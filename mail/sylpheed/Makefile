@@ -1,9 +1,9 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: mail/sylpheed/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v${PORTVERSION:C/\.[^\.]*$//}/  \
 		CRITICAL
@@ -11,7 +11,6 @@ MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v${PORTVERSION:C/\.[^\.]*$//}/ 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Lightweight, featureful, and fast GTK+ based e-mail client
 
-LIB_DEPENDS=	aspell:${PORTSDIR}/textproc/aspell
 RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 
 USES=		gettext iconv gmake
@@ -19,7 +18,6 @@ USE_BZIP2=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 # Sylpheed needs pthread if GnomeVFS is installed (GtkFileChooser uses it)
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
@@ -45,8 +43,7 @@ OPTIONS_DEFAULT=SSL GTKSPELL
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
-# we can't use USE_OPENSSL=yes after including bsd.port.pre.mk
-.include "${PORTSDIR}/Mk/bsd.openssl.mk"
+USE_OPENSSL=	yes
 CONFIGURE_ARGS+=--enable-ssl
 .else
 CONFIGURE_ARGS+=--disable-ssl
@@ -54,8 +51,7 @@ CONFIGURE_ARGS+=--disable-ssl
 
 .if ${PORT_OPTIONS:MGPGME}
 LIB_DEPENDS+=	gpgme:${PORTSDIR}/security/gpgme
-RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg \
-		pinentry-gtk-2:${PORTSDIR}/security/pinentry-gtk2
+RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg
 CONFIGURE_ARGS+=--enable-gpgme
 .else
 CONFIGURE_ARGS+=--disable-gpgme
@@ -105,8 +101,7 @@ MAKEFILES=	Makefile.in ac/Makefile.in faq/Makefile.in faq/de/Makefile.in \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS:S/"//g}|g; \
-		s|-lresolv||g; s|-lpisock\"|-liconv &|g; \
-		s|libs gtkspell-2\.0`|& -laspell|g;' \
+		s|-lresolv||g; s|-lpisock\"|-liconv &|g;' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/etc|${LOCALBASE}&|g' \
 		${WRKSRC}/libsylph/procmime.c
