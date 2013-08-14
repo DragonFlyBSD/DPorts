@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gssdp/Makefile 320317 2013-06-09 08:34:06Z sunpoet $
+# $FreeBSD: net/gssdp/Makefile 324475 2013-08-10 11:28:31Z sunpoet $
 
 PORTNAME=	gssdp
-PORTVERSION=	0.14.3
+PORTVERSION=	0.14.4
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -20,11 +20,10 @@ OPTIONS_DEFAULT=GTK3
 CONFIGURE_ARGS=	--enable-introspection=yes
 CONFIGURE_ENV=	VAPIGEN=""
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	glib20
+USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_XZ=		yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 
 .include <bsd.port.options.mk>
 
