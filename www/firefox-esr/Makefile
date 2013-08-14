@@ -1,12 +1,13 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox-esr/Makefile 321792 2013-06-26 11:01:34Z flo $
+# $FreeBSD: www/firefox-esr/Makefile 324409 2013-08-08 18:42:03Z flo $
 
 PORTNAME=	firefox
-DISTVERSION=	17.0.7
+DISTVERSION=	17.0.8
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source
 DISTNAME=	${PORTNAME}-${DISTVERSION}esr.source
+PKGNAMESUFFIX=	-esr
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
@@ -44,39 +45,10 @@ MOZ_OPTIONS=	--program-transform-name='s/firefox/${MOZILLA}/' \
 		--enable-application=browser \
 		--enable-official-branding
 
-OPTIONS_DEFINE=	PGO
-
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 .include <bsd.port.pre.mk>
 
 WRKSRC:=	${WRKDIR}/mozilla-esr17
-
-.if ${PORT_OPTIONS:MPGO}
-USE_GCC?=	any
-USE_DISPLAY=		yes
-.include "${PORTSDIR}/Mk/bsd.python.mk"
-
-.undef GNU_CONFIGURE
-MOZ_OPTIONS+=	${CONFIGURE_TARGET}
-MAKEFILE=	${WRKSRC}/client.mk
-ALL_TARGET=	profiledbuild
-MOZ_MK_OPTIONS+=PROFILE_GEN_SCRIPT="${PYTHON_CMD} \
-		@MOZ_OBJDIR@/_profile/pgo/profileserver.py"
-.endif
-
-pre-extract:
-.if ${PORT_OPTIONS:MPGO}
-	@${ECHO} "*****************************************************************"
-	@${ECHO} "**************************** attention **************************"
-	@${ECHO} "*****************************************************************"
-	@${ECHO} "To build Firefox with PGO support you need a running X server and"
-	@${ECHO} "   build this port with an user who could access the X server!   "
-	@${ECHO} ""
-	@${ECHO} "During the build a Firefox instance will start and run some test."
-	@${ECHO} "      Do not interrupt or close Firefox during this tests!       "
-	@${ECHO} "*****************************************************************"
-	@sleep 10
-.endif
 
 post-extract:
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' -e 's|@MOZILLA@|${MOZILLA}|' \
