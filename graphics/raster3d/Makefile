@@ -1,9 +1,9 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: graphics/raster3d/Makefile 322747 2013-07-11 06:31:54Z bapt $
+# $FreeBSD: graphics/raster3d/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	raster3d
 PORTVERSION=	3.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics biology
 MASTER_SITES=	http://skuld.bmsc.washington.edu/${PORTNAME}/
 DISTNAME=	Raster3D_${PORTVERSION:R}-${PORTVERSION:E}
@@ -13,8 +13,8 @@ COMMENT=	Set of tools for generating raster images of proteins and molecules
 
 LICENSE=	ART20
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd \
-		tiff.4:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
+		tiff:${PORTSDIR}/graphics/tiff
 
 OPTIONS_DEFINE=	MAGICK DOCS EXAMPLES
 OPTIONS_DEFAULT=	MAGICK
