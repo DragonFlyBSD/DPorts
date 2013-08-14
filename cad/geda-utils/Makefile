@@ -2,7 +2,7 @@
 # Date created:			4 April 2001
 # Whom:				bruno schwander <bruno@tinkerbox.org>
 #
-# $FreeBSD: ports/cad/geda-utils/Makefile,v 1.29 2012/11/17 05:54:54 svnexp Exp $
+# $FreeBSD: cad/geda-utils/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	utils
@@ -24,10 +24,11 @@ LIB_DEPENDS=	geda.33:${PORTSDIR}/cad/libgeda
 DOCSDIR=	${PREFIX}/share/doc/geda
 DATADIR=	${PREFIX}/share/geda
 
+USES=		perl5
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_PYTHON_RUN=	yes
 CONFIGURE_ARGS=	--with-docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
