@@ -1,5 +1,5 @@
 # Created by: Mantas Kaulakys <stone@tainet.lt>
-# $FreeBSD: security/amavis-stats/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/amavis-stats/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	amavis-stats
@@ -13,7 +13,8 @@ COMMENT=	Simple AMaViS statistics generator based on rrdtool
 
 RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_PHP=	pcre
 
 MAN1=		amavis-stats.1
