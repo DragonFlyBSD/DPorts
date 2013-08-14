@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	llgal
-# Date created:				2007-01-25
-# Whom:					arved
-#
-# $FreeBSD: www/llgal/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: arved
+# $FreeBSD: www/llgal/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	llgal
 PORTVERSION=	0.13.17
@@ -27,8 +24,7 @@ RUN_DEPENDS=	p5-Image-Size>=0:${PORTSDIR}/graphics/p5-Image-Size \
 		convert:${PORTSDIR}/graphics/ImageMagick
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
-USES=		gettext
+USES=		gettext perl5
 USE_GMAKE=	yes
 
 MAN1=		llgal.1
