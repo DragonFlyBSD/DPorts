@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/wargus/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: games/wargus/Makefile 324082 2013-08-01 05:35:25Z bapt $
 
 PORTNAME=	wargus
 PORTVERSION=	2.2.5.5
@@ -17,8 +17,8 @@ RUN_DEPENDS=	stratagus:${PORTSDIR}/games/stratagus
 
 LICENSE=	GPLv2
 NOT_FOR_ARCHS=	sparc64
-USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gmake
+USE_CSTD=	gnu89
 USE_GNOME=	gtk20
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 SUB_FILES=	${PORTNAME} pkg-message
