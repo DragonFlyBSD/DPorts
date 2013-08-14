@@ -1,5 +1,5 @@
 # Created by: Sarod Yatawatta <sarod@cs.pdn.ac.lk>
-# $FreeBSD: cad/pdnmesh/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: cad/pdnmesh/Makefile 323577 2013-07-24 08:10:12Z marino $
 
 PORTNAME=	pdnmesh
 PORTVERSION=	0.2.2
@@ -32,10 +32,9 @@ USE_GNOME=	gdkpixbuf2 gtk20
 USE_XORG=	ice pixman sm x11 xau xcb xcomposite xcursor xdamage xdmcp \
 		xext xfixes xmu xi xinerama xrandr xrender xt xxf86vm
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lm
 
 MAN1=		pdnmesh.1
 MAN5=		pdnmesh_input.5
