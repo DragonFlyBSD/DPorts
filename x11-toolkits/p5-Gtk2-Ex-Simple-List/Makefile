@@ -2,7 +2,7 @@
 # Date created:		3 December 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2-Ex-Simple-List/Makefile,v 1.9 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-Simple-List/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Gtk2-Ex-Simple-List
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Glib2>=1.00:${PORTSDIR}/devel/p5-Glib2 \
 		p5-Gtk2>=1.060:${PORTSDIR}/x11-toolkits/p5-Gtk2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=	${PORTNAME:S/-/::/g}.3
 
 .include <bsd.port.mk>
