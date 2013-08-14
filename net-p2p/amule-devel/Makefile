@@ -1,8 +1,9 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net-p2p/amule-devel/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: net-p2p/amule-devel/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	amule
 PORTVERSION=	10802
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	http://amule.sourceforge.net/tarballs/
 PKGNAMESUFFIX=	-devel
