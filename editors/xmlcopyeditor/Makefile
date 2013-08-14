@@ -1,5 +1,5 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
-# $FreeBSD: editors/xmlcopyeditor/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: editors/xmlcopyeditor/Makefile 324353 2013-08-07 13:59:55Z gahr $
 
 PORTNAME=	xmlcopyeditor
 PORTVERSION=	1.2.0.9
@@ -17,12 +17,7 @@ WX_COMPS=	wx contrib
 WX_CONF_ARGS=	absolute
 WX_UNICODE=	yes
 USES=		gettext
-USE_DOS2UNIX=	src/templates/DTD.dtd \
-		src/templates/OpenLearn_document.xml \
-		src/rng/docbookxi.rnc \
-		src/rng/tei_all.rnc \
-		src/rng/xhtml-strict.rng \
-		src/rng/xhtml.rng
+USE_DOS2UNIX=	yes
 
 BUILD_DEPENDS+=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 LIB_DEPENDS=	xerces-c.3:${PORTSDIR}/textproc/xerces-c3 \
