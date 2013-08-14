@@ -1,1 +1,1 @@
-LDFLAGS+= -lstdc++ -L${LOCALBASE}/lib -lXext
+LDFLAGS+= -lstdc++
