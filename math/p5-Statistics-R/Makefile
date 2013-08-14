@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-R/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/p5-Statistics-R/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Statistics-R
 PORTVERSION=	0.31
@@ -17,7 +17,8 @@ RUN_DEPENDS=	${LOCALBASE}/bin/R:${PORTSDIR}/math/R \
 		p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run \
 		p5-Regexp-Common>=0:${PORTSDIR}/textproc/p5-Regexp-Common
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Statistics::R::Legacy.3 \
 		Statistics::R::Win32.3 \
