@@ -2,7 +2,7 @@
 # Date created:				31 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/p5-Graph-SocialMap/Makefile,v 1.14 2012/11/17 05:58:17 svnexp Exp $
+# $FreeBSD: graphics/p5-Graph-SocialMap/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Graph-SocialMap
@@ -24,6 +24,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Graph::SocialMap.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
