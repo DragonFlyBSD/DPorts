@@ -2,12 +2,12 @@
 # Date created:		2007-01-22
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: audio/sonata/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/sonata/Makefile 324188 2013-08-03 11:20:55Z kwm $
 #
 
 PORTNAME=	sonata
 PORTVERSION=	1.6.2.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio python
 MASTER_SITES=	http://codingteam.net/project/sonata/upload/releases/
 
