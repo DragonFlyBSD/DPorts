@@ -2,7 +2,7 @@
 # Date created:				17 June 1999
 # Whom:					Brandon Fosdick <bfoz@glue.umd.edu>
 #
-# $FreeBSD: graphics/giram/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/giram/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	giram
@@ -18,8 +18,8 @@ LIB_DEPENDS=	3ds-1.3:${PORTSDIR}/graphics/lib3ds
 BUILD_DEPENDS=	povray:${PORTSDIR}/graphics/povray-meta
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		gettext
-USE_PERL5_BUILD=yes
+USES=		gettext perl5
+USE_PERL5=	build
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
