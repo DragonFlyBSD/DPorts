@@ -1,5 +1,5 @@
 # Created by: Yeti <yeti@gwyddion.net>
-# $FreeBSD: science/gwyddion/Makefile 322105 2013-06-30 21:25:03Z antoine $
+# $FreeBSD: science/gwyddion/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	gwyddion
 PORTVERSION=	2.31
@@ -42,7 +42,7 @@ MAN1=		gwyddion.1 gwyddion-thumbnailer.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 MAN3+=		Gwyddion::dump.3pm
 PLIST_SUB+=	PERL=""
 .else
