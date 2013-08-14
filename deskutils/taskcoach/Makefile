@@ -1,7 +1,7 @@
-# $FreeBSD: ports/deskutils/taskcoach/Makefile,v 1.21 2013/02/08 10:26:46 svnexp Exp $
+# $FreeBSD: deskutils/taskcoach/Makefile 324257 2013-08-05 03:12:44Z kevlo $
 
 PORTNAME=	taskcoach
-PORTVERSION=	1.3.23
+PORTVERSION=	1.3.31
 CATEGORIES=	deskutils python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/Release-${PORTVERSION}
 DISTNAME=	TaskCoach-${PORTVERSION}
