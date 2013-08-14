@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-clocks/intclock/Makefile 313753 2013-03-09 19:59:21Z eadler $
+# $FreeBSD: x11-clocks/intclock/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	intclock
 PORTVERSION=	2.13
@@ -13,7 +13,8 @@ COMMENT=	Multi-timezone clock
 BUILD_DEPENDS=	p5-Gtk2>=1.144:${PORTSDIR}/x11-toolkits/p5-Gtk2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 post-patch:
 	@${REINPLACE_CMD} -e \
