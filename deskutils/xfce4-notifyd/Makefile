@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notifyd/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: deskutils/xfce4-notifyd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	xfce4-notifyd
 PORTVERSION=	0.2.4
@@ -24,7 +24,6 @@ USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil xfconf
 INSTALLS_ICONS=	yes
 USE_XORG=	x11
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	notification-daemon-[0-9]* xfce4-notification-daemon-[0-9]*
 
