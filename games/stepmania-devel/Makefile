@@ -1,5 +1,5 @@
 # Created by: Brad Allen <braddo@tranceaddict.net>
-# $FreeBSD: games/stepmania-devel/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: games/stepmania-devel/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	stepmania
 PORTVERSION=	5.0.a3
@@ -28,13 +28,12 @@ PROJECTHOST=	sm-ssc
 USE_BZIP2=	yes
 USE_XORG=	x11 xau xdmcp xext xrandr xrender xtst
 USE_GL=		gl glu
-USES=        pathfix iconv shebangfix
+USES=		pathfix iconv shebangfix perl5
 USE_GNOME=	gtk20
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-ffmpeg
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 SHEBANG_FILES=	Utils/*.pl \
 		extern/zlib/zlib2ansi
 
