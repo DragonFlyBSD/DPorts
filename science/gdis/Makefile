@@ -1,5 +1,5 @@
 # Created y: ijliao
-# $FreeBSD: science/gdis/Makefile 313207 2013-03-02 06:29:42Z miwi $
+# $FreeBSD: science/gdis/Makefile 323710 2013-07-26 09:46:53Z bapt $
 
 PORTNAME=	gdis
 PORTVERSION=	0.90
@@ -53,7 +53,7 @@ do-configure:
 		>> ${WRKSRC}/${MAKEFILE}
 	@${ECHO_CMD} 'INCS=`pkg-config --cflags gtkglext-1.0`' \
 		>> ${WRKSRC}/${MAKEFILE}
-	@${ECHO_CMD} 'LIBS=`pkg-config --libs gtkglext-1.0`' \
+	@${ECHO_CMD} 'LIBS=`pkg-config --libs gtkglext-1.0` -lgthread-2.0' \
 		>> ${WRKSRC}/${MAKEFILE}
 	@${ECHO_CMD} 'OBJ=$$(SRC:.c=.o)' \
 		>> ${WRKSRC}/${MAKEFILE}
