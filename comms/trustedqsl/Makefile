@@ -1,4 +1,4 @@
-# $FreeBSD: comms/trustedqsl/Makefile 322238 2013-07-03 17:45:02Z db $
+# $FreeBSD: comms/trustedqsl/Makefile 323809 2013-07-27 22:50:01Z db $
 
 PORTNAME=	trustedqsl
 PORTVERSION=	1.14.2
@@ -25,7 +25,7 @@ USE_LDCONFIG=	yes
 post-install:
 	@${ECHO_MSG}
 	@${ECHO_MSG} trustedqsl is now installed. You will have to create a directory .tqsl in
-	@${ECHO_MSG} your home directory and setup a copy of ${PREFIX}/share/tqsl/config.xml here
+	@${ECHO_MSG} your home directory and setup a copy of ${PREFIX}/share/TrustedQSL/config.xml here
 	@${ECHO_MSG} before this program will run correctly.
 	@${ECHO_MSG}
 
