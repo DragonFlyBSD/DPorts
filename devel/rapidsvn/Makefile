@@ -1,15 +1,9 @@
-# New ports collection makefile for:	rapidsvn
-# Date created:		Jan 1, 2005
-# Whom:			kuriyama@FreeBSD.org
-#
-# $FreeBSD: devel/rapidsvn/Makefile 318540 2013-05-19 16:00:22Z kuriyama $
-#
+# $FreeBSD: devel/rapidsvn/Makefile 323919 2013-07-29 21:02:10Z mandree $
 
 PORTNAME=	rapidsvn
 PORTVERSION=	0.12.1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.rapidsvn.org/download/release/0.12.1/
-DISTNAME=	${PORTNAME}-0.12.1
+MASTER_SITES=	http://www.rapidsvn.org/download/release/${PORTVERSION}/
 
 MAINTAINER=	robert.ayrapetyan@gmail.com
 COMMENT=	Cross-platform GUI front-end for the Subversion revision system
@@ -23,7 +17,6 @@ WX_CONF_ARGS=	absolute
 
 GNU_CONFIGURE=	yes
 USES=		gettext
-USE_AUTOTOOLS=	autoconf libtool automake
 CONFIGURE_TARGET=
 CONFIGURE_ARGS=	--with-apr-config=apr-1-config \
 	--with-apu-config=apu-1-config \
@@ -37,10 +30,6 @@ CONFIGURE_ARGS=	--with-apr-config=apr-1-config \
 
 USE_LDCONFIG=	yes
 MAN1=		rapidsvn.1
-AUTOTOOLSFILES=	aclocal.m4
-
-pre-configure:
-	@cd ${WRKSRC} && ${AUTORECONF}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/manpage/rapidsvn.1 ${MAN1PREFIX}/man/man1/
