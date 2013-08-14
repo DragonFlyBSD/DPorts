@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: graphics/clutter/Makefile 324037 2013-07-31 11:57:45Z kwm $
 #  $MCom: ports/graphics/clutter/Makefile,v 1.34 2010/09/24 16:35:42 kwm Exp $
 
 PORTNAME=	clutter
@@ -37,5 +37,7 @@ post-patch:
 		${WRKSRC}/clutter/x11/*.h \
 		${WRKSRC}/clutter/cogl/cogl/*.h \
 		${WRKSRC}/clutter/json/*.c
+	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/clutter/Makefile.in
 
 .include <bsd.port.mk>
