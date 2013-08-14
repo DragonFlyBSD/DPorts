@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: mail/p5-FuzzyOcr/Makefile 318918 2013-05-24 07:42:49Z az $
+# $FreeBSD: mail/p5-FuzzyOcr/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	FuzzyOcr
 DISTVERSION=	2.3b
@@ -22,7 +22,7 @@ RUN_DEPENDS=	giftopnm:${PORTSDIR}/graphics/netpbm			\
 
 CONFLICTS=	p5-FuzzyOcr-devel-[0-9]*
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
