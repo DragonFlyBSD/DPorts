@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/deluge/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net-p2p/deluge/Makefile 323220 2013-07-18 10:42:14Z rm $
 
 PORTNAME=	deluge
 PORTVERSION=	1.3.6
@@ -63,7 +63,8 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>=0.83:${PORTSDIR}/devel/py-dbus \
 		xdg-utils>=1.0.2:${PORTSDIR}/devel/xdg-utils
 
 PLIST_SUB+=	PYGTK=""
-USE_GNOME+=	desktopfileutils librsvg2 pygtk2
+USE_GNOME+=	librsvg2 pygtk2
+USES+=		desktop-file-utils
 INSTALLS_ICONS=	yes
 .else
 PLIST_SUB+=	PYGTK="@comment "
@@ -106,7 +107,6 @@ post-install:
 	fi
 	${INSTALL_DATA} ${WRKSRC}/deluge/data/share/applications/deluge.desktop \
 		${PREFIX}/share/applications
-	@-update-desktop-database
 .endif
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
