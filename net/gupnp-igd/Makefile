@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-igd/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/gupnp-igd/Makefile 324478 2013-08-10 11:30:09Z sunpoet $
 
 PORTNAME=	gupnp-igd
 PORTVERSION=	0.2.2
@@ -19,12 +19,11 @@ RUN_DEPENDS=	gupnp>=0.18:${PORTSDIR}/net/gupnp
 
 CONFIGURE_ARGS=	--enable-introspection=yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	glib20
+USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USE_XZ=		yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e '/ --define-variable=/d' ${WRKSRC}/configure
