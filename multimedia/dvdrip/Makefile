@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-# $FreeBSD: multimedia/dvdrip/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: multimedia/dvdrip/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	dvdrip
 PORTVERSION=	0.98.11
@@ -33,9 +33,9 @@ OPTIONS_DEFINE=	VORBIS SUBTITLE
 OPTIONS_DEFAULT=	VORBIS SUBTITLE
 SUBTITLE_DESC=	Enable support for getting subtitles
 
-PERL_CONFIGURE=	yes
 CONFIGURE_ENV=	SKIP_UNPACK_REQUIRED_MODULES=1
-USES=		gettext
+USES=		gettext perl5
+USE_PERL5=	configure patch
 MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		dvdrip.1 dvdrip-progress.1 dvdrip-splitpipe.1
