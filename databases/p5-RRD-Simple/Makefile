@@ -1,9 +1,5 @@
-# New ports collection makefile for:	RRD-Simple
-# Date created:				2006/07/21
-# Whom:					chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/databases/p5-RRD-Simple/Makefile,v 1.22 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: databases/p5-RRD-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	RRD-Simple
 PORTVERSION=	1.44
@@ -19,7 +15,8 @@ COMMENT=	Simple interface to create and store data in RRD files
 BUILD_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 MAN3=		RRD::Simple.3 RRD::Simple::Examples.3
 
 .include <bsd.port.mk>
