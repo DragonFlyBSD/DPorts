@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-GraphViz-DBI
-# Date created:				10 October 2001
-# Whom:					tobez
-#
-# $FreeBSD: ports/databases/p5-GraphViz-DBI/Makefile,v 1.15 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: tobez
+# $FreeBSD: databases/p5-GraphViz-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	GraphViz-DBI
 PORTVERSION=	1.100860
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
 RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
 		p5-GraphViz>=0:${PORTSDIR}/graphics/p5-GraphViz
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		GraphViz::DBI.3
 
