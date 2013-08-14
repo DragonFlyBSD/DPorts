@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/hpijs/Makefile,v 1.36 2012/12/06 11:00:08 svnexp Exp $
+# $FreeBSD: print/hpijs/Makefile 324279 2013-08-05 16:03:36Z az $
 
 PORTNAME=	hpijs
 PORTVERSION=	2.1.4
@@ -16,7 +16,6 @@ CONFLICTS=	hplip-[0-9]*
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=		--disable-dependency-tracking
 USE_GHOSTSCRIPT_RUN=	yes
-WANT_PERL=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -25,13 +24,11 @@ OPTIONS_DEFINE=	CUPS DOCS FOOMATIC
 OPTIONS_DEFAULT=	CUPS FOOMATIC
 FOOMATIC_DESC=	Install foomatic-rip and PPD files
 
-.include <bsd.port.pre.mk>
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS} || ${PORT_OPTIONS:MFOOMATIC}
 CONFLICTS+=		foomatic-filters-*
-USE_PERL5=		true
+USES=			perl5
 CONFIGURE_ARGS+=	--enable-foomatic-install
 PLIST_SUB+=		FOOMATIC=""
 .else
@@ -47,6 +44,8 @@ PLIST_SUB+=		CUPS=""
 CONFIGURE_ARGS+=	--disable-cups-install
 PLIST_SUB+=		CUPS="@comment "
 .endif
+
+.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/share/cups|${LOCALBASE}/share/cups|g ; \
