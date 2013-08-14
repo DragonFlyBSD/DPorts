@@ -1,11 +1,6 @@
-# ex:ts=8
-# Ports collection Makefile for: 	syndigator
-# Date created:			Apr 20, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/syndigator/Makefile,v 1.16 2012/11/17 06:03:06 svnexp Exp $
-#   $MCom: ports/www/syndigator/Makefile,v 1.4 2007/09/09 22:45:27 mezz Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/syndigator/Makefile 324180 2013-08-03 07:52:55Z az $
+# $MCom: ports/www/syndigator/Makefile,v 1.4 2007/09/09 22:45:27 mezz Exp $
 
 PORTNAME=	syndigator
 PORTVERSION=	0.15.1
@@ -25,16 +20,16 @@ RUN_DEPENDS=	p5-Text-Iconv>=0:${PORTSDIR}/converters/p5-Text-Iconv \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-Gtk2-Html2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2-Html2
 
+USES=		perl5
 USE_GNOME=	gnomehier
-USE_PERL5=	yes
 NO_BUILD=	yes
 
 GNOMEDIR=	${PREFIX}/share
 
 post-patch:
-	@${PERL} -pi -e 's|./lib|${PREFIX}/${SITE_PERL_REL}/${PORTNAME}|g' \
+	@${REINPLACE_CMD} -i '' -e 's|./lib|${PREFIX}/${SITE_PERL_REL}/${PORTNAME}|' \
 		${WRKSRC}/syndigator
-	@${PERL} -pi -e 's|./images/|${GNOMEDIR}/pixmaps/${PORTNAME}/|g' \
+	@${REINPLACE_CMD} -i '' -e 's|./images/|${GNOMEDIR}/pixmaps/${PORTNAME}/|' \
 		${WRKSRC}/lib/RSSReader/Gtk2UI/IconFactory.pm
 
 do-install:
