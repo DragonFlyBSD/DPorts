@@ -1,2 +1,1 @@
 LIB_DEPENDS+= ssl:${PORTSDIR}/security/openssl
-MAKE_JOBS_UNSAFE=yes

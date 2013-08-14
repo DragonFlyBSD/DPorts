@@ -1,13 +1,12 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: mail/deforaos-mailer/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: mail/deforaos-mailer/Makefile 323755 2013-07-26 21:41:07Z marino $
 
 PORTNAME=	mailer
 PORTVERSION=	0.1.6
-
 CATEGORIES=	mail
 MASTER_SITES=	http://www.defora.org/os/download/download/4029/
-DISTNAME=	Mailer-${PORTVERSION}
 PKGNAMEPREFIX=	deforaos-
+DISTNAME=	Mailer-${PORTVERSION}
 
 MAINTAINER=	olivier@cochard.me
 COMMENT=	DeforaOS desktop mail client
@@ -27,6 +26,8 @@ USE_OPENSSL=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
 MAKE_ENV+=	MANDIR=${MANPREFIX}/man
+
+MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		compose.1 \
 		mailer.1
