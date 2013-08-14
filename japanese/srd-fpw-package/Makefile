@@ -1,9 +1,5 @@
-# New ports collection makefile for:	srd-fpw-package
-# Date created:		00/06/14
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/srd-fpw-package/Makefile,v 1.16 2012/11/17 05:58:40 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: japanese/srd-fpw-package/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	srd-fpw-package
 PORTVERSION=	1.0.8
@@ -20,7 +16,7 @@ RUN_DEPENDS=	display:${PORTSDIR}/graphics/ImageMagick
 
 NO_BUILD=	yes
 PLIST_SUB=	PKGNAME=${PKGNAME}
-USE_PERL5=	yes
+USES=		perl5
 
 PKG_DIR=	${PREFIX}/share/dict/lookup-package
 
