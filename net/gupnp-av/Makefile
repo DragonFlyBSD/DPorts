@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-av/Makefile 320796 2013-06-13 12:44:44Z sunpoet $
+# $FreeBSD: net/gupnp-av/Makefile 324477 2013-08-10 11:29:45Z sunpoet $
 
 PORTNAME=	gupnp-av
 PORTVERSION=	0.12.2
@@ -19,11 +19,10 @@ RUN_DEPENDS=	gupnp>=0.19.0:${PORTSDIR}/net/gupnp
 CONFIGURE_ARGS=	--enable-introspection=yes
 CONFIGURE_ENV=	VAPIGEN=""
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	glib20
+USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_XZ=		yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wno-unused-parameters||' ${WRKSRC}/tests/Makefile.in
