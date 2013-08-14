@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp/Makefile 320318 2013-06-09 08:34:26Z sunpoet $
+# $FreeBSD: net/gupnp/Makefile 324476 2013-08-10 11:29:16Z sunpoet $
 
 PORTNAME=	gupnp
-PORTVERSION=	0.20.3
+PORTVERSION=	0.20.4
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -19,12 +19,11 @@ LIB_DEPENDS=	gssdp-1.0:${PORTSDIR}/net/gssdp \
 CONFIGURE_ARGS=	--enable-introspection=yes
 CONFIGURE_ENV=	VAPIGEN=""
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	glib20
+USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USE_XZ=		yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/tools/gupnp-binding-tool
