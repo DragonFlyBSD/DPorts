@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pdf2svg
-# Date created:		Mar 13 2009
-# Whom:			martin.dieringer@gmx.de
-#
-# $FreeBSD: ports/graphics/pdf2svg/Makefile,v 1.9 2012/11/17 05:58:18 svnexp Exp $
+# Created by: Martin Dieringer <martin.dieringe@gmx.de>
+# $FreeBSD: graphics/pdf2svg/Makefile 323540 2013-07-23 16:25:51Z pawel $
 
 PORTNAME=	pdf2svg
-PORTVERSION=	0.2.1
-PORTREVISION=	6
+PORTVERSION=	0.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cityinthesky.co.uk/_media/opensource/
 
