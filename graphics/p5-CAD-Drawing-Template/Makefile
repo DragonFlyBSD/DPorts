@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CAD-Drawing-Template
-# Date created:				22 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-CAD-Drawing-Template/Makefile,v 1.12 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: graphics/p5-CAD-Drawing-Template/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	CAD-Drawing-Template
 PORTVERSION=	0.01
@@ -21,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	CAD::Drawing::Template.3
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
