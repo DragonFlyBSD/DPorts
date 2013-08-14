@@ -1,8 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: mail/thunderbird/Makefile 321792 2013-06-26 11:01:34Z flo $
+# $FreeBSD: mail/thunderbird/Makefile 324561 2013-08-10 23:34:16Z marino $
 
 PORTNAME=	thunderbird
-DISTVERSION=	17.0.7
+DISTVERSION=	17.0.8
 CATEGORIES=	mail ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source
 DISTFILES=	${PORTNAME}-${DISTVERSION}esr.source${EXTRACT_SUFX}
@@ -69,7 +69,7 @@ DISTFILES+=	${EM_DISTFILE}:enigmail
 RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg
 EM_DISTNAME=	enigmail-${EM_VERSION}
 EM_DISTFILE=	${EM_DISTNAME}.tar.gz
-EM_XPI_FILE=	${MOZ_OBJDIR}/mozilla/dist/bin/${EM_DISTNAME}-freebsd-${ARCH:S/amd64/x86_64/}.xpi
+EM_XPI_FILE=	${MOZ_OBJDIR}/mozilla/dist/bin/${EM_DISTNAME}-${OPSYS:tl}-${ARCH:S/amd64/x86_64/}.xpi
 EM_ORIG_ID=	{847b3a00-7ab1-11d4-8f02-006008948af5}
 EM_ID=		${PORTNAME}@mozilla-enigmail.org
 EM_ID_RFILES=	${XPI_LIBDIR}/${EM_ID}/install.rdf \
