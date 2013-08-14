@@ -1,4 +1,4 @@
-@comment $FreeBSD: x11-wm/libcompizconfig/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: x11-wm/libcompizconfig/pkg-plist 321696 2013-06-24 18:07:54Z antoine $
 include/compizconfig/ccs.h
 include/compizconfig/ccs-backend.h
 lib/libcompizconfig.so.0
@@ -15,7 +15,7 @@ libdata/pkgconfig/libcompizconfig.pc
 share/compiz/ccp.xml
 etc/compizconfig/config
 @dirrmtry etc/compizconfig
-@dirrmtry share/compizconfig
+@dirrmtry share/compiz
 @dirrmtry lib/compizconfig/backends
 @dirrmtry lib/compizconfig
 @dirrmtry include/compizconfig
