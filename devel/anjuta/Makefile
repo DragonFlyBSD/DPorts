@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/anjuta/Makefile 322372 2013-07-06 09:04:54Z ohauer $
+# $FreeBSD: devel/anjuta/Makefile 323966 2013-07-30 12:55:07Z kwm $
 #   $MCom: ports/devel/anjuta/Makefile,v 1.72 2012/12/13 20:33:05 kwm Exp $
 
 PORTNAME=	anjuta
@@ -31,12 +31,13 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 CONFLICTS=	anjuta-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		gmake gettext
+USES=		gmake gettext pathfix shebangfix shared-mime-info
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
 USE_PYTHON=	yes
-USE_GNOME=	gnomeprefix gnomehack vte gtksourceview2 libgda4
+USE_GNOME=	gnomeprefix vte gtksourceview2 libgda4
+USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -57,6 +58,7 @@ GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		file-manager.schemas \
 		preferences.schemas \
 		python-plugin-properties.schemas
+SHEBANG_FILES=	scripts/builder2schema.pl
 
 MAN1=		anjuta.1 anjuta-launcher.1
 
@@ -106,6 +108,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
 .endfor
 .endif
-	@-update-mime-database ${PREFIX}/share/mime
 
 .include <bsd.port.mk>
