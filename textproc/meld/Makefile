@@ -1,8 +1,8 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: textproc/meld/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: textproc/meld/Makefile 324064 2013-07-31 18:08:07Z pawel $
 
 PORTNAME=	meld
-PORTVERSION=	1.7.3
+PORTVERSION=	1.7.4
 CATEGORIES=	textproc devel python
 MASTER_SITES=	GNOME
 
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 USE_XZ=		yes
 USE_GNOME=	pygnome2
-USES=		gmake desktop-file-utils
+USES=		desktop-file-utils gmake shared-mime-info
 USE_PYTHON=	-2.7
 MAKE_ARGS=	prefix=${PREFIX}
 INSTALLS_ICONS=	yes
