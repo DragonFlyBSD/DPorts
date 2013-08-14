@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libgnomeuimm
-# Date created:         22 May 2003
-# Whom:                 Alexander Nedotsukov <bland@mail.ru>
-#
-# $FreeBSD: ports/x11-toolkits/libgnomeuimm/Makefile,v 1.27 2012/11/17 06:03:36 svnexp Exp $
-#
+# Created by: Alexander Nedotsukov <bland@mail.ru>
+# $FreeBSD: x11-toolkits/libgnomeuimm/Makefile 323784 2013-07-27 13:25:14Z kwm $
 
 PORTNAME=	libgnomeuimm
 PORTVERSION=	2.0.0
@@ -21,8 +17,8 @@ LIB_DEPENDS=	gnomemm-2.0:${PORTSDIR}/x11/libgnomemm \
 		glademm-2.0:${PORTSDIR}/devel/libglademm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack libgnomeui
+USES=		gmake pathfix
+USE_GNOME=	libgnomeui
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
