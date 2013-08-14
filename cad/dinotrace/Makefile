@@ -1,5 +1,5 @@
 # Created by: Joachim Strombergson <watchman@ludd.ltu.se>
-# $FreeBSD: cad/dinotrace/Makefile 322587 2013-07-09 21:49:35Z bapt $
+# $FreeBSD: cad/dinotrace/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	dinotrace
 PORTVERSION=	9.4c
@@ -16,10 +16,9 @@ OPTIONS_DEFAULT=	EMACS
 EMACS_DESC=	Install Emacs supplimentary files
 
 USE_XORG=	x11 sm ice xmu xt
-USES=		gmake motif
-USE_PERL5_BUILD=	yes
+USES=		gmake motif perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 INFO=		dinotrace
 PLIST_FILES=	bin/dinotrace
