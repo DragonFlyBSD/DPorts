@@ -1,9 +1,9 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-GDD/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: graphics/R-cran-GDD/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	GDD
 DISTVERSION=	0.1-13.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -12,7 +12,7 @@ COMMENT=	Graphics device for R for creating bitmap output
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	gd>=2.0.35_8,1:${PORTSDIR}/graphics/gd
+BUILD_DEPENDS=	libgd>=2.0.35_8,1:${PORTSDIR}/graphics/gd
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
