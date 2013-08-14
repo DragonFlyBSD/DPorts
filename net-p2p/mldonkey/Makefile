@@ -1,8 +1,9 @@
 # Created by: Holger Lamm <holger@e-gitt.net>
-# $FreeBSD: net-p2p/mldonkey/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net-p2p/mldonkey/Makefile 324449 2013-08-09 16:25:48Z cperciva $
 
 PORTNAME=	mldonkey
 PORTVERSION=	3.1.3
+PORTREVISION=	1
 CATEGORIES+=	net-p2p
 MASTER_SITES=	SF
 
