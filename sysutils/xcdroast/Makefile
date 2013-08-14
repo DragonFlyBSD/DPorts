@@ -1,9 +1,9 @@
 # Created by: Oliver Lehmann <Kai_Allard_Liao@gmx.de>
-# $FreeBSD: sysutils/xcdroast/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/xcdroast/Makefile 324063 2013-07-31 17:02:53Z oliver $
 
 PORTNAME=	xcdroast
 PORTVERSION=	0.98.a.16
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.98alpha16 \
 		http://www.xcdroast.org/download/
