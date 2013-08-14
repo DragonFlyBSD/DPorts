@@ -1,7 +1,7 @@
-# $FreeBSD: astro/gmapcatcher/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: astro/gmapcatcher/Makefile 324256 2013-08-05 02:51:55Z kevlo $
 
 PORTNAME=	gmapcatcher
-PORTVERSION=	0.8.0.0
+PORTVERSION=	0.8.0.4
 CATEGORIES=	astro geography
 MASTER_SITES=	http://gmapcatcher.googlecode.com/files/
 DISTNAME=	mapcatcher_${PORTVERSION}
@@ -17,7 +17,7 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_NOEGGINFO=	yes
-PLIST_SUB=	PYTHON_VER=${PYTHON_VER}
+PLIST_SUB=	PORTVERSION="${PORTVERSION}" PYTHON_VER="${PYTHON_VER}"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/share/pixmaps,${PREFIX}/share/pixmaps,g' \
