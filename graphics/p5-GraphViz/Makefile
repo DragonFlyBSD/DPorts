@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: ports/graphics/p5-GraphViz/Makefile,v 1.27 2013/01/10 14:56:14 svnexp Exp $
+# $FreeBSD: graphics/p5-GraphViz/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	GraphViz
 PORTVERSION=	2.14
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run \
 		p5-XML-Twig>=0:${PORTSDIR}/textproc/p5-XML-Twig \
 		dot:${PORTSDIR}/graphics/graphviz
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::GraphVizProf.3 \
 		GraphViz.3 \
