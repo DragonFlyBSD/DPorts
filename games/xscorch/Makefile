@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xscorch
-# Date created:				19 Apr 2000
-# Whom:					will
-#
-# $FreeBSD: ports/games/xscorch/Makefile,v 1.32 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: games/xscorch/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	xscorch
 PORTVERSION=	0.2.1
@@ -20,8 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 OPTIONS_DEFINE=	MIKMOD
 OPTIONS_DEFAULT=	MIKMOD
 
+USES=		perl5
 USE_GNOME=	gtk20
-USE_PERL5=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
