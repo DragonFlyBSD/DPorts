@@ -1,9 +1,9 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net-p2p/amule/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: net-p2p/amule/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	amule
 PORTVERSION=	2.3.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF/${PORTNAME}/aMule/${PORTVERSION}
 DISTNAME=	aMule-${PORTVERSION}
