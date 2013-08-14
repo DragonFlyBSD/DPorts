@@ -1,8 +1,8 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/evas/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: graphics/evas/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	evas
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 PORTEPOCH=	2
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	# none
