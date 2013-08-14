@@ -1,9 +1,9 @@
 # Created by: fjoe@FreeBSD.org
-# $FreeBSD: x11-toolkits/wxgtk26/Makefile 316695 2013-04-27 22:09:15Z bapt $
+# $FreeBSD: x11-toolkits/wxgtk26/Makefile 324037 2013-07-31 11:57:45Z kwm $
 
 PORTNAME=	wx
 PORTVERSION=	2.6.4
-PORTREVISION?=	6
+PORTREVISION?=	7
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/wxwindows/wxGTK/${PORTVERSION}
 PKGNAMESUFFIX=	${WXGTK_FLAVOR}
@@ -24,7 +24,7 @@ USE_XORG=	x11 sm xxf86vm xinerama
 USE_GL=		glu
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_GNOME=	gtk20
+USE_GNOME=	gtk20 pangox-compat
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libpng=sys\
 		--with-libjpeg=sys\
