@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/p5-Gtk2-Html2/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/p5-Gtk2-Html2/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Gtk2-Html2
 PORTVERSION=	0.03
@@ -20,8 +20,8 @@ RUN_DEPENDS=	p5-Glib2>=0:${PORTSDIR}/devel/p5-Glib2 \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
 USE_GNOME=	libgtkhtml
-USES=		pkgconfig
-PERL_CONFIGURE=	yes
+USES=		pkgconfig perl5
+USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=	yes
 
 post-install:
