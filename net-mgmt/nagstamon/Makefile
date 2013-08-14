@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-mgmt/nagstamon/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: net-mgmt/nagstamon/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	nagstamon
 PORTVERSION=	0.9.9
@@ -21,8 +21,6 @@ USE_PYDISTUTILS=yes
 USE_GNOME=	pygtk2 librsvg2
 
 MAN1=		nagstamon.1
-
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/Nagstamon
 
