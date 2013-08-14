@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/audacious-dumb/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: audio/audacious-dumb/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	audacious-dumb
 PORTVERSION=	0.82
@@ -18,7 +18,6 @@ BUILD_DEPENDS=	audacious:${PORTSDIR}/multimedia/audacious \
 
 USES=		gmake
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|3\.1-alpha1|3\.1|g; \
