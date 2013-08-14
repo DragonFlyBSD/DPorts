@@ -1,9 +1,9 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/pcb/Makefile 323015 2013-07-15 05:37:39Z marino $
+# $FreeBSD: cad/pcb/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	pcb
 PORTVERSION=	20110918
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
