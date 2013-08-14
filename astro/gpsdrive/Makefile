@@ -1,5 +1,5 @@
 # Created by: Marco Molteni <molter@gufi.org>
-# $FreeBSD: astro/gpsdrive/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: astro/gpsdrive/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	gpsdrive
 PORTVERSION=	2.09
@@ -15,10 +15,10 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
+USES=		perl5
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
-USE_PERL5=	yes
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
