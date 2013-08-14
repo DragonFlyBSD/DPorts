@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: polish/gnugadu2/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: polish/gnugadu2/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	gnugadu2
 PORTVERSION=	2.3.0
@@ -17,11 +17,10 @@ LIB_DEPENDS=	gadu.3:${PORTSDIR}/polish/libgadu \
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext perl5
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 USE_XORG=	x11 xaw ice xscrnsaver
 WANT_GNOME=	yes
 # there is a header conflict here, that breaks build
