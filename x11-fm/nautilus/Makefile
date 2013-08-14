@@ -1,5 +1,5 @@
 # Created by: ade, archie
-# $FreeBSD: x11-fm/nautilus/Makefile 321088 2013-06-17 08:16:03Z kwm $
+# $FreeBSD: x11-fm/nautilus/Makefile 324219 2013-08-04 07:26:19Z az $
 #   $MCom: ports/x11-fm/nautilus/Makefile,v 1.212 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	nautilus
@@ -22,8 +22,7 @@ CONFLICTS=	nautilus-3.[0-9]*
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		gettext
-USES=		desktop-file-utils shared-mime-info
+USES=		gettext desktop-file-utils shared-mime-info
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
 		librsvg2 ltverhack gvfs ltasneededhack
 USE_LDCONFIG=	yes
