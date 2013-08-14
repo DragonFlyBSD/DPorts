@@ -2,7 +2,7 @@
 # Date created:		2004-08-03
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: x11-toolkits/p5-Glade2/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
+# $FreeBSD: x11-toolkits/p5-Glade2/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Glade
@@ -26,7 +26,8 @@ BUILD_DEPENDS=	p5-ExtUtils-Depends>=0:${PORTSDIR}/devel/p5-ExtUtils-Depends \
 RUN_DEPENDS=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
 USE_GNOME=	libglade2
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Gtk2::GladeXML.3
 
