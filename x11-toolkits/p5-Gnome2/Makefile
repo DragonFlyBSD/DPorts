@@ -3,7 +3,7 @@
 # Date created:			Jan 2, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gnome2/Makefile,v 1.27 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gnome2/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Gnome2
@@ -29,7 +29,8 @@ RUN_DEPENDS=	p5-Glib2>=0:${PORTSDIR}/devel/p5-Glib2 \
 		p5-Gnome2-Canvas>=0:${PORTSDIR}/x11-toolkits/p5-Gnome2-Canvas
 
 USE_GNOME=	libgnomeui libgnome libbonoboui
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAKE_JOBS_UNSAFE=	yes
 
