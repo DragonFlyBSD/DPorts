@@ -1,4 +1,4 @@
-@comment $FreeBSD: editors/gobby/pkg-plist 310137 2013-01-09 11:31:47Z sbz $
+@comment $FreeBSD: editors/gobby/pkg-plist 324042 2013-07-31 12:40:12Z antoine $
 bin/gobby
 %%DATADIR%%/icons/HighContrastLargePrint/48x48/actions/chat.png
 %%DATADIR%%/icons/HighContrastLargePrint/48x48/actions/document-list.png
@@ -70,6 +70,7 @@ share/icons/hicolor/scalable/apps/gobby.svg
 @dirrmtry share/locale/hr/LC_MESSAGES
 @dirrmtry share/locale/he/LC_MESSAGES
 @dirrmtry share/locale/gv/LC_MESSAGES
+@dirrmtry share/locale/gv
 @dirrmtry share/locale/fr/LC_MESSAGES
 @dirrmtry share/locale/fi/LC_MESSAGES
 @dirrmtry share/locale/eu/LC_MESSAGES
