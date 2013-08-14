@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tuxtype
-# Date created:				Mon Aug  6 21:53:03 EDT 2001
-# Whom:					Patrick Li <pat@databits.net>
-#
-# $FreeBSD: games/tuxtype/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
-#
+# Created by: Patrick Li <pat@databits.net>
+# $FreeBSD: games/tuxtype/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	tuxtype
 PORTVERSION=	1.8.1
@@ -28,8 +24,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}_w_fonts-${PORTVERSION}
 
 USE_GNOME=	libxml2
 USE_SDL=	image mixer net pango sdl
-USE_PERL5=	yes
-USES=		iconv
+USES=		iconv perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	T4K_COMMON_CFLAGS="-I${T4K_WRKSRC}/src" \
