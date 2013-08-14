@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xvattr/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/xvattr/Makefile 323695 2013-07-26 06:47:04Z bapt $
 
 PORTNAME=	xvattr
 PORTVERSION=	1.3
@@ -38,9 +38,9 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} ${PORTNAME}.c -o ${PORTNAME} \
-		`pkg-config --cflags --libs xv` -lX11
+		`pkg-config --cflags --libs xv x11`
 	cd ${WRKSRC} && ${CC} ${CFLAGS} g${PORTNAME}.c -o g${PORTNAME} \
-		`pkg-config --cflags --libs ${GTK_PC} xv` -lX11
+		`pkg-config --cflags --libs ${GTK_PC} xv x11`
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
