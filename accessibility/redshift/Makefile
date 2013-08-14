@@ -1,8 +1,8 @@
 # New ports collection makefile for:   redshift
 # Date created:        Wed Nov 24 12:35:17 CST 2010
-# Whom:                Mark Felder <feld@feld.me>
+# Whom:                Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD: accessibility/redshift/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: accessibility/redshift/Makefile 323891 2013-07-29 15:03:58Z feld $
 #
 
 PORTNAME=	redshift
@@ -11,7 +11,7 @@ PORTREVISION=	1
 CATEGORIES=	accessibility
 MASTER_SITES=	http://launchpad.net/redshift/trunk/${PORTVERSION}/+download/
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Adjusts the color temperature of your screen
 
 FETCH_ARGS=	"-pRr"
