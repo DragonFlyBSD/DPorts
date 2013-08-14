@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Catalyst-View-RRDGraph/Makefile,v 1.12 2013/02/09 14:03:38 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-View-RRDGraph/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-View-RRDGraph
 PORTVERSION=	0.08
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockObject>=1.07:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Helper::View::RRDGraph.3 \
 	Catalyst::View::RRDGraph.3
