@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <Nukama@gmail.com>
-# $FreeBSD: editors/gummi/Makefile 322366 2013-07-06 07:59:09Z bapt $
+# $FreeBSD: editors/gummi/Makefile 323932 2013-07-29 22:37:26Z bapt $
 
 PORTNAME=	gummi
 PORTVERSION=	0.6.5
@@ -35,7 +35,7 @@ TEXCOUNT_DESC=	With texcount statistics
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
