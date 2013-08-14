@@ -1,9 +1,5 @@
-# ports collection makefile for:	sharpconstruct
-# Date created:		24 Feb 2006
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: graphics/sharpconstruct/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: graphics/sharpconstruct/Makefile 323503 2013-07-22 22:50:30Z amdmi3 $
 
 PORTNAME=	sharpconstruct
 PORTVERSION=	0.11
