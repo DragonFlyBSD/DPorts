@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-UML-Class-Simple/Makefile 318368 2013-05-17 09:36:04Z lth $
+# $FreeBSD: textproc/p5-UML-Class-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	UML-Class-Simple
 PORTVERSION=	0.19
@@ -20,12 +20,13 @@ BUILD_DEPENDS=	p5-Class-Inspector>=1.16:${PORTSDIR}/devel/p5-Class-Inspector \
 		dot:${PORTSDIR}/graphics/graphviz
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	umlclass.pl.1
 MAN3=	UML::Class::Simple.3
 
 post-patch:
-	${PERL} -pi -e '$$_="" if /auto_install/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' '/auto_install/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
