@@ -1,6 +1,5 @@
 BUILD_DEPENDS+=		yasm:${PORTSDIR}/devel/yasm
 BUILD_DEPENDS+=		gm4:${PORTSDIR}/devel/m4
-BUILD_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
 
 OPTIONS_EXCLUDE+=	WEBRTC ENIGMAIL LDAP
 CONFIGURE_ARGS+=	--disable-webrtc

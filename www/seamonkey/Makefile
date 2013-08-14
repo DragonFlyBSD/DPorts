@@ -1,8 +1,8 @@
 # Created by: eivind/dima/jseger
-# $FreeBSD: www/seamonkey/Makefile 322692 2013-07-10 13:28:54Z flo $
+# $FreeBSD: www/seamonkey/Makefile 324562 2013-08-11 01:20:54Z marino $
 
 PORTNAME=	seamonkey
-DISTVERSION=	2.19
+DISTVERSION=	2.20
 CATEGORIES?=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
@@ -11,14 +11,14 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	The open source, standards compliant web browser
 
-BUILD_DEPENDS=	nspr>=4.9.6:${PORTSDIR}/devel/nspr \
-		nss>=3.14.3:${PORTSDIR}/security/nss \
+BUILD_DEPENDS=	nspr>=4.10:${PORTSDIR}/devel/nspr \
+		nss>=3.15:${PORTSDIR}/security/nss \
 		sqlite3>=3.7.16.1:${PORTSDIR}/databases/sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		unzip:${PORTSDIR}/archivers/unzip
 
 EM_VERSION=	1.5.2
-L_VERSION=	2.4b1
+L_VERSION=	2.5b1
 
 USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
@@ -30,7 +30,6 @@ WANT_GNOME=	yes
 USE_QT4=	# empty
 QT_NONSTANDARD=	yes
 WANT_PERL=	yes
-GNU_CONFIGURE=	yes
 ALL_TARGET=	default
 USE_GL=		gl
 USE_DOS2UNIX=	mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
@@ -47,12 +46,17 @@ MOZ_PKGCONFIG_FILES=
 NOT_FOR_ARCHS=	ia64
 
 OPTIONS_DEFINE=	CHATZILLA COMPOSER ENIGMAIL LDAP LIGHTNING MAILNEWS WEBRTC
-OPTIONS_DEFAULT=CHATZILLA COMPOSER LDAP LIGHTNING MAILNEWS WEBRTC
+OPTIONS_DEFAULT=CHATZILLA COMPOSER ENIGMAIL LDAP LIGHTNING MAILNEWS WEBRTC
 
 CHATZILLA_DESC?=Chatzilla IRC module
 COMPOSER_DESC?=	HTML Composer module
 LDAP_DESC?=	LDAP support for Mailnews
 MAILNEWS_DESC?=	Mail and News modules
+
+# non-client.mk objdir build broken after bug 846540
+.undef GNU_CONFIGURE
+ALL_TARGET=	build
+MAKEFILE=	${WRKSRC}/client.mk
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
@@ -73,7 +77,6 @@ MOZSRC:=	${WRKSRC}/mozilla
 XPI_LIBDIR=	${PREFIX}/lib/xpi
 
 .if ! ${PORT_OPTIONS:MMAILNEWS}
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-configure.in
 MOZ_OPTIONS+=	--disable-ldap --disable-mailnews
 .else
 # mail and news desired, but not LDAP
@@ -83,7 +86,6 @@ MOZ_OPTIONS+=	--disable-ldap --enable-mailnews
 MOZ_OPTIONS+=	--enable-ldap --enable-mailnews
 .endif
 .if ${PORT_OPTIONS:MENIGMAIL}
-BROKEN=		Does not build see https://bugzilla.mozilla.org/show_bug.cgi?id=886095
 MASTER_SITES+=	http://www.enigmail.net/download/source/:enigmail
 DISTFILES+=	${EM_DISTFILE}:enigmail
 RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg
@@ -96,6 +98,7 @@ EM_ID_RFILES=	${XPI_LIBDIR}/${EM_ID}/install.rdf \
 		${XPI_LIBDIR}/${EM_ID}/components/enigmail.js \
 		${XPI_LIBDIR}/${EM_ID}/modules/enigmailCommon.jsm
 EXTRA_PATCHES+=	${FILESDIR}/extrapatch-enigmail-ipc-src-Makefile
+EXTRA_PATCHES+=	${FILESDIR}/extra-bug886095
 .endif
 .endif
 
