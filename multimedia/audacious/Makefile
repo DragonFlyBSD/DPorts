@@ -1,8 +1,8 @@
 # Created by: Zastupov Stepan [RedChrom] <redchrom@mail.ru>
-# $FreeBSD: multimedia/audacious/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/audacious/Makefile 324331 2013-08-07 06:35:24Z oliver $
 
 PORTNAME=	audacious
-PORTVERSION=	3.3.4
+PORTVERSION=	3.4
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 
@@ -22,7 +22,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-CONFIGURE_ARGS=	--disable-chardet
+CONFIGURE_ARGS=	--disable-chardet --with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 
 MAN1=		audacious.1 audtool.1
 
