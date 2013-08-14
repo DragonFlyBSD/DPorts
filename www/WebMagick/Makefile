@@ -1,9 +1,9 @@
 # Created by: ache
-# $FreeBSD: www/WebMagick/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: www/WebMagick/Makefile 324377 2013-08-08 07:12:36Z ache $
 
 PORTNAME=	WebMagick
-PORTVERSION=	2.03p18
-DISTVERSION=	2.03pre18
+PORTVERSION=	2.03p23
+DISTVERSION=	2.03pre23
 PORTEPOCH=	1
 CATEGORIES=	www graphics
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}-beta/${DISTVERSION}
@@ -16,8 +16,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick
 RUN_DEPENDS=	p5-Sort-Naturally>=0:${PORTSDIR}/textproc/p5-Sort-Naturally
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 USE_AUTOTOOLS=  autoconf aclocal automake
 AUTOMAKE_ARGS+=	--add-missing
 INFO=		webmagick
