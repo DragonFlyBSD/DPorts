@@ -3,7 +3,7 @@
 # Date created:                Jan 31, 2001
 # Whom:                        Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/games/mahjong/Makefile,v 1.42 2012/11/17 05:57:45 svnexp Exp $
+# $FreeBSD: games/mahjong/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	mahjong
@@ -19,12 +19,12 @@ COMMENT=	A networked Mah Jong program, together with a computer player
 
 LICENSE=	GPLv2 # (or later)
 
+USES=		perl5
 USE_GNOME=	gtk20
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_GMAKE=	yes
 MAKE_ENV=	CCLINK="${CC}" CDEBUGFLAGS="${CFLAGS}" PERL="${PERL}" \
 		INCLUDES="-I."
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		xmj.1
 MLINKS=		xmj.1 mj-player.1 \
