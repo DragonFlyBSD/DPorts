@@ -2,7 +2,7 @@
 # Date created:		2004-03-31
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/multimedia/acidrip/Makefile,v 1.22 2012/11/17 05:59:47 svnexp Exp $
+# $FreeBSD: multimedia/acidrip/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	acidrip
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	lsdvd:${PORTSDIR}/multimedia/lsdvd \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN1=		acidrip.1
 
 .if defined(WITH_DVD_DEVICE)
