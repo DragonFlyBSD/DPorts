@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: multimedia/gnome-mplayer/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: multimedia/gnome-mplayer/Makefile 323670 2013-07-25 21:20:22Z bapt $
 
 PORTNAME=	gnome-mplayer
 PORTVERSION=	1.0.8
@@ -22,10 +22,8 @@ GIO_DESC=	Use GIO for file I/O
 GPOD_DESC=	Add support for libgpod
 NAUPLUG_DESC=	Enable Nautilus plugin
 
-MAKE_JOBS_SAFE=	yes
-
+USES=		gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_XORG=	x11 xscrnsaver
 INSTALLS_ICONS=	yes
@@ -88,6 +86,7 @@ CONFIGURE_ARGS+=	--enable-nautilus=no
 USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
+LDFLAGS+=	-lintl
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
