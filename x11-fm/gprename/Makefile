@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-fm/gprename/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-fm/gprename/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	gprename
 PORTVERSION=	2.7
@@ -19,8 +19,8 @@ RUN_DEPENDS=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 WRKSRC=		${WRKDIR}/${PORTNAME}/trunk
 
 USE_BZIP2=	yes
-USE_PERL5_RUN=	yes
-USES=		gettext
+USE_PERL5=	run
+USES=		gettext perl5
 NO_BUILD=	yes
 
 MAN1=		gprename.1
