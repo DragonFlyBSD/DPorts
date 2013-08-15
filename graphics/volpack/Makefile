@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/volpack/Makefile,v 1.5 2012/12/10 20:43:14 svnexp Exp $
+# $FreeBSD: graphics/volpack/Makefile 324710 2013-08-14 12:38:41Z danfe $
 
 PORTNAME=	volpack
 PORTVERSION=	1.0b3
@@ -13,6 +13,7 @@ COMMENT=	Portable software library for volume rendering
 LICENSE=	BSD
 
 GNU_CONFIGURE=	yes
+MAKE_ARGS=	MFLAGS=""	# required for bmake(1) and -jX builds
 
 PLIST_FILES=	lib/libvolpack.a \
 		include/volpack.h
