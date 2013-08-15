@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gio-sharp
-# Date created:		2011-04-26
-# Whom:			Romain Tartiere <romain@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/gio-sharp/Makefile,v 1.3 2012/11/17 05:55:45 svnexp Exp $
-#
+# Created by: Romain Tartiere <romain@FreeBSD.org>
+# $FreeBSD: devel/gio-sharp/Makefile 324693 2013-08-14 10:54:04Z marino $
 
 PORTNAME=	gio-sharp
 PORTVERSION=	2.22.3
@@ -16,7 +12,9 @@ COMMENT=	GIO bindings not available in gtk-sharp
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	gnomehack gtksharp20
+
+MAKE_JOBS_UNSAFE=yes
 
 .include <bsd.port.mk>
