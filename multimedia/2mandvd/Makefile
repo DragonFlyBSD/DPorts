@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: multimedia/2mandvd/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: multimedia/2mandvd/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	2ManDVD
 PORTVERSION=	1.8.4
@@ -30,14 +30,14 @@ RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+USES=		perl5
 USE_QT4=	corelib gui opengl \
 		linguist_build moc_build qmake_build rcc_build uic_build
 USE_GL=		glu
 USE_SDL=	sdl
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_GMAKE=	yes
 MAKE_ENV=	QTDIR="${QT_PREFIX}"
-MAKE_JOBS_SAFE=	yes
 
 DATADIR=	${PREFIX}/share/2ManDVD
 
