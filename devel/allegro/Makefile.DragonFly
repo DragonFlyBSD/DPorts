@@ -1,6 +1,0 @@
-# gcc 4.4 assembler has some kind of bug in it
-# Using it results in this error
-# al386gcc.h:209: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
-# al386gcc.h:209: error: 'asm' operand has impossible constraints
-
-USE_GCC= 4.7
