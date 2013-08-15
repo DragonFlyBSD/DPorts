@@ -1,4 +1,4 @@
-/* $FreeBSD: ports/lang/pcc/files/ccconfig.h,v 1.6 2012/11/17 05:58:54 svnexp Exp $ */
+/* $FreeBSD: lang/pcc/files/ccconfig.h 300896 2012-07-14 13:54:48Z beat $ */
 /*	$Id: ccconfig.h,v 1.2 2004/12/02 21:32:25 ragge Exp $	*/
 
 /*

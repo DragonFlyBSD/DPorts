@@ -1,4 +1,4 @@
-/* $FreeBSD: ports/lang/pcc/files/f77config.h,v 1.2 2012/11/17 05:58:54 svnexp Exp $ */
+/* $FreeBSD: lang/pcc/files/f77config.h 300896 2012-07-14 13:54:48Z beat $ */
 /*	$Id: f77config.h,v 1.1 2005/04/17 20:22:18 ragge Exp $	*/
 
 /*
