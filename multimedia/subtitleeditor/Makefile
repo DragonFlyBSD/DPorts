@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/subtitleeditor/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: multimedia/subtitleeditor/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	subtitleeditor
 PORTVERSION=	0.40.0
@@ -24,7 +24,6 @@ USE_GNOME=	gtk20
 USE_GSTREAMER=	good
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
