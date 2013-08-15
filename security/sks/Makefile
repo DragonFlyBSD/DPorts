@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/sks/Makefile,v 1.12 2013/01/05 15:46:11 svnexp Exp $
+# $FreeBSD: security/sks/Makefile 324689 2013-08-14 08:32:53Z johans $
 
 PORTNAME=	sks
 PORTVERSION=	1.1.4
@@ -13,7 +13,9 @@ PROJECTHOST=	sks-keyserver
 
 USE_OCAML=	yes
 USE_BDB=	5
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
+MAKE_JOBS_UNSAFE=yes
 
 USE_GMAKE=	yes
 MAKE_ENV=	BDBINCLUDE="-I${BDB_INCLUDE_DIR}" \
