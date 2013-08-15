@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: devel/adime/Makefile 315472 2013-03-28 15:22:11Z eadler $
+# $FreeBSD: devel/adime/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	adime
 PORTVERSION=	2.2.1
@@ -12,15 +12,13 @@ COMMENT=	Generate Allegro dialogs in a very simple way
 
 LIB_DEPENDS=	alleg:${PORTSDIR}/devel/allegro
 
-USE_GMAKE=	yes
+USES=	gmake
 
 .include "Makefile.man"
 
 MAKEFILE=	makefile
 INSTALL_TARGET=	install install-man
 USE_LDCONFIG=	yes
-
-MAKE_JOBS_SAFE=	yes
 
 pre-build:
 	@(cd ${WRKSRC} && ${SH} fix.sh unix)
