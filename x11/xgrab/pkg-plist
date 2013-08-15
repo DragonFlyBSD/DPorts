@@ -1,0 +1,3 @@
+bin/xgrab
+bin/xgrabsc
+lib/X11/app-defaults/XGrab
