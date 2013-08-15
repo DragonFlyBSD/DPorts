@@ -1,9 +1,5 @@
-# Ports collection makefile for:	mmix
-# Date created:				25 Oct 2000
-# Whom:			Jing-Tang Keith Jang <keith@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/mmix/Makefile,v 1.23 2012/11/17 05:58:53 svnexp Exp $
-#
+# Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
+# $FreeBSD: lang/mmix/Makefile 324706 2013-08-14 12:05:35Z marino $
 
 PORTNAME=	mmix
 PORTVERSION=	20110831
@@ -15,6 +11,8 @@ MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	A RISC computer designed by Donald E. Knuth
 
 BUILD_DEPENDS=	ctangle:${PORTSDIR}/devel/cweb
+
+MAKE_JOBS_UNSAFE=yes
 
 NO_WRKSUBDIR=	yes
 FILES=		mmix.1 mmix.mp silly.out silly.run
