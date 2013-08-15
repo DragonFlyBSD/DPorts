@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-RRDTool
-# Date created:	   05 July 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/p5-POE-Component-RRDTool/Makefile,v 1.18 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/p5-POE-Component-RRDTool/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	POE-Component-RRDTool
 PORTVERSION=	0.18
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		${LOCALBASE}/bin/rrdtool:${PORTSDIR}/databases/rrdtool
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 CONFIGURE_ARGS=	</dev/null
 
 MAN3=		POE::Component::RRDTool.3
