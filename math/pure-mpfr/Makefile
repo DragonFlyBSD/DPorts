@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-mpfr
-# Date created:		2011-10-19
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/math/pure-mpfr/Makefile,v 1.2 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: math/pure-mpfr/Makefile 324729 2013-08-14 14:58:37Z marino $
 
 PORTNAME=	pure-mpfr
 PORTVERSION=	0.4
@@ -13,12 +9,12 @@ MAINTAINER=	lichray@gmail.com
 COMMENT=	Multiprecision floats for Pure
 
 USE_PURE=	yes
+USES=		pkgconfig
 
 PLIST_FILES=	lib/pure/mpfr.pure \
 		lib/pure/mpfr.so
 
 MAKE_ARGS+=	libdir="${PREFIX}/lib"
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
