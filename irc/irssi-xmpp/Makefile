@@ -1,7 +1,5 @@
-# New ports collection makefile for:   irssi-xmpp
-# Date created:                11 September 2007
-# Whom:                        Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/irc/irssi-xmpp/Makefile,v 1.8 2012/11/17 05:58:29 svnexp Exp $
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: irc/irssi-xmpp/Makefile 324701 2013-08-14 11:36:20Z marino $
 
 PORTNAME=	irssi-xmpp
 PORTVERSION=	0.51
@@ -15,6 +13,7 @@ BUILD_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 LIB_DEPENDS=	loudmouth:${PORTSDIR}/net-im/loudmouth
 
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 
 PLIST_FILES=	lib/irssi/modules/libfe_xmpp.so \
@@ -30,6 +29,8 @@ PORTDOCS=	README \
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+MAKE_JOBS_UNSAFE=yes
 
 post-configure:
 	@${REINPLACE_CMD} "/ggdb/d" ${WRKSRC}/config.mk
