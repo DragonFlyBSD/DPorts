@@ -1,9 +1,8 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 323078 2013-07-15 20:24:59Z naddy $
+# $FreeBSD: multimedia/vlc/Makefile 324226 2013-08-04 12:49:58Z az $
 
 PORTNAME=	vlc
-DISTVERSION=	2.0.6
-PORTREVISION=	5
+DISTVERSION=	2.0.7
 PORTEPOCH=	3
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/p/-pre/}/ \
@@ -64,8 +63,8 @@ NO_DVD_DESC=	disable DVD specific features
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		iconv
-USE_PERL5_BUILD=yes
+USES=		iconv perl5
+USE_PERL5=	build
 USE_GL=yes
 USE_CSTD=	gnu99
 MAKE_JOBS_SAFE=	yes
@@ -803,7 +802,7 @@ pre-install:
 .if ${PORT_OPTIONS:MNLS}
 	cd ${FAKEDIR}/share/locale && ${FIND} -s * -type f -o -type l | \
 		${SED} -e 's|^|share/locale/|' >> ${PLIST}
-.for locale in ach an cgg bn_IN ckb co ff fur gd ia kk km kmr lg my oc ps tet tl zu
+.for locale in ach an az cgg bn_IN ckb co ff fur gd ia kk km kmr ky lg my oc or_IN ps tet tl zu
 	${ECHO_CMD} "@dirrmtry share/locale/${locale}/LC_MESSAGES" >> ${PLIST}
 	${ECHO_CMD} "@dirrmtry share/locale/${locale}" >> ${PLIST}
 .endfor
