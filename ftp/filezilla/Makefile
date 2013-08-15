@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ftp/filezilla/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: ftp/filezilla/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	filezilla
@@ -21,7 +21,6 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 		idn:${PORTSDIR}/dns/libidn \
 		tinyxml:${PORTSDIR}/textproc/tinyxml
 
-MAKE_JOBS_SAFE=	yes
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
