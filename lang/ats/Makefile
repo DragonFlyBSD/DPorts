@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: ports/lang/ats/Makefile,v 1.11 2013/01/24 10:43:46 svnexp Exp $
+# $FreeBSD: lang/ats/Makefile 324708 2013-08-14 12:27:04Z marino $
 
 PORTNAME=	ats
 PORTVERSION=	${ATS_VER}
@@ -13,10 +13,12 @@ MAINTAINER=	jyyou@cs.nctu.edu.tw
 COMMENT=	Language with a type system rooted in the Applied Type System
 
 ONLY_FOR_ARCHS=	i386 amd64
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include \
 		-L${LOCALBASE}/lib
+
+MAKE_JOBS_UNSAFE=yes
 
 PORTDOCS=	FAQ.txt
 PORTEXAMPLES=	AUP INTRO KernighanRitchie MISC MULTICORE TEST
