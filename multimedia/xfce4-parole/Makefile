@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/xfce4-parole/Makefile 319807 2013-06-03 20:55:44Z olivierd $
+# $FreeBSD: multimedia/xfce4-parole/Makefile 323654 2013-07-25 17:21:59Z olivierd $
 
 PORTNAME=	parole
-PORTVERSION=	0.5.1
+PORTVERSION=	0.5.2
 CATEGORIES=	multimedia xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}/
 DIST_SUBDIR=	xfce4
@@ -19,7 +19,6 @@ LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib \
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 CONFIGURE_ARGS=	--enable-notify-plugin \
 		--enable-tray-plugin \
 		--enable-taglib \
@@ -30,7 +29,7 @@ USE_GNOME=	gtk20 glib20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil
 USE_XORG=	x11 sm
 USE_LDCONFIG=	yes
-USES=		desktop-file-utils pathfix pkgconfig
+USES=		desktop-file-utils pathfix pkgconfig gmake
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SINGLE=	GSTREAMER
