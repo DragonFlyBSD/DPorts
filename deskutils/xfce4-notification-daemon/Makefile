@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.3.7
@@ -27,7 +27,6 @@ USE_BZIP2=	yes
 USE_GNOME=	librsvg2
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv libutil libgui
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/xfce4 \
 			--libexecdir=${PREFIX}/libexec/xfce4 \
