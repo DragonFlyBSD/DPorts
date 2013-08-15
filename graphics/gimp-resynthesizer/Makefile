@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/gimp-resynthesizer/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/gimp-resynthesizer/Makefile 324400 2013-08-08 15:19:42Z amdmi3 $
 
 PORTNAME=	resynthesizer
 PORTVERSION=	2.0
@@ -24,6 +24,7 @@ USES=		gettext
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	aclocal automake
 USE_GMAKE=	yes
+AUTOMAKE_ARGS=	--add-missing
 
 OPTIONS_DEFINE=	THREADS
 THREADS_DESC=	Threading support (produces nondeterministic results)
