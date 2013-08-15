@@ -1,8 +1,8 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/jvmtop/Makefile 321335 2013-06-19 21:42:55Z jgh $
+# $FreeBSD: sysutils/jvmtop/Makefile 323974 2013-07-30 16:24:11Z jgh $
 
 PORTNAME=	jvmtop
-PORTVERSION=	0.6.0
+PORTVERSION=	0.7.1
 CATEGORIES=	sysutils java
 MASTER_SITES=	GOOGLE_CODE
 
