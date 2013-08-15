@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: biology/libgenome/Makefile 321307 2013-06-19 18:53:54Z bsam $
+# $FreeBSD: biology/libgenome/Makefile 324692 2013-08-14 09:53:39Z marino $
 
 PORTNAME=	libgenome
 PORTVERSION=	0.5.2
@@ -12,6 +12,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Toolkit for developing bioinformatic related software in C++
 
 LICENSE=	GPLv2
+
+MAKE_JOBS_UNSAFE=yes
 
 USE_AUTOTOOLS=	libtool
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
