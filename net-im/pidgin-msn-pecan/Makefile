@@ -2,7 +2,7 @@
 # Date created:		30 July 2008
 # Whom:			hrkfrd@gmail.com
 #
-# $FreeBSD: net-im/pidgin-msn-pecan/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net-im/pidgin-msn-pecan/Makefile 323776 2013-07-27 10:19:30Z marino $
 #
 
 PORTNAME=	msn-pecan
@@ -15,6 +15,9 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.r/-rc/}
 
 MAINTAINER=	hrkfdn@gmail.com
 COMMENT=	Alternative MSN protocol plugin for libpurple
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple
 
