@@ -1,5 +1,5 @@
 # Created by: Yuan Jue <yuanjue@yuanjue.net>
-# $FreeBSD: devel/kdesvn-kde4/Makefile 322537 2013-07-08 20:12:17Z rakuco $
+# $FreeBSD: devel/kdesvn-kde4/Makefile 323850 2013-07-28 20:28:32Z dbn $
 
 PORTNAME=	kdesvn
 DISTVERSION=	1.6.0
@@ -23,7 +23,6 @@ USE_KDE4=	kdelibs kdeprefix automoc4
 USE_LDCONFIG=	yes
 USE_QT4=	corelib gui xml network dbus svg qt3support sql \
 		qmake_build moc_build rcc_build uic_build linguist_build
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		kdesvn.1 kdesvnaskpass.1
 
