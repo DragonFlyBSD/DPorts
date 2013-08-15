@@ -1,5 +1,3 @@
-$NetBSD: patch-ad,v 1.3 2010/01/15 19:18:42 tnn Exp $
-
 --- corba/make/common/shared/Platform.gmk.orig	2010-01-02 13:49:48.000000000 +0000
 +++ corba/make/common/shared/Platform.gmk
 @@ -265,6 +265,13 @@ ifeq ($(SYSTEM_UNAME), FreeBSD)
@@ -16,15 +14,3 @@ $NetBSD: patch-ad,v 1.3 2010/01/15 19:18:42 tnn Exp $
  ifeq ($(SYSTEM_UNAME), Darwin)
    PLATFORM = bsd
    OS_NAME = darwin
-@@ -347,9 +354,9 @@ ifeq ($(PLATFORM), bsd)
-   REQUIRED_FREE_SPACE=1500000
-   # How much RAM does this machine have:
-   ifeq ($(OS_VENDOR), OpenBSD)
--    MB_OF_MEMORY=$(shell sysctl -n hw.physmem | awk '{print int($$NF / 1048576); }' )
-+    MB_OF_MEMORY=$(shell /sbin/sysctl -n hw.physmem | awk '{print int($$NF / 1048576); }' )
-   else
--    MB_OF_MEMORY=$(shell (sysctl -n hw.physmem64 2> /dev/null || sysctl -n hw.physmem) | awk '{print int($$NF / 1048576); }' )
-+    MB_OF_MEMORY=$(shell (/sbin/sysctl -n hw.physmem64 2> /dev/null || sysctl -n hw.physmem) | awk '{print int($$NF / 1048576); }' )
-   endif
- endif
- 

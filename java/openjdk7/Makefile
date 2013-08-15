@@ -60,6 +60,7 @@ LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2 \
 		asound:${PORTSDIR}/audio/alsa-lib
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
 		unzip:${PORTSDIR}/archivers/unzip \
+		javavm:${PORTSDIR}/java/javavmwrapper \
 		${LOCALBASE}/include/cups/cups.h:${PORTSDIR}/print/cups-client
 RUN_DEPENDS+=	javavm:${PORTSDIR}/java/javavmwrapper \
 		${LOCALBASE}/lib/X11/fonts/dejavu:${PORTSDIR}/x11-fonts/dejavu
@@ -152,6 +153,11 @@ post-patch:
 	@${REINPLACE_CMD} 's|build-policy install-limited|build-policy install-unlimited|' \
 		${WRKSRC}/jdk/make/javax/crypto/Makefile
 .endif
+
+# override do-build to filter out _MAKE_JOBS to enable parallel build
+do-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} \
+		${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET}
 
 .if ${PORT_OPTIONS:MTZUPDATE}
 pre-install:
