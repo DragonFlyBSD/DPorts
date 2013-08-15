@@ -1,13 +1,13 @@
 # Created by: ijliao
-# $FreeBSD: print/scribus/Makefile 321333 2013-06-19 21:37:29Z bsam $
+# $FreeBSD: print/scribus/Makefile 324393 2013-08-08 12:09:50Z bsam $
 
 PORTNAME=	scribus
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.3
 CATEGORIES=	print editors
 MASTER_SITES=	SF \
 		http://www.scribus.net/downloads/${PORTVERSION}/
 
-MAINTAINER=	sylvio@FreeBSD.org
+MAINTAINER=	bsam@FreeBSD.org
 COMMENT=	Comprehensive desktop publishing program
 
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
@@ -18,7 +18,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		freetype:${PORTSDIR}/print/freetype2 \
 		podofo:${PORTSDIR}/graphics/podofo \
 		boost_thread:${PORTSDIR}/devel/boost-libs \
-		aspell:${PORTSDIR}/textproc/aspell \
+		hunspell:${PORTSDIR}/textproc/hunspell \
 		cairo:${PORTSDIR}/graphics/cairo \
 		hyphen:${PORTSDIR}/textproc/hyphen \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
@@ -34,7 +34,7 @@ USE_PYTHON=	yes
 USES=		cmake desktop-file-utils pkgconfig shared-mime-info
 USE_LDCONFIG=	yes
 
-CMAKE_ARGS+=	-DWITH_ASPELL=NO -DWANT_HUNSPELL=YES -Wno-ferror-limit
+CMAKE_ARGS+=	-DWANT_HUNSPELL=YES -Wno-ferror-limit
 
 MAN1=		scribus.1
 MANLANG=	"" pl de
