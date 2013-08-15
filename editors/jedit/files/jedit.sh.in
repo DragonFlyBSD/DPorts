@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/editors/jedit/files/jedit.sh.in,v 1.5 2012/11/17 05:57:14 svnexp Exp $
+# $FreeBSD: editors/jedit/files/jedit.sh.in 300896 2012-07-14 13:54:48Z beat $
 
 # Java heap size, in megabytes
 JAVA_HEAP_SIZE=32
