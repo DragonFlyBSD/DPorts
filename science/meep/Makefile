@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/meep/Makefile 320517 2013-06-11 01:06:48Z miwi $
+# $FreeBSD: science/meep/Makefile 324218 2013-08-04 07:13:08Z az $
 
 PORTNAME=	meep
 PORTVERSION=	1.1.1
@@ -21,10 +21,9 @@ RUN_DEPENDS+=	harminv:${PORTSDIR}/science/harminv
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
 USE_FORTRAN=	yes
 USE_GCC=	4.6+
-USES=		gettext iconv
+USES=		gettext iconv pathfix
 USE_AUTOTOOLS+=	libltdl
 CPPFLAGS+=	-I${LOCALBASE}/include
 LD_LIBRARY_PATH=	-L${LOCALBASE}/lib -L/usr/lib
