@@ -1,8 +1,8 @@
 # Created by: keith@FreeBSD.org
-# $FreeBSD: math/gap/Makefile 314858 2013-03-21 18:25:04Z johans $
+# $FreeBSD: math/gap/Makefile 324737 2013-08-14 15:51:59Z johans $
 
 PORTNAME=	gap
-PORTVERSION=	4.6.3.${GAP_DISTDATE}
+PORTVERSION=	4.6.5.${GAP_DISTDATE}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.gap-system.org/pub/gap/gap46/tar.bz2/ \
 		ftp://ftp.stack.nl/pub/users/johans/gap/ \
@@ -13,12 +13,14 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	GAP is a system for computational discrete algebra
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 ALL_TARGET=	default
 
+MAKE_JOBS_UNSAFE=yes
+
 GAP_VERSION=	${PORTNAME}${PORTVERSION:R:R:S/./r/}	# gap4r5
-GAP_DISTTIME=	2013_03_18-17_40
+GAP_DISTTIME=	2013_07_20-20_02
 GAP_DISTDATE=	${GAP_DISTTIME:C/-.*//:S/_//g}
 GAP_LIBDIR=	${PREFIX}/lib/${GAP_VERSION}
 WRKSRC=		${WRKDIR}/${GAP_VERSION}
