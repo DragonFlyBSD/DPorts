@@ -1,5 +1,5 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
-# $FreeBSD: graphics/ufraw/Makefile 318579 2013-05-20 07:50:28Z bsam $
+# $FreeBSD: graphics/ufraw/Makefile 324591 2013-08-11 14:45:59Z bsam $
 
 PORTNAME=	ufraw
 PORTVERSION=	0.19.2
@@ -104,7 +104,7 @@ post-patch:
 .endfor
 
 pre-build:
-	@${INSTALL_SCRIPT} ${LOCALBASE}/share/glib-2.0/gettext/mkinstalldirs \
+	@${INSTALL_SCRIPT} ${LOCALBASE}/share/icu/50.1.2/mkinstalldirs \
 		${WRKSRC}
 
 post-install:
