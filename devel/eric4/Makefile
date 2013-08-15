@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile 316334 2013-04-23 10:16:03Z bsam $
+# $FreeBSD: devel/eric4/Makefile 324295 2013-08-05 22:29:36Z bsam $
 
 CATEGORIES=	devel python
 DISTNAME=	${PORTNAME}-${PORTVERSION}
@@ -23,6 +23,7 @@ SUB_FILES=	eric4.desktop
 do-configure:
 	${SED}  -e 's,PYTHON_SITELIBDIR,${PYTHON_SITELIBDIR},' \
 		-e 's,PREFIX,${PREFIX},' \
+		-e 's,DATADIR,${DATADIR},' \
 		-e 's,LOCALBASE,${LOCALBASE},' \
 		-e 's,DOCSDIR,${DOCSDIR},' \
 		-e 's,EXAMPLESDIR,${EXAMPLESDIR},' \
@@ -31,7 +32,7 @@ do-configure:
 post-install:
 	${INSTALL} -d ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/eric4.desktop ${PREFIX}/share/applications/
-	${LN} ${PYTHON_SITELIBDIR}/eric4/icons/default/eric.png ${PREFIX}/share/pixmaps/
-	${MKDIR} ${PYTHON_SITELIBDIR}/${PORTNAME}/i18n
+	${LN} -sf ${DATADIR}/icons/default/eric.png ${PREFIX}/share/pixmaps/
+	@${MKDIR} ${DATADIR}/i18n
 
 .include "${.CURDIR}/../../devel/eric4/Makefile.inc"

@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile.inc 322455 2013-07-07 17:23:50Z bsam $
+# $FreeBSD: devel/eric4/Makefile.inc 324295 2013-08-05 22:29:36Z bsam $
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric4:
@@ -7,6 +7,7 @@
 
 PORTNAME=	eric4
 PORTVERSION=	4.5.13
+PORTREVISION=	1
 MASTER_SITES=	SF/eric-ide/${PORTNAME}/stable/${PORTVERSION}
 DISTNAME?=	${PORTNAME}-i18n-${I18N_LANG}-${PORTVERSION}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -23,7 +24,7 @@ INSTALL_CMD?=	install-i18n.py
 
 USE_PYTHON=	2.5+
 NO_BUILD=	yes
-PLIST_FILES?=	%%PYTHON_SITELIBDIR%%/${PORTNAME}/i18n/${PORTNAME}_${I18N_LANG}.qm
+PLIST_FILES?=	%%DATADIR%%/i18n/${PORTNAME}_${I18N_LANG}.qm
 
 do-install:
 	@(cd ${WRKSRC}; \
