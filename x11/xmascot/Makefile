@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmascot
-# Date created:		20 November 1996
-# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/x11/xmascot/Makefile,v 1.15 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: x11/xmascot/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xmascot
 PORTVERSION=	2.6a
@@ -15,7 +11,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Moving mascot on your X11 screen
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xmascot.1
 
