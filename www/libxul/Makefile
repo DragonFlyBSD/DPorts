@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/libxul/Makefile 324409 2013-08-08 18:42:03Z flo $
+# $FreeBSD: www/libxul/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libxul
 DISTVERSION=	17.0.8
@@ -31,7 +31,6 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GL=		gl
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	SKIP_GRE_REGISTRATION=1 mozappdir=${PREFIX}/lib/${MOZILLA}
 LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
 USE_LDCONFIG=	${PREFIX}/lib/${MOZILLA}
