@@ -1,11 +1,10 @@
-# $FreeBSD: www/rt40/Makefile 318867 2013-05-23 12:32:32Z matthew $
+# $FreeBSD: www/rt40/Makefile 324221 2013-08-04 12:19:25Z matthew $
 
 PORTNAME=	rt
-PORTVERSION=	4.0.13
-PORTREVISION=	1
+PORTVERSION=	4.0.17
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/ \
-		ftp://ftp.eu.uu.net/pub/unix/ticketing/rt/release/
+		SF/requesttracker/
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	RT is an industrial-grade ticketing system written in Perl
@@ -62,11 +61,12 @@ BUILD_DEPENDS+=	${CORE_DEPS}       \
 		${ICAL_DEPS}       \
 		${SMTP_DEPS}       \
 		${DASHBOARDS_DEPS} \
-		${USERLOGO_DEPS}
+		${USERLOGO_DEPS}   \
+		${HTML_DOC_DEPS}
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
+USES+=		perl5
 USE_AUTOTOOLS=	autoconf
 
 .include <bsd.port.options.mk>
@@ -78,6 +78,7 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-noportdocs-Makefile.in
 .if ${PORT_OPTIONS:MAP_MODPERL}
 BUILD_DEPENDS+=	${MODPERL2_DEPS}
 RUN_DEPENDS+=	${MODPERL2_DEPS}
+CONFIGURE_ARGS+=	--with-apachectl=${LOCALBASE}/sbin/apachectl
 .endif
 
 .if ${PORT_OPTIONS:MAP_MODFASTCGI}
@@ -85,6 +86,7 @@ USE_APACHE_RUN=	22+
 BUILD_DEPENDS+=	${LOCALBASE}/${APACHEMODDIR}/mod_fastcgi.so:${PORTSDIR}/www/mod_fastcgi
 RUN_DEPENDS+=	${LOCALBASE}/${APACHEMODDIR}/mod_fastcgi.so:${PORTSDIR}/www/mod_fastcgi \
 		${FASTCGI_DEPS}
+CONFIGURE_ARGS+=	--with-apachectl=${LOCALBASE}/sbin/apachectl
 .endif
 
 .if ${PORT_OPTIONS:MLIGHTTPD}
@@ -156,7 +158,7 @@ CONFIGURE_ARGS+=	--enable-gpg
 .if ${PORT_OPTIONS:MGD}
 BUILD_DEPENDS+=	${GD_DEPS}
 RUN_DEPENDS+=	${GD_DEPS}
-configure_args+=	--enable-gd
+CONFIGURE_ARGS+=	--enable-gd
 .endif
 
 RT_ETC_PATH?=	${PREFIX}/etc/${PORTNAME}40
@@ -188,6 +190,8 @@ CONFIGURE_ARGS+=	--enable-layout=${RT_LAYOUT} \
 	--with-db-rt-pass=${DB_PASSWORD} \
 	--with-db-database=${DB_DATABASE} \
 	--with-db-dba=${DB_DBA_USER}
+
+CONFIGURE_ENV+=	PERL=${LOCALBASE}/bin/perl
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
