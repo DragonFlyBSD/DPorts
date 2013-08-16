@@ -1,9 +1,5 @@
-# New ports collection makefile for:	facturier
-# Date created:		30 January 2003
-# Whom:			Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/french/facturier/Makefile,v 1.21 2012/11/17 05:57:28 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: french/facturier/Makefile 324036 2013-07-31 11:56:17Z az $
 
 PORTNAME=	facturier
 PORTVERSION=	2.1.2
@@ -23,8 +19,9 @@ RUN_DEPENDS=	${LOCALBASE}/bin/htmldoc:${PORTSDIR}/textproc/htmldoc			\
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 NO_BUILD=	yes
+USES=		perl5
 USE_APACHE_RUN=	22+
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_MYSQL=	yes
 
 SUB_FILES=	pkg-deinstall
