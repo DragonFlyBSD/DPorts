@@ -1,8 +1,9 @@
-# Created by: chinsan
-# $FreeBSD: net-mgmt/icinga/Makefile 323338 2013-07-20 08:16:37Z lme $
+# Created by: Chin-San Huang <chinsan@FreeBSD.org>
+# $FreeBSD: net-mgmt/icinga/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	icinga
 PORTVERSION=	1.9.3
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF
 
@@ -15,11 +16,8 @@ LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:${PORTSDIR}/net-mgmt/nagios-plugins
 
 USES=		iconv
-USE_PERL5_BUILD=	yes
 USE_AUTOTOOLS=	autoconf libltdl
 USE_RC_SUBR=	icinga
-
-MAKE_JOBS_UNSAFE=yes
 
 GNU_CONFIGURE=	yes
 
@@ -58,7 +56,8 @@ CONFIGURE_ARGS=	--with-command-user=${ICINGAUSER} \
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib" \
 		PERL=${PERL}
 
-INSTALL_TARGET=	install install-commandmode install-config install-eventhandlers
+INSTALL_TARGET=	install install-commandmode install-config \
+		install-eventhandlers
 
 PLIST_SUB=	ICINGADIR=${ICINGADIR} \
 		ICINGALOGDIR=${ICINGALOGDIR} \
@@ -79,11 +78,11 @@ SUB_FILES=	pkg-install \
 SUB_LIST=	PREFIX=${PREFIX} \
 		${PLIST_SUB}
 
-OPTIONS_DEFINE=		EMBEDDED_PERL NANOSLEEP UNHANDLED_HACK IDOUTILS APACHE
+OPTIONS_DEFINE=	EMBEDDED_PERL NANOSLEEP UNHANDLED_HACK IDOUTILS APACHE EXAMPLES
 OPTIONS_DEFAULT=	EMBEDDED_PERL IDOUTILS
 
 EMBEDDED_PERL_DESC=	Enable embedded Perl
-NANOSLEEP_DESC=		Use nanosleep in event timing
+NANOSLEEP_DESC=		Use nanosleep(2) in event timing
 UNHANDLED_HACK_DESC=	Display passive checks in unhandled queries
 IDOUTILS_DESC=		Enable Icinga Data Objects support
 APACHE_DESC=		Depend on Apache and install webconfig
@@ -91,7 +90,7 @@ APACHE_DESC=		Depend on Apache and install webconfig
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEMBEDDED_PERL}
-USE_PERL5=	yes
+USE_PERL5_BUILD=	yes
 CONFIGURE_ARGS+=	--enable-embedded-perl \
 		--with-perlcache
 PLIST_SUB+=	EMBEDDED_PERL=""
@@ -127,30 +126,41 @@ PLIST_SUB+=		APACHE="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's#/bin/ping#/sbin/ping#' ${WRKSRC}/sample-config/cgi.cfg.in
-	@${REINPLACE_CMD} -e 's#Linux#FreeBSD#' ${WRKSRC}/sample-config/icinga.cfg.in
-	@${REINPLACE_CMD} -e 's#775#755#g; s#664#644#g' ${WRKSRC}/html/Makefile.in
+	@${REINPLACE_CMD} -e 's#/bin/ping#/sbin/ping#' \
+		${WRKSRC}/sample-config/cgi.cfg.in
+	@${REINPLACE_CMD} -e 's#Linux#${OPSYS}#' \
+		${WRKSRC}/sample-config/icinga.cfg.in
+	@${REINPLACE_CMD} -e 's#775#755#g; s#664#644#g' \
+		${WRKSRC}/html/Makefile.in
 .if ${PORT_OPTIONS:MUNHANDLED_HACK}
 	@${REINPLACE_CMD} -e 's#;serviceprops=42\&#;serviceprops=10\&#g' \
-		-e 's#;hostprops=42\"#;hostprops=10\"#g' ${WRKSRC}/html/menu.html.in
+		-e 's#;hostprops=42\"#;hostprops=10\"#g' \
+			${WRKSRC}/html/menu.html.in
 .endif
-	@${FIND} ${WRKSRC} -name '*.orig' -delete
+# Use correct make(1) syntax to unbreak parallel builds
+	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \
+		-E 's#cd (.+) && (make|\$$\(MAKE\))#$$(MAKE) -C \1#'
 
 pre-su-install:
 	@${SH} ${PKGINSTALL} ${DISTNAME} PRE-INSTALL
 
 post-install:
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}/idoutils/
 	${MKDIR} ${EXAMPLESDIR}/idoutils/config/
 	${MKDIR} ${EXAMPLESDIR}/idoutils/db
-	cd ${WRKSRC}/module/idoutils/config && ${COPYTREE_SHARE} . ${EXAMPLESDIR}/idoutils/config
-	cd ${WRKSRC}/module/idoutils/db     && ${COPYTREE_SHARE} . ${EXAMPLESDIR}/idoutils/db
+	cd ${WRKSRC}/module/idoutils/config && ${COPYTREE_SHARE} . \
+		${EXAMPLESDIR}/idoutils/config
+	cd ${WRKSRC}/module/idoutils/db && ${COPYTREE_SHARE} . \
+		${EXAMPLESDIR}/idoutils/db
 .endif
-	@${CHMOD} 775 ${ICINGADIR} ${ICINGALOGDIR}/archives ${ICINGADIR}/checkresults ${ICINGADIR}/rw
-	@${CHMOD} g+s ${ICINGADIR}/rw
-	@${CHOWN} ${ICINGAUSER}:${ICINGAGROUP} ${ICINGADIR} ${ICINGALOGDIR}/archives ${ICINGADIR}/checkresults
+	@${CHMOD} 775 ${ICINGADIR} ${ICINGALOGDIR}/archives \
+		${ICINGADIR}/checkresults ${ICINGADIR}/rw
+	@${CHOWN} ${ICINGAUSER}:${ICINGAGROUP} ${ICINGADIR} \
+		${ICINGALOGDIR}/archives ${ICINGADIR}/checkresults
 	@${CHOWN} ${ICINGAUSER}:${WWWGRP} ${ICINGADIR}/rw
+	@${ECHO_MSG}
 	@${CAT} ${PKGMESSAGE}
+	@${ECHO_MSG}
 
 .include <bsd.port.mk>
