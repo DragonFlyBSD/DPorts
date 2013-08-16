@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: security/libpreludedb/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: security/libpreludedb/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	libpreludedb
 PORTVERSION=	1.0.1p1
@@ -39,7 +39,7 @@ SQLITE_DESC=	SQLite3 plugin
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=		yes
+USES+=			perl5
 CONFIGURE_ARGS+=	--with-perl
 PLIST_SUB+=		WITH_PERL=""
 .else
