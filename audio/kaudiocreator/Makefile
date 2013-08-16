@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/kaudiocreator/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: audio/kaudiocreator/Makefile 323850 2013-07-28 20:28:32Z dbn $
 
 PORTNAME=	kaudiocreator
 PORTVERSION=	1.3
@@ -25,7 +25,6 @@ USES=		cmake
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdehier kdeprefix libkcddb libkcompactdisc
 
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 OPTIONS_DEFINE=	NLS
