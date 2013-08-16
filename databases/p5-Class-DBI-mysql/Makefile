@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: ports/databases/p5-Class-DBI-mysql/Makefile,v 1.9 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: databases/p5-Class-DBI-mysql/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Class-DBI-mysql
 PORTVERSION=	1.00
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::mysql.3
 
