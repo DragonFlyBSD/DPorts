@@ -1,9 +1,9 @@
 # Created by: chuckr@freebsd.org
-# $FreeBSD: math/octave/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: math/octave/Makefile 324324 2013-08-06 19:08:57Z bf $
 
 PORTNAME=	octave
 PORTVERSION=	3.6.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/octave/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/bleeding-edge/
