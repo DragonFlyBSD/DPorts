@@ -1,4 +1,4 @@
-$FreeBSD: ports/math/chryzodus/files/patch-makefile.unx,v 1.2 2012/11/17 05:59:19 svnexp Exp $
+$FreeBSD: math/chryzodus/files/patch-makefile.unx 300896 2012-07-14 13:54:48Z beat $
 --- makefile.unx	Tue Jun 29 17:16:38 2004
 +++ makefile.unx.port	Sat Jul  9 21:43:27 2005
 @@ -6,7 +6,7 @@

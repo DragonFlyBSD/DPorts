@@ -1,4 +1,4 @@
-$FreeBSD: ports/math/chryzodus/files/patch-gui.cpp,v 1.2 2012/11/17 05:59:19 svnexp Exp $
+$FreeBSD: math/chryzodus/files/patch-gui.cpp 300896 2012-07-14 13:54:48Z beat $
 --- gui.cpp	Tue Jun 29 17:16:38 2004
 +++ gui.cpp.port	Sat Jul  9 21:25:43 2005
 @@ -121,7 +121,7 @@

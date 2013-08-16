@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/math/chryzodus/pkg-plist,v 1.2 2012/11/17 05:59:19 svnexp Exp $
+@comment $FreeBSD: math/chryzodus/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/chryzodus
 %%PORTDOCS%%%%DOCSDIR%%/chryzode.html
 %%PORTDOCS%%%%DOCSDIR%%/file.html

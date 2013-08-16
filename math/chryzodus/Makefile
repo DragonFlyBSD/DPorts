@@ -2,7 +2,7 @@
 # Date created:		2005-07-09
 # Whom:			Nicola Vitale <nivit@email.it>
 #
-# $FreeBSD: ports/math/chryzodus/Makefile,v 1.7 2012/11/17 05:59:19 svnexp Exp $
+# $FreeBSD: math/chryzodus/Makefile 323734 2013-07-26 16:04:47Z crees $
 #
 
 PORTNAME=	chryzodus
@@ -15,7 +15,7 @@ MASTER_SITES=	SF
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A chryzode (http//www.chryzode.org) explorer
 
-LIB_DEPENDS=	alleg.42:${PORTSDIR}/devel/allegro
+LIB_DEPENDS=	alleg:${PORTSDIR}/devel/allegro
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKEFILE=	makefile.unx
