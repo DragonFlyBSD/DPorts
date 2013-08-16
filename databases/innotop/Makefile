@@ -2,11 +2,11 @@
 # Date created:				23 October 2006
 # Whom:	      				Steven Kreuzer <skreuzer@f2o.org>
 #
-# $FreeBSD: ports/databases/innotop/Makefile,v 1.21 2012/12/28 19:21:07 svnexp Exp $
+# $FreeBSD: databases/innotop/Makefile 323497 2013-07-22 20:24:55Z skreuzer $
 #
 
 PORTNAME=	innotop
-PORTVERSION=	1.9.0
+PORTVERSION=	1.9.1
 CATEGORIES=	databases
 MASTER_SITES=	GOOGLE_CODE
 
