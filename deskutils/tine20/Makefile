@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: deskutils/tine20/Makefile 313133 2013-03-01 04:06:28Z swills $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: deskutils/tine20/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	tine20
 PORTVERSION=	0.0.2012.10.04
@@ -8,7 +8,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	http://www.tine20.org/downloads/${DISTVERSIONSUFFIX}/
 DISTNAME=	${PORTNAME}-allinone_${DISTVERSIONSUFFIX}
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Professional Open Source Groupware and CRM
 
 LICENSE_FILE=	${WRKSRC}/LICENSE
