@@ -1,5 +1,5 @@
 # Created by: Ryan T. Dean <rtdean@cytherianage.net>
-# $FreeBSD: www/ljdeps/Makefile 318953 2013-05-24 10:35:14Z az $
+# $FreeBSD: www/ljdeps/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	ljdeps
 PORTVERSION=	1.0
@@ -31,7 +31,7 @@ RUN_DEPENDS=	p5-Net-Telnet>=0:${PORTSDIR}/net/p5-Net-Telnet \
 
 EXTRACT_ONLY=	# Empty
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 do-install:	# Empty
 
