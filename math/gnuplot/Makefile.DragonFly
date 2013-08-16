@@ -1,5 +1,3 @@
 USES+=			iconv readline ncurses
 CONFIGURE_ARGS+=	--with-readline=bsd
-
 LDFLAGS+=		-L${LOCALBASE}/lib -liconv
-
