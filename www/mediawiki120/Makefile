@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/mediawiki120/Makefile 320364 2013-06-09 17:48:16Z miwi $
+# $FreeBSD: www/mediawiki120/Makefile 324302 2013-08-06 06:47:13Z wen $
 
 PORTNAME=	mediawiki
 PORTVERSION=	1.20.6
@@ -41,7 +41,7 @@ USE_PHP+=	pgsql
 .endif
 
 .if ${PORT_OPTIONS:MSQLITE}
-USE_PHP+=	sqlite
+USE_PHP+=	sqlite3
 .endif
 
 .if ${PORT_OPTIONS:MLDAP}
