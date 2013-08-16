@@ -2,7 +2,7 @@
 # Date created:				26 December 2003
 # Whom:					Hideki Machida <hido@neojapangz.com>
 #
-# $FreeBSD: ports/games/hlstats/Makefile,v 1.22 2012/11/17 05:57:41 svnexp Exp $
+# $FreeBSD: games/hlstats/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	hlstats
@@ -18,10 +18,11 @@ LICENSE=	CDDL
 
 RUN_DEPENDS=	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql
 
+USES=		perl5
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USE_PHP=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 HLSTATS?=	www/${PORTNAME}
 PLIST_SUB+=	HLSTATS=${HLSTATS}
 
