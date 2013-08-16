@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-# $FreeBSD: sysutils/isomaster/Makefile 319181 2013-05-27 09:05:14Z bsam $
+# $FreeBSD: sysutils/isomaster/Makefile 323690 2013-07-26 06:24:12Z bapt $
 
 PORTNAME=	isomaster
 PORTVERSION=	1.3.9
@@ -22,7 +22,7 @@ MAKE_ENV=	DEFAULT_VIEWER="xdg-open" USE_SYSTEM_INIPARSER=1
 MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include -Diniparser_setstr=iniparser_set
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
 PLIST_SUB=	DESKTOPDIR="${DESKTOPDIR:S,^${PREFIX}/,,}"
 
