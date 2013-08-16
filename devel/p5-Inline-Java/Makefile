@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Inline-Java/Makefile,v 1.21 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/p5-Inline-Java/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Inline-Java
 PORTVERSION=	0.53
@@ -20,7 +20,8 @@ JAVA_OS=        native
 
 MAKE_JOBS_UNSAFE=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	J2SDK=${JAVA_HOME} </dev/null
 
 MAN3=		Inline::Java.3 \
