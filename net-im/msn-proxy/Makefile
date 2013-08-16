@@ -2,7 +2,7 @@
 # Date created:			20 January 2008
 # Whom:				Luiz Otavio O Souza <loos.br@gmail.com>
 #
-# $FreeBSD: ports/net-im/msn-proxy/Makefile,v 1.12 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/msn-proxy/Makefile 323776 2013-07-27 10:19:30Z marino $
 #
 
 PORTNAME=	msn-proxy
@@ -13,6 +13,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	loos.br@gmail.com
 COMMENT=	Messenger proxy/control daemon
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 LIB_DEPENDS=	event-1.4:${PORTSDIR}/devel/libevent
 
