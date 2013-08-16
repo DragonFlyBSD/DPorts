@@ -3,7 +3,7 @@
 # Date Created:			Aug 30, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/graphics/p5-Chart-Graph/Makefile,v 1.13 2012/11/17 05:58:16 svnexp Exp $
+# $FreeBSD: graphics/p5-Chart-Graph/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Chart-Graph
@@ -20,7 +20,8 @@ RUN_DEPENDS=	gnuplot:${PORTSDIR}/math/gnuplot \
 		xmgrace:${PORTSDIR}/math/grace \
 		ppmtogif:${PORTSDIR}/graphics/netpbm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Chart::Graph.3 \
 	Chart::Graph::Gnuplot.3 \
