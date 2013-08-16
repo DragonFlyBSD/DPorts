@@ -2,7 +2,7 @@
 # Date created:        27 Mart 2008
 # Whom:            Andreev Maxim
 #
-# $FreeBSD: archivers/xarchiver/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: archivers/xarchiver/Makefile 324298 2013-08-06 01:13:53Z mandree $
 #
 
 PORTNAME=	xarchiver
@@ -11,7 +11,7 @@ PORTREVISION=	6
 CATEGORIES=	archivers
 MASTER_SITES=	SF
 
-MAINTAINER=	andreevmaxim@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Desktop-agnostic GTK+2 frontend to various archiving tools
 
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
