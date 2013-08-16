@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-DBIx-MySQLSequence
-# Date created:				18 March 2006
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-MySQLSequence/Makefile,v 1.5 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-MySQLSequence/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	DBIx-MySQLSequence
 PORTVERSION=	1.04
@@ -22,11 +18,12 @@ RUN_DEPENDS=	p5-DBD-mysql>0:${PORTSDIR}/databases/p5-DBD-mysql \
 		p5-DBI>0:${PORTSDIR}/databases/p5-DBI \
 		p5-Params-Util>=0.26:${PORTSDIR}/devel/p5-Params-Util
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::MySQLSequence.3
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if m/Test::More/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' '/Test::More/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
