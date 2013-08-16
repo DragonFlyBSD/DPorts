@@ -2,7 +2,7 @@
 # Date created:		2009-11-27
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/sysutils/hfsexplorer/Makefile,v 1.4 2013/01/23 15:05:38 svnexp Exp $
+# $FreeBSD: sysutils/hfsexplorer/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	hfsexplorer
@@ -12,7 +12,7 @@ CATEGORIES=	sysutils java
 MASTER_SITES=	SF/catacombae/HFSExplorer/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-0_21-src
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	HFSExplorer read Mac-formatted harddisks and disk images
 
 BUILD_DEPENDS=	ant:${PORTSDIR}/devel/apache-ant
