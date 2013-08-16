@@ -2,7 +2,7 @@
 # Date created:		2010-02-04
 # Whom:			Bernhard Froehlich <decke@bluelife.at>
 #
-# $FreeBSD: ports/games/paintown/Makefile,v 1.8 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/paintown/Makefile 323734 2013-07-26 16:04:47Z crees $
 #
 
 PORTNAME=	paintown
@@ -17,7 +17,7 @@ COMMENT=	Fighting game similar to Streets of Rage and TMNT
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS+=	alleg.42:${PORTSDIR}/devel/allegro \
+LIB_DEPENDS+=	alleg:${PORTSDIR}/devel/allegro \
 		png15:${PORTSDIR}/graphics/png \
 		freetype:${PORTSDIR}/print/freetype2
 
