@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/hawk/Makefile 305526 2012-10-08 10:38:47Z dougb $
+# $FreeBSD: net-mgmt/hawk/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	hawk
 PORTVERSION=	0.6
@@ -14,7 +14,7 @@ RUN_DEPENDS=	p5-Net-Netmask>0:${PORTSDIR}/net-mgmt/p5-Net-Netmask \
 		p5-DBI>0:${PORTSDIR}/databases/p5-DBI \
 		p5-DBD-mysql>0:${PORTSDIR}/databases/p5-DBD-mysql
 
-USE_PERL5=	yes
+USES=		perl5
 USE_MYSQL=	server
 USE_PHP=	mysql
 WANT_PHP_MOD=	yes
