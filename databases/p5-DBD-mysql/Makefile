@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-mysql/Makefile 319967 2013-06-05 09:13:25Z mat $
+# $FreeBSD: databases/p5-DBD-mysql/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBD-mysql
 PORTVERSION=	4.023
@@ -21,7 +21,8 @@ CONFLICTS?=	p5-Mysql-modules-[0-9]* p5-DBD-mysql[45][0-9]-[0-9]*
 
 USE_MYSQL=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Bundle::DBD::mysql.3 DBD::mysql.3 DBD::mysql::INSTALL.3
 
