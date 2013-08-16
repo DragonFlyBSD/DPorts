@@ -1,5 +1,5 @@
 # Created by: Piet Delport <pjd@303.za.net>
-# $FreeBSD: databases/mrtg-mysql-load/Makefile 317657 2013-05-08 12:47:16Z ehaupt $
+# $FreeBSD: databases/mrtg-mysql-load/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	mrtg-mysql-load
 PORTVERSION=	1.02
@@ -13,9 +13,10 @@ COMMENT=	A MySQL load analysis fetcher for MRTG
 
 RUN_DEPENDS=	mrtg:${PORTSDIR}/net-mgmt/mrtg
 
+USES=		perl5
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_MYSQL=	yes
 
 MAN1=		${PORTNAME}.1
