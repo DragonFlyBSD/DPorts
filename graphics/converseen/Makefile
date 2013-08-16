@@ -1,8 +1,8 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: graphics/converseen/Makefile 320352 2013-06-09 16:58:16Z miwi $
+# $FreeBSD: graphics/converseen/Makefile 323614 2013-07-24 17:59:10Z pawel $
 
 PORTNAME=	converseen
-PORTVERSION=	0.6.3
+PORTVERSION=	0.6.4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Converseen/Converseen%200.6/
 
