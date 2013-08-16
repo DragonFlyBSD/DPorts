@@ -1,5 +1,5 @@
 # Created by: Michael Lednev <liettneff@bk.ru>
-# $FreeBSD: ports/net/abills/Makefile,v 1.21 2013/02/04 16:05:27 svnexp Exp $
+# $FreeBSD: net/abills/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	abills
 PORTVERSION=	0.54
@@ -22,7 +22,8 @@ RUN_DEPENDS=	radiusd:${PORTSDIR}/net/freeradius2 \
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 SUB_FILES=	pkg-message
 
