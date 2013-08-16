@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Parser
-# Date created:		2006-08-10
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Parser/Makefile,v 1.14 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Test-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Parser
 PORTVERSION=	1.9
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Chart-Graph>=0:${PORTSDIR}/graphics/p5-Chart-Graph \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
 		p5-XML-Twig>=0:${PORTSDIR}/textproc/p5-XML-Twig
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		parse_iozone.1 parse_test.1
 
