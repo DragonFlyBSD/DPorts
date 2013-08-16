@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports/www/p5-RT-Extension-SLA/Makefile,v 1.22 2012/12/15 09:34:29 svnexp Exp $
+# $FreeBSD: www/p5-RT-Extension-SLA/Makefile 324134 2013-08-01 22:04:01Z matthew $
 
 PORTNAME=	RT-Extension-SLA
 PORTVERSION=	0.07
@@ -17,7 +17,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 LICENSE=	GPLv2
 
-PERL_CONFIGURE=	yes
+USES+=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	RT38
 RT38_DESC=	Install for rt-3.8.x (default rt-4.0.x)
