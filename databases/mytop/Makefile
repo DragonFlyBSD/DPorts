@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: ports/databases/mytop/Makefile,v 1.33 2013/01/22 22:46:33 svnexp Exp $
+# $FreeBSD: databases/mytop/Makefile 324134 2013-08-01 22:04:01Z matthew $
 
 PORTNAME=	mytop
 PORTVERSION=	1.6
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-DBD-mysql>1.0:${PORTSDIR}/databases/p5-DBD-mysql \
 
 CONFLICTS=	mariadb-scripts-[0-9]*
 
-PERL_CONFIGURE=	yes
+USES+=		perl5
+USE_PERL5=	configure
 
 MAN1=		mytop.1
 

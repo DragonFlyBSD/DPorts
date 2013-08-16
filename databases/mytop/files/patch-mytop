@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/mytop/files/patch-mytop,v 1.12 2013/01/22 22:46:33 svnexp Exp $
+$FreeBSD: databases/mytop/files/patch-mytop 310838 2013-01-22 22:17:27Z matthew $
 
 --- mytop.orig
 +++ mytop
