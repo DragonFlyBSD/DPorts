@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/hotcrp/Makefile,v 1.8 2013/01/02 03:37:47 svnexp Exp $
+# $FreeBSD: www/hotcrp/Makefile 324258 2013-08-05 03:29:25Z kevlo $
 
 PORTNAME=	hotcrp
-PORTVERSION=	2.55
+PORTVERSION=	2.60
 CATEGORIES=	www
 MASTER_SITES=	http://www.read.seas.harvard.edu/~kohler/hotcrp/
 
@@ -13,7 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/Mail.php:${PORTSDIR}/mail/pear-Mail \
 		pdftohtml:${PORTSDIR}/textproc/pdftohtml \
 		zip:${PORTSDIR}/archivers/zip
 
-USE_PHP=	mysql gd session ctype
+USE_PHP=	mysqli gd session ctype
 USE_MYSQL=	server
 
 PEARDIR=	${PREFIX}/share/pear
