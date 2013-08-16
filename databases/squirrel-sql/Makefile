@@ -2,11 +2,11 @@
 # Date created: 	2006/11/06
 # Whom:         	Roy Boerner
 #
-# $FreeBSD: ports/databases/squirrel-sql/Makefile,v 1.22 2013/01/23 15:05:32 svnexp Exp $
+# $FreeBSD: databases/squirrel-sql/Makefile 322775 2013-07-11 15:22:10Z miwi $
 #
 
 PORTNAME=	squirrel-sql
-PORTVERSION=	3.4.0
+PORTVERSION=	3.5.0
 PORTREVISION=	1
 CATEGORIES=	databases java
 MASTER_SITES=	SF/${PORTNAME}/1-stable/${PORTVERSION}-plainzip
@@ -30,7 +30,7 @@ DESKTOP_ENTRIES="Squirrel-SQL Client" \
 		"${COMMENT}" \
 		"${DATADIR}/icons/acorn.png" \
 		"squirrel-sql" \
-		"Office;Database;Java;" \
+		"Development;Database;Java;" \
 		false
 
 post-extract:
