@@ -2,7 +2,7 @@
 # Date Created:				13 December 2003
 # Whom:				 	chris_pressey@yahoo.ca
 #
-# $FreeBSD: ports/games/fargoal/Makefile,v 1.10 2012/11/17 05:57:38 svnexp Exp $
+# $FreeBSD: games/fargoal/Makefile 323734 2013-07-26 16:04:47Z crees $
 #
 
 PORTNAME=	fargoal
@@ -15,7 +15,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Remake of classic roguelike game "Sword of Fargoal"
 
-LIB_DEPENDS=	alleg.42:${PORTSDIR}/devel/allegro
+LIB_DEPENDS=	alleg:${PORTSDIR}/devel/allegro
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
