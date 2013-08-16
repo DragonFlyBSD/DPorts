@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: ports/comms/atslog/Makefile,v 1.18 2013/02/20 18:08:01 svnexp Exp $
+# $FreeBSD: comms/atslog/Makefile 324166 2013-08-02 16:55:05Z az $
 
 PORTNAME=	atslog
 PORTVERSION=	2.1.1
@@ -19,7 +19,7 @@ WWW_DESC=	Install web interface
 WWWGD_DESC=	Graphic reports
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	${PORTNAME}d
 PORTDOCS=	CHANGES ChangeLog DEINSTALL INSTALL LICENSE TODO UPDATING USAGE
 SUB_FILES=	pkg-message

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/comms/atslog/files/atslogd.in,v 1.6 2012/11/17 05:54:58 svnexp Exp $
+# $FreeBSD: comms/atslog/files/atslogd.in 300895 2012-07-14 12:56:14Z beat $
 #
 # PROVIDE: atslogd
 # REQUIRE: mysql postgresql
