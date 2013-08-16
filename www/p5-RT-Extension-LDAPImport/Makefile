@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports/www/p5-RT-Extension-LDAPImport/Makefile,v 1.21 2013/02/02 23:43:47 svnexp Exp $
+# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 324134 2013-08-01 22:04:01Z matthew $
 
 PORTNAME=	RT-Extension-LDAPImport
 PORTVERSION=	0.34
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-perl-ldap>0:${PORTSDIR}/net/p5-perl-ldap \
 		p5-Class-Accessor>0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES+=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	RT38
 RT38_DESC=	Install for rt-3.8.x (default rt-4.0.x)
