@@ -1,8 +1,9 @@
 # Created by: Dan Langille <dan@langille.org>
-# $FreeBSD: ports/sysutils/bacula-bat/Makefile,v 1.18 2012/12/16 16:36:39 svnexp Exp $
+# $FreeBSD: sysutils/bacula-bat/Makefile 324549 2013-08-10 16:32:46Z marck $
 
 PORTNAME=	bacula
 PKGNAMESUFFIX=	-bat
+PORTREVISION=	4
 
 COMMENT=	Network backup solution (GUI)
 
