@@ -1,4 +1,4 @@
-# $FreeBSD: finance/kmymoney-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: finance/kmymoney-kde4/Makefile 323850 2013-07-28 20:28:32Z dbn $
 
 PORTNAME=	kmymoney
 PORTVERSION=	4.6.3
@@ -29,7 +29,6 @@ USE_QT4=	gui dbus network phonon sql svg xml \
 		qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdehier kdeprefix automoc4 kdelibs pimlibs sharedmime
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		kmymoney.1
 
