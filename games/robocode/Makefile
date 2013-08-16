@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/robocode/Makefile 320232 2013-06-08 02:28:17Z miwi $
+# $FreeBSD: games/robocode/Makefile 323545 2013-07-23 18:57:15Z pawel $
 
 PORTNAME=	robocode
-PORTVERSION=	1.8.1.0
+PORTVERSION=	1.8.2.0
 CATEGORIES=	games java
 MASTER_SITES=	SF \
 		SF/nemysisfreebsdp/:icons
@@ -48,7 +48,7 @@ do-install:
 .endfor
 
 post-install:
-	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png ${PREFIX}/share/pixmaps/
+	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png ${PREFIX}/share/pixmaps
 	${MKDIR} -m a+rwx ${DATADIR}/config
 
 .if ${PORT_OPTIONS:MDOCS}
