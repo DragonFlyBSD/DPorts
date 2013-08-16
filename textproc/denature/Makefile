@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/textproc/denature/Makefile,v 1.10 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/denature/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	denature
 PORTVERSION=	0.6.5
@@ -16,7 +16,7 @@ RUN_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-CSS-Tiny>=0:${PORTSDIR}/textproc/p5-CSS-Tiny \
 		fop:${PORTSDIR}/textproc/fop
 
-USE_PERL5=	yes
+USES=		perl5
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 POD2MAN?=	pod2man
@@ -26,8 +26,9 @@ MAN1=		denature.1
 PLIST_FILES=	bin/denature
 
 post-patch:
-	@${PERL} -pi -e "s|%%LOCALBASE%%|${LOCALBASE}| ; \
-		s|%%JAVA_HOME%%|${JAVA_HOME}|" ${WRKSRC}/denature
+	@${REINPLACE_CMD} -i '' -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+			-e 's|%%JAVA_HOME%%|${JAVA_HOME}|' \
+		 ${WRKSRC}/denature
 
 do-build:
 	cd ${WRKSRC} && ${POD2MAN} denature > denature.1
