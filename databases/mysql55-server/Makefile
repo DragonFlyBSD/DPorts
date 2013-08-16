@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql55-server/Makefile 320671 2013-06-12 07:56:24Z ale $
+# $FreeBSD: databases/mysql55-server/Makefile 321789 2013-06-26 08:06:12Z ale $
 
 PORTNAME?=	mysql
 PORTVERSION=	5.5.32
@@ -11,6 +11,8 @@ PKGNAMESUFFIX?=	-server
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
+
+LICENSE=	GPLv2
 
 SLAVEDIRS=	databases/mysql55-client
 USES=		cmake
