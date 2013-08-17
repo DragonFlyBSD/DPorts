@@ -1,0 +1,10 @@
+--- configure.orig	2013-08-17 21:00:48.154716000 +0000
++++ configure
+@@ -6549,6 +6549,7 @@ EOF
+ 
+       powerpc-apple-macos* | \
+       *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
