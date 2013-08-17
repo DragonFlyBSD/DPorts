@@ -2,12 +2,12 @@
 # Date created:				20. November 2007
 # Whom:					Simon I. Rigét
 #
-# $FreeBSD: multimedia/kissdx/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/kissdx/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	kissdx
 PORTVERSION=	0.13.10a
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	multimedia net
 MASTER_SITES=	http://paragi.dk/kiss/
 
