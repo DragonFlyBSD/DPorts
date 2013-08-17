@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/cssed/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: www/cssed/Makefile 323706 2013-07-26 09:22:16Z bapt $
 
 PORTNAME=	cssed
 PORTVERSION=	0.4.0
@@ -14,7 +14,7 @@ USES=        pathfix
 USE_GNOME=	gtk20 libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lgmodule-2.0
 CONFIGURE_ARGS=	--with-plugin-headers
 
 MAN1=		cssed.1
