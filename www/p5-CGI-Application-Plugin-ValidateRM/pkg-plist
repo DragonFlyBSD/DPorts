@@ -1,4 +1,0 @@
-%%SITE_PERL%%/CGI/Application/Plugin/ValidateRM.pm
-@dirrmtry %%SITE_PERL%%/CGI/Application/Plugin
-@dirrmtry %%SITE_PERL%%/CGI/Application
-@dirrmtry %%SITE_PERL%%/CGI
