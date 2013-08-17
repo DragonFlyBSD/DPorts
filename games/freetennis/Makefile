@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: games/freetennis/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: games/freetennis/Makefile 324318 2013-08-06 15:23:12Z johans $
 
 PORTNAME=	freetennis
 PORTVERSION=	0.4.8
@@ -8,15 +8,15 @@ CATEGORIES=	games
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A tennis simulation
+COMMENT=	Tennis simulation
 
 BUILD_DEPENDS=	ocamlopt:${PORTSDIR}/lang/ocaml \
+		ocaml-images>3.0:${PORTSDIR}/graphics/ocaml-images \
 		${OCAML_DEPENDS}
 RUN_DEPENDS=	${OCAML_DEPENDS}
 
 OCAML_DEPENDS=	${LOCALBASE}/lib/ocaml/site-lib/lablgtk2/gtk.ml:${PORTSDIR}/x11-toolkits/ocaml-lablgtk2 \
 		${LOCALBASE}/lib/ocaml/lablGL/gl.ml:${PORTSDIR}/graphics/ocaml-lablgl \
-		${LOCALBASE}/lib/ocaml/site-lib/camlimages/camlimages.a:${PORTSDIR}/graphics/ocaml-images \
 		${LOCALBASE}/lib/ocaml/site-lib/sdl/sdl.mli:${PORTSDIR}/devel/ocaml-sdl
 
 USE_BZIP2=	yes
