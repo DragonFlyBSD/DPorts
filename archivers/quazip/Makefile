@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: archivers/quazip/Makefile 321046 2013-06-16 13:49:17Z nivit $
+# $FreeBSD: archivers/quazip/Makefile 323556 2013-07-24 06:01:03Z bapt $
 
 PORTNAME=	quazip
 PORTVERSION=	0.5.1
