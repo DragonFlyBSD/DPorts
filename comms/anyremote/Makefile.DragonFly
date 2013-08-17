@@ -1,2 +1,1 @@
-USES+=		iconv
-LDFLAGS+=	-liconv
+CFLAGS+= -D__FreeBSD__=-9
