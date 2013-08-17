@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: ports/devel/cvs2darcs/Makefile,v 1.11 2012/12/20 02:32:25 svnexp Exp $
+# $FreeBSD: devel/cvs2darcs/Makefile 323847 2013-07-28 19:48:40Z pgj $
 
 PORTNAME=	cvs2darcs
 PORTVERSION=	0.8
