@@ -1,1 +1,1 @@
-USE_GMAKE= yes
+USES:= ${USES:Nfmake} gmake

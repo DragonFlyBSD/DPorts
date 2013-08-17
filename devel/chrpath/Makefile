@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: devel/chrpath/Makefile 319793 2013-06-03 16:37:29Z rene $
+# $FreeBSD: devel/chrpath/Makefile 321368 2013-06-20 09:55:12Z rene $
 
 PORTNAME=	chrpath
 PORTVERSION=	0.13
@@ -16,6 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 GNU_CONFIGURE=	yes
 
 MAN1=		chrpath.1
+
+USES=		fmake
 
 PLIST_FILES=	bin/chrpath
 
