@@ -1,2 +1,4 @@
 LIB_DEPENDS+=	ssl:${PORTSDIR}/security/openssl
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib -liconv -lssl -lcrypto
+BUILD_DEPENDS+=	gperf:${PORTSDIR}/devel/gperf \
+		${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
