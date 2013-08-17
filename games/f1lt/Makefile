@@ -1,8 +1,8 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: games/f1lt/Makefile 317054 2013-05-01 22:11:34Z jgh $
+# $FreeBSD: games/f1lt/Makefile 323495 2013-07-22 19:16:07Z jgh $
 
 PORTNAME=	f1lt
-PORTVERSION=	2.0.2
+PORTVERSION=	2.1.1
 CATEGORIES=	games
 MASTER_SITES=	GOOGLE_CODE \
 		LOCAL/jgh/games/${PORTNAME}/
@@ -16,11 +16,10 @@ LICENSE=	GPLv3
 OPTIONS_DEFINE=	DOCS
 
 USE_QT4=	gui network moc_build qmake_build rcc_build uic_build
-WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
+WRKSRC=	${WRKDIR}/${DISTNAME:S|-src||}
 
 HAS_CONFIGURE=	yes
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=	gmake
 
 PLIST_FILES=	bin/F1LT \
 		bin/f1lt \
@@ -51,6 +50,11 @@ post-install:
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${DOCSDIR}
 .endif
+	${STRIP_CMD} ${PREFIX}/bin/F1LT
+	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/bin/F1LT
+	${CHMOD} 755 ${PREFIX}/bin/F1LT
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/f1lt/*.dat
+	${CHMOD} 644 ${PREFIX}/share/f1lt/*.dat
 	@${LN} -s ${PREFIX}/bin/F1LT ${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
