@@ -1,0 +1,11 @@
+--- configure.orig	2013-08-17 22:52:47.294312000 +0000
++++ configure
+@@ -4719,7 +4719,7 @@ echo "${ECHO_T}yes" >&6; }
+                         LDFLAGS="$LDFLAGS -Wl,-rpath,\$(libdir)"
+ 			;;
+ 
+-		*BSD*)
++		*BSD*|DragonFly)
+ 			{ echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+ 			LIBMXML="libmxml.so.1.5"

@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/mxml/Makefile 317921 2013-05-11 21:51:03Z rakuco $
+# $FreeBSD: textproc/mxml/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mxml
 PORTVERSION=	2.7
@@ -19,7 +19,6 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USES=	pathfix
 CONFIGURE_ARGS=	--with-docdir=no
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 MAN1=	mxmldoc.1
