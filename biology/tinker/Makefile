@@ -1,8 +1,9 @@
 # Created by: Glenn Johnson
-# $FreeBSD: biology/tinker/Makefile 319343 2013-05-29 05:25:49Z miwi $
+# $FreeBSD: biology/tinker/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tinker
-PORTVERSION=	6.2.05
+PORTVERSION=	6.2.06
+PORTREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://dasher.wustl.edu/tinker/downloads/
 
@@ -23,7 +24,6 @@ MAKE_ENV=	HAVE_G2C=yes
 MAKEFILE=	${WRKSRC}/make/Makefile
 ALL_TARGET=	all listing
 INSTALL_TARGET=	rename
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
@@ -38,6 +38,9 @@ FFLAGS+=	-mfancy-math-387 -malign-double
 
 post-extract:
 	@${CHMOD} -R u+w ${WRKSRC}
+
+pre-build:
+	@${RM} -f ${BUILD_WRKSRC}/*.c 
 
 post-install:
 	@${MKDIR} ${DATADIR}
