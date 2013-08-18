@@ -1,0 +1,18 @@
+--- configure.intermediate	2013-08-18 00:50:36.603976000 +0000
++++ configure
+@@ -1189,13 +1189,13 @@ darwin* | rhapsody*)
+   esac
+   ;;
+ 
+-freebsd* )
++freebsd* |dragonfly*)
+   if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
+     case $host_cpu in
+     i*86 )
+       # Not sure whether the presence of OpenBSD here was a mistake.
+       # Let's accept both of them until this is cleared up.
+-      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD)/i[3-9]86 (compact )?demand paged shared library'
++      lt_cv_deplibs_check_method='file_magic (FreeBSD|DragonFly|OpenBSD)/i[3-9]86 (compact )?demand paged shared library'
+       lt_cv_file_magic_cmd=/usr/bin/file
+       lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
+       ;;

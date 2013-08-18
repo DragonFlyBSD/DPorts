@@ -1,0 +1,11 @@
+--- config/ltconfig.intermediate	2013-08-18 00:50:36.603976000 +0000
++++ config/ltconfig
+@@ -1114,7 +1114,7 @@ freebsd1*)
+   dynamic_linker=no
+   ;;
+ 
+-freebsd*)
++freebsd*|dragonfly*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo elf`
+   version_type=freebsd-$objformat
+   case $version_type in
