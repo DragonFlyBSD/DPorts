@@ -1,8 +1,8 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: net-mgmt/netdisco/Makefile 322181 2013-07-02 16:59:24Z lme $
+# $FreeBSD: net-mgmt/netdisco/Makefile 323092 2013-07-16 05:45:38Z miwi $
 
 PORTNAME=	netdisco
-PORTVERSION=	1.3
+PORTVERSION=	1.3.1
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF
 
