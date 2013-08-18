@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/otrs/Makefile 321430 2013-06-20 22:25:36Z flo $
+# $FreeBSD: devel/otrs/Makefile 323364 2013-07-21 02:41:07Z swills $
 
 PORTNAME=	otrs
-PORTVERSION=	3.2.8
+PORTVERSION=	3.2.9
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.otrs.org/pub/otrs/ \
 		ftp://ftp.samurai.com/pub/otrs/ \
@@ -40,6 +40,10 @@ BUILD_DEPENDS=	p5-Date-Pcalc>=0:${PORTSDIR}/devel/p5-Date-Pcalc \
 		p5-Email-Valid>=0:${PORTSDIR}/mail/p5-Email-Valid
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+USES=		shebangfix
+SHEBANG_FILES=	bin/cgi-bin/*.pl bin/fcgi-bin/*.pl bin/*.pl \
+		scripts/auto_build/*.pl scripts/tools/*.pl scripts/*.pl
+
 OPTIONS_DEFINE=		MYSQL PGSQL REPORTS_MODULES SMTP POP3 IMAP LDAP PDF \
 			GNUPG DOCS
 OPTIONS_DEFAULT=	MYSQL REPORTS_MODULES SMTP POP3 IMAP PDF ASPELL
@@ -52,8 +56,6 @@ SMTP_DESC=		Send email via SMTP
 REPORTS_MODULES_DESC=	Reports support
 
 USE_BZIP2=	yes
-USES=		shebangfix
-SHEBANG_FILES=	bin/*.pl
 
 OTRSDIR=	${PREFIX}/otrs
 USERS=		${PORTNAME}
@@ -123,6 +125,9 @@ RUN_DEPENDS+=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 
 .if ${PORT_OPTIONS:MPDF}
 RUN_DEPENDS+=	p5-PDF-API2>=0.57:${PORTSDIR}/textproc/p5-PDF-API2
+. if ${PERL_LEVEL} < 500903
+RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
+. endif
 .endif
 
 .if ${PORT_OPTIONS:MISPELL}
@@ -144,6 +149,9 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 	@${RM} -rf ${WRKSRC}/Kernel/cpan-lib/ \
 		${CLEAN_FILES:S!^!${WRKSRC}/!}
+	#shebang file only gets the first instance of /usr/bin/perl
+	@${REINPLACE_CMD} -e "s|/usr/bin/perl|${LOCALBASE}/bin/perl|g" \
+		${WRKSRC}/bin/otrs.CreateApacheStartupFile.pl
 
 do-build:
 	@${FIND} ${WRKSRC}/Kernel -type d | ${XARGS} ${CHMOD} 0755
