@@ -1,8 +1,8 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: ports/java/eclipse-ecj/Makefile,v 1.6 2012/12/15 08:17:12 svnexp Exp $
+# $FreeBSD: java/eclipse-ecj/Makefile 320506 2013-06-10 22:04:00Z jgh $
 
 PORTNAME=	ecj
-PORTVERSION=	3.8.1
+PORTVERSION=	3.8.2
 CATEGORIES=	java devel
 MASTER_SITES=	ECLIPSE
 MASTER_SITE_SUBDIR=	R-${PORTVERSION}-${DROPDATE}
@@ -26,7 +26,7 @@ SUB_FILES=	ecj.sh
 SUB_LIST=	PORTVERSION=${PORTVERSION}
 NO_WRKSUBDIR=	yes
 
-DROPDATE=	201209141540
+DROPDATE=	201301310800
 PLIST_FILES=	bin/${PORTNAME}.sh \
 		%%JAVAJARDIR%%/${PORTNAME}-${PORTVERSION}.jar
 
