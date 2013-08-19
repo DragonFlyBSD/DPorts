@@ -1,0 +1,23 @@
+--- configure.orig	2013-05-26 20:21:47.000000000 +0000
++++ configure
+@@ -2135,6 +2135,10 @@ case $_host_os in
+ 		LDFLAGS="$LDFLAGS -L$DEVKITPRO/libnds/lib"
+ 		LIBS="$LIBS -lnds9"
+ 		;;
++	dragonfly*)
++		LDFLAGS="$LDFLAGS -L$(PREFIX)/lib"
++		CXXFLAGS="$CXXFLAGS -I$(PREFIX)/include"
++		;;
+ 	freebsd*)
+ 		LDFLAGS="$LDFLAGS -L/usr/local/lib"
+ 		CXXFLAGS="$CXXFLAGS -I/usr/local/include"
+@@ -2915,6 +2919,9 @@ case $_host_os in
+ 	amigaos* | cygwin* | dreamcast | ds | gamecube | mingw* | n64 | ps2 | ps3 | psp | wii | wince)
+ 		_posix=no
+ 		;;
++	dragonfly*)
++		_posix=yes
++		;;
+ 	android | beos* | bsd* | darwin* | freebsd* | gph-linux | haiku* | hpux* | iphone | irix* | linux* | maemo | mint* | netbsd* | openbsd* | solaris* | sunos* | uclinux* | webos)
+ 		_posix=yes
+ 		;;
