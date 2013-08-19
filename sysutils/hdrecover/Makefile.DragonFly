@@ -1,0 +1,1 @@
+CFLAGS+= -D__FreeBSD_cc_version=400201

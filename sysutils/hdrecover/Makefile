@@ -2,12 +2,11 @@
 # Date created:        18 June 2012
 # Whom:                Cy Schubert <cy@freebsd.org>
 #
-# $FreeBSD: sysutils/hdrecover/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: sysutils/hdrecover/Makefile 323840 2013-07-28 17:24:23Z cy $
 #
 
 PORTNAME=	hdrecover
-PORTVERSION=	0.4
-PORTREVISION=	1
+PORTVERSION=	0.5
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
