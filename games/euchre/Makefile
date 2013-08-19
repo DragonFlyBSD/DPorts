@@ -1,28 +1,26 @@
-# New ports collection Makefile for:	euchre
-# Date created:				23 July 2002
-# Whom:					Frank Laszlo <laszlof@freebsdmatrix.net>
-#
-# $FreeBSD: ports/games/euchre/Makefile,v 1.22 2012/11/17 05:57:37 svnexp Exp $
-#
+# Created by: Frank Laszlo <laszlof@freebsdmatrix.net>
+# $FreeBSD: games/euchre/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	euchre
-PORTVERSION=	0.7
-PORTREVISION=	4
+PORTVERSION=	0.8
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Very popular card game with variable skill levels
 
+LICENSE=	GPLv2 # (or later)
+
+USE_GNOME=	gtk20
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-silent-rules
+
 PLIST_FILES=	bin/euchre
-USE_AUTOTOOLS=	automake14 autoconf213
-USE_GNOME=	gtk12
-CFLAGS+=	-include "${FILESDIR}/std-namespace.h" -Werror
-MAKE_JOBS_SAFE=	yes
+
+DESKTOP_ENTRIES="Euchre" "" "" "${PORTNAME}" "" true
 
 post-patch:
-	${REINPLACE_CMD} 's,char,const char,'	\
-		${WRKSRC}/src/pixmaps/*.xpm	\
-		${WRKSRC}/src/pixmaps/pixmaps.?pp
+	@${REINPLACE_CMD} -e \
+		'/^AM_/s|-Werror||' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
