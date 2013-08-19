@@ -1,12 +1,8 @@
-# New ports collection makefile for:	diskscrub
-# Date created:		28 November 2006
-# Whom:			Erik Greenwald <erik@smluc.org>
-#
-# $FreeBSD: ports/sysutils/diskscrub/Makefile,v 1.6 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: Erik Greenwald <erik@smluc.org>
+# $FreeBSD: ports/sysutils/diskscrub/Makefile,v 1.7 2013/01/12 04:43:05 svnexp Exp $
 
 PORTNAME=	diskscrub
-PORTVERSION=	2.2
+PORTVERSION=	2.5.2
 CATEGORIES=	sysutils
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	scrub-${PORTVERSION}
