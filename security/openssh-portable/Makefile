@@ -1,17 +1,19 @@
 # Created by: dwcjr@inethouston.net
-# $FreeBSD: security/openssh-portable/Makefile 317070 2013-05-02 02:03:09Z bdrewery $
+# $FreeBSD: security/openssh-portable/Makefile 322345 2013-07-05 18:27:50Z bdrewery $
 
 PORTNAME=	openssh
-DISTVERSION=	5.8p2
-PORTREVISION=	5
+DISTVERSION=	6.2p2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	${MASTER_SITE_OPENBSD}
 MASTER_SITE_SUBDIR=	OpenSSH/portable
-PKGNAMESUFFIX=	-portable
+PKGNAMESUFFIX?=	-portable
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	The portable version of OpenBSD's OpenSSH
+
+LICENSE=	BSD
 
 MAN1=	sftp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh-keyscan.1 scp.1 ssh.1
 MLINKS=	ssh.1 slogin.1
@@ -20,9 +22,9 @@ MAN8=	sftp-server.8 sshd.8 ssh-keysign.8 ssh-pkcs11-helper.8
 
 CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.*
 
-# XXX: ports/52706 will allow using DEFAULT,x509,gsskex here.
+# XXX: ports/52706 will allow using DEFAULT,x509 here.
 PATCH_SITES+=		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
-			http://mirror.shatow.net/freebsd/${PORTNAME}/:x509,gsskex
+			http://mirror.shatow.net/freebsd/${PORTNAME}/:x509
 
 USE_PERL5_BUILD=	yes
 USE_AUTOTOOLS=		autoconf autoheader
@@ -40,23 +42,23 @@ SUDO?=		# empty
 MAKE_ENV+=	SUDO="${SUDO}"
 
 OPTIONS_DEFINE=		PAM TCP_WRAPPERS LIBEDIT BSM \
-			KERB_GSSAPI OPENSSH_CHROOT HPN LPK X509 \
-			OVERWRITE_BASE SCTP
-OPTIONS_DEFAULT=	LIBEDIT PAM TCP_WRAPPERS
+			HPN LPK X509 KERB_GSSAPI \
+			OVERWRITE_BASE SCTP AES_THREADED
+OPTIONS_DEFAULT=	LIBEDIT PAM TCP_WRAPPERS HPN
 OPTIONS_RADIO=		KERBEROS
 OPTIONS_RADIO_KERBEROS=	MIT HEIMDAL HEIMDAL_BASE
 TCP_WRAPPERS_DESC=	Enable tcp_wrappers support
 BSM_DESC=		Enable OpenBSM Auditing
 KERB_GSSAPI_DESC=	Enable Kerberos/GSSAPI patch (req: GSSAPI)
-OPENSSH_CHROOT_DESC=	Enable CHROOT support
 HPN_DESC=		Enable HPN-SSH patch
-LPK_DESC=		Enable LDAP Public Key (LPK) patch
+LPK_DESC=		Enable LDAP Public Key (LPK) [OBSOLETE]
 X509_DESC=		Enable x509 certificate patch
 SCTP_DESC=		Enable SCTP support
 OVERWRITE_BASE_DESC=	OpenSSH overwrite base
 HEIMDAL_DESC=		Heimdal Kerberos (security/heimdal)
 HEIMDAL_BASE_DESC=	Heimdal Kerberos (base)
 MIT_DESC=		MIT Kerberos (security/krb5)
+AES_THREADED_DESC=	Threaded AES-CTR [HPN/Experimental]
 
 .include <bsd.port.pre.mk>
 
@@ -64,8 +66,11 @@ MIT_DESC=		MIT Kerberos (security/krb5)
 CONFIGURE_LIBS+=	-lutil
 .endif
 
+# 900007 is when utmp(5) was removed and utmpx(3) added
 .if ${OSVERSION} >= 900007
 CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp --disable-wtmpx --without-lastlog
+.else
+EXTRA_PATCHES+=		${FILESDIR}/extra-patch-sshd-utmp-size
 .endif
 
 .if ${PORT_OPTIONS:MX509}
@@ -73,8 +78,8 @@ CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp --disable-wtmpx --without-lastlog
 BROKEN=		X509 patch and HPN patch do not apply cleanly together
 .  endif
 
-.  if ${PORT_OPTIONS:MKERB_GSSAPI}
-BROKEN=		X509 patch incompatible with KERB_GSSAPI patch
+.  if ${PORT_OPTIONS:MAES_THREADED}
+BROKEN=		X509 patch and AES_THREADED patch do not apply cleanly together
 .  endif
 
 .  if ${PORT_OPTIONS:MSCTP}
@@ -84,6 +89,15 @@ BROKEN=		X509 patch and SCTP patch do not apply cleanly together
 .  if ${PORT_OPTIONS:MLPK}
 BROKEN=		X509 patch and LPK patch do not apply cleanly together
 .  endif
+
+.  if ${PORT_OPTIONS:MKERB_GSSAPI}
+BROKEN=		X509 patch incompatible with KERB_GSSAPI patch
+.  endif
+
+.endif
+
+.if ${PORT_OPTIONS:MHEIMDAL_BASE} && ${PORT_OPTIONS:MKERB_GSSAPI}
+BROKEN=		KERB_GSSAPI Requires either MIT or HEMIDAL, does not build with base Heimdal currently
 .endif
 
 .if defined(OPENSSH_OVERWRITE_BASE)
@@ -119,9 +133,10 @@ IGNORE=		You have selected HEIMDAL_BASE but do not have heimdal installed in bas
 CONFIGURE_LIBS+=	-lgssapi_krb5
 .	endif
 .  endif
+
+# Adapated from 5.7 patch at http://www.sxw.org.uk/computing/patches/
 .if ${PORT_OPTIONS:MKERB_GSSAPI}
-PATCH_SITES+=		http://www.sxw.org.uk/computing/patches/:gsskex
-PATCHFILES+=		openssh-5.7p1-gsskex-all-20110125.patch:gsskex
+PATCHFILES+=		openssh-6.2p2-gsskex-all-20110125.patch.gz
 PATCH_DIST_STRIP=
 .endif
 .if ${OPENSSLBASE} == "/usr"
@@ -134,21 +149,27 @@ LDFLAGS=		# empty
 CONFIGURE_ARGS+=	--with-ssl-dir=${OPENSSLBASE}
 .endif
 
-.if ${PORT_OPTIONS:MOPENSSH_CHROOT}
-CFLAGS+=		-DCHROOT
+# http://www.psc.edu/index.php/hpn-ssh
+.if ${PORT_OPTIONS:MHPN}
+HPN_VERSION=		13v14
+PATCHFILES+=		${PORTNAME}-6.2p1-hpn${HPN_VERSION}.diff.gz
+EXTRA_PATCHES+=		${FILESDIR}/extra-patch-hpn-window-size
+PATCH_DIST_STRIP=
 .endif
 
 # http://www.psc.edu/index.php/hpn-ssh
-.if ${PORT_OPTIONS:MHPN}
-PATCHFILES+=		${PORTNAME}-5.8p1-hpn13v11.diff.gz
+.if ${PORT_OPTIONS:MAES_THREADED}
+AES_THREADED_VERSION=		v14
+PATCHFILES+=		${PORTNAME}-6.2p1-CTR-threaded-${AES_THREADED_VERSION}.diff.gz
 PATCH_DIST_STRIP=
 .endif
 
 # See http://code.google.com/p/openssh-lpk/wiki/Main
 # and svn repo described here:
 # http://code.google.com/p/openssh-lpk/source/checkout
+# LPK is now OBSOLETE with 6.2: https://code.google.com/p/openssh-lpk/issues/detail?id=15#c1
 .if ${PORT_OPTIONS:MLPK}
-PATCHFILES+=		${PORTNAME}-lpk-5.8p2.patch.gz
+PATCHFILES+=		${PORTNAME}-lpk-6.2p1.patch.gz
 USE_OPENLDAP=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-ldap=yes \
@@ -159,8 +180,9 @@ CONFIGURE_LIBS+=	-lldap
 
 # See http://www.roumenpetrov.info/openssh/
 .if ${PORT_OPTIONS:MX509}
-PATCH_SITES+=		http://www.roumenpetrov.info/openssh/x509-7.0/:x509
-PATCHFILES+=		${PORTNAME}-5.8p1+x509-7.0.diff.gz:x509
+X509_VERSION=		7.4.1
+PATCH_SITES+=		http://www.roumenpetrov.info/openssh/x509-${X509_VERSION}/:x509
+PATCHFILES+=		${PORTNAME}-6.2p1+x509-${X509_VERSION}.diff.gz:x509
 PATCH_DIST_STRIP=	-p1
 PLIST_SUB+=		X509=""
 MAN5+=			ssh_engine.5

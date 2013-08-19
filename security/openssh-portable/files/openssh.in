@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: security/openssh-portable/files/openssh.in 315920 2013-04-17 00:35:31Z bdrewery $
+# $FreeBSD: security/openssh-portable/files/openssh.in 321578 2013-06-22 15:11:30Z bdrewery $
 #
 # PROVIDE: openssh
 # REQUIRE: DAEMON
@@ -27,7 +27,7 @@ load_rc_config ${name}
 command=%%PREFIX%%/sbin/sshd
 extra_commands="configtest reload keygen"
 start_precmd="${name}_checks"
-reload_precmd="${name}_configtest"
+reload_precmd="${name}_checks"
 restart_precmd="${name}_checks"
 configtest_cmd="${name}_configtest"
 keygen_cmd="${name}_keygen"
