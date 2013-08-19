@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/kinput2/Makefile 317179 2013-05-03 08:13:43Z bapt $
+# $FreeBSD: japanese/kinput2/Makefile 322662 2013-07-10 11:37:25Z bapt $
 
 PORTNAME=	kinput2
 PORTVERSION=	3.1
@@ -9,9 +9,11 @@ MASTER_SITES=	ftp://ftp.sra.co.jp/pub/x11/kinput2/
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
-COMMENT=	A Japanese text input server for X11 applications
+COMMENT=	Japanese text input server for X11 applications
 
-USE_IMAKE=	yes
+MAKE_JOBS_UNSAFE=	yes
+
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 SUB_FILES=	Kinput2.conf
 PLIST_FILES=	${PLIST_ALL}
