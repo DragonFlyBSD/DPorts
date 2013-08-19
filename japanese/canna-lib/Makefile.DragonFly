@@ -1,0 +1,7 @@
+post-patch:
+	@${REINPLACE_CMD} -e 's|__FreeBSD|__DragonFly|g' \
+		-e 's|500000|300000|g' \
+		${WRKSRC}/canna/widedef.h \
+		${WRKSRC}/canna/protodefs.h \
+		${WRKSRC}/ccustom/lex.l \
+		${WRKSRC}/ccustom/ccustom.c
