@@ -1,8 +1,8 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	c++-gtk-utils
-PORTVERSION=	2.0.16
+PORTVERSION=	2.2.1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/cxx-gtk-utils/cxx-gtk-utils/${PORTVERSION}/
 DISTNAME=	c%2B%2B-gtk-utils-${PORTVERSION}
@@ -13,7 +13,7 @@ COMMENT=	Lightweight library for programming GTK+ programs
 LICENSE=	LGPL21
 
 GNU_CONFIGURE=	yes
-USE_GCC=	4.4+
+USE_GCC=	yes
 USES=		pathfix pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
@@ -22,13 +22,18 @@ CONFIGURE_SCRIPT=	configure-gtk2
 CONFIGURE_ARGS+=	--docdir=${DOCSDIR}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+PORTDOCS=	*
 
-OPTIONS_DEFINE=	DEBUG
+OPTIONS_DEFINE=	DEBUG DOCS
+
+DEBUG_CONFIGURE_ON=	--enable-debug
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MDEBUG}
-CONFIGURE_ARGS+=--enable-debug
+post-configure:
+.if ! ${PORT_OPTIONS:MDOCS}
+	@${REINPLACE_CMD} '/^SUBDIRS/ s|docs|| ; /^pkgdoc_DATA/d' \
+		${WRKSRC}/Makefile
 .endif
 
 .include <bsd.port.mk>
