@@ -5,7 +5,7 @@
  	;;
  
 -    *-*bsd*)
-+    *-*bsd*|*-*-dragonfly*)
++    *-*bsd*|*-dragonfly*)
  	{ echo "$as_me:$LINENO: result: Generic BSD ($host) found." >&5
  echo "${ECHO_T}Generic BSD ($host) found." >&6; }
  	CFLAGS="-Wno-long-long $CFLAGS"
