@@ -1,58 +1,88 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: ports/cad/leocad/Makefile,v 1.36 2012/12/14 17:31:36 svnexp Exp $
+# $FreeBSD: cad/leocad/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	leocad
-PORTVERSION=	0.79.0
+PORTVERSION=	0.79.3
 CATEGORIES=	cad
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
-DISTFILES=	${LEOCAD_DISTNAME} ${LEOCAD_PIECES}
-EXTRACT_ONLY=	${LEOCAD_DISTNAME}
+MASTER_SITES=	GOOGLE_CODE
+DISTFILES=	${PORTNAME}-${PORTVERSION}-src.tgz \
+		${LEOCAD_PIECES}
+DIST_SUBDIR=	${PORTNAME}
+EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}-src.tgz
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A CAD program that uses bricks similar to those found in many toys
+MAINTAINER=	nemysis@gmx.ch
+COMMENT=	CAD program that uses bricks similar to those found in many toys
 
-EXTRACT_DEPENDS=unzip:${PORTSDIR}/archivers/unzip
+LICENSE=	GPLv2
+
+EXTRACT_DEPENDS=${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
-LEOCAD_DISTNAME=leocad-${PORTVERSION}-src.tgz
-LEOCAD_PIECES=	pieces-5823b.zip
 WRKSRC=		${WRKDIR}/${PORTNAME}
+LEOCAD_PIECES=	pieces-7114.zip
 
+USES=		gmake pkgconfig shared-mime-info
 USE_GL=		glut
-USE_XORG=	x11
-USE_GMAKE=	yes
 USE_GNOME=	gtk20
-MAKE_JOBS_UNSAFE=	yes
 
-DESKTOP_ENTRIES="Leocad" "${COMMENT}" "" "${PORTNAME}" "Engineering;" "true"
-
-PLIST_FILES=	bin/leocad \
-		${DATADIR_REL}/pieces.bin \
-		${DATADIR_REL}/pieces.idx
-PLIST_DIRS=	${DATADIR_REL}
 MAN1=		leocad.1
 
+PORTDOCS=	*
+
+DOCSRCDIR1=	${WRKSRC}
+DOC_FILES1=	CREDITS.txt README.txt
+
+DOCSRCDIR2=	${WRKSRC}/docs
+DOCSDIR2=	${DOCSDIR}/docs
+DOC_FILES2=	LINUX.txt TODO.txt
+
+INSTALLS_ICONS=	yes
+ICON_SIZES=	16x16 24x24 32x32 48x48 128x128 256x256
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.pre.mk>
+
 post-extract:
-	@${UNZIP_CMD} -q -o ${DISTDIR}/${LEOCAD_PIECES} -d ${WRKDIR}/pieces
+	@${UNZIP_CMD} -q -o ${_DISTDIR}/${LEOCAD_PIECES} -d ${WRKDIR}/pieces
 
 post-patch:
 	@${REINPLACE_CMD} -e \
-		's|%%LOCALBASE%%|${LOCALBASE}|g; \
-		s|%%PTHREAD_CFLAGS%%|${PTHREAD_CFLAGS}|; \
-		s|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|' \
+		's|-ldl||' ${WRKSRC}/common/module.mk
+	@${REINPLACE_CMD} \
+		-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		-e 's|%%PTHREAD_CFLAGS%%|${PTHREAD_CFLAGS}|' \
+		-e 's|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|' \
 		${WRKSRC}/config.mk
 	@${REINPLACE_CMD} 's|share/man|man|g' \
 		${WRKSRC}/Makefile
+.for s in 16 24 32 48 128 256
+	@cd ${WRKSRC}/tools/icon && \
+		${MV} icon${s}.png ${PORTNAME}_${s}x${s}.png
+.endfor
+	@cd ${WRKSRC}/tools/icon && ${CP} -a ${PORTNAME}_128x128.png icon128.png
 
 do-configure:
-	cd ${WRKSRC} && ${GMAKE} config
+	cd ${WRKSRC} && ${SETENV} PREFIX="${PREFIX}" ${GMAKE} config
 
 post-install:
-	${MKDIR} ${DATADIR}
+	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKDIR}/pieces/* ${DATADIR}
 
-.include <bsd.port.pre.mk>
+.for s in ${ICON_SIZES}
+	${MKDIR} ${PREFIX}/share/icons/hicolor/${s}/apps
+	${INSTALL_DATA} ${WRKSRC}/tools/icon/${PORTNAME}_${s}.png \
+		${PREFIX}/share/icons/hicolor/${s}/apps/${PORTNAME}.png
+.endfor
+	@${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png ${PREFIX}/share/pixmaps
+
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${DOC_FILES1:S|^|${DOCSRCDIR1}/|} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR2}
+	${INSTALL_DATA} ${DOC_FILES2:S|^|${DOCSRCDIR2}/|} ${DOCSDIR2}
+.endif
 
 .if ${ARCH} == "sparc64"
 BROKEN=		Does not compile on sparc64
