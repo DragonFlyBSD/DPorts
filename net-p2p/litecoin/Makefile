@@ -1,12 +1,10 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net-p2p/litecoin/Makefile 323409 2013-07-21 18:40:22Z swills $
+# $FreeBSD: net-p2p/litecoin/Makefile 324464 2013-08-10 02:18:49Z swills $
 
 PORTNAME=	litecoin
-PORTVERSION=	0.6.9.2
+PORTVERSION=	0.8.3.7
 CATEGORIES=	net-p2p finance
-
-MASTER_SITES=	${MASTER_SITE_LOCAL} \
-		http://people.freebsd.org/~swills/ \
+MASTER_SITES=	LOCAL/swills \
 		GH
 
 MAINTAINER=	swills@FreeBSD.org
@@ -16,7 +14,7 @@ LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	litecoin-project
-GH_COMMIT=	0d6bbe6
+GH_COMMIT=	2884342
 GH_TAGNAME=	v${PORTVERSION}
 
 USE_OPENSSL=	yes
@@ -82,7 +80,7 @@ do-configure:
 		USE_UPNP=${QMAKE_USE_UPNP} \
 		USE_QRCODE=${QMAKE_USE_QRCODE} \
 		USE_DBUS=${QMAKE_USE_DBUS} \
-		litecoin-qt.pro
+		bitcoin-qt.pro
 .endif
 
 do-install:
