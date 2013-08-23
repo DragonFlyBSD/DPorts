@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: devel/qt4-help-tools/Makefile 321480 2013-06-21 17:13:51Z rakuco $
+# $FreeBSD: devel/qt4-help-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	help
 DISTVERSION=	${QT4_VERSION}
@@ -14,7 +14,6 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build corelib \
 		gui sql xml doc help
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
