@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/math/py-gmpy/Makefile,v 1.10 2013/01/13 04:59:29 svnexp Exp $
+# $FreeBSD: math/py-gmpy/Makefile 324922 2013-08-18 14:49:48Z wen $
 
 PORTNAME=	gmpy
-PORTVERSION=	1.16
+PORTVERSION=	1.17
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Python Extension that Wraps the GMP Library
 
-LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
+LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp
 
 USE_ZIP=	yes
 USE_PYTHON=	yes
