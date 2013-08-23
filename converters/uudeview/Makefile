@@ -2,7 +2,7 @@
 # Date Created:		04 Aug 1996
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $FreeBSD: ports/converters/uudeview/Makefile,v 1.32 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: converters/uudeview/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	uudeview
@@ -19,7 +19,6 @@ LIB_DEPENDS=	uu.3:${PORTSDIR}/converters/uulib
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tcl
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
