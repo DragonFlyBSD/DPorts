@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-libwww/Makefile 313954 2013-03-12 08:06:16Z sunpoet $
+# $FreeBSD: www/p5-libwww/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	libwww
 PORTVERSION=	6.05
@@ -29,7 +29,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 OPTIONS_DEFINE=	HTTPS
 
 CONFIGURE_ARGS=	--aliases
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		GET.1 \
 		HEAD.1 \
