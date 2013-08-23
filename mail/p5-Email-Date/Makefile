@@ -1,9 +1,8 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Date/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Email-Date/Makefile 325151 2013-08-21 14:59:07Z mat $
 
 PORTNAME=	Email-Date
-PORTVERSION=	1.10.3
-PORTREVISION=	1
+PORTVERSION=	1.10.4
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
