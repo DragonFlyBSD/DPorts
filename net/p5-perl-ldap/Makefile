@@ -1,8 +1,8 @@
 # Created by: scrappy@freebsd.org
-# $FreeBSD: net/p5-perl-ldap/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-perl-ldap/Makefile 325194 2013-08-22 13:06:31Z mat $
 
 PORTNAME=	perl-ldap
-PORTVERSION=	0.5600
+PORTVERSION=	0.5700
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MARSCHAP
