@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/jasper/Makefile 316157 2013-04-20 16:01:55Z dinoex $
+# $FreeBSD: graphics/jasper/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jasper
 PORTVERSION=	1.900.1
@@ -20,7 +20,6 @@ USE_AUTOTOOLS=	libtool
 USE_ZIP=	yes
 USE_GNOME=	lthack
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-shared --enable-static
