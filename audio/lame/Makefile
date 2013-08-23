@@ -2,7 +2,7 @@
 # Date created:        11 January 1998
 # Whom:                yoshiaki Uchikawa
 #
-# $FreeBSD: audio/lame/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: audio/lame/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	lame
@@ -19,7 +19,6 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-nasm --enable-mp3rtp --disable-gtktest
 
 RESTRICTED=	patent issues, see http://www.mp3licensing.com/
