@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Simple/Makefile 319035 2013-05-25 08:14:36Z sunpoet $
+# $FreeBSD: security/p5-Authen-Simple/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Authen-Simple
 PORTVERSION=	0.5
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Authen::Simple.3 \
 		Authen::Simple::Adapter.3 \
