@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: graphics/exif/Makefile 322581 2013-07-09 21:26:48Z pav $
+# $FreeBSD: graphics/exif/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	exif
 PORTVERSION=	0.6.20
@@ -16,7 +16,6 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 USES=		pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV+=		POPT_CFLAGS=-I${LOCALBASE}/include POPT_LIBS="-L${LOCALBASE}/lib -lpopt"
 
 .include <bsd.port.options.mk>
