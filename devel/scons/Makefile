@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: devel/scons/Makefile 318450 2013-05-18 20:24:03Z rakuco $
+# $FreeBSD: devel/scons/Makefile 324878 2013-08-17 22:55:46Z mva $
 
 PORTNAME=	scons
 PORTVERSION=	2.3.0
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	gavin@16degrees.com.au
 COMMENT=	A build tool alternative to make
 
-MAKE_JOBS_SAFE=	yes
+RUN_DEPENDS+=	python2:${PORTSDIR}/lang/python2
 
 .if !defined (NO_INSTALL_MANPAGES)
 MAN1=		scons.1 sconsign.1 scons-time.1
