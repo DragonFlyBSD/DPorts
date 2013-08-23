@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libgit2/Makefile 323065 2013-07-15 16:34:26Z wg $
+# $FreeBSD: devel/libgit2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libgit2
 PORTVERSION=	0.19.0
@@ -18,7 +18,6 @@ USES=		cmake
 USE_LDCONFIG=	yes
 USE_PYTHON_BUILD=	yes
 
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 
