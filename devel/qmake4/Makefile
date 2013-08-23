@@ -1,8 +1,9 @@
 # Created by: lofi@freebsd.org, mi@aldan.algebra.com
-# $FreeBSD: devel/qmake4/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qmake4/Makefile 324773 2013-08-15 15:39:05Z rakuco $
 
 PORTNAME=	qmake
 DISTVERSION=	${QT4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt4-
 
@@ -16,7 +17,6 @@ REINPLACE_ARGS=	-i ""
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 MAKE_ENV+=	FILESDIR="${FILESDIR}"
-MAKE_JOBS_SAFE=	yes
 TODAY_CMD=	/bin/date +%Y-%m-%d
 
 EXTRACT_AFTER_ARGS= \
@@ -48,6 +48,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|@QMAKE_QTOBJS@||g' ${WRKSRC}/Makefile.unix
 
 # FIXME: This is ugly
+	@${RM} ${WRKSRC}/../mkspecs/features/unix/*.orig
 	@${RM} ${WRKSRC}/../mkspecs/freebsd-g++/*.orig
 	@${RM} ${WRKSRC}/../mkspecs/freebsd-g++46/*.orig
 
