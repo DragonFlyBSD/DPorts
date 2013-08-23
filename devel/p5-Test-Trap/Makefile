@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Trap
-# Date created:		2011-09-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Test-Trap/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Trap/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Test-Trap
 PORTVERSION=	0.2.2
@@ -16,11 +12,11 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Trap exit codes, exceptions, output, etc
 
 BUILD_DEPENDS=	p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump
-RUN_DEPENDS=	p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Tester>=0.10.7:${PORTSDIR}/devel/p5-Test-Tester
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::Trap.3 \
 		Test::Trap::Builder.3 \
