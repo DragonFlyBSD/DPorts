@@ -1,9 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: net/p5-Net/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net/Makefile 325181 2013-08-22 11:09:32Z mat $
 
 PORTNAME=	Net
-PORTVERSION=	1.22
-PORTREVISION=	2
+PORTVERSION=	1.23
 PORTEPOCH=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
@@ -13,7 +12,11 @@ DISTNAME=	libnet-${PORTVERSION}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 modules to access and use network protocols
 
-RUN_DEPENDS=	p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL
+OPTIONS_DEFINE=		SASL
+OPTIONS_DEFAULT=	SASL
+SASL_DESC=		SASL auth for POP3 and SMTP support.
+
+SASL_RUN_DEPENDS=	p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL
 
 PORTSCOUT=	skipv:1.0901
 
