@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/db47/pkg-plist,v 1.35 2012/11/17 05:55:06 svnexp Exp $
+@comment $FreeBSD: databases/db47/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/berkeley_db_svc-4.7
 bin/db47/berkeley_db_svc
 bin/db47/db_archive
