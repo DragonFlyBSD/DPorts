@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: ports/sysutils/ucspi-tcp/Makefile,v 1.38 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/ucspi-tcp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ucspi-tcp
 PORTVERSION=	0.88
@@ -21,7 +21,6 @@ RSS_DIFF_DESC=	Patch rblsmtpd for qmail users
 RBL2SMTPD_DESC=	Don't drop connection, pass envvar to smtpd
 LIMITS_DESC=	Implement per-connection and other limits
 
-MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	prog install instcheck
 
