@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/libprelude/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/libprelude/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
@@ -26,7 +26,6 @@ CONFIGURE_ARGS=	--localstatedir=/var \
 USE_GMAKE=	yes
 USES=	pathfix pkgconfig gettext iconv charsetfix
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
