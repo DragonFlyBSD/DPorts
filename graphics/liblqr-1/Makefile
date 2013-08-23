@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/liblqr-1/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: graphics/liblqr-1/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	liblqr-1
 DISTVERSION=	0.4.1
@@ -16,7 +16,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 pkgconfig
 USES=		gettext
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 # Use GNU89 inline semantics
