@@ -1,8 +1,8 @@
 # Created by: T. William Wells <bill@twwells.com>
-# $FreeBSD: databases/p5-BerkeleyDB/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-BerkeleyDB/Makefile 325037 2013-08-20 09:51:25Z mat $
 
 PORTNAME=	BerkeleyDB
-PORTVERSION=	0.52
+PORTVERSION=	0.53
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
