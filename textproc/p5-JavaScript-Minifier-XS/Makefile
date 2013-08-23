@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-JavaScript-Minifier-XS/Makefile 316562 2013-04-26 03:10:27Z sunpoet $
+# $FreeBSD: textproc/p5-JavaScript-Minifier-XS/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	JavaScript-Minifier-XS
 PORTVERSION=	0.09
@@ -17,7 +17,8 @@ TEST_DEPENDS=	p5-JavaScript-Minifier>=0:${PORTSDIR}/textproc/p5-JavaScript-Minif
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		JavaScript::Minifier::XS.3
 
