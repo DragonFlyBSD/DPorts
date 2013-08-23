@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.14/Makefile 323489 2013-07-22 18:03:15Z az $
+# $FreeBSD: lang/perl5.14/Makefile 325216 2013-08-22 17:03:43Z sunpoet $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
@@ -20,8 +20,9 @@ COMMENT=	Practical Extraction and Report Language
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-CONFLICTS=	perl-5.16.* perl-threaded-5.16.* \
-		perl-5.12.* perl-threaded-5.12.*
+CONFLICTS=	perl-5.12.* perl-threaded-5.12.* \
+		perl-5.16.* perl-threaded-5.16.* \
+		perl-5.18.* perl-threaded-5.18.*
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_MALLOC PERL_64BITINT THREADS PTHREAD \
 		MULTIPLICITY SITECUSTOMIZE USE_PERL
