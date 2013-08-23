@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tie-Function
-# Date created:		2011-08-04
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Tie-Function/Makefile,v 1.2 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Tie-Function/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Tie-Function
 PORTVERSION=	0.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Wrap functions in tied hash sugar
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Tie::Function.3
 
