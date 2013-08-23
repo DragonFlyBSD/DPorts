@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Data-Dump-Streamer/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Dump-Streamer/Makefile 325051 2013-08-20 14:14:53Z mat $
 
 PORTNAME=	Data-Dump-Streamer
-PORTVERSION=	2.34
+PORTVERSION=	2.36
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
