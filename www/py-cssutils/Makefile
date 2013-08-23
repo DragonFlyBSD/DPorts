@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-cssutils
-# Date created:			Aug 26, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/py-cssutils/Makefile,v 1.13 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/py-cssutils/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	cssutils
 PORTVERSION=	0.9.9
@@ -13,7 +8,7 @@ CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CSS Cascading Style Sheets library for Python
 
 USE_ZIP=	yes
