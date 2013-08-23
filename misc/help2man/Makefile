@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/help2man/Makefile 322608 2013-07-10 03:40:21Z sunpoet $
+# $FreeBSD: misc/help2man/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	help2man
 PORTVERSION=	1.43.3
@@ -15,8 +15,7 @@ OPTIONS_DEFINE=	NLS
 
 CFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		gmake perl5
 
 INFO=		${PORTNAME}
 MAN1=		${PORTNAME}.1
