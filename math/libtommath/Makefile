@@ -1,4 +1,4 @@
-# $FreeBSD: math/libtommath/Makefile 319380 2013-05-29 15:41:00Z miwi $
+# $FreeBSD: math/libtommath/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libtommath
 PORTVERSION=	0.42.0
@@ -18,7 +18,6 @@ USE_GMAKE=	yes
 ALL_TARGET=	default
 CFLAGS+=	-fPIC
 PORTDOCS=	*
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	include/tommath.h include/tommath_class.h \
 		include/tommath_superclass.h lib/libtommath.a
