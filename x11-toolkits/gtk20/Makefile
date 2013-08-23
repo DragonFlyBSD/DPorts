@@ -1,11 +1,11 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk20/Makefile 323631 2013-07-25 09:36:57Z kwm $
+# $FreeBSD: x11-toolkits/gtk20/Makefile 324911 2013-08-18 13:29:30Z mva $
 #   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.237 2013/03/04 17:44:38 kwm Exp $
 # Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
 PORTVERSION=	2.24.19
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,11 +26,11 @@ PORTSCOUT=	limitw:0,even
 
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 RUN_DEPENDS+=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
-		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
+		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
+		python:${PORTSDIR}/lang/python
 
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
