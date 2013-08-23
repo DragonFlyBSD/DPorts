@@ -1,5 +1,5 @@
 # Created by: Yarema <yds@CoolRat.org>
-# $FreeBSD: ports/devel/sysconftool/Makefile,v 1.24 2012/11/17 05:57:04 svnexp Exp $
+# $FreeBSD: devel/sysconftool/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sysconftool
 PORTVERSION=	0.16
@@ -12,7 +12,6 @@ COMMENT=	Helps to install application configuration files
 USE_BZIP2=	yes
 USE_PERL5=	yes
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	automake aclocal autoconf
 
