@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: ports/graphics/jpeg/Makefile,v 1.65 2013/02/08 13:27:06 svnexp Exp $
+# $FreeBSD: graphics/jpeg/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jpeg
 PORTVERSION=	8
@@ -23,7 +23,6 @@ DISTVERSION2=	8d
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-static
-MAKE_JOBS_SAFE=	yes
 
 ADDITIONAL_HEADER=	jinclude.h jpegint.h
 
