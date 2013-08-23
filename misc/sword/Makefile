@@ -1,5 +1,5 @@
 # Created by: Willem van Engen <wvengen@stack.nl>
-# $FreeBSD: misc/sword/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: misc/sword/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sword
 PORTVERSION=	1.6.2
@@ -17,7 +17,6 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	cppunit-config:${PORTSDIR}/devel/cppunit
 
-MAKE_JOBS_SAFE=	yes
 
 USE_GCC=	any
 USE_GNOME=	pkgconfig
