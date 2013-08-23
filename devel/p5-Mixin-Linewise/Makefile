@@ -1,9 +1,8 @@
 # Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 325057 2013-08-20 15:08:00Z mat $
 
 PORTNAME=	Mixin-Linewise
-PORTVERSION=	0.003
-PORTREVISION=	1
+PORTVERSION=	0.004
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
