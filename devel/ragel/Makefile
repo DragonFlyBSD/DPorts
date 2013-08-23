@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/ragel/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: devel/ragel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ragel
 PORTVERSION=	6.8
@@ -14,7 +14,6 @@ LICENSE_COMB=	dual
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 
