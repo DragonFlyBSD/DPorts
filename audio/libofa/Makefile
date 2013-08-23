@@ -2,7 +2,7 @@
 # Date created:		2006-04-01
 # Whom:			Alexander Botero-Lowry <alex@foxybanana.com>
 #
-# $FreeBSD: audio/libofa/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/libofa/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libofa
@@ -32,7 +32,6 @@ USES=	pathfix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
