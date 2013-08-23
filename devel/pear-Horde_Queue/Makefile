@@ -1,7 +1,7 @@
-# $FreeBSD: devel/pear-Horde_Queue/Makefile 317884 2013-05-11 15:16:00Z mm $
+# $FreeBSD: devel/pear-Horde_Queue/Makefile 325255 2013-08-23 08:30:45Z mm $
 
 PORTNAME=	Horde_Queue
-PORTVERSION=	1.0.0
+PORTVERSION=	1.1.0
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
