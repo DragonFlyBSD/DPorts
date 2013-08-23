@@ -1,4 +1,4 @@
-# $FreeBSD: net/miniupnpc/Makefile 313380 2013-03-03 21:09:54Z dinoex $
+# $FreeBSD: net/miniupnpc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	miniupnpc
 PORTVERSION=	1.8
@@ -11,7 +11,6 @@ COMMENT?=	UPnP IGD client lightweight library
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
