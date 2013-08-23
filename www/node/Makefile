@@ -1,8 +1,8 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: www/node/Makefile 323787 2013-07-27 13:49:49Z swills $
+# $FreeBSD: www/node/Makefile 325249 2013-08-23 05:02:37Z delphij $
 
 PORTNAME=	node
-PORTVERSION=	0.10.15
+PORTVERSION=	0.10.17
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
@@ -22,7 +22,6 @@ USE_GMAKE=	yes
 CONFLICTS=	node-0.[02-9][0-9]* node-devel-0.[0-9]*
 
 ONLY_FOR_ARCHS=	i386 amd64
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} --without-npm
 PREFIX_RELDEST=	${PREFIX:S,^${DESTDIR},,}
 REINPLACE_ARGS=	-i ''
