@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/lash/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: audio/lash/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lash
 PORTVERSION=	0.5.4
@@ -26,7 +26,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-alsa-midi
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include/dssi -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
