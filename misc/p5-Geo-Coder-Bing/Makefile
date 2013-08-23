@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Bing/Makefile 316377 2013-04-23 17:10:23Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Bing/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Geo-Coder-Bing
 PORTVERSION=	0.11
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-JSON>=2:${PORTSDIR}/converters/p5-JSON \
 		p5-libwww>=6.02:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Geo::Coder::Bing.3
 
