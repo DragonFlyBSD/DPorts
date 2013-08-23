@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tmake
-# Date created:		8 March 2000
-# Whom:			jesse@cs.uni-magdeburg.de
-#
-# $FreeBSD: ports/devel/tmake/Makefile,v 1.23 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: jesse@cs.uni-magdeburg.de
+# $FreeBSD: devel/tmake/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	tmake
 PORTVERSION=	1.13
@@ -16,7 +12,7 @@ COMMENT=	Extremely portable perl-based make utility
 
 NO_BUILD=	yes
 REINPLACE_ARGS=	-i ''
-USE_PERL5=	yes
+USES=		perl5
 
 post-patch:
 	@${RM} -f ${WRKSRC}/bin/tmake.orig ${WRKSRC}/lib/unix/generic.t.orig
@@ -27,14 +23,14 @@ post-patch:
 			${WRKSRC}/lib/freebsd-g++/tmake.conf
 
 do-install:
-	@${MKDIR} ${DATADIR}/
-	@cd ${WRKSRC}/lib/ && ${COPYTREE_SHARE} . ${DATADIR}/
-	@cd ${WRKSRC}/bin/ && ${INSTALL_SCRIPT} progen tmake ${PREFIX}/bin/
+	${MKDIR} ${DATADIR}/
+	cd ${WRKSRC}/lib/ && ${COPYTREE_SHARE} . ${DATADIR}/
+	cd ${WRKSRC}/bin/ && ${INSTALL_SCRIPT} progen tmake ${PREFIX}/bin/
 
 post-install:
-	@${ECHO}
-	@${ECHO} "Make sure to set your TMAKEPATH environment variable"
-	@${ECHO} "to ${DATADIR}/freebsd-g++."
-	@${ECHO}
+	@${ECHO_MSG}
+	@${ECHO_MSG} "Make sure to set your TMAKEPATH environment variable"
+	@${ECHO_MSG} "to ${DATADIR}/freebsd-g++."
+	@${ECHO_MSG}
 
 .include <bsd.port.mk>
