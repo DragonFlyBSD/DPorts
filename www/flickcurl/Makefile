@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/flickcurl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/flickcurl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	flickcurl
 PORTVERSION=	1.24
@@ -24,7 +24,6 @@ USE_GNOME=	ltverhack libxml2
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-html-dir=${WRKDIR}/tmproot
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		flickcurl.1 flickcurl-config.1 flickrdf.1
 
