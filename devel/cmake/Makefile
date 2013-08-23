@@ -1,5 +1,5 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 324203 2013-08-03 21:15:54Z rakuco $
+# $FreeBSD: devel/cmake/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cmake
 PORTVERSION=	2.8.11.2
@@ -16,7 +16,6 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--datadir="/${DATADIR_REL}" \
 		--docdir="/${DOCSDIR_REL}" \
 		--init="${PATCHDIR}/InitialCache.cmake"
-MAKE_JOBS_SAFE=	yes
 
 .if defined(STRIP) && ${STRIP} != ""
 INSTALL_TARGET=	install/strip
