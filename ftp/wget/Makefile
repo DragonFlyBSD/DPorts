@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: ftp/wget/Makefile 318142 2013-05-14 08:27:47Z vd $
+# $FreeBSD: ftp/wget/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wget
 DISTVERSION=	1.14
@@ -16,7 +16,6 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_RADIO=	SSL
 OPTIONS_RADIO_SSL=GNUTLS OPENSSL
