@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: lang/librep/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: lang/librep/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	librep
 PORTVERSION=	0.92.3
@@ -26,7 +26,6 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-aclocaldir=${PREFIX}/share/aclocal \
 		--with-stack-direction=-1
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib -pthread
