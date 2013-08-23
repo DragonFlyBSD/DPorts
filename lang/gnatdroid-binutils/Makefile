@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-binutils/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: lang/gnatdroid-binutils/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=		binutils
 PORTVERSION=		2.21.1
@@ -21,7 +21,6 @@ USE_GCC=	any
 USE_GMAKE=	YES
 HAS_CONFIGURE=	YES
 NO_MTREE=	YES
-MAKE_JOBS_SAFE=	YES
 
 WRKSRC=			${WRKDIR}/binutils-${PORTVERSION}
 PREFIX=			${LOCALBASE}/android9
