@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: astro/gpsd/Makefile 317170 2013-05-03 04:56:40Z rm $
+# $FreeBSD: astro/gpsd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gpsd
 PORTVERSION=	3.9
@@ -18,7 +18,6 @@ USE_RC_SUBR=	gpsd
 USE_PYTHON=	yes
 INSTALLS_EGGINFO=	yes
 PYDISTUTILS_EGGINFO=	gps-${PORTVERSION}.egg-info
-MAKE_JOBS_SAFE=	yes
 
 SCONS_BUILDENV=	CC=${CC}
 SCONS_ARGS=	prefix="${PREFIX}" mandir="man" pkgconfig="libdata/pkgconfig" \
