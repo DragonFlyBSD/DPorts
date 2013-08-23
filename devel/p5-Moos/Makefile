@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Moos/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-Moos/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Moos
 PORTVERSION=	0.15
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Class-XSAccessor>=1.07:${PORTSDIR}/devel/p5-Class-XSAccessor \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		remoos.1
 MAN3=		Moos.3 \
