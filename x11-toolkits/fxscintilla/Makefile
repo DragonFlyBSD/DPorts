@@ -1,5 +1,5 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: x11-toolkits/fxscintilla/Makefile 316372 2013-04-23 16:45:40Z gahr $
+# $FreeBSD: x11-toolkits/fxscintilla/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fxscintilla
 PORTVERSION=	2.28.0
@@ -19,6 +19,5 @@ USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
