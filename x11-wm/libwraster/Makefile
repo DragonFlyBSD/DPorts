@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/libwraster/Makefile 317142 2013-05-02 19:37:23Z hrs $
+# $FreeBSD: x11-wm/libwraster/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libwraster
 PORTVERSION=	0.95.4
@@ -32,7 +32,6 @@ CONFIGURE_ARGS=	--with-pixmapdir=${PREFIX}/include/X11/pixmaps \
 		--enable-modelock \
 		--enable-xinerama --enable-usermenu \
 		--with-x
-MAKE_JOBS_SAFE=	yes
 CPPFLAGS+=	-DPREFIX=\\\"${PREFIX}\\\" -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
