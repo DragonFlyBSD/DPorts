@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: print/tex-dvipdfmx/Makefile 318747 2013-05-22 08:26:53Z hrs $
+# $FreeBSD: print/tex-dvipdfmx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dvipdfmx
 PORTVERSION=	20120420
@@ -61,7 +61,6 @@ CONFIGURE_ARGS= --with-paper \
 		--with-system-zlib
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+= 	-lpaper -L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 NO_MANCOMPRESS=	yes
 MAN1=	dvipdfm.1 dvipdft.1 ebb.1 extractbb.1
