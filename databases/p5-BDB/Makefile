@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-BDB
-# Date created:		2011-06-05
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-BDB/Makefile,v 1.7 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: databases/p5-BDB/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	BDB
 PORTVERSION=	1.90
@@ -17,19 +13,19 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Asynchronous Berkeley DB access
 
 BUILD_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
-RUN_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PORTSCOUT=	skipv:1.801
 
 CFLAGS+=	-I${BDB_INCLUDE_DIR}
 LDFLAGS+=	${PTHREAD_LIBS}
-PERL_CONFIGURE=	yes
 USE_BDB=	43+
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		BDB.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '18 s|-lpthread -ldb|-l${BDB_LIB_NAME} ${PTHREAD_LIBS}|' ${WRKSRC}/Makefile.PL
-#	@${REINPLACE_CMD} -e '/RPCCLIENT/d' ${WRKSRC}/BDB.pm
 
 .include <bsd.port.mk>
