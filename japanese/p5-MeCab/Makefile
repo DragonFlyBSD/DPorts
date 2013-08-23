@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/p5-MeCab/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: japanese/p5-MeCab/Makefile 324570 2013-08-11 05:21:05Z tota $
 
 PORTNAME=	MeCab
-PORTVERSION=	0.995
+PORTVERSION=	0.996
 CATEGORIES=	japanese textproc perl5
 MASTER_SITES=	GOOGLE_CODE
 PROJECTHOST=	${PORTNAME:tl}
@@ -13,9 +13,6 @@ COMMENT=	MeCab library module for Perl5
 
 LICENSE=	BSD GPLv2 LGPL21
 LICENSE_COMB=	dual
-LICENSE_FILE_BSD=	${WRKSRC}/BSD
-LICENSE_FILE_GPLv2=	${WRKSRC}/GPL
-LICENSE_FILE_LGPL21=	${WRKSRC}/LGPL
 
 LIB_DEPENDS=	mecab:${PORTSDIR}/japanese/mecab
 
