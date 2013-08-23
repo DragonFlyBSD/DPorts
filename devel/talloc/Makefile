@@ -1,4 +1,4 @@
-# $FreeBSD: devel/talloc/Makefile 322111 2013-07-01 02:36:07Z timur $
+# $FreeBSD: devel/talloc/Makefile 324881 2013-08-17 23:51:12Z mva $
 
 PORTNAME=		talloc
 PORTVERSION=		2.0.8
@@ -23,7 +23,6 @@ WAF_TOOL=		buildtools/bin/waf
 CONFIGURE_SCRIPT=	${WAF_TOOL} configure
 CONFIGURE_LOG=		bin/config.log
 
-MAKE_JOBS_SAFE=		yes
 
 PKGCONFIGDIR?=		${PREFIX}/libdata/pkgconfig
 PLIST_SUB+=		PKGCONFIGDIR=${PKGCONFIGDIR:S;${PREFIX}/;;}
@@ -76,6 +75,7 @@ INSTALL_TARGET=		install
 IGNORE_NONTHREAD_PYTHON=needs port lang/python${PYTHON_SUFFIX} to be build with THREADS support
 
 post-patch:
+			@${REINPLACE_CMD} -e 's|python|python${PYTHON_VER}|' ${BUILD_WRKSRC}/${WAF_TOOL}
 			@${REINPLACE_CMD} -e 's|%%PKGCONFIGDIR%%|${PKGCONFIGDIR}|g' \
 				${BUILD_WRKSRC}/wscript
 
