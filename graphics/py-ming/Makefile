@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Python/Ming
-# Date created:		16 Oct 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/graphics/py-ming/Makefile,v 1.26 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: graphics/py-ming/Makefile 325206 2013-08-22 15:21:08Z sunpoet $
 
 PORTNAME=	ming
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
