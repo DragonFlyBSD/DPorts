@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/libstreams/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: deskutils/libstreams/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libstreams
 PORTVERSION=	${STRIGI_VERSION}
@@ -10,7 +10,6 @@ COMMENT=	Strigi desktop search: streams library
 
 USES=		iconv
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e \
