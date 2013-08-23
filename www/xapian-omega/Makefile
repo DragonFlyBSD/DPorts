@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-# $FreeBSD: www/xapian-omega/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: www/xapian-omega/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	xapian-omega
 PORTVERSION=	1.2.15
@@ -27,7 +27,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		omindex.1 scriptindex.1
 MORE_PORTDOCS=	AUTHORS ChangeLog NEWS README TODO
