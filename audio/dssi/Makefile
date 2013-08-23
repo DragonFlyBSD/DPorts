@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/dssi/Makefile 322948 2013-07-13 17:23:19Z deischen $
+# $FreeBSD: audio/dssi/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dssi
 PORTVERSION=	1.1.1
@@ -26,7 +26,6 @@ OPTIONS_DEFINE=	QT4
 USES=	pathfix pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
