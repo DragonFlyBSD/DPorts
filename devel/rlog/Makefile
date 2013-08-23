@@ -2,7 +2,7 @@
 # Date created:		2007-01-05
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: devel/rlog/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/rlog/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	rlog
@@ -20,7 +20,6 @@ USES=	pathfix
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e \
