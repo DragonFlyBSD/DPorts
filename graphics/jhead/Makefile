@@ -1,5 +1,5 @@
 # Created by: Jamie Hermans <jamie@hermans.ca>
-# $FreeBSD: graphics/jhead/Makefile 313722 2013-03-09 15:47:21Z sunpoet $
+# $FreeBSD: graphics/jhead/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jhead
 PORTVERSION=	2.97
@@ -13,7 +13,6 @@ RUN_DEPENDS=	jpegtran:${PORTSDIR}/graphics/jpeg
 
 OPTIONS_DEFINE=	DOCS
 
-MAKE_JOBS_SAFE=	yes
 MAKEFILE=	makefile
 
 MAN1=		jhead.1
