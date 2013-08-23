@@ -1,9 +1,9 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/gstreamer1-libav/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: multimedia/gstreamer1-libav/Makefile 325107 2013-08-21 11:24:07Z kwm $
 #    $MCom: ports/multimedia/gstreamer1-libav/Makefile,v 1.4 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1-libav
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.9
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-libav/
 DISTNAME=	gst-libav-${PORTVERSION}
@@ -28,11 +28,8 @@ LIBAV_CONFIG=	--cc=${CC} \
 		--enable-pic
 LDFLAGS+=	-Wl,-Bsymbolic
 CFLAGS+=	-fno-force-addr
-#CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG}
 
 PLIST_SUB=	VERSION="${GST1_VERSION}"
-
-#PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 
 # sse hardware vector support
 .if defined(MACHINE_CPU) && (${MACHINE_CPU:Msse} == "sse" || ${MACHINE_CPU:Mamd64} == "amd64")
