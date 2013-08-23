@@ -2,7 +2,7 @@
 # Date created:		Dec 28 1998
 # Whom:			Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
 #
-# $FreeBSD: math/fftw/Makefile 323109 2013-07-16 14:45:25Z miwi $
+# $FreeBSD: math/fftw/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	fftw
@@ -32,7 +32,6 @@ AUTOMAKE_ARGS=	--add-missing
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 CONFIGURE_ARGS=	--enable-shared
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	FFTW_SUFX="${FFTW_SUFX}"
 
