@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-vumeter/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-vumeter/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vumeter
 PORTVERSION=	0.9.2
@@ -18,7 +18,6 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 USE_GNOME=	gdkpixbuf
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 DATADIR=	${PREFIX}/share/xmms/VU_Meter_skins
 
