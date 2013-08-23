@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 321701 2013-06-24 18:35:04Z eadler $
+# $FreeBSD: ports-mgmt/dialog4ports/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dialog4ports
 PORTVERSION=	0.1.5
@@ -25,7 +25,6 @@ MAKE_ENV+=	__MAKE_CONF=/dev/null SRCCONF=/dev/null
 
 PLIST_FILES=	bin/dialog4ports
 
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
