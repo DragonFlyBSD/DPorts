@@ -2,13 +2,13 @@
 # Date created:			7 Jun 2006
 # Whom:				Alex Dupre <ale@FreeBSD.org>
 #
-# $FreeBSD: ports/ports-mgmt/portconf/Makefile,v 1.8 2012/11/17 06:00:46 svnexp Exp $
+# $FreeBSD: ports-mgmt/portconf/Makefile 324628 2013-08-12 13:05:07Z ale $
 #
 # This port is self contained in the files directory.
 #
 
 PORTNAME=	portconf
-PORTVERSION=	1.5
+PORTVERSION=	1.6
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
