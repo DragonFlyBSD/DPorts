@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: graphics/libwmf/Makefile 314974 2013-03-22 23:18:27Z beech $
+# $FreeBSD: graphics/libwmf/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libwmf
 PORTVERSION=	0.2.8.4
@@ -24,7 +24,6 @@ CONFIGURE_ARGS=	--with-sys-gd=no \
 		--with-png=${LOCALBASE} --with-jpeg=${LOCALBASE} \
 		--with-gsfontdir=${LOCALBASE}/share/ghostscript/fonts
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 
