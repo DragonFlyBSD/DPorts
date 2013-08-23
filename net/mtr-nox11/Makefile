@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mtr-nox11
-# Date created:		2011-01-16
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/net/mtr-nox11/Makefile,v 1.5 2012/11/17 06:00:06 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: net/mtr-nox11/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 MASTERDIR=	${.CURDIR}/../mtr
 
