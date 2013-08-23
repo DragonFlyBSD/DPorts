@@ -1,4 +1,4 @@
-# $FreeBSD: devel/fossil/Makefile 321355 2013-06-20 07:21:04Z bapt $
+# $FreeBSD: devel/fossil/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fossil
 PORTVERSION=	20130618210923
@@ -12,7 +12,6 @@ COMMENT=	DSCM with built-in wiki, http interface and server, tickets database
 
 LICENSE=	BSD
 
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/fossil
 
