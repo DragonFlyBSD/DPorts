@@ -1,7 +1,7 @@
-# $FreeBSD: ports/x11/xwd/Makefile,v 1.7 2013/02/04 05:12:43 svnexp Exp $
+# $FreeBSD: x11/xwd/Makefile 324719 2013-08-14 13:43:49Z zeising $
 
 PORTNAME=	xwd
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -10,7 +10,7 @@ COMMENT=	Dump an image of an X window
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xmuu x11
+USE_XORG=	x11 xkbfile
 
 PLIST_FILES=	bin/xwd
 
