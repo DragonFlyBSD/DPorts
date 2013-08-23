@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Lexical-Var/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Lexical-Var/Makefile 324951 2013-08-19 07:59:29Z culot $
 
 PORTNAME=	Lexical-Var
-PORTVERSION=	0.007
+PORTVERSION=	0.008
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
