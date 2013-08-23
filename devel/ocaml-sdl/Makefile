@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/ocaml-sdl/Makefile,v 1.31 2012/12/20 06:27:29 svnexp Exp $
+# $FreeBSD: devel/ocaml-sdl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sdl
 PORTVERSION=	0.9.1
@@ -33,7 +33,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-lablgldir=${LOCALBASE} \
 		--with-sdl-prefix=${LOCALBASE} \
 		--with-installdir=${PREFIX}
-MAKE_JOBS_SAFE=	yes
 
 DOCSDIR=	${OCAML_DOCSDIR}/${PORTNAME}
 
