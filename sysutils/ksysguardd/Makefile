@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ksysguardd/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: sysutils/ksysguardd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ksysguardd
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,6 @@ USE_KDE4=	kdeprefix kdehier
 USES=		cmake
 CMAKE_ARGS+=	-DBIN_INSTALL_DIR:STRING="${PREFIX}/bin" \
 		-DSYSCONF_INSTALL_DIR:STRING="${PREFIX}/etc"
-MAKE_JOBS_SAFE=	yes
 
 EXTRACT_AFTER_ARGS=	'${DISTNAME}/ksysguard/${PORTNAME}' \
 			'${DISTNAME}/ksysguard/example/${PORTNAME}rc' \
