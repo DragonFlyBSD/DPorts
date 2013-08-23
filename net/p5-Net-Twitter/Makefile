@@ -1,8 +1,8 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Twitter/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Twitter/Makefile 325193 2013-08-22 12:50:49Z mat $
 
 PORTNAME=	Net-Twitter
-PORTVERSION=	4.00006
+PORTVERSION=	4.00007
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
