@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: textproc/qt4-xml/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: textproc/qt4-xml/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xml
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	Qt XML library
 USE_QT4=	qmake_build moc_build corelib
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/qt4
