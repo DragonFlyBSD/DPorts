@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libsoup/Makefile 318626 2013-05-20 20:46:21Z kwm $
+# $FreeBSD: devel/libsoup/Makefile 324877 2013-08-17 22:44:27Z mva $
 #   $MCom: ports/trunk/devel/libsoup/Makefile 18456 2013-05-12 14:40:21Z kwm $
 
 PORTNAME=	libsoup
@@ -12,7 +12,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A SOAP (Simple Object Access Protocol) implementation in C
 
-BUILD_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
+BUILD_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking \
+		python2:${PORTSDIR}/lang/python2
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
 
@@ -26,7 +27,6 @@ USE_SQLITE=	3
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_PYTHON_BUILD=	-2.7
 CONFIGURE_ARGS=	--disable-more-warnings
 CPPFLAGS+=	-I${LOCALBASE}/include
