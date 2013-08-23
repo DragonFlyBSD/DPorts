@@ -2,7 +2,7 @@
 # Date created:				26 Apr 2008
 # Whom:					Sergey A. Osokin <osa@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/libraw/Makefile,v 1.36 2012/11/17 05:58:13 svnexp Exp $
+# $FreeBSD: graphics/libraw/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #
 
 PORTNAME=	libraw
@@ -42,7 +42,7 @@ CFLAGS+=	-O3
 .endif
 
 .if ${PORT_OPTIONS:MOPENMP}
-USE_GCC=	4.6+
+USE_GCC=	yes
 CONFIGURE_ARGS+=--enable-openmp
 .else
 CONFIGURE_ARGS+=--disable-openmp
