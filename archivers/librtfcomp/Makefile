@@ -2,7 +2,7 @@
 # Date Created:				13 June 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/archivers/librtfcomp/Makefile,v 1.10 2013/02/20 16:45:20 svnexp Exp $
+# $FreeBSD: archivers/librtfcomp/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	librtfcomp
@@ -13,7 +13,6 @@ MASTER_SITES=	SF/synce/SynCE/0.10.0
 MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	LZRTF compression library
 
-MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
