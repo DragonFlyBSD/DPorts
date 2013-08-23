@@ -2,7 +2,7 @@
 # Date created:		2005-05-04
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/gpac-libgpac/Makefile,v 1.27 2012/11/17 05:59:49 svnexp Exp $
+# $FreeBSD: multimedia/gpac-libgpac/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gpac
@@ -19,7 +19,6 @@ COMMENT=	Gpac MPEG-4 Systems library and headers
 WRKSRC=		${WRKDIR}/gpac
 ALL_TARGET=	lib
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
