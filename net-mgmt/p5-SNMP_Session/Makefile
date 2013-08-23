@@ -1,9 +1,9 @@
 # Created by: Stephen J. Roznowski <sjr@home.net>
-# $FreeBSD: net-mgmt/p5-SNMP_Session/Makefile 322986 2013-07-14 15:14:19Z crees $
+# $FreeBSD: net-mgmt/p5-SNMP_Session/Makefile 324621 2013-08-12 11:15:04Z demon $
 
 PORTNAME=	SNMP_Session
 PORTVERSION=	1.13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PROJECTHOST=	snmp-session
