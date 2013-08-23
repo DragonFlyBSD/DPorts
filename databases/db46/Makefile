@@ -2,7 +2,7 @@
 # Date created:		2007-07-26
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/databases/db46/Makefile,v 1.94 2012/11/17 05:55:06 svnexp Exp $
+# $FreeBSD: databases/db46/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	db46
@@ -44,7 +44,6 @@ CONFIGURE_ARGS=	--enable-compat185 --enable-dump185 --enable-cxx \
 		--bindir=${PREFIX}/bin/${PORTNAME}
 CONFIGURE_SCRIPT=	../dist/configure
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 INSTALL_TARGET=	install_include install_lib install_utilities
 LIBTOOLFILES=	${CONFIGURE_SCRIPT}
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
