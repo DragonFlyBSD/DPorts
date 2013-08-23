@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/iulib/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: graphics/iulib/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	iulib
 PORTVERSION=	0.4
@@ -19,7 +19,6 @@ OPTIONS_DEFINE=	SDL VIDIO
 SDL_DESC=	Enable SDL for graphical debugging
 VIDIO_DESC=	Enable Video Input/Output (using ffmpeg)
 
-MAKE_JOBS_SAFE=	yes
 USE_GCC=	any
 USE_PYTHON_BUILD=	yes
 USE_AUTOTOOLS=	libtool aclocal automake autoconf
