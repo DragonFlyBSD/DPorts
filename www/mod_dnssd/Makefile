@@ -2,7 +2,7 @@
 # Date created:		27 February 2009
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_dnssd/Makefile,v 1.16 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_dnssd/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_dnssd
@@ -17,7 +17,6 @@ COMMENT=	An Apache module that provides DNS-SD capabilities
 
 LIB_DEPENDS=	avahi-client.3:${PORTSDIR}/net/avahi-app
 
-MAKE_JOBS_SAFE=	yes
 
 USE_GMAKE=	yes
 USE_APACHE=	22
