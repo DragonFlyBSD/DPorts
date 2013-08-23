@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-AnyMQ/Makefile,v 1.5 2013/02/19 19:56:32 svnexp Exp $
+# $FreeBSD: devel/p5-AnyMQ/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	AnyMQ
 PORTVERSION=	0.35
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		AnyMQ.3 \
 		AnyMQ::Queue.3 \
