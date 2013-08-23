@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: mail/mlmmj/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: mail/mlmmj/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mlmmj
 PORTVERSION=	1.2.17.1
@@ -50,7 +50,6 @@ USE_BZIP2=	yes
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${MANPREFIX}/man
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		mlmmj-bounce.1 mlmmj-list.1 mlmmj-maintd.1 mlmmj-make-ml.sh.1 mlmmj-process.1 mlmmj-recieve.1 mlmmj-send.1 mlmmj-sub.1 mlmmj-unsub.1
 
