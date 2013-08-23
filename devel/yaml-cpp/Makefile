@@ -1,5 +1,5 @@
 # Created by: Tim Niemueller <tim@niemueller.de>
-# $FreeBSD: devel/yaml-cpp/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/yaml-cpp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	yaml-cpp
 PORTVERSION=	0.3.0
@@ -14,7 +14,6 @@ LICENSE=	MIT
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON -DYAML_CPP_BUILD_TOOLS=0
 
