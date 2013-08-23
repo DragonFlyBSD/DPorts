@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: devel/geany/Makefile 322834 2013-07-12 14:15:50Z makc $
+# $FreeBSD: devel/geany/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	geany
 PORTVERSION=	1.23.1
@@ -19,7 +19,6 @@ USE_GNOME=	gtk20
 USES=		pathfix pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	VTE NLS DOCS
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
