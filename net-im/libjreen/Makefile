@@ -1,5 +1,5 @@
 # Created by: Max Brazhnikov <makc@FreeBSD.org>
-# $FreeBSD: net-im/libjreen/Makefile 316930 2013-04-30 13:44:30Z nivit $
+# $FreeBSD: net-im/libjreen/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libjreen
 PORTVERSION=	1.1.1
@@ -20,7 +20,6 @@ GH_TAGNAME=	v${PORTVERSION}
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAKE_JOBS_SAFE=	yes
 
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
