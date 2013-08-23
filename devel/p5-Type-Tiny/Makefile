@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Type-Tiny/Makefile 324404 2013-08-08 17:37:57Z sunpoet $
+# $FreeBSD: devel/p5-Type-Tiny/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Type-Tiny
 PORTVERSION=	0.022
@@ -23,7 +23,8 @@ TEST_DEPENDS=	p5-Class-InsideOut>=0:${PORTSDIR}/devel/p5-Class-InsideOut \
 		p5-Sub-Exporter-Lexical>=0:${PORTSDIR}/devel/p5-Sub-Exporter-Lexical \
 		p5-Validation-Class>=0:${PORTSDIR}/devel/p5-Validation-Class
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Devel::TypeTiny::Perl56Compat.3 \
 		Eval::TypeTiny.3 \
