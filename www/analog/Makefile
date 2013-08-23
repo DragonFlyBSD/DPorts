@@ -1,5 +1,5 @@
 # Created by: jfitz
-# $FreeBSD: www/analog/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: www/analog/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	analog
 PORTVERSION=	6.0
@@ -24,7 +24,6 @@ LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 BUILD_WRKSRC=	${WRKSRC}/src
 
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
