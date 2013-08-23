@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-Lexical-Persistence
-# Date created:				01 Jan 2007
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Lexical-Persistence/Makefile,v 1.11 2012/11/17 05:56:20 svnexp Exp $
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: devel/p5-Lexical-Persistence/Makefile 325100 2013-08-21 09:17:02Z jadawin $
 #
 
 PORTNAME=	Lexical-Persistence
-PORTVERSION=	1.020
+PORTVERSION=	1.023
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Lexical::Persistence.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
