@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.ORG
-# $FreeBSD: x11-toolkits/wxgtk28/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: x11-toolkits/wxgtk28/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wx
 PORTVERSION=	2.8.12
@@ -22,7 +22,6 @@ USE_BZIP2=	yes
 USE_XORG=	x11 sm xxf86vm xinerama 
 USE_GL=		glu
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_GNOME=	gtk20 pangox-compat
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libpng=sys\
