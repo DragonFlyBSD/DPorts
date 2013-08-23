@@ -1,5 +1,5 @@
 # Created by: Chris Larsen <darth@vader.dk>
-# $FreeBSD: www/p5-WWW-Curl/Makefile 322888 2013-07-13 05:44:58Z sunpoet $
+# $FreeBSD: www/p5-WWW-Curl/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	WWW-Curl
 PORTVERSION=	4.15
@@ -16,7 +16,8 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		WWW::Curl.3
 
