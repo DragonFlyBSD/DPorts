@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-DES/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-DES/Makefile 324966 2013-08-19 09:01:00Z mat $
 
 PORTNAME=	Crypt-DES
-PORTVERSION=	2.05
+PORTVERSION=	2.07
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
