@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: lang/spidermonkey185/Makefile 320274 2013-06-08 17:13:09Z koobs $
+# $FreeBSD: lang/spidermonkey185/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=		spidermonkey185
 PORTVERSION=		1.8.5
@@ -25,7 +25,6 @@ USE_GNOME=		gnomehack
 USE_LDCONFIG=		yes
 USE_PERL5_BUILD=	yes
 USE_PYTHON_BUILD=	2.5-2.7
-MAKE_JOBS_SAFE=		yes
 
 WRKSRC=			${WRKDIR}/js-${PORTVERSION}/js/src
 
