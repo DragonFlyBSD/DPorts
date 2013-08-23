@@ -1,4 +1,4 @@
-# $FreeBSD: databases/ldb/Makefile 322111 2013-07-01 02:36:07Z timur $
+# $FreeBSD: databases/ldb/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=		ldb
 PORTVERSION=		1.1.16
@@ -24,7 +24,6 @@ CONFIGURE_SCRIPT=	${WAF_TOOL} configure
 
 USE_OPENLDAP=		yes
 
-MAKE_JOBS_SAFE=		yes
 
 PKGCONFIGDIR?=		${PREFIX}/libdata/pkgconfig
 PLIST_SUB+=		PKGCONFIGDIR=${PKGCONFIGDIR:S;${PREFIX}/;;}
