@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: print/dvipdfmx/Makefile 318635 2013-05-21 01:43:38Z hrs $
+# $FreeBSD: print/dvipdfmx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dvipdfmx
 PORTVERSION=	20110311
@@ -22,7 +22,6 @@ RUN_DEPENDS=	${ADOBECMAPDIR}/ai0/CMap/Identity-H:${PORTSDIR}/print/adobe-cmaps
 USE_TEX=	tetex base texmf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${LOCALBASE}/share
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	DVIPDFMXDIR=${DVIPDFMXDIR} \
 		FONTMAPDIR=${FONTMAPDIR} \
