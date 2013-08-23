@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-attic
-# Date created:		2011-11-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-attic/Makefile,v 1.3 2012/11/17 05:56:58 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/rubygem-attic/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	attic
 PORTVERSION=	0.5.3
@@ -11,7 +7,7 @@ CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A place to hide private instance variables in your Ruby objects
+COMMENT=	Place to hide private instance variables in your Ruby objects
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
