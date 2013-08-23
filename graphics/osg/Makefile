@@ -1,9 +1,9 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: graphics/osg/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: graphics/osg/Makefile 325086 2013-08-21 03:46:21Z sunpoet $
 
 PORTNAME=	osg
 PORTVERSION=	3.0.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-${PORTVERSION}/source/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -24,7 +24,6 @@ USES=		cmake pkgconfig
 USE_GL=		gl glu
 USE_XORG=	x11
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 USE_GCC=	4.2+
 
 PLIST_SUB=	OSG_VERSION=${PORTVERSION} \
