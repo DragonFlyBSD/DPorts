@@ -2,7 +2,7 @@
 # Date created:		2 April 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: devel/darts/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: devel/darts/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	darts
@@ -14,7 +14,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A C++ template library that implements Double-Array
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 EXAMPLES=	darts.cpp mkdarts.cpp
 DOCS=		AUTHORS ChangeLog README doc
