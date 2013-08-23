@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/libmng/Makefile 317488 2013-05-06 08:59:02Z bapt $
+# $FreeBSD: graphics/libmng/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libmng
 PORTVERSION=	1.0.10
@@ -19,7 +19,6 @@ OPTIONS_DEFINE=	MNG_OPTIMIZE
 MNG_OPTIMIZE_DESC=	Use vendor's new optimization flags
 
 MAKEFILE=	${FILESDIR}/Makefile.bsd
-MAKE_JOBS_SAFE=	yes
 #USE_BZIP2=	yes	# Please, uncomment on next upgrade
 
 USE_LDCONFIG=	yes
