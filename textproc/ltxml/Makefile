@@ -1,5 +1,5 @@
 # Created by: Samuel Tardieu <sam@inf.enst.fr>
-# $FreeBSD: textproc/ltxml/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: textproc/ltxml/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ltxml
 PORTVERSION=	1.2.9
@@ -21,7 +21,6 @@ USES=		perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-zlib=/usr --datadir=${PREFIX}/lib/ltxml12
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
