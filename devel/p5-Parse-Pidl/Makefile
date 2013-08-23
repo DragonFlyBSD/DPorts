@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Parse-Pidl/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Parse-Pidl/Makefile 325162 2013-08-21 17:18:06Z timur $
 
 PORTNAME=		Parse-Pidl
 PORTVERSION=		${SAMBA4_VERSION}
@@ -23,8 +23,8 @@ SAMBA4_SUBPORT=		yes
 MASTERDIR=		${.CURDIR}/../../net/${SAMBA4_PORT}
 PKGDIR=			${.CURDIR}
 
-USES=		perl5
-USE_PERL5=	configure
+USES=			perl5
+USE_PERL5=		configure
 PATCH_WRKSRC=		${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/pidl
 
