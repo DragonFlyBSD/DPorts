@@ -2,7 +2,7 @@
 # Date created:		September 08, 1998
 # Whom:			Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fonts/ttmkfdir/Makefile,v 1.34 2012/12/07 17:45:48 svnexp Exp $
+# $FreeBSD: x11-fonts/ttmkfdir/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	ttmkfdir
@@ -22,7 +22,6 @@ PLIST_FILES=	bin/ttmkfdir
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_XORG=	x11
-MAKE_JOBS_SAFE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin
