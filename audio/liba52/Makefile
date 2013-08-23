@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/liba52/Makefile 320975 2013-06-14 22:38:23Z bapt $
+# $FreeBSD: audio/liba52/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	liba52
 PORTVERSION=	0.7.4
@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-oss --enable-shared
 USE_LDCONFIG=	yes
