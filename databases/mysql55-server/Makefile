@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql55-server/Makefile 321789 2013-06-26 08:06:12Z ale $
+# $FreeBSD: databases/mysql55-server/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME?=	mysql
-PORTVERSION=	5.5.32
+PORTVERSION=	5.5.33
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	${MASTER_SITE_MYSQL}
@@ -15,9 +15,7 @@ COMMENT?=	Multithreaded SQL database (server)
 LICENSE=	GPLv2
 
 SLAVEDIRS=	databases/mysql55-client
-USES=		cmake
-USES+=		readline
-MAKE_JOBS_SAFE=	yes
+USES=		cmake readline
 NO_OPTIONS_SORT=yes
 
 OPTIONS_DEFINE=	SSL FASTMTX
