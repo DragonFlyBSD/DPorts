@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: mail/qmail/Makefile 321223 2013-06-18 23:03:14Z bdrewery $
+# $FreeBSD: mail/qmail/Makefile 325040 2013-08-20 11:43:44Z az $
 
 PORTNAME=	qmail
 PORTVERSION?=	${QMAIL_VERSION}
@@ -256,7 +256,8 @@ EXTRA_MAN8=	qmail-badloadertypes.8 qmail-badmimetypes.8 qmail-mfrules.8 \
 		qmail-recipients.8
 ALL_TARGET+=	${EXTRA_MAN8}
 MAN8+=		${EXTRA_MAN8}
-USE_PERL5_BUILD=	yes
+USES+=		perl5
+USE_PERL5=	patch build
 .endif
 
 .if defined(SLAVE_LDAP)
