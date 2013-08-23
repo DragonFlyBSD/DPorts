@@ -1,5 +1,5 @@
 # Created by:				Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/graphics/svgalib/Makefile,v 1.28 2013/01/30 17:24:00 svnexp Exp $
+# $FreeBSD: graphics/svgalib/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	svgalib
 PORTVERSION=	1.4.3
@@ -12,7 +12,6 @@ COMMENT=	A low level console graphics library
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-MAKE_JOBS_SAFE=	yes
 
 USE_DOS2UNIX=	utils/gtf/gtf.h utils/gtf/scitech.h
 USE_GMAKE=	yes
