@@ -2,7 +2,7 @@
 # Date created:        30 September 2002
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: x11-toolkits/gtkmm24/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-toolkits/gtkmm24/Makefile 324744 2013-08-14 22:35:50Z ak $
 #   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.77 2011/07/16 17:31:29 kwm Exp $
 #
 
@@ -33,7 +33,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack gtk20 ltverhack:1
-MAKE_JOBS_SAFE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation \
