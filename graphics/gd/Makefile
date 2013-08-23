@@ -1,9 +1,9 @@
 # Created by: jeff@cetlink.net
-# $FreeBSD: graphics/gd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/gd/Makefile 324782 2013-08-15 19:12:46Z dinoex $
 
 PORTNAME=	libgd
 PORTVERSION=	2.1.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 PORTEPOCH=	1
 CATEGORIES+=	graphics
 MASTER_SITES=	http://cdn.bitbucket.org/libgd/gd-libgd/downloads/
