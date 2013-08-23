@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/qwt5/Makefile 317947 2013-05-12 11:48:49Z makc $
+# $FreeBSD: x11-toolkits/qwt5/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qwt
 PORTVERSION=	5.2.3
@@ -14,7 +14,6 @@ USE_GMAKE=	yes
 QMAKE_ARGS+=	-recursive PREFIX=${PREFIX}
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 PORTSCOUT=	limit:^5\.
 
 PORTDOCS=	*
