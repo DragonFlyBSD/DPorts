@@ -1,5 +1,5 @@
 # Created by: chuckr@freebsd.org
-# $FreeBSD: print/transfig/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: print/transfig/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	transfig
 PORTVERSION=	3.2.5d
@@ -14,7 +14,6 @@ COMMENT=	Tools to convert Xfig's .fig files
 RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-MAKE_JOBS_SAFE=	yes
 
 USES=		imake
 CFLAGS+=	-Wno-return-type
