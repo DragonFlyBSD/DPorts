@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: lang/php53/Makefile 322936 2013-07-13 15:21:08Z flo $
+# $FreeBSD: lang/php53/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	php53
 PORTVERSION=	5.3.27
@@ -15,7 +15,6 @@ COMMENT=	PHP Scripting Language
 LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
 USE_BZIP2=	yes
-MAKE_JOBS_SAFE=	yes
 .if !defined(PKGNAMESUFFIX)
 USE_AUTOTOOLS=	autoconf
 
