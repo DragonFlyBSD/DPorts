@@ -1,9 +1,5 @@
-# New ports collection makefile for:    python
-# Date created:         08 August 1995
-# Whom:                 jkh
-#
-# $FreeBSD: ports/lang/python/Makefile,v 1.166 2012/11/17 05:58:55 svnexp Exp $
-#
+# Created by: jkh
+# $FreeBSD: lang/python/Makefile 324925 2013-08-18 15:25:24Z mva $
 
 PORTNAME=	python
 PORTVERSION=	${PYTHON_VER}
@@ -17,11 +13,43 @@ MAINTAINER=	python@FreeBSD.org
 COMMENT=	The "meta-port" for the default version of Python interpreter
 
 USE_PYTHON_RUN=	yes
-PYTHON_VERSION=	${PYTHON_DEFAULT_VERSION}
 NO_BUILD=	yes
+PYTHON_NO_DEPENDS=	yes
+
+PLIST_FILES=	bin/2to3 \
+		bin/idle \
+		bin/pydoc \
+		bin/python \
+		bin/python-config \
+		bin/python-shared \
+		bin/python-shared-config
+
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_MAJOR_VER} == 2
+RUN_DEPENDS+=	python2:${PORTSDIR}/lang/python2
+PLIST_FILES+=	bin/smtpd.py
+.elif ${PYTHON_MAJOR_VER} == 3
+RUN_DEPENDS+=	python3:${PORTSDIR}/lang/python3
+.endif
 
 do-install:
-	@${DO_NADA}
+.for file in python python-shared
+	${LN} -sf ${PREFIX}/bin/${file}${PYTHON_MAJOR_VER} ${PREFIX}/bin/${file}
+.endfor
+	${LN} -sf ${PREFIX}/bin/2to3-${PYTHON_MAJOR_VER} ${PREFIX}/bin/2to3
+.if ${PYTHON_MAJOR_VER} == 2
+	${LN} -sf ${PREFIX}/bin/smtpd${PYTHON_MAJOR_VER}.py ${PREFIX}/bin/smtpd.py
+.for file in idle pydoc
+	${LN} -sf ${PREFIX}/bin/${file}${PYTHON_MAJOR_VER} ${PREFIX}/bin/${file}
+.endfor
+.elif ${PYTHON_MAJOR_VER} == 3
+.for file in idle pydoc
+	${LN} -sf ${PREFIX}/bin/${file}${PYTHON_MAJOR_VER}-${PYTHON_VER} ${PREFIX}/bin/${file}
+.endfor
+.endif
+	${LN} -sf ${PREFIX}/bin/python${PYTHON_MAJOR_VER}-config ${PREFIX}/bin/python-config
+	${LN} -sf ${PREFIX}/bin/python-shared${PYTHON_MAJOR_VER}-config ${PREFIX}/bin/python-shared-config
 
 # Major upgrade support
 PORTUPGRADE_CMD=	${LOCALBASE}/sbin/portupgrade
@@ -61,4 +89,4 @@ upgrade-site-packages:
 		fi; \
 	fi; \
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
