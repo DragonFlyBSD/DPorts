@@ -1,12 +1,8 @@
-# New ports collection makefile for:    py-pycerberus
-# Date created:                         28 September 2010
-# Whom:                                 Douglas Thrift
-#
-# $FreeBSD: ports/devel/py-pycerberus/Makefile,v 1.3 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Douglas Thrift <douglas@douglasthrift.net>
+# $FreeBSD: devel/py-pycerberus/Makefile 324617 2013-08-12 08:08:40Z culot $
 
 PORTNAME=	pycerberus
-PORTVERSION=	0.4.2
+PORTVERSION=	0.5
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
