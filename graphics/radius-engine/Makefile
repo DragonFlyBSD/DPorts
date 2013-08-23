@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/radius-engine/Makefile 321683 2013-06-24 13:56:07Z wg $
+# $FreeBSD: graphics/radius-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	radius-engine
 PORTVERSION=	1.1
@@ -21,7 +21,6 @@ USE_GL=		glu
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CFLAGS+=	-I${LOCALBASE}/include
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	include/radius.h \
 		lib/libradius-engine.a \
