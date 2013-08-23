@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/libpcap/Makefile 319401 2013-05-30 02:15:01Z wxs $
+# $FreeBSD: net/libpcap/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libpcap
 PORTVERSION=	1.4.0
@@ -9,7 +9,6 @@ MASTER_SITES=	http://www.tcpdump.org/release/
 MAINTAINER=	wxs@FreeBSD.org
 COMMENT=	Ubiquitous network traffic capture library
 
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=		bison
