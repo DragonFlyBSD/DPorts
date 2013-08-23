@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: math/R/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/R/Makefile 324786 2013-08-15 22:13:42Z bf $
 
 PORTNAME?=	R
 PORTVERSION=	3.0.1
@@ -115,13 +115,13 @@ CONFIGURE_ENV +=	SHLIB_${flag}FLAGS="${PICFLAG}"
 
 .if ${PORT_OPTIONS:MMISSING}
 LIB_DEPENDS+=		missing:${PORTSDIR}/math/libmissing
-LIBM=			-L${LOCALBASE}/lib -lmissing
+LIBM=			-lm -L${LOCALBASE}/lib -lmissing
 LIBMH=			"missing_math.h"
 .if defined(LIBRMATH_SLAVEPORT)
 CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 .else
-LIBM=			-lquadmath
+LIBM=			-lm -lquadmath
 LIBMH=			<quadmath.h>
 .endif
 
