@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/cclive/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: multimedia/cclive/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cclive
 PORTVERSION=	0.7.11
@@ -20,7 +20,6 @@ LIB_DEPENDS=	boost_system:${PORTSDIR}/devel/boost-libs \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-boost=${LOCALBASE}
-MAKE_JOBS_SAFE=	yes
 USES=		pkgconfig
 USE_XZ=		yes
 
