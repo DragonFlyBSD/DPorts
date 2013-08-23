@@ -2,7 +2,7 @@
 # Date created:		2007-03-06
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: audio/liblscp/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: audio/liblscp/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	liblscp
@@ -20,6 +20,5 @@ USES=	pathfix
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
