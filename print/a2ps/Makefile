@@ -1,5 +1,5 @@
 # Created by: Chuck Robey <chuckr@freebsd.org>
-# $FreeBSD: print/a2ps/Makefile 316672 2013-04-27 16:00:26Z hrs $
+# $FreeBSD: print/a2ps/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	a2ps
 PORTVERSION=	4.13b
@@ -32,7 +32,6 @@ CONFIGURE_ARGS=	--with-medium=libpaper --sharedstatedir=${PREFIX}/share \
 	--sysconfdir=${PREFIX}/etc --datadir=${PREFIX}/share \
 	--localstatedir=${PREFIX}/share
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
-MAKE_JOBS_SAFE=	yes
 
 PAPERSIZE?=
 .if ${PAPERSIZE:tl} == a4
