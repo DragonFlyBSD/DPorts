@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: www/qt4-webkit/Makefile 317896 2013-05-11 17:31:45Z rakuco $
+# $FreeBSD: www/qt4-webkit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	webkit
 DISTVERSION=	${QT4_VERSION}
@@ -16,7 +16,6 @@ USE_QT4=	corelib declarative gui network \
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
 USE_XORG=	xrender
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/qt4
