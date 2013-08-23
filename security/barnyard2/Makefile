@@ -1,4 +1,4 @@
-# $FreeBSD: security/barnyard2/Makefile 312306 2013-02-15 19:25:12Z jgh $
+# $FreeBSD: security/barnyard2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	barnyard2
 PORTVERSION=	1.12
@@ -37,7 +37,6 @@ ACLOCAL_ARGS=	-I m4 -I ${LOCALBASE}/share/aclocal
 
 USE_RC_SUBR=	barnyard2
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
