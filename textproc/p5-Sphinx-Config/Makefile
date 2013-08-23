@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sphinx-Config
-# Date created:		2011-10-05
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Sphinx-Config/Makefile,v 1.2 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/p5-Sphinx-Config/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Sphinx-Config
 PORTVERSION=	0.09
@@ -15,9 +11,10 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sphinx search engine configuration file read/modify/write
 
 BUILD_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils
-RUN_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Sphinx::Config.3
 
