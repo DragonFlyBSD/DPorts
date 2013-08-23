@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Taint-Util
-# Date created:		2011-07-21
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Taint-Util/Makefile,v 1.2 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Taint-Util/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Taint-Util
 PORTVERSION=	0.08
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Test for and flip the taint flag without regex matches or eval
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Taint::Util.3
 
