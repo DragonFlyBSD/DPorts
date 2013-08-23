@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/libstreamanalyzer/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: deskutils/libstreamanalyzer/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libstreamanalyzer
 PORTVERSION=	${STRIGI_VERSION}
@@ -17,7 +17,6 @@ LIB_DEPENDS=	avcodec${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFI
 USES=		pkgconfig iconv
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 # supported versions: ffmpeg, ffmpeg1, ffmpeg-devel
 # corresponding FFMPEG_SUFFIX: '', '1', '-devel'
