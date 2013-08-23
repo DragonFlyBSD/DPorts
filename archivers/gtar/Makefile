@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/gtar/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: archivers/gtar/Makefile 325019 2013-08-19 20:54:39Z naddy $
 
 PORTNAME=	tar
 PORTVERSION=	1.26
@@ -10,9 +10,6 @@ PKGNAMEPREFIX=	g
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	GNU version of the traditional tape archiver
-
-# only force dependencies for compressors that have a single-letter option
-#RUN_DEPENDS=	# see below
 
 INFO=		tar
 
@@ -26,6 +23,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${LDSTATIC}
 CONFIGURE_ENV=	DEFAULT_ARCHIVE=/dev/sa0 \
 		DEFAULT_RMT_COMMAND=/etc/rmt
+# supply result to skip a test that will abort configure if run as root
+CONFIGURE_ENV+=	gl_cv_func_mknod_works=yes
 
 OPTIONS_DEFINE=	STATIC
 
@@ -49,17 +48,4 @@ PLIST_SUB+=	NLS="@comment "
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-RUN_DEPENDS+=	xz:${PORTSDIR}/archivers/xz
-.endif
-
-# supply result to skip a test that will abort configure if run as root
-.if ${OSVERSION} < 800040
-CONFIGURE_ENV+=	gl_cv_func_mknod_works=no
-.else
-CONFIGURE_ENV+=	gl_cv_func_mknod_works=yes
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
