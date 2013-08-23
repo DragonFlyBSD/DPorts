@@ -133,6 +133,10 @@ lib/graphviz/libgvplugin_neato_layout.a
 %%WITH_PANGOCAIRO%%lib/graphviz/libgvplugin_pango.so.6
 %%WITH_PANGOCAIRO%%lib/graphviz/libgvplugin_pango.la
 %%WITH_PANGOCAIRO%%lib/graphviz/libgvplugin_pango.a
+%%WITH_POPPLER%%lib/graphviz/libgvplugin_poppler.a
+%%WITH_POPPLER%%lib/graphviz/libgvplugin_poppler.la
+%%WITH_POPPLER%%lib/graphviz/libgvplugin_poppler.so
+%%WITH_POPPLER%%lib/graphviz/libgvplugin_poppler.so.6
 %%WITH_PANGOCAIRO%%lib/graphviz/libgvplugin_xlib.a
 %%WITH_PANGOCAIRO%%lib/graphviz/libgvplugin_xlib.la
 %%WITH_PANGOCAIRO%%lib/graphviz/libgvplugin_xlib.so
@@ -336,6 +340,7 @@ libdata/pkgconfig/libxdot.pc
 %%PORTDOCS%%%%DOCSDIR%%/html/triangle.gif
 %%PORTDOCS%%%%DOCSDIR%%/html/tripleoctagon.gif
 %%PORTDOCS%%%%DOCSDIR%%/latex_suggestions.txt
+%%PORTDOCS%%%%DOCSDIR%%/pdf/Agraph.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/acyclic.1.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/bcomps.1.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/ccomps.1.pdf
