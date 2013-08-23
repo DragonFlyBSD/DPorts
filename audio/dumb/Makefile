@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: audio/dumb/Makefile 324723 2013-08-14 14:12:06Z marino $
+# $FreeBSD: audio/dumb/Makefile 324869 2013-08-17 20:37:00Z marino $
 
 PORTNAME=	dumb
 PORTVERSION=	0.9.3
