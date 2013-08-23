@@ -1,5 +1,5 @@
 # Created by: Philippe Charnier <charnier@lirmm.fr>
-# $FreeBSD: multimedia/mpeg2codec/Makefile 323667 2013-07-25 21:04:07Z bapt $
+# $FreeBSD: multimedia/mpeg2codec/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mpeg2codec
 PORTVERSION=	1.2
@@ -20,7 +20,6 @@ OPTIONS_DEFAULT=	X11
 WRKSRC=		${WRKDIR}/mpeg2
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 DATADIR=	${PREFIX}/share/mpeg2
 
