@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: security/ocaml-cryptokit/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/ocaml-cryptokit/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	cryptokit
@@ -17,7 +17,6 @@ USE_OCAML=	yes
 USE_OCAML_LDCONFIG=	yes
 USE_OCAML_FINDLIB=	yes
 USE_OCAMLFIND_PLIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	DOCS
 
