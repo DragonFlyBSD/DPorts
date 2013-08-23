@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-POE-Test-Loops
-# Date created:				05 July 2008
-# Whom:					Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/devel/p5-POE-Test-Loops/Makefile,v 1.20 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: devel/p5-POE-Test-Loops/Makefile 325236 2013-08-22 21:56:54Z jase $
 
 PORTNAME=	POE-Test-Loops
-PORTVERSION=	1.351
+PORTVERSION=	1.352
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RCAPUTO
@@ -18,7 +14,8 @@ COMMENT=	Reusable tests for POE Loop authors
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN1=		poe-gen-tests.1
 MAN3=		POE::Test::Loops.3
