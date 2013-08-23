@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-BrowserDetect/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-BrowserDetect/Makefile 324953 2013-08-19 08:07:48Z culot $
 
 PORTNAME=	HTTP-BrowserDetect
-PORTVERSION=	1.55
+PORTVERSION=	1.59
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:OALDERS
