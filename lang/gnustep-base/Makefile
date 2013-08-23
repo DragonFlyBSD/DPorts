@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: lang/gnustep-base/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: lang/gnustep-base/Makefile 325025 2013-08-20 01:08:17Z linimon $
 
 PORTNAME=	gnustep-base
 PORTVERSION=	1.24.0
@@ -8,7 +8,7 @@ CATEGORIES=	lang devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep Foundation library
 
 LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi
