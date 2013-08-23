@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: databases/qt4-mysql-plugin/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: databases/qt4-mysql-plugin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
@@ -13,7 +13,6 @@ DB=		mysql
 USE_QT4=	moc_build sql
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 USE_MYSQL=	yes
 DRIVER=		src/sql/drivers/${DB}
