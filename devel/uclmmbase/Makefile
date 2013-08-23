@@ -1,5 +1,5 @@
 # Created by: Garrett Wollman <wollman@lcs.mit.edu>
-# $FreeBSD: devel/uclmmbase/Makefile 318988 2013-05-24 16:08:58Z bapt $
+# $FreeBSD: devel/uclmmbase/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	uclmmbase
 PORTVERSION=	1.2.18
@@ -17,7 +17,6 @@ USE_OPENSSL=	yes
 CONFIGURE_ARGS=	--enable-ipv6
 .endif
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
 post-configure:
