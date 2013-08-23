@@ -2,7 +2,7 @@
 # Date created:		Wed Apr 14 18:11:42 CEST 2010
 # Whom:			Juergen Lock <nox@freebsd.org>
 #
-# $FreeBSD: devel/cxxtools/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/cxxtools/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	cxxtools
@@ -19,7 +19,6 @@ USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
