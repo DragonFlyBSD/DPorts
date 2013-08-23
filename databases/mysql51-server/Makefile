@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql51-server/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: databases/mysql51-server/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME?=	mysql
-PORTVERSION=	5.1.70
+PORTVERSION=	5.1.71
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL}
@@ -14,7 +14,6 @@ COMMENT?=	Multithreaded SQL database (server)
 
 SLAVEDIRS=	databases/mysql51-client databases/mysql51-scripts
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--localstatedir=/var/db/mysql \
 		--without-debug \
