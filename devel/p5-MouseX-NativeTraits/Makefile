@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MouseX-NativeTraits/Makefile,v 1.5 2012/12/04 10:05:58 svnexp Exp $
+# $FreeBSD: devel/p5-MouseX-NativeTraits/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	MouseX-NativeTraits
 PORTVERSION=	1.09
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Any-Moose>=0.13:${PORTSDIR}/devel/p5-Any-Moose \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Mouse::Meta::Attribute::Custom::Trait::Array.3 \
 		Mouse::Meta::Attribute::Custom::Trait::Bool.3 \
