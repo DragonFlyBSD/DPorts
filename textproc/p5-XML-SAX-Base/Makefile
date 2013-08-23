@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-SAX-Base/Makefile 316585 2013-04-26 08:53:17Z sunpoet $
+# $FreeBSD: textproc/p5-XML-SAX-Base/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	XML-SAX-Base
 PORTVERSION=	1.08
@@ -15,7 +15,8 @@ LICENSE_COMB=	dual
 
 CONFLICTS=	p5-XML-SAX-0.[0-8]* p5-XML-SAX-0.9[0-8]*
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		XML::SAX::Base.3 \
 		XML::SAX::BuildSAXBase.3 \
