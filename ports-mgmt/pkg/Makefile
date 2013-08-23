@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 323162 2013-07-17 12:11:59Z bapt $
+# $FreeBSD: ports-mgmt/pkg/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pkg
 DISTVERSION=	1.1.4
@@ -15,7 +15,6 @@ LICENSE=	BSD
 
 USE_XZ=		yes
 
-MAKE_JOBS_SAFE=	yes
 # Disable CCACHE support because of the chicken/egg problem pkg should always
 # With no dependency at all
 NO_CCACHE=	yes
