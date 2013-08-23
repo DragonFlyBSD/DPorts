@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-textile
-# Date created:				2008-09-05
-# Whom:					Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/www/py-textile/Makefile,v 1.7 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
+# $FreeBSD: www/py-textile/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	textile
 PORTVERSION=	2.1.5
@@ -12,7 +8,7 @@ MASTER_SITES=	CHEESESHOP \
 		GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Textile markup generator written in Python
 
 LICENSE=	BSD
