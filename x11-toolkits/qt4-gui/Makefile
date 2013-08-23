@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: x11-toolkits/qt4-gui/Makefile 322490 2013-07-08 11:42:01Z bapt $
+# $FreeBSD: x11-toolkits/qt4-gui/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
@@ -16,7 +16,6 @@ RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 USE_QT4=	qmake_build moc_build rcc_build uic_build corelib
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 USES=		pkgconfig
