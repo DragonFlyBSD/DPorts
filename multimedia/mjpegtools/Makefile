@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/mjpegtools/Makefile 316286 2013-04-22 22:57:36Z bapt $
+# $FreeBSD: multimedia/mjpegtools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mjpegtools
 PORTVERSION=	2.0.0
@@ -29,7 +29,6 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		ac_cv_lib_Xxf86dga_XF86DGAQueryExtension=no
 CONFIGURE_ARGS=	--without-x
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		jpeg2yuv.1 lav2mpeg.1 lav2wav.1 lav2yuv.1 lavpipe.1 lavplay.1 \
 		lavrec.1 lavtrans.1 mjpegtools.1 mp2enc.1 mpeg2enc.1 mplex.1 \
