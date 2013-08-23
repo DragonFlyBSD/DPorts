@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libmpeg2/Makefile 315226 2013-03-25 14:05:23Z makc $
+# $FreeBSD: multimedia/libmpeg2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libmpeg2
 PORTVERSION=	0.5.1
@@ -14,7 +14,6 @@ USES=		pathfix
 USE_GNOME=	ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--enable-shared
 
