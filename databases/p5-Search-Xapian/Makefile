@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-Search-Xapian/Makefile 316064 2013-04-18 17:40:38Z sunpoet $
+# $FreeBSD: databases/p5-Search-Xapian/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Search-Xapian
 PORTVERSION=	1.2.15.0
@@ -23,7 +23,8 @@ PORTSCOUT=	limitw:1,even
 
 CC=		${CXX}
 CONFIGURE_ARGS=	XAPIAN_CONFIG=${LOCALBASE}/bin/xapian-config
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Search::Xapian.3 \
 		Search::Xapian::AssertionError.3 \
