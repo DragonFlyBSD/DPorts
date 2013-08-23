@@ -2,7 +2,7 @@
 # Date created:				2008-03-19
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/audio/libdiscid/Makefile,v 1.6 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libdiscid/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libdiscid
@@ -21,7 +21,6 @@ LICENSE=	LGPL21
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	ltverhack gnomehack
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
