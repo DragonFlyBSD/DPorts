@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hwloc/Makefile 319015 2013-05-24 20:58:30Z pawel $
+# $FreeBSD: devel/hwloc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hwloc
 PORTVERSION=	1.7.1
@@ -22,7 +22,6 @@ USES=		pkgconfig pathfix iconv
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	libxml2
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 
