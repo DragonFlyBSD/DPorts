@@ -2,7 +2,7 @@
 # Date created:		Wed Apr 14 18:11:42 CEST 2010
 # Whom:			Juergen Lock <nox@freebsd.org>
 #
-# $FreeBSD: www/tntnet/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: www/tntnet/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	tntnet
@@ -33,7 +33,6 @@ LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
 CONFIGURE_ARGS+=	--with-ssl=openssl
 .endif
 
-MAKE_JOBS_SAFE=	yes
 MAN1=		ecppc.1 ecppl.1 ecppll.1 tntnet-config.1
 MAN7=		ecpp.7 tntnet.conf.7 tntnet.properties.7
 MAN8=		tntnet.8
