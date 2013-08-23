@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xmlpatterns-tool
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	Qt4 command line utility for running XQueries
 USE_QT4=	qmake_build xmlpatterns
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
