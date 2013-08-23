@@ -1,13 +1,10 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: graphics/p5-GD-Graph/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-GD-Graph/Makefile 325136 2013-08-21 14:16:57Z mat $
 
 PORTNAME=	GD-Graph
-PORTVERSION=	1.44.01
-DISTVERSION=	${PORTVERSION:C/\.(..)$/_\1/}
-PORTREVISION=	5
+PORTVERSION=	1.48
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:BWARFIELD
 PKGNAMEPREFIX=	p5-
 DISTNAME=	GDGraph-${DISTVERSION}
 
