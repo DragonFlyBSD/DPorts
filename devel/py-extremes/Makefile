@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-Extremes
-# Date created:				22-jan-2008
-# Whom:					alexander smishlajev
-#
-# $FreeBSD: ports/devel/py-extremes/Makefile,v 1.5 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: alexander smishlajev
+# $FreeBSD: devel/py-extremes/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	Extremes
 PORTVERSION=	1.1.1
@@ -12,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
 MASTER_SITE_SUBDIR=	source/E/Extremes
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Production-quality 'Min' and 'Max' objects (adapted from PEP 326)
 
 USE_PYTHON=	yes
