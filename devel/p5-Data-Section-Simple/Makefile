@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Section-Simple/Makefile 320773 2013-06-13 11:52:08Z sunpoet $
+# $FreeBSD: devel/p5-Data-Section-Simple/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Data-Section-Simple
 PORTVERSION=	0.05
@@ -13,7 +13,8 @@ COMMENT=	Read data from __DATA__
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Data::Section::Simple.3
 
