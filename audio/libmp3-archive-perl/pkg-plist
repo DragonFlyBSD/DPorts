@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/libmp3-archive-perl/pkg-plist,v 1.2 2012/11/17 05:54:36 svnexp Exp $
+@comment $FreeBSD: audio/libmp3-archive-perl/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 etc/mp3archiverc
 %%SITE_PERL%%/MP3/Archive.pm
 %%SITE_PERL%%/MP3/Archive/Config.pm
