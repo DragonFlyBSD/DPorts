@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/varnish/Makefile,v 1.57 2012/12/10 19:24:06 svnexp Exp $
+# $FreeBSD: www/varnish/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	varnish
 PORTVERSION=	3.0.3
@@ -38,7 +38,6 @@ SUB_FILES=	pkg-message
 BAD_TESTS+=	r00832
 EXTRA_PATCHES+=	${FILESDIR}/no-inet6.patch
 .endif
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|\$$(libdir)/pkgconfig|\$$(prefix)/libdata/pkgconfig|' \
