@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: lang/lua52/Makefile 324286 2013-08-05 20:37:35Z mandree $
+# $FreeBSD: lang/lua52/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lua
 PORTVERSION=	5.2.2
@@ -26,7 +26,6 @@ LUA_MODSHAREDIR=	${LUA_PREFIX}/share/lua/${LUA_VER}
 
 ALL_TARGET=	freebsd
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	LUA_SONAME="liblua-${LUA_VER}.so.${LUA_VER_SH}" \
 		MYCFLAGS="${CFLAGS}" MYLDFLAGS="${LDFLAGS}"
 # liblua.so requires libm, so make sure it has an explicit dependency
