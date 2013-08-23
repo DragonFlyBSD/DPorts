@@ -2,7 +2,7 @@
 # Date created:		24 Oct 2009
 # Whom:			Brooks Davis
 #
-# $FreeBSD: lang/clang31/Makefile 315847 2013-04-16 16:50:27Z tijl $
+# $FreeBSD: lang/clang31/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	clang31
@@ -43,7 +43,6 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
 USE_PYTHON=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAKE_ARGS=	CLANG_TBLGEN=${WRKSRC}/${RELTYPE}/bin/clang-tblgen \
 		LLVMIncDir=${LOCALBASE}/include \
