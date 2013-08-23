@@ -1,5 +1,5 @@
 # Created by: dwm
-# $FreeBSD: ports/devel/icu/Makefile,v 1.59 2013/02/14 10:22:08 svnexp Exp $
+# $FreeBSD: devel/icu/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	icu
 PORTVERSION=	50.1.2
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--with-data-packaging=library \
 			--enable-shared \
 			--enable-static
 
-MAKE_JOBS_SAFE=	yes
 
 USE_GMAKE=		yes
 INSTALL_TARGET=		install install-manx
