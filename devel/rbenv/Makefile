@@ -1,8 +1,8 @@
-# $FreeBSD: devel/rbenv/Makefile 320237 2013-06-08 06:39:45Z jgh $
+# $FreeBSD: devel/rbenv/Makefile 324606 2013-08-11 22:00:09Z jgh $
 
 PORTNAME=	rbenv
 PORTVERSION=	0.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel ruby
 MASTER_SITES=	GH
 
@@ -30,10 +30,10 @@ post-patch:
 	@${REINPLACE_CMD} -e "s|\$$root/completions|${DATADIR}/completions|g" ${WRKSRC}/libexec/rbenv-init
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/bin/ruby-local-exec ${PREFIX}/bin
-	@( cd ${WRKSRC}/libexec && ${COPYTREE_BIN} \* ${PREFIX}/libexec )
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/ruby-local-exec ${PREFIX}/bin
+	( ${INSTALL_SCRIPT} ${WRKSRC}/libexec/* ${PREFIX}/libexec/ )
 	@${LN} -sf ${PREFIX}/libexec/rbenv ${PREFIX}/bin/rbenv
 	@${MKDIR} ${DATADIR}/completions
-	@( cd ${WRKSRC}/completions && ${COPYTREE_BIN} \* ${DATADIR}/completions )
+	( cd ${WRKSRC}/completions && ${COPYTREE_BIN} \* ${DATADIR}/completions )
 
 .include <bsd.port.mk>
