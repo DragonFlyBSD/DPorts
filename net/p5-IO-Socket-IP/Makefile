@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-IO-Socket-IP/Makefile 323805 2013-07-27 20:15:04Z sunpoet $
+# $FreeBSD: net/p5-IO-Socket-IP/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	IO-Socket-IP
 PORTVERSION=	0.22
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Socket>=1.97:${PORTSDIR}/net/p5-Socket
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		IO::Socket::IP.3
 
