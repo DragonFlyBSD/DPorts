@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Umph-Prompt
-# Date created:		2011-09-27
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/p5-Umph-Prompt/Makefile,v 1.5 2012/12/16 06:16:57 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: multimedia/p5-Umph-Prompt/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Umph-Prompt
 PORTVERSION=	0.1.0
@@ -12,9 +8,10 @@ MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	An interactive prompt module for umph and similar programs
+COMMENT=	Interactive prompt module for umph and similar programs
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 PROJECTHOST=	umph
 
