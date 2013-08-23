@@ -2,7 +2,7 @@
 # Date created:				5 July 2001
 # Whom:					petef@FreeBSD.org
 #
-# $FreeBSD: ports/graphics/peps/Makefile,v 1.23 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/peps/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	peps
@@ -24,7 +24,6 @@ PORTDOCS=	peps.pdf
 PLIST_FILES=	bin/peps \
 		etc/peps.mime
 
-MAKE_JOBS_SAFE=	yes
 
 .if defined(WITHOUT_X11)
 ALL_TARGET=	peps
