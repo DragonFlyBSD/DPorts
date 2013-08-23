@@ -2,7 +2,7 @@
 # Date Created:				2012-07-01
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: audio/libmusicbrainz5/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/libmusicbrainz5/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libmusicbrainz
@@ -22,7 +22,6 @@ LATEST_LINK=	${PORTNAME}5
 USES=		cmake
 USE_LDCONFIG=	yes
 
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e '/pkgconfig/s|$${LIB_INSTALL_DIR}|libdata|' \
