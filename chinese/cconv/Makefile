@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cconv
-# Date created:		2011-04-26
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: chinese/cconv/Makefile 316684 2013-04-27 18:31:47Z mva $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: chinese/cconv/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	cconv
 PORTVERSION=	0.6.2
