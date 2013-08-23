@@ -1,4 +1,4 @@
-# $FreeBSD: devel/qt4-declarative/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qt4-declarative/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	declarative
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +12,6 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build corelib gui network \
 		opengl script sql svg xml xmlpatterns
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/qt4
