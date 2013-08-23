@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SVG-Parser
-# Date created:		2011-09-29
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-SVG-Parser/Makefile,v 1.2 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/p5-SVG-Parser/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	SVG-Parser
 PORTVERSION=	1.03
@@ -17,11 +13,10 @@ COMMENT=	XML Parser for SVG documents
 BUILD_DEPENDS=	p5-SVG>=2:${PORTSDIR}/textproc/p5-SVG \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
-RUN_DEPENDS=	p5-SVG>=2:${PORTSDIR}/textproc/p5-SVG \
-		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
-		p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		SVG::Parser.3 \
 		SVG::Parser::Expat.3 \
