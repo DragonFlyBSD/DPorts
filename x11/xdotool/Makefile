@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xdotool/Makefile,v 1.26 2012/12/12 18:51:49 svnexp Exp $
+# $FreeBSD: x11/xdotool/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xdotool
 DISTVERSION=	2.20110530.1
@@ -17,7 +17,6 @@ USE_XORG=	x11 xtst xinerama
 
 MAN1=		xdotool.1
 PLIST_FILES=	bin/xdotool lib/libxdo.so lib/libxdo.so.2 include/xdo.h
-MAKE_JOBS_SAFE=	yes
 
 # Older GCC on RELENG_6 doesn't like -Wno-missing-field-initializers
 post-patch:
