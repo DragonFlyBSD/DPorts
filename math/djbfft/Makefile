@@ -2,7 +2,7 @@
 # Date created:				Wed May 15 16:29:51 BRT 2002
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/math/djbfft/Makefile,v 1.20 2012/11/17 05:59:20 svnexp Exp $
+# $FreeBSD: math/djbfft/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	djbfft
@@ -17,7 +17,6 @@ COMMENT=	An extremely fast library for floating-point convolution
 DISABLE_SIZE=	yes
 ALL_TARGET=
 INSTALL_TARGET=setup check
-MAKE_JOBS_SAFE=	yes
 
 HEADER_FILES=	complex4.h complex8.h fftc4.h fftc8.h fftfreq.h \
 		fftr4.h fftr8.h real4.h real8.h
