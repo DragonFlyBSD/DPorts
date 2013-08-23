@@ -1,5 +1,5 @@
 # Created by: mikeh@FreeBSD.org
-# $FreeBSD: devel/libcheck/Makefile 316540 2013-04-26 02:28:07Z sunpoet $
+# $FreeBSD: devel/libcheck/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	libcheck
 PORTVERSION=	0.9.10
@@ -8,7 +8,7 @@ MASTER_SITES=	SF/check/check/${PORTVERSION}
 DISTNAME=	check-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A unit test framework for C
+COMMENT=	Unit test framework for C
 
 LICENSE=	LGPL21
 
@@ -16,9 +16,8 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 CONFIGURE_ENV=	ac_cv_path_AWK_PATH=${AWK}
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix
+USES=		gmake pathfix
 
 INFO=		check
 MAN1=		checkmk.1
