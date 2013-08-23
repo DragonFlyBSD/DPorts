@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: archivers/liborange/Makefile 316684 2013-04-27 18:31:47Z mva $
+# $FreeBSD: archivers/liborange/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	liborange
 PORTVERSION=	0.4
@@ -21,7 +21,6 @@ INNO_DESC=		Build with expermential Inno Setup support
 VISE_DESC=		Build with expermential VISE support
 MSI_DESC=		Build with expermential MSI support
 
-MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
