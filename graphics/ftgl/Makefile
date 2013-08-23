@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/ftgl/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/ftgl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ftgl
 DISTVERSION=	2.1.3-rc5
@@ -20,7 +20,6 @@ CONFIGURE_ARGS=	--with-gl-inc="${LOCALBASE}/include" \
 		--without-glut-inc
 USES=	pathfix
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:S/-/~/}
 
