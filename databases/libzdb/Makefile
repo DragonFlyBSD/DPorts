@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: databases/libzdb/Makefile 323328 2013-07-19 20:57:59Z cs $
+# $FreeBSD: databases/libzdb/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libzdb
@@ -25,7 +25,6 @@ USES=	pathfix
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
