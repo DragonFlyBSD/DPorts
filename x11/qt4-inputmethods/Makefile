@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: x11/qt4-inputmethods/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: x11/qt4-inputmethods/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	inputmethods
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	Qt input method plugins
 USE_QT4=	qmake_build moc_build corelib gui
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
