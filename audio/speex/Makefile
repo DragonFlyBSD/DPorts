@@ -2,7 +2,7 @@
 # Date created:			Jul 30, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/audio/speex/Makefile,v 1.62 2012/11/17 05:54:44 svnexp Exp $
+# $FreeBSD: audio/speex/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	speex
@@ -23,7 +23,6 @@ USE_GNOME=	gnomehack ltverhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--with-ogg-dir=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
