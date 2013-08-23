@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/opengtl/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/opengtl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	opengtl
 PORTVERSION=	0.9.18
@@ -18,7 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PERL5=	yes
 USE_BZIP2=	yes
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	SHIVA
