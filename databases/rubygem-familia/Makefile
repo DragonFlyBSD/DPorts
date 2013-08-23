@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-familia
-# Date created:		2011-11-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: databases/rubygem-familia/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: databases/rubygem-familia/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	familia
 PORTVERSION=	0.7.1
