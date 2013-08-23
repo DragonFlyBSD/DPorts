@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/sdl_gfx/Makefile 314109 2013-03-13 19:26:28Z mva $
+# $FreeBSD: graphics/sdl_gfx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sdl_gfx
 PORTVERSION=	2.0.24
@@ -11,7 +11,6 @@ DISTNAME=	SDL_gfx-${PORTVERSION}
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	SDL graphics drawing primitives and other support functions
 
-MAKE_JOBS_SAFE=	yes
 USES=		pathfix
 USE_AUTOTOOLS=	libtool
 USE_SDL=	sdl
