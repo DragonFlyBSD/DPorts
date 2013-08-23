@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: net/net6/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net/net6/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	net6
 PORTVERSION=	1.3.14
@@ -17,7 +17,6 @@ LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
 
 USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
