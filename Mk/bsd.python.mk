@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 322046 2013-06-29 11:43:01Z crees $
+# $FreeBSD: Mk/bsd.python.mk 324921 2013-08-18 14:46:41Z mva $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -558,10 +558,12 @@ PYTHON_NO_DEPENDS?=		NO
 
 .if ${PYTHON_NO_DEPENDS} == "NO"
 .if defined(USE_PYTHON_BUILD)
-BUILD_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR}
+BUILD_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR} \
+		python:${PORTSDIR}/lang/python
 .endif
 .if defined(USE_PYTHON_RUN)
-RUN_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR}
+RUN_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR} \
+		python:${PORTSDIR}/lang/python
 .endif
 .endif		# ${PYTHON_NO_DEPENDS} == "NO"
 

@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 324424 2013-08-09 09:39:24Z ehaupt $
+# $FreeBSD: Mk/bsd.sites.mk 325021 2013-08-19 21:25:34Z sbz $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -1336,9 +1336,10 @@ MASTER_SITE_TUCOWS+= \
 .endif
 
 # List:		http://www.vim.org/mirrors.php
-# Updated:	2013-01-03
+# Updated:	2013-08-19
 .if !defined(IGNORE_MASTER_SITE_VIM)
 MASTER_SITE_VIM+= \
+	http://ftp.vim.org/pub/vim/unix/ \
 	http://artfiles.org/vim.org/unix/ \
 	http://ftp.gr.vim.org/pub/vim/unix/ \
 	http://ftp.stut.edu.tw/vim/unix/ \
@@ -1352,6 +1353,7 @@ MASTER_SITE_VIM+= \
 	http://tweedo.com/mirror/ftp.vim.org/unix/ \
 	http://vim.cybermirror.org/unix/ \
 	http://vim.mirror.fr/unix/ \
+	ftp://ftp.home.vim.org/pub/vim/unix/ \
 	ftp://artfiles.org/vim.org/unix/ \
 	ftp://ftp.ar.vim.org/pub/vim/unix/ \
 	ftp://ftp.ca.vim.org/pub/vim/unix/ \

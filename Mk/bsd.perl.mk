@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.perl.mk 324008 2013-07-31 06:57:22Z bapt $
+# $FreeBSD: Mk/bsd.perl.mk 325217 2013-08-22 17:09:46Z sunpoet $
 #
 # /!\ THIS FILE IS DEPRECATED PLEASE CONFIGURE USING USES=perl5 /!\
 #
@@ -24,8 +24,8 @@
 #
 # PERL_LEVEL	- Perl version as an integer of the form MNNNPP, where
 #				  M is major version, N is minor version, and P is
-#				  the patch level. E.g., PERL_VERSION=5.14.2 would give
-#				  a PERL_LEVEL of 501402. This can be used in comparisons
+#				  the patch level. E.g., PERL_VERSION=5.14.4 would give
+#				  a PERL_LEVEL of 501404. This can be used in comparisons
 #				  to determine if the version of perl is high enough,
 #				  whether a particular dependency is needed, etc.
 # PERL_ARCH		- Directory name of architecture dependent libraries
@@ -75,7 +75,9 @@ PERL_ARCH?=		mach
 
 # there must always be a default to prevent dependency failures such
 # as "ports/lang: not found"
-.if    ${PERL_LEVEL} >= 501600
+.if    ${PERL_LEVEL} >= 501800
+PERL_PORT?=	perl5.18
+.elif    ${PERL_LEVEL} >= 501600
 PERL_PORT?=	perl5.16
 .elif  ${PERL_LEVEL} >= 501400
 PERL_PORT?=	perl5.14
