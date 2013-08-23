@@ -2,7 +2,7 @@
 # Date created:		Mon Jun 28 18:02:04 PDT 1999
 # Whom:			nsayer@freebsd.org
 #
-# $FreeBSD: ports/security/libmcrypt/Makefile,v 1.62 2012/11/17 06:01:07 svnexp Exp $
+# $FreeBSD: security/libmcrypt/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libmcrypt
@@ -15,7 +15,6 @@ COMMENT=	Multi-cipher cryptographic library (used in PHP)
 
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-static
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 MAN3=		mcrypt.3
