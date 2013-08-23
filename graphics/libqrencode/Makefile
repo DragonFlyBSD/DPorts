@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: graphics/libqrencode/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/libqrencode/Makefile 324657 2013-08-13 11:38:53Z vanilla $
 
 PORTNAME=	libqrencode
-PORTVERSION=	3.4.2
+PORTVERSION=	3.4.3
 PORTREVISION=	0
 CATEGORIES=	graphics
 MASTER_SITES=	http://fukuchi.org/works/qrencode/
