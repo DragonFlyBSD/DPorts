@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter-Progressive/Makefile 320782 2013-06-13 11:52:48Z sunpoet $
+# $FreeBSD: devel/p5-Sub-Exporter-Progressive/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Sub-Exporter-Progressive
 PORTVERSION=	0.001.010
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Sub::Exporter::Progressive.3
 
