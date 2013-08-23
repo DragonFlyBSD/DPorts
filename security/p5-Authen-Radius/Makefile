@@ -1,12 +1,11 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Radius/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Authen-Radius/Makefile 325018 2013-08-19 20:45:58Z tobez $
 
 PORTNAME=	Authen-Radius
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	RadiusPerl-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to provide simple Radius client facilities
