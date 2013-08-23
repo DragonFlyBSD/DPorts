@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sys-Info-Base
-# Date created:		2011-10-09
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Sys-Info-Base/Makefile,v 1.4 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Sys-Info-Base/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Sys-Info-Base
 PORTVERSION=	0.78.02
@@ -18,7 +14,8 @@ COMMENT=	Base class for Sys::Info
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Sys::Info::Base.3 \
 		Sys::Info::Constants.3 \
