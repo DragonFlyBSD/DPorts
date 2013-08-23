@@ -1,5 +1,5 @@
 # Created by: k@123.org
-# $FreeBSD: www/lighttpd/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/lighttpd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME?=	lighttpd
 PORTVERSION=	1.4.32
@@ -22,7 +22,6 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	lthack
 USE_GMAKE=	yes
 USES=		pkgconfig
-MAKE_JOBS_SAFE=	yes
 
 #.if !defined(_BUILDING_LIGHTTPD_MODULE)
 #USE_AUTOTOOLS=	libtool
