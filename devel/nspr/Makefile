@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/nspr/Makefile 321792 2013-06-26 11:01:34Z flo $
+# $FreeBSD: devel/nspr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	nspr
 DISTVERSION=	4.10
@@ -10,14 +10,13 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	A platform-neutral API for system level and libc like functions
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/nspr/build
-CONFIGURE_WRKSRC= ${WRKSRC}/..
 
-USE_AUTOTOOLS=	autoconf213
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	autoconf213
 CONFIGURE_ARGS=	--srcdir=${WRKSRC:H}
+CONFIGURE_WRKSRC= ${WRKSRC}/..
 
 MAKE_ENV=	DIST=${WRKSRC}/dist
 
