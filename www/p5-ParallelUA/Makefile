@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Parallel-UA
-# Date created:                         Sep 8 1998
-# Whom:                                 ache@freebsd.org
-#
-# $FreeBSD: ports/www/p5-ParallelUA/Makefile,v 1.36 2012/11/17 06:02:52 svnexp Exp $
-#
+# Created by: ache@FreeBSD.org
+# $FreeBSD: www/p5-ParallelUA/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	ParallelUA
 PORTVERSION=	2.57
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 REINPLACE_ARGS=	-i ''
 
 MAN3=		Bundle::ParallelUA.3 \
