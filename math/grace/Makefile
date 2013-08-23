@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.de>
-# $FreeBSD: math/grace/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: math/grace/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	grace
 PORTVERSION=	5.1.23
@@ -35,7 +35,6 @@ CONFIGURE_ARGS=	--enable-grace-home=${DATADIR} \
 		--with-helpviewer="xdg-open %s" \
 		--without-bundled-xbae
 ALL_TARGET=	# empty
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		convcal.1 grace.1 grconvert.1
 MLINKS=		grace.1 gracebat.1 \
