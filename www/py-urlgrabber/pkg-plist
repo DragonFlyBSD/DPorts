@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/py-urlgrabber/pkg-plist,v 1.3 2012/11/17 06:03:02 svnexp Exp $
+@comment $FreeBSD: www/py-urlgrabber/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/urlgrabber
 %%PYTHON_SITELIBDIR%%/urlgrabber/__init__.py
 %%PYTHON_SITELIBDIR%%/urlgrabber/__init__.pyc
