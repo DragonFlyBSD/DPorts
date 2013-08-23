@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-Object/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Set-Object/Makefile 325013 2013-08-19 18:47:08Z sunpoet $
 
 PORTNAME=	Set-Object
 PORTVERSION=	1.31
@@ -12,15 +12,18 @@ COMMENT=	Perl module to manage sets of objects
 
 LICENSE=	ART10
 
+OPTIONS_DEFINE=	DOCS
+
 USES=		perl5
 USE_PERL5=	configure
 
 MAN3=		Set::Changes.3 Set::Object.3 Set::Object::Weak.3
-
-.if !defined(NOPORTDOCS)
 PORTDOCS=	Changes.pod README
 
+.include <bsd.port.options.mk>
+
 post-install:
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
