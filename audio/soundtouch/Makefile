@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/audio/soundtouch/Makefile,v 1.31 2013/02/05 10:54:59 svnexp Exp $
+# $FreeBSD: audio/soundtouch/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	soundtouch
 PORTVERSION=	1.7.1
@@ -20,7 +20,6 @@ USE_AUTOTOOLS=	libtoolize aclocal autoheader automake autoconf
 ACLOCAL_ARGS=	-I config/m4
 AUTOMAKE_ARGS=	--add-missing --copy --foreign
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
