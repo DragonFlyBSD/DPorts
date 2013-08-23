@@ -1,11 +1,10 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: deskutils/p5-Data-ICal/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: deskutils/p5-Data-ICal/Makefile 325038 2013-08-20 09:52:55Z mat $
 
 PORTNAME=	Data-ICal
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	deskutils perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:TSIBLEY
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
