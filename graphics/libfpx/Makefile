@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/libfpx/Makefile 324126 2013-08-01 21:02:17Z bapt $
+# $FreeBSD: graphics/libfpx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libfpx
 DISTVERSION=	1.3.1-1
@@ -21,7 +21,6 @@ USE_XZ=	yes
 PLIST_FILES=	lib/libfpx.so.2 lib/libfpx.so lib/libfpx.a include/fpxlib.h
 USE_LDCONFIG=	yes
 MAKEFILE=	${FILESDIR}/Makefile.bsd
-MAKE_JOBS_SAFE=	yes
 post-patch:
 	${SED} -i '' -e '/^#include "fpxlib-config.h"/d'	\
 		${WRKSRC}/basics/filename.cpp	\
