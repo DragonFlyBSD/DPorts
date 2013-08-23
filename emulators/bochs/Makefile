@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: emulators/bochs/Makefile 319346 2013-05-29 05:29:30Z miwi $
+# $FreeBSD: emulators/bochs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bochs
 PORTVERSION=	2.6.2
@@ -78,7 +78,6 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	ac_cv_header_alsa_asoundlib_h=no
 CONFIGURE_ARGS=	--disable-docbook --disable-instrumentation
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-fno-exceptions -fomit-frame-pointer ${CPPFLAGS}
 CXXFLAGS+=	-fno-rtti
