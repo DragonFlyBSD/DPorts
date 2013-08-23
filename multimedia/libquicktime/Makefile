@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/libquicktime/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/libquicktime/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libquicktime
 PORTVERSION=	1.2.4
@@ -20,7 +20,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_LDCONFIG=	yes
 USES=		pathfix pkgconfig gettext
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	autoconf
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
