@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gwenhywfar/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: devel/gwenhywfar/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gwenhywfar
 PORTVERSION=	4.3.3
@@ -29,7 +29,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release="yes" \
 		--with-guis="${SLAVEPORT}"
 CPPFLAGS+=	-DGCRYPT_NO_DEPRECATED
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	GWEN_SHLIB_VER="${GWEN_SHLIB_VER}"
 USE_LDCONFIG=	yes
