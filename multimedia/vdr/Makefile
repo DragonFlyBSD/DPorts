@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@freebsd.org>
-# $FreeBSD: multimedia/vdr/Makefile 322722 2013-07-10 17:44:45Z nox $
+# $FreeBSD: multimedia/vdr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vdr
 PORTVERSION=	1.7.29
@@ -26,7 +26,6 @@ USES=		pkgconfig gettext iconv gmake
 DIST_SUBDIR=	vdr
 USE_BZIP2=	yes
 PORTDOCS=	COPYING INSTALL MANUAL README HISTORY
-MAKE_JOBS_SAFE=	yes
 MAN1=		vdr.1
 MAN5=		vdr.5
 MANCOMPRESSED=	yes
