@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-im/libmsn/Makefile 323776 2013-07-27 10:19:30Z marino $
+# $FreeBSD: net-im/libmsn/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libmsn
 DISTVERSION=	4.2.1
@@ -18,7 +18,6 @@ USE_BZIP2=	yes
 USES=		cmake
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|lib$${LIB_SUFFIX}/pkgconfig|libdata/pkgconfig|g' \
