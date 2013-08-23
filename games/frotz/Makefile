@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/games/frotz/Makefile,v 1.18 2012/11/28 21:31:51 svnexp Exp $
+# $FreeBSD: games/frotz/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	frotz
 PORTVERSION=	2.43d
@@ -15,7 +15,6 @@ LICENSE=	GPLv2 # (or later)
 MAKE_ARGS=	CC="${CC}" OPTS="${CFLAGS}" PREFIX="${PREFIX}" \
 		CONFIG_DIR="${PREFIX}/etc" SOUND_DEFS="-DOSS_SOUND" \
 		SOUND_DEV="/dev/dsp" INCL="" LIB=""
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		frotz.6 dfrotz.6
 PORTDOCS=	AUTHORS BUGS ChangeLog DUMB HOW_TO_PLAY README
