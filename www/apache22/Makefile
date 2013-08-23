@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22/Makefile 322728 2013-07-10 19:01:44Z ohauer $
+# $FreeBSD: www/apache22/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	apache22
 PORTVERSION=	2.2.25
@@ -15,7 +15,6 @@ LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2 \
 		apr-1:${PORTSDIR}/devel/apr1 \
 		pcre:${PORTSDIR}/devel/pcre
 
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK?=	apache22
 
