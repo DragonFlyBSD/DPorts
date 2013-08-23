@@ -1,14 +1,14 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/print/py-relatorio/Makefile,v 1.11 2013/02/15 15:03:52 svnexp Exp $
+# $FreeBSD: print/py-relatorio/Makefile 324973 2013-08-19 11:21:36Z wen $
 
 PORTNAME=	relatorio
-PORTVERSION=	0.5.7
+PORTVERSION=	0.6.0
 CATEGORIES=	print python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	wen@FreeBSD.org
-COMMENT=	A templating library able to output odt and pdf files
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Templating library able to output odt and pdf files
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Genshi>=0.5:${PORTSDIR}/textproc/py-genshi \
 		${PYTHON_PKGNAMEPREFIX}lxml>=2.2:${PORTSDIR}/devel/py-lxml
