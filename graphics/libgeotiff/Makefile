@@ -1,9 +1,5 @@
-# New ports collection makefile for:		libgeotiff
-# Date created:					9 December 2005
-# Whom:						Sam Lawrance
-#
-# $FreeBSD: ports/graphics/libgeotiff/Makefile,v 1.18 2012/11/17 05:58:12 svnexp Exp $
-#
+# Created by: Sam Lawrance
+# $FreeBSD: graphics/libgeotiff/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	libgeotiff
 PORTVERSION=	1.4.0
