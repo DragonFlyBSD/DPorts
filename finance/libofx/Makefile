@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <glennpj@charter.net>
-# $FreeBSD: finance/libofx/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: finance/libofx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libofx
 PORTVERSION=	0.9.5
@@ -23,7 +23,6 @@ AUTOMAKE_ARGS=	--add-missing
 CONFIGURE_ARGS=	--disable-doxygen --disable-dot --disable-gengetopt \
 		--with-opensp-includes=${LOCALBASE}/include/OpenSP \
 		--with-opensp-libs=${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
