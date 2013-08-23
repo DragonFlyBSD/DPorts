@@ -1,8 +1,8 @@
 # Created by: patrick@mindstep.com
-# $FreeBSD: security/p5-Crypt-Blowfish/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-Blowfish/Makefile 324983 2013-08-19 12:40:28Z mat $
 
 PORTNAME=	Crypt-Blowfish
-PORTVERSION=	2.12
+PORTVERSION=	2.14
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
