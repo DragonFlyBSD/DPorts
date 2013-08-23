@@ -2,7 +2,7 @@
 # Date created:		Aug 17 1996
 # Whom:			chuckr
 #
-# $FreeBSD: ports/x11-toolkits/itk/Makefile,v 1.29 2012/11/17 06:03:36 svnexp Exp $
+# $FreeBSD: x11-toolkits/itk/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	itk
@@ -31,7 +31,6 @@ MAJOR=		${PORTVERSION:R}
 MINOR=		${PORTVERSION:E}
 PLIST_SUB+=	MAJOR=${MAJOR} MINOR=${MINOR}
 ITK_LIB=	libitk.so.${MAJOR}
-MAKE_JOBS_SAFE=	yes
 
 MANN=		Archetype.n Toplevel.n Widget.n itk.n itkvars.n usual.n
 
