@@ -1,8 +1,8 @@
 # Created by: Jan-Peter Koopmann <j.koopmann@seceidos.de>
-# $FreeBSD: converters/p5-Convert-BinHex/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Convert-BinHex/Makefile 325256 2013-08-23 08:39:12Z jadawin $
 
 PORTNAME=	Convert-BinHex
-PORTVERSION=	1.119
+PORTVERSION=	1.120
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
