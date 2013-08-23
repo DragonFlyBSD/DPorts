@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep-make/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: devel/gnustep-make/Makefile 325025 2013-08-20 01:08:17Z linimon $
 
 PORTNAME=	gnustep-make
 PORTVERSION=	2.6.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep makefile package
 
 LICENSE=        GPLv3
