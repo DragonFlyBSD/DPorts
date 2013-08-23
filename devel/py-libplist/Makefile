@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-libplist/Makefile 317562 2013-05-07 00:17:21Z avilla $
+# $FreeBSD: devel/py-libplist/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTREVISION=	0
 CATEGORIES=	devel python
@@ -17,7 +17,6 @@ MASTERDIR=	${.CURDIR:H:H}/devel/libplist
 # Required to reference installed libplist.
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 PLIST=		${.CURDIR}/pkg-plist
 FILESDIR=	${.CURDIR}/files
