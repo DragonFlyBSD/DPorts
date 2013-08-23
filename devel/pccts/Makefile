@@ -3,7 +3,7 @@
 # Date created:				22 June 1997
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/devel/pccts/Makefile,v 1.30 2012/11/17 05:56:37 svnexp Exp $
+# $FreeBSD: devel/pccts/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	pccts
@@ -23,7 +23,6 @@ USE_ZIP=	yes
 MAKE_ENV=	COPT="${CFLAGS}"
 MAKEFILE=	makefile
 ALL_TARGET=	# empty
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		antlr.1 dlg.1
 
