@@ -1,4 +1,4 @@
-# $FreeBSD: print/texlive-base/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: print/texlive-base/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	texlive
 PORTVERSION=	20120701
@@ -85,7 +85,6 @@ CONFIGURE_ARGS= --disable-native-texlive-build \
 CFLAGS+=	-I${LOCALBASE}/include \
 		-I${LOCALBASE}/include/kpathsea \
 		-I${LOCALBASE}/include/ptexenc
-MAKE_JOBS_SAFE=	yes
 PLIST_SUB=	INSTALL_DATA="${INSTALL_DATA}"
 
 NO_MANCOMPRESS=	yes
