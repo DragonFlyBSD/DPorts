@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/llvm31/files/patch-utils_llvm-build_llvmbuild_main.py,v 1.1 2013/01/10 17:27:22 svnexp Exp $
+$FreeBSD: devel/llvm31/files/patch-utils_llvm-build_llvmbuild_main.py 300896 2012-07-14 13:54:48Z beat $
 
 --- utils/llvm-build/llvmbuild/main.py.orig
 +++ utils/llvm-build/llvmbuild/main.py
