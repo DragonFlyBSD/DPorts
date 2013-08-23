@@ -1,5 +1,5 @@
 # Created by: Richard Kiss
-# $FreeBSD: lang/lua/Makefile 324286 2013-08-05 20:37:35Z mandree $
+# $FreeBSD: lang/lua/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lua
 PORTVERSION=	5.1.5
@@ -22,7 +22,6 @@ LUA_COMPS=	# only define variables
 ALL_TARGET=	freebsd
 USES=		pkgconfig
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	LUA_SONAME="liblua-${LUA_VER}.so.${LUA_VER_SH}"
 # Overriding __MAKE_CONF makes sure that we don't re-parse
 # /etc/make.conf during do-build, which would jeopardize the build
