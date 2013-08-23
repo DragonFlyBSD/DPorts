@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gcc-aux/Makefile 324090 2013-08-01 06:31:18Z bapt $
+# $FreeBSD: lang/gcc-aux/Makefile 324771 2013-08-15 14:39:14Z ak $
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
@@ -24,15 +24,15 @@ FULL_GNATGCC=		NOT_SET
 OS_LABEL4VERS=		[${OPSYS}]
 GARCH=			${ARCH:S/amd64/x86_64/}
 
-OPTIONS_DEFINE= 	ADA CXX FORT OBJC STATIC TESTSUITE NLS
+OPTIONS_DEFINE=	ADA CXX FORT OBJC STATIC TESTSUITE NLS
 OPTIONS_DEFAULT=	ADA CXX FORT OBJC
 NO_OPTIONS_SORT=	yes
 
 ADA_DESC=		Build Ada language
 CXX_DESC=		Build C++ language
 FORT_DESC=		Build Fortran language
-OBJC_DESC=      	Build Objective-C language
-STATIC_DESC=    	Build with no shared libraries other than libc
+OBJC_DESC=		Build Objective-C language
+STATIC_DESC=	Build with no shared libraries other than libc
 TESTSUITE_DESC=		Activate test support
 
 USES+=		perl5
