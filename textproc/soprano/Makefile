@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: textproc/soprano/Makefile 322992 2013-07-14 16:17:59Z rakuco $
+# $FreeBSD: textproc/soprano/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	soprano
 PORTVERSION=	2.9.3
@@ -19,7 +19,6 @@ USE_BZIP2=	yes
 USES=		cmake pkgconfig
 CMAKE_ARGS+=	-DSOPRANO_DISABLE_CLUCENE_INDEX=yes \
 		-DSOPRANO_DISABLE_SESAME2_BACKEND=yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 post-patch:
