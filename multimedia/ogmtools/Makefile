@@ -2,7 +2,7 @@
 # Date created:		Sun Oct 20 13:06:13 UTC 2002
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/ogmtools/Makefile,v 1.35 2012/11/17 05:59:52 svnexp Exp $
+# $FreeBSD: multimedia/ogmtools/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	ogmtools
@@ -20,7 +20,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ogg-prefix=${LOCALBASE} \
   		--with-vorbis-prefix=${LOCALBASE}
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		ogmcat.1 ogmdemux.1 ogminfo.1 ogmmerge.1 ogmsplit.1
 
