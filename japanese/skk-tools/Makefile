@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skk-tools/Makefile 316350 2013-04-23 11:46:54Z bapt $
+# $FreeBSD: japanese/skk-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	skk-tools
 PORTVERSION=	1.3.2
@@ -19,7 +19,6 @@ OPTIONS_DEFAULT=	EXPR2
 EXPR2_DESC=	Build skkdic-expr2 (needs glib-2.x)
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/skk
 
