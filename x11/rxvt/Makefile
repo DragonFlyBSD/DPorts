@@ -2,7 +2,7 @@
 # Date created:         5th December 1994
 # Whom:                 gpalmer@FreeBSD.org
 #
-# $FreeBSD: ports/x11/rxvt/Makefile,v 1.77 2012/11/17 18:30:23 svnexp Exp $
+# $FreeBSD: x11/rxvt/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 # If possible, please consider updating the simple ports/x11-clocks/rclock
 # when you upgrade rxvt. These ports all use the same distfile.
@@ -40,7 +40,6 @@ CONFIGURE_ARGS=	--enable-ttygid \
 MAN1=		rxvt.1
 PLIST_FILES=	bin/rxvt
 
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
