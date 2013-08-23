@@ -2,7 +2,7 @@
 # Date created:				9 May 2009
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: devel/libgdata/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/libgdata/Makefile 324744 2013-08-14 22:35:50Z ak $
 #   $MCom: ports/devel/libgdata/Makefile,v 1.14 2010/09/30 19:39:17 kwm Exp $
 #
 
@@ -22,7 +22,6 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=		gettext
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack intltool ltverhack glib20
 CPPFLAGS+=	-I${LOCALBASE}/include 
