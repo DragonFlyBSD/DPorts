@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tk-Sugar
-# Date created:		2011-10-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/p5-Tk-Sugar/Makefile,v 1.2 2012/11/17 06:03:38 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: x11-toolkits/p5-Tk-Sugar/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Tk-Sugar
 PORTVERSION=	1.093.190
@@ -16,9 +12,10 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sugar syntax for Tk
 
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
-RUN_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Tk::Sugar.3
 
