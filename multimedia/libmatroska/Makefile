@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libmatroska/Makefile 317560 2013-05-06 22:48:45Z ehaupt $
+# $FreeBSD: multimedia/libmatroska/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libmatroska
 PORTVERSION=	1.4.0
@@ -21,7 +21,6 @@ USE_DOS2UNIX=	make/linux/Makefile
 BUILD_WRKSRC=	${WRKSRC}/make/linux
 INSTALL_WRKSRC=	${WRKSRC}/make/linux
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 # Installs dir with proper permissions
 INSTALL_DATA_DIR=	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m 755
