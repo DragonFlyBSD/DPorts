@@ -1,4 +1,4 @@
-# $FreeBSD: audio/chromaprint/Makefile 322705 2013-07-10 15:25:37Z makc $
+# $FreeBSD: audio/chromaprint/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	chromaprint
 PORTVERSION=	0.7
@@ -15,7 +15,6 @@ LIB_DEPENDS=	avcodec${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFI
 
 USES=		cmake:outsource
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CMAKE_ARGS=	-DBUILD_EXAMPLES:BOOL=ON \
 		-DWITH_AVFFT:BOOL=ON \
