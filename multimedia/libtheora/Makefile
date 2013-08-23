@@ -2,7 +2,7 @@
 # Date created:				09 februari 2003
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
-# $FreeBSD: ports/multimedia/libtheora/Makefile,v 1.32 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/libtheora/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libtheora
@@ -19,7 +19,6 @@ LIB_DEPENDS=	vorbis.4:${PORTSDIR}/audio/libvorbis
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	ltverhack
 CONFIGURE_ENV=	LIBS="${PTHEAD_LIBS}"
