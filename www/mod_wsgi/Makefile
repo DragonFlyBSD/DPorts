@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: ports/www/mod_wsgi/Makefile,v 1.25 2012/11/17 06:02:42 svnexp Exp $
+# $FreeBSD: www/mod_wsgi/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_wsgi
 PORTVERSION=	2.8
@@ -15,7 +15,6 @@ COMMENT=	Python WSGI adapter module for Apache
 
 LICENSE=	AL2
 
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	mod_wsgi2
 CONFLICTS=	${PKGNAMEPREFIX}mod_wsgi-3.* mod_wsgi-3.*
