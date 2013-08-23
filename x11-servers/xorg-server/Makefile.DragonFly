@@ -4,6 +4,7 @@ OPTIONS_EXCLUDE+= HAL
 
 .if defined(WITH_NEW_XORG)
 EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-newxorg-hw_xfree86_os-support_xf86__OSlib.h
+EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-newxorg-hw_xfree86_common_xf86Config.c
 .else
 EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-oldxorg-hw_xfree86_os-support_xf86__OSlib.h
 .endif
