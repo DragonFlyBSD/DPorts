@@ -1,8 +1,8 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: security/libgcrypt/Makefile 317219 2013-05-03 16:35:24Z ehaupt $
+# $FreeBSD: security/libgcrypt/Makefile 325029 2013-08-20 05:31:34Z rpaulo $
 
 PORTNAME=	libgcrypt
-PORTVERSION=	1.5.2
+PORTVERSION=	1.5.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -35,6 +35,9 @@ CONFIGURE_ARGS+=	--disable-asm
 .if (${OSVERSION} >= 1000000)
 BROKEN=	will not compile. See pr ports/166388
 .endif
+
+.elif ${ARCH} == "armv6"
+USE_GCC=4.2+
 
 .elif ${ARCH} == "i386"
 .if (${OSVERSION} < 900033)
