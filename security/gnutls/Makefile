@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/gnutls/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: security/gnutls/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gnutls
 PORTVERSION=	2.12.23
@@ -21,7 +21,6 @@ USES=		pathfix pkgconfig iconv
 USE_BZIP2=	yes
 USE_GNOME=	ltverhack
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 LIBTOOLFILES=	configure lib/configure libextra/configure
