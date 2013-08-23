@@ -2,7 +2,7 @@
 # Date created:			Wed May  5 16:38:55 EDT 2004
 # Whom:				Michael Johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/audio/faac/Makefile,v 1.45 2012/11/17 05:54:30 svnexp Exp $
+# $FreeBSD: audio/faac/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	faac
@@ -21,7 +21,6 @@ RESTRICTED=	Distribution in binary form is prohibited
 USE_BZIP2=	yes
 USE_DOS2UNIX=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I . -I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
