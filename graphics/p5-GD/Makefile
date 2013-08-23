@@ -1,13 +1,11 @@
 # Created by: Philip M. Gollucci <pgollucci@FreeBSD.org>
-# $FreeBSD: graphics/p5-GD/Makefile 324445 2013-08-09 15:21:56Z dinoex $
+# $FreeBSD: graphics/p5-GD/Makefile 325131 2013-08-21 13:54:13Z mat $
 
 PORTNAME=	GD
-PORTVERSION=	2.49
-PORTREVISION=	1
+PORTVERSION=	2.50
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	GD-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 interface to Gd Graphics Library version2
