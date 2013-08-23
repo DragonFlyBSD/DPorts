@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xset/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xset/Makefile 324726 2013-08-14 14:39:26Z zeising $
 
 PORTNAME=	xset
-PORTVERSION=	1.2.2
+PORTVERSION=	1.2.3
 PORTREVISION=	1
 CATEGORIES=	x11
 
