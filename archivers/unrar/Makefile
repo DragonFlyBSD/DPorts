@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/archivers/unrar/Makefile,v 1.79 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: archivers/unrar/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
 
 PORTNAME=	unrar
 PORTVERSION=	4.20
@@ -21,7 +21,7 @@ CONFLICTS?=	zh-unrar-[0-9].* unrar-iconv-[0-9].*
 
 MAKE_ARGS=	STRIP=${STRIP_CMD}
 MAKEFILE=	makefile.unix
-USE_GMAKE=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/unrar
