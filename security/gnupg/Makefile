@@ -1,8 +1,7 @@
-# $FreeBSD: security/gnupg/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/gnupg/Makefile 324990 2013-08-19 13:29:42Z kuriyama $
 
 PORTNAME=	gnupg
-PORTVERSION=	2.0.20
-PORTREVISION=	1
+PORTVERSION=	2.0.21
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	gnupg
