@@ -2,7 +2,7 @@
 # Date created:		20 Nov 2005
 # Whom:			Hye-Shik Chang
 #
-# $FreeBSD: devel/llvm/Makefile 319327 2013-05-28 20:28:03Z brooks $
+# $FreeBSD: devel/llvm/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	llvm
@@ -30,7 +30,6 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
 USE_PYTHON_BUILD=	yes
-MAKE_JOBS_SAFE=	yes
 
 # Suggested tweaks from http://llvm.org/docs/Packaging.html
 CONFIGURE_ARGS+=	--enable-shared
