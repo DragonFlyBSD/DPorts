@@ -2,7 +2,7 @@
 # Date created:        13 February 2009
 # Whom:                Tassilo Philipp <tphilipp@potion-studios.com>
 #
-# $FreeBSD: ports/devel/psptoolchain-binutils/Makefile,v 1.4 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: devel/psptoolchain-binutils/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=		binutils
@@ -19,7 +19,6 @@ COMMENT=		PlayStation Portable development toolchain ${PORTNAME}
 USE_BZIP2=		yes
 USE_GCC=		any
 USE_GMAKE=		yes
-MAKE_JOBS_SAFE=		yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_TARGET=	${ARCH:S/amd64/x86_64/}-unknown-freebsd${OSREL}
