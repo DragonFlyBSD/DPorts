@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: irc/pure-emacs21/Makefile 319344 2013-05-29 05:26:53Z miwi $
+# $FreeBSD: irc/pure-emacs21/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pure
 PORTVERSION=	0.6
@@ -29,7 +29,6 @@ PUREBIN?=	bin
 MAKE_ARGS+=	LISPDIR=${PREFIX}/${LISPDIR} \
 		PACKDIR=${PREFIX}/${EMACS_LIBDIR}/site-packages \
 		BINDIR=${PREFIX}/${PUREBIN}
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	PURELISP=${LISPDIR} \
 		EMACS_ONLY=${EMACS_ONLY} \
