@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 320823 2013-06-13 18:09:48Z sunpoet $
+# $FreeBSD: www/aria2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	aria2
 PORTVERSION=	1.17.1
@@ -24,7 +24,6 @@ CONFIGURE_ENV=	OPENSSL_CFLAGS=-I${OPENSSLINC} OPENSSL_LIBS="-L${OPENSSLLIB} -lss
 		AZLIB_CFLAGS=-I${INCLUDEDIR} ZLIB_LIBS="-L${LIBDIR} -lz" \
 		ac_cv_path_RST2HTML=no
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_GNOME=	libxml2
 USE_OPENSSL=	yes
 USE_XZ=		yes
