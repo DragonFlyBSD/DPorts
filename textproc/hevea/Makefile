@@ -1,15 +1,12 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: textproc/hevea/Makefile 315758 2013-04-08 12:12:46Z gahr $
+# $FreeBSD: textproc/hevea/Makefile 325146 2013-08-21 14:48:34Z gahr $
 
 PORTNAME=	hevea
-PORTVERSION=	2.06
+PORTVERSION=	2.09
 CATEGORIES=	textproc
 MASTER_SITES=	http://para.inria.fr/~maranget/hevea/distri/ \
 		ftp://ftp.inria.fr/INRIA/moscova/hevea/
-DISTFILES=	${PORTNAME}-${PORTVERSION}.tar.gz \
-		${PORTNAME}-${PORTVERSION}-manual.pdf \
-		${PORTNAME}-${PORTVERSION}-manual.ps.gz \
-		${PORTNAME}-${PORTVERSION}-manual.tar.gz
+DISTFILES=	${PORTNAME}-${PORTVERSION}.tar.gz
 EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}.tar.gz
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -20,6 +17,12 @@ BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml
 PLIST_SUB=	HEVEAVERSION=${PORTVERSION}
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
+DISTFILES+=	${PORTNAME}-${PORTVERSION}-manual.pdf \
+		${PORTNAME}-${PORTVERSION}-manual.ps.gz \
+		${PORTNAME}-${PORTVERSION}-manual.tar.gz
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^PREFIX=/s|/usr/local|${PREFIX}|' \
