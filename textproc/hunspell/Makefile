@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: textproc/hunspell/Makefile 320649 2013-06-11 21:44:16Z rakuco $
+# $FreeBSD: textproc/hunspell/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.3.2
@@ -16,7 +16,6 @@ LICENSE_COMB=	dual
 
 CONFIGURE_ARGS=	--disable-nls --with-libiconv-prefix=${LOCALBASE} --with-readline --with-ui
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USES=		pathfix iconv ncurses readline
 USE_LDCONFIG=	yes
 
