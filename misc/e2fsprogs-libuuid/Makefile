@@ -2,7 +2,7 @@
 # Date created:				26 Jan 2006
 # Whom:					Matthias Andree <matthias.andree@gmx.de>
 #
-# $FreeBSD: ports/misc/e2fsprogs-libuuid/Makefile,v 1.15 2012/11/17 05:59:34 svnexp Exp $
+# $FreeBSD: misc/e2fsprogs-libuuid/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTREVISION=	0
@@ -26,7 +26,6 @@ INSTALL_TARGET=	install install-shlibs
 INSTALL_WRKSRC=	${WRKSRC}/lib/uuid
 FILESDIR=	${.CURDIR}/files
 USE_RC_SUBR=	uuidd
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		uuidgen.1
 
