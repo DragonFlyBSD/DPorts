@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-storable
-# Date created:		2011-11-02
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-storable/Makefile,v 1.3 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/rubygem-storable/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	storable
 PORTVERSION=	0.8.9
