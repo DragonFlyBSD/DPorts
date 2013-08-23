@@ -2,7 +2,7 @@
 # Date created:			  Fri Sep 20, 2002
 # Whom:				  Alexandr Kovalenko <never@nevermind.kiev.ua>
 #
-# $FreeBSD: converters/enca/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: converters/enca/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	enca
@@ -25,7 +25,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR}
 
 CPPFLAGS+=	-I${LOCALBASE}/include
