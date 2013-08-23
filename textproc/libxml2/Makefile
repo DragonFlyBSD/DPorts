@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: textproc/libxml2/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/libxml2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #    $MCom: ports/textproc/libxml2/Makefile,v 1.15 2012/11/26 19:55:23 kwm Exp $
 
 PORTNAME=	libxml2
@@ -18,7 +18,6 @@ COMMENT?=	XML parser library for GNOME
 
 USE_CSTD=	gnu89
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 USES=		pathfix iconv
 USE_GNOME?=	pkgconfig
