@@ -2,7 +2,7 @@
 # Date created:         Sun Feb 21 2001
 # Whom:                 tobez@tobez.org
 #
-# $FreeBSD: ports/mail/libesmtp/Makefile,v 1.49 2012/11/17 05:59:04 svnexp Exp $
+# $FreeBSD: mail/libesmtp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libesmtp
 PORTVERSION=	1.0.6
@@ -28,7 +28,6 @@ CONFIGURE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}" \
 # require-all-recipients (implied by enable-all) is required for Balsa
 CONFIGURE_ARGS=	--enable-all --disable-isoc
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
