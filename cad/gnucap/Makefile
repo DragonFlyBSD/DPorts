@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gnucap/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: cad/gnucap/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gnucap
 PORTVERSION=	2009.12.07
@@ -19,7 +19,6 @@ READLINE_DESC=	Enable readline support
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		gnucap.1 gnucap-ibis.1
 PORTDOCS=	*
