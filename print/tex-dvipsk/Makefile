@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-dvipsk/Makefile 318747 2013-05-22 08:26:53Z hrs $
+# $FreeBSD: print/tex-dvipsk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dvipsk
 PORTVERSION=	5.992
@@ -56,7 +56,6 @@ CONFIGURE_ARGS= --with-paper \
 		--with-system-zlib
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+= 	-lpaper -L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 NO_MANCOMPRESS=	yes
 MAN1=	afm2tfm.1 dvips.1
