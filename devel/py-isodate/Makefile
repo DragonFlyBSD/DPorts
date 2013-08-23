@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/py-isodate/Makefile,v 1.4 2012/12/23 21:08:00 svnexp Exp $
+# $FreeBSD: devel/py-isodate/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	isodate
 PORTVERSION=	0.4.9
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	An ISO 8601 date/time/duration parser and formater
+COMMENT=	ISO 8601 date/time/duration parser and formater
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
