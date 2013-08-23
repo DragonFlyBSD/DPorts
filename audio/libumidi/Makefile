@@ -1,15 +1,14 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/libumidi/Makefile 323824 2013-07-28 12:44:43Z nox $
+# $FreeBSD: audio/libumidi/Makefile 324862 2013-08-17 18:41:45Z kwm $
 
 PORTNAME=	libumidi
-PORTVERSION=	2.0.7
-PORTREVISION=	1
+PORTVERSION=	2.0.8
 CATEGORIES=	audio
 MASTER_SITES=	http://www.selasky.org/hans_petter/distfiles/ \
 		http://home.selasky.org:8192/distfiles/
 
 MAINTAINER=	hselasky@FreeBSD.org
-COMMENT=	A universal general purpose MIDI library
+COMMENT=	Universal general purpose MIDI library
 
 LICENSE=	BSD
 USE_BZIP2=	yes
@@ -25,7 +24,7 @@ MAKE_ARGS+=" PTHREAD_LIBS=${PTHREAD_LIBS}"
 
 .if ${PORT_OPTIONS:MJACK}
 MAKE_ARGS+=" HAVE_JACK=YES"
-LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack
 .endif
 
 .if ${PORT_OPTIONS:MDEBUG}
