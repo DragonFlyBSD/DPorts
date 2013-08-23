@@ -2,7 +2,7 @@
 # Date Created:		04 Aug 1996
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $FreeBSD: ports/converters/uulib/Makefile,v 1.38 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: converters/uulib/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	uulib
@@ -21,7 +21,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 GNU_CONFIGURE=	yes
 ALL_TARGET=	libuu.a	libuu.so.${SHLIB_VER}
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		uulib.3
 PORTDOCS=	*
