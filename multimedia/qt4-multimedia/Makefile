@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/qt4-multimedia/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: multimedia/qt4-multimedia/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	multimedia
 DISTVERSION=	${QT4_VERSION}
@@ -11,7 +11,6 @@ COMMENT=	Qt4 low-level multimedia API
 USE_QT4=	qmake_build moc_build uic_build corelib gui
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/qt4
