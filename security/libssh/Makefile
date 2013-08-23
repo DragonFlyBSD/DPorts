@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: security/libssh/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/libssh/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libssh
 PORTVERSION=	0.5.2
@@ -15,7 +15,6 @@ OPTIONS_DEFINE=	GCRYPT SSH1
 GCRYPT_DESC=	Build with libgcrypt
 SSH1_DESC=	Build with SSH1 support
 
-MAKE_JOBS_SAFE=	yes
 USES=		cmake
 CMAKE_SOURCE_PATH=	${WRKSRC}
 CONFIGURE_WRKSRC=	${CMAKE_SOURCE_PATH}/build
