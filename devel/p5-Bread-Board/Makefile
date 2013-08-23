@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Bread-Board
-# Date created:		2011-05-31
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Bread-Board/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Bread-Board/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Bread-Board
 PORTVERSION=	0.25
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:STEVAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A solderless way to wire up your application components
+COMMENT=	Solderless way to wire up your application components
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
@@ -31,7 +27,8 @@ TEST_DEPENDS=	p5-Form-Sensible>=0:${PORTSDIR}/devel/p5-Form-Sensible \
 OPTIONS_DEFINE=	GRAPHVIZ
 GRAPHVIZ_DESC=	Visualize a Bread::Board system via Graphviz
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		visualize-breadboard.1
 MAN3=		Bread::Board.3 \
