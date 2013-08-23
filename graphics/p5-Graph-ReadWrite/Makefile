@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: graphics/p5-Graph-ReadWrite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Graph-ReadWrite/Makefile 325137 2013-08-21 14:17:50Z mat $
 
 PORTNAME=	Graph-ReadWrite
-PORTVERSION=	2.03
+PORTVERSION=	2.04
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
