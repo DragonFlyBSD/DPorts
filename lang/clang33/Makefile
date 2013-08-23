@@ -1,4 +1,4 @@
-# $FreeBSD: lang/clang33/Makefile 322654 2013-07-10 11:27:36Z kwm $
+# $FreeBSD: lang/clang33/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	clang
 DISTVERSION=	3.3
@@ -36,7 +36,6 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
 USE_PYTHON_BUILD=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAKE_ARGS=	CLANG_TBLGEN=${WRKSRC}/${RELTYPE}/bin/clang-tblgen \
 		LLVMIncDir=${LLVM_PREFIX}/include \
