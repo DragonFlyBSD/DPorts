@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-# $FreeBSD: print/tex-xdvik/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: print/tex-xdvik/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.86
@@ -37,7 +37,6 @@ CONFIGURE_ARGS=	--enable-shared \
 CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
-MAKE_JOBS_SAFE=	yes
 CFLAGS+=	-I${LOCALBASE}/include -DHAVE_LIBPAPER -g -O0
 PLIST_SUB=	TEXMFDIR=${TEXMFDIR} TEXMFCONFIGDIR=${TEXMFDIR}-config
 CONFLICTS_INSTALL=	xdvi-[0-9]* xdvi-*-[0-9]* *-xdvi-[0-9]* \
