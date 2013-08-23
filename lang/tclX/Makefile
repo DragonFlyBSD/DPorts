@@ -2,7 +2,7 @@
 # Date created:		6 February 1996
 # Whom:			jkh
 #
-# $FreeBSD: lang/tclX/Makefile 316353 2013-04-23 11:56:21Z gahr $
+# $FreeBSD: lang/tclX/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	tclX
@@ -26,7 +26,6 @@ CONFIGURE_ARGS=	--enable-shared \
 		--with-help=Help \
 		--with-tcl="${TCL_LIBDIR}"
 PLIST_SUB=	TCLX_VER=${PORTVERSION}
-MAKE_JOBS_SAFE=	yes
 ALL_TARGET=	binaries libraries
 INSTALL_TARGET=	install-binaries install-libraries
 
