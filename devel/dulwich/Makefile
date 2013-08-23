@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/dulwich/Makefile 320329 2013-06-09 12:52:21Z wg $
+# $FreeBSD: devel/dulwich/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dulwich
 PORTVERSION=	0.9.0
@@ -13,7 +13,6 @@ COMMENT=	Pure-Python implementation of the Git file formats and protocols
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS HACKING NEWS README introduction.txt \
 		object-store.txt protocol.txt remote.txt repo.txt tag.txt
