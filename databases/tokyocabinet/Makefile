@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/tokyocabinet/Makefile 320319 2013-06-09 09:17:28Z antoine $
+# $FreeBSD: databases/tokyocabinet/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tokyocabinet
 PORTVERSION=	1.4.48
@@ -11,7 +11,6 @@ MASTER_SITE_SUBDIR=	kuriyama
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	A modern implementation of DBM
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
