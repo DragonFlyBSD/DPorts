@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: security/cryptopp/Makefile 318803 2013-05-22 22:51:57Z delphij $
+# $FreeBSD: security/cryptopp/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=		cryptopp
 PORTVERSION=		5.6.2
@@ -11,10 +11,10 @@ DISTNAME=		cryptopp${PORTVERSION:S/.//g}
 MAINTAINER=		delphij@FreeBSD.org
 COMMENT=		Free C++ class library of Cryptographic Primitives
 
-OPTIONS_DEFINE=		DEBUG DOCS GCC46 STATIC THREADS
+OPTIONS_DEFINE=		DEBUG DOCS GCC STATIC THREADS
 OPTIONS_DEFAULT=	STATIC THREADS
 STATIC_DESC=		Build static version only (no shared libs)
-GCC46_DESC=		Build with GCC 4.6+
+GCC_DESC=		Build with current GCC
 
 .include <bsd.port.options.mk>
 
@@ -22,7 +22,6 @@ NO_WRKSUBDIR=		yes
 USE_ZIP=		yes
 EXTRACT_BEFORE_ARGS=	-aq
 USE_GMAKE=		yes
-MAKE_JOBS_SAFE=		yes
 MAKEFILE=		GNUmakefile
 
 LIBVERSION=		0
@@ -33,8 +32,8 @@ PLIST_SUB+=		PORTVERSION=${PORTVERSION}
 CXXFLAGS+=		-DNDEBUG
 .endif
 
-.if ${PORT_OPTIONS:MGCC46}
-USE_GCC=		4.6+
+.if ${PORT_OPTIONS:MGCC}
+USE_GCC=		yes
 .endif
 
 .if ${PORT_OPTIONS:MSTATIC}
