@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/gdb66/Makefile 323530 2013-07-23 12:28:56Z gahr $
+# $FreeBSD: devel/gdb66/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
@@ -19,7 +19,6 @@ OPTIONS_DEFINE=	INSIGHT
 INSIGHT_DESC=	Tcl/Tk GUI (experimental!)
 
 CONFLICTS?=	gdb-[7-9]*
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USE_GCC=	any
 USE_GMAKE=	yes
