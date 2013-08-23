@@ -2,7 +2,7 @@
 # Date created:		2005-01-11
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/x264/Makefile,v 1.94 2012/11/17 05:59:55 svnexp Exp $
+# $FreeBSD: multimedia/x264/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	x264
 PORTVERSION=	0.${X264_BUILD}.${X264_REV}
@@ -36,7 +36,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	ASM DEBUG PGO GPAC X11_OUTPUT
 OPTIONS_DEFAULT=	ASM PGO GPAC
