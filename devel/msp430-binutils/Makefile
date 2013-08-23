@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-binutils/Makefile 317121 2013-05-02 14:19:29Z bapt $
+# $FreeBSD: devel/msp430-binutils/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	binutils
 PORTVERSION=	${BINUTILVERSION}.${LTSVERSION}
@@ -35,7 +35,6 @@ LTS_PATCHES+=	${PKGNAMEPREFIX}${PORTNAME}-${BINUTILVERSION}-${PATCHVERSION}-sf${
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=${PKGNAMEPREFIX:S/-$//} \
