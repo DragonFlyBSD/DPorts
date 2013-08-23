@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libkolabxml/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: textproc/libkolabxml/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libkolabxml
 PORTVERSION=	0.8.4
@@ -26,7 +26,6 @@ CMAKE_ARGS=	-DBUILD_TESTS:BOOL=OFF \
 		-DJAVA_BINDINGS:BOOL=OFF \
 		-DPHP_BINDINGS:BOOL=OFF \
 		-DPYTHON_BINDINGS:BOOL=OFF
-MAKE_JOBS_SAFE=	yes
 USES=		cmake:outsource
 USE_LDCONFIG=	yes
 
