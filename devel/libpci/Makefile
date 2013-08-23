@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: devel/libpci/Makefile 316176 2013-04-21 10:32:50Z sunpoet $
+# $FreeBSD: devel/libpci/Makefile 324999 2013-08-19 15:41:40Z sunpoet $
 
 PORTNAME=	libpci
 PORTVERSION=	3.2.0
@@ -16,9 +16,10 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 
 ALL_TARGET=	lib/libpci.a
+CPPFLAGS+=	-fPIC
 MAKE_ENV=	LANG=C
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USES=		gmake
 
 PLIST_DIRS=	include/pci
 PLIST_FILES=	${LIBPCI_FILES} lib/libpci.so.3
@@ -29,13 +30,7 @@ LIBPCI_FILES=	include/pci/config.h include/pci/header.h include/pci/pci.h \
 
 post-patch:
 	@${LN} -s . ${WRKSRC}/lib/pci
-	@${REINPLACE_CMD} \
-		-e 's|^CC=.*$$|CC=${CC}|' \
-		-e 's|^CFLAGS=|CFLAGS+=|' \
-		-e 's|^IDSDIR=.*$$|IDSDIR=${PREFIX}/share/pciids|' \
-		-e 's|^OPT=.*$$|OPT=-fPIC|' \
-		-e 's|^PREFIX=.*$$|PREFIX=${PREFIX}|' \
-			${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e '/^CC=/d; /^CFLAGS=/ s|=|+=|; /^IDSDIR=/ s|$$|/pciids|; /^OPT=/d; /^PREFIX=/d' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} 's|^#include "|&pci/|' ${WRKSRC}/lib/pci.h
 
 post-build:
