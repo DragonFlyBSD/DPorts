@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: multimedia/libvpx/Makefile 317872 2013-05-11 12:58:40Z bapt $
+# $FreeBSD: multimedia/libvpx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libvpx
 PORTVERSION=	1.1.0
@@ -19,7 +19,6 @@ HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=yes
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
