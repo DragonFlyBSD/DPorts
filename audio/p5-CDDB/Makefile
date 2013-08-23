@@ -1,8 +1,8 @@
 # Created by: Yar Tikhiy <yar@comp.chem.msu.su>
-# $FreeBSD: audio/p5-CDDB/Makefile 324382 2013-08-08 09:21:47Z jadawin $
+# $FreeBSD: audio/p5-CDDB/Makefile 325036 2013-08-20 09:38:56Z mat $
 
 PORTNAME=	CDDB
-PORTVERSION=	1.221
+PORTVERSION=	1.222
 CATEGORIES=	audio perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
