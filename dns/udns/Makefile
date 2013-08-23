@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/dns/udns/Makefile,v 1.6 2012/12/31 13:42:57 svnexp Exp $
+# $FreeBSD: dns/udns/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	udns
 PORTVERSION=	0.2
@@ -10,7 +10,6 @@ MAINTAINER=	mm@FreeBSD.org
 COMMENT=	DNS resolver library with sync and async queries
 
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	IPV6 DOCS
