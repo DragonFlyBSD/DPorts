@@ -1,5 +1,5 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: lang/ghc/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: lang/ghc/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	ghc
 PORTVERSION=	7.6.3
@@ -31,12 +31,11 @@ USE_PERL5_BUILD=	yes
 USE_GMAKE=		yes
 USES=			iconv ncurses
 USE_BINUTILS=		yes
-USE_GCC=		4.6+
+USE_GCC=		yes
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
 # The configure process accepts,filters and canonicalises
