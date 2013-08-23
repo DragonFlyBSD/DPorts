@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Tiny/Makefile 322602 2013-07-10 03:34:14Z sunpoet $
+# $FreeBSD: www/p5-HTTP-Tiny/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	HTTP-Tiny
 PORTVERSION=	0.034
@@ -18,7 +18,8 @@ OPTIONS_DEFINE=	COOKIE HTTPS
 OPTIONS_DEFAULT=COOKIE HTTPS
 COOKIE_DESC=	Cookie support
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		HTTP::Tiny.3
 
