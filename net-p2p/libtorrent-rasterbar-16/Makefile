@@ -1,13 +1,13 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-rasterbar-16/Makefile 324066 2013-07-31 19:00:08Z antoine $
+# $FreeBSD: net-p2p/libtorrent-rasterbar-16/Makefile 325006 2013-08-19 16:41:05Z nemysis $
 
 PORTNAME=	libtorrent-rasterbar
-PORTVERSION=	0.16.10
+PORTVERSION=	0.16.11
 CATEGORIES?=	net-p2p ipv6
 MASTER_SITES=	GOOGLE_CODE
 PROJECTHOST=	libtorrent
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT?=	C++ library implementing a BitTorrent client
 
 LICENSE=	BSD
