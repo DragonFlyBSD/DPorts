@@ -1,4 +1,4 @@
-# $FreeBSD: security/libotr3/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/libotr3/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libotr
 PORTVERSION=	3.2.1
@@ -17,7 +17,6 @@ BUILD_DEPENDS=	pkgconf>0:${PORTSDIR}/devel/pkgconf
 LIB_DEPENDS=	gpg-error.0:${PORTSDIR}/security/libgpg-error \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
-MAKE_JOBS_SAFE=	yes
 
 NO_LATEST_LINK=	yes
 CONFLICTS=	libotr-4.*
