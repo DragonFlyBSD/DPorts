@@ -1,5 +1,5 @@
 # Created by: chuckr
-# $FreeBSD: lang/itcl/Makefile 316934 2013-04-30 14:21:22Z gahr $
+# $FreeBSD: lang/itcl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	itcl
 PORTVERSION=	3.4.1
@@ -15,7 +15,6 @@ USE_TCL=	84+
 
 USE_LDCONFIG=	${PREFIX}/lib/itcl${PORTVERSION:R}
 
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION}
 
 GNU_CONFIGURE=	yes
