@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/mopac/Makefile 321303 2013-06-19 18:38:46Z bsam $
+# $FreeBSD: biology/mopac/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mopac
 PORTVERSION=	7.${MOPAC_SUBVERSION}
@@ -18,7 +18,6 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf libtool
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing --copy
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
