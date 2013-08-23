@@ -1,12 +1,13 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-OOTools/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-OOTools/Makefile 325064 2013-08-20 16:57:19Z mat $
 
 PORTNAME=	OOTools
-PORTVERSION=	2.21
+PORTVERSION=	2.30
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:DOMIZIO
+MASTER_SITE_SUBDIR=	CPAN:SKNPP
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/0$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module collection to easily create constructors methods
