@@ -1,9 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-mwlib/Makefile 313500 2013-03-06 05:53:37Z rm $
+# $FreeBSD: devel/py-mwlib/Makefile 325079 2013-08-21 00:52:48Z wen $
 
 PORTNAME=	mwlib
-PORTVERSION=	0.13.6
-PORTREVISION=	1
+PORTVERSION=	0.15.11
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
