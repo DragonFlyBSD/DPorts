@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tex-web2c/Makefile 318262 2013-05-15 19:53:59Z hrs $
+# $FreeBSD: devel/tex-web2c/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	web2c
 PORTVERSION=	20120701
@@ -49,7 +49,6 @@ CONFIGURE_ARGS= --disable-luatex \
 		--with-system-zlib \
 		--with-system-zziplib
 CFLAGS+=	-I${LOCALBASE}/include
-MAKE_JOBS_SAFE=	yes
 
 INFO=	web2c
 NO_MANCOMPRESS=	yes
