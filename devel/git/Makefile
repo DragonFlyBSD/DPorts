@@ -1,5 +1,5 @@
 # Created by: Eric Anholt
-# $FreeBSD: devel/git/Makefile 323615 2013-07-24 18:27:40Z wxs $
+# $FreeBSD: devel/git/Makefile 324872 2013-08-17 22:13:24Z mva $
 
 PORTNAME=	git
 PORTVERSION=	1.8.3.4
@@ -15,7 +15,6 @@ MAINTAINER=	wxs@FreeBSD.org
 COMMENT?=	Distributed source code management tool
 
 PROJECTHOST=	git-core
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		git.1 \
 		git-add.1 \
@@ -228,7 +227,7 @@ ALL_TARGET=	all strip
 .if ${PORT_OPTIONS:MP4} || ${PORT_OPTIONS:MCONTRIB}
 USE_PYTHON=	yes
 PLIST_SUB+=	PYTHON_VER=${PYTHON_VER} PYTHON=""
-CONFIGURE_ARGS+=	--with-python=${LOCALBASE}/bin/python
+CONFIGURE_ARGS+=	--with-python=${PYTHON_CMD}
 .else
 CONFIGURE_ARGS+=	--without-python
 PLIST_SUB+=	PYTHON="@comment "
