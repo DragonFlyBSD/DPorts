@@ -1,5 +1,5 @@
 # Created by: Kenjiro Cho <kjc@csl.sony.co.jp>
-# $FreeBSD: x11-toolkits/blt/Makefile 316351 2013-04-23 11:51:52Z gahr $
+# $FreeBSD: x11-toolkits/blt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	blt
 PORTVERSION=	2.4z
@@ -28,7 +28,6 @@ WRKSRC=		${WRKDIR}/blt2.4z
 GNU_CONFIGURE=	yes
 CFLAGS+=	-Wall -Wno-uninitialized
 CFLAGS+=	-I${TK_INCLUDEDIR}/generic -I${TK_INCLUDEDIR}/unix
-MAKE_JOBS_SAFE=	yes
 
 USE_TK=		84+
 INVALID_TK_VER=	86
