@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: net-im/libtelepathy/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: net-im/libtelepathy/Makefile 324893 2013-08-18 08:32:05Z mva $
 #    $MCom: ports/net-im/libtelepathy/Makefile,v 1.3 2008/02/27 14:00:06 ahze Exp $
 
 PORTNAME=	libtelepathy
@@ -19,6 +19,7 @@ LIB_DEPENDS=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 
+USE_PYTHON_BUILD=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
