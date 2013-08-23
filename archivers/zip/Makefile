@@ -2,7 +2,7 @@
 # Date created:				22 Dec 1994
 # Whom:					Andrey Chernov <ache@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/zip/Makefile,v 1.44 2012/12/16 04:19:55 svnexp Exp $
+# $FreeBSD: archivers/zip/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	zip
@@ -22,7 +22,6 @@ PLIST_FILES=	bin/zip bin/zipcloak bin/zipnote bin/zipsplit
 MAN1=		zip.1 zipcloak.1 zipnote.1 zipsplit.1
 PORTDOCS=	*
 
-MAKE_JOBS_SAFE=	yes
 
 do-install:
 .for p in ${PLIST_FILES:T}
