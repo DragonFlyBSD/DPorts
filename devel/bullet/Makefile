@@ -2,7 +2,7 @@
 # Date created:		2008-01-09
 # Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
 #
-# $FreeBSD: devel/bullet/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/bullet/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	bullet
@@ -18,7 +18,6 @@ COMMENT=	3D collision detection and rigid body dynamics library
 USE_GL=		gl glu glut
 USE_XORG=	x11
 USE_GCC=	any
-MAKE_JOBS_SAFE=	yes
 
 USES=		cmake
 
