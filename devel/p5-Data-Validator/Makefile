@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Validator/Makefile 321518 2013-06-22 02:04:25Z sunpoet $
+# $FreeBSD: devel/p5-Data-Validator/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Data-Validator
 PORTVERSION=	1.03
@@ -18,7 +18,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Data::Validator.3 \
 		Data::Validator::Role::AllowExtra.3 \
