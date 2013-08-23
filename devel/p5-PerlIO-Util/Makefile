@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PerlIO-Util
-# Date created:		2011-08-15
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-PerlIO-Util/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-PerlIO-Util/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	PerlIO-Util
 PORTVERSION=	0.72
@@ -13,9 +9,10 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A selection of general PerlIO utilities
+COMMENT=	Selection of general PerlIO utilities
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		PerlIO::Util.3 \
 		PerlIO::Util::JA.3 \
