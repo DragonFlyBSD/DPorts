@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ftp/lftp/Makefile 319191 2013-05-27 09:28:05Z martymac $
+# $FreeBSD: ftp/lftp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lftp
 PORTVERSION=	4.4.7
@@ -28,7 +28,6 @@ GNU_CONFIGURE=	yes
 # but is missing the required POSIX_FADV_* macros
 CONFIGURE_ENV=	i_cv_posix_fallocate_works=no \
 		LIBS="-L${LOCALBASE}/lib"
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS BUGS ChangeLog FAQ FEATURES INSTALL \
 		MIRRORS NEWS README README.debug-levels README.modules \
