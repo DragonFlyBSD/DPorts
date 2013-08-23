@@ -2,7 +2,7 @@
 # Date created:		24 September 1994
 # Whom:			adam
 #
-# $FreeBSD: ports/mail/procmail/Makefile,v 1.63 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/procmail/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 #
 
 PORTNAME=	procmail
@@ -19,7 +19,7 @@ MASTER_SITES=	ftp://ftp.ucsb.edu/pub/mirrors/procmail/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A local mail delivery agent
+COMMENT=	Local mail delivery agent
 
 INSTALL_TARGET=	install-suid install.man
 MAKE_JOBS_UNSAFE=	yes
