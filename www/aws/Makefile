@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: www/aws/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: www/aws/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	aws
 PORTVERSION=	3.1.0.0
@@ -18,7 +18,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=		ada
-MAKE_JOBS_SAFE=	yes
 DOTBUILD=	release
 ADDL_RPATH=	${LOCALBASE}/lib:${LOCALBASE}/lib/aws/native/relocatable
 
