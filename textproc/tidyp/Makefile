@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: ports/textproc/tidyp/Makefile,v 1.8 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/tidyp/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	tidyp
 PORTVERSION=	1.04
@@ -8,7 +8,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/petdance/tidyp/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A library and program to validate and fix HTML
+COMMENT=	Library and program to validate and fix HTML
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
