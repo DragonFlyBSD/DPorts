@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/p5-SQL-Interp/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-SQL-Interp/Makefile 325099 2013-08-21 09:13:12Z mat $
 
 PORTNAME=	SQL-Interp
-PORTVERSION=	1.21
+PORTVERSION=	1.22
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
