@@ -1,9 +1,5 @@
-# New ports collection makefile for:	netcdf-ftn
-# Date created:		Sun Mar 08 2009
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/science/netcdf-ftn/Makefile,v 1.6 2012/11/17 06:00:58 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: science/netcdf-ftn/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	netcdf
 
