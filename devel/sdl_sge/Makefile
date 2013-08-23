@@ -2,7 +2,7 @@
 # Date created:        30 July 2006
 # Whom:                Jona Joachim <walkingshadow@grummel.net>
 #
-# $FreeBSD: ports/devel/sdl_sge/Makefile,v 1.24 2012/11/17 05:57:02 svnexp Exp $
+# $FreeBSD: devel/sdl_sge/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	sdl_sge
@@ -26,7 +26,6 @@ SDL_dESC=	Enable support for SDL_image
 USE_SDL=	sdl
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
