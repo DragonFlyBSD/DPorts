@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-CPAN-Meta/Makefile 324316 2013-08-06 13:05:21Z sunpoet $
+# $FreeBSD: devel/p5-CPAN-Meta/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	CPAN-Meta
 PORTVERSION=	2.132140
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-CPAN-Meta-Requirements>=2.121:${PORTSDIR}/devel/p5-CPAN-Meta-R
 		p5-Parse-CPAN-Meta>=1.44.03:${PORTSDIR}/devel/p5-Parse-CPAN-Meta
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		CPAN::Meta.3 \
 		CPAN::Meta::Converter.3 \
