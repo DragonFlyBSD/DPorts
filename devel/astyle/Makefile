@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: devel/astyle/Makefile 317785 2013-05-10 10:18:10Z lme $
+# $FreeBSD: devel/astyle/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	astyle
 PORTVERSION=	2.03
@@ -15,7 +15,7 @@ CFLAGS+=	-W -Wall -fno-rtti -fno-exceptions
 LDFLAGS+=	-s
 MAKE_ARGS+=	CFLAGS="${CFLAGS}"
 USE_GMAKE=	yes
-USE_GCC=	4.4+
+USE_GCC=	yes
 
 WRKSRC=		${WRKDIR}/astyle/build/gcc
 
