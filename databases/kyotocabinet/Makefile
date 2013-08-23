@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/databases/kyotocabinet/Makefile,v 1.23 2012/11/17 05:55:09 svnexp Exp $
+# $FreeBSD: databases/kyotocabinet/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	kyotocabinet
 PORTVERSION=	1.2.76
@@ -8,7 +8,7 @@ MASTER_SITES=	http://fallabs.com/${PORTNAME}/pkg/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A straightforward implementation of DBM
+COMMENT=	Straightforward implementation of DBM
 
 LICENSE=	GPLv3
 
@@ -16,10 +16,9 @@ OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	PCDIR="${PREFIX}/libdata/pkgconfig"
-MAKE_JOBS_SAFE=	yes
 USE_GCC=	4.2+
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USES=		gmake
 
 MAN1=		kccachetest.1 \
 		kcdirmgr.1 \
