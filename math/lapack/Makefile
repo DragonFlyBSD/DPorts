@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: math/lapack/Makefile 320035 2013-06-05 22:23:01Z bapt $
+# $FreeBSD: math/lapack/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME?=	lapack
 PORTVERSION=	3.4.2
@@ -26,7 +26,6 @@ SHARED_DESC=	Build shared libraries and PIC archives
 STATIC_DESC=	Build (non-PIC) archives
 
 MAKE_ENV=	BLASLIB="${BLASLIB}"
-MAKE_JOBS_SAFE=	yes
 PLIST_SUB=	SVERSION="${SVERSION}"
 
 WRKSRC =		${WRKDIR}/lapack-${PORTVERSION}
