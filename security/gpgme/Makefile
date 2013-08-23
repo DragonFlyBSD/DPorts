@@ -1,5 +1,5 @@
 # Created by: teramoto@comm.eng.osaka-u.ac.jp
-# $FreeBSD: security/gpgme/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/gpgme/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gpgme
@@ -31,7 +31,6 @@ USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/gpgme \
 		--with-g13=no
