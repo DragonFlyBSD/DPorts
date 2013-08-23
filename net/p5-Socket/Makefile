@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Socket/Makefile 324314 2013-08-06 13:01:45Z sunpoet $
+# $FreeBSD: net/p5-Socket/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Socket
 PORTVERSION=	2.011
@@ -14,7 +14,8 @@ COMMENT=	Networking constants and support functions
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Socket.3
 
