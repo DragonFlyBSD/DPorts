@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: ftp/curl/Makefile 324450 2013-08-09 16:39:42Z sunpoet $
+# $FreeBSD: ftp/curl/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	curl
 PORTVERSION=	7.31.0
@@ -33,10 +33,9 @@ CONFIGURE_ARGS+=--disable-threaded-resolver --disable-werror \
 		--without-axtls
 CONFIGURE_ENV=	LOCALBASE="${LOCALBASE}"
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_XZ=		yes
-USES=		pathfix
+USES=		pathfix perl5
 
 .if !defined(BUILDING_HIPHOP)
 USE_LDCONFIG=	yes
