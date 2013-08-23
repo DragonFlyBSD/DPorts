@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Mock-Quick/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Mock-Quick/Makefile 325058 2013-08-20 15:22:10Z mat $
 
 PORTNAME=	Mock-Quick
-PORTVERSION=	1.106
+PORTVERSION=	1.107
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:EXODIST
