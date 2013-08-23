@@ -1,5 +1,5 @@
 # Created by: Tom Hukins <tom@eborcom.com>
-# $FreeBSD: mail/maildrop/Makefile 324039 2013-07-31 12:16:16Z madpilot $
+# $FreeBSD: mail/maildrop/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 # The following compile-time options are available:
 # WITH_AUTHLIB=yes	Enable optional support for Courier Auth Library
@@ -32,7 +32,6 @@ USES=		iconv shebangfix perl5
 USES+=		gmake
 .endif
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-syslog=1 \
 		--enable-use-flock=1 \
 		--with-etcdir="${PREFIX}/etc" \
