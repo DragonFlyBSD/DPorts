@@ -1,5 +1,5 @@
 # Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-# $FreeBSD: japanese/less/Makefile 317420 2013-05-05 16:12:13Z hrs $
+# $FreeBSD: japanese/less/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	less
 PORTVERSION=	382.262
@@ -29,7 +29,6 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cs-regex
-MAKE_JOBS_SAFE=	yes
 PORTDOCS=	README.iso README.iso.jp README.lesw.euc \
 		README.regex README.regex.jp README.ext.jp
 PLIST_FILES=	bin/jless bin/jlesskey bin/jlessecho
