@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 324226 2013-08-04 12:49:58Z az $
+# $FreeBSD: multimedia/vlc/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	vlc
 DISTVERSION=	2.0.7
@@ -67,7 +67,6 @@ USES=		iconv perl5
 USE_PERL5=	build
 USE_GL=yes
 USE_CSTD=	gnu99
-MAKE_JOBS_SAFE=	yes
 WANT_GNOME=	yes
 
 FAKEDIR=	${WRKDIR}/fake${PREFIX}
@@ -695,7 +694,7 @@ CXX=	clang++
 CPP=	clang-cpp
 .else
 .if ${ARCH} == "i386"
-USE_GCC?=	4.6+ # sse/3dnow detection on i386 needs newer gcc
+USE_GCC?=	yes # sse/3dnow detection on i386 needs newer GCC 
 .endif
 .endif
 
