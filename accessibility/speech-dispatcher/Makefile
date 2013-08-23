@@ -1,4 +1,4 @@
-# $FreeBSD: ports/accessibility/speech-dispatcher/Makefile,v 1.14 2013/01/05 03:41:40 svnexp Exp $
+# $FreeBSD: accessibility/speech-dispatcher/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	speech-dispatcher
 PORTVERSION=	0.7.1
@@ -21,7 +21,6 @@ GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/${PORTNAME}
 
 ETCFILES=	clients/emacs.conf clients/gnome-speech.conf \
