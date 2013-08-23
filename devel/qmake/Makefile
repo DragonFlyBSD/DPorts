@@ -1,5 +1,5 @@
 # Created by: mi@aldan.algebra.com
-# $FreeBSD: devel/qmake/Makefile 321482 2013-06-21 17:24:13Z rakuco $
+# $FreeBSD: devel/qmake/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qmake
 PORTVERSION=	3.3.8
@@ -16,7 +16,6 @@ COMMENT=	The build utility of the Qt project
 REINPLACE_ARGS=	-i ""
 WRKSRC=		${WRKDIR}/${DISTNAME}/qmake
 MAKEFILE=	${FILESDIR}/Makefile.bsd
-MAKE_JOBS_SAFE=	yes
 PLIST_SUB+=	_PREFIX="${PREFIX}"
 MAKE_ENV+=	FILESDIR="${FILESDIR}"
 
