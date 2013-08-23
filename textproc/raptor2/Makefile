@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/raptor2/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: textproc/raptor2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	raptor2
 PORTVERSION=	2.0.9
@@ -27,7 +27,6 @@ CONFIGURE_ARGS=	--with-xml2-config=${LOCALBASE}/bin/xml2-config \
 		--with-www=curl
 
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		rapper.1
 MAN3=		libraptor2.3
