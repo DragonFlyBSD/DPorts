@@ -1,5 +1,5 @@
 # Created by: Juha Nygard <juha.nygard1@netikka.fi>
-# $FreeBSD: audio/fluidsynth/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/fluidsynth/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fluidsynth
 PORTVERSION=	1.1.6
@@ -20,7 +20,6 @@ USES=		cmake pkgconfig
 CMAKE_ARGS=	-Denable-ladcca:BOOL=FALSE \
 		-Denable-midishare:BOOL=FALSE
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	${PA_CFLAGS} -I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	${PA_LDFLAGS} -L${LOCALBASE}/lib ${PTHREAD_LIBS}
