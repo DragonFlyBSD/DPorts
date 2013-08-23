@@ -1,8 +1,9 @@
 # Created by: torstenb
-# $FreeBSD: shells/zsh/Makefile 320934 2013-06-14 14:31:22Z bapt $
+# $FreeBSD: shells/zsh/Makefile 325238 2013-08-22 22:18:13Z bapt $
 
 PORTNAME=	zsh
 PORTVERSION=	5.0.2
+PORTREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
 		SF/${PORTNAME}/${PORTNAME}-doc/${PORTVERSION}:doc
@@ -63,7 +64,7 @@ PCRE_LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 PCRE_CONFIGURE_ENABLE=	pcre
 MEM_CONFIGURE_ENABLE=	zsh-mem
 SECURE_FREE_CONFIGURE_ENABLE=	zsh-secure-free
-MAILDIR_CONFIGURE_ENABLE=	maildit-support
+MAILDIR_CONFIGURE_ENABLE=	maildir-support
 STATIC_LDFLAGS=		-static
 STATIC_CONFIGURE_ON=	--disable-dynamic
 STATIC_CONFIGURE_OFF=	--enable-dynamic
