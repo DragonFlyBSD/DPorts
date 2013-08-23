@@ -2,7 +2,7 @@
 # Date created:		18 Jan 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/msgpack/Makefile,v 1.12 2012/11/17 05:56:01 svnexp Exp $
+# $FreeBSD: devel/msgpack/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #
 
 PORTNAME=	msgpack
@@ -20,7 +20,7 @@ USE_LDCONFIG=	yes
 
 .if ${ARCH} == "sparc64"
 # required for __sync _* atomic operations on sparc
-USE_GCC=	4.4+
+USE_GCC=	yes
 .else
 USE_GCC=	4.2+
 .endif
