@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MouseX-Foreign
-# Date created:		2011-08-15
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-MouseX-Foreign/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-MouseX-Foreign/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	MouseX-Foreign
 PORTVERSION=	0.007
@@ -16,13 +12,12 @@ COMMENT=	Extends non-Mouse classes as well as Mouse classes
 
 BUILD_DEPENDS=	p5-Any-Moose>=0.15:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-Mouse>=0.77:${PORTSDIR}/devel/p5-Mouse
-RUN_DEPENDS=	p5-Any-Moose>=0.15:${PORTSDIR}/devel/p5-Any-Moose \
-		p5-Mouse>=0.77:${PORTSDIR}/devel/p5-Mouse
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		MouseX::Foreign.3 \
 		MouseX::Foreign::Meta::Role::Class.3 \
