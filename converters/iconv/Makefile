@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: converters/iconv/Makefile 325126 2013-08-21 13:11:02Z wg $
 
 PORTNAME=	iconv
 PORTVERSION=	2.0
@@ -11,8 +11,8 @@ MASTER_SITE_SUBDIR=	bland
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	Charset conversion library and utilities
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 SHEBANG_FILES=	iconv_builtin ccs/iconv_mktbl
 
@@ -20,10 +20,19 @@ MANCOMPRESSED=	yes
 MAN1=		biconv.1
 MAN3=		biconv.3 biconv_open.3 biconv_close.3
 
-.if defined(NO_PROFILE) || defined(NOPROFILE) || defined(WITHOUT_PROFILE)
-PLIST_SUB=	PROFILE:="@comment "
+OPTIONS_DEFINE=	CCSUTIL
+OPTIONS_DEFAULT=CCSUTIL
+
+OPTIONS_SUB=	yes
+
+CCSUTIL_DESC=	Install Coded character set (CCS) util
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MCCSUTIL}
+USE_PERL5+=	run
 .else
-PLIST_SUB=	PROFILE:=""
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-ccs_Makefile
 .endif
 
 .include <bsd.port.mk>
