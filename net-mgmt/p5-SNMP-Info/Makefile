@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: net-mgmt/p5-SNMP-Info/Makefile 323102 2013-07-16 13:12:51Z culot $
+# $FreeBSD: net-mgmt/p5-SNMP-Info/Makefile 325129 2013-08-21 13:40:12Z jadawin $
 
 PORTNAME=	SNMP-Info
-PORTVERSION=	3.03
+PORTVERSION=	3.05
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,7 +17,8 @@ LIB_DEPENDS=	netsnmp:${PORTSDIR}/net-mgmt/net-snmp
 PERL_CONFIGURE=	yes
 
 MAN3=	SNMP::Info.3 SNMP::Info::AdslLine.3 SNMP::Info::Airespace.3 \
-	SNMP::Info::IPv6.3 SNMP::Info::Layer2::HPVC.3 \
+	SNMP::Info::IPv6.3 SNMP::Info::Layer2::CiscoSB.3 \
+	SNMP::Info::Layer2::HPVC.3 \
 	SNMP::Info::Layer2::Kentrox.3 SNMP::Info::Layer3::Altiga.3 \
 	SNMP::Info::Layer3::Arista.3 SNMP::Info::Layer3::Aruba.3 \
 	SNMP::Info::Layer3::BlueCoatSG.3 SNMP::Info::Bridge.3 \
