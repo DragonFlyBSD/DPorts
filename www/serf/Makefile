@@ -1,5 +1,5 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD: www/serf/Makefile 322369 2013-07-06 08:50:22Z ohauer $
+# $FreeBSD: www/serf/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	serf
 PORTVERSION=	1.2.1
@@ -13,7 +13,6 @@ COMMENT=	Serf HTTP client library
 
 LIB_DEPENDS+=	apr-1:${PORTSDIR}/devel/apr1
 
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USES=		pathfix
 GNU_CONFIGURE=	yes
