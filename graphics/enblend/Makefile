@@ -1,5 +1,5 @@
 # Created by: cartola@openit.com.br
-# $FreeBSD: graphics/enblend/Makefile 318271 2013-05-16 03:41:15Z grog $
+# $FreeBSD: graphics/enblend/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	enblend
 PORTVERSION=	4.1.1
@@ -21,7 +21,6 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		gsl:${PORTSDIR}/math/gsl
 RUN_DEPENDS=	OpenEXR>=1.0:${PORTSDIR}/graphics/OpenEXR
 
-MAKE_JOBS_SAFE= yes
 USE_AUTOTOOLS=	automake:env autoconf:env
 USE_GMAKE=	yes
 # We need a newer version of makinfo for this.
@@ -30,8 +29,7 @@ CONFIGURE_ARGS=	MAKEINFO="${LOCALBASE}/bin/makeinfo"
 
 # GCC 4.2 has some problems, see
 # http://groups.google.com/group/hugin-ptx/browse_thread/thread/725b1581c9889e37/50abe3387d61541a#50abe3387d61541a
-# Gerald Pfeifer <gerald@pfeifer.com> asked to use 4.4+ instead of 4.3+
-USE_GCC=	4.4+
+USE_GCC=	yes
 USE_GL=		glew glut
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	"LIBS=-lboost_system"
