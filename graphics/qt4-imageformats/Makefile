@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: graphics/qt4-imageformats/Makefile 317896 2013-05-11 17:31:45Z rakuco $
+# $FreeBSD: graphics/qt4-imageformats/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	imageformats
 DISTVERSION=	${QT4_VERSION}
@@ -17,7 +17,6 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 USE_QT4=	qmake_build moc_build rcc_build corelib gui svg xml
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	true
 
 HAS_CONFIGURE=	yes
 
