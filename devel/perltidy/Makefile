@@ -1,11 +1,11 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/perltidy/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/perltidy/Makefile 325062 2013-08-20 16:54:04Z mat $
 
 PORTNAME=	perltidy
-PORTVERSION=	20130717
+PORTVERSION=	20130806
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/%SUBDIR%/Perl/} \
-		SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR= Perl
 DISTNAME=	Perl-Tidy-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
