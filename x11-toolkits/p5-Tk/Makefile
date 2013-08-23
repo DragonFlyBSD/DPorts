@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Tk/Makefile 324827 2013-08-17 00:16:12Z cy $
 
 PORTNAME=	Tk
-PORTVERSION=	804.030
+PORTVERSION=	804.031
 PORTREVISION=	1
 CATEGORIES=	x11-toolkits tk perl5
 MASTER_SITES=	CPAN
@@ -42,7 +42,6 @@ MAN3=		Tie::Watch.3 \
 		Tk::Clipboard.3 \
 		Tk::CmdLine.3 \
 		Tk::ColorEditor.3 \
-		Tk::Common.3 \
 		Tk::Compound.3 \
 		Tk::ConfigSpecs.3 \
 		Tk::DItem.3 \
@@ -50,6 +49,8 @@ MAN3=		Tie::Watch.3 \
 		Tk::Dialog.3 \
 		Tk::DialogBox.3 \
 		Tk::DirTree.3 \
+		Tk::DragDrop::Common.3 \
+		Tk::DragDrop::SunConst.3 \
 		Tk::DropSite.3 \
 		Tk::Entry.3 \
 		Tk::Error.3 \
@@ -93,7 +94,6 @@ MAN3=		Tie::Watch.3 \
 		Tk::Scrolled.3 \
 		Tk::Spinbox.3 \
 		Tk::Submethods.3 \
-		Tk::SunConst.3 \
 		Tk::TList.3 \
 		Tk::Table.3 \
 		Tk::Tcl-perl.3 \
