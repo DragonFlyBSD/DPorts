@@ -1,16 +1,12 @@
-# Ports collection makefile for:	py-libdnet
-# Date created:			Nov 2, 2005
-# Whom:	      			thierry@pompo.net
-#
-# $FreeBSD: ports/net/py-libdnet/Makefile,v 1.9 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: net/py-libdnet/Makefile 324895 2013-08-18 08:56:22Z mva $
 
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 COMMENT=	Python module for libdnet
 
-LIB_DEPENDS=	dnet.1:${PORTSDIR}/net/libdnet
+LIB_DEPENDS=	dnet:${PORTSDIR}/net/libdnet
 
 NOT_FOR_ARCHS=	ia64
 NOT_FOR_ARCHS_REASON_ia64=	fails to build with internal compiler error
@@ -23,7 +19,7 @@ PLIST=		${.CURDIR}/pkg-plist
 LIBDNET_SLAVE=	yes
 
 USE_PYTHON=	yes
-CONFIGURE_ARGS=	--with-python
+CONFIGURE_ARGS=	--with-python=${PYTHON_CMD}
 INSTALLS_EGGINFO=	yes
 PYDISTUTILS_PKGNAME=	dnet
 
