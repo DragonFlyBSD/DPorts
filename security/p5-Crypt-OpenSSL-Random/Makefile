@@ -1,10 +1,11 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: security/p5-Crypt-OpenSSL-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-OpenSSL-Random/Makefile 324982 2013-08-19 12:40:02Z mat $
 
 PORTNAME=	Crypt-OpenSSL-Random
-PORTVERSION=	0.04
+PORTVERSION=	0.06
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:RURBAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
