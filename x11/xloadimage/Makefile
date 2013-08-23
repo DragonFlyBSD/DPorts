@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: ports/x11/xloadimage/Makefile,v 1.53 2013/01/30 00:47:29 svnexp Exp $
+# $FreeBSD: x11/xloadimage/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xloadimage
 PORTVERSION=	4.1.21
@@ -28,7 +28,6 @@ REVISION=	${PORTVERSION:E}
 
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
