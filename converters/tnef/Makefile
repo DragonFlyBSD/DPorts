@@ -1,5 +1,5 @@
 # Created by: Cyrus Rahman <cr@jcmax.com>
-# $FreeBSD: ports/converters/tnef/Makefile,v 1.32 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: converters/tnef/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tnef
 PORTVERSION=	1.4.9
@@ -13,7 +13,6 @@ OPTIONS_DEFINE=	DOCS
 
 USE_GCC=	any
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		tnef.1
 PORTDOCS=	AUTHORS NEWS README THANKS TODO
