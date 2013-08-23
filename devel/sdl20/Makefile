@@ -1,17 +1,16 @@
-# $FreeBSD: devel/sdl20/Makefile 322377 2013-07-06 10:24:18Z mva $
+# $FreeBSD: devel/sdl20/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sdl2
-PORTVERSION=	2.0.p7353
+PORTVERSION=	2.0.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.libsdl.org/tmp/
-DISTNAME=	SDL-2.0.0-7353
+MASTER_SITES=	http://www.libsdl.org/release/
+DISTNAME=	SDL2-${PORTVERSION}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Cross-platform multimedia development API
 
 USES=		pathfix cmake:outsource iconv
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CMAKE_ARGS+=	-DVIDEO_OPENGLES:BOOL=OFF -DPTHREADS_SEM:BOOL=OFF \
 		-DALTIVEC:BOOL=OFF
