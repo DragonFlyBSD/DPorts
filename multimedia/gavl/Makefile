@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/gavl/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/gavl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gavl
 PORTVERSION=	1.4.0
@@ -14,7 +14,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
