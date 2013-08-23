@@ -2,7 +2,7 @@
 # Date created:		26 Dec 2009
 # Whom:			Stas Timokhin <devel@stasyan.com>
 #
-# $FreeBSD: ports/science/harminv/Makefile,v 1.4 2012/11/17 06:00:57 svnexp Exp $
+# $FreeBSD: science/harminv/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #
 
 PORTNAME=	harminv
@@ -17,7 +17,7 @@ COMMENT=	Solver of harmonic inversion
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_FORTRAN=	yes
-USE_GCC=	4.4+
+USE_GCC=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LD_LIBRARY_PATH=	-L${LOCALBASE}/lib -L/usr/lib
 LDFLAGS+=	-L${LOCALBASE}/lib
