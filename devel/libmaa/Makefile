@@ -1,9 +1,5 @@
-# Ports collection makefile for:  libmaa
-# Date created:			  2008/01/26
-# Whom:				  chinsan
-#
-# $FreeBSD: ports/devel/libmaa/Makefile,v 1.17 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/libmaa/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	libmaa
 PORTVERSION=	1.3.2
@@ -24,7 +20,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 
 DOCS=		README doc/libmaa.600dpi.ps
