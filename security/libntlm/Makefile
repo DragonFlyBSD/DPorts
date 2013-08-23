@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/libntlm/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: security/libntlm/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libntlm
 PORTVERSION=	1.3
@@ -14,7 +14,6 @@ LICENSE=	LGPL21
 USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README THANKS
 
