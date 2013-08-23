@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: databases/qt4-odbc-plugin/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: databases/qt4-odbc-plugin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
@@ -15,7 +15,6 @@ LIB_DEPENDS+=	iodbc.3:${PORTSDIR}/databases/libiodbc
 USE_QT4=	moc_build sql
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 DRIVER=		src/sql/drivers/${DB}
 PLUGIN=		src/plugins/sqldrivers/${DB}
