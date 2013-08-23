@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/stratagus/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/stratagus/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	stratagus
 PORTVERSION=	2.2.7
@@ -27,7 +27,6 @@ CMAKE_ARGS=	-DGAMEDIR:STRING="bin" \
 		-DTOLUA++_APP:STRING="${TOLUAXX_CMD}" \
 		-DTOLUA++_INCLUDE_DIR:STRING="${LUA_INCDIR}" \
 		-DTOLUA++_LIBRARY:STRING="${LUA_LIBDIR}/libtolua++.so"
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		stratagus.6
 PORTDOCS=	*
