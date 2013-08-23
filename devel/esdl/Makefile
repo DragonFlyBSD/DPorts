@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/esdl/Makefile,v 1.49 2013/01/26 15:25:59 svnexp Exp $
+# $FreeBSD: devel/esdl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	esdl
 PORTVERSION=	1.0.1
@@ -22,7 +22,6 @@ USE_GMAKE=	yes
 USE_SDL=	sdl
 ALL_TARGET=	target
 PLIST_SUB=	VERSION="${PORTVERSION}"
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	SDL_TTF SDL_IMAGE
 OPTIONS_DEFAULT=SDL_TTF SDL_IMAGE

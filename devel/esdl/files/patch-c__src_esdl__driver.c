@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/esdl/files/patch-c__src_esdl__driver.c,v 1.2 2012/11/17 05:55:42 svnexp Exp $
+$FreeBSD: devel/esdl/files/patch-c__src_esdl__driver.c 302568 2012-08-15 09:08:58Z olgeni $
 
 --- c_src/esdl_driver.c.orig
 +++ c_src/esdl_driver.c
