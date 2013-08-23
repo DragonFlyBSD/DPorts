@@ -1,4 +1,4 @@
-# $FreeBSD: devel/smokegen/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/smokegen/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	smokegen
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,6 @@ USE_QT4=	corelib xml qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
 USES=		cmake:outsource
 CMAKE_ARGS+=	-DSMOKE_CMAKE_MODULE_DIR:PATH=${PREFIX}/lib/cmake/smoke
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 pre-configure:
