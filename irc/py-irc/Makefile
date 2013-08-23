@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: irc/py-irc/Makefile 323532 2013-07-23 12:51:41Z wg $
+# $FreeBSD: irc/py-irc/Makefile 324902 2013-08-18 12:48:03Z wg $
 
 PORTNAME=	irc
-PORTVERSION=	8.4
+PORTVERSION=	8.5.1
 CATEGORIES=	irc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
