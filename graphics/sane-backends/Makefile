@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-backends/Makefile 316839 2013-04-29 19:40:20Z bapt $
+# $FreeBSD: graphics/sane-backends/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.23
@@ -38,7 +38,6 @@ CONFIGURE_ARGS=	--with-docdir=${WRKDIR}/tmproot \
 		--disable-locking \
 		--enable-pthread
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	saned
 SUB_FILES+=	pkg-message
