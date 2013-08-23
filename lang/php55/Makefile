@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php55/Makefile 321684 2013-06-24 14:32:11Z ale $
+# $FreeBSD: lang/php55/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	php55
-PORTVERSION=	5.5.0
+PORTVERSION=	5.5.1
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -17,7 +17,6 @@ LICENSE=	PHP301
 LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
 USE_BZIP2=	yes
-MAKE_JOBS_SAFE=	yes
 NO_OPTIONS_SORT=yes
 .if !defined(PKGNAMESUFFIX)
 USE_AUTOTOOLS=	autoconf
@@ -38,7 +37,7 @@ CONFIGURE_ARGS=	\
 
 USE_GNOME=	libxml2
 
-OPTIONS_DEFINE=	CLI CGI FPM APACHE AP2FILTER EMBED DEBUG DTRACE IPV6 MAILHEAD LINKTHR
+OPTIONS_DEFINE=	CLI CGI FPM APACHE AP2FILTER EMBED DEBUG DTRACE IPV6 MAILHEAD LINKTHR ZTS
 OPTIONS_DEFAULT=CLI CGI IPV6 LINKTHR
 
 CLI_DESC=	Build CLI version
@@ -52,6 +51,7 @@ DTRACE_DESC=	Enable DTrace support
 IPV6_DESC=	Enable ipv6 support
 MAILHEAD_DESC=	Enable mail header patch
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
+ZTS_DESC=	Force Zend Thread Safety (ZTS) build
 
 CONFLICTS=	php52-5* php53-5* php54-5* php5-5*
 
@@ -81,6 +81,7 @@ CONFIGURE_ARGS+=--disable-cli
 .if ${PORT_OPTIONS:MCGI}
 PHP_SAPI+=	cgi
 PLIST_SUB+=	CGI=""
+MAN1+=		php-cgi.1
 .else
 PLIST_SUB+=	CGI="@comment "
 CONFIGURE_ARGS+=--disable-cgi
@@ -152,6 +153,10 @@ CONFIGURE_ENV+=	LIBS="${LIBS} ${PTHREAD_LIBS}"
 
 .if ${PORT_OPTIONS:MDEBUG}
 CONFIGURE_ARGS+=--enable-debug
+.endif
+
+.if ${PORT_OPTIONS:MZTS}
+CONFIGURE_ARGS+=--enable-maintainer-zts
 .endif
 
 .if ${PORT_OPTIONS:MDTRACE}
