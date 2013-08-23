@@ -13,7 +13,7 @@
 #    - graphics/libGLU
 #    - graphics/dri
 #
-# $FreeBSD: graphics/libGL/bsd.mesalib.mk 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: graphics/libGL/bsd.mesalib.mk 324875 2013-08-17 22:31:07Z mva $
 
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
@@ -34,7 +34,10 @@ MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/
 DISTFILES=	MesaLib-${MESADISTVERSION}${EXTRACT_SUFX}
 MAINTAINER?=	x11@FreeBSD.org
 
+# HACK: added lang/python as build dependency - we need to check, which 
+# python versions are cleanly supported by Mesa
 BUILD_DEPENDS+=	makedepend:${PORTSDIR}/devel/makedepend \
+		python:${PORTSDIR}/lang/python \
 		${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2
 
 USES=	bison
@@ -43,7 +46,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
