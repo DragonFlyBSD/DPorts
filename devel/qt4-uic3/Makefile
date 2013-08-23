@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-uic3/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qt4-uic3/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	uic3
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	Qt backwards-compatible user interface compiler
 USE_QT4=	qmake_build qt3support corelib gui network sql xml porting
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
