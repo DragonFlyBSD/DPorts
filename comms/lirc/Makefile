@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mikeh@FreeBSD.org>
-# $FreeBSD: comms/lirc/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: comms/lirc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lirc
 PORTVERSION=	0.9.0
@@ -23,7 +23,6 @@ USE_PYTHON=	yes
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=		--enable-sandboxed --with-devdir=/var/run/lirc \
 			--sysconfdir=${PREFIX}/etc
