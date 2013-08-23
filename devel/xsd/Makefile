@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/devel/xsd/Makefile,v 1.1 2013/02/04 03:34:06 svnexp Exp $
+# $FreeBSD: devel/xsd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xsd
 PORTVERSION=	3.3.0
@@ -26,7 +26,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAKEFILE=	makefile
 MAKE_ARGS=	install_prefix=${PREFIX} \
 		verbose=1
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 
