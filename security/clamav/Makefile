@@ -1,5 +1,5 @@
 # Created by: markun@onohara.to
-# $FreeBSD: security/clamav/Makefile 321497 2013-06-21 18:45:23Z garga $
+# $FreeBSD: security/clamav/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	clamav
 PORTVERSION=	0.97.8
@@ -41,7 +41,6 @@ ICONV_USES=		iconv
 EXPERIMENTAL_CONFIGURE_ENABLE=	experimental
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_GCC=	any
 USE_RC_SUBR=	clamav-clamd clamav-freshclam
