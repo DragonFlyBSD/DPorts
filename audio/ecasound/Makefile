@@ -1,5 +1,5 @@
 # Created by: The Anarcat <anarcat@anarcat.dyndns.org>
-# $FreeBSD: audio/ecasound/Makefile 323767 2013-07-26 23:46:21Z bapt $
+# $FreeBSD: audio/ecasound/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ecasound
 PORTVERSION=	2.9.0
@@ -30,7 +30,6 @@ CONFIGURE_ARGS=	--disable-liblilv \
 		--enable-sys-readline \
 		--disable-arts
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
