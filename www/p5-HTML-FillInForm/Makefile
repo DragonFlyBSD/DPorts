@@ -1,8 +1,8 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: www/p5-HTML-FillInForm/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-FillInForm/Makefile 324985 2013-08-19 12:50:16Z culot $
 
 PORTNAME=	HTML-FillInForm
-PORTVERSION=	2.11
+PORTVERSION=	2.20
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
