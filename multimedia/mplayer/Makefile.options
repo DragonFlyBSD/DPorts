@@ -4,7 +4,7 @@
 # Some of the knobs are not tunable by the OPTIONS framework. These are
 # explained here in detail.
 #
-# $FreeBSD: multimedia/mplayer/Makefile.options 315542 2013-03-29 15:20:53Z naddy $
+# $FreeBSD: multimedia/mplayer/Makefile.options 324851 2013-08-17 16:27:24Z gerald $
 #
 # Feature options:
 # These options influence some general behaviour of mplayer. Almost all of the featues,
@@ -71,7 +71,7 @@ CPP=		clang-cpp
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-clang-version
 .else
 .if ${PORT_OPTIONS:MOTCHAIN}
-USE_GCC?=	4.6+
+USE_GCC?=	yes
 BUILD_DEPENDS+=	${LOCALBASE}/bin/as:${PORTSDIR}/devel/binutils
 .else
 CONFIGURE_ARGS+=--disable-ssse3 --disable-sse4 --disable-sse42 \
