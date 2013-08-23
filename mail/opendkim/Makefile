@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/opendkim/Makefile 317604 2013-05-07 13:00:32Z bdrewery $
+# $FreeBSD: mail/opendkim/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=		opendkim
 PORTVERSION=		2.8.3
@@ -20,7 +20,6 @@ LICENSE_NAME_SENDMAIL=	Sendmail Open Source License
 LICENSE_PERMS_SENDMAIL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 NO_OPTIONS_SORT=yes
 USES=		pkgconfig:build
 USE_OPENSSL=	yes
