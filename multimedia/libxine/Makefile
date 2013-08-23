@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: multimedia/libxine/Makefile 323375 2013-07-21 11:27:17Z nox $
+# $FreeBSD: multimedia/libxine/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xine
 PORTVERSION=	1.2.2
@@ -64,7 +64,6 @@ CONFIGURE_ARGS=	--with-w32-path=${LOCALBASE}/lib/win32 \
 		--without-alsa \
 		--disable-musepack \
 		--enable-dvb
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	CACA ESOUND JACK GNOMEVFS2 PULSEAUDIO XVMC SMB AALIB \
 		IMAGEMAGICK GTK2 WAVPACK VAAPI LIBBLURAY
