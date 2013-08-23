@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-DecoratorTools
-# Date created:				20-jan-2008
-# Whom:					alexander smishlajev
-#
-# $FreeBSD: ports/devel/py-decoratortools/Makefile,v 1.7 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: alexander smishlajev
+# $FreeBSD: devel/py-decoratortools/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	DecoratorTools
 PORTVERSION=	1.8
