@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: graphics/ImageMagick/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ImageMagick
 PORTREVISION=	1
@@ -42,7 +42,6 @@ USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared --without-dps --without-lcms
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 MAN1=		ImageMagick.1 Magick++-config.1 Magick-config.1 Wand-config.1 \
