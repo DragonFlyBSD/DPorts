@@ -2,7 +2,7 @@
 # Date created:		28 August 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: graphics/libgfx/Makefile 318122 2013-05-13 18:20:14Z mi $
+# $FreeBSD: graphics/libgfx/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libgfx
@@ -31,7 +31,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gzstream --with-libtiff-lzw --with-x
 ALL_TARGET=	${PORTNAME}.so
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-fPIC
 CPPFLAGS+=	-I${LOCALBASE}/include
