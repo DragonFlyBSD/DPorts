@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/frei0r/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/frei0r/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	frei0r
 PORTVERSION=	1.3
@@ -16,7 +16,6 @@ COMMENT?=	Minimalistic plugin API for video effects
 .if !defined(BUILDING_FREI0R_METAPORT)
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack pkgconfig
-MAKE_JOBS_SAFE=	yes
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
