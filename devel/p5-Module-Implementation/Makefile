@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Implementation/Makefile 323123 2013-07-16 20:19:17Z sunpoet $
+# $FreeBSD: devel/p5-Module-Implementation/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Module-Implementation
 PORTVERSION=	0.07
@@ -20,7 +20,8 @@ TEST_DEPENDS=	p5-Test-Fatal>=0.006:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-Taint>=0:${PORTSDIR}/devel/p5-Test-Taint
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Module::Implementation.3
 
