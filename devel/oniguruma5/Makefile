@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/oniguruma5/Makefile 316860 2013-04-30 00:41:29Z miwi $
+# $FreeBSD: devel/oniguruma5/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	oniguruma
 PORTVERSION=	5.9.4
@@ -21,7 +21,6 @@ CONFLICTS=	oniguruma-2.*
 USES=		pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
