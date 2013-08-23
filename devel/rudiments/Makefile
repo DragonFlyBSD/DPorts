@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/rudiments/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/rudiments/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rudiments
 PORTVERSION=	0.41
@@ -20,7 +20,6 @@ CONFIGURE_ARGS=	--with-ssl-includes=-I${OPENSSLINC} \
 		--with-ssl-libs=-L${OPENSSLLIB} \
 		--disable-pcre
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		rudiments-config.1
 
