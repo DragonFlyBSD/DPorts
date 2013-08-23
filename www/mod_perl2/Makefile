@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: www/mod_perl2/Makefile 316307 2013-04-23 05:11:57Z ohauer $
+# $FreeBSD: www/mod_perl2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_perl
 PORTVERSION=	2.0.8
@@ -15,7 +15,6 @@ COMMENT=	Embeds a Perl interpreter in the Apache2 server
 BUILD_DEPENDS=	p5-BSD-Resource>=0:${PORTSDIR}/devel/p5-BSD-Resource
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 SUB_LIST=	APACHEMODDIR=${APACHEMODDIR}
