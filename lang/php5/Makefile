@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php5/Makefile 323097 2013-07-16 06:47:02Z ale $
+# $FreeBSD: lang/php5/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	php5
 PORTVERSION=	5.4.17
@@ -17,7 +17,6 @@ LICENSE=	PHP301
 LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
 USE_BZIP2=	yes
-MAKE_JOBS_SAFE=	yes
 NO_OPTIONS_SORT=yes
 .if !defined(PKGNAMESUFFIX)
 USE_AUTOTOOLS=	autoconf
@@ -38,7 +37,7 @@ CONFIGURE_ARGS=	\
 
 USE_GNOME=	libxml2
 
-OPTIONS_DEFINE=	CLI CGI FPM APACHE AP2FILTER EMBED DEBUG DTRACE IPV6 MAILHEAD LINKTHR
+OPTIONS_DEFINE=	CLI CGI FPM APACHE AP2FILTER EMBED DEBUG DTRACE IPV6 MAILHEAD LINKTHR ZTS
 OPTIONS_DEFAULT=CLI CGI IPV6 LINKTHR
 
 CLI_DESC=	Build CLI version
@@ -52,6 +51,7 @@ DTRACE_DESC=	Enable DTrace support
 IPV6_DESC=	Enable ipv6 support
 MAILHEAD_DESC=	Enable mail header patch
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
+ZTS_DESC=	Force Zend Thread Safety (ZTS) build
 
 CONFLICTS=	php52-5* php53-5* php55-5*
 
@@ -148,6 +148,10 @@ CONFIGURE_ENV+=	ac_cv_pthreads_lib="" \
 
 .if ${PORT_OPTIONS:MLINKTHR}
 CONFIGURE_ENV+=	LIBS="${LIBS} ${PTHREAD_LIBS}"
+.endif
+
+.if ${PORT_OPTIONS:MZTS}
+CONFIGURE_ARGS+=--enable-maintainer-zts
 .endif
 
 .if ${PORT_OPTIONS:MDEBUG}
