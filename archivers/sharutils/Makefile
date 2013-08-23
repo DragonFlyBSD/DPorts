@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: archivers/sharutils/Makefile 320561 2013-06-11 14:14:05Z garga $
+# $FreeBSD: archivers/sharutils/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sharutils
 PORTVERSION=	4.13.5
@@ -17,7 +17,6 @@ OPTIONS_DEFINE=	NLS
 USE_XZ=		yes
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--program-prefix=g --disable-uucode
 INSTALL_TARGET=	install install-man
 MAN1=		gshar.1 gunshar.1
