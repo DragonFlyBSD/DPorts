@@ -1,5 +1,5 @@
 # Created by: cfs@ing.puc.cl (original)
-# $FreeBSD: ports/graphics/urt/Makefile,v 1.50 2013/01/21 04:17:28 svnexp Exp $
+# $FreeBSD: graphics/urt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	urt
 PORTVERSION=	3.1b1
@@ -30,7 +30,6 @@ USE_GMAKE=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	# none
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	aliastorle.1 applymap.1 avg4.1 crop.1 cubitorle.1 dvirle.1	\
 	fant.1 getx11.1 giftorle.1 graytorle.1 into.1 mcut.1 mergechan.1\
