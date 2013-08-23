@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: graphics/libdrm/Makefile 323524 2013-07-23 10:20:02Z kwm $
+# $FreeBSD: graphics/libdrm/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libdrm
 PORTVERSION=	${LIBDRM_VERSION}
@@ -17,7 +17,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-MAKE_JOBS_SAFE=	yes
 
 .if defined(WITH_NEW_XORG)
 
