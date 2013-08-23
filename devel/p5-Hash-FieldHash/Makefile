@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-FieldHash/Makefile 320285 2013-06-08 21:01:44Z sunpoet $
+# $FreeBSD: devel/p5-Hash-FieldHash/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	Hash-FieldHash
 PORTVERSION=	0.14
@@ -8,14 +8,15 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A lightweight field hash implementation
+COMMENT=	Lightweight field hash implementation
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-LeakTrace>=0.07:${PORTSDIR}/devel/p5-Test-LeakTrace
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Hash::FieldHash.3
 
