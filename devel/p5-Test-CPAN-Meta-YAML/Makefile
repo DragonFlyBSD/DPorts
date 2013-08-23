@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-CPAN-Meta-YAML/Makefile 323806 2013-07-27 20:16:04Z sunpoet $
+# $FreeBSD: devel/p5-Test-CPAN-Meta-YAML/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Test-CPAN-Meta-YAML
 PORTVERSION=	0.22
@@ -15,7 +15,8 @@ LICENSE=	ART20
 BUILD_DEPENDS=	p5-Test-YAML-Valid>=0.03:${PORTSDIR}/devel/p5-Test-YAML-Valid
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::CPAN::Meta::YAML.3 \
 		Test::CPAN::Meta::YAML::Version.3
