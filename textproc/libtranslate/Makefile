@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: textproc/libtranslate/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: textproc/libtranslate/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=		libtranslate
 PORTVERSION=		0.99
@@ -25,7 +25,6 @@ USE_LDCONFIG=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS=		--with-html-dir=${PREFIX}/share/doc
-MAKE_JOBS_SAFE=		yes
 
 OPTIONS_DEFINE=	GENERIC TALKFILTERS
 OPTIONS_DEFAULT=	GENERIC TALKFILTERS
