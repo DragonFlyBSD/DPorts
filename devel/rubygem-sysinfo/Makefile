@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-sysinfo
-# Date created:		2011-11-07
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-sysinfo/Makefile,v 1.4 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/rubygem-sysinfo/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	sysinfo
 PORTVERSION=	0.8.0
