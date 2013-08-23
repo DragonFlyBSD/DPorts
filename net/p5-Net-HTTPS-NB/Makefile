@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Net-HTTPS-NB/Makefile 320829 2013-06-13 18:55:20Z sunpoet $
+# $FreeBSD: net/p5-Net-HTTPS-NB/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Net-HTTPS-NB
 PORTVERSION=	0.13
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-IO-Socket-SSL>=0.98:${PORTSDIR}/security/p5-IO-Socket-SSL \
 		p5-Net-HTTP>=0:${PORTSDIR}/net/p5-Net-HTTP
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Net::HTTPS::NB.3
 
