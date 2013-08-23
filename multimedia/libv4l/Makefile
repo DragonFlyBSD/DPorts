@@ -2,7 +2,7 @@
 # Date created: 13 January 2010
 # Whom:         Andrew Thompson <thompsa@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/libv4l/Makefile,v 1.8 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/libv4l/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libv4l
@@ -23,7 +23,6 @@ MAKE_ARGS=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib
 
