@@ -2,7 +2,7 @@
 # Date created:		11 May 2004
 # Whom:			Bruce M Simpson <bms@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/dirac/Makefile,v 1.22 2012/11/17 05:59:48 svnexp Exp $
+# $FreeBSD: multimedia/dirac/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	dirac
@@ -17,7 +17,6 @@ COMMENT?=	Open source video codec from the BBC
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_GNOME=	pkgconfig gnomehack
 USE_LDCONFIG=	yes
 
