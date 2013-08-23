@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/multimedia/schroedinger/Makefile,v 1.17 2012/11/17 05:59:53 svnexp Exp $
+# $FreeBSD: multimedia/schroedinger/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	schroedinger
 PORTVERSION=	1.0.11
@@ -21,7 +21,6 @@ BUILD_DEPENDS=	orc>=0.4.16:${PORTSDIR}/devel/orc
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^pkgconfigdir=.*|pkgconfigdir="\\$${prefix}/libdata/pkgconfig"|' \
