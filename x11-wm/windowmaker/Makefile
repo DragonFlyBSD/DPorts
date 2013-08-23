@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11-wm/windowmaker/Makefile 317225 2013-05-03 17:39:01Z jgh $
+# $FreeBSD: x11-wm/windowmaker/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	windowmaker
 PORTVERSION=	0.95.4
@@ -34,7 +34,6 @@ CONFIGURE_ARGS=	--with-pixmapdir=${PREFIX}/include/X11/pixmaps \
 		--enable-modelock \
 		--enable-xinerama --enable-usermenu \
 		--with-x
-MAKE_JOBS_SAFE=	yes
 CPPFLAGS+=	-DPREFIX=\\\"${PREFIX}\\\" -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 PORTDOCS=	AUTHORS BUGFORM BUGS ChangeLog FAQ FAQ.I18N INSTALL \
