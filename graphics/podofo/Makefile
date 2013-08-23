@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: graphics/podofo/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: graphics/podofo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	podofo
 PORTVERSION=	0.9.2
@@ -24,7 +24,6 @@ CMAKE_ARGS=	-DPODOFO_BUILD_SHARED:BOOL=TRUE \
 USE_GCC=	any
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		podofobox.1 podofocountpages.1 podofocrop.1 \
 		podofoencrypt.1 podofoimg2pdf.1 podofoimgextract.1 \
