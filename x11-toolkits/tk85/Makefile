@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/tk85/Makefile 318766 2013-05-22 13:04:58Z gahr $
+# $FreeBSD: x11-toolkits/tk85/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tk
 PORTVERSION=	8.5.14
@@ -39,7 +39,6 @@ MANCOMPRESSED=	no
 DATADIR=	${PREFIX}/share/${PORTNAME}${TK_VER}
 SUB_FILES=	pkgIndex.tcl
 
-MAKE_JOBS_SAFE=	yes
 
 USE_TCL=	${SHORT_TK_VER}
 
