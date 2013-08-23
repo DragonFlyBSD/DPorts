@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/ffmpeg/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.7.15
@@ -24,7 +24,6 @@ CONFIGURE_LOG=	config.err
 USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 WANT_SDL=	yes
 USE_PERL5_BUILD=	yes
 
