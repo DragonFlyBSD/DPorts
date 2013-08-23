@@ -2,7 +2,7 @@
 # Date Created:				20 June 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/libarc/Makefile,v 1.12 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: archivers/libarc/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libarc
@@ -20,7 +20,6 @@ SOVERSION=	1
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I." LN="${LN} -sf" \
 		SOLIB="${SOLIB}" SOVERSION="${SOVERSION}"
 
-MAKE_JOBS_SAFE=	yes
 
 USE_LDCONFIG=	yes
 
