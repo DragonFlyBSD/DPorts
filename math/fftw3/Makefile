@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: math/fftw3/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: math/fftw3/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #    $MCom: ports-experimental/math/fftw3/Makefile,v 1.1 2006/03/28 00:08:57 ahze Exp $
 
 PORTNAME=	fftw3
@@ -98,7 +98,7 @@ FFTW3_SUFX=	q
 FFTW3_PKGNAMESUFFIX=	-quad
 CONFIGURE_ARGS+=--enable-quad-precision
 ONLY_FOR_ARCHS =	i386 amd64
-USE_GCC=	4.6+
+USE_GCC=	yes
 .endif
 
 .if ${FFTW3_FLAVOR} == "default"
