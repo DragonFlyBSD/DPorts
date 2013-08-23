@@ -1,8 +1,9 @@
 # Created by: Geoffroy Desvernay <dgeo@centrale-marseille.fr>
-# $FreeBSD: net-mgmt/netdisco-mibs/Makefile 323093 2013-07-16 05:46:30Z miwi $
+# $FreeBSD: net-mgmt/netdisco-mibs/Makefile 324937 2013-08-18 20:54:02Z nox $
 
 PORTNAME=	netdisco-mibs
 PORTVERSION=	1.4
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/netdisco/netdisco-mibs/${PORTVERSION}
 
