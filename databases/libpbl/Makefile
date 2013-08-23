@@ -2,7 +2,7 @@
 # Date Created:				2 Jan 2006
 # Whom:					Zach Thompson <hideo@lastamericanempire.com>
 #
-# $FreeBSD: ports/databases/libpbl/Makefile,v 1.13 2012/11/17 05:55:10 svnexp Exp $
+# $FreeBSD: databases/libpbl/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libpbl
@@ -16,7 +16,6 @@ COMMENT=	Peter Graf's Program Base Library
 
 MAKEFILE=	makefile
 PLIST_FILES=	lib/libpbl.a include/pbl.h
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
