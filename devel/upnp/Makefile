@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: devel/upnp/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: devel/upnp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	upnp
 PORTVERSION=	1.6.18
@@ -17,7 +17,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 
