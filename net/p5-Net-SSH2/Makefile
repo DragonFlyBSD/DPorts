@@ -1,8 +1,8 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-SSH2/Makefile 324379 2013-08-08 07:55:11Z jadawin $
+# $FreeBSD: net/p5-Net-SSH2/Makefile 325124 2013-08-21 13:07:03Z jadawin $
 
 PORTNAME=	Net-SSH2
-PORTVERSION=	0.51
+PORTVERSION=	0.52
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
