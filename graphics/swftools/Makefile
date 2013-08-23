@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/swftools/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/swftools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	swftools
 PORTVERSION=	0.9.2
@@ -28,7 +28,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_lib_zzip_zzip_file_open=no
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		as3compile.1 font2swf.1 gif2swf.1 jpeg2swf.1 pdf2swf.1 \
 		png2swf.1 swfbbox.1 swfc.1 swfcombine.1 swfdump.1 \
