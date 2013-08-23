@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: devel/apr1/Makefile 322367 2013-07-06 08:43:48Z ohauer $
+# $FreeBSD: devel/apr1/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	apr
 PORTVERSION=	${APR_VERSION}.${APU_VERSION}
@@ -13,7 +13,6 @@ COMMENT=	Apache Portability Library
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_GROUP=		APR APU
 OPTIONS_GROUP_APR=	THREADS IPV6 DEVRANDOM
