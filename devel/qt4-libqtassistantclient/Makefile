@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-libqtassistantclient/Makefile 321482 2013-06-21 17:24:13Z rakuco $
+# $FreeBSD: devel/qt4-libqtassistantclient/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libQtAssistantClient
 PORTVERSION=	4.6.3
@@ -15,7 +15,6 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt documentation browser integration library
 
 USE_QT4=	qmake_build moc_build rcc_build corelib gui network
-MAKE_JOBS_SAFE=	yes
 
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
