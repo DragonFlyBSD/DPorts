@@ -1,10 +1,10 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 319999 2013-06-05 15:06:44Z gahr $
+# $FreeBSD: x11-wm/e16/Makefile 325135 2013-08-21 14:13:11Z gahr $
 
 PORTNAME=	e16
-PORTVERSION=	1.0.13
+PORTVERSION=	1.0.13.001
 CATEGORIES=	x11-wm enlightenment
-MASTER_SITES=	SF/enlightenment/${PORTNAME}/${PORTVERSION}/
+MASTER_SITES=	SF/enlightenment/${PORTNAME}/Snapshots/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A very artistic X window manager
