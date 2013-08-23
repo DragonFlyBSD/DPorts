@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PerlIO-Layers
-# Date created:		2011-08-27
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-PerlIO-Layers/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-PerlIO-Layers/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	PerlIO-Layers
 PORTVERSION=	0.010
@@ -18,9 +14,10 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils
-RUN_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		PerlIO::Layers.3
 
