@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: security/p5-IO-Async-SSL/Makefile 320292 2013-06-08 21:10:12Z sunpoet $
+# $FreeBSD: security/p5-IO-Async-SSL/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	IO-Async-SSL
 PORTVERSION=	0.10
@@ -21,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	${LOCALBASE}/bin/socat:${PORTSDIR}/net/socat \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		IO::Async::SSL.3 \
 		IO::Async::SSLStream.3
