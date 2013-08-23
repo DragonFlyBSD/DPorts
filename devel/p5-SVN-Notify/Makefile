@@ -1,9 +1,9 @@
 # Ports collection Makefile for:		SVN::Notify
 # Created by: dom@happygiraffe.net
-# $FreeBSD: devel/p5-SVN-Notify/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-SVN-Notify/Makefile 325063 2013-08-20 16:56:10Z mat $
 
 PORTNAME=	SVN-Notify
-PORTVERSION=	2.83
+PORTVERSION=	2.84
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
