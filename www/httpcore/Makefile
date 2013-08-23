@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/httpcore/Makefile 315528 2013-03-29 08:25:48Z ale $
+# $FreeBSD: www/httpcore/Makefile 324635 2013-08-12 15:40:24Z ale $
 
 PORTNAME=	httpcore
-DISTVERSION=	4.2.4
+DISTVERSION=	4.3
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	httpcomponents/${PORTNAME}/binary
@@ -17,7 +17,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/httpcomponents-core-${DISTVERSION}
+#WRKSRC=		${WRKDIR}/httpcomponents-core-${DISTVERSION}
+NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar %%JAVAJARDIR%%/${PORTNAME}-nio.jar
 
