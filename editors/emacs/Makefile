@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: editors/emacs/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: editors/emacs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}
@@ -14,7 +14,6 @@ COMMENT=	GNU editing macros
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	emacs-19.* emacs-21.* emacs-22.* emacs-23.* \
 		xemacs-[0-9]* xemacs-devel-[0-9]* \
