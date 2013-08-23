@@ -2,7 +2,7 @@
 # Date created:		Fri Oct 14 04:49:22 UTC 2005
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/subtitleripper/Makefile,v 1.14 2012/11/17 05:59:54 svnexp Exp $
+# $FreeBSD: multimedia/subtitleripper/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	subtitleripper
@@ -23,7 +23,6 @@ RUN_DEPENDS=	gocr:${PORTSDIR}/graphics/gocr \
 
 USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 DOC_FILES=	\
 		ChangeLog \
