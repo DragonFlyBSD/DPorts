@@ -2,7 +2,7 @@
 # Date created:		25 December 1999
 # Whom:			Russell L. Carter <rcarter@pinyon.org>
 #
-# $FreeBSD: databases/metakit/Makefile 316351 2013-04-23 11:51:52Z gahr $
+# $FreeBSD: databases/metakit/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	metakit
@@ -19,7 +19,6 @@ LICENSE_FILE=	${WRKSRC}/../license.terms
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/builds
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_SCRIPT=	../unix/configure
 USE_LDCONFIG=	yes
 ONLY_FOR_ARCHS=	i386 alpha amd64
