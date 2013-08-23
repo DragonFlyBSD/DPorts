@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-qpy
-# Date created:		13 Nov 2006
-# Whom:	      		Dryice Liu <dryice@dryice.name>
-#
-# $FreeBSD: ports/www/py-qpy/Makefile,v 1.10 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Dryice Liu <dryice@dryice.name>
+# $FreeBSD: www/py-qpy/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	qpy
 PORTVERSION=	1.8
