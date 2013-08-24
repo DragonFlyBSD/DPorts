@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/revelation/Makefile 321136 2013-06-17 15:32:04Z miwi $
+# $FreeBSD: security/revelation/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	revelation
 PORTVERSION=	0.4.14
@@ -30,7 +30,6 @@ USE_PYTHON=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 GCONF_SCHEMAS=	revelation.schemas
 
