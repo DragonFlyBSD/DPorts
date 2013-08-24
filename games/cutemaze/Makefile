@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/cutemaze/Makefile,v 1.6 2012/11/17 05:57:35 svnexp Exp $
+# $FreeBSD: games/cutemaze/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cutemaze
 PORTVERSION=	1.1.0
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_BZIP2=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	ChangeLog README
 
