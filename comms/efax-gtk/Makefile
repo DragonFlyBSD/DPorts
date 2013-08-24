@@ -1,8 +1,9 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: comms/efax-gtk/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: comms/efax-gtk/Makefile 325069 2013-08-20 18:25:07Z pawel $
 
 PORTNAME=	efax-gtk
 PORTVERSION=	3.2.12
+PORTREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.src.tgz
@@ -20,7 +21,7 @@ USES=		pkgconfig
 USE_GHOSTSCRIPT_RUN=yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
-USE_GCC=	yes
+USE_GCC=	4.6+
 
 CONFLICTS=	efax-[0-9]*
 
