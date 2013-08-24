@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/trayer/Makefile 322531 2013-07-08 18:44:24Z madpilot $
+# $FreeBSD: x11/trayer/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	trayer
 PORTVERSION=	1.1.5
@@ -16,7 +16,6 @@ USE_GNOME=	gtk20 glib20 pango atk
 USES=		iconv gmake
 USE_XORG=	xmu
 MAKE_ARGS=	"PREFIX=${PREFIX}"
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/sargon-${PORTNAME}-srg-${GITVERSION:S/^0-g//}
 
 PORTDOCS=	README CREDITS CHANGELOG
