@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/font-jisx0213/Makefile 317640 2013-05-08 01:27:26Z hrs $
+# $FreeBSD: japanese/font-jisx0213/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jisx0213
 PORTVERSION=	20040425
@@ -26,7 +26,6 @@ NO_WRKSUBDIR=	yes
 EXTRACT_CMD=		${GZCAT}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	> ${WRKDIR}/$${file%.gz}
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	FONTDIR=${LOCALFONTDIR}
 PLIST_SUB=	FONTDIR=${LOCALFONTDIR} XFONTDIR=lib/X11/fonts/${FONTDIR}
 SUB_FILES=	Makefile
