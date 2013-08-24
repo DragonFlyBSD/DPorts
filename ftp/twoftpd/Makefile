@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
-# $FreeBSD: ftp/twoftpd/Makefile 316867 2013-04-30 02:22:56Z miwi $
+# $FreeBSD: ftp/twoftpd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	twoftpd
 PORTVERSION=	1.42
@@ -16,7 +16,6 @@ LIB_DEPENDS=	cvm-v2client:${PORTSDIR}/security/cvm
 
 OPTIONS_DEFINE=	DOCS
 
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
