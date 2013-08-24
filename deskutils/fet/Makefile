@@ -1,5 +1,5 @@
 # Created by: Leinier Cruz Salfran <salfrancl@yahoo.es>
-# $FreeBSD: ports/deskutils/fet/Makefile,v 1.9 2013/01/23 15:05:32 svnexp Exp $
+# $FreeBSD: deskutils/fet/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fet
 PORTVERSION=	5.18.2
@@ -20,7 +20,6 @@ USE_BZIP2=	yes
 USE_QT4=	gui network xml \
 		moc_build qmake_build rcc_build uic_build
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		fet.1
 
