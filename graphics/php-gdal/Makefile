@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/php-gdal/Makefile 313829 2013-03-10 14:54:52Z sunpoet $
+# $FreeBSD: graphics/php-gdal/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
 
 PORTNAME=	gdal
-PORTVERSION=	1.9.2
+PORTVERSION=	1.10.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.osgeo.org/gdal/ \
 		ftp://ftp.remotesensing.org/pub/gdal/ \
@@ -23,9 +23,9 @@ LIBTOOLFILES=	# empty
 MAKEFILE=	GNUmakefile
 PHP_MOD_NAME=	php_${PORTNAME}
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_PHP=	yes
 USE_PHP_BUILD=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/php
 
 post-patch:
