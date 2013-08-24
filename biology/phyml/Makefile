@@ -1,5 +1,5 @@
 # Created by: ballen
-# $FreeBSD: ports/biology/phyml/Makefile,v 1.6 2013/02/04 13:32:33 svnexp Exp $
+# $FreeBSD: biology/phyml/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	phyml
 PORTVERSION=	20121109
@@ -21,7 +21,6 @@ PATCH_WRKSRC=	${WRKSRC}/src
 
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf
 AUTOMAKE_ARGS=	--add-missing
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/phyml
 
