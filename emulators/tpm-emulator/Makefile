@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: emulators/tpm-emulator/Makefile 323772 2013-07-27 04:27:19Z hrs $
+# $FreeBSD: emulators/tpm-emulator/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tpm-emulator
 PORTVERSION=	0.7.4
@@ -23,7 +23,6 @@ CMAKE_ENV=	PREFIX="${PREFIX}"
 CMAKE_ARGS=	-DTPM_INCLUDE_DIRS:STRING="${LOCALBASE}/include" \
 		-DTPM_LIBRARY_DIRS:STRING="${LOCALBASE}/lib"
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 USERS=		_tss
 GROUPS=		_tss
 SUB_LIST=	USERS="${USERS}" GROUPS="${GROUPS}"
