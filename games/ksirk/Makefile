@@ -1,4 +1,4 @@
-# $FreeBSD: games/ksirk/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: games/ksirk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ksirk
 PORTVERSION=	${KDE4_VERSION}
@@ -20,7 +20,6 @@ USE_QT4=	corelib gui corelib gui network qt3support svg xml \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <${.CURDIR}/../kdegames4/Makefile.common>
 .include <bsd.port.mk>
