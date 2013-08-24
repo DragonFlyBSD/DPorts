@@ -1,11 +1,10 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/redmine-backlogs/Makefile 320222 2013-06-07 19:19:48Z swills $
+# $FreeBSD: www/redmine-backlogs/Makefile 324913 2013-08-18 13:31:33Z bdrewery $
 
 PORTNAME=	backlogs
 PORTVERSION=	1.0.2
 CATEGORIES=	www
 
-MAINTAINER=	pgollucci@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Agile plugin for Redmine
 
 USE_GITHUB=	yes
