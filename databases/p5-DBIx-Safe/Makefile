@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DBIx-Safe
-# Date created:		2011-12-05
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Safe/Makefile,v 1.2 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-Safe/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	DBIx-Safe
 PORTVERSION=	1.2.5
@@ -17,10 +13,10 @@ COMMENT=	Safer access to your database through a DBI database handle
 
 BUILD_DEPENDS=	p5-DBD-Pg>=1.49:${PORTSDIR}/databases/p5-DBD-Pg \
 		p5-DBI>=1.490:${PORTSDIR}/databases/p5-DBI
-RUN_DEPENDS=	p5-DBD-Pg>=1.49:${PORTSDIR}/databases/p5-DBD-Pg \
-		p5-DBI>=1.490:${PORTSDIR}/databases/p5-DBI
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		DBIx::Safe.3
 
