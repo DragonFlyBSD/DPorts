@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Plurk
-# Date created:		2010-07-06
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Net-Plurk/Makefile,v 1.2 2012/11/17 06:02:52 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: www/p5-Net-Plurk/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Net-Plurk
 PORTVERSION=	0.11
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:CLSUNG
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A perl interface to Plurk API
+COMMENT=	Perl interface to Plurk API
 
 BUILD_DEPENDS=	p5-AnyEvent-HTTP>=0:${PORTSDIR}/www/p5-AnyEvent-HTTP \
 		p5-DateTime-Format-Strptime>=0:${PORTSDIR}/devel/p5-DateTime-Format-Strptime \
@@ -28,7 +24,8 @@ BUILD_DEPENDS=	p5-AnyEvent-HTTP>=0:${PORTSDIR}/www/p5-AnyEvent-HTTP \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Net::Plurk.3 \
 		Net::Plurk::OAuth.3 \
