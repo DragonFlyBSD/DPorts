@@ -2,7 +2,7 @@
 # Date created:				16/04/2002
 # Whom:				Dominic Marks <dominic.marks@btinternet.com>
 #
-# $FreeBSD: ports/net/honeyd/Makefile,v 1.43 2012/11/17 06:00:02 svnexp Exp $
+# $FreeBSD: net/honeyd/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	honeyd
@@ -23,7 +23,6 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-libdnet=${LOCALBASE} \
 		--with-libevent=${LOCALBASE}
-MAKE_JOBS_SAFE=	yes
 
 .if defined(WITH_PYTHON)
 USE_PYTHON=	yes
