@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/checkbashisms/Makefile,v 1.2 2012/11/17 05:55:37 svnexp Exp $
+# $FreeBSD: devel/checkbashisms/Makefile 325040 2013-08-20 11:43:44Z az $
 
 PORTNAME=	checkbashisms
 PORTVERSION=	2.0.0.2
@@ -14,7 +14,8 @@ LICENSE=	GPLv2
 
 SF_PROJECT=	checkbaskisms
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
