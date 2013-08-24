@@ -1,5 +1,5 @@
 # Created by: fenner
-# $FreeBSD: net/tcptrace/Makefile 321108 2013-06-17 13:30:52Z wg $
+# $FreeBSD: net/tcptrace/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tcptrace
 PORTVERSION=	6.6.7
@@ -13,7 +13,6 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	tcptrace
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/xpl2gpl
