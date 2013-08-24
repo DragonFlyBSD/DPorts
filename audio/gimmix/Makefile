@@ -2,7 +2,7 @@
 # Date created:                                11 April 2007
 # Whom:                                        Matthieu Guegan <matt.guegan@free.fr>
 #
-# $FreeBSD: audio/gimmix/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/gimmix/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gimmix
@@ -30,7 +30,6 @@ USE_BZIP2=	yes
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		gimmix.1
 
