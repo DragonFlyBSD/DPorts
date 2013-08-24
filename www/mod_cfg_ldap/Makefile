@@ -2,7 +2,7 @@
 # Date created:				Sun Oct 19
 # Whom:					Clement Laforet <sheepkiller@cultdeadsheep.org>
 #
-# $FreeBSD: ports/www/mod_cfg_ldap/Makefile,v 1.12 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_cfg_ldap/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_cfg_ldap
@@ -15,7 +15,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows you to keep your virtual host configuration in a LDAP directory
 
-MAKE_JOBS_SAFE=  yes
 
 USE_APACHE=	22+
 USE_OPENLDAP=	yes
