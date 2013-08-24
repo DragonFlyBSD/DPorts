@@ -1,8 +1,8 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: net-mgmt/darkstat/Makefile 324402 2013-08-08 17:08:38Z wg $
+# $FreeBSD: net-mgmt/darkstat/Makefile 324694 2013-08-14 10:54:47Z wg $
 
 PORTNAME=	darkstat
-PORTVERSION=	3.0.716
+PORTVERSION=	3.0.717
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://unix4lyfe.org/darkstat/
 
