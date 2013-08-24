@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: graphics/swfmill/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/swfmill/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	swfmill
 PORTVERSION=	0.3.2
@@ -18,7 +18,6 @@ USES=		pkgconfig iconv
 USE_GNOME=	libxml2 libxslt
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/swfmill
 
