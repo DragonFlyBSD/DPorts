@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: devel/cgit/Makefile 321081 2013-06-16 23:14:41Z antoine $
+# $FreeBSD: devel/cgit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cgit
 PORTVERSION=	0.9.2
@@ -27,7 +27,6 @@ CFLAGS+=	-I${LOCALBASE}/include
 MAKE_ARGS+=	CGIT_SCRIPT_PATH=${WWWDIR} \
 		CGIT_CONFIG=${PREFIX}/etc/cgitrc NO_GETTEXT=1
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 SUB_LIST+=	PORTNAME=${PORTNAME}
