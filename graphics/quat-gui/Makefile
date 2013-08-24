@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/quat-gui/Makefile 318306 2013-05-16 10:30:29Z miwi $
+# $FreeBSD: graphics/quat-gui/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	quat
 PORTVERSION=	1.20
@@ -25,7 +25,6 @@ USE_GL=		gl glut
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	FLUID="${LOCALBASE}/bin/fluid"
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/doc
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
