@@ -2,7 +2,7 @@
 # Date created:		29 Feb 2006
 # Whom:			Pedro F. Giffuni
 #
-# $FreeBSD: ports/cad/feappv/Makefile,v 1.14 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/feappv/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	feappv
@@ -28,7 +28,6 @@ USE_GMAKE=	yes
 MAKEFILE=	makefile
 MAKE_ENV=	FEAPPVHOME3_1="${WRKSRC}"
 ALL_TARGET=	install
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lX11 -lm
