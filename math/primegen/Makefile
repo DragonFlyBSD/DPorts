@@ -2,7 +2,7 @@
 # Date created:				Fri Mar 27 2009 12:04:22 UTC
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/math/primegen/Makefile,v 1.2 2012/11/17 05:59:28 svnexp Exp $
+# $FreeBSD: math/primegen/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	primegen
@@ -14,7 +14,6 @@ MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	A small, fast library to generate prime numbers in order
 
 ALL_TARGET=
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	primes.1 primegaps.1
 MAN3=	primegen.3
