@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/ocre/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/ocre/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ocre
 PORTVERSION=	0.042
@@ -24,7 +24,6 @@ USE_GNOME=	gtk20
 USES=		gettext
 USE_GMAKE=	yes
 MAKE_ENV=	CFLAGS1="${CFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 MANLANG=	"" es
 MAN1=		${PORTNAME}.1
