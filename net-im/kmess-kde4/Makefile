@@ -2,7 +2,7 @@
 # Date created:			21 June 2002
 # Whom:				Hye-Shik Chang <perky@python.or.kr>
 #
-# $FreeBSD: net-im/kmess-kde4/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: net-im/kmess-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	kmess
@@ -18,7 +18,6 @@ LIB_DEPENDS=	qca.2:${PORTSDIR}/devel/qca
 RUN_DEPENDS=	qca-ossl>=2.0.0.b3:${PORTSDIR}/security/qca-ossl
 
 LATEST_LINK=	${PORTNAME}-kde4
-MAKE_JOBS_SAFE=	yes
 
 USE_BZIP2=	yes
 USE_GNOME=	libxml2 libxslt
