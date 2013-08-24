@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/codeworker/Makefile 313200 2013-03-02 06:01:32Z miwi $
+# $FreeBSD: devel/codeworker/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	codeworker
 PORTVERSION=	4.5.3
@@ -19,7 +19,6 @@ USE_DOS2UNIX=	yes
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CXX}" CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" LFLAGS="-lm"
 ALL_TARGET=	build
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-Dstricmp=strcasecmp
 
