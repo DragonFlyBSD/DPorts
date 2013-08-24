@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: ports/graphics/qiv/Makefile,v 1.52 2012/12/13 07:59:05 svnexp Exp $
+# $FreeBSD: graphics/qiv/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qiv
 PORTVERSION=	2.2.4
@@ -19,7 +19,6 @@ LICENSE=	GPLv2
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	XINERAMA
 
