@@ -1,4 +1,4 @@
-# $FreeBSD: games/libkdegames/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: games/libkdegames/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libkdegames
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,6 @@ USES=		cmake:outsource
 USE_QT4=	network phonon xml moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CMAKE_ARGS+=	-DWITH_OpenAL:BOOL=False
 CMAKE_ARGS+=	-DWITH_SndFile:BOOL=False
