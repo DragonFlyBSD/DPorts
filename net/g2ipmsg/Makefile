@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: net/g2ipmsg/Makefile 318240 2013-05-15 13:44:43Z miwi $
+# $FreeBSD: net/g2ipmsg/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	g2ipmsg
 PORTVERSION=	0.9.6
@@ -24,7 +24,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-doxygen-doc \
 		--enable-systray \
 		--with-ssl=${OPENSSLBASE}
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
