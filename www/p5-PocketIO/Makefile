@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/www/p5-PocketIO/Makefile,v 1.10 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-PocketIO/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	PocketIO
 PORTVERSION=	0.14000
@@ -23,7 +23,8 @@ TEST_DEPENDS=	p5-Plack>=0:${PORTSDIR}/www/p5-Plack \
 		p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP \
 		p5-Twiggy>=0:${PORTSDIR}/www/p5-Twiggy
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		PocketIO.3 \
 		PocketIO::Broadcast.3 \
