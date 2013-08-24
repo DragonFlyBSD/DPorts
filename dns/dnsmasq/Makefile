@@ -1,5 +1,5 @@
 # Created by: Steven Honson
-# $FreeBSD: dns/dnsmasq/Makefile 316620 2013-04-26 15:10:57Z bapt $
+# $FreeBSD: dns/dnsmasq/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dnsmasq
 DISTVERSION=	2.66
@@ -23,7 +23,6 @@ PORTDOCS=	CHANGELOG CHANGELOG.archive FAQ doc.html setup.html
 SUB_FILES=	pkg-message
 
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 CFLAGS+=	-Wall -Wno-unused-value
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" PREFIX="${PREFIX}" COPTS="${CFLAGS}" LIBS="${LDFLAGS}" RPM_OPT_FLAGS="${CPPFLAGS}"
 
