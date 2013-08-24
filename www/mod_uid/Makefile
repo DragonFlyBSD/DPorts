@@ -2,7 +2,7 @@
 # Date created:				02 December 2003
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_uid/Makefile,v 1.10 2012/11/17 06:02:42 svnexp Exp $
+# $FreeBSD: www/mod_uid/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_uid
@@ -13,7 +13,6 @@ MASTER_SITES=	ftp://ftp.lexa.ru/pub/apache-rus/contrib/
 MAINTAINER=	leeym@FreeBSD.org
 COMMENT=	A module issuing the "correct" cookies for counting the site visitors
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22
 
