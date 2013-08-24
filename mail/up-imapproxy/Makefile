@@ -1,5 +1,5 @@
 # Created by: Martin Blapp
-# $FreeBSD: mail/up-imapproxy/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: mail/up-imapproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	imapproxy
 PORTVERSION=	1.2.7
@@ -22,7 +22,6 @@ USES=	pathfix
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	autoheader
 CONFIGURE_ARGS=	--with-openssl=${OPENSSLBASE}
-MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	imapproxyd
 
