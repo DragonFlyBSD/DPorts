@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: graphics/kphotoalbum-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: graphics/kphotoalbum-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kphotoalbum
 PORTVERSION=	4.4
@@ -19,7 +19,6 @@ USE_QT4=	phonon sql \
 		qmake_build moc_build rcc_build uic_build
 USE_BZIP2=	yes
 USES=		cmake:outsource
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	${PORTNAME}-kde4
 
