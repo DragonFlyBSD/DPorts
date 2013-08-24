@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.ORG
-# $FreeBSD: science/paraview/Makefile 316757 2013-04-28 22:08:22Z bapt $
+# $FreeBSD: science/paraview/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	paraview
 PORTVERSION=	3.10.1
@@ -82,7 +82,6 @@ PLIST_SUB+=	GL2PS=""
 PLIST_SUB+=	GL2PS="@comment "
 .endif
 
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB+=	VERMAJORMINOR=${VERMAJORMINOR}
 CMAKE2INST=	ParaViewConfig.cmake \
