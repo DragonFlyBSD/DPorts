@@ -1,5 +1,5 @@
 # Created by: Shane Bell <decept0@gmail.com>
-# $FreeBSD: x11/yakuake-kde4/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11/yakuake-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	yakuake
 PORTVERSION=	2.9.9
@@ -18,7 +18,6 @@ USES=		cmake gettext
 USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
