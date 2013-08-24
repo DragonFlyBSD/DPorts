@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-ADS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-ADS/Makefile 325035 2013-08-20 09:37:16Z mat $
 
 PORTNAME=	Astro-ADS
-PORTVERSION=	1.20.7
+PORTVERSION=	1.25.1
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Astro
