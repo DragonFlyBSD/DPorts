@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: net/liferea/Makefile 322758 2013-07-11 08:02:01Z kwm $
+# $FreeBSD: net/liferea/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	liferea
 PORTVERSION=	1.8.15
@@ -24,7 +24,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-libnotify --disable-libindicate
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		liferea.1
 MANLANG=	"" pl
