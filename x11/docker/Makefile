@@ -2,7 +2,7 @@
 # Date created:				March 15, 2003
 # Whom:					Samy Al Bahra <samy@kerneled.org>
 #
-# $FreeBSD: ports/x11/docker/Makefile,v 1.16 2012/11/17 06:03:14 svnexp Exp $
+# $FreeBSD: x11/docker/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	docker
@@ -21,7 +21,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_XORG=	x11
 USE_GNOME=	glib20
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/docker
 
