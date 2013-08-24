@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/pire/Makefile 307950 2012-11-28 23:58:50Z amdmi3 $
+# $FreeBSD: devel/pire/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pire
 PORTVERSION=	0.0.4
@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 ONLY_FOR_ARCHS=	amd64 i386 ia64
 ONLY_FOR_ARCHS_REASON=	not yet ported to big-endian platforms
