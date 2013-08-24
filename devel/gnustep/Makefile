@@ -1,14 +1,15 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep/Makefile 320262 2013-06-08 16:21:24Z antoine $
+# $FreeBSD: devel/gnustep/Makefile 325244 2013-08-22 23:34:31Z marino $
 
 PORTNAME=	gnustep
 PORTVERSION=	1.24.0
+PORTREVISION=	1
 CATEGORIES=	devel lang gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Objective-C libraries based on the OpenStep standard
 
 # Backends are slave ports with conflicting plists
