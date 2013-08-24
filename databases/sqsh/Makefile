@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: databases/sqsh/Makefile 323017 2013-07-15 06:05:44Z marino $
+# $FreeBSD: databases/sqsh/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sqsh
 PORTVERSION=	2.1.8
@@ -21,7 +21,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	SYBASE="${LOCALBASE}"
 CONFIGURE_ARGS=	--with-readline
 ALL_TARGET=	build
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		sqsh.1
 PLIST_FILES=	bin/sqsh etc/sqshrc.default
