@@ -2,7 +2,7 @@
 # Date created:		Mon Aug  1 01:00:17 UTC 2011
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: x11-fm/ultracopier/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-fm/ultracopier/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	ultracopier
@@ -26,7 +26,6 @@ USE_QT4=	corelib dbus gui moc_build network qmake_build rcc_build svg \
 
 USES=		cmake
 CMAKE_ARGS+=	-DCMAKE_BUILD_KDE4:bool=true
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR_WITHOUT_PREFIX:Q} \
