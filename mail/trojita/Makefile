@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: mail/trojita/Makefile 323056 2013-07-15 14:59:14Z miwi $
+# $FreeBSD: mail/trojita/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	trojita
 PORTVERSION=	0.3.93
@@ -12,7 +12,6 @@ COMMENT=	Fast cross-platform Qt IMAP e-mail client
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-MAKE_JOBS_SAFE=	yes
 
 USE_BZIP2=	yes
 
