@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: audio/wxguitar/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: audio/wxguitar/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wxguitar
 PORTVERSION=	1.01
@@ -19,7 +19,6 @@ WX_UNICODE=	yes
 CONFIGURE_ARGS=	--with-wx-config=${WX_CONFIG}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/wxGuitar
 
