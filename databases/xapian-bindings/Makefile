@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/xapian-bindings/Makefile 316063 2013-04-18 17:40:18Z sunpoet $
+# $FreeBSD: databases/xapian-bindings/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	xapian-bindings
 PORTVERSION=	1.2.15
@@ -37,7 +37,7 @@ PLIST_SUB+=	LUA="@comment "
 .if ${PORT_OPTIONS:MPERL}
 CONFIGURE_ARGS+=--with-perl
 CONFIGURE_ENV+=	PERL_LIB="${SITE_PERL}"
-USE_PERL5=	yes
+USES=		perl5
 PLIST_SUB+=	PERL=""
 .else
 PLIST_SUB+=	PERL="@comment "
