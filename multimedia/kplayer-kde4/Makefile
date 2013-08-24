@@ -2,7 +2,7 @@
 # Date created:				Fri Apr 11 09:12:55 CEST 2003
 # Whom:					Stefan Eßer <se@FreeBSD.org>
 #
-# $FreeBSD: multimedia/kplayer-kde4/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: multimedia/kplayer-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	kplayer
@@ -22,7 +22,6 @@ USE_BZIP2=	yes
 USES=		cmake gettext
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdehier kdeprefix kdelibs automoc4
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 .for lang in da en es it pt sv
