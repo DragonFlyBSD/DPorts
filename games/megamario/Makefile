@@ -1,6 +1,6 @@
 # Created by:	nemysis@gmx.ch
 #
-# $FreeBSD: ports/games/megamario/Makefile,v 1.1 2012/11/30 19:13:11 svnexp Exp $
+# $FreeBSD: games/megamario/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	megamario
 PORTVERSION=	1.7
@@ -23,7 +23,6 @@ USE_DOS2UNIX=	*.cpp *.h *.ini Makefile* *.txt *.desktop
 ALL_TARGET=	${PORTNAME}
 USE_SDL=	sdl image mixer ttf
 USE_GL=		glu
-MAKE_JOBS_SAFE=	yes
 
 pre-extract:
 		${MKDIR} ${WRKDIR}/${DISTNAME}
