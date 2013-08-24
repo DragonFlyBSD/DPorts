@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/rubrica/Makefile 317994 2013-05-13 04:27:55Z ak $
+# $FreeBSD: deskutils/rubrica/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rubrica
 PORTVERSION=	2.0.10
@@ -22,7 +22,6 @@ USES=        pathfix gettext
 USE_GNOME=	gconf2 gnomeprefix libglade2
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-MAKE_JOBS_SAFE=	yes
 
 GCONF_SCHEMAS=	rubrica2.schemas
 
