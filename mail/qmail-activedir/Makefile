@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: mail/qmail-activedir/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/qmail-activedir/Makefile 324907 2013-08-18 13:18:12Z bdrewery $
 
 PORTNAME=	qmail-activedir
 PORTVERSION=	0.17
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://fo2k.com/qmail-activedir/
 
-MAINTAINER=	jmelo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Programs to allow qmail to authenticate users through a MS ad
 
 USES=		qmail:run
@@ -29,7 +29,7 @@ PORTDOCS=	INSTALL README
 WANT_OPENLDAP_VER=	${WITH_OPENLDAP_VER}
 .endif
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/var/qmail,${QMAIL_PREFIX},g' \
@@ -52,7 +52,7 @@ do-install:
 	${CHMOD} 711 ${PREFIX}/bin/qmail-adgetpw
 	${CHOWN} root:qmail ${PREFIX}/bin/qmail-adgetpw
 	${CHOWN} root:wheel ${PREFIX}/bin/create_alias_files
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
@@ -60,4 +60,4 @@ do-install:
 .endif
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
