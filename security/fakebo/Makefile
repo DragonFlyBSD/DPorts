@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: security/fakebo/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/fakebo/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	fakebo
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf
 AUTOMAKE_ARGS=	--add-missing
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		fakebo.1
 PORTDOCS=	README custom.replies
