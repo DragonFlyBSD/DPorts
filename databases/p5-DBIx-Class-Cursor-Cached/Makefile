@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DBIx-Class-Cursor-Cached
-# Date created:		2011-06-12
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-Cursor-Cached/Makefile,v 1.5 2012/11/17 05:55:14 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-Class-Cursor-Cached/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	DBIx-Class-Cursor-Cached
 PORTVERSION=	1.001.001
@@ -18,14 +14,12 @@ COMMENT=	Cursor class with built-in caching support
 BUILD_DEPENDS=	p5-Carp-Clan>=6.0:${PORTSDIR}/devel/p5-Carp-Clan \
 		p5-DBIx-Class>=0.08124:${PORTSDIR}/databases/p5-DBIx-Class \
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
-RUN_DEPENDS=	p5-Carp-Clan>=6.0:${PORTSDIR}/devel/p5-Carp-Clan \
-		p5-DBIx-Class>=0.08124:${PORTSDIR}/databases/p5-DBIx-Class \
-		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
 		p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		DBIx::Class::Cursor::Cached.3
 
