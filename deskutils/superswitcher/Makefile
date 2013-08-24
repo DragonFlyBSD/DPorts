@@ -2,7 +2,7 @@
 # Date Created:				02 Jan 2006
 # Whom:					Remington Lang <MrL0Lz@gmail.com>
 #
-# $FreeBSD: deskutils/superswitcher/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: deskutils/superswitcher/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	superswitcher
@@ -21,7 +21,6 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 USE_GNOME=	gconf2 libwnck
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
