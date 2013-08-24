@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: x11/workrave/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/workrave/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	workrave
 PORTVERSION=	1.9.4
@@ -25,7 +25,6 @@ DESKTOP_ENTRIES=	"Workrave" "RSI prevention tool" \
 USE_XORG=	x11 xmu recordproto xtst xext
 USES=		pathfix pkgconfig
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_GNOME=	gnomeprefix intlhack gconf2 intltool
 USE_GSTREAMER=	good
 GNU_CONFIGURE=	yes
