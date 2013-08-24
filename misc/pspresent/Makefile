@@ -2,7 +2,7 @@
 # Date created:        25 Jul 2007
 # Whom:                Timothy Bourke <timbob@bigpond.com>
 #
-# $FreeBSD: ports/misc/pspresent/Makefile,v 1.8 2012/11/17 05:59:44 svnexp Exp $
+# $FreeBSD: misc/pspresent/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	pspresent
@@ -20,7 +20,6 @@ USE_XORG=	x11 xext xinerama
 USE_GHOSTSCRIPT_RUN=	yes
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDLIBS="${LDFLAGS}"
 ALL_TARGET=	pspresent
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		pspresent.1
 PLIST_FILES=	bin/pspresent
