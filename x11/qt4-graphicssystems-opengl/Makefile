@@ -1,4 +1,4 @@
-# $FreeBSD: x11/qt4-graphicssystems-opengl/Makefile 317896 2013-05-11 17:31:45Z rakuco $
+# $FreeBSD: x11/qt4-graphicssystems-opengl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	graphicssystems
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	OpenGL rendering engine (experimental)
 USE_QT4=	qmake_build opengl
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 USE_GL=		glu
