@@ -3,7 +3,7 @@
 # Date created:			  Wed Dec 23, 1998
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD: ports/dns/dlint/Makefile,v 1.24 2012/11/17 05:57:08 svnexp Exp $
+# $FreeBSD: dns/dlint/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	dlint
@@ -17,7 +17,6 @@ MAINTAINER=	jlaffaye@FreeBSD.org
 COMMENT=	Lint for DNS zones (Domain Name Server zone verification utility)
 
 NO_BUILD=	yes
-MAKE_JOBS_SAFE=	yes
 MAN8=		dlint.8
 
 do-configure:
