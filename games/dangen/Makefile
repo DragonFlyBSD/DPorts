@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/dangen/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/dangen/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dangen
 PORTVERSION=	0.5
@@ -14,7 +14,6 @@ COMMENT=	Shoot'em up game where accurate shooting matters
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_SDL=	sdl image
-MAKE_JOBS_SAFE=	yes
 DESKTOP_ENTRIES="dangen" \
 		"Shoot'em up game where accurate shooting matters" \
 		"" \
