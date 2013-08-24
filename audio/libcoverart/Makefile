@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libcoverart/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/libcoverart/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libcoverart
 PORTVERSION=	1.0.0
@@ -16,7 +16,6 @@ LIB_DEPENDS=	jansson:${PORTSDIR}/devel/jansson \
 USES=		cmake
 USE_LDCONFIG=	yes
 
-MAKE_JOBS_SAFE=	yes
 
 # {PROJECT_VERSION} is not a variable nor a typo, just part of the directory name
 WRKSRC=		${WRKDIR}/${PORTNAME}-{PROJECT_VERSION}
