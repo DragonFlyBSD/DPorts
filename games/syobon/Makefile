@@ -2,7 +2,7 @@
 # Date created:		2012-05-06
 # Whom:			nemysis@gmx.ch
 #
-# $FreeBSD: ports/games/syobon/Makefile,v 1.3 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/syobon/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	syobon
@@ -22,7 +22,6 @@ USE_GMAKE=	yes
 USE_DOS2UNIX=	*.txt
 ALL_TARGET=	${PORTNAME}
 USE_SDL=	sdl gfx image mixer ttf
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
