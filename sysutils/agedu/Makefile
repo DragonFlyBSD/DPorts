@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/sysutils/agedu/Makefile,v 1.9 2012/12/12 03:26:59 svnexp Exp $
+# $FreeBSD: sysutils/agedu/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	agedu
 PORTVERSION=	9723
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/${PORTNAME}/ \
 DISTNAME=	${PORTNAME}-r${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A Unix utility for tracking down wasted disk space
+COMMENT=	Unix utility for tracking down wasted disk space
 
 GNU_CONFIGURE=	yes
 
