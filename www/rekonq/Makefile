@@ -1,4 +1,4 @@
-# $FreeBSD: www/rekonq/Makefile 322987 2013-07-14 15:21:03Z makc $
+# $FreeBSD: www/rekonq/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rekonq
 PORTVERSION=	2.3.2
@@ -13,7 +13,6 @@ USES=		cmake:outsource
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	script webkit \
 		moc_build qmake_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	OPERA NEPOMUK
 OPTIONS_DEFAULT=	NEPOMUK
