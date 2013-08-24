@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: ports/cad/admesh/Makefile,v 1.11 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/admesh/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	admesh
 PORTVERSION=	0.95
@@ -16,7 +16,6 @@ LICENSE=	GPLv2 # (or later)
 OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	admesh.doc
 PLIST_FILES=	bin/admesh
