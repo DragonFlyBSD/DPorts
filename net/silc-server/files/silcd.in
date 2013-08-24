@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/silc-server/files/silcd.in,v 1.4 2012/11/17 06:00:20 svnexp Exp $
+# $FreeBSD: net/silc-server/files/silcd.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: silcd
 # REQUIRE: NETWORKING

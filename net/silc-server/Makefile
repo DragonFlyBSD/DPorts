@@ -2,7 +2,7 @@
 # Date created:				Thu Nov 8 01:50:05 BRST 2001
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/net/silc-server/Makefile,v 1.55 2012/11/19 16:42:31 svnexp Exp $
+# $FreeBSD: net/silc-server/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	silc
@@ -24,7 +24,6 @@ COMMENT=	Secure Internet Live Conferencing (SILC) network server
 
 LIB_DEPENDS=	silc-1.1:${PORTSDIR}/devel/silc-toolkit
 
-MAKE_JOBS_SAFE=	yes
 SUB_FILES=	pkg-message pkg-deinstall
 USE_RC_SUBR=	silcd
 USE_BZIP2=	yes
