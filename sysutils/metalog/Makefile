@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: sysutils/metalog/Makefile 319251 2013-05-27 14:38:07Z bsam $
+# $FreeBSD: sysutils/metalog/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	metalog
 DISTVERSION=	0.8
@@ -19,7 +19,6 @@ USE_BZIP2=	yes
 USE_RC_SUBR=	${PORTNAME}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
