@@ -2,7 +2,7 @@
 # Date created:        19 July 2009
 # Whom:                Tassilo Philipp <tphilipp@potion-studios.com>
 #
-# $FreeBSD: ports/devel/psptoolchain-gcc-stage1/Makefile,v 1.4 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: devel/psptoolchain-gcc-stage1/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=		gcc
@@ -40,7 +40,6 @@ BUILD_DEPENDS+=		psp-addr2line:${PORTSDIR}/devel/psptoolchain-binutils \
 
 USE_BZIP2=		yes
 USE_GMAKE=		yes
-MAKE_JOBS_SAFE=		yes
 
 PATCH_WRKSRC=		${SRCDIR}
 CONFIGURE_SCRIPT=	../${SRCDIR:S/${WRKDIR}\///}/configure
