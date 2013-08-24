@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: games/kobodeluxe/Makefile 317357 2013-05-04 21:29:53Z bapt $
+# $FreeBSD: games/kobodeluxe/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kobodeluxe
 PORTVERSION=	0.5.1
@@ -16,7 +16,6 @@ USE_BZIP2=	yes
 USE_SDL=	image sdl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sharedstatedir=${SCOREDIR} --enable-oss
-MAKE_JOBS_SAFE=	yes
 
 .if defined(.PARSEDIR)
 USE_GMAKE=	yes
