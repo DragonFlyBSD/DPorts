@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: net-p2p/bitcoin/Makefile 322080 2013-06-30 12:57:41Z swills $
+# $FreeBSD: net-p2p/bitcoin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bitcoin
 PORTVERSION=	0.8.3
@@ -30,7 +30,6 @@ USE_GMAKE=	yes
 USE_OPENSSL=	yes
 USE_BDB=	yes
 WANT_BDB_VER=	48
-MAKE_JOBS_SAFE=	yes
 
 CXXFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
 CXXFLAGS+=	-L${LOCALBASE}/lib -L${BDB_LIB_DIR}
