@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/leptonica/Makefile 313487 2013-03-06 00:30:39Z bf $
+# $FreeBSD: graphics/leptonica/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	leptonica
 PORTVERSION=	1.69
@@ -18,7 +18,6 @@ LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
 CONFLICTS=	leptonlib-[0-9]*
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
