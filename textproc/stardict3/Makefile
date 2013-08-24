@@ -1,5 +1,5 @@
 # Created by: eric
-# $FreeBSD: textproc/stardict3/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: textproc/stardict3/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	stardict
 PORTVERSION=	3.0.4
@@ -24,7 +24,6 @@ USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack
 USES=		gettext
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_WRKSRC=	${WRKSRC}/dict
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
 INSTALL_WRKSRC=	${CONFIGURE_WRKSRC}
