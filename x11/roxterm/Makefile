@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: x11/roxterm/Makefile 322769 2013-07-11 15:13:17Z miwi $
+# $FreeBSD: x11/roxterm/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	roxterm
 PORTVERSION=	2.7.2
@@ -25,7 +25,6 @@ USE_GNOME=	libglade2 librsvg2 vte
 USE_PYTHON_BUILD=	yes
 USE_AUTOTOOLS=	libtool:env
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	roxterm.1 \
 	roxterm-config.1
