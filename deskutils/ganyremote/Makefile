@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/ganyremote/Makefile 321127 2013-06-17 15:15:37Z miwi $
+# $FreeBSD: deskutils/ganyremote/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ganyremote
 PORTVERSION=	6.2
@@ -19,7 +19,6 @@ USES=		gettext
 USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
