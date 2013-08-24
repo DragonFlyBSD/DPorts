@@ -2,7 +2,7 @@
 # Date created:				2009-08-24
 # Whom:						vshankar
 #
-# $FreeBSD: www/mod_flickr/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/mod_flickr/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_flickr
@@ -16,7 +16,6 @@ COMMENT=	Apache module for Flickr API access
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
-MAKE_JOBS_SAFE=	yes
 
 XTRA_FLAGS=	-lcurl
 
