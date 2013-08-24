@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <martin.dieringer@gmx.de>
-# $FreeBSD: graphics/mupdf/Makefile 317735 2013-05-09 11:44:36Z madpilot $
+# $FreeBSD: graphics/mupdf/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mupdf
 PORTVERSION=	1.2
@@ -27,7 +27,6 @@ USES=		pkgconfig
 USE_XORG=	x11 xext
 MAN1=		mupdf.1 mutool.1 mudraw.1
 
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-source
 
 OPTIONS_DEFINE=	SCROLL JS
