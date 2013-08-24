@@ -1,8 +1,8 @@
 # Created by: kungfuftr <scott@surreytech.co.uk>
-# $FreeBSD: net/p5-SOAP-Data-Builder/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-SOAP-Data-Builder/Makefile 325195 2013-08-22 13:07:51Z mat $
 
 PORTNAME=	SOAP-Data-Builder
-PORTVERSION=	0.9
+PORTVERSION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
