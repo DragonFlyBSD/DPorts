@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Spec/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-Test-Spec/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Test-Spec
 PORTVERSION=	0.46
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Package-Stash>=0.23:${PORTSDIR}/devel/p5-Package-Stash \
 		p5-Tie-IxHash>=0:${PORTSDIR}/devel/p5-Tie-IxHash
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::Spec.3 \
 		Test::Spec::Mocks.3
