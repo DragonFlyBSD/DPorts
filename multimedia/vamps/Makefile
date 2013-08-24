@@ -2,7 +2,7 @@
 # Date created:		Fri Dec 16 04:38:13 UTC 2005
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/vamps/Makefile,v 1.14 2012/11/17 05:59:54 svnexp Exp $
+# $FreeBSD: multimedia/vamps/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	vamps
@@ -17,7 +17,6 @@ COMMENT=	High performance tool to transcode DVD videos to a smaller size
 LIB_DEPENDS=	dvdread.4:${PORTSDIR}/multimedia/libdvdread
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-DHAVE_BUILTIN_EXPECT \
 		-I${LOCALBASE}/include \
