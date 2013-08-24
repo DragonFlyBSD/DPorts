@@ -1,4 +1,4 @@
-# $FreeBSD: audio/audex/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: audio/audex/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	audex
 DISTVERSION=	0.74b1
@@ -18,7 +18,6 @@ USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb
 USE_QT4=	gui dbus network svg xml \
 		qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=		NLS EYED3 FAAC FLAC LAME VORBIS
 OPTIONS_DEFAULT=	FLAC VORBIS
