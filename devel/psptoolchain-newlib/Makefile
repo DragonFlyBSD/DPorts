@@ -2,7 +2,7 @@
 # Date created:        13 February 2009
 # Whom:                Tassilo Philipp <tphilipp@potion-studios.com>
 #
-# $FreeBSD: ports/devel/psptoolchain-newlib/Makefile,v 1.3 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: devel/psptoolchain-newlib/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=		newlib
@@ -26,7 +26,6 @@ BUILD_DEPENDS+=		${LOCALBASE}/${PSP_SDK_STAGE_PREFIX}/sdk/include/pspsdk.h:${POR
 			${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin/psp-gcc:${PORTSDIR}/devel/psptoolchain-gcc-stage1
 
 USE_GMAKE=		yes
-MAKE_JOBS_SAFE=		yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV=		PATH=${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin:${PATH}
