@@ -2,7 +2,7 @@
 # Date created:				2006-03-17
 # Whom:					arved
 #
-# $FreeBSD: security/matrixssl/Makefile 308035 2012-11-30 23:50:42Z sperber $
+# $FreeBSD: security/matrixssl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	matrixssl
 PORTVERSION=	3.3
@@ -24,7 +24,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}-${PORTVERSION:S/./-/g}-open
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CC}" DFLAGS="${CFLAGS}" STRIP="${TEST}"
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
