@@ -2,7 +2,7 @@
 # Date created:        January 20 2003
 # Whom:                Samy Al Bahra <samy@kerneled.org>
 #
-# $FreeBSD: ports/devel/z80-asm/Makefile,v 1.12 2012/11/17 05:57:07 svnexp Exp $
+# $FreeBSD: devel/z80-asm/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	z80-asm
@@ -20,7 +20,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Z80 assembly code assembler and disassembler
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		z80-asm.1 z80-mon.1
 MAN3=		z80-cpu.3 z80-memory.3
