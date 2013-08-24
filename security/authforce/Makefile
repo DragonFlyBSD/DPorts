@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: security/authforce/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/authforce/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	authforce
 PORTVERSION=	0.9.9
@@ -18,7 +18,6 @@ USES=		ncurses
 #USE_READLINE=	yes
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-MAKE_JOBS_SAFE=	yes
 NO_CCACHE=	yes
 
 MANCOMPRESSED=	yes
