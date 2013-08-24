@@ -1,5 +1,5 @@
 # Created by: ubique
-# $FreeBSD: www/mod_tsa/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/mod_tsa/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_tsa
 PORTVERSION=	1.0
@@ -14,7 +14,6 @@ COMMENT=	Time stamping authority (RFC 3161) module for apache
 OPTIONS_DEFINE=	MYSQL PGSQL FIREBIRD DEBUG DEBUG_MEMORY
 DEBUG_MEMORY_DESC=	Memory debug
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-openssl-incdir=${OPENSSLINC} \
