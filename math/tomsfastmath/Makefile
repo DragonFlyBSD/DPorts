@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/tomsfastmath/Makefile,v 1.28 2012/12/12 18:51:46 svnexp Exp $
+# $FreeBSD: math/tomsfastmath/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tomsfastmath
 PORTVERSION=	0.12
@@ -15,7 +15,6 @@ MAKEFILE=	makefile
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 ALL_TARGET=	default
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	include/tfm.h lib/libtfm.a
 
