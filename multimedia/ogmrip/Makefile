@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: multimedia/ogmrip/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/ogmrip/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ogmrip
 PORTVERSION=	1.0.0
@@ -38,7 +38,6 @@ USE_GNOME=	glib20 intlhack libxml2
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
