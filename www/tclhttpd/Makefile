@@ -2,7 +2,7 @@
 # Date created:		27 Apr 2000
 # Whom:			Mikhail Teterin <mi@aldan.algebra.com>
 #
-# $FreeBSD: ports/www/tclhttpd/Makefile,v 1.23 2012/11/17 06:03:06 svnexp Exp $
+# $FreeBSD: www/tclhttpd/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	tclhttpd
@@ -23,7 +23,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-tcl="${TCL_LIBDIR}"	\
 		--with-tclinclude="${TCL_INCLUDEDIR}"
 
-MAKE_JOBS_SAFE=	yes
 USE_TCL=	84+
 MAN1=		tclhttpd.1
 
