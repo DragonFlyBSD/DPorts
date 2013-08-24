@@ -1,5 +1,5 @@
 # Created by: Dominik Rothert <dr@domix.de>
-# $FreeBSD: x11-wm/wmakerconf/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-wm/wmakerconf/Makefile 324744 2013-08-14 22:35:50Z ak $
 #    $MCom: ports/x11-wm/wmakerconf/Makefile,v 1.2 2006/10/05 07:31:44 mezz Exp $
 PORTNAME=	wmakerconf
 PORTVERSION=	2.12
@@ -23,7 +23,6 @@ USE_PERL5=	yes
 USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--with-wmakerdataprefix="${LOCALBASE}/share" \
 		--with-wmakeretcprefix="${LOCALBASE}/share"
 
