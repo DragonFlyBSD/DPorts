@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/strigiclient/Makefile 315308 2013-03-26 15:43:09Z makc $
+# $FreeBSD: deskutils/strigiclient/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	strigiclient
 PORTVERSION=	${STRIGI_VERSION}
@@ -14,7 +14,6 @@ LIB_DEPENDS=	streams:${PORTSDIR}/deskutils/libstreams \
 
 USE_QT4=	corelib gui dbus moc_build uic_build qmake_build rcc_build
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <${.CURDIR}/../strigi/Makefile.common>
 .include <bsd.port.mk>
