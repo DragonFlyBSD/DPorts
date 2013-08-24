@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/interlogic/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/interlogic/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	interlogic
 PORTVERSION=	0.30
@@ -14,7 +14,6 @@ COMMENT=	Move colored balls through the maze connecting it with each other
 USE_SDL=	image sdl
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/interlogic
 
