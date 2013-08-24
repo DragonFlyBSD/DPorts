@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: games/xjewel/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xjewel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xjewel
 PORTVERSION=	1.6
@@ -17,7 +17,6 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 
 USES=		imake
 USE_XORG=	x11 xext
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		xjewel.6
 
