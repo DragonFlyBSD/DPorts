@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice010/Makefile 321880 2013-06-27 11:43:43Z kwm $
+# $FreeBSD: devel/goffice010/Makefile 324744 2013-08-14 22:35:50Z ak $
 #   $MCom: ports/trunk/devel/goffice/Makefile 18385 2013-04-22 12:56:25Z kwm $
 
 PORTNAME=	goffice
@@ -27,7 +27,6 @@ CONFIGURE_ARGS=	--with-lasem=no --with-config-backend=gsettings
 PLIST_SUB=	VERSION=${PORTVERSION} SHORT_VER=${SHORT_VER}
 SHORT_VER=0.10
 
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g'\
