@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 322191 2013-07-02 19:04:18Z rakuco $
+# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ffmpegthumbs
 PORTVERSION=	${KDE4_VERSION}
@@ -22,7 +22,6 @@ USES=		cmake:outsource
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 
 # supported versions: ffmpeg1, ffmpeg-devel
 # corresponding FFMPEG_SUFFIX: '1', '-devel'
