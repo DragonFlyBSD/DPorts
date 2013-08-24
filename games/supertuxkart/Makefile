@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/supertuxkart/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/supertuxkart/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	supertuxkart
 PORTVERSION=	0.8
@@ -28,7 +28,6 @@ USES=		cmake gettext
 USE_GMAKE=	yes
 USE_SDL=	sdl
 USE_DOS2UNIX=	lib/irrlicht/source/Irrlicht/Makefile
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/SuperTuxKart-${PORTVERSION}
 
