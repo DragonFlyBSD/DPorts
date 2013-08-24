@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/games/brainparty/Makefile,v 1.7 2013/02/04 07:22:50 svnexp Exp $
+# $FreeBSD: games/brainparty/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	brainparty
 PORTVERSION=	0.5
@@ -15,7 +15,6 @@ COMMENT=	Family-friendly set of 36 puzzle games
 USE_GMAKE=	yes
 USE_SDL=	sdl mixer ttf gfx image
 USE_GL=		gl glu
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
