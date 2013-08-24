@@ -2,7 +2,7 @@
 # Date created:				12 January 1997
 # Whom:					jkh
 #
-# $FreeBSD: ports/games/xspringies/Makefile,v 1.13 2012/11/17 05:57:58 svnexp Exp $
+# $FreeBSD: games/xspringies/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	xspringies
@@ -20,7 +20,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XORG=	x11 xext
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		xspringies.1
 
