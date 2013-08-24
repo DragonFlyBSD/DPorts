@@ -1,14 +1,9 @@
-# New ports collection makefile for:	Internationalized fvwm2
-# Date created:		20 Jan 1996
-# Whom:			peter
-#
-# $FreeBSD: ports/x11-wm/fvwm2-i18n/Makefile,v 1.28 2012/11/17 06:03:42 svnexp Exp $
-#
+# Created by: peter
+# $FreeBSD: x11-wm/fvwm2-i18n/Makefile 324910 2013-08-18 13:24:23Z bdrewery $
 
 CATEGORIES=	x11-wm
 PKGNAMESUFFIX=	2-i18n
 
-MAINTAINER=	matusita@FreeBSD.org
 COMMENT=Internationalized fvwm version 2, a window manager for X
 
 MASTERDIR=	${.CURDIR}/../../x11-wm/fvwm2
