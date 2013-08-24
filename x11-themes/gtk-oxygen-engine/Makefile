@@ -1,5 +1,5 @@
 # Created by: Max Brazhnikov <makc@FreeBSD.org>
-# $FreeBSD: x11-themes/gtk-oxygen-engine/Makefile 319810 2013-06-03 21:57:45Z rakuco $
+# $FreeBSD: x11-themes/gtk-oxygen-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	oxygen
 PORTVERSION=	1.3.4
@@ -21,7 +21,6 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 USES=		cmake pkgconfig
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
