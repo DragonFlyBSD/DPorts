@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger
-# $FreeBSD: astro/fowsr/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: astro/fowsr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fowsr
 PORTVERSION=	${FILEVER}.${FILEDATE}
@@ -17,7 +17,6 @@ FILEDATE=	20100718
 WRKSRC=		${WRKDIR}/${PORTNAME}-${FILEVER}
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/fowsr
 
