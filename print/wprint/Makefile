@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/wprint/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: print/wprint/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wprint
 PORTVERSION=	2.05
@@ -17,7 +17,6 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 
 USES=		iconv perl5
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		wprint.1
 
