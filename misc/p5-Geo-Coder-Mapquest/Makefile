@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Mapquest/Makefile 322610 2013-07-10 03:42:12Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Mapquest/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Geo-Coder-Mapquest
 PORTVERSION=	0.06
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-JSON>=2:${PORTSDIR}/converters/p5-JSON \
 		p5-libwww>=6.02:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Geo::Coder::Mapquest.3
 
