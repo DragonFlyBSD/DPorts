@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: math/p5-Math-GMPq/Makefile 314569 2013-03-18 14:43:04Z sunpoet $
+# $FreeBSD: math/p5-Math-GMPq/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Math-GMPq
 PORTVERSION=	0.36
@@ -19,7 +19,8 @@ TEST_DEPENDS=	p5-Math-GMP>=0:${PORTSDIR}/math/p5-Math-GMP \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
 CONFIGURE_ARGS=	INC=-I${LOCALBASE}/include LIBS="-L${LOCALBASE}/lib -lgmp"
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Math::GMPq.3
 
