@@ -1,5 +1,5 @@
 # Created by: Thomas Quinot <thomas@cuivre.fr.eu.org>
-# $FreeBSD: security/calife-devel/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/calife-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	calife
@@ -8,7 +8,6 @@ CATEGORIES=	security
 MASTER_SITES=	http://assets.keltia.net/calife/
 DISTNAME=	calife-3.0.1
 
-MAKE_JOBS_SAFE=yes
 MAINTAINER=	thomas@FreeBSD.org
 COMMENT=	Lightweight alternative to sudo
 
