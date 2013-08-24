@@ -1,5 +1,5 @@
 # Created by: Yonatan <Yonatan@Xpert.com>
-# $FreeBSD: security/libtomcrypt/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: security/libtomcrypt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libtomcrypt
 PORTVERSION=	1.17
@@ -18,7 +18,6 @@ MAKE_ARGS=	DESTDIR="${PREFIX}" LIBPATH="/lib" INCPATH="/include" \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 ALL_TARGET=	library
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${PREFIX}/include
 
