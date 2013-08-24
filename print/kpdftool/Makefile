@@ -1,5 +1,5 @@
 # Created by: Yuan, Jue <yuanjue@yuanjue.net>
-# $FreeBSD: ports/print/kpdftool/Makefile,v 1.18 2013/01/23 15:05:37 svnexp Exp $
+# $FreeBSD: print/kpdftool/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kpdftool
 PORTVERSION=	0.23.1
@@ -16,7 +16,6 @@ RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 USE_ZIP=	yes
 USE_QT4=	qt3support moc_build porting_build qmake_build uic3_build
 USE_GHOSTSCRIPT_RUN=	yes
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES=	"KPDFTool" "${COMMENT}" "kpdftool" \
 			"kpdftool" "Qt;Utility;" false
