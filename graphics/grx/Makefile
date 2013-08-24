@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: graphics/grx/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: graphics/grx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	grx
 PORTVERSION=	2.4.9
@@ -28,7 +28,6 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} --with-fontpath=${DATADIR}/fonts \
 ALL_TARGET=	libs
 INSTALL_TARGET=	install install-bin install-fonts install-info
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
