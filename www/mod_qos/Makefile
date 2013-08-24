@@ -1,5 +1,5 @@
 # Created by: Andrea Cervesato <andrea@cervesato.it>
-# $FreeBSD: www/mod_qos/Makefile 321647 2013-06-23 19:22:41Z ohauer $
+# $FreeBSD: www/mod_qos/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_qos
 PORTVERSION=	10.15
@@ -11,7 +11,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	andrea@cervesato.it
 COMMENT=	Qos for Apache
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22+
 AP_GENPLIST=	yes
