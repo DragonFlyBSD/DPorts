@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/qt4-qmlviewer/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qt4-qmlviewer/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qmlviewer
 DISTVERSION=	${QT4_VERSION}
@@ -13,7 +13,6 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build declarative script \
 		svg xmlpatterns sql opengl network corelib
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
