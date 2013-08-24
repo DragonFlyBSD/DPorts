@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <sutton@aardvark.apana.org.au>
-# $FreeBSD: emulators/prodosemu/Makefile 311583 2013-02-04 08:50:18Z araujo $
+# $FreeBSD: emulators/prodosemu/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	prodosemu
 PORTVERSION=	0.1
@@ -14,7 +14,6 @@ RESTRICTED=	apple.rom copyright is owned by Apple and cannot be distributed.
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-v${PORTVERSION}
 
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README
 PLIST_FILES=	bin/prodos share/apple2/prodos-2e.rom
