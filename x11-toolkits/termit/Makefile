@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: x11-toolkits/termit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
@@ -26,7 +26,6 @@ USE_LUA=	yes
 USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 USE_GNOME=	gdkpixbuf2 vte
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include/vte-0.0
 
