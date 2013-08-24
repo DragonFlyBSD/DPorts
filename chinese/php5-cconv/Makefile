@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-cconv
-# Date created:		2011-04-28
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/chinese/php5-cconv/Makefile,v 1.4 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: chinese/php5-cconv/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	cconv
 PORTVERSION=	0.6.4
