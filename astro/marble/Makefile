@@ -1,4 +1,4 @@
-# $FreeBSD: astro/marble/Makefile 322191 2013-07-02 19:04:18Z rakuco $
+# $FreeBSD: astro/marble/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	marble
 PORTVERSION=	${KDE4_VERSION}
@@ -20,7 +20,6 @@ USE_QT4=	corelib dbus declarative designer_build gui network phonon \
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 CMAKE_ARGS=	-DMOBILE:BOOL=FALSE
 
