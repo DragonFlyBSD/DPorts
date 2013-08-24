@@ -2,7 +2,7 @@
 # Date created:				17 May 1998
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/games/battalion/Makefile,v 1.23 2012/11/17 05:57:32 svnexp Exp $
+# $FreeBSD: games/battalion/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	battalion
@@ -19,7 +19,6 @@ COMMENT=	Monsters, explosions, destruction game for X Window System
 USE_BZIP2=	yes
 USE_GL=		glu
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LDFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include/X11 -I${LOCALBASE}/include \
 		-DLINUXVERSION -DLINUXAUDIO
