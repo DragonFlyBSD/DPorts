@@ -2,7 +2,7 @@
 # Date created:				Mon Jul 25 10:42:16 CEST 2005
 # Whom:					Markus Brueffer <markus@FreeBSD.org>
 #
-# $FreeBSD: deskutils/kchmviewer-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: deskutils/kchmviewer-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	kchmviewer
@@ -21,7 +21,6 @@ LATEST_LINK=	${PORTNAME}-kde4
 USES=		cmake
 USE_KDE4=	kdeprefix kdelibs automoc4
 USE_QT4=	webkit qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 post-install:
 	${MKDIR} ${PREFIX}/share/pixmaps
