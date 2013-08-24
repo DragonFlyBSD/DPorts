@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/pipewalker/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/pipewalker/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pipewalker
 PORTVERSION=	0.8.3
@@ -14,7 +14,6 @@ COMMENT=	A clone of the NetWalk game
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 USE_GL=		gl glu
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
