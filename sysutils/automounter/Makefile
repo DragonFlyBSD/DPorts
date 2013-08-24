@@ -1,8 +1,8 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: sysutils/automounter/Makefile 318897 2013-05-23 19:00:20Z zeising $
+# $FreeBSD: sysutils/automounter/Makefile 324960 2013-08-19 08:48:51Z culot $
 
 PORTNAME=	automounter
-PORTVERSION=	1.4.5
+PORTVERSION=	1.4.6
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/bsdadminscripts/${PORTNAME}
 EXTRACT_SUFX=	.tar.xz
