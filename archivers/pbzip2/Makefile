@@ -3,7 +3,7 @@
 # Date created:			Dec 7, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/archivers/pbzip2/Makefile,v 1.29 2013/02/07 15:31:56 svnexp Exp $
+# $FreeBSD: archivers/pbzip2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	pbzip2
@@ -22,7 +22,6 @@ MAN1=		pbzip2.1
 MLINKS=		pbzip2.1 pbunzip2.1
 
 USE_GMAKE=	YES
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/pbzip2 bin/pbunzip2
 
