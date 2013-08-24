@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: www/http-analyze/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: www/http-analyze/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	http-analyze
 PORTVERSION=	2.4.4
@@ -26,7 +26,6 @@ MAKE_ARGS=	HA_BINDIR="${PREFIX}/bin" HA_LIBDIR="${DATADIR}" \
 		DEFINES="-DBSD -Dunix" OPTIM="${CFLAGS}" \
 		CC="${CC}"
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	$$(gdlib-config --includes)
 LDFLAGS+=	$$(gdlib-config --ldflags) $$(gdlib-config --libs)
