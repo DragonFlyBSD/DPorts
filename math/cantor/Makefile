@@ -1,4 +1,4 @@
-# $FreeBSD: math/cantor/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: math/cantor/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cantor
 PORTVERSION=	${KDE4_VERSION}
@@ -22,7 +22,6 @@ USE_QT4=	corelib qtestlib_build xml xmlpatterns \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	MAXIMA OCTAVE R
 MAXIMA_DESC=	Maxima backend
