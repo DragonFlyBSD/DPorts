@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Graph-Writer-GraphViz
-# Date created:				31 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-Graph-Writer-GraphViz/Makefile,v 1.14 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: graphics/p5-Graph-Writer-GraphViz/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Graph-Writer-GraphViz
 PORTVERSION=	0.11
@@ -19,12 +15,10 @@ BUILD_DEPENDS=	p5-Graph>=0.54:${PORTSDIR}/math/p5-Graph \
 		p5-Graph-ReadWrite>=0:${PORTSDIR}/graphics/p5-Graph-ReadWrite \
 		p5-GraphViz>=2.02:${PORTSDIR}/graphics/p5-GraphViz \
 		p5-IO-All>=0.30:${PORTSDIR}/devel/p5-IO-All
-RUN_DEPENDS=	p5-Graph>=0.54:${PORTSDIR}/math/p5-Graph \
-		p5-Graph-ReadWrite>=0:${PORTSDIR}/graphics/p5-Graph-ReadWrite \
-		p5-GraphViz>=2.02:${PORTSDIR}/graphics/p5-GraphViz \
-		p5-IO-All>=0.30:${PORTSDIR}/devel/p5-IO-All
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Graph::Writer::GraphViz.3
 
