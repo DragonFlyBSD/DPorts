@@ -1,5 +1,5 @@
 # Created by: Eijiro Shibusawa <ej-sib@ice.uec.ac.jp>
-# $FreeBSD: math/lapacke/Makefile 319993 2013-06-05 14:11:19Z bapt $
+# $FreeBSD: math/lapacke/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lapacke
 PORTVERSION=	3.4.0
@@ -18,7 +18,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_LDCONFIG=	yes
 USE_FORTRAN=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	PROFILE XLAPACKE
 PROFILE_DESC=	Build a profiling library
