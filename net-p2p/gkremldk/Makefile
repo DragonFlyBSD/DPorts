@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net-p2p/gkremldk/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-p2p/gkremldk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gkremldk
 PORTVERSION=	0.9.8
@@ -23,7 +23,6 @@ USE_BZIP2=	yes
 USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -E \
