@@ -1,8 +1,8 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: www/py-flexget/Makefile 324277 2013-08-05 15:24:13Z wg $
+# $FreeBSD: www/py-flexget/Makefile 325070 2013-08-20 19:39:33Z wg $
 
 PORTNAME=	flexget
-PORTVERSION=	1.1.82
+PORTVERSION=	1.1.85
 PORTEPOCH=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://download.flexget.com/archive/ \
