@@ -1,4 +1,4 @@
-# $FreeBSD: math/liborigin/Makefile 323316 2013-07-19 16:32:15Z makc $
+# $FreeBSD: math/liborigin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	liborigin
 PORTVERSION=	2.0.0
@@ -15,7 +15,6 @@ CONFLICTS_INSTALL=	labplot-2.*
 
 USES=		cmake:outsource
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PORTDOCS=	*
