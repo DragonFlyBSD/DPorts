@@ -1,4 +1,4 @@
-# $FreeBSD: net/pxe-pdhcp/Makefile 319753 2013-06-03 04:26:24Z hrs $
+# $FreeBSD: net/pxe-pdhcp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pxe-pdhcp
 PORTVERSION=	0.0.2007
@@ -13,7 +13,6 @@ LICENSE_FILE=	${WRKSRC}/README.md
 
 WRKSRC=		${WRKDIR}/frsyuki-${PORTNAME}-a201b88
 SUB_FILES=	Makefile
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	PORTDOCS=${PORT_OPTIONS:MDOCS}
 PLIST_FILES=	sbin/${PORTNAME}
 
