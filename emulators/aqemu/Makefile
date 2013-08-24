@@ -2,7 +2,7 @@
 # Date created:		2008-09-03
 # Whom:			Max Brazhnikov <makc@FreeBSD.org>
 #
-# $FreeBSD: emulators/aqemu/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: emulators/aqemu/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	aqemu
@@ -20,7 +20,6 @@ USE_BZIP2=	yes
 USE_QT4=	gui qtestlib xml qmake_build uic_build moc_build rcc_build \
 		linguist_build
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S,.0$,,}
 
 MAN1=		aqemu.1
