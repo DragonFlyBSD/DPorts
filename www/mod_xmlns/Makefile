@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_xmlns/Makefile 319447 2013-05-30 19:14:44Z ohauer $
+# $FreeBSD: www/mod_xmlns/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_xmlns
 PORTVERSION=	0.97
@@ -12,7 +12,6 @@ DISTFILES=	xmlns.h mod_xmlns.c
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for XML namespaces
 
-MAKE_JOBS_SAFE=  yes
 
 USE_GNOME=	libxml2
 USE_APACHE=	22+
