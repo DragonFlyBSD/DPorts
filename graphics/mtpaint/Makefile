@@ -2,7 +2,7 @@
 # Date created:		3 April 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: graphics/mtpaint/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/mtpaint/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mtpaint
@@ -34,7 +34,6 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=${MAN1PREFIX}/man/man1 \
 		--localedir=${PREFIX}/share/locale \
 		gtk2 cflags asneeded ft jpeg tiff man GIF
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 
