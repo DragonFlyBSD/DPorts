@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: devel/privman/Makefile 318628 2013-05-20 21:39:01Z bdrewery $
+# $FreeBSD: devel/privman/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	privman
 PORTVERSION=	0.9.3
@@ -15,7 +15,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MLINKS=		priv_pam.3 priv_pam_acct_mgmt.3 \
 		priv_pam.3 priv_pam_authenticate.3 \
