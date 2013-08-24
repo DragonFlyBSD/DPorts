@@ -1,5 +1,5 @@
 # Created by: Mitsuru Yoshida <mitsuru@riken.go.jp>
-# $FreeBSD: www/tinyproxy/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/tinyproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tinyproxy
 PORTVERSION=	1.8.3
@@ -21,7 +21,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_RC_SUBR=	tinyproxy
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--bindir=${PREFIX}/sbin \
 		--program-transform-name="" \
 		--disable-silent-rules \
