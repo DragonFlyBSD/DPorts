@@ -1,8 +1,8 @@
 # Created by: Alex Varju <freebsd-ports@varju.ca>
-# $FreeBSD: devel/pmd/Makefile 319325 2013-05-28 19:41:51Z antoine $
+# $FreeBSD: devel/pmd/Makefile 324766 2013-08-15 11:56:29Z wg $
 
 PORTNAME=	pmd
-PORTVERSION=	5.0.4
+PORTVERSION=	5.0.5
 CATEGORIES=	devel java
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-bin-${PORTVERSION}
@@ -18,6 +18,7 @@ JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 PORTDOCS=	*
+PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=	DOCS
 
