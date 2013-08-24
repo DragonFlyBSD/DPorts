@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: ports/graphics/fraqtive/Makefile,v 1.21 2012/12/11 12:36:11 svnexp Exp $
+# $FreeBSD: graphics/fraqtive/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fraqtive
 PORTVERSION=	0.4.6
@@ -17,7 +17,6 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	QMAKESPEC="${QMAKESPEC}" \
 		QMAKE_CFLAGS="${CFLAGS}"
 CONFIGURE_ARGS=	-prefix ${PREFIX} -qmake ${QMAKE}
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	SSE2
 SSE2_DESC=	Enable SSE2 optimization
