@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tk-CursorControl
-# Date created:		2011-10-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/p5-Tk-CursorControl/Makefile,v 1.3 2012/11/17 06:03:37 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: x11-toolkits/p5-Tk-CursorControl/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Tk-CursorControl
 PORTVERSION=	0.4
@@ -16,10 +12,11 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Manipulate the mouse cursor programmatically
 
 BUILD_DEPENDS=	p5-Tk>=800.015:${PORTSDIR}/x11-toolkits/p5-Tk
-RUN_DEPENDS=	p5-Tk>=800.015:${PORTSDIR}/x11-toolkits/p5-Tk
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
 ALL_TARGETS=	pure_install
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Tk::CursorControl.3
 
