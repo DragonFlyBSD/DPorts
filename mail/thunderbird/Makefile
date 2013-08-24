@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: mail/thunderbird/Makefile 324561 2013-08-10 23:34:16Z marino $
+# $FreeBSD: mail/thunderbird/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	thunderbird
 DISTVERSION=	17.0.8
@@ -25,7 +25,6 @@ USE_PYTHON_BUILD=-2.7
 USE_GECKO=	gecko
 USE_MOZILLA=	# empty
 
-MAKE_JOBS_SAFE=	yes
 WANT_GNOME=	yes
 USE_QT4=	# empty
 QT_NONSTANDARD=	yes
