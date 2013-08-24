@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: astro/weather/Makefile 315046 2013-03-23 16:31:13Z sunpoet $
+# $FreeBSD: astro/weather/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	weather
 PORTVERSION=	2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://fungi.yuggoth.org/weather/src/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	An utility to provide current weather conditions and forecasts
+COMMENT=	Utility to provide current weather conditions and forecasts
 
 LICENSE=	ISCL
 
