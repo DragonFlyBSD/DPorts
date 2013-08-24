@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/chocolate-doom/Makefile,v 1.1 2013/01/29 23:41:51 svnexp Exp $
+# $FreeBSD: games/chocolate-doom/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	chocolate-doom
 PORTVERSION=	1.7.0
@@ -13,7 +13,6 @@ LICENSE=	GPLv2
 USE_GMAKE=	yes
 USE_SDL=	mixer net sdl
 USE_PYTHON=	2.5+
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 
 MAN5=		chocolate-doom.cfg.5 default.cfg.5
