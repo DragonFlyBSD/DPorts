@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-List-Gen
-# Date created:		2011-10-17
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-List-Gen/Makefile,v 1.3 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-List-Gen/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	List-Gen
 PORTVERSION=	0.974
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Functions for generating lists
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		List::Gen.3 \
 		List::Gen::Benchmark.3 \
