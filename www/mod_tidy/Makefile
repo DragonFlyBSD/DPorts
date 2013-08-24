@@ -2,7 +2,7 @@
 # Date created:				Sun Oct  5
 # Whom:					Clement Laforet <sheepkiller@cultdeadsheep.org>
 #
-# $FreeBSD: ports/www/mod_tidy/Makefile,v 1.18 2012/11/17 06:02:42 svnexp Exp $
+# $FreeBSD: www/mod_tidy/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_tidy
@@ -17,7 +17,6 @@ COMMENT=	Validates the HTML output of your apache2 webserver
 
 LIB_DEPENDS=	tidy:${PORTSDIR}/www/tidy-lib
 
-MAKE_JOBS_SAFE=  yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 USE_APACHE=	22+
