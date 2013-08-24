@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: security/tpmmanager/Makefile 322284 2013-07-04 17:59:48Z wg $
+# $FreeBSD: security/tpmmanager/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tpmmanager
 PORTVERSION=	0.8.1
@@ -17,7 +17,6 @@ QT_NONSTANDARD=	YES
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 
 HAS_CONFIGURE=	YES
-MAKE_JOBS_SAFE=	YES
 
 PLIST_FILES=	bin/${PORTNAME}
 
