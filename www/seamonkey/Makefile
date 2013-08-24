@@ -1,8 +1,9 @@
 # Created by: eivind/dima/jseger
-# $FreeBSD: www/seamonkey/Makefile 324562 2013-08-11 01:20:54Z marino $
+# $FreeBSD: www/seamonkey/Makefile 324838 2013-08-17 10:43:22Z flo $
 
 PORTNAME=	seamonkey
 DISTVERSION=	2.20
+PORTREVISION=	1
 CATEGORIES?=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
@@ -33,7 +34,6 @@ WANT_PERL=	yes
 ALL_TARGET=	default
 USE_GL=		gl
 USE_DOS2UNIX=	mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
-MAKE_JOBS_SAFE=	yes
 MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome
 
 MOZ_EXTENSIONS=	default
@@ -83,6 +83,9 @@ MOZ_OPTIONS+=	--disable-ldap --disable-mailnews
 .if ! ${PORT_OPTIONS:MLDAP}
 MOZ_OPTIONS+=	--disable-ldap --enable-mailnews
 .else
+. if ${ARCH} == i386
+USE_GCC?=	yes
+. endif
 MOZ_OPTIONS+=	--enable-ldap --enable-mailnews
 .endif
 .if ${PORT_OPTIONS:MENIGMAIL}
