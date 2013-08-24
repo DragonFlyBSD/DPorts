@@ -1,13 +1,12 @@
 # Created by: Chris Larsen <darth@vader.dk>
-# $FreeBSD: databases/p5-SQLite-Work/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-SQLite-Work/Makefile 325101 2013-08-21 09:27:33Z mat $
 
 PORTNAME=	SQLite-Work
-PORTVERSION=	0.10.02
+PORTVERSION=	0.13
 CATEGORIES=	databases www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RUBYKAT
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Report on and update an SQLite database
@@ -28,8 +27,5 @@ MAN3=		SQLite::Work::Mail.3 \
 MAN1=		sqlw_mail.1 \
 		sqlw_import.1 \
 		sqlreport.1
-
-post-patch:
-		${CHMOD} u+w ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
