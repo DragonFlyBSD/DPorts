@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/games/peg-e/Makefile,v 1.9 2013/02/25 04:43:48 svnexp Exp $
+# $FreeBSD: games/peg-e/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	peg-e
 PORTVERSION=	1.1.2
@@ -15,7 +15,6 @@ USE_BZIP2=	yes
 USE_QT4=	corelib gui moc_build qmake_build rcc_build
 WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
