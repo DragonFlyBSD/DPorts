@@ -1,8 +1,8 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: japanese/py-mecab/Makefile 314728 2013-03-20 12:42:31Z tota $
+# $FreeBSD: japanese/py-mecab/Makefile 324571 2013-08-11 05:21:29Z tota $
 
 PORTNAME=	mecab
-PORTVERSION=	0.995
+PORTVERSION=	0.996
 CATEGORIES=	japanese python textproc
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-python-${PORTVERSION}
@@ -12,9 +12,6 @@ COMMENT=	Python bindings for MeCab
 
 LICENSE=	BSD GPLv2 LGPL21
 LICENSE_COMB=	dual
-LICENSE_FILE_BSD=	${WRKSRC}/BSD
-LICENSE_FILE_GPLv2=	${WRKSRC}/GPL
-LICENSE_FILE_LGPL21=	${WRKSRC}/LGPL
 
 BUILD_DEPENDS=	swig>=1.3:${PORTSDIR}/devel/swig13
 LIB_DEPENDS=	mecab:${PORTSDIR}/japanese/mecab
