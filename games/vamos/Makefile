@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/vamos/Makefile 323745 2013-07-26 18:38:38Z deischen $
+# $FreeBSD: games/vamos/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vamos
 PORTVERSION=	0.7.0
@@ -25,7 +25,6 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	ac_cv_header_boost_test_unit_test_hpp=no \
 		ac_cv_lib_freeglut_glutGetModifiers=no
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
