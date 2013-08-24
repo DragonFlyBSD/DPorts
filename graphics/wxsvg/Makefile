@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/wxsvg/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: graphics/wxsvg/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wxsvg
 PORTVERSION=	1.1.15
@@ -25,7 +25,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBAV_CFLAGS="${LIBAV_CFLAGS}" LIBAV_LIBS="${LIBAV_LIBS}"
 MAKE_ENV=	AM_CPPFLAGS="${LIBAV_CFLAGS}"
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
