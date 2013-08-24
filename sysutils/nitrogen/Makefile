@@ -1,5 +1,5 @@
 # Created by: Jonathan Liu <Net147@hotmail.com>
-# $FreeBSD: sysutils/nitrogen/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: sysutils/nitrogen/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	nitrogen
 PORTVERSION=	1.5.2
@@ -39,7 +39,6 @@ USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext xfixes \
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-inotify
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
