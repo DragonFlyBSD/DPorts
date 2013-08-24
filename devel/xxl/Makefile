@@ -1,5 +1,5 @@
 # Created by: Robert Schlotterbeck <robert@rs.tarrant.tx.us>
-# $FreeBSD: ports/devel/xxl/Makefile,v 1.19 2013/02/14 10:22:24 svnexp Exp $
+# $FreeBSD: devel/xxl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xxl
 PORTVERSION=	1.0.1
@@ -18,7 +18,6 @@ OPTIONS_DEFAULT=THREADS
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	xxl.html xxl.pdf
 
