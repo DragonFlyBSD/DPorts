@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@Fluffy.Khv.RU>
-# $FreeBSD: sysutils/polkit-kde/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: sysutils/polkit-kde/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	polkit-kde
 PORTVERSION=	0.99.1
@@ -19,7 +19,6 @@ USE_BZIP2=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
