@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-perlqt/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/p5-perlqt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	perlqt
 PORTVERSION=	${KDE4_VERSION}
@@ -21,7 +21,6 @@ USE_QT4=	corelib dbus gui network xml \
 		qmake_build moc_build uic_build rcc_build
 USES=		cmake:outsource
 
-MAKE_JOBS_SAFE=	yes
 
 # Respect PREFIX
 CMAKE_ARGS+=	-DCUSTOM_PERL_SITE_ARCH_DIR=${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}
