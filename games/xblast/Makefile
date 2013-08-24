@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: games/xblast/Makefile 317521 2013-05-06 15:18:38Z bapt $
+# $FreeBSD: games/xblast/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xblast
 PORTVERSION=	2.10.4
@@ -42,7 +42,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-admin
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOHEADER="${TRUE}" \
 		AUTOMAKE="${TRUE}"
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		xblast.6
 
