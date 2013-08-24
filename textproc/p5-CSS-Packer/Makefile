@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CSS-Packer
-# Date created:		2011-07-23
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-CSS-Packer/Makefile,v 1.4 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/p5-CSS-Packer/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	CSS-Packer
 PORTVERSION=	1.002.001
@@ -16,11 +12,11 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Another CSS minifier
 
 BUILD_DEPENDS=	p5-Regexp-RegGrp>=1.001.001:${PORTSDIR}/devel/p5-Regexp-RegGrp
-RUN_DEPENDS=	p5-Regexp-RegGrp>=1.001.001:${PORTSDIR}/devel/p5-Regexp-RegGrp
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.22:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		CSS::Packer.3
 
