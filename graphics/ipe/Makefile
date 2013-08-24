@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: graphics/ipe/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: graphics/ipe/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ipe
 PORTVERSION=	7.1.4
@@ -39,7 +39,6 @@ MAKE_ENV=	DLL_CFLAGS="-fPIC" \
 		LUA_LIBS="-L${LOCALBASE}/lib -llua-5.2" \
 		MOC="${MOC}"
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
