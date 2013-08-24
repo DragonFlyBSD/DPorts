@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: archivers/rvm/Makefile 313753 2013-03-09 19:59:21Z eadler $
+# $FreeBSD: archivers/rvm/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	rvm
 PORTVERSION=	1.07
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 NO_LATEST_LINK=	yes
 
 USE_GMAKE=	yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-default-config-file=${PREFIX}/etc/rvm.conf \
 		--enable-assume-stl-memory-exception
