@@ -2,7 +2,7 @@
 # Date created:				10th February 1995
 # Whom:					gpalmer
 #
-# $FreeBSD: x11-clocks/xdaliclock/Makefile 324247 2013-08-04 19:27:55Z wxs $
+# $FreeBSD: x11-clocks/xdaliclock/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	xdaliclock
@@ -20,6 +20,5 @@ GNU_CONFIGURE=	yes
 USE_XORG=	xt sm ice xext x11
 MAN1=		xdaliclock.1
 PLIST_FILES=	bin/xdaliclock
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
