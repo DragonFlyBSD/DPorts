@@ -1,5 +1,5 @@
 # Created by: mike@LITech.lviv.ua
-# $FreeBSD: ports/ukrainian/webalizer/Makefile,v 1.8 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: ukrainian/webalizer/Makefile 324897 2013-08-18 09:23:21Z marino $
 
 MASTERDIR=	${.CURDIR}/../../www/webalizer
 CATEGORIES=	ukrainian
