@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/man2web/Makefile,v 1.13 2012/11/17 06:02:39 svnexp Exp $
+# $FreeBSD: www/man2web/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	man2web
 PORTVERSION=	0.88
@@ -14,7 +14,6 @@ CONFIGURE_ARGS=	--bindir="${PREFIX}/${CGIDIR}" \
 		--sysconfdir="${PREFIX}/etc" \
 		--with-manpath=/usr/share/man:${LOCALBASE}/man \
 		--with-distro=freebsd --enable-lynx
-MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	CGIDIR="${CGIDIR}"
 CGIDIR=	www/cgi-bin

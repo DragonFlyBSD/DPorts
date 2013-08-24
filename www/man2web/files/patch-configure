@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/man2web/files/patch-configure,v 1.2 2012/11/17 06:02:39 svnexp Exp $
+$FreeBSD: www/man2web/files/patch-configure 300897 2012-07-14 14:29:18Z beat $
 
 --- configure.orig	Mon Apr 28 03:07:10 2003
 +++ configure	Mon Apr 28 16:41:10 2003

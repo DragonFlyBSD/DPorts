@@ -1,4 +1,4 @@
-/* $FreeBSD: ports/www/man2web/files/freebsd.h,v 1.2 2012/11/17 06:02:39 svnexp Exp $ */
+/* $FreeBSD: www/man2web/files/freebsd.h 300897 2012-07-14 14:29:18Z beat $ */
 
 /* default section entries that are used if configuration file is disabled*/
 #define SECTION_COUNT 9

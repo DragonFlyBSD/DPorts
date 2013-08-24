@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/man2web/pkg-plist,v 1.4 2012/11/17 06:02:39 svnexp Exp $
+@comment $FreeBSD: www/man2web/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/man2web
 %%CGIDIR%%/man2web
 etc/man2web.conf.default

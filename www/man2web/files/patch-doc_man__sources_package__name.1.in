@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/man2web/files/patch-doc_man__sources_package__name.1.in,v 1.2 2012/11/17 06:02:39 svnexp Exp $
+$FreeBSD: www/man2web/files/patch-doc_man__sources_package__name.1.in 300897 2012-07-14 14:29:18Z beat $
 
 --- doc/man_sources/package_name.1.in.orig	Sat Apr 19 14:12:16 2003
 +++ doc/man_sources/package_name.1.in	Sat Apr 19 14:13:07 2003
