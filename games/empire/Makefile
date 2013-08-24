@@ -2,7 +2,7 @@
 # Date created:				13 May 1997
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/games/empire/Makefile,v 1.31 2012/11/17 05:57:37 svnexp Exp $
+# $FreeBSD: games/empire/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	empire
@@ -17,7 +17,6 @@ COMMENT=	Simulation of a full-scale war between two emperors
 
 LICENSE=	GPLv2
 
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		empire.6
 
