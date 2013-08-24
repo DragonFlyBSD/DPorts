@@ -1,4 +1,4 @@
-# $FreeBSD: security/pidgin-otr/Makefile 322360 2013-07-06 01:22:56Z jgh $
+# $FreeBSD: security/pidgin-otr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	otr
 PORTVERSION=	4.0.0
@@ -19,7 +19,6 @@ LIB_DEPENDS=	otr:${PORTSDIR}/security/libotr \
 		gcrypt:${PORTSDIR}/security/libgcrypt \
 		purple:${PORTSDIR}/net-im/libpurple
 
-MAKE_JOBS_SAFE=	yes
 
 USE_GNOME=	intltool
 USES=		gettext gmake
