@@ -2,7 +2,7 @@
 # Date created:                25 February 2000
 # Whom:                        Brad Hendrickse <bradh@uunet.co.za>
 #
-# $FreeBSD: ports/net-mgmt/isic/Makefile,v 1.16 2013/02/18 21:46:32 svnexp Exp $
+# $FreeBSD: net-mgmt/isic/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	isic
@@ -18,7 +18,6 @@ COMMENT=	IP Stack Integrity Checker
 LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	isic.1
 
