@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Geocoder-US/Makefile 324441 2013-08-09 14:32:28Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Geocoder-US/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Geo-Coder-Geocoder-US
 PORTVERSION=	0.004
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Text-CSV>=0:${PORTSDIR}/textproc/p5-Text-CSV \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Geo::Coder::Geocoder::US.3
 
