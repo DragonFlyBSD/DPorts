@@ -2,7 +2,7 @@
 # Date created:        			28 December 2006
 # Whom:					Rob Zinkov
 #
-# $FreeBSD: ports/lang/gambit-c/Makefile,v 1.14 2012/11/17 05:58:49 svnexp Exp $
+# $FreeBSD: lang/gambit-c/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gambit-c
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=--enable-interpreter-name=gsi-gambit  --enable-compiler-name=gsc
 
 INFO=		gambit-c
 
-MAKE_JOBS_SAFE=	yes
 
 USE_LDCONFIG=	${PREFIX}/lib/gambit-c
 
