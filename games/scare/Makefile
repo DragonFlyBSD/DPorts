@@ -2,7 +2,7 @@
 # Date created:				6 February 2005
 # Whom:					Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/games/scare/Makefile,v 1.12 2012/11/17 05:57:51 svnexp Exp $
+# $FreeBSD: games/scare/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	scare
@@ -26,7 +26,6 @@ OPTIONS_DEFINE=	XGLK
 XGLK_DESC=	Use the xglk graphics library
 
 USE_ZIP=	yes
-MAKE_JOBS_SAFE=yes
 
 PLIST_FILES=	bin/scare
 
