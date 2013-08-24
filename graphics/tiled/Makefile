@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/tiled/Makefile 313642 2013-03-08 12:57:22Z amdmi3 $
+# $FreeBSD: graphics/tiled/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tiled
 PORTVERSION=	0.9.0
@@ -12,7 +12,6 @@ COMMENT=	General purpose tile map editor
 
 USE_QT4=	corelib gui opengl \
 		linguist_build qmake_build moc_build uic_build rcc_build
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 MAN1=		tiled.1 tmxrasterizer.1 tmxviewer.1
