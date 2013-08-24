@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: ports/games/xlife/Makefile,v 1.26 2013/02/10 10:22:52 svnexp Exp $
+# $FreeBSD: games/xlife/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xlife
 PORTVERSION=	6.6.1
@@ -16,7 +16,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 
 USE_BZIP2=	yes
 USE_XORG=	x11
-MAKE_JOBS_SAFE=	yes
 
 MLINKS=		xlife.6 lifeconv.6
 MAN6=		xlife.6
