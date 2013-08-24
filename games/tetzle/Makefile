@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/tetzle/Makefile 313646 2013-03-08 13:13:35Z amdmi3 $
+# $FreeBSD: games/tetzle/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tetzle
 PORTVERSION=	2.0.2
@@ -15,7 +15,6 @@ USE_BZIP2=	yes
 USE_QT4=	corelib gui moc_build opengl qmake_build rcc_build xml
 WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
