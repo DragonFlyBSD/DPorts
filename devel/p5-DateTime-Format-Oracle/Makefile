@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Format-Oracle
-# Date created:		2011-10-19
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Format-Oracle/Makefile,v 1.2 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-DateTime-Format-Oracle/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	DateTime-Format-Oracle
 PORTVERSION=	0.06
@@ -17,11 +13,10 @@ COMMENT=	Parse and format Oracle dates and timestamps
 BUILD_DEPENDS=	p5-Convert-NLS_DATE_FORMAT>=0.03:${PORTSDIR}/converters/p5-Convert-NLS_DATE_FORMAT \
 		p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Format-Builder>=0:${PORTSDIR}/devel/p5-DateTime-Format-Builder
-RUN_DEPENDS=	p5-Convert-NLS_DATE_FORMAT>=0.03:${PORTSDIR}/converters/p5-Convert-NLS_DATE_FORMAT \
-		p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
-		p5-DateTime-Format-Builder>=0:${PORTSDIR}/devel/p5-DateTime-Format-Builder
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		DateTime::Format::Oracle.3
 
