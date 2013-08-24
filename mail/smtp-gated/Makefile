@@ -1,5 +1,5 @@
 # Created by: msciciel
-# $FreeBSD: mail/smtp-gated/Makefile 313529 2013-03-06 17:18:45Z lippe $
+# $FreeBSD: mail/smtp-gated/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	smtp-gated
 PORTVERSION=	1.4.20.0
@@ -19,7 +19,6 @@ CHUNKING_DESC=	Enable support for SMTP CHUNKING extension
 ECONNRESET_DESC=	Be quiet about Connection reset by peer message
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
