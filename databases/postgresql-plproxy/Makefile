@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/postgresql-plproxy/Makefile 322415 2013-07-07 00:15:47Z jgh $
+# $FreeBSD: databases/postgresql-plproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	plproxy
 PORTVERSION=	2.5
@@ -14,7 +14,6 @@ LICENSE=	BSD
 
 USES=		bison gmake
 USE_PGSQL=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTSCOUT=	site:http://pgfoundry.org/frs/?group_id=1000207
 
