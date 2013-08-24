@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/cretan-hubris/Makefile 322856 2013-07-12 17:30:35Z deischen $
+# $FreeBSD: games/cretan-hubris/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cretan-hubris
 PORTVERSION=	0.2
@@ -28,7 +28,6 @@ USE_SDL=	sdl sound
 USE_GL=		glu
 GNU_CONFIGURE=	yes
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME}.desktop \
