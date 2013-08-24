@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: editors/texmaker/Makefile 322960 2013-07-13 18:06:06Z makc $
+# $FreeBSD: editors/texmaker/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	texmaker
 PORTVERSION=	4.0.2
@@ -22,7 +22,6 @@ USE_TEX=	latex dvipsk
 HAS_CONFIGURE=	yes
 QMAKE_ARGS=	PREFIX=${PREFIX} ICONDIR=${PREFIX}/share/pixmaps \
 		DESKTOPDIR=${DESKTOPDIR}
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	GV XDVI
 GV_DESC=	View ps files with gv
