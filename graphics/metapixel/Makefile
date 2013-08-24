@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: graphics/metapixel/Makefile 314320 2013-03-15 17:52:36Z sunpoet $
+# $FreeBSD: graphics/metapixel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	metapixel
 PORTVERSION=	1.0.2
@@ -21,7 +21,6 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 CPPFLAGS+=	$$(libpng-config --I_opts) -I${LOCALBASE}/include -I.
 LDFLAGS+=	$$(libpng-config --L_opts) -L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 USE_GMAKE=	yes
 
 MAN1=		metapixel.1
