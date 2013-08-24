@@ -1,8 +1,8 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Box/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: mail/p5-Mail-Box/Makefile 325002 2013-08-19 16:29:17Z tobez $
 
 PORTNAME=	Mail-Box
-PORTVERSION=	2.107
+PORTVERSION=	2.109
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MARKOV
