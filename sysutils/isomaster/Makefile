@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-# $FreeBSD: sysutils/isomaster/Makefile 323690 2013-07-26 06:24:12Z bapt $
+# $FreeBSD: sysutils/isomaster/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	isomaster
 PORTVERSION=	1.3.9
@@ -19,7 +19,6 @@ USE_GNOME=	intlhack gnomehier gtk20
 USES=		desktop-file-utils gettext
 USE_GMAKE=	yes
 MAKE_ENV=	DEFAULT_VIEWER="xdg-open" USE_SYSTEM_INIPARSER=1
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include -Diniparser_setstr=iniparser_set
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
