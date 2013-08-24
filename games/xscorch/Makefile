@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: games/xscorch/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: games/xscorch/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xscorch
 PORTVERSION=	0.2.1
@@ -20,7 +20,6 @@ USES=		perl5
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		xscorch.6
 
