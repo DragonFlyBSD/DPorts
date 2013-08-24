@@ -2,7 +2,7 @@
 # Date created:			Tue May 15, 2012
 # Whom:				Stefan Caunter <stef@scaleengine.com>
 #
-# $FreeBSD: ports/dns/gdnsd/Makefile,v 1.3 2012/11/17 05:57:09 svnexp Exp $
+# $FreeBSD: dns/gdnsd/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gdnsd
@@ -19,7 +19,6 @@ LICENSE=	GPLv3
 OPTIONS_DEFINE=	GEOIP
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 MAN1=		gdnsd_geoip_test.1
