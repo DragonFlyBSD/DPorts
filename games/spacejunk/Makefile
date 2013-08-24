@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/spacejunk/Makefile 320912 2013-06-14 13:18:53Z amdmi3 $
+# $FreeBSD: games/spacejunk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	spacejunk
 PORTVERSION=	1.0.5
@@ -14,7 +14,6 @@ LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl mixer image
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
