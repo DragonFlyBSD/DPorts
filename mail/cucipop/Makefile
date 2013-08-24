@@ -1,5 +1,5 @@
 # Created by: igor@zynaps.ru
-# $FreeBSD: mail/cucipop/Makefile 321291 2013-06-19 16:39:43Z antoine $
+# $FreeBSD: mail/cucipop/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 # NOTE: APOP works only for virtual hosts as designed!
 #       Virtual hosts works only with Berkeley DB2.
@@ -23,7 +23,6 @@ COMMENT=	Cubic Circle's POP3 daemon (fully RFC1939 compliant)
 
 #BUILD_DEPENDS=  ${PREFIX}/include/db2/db.h:${PORTSDIR}/databases/db2
 
-MAKE_JOBS_SAFE=	yes
 
 MAN8=		cucipop.8 #makevpopdb.8
 PLIST_FILES=	libexec/cucipop
