@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Command/Makefile 317108 2013-05-02 13:01:59Z sunpoet $
+# $FreeBSD: devel/p5-Test-Command/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Test-Command
 PORTVERSION=	0.11
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1.04:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::Command.3
 
