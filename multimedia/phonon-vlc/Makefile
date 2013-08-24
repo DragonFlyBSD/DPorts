@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/phonon-vlc/Makefile 322189 2013-07-02 17:34:39Z rakuco $
+# $FreeBSD: multimedia/phonon-vlc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	phonon
 PORTVERSION=	0.6.2
@@ -22,7 +22,6 @@ USE_QT4=	corelib gui phonon \
 		qmake_build moc_build rcc_build uic_build
 USE_XZ=		yes
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 
 PHONON_BRANCH=	stable
 
