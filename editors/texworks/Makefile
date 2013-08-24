@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: editors/texworks/Makefile 316337 2013-04-23 10:19:45Z bapt $
+# $FreeBSD: editors/texworks/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	texworks
 PORTVERSION=	0.4.4
@@ -28,7 +28,6 @@ QMAKE_ARGS=	INSTALL_PREFIX=${PREFIX} \
 		TW_DICPATH=${LOCALBASE}/share/hunspell \
 		TW_HELPPATH=${DOCSDIR}
 QMAKEFLAGS+=	QMAKE_LFLAGS="-lz"
-MAKE_JOBS_SAFE=	yes
 
 VCS_REVISION=	1004
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
