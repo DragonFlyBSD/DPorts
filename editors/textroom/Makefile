@@ -1,5 +1,5 @@
 # Created by: admin@mjbrune.org
-# $FreeBSD: editors/textroom/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: editors/textroom/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	textroom
 PORTVERSION=	0.8.2
@@ -20,7 +20,6 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build corelib gui xml \
 		svg opengl qt3support
 QMAKE_ARGS=	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' \
