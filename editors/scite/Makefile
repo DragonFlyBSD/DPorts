@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/scite/Makefile 321588 2013-06-22 20:09:24Z rakuco $
+# $FreeBSD: editors/scite/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	scite
 PORTVERSION=	3.3.3
@@ -22,7 +22,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}/gtk
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 MAKEFILE=	makefile
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		scite.1
 PORTDOCS=	*
