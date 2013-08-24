@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: security/p5-CACertOrg-CA/Makefile 322839 2013-07-12 14:31:56Z sunpoet $
+# $FreeBSD: security/p5-CACertOrg-CA/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	CACertOrg-CA
 PORTVERSION=	20110724.002
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CACert.org CA root certificate in PEM format
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		CACertOrg::CA.3
 
