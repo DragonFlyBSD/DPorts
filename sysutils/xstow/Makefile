@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: sysutils/xstow/Makefile 305477 2012-10-07 13:59:39Z rakuco $
+# $FreeBSD: sysutils/xstow/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xstow
 PORTVERSION=	1.0.0
@@ -11,7 +11,6 @@ COMMENT=	Enhanced replacement for GNU stow written in C++
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=	--enable-debug
