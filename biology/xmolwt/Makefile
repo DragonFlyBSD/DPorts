@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/xmolwt/Makefile 321311 2013-06-19 19:07:35Z bsam $
+# $FreeBSD: biology/xmolwt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xmolwt
 PORTVERSION=	0.7
@@ -15,7 +15,6 @@ OPTIONS_DEFINE=	DOCS GTK2
 USE_GMAKE=	yes
 MAKEFILE=	Makefile.gtk
 ALL_TARGET=	gmolwt
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PLIST_FILES=	bin/gmolwt bin/molwt
