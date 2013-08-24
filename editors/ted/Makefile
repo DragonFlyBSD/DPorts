@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: editors/ted/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: editors/ted/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ted
 PORTVERSION=	2.23
@@ -34,7 +34,6 @@ MAKE_ENV=	DEF_AFMDIR="-DAFMDIR=\"\\\"${AFMDIR}/\\\"\"" \
 		DEF_DOCUMENT_DIR="-DDOCUMENT_DIR=\"\\\"${DOCSDIR}/\\\"\"" \
 		DEF_PSSCRIPT_DIR="-DPSSCRIPT_DIR=\"\\\"${DATADIR}/\\\"\""
 ALL_TARGET=	compile.shared
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		Ted.1 rtf2pdf.1 rtf2ps.1
 
