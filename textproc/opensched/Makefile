@@ -2,7 +2,7 @@
 # Date created:				31 January 2001
 # Whom:					Daniel McRobb <dwm@caimis.com>
 #
-# $FreeBSD: ports/textproc/opensched/Makefile,v 1.20 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/opensched/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	opensched
@@ -18,7 +18,6 @@ LICENSE=	GPLv2
 
 USE_GMAKE=	yes
 ALL_TARGET=	build
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		opensched.1
 PLIST_FILES=	bin/opensched
