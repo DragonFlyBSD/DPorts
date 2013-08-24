@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: graphics/pngcrush/Makefile 320275 2013-06-08 17:18:33Z mandree $
+# $FreeBSD: graphics/pngcrush/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pngcrush
 PORTVERSION=	1.7.59
@@ -16,7 +16,6 @@ USE_XZ=		yes
 CFLAGS+=	-DPNGCRUSH_COUNT_COLORS -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ARGS+=	CC="${CC}" CFLAGS="${CFLAGS}" LD="${CC}" LDFLAGS="${LDFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/pngcrush
 
