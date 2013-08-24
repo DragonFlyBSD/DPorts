@@ -1,18 +1,14 @@
-# New ports collection makefile for:	py-hashring
-# Date created:		2008-12-24
-# Whom:			Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/devel/py-hashring/Makefile,v 1.4 2012/11/17 05:56:47 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
+# $FreeBSD: devel/py-hashring/Makefile 325082 2013-08-21 02:47:00Z wen $
 
 PORTNAME=	hashring
-PORTVERSION=	1.2
+PORTVERSION=	1.3.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	hash_ring-${PORTVERSION}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An implementation of consistent hashing in Python
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}memcached>=0:${PORTSDIR}/databases/py-memcached
