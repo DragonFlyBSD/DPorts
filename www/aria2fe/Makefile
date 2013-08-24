@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/aria2fe/Makefile,v 1.10 2013/02/04 13:24:23 svnexp Exp $
+# $FreeBSD: www/aria2fe/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	aria2fe
 DISTVERSION=	0.0.5
@@ -20,7 +20,6 @@ INSTALL_WRKSRC=	${WRKSRC}/bin
 
 USE_BZIP2=	yes
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
