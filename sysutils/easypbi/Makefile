@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/sysutils/easypbi/Makefile,v 1.8 2013/01/19 17:51:47 svnexp Exp $
+# $FreeBSD: sysutils/easypbi/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	easypbi
@@ -14,7 +14,6 @@ LIB_DEPENDS=	QtSolutions_SingleApplication-head.1:${PORTSDIR}/devel/qt4-qtsoluti
 
 USE_QT4=	corelib gui network webkit xml qmake_build moc_build rcc_build uic_build linguist
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/EasyPBI-source
 
 QMAKE_PRO=	EasyPBI.pro
