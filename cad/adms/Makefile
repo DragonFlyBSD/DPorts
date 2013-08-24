@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/adms/Makefile 316310 2013-04-23 06:34:47Z bapt $
+# $FreeBSD: cad/adms/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	adms
 PORTVERSION=	2.3.0
@@ -18,7 +18,6 @@ USE_GNOME=	glib20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		admsXml.1
 
