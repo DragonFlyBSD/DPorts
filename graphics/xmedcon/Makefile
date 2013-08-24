@@ -1,5 +1,5 @@
 # Created by: Paul Everlund
-# $FreeBSD: graphics/xmedcon/Makefile 323045 2013-07-15 14:49:39Z miwi $
+# $FreeBSD: graphics/xmedcon/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xmedcon
 PORTVERSION=	0.13.0
@@ -29,7 +29,6 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/xmedcon \
 		--enable-llcheck
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
