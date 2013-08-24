@@ -2,7 +2,7 @@
 # Date created:        16 April 2001
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/emulators/cingb/Makefile,v 1.11 2012/11/17 05:57:20 svnexp Exp $
+# $FreeBSD: emulators/cingb/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	cingb
@@ -22,7 +22,6 @@ USE_BZIP2=	yes
 USE_XORG=	x11 xext xv
 MAKE_ENV=	X11BASE="${LOCALBASE}"
 ALL_TARGET=	standard
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README README.FAQ
 PLIST_FILES=	bin/cingb bin/cingb_conf
