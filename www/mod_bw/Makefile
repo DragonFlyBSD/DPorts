@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: ports/www/mod_bw/Makefile,v 1.13 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_bw/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_bw
 PORTVERSION=	0.8
@@ -12,7 +12,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Bandwidth and Connection control per Virtual Host or Directory
 
-MAKE_JOBS_SAFE=  yes
 
 WRKSRC=		${WRKDIR}/mod_bw
 USE_APACHE=	22
