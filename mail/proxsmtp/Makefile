@@ -1,5 +1,5 @@
 # Created by: Dario Freni <saturnero@gufi.org>
-# $FreeBSD: mail/proxsmtp/Makefile 309058 2012-12-17 03:30:32Z araujo $
+# $FreeBSD: mail/proxsmtp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	proxsmtp
 PORTVERSION=	1.10
@@ -13,7 +13,6 @@ LICENSE=	BSD
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	proxsmtpd
 SUB_FILES=	pkg-message
