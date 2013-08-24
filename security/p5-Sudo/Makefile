@@ -1,11 +1,11 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/p5-Sudo/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Sudo/Makefile 324978 2013-08-19 12:33:15Z mat $
 
 PORTNAME=	Sudo
-PORTVERSION=	0.32
+PORTVERSION=	0.33
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:LANDMAN
+MASTER_SITE_SUBDIR=	CPAN:WAG
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
