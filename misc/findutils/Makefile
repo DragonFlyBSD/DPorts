@@ -1,5 +1,5 @@
 # Created by: Robert Withrow <witr@rwwa.com>
-# $FreeBSD: misc/findutils/Makefile 320600 2013-06-11 14:59:21Z miwi $
+# $FreeBSD: misc/findutils/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	findutils
 PORTVERSION=	4.5.11
@@ -32,7 +32,6 @@ PLIST_SUB+=	NLS="@comment "
 
 CONFIGURE_ARGS+=	--program-prefix=g --localstatedir=${LOCALSTATEDIR}
 MAKE_ARGS=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-MAKE_JOBS_SAFE=	yes
 
 INFO=		find find-maint
 MAN1=		gfind.1 gxargs.1 glocate.1 gupdatedb.1 goldfind.1
