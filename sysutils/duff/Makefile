@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/duff/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/duff/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	duff
 PORTVERSION=	0.5.2
@@ -13,7 +13,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
