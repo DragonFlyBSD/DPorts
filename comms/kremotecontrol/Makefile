@@ -1,4 +1,4 @@
-# $FreeBSD: comms/kremotecontrol/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: comms/kremotecontrol/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kremotecontrol
 PORTVERSION=	${KDE4_VERSION}
@@ -20,6 +20,5 @@ USES=		cmake:outsource
 USE_QT4=	corelib script xmlpatterns \
 		qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
