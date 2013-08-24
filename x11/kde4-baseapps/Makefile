@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-baseapps/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/kde4-baseapps/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kde-baseapps
 PORTVERSION=	${KDE4_VERSION}
@@ -24,7 +24,6 @@ USE_QT4=	corelib dbus gui script xml \
 		moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11 xt
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CMAKE_ARGS+=	-DCMAKE_REQUIRED_FLAGS:STRING="-L${LOCALBASE}/lib"
 
