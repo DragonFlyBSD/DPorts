@@ -1,5 +1,5 @@
 # Created by: Michael Ranner
-# $FreeBSD: irc/kvirc/Makefile 317967 2013-05-12 16:16:56Z makc $
+# $FreeBSD: irc/kvirc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kvirc
 PORTVERSION=	4.2.0
@@ -31,7 +31,6 @@ CMAKE_ARGS=	-DWANT_ESD=no -DWANT_DOXYGEN=no \
 		-DMANDIR=${MANPREFIX}
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		kvirc.1
 MANLANG=	"" de fr it pt uk
