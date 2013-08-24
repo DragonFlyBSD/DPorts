@@ -1,18 +1,13 @@
-# New ports collection makefile for:	py-netaddr
-# Date created:		2008-10-14
-# Whom:			Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/net/py-netaddr/Makefile,v 1.12 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
+# $FreeBSD: net/py-netaddr/Makefile 325084 2013-08-21 03:03:05Z wen $
 
 PORTNAME=	netaddr
-PORTVERSION=	0.7.7
+PORTVERSION=	0.7.10
 CATEGORIES=	net python
-MASTER_SITES=	https://github.com/drkjam/${PORTNAME}/downloads/ \
-		CHEESESHOP
+MASTER_SITES=	https://github.com/drkjam/${PORTNAME}/downloads/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A python library for the manipulation of network addresses
 
 LICENSE=	BSD
@@ -26,7 +21,9 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	AUTHORS CHANGELOG README
 TESTFILES=	__init__.py
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
