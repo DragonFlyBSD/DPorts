@@ -1,5 +1,5 @@
 # Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/gqview/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: graphics/gqview/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gqview
 PORTVERSION=	2.0.4
@@ -17,7 +17,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		gqview.1
 
