@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: ports/sysutils/uptimed/Makefile,v 1.23 2013/02/05 10:26:38 svnexp Exp $
+# $FreeBSD: sysutils/uptimed/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	uptimed
 PORTVERSION=	0.3.17
@@ -19,7 +19,6 @@ LIBTOOLIZE_ARGS=--copy --force
 ACLOCAL_ARGS=	# empty
 AUTOMAKE_ARGS=	--copy --add-missing --foreign
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	${PORTNAME}
 
