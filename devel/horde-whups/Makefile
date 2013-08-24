@@ -1,7 +1,7 @@
-# $FreeBSD: devel/horde-whups/Makefile 323132 2013-07-16 22:23:18Z mm $
+# $FreeBSD: devel/horde-whups/Makefile 325255 2013-08-23 08:30:45Z mm $
 
 PORTNAME=	whups
-DISTVERSION=	3.0.0RC1
+DISTVERSION=	3.0.0RC2
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	horde-
 
