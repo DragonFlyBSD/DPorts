@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/games/brikx/Makefile,v 1.10 2013/02/04 07:33:09 svnexp Exp $
+# $FreeBSD: games/brikx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	brikx
 PORTVERSION=	0.4.5
@@ -15,7 +15,6 @@ COMMENT=	Puzzle game - remove all tiles from the table
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl mixer image ttf
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES="Brikx" \
 		"Puzzle game" \
