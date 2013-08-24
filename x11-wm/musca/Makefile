@@ -2,7 +2,7 @@
 # Date created:		2009-03-30
 # Whom:			Dennis Herrmann <dhn@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-wm/musca/Makefile,v 1.11 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: x11-wm/musca/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	musca
@@ -20,7 +20,6 @@ RUN_DEPENDS=	dmenu:${PORTSDIR}/x11/dmenu
 USE_XORG=	x11
 MAKE_ARGS=	CFLAGS="-I${LOCALBASE}/include \
 		-L${LOCALBASE}/lib"
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/musca
 MAN1=	musca.1
