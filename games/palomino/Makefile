@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/palomino/Makefile 321185 2013-06-18 13:03:10Z wg $
+# $FreeBSD: games/palomino/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	palomino
 PORTVERSION=	20130527
@@ -24,7 +24,6 @@ USE_GL=		gl
 USES=		cmake
 USE_LUA=	5.1
 LUA_COMPS=	lua:build
-MAKE_JOBS_SAFE=	yes
 
 MISC_VER=	20091027
 MODELS_VER=	20090615
