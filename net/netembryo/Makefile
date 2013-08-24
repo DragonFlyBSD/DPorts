@@ -1,5 +1,5 @@
 # Created by: Emmanuel Richiardone (err@tollari.org)
-# $FreeBSD: net/netembryo/Makefile 318463 2013-05-18 22:43:54Z rakuco $
+# $FreeBSD: net/netembryo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	netembryo
 PORTVERSION=	0.1.1
@@ -24,7 +24,6 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-silent-rules
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
