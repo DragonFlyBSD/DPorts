@@ -2,7 +2,7 @@
 # Date created:				11 June 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/games/evilfinder/Makefile,v 1.12 2012/11/17 05:57:37 svnexp Exp $
+# $FreeBSD: games/evilfinder/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	evilfinder
@@ -21,7 +21,6 @@ COMMENT=	Numerologically determine the evilness of things
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/ef \
 	%%WRAPPER%%bin/evilfinder \
