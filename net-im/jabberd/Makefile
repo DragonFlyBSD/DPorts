@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net-im/jabberd/Makefile 321681 2013-06-24 13:53:29Z mm $
+# $FreeBSD: net-im/jabberd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jabberd
 PORTVERSION=	2.2.17
@@ -28,7 +28,6 @@ CYRUS_DESC=	Use Cyrus SASL backend (not supported)
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_PERL5_RUN=	yes
 USE_OPENSSL=	yes
 USES=		iconv
