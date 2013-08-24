@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/scrot/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: graphics/scrot/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	scrot
 PORTVERSION=	0.8
@@ -14,7 +14,6 @@ COMMENT=	A screen capture utility that utilizes Imlib2
 LIB_DEPENDS=	giblib:${PORTSDIR}/graphics/giblib
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		scrot.1
 
