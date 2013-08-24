@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/gottet/Makefile 313159 2013-03-01 18:11:10Z pawel $
+# $FreeBSD: games/gottet/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gottet
 PORTVERSION=	1.0.5
@@ -14,7 +14,6 @@ LICENSE=	GPLv3
 
 USE_BZIP2=	yes
 USE_QT4=	moc_build qmake_build rcc_build iconengines imageformats
-MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
 
 PORTDOCS=	CREDITS ChangeLog
