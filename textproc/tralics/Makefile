@@ -1,5 +1,5 @@
 # Created by: siasia
-# $FreeBSD: ports/textproc/tralics/Makefile,v 1.5 2012/12/10 04:50:38 svnexp Exp $
+# $FreeBSD: textproc/tralics/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tralics
 PORTVERSION=	2.15.0
@@ -14,7 +14,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
 MAKE_ARGS=	CC="${CXX}" CXX="${CXX}" CPPFLAGS="${CXXFLAGS}"
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
