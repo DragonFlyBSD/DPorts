@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: www/yii/Makefile 320364 2013-06-09 17:48:16Z miwi $
+# $FreeBSD: www/yii/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	yii
 PORTVERSION=	1.1.13
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	GOOGLE_CODE \
 		SF
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A high-performance component-based PHP framework
 
 LICENSE=	BSD
