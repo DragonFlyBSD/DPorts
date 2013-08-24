@@ -2,7 +2,7 @@
 # Date created:		2 May 1998
 # Whom:			Bruce A. Mah <bmah@ca.sandia.gov>
 #
-# $FreeBSD: x11/dxpc/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: x11/dxpc/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	dxpc
@@ -22,7 +22,6 @@ USE_XORG=	x11
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-lzo-lib=${LOCALBASE}
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		dxpc.1
 PLIST_FILES=	bin/dxpc
