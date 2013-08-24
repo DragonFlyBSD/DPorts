@@ -1,5 +1,5 @@
 # Created by: Eugene M. Kim <ab@astralblue.net>
-# $FreeBSD: mail/spamass-milter/Makefile 319871 2013-06-04 15:47:06Z bapt $
+# $FreeBSD: mail/spamass-milter/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	spamass-milter
 PORTVERSION=	0.3.2
@@ -15,7 +15,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 LICENSE=	GPLv2
 
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	ADDAUTH_PATCH REJECTTEXT_PATCH LDAP SENDMAIL_PORT IPV6
 ADDAUTH_PATCH_DESC=	Bypass checks for SMTP AUTH connections
