@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Sys-Info
-# Date created:		2011-10-09
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Sys-Info/Makefile,v 1.2 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Sys-Info/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Test-Sys-Info
 PORTVERSION=	0.20
@@ -17,7 +13,8 @@ COMMENT=	Centralized test suite for Sys::Info
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::Sys::Info.3 \
 		Test::Sys::Info::Driver.3
