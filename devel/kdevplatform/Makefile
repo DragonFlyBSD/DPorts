@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevplatform/Makefile 322193 2013-07-02 19:20:28Z rakuco $
+# $FreeBSD: devel/kdevplatform/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdevplatform
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -21,7 +21,6 @@ USE_QT4=	qmake_build moc_build uic_build rcc_build \
 		corelib designer_build gui webkit
 USE_BZIP2=	yes
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 PLIST_SUB+=	SHLIB_VER=7.0.0 \
