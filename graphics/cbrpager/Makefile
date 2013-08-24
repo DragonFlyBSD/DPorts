@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/cbrpager/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: graphics/cbrpager/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cbrpager
 PORTVERSION=	0.9.22
@@ -22,7 +22,6 @@ BUILD_DEPENDS=	jpegtopnm:${PORTSDIR}/graphics/netpbm
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_GNOME=	libgnomeui
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
