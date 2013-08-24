@@ -1,5 +1,5 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: graphics/converseen/Makefile 323614 2013-07-24 17:59:10Z pawel $
+# $FreeBSD: graphics/converseen/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	converseen
 PORTVERSION=	0.6.4
@@ -27,6 +27,5 @@ USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender xt
 USE_QT4=	corelib gui linguist_build moc_build qmake_build \
 		rcc_build uic_build
 USE_GNOME=	glib20
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
