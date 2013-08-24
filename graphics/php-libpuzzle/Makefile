@@ -2,7 +2,7 @@
 # Date created:				18 May 2010
 # Whom:					Naram Qashat <cyberbotx@cyberbotx.com>
 #
-# $FreeBSD: graphics/php-libpuzzle/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/php-libpuzzle/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libpuzzle
@@ -24,7 +24,6 @@ LICENSE_FILES=	${WRKSRC}/COPYING
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/php/${PORTNAME}
 
-MAKE_JOBS_SAFE=	yes
 
 USE_BZIP2=	yes
 
