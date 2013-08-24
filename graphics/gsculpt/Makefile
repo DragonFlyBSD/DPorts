@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/gsculpt/Makefile,v 1.41 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/gsculpt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gsculpt
 PORTVERSION=	0.99.47
@@ -26,7 +26,6 @@ USE_PYTHON=	2.4+
 USE_SCONS=	yes
 SCONS_BUILDENV=	${SCONS_ENV}
 USE_LDCONFIG=	${PREFIX}/lib/gSculpt
-MAKE_JOBS_SAFE=	yes
 
 DATADIR=	${PREFIX}/share/gSculpt
 
