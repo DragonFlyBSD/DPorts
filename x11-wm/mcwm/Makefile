@@ -1,5 +1,5 @@
 # Created by: Jakub Lach <jakub_lach@mailplus.pl>
-# $FreeBSD: ports/x11-wm/mcwm/Makefile,v 1.14 2013/02/10 13:48:59 svnexp Exp $
+# $FreeBSD: x11-wm/mcwm/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mcwm
 PORTVERSION=	20130209
@@ -16,7 +16,6 @@ LIB_DEPENDS=	xcb-util:${PORTSDIR}/x11/xcb-util \
 		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms \
 		xcb-icccm:${PORTSDIR}/x11/xcb-util-wm
 
-MAKE_JOBS_SAFE=	yes
 
 USE_XORG=	x11 xrandr
 USE_BZIP2=	yes
