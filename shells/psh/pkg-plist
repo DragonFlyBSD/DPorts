@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/shells/psh/pkg-plist,v 1.16 2012/11/17 06:01:23 svnexp Exp $
+@comment $FreeBSD: shells/psh/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/psh
 %%DATADIR%%/complete/debian
 %%DATADIR%%/complete/perl
