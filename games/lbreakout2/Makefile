@@ -2,7 +2,7 @@
 # Date created:		12 June 2002
 # Whom:			verm@drunkmonk.net
 #
-# $FreeBSD: ports/games/lbreakout2/Makefile,v 1.26 2012/11/17 05:57:43 svnexp Exp $
+# $FreeBSD: games/lbreakout2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	lbreakout2
@@ -22,7 +22,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-sdl-net \
 		--localstatedir=/var/games \
 		--disable-nls
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
 LDFLAGS+=	-L${LOCALBASE}/lib
