@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/lander/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/lander/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lander
 PORTVERSION=	0.6.4
@@ -18,7 +18,6 @@ GNU_CONFIGURE=	yes
 USES=		gettext
 USE_SDL=	sdl image mixer
 USE_GL=		gl glu
-MAKE_JOBS_SAFE=	yes
 USE_GCC=	4.2+
 
 CPPFLAGS+=	-I${LOCALBASE}/include
