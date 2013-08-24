@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: graphics/scantailor/Makefile 324335 2013-08-07 08:40:17Z vg $
+# $FreeBSD: graphics/scantailor/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	scantailor
 PORTVERSION=	0.9.11.1
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost
 USES=		cmake gettext iconv
 USE_QT4=	gui xml qmake_build uic_build moc_build rcc_build \
 		linguist_build
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES="Scan Tailor" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Graphics;Scanning;" false
