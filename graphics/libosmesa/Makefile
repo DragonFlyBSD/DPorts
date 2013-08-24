@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: graphics/libosmesa/Makefile 324266 2013-08-05 08:48:10Z gahr $
+# $FreeBSD: graphics/libosmesa/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	libosmesa
 PORTVERSION=	9.1.6
@@ -45,7 +45,7 @@ CC=	/usr/bin/clang
 CXX=	/usr/bin/clang++
 CPP=	/usr/bin/clang-cpp
 .else
-USE_GCC=4.6+
+USE_GCC=yes
 .endif
 .endif
 
