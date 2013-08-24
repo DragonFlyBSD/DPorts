@@ -1,5 +1,5 @@
 # Created by: alexp
-# $FreeBSD: ports/net/rinetd/Makefile,v 1.30 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/rinetd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rinetd
 PORTVERSION=	0.62
@@ -17,7 +17,6 @@ OPTIONS_DEFINE=	DOCS
 
 WRKSRC=		${WRKDIR}/rinetd-${PORTVERSION}
 
-MAKE_JOBS_SAFE=	yes
 USE_DOS2UNIX=	yes
 
 MAN8=		rinetd.8
