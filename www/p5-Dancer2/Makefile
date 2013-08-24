@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer2/Makefile 324305 2013-08-06 08:03:52Z wen $
+# $FreeBSD: www/p5-Dancer2/Makefile 324941 2013-08-19 01:39:43Z wen $
 
 PORTNAME=	Dancer2
-PORTVERSION=	0.07
+PORTVERSION=	0.08
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
