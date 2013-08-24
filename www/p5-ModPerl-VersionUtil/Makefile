@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-ModPerl-VersionUtil
-# Date created:		2011-06-12
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-ModPerl-VersionUtil/Makefile,v 1.2 2012/11/17 06:02:51 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: www/p5-ModPerl-VersionUtil/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	ModPerl-VersionUtil
 PORTVERSION=	0.03
@@ -14,9 +10,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Makes it easier to investigate your mod_perl version
 
-RUN_DEPENDS=	p5-Class-Data-Inheritable>=0.02:${PORTSDIR}/devel/p5-Class-Data-Inheritable
+BUILD_DEPENDS=	p5-Class-Data-Inheritable>=0.02:${PORTSDIR}/devel/p5-Class-Data-Inheritable
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		ModPerl::VersionUtil.3
 
