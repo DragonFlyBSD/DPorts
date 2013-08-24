@@ -3,7 +3,7 @@
 # Date created:			Mar 4, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/games/scid/Makefile,v 1.18 2013/02/06 19:12:11 svnexp Exp $
+# $FreeBSD: games/scid/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	scid
@@ -21,7 +21,6 @@ HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 TCL_LIBRARY=	-L${LOCALBASE}/lib -ltcl${USE_TCL}
 
