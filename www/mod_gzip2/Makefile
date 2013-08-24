@@ -2,7 +2,7 @@
 # Date created:		2008-06-27
 # Whom:			Stefan `Sec` Zehl <sec@42.org>
 #
-# $FreeBSD: ports/www/mod_gzip2/Makefile,v 1.21 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_gzip2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_gzip2
@@ -15,7 +15,6 @@ DISTNAME=	mod_gzip-${PORTVERSION}
 MAINTAINER=	sec@42.org
 COMMENT=	An Internet Content Acceleration module for Apache2+
 
-MAKE_JOBS_SAFE=  yes
 
 USE_APACHE=	22+
 AP_FAST_BUILD=	yes
