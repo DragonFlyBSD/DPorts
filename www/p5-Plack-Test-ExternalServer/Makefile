@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Plack-Test-ExternalServer/Makefile 319037 2013-05-25 08:15:58Z sunpoet $
+# $FreeBSD: www/p5-Plack-Test-ExternalServer/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Plack-Test-ExternalServer
 PORTVERSION=	0.01
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Plack::Test::ExternalServer.3
 
