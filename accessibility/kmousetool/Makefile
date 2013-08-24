@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/kmousetool/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: accessibility/kmousetool/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kmousetool
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,6 @@ USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USES=		cmake:outsource
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USE_XORG=	xtst
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	kmousetool.1
 
