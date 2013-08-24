@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Marpa
-# Date created:		2011-10-25
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: lang/p5-Marpa/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: lang/p5-Marpa/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Marpa
 PORTVERSION=	0.208
@@ -18,10 +14,10 @@ COMMENT=	Parse any Language You Can Describe in BNF
 
 BUILD_DEPENDS=	p5-HTML-Parser>=3.64:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-PPI>=1.206:${PORTSDIR}/textproc/p5-PPI
-RUN_DEPENDS=	p5-HTML-Parser>=3.64:${PORTSDIR}/www/p5-HTML-Parser \
-		p5-PPI>=1.206:${PORTSDIR}/textproc/p5-PPI
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Marpa::Advanced::Algorithm.3 \
 		Marpa::Advanced::Bibliography.3 \
