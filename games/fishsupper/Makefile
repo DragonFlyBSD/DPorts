@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/fishsupper/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/fishsupper/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fishsupper
 PORTVERSION=	0.1.6
@@ -16,7 +16,6 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_SDL=	sdl image mixer
 USE_GL=		gl
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
