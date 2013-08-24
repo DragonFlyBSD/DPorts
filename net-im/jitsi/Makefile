@@ -1,23 +1,21 @@
 # Created by: Tzanetos Balitsaris <tzabal@it.teithe.gr>
-# $FreeBSD: net-im/jitsi/Makefile 315152 2013-03-24 19:16:45Z cs $
+# $FreeBSD: net-im/jitsi/Makefile 324687 2013-08-14 08:22:59Z cs $
 
 PORTNAME=	jitsi
-PORTVERSION=	1.1
+PORTVERSION=	2.2
 CATEGORIES=	net-im java
-MASTER_SITES=	https://download.jitsi.org/jitsi/nightly/src/ \
-		http://aetos.it.teithe.gr/~tzabal/files/
-DISTNAME=	jitsi-src-1.1.4456.10418
+MASTER_SITES=	http://www.c-s.li/ports/ \
+		https://download.jitsi.org/jitsi/src/
+DISTNAME=	jitsi-src-2.2.4603.9615
 
 MAINTAINER=	tzabal@it.teithe.gr
 COMMENT=	Open source IM and VoIP application
 
+MAN1=		jitsi.1
 USE_ZIP=	yes
 USE_JAVA=	yes
 USE_ANT=	yes
 MAKE_ARGS=	rebuild
-USE_LDCONFIG=	yes
-
-WRKSRC=		${WRKDIR}/${PORTNAME}
 
 DESKTOP_ENTRIES="Jitsi" \
 		"VoIP and Instant Messenger" \
@@ -64,6 +62,10 @@ do-install:
 # Wrapper script to run Jitsi
 	@${ECHO_CMD} ">> Installing wrapper script..."
 	@${INSTALL_SCRIPT} ${FILESDIR}/jitsi.sh ${PREFIX}/bin/jitsi
+
+# Manual page
+	@${ECHO_CMD} ">> Installing the manual page..."
+	@${INSTALL_MAN} ${FILESDIR}/jitsi.1 ${MANPREFIX}/man/man1
 
 # Desktop related
 	@${ECHO_CMD} ">> Installing Jitsi's logo..."
