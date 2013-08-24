@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: multimedia/k9copy-kde4/Makefile 319909 2013-06-04 21:20:31Z jgh $
+# $FreeBSD: multimedia/k9copy-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	k9copy
 PORTVERSION=	2.3.4
@@ -18,7 +18,6 @@ LIB_DEPENDS=	xine:${PORTSDIR}/multimedia/libxine \
 USES=		cmake gettext
 USE_KDE4=	kdeprefix kdelibs automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	${PORTNAME}-kde4
 
