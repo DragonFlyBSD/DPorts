@@ -1,10 +1,11 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-Machines/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-SAX-Machines/Makefile 325009 2013-08-19 17:37:34Z tobez $
 
 PORTNAME=	XML-SAX-Machines
-PORTVERSION=	0.42
+PORTVERSION=	0.46
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:PERIGRIN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -20,7 +21,9 @@ USE_PERL5=	configure
 MAN3=		XML::Filter::Distributor.3 XML::Filter::DocSplitter.3 \
 		XML::Filter::Merger.3 XML::Filter::Tee.3 XML::SAX::ByRecord.3 \
 		XML::SAX::EventMethodMaker.3 XML::SAX::Machine.3 \
-		XML::SAX::Machines.3 XML::SAX::Machines::ConfigHelper.3 \
+		XML::SAX::Machines.3 \
+		XML::SAX::Machines::ConfigDefaults.3 \
+		XML::SAX::Machines::ConfigHelper.3 \
 		XML::SAX::Manifold.3 XML::SAX::Pipeline.3 XML::SAX::Tap.3
 
 regression-test: build
