@@ -1,5 +1,5 @@
 # Created by: Steffen Vogelreuter
-# $FreeBSD: sysutils/gtk-imonc/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: sysutils/gtk-imonc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gtk-imonc
 PORTVERSION=	0.6.4.1
@@ -25,7 +25,6 @@ USES=		pkgconfig gettext iconv
 USE_GNOME=	gdkpixbuf2 gtk20
 USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
