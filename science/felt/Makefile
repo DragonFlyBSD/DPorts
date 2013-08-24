@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: science/felt/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: science/felt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	felt
 PORTVERSION=	3.07
@@ -24,7 +24,6 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 		--x-defaults="${LOCALBASE}/lib/X11/app-defaults" \
 		--x-includes="${LOCALBASE}/include" \
 		--x-libraries="${LOCALBASE}/lib"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		burlap.1 corduroy.1 felt.1 patchwork.1 velvet.1 yardstick.1
 MAN3=		Drawing.3
