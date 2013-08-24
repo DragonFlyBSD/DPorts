@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: news/pan/Makefile 318756 2013-05-22 09:30:19Z kwm $
+# $FreeBSD: news/pan/Makefile 324933 2013-08-18 19:19:11Z swills $
 #   $MCom: ports/news/pan/Makefile,v 1.7 2008/01/19 22:45:42 mezz Exp $
 
 PORTNAME=	pan
@@ -23,7 +23,7 @@ USES=		pathfix gettext
 USE_GNOME=	intlhack
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lgnuregex
+LDFLAGS+=	-L${LOCALBASE}/lib -lgnuregex -liconv
 
 OPTIONS_DEFINE=	GTKSPELL GTK3
 OPTIONS_DEFAULT=GTKSPELL
