@@ -1,5 +1,5 @@
 # Created by: <trasz@FreeBSD.org>
-# $FreeBSD: ports/audio/calf/Makefile,v 1.12 2012/12/31 16:18:05 svnexp Exp $
+# $FreeBSD: audio/calf/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	calf
 PORTVERSION=	0.0.19
@@ -27,7 +27,6 @@ USE_GNOME=	gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
