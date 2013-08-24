@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: graphics/exiftran/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/exiftran/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	exiftran
 DISTNAME=	fbida-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
@@ -17,7 +17,6 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAKE_JOBS_SAFE=	yes
 MAKE_ARGS+=	WRKSRC=${WRKSRC} BINDIR=${PREFIX}/bin MANDIR=${MANPREFIX}/man
 
 PLIST_FILES=	bin/exiftran bin/thumbnail.cgi
