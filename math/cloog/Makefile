@@ -1,4 +1,4 @@
-# $FreeBSD: math/cloog/Makefile 321979 2013-06-28 19:38:58Z lippe $
+# $FreeBSD: math/cloog/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cloog
 PORTVERSION=	0.18.0
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-gmp-prefix=${PREFIX}
 CONFIGURE_ENV=	pkgconfig_libdir=${PREFIX}/libdata/pkgconfig/
 
-MAKE_JOBS_SAFE=	yes
 
 post-install:
 	${LN} -s ${PREFIX}/lib/libcloog-isl.so.4 \
