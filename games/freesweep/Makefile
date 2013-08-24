@@ -2,7 +2,7 @@
 # Date created:				25 July 1999
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/games/freesweep/Makefile,v 1.18 2012/11/17 05:57:39 svnexp Exp $
+# $FreeBSD: games/freesweep/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	freesweep
@@ -22,7 +22,6 @@ CONFIGURE_ARGS=	--with-prefsdir=${DATADIR} \
 		--with-scoresdir=${DATADIR} \
 		--disable-debug-log
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		freesweep.6
 PORTDOCS=	CHANGES README
