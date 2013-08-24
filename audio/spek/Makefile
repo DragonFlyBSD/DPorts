@@ -1,5 +1,5 @@
 # Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
-# $FreeBSD: audio/spek/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: audio/spek/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	spek
 PORTVERSION=	0.8.2
@@ -28,7 +28,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	FFMPEG_CFLAGS="-I${LOCALBASE}/include/ffmpeg1" \
 		FFMPEG_LIBS="-lavcodec1 -lavformat1 -lavutil1 -L${LOCALBASE}/lib/ffmpeg1"
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-install:
 	-@update-desktop-database
