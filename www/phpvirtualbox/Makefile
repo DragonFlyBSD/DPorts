@@ -1,10 +1,10 @@
 # Created by:	Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/phpvirtualbox/Makefile 323161 2013-07-17 11:57:34Z decke $
+# $FreeBSD: www/phpvirtualbox/Makefile 324596 2013-08-11 16:24:04Z decke $
 
 PORTNAME=	phpvirtualbox
-DISTVERSION=	4.2-5
+DISTVERSION=	4.2-6
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
+MASTER_SITES=	SF/${PORTNAME} \
 		LOCAL/decke
 
 MAINTAINER=	vbox@FreeBSD.org
