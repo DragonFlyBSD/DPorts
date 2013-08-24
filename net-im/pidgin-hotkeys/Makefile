@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-im/pidgin-hotkeys/Makefile,v 1.29 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/pidgin-hotkeys/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pidgin-hotkeys
 PORTVERSION=	0.2.4
@@ -15,7 +15,6 @@ RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 USE_GNOME=	pkgconfig gtk20
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	lib/pidgin/hotkeys.so \
 		lib/pidgin/hotkeys.la
