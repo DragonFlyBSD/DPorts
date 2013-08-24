@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: games/qnetwalk/Makefile 318736 2013-05-21 23:54:31Z amdmi3 $
+# $FreeBSD: games/qnetwalk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qnetwalk
 PORTVERSION=	1.3
@@ -12,7 +12,6 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Qt-version of the NetWalk game
 
 USE_QT4=	corelib gui qmake_build moc_build rcc_build
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		qnetwalk.6
 
