@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/frikqcc/Makefile 314428 2013-03-17 12:39:11Z danfe $
+# $FreeBSD: games/frikqcc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	frikqcc
 PORTVERSION=	2.6
@@ -16,7 +16,6 @@ LICENSE=	GPLv2
 USE_ZIP=	yes
 
 MAKEFILE=	${FILESDIR}/Makefile
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/frikqcc bin/frikqcdec
 
