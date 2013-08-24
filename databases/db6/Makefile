@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: databases/db6/Makefile 323622 2013-07-24 21:57:54Z mandree $
+# $FreeBSD: databases/db6/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	db6
 PORTVERSION=	6.0.19.0
@@ -24,7 +24,6 @@ CONFIGURE_ARGS=	--enable-cxx --enable-stl \
 		--bindir=${PREFIX}/bin/${PORTNAME}
 CONFIGURE_SCRIPT=	../dist/configure
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_GMAKE=	yes
 INSTALL_TARGET=	install_include install_lib install_utilities
 LIBTOOLFILES=	${CONFIGURE_SCRIPT}
