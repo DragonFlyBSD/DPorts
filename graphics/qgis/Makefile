@@ -1,9 +1,9 @@
 # Created by: Laurent Courty
-# $FreeBSD: graphics/qgis/Makefile 315752 2013-04-07 11:58:04Z wen $
+# $FreeBSD: graphics/qgis/Makefile 325086 2013-08-21 03:46:21Z sunpoet $
 
 PORTNAME=	qgis
 PORTVERSION=	1.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://qgis.org/downloads/ \
 		http://download.osgeo.org/qgis/src/
