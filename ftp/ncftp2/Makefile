@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ftp/ncftp2/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: ftp/ncftp2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ncftp
 PORTVERSION=	2.4.3
@@ -19,7 +19,6 @@ READLINE_DESC=	Enable readline support
 USES=		ncurses
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_func_getmaxyx=yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		ncftp2.1
 PLIST_FILES=	bin/${LATEST_LINK}
