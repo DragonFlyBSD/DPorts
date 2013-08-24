@@ -1,5 +1,5 @@
 # Created by: n_hibma@qubesoft.com
-# $FreeBSD: mail/mailman/Makefile 322407 2013-07-06 19:24:51Z wxs $
+# $FreeBSD: mail/mailman/Makefile 325095 2013-08-21 08:05:53Z mandree $
 
 PORTNAME=	mailman
 DISTVERSION=	2.1.14
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	mailman
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Mailing list manager (MLM) with a user-friendly web front-end
 
 LICENSE=	GPLv2
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=--with-python=${PYTHON_CMD} \
 		--with-groupname=${MM_GROUPNAME} \
 		--with-mail-gid=${MAIL_GID} --with-cgi-gid=${CGI_GID} \
 		--with-permcheck=no
-MAKE_JOBS_SAFE=	yes
 
 # The Mailman port supports a number of variables that may be tweaked at
 # build time.  Getting the values of some of them right is crucial!
