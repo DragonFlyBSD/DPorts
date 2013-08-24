@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: multimedia/quark/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/quark/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	quark
 PORTVERSION=	3.24
@@ -22,7 +22,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS COPYING INSTALL README
 GCONF_SCHEMAS=	quark.schemas strange-quark.schemas
