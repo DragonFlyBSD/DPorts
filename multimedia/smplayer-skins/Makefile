@@ -1,8 +1,8 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: ports/multimedia/smplayer-skins/Makefile,v 1.1 2013/02/18 20:51:33 svnexp Exp $
+# $FreeBSD: multimedia/smplayer-skins/Makefile 325008 2013-08-19 17:35:46Z pawel $
 
 PORTNAME=	smplayer-skins
-PORTVERSION=	20121029
+PORTVERSION=	20130605
 CATEGORIES=	multimedia audio kde
 MASTER_SITES=	SF/smplayer/SMPlayer-skins/${PORTVERSION}
 
