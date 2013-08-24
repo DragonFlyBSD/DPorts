@@ -2,7 +2,7 @@
 # Date created:				2008/05/27
 # Whom:					chinsan
 #
-# $FreeBSD: ports/www/mod_fileiri/Makefile,v 1.9 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_fileiri/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_fileiri
@@ -16,7 +16,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	A http IRIs module for Apache 2
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22+
 
