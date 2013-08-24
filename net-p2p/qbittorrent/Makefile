@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent/Makefile 322764 2013-07-11 11:48:18Z wg $
+# $FreeBSD: net-p2p/qbittorrent/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qbittorrent
 PORTVERSION=	3.0.10
@@ -20,7 +20,6 @@ USES=		pkgconfig
 HAS_CONFIGURE=	yes
 USE_QT4=	corelib network qmake_build moc_build rcc_build
 QT_NONSTANDARD=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1?=		qbittorrent.1
 
