@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: x11/xnee/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: x11/xnee/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xnee
 PORTVERSION=	3.16
@@ -14,7 +14,6 @@ LICENSE=	GPLv3
 GNU_CONFIGURE=	yes
 USE_XORG=	xtst
 USES=		gmake pathfix
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--enable-cli --disable-doc --disable-xinput2
 
