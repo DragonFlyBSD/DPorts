@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xload/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xload/Makefile 324720 2013-08-14 13:44:33Z zeising $
 
 PORTNAME=	xload
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
