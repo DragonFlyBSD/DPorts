@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pgsphere
-# Date created:		2010-02-09
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-#
-# $FreeBSD: ports/databases/pgsphere/Makefile,v 1.9 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
+# $FreeBSD: databases/pgsphere/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	pgsphere
 PORTVERSION=	1.1.1
@@ -18,7 +14,7 @@ COMMENT=	Spherical data types, functions, and operators for PostgreSQL
 DATADIR=	${PREFIX}/share/postgresql
 DOCSDIR?=	${PREFIX}/share/doc/postgresql
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 USE_PGSQL=	yes
 
