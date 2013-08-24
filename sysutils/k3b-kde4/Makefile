@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/k3b-kde4/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: sysutils/k3b-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.2
@@ -25,7 +25,6 @@ USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb sharedmime
 USE_QT4=	gui dbus network phonon qt3support sql svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	CDRDAO DVDPLUSRW EMOVIX VCDIMAGER FFMPEG FLAC MAD \
 		MUSEPACK SNDFILE VORBIS_DEC LAME SOX VORBIS_ENC \
