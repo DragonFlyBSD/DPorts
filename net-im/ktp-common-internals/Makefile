@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-common-internals/Makefile 322191 2013-07-02 19:04:18Z rakuco $
+# $FreeBSD: net-im/ktp-common-internals/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ktp-common-internals
 PORTVERSION=	${KTP_VERSION}
@@ -19,7 +19,6 @@ USE_QT4=	declarative script \
 		moc_build qmake_build rcc_build uic_build
 USES=		cmake gettext
 USE_BZIP2=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
