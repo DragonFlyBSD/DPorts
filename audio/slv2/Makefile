@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD: audio/slv2/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
+# $FreeBSD: audio/slv2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	slv2
 PORTVERSION=	0.6.6
@@ -20,7 +20,6 @@ USES=		pkgconfig
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
