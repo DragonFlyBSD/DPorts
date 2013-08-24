@@ -1,4 +1,4 @@
-# $FreeBSD: security/fbopenssl/Makefile 321211 2013-06-18 18:40:13Z hrs $
+# $FreeBSD: security/fbopenssl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fbopenssl
 PORTVERSION=	0.0.4
@@ -14,7 +14,6 @@ USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 MAKEFILE=	BSDMakefile
 MAKE_ENV=	BSD_INSTALL_DATA="${BSD_INSTALL_DATA}"
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PORTDOCS=	readme.txt
 
