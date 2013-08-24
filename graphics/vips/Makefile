@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/vips/Makefile 321692 2013-06-24 17:00:40Z antoine $
+# $FreeBSD: graphics/vips/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vips
 PORTVERSION=	7.26.3
@@ -37,7 +37,6 @@ USE_PERL5_BUILD=yes
 USE_GNOME=	gnomehack glib20 pkgconfig pango libxml2
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 
 post-configure:
