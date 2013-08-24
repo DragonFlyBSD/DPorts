@@ -2,7 +2,7 @@
 # Date created:				15 May 2005
 # Whom:					rsmith@xs4all.nl
 #
-# $FreeBSD: ports/science/lamprop/Makefile,v 1.9 2012/11/17 06:00:58 svnexp Exp $
+# $FreeBSD: science/lamprop/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	lamprop
@@ -18,7 +18,6 @@ PLIST_FILES=	bin/lamprop
 MAN1=		lamprop.1
 MAN5=		lamprop.5
 MANCOMPRESSED=	yes
-MAKE_JOBS_SAFE=	yes
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
