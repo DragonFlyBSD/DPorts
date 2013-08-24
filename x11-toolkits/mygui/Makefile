@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-toolkits/mygui/Makefile 323738 2013-07-26 17:27:42Z amdmi3 $
+# $FreeBSD: x11-toolkits/mygui/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	mygui
 PORTVERSION=	3.2.0
@@ -19,9 +19,8 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libOgreMain.so:${PORTSDIR}/graphics/ogre3d \
 USE_ZIP=	yes
 USES=		cmake
 CMAKE_ARGS=	-DMYGUI_BUILD_DEMOS=OFF -DMYGUI_BUILD_DOCS=OFF
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_DOS2UNIX=	*.cpp *.h
 
 post-patch:
