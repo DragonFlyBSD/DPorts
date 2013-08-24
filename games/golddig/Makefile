@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: games/golddig/Makefile 313189 2013-03-02 05:41:16Z miwi $
+# $FreeBSD: games/golddig/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	golddig
 PORTVERSION=	3.1
@@ -12,7 +12,6 @@ COMMENT=	Getting the Gold and Avoiding Death
 
 USE_XORG=	x11
 MAKE_ENV=	X11BASE="${LOCALBASE}"
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
