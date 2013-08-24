@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/xvile/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: editors/xvile/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xvile
 PORTVERSION=	9.8k
@@ -35,7 +35,6 @@ CONFIGURE_ARGS=	--disable-imake \
 		--with-xpm \
 		--with-pixmapdir=${PREFIX}/share/pixmaps
 MAKEFILE=	makefile
-MAKE_JOBS_SAFE=	yes
 
 DATADIR=	${PREFIX}/share/vile
 
