@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: devel/kyra/Makefile 315293 2013-03-26 14:11:35Z miwi $
+# $FreeBSD: devel/kyra/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kyra
 PORTVERSION=	2.1.3
@@ -26,7 +26,6 @@ MAKEFILE=	MakefileKyra
 MAKE_ENV=	MAKE_KYRA=RELEASE KYRA_OPENGL=YES
 MAKE_ARGS=	CC="${CC}" CXX="${CXX}" LD="${CXX}" \
 		RELEASE_CFLAGS="${CFLAGS}" RELEASE_CXXFLAGS="${CXXFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 do-install:
 .for i in encoder spriteed
