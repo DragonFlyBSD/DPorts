@@ -2,7 +2,7 @@
 # Date created:				4 May 1999
 # Whom:					Andrey Zakhvatov <andy@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/chpp/Makefile,v 1.21 2012/11/17 06:01:53 svnexp Exp $
+# $FreeBSD: textproc/chpp/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	chpp
@@ -23,7 +23,6 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoheader aclocal automake autoconf
 AUTOMAKE_ARGS=	--add-missing --copy --force-missing
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
