@@ -2,7 +2,7 @@
 # Date created:				21 Feb 2003
 # Whom:					Sunagawa Koji <koj@ofug.net>
 #
-# $FreeBSD: japanese/mailman/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: japanese/mailman/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mailman
@@ -37,7 +37,6 @@ CONFIGURE_ARGS+=--with-python=${PYTHON_CMD} \
 		--with-groupname=${MM_GROUPNAME} \
 		--with-mail-gid=${MAIL_GID} --with-cgi-gid=${CGI_GID} \
 		--with-permcheck=no
-MAKE_JOBS_SAFE=	yes
 
 # The Mailman port supports a number of variables that may be tweaked at
 # build time.  Getting the values of some of them right is crucial!
