@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Find-Object/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-Find-Object/Makefile 325055 2013-08-20 15:04:15Z mat $
 
 PORTNAME=	File-Find-Object
-PORTVERSION=	0.2.7
+PORTVERSION=	0.2.8
 DISTVERSIONPREFIX=v
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
