@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/volleyball/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
+# $FreeBSD: games/volleyball/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	volleyball
 PORTVERSION=	0.8.6
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 USES=		gettext
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CONFIGURE_ARGS=	--mandir="${MANPREFIX}/man" --disable-nls # strangeness in nls support
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README
 MAN6=		volleyball.6
