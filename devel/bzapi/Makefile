@@ -1,9 +1,4 @@
-# New ports collection makefile for:	bzapi
-# Date created:			October 27, 2011
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/bzapi/Makefile,v 1.3 2012/11/17 05:55:36 svnexp Exp $
-#
+# $FreeBSD: devel/bzapi/Makefile 324913 2013-08-18 13:31:33Z bdrewery $
 
 PORTNAME=	bzapi
 DISTVERSION=	165:82e75bdd00be
@@ -11,7 +6,7 @@ PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	LOCAL/pgollucci
 
-MAINTAINER=	pgollucci@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Bugzilla REST API
 
 BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.80011:${PORTSDIR}/www/p5-Catalyst-Runtime \
