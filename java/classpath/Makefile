@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: java/classpath/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: java/classpath/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	classpath
 PORTVERSION=	0.99
@@ -139,7 +139,7 @@ USE_JAVA=		yes
 JAVA_VERSION=		1.6+
 .else
 USE_BINUTILS=		yes
-USE_GCC=		4.6+
+USE_GCC=		yes
 GCC_SUFX=		${_USE_GCC:S/.//}
 JAR?=			${LOCALBASE}/bin/gjar${GCC_SUFX}
 JAVA?=			${LOCALBASE}/bin/gij${GCC_SUFX}
