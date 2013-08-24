@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@FreeBSD.org>
-# $FreeBSD: x11/thingylaunch/Makefile 318398 2013-05-17 19:28:04Z gahr $
+# $FreeBSD: x11/thingylaunch/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	thingylaunch
 PORTVERSION=	1.1.5
@@ -13,7 +13,6 @@ LICENSE_COMB=	multi
 
 USE_XORG=	x11 xproto
 USES=		cmake:outsource
-MAKE_JOBS_SAFE=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gahr
