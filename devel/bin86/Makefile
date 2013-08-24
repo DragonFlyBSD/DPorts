@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/devel/bin86/Makefile,v 1.26 2012/12/01 02:08:29 svnexp Exp $
+# $FreeBSD: devel/bin86/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bin86
 PORTVERSION=	0.16.19
@@ -11,7 +11,6 @@ COMMENT=	16-bit assembler and loader
 
 OPTIONS_DEFINE=	DOCS
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		as86.1 ld86.1
 PORTDOCS=	ChangeLog README README-0.4
