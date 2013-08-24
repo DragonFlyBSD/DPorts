@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: biology/phylip/Makefile 321697 2013-06-24 18:09:52Z rakuco $
+# $FreeBSD: biology/phylip/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	phylip
 PORTVERSION=	3.695
@@ -24,7 +24,6 @@ MAKEFILE=	Makefile.unx
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DUNX" \
 		DFLAGS="${CFLAGS} -DX -I${LOCALBASE}/include" \
 		DLIBS="-L${LOCALBASE}/lib -lX11 -lXaw -lXt -lm"
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 PORTDOCS=	*
