@@ -2,7 +2,7 @@
 # Date created:		Mon 11 Aug 2008 11:28:33 UTC
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/libmetalink/Makefile,v 1.7 2012/11/17 05:59:41 svnexp Exp $
+# $FreeBSD: misc/libmetalink/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #
 
 PORTNAME=	libmetalink
@@ -20,13 +20,12 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 FETCH_ARGS=
 USE_BZIP2=	yes
-USE_GCC=	4.4+
+USE_GCC=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	\
 		--with-libexpat-prefix="${LOCALBASE}" \
 		--with-libxml2="no"
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 # Examples to install
 EXAMPLES_FILES=	\
