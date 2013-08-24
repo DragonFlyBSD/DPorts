@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/gnucflow/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: devel/gnucflow/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gnucflow
 PORTVERSION=	1.4
@@ -16,7 +16,6 @@ CONFLICTS=	bsdcflow-[0-9]* cflow-[0-9]*
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 INFO=		cflow
 
