@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: textproc/xmlroff/Makefile 316748 2013-04-28 20:50:13Z hrs $
+# $FreeBSD: textproc/xmlroff/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xmlroff
 PORTVERSION=	0.6.2
@@ -25,7 +25,6 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
