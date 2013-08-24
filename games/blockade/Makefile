@@ -2,7 +2,7 @@
 # Date created:		29 May 1999
 # Whom:			Chris Piazza <cpiazza@FreeBSD.org>
 #
-# $FreeBSD: ports/games/blockade/Makefile,v 1.15 2012/11/17 05:57:33 svnexp Exp $
+# $FreeBSD: games/blockade/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	blockade
@@ -19,7 +19,6 @@ COMMENT=	An X version of the `blockade' Macintosh game
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_XORG=	x11
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		blockade.6
 PLIST_FILES=	bin/blockade
