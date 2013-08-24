@@ -1,5 +1,5 @@
 # Created by: Niclas Zeising <zeising@FreeBSD.org>
-# $FreeBSD: net/ostinato/Makefile 314580 2013-03-18 15:14:27Z vanilla $
+# $FreeBSD: net/ostinato/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ostinato
 PORTVERSION=	0.5.1
@@ -15,7 +15,6 @@ LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
 
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build network script \
 		xml
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/drone \
 		bin/ostinato
