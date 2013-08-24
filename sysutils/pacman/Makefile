@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/pacman/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: sysutils/pacman/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pacman
 PORTVERSION=	4.0.3
@@ -19,7 +19,6 @@ BUILD_DEPENDS=	asciidoc:${PORTSDIR}/textproc/asciidoc \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--with-root-dir="${PACMAN_ROOT}" \
 		--localstatedir=/var
 USE_LDCONFIG=	yes
