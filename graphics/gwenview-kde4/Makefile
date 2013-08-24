@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/gwenview-kde4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: graphics/gwenview-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gwenview
 PORTVERSION=	${KDE4_VERSION}
@@ -23,7 +23,6 @@ USES=		cmake:outsource
 USE_QT4=	corelib gui opengl qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
