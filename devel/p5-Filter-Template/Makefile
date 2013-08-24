@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Filter-Template/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Filter-Template/Makefile 325056 2013-08-20 15:05:56Z mat $
 
 PORTNAME=	Filter-Template
-PORTVERSION=	1.040
+PORTVERSION=	1.043
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
