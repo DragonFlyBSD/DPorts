@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/meritous/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/meritous/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	meritous
 PORTVERSION=	1.2
@@ -19,7 +19,6 @@ USE_GMAKE=	yes
 USE_SDL=	sdl mixer image
 ALL_TARGET=	default
 USE_DOS2UNIX=	dat/d/helpfile.txt src/*.c
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PORTDATA=	*
