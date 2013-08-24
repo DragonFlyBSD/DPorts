@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/simsu/Makefile,v 1.8 2013/02/23 19:47:52 svnexp Exp $
+# $FreeBSD: games/simsu/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	simsu
 PORTVERSION=	1.2.3
@@ -16,7 +16,6 @@ LICENSE=	GPLv3
 USE_BZIP2=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	CREDITS ChangeLog
 
