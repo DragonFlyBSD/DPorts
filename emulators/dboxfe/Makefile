@@ -1,4 +1,4 @@
-# $FreeBSD: ports/emulators/dboxfe/Makefile,v 1.10 2013/01/23 15:05:33 svnexp Exp $
+# $FreeBSD: emulators/dboxfe/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dboxfe
 PORTVERSION=	0.1.3
@@ -15,7 +15,6 @@ RUN_DEPENDS=	dosbox:${PORTSDIR}/emulators/dosbox
 USE_BZIP2=	yes
 USE_QT4=	gui network xml uic_build moc_build qmake_build rcc_build
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/dboxfe \
 		bin/dboxfetray \
