@@ -2,7 +2,7 @@
 # Date created:		Thu Apr 29 16:03:45 UTC 2004
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/security/pam_pgina/Makefile,v 1.7 2012/11/17 06:01:14 svnexp Exp $
+# $FreeBSD: security/pam_pgina/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	pam_pGina
@@ -21,7 +21,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_PERL5_RUN=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 # PREFIX safeness
