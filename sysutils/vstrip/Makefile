@@ -2,7 +2,7 @@
 # Date created:		Mon Jan  2 18:13:03 UTC 2006
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/vstrip/Makefile,v 1.12 2012/11/17 06:01:49 svnexp Exp $
+# $FreeBSD: sysutils/vstrip/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	vstrip
@@ -22,7 +22,6 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 post-extract:
 	@${FIND} ${WRKSRC} -type f -print0 | \
