@@ -1,5 +1,5 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
-# $FreeBSD: dns/knot/Makefile 320814 2013-06-13 16:15:29Z wg $
+# $FreeBSD: dns/knot/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	knot
 DISTVERSION=	1.3.0r1
@@ -17,7 +17,6 @@ BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison \
 		flex>=2.5.35_1:${PORTSDIR}/textproc/flex
 LIB_DEPENDS=	urcu:${PORTSDIR}/sysutils/liburcu
 
-MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool
 
 USE_LDCONFIG=	yes
