@@ -1,5 +1,5 @@
 # Created by: dom@myrddin.demon.co.uk
-# $FreeBSD: x11/xscreensaver/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/xscreensaver/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xscreensaver
 PORTVERSION=	5.21
@@ -18,7 +18,6 @@ LIB_DEPENDS=	gle.4:${PORTSDIR}/graphics/gle \
 RUN_DEPENDS=	p5-libwww>0:${PORTSDIR}/www/p5-libwww \
 		giftopnm:${PORTSDIR}/graphics/netpbm
 
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	xscreensaver-gnome-[0-9]* xscreensaver-gnome-hacks-[0-9]*
 
