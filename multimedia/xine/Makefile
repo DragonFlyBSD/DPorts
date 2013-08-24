@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/xine/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: multimedia/xine/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xine
 PORTVERSION=	0.99.7
@@ -35,7 +35,6 @@ CONFIGURE_ARGS=	--enable-vdr-keys \
 		--disable-nvtvsimple
 MAKE_ENV=	V=1
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
