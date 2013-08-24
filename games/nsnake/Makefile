@@ -1,13 +1,13 @@
 # Created by: markand
-# $FreeBSD: ports/games/nsnake/Makefile,v 1.7 2012/11/17 05:57:47 svnexp Exp $
+# $FreeBSD: games/nsnake/Makefile 324674 2013-08-13 16:53:48Z wg $
 
 PORTNAME=	nsnake
 PORTVERSION=	1.4
 CATEGORIES=	games
-MASTER_SITES=	http://softs.malikania.fr/releases/
+MASTER_SITES=	http://releases.malikania.fr/nsnake/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	demelier.david@gmail.com
 COMMENT=	Snake game written in C and ncurses
 
 LICENSE=	MIT
