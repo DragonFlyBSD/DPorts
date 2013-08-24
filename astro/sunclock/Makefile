@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: ports/astro/sunclock/Makefile,v 1.38 2013/02/04 12:50:57 svnexp Exp $
+# $FreeBSD: astro/sunclock/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sunclock
 PORTVERSION=	3.57
@@ -16,7 +16,6 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 
 USE_BZIP2=	yes
 USE_XORG=	xpm
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	$$(libpng-config --I_opts) \
 		-I${LOCALBASE}/include \
