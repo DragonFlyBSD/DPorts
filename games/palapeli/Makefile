@@ -1,4 +1,4 @@
-# $FreeBSD: games/palapeli/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: games/palapeli/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	palapeli
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,6 @@ USE_QT4=	corelib gui gui \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d' \
