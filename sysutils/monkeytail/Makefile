@@ -1,9 +1,5 @@
-# New ports collection makefile for:	monkeytail
-# Date created:		2008-09-13
-# Whom:			Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/sysutils/monkeytail/Makefile,v 1.6 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
+# $FreeBSD: sysutils/monkeytail/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	monkeytail
 PORTVERSION=	0.3.2
@@ -12,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://git.dollyfish.net.nz/releases/${MASTER_SITE_SUBDIR}/
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A multi-file tail on both local and remote hosts
 
 RUN_DEPENDS=	p5-Config-General>=0:${PORTSDIR}/devel/p5-Config-General \
