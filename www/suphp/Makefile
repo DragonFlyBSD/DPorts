@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: www/suphp/Makefile 323445 2013-07-22 13:24:05Z bdrewery $
+# $FreeBSD: www/suphp/Makefile 324854 2013-08-17 16:40:11Z bdrewery $
 
 PORTNAME=	suphp
 PORTVERSION=	0.7.2
@@ -7,8 +7,11 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.suphp.org/download/ \
 		${MASTER_SITE_LOCAL:S|%SUBDIR%|koitsu|}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Securely execute PHP scripts under Apache
+
+DEPRECATED=	Upstream dead, EOL: https://lists.marsching.com/pipermail/suphp/2013-May/002554.html
+EXPIRATION_DATE=2013-12-17
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	aclocal:env automake autoconf:env libtool:env
