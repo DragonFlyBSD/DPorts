@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: multimedia/mpv/Makefile 323116 2013-07-16 17:52:47Z gblach $
+# $FreeBSD: multimedia/mpv/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mpv
 PORTVERSION=	20130711
@@ -47,7 +47,6 @@ IN_DESC=	Input
 VO_DESC=	Video Output
 AO_DESC=	Audio Output
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		mpv.1
 MANCOMPRESSED=	no
