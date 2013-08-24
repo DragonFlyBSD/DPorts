@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: sysutils/apcupsd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: sysutils/apcupsd/Makefile 324574 2013-08-11 05:43:04Z dinoex $
 
 PORTNAME=	apcupsd
 PORTVERSION=	3.14.10
@@ -77,7 +77,7 @@ CONFIGURE_ARGS+=	--enable-net \
 
 .if ${PORT_OPTIONS:MCGI}
 CONFIGURE_ARGS+=	--enable-cgi --with-cgi-bin=${ETCDIR}/cgi
-LIB_DEPENDS+=		gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS+=		gd:${PORTSDIR}/graphics/gd
 PLIST_SUB+=		CGI=""
 .else
 PLIST_SUB+=		CGI="@comment "
