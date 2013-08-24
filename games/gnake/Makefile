@@ -1,26 +1,24 @@
-# Ports collection makefile for:  gnake
-# Date created:                   2011/02/20
-# Whom:                           chinsan
-#
-# $FreeBSD: ports/games/gnake/Makefile,v 1.2 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: games/gnake/Makefile 324943 2013-08-19 05:45:23Z jgh $
 
 PORTNAME=	gnake
 PORTVERSION=	0.94b
 CATEGORIES=	games
-MASTER_SITES=	LOCAL/chinsan \
-		http://lightless.org/files/
+MASTER_SITES=	http://lightless.org/files/ \
+		LOCAL/jgh/games/${PORTNAME}/
 DISTNAME=	Gnake.${PORTVERSION}
 
-MAINTAINER=	chinsan@FreeBSD.org
-COMMENT=	A Nibbles clone for GNU/Linux and *BSD
+MAINTAINER=	jgh@FreeBSD.org
+COMMENT=	Nibbles clone for GNU/Linux and *BSD
 
 LICENSE=	GPLv2
+
+OPTIONS_DEFINE=	DOCS
+
 LDFLAGS+=	-L${LOCALBASE}/lib -lncurses
 CFLAGS+=	-Wall
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}
 PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME}
 
@@ -28,11 +26,13 @@ do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} -o ${WRKSRC}/${PORTNAME} \
 		${WRKSRC}/gnake.c
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${INSTALL} -d ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
