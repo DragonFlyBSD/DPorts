@@ -2,7 +2,7 @@
 # Date created:				13 December 2001
 # Whom:					Arne Lundberg <arlu@telia.com>
 #
-# $FreeBSD: ports/net/qadsl/Makefile,v 1.14 2012/11/17 06:00:17 svnexp Exp $
+# $FreeBSD: net/qadsl/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	qadsl
@@ -24,7 +24,6 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-global-cfg=${PREFIX}/etc/qadsl.conf \
 		--with-pidfile=/var/run/qadsl.pid
-MAKE_JOBS_SAFE=	yes
 
 MAN8=		qadsl.8
 MAN5=		qadsl.conf.5

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/qadsl/files/qadsl.in,v 1.2 2012/11/17 06:00:17 svnexp Exp $
+# $FreeBSD: net/qadsl/files/qadsl.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: qadsl 
 # REQUIRE: NETWORK
