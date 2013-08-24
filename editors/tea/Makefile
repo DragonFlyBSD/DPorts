@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: editors/tea/Makefile 323145 2013-07-17 04:07:19Z miwi $
+# $FreeBSD: editors/tea/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tea
 PORTVERSION=	36.0.2
@@ -17,7 +17,6 @@ OPTIONS_DEFAULT=	ASPELL
 
 USE_BZIP2=	yes
 USE_QT4=	gui moc_build qmake_build rcc_build
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/tea share/pixmaps/tea_icon_v2.png
 
