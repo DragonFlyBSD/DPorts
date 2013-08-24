@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/nagaina/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: deskutils/nagaina/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	nagaina
 PORTVERSION=	0.1.2
@@ -28,7 +28,6 @@ USES=		gettext iconv
 USE_GNOME=	glib20
 USE_QT4=	corelib gui xml moc_build qmake_build rcc_build uic_build
 USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	CHANGELOG TODO
 PLIST_FILES=	bin/${PORTNAME} share/pixmaps/${PORTNAME}.png
