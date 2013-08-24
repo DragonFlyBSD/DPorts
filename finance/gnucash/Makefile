@@ -1,4 +1,4 @@
-# $FreeBSD: finance/gnucash/Makefile 320505 2013-06-10 20:53:54Z madpilot $
+# $FreeBSD: finance/gnucash/Makefile 324744 2013-08-14 22:35:50Z ak $
 #   $MCom: ports/finance/gnucash/Makefile,v 1.26 2008/12/31 03:25:18 mezz Exp $
 
 PORTNAME=	gnucash
@@ -32,7 +32,6 @@ WEBKIT_DESC=	Use webkit instead of gtkhtml for the HTML engine
 USE_BZIP2=	yes
 USES=		gettext
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_PERL5=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix libglade2 libgnomeui
