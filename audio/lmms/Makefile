@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: audio/lmms/Makefile 323329 2013-07-19 21:38:37Z madpilot $
+# $FreeBSD: audio/lmms/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lmms
 PORTVERSION=	0.4.15
@@ -43,7 +43,6 @@ CMAKE_ARGS=	-DWANT_ALSA:BOOL=OFF \
 		-DWANT_TAP:BOOL=OFF \
 		-DWANT_VST:BOOL=OFF \
 		-DHAVE_STRTOLL=ON
-MAKE_JOBS_SAFE=	yes
 
 MANCOMPRESSED=	yes
 MAN1=		lmms.1
