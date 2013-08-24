@@ -1,8 +1,8 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Data-Rx/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Rx/Makefile 324654 2013-08-13 09:47:57Z jadawin $
 
 PORTNAME=	Data-Rx
-PORTVERSION=	0.200003
+PORTVERSION=	0.200004
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
