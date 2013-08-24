@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gaeo
-# Date created:		2008-07-24
-# Whom:			Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/www/gaeo/Makefile,v 1.10 2012/11/17 06:02:34 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
+# $FreeBSD: www/gaeo/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	gaeo
 PORTVERSION=	0.3
@@ -11,7 +7,7 @@ PORTEPOCH=	1
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An open-source web framework running on Google App Engine
 
 RUN_DEPENDS=	google-appengine>=1.1.0:${PORTSDIR}/www/google-appengine \
