@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/hg-git/Makefile 316856 2013-04-30 00:37:16Z miwi $
+# $FreeBSD: devel/hg-git/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hg-git
 PORTVERSION=	0.4.0
@@ -16,7 +16,6 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}dulwich>=0.8.7:${PORTSDIR}/devel/dulwich \
 		mercurial>=2.5.2:${PORTSDIR}/devel/mercurial \
 		${PKGNAMEPREFIX}ordereddict>=1.1:${PORTSDIR}/devel/py-ordereddict
 
-MAKE_JOBS_SAFE=	yes
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
