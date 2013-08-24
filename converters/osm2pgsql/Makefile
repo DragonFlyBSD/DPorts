@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/osm2pgsql/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: converters/osm2pgsql/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	osm2pgsql
 PORTVERSION=	r29250
@@ -23,7 +23,6 @@ USE_AUTOTOOLS=	autoconf automake libtool aclocal autoheader libtoolize
 USE_GMAKE=	yes
 USE_PGSQL=	yes
 USE_GNOME=	libxml2
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	ChangeLog README AUTHORS TODO
 
