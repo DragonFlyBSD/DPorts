@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: archivers/ark/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: archivers/ark/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ark
 PORTVERSION=	${KDE4_VERSION}
@@ -20,7 +20,6 @@ USE_KDE4=	kdeprefix kdehier automoc4 kdelibs libkonq
 USES=		cmake:outsource
 USE_QT4=	qtestlib qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		ark.1
 
