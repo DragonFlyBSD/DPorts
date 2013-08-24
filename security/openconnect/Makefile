@@ -1,5 +1,5 @@
 # Created by: Damian Gerow
-# $FreeBSD: security/openconnect/Makefile 324412 2013-08-08 23:58:12Z zi $
+# $FreeBSD: security/openconnect/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	openconnect
 PORTVERSION=	5.01
@@ -24,7 +24,6 @@ USE_AUTOTOOLS=	aclocal autoconf automake libtool
 USES=		pathfix pkgconfig
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
-MAKE_JOBS_SAFE=	yes
 ACLOCAL_ARGS=	-I .
 AUTOMAKE_ARGS=	--add-missing
 USE_LDCONFIG=	yes
