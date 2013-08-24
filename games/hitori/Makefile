@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/hitori/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/hitori/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hitori
 PORTVERSION=	0.4.0
@@ -24,7 +24,6 @@ USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 gtk30
-MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
 
 PORTDOCS=	AUTHORS ChangeLog MAINTAINERS NEWS README
