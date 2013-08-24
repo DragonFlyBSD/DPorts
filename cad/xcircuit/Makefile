@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/xcircuit/Makefile 323156 2013-07-17 09:35:13Z miwi $
+# $FreeBSD: cad/xcircuit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xcircuit
 PORTVERSION=	3.7.51
@@ -29,7 +29,6 @@ CONFIGURE_ARGS=	--with-tcl=${TCL_LIBDIR} \
 		--with-tk=${TK_LIBDIR}
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOHEADER="${TRUE}" \
 		AUTOMAKE="${TRUE}"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		xcircuit.1
 
