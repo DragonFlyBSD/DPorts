@@ -1,5 +1,5 @@
 # Created by: oly@world.std.com
-# $FreeBSD: print/lout/Makefile 322038 2013-06-29 10:05:00Z pawel $
+# $FreeBSD: print/lout/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lout
 PORTVERSION=	3.40
@@ -16,7 +16,6 @@ OPTIONS_DEFINE=	DOCS
 USE_GMAKE=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	lout prg2lout
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		lout.1 prg2lout.1
 
