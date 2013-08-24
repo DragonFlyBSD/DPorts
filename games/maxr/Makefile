@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/maxr/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/maxr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	maxr
 PORTVERSION=	0.2.8
@@ -16,7 +16,6 @@ USE_SDL=	sdl mixer net
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES="M.A.X.R." \
 		"Mechanized Assault and Exploration Reloaded" \
