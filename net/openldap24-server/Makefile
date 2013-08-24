@@ -1,8 +1,8 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 321662 2013-06-24 05:29:24Z delphij $
+# $FreeBSD: net/openldap24-server/Makefile 325068 2013-08-20 18:24:59Z delphij $
 
 PORTNAME=		openldap
-DISTVERSION=		2.4.35
+DISTVERSION=		2.4.36
 PORTREVISION=		${OPENLDAP_PORTREVISION}
 CATEGORIES=		net databases
 MASTER_SITES=		ftp://ftp.OpenLDAP.org/pub/OpenLDAP/%SUBDIR%/ \
@@ -44,7 +44,6 @@ LICENSE_PERMS=		dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 LATEST_LINK?=		${PKGNAMEPREFIX}openldap24${PKGNAMESUFFIX}
 USE_OPENSSL=		yes
-MAKE_JOBS_SAFE=		yes
 USE_AUTOTOOLS=		libtool
 .if !defined(CLIENT_ONLY)
 USERS=			ldap
