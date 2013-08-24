@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/games/bs/Makefile,v 1.21 2012/12/07 16:51:43 svnexp Exp $
+# $FreeBSD: games/bs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bs
 PORTVERSION=	2.9
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 MAKE_ARGS=	CC="${CC}"
 ALL_TARGET=	# empty
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		bs.6
 PLIST_FILES=	bin/bs
