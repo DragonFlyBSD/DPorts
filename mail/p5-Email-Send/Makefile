@@ -1,9 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Send/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: mail/p5-Email-Send/Makefile 325010 2013-08-19 17:39:27Z tobez $
 
 PORTNAME=	Email-Send
-PORTVERSION=	2.198
-PORTREVISION=	1
+PORTVERSION=	2.199
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
