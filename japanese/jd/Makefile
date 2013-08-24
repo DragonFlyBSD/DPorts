@@ -1,5 +1,5 @@
 # Created by: Takashi Kato <townwear@gmail.com>
-# $FreeBSD: japanese/jd/Makefile 319081 2013-05-26 00:33:54Z jgh $
+# $FreeBSD: japanese/jd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=		jd
 PORTVERSION=		2.8.5
@@ -20,7 +20,6 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 		gcrypt:${PORTSDIR}/security/libgcrypt \
 		gtkmm:${PORTSDIR}/x11-toolkits/gtkmm24
 
-MAKE_JOBS_SAFE=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoconf automake libtool
 USE_GNOME=	gtk20 libgnomeui
