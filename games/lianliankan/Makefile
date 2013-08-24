@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/lianliankan/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: games/lianliankan/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lianliankan
 DISTVERSION=	2.3beta1
@@ -16,7 +16,6 @@ LICENSE=	GPLv2
 USES=		pkgconfig
 USE_GNOME=	gtk20 esound
 USE_AUTOTOOLS=	aclocal automake autoconf libtool
-MAKE_JOBS_SAFE=	yes
 
 AUTOMAKE_ARGS=	--add-missing --copy
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
