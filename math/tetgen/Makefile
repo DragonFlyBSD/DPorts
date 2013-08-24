@@ -2,7 +2,7 @@
 # Date created:			16 December 2005
 # Whom:				Pedro F. Giffuni
 #
-# $FreeBSD: ports/math/tetgen/Makefile,v 1.14 2012/11/17 05:59:31 svnexp Exp $
+# $FreeBSD: math/tetgen/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	tetgen
@@ -23,7 +23,6 @@ OPTIONS_DEFINE=	EXAMPLES
 
 MAKEFILE=	makefile
 ALL_TARGET=	tetgen tetlib
-MAKE_JOBS_SAFE=	yes
 
 PORTEXAMPLES=	example.poly
 PLIST_FILES=	bin/tetgen include/tetgen.h lib/libtet.a
