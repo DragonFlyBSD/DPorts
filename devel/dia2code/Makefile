@@ -3,7 +3,7 @@
 # Date created:			Mar 7, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/dia2code/Makefile,v 1.20 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: devel/dia2code/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	dia2code
@@ -22,7 +22,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOHEADER="${TRUE}" \
 		AUTOMAKE="${TRUE}"
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
