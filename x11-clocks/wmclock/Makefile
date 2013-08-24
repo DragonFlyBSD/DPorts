@@ -1,5 +1,5 @@
 # Created by: Per Otterstr=F6m <pelle@fukt.bth.se>
-# $FreeBSD: x11-clocks/wmclock/Makefile 322014 2013-06-28 23:05:59Z bapt $
+# $FreeBSD: x11-clocks/wmclock/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wmclock
 PORTVERSION=	1.0.14
@@ -12,7 +12,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dockable clock applet for Window Maker
 
 USES=		imake
-MAKE_JOBS_SAFE=	yes
 USE_XORG=	xpm
 MAN1=		wmclock.1
 PLIST_FILES=	bin/wmclock
