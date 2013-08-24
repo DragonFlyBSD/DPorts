@@ -2,12 +2,12 @@
 # Date created:        9 January 2009
 # Whom:                slaven@rezic.de
 #
-# $FreeBSD: ports/astro/merkaartor/Makefile,v 1.28 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/merkaartor/Makefile 325086 2013-08-21 03:46:21Z sunpoet $
 #
 
 PORTNAME=	merkaartor
 PORTVERSION=	0.18.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	astro
 MASTER_SITES=	http://merkaartor.be/attachments/download/301/ \
 		https://secure.ohos.nl/downloads/
@@ -25,7 +25,6 @@ USE_LDCONFIG=	yes
 
 USE_QT4=	qmake_build uic_build moc_build rcc_build \
 		gui network svg webkit xml imageformats script scripttools
-MAKE_JOBS_SAFE=	yes
 
 .if exists(${LOCALBASE}/bin/gnome-session)
 INSTALLS_ICONS=	yes
