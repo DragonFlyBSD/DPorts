@@ -1,4 +1,2 @@
-MAKE_JOBS_UNSAFE=yes
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		popt:${PORTSDIR}/devel/popt
-
