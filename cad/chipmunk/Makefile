@@ -2,7 +2,7 @@
 # Date created:		29 July 1995
 # Whom:			janek@gaja.ipan.lublin.pl
 #
-# $FreeBSD: ports/cad/chipmunk/Makefile,v 1.29 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/chipmunk/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	chipmunk
@@ -27,7 +27,6 @@ NO_WRKSUBDIR=	yes
 
 USE_XORG=	x11
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
