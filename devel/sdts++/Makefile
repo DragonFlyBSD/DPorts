@@ -1,5 +1,5 @@
 # Created by: erik@habatech.no
-# $FreeBSD: devel/sdts++/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/sdts++/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sdts++
 PORTVERSION=	1.5.1
@@ -22,7 +22,6 @@ ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing --copy --foreign
 CONFIGURE_ARGS=	--with-boost=${LOCALBASE}/include
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 INFO=		sdts++
 
