@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-cmdln
-# Date created:		2008-09-05
-# Whom:			Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/devel/py-cmdln/Makefile,v 1.5 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
+# $FreeBSD: devel/py-cmdln/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	cmdln
 PORTVERSION=	1.1.2
@@ -12,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A python module for easily building good multi-command scripts
 
 USE_ZIP=	yes
