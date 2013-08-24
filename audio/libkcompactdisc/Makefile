@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: audio/libkcompactdisc/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: audio/libkcompactdisc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libkcompactdisc
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,6 @@ USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	phonon moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	ALSA
 
