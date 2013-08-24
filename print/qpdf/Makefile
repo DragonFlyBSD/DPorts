@@ -1,8 +1,8 @@
 # Created by: Dmitry Kazarov <d.y.kazarov@mail.ru>
-# $FreeBSD: ports/print/qpdf/Makefile,v 1.1 2013/02/16 23:47:24 svnexp Exp $
+# $FreeBSD: print/qpdf/Makefile 325172 2013-08-21 23:23:51Z wg $
 
 PORTNAME=	qpdf
-PORTVERSION=	4.0.0
+PORTVERSION=	4.0.1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}
@@ -10,12 +10,14 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	d.y.kazarov@mail.ru
 COMMENT=	Command-line tools for transforming and inspecting PDF files
 
+LICENSE=	ART20
+
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
-LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USES=		gmake
 
 MAN1=		fix-qdf.1 qpdf.1 zlib-flate.1
 
