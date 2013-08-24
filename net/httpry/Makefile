@@ -1,4 +1,4 @@
-# $FreeBSD: net/httpry/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net/httpry/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	httpry
 PORTVERSION=	0.1.7
@@ -11,7 +11,6 @@ COMMENT=	Packet sniffer designed for displaying and logging HTTP traffic
 MAN1=		httpry.1
 
 USE_RC_SUBR=	httpry
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	EXTRASCRIPTS
 EXTRASCRIPTS_DESC=	Install additional scripts
