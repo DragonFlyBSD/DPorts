@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/moonlander/Makefile 319508 2013-05-31 14:59:37Z jgh $
+# $FreeBSD: games/moonlander/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	moonlander
 PORTVERSION=	1.0
@@ -16,7 +16,6 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/README.txt
 
 USE_SDL=	mixer image sdl
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/moon-lander
 
