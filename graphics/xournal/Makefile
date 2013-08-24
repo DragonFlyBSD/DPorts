@@ -1,5 +1,5 @@
 # Created by: Jan Henrik Sylvester <me@janh.de>
-# $FreeBSD: ports/graphics/xournal/Makefile,v 1.7 2013/01/13 17:43:18 svnexp Exp $
+# $FreeBSD: graphics/xournal/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xournal
 PORTVERSION=	0.4.7
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib
 
-MAKE_JOBS_SAFE=	yes
 USE_GNOME=	desktopfileutils libgnomecanvas
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--docdir="${DOCSDIR}"
