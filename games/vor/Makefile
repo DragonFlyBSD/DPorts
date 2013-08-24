@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/vor/Makefile 318817 2013-05-23 02:02:20Z amdmi3 $
+# $FreeBSD: games/vor/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vor
 PORTVERSION=	0.5.5
@@ -15,7 +15,6 @@ USE_SDL=	mixer image sdl
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README
 
