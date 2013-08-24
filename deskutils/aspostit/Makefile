@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: ports/deskutils/aspostit/Makefile,v 1.15 2013/02/07 21:52:07 svnexp Exp $
+# $FreeBSD: deskutils/aspostit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	aspostit
 PORTVERSION=	1.3
@@ -17,7 +17,6 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
 USE_XORG=	xpm xaw xext x11
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		aspostit.1
 PLIST_FILES=	bin/aspostit
