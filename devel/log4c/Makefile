@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/log4c/Makefile 317965 2013-05-12 16:05:10Z stefan $
+# $FreeBSD: devel/log4c/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	log4c
 PORTVERSION=	1.2.3
@@ -17,7 +17,6 @@ OPTIONS_DEFAULT=EXPAT
 USES=	pathfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	log4c-config.1
 
