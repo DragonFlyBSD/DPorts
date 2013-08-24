@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: ftp/ftpmirror/Makefile 323655 2013-07-25 17:45:09Z az $
+# $FreeBSD: ftp/ftpmirror/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ftpmirror
 PORTVERSION=	1.96
@@ -16,7 +16,6 @@ OPTIONS_DEFINE=	DOCS
 
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 USES=		shebangfix
 SHEBANG_FILES=	ftpmirror rotate
