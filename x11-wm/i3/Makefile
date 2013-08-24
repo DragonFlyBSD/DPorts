@@ -1,16 +1,13 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11-wm/i3/Makefile 324223 2013-08-04 12:33:50Z az $
+# $FreeBSD: x11-wm/i3/Makefile 325237 2013-08-22 21:58:25Z bapt $
 
 PORTNAME=	i3
-DISTVERSION=	4.5.1
-PORTREVISION=	1
+DISTVERSION=	4.6
 CATEGORIES=	x11-wm
-MASTER_SITES=	http://i3wm.org/downloads/ \
-		${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	dhn
+MASTER_SITES=	http://i3wm.org/downloads/
 
 MAINTAINER=	bapt@FreeBSD.org
-COMMENT=	An improved dynamic tiling window manager
+COMMENT=	Improved dynamic tiling window manager
 
 LICENSE=	BSD
 
