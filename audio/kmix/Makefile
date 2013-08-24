@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: audio/kmix/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: audio/kmix/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kmix
 PORTVERSION=	${KDE4_VERSION}
@@ -20,7 +20,6 @@ USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	gui phonon xml \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	ALSA PULSEAUDIO
 
