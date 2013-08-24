@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/xbill/Makefile 322621 2013-07-10 06:55:28Z bapt $
+# $FreeBSD: games/xbill/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xbill
 PORTVERSION=	2.1
@@ -14,7 +14,6 @@ COMMENT=	Save your computers from the evil clutches of Bill
 GNU_CONFIGURE=	yes
 WANT_GNOME=	yes
 CONFIGURE_ARGS=	--localstatedir=${SCORES_DIR}
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		xbill.6
 
