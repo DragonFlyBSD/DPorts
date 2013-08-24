@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: misc/qt4-qtdemo/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: misc/qt4-qtdemo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qtdemo
 DISTVERSION=	${QT4_VERSION}
@@ -15,7 +15,6 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build corelib designer \
 		xmlpatterns multimedia
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
