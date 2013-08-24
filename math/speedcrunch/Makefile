@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: math/speedcrunch/Makefile 317947 2013-05-12 11:48:49Z makc $
+# $FreeBSD: math/speedcrunch/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	speedcrunch
 DISTVERSION=	0.10.1
@@ -14,7 +14,6 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build gui xml
 USES=		cmake
 CMAKE_SOURCE_PATH=	src
 
-MAKE_JOBS_SAFE=	yes
 
 LRELEASE_CMD=	${LOCALBASE}/bin/lrelease-qt4
 LRELEASE_ARGS=	-compress -silent
