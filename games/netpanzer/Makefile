@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/netpanzer/Makefile,v 1.29 2012/12/10 20:43:14 svnexp Exp $
+# $FreeBSD: games/netpanzer/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	netpanzer
 PORTVERSION=	0.8.4
@@ -12,7 +12,6 @@ COMMENT=	Real time, isometric view, tank multiplayer strategy game
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAKE_JOBS_SAFE=	yes
 LDFLAGS+=	${PTHREAD_LIBS}
 CFLAGS+=	${PTHREAD_CFLAGS}
 
