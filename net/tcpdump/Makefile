@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/tcpdump/Makefile 319402 2013-05-30 02:15:22Z wxs $
+# $FreeBSD: net/tcpdump/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tcpdump
 PORTVERSION=	4.4.0
@@ -13,7 +13,6 @@ LIB_DEPENDS=	pcap:${PORTSDIR}/net/libpcap
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-MAKE_JOBS_SAFE=	yes
 
 UNPRIV_USER?=	nobody
 CHROOTDIR?=	/var/run/tcpdump
