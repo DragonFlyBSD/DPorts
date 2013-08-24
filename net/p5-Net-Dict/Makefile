@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net/p5-Net-Dict/Makefile 323401 2013-07-21 15:40:43Z sunpoet $
+# $FreeBSD: net/p5-Net-Dict/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Net-Dict
 PORTVERSION=	2.10
@@ -14,7 +14,8 @@ COMMENT=	Simple client API for the DICT protocol
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Net::Dict.3
 
