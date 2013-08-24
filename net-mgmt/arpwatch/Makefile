@@ -2,7 +2,7 @@
 # Date created:         March 24 1997
 # Whom:                 Brian Somers <brian@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/arpwatch/Makefile,v 1.57 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-mgmt/arpwatch/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	arpwatch
@@ -17,7 +17,6 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.([^\.]*)$/\1/}
 MAINTAINER=	tabthorpe@FreeBSD.org
 COMMENT=	Monitor arp & rarp requests
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--quiet
