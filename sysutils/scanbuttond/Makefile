@@ -1,5 +1,5 @@
 # Created by: Daniel Thiele
-# $FreeBSD: sysutils/scanbuttond/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: sysutils/scanbuttond/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	scanbuttond
 PORTVERSION=	0.2.3
@@ -16,7 +16,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES+=	pkg-message
 
