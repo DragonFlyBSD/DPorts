@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: misc/pdmenu/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: misc/pdmenu/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pdmenu
 PORTVERSION=	1.3.2
@@ -25,7 +25,6 @@ CONFIGURE_ENV=	SLANG_H_LOC="${LOCALBASE}/include/slang.h" \
 		SLANG_LIB_LOC="${LOCALBASE}/lib" \
 		LIBS="-lcurses -lintl"
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		pdmenu.1
 MAN5=		pdmenurc.5
