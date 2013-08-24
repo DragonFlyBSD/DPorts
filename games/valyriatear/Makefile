@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/valyriatear/Makefile 318861 2013-05-23 10:04:07Z amdmi3 $
+# $FreeBSD: games/valyriatear/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	valyriatear
 PORTVERSION=	0.5.0
@@ -27,7 +27,6 @@ USE_SDL=	sdl image ttf
 USE_GL=		gl
 USE_OPENAL=	yes
 USE_LUA=	5.1
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 
