@@ -1,5 +1,5 @@
 # Created by: uyamba@gmail.com
-# $FreeBSD: audio/qmpdclient/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/qmpdclient/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qmpdclient
 PORTVERSION=	1.2.2
@@ -18,7 +18,6 @@ RUN_DEPENDS+=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hico
 USE_BZIP2=	yes
 USE_QT4=	qmake_build moc_build rcc_build uic_build \
 		corelib gui network xml xmlpatterns
-MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
 QMAKE_ARGS=	${QMAKE_PRO}
 QMAKE_PRO=	${PORTNAME}.pro
