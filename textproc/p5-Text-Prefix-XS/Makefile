@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Prefix-XS
-# Date created:		2011-12-24
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Prefix-XS/Makefile,v 1.2 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Prefix-XS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Text-Prefix-XS
 PORTVERSION=	0.15
@@ -15,11 +11,11 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast prefix searching
 
 BUILD_DEPENDS=	p5-Digest-SHA1>=1:${PORTSDIR}/security/p5-Digest-SHA1
-RUN_DEPENDS=	p5-Digest-SHA1>=1:${PORTSDIR}/security/p5-Digest-SHA1
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0.108:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Text::Prefix::XS.3
 
