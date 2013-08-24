@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/manedit/Makefile 312872 2013-02-24 15:40:06Z johans $
+# $FreeBSD: editors/manedit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	manedit
 PORTVERSION=	1.2.1
@@ -12,7 +12,6 @@ COMMENT=	A UNIX manual page editor and viewer
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}
 
 MAKEFILE=	Makefile.FreeBSD
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
 
