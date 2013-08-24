@@ -1,4 +1,4 @@
-# $FreeBSD: games/supertux-devel/Makefile 323315 2013-07-19 16:30:10Z makc $
+# $FreeBSD: games/supertux-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	supertux
 PORTVERSION=	0.3.4
@@ -19,7 +19,6 @@ USE_SDL=	image
 USE_OPENAL=	al
 USE_GL=		glew
 USES=		cmake:outsource
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e '/^Icon=/s,supertux.png,supertux2.png,' \
