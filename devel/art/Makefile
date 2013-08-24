@@ -2,7 +2,7 @@
 # Date created: 2011-11-05
 # Whom: Vladimir Gorelov <virtual.lark@gmail.com>
 #
-# $FreeBSD: ports/devel/art/Makefile,v 1.3 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: devel/art/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	art
@@ -19,7 +19,6 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	xml++-2.6:${PORTSDIR}/textproc/libxml++26
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/artlibgen/src/artlibgen ${PREFIX}/bin
