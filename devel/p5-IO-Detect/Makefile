@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Detect/Makefile 313791 2013-03-10 02:51:28Z sunpoet $
+# $FreeBSD: devel/p5-IO-Detect/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	IO-Detect
 PORTVERSION=	0.005
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-IO-All>=0:${PORTSDIR}/devel/p5-IO-All \
 
 CONFLICTS_INSTALL=	p5-Scalar-Does-0.[1-9]*
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		IO::Detect.3
 
