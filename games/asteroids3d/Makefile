@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/asteroids3d/Makefile,v 1.7 2013/02/20 18:39:06 svnexp Exp $
+# $FreeBSD: games/asteroids3d/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	asteroids3d
 PORTVERSION=	0.5.1
@@ -21,7 +21,6 @@ USE_AUTOTOOLS=	aclocal autoheader
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	with_gamesdir="${PREFIX}/bin" with_gamedatadir="${DATADIR}"
 USE_GL=		glut glu
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
