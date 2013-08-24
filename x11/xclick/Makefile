@@ -2,7 +2,7 @@
 # Date created:		Ter 20 Fev 2007 07:53:32 UTC
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/xclick/Makefile,v 1.7 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/xclick/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	xclick
@@ -18,7 +18,6 @@ MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	Generates X11 mouse button click events
 
 USE_XORG=	x11 xtst xext xfixes xi
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
