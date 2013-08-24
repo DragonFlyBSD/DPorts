@@ -2,7 +2,7 @@
 # Date created:				2 January 2009
 # Whom:					Alex Deiter <Alex.Deiter@Gmail.COM>
 #
-# $FreeBSD: ports/net/udpxy/Makefile,v 1.8 2012/11/17 06:00:23 svnexp Exp $
+# $FreeBSD: net/udpxy/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	udpxy
@@ -17,7 +17,6 @@ COMMENT=	UDP-to-HTTP multicast traffic relay daemon
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-0
 USE_RC_SUBR=	udpxy
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 RELEASE_MASCOT=	Chipmunk
 
 OPTIONS_SINGLE=	CONF

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/udpxy/files/udpxy.in,v 1.7 2012/11/17 06:00:23 svnexp Exp $
+# $FreeBSD: net/udpxy/files/udpxy.in 304312 2012-09-15 09:38:26Z ak $
 #
 
 # PROVIDE: udpxy
