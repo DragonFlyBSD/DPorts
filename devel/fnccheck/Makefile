@@ -1,5 +1,5 @@
 # Created by George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: devel/fnccheck/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: devel/fnccheck/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fnccheck
 PORTVERSION=	3.2.0
@@ -19,7 +19,6 @@ LIBTOOLIZE_ARGS=--force
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--force-missing --add-missing --foreign
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread
