@@ -1,6 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: ports/shells/jailkit/Makefile,v 1.10 2013/01/07 20:44:12 svnexp Exp $
-#
+# $FreeBSD: shells/jailkit/Makefile 324765 2013-08-15 11:51:39Z danfe $
 
 PORTNAME=	jailkit
 PORTVERSION=	2.15
@@ -9,7 +8,7 @@ MASTER_SITES=	http://olivier.sessink.nl/jailkit/ \
 		http://www.sfr-fresh.com/unix/privat/
 
 MAINTAINER=	sylvio@FreeBSD.org
-COMMENT=	Jailkit is a set of utilities to limit user account
+COMMENT=	Utilities to limit user account
 
 GNU_CONFIGURE=	yes
 USE_PYTHON=	2.5+
@@ -33,19 +32,18 @@ MANCOMPRESSED=	yes
 
 PORTDOCS=	COPYRIGHT README.txt
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 post-install:
 	@${ECHO_MSG} "Updating ${SHELLS}"
 	@${CP} ${SHELLS} ${SHELLS}.bak
 	@(${GREP} -v ${PREFIX}/sbin/jk_chrootsh ${SHELLS}.bak; \
-	  ${ECHO_CMD} ${PREFIX}/sbin/jk_chrootsh) > ${SHELLS}
+		${ECHO_CMD} ${PREFIX}/sbin/jk_chrootsh) > ${SHELLS}
 	@${RM} -f ${SHELLS}.bak
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for docs in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${docs} ${DOCSDIR}
-.endfor
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
 .endif
-.include <bsd.port.post.mk>
+
+.include <bsd.port.mk>
