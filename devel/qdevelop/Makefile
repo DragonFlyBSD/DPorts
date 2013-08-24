@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-# $FreeBSD: devel/qdevelop/Makefile 315222 2013-03-25 13:59:18Z makc $
+# $FreeBSD: devel/qdevelop/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qdevelop
 PORTVERSION=	0.28
@@ -15,7 +15,6 @@ RUN_DEPENDS=	exctags:${PORTSDIR}/devel/ctags
 
 USE_QT4=	gui sql network xml designer sql-sqlite3_run \
 		qmake_build moc_build uic_build rcc_build
-MAKE_JOBS_SAFE=	yes
 
 QMAKE_ARGS=	-recursive ${QMAKE_PRO}
 QMAKE_PRO=	QDevelop.pro
