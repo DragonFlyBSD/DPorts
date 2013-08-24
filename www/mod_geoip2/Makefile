@@ -1,5 +1,5 @@
 # Created by: Jukka A. Ukkonen <jau@iki.fi>
-# $FreeBSD: ports/www/mod_geoip2/Makefile,v 1.20 2013/01/21 00:59:05 svnexp Exp $
+# $FreeBSD: www/mod_geoip2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_geoip2
 PORTVERSION=	1.2.8
@@ -15,7 +15,6 @@ LICENSE=	AL2
 BUILD_DEPENDS=	GeoIP>=1.4.4:${PORTSDIR}/net/GeoIP
 RUN_DEPENDS=	GeoIP>=1.4.4:${PORTSDIR}/net/GeoIP
 
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	mod_geoip-[0-9]*
 
