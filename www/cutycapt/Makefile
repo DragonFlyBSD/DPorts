@@ -2,7 +2,7 @@
 # Date created:		2010-09-29
 # Whom:			Axel Gonzalez <loox@e-shell.net>
 #
-# $FreeBSD: ports/www/cutycapt/Makefile,v 1.4 2012/11/17 06:02:30 svnexp Exp $
+# $FreeBSD: www/cutycapt/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	cutycapt
@@ -19,7 +19,6 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}/CutyCapt
 
 USE_QT4=	qmake_build moc_build imageformats webkit
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/CutyCapt
 
