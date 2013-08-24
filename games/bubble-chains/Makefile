@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/bubble-chains/Makefile 316755 2013-04-28 21:38:56Z beech $
+# $FreeBSD: games/bubble-chains/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bubble-chains
 PORTVERSION=	0.1.1
@@ -24,10 +24,8 @@ USE_GL=		glut glew glu
 USE_XORG=	xrandr
 USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats \
 		corelib svg xml opengl network
-
 QMAKEFLAGS+=	QMAKE_LFLAGS="-L${LOCALBASE}/lib -lX11 -lSDL-1.2"
 
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README
 
