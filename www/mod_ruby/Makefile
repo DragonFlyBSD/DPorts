@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/mod_ruby/Makefile 318110 2013-05-13 15:39:33Z dinoex $
+# $FreeBSD: www/mod_ruby/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_ruby
 PORTVERSION=	1.3.0
@@ -12,7 +12,6 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	An Apache module that embeds Ruby interpreter within
 
-MAKE_JOBS_SAFE=  yes
 
 USE_APACHE=	22
 USE_RUBY=	yes
