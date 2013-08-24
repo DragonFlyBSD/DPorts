@@ -3,7 +3,7 @@
 # Date created:			Mar 18, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: www/wsdlpull/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/wsdlpull/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	wsdlpull
@@ -19,7 +19,6 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
