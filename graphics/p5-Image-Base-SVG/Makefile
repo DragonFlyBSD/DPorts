@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Image-Base-SVG
-# Date created:		2011-09-29
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-Image-Base-SVG/Makefile,v 1.2 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: graphics/p5-Image-Base-SVG/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Image-Base-SVG
 PORTVERSION=	4
@@ -17,11 +13,10 @@ COMMENT=	SVG image file output
 BUILD_DEPENDS=	p5-Image-Base>=0:${PORTSDIR}/graphics/p5-Image-Base \
 		p5-SVG>=2.38:${PORTSDIR}/textproc/p5-SVG \
 		p5-SVG-Parser>=0:${PORTSDIR}/textproc/p5-SVG-Parser
-RUN_DEPENDS=	p5-Image-Base>=0:${PORTSDIR}/graphics/p5-Image-Base \
-		p5-SVG>=2.38:${PORTSDIR}/textproc/p5-SVG \
-		p5-SVG-Parser>=0:${PORTSDIR}/textproc/p5-SVG-Parser
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Image::Base::SVG.3
 
