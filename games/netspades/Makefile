@@ -2,7 +2,7 @@
 # Date created:				23 July 2002
 # Whom:					Frank Laszlo <laszlof@freebsdmatrix.net>
 #
-# $FreeBSD: ports/games/netspades/Makefile,v 1.17 2012/11/17 05:57:47 svnexp Exp $
+# $FreeBSD: games/netspades/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	NetSpades
@@ -16,7 +16,6 @@ COMMENT=	Very popular card game for 1-4 players over a network
 
 LIB_DEPENDS=	slang.2:${PORTSDIR}/devel/libslang2
 
-MAKE_JOBS_SAFE=  yes
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
