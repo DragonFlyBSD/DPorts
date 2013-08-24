@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl6-Slurp/Makefile 324313 2013-08-06 13:00:36Z sunpoet $
+# $FreeBSD: devel/p5-Perl6-Slurp/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Perl6-Slurp
 PORTVERSION=	0.05.1003
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Perl6-Export>=0.07:${PORTSDIR}/devel/p5-Perl6-Export
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Perl6::Slurp.3
 
