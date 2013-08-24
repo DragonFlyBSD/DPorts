@@ -1,4 +1,4 @@
-# $FreeBSD: www/kwebkitpart/Makefile 315372 2013-03-27 11:02:53Z makc $
+# $FreeBSD: www/kwebkitpart/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kwebkitpart
 PORTVERSION=	1.3.2
@@ -13,7 +13,6 @@ USE_QT4=	designer gui webkit \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
