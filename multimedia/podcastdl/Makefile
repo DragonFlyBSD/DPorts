@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: multimedia/podcastdl/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: multimedia/podcastdl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	podcastdl
 PORTVERSION=	0.3.0
@@ -15,7 +15,6 @@ LICENSE=	BSD
 LIB_DEPENDS=	mrss:${PORTSDIR}/textproc/libmrss
 
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/podcastdl
 
