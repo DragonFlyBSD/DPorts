@@ -2,7 +2,7 @@
 # Date created:		2011-07-03
 # Whom:			Dennis Herrmann <dhn@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/lsw/Makefile,v 1.2 2012/11/17 06:03:18 svnexp Exp $
+# $FreeBSD: x11/lsw/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	lsw
@@ -21,7 +21,6 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 MAN1=	lsw.1
-MAKE_JOBS_SAFE=	yes
 USE_XORG=	x11 xt xproto xext
 
 post-patch:
