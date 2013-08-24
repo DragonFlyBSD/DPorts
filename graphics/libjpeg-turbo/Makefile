@@ -1,5 +1,5 @@
 # Created by: Denis Podolskiy <bytestore@yandex.ru>
-# $FreeBSD: graphics/libjpeg-turbo/Makefile 319723 2013-06-02 19:37:44Z pawel $
+# $FreeBSD: graphics/libjpeg-turbo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libjpeg-turbo
 PORTVERSION=	1.3.0
@@ -17,7 +17,6 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	SO_MAJOR_VERSION=${SOVERSION}
 CONFIGURE_ARGS=	--with-jpeg8
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 ALL_TARGET=	test
 
 MAN1=		cjpeg.1 djpeg.1 jpegtran.1 rdjpgcom.1 wrjpgcom.1
