@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: ports/games/nuclearchess/Makefile,v 1.19 2013/02/22 10:41:54 svnexp Exp $
+# $FreeBSD: games/nuclearchess/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	nuclearchess
 PORTVERSION=	1.0.0
@@ -22,7 +22,6 @@ USE_GNOME=	desktopfileutils
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=${DATADIR}
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS ChangeLog
 
