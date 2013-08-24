@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/linsmith/Makefile 323464 2013-07-22 15:23:15Z miwi $
+# $FreeBSD: science/linsmith/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	linsmith
 PORTVERSION=	0.99.26
@@ -14,7 +14,6 @@ LICENSE=	GPLv2 # (or later)
 USES=		gettext
 USE_GNOME=	libgnomeui libxml2
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
