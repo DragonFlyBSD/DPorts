@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/gnash/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: graphics/gnash/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gnash
 PORTVERSION=	0.8.10
@@ -30,7 +30,6 @@ WANT_GSTREAMER=	yes
 USE_GNOME=	pkgconfig libxml2
 USE_XORG=	x11 xau xdmcp xext xi xinerama ice sm xv
 USE_AUTOTOOLS=	libltdl
-MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
 
 # jemalloc leads to infinite recursion on FreeBSD
