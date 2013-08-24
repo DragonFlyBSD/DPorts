@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/tpm-tools/Makefile 323634 2013-07-25 10:49:53Z hrs $
+# $FreeBSD: security/tpm-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tpm-tools
 PORTVERSION=	1.3.5
@@ -25,7 +25,6 @@ USE_LDCONFIG=	YES
 USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	YES
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl -liconv
-MAKE_JOBS_SAFE=	YES
 
 MAN1=		tpm_sealdata.1 tpm_version.1				\
 		tpmtoken_import.1 tpmtoken_init.1 tpmtoken_objects.1	\
