@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net/silc-client/Makefile 317181 2013-05-03 08:16:33Z bapt $
+# $FreeBSD: net/silc-client/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	silc
 PORTVERSION=	1.1.8
@@ -20,7 +20,6 @@ COMMENT=	Secure Internet Live Conferencing (SILC) network client
 
 CONFLICTS=	silc-toolkit-1.1.* silc-irssi-plugin-1.1.*
 
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
