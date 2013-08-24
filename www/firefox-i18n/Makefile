@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/firefox-i18n/Makefile 324409 2013-08-08 18:42:03Z flo $
+# $FreeBSD: www/firefox-i18n/Makefile 324842 2013-08-17 13:17:58Z flo $
 
 PORTNAME=	firefox-i18n
-PORTVERSION=	23.0
+PORTVERSION=	23.0.1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/linux-i686/xpi
 PKGNAMEPREFIX=
