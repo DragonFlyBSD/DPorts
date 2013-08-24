@@ -1,9 +1,5 @@
-# New ports collection makefile for:   tcptraceroute
-# Date created:        21 March 2002
-# Whom:                jeff@cetlink.net
-#
-# $FreeBSD: ports/net/tcptraceroute/Makefile,v 1.13 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: jeff@cetlink.net
+# $FreeBSD: net/tcptraceroute/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	tcptraceroute
 PORTVERSION=	1.4
@@ -13,7 +9,7 @@ MASTER_SITES=	http://michael.toren.net/code/tcptraceroute/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A traceroute implementation using TCP packets
+COMMENT=	Traceroute implementation using TCP packets
 
 BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet10
 

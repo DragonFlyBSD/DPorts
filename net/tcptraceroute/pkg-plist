@@ -1,2 +1,2 @@
-@comment $FreeBSD: ports/net/tcptraceroute/pkg-plist,v 1.3 2012/11/17 06:00:23 svnexp Exp $
+@comment $FreeBSD: net/tcptraceroute/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 sbin/tcptraceroute
