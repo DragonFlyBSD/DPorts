@@ -1,5 +1,5 @@
 # Created by: Brad Lanam <bll@gentoo.com>
-# $FreeBSD: sysutils/di/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/di/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	di
 PORTVERSION=	4.34
@@ -10,7 +10,6 @@ MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Disk Information Utility
 
 MAKE_ENV+=	prefix="${PREFIX}"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		di.1
 
