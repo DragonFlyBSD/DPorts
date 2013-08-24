@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/alienwave/Makefile 315194 2013-03-25 06:06:11Z miwi $
+# $FreeBSD: games/alienwave/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	alienwave
 PORTVERSION=	0.4.0
@@ -23,7 +23,6 @@ LEVEL_HARD_DESC=	Killing Xzarna: hard
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README STORY TO_DO
 PLIST_FILES=	bin/alienwave
