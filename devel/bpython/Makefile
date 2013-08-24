@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bpython
-# Date created:		2010-03-09
-# Whom:			Yi-Jheng Lin <yzlin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/bpython/Makefile,v 1.5 2012/11/17 05:55:35 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@FreeBSD.org>
+# $FreeBSD: devel/bpython/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	bpython
 PORTVERSION=	0.11
@@ -11,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://bpython-interpreter.org/releases/
 PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A fancy interface to the Python interpreter
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pygments>=0:${PORTSDIR}/textproc/py-pygments

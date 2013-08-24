@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/bpython/pkg-plist,v 1.4 2012/11/17 05:55:35 svnexp Exp $
+@comment $FreeBSD: devel/bpython/pkg-plist 302671 2012-08-17 09:12:40Z sbz $
 bin/bpython
 bin/bpython-gtk
 bin/bpython-urwid
