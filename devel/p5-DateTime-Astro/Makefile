@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-DateTime-Astro/Makefile 321517 2013-06-22 02:02:35Z sunpoet $
+# $FreeBSD: devel/p5-DateTime-Astro/Makefile 325210 2013-08-22 16:21:53Z sunpoet $
 
 PORTNAME=	DateTime-Astro
 PORTVERSION=	0.99.999
@@ -18,8 +18,8 @@ LIB_DEPENDS=	mpfr:${PORTSDIR}/math/mpfr
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_PERL5=	configure
+USES=		gmake perl5
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAN3=		DateTime::Astro.3 \
