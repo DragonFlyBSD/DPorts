@@ -1,5 +1,5 @@
 # Created by: Yuri <yuri@tsoft.com>
-# $FreeBSD: multimedia/assimp/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/assimp/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	assimp
 PORTVERSION=	3.0
@@ -18,9 +18,8 @@ LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs
 
 USE_ZIP=	yes
 USES=		cmake pkgconfig
-USE_GCC=	4.6+ # 4.2+ causes compiler warnings
+USE_GCC=	yes	# GCC 4.2 causes compiler warnings
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 # CMAKE_ARGS instructs cmake to skip runtime path removal during install
 CMAKE_ARGS+=	"-DCMAKE_SKIP_RPATH=ON"
