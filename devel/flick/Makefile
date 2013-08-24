@@ -2,7 +2,7 @@
 # Date created:		21 Mar 1998
 # Whom:			giffunip@asme.org
 #
-# $FreeBSD: ports/devel/flick/Makefile,v 1.16 2013/02/08 08:47:35 svnexp Exp $
+# $FreeBSD: devel/flick/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	flick
@@ -24,7 +24,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
