@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-themes/qt4-style-float/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: x11-themes/qt4-style-float/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	float
 PORTVERSION=	0.1a2
@@ -17,7 +17,6 @@ LICENSE=	GPLv2
 
 USE_BZIP2=	yes
 USE_QT4=	corelib gui qmake_build moc_build rcc_build
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/floatstyle-${PORTVERSION}
 
