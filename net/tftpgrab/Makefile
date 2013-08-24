@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/tftpgrab/Makefile,v 1.5 2012/12/12 18:51:47 svnexp Exp $
+# $FreeBSD: net/tftpgrab/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tftpgrab
 PORTVERSION=	0.2
@@ -10,7 +10,6 @@ MAINTAINER=	wxs@FreeBSD.org
 COMMENT=	TFTP stream extractor
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/tftpgrab
 
