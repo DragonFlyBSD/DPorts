@@ -1,5 +1,5 @@
 # Created by: Jonathan Chen <jonc@chen.org.nz>
-# $FreeBSD: net-im/psi/Makefile 317947 2013-05-12 11:48:49Z makc $
+# $FreeBSD: net-im/psi/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	psi
 PORTVERSION=	0.15
@@ -24,7 +24,6 @@ USE_XORG=	xscrnsaver
 CONFIGURE_ARGS=	--prefix=${PREFIX} --qtdir=${LOCALBASE} \
 		--disable-growl --verbose
 CONFIGURE_ENV=	QMAKEFLAGS='${QMAKEFLAGS}'
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	ASPELL ENCHANT DBUS DEBUG
 OPTIONS_DEFAULT=	ASPELL DBUS
