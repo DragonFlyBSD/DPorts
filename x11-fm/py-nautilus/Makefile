@@ -2,7 +2,7 @@
 # Date created:				31 May, 2005
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fm/py-nautilus/Makefile,v 1.22 2012/11/17 06:03:26 svnexp Exp $
+# $FreeBSD: x11-fm/py-nautilus/Makefile 324744 2013-08-14 22:35:50Z ak $
 #   $MCom: ports/x11-fm/py-nautilus/Makefile,v 1.11 2009/04/07 17:54:12 marcus Exp $
 #
 
@@ -26,7 +26,6 @@ GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack pygnome2 nautilus2
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV=	PYTHON_VERSION="${PYTHON_VER}"
 
 DOCSDIR=	${PREFIX}/share/doc/nautilus-python
