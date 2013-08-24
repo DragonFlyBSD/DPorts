@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile 323351 2013-07-20 17:11:54Z ohauer $
+# $FreeBSD: www/apache24/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	apache24
 PORTVERSION=	2.4.6
@@ -14,7 +14,6 @@ LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2 \
 		apr-1:${PORTSDIR}/devel/apr1 \
 		pcre:${PORTSDIR}/devel/pcre
 
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK?=	apache24
 
