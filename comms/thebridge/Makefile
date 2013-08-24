@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/thebridge/Makefile 320328 2013-06-09 12:44:52Z miwi $
+# $FreeBSD: comms/thebridge/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	thebridge
 PORTVERSION=	1.09
@@ -18,7 +18,6 @@ PORTDOCS=	README
 USE_RC_SUBR=	tbd
 USE_AUTOTOOLS=	autoconf
 CONFIGURE_ENV=	AUTOMAKE=/usr/bin/true
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
