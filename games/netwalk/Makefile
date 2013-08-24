@@ -1,4 +1,4 @@
-# $FreeBSD: games/netwalk/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: games/netwalk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	netwalk
 PORTVERSION=	0.4.10
@@ -27,7 +27,6 @@ USE_GMAKE=	yes
 USES=		iconv
 USE_XORG=	x11 xau xdmcp
 ALL_TARGET=
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
