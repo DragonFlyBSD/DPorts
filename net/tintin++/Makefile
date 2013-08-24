@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/net/tintin++/Makefile,v 1.42 2013/01/30 17:47:33 svnexp Exp $
+# $FreeBSD: net/tintin++/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	tintin++
 PORTVERSION=	2.00.9
@@ -8,7 +8,7 @@ MASTER_SITES=	SF/tintin/TinTin%2B%2B%20Source%20Code/${PORTVERSION}/
 DISTNAME=	tintin-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A client program to help playing MUDs
+COMMENT=	Client program to help playing MUDs
 
 LICENSE=	GPLv2
 
@@ -23,7 +23,7 @@ CONFIGURE_ARGS=	--includedir=${LOCALBASE}/include \
 CONFIGURE_ENV=	ac_cv_file__dev_ptmx=no
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-USE_GMAKE=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/tt/src
 
 DOCS=		CREDITS FAQ README SCRIPTS TODO \
