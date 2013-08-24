@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-true
-# Date created:		2011-11-05
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-true/Makefile,v 1.2 2012/11/17 05:56:37 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-true/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	true
 PORTVERSION=	0.18
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-B-Hooks-OP-Annotation>=0.43:${PORTSDIR}/devel/p5-B-Hooks-OP-Anno
 		p5-B-Hooks-OP-Check>=0.18:${PORTSDIR}/devel/p5-B-Hooks-OP-Check \
 		p5-Devel-StackTrace>=1.27:${PORTSDIR}/devel/p5-Devel-StackTrace
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		true.3 \
 		true::VERSION.3
