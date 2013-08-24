@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/net-mgmt/echolot/Makefile,v 1.12 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/echolot/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	echolot
 PORTVERSION=	0.1.0
@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		echolot.1
 PORTDOCS=	*
