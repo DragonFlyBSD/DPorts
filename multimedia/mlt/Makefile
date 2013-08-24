@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/mlt/Makefile 320204 2013-06-07 14:33:45Z avilla $
+# $FreeBSD: multimedia/mlt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mlt
 PORTVERSION=	0.9.0
@@ -25,7 +25,6 @@ USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gpl --enable-gpl3
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .ifndef(WITH_DEBUG)
