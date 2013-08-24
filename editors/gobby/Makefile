@@ -1,4 +1,4 @@
-# $FreeBSD: editors/gobby/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: editors/gobby/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gobby
 PORTVERSION=	0.4.13
@@ -22,7 +22,6 @@ GTKSPELL_DESC=	Enable GtkSpell support
 USE_GNOME=	gnomehack gtksourceview2 intltool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
 
 MAN1=		${PORTNAME}.1
