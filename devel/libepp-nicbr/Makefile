@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: devel/libepp-nicbr/Makefile 319290 2013-05-28 05:50:55Z miwi $
+# $FreeBSD: devel/libepp-nicbr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libepp-nicbr
 PORTVERSION=	1.13
@@ -23,7 +23,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_header_cppunit_TestRunner_h=no
 CONFIGURE_ARGS=	--with-xerces-c=${LOCALBASE} \
 		--with-openssl=${OPENSSLBASE}
-MAKE_JOBS_SAFE=	yes
 
 DATADIR=	${PREFIX}/share/${PORTNAME:S/-/_/}
 
