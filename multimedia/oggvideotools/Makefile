@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: multimedia/oggvideotools/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: multimedia/oggvideotools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	oggvideotools
 PORTVERSION=	0.8a
@@ -20,7 +20,6 @@ LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 USE_SDL=	sdl
 USES=		cmake pkgconfig
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
