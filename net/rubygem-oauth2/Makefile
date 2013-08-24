@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-oauth2/Makefile 322599 2013-07-10 03:32:33Z sunpoet $
+# $FreeBSD: net/rubygem-oauth2/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	oauth2
 PORTVERSION=	0.9.2
@@ -7,7 +7,7 @@ CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A Ruby wrapper for the OAuth 2.0 protocol
+COMMENT=	Ruby wrapper for the OAuth 2.0 protocol
 
 LICENSE=	MIT
 
