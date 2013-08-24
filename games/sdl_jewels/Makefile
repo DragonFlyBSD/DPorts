@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/sdl_jewels/Makefile,v 1.5 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/sdl_jewels/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sdl_jewels
 PORTVERSION=	1.1.1
@@ -22,7 +22,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME:S/sdl/SDL/}-${PORTVERSION}
 
 USE_SDL=	sdl image mixer
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 ALL_TARGET=
 
 PLIST_FILES=	bin/sdljewels \
