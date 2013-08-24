@@ -1,4 +1,4 @@
-# $FreeBSD: games/tbe/Makefile 317344 2013-05-04 20:09:09Z johans $
+# $FreeBSD: games/tbe/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tbe
 PORTVERSION=	9
@@ -15,7 +15,6 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
 
 USE_GMAKE=	yes
 USE_QT4=	qmake_build corelib gui moc_build rcc_build svg uic_build xml
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/TheButterflyEffect-M${PORTVERSION}rc3
 
 PLIST_FILES=	bin/tbe
