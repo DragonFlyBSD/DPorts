@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: x11/gsynaptics/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11/gsynaptics/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gsynaptics
 PORTVERSION=	0.9.16
@@ -17,7 +17,6 @@ USES=		pathfix pkgconfig gettext
 USE_GNOME=	gconf2 libglade2 gnomedocutils
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
