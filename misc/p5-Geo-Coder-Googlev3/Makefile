@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/misc/p5-Geo-Coder-Googlev3/Makefile,v 1.4 2012/12/08 16:17:26 svnexp Exp $
+# $FreeBSD: misc/p5-Geo-Coder-Googlev3/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Geo-Coder-Googlev3
 PORTVERSION=	0.12
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Geo::Coder::Googlev3.3
 
