@@ -1,13 +1,16 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: irc/irssi-xmpp/Makefile 324701 2013-08-14 11:36:20Z marino $
+# $FreeBSD: irc/irssi-xmpp/Makefile 325098 2013-08-21 08:46:00Z jadawin $
 
 PORTNAME=	irssi-xmpp
-PORTVERSION=	0.51
+PORTVERSION=	0.52
 CATEGORIES=	irc
 MASTER_SITES=	http://cybione.org/~irssi-xmpp/files/
 
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Irssi-xmpp is an irssi plugin to connect to the Jabber network
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
@@ -16,40 +19,13 @@ LIB_DEPENDS=	loudmouth:${PORTSDIR}/net-im/loudmouth
 USES=		pkgconfig
 USE_LDCONFIG=	yes
 
-PLIST_FILES=	lib/irssi/modules/libfe_xmpp.so \
-		lib/irssi/modules/libtext_xmpp.so \
-		lib/irssi/modules/libxmpp_core.so
-PORTDOCS=	README \
-		FAQ \
-		GENERAL \
-		INTERNAL \
-		MUC \
-		STARTUP \
-		XEP
-
-LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
-
 MAKE_JOBS_UNSAFE=yes
 
-post-configure:
-	@${REINPLACE_CMD} "/ggdb/d" ${WRKSRC}/config.mk
+.include <bsd.port.options.mk>
 
-do-install:
-.for data in core fe-common fe-text
-	${MKDIR} ${PREFIX}/lib/irssi/modules
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${data}/*.so \
-		${PREFIX}/lib/irssi/modules
-.endfor
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/GENERAL ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/INTERNAL ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/MUC ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/STARTUP ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/XEP ${DOCSDIR}
+post-patch:
+.if ! ${PORT_OPTIONS:MDOCS}
+	${REINPLACE_CMD} -e 's/ doc-install / /g' ${WRKSRC}/Makefile
 .endif
 
 .include <bsd.port.mk>
