@@ -1,4 +1,4 @@
-# $FreeBSD: audio/linnya/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/linnya/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	linnya
 PORTVERSION=	2.3.0
@@ -23,7 +23,6 @@ USE_GMAKE=	yes
 USE_GNOME=	gtk30
 USE_SQLITE=	3
 USE_GSTREAMER=	good mp3
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
