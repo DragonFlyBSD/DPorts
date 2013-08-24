@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/arx-libertatis/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/arx-libertatis/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	arx-libertatis
 PORTVERSION=	1.0.3
@@ -24,7 +24,6 @@ USE_SDL=	sdl
 USE_GL=		gl glu
 USES=		cmake
 CMAKE_ARGS=	-DCMAKE_INSTALL_MANDIR="man" -DDATA_DIR=arx
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
