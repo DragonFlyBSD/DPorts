@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: ports/graphics/imagesort/Makefile,v 1.21 2012/11/17 05:58:09 svnexp Exp $
+# $FreeBSD: graphics/imagesort/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	imagesort
 PORTVERSION=	2.0
@@ -20,7 +20,6 @@ OPTIONS_DEFINE=	DOCS
 
 USE_XORG=	x11 xt
 USE_GNOME=	imlib
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README imagesortrc.sample
 PLIST_FILES=	bin/imagesort
