@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: graphics/xgrasp/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: graphics/xgrasp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xgrasp
 PORTVERSION=	1.7d
@@ -16,7 +16,6 @@ NO_WRKSUBDIR=	yes
 
 USES=		imake
 USE_XORG=	x11 xext
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		glib.1 xgrasp.1
 PLIST_FILES=	bin/glib bin/xgrasp
