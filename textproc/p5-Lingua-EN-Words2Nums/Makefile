@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Words2Nums/Makefile,v 1.2 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-EN-Words2Nums/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Lingua-EN-Words2Nums
 PORTVERSION=	0.18
@@ -13,7 +13,8 @@ COMMENT=	Convert English text to numbers
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Lingua::EN::Words2Nums.3
 
