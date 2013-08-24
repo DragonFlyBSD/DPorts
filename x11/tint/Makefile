@@ -1,4 +1,4 @@
-# $FreeBSD: x11/tint/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11/tint/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tint2
 PORTVERSION=	0.11
@@ -11,7 +11,6 @@ COMMENT=	Lightweight freedesktop-compliant panel/taskbar/systray/clock
 
 LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 
-MAKE_JOBS_SAFE=	yes
 
 PROJECTHOST=	tint2
 USE_BZIP2=	yes
