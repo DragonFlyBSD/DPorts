@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/finance/p5-Finance-Quote/Makefile,v 1.28 2012/11/17 05:57:26 svnexp Exp $
+# $FreeBSD: finance/p5-Finance-Quote/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Finance-Quote
 PORTVERSION=	1.18
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Finance::Quote.3 \
 		Finance::Quote::AEX.3 \
