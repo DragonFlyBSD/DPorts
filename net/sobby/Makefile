@@ -2,7 +2,7 @@
 # Date created:				2005-10-14
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
-# $FreeBSD: ports/net/sobby/Makefile,v 1.23 2012/11/17 06:00:21 svnexp Exp $
+# $FreeBSD: net/sobby/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	sobby
@@ -24,7 +24,6 @@ LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-zeroconf
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
