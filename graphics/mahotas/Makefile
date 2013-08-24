@@ -1,5 +1,5 @@
 # Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
-# $FreeBSD: ports/graphics/mahotas/Makefile,v 1.7 2012/12/16 15:40:24 svnexp Exp $
+# $FreeBSD: graphics/mahotas/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	mahotas
 PORTVERSION=	0.9.6
@@ -13,7 +13,7 @@ COMMENT=	Computer vision and image processing library for Python
 BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	freeimage:${PORTSDIR}/graphics/freeimage
 
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
