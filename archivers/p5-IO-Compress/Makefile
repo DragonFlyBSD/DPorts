@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: archivers/p5-IO-Compress/Makefile 320280 2013-06-08 20:58:48Z sunpoet $
+# $FreeBSD: archivers/p5-IO-Compress/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	IO-Compress
-PORTVERSION=	2.061
+PORTVERSION=	2.062
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
@@ -14,14 +14,15 @@ COMMENT=	Perl5 compression modules (bzip2, deflate, gzip, zlib, zip)
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Compress-Raw-Bzip2>=2.061:${PORTSDIR}/archivers/p5-Compress-Raw-Bzip2 \
-		p5-Compress-Raw-Zlib>=2.061:${PORTSDIR}/archivers/p5-Compress-Raw-Zlib
+BUILD_DEPENDS=	p5-Compress-Raw-Bzip2>=2.062:${PORTSDIR}/archivers/p5-Compress-Raw-Bzip2 \
+		p5-Compress-Raw-Zlib>=2.062:${PORTSDIR}/archivers/p5-Compress-Raw-Zlib
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
 CONFLICTS=	p5-Compress-Zlib-2* p5-IO-Compress-Base-2* p5-IO-Compress-Zlib-2* p5-IO-Compress-Bzip2-2*
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Compress::Zlib.3 \
 		File::GlobMapper.3 \
