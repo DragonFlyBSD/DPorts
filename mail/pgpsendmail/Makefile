@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/mail/pgpsendmail/Makefile,v 1.19 2013/02/07 22:31:57 svnexp Exp $
+# $FreeBSD: mail/pgpsendmail/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pgpsendmail
 PORTVERSION=	1.4
@@ -18,7 +18,6 @@ BUILD_DEPENDS=	pgp:${PORTSDIR}/security/pgp
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		pgppipe.1 sendpgppass.1
 MAN8=		pgpsendmail.8 pgpdaemon.8
