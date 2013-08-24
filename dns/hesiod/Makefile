@@ -1,5 +1,5 @@
 # Created by: n@nectar.com
-# $FreeBSD: dns/hesiod/Makefile 316571 2013-04-26 06:33:30Z miwi $
+# $FreeBSD: dns/hesiod/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hesiod
 PORTVERSION=	3.2.1
@@ -18,7 +18,6 @@ USES=		pathfix
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-silent-rules
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
