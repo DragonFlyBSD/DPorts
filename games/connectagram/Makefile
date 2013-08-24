@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/connectagram/Makefile 320217 2013-06-07 15:41:58Z miwi $
+# $FreeBSD: games/connectagram/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	connectagram
 PORTVERSION=	1.1.1
@@ -17,7 +17,6 @@ USES=		desktop-file-utils
 USE_QT4=	moc_build qmake_build rcc_build gui network iconengines \
 		imageformats
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	CREDITS ChangeLog
 
