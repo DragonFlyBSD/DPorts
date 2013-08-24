@@ -1,10 +1,10 @@
 # Created by: Yasuhiro KIMURA <yasu@utahime.org>
-# $FreeBSD: mail/py-authres/Makefile 319340 2013-05-29 05:23:13Z miwi $
+# $FreeBSD: mail/py-authres/Makefile 324615 2013-08-12 07:55:13Z culot $
 
 PORTNAME=	authres
-PORTVERSION=	0.600
+PORTVERSION=	0.602
 CATEGORIES=	mail python
-MASTER_SITES=	http://launchpad.net/authentication-results-python/trunk/0.6/+download/
+MASTER_SITES=	http://launchpad.net/authentication-results-python/trunk/0.602/+download/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yasu@utahime.org
