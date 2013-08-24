@@ -2,7 +2,7 @@
 # Date created:			16 June 2002
 # Whom:				Duncan Barclay <dmlb@dmlb.org>
 #
-# $FreeBSD: ports/cad/gwave/Makefile,v 1.35 2012/11/17 05:54:54 svnexp Exp $
+# $FreeBSD: cad/gwave/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gwave
@@ -26,7 +26,6 @@ PLOTUTILS_DESC=	Enable plotting using plotutils
 USE_GNOME=	gtk12
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
