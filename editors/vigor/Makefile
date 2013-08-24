@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: editors/vigor/Makefile 319831 2013-06-04 08:23:11Z miwi $
+# $FreeBSD: editors/vigor/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vigor
 PORTVERSION=	0.016
@@ -21,7 +21,6 @@ USE_TK=		yes
 USE_TK_BUILD=	yes
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR}
 LDFLAGS+=	-L${LOCALBASE}/lib
