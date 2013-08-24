@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/graphics/autoq3d/Makefile,v 1.18 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/autoq3d/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	autoq3d
 PORTVERSION=	1.40
@@ -19,7 +19,6 @@ USE_GL=		glu
 USE_ZIP=	yes
 USE_QT4=	corelib gui opengl \
 		moc_build qmake_build
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	3DQformat.txt ChangeLog.txt
 
