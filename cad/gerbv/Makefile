@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gerbv/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: cad/gerbv/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gerbv
 PORTVERSION=	2.6.0
@@ -18,7 +18,6 @@ USE_GNOME=	desktopfileutils gtk20
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
