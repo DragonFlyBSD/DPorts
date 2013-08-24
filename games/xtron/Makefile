@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xtron/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/xtron/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xtron
 PORTVERSION=	1.1a
@@ -12,7 +12,6 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Avoid running into walls, your own tail, and that of your opponent
 
 USE_XORG=	x11 xpm
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES="xtron" \
 		"Avoid running into walls, your own tail, and that of your opponent" \
