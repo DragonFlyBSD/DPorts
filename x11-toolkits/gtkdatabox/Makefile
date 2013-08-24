@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/gtkdatabox/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/gtkdatabox/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gtkdatabox
 PORTVERSION=	0.9.2.0
@@ -22,7 +22,6 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--includedir="${PREFIX}/include/${PORTNAME}" \
 		--with-html-dir="${PREFIX}/share/doc"
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PORTEXAMPLES=	*
