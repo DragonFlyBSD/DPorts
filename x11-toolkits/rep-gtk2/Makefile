@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-toolkits/rep-gtk2/Makefile 316954 2013-04-30 17:43:43Z sperber $
+# $FreeBSD: x11-toolkits/rep-gtk2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rep-gtk2
 PORTVERSION=	0.90.8.1
@@ -21,7 +21,6 @@ USES=		pathfix pkgconfig
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
