@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: astro/R-cran-maptools/Makefile 322392 2013-07-06 13:03:45Z tota $
+# $FreeBSD: astro/R-cran-maptools/Makefile 324609 2013-08-12 01:25:07Z tota $
 
 PORTNAME=	maptools
-DISTVERSION=	0.8-25
+DISTVERSION=	0.8-26
 CATEGORIES=	astro
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
