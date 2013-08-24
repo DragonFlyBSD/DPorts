@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/flowcanvas/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
+# $FreeBSD: x11-toolkits/flowcanvas/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	flowcanvas
 PORTVERSION=	0.7.1
@@ -21,7 +21,6 @@ LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs \
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 
