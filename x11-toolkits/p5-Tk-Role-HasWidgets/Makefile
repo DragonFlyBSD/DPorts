@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Role-HasWidgets/Makefile 316374 2013-04-23 17:07:20Z sunpoet $
+# $FreeBSD: x11-toolkits/p5-Tk-Role-HasWidgets/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Tk-Role-HasWidgets
 PORTVERSION=	1.112.380
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Moose>=0.92:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Has-Sugar>=0:${PORTSDIR}/devel/p5-MooseX-Has-Sugar
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Tk::Role::HasWidgets.3
 
