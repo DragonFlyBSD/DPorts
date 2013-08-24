@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/scintilla/Makefile 321587 2013-06-22 20:07:48Z rakuco $
+# $FreeBSD: x11-toolkits/scintilla/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	scintilla
 PORTVERSION=	3.3.3
@@ -18,7 +18,6 @@ USE_GMAKE=	yes
 MAKEFILE=	makefile
 USE_LDCONFIG=	yes
 USE_GNOME=	gtk20
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV+=	LDFLAGS="${LDFLAGS}"
 CFLAGS+=	-DPIC ${PICFLAG}
 
