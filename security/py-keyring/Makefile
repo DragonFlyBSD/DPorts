@@ -1,8 +1,8 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-keyring/Makefile 320346 2013-06-09 16:48:39Z miwi $
+# $FreeBSD: security/py-keyring/Makefile 324670 2013-08-13 15:00:47Z culot $
 
 PORTNAME=	keyring
-PORTVERSION=	1.3
+PORTVERSION=	1.6.1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -36,7 +36,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pycrypto>=2.5:${PORTSDIR}/security/py-pycry
 .endif
 
 .if ${PORT_OPTIONS:MGNOME_KEYRING}
-USE_GNOME+=	pygnomedesktop
+USE_GNOME+=	pygobject3
 .endif
 
 .if ${PORT_OPTIONS:MKDE_KWALLET}
