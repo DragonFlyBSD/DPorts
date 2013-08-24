@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: ports/games/jzip/Makefile,v 1.13 2013/02/07 22:12:08 svnexp Exp $
+# $FreeBSD: games/jzip/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jzip
 PORTVERSION=	2.0.1g
@@ -13,7 +13,6 @@ COMMENT=	Text-mode Infocom game interpreter
 NO_WRKSUBDIR=	yes
 
 USE_ZIP=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-DPOSIX -DHAVE_GETOPT
 
