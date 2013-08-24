@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Toolkit
-# Date created:		2011-05-30
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Toolkit/Makefile,v 1.5 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Toolkit/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	XML-Toolkit
 PORTVERSION=	0.15
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:PERIGRIN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A suit of XML tools with Antlers
+COMMENT=	Suit of XML tools with Antlers
 
 BUILD_DEPENDS=	p5-Bread-Board>=0:${PORTSDIR}/devel/p5-Bread-Board \
 		p5-Devel-PackagePath>=0.01:${PORTSDIR}/devel/p5-Devel-PackagePath \
@@ -36,7 +32,8 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-XML>=0:${PORTSDIR}/devel/p5-Test-XML
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		XML::Filter::Moose.3 \
 		XML::Generator::Moose.3 \
