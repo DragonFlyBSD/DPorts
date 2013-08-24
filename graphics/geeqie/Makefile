@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@rwxrwxrwx.net>
-# $FreeBSD: graphics/geeqie/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: graphics/geeqie/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	geeqie
 PORTVERSION=	1.1
@@ -22,7 +22,6 @@ CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	${CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ARGS+=	top_builddir="${WRKSRC}"
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 MAN1=		geeqie.1
