@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Parsepp
-# Date created:		2012-07-01
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Parsepp/Makefile,v 1.6 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Parsepp/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	XML-Parsepp
 PORTVERSION=	0.06
@@ -17,7 +13,8 @@ COMMENT=	Simplified pure Perl parser for XML
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	5.14.0+
+USE_PERL5=	5.14.0+ configure
+USES=		perl5
 
 MAN3=		XML::Parsepp.3
 
