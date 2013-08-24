@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/corsix-th/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: games/corsix-th/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	corsixth
 PORTVERSION=	0.21
@@ -19,7 +19,6 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 USES=		cmake
 USE_LUA=	yes
 USE_SDL=	mixer
-MAKE_JOBS_SAFE=	yes
 USE_DOS2UNIX=	CMake/FindFFmpeg.cmake \
 		CorsixTH/CMakeLists.txt
 
@@ -39,7 +38,7 @@ CC=		/usr/bin/clang
 CPP=		/usr/bin/clang-cpp
 CXX=		/usr/bin/clang++
 .else
-USE_GCC=	4.6+
+USE_GCC=	yes
 .endif
 .endif
 .else
