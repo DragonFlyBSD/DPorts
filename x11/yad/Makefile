@@ -1,4 +1,4 @@
-# $FreeBSD: x11/yad/Makefile 323157 2013-07-17 09:36:13Z miwi $
+# $FreeBSD: x11/yad/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	yad
 PORTVERSION=	0.22.1
@@ -15,7 +15,6 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV+=	DATADIRNAME=share
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	yad.1
 
