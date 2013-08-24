@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.ORG
-# $FreeBSD: x11-toolkits/wxgtk29/Makefile 316695 2013-04-27 22:09:15Z bapt $
+# $FreeBSD: x11-toolkits/wxgtk29/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wx
 PORTVERSION=	2.9.4
@@ -25,7 +25,6 @@ USE_GCC=	any
 USE_XORG=	x11 sm xxf86vm xinerama
 USE_GL=		glu
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
