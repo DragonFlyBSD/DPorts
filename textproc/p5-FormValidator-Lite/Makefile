@@ -1,9 +1,9 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: textproc/p5-FormValidator-Lite/Makefile 318003 2013-05-13 07:55:29Z culot $
+# $FreeBSD: textproc/p5-FormValidator-Lite/Makefile 324619 2013-08-12 09:12:47Z culot $
 #
 
 PORTNAME=	FormValidator-Lite
-PORTVERSION=	0.34
+PORTVERSION=	0.37
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -33,6 +33,7 @@ MAN3=		FormValidator::Lite.3 \
 		FormValidator::Lite::Constraint::Email.3 \
 		FormValidator::Lite::Constraint::File.3 \
 		FormValidator::Lite::Constraint::Japanese.3 \
+		FormValidator::Lite::Constraint::Number.3 \
 		FormValidator::Lite::Constraint::Time.3 \
 		FormValidator::Lite::Constraint::URL.3 \
 		FormValidator::Lite::Messages::en.3 \
