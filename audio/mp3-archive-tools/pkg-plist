@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/mp3-archive-tools/pkg-plist,v 1.3 2012/11/17 05:54:38 svnexp Exp $
+@comment $FreeBSD: audio/mp3-archive-tools/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/cddbtofilename
 bin/filenametoid3
 bin/freedbtofilename
