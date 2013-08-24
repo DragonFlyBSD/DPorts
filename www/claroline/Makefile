@@ -1,8 +1,8 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/claroline/Makefile 323347 2013-07-20 13:33:44Z wen $
+# $FreeBSD: www/claroline/Makefile 324977 2013-08-19 11:50:35Z wen $
 
 PORTNAME=	claroline
-PORTVERSION=	1.11.7
+PORTVERSION=	1.11.8
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/Claroline/Claroline_${PORTVERSION}
 
