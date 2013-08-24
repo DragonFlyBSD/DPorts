@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Thrift-XS
-# Date created:		2011-12-15
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Thrift-XS/Makefile,v 1.2 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Thrift-XS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Thrift-XS
 PORTVERSION=	1.04
@@ -19,17 +15,14 @@ BUILD_DEPENDS=	p5-Bit-Vector>=0:${PORTSDIR}/math/p5-Bit-Vector \
 		p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
-RUN_DEPENDS=	p5-Bit-Vector>=0:${PORTSDIR}/math/p5-Bit-Vector \
-		p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
-		p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
-		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Proc-ProcessTable>=0:${PORTSDIR}/devel/p5-Proc-ProcessTable \
 		p5-Test-BinaryData>=0:${PORTSDIR}/devel/p5-Test-BinaryData \
 		p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1.04:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Thrift::XS.3 \
 		Thrift::XS::BinaryProtocol.3 \
