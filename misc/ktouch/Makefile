@@ -1,4 +1,4 @@
-# $FreeBSD: misc/ktouch/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: misc/ktouch/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ktouch
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,6 @@ USE_QT4=	corelib declarative opengl phonon script sql xmlpatterns \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_XORG=	xkbfile
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		ktouch.1
 
