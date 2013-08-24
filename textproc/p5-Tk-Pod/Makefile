@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Tk-Pod/Makefile 315006 2013-03-23 07:26:24Z sunpoet $
+# $FreeBSD: textproc/p5-Tk-Pod/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Tk-Pod
 PORTVERSION=	0.9941
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Tk>=800.004:${PORTSDIR}/x11-toolkits/p5-Tk
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		tkmore.1 \
 		tkpod.1
