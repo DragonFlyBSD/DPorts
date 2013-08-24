@@ -2,7 +2,7 @@
 # Date created:		22 Mar 2001
 # Whom:			Mario Sergio Fujikawa Ferreira <liouxFreeBSD.org>
 #
-# $FreeBSD: ports/net/rp-pppoe/Makefile,v 1.16 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/rp-pppoe/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	rp-pppoe
@@ -18,7 +18,6 @@ PATCH_WRKSRC=	${WRKSRC}/src
 CONFIGURE_WRKSRC=	${WRKSRC}/src
 BUILD_WRKSRC=	${WRKSRC}/src
 
-MAKE_JOBS_SAFE=	yes
 
 MAN5=	pppoe.conf.5
 MAN8=	pppoe-connect.8 pppoe-setup.8 pppoe-start.8 pppoe-status.8 \
