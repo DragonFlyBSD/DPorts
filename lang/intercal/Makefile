@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@freebsd.org>
-# $FreeBSD: ports/lang/intercal/Makefile,v 1.16 2012/12/31 15:23:18 svnexp Exp $
+# $FreeBSD: lang/intercal/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	intercal
 PORTVERSION=	0.29
@@ -25,7 +25,7 @@ post-patch:
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900000
-USE_GCC=	4.6+
+USE_GCC=	yes
 .endif
 
 .include <bsd.port.post.mk>
