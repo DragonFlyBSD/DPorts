@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: emulators/visualos/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: emulators/visualos/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	VisualOS
 PORTVERSION=	1.0.5
@@ -16,7 +16,6 @@ USES=        pathfix
 USE_GNOME=	gnomeprefix libglade
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
