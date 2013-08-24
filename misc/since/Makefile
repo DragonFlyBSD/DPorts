@@ -2,7 +2,7 @@
 # Date created:		11 February 2002
 # Whom:	      		Johann Visagie <wjv@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/since/Makefile,v 1.15 2012/11/17 05:59:44 svnexp Exp $
+# $FreeBSD: misc/since/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	since
@@ -17,7 +17,6 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	${PORTNAME}
 
