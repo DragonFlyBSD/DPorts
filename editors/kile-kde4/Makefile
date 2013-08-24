@@ -1,5 +1,5 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: editors/kile-kde4/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: editors/kile-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kile
 PORTVERSION=	2.1.3
@@ -16,7 +16,6 @@ USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdeprefix kdelibs automoc4 sharedmime kate_run
 USE_TEX=	latex
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	${PORTNAME}-kde4
 
