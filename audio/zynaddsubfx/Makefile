@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/zynaddsubfx/Makefile 319246 2013-05-27 14:21:14Z miwi $
+# $FreeBSD: audio/zynaddsubfx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	zynaddsubfx
 PORTVERSION=	2.4.3
@@ -23,7 +23,6 @@ LO_DESC=	Open Sound Control support via LibLO
 
 USE_BZIP2=	yes
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PORTEXAMPLES=	*
