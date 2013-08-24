@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: japanese/xjtext/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: japanese/xjtext/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xjtext
 PORTVERSION=	1.3
@@ -13,7 +13,6 @@ COMMENT=	A text viewer for Japanese vertical writings
 
 USES=		bison
 USE_GNOME=	imlib
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
