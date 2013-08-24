@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/capitalism/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: games/capitalism/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	capitalism
 PORTVERSION=	0.5.1
@@ -26,7 +26,6 @@ USES=		iconv
 USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender
 USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats \
 		corelib gui network script xml
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README changelog readme.txt
 
