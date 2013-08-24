@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::Ident
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-Lingua-Ident/Makefile,v 1.11 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-Ident/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Lingua-Ident
 PORTVERSION=	1.7
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Statistical language identification
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		trainlid.1
 MAN3=		Lingua::Ident.3
