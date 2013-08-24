@@ -1,5 +1,5 @@
 # Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: mail/mew/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/mew/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mew
 PORTVERSION=	6.5
@@ -23,7 +23,6 @@ USE_EMACS=	yes
 RUN_DEPENDS=	rubygem-sqlite3>=0:${PORTSDIR}/databases/rubygem-sqlite3
 .endif
 
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
