@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/math/yacas/Makefile,v 1.53 2012/11/17 05:59:32 svnexp Exp $
+# $FreeBSD: math/yacas/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	yacas
 PORTVERSION=	1.3.3
@@ -20,7 +20,6 @@ USE_PERL5_BUILD=yes
 USE_GMAKE=	yes
 #USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
