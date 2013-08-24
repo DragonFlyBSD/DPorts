@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 324462 2013-08-09 20:52:29Z delphij $
+  $FreeBSD: security/vuxml/vuln.xml 325102 2013-08-21 09:29:44Z rene $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,264 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="ae651a4b-0a42-11e3-ba52-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>29.0.1547.57</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>25 security fixes in this release, including:</p>
+	  <ul>
+	    <li>[181617] High CVE-2013-2900: Incomplete path sanitization in
+	      file handling. Credit to Krystian Bigaj.</li>
+	    <li> [254159] Low CVE-2013-2905: Information leak via overly broad
+	      permissions on shared memory files. Credit to Christian
+	      Jaeger.</li>
+	    <li>[257363] High CVE-2013-2901: Integer overflow in ANGLE. Credit
+	      to Alex Chapman.</li>
+	    <li>[260105] High CVE-2013-2902: Use after free in XSLT. Credit to
+	      cloudfuzzer.</li>
+	    <li>[260156] High CVE-2013-2903: Use after free in media element.
+	      Credit to cloudfuzzer.</li>
+	    <li>[260428] High CVE-2013-2904: Use after free in document
+	      parsing. Credit to cloudfuzzer.</li>
+	    <li>[274602] CVE-2013-2887: Various fixes from internal audits,
+	      fuzzing and other initiatives (Chrome 29).</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2887</cvename>
+      <cvename>CVE-2013-2900</cvename>
+      <cvename>CVE-2013-2901</cvename>
+      <cvename>CVE-2013-2902</cvename>
+      <cvename>CVE-2013-2903</cvename>
+      <cvename>CVE-2013-2904</cvename>
+      <cvename>CVE-2013-2905</cvename>
+      <url>http://googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2013-08-20</discovery>
+      <entry>2013-08-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4d087b35-0990-11e3-a9f4-bcaec565249c">
+    <topic>gstreamer-ffmpeg -- Multiple vulnerabilities in bundled libav</topic>
+    <affects>
+      <package>
+	<name>gstreamer-ffmpeg</name>
+	<range><lt>0.10.13_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<blockquote cite="http://libav.org/releases/libav-0.7.7.changelog">
+	  <p>Bundled version of libav in gstreamer-ffmpeg contains a number of
+	     vulnerabilities.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2011-3892</cvename>
+      <cvename>CVE-2011-3893</cvename>
+      <cvename>CVE-2011-3895</cvename>
+      <cvename>CVE-2011-3929</cvename>
+      <cvename>CVE-2011-3936</cvename>
+      <cvename>CVE-2011-3937</cvename>
+      <cvename>CVE-2011-3940</cvename>
+      <cvename>CVE-2011-3945</cvename>
+      <cvename>CVE-2011-3947</cvename>
+      <cvename>CVE-2011-3951</cvename>
+      <cvename>CVE-2011-3952</cvename>
+      <cvename>CVE-2011-4031</cvename>
+      <cvename>CVE-2011-4351</cvename>
+      <cvename>CVE-2011-4352</cvename>
+      <cvename>CVE-2011-4353</cvename>
+      <cvename>CVE-2011-4364</cvename>
+      <cvename>CVE-2011-4579</cvename>
+      <cvename>CVE-2012-0848</cvename>
+      <cvename>CVE-2012-0850</cvename>
+      <cvename>CVE-2012-0851</cvename>
+      <cvename>CVE-2012-0852</cvename>
+      <cvename>CVE-2012-0853</cvename>
+      <cvename>CVE-2012-0858</cvename>
+      <cvename>CVE-2012-0947</cvename>
+      <cvename>CVE-2012-2772</cvename>
+      <cvename>CVE-2012-2775</cvename>
+      <cvename>CVE-2012-2777</cvename>
+      <cvename>CVE-2012-2779</cvename>
+      <cvename>CVE-2012-2783</cvename>
+      <cvename>CVE-2012-2784</cvename>
+      <cvename>CVE-2012-2786</cvename>
+      <cvename>CVE-2012-2787</cvename>
+      <cvename>CVE-2012-2788</cvename>
+      <cvename>CVE-2012-2790</cvename>
+      <cvename>CVE-2012-2791</cvename>
+      <cvename>CVE-2012-2793</cvename>
+      <cvename>CVE-2012-2794</cvename>
+      <cvename>CVE-2012-2798</cvename>
+      <cvename>CVE-2012-2800</cvename>
+      <cvename>CVE-2012-2801</cvename>
+      <cvename>CVE-2012-2803</cvename>
+      <cvename>CVE-2012-5144</cvename>
+      <url>http://libav.org/releases/libav-0.7.7.changelog</url>
+    </references>
+    <dates>
+      <discovery>2013-08-20</discovery>
+      <entry>2013-08-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="689c2bf7-0701-11e3-9a25-002590860428">
+    <topic>GnuPG and Libgcrypt -- side-channel attack vulnerability</topic>
+    <affects>
+      <package>
+	<name>libgcrypt</name>
+	<range><lt>1.5.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Werner Koch of the GNU project reports:</p>
+	<blockquote cite="http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000329.html">
+	  <p>Noteworthy changes in version 1.5.3:</p>
+	  <p>Mitigate the Yarom/Falkner flush+reload side-channel attack on RSA secret keys...</p>
+	  <p>Note that Libgcrypt is used by GnuPG 2.x and thus this release fixes the above
+	    problem. The fix for GnuPG less than 2.0 can be found in the just released GnuPG
+	    1.4.14.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+    <url>http://eprint.iacr.org/2013/448</url>
+    <url>http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000329.html</url>
+    <url>http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000330.html</url>
+    </references>
+    <dates>
+      <discovery>2013-07-18</discovery>
+      <entry>2013-08-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2b2f6092-0694-11e3-9e8e-000c29f6ae42">
+    <topic>puppet -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>puppet</name>
+	<range><ge>2.7</ge><lt>2.7.23</lt></range>
+	<range><ge>3.0</ge><lt>3.2.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Puppet Labs reports:</p>
+	<blockquote cite="http://puppetlabs.com/security/cve/cve-2013-4761/">
+	  <p>By using the `resource_type` service, an attacker could
+	    cause puppet to load arbitrary Ruby files from the puppet
+	    master node's file system. While this behavior is not
+	    enabled by default, `auth.conf` settings could be modified
+	    to allow it. The exploit requires local file system access
+	    to the Puppet Master.</p>
+	  <p>Puppet Module Tool (PMT) did not correctly control
+	    permissions of modules it installed, instead transferring
+	    permissions that existed when the module was built.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4761</cvename>
+      <cvename>CVE-2013-4956</cvename>
+      <url>http://puppetlabs.com/security/cve/cve-2013-4761/</url>
+      <url>http://puppetlabs.com/security/cve/cve-2013-4956/</url>
+    </references>
+    <dates>
+      <discovery>2013-07-05</discovery>
+      <entry>2013-08-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9a0a892e-05d8-11e3-ba09-000c29784fd1">
+    <topic>lcms2 -- Null Pointer Dereference Denial of Service Vulnerability</topic>
+    <affects>
+      <package>
+	<name>lcms2</name>
+	<range><lt>2.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mageia security team reports:</p>
+	<blockquote cite="http://advisories.mageia.org/MGASA-2013-0240.html">
+	  <p>It was discovered that Little CMS did not properly verify certain
+	    memory allocations. If a user or automated system using Little CMS
+	    were tricked into opening a specially crafted file, an attacker
+	    could cause Little CMS to crash (CVE-2013-4160).
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4160</cvename>
+      <url>http://advisories.mageia.org/MGASA-2013-0240.html</url>
+      <url>https://bugs.mageia.org/show_bug.cgi?id=10816</url>
+    </references>
+    <dates>
+      <discovery>2013-07-22</discovery>
+      <entry>2013-08-15</entry>
+      <modified>2013-08-19</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="72bf9e21-03df-11e3-bd8d-080027ef73ec">
+    <topic>polarssl -- denial of service vulnerability</topic>
+    <affects>
+      <package>
+	<name>polarssl</name>
+	<range><lt>1.2.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Paul Bakker reports:</p>
+	<blockquote cite="https://polarssl.org/tech-updates/security-advisories/polarssl-security-advisory-2013-03">
+	  <p>A bug in the logic of the parsing of PEM encoded certificates in
+	    x509parse_crt() can result in an infinite loop, thus hogging processing
+	    power.</p>
+	  <p>While parsing a Certificate message during the SSL/TLS handshake,
+	    PolarSSL extracts the presented certificates and sends them on to
+	    be parsed. As the RFC specifies that the certificates in the
+	    Certificate message are always X.509 certificates in DER format,
+	    bugs in the decoding of PEM certificates should normally not be
+	    triggerable via the SSL/TLS handshake.</p>
+	  <p>Versions of PolarSSL prior to 1.1.7 in the 1.1 branch and prior
+	    to 1.2.8 in the 1.2 branch call the generic x509parse_crt()
+	    function for parsing during the handshake. x509parse_crt() is a
+	    generic functions that wraps parsing of both PEM-encoded and
+	    DER-formatted certificates. As a result it is possible to craft
+	    a Certificate message that includes a PEM encoded certificate in
+	    the Certificate message that triggers the infinite loop.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4623</cvename>
+      <url>https://polarssl.org/tech-updates/security-advisories/polarssl-security-advisory-2013-03</url>
+    </references>
+    <dates>
+      <discovery>2013-06-21</discovery>
+      <entry>2013-08-13</entry>
+      <modified>2013-08-15</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="e21c7c7a-0116-11e3-9e83-3c970e169bc2">
     <topic>samba -- denial of service vulnerability</topic>
     <affects>
@@ -9311,7 +9569,7 @@ executed in your Internet Explorer while displaying the email.</p>
     <dates>
       <discovery>2012-08-13</discovery>
       <entry>2012-09-08</entry>
-      <modified>2012-09-23</modified>
+      <modified>2013-05-13</modified>
     </dates>
   </vuln>
 
