@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: archivers/unalz/Makefile 317806 2013-05-10 14:31:14Z miwi $
+# $FreeBSD: archivers/unalz/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	unalz
 PORTVERSION=	0.65
@@ -20,7 +20,6 @@ USE_DOS2UNIX=	yes
 MAKE_ARGS=	CPP="${CXX}" CC="${CC}" OBJ="${UNALZ_OBJS}" \
 		LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	posix-utf8
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lz -lbz2
