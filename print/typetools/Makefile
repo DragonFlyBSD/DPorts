@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/typetools/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/typetools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	typetools
 PORTVERSION=	2.98
@@ -16,7 +16,6 @@ USE_TEX=	base
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_header_kpathsea_kpathsea_h=yes
 CONFIGURE_ARGS=	--with-kpathsea=${LOCALBASE}
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		cfftot1.1 mmafm.1 mmpfb.1 otfinfo.1 otftotfm.1 t1dotlessj.1 \
 		t1lint.1 t1rawafm.1 t1reencode.1 t1testpage.1 ttftotype42.1
