@@ -3,7 +3,7 @@
 # Date created:			Mar 14, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: cad/qfsm/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: cad/qfsm/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	qfsm
@@ -26,7 +26,6 @@ USE_QT4=	corelib gui qt3support svg xml \
 USE_GNOME=	desktopfileutils
 USES=		cmake
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
