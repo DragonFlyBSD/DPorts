@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/cocaine-core/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/cocaine-core/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	cocaine-core
 PORTVERSION=	0.10
@@ -20,14 +20,13 @@ LIB_DEPENDS=	boost_iostreams:${PORTSDIR}/devel/boost-libs \
 		zmq:${PORTSDIR}/devel/zmq
 
 USES=		cmake
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	zloidemon
 GH_COMMIT=	7d0f35c
 GH_TAGNAME=	${GH_COMMIT}
 
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	json-c-[0-9]*
 
