@@ -1,4 +1,4 @@
-# $FreeBSD: games/lordsawar/Makefile 318586 2013-05-20 08:58:29Z miwi $
+# $FreeBSD: games/lordsawar/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lordsawar
 PORTVERSION=	0.2.0
@@ -23,7 +23,6 @@ USE_GCC=	any
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-boost-includedir=${LOCALBASE}/include
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
