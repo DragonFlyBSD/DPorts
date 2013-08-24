@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/mp3lint/pkg-plist,v 1.2 2012/11/17 05:54:39 svnexp Exp $
+@comment $FreeBSD: audio/mp3lint/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/mp3lint
 bin/mp3lintsum
 bin/mp3lintskip

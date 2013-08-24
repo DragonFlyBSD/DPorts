@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mp3lint
-# Date created:		2010-07-06
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-#
-# $FreeBSD: ports/audio/mp3lint/Makefile,v 1.5 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
+# $FreeBSD: audio/mp3lint/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	mp3lint
 PORTVERSION=	0.9
@@ -12,12 +8,13 @@ MASTER_SITES=	http://erislabs.net/ianb/projects/${PORTNAME}/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A configurable tool to check collections of audio files
+COMMENT=	Configurable tool to check collections of audio files
 
 BUILD_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl
 RUN_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		mp3lintsum.1 mp3lintskip.1 mp3lint.1
 MAN3=		mp3lint-tools.3
