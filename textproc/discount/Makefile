@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: ports/textproc/discount/Makefile,v 1.27 2013/02/04 04:23:48 svnexp Exp $
+# $FreeBSD: textproc/discount/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	discount
 DISTVERSION=	2.1.5a
@@ -18,7 +18,6 @@ HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=configure.sh
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--mandir=${MANPREFIX}/man
-MAKE_JOBS_SAFE=	yes
 INSTALL_TARGET=	install install.man
 
 MAN1=		markdown.1
