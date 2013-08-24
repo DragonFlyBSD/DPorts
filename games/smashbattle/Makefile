@@ -1,6 +1,6 @@
 # Created by:		nemysis@gmx.ch
 #
-# $FreeBSD: ports/games/smashbattle/Makefile,v 1.2 2012/11/17 05:57:53 svnexp Exp $
+# $FreeBSD: games/smashbattle/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	smashbattle
 PORTVERSION=	110224
@@ -19,7 +19,6 @@ USE_GMAKE=	yes
 USE_DOS2UNIX=	*.cpp *.h *.ini Makefile
 ALL_TARGET=	battle
 USE_SDL=	sdl image mixer
-MAKE_JOBS_SAFE=	yes
 
 pre-extract:
 	@${MKDIR} ${WRKDIR}/${DISTNAME}
