@@ -1,5 +1,5 @@
 # Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
-# $FreeBSD: graphics/showimage/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/showimage/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	showimage
 PORTVERSION=	1.6.3
@@ -15,7 +15,6 @@ USE_BZIP2=	yes
 USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
