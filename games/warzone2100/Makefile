@@ -1,5 +1,5 @@
 # Create by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/warzone2100/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/warzone2100/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	warzone2100
 PORTVERSION=	3.1.0
@@ -40,9 +40,8 @@ CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}" \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 REINPLACE_ARGS=	-i ''
-MAKE_JOBS_SAFE=	yes
 PORTDOCS=	*
-USE_GCC=	4.6+
+USE_GCC=	yes
 
 .include <bsd.port.options.mk>
 
