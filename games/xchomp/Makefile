@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xchomp/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xchomp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xchomp
 PORTVERSION=	pl1
@@ -14,7 +14,6 @@ WRKSRC=		${WRKDIR}/xchomp
 
 USES=		imake
 USE_XORG=	x11 xext
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/xchomp
 
