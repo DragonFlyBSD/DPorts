@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@freebsd.org>
-# $FreeBSD: devel/kaptain/Makefile 313212 2013-03-02 06:38:39Z miwi $
+# $FreeBSD: devel/kaptain/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kaptain
 PORTVERSION=	0.73
@@ -15,7 +15,6 @@ LICENSE=	GPLv2 # (or later)
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 USE_QT4=	qt3support moc_build qmake_build
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		kaptain.1
 INFO=		kaptain
