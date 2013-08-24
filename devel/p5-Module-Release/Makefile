@@ -1,9 +1,5 @@
-# New ports collection makefile for:	release
-# Date created:	   14 Mart 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Module-Release/Makefile,v 1.24 2012/11/17 05:56:22 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Module-Release/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Module-Release
 PORTVERSION=	2.06
@@ -26,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
 		p5-Test-Without-Module>=0:${PORTSDIR}/devel/p5-Test-Without-Module
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		release.1
 MAN3=		Module::Release.3 \
