@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/science/flounder/Makefile,v 1.35 2012/12/23 21:38:07 svnexp Exp $
+# $FreeBSD: science/flounder/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	flounder
 PORTVERSION=	0.40
@@ -22,7 +22,6 @@ GRACE_DESC=	Plotting via GRACE
 USE_GL=		glut
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
