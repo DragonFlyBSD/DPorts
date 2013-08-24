@@ -2,7 +2,7 @@
 # Date created:        Sun Apr  6 10:12:16 CEST 2003
 # Whom:                Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/net/nast/Makefile,v 1.24 2013/02/18 21:46:32 svnexp Exp $
+# $FreeBSD: net/nast/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	nast
@@ -22,7 +22,6 @@ LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
-MAKE_JOBS_SAFE=	yes
 
 MAN8=		nast.8
 PLIST_FILES=	bin/nast
