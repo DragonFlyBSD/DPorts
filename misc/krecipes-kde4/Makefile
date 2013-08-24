@@ -1,4 +1,4 @@
-# $FreeBSD: misc/krecipes-kde4/Makefile 317967 2013-05-12 16:16:56Z makc $
+# $FreeBSD: misc/krecipes-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	krecipes
 DISTVERSION=	2.0-beta2
@@ -20,7 +20,6 @@ OPTIONS_DEFAULT=	SQLITE
 USES=		cmake gettext
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdeprefix kdelibs qimageblitz sharedmime
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
