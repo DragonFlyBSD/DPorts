@@ -2,7 +2,7 @@
 # Date created:				Sun May 20 12:58:02 CEST 2001
 # Whom:					Dirk Froemberg <dirk@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_jk/Makefile,v 1.54 2012/11/17 21:11:24 svnexp Exp $
+# $FreeBSD: www/mod_jk/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_jk
@@ -17,7 +17,6 @@ DISTNAME=	tomcat-connectors-${PORTVERSION}-src
 MAINTAINER?=	girgen@FreeBSD.org
 COMMENT?=	Apache JK module for connecting to Tomcat using AJP1X
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE?=	22+
 APACHE_VER=	2.0
