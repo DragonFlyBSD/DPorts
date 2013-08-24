@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: emulators/xsystem35/Makefile 316577 2013-04-26 06:56:29Z miwi $
+# $FreeBSD: emulators/xsystem35/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xsystem35
 PORTVERSION=	1.7.2
@@ -25,7 +25,6 @@ CONFIGURE_ARGS=	--without-included-gettext \
 		--with-cachesize=20 \
 		--enable-midi=seq,extp,raw \
 		--enable-cdrom=bsd,mp3
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
