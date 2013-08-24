@@ -1,5 +1,5 @@
 # Created by: Lukasz Wasikowski <lukasz@wasikowski.net>
-# $FreeBSD: www/mod_macro22/Makefile 315392 2013-03-27 16:19:19Z ohauer $
+# $FreeBSD: www/mod_macro22/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_macro
 PORTVERSION=	1.1.11
@@ -14,7 +14,6 @@ LICENSE_NAME=	mod_macro license (apache with postcard request)
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22
 LATEST_LINK=	mod_macro22
