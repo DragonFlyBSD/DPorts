@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: graphics/claraocr/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: graphics/claraocr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	claraocr
 PORTVERSION=	20031214
@@ -17,7 +17,6 @@ RUN_DEPENDS=	pnmenlarge:${PORTSDIR}/graphics/netpbm
 USES=		shebangfix perl5
 USE_XORG=	x11
 MAKE_ENV=	MKDIR="${MKDIR}"
-MAKE_JOBS_SAFE=	yes
 
 SHEBANG_FILES=	clara.pl mkdoc.pl selthresh
 
