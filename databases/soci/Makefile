@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: databases/soci/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: databases/soci/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	soci
 PORTVERSION=	3.1.0
@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt
 USE_ZIP=	yes
 USES=		cmake
 CMAKE_ARGS+=	-DWITH_ORACLE:BOOL=OFF
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 SUB_FILES=	pkg-message
