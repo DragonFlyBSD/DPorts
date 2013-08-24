@@ -1,5 +1,5 @@
 # Created by: Mina R Waheeb <syncer@gmail.com>
-# $FreeBSD: devel/qtscriptgenerator/Makefile 318827 2013-05-23 02:23:34Z jgh $
+# $FreeBSD: devel/qtscriptgenerator/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qtscriptgenerator
 PORTVERSION=	0.2.0
@@ -22,7 +22,6 @@ USE_QT4=	corelib declarative designer doc help help-tools gui \
 		sql svg webkit xml xmlpatterns xmlpatterns-tool \
 		qmake_build moc_build rcc_build uic_build
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
