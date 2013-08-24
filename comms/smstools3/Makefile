@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: comms/smstools3/Makefile 315474 2013-03-28 15:51:16Z eadler $
+# $FreeBSD: comms/smstools3/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	smstools
 PORTVERSION=	3.1.15
@@ -22,7 +22,6 @@ STATS_DESC=	Build status and statistics support
 WRKSRC=		${WRKDIR}/smstools3
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_RC_SUBR=	smsd
 SPOOLDIR?=	/var/spool/sms
 LOGDIR?=	/var/log/smsd
