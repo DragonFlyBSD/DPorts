@@ -1,4 +1,4 @@
-# $FreeBSD: net/pktanon/Makefile 317454 2013-05-06 01:55:29Z wxs $
+# $FreeBSD: net/pktanon/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pktanon
 PORTVERSION=	1.4.0
@@ -15,7 +15,6 @@ LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs \
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lboost_system
-MAKE_JOBS_SAFE=	yes
 
 post-install:
 	${MKDIR} ${DATADIR}/profiles
