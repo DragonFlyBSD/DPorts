@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: x11/kdelibs4/Makefile 322191 2013-07-02 19:04:18Z rakuco $
+# $FreeBSD: x11/kdelibs4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_VERSION}
@@ -52,7 +52,6 @@ USE_QT4=	corelib dbus declarative designer_build gui \
 		imageformats_run qdbusviewer_run
 USE_XORG=	sm x11 xcursor xext xfixes xrender xtst
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 CMAKE_ARGS+=	-DWITH_ACL:BOOL=Off \
