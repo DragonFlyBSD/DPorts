@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/semantik/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/semantik/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	semantik
 PORTVERSION=	0.8.3
@@ -22,7 +22,6 @@ CONFIGURE_ENV=	CXXFLAGS="${CXXFLAGS}" \
 		WAF_HOME="${WRKSRC}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-I${LOCALBASE}/include
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
