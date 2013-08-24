@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-Helpers/Makefile 317622 2013-05-07 16:22:57Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-Helpers/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	ExtUtils-Helpers
 PORTVERSION=	0.021
@@ -13,7 +13,8 @@ COMMENT=	Various portability utilities for module builders
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		ExtUtils::Helpers.3 \
 		ExtUtils::Helpers::Unix.3 \
