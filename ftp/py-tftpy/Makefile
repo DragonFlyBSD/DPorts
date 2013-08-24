@@ -1,9 +1,5 @@
-# New ports collection makefile for: py-tftpy
-# Date created:			11 May 2010
-# Whom:				Ju Pengfei <jupengfei@gmail.com>
-#
-# $FreeBSD: ports/ftp/py-tftpy/Makefile,v 1.6 2012/11/17 05:57:30 svnexp Exp $
-#
+# Created by: Ju Pengfei <jupengfei@gmail.com>
+# $FreeBSD: ftp/py-tftpy/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	tftpy
 PORTVERSION=	0.6.0
@@ -13,7 +9,7 @@ MASTER_SITES=	SF \
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A Pure Python TFTP Implementation
+COMMENT=	Pure Python TFTP Implementation
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
