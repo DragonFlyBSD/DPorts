@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: games/freecell-solver/Makefile 322241 2013-07-03 18:19:59Z pawel $
+# $FreeBSD: games/freecell-solver/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	freecell-solver
 PORTVERSION=	3.20.1
@@ -20,7 +20,6 @@ USES=		cmake:outsource
 USE_PERL5_BUILD=	yes
 CMAKE_ARGS=	-DFCS_WITH_TEST_SUITE:BOOL=OFF
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 
