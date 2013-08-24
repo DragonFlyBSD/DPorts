@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-qtruby/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/ruby-qtruby/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qtruby
 PORTVERSION=	${KDE4_VERSION}
@@ -23,7 +23,6 @@ USE_QT4=	corelib dbus declarative gui network phonon script webkit xml \
 USE_RUBY=	yes
 USE_XZ=		yes
 USES=		cmake:outsource
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 SUB_FILES=	ruby-kdebindings-env.sh pkg-message
