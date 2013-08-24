@@ -2,7 +2,7 @@
 # Date Created:				2012-08-12
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/devel/npth/Makefile,v 1.4 2013/02/14 10:22:11 svnexp Exp $
+# $FreeBSD: devel/npth/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	npth
@@ -20,7 +20,6 @@ LICENSE_COMB=	dual
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
