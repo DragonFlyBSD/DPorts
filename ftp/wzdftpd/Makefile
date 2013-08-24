@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: ftp/wzdftpd/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: ftp/wzdftpd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wzdftpd
 PORTVERSION=	0.8.3
@@ -25,7 +25,6 @@ ACLOCAL_ARGS=	-I m4 -I ac-helpers
 AUTOMAKE_ARGS=	--add-missing --copy
 CONFIGURE_ARGS=	--sysconfdir=${ETCDIR} --without-pam --disable-bonjour
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	wzdftpd
 
