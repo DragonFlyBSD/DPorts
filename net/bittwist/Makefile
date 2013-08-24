@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/bittwist/Makefile,v 1.15 2012/12/12 18:51:46 svnexp Exp $
+# $FreeBSD: net/bittwist/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bittwist
 PORTVERSION=	1.1
@@ -11,7 +11,6 @@ COMMENT=	Libpcap-based Ethernet packet generator, with PCAP editor
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		bittwist.1 bittwistb.1 bittwiste.1
 PLIST_FILES=	bin/bittwist bin/bittwistb bin/bittwiste
