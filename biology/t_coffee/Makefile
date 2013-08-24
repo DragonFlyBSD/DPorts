@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: ports/biology/t_coffee/Makefile,v 1.20 2013/01/14 08:41:31 svnexp Exp $
+# $FreeBSD: biology/t_coffee/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	t_coffee
 PORTVERSION=	9.03
@@ -23,7 +23,6 @@ BUILD_WRKSRC=	${WRKSRC}/t_coffee_source
 USE_FORTRAN=	yes
 MAKE_ENV=	FCC="${FC} ${FFLAGS}"
 MAKEFILE=	makefile
-MAKE_JOBS_SAFE=	yes
 
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/TMalign bin/t_coffee
