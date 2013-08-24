@@ -1,5 +1,5 @@
 # Created by: Yeti <yeti@gwyddion.net>
-# $FreeBSD: science/gwyddion/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: science/gwyddion/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gwyddion
 PORTVERSION=	2.31
@@ -30,7 +30,6 @@ CONFIGURE_ARGS=	--disable-silent-rules --disable-gtk-doc \
 		--without-kde4-thumbnailer
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
