@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Geo-Coordinates-Converter-iArea
-# Date created:		2011-06-12
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/science/p5-Geo-Coordinates-Converter-iArea/Makefile,v 1.2 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: science/p5-Geo-Coordinates-Converter-iArea/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Geo-Coordinates-Converter-iArea
 PORTVERSION=	0.14
@@ -14,11 +10,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Some utility functions around iArea
 
-RUN_DEPENDS=	p5-CDB_File>=0.96:${PORTSDIR}/databases/p5-CDB_File \
+BUILD_DEPENDS=	p5-CDB_File>=0.96:${PORTSDIR}/databases/p5-CDB_File \
 		p5-File-ShareDir>=1.02:${PORTSDIR}/devel/p5-File-ShareDir \
 		p5-Geo-Coordinates-Converter>=0.09:${PORTSDIR}/science/p5-Geo-Coordinates-Converter
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Geo::Coordinates::Converter::iArea.3 \
 		Geo::Coordinates::Converter::Format::IArea.3
