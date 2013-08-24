@@ -1,7 +1,7 @@
-# $FreeBSD: www/horde-wicked/Makefile 323133 2013-07-16 22:26:36Z mm $
+# $FreeBSD: www/horde-wicked/Makefile 325255 2013-08-23 08:30:45Z mm $
 
 PORTNAME=	wicked
-DISTVERSION=	2.0.0RC1
+DISTVERSION=	2.0.0RC2
 CATEGORIES=	www pear
 PKGNAMEPREFIX=	horde-
 
