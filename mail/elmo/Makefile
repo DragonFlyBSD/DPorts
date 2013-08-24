@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/elmo/Makefile 322746 2013-07-11 06:27:40Z bapt $
+# $FreeBSD: mail/elmo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.0
@@ -25,7 +25,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		elmo.1 elmoconf.pl.1
 
