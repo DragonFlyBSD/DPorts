@@ -1,5 +1,5 @@
 # Created by: tetsushi NAKAI <nakai@tsl.pe.u-tokyo.ac.jp>
-# $FreeBSD: editors/tamago/Makefile 317394 2013-05-05 05:23:29Z hrs $
+# $FreeBSD: editors/tamago/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tamago
 PORTVERSION=	4.0.6.0.20041122.19
@@ -24,7 +24,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_EMACS=	yes
 WRKSRC=		${WRKDIR}/egg-4.0.6+0.20041122cvs
-MAKE_JOBS_SAFE=	yes
 PLIST_SUB=	ELISPDIR="${EMACS_VERSION_SITE_LISPDIR}"
 PORTDOCS=	AUTHORS ChangeLog ChangeLog.1997-1998 \
 		ChangeLog.2000-2001 PROBLEMS README.ja.txt TODO \
