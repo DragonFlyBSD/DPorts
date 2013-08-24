@@ -2,7 +2,7 @@
 # Date created:				Jul 20 2003
 # Whom:                			Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/www/ffproxy/Makefile,v 1.18 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/ffproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	ffproxy
@@ -19,7 +19,6 @@ COMMENT=	Filtering HTTP proxy server
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN5=	${PORTNAME}.conf.5
 MAN7=	${PORTNAME}.quick.7
