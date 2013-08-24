@@ -2,7 +2,7 @@
 # Date created:			Tue  9 Aug 2011, 00:42:14
 # Whom:				fluffy@
 #
-# $FreeBSD: graphics/prison/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/prison/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	prison
 PORTVERSION=	1.0
@@ -20,7 +20,6 @@ LIB_DEPENDS=	dmtx.0:${PORTSDIR}/graphics/libdmtx \
 
 USE_QT4=	corelib gui qmake_build moc_build rcc_build uic_build
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
