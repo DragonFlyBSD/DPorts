@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Log-Dispatch-Configurator-Any/Makefile,v 1.3 2013/02/01 21:41:51 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Dispatch-Configurator-Any/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Log-Dispatch-Configurator-Any
 PORTVERSION=	1.122.640
@@ -23,7 +23,8 @@ TEST_DEPENDS=	p5-Config-Tiny>=0:${PORTSDIR}/devel/p5-Config-Tiny \
 		p5-Test-Pod-Coverage>=1.04:${PORTSDIR}/devel/p5-Test-Pod-Coverage \
 		p5-YAML-LibYAML>=0:${PORTSDIR}/textproc/p5-YAML-LibYAML
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Log::Dispatch::Configurator::Any.3
 
