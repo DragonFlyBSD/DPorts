@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-GraphViz2/Makefile 324458 2013-08-09 19:23:31Z sunpoet $
+# $FreeBSD: graphics/p5-GraphViz2/Makefile 325218 2013-08-22 17:11:02Z sunpoet $
 
 PORTNAME=	GraphViz2
-PORTVERSION=	2.18
+PORTVERSION=	2.19
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RSAVAGE
@@ -49,7 +49,8 @@ TEST_DEPENDS=	p5-Test-Pod>=1.45:${PORTSDIR}/devel/p5-Test-Pod
 
 OPTIONS_DEFINE=	EXAMPLES
 
-PERL_CONFIGURE=	5.14.2+
+USE_PERL5=	5.14.2+ configure
+USES=		perl5
 
 MAN3=		GraphViz2.3 \
 		GraphViz2::Config.3 \
