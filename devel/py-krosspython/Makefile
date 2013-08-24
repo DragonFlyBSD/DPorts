@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-krosspython/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/py-krosspython/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	krosspython
 PORTVERSION=	${KDE4_VERSION}
@@ -20,7 +20,6 @@ USES=		cmake:outsource
 CMAKE_ARGS+=	-DBUILD_falcon:BOOL=FALSE \
 		-DBUILD_ruby:BOOL=FALSE \
 		-DBUILD_java:BOOL=FALSE
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	lib/kde4/krosspython.so
 
