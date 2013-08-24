@@ -2,7 +2,7 @@
 # Date created:				September 17, 2005
 # Whom:					delphij@FreeBSD.org
 #
-# $FreeBSD: mail/libvmime/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/libvmime/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libvmime
@@ -22,7 +22,6 @@ USE_GMAKE=	yes
 USES=		iconv
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include -D_GLIBCXX__PTHREADS
 CXXFLAGS+=	${CFLAGS}
