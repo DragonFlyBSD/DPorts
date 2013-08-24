@@ -1,4 +1,4 @@
-# $FreeBSD: security/scanhill/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: security/scanhill/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	scanhill
 DISTVERSION=	0.5-p1
@@ -14,7 +14,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 GNU_CONFIGURE=	yes
 USES=		iconv
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README.txt INSTALL.txt mysql.sql
 
