@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/phlipple/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/phlipple/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	phlipple
 PORTVERSION=	0.8.5
@@ -16,7 +16,6 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl mixer image
 USE_GL=		gl glu
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
