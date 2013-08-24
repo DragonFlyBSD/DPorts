@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: security/py-fail2ban/Makefile 320563 2013-06-11 14:21:48Z culot $
+# $FreeBSD: security/py-fail2ban/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fail2ban
 PORTVERSION=	0.8.9
@@ -17,7 +17,6 @@ GITVERSION=	0-g152c619
 FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-1a3155a
 
-MAKE_JOBS_SAFE=	yes
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
