@@ -1,23 +1,25 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/syslog-ng/Makefile 324735 2013-08-14 15:40:29Z cy $
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.3.9
+PORTVERSION=	3.4.3
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/sources/$(PORTVERSION)/source/
-DISTFILES=	$(PORTNAME)_$(PORTVERSION).tar.gz
+DISTVERSION=	$(PORTVERSION:S/a/alpha/:S/b/beta/:S/r/rc/)
+DISTFILES=	syslog-ng_${DISTVERSION}.tar.gz
+MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${DISTVERSION}/source/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	A powerful syslogd replacement
 
+LATEST_LINK=	${PORTNAME}
 CONFLICTS?=	syslog-ng-[0-9]* syslog-ng[0-9]-[0-9]* \
+		syslog-ng[0-9][0-9]-[0-9]* \
 		syslog-ng-devel-[0-9]*
-WRKSRC=		$(WRKDIR)/$(PORTNAME)-$(PORTVERSION)
+WRKSRC=		$(WRKDIR)/$(PORTNAME)-$(DISTVERSION)
 
-OPTIONS_RADIO=	SSL JSON
+OPTIONS_RADIO=	SSL
 OPTIONS_RADIO_SSL=	SYS_SSL PORTS_SSL
-OPTIONS_RADIO_JSON=	JSON_C JSON_GLIB
-OPTIONS_DEFINE=	TCP_WRAPPERS SQL SPOOF IPV6 PCRE SYSLOG2NG DOCS
+OPTIONS_DEFINE=	TCP_WRAPPERS SQL SPOOF IPV6 PCRE SMTP JSON GEOIP DOCS
 OPTIONS_DEFAULT=	PORTS_SSL PCRE
 SYS_SSL_DESC=		Build with OpenSSL support (from system)
 PORTS_SSL_DESC=		Build with OpenSSL support (from ports)
@@ -26,9 +28,9 @@ SQL_DESC=		Build with database (libdbi) support
 SPOOF_DESC=		Build with spoof source support
 IPV6_DESC=		Build with IPV6 support
 PCRE_DESC=		Build with PCRE support
-JSON_C_DESC=		Build with JSON-C support
-JSON_GLIB_DESC=		Build with JSON-GLIB support
-SYSLOG2NG_DESC=		Install syslog2ng script
+SMTP_DESC=		Build with SMTP support
+JSON_DESC=		Build with JSON-C support
+GEOIP_DESC=		Build with GeoIP support
 
 .include <bsd.port.options.mk>
 
@@ -46,7 +48,8 @@ USE_GNOME=	glib20 gnomehack
 SUB_FILES=	pkg-message
 
 CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --localstatedir=/var/db \
-		--enable-dynamic-linking
+		--enable-dynamic-linking \
+		--enable-debug
 
 .if ${PORT_OPTIONS:MSYS_SSL} || ${PORT_OPTIONS:MPORTS_SSL}
 USE_OPENSSL=		yes
@@ -64,6 +67,10 @@ WITH_OPENSSL_PORT=	yes
 
 .include <bsd.port.pre.mk>
 
+.if ${ARCH} == "sparc64"
+BROKEN=		Does not compile on sparc64: gcc core dump
+.endif
+
 .if ${PORT_OPTIONS:MTCP_WRAPPERS}
 CONFIGURE_ARGS+=	--enable-tcp-wrapper
 .else
@@ -71,11 +78,11 @@ CONFIGURE_ARGS+=	--disable-tcp-wrapper
 .endif
 
 .if ${PORT_OPTIONS:MSPOOF}
-LIB_DEPENDS+=		net:${PORTSDIR}/net/libnet
+BUILD_DEPENDS=		${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
 LIBNET_CONFIG?=		${LOCALBASE}/bin/libnet11-config
 CONFIGURE_ARGS+=	--enable-spoof-source --with-libnet=${LOCALBASE}/bin
-CFLAGS+=		-g `${LIBNET_CONFIG} --cflags` -I${LOCALBASE}/include
-LDFLAGS+=		-g `${LIBNET_CONFIG} --libs`
+CFLAGS+=		`${LIBNET_CONFIG} --cflags` -I${LOCALBASE}/include
+LDFLAGS+=		`${LIBNET_CONFIG} --libs`
 .else
 CONFIGURE_ARGS+=	--disable-spoof-source
 .endif
@@ -93,6 +100,23 @@ LIB_DEPENDS+=		pcre:${PORTSDIR}/devel/pcre
 CONFIGURE_ARGS+=	--disable-pcre
 .endif
 
+.if ${PORT_OPTIONS:MGEOIP}
+CONFIGURE_ARGS+=	--enable-geoip
+LIB_DEPENDS+=		GeoIP.5:${PORTSDIR}/net/GeoIP
+CONFIGURE_ENV+=		GEOIP_LIBS="-lGeoIP"
+PLIST_FILES+=		lib/syslog-ng/libtfgeoip.la lib/syslog-ng/libtfgeoip.so
+.else
+CONFIGURE_ARGS+=	--disable-geoip
+.endif
+
+.if ${PORT_OPTIONS:MSMTP}
+CONFIGURE_ARGS+=	--with-libesmtp=/usr/local/
+LIB_DEPENDS+=		esmtp.7:${PORTSDIR}/mail/libesmtp
+PLIST_FILES+=		lib/syslog-ng/libafsmtp.la lib/syslog-ng/libafsmtp.so
+.else
+CONFIGURE_ARGS+=	--disable-smtp
+.endif
+
 .if ${PORT_OPTIONS:MSQL}
 LIB_DEPENDS+=		dbi.1:${PORTSDIR}/databases/libdbi
 CONFIGURE_ENV+=		LIBDBI_LIBS="-ldbi"
@@ -102,41 +126,29 @@ PLIST_FILES+=		lib/syslog-ng/libafsql.la lib/syslog-ng/libafsql.so
 CONFIGURE_ARGS+=	--disable-sql
 .endif
 
-.if ${PORT_OPTIONS:MJSON_GLIB}
-LIB_DEPENDS+=		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
-CONFIGURE_ARGS+=	--enable-json --with-json=json-glib
-PLIST_FILES+=		lib/syslog-ng/libtfjson.la lib/syslog-ng/libtfjson.so
-.elif ${PORT_OPTIONS:MJSON_C}
+.if ${PORT_OPTIONS:MJSON}
 LIB_DEPENDS+=		json.0:${PORTSDIR}/devel/json-c
-CONFIGURE_ARGS+=	--enable-json --with-json=json-c
-PLIST_FILES+=		lib/syslog-ng/libtfjson.la lib/syslog-ng/libtfjson.so
+CONFIGURE_ARGS+=	--enable-json
+PLIST_FILES+= 		lib/syslog-ng/libjson-plugin.la lib/syslog-ng/libjson-plugin.so
 .else
-CONFIGURE_ARGS+=	--disable-json
+CONFIGURE_ARGS+=        --disable-json
 .endif
 
 .if ${OSVERSION} >= 900034
 CONFIGURE_ARGS+=        --disable-linux-caps
 .endif
 
-.if ${PORT_OPTIONS:MSYSLOG2NG}
-PLIST_FILES+=		sbin/syslog2ng
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's:libnet-config:libnet11-config:g' ${WRKSRC}/configure
 	@${LN} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
-	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
 post-install:
-.if ${PORT_OPTIONS:MSYSLOG2NG}
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/syslog2ng ${PREFIX}/sbin
-.endif
 .if ${PORT_OPTIONS:MDOCS}
 	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} \
+			${PREFIX}/share/doc/syslog-ng \
 			${PREFIX}/share/doc/syslog-ng
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/syslog-ng
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/syslog-ng
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/syslog-ng
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/syslog-ng
 .endif
 	@if [ ! -f ${PREFIX}/etc/syslog-ng.conf.sample ]; then \
