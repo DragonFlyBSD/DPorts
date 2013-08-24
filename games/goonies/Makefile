@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/goonies/Makefile 320913 2013-06-14 13:19:53Z amdmi3 $
+# $FreeBSD: games/goonies/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	goonies
 PORTVERSION=	1.0.1
@@ -20,7 +20,6 @@ USE_GL=		yes
 BUILD_WRKSRC=	${WRKSRC}/src
 MAKEFILE=	../build/linux/Makefile
 MAKE_ENV=	DATADIR="${DATADIR}"
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
