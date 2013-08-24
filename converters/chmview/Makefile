@@ -1,5 +1,5 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: converters/chmview/Makefile 321844 2013-06-27 03:17:30Z ak $
+# $FreeBSD: converters/chmview/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	chmview
 PORTVERSION=	2.0b4
@@ -21,7 +21,6 @@ USE_DOS2UNIX=	chmview.c utf8.c utf8.h
 
 WRKSRC=		${WRKDIR}/src
 PLIST_FILES=	bin/chmview
-MAKE_JOBS_SAFE=	yes
 
 pre-patch:
 	@${CP} ${FILESDIR}/Makefile ${WRKSRC}
