@@ -1,5 +1,5 @@
 # Created by:   nemysis@gmx.ch
-# $FreeBSD: ports/games/tong/Makefile,v 1.2 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/tong/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tong
 PORTVERSION=	1.2
@@ -14,7 +14,6 @@ LICENSE=	GPLv3
 
 USE_SDL=	image mixer sdl
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	CHANGELOG README making-of.txt notes.txt
 
