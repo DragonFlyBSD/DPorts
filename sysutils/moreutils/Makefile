@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/moreutils/Makefile 322913 2013-07-13 11:53:07Z sunpoet $
+# $FreeBSD: sysutils/moreutils/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	moreutils
 PORTVERSION=	0.49
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	MANPAGES
 OPTIONS_DEFAULT=MANPAGES
 
 ALL_TARGET=	bins
-USE_PERL5=	yes
+USES=		perl5
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MANCOMPRESSED=	no
