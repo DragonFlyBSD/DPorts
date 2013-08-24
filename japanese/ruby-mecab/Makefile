@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/ruby-mecab/Makefile 314726 2013-03-20 12:40:53Z tota $
+# $FreeBSD: japanese/ruby-mecab/Makefile 324572 2013-08-11 05:21:49Z tota $
 
 PORTNAME=	mecab
-PORTVERSION=	0.995
+PORTVERSION=	0.996
 CATEGORIES=	japanese textproc ruby
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTNAME=	${PORTNAME}-ruby-${PORTVERSION}
@@ -12,9 +12,6 @@ COMMENT=	MeCab library module for Ruby
 
 LICENSE=	BSD GPLv2 LGPL21
 LICENSE_COMB=	dual
-LICENSE_FILE_BSD=	${WRKSRC}/BSD
-LICENSE_FILE_GPLv2=	${WRKSRC}/GPL
-LICENSE_FILE_LGPL21=	${WRKSRC}/LGPL
 
 LIB_DEPENDS=	mecab:${PORTSDIR}/japanese/mecab
 
