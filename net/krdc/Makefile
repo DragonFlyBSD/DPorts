@@ -1,4 +1,4 @@
-# $FreeBSD: net/krdc/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: net/krdc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	krdc
 PORTVERSION=	${KDE4_VERSION}
@@ -23,7 +23,6 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/${PORTNAME}
 
