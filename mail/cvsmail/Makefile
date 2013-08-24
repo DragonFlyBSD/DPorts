@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@FreeBSD.org>
-# $FreeBSD: mail/cvsmail/Makefile 315795 2013-04-13 13:55:56Z bdrewery $
+# $FreeBSD: mail/cvsmail/Makefile 324913 2013-08-18 13:31:33Z bdrewery $
 
 PORTNAME=	cvsmail
 PORTVERSION=	2.2
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	LOCAL/pgollucci
 DISTNAME=	mailutils-${PORTVERSION}
 
-MAINTAINER=	pgollucci@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A small program to add cvsweb links to FreeBSD commit messages
 
 DIST_SUBDIR=	${PORTNAME}
