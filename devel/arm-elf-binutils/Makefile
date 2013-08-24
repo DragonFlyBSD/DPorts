@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: devel/arm-elf-binutils/Makefile 320038 2013-06-06 00:04:19Z bdrewery $
+# $FreeBSD: devel/arm-elf-binutils/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	binutils
 PORTVERSION=	2.23.2
@@ -28,7 +28,6 @@ MAN1=		${PKGNAMEPREFIX}addr2line.1 ${PKGNAMEPREFIX}as.1 \
 		${PKGNAMEPREFIX}elfedit.1 ${PKGNAMEPREFIX}windmc.1 \
 		${PKGNAMEPREFIX}gprof.1
 
-MAKE_JOBS_SAFE=	yes
 
 post-install:
 .for F in addr2line c++filt elfedit gprof objcopy objdump readelf size strings
