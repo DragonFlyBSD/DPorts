@@ -2,7 +2,7 @@
 # Date created:				2003 Mar 14
 # Whom:					Marcin Cieslak <saper@system.pl>
 #
-# $FreeBSD: ports/net-mgmt/flow-extract/Makefile,v 1.12 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/flow-extract/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	flow-extract
@@ -22,7 +22,6 @@ BUILD_DEPENDS=	${LOCALBASE}/include/ftlib.h:${PORTSDIR}/net-mgmt/flow-tools
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LDFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		flow-extract.1
 PLIST_FILES=	bin/flow-extract
