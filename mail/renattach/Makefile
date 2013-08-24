@@ -2,7 +2,7 @@
 # Date created:				20 June 2004
 # Whom:					Stefan A. Deutscher (sad@mailaps.org)
 #
-# $FreeBSD: ports/mail/renattach/Makefile,v 1.13 2012/11/17 05:59:13 svnexp Exp $
+# $FreeBSD: mail/renattach/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	renattach
@@ -13,7 +13,6 @@ MASTER_SITES=	http://www.pc-tools.net/files/unix/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rename or remove certain attachments or kill entire messages
 
-MAKE_JOBS_SAFE=  yes
 
 GNU_CONFIGURE=	yes
 
