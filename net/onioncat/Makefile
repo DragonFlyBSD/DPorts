@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: net/onioncat/Makefile 313211 2013-03-02 06:36:32Z miwi $
+# $FreeBSD: net/onioncat/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	onioncat
 PORTVERSION=	0.2.2.r554
@@ -15,7 +15,6 @@ RUN_DEPENDS=	tor:${PORTSDIR}/security/tor
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PTHREAD_LIBS="-pthread"
-MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	${PORTNAME}
 MAN1=		ocat.1
