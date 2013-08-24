@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: audio/shntool/Makefile 315291 2013-03-26 14:00:52Z bapt $
+# $FreeBSD: audio/shntool/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	shntool
 PORTVERSION=	3.0.10
@@ -10,7 +10,6 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Multi-purpose .wav processing utility
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 SHN_ALIASES=	tool len fix hash pad join split cat cmp cue conv info strip gen trim
 PLIST_FILES=	${SHN_ALIASES:S|^|bin/shn|}
 MAN1=		shntool.1
