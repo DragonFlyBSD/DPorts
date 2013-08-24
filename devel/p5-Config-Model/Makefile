@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Config-Model/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Config-Model/Makefile 324653 2013-08-13 09:17:19Z jadawin $
 
 PORTNAME=	Config-Model
-PORTVERSION=	2.036
+PORTVERSION=	2.040
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DDUMONT
