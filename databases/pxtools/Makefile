@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: databases/pxtools/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: databases/pxtools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pxtools
 PORTVERSION=	0.0.20
@@ -15,7 +15,6 @@ LICENSE=	GPLv2
 
 USES=		gettext
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
