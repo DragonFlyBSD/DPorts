@@ -1,5 +1,5 @@
 # Created by: Jeremy <karlj000@unbc.ca>
-# $FreeBSD: biology/avida/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: biology/avida/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	avida
 PORTVERSION=	2.12.4
@@ -15,7 +15,6 @@ LICENSE=	GPLv3
 OPTIONS_DEFINE=	DOCS
 
 USES=		cmake:outsource ncurses
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PLIST_FILES=	${BIN_FILES:S|^|bin/|} \
