@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/x11/slock/Makefile,v 1.18 2012/11/17 06:03:19 svnexp Exp $
+# $FreeBSD: x11/slock/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	slock
 PORTVERSION=	1.1
@@ -17,7 +17,6 @@ PLIST_FILES=	bin/slock
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-MAKE_JOBS_SAFE=	yes
 USE_XORG=	x11 xt xproto xext
 
 post-patch:
