@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/minitube/Makefile 317947 2013-05-12 11:48:49Z makc $
+# $FreeBSD: multimedia/minitube/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	minitube
 PORTVERSION=	2.0
@@ -13,7 +13,6 @@ USE_QT4=	gui network xml dbus phonon phonon-gst \
 USE_GSTREAMER=	ffmpeg
 HAS_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 QMAKE_ARGS=	-recursive PREFIX=${PREFIX} QMAKE_LRELEASE=${LRELEASE} ${QMAKE_PRO}
