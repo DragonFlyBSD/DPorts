@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Log-Dispatch-Dir/Makefile,v 1.8 2013/02/01 21:58:46 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Dispatch-Dir/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Log-Dispatch-Dir
 PORTVERSION=	0.10
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-File-LibMagic>=0:${PORTSDIR}/devel/p5-File-LibMagic \
 		p5-Media-Type-Simple>=0:${PORTSDIR}/devel/p5-Media-Type-Simple
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Log::Dispatch::Dir.3
 
