@@ -1,11 +1,13 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-OpenCA-REQ/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-OpenCA-REQ/Makefile 324979 2013-08-19 12:35:00Z mat $
 
 PORTNAME=	OpenCA-REQ
-PORTVERSION=	0.9.52
+PORTVERSION=	0.9.60
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:MADWOLF
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/0$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to easily manage Cert REQUESTs
