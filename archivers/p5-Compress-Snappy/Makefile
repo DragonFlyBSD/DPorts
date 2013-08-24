@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-Compress-Snappy/Makefile 315849 2013-04-16 16:51:47Z sunpoet $
+# $FreeBSD: archivers/p5-Compress-Snappy/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Compress-Snappy
 PORTVERSION=	0.20
@@ -15,7 +15,8 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	snappy:${PORTSDIR}/archivers/snappy
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Compress::Snappy.3
 
