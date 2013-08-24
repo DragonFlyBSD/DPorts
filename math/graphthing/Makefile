@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/graphthing/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: math/graphthing/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	graphthing
 PORTVERSION=	1.3.2
@@ -21,7 +21,6 @@ WX_CONF_ARGS=	absolute
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/graphthing bin/gt
 
