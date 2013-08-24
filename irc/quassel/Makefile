@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: irc/quassel/Makefile 323341 2013-07-20 11:08:11Z makc $
+# $FreeBSD: irc/quassel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	quassel
 PORTVERSION=	0.9.0
@@ -15,7 +15,6 @@ USE_BZIP2=	yes
 USES=		cmake:outsource
 USE_QT4=	corelib network script sql \
 		qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	KDE NLS
 OPTIONS_MULTI=	MODULE
