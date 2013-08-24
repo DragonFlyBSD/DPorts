@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/shlock/Makefile,v 1.16 2012/11/17 06:01:46 svnexp Exp $
+# $FreeBSD: sysutils/shlock/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	shlock
 PORTVERSION=	2.5.3
@@ -16,7 +16,6 @@ WRKSRC=		${WRKDIR}/inn-${PORTVERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_PERL="${TRUE}"
 ALL_TARGET=	all-lib
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
