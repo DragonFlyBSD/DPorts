@@ -2,7 +2,7 @@
 # Date created:				31 August 2009
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: audio/istream/Makefile 322581 2013-07-09 21:26:48Z pav $
+# $FreeBSD: audio/istream/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	istream
@@ -21,7 +21,6 @@ USE_XORG=	xtst
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}c
 CPPFLAGS+=	`pkg-config --cflags libgnomeui-2.0`
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|libdir)/bonobo|prefix)/libdata/bonobo|' ${WRKSRC}/src/Makefile.in
