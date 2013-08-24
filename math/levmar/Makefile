@@ -1,5 +1,5 @@
 # Created by: Eijiro Shibusawa <ej-sib@ice.uec.ac.jp>
-# $FreeBSD: math/levmar/Makefile 319993 2013-06-05 14:11:19Z bapt $
+# $FreeBSD: math/levmar/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	levmar
 PORTVERSION=	2.5
@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_LDCONFIG=	yes
 USE_FORTRAN=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	PROFILE
 PROFILE_DESC=	Build a profiling library
