@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-# $FreeBSD: audio/ices/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: audio/ices/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ices
 PORTVERSION=	2.0.2
@@ -27,7 +27,6 @@ USE_GNOME=	libxml2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-roaraudio --disable-sun-audio
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
