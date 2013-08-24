@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox-esr/Makefile 324409 2013-08-08 18:42:03Z flo $
+# $FreeBSD: www/firefox-esr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	firefox
 DISTVERSION=	17.0.8
@@ -28,7 +28,6 @@ MOZ_PKGCONFIG_FILES=	# empty
 USE_MOZILLA=	# empty
 MOZILLA_NAME=	Firefox
 
-MAKE_JOBS_SAFE=	yes
 WANT_GNOME=	yes
 USE_QT4=	# empty
 QT_NONSTANDARD=	yes
