@@ -1,4 +1,4 @@
-# $FreeBSD: games/golly/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/golly/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	golly
 PORTVERSION=	2.4
@@ -14,7 +14,6 @@ USES=		cmake:outsource
 USE_PERL5=	yes
 USE_PYTHON=	2.7+
 USE_WX=		2.8+
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES=	"Golly" "${COMMENT}" "${PREFIX}/share/pixmaps/golly.xpm" \
 			"${PREFIX}/bin/golly" "Education;" "true"
