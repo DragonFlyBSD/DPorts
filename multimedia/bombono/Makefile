@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: multimedia/bombono/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: multimedia/bombono/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bombono
 PORTVERSION=	1.2.2
@@ -28,7 +28,6 @@ USE_BZIP2=	yes
 USE_SCONS=	yes
 USE_GCC=	4.2+
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 CXXFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
