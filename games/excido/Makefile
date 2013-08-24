@@ -2,7 +2,7 @@
 # Date created:				19 Aug 2005
 # Whom:					Alejandro Pulver <alejandro@varnet.biz>
 #
-# $FreeBSD: ports/games/excido/Makefile,v 1.22 2012/11/17 05:57:37 svnexp Exp $
+# $FreeBSD: games/excido/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	excido
@@ -28,7 +28,6 @@ USE_GL=		yes
 USE_SDL=	image sdl ttf
 USE_OPENAL=	al alut
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-install:
 .if !defined(NOPORTDOCS)
