@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: audio/deadbeef/Makefile 324162 2013-08-02 11:23:18Z vg $
+# $FreeBSD: audio/deadbeef/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	deadbeef
 PORTVERSION=	0.5.5
@@ -27,7 +27,6 @@ CONFIGURE_ARGS=	--disable-alsa --disable-nullout \
 		LDFLAGS="-L${LOCALBASE}/lib" LIBS="-lexecinfo -lintl"
 WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV+=	CONFIG_SHELL="${LOCALBASE}/bin/bash"
 SHEBANG_FILES=	yasmwrapper.sh
 
