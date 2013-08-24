@@ -2,7 +2,7 @@
 # Date created:		2009-05-20
 # Whom:			Hiroto Kagotani <hiroto.kagotani@gmail.com>
 #
-# $FreeBSD: ports/japanese/nhocr/Makefile,v 1.2 2012/11/17 05:58:38 svnexp Exp $
+# $FreeBSD: japanese/nhocr/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	nhocr
@@ -15,7 +15,6 @@ COMMENT=	OCR engine for Japanese language
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libsip.a:${PORTSDIR}/graphics/O2-tools
 
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-O2tools=${LOCALBASE} --datadir=${DATADIR}
 
