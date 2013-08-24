@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: graphics/libopenraw/Makefile 322581 2013-07-09 21:26:48Z pav $
+# $FreeBSD: graphics/libopenraw/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libopenraw
 PORTVERSION=	0.0.8
@@ -13,7 +13,6 @@ COMMENT=	Library for camera RAW files decoding
 LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
 		jpeg.11:${PORTSDIR}/graphics/jpeg
 
-MAKE_JOBS_SAFE=	yes
 USES=		pkgconfig
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
