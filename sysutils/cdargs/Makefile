@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/cdargs/Makefile,v 1.15 2012/12/12 18:51:48 svnexp Exp $
+# $FreeBSD: sysutils/cdargs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cdargs
 PORTVERSION=	1.35
@@ -13,7 +13,6 @@ COMMENT=	Navigate the filesystem using a menu interface or a bookmark system
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		cdargs.1
 PLIST_FILES=	bin/cdargs
