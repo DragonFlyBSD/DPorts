@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-CLI-Interact/Makefile,v 1.12 2013/01/30 20:12:51 svnexp Exp $
+# $FreeBSD: net/p5-Net-CLI-Interact/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Net-CLI-Interact
 PORTVERSION=	2.123.620
@@ -26,7 +26,8 @@ BUILD_DEPENDS=	p5-Class-Load>=0:${PORTSDIR}/devel/p5-Class-Load \
 		p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Net::CLI::Interact.3 \
 		Net::CLI::Interact::Action.3 \
