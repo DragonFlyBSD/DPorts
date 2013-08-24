@@ -2,7 +2,7 @@
 # Date created:        29 July 2000
 # Whom:                Sakai Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
 #
-# $FreeBSD: ports/games/xfireworks/Makefile,v 1.14 2012/11/17 05:57:56 svnexp Exp $
+# $FreeBSD: games/xfireworks/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	xfireworks
@@ -18,7 +18,6 @@ LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
 USE_XORG=	x11
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		xfireworks.1
 
