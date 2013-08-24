@@ -1,5 +1,5 @@
 # Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
-# $FreeBSD: editors/emacs-devel/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: editors/emacs-devel/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}.${EMACS_REV}
@@ -15,7 +15,6 @@ COMMENT=	GNU editing macros
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	emacs-19.* emacs-21.* emacs-22.* emacs-23.* \
 		xemacs-[0-9]* xemacs-devel-[0-9]* \
@@ -233,7 +232,7 @@ CONFIGURE_ARGS+=	--without-gnutls
 .endif
 
 .if ${PORT_OPTIONS:MLTO}
-USE_GCC=	4.6+
+USE_GCC=	yes
 CONFIGURE_ARGS+=	--enable-link-time-optimization
 .endif
 
