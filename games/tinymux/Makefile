@@ -2,7 +2,7 @@
 # Date created:		1998/05/28
 # Whom:			cjohnson
 #
-# $FreeBSD: games/tinymux/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/tinymux/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	tinymux
@@ -20,7 +20,6 @@ WRKSRC=		${WRKDIR}/mux2.6/src
 USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 
