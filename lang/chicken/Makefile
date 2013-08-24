@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: lang/chicken/Makefile 324282 2013-08-05 19:05:48Z wg $
+# $FreeBSD: lang/chicken/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	chicken
 PORTVERSION=	4.8.0.4
@@ -9,7 +9,6 @@ MASTER_SITES=	http://code.call-cc.org/releases/4.8.0/
 MAINTAINER=	vmagerya@gmail.com
 COMMENT=	A Scheme-to-C compiler
 
-MAKE_JOBS_SAFE=	yes
 
 USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
