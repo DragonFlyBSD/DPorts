@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/jvgs/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/jvgs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jvgs
 PORTVERSION=	0.5.1
@@ -17,7 +17,6 @@ USES=		cmake
 USE_SDL=	sdl mixer
 USE_GL=		gl glu
 USE_LUA=	5.1+
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	${PORTNAME}
 
