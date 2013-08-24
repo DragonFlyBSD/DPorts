@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-qt4/Makefile 316943 2013-04-30 15:57:28Z avilla $
+# $FreeBSD: net-im/telepathy-qt4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	telepathy-qt4
 PORTVERSION=	0.9.3
@@ -22,7 +22,6 @@ USE_QT4=	dbus gui network qtestlib_build xml \
 USES=		cmake pkgconfig
 CMAKE_ARGS=	-DENABLE_FARSIGHT:BOOL=True \
 		-DENABLE_TESTS:BOOL=False
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"
