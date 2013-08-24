@@ -2,7 +2,7 @@
 # Date created:				2004 11 July
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/fyre/Makefile,v 1.30 2013/01/17 04:09:20 svnexp Exp $
+# $FreeBSD: graphics/fyre/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	fyre
@@ -27,7 +27,6 @@ USE_GNOME=	desktopfileutils libglade2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
