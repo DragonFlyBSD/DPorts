@@ -1,5 +1,5 @@
 # Created by: Jeffery Hansen <hansen@cmu.edu>
-# $FreeBSD: cad/tkgate/Makefile 318163 2013-05-14 14:34:33Z gahr $
+# $FreeBSD: cad/tkgate/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tkgate
 DISTVERSION=	2.0-b10
@@ -15,7 +15,6 @@ LICENSE=	GPLv2 # (or later)
 GNU_CONFIGURE=	yes
 USES=		iconv
 USE_TK=		84+
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		gmac.1 tkgate.1 verga.1
 
