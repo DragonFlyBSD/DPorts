@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/dvdstyler/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: multimedia/dvdstyler/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dvdstyler
 PORTVERSION=	2.4.3
@@ -43,7 +43,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBAV_CFLAGS="${LIBAV_CFLAGS}" LIBAV_LIBS="${LIBAV_LIBS}" \
 		ac_cv_path_FFMPEG_PATH="${LOCALBASE}/bin/ffmpeg1"
 MAKE_ENV=	AM_CPPFLAGS="${LIBAV_CFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
