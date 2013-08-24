@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-statistics/Makefile 323843 2013-07-28 18:02:44Z stephen $
+# $FreeBSD: math/octave-forge-statistics/Makefile 324819 2013-08-16 22:40:22Z stephen $
 
 PORTNAME=	octave-forge-statistics
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
