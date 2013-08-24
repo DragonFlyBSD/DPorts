@@ -1,8 +1,8 @@
 # Created by: stb
-# $FreeBSD: net/netatalk3/Makefile 320296 2013-06-08 21:52:07Z marcus $
+# $FreeBSD: net/netatalk3/Makefile 324929 2013-08-18 16:13:02Z marcus $
 
 PORTNAME=	netatalk
-PORTVERSION=	3.0.4
+PORTVERSION=	3.0.5
 PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	SF
