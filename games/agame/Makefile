@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/agame/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
+# $FreeBSD: games/agame/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	agame
 PORTVERSION=	1577
@@ -18,7 +18,6 @@ LICENSE=	GPLv2
 
 USE_SDL=	sdl image mixer
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/game
 
