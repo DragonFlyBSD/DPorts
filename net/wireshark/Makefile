@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/wireshark/Makefile 323802 2013-07-27 17:52:26Z marcus $
+# $FreeBSD: net/wireshark/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME?=	wireshark
 PORTVERSION=	1.10.1
@@ -24,7 +24,6 @@ USE_PYTHON_BUILD=yes
 USES=		iconv gettext pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 WANT_GNOME=	yes
 USE_OPENSSL=	yes
 CONFIGURE_ENV=	LIBS="${WIRESHARK_LIBS}"
