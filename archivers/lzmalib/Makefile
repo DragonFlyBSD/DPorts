@@ -2,7 +2,7 @@
 # Date created:		2008-09-22
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/lzmalib/Makefile,v 1.3 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: archivers/lzmalib/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	lzmalib
@@ -16,6 +16,5 @@ COMMENT=	Thin wrapper library of LZMA
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
