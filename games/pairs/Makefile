@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: games/pairs/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: games/pairs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pairs
 PORTVERSION=	${KDE4_VERSION}
@@ -18,6 +18,5 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	declarative opengl phonon xmlpatterns \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
