@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/pachi/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/pachi/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pachi
 PORTVERSION=	1.0
@@ -15,7 +15,6 @@ COMMENT=	A platforms game similar to Manic Miner
 USE_SDL=	mixer sdl
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CPPFLAGS+=	-I${LOCALBASE}/include
