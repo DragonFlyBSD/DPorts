@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/kdenlive/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: multimedia/kdenlive/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdenlive
 PORTVERSION=	0.9.6
@@ -23,7 +23,6 @@ USE_XORG=	x11
 USES=		cmake
 USE_BZIP2=	yes
 CMAKE_ARGS=	-DFFMPEG_SUFFIX:STRING="${FFMPEG_SUFX}"
-MAKE_JOBS_SAFE=	yes
 
 # Keep in sync with multimedia/mlt, possibly.
 FFMPEG_SUFX=	1
