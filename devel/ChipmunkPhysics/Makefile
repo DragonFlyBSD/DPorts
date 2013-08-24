@@ -1,5 +1,5 @@
 # Created by: Tim Cas <ports@stdrand.com>
-# $FreeBSD: devel/ChipmunkPhysics/Makefile 320626 2013-06-11 18:44:16Z rakuco $
+# $FreeBSD: devel/ChipmunkPhysics/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ChipmunkPhysics
 PORTVERSION=	6.1.5
@@ -17,7 +17,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USES=		cmake
 CMAKE_ARGS=	-DBUILD_DEMOS=OFF
-MAKE_JOBS_SAFE=	yes
 
 USE_LDCONFIG=	yes
 
