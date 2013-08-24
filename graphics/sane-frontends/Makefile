@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-frontends/Makefile 318933 2013-05-24 08:47:33Z araujo $
+# $FreeBSD: graphics/sane-frontends/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sane-frontends
 PORTVERSION=	1.0.14
@@ -17,7 +17,6 @@ LIB_DEPENDS=	sane:${PORTSDIR}/graphics/sane-backends
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
