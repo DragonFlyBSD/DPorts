@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libfishsound/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/libfishsound/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://downloads.xiph.org/releases/libfishsound/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A programing interface to decode/encode audio data
+COMMENT=	Programing interface to decode/encode audio data
 
 LICENSE=	BSD
 
