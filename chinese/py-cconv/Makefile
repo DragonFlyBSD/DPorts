@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-cconv
-# Date created:		2011-04-28
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/chinese/py-cconv/Makefile,v 1.3 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: chinese/py-cconv/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	cconv
 PORTVERSION=	0.5.0
