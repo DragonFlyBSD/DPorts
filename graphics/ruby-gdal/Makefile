@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/ruby-gdal/Makefile 313912 2013-03-11 14:38:10Z sunpoet $
+# $FreeBSD: graphics/ruby-gdal/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
 
 PORTNAME=	gdal
-PORTVERSION=	1.9.2
+PORTVERSION=	1.10.0
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://download.osgeo.org/gdal/ \
 		ftp://ftp.remotesensing.org/pub/gdal/ \
@@ -21,8 +21,8 @@ LIBTOOLFILES=	# empty
 MAKE_ARGS=	USER_DEFS=-fPIC
 MAKEFILE=	GNUmakefile
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_RUBY=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/ruby
 
 post-patch:
