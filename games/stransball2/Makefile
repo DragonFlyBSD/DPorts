@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/stransball2/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/stransball2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	stransball2
 PORTVERSION=	1.5
@@ -18,7 +18,6 @@ USE_ZIP=	yes
 USE_GMAKE=	yes
 USE_SDL=	sdl image mixer sound
 USE_DOS2UNIX=	yes
-MAKE_JOBS_SAFE=	yes
 
 BUILD_WRKSRC=	${WRKSRC}/sources
 
