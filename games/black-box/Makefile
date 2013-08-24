@@ -1,5 +1,5 @@
 # Created By: nemysis@gmx.ch
-# $FreeBSD: games/black-box/Makefile 314007 2013-03-12 23:26:14Z beech $
+# $FreeBSD: games/black-box/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	black-box
 PORTVERSION=	1.4.8
@@ -19,7 +19,6 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl image mixer
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README
 
