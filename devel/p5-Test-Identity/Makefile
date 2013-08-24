@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Identity
-# Date created:		2011-11-28
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Identity/Makefile,v 1.2 2012/11/17 05:56:32 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Identity/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Test-Identity
 PORTVERSION=	0.01
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Assert the referential identity of a reference
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::Identity.3
 
