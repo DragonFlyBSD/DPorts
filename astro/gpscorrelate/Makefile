@@ -1,5 +1,5 @@
 # Created by: Lukas Maly
-# $FreeBSD: astro/gpscorrelate/Makefile 321123 2013-06-17 15:05:07Z miwi $
+# $FreeBSD: astro/gpscorrelate/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gpscorrelate
 PORTVERSION=	1.6.1
@@ -24,7 +24,6 @@ GH_COMMIT=	a36646b
 
 USE_GNOME=	libxml2
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		gpscorrelate.1
 MLINKS=		gpscorrelate.1 gpscorrelate-gui.1
