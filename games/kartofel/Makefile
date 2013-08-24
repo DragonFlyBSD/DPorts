@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/kartofel/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/kartofel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kartofel
 PORTVERSION=	1.2
@@ -17,7 +17,6 @@ USE_GMAKE=	yes
 USE_SDL=	sdl gfx mixer image ttf
 
 ALL_TARGET=	default
-MAKE_JOBS_SAFE=	yes
 
 DATA_DIRS=	sounds fonts music images levels
 
