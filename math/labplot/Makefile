@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: math/labplot/Makefile 319208 2013-05-27 11:07:49Z ehaupt $
+# $FreeBSD: math/labplot/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	labplot
 DISTVERSION=	2.0.0.alpha3
@@ -24,7 +24,6 @@ USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USES=		cmake
 CMAKE_ARGS=	-DOPJ_LIBRARY:STRING=""
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
