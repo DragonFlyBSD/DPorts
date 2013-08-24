@@ -1,5 +1,5 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: science/avogadro/Makefile 317808 2013-05-10 14:33:41Z miwi $
+# $FreeBSD: science/avogadro/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	avogadro
 PORTVERSION=	1.1.0
@@ -25,7 +25,6 @@ USE_QT4=	gui network opengl \
 CMAKE_ARGS=	-DENABLE_GLSL=OFF \
 		-DQT_MKSPECS_RELATIVE=share/qt4/mkspecs
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-idirafter ${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
