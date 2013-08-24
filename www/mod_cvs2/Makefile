@@ -2,7 +2,7 @@
 # Date created:				6 January 2003
 # Whom:					Clement Laforet <clement@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_cvs2/Makefile,v 1.9 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_cvs2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_cvs
@@ -15,7 +15,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	A module that makes Apache 2 CVS aware
 
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	mod_cvs2
 
