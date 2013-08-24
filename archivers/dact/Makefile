@@ -3,7 +3,7 @@
 # Date created:			May 2, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: archivers/dact/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: archivers/dact/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	dact
@@ -19,7 +19,6 @@ LIB_DEPENDS=	mcrypt.8:${PORTSDIR}/security/libmcrypt \
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/lib
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
