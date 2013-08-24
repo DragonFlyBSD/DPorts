@@ -1,4 +1,4 @@
-# $FreeBSD: audio/kid3-kde4/Makefile 322705 2013-07-10 15:25:37Z makc $
+# $FreeBSD: audio/kid3-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kid3
 PORTVERSION=	2.3
@@ -16,7 +16,6 @@ LATEST_LINK=	${PORTNAME}-kde4
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USES=		cmake gettext
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	FLAC ID3LIB MP4V2 VORBIS TAGLIB CHROMAPRINT
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
