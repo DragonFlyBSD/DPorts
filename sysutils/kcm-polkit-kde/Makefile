@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	polkit-kde
 DISTVERSION=	0.0-${PORTDATE}
@@ -18,7 +18,6 @@ USE_QT4=	dbus xml moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
 USES=		cmake pkgconfig
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-kcmodules-1
