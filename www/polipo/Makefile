@@ -2,7 +2,7 @@
 # Date created:        2005-01-25
 # Whom:                Frank Behrens <frank@pinky.sax.de>
 #
-# $FreeBSD: ports/www/polipo/Makefile,v 1.21 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/polipo/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	polipo
@@ -16,7 +16,6 @@ COMMENT=	A small and fast caching web proxy
 
 MAN1=		polipo.1
 
-MAKE_JOBS_SAFE=	yes
 USE_RC_SUBR=	polipo
 
 .include <bsd.port.pre.mk>
