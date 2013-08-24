@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-qp
-# Date created:		14 Nov 2006
-# Whom:	      		Dryice Liu <dryice@dryice.name>
-#
-# $FreeBSD: ports/www/py-qp/Makefile,v 1.11 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Dryice Liu <dryice@dryice.name>
+# $FreeBSD: www/py-qp/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	qp
 PORTVERSION=	2.2
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.mems-exchange.org/software/qp/ \
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A python web framework to use qpy and durus together
+COMMENT=	Python web framework to use qpy and durus together
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}durus>=0:${PORTSDIR}/devel/py-durus \
 		${PYTHON_PKGNAMEPREFIX}qpy>=1.7:${PORTSDIR}/www/py-qpy
