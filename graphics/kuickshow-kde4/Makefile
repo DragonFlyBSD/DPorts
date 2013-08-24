@@ -2,7 +2,7 @@
 # Date created:				July 09 2004
 # Whom:					Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: graphics/kuickshow-kde4/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: graphics/kuickshow-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	kuickshow
@@ -22,7 +22,6 @@ USE_GNOME=	imlib
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	corelib opengl qmake_build moc_build rcc_build uic_build
 USES=		cmake gettext
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	${PORTNAME}-kde4
 
