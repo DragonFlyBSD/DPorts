@@ -1,4 +1,4 @@
-# $FreeBSD: games/wesnoth/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: games/wesnoth/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.10.6
@@ -19,7 +19,6 @@ LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
 
 USE_SDL=	image mixer net ttf
 USE_GNOME=	pango desktopfileutils
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USES=		cmake
 CMAKE_ARGS=	-DMANDIR="man"
