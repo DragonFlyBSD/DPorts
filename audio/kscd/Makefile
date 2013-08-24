@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: audio/kscd/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: audio/kscd/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kscd
 PORTVERSION=	${KDE4_VERSION}
@@ -22,7 +22,6 @@ USE_KDE4=	kdehier kdelibs kdeprefix libkcddb libkcompactdisc \
 		automoc4
 USE_QT4=	phonon moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	ALSA
 
