@@ -1,5 +1,5 @@
 # Created by: mt@primats.org.ua
-# $FreeBSD: www/sarg/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: www/sarg/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sarg
 PORTVERSION=	2.3.6
@@ -21,7 +21,6 @@ PHP_DESC=	Install PHP for reporting generating
 USE_AUTOTOOLS=	autoconf aclocal
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	CPPFLAGS=-I${LOCALBASE}/include \
 		--sysconfdir="${ETCDIR}" \
