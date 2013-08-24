@@ -2,7 +2,7 @@
 # Date created:				Sat 19 Oct 2008
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
-# $FreeBSD: multimedia/ffmpeg2theora/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/ffmpeg2theora/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ffmpeg2theora
 PORTVERSION=	0.29
@@ -23,7 +23,6 @@ USES=		iconv
 USE_SCONS=	yes
 SCONS_BUILDENV=	CC="${CC}" CCFLAGS="${CFLAGS}" \
 		APPEND_CCFLAGS="${CPPFLAGS}" APPEND_LINKFLAGS="${LDFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
