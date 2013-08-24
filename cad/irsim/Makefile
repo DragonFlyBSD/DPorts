@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: ports/cad/irsim/Makefile,v 1.46 2013/02/08 00:50:51 svnexp Exp $
+# $FreeBSD: cad/irsim/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	irsim
 PORTVERSION=	9.7.79
@@ -23,7 +23,6 @@ CONFIGURE_WRKSRC=	${WRKSRC}/scripts
 USE_XORG=	x11
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
