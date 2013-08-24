@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-eBay
-# Date created:				Sat May 27 13:25:11 UTC 2006
-# Whom:	      				Alexander Zhuravlev <zaa@zaa.pp.ru>
-#
-# $FreeBSD: ports/www/p5-Net-eBay/Makefile,v 1.16 2012/11/17 06:02:52 svnexp Exp $
-#
+# Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
+# $FreeBSD: www/p5-Net-eBay/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Net-eBay
 PORTVERSION=	0.61
@@ -29,7 +25,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	EXAMPLES
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Net::eBay.3
 
