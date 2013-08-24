@@ -1,8 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx-devel/Makefile 323456 2013-07-22 14:38:30Z osa $
+# $FreeBSD: www/nginx-devel/Makefile 325067 2013-08-20 18:07:10Z osa $
 
 PORTNAME=	nginx
-PORTVERSION=	1.5.2
+PORTVERSION=	1.5.3
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
@@ -192,7 +192,6 @@ XSS_DESC=			3rd party xss module
 VIDEO_DESC=			Video module support
 
 WANT_GNOME=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
@@ -338,8 +337,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_ctpp2-${NGINX_CTPP2_VERSION}
 .endif
 
 .if ${PORT_OPTIONS:MECHO}
-NGINX_ECHO_VERSION=	0.45
-GIT_ECHO_VERSION=	0-g6ce0801
+NGINX_ECHO_VERSION=	0.46
+GIT_ECHO_VERSION=	0-g4de92b1
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/echo-nginx-module/tarball/v${NGINX_ECHO_VERSION}/:echo
 DISTFILES+=	agentzh-echo-nginx-module-v${NGINX_ECHO_VERSION}-${GIT_ECHO_VERSION}.tar.gz:echo
@@ -347,8 +346,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-echo-nginx-module-${GIT_ECHO_VERS
 .endif
 
 .if ${PORT_OPTIONS:MHEADERS_MORE}
-NGINX_HEADERS_MORE_VERSION=	0.20
-GIT_HEADERS_MORE_VERSION=	0-g0df17d0
+NGINX_HEADERS_MORE_VERSION=	0.22
+GIT_HEADERS_MORE_VERSION=	0-g6d19a39
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/headers-more-nginx-module/tarball/v${NGINX_HEADERS_MORE_VERSION}/:headers_more
 DISTFILES+=	agentzh-headers-more-nginx-module-v${NGINX_HEADERS_MORE_VERSION}-${GIT_HEADERS_MORE_VERSION}.tar.gz:headers_more
@@ -537,6 +536,7 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_upstream.h
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_UPSTREAM_STICKY}
+IGNORE=	HTTP_UPSTREAM_STICKY: update require
 USE_HTTP_SSL=	yes
 NGINX_UPSTREAM_STICKY_VERSION=	1.1
 MASTER_SITES+=	http://nginx-sticky-module.googlecode.com/files/:upstreamsticky
@@ -557,6 +557,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}
 .endif
 
 .if ${PORT_OPTIONS:MDRIZZLE}
+IGNORE=	DRIZZLE: update require
 LIB_DEPENDS+=	drizzle:${PORTSDIR}/databases/libdrizzle
 NGINX_DRIZZLE_VERSION=	0.1.5
 GIT_DRIZZLE_VERSION=	0-g943c915
@@ -611,8 +612,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/arut-nginx-let-module-${GIT_LET_VERSION:S
 LIB_DEPENDS+=	luajit-5.1:${PORTSDIR}/lang/luajit
 CONFIGURE_ENV+=	"LUAJIT_INC=${LOCALBASE}/include/luajit-2.0"
 CONFIGURE_ENV+=	"LUAJIT_LIB=${LOCALBASE}/lib"
-NGINX_LUA_VERSION=	0.8.2
-GIT_LUA_VERSION=	0-g3915187
+NGINX_LUA_VERSION=	0.8.6
+GIT_LUA_VERSION=	0-g940429a
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/chaoslawful/lua-nginx-module/tarball/v${NGINX_LUA_VERSION}/:lua
 DISTFILES+=	chaoslawful-lua-nginx-module-v${NGINX_LUA_VERSION}-${GIT_LUA_VERSION}.tar.gz:lua
@@ -629,7 +630,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-memc-nginx-module-${GIT_MEMC_VERS
 .endif
 
 .if ${PORT_OPTIONS:MMODSECURITY}
-NGINX_MODSECURITY_VERSION=	2.7.4
+NGINX_MODSECURITY_VERSION=	2.7.5
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		apr-1:${PORTSDIR}/devel/apr1
 USE_APACHE=	22+
@@ -657,7 +658,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	4.0.10
+PASSENGER_VERSION=	4.0.14
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
@@ -669,6 +670,7 @@ CFLAGS+=	-DNDEBUG
 .endif
 
 .if ${PORT_OPTIONS:MPOSTGRES}
+IGNORE=	POSTGRES: update require
 USE_PGSQL=	yes
 NGINX_POSTGRES_VERSION=	0.9
 MASTER_SITES+=	http://labs.frickle.com/files/:postgres
@@ -705,8 +707,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-redis2-nginx-module-${GIT_REDIS2_
 .endif
 
 .if ${PORT_OPTIONS:MRTMP}
-NGINX_RTMP_VERSION=	1.0.1
-GIT_RTMP_VERSION=	0-g421d9ff
+NGINX_RTMP_VERSION=	1.0.3
+GIT_RTMP_VERSION=	0-g7749d54
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/arut/nginx-rtmp-module/tarball/v${NGINX_RTMP_VERSION}/:rtmp
 DISTFILES+=	arut-rtmp-nginx-module-v${NGINX_RTMP_VERSION}-${GIT_RTMP_VERSION}.tar.gz:rtmp
@@ -740,8 +742,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_slowfs_cache-${NGINX_SLOWFS_CACHE_VER
 .endif
 
 .if ${PORT_OPTIONS:MSRCACHE}
-NGINX_SRCACHE_VERSION=	0.21
-GIT_SRCACHE_VERSION=	0-g996a76c
+NGINX_SRCACHE_VERSION=	0.22
+GIT_SRCACHE_VERSION=	0-gd0c7ff5
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/srcache-nginx-module/tarball/v${NGINX_SRCACHE_VERSION}/:srcache
 DISTFILES+=	agentzh-srcache-nginx-module-v${NGINX_SRCACHE_VERSION}-${GIT_SRCACHE_VERSION}.tar.gz:srcache
@@ -756,13 +758,14 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_supervisord-${NGINX_SUPERVISORD_VERSI
 .endif
 
 .if ${PORT_OPTIONS:MSYSLOG_SUPPORT}
-IGNORE=	update require
+IGNORE=	SYSLOG: update require
 NGINX_SYSLOG_SUPPORT_FACILITY?=	LOG_DAEMON
 CONFIGURE_ARGS+=--with-syslog --with-syslog-facility=${NGINX_SYSLOG_SUPPORT_FACILITY}
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-syslog_support
 .endif
 
 .if ${PORT_OPTIONS:MTCP_PROXY}
+IGNORE=	TCP_PROXY: update require
 NGINX_TCP_PROXY_VERSION=	0.26
 GIT_TCP_PROXY_VERSION=	0-gb83e5a6
 FETCH_ARGS=	-pRr
