@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-themes/lxappearance/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: x11-themes/lxappearance/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lxappearance
 PORTVERSION=	0.5.2
@@ -15,7 +15,6 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 USES=		gmake
 USE_GNOME=	gnomehack gtk20 intlhack
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		lxappearance.1
 
