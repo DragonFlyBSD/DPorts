@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-logger-qt4/Makefile 317152 2013-05-02 21:28:26Z avilla $
+# $FreeBSD: net-im/telepathy-logger-qt4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	telepathy-logger-qt4
 PORTVERSION=	0.6.0
@@ -26,7 +26,6 @@ USE_QT4=	corelib dbus moc_build qmake_build rcc_build uic_build
 USES=		bison:build cmake
 USE_BZIP2=	yes
 CMAKE_ARGS=	-DUSE_COMMON_CMAKE_PACKAGE_CONFIG_DIR:BOOL=True
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 post-patch:
