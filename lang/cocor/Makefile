@@ -1,5 +1,5 @@
 # Created by: Guy Antony Halse <guy@rucus.ru.za.za>
-# $FreeBSD: ports/lang/cocor/Makefile,v 1.7 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: lang/cocor/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cocor
 PORTVERSION=	1.7
@@ -20,7 +20,6 @@ USE_DOS2UNIX=	yes
 MAKE_ENV=	CRFRAMES="${WRKSRC}/frames"
 MAKEFILE=	unix.mk
 ALL_TARGET=	all1
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 
