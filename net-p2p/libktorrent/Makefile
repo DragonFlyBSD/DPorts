@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/libktorrent/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: net-p2p/libktorrent/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libktorrent
 DISTVERSION=	1.3.1
@@ -19,7 +19,6 @@ USE_KDE4=	kdelibs kdehier kdeprefix automoc4
 USE_QT4=	qtestlib_build qmake_build moc_build rcc_build uic_build
 USES=		cmake:outsource gettext
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 SHLIB_VER=	5.0.1
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER} \
