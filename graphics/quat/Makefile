@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/quat/Makefile 318643 2013-05-21 05:51:07Z miwi $
+# $FreeBSD: graphics/quat/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	quat
 PORTVERSION=	1.20
@@ -17,7 +17,6 @@ OPTIONS_DEFINE=	OPTIMIZED_CFLAGS DOCS
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-gui \
 		--datadir=${PREFIX}/share/doc
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PLIST_FILES=	bin/quat-txt
