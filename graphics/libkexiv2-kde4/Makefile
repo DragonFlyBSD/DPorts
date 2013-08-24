@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libkexiv2-kde4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: graphics/libkexiv2-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libkexiv2
 PORTVERSION=	${KDE4_VERSION}
@@ -22,7 +22,6 @@ USES=		cmake:outsource
 USE_QT4=	corelib gui xml \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 pre-configure:
 	${REINPLACE_CMD} -e '/pkgconfig/ s/$${LIB_INSTALL_DIR}/libdata/' \
