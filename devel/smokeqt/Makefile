@@ -1,4 +1,4 @@
-# $FreeBSD: devel/smokeqt/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/smokeqt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	smokeqt
 PORTVERSION=	${KDE4_VERSION}
@@ -22,7 +22,6 @@ USE_QT4=	corelib dbus declarative designer_build gui help \
 		qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
 USES=		cmake:outsource
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
