@@ -1,8 +1,8 @@
 # Created by: Jens Rehsack <rehsack@liwing.de>
-# $FreeBSD: devel/php-xdebug/Makefile 322259 2013-07-03 21:10:44Z lippe $
+# $FreeBSD: devel/php-xdebug/Makefile 325209 2013-08-22 15:47:39Z wg $
 
 PORTNAME=	xdebug
-PORTVERSION=	2.2.2
+PORTVERSION=	2.2.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.xdebug.org/files/
 PKGNAMEPREFIX=	php-
