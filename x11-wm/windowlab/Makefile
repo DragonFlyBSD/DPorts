@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: x11-wm/windowlab/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/windowlab/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	windowlab
 PORTVERSION=	1.40
@@ -19,7 +19,6 @@ OPTIONS_DEFINE=	XFT DOCS
 USE_XORG=	x11 xext
 USE_GMAKE=	yes
 MAKE_ENV=	XROOT="${LOCALBASE}" SYSCONFDIR="${ETCDIR}"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		windowlab.1x
 PORTDOCS=	CHANGELOG README
