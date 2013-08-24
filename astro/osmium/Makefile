@@ -1,8 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/osmium/Makefile 319273 2013-05-27 16:47:39Z amdmi3 $
+# $FreeBSD: astro/osmium/Makefile 325086 2013-08-21 03:46:21Z sunpoet $
 
 PORTNAME=	osmium
 PORTVERSION=	git20130522
+PORTREVISION=	1
 CATEGORIES=	astro geography devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
