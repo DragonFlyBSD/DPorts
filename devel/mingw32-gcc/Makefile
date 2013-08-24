@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/mingw32-gcc/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/mingw32-gcc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}
@@ -26,7 +26,6 @@ USES=		bison iconv
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
-MAKE_JOBS_SAFE=	yes
 
 GCC_TARG=	${PKGNAMEPREFIX:S/-$//}
 
