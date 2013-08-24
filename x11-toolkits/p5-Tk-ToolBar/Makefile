@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tk-ToolBar
-# Date created:		2011-10-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/p5-Tk-ToolBar/Makefile,v 1.4 2012/11/17 06:03:38 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: x11-toolkits/p5-Tk-ToolBar/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Tk-ToolBar
 PORTVERSION=	0.10
@@ -13,13 +9,14 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A toolbar widget for Perl/Tk
+COMMENT=	Toolbar widget for Perl/Tk
 
 BUILD_DEPENDS=	p5-Tk-CursorControl>=0:${PORTSDIR}/x11-toolkits/p5-Tk-CursorControl
-RUN_DEPENDS=	p5-Tk-CursorControl>=0:${PORTSDIR}/x11-toolkits/p5-Tk-CursorControl
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_ZIP=	yes
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Tk::ToolBar.3
 
