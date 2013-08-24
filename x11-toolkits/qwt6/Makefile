@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/qwt6/Makefile 322988 2013-07-14 15:27:05Z makc $
+# $FreeBSD: x11-toolkits/qwt6/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qwt
 PORTVERSION=	6.1.0
@@ -14,7 +14,6 @@ USE_GMAKE=	yes
 QMAKE_ARGS+=	-recursive PREFIX=${PREFIX}
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 DOCSDIR=	${PREFIX}/share/doc/${LATEST_LINK}
 
 LATEST_LINK=	qwt6
