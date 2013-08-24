@@ -1,5 +1,5 @@
 # Created by: Daniel B. Hemmerich <dan@spot.org>
-# $FreeBSD: misc/p5-Text-FIGlet/Makefile 316205 2013-04-21 19:22:42Z sunpoet $
+# $FreeBSD: misc/p5-Text-FIGlet/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Text-FIGlet
 PORTVERSION=	2.19.3
@@ -18,7 +18,8 @@ RUN_DEPENDS=	${LOCALBASE}/bin/figlet:${PORTSDIR}/misc/figlet
 TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		charmap.pl.1 \
 		figlet.pl.1 \
