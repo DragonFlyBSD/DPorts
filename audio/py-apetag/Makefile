@@ -2,7 +2,7 @@
 # Date created:                 February 10, 2007
 # Whom:                         Chao Shin <quakelee@cn.freebsd.org>
 #
-# $FreeBSD: ports/audio/py-apetag/Makefile,v 1.8 2012/11/17 05:54:41 svnexp Exp $
+# $FreeBSD: audio/py-apetag/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	apetag
 PORTVERSION=	1.2
@@ -17,6 +17,5 @@ COMMENT=	Library for APE Tag written in Python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	py-ApeTag
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
