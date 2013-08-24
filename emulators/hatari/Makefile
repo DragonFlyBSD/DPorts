@@ -1,5 +1,5 @@
 # Created by: Michael Neumann <mneumann@ntecs.de>
-# $FreeBSD: emulators/hatari/Makefile 323036 2013-07-15 14:43:30Z miwi $
+# $FreeBSD: emulators/hatari/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hatari
 PORTVERSION=	1.7.0
@@ -27,7 +27,6 @@ CMAKE_ARGS=	-DPORTAUDIO_INCLUDE_DIR:STRING="${PA2_INCLUDE_DIR}" \
 		-DCMAKE_C_FLAGS_RELEASE:STRING="-DNDEBUG" \
 		-DETCDIR:STRING="${PREFIX}/etc" \
 		-DMANDIR:STRING="man/man1"
-MAKE_JOBS_SAFE=	yes
 
 MANCOMPRESSED=	yes
 MANLANG=	"" fr
