@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: irc/irssi-devel/Makefile 316344 2013-04-23 10:51:39Z bapt $
+# $FreeBSD: irc/irssi-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	irssi
 PORTVERSION=	20120624
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_GMAKE=	yes
 WANT_PERL=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		irssi.1
 
