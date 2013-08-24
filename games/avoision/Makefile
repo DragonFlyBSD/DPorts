@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/avoision/Makefile 322858 2013-07-12 17:34:04Z deischen $
+# $FreeBSD: games/avoision/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	avoision
 PORTVERSION=	1.1
@@ -27,7 +27,6 @@ USE_SDL=	sdl sound
 USE_GL=		glu
 GNU_CONFIGURE=	yes
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME}.desktop \
