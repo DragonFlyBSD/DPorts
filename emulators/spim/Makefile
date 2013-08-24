@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: emulators/spim/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: emulators/spim/Makefile 325221 2013-08-22 17:53:18Z wg $
 
 PORTNAME=	spim
 PORTVERSION=	8.0
@@ -18,6 +18,7 @@ INSTALL_WRKSRC=	${WRKSRC}/${PORTNAME}
 ALL_TARGET=	${PORTNAME}
 
 MAN1=		spim.1
+MANCOMPRESSED=	no
 PORTDOCS=	cycle.ps.gz spim.ps.gz SPIM.html
 PLIST_FILES=	bin/spim %%DATADIR%%/exceptions.s
 PLIST_DIRS=	%%DATADIR%%
