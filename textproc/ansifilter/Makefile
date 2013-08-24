@@ -1,16 +1,12 @@
-# New ports collection makefile for:	ansifilter
-# Date created:				09 July 2008
-# Whom:					Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/textproc/ansifilter/Makefile,v 1.6 2012/11/17 06:01:51 svnexp Exp $
-#
+# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
+# $FreeBSD: textproc/ansifilter/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	ansifilter
 PORTVERSION=	1.4
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.andre-simon.de/zip/
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Customizable ANSI Code Converter
 
 USE_BZIP2=	yes
