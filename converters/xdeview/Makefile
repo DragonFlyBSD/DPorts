@@ -2,7 +2,7 @@
 # Date Created:		9 Feb 1997
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $FreeBSD: converters/xdeview/Makefile 316351 2013-04-23 11:51:52Z gahr $
+# $FreeBSD: converters/xdeview/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	xdeview
@@ -26,7 +26,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tcl --disable-tk
 ALL_TARGET=	xdeview
 INSTALL_TARGET=	install-tcl
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${TCL_INCLUDEDIR} -DHAVE_TCL \
 		-I${TK_INCLUDEDIR} -DHAVE_TK \
