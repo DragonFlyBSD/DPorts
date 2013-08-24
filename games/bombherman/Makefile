@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/bombherman/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: games/bombherman/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bomb-her-man
 PORTVERSION=	0.3
@@ -30,7 +30,6 @@ GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	automake:env
 USE_GMAKE=	yes
 ALL_TARGET=	# empty
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
