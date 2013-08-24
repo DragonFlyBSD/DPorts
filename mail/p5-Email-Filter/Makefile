@@ -1,8 +1,8 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-Filter/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Email-Filter/Makefile 325147 2013-08-21 14:52:09Z mat $
 
 PORTNAME=	Email-Filter
-PORTVERSION=	1.03.2
+PORTVERSION=	1.03.3
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
