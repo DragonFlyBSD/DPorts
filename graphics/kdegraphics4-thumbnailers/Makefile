@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kdegraphics4-thumbnailers/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: graphics/kdegraphics4-thumbnailers/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdegraphics-thumbnailers
 PORTVERSION=	${KDE4_VERSION}
@@ -16,6 +16,5 @@ USE_KDE4=	kdehier kdelibs kdeprefix libkdcraw libkexiv2 automoc4
 USES=		cmake:outsource
 USE_QT4=	gui qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
