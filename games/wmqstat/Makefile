@@ -2,7 +2,7 @@
 # Date created:				25 Apr 2003
 # Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
 #
-# $FreeBSD: ports/games/wmqstat/Makefile,v 1.12 2012/11/17 05:57:56 svnexp Exp $
+# $FreeBSD: games/wmqstat/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	wmqstat
@@ -17,7 +17,6 @@ COMMENT=	A dockapp for monitoring of various Internet game servers
 RUN_DEPENDS=	qstat:${PORTSDIR}/games/qstat
 
 USE_XORG=	xpm x11 xext
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README
