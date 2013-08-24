@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/sdb/Makefile 318816 2013-05-23 02:01:29Z amdmi3 $
+# $FreeBSD: games/sdb/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sdb
 PORTVERSION=	1.0.2
@@ -16,7 +16,6 @@ COMMENT=	Futuristic overhead shooter
 USE_SDL=	mixer image sdl
 USE_GL=		gl glu
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 BUILD_WRKSRC=	${WRKSRC}/src
 
