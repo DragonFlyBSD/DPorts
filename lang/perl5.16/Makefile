@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.16/Makefile 323474 2013-07-22 15:56:27Z az $
+# $FreeBSD: lang/perl5.16/Makefile 324662 2013-08-13 13:04:55Z mat $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
@@ -21,7 +21,8 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 CONFLICTS=	perl-5.12.* perl-threaded-5.12.* \
-		perl-5.14.* perl-threaded-5.14.*
+		perl-5.14.* perl-threaded-5.14.* \
+		perl-5.18.* perl-threaded-5.18.*
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_MALLOC PERL_64BITINT THREADS PTHREAD \
 		MULTIPLICITY SITECUSTOMIZE USE_PERL
