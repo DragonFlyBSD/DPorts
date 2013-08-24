@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kdegraphics4-strigi-analyzer/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: graphics/kdegraphics4-strigi-analyzer/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdegraphics-strigi-analyzer
 PORTVERSION=	${KDE4_VERSION}
@@ -18,6 +18,5 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4 strigi
 USES=		cmake:outsource
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
