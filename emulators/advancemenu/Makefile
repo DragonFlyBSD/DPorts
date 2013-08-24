@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: emulators/advancemenu/Makefile 317765 2013-05-10 06:42:43Z miwi $
+# $FreeBSD: emulators/advancemenu/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	advancemenu
 PORTVERSION=	2.6
@@ -22,7 +22,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-asm --disable-svgalib --disable-fb \
 		--disable-alsa --enable-oss --disable-slang \
 		--disable-ncurses --disable-kevent
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-idirafter ${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
