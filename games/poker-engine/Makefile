@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/poker-engine/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: games/poker-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	poker-engine
 PORTVERSION=	1.3.6
@@ -26,7 +26,6 @@ USES=		pkgconfig gettext
 USE_PYTHON=	2.5-2.7
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN8=	pokerconfigupgrade.8
 
