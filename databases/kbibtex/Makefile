@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: databases/kbibtex/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: databases/kbibtex/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kbibtex
 DISTVERSION=	0.4.1
@@ -18,7 +18,6 @@ USE_GNOME=	libxml2 libxslt
 USE_KDE4=	kdelibs kdeprefix automoc4 sharedmime
 USE_QT4=	qmake_build moc_build uic_build rcc_build \
 		webkit
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		kbibtex.1
 
