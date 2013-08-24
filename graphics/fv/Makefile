@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: graphics/fv/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/fv/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fv
 PORTVERSION=	1.03
@@ -20,7 +20,6 @@ USE_ZIP=	yes
 USE_GL=		glut
 USE_GMAKE=	yes
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 CXXFLAGS+=	$$(pkg-config --cflags libpng15) \
 		-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
