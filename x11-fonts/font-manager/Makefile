@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-fonts/font-manager/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-fonts/font-manager/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	font-manager
 PORTVERSION=	0.5.7
@@ -19,7 +19,6 @@ USE_PYTHON=	2.6-2.7
 USE_GNOME=	pygtk2
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 LICENSE_FILE=	${WRKSRC}/COPYING
 PORTDATA=	*
