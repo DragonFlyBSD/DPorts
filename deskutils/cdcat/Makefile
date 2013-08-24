@@ -1,5 +1,5 @@
 # Created by: Aren Tyr <aren.tyr@gawab.com>
-# $FreeBSD: deskutils/cdcat/Makefile 315474 2013-03-28 15:51:16Z eadler $
+# $FreeBSD: deskutils/cdcat/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cdcat
 PORTVERSION=	2.1
@@ -31,7 +31,6 @@ USE_BZIP2=	yes
 USE_QT4=	corelib gui xml \
 		linguist_build moc_build qmake_build uic_build
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 QMAKEFLAGS+=	INCLUDEPATH+="${L7Z_WRKSRC}/Lib7Zip" \
 		INCLUDEPATH+="${MIF_WRKSRC}/MediaInfoLib/Source" \
