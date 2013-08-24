@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/flobopuyo/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/flobopuyo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	flobopuyo
 PORTVERSION=	0.20
@@ -16,7 +16,6 @@ USES=		bison
 USE_GMAKE=	yes
 USE_SDL=	sdl mixer image
 USE_DOS2UNIX=	yes
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES="FloboPuyo" \
 		"Clone of the famous PuyoPuyo" \
