@@ -1,9 +1,5 @@
-# New ports collection makefile for:	docdiff
-# Date created:		13 December 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/docdiff/Makefile,v 1.7 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: textproc/docdiff/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	docdiff
 PORTVERSION=	0.4.0
