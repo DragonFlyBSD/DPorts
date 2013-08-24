@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: editors/lfhex/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: editors/lfhex/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lfhex
 PORTVERSION=	0.42
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 
 USE_QT4=	corelib gui moc_build qmake_build rcc_build
 USES=		bison
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
