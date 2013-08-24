@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-makeqpf/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qt4-makeqpf/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	makeqpf
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	Qt qtopia font creator
 USE_QT4=	qmake_build moc_build rcc_build uic_build corelib gui
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
