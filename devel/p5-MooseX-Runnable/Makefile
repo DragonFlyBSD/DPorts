@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-Runnable
-# Date created:		2011-06-11
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Runnable/Makefile,v 1.3 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-Runnable/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	MooseX-Runnable
 PORTVERSION=	0.03
@@ -27,7 +23,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-TableDriven>=0:${PORTSDIR}/devel/p5-Test-TableDriven \
 		p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		mx-run.1
 MAN3=		MooseX::Runnable.3 \
