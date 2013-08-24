@@ -2,7 +2,7 @@
 # Date created:				9 May 2005
 # Whom:					Ozkan KIRIK <ozkan@enderunix.org>
 #
-# $FreeBSD: ports/dns/checkdns/Makefile,v 1.14 2012/11/17 05:57:08 svnexp Exp $
+# $FreeBSD: dns/checkdns/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	checkdns
@@ -15,7 +15,6 @@ MASTER_SITES=	http://www.enderunix.org/checkdns/ \
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	A domain name server analysis and reporting tool
 
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
