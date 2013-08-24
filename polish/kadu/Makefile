@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/kadu/Makefile 322999 2013-07-14 19:56:12Z pawel $
+# $FreeBSD: polish/kadu/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kadu
 PORTVERSION=	0.12.2
@@ -47,7 +47,6 @@ USES=		cmake pkgconfig gettext iconv
 USE_XORG=	ice sm x11 xau xcb xdmcp xext xfixes xrender xscrnsaver
 CMAKE_ARGS=	-DKADU_VERSION:STRING="${DISTVERSION}" -DWITH_ENCHANT=ON
 # Setting KADU_VERSION disables git invocation
-MAKE_JOBS_SAFE=	yes
 
 USE_QT4=	corelib dbus declarative gui network phonon qtestlib script \
 		scripttools svg webkit xml xmlpatterns linguist_build \
