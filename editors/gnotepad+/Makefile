@@ -2,7 +2,7 @@
 # Date created:		08 March 1999
 # Whom:			brett@peloton.physics.montana.edu
 #
-# $FreeBSD: editors/gnotepad+/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: editors/gnotepad+/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gnotepad+
@@ -27,7 +27,6 @@ WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gtk12
 USES=		gettext
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		gnp.1
 
