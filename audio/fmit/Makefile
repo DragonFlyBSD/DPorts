@@ -2,7 +2,7 @@
 # Date created:		2007-09-08
 # Whom:			Edward Tomasz Napierala <trasz@FreeBSD.org>
 #
-# $FreeBSD: audio/fmit/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/fmit/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	fmit
@@ -29,7 +29,6 @@ USE_QT4=	corelib gui opengl \
 USE_GL=		glut
 USES=		cmake
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
