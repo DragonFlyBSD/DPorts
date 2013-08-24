@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: emulators/catapult/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: emulators/catapult/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	catapult
 PORTVERSION=	0.9.1
@@ -43,7 +43,6 @@ MAKE_ARGS=	INSTALL_BASE="${PREFIX}" \
 		CATAPULT_OPENMSX_BINARY="${LOCALBASE}/bin/openmsx" \
 		CATAPULT_OPENMSX_SHARE="${LOCALBASE}/share/openmsx" \
 		SYMLINK_FOR_BINARY="false"
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
