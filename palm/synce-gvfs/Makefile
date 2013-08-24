@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: palm/synce-gvfs/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: palm/synce-gvfs/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	synce-gvfs
 PORTVERSION=	0.3.1
@@ -13,7 +13,6 @@ COMMENT=	GVFS module for access Windows Mobile devices
 EXTRACT_DEPENDS=${NONEXISTENT}:${GVFS_PORTDIR}:patch
 LIB_DEPENDS=	rapi.2:${PORTSDIR}/palm/synce-librapi2
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
