@@ -2,7 +2,7 @@
 # Date created:				9 November 2002
 # Whom:					Marc Fonvieille <blackend@FreeBSD.org>
 #
-# $FreeBSD: ports/cad/atlc/Makefile,v 1.9 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/atlc/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	atlc
@@ -18,7 +18,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		atlc.1 coax.1 create_bmp_for_circ_in_circ.1 \
 		create_bmp_for_circ_in_rect.1 \
