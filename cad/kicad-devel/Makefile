@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/kicad-devel/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: cad/kicad-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=		kicad
 DISTVERSION=    r${BZR_SRC_REV}
@@ -43,7 +43,6 @@ CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" \
 		-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
 		-DwxWidgets_CONFIG_EXECUTABLE="${WX_CONFIG}"
 
-MAKE_JOBS_SAFE= yes
 
 .include <bsd.port.pre.mk>
 
