@@ -2,7 +2,7 @@
 # Date created:				15 August 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: games/heroes/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/heroes/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	heroes
@@ -40,7 +40,6 @@ USES=		gettext iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 CONFIGURE_ARGS=	--with-sdl_mixer=${LOCALBASE} --without-gii --without-ggi
-MAKE_JOBS_SAFE=	yes
 
 .if defined(WITH_OPTIMIZED_CFLAGS)
 CONFIGURE_ARGS+=--enable-optimizations
