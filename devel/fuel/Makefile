@@ -2,7 +2,7 @@
 # Date created:				2012-04-26
 # Whom:					Hakisho Nukama <nukama@gmail.com>
 #
-# $FreeBSD: ports/devel/fuel/Makefile,v 1.3 2012/11/17 05:55:43 svnexp Exp $
+# $FreeBSD: devel/fuel/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	fuel
@@ -19,7 +19,6 @@ RUN_DEPENDS=	${LOCALBASE}/bin/fossil:${PORTSDIR}/devel/fossil
 
 USE_QT4=	corelib gui \
 		qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 
