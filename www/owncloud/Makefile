@@ -1,7 +1,8 @@
-# $FreeBSD: www/owncloud/Makefile 324018 2013-07-31 08:34:47Z kevlo $
+# $FreeBSD: www/owncloud/Makefile 324752 2013-08-15 06:19:57Z kevlo $
 
 PORTNAME=	owncloud
-PORTVERSION=	5.0.9
+PORTVERSION=	5.0.10
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 
@@ -16,7 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_BZIP2=	yes
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv json mbstring \
 		mysql pdo pdo_mysql pdo_sqlite session simplexml sqlite3 xml \
-		zip zlib
+		wddx zip zlib
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
 
