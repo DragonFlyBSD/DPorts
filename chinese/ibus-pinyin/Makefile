@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: chinese/ibus-pinyin/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: chinese/ibus-pinyin/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.4.0
@@ -20,7 +20,7 @@ RUN_DEPENDS=	ibus-daemon:${PORTSDIR}/textproc/ibus \
 USE_PYTHON=	yes
 USE_GNOME=	pygtk2
 
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking --disable-lua-extension
