@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: comms/zmtx-zmrx/Makefile 316126 2013-04-20 05:15:05Z danfe $
+# $FreeBSD: comms/zmtx-zmrx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	zmtx-zmrx
 PORTVERSION=	1.02
@@ -12,7 +12,6 @@ COMMENT=	Send and receive files via ZMODEM protocol (unrestrictive)
 USE_CSTD=	gnu89
 
 MAKEFILE=	makefile
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAN1=		zmrx.1 zmtx.1
