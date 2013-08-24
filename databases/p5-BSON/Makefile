@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-BSON/Makefile 319034 2013-05-25 08:14:12Z sunpoet $
+# $FreeBSD: databases/p5-BSON/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	BSON
 PORTVERSION=	0.11
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		BSON.3 \
 		BSON::Binary.3 \
