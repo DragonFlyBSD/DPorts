@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-HTML-Entities-Interpolate/Makefile 322572 2013-07-09 20:52:07Z sunpoet $
+# $FreeBSD: textproc/p5-HTML-Entities-Interpolate/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	HTML-Entities-Interpolate
 PORTVERSION=	1.05
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.45:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		HTML::Entities::Interpolate.3
 
