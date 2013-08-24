@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/libdap/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: devel/libdap/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
 
 PORTNAME=	libdap
 PORTVERSION=	3.11.7
@@ -19,9 +19,8 @@ CONFIGURE_ARGS=	--with-zlib=/usr
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GMAKE=	yes
-USES=	pathfix
 USE_LDCONFIG=	yes
+USES=		gmake pathfix
 
 MAN1=		dap-config.1 \
 		getdap.1
