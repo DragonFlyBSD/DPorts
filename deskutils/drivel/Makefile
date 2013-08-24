@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: deskutils/drivel/Makefile 323469 2013-07-22 15:30:21Z miwi $
+# $FreeBSD: deskutils/drivel/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	drivel
 PORTVERSION=	3.0.5
@@ -24,7 +24,6 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-error-on-warning
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
-MAKE_JOBS_SAFE=	yes
 
 GCONF_SCHEMAS=	drivel.schemas
 
