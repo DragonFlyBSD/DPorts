@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/xorgramana/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/xorgramana/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xorgramana
 PORTVERSION=	0.0.8
@@ -16,7 +16,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_SDL=	sdl image
 USE_GL=		glu
-MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	${PORTNAME}
 MKE_JOBS_SAFE=	yes
