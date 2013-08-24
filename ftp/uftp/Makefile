@@ -2,11 +2,11 @@
 # Date created:				4 June 2008
 # Whom:					George V. Neville-Neil <gnn@FreeBSD.org>
 #
-# $FreeBSD: ftp/uftp/Makefile 322364 2013-07-06 06:57:48Z demon $
+# $FreeBSD: ftp/uftp/Makefile 325092 2013-08-21 06:56:47Z demon $
 #
 
 PORTNAME=	uftp
-PORTVERSION=	4.0
+PORTVERSION=	4.1.2
 PORTEPOCH=	1
 CATEGORIES=	ftp
 MASTER_SITES=	http://uftp-multicast.sourceforge.net/downloads/
