@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/zaz/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/zaz/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	zaz
 PORTVERSION=	1.0.0
@@ -19,7 +19,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl image
 USE_GL=		gl glu
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include/freetype2 -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
