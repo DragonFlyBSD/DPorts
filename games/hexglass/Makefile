@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/hexglass/Makefile,v 1.7 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/hexglass/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hexglass
 PORTVERSION=	1.2.1
@@ -11,7 +11,6 @@ COMMENT=	Tetris-like puzzle game based on a hexagonal grid
 
 USE_QT4=	gui qmake_build moc_build rcc_build
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.xpm
