@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/ndpmon/Makefile 321019 2013-06-15 21:38:43Z stefan $
+# $FreeBSD: net-mgmt/ndpmon/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ndpmon
 PORTVERSION=	1.4.0
@@ -34,7 +34,6 @@ USE_GNOME=	libxml2
 USE_PERL5_RUN=	yes
 USE_RC_SUBR=	ndpmonitor
 
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	OSTYPE=FreeBSD
 CONFIGURE_ARGS=	--with-var-datadir=${PREFIX}/var --with-confdir=${ETCDIR} \
