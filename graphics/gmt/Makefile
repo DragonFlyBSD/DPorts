@@ -1,9 +1,9 @@
 # Created by: sec@42.org
-# $FreeBSD: graphics/gmt/Makefile 322745 2013-07-11 06:15:02Z bapt $
+# $FreeBSD: graphics/gmt/Makefile 325086 2013-08-21 03:46:21Z sunpoet $
 
 PORTNAME=	gmt
 PORTVERSION=	4.5.8
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://falcon.grdl.noaa.gov/pub/${PORTNAME}/	\
 		ftp://ftp.soest.hawaii.edu/${PORTNAME}/		\
