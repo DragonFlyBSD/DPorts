@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-public_suffix_service
-# Date created:		2011-11-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/dns/rubygem-public_suffix_service/Makefile,v 1.5 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: dns/rubygem-public_suffix_service/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	public_suffix_service
 PORTVERSION=	0.9.1
