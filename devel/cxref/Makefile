@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@freebsd.org>
-# $FreeBSD: ports/devel/cxref/Makefile,v 1.36 2013/01/16 09:01:56 svnexp Exp $
+# $FreeBSD: devel/cxref/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cxref
 PORTVERSION=	1.6d
@@ -17,7 +17,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-cxref-cpp
 ALL_TARGET=	programs
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		cxref.1 cxref-query.1
 
