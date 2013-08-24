@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Monitor-Simple/Makefile 320778 2013-06-13 11:52:31Z sunpoet $
+# $FreeBSD: sysutils/p5-Monitor-Simple/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Monitor-Simple
 PORTVERSION=	0.2.8
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-File-Which>=0:${PORTSDIR}/sysutils/p5-File-Which
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		smonitor.1
 MAN3=		Monitor::Simple.3 \
