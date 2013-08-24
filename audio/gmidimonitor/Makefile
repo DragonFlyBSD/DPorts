@@ -2,7 +2,7 @@
 # Date created:		2007-03-20
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: audio/gmidimonitor/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
+# $FreeBSD: audio/gmidimonitor/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	gmidimonitor
@@ -19,7 +19,6 @@ LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk20 libglade2
-MAKE_JOBS_SAFE=	yes
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
