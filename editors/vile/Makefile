@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/vile/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: editors/vile/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vile
 PORTVERSION=	9.8k
@@ -23,7 +23,6 @@ USES=		pkgconfig shebangfix
 SHEBANG_FILES=	perl/vileget
 GNU_CONFIGURE=	yes
 MAKEFILE=	makefile
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		vile.1
 
