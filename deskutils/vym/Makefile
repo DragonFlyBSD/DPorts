@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: deskutils/vym/Makefile 318730 2013-05-21 22:40:19Z jgh $
+# $FreeBSD: deskutils/vym/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vym
 PORTVERSION=	2.2.4
@@ -18,7 +18,6 @@ QMAKE_ARGS=	PREFIX=${PREFIX} \
 		DOCDIR=${DOCSDIR}
 QT_LRELEASE=	${LOCALBASE}/bin/lrelease-qt4
 
-MAKE_JOBS_SAFE=	yes
 STRIP_FILES=	bin/vym
 
 DESKTOP_ENTRIES=	"VYM" \
