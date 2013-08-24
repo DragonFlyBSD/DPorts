@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/neverball/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -20,7 +20,6 @@ USE_GL=		gl
 USE_SDL=	sdl ttf
 USE_GMAKE=	yes
 MAKE_ENV+=	ENABLE_WII=0
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	CHANGES COPYING README
 MAN6=		neverball.6 neverputt.6
