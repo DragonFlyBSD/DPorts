@@ -1,5 +1,5 @@
 # Created by: shoemaker@bluebottle.com (Jonathan Shoemaker)
-# $FreeBSD: games/quackle/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: games/quackle/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	quackle
 PORTVERSION=	0.97
@@ -21,7 +21,6 @@ BUILD_WRKSRC=	${WRKSRC}/quacker
 USES=		gmake
 USE_GCC=	any
 USE_QT4=	gui moc_build qmake_build
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES="Quackle" "${COMMENT}" "" "quackle" "Game;BoardGame;" "true"
 
