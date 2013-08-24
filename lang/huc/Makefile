@@ -2,7 +2,7 @@
 # Date created:			1 December 2003
 # Whom:				Frederic Cambus
 #
-# $FreeBSD: ports/lang/huc/Makefile,v 1.7 2012/11/17 05:58:51 svnexp Exp $
+# $FreeBSD: lang/huc/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	huc
@@ -21,7 +21,6 @@ NO_WRKSUBDIR=	yes
 USE_ZIP=	yes
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CC}" LD="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
