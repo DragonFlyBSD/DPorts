@@ -1,5 +1,5 @@
 # Created by: krion@FreeBSD.org
-# $FreeBSD: ports/net/icpld/Makefile,v 1.29 2012/12/17 02:18:02 svnexp Exp $
+# $FreeBSD: net/icpld/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	icpld
 PORTVERSION=	1.1.5
@@ -13,7 +13,6 @@ COMMENT=	Internet connection performance logging daemon
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 
