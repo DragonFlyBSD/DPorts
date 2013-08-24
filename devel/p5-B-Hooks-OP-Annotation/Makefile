@@ -2,7 +2,7 @@
 # Date created:		2011-08-15
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-B-Hooks-OP-Annotation/Makefile,v 1.2 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-B-Hooks-OP-Annotation/Makefile 325148 2013-08-21 14:55:43Z sunpoet $
 #
 
 PORTNAME=	B-Hooks-OP-Annotation
@@ -15,9 +15,10 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Annotate and delegate hooked OPs
 
 BUILD_DEPENDS=	p5-ExtUtils-Depends>=0.304:${PORTSDIR}/devel/p5-ExtUtils-Depends
-RUN_DEPENDS=	p5-ExtUtils-Depends>=0.304:${PORTSDIR}/devel/p5-ExtUtils-Depends
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		B::Hooks::OP::Annotation.3
 
