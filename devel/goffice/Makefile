@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice/Makefile 321967 2013-06-28 16:53:57Z kwm $
+# $FreeBSD: devel/goffice/Makefile 324744 2013-08-14 22:35:50Z ak $
 #   $MCom: ports/trunk/devel/goffice/Makefile 17268 2013-04-01 05:13:11Z marcus $
 #
 # !!! When updating goffice, don't forget to update pkg-plist in:
@@ -32,7 +32,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB=	VERSION=${PORTVERSION} \
 		SHORT_VER=0.8
 
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	GCONF
 OPTIONS_DEFAULT=GCONF
