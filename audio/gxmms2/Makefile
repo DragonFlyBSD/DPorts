@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/gxmms2/Makefile 322531 2013-07-08 18:44:24Z madpilot $
+# $FreeBSD: audio/gxmms2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gxmms2
 PORTVERSION=	0.7.1
@@ -21,7 +21,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_GNOME=	gtk20
 USES=		gmake
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/gxmms2 \
 		%%DATADIR%%/gxmms2_mini.xpm
