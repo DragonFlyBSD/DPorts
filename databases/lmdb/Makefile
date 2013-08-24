@@ -1,8 +1,8 @@
 # Created by: Xin Li <delphij@FreeBSD.org>
-# $FreeBSD: databases/lmdb/Makefile 313947 2013-03-11 23:58:01Z delphij $
+# $FreeBSD: databases/lmdb/Makefile 324812 2013-08-16 18:40:22Z delphij $
 
 PORTNAME=	lmdb
-PORTVERSION=	0.9.6
+PORTVERSION=	0.9.7
 CATEGORIES=	databases
 MASTER_SITES=	https://gitorious.org/${GO_ACCOUNT}/${GO_PROJECT}/archive-tarball/${GO_TAGNAME}?dummy=
 
@@ -18,7 +18,7 @@ MAKE_ENV+=	INSTALL_LIB="${INSTALL_LIB}" INSTALL_DATA="${INSTALL_DATA}" INSTALL_M
 
 GO_ACCOUNT=	mdb
 GO_PROJECT=	mdb
-GO_TAGNAME=	${PORTNAME:tu}_${PORTVERSION:S/./_/g}
+GO_TAGNAME=	${PORTNAME:tu}_${PORTVERSION}
 FETCH_ARGS?=	-o - > ${DISTDIR}/${DISTFILES}
 
 MAN1=		mdb_stat.1 mdb_copy.1
