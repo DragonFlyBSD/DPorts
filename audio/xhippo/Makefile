@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <rod@zort.on.ca>
-# $FreeBSD: audio/xhippo/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/xhippo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xhippo
 PORTVERSION=	3.5
@@ -18,7 +18,6 @@ USE_GNOME=	gtk20
 USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk2
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
