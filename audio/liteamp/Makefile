@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: audio/liteamp/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: audio/liteamp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	liteamp
 PORTVERSION=	0.2.4.2
@@ -23,7 +23,6 @@ USE_GNOME=	libgnomeui
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	LDFLAGS="${LDFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		liteamp.1
 
