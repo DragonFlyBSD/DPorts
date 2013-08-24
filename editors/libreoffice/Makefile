@@ -1,11 +1,8 @@
-# $FreeBSD: editors/libreoffice/Makefile 324231 2013-08-04 13:18:24Z az $
+# $FreeBSD: editors/libreoffice/Makefile 325232 2013-08-22 20:44:37Z jkim $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	1
-MASTER_SITES+=	http://dev-www.libreoffice.org/src/:src \
-		http://dev-www.libreoffice.org/extern/:ext
-MASTER_SITE_SUBDIR=	src/${PORTVERSION}/
+PORTREVISION=	0
 
 COMMENT=	Full integrated office productivity suite
 
@@ -37,7 +34,7 @@ LIB_DEPENDS=	icutu:${PORTSDIR}/devel/icu \
 		png15:${PORTSDIR}/graphics/png \
 		poppler:${PORTSDIR}/graphics/poppler \
 		lpsolve55:${PORTSDIR}/math/lp_solve \
-		cmis-0.3:${PORTSDIR}/net/libcmis \
+		cmis-0.4:${PORTSDIR}/net/libcmis \
 		ldap-2.4:${PORTSDIR}/net/openldap24-client \
 		mspub-0.0:${PORTSDIR}/print/libmspub \
 		nss3.1:${PORTSDIR}/security/nss \
@@ -63,18 +60,16 @@ RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fo
 CONFLICTS_INSTALL=	libreoffice-legacy-[0-9]*
 
 _MAKE_JOBS=	#
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf aclocal
 USE_GCC=	4.7
-USE_GMAKE=	yes
 USE_PERL5=	build
-USE_PYTHON=	3.3+
+USE_PYTHON=	yes
 USE_QT4=	# empty but required
 USE_XORG=	xaw xrandr
 USE_XZ=		yes
-USES=		bison pkgconfig perl5
+USES= 		bison gmake perl5 pkgconfig
 USE_GNOME+=	gtk20 desktopfileutils
 INSTALLS_ICONS= yes
 
