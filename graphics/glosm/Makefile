@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/glosm/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/glosm/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	glosm
 PORTVERSION=	0.0.2
@@ -18,7 +18,6 @@ USE_BZIP2=	yes
 USES=		cmake
 USE_GL=		gl
 USE_SDL=	sdl
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README ChangeLog
 
