@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiw27@gmail.com>
-# $FreeBSD: shells/fish/Makefile 319306 2013-05-28 13:49:59Z miwi $
+# $FreeBSD: shells/fish/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fish
 PORTVERSION=	2.0.0
@@ -18,7 +18,6 @@ USES=		iconv
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoconf
 CONFIGURE_ARGS=	--docdir=${WRKDIR}/tmproot
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread
