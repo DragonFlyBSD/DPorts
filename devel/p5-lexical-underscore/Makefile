@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-lexical-underscore/Makefile 313741 2013-03-09 18:18:56Z sunpoet $
+# $FreeBSD: devel/p5-lexical-underscore/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	lexical-underscore
 PORTVERSION=	0.001
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-PadWalker>=0:${PORTSDIR}/devel/p5-PadWalker
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		lexical::underscore.3
 
