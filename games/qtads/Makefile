@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiwang27@gmail.com>
-# $FreeBSD: ports/games/qtads/Makefile,v 1.2 2013/02/23 15:04:18 svnexp Exp $
+# $FreeBSD: games/qtads/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qtads
 PORTVERSION=	2.1.6
@@ -15,7 +15,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_QT4=	gui moc_build network qmake_build rcc_build uic_build
 USE_SDL=	sdl mixer sound
-MAKE_JOBS_SAFE=	yes
 
 QMAKEFLAGS+=	QMAKE_CFLAGS_RELEASE="" QMAKE_CXXFLAGS_RELEASE=""
 
