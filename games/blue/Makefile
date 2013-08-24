@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/games/blue/Makefile,v 1.21 2012/11/28 18:12:31 svnexp Exp $
+# $FreeBSD: games/blue/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	blue
 PORTVERSION=	2.11
@@ -14,7 +14,6 @@ LICENSE=	BSD
 
 USE_GMAKE=	yes
 ALL_TARGET=	bluemoon
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/blue \
 		bin/bluemoon
