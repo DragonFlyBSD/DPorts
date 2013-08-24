@@ -1,5 +1,5 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: mail/fetchmail/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: mail/fetchmail/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 # NOTE:  The fetchmailconf program (an interactive program for
 # writing .fetchmailrc files) requires Python, Tk, X11, etc.
@@ -28,7 +28,6 @@ SUB_FILES=	pkg-message
 
 USE_XZ=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 CONFIGURE_ARGS=	--enable-opie --enable-RPA --enable-SDPS \
