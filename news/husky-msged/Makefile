@@ -1,5 +1,5 @@
-# Created by: Max Khon
-# $FreeBSD: news/husky-msged/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# Created by: Max Khon <fjoe@FreeBSD.org>
+# $FreeBSD: news/husky-msged/Makefile 325106 2013-08-21 11:17:07Z danfe $
 
 PORTNAME=	msged
 PORTVERSION=	6.2RC1
@@ -12,14 +12,16 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	fjoe@FreeBSD.org
 COMMENT=	Msged/TE (full-featured FTN mail reader)
 
-LIB_DEPENDS=	fidoconfig.0:${PORTSDIR}/news/husky-fidoconf
+LIB_DEPENDS=	libfidoconfig.so:${PORTSDIR}/news/husky-fidoconf
 
 MAKE_ARGS=	MSGEDCFG="\\\"~/.msged\\\""
 
 INFO=		msged
 
 post-patch:
-	@${REINPLACE_CMD} -e 's,html info,info,' -e 's,install-html install-info,install-info,' ${WRKSRC}/doc/manual/makefile.husky
+	@${REINPLACE_CMD} -e 's,html info,info,' \
+		-e 's,install-html install-info,install-info,' \
+		${WRKSRC}/doc/manual/makefile.husky
 
 .include "${.CURDIR}/../husky-base/Makefile.inc"
 .include <bsd.port.mk>
