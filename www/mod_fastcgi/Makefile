@@ -1,5 +1,5 @@
 # Created by: JunSeon Oh <hollywar@mail.holywar.net>
-# $FreeBSD: www/mod_fastcgi/Makefile 315402 2013-03-27 18:17:22Z ohauer $
+# $FreeBSD: www/mod_fastcgi/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_fastcgi
 PORTVERSION=	2.4.7
@@ -12,7 +12,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	A fast-cgi module for Apache
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
