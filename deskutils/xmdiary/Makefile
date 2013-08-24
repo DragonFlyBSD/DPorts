@@ -1,5 +1,5 @@
 # Created by: mi@aldan.ziplink.net
-# $FreeBSD: deskutils/xmdiary/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: deskutils/xmdiary/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xmdiary
 PORTVERSION=	3.0.3
@@ -20,7 +20,6 @@ USE_XORG=	x11 xext xp xpm xt
 MAN1=		xdaclunix.1 xdalarm.1 xdcustom.1 xddump.1 xdiary.1 xdinitdb.1 \
 		xdlight.1 xdnotify.1 xdprformat.1 xdremind.1 xdremove.1 \
 		xdrestore.1
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${ECHO_MSG} removing the "malloc.h" includes
