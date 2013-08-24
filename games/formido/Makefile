@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/formido/Makefile 319935 2013-06-04 22:33:37Z amdmi3 $
+# $FreeBSD: games/formido/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	formido
 PORTVERSION=	1.0.1
@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/GPL_license.txt
 USE_SDL=	sdl mixer image
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CXX}" DATDIR="${DATADIR}" DEFCONFIGDIR="${DATADIR}"
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
