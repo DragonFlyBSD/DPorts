@@ -1,5 +1,5 @@
 # Created by: jamie
-# $FreeBSD: ports/graphics/intergif/Makefile,v 1.4 2013/02/04 14:57:30 svnexp Exp $
+# $FreeBSD: graphics/intergif/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	interGif
 PORTVERSION=	6.15
@@ -15,7 +15,6 @@ WRKSRC=		${WRKDIR}/igsrc
 
 MAKEFILE=	makefile.ix
 ALL_TARGET=	intergif
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/intergif
 
