@@ -1,6 +1,6 @@
 # Created by: Wu Ching-hong <woju@freebsd.ee.ntu.edu.tw>
 # 				  and David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net/queso/Makefile 315694 2013-04-03 06:24:06Z miwi $
+# $FreeBSD: net/queso/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	queso
 PORTVERSION=	980922
@@ -16,7 +16,6 @@ LICENSE=	GPLv2
 OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
