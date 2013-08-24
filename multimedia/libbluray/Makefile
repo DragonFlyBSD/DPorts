@@ -1,5 +1,5 @@
 # Created by: kamikaze@bsdforen.de
-# $FreeBSD: multimedia/libbluray/Makefile 317873 2013-05-11 13:14:01Z bapt $
+# $FreeBSD: multimedia/libbluray/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libbluray
 PORTVERSION=	0.2.2
@@ -24,7 +24,6 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix="${PREFIX}" \
 		--disable-debug \
 		--disable-optimizations
-MAKE_JOBS_SAFE=	yes
 MAKE_ARGS+=	pkgconfigdir="${PREFIX}/libdata/pkgconfig" \
 		CFLAGS=${CFLAGS:Q}
 
