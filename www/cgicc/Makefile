@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: www/cgicc/Makefile 315656 2013-04-01 15:44:05Z bdrewery $
+# $FreeBSD: www/cgicc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cgicc
 PORTVERSION=	3.2.10
@@ -19,7 +19,6 @@ USES=		pathfix
 
 PORTDOCS=	*
 CXXFLAGS+=	-Wno-unknown-pragmas
-MAKE_JOBS_SAFE=	yes
 
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
