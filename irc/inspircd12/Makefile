@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: irc/inspircd12/Makefile 317782 2013-05-10 09:28:07Z bapt $
+# $FreeBSD: irc/inspircd12/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	inspircd
 PORTVERSION=	1.2.9
@@ -19,7 +19,6 @@ USES=		shebangfix
 USE_BZIP2=	yes
 USE_LDCONFIG=	${PREFIX}/lib/inspircd
 USE_RC_SUBR=	inspircd
-MAKE_JOBS_SAFE=	yes
 SHEBANG_FILES=	configure modulemanager make/run-cc.pl
 
 USERS=	${INCPIRCD_USR}
