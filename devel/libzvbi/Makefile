@@ -2,12 +2,11 @@
 # Date created:				15 May 2003
 # Whom:					Oliver Lehmann <oliver@freebsd.org>
 #
-# $FreeBSD: devel/libzvbi/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/libzvbi/Makefile 324620 2013-08-12 09:27:35Z oliver $
 #
 
 PORTNAME=	libzvbi
-PORTVERSION=	0.2.33
-PORTREVISION=	4
+PORTVERSION=	0.2.34
 CATEGORIES=	devel
 MASTER_SITES=	SF/zapping/zvbi/${PORTVERSION}
 DISTNAME=	${PORTNAME:S/lib//}-${PORTVERSION}
@@ -32,6 +31,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|#cpu (\([^)]*\))|defined(__\1__)|g' \
 		${WRKSRC}/src/misc.h \
 		${WRKSRC}/src/exp-gfx.c
+	@${REINPLACE_CMD} -e 's|, ts|, \&ts|' ${WRKSRC}/test/date.c
 	@${REINPLACE_CMD} -e 's|zvbi-atsc-cc$$(EXEEXT)||g; \
 		s|zvbi-atsc-cc\.1||g' ${WRKSRC}/contrib/Makefile.in
 
