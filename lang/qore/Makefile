@@ -1,4 +1,4 @@
-# $FreeBSD: lang/qore/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: lang/qore/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qore
 PORTVERSION=	0.8.7
@@ -21,7 +21,6 @@ USES=		pathfix iconv
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ENV=	LEX="${LOCALBASE}/bin/flex" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \
