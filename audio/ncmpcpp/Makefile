@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/ncmpcpp/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: audio/ncmpcpp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ncmpcpp
 PORTVERSION=	0.5.10
@@ -25,7 +25,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 MAN1=	ncmpcpp.1
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	CURL CLOCK UTF8 TAGLIB OUTPUTS VISUALIZER
 OPTIONS_DEFAULT=	CURL CLOCK OUTPUTS VISUALIZER
