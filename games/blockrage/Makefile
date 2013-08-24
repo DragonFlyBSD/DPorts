@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/blockrage/Makefile 314185 2013-03-14 21:08:06Z beech $
+# $FreeBSD: games/blockrage/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	blockrage
 PORTVERSION=	0.2.3
@@ -18,7 +18,6 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 ALL_TARGET=	${PORTNAME}
 USE_SDL=	sdl image mixer
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		${PORTNAME}.6
 
