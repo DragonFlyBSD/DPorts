@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/rnd_jue/Makefile 314971 2013-03-22 22:31:57Z beech $
+# $FreeBSD: games/rnd_jue/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rnd_jue
 PORTVERSION=	3.3.0.0
@@ -33,7 +33,6 @@ MAKE_ARGS=	CC="${CC}" MAKE="${GMAKE}" OPTIONS="${CFLAGS}" \
 		RO_GAME_DIR="${DATADIR}" \
 		X11_PATH="${LOCALBASE}"
 ALL_TARGET=	sdl
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
