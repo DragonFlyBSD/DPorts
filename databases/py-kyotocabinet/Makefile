@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-kyotocabinet
-# Date created:		2011-08-25
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/py-kyotocabinet/Makefile,v 1.7 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: databases/py-kyotocabinet/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	kyotocabinet
 PORTVERSION=	1.22
