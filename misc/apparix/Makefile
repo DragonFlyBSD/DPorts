@@ -2,7 +2,7 @@
 # Date created:         16 Apr 2006
 # Whom:                 Frank Steinborn <steinex@nognu.de>
 #
-# $FreeBSD: ports/misc/apparix/Makefile,v 1.11 2012/11/17 05:59:32 svnexp Exp $
+# $FreeBSD: misc/apparix/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	apparix
@@ -19,7 +19,6 @@ LICENSE=	GPLv2
 OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		apparix.1
 PORTDOCS=	apparix.azm apparix.html apparix.ps
