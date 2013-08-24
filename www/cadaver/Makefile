@@ -1,5 +1,5 @@
 # Created by: Alex Povolotsky <tarkhil@over.ru>
-# $FreeBSD: www/cadaver/Makefile 317472 2013-05-06 06:54:19Z bapt $
+# $FreeBSD: www/cadaver/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cadaver
 PORTVERSION=	0.23.3
@@ -16,7 +16,6 @@ LIB_DEPENDS=	neon:${PORTSDIR}/www/neon29
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-netrc
 ALL_TARGET=	cadaver
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		cadaver.1
 PLIST_FILES=	bin/cadaver
