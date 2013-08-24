@@ -1,7 +1,6 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-rasterbar-16-python/Makefile 324066 2013-07-31 19:00:08Z antoine $
+# $FreeBSD: net-p2p/libtorrent-rasterbar-16-python/Makefile 325006 2013-08-19 16:41:05Z nemysis $
 
-PORTREVISION=	3
 CATEGORIES=	net-p2p python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
