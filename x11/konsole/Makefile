@@ -1,4 +1,4 @@
-# $FreeBSD: x11/konsole/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: x11/konsole/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	konsole
 PORTVERSION=	${KDE4_VERSION}
@@ -18,6 +18,5 @@ USES=		cmake:outsource
 USE_QT4=	xml moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11 xrender
 CMAKE_ARGS+=	-DCMAKE_REQUIRED_FLAGS:STRING="-L${LOCALBASE}/lib"
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
