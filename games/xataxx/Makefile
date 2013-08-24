@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xataxx/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xataxx/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xataxx
 PORTVERSION=	1.0
@@ -16,7 +16,6 @@ OPTIONS_DEFINE=	DOCS
 
 USES=		imake
 USE_XORG=	x11 xext
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		xataxx.6
 
