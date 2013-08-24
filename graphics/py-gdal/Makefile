@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/py-gdal/Makefile 324401 2013-08-08 16:47:32Z sunpoet $
+# $FreeBSD: graphics/py-gdal/Makefile 325089 2013-08-21 03:47:40Z sunpoet $
 
 PORTNAME=	gdal
-PORTVERSION=	1.9.2
+PORTVERSION=	1.10.0
 CATEGORIES=	graphics python
 MASTER_SITES=	http://download.osgeo.org/gdal/ \
 		ftp://ftp.remotesensing.org/pub/gdal/ \
