@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mariadb55-server/Makefile 320339 2013-06-09 14:54:38Z flo $
+# $FreeBSD: databases/mariadb55-server/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME?=	mariadb
 PORTVERSION=	5.5.31
@@ -20,7 +20,6 @@ COMMENT?=	Multithreaded SQL database (server)
 
 SLAVEDIRS=	databases/mariadb55-client
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 NO_OPTIONS_SORT=yes
 
 OPTIONS_DEFINE+=	SSL OPENSSL PORTSSL FASTMTX
