@@ -1,8 +1,8 @@
-# Created by:					Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: ports/sysutils/vimpager/Makefile,v 1.16 2013/02/15 08:04:45 svnexp Exp $
+# Created by:	Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: sysutils/vimpager/Makefile 324585 2013-08-11 12:39:50Z adamw $
 
 PORTNAME=	vimpager
-PORTVERSION=	1.7.9
+PORTVERSION=	1.8.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/rkitover/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 
