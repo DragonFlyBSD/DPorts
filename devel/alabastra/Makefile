@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/devel/alabastra/Makefile,v 1.17 2012/12/08 01:21:47 svnexp Exp $
+# $FreeBSD: devel/alabastra/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	alabastra
 PORTVERSION=	0.21b
@@ -21,7 +21,6 @@ USE_QT4=	gui xml \
 		iconengines_run
 USE_GMAKE=	yes
 ALL_TARGET=	Alabastra
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/alabastra
 
