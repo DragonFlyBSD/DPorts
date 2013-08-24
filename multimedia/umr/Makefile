@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: multimedia/umr/Makefile 313245 2013-03-02 14:45:34Z miwi $
+# $FreeBSD: multimedia/umr/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	umr
 PORTVERSION=	0.3
@@ -9,7 +9,6 @@ MASTER_SITES=	http://www.oldunreal.com/mods/other/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unreal Media Ripper
 
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
