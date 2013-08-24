@@ -1,9 +1,9 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: games/freetennis/Makefile 324318 2013-08-06 15:23:12Z johans $
+# $FreeBSD: games/freetennis/Makefile 324890 2013-08-18 07:52:13Z marino $
 
 PORTNAME=	freetennis
 PORTVERSION=	0.4.8
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	SF
 
