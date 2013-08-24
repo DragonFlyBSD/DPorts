@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: devel/jwasm/Makefile 316818 2013-04-29 14:20:19Z miwi $
+# $FreeBSD: devel/jwasm/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	jwasm
 PORTVERSION=	210
@@ -20,7 +20,6 @@ USE_ZIP=	yes
 USE_DOS2UNIX=	yes
 USE_GMAKE=	yes
 MAKEFILE=	GccUnix.mak
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PLIST_FILES=	bin/jwasm
