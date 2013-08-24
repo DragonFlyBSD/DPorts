@@ -2,7 +2,7 @@
 # Date created:		2012-04-11
 # Whom:			nemysis@gmx.ch
 #
-# $FreeBSD: ports/games/twind/Makefile,v 1.6 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/twind/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	twind
@@ -17,7 +17,6 @@ COMMENT=	Match and remove all of the blocks before time runs out
 LICENSE=	GPLv2
 
 USE_SDL=	sdl image mixer
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS CREDITS ChangeLog NEWS README TODO
 
