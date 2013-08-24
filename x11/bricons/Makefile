@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: x11/bricons/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: x11/bricons/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bricons
 PORTVERSION=	3.0
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		imake perl5
 USE_PERL5=	build
 USE_XORG=	xaw
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		bricons.1
 
