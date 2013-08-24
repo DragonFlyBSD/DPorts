@@ -2,7 +2,7 @@
 # Date created:		27 Aug 2009
 # Whom:			Stas Timokhin <stast@bsdportal.ru>
 #
-# $FreeBSD: games/opensonic/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/opensonic/Makefile 323734 2013-07-26 16:04:47Z crees $
 #
 
 PORTNAME=	opensonic
@@ -31,7 +31,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/libaldmb.a:${PORTSDIR}/audio/dumb-allegro \
 		alpng>=1.3:${PORTSDIR}/graphics/alpng
 RUN_DEPENDS+=	${LOCALBASE}/lib/libaldmb.a:${PORTSDIR}/audio/dumb-allegro \
 		alpng>=1.3:${PORTSDIR}/graphics/alpng
-LIB_DEPENDS+=	alleg.42:${PORTSDIR}/devel/allegro \
+LIB_DEPENDS+=	alleg:${PORTSDIR}/devel/allegro \
 		ogg:${PORTSDIR}/audio/libogg \
 		vorbis.4:${PORTSDIR}/audio/libvorbis
 
