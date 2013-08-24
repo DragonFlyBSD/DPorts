@@ -1,17 +1,15 @@
-# New ports collection makefile for:	p5-ming
-# Date created:		18 September 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: graphics/p5-ming/Makefile 320709 2013-06-12 17:45:02Z az $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: graphics/p5-ming/Makefile 325205 2013-08-22 15:21:03Z sunpoet $
 
 PORTNAME=	ming
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	graphics perl5
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl5 module for Ming which allows you to create Flash 4/5 movies
+
+OPTIONS_DEFINE=	EXAMPLES
 
 CONFIGURE_ARGS=	--enable-perl
 INSTALL_WRKSRC=	${WRKSRC}/perl_ext
@@ -19,7 +17,7 @@ MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 PATCH_WRKSRC=	${WRKSRC}/perl_ext
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${.CURDIR}/pkg-plist
-USE_PERL5=	yes
+USES=		perl5
 
 MASTERDIR=	${.CURDIR}/../../graphics/ming
 SLAVEPORT=	p5
@@ -59,8 +57,10 @@ MAN3=		SWF.3 \
 		SWF::TextField.3 \
 		SWF::VideoStream.3
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}/
 	cd ${INSTALL_WRKSRC}/examples/ && ${INSTALL_DATA} *.cgi ${EXAMPLESDIR}/
 .endif
