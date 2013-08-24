@@ -2,7 +2,7 @@
 # Date created:		2004-04-27
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: lang/libjit/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: lang/libjit/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libjit
@@ -20,7 +20,6 @@ USES=	pathfix
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 CFLAGS+=	-O0
 
 INFO=		libjit
