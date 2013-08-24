@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: print/bibview/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: print/bibview/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bibview
 PORTVERSION=	2.2
@@ -11,7 +11,6 @@ MASTER_SITE_SUBDIR= biblio/bibtex/utils/bibview-2.0
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical interface for manipulating BibTeX bibliography databases
 
-MAKE_JOBS_SAFE=	yes
 
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xt
