@@ -2,7 +2,7 @@
 # Date created:			Tue Jun  1 22:58:13 PDT 1999
 # Whom:				mharo@FreeBSD.org
 #
-# $FreeBSD: benchmarks/ttcp/Makefile 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: benchmarks/ttcp/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	ttcp
@@ -21,7 +21,6 @@ LICENSE_NAME=	${LICENSE:S/_/ /}
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_TEXT=	The license: ${_LICENSE} (${_LICENSE_NAME}) is standard, please read from the web.
 
-MAKE_JOBS_SAFE=	yes
 
 NO_WRKSUBDIR=	yes
 DIST_SUBDIR=	${PORTNAME}
