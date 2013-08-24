@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XS-Object-Magic
-# Date created:		2011-11-05
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-XS-Object-Magic/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-XS-Object-Magic/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	XS-Object-Magic
 PORTVERSION=	0.04
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-ExtUtils-Depends>=0.302:${PORTSDIR}/devel/p5-ExtUtils-Depends
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		XS::Object::Magic.3
 
