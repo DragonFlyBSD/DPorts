@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: ftp/hsftp/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: ftp/hsftp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hsftp
 PORTVERSION=	1.15
@@ -20,7 +20,6 @@ READLINE_DESC=	Enable readline support
 
 GNU_CONFIGURE=	yes
 MAKEFILE=	makefile
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		hsftp.1
 PLIST_FILES=	bin/hsftp
