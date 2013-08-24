@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: misc/xpns/Makefile 319849 2013-06-04 10:04:47Z miwi $
+# $FreeBSD: misc/xpns/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xpns
 PORTVERSION=	1.0
@@ -17,7 +17,6 @@ NO_WRKSUBDIR=	yes
 USE_XORG=	x11 xaw
 MAKEFILE=	makefile
 ALL_TARGET=	pns
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 PLIST_FILES=	bin/xpns \
