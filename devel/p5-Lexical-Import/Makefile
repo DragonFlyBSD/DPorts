@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Lexical-Import
-# Date created:		2012-02-07
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Lexical-Import/Makefile,v 1.2 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Lexical-Import/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Lexical-Import
 PORTVERSION=	0.002
@@ -17,14 +13,12 @@ COMMENT=	Clean imports from package-exporting modules
 BUILD_DEPENDS=	p5-Lexical-Var>=0.006:${PORTSDIR}/devel/p5-Lexical-Var \
 		p5-Module-Runtime>=0.011:${PORTSDIR}/devel/p5-Module-Runtime \
 		p5-Params-Classify>=0:${PORTSDIR}/devel/p5-Params-Classify
-RUN_DEPENDS=	p5-Lexical-Var>=0.006:${PORTSDIR}/devel/p5-Lexical-Var \
-		p5-Module-Runtime>=0.011:${PORTSDIR}/devel/p5-Module-Runtime \
-		p5-Params-Classify>=0:${PORTSDIR}/devel/p5-Params-Classify
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	5.12.0+
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Lexical::Import.3
 
