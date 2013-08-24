@@ -2,7 +2,7 @@
 # Date created:			23 July 2005
 # Whom:				Travis Poppe <tlp@liquidx.org>
 #
-# $FreeBSD: ports/games/cavezofphear/Makefile,v 1.10 2012/11/17 05:57:34 svnexp Exp $
+# $FreeBSD: games/cavezofphear/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	cavezofphear
@@ -25,7 +25,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	phear
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	ChangeLog README README-EDITOR TODO
 
