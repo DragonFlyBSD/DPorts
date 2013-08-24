@@ -1,5 +1,5 @@
 # Created by: Fabian Keil <fk@fabiankeil.de>
-# $FreeBSD: net-mgmt/vidalia/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net-mgmt/vidalia/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	vidalia
 PORTVERSION=	0.2.21
@@ -16,6 +16,5 @@ COMMENT=	Graphical Tor controller based on Qt 4.x
 USES=		cmake
 INSTALLS_ICONS=	yes
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build network xml linguist_build
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
