@@ -1,5 +1,5 @@
 # Created by: Hideyuki KURASHINA <rushani@FreeBSD.org>
-# $FreeBSD: graphics/bmeps/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: graphics/bmeps/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bmeps
 PORTVERSION=	2.2.26
@@ -27,7 +27,6 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/dktools\
 		--without-perl\
 		--with-lzw
 ALL_TARGET=	stc ${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
