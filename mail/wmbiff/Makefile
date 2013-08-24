@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: mail/wmbiff/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: mail/wmbiff/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wmbiff
 PORTVERSION=	0.4.27
@@ -14,7 +14,6 @@ OPTIONS_DEFINE=	GNUTLS
 
 USE_XORG=	xpm
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		wmbiff.1
 MAN5=		wmbiffrc.5
