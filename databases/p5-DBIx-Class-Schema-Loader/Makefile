@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 325045 2013-08-20 12:17:29Z mat $
 
 PORTNAME=	DBIx-Class-Schema-Loader
-PORTVERSION=	0.07035
+PORTVERSION=	0.07036
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
