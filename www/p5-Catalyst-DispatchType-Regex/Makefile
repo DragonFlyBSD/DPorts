@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-DispatchType-Regex/Makefile 321535 2013-06-22 03:38:42Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-DispatchType-Regex/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Catalyst-DispatchType-Regex
 PORTVERSION=	5.90.032
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Catalyst::DispatchType::LocalRegex.3 \
 		Catalyst::DispatchType::LocalRegexp.3 \
