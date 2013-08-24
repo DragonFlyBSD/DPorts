@@ -1,5 +1,5 @@
 # Created by: Dmitry Semkin <lslarry@gmail.com>
-# $FreeBSD: www/srg/Makefile 318437 2013-05-18 17:53:41Z bapt $
+# $FreeBSD: www/srg/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	srg
 PORTVERSION=	1.3.6
@@ -15,7 +15,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		srg.1
 
