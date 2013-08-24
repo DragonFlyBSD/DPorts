@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: math/abakus/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/abakus/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	abakus
 PORTVERSION=	0.92
@@ -21,7 +21,6 @@ USES=		bison cmake
 CMAKE_ARGS=	-DCMAKE_REQUIRED_INCLUDES:STRING="${LOCALBASE}/include" \
 		-DCMAKE_REQUIRED_FLAGS:STRING="${LDFLAGS}" \
 		-DFLEX_EXECUTABLE:FILEPATH=${LOCALBASE}/bin/flex
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
