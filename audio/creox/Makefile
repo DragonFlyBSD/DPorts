@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/creox/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/creox/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	creox
 PORTVERSION=	0.3.0
@@ -22,7 +22,6 @@ USES=		cmake:outsource
 USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XORG=	xft xpm
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e \
