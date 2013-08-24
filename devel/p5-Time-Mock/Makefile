@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Time-Mock/Makefile 313792 2013-03-10 02:53:10Z sunpoet $
+# $FreeBSD: devel/p5-Time-Mock/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Time-Mock
 PORTVERSION=	0.0.2
@@ -14,7 +14,8 @@ COMMENT=	Shift and scale time
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Time::Mock.3
 
