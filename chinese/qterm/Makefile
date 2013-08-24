@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/qterm/Makefile 315876 2013-04-16 18:23:45Z madpilot $
+# $FreeBSD: chinese/qterm/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qterm
 PORTVERSION=	0.5.12
@@ -16,7 +16,6 @@ USE_QT4=	codecs-cn_run codecs-tw_run gui help-tools_build \
 		linguist_build moc_build network qt3support_build \
 		qmake_build rcc_build uic_build xml
 USE_XORG=	x11 ice
-MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
 
 CONFLICTS_INSTALL=	torque-[0-9]*
