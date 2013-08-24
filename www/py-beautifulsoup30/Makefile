@@ -1,9 +1,5 @@
-# New ports collection makefile for:	beautifulsoup
-# Date created:				15 July 2005
-# Whom:					Mike Meyer <mwm@mired.org>
-#
-# $FreeBSD: ports/www/py-beautifulsoup30/Makefile,v 1.12 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Mike Meyer <mwm@mired.org>
+# $FreeBSD: www/py-beautifulsoup30/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
 
 PORTNAME=	beautifulsoup
 PORTVERSION=	3.0.8.1
@@ -12,7 +8,7 @@ MASTER_SITES=	http://www.crummy.com/software/BeautifulSoup/download/3.x/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	BeautifulSoup-${PORTVERSION}
 
-MAINTAINER=	yzlin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML/XML Parser for Python
 
 USE_PYTHON=	yes
