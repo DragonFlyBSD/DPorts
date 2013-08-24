@@ -1,10 +1,8 @@
 # Created by: Paul Dlug<paul@nerdlabs.com>
-#
-# $FreeBSD: net-mgmt/nrpe2/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: net-mgmt/nrpe2/Makefile 325128 2013-08-21 13:36:27Z skreuzer $
 
 PORTNAME=	nrpe
-DISTVERSION=	2.13
-PORTREVISION=	2
+DISTVERSION=	2.14
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/nagios/${PORTNAME}-2.x/${PORTNAME}-${PORTVERSION}
 

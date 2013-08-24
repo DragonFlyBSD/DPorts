@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-mgmt/nrpe2/files/nrpe2.in 319487 2013-05-31 11:54:01Z crees $
+# $FreeBSD: net-mgmt/nrpe2/files/nrpe2.in 325128 2013-08-21 13:36:27Z skreuzer $
 #
 # PROVIDE: nrpe2
 # REQUIRE: LOGIN
@@ -26,7 +26,7 @@ required_files="${nrpe2_configfile}"
 
 command="%%PREFIX%%/sbin/nrpe2"
 command_args="-c ${nrpe2_configfile} -d"
-extra_commands="reload"
+extra_commands=reload
 sig_reload=HUP
 
 start_precmd=nrpe2_prestart
