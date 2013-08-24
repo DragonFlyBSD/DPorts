@@ -1,4 +1,4 @@
-# $FreeBSD: cad/librecad/Makefile 323342 2013-07-20 11:08:57Z makc $
+# $FreeBSD: cad/librecad/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	librecad
 PORTVERSION=	1.0.3
@@ -12,7 +12,6 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libmuparser.a:${PORTSDIR}/math/muparser
 
 USE_QT4=	help qt3support help-tools_build moc_build qmake_build \
 		rcc_build uic_build uic3_build
-MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 USE_GITHUB=	yes
