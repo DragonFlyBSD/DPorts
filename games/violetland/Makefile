@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/violetland/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: games/violetland/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	violetland
 PORTVERSION=	0.4.3
@@ -17,7 +17,6 @@ LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs
 USE_ZIP=	yes
 USE_SDL=	sdl mixer image ttf
 USE_GL=		gl glu
-MAKE_JOBS_SAFE=	yes
 USES=		cmake gettext
 USE_DOS2UNIX=	yes
 CMAKE_ARGS=	-DDATA_INSTALL_DIR="${DATADIR}"
