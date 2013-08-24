@@ -1,5 +1,5 @@
 # Created by: elbarto@ArcadeBSD.org
-# $FreeBSD: comms/dfu-programmer/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: comms/dfu-programmer/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dfu-programmer
 PORTVERSION=	0.5.5
@@ -12,7 +12,6 @@ COMMENT=	Device Firmware Update based USB programmer for Atmel chips
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lusb
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/dfu-programmer
 
