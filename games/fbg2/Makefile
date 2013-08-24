@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/fbg2/Makefile 322857 2013-07-12 17:32:04Z deischen $
+# $FreeBSD: games/fbg2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	fbg2
 PORTVERSION=	0.4
@@ -28,7 +28,6 @@ USE_SDL=	sdl sound
 USE_GL=		glu
 GNU_CONFIGURE=	yes
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME}.desktop \
