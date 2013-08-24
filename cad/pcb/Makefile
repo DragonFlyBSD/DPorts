@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/pcb/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: cad/pcb/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pcb
 PORTVERSION=	20110918
@@ -27,7 +27,6 @@ CONFIGURE_ENV+=	INSTALL_DATA="${BSD_INSTALL_DATA}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-pthread -L${LOCALBASE}/lib
 CONFIGURE_ARGS= --docdir=${DOCSDIR}
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS= pcb.html pcb.pdf refcard.pdf pad.png puller.png thermal.png	\
 	examples tutorial gcode.png gcode_control_img.png		\
