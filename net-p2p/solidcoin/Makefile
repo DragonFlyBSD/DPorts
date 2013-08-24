@@ -1,5 +1,5 @@
 # Created by: Dmitriy Limonov
-# $FreeBSD: net-p2p/solidcoin/Makefile 316868 2013-04-30 02:24:08Z miwi $
+# $FreeBSD: net-p2p/solidcoin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	solidcoin
 PORTVERSION=	2.041
@@ -31,7 +31,6 @@ WANT_BDB_VER=	47
 USE_GCC=	any
 USE_GMAKE=	yes
 ALL_TARGET=	${BINARY}
-MAKE_JOBS_SAFE=	yes
 
 CXXFLAGS+=	-Wno-invalid-offsetof
 CPPFLAGS+=	-I${BDB_INCLUDE_DIR} -I${LOCALBASE}/include
