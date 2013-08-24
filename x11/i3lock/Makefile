@@ -1,24 +1,22 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11/i3lock/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/i3lock/Makefile 325241 2013-08-22 22:56:25Z bapt $
 
 PORTNAME=	i3lock
-PORTVERSION=	2.4.1
-PORTREVISION=	2
+PORTVERSION=	2.5
 CATEGORIES=	x11
-MASTER_SITES=	http://i3wm.org/${PORTNAME}/ \
-		http://mirror.4bit.ws/ \
-		${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	dhn
+MASTER_SITES=	http://i3wm.org/${PORTNAME}/
 
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Slightly improved screen locker based on slock
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo \
-		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms \
-		xcb-image:${PORTSDIR}/x11/xcb-util-image \
-		ev.4:${PORTSDIR}/devel/libev
+LIB_DEPENDS=	libcairo.so.2:${PORTSDIR}/graphics/cairo \
+		libxcb-keysyms.so:${PORTSDIR}/x11/xcb-util-keysyms \
+		libxcb-image.so:${PORTSDIR}/x11/xcb-util-image \
+		libev.so.4:${PORTSDIR}/devel/libev \
+		libxkbfile.so:${PORTSDIR}/x11/libxkbfile \
+		libxkbcommon.so:${PORTSDIR}/x11/libxkbcommon
 
 MAKE_ARGS=	PREFIX="${PREFIX}" X11LIB="${LOCALBASE}/lib" \
 		X11INC="${LOCALBASE}/include" CC="${CC}" \
@@ -30,7 +28,6 @@ PLIST_FILES=	bin/i3lock \
 MAN1=	i3lock.1
 
 LDFLAGS+=	-liconv
-MAKE_JOBS_SAFE=	yes
 USE_XORG=	x11 xcb xt xproto xext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
