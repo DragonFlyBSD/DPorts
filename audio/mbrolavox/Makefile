@@ -1,8 +1,9 @@
 # Created by: trevor
-# $FreeBSD: audio/mbrolavox/Makefile 323062 2013-07-15 15:48:15Z tijl $
+# $FreeBSD: audio/mbrolavox/Makefile 324688 2013-08-14 08:32:51Z tijl $
 
 PORTNAME=	mbrolavox
 PORTVERSION=	3.0.1
+PORTREVISION=	1
 CATEGORIES=	audio accessibility
 DISTFILES=	#
 DIST_SUBDIR=	${PORTNAME}
