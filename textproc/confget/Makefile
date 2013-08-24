@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: ports/textproc/confget/Makefile,v 1.10 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: textproc/confget/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
 
 PORTNAME=	confget
 PORTVERSION=	1.04
@@ -15,7 +15,7 @@ OPTIONS_DEFINE=	EXAMPLES PCRE
 OPTIONS_DEFAULT=PCRE
 
 MAKE_ENV=	CFLAGS_CONF=-DHAVE_FGETLN
-USE_GMAKE=	yes
+USES=		gmake
 
 MAN1=		confget.1
 MANCOMPRESSED=	yes
