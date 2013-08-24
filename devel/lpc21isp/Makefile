@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: ports/devel/lpc21isp/Makefile,v 1.7 2013/02/08 08:37:06 svnexp Exp $
+# $FreeBSD: devel/lpc21isp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lpc21isp
 PORTVERSION=	1.85
@@ -15,7 +15,6 @@ LICENSE=	LGPL3 # (or later)
 NO_WRKSUBDIR=	yes
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/lpc21isp
 
