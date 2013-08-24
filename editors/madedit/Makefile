@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: editors/madedit/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: editors/madedit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	madedit
 PORTVERSION=	0.2.9
@@ -13,7 +13,6 @@ COMMENT=	An open-source and cross-platform text/hex editor
 USES=		gettext
 USE_WX=		2.6+
 WANT_UNICODE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_DOS2UNIX=	yes
 
 LIB_DEPENDS+=	boost_regex:${PORTSDIR}/devel/boost-libs
