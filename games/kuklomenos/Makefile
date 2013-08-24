@@ -2,7 +2,7 @@
 # Date created:				2008/08/31
 # Whom:					chinsan
 #
-# $FreeBSD: games/kuklomenos/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/kuklomenos/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	kuklomenos
@@ -23,7 +23,6 @@ OPTIONS_DEFAULT=	VORBIS
 
 USE_SDL=	sdl
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHEAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
