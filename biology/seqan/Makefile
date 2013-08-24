@@ -2,7 +2,7 @@
 # Date created:        3 May 2012
 # Whom:                h2
 #
-# $FreeBSD: biology/seqan/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: biology/seqan/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #
 
 PORTNAME=	seqan
@@ -33,7 +33,7 @@ PKG_MESSAGE=	${WRKDIR}/pkg-message
 
 .if ${ARCH} == i386
 # triggers internal error in system gcc
-USE_GCC=	4.6+
+USE_GCC=	yes
 .endif
 
 # unsafe workaround because FreeBSD lacks logl and expl
