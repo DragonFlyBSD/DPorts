@@ -1,4 +1,4 @@
-# $FreeBSD: misc/libkdeedu/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: misc/libkdeedu/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libkdeedu
 PORTVERSION=	${KDE4_VERSION}
@@ -17,6 +17,5 @@ USES=		cmake:outsource
 USE_QT4=	corelib gui xml moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
