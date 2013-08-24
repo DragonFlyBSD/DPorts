@@ -2,7 +2,7 @@
 # Date created:		2012-01-23
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Protocol-SocketIO/Makefile,v 1.5 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Protocol-SocketIO/Makefile 325148 2013-08-21 14:55:43Z sunpoet $
 #
 
 PORTNAME=	Protocol-SocketIO
@@ -18,9 +18,10 @@ COMMENT=	Socket.IO protocol implementation
 LICENSE=	ART20
 
 BUILD_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON
-RUN_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Protocol::SocketIO.3 \
 		Protocol::SocketIO::Handshake.3 \
