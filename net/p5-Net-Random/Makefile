@@ -1,13 +1,11 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Random/Makefile 325186 2013-08-22 11:47:24Z mat $
 
 PORTNAME=	Net-Random
-PORTVERSION=	2.2.2
+PORTVERSION=	2.3
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:DCANTRELL
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to get random data from online sources
