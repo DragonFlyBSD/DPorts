@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_clamav/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: www/mod_clamav/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_clamav
 PORTVERSION=	0.23
@@ -12,7 +12,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	tmueko@kommunity.net
 COMMENT=	Scans content delivered by the Apache20 proxy module for viruses
 
-MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 USE_APACHE=	22
