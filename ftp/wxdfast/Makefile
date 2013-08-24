@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ftp/wxdfast/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: ftp/wxdfast/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wxdfast
 PORTVERSION=	0.6.0
@@ -24,7 +24,6 @@ ACLOCAL_ARGS=	-I ${LOCALBASE}/share/locale
 AUTOMAKE_ARGS=	--add-missing --copy --force-missing --foreign
 LIBTOOLIZE_ARGS=--copy --force
 CONFIGURE_ENV=	WXRC="${WXRC_CMD}"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		wxdfast.1
 
