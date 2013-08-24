@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson
-# $FreeBSD: biology/tinker/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/tinker/Makefile 324901 2013-08-18 11:38:34Z marino $
 
 PORTNAME=	tinker
 PORTVERSION=	6.2.06
