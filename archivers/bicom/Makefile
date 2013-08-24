@@ -2,7 +2,7 @@
 # Date created:				09 May 2003
 # Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
 #
-# $FreeBSD: ports/archivers/bicom/Makefile,v 1.7 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/bicom/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	bicom
@@ -20,7 +20,6 @@ RESTRICTED=	Contact author personally regarding commercial use
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
 MAKEFILE=	${FILESDIR}/Makefile
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/bicom
 

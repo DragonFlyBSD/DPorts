@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/archivers/bicom/files/Makefile,v 1.4 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/bicom/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 CXX ?=	c++
