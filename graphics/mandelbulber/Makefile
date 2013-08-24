@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/graphics/mandelbulber/Makefile,v 1.1 2012/12/14 14:36:10 svnexp Exp $
+# $FreeBSD: graphics/mandelbulber/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mandelbulber
 DISTVERSION=	1.13-1
@@ -18,7 +18,6 @@ USE_GNOME=	glib20 gtk20
 BUILD_WRKSRC=	${WRKSRC}/makefiles
 MAKEFILE=	makefile
 CXXFLAGS+=	-DSHARED_DIR=\\\"${DATADIR}\\\"
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} share/applications/${PORTNAME}.desktop
 PLIST_DIRSTRY=	share/applications
