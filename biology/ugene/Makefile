@@ -1,5 +1,5 @@
 # Created by: Hannes Hauswedell <h2+fbsdports@fsfe.org>
-# $FreeBSD: ports/biology/ugene/Makefile,v 1.2 2013/02/25 13:48:22 svnexp Exp $
+# $FreeBSD: biology/ugene/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ugene
 DISTVERSION=	1.11.4
@@ -21,7 +21,6 @@ USE_XORG=	xtst
 
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 MANCOMPRESSED=	yes
