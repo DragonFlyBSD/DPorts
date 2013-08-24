@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/ddskk/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: japanese/ddskk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ddskk
 PORTVERSION=	15.1
@@ -15,7 +15,6 @@ COMMENT=	Simple Kana to Kanji conversion program on Emacsen
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-MAKE_JOBS_SAFE=	yes
 USE_EMACS=	yes
 INFO=		skk
 
