@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kris@pcbsd.org>
-# $FreeBSD: x11-themes/gtk-qt4-engine/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11-themes/gtk-qt4-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gtk-qt-engine
 PORTVERSION=	1.1
@@ -16,7 +16,6 @@ USE_QT4=	corelib gui moc_build rcc_build uic_build qmake_build
 USES=		cmake gettext
 USE_KDE4=	kdelibs kdeprefix automoc4
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	BONOBO
 BONOBO_DESC=	Better support for Bonobo (GNOME) framework
