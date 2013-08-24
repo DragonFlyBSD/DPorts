@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: misc/nut/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: misc/nut/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	nut
 PORTVERSION=	18.4
@@ -17,7 +17,6 @@ OPTIONS_DEFINE=	FLTK DOCS
 FLTK_DESC=	Install FLTK GUI
 
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${UNIQUENAME}
 
