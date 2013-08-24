@@ -1,5 +1,5 @@
 # Created by: Carl Makin <carl@stagecraft.cx>
-# $FreeBSD: ports/comms/hamfax/Makefile,v 1.22 2012/12/25 19:20:26 svnexp Exp $
+# $FreeBSD: comms/hamfax/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hamfax
 PORTVERSION=	0.8.1
@@ -18,7 +18,6 @@ CONFIGURE_ARGS+=	CPPFLAGS="-I${LOCALBASE}/include" \
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		hamfax.1
 .include <bsd.port.mk>
