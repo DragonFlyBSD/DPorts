@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: lang/mdk/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: lang/mdk/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mdk
 PORTVERSION=	1.2.6
@@ -18,7 +18,6 @@ USE_GNOME=	glib20 intltool
 USES=		gettext ncurses readline
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
