@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/www/mod_fcgid/Makefile,v 1.26 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_fcgid/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_fcgid
 PORTVERSION=	2.3.6
@@ -12,7 +12,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	hemi@puresimplicity.net
 COMMENT=	An alternative FastCGI module for Apache2
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22+
 
