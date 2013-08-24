@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: textproc/dwdiff/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: textproc/dwdiff/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	dwdiff
 PORTVERSION=	2.0.4
@@ -17,7 +17,6 @@ LICENSE=	GPLv3
 OPTIONS_DEFINE=	UNICODE NLS DOCS
 OPTIONS_DEFAULT=UNICODE
 
-MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
