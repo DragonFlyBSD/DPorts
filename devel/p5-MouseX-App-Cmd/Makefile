@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MouseX-App-Cmd
-# Date created:		2011-12-12
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-MouseX-App-Cmd/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-MouseX-App-Cmd/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	MouseX-App-Cmd
 PORTVERSION=	0.11
@@ -26,7 +22,8 @@ TEST_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		MouseX::App::Cmd.3 \
 		MouseX::App::Cmd::Command.3
