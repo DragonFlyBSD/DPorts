@@ -1,9 +1,11 @@
-# $FreeBSD: devel/py-dynrules/Makefile 319339 2013-05-29 04:46:28Z jgh $
+# $FreeBSD: devel/py-dynrules/Makefile 324792 2013-08-16 06:12:28Z mva $
 
 PORTNAME=	dynrules
 PORTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://cdn.bitbucket.org/marcusva/py-dynrules/downloads/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Dynamic Scripting for adaptive AI systems
