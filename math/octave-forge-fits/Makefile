@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-fits/Makefile 322356 2013-07-05 20:59:44Z stephen $
+# $FreeBSD: math/octave-forge-fits/Makefile 324823 2013-08-16 22:43:15Z stephen $
 
 PORTNAME=	octave-forge-fits
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -10,7 +10,7 @@ COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
-OCTSRC=		${DISTNAME}
+OCTSRC=		${OCTAVE_PKGNAME}
 
 WRKSRC=	${WRKDIR}/${OCTSRC}/src
 
