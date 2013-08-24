@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/flare/Makefile 315870 2013-04-16 17:47:58Z amdmi3 $
+# $FreeBSD: games/flare/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	flare
 PORTVERSION=	0.18
@@ -14,7 +14,6 @@ LICENSE=	GPLv3
 
 USES=		cmake
 USE_SDL=	sdl mixer image ttf
-MAKE_JOBS_SAFE=	yes
 CMAKE_BUILD_TYPE=	#empty
 INSTALLS_ICONS=	yes
 
