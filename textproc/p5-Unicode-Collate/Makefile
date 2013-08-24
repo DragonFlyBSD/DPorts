@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-Collate/Makefile 321533 2013-06-22 03:22:45Z sunpoet $
+# $FreeBSD: textproc/p5-Unicode-Collate/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Unicode-Collate
 PORTVERSION=	0.98
@@ -14,7 +14,8 @@ COMMENT=	Unicode Collation Algorithm
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Unicode::Collate.3 \
 		Unicode::Collate::CJK::Big5.3 \
