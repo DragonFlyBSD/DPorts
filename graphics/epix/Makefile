@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/epix/Makefile 323038 2013-07-15 14:44:53Z miwi $
+# $FreeBSD: graphics/epix/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	epix
 PORTVERSION=	1.2.11
@@ -21,7 +21,6 @@ USE_TEX=	latex dvipsk:build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-bash=${LOCALBASE}/bin/bash \
 		--with-runtime=${CXX}
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		elaps.1 epix.1 flix.1 laps.1
 INFO=		epix
