@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: math/gnumeric/Makefile 321882 2013-06-27 12:06:29Z kwm $
+# $FreeBSD: math/gnumeric/Makefile 324744 2013-08-14 22:35:50Z ak $
 #   $MCom: ports/trunk/math/gnumeric/Makefile 18444 2013-05-11 12:51:26Z kwm $
 
 PORTNAME=	gnumeric
@@ -30,7 +30,6 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 GLIB_SCHEMAS=	org.gnome.gnumeric.dialogs.gschema.xml \
 		org.gnome.gnumeric.gschema.xml \
