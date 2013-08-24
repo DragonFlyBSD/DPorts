@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/okular/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: graphics/okular/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	okular
 PORTVERSION=	${KDE4_VERSION}
@@ -28,7 +28,6 @@ USE_QT4=	corelib declarative gui opengl xml \
 		qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		okular.1
 
