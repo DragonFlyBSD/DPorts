@@ -1,0 +1,4 @@
+@comment $FreeBSD: databases/p5-DBIx-Class-VirtualColumns/pkg-plist 325200 2013-08-22 14:41:50Z mat $
+%%SITE_PERL%%/DBIx/Class/VirtualColumns.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/DBIx/Class/VirtualColumns/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/DBIx/Class/VirtualColumns
