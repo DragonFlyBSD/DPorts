@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11/xorg-edit/Makefile 314150 2013-03-14 11:52:19Z miwi $
+# $FreeBSD: x11/xorg-edit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xorg-edit
 PORTVERSION=	08.08.06
@@ -19,7 +19,6 @@ USE_DOS2UNIX=	*.cpp *.h
 USE_WX=		2.6+
 WX_UNICODE=	yes
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/xorg-edit \
 		lib/xorg-edit/de_DE/LC_MESSAGES/xorg-edit.mo \
