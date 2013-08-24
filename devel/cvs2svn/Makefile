@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/cvs2svn/Makefile 313346 2013-03-03 13:04:22Z ohauer $
+# $FreeBSD: devel/cvs2svn/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cvs2svn
 PORTVERSION=	2.4.0
@@ -20,7 +20,6 @@ COMMENT=	CVS to Subversion Repository Converter
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gdbm>0:${PORTSDIR}/databases/py-gdbm
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAKE_JOBS_SAFE=	yes
 
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
