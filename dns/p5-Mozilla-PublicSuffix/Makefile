@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: dns/p5-Mozilla-PublicSuffix/Makefile 318905 2013-05-23 20:24:33Z sunpoet $
+# $FreeBSD: dns/p5-Mozilla-PublicSuffix/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Mozilla-PublicSuffix
 PORTVERSION=	0.1.15
@@ -16,7 +16,8 @@ LICENSE=	MIT
 BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Mozilla::PublicSuffix.3
 
