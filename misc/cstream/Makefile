@@ -1,5 +1,5 @@
 # Created by: cracauer@cons.org "Martin Cracauer"
-# $FreeBSD: ports/misc/cstream/Makefile,v 1.31 2012/11/25 21:44:48 svnexp Exp $
+# $FreeBSD: misc/cstream/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cstream
 PORTVERSION=	3.0.0
@@ -14,7 +14,6 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		cstream.1
 PLIST_FILES=	bin/cstream
