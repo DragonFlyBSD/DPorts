@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.12/Makefile 320679 2013-06-12 13:00:55Z az $
+# $FreeBSD: lang/perl5.12/Makefile 324662 2013-08-13 13:04:55Z mat $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
@@ -21,7 +21,8 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 CONFLICTS=	perl-5.14.* perl-threaded-5.14.* \
-		perl-5.16.* perl-threaded-5.16.*
+		perl-5.16.* perl-threaded-5.16.* \
+		perl-5.18.* perl-threaded-5.18.*
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_MALLOC PERL_64BITINT THREADS PTHREAD \
 		MULTIPLICITY SITECUSTOMIZE USE_PERL
@@ -34,6 +35,9 @@ PTHREAD_DESC=		Build with -pthread
 MULTIPLICITY_DESC=	Use multiplicity
 SITECUSTOMIZE_DESC=	Run-time customization of @INC
 USE_PERL_DESC=		Rewrite links in /usr/bin
+
+DEPRECATED=	Consider switching to a more recent version of Perl
+EXPIRATION_DATE=	2014-02-14
 
 PORTSCOUT=	limitw:1,even
 
