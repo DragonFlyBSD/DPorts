@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: misc/metalink-tools/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: misc/metalink-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	metalink
 PORTVERSION=	0.3.6
@@ -25,7 +25,6 @@ USES=		pkgconfig
 CONFIGURE_ENV+=	AWK="${AWK}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 # Documents to install
 DOC_FILES=	\
