@@ -1,5 +1,5 @@
 # Created by: M. L. Dodson, <bdodson@scms.utmb.edu>
-# $FreeBSD: math/gri/Makefile 317553 2013-05-06 21:58:11Z bapt $
+# $FreeBSD: math/gri/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gri
 PORTVERSION=	2.12.23
@@ -15,7 +15,6 @@ USES=		readline
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-FreeBSD
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
