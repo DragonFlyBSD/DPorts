@@ -1,4 +1,4 @@
-# $FreeBSD: www/wwwstat/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/wwwstat/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	wwwstat
 PORTVERSION=	2.01
@@ -14,7 +14,6 @@ PATCHFILES=	patch-2.01.txt
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Webserver logfile analysis package
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE_RUN=	22+
 USES=		perl5
