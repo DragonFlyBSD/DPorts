@@ -1,5 +1,5 @@
 # Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
-# $FreeBSD: sysutils/filelight-kde4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: sysutils/filelight-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	filelight
 PORTVERSION=	${KDE4_VERSION}
@@ -19,6 +19,5 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USES=		cmake:outsource
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USE_XZ=		yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
