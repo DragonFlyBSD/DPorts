@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: ports/multimedia/smile/Makefile,v 1.23 2013/01/23 15:05:36 svnexp Exp $
+# $FreeBSD: multimedia/smile/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	smile
 PORTVERSION=	1.0
@@ -20,7 +20,6 @@ USE_QT4=	qmake_build gui corelib rcc_build moc_build uic_build \
 
 MAKE_ENV=	QTDIR=${QT_PREFIX}
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES="Smile" "${COMMENT}" "${PREFIX}/share/pixmaps/smile.png" \
 		"${PORTNAME}" "AudioVideo;Qt;" false
