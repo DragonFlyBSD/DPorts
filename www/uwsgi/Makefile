@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: www/uwsgi/Makefile 323435 2013-07-22 08:10:36Z demon $
+# $FreeBSD: www/uwsgi/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	uwsgi
 PORTVERSION=	1.9.14
@@ -12,7 +12,6 @@ COMMENT=	Developer-friendly WSGI server which uses uwsgi protocol
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-MAKE_JOBS_SAFE=	yes
 
 USE_PYTHON=	yes
 USE_RC_SUBR=	uwsgi
