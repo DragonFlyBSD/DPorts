@@ -1,9 +1,8 @@
 # Created by: Aaron Straup Cope <ascope@cpan.org>
-# $FreeBSD: net/p5-Net-Delicious/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Delicious/Makefile 325182 2013-08-22 11:10:08Z mat $
 
 PORTNAME=	Net-Delicious
-PORTVERSION=	1.1.3
-PORTREVISION=	1
+PORTVERSION=	1.1.4
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
