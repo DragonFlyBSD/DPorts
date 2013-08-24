@@ -1,5 +1,5 @@
 # Created by: mdh <mdh@solitox.net>
-# $FreeBSD: ports/security/xyssl/Makefile,v 1.11 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: security/xyssl/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	xyssl
 PORTVERSION=	0.9
@@ -19,7 +19,6 @@ LICENSE_FILE=	${WRKSRC}/BSD.txt
 PORTDOCS=	ChangeLog
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
