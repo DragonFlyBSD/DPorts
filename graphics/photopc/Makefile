@@ -1,6 +1,6 @@
 # Created by:			Douglas Carmichael <dcarmich@mcs.com>
 #
-# $FreeBSD: ports/graphics/photopc/Makefile,v 1.14 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/photopc/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	photopc
 PORTVERSION=	3.07
@@ -11,7 +11,6 @@ MAINTAINER=	nemysis@gmx.ch
 COMMENT=	Control cameras based on Sierra Imaging chipset and compatibles
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/epinfo \
 		bin/photopc \
