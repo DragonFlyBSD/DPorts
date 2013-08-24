@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiwang27@gmail.com>
-# $FreeBSD: games/frobtads/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/frobtads/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	frobtads
 PORTVERSION=	1.2.2
@@ -20,7 +20,6 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	automake autoconf
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-lcompat"
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
