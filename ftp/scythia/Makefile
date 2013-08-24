@@ -2,7 +2,7 @@
 # Date created:		30 Jun 2007
 # Whom:			Yinghong.Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/ftp/scythia/Makefile,v 1.14 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: ftp/scythia/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	scythia
@@ -18,7 +18,6 @@ COMMENT=	Small ftp client unpretentious based on Qt4
 
 USE_QT4=	gui network corelib qmake_build uic_build moc_build rcc_build
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 .if defined(NOPORTDOCS)
