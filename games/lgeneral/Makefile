@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: games/lgeneral/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/lgeneral/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	lgeneral
 PORTVERSION=	1.2.3
@@ -23,7 +23,6 @@ SOUND_DESC=	Enable sound support
 USE_SDL=	sdl
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_CSTD=	gnu89
 
 CPPFLAGS+=	-I${LOCALBASE}/include
