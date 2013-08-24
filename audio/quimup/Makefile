@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: audio/quimup/Makefile 313257 2013-03-02 15:00:14Z miwi $
+# $FreeBSD: audio/quimup/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	quimup
 PORTVERSION=	1.3.0
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
 USE_QT4=	corelib gui network \
 		moc_build qmake_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.png
