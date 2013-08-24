@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox/Makefile 324409 2013-08-08 18:42:03Z flo $
+# $FreeBSD: www/firefox/Makefile 324842 2013-08-17 13:17:58Z flo $
 
 PORTNAME=	firefox
-DISTVERSION=	23.0
+DISTVERSION=	23.0.1
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
@@ -27,7 +27,6 @@ MOZ_PKGCONFIG_FILES=	# empty
 USE_MOZILLA=	# empty
 MOZILLA_NAME=	Firefox
 
-MAKE_JOBS_SAFE=	yes
 WANT_GNOME=	yes
 USE_QT4=	# empty
 QT_NONSTANDARD=	yes
