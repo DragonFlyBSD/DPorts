@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/rezerwar/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
+# $FreeBSD: games/rezerwar/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rezerwar
 PORTVERSION=	0.4.2
@@ -15,7 +15,6 @@ USE_GMAKE=	yes
 USE_SDL=	sdl mixer
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	Unix
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV=	TARGET_BIN=${PREFIX}/bin \
 		TARGET_DOC=${DOCSDIR} \
 		TARGET_DATA=${DATADIR}
