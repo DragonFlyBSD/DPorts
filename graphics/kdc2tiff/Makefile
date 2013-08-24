@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: graphics/kdc2tiff/Makefile 319836 2013-06-04 08:45:42Z miwi $
+# $FreeBSD: graphics/kdc2tiff/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdc2tiff
 PORTVERSION=	0.35
@@ -17,7 +17,6 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
