@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Devel-PackagePath
-# Date created:		2011-05-31
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Devel-PackagePath/Makefile,v 1.3 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Devel-PackagePath/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Devel-PackagePath
 PORTVERSION=	0.03
@@ -14,10 +10,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Inspect and manipulate a Path based on a Package name
 
-RUN_DEPENDS=	p5-Moose>=0.64:${PORTSDIR}/devel/p5-Moose \
+BUILD_DEPENDS=	p5-Moose>=0.64:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Types-Path-Class>=0.04:${PORTSDIR}/devel/p5-MooseX-Types-Path-Class
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Devel::PackagePath.3
 
