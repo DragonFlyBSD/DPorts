@@ -1,11 +1,12 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-SIP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-SIP/Makefile 325191 2013-08-22 12:39:00Z mat $
 
 PORTNAME=	Net-SIP
-PORTVERSION=	0.68
+PORTVERSION=	0.68.2
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.(.)$/\1/}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Framework SIP (Voice Over IP, RFC3261)
