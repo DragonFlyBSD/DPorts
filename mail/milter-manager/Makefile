@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/milter-manager/Makefile 313662 2013-03-08 17:59:31Z beech $
+# $FreeBSD: mail/milter-manager/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	milter-manager
 PORTVERSION=	1.8.6
@@ -26,7 +26,6 @@ USE_GMAKE=	yes
 USE_GNOME=	glib20 intltool
 USE_LDCONFIG=	yes
 USE_RUBY=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
