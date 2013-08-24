@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/seaview/Makefile 323044 2013-07-15 14:49:02Z miwi $
+# $FreeBSD: biology/seaview/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	seaview
 PORTVERSION=	4.4.2
@@ -28,7 +28,6 @@ MAKE_ENV=	HELPFILE='-DDEFAULT_HELPFILE=\"${DATADIR}/seaview.html\"' \
 		USE_XFT='-DUSE_XFT' \
 		OPT="${CFLAGS}"
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/seaview %%DATADIR%%/seaview.html
 PLIST_DIRS=	%%DATADIR%%
