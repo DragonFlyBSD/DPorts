@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Math-Prime-XS
-# Date created:		2011-09-23
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: math/p5-Math-Prime-XS/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Prime-XS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Math-Prime-XS
 PORTVERSION=	0.26
@@ -17,13 +13,12 @@ COMMENT=	Detect and calculate prime numbers with deterministic tests
 
 BUILD_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-boolean>=0:${PORTSDIR}/devel/p5-boolean
-RUN_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
-		p5-boolean>=0:${PORTSDIR}/devel/p5-boolean
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1.04:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Math::Prime::XS.3
 
