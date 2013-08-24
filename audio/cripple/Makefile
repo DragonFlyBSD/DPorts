@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/cripple/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: audio/cripple/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cripple
 PORTVERSION=	0.06b
@@ -12,7 +12,6 @@ COMMENT=	Command line CD ripper/encoder wrapper with cddb support
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 LIB_DEPENDS+=	cdio.13:${PORTSDIR}/sysutils/libcdio
 RUN_DEPENDS+=	lame:${PORTSDIR}/audio/lame\
