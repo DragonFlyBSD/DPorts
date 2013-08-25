@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-krossruby/Makefile 322300 2013-07-04 23:34:32Z rakuco $
+# $FreeBSD: devel/ruby-krossruby/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	krossruby
 PORTVERSION=	${KDE4_VERSION}
@@ -22,7 +22,6 @@ USES=		cmake:outsource
 CMAKE_ARGS+=	-DBUILD_python:BOOL=FALSE \
 		-DBUILD_falcon:BOOL=FALSE \
 		-DBUILD_java:BOOL=FALSE
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	lib/kde4/krossruby.so
 
