@@ -1,5 +1,5 @@
 # Created by: Russell Cloran <russell@rucus.ru.ac.za>
-# $FreeBSD: textproc/redland-bindings/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: textproc/redland-bindings/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	redland-bindings
 PORTVERSION=	1.0.16.1
@@ -12,7 +12,6 @@ COMMENT?=	Language bindings for the Redland package
 LIB_DEPENDS=	rdf:${PORTSDIR}/textproc/redland
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	PERL PHP PYTHON RUBY
 OPTIONS_DEFAULT=PYTHON
