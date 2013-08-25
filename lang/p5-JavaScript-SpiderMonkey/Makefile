@@ -2,7 +2,7 @@
 # Date created:				25 February 2005
 # Whom:	      				kappa@freebsd.org.ua
 #
-# $FreeBSD: ports/lang/p5-JavaScript-SpiderMonkey/Makefile,v 1.16 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: lang/p5-JavaScript-SpiderMonkey/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 #
 
 PORTNAME=	JavaScript-SpiderMonkey
@@ -19,7 +19,8 @@ LIB_DEPENDS=	js.1:${PORTSDIR}/lang/spidermonkey17
 
 TEST_DEPENDS=	p5-Log-Log4perl>=0:${PORTSDIR}/devel/p5-Log-Log4perl
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		JavaScript::SpiderMonkey.3
 
