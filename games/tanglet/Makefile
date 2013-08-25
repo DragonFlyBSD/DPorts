@@ -1,42 +1,40 @@
-# New Ports collection makefile for:	tanglet
-# Date created:		2012-04-21
-# Whom:			nemysis@gmx.ch
-#
-# $FreeBSD: ports/games/tanglet/Makefile,v 1.5 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: games/tanglet/Makefile 324873 2013-08-17 22:16:57Z nemysis $
 
 PORTNAME=	tanglet
-PORTVERSION=	1.2.1
-PORTREVISION=	2
+PORTVERSION=	1.2.2
 CATEGORIES=	games
 MASTER_SITES=	http://gottcode.org/${PORTNAME}/
 EXTRACT_SUFX=	-src.tar.bz2
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
+
 COMMENT=	Single player word finding game based on Boggle
 
 LICENSE=	GPLv3
 
 USE_BZIP2=	yes
-USE_QT4=	moc_build qmake_build rcc_build gui
+USES=		desktop-file-utils
+USE_QT4=	moc_build qmake_build rcc_build gui iconengines imageformats
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
-PORTDOCS=	CREDITS ChangeLog
+PORTDOCS=	CREDITS ChangeLog NEWS
 
 .include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -i '' -e '/PKGCONFIG += zlib/d' \
+		${WRKSRC}/tanglet.pro
 
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
 
 post-install:
-# Pixmaps
 	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png ${PREFIX}/share/pixmaps/
 
-# Documentation
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
 
