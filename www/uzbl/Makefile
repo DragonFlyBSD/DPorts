@@ -2,7 +2,7 @@
 # Date created:				2009/12/14
 # Whom:					aehlig@linta.de
 #
-# $FreeBSD: ports/www/uzbl/Makefile,v 1.21 2012/11/17 06:03:10 svnexp Exp $
+# $FreeBSD: www/uzbl/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	uzbl
@@ -32,7 +32,6 @@ GITVERSION=	228bc38
 
 WRKSRC=		${WRKDIR}/Dieterbe-uzbl-${GITVERSION}
 
-MAKE_JOBS_SAFE=	YES
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	AUTHORS README COMMUNITY CONTRIBUTING FAQ INSTALL TODO config-syntax \
