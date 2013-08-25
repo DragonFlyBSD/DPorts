@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/kopete-kde4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: net-im/kopete-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kopete
 PORTVERSION=	${KDE4_VERSION}
@@ -46,7 +46,6 @@ USE_SQLITE=	yes
 USE_XORG=	x11 xdamage xext xscrnsaver xtst
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/${PORTNAME}
 
