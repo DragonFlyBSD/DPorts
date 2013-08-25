@@ -2,7 +2,7 @@
 # Date created:				15 April 2007
 # Whom:					stas
 #
-# $FreeBSD: ports/www/mod_proctitle/Makefile,v 1.14 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_proctitle/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_proctitle
@@ -15,7 +15,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Set httpd process titles to reflect currently processed request
 
-MAKE_JOBS_SAFE=  yes
 
 USE_APACHE=	22+
 GNU_CONFIGURE=	yes
