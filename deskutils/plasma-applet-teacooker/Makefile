@@ -2,7 +2,7 @@
 # Date Created:				2008-10-03
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: deskutils/plasma-applet-teacooker/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: deskutils/plasma-applet-teacooker/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	teacooker
@@ -20,7 +20,6 @@ USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	gui dbus network opengl svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/TeaCooker
 
