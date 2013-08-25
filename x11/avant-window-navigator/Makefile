@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11/avant-window-navigator/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/avant-window-navigator/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	avant-window-navigator
 PORTVERSION=	0.3.2.1
@@ -26,7 +26,6 @@ INSTALLS_ICONS=	yes
 USE_XORG=	x11 xproto xcomposite xrender
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-MAKE_JOBS_SAFE=	yes
 
 AWN_DESKTOP?=	agnostic
 
