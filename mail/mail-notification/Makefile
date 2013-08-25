@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: mail/mail-notification/Makefile 319871 2013-06-04 15:47:06Z bapt $
+# $FreeBSD: mail/mail-notification/Makefile 325012 2013-08-19 18:46:44Z kwm $
 
 PORTNAME=	mail-notification
 DISTVERSION=	5.4
@@ -124,6 +124,7 @@ LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|-Werror||g' ${WRKSRC}/jb ${WRKSRC}/jbsrc/jb.c
 .if ${OSVERSION} < 700042
 	@${REINPLACE_CMD} -e "s,-Wno-pointer-sign,," ${WRKSRC}/jb
 .endif
