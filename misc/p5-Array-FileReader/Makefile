@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Array-FileReader
-# Date created:				2011/02/20
-# Whom:					chinsan
-#
-# $FreeBSD: ports/misc/p5-Array-FileReader/Makefile,v 1.3 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: misc/p5-Array-FileReader/Makefile 324918 2013-08-18 14:25:16Z az $
 
 PORTNAME=	Array-FileReader
 PORTVERSION=	0.03
@@ -11,13 +7,14 @@ CATEGORIES=	misc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	chinsan@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lazily tie files to arrays for reading
 
 BUILD_DEPENDS=	p5-IO>=0:${PORTSDIR}/devel/p5-IO
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Array::FileReader.3
 
