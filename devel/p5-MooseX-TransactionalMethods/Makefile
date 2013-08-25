@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-TransactionalMethods/Makefile,v 1.3 2013/02/08 02:51:26 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-TransactionalMethods/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	MooseX-TransactionalMethods
 PORTVERSION=	0.008
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Moose>=1.21:${PORTSDIR}/devel/p5-Moose \
 		p5-aliased>=0:${PORTSDIR}/devel/p5-aliased
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		MooseX::Meta::Method::Transactional.3 \
 		MooseX::TransactionalMethods.3
