@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Install-XSUtil/Makefile 316551 2013-04-26 02:53:22Z sunpoet $
+# $FreeBSD: devel/p5-Module-Install-XSUtil/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Module-Install-XSUtil
 PORTVERSION=	0.44
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Module-Install>=0.91:${PORTSDIR}/devel/p5-Module-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-B-Hooks-OP-Annotation>=0.43:${PORTSDIR}/devel/p5-B-Hooks-OP-Annotation
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Module::Install::XSUtil.3
 
