@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: ports/www/mod_log_mysql/Makefile,v 1.21 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_log_mysql/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_log_mysql
 PORTVERSION=	1.0
@@ -19,7 +19,6 @@ COMMENT=	Allows Apache 2 to log to a MySQL database
 
 RUN_DEPENDS+=	${LOCALBASE}/${APACHEMODDIR}/mod_log_config-st.so:${PORTSDIR}/www/mod_log_config-st
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
