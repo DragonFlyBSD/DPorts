@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: print/p5-PostScript-PPD/Makefile 321510 2013-06-22 00:35:43Z sunpoet $
+# $FreeBSD: print/p5-PostScript-PPD/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	PostScript-PPD
 PORTVERSION=	0.0205
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		PostScript::PPD.3
 
