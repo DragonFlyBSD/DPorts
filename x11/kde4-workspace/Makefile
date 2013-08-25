@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-workspace/Makefile 322191 2013-07-02 19:04:18Z rakuco $
+# $FreeBSD: x11/kde4-workspace/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_VERSION}
@@ -55,7 +55,6 @@ USE_XORG=	kbproto x11 xau xcomposite xcursor xdamage xdmcp xfixes \
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 # Xmms and Googlegadgets could be enabled.
 CMAKE_ARGS=	-DCMAKE_REQUIRED_FLAGS:STRING="-L${LOCALBASE}/lib" \
