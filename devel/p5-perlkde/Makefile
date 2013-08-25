@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-perlkde/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/p5-perlkde/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	perlkde
 PORTVERSION=	${KDE4_VERSION}
@@ -14,13 +14,12 @@ COMMENT=	Perl bindings for KDE
 USE_XZ=		yes
 USE_PERL5=	yes
 # Build fails with system gcc
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_KDE4=	kdehier kdeprefix perlqt smokekde automoc4
 USE_QT4=	network opengl sql svg xml \
 		qmake_build moc_build uic_build rcc_build
 USES=		cmake:outsource
 
-MAKE_JOBS_SAFE=	yes
 
 # Respect PREFIX
 CMAKE_ARGS+=	-DCUSTOM_PERL_SITE_ARCH_DIR=${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}
