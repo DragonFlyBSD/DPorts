@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2/Makefile 315740 2013-04-06 11:10:15Z bapt $
+# $FreeBSD: security/cyrus-sasl2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	cyrus-sasl
 PORTVERSION=	2.1.26
@@ -15,7 +15,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	${PORTNAME}2
 
-MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
