@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/qwt6-designerplugin/Makefile 322988 2013-07-14 15:27:05Z makc $
+# $FreeBSD: x11-toolkits/qwt6-designerplugin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qwt
 PORTVERSION=	6.1.0
@@ -17,7 +17,6 @@ USE_GMAKE=	yes
 QMAKE_ARGS+=	-recursive CONFIG+=QwtDesigner \
 		PLUGINDIR=${PREFIX}/${QT_PLUGINDIR_REL}
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	qwt6${PKGNAMESUFFIX}
 
