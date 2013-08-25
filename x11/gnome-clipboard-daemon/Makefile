@@ -1,4 +1,4 @@
-# $FreeBSD: x11/gnome-clipboard-daemon/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/gnome-clipboard-daemon/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	gnome-clipboard-daemon
 PORTVERSION=	1.0
@@ -15,7 +15,6 @@ LICENSE=	GPLv2
 USE_BZIP2=	yes
 USES=		pkgconfig
 USE_GNOME=	gtk20
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
