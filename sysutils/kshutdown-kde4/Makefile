@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/kshutdown-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: sysutils/kshutdown-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kshutdown
 DISTVERSION=	3.0beta6
@@ -14,7 +14,6 @@ USES=		cmake
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdehier kdeprefix workspace
 
-MAKE_JOBS_SAFE=	yes
 LATEST_LINK=	${PORTNAME}-kde4
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
