@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-OAI-Harvester
-# Date created:		2003-11-13
-# Whom:			Paul Dlug <paul@aps.org>
-#
-# $FreeBSD: ports/net/p5-OAI-Harvester/Makefile,v 1.18 2012/11/17 06:00:12 svnexp Exp $
-#
+# Created by: Paul Dlug <paul@aps.org>
+# $FreeBSD: net/p5-OAI-Harvester/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	OAI-Harvester
 PORTVERSION=	1.15
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
@@ -14,17 +11,19 @@ MASTER_SITE_SUBDIR=	CPAN:THB
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A module to harvest using the OAI protocol
+COMMENT=	Perl module to harvest using the OAI protocol
 
-BUILD_DEPENDS=	p5-libwww>=2.0:${PORTSDIR}/www/p5-libwww \
-		p5-URI>=1.3:${PORTSDIR}/net/p5-URI \
-		p5-XML-SAX>=0.12:${PORTSDIR}/textproc/p5-XML-SAX
-RUN_DEPENDS=	p5-libwww>=2.0:${PORTSDIR}/www/p5-libwww \
-		p5-URI>=1.3:${PORTSDIR}/net/p5-URI \
-		p5-XML-SAX>=0.12:${PORTSDIR}/textproc/p5-XML-SAX
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+BUILD_DEPENDS=	p5-URI>=1.30:${PORTSDIR}/net/p5-URI \
+		p5-XML-SAX>=0.12:${PORTSDIR}/textproc/p5-XML-SAX \
+		p5-XML-SAX-Base>=1.04:${PORTSDIR}/textproc/p5-XML-SAX-Base \
+		p5-libwww>=2.0:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		oai-listrecords.1 oai-listsets.1
 MAN3=		Net::OAI::Base.3 Net::OAI::Error.3 Net::OAI::GetRecord.3 \
