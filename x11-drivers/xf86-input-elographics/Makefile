@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-elographics/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-input-elographics/Makefile 324724 2013-08-14 14:38:13Z zeising $
 
 PORTNAME=	xf86-input-elographics
 PORTVERSION=	${ELO_VERSION}
@@ -12,7 +12,7 @@ XORG_CAT=	driver
 MAN4=		elographics.4x
 
 .if defined(WITH_NEW_XORG)
-ELO_VERSION=	1.3.0
+ELO_VERSION=	1.4.1
 ELO_REVISION=	0
 .else
 ELO_VERSION=	1.2.4
