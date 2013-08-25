@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: games/crossfire-client/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/crossfire-client/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	crossfire-client
 PORTVERSION=	1.70.0
@@ -23,7 +23,6 @@ USE_SDL=	sdl image mixer
 CONFIGURE_ARGS+=	--disable-alsa --disable-alsa9
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 MAN6=	crossfire-client-gtk2.6
 
