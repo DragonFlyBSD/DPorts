@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/kdeplasma-addons/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: deskutils/kdeplasma-addons/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdeplasma-addons
 PORTVERSION=	${KDE4_VERSION}
@@ -28,7 +28,6 @@ USE_QT4=	corelib dbus declarative gui network script sql webkit \
 		qmake_build moc_build rcc_build uic_build
 USE_XORG=	x11 xrender xtst
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	MARBLE SCIM # IBUS
 OPTIONS_DEFAULT=	MARBLE
