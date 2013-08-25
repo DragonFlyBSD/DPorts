@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Media-Type-Simple/Makefile,v 1.1 2013/02/01 21:55:50 svnexp Exp $
+# $FreeBSD: devel/p5-Media-Type-Simple/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Media-Type-Simple
 PORTVERSION=	0.02
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.22:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1.08:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		MIME::Type::Simple.3 \
 		Media::Type::Simple.3
