@@ -2,7 +2,7 @@
 # Date created:				17 October 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/net-im/pidgin-fetion/Makefile,v 1.18 2013/02/20 16:45:25 svnexp Exp $
+# $FreeBSD: net-im/pidgin-fetion/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	fetion
@@ -18,7 +18,6 @@ COMMENT=	Fetion protocol plugin for libpurple
 
 LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple
 
-MAKE_JOBS_SAFE=	yes
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
