@@ -1,12 +1,10 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: finance/p5-Data-Currency/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Data-Currency/Makefile 325120 2013-08-21 12:49:52Z mat $
 
 PORTNAME=	Data-Currency
-PORTVERSION=	0.04002
-PORTREVISION=	1
+PORTVERSION=	0.06000
 CATEGORIES=	finance perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	Data
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
