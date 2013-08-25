@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sea-defender/Makefile 318818 2013-05-23 02:02:57Z amdmi3 $
+# $FreeBSD: games/sea-defender/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sea-defender
 PORTVERSION=	r20100723
@@ -17,7 +17,6 @@ USE_GMAKE=	yes
 USE_SDL=	sdl mixer image ttf
 USE_GL=		gl glu
 USE_XORG=	x11 xrandr
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	${PORTNAME}.sh
 PLIST_FILES=	libexec/${PORTNAME} bin/${PORTNAME}
