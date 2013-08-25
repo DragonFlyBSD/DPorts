@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-TomTom/Makefile 316558 2013-04-26 03:03:00Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-TomTom/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Geo-Coder-TomTom
 PORTVERSION=	0.03
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-JSON>=2:${PORTSDIR}/converters/p5-JSON \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Geo::Coder::TomTom.3
 
