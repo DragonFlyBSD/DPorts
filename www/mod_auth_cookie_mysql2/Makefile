@@ -1,5 +1,5 @@
 # Created by: clement
-# $FreeBSD: ports/www/mod_auth_cookie_mysql2/Makefile,v 1.17 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_cookie_mysql2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_auth_cookie_mysql2
 PORTVERSION=	1.0
@@ -12,7 +12,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows authentication against a MySQL database via a secure cookie
 
-MAKE_JOBS_SAFE=	yes
 
 USE_MYSQL=	yes
 USE_APACHE=	22
