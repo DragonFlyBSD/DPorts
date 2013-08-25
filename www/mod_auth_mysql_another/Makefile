@@ -1,5 +1,5 @@
 # Created by: mbr@freebsd.org
-# $FreeBSD: ports/www/mod_auth_mysql_another/Makefile,v 1.25 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_mysql_another/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_auth_mysql
 PORTVERSION=	3.0.0
@@ -11,7 +11,6 @@ PKGNAMESUFFIX=	_another
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows users to use MySQL databases for user authentication
 
-MAKE_JOBS_SAFE=	yes
 
 USE_MYSQL=	yes
 USE_APACHE=	22

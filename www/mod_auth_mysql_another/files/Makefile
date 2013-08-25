@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/www/mod_auth_mysql_another/files/Makefile,v 1.2 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_mysql_another/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 all: build
 
