@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-DNS-TestNS
-# Date created:		2010-06-26
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-#
-# $FreeBSD: ports/dns/p5-Net-DNS-TestNS/Makefile,v 1.6 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
+# $FreeBSD: dns/p5-Net-DNS-TestNS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Net-DNS-TestNS
 PORTVERSION=	1.10
@@ -18,10 +14,10 @@ COMMENT=	Perl extension for simulating simple Nameservers
 
 BUILD_DEPENDS=	p5-Net-DNS>=0.64:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-XML-LibXML>=1.53:${PORTSDIR}/textproc/p5-XML-LibXML
-RUN_DEPENDS=	p5-Net-DNS>=0.64:${PORTSDIR}/dns/p5-Net-DNS \
-		p5-XML-LibXML>=1.53:${PORTSDIR}/textproc/p5-XML-LibXML
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Net::DNS::TestNS.3 Net::DNS::TestNS::DTD.3
 
