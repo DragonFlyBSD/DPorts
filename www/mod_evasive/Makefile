@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: ports/www/mod_evasive/Makefile,v 1.16 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_evasive/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_evasive
 PORTVERSION=	1.10.1
@@ -12,7 +12,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	kiwi@oav.net
 COMMENT=	An Apache module to try to protect the HTTP Server from DoS/DDoS attacks
 
-MAKE_JOBS_SAFE=  yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
