@@ -2,7 +2,7 @@
 # Date created:				11 April 2009
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: net-im/pidgin-birthday-reminder/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net-im/pidgin-birthday-reminder/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	pidgin-birthday-reminder
@@ -18,7 +18,6 @@ LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple
 BUILD_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
