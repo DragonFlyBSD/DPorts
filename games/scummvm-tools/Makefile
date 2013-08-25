@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/scummvm-tools/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/scummvm-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	scummvm-tools
 DISTVERSION=	1.0.0rc1
@@ -24,7 +24,6 @@ USE_GMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 CXXFLAGS=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
