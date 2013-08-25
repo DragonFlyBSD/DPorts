@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: finance/qhacc/Makefile 323465 2013-07-22 15:25:04Z miwi $
+# $FreeBSD: finance/qhacc/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	qhacc
 PORTVERSION=	4.1
@@ -17,9 +17,8 @@ LIB_DEPENDS=	qwt6:${PORTSDIR}/x11-toolkits/qwt6
 OPTIONS_DEFINE=	DOCS
 
 USE_QT4=	corelib gui sql moc_build qmake_build rcc_build uic_build
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CXXFLAGS+=	-fpermissive
 
