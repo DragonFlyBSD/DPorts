@@ -2,7 +2,7 @@
 # Date created:			21 Jan 2004
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/games/orbital_eunuchs_sniper/Makefile,v 1.20 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/orbital_eunuchs_sniper/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	orbital_eunuchs_sniper
@@ -18,7 +18,6 @@ COMMENT=	An overhead shooting game
 USE_SDL=	sdl image mixer
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-games-dir=${PREFIX}/share
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS ChangeLog README TODO readme.txt
 
