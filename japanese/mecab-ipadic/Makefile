@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: ports/japanese/mecab-ipadic/Makefile,v 1.11 2013/02/11 06:44:18 svnexp Exp $
+# $FreeBSD: japanese/mecab-ipadic/Makefile 325042 2013-08-20 11:54:39Z az $
 
 PORTNAME=	mecab-ipadic
 DISTVERSION=	2.7.0-20070801
@@ -21,7 +21,8 @@ LICENSE_PERMS_ICOT=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	ja-mecab>=0.94:${PORTSDIR}/japanese/mecab
 
-USE_PERL5_BUILD=	yes
+USES=			perl5
+USE_PERL5=		build
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-dicdir=${PREFIX}/lib/mecab/dic/ipadic
 
