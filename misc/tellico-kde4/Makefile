@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: misc/tellico-kde4/Makefile 322671 2013-07-10 11:56:12Z rakuco $
+# $FreeBSD: misc/tellico-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	tellico
 PORTVERSION=	2.3.8
@@ -24,6 +24,5 @@ USE_KDE4=	kdehier kdelibs kdeprefix libksane pimlibs \
 		automoc4 qimageblitz libkcddb sharedmime
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 USES=		cmake gettext
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
