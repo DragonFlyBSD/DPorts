@@ -1,5 +1,5 @@
 # Created by: Douglas Carmichael <dcarmich@dcarmichael.net>
-# $FreeBSD: devel/kdevelop-pg-qt/Makefile 322190 2013-07-02 17:43:53Z rakuco $
+# $FreeBSD: devel/kdevelop-pg-qt/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	kdevelop
 PORTVERSION=	1.0.0
@@ -16,11 +16,10 @@ COMMENT=	Parser-generator from KDevplatform
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
 
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_BZIP2=	yes
 USES=		bison cmake:outsource
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	qmake_build moc_build uic_build rcc_build
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
