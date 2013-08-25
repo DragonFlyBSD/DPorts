@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Cairo-GObject
-# Date created:		2011-10-17
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Cairo-GObject/Makefile,v 1.3 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Cairo-GObject/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Cairo-GObject
 PORTVERSION=	1.001
@@ -25,7 +21,8 @@ RUN_DEPENDS=	cairo>=1.10.0:${PORTSDIR}/graphics/cairo \
 		p5-Cairo>=1.080:${PORTSDIR}/graphics/p5-Cairo \
 		p5-Glib2>=1.224:${PORTSDIR}/devel/p5-Glib2
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Cairo::GObject.3
 
