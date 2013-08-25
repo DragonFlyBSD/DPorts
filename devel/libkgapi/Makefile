@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libkgapi/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/libkgapi/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	libkgapi
 PORTVERSION=	0.4.4
@@ -16,7 +16,6 @@ LIB_DEPENDS=	qjson.0:${PORTSDIR}/devel/qjson
 
 CONFLICTS=	akonadi-google-0.*
 
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USES=		cmake
 USE_KDE4=	automoc4 kdelibs kdeprefix kdehier pimlibs
