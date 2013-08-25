@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pykde4/Makefile 318452 2013-05-18 20:34:41Z makc $
+# $FreeBSD: devel/py-pykde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pykde4
 PORTVERSION=	${KDE4_VERSION}
@@ -34,7 +34,6 @@ USE_QT4=	corelib dbus designer_build gui network xml \
 USE_XZ=		yes
 USES=		cmake:outsource
 CMAKE_ARGS+=	-DWITH_PolkitQt:BOOL=FALSE
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	kdebindings4.pth
 SUB_LIST=	PYTHONPREFIX_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR}
