@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Authen-Simple-LDAP
-# Date created:				21 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Authen-Simple-LDAP/Makefile,v 1.8 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: security/p5-Authen-Simple-LDAP/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Authen-Simple-LDAP
 PORTVERSION=	0.3
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Authen-Simple>=0:${PORTSDIR}/security/p5-Authen-Simple \
 		p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Authen::Simple::ActiveDirectory.3 \
 		Authen::Simple::LDAP.3
