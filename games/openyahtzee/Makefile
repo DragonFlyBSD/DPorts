@@ -2,7 +2,7 @@
 # Date created:		04 January 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/games/openyahtzee/Makefile,v 1.17 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/openyahtzee/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #
 
 PORTNAME=	openyahtzee
@@ -20,11 +20,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/scoped_ptr.hpp:${PORTSDIR}/devel/boost-libs
 
 USE_BZIP2=	yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_WX=		2.8+
 WX_CONF_ARGS=	absolute
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
