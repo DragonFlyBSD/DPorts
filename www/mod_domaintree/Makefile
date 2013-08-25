@@ -2,7 +2,7 @@
 # Date created:				May 5th 2006
 # Whom:					Daniel Gerzo <danger@rulez.sk>
 #
-# $FreeBSD: ports/www/mod_domaintree/Makefile,v 1.9 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_domaintree/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_domaintree
@@ -15,7 +15,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	danger@FreeBSD.org
 COMMENT=	Hostname to filesystem mapper for Apache 2
 
-MAKE_JOBS_SAFE=  yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_APACHE=	22+
