@@ -1,5 +1,5 @@
 # Created by: Torsten Blum <torstenb@FreeBSD.org>
-# $FreeBSD: mail/postfix-current/Makefile 316548 2013-04-26 02:45:54Z sahil $
+# $FreeBSD: mail/postfix-current/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	postfix
 DISTVERSION=	2.11-20130405
@@ -27,7 +27,6 @@ CONFLICTS=	courier-0.* postfix-1.* postfix-2.* postfix-base-2.* \
 
 USERS=		postfix
 GROUPS=		mail maildrop postfix
-MAKE_JOBS_SAFE=	yes
 USE_SUBMAKE=	yes
 USE_PERL5_BUILD=yes
 SCRIPTS_ENV+=	POSTFIX_DEFAULT_MTA="${POSTFIX_DEFAULT_MTA}"
