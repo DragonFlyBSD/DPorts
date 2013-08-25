@@ -2,7 +2,7 @@
 # Date created:         30 August 2011
 # Whom:                 Anton Hryciuk <gnixua@gmail.com>
 #
-# $FreeBSD: ports/net-im/pidgin-audacious-remote/Makefile,v 1.5 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/pidgin-audacious-remote/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	pidgin-audacious-remote
@@ -22,7 +22,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--prefix=${PREFIX}"
