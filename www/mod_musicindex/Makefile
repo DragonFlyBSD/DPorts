@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: www/mod_musicindex/Makefile 316996 2013-05-01 07:25:09Z jgh $
+# $FreeBSD: www/mod_musicindex/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_musicindex
 PORTVERSION=	1.3.7
@@ -23,7 +23,6 @@ MYSQLCACHE_DESC=	MySQL caching support
 
 .include <bsd.port.options.mk>
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
