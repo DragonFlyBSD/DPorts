@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-WebService-Google-Reader
-# Date created:				2010-09-06
-# Whom:					Frederic Culot <frederic@culot.org>
-#
-# $FreeBSD: ports/www/p5-WebService-Google-Reader/Makefile,v 1.10 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Frederic Culot <frederic@culot.org>
+# $FreeBSD: www/p5-WebService-Google-Reader/Makefile 324969 2013-08-19 09:33:00Z culot $
 
 PORTNAME=	WebService-Google-Reader
-PORTVERSION=	0.21
+PORTVERSION=	0.22
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
