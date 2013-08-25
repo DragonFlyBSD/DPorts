@@ -2,7 +2,7 @@
 # Date created:				15 May 2003
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: irc/konversation-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: irc/konversation-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	konversation
@@ -23,6 +23,5 @@ USE_XZ=		yes
 USES=		cmake
 USE_KDE4=	kdeprefix pimlibs automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
