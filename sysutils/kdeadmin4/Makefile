@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: sysutils/kdeadmin4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: sysutils/kdeadmin4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdeadmin
 PORTVERSION=	${KDE4_VERSION}
@@ -17,6 +17,5 @@ USE_XZ=		yes
 USE_KDE4=	kdelibs pimlibs kdeprefix kdehier automoc4
 USES=		cmake:outsource
 USE_QT4=	dbus moc_build qmake_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
