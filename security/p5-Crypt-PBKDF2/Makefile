@@ -1,8 +1,8 @@
 # Created by: Victor Popov <v.a.popov@gmail.com>
-# $FreeBSD: security/p5-Crypt-PBKDF2/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-PBKDF2/Makefile 324981 2013-08-19 12:39:27Z mat $
 
 PORTNAME=	Crypt-PBKDF2
-PORTVERSION=	0.121930
+PORTVERSION=	0.131750
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ARODLAND
