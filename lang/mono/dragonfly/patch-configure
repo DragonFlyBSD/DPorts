@@ -1,4 +1,4 @@
---- configure.orig	2013-07-13 17:44:49.766393000 +0000
+--- configure.orig	2013-08-25 14:42:14.669977000 +0000
 +++ configure
 @@ -3845,7 +3845,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		mono_cv_clang=no
@@ -28,7 +28,37 @@
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -25141,7 +25142,7 @@ case "$host" in
+@@ -16999,6 +17000,9 @@ i?86-*-linux*|x86_64-*-linux*|powerpc-*-
+ |amd64-*-freebsd*|i?86-*-freebsd*|ia64-*-freebsd*|arm*-*-linux*|sparc*-*-linux*|mips*-*-linux*|x86_64-apple-darwin*)
+     pic_options='-fPIC'
+     ;;
++*-*-dragonfly*)
++    pic_options='-fPIC'
++    ;;
+ ?86-pc-cygwin*|i?86-pc-cygwin*)
+     pic_options='-DDLL_EXPORT'
+     ;;
+@@ -24638,6 +24642,9 @@ rm -f core conftest.err conftest.$ac_obj
+ 			sgen_supported=true
+ 			AOT_SUPPORTED="yes"
+ 			;;
++		  dragonfly*)
++		  	sggen_supported=true
++		  	;;
+ 		  darwin*|openbsd*|freebsd*)
+ 			sgen_supported=true
+ 		        ;;
+@@ -24658,6 +24665,9 @@ $as_echo "#define __mono_ilp32__ 1" >>co
+ 			sgen_supported=true
+ 			AOT_SUPPORTED="yes"
+ 			;;
++		  dragonfly*)
++		  	sgen_supported=true
++		  	;;
+ 		  darwin*|openbsd*|freebsd*)
+ 			sgen_supported=true
+ 			;;
+@@ -25146,7 +25156,7 @@ case "$host" in
  	SQLITE="libsqlite.so"
  	SQLITE3="libsqlite3.so"
  	;;
