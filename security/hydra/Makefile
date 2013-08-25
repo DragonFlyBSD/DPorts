@@ -1,5 +1,5 @@
 # Created by: Laurent LEVIER <llevier@argosnet.com>
-# $FreeBSD: ports/security/hydra/Makefile,v 1.46 2013/01/14 14:59:43 svnexp Exp $
+# $FreeBSD: security/hydra/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	hydra
 PORTVERSION=	7.4.2
@@ -24,7 +24,6 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
 WANT_GNOME=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		hydra.1 pw-inspector.1
 
