@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-Dancer-Plugin-Database/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Dancer-Plugin-Database/Makefile 325043 2013-08-20 12:15:51Z mat $
 
 PORTNAME=	Dancer-Plugin-Database
-PORTVERSION=	2.04
+PORTVERSION=	2.07
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -24,7 +24,6 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Dancer::Plugin::Database.3 \
-		Dancer::Plugin::Database::Handle.3
+P5MAN3=		Dancer::Plugin::Database.3
 
 .include <bsd.port.mk>
