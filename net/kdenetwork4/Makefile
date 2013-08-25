@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/kdenetwork4/Makefile 323459 2013-07-22 15:07:30Z makc $
+# $FreeBSD: net/kdenetwork4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdenetwork
 PORTVERSION=	${KDE4_VERSION}
@@ -30,7 +30,6 @@ USE_SQLITE=	yes
 USE_XORG=	x11 xdamage xext xscrnsaver xtst
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV=	XDG_CONFIG_HOME=/dev/null
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
