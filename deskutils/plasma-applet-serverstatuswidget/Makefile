@@ -2,7 +2,7 @@
 # Date Created:				2011-02-23
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: deskutils/plasma-applet-serverstatuswidget/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: deskutils/plasma-applet-serverstatuswidget/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	serverstatuswidget
@@ -20,7 +20,6 @@ USE_BZIP2=	yes
 USES=		cmake gettext
 USE_KDE4=	automoc4 kdeprefix workspace
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
