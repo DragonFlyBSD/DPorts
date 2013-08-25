@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/mod_extract_forwarded/files/extra-patch-yoshfuji,v 1.1 2012/12/24 13:11:14 svnexp Exp $
+# $FreeBSD: www/mod_extract_forwarded/files/extra-patch-yoshfuji 309457 2012-12-24 12:42:56Z kuriyama $
 diff --git a/INSTALL b/INSTALL
 index fa06d8a..d1f6d56 100644
 --- a/INSTALL
