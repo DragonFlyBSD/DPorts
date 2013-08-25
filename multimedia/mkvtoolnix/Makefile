@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/mkvtoolnix/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: multimedia/mkvtoolnix/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	mkvtoolnix
 PORTVERSION=	6.3.0
@@ -22,7 +22,7 @@ LIB_DEPENDS=	vorbis:${PORTSDIR}/audio/libvorbis \
 
 USES=		pkgconfig gettext iconv
 USE_XZ=		yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 GNU_CONFIGURE=	yes
 USE_RAKE=	yes
 USE_RUBY=	yes
@@ -35,7 +35,6 @@ CONFIGURE_ARGS=	--disable-qt \
 		--with-boost-filesystem=boost_filesystem \
 		--with-boost-system=boost_system \
 		--with-boost-regex=boost_regex
-MAKE_JOBS_SAFE=	yes
 
 MANLANG=	"" ja zh_CN nl uk
 MAN1=		mkvextract.1 mkvinfo.1 mkvmerge.1 mkvpropedit.1
