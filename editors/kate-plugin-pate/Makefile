@@ -1,4 +1,4 @@
-# $FreeBSD: editors/kate-plugin-pate/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: editors/kate-plugin-pate/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kate-plugin-pate
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,6 @@ USE_KDE4=	kdelibs kdeprefix kdehier automoc4 kate \
 USE_QT4=	gui webkit \
 		moc_build qmake_build rcc_build uic_build
 USE_PYTHON=	yes
-MAKE_JOBS_SAFE=	yes
 
 DISTINFO_FILE=	${PORTSDIR}/editors/kate/distinfo
 
