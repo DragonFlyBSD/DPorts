@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_proxy_xml/Makefile 319447 2013-05-30 19:14:44Z ohauer $
+# $FreeBSD: www/mod_proxy_xml/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_proxy_xml
 PORTVERSION=	0.1
@@ -12,7 +12,6 @@ DISTFILES=	xmlns.h mod_proxy_xml.c
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for rewriting URI references in XML
 
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=	${WRKDIR}
 
