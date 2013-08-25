@@ -1,5 +1,5 @@
 # Created by: Jasper Jongmans <j.jongmans@aprogas.net>
-# $FreeBSD: games/crossfire-server/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: games/crossfire-server/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	crossfire
 PORTVERSION=	1.70.0
@@ -27,7 +27,6 @@ USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-check=no
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		crossfire-config.6 crossfire-server.6 crossloop.6 \
 		crossloop.web.6
