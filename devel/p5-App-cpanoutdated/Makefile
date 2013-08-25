@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-App-cpanoutdated/Makefile,v 1.1 2013/02/21 17:49:03 svnexp Exp $
+# $FreeBSD: devel/p5-App-cpanoutdated/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	App-cpanoutdated
 PORTVERSION=	0.24
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-CPAN-DistnameInfo>=0.10:${PORTSDIR}/devel/p5-CPAN-DistnameInfo
 		p5-local-lib>=0:${PORTSDIR}/devel/p5-local-lib
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		cpan-outdated.1
 MAN3=		App::cpanoutdated.3
