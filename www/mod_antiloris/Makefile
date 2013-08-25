@@ -1,5 +1,5 @@
 # Created by: Aleksandar Pejic <alex@vts.su.ac.rs>
-# $FreeBSD: ports/www/mod_antiloris/Makefile,v 1.5 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_antiloris/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_antiloris
 PORTVERSION=	0.4
@@ -10,7 +10,6 @@ MASTER_SITES=	ftp://ftp.monshouwer.eu/pub/linux/mod_antiloris/
 MAINTAINER=	alex@vts.su.ac.rs
 COMMENT=	Protect Apache 2.x against the Slowloris HTTP DoS attack
 
-MAKE_JOBS_SAFE=	yes
 
 USE_BZIP2=	yes
 USE_APACHE=	22
