@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/penguin-command/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/penguin-command/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	penguin-command
 PORTVERSION=	1.6.11
@@ -15,7 +15,6 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 
 USE_SDL=	mixer image sdl
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		penguin-command.6 penguin-command.ja.6
 
