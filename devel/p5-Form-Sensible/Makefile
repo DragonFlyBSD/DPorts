@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Form-Sensible
-# Date created:		2012-02-13
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Form-Sensible/Makefile,v 1.2 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Form-Sensible/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Form-Sensible
 PORTVERSION=	0.20.023
@@ -13,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A sensible way to handle form based user interface
+COMMENT=	Sensible way to handle form based user interface
 
 BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Format-Natural>=0:${PORTSDIR}/devel/p5-DateTime-Format-Natural \
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Form::Sensible.3 \
 		Form::Sensible::DelegateConnection.3 \
