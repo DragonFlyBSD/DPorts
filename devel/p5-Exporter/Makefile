@@ -1,8 +1,8 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: devel/p5-Exporter/Makefile 313220 2013-03-02 10:12:49Z culot $
+# $FreeBSD: devel/p5-Exporter/Makefile 325320 2013-08-24 23:48:01Z mat $
 
 PORTNAME=	Exporter
-PORTVERSION=	5.67
+PORTVERSION=	5.68
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
