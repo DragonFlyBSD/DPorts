@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Navteq/Makefile 316553 2013-04-26 02:57:22Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Navteq/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Geo-Coder-Navteq
 PORTVERSION=	0.03
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-URI>=1.36:${PORTSDIR}/net/p5-URI \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Geo::Coder::Navteq.3
 
