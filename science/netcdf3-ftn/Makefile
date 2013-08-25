@@ -1,9 +1,5 @@
-# New ports collection makefile for:	netcdf3-ftn
-# Date created:		2010-05-18
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-#
-# $FreeBSD: ports/science/netcdf3-ftn/Makefile,v 1.3 2012/11/17 06:00:58 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
+# $FreeBSD: science/netcdf3-ftn/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	netcdf
 
