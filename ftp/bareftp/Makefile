@@ -1,5 +1,5 @@
 # Created by: Chris Petrik (chris@officialunix.com)
-# $FreeBSD: ftp/bareftp/Makefile 318326 2013-05-16 18:33:56Z bdrewery $
+# $FreeBSD: ftp/bareftp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	bareftp
 PORTVERSION=	0.3.10
@@ -22,7 +22,6 @@ USE_GMAKE=	yes
 
 USE_LDCONFIG=	yes
 
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		bareftp.1
 
