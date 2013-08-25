@@ -1,5 +1,5 @@
 # Created by: Manuel Kasper <mk@neon1.net>
-# $FreeBSD: ports/www/mod_auth_pubtkt/Makefile,v 1.9 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_pubtkt/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_auth_pubtkt
 PORTVERSION=	0.8
@@ -11,7 +11,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	mk@neon1.net
 COMMENT=	An Apache module to provide public key ticket based authentication
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22+
 HAS_CONFIGURE=	yes
