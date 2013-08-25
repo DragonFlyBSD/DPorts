@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/oyranos/Makefile 324338 2013-08-07 10:10:06Z bsam $
+# $FreeBSD: graphics/oyranos/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	oyranos
 PORTVERSION=	0.9.4
