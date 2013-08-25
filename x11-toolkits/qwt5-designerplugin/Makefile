@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/qwt5-designerplugin/Makefile,v 1.7 2012/12/15 13:56:04 svnexp Exp $
+# $FreeBSD: x11-toolkits/qwt5-designerplugin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	qwt
 PORTVERSION=	5.2.3
@@ -17,7 +17,6 @@ USE_GMAKE=	yes
 QMAKE_ARGS+=	-recursive CONFIG+=QwtDesigner \
 		PLUGINDIR=${PREFIX}/${QT_PLUGINDIR_REL}
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 PORTSCOUT=	limit:^5\.
 
 STRIP_FILES=	${QT_PLUGINDIR_REL}/designer/libqwt_designer_plugin.so
