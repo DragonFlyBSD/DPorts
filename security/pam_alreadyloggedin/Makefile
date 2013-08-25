@@ -1,5 +1,5 @@
 # Created by: green@FreeBSD.org
-# $FreeBSD: security/pam_alreadyloggedin/Makefile 318971 2013-05-24 14:02:52Z bapt $
+# $FreeBSD: security/pam_alreadyloggedin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pam_alreadyloggedin
 PORTVERSION=	0.3
@@ -21,7 +21,6 @@ MANCOMPRESSED=	yes
 .endif
 
 MAN8=		pam_alreadyloggedin.8
-MAKE_JOBS_SAFE=	yes
 PLIST_FILES=	lib/pam_alreadyloggedin.so lib/pam_alreadyloggedin.so.2
 
 do-configure:
