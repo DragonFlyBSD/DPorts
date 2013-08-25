@@ -2,7 +2,7 @@
 # Date created:        			March 26, 2007
 # Whom:                			José García Juanino <jjuanino@gmail.com>
 #
-# $FreeBSD: ports/www/mod_authnz_external/Makefile,v 1.10 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_authnz_external/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_authnz_external
@@ -15,7 +15,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	eg@fbsd.lt
 COMMENT=	Allows users authentication based on external mechanisms on apache 2.2
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
