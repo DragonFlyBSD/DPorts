@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Mock-LWP-Dispatch/Makefile 320287 2013-06-08 21:04:22Z sunpoet $
+# $FreeBSD: devel/p5-Test-Mock-LWP-Dispatch/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Test-Mock-LWP-Dispatch
 PORTVERSION=	0.06
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::Mock::LWP::Dispatch.3
 
