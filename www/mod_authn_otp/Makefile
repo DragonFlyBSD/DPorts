@@ -1,5 +1,5 @@
 # Created by: Alexander Hausner <alex@hugo.bmg.gv.at>
-# $FreeBSD: ports/www/mod_authn_otp/Makefile,v 1.6 2012/12/17 22:52:49 svnexp Exp $
+# $FreeBSD: www/mod_authn_otp/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_authn_otp
 PORTVERSION=	1.1.5
@@ -12,7 +12,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	alex@hugo.bmg.gv.at
 COMMENT=	Apache module for one-time password authentication
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_APACHE=	22
