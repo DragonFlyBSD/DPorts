@@ -2,7 +2,7 @@
 # Date created:        18 Feb 2010
 # Whom:                Sascha Klauder <sklauder@trimind.de>
 #
-# $FreeBSD: ports/palm/jpilot-picsnvideos/Makefile,v 1.7 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: palm/jpilot-picsnvideos/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	picsnvideos
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	jpilot:${PORTSDIR}/palm/jpilot
 LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${PREFIX}/lib
 PORTDOCS=	README AUTHORS
