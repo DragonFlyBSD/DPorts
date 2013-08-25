@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Parse-HTTP-UserAgent
-# Date created:		2011-11-13
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Parse-HTTP-UserAgent/Makefile,v 1.5 2012/11/17 06:02:52 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: www/p5-Parse-HTTP-UserAgent/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Parse-HTTP-UserAgent
 PORTVERSION=	0.35
@@ -18,7 +14,8 @@ COMMENT=	Parser for the User Agent string
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Parse::HTTP::UserAgent.3 \
 		Parse::HTTP::UserAgent::Base::Accessors.3 \
