@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-Types-Set-Object
-# Date created:		2011-06-11
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Types-Set-Object/Makefile,v 1.2 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-Types-Set-Object/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	MooseX-Types-Set-Object
 PORTVERSION=	0.03
@@ -14,13 +10,15 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set::Object type with coercions and stuff
 
-RUN_DEPENDS=	p5-Moose>=0.50:${PORTSDIR}/devel/p5-Moose \
+BUILD_DEPENDS=	p5-Moose>=0.50:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Types>=0:${PORTSDIR}/devel/p5-MooseX-Types \
 		p5-Set-Object>=0:${PORTSDIR}/devel/p5-Set-Object
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		MooseX::Types::Set::Object.3
 
