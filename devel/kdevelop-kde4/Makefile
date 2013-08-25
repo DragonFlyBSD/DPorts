@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevelop-kde4/Makefile 322195 2013-07-02 19:34:19Z rakuco $
+# $FreeBSD: devel/kdevelop-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdevelop
 DISTVERSION=	${KDEVELOP_VERSION}
@@ -21,7 +21,6 @@ USE_QT4=	qmake_build moc_build uic_build rcc_build
 USE_BZIP2=	yes
 USES=		cmake shared-mime-info
 USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	OKTETA PHP NLS
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
