@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/impossible_mission_puzzle/Makefile,v 1.5 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/impossible_mission_puzzle/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	impossible_mission_puzzle
 PORTVERSION=	1.0.1
@@ -19,7 +19,6 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}/puzzle-${PORTVERSION}
 
 USE_SDL=	sdl
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.png
