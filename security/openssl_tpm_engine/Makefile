@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/openssl_tpm_engine/Makefile 323649 2013-07-25 15:30:11Z hrs $
+# $FreeBSD: security/openssl_tpm_engine/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	openssl_tpm_engine
 PORTVERSION=	0.4.2
@@ -18,7 +18,6 @@ USES=	gmake
 USE_AUTOTOOLS=	autoconf libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 SUB_FILES=	pkg-message
