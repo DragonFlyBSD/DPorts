@@ -1,5 +1,5 @@
 # Created by: Tommy Scheunemann <net@arrishq.net>
-# $FreeBSD: ports/www/mod_auth_form/Makefile,v 1.12 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_form/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_auth_form
 PORTVERSION=	2.05
@@ -12,7 +12,6 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	net@arrishq.net
 COMMENT=	MySQL based form authentication module for Apache 2.x
 
-MAKE_JOBS_SAFE=  yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
