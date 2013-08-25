@@ -1,5 +1,5 @@
 # Created by: wollman
-# $FreeBSD: www/mod_auth_kerb2/Makefile 321221 2013-06-18 20:46:01Z ohauer $
+# $FreeBSD: www/mod_auth_kerb2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_auth_kerb
 PORTVERSION=	5.4
@@ -11,7 +11,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	An Apache module for authenticating users with Kerberos v5
 
-MAKE_JOBS_SAFE=  yes
 
 LATEST_LINK=   mod_auth_kerb2
 
