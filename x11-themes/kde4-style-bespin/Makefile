@@ -2,7 +2,7 @@
 # Date created:                        Thu Dec  3 04:21:05  EST 2009
 # Whom:                                Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: x11-themes/kde4-style-bespin/Makefile 318812 2013-05-23 01:53:41Z swills $
+# $FreeBSD: x11-themes/kde4-style-bespin/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	bespin
@@ -19,6 +19,5 @@ WRKSRC=		${WRKDIR}/cloudcity
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 USES=		cmake
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
