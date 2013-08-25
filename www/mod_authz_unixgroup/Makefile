@@ -1,5 +1,5 @@
 # Created by: Will Stacey <will@at.org>
-# $FreeBSD: ports/www/mod_authz_unixgroup/Makefile,v 1.11 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_authz_unixgroup/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_authz_unixgroup
 PORTVERSION=	1.0.1
@@ -10,7 +10,6 @@ MASTER_SITES=	http://www.unixpapa.com/software/
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	A unix group access control module for Apache 2.1 and later
 
-MAKE_JOBS_SAFE=  yes
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
