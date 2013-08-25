@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kactivitymanagerd/Makefile 323453 2013-07-22 14:25:27Z makc $
+# $FreeBSD: x11/kactivitymanagerd/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	kactivitymanagerd
 PORTVERSION=	${KDE4_VERSION}
@@ -20,15 +20,14 @@ USES=		cmake:outsource
 USE_QT4=	declarative opengl script sql \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 DISTINFO_FILE=	${.CURDIR}/../kactivities/distinfo
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 # https://bugs.kde.org/show_bug.cgi?id=305529#c10
 CMAKE_ARGS+=	-DCMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS=-rdynamic
 
-# 'USES= moderncompiler' would help, for now force dependency on gcc
-USE_GCC=	4.6+
+# 'USES= moderncompiler' would help, for now force dependency on GCC
+USE_GCC=	yes
 
 .include <bsd.port.pre.mk>
 
