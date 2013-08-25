@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/rocksndiamonds/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/rocksndiamonds/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	rocksndiamonds
 PORTVERSION=	3.3.0.1
@@ -41,7 +41,6 @@ MAKE_ARGS=	CC="${CC}" MAKE="${GMAKE}" OPTIONS="${CFLAGS}" \
 		RO_GAME_DIR="${DATADIR}" \
 		X11_PATH="${LOCALBASE}"
 ALL_TARGET=	sdl
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
