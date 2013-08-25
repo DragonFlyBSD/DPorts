@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-LibXML-Cache
-# Date created:		2011-09-11
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-LibXML-Cache/Makefile,v 1.4 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-LibXML-Cache/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	XML-LibXML-Cache
 PORTVERSION=	0.12
@@ -24,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-File-Touch>=0:${PORTSDIR}/devel/p5-File-Touch \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		XML::LibXML::Cache.3 \
 		XML::LibXML::Cache::Base.3 \
