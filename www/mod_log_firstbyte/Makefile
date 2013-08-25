@@ -2,7 +2,7 @@
 # Date created:				January 29, 2008
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_log_firstbyte/Makefile,v 1.12 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_log_firstbyte/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_log_firstbyte
@@ -17,7 +17,6 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Log the time between request and the first byte of the response served
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22+
 
