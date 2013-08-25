@@ -2,7 +2,7 @@
 # Date created:		2009-01-06
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/mod_memcache/Makefile,v 1.10 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_memcache/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_memcache
@@ -15,7 +15,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Apache 2.2.x module to manage apr_memcache connections
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 PROJECTHOST=	modmemcache
