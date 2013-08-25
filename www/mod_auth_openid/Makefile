@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: www/mod_auth_openid/Makefile 316165 2013-04-20 19:21:29Z ohauer $
+# $FreeBSD: www/mod_auth_openid/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_auth_openid
 PORTVERSION=	0.7
@@ -13,7 +13,6 @@ COMMENT=	An authentication module for the Apache 2 webserver with OpenID
 LIB_DEPENDS=	opkele:${PORTSDIR}/devel/libopkele \
 		sqlite3:${PORTSDIR}/databases/sqlite3
 
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	${APACHEMODDIR}/mod_auth_openid.so
 
