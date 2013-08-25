@@ -2,7 +2,7 @@
 # Date created:				2007-09-07
 # Whom:					Matthias Andree <matthias.andree@gmx.de>
 #
-# $FreeBSD: ports/misc/e2fsprogs-libblkid/Makefile,v 1.6 2012/11/17 05:59:34 svnexp Exp $
+# $FreeBSD: misc/e2fsprogs-libblkid/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 # set PORTREVISION to avoid override by master port
 
@@ -23,7 +23,6 @@ USE_LDCONFIG=	yes
 ALL_TARGET=	libs
 INSTALL_TARGET=	install install-shlibs
 INSTALL_WRKSRC=	${WRKSRC}/lib/blkid
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		libblkid.3
 
