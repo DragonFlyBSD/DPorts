@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Algorithm-Pair-Best2
-# Date created:		2011-11-24
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/games/p5-Algorithm-Pair-Best2/Makefile,v 1.2 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: games/p5-Algorithm-Pair-Best2/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Algorithm-Pair-Best2
 PORTVERSION=	2.035
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Select tournament pairings
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Algorithm::Pair::Best2.3
 
