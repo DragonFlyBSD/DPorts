@@ -1,4 +1,4 @@
-# $FreeBSD: net/knemo-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net/knemo-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	knemo
 PORTVERSION=	0.7.6
@@ -16,7 +16,6 @@ USES=		cmake
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 USE_KDE4=	kdeprefix kdelibs workspace automoc4
 
-MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 .include <bsd.port.pre.mk>
