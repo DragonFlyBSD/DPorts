@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Carp-Always-Color/Makefile,v 1.6 2013/01/30 18:09:48 svnexp Exp $
+# $FreeBSD: devel/p5-Carp-Always-Color/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Carp-Always-Color
 PORTVERSION=	0.07
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Carp-Always>=0.10:${PORTSDIR}/devel/p5-Carp-Always
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-IO-Pty-Easy>=0:${PORTSDIR}/devel/p5-IO-Pty-Easy
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Carp::Always::Color.3 \
 		Carp::Always::Color::HTML.3 \
