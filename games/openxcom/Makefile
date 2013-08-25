@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/openxcom/Makefile 323138 2013-07-16 23:46:59Z amdmi3 $
+# $FreeBSD: games/openxcom/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	openxcom
 PORTVERSION=	0.9.0
@@ -23,8 +23,7 @@ GH_COMMIT=	5c8b540
 USE_GMAKE=	yes
 USE_SDL=	sdl mixer image gfx
 USE_GL=		gl
-MAKE_JOBS_SAFE=	yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 
 BUILD_WRKSRC=	${WRKSRC}/src
 MAKEFILE=	Makefile.simple
