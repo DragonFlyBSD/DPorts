@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Role-Dialog/Makefile 316375 2013-04-23 17:09:04Z sunpoet $
+# $FreeBSD: x11-toolkits/p5-Tk-Role-Dialog/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Tk-Role-Dialog
 PORTVERSION=	1.112.380
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-Moose>=0.92:${PORTSDIR}/devel/p5-Moose \
 		p5-Tk-Sugar>=0:${PORTSDIR}/x11-toolkits/p5-Tk-Sugar
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Tk::Role::Dialog.3
 
