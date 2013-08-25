@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/cyrus-sasl2-ldapdb/Makefile,v 1.20 2013/02/17 17:24:21 svnexp Exp $
+# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ldapdb
 PORTVERSION=	2.1.26
@@ -21,7 +21,6 @@ DISTINFO_FILE=	${CYRUS_SASL2_DIR}/distinfo
 PATCHDIR=	${CYRUS_SASL2_DIR}/files
 INSTALL_WRKSRC=	${WRKSRC}/plugins
 
-MAKE_JOBS_SAFE=	yes
 
 USE_LDCONFIG=	yes
 
