@@ -1,4 +1,4 @@
-# $FreeBSD: devel/smokekde/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/smokekde/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	smokekde
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,6 @@ USE_QT4=	corelib dbus designer_build gui network opengl sql svg xml \
 		qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
 USES=		cmake:outsource
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	ATTICA
