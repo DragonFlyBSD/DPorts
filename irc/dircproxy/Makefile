@@ -2,7 +2,7 @@
 # Date created:				11 January 2001
 # Whom:					George Reid <greid@ukug.uk.freebsd.org>
 #
-# $FreeBSD: ports/irc/dircproxy/Makefile,v 1.18 2012/11/17 05:58:28 svnexp Exp $
+# $FreeBSD: irc/dircproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	dircproxy
@@ -18,7 +18,6 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 SUB_FILES+=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
