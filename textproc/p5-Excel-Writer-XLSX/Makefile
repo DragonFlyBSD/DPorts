@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Excel-Writer-XLSX/Makefile 322601 2013-07-10 03:33:52Z sunpoet $
+# $FreeBSD: textproc/p5-Excel-Writer-XLSX/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Excel-Writer-XLSX
 PORTVERSION=	0.70
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc \
 		p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		extract_vba.1
 MAN3=		Excel::Writer::XLSX.3 \
