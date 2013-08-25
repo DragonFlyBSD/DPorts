@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: net-p2p/eiskaltdcpp-gtk/Makefile 317832 2013-05-10 17:34:56Z fjoe $
+# $FreeBSD: net-p2p/eiskaltdcpp-gtk/Makefile 324851 2013-08-17 16:27:24Z gerald $
 
 PORTNAME=	eiskaltdcpp-gtk
 PORTVERSION=	2.2.4
@@ -21,10 +21,9 @@ CMAKE_ARGS+=	-DBUILD_LIB:BOOL=OFF
 PROJECTHOST=	eiskaltdc
 
 USE_XZ=		yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 USES=		cmake gettext
 USE_OPENSSL=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		${PORTNAME}.1
 MANCOMPRESSED=	yes
