@@ -1,12 +1,12 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-DAV-Server/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-DAV-Server/Makefile 325183 2013-08-22 11:10:57Z mat $
 
 PORTNAME=	Net-DAV-Server
-PORTVERSION=	1.30.2
+PORTVERSION=	1.30.5
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-1.302
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.(.)$/\1/}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Provide a DAV Server
