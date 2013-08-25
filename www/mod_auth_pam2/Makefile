@@ -2,7 +2,7 @@
 # Date created:				Sun Oct  5
 # Whom:					Clement Laforet <sheepkiller@cultdeadsheep.org>
 #
-# $FreeBSD: ports/www/mod_auth_pam2/Makefile,v 1.15 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_pam2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_auth_pam
@@ -16,7 +16,6 @@ DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows users to use PAM modules for user authentication
 
-MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	mod_auth_pam2
 
