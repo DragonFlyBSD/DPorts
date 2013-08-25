@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter-Lexical/Makefile 319076 2013-05-25 23:46:59Z sunpoet $
+# $FreeBSD: devel/p5-Sub-Exporter-Lexical/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Sub-Exporter-Lexical
 PORTVERSION=	0.092.291
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-B-Hooks-EndOfScope>=0:${PORTSDIR}/devel/p5-B-Hooks-EndOfScope 
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Sub::Exporter::Lexical.3
 
