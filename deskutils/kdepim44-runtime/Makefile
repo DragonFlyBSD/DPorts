@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44-runtime/Makefile 315680 2013-04-02 15:40:37Z makc $
+# $FreeBSD: deskutils/kdepim44-runtime/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	4.4.11.1
@@ -23,7 +23,6 @@ USE_BZIP2=	yes
 USE_QT4=	qmake_build moc_build rcc_build uic_build \
 		corelib dbus gui network qtestlib xml
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	${GREP} -H -r "#include <q" ${WRKSRC} | ${CUT} -d: -f1 | uniq | \
