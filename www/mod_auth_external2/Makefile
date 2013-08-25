@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: ports/www/mod_auth_external2/Makefile,v 1.18 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_external2/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_auth_external
 PORTVERSION=	2.2.11
@@ -11,7 +11,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows users authentication based on external mechanisms
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
