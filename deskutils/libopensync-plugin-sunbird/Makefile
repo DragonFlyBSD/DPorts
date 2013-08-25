@@ -2,7 +2,7 @@
 # Date created:				07 October 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/deskutils/libopensync-plugin-sunbird/Makefile,v 1.6 2013/02/20 16:45:21 svnexp Exp $
+# $FreeBSD: deskutils/libopensync-plugin-sunbird/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libopensync-plugin-sunbird
@@ -17,7 +17,6 @@ COMMENT=	Sunbird plugin for the OpenSync framework
 LIB_DEPENDS=	opensync.0:${PORTSDIR}/devel/libopensync022 \
 		neon.27:${PORTSDIR}/www/neon29
 
-MAKE_JOBS_SAFE=	yes
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
