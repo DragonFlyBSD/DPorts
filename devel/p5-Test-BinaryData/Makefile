@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-BinaryData
-# Date created:		2011-12-15
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-BinaryData/Makefile,v 1.2 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-BinaryData/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Test-BinaryData
 PORTVERSION=	0.013
@@ -16,7 +12,8 @@ COMMENT=	Compare two things, give hex dumps if they differ
 
 TEST_DEPENDS=	p5-Test-Tester>=0.10.7:${PORTSDIR}/devel/p5-Test-Tester
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Test::BinaryData.3
 
