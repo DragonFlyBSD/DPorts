@@ -1,4 +1,4 @@
-# $FreeBSD: editors/calligra/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: editors/calligra/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	calligra
 PORTVERSION=	${CALLIGRA_VERSION}
@@ -49,7 +49,6 @@ USE_BZIP2=	yes
 USES=		cmake:outsource pkgconfig iconv
 CMAKE_ARGS=	-DCMAKE_INCLUDE_PATH:STRING="${QT_INCDIR} ${LOCALBASE}/include" \
 		-DIHAVEPATCHEDQT:BOOL=TRUE # To be removed with Qt 4.8.2.
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	GTL MARBLE MYSQL PGSQL SYBASE
