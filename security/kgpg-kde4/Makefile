@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/kgpg-kde4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: security/kgpg-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kgpg
 PORTVERSION=	${KDE4_VERSION}
@@ -20,6 +20,5 @@ USE_XZ=		yes
 USE_KDE4=	kdeprefix kdehier automoc4 kdelibs pimlibs
 USES=		cmake:outsource
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
