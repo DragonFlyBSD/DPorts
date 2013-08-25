@@ -2,7 +2,7 @@
 # Date created:				19 June 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/deskutils/libopensync-plugin-synce-legacy/Makefile,v 1.7 2013/02/20 16:45:21 svnexp Exp $
+# $FreeBSD: deskutils/libopensync-plugin-synce-legacy/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	libopensync-plugin-synce
@@ -18,7 +18,6 @@ COMMENT=	SynCE legacy plugin for the OpenSync framework
 LIB_DEPENDS=	opensync.0:${PORTSDIR}/devel/libopensync022 \
 		rra.0:${PORTSDIR}/palm/synce-librra
 
-MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 libxml2
