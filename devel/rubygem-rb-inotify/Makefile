@@ -1,13 +1,15 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/rubygem-rb-inotify/Makefile,v 1.4 2013/01/30 18:48:25 svnexp Exp $
+# $FreeBSD: devel/rubygem-rb-inotify/Makefile 324886 2013-08-18 06:55:20Z sunpoet $
 
 PORTNAME=	rb-inotify
-PORTVERSION=	0.9.0
+PORTVERSION=	0.9.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby wrapper for libinotify, using ffi
+
+LICENSE=	MIT
 
 LIB_DEPENDS=	inotify:${PORTSDIR}/devel/libinotify
 RUN_DEPENDS=	rubygem-ffi>=0.5.0:${PORTSDIR}/devel/rubygem-ffi
