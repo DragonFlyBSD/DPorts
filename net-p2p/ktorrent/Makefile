@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: net-p2p/ktorrent/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: net-p2p/ktorrent/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	ktorrent
 DISTVERSION=	4.3.1
@@ -21,7 +21,6 @@ USE_QT4=	corelib gui network qt3support qtestlib webkit \
 		qmake_build moc_build rcc_build uic_build
 USES=		cmake:outsource gettext
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS_BUILD=	ktorrent-2*
 
