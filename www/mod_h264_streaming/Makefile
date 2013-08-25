@@ -2,7 +2,7 @@
 # Date created:				May 14, 2009
 # Whom:					Li-Wen Hsu <lwhsu@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_h264_streaming/Makefile,v 1.8 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_h264_streaming/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_h264_streaming
@@ -17,7 +17,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Apache H264 streaming module
 
-MAKE_JOBS_SAFE=	yes
 
 USE_APACHE=	22+
 
