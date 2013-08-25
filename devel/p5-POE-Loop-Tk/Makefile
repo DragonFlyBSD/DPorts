@@ -1,26 +1,22 @@
-# New ports collection makefile for:	p5-POE-Loop-Tk
-# Date created:		2011-10-10
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-POE-Loop-Tk/Makefile,v 1.3 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-POE-Loop-Tk/Makefile 325219 2013-08-22 17:38:50Z sunpoet $
 
 PORTNAME=	POE-Loop-Tk
-PORTVERSION=	1.304
+PORTVERSION=	1.305
 PORTREVISION=	1
 CATEGORIES=	devel tk perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A bridge that allows POE to be driven by Tk
+COMMENT=	Bridge that allows POE to be driven by Tk
 
-BUILD_DEPENDS=	p5-POE>=1.289:${PORTSDIR}/devel/p5-POE \
-		p5-Tk>=804.028:${PORTSDIR}/x11-toolkits/p5-Tk
-RUN_DEPENDS=	p5-POE>=1.289:${PORTSDIR}/devel/p5-POE \
-		p5-Tk>=804.028:${PORTSDIR}/x11-toolkits/p5-Tk
+BUILD_DEPENDS=	p5-POE>=1.356:${PORTSDIR}/devel/p5-POE \
+		p5-Tk>=804.031:${PORTSDIR}/x11-toolkits/p5-Tk
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		POE::Loop::Tk.3 \
 		POE::Loop::TkActiveState.3 \
