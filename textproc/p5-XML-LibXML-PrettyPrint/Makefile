@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-LibXML-PrettyPrint/Makefile 316584 2013-04-26 08:53:01Z sunpoet $
+# $FreeBSD: textproc/p5-XML-LibXML-PrettyPrint/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	XML-LibXML-PrettyPrint
 PORTVERSION=	0.003
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Pragmatic>=0:${PORTSDIR}/devel/p5-Pragmatic \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Warn>=0.20:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		XML::LibXML::PrettyPrint.3
 
