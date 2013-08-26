@@ -1,5 +1,5 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: deskutils/libgcal/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: deskutils/libgcal/Makefile 325281 2013-08-23 21:33:59Z bsam $
 
 PORTNAME=	libgcal
 PORTVERSION=	0.9.6
@@ -13,12 +13,11 @@ COMMENT=	Library allowing communication with Google calendar and contacts
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		iconv:${PORTSDIR}/converters/libiconv \
-		xml2:${PORTSDIR}/textproc/libxml2
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libxml2.so:${PORTSDIR}/textproc/libxml2
 
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake iconv
 CMAKE_ARGS=	-DLIB_INSTALL_DIR="${LOCALBASE}/lib" \
 		-DENABLE_TESTS=OFF
 USE_LDCONFIG=	yes
