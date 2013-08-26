@@ -1,10 +1,10 @@
-# $FreeBSD: net/sdl2_net/Makefile 322381 2013-07-06 10:27:53Z mva $
+# $FreeBSD: net/sdl2_net/Makefile 324741 2013-08-14 17:23:35Z mva $
 
 PORTNAME=	sdl2_net
-PORTVERSION=	2.0.p2
+PORTVERSION=	2.0.0
 CATEGORIES=	net
-MASTER_SITES=	http://www.libsdl.org/tmp/SDL_net/release/
-DISTNAME=	SDL2_net-2.0.0
+MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
+DISTNAME=	SDL2_net-${PORTVERSION}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	A small sample cross-platform networking library
