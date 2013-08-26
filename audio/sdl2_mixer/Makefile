@@ -1,10 +1,10 @@
-# $FreeBSD: audio/sdl2_mixer/Makefile 322378 2013-07-06 10:25:32Z mva $
+# $FreeBSD: audio/sdl2_mixer/Makefile 324741 2013-08-14 17:23:35Z mva $
 
 PORTNAME=	sdl2_mixer
-PORTVERSION=	2.0.p2
+PORTVERSION=	2.0.0
 CATEGORIES=	audio
-MASTER_SITES=	http://www.libsdl.org/tmp/SDL_mixer/release/
-DISTNAME=	SDL2_mixer-2.0.0
+MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
+DISTNAME=	SDL2_mixer-${PORTVERSION}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	A sample multi-channel audio mixer library
