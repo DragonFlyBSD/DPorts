@@ -8,7 +8,7 @@
 PORTNAME=	xbl
 PORTVERSION=	1.1.6
 CATEGORIES=	games
-MASTER_SITES=	http://www710.univ-lyon1.fr/~exco/XBL/
+MASTER_SITES=	http://perso.univ-lyon1.fr/thierry.excoffier/XBL/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A 3D block-dropping game
