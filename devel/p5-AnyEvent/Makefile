@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-AnyEvent/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-AnyEvent/Makefile 325313 2013-08-24 20:41:19Z sunpoet $
 
 PORTNAME=	AnyEvent
-PORTVERSION=	7.04
+PORTVERSION=	7.05
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
