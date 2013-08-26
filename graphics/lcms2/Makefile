@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/lcms2/Makefile 322609 2013-07-10 03:41:06Z sunpoet $
+# $FreeBSD: graphics/lcms2/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	lcms2
 PORTVERSION=	2.5
@@ -52,10 +52,10 @@ PLIST_SUB+=	TIFFICC="@comment "
 .endif
 
 post-patch:
-.if empty(PORT_OPTIONS:MJPEGICC)
+.if !${PORT_OPTIONS:MJPEGICC}
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| utils/jpgicc||' ${WRKSRC}/Makefile.in
 .endif
-.if empty(PORT_OPTIONS:MTIFFICC)
+.if !${PORT_OPTIONS:MTIFFICC}
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| utils/tificc||' ${WRKSRC}/Makefile.in
 .endif
 
