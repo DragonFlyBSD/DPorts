@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-Marpa-PP
-# Date created:		2011-10-25
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: lang/p5-Marpa-PP/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: lang/p5-Marpa-PP/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Marpa-PP
 PORTVERSION=	0.014
+PORTREVISION=	1
 CATEGORIES=	lang textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JKEGL
@@ -16,15 +13,16 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}000
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure Perl version of Marpa
 
-BUILD_DEPENDS=	p5-PPI>=1.206:${PORTSDIR}/textproc/p5-PPI \
-		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
-BUILD_DEPENDS=	p5-PPI>=1.206:${PORTSDIR}/textproc/p5-PPI \
-		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
+LICENSE=	LGPL3
 
+BUILD_DEPENDS=	p5-PPI>=1.206:${PORTSDIR}/textproc/p5-PPI \
+		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Weaken>=3.004000:${PORTSDIR}/devel/p5-Test-Weaken
 
 # PERL_CONFIGURE failed on Perl 5.12.4
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
+USES=		perl5
 
 MAN3=		Marpa::PP.3 \
 		Marpa::PP::Advanced::Bibliography.3 \
