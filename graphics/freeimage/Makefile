@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: graphics/freeimage/Makefile 324091 2013-08-01 06:35:28Z bapt $
+# $FreeBSD: graphics/freeimage/Makefile 325385 2013-08-26 10:36:29Z bapt $
 
 PORTNAME=	freeimage
 PORTVERSION=	3.15.4
@@ -42,10 +42,10 @@ post-patch:
 		${WRKSRC}/Makefile.gnu ${WRKSRC}/Makefile.fip
 
 post-build:
-	cd ${WRKSRC} && ${GMAKE} -f Makefile.fip
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f Makefile.fip ${_MAKE_JOBS} ${MAKE_ARGS}
 
 post-install:
-	cd ${WRKSRC} && ${GMAKE} -f Makefile.fip ${INSTALL_TARGET}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f Makefile.fip ${MAKE_ARGS} ${INSTALL_TARGET}
 	${LN} -s libfreeimageplus-${PORTVERSION}.so.3 ${PREFIX}/lib/libfreeimageplus.so
 	${LN} -s libfreeimageplus-${PORTVERSION}.so ${PREFIX}/lib/libfreeimageplus.so.3
 
