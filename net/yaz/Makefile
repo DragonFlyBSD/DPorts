@@ -1,15 +1,15 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: net/yaz/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/yaz/Makefile 325287 2013-08-24 08:53:25Z pawel $
 
 PORTNAME=	yaz
-PORTVERSION=	4.2.62
+PORTVERSION=	4.2.65
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
 MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	Z39.50/SR client and API library
 
-LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu
+LIB_DEPENDS=	libicuuc.so:${PORTSDIR}/devel/icu
 
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
