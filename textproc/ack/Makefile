@@ -1,8 +1,8 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/ack/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/ack/Makefile 325266 2013-08-23 13:52:23Z mat $
 
 PORTNAME=	ack
-PORTVERSION=	2.04
+PORTVERSION=	2.08
 CATEGORIES=	textproc perl5 sysutils
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	App
