@@ -1,7 +1,7 @@
-# $FreeBSD: net/ranch/Makefile 318907 2013-05-23 20:31:42Z olgeni $
+# $FreeBSD: net/ranch/Makefile 325376 2013-08-26 08:29:46Z olgeni $
 
 PORTNAME=	ranch
-PORTVERSION=	0.8.3
+PORTVERSION=	0.8.5
 CATEGORIES=	net
 MASTER_SITES=	GH
 
@@ -17,7 +17,7 @@ USE_GMAKE=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	extend
 GH_PROJECT=	ranch
-GH_COMMIT=	53be20d
+GH_COMMIT=	4170575
 GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
