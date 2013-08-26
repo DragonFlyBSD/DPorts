@@ -1,10 +1,11 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: misc/pinfo/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: misc/pinfo/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	pinfo
 PORTVERSION=	0.6.10
 CATEGORIES=	misc
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/file/3351/
+MASTER_SITES=	http://spout.ussg.indiana.edu/linux/gentoo/distfiles/ \
+		http://ftp.yellowdoglinux.com/.2/gentoo/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ncurses based, lynx style info documentation browser
@@ -21,7 +22,6 @@ LIBTOOLIZE_ARGS=--force
 ACLOCAL_ARGS=	-I macros
 AUTOMAKE_ARGS=	--add-missing --force-missing
 CONFIGURE_ARGS=	--with-localedir=${PREFIX}/share/locale
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
