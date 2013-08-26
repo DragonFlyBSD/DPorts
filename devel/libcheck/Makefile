@@ -1,5 +1,5 @@
 # Created by: mikeh@FreeBSD.org
-# $FreeBSD: devel/libcheck/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: devel/libcheck/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	libcheck
 PORTVERSION=	0.9.10
@@ -33,10 +33,10 @@ post-patch:
 		-e '/^exampledir = / s|(docdir)/example|(datadir)/examples/${PORTNAME}|' \
 		-e '/^example[a-z]*dir = / s|(docdir)/example/|(exampledir)/|' \
 			${WRKSRC}/doc/Makefile.in
-.if empty(PORT_OPTIONS:MDOCS)
+.if !${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^install-data-am:/ s| install-docDATA||' ${WRKSRC}/Makefile.in
 .endif
-.if empty(PORT_OPTIONS:MEXAMPLES)
+.if !${PORT_OPTIONS:MEXAMPLES}
 	@${REINPLACE_CMD} \
 		-e '/^install-data-am:/ s| install-exampleDATA install-examplesrcDATA||' \
 		-e 's|install-exampletestsDATA ||' \
