@@ -1,5 +1,5 @@
 # Created by: J.F. Dockes
-# $FreeBSD: databases/xapian-core/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: databases/xapian-core/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	xapian-core
 PORTVERSION=	1.2.15
@@ -33,12 +33,12 @@ MAN1=		xapian-check.1 \
 
 .include <bsd.port.options.mk>
 
-.if empty(PORT_OPTIONS:MSSE2)
+.if !${PORT_OPTIONS:MSSE2}
 CONFIGURE_ARGS+=--disable-sse
 .endif
 
 post-patch:
-.if empty(PORT_OPTIONS:MDOCS)
+.if !${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| docs||' ${WRKSRC}/Makefile.in
 .endif
 
