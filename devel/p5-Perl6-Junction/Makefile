@@ -1,8 +1,8 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl6-Junction/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Perl6-Junction/Makefile 325364 2013-08-25 16:39:39Z sunpoet $
 
 PORTNAME=	Perl6-Junction
-PORTVERSION=	1.50000
+PORTVERSION=	1.60000
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,6 +16,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Perl6::Junction.3
+MAN3=		Perl6::Junction.3
 
 .include <bsd.port.mk>
