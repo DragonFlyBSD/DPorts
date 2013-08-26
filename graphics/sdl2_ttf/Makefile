@@ -1,10 +1,10 @@
-# $FreeBSD: graphics/sdl2_ttf/Makefile 322380 2013-07-06 10:26:33Z mva $
+# $FreeBSD: graphics/sdl2_ttf/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	sdl2_ttf
-PORTVERSION=	2.0.p2
+PORTVERSION=	2.0.12
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.libsdl.org/tmp/SDL_ttf/release/
-DISTNAME=	SDL2_ttf-2.0.12
+MASTER_SITES=	http://www.libsdl.org/projects/SDL_ttf/release/
+DISTNAME=	SDL2_ttf-${PORTVERSION}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	A library to use TrueType fonts to render text in SDL applications
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	OPENGL
 
