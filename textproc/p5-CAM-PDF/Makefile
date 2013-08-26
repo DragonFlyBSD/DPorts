@@ -1,11 +1,10 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-CAM-PDF/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-CAM-PDF/Makefile 325268 2013-08-23 13:52:50Z mat $
 
 PORTNAME=	CAM-PDF
-PORTVERSION=	1.59
+PORTVERSION=	1.60
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:CDOLAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -17,7 +16,6 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Crypt-RC4>=2.02:${PORTSDIR}/security/p5-Crypt-RC4 \
 		p5-Text-PDF>=0.29:${PORTSDIR}/print/p5-Text-PDF
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Memory-Cycle>=1.02:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 		p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
