@@ -1,8 +1,7 @@
-# $FreeBSD: devel/pkgconf/Makefile 317130 2013-05-02 15:47:15Z bapt $
+# $FreeBSD: devel/pkgconf/Makefile 325278 2013-08-23 19:35:53Z bapt $
 
 PORTNAME=	pkgconf
-PORTVERSION=	0.9.2
-PORTREVISION=	1
+PORTVERSION=	0.9.3
 CATEGORIES=	devel
 MASTER_SITES=	http://rabbit.dereferenced.org/~nenolod/distfiles/ \
 		http://files.etoilebsd.net/pkgconf/
