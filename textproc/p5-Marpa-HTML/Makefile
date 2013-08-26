@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Marpa-HTML/Makefile 319033 2013-05-25 08:13:20Z sunpoet $
+# $FreeBSD: textproc/p5-Marpa-HTML/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Marpa-HTML
 PORTVERSION=	0.112
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=3.64:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-Marpa-XS>=0.026:${PORTSDIR}/lang/p5-Marpa-XS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		html_fmt.1 \
 		html_score.1
