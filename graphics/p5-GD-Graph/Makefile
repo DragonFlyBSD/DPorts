@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: graphics/p5-GD-Graph/Makefile 325136 2013-08-21 14:16:57Z mat $
+# $FreeBSD: graphics/p5-GD-Graph/Makefile 325332 2013-08-25 09:05:35Z az $
 
 PORTNAME=	GD-Graph
 PORTVERSION=	1.48
@@ -25,4 +25,10 @@ MAN3=		GD::Graph.3 \
 		GD::Graph::colour.3 \
 		GD::Graph::hbars.3
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501400
+BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.58:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
+.endif
+
+.include <bsd.port.post.mk>
