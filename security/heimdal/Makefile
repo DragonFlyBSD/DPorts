@@ -33,6 +33,7 @@ USE_OPENSSL=	yes
 USES=		gettext
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS+=	--with-libintl=${LOCALBASE} \
 			--with-readline=${DESTDIR}/usr \
 			--enable-pthread-support \
