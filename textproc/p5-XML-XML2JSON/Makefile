@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-XML2JSON/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-XML-XML2JSON/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	XML-XML2JSON
 PORTVERSION=	0.06
@@ -31,7 +31,7 @@ MAN3=		XML::XML2JSON.3
 
 .include <bsd.port.options.mk>
 
-.if empty(PORT_OPTIONS:MJSON_SYCK) && empty(PORT_OPTIONS:MJSON_XS) && empty(PORT_OPTIONS:MJSON) && empty(PORT_OPTIONS:MJSON_DWIW)
+.if !${PORT_OPTIONS:MJSON_SYCK} && !${PORT_OPTIONS:MJSON_XS} && !${PORT_OPTIONS:MJSON} && !${PORT_OPTIONS:MJSON_DWIW}
 IGNORE=		you must choose at least one JSON module
 .endif
 
