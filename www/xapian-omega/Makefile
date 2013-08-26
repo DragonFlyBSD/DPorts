@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-# $FreeBSD: www/xapian-omega/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: www/xapian-omega/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	xapian-omega
 PORTVERSION=	1.2.15
@@ -50,7 +50,7 @@ post-patch:
 		-e '/^dist_sysconf_DATA = /d' \
 		-e '/^pkglibbindir = / s| = .*$$| = ${WWWDIR}/cgi-bin|' \
 			${WRKSRC}/Makefile.in
-.if empty(PORT_OPTIONS:MDOCS)
+.if !${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| docs||' ${WRKSRC}/Makefile.in
 .endif
 
