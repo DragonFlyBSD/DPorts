@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/shebangfix.mk 320453 2013-06-10 10:18:59Z bapt $
+# $FreeBSD: Mk/Uses/shebangfix.mk 325357 2013-08-25 16:14:28Z mva $
 #
 # common templates for replacing #! interpreters in scripts file
 #
@@ -19,7 +19,7 @@
 #
 # To override a definition for example replacing /usr/bin/perl by /usr/bin/env perl
 # add to the port Makefile:
-# perl_CMD=	${SENTENV} perl
+# perl_CMD=	${SETENV} perl
 #
 
 .if !defined(_INCLUDE_USES_SHEBANGFIX_Mk)

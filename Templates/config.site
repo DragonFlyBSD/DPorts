@@ -1,4 +1,4 @@
-# $FreeBSD: Templates/config.site 319483 2013-05-31 10:53:04Z bdrewery $
+# $FreeBSD: Templates/config.site 325279 2013-08-23 19:49:11Z bapt $
 # Path
 : ${ac_cv_path_GZIP=/usr/bin/gzip}
 : ${ac_cv_path_BZIP2=/usr/bin/bzip2}
@@ -198,6 +198,8 @@
 : ${ac_cv_func_mkdtemp=yes}
 : ${ac_cv_func_memset=yes}
 : ${ac_cv_func_strftime=yes}
+: ${ac_cv_func_getgid=yes}
+: ${ac_cv_func_getuid=yes}
 : ${ac_cv_func_getegid=yes}
 : ${ac_cv_func_geteuid=yes}
 : ${ac_cv_func_stpcpy=yes}
@@ -216,6 +218,7 @@
 : ${ac_cv_func_mbrtowc=yes}
 : ${ac_cv_func_wcrtomb=yes}
 : ${ac_cv_func_readlink=yes}
+: ${ac_cv_func_readlinkat=yes}
 : ${ac_cv_func_realpath=yes}
 : ${ac_cv_func_lstat=yes}
 : ${ac_cv_func_mbsinit=yes}
@@ -277,6 +280,9 @@
 : ${ac_cv_func_wcslen=yes}
 : ${ac_cv_func_wcsnlen=yes}
 : ${ac_cv_func_wcwidth=yes}
+: ${ac_cv_func_strlcpy=yes}
+: ${ac_cv_func_strlcat=yes}
+: ${ac_cv_func_towlower=yes}
 
 # non existing functions
 : ${ac_cv_func_yield=no}

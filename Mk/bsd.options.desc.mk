@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 322819 2013-07-12 08:11:42Z sunpoet $
+# $FreeBSD: Mk/bsd.options.desc.mk 325306 2013-08-24 19:34:07Z sunpoet $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -69,7 +69,7 @@ ECW_DESC?=		ECW image format support
 ESOUND_DESC?=		EsounD sound server support
 EXAMPLES_DESC?=		Build and/or install examples
 EXIV2_DESC?=		EXIF and IPTC metadata support via exiv2
-EXPAT_DESC?=		Expat XML parser support
+EXPAT_DESC?=		XML parser support via Expat
 FAAC_DESC?=		FAAC AAC encoder support
 FAAD_DESC?=		FAAD AAC decoder support
 FAM_DESC?=		File Alteration Monitor support
@@ -273,6 +273,7 @@ LIBVISUAL_DESC?=	Audio visualisation support via libvisual
 LIBWMF_DESC?=		libwmf support
 LIBWRAP_DESC?=		TCP wrapper support
 LIBXINE_DESC?=		libxine support
+LIBXML2_DESC?=		XML parser support via libxml2
 LIGHTTPD_DESC?=		Lighttpd server support
 LIRC_DESC?=		Infrared remote control support
 LITE_DESC?=		Reduced features or memory footprint
@@ -452,7 +453,7 @@ X11_DESC?=		X11 (graphics) support
 X264_DESC?=		H.264 video codec support via x264
 XALAN_DESC?=		Xalan XSLT processor support
 XCURSOR_DESC?=		Cursor themes support
-XERCES_DESC?=		Xerces XML parser support
+XERCES_DESC?=		XML parser support via Xerces
 XFT_DESC?=		Xft font library support
 XINE_DESC?=		Multimedia support via Xine
 XINERAMA_DESC?=		X11 Xinerama extension support

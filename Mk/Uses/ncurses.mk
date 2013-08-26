@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/ncurses.mk 321369 2013-06-20 09:57:54Z bapt $
+# $FreeBSD: Mk/Uses/ncurses.mk 325363 2013-08-25 16:38:15Z rakuco $
 #
 # handle dependency on the ncurses port
 #
@@ -14,7 +14,7 @@
 # Overridable defaults:
 # NCURSES_PORT=	devel/ncurses
 #
-# The makefile sets this variables:
+# The makefile sets the following variables:
 # NCURSESBASE		- "/usr" or ${LOCALBASE}
 # NCURSESLIB		- path to the libs
 # NCURSESINC		- path to the matching includes

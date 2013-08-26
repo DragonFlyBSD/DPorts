@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 325021 2013-08-19 21:25:34Z sbz $
+# $FreeBSD: Mk/bsd.sites.mk 325340 2013-08-25 12:21:15Z koobs $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -134,8 +134,6 @@ MASTER_SITE_CHEESESHOP+= \
 	http://f.pypi.python.org/packages/%SUBDIR%/ \
 	http://g.pypi.python.org/packages/%SUBDIR%/ \
 	http://pypi.crate.io/packages/%SUBDIR%/ \
-	http://pypi.inqbus.de/${DISTNAME:S/${DISTVERSION}//:S/-//}/ \
-	http://pypi.it.uwosh.edu/${DISTNAME:S/${DISTVERSION}//:S/-//}/ \
 	http://pypi.python.jp/${DISTNAME:S/${DISTVERSION}//:S/-//}/
 .endif
 

@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 324921 2013-08-18 14:46:41Z mva $
+# $FreeBSD: Mk/bsd.python.mk 325330 2013-08-25 08:12:59Z mva $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -80,6 +80,9 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #					  format "python2.0". Set this in your makefile in case you
 #					  want to build extensions with an older binary.
 #					  default: depends on the version of your python binary
+#
+# PYTHON_VER		- Version of the python binary in your ${PATH}, in the
+#					  format "2.7".
 #
 # PYTHON_DEFAULT_VERSION
 #					- Version of the default python binary in your ${PATH}, in
