@@ -1,9 +1,8 @@
-# Ports collection makefile for:	p5-WWW-Scraper-ISBN-Driver
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: www/p5-WWW-Scraper-ISBN-Driver/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Scraper-ISBN-Driver/Makefile 325379 2013-08-26 09:35:23Z jadawin $
 
 PORTNAME=	WWW-Scraper-ISBN-Driver
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
