@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Marpa-XS
-# Date created:		2011-10-25
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: lang/p5-Marpa-XS/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: lang/p5-Marpa-XS/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Marpa-XS
 PORTVERSION=	1.008000
@@ -15,6 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XS version of Marpa
 
+LICENSE=	LGPL3
+
 BUILD_DEPENDS=	p5-ExtUtils-CBuilder>=0.27:${PORTSDIR}/devel/p5-ExtUtils-CBuilder \
 		p5-ExtUtils-PkgConfig>=0:${PORTSDIR}/devel/p5-ExtUtils-PkgConfig \
 		p5-Glib2>=1.223:${PORTSDIR}/devel/p5-Glib2 \
@@ -24,10 +22,10 @@ RUN_DEPENDS=	p5-ExtUtils-PkgConfig>=0:${PORTSDIR}/devel/p5-ExtUtils-PkgConfig \
 		p5-Glib2>=1.223:${PORTSDIR}/devel/p5-Glib2 \
 		p5-PPI>=1.206:${PORTSDIR}/textproc/p5-PPI \
 		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
-
 TEST_DEPENDS=	p5-Test-Weaken>=3.004000:${PORTSDIR}/devel/p5-Test-Weaken
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Marpa::XS.3 \
 		Marpa::XS::Advanced::Bibliography.3 \
