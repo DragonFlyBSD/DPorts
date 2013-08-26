@@ -1,16 +1,16 @@
 # Created by: Yarema <yds@CoolRat.org>
-# $FreeBSD: devel/sysconftool/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/sysconftool/Makefile 325386 2013-08-26 11:00:44Z garga $
 
 PORTNAME=	sysconftool
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	devel
 MASTER_SITES=	SF/courier/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Helps to install application configuration files
 
+USES=		perl5
 USE_BZIP2=	yes
-USE_PERL5=	yes
 HAS_CONFIGURE=	yes
 
 USE_AUTOTOOLS=	automake aclocal autoconf
