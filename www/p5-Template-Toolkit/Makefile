@@ -1,8 +1,8 @@
 # Created by: clive
-# $FreeBSD: www/p5-Template-Toolkit/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Template-Toolkit/Makefile 325338 2013-08-25 11:50:03Z az $
 
 PORTNAME=	Template-Toolkit
-PORTVERSION=	2.24
+PORTVERSION=	2.25
 CATEGORIES=	www textproc perl5
 MASTER_SITES=	CPAN \
 		http://www.template-toolkit.org/download/
@@ -13,7 +13,6 @@ COMMENT=	Extensive Toolkit for template processing
 
 BUILD_DEPENDS=	p5-AppConfig>=1.56:${PORTSDIR}/devel/p5-AppConfig
 RUN_DEPENDS=	p5-AppConfig>=1.56:${PORTSDIR}/devel/p5-AppConfig
-
 TEST_DEPENDS=	p5-Image-Size>=0:${PORTSDIR}/graphics/p5-Image-Size \
 		p5-Pod-POM>=0:${PORTSDIR}/textproc/p5-Pod-POM
 
