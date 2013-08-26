@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/kyotocabinet/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: databases/kyotocabinet/Makefile 325351 2013-08-25 16:12:33Z sunpoet $
 
 PORTNAME=	kyotocabinet
 PORTVERSION=	1.2.76
@@ -16,7 +16,6 @@ OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	PCDIR="${PREFIX}/libdata/pkgconfig"
-USE_GCC=	4.2+
 USE_LDCONFIG=	yes
 USES=		gmake
 
@@ -53,7 +52,7 @@ BROKEN=		Does not link on powerpc
 .endif
 
 post-patch:
-.if empty(PORT_OPTIONS:MDOCS)
+.if !${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/DOCDIR/d' ${WRKSRC}/Makefile.in
 .endif
 
