@@ -1,5 +1,5 @@
 # Created by: timur@FreeBSD.org
-# $FreeBSD: net/samba4/Makefile 324368 2013-08-07 23:03:25Z timur $
+# $FreeBSD: net/samba4/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME?=		${SAMBA4_PORTNAME}
 PORTVERSION?=		${SAMBA4_VERSION}
@@ -16,7 +16,6 @@ LICENSE=		GPLv3
 
 CONFLICTS?=		*samba3[2-6]-3.*
 
-MAKE_JOBS_SAFE=		yes
 
 SAMBA4_BASENAME=	samba
 SAMBA4_PORTNAME=	${SAMBA4_BASENAME}4
