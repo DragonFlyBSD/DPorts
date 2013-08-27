@@ -1,8 +1,8 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: lang/basic256/Makefile 316570 2013-04-26 06:31:53Z miwi $
+# $FreeBSD: lang/basic256/Makefile 325334 2013-08-25 09:14:39Z vg $
 
 PORTNAME=	basic256
-PORTVERSION=	0.9.9.58
+PORTVERSION=	0.9.9.64
 CATEGORIES=	lang
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	kidbasic/${PORTNAME}
@@ -23,6 +23,8 @@ USE_SDL=	sdl mixer
 USE_QT4=	corelib gui network xml webkit moc_build qmake_build rcc_build uic_build
 USE_DOS2UNIX=	yes
 HAS_CONFIGURE=	yes
+
+MAKE_JOBS_UNSAFE=yes
 
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
