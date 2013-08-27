@@ -1,8 +1,8 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: security/pinentry-gtk2/Makefile 322559 2013-07-09 13:37:13Z makc $
+# $FreeBSD: security/pinentry-gtk2/Makefile 325273 2013-08-23 16:12:31Z makc $
 
 PORTNAME=	pinentry
-PORTREVISION=	3
+PORTREVISION=	0
 
 COMMENT=	GTK+ 2.0 version of the GnuPG password dialog
 
