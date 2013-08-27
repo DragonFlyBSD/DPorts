@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/dparser/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/dparser/Makefile 325391 2013-08-26 12:21:32Z gahr $
 
 PORTNAME=	dparser
 PORTVERSION=	1.30
@@ -16,7 +16,7 @@ BOEHM_DESC=	Boehm garbage collector support
 WRKSRC=		${WRKDIR}/d
 
 EXTRACT_AFTER_ARGS=	--exclude "*my*"
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CC="${CC}" D_OPTIMIZE= PREFIX=${PREFIX}
 
 MAN1=		make_dparser.1
