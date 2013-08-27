@@ -1,8 +1,9 @@
 # Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-# $FreeBSD: devel/py-jira/Makefile 324370 2013-08-07 23:34:55Z wg $
+# $FreeBSD: devel/py-jira/Makefile 325354 2013-08-25 16:13:49Z olgeni $
 
 PORTNAME=	jira
 PORTVERSION=	0.13
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ COMMENT=	Library to ease use of the JIRA 5 REST APIs
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=1.0.0:${PORTSDIR}/www/py-requests \
 		${PYTHON_PKGNAMEPREFIX}requests-oauthlib>=0.3.0:${PORTSDIR}/www/py-requests-oauthlib \
-		ipython${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/devel/ipython \
+		${PYTHON_PKGNAMEPREFIX}ipython>=0:${PORTSDIR}/devel/ipython \
 		${PYTHON_PKGNAMEPREFIX}tlslite>=0.4.1:${PORTSDIR}/security/py-tlslite \
 		${PYTHON_PKGNAMEPREFIX}pycrypto>=0:${PORTSDIR}/security/py-pycrypto
 
