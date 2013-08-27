@@ -1,9 +1,9 @@
 # Created by: Dmitry Frolov <frol@nov.net>
-# $FreeBSD: sysutils/ipmitool/Makefile 317682 2013-05-08 15:36:00Z sunpoet $
+# $FreeBSD: sysutils/ipmitool/Makefile 325311 2013-08-24 20:39:45Z sunpoet $
 
 PORTNAME=	ipmitool
 PORTVERSION=	1.8.12
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	SF
 
