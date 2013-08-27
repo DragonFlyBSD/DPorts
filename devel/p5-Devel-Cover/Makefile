@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-Cover/Makefile 325207 2013-08-22 15:22:18Z sunpoet $
+# $FreeBSD: devel/p5-Devel-Cover/Makefile 325337 2013-08-25 11:30:23Z az $
 
 PORTNAME=	Devel-Cover
-PORTVERSION=	1.07
+PORTVERSION=	1.08
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
