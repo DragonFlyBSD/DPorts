@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXtrans/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXtrans/Makefile 325381 2013-08-26 10:07:01Z zeising $
 
 PORTNAME=	libXtrans
 PORTVERSION=	0.1
@@ -9,6 +9,11 @@ MASTER_SITES=	http://xlibs.freedesktop.org/release/
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Network API translation layer for X applications and libraries
+
+CONFLICTS=	xtrans
+
+DEPRECATED=	Project is obsoleted, use x11/xtrans instead
+EXPIRATION_DATE=2013-09-26
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
