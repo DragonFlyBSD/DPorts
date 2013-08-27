@@ -1,26 +1,24 @@
-# Created by: vanilla@
-# $FreeBSD: devel/spdict/Makefile 324697 2013-08-14 11:08:04Z marino $
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
+# $FreeBSD: devel/spdict/Makefile 325296 2013-08-24 12:50:39Z danfe $
 
 PORTNAME=	spdict
 PORTVERSION=	0.3
 PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
 
 MAINTAINER=	vanilla@FreeBSD.org
-COMMENT=	A library of dictionary algorithms
+COMMENT=	Library of dictionary algorithms
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_LDCONFIG=	yes
 USES=		gmake
 
-MAKE_JOBS_UNSAFE=yes
-
 do-install:
 	@${MKDIR} ${PREFIX}/include/spdict
-	@${INSTALL} ${WRKSRC}/*.hpp ${PREFIX}/include/spdict
-	@${INSTALL} ${WRKSRC}/libspdict.so ${PREFIX}/lib/libspdict.so.1
-	@${LN} -s ${PREFIX}/lib/libspdict.so.1 ${PREFIX}/lib/libspdict.so
+	${INSTALL_DATA} ${WRKSRC}/*.hpp ${PREFIX}/include/spdict
+	${INSTALL_DATA} ${WRKSRC}/libspdict.so ${PREFIX}/lib/libspdict.so.1
+	${LN} -s libspdict.so.1 ${PREFIX}/lib/libspdict.so
 
 .include <bsd.port.mk>
