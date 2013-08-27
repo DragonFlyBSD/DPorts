@@ -1,5 +1,5 @@
 # Created by: SADA Kenji <sada@FreeBSD.org>
-# $FreeBSD: japanese/w3m/Makefile 325211 2013-08-22 16:30:42Z nobutaka $
+# $FreeBSD: japanese/w3m/Makefile 325261 2013-08-23 12:30:16Z nobutaka $
 
 CATEGORIES=	japanese
 
@@ -10,7 +10,7 @@ MASTERDIR=	${.CURDIR}/../../www/w3m
 PKGDIR=		${.CURDIR}
 PLIST=		${MASTERDIR}/pkg-plist
 
-OPTIONS_OVERRIDE=	DOCS JAPANESE
+OPTIONS_SLAVE=	DOCS JAPANESE
 NO_DIALOG=	yes
 CONFLICTS=	ja-w3m-img-0.5.* w3m-0.5.* w3m-img-0.5.*
 
