@@ -1,7 +1,7 @@
-# $FreeBSD: security/pinentry-qt4/Makefile 322559 2013-07-09 13:37:13Z makc $
+# $FreeBSD: security/pinentry-qt4/Makefile 325273 2013-08-23 16:12:31Z makc $
 
 PORTNAME=	pinentry
-PORTREVISION=	3
+PORTREVISION=	0
 
 COMMENT=	Qt 4 version of the gnupg password dialog
 
