@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Code2000
-# Date created:		6 Dec 2003
-# Whom:			Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/x11-fonts/code2000/Makefile,v 1.16 2012/11/17 06:03:27 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: x11-fonts/code2000/Makefile 325390 2013-08-26 12:07:39Z thierry $
 
 PORTNAME=	code2000
 PORTVERSION=	1.171

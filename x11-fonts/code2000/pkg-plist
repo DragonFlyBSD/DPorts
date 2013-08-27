@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11-fonts/code2000/pkg-plist,v 1.7 2012/11/17 06:03:27 svnexp Exp $
+@comment $FreeBSD: x11-fonts/code2000/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%FONTSDIR%%/code2000.html
 %%FONTSDIR%%/code2000.ttf
 %%FONTSDIR%%/fonts.dir
