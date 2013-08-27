@@ -1,8 +1,8 @@
 # Created by: Oleg Sidorkin <osidorkin@gmail.com>
-# $FreeBSD: www/xpi-flagfox/Makefile 306625 2012-10-29 17:49:54Z flo $
+# $FreeBSD: www/xpi-flagfox/Makefile 325265 2013-08-23 13:47:12Z wg $
 
 PORTNAME=	flagfox
-PORTVERSION=	4.2.2
+PORTVERSION=	4.2.11
 DISTVERSIONSUFFIX=	-sm+fx
 CATEGORIES=	www
 
