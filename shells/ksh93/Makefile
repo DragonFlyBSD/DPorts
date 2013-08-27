@@ -1,4 +1,4 @@
-# $FreeBSD: shells/ksh93/Makefile 324455 2013-08-09 19:01:58Z sunpoet $
+# $FreeBSD: shells/ksh93/Makefile 325331 2013-08-25 08:20:14Z sunpoet $
 
 # Make sure that your configuration DOES NOT set ANY gcc-related
 # variables.  ksh93 will not compile if you set even the seemingly
@@ -23,7 +23,7 @@ COMMENT=	Official AT&T release of KornShell 93
 
 LICENSE=	EPL
 
-OPTIONS_DEFINE=	STATIC
+OPTIONS_DEFINE=	EXAMPLES STATIC
 
 FETCH_ARGS=	-Rr
 FETCH_ENV=	HTTP_AUTH='basic:*:I accept www.opensource.org/licenses/cpl:.'
@@ -52,7 +52,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/ksh ${PREFIX}/bin/ksh93
 	${INSTALL_MAN} ${WRKSRC}/man/man1/sh.1 ${MAN1PREFIX}/man/man1/ksh93.1
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}/
 	cd ${WRKSRC}/fun/ && ${INSTALL_SCRIPT} dirs popd pushd ${EXAMPLESDIR}/
 .endif
