@@ -1,8 +1,8 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: security/pinentry-curses/Makefile 322559 2013-07-09 13:37:13Z makc $
+# $FreeBSD: security/pinentry-curses/Makefile 325273 2013-08-23 16:12:31Z makc $
 
 PORTNAME=	pinentry
-PORTREVISION=	3
+PORTREVISION=	0
 
 COMMENT=	Curses version of the gnupg password dialog
 
