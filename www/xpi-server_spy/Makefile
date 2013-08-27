@@ -1,8 +1,8 @@
 # Created by: Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: www/xpi-server_spy/Makefile 319042 2013-05-25 10:02:45Z bar $
+# $FreeBSD: www/xpi-server_spy/Makefile 325303 2013-08-24 16:58:28Z bar $
 
 PORTNAME=	server_spy
-PORTVERSION=	0.2.2
+PORTVERSION=	0.2.3
 DISTVERSIONSUFFIX=	-fx
 CATEGORIES=	www
 
