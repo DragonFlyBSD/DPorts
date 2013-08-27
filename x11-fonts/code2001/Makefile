@@ -1,15 +1,11 @@
-# New ports collection makefile for:	Code2001
-# Date created:		10 May 2008
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/code2001/Makefile,v 1.3 2012/11/17 06:03:27 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: x11-fonts/code2001/Makefile 325384 2013-08-26 10:33:05Z marino $
 
 PORTNAME=	code2001
 PORTVERSION=	0.919
 CATEGORIES=	x11-fonts
 MASTER_SITES=	CENKES/myports/${DIST_SUBDIR}
-DISTFILES=	${PORTNAME:tu}${EXTRACT_SUFX:tu}
+DISTFILES=	CODE2001.ZIP
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
