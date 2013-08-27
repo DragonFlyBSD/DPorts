@@ -1,9 +1,9 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-devel/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-p2p/libtorrent-devel/Makefile 325348 2013-08-25 15:17:18Z az $
 
 PORTNAME=	libtorrent-devel
 PORTVERSION=	0.13.3
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	http://libtorrent.rakshasa.no/downloads/
 DISTNAME=	${PORTNAME:S/-devel//}-${PORTVERSION}
