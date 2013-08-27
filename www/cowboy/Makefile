@@ -1,7 +1,7 @@
-# $FreeBSD: www/cowboy/Makefile 318909 2013-05-23 20:53:11Z olgeni $
+# $FreeBSD: www/cowboy/Makefile 325377 2013-08-26 08:30:29Z olgeni $
 
 PORTNAME=	cowboy
-PORTVERSION=	0.8.4
+PORTVERSION=	0.8.6
 CATEGORIES=	www
 MASTER_SITES=	GH
 
@@ -18,7 +18,7 @@ USE_GMAKE=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	extend
 GH_PROJECT=	cowboy
-GH_COMMIT=	46b2ea0
+GH_COMMIT=	9eaee45
 GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
