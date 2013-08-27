@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Search/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Search/Makefile 325269 2013-08-23 13:52:54Z jadawin $
 
 PORTNAME=	WWW-Search
-PORTVERSION=	2.509
+PORTVERSION=	2.511
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
