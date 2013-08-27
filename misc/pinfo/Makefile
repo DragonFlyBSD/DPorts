@@ -4,8 +4,7 @@
 PORTNAME=	pinfo
 PORTVERSION=	0.6.10
 CATEGORIES=	misc
-MASTER_SITES=	http://spout.ussg.indiana.edu/linux/gentoo/distfiles/ \
-		http://ftp.yellowdoglinux.com/.2/gentoo/distfiles/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/file/3351/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ncurses based, lynx style info documentation browser
