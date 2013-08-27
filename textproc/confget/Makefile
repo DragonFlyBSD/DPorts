@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/confget/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
+# $FreeBSD: textproc/confget/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	confget
 PORTVERSION=	1.04
@@ -35,7 +35,7 @@ MAKE_ENV+=	PCRE_CFLAGS="" PCRE_LIBS=""
 .endif
 
 post-patch:
-.if empty(PORT_OPTIONS:MEXAMPLES)
+.if !${PORT_OPTIONS:MEXAMPLES}
 	@${REINPLACE_CMD} -e '/^install:/ s| install-examples||' ${WRKSRC}/Makefile
 .endif
 
