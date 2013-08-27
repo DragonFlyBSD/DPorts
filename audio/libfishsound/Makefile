@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libfishsound/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: audio/libfishsound/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
@@ -31,7 +31,7 @@ PORTDOCS=	*
 .endif
 
 post-patch:
-.if empty(PORT_OPTIONS:MDOCS) || empty(PORT_OPTIONS:MDOXYGEN)
+.if !${PORT_OPTIONS:MDOCS} || !${PORT_OPTIONS:MDOXYGEN}
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| doc||' ${WRKSRC}/Makefile.in
 .endif
 
