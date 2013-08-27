@@ -1,7 +1,7 @@
-# $FreeBSD: devel/git-review/Makefile 316037 2013-04-18 12:06:10Z culot $
+# $FreeBSD: devel/git-review/Makefile 325323 2013-08-25 02:07:08Z rakuco $
 
 PORTNAME=	git-review
-PORTVERSION=	1.21
+PORTVERSION=	1.23
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 MASTER_SITE_SUBDIR=	source/g/${PORTNAME}
@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/git-review.1 ${PREFIX}/man/man1
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/README.md ${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/README.rst ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/HACKING.rst ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/AUTHORS ${DOCSDIR}
 .endif
