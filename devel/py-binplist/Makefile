@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-binplist/Makefile 324448 2013-08-09 16:02:28Z antoine $
+# $FreeBSD: devel/py-binplist/Makefile 325264 2013-08-23 13:39:54Z antoine $
 
 PORTNAME=	binplist
-PORTVERSION=	0.1.3
+PORTVERSION=	0.1.4
 CATEGORIES=	devel python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
-PLIST_FILES=	bin/binplist \
+PLIST_FILES=	bin/plist.py \
 		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 .include <bsd.port.mk>
