@@ -1,5 +1,5 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: www/cherokee/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: www/cherokee/Makefile 325322 2013-08-25 02:03:45Z rakuco $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
@@ -20,8 +20,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread
-
-PORTSCOUT=	limit:^1\.2\.102
 
 CHEROKEE_VARDIR?=	/var
 CHEROKEE_LOGDIR?=	${CHEROKEE_VARDIR}/log
