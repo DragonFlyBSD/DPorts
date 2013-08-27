@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xbl
-# Date created:		May 25 1997
-# Whom:			pgs (original)
-#
-# $FreeBSD: ports/games/xbl/Makefile,v 1.33 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: pgs (original)
+# $FreeBSD: games/xbl/Makefile 325395 2013-08-26 13:22:00Z marino $
 
 PORTNAME=	xbl
 PORTVERSION=	1.1.6
@@ -11,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://perso.univ-lyon1.fr/thierry.excoffier/XBL/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A 3D block-dropping game
+COMMENT=	3D block-dropping game
 
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
