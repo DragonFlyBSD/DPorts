@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/virtualmin/Makefile 316619 2013-04-26 15:10:03Z olgeni $
+# $FreeBSD: sysutils/virtualmin/Makefile 325383 2013-08-26 10:21:16Z olgeni $
 
 PORTNAME=	virtualmin
-PORTVERSION=	4.00
+PORTVERSION=	4.01
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.webmin.com/download/virtualmin/
 DISTNAME=	virtual-server-${PORTVERSION}.gpl
