@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ebnetd/Makefile 315163 2013-03-24 21:08:06Z tota $
+# $FreeBSD: japanese/ebnetd/Makefile 325366 2013-08-25 18:06:53Z az $
 
 PORTNAME=	ebnetd
 PORTVERSION=	1.0
@@ -10,7 +10,6 @@ MAINTAINER=	yasu@utahime.org
 COMMENT=	Servers for accessing CD-ROM books via TCP/IP
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	eb:${PORTSDIR}/japanese/eb
 
