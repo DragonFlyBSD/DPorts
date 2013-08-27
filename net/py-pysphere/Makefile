@@ -1,8 +1,8 @@
 # Created by: olli hauer <ohauer@FreeBSD.org>
-# $FreeBSD: net/py-pysphere/Makefile 321015 2013-06-15 19:39:56Z ohauer $
+# $FreeBSD: net/py-pysphere/Makefile 325367 2013-08-25 18:21:27Z ohauer $
 
 PORTNAME=	pysphere
-PORTVERSION=	0.1.7
+PORTVERSION=	0.1.8
 CATEGORIES=	net python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,11 +18,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
-
-post-patch:
-	@${SED} -i '' -e 's/pysphere-0.1.5/pysphere-0.1.7/' \
-		${WRKSRC}/setup.py \
-		${WRKSRC}/PKG-INFO \
-		${WRKSRC}/pysphere.egg-info/PKG-INFO
 
 .include <bsd.port.mk>
