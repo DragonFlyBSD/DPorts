@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Bread-Board-Declare/Makefile 318903 2013-05-23 20:22:28Z sunpoet $
+# $FreeBSD: devel/p5-Bread-Board-Declare/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Bread-Board-Declare
 PORTVERSION=	0.14
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Bread-Board>=0.22:${PORTSDIR}/devel/p5-Bread-Board \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Bread::Board::Declare.3 \
 		Bread::Board::Declare::BlockInjection.3 \
