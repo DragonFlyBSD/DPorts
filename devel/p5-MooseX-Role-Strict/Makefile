@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Role-Strict/Makefile 315843 2013-04-16 16:45:52Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Role-Strict/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	MooseX-Role-Strict
 PORTVERSION=	0.05
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Moose>=0.89:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		MooseX::Meta::Role::Strict.3 \
 		MooseX::Role::Strict.3
