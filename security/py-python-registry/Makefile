@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/py-python-registry/Makefile 324486 2013-08-10 11:51:31Z antoine $
+# $FreeBSD: security/py-python-registry/Makefile 324837 2013-08-17 08:49:49Z antoine $
 
 PORTNAME=	python-registry
-PORTVERSION=	0.2.6
+PORTVERSION=	0.2.7
 CATEGORIES=	security devel python
 MASTER_SITES=	GH \
 		LOCAL/antoine
@@ -16,7 +16,7 @@ LICENSE=	AL2
 USE_GITHUB=	yes
 GH_ACCOUNT=	williballenthin
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	f4930a1
+GH_COMMIT=	ca12109
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
@@ -29,8 +29,8 @@ PORTEXAMPLES=	*
 .include <bsd.port.options.mk>
 
 post-patch:
-	${REINPLACE_CMD} 's|0.2.4.1|${PORTVERSION}|' ${WRKSRC}/Registry/__init__.py
-	${REINPLACE_CMD} 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/samples/*.py
+	${REINPLACE_CMD} 's|0.2.6|${PORTVERSION}|' ${WRKSRC}/Registry/__init__.py
+	${REINPLACE_CMD} '1s|.*|#!${PYTHON_CMD}|' ${WRKSRC}/samples/*.py
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
