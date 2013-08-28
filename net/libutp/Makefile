@@ -2,7 +2,7 @@
 # Date created: July 26, 2012
 # Whom:		Mikhail Teterin <mi@aldan.algebra.com>
 #
-# $FreeBSD: ports/net/libutp/Makefile,v 1.2 2012/11/17 06:00:05 svnexp Exp $
+# $FreeBSD: net/libutp/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	bittorrent-libutp
@@ -18,7 +18,6 @@ LICENSE=	MIT
 
 USE_DOS2UNIX=	yes
 MAKEFILE=	${FILESDIR}/BSDmakefile
-MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 # GitHub will issue a 302 redirect, no way around that, so we
 # have to allow fetch(1) to follow the redirect, which is normally
