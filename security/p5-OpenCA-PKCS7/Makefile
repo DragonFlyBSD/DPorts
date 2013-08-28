@@ -1,11 +1,12 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-OpenCA-PKCS7/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-OpenCA-PKCS7/Makefile 324980 2013-08-19 12:35:44Z mat $
 
 PORTNAME=	OpenCA-PKCS7
-PORTVERSION=	0.9.13
-PORTREVISION=	1
+PORTVERSION=	0.9.1.1.1
+PORTEPOCH=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:MADWOLF
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
