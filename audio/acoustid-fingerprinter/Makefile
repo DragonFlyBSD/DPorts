@@ -1,4 +1,4 @@
-# $FreeBSD: audio/acoustid-fingerprinter/Makefile 322705 2013-07-10 15:25:37Z makc $
+# $FreeBSD: audio/acoustid-fingerprinter/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	acoustid-fingerprinter
 PORTVERSION=	0.6
@@ -19,7 +19,6 @@ USES=		cmake
 USE_QT4=	gui network \
 		qmake_build moc_build rcc_build uic_build
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 CMAKE_ARGS=	-DFFMPEG_SUFFIX:STRING=${FFMPEG_SUFFIX}
 FFMPEG_SUFFIX?=	1
