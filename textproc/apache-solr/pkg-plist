@@ -1,4 +1,4 @@
-@comment $FreeBSD: textproc/apache-solr/pkg-plist 320733 2013-06-13 05:54:33Z vanilla $
+@comment $FreeBSD: textproc/apache-solr/pkg-plist 325389 2013-08-26 12:03:29Z vanilla $
 %%JAVAJARDIR%%/solr-%%PORTVERSION%%.war
 %%JAVAJARDIR%%/solr-analysis-extras-%%PORTVERSION%%.jar
 %%JAVAJARDIR%%/solr-cell-%%PORTVERSION%%.jar
@@ -26,8 +26,8 @@
 %%JAVAJARDIR%%/test-framework/README.txt
 %%JAVAJARDIR%%/test-framework/lib/ant-1.8.2.jar
 %%JAVAJARDIR%%/test-framework/lib/junit-4.10.jar
-%%JAVAJARDIR%%/test-framework/lib/junit4-ant-2.0.9.jar
-%%JAVAJARDIR%%/test-framework/lib/randomizedtesting-runner-2.0.9.jar
+%%JAVAJARDIR%%/test-framework/lib/junit4-ant-2.0.10.jar
+%%JAVAJARDIR%%/test-framework/lib/randomizedtesting-runner-2.0.10.jar
 %%JAVAJARDIR%%/test-framework/lucene-libs/lucene-test-framework-%%PORTVERSION%%.jar
 @dirrmtry %%JAVAJARDIR%%/solrj-lib
 @dirrmtry %%JAVAJARDIR%%/test-framework/lib
