@@ -2,7 +2,7 @@
 # Date created:		Thursday 13 November 2003
 # Whom:			edwin@mavetju.org
 #
-# $FreeBSD: www/mod_encoding/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: www/mod_encoding/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_encoding
@@ -15,7 +15,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for non-ASCII filename interoperability
 
-MAKE_JOBS_SAFE=	yes
 
 # This port will work with the following version of Apache and anything newer.
 # Mostly because of the dependency of mod_dav.
