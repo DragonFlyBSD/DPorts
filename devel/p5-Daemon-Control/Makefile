@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Daemon-Control/Makefile 316648 2013-04-27 04:14:22Z sunpoet $
+# $FreeBSD: devel/p5-Daemon-Control/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	Daemon-Control
 PORTVERSION=	0.001.000
@@ -14,7 +14,8 @@ COMMENT=	Create init scripts in Perl
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		Daemon::Control.3
 
