@@ -1,15 +1,15 @@
 # Created by: Jimmy Olgeni <olgeni@uli.it>
-# $FreeBSD: deskutils/egroupware/Makefile 324110 2013-08-01 14:56:44Z wg $
+# $FreeBSD: deskutils/egroupware/Makefile 325382 2013-08-26 10:15:15Z sunpoet $
 
 PORTNAME=	eGroupware
-PORTVERSION=	1.8.004.20130727
+PORTVERSION=	1.8.004.20130819
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}-1.8/${PORTNAME}-${PORTVERSION}
 DISTFILES=	${PORTNAME}-${PORTVERSION}.tar.bz2 \
 		${PORTNAME}-egw-pear-${PORTVERSION}.tar.bz2
 
 MAINTAINER=	danilogondolfo@gmail.com
-COMMENT=	A web based GroupWare system
+COMMENT=	Web-based GroupWare system
 
 BUILD_DEPENDS=	${PEARDIR}/Auth/SASL.php:${PORTSDIR}/security/pear-Auth_SASL \
 		${PEARDIR}/Net/IMAP.php:${PORTSDIR}/mail/pear-Net_IMAP \
@@ -39,6 +39,7 @@ POSTGRES_DESC=	PostgreSQL database support
 ZIP_DESC=	Install PHP zip extension
 
 .include <bsd.port.options.mk>
+
 .if ${PORT_OPTIONS:MMYSQL}
 USE_PHP+=	mysql
 USE_PHP+=	pdo_mysql
