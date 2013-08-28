@@ -1,4 +1,4 @@
-# $FreeBSD: www/kpartsplugin/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: www/kpartsplugin/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	kpartsplugin
 DISTVERSION=	0.0-${PORTDATE}
@@ -15,7 +15,6 @@ USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
 USES=		cmake
 CMAKE_ARGS=	-DNSPLUGIN_INSTALL_DIR:PATH="${WEBPLUGINS_DIR}"
-MAKE_JOBS_SAFE=	yes
 
 PORTDATE=	20120723
 
