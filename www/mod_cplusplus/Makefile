@@ -1,5 +1,5 @@
 # Created by: Michael Durian <durian@shadetreesoftware.com>
-# $FreeBSD: ports/www/mod_cplusplus/Makefile,v 1.21 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_cplusplus/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_cplusplus
 PORTVERSION=	1.5.4
@@ -11,7 +11,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for loading C++ objects as handlers
 
-MAKE_JOBS_SAFE=  yes
 
 USE_APACHE=	22
 USE_AUTOTOOLS=	autoconf autoheader libtool automake aclocal
