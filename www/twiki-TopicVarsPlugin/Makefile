@@ -1,12 +1,9 @@
-# New ports collection makefile for:	twiki-TopicVarsPlugin
-# Date created:		30 April 2008
-#
-# $FreeBSD: ports/www/twiki-TopicVarsPlugin/Makefile,v 1.2 2012/11/17 06:03:09 svnexp Exp $
-#
+# $FreeBSD: www/twiki-TopicVarsPlugin/Makefile 325271 2013-08-23 14:02:37Z wg $
 
 PORTNAME=	TopicVarsPlugin
-SVNREV=		16417b
+SVNREV=		16417
 # with modifications, to be committed to SVN
+PORTEPOCH=	1
 
 COMMENT=	Create externally usable variables in any topic
 
