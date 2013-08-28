@@ -1,13 +1,15 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/rubygem-spreadsheet/Makefile 322968 2013-07-13 20:23:35Z swills $
+# $FreeBSD: textproc/rubygem-spreadsheet/Makefile 325346 2013-08-25 14:01:20Z sunpoet $
 
 PORTNAME=	spreadsheet
-PORTVERSION=	0.8.6
+PORTVERSION=	0.8.9
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	A Ruby module to generate Microsoft Excel compatible files
+COMMENT=	Ruby module to generate Microsoft Excel compatible files
+
+LICENSE=	GPLv3
 
 RUN_DEPENDS=	rubygem-ruby-ole>=1.0:${PORTSDIR}/devel/rubygem-ruby-ole
 
