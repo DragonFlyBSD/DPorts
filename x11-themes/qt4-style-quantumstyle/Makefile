@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-themes/qt4-style-quantumstyle/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: x11-themes/qt4-style-quantumstyle/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	quantumstyle
 DISTVERSION=	rc6
@@ -17,7 +17,6 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_QT4=	corelib gui svg qmake_build rcc_build uic_build moc_build
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/QuantumStyle
 
