@@ -2,7 +2,7 @@
 # Date created:				Sep 10 2005
 # Whom:					Clement Laforet <clement@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_auth_mysql2/Makefile,v 1.16 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_mysql2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_auth_mysql
@@ -22,7 +22,6 @@ LICENSE=	AL2
 LATEST_LINK=	mod_auth_mysql2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAKE_JOBS_SAFE=  yes
 USE_MYSQL=	yes
 USE_APACHE=	22+
 AP_FAST_BUILD=	yes
