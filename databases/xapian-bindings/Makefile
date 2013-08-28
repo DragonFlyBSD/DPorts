@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/xapian-bindings/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: databases/xapian-bindings/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
 
 PORTNAME=	xapian-bindings
 PORTVERSION=	1.2.15
@@ -77,7 +77,7 @@ PLIST_SUB+=	RUBY="@comment "
 post-patch:
 # do not install rdoc
 	@${REINPLACE_CMD} -e '/^install-data-am:/ s|install-data-local||' ${WRKSRC}/ruby/Makefile.in
-.if empty(PORT_OPTIONS:MDOCS)
+.if !${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^install-data-am:/ s|install-dist_docdataDATA install-dist_exampledataDATA ||' ${WRKSRC}/lua/Makefile.in ${WRKSRC}/php/Makefile.in ${WRKSRC}/python/Makefile.in
 	@${REINPLACE_CMD} -e '/^install-data-am:/ s|install-dist_docdataDATA||; 799 s|install-dist_exampledataDATA ||' ${WRKSRC}/ruby/Makefile.in
 .endif
