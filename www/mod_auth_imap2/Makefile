@@ -2,7 +2,7 @@
 # Date created:				Jun 5 2004
 # Whom:					Clement Laforet <clement@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_auth_imap2/Makefile,v 1.12 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_imap2/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_auth_imap
@@ -18,7 +18,6 @@ COMMENT=	An Apache 2 module to provide authentication via an IMAP mail server
 
 LICENSE=	GPLv2
 
-MAKE_JOBS_SAFE=  yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}2-${PORTVERSION}
 USE_APACHE=	22+
