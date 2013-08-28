@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_line_edit/Makefile 319447 2013-05-30 19:14:44Z ohauer $
+# $FreeBSD: www/mod_line_edit/Makefile 324744 2013-08-14 22:35:50Z ak $
 
 PORTNAME=	mod_line_edit
 PORTVERSION=	1.0.0
@@ -13,7 +13,6 @@ EXTRACT_SUFX=
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for simple text rewriting
 
-MAKE_JOBS_SAFE=  yes
 
 WRKSRC=	${WRKDIR}
 
