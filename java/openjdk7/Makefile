@@ -31,7 +31,6 @@ EXTRACT_SUFX=	.zip
 USES=		iconv gmake
 USE_XORG+=	x11 xext xi xrender xt xtst
 MAKE_ARGS=	CC=${CC} CXX=${CXX} HOST_CC=${CC}
-MAKE_JOBS_UNSAFE=	yes
 USE_GCC=	any
 
 OPTIONS_DEFINE=		DEBUG POLICY TZUPDATE
