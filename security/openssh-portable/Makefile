@@ -1,5 +1,5 @@
 # Created by: dwcjr@inethouston.net
-# $FreeBSD: security/openssh-portable/Makefile 322345 2013-07-05 18:27:50Z bdrewery $
+# $FreeBSD: security/openssh-portable/Makefile 325040 2013-08-20 11:43:44Z az $
 
 PORTNAME=	openssh
 DISTVERSION=	6.2p2
@@ -26,7 +26,8 @@ CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.*
 PATCH_SITES+=		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
 			http://mirror.shatow.net/freebsd/${PORTNAME}/:x509
 
-USE_PERL5_BUILD=	yes
+USES=			perl5
+USE_PERL5=		build
 USE_AUTOTOOLS=		autoconf autoheader
 USE_OPENSSL=		yes
 GNU_CONFIGURE=		yes
