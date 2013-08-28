@@ -1,12 +1,11 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Smart-Comments/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Smart-Comments/Makefile 325119 2013-08-21 12:49:19Z mat $
 
 PORTNAME=	Smart-Comments
-PORTVERSION=	1.0.4
-PORTREVISION=	1
+PORTVERSION=	1.000005
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:CHORNY
+MASTER_SITE_SUBDIR=	CPAN:DCONWAY
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
