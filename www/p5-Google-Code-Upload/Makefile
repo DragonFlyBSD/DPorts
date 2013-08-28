@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Google-Code-Upload
-# Date created:		2010-07-06
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-#
-# $FreeBSD: ports/www/p5-Google-Code-Upload/Makefile,v 1.6 2012/11/17 06:02:49 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
+# $FreeBSD: www/p5-Google-Code-Upload/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
 
 PORTNAME=	Google-Code-Upload
 PORTVERSION=	0.07
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		googlecode_upload.pl.1
 MAN3=		Google::Code::Upload.3
