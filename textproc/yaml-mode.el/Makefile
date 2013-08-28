@@ -1,9 +1,8 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: textproc/yaml-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: textproc/yaml-mode.el/Makefile 324696 2013-08-14 11:07:20Z wg $
 
 PORTNAME=	yaml-mode.el
-PORTVERSION=	0.0.8
-PORTREVISION=	2
+PORTVERSION=	0.0.9
 CATEGORIES=	textproc elisp
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
 
@@ -16,7 +15,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	yoshiki
 GH_PROJECT=	yaml-mode
 GH_TAGNAME=	release-${PORTVERSION}
-GH_COMMIT=	c2ac933
+GH_COMMIT=	5eae0c1
 
 USE_EMACS=	yes
 
