@@ -2,7 +2,7 @@
 # Date created:            				Thursday December 24, 2009
 # Whom:                				 	Kimo <kimor79@yahoo.com>
 #
-# $FreeBSD: www/mod_auth_cas/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/mod_auth_cas/Makefile 324744 2013-08-14 22:35:50Z ak $
 #
 
 PORTNAME=	mod_auth_cas
@@ -22,7 +22,6 @@ LICENSE=	AL2
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
-MAKE_JOBS_SAFE=	yes
 NO_WRKSUBDIR=	yes
 
 USE_APACHE=	22+
