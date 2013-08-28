@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/www/p5-HTML-Parser-Simple/Makefile,v 1.3 2012/12/05 03:23:45 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Parser-Simple/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
 
 PORTNAME=	HTML-Parser-Simple
 PORTVERSION=	2.00
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Moos>=0.13:${PORTSDIR}/devel/p5-Moos \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN3=		HTML::Parser::Simple.3 \
 		HTML::Parser::Simple::Attributes.3 \
