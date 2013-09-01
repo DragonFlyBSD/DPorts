@@ -71,7 +71,7 @@ ARCH!=	${UNAME} -p
 OSVERSION=	9999999
 .endif
 
-if !defined(DFLYVERSION)
+.if !defined(DFLYVERSION)
 .if exists(/usr/include/sys/param.h)
 DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
 .elif exists(${SRC_BASE}/sys/sys/param.h)
