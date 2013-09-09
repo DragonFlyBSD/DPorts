@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.commands.mk 323942 2013-07-30 06:32:01Z bapt $
+# $FreeBSD: Mk/bsd.commands.mk 325992 2013-09-02 13:26:34Z tijl $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -97,7 +97,7 @@ UNMAKESELF_CMD?=	${LOCALBASE}/bin/unmakeself
 UNZIP_CMD?=	${LOCALBASE}/bin/unzip
 WHICH?=		/usr/bin/which
 XARGS?=		/usr/bin/xargs
-XMKMF?=		${LOCALBASE}/bin/xmkmf -a
+XMKMF?=		${LOCALBASE}/bin/xmkmf
 YACC?=		/usr/bin/yacc
 
 XZ?=	-Mmax

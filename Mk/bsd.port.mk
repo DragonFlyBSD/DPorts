@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 324051 2013-07-31 13:30:18Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 326801 2013-09-09 10:37:03Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -320,6 +320,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_GCC		- If set, this port requires this version of gcc, either in
 #				  the system or installed from a port.
 # USE_CSTD		- Override the default C language standard (gnu89, gnu99)
+# USE_CXXSTD	  Override the default C++ language standard
 # USE_BINUTILS	- Use binutils suite from port instead of the version in base.
 ##
 # USE_GHOSTSCRIPT
@@ -1091,8 +1092,11 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  a different checksum and you intend to verify if
 #				  the port still works with it.
 # USE_PACKAGE_DEPENDS
-#				- Install dependencies from existing packages instead
-#				  of building the port from scratch.
+#				- Try to install dependencies from existing packages instead
+#				  of building the port from scratch. Fallback on source
+#				  if an existing package is not present.
+# USE_PACKAGE_DEPENDS_ONLY
+#				- Like USE_PACKAGE_DEPENDS, but do not fallback on source.
 # INSTALL_AS_USER
 #				- Define this to install as the current user, intended
 #				  for systems where you have no root access.
@@ -2141,6 +2145,10 @@ CFLAGS+=       -fno-strict-aliasing
 CFLAGS:=	${CFLAGS:N-std=*} -std=${USE_CSTD}
 .endif
 
+.if defined(USE_CXXSTD)
+CXXFLAGS:=	${CXXFLAGS:N-std=*} -std=${USE_CXXSTD}
+.endif
+
 # Multiple make jobs support
 .if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
 _MAKE_JOBS=		#
@@ -2173,7 +2181,7 @@ _CCACHE_PATH=	${LOCALBASE}/libexec/ccache
 
 # Prepend the ccache dir into the PATH and setup ccache env
 PATH:=	${_CCACHE_PATH}:${PATH}
-.if !${MAKE_ENV:M*PATH=*} && !${CONFIGURE_ENV:M*PATH=*}
+.if !${MAKE_ENV:MPATH=*} && !${CONFIGURE_ENV:MPATH=*}
 MAKE_ENV+=			PATH=${PATH}
 CONFIGURE_ENV+=		PATH=${PATH}
 .endif
@@ -2859,8 +2867,9 @@ CONFIGURE_FAIL_MESSAGE?=	"Please report the problem to ${MAINTAINER} [maintainer
 CONFIGURE_MAX_CMD_LEN!=	${SYSCTL} -n kern.argmax
 .endif
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
+CONFIG_SITE?=		${PORTSDIR}/Templates/config.site
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX} $${_LATE_CONFIGURE_ARGS}
-CONFIGURE_ENV+=		CONFIG_SITE=${PORTSDIR}/Templates/config.site lt_cv_sys_max_cmd_len=${CONFIGURE_MAX_CMD_LEN}
+CONFIGURE_ENV+=		CONFIG_SITE=${CONFIG_SITE} lt_cv_sys_max_cmd_len=${CONFIGURE_MAX_CMD_LEN}
 HAS_CONFIGURE=		yes
 
 SET_LATE_CONFIGURE_ARGS= \
@@ -3422,7 +3431,13 @@ do-fetch:
 			else \
 				SORTED_MASTER_SITES_CMD_TMP="${SORTED_MASTER_SITES_DEFAULT_CMD}" ; \
 			fi; \
-			for site in `eval $$SORTED_MASTER_SITES_CMD_TMP ${_RANDOMIZE_SITES}`; do \
+			sites_remaining=0; \
+			sites="`eval $$SORTED_MASTER_SITES_CMD_TMP ${_RANDOMIZE_SITES}`"; \
+			for site in $${sites}; do \
+				sites_remaining=$$(($${sites_remaining} + 1)); \
+			done; \
+			for site in $${sites}; do \
+				sites_remaining=$$(($${sites_remaining} - 1)); \
 			    ${ECHO_MSG} "=> Attempting to fetch $${site}$${file}"; \
 				CKSIZE=`alg=SIZE; ${DISTINFO_DATA}`; \
 				case $${file} in \
@@ -3431,7 +3446,16 @@ do-fetch:
 				*)		args=$${site}$${file};; \
 				esac; \
 				if ${SETENV} ${FETCH_ENV} ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${args} ${FETCH_AFTER_ARGS}; then \
-					continue 2; \
+					actual_size=`stat -f %z "$${file}"`; \
+					if [ -n "${DISABLE_SIZE}" ] || [ -z "$${CKSIZE}" ] || [ $${actual_size} -eq $${CKSIZE} ]; then \
+						continue 2; \
+					else \
+						${ECHO_MSG} "=> Fetched file size mismatch (expected $${CKSIZE}, actual $${actual_size})"; \
+						if [ $${sites_remaining} -gt 1 ]; then \
+							${ECHO_MSG} "=> Trying next site"; \
+							${RM} -f $${file}; \
+						fi; \
+					fi; \
 				fi; \
 			done; \
 			${ECHO_MSG} "=> Couldn't fetch it - please try to retrieve this";\
@@ -4809,6 +4833,7 @@ checksum: fetch check-checksum-algorithms
 						${ECHO_MSG} "=> $$alg Checksum mismatch for $$file."; \
 						refetchlist="$$refetchlist$$file "; \
 						OK="$${OK:-retry}"; \
+						[ "$${OK}" = "retry" -a ${FETCH_REGET} -gt 0 ] && ${RM} -f $${file}; \
 						ignored="false"; \
 					fi; \
 				fi; \
@@ -4930,7 +4955,7 @@ _DEPEND_ALWAYS=	0
 .endif
 
 _INSTALL_DEPENDS=	\
-		if [ X${USE_PACKAGE_DEPENDS} != "X" ]; then \
+		if [ -n "${USE_PACKAGE_DEPENDS}" -o -n "${USE_PACKAGE_DEPENDS_ONLY}" ]; then \
 			subpkgfile=`(cd $$dir; ${MAKE} $$depends_args -V '$${PKGFILE}')`; \
 			subpkgname=$${subpkgfile%-*} ; \
 			subpkgname=$${subpkgname\#\#*/} ; \
@@ -4944,6 +4969,10 @@ _INSTALL_DEPENDS=	\
 				else \
 					${PKG_ADD} $${subpkgfile}; \
 				fi; \
+			elif [ -n "${USE_PACKAGE_DEPENDS_ONLY}" -a "$${target}" = "${DEPENDS_TARGET}" ]; then \
+				${ECHO_MSG} "===>   ${PKGNAME} depends on package: $${subpkgfile} - not found"; \
+				${ECHO_MSG} "===>   USE_PACKAGE_DEPENDS_ONLY set - will not build from source"; \
+				exit 1; \
 			else \
 			  (cd $$dir; ${MAKE} -DINSTALLS_DEPENDS $$target $$depends_args) ; \
 			fi; \
@@ -5067,7 +5096,8 @@ lib-depends:
 		for libdir in $$dirs; do \
 			test -f $${libdir}/$${lib} || continue; \
 			if [ -x /usr/bin/file ]; then \
-				[ `file -b -L --mime-type $${libdir}/$${lib}` = "application/x-sharedlib" ] || continue ; \
+				_LIB_FILE=`realpath $${libdir}/$${lib}`; \
+				[ `file -b -L --mime-type $${_LIB_FILE}` = "application/x-sharedlib" ] || continue ; \
 			fi ; \
 			found=1 ; \
 			${ECHO_MSG} " - found"; \

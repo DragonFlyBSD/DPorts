@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 325306 2013-08-24 19:34:07Z sunpoet $
+# $FreeBSD: Mk/bsd.options.desc.mk 326632 2013-09-07 12:08:39Z zi $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -25,7 +25,6 @@ AO_DESC?=		libao audio library support
 APACHE_DESC?=		Apache server support
 APE_DESC?=		Monkey's Audio lossless format support
 ARCHIVE_DESC?=		bzip2/zip/iso9660 archive support
-ARTS_DESC?=		aRts audio system support
 ASM_DESC?=		Use optimized assembly code
 ASPELL_DESC?=		Spell checking support via GNU Aspell
 ASSERT_DESC?=		Enable debug assertions
@@ -122,6 +121,7 @@ GRASS_DESC?=		GRASS support
 GSM_DESC?=		GSM codec support
 GSSAPI_DESC?=		GSSAPI support
 GSTREAMER_DESC?=	Multimedia support via GStreamer
+GTA_DESC?=		Generic Tagged Array (GTA) support
 GTK1_DESC?=		GTK+ 1 GUI toolkit support
 GTK2_DESC?=		GTK+ 2 GUI toolkit support
 GTK3_DESC?=		GTK+ 3 GUI toolkit support
@@ -296,6 +296,7 @@ MMS_DESC?=		MMS streaming support
 MMX_DESC?=		Use MMX optimized routines
 MODPERL_DESC?=		mod_perl support
 MODPLUG_DESC?=		ModPlug decoder support
+MONGO_DESC?=		MongoDB support
 MONO_DESC?=		Mono bindings or support
 MOTIF_DESC?=		Motif widget library support
 MOUSE_DESC?=		Mouse support

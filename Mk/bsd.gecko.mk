@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.gecko.mk 324409 2013-08-08 18:42:03Z flo $
+# $FreeBSD: Mk/bsd.gecko.mk 326101 2013-09-02 21:57:08Z bapt $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -502,7 +502,7 @@ MOZILLA_BIN?=	${PORTNAME}-bin
 MOZILLA_EXEC_NAME?=${MOZILLA}
 MOZ_RPATH?=	${MOZILLA}
 USE_GNOME+=	libidl desktopfileutils
-USES=	iconv
+USES+=	iconv
 USE_PERL5_BUILD=yes
 USE_XORG=	printproto sm xt xi xext x11 xinerama \
 		ice xproto

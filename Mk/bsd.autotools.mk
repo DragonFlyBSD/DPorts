@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.autotools.mk 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: Mk/bsd.autotools.mk 325841 2013-09-01 01:18:05Z koobs $
 #
 # Please view me with 4 column tabs!
 #
@@ -42,6 +42,9 @@ Autotools_Include_MAINTAINER=	autotools@FreeBSD.org
 #
 # AUTOHEADER_ARGS=...
 #	- Extra arguments passed to autoheader during configure step
+#
+# LIBTOOLIZE_ARGS=...
+#	- Extra arguments passed to libtoolize during configure step
 #
 # LIBTOOLFLAGS=<value>
 #	- Arguments passed to libtool during configure step

@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 325280 2013-08-23 20:54:44Z rene $
+# $FreeBSD: GIDs 326016 2013-09-02 15:45:53Z lippe $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -89,6 +89,7 @@ agk:*:172:
 polipo:*:173:
 flowtools:*:174:
 twms:*:175:
+gdnsd:*:179:
 rt:*:180:
 nagios:*:181:
 noc:*:182:

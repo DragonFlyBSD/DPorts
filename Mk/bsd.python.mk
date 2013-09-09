@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 325330 2013-08-25 08:12:59Z mva $
+# $FreeBSD: Mk/bsd.python.mk 326663 2013-09-07 17:21:58Z sunpoet $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -27,7 +27,7 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #					  default: ${PYTHONBASE}/bin/${PYTHON_VERSION}
 #
 # PYTHON_DISTFILE	- The ${DISTFILE} for your python version. Needed for
-#					  extensions like Tkinter, py-gdbm and py-expat, which
+#					  extensions like bsddb, gdbm, sqlite3 and tkinter, which
 #					  are built from sources contained in the Python
 #					  distribution.
 #

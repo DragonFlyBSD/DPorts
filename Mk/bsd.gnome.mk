@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.gnome.mk 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: Mk/bsd.gnome.mk 326490 2013-09-06 11:43:34Z kwm $
 #	$NetBSD: $
 #     $MCom: ports/trunk/Mk/bsd.gnome.mk 17271 2013-04-01 15:16:27Z kwm $
 #
@@ -70,7 +70,7 @@ Gnome_Pre_Include=			bsd.gnome.mk
 # non-version specific components
 _USE_GNOME_ALL= esound intlhack intltool introspection ltasneededhack lthack \
 		ltverhack gnomehack referencehack gnomehier gnomemimedata \
-		gnomeprefix pkgconfig
+		gnomeprefix
 
 # GNOME 1 components
 _USE_GNOME_ALL+= bonobo gconf gdkpixbuf glib12 \
@@ -91,11 +91,11 @@ _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 evolutiondataserver gal2 
 		pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf gtk30 gtksourceview3 pygobject3
+_USE_GNOME_ALL+= dconf gtk30 gtksourceview3 libgda5 libgda5-ui pygobject3
 
 # C++ bindings
 _USE_GNOME_ALL+=atkmm cairomm gconfmm gconfmm26 glibmm gtkmm20 gtkmm24 \
-		gtkmm30 gtksourceviewmm3 libgdamm \
+		gtkmm30 gtksourceviewmm3 libgdamm libgdamm5 \
 		libgtksourceviewmm libxml++ libxml++26 libsigc++12 libsigc++20 \
 		pangomm
 
@@ -186,6 +186,10 @@ gtksourceviewmm3_USE_GNOME_IMPL=gtkmm30 gtksourceview3
 libgdamm_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgdamm-4.0.pc
 libgdamm_LIB_DEPENDS=	gdamm-4.0:${PORTSDIR}/databases/libgdamm
 libgdamm_USE_GNOME_IMPL=libgda4 glibmm
+
+libgdamm5_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgdamm-5.0.pc
+libgdamm5_LIB_DEPENDS=		libgdamm-5.0.so:${PORTSDIR}/databases/libgdamm5
+libgdamm5_USE_GNOME_IMPL=	libgda5 glibmm
 
 libgtksourceviewmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtksourceviewmm-2.0.pc
 libgtksourceviewmm_LIB_DEPENDS=		gtksourceviewmm-2.0:${PORTSDIR}/x11-toolkits/libgtksourceviewmm
@@ -500,6 +504,14 @@ libgda4_LIB_DEPENDS=	gda-4.0.5:${PORTSDIR}/databases/libgda4
 libgda4_DETECT=			 ${LOCALBASE}/libdata/pkgconfig/libgda-4.0.pc
 libgda4_USE_GNOME_IMPL=	glib20 libxslt
 
+libgda5_LIB_DEPENDS=	libgda-5.0.so:${PORTSDIR}/databases/libgda5
+libgda5_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgda-5.0.pc
+libgda5_USE_GNOME_IMPL=	glib20 libxslt
+
+libgda5-ui_LIB_DEPENDS=	libgda-ui-5.0.so:${PORTSDIR}/databases/libgda5-ui
+libgda5-ui_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgda-ui-5.0.pc
+libgda5-ui_USE_GNOME_IMPL=glib20 libxslt libgda5
+
 libgnomedb_LIB_DEPENDS=	gnomedb-3.0.4:${PORTSDIR}/databases/libgnomedb
 libgnomedb_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomedb.pc
 libgnomedb_USE_GNOME_IMPL=libgnomeui libgda3
@@ -515,10 +527,6 @@ gtksourceview2_USE_GNOME_IMPL=gtk20 libxml2
 gtksourceview3_LIB_DEPENDS=	gtksourceview-3.0.0:${PORTSDIR}/x11-toolkits/gtksourceview3
 gtksourceview3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtksoureview-3.0.pc
 gtksourceview3_USE_GNOME_IMPL=	gtk30 libxml2
-
-pkgconfig_DETECT=		${LOCALBASE}/bin/pkgconf
-pkgconfig_BUILD_DEPENDS=	pkgconf:${PORTSDIR}/devel/pkgconf
-pkgconfig_RUN_DEPENDS=		pkgconf:${PORTSDIR}/devel/pkgconf
 
 libgsf_LIB_DEPENDS=		gsf-1.114:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgsf-1.pc
@@ -550,7 +558,7 @@ intltool_BUILD_DEPENDS=	${intltool_DETECT}:${PORTSDIR}/textproc/intltool
 intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${REINPLACE_CMD} -e \
 				's|mkdir $$lang or|mkdir $$lang, 0777 or| ; \
 				 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";| ; \
-				 s|/usr/bin/iconv|${LOCALBASE}/bin/iconv|g ; \
+				 s|/usr/bin/iconv|${ICONV_CMD}|g ; \
 				 s|unpack *[(]'"'"'U\*'"'"'|unpack ('"'"'C*'"'"'|'
 intlhack_USE_GNOME_IMPL=intltool
 
