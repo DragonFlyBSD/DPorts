@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/gdb66/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/gdb66/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
@@ -27,7 +27,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CONFIGURED_M4=m4 CONFIGURED_BISON=byacc
 CONFIGURE_ARGS=	--program-suffix=${PORTVERSION:S/.//g} \
 		--enable-target=all \
-		--enable-tui --with-libiconv-prefix=${LOCALBASE}
+		--enable-tui ${ICONV_CONFIGURE_ARG}
 CFLAGS:=	${CFLAGS:C/ +$//}	# blanks at EOL creep in sometimes
 CFLAGS+=	-DRL_NO_COMPAT
 EXCLUDE=	dejagnu expect sim texinfo intl
