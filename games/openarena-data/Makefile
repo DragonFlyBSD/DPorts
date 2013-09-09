@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD: games/openarena-data/Makefile 317132 2013-05-02 17:10:48Z bapt $
+# $FreeBSD: games/openarena-data/Makefile 325802 2013-08-31 12:18:39Z marino $
 
 PORTNAME=	data
 PORTVERSION=	0.8.8
@@ -21,7 +21,7 @@ FETCH_ARGS=
 OA_DATA=	${PKGNAMEPREFIX}${OA_DATA_VER}.zip
 OA_DATA_VER=	0.8.8
 
-.include "../openarena/Makefile.include"
+.include "${.CURDIR}/../openarena/Makefile.include"
 
 do-install:
 	${MKDIR} ${DATADIR}
