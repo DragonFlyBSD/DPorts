@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: lang/gawk/Makefile 322035 2013-06-29 09:30:23Z johans $
+# $FreeBSD: lang/gawk/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	gawk
 PORTVERSION=	4.1.0
@@ -18,7 +18,8 @@ INFO=		gawk gawkinet
 
 USE_XZ=		true
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
+USES=		iconv
+CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--with-libintl-prefix=${LOCALBASE} \
 		AWK=${AWK}
 
