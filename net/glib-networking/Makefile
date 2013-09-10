@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net/glib-networking/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: net/glib-networking/Makefile 326025 2013-09-02 16:21:38Z bapt $
 #   $MCom: ports/trunk/net/glib-networking/Makefile 18537 2013-06-16 20:08:30Z kwm $
 
 PORTNAME=	glib-networking
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack glib20 intltool
-USES=		gettext gmake
+USES=		gettext gmake pkgconfig
 CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
