@@ -2,7 +2,7 @@
 # Date created:				16 Oct 2010
 # Whom:	      				Zane C. Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-WhitePages/Makefile,v 1.3 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-WhitePages/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-WhitePages
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::WhitePages.3
 
