@@ -2,7 +2,7 @@
 # Date created:				2009-02-04
 # Whom:					Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-LWP-ConnCache-MaxKeepAliveRequests/Makefile,v 1.4 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-LWP-ConnCache-MaxKeepAliveRequests/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	LWP-ConnCache-MaxKeepAliveRequests
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		LWP::ConnCache::MaxKeepAliveRequests.3
 
