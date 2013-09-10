@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Calendar-Japanese
-# Date created:		2007-11-06
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Calendar-Japanese/Makefile,v 1.4 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: devel/p5-DateTime-Calendar-Japanese/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	DateTime-Calendar-Japanese
 PORTVERSION=	0.06001
@@ -31,7 +27,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-YAML>0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Calendar::Japanese.3
 
