@@ -1,10 +1,11 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Email-Simple/Makefile 326285 2013-09-04 15:24:23Z tobez $
 
 PORTNAME=	Email-Simple
-PORTVERSION=	2.201
+PORTVERSION=	2.202
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:RJBS
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
