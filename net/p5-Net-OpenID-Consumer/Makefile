@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-OpenID-Consumer/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-OpenID-Consumer/Makefile 326586 2013-09-07 09:55:50Z tobez $
 
 PORTNAME=	Net-OpenID-Consumer
-PORTVERSION=	1.14
+PORTVERSION=	1.15
 CATEGORIES=	net security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,7 +12,7 @@ COMMENT=	Library for consumers of OpenID identities
 
 BUILD_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
-		p5-Net-OpenID-Common>=1.13:${PORTSDIR}/security/p5-Net-OpenID-Common \
+		p5-Net-OpenID-Common>=1.18:${PORTSDIR}/security/p5-Net-OpenID-Common \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
