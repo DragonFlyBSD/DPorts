@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gstreamer-plugins-gnonlin
-# Date created:		2006-04-25
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/gstreamer-plugins-gnonlin/Makefile,v 1.29 2012/11/17 05:59:49 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: multimedia/gstreamer-plugins-gnonlin/Makefile 326133 2013-09-03 10:23:55Z bapt $
 #    $MCom: ports/multimedia/gstreamer-plugins-gnonlin/Makefile,v 1.7 2006/07/21 16:39:31 ahze Exp $
-#
 
 PORTNAME=	gstreamer-plugins-gnonlin
 PORTVERSION=	0.10.17
@@ -16,6 +12,7 @@ MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Gstreamer lib for writing non-linear audio and video
 
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GSTREAMER=	yes
