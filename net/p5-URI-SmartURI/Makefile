@@ -2,7 +2,7 @@
 # Date created:				2008-07-09
 # Whom:					Oleg Mamontov <oleg@mamontov.net>
 #
-# $FreeBSD: net/p5-URI-SmartURI/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net/p5-URI-SmartURI/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	URI-SmartURI
@@ -28,7 +28,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-NoWarnings>0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		URI::SmartURI.3
 
