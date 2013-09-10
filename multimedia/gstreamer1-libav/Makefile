@@ -1,9 +1,9 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/gstreamer1-libav/Makefile 325107 2013-08-21 11:24:07Z kwm $
+# $FreeBSD: multimedia/gstreamer1-libav/Makefile 325825 2013-08-31 18:29:55Z kwm $
 #    $MCom: ports/multimedia/gstreamer1-libav/Makefile,v 1.4 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1-libav
-PORTVERSION=	1.0.9
+PORTVERSION=	1.0.10
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-libav/
 DISTNAME=	gst-libav-${PORTVERSION}
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	yasm:${PORTSDIR}/devel/yasm \
 		orc>=0.4.16:${PORTSDIR}/devel/orc
-LIB_DEPENDS=	orc-0.4:${PORTSDIR}/devel/orc
+LIB_DEPENDS=	liborc-0.4.so:${PORTSDIR}/devel/orc
 
 USE_XZ=		yes
 USE_GMAKE=	yes
