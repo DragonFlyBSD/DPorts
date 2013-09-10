@@ -1,7 +1,7 @@
-# $FreeBSD: x11-wm/twm/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-wm/twm/Makefile 326719 2013-09-08 12:34:34Z zeising $
 
 PORTNAME=	twm
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 CATEGORIES=	x11-wm
 
 MAINTAINER=	x11@FreeBSD.org
