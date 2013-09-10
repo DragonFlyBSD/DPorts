@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/startup-notification/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: x11/startup-notification/Makefile 326011 2013-09-02 15:26:23Z bapt $
 #   $MCom: ports/x11/startup-notification/Makefile,v 1.10 2010/07/21 18:04:43 mezz Exp $
 
 PORTNAME=	startup-notification
@@ -16,8 +16,8 @@ LIB_DEPENDS=	xcb-util:${PORTSDIR}/x11/xcb-util
 
 USE_XORG=	x11
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack ltasneededhack
+USES=		gmake pathfix pkgconfig
+USE_GNOME=	ltasneededhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
