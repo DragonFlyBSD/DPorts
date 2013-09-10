@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/libadplug/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/libadplug/Makefile 326260 2013-09-04 08:25:16Z bapt $
 
 PORTNAME=	libadplug
 PORTVERSION=	2.2.1
@@ -40,5 +40,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^\(pkgconfigdir\ =\).*|\1 $$(prefix)/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in \
 		${WRKSRC}/Makefile.am
+	@${REINPLACE_CMD} -e 's/-lstdc++//g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
