@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mknod
-# Date created:		3 November 2004
-# Whom:			Sean Farley <sean-freebsd@farley.org>
-#
-# $FreeBSD: ports/devel/p5-Mknod/Makefile,v 1.6 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Sean Farley <sean-freebsd@farley.org>
+# $FreeBSD: devel/p5-Mknod/Makefile 326802 2013-09-09 11:01:46Z az $
 
 PORTNAME=	Mknod
 PORTVERSION=	0.02
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sean-freebsd@farley.org
 COMMENT=	Perl module interface to the mknod(2) system call
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MANPREFIX=	${SITE_PERL}
 MAN3=		Mknod.3
