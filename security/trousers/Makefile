@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/trousers/Makefile 324052 2013-07-31 13:59:04Z hrs $
+# $FreeBSD: security/trousers/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	trousers
 PORTVERSION=	0.3.10
@@ -54,6 +54,10 @@ PLIST_SUB+=	TDDL=""
 .if ${PORT_OPTIONS:MDEBUG}
 CONFIGURE_ARGS+=--enable-debug
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/-liconv$$/${ICONV_LIB}/' \
+		${WRKSRC}/src/tspi/Makefile.am
 
 run-autotools:	run-autotools-autoreconf
 
