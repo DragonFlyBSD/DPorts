@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/cosmo/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/cosmo/Makefile 325992 2013-09-02 13:26:34Z tijl $
 
 PORTNAME=	cosmo
 PORTVERSION=	2.0.4
@@ -22,9 +22,8 @@ NO_CDROM=	Possible copyright infringement
 
 WRKSRC=		${WRKDIR}/cosmo2
 DIST_SUBDIR=	cosmo
-USES=		imake
+USES=		imake:notall
 USE_XORG=	x11 xext
-XMKMF=		xmkmf
 NO_INSTALL_MANPAGES=	yes
 
 post-install:
