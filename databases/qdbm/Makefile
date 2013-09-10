@@ -2,7 +2,7 @@
 # Date created:				18 October 2003
 # Whom:					Kimura Fuyuki <fuyuki@nigredo.org>
 #
-# $FreeBSD: databases/qdbm/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: databases/qdbm/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #    $MCom: ports-stable/databases/qdbm/Makefile,v 1.6 2008/03/29 20:07:25 ahze Exp $
 
 PORTNAME=	qdbm
@@ -45,7 +45,7 @@ post-patch:
 
 post-build:
 	cd ${WRKSRC}/lab; \
-	${MAKE} CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib -liconv" fmtcnv031127
+	${MAKE} CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib ${ICONV_LIB}" fmtcnv031127
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lab/fmtcnv031127 ${PREFIX}/bin
