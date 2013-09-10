@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: devel/p5-Exporter/Makefile 325320 2013-08-24 23:48:01Z mat $
+# $FreeBSD: devel/p5-Exporter/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Exporter
 PORTVERSION=	5.68
@@ -13,7 +13,8 @@ COMMENT=	Implements default import method for modules
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Exporter.3 Exporter::Heavy.3
 
