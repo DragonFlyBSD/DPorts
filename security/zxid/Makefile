@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/zxid/Makefile 324129 2013-08-01 21:25:35Z bapt $
+# $FreeBSD: security/zxid/Makefile 325406 2013-08-26 17:24:09Z bapt $
 
 PORTNAME=	zxid
 PORTVERSION=	1.05
@@ -30,7 +30,9 @@ ZXID_BINS=	smime zxcall zxcot zxdecode zxencdectest zxid zxidhlo \
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e '/which gcc/d' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e '/which gcc/d' \
+		-e 's/ --export-all-symbols/ /g' \
+		${WRKSRC}/Makefile
 
 post-install:
 	${MKDIR} ${PREFIX}/include/zxid/
