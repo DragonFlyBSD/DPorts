@@ -1,5 +1,5 @@
 # Created by: The Anarcat <anarcat@anarcat.dyndns.org>
-# $FreeBSD: audio/ecasound/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/ecasound/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	ecasound
 PORTVERSION=	2.9.0
@@ -22,8 +22,7 @@ AUDIOFILE_DESC=	Enable libaudiofile support
 LO_DESC=	Enable liblo support
 OIL_DESC=	Enable liboil support
 
-USES=		readline
-USE_GMAKE=	yes
+USES=		gmake readline
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-liblilv \
 		--disable-rubyecasound \
