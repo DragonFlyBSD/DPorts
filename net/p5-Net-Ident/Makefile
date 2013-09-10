@@ -3,7 +3,7 @@
 # Date created:			Oct 30, 2003
 # Whom:	      			kai
 #
-# $FreeBSD: ports/net/p5-Net-Ident/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Ident/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-Ident
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kai@xs4all.nl
 COMMENT=	Lookup the username on the remote end of a TCP/IP connection
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Ident.3
 
