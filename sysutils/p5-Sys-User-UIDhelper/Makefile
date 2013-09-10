@@ -2,7 +2,7 @@
 # Date created:		2009-10-31
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/sysutils/p5-Sys-User-UIDhelper/Makefile,v 1.4 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Sys-User-UIDhelper/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	Sys-User-UIDhelper
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Helps for locating free UIDs
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::User::UIDhelper.3
 
