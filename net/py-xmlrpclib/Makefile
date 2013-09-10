@@ -2,7 +2,7 @@
 # Date created:		29 May 2001
 # Whom:	      		Johann Visagie <johann@egenetics.com>
 #
-# $FreeBSD: ports/net/py-xmlrpclib/Makefile,v 1.7 2012/11/17 06:00:16 svnexp Exp $
+# $FreeBSD: net/py-xmlrpclib/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	xmlrpclib
