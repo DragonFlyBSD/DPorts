@@ -1,8 +1,8 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: devel/p5-Config-MVP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Config-MVP/Makefile 326210 2013-09-03 19:31:51Z sunpoet $
 
 PORTNAME=	Config-MVP
-PORTVERSION=	2.200003
+PORTVERSION=	2.200004
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -23,7 +23,6 @@ BUILD_DEPENDS=	p5-Class-Load>=0.17:${PORTSDIR}/devel/p5-Class-Load \
 		p5-Tie-IxHash>=0:${PORTSDIR}/devel/p5-Tie-IxHash \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USES=		perl5
