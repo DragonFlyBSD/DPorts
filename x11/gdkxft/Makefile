@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/gdkxft/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: x11/gdkxft/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	gdkxft
 PORTVERSION=	1.5
@@ -17,9 +17,9 @@ LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk12
 USE_XORG+=	x11 xft
-USES=		iconv gettext
+USES=		iconv pkgconfig gettext
 GNU_CONFIGURE=	yes
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CFLAGS+=	`pkg-config xft --cflags`
 CONFIGURE_ARGS=	--sbindir=${PREFIX}/bin \
 		--without-gnome
