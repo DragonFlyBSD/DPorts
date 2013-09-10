@@ -2,7 +2,7 @@
 # Date created:		2008-06-24
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-LDAP-AutoDNs/Makefile,v 1.7 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LDAP-AutoDNs/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Net-LDAP-AutoDNs
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Automatically make some default decisions some LDAP DNs and scopes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::AutoDNs.3
 
