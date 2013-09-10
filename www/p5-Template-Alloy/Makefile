@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: www/p5-Template-Alloy/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Template-Alloy/Makefile 325689 2013-08-30 13:18:49Z tobez $
 
 PORTNAME=	Template-Alloy
-PORTVERSION=	1.016
+PORTVERSION=	1.019
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RHANDOM
