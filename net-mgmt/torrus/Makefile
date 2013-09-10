@@ -1,5 +1,5 @@
 # Created by: Corey Smith <corsmith@gmail.com>
-# $FreeBSD: ports/net-mgmt/torrus/Makefile,v 1.20 2012/12/21 21:53:31 svnexp Exp $
+# $FreeBSD: net-mgmt/torrus/Makefile 326244 2013-09-04 03:24:02Z az $
 
 PORTNAME=	torrus
 PORTVERSION=	2.05
@@ -25,7 +25,8 @@ BUILD_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GNOME=	libxml2
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 GNU_CONFIGURE=	YES
 
 USERS=		torrus
