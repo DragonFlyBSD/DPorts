@@ -2,7 +2,7 @@
 # Date created:		28 January 2006
 # Whom:			Yuki SHIMAZU  <y.shimazu@nifty.com>
 #
-# $FreeBSD: ports/sysutils/fpkg/Makefile,v 1.4 2012/11/17 06:01:30 svnexp Exp $
+# $FreeBSD: sysutils/fpkg/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	fpkg
@@ -17,7 +17,7 @@ EXTRACT_ONLY=
 MAINTAINER=	y.shimazu@nifty.com
 COMMENT=	Package Tool Wrapper for FreeBSD
 
-USE_PERL5=	YES
+USES=		perl5
 NO_WRKSUBDIR=	YES
 NO_BUILD=	YES
 PLIST_FILES=	bin/fpkg
