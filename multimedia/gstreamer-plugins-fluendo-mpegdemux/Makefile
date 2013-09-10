@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gstreamer-plugins-fluendo-mpegdemux
-# Date created:		2007-02-25
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/gstreamer-plugins-fluendo-mpegdemux/Makefile,v 1.13 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: multimedia/gstreamer-plugins-fluendo-mpegdemux/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	gstreamer-plugins-fluendo-mpegdemux
 PORTVERSION=	0.10.71
@@ -17,6 +13,7 @@ COMMENT=	MPEG2 demuxing gstreamer plugin from fluendo
 LICENSE=	MPL
 
 CFLAGS:=	${CFLAGS} -O2
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
