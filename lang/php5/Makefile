@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php5/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/php5/Makefile 325458 2013-08-27 15:10:38Z ale $
 
 PORTNAME=	php5
-PORTVERSION=	5.4.17
+PORTVERSION=	5.4.19
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -81,6 +81,7 @@ CONFIGURE_ARGS+=--disable-cli
 .if ${PORT_OPTIONS:MCGI}
 PHP_SAPI+=	cgi
 PLIST_SUB+=	CGI=""
+MAN1+=		php-cgi.1
 .else
 PLIST_SUB+=	CGI="@comment "
 CONFIGURE_ARGS+=--disable-cgi
