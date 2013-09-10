@@ -2,7 +2,7 @@
 # Date created:		2008-04-28
 # Whom:			Jeffrey Goldberg <jeffrey@goldmark.org>
 #
-# $FreeBSD: ports/sysutils/p5-Lchown/Makefile,v 1.5 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Lchown/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	Lchown
@@ -16,7 +16,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jeffrey@goldmark.org
 COMMENT=	A perl5 module providing access to lchown(2)
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Lchown.3
 
