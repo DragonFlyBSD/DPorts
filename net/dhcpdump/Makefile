@@ -2,7 +2,7 @@
 # Date created:        1 March 2001
 # Whom:                Edwin Groothuis (edwin@mavetju.org)
 #
-# $FreeBSD: ports/net/dhcpdump/Makefile,v 1.13 2012/11/17 05:59:59 svnexp Exp $
+# $FreeBSD: net/dhcpdump/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	dhcpdump
@@ -16,7 +16,8 @@ COMMENT=	Decode and diagnose sniffed DHCP packets
 MAN8=		dhcpdump.8
 PLIST_FILES=	bin/dhcpdump
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dhcpdump ${PREFIX}/bin
