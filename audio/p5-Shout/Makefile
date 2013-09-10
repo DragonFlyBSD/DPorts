@@ -1,5 +1,5 @@
 # Created by: leo
-# $FreeBSD: audio/p5-Shout/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: audio/p5-Shout/Makefile 326381 2013-09-05 10:36:41Z az $
 
 PORTNAME=	Shout
 PORTVERSION=	2.1
@@ -12,7 +12,7 @@ COMMENT=	Perl glue for libshout MP3 streaming source library
 
 LIB_DEPENDS=	shout.5:${PORTSDIR}/audio/libshout2
 
-USES=		perl5
+USES=		perl5 pkgconfig
 USE_PERL5=	configure
 
 MAN3=		Shout.3
