@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 325102 2013-08-21 09:29:44Z rene $
+  $FreeBSD: security/vuxml/vuln.xml 326057 2013-09-02 19:04:20Z ohauer $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,109 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="f8a913cc-1322-11e3-8ffa-20cf30e32f6d">
+    <topic>svnserve is vulnerable to a local privilege escalation vulnerability via symlink attack.</topic>
+    <affects>
+      <package>
+	<name>subversion</name>
+	<range><ge>1.4.0</ge><lt>1.6.23_2</lt></range>
+	<range><ge>1.7.0</ge><lt>1.7.13</lt></range>
+	<range><ge>1.8.0</ge><lt>1.8.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Subversion Project reports:</p>
+	<blockquote cite="http://subversion.apache.org/security/CVE-2013-4277-advisory.txt">
+	  <p>svnserve takes a --pid-file option which creates a file containing the
+	    process id it is running as.  It does not take steps to ensure that the file
+	    it has been directed at is not a symlink.  If the pid file is in a directory
+	    writeable by unprivileged users, the destination could be replaced by a
+	    symlink allowing for privilege escalation.  svnserve does not create a pid
+	    file by default.</p>
+	  <p>All versions are only vulnerable when the --pid-file=ARG option is used.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4277</cvename>
+      <url>http://subversion.apache.org/security/CVE-2013-4277-advisory.txt</url>
+    </references>
+    <dates>
+      <discovery>2013-08-30</discovery>
+      <entry>2013-09-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b3b8d491-0fbb-11e3-8c50-1c6f65c11ee6">
+    <topic>cacti -- allow remote attackers to execute arbitrary SQL commands</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><lt>0.8.8b</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cacti release reports:</p>
+	<blockquote cite="http://www.cacti.net/release_notes_0_8_8b.php">
+	  <p>Multiple security vulnerabilities have been fixed:</p>
+	  <ul>
+	    <li>SQL injection vulnerabilities</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+       <cvename>CVE-2013-1434</cvename>
+       <cvename>CVE-2013-1435</cvename>
+       <url>http://www.cacti.net/release_notes_0_8_8b.php</url>
+    </references>
+    <dates>
+      <discovery>2013-08-06</discovery>
+      <entry>2013-08-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fd2bf3b5-1001-11e3-ba94-0025905a4771">
+    <topic>asterisk -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>asterisk11</name>
+	<range><gt>11.*</gt><lt>11.5.1</lt></range>
+      </package>
+      <package>
+	<name>asterisk10</name>
+	<range><gt>10.*</gt><lt>10.12.3</lt></range>
+      </package>
+      <package>
+	<name>asterisk18</name>
+	<range><gt>1.8.*</gt><lt>1.8.21.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="https://www.asterisk.org/security">
+	  <p>Remote Crash From Late Arriving SIP ACK With SDP</p>
+	  <p>Remote Crash when Invalid SDP is sent in SIP Request</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-5641</cvename>
+      <cvename>CVE-2013-5642</cvename>
+      <url>http://downloads.asterisk.org/pub/security/AST-2013-004.html</url>
+      <url>http://downloads.asterisk.org/pub/security/AST-2013-005.html</url>
+      <url>https://www.asterisk.org/security</url>
+    </references>
+    <dates>
+      <discovery>2013-08-27</discovery>
+      <entry>2013-08-28</entry>
+      <modified>2013-08-29</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="ae651a4b-0a42-11e3-ba52-00262d5ed8ee">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>
