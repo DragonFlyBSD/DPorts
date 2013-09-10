@@ -2,7 +2,7 @@
 # Date created:		2008-02-13
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-LDAP-LDAPhash/Makefile,v 1.8 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LDAP-LDAPhash/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Net-LDAP-LDAPhash
@@ -18,7 +18,8 @@ COMMENT=	Make a hash out of the return from a search using Net::LDAP::Search
 BUILD_DEPENDS=	p5-perl-ldap>=0.39:${PORTSDIR}/net/p5-perl-ldap
 RUN_DEPENDS=	p5-perl-ldap>=0.39:${PORTSDIR}/net/p5-perl-ldap
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::LDAPhash.3
 
