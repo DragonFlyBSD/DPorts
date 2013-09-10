@@ -2,7 +2,7 @@
 # Date created:				18 Feb 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-EPP/Makefile,v 1.13 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-EPP/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-EPP
@@ -63,6 +63,7 @@ MAN3=	Net::EPP.3 \
 	Net::EPP::Frame::Command::Transfer::Contact.3 \
 	Net::EPP::Frame::Command::Poll::Ack.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
