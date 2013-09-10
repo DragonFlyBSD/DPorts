@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-core/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas-core/Makefile 326411 2013-09-05 16:25:38Z bapt $
 
 PORTNAME=	core
 PORTVERSION=	1.7.8
