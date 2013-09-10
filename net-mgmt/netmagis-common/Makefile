@@ -1,5 +1,5 @@
 # Created by: Pierre David <pdagog@gmail.com>, Jean Benoit <jean@unistra.fr>
-# $FreeBSD: net-mgmt/netmagis-common/Makefile 323779 2013-07-27 11:12:27Z danfe $
+# $FreeBSD: net-mgmt/netmagis-common/Makefile 326244 2013-09-04 03:24:02Z az $
 
 PORTNAME?=	netmagis
 DISTVERSION?=	2.2.0
@@ -45,7 +45,7 @@ RUN_DEPENDS+=	rancid-run:${PORTSDIR}/net-mgmt/rancid \
 .endif
 
 .if ${PKGNAMESUFFIX} == -metro
-USE_PERL5=	yes
+USES=		perl5
 
 RUN_DEPENDS+=	p5-DBD-Pg>0:${PORTSDIR}/databases/p5-DBD-Pg \
 		p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP \
