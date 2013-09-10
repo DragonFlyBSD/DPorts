@@ -1,8 +1,8 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-XML-Compile-SOAP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-XML-Compile-SOAP/Makefile 325695 2013-08-30 13:31:33Z tobez $
 
 PORTNAME=	XML-Compile-SOAP
-PORTVERSION=	2.37
+PORTVERSION=	2.38
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
