@@ -2,8 +2,10 @@
 # Date created:			12 Apr 2012
 # Whom:				Florian Smeets <flo@FreeBSD.org>
 #
-# $FreeBSD: ports/security/php53-openssl/Makefile,v 1.2 2012/11/17 06:01:15 svnexp Exp $
+# $FreeBSD: security/php53-openssl/Makefile 325434 2013-08-27 10:33:45Z garga $
 #
+
+PORTREVISION=	1
 
 CATEGORIES=	security
 
