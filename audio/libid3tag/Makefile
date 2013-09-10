@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: ports/audio/libid3tag/Makefile,v 1.19 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libid3tag/Makefile 326436 2013-09-05 18:24:58Z sunpoet $
 
 PORTNAME=	libid3tag
 PORTVERSION=	0.15.1b
@@ -10,21 +10,20 @@ MASTER_SITES=	SF/mad/${PORTNAME}/${PORTVERSION} \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ID3 tags library (part of MAD project)
 
-LICENSE=	GPLv2
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
 
-USE_GNOME=	pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+USES=		pkgconfig
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
-	    	${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' ${WRKSRC}/configure
 
 post-build:
 	cd ${WRKSRC} && CONFIG_FILES=id3tag.pc CONFIG_HEADERS= ${SH} ./config.status
 
 post-install:
-	${MKDIR} ${PREFIX}/libdata/pkgconfig
-	${INSTALL_DATA} ${WRKSRC}/id3tag.pc ${PREFIX}/libdata/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/id3tag.pc ${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
