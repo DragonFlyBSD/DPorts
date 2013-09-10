@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AFsp
-# Date created:				30 May 2000
-# Whom:					Kawaguti Ginga <ginga@athena.club.ne.jp>
-#
-# $FreeBSD: ports/audio/afsp/Makefile,v 1.20 2012/11/17 05:54:27 svnexp Exp $
-#
+# Created by: Kawaguti Ginga <ginga@athena.club.ne.jp>
+# $FreeBSD: audio/afsp/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	afsp
 PORTVERSION=	8.2
@@ -14,7 +10,7 @@ DISTNAME=	AFsp-v8r2
 MAINTAINER=	ginga-freebsd@ginganet.org
 COMMENT=	Audio file conversion utilities and library
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_JOBS_UNSAFE=	yes
 
 MAN1=	AFsp.1audio CompAudio.1audio CopyAudio.1audio FiltAudio.1audio \

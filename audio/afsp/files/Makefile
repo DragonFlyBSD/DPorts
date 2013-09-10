@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/afsp/files/Makefile,v 1.9 2012/11/17 05:54:27 svnexp Exp $
+# $FreeBSD: audio/afsp/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 LIBRARIES =	lib/libAO.a \
 		lib/libtsp.a
