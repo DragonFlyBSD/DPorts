@@ -1,5 +1,5 @@
 # Created by: Oliver Hartmann <ohartman@zedat.fu-berlin.de>
-# $FreeBSD: devel/opencl/Makefile 317055 2013-05-01 22:29:39Z rakuco $
+# $FreeBSD: devel/opencl/Makefile 325857 2013-09-01 14:25:11Z marino $
 
 PORTNAME=	opencl
 PORTVERSION=	1.2
