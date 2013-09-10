@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dirac
-# Date created:		11 May 2004
-# Whom:			Bruce M Simpson <bms@FreeBSD.org>
-#
-# $FreeBSD: multimedia/dirac/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Bruce M Simpson <bms@FreeBSD.org>
+# $FreeBSD: multimedia/dirac/Makefile 325750 2013-08-31 00:29:43Z bapt $
 
 PORTNAME=	dirac
 PORTVERSION=	1.0.2
@@ -16,8 +12,7 @@ COMMENT?=	Open source video codec from the BBC
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	pkgconfig gnomehack
+USES=		gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 CONFIGURE_ENV?=	HAVE_LATEX=${FALSE} HAVE_DVIPDFM=${FALSE} \
