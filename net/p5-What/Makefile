@@ -2,7 +2,7 @@
 # Date created:		2006-07-15
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-What/Makefile,v 1.8 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-What/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	What
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		What.3 What::MTA.3
 
