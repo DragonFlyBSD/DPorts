@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: devel/p5-Chooser/Makefile 314068 2013-03-13 11:14:32Z bapt $
+# $FreeBSD: devel/p5-Chooser/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	Chooser
 PORTVERSION=	2.0.0
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Net-CIDR-Lite>=0.21:${PORTSDIR}/net/p5-Net-CIDR-Lite \
 		p5-IO-Socket-SSL>=1.74:${PORTSDIR}/security/p5-IO-Socket-SSL \
 		p5-Text-NeatTemplate>=0.10.01:${PORTSDIR}/textproc/p5-Text-NeatTemplate
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Chooser.3
 
