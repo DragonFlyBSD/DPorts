@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libsndfile
-# Date created:			Jul 20, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: audio/libsndfile/Makefile 320405 2013-06-09 19:30:58Z naddy $
-#
+# Created by: ijliao
+# $FreeBSD: audio/libsndfile/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	libsndfile
 PORTVERSION=	1.0.25
@@ -17,9 +13,8 @@ COMMENT=	Reading and writing files containing sampled sound (like WAV or AIFF)
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GNOME=	gnomehack pkgconfig
+USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 CONFIGURE_ARGS=	--disable-gcc-pipe \
 		--disable-sqlite \
 		--disable-alsa \
