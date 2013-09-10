@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/gdome2/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: textproc/gdome2/Makefile 325990 2013-09-02 13:16:00Z bapt $
 
 PORTNAME=	gdome2
 PORTVERSION=	0.8.1
@@ -13,7 +13,7 @@ COMMENT=	Gnome DOM Engine
 LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	GLIB_CONFIG="${LOCALBASE}/bin/pkg-config glib-2.0"
