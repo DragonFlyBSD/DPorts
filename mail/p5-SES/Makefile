@@ -1,5 +1,5 @@
 # Created by: Stephon Chen <stephon@pixnet.tw>
-# $FreeBSD: mail/p5-SES/Makefile 318932 2013-05-24 08:46:46Z az $
+# $FreeBSD: mail/p5-SES/Makefile 326272 2013-09-04 13:07:40Z az $
 
 PORTNAME=	SES
 PORTVERSION=	1.01
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-LWP-Protocol-https>=0:${PORTSDIR}/www/p5-LWP-Protocol-https \
 		p5-libwww>=6:${PORTSDIR}/www/p5-libwww
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/bin
 
