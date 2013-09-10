@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
-# $FreeBSD: print/xdvi/Makefile 324022 2013-07-31 09:18:07Z danfe $
+# $FreeBSD: print/xdvi/Makefile 325992 2013-09-02 13:26:34Z tijl $
 
 PORTNAME=	xdvi
 PORTVERSION=	pl20
@@ -16,12 +16,11 @@ COMMENT=	DVI previewer for the X Window System
 
 CONFLICTS=	teTeX-*
 
-USES=		gmake imake
+USES=		gmake imake:notall
 USE_XORG=	ice sm x11 xaw xext xmu xt xpm
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 PLIST_SUB=	LOCALBASE=${LOCALBASE}
-XMKMF=		xmkmf
 .if defined(PACKAGE_BUILDING)
 SCRIPTS_ENV=	PACKAGE_BUILDING=${PACKAGE_BUILDING}
 .else
