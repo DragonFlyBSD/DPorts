@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Devel-CheckOS/Makefile,v 1.10 2013/01/28 15:53:34 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-CheckOS/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	Devel-CheckOS
 PORTVERSION=	1.71
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Data-Compare>=1.2100:${PORTSDIR}/devel/p5-Data-Compare \
 		p5-File-Find-Rule>=0.28:${PORTSDIR}/devel/p5-File-Find-Rule
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		use-devel-assertos.1
 MAN3=		Devel::AssertOS.3 \
