@@ -1,9 +1,9 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/ocropus/Makefile 323110 2013-07-16 14:56:10Z miwi $
+# $FreeBSD: graphics/ocropus/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	ocropus
 PORTVERSION=	0.4
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
@@ -14,7 +14,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		jpeg.11:${PORTSDIR}/graphics/jpeg \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		iulib.0:${PORTSDIR}/graphics/iulib \
-		gsl.16:${PORTSDIR}/math/gsl
+		gsl:${PORTSDIR}/math/gsl
 
 WRKSRC=		${WRKDIR}/ocropus-0.4/ocropus
 
