@@ -2,11 +2,12 @@
 # Date created:		22 December 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/math/ruby-gsl/Makefile,v 1.35 2012/11/17 05:59:30 svnexp Exp $
+# $FreeBSD: math/ruby-gsl/Makefile 325401 2013-08-26 16:06:37Z bf $
 #
 
 PORTNAME=	gsl
 PORTVERSION=	1.14.7
+PORTREVISION=	1
 CATEGORIES=	math ruby
 MASTER_SITES=	RF
 MASTER_SITE_SUBDIR=	rb-${PORTNAME}
@@ -18,7 +19,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A Ruby extension library for GSL (GNU Scientific Library)
 
-LIB_DEPENDS=	gsl.16:${PORTSDIR}/math/gsl
+LIB_DEPENDS=	gsl:${PORTSDIR}/math/gsl
 
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
@@ -35,6 +36,11 @@ post-patch:
 	${WRKSRC}/ext/matrix_complex.c
 	${REINPLACE_CMD} -e 's|gsl_vector_complex_equal|rb_&|g' \
 	${WRKSRC}/ext/vector_complex.c
+	${REINPLACE_CMD} -Ee \
+	'/(gsl_wavelet_direction|INT2FIX)/s/(for|back)ward/gsl_wavelet_&/' \
+	${WRKSRC}/ext/wavelet.c
+	${REINPLACE_CMD} -Ee '/INT2FIX/s/(for|back)ward/gsl_fft_&/' \
+	${WRKSRC}/ext/fft.c
 
 post-install:
 .if !defined(NOPORTEXAMPLES)
