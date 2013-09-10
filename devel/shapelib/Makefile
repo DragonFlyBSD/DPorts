@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: ports/devel/shapelib/Makefile,v 1.33 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/shapelib/Makefile 325456 2013-08-27 15:03:04Z sunpoet $
 
 PORTNAME=	shapelib
 PORTVERSION=	1.3.0
@@ -11,6 +11,8 @@ MASTER_SITES=	http://download.osgeo.org/shapelib/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C API for reading and writing ArcView Shapefiles
+
+LICENSE=	LGPL20
 
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
