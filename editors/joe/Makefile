@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: editors/joe/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: editors/joe/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	joe
 PORTVERSION=	3.7
@@ -20,7 +20,7 @@ LICENSE=	GPLv1
 USE_GMAKE=	yes
 USES=		iconv ncurses
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -liconv"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 ALL_TARGET=	${PORTNAME}
