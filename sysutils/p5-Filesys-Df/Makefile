@@ -2,7 +2,7 @@
 # Date created:				31 May 2006
 # Whom:	      				Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/p5-Filesys-Df/Makefile,v 1.6 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Filesys-Df/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	Filesys-Df
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	pirzyk@FreeBSD.org
 COMMENT=	Perl extension for filesystem space
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Filesys::Df.3
 
