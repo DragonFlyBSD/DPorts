@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: multimedia/clive/Makefile 318952 2013-05-24 10:30:58Z az $
+# $FreeBSD: multimedia/clive/Makefile 326361 2013-09-05 07:29:05Z az $
 
 PORTNAME=	clive
 PORTVERSION=	2.3.3
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Getopt-ArgvFile>=1.11:${PORTSDIR}/devel/p5-Getopt-ArgvFile \
 # deskutils/ljclive, multimedia/clive1 (same executable/manpage/distfile name)
 CONFLICTS=	py*-clive-[0-1]* ljclive-[0-9]*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		clive.1
 PLIST_FILES=	bin/clive \
