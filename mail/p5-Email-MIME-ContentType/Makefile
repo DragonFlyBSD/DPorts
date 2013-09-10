@@ -1,12 +1,7 @@
-# New ports collection makefile for:	p5-Email-MIME-ContentType
-# Date created:				2004-08-29
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: mail/p5-Email-MIME-ContentType/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# $FreeBSD: mail/p5-Email-MIME-ContentType/Makefile 325797 2013-08-31 11:48:45Z lth $
 
 PORTNAME=	Email-MIME-ContentType
-PORTVERSION=	1.01.5
+PORTVERSION=	1.01.7
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Email
