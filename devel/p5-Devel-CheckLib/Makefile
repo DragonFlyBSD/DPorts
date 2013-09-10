@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Devel-CheckLib/Makefile 323868 2013-07-29 07:26:18Z culot $
+# $FreeBSD: devel/p5-Devel-CheckLib/Makefile 326818 2013-09-09 15:55:47Z az $
 
 PORTNAME=	Devel-CheckLib
 PORTVERSION=	1.01
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-IO-CaptureOutput>=1.08:${PORTSDIR}/devel/p5-IO-CaptureOutput
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		use-devel-checklib.1
 MAN3=		Devel::CheckLib.3
