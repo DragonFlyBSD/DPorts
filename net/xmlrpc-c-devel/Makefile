@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/xmlrpc-c-devel/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/xmlrpc-c-devel/Makefile 325961 2013-09-02 09:45:00Z garga $
 
 PORTNAME=	xmlrpc-c
 PORTVERSION=	1.33.2
@@ -21,8 +21,8 @@ CPLUSPLUS_DESC=	 Build xmlrpc-c c++ libs and tools
 
 CONFLICTS=	xmlrpc-epi-0.* xmlrpc-c-[0-9]*
 
+USES=		gmake
 USE_XZ=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
 MAKE_JOBS_UNSAFE=	yes
