@@ -2,11 +2,11 @@
 # Date created:				19 November 2003
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/dmidecode/Makefile,v 1.16 2012/11/17 06:01:28 svnexp Exp $
+# $FreeBSD: sysutils/dmidecode/Makefile 326327 2013-09-04 21:14:14Z anders $
 #
 
 PORTNAME=	dmidecode
-PORTVERSION=	2.11
+PORTVERSION=	2.12
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SAVANNAH} \
 		ftp://ftp.nuug.no/pub/anders/distfiles/
