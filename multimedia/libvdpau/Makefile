@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libvdpau/Makefile 324326 2013-08-06 23:40:07Z madpilot $
+# $FreeBSD: multimedia/libvdpau/Makefile 326080 2013-09-02 20:27:53Z antoine $
 
 PORTNAME=	libvdpau
 PORTVERSION=	0.7
@@ -11,6 +11,7 @@ COMMENT=	VDPAU wrapper and tracing library
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		pkgconfig
 USE_XZ=		yes
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtoolize
 ACLOCAL_ARGS=	-I.
