@@ -2,7 +2,7 @@
 # Date created:		6 May 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-POE-Component-Client-Ident/Makefile,v 1.18 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-POE-Component-Client-Ident/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	POE-Component-Client-Ident
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-POE>=0.9999:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-POE-Server-TCP>=0:${PORTSDIR}/devel/p5-Test-POE-Server-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::Ident.3 \
 		POE::Component::Client::Ident::Agent.3 \
