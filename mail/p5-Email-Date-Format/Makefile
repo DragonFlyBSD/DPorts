@@ -2,7 +2,7 @@
 # Date created:         2007-12-26
 # Whom:                 Anton Yuzhaninov <citrin@rambler-co.ru>
 #
-# $FreeBSD: ports/mail/p5-Email-Date-Format/Makefile,v 1.2 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/p5-Email-Date-Format/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	Email-Date-Format
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Produce RFC 2822 date strings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::Date::Format.3
 
