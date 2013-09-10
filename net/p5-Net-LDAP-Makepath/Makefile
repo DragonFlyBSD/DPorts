@@ -2,7 +2,7 @@
 # Date created:		2008-06-24
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-LDAP-Makepath/Makefile,v 1.7 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LDAP-Makepath/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-LDAP-Makepath
@@ -18,7 +18,8 @@ COMMENT=	Provides a method for creating paths in LDAP simply
 
 RUN_DEPENDS=	 p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::Makepath.3
 
