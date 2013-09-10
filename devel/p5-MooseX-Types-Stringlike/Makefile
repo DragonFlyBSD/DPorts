@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-Stringlike/Makefile 313357 2013-03-03 15:08:26Z kuriyama $
+# $FreeBSD: devel/p5-MooseX-Types-Stringlike/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	MooseX-Types-Stringlike
 PORTVERSION=	0.001
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-MooseX-Types>0:${PORTSDIR}/devel/p5-MooseX-Types
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Types::Stringlike.3
 
