@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: www/p5-URI-Escape-XS/Makefile 313093 2013-02-28 15:10:17Z culot $
+# $FreeBSD: www/p5-URI-Escape-XS/Makefile 326161 2013-09-03 15:28:40Z az $
 
 PORTNAME=	URI-Escape-XS
 PORTVERSION=	0.10
@@ -13,7 +13,8 @@ COMMENT=	Drop-In replacement for URI::Escape in XS
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	URI::Escape::XS.3
 
