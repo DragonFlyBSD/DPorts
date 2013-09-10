@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: converters/p5-Text-Iconv/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Text-Iconv/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	Text-Iconv
 PORTVERSION=	1.7
@@ -13,7 +13,7 @@ COMMENT=	Perl interface to iconv() codeset conversion function
 USES=		perl5 iconv
 USE_PERL5=	configure
 CONFIGURE_ARGS+=	INC="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib -liconv"
+		LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 
 MAN3=		Text::Iconv.3
 
