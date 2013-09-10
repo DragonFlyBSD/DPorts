@@ -1,8 +1,8 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime26/Makefile 322163 2013-07-02 11:52:15Z wg $
+# $FreeBSD: mail/gmime26/Makefile 326162 2013-09-03 15:59:29Z wg $
 
 PORTNAME=	gmime
-PORTVERSION=	2.6.16
+PORTVERSION=	2.6.17
 PORTREVISION?=	0
 CATEGORIES?=	mail
 MASTER_SITES=	GNOME
@@ -18,10 +18,9 @@ CONFLICTS=	gmime-1.0.*
 SLAVEDIRS=	mail/gmime26-sharp
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}26
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME+=	glib20 ltverhack
-USES=		pathfix pkgconfig iconv
+USES=		gmake pathfix pkgconfig iconv
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
