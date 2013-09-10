@@ -2,7 +2,7 @@
 # Date Created: 			18 May 2000
 # Whom: 				Guy Antony Halse <guy@rucus.ru.za.za>
 #
-# $FreeBSD: ports/mail/p5-Mail-Ezmlm/Makefile,v 1.16 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Ezmlm/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	Mail-Ezmlm
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 EZMLM_DIR?=	${LOCALBASE}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .if defined(PACKAGE_BUILDING)
 CONFIGURE_ENV=	BSD_BATCH_INSTALL=yes
