@@ -2,7 +2,7 @@
 # Date created:		13 Oct 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-AnyEvent-ReverseHTTP/Makefile,v 1.3 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-AnyEvent-ReverseHTTP/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	AnyEvent-ReverseHTTP
@@ -22,7 +22,8 @@ RUN_DEPENDS=	\
 	p5-URI>0:${PORTSDIR}/net/p5-URI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::ReverseHTTP.3
 
