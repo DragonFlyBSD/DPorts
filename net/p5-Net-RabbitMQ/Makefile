@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-RabbitMQ
-# Date created:		2010-09-07
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: ports/net/p5-Net-RabbitMQ/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: net/p5-Net-RabbitMQ/Makefile 325886 2013-09-01 17:19:39Z az $
 
 PORTNAME=	Net-RabbitMQ
 PORTVERSION=	0.2.0
@@ -18,8 +14,8 @@ COMMENT=	Perl module to interact with RabbitMQ over AMQP using librabbitmq
 BUILD_DEPENDS=	${LOCALBASE}/sbin/rabbitmqctl:${PORTSDIR}/net/rabbitmq
 RUN_DEPENDS=	${LOCALBASE}/sbin/rabbitmqctl:${PORTSDIR}/net/rabbitmq
 
-USE_PERL5=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::RabbitMQ.3
 
