@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Data::Page::NoTotalEntries
-# Date created:		26 Feb 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-Page-NoTotalEntries/Makefile,v 1.5 2012/11/17 05:56:10 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Data-Page-NoTotalEntries/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Data-Page-NoTotalEntries
 PORTVERSION=	0.02
@@ -20,7 +15,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Page::NoTotalEntries.3 \
 	Data::Page::README.3
