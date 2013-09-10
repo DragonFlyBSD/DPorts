@@ -2,7 +2,7 @@
 # Date created:				12 October 2005
 # Whom:					Mauricio Herrera Cuadra <mauricio@arareko.net>
 #
-# $FreeBSD: ports/biology/p5-Bio-ASN1-EntrezGene/Makefile,v 1.4 2012/11/17 05:54:52 svnexp Exp $
+# $FreeBSD: biology/p5-Bio-ASN1-EntrezGene/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	Bio-ASN1-EntrezGene
@@ -17,7 +17,8 @@ COMMENT=	Regular expression-based Perl Parser for NCBI Entrez Gene
 
 WRKSRC=		${WRKDIR}/Bio-ASN1-EntrezGene-1.09
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Bio::ASN1::EntrezGene.3 \
 		Bio::ASN1::EntrezGene::Indexer.3 \
