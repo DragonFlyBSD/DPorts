@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-farsight/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: net-im/telepathy-farsight/Makefile 326133 2013-09-03 10:23:55Z bapt $
 #   $MCom$
 
 PORTNAME=	telepathy-farsight
@@ -15,7 +15,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		gstfarsight-0.10:${PORTSDIR}/net-im/farsight2
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USE_AUTOTOOLS=	libtool
