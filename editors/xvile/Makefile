@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/xvile/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/xvile/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	xvile
 PORTVERSION=	9.8k
@@ -53,7 +53,7 @@ PLIST_SUB+=	SO_EXT=""
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=		iconv
-CONFIGURE_ARGS+=	--with-iconv --with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-iconv ${ICONV_CONFIGURE_ARG}
 PLIST_SUB+=	ICONV=""
 .else
 BROKEN=		Does not build if ICONV support is disabled
