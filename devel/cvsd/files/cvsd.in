@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/devel/cvsd/files/cvsd.in,v 1.5 2012/11/17 05:55:39 svnexp Exp $
+# $FreeBSD: devel/cvsd/files/cvsd.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: cvsd
 # REQUIRE: LOGIN syslogd
