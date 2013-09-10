@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-PerlIO-via-dynamic
-# Date created:				Mar  2004
-# Whom:					Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: ports/devel/p5-PerlIO-via-dynamic/Makefile,v 1.11 2012/12/23 13:10:35 svnexp Exp $
-#
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/p5-PerlIO-via-dynamic/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	PerlIO-via-dynamic
 PORTVERSION=	0.14
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	Dynamic PerlIO layers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PerlIO::via::dynamic.3
 
