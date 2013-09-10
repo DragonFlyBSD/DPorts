@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/zaz/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/zaz/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	zaz
 PORTVERSION=	1.0.0
@@ -17,6 +17,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_SDL=	sdl image
 USE_GL=		gl glu
 
@@ -26,16 +27,16 @@ CONFIGURE_ARGS=	--with-icondir="${PREFIX}/share/pixmaps"
 
 PORTDOCS=	*
 
-# Unconditially disable NLS for now: the game segfaults with 8bit locales
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
+# Unconditially disable NLS for now: the game segfaults with 8bit locales
+#.if ${PORT_OPTIONS:MNLS}
+#USES+=		gettext
+#PLIST_SUB+=	NLS=""
+#.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.endif
+#.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^zazdocdir =/ s|$${prefix}/doc|$${prefix}/share/doc|' \
