@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gcc-aux/Makefile 324771 2013-08-15 14:39:14Z ak $
+# $FreeBSD: lang/gcc-aux/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
@@ -197,7 +197,7 @@ ADA_CONFIG_ARGS+=	--with-system-zlib
 ADA_CONFIG_ARGS+=	--with-gmp=${PREFIX}
 ADA_CONFIG_ARGS+=	--with-mpfr=${PREFIX}
 ADA_CONFIG_ARGS+=	--with-mpc=${PREFIX}
-ADA_CONFIG_ARGS+=	--with-libiconv-prefix=${PREFIX}
+ADA_CONFIG_ARGS+=	${ICONV_CONFIGURE_ARG}
 ADA_CONFIG_ARGS+=	--enable-shared
 ADA_CONFIG_ARGS+=	--enable-threads=posix
 ADA_CONFIG_ARGS+=	--disable-bootstrap
