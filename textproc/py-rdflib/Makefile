@@ -1,21 +1,21 @@
 # Created by: ijliao
-# $FreeBSD: ports/textproc/py-rdflib/Makefile,v 1.25 2012/11/17 06:02:18 svnexp Exp $
+# $FreeBSD: textproc/py-rdflib/Makefile 326681 2013-09-07 19:14:23Z sunpoet $
 
 PORTNAME=	rdflib
-PORTVERSION=	3.2.3
+PORTVERSION=	4.0.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
-COMMENT=	A Python library for RDF manipulation
+COMMENT=	Python library for RDF manipulation
 
 LICENSE=	BSD
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}isodate>=0:${PORTSDIR}/devel/py-isodate
 
-USE_PYTHON=		-2.7
-USE_PYDISTUTILS=	yes
+USE_PYTHON=	-2.7
+USE_PYDISTUTILS=yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|setuptools|distutils.core|' ${WRKSRC}/${PYSETUP}
