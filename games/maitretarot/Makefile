@@ -1,9 +1,5 @@
-# New ports collection makefile for:	maitretarot
-# Date created:		Sun 7 mar 2004
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/games/maitretarot/Makefile,v 1.6 2012/11/17 05:57:45 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: games/maitretarot/Makefile 326013 2013-09-02 15:39:17Z bapt $
 
 PORTNAME=		maitretarot
 PORTVERSION=		0.1.98
@@ -17,6 +13,7 @@ COMMENT=		Server side of MaitreTarot, a Tarot card game
 
 LIB_DEPENDS=		maitretarot.0:${PORTSDIR}/games/libmaitretarot
 
+USES=			pkgconfig
 USE_BZIP2=		yes
 GNU_CONFIGURE=		yes
 USE_GNOME=		glib20 libxml2
