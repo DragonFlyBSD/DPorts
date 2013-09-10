@@ -2,7 +2,7 @@
 # Date created:				27 Sep 2010
 # Whom:					Sascha Klauder <sklauder@trimind.de>
 #
-# $FreeBSD: ports/sysutils/massadmin/Makefile,v 1.2 2012/11/17 06:01:38 svnexp Exp $
+# $FreeBSD: sysutils/massadmin/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 
 PORTNAME=	massadmin
@@ -20,7 +20,7 @@ RUN_DEPENDS=	p5-Expect>=1.21:${PORTSDIR}/lang/p5-Expect \
 		p5-IO-Tty>=1.08:${PORTSDIR}/devel/p5-IO-Tty
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 LICENSE=	GPLv3
 
