@@ -1,9 +1,5 @@
-# New ports collection makefile for:    unrar
-# Date created:				23 Sep 2005
-# Whom:					samm@os2.kiev.ua
-#
-# $FreeBSD: ports/archivers/libunrar/Makefile,v 1.22 2012/11/17 05:54:21 svnexp Exp $
-#
+# Created by: samm@os2.kiev.ua
+# $FreeBSD: archivers/libunrar/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	libunrar
 PORTVERSION=	3.9.10
@@ -17,7 +13,7 @@ COMMENT=	Library to work with RAR archives
 
 WRKSRC=		${WRKDIR}/unrar
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKEFILE=	makefile.unix
 ALL_TARGET=	lib
 USE_LDCONFIG=	yes
