@@ -1,5 +1,5 @@
 # Created By: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-subversion/Makefile 321328 2013-06-19 21:13:34Z ohauer $
+# $FreeBSD: devel/p5-subversion/Makefile 326581 2013-09-07 08:23:45Z az $
 
 PKGNAMEPREFIX=	p5-
 
@@ -15,7 +15,7 @@ MASTERDIR=	${.CURDIR}/../../devel/subversion
 .endif
 PKGDIR=		${.CURDIR}
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 MAN3=		SVN::Base.3 \
