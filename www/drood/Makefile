@@ -1,13 +1,8 @@
-# New ports collection makefile for:  drood
-# Date created:                       Sat, 07 Jul 2007 22:47:06 EDT
-# Whom:                               James Bailie <jimmy@mammothcheese.ca>
-#
-# $FreeBSD: ports/www/drood/Makefile,v 1.70 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: James Bailie <jimmy@mammothcheese.ca>
+# $FreeBSD: www/drood/Makefile 326862 2013-09-10 04:22:02Z tabthorpe $
 
 PORTNAME=	drood
-PORTVERSION=	3.4
-PORTREVISION=	1
+PORTVERSION=	3.6
 CATEGORIES=	www
 MASTER_SITES=	http://www.mammothcheese.ca/
 
