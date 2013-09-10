@@ -2,7 +2,7 @@
 # Date created:					Oct 30 2009
 # Whom:						Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/p5-Pango/Makefile,v 1.10 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Pango/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Pango
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-ExtUtils-Depends>=0.300:${PORTSDIR}/devel/p5-ExtUtils-Depends 
 RUN_DEPENDS=	p5-Glib2>=1.220:${PORTSDIR}/devel/p5-Glib2
 
 USE_GNOME=	pango
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=yes
 
 post-install:
