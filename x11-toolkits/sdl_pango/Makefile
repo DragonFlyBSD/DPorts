@@ -1,9 +1,5 @@
-# New ports collection makefile for:   x11-toolkits/sdl_pango
-# Date created:        2006-10-30
-# Whom:                Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/x11-toolkits/sdl_pango/Makefile,v 1.13 2012/11/17 06:03:39 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: x11-toolkits/sdl_pango/Makefile 326032 2013-09-02 16:55:04Z bapt $
 
 PORTNAME=	sdl_pango
 PORTVERSION=	0.1.2
@@ -18,6 +14,7 @@ PATCHFILES=	SDL_Pango-0.1.2-API-adds.patch
 MAINTAINER=	edwin@mavetju.org
 COMMENT=	SDL_Pango is the SDL API to the Pango text rendering engine of GNOME 2.x
 
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_SDL=	sdl
 USE_GNOME=	pango
