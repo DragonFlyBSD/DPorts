@@ -2,7 +2,7 @@
 # Date created:		2008-01-29
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-HTML-RobotsMETA/Makefile,v 1.5 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-RobotsMETA/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	HTML-RobotsMETA
@@ -18,7 +18,8 @@ COMMENT=	Parse HTML For Robots Exclusion META Markup
 BUILD_DEPENDS=	p5-HTML-Parser>=3:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::RobotsMETA.3 \
 		HTML::RobotsMETA::Rules.3
