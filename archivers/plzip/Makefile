@@ -1,5 +1,5 @@
 # Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-# $FreeBSD: archivers/plzip/Makefile 321168 2013-06-18 03:38:38Z delphij $
+# $FreeBSD: archivers/plzip/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	plzip
 PORTVERSION=	1.0
@@ -13,8 +13,8 @@ BUILD_DEPENDS=	lzlib>=1.1:${PORTSDIR}/archivers/lzlib
 
 PLIST_FILES=	bin/plzip
 
+USES=		gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 CONFIGURE_ARGS=	CXXFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 MAN1=		plzip.1
