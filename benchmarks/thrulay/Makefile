@@ -1,8 +1,5 @@
-# New ports collection makefile for:   thrulay
-# Date created:        2005-10-19
-# Whom:                shalunov
-#
-# $FreeBSD: ports/benchmarks/thrulay/Makefile,v 1.6 2012/11/17 05:54:51 svnexp Exp $
+# Created by: shalunov
+# $FreeBSD: benchmarks/thrulay/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	thrulay
 PORTVERSION=	0.9
@@ -17,7 +14,7 @@ MAN1=		thrulay.1
 MAN8=		thrulayd.8
 MANCOMPRESSED=	no
 HAS_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	thrulayd
 SUB_FILES=	thrulayd
