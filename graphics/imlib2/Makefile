@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/imlib2/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/imlib2/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME=	imlib2
 PORTVERSION=	1.4.5
@@ -16,7 +16,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 USE_EFL=	libtool_hack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
