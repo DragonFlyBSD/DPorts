@@ -1,9 +1,4 @@
-# New ports collection makefile for:	IO::Handle::Util
-# Date created:		16 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-IO-Handle-Util/Makefile,v 1.4 2012/11/17 05:56:18 svnexp Exp $
-#
+# $FreeBSD: devel/p5-IO-Handle-Util/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	IO-Handle-Util
 PORTVERSION=	0.01
@@ -21,7 +16,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	IO::Handle::Iterator.3 \
 	IO::Handle::Prototype.3 \
