@@ -2,7 +2,7 @@
 # Date created:				22 Sep 2005
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/p5-Business-ISBN-Data/Makefile,v 1.11 2012/11/17 05:59:43 svnexp Exp $
+# $FreeBSD: misc/p5-Business-ISBN-Data/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	Business-ISBN-Data
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	leeym@FreeBSD.org
 COMMENT=	Data pack for Business::ISBN
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::ISBN::Data.3
 
