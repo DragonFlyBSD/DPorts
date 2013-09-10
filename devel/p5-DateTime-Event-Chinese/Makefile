@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Event-Chinese
-# Date created:		2007-11-06
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Event-Chinese/Makefile,v 1.4 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: devel/p5-DateTime-Event-Chinese/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	DateTime-Event-Chinese
 PORTVERSION=	1.00
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-DateTime-Astro>=0:${PORTSDIR}/devel/p5-DateTime-Astro \
 RUN_DEPENDS=	p5-DateTime-Astro>=0:${PORTSDIR}/devel/p5-DateTime-Astro \
 		p5-Math-Round>=0:${PORTSDIR}/math/p5-Math-Round
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Event::Chinese.3
 
