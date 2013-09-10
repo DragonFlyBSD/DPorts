@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xteddy
-# Date created:        3 June 1998
-# Whom:                Eckart "Isegrim" Hofmann
-#
-# $FreeBSD: ports/games/xteddy/Makefile,v 1.31 2012/11/17 05:57:58 svnexp Exp $
-#    $MCom: ports/games/xteddy/Makefile,v 1.1 2006/10/04 13:16:56 ahze Exp $
+# Created by: Eckart "Isegrim" Hofmann
+# $FreeBSD: games/xteddy/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	xteddy
 PORTVERSION=	2.2
@@ -11,10 +7,11 @@ CATEGORIES=	games
 MASTER_SITES=	http://webstaff.itn.liu.se/~stegu/xteddy/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A cuddlesome teddy for the X desktop
+COMMENT=	Cuddlesome teddy for the X desktop
 
 LICENSE=	GPLv2
 
+USES=		pkgconfig
 USE_EFL=	imlib2
 GNU_CONFIGURE=	yes
 
