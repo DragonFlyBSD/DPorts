@@ -2,7 +2,7 @@
 # Date created:		2012-06-05
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/www/rubygem-robotex/Makefile,v 1.2 2012/11/17 06:03:05 svnexp Exp $
+# $FreeBSD: www/rubygem-robotex/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	robotex
