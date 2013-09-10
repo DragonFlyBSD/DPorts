@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Data-Hierarchy
-# Date created:				Mar 15 2004
-# Whom:					Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: ports/devel/p5-Data-Hierarchy/Makefile,v 1.14 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/p5-Data-Hierarchy/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	Data-Hierarchy
 PORTVERSION=	0.34
@@ -16,7 +12,8 @@ COMMENT=	Handle data in a hierarchical structure
 
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Hierarchy.3
 
