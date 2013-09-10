@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CPAN-Testers-Report
-# Date created:		2011-02-05
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-CPAN-Testers-Report/Makefile,v 1.4 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-CPAN-Testers-Report/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	CPAN-Testers-Report
 PORTVERSION=	1.999001
@@ -18,7 +14,8 @@ COMMENT=	CPAN Testers report object
 BUILD_DEPENDS=	p5-Metabase-Fact>0:${PORTSDIR}/devel/p5-Metabase-Fact
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CPAN::Testers::Fact::LegacyReport.3 \
 	CPAN::Testers::Fact::TestEnvironment.3 \
