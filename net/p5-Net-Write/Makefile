@@ -2,7 +2,7 @@
 # Date created:				17 May 2006
 # Whom:					Christopher Boumenot <boumenot@gmail.com>
 #
-# $FreeBSD: ports/net/p5-Net-Write/Makefile,v 1.13 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Write/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	Net-Write
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Class-Gomor>=1.00:${PORTSDIR}/devel/p5-Class-Gomor \
 		p5-Net-Pcap>=0.14:${PORTSDIR}/net/p5-Net-Pcap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Write.3 \
 	Net::Write::Layer.3 \
