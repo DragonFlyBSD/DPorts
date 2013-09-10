@@ -2,7 +2,7 @@
 # Date created:				05 June 2007
 # Whom:					Olivier Girard <Olivier.Girard@univ-angers.fr>
 #
-# $FreeBSD: ports/mail/p5-MIME-Charset/Makefile,v 1.6 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-MIME-Charset/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	MIME-Charset
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	Olivier.Girard@univ-angers.fr
 COMMENT=	Charset Informations for MIME
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MIME::Charset.3 MIME::Charset::JA_JP.3
 
