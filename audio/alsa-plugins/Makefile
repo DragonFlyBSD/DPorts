@@ -1,9 +1,5 @@
-# New ports collection makefile for:   alsa-plugins
-# Date created:                June 29, 2009
-# Whom:                        Aragon Gouveia <aragon@phat.za.net>
-#
-# $FreeBSD: ports/audio/alsa-plugins/Makefile,v 1.8 2012/11/17 05:54:27 svnexp Exp $
-#
+# Created by: Aragon Gouveia <aragon@phat.za.net>
+# $FreeBSD: audio/alsa-plugins/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	alsa-plugins
 PORTVERSION=	1.0.26
@@ -18,7 +14,7 @@ LIB_DEPENDS=	asound:${PORTSDIR}/audio/alsa-lib
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	${PREFIX}/lib/alsa-lib
 
