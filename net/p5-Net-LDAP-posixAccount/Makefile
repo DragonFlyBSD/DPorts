@@ -2,7 +2,7 @@
 # Date created:		2009-10-31
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-LDAP-posixAccount/Makefile,v 1.4 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LDAP-posixAccount/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	Net-LDAP-posixAccount
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap \
 		p5-Sys-User-UIDhelper>=0:${PORTSDIR}/sysutils/p5-Sys-User-UIDhelper \
 		p5-Sys-Group-GIDhelper>=0:${PORTSDIR}/sysutils/p5-Sys-Group-GIDhelper
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::posixAccount.3
 
