@@ -1,8 +1,8 @@
 # Created by: Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: devel/p5-File-ShareDir-Install/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-ShareDir-Install/Makefile 326224 2013-09-03 20:02:04Z tobez $
 
 PORTNAME=	File-ShareDir-Install
-PORTVERSION=	0.04
+PORTVERSION=	0.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
