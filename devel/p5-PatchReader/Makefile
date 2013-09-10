@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PatchReader
-# Date created:				2004-02-11
-# Whom:					Toni Viemerö <toni.viemero@iki.fi>
-#
-# $FreeBSD: ports/devel/p5-PatchReader/Makefile,v 1.9 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Toni Viemerö <toni.viemero@iki.fi>
+# $FreeBSD: devel/p5-PatchReader/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	PatchReader
 PORTVERSION=	0.9.6
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	toni.viemero@iki.fi
 COMMENT=	Perl module with utilities to read and manipulate patches and CVS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PatchReader.3
 
