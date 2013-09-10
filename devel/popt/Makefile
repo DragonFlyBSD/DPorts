@@ -1,5 +1,5 @@
 # Created by: Yuan-Chen Cheng <ycheng@sinica.edu.tw>
-# $FreeBSD: devel/popt/Makefile 317521 2013-05-06 15:18:38Z bapt $
+# $FreeBSD: devel/popt/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	popt
 PORTVERSION=	1.16
@@ -9,7 +9,7 @@ MASTER_SITES=	http://rpm5.org/files/popt/
 MAINTAINER=	jpaetzel@FreeBSD.org
 COMMENT=	A getopt(3) like library with a number of enhancements, from Redhat
 
-CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
+CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--program-prefix=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
