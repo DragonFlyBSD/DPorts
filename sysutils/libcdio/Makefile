@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: sysutils/libcdio/Makefile 317619 2013-05-07 15:46:15Z ale $
+# $FreeBSD: sysutils/libcdio/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	libcdio
 PORTVERSION=	0.83
@@ -21,10 +21,10 @@ GNU_CONFIGURE=	yes
 USES=		pathfix pkgconfig iconv ncurses
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG}
 USE_PERL5_BUILD=yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 MAN1=	cd-drive.1 cd-info.1 iso-read.1 iso-info.1 cd-read.1
 
 INFO=		libcdio
