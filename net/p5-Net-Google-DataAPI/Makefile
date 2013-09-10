@@ -2,7 +2,7 @@
 # Date created:				23 March 2010
 # Whom:					Gunter Wambaugh <gunter@six-two.net>
 #
-# $FreeBSD: ports/net/p5-Net-Google-DataAPI/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Google-DataAPI/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-Google-DataAPI
@@ -35,7 +35,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Google::DataAPI.3 \
 		Net::Google::DataAPI::Auth::ClientLogin::Multiple.3 \
