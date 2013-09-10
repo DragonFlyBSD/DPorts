@@ -2,7 +2,7 @@
 # Date created:				20 April 2008
 # Whom:					ayunyan <ayunyan@gmail.com>
 #
-# $FreeBSD: mail/getlive/Makefile 313139 2013-03-01 07:45:13Z beech $
+# $FreeBSD: mail/getlive/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	getlive
@@ -21,7 +21,8 @@ RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	bin/getlive etc/getlive.conf.sample
 PORTDOCS=	ChangeLog License Manual
