@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-module-wlan/Makefile 318126 2013-05-13 19:56:09Z gblach $
+# $FreeBSD: x11-wm/e17-module-wlan/Makefile 325734 2013-08-30 23:31:49Z bapt $
 
 PORTNAME=	wlan
 PORTVERSION=	20130510
@@ -14,11 +14,10 @@ BUILD_DEPENDS=	enlightenment:${PORTSDIR}/x11-wm/enlightenment
 RUN_DEPENDS=	enlightenment:${PORTSDIR}/x11-wm/enlightenment
 
 DIST_SUBDIR=	e17
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_EFL=	edje libtool_hack modarch_hack
-USE_GNOME=	pkgconfig
 
 .include <bsd.port.options.mk>
 
