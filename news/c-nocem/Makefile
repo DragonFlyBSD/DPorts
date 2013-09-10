@@ -1,4 +1,4 @@
-# $FreeBSD: ports/news/c-nocem/Makefile,v 1.28 2012/11/17 06:00:41 svnexp Exp $
+# $FreeBSD: news/c-nocem/Makefile 325955 2013-09-02 09:22:47Z az $
 
 PORTNAME=	c-nocem
 PORTVERSION=	3.7
@@ -22,7 +22,7 @@ CNEWS_PORT?=	news/cnews
 CNEWSWRK?=	${WRKDIRPREFIX}${.CURDIR}/../../${CNEWS_PORT}/work
 NEWSBIN?=	${PREFIX}/libexec/cnews
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-cnews=${CNEWSWRK}
 PLIST_SUB+=	NEWSBIN=${NEWSBIN:S=${PREFIX}/==}
