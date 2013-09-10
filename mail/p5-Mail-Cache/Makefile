@@ -2,7 +2,7 @@
 # Date created:		2009-09-27
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/mail/p5-Mail-Cache/Makefile,v 1.5 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Cache/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	Mail-Cache
@@ -18,7 +18,8 @@ COMMENT=	Caches mail information
 BUILD_DEPENDS=	p5-File-BaseDir>=0:${PORTSDIR}/devel/p5-File-BaseDir \
 		p5-Email-Simple>=0:${PORTSDIR}/mail/p5-Email-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Cache.3
 
