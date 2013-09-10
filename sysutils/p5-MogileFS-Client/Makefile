@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: sysutils/p5-MogileFS-Client/Makefile 324638 2013-08-12 17:42:24Z trociny $
+# $FreeBSD: sysutils/p5-MogileFS-Client/Makefile 326574 2013-09-07 07:11:48Z az $
 
 PORTNAME=	MogileFS-Client
 PORTVERSION=	1.17
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-IO-stringy>=2.102:${PORTSDIR}/devel/p5-IO-stringy \
 RUN_DEPENDS=	p5-IO-stringy>=2.102:${PORTSDIR}/devel/p5-IO-stringy \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MogileFS::Client.3
 
