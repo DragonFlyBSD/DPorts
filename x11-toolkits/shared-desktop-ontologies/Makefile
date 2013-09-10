@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/shared-desktop-ontologies/Makefile 321421 2013-06-20 20:25:05Z rakuco $
+# $FreeBSD: x11-toolkits/shared-desktop-ontologies/Makefile 325736 2013-08-30 23:40:56Z bapt $
 
 PORTNAME=	shared-desktop-ontologies
 PORTVERSION=	0.11.0
@@ -12,8 +12,7 @@ CMAKE_ARGS+=	-DPKGCONFIG_INSTALL_DIR:PATH="libdata/pkgconfig/"
 INSTALL_TARGET=	install
 
 USE_BZIP2=	yes
-USES=		cmake
-USE_GNOME=	pkgconfig
+USES=		cmake pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/cmake/SharedDesktopOntologies|lib/cmake/SharedDesktopOntologies|' \
