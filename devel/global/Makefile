@@ -1,5 +1,5 @@
-# Created by: chuckr@freebsd.org
-# $FreeBSD: devel/global/Makefile 321927 2013-06-28 02:30:22Z clsung $
+# Created by: chuckr@FreeBSD.org
+# $FreeBSD: devel/global/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	global
 PORTVERSION=	6.2.8
@@ -10,7 +10,7 @@ MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A source code tag system
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		global.1 globash.1 gozilla.1 gtags.1 gtags-cscope.1 htags.1
 INFO=		global
