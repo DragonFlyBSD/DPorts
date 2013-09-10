@@ -1,9 +1,9 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: www/py-waitress/Makefile 324640 2013-08-12 20:58:01Z olivierd $
+# $FreeBSD: www/py-waitress/Makefile 325615 2013-08-29 17:42:01Z olivierd $
 #
 
 PORTNAME=	waitress
-PORTVERSION=	0.8.6
+PORTVERSION=	0.8.7
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,6 @@ MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Python WSGI server
 
 LICENSE=	ZPL21
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
