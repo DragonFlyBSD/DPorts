@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Test-SharedFork/Makefile,v 1.16 2013/01/12 16:51:30 svnexp Exp $
+# $FreeBSD: devel/p5-Test-SharedFork/Makefile 326787 2013-09-09 09:45:12Z az $
 
 PORTNAME=	Test-SharedFork
 PORTVERSION=	0.21
@@ -12,7 +12,8 @@ COMMENT=	Perl extension for fork test
 
 TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::SharedFork.3
 
