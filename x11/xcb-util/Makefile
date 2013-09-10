@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11/xcb-util/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xcb-util/Makefile 325997 2013-09-02 13:54:45Z bapt $
 
 PORTNAME=	xcb-util
 PORTVERSION=	0.3.9
@@ -12,7 +12,7 @@ MAINTAINER=	garga@FreeBSD.org
 COMMENT=	A module with libxcb/libX11 extension/replacement libraries
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_XORG=	xau xcb xdmcp xorg-macros
 USE_AUTOTOOLS=	libtool
