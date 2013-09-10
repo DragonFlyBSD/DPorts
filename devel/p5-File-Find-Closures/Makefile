@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-File-Find-Closures
-# Date created:		2008-11-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-File-Find-Closures/Makefile,v 1.2 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-File-Find-Closures/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	File-Find-Closures
 PORTVERSION=	1.09
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Functions you can use with File::Find
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Find::Closures.3
 
