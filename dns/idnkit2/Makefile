@@ -1,5 +1,5 @@
 # Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
-# $FreeBSD: dns/idnkit2/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: dns/idnkit2/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME=	idnkit
 PORTVERSION=	2.2
@@ -20,7 +20,7 @@ USE_AUTOTOOLS=	libtool
 USES=		iconv
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-libiconv=${LOCALBASE}
+CONFIGURE_ARGS= ${ICONV_CONFIGURE_BASE}
 
 USE_LDCONFIG=	yes
 
@@ -32,5 +32,9 @@ MAN3=	idn_checkname.3 idn_comparenames.3 idn_comparenames2.3 \
 	idn_version_libidn.3 idn_version_unicode.3 libidnkit.3 libidnkitlite.3
 MAN5=	idn2.conf.5 idn2rc.5 idnalias.conf.5 idnlang.conf.5
 MANCOMPRESSED=	no
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-liconv|${ICONV_LIB}|' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
