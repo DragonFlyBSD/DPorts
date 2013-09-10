@@ -1,5 +1,5 @@
 # Created by: gpalmer@FreeBSD.org
-# $FreeBSD: x11/rxvt-unicode/Makefile 317423 2013-05-05 18:11:09Z thierry $
+# $FreeBSD: x11/rxvt-unicode/Makefile 325735 2013-08-30 23:38:43Z bapt $
 
 PORTNAME=	rxvt-unicode
 PORTVERSION=	9.18
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	tic:${PORTSDIR}/devel/ncurses	\
 RUN_DEPENDS=	${LOCALBASE}/bin/fc-cache:${PORTSDIR}/x11-fonts/fontconfig	\
 		${LOCALBASE}/share/misc/terminfo.db:${PORTSDIR}/devel/ncurses
 
-USE_GNOME=		pkgconfig
+USES=			pkgconfig
 USE_XORG=		xpm xft xrender
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
