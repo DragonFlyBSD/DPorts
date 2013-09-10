@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libleaftag
-# Date Created:             24 May 2006
-# Whom:                Khairil Yusof <kaeru@inigo-tech.com>
-#
-# $FreeBSD: ports/devel/libleaftag/Makefile,v 1.5 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: Khairil Yusof <kaeru@inigo-tech.com>
+# $FreeBSD: devel/libleaftag/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	libleaftag
 PORTVERSION=	0.3.1
@@ -15,9 +11,9 @@ MAINTAINER=	kaeru@inigo-tech.com
 COMMENT=	Leaftag is a library for tagging files on the desktop
 
 USE_SQLITE=	2
-USE_GMAKE=	yes
+USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack glib20 pkgconfig
+USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
