@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/pear-Horde_Browser/Makefile 314455 2013-03-17 15:28:55Z miwi $
+# $FreeBSD: www/pear-Horde_Browser/Makefile 325479 2013-08-27 18:10:33Z mm $
 
 PORTNAME=	Horde_Browser
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.4
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
