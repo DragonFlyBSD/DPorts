@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nethirc
-# Date created:		15 Dec 1999
-# Whom:			Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: ports/irc/nethirc/Makefile,v 1.23 2012/11/17 05:58:29 svnexp Exp $
-#
+# Created by: Will Andrews <andrews@technologist.com>
+# $FreeBSD: irc/nethirc/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	NetHirc
 PORTVERSION=	0.94
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-POE-Component-IRC>=0:${PORTSDIR}/irc/p5-POE-Component-IRC \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		nethirc.pl.1
 MAN3=		NetHirc.3
