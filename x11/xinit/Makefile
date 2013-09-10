@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xinit/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xinit/Makefile 326804 2013-09-09 12:09:30Z zeising $
 
 PORTNAME=	xinit
-PORTVERSION=	1.3.2
+PORTVERSION=	1.3.3
 PORTEPOCH=	1
 CATEGORIES=	x11
 
@@ -12,9 +12,6 @@ LICENSE=	MIT
 
 XORG_CAT=	app
 USE_XORG=	x11
-
-PLIST_FILES=	bin/startx bin/xinit lib/X11/xinit/xinitrc
-PLIST_DIRS=	lib/X11/xinit
 
 MAN1=		startx.1 xinit.1
 
