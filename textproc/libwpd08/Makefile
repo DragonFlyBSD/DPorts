@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libwpd
-# Date created:         Mon May 19 09:09:10 PDT 2003
-# Whom:                 reed@pugetsoundtechnology.com
-#
-# $FreeBSD: textproc/libwpd08/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: reed@pugetsoundtechnology.com
+# $FreeBSD: textproc/libwpd08/Makefile 326025 2013-09-02 16:21:38Z bapt $
 
 PORTNAME=	libwpd
 PORTVERSION=	0.8.14
@@ -20,6 +16,7 @@ LICENSE=	LGPL21
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	gnomehack libgsf
 USE_LDCONFIG=	yes
 
