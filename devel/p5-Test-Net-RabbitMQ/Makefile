@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Net-RabbitMQ
-# Date created:		2010-09-10
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Net-RabbitMQ/Makefile,v 1.8 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Net-RabbitMQ/Makefile 326656 2013-09-07 16:51:08Z az $
 
 PORTNAME=	Test-Net-RabbitMQ
 PORTVERSION=	0.09
@@ -20,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Net::RabbitMQ.3
 
