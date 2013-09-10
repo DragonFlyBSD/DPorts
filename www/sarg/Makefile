@@ -1,5 +1,5 @@
 # Created by: mt@primats.org.ua
-# $FreeBSD: www/sarg/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/sarg/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	sarg
 PORTVERSION=	2.3.6
@@ -18,8 +18,8 @@ OPTIONS_DEFAULT=GD PHP NLS PCRE LDAP ICONV
 
 PHP_DESC=	Install PHP for reporting generating
 
+USES=		gmake
 USE_AUTOTOOLS=	autoconf aclocal
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	CPPFLAGS=-I${LOCALBASE}/include \
@@ -72,7 +72,7 @@ CONFIGURE_ARGS+=--without-ldap
 .if ${PORT_OPTIONS:MICONV}
 CONFIGURE_ARGS+=--with-iconv
 USES+=	iconv
-EXTRA_LDFLAGS+=	-liconv
+EXTRA_LDFLAGS+=	${ICONV_LIB}
 .else
 CONFIGURE_ARGS+=--without-iconv
 .endif
