@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdparanoia
-# Date created:				5 Jan 2003
-# Whom:			Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-#
-# $FreeBSD: ports/audio/cdparanoia/Makefile,v 1.19 2012/11/17 05:54:29 svnexp Exp $
-#
+# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
+# $FreeBSD: audio/cdparanoia/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	cdparanoia
 PORTVERSION=	3.9.8
@@ -17,7 +13,7 @@ MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	A CDDA extraction tool (also known as ripper)
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 
 MAN1=		cdparanoia.1
