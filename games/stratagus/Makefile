@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/stratagus/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/stratagus/Makefile 326035 2013-09-02 17:06:54Z bapt $
 
 PORTNAME=	stratagus
 PORTVERSION=	2.2.7
@@ -22,7 +22,7 @@ USE_SDL=	sdl
 USE_SQLITE=	3
 USE_LUA=	5.0+
 LUA_COMPS=	toluaxx
-USES=		cmake:outsource
+USES=		cmake:outsource pkgconfig
 CMAKE_ARGS=	-DGAMEDIR:STRING="bin" \
 		-DTOLUA++_APP:STRING="${TOLUAXX_CMD}" \
 		-DTOLUA++_INCLUDE_DIR:STRING="${LUA_INCDIR}" \
