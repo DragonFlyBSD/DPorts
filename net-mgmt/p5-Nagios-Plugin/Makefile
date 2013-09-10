@@ -2,7 +2,7 @@
 # Date created:				13 08 2006
 # Whom:					Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/net-mgmt/p5-Nagios-Plugin/Makefile,v 1.26 2013/02/26 03:41:38 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Nagios-Plugin/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	Nagios-Plugin
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Config-Tiny>=0:${PORTSDIR}/devel/p5-Config-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Nagios::Plugin.3 \
 		Nagios::Plugin::Config.3 \
