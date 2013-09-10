@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-CPS/Makefile,v 1.11 2013/01/21 09:43:35 svnexp Exp $
+# $FreeBSD: devel/p5-CPS/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	CPS
 PORTVERSION=	0.18
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Test-Identity>0:${PORTSDIR}/devel/p5-Test-Identity \
 		p5-Test-Refcount>0:${PORTSDIR}/devel/p5-Test-Refcount \
 		p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		CPS.3 \
 		CPS::Functional.3 \
