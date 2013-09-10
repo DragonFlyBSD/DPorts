@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Eval-WithLexicals/Makefile 319094 2013-05-26 07:15:17Z kuriyama $
+# $FreeBSD: devel/p5-Eval-WithLexicals/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	Eval-WithLexicals
 PORTVERSION=	1.002000
@@ -14,7 +14,8 @@ RUN_DEPENDS=	\
 	p5-Moo>=0.009006:${PORTSDIR}/devel/p5-Moo
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Eval::WithLexicals.3 \
 	Eval::WithLexicals::WithHintPersistence.3
