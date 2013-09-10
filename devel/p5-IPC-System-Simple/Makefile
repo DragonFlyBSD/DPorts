@@ -1,9 +1,4 @@
-# New ports collection makefile for:	IPC::System::Simple
-# Date created:		22 Jan 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-IPC-System-Simple/Makefile,v 1.6 2012/11/17 05:56:19 svnexp Exp $
-#
+# $FreeBSD: devel/p5-IPC-System-Simple/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	IPC-System-Simple
 PORTVERSION=	1.21
@@ -14,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to run commands simply with detailed diagnostics
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IPC::System::Simple.3
 
