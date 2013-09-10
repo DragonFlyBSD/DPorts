@@ -2,7 +2,7 @@
 # Date created:		11 June 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/science/ruby-netcdf/Makefile,v 1.19 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: science/ruby-netcdf/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	netcdf
