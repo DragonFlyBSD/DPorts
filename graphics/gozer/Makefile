@@ -2,7 +2,7 @@
 # Date created:				12 Nov 2000
 # Whom:					Jeremy Norris <ishmael27@home.com>
 #
-# $FreeBSD: ports/graphics/gozer/Makefile,v 1.20 2012/11/17 05:58:08 svnexp Exp $
+# $FreeBSD: graphics/gozer/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	gozer
