@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-UUID
-# Date created:		2011-07-10
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-UUID/Makefile,v 1.3 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-UUID/Makefile 325880 2013-09-01 17:05:52Z az $
 
 PORTNAME=	UUID
 PORTVERSION=	0.04
@@ -17,8 +13,8 @@ COMMENT=	Perl extension for using UUID interfaces as defined in e2fsprogs
 
 LIB_DEPENDS=	uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
 
-USE_PERL5=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CFLAGS+=	-I${LOCALBASE}/include
 
 MAN3=	UUID.3
