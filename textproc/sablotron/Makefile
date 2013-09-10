@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/sablotron/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/sablotron/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	Sablot
 PORTVERSION=	1.0.3
@@ -36,7 +36,7 @@ PLIST_SUB+=	SHLIB_MAJOR="${SHLIB_MAJOR}"
 
 CONFIGURE_ENV=	LIBTOOL=${LIBTOOL}
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lexpat -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib -lexpat ${ICONV_LIB}
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USES=		iconv perl5
