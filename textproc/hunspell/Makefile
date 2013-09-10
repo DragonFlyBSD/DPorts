@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: textproc/hunspell/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/hunspell/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.3.2
@@ -14,7 +14,7 @@ COMMENT=	Improved spell-checker for Hungarian and other languages
 LICENSE=	GPLv2 LGPL21 MPL
 LICENSE_COMB=	dual
 
-CONFIGURE_ARGS=	--disable-nls --with-libiconv-prefix=${LOCALBASE} --with-readline --with-ui
+CONFIGURE_ARGS=	--disable-nls ${ICONV_CONFIGURE_ARG} --with-readline --with-ui
 GNU_CONFIGURE=	yes
 USES=		pathfix iconv ncurses readline
 USE_LDCONFIG=	yes
