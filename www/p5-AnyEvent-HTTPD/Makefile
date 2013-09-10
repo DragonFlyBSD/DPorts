@@ -2,7 +2,7 @@
 # Date created:		2009-07-17
 # Whom:			Mons Anderson <mons@cpan.org>
 #
-# $FreeBSD: ports/www/p5-AnyEvent-HTTPD/Makefile,v 1.7 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-AnyEvent-HTTPD/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	AnyEvent-HTTPD
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-common-sense>=2.0:${PORTSDIR}/devel/p5-common-sense \
 		p5-URI>=1.40:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::HTTPD.3 AnyEvent::HTTPD::Request.3 AnyEvent::HTTPD::Util.3 AnyEvent::HTTPD::HTTPServer.3 AnyEvent::HTTPD::HTTPConnection.3
 
