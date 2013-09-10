@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xman/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xman/Makefile 326720 2013-09-08 12:34:57Z zeising $
 
 PORTNAME=	xman
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.3
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
