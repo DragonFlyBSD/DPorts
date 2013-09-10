@@ -2,7 +2,7 @@
 # Date created:			1 January 2002
 # Whom:				John Holland <john@zoner.org>
 #
-# $FreeBSD: ports/news/ubh/Makefile,v 1.16 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/ubh/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	ubh
@@ -22,7 +22,7 @@ RUN_DEPENDS=	\
 	p5-String-CRC32>=0:${PORTSDIR}/devel/p5-String-CRC32
 
 NO_BUILD=	YES
-USE_PERL5=	YES
+USES=		perl5
 
 pre-patch:
 	@${MV} ${WRKSRC}/ubh ${WRKSRC}/ubh.old
