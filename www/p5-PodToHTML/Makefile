@@ -2,7 +2,7 @@
 # Date created:                27 February 2004
 # Whom:                        hrs@FreeBSD.org
 #
-# $FreeBSD: ports/www/p5-PodToHTML/Makefile,v 1.12 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-PodToHTML/Makefile 325974 2013-09-02 11:04:10Z az $
 
 PORTNAME=	PodToHTML
 PORTVERSION=	0.08
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-HTML-Format>=0:${PORTSDIR}/textproc/p5-HTML-Format
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		podtohtml.1
 MAN3=		Pod::HTML_Elements.3 \
