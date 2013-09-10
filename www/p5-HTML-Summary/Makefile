@@ -2,7 +2,7 @@
 # Date created:			3 January 2000
 # Whom:				Dmitry Sivachenko <dima@Chg.RU>
 #
-# $FreeBSD: ports/www/p5-HTML-Summary/Makefile,v 1.12 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Summary/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	HTML-Summary
@@ -16,7 +16,8 @@ COMMENT=	Produces summaries from the textual content of web pages
 
 BUILD_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Summary.3 Text::Sentence.3 Lingua::JA::Jtruncate.3
 
