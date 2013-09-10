@@ -3,7 +3,7 @@
 # Whom:	      				Conor McDermottroe <ports@mcdermottroe.com>
 # ex:ts=8
 #
-# $FreeBSD: ports/www/p5-TestGen4Web-Runner/Makefile,v 1.11 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-TestGen4Web-Runner/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	TestGen4Web-Runner
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		TestGen4Web::Runner.3
 
