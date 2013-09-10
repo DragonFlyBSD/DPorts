@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-Attribute-ENV
-# Date created:				18 November 2010
-# Whom: 				alan <Alan@Wave2.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Attribute-ENV/Makefile,v 1.4 2012/11/17 05:56:22 svnexp Exp $
-#
+# Created by: alan <Alan@Wave2.org>
+# $FreeBSD: devel/p5-MooseX-Attribute-ENV/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	MooseX-Attribute-ENV
 PORTVERSION=	0.02
@@ -20,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Moose>=1.19:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Attribute::ENV.3
 
