@@ -1,9 +1,9 @@
 # Created by: gahr
-# $FreeBSD: editors/fxite/Makefile 316372 2013-04-23 16:45:40Z gahr $
+# $FreeBSD: editors/fxite/Makefile 325571 2013-08-29 07:48:22Z gahr $
 
 PORTNAME=	fxite
 PORTVERSION=	0.91
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 
 MAINTAINER=	gahr@FreeBSD.org
