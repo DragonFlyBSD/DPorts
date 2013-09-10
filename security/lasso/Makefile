@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/lasso/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: security/lasso/Makefile 326013 2013-09-02 15:39:17Z bapt $
 
 PORTNAME=	lasso
 PORTVERSION=	2.1.1
@@ -15,6 +15,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 CONFIGURE_ARGS+=	--disable-java --disable-php4 --with-zlib
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	gnomehack glib20 libxml2
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
