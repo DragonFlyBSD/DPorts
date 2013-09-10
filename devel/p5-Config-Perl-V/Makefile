@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Config-Perl-V
-# Date created:		2011-02-05
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Config-Perl-V/Makefile,v 1.8 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Config-Perl-V/Makefile 326865 2013-09-10 05:48:19Z az $
 PORTNAME=	Config-Perl-V
 PORTVERSION=	0.15
 CATEGORIES=	devel perl5
@@ -18,7 +14,8 @@ COMMENT=	Structured data retrieval of perl -V output
 BUILD_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Config::Perl::V.3
 
