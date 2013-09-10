@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-App-Rad/Makefile 321861 2013-06-27 07:02:45Z miwi $
+# $FreeBSD: devel/p5-App-Rad/Makefile 326639 2013-09-07 14:36:58Z az $
 
 PORTNAME=	App-Rad
 PORTVERSION=	1.05
@@ -13,7 +13,8 @@ COMMENT=	Rapid (and easy!) creation of command line applications
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		App::Rad.3 \
 		App::Rad::Exclude.3 \
