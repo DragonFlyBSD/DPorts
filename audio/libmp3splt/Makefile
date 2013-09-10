@@ -1,5 +1,5 @@
 # Created by: Anton Yuzhaninov <citrin@citrin.ru>
-# $FreeBSD: audio/libmp3splt/Makefile 323660 2013-07-25 18:30:17Z marino $
+# $FreeBSD: audio/libmp3splt/Makefile 325990 2013-09-02 13:16:00Z bapt $
 
 PORTNAME=	libmp3splt
 PORTVERSION=	0.8.2
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-cutter --disable-doxygen_doc
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libltdl
 
