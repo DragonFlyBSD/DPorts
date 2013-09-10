@@ -2,7 +2,7 @@
 # Date created:		2006-07-14
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/news/p5-NNML/Makefile,v 1.4 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/p5-NNML/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	NNML
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	A minimal NNTP server
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 RESTRICTED=	License unknown
 
