@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-JSON-XS-VersionOneAndTwo
-# Date created:	   21 Nov 2008
-# Whom:		   Denis Pokataev <catone@cpan.org>
-#
-# $FreeBSD: ports/converters/p5-JSON-XS-VersionOneAndTwo/Makefile,v 1.6 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Denis Pokataev <catone@cpan.org>
+# $FreeBSD: converters/p5-JSON-XS-VersionOneAndTwo/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	JSON-XS-VersionOneAndTwo
 PORTVERSION=	0.31
@@ -17,7 +13,8 @@ COMMENT=	Support versions 1 and 2 of JSON::XS
 RUN_DEPENDS=	p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	JSON::XS::VersionOneAndTwo.3
 
