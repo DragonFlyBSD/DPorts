@@ -4,7 +4,7 @@
 #
 # Created because the gem interface changed significantly with v3
 #
-# $FreeBSD: ports/devel/rubygem-deprecated2/Makefile,v 1.2 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: devel/rubygem-deprecated2/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	deprecated
