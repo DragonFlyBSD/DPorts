@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/e_dbus/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: devel/e_dbus/Makefile 326094 2013-09-02 21:32:23Z antoine $
 
 PORTNAME=	e_dbus
 PORTVERSION=	1.7.8
@@ -18,7 +18,7 @@ LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_EFL=	eina evas ecore libtool_hack librt_hack
 USE_EFL_ECORE=	evas
 USE_LDCONFIG=	yes
