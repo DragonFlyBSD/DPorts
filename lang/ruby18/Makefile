@@ -2,7 +2,7 @@
 # Date created:		6 May 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/lang/ruby18/Makefile,v 1.156 2013/01/11 23:13:18 svnexp Exp $
+# $FreeBSD: lang/ruby18/Makefile 310250 2013-01-11 22:05:13Z jgh $
 #
 
 PORTNAME=	ruby
