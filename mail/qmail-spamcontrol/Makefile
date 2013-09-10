@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/qmail-spamcontrol/Makefile,v 1.47 2013/02/23 19:42:18 svnexp Exp $
+# $FreeBSD: mail/qmail-spamcontrol/Makefile 325421 2013-08-26 23:30:41Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION=	${QMAIL_VERSION}.${SPAMCONTROL_VERSION}
@@ -18,8 +18,6 @@ CONFLICTS=	qmail-[0-9]* qmail-ldap-[0-9]* qmail-mysql-[0-9]* qmail-tls-[0-9]*
 EXTRA_PATCHES+=	${MASTERDIR}/files/patch-install.c \
 		${MASTERDIR}/files/patch-Makefile \
 		${MASTERDIR}/files/patch-auto_uids-c-dist
-
-USE_GCC=	any
 
 # Distfiles
 QMAIL_DIST=		${PORTNAME}-${QMAIL_VERSION}${EXTRACT_SUFX}
