@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-MooseX-Traits-Pluggable
-# Date created:				25 July 2009
-# Whom:					Bill Brinzer <bill.brinzer@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Traits-Pluggable/Makefile,v 1.10 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Bill Brinzer <bill.brinzer@gmail.com>
+# $FreeBSD: devel/p5-MooseX-Traits-Pluggable/Makefile 326728 2013-09-08 13:59:48Z az $
 
 PORTNAME=	MooseX-Traits-Pluggable
 PORTVERSION=	0.10
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	\
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Traits::Pluggable.3
 
