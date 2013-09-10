@@ -2,7 +2,7 @@
 # Date created:		19 August 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/mail/p5-Email-Valid-Loose/Makefile,v 1.10 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-Valid-Loose/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	Email-Valid-Loose
@@ -17,7 +17,8 @@ COMMENT=	A variation of Email::Valid which allows dot before at mark
 BUILD_DEPENDS=	p5-Email-Valid>=0:${PORTSDIR}/mail/p5-Email-Valid
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::Valid::Loose.3
 
