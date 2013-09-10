@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Parser/Makefile 318360 2013-05-17 08:09:57Z jadawin $
+# $FreeBSD: www/p5-HTML-Parser/Makefile 325960 2013-09-02 09:44:14Z az $
 
 PORTNAME=	HTML-Parser
 PORTVERSION=	3.71
@@ -13,7 +13,8 @@ COMMENT=	Perl5 module for parsing HTML documents
 RUN_DEPENDS=	p5-HTML-Tagset>=3:${PORTSDIR}/www/p5-HTML-Tagset
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Entities.3 \
 		HTML::Filter.3 \
