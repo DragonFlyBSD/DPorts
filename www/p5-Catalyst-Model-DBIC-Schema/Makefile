@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 326605 2013-09-07 10:19:59Z sunpoet $
 
 PORTNAME=	Catalyst-Model-DBIC-Schema
-PORTVERSION=	0.60
+PORTVERSION=	0.61
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -34,7 +34,8 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
 USES=		perl5
-USE_PERL5=	configure extract
+#USE_PERL5=	configure extract
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Helper::Model::DBIC::Schema.3 \
 		Catalyst::Model::DBIC::Schema.3 \
@@ -43,7 +44,7 @@ MAN3=		Catalyst::Helper::Model::DBIC::Schema.3 \
 		Catalyst::TraitFor::Model::DBIC::Schema::Replicated.3 \
 		Catalyst::TraitFor::Model::DBIC::Schema::SchemaProxy.3
 
-post-extract:
-	@${PERL} -i.bak -ne 'print unless m,^feature, .. m,;$$,' ${WRKSRC}/Makefile.PL
+#post-patch:
+#	@${PERL} -i.bak -ne 'print unless m,^feature, .. m,;$$,' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
