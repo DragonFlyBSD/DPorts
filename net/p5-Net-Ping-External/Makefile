@@ -2,7 +2,7 @@
 # Date created: March 5th 2004
 # Whom: Douglas Thrift <douglas@douglasthrift.net>
 #
-# $FreeBSD: ports/net/p5-Net-Ping-External/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Ping-External/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-Ping-External
@@ -18,7 +18,8 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 USE_ZIP=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Ping::External.3
 
