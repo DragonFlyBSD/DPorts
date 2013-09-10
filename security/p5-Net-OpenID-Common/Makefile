@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 326585 2013-09-07 09:46:48Z tobez $
 
 PORTNAME=	Net-OpenID-Common
-PORTVERSION=	1.17
+PORTVERSION=	1.18
 CATEGORIES=	security net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
