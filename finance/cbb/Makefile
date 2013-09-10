@@ -2,7 +2,7 @@
 # Date created:			24 September, 1998
 # Whom:				kline
 #
-# $FreeBSD: ports/finance/cbb/Makefile,v 1.34 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/cbb/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	cbb
@@ -17,7 +17,7 @@ COMMENT=	Checkbook balancing tool
 USE_TK=		yes
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-perl=${PERL} \
 		--with-wish=${WISH}
