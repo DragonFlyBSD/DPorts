@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-B-Hooks-OP-Annotation
-# Date created:		2011-08-15
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-B-Hooks-OP-Annotation/Makefile 325148 2013-08-21 14:55:43Z sunpoet $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-B-Hooks-OP-Annotation/Makefile 325460 2013-08-27 15:20:44Z sunpoet $
 
 PORTNAME=	B-Hooks-OP-Annotation
 PORTVERSION=	0.44
@@ -13,6 +9,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Annotate and delegate hooked OPs
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-ExtUtils-Depends>=0.304:${PORTSDIR}/devel/p5-ExtUtils-Depends
 RUN_DEPENDS:=	${BUILD_DEPENDS}
