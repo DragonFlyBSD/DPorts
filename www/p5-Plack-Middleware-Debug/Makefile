@@ -2,7 +2,7 @@
 # Date created:		03 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-Debug/Makefile,v 1.11 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-Debug/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	Plack-Middleware-Debug
@@ -25,7 +25,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Debug.3 \
 	Plack::Middleware::Debug::Base.3 \
