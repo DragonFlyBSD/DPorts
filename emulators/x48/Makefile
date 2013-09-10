@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@FreeBSD.org>
-# $FreeBSD: emulators/x48/Makefile 317453 2013-05-06 01:14:55Z danfe $
+# $FreeBSD: emulators/x48/Makefile 326132 2013-09-03 09:59:01Z bapt $
 
 PORTNAME=	x48
 PORTVERSION=	0.6.4
@@ -24,7 +24,7 @@ AUTOMAKE_ARGS=	--add-missing --copy -Wno-portability
 ACLOCAL_ARGS=	# default args (--acdir=...) produce broken configure script
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LIBS=-lutil
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_XORG=	x11 xext xt
 NO_WRKSUBDIR=	yes
 
