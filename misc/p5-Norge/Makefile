@@ -2,7 +2,7 @@
 # Date created:				17 May 2005
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/p5-Norge/Makefile,v 1.5 2012/11/17 05:59:43 svnexp Exp $
+# $FreeBSD: misc/p5-Norge/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Norge
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	Misc. Norwegian methods for Perl, conversion/dates/numbers etc.
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		No::Sort.3 No::KontoNr.3 No::PersonNr.3 No::Dato.3
 
