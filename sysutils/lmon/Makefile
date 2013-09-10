@@ -2,7 +2,7 @@
 # Date created:				15 Mar 2005
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/lmon/Makefile,v 1.11 2012/11/17 06:01:37 svnexp Exp $
+# $FreeBSD: sysutils/lmon/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	lmon
@@ -19,7 +19,7 @@ RUN_DEPENDS=	p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles \
 		p5-File-Tail>=0:${PORTSDIR}/devel/p5-File-Tail
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 do-install:
 	${INSTALL} -d -m 0755 ${PREFIX}/${PORTNAME}
