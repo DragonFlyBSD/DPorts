@@ -1,5 +1,5 @@
 # Created by: Paul Traina <pst@FreeBSD.org>
-# $FreeBSD: palm/pilot-link/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: palm/pilot-link/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME=	pilot-link
 PORTVERSION=	0.12.5
@@ -17,7 +17,7 @@ USES=		pathfix pkgconfig iconv
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${WRKSRC}/popt -I${LOCALBASE}/include
-CONFIGURE_ARGS+=--with-libiconv=${LOCALBASE}  --with-included-popt --enable-conduits --enable-xsltproc
+CONFIGURE_ARGS+=${ICONV_CONFIGURE_BASE}  --with-included-popt --enable-conduits --enable-xsltproc
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	PNG THREADS USB
