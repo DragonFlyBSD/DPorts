@@ -2,7 +2,7 @@
 # Date created:				21 March 2006
 # Whom:					Espen Tagestad <espen@tagestad.no>
 #
-# $FreeBSD: ports/www/p5-HTML-Template-Pluggable/Makefile,v 1.10 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Template-Pluggable/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	HTML-Template-Pluggable
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-HTML-Template>=2.7:${PORTSDIR}/www/p5-HTML-Template \
 		p5-Class-Trigger>=0:${PORTSDIR}/devel/p5-Class-Trigger
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Template::Pluggable.3 \
 		HTML::Template::Plugin::Dot.3
