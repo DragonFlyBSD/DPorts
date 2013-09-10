@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: mail/rlytest/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: mail/rlytest/Makefile 326271 2013-09-04 12:28:16Z az $
 
 PORTNAME=	rlytest
 PORTVERSION=	1.22
@@ -16,7 +16,7 @@ EXTRACT_AFTER_ARGS=	> ${WRKDIR}/${PORTNAME}
 
 NO_WRKSUBDIR=	yes
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		rlytest.1
 PLIST_FILES=	bin/rlytest
