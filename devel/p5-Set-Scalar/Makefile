@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-Scalar/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Set-Scalar/Makefile 326752 2013-09-08 16:06:41Z tobez $
 
 PORTNAME=	Set-Scalar
-PORTVERSION=	1.25
+PORTVERSION=	1.26
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
