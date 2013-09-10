@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: misc/gnome-icon-theme/Makefile 318264 2013-05-15 21:18:01Z kwm $
+# $FreeBSD: misc/gnome-icon-theme/Makefile 326051 2013-09-02 18:18:26Z bapt $
 #   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.149 2010/08/30 13:45:30 avl Exp $
 
 PORTNAME=	gnome-icon-theme
@@ -17,9 +17,8 @@ BUILD_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hic
 RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		pathfix gmake pkgconfig
 USE_GNOME=	intlhack
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
