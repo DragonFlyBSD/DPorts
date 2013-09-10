@@ -2,7 +2,7 @@
 # Date created:		7 December 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/www/ruby-fcgi/Makefile,v 1.14 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/ruby-fcgi/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	fcgi
