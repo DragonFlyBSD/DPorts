@@ -1,7 +1,7 @@
-# $FreeBSD: devel/meck/Makefile 318722 2013-05-21 20:58:07Z olgeni $
+# $FreeBSD: devel/meck/Makefile 325996 2013-09-02 13:53:57Z olgeni $
 
 PORTNAME=	meck
-PORTVERSION=	0.7.2
+PORTVERSION=	0.8.1
 CATEGORIES=	devel
 MASTER_SITES=	GH
 
@@ -16,10 +16,11 @@ RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
+USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	eproxus
 GH_PROJECT=	meck
-GH_COMMIT=	37715e6
+GH_COMMIT=	1286aba
 GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
