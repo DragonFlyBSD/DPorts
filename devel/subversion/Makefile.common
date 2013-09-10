@@ -1,8 +1,8 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile.common 323611 2013-07-24 17:18:50Z lev $
+# $FreeBSD: devel/subversion/Makefile.common 326057 2013-09-02 19:04:20Z ohauer $
 
 PORTNAME=	subversion
-PORTVERSION=	1.8.1
+PORTVERSION=	1.8.3
 PORTREVISION?=	0
 CATEGORIES+=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:S/$/:main/} \
@@ -36,7 +36,7 @@ OPTIONS=		# Dirty hack: if OPTIONS is not defined, OPTIONSFILE will not be inclu
 .endif
 
 .include <bsd.port.options.mk>
-			
+
 .if ${PORT_OPTIONS:MSASL}
 LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
 CONFIGURE_ARGS+=--with-sasl=${LOCALBASE}
