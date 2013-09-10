@@ -1,9 +1,5 @@
-# ports collection makefile for:	libmikmod
-# Date created:		Sun Apr 11 13:06:01 PDT 1999
-# Whom:			Michael Haro <mharo@area51.fremont.ca.us>
-#
-# $FreeBSD: ports/audio/libmikmod/Makefile,v 1.52 2012/11/17 05:54:36 svnexp Exp $
-#
+# Created by: Michael Haro <mharo@area51.fremont.ca.us>
+# $FreeBSD: audio/libmikmod/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	libmikmod
 PORTVERSION=	3.1.12
@@ -16,7 +12,7 @@ COMMENT=	MikMod Sound Library
 USE_AUTOTOOLS=	libtool
 WANT_GNOME=	yes
 USE_GNOME=	lthack
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 USE_LDCONFIG=	yes
