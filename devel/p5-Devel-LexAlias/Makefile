@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Chen
-# $FreeBSD: ports/devel/p5-Devel-LexAlias/Makefile,v 1.9 2013/02/13 06:44:03 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-LexAlias/Makefile 326822 2013-09-09 16:55:31Z az $
 
 PORTNAME=	Devel-LexAlias
 PORTVERSION=	0.05
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Devel-Caller>=0.03:${PORTSDIR}/devel/p5-Devel-Caller
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Devel::LexAlias.3
 
