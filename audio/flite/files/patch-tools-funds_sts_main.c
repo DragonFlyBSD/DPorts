@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/flite/files/patch-tools-funds_sts_main.c,v 1.2 2012/11/17 05:54:31 svnexp Exp $
+$FreeBSD: audio/flite/files/patch-tools-funds_sts_main.c 300895 2012-07-14 12:56:14Z beat $
 
 Tags: for-upstream
 

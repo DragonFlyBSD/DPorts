@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/flite/files/patch-configure,v 1.4 2012/11/17 05:54:31 svnexp Exp $
+$FreeBSD: audio/flite/files/patch-configure 300895 2012-07-14 12:56:14Z beat $
 
 --- configure.orig	2009-08-14 22:50:59.000000000 +0200
 +++ configure	2010-09-09 15:07:27.000000000 +0200
