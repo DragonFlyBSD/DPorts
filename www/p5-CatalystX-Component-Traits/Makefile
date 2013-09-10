@@ -2,7 +2,7 @@
 # Date created:				25 July 2009
 # Whom:					Bill Brinzer <bill.brinzer@gmail.com>
 #
-# $FreeBSD: ports/www/p5-CatalystX-Component-Traits/Makefile,v 1.6 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-CatalystX-Component-Traits/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	CatalystX-Component-Traits
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=5.80005:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CatalystX::Component::Traits.3
 
