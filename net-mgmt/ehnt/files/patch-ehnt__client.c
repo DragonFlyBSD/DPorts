@@ -1,8 +1,8 @@
 
-$FreeBSD: ports/net-mgmt/ehnt/files/patch-ehnt__client.c,v 1.4 2012/11/17 06:00:31 svnexp Exp $
+$FreeBSD: net-mgmt/ehnt/files/patch-ehnt__client.c 326363 2013-09-05 07:40:06Z marck $
 
---- ehnt_client.c.orig	Thu Oct  4 22:18:29 2001
-+++ ehnt_client.c	Mon Aug  9 23:49:05 2004
+--- ehnt_client.c.orig
++++ ehnt_client.c
 @@ -27,6 +27,9 @@
  static void sig_int (int);
  char getkey();
@@ -42,3 +42,12 @@ $FreeBSD: ports/net-mgmt/ehnt/files/patch-ehnt__client.c,v 1.4 2012/11/17 06:00:
       char key;
       key=getkey();
       switch (key) {
+@@ -125,7 +130,7 @@
+  } /* for ( ; ; ) */
+ }
+ 
+-int ehnt_client_processmessage(int sockfd,struct in_addr routeraddr, struct ehnt_struct *my_ehnt_struct ) {
++void ehnt_client_processmessage(int sockfd,struct in_addr routeraddr, struct ehnt_struct *my_ehnt_struct ) {
+   int c,i;
+   char mesg[MAXPACKET];
+   struct flow_ver5_hdr * flowhdr;

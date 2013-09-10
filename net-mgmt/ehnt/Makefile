@@ -2,7 +2,7 @@
 # Date created:		2 August 2001
 # Whom:			marck@rinet.ru
 #
-# $FreeBSD: ports/net-mgmt/ehnt/Makefile,v 1.17 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/ehnt/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	ehnt

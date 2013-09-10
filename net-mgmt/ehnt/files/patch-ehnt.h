@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/ehnt/files/patch-ehnt.h,v 1.3 2012/11/17 06:00:31 svnexp Exp $
+$FreeBSD: net-mgmt/ehnt/files/patch-ehnt.h 300897 2012-07-14 14:29:18Z beat $
 
 --- ehnt.h.orig	Thu Oct  4 22:18:29 2001
 +++ ehnt.h	Wed Jun 23 14:35:08 2004
