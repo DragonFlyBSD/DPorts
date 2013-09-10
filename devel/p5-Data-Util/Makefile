@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Util/Makefile 318692 2013-05-21 13:29:18Z kuriyama $
+# $FreeBSD: devel/p5-Data-Util/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	Data-Util
 PORTVERSION=	0.62
@@ -17,7 +17,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS} \
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 	p5-Scope-Guard>=0.20:${PORTSDIR}/devel/p5-Scope-Guard
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Util.3 \
 		Data::Util::Curry.3 \
