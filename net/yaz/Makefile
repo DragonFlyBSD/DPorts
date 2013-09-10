@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: net/yaz/Makefile 325287 2013-08-24 08:53:25Z pawel $
+# $FreeBSD: net/yaz/Makefile 326683 2013-09-07 19:49:41Z bsam $
 
 PORTNAME=	yaz
 PORTVERSION=	4.2.65
@@ -18,7 +18,7 @@ USE_GNOME=	libxml2 libxslt
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=--enable-shared --with-openssl=${OPENSSLBASE} \
-		--with-iconv=${LOCALBASE} --with-xml2=${LOCALBASE} \
+		--with-iconv=${ICONV_PREFIX} --with-xml2=${LOCALBASE} \
 		--with-xslt=${LOCALBASE} --with-icu=${LOCALBASE} \
 		--enable-tcpd
 
