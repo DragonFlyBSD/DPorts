@@ -2,7 +2,7 @@
 # Date created:		2008-01-30
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-WWW-RobotRules-Parser/Makefile,v 1.2 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-RobotRules-Parser/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	WWW-RobotRules-Parser
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::RobotRules::Parser.3
 
