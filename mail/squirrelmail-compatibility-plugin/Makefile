@@ -1,5 +1,5 @@
 # Created by: Alexander Wittig <alexander@wittig.name>
-# $FreeBSD: mail/squirrelmail-compatibility-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-compatibility-plugin/Makefile 326249 2013-09-04 06:06:59Z az $
 
 PORTNAME=	compatibility
 PORTVERSION=	2.0.16
@@ -13,7 +13,8 @@ DIST_SUBDIR=	squirrelmail
 MAINTAINER=	tabthorpe@FreeBSD.org
 COMMENT=	Required by many plugins for compatibility with SquirrelMail
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 CONFLICTS=	squirrelmail-compatibility-plugin-1.*
 
