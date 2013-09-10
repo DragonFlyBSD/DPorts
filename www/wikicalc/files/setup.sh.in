@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/www/wikicalc/files/setup.sh.in,v 1.2 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/wikicalc/files/setup.sh.in 300897 2012-07-14 14:29:18Z beat $
 
 ask_noyes()
 {

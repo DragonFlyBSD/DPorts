@@ -2,7 +2,7 @@
 # Date created:		June 24, 2007
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: ports/www/wikicalc/Makefile,v 1.4 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/wikicalc/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	wikicalc
@@ -16,7 +16,7 @@ COMMENT=	An Open Source Wiki-Spreadsheet
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SUB_FILES=	setup.sh
