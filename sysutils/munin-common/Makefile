@@ -1,5 +1,5 @@
 # Created by: Sean Rees <sean@rees.us>
-# $FreeBSD: sysutils/munin-common/Makefile 305413 2012-10-06 22:10:55Z flo $
+# $FreeBSD: sysutils/munin-common/Makefile 326530 2013-09-06 17:55:21Z az $
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	p5-Module-Build>=0:${PORTSDIR}/devel/p5-Module-Build \
 		p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
 RUN_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
 
-USE_PERL5=	yes
+USES=		perl5
 USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/.r/rc/}
 
