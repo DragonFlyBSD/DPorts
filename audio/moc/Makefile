@@ -1,5 +1,5 @@
 # Created by: Revis Zinkov <rzinkov@gmail.com>
-# $FreeBSD: audio/moc/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/moc/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	moc
 PORTVERSION=	2.4.4
@@ -8,9 +8,9 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.daper.net/pub/soft/moc/stable/
 
 MAINTAINER=	rzinkov@gmail.com
-COMMENT=	A console audio player designed to be powerful and easy to use
+COMMENT=	Console audio player designed to be powerful and easy to use
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
