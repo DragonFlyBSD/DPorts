@@ -1,8 +1,5 @@
-# New ports collection Makefile for:		netio
-# Date created:					2005-01-09
-# Whom:						arved
-#
-# $FreeBSD: ports/benchmarks/netio/Makefile,v 1.6 2012/11/17 05:54:50 svnexp Exp $
+# Created by: arved
+# $FreeBSD: benchmarks/netio/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	netio
 PORTVERSION=	1.26
@@ -16,7 +13,7 @@ COMMENT=	Network benchmark
 
 WRKSRC=		${WRKDIR}
 USE_ZIP=	yes
-USE_GMAKE=	yes
+USES=		gmake
 PLIST_FILES=	bin/netio
 
 CFLAGS+=	-DUNIX ${PTHREAD_CFLAGS}
