@@ -2,7 +2,7 @@
 # Date created:		2004-10-03
 # Whom:			Sergei Kolobov <sergei@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/t-prot/Makefile,v 1.20 2012/11/17 05:59:16 svnexp Exp $
+# $FreeBSD: mail/t-prot/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	t-prot
@@ -17,7 +17,7 @@ COMMENT=	TOFU Protection - Display Filter for RFC822 messages
 RUN_DEPENDS=	p5-Getopt-Long>=0:${PORTSDIR}/devel/p5-Getopt-Long \
 	p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MAN1=		t-prot.1
