@@ -2,11 +2,11 @@
 # Date created:				28 March 2010
 # Whom:					Sahil Tandon <sahil@tandon.net>
 #
-# $FreeBSD: ports/lang/runawk/Makefile,v 1.10 2012/11/17 05:58:56 svnexp Exp $
+# $FreeBSD: lang/runawk/Makefile 326060 2013-09-02 19:15:12Z sahil $
 #
 
 PORTNAME=	runawk
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.4
 CATEGORIES=	lang
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -20,6 +20,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -Wl,-rpath -Wl,${LOCALBASE}/lib
 
 MAN1=		${PORTNAME}.1 alt_getopt.1
+MAN3=		${PORTNAME}_modules.3
 
 PLIST_FILES=	bin/${PORTNAME} bin/alt_getopt bin/alt_getopt.sh
 
