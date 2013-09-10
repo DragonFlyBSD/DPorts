@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ktoblzcheck
-# Date created:         25 November 2003
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: finance/ktoblzcheck/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: finance/ktoblzcheck/Makefile 326388 2013-09-05 11:39:11Z bapt $
 
 PORTNAME=	ktoblzcheck
 PORTVERSION=	1.40
@@ -32,5 +28,8 @@ PLIST_SUB+=	PYTHON=""
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON="@comment "
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e "s/-lstdc++//g" ${WRKSRC}/src/lib/Makefile.in
 
 .include <bsd.port.mk>
