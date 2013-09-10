@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/hal/Makefile 317507 2013-05-06 11:12:33Z kwm $
+# $FreeBSD: sysutils/hal/Makefile 326032 2013-09-02 16:55:04Z bapt $
 #   $MCom: ports/sysutils/hal/Makefile,v 1.81 2010/04/13 02:49:07 mezz Exp $
 
 PORTNAME=	hal
@@ -18,8 +18,7 @@ LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit \
 		ck-connector:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	intlhack ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
