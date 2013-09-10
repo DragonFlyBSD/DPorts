@@ -1,5 +1,5 @@
 # Created by: Tomasz Paszkowski <ns88@k.pl>
-# $FreeBSD: mail/ssmtp/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/ssmtp/Makefile 325613 2013-08-29 17:37:23Z sunpoet $
 
 PORTNAME=	ssmtp
 PORTVERSION=	2.64
@@ -32,7 +32,6 @@ MAN8=		ssmtp.8
 MAN5=		ssmtp.conf.5
 
 OPTIONS_DEFINE=	LOGFILE IPV6 USERPREFS XORIGIP
-OPTIONS_DEFINE= USERPREFS XORIGIP
 LOGFILE_DESC=	log file
 USERPREFS_DESC=	user defined revaliases
 XORIGIP_DESC=	Add X-Originating-IP header
