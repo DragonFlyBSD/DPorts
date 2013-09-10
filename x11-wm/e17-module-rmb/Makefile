@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-module-rmb/Makefile 318126 2013-05-13 19:56:09Z gblach $
+# $FreeBSD: x11-wm/e17-module-rmb/Makefile 325734 2013-08-30 23:31:49Z bapt $
 
 PORTNAME=	rmb
 PORTVERSION=	20130510
@@ -19,6 +19,6 @@ DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_EFL=	libtool_hack modarch_hack
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 
 .include <bsd.port.mk>
