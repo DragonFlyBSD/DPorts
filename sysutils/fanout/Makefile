@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/sysutils/fanout/Makefile,v 1.4 2013/01/09 20:05:10 svnexp Exp $
+# $FreeBSD: sysutils/fanout/Makefile 326573 2013-09-07 06:47:20Z az $
 
 PORTNAME=	fanout
 PORTVERSION=	0.6.1
@@ -11,7 +11,8 @@ MASTER_SITES=	http://www.stearns.org/fanout/ \
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Tool to run commands on multiple machines
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/fanout bin/fanterm bin/fanmux
 .if !defined(NOPORTDOCS)

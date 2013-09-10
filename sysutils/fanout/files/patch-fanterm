@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/fanout/files/patch-fanterm,v 1.2 2012/11/17 06:01:30 svnexp Exp $
+$FreeBSD: sysutils/fanout/files/patch-fanterm 300897 2012-07-14 14:29:18Z beat $
 
 --- fanterm.orig
 +++ fanterm
