@@ -2,7 +2,7 @@
 # Date created:                14 June 2003
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: palm/synce-libsynce/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: palm/synce-libsynce/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	libsynce
 PORTVERSION=	0.14
@@ -18,8 +18,8 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix iconv
-CONFIGURE_ARGS+=	--with-libiconv-prefix="${LOCALBASE}" \
+USES=		pathfix iconv pkgconfig
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG} \
 			--enable-dccm-file-support=no \
 			--enable-hal-support=yes \
 			--enable-odccm-support=no
