@@ -2,7 +2,7 @@
 # Date created:		2007-06-30
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Net-SSH-Expect/Makefile,v 1.13 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-SSH-Expect/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-SSH-Expect
@@ -17,7 +17,8 @@ COMMENT=	SSH wrapper to execute remote commands
 RUN_DEPENDS=	p5-Expect>=0:${PORTSDIR}/lang/p5-Expect
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SSH::Expect.3
 
