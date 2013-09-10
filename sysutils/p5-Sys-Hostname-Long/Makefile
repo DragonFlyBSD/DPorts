@@ -2,7 +2,7 @@
 # Date created:				March 6th, 2004
 # Whom:					Tim Bishop <tim@bishnet.net>
 #
-# $FreeBSD: ports/sysutils/p5-Sys-Hostname-Long/Makefile,v 1.7 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Sys-Hostname-Long/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	Sys-Hostname-Long
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tdb@FreeBSD.org
 COMMENT=	Try every conceivable way to get full hostname
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::Hostname::Long.3
 
