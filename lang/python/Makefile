@@ -1,8 +1,9 @@
 # Created by: jkh
-# $FreeBSD: lang/python/Makefile 324925 2013-08-18 15:25:24Z mva $
+# $FreeBSD: lang/python/Makefile 325399 2013-08-26 14:34:21Z lwhsu $
 
 PORTNAME=	python
 PORTVERSION=	${PYTHON_VER}
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	lang python ipv6
 MASTER_SITES=	# empty
