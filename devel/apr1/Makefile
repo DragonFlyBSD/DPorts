@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: devel/apr1/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/apr1/Makefile 326683 2013-09-07 19:49:41Z bsam $
 
 PORTNAME=	apr
 PORTVERSION=	${APR_VERSION}.${APU_VERSION}
@@ -44,7 +44,7 @@ SHLIB_APU_MAJOR=	5
 APR_CONF_ARGS=	--with-installbuilddir=${DATADIR}/build-1
 APU_CONF_ARGS=	--with-apr=${APR_WRKDIR} \
 		--with-expat=${LOCALBASE} \
-		--with-iconv=${LOCALBASE}
+		--with-iconv=${ICONV_PREFIX}
 
 .include <bsd.port.options.mk>
 
