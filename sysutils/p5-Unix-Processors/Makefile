@@ -2,7 +2,7 @@
 # Date created:		13 Dec 2001
 # Whom:			Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/sysutils/p5-Unix-Processors/Makefile,v 1.14 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Unix-Processors/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	Unix-Processors
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Interface to processor (CPU) information
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Unix::Processors.3 Unix::Processors::Info.3
 
