@@ -2,7 +2,7 @@
 # Date created:		18 August 2011
 # Whom:			Linh Pham <question+fbsdports@closedsrc.org>
 #
-# $FreeBSD: ports/sysutils/vlogger/Makefile,v 1.3 2012/11/17 06:01:49 svnexp Exp $
+# $FreeBSD: sysutils/vlogger/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	vlogger
@@ -17,7 +17,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MAN1=		${PORTNAME}.1
