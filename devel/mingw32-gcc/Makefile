@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/mingw32-gcc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/mingw32-gcc/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}
@@ -61,7 +61,7 @@ CONFIGURE_ARGS=	--disable-nls --target=${GCC_TARG} \
 		--enable-libstdcxx-debug \
 		--disable-build-poststage1-with-cxx \
 		--enable-version-specific-runtime-libs \
-		--with-libiconv-prefix=${LOCALBASE} \
+		${ICONV_CONFIGURE_ARG} \
 		--includedir=${PREFIX}/${GCC_TARG}/include \
 		--datadir=${PREFIX}/${GCC_TARG}/share \
 		--with-system-zlib
