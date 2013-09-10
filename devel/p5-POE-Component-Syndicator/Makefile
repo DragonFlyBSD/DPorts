@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-POE-Component-Syndicator
-# Date created:	   2011-05-03
-# Whom:		   Jase Thew <freebsd@beardz.net>
-#
-# $FreeBSD: ports/devel/p5-POE-Component-Syndicator/Makefile,v 1.8 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Jase Thew <freebsd@beardz.net>
+# $FreeBSD: devel/p5-POE-Component-Syndicator/Makefile 326787 2013-09-09 09:45:12Z az $
 
 PORTNAME=	POE-Component-Syndicator
 PORTVERSION=	0.06
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-POE>=1.311:${PORTSDIR}/devel/p5-POE \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Syndicator.3
 
