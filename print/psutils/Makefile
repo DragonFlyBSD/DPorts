@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org> and David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: print/psutils/Makefile 316401 2013-04-24 04:13:09Z hrs $
+# $FreeBSD: print/psutils/Makefile 326361 2013-09-05 07:29:05Z az $
 
 PORTNAME=	psutils
 PORTVERSION=	1.17
@@ -16,7 +16,8 @@ COMMENT=	Utilities for manipulating PostScript documents
 
 LIB_DEPENDS=	paper:${PORTSDIR}/print/libpaper
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKEFILE=	Makefile.unix
 MAKE_ENV+=	DATADIR="${DATADIR}" PERL="${PERL5}" CHMOD="${CHMOD}"
