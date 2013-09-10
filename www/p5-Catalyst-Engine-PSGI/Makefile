@@ -2,7 +2,7 @@
 # Date created:		13 Oct 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Engine-PSGI/Makefile,v 1.15 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Engine-PSGI/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	Catalyst-Engine-PSGI
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-Catalyst-Action-RenderView>0:${PORTSDIR}/www/p5-Catalyst-Action-RenderView
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Controller::Metal.3 \
 	Catalyst::Engine::PSGI.3 \
