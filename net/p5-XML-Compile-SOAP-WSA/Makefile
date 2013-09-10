@@ -2,7 +2,7 @@
 # Date created:				23 Nov 2010
 # Whom:					Patrick Powell <papowell@astart.com>
 #
-# $FreeBSD: ports/net/p5-XML-Compile-SOAP-WSA/Makefile,v 1.3 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-XML-Compile-SOAP-WSA/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	XML-Compile-SOAP-WSA
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Net-Server>=0.97:${PORTSDIR}/net/p5-Net-Server \
 		p5-XML-Compile-Cache>=0.91:${PORTSDIR}/textproc/p5-XML-Compile-Cache
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Compile::SOAP::WSA.3 \
 	XML::Compile::SOAP::WSA::Util.3
