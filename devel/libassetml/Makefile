@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: devel/libassetml/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: devel/libassetml/Makefile 326484 2013-09-06 10:24:11Z bapt $
 
 PORTNAME=	libassetml
 PORTVERSION=	1.2.1
@@ -13,14 +13,13 @@ COMMENT=	Devel Library to share image and audio files between projects
 BUILD_DEPENDS=	texi2html:${PORTSDIR}/textproc/texi2html
 LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
 
-USES=		pkgconfig gettext
+USES=		pkgconfig gettext gmake
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_GNOME=	gnomehack lthack gnomeprefix glib20 libxml2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
-CFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 INFO=	libassetml
 
