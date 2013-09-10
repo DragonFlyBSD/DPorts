@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-pyro/Makefile 320647 2013-06-11 21:24:41Z rm $
+# $FreeBSD: devel/py-pyro/Makefile 325608 2013-08-29 15:40:41Z rm $
 
 PORTNAME=	pyro
-PORTVERSION=	4.20
+PORTVERSION=	4.22
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,6 +12,8 @@ MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Distributed Object Middleware for Python(IPC/RPC)
 
 LICENSE=	MIT
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}serpent>=1.3:${PORTSDIR}/devel/py-serpent
 
 USE_DOS2UNIX=	yes
 USE_PYTHON=	yes
