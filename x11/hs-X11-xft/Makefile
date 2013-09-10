@@ -1,4 +1,4 @@
-# $FreeBSD: x11/hs-X11-xft/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11/hs-X11-xft/Makefile 326422 2013-09-05 17:37:22Z antoine $
 
 PORTNAME=	X11-xft
 PORTVERSION=	0.3.1
@@ -10,6 +10,7 @@ COMMENT=	Bindings to the Xft, Xrender and Freetype for Haskell programs
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_CABAL=	utf8-string>=0.1 X11>=1.2.1
 USE_XORG=	xft xrender
 
