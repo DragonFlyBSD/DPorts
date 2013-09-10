@@ -1,5 +1,5 @@
 # Created by: Cyrus Rahman <cr@jcmax.com>
-# $FreeBSD: converters/tnef/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: converters/tnef/Makefile 326406 2013-09-05 14:59:29Z bapt $
 
 PORTNAME=	tnef
 PORTVERSION=	1.4.9
@@ -11,7 +11,6 @@ COMMENT=	Unpack data in MS Outlook TNEF format
 
 OPTIONS_DEFINE=	DOCS
 
-USE_GCC=	any
 GNU_CONFIGURE=	yes
 
 MAN1=		tnef.1
