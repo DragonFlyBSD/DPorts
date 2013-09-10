@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xkill/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xkill/Makefile 326805 2013-09-09 12:14:24Z zeising $
 
 PORTNAME=	xkill
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
