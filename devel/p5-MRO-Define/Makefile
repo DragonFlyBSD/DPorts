@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-MRO-Define/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MRO-Define/Makefile 326366 2013-09-05 08:20:25Z tobez $
 
 PORTNAME=	MRO-Define
-PORTVERSION=	0.01
+PORTVERSION=	0.02
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FLORA
