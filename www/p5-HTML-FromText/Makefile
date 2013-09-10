@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: www/p5-HTML-FromText/Makefile 323234 2013-07-18 14:05:18Z culot $
+# $FreeBSD: www/p5-HTML-FromText/Makefile 326003 2013-09-02 15:12:10Z az $
 
 PORTNAME=		HTML-FromText
 PORTVERSION=		2.07
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Email-Find>=0.09:${PORTSDIR}/mail/p5-Email-Find \
 		p5-HTML-Parser>=1.26:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=			text2html.1
 MAN3=			HTML::FromText.3
