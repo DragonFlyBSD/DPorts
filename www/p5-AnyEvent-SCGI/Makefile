@@ -2,7 +2,7 @@
 # Date created:		16 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-AnyEvent-SCGI/Makefile,v 1.3 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-AnyEvent-SCGI/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	AnyEvent-SCGI
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 	p5-AnyEvent>=5.2:${PORTSDIR}/devel/p5-AnyEvent
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::SCGI.3
 
