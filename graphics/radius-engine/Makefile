@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/radius-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/radius-engine/Makefile 326032 2013-09-02 16:55:04Z bapt $
 
 PORTNAME=	radius-engine
 PORTVERSION=	1.1
@@ -15,7 +15,7 @@ LIB_DEPENDS=	lua-5.1:${PORTSDIR}/lang/lua \
 		png15:${PORTSDIR}/graphics/png \
 		physfs.1:${PORTSDIR}/devel/physfs
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_SDL=	sdl sound
 USE_GL=		glu
 GNU_CONFIGURE=	yes
