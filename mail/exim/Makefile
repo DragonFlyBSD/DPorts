@@ -1,5 +1,5 @@
 # Created by: markm@FreeBSD.org
-# $FreeBSD: mail/exim/Makefile 321586 2013-06-22 20:00:56Z rea $
+# $FreeBSD: mail/exim/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}
@@ -235,7 +235,7 @@ SEDLIST+=	-e 's,XX_TCP_WRAPPERS_LIBS_XX,,'
 
 .if ${PORT_OPTIONS:MICONV}
 USES=		iconv
-SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,-L${LOCALBASE:S/,/\\,/g}/lib -liconv,' \
+SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,-L${LOCALBASE:S/,/\\,/g}/lib ${ICONV_LIB},' \
 		-e 's,^\# (HAVE_ICONV=),\1,'
 .else
 SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,,'
@@ -406,7 +406,7 @@ SEDLIST+=	-e 's,^\# (LOOKUP_PASSWD=),\1,'
 
 .if ${PORT_OPTIONS:MSQLITE}
 USE_SQLITE=	yes
-USE_GNOME=	pkgconfig
+USES+=		pkgconfig
 SEDLIST+=	-e 's,XX_SQLITE_LIBS_XX,`pkg-config --static --libs sqlite3`,' \
 		-e 's,XX_SQLITE_FLAGS_XX,`pkg-config --cflags sqlite3`,' \
 		-e 's,^\# (LOOKUP_SQLITE=),\1,'
