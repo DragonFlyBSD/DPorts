@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Mock-LWP
-# Date created:		2009-03-13
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Mock-LWP/Makefile,v 1.4 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: devel/p5-Test-Mock-LWP/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	Test-Mock-LWP
 PORTVERSION=	0.06
@@ -16,7 +12,8 @@ COMMENT=	Easy mocking of LWP packages
 
 RUN_DEPENDS=	p5-Test-MockObject>=1.08:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Mock::HTTP::Request.3 \
 		Test::Mock::HTTP::Response.3 \
