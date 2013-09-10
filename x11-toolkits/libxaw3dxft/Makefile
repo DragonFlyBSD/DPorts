@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/libxaw3dxft/Makefile,v 1.4 2013/01/26 16:50:55 svnexp Exp $
+# $FreeBSD: x11-toolkits/libxaw3dxft/Makefile 325997 2013-09-02 13:54:45Z bapt $
 
 PORTNAME=	libxaw3dxft
 DISTVERSION=	1.6.2b
@@ -11,6 +11,7 @@ COMMENT=	3D Xaw (Athena Widget Set) replacement with extended fonts
 
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
