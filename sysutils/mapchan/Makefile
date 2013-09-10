@@ -1,5 +1,5 @@
 # Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-# $FreeBSD: sysutils/mapchan/Makefile 319117 2013-05-26 16:14:45Z bsam $
+# $FreeBSD: sysutils/mapchan/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	mapchan
 PORTVERSION=	3.2
@@ -14,7 +14,7 @@ USES=		iconv
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKE_ENV=	MAPDIR=${PREFIX}/etc/${PORTNAME}
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 ETCDAT=		*.map default.sample
 MAN8=		mapchan.8
 PORTDOCS=	README
