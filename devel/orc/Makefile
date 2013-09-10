@@ -1,8 +1,8 @@
 # Created by: mm
-# $FreeBSD: devel/orc/Makefile 323993 2013-07-30 20:43:20Z mm $
+# $FreeBSD: devel/orc/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	orc
-PORTVERSION=	0.4.17
+PORTVERSION=	0.4.18
 CATEGORIES=	devel
 MASTER_SITES=	http://code.entropywave.com/download/orc/
 
@@ -12,10 +12,9 @@ COMMENT=	Library and toolset to operate arrays of data
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GNOME=	pkgconfig
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
