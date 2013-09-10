@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-List-AllUtils
-# Date created:		2011-02-16
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: devel/p5-List-AllUtils/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-List-AllUtils/Makefile 326787 2013-09-09 09:45:12Z az $
 
 PORTNAME=	List-AllUtils
 PORTVERSION=	0.03
@@ -17,7 +13,8 @@ COMMENT=	Combines List::Util and List::MoreUtils in one bite-sized package
 BUILD_DEPENDS=	p5-List-MoreUtils>=0.28:${PORTSDIR}/lang/p5-List-MoreUtils
 RUN_DEPENDS=	p5-List-MoreUtils>=0.28:${PORTSDIR}/lang/p5-List-MoreUtils
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		List::AllUtils.3
 
