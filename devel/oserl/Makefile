@@ -1,4 +1,4 @@
-# $FreeBSD: devel/oserl/Makefile 318430 2013-05-18 13:06:47Z olgeni $
+# $FreeBSD: devel/oserl/Makefile 326259 2013-09-04 08:00:01Z bsam $
 
 PORTNAME=	oserl
 PORTVERSION=	3.2.4
@@ -21,8 +21,8 @@ GH_PROJECT=	oserl
 GH_COMMIT=	f14115d
 GH_TAGNAME=	${PORTVERSION}
 
-USE_GMAKE=	yes
 USE_DOS2UNIX=	Makefile
+USES=		gmake iconv
 ALL_TARGET=	compile doc
 
 MAN1=		oserl.1
@@ -41,7 +41,7 @@ post-extract:
 
 do-install:
 .for manpage in ${MAN1} ${MAN3}
-	@iconv -f UTF-8 -t ISO-8859-1 ${WRKSRC}/doc/man/${manpage} > ${WRKSRC}/doc/man/${manpage}.iconv
+	@${ICONV_CMD} -f UTF-8 -t ISO-8859-1 ${WRKSRC}/doc/man/${manpage} > ${WRKSRC}/doc/man/${manpage}.iconv
 .endfor
 .for manpage in ${MAN1}
 	@${INSTALL_MAN} ${WRKSRC}/doc/man/${manpage}.iconv ${MAN1PREFIX}/man/man1/${manpage}
