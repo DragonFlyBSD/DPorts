@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ezmlm-web
-# Date Created: 			18 May 2000
-# Whom: 				Guy Antony Halse <guy@rucus.ru.za.za>
-#
-# $FreeBSD: ports/mail/ezmlm-web/Makefile,v 1.15 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: Guy Antony Halse <guy@rucus.ru.za.za>
+# $FreeBSD: mail/ezmlm-web/Makefile 325882 2013-09-01 17:12:03Z az $
 
 PORTNAME=	ezmlm-web
 PORTVERSION=	3.2
@@ -21,9 +17,9 @@ EXAMPLES=	apache.conf.dist ezmlmwebrc.dist ezmlmwebrc.minimal-dist \
 		htaccess.dist multidomain.conf.dist webusers.dist
 DOCS=		INSTALL README TODO UPGRADING changelog copyright
 
-USE_GMAKE=	yes
-USE_PERL5=	yes
-PERL_CONFIGURE=	yes
+USES=		gmake perl5 shebangfix
+USE_PERL5=	configure
+SHEBANG_FILES=	ezmlm-web.cgi
 
 post-patch:
 	${REINPLACE_CMD} -e 's|local/share|share|' \
