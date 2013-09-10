@@ -1,8 +1,8 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ftp/lftp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/lftp/Makefile 326251 2013-09-04 06:20:39Z martymac $
 
 PORTNAME=	lftp
-PORTVERSION=	4.4.7
+PORTVERSION=	4.4.9
 CATEGORIES=	ftp ipv6
 MASTER_SITES=	http://ftp.yars.free.net/pub/source/lftp/ \
 		http://ftp.yars.free.net/pub/source/lftp/old/ \
