@@ -1,7 +1,7 @@
-# $FreeBSD: graphics/p5-Color-Scheme/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: graphics/p5-Color-Scheme/Makefile 326756 2013-09-08 16:20:06Z tobez $
 
 PORTNAME=	Color-Scheme
-PORTVERSION=	1.04
+PORTVERSION=	1.05
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Color
