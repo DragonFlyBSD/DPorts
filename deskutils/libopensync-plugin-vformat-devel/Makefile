@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-vformat-devel/Makefile 324391 2013-08-08 11:34:14Z wg $
+# $FreeBSD: deskutils/libopensync-plugin-vformat-devel/Makefile 325999 2013-09-02 14:19:47Z bapt $
 
 PORTNAME=	libopensync-plugin-vformat
 PORTVERSION=	0.39
@@ -13,7 +13,7 @@ COMMENT=	Vformat plugin for the OpenSync framework
 LIB_DEPENDS=	opensync:${PORTSDIR}/devel/libopensync
 
 USE_BZIP2=	yes
-USES=		cmake iconv
+USES=		cmake iconv pkgconfig
 CMAKE_ARGS+=	-Wno-dev
 CFLAGS+=	"-I${LOCALBASE}/include"
 
