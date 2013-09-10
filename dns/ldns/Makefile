@@ -1,9 +1,9 @@
 # Created by: Konstantin Saurbier <saurbier@math.uni-bielefeld.de>
-# $FreeBSD: dns/ldns/Makefile 322766 2013-07-11 12:40:54Z mat $
+# $FreeBSD: dns/ldns/Makefile 326404 2013-09-05 14:37:34Z sem $
 
 PORTNAME=	ldns
 PORTVERSION=	1.6.16
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dns
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/ \
 		CRITICAL
@@ -268,7 +268,9 @@ PLIST_SUB+=	EXAMPLES="@comment "
 .endif # BUILD_PYLDNS
 
 .if ${PORT_OPTIONS:MGOST}
+. if ${OSVERSION} < 1000015
 BUILD_DEPENDS+=	openssl>=1.0:${PORTSDIR}/security/openssl
+. endif
 .else
 NO_GOST=	--disable-gost
 CONFIGURE_ARGS+=${NO_GOST}
