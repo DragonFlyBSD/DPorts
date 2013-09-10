@@ -1,5 +1,5 @@
 # Created by: Mathew Kanner <mat@hak.cnd.mcgill.ca>
-# $FreeBSD: audio/tse3/Makefile 323767 2013-07-26 23:46:21Z bapt $
+# $FreeBSD: audio/tse3/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	tse3
 PORTVERSION=	0.3.1
@@ -12,7 +12,7 @@ COMMENT=	MIDI library
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--without-doc-install \
 		--without-aRts
