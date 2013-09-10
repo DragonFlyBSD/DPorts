@@ -1,5 +1,5 @@
 # Created by: max
-# $FreeBSD: japanese/p5-nkf/Makefile 317159 2013-05-02 21:57:28Z hrs $
+# $FreeBSD: japanese/p5-nkf/Makefile 326884 2013-09-10 09:39:11Z az $
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
@@ -18,7 +18,8 @@ LICENSE_FILE_ZLIB=	${WRKSRC}/NKF.pm
 LICENSE_FILE_NKF=	${WRKSRC}/NKF.xs
 LICENSE_PERMS_NKF=	${_LICENSE_PERMS_DEFAULT}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/NKF.mod
 
 MAN3=		NKF.3
