@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/py-poker-eval/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/py-poker-eval/Makefile 325711 2013-08-30 16:49:43Z mva $
 
 PORTNAME=	poker-eval
 PORTVERSION=	0.138
@@ -23,7 +23,7 @@ ACLOCAL_ARGS=	-I config
 AUTOMAKE_ARGS=	--add-missing
 CONFIGURE_ARGS=	PYTHON=""
 
-PLIST_SUB=	PYVER=${_PYTHON_VERSION:S/./_/}
+PLIST_SUB=	PYVER=${PYTHON_VER:S/./_/}
 
 post-configure:
 	@${INSTALL_SCRIPT} ${AUTOMAKE_DIR}/py-compile ${WRKSRC}/config
