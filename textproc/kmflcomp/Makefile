@@ -2,7 +2,7 @@
 # Date created:		10 October 2007
 # Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
 #
-# $FreeBSD: textproc/kmflcomp/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/kmflcomp/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	kmflcomp
@@ -26,7 +26,7 @@ USE_LDCONFIG=	yes
 USES=		iconv
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 DOCSDIR=	${PREFIX}/share/doc/kmfl/${PORTNAME}
 DOCS=		${DISTDIR}/${DIST_SUBDIR}/KMFL-Compiler.sxw \
