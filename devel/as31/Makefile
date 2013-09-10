@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: devel/as31/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/as31/Makefile 325658 2013-08-30 03:37:22Z danfe $
 
 PORTNAME=	as31
 PORTVERSION=	2.0.b3
@@ -9,28 +9,33 @@ MASTER_SITES=	http://www.pjrc.com/tech/8051/tools/
 DISTNAME=	${PORTNAME}_beta3
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A free 8051 assembler
+COMMENT=	Free 8051 assembler
 
-.ifndef(WITHOUT_X11)
-USE_GNOME=	gtk12
-PLIST_SUB+=	X11=""
-.else
-ALL_TARGET=	as31
-PLIST_SUB+=	X11="@comment "
-.endif
-USES=		bison
-
+# GNU make(1) allows parallel (-jX) builds to work: we plug a race in
+# "bison" rule (which outputs multiple files) via order prerequisites
+# (see files/patch-Makefile)
+USES=		bison gmake
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
 MAN1=		as31.1
 PLIST_FILES=	bin/as31 %%X11%%bin/as31_gtk
 
+OPTIONS_DEFINE=	X11
+OPTIONS_SUB=	yes
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MX11}
+USE_GNOME=	gtk12
+.else
+ALL_TARGET=	as31
+.endif
+
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/as31 ${PREFIX}/bin
-	@${INSTALL_MAN} ${WRKSRC}/as31.1 ${MANPREFIX}/man/man1
-.ifndef(WITHOUT_X11)
-	@${INSTALL} ${WRKSRC}/as31_gtk ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/as31 ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/as31.1 ${MANPREFIX}/man/man1
+.if ${PORT_OPTIONS:MX11}
+	${INSTALL_PROGRAM} ${WRKSRC}/as31_gtk ${PREFIX}/bin
 .endif
 
 .include <bsd.port.mk>
