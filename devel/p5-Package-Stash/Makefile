@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/p5-Package-Stash/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Package-Stash/Makefile 326261 2013-09-04 08:50:25Z tobez $
 
 PORTNAME=	Package-Stash
-PORTVERSION=	0.35
+PORTVERSION=	0.36
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
