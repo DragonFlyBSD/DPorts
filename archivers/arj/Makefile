@@ -1,5 +1,5 @@
 # Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-# $FreeBSD: ports/archivers/arj/Makefile,v 1.38 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/arj/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	arj
 PORTVERSION=	3.10.22
@@ -12,8 +12,8 @@ COMMENT=	Open-source ARJ
 
 OPTIONS_DEFINE=	DOCS
 
+USES=		gmake
 USE_AUTOTOOLS=	autoconf
-USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=	yes
 CONFIGURE_WRKSRC=	${WRKSRC}/gnu
 CFLAGS+=	-fPIC
