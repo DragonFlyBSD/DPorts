@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/libopensync022/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: devel/libopensync022/Makefile 325997 2013-09-02 13:54:45Z bapt $
 
 PORTNAME=	libopensync
 PORTVERSION=	0.22
@@ -18,7 +18,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20 libxml2
 USE_LDCONFIG=	yes
 
