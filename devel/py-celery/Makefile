@@ -1,8 +1,8 @@
 # Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-# $FreeBSD: devel/py-celery/Makefile 324845 2013-08-17 14:14:12Z wg $
+# $FreeBSD: devel/py-celery/Makefile 326138 2013-09-03 12:21:54Z wg $
 
 PORTNAME=	celery
-PORTVERSION=	3.0.22
+PORTVERSION=	3.0.23
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,7 @@ LICENSE=	BSD
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}amqplib>=0:${PORTSDIR}/net/py-amqplib \
 		${PYTHON_PKGNAMEPREFIX}billiard>=2.7.3.32:${PORTSDIR}/devel/py-billiard \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:${PORTSDIR}/devel/py-dateutil \
-		${PYTHON_PKGNAMEPREFIX}kombu>=2.5.13:${PORTSDIR}/net/py-kombu \
+		${PYTHON_PKGNAMEPREFIX}kombu>=2.5.14:${PORTSDIR}/net/py-kombu \
 		${PYTHON_PKGNAMEPREFIX}memcached>=0:${PORTSDIR}/databases/py-memcached
 
 USE_PYTHON=	yes
