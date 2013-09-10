@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11/i3lock/Makefile 325241 2013-08-22 22:56:25Z bapt $
+# $FreeBSD: x11/i3lock/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	i3lock
 PORTVERSION=	2.5
@@ -27,10 +27,10 @@ PLIST_FILES=	bin/i3lock \
 
 MAN1=	i3lock.1
 
-LDFLAGS+=	-liconv
+LDFLAGS+=	${ICONV_LIB}
 USE_XORG=	x11 xcb xt xproto xext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv pkgconfig
 
 .include <bsd.port.mk>
