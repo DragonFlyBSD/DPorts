@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-ZConf-GUI
-# Date created:		2009-05-25
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports/devel/p5-ZConf-GUI/Makefile,v 1.9 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: devel/p5-ZConf-GUI/Makefile 326839 2013-09-09 18:34:59Z az $
 
 PORTNAME=	ZConf-GUI
 PORTVERSION=	1.1.0
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-ZConf>=6.1.0:${PORTSDIR}/net/p5-ZConf \
 		${LOCALBASE}/bin/xhost:${PORTSDIR}/x11/xhost
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZConf::GUI.3
 
