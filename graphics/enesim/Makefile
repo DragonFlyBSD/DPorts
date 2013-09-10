@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/graphics/enesim/Makefile,v 1.1 2012/12/22 21:09:57 svnexp Exp $
+# $FreeBSD: graphics/enesim/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME=	enesim
 PORTVERSION=	20121003
@@ -15,7 +15,7 @@ DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_EFL=	eina libtool_hack
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS=	--disable-static
