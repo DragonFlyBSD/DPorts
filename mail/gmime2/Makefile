@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime2/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: mail/gmime2/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME=	gmime
 PORTVERSION=	2.2.27
@@ -16,14 +16,13 @@ CONFLICTS=	gmime-1.0.* gmime-2.4.*
 
 SLAVEDIRS=	mail/gmime2-sharp
 
-USE_GMAKE=	yes
 USE_GNOME?=	glib20
-USES=		pathfix pkgconfig iconv
+USES=		gmake pathfix pkgconfig iconv
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 # www.freebsd.org/cgi/query-pr.cgi?pr=118092
 # Rename uudecode and uuencode to gmime-* to not conflict with userland
-CONFIGURE_ARGS?=	--with-libiconv=${LOCALBASE} \
+CONFIGURE_ARGS?=	${ICONV_CONFIGURE_BASE} \
 			--with-html-dir=${PREFIX}/share/doc \
 			--enable-mono=no \
 			--program-transform-name="s/uuencode/gmime-uuencode/;s/uudecode/gmime-uudecode/;"
@@ -32,7 +31,11 @@ CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 
 LATEST_LINK?=	${PORTNAME}2
 
+OPTIONS_DEFINE=	DOCS
+
 PORTDOCS=	*
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|stdint.h|inttypes.h|" ${WRKSRC}/zentimer.h
@@ -40,7 +43,7 @@ post-patch:
 		${WRKSRC}/gmime/Makefile.in
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if  ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in docs/reference/html/*
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
