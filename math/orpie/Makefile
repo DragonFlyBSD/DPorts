@@ -2,12 +2,12 @@
 # Date created:		 4 August 2004
 # Whom:			Dylan Simon <dylan@dylex.net>
 #
-# $FreeBSD: ports/math/orpie/Makefile,v 1.20 2012/11/17 05:59:25 svnexp Exp $
+# $FreeBSD: math/orpie/Makefile 325401 2013-08-26 16:06:37Z bf $
 #
 
 PORTNAME=	orpie
 PORTVERSION=	1.5.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES+=	math
 MASTER_SITES=	http://pessimization.com/software/orpie/
 
@@ -15,7 +15,7 @@ MAINTAINER=	dylan@dylex.net
 COMMENT=	A fullscreen RPN calculator for the console
 
 BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml
-LIB_DEPENDS=	gsl.16:${PORTSDIR}/math/gsl
+LIB_DEPENDS=	gsl:${PORTSDIR}/math/gsl
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
