@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: net-mgmt/cnagios/Makefile 315900 2013-04-16 20:48:40Z madpilot $
+# $FreeBSD: net-mgmt/cnagios/Makefile 326244 2013-09-04 03:24:02Z az $
 
 PORTNAME=	cnagios
 PORTVERSION=	0.30
@@ -21,7 +21,7 @@ CONFIGURE_ARGS=	--with-etc-dir="${ETCDIR}" \
 		--with-var-dir="${NAGIOSDIR}" \
 		--with-status-file="${NAGIOSDIR}/status.dat" \
 		--with-nagios-data=3
-USE_PERL5=	YES
+USES=		perl5
 ALL_TARGET=	cnagios
 
 MAN1=		cnagios.1
