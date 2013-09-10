@@ -2,7 +2,7 @@
 # Date created:		8 June 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-tzfile/Makefile,v 1.13 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: devel/ruby-tzfile/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	tzfile
