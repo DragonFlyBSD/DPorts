@@ -1,8 +1,8 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 324650 2013-08-13 05:16:55Z dinoex $
+# $FreeBSD: graphics/graphviz/Makefile 326745 2013-09-08 15:28:15Z dinoex $
 
 PORTNAME=	graphviz
-PORTVERSION=	2.32.0
+PORTVERSION=	2.34.0
 CATEGORIES=	graphics tk
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -16,8 +16,7 @@ LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg \
 		expat:${PORTSDIR}/textproc/expat2 \
 		gd:${PORTSDIR}/${GD_PORT}
 
-USES=		bison
-USE_GMAKE=	yes
+USES=		bison gmake pkgconfig
 USE_AUTOTOOLS=	libltdl libtool
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
@@ -62,12 +61,13 @@ PDOCS_HTML=	doc/*.html doc/info/*.gif
 
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 
-OPTIONS_DEFINE=	XPM DIGCOLA IPSEPCOLA ICONV NLS PANGOCAIRO LIBRSVG2 POPPLER GTK2 GDK_PIXBUF GNOMEUI SMYRNA GVEDIT MING DEVIL GHOSTSCRIPT PERL PHP PYTHON RUBY LUA TCL GUILE TK NVTHREADS
+OPTIONS_DEFINE=	XPM DIGCOLA IPSEPCOLA ICONV NLS PANGOCAIRO LIBRSVG2 POPPLER ANN GTK2 GDK_PIXBUF GNOMEUI SMYRNA GVEDIT MING DEVIL GHOSTSCRIPT PERL PHP PYTHON RUBY LUA TCL GUILE TK NVTHREADS
 OPTIONS_DEFAULT?=	XPM DIGCOLA IPSEPCOLA ICONV NLS PANGOCAIRO
 NO_OPTIONS_SORT=yes
 DIGCOLA_DESC=	neato layout engine wiwth DIGCOLA features
 IPSEPCOLA_DESC=	neato layout engine wiwth IPSEPCOLA features
 PANGOCAIRO_DESC=pangocairo support
+ANN_DESC=	ANN edge bundling support
 SMYRNA_DESC=	SMYRNA graph viewer (requires GTK2)
 GVEDIT_DESC=	gvedit (requires qt)
 GTK2_DESC=	gtk2 plugin (requires PANGOCAIRO)
@@ -167,7 +167,7 @@ PLIST_SUB+=		WITH_PANGOCAIRO="@comment "
 CONFIGURE_ARGS+=	--with-rsvg=yes
 PLIST_SUB+=		WITH_RSVG=""
 USE_GNOME+=		librsvg2
-USE_GL+=		gl glu
+USE_GL+=		gl glu glut
 .if empty(PORT_OPTIONS:MPANGOCAIRO)
 IGNORE=			option PANGOCAIRO is required for option LIBRVG2
 .endif
@@ -183,6 +183,17 @@ PLIST_SUB+=		WITH_POPPLER=""
 .else
 CONFIGURE_ARGS+=        --without-poppler
 PLIST_SUB+=		WITH_POPPLER="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MANN}
+LIB_DEPENDS+=           ann:${PORTSDIR}/math/ann
+CONFIGURE_ENV+=		ANN_CFLAGS=-I${LOCALBASE}/include ANN_LIBS=-lann
+CONFIGURE_ARGS+=        --with-ann=yes
+PLIST_SUB+=             WITH_ANN=""
+MAN1+=			mingle.1
+.else
+CONFIGURE_ARGS+=        --without-ann
+PLIST_SUB+=             WITH_ANN="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGTK2}
