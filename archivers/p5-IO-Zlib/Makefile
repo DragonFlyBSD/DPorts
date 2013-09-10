@@ -2,7 +2,7 @@
 # Date created:		15 Feb 2002
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: archivers/p5-IO-Zlib/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: archivers/p5-IO-Zlib/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 
 PORTNAME=	IO-Zlib
@@ -16,7 +16,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	IO:: style interface to Compress::Zlib
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		IO::Zlib.3
 
 .include <bsd.port.mk>
