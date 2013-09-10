@@ -2,7 +2,7 @@
 # Date created:		2006-07-23
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-Net-Flickr-API/Makefile,v 1.14 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Net-Flickr-API/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	Net-Flickr-API
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Config-Simple>=0:${PORTSDIR}/devel/p5-Config-Simple \
 		p5-XML-XPath>=0:${PORTSDIR}/textproc/p5-XML-XPath
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::Flickr::API.3
 
