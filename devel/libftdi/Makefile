@@ -1,5 +1,5 @@
 # Created by: Olexandr Davydenko <o.davydenko@gmail.com>
-# $FreeBSD: devel/libftdi/Makefile 321292 2013-06-19 16:49:25Z stefan $
+# $FreeBSD: devel/libftdi/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	libftdi
 PORTVERSION=	0.20
@@ -17,7 +17,7 @@ USE_AUTOTOOLS=		autoconf libtool automake
 GNU_CONFIGURE=		yes
 CFLAGS+=		-I${LOCALBASE}/include
 USE_LDCONFIG=		yes
-USE_GNOME=		pkgconfig gnomehack
+USES=			pathfix pkgconfig
 
 PORTDOCS=		COPYING.LIB ChangeLog README
 
