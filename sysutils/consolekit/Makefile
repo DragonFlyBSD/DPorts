@@ -1,8 +1,5 @@
-# New ports collection makefile for:	ConsoleKit
-# Date Created:				26 Aug 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: sysutils/consolekit/Makefile 316407 2013-04-24 07:35:40Z ak $
+# Created by: Florent Thoumie <flz@FreeBSD.org>
+# $FreeBSD: sysutils/consolekit/Makefile 326025 2013-09-02 16:21:38Z bapt $
 #    $MCom: ports/sysutils/consolekit/Makefile,v 1.25 2010/10/23 10:12:30 kwm Exp $
 
 PORTNAME=	consolekit
@@ -20,7 +17,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 WRKSRC=		${WRKDIR}/ConsoleKit-${PORTVERSION}
 USE_BZIP2=	yes
 USE_XORG=	x11
-USES=	pathfix gettext
+USES=	pathfix gettext pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
