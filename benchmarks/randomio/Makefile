@@ -1,9 +1,5 @@
-# New ports collection makefile for:	randomio
-# Date created:		20 Aug 2010
-# Whom:			Sergey Kandaurov <pluknet@gmail.com>
-#
-# $FreeBSD: ports/benchmarks/randomio/Makefile,v 1.2 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Sergey Kandaurov <pluknet@gmail.com>
+# $FreeBSD: benchmarks/randomio/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	randomio
 PORTVERSION=	1.4
@@ -14,7 +10,7 @@ MAINTAINER=	pluknet@gmail.com
 COMMENT=	A multithreaded disk i/o microbenchmark
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 PLIST_FILES=	bin/${PORTNAME}
 
 do-install:
