@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-tkinter/Makefile 313167 2013-03-01 20:12:01Z lwhsu $
+# $FreeBSD: x11-toolkits/py-tkinter/Makefile 326662 2013-09-07 17:21:55Z sunpoet $
 
 PORTNAME=	tkinter
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -12,6 +12,8 @@ DISTFILES=	${PYTHON_DISTFILE}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python bindings to the Tk widget set
+
+PORTSCOUT=	ignore:1
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
