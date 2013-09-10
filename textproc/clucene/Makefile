@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/clucene/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/clucene/Makefile 326281 2013-09-04 14:43:18Z bapt $
 
 PORTNAME=	clucene
 PORTVERSION=	2.3.3.4
@@ -20,7 +20,7 @@ USES=		cmake iconv
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DBUILD_CONTRIBS_LIB=ON
-CXXFLAGS+=	-D__LONG_LONG_SUPPORTED
+CXXFLAGS+=	-D__LONG_LONG_SUPPORTED -D_WCHAR_H_CPLUSPLUS_98_CONFORMANCE_
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR_REL}|' \
