@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 318358 2013-05-17 07:50:38Z jadawin $
+# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 326257 2013-09-04 07:19:56Z az $
 
 PORTNAME=	Mail-IMAPClient
 PORTVERSION=	3.33
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC \
 		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
 		p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 
 MAN3=	Mail::IMAPClient.3 \
