@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/namazu2/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: databases/namazu2/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	namazu
 PORTVERSION=	${NAMAZU_PORTVERSION}
@@ -17,7 +17,7 @@ USES=		gettext iconv perl5
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-perl5="${PERL}" \
 		--with-libintl-prefix=${LOCALBASE} \
-		--with-libiconv-prefix=${LOCALBASE}
+		${ICONV_CONFIGURE_ARG}
 USE_LDCONFIG=	yes
 
 .include "${.CURDIR}/Makefile.common"
