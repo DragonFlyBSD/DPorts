@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: mail/qmail/Makefile 325040 2013-08-20 11:43:44Z az $
+# $FreeBSD: mail/qmail/Makefile 325421 2013-08-26 23:30:41Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION?=	${QMAIL_VERSION}
@@ -703,6 +703,7 @@ post-patch:
 	@cd ${WRKSRC} && ./install_spamcontrol.sh
 	@${PATCH} -d ${WRKSRC} < ${FILESDIR}/extra-patch-spamcontrol-qmail-smtpd.c
 	@${PATCH} -d ${WRKSRC} < ${FILESDIR}/extra-patch-spamcontrol-qmail-remote.c
+	@${PATCH} -d ${WRKSRC} < ${FILESDIR}/extra-patch-spamcontrol-tls_remote.c
 . if ${PORT_OPTIONS:MSPF_PATCH} && defined(SPF_SPAMCONTROL_PATCH)
 	@${PATCH} -d ${WRKSRC} < ${DISTDIR}/${DIST_SUBDIR}/${SPF_SPAMCONTROL_PATCH}
 .  if ${PORT_OPTIONS:MEXTTODO_PATCH} && defined(EXTTODO_PATCH)
