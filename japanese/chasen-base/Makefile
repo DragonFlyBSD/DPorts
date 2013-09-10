@@ -3,7 +3,7 @@
 # Whom:			kuriyama
 #
 # $NetBSD: Makefile,v 1.2 1999/06/07 09:54:39 sakamoto Exp $
-# $FreeBSD: japanese/chasen-base/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: japanese/chasen-base/Makefile 326444 2013-09-05 20:18:30Z bsam $
 #
 
 PORTNAME=	chasen
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/darts.h:${PORTSDIR}/devel/darts
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-darts=${LOCALBASE}/include --with-libiconv=${LOCALBASE}
+CONFIGURE_ARGS=	--with-darts=${LOCALBASE}/include ${ICONV_CONFIGURE_BASE}
 USES=		iconv
 USE_LDCONFIG=	yes
 
