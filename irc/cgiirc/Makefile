@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: ports/irc/cgiirc/Makefile,v 1.13 2012/11/30 07:55:43 svnexp Exp $
+# $FreeBSD: irc/cgiirc/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	cgiirc
 PORTVERSION=	0.5.10
@@ -12,7 +12,7 @@ COMMENT=	IRC web gateway written in Perl
 
 LICENSE=	GPLv2
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 pre-install:
