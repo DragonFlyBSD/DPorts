@@ -2,7 +2,7 @@
 # Date created:				Wed 10 Nov 2010 23:44:23 GMT
 # Whom:					Jase Thew <freebsd@beardz.net>
 #
-# $FreeBSD: ports/sysutils/p5-File-Stat-ModeString/Makefile,v 1.4 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-File-Stat-ModeString/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	File-Stat-ModeString
@@ -20,7 +20,8 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	p5-File-Stat-Bits>0:${PORTSDIR}/sysutils/p5-File-Stat-Bits
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Stat::ModeString.3
 
