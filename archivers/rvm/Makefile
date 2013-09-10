@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: archivers/rvm/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: archivers/rvm/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	rvm
 PORTVERSION=	1.07
@@ -16,7 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 NO_LATEST_LINK=	yes
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_GCC=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-default-config-file=${PREFIX}/etc/rvm.conf \
