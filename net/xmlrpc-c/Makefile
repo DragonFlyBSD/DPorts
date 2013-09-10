@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/xmlrpc-c/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/xmlrpc-c/Makefile 325961 2013-09-02 09:45:00Z garga $
 
 PORTNAME=	xmlrpc-c
 PORTVERSION=	1.25.23
@@ -20,8 +20,7 @@ LIBWWW_DESC=	Compile with libwww support
 
 CONFLICTS=	xmlrpc-epi-0.* xmlrpc-c-devel-[0-9]*
 
-USE_PERL5=	yes
-USE_GMAKE=	yes
+USES=		gmake perl5
 USE_AUTOTOOLS=	libtool:env
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
