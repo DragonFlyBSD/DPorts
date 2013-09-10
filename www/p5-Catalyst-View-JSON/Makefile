@@ -2,7 +2,7 @@
 # Date created:		May 10, 2006
 # Whom:			kuriyama@FreeBSD.org
 #
-# $FreeBSD: ports/www/p5-Catalyst-View-JSON/Makefile,v 1.18 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-View-JSON/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	Catalyst-View-JSON
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.6000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-MRO-Compat>0:${PORTSDIR}/devel/p5-MRO-Compat
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Helper::View::JSON.3 Catalyst::View::JSON.3
 
