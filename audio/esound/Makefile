@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: audio/esound/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/esound/Makefile 326709 2013-09-08 08:27:08Z antoine $
 #   $MCom: ports/audio/esound/Makefile,v 1.1 2008/11/20 19:38:24 marcus Exp $
 
 PORTNAME=	esound
@@ -16,7 +16,7 @@ LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USES=	pathfix pkgconfig
+USES=		pathfix pkgconfig:both
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=  yes
 CONFIGURE_ENV=	JW=false
