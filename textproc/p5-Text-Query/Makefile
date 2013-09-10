@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Query/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/p5-Text-Query/Makefile 326761 2013-09-08 16:38:26Z tobez $
 
 PORTNAME=	Text-Query
-PORTVERSION=	0.07
+PORTVERSION=	0.09
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
