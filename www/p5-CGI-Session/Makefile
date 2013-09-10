@@ -2,7 +2,7 @@
 # Date created:				12 June 2002
 # Whom:					Erwin Lansing <erwin@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CGI-Session/Makefile,v 1.29 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Session/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	CGI-Session
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for persistent session management
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		\
 		CGI::Session.3 \
