@@ -1,9 +1,5 @@
-# New ports collection makefile for:   nttcp
-# Date created:        11 Nov 1998
-# Whom:                Bill Fumerola <billf@chc-chimes.com>
-#
-# $FreeBSD: ports/benchmarks/nttcp/Makefile,v 1.22 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Bill Fumerola <billf@chc-chimes.com>
+# $FreeBSD: benchmarks/nttcp/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	nttcp
 PORTVERSION=	1.47
@@ -20,7 +16,7 @@ RESTRICTED=	No commercial use
 ALL_TARGET=	nttcp
 MAN1=		nttcp.1
 PLIST_FILES=	bin/nttcp
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ENV+=	OPT="${CFLAGS}"
 NOPRECIOUSMAKEVARS=yes
 
