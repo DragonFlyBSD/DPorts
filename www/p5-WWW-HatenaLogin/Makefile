@@ -2,7 +2,7 @@
 # Date created:		2009-04-06
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-WWW-HatenaLogin/Makefile,v 1.3 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-HatenaLogin/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	WWW-HatenaLogin
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay \
 		p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::HatenaLogin.3
 
