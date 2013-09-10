@@ -1,5 +1,5 @@
 # Created by: Shuichi Tanaka
-# $FreeBSD: japanese/libjcode/Makefile 324128 2013-08-01 21:21:30Z bapt $
+# $FreeBSD: japanese/libjcode/Makefile 326435 2013-09-05 18:24:04Z tabthorpe $
 
 PORTNAME=	libjcode
 PORTVERSION=	1.00
@@ -7,7 +7,7 @@ CATEGORIES=	japanese net
 MASTER_SITES=	http://keemun.soraneko.com/gtkicq/archives/
 DISTNAME=	${PORTNAME}
 
-MAINTAINER=	stanaka@bb.mbn.or.jp
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Japanese charset conversion library
 
 MAKE_ARGS=	CC=${CC}
