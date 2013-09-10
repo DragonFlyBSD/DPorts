@@ -2,7 +2,7 @@
 # Date created:				June 26th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: misc/p5-Locale-Codes/Makefile 321668 2013-06-24 07:11:47Z demon $
+# $FreeBSD: misc/p5-Locale-Codes/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	Locale-Codes
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Perl5 module providing access to ISO3166 and ISO639 Country Codes
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Locale::Codes.3 Locale::Codes::API.3 Locale::Codes::Changes.3 \
 	Locale::Codes::Constants.3 Locale::Codes::Country.3 \
