@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Devel-REPL
-# Date created:		2009-08-31
-# Whom:			Ashish SHUKLA <wahjava@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-Devel-REPL/Makefile,v 1.12 2013/01/20 16:28:39 svnexp Exp $
-#
+# Created by: Ashish SHUKLA <wahjava@gmail.com>
+# $FreeBSD: devel/p5-Devel-REPL/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	Devel-REPL
 PORTVERSION=	1.003014
@@ -33,7 +29,8 @@ BUILD_DEPENDS=	p5-Moose>=0.74:${PORTSDIR}/devel/p5-Moose \
 	p5-Sys-SigAction>0:${PORTSDIR}/devel/p5-Sys-SigAction
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Devel::REPL.3 \
 	Devel::REPL::Overview.3 \
