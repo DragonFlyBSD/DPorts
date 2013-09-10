@@ -2,7 +2,7 @@
 # Date created:		2008-01-30
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-Web-Scraper-Config/Makefile,v 1.2 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-Web-Scraper-Config/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	Web-Scraper-Config
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-Config-Any>=0:${PORTSDIR}/devel/p5-Config-Any \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-Web-Scraper>=0:${PORTSDIR}/www/p5-Web-Scraper
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Web::Scraper::Config.3
 
