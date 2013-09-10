@@ -1,9 +1,5 @@
-# New ports collection makefile for:	raw images library
-# Date created:				26 Apr 2008
-# Whom:					Sergey A. Osokin <osa@FreeBSD.org>
-#
-# $FreeBSD: graphics/libraw/Makefile 324851 2013-08-17 16:27:24Z gerald $
-#
+# Created by: Sergey A. Osokin <osa@FreeBSD.org>
+# $FreeBSD: graphics/libraw/Makefile 326082 2013-09-02 20:31:38Z bapt $
 
 PORTNAME=	libraw
 PORTVERSION=	0.14.7
@@ -21,6 +17,7 @@ LICENSE_COMB=	dual
 LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
 
 USE_LDCONFIG=	yes
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-examples --disable-jasper
 CFLAGS+=	-fPIC
@@ -112,5 +109,8 @@ do-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${PORTEXAMPLES:S,^,${WRKSRC}/samples/,} ${EXAMPLESDIR}
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e "s/-lstdc++//g" ${WRKSRC}/configure
 
 .include <bsd.port.mk>
