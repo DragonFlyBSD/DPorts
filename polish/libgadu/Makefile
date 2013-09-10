@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@BSDGuru.org>
-# $FreeBSD: ports/polish/libgadu/Makefile,v 1.22 2013/01/24 16:52:54 svnexp Exp $
+# $FreeBSD: polish/libgadu/Makefile 325970 2013-09-02 10:31:45Z bapt $
 
 PORTNAME=	libgadu
 DISTVERSION=	1.11.2
@@ -14,7 +14,7 @@ LICENSE=	LGPL21
 
 CONFLICTS=	pl-ekg-1.[0-6]*
 
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--enable-shared --disable-static --with-pthread \
