@@ -2,11 +2,11 @@
 # Date created:				8 April 2001
 # Whom:					Anatoliy Dmytriyev
 #
-# $FreeBSD: ports/net/p5-NetPacket/Makefile,v 1.13 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-NetPacket/Makefile 326773 2013-09-08 21:22:46Z tobez $
 #
 
 PORTNAME=	NetPacket
-PORTVERSION=	1.3.1
+PORTVERSION=	1.4.1
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,10 +16,11 @@ COMMENT=	Modules to assemble/disassemble network packets at the protocol level
 
 LICENSE=	ART20
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		NetPacket.3 NetPacket::ARP.3 NetPacket::Ethernet.3 \
 		NetPacket::ICMP.3 NetPacket::IGMP.3 NetPacket::UDP.3\
-		NetPacket::IP.3 NetPacket::TCP.3
+		NetPacket::IP.3 NetPacket::TCP.3 NetPacket::USBMon.3
 
 .include <bsd.port.mk>
