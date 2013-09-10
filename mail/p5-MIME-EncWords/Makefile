@@ -2,7 +2,7 @@
 # Date created:				05 June 2007
 # Whom:					Olivier Girard <Olivier.Girard@univ-angers.fr>
 #
-# $FreeBSD: ports/mail/p5-MIME-EncWords/Makefile,v 1.7 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-MIME-EncWords/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	MIME-EncWords
@@ -16,7 +16,8 @@ COMMENT=	Deal with RFC 2047 encoded words (improved)
 
 RUN_DEPENDS=	p5-MIME-Charset>=1.006.2:${PORTSDIR}/mail/p5-MIME-Charset
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MIME::EncWords.3 MIME::EncWords::JA_JP.3
 
