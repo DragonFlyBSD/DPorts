@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Text-vFile-asData/Makefile 318700 2013-05-21 14:09:57Z kuriyama $
+# $FreeBSD: devel/p5-Text-vFile-asData/Makefile 326581 2013-09-07 08:23:45Z az $
 
 PORTNAME=	Text-vFile-asData
 PORTVERSION=	0.08
@@ -12,7 +12,8 @@ COMMENT=	Parse vFile formatted files into data structures
 RUN_DEPENDS=	p5-Class-Accessor-Chained>0:${PORTSDIR}/devel/p5-Class-Accessor-Chained
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::vFile::asData.3
 
