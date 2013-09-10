@@ -1,13 +1,13 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-MyXML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-MyXML/Makefile 326878 2013-09-10 08:58:17Z tobez $
 
 PORTNAME=	XML-MyXML
-PORTVERSION=	0.09.91
-DISTVERSION=	${PORTVERSION:C/\.(..)$/\1/}
+PORTVERSION=	0.10.02
 PORTEPOCH=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple-to-use XML module parsing and creating XML documents
@@ -20,6 +20,6 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::MyXML.3
+MAN3=		XML::MyXML.3 XML::MyXML::II.3
 
 .include <bsd.port.mk>
