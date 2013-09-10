@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Net-Server-Coro/Makefile,v 1.10 2013/01/14 15:05:42 svnexp Exp $
+# $FreeBSD: net/p5-Net-Server-Coro/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	Net-Server-Coro
 PORTVERSION=	1.3
@@ -15,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Net-Server>=2:${PORTSDIR}/net/p5-Net-Server
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Server::Coro.3
 
