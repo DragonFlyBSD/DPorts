@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Storage/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Storage/Makefile 326772 2013-09-08 21:16:41Z tobez $
 
 PORTNAME=	MooseX-Storage
-PORTVERSION=	0.34
+PORTVERSION=	0.42
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,21 +10,24 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Serialization framework for Moose classes
 
-BUILD_DEPENDS=	p5-JSON-Any>=1.15:${PORTSDIR}/converters/p5-JSON-Any \
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+RUN_DEPENDS=	p5-JSON-Any>=1.15:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-Moose>=0.99:${PORTSDIR}/devel/p5-Moose \
 		p5-String-RewritePrefix>=0.004:${PORTSDIR}/textproc/p5-String-RewritePrefix
-RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA \
-		p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+TEST_DEPENDS=	p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-JSON>=0.06:${PORTSDIR}/devel/p5-Test-JSON \
 		p5-Test-Requires>=0.05:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-Without-Module>=0:${PORTSDIR}/devel/p5-Test-Without-Module \
-		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
+		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML \
+		p5-Test-CheckDeps>=0:${PORTSDIR}/devel/p5-Test-CheckDeps
 
 USES=		perl5
-USE_PERL5=	configure
+USE_PERL5=	modbuildtiny
 
 MAN3=		MooseX::Storage.3 \
 		MooseX::Storage::Base::WithChecksum.3 \
