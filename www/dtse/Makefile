@@ -2,7 +2,7 @@
 # Date created: 7 Mar 2004
 # Whom: Douglas Thrift <douglas@douglasthrift.net>
 #
-# $FreeBSD: ports/www/dtse/Makefile,v 1.13 2012/11/17 06:02:32 svnexp Exp $
+# $FreeBSD: www/dtse/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	dtse
@@ -24,7 +24,7 @@ USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-openssl=${OPENSSLBASE}
 .endif
 
-USE_PERL5=	yes
+USES=		perl5
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal:env automake:env autoconf:env
