@@ -2,7 +2,7 @@
 # Date created:				2010-11-11
 # Whom:					Frederic Culot <culot@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/p5-File-Signature/Makefile,v 1.2 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: sysutils/p5-File-Signature/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	File-Signature
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Detect changes to a file's content or attributes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Signature.3
 
