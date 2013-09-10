@@ -1,5 +1,5 @@
 # Created by: Jerry A! <jerry@thehutt.org>
-# $FreeBSD: ports/devel/libstroke/Makefile,v 1.22 2012/12/06 23:31:45 svnexp Exp $
+# $FreeBSD: devel/libstroke/Makefile 326334 2013-09-04 23:10:19Z bapt $
 
 PORTNAME=	libstroke
 PORTVERSION=	0.5.1
@@ -10,12 +10,12 @@ MASTER_SITES=	http://etla.net/libstroke/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A stroke translation library
 
+USES=		gmake
+USE_CSTD=	gnu89
 USE_XORG=	x11
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 WANT_GNOME=	yes
 USE_LDCONFIG=	yes
-USE_GCC=	any
 
 OPTIONS_DEFINE=	GTK1
 GTK1_DESC=	Build with legacy Gtk+/GNOME stroke support
