@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog6/Makefile 319083 2013-05-26 00:58:25Z brd $
+# $FreeBSD: sysutils/rsyslog6/Makefile 325982 2013-09-02 12:32:28Z bapt $
 
 PORTNAME=	rsyslog
 PORTVERSION=	6.6.0
@@ -22,6 +22,8 @@ LIB_DEPENDS+=	ee:${PORTSDIR}/devel/libee \
 		sysinfo:${PORTSDIR}/devel/libsysinfo \
 		json.0:${PORTSDIR}/devel/json-c \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
+
+USES=		pkgconfig
 
 .ifdef MNAME
 RUN_DEPENDS=	rsyslog>=${PORTVERSION}:${PORTSDIR}/sysutils/rsyslog6
