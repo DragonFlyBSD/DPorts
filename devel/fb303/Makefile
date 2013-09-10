@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/fb303/Makefile 314031 2013-03-13 06:51:06Z rm $
+# $FreeBSD: devel/fb303/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	fb303
 PORTVERSION=	${THRIFT_PORTVERSION}
@@ -23,7 +23,8 @@ AUTOMAKE_ARGS=	-a
 CONFIGURE_ARGS=	PY_PREFIX="${PREFIX}"
 USE_AUTOTOOLS=	aclocal automake autoconf
 USE_GMAKE=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_PYTHON=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/contrib/fb303
 
