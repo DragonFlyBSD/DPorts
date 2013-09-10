@@ -2,7 +2,7 @@
 # Date created:                7 May 2006
 # Whom:                        Matt Mills <matt_mills@btopenworld.com>
 #
-# $FreeBSD: ports/misc/ipbt/Makefile,v 1.19 2012/11/17 05:59:38 svnexp Exp $
+# $FreeBSD: misc/ipbt/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	ipbt
@@ -17,7 +17,7 @@ COMMENT=	A high-tech ttyrec player with improvements over ttyplay
 
 MAN1=		ipbt.1
 
-USE_PERL5=	yes
+USES=		perl5
 
 ALL_TARGET=	${PORTNAME}
 PLIST_FILES=	bin/ipbt bin/ttygrep bin/ttydump
