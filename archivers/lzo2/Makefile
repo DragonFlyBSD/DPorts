@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lzo
-# Date created:				21 Feb 1998
-# Whom:					giffunip@asme.org
-#
-# $FreeBSD: ports/archivers/lzo2/Makefile,v 1.59 2012/11/17 05:54:21 svnexp Exp $
-#
+# Created by: giffunip@asme.org
+# $FreeBSD: archivers/lzo2/Makefile 325635 2013-08-29 21:58:49Z mandree $
 
 PORTNAME=	lzo2
 PORTVERSION=	2.06
@@ -22,7 +18,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared --docdir=${DOCSDIR}
 USE_LDCONFIG=	yes
 
-.if defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if !${PORT_OPTIONS:MDOCS}
 INSTALL_TARGET=	install-exec install-pkgincludeHEADERS
 .endif
 
@@ -34,7 +32,7 @@ post-build:
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${REINPLACE_CMD} -e 's,doc/,,' NEWS README
 .for i in AUTHORS BUGS COPYING NEWS README THANKS
@@ -42,7 +40,7 @@ post-install:
 .endfor
 	${INSTALL_DATA}	${WRKSRC}/doc/* ${DOCSDIR}/
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA}	${WRKSRC}/examples/[a-z]*.[ch] ${EXAMPLESDIR}/
 .endif
