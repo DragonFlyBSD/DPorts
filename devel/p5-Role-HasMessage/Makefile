@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Role-HasMessage
-# Date created:				2011-09-19
-# Whom:					Geraud CONTINSOUZAS <geraud@gcu.info>
-#
-# $FreeBSD: ports/devel/p5-Role-HasMessage/Makefile,v 1.2 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
+# $FreeBSD: devel/p5-Role-HasMessage/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Role-HasMessage
 PORTVERSION=	0.005
@@ -25,7 +21,8 @@ RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Role::HasMessage.3 \
 	Role::HasMessage::Errf.3
