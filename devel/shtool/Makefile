@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shtool
-# Date created:			26-Apr-1999
-# Whom:				Ralf S. Engelschall
-#
-# $FreeBSD: ports/devel/shtool/Makefile,v 1.46 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: Ralf S. Engelschall
+# $FreeBSD: devel/shtool/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	shtool
 PORTVERSION=	2.0.8
@@ -15,7 +11,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:GNU,OSSP
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	The GNU Portable Shell Tool
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 
 MAN1=		shtool-arx.1 shtool-echo.1 shtool-fixperm.1 shtool-install.1 \
