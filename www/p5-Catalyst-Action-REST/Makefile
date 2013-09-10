@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 326602 2013-09-07 10:19:47Z sunpoet $
 
 PORTNAME=	Catalyst-Action-REST
-PORTVERSION=	1.06
+PORTVERSION=	1.11
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,7 +15,6 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.80030:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Class-Inspector>=1.13:${PORTSDIR}/devel/p5-Class-Inspector \
-		p5-Data-Serializer>=0.36:${PORTSDIR}/devel/p5-Data-Serializer \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-MRO-Compat>=0.10:${PORTSDIR}/devel/p5-MRO-Compat \
 		p5-Moose>=1.03:${PORTSDIR}/devel/p5-Moose \
