@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: ports/devel/p5-DateTime-Format-Natural/Makefile,v 1.14 2012/11/17 05:56:12 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Format-Natural/Makefile 326784 2013-09-09 08:21:32Z az $
 
 PORTNAME=	DateTime-Format-Natural
 PORTVERSION=	1.01
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-boolean>=0:${PORTSDIR}/devel/p5-boolean \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockTime>=0:${PORTSDIR}/devel/p5-Test-MockTime
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		dateparse.1
 
