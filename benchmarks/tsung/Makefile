@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: benchmarks/tsung/Makefile 321757 2013-06-25 18:37:55Z swills $
+# $FreeBSD: benchmarks/tsung/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	tsung
 PORTVERSION=	1.5.0
@@ -14,11 +14,11 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang
 RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
 
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_PYTHON_RUN=	yes
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake perl5
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
