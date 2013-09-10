@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: emulators/spim/Makefile 325221 2013-08-22 17:53:18Z wg $
+# $FreeBSD: emulators/spim/Makefile 325992 2013-09-02 13:26:34Z tijl $
 
 PORTNAME=	spim
 PORTVERSION=	8.0
@@ -34,7 +34,7 @@ MAN1+=		xspim.1
 
 post-build:
 .if ${PORT_OPTIONS:MGUI}
-	@(cd ${WRKSRC}/xspim && ${SETENV} ${MAKE_ENV} ${XMKMF} && \
+	@(cd ${WRKSRC}/xspim && ${SETENV} ${MAKE_ENV} ${XMKMF} ${XMKMF_ARGS} && \
 		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE})
 .endif
 
