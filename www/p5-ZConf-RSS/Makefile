@@ -2,7 +2,7 @@
 # Date created:         2009-11-09
 # Whom:                 Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/www/p5-ZConf-RSS/Makefile,v 1.6 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-ZConf-RSS/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	ZConf-RSS
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-ZConf>=0:${PORTSDIR}/net/p5-ZConf \
 		p5-HTML-FormatText-WithLinks>=0:${PORTSDIR}/textproc/p5-HTML-FormatText-WithLinks
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZConf::RSS.3 \
 		ZConf::RSS::GUI.3
