@@ -1,5 +1,5 @@
 # Created by: Udo Schweigert
-# $FreeBSD: mail/mutt/Makefile 323108 2013-07-16 14:43:38Z miwi $
+# $FreeBSD: mail/mutt/Makefile 326316 2013-09-04 20:01:05Z bsam $
 #
 # In addition to the options you can enable other configuration
 # options of mutt by adding them to the MUTT_CONFIGURE_ARGS variable. For
@@ -9,7 +9,7 @@
 
 PORTNAME=	mutt
 PORTVERSION=	1.5.21
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES+=	mail ipv6
 MASTER_SITES=	ftp://ftp.mutt.org/mutt/devel/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/devel/ \
@@ -66,8 +66,8 @@ OPTIONS_DEFINE=	COMPRESSED_FOLDERS SASL DEBUG FLOCK \
 		MAILDIR_HEADER_CACHE MAILDIR_MTIME_PATCH \
 		NNTP PARENT_CHILD_MATCH_PATCH \
 		QUOTE_PATCH REVERSE_REPLY_PATCH SGMLFORMAT SIDEBAR_PATCH \
-		SIGNATURE_MENU SMIME_OUTLOOK_COMPAT TOKYOCABINET \
-		TRASH_PATCH XML
+		SIGNATURE_MENU SMART_DATE SMIME_OUTLOOK_COMPAT \
+		TOKYOCABINET TRASH_PATCH XML
 
 OPTIONS_SINGLE=	SCREEN
 OPTIONS_RADIO=	SPELL
@@ -97,6 +97,7 @@ SGMLFORMAT_DESC=	SGML support
 SIDEBAR_PATCH_DESC=	Sidebar support
 SIGNATURE_MENU_DESC=	Signature menu
 SLANG_DESC=	SLANG support
+SMART_DATE_DESC=	Dynamic date formatting with "%@"
 SMIME_OUTLOOK_COMPAT_DESC=	SMIME outlook compatibility
 TOKYOCABINET_DESC=	Use tokyocabinet instead of Berkley DB
 TRASH_PATCH_DESC=	Trash folder support
@@ -193,6 +194,11 @@ post-patch::
 	@${PATCH} ${PATCH_ARGS} < ${PATCHDIR}/extra-patch-smime-outlook
 .endif
 
+.if ${PORT_OPTIONS:MSMART_DATE}
+post-patch::
+	@${PATCH} ${PATCH_ARGS} < ${PATCHDIR}/extra-patch-smartdate
+.endif
+
 .if ${PORT_OPTIONS:MSIGNATURE_MENU}
 IGNORE=	the WITH_SIGNATURE_MENU does not work at the moment
 XML_NEEDED=	yes
@@ -237,7 +243,7 @@ CONFIGURE_ARGS+=	--enable-locales-fix
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=			iconv
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 .else
 CONFIGURE_ARGS+=	--disable-iconv
 .endif
@@ -385,7 +391,7 @@ SCRIPTS_ENV+=	COMPRESSED_FOLDERS="yes"
 SCRIPTS_ENV+=	QUOTE_PATCH="yes"
 .endif
 
-.if ${PORT_OPTIONS:MIMAP_HEADER_CACHE}
+.if ${PORT_OPTIONS:MIMAP_HEADER_CACHE} || ${PORT_OPTIONS:MMAILDIR_HEADER_CACHE}
 .if ${PORT_OPTIONS:MTOKYOCABINET}
 CONFIGURE_ARGS+=	--enable-hcache --without-gdbm --without-bdb --with-tokyocabinet
 LIB_DEPENDS+=		tokyocabinet.9:${PORTSDIR}/databases/tokyocabinet
