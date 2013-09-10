@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/graphite2/Makefile 324205 2013-08-03 22:08:50Z bapt $
+# $FreeBSD: graphics/graphite2/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	graphite2
 PORTVERSION=	1.2.3
@@ -11,7 +11,7 @@ COMMENT=	Rendering capabilities for complex non-Roman writing systems
 
 USES=		cmake iconv
 USE_LDCONFIG=	yes
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/pkgconfig,data/pkgconfig,g' ${WRKSRC}/CMakeLists.txt
