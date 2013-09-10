@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-SUPER
-# Date created:				12 June, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-SUPER/Makefile,v 1.5 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/p5-SUPER/Makefile 325897 2013-09-01 18:14:40Z az $
 
 PORTNAME=	SUPER
 PORTVERSION=	1.17
@@ -19,8 +15,8 @@ BUILD_DEPENDS=	p5-Sub-Identify>=0.04:${PORTSDIR}/devel/p5-Sub-Identify \
 		p5-Scalar-List-Utils>=0.20:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	SUPER.3
 
