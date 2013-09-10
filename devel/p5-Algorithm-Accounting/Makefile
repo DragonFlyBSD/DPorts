@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Algorithm-Accounting
-# Date created:				25 Oct 2004
-# Whom:					Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-#
-# $FreeBSD: ports/devel/p5-Algorithm-Accounting/Makefile,v 1.13 2012/11/17 05:56:03 svnexp Exp $
-#
+# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
+# $FreeBSD: devel/p5-Algorithm-Accounting/Makefile 326822 2013-09-09 16:55:31Z az $
 
 PORTNAME=	Algorithm-Accounting
 PORTVERSION=	0.08
@@ -26,7 +22,8 @@ BUILD_DEPENDS=	p5-Spiffy>=0:${PORTSDIR}/devel/p5-Spiffy \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::Accounting.3 \
 		Algorithm::Accounting::Report.3 \
