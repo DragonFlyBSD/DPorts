@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libsoup/Makefile 324877 2013-08-17 22:44:27Z mva $
+# $FreeBSD: devel/libsoup/Makefile 326032 2013-09-02 16:55:04Z bapt $
 #   $MCom: ports/trunk/devel/libsoup/Makefile 18456 2013-05-12 14:40:21Z kwm $
 
 PORTNAME=	libsoup
@@ -21,12 +21,11 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-USES=		gettext pathfix
+USES=		gettext pathfix gmake pkgconfig
 USE_GNOME=	gnomehier glib20 libxml2 ltverhack referencehack intltool
 USE_SQLITE=	3
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_PYTHON_BUILD=	-2.7
 CONFIGURE_ARGS=	--disable-more-warnings
 CPPFLAGS+=	-I${LOCALBASE}/include
