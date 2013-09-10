@@ -2,7 +2,7 @@
 # Date created:				December 11th 2006
 # Whom:	      				Xavier Beaudouin <kiwi@oav.net>
 #
-# $FreeBSD: ports/net-mgmt/routers2/Makefile,v 1.12 2012/11/17 06:00:37 svnexp Exp $
+# $FreeBSD: net-mgmt/routers2/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	routers2
@@ -28,7 +28,7 @@ RUN_DEPENDS=	p5-Convert-ASN1>=0:${PORTSDIR}/converters/p5-Convert-ASN1 \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-v${PORTVERSION}
 
-USE_PERL5=	YES
+USES=		perl5
 
 NO_BUILD=	YES
 
