@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Router-Simple-Sinatraish/Makefile,v 1.1 2013/01/18 07:05:30 svnexp Exp $
+# $FreeBSD: www/p5-Router-Simple-Sinatraish/Makefile 326148 2013-09-03 13:06:13Z az $
 
 PORTNAME=	Router-Simple-Sinatraish
 PORTVERSION=	0.03
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Router-Simple>=0.09:${PORTSDIR}/www/p5-Router-Simple
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Router::Simple::Sinatraish.3
 
