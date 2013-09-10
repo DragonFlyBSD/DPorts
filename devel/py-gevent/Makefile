@@ -1,5 +1,5 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: devel/py-gevent/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/py-gevent/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
 
 PORTNAME=	gevent
 PORTVERSION=	0.13.8
@@ -16,7 +16,7 @@ LIB_DEPENDS=	event:${PORTSDIR}/devel/libevent
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}greenlet>=0:${PORTSDIR}/devel/py-greenlet
 
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
 PYDISTUTILS_BUILDARGS=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
