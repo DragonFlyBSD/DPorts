@@ -2,7 +2,7 @@
 # Date created:			13 August 2002
 # Whom:				Harold Gutch <logix@foobar.franken.de>
 #
-# $FreeBSD: ports/misc/spamcalc/Makefile,v 1.3 2012/11/17 05:59:45 svnexp Exp $
+# $FreeBSD: misc/spamcalc/Makefile 325959 2013-09-02 09:36:29Z az $
 
 PORTNAME=	spamcalc
 PORTVERSION=	0.5
@@ -14,7 +14,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	logix@foobar.franken.de
 COMMENT=	Calculates "DNS-spam"-values for hostnames
 
-USE_PERL5=	YES
+USES=		perl5
 
 do-build:
 	${REINPLACE_CMD} -e "s,sc.conf,${PREFIX}/etc/spamcalc.conf," \
