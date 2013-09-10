@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/mesa-demos/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/mesa-demos/Makefile 326050 2013-09-02 18:15:57Z antoine $
 
 PORTNAME=	mesa-demos
 PORTVERSION=	8.1.0
@@ -11,7 +11,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	OpenGL demos distributed with Mesa
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_GL=		glu glut glew
 USE_XORG=	glproto x11 xext xi xxf86vm xdamage xfixes dri2proto
