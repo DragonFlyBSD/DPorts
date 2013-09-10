@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Class-Accessor-Constructor/Makefile,v 1.1 2013/01/18 12:08:30 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Accessor-Constructor/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	Class-Accessor-Constructor
 PORTVERSION=	1.111590
@@ -16,7 +16,8 @@ RUN_DEPENDS=	\
 	p5-Data-Inherited>0:${PORTSDIR}/devel/p5-Data-Inherited
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Class::Accessor::Constructor.3 \
 	Class::Accessor::Constructor::Base.3
