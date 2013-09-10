@@ -1,5 +1,5 @@
 # Created by: Marc Abramowitz (http://marc.abramowitz.info)
-# $FreeBSD: graphics/opencv/Makefile 324558 2013-08-10 20:35:10Z marino $
+# $FreeBSD: graphics/opencv/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME?=	opencv
 PORTVERSION=	2.3.1
@@ -14,11 +14,10 @@ COMMENT=	Open Source Computer Vision library from Intel
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/doc/license.txt
 
-USE_GNOME=	pkgconfig
 WANT_GSTREAMER=	yes
 MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake pkgconfig
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/OpenCV-${DISTVERSION}
