@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Componenet-Hailo
-# Date created:	   2011-07-19
-# Whom:		   milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: ports/devel/p5-POE-Component-Hailo/Makefile,v 1.2 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: milki <milki@rescomp.berkeley.edu>
+# $FreeBSD: devel/p5-POE-Component-Hailo/Makefile 326787 2013-09-09 09:45:12Z az $
 
 PORTNAME=	POE-Component-Hailo
 PORTVERSION=	0.10
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-Hailo>=0:${PORTSDIR}/textproc/p5-Hailo
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POE::Component::Hailo.3
 
