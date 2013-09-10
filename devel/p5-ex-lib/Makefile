@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-ex-lib
-# Date created:		2009-01-23
-# Whom:			Mons Anderson <mons@cpan.org>
-#
-# $FreeBSD: ports/devel/p5-ex-lib/Makefile,v 1.7 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Mons Anderson <mons@cpan.org>
+# $FreeBSD: devel/p5-ex-lib/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	ex-lib
 PORTVERSION=	0.90
@@ -16,7 +12,8 @@ COMMENT=	Relative use lib in absolute way
 
 RUN_DEPENDS=	p5-lib-abs>=0.90:${PORTSDIR}/devel/p5-lib-abs
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ex::lib.3
 
