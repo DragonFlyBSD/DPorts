@@ -2,7 +2,7 @@
 # Date created:		2003-11-18
 # Whom:			Paul Dlug <paul@nerdlabs.com>
 #
-# $FreeBSD: ports/net-mgmt/nsca27/Makefile,v 1.2 2013/01/29 19:59:46 svnexp Exp $
+# $FreeBSD: net-mgmt/nsca27/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	nsca
@@ -30,7 +30,7 @@ CONFLICTS=	nsca-client-2.9.*
 .endif
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 CONFIGURE_ARGS=	--prefix=${PREFIX} --localstatedir=/var/spool/nagios
 DOCSDIR?=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 

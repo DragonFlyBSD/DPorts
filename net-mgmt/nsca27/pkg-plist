@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net-mgmt/nsca27/pkg-plist,v 1.1 2013/01/29 19:56:32 svnexp Exp $
+@comment $FreeBSD: net-mgmt/nsca27/pkg-plist 311182 2013-01-29 19:49:38Z mm $
 %%PORTDOCS%%%%DOCSDIR%%/Changelog
 %%PORTDOCS%%%%DOCSDIR%%/LEGAL
 %%PORTDOCS%%%%DOCSDIR%%/README

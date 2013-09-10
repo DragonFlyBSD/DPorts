@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net-mgmt/nsca27/files/nsca.in,v 1.1 2013/01/29 19:56:32 svnexp Exp $
+# $FreeBSD: net-mgmt/nsca27/files/nsca.in 311182 2013-01-29 19:49:38Z mm $
 #
 # PROVIDE: nsca
 # REQUIRE: nagios
