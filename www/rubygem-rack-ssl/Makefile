@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/www/rubygem-rack-ssl/Makefile,v 1.3 2013/02/16 21:49:47 svnexp Exp $
+# $FreeBSD: www/rubygem-rack-ssl/Makefile 312384 2013-02-16 20:54:38Z swills $
 
 PORTNAME=	rack-ssl
 PORTVERSION=	1.3.3
