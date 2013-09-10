@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Calendar::Simple
-# Date created:				29 Oct 2003
-# Whom:	      				Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Calendar-Simple/Makefile,v 1.11 2012/11/17 05:56:06 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Calendar-Simple/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	Calendar-Simple
 PORTVERSION=	1.21
@@ -15,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to create simple calendars
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Calendar::Simple.3
 
