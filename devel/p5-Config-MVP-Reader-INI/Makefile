@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Config-MVP-Reader-INI
-# Date created:				2011-09-19
-# Whom:					Geraud CONTINSOUZAS <geraud@gcu.info>
-#
-# $FreeBSD: ports/devel/p5-Config-MVP-Reader-INI/Makefile,v 1.2 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
+# $FreeBSD: devel/p5-Config-MVP-Reader-INI/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	Config-MVP-Reader-INI
 PORTVERSION=	2.101461
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Config-INI>=0:${PORTSDIR}/devel/p5-Config-INI \
 		p5-Config-MVP>=2:${PORTSDIR}/devel/p5-Config-MVP
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Config::MVP::Reader::INI.3
 
