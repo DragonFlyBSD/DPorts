@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: japanese/eb/Makefile 325246 2013-08-23 00:06:37Z marino $
+# $FreeBSD: japanese/eb/Makefile 326698 2013-09-07 22:09:49Z bsam $
 
 PORTNAME=	eb
 PORTVERSION=	4.4.3
@@ -78,12 +78,12 @@ APPENDIXDIR=	${DATADIR}/appendix
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
+USES+=		gettext iconv
 CONFIGURE_ARGS+=	--enable-nls \
 		--with-gettext-includes=${LOCALBASE}/include \
 		--with-gettext-libraries=${LOCALBASE}/lib \
-		--with-iconv-includes=${LOCALBASE}/include \
-		--with-iconv-libraries=${LOCALBASE}/lib
+		--with-iconv-includes=${ICONV_PREFIX}/include \
+		--with-iconv-libraries=${ICONV_PREFIX}/lib
 PLIST_SUB=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
