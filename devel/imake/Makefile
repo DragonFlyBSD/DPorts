@@ -1,8 +1,9 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: devel/imake/Makefile 324227 2013-08-04 12:53:54Z az $
+# $FreeBSD: devel/imake/Makefile 325992 2013-09-02 13:26:34Z tijl $
 
 PORTNAME=	imake
 PORTVERSION=	1.0.6
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
 
