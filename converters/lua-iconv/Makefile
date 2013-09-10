@@ -2,7 +2,7 @@
 # Date created:			        04 Dec 2009
 # Whom:					vanilla@
 #
-# $FreeBSD: converters/lua-iconv/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: converters/lua-iconv/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	iconv
@@ -21,7 +21,9 @@ USES=		pkgconfig iconv
 PLIST_FILES=	%%LUA_MODLIBDIR%%/iconv.so
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%INCDIR%%|-I${PREFIX}/include|;s|%%LIBDIR%%|-L${PREFIX}/lib|' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|%%INCDIR%%|-I${PREFIX}/include| ; \
+		s|%%LIBDIR%%|-L${PREFIX}/lib|; \
+		s|%%ICONV_LIB%%|${ICONV_LIB}|' ${WRKSRC}/Makefile
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/iconv.so ${LUA_MODLIBDIR}
