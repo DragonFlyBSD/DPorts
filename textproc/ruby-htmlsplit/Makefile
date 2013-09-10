@@ -2,7 +2,7 @@
 # Date created:		20 September 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/textproc/ruby-htmlsplit/Makefile,v 1.9 2012/11/17 06:02:19 svnexp Exp $
+# $FreeBSD: textproc/ruby-htmlsplit/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	htmlsplit
