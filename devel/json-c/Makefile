@@ -1,5 +1,5 @@
 # Created by: gno@yahoo-inc.com
-# $FreeBSD: ports/devel/json-c/Makefile,v 1.9 2012/12/15 08:22:13 svnexp Exp $
+# $FreeBSD: devel/json-c/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	json-c
 PORTVERSION=	0.9
@@ -11,8 +11,7 @@ COMMENT=	JSON (JavaScript Object Notation) implementation in C
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	pkgconfig gnomehack
+USES=		gmake pathfix pkgconfig
 
 CONFLICTS=	cocaine-core-[0-9]*
 
