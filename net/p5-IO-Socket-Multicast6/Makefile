@@ -2,7 +2,7 @@
 # Date created:		2007-03-10
 # Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
 #
-# $FreeBSD: ports/net/p5-IO-Socket-Multicast6/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	IO-Socket-Multicast6
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-IO-Interface>=1.01:${PORTSDIR}/net/p5-IO-Interface \
 		p5-Socket6>=0.19:${PORTSDIR}/net/p5-Socket6
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		IO::Socket::Multicast6.3
 
