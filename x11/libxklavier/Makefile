@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/libxklavier/Makefile 314704 2013-03-20 02:01:11Z mezz $
+# $FreeBSD: x11/libxklavier/Makefile 325997 2013-09-02 13:54:45Z bapt $
 #   $MCom: ports/x11/libxklavier/Makefile,v 1.53 2010/01/12 02:18:34 avl Exp $
 
 PORTNAME=	libxklavier
@@ -16,10 +16,9 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 RUN_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
-USES=		pathfix
+USES=		pathfix gmake pkgconfig
 USE_XORG=	x11 xi xkbfile
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	libxml2 glib20 ltverhack:12
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
