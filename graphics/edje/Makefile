@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/edje/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/edje/Makefile 326093 2013-09-02 21:29:44Z antoine $
 
 PORTNAME=	edje
 PORTVERSION=	1.7.8
@@ -16,7 +16,7 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix shared-mime-info
+USES=		pathfix pkgconfig shared-mime-info
 USE_EFL=	eet evas ecore embryo libtool_hack librt_hack
 USE_EFL_EVAS_LOADERS=	eet jpeg png
 USE_EFL_ECORE=	evas file imf imf_evas
