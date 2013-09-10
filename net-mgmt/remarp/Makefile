@@ -2,7 +2,7 @@
 # Date created:        Tue Apr 1 14:02:35 GMT 2003
 # Whom:                mich@freebsdcluster.org
 #
-# $FreeBSD: ports/net-mgmt/remarp/Makefile,v 1.8 2012/11/17 06:00:37 svnexp Exp $
+# $FreeBSD: net-mgmt/remarp/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	remarp
@@ -17,7 +17,7 @@ COMMENT=	An SNMP-based ARP watcher
 RUN_DEPENDS=	p5-AppConfig>=0:${PORTSDIR}/devel/p5-AppConfig \
 		p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP
 
-USE_PERL5=	YES
+USES=		perl5
 NO_BUILD=	YES
 
 REMARP_SPOOL=	/var/spool/remarp
