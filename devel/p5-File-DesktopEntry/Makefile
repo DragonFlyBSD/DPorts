@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: devel/p5-File-DesktopEntry/Makefile 314070 2013-03-13 11:18:22Z bapt $
+# $FreeBSD: devel/p5-File-DesktopEntry/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	File-DesktopEntry
 PORTVERSION=	0.04
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-PathTools>=0:${PORTSDIR}/devel/p5-PathTools \
 		p5-File-BaseDir>=0.03:${PORTSDIR}/devel/p5-File-BaseDir
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	File::DesktopEntry.3
 
