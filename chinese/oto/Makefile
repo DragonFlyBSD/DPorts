@@ -2,7 +2,7 @@
 # Date created:		8 March 2003
 # Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: chinese/oto/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: chinese/oto/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	oto
@@ -17,7 +17,7 @@ USES=		iconv
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -liconv"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 
 post-patch:
 	@${FIND} ${WRKSRC}/src/ -type f -print0 | \
