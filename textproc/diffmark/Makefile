@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/diffmark/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: textproc/diffmark/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	diffmark
 PORTVERSION=	0.10
@@ -11,6 +11,7 @@ COMMENT=	XML diff and merge package
 
 LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 
+USES=		pkgconfig
 USE_LDCONFIG=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--with-libxml2-incldir=${LOCALBASE}/include/libxml2
