@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: misc/p5-List-Util-WeightedRoundRobin/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: misc/p5-List-Util-WeightedRoundRobin/Makefile 325903 2013-09-01 19:03:19Z az $
 
 PORTNAME=	List-Util-WeightedRoundRobin
 PORTVERSION=	0.4
@@ -10,7 +10,6 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Creates a list based on weighted input
 
-PERL_CONFIGURE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
