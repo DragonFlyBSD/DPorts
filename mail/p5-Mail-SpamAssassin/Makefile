@@ -1,5 +1,5 @@
 # Created by: Anthony Kim
-# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 320127 2013-06-06 21:50:41Z bapt $
+# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 326056 2013-09-02 19:00:24Z az $
 
 PORTNAME=	Mail-SpamAssassin
 PORTVERSION=	3.3.2
@@ -25,7 +25,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS?=	ja-p5-Mail-SpamAssassin-[0-9]* p5-Mail-SpamAssassin-devel-[0-9]* p5-Mail-SpamAssassin-Alt-[0-9]*
 
-PERL_CONFIGURE=	5.12+
+USES=		perl5
+USE_PERL5=	configure
 USE_LDCONFIG=	yes
 DBDIR?=		/var/db
 ETCDIR?=	${PREFIX}/etc/mail/spamassassin
