@@ -3,7 +3,7 @@
 # Date created:			  6 June 2000
 # Whom:				  Cyrille Lefevre <clefevre@citeweb.net>
 #
-# $FreeBSD: ports/sysutils/stow/Makefile,v 1.17 2012/11/17 06:01:46 svnexp Exp $
+# $FreeBSD: sysutils/stow/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	stow
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 TEST_DEPENDS=	p5-Test-Output>0:${PORTSDIR}/devel/p5-Test-Output
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_PERL=${PERL}
