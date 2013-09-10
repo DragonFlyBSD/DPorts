@@ -2,7 +2,7 @@
 # Date created:        4 May 2003
 # Whom:                Larry Rosenman <ler@lerctr.org>
 #
-# $FreeBSD: ports/net-mgmt/iog/Makefile,v 1.5 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/iog/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	iog
@@ -17,7 +17,7 @@ MAINTAINER=	ler@lerctr.org
 COMMENT=	Graphs Byte Counts for switches/routers/etc
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_SUB+=	VERSION=${PORTVERSION}
 IOG_USER=	iog
 IOG_GROUP=	www
