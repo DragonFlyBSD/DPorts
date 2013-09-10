@@ -2,7 +2,7 @@
 # Date created:		Sun Sep 26 09:25:38 EEST 1999
 # Whom:	      		Martti Kuparinen <martti.kuparinen@ericsson.com>
 #
-# $FreeBSD: ports/mail/p5-IMAP-Admin/Makefile,v 1.25 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-IMAP-Admin/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	IMAP-Admin
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	chifeng@gmail.com
 COMMENT=	Perl module for basic IMAP server administration
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IMAP::Admin.3
 EXAMPLESDIR=	${PREFIX}/share/examples/${UNIQUENAME}
