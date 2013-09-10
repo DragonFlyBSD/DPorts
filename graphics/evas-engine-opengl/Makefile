@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-opengl/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas-engine-opengl/Makefile 326045 2013-09-02 18:03:16Z antoine $
 
 PORTNAME=	engine-opengl
 PORTVERSION=	1.7.8
@@ -19,7 +19,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_EFL=	evas librt_hack libtool_hack
 USE_XORG=	x11 xext xrender
 USE_GL=		gl glu
