@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wavegain
-# Date created:			24 May 2008
-# Whom:				Denise H. G. <darcsis@gmail.com>
-#
-# $FreeBSD: ports/audio/wavegain/Makefile,v 1.5 2012/11/17 05:54:47 svnexp Exp $
-#
+# Created by: Denise H. G. <darcsis@gmail.com>
+# $FreeBSD: audio/wavegain/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	wavegain
 PORTVERSION=	1.2.8
@@ -16,8 +12,8 @@ COMMENT=	A program that applies ReplayGain to wave files
 
 LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile
 
+USES=		gmake
 USE_ZIP=	yes
-USE_GMAKE=	yes
 USE_DOS2UNIX=	audio.c wavegain.c
 
 PLIST_FILES=	bin/wavegain
