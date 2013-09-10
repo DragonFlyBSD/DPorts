@@ -2,7 +2,7 @@
 # Date created:		2007-11-06
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-File-Mork/Makefile,v 1.3 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-File-Mork/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	File-Mork
@@ -18,7 +18,8 @@ COMMENT=	A module to read Mozilla URL history files
 BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		mork.1
 MAN3=		File::Mork.3
