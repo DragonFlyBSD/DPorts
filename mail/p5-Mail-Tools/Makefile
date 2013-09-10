@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/mail/p5-Mail-Tools/Makefile,v 1.58 2013/01/14 15:12:14 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Tools/Makefile 326271 2013-09-04 12:28:16Z az $
 
 PORTNAME=	Mail-Tools
 PORTVERSION=	2.12
@@ -14,7 +14,8 @@ COMMENT=	Perl5 modules for dealing with Internet e-mail messages
 RUN_DEPENDS=	p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Address.3 \
 		Mail::Cap.3 \
