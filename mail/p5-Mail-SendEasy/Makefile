@@ -2,7 +2,7 @@
 # Date created:		2006-07-15
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/mail/p5-Mail-SendEasy/Makefile,v 1.3 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-SendEasy/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	Mail-SendEasy
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Send plain/html e-mails through SMTP servers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::SendEasy.3 Mail::SendEasy::AUTH.3 \
 	       	Mail::SendEasy::SMTP.3
