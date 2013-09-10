@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 319139 2013-05-26 22:19:56Z kuriyama $
+# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	Sereal-Decoder
 PORTVERSION=	0.36
@@ -13,7 +13,8 @@ COMMENT=	Perl extension for fast, compact, powerful binary deserialization
 TEST_DEPENDS=	\
 	p5-Test-LongString>0:${PORTSDIR}/devel/p5-Test-LongString
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sereal::Decoder.3
 
