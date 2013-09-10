@@ -1,4 +1,4 @@
-# $FreeBSD: devel/liblangtag/Makefile 317716 2013-05-08 22:53:08Z jkim $
+# $FreeBSD: devel/liblangtag/Makefile 325937 2013-09-02 05:41:50Z bsam $
 
 PORTNAME=	liblangtag
 PORTVERSION=	0.5.1
@@ -13,7 +13,6 @@ COMMENT=	An interface library to access tags for identifying languages
 LICENSE=	LGPL3 MPL
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
 LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
@@ -21,7 +20,7 @@ USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix pkgconfig
+USES=		iconv:build pathfix pkgconfig
 
 CONFIGURE_ARGS=	--disable-introspection
 
