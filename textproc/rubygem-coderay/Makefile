@@ -1,12 +1,12 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/textproc/rubygem-coderay/Makefile,v 1.12 2013/02/21 15:41:56 svnexp Exp $
+# $FreeBSD: textproc/rubygem-coderay/Makefile 325844 2013-09-01 08:23:05Z tota $
 
 PORTNAME=	coderay
-PORTVERSION=	1.0.9
+PORTVERSION=	1.1.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	tota@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Fast and easy syntax highlighting for selected languages
 
 LICENSE=	LGPL21
