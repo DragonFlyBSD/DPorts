@@ -2,7 +2,7 @@
 # Date created:	   2011-07-19
 # Whom:		   milki <milki@rescomp.berkeley.edu>
 #
-# $FreeBSD: ports/misc/p5-Bot-Training-MegaHAL/Makefile,v 1.5 2012/12/16 06:16:57 svnexp Exp $
+# $FreeBSD: misc/p5-Bot-Training-MegaHAL/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Bot-Training-MegaHAL
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-File-ShareDir-Install>=0:${PORTSDIR}/devel/p5-File-ShareDir-In
 RUN_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 	p5-Bot-Training>=0:${PORTSDIR}/misc/p5-Bot-Training
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Bot::Training::MegaHAL.3
 
