@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-pip/Makefile,v 1.9 2013/01/18 10:54:03 svnexp Exp $
+# $FreeBSD: devel/p5-pip/Makefile 326823 2013-09-09 17:31:07Z az $
 
 PORTNAME=	pip
 PORTVERSION=	1.19
@@ -27,7 +27,8 @@ TEST_DEPENDS=	p5-LWP-Online>=0:${PORTSDIR}/www/p5-LWP-Online \
 		p5-Test-Script>=0:${PORTSDIR}/devel/p5-Test-Script \
 		p5-Compress-Bzip2>=0:${PORTSDIR}/archivers/p5-Compress-Bzip2
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Module::Plan::Base.3 \
 		Module::Plan::Lite.3 \
