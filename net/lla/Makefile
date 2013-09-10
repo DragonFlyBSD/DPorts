@@ -2,7 +2,7 @@
 # Date created:				2 May 2001
 # Whom:					Sunagawa Koji <koj@ofug.net>
 #
-# $FreeBSD: ports/net/lla/Makefile,v 1.12 2012/11/17 06:00:05 svnexp Exp $
+# $FreeBSD: net/lla/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	lla
@@ -21,7 +21,7 @@ RUN_DEPENDS=	p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc \
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/lla
 
 EXTRACT_CMD=		${CP}
