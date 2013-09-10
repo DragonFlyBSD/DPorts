@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Meta::Builder
-# Date created:		23 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Meta-Builder/Makefile,v 1.5 2012/11/17 05:56:21 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Meta-Builder/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	Meta-Builder
 PORTVERSION=	0.003
@@ -19,7 +14,8 @@ COMMENT=	Perl extension for creating Meta objects to track custom metrics
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Fennec-Lite>=0:${PORTSDIR}/devel/p5-Fennec-Lite
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Meta::Builder.3 \
 	Meta::Builder::Base.3 \
