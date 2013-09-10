@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/vile/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/vile/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	vile
 PORTVERSION=	9.8k
@@ -39,7 +39,7 @@ PLIST_SUB+=	SO_EXT=""
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=		iconv
-CONFIGURE_ARGS+=	--with-iconv --with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-iconv ${ICONV_CONFIGURE_ARG}
 PLIST_SUB+=	ICONV=""
 .else
 CONFIGURE_ARGS+=	--without-iconv --without-locale
