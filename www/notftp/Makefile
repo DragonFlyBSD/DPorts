@@ -1,17 +1,16 @@
-# New ports collection makefile for:	NotFTP
-# Date created:		3 July 2002
-# Whom:			Ryan Grove <ryan@wonko.com>
-#
-# $FreeBSD: ports/www/notftp/Makefile,v 1.8 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Ryan Grove <ryan@wonko.com>
+# $FreeBSD: www/notftp/Makefile 326437 2013-09-05 18:40:18Z tabthorpe $
 
 PORTNAME=	notftp
 PORTVERSION=	1.3.1
 CATEGORIES=	www ftp
 MASTER_SITES=	http://wonko.com/notftp/files/
 
-MAINTAINER=	ryan@wonko.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An easy to use Web to FTP gateway written in PHP
+
+DEPRECATED=	distfile unfetchable
+EXPIRATION_DATE=2014-01-01
 
 USE_PHP=	yes
 
