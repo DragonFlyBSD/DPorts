@@ -1,12 +1,11 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Types/Makefile 326782 2013-09-09 08:01:28Z tobez $
 
 PORTNAME=	MooseX-Types
-PORTVERSION=	0.35
-PORTREVISION=	1
+PORTVERSION=	0.37
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:DROLSKY
+MASTER_SITE_SUBDIR=	CPAN:ETHER
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -16,16 +15,18 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Carp-Clan>=6.00:${PORTSDIR}/devel/p5-Carp-Clan \
-		p5-Moose>=0.61:${PORTSDIR}/devel/p5-Moose \
-		p5-Sub-Install>=0.924:${PORTSDIR}/devel/p5-Sub-Install \
+		p5-Module-Runtime>=0:${PORTSDIR}/devel/p5-Module-Runtime \
+		p5-Moose>=1.06:${PORTSDIR}/devel/p5-Moose \
+		p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
 		p5-Sub-Name>=0:${PORTSDIR}/devel/p5-Sub-Name \
-		p5-namespace-clean>=0.19:${PORTSDIR}/devel/p5-namespace-clean
+		p5-namespace-autoclean>=0.08:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
-		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
+		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
+		p5-Test-CheckDeps>=0.006:${PORTSDIR}/devel/p5-Test-CheckDeps
 
 USES=		perl5
-USE_PERL5=	configure
+USE_PERL5=	modbuildtiny
 
 MAN3=		MooseX::Types.3 \
 		MooseX::Types::Base.3 \
