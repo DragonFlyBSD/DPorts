@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libev
-# Date created:							18 Dec 2007
-# Whom:									vsevolod
-#
-# $FreeBSD: devel/libev/Makefile 317741 2013-05-09 16:47:55Z vsevolod $
-#
+# Created by: vsevolod
+# $FreeBSD: devel/libev/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	libev
 PORTVERSION=	4.15
@@ -17,7 +13,7 @@ COMMENT=	A full-featured and high-performance event loop library
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 
 MAN3=		ev.3
 
