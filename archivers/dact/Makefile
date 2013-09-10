@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	dact
-# Date created:			May 2, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: archivers/dact/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: ijliao
+# $FreeBSD: archivers/dact/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	dact
 PORTVERSION=	0.8.42
@@ -17,7 +12,7 @@ COMMENT=	Dynamic Adaptive Compression Tool
 LIB_DEPENDS=	mcrypt.8:${PORTSDIR}/security/libmcrypt \
 		lzo2.2:${PORTSDIR}/archivers/lzo2
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/lib
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
