@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: devel/cvsstat/Makefile 323795 2013-07-27 16:06:25Z az $
+# $FreeBSD: devel/cvsstat/Makefile 326639 2013-09-07 14:36:58Z az $
 
 PORTNAME=	cvsstat
 PORTVERSION=	2.24
@@ -13,7 +13,7 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	glarkin@FreeBSD.org
 COMMENT=	Transforms the output of 'cvs status' to a sorted ASCII table
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 PLIST_FILES=	bin/cvsstat
 
