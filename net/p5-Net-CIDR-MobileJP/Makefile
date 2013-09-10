@@ -2,7 +2,7 @@
 # Date created:		19 Jul 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-CIDR-MobileJP/Makefile,v 1.5 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-CIDR-MobileJP/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Net-CIDR-MobileJP
@@ -21,7 +21,8 @@ RUN_DEPENDS=	\
 	p5-YAML>0:${PORTSDIR}/textproc/p5-YAML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::CIDR::MobileJP.3 \
 	Net::CIDR::net-cidr-mobilejp-scraper.3
