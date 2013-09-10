@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/libvisual04/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: graphics/libvisual04/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME=	libvisual
 PORTVERSION=	0.4.0
@@ -15,8 +15,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack pkgconfig
-USES=		gettext
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
