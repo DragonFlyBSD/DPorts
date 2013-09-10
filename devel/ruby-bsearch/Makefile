@@ -2,7 +2,7 @@
 # Date created:			13 July 2001
 # Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-bsearch/Makefile,v 1.14 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: devel/ruby-bsearch/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	bsearch
