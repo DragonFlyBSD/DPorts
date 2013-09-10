@@ -1,0 +1,23 @@
+# Created by: Stefan Zehl <sec@42.org>
+# $FreeBSD: audio/libsidplay/Makefile 326543 2013-09-06 20:16:39Z bapt $
+
+PORTNAME=	libsidplay
+PORTVERSION=	1.36.59
+CATEGORIES=	audio emulators
+MASTER_SITES=	http://bsd-geek.de/FreeBSD/distfiles/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Commodore SID-chip emulator library to play SID music files
+
+USE_AUTOTOOLS=	libtool
+USE_LDCONFIG=	yes
+CONFIGURE_ENV=	sid_cv_have_ios_binary=yes
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "i386"
+CONFIGURE_ARGS=	--enable-optendian --enable-optfixpoint
+.endif
+
+.include <bsd.port.post.mk>
