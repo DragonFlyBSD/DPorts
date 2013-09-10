@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Any/Makefile 318693 2013-05-21 13:30:27Z kuriyama $
+# $FreeBSD: devel/p5-Log-Any/Makefile 326784 2013-09-09 08:21:32Z az $
 
 PORTNAME=	Log-Any
 PORTVERSION=	0.15
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to bring loggers and listeners together
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Log::Any.3 \
 	Log::Any::Adapter::Core.3 \
