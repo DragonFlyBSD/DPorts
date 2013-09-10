@@ -1,4 +1,4 @@
-# $FreeBSD: devel/autoconf-wrapper/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: devel/autoconf-wrapper/Makefile 325731 2013-08-30 23:22:07Z bdrewery $
 
 PORTNAME?=	autoconf-wrapper
 PORTVERSION=	20130530
@@ -33,7 +33,7 @@ do-configure:
 do-install:
 	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
 .for tool in ${WRAPPED_TOOLS}
-	@${LN} -s ${PORTNAME} ${PREFIX}/bin/${tool}
+	@${LN} -sf ${PORTNAME} ${PREFIX}/bin/${tool}
 .endfor
 
 .include <bsd.port.post.mk>
