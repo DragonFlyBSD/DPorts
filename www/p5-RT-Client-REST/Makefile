@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-RT-Client-REST/Makefile 313272 2013-03-02 16:38:36Z miwi $
+# $FreeBSD: www/p5-RT-Client-REST/Makefile 326021 2013-09-02 16:07:56Z az $
 
 PORTNAME=	RT-Client-REST
 PORTVERSION=	0.43
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	RT::Client::REST.3 \
 	RT::Client::REST::Attachment.3 \
