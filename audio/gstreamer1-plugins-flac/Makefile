@@ -1,6 +1,6 @@
-# $FreeBSD: audio/gstreamer1-plugins-flac/Makefile 320462 2013-06-10 11:04:03Z naddy $
+# $FreeBSD: audio/gstreamer1-plugins-flac/Makefile 325825 2013-08-31 18:29:55Z kwm $
 
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	audio
 
 COMMENT=	Gstreamer free lossless audio encoder/decoder plugin
