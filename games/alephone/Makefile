@@ -1,5 +1,5 @@
 # Created by: Michael Alyn Miller <malyn@strangeGizmo.com>
-# $FreeBSD: games/alephone/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/alephone/Makefile 326032 2013-09-02 16:55:04Z bapt $
 
 PORTNAME=	alephone
 PORTVERSION=	20120514
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/include/boost/function.hpp:${PORTSDIR}/devel/boost-
 
 USE_GMAKE=	yes
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_SDL+=	image net sdl sound
 USE_GL=		yes
