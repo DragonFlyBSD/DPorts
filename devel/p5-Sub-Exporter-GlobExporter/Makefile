@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Sub-Exporter-GlobExporter/Makefile 320608 2013-06-11 16:07:25Z culot $
+# $FreeBSD: devel/p5-Sub-Exporter-GlobExporter/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Sub-Exporter-GlobExporter
 PORTVERSION=	0.003
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 RUN_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sub::Exporter::GlobExporter.3
 
