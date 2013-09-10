@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Class::Method::Modifiers::Fast
-# Date created:		21 Jan 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Method-Modifiers-Fast/Makefile,v 1.6 2012/11/17 05:56:07 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Class-Method-Modifiers-Fast/Makefile 326810 2013-09-09 14:13:20Z az $
 
 PORTNAME=	Class-Method-Modifiers-Fast
 PORTVERSION=	0.041
@@ -19,7 +14,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Sub-Uplevel>=0.18:${PORTSDIR}/devel/p5-Sub-Uplevel
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Method::Modifiers::Fast.3
 
