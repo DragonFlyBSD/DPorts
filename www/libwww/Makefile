@@ -2,7 +2,7 @@
 # Date created:		18 Feb 1996
 # Whom:			torstenb
 #
-# $FreeBSD: ports/www/libwww/Makefile,v 1.50 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/libwww/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	libwww
@@ -20,7 +20,8 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-static --with-zlib --with-ssl=${OPENSSLBASE}
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 
