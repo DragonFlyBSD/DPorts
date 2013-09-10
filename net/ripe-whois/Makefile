@@ -2,7 +2,7 @@
 # Date created:		18th February 2004
 # Whom:			Lars Erik Gullerud <lerik@nolink.net>
 #
-# $FreeBSD: ports/net/ripe-whois/Makefile,v 1.6 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/ripe-whois/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	ripe-whois
@@ -14,7 +14,8 @@ DISTNAME=	whois3-${PORTVERSION}
 MAINTAINER=	lerik@nolink.net
 COMMENT=	The RIPE whois client version 3
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 
 GNU_CONFIGURE=	yes
 
