@@ -2,7 +2,7 @@
 # Date created:		13 May 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/graphics/ruby-image_size/Makefile,v 1.11 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/ruby-image_size/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	image_size
