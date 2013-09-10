@@ -1,7 +1,7 @@
-# $FreeBSD: x11-clocks/xclock/Makefile 321891 2013-06-27 13:39:18Z zeising $
+# $FreeBSD: x11-clocks/xclock/Makefile 326721 2013-09-08 12:35:20Z zeising $
 
 PORTNAME=	xclock
-PORTVERSION=	1.0.6
+PORTVERSION=	1.0.7
 PORTREVISION=	1
 CATEGORIES=	x11-clocks
 
