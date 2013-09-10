@@ -2,7 +2,7 @@
 # Date created:				21 May 2010
 # Whom:					Yaroslav Berezhinskiy <yaroslav@berezhinskiy.org.ua>
 #
-# $FreeBSD: ports/sysutils/backupme/Makefile,v 1.3 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: sysutils/backupme/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	backupme
@@ -24,7 +24,7 @@ RUN_DEPENDS=	p5-Log-Log4perl>=0:${PORTSDIR}/devel/p5-Log-Log4perl \
 		p5-Net-Jabber>=0:${PORTSDIR}/net-im/p5-Net-Jabber \
 		p5-Net-SSH>=0:${PORTSDIR}/net/p5-Net-SSH
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_BUILD=	yes
 NO_INSTALL_MANPAGES=	yes
