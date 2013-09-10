@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: textproc/py-libxml2/Makefile 322246 2013-07-03 18:54:25Z eadler $
+# $FreeBSD: textproc/py-libxml2/Makefile 326683 2013-09-07 19:49:41Z bsam $
 
 PORTREVISION=	0
 CATEGORIES=	textproc gnome python
@@ -16,9 +16,10 @@ PLIST=		${.CURDIR}/pkg-plist
 
 USE_GNOME+=	libxml2
 USE_PYTHON=	-2.7
+USES=		iconv
 CPPFLAGS+=	`${PYTHON_VERSION}-config --cflags`
 LDFLAGS+=	-L${LOCALBASE}/lib `${PYTHON_VERSION}-config --libs`
-CONFIGURE_ARGS=	--with-iconv=${LOCALBASE} \
+CONFIGURE_ARGS=	--with-iconv=${ICONV_PREFIX} \
 		--with-html-dir=${PREFIX}/share/doc \
 		--with-html-subdir=${PORTNAME} \
 		--with-python=${PYTHON_CMD}
