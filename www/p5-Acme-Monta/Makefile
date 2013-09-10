@@ -2,7 +2,7 @@
 # Date created:				14 June 2005
 # Whom:	      				TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/www/p5-Acme-Monta/Makefile,v 1.5 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-Acme-Monta/Makefile 326167 2013-09-03 16:18:49Z az $
 #
 
 PORTNAME=	Acme-Monta
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kaoru@kaisei.org
 COMMENT=	Monta Method reproduced in web
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Acme::Monta.3
 
