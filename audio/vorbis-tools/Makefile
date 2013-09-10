@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/vorbis-tools/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: audio/vorbis-tools/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	vorbis-tools
 PORTVERSION=	1.4.0
@@ -18,6 +18,7 @@ LIB_DEPENDS=	ao.4:${PORTSDIR}/audio/libao \
 		speex.1:${PORTSDIR}/audio/speex \
 		vorbis.4:${PORTSDIR}/audio/libvorbis
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
