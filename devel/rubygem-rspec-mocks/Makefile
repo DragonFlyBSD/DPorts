@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-mocks/Makefile 322956 2013-07-13 17:53:42Z swills $
+# $FreeBSD: devel/rubygem-rspec-mocks/Makefile 326694 2013-09-07 21:36:28Z sunpoet $
 
 PORTNAME=	rspec-mocks
-PORTVERSION=	2.14.1
+PORTVERSION=	2.14.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
