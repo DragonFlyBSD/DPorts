@@ -1,5 +1,5 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD: devel/rubygem-pry/Makefile 319680 2013-06-02 16:05:46Z swills $
+# $FreeBSD: devel/rubygem-pry/Makefile 326689 2013-09-07 21:29:50Z sunpoet $
 
 PORTNAME=	pry
 PORTVERSION=	0.9.12.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	An IRB alternative and runtime developer console
+COMMENT=	IRB alternative and runtime developer console
 
 BUILD_DEPENDS=	rubygem-rdoc>=3.12:${PORTSDIR}/devel/rubygem-rdoc
 RUN_DEPENDS=	rubygem-coderay>=1.0.5:${PORTSDIR}/textproc/rubygem-coderay \
@@ -19,5 +19,9 @@ USE_RAKE=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/pry
+
+post-patch:
+	@${REINPLACE_CMD} -e "19,26 s|~>|'>='|" ${WRKSRC}/${GEM_NAME}.gemspec
+	@${REINPLACE_CMD} -e '/coderay/ s|~>|>=|' ${WRKSRC}/${PORTNAME}.gemspec
 
 .include <bsd.port.mk>
