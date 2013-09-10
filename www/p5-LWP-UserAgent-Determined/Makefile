@@ -2,7 +2,7 @@
 # Date created:				2008-03-16
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-LWP-UserAgent-Determined/Makefile,v 1.7 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-LWP-UserAgent-Determined/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	LWP-UserAgent-Determined
@@ -18,7 +18,8 @@ COMMENT=	A virtual browser that retries errors
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		LWP::UserAgent::Determined.3
 
