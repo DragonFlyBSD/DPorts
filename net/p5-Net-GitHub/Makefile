@@ -1,8 +1,8 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-GitHub/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-GitHub/Makefile 325852 2013-09-01 12:38:47Z tobez $
 
 PORTNAME=	Net-GitHub
-DISTVERSION=	0.52
+DISTVERSION=	0.53
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FAYLAND
