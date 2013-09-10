@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Meta-Requirements/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-CPAN-Meta-Requirements/Makefile 325777 2013-08-31 07:57:18Z sunpoet $
 
 PORTNAME=	CPAN-Meta-Requirements
-PORTVERSION=	2.122
+PORTVERSION=	2.123
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
