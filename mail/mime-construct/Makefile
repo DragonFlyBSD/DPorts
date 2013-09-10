@@ -2,7 +2,7 @@
 # Date created:				Tue 02 Mar 2010
 # Whom:					Alexey V. Degtyarev <alexey@renatasystems.org>
 #
-# $FreeBSD: ports/mail/mime-construct/Makefile,v 1.4 2012/11/17 05:59:06 svnexp Exp $
+# $FreeBSD: mail/mime-construct/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	mime-construct
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64 \
 		p5-Proc-WaitStat>=0:${PORTSDIR}/devel/p5-Proc-WaitStat
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		mime-construct.1
 
