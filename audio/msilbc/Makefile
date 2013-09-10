@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/msilbc/Makefile,v 1.2 2012/11/17 05:54:39 svnexp Exp $
+# $FreeBSD: audio/msilbc/Makefile 325998 2013-09-02 14:11:19Z bapt $
 
 PORTNAME=	msilbc
 PORTVERSION=	2.0.3
@@ -11,6 +11,8 @@ COMMENT=	Mediastreamer plugin for the iLBC audio codec
 LIB_DEPENDS=	ortp.8:${PORTSDIR}/net/linphone-base \
 		mediastreamer.0:${PORTSDIR}/net/linphone-base \
 		ilbc.0:${PORTSDIR}/net/ilbc
+
+USES=		pkgconfig
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
