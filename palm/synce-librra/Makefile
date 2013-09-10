@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: palm/synce-librra/Makefile 320133 2013-06-06 22:04:58Z bapt $
+# $FreeBSD: palm/synce-librra/Makefile 326096 2013-09-02 21:36:52Z antoine $
 
 PORTNAME=	librra
 PORTVERSION=	0.14
@@ -23,7 +23,7 @@ RECURR_DESC=	Enable experimential recurrence support
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		pathfix iconv
+USES=		pathfix pkgconfig iconv
 CONFIGURE_ARGS+=	--with-libsynce="${LOCALBASE}" \
 			--with-libmimedir="${LOCALBASE}"
 
