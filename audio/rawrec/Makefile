@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/rawrec/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/rawrec/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	rawrec
 PORTVERSION=	0.9.991
@@ -12,7 +12,7 @@ COMMENT=	Utility to record and playback raw audio data
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CC="${CC}" \
 		CFLAGS="${CPPFLAGS} ${CFLAGS} ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -lm ${PTHREAD_LIBS}"
