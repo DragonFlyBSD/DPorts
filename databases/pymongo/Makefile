@@ -1,8 +1,8 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: databases/pymongo/Makefile 325073 2013-08-20 20:01:03Z wg $
+# $FreeBSD: databases/pymongo/Makefile 326629 2013-09-07 11:50:47Z wg $
 
 PORTNAME=	pymongo
-PORTVERSION=	2.6
+PORTVERSION=	2.6.2
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 
