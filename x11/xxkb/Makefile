@@ -1,5 +1,5 @@
 # Created by: Alexander Matey <matey@cis.ohio-state.edu>
-# $FreeBSD: x11/xxkb/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/xxkb/Makefile 325992 2013-09-02 13:26:34Z tijl $
 
 PORTNAME=	xxkb
 PORTVERSION=	1.11
@@ -25,7 +25,7 @@ OPTIONS_DEFINE=	LIBRSVG2 DOCS
 
 .if ${PORT_OPTIONS:MLIBRSVG2}
 LIB_DEPENDS=	rsvg-2:${PORTSDIR}/graphics/librsvg2
-XMKMF=		xmkmf -a -DWITH_SVG_SUPPORT
+XMKMF_ARGS=	-DWITH_SVG_SUPPORT
 .endif
 
 post-build:
