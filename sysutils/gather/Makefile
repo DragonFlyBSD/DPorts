@@ -2,7 +2,7 @@
 # Date created:				14 February 2010
 # Whom:					Mikolaj Golub <to.my.trociny@gmail.com>
 #
-# $FreeBSD: ports/sysutils/gather/Makefile,v 1.5 2012/11/17 06:01:32 svnexp Exp $
+# $FreeBSD: sysutils/gather/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	gather
@@ -17,7 +17,7 @@ LICENSE=	BSD
 
 PROJECTHOST=	gatherit
 
-USE_PERL5=	yes
+USES=		perl5
 
 CONFLICTS_INSTALL=	harvest-[0-9]*
 
