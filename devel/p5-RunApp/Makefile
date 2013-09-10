@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-RunApp
-# Date created:				Dec 29 2006
-# Whom:					Rong-En Fan <rafan@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-RunApp/Makefile,v 1.5 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Rong-En Fan <rafan@FreeBSD.org>
+# $FreeBSD: devel/p5-RunApp/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	RunApp
 PORTVERSION=	0.13
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-App-Control>=0:${PORTSDIR}/devel/p5-App-Control \
 	
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		App::Control::Apache.3 \
 		RunApp.3 \
