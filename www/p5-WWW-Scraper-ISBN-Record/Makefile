@@ -1,9 +1,8 @@
-# Ports collection makefile for:	p5-WWW-Scraper-ISBN-Record
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: www/p5-WWW-Scraper-ISBN-Record/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Scraper-ISBN-Record/Makefile 325526 2013-08-28 13:13:47Z jadawin $
 
 PORTNAME=	WWW-Scraper-ISBN-Record
-PORTVERSION=	0.17
+PORTVERSION=	0.19
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
