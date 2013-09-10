@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-mission-control/Makefile 313651 2013-03-08 14:46:22Z kwm $
+# $FreeBSD: net-im/telepathy-mission-control/Makefile 326035 2013-09-02 17:06:54Z bapt $
 #    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.23 2012/08/17 19:06:46 kwm Exp $
 
 PORTNAME=	telepathy-mission-control
@@ -13,11 +13,11 @@ COMMENT=	Telepathy component to apps to abstract details of connection managers
 LIB_DEPENDS=	telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
+USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix libxslt gnomehack ltverhack
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GLIB_SCHEMAS=	im.telepathy.MissionControl.FromEmpathy.gschema.xml
 CONFIGURE_ARGS=	--disable-upower
