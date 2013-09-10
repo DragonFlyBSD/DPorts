@@ -2,7 +2,7 @@
 # Date created:				23 Oct 2004
 # Whom:					Dmitry Morozovsky <marck@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/p5-List-Compare/Makefile,v 1.7 2012/11/17 05:59:43 svnexp Exp $
+# $FreeBSD: misc/p5-List-Compare/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=		List-Compare
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		marck@FreeBSD.org
 COMMENT=		Perl extension for comparing lists
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 PLIST_FILES=	\
 	${SITE_PERL_REL}/List/Compare.pm \
