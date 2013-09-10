@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Benchmark
-# Date created:		2006-07-13
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Benchmark/Makefile,v 1.6 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Test-Benchmark/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Test-Benchmark
 PORTVERSION=	0.004
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Test-Tester>=0:${PORTSDIR}/devel/p5-Test-Tester \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Benchmark.3
 
