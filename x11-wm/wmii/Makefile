@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11-wm/wmii/Makefile 323685 2013-07-26 06:07:28Z bapt $
+# $FreeBSD: x11-wm/wmii/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	wmii
 DISTVERSION=	3.6	# this is stable version; for 3.9.x, use -devel port
@@ -32,7 +32,7 @@ SLIM_LAYOUT_BOX_DESC=	Build with slim layout boxes
 
 .if ${PORT_OPTIONS:MUTF8}
 USES+=		iconv
-MAKE_ARGS+=	LIBICONV="-liconv"
+MAKE_ARGS+=	LIBICONV="${ICONV_LIB}"
 .else
 MAKE_ARGS+=	-DNO_UTF8
 .endif
