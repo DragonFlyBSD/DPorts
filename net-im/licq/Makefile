@@ -1,5 +1,5 @@
 # Created by: Brian Feldman & Matt Heckaman
-# $FreeBSD: net-im/licq/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net-im/licq/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	base
 PORTVERSION=	${LICQ_VER}
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 LICQ_PORT?=	net-im/licq
 
 # workaround for installed autoconf/automake
-LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib -liconv -Wl,--export-dynamic
+LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib ${ICONV_LIB} -Wl,--export-dynamic
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-I${LOCALBASE}/include
 CXXFLAGS+=	-Wl,--export-dynamic
