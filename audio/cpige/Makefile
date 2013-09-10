@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cpige
-# Date created:				27 March, 2005
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/cpige/Makefile,v 1.16 2012/11/17 05:54:29 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: audio/cpige/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	cpige
 DISTVERSION=	1.5
@@ -15,7 +11,7 @@ MASTER_SITES=	http://old.ed.zehome.com/cpige/ \
 MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Icecast/Shoutcast stream ripper
 
-USE_GMAKE=	yes
+USES=		gmake
 
 MAKE_ARGS=	CC="${CC}"
 
