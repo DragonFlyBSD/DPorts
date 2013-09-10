@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: ports/textproc/cdiff/Makefile,v 1.15 2012/11/17 06:01:52 svnexp Exp $
+# $FreeBSD: textproc/cdiff/Makefile 325961 2013-09-02 09:45:00Z garga $
 # This port is self contained in the src directory.
 #
 
@@ -14,7 +14,7 @@ COMMENT=	Diff readability enhancer for color terminals
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 SRC=		${.CURDIR}/src
 
