@@ -1,9 +1,4 @@
-# New ports collection makefile for:	JSON
-# Date created:		19 Aug 2005
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/p5-JSON1/Makefile,v 1.16 2012/11/17 05:55:04 svnexp Exp $
-#
+# $FreeBSD: converters/p5-JSON1/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	JSON
 PORTVERSION=	1.15
@@ -18,7 +13,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 CONFLICTS=	p5-JSON-2.*
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 NO_LATEST_LINK=	yes
 MAN3=		Apache::JSONRPC.3 JSON.3 JSON::Converter.3 \
 		JSON::PP.3 JSON::PP5005.3 JSON::PP56.3 JSON::Parser.3 \
