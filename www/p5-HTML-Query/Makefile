@@ -2,7 +2,7 @@
 # Date created:				Wed Oct 24 10:09:12 EDT 2007
 # Whom:					Vivek Khera <vivek@khera.org>
 #
-# $FreeBSD: ports/www/p5-HTML-Query/Makefile,v 1.7 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Query/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	HTML-Query
@@ -17,7 +17,8 @@ COMMENT=	JQuery-like selection queries for HTML::Element
 RUN_DEPENDS+=	p5-Badger>0.0:${PORTSDIR}/devel/p5-Badger \
 		p5-HTML-Tree>=3.23:${PORTSDIR}/www/p5-HTML-Tree
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Query.3
 PLIST_FILES=	%%SITE_PERL%%/HTML/Query.pm \
