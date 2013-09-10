@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Config::MySQL
-# Date created:		19 Mar 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Config-MySQL/Makefile,v 1.3 2012/11/17 05:56:09 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Config-MySQL/Makefile 326822 2013-09-09 16:55:31Z az $
 
 PORTNAME=	Config-MySQL
 PORTVERSION=	0.02
@@ -18,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Config-INI>0:${PORTSDIR}/devel/p5-Config-INI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Config::MySQL.3 \
 	Config::MySQL::Reader.3 \
