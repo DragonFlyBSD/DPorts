@@ -2,7 +2,7 @@
 # Date created:		2011-09-12
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-coffee-rails/Makefile,v 1.9 2013/01/09 04:43:42 svnexp Exp $
+# $FreeBSD: devel/rubygem-coffee-rails/Makefile 310121 2013-01-09 03:53:15Z swills $
 #
 
 PORTNAME=	coffee-rails
