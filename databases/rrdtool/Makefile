@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool/Makefile 320947 2013-06-14 16:00:57Z antoine $
+# $FreeBSD: databases/rrdtool/Makefile 326025 2013-09-02 16:21:38Z bapt $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.4.7
@@ -24,7 +24,7 @@ USE_RC_SUBR=	rrdcached
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 WANT_PERL=	yes
 USE_GNOME=	gnomehack intltool
 
