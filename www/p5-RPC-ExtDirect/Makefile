@@ -1,5 +1,5 @@
 # Created by:	Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 318612 2013-05-20 16:15:17Z tj $
+# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 326033 2013-09-02 16:56:12Z az $
 
 PORTNAME=	RPC-ExtDirect
 PORTVERSION=	2.13
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Attribute-Handlers>=0.93:${PORTSDIR}/devel/p5-Attribute-Handle
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.46:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		RPC::ExtDirect.3 \
 		RPC::ExtDirect::API.3 \
