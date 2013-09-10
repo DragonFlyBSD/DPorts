@@ -1,5 +1,5 @@
 # Created by: jeff@cetlink.net
-# $FreeBSD: graphics/gd/Makefile 324782 2013-08-15 19:12:46Z dinoex $
+# $FreeBSD: graphics/gd/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	libgd
 PORTVERSION=	2.1.0
@@ -44,7 +44,7 @@ GNU_CONFIGURE_ARGS+=	--with-fontconfig=no
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=		iconv
-GNU_CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
+GNU_CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 .else
 GNU_CONFIGURE_ARGS+=	--without-libiconv
 GNU_CONFIGURE_ARGS+=	--with-libiconv-prefix=no
