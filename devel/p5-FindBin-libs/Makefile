@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-FindBin-libs/Makefile 324502 2013-08-10 13:20:30Z kuriyama $
+# $FreeBSD: devel/p5-FindBin-libs/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	FindBin-libs
 PORTVERSION=	1.8000
@@ -11,7 +11,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/000$//}
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to locate and use lib directories
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		FindBin::libs.3
 
