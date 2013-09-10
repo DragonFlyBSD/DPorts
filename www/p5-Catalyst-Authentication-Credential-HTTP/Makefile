@@ -2,7 +2,7 @@
 # Date created:	   15 May 2009
 # Whom:		   Denis Pokataev <catone@cpan.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Authentication-Credential-HTTP/Makefile,v 1.7 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Authentication-Credential-HTTP/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	Catalyst-Authentication-Credential-HTTP
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Authentication::Credential::HTTP.3
 
