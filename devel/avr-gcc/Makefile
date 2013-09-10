@@ -1,5 +1,5 @@
 # Created by: Joerg Wunsch <joerg@freebsd.org>
-# $FreeBSD: devel/avr-gcc/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/avr-gcc/Makefile 326554 2013-09-06 22:04:10Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	4.5.1
@@ -34,8 +34,8 @@ CONFIGURE_SCRIPT=	../gcc-${PORTVERSION}/configure
 
 USE_PERL5_BUILD=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		bison gettext
+CPPFLAGS+=	-I${LOCALBASE}/include
+USES=		bison gettext gmake
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.pre.mk>
