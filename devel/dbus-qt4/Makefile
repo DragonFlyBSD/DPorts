@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: devel/dbus-qt4/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/dbus-qt4/Makefile 326034 2013-09-02 17:03:17Z antoine $
 
 PORTNAME=	dbus
 DISTVERSION=	${QT4_VERSION}
@@ -11,6 +11,7 @@ COMMENT=	Qt4 bindings for the D-BUS messaging system
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus
 
+USES=		pkgconfig
 USE_QT4=	qmake_build moc_build rcc_build corelib xml
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
