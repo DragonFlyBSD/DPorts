@@ -2,7 +2,7 @@
 # Date created:         May 11, 2000
 # Whom:                 Nick Sayer <nsayer@FreeBSD.org>
 #
-# $FreeBSD: databases/unixODBC/Makefile 320321 2013-06-09 09:29:45Z fjoe $
+# $FreeBSD: databases/unixODBC/Makefile 326316 2013-09-04 20:01:05Z bsam $
 #
 
 PORTNAME=	unixODBC
@@ -18,7 +18,7 @@ CONFLICTS=	libiodbc-[0-9]*
 USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static --enable-shared \
-		--with-libiconv-prefix=${LOCALBASE}
+		${ICONV_CONFIGURE_ARG}
 USE_LDCONFIG=	yes
 
 PORTDOCS=	*
