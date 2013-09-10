@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Data::SExpression
-# Date created:		19 Mar 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-SExpression/Makefile,v 1.4 2012/11/17 05:56:10 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Data-SExpression/Makefile 326839 2013-09-09 18:34:59Z az $
 
 PORTNAME=	Data-SExpression
 PORTVERSION=	0.41
@@ -19,7 +14,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::SExpression.3 \
 	Data::SExpression::Cons.3 \
