@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnat-aux/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: lang/gnat-aux/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	gnat-aux
 PORTVERSION=	${SNAPSHOT}
@@ -173,7 +173,7 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-gmp=${PKG_PREFIX}
 CONFIGURE_ARGS+=	--with-mpfr=${PKG_PREFIX}
 CONFIGURE_ARGS+=	--with-mpc=${PKG_PREFIX}
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${PKG_PREFIX}
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--disable-bootstrap
