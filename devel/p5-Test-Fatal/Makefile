@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Test-Fatal
-# Date created:				2010-11-15
-# Whom:					Frederic Culot <culot@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Fatal/Makefile,v 1.8 2012/11/17 05:56:32 svnexp Exp $
-#
+# Created by: Frederic Culot <culot@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Fatal/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	Test-Fatal
 PORTVERSION=	0.010
@@ -20,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Try-Tiny>=0.07:${PORTSDIR}/lang/p5-Try-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Fatal.3
 
