@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Scope-Guard
-# Date created:           29 December 2006
-# Whom:                   Craig Manley
-#
-# $FreeBSD: ports/devel/p5-Scope-Guard/Makefile,v 1.7 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Craig Manley
+# $FreeBSD: devel/p5-Scope-Guard/Makefile 326810 2013-09-09 14:13:20Z az $
 
 PORTNAME=	Scope-Guard
 PORTVERSION=	0.20
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	v.a.popov@gmail.com
 COMMENT=	Lexically scoped resource management
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Scope::Guard.3
 
