@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Module::Setup
-# Date created:		22 Jan 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Module-Setup/Makefile,v 1.5 2012/11/17 05:56:22 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Module-Setup/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	Module-Setup
 PORTVERSION=	0.09
@@ -27,7 +22,8 @@ RUN_DEPENDS=	\
 	p5-Text-Patch>0:${PORTSDIR}/textproc/p5-Text-Patch
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		module-setup.1
 MAN3=		Module::MEMOja.3 \
