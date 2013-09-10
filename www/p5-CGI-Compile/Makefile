@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Compile/Makefile 318770 2013-05-22 14:43:23Z kuriyama $
+# $FreeBSD: www/p5-CGI-Compile/Makefile 326167 2013-09-03 16:18:49Z az $
 
 PORTNAME=	CGI-Compile
 PORTVERSION=	0.16
@@ -19,7 +19,8 @@ TEST_DEPENDS=	\
 	p5-CGI-Emulate-PSGI>0:${PORTSDIR}/www/p5-CGI-Emulate-PSGI
 # Depending on Plack::Test causes cyclic dependencies.
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Compile.3
 
