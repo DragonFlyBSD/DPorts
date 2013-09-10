@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net-mgmt/pancho/pkg-plist,v 1.14 2012/11/17 06:00:36 svnexp Exp $
+@comment $FreeBSD: net-mgmt/pancho/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/pancho
 etc/pancho.conf.sample
 %%SITE_PERL%%/Pancho/Util.pm

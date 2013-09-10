@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/pancho/Makefile,v 1.30 2012/12/12 21:45:13 svnexp Exp $
+# $FreeBSD: net-mgmt/pancho/Makefile 326167 2013-09-03 16:18:49Z az $
 
 PORTNAME=	pancho
 PORTVERSION=	9.3.9
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP \
 		p5-Parallel-ForkManager>=0:${PORTSDIR}/devel/p5-Parallel-ForkManager
 
 WRKSRC=		${WRKDIR}/Pancho-${PORTVERSION}
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pancho.1
 
