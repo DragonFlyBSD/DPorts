@@ -1,4 +1,4 @@
-# $FreeBSD: print/libmspub/Makefile 318617 2013-05-20 17:38:03Z jkim $
+# $FreeBSD: print/libmspub/Makefile 326819 2013-09-09 16:06:52Z sunpoet $
 
 PORTNAME=	libmspub
 PORTVERSION=	0.0.6
@@ -12,9 +12,9 @@ LICENSE=	LGPL21 MPL GPLv2
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/ptr_container/ptr_map.hpp:${PORTSDIR}/devel/boost-libs
-LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu \
-		wpg-0.2:${PORTSDIR}/graphics/libwpg \
-		wpd-0.9:${PORTSDIR}/textproc/libwpd
+LIB_DEPENDS=	libicui18n.so:${PORTSDIR}/devel/icu \
+		libwpd-0.9.so:${PORTSDIR}/textproc/libwpd \
+		libwpg-0.2.so:${PORTSDIR}/graphics/libwpg
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
