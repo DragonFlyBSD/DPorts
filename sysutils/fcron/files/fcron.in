@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/fcron/files/fcron.in,v 1.4 2012/11/17 06:01:30 svnexp Exp $
+# $FreeBSD: sysutils/fcron/files/fcron.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: fcron

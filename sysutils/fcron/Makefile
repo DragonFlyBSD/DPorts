@@ -3,7 +3,7 @@
 # Date created:			Mar 1, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/fcron/Makefile,v 1.29 2012/11/17 06:01:30 svnexp Exp $
+# $FreeBSD: sysutils/fcron/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	fcron
@@ -21,7 +21,8 @@ COMMENT=	A periodic command scheduler
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 CONFIGURE_ARGS=	--with-etcdir=${PREFIX}/etc --localstatedir=/var \
 		--with-cflags="${CFLAGS}" \
 		--with-rootname=root --with-rootgroup=wheel \
