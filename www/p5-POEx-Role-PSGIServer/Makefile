@@ -2,7 +2,7 @@
 # Date created:		09 Oct 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-POEx-Role-PSGIServer/Makefile,v 1.6 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-POEx-Role-PSGIServer/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	POEx-Role-PSGIServer
@@ -34,7 +34,8 @@ TEST_DEPENDS=	p5-HTTP-Parser-XS>=0:${PORTSDIR}/www/p5-HTTP-Parser-XS \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POEx::Role::PSGIServer.3 \
 	POEx::Role::PSGIServer::ProxyWriter.3 \
