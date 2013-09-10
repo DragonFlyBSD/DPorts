@@ -1,9 +1,8 @@
 # Created by: Lutz Boehne <lboehne@damogran.de>
-# $FreeBSD: devel/udis86/Makefile 321042 2013-06-16 12:18:57Z bf $
+# $FreeBSD: devel/udis86/Makefile 326500 2013-09-06 14:10:36Z bf $
 
 PORTNAME=	udis86
-PORTVERSION=	1.7.1
-PORTREVISION=	1
+PORTVERSION=	1.7.2
 CATEGORIES=	devel
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION:R}
@@ -13,7 +12,7 @@ COMMENT=	Minimalistic x86 and x86-64 disassembler library
 
 LICENSE=	BSD
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
@@ -25,6 +24,8 @@ PORTDOCS=	x86
 .include <bsd.port.options.mk>
 
 post-patch:
+	@${REINPLACE_CMD} -Ee 's/function ([^#]+).*/\1 ()/' \
+		${WRKSRC}/tests/difftest.sh.in
 .if ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '\|docdir =|s|/docs/|/doc/|' \
 		${WRKSRC}/docs/manual/Makefile.in \
@@ -39,7 +40,7 @@ CONFIGURE_ENV+=		PYTHON="${PYTHON_CMD}" YASM="${LOCALBASE}/bin/yasm"
 USE_PYTHON_BUILD=	yes
 
 check regression-test test: build
-	@cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_ARGS} check
+	@cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} check
 
 .else
 CONFIGURE_ARGS+=	--without-yasm
