@@ -2,7 +2,7 @@
 # Date created:				27 March 2004
 # Whom:					Pavel Novikov
 #
-# $FreeBSD: ports/sysutils/jtop/Makefile,v 1.5 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: sysutils/jtop/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	jtop
@@ -18,7 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN1=		jtop.1
 MANCOMPRESSED=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/jtop
 
 .include <bsd.port.mk>
