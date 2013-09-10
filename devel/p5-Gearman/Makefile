@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Gearman
-# Date created:		Mon Mar 26 11:45:06 EDT 2007
-# Whom:			Vivek Khera <vivek@khera.org>
-#
-# $FreeBSD: ports/devel/p5-Gearman/Makefile,v 1.7 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: Vivek Khera <vivek@khera.org>
+# $FreeBSD: devel/p5-Gearman/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	Gearman
 PORTVERSION=	1.11
@@ -17,7 +13,8 @@ COMMENT=	Gearman client libraray for Perl
 
 RUN_DEPENDS+=	p5-String-CRC32>=0.0:${PORTSDIR}/devel/p5-String-CRC32
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Gearman::Client.3 Gearman::Task.3 Gearman::Worker.3
 PLIST_FILES=	%%SITE_PERL%%/Gearman/Client.pm \
