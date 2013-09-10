@@ -1,10 +1,10 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: science/cdo/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
+# $FreeBSD: science/cdo/Makefile 325626 2013-08-29 18:35:35Z sunpoet $
 
 PORTNAME=	cdo
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.1
 CATEGORIES=	science
-MASTER_SITES=	https://code.zmaw.de/attachments/download/5287/ \
+MASTER_SITES=	https://code.zmaw.de/attachments/download/5824/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -13,11 +13,10 @@ COMMENT=	Climate Data Operators
 OPTIONS_DEFINE=	HDF5 JASPER NETCDF PROJ SZIP
 OPTIONS_DEFAULT=HDF5 NETCDF PROJ SZIP
 
-CFLAGS+=	${PTHREAD_CFLAGS}
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--enable-cdi-lib --program-transform-name="" --with-zlib=/usr
 GNU_CONFIGURE=	yes
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 USE_LDCONFIG=	yes
 USES=		gmake pathfix
 
