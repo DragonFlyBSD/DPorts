@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Future/Makefile 322277 2013-07-04 14:30:28Z culot $
+# $FreeBSD: devel/p5-Future/Makefile 326871 2013-09-10 07:32:42Z culot $
 
 PORTNAME=	Future
-PORTVERSION=	0.15
+PORTVERSION=	0.17
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
@@ -16,10 +16,10 @@ LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Identity>0:${PORTSDIR}/devel/p5-Test-Identity \
-		p5-Test-Refcount>0:${PORTSDIR}/devel/p5-Test-Refcount \
-		p5-Test-Warn>0:${PORTSDIR}/devel/p5-Test-Warn
+		p5-Test-Refcount>0:${PORTSDIR}/devel/p5-Test-Refcount
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Future.3 Future::Phrasebook.3 Future::Utils.3
 
