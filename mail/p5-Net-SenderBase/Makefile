@@ -2,7 +2,7 @@
 # Date created:				2009 March 18
 # Whom:					J.R. Oldroyd <fbsd@opal.com>
 #
-# $FreeBSD: ports/mail/p5-Net-SenderBase/Makefile,v 1.4 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Net-SenderBase/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	Net-SenderBase
@@ -17,7 +17,8 @@ COMMENT=	Query the SenderBase service
 
 RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SenderBase.3 \
 		Net::SenderBase::Query.3 \
