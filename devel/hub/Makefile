@@ -1,17 +1,17 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: ports/devel/hub/Makefile,v 1.2 2012/11/17 05:55:50 svnexp Exp $
+# $FreeBSD: devel/hub/Makefile 326820 2013-09-09 16:24:12Z rakuco $
 
 PORTNAME=	hub
-PORTVERSION=	1.10.2
+PORTVERSION=	1.10.6
 CATEGORIES=	devel
 
-MAINTAINER=	simon@olofsson.de
+MAINTAINER=	koukopoulos@gmail.com
 COMMENT=	Introduces git to GitHub
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	defunkt
+GH_ACCOUNT=	github
 GH_TAGNAME=	v${DISTVERSION}
-GH_COMMIT=	16b388a
+GH_COMMIT=	5b43748
 
 USE_RUBY=	yes
 USE_RAKE=	yes
