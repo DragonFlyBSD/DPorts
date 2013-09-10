@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/security/outguess/Makefile,v 1.11 2013/01/27 06:41:41 svnexp Exp $
+# $FreeBSD: security/outguess/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
 
 PORTNAME=	outguess
 PORTVERSION=	0.2
