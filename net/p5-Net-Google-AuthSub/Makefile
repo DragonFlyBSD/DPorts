@@ -2,7 +2,7 @@
 # Date created:		2008-02-21
 # Whom:			Felippe de Meirelles Motta <lippemail@gmail.com>
 #
-# $FreeBSD: ports/net/p5-Net-Google-AuthSub/Makefile,v 1.7 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Google-AuthSub/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Net-Google-AuthSub
@@ -18,7 +18,8 @@ COMMENT=	Interact with sites that implement Google style AuthSub
 RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Google::AuthSub::Response.3 \
 		Net::Google::AuthSub.3
