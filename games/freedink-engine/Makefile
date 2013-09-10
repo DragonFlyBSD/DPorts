@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: games/freedink-engine/Makefile 324762 2013-08-15 11:37:57Z wg $
+# $FreeBSD: games/freedink-engine/Makefile 326035 2013-09-02 17:06:54Z bapt $
 
 PORTNAME=	freedink
 PORTVERSION=	1.08.${PORTVER}
@@ -13,7 +13,7 @@ COMMENT=	Dink Smallwood RPG and RPG Construction Set
 
 LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
-USES=		gettext gmake
+USES=		gettext gmake pkgconfig
 USE_SDL=	sdl gfx ttf image mixer
 GNU_CONFIGURE=	yes
 PORTVER=	20121209
