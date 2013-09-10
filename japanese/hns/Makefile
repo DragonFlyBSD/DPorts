@@ -1,9 +1,5 @@
-# New ports collection makefile for:    hns
-# Date created:                 10 Jun 1999
-# Whom:                         Hyper NIKKI System Project <hnsmaster@h14m.org>
-#
-# $FreeBSD: ports/japanese/hns/Makefile,v 1.15 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: Hyper NIKKI System Project <hnsmaster@h14m.org>
+# $FreeBSD: japanese/hns/Makefile 326884 2013-09-10 09:39:11Z az $
 
 PORTNAME=	hns
 PORTVERSION=	2.19.9
@@ -14,7 +10,7 @@ MASTER_SITE_SUBDIR=	h14m/22597
 MAINTAINER=	hnsmaster@h14m.org
 COMMENT=	Hyper NIKKI System, a CGI system for Electric Diary Interchange
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 do-install:
