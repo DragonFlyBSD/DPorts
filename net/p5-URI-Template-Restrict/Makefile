@@ -2,7 +2,7 @@
 # Date created:		22 Jan 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-URI-Template-Restrict/Makefile,v 1.6 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-URI-Template-Restrict/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	URI-Template-Restrict
@@ -25,7 +25,8 @@ BUILD_DEPENDS=	\
 	p5-Unicode-Normalize>0:${PORTSDIR}/textproc/p5-Unicode-Normalize \
 	p5-URI>0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		URI::Template::Restrict.3 \
 		URI::Template::Restrict::Expansion.3
