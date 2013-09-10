@@ -2,7 +2,7 @@
 # Date created:				5 June 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/ftpcopy/Makefile,v 1.28 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ftp/ftpcopy/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	ftpcopy
@@ -13,7 +13,8 @@ MASTER_SITES=	http://www.ohse.de/uwe/ftpcopy/
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Command line ftp tools for listing and mirroring
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 
 WRKSRC=		${WRKDIR}/web/${DISTNAME}
 
