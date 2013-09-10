@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/ender/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: graphics/ender/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME=	ender
 PORTVERSION=	20121003
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		bison pathfix
+USES=		bison pathfix pkgconfig
 USE_EFL=	eina enesim libtool_hack
-USE_GNOME=	pkgconfig
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS=	--disable-static
