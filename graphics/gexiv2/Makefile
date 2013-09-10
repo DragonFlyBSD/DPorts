@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: graphics/gexiv2/Makefile 320624 2013-06-11 18:36:56Z wg $
+# $FreeBSD: graphics/gexiv2/Makefile 326086 2013-09-02 20:42:58Z bapt $
 
 PORTNAME=	gexiv2
 PORTVERSION=	0.6.1
@@ -17,11 +17,11 @@ BUILD_DEPENDS=	libtool:${PORTSDIR}/devel/libtool \
 		gm4:${PORTSDIR}/devel/m4
 LIB_DEPENDS=	exiv2:${PORTSDIR}/graphics/exiv2
 
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_XZ=		yes
 USE_GNOME=	glib20
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+MAKE_ARGS=	REQUIRED_CFLAGS=""
 
 post-patch:
 	@${REINPLACE_CMD} -E \
