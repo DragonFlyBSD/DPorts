@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: devel/p5-boolean/Makefile 318076 2013-05-13 12:57:18Z culot $
+# $FreeBSD: devel/p5-boolean/Makefile 326656 2013-09-07 16:51:08Z az $
 
 PORTNAME=		boolean
 PORTVERSION=		0.30
@@ -14,7 +14,8 @@ COMMENT=		Boolean support for Perl
 LICENSE=		ART10 GPLv1
 LICENSE_COMB=		dual
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			boolean.3
 
