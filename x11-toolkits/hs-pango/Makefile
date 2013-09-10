@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-pango/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11-toolkits/hs-pango/Makefile 326195 2013-09-03 18:39:13Z antoine $
 
 PORTNAME=	pango
 PORTVERSION=	0.12.4
@@ -10,6 +10,7 @@ COMMENT=	Binding to the Pango text rendering engine
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_CABAL=	cairo>=0.12.0 glib>=0.12.0 mtl
 USE_GNOME=	pango
 
