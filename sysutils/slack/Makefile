@@ -1,5 +1,5 @@
 # Created by: Steve Atwell
-# $FreeBSD: sysutils/slack/Makefile 320598 2013-06-11 14:57:58Z miwi $
+# $FreeBSD: sysutils/slack/Makefile 326574 2013-09-07 07:11:48Z az $
 
 PORTNAME=	slack
 PORTVERSION=	0.15.2
@@ -12,7 +12,7 @@ COMMENT=	Configuration management system designed to appeal to lazy admins
 
 RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 
-USE_PERL5=	yes
+USES=		perl5
 USE_GMAKE=	yes
 
 MAN1=		slack-diff.1
