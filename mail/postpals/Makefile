@@ -2,7 +2,7 @@
 # Date created:				7 March 2010
 # Whom:					Sahil Tandon <sahil@tandon.net>
 #
-# $FreeBSD: ports/mail/postpals/Makefile,v 1.3 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/postpals/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	postpals
@@ -22,7 +22,8 @@ RUN_DEPENDS=	p5-IO-Multiplex>=0:${PORTSDIR}/devel/p5-IO-Multiplex \
 SUB_FILES=	pkg-message
 
 USE_RC_SUBR=	${PORTNAME} ${PORTNAME}-taillog
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 USERS=		postpals
