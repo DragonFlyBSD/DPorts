@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/xine/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/xine/Makefile 326133 2013-09-03 10:23:55Z bapt $
 
 PORTNAME=	xine
 PORTVERSION=	0.99.7
@@ -29,7 +29,7 @@ WIN32_CODECS_DESC=	Enable win32 codecs
 
 USE_XZ=		yes
 USE_XORG=	x11 xext xinerama xscrnsaver xt xtst xv xxf86vm
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-vdr-keys \
 		--disable-nvtvsimple
