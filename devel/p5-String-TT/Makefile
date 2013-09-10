@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: devel/p5-String-TT/Makefile 314073 2013-03-13 11:20:04Z bapt $
+# $FreeBSD: devel/p5-String-TT/Makefile 326581 2013-09-07 08:23:45Z az $
 
 PORTNAME=	String-TT
 PORTVERSION=	0.03
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-PadWalker>=1:${PORTSDIR}/devel/p5-PadWalker \
 		p5-Test-TableDriven>=0:${PORTSDIR}/devel/p5-Test-TableDriven
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::TT.3
 
