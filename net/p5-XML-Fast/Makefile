@@ -2,7 +2,7 @@
 # Date created:		2012-02-04
 # Whom:			Dennis Herrmann <dhn@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-XML-Fast/Makefile,v 1.2 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-XML-Fast/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	XML-Fast
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Simple and very fast XML to hash conversion
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Fast.3
 
