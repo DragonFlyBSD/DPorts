@@ -1,7 +1,7 @@
-# $FreeBSD: mail/p5-Email-MIME-Encodings/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: mail/p5-Email-MIME-Encodings/Makefile 325800 2013-08-31 11:53:57Z lth $
 
 PORTNAME=	Email-MIME-Encodings
-PORTVERSION=	1.314
+PORTVERSION=	1.315
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
