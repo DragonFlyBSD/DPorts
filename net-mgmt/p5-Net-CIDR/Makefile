@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/p5-Net-CIDR/Makefile,v 1.19 2012/11/18 05:57:52 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-CIDR/Makefile 326245 2013-09-04 03:27:37Z az $
 
 PORTNAME=	Net-CIDR
 PORTVERSION=	0.17
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Perl module to manipulate IPv4/IPv6 netblocks in CIDR notation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::CIDR.3
 
