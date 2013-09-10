@@ -2,7 +2,7 @@
 # Date created:				17 Feb 2004
 # Whom:						Jim Pirzyk <pirzyk@freebsd.org>
 #
-# $FreeBSD: sysutils/psgconf/Makefile 305949 2012-10-16 05:38:25Z az $
+# $FreeBSD: sysutils/psgconf/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 
 PORTNAME=	psgconf
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Config-Objective>=0:${PORTSDIR}/devel/p5-Config-Objective \
 	p5-Text-Diff>=0:${PORTSDIR}/textproc/p5-Text-Diff
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		psgconf.1
 MAN3=		PSGConf.3 \
