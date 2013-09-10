@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-StackTrace-AsHTML/Makefile 313352 2013-03-03 14:43:51Z kuriyama $
+# $FreeBSD: devel/p5-Devel-StackTrace-AsHTML/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Devel-StackTrace-AsHTML
 PORTVERSION=	0.14
@@ -13,7 +13,8 @@ COMMENT=	Perl extension to display stack trace in HTML
 RUN_DEPENDS=	p5-Devel-StackTrace>0:${PORTSDIR}/devel/p5-Devel-StackTrace
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Devel::StackTrace::AsHTML.3
 
