@@ -1,8 +1,6 @@
-# New ports collection makefile for:	sdl_net
-# Date created:				20 September 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/net/sdl_net/Makefile,v 1.33 2012/11/17 06:00:20 svnexp Exp $
+# $FreeBSD: net/sdl_net/Makefile 325749 2013-08-31 00:26:08Z bapt $
 #
 
 PORTNAME=	sdl_net
@@ -16,8 +14,7 @@ COMMENT=	A small sample cross-platform networking library
 
 USE_AUTOTOOLS=	libtool
 USE_SDL=	sdl
-USE_GNOME=	gnomehack pkgconfig
-USE_GMAKE=	yes
+USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
