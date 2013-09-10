@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Devel/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Devel/Makefile 326604 2013-09-07 10:19:55Z sunpoet $
 
 PORTNAME=	Catalyst-Devel
-PORTVERSION=	1.37
+PORTVERSION=	1.38
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BOBTFISH
