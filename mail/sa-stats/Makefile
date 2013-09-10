@@ -2,7 +2,7 @@
 # Date created:				Tue 16 Mar 2010
 # Whom:					Alexey V. Degtyarev <alexey@renatasystems.org>
 #
-# $FreeBSD: ports/mail/sa-stats/Makefile,v 1.2 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/sa-stats/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	sa-stats
@@ -19,7 +19,7 @@ COMMENT=	Generates top spam/ham rules fired for SpamAssassin installations
 
 RUN_DEPENDS=	p5-Getopt-Long>=0:${PORTSDIR}/devel/p5-Getopt-Long
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
