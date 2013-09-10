@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Declare/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Declare/Makefile 326880 2013-09-10 09:21:40Z sunpoet $
 
 PORTNAME=	MooseX-Declare
-PORTVERSION=	0.35
+PORTVERSION=	0.36
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,11 +16,14 @@ BUILD_DEPENDS=	p5-Moose>=0.90:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Types>=0.20:${PORTSDIR}/devel/p5-MooseX-Types \
 		p5-Devel-Declare>=0.005011:${PORTSDIR}/devel/p5-Devel-Declare \
 		p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
+		p5-Module-Runtime>=0:${PORTSDIR}/devel/p5-Module-Runtime \
+		p5-Parse-Method-Signatures>=0:${PORTSDIR}/devel/p5-Parse-Method-Signatures \
+		p5-aliased>=0:${PORTSDIR}/devel/p5-aliased \
 		p5-namespace-clean>=0.11:${PORTSDIR}/devel/p5-namespace-clean \
 		p5-namespace-autoclean>=0.09:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
-		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
+TEST_DEPENDS=	p5-Test-CheckDeps>=0:${PORTSDIR}/devel/p5-Test-CheckDeps \
+		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USES=		perl5
 USE_PERL5=	configure
