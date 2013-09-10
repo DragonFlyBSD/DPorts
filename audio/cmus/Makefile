@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: audio/cmus/Makefile 323767 2013-07-26 23:46:21Z bapt $
+# $FreeBSD: audio/cmus/Makefile 326108 2013-09-02 22:26:06Z bapt $
 
 PORTNAME=	cmus
 PORTVERSION=	2.5.0
@@ -11,21 +11,18 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	h.skuhra@gmail.com
 COMMENT=	Console-based music player with really cool features
 
-USES=		pkgconfig iconv ncurses
+USES=		gmake pkgconfig iconv ncurses
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	HOSTCC=${CC}
 CONFIGURE_ARGS+=prefix=${PREFIX} mandir=${MANPREFIX}/man \
 		exampledir=${EXAMPLESDIR} \
-		CONFIG_ALSA=n CONFIG_ROAR=n
+		CONFIG_ALSA=n CONFIG_ARTS=n CONFIG_ROAR=n
 
 OPTIONS_DEFINE=	AAC AO CDDB CDIO CUE DISCID FFMPEG FLAC MAD MIKMOD \
 		MODPLUG MP4 MUSEPACK PULSEAUDIO TREMOR VORBIS WAVPACK
 OPTIONS_DEFAULT=FLAC MAD VORBIS
 DISCID_DESC=	DISCID support
-
-CONFIGURE_ARGS=CONFIG_ARTS=n
 
 .include <bsd.port.options.mk>
 
