@@ -2,7 +2,7 @@
 # Date created:		2011-08-17
 # Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/ruby-gio2/Makefile,v 1.4 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-gio2/Makefile 303740 2012-09-06 05:28:49Z swills $
 #
 
 PORTNAME=	gio2
