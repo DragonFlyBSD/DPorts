@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold
-# $FreeBSD: devel/p5-DateTime-Format-Strptime/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Strptime/Makefile 326043 2013-09-02 17:37:56Z sunpoet $
 
 PORTNAME=	DateTime-Format-Strptime
 PORTVERSION=	1.54
@@ -10,6 +10,8 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse and format strp and strf time patterns
+
+LICENSE=	ART20
 
 RUN_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-DateTime-TimeZone>=0:${PORTSDIR}/devel/p5-DateTime-TimeZone \
