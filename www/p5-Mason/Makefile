@@ -2,7 +2,7 @@
 # Date created:				03 April, 2012
 # Whom:					Muhammad Moinur Rahman <5u623l20@gmail.com>
 #
-# $FreeBSD: ports/www/p5-Mason/Makefile,v 1.4 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-Mason/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	Mason
@@ -35,7 +35,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Class-Most>=0:${PORTSDIR}/devel/p5-Test-Class-Most \
 		p5-Test-LongString>=0:${PORTSDIR}/devel/p5-Test-LongString
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		mason.pl.1
 MAN3=		Mason.3 \
