@@ -1,8 +1,9 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/mingw32-binutils/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/mingw32-binutils/Makefile 326102 2013-09-02 22:00:52Z tijl $
 
 PORTNAME=	binutils
 PORTVERSION=	${BINUTILVERSION}
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEWARE}
@@ -15,14 +16,12 @@ COMMENT=	GNU Binutils for Windows cross-development
 BINUTILVERSION=	2.23.1
 
 USE_BZIP2=	yes
-USE_GCC=	any
-USE_GMAKE=	yes
-USES=		iconv
+USES=		gmake iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=${PKGNAMEPREFIX:S/-$//} \
 		--with-gcc --with-gnu-ld --with-gnu-as \
 		--disable-nls --disable-win32-registry \
-		--disable-shared
+		--disable-shared --disable-werror
 INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
 
 MAN1=	${PKGNAMEPREFIX}addr2line.1 ${PKGNAMEPREFIX}ar.1    \
