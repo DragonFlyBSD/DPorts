@@ -2,7 +2,7 @@
 # Date created:		27 January 2011
 # Whom:			Paul Schmehl <pauls@utdallas.edu>
 #
-# $FreeBSD: ports/net/p5-IP-Anonymous/Makefile,v 1.2 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-IP-Anonymous/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	IP-Anonymous
@@ -16,7 +16,8 @@ COMMENT=	Perl extension to provide anonymous IP addresses
 
 RUN_DEPENDS=	p5-Crypt-Rijndael>=0:${PORTSDIR}/security/p5-Crypt-Rijndael
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IP::Anonymous.3
 
