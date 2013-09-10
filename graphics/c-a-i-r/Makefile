@@ -1,9 +1,5 @@
-# New ports collection makefile for:	c-a-i-r
-# Date created:				18 Oct 2008
-# Whom:					buganini@gmail.com
-#
-# $FreeBSD: ports/graphics/c-a-i-r/Makefile,v 1.5 2012/11/17 05:58:01 svnexp Exp $
-#
+# Created by: buganini@gmail.com
+# $FreeBSD: graphics/c-a-i-r/Makefile 326168 2013-09-03 16:19:05Z bapt $
 
 PORTNAME=	c-a-i-r
 PORTVERSION=	2.19
@@ -15,7 +11,8 @@ MAINTAINER=	buganini@gmail.com
 COMMENT=	Content Aware Image Resizer is an implementation of seam carving
 
 USE_ZIP=	yes
-USE_GMAKE=	yes
+USES=		gmake
+MAKE_ARGS+=	CC="${CXX}"
 
 WRKSRC=		${WRKDIR}
 
