@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-Object-Pluggable
-# Date created:		2009-08-31
-# Whom:			Ashish SHUKLA <wahjava@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Object-Pluggable/Makefile,v 1.5 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Ashish SHUKLA <wahjava@gmail.com>
+# $FreeBSD: devel/p5-MooseX-Object-Pluggable/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	MooseX-Object-Pluggable
 PORTVERSION=	0.0011
@@ -18,7 +14,8 @@ COMMENT=	Make your classes pluggable
 BUILD_DEPENDS=	p5-Moose>=0.35:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Object::Pluggable.3
 
