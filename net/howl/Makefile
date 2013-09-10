@@ -1,8 +1,5 @@
-# New ports collection makefile for:	howl
-# Date created:			21 July 2003
-# Whom:				David Magda <dmagda+howl@ee.ryerson.ca>
-# $FreeBSD: ports/net/howl/Makefile,v 1.39 2012/11/17 06:00:02 svnexp Exp $
-#
+# Created by: David Magda <dmagda+howl@ee.ryerson.ca>
+# $FreeBSD: net/howl/Makefile 325749 2013-08-31 00:26:08Z bapt $
 
 PORTNAME=	howl
 PORTVERSION=	1.0.0
@@ -16,8 +13,7 @@ COMMENT=	Zeroconf/Bonjour(tm) implementation
 CONFLICTS=	avahi-[0-9]*
 
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
-USE_GNOME=	pkgconfig
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
