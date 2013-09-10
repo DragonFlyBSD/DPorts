@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Directory-Scratch/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Directory-Scratch/Makefile 326742 2013-09-08 15:07:35Z tobez $
 
 PORTNAME=	Directory-Scratch
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
