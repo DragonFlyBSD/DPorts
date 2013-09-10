@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Event-Notify
-# Date created:		2008-01-03
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/devel/p5-Event-Notify/Makefile,v 1.2 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: devel/p5-Event-Notify/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Event-Notify
 PORTVERSION=	0.00004
@@ -18,7 +14,8 @@ COMMENT=	Simple Observer/Notifier
 BUILD_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 RUN_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Event::Notify.3
 
