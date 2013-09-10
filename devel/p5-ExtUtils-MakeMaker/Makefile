@@ -1,14 +1,17 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 325315 2013-08-24 21:34:55Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 326503 2013-09-06 14:12:25Z tobez $
 
 PORTNAME=	ExtUtils-MakeMaker
-PORTVERSION=	6.72
+PORTVERSION=	6.76
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Designed to write a Makefile for an extension module
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
