@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MouseX-Types-Path-Class
-# Date created:		2009-04-22
-# Whom:			TERAMOTO Masahiro <markun@onohara.to>
-#
-# $FreeBSD: devel/p5-MouseX-Types-Path-Class/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: TERAMOTO Masahiro <markun@onohara.to>
+# $FreeBSD: devel/p5-MouseX-Types-Path-Class/Makefile 326818 2013-09-09 15:55:47Z az $
 
 PORTNAME=	MouseX-Types-Path-Class
 PORTVERSION=	0.07
@@ -26,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-UseAllModules>0:${PORTSDIR}/devel/p5-Test-UseAllModules
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MouseX::Types::Path::Class.3
 
