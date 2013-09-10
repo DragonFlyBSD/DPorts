@@ -2,7 +2,7 @@
 # Date created:			Nov 04, 2005
 # Whom:				Clemens Zauner <czauner+ports@onlineloop.com>
 #
-# $FreeBSD: textproc/wbxml2/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: textproc/wbxml2/Makefile 325911 2013-09-01 19:51:52Z bsam $
 #
 
 PORTNAME=	wbxml2
@@ -14,8 +14,7 @@ DISTNAME=	libwbxml-${PORTVERSION}
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	Library & tools for converting wbxml<->xml
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2 \
-		iconv.3:${PORTSDIR}/converters/libiconv
+LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
 WRKSRC=			${WRKDIR}/libwbxml-${PORTVERSION}
 CONFIGURE_WRKSRC=	${WRKDIR}/libwbxml-${PORTVERSION}/build
@@ -23,7 +22,7 @@ BUILD_WRKSRC=		${CONFIGURE_WRKSRC}
 INSTALL_WRKSRC=		${CONFIGURE_WRKSRC}
 
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake iconv
 CMAKE_SOURCE_PATH=	..
 USE_LDCONFIG=	yes
 
