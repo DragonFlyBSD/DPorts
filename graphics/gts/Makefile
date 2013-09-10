@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/gts/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/gts/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME=	gts
 PORTVERSION=	0.7.6
@@ -10,7 +10,8 @@ MASTER_SITES=	SF
 MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	GNU Triangulated Surface Library
 
-USE_GNOME=	glib20 pkgconfig
+USES=		pkgconfig
+USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
