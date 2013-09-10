@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-TagCloud/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-HTML-TagCloud/Makefile 326763 2013-09-08 16:43:26Z tobez $
 
 PORTNAME=	HTML-TagCloud
-PORTVERSION=	0.37
+PORTVERSION=	0.38
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
