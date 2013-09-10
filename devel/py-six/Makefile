@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/py-six/Makefile 315934 2013-04-17 06:44:00Z rm $
+# $FreeBSD: devel/py-six/Makefile 326590 2013-09-07 10:00:50Z rm $
 
 PORTNAME=	six
-PORTVERSION=	1.2.0
+PORTVERSION=	1.4.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,6 @@ COMMENT=	Python 2 and 3 compatibility utilities
 
 LICENSE=	MIT
 
-# Python3 ready
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
