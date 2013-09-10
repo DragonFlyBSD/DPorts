@@ -2,7 +2,7 @@
 # Date created:         17 Jan 2004
 # Whom:                 sanpei@FreeBSD.org
 #
-# $FreeBSD: ports/net-mgmt/mrtg-ping-probe/Makefile,v 1.11 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/mrtg-ping-probe/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	mrtg-ping-probe
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/mrtg:${PORTSDIR}/net-mgmt/mrtg
 
 FETCH_BEFORE_ARGS=	-p      # MASTER_SITE needs PASSIVE FTP.
 
-USE_PERL5=	YES
+USES=		perl5
 
 MAN1=		${PORTNAME}.1
 
