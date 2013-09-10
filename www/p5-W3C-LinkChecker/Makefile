@@ -2,7 +2,7 @@
 # Date created:				25 November 2004
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/www/p5-W3C-LinkChecker/Makefile,v 1.17 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-W3C-LinkChecker/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	W3C-LinkChecker
@@ -28,6 +28,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 MAN1=		checklink.1
 MANCOMPRESSED=	no
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
