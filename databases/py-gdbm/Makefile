@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: databases/py-gdbm/Makefile 313167 2013-03-01 20:12:01Z lwhsu $
+# $FreeBSD: databases/py-gdbm/Makefile 326660 2013-09-07 17:21:47Z sunpoet $
 
 PORTNAME=	gdbm
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -14,6 +14,8 @@ MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python bindings to the GNU dbm library
 
 LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm
+
+PORTSCOUT=	ignore:1
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
