@@ -2,7 +2,7 @@
 # Date created:		2006-07-29
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-Net-Flickr-RDF/Makefile,v 1.10 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Net-Flickr-RDF/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	Net-Flickr-RDF
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Net-Flickr-API>=1.7:${PORTSDIR}/www/p5-Net-Flickr-API \
 		p5-TimeDate>=1.16:${PORTSDIR}/devel/p5-TimeDate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Flickr::RDF.3
 
