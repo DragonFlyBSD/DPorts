@@ -1,7 +1,7 @@
-# $FreeBSD: security/pear-Horde_Auth/Makefile 323139 2013-07-16 23:49:05Z mm $
+# $FreeBSD: security/pear-Horde_Auth/Makefile 326198 2013-09-03 18:43:02Z mm $
 
 PORTNAME=	Horde_Auth
-PORTVERSION=	2.0.6
+PORTVERSION=	2.1.0
 CATEGORIES=	security www pear
 
 MAINTAINER=	horde@FreeBSD.org
