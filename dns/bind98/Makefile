@@ -1,4 +1,4 @@
-# $FreeBSD: dns/bind98/Makefile 323808 2013-07-27 21:08:35Z roberto $
+# $FreeBSD: dns/bind98/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME=	bind98
 PORTVERSION=	9.8.5.2
@@ -72,7 +72,8 @@ CONFIGURE_ARGS+=	--without-libxml2
 .endif
 
 .if ${PORT_OPTIONS:MIDN}
-CONFIGURE_ARGS+=	--with-idn=${LOCALBASE} --with-libiconv=${LOCALBASE}
+USES+=			iconv
+CONFIGURE_ARGS+=	--with-idn=${LOCALBASE} ${ICONV_CONFIGURE_BASE}
 LIB_DEPENDS+=		idnkit.1:${PORTSDIR}/dns/idnkit
 .else
 CONFIGURE_ARGS+=	--without-idn
