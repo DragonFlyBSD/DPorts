@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/flac/Makefile 323248 2013-07-18 17:47:53Z naddy $
+# $FreeBSD: audio/flac/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	flac
 PORTVERSION=	1.3.0
@@ -12,7 +12,7 @@ COMMENT=	Free lossless audio codec
 
 LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
