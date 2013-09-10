@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	dcd
-# Date created:				20 June 2008
-# Whom:					gahr
-#
-# $FreeBSD: ports/audio/dcd/Makefile,v 1.6 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: audio/dcd/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	dcd
 PORTVERSION=	0.99.2
@@ -16,7 +12,7 @@ COMMENT=	A simple, programmable, intelligent CD player
 
 LIB_DEPENDS=	cdaudio:${PORTSDIR}/audio/libcdaudio
 
-USE_GMAKE=	yes
+USES=		gmake
 
 MAN1=	dcd.1
 PLIST_FILES=	bin/dcd
