@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/openssl/Makefile 314526 2013-03-18 06:20:21Z dinoex $
+# $FreeBSD: security/openssl/Makefile 326837 2013-09-09 18:22:13Z dinoex $
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.1
@@ -14,8 +14,6 @@ DIST_SUBDIR=	${DISTNAME}2
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	SSL and crypto library
-
-BUILD_DEPENDS=	makedepend:${PORTSDIR}/devel/makedepend
 
 .ifdef USE_OPENSSL
 .error You have `USE_OPENSSL' variable defined either in environment or in make(1) arguments. Please undefine and try again.
