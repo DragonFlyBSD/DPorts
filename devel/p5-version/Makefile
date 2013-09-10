@@ -1,8 +1,8 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-version/Makefile 325065 2013-08-20 16:59:56Z mat $
+# $FreeBSD: devel/p5-version/Makefile 326125 2013-09-03 08:26:58Z tobez $
 
 PORTNAME=	version
-PORTVERSION=	0.99.03
+PORTVERSION=	0.99.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
