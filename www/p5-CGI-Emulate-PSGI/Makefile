@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-CGI-Emulate-PSGI/Makefile,v 1.11 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Emulate-PSGI/Makefile 325974 2013-09-02 11:04:10Z az $
 
 PORTNAME=	CGI-Emulate-PSGI
 PORTVERSION=	0.15
@@ -14,7 +14,8 @@ RUN_DEPENDS=	\
 	p5-libwww>0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Emulate::PSGI.3 \
 	CGI::Parse::PSGI.3
