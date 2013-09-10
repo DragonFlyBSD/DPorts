@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: devel/p5-Date-Simple/Makefile 319187 2013-05-27 09:22:33Z bapt $
+# $FreeBSD: devel/p5-Date-Simple/Makefile 326823 2013-09-09 17:31:07Z az $
 
 PORTNAME=		Date-Simple
 PORTVERSION=		3.03
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		dhn@FreeBSD.org
 COMMENT=		A simple date object
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Date::Simple.3 Date::Simple::NoXS.3 \
 			Date::Simple::D8.3 Date::Simple::Fmt.3 \
