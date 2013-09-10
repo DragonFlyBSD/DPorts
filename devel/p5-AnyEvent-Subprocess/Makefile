@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-AnyEvent-Subprocess
-# Date created:	   24 Mar 2010
-# Whom:		   Denis Pokataev <catone@cpan.org>
-#
-# $FreeBSD: ports/devel/p5-AnyEvent-Subprocess/Makefile,v 1.5 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: Denis Pokataev <catone@cpan.org>
+# $FreeBSD: devel/p5-AnyEvent-Subprocess/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	AnyEvent-Subprocess
 PORTVERSION=	1.102912
@@ -37,7 +33,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-use-ok>0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AnyEvent::Subprocess.3 \
 		AnyEvent::Subprocess::DefaultDelegates.3 \
