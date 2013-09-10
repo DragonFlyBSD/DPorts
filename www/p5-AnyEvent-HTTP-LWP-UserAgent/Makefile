@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-AnyEvent-HTTP-LWP-UserAgent/Makefile,v 1.1 2013/01/13 03:00:01 svnexp Exp $
+# $FreeBSD: www/p5-AnyEvent-HTTP-LWP-UserAgent/Makefile 325960 2013-09-02 09:44:14Z az $
 
 PORTNAME=	AnyEvent-HTTP-LWP-UserAgent
 PORTVERSION=	0.10
@@ -17,7 +17,8 @@ RUN_DEPENDS=	\
 	p5-libwww>=5.815:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::HTTP::LWP::UserAgent.3
 
