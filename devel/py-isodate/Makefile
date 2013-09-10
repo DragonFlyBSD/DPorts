@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/py-isodate/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: devel/py-isodate/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
 
 PORTNAME=	isodate
 PORTVERSION=	0.4.9
@@ -11,7 +11,7 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ISO 8601 date/time/duration parser and formater
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|setuptools|do_not_use_&|' ${WRKSRC}/${PYSETUP}
