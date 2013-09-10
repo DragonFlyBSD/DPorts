@@ -2,7 +2,7 @@
 # Date created:	   2008-02-18
 # Whom:		   Shinsuke Matsui <smatsui@karashi.org>
 #
-# $FreeBSD: ports/devel/p5-File-chmod/Makefile,v 1.3 2012/11/17 05:56:17 svnexp Exp $
+# $FreeBSD: devel/p5-File-chmod/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	File-chmod
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	smatsui@karashi.org
 COMMENT=	File::chmod - Implements symbolic and ls chmod modes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::chmod.3
 
