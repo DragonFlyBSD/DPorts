@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Mix
-# Date created:				21 May 2009
-# Whom:					brix@FreeBSD.org
-#
-# $FreeBSD: ports/devel/p5-Class-Mix/Makefile,v 1.5 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: brix@FreeBSD.org
+# $FreeBSD: devel/p5-Class-Mix/Makefile 326787 2013-09-09 09:45:12Z az $
 
 PORTNAME=	Class-Mix
 PORTVERSION=	0.005
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
 RUN_DEPENDS=	p5-parent>=0:${PORTSDIR}/devel/p5-parent \
 		p5-Params-Classify>=0:${PORTSDIR}/devel/p5-Params-Classify
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Class::Mix.3
 
