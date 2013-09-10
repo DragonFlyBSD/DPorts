@@ -1,11 +1,13 @@
 # Created by: Maxim Maximov (mcsi@agava.com)
-# $FreeBSD: devel/p5-enum/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-enum/Makefile 326476 2013-09-06 08:26:28Z tobez $
 
 PORTNAME=	enum
-PORTVERSION=	1.016
+PORTVERSION=	1.050
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:NEILB
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/0$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	\
