@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@freebsd.org>
-# $FreeBSD: multimedia/vdr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/vdr/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	vdr
 PORTVERSION=	1.7.29
@@ -78,7 +78,8 @@ ALL_TARGET=	vdr plugins
 
 post-patch:
 # clang doesn't know -MG:
-	@${REINPLACE_CMD} '/^MAKEDEP.*-MM/s/-MG[[:space:]]*$$/# -MG/' \
+	@${REINPLACE_CMD} -e '/^MAKEDEP.*-MM/s/-MG[[:space:]]*$$/# -MG/' \
+			-e '/^LIBS/s/-liconv/${ICONVLIB}/' \
 		${WRKSRC}/Makefile ${WRKSRC}/libsi/Makefile \
 		${WRKSRC}/PLUGINS/src/*/Makefile
 	@[ ! -f ${WRKSRC}/s2apiwrapper.c ] || \
