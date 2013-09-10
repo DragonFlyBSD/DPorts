@@ -2,12 +2,11 @@
 # Date created:		1 October 2010
 # Whom:			johans
 #
-# $FreeBSD: ports/graphics/webp/Makefile,v 1.12 2012/11/17 05:58:24 svnexp Exp $
+# $FreeBSD: graphics/webp/Makefile 326851 2013-09-09 22:52:20Z mm $
 #
 
 PORTNAME=	webp
-PORTVERSION=	0.1.3
-PORTREVISION=	1
+PORTVERSION=	0.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
@@ -15,7 +14,7 @@ DISTNAME=	lib${PORTNAME}-${PORTVERSION}
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Google WebP image format conversion tool
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
+LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
 USE_LDCONFIG=	yes
