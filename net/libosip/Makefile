@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	libosip
-# Date created:			Jun 14, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/net/libosip/Makefile,v 1.35 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/libosip/Makefile 325749 2013-08-31 00:26:08Z bapt $
 
 PORTNAME=	libosip
 PORTVERSION=	3.6.0
@@ -17,7 +12,7 @@ COMMENT=	A low layer of SIP implementation
 
 CONFLICTS=	libosip2-2*
 
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-debug --disable-trace
 USE_LDCONFIG=	yes
