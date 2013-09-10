@@ -1,5 +1,5 @@
 # Created by: marcus@FreeBSD.org
-# $FreeBSD: graphics/poppler/Makefile 314805 2013-03-21 05:27:16Z mezz $
+# $FreeBSD: graphics/poppler/Makefile 326025 2013-09-02 16:21:38Z bapt $
 #   $MCom: ports/graphics/poppler/Makefile,v 1.84 2013/03/12 14:53:49 kwm Exp $
 
 PORTNAME=	poppler
@@ -18,7 +18,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		lcms2:${PORTSDIR}/graphics/lcms2
 RUN_DEPENDS=	poppler-data>0:${PORTSDIR}/graphics/poppler-data
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack libxml2 ltverhack
 USE_AUTOTOOLS=	libtool
 MAKE_JOBS_UNSAFE=	yes
