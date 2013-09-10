@@ -2,7 +2,7 @@
 # Date created:		2006-07-14
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-OurNet-BBSAgent/Makefile,v 1.5 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-OurNet-BBSAgent/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	OurNet-BBSAgent
@@ -17,7 +17,8 @@ COMMENT=	Scriptable telnet-based virtual users
 BUILD_DEPENDS=	p5-Net-Telnet>=0:${PORTSDIR}/net/p5-Net-Telnet
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		OurNet::BBSAgent.3
 
