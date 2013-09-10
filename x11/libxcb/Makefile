@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/libxcb/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libxcb/Makefile 325978 2013-09-02 11:56:52Z bapt $
 
 PORTNAME=	libxcb
 PORTVERSION=	1.9.1
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:${PORTSDIR}/devel/l
 CONFIGURE_ARGS+=	--disable-build-docs --without-doxygen --enable-xinput
 
 USE_BZIP2=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	libxslt:build
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
