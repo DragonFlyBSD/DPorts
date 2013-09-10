@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/speech-dispatcher/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: accessibility/speech-dispatcher/Makefile 325643 2013-08-30 00:47:20Z bapt $
 
 PORTNAME=	speech-dispatcher
 PORTVERSION=	0.7.1
@@ -16,11 +16,11 @@ LIB_DEPENDS=	dotconf:${PORTSDIR}/devel/dotconf \
 		sndfile:${PORTSDIR}/audio/libsndfile
 
 # gnomehier is required because of share/sounds directory.
-USE_GNOME=	glib20 gnomehier pkgconfig
+USES=		gmake pkgconfig
+USE_GNOME=	glib20 gnomehier
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GMAKE=	yes
 USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/${PORTNAME}
 
 ETCFILES=	clients/emacs.conf clients/gnome-speech.conf \
