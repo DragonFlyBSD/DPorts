@@ -1,5 +1,5 @@
 # Created by: Jonathan Hanna
-# $FreeBSD: japanese/edict-utf-8/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: japanese/edict-utf-8/Makefile 326697 2013-09-07 21:59:42Z bsam $
 
 PORTNAME=	edict-utf-8
 PORTVERSION=	20100420
@@ -13,8 +13,7 @@ COMMENT=	Japanese-English edict UTF-8 dictionaries
 EXTRACT_DEPENDS=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
 USES=		iconv
-ICONV?=		iconv
-CONVERT_CMD=	${ICONV} -c -f EUC-JP -t UTF-8
+CONVERT_CMD=	${ICONV_CMD} -c -f EUC-JP -t UTF-8
 
 DIST_SUBDIR=	${PORTNAME}
 
