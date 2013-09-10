@@ -1,9 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: security/duo/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/duo/Makefile 326104 2013-09-02 22:06:57Z zi $
 
 PORTNAME=	duo
-PORTVERSION=	1.9.2
-PORTREVISION=	1
+PORTVERSION=	1.9.4
 CATEGORIES=	security
 MASTER_SITES=	https://dl.duosecurity.com/ \
 		http://mirrors.rit.edu/zi/
@@ -15,7 +14,7 @@ COMMENT=	Duo unix integration package
 LICENSE=	GPLv2
 
 CONFIGURE_ARGS=	--with-pam=${PREFIX}/lib/security --sysconfdir=${PREFIX}/etc \
-		--docdir=${DOCSDIR}
+		--docdir=${DOCSDIR} --includedir=${PREFIX}/include/${PORTNAME}
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
