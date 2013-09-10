@@ -1,14 +1,14 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: ports/www/p5-Mojolicious/Makefile,v 1.34 2013/01/08 19:54:53 svnexp Exp $
+# $FreeBSD: www/p5-Mojolicious/Makefile 326798 2013-09-09 10:09:07Z sunpoet $
 
 PORTNAME=	Mojolicious
-PORTVERSION=	3.74
+PORTVERSION=	4.34
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	mopsfelder@gmail.com
-COMMENT=	A high level MVC web framework written in Perl
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	High level MVC web framework written in Perl
 
 LICENSE=	ART20
 
@@ -16,9 +16,10 @@ BUILD_DEPENDS=	p5-EV>=4:${PORTSDIR}/devel/p5-EV
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	IPV6 TLS
-OPTIONS_DEFAULT=IPV6 TLS
+OPTIONS_DEFAULT=TLS
 
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
+USES=		perl5
 
 MAN1=		hypnotoad.1 \
 		mojo.1 \
@@ -69,6 +70,7 @@ MAN3=		Mojo.3 \
 		Mojo::Server::Hypnotoad.3 \
 		Mojo::Server::Morbo.3 \
 		Mojo::Server::PSGI.3 \
+		Mojo::Server::Prefork.3 \
 		Mojo::Template.3 \
 		Mojo::Transaction.3 \
 		Mojo::Transaction::HTTP.3 \
@@ -92,6 +94,7 @@ MAN3=		Mojo.3 \
 		Mojolicious::Command::generate::plugin.3 \
 		Mojolicious::Command::get.3 \
 		Mojolicious::Command::inflate.3 \
+		Mojolicious::Command::prefork.3 \
 		Mojolicious::Command::psgi.3 \
 		Mojolicious::Command::routes.3 \
 		Mojolicious::Command::test.3 \
@@ -116,8 +119,6 @@ MAN3=		Mojo.3 \
 		Mojolicious::Plugin::JSONConfig.3 \
 		Mojolicious::Plugin::Mount.3 \
 		Mojolicious::Plugin::PODRenderer.3 \
-		Mojolicious::Plugin::PoweredBy.3 \
-		Mojolicious::Plugin::RequestTimer.3 \
 		Mojolicious::Plugin::TagHelpers.3 \
 		Mojolicious::Plugins.3 \
 		Mojolicious::Renderer.3 \
