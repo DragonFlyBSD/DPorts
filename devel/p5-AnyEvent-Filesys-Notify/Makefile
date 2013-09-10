@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 326822 2013-09-09 16:55:31Z az $
 
 PORTNAME=	AnyEvent-Filesys-Notify
 PORTVERSION=	0.22
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Without-Module>=0:${PORTSDIR}/devel/p5-Test-Without-Module
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	AnyEvent::Filesys::Notify.3 \
 	AnyEvent::Filesys::Notify::Event.3 \
