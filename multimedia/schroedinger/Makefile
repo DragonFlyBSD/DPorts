@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/schroedinger/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/schroedinger/Makefile 325939 2013-09-02 06:20:09Z bapt $
 
 PORTNAME=	schroedinger
 PORTVERSION=	1.0.11
@@ -19,6 +19,7 @@ LICENSE_FILE_MPL=	${WRKSRC}/COPYING.MPL
 LIB_DEPENDS=	orc-0.4:${PORTSDIR}/devel/orc
 BUILD_DEPENDS=	orc>=0.4.16:${PORTSDIR}/devel/orc
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
