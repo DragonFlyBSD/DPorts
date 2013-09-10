@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: irc/p5-POE-Component-Server-IRC/Makefile 320268 2013-06-08 16:26:04Z miwi $
+# $FreeBSD: irc/p5-POE-Component-Server-IRC/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	POE-Component-Server-IRC
 PORTVERSION=	1.54
@@ -27,7 +27,8 @@ RUN_DEPENDS=	p5-Crypt-PasswdMD5>=1.3:${PORTSDIR}/security/p5-Crypt-PasswdMD5 \
 		p5-POE-Filter-Zlib>0:${PORTSDIR}/archivers/p5-POE-Filter-Zlib
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pmkpasswd.1
 MAN3=		POE::Component::Server::IRC.3 \
