@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Spelling/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: devel/p5-Test-Spelling/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	Test-Spelling
 PORTVERSION=	0.19
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Pod-Spell>=0:${PORTSDIR}/textproc/p5-Pod-Spell \
 		p5-IPC-Run3>=0:${PORTSDIR}/devel/p5-IPC-Run3
 TEST_DEPENDS=	p5-Test-Tester>=0:${PORTSDIR}/devel/p5-Test-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Spelling.3
 
