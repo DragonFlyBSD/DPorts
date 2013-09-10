@@ -1,5 +1,5 @@
 # Created by: dikshie <dikshie@lapi.itb.ac.id>
-# $FreeBSD: net/p5-IP-Country/Makefile 319222 2013-05-27 12:29:00Z culot $
+# $FreeBSD: net/p5-IP-Country/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	IP-Country
 PORTVERSION=	2.28
@@ -13,7 +13,8 @@ COMMENT=	Fast lookup of country codes from IP addresses
 BUILD_DEPENDS=	p5-Geography-Countries>=0:${PORTSDIR}/misc/p5-Geography-Countries
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		ip2cc.1
 MAN3=		IP::Authority.3 \
