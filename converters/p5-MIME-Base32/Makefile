@@ -1,5 +1,5 @@
-# Created by: nork@freebsd.org
-# $FreeBSD: ports/converters/p5-MIME-Base32/Makefile,v 1.6 2013/01/13 09:43:16 svnexp Exp $
+# Created by: nork@FreeBSD.org
+# $FreeBSD: converters/p5-MIME-Base32/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	MIME-Base32
 PORTVERSION=	1.02a
@@ -14,7 +14,8 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-1.02
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MIME::Base32.3
 
