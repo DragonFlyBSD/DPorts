@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-User-Identity
-# Date created:				21 Jul 2005
-# Whom:					Max Campos <mcampos@bpsw.biz>
-#
-# $FreeBSD: ports/devel/p5-User-Identity/Makefile,v 1.7 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Max Campos <mcampos@bpsw.biz>
+# $FreeBSD: devel/p5-User-Identity/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	User-Identity
 PORTVERSION=	0.93
@@ -16,7 +12,8 @@ COMMENT=	Perl module for abstracting information about a physical person
 
 RUN_DEPENDS=	p5-Geography-Countries>=0:${PORTSDIR}/misc/p5-Geography-Countries
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Identity.3 \
 		User::Identity.3 \
