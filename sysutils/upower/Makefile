@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/upower/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/upower/Makefile 326025 2013-09-02 16:21:38Z bapt $
 #   $MCom: ports/sysutils/upower/Makefile,v 1.19 2010/10/05 08:30:15 kwm Exp $
 
 PORTNAME=	upower
@@ -18,9 +18,8 @@ RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/d
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack ltverhack glib20
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
