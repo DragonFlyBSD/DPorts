@@ -1,5 +1,5 @@
 # Created by: hrkfrd@googlemail.com
-# $FreeBSD: audio/mpdas/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/mpdas/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	mpdas
 PORTVERSION=	0.3.0
@@ -13,7 +13,7 @@ COMMENT=	MPD AudioScrobbler written in C++ supporting the latest protocol
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		mpd.4:${PORTSDIR}/audio/libmpd
 
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 USE_BZIP2=	yes
 
 USE_RC_SUBR=	mpdas
