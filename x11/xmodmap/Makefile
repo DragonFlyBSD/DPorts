@@ -1,7 +1,7 @@
-# $FreeBSD: ports/x11/xmodmap/Makefile,v 1.7 2013/02/04 04:55:10 svnexp Exp $
+# $FreeBSD: x11/xmodmap/Makefile 326807 2013-09-09 12:21:54Z zeising $
 
 PORTNAME=	xmodmap
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
