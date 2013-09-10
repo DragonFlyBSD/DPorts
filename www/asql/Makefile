@@ -2,7 +2,7 @@
 # Date created:		2008-10-15
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/asql/Makefile,v 1.9 2012/11/17 06:02:28 svnexp Exp $
+# $FreeBSD: www/asql/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	asql
@@ -20,6 +20,6 @@ RUN_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 
 NO_BUILD=	yes
 PLIST_FILES=	bin/asql
-USE_PERL5=	yes
+USES=		perl5
 
 .include <bsd.port.mk>
