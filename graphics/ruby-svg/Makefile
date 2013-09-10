@@ -2,7 +2,7 @@
 # Date created:		8 July 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/graphics/ruby-svg/Makefile,v 1.12 2012/11/17 05:58:22 svnexp Exp $
+# $FreeBSD: graphics/ruby-svg/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	svg
