@@ -13,7 +13,7 @@
 #    - graphics/libGLU
 #    - graphics/dri
 #
-# $FreeBSD: graphics/libGL/bsd.mesalib.mk 324875 2013-08-17 22:31:07Z mva $
+# $FreeBSD: graphics/libGL/bsd.mesalib.mk 326002 2013-09-02 14:39:52Z bapt $
 
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
@@ -40,7 +40,7 @@ BUILD_DEPENDS+=	makedepend:${PORTSDIR}/devel/makedepend \
 		python:${PORTSDIR}/lang/python \
 		${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2
 
-USES=	bison
+USES+=	bison
 USE_PYTHON_BUILD=yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
