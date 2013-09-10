@@ -1,10 +1,5 @@
-# New ports collection makefile for: unace
-# URL: http://members.aol.com/mlemke6413/ace.html
-# Date created:         23 February 1999
-# Whom:                 Joao Carlos Mendes Luis <jonny@jonny.eng.br>
-#
-# $FreeBSD: ports/archivers/unace/Makefile,v 1.13 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: Joao Carlos Mendes Luis <jonny@jonny.eng.br>
+# $FreeBSD: archivers/unace/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	unace
 PORTVERSION=	1.2b
@@ -18,7 +13,7 @@ COMMENT=	Extract, view & test ACE archives
 
 MAKE_JOBS_UNSAFE=	yes
 
-USE_GMAKE=	yes
+USES=		gmake
 ALL_TARGET=	clean unace
 PLIST_FILES=	bin/unace
 

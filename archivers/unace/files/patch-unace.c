@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/archivers/unace/files/patch-unace.c,v 1.2 2012/11/17 05:54:24 svnexp Exp $
+$FreeBSD: archivers/unace/files/patch-unace.c 300895 2012-07-14 12:56:14Z beat $
 
 --- unace.c.orig
 +++ unace.c
