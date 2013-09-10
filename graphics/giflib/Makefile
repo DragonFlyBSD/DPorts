@@ -1,9 +1,8 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/giflib/Makefile 321950 2013-06-28 06:27:25Z dinoex $
+# $FreeBSD: graphics/giflib/Makefile 326723 2013-09-08 12:42:14Z dinoex $
 
 PORTNAME=	giflib
-PORTVERSION=	4.2.1
-PORTREVISION=	2
+PORTVERSION=	4.2.3
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-4.x
 PKGNAMESUFFIX=	${NOX11SUFFIX}${PKGNAMESUFFIX2}
