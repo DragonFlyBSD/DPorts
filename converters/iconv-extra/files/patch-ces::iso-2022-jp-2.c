@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/converters/iconv-extra/files/patch-ces::iso-2022-jp-2.c,v 1.2 2012/11/17 05:55:03 svnexp Exp $
+$FreeBSD: converters/iconv-extra/files/patch-ces::iso-2022-jp-2.c 300895 2012-07-14 12:56:14Z beat $
 
 --- ces/iso-2022-jp-2.c	2002/03/17 11:15:25	1.1
 +++ ces/iso-2022-jp-2.c	2002/03/17 11:15:46

@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iconv
-# Date created:				10 September 2000
-# Whom:			Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-#
-# $FreeBSD: ports/converters/iconv-extra/Makefile,v 1.9 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
+# $FreeBSD: converters/iconv-extra/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	iconv-extra
 PORTVERSION=	2.0
@@ -16,6 +12,6 @@ COMMENT=	Additional charsets for the iconv library (those from the Unicode site)
 
 LIB_DEPENDS=	biconv.2:${PORTSDIR}/converters/iconv
 
-USE_PERL5=	yes
+USES=		perl5
 
 .include <bsd.port.mk>
