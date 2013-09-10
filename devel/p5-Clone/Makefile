@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Clone/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: devel/p5-Clone/Makefile 326432 2013-09-05 18:15:29Z tobez $
 
 PORTNAME=	Clone
-PORTVERSION=	0.34
+PORTVERSION=	0.35
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
