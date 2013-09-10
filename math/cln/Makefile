@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:   cln
-# Date created:                Fab 11, 2001
-# Whom:                        Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/math/cln/Makefile,v 1.48 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: math/cln/Makefile 325752 2013-08-31 00:35:35Z bapt $
 
 PORTNAME=	cln
 PORTVERSION=	1.3.2
@@ -20,8 +15,7 @@ LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack pkgconfig
-USE_GMAKE=	yes
+USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gmp
 USE_LDCONFIG=	yes
