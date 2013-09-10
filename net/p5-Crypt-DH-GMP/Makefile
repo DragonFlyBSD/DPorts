@@ -1,8 +1,8 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: net/p5-Crypt-DH-GMP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Crypt-DH-GMP/Makefile 326479 2013-09-06 08:34:39Z tobez $
 
 PORTNAME=	Crypt-DH-GMP
-PORTVERSION=	0.00010
+PORTVERSION=	0.00011
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
