@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-eyed3
-# Date created:		22 August 2003
-# Whom:			Hye-Shik Chang <perky@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/py-eyed3/Makefile,v 1.19 2012/11/17 05:54:41 svnexp Exp $
+# Created by: Hye-Shik Chang <perky@FreeBSD.org>
+# $FreeBSD: audio/py-eyed3/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	eyed3
 PORTVERSION=	0.6.18
@@ -19,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PYTHON=	2.6-2.7
 USE_PYTHON_PREFIX=	yes
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PYTHON="${PYTHON_CMD}"
 MAKE_ENV=	SETUP_ARGS_BUILD="${PYDISTUTILS_BUILDARGS}" \
