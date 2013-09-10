@@ -1,5 +1,5 @@
 # Created by: tabthorpe
-# $FreeBSD: ports/devel/p5-Locale-PO/Makefile,v 1.7 2013/02/16 01:46:31 svnexp Exp $
+# $FreeBSD: devel/p5-Locale-PO/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	Locale-PO
 PORTVERSION=	0.23
@@ -13,7 +13,8 @@ COMMENT=	Perl module for manipulating .po entries from GNU gettext
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 
 BUILD_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
