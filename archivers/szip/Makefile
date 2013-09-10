@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
-# $FreeBSD: archivers/szip/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: archivers/szip/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	szip
 PORTVERSION=	1.12b
@@ -12,7 +12,7 @@ DISTNAME=	sz${PORTVERSION:S/.//}_src
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast compression utility
 
-USE_GMAKE=	yes
+USES=		gmake
 
 WRKSRC=		${WRKDIR}
 
