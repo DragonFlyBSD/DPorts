@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: multimedia/emotion/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: multimedia/emotion/Makefile 326133 2013-09-03 10:23:55Z bapt $
 
 PORTNAME=	emotion
 PORTVERSION=	1.7.8
@@ -16,7 +16,7 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_EFL=	ecore edje eet eio embryo evas libtool_hack modarch_hack
 USE_EFL_EVAS_LOADERS=	png jpeg
 USE_LDCONFIG=	yes
