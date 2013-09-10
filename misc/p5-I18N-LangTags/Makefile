@@ -2,7 +2,7 @@
 # Date created:			26 December 1999
 # Whom:	      			Dmitry Sivachenko <dima@Chg.RU>
 #
-# $FreeBSD: ports/misc/p5-I18N-LangTags/Makefile,v 1.16 2012/11/17 05:59:43 svnexp Exp $
+# $FreeBSD: misc/p5-I18N-LangTags/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	I18N-LangTags
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Functions for dealing with RFC-1766-style language tags
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		I18N::LangTags.3 I18N::LangTags::Detect.3 I18N::LangTags::List.3
 
