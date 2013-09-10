@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-module-everything-places/Makefile 318126 2013-05-13 19:56:09Z gblach $
+# $FreeBSD: x11-wm/e17-module-everything-places/Makefile 325734 2013-08-30 23:31:49Z bapt $
 
 PORTNAME=	everything-places
 PORTVERSION=	20130510
@@ -16,9 +16,8 @@ RUN_DEPENDS=	enlightenment:${PORTSDIR}/x11-wm/enlightenment
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_EFL=	edje libtool_hack modarch_hack
-USE_GNOME=	pkgconfig
 
 .include <bsd.port.options.mk>
 
