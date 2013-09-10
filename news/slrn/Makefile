@@ -1,5 +1,5 @@
 # Created by: Carey Jones <mcj@acquiesce.org>
-# $FreeBSD: news/slrn/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: news/slrn/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	slrn
 PORTVERSION=	1.0.1
@@ -19,7 +19,7 @@ USES=		iconv
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-ipv6 --disable-inews --with-slrnpull \
-			--with-libiconv-prefix=${LOCALBASE}
+			${ICONV_CONFIGURE_ARG}
 
 ALL_TARGET=	all
 
