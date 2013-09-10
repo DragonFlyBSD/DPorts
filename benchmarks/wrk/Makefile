@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: benchmarks/wrk/Makefile 322902 2013-07-13 07:05:26Z osa $
+# $FreeBSD: benchmarks/wrk/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	wrk
 PORTVERSION=	2.2.2
@@ -15,7 +15,7 @@ LICENSE=	AL2
 
 FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_GMAKE=	yes
+USES=		gmake
 CFLAGS+=	-std=c99 -D_DECLARE_C99_LDBL_MATH
 
 PLIST_FILES=	bin/wrk
