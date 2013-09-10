@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: ports/devel/p5-Paranoid/Makefile,v 1.12 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-Paranoid/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Paranoid
 PORTVERSION=	0.36
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Paranoid::Data.3 \
 		Paranoid::Log::File.3 \
