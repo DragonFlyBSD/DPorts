@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/dbus-glib/Makefile 318117 2013-05-13 15:50:10Z kwm $
+# $FreeBSD: devel/dbus-glib/Makefile 325997 2013-09-02 13:54:45Z bapt $
 #   $MCom$
 
 PORTNAME=	dbus-glib
@@ -13,8 +13,7 @@ COMMENT=	GLib bindings for the D-BUS messaging system
 LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
 
 USE_GNOME=	gnomehack glib20 ltverhack
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-test-socket-dir=${WRKDIR} \
