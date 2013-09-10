@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@dante.org.uk
-# $FreeBSD: ports/net/p5-IO-Socket-Multicast/Makefile,v 1.18 2013/01/09 20:05:01 svnexp Exp $
+# $FreeBSD: net/p5-IO-Socket-Multicast/Makefile 326380 2013-09-05 10:32:23Z az $
 
 PORTNAME=	IO-Socket-Multicast
 PORTVERSION=	1.12
@@ -15,7 +15,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 MAN3=		IO::Socket::Multicast.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 post-install:
 .ifndef(NOPORTEXAMPLES)
