@@ -2,7 +2,7 @@
 # Date created:		2008-09-26
 # Whom:			Charlie & <root@dev2.rambler.ru>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Component-InstancePerContext/Makefile,v 1.3 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Component-InstancePerContext/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	Catalyst-Component-InstancePerContext
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime	\
 		p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Component::InstancePerContext.3
 
