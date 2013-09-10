@@ -2,7 +2,7 @@
 # Date created:		26 June 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/databases/rubygem-sqlite3/Makefile,v 1.29 2013/01/23 17:04:03 svnexp Exp $
+# $FreeBSD: databases/rubygem-sqlite3/Makefile 310879 2013-01-23 16:41:34Z swills $
 #
 
 PORTNAME=	sqlite3
