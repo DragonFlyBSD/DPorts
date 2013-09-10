@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: accessibility/gnome-speech/Makefile 316722 2013-04-28 13:52:53Z kwm $
+# $FreeBSD: accessibility/gnome-speech/Makefile 325643 2013-08-30 00:47:20Z bapt $
 #   $MCom: ports/accessibility/gnome-speech/Makefile,v 1.21 2006/08/22 00:55:57 ahze Exp $
 
 PORTNAME=	gnome-speech
@@ -12,9 +12,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME text-to-speech API
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix libbonobo
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
