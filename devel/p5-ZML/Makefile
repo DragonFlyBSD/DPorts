@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-ZML
-# Date created:		2008-05-12
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports/devel/p5-ZML/Makefile,v 1.9 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: devel/p5-ZML/Makefile 326728 2013-09-08 13:59:48Z az $
 
 PORTNAME=	ZML
 PORTVERSION=	1.0.0
@@ -18,7 +14,8 @@ COMMENT=	A simple, fast, and easy to read binary data storage format
 BUILD_DEPENDS=	p5-Error-Helper>=0:${PORTSDIR}/devel/p5-Error-Helper
 RUN_DEPENDS=	p5-Error-Helper>=0:${PORTSDIR}/devel/p5-Error-Helper
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZML.3
 
