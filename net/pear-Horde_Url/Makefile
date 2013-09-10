@@ -1,11 +1,8 @@
-# Ports collection makefile for:  pear-Horde_Url
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: net/pear-Horde_Url/Makefile 316218 2013-04-21 22:16:15Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: net/pear-Horde_Url/Makefile 325479 2013-08-27 18:10:33Z mm $
 
 PORTNAME=	Horde_Url
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.1
 CATEGORIES=	net www pear
 
 MAINTAINER=	horde@FreeBSD.org
