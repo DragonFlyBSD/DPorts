@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: security/opensaml2/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/opensaml2/Makefile 325939 2013-09-02 06:20:09Z bapt $
 
 PORTNAME=	opensaml2
 PORTVERSION=	2.5.3
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	boost-libs>=0:${PORTSDIR}/devel/boost-libs
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-log4shib=${LOCALBASE} --with-openssl=${OPENSSLBASE} \
 		--with-xmltooling=${LOCALBASE} --disable-doxygen-doc
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 
 post-patch:
