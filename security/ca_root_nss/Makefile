@@ -1,8 +1,9 @@
 # Created by: Brooks Davis <brooks@FreeBSD.org>
-# $FreeBSD: security/ca_root_nss/Makefile 322687 2013-07-10 13:01:52Z flo $
+# $FreeBSD: security/ca_root_nss/Makefile 325572 2013-08-29 08:10:09Z mandree $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 DISTNAME=	nss-${VERSION_NSS}${NSS_SUFFIX}
