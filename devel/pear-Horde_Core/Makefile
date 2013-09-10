@@ -1,7 +1,8 @@
-# $FreeBSD: devel/pear-Horde_Core/Makefile 324467 2013-08-10 07:46:18Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_Core/Makefile 326198 2013-09-03 18:43:02Z mm $
 
 PORTNAME=	Horde_Core
-PORTVERSION=	2.6.6
+PORTVERSION=	2.8.0
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
@@ -49,6 +50,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Serialize \
 		Horde_SessionHandler \
 		Horde_Share \
+		Horde_Smtp \
 		Horde_Support \
 		Horde_Template \
 		Horde_Token \
