@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-IO-KQueue
-# Date Created:				8 Dec, 2005
-# Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-IO-KQueue/Makefile,v 1.13 2012/11/17 05:56:18 svnexp Exp $
-#
+# $FreeBSD: devel/p5-IO-KQueue/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	IO-KQueue
 PORTVERSION=	0.34
@@ -14,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl interface to the BSD kqueue system call
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::KQueue.3
 
