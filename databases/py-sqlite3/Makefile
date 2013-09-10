@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: databases/py-sqlite3/Makefile 313167 2013-03-01 20:12:01Z lwhsu $
+# $FreeBSD: databases/py-sqlite3/Makefile 326661 2013-09-07 17:21:51Z sunpoet $
 
 PORTNAME=	sqlite3
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -14,6 +14,8 @@ MAINTAINER=	python@FreeBSD.org
 COMMENT=	Standard Python binding to the SQLite3 library
 
 LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3
+
+PORTSCOUT=	ignore:1
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
