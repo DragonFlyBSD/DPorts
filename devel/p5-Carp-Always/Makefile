@@ -2,7 +2,7 @@
 # Date created:		21 Jan 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Carp-Always/Makefile,v 1.5 2012/11/17 05:56:06 svnexp Exp $
+# $FreeBSD: devel/p5-Carp-Always/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	Carp-Always
@@ -19,7 +19,8 @@ LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Base>0:${PORTSDIR}/devel/p5-Test-Base
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Carp::Always.3
 
