@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ppmd-7z
-# Date created:		1 September 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/ppmd-7z/Makefile,v 1.15 2013/02/07 15:31:56 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: archivers/ppmd-7z/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	ppmd
 PORTVERSION=	9.04
@@ -16,7 +12,7 @@ MAINTAINER=	bf@FreeBSD.org
 COMMENT=	High-ratio PPMD compressor
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/p7zip_${DISTVERSION}
 BUILD_WRKSRC=	${WRKSRC}/CPP/7zip/Compress/PPMD_Alone
 MAKEFILE=	makefile
