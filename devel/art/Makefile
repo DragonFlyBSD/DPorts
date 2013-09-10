@@ -1,9 +1,5 @@
-# New ports collection makefile for: art
-# Date created: 2011-11-05
-# Whom: Vladimir Gorelov <virtual.lark@gmail.com>
-#
-# $FreeBSD: devel/art/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Vladimir Gorelov <virtual.lark@gmail.com>
+# $FreeBSD: devel/art/Makefile 326013 2013-09-02 15:39:17Z bapt $
 
 PORTNAME=	art
 PORTVERSION=	0.9.01
@@ -18,7 +14,7 @@ LICENSE=	GPLv3
 
 LIB_DEPENDS=	xml++-2.6:${PORTSDIR}/textproc/libxml++26
 
-USE_GMAKE=	yes
+USES=	gmake pkgconfig
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/artlibgen/src/artlibgen ${PREFIX}/bin
