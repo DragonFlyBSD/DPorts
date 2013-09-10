@@ -2,7 +2,7 @@
 # Date created:		2007-02-14
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/www/py-scriptaculous/Makefile,v 1.7 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-scriptaculous/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	scriptaculous
