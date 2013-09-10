@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang
-# $FreeBSD: net/x11vnc/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: net/x11vnc/Makefile 325944 2013-09-02 06:39:37Z bapt $
 
 PORTNAME=	x11vnc
 PORTVERSION=	0.9.13
@@ -22,7 +22,7 @@ USE_XORG=	x11 xcb xdamage xfixes xrandr xinerama xext xtst xau xrender \
 # Sets LDFLAGS and adds to CONFIGURE_ENV, therefore we set LDFLAGS
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_OPENSSL=	yes
-USES=		iconv
+USES=		iconv pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 
