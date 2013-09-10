@@ -2,7 +2,7 @@
 # Date created:			26 August 2007
 # Whom:				Xavier Beaudouin <kiwi@oav.net>
 #
-# $FreeBSD: ports/mail/ovs/Makefile,v 1.13 2013/02/04 08:01:38 svnexp Exp $
+# $FreeBSD: mail/ovs/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	ovs
@@ -18,7 +18,7 @@ RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool	\
 		p5-File-Tail>=0:${PORTSDIR}/devel/p5-File-Tail
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 CGIDIR?=	${PREFIX}/www/cgi-bin
 DATADIR?=	/var/db/ovs
