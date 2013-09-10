@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-pdf/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas_generic_loaders-pdf/Makefile 326035 2013-09-02 17:06:54Z bapt $
 
 PORTNAME=	pdf
 PORTVERSION=	1.7.8
@@ -16,6 +16,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	poppler:${PORTSDIR}/graphics/poppler
 
+USES=		pkgconfig
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
