@@ -1,9 +1,5 @@
-# New ports collection makefile for: tircd
-# Date created:		6th March 2010
-# Whom:			Gavin Atkinson <gavin@FreeBSD.org>
-#
-# $FreeBSD: ports/irc/tircd/Makefile,v 1.4 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Gavin Atkinson <gavin@FreeBSD.org>
+# $FreeBSD: irc/tircd/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	tircd
 PORTVERSION=	0.10
@@ -24,7 +20,7 @@ RUN_DEPENDS=	p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-POE-Filter-IRCD>=0:${PORTSDIR}/irc/p5-POE-Filter-IRCD
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MAN1=		tircd.1
