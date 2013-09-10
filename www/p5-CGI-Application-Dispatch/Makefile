@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Dispatch/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: www/p5-CGI-Application-Dispatch/Makefile 326042 2013-09-02 17:29:36Z az $
 
 PORTNAME=	CGI-Application-Dispatch
 PORTVERSION=	3.12
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-CGI-Application>=4.50:${PORTSDIR}/www/p5-CGI-Application \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		CGI::Application::Dispatch.3 \
 		CGI::Application::Dispatch::PSGI.3 \
