@@ -1,8 +1,8 @@
 # Created by: Dean Freeman (wfreeman@sourcefire.com)
-# $FreeBSD: net/daq/Makefile 316963 2013-04-30 20:49:37Z bdrewery $
+# $FreeBSD: net/daq/Makefile 325417 2013-08-26 21:00:40Z zi $
 
 PORTNAME=	daq
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
 CATEGORIES=	net
 MASTER_SITES=	SF/snort/snort \
 		http://mirrors.rit.edu/zi/
