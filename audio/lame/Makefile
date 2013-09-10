@@ -1,9 +1,5 @@
-# ports collection makefile for:   lame
-# Date created:        11 January 1998
-# Whom:                yoshiaki Uchikawa
-#
-# $FreeBSD: audio/lame/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: yoshiaki Uchikawa
+# $FreeBSD: audio/lame/Makefile 325729 2013-08-30 23:10:18Z bapt $
 
 PORTNAME=	lame
 PORTVERSION=	3.99.5
@@ -14,11 +10,10 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/3.99
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Fast MP3 encoder kit
 
-USES=		iconv
+USES=		gmake iconv
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 CONFIGURE_ARGS=	--enable-nasm --enable-mp3rtp --disable-gtktest
 
 RESTRICTED=	patent issues, see http://www.mp3licensing.com/
