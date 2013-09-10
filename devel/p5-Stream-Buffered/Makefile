@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Stream-Buffered/Makefile,v 1.2 2012/11/17 05:56:29 svnexp Exp $
+# $FreeBSD: devel/p5-Stream-Buffered/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Stream-Buffered
 PORTVERSION=	0.02
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for temporary buffer to save bytes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Stream::Buffered.3
 
