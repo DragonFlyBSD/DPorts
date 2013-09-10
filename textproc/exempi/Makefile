@@ -2,7 +2,7 @@
 # Date created:		2008-02-26
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: textproc/exempi/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/exempi/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #   $MCom: ports/textproc/exempi/Makefile,v 1.1 2008/02/26 18:50:26 ahze Exp $
 #
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	ltverhack
 CONFIGURE_ARGS=	--enable-unittest=no
-CONFIGURE_ENV=	LIBS="-liconv"
+CONFIGURE_ENV=	LIBS="${ICONV_LIB}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USES=		pathfix iconv
