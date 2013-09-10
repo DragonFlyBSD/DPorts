@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libva/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: multimedia/libva/Makefile 326032 2013-09-02 16:55:04Z bapt $
 
 PORTNAME=	libva
 PORTVERSION=	1.2.1
@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
 LIB_DEPENDS=	drm:${PORTSDIR}/graphics/libdrm
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_XORG=	glproto pciaccess xext xfixes 
 USE_GL=		gl
