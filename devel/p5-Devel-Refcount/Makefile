@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Devel-Refcount/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Devel-Refcount/Makefile 326741 2013-09-08 15:06:23Z tobez $
 
 PORTNAME=	Devel-Refcount
-PORTVERSION=	0.09
+PORTVERSION=	0.10
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
