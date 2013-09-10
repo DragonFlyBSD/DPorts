@@ -1,5 +1,5 @@
 # Created by: michaelnottebrock@gmx.net and lioux@FreeBSD.org
-# $FreeBSD: ports/audio/portaudio/Makefile,v 1.16 2012/12/31 06:43:35 svnexp Exp $
+# $FreeBSD: audio/portaudio/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	portaudio
 PORTVERSION=	18.1
@@ -13,9 +13,9 @@ COMMENT=	Portable cross-platform Audio API
 
 LICENSE=	MIT
 
+USES=		gmake
 USE_ZIP=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_DOS2UNIX=	yes
 USE_LDCONFIG=	yes
 
