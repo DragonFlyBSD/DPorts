@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-gst/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas_generic_loaders-gst/Makefile 326347 2013-09-05 05:31:16Z antoine $
 
 PORTNAME=	gst
 PORTVERSION=	1.7.8
@@ -17,6 +17,7 @@ LICENSE=	GPLv2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_EFL=	eina
 USE_GSTREAMER=	good ffmpeg
 USE_LDCONFIG=	yes
