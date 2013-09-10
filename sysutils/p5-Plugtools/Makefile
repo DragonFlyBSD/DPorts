@@ -2,7 +2,7 @@
 # Date created:		2009-10-31
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/sysutils/p5-Plugtools/Makefile,v 1.6 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Plugtools/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	Plugtools
@@ -25,7 +25,8 @@ RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap \
 		p5-File-BaseDir>=0:${PORTSDIR}/devel/p5-File-BaseDir \
 		p5-Config-IniHash>=0:${PORTSDIR}/devel/p5-Config-IniHash
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Plugtools.3 \
 		Plugtools::Plugins::Dump.3
