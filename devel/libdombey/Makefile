@@ -1,12 +1,8 @@
-# New ports collection makefile for:  libdombey
-# Date created:                       Fri, 23 Apr 2010 14:24:06 EDT
-# Whom:                               James Bailie <jimmy@mammothcheese.ca>
-#
-# $FreeBSD: ports/devel/libdombey/Makefile,v 1.19 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: James Bailie <jimmy@mammothcheese.ca>
+# $FreeBSD: devel/libdombey/Makefile 326238 2013-09-04 00:48:38Z tabthorpe $
 
 PORTNAME=	libdombey
-PORTVERSION=	2.2
+PORTVERSION=	2.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.mammothcheese.ca/
 
