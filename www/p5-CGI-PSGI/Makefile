@@ -2,7 +2,7 @@
 # Date created:		13 Oct 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CGI-PSGI/Makefile,v 1.14 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-PSGI/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	CGI-PSGI
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to enable CGI.pm applications to adapt PSGI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::PSGI.3
 
