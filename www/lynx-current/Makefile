@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/lynx-current/Makefile 316951 2013-04-30 16:47:38Z johans $
+# $FreeBSD: www/lynx-current/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	lynx
 PORTVERSION=	2.8.8d15
@@ -29,7 +29,7 @@ CONFIGURE_ARGS=	--with-zlib --libdir="${L_LIB}" \
 		--enable-idna \
 		--enable-ipv6 \
 		--with-mime-libdir=${PREFIX}/etc \
-		--with-libiconv-prefix=${LOCALBASE} \
+		${ICONV_CONFIGURE_ARG} \
 		--with-screen=ncursesw \
 		--with-ssl=${OPENSSLBASE}
 
