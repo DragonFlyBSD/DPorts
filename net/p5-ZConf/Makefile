@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-ZConf/Makefile 319500 2013-05-31 14:44:50Z miwi $
+# $FreeBSD: net/p5-ZConf/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	ZConf
 PORTVERSION=	6.1.0
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-Chooser>=0:${PORTSDIR}/devel/p5-Chooser \
 		p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZConf.3 \
 		ZConf::backends::file.3 \
