@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: devel/p5-Sys-SigAction/Makefile 323529 2013-07-23 12:27:51Z culot $
+# $FreeBSD: devel/p5-Sys-SigAction/Makefile 326728 2013-09-08 13:59:48Z az $
 
 PORTNAME=	Sys-SigAction
 PORTVERSION=	0.17
@@ -13,7 +13,8 @@ COMMENT=	Perl extension for Consistent Signal Handling
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::SigAction.3
 
