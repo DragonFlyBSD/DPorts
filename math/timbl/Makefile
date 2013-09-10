@@ -1,9 +1,5 @@
-# New ports collection makefile for: timbl
-# Date created:		13 March 2008
-# Whom:			Yuri Victorovich <yuri@tsoft.com>
-#
-# $FreeBSD: ports/math/timbl/Makefile,v 1.3 2012/11/17 05:59:31 svnexp Exp $
-#
+# Created by: Yuri Victorovich <yuri@tsoft.com>
+# $FreeBSD: math/timbl/Makefile 325752 2013-08-31 00:35:35Z bapt $
 
 PORTNAME=	timbl
 PORTVERSION=	6.4.2
@@ -18,10 +14,9 @@ LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
 MAN1=	timbl.1
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pathfix pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 
 post-patch:
