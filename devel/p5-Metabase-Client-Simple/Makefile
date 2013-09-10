@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Metabase-Client-Simple
-# Date created:		2011-02-05
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Metabase-Client-Simple/Makefile,v 1.5 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Metabase-Client-Simple/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	Metabase-Client-Simple
 PORTVERSION=	0.009
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-Metabase-Fact>0:${PORTSDIR}/devel/p5-Metabase-Fact \
 		p5-Crypt-SSLeay>0:${PORTSDIR}/security/p5-Crypt-SSLeay
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Metabase::Client::Simple.3
 
