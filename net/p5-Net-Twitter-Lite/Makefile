@@ -2,7 +2,7 @@
 # Date created:				Aug  2, 2009
 # Whom:					Masafumi NAKANE <max@FreeBSD.org>
 #
-# $FreeBSD: net/p5-Net-Twitter-Lite/Makefile 313685 2013-03-09 01:15:55Z max $
+# $FreeBSD: net/p5-Net-Twitter-Lite/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-Twitter-Lite
@@ -30,7 +30,8 @@ RUN_DEPENDS=	p5-JSON>=2.02:${PORTSDIR}/converters/p5-JSON \
 		p5-Net-OAuth>=0.25:${PORTSDIR}/net/p5-Net-OAuth \
 		p5-Crypt-SSLeay>=0.5:${PORTSDIR}/security/p5-Crypt-SSLeay
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Net::Twitter::Lite.3 Net::Twitter::Lite::API::V1.3 \
 		Net::Twitter::Lite::API::V1_1.3 Net::Twitter::Lite::Error.3 \
 		Net::Twitter::Lite::WithAPIv1_1.3
