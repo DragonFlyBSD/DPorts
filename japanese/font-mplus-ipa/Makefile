@@ -1,8 +1,8 @@
-# $FreeBSD: japanese/font-mplus-ipa/Makefile 316981 2013-05-01 02:47:02Z hrs $
+# $FreeBSD: japanese/font-mplus-ipa/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	mplus-ipa
 PORTVERSION=	1.0.20060520.p1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	hrs
