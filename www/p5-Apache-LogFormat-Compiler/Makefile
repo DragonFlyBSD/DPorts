@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Apache-LogFormat-Compiler/Makefile 319786 2013-06-03 14:28:51Z kuriyama $
+# $FreeBSD: www/p5-Apache-LogFormat-Compiler/Makefile 326156 2013-09-03 15:07:52Z az $
 
 PORTNAME=	Apache-LogFormat-Compiler
 PORTVERSION=	0.13
@@ -13,7 +13,8 @@ TEST_DEPENDS=	\
 	p5-HTTP-Message>0:${PORTSDIR}/www/p5-HTTP-Message \
 	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Apache::LogFormat::Compiler.3
 
