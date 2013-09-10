@@ -1,8 +1,9 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/enlightenment/Makefile 324625 2013-08-12 12:45:24Z gblach $
+# $FreeBSD: x11-wm/enlightenment/Makefile 326433 2013-09-05 18:20:35Z gblach $
 
 PORTNAME=	enlightenment
 PORTVERSION=	0.17.4
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -19,8 +20,7 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix iconv
-USE_GMAKE=	yes
+USES=		pathfix iconv gmake pkgconfig
 USE_EFL=	eina eet evas ecore eio edbus efreet edje \
 		libtool_hack librt_hack modarch_hack
 USE_EFL_EVAS_LOADERS=	eet jpeg png
