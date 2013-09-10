@@ -2,7 +2,7 @@
 # Date created:			Apr 1, 2009
 # Whom:				skreuzer
 #
-# $FreeBSD: ports/net/p5-Net-OAuth-Simple/Makefile,v 1.8 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-OAuth-Simple/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	Net-OAuth-Simple
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Crypt-SSLeay>=0.57:${PORTSDIR}/security/p5-Crypt-SSLeay \
 		p5-Test-Simple>=0.86:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=	Net::OAuth::Simple.3
 
 .include <bsd.port.mk>
