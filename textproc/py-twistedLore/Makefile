@@ -1,14 +1,11 @@
-# New ports collection makefile for:	py-twistedLore
-# Date created:		14 April 2005
-# Whom:	      		Neal Nelson <neal@nelson.name>
-#
-# $FreeBSD: ports/textproc/py-twistedLore/Makefile,v 1.12 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Neal Nelson <neal@nelson.name>
+# $FreeBSD: textproc/py-twistedLore/Makefile 326647 2013-09-07 16:15:26Z sunpoet $
 
 PORTNAME=	twistedLore
-PORTVERSION=	12.1.0
+PORTVERSION=	13.1.0
 CATEGORIES=	textproc python
-MASTER_SITES=	http://twistedmatrix.com/Releases/Lore/${PORTVERSION:R}/
+MASTER_SITES=	http://twistedmatrix.com/Releases/Lore/${PORTVERSION:R}/ \
+		LOCAL/sunpoet
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	TwistedLore-${PORTVERSION}
 
@@ -16,14 +13,13 @@ MAINTAINER=	python@FreeBSD.org
 COMMENT=	Documentation generator with HTML and LaTeX support
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twistedCore>=${PORTVERSION}:${PORTSDIR}/devel/py-twistedCore
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYTHON=	-2.7
+USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
 
 .include <bsd.port.mk>
