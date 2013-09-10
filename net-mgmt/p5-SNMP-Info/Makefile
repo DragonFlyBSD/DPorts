@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: net-mgmt/p5-SNMP-Info/Makefile 325129 2013-08-21 13:40:12Z jadawin $
+# $FreeBSD: net-mgmt/p5-SNMP-Info/Makefile 326244 2013-09-04 03:24:02Z az $
 
 PORTNAME=	SNMP-Info
 PORTVERSION=	3.05
@@ -14,7 +14,8 @@ LICENSE=	BSD
 
 LIB_DEPENDS=	netsnmp:${PORTSDIR}/net-mgmt/net-snmp
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	SNMP::Info.3 SNMP::Info::AdslLine.3 SNMP::Info::Airespace.3 \
 	SNMP::Info::IPv6.3 SNMP::Info::Layer2::CiscoSB.3 \
