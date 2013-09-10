@@ -1,10 +1,11 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: mail/p5-Email-Valid/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: mail/p5-Email-Valid/Makefile 326715 2013-09-08 09:40:53Z tobez $
 
 PORTNAME=	Email-Valid
-PORTVERSION=	0.190
+PORTVERSION=	1.192
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:RJBS
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tobez@FreeBSD.org
