@@ -2,7 +2,7 @@
 # Date created:		9 Aug 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/japanese/ruby-uconv/Makefile,v 1.21 2012/11/17 05:58:39 svnexp Exp $
+# $FreeBSD: japanese/ruby-uconv/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	uconv
