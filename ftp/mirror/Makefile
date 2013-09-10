@@ -2,7 +2,7 @@
 # Date created:		15 May 1995
 # Whom:			torstenb
 #
-# $FreeBSD: ports/ftp/mirror/Makefile,v 1.29 2012/12/11 14:27:09 svnexp Exp $
+# $FreeBSD: ftp/mirror/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	mirror
@@ -31,7 +31,7 @@ PLIST_FILES=	bin/mirror \
 
 PLIST_DIRS=	lib/mirror
 
-USE_PERL5=	yes
+USES=		perl5
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
 MAN1=		mirror.1 mirror-master.1

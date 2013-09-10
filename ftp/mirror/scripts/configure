@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/ftp/mirror/scripts/configure,v 1.5 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ftp/mirror/scripts/configure 300896 2012-07-14 13:54:48Z beat $
 #
 
 mv ${WRKSRC}/mirror.pl ${WRKSRC}/mirror.pl.bak
