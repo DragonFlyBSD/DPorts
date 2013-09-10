@@ -1,5 +1,5 @@
 # Created by: Slaven Rezic <slaven@rezic.de>
-# $FreeBSD: misc/lesspipe/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: misc/lesspipe/Makefile 325955 2013-09-02 09:22:47Z az $
 
 PORTNAME=	lesspipe
 PORTVERSION=	1.55
@@ -26,7 +26,7 @@ BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
 		cdrecord:${PORTSDIR}/sysutils/cdrtools
 .endif
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_BUILD=	yes
 HAS_CONFIGURE=	yes
