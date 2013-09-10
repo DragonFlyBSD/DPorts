@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Chemistry-File-VRML
-# Date created:		2010-03-10
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: ports/science/p5-Chemistry-File-VRML/Makefile,v 1.5 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: science/p5-Chemistry-File-VRML/Makefile 326873 2013-09-10 08:26:53Z az $
 
 PORTNAME=	Chemistry-File-VRML
 PORTVERSION=	0.10
@@ -20,6 +16,7 @@ RUN_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol
 
 MAN3=	Chemistry::File::VRML.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
