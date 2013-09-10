@@ -1,9 +1,8 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/meep/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: science/meep/Makefile 326176 2013-09-03 17:06:48Z skreuzer $
 
 PORTNAME=	meep
-PORTVERSION=	1.1.1
-PORTREVISION=	4
+PORTVERSION=	1.2
 CATEGORIES=	science
 MASTER_SITES=	http://ab-initio.mit.edu/meep/
 
@@ -15,8 +14,8 @@ BUILD_DEPENDS+=	bash:${PORTSDIR}/shells/bash \
 		gsed:${PORTSDIR}/textproc/gsed
 LIB_DEPENDS+=	guile.21:${PORTSDIR}/lang/guile \
 		blas.2:${PORTSDIR}/math/blas \
-		ctl.4:${PORTSDIR}/science/libctl \
-		hdf5.0:${PORTSDIR}/science/hdf5
+		ctl.5:${PORTSDIR}/science/libctl \
+		hdf5.7:${PORTSDIR}/science/hdf5-18
 RUN_DEPENDS+=	harminv:${PORTSDIR}/science/harminv
 
 USE_GMAKE=	yes
