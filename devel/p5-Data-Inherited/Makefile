@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Data-Inherited/Makefile,v 1.1 2013/01/18 11:46:53 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Inherited/Makefile 326734 2013-09-08 14:47:37Z az $
 
 PORTNAME=	Data-Inherited
 PORTVERSION=	1.100860
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for hierarchy-wide accumulation of list/hash results
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Inherited.3
 
