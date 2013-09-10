@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: archivers/rpm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: archivers/rpm/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	rpm
 PORTVERSION=	3.0.6
@@ -16,7 +16,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 CONFLICTS=	rpm-[45].*
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	automake14 autoconf213 libtool
 CONFIGURE_ARGS=	--with-glob
 USE_LDCONFIG=	yes
@@ -28,7 +28,7 @@ MAKE_ENV=	OLD_PO_FILE_INPUT=1
 USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl -liconv"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl ${ICONV_LIB}"
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
