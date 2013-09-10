@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: security/py-m2crypto/Makefile 324885 2013-08-18 03:15:35Z sunpoet $
+# $FreeBSD: security/py-m2crypto/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
 
 PORTNAME=	m2crypto
 PORTVERSION=	0.21.1
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/swig:${PORTSDIR}/devel/swig13
 
 USE_OPENSSL=	yes
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
 PYDISTUTILS_BUILDARGS=	build_ext --openssl="${OPENSSLBASE}"
 PYDISTUTILS_PKGNAME=	M2Crypto
 
