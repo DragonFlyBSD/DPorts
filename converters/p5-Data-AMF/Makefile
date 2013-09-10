@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Data::AMF
-# Date created:		25 Dec 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/p5-Data-AMF/Makefile,v 1.7 2012/11/17 05:55:03 svnexp Exp $
-#
+# $FreeBSD: converters/p5-Data-AMF/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Data-AMF
 PORTVERSION=	0.09
@@ -21,7 +16,8 @@ RUN_DEPENDS=	\
 	p5-XML-LibXML>0:${PORTSDIR}/textproc/p5-XML-LibXML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::AMF.3 \
 	Data::AMF::Formatter.3 \
