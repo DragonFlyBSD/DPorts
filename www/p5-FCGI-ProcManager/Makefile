@@ -2,7 +2,7 @@
 # Date created:		2007-12-28
 # Whom:			Peter <peter@vereshagin.org>
 #
-# $FreeBSD: ports/www/p5-FCGI-ProcManager/Makefile,v 1.5 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-FCGI-ProcManager/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	FCGI-ProcManager
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	peter@vereshagin.org
 COMMENT=	Functions for managing FastCGI applications
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		FCGI::ProcManager.3 \
 		FCGI::ProcManager::Constrained.3
