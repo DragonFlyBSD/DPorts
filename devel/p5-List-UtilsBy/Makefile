@@ -1,9 +1,4 @@
-# New ports collection makefile for:	List::UtilsBy
-# Date created:		25 Feb 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-List-UtilsBy/Makefile,v 1.5 2012/11/17 05:56:20 svnexp Exp $
-#
+# $FreeBSD: devel/p5-List-UtilsBy/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	List-UtilsBy
 PORTVERSION=	0.09
@@ -14,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for higher-order list utility functions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	List::UtilsBy.3
 
