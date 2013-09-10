@@ -1,9 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-Cache-Memcached-Fast/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: databases/p5-Cache-Memcached-Fast/Makefile 326733 2013-09-08 14:44:57Z tobez $
 
 PORTNAME=	Cache-Memcached-Fast
-PORTVERSION=	0.19
-PORTREVISION=	2
+PORTVERSION=	0.21
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
