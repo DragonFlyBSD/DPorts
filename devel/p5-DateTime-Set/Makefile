@@ -1,14 +1,16 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Set/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Set/Makefile 325532 2013-08-28 14:02:47Z sunpoet $
 
 PORTNAME=	DateTime-Set
-PORTVERSION=	0.31
+PORTVERSION=	0.32
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Datetime sets and set math
+
+LICENSE=	GPLv2
 
 BUILD_DEPENDS=	p5-DateTime>=0.12:${PORTSDIR}/devel/p5-DateTime \
 		p5-Set-Infinite>=0.59:${PORTSDIR}/devel/p5-Set-Infinite
