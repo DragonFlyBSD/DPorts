@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/ruby-cairo/Makefile,v 1.20 2012/12/31 17:09:09 svnexp Exp $
+# $FreeBSD: graphics/ruby-cairo/Makefile 325928 2013-09-01 22:50:06Z bapt $
 #   $MCom: ports/graphics/ruby-cairo/Makefile,v 1.9 2008/10/19 23:20:49 mezz Exp $
 
 PORTNAME=	cairo
@@ -14,7 +14,7 @@ COMMENT=	Ruby binding for Cairo
 BUILD_DEPENDS=	rubygem-pkg-config>=1.0.7:${PORTSDIR}/devel/rubygem-pkg-config
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=yes
 CONFIGURE_ARGS+=--ruby=${RUBY}
