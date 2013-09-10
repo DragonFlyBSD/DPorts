@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-C3-Adopt-NEXT
-# Date created:	   18 Jun 2009
-# Whom:		   Denis Pokataev <catone@cpan.org>
-#
-# $FreeBSD: ports/devel/p5-Class-C3-Adopt-NEXT/Makefile,v 1.7 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Denis Pokataev <catone@cpan.org>
+# $FreeBSD: devel/p5-Class-C3-Adopt-NEXT/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Class-C3-Adopt-NEXT
 PORTVERSION=	0.13
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::C3::Adopt::NEXT.3
 
