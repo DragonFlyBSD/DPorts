@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: databases/py-bsddb/Makefile 318353 2013-05-17 04:17:22Z rm $
+# $FreeBSD: databases/py-bsddb/Makefile 326659 2013-09-07 17:21:44Z sunpoet $
 
 PORTNAME=	bsddb
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -12,6 +12,8 @@ DISTFILES=	${PYTHON_DISTFILE}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Standard Python bindings to the Berkeley DB library
+
+PORTSCOUT=	ignore:1
 
 USE_BDB=	43+
 USE_PYTHON=	yes
