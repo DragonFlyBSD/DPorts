@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/policykit/Makefile 317815 2013-05-10 14:39:50Z kwm $
+# $FreeBSD: sysutils/policykit/Makefile 326013 2013-09-02 15:39:17Z bapt $
 #   $MCom: ports/sysutils/policykit/Makefile,v 1.22 2008/08/21 21:53:00 mezz Exp $
 
 PORTNAME=	policykit
@@ -18,7 +18,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 USERS=		polkit
 GROUPS=		polkit
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20 intlhack
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
