@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-HTTP-Session/Makefile,v 1.16 2013/01/14 15:19:58 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Session/Makefile 326139 2013-09-03 12:27:09Z az $
 
 PORTNAME=	HTTP-Session
 PORTVERSION=	0.48
@@ -24,7 +24,8 @@ TEST_DEPENDS=	\
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires \
 	p5-Test-Memory-Cycle>0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::Session.3 \
 		HTTP::Session::State::Cookie.3 \
