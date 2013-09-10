@@ -2,7 +2,7 @@
 # Date created:		20 Jan 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Engine/Makefile,v 1.20 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Engine/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	HTTP-Engine
@@ -31,7 +31,8 @@ TEST_DEPENDS=	\
 	p5-IO-stringy>0:${PORTSDIR}/devel/p5-IO-stringy \
 	p5-MouseX-Types>=0.05:${PORTSDIR}/devel/p5-MouseX-Types
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::Engine.3 \
 		HTTP::Engine::Cookbook.3 \
