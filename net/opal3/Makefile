@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@freebsd.org>
-# $FreeBSD: net/opal3/Makefile 316616 2013-04-26 14:36:05Z ak $
+# $FreeBSD: net/opal3/Makefile 326142 2013-09-03 12:50:18Z bapt $
 
 PORTNAME=	opal3
 PORTVERSION=	3.6.6
@@ -22,8 +22,7 @@ WRKSRC=		${WRKDIR}/opal-${PORTVERSION}
 
 USE_GCC=	any
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 #MAKE_JOBS_SAFE=	yes
