@@ -1,5 +1,5 @@
 # Created by: Warner Losh <imp@FreeBSD.org>
-# $FreeBSD: devel/p5-Acme-Damn/Makefile 314061 2013-03-13 11:01:26Z bapt $
+# $FreeBSD: devel/p5-Acme-Damn/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	Acme-Damn
 PORTVERSION=	0.05
@@ -13,7 +13,8 @@ COMMENT=	Unblessing perl objects
 RUN_DEPENDS=	p5-Test-Exception>=0.29:${PORTSDIR}/devel/p5-Test-Exception
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3 += Acme::Damn.3
 
