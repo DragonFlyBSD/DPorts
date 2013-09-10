@@ -1,5 +1,5 @@
 # Created by: verm
-# $FreeBSD: editors/ssed/Makefile 317474 2013-05-06 07:01:48Z bapt $
+# $FreeBSD: editors/ssed/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	sed
 PORTVERSION=	3.62
@@ -19,8 +19,8 @@ MAN1=		ssed.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
+USES+=		gettext iconv
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
