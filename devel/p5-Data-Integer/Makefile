@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Data-Integer
-# Date created:				25 Mar 2009
-# Whom:					brix@FreeBSD.org
-#
-# $FreeBSD: ports/devel/p5-Data-Integer/Makefile,v 1.3 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: brix@FreeBSD.org
+# $FreeBSD: devel/p5-Data-Integer/Makefile 326823 2013-09-09 17:31:07Z az $
 
 PORTNAME=	Data-Integer
 PORTVERSION=	0.004
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	brix@FreeBSD.org
 COMMENT=	Perl module for details of the native integer data type
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Data::Integer.3
 
