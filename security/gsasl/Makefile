@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/gsasl/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/gsasl/Makefile 325745 2013-08-31 00:11:06Z bapt $
 
 PORTNAME=	gsasl
 PORTVERSION=	1.8.0
@@ -16,9 +16,8 @@ LIB_DEPENDS=	idn.17:${PORTSDIR}/dns/libidn \
 		gnutls.26:${PORTSDIR}/security/gnutls \
 		ntlm.0:${PORTSDIR}/security/libntlm
 
-USES=		charsetfix
-USE_GNOME=	gnomehack pkgconfig
-USE_PERL5_BUILD=	yes
+USES=		charsetfix pathfix perl5 pkgconfig
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
