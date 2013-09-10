@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ha
-# Date created:         24 Jan 1995
-# Whom:                 ache
-#
-# $FreeBSD: ports/archivers/ha/Makefile,v 1.27 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: archivers/ha/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	ha
 PORTVERSION=	0.999b
@@ -22,7 +18,7 @@ NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/ha
 MAKEFILE=	makefile.nix
 ALL_TARGET=	ha
-USE_GMAKE=	yes
+USES=		gmake
 
 post-patch:
 	@${REINPLACE_CMD} 's,<malloc.h>,<stdlib.h>,' \
