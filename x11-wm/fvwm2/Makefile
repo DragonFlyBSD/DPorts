@@ -1,9 +1,9 @@
 # Created by: peter
-# $FreeBSD: x11-wm/fvwm2/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: x11-wm/fvwm2/Makefile 326395 2013-09-05 13:21:52Z madpilot $
 
 PORTNAME=	fvwm
 PORTVERSION=	2.6.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		http://www.fvwm.org/generated/icon_download/
@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	X_CFLAGS=-I${LOCALBASE}/include
 CONFIGURE_ARGS= --mandir=${MANPREFIX}/man
 USE_AUTOTOOLS=	autoconf
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_XORG=	xpm xft
 USE_BZIP2=	yes
 WANT_GNOME=	yes
