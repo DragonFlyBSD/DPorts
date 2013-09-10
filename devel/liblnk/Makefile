@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/liblnk/Makefile 324836 2013-08-17 08:48:01Z antoine $
+# $FreeBSD: devel/liblnk/Makefile 325779 2013-08-31 08:21:32Z antoine $
 
 PORTNAME=	liblnk
-PORTVERSION=	20130815
+PORTVERSION=	20130829
 CATEGORIES=	devel
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSQmluVC1YeDVvZWM/ \
 		LOCAL/antoine
