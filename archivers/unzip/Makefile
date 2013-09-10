@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: archivers/unzip/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: archivers/unzip/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	unzip
 PORTVERSION=	6.0
@@ -48,7 +48,7 @@ PATCHFILES+=		unzip60-alt-iconv-utf8.patch
 PATCH_DIST_STRIP+=	-p1
 USES=			iconv
 CFLAGS+=		-I${LOCALBASE}/include -DNATIVE
-MAKE_ARGS+=		LFLAGS1="-L${LOCALBASE}/lib -liconv"
+MAKE_ARGS+=		LFLAGS1="-L${LOCALBASE}/lib ${ICONV_LIB}"
 .endif
 
 MAKE_ENV=	LOCAL_UNZIP="${LOCAL_UNZIP}" \
