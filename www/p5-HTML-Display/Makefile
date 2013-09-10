@@ -2,7 +2,7 @@
 # Date created:				24 Oct 2007
 # Whom:					Rong-En Fan <rafan@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTML-Display/Makefile,v 1.4 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Display/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	HTML-Display
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-HTML-TokeParser-Simple>=2:${PORTSDIR}/www/p5-HTML-TokeParser-Sim
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-Harness>=2.30:${PORTSDIR}/devel/p5-Test-Harness
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::Display.3 \
 	HTML::Display::Common.3 \
