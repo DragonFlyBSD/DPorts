@@ -2,7 +2,7 @@
 # Date created:                14 June 2003
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: palm/synce-librapi2/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: palm/synce-librapi2/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME=	librapi2
 PORTVERSION=	0.14
@@ -19,10 +19,9 @@ CONFLICTS=	popular-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix iconv
+USES=		pathfix iconv pkgconfig
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--with-libiconv="${LOCALBASE}" \
-			--with-libsynce="${LOCALBASE}"
+CONFIGURE_ARGS=	${ICONV_CONFIGURE_BASE} --with-libsynce="${LOCALBASE}"
 
 .include <bsd.port.pre.mk>
 
