@@ -2,7 +2,7 @@
 # Date created:				18 June 1997
 # Whom:					koshy@india.hp.com
 #
-# $FreeBSD: ports/www/mhonarc/Makefile,v 1.47 2012/11/17 06:02:39 svnexp Exp $
+# $FreeBSD: www/mhonarc/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	mhonarc
@@ -17,7 +17,7 @@ MAINTAINER=	kerndtr@kerndt.com
 COMMENT=	WWW front end for mail archives
 
 USE_BZIP2=	Yes
-USE_PERL5=	Yes
+USES=		perl5
 NO_BUILD=	Yes
 
 MAN1=	mhonarc.1 mha-dbedit.1 mha-dbrecover.1 mha-decode.1
