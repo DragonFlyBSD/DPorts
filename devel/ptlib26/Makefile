@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@freebsd.org>
-# $FreeBSD: devel/ptlib26/Makefile 314833 2013-03-21 09:52:24Z kwm $
+# $FreeBSD: devel/ptlib26/Makefile 326035 2013-09-02 17:06:54Z bapt $
 
 PORTNAME=	ptlib
 PORTVERSION=	2.6.7
@@ -18,8 +18,7 @@ LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 CONFLICTS=	pwlib-1.* ptlib-2.4.* ptlib-2.8.*
 
 USE_BZIP2=	yes
-USES=		bison
-USE_GMAKE=	yes
+USES=		bison gmake pkgconfig
 GNU_CONFIGURE=	yes
 WANT_GNOME=	yes
 USE_OPENSSL=	yes
