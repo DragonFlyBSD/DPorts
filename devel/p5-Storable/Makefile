@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Storable/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Storable/Makefile 326754 2013-09-08 16:17:13Z tobez $
 
 PORTNAME=	Storable
-PORTVERSION=	2.39
+PORTVERSION=	2.45
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
