@@ -2,7 +2,7 @@
 # Date created:				2007-05-07
 # Whom:				Wu Chin-Hao <wchunhao@cs.nctu.edu.tw>
 #
-# $FreeBSD: ports/sysutils/snap/Makefile,v 1.4 2012/11/17 06:01:46 svnexp Exp $
+# $FreeBSD: sysutils/snap/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	snap
@@ -15,7 +15,8 @@ MAINTAINER=	wchunhao@cs.nctu.edu.tw
 COMMENT=	Tools for periodic and manual management of UFS2 snapshots
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN8=		snap.8
 
