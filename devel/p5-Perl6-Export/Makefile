@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Perl6-Export
-# Date created:				21 Oct 2004
-# Whom:					Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-#
-# $FreeBSD: ports/devel/p5-Perl6-Export/Makefile,v 1.7 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
+# $FreeBSD: devel/p5-Perl6-Export/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	Perl6-Export
 PORTVERSION=	0.07
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	Implements the Perl 6 'is export(...)' trait
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Perl6::Export.3
 
