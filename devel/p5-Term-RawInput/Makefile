@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-RawInput/Makefile 321552 2013-06-22 08:22:38Z culot $
+# $FreeBSD: devel/p5-Term-RawInput/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	Term-RawInput
 PORTVERSION=	1.15
@@ -14,7 +14,8 @@ COMMENT=	Drop-in replacement for <STDIN> with handling of non-standard keys
 BUILD_DEPENDS=	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Term::RawInput.3
 
