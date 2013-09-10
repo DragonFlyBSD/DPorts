@@ -2,7 +2,7 @@
 # Date created:		2011-03-29
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/rubygem-bzip2/Makefile,v 1.2 2012/11/17 05:54:23 svnexp Exp $
+# $FreeBSD: archivers/rubygem-bzip2/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	bzip2
