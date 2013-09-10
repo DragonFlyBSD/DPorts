@@ -1,5 +1,5 @@
 # Created by: Mons Anderson <mons@cpan.org>
-# $FreeBSD: devel/p5-Object-Event/Makefile 314048 2013-03-13 09:38:54Z bapt $
+# $FreeBSD: devel/p5-Object-Event/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	Object-Event
 PORTVERSION=	1.220
@@ -14,7 +14,8 @@ COMMENT=	A class that provides an event callback interface
 RUN_DEPENDS=	p5-AnyEvent>=3.5:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Object::Event.3
 
