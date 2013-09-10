@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-JE/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: www/p5-JE/Makefile 325984 2013-09-02 12:52:42Z az $
 
 PORTNAME=	JE
 PORTVERSION=	0.060
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-TimeDate>0:${PORTSDIR}/devel/p5-TimeDate \
 		p5-Tie-RefHash-Weak>0:${PORTSDIR}/devel/p5-Tie-RefHash-Weak
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		JE::Object.3 JE::_FieldHash.3 JE::String.3 \
 		JE::Object::Boolean.3 JE::Object::Number.3 \
