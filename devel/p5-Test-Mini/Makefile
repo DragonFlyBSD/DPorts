@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Mini
-# Date created:		2011-01-13
-# Whom:			Kurt Lidl <kurt.lidl@cello.com>
-#
-# $FreeBSD: ports/devel/p5-Test-Mini/Makefile,v 1.5 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Kurt Lidl <kurt.lidl@cello.com>
+# $FreeBSD: devel/p5-Test-Mini/Makefile 326810 2013-09-09 14:13:20Z az $
 
 PORTNAME=	Test-Mini
 PORTVERSION=	v1.1.3
@@ -26,7 +22,8 @@ BUILD_DEPENDS=	p5-Data-Inspect>=0.03:${PORTSDIR}/devel/p5-Data-Inspect \
 		p5-namespace-clean>=0.14:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Mini.3 \
 	Test::Mini::Assertions.3 \
