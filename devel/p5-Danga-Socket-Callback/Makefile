@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: devel/p5-Danga-Socket-Callback/Makefile 317213 2013-05-03 14:36:20Z culot $
+# $FreeBSD: devel/p5-Danga-Socket-Callback/Makefile 326802 2013-09-09 11:01:46Z az $
 
 PORTNAME=	Danga-Socket-Callback
 PORTVERSION=	0.013
@@ -18,7 +18,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Danga-Socket>=0:${PORTSDIR}/devel/p5-Danga-Socket
 RUN_DEPENDS=	p5-Danga-Socket>=0:${PORTSDIR}/devel/p5-Danga-Socket
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Danga::Socket::Callback.3
 
