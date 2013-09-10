@@ -1,5 +1,5 @@
-# Created by: jmz
-# $FreeBSD: graphics/netpbm/Makefile 317976 2013-05-12 20:37:50Z dinoex $
+# Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
+# $FreeBSD: graphics/netpbm/Makefile 325849 2013-09-01 11:24:19Z danfe $
 
 PORTNAME=	netpbm
 PORTVERSION=	10.35.89
@@ -20,10 +20,7 @@ LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff \
 		xml2:${PORTSDIR}/textproc/libxml2
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
-MAKE_JOBS_UNSAFE=	yes
-
-USE_PERL5=	yes
-USE_GMAKE=	yes
+USES=		gmake perl5
 CFLAGS+=	-DPNG_DEPSTRUCT= -Iutil
 MAKE_ENV=	LN="${LN}" RANLIB="${RANLIB}"
 MAKEFILE=	GNUmakefile
