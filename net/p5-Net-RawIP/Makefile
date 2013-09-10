@@ -2,7 +2,7 @@
 # Date created:				18 February 1999
 # Whom:                			Dima Sivachenko <dima@chg.ru>
 #
-# $FreeBSD: ports/net/p5-Net-RawIP/Makefile,v 1.22 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-RawIP/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Net-RawIP
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	A perl module to manipulate raw IP packets
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Net::RawIP.3 Net::RawIP::libpcap.3
 
 .include <bsd.port.mk>
