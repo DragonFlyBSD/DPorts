@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-orz
-# Date created:				2006-06-08
-# Whom:					Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-orz/Makefile,v 1.9 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: devel/p5-orz/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	orz
 PORTVERSION=	0.13
@@ -18,7 +14,8 @@ COMMENT=	A method of annotation as /* */ in perl
 BUILD_DEPENDS=	p5-Module-Compile>=0.21:${PORTSDIR}/devel/p5-Module-Compile
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		orz.3
 
