@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-GUID/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Data-GUID/Makefile 326738 2013-09-08 14:56:37Z tobez $
 
 PORTNAME=	Data-GUID
-PORTVERSION=	0.046
+PORTVERSION=	0.047
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
