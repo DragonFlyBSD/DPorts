@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/aria2/Makefile 325997 2013-09-02 13:54:45Z bapt $
 
 PORTNAME=	aria2
 PORTVERSION=	1.17.1
@@ -27,7 +27,7 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	libxml2
 USE_OPENSSL=	yes
 USE_XZ=		yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 
 MAN1=		aria2c.1
 MANLANG=	"" pt ru
