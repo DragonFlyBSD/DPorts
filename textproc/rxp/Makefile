@@ -2,7 +2,7 @@
 # Date created:		12 Jan 2001
 # Whom:			jkoshy
 #
-# $FreeBSD: ports/textproc/rxp/Makefile,v 1.8 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: textproc/rxp/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	rxp
