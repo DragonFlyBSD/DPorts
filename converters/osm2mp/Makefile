@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/osm2mp/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# $FreeBSD: converters/osm2mp/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	osm2mp
 PORTVERSION=	r475
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML \
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
