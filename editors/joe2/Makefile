@@ -2,7 +2,7 @@
 # Date created:		01 Jul 1995
 # Whom:			torstenb@FreeBSD.org
 #
-# $FreeBSD: editors/joe2/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: editors/joe2/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	joe
@@ -21,7 +21,7 @@ CONFLICTS=	joe-3*
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=		iconv
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -liconv"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 ALL_TARGET=	${PORTNAME}
