@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/libGLU/Makefile 321462 2013-06-21 11:55:01Z zeising $
+# $FreeBSD: graphics/libGLU/Makefile 326020 2013-09-02 16:04:20Z bapt $
 
 PORTNAME=	libGLU
 PORTVERSION=	9.0.0
@@ -11,7 +11,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	OpenGL utility library
 
 USE_BZIP2=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GL=		gl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-static
