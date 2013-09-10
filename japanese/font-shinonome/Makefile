@@ -1,9 +1,5 @@
-# New ports collection makefile for: shinonome
-# Date created:		June 15 2001
-# Whom:			Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/font-shinonome/Makefile,v 1.21 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
+# $FreeBSD: japanese/font-shinonome/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	font-shinonome
 PORTVERSION=	0.9.11.p1
@@ -53,6 +49,10 @@ FONTNAMES=\
 	shnmk16      shnmk16b     shnmk16i     shnmk16bi     \
 	shnmk16min   shnmk16minb  shnmk16mini  shnmk16minbi
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 do-build:
 	@${ECHO_CMD} -n "Compressing PCF fonts"
 	@cd ${WRKSRC} && for F in ${FONTNAMES}; do \
@@ -71,7 +71,7 @@ do-install:
 
 post-install:
 	${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif

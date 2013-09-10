@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/japanese/font-shinonome/pkg-plist,v 1.5 2012/11/17 05:58:34 svnexp Exp $
+@comment $FreeBSD: japanese/font-shinonome/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%DATADIR%%/shnm6x12a.pcf.gz
 %%DATADIR%%/shnm6x12ab.pcf.gz
 %%DATADIR%%/shnm6x12abi.pcf.gz
