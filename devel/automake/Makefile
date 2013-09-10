@@ -1,9 +1,5 @@
-# New ports collection makefile for:	automake
-# Date created:		5th December 2006
-# Whom:			Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: devel/automake/Makefile 323088 2013-07-16 05:42:36Z ade $
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: devel/automake/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	automake
 PORTVERSION=	1.14
@@ -22,7 +18,7 @@ USE_AUTOTOOLS=	autoconf:env
 BUILD_VERSION=	1.14
 PLIST_SUB=	BUILD_VERSION=${BUILD_VERSION}
 USE_XZ=		yes
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-suffix=-${BUILD_VERSION}
 CONFIGURE_ENV+=	MAKEINFO="makeinfo --no-split"
