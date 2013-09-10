@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/avahi-app/Makefile 323218 2013-07-18 10:29:51Z kwm $
+# $FreeBSD: net/avahi-app/Makefile 326025 2013-09-02 16:21:38Z bapt $
 #   $MCom: ports/net/avahi-app/Makefile,v 1.25 2012/09/01 23:02:11 mezz Exp $
 
 PORTNAME=	avahi
@@ -26,7 +26,7 @@ USERS?=		${PORTNAME}
 GROUPS?=	${USERS}
 
 USE_GNOME+=	ltverhack glib20 intltool
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME_SUBR=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
