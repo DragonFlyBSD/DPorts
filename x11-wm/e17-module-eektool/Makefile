@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-module-eektool/Makefile 318126 2013-05-13 19:56:09Z gblach $
+# $FreeBSD: x11-wm/e17-module-eektool/Makefile 325734 2013-08-30 23:31:49Z bapt $
 
 PORTNAME=	eektool
 PORTVERSION=	20130510
@@ -17,9 +17,8 @@ DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_EFL=	edje libtool_hack modarch_hack
-USE_GNOME=	pkgconfig
 
 .include <bsd.port.options.mk>
 
