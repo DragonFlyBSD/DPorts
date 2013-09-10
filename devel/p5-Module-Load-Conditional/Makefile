@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Load-Conditional/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Module-Load-Conditional/Makefile 325995 2013-09-02 13:52:02Z tobez $
 
 PORTNAME=	Module-Load-Conditional
-PORTVERSION=	0.54
+PORTVERSION=	0.58
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
