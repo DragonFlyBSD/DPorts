@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Config-INI-Simple
-# Date created:		2006-07-11
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Config-INI-Simple/Makefile,v 1.7 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Config-INI-Simple/Makefile 326656 2013-09-07 16:51:08Z az $
 
 PORTNAME=	Config-INI-Simple
 PORTVERSION=	0.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Simple reading and writing from an INI file
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::INI::Simple.3
 
