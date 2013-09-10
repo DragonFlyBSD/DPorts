@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: misc/p5-I18N-Charset/Makefile 319456 2013-05-31 01:44:38Z miwi $
+# $FreeBSD: misc/p5-I18N-Charset/Makefile 325955 2013-09-02 09:22:47Z az $
 
 PORTNAME=	I18N-Charset
 PORTVERSION=	1.39.4
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-IO-Capture>=0:${PORTSDIR}/devel/p5-IO-Capture
 RUN_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 		p5-Unicode-MapUTF8>=0:${PORTSDIR}/converters/p5-Unicode-MapUTF8
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		I18N::Charset.3
 
