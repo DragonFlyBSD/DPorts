@@ -1,8 +1,8 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: net/p5-Net-Patricia/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Patricia/Makefile 326270 2013-09-04 11:50:29Z tobez $
 
 PORTNAME=	Net-Patricia
-PORTVERSION=	1.20
+PORTVERSION=	1.21
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
