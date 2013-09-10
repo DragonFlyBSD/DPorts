@@ -2,7 +2,7 @@
 # Date created:				27 March 2004
 # Whom:					Pavel Novikov
 #
-# $FreeBSD: ports/sysutils/jps/Makefile,v 1.5 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: sysutils/jps/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	jps
@@ -18,7 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN1=		jps.1
 MANCOMPRESSED=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/jps
 
 .include <bsd.port.mk>
