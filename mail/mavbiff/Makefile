@@ -2,7 +2,7 @@
 # Date created:        25 December 2001
 # Whom:                Edwin Groothuis (edwin@mavetju.org)
 #
-# $FreeBSD: ports/mail/mavbiff/Makefile,v 1.14 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mavbiff/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	mavbiff
@@ -15,7 +15,7 @@ MAINTAINER=	edwin@mavetju.org
 COMMENT=	Small screen with active mailboxes and bring-to-front-facility
 
 USE_GNOME=      gtk12
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		mavbiff.1
 
