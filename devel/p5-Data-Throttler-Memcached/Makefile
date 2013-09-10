@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-Throttler-Memcached
-# Date created:		2008-01-30
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: devel/p5-Data-Throttler-Memcached/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: devel/p5-Data-Throttler-Memcached/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	Data-Throttler-Memcached
 PORTVERSION=	0.00003
@@ -22,7 +18,8 @@ RUN_DEPENDS=	p5-Cache-Memcached-Managed>=0:${PORTSDIR}/databases/p5-Cache-Memcac
 		p5-Data-Throttler>=0:${PORTSDIR}/devel/p5-Data-Throttler \
 		p5-Class-Accessor>0:${PORTSDIR}/devel/p5-Class-Accessor
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Throttler::Memcached.3 \
 		Data::Throttler::BucketChain::Memcached.3
