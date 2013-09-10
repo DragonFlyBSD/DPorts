@@ -1,5 +1,5 @@
 # Created by: obrien@cs.ucdavis.edu
-# $FreeBSD: news/tin/Makefile 320521 2013-06-11 02:18:11Z miwi $
+# $FreeBSD: news/tin/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	tin
 PORTVERSION=	2.0.1
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=--with-nntp-default-server=news \
 		--with-pcre=yes \
 		--with-screen=${TIN_SCREEN} \
 		--enable-break-long-lines \
-		--with-libiconv-prefix=${LOCALBASE} \
+		${ICONV_CONFIGURE_ARG} \
 		--with-mime-default-charset=US-ASCII \
 		--enable-ipv6
 MAKE_ARGS+=	MAKE=${GMAKE}
