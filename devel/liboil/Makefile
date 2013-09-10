@@ -1,10 +1,6 @@
-# New ports collection makefile for:	liboil
-# Date created:				Nov 24, 2004
-# Whom:					ijliao
-#
-# $FreeBSD: ports/devel/liboil/Makefile,v 1.44 2012/11/17 05:55:55 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: devel/liboil/Makefile 326333 2013-09-04 23:08:39Z bapt $
 #    $MCom: ports/devel/liboil/Makefile,v 1.7 2008/03/23 06:57:57 marcus Exp $
-#      $Id: Makefile 23 2006-10-25 14:24:32Z buhnux $
 
 PORTNAME=	liboil
 PORTVERSION=	0.3.17
@@ -17,15 +13,16 @@ COMMENT=	Library of optimized inner loops
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GCC=	any
-USE_GNOME=	pkgconfig gnomehack ltverhack
+USES=		pathfix pkgconfig
+USE_GNOME=	ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--disable-glib
 CFLAGS:=	${CFLAGS:N-O*} -O2
 
-.if ${CC:T:M*clang*}
+_COMPILER_VERSION!=	${CC} --version
+.if ${_COMPILER_VERSION:Mclang}
 CFLAGS+=	-fheinous-gnu-extensions
 .endif
 
