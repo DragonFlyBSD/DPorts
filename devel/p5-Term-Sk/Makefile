@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Term-Sk/Makefile,v 1.3 2013/01/13 20:41:32 svnexp Exp $
+# $FreeBSD: devel/p5-Term-Sk/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Term-Sk
 PORTVERSION=	0.13
@@ -13,7 +13,8 @@ COMMENT=	Perl extension to display a progress indicator on a terminal
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Term::Sk.3
 
