@@ -1,8 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/science/getdp/Makefile,v 1.38 2012/11/17 06:00:57 svnexp Exp $
+# $FreeBSD: science/getdp/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	getdp
 PORTVERSION=	2.2.1
+PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	http://www.geuz.org/getdp/src/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
@@ -11,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	A rather general finite element solver using mixed finite elements
 
-LIB_DEPENDS=	gsl.16:${PORTSDIR}/math/gsl	\
+LIB_DEPENDS=	gsl:${PORTSDIR}/math/gsl	\
 		lapack.4:${PORTSDIR}/math/lapack
 
 USE_GMAKE=	yes
