@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 322372 2013-07-06 09:04:54Z ohauer $
+# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 326035 2013-09-02 17:06:54Z bapt $
 
 PORTNAME=	monitor-core
 PORTVERSION=	3.4.0
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	GMETAD
 OPTIONS_DEFAULT=	GMETAD
 GMETAD_DESC=	include gmetad
 
+USES=		pkgconfig
 USE_PYTHON=	yes
 USE_AUTOTOOLS=	libtool
 LIBTOOLFILES=	configure libmetrics/configure
