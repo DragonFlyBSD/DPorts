@@ -2,7 +2,7 @@
 # Date created:				28 Aug 2007
 # Whom:					Shinsuke Matsui <smatsui@karashi.org>
 #
-# $FreeBSD: ports/www/p5-HTML-Selector-XPath/Makefile,v 1.9 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Selector-XPath/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	HTML-Selector-XPath
@@ -16,7 +16,8 @@ COMMENT=	HTML::Selector::XPath - CSS Selector to XPath compiler
 
 TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Selector::XPath.3
 
