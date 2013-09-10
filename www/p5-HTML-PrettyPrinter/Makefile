@@ -2,7 +2,7 @@
 # Date created:				Wed Mar  1 15:41:13 EST 2006
 # Whom:					Vivek Khera <vivek@khera.org>
 #
-# $FreeBSD: ports/www/p5-HTML-PrettyPrinter/Makefile,v 1.5 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-PrettyPrinter/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	HTML-PrettyPrinter
@@ -17,7 +17,8 @@ COMMENT=	Generate nice HTML files from HTML syntax trees
 BUILD_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::PrettyPrinter.3
 
