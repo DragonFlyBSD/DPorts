@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/pangomm/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: x11-toolkits/pangomm/Makefile 326032 2013-09-02 16:55:04Z bapt $
 #   $MCom: ports/trunk/x11-toolkits/pangomm/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	pangomm
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=		gmake pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	cairomm glibmm pango
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
