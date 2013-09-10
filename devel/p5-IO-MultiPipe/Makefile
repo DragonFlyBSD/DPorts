@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-MultiPipe
-# Date created:		2009-01-14
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports/devel/p5-IO-MultiPipe/Makefile,v 1.4 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: devel/p5-IO-MultiPipe/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	IO-MultiPipe
 PORTVERSION=	0.0.0
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Check for errors when running a command through multiple pipes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::MultiPipe.3
 
