@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Module::Versions
-# Date created:		03 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Module-Versions/Makefile,v 1.2 2012/11/17 05:56:22 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Module-Versions/Makefile 326822 2013-09-09 16:55:31Z az $
 
 PORTNAME=	Module-Versions
 PORTVERSION=	0.02
@@ -15,7 +10,8 @@ MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to handle versions of loaded modules
 
 USE_ZIP=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Module::Versions.3
 
