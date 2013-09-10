@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: textproc/freexl/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/freexl/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	freexl
 DISTVERSION=	1.0.0e
@@ -14,7 +14,7 @@ USE_GMAKE=	yes
 USES=		iconv
 
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	yes
 
