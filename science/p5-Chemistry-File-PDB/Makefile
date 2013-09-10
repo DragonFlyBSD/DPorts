@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Chemistry-File-PDB
-# Date created:				17 May, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/science/p5-Chemistry-File-PDB/Makefile,v 1.3 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: science/p5-Chemistry-File-PDB/Makefile 326873 2013-09-10 08:26:53Z az $
 
 PORTNAME=	Chemistry-File-PDB
 PORTVERSION=	0.23
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Chemistry-Mol>=0.37:${PORTSDIR}/science/p5-Chemistry-Mol \
 		p5-Chemistry-MacroMol>=0.06:${PORTSDIR}/science/p5-Chemistry-MacroMol
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Chemistry::File::PDB.3
 
