@@ -2,7 +2,7 @@
 # Date created:				28 July 2007
 # Whom:					Sergey Matveychuk <sem@FreeBSD.org>
 #
-# $FreeBSD: net/p5-Net-Ping/Makefile 314548 2013-03-18 10:21:48Z sem $
+# $FreeBSD: net/p5-Net-Ping/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-Ping
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sem@FreeBSD.org
 COMMENT=	A perl module to check a remote host for reachability
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Ping.3
 
