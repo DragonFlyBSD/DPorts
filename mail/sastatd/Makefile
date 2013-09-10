@@ -2,7 +2,7 @@
 # Date created:				2010-01-12
 # Whom:					Oleg A. Mamontov <oleg@mamontov.net>
 #
-# $FreeBSD: ports/mail/sastatd/Makefile,v 1.5 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/sastatd/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=		sastatd
@@ -22,7 +22,8 @@ BUILD_DEPENDS=		p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any \
 
 RUN_DEPENDS:=		${BUILD_DEPENDS}
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 SASTATD_DBDIR?=		/var/db/sastatd
 SASTATD_RUNDIR?=	/var/run/sastatd
