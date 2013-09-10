@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Chemistry-Isotope
-# Date created:		2010-03-10
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: ports/science/p5-Chemistry-Isotope/Makefile,v 1.4 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: science/p5-Chemistry-Isotope/Makefile 326873 2013-09-10 08:26:53Z az $
 
 PORTNAME=	Chemistry-Isotope
 PORTVERSION=	0.11
@@ -17,6 +13,7 @@ COMMENT=	Table of the isotopes exact mass data
 
 MAN3=	Chemistry::Isotope.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
