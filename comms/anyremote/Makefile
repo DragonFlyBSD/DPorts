@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: comms/anyremote/Makefile 324127 2013-08-01 21:11:57Z bapt $
+# $FreeBSD: comms/anyremote/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	anyremote
 PORTVERSION=	6.3.1
@@ -11,10 +11,11 @@ COMMENT=	Remote control service over Bluetooth, infrared, or TCP/IP networking
 
 LICENSE=	GPLv2
 
+USES=		pkgconfig
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 OPTIONS_DEFINE=	DOCS DBUS X11
 OPTIONS_DEFAULT=	DBUS X11
