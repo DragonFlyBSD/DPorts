@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/colormake/Makefile,v 1.2 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: devel/colormake/Makefile 326822 2013-09-09 16:55:31Z az $
 
 PORTNAME=	colormake
 PORTVERSION=	0.9
@@ -12,7 +12,8 @@ RUN_DEPENDS=	gmake:${PORTSDIR}/devel/gmake \
 		bash:${PORTSDIR}/shells/bash
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 PLIST_FILES=	bin/colormake bin/colormake.pl bin/colormake-short bin/clmake \
 		bin/clmake-short
 
