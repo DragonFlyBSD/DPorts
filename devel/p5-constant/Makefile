@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: devel/p5-constant/Makefile 321215 2013-06-18 19:07:05Z tj $
+# $FreeBSD: devel/p5-constant/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	constant
 PORTVERSION=	1.27
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tj@FreeBSD.org
 COMMENT=	Perl pragma to declare constants
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		constant.3
 
