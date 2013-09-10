@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Devel-Autoflush
-# Date created:		2011-02-04
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Devel-Autoflush/Makefile,v 1.4 2012/11/17 05:56:13 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Devel-Autoflush/Makefile 326802 2013-09-09 11:01:46Z az $
 
 PORTNAME=	Devel-Autoflush
 PORTVERSION=	0.05
@@ -20,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		Devel::Autoflush.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
