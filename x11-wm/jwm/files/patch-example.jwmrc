@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-wm/jwm/files/patch-example.jwmrc,v 1.2 2012/11/17 06:03:43 svnexp Exp $
+$FreeBSD: x11-wm/jwm/files/patch-example.jwmrc 300897 2012-07-14 14:29:18Z beat $
 
 --- example.jwmrc.orig
 +++ example.jwmrc

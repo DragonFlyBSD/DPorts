@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: ports/x11-wm/jwm/Makefile,v 1.30 2012/12/17 10:00:43 svnexp Exp $
+# $FreeBSD: x11-wm/jwm/Makefile 326020 2013-09-02 16:04:20Z bapt $
 
 PORTNAME=	jwm
 PORTVERSION=	2.0.1
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
+USES=		pkgconfig
 USE_XORG=	xpm
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
