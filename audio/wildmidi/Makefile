@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: audio/wildmidi/Makefile 319227 2013-05-27 12:45:20Z bapt $
+# $FreeBSD: audio/wildmidi/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	wildmidi
 PORTVERSION=	0.2.3.5
@@ -16,7 +16,7 @@ LICENSE_COMB=	multi
 
 MAKE_JOBS_UNSAFE=	yes
 
-USE_GMAKE=	yes
+UDES=		gmake
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
