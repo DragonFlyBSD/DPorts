@@ -1,9 +1,5 @@
-# New ports collection makefile for:	argp-standalone
-# Date created:				1 March 2004
-# Whom:					Sergey Matveychuk <sem@ciam.ru>
-#
-# $FreeBSD: devel/argp-standalone/Makefile 323088 2013-07-16 05:42:36Z ade $
-#
+# Created by: Sergey Matveychuk <sem@ciam.ru>
+# $FreeBSD: devel/argp-standalone/Makefile 326332 2013-09-04 23:00:51Z bapt $
 
 PORTNAME=	argp-standalone
 PORTVERSION=	1.3
@@ -16,7 +12,7 @@ MASTER_SITE_SUBDIR=	sem
 MAINTAINER=	sem@FreeBSD.org
 COMMENT=	Standalone version of arguments parsing functions from GLIBC
 
-USE_GCC=	any
+USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	aclocal autoconf automake libtool
 AUTOMAKE_ARGS=	-c -a
