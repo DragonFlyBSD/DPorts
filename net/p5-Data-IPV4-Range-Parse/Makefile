@@ -2,7 +2,7 @@
 # Date created:		2010-11-10
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Data-IPV4-Range-Parse/Makefile,v 1.3 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-Data-IPV4-Range-Parse/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Data-IPV4-Range-Parse
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Perl extension parsing IPv4 ranges
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::IPV4::Range::Parse.3
 
