@@ -2,7 +2,7 @@
 # Date created:		2011-06-24
 # Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/p5-AnyEvent-SNMP/Makefile,v 1.5 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-AnyEvent-SNMP/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	AnyEvent-SNMP
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-AnyEvent>=5.23:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-common-sense>=3.4:${PORTSDIR}/devel/p5-common-sense
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::SNMP.3
 
