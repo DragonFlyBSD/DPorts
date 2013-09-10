@@ -1,9 +1,8 @@
-# Ports collection makefile for:	p5-Pod-Markdown
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 325947 2013-09-02 07:47:38Z az $
 
 PORTNAME=	Pod-Markdown
-PORTVERSION=	1.320000
+PORTVERSION=	1.322000
 CATEGORIES=	textproc devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
