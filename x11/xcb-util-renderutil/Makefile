@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-renderutil/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xcb-util-renderutil/Makefile 326011 2013-09-02 15:26:23Z bapt $
 
 PORTNAME=	xcb-util-renderutil
 PORTVERSION=	0.3.8
@@ -12,7 +12,7 @@ LIB_DEPENDS=	xcb-util:${PORTSDIR}/x11/xcb-util
 #BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_XORG=	xcb xorg-macros
 USE_LDCONFIG=	yes
 #USE_XORG=	xau xdmcp
