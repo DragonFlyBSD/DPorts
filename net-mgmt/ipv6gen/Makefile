@@ -2,7 +2,7 @@
 # Date created:                         4 April 2005
 # Whom:                                 Vladimir Kotal <vlada@devnull.cz>
 #
-# $FreeBSD: ports/net-mgmt/ipv6gen/Makefile,v 1.6 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/ipv6gen/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	ipv6gen
@@ -17,7 +17,8 @@ COMMENT=	IPv6 prefix generator
 MAN1=	${PORTNAME}.1
 
 NO_BUILD=
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 PLIST_FILES=	bin/${PORTNAME} bin/check-overlap
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
