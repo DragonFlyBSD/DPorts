@@ -2,7 +2,7 @@
 # Date created:				May 7, 2009
 # Whom:					Masafumi NAKANE <max@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Shorten-Bitly/Makefile,v 1.7 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Shorten-Bitly/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	WWW-Shorten-Bitly
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-JSON-Any>=1.18:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-XML-Simple>=2.18:${PORTSDIR}/textproc/p5-XML-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		bitly_url.1
 MAN3=		WWW::Shorten::Bitly.3
