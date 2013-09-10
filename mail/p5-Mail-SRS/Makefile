@@ -2,7 +2,7 @@
 # Date created:        24 May 2004
 # Whom:                snowchyld
 #
-# $FreeBSD: ports/mail/p5-Mail-SRS/Makefile,v 1.10 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-SRS/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	Mail-SRS
@@ -28,6 +28,7 @@ MAN3=	Mail::SRS.3 \
 MAN1=	srs.1 \
 	srsd.1
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
