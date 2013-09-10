@@ -2,7 +2,7 @@
 # Date created:		4 April 2001
 # Whom:	      		Johann Visagie <johann@egenetics.com>
 #
-# $FreeBSD: ports/textproc/py-asv/Makefile,v 1.13 2012/11/17 06:02:17 svnexp Exp $
+# $FreeBSD: textproc/py-asv/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	asv
