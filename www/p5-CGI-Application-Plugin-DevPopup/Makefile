@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-DevPopup/Makefile,v 1.15 2013/01/21 10:16:12 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-DevPopup/Makefile 325974 2013-09-02 11:04:10Z az $
 
 PORTNAME=	CGI-Application-Plugin-DevPopup
 PORTVERSION=	1.08
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-CGI-Application>=4.01:${PORTSDIR}/www/p5-CGI-Application \
 		p5-IO-stringy>0:${PORTSDIR}/devel/p5-IO-stringy
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Application::Plugin::DevPopup.3 \
 	CGI::Application::Plugin::DevPopup::HTTPHeaders.3 \
