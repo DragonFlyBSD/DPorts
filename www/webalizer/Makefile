@@ -1,15 +1,15 @@
-# $FreeBSD: www/webalizer/Makefile 324460 2013-08-09 20:01:35Z dinoex $
+# $FreeBSD: www/webalizer/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	webalizer
-PORTVERSION=	2.23.5
-PORTREVISION=	6
+PORTVERSION=	2.23.8
+PORTREVISION=	0
 CATEGORIES+=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/:main \
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/geodb/:geodb \
 		ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/:main \
 		http://flags.blogpotato.de/zip/:flags
 PKGNAMESUFFIX?=	${WEBALIZER_SUFFIX}${PKGNAMESUFFIX2}
-DISTNAME=	${PORTNAME}-2.23-05-src
+DISTNAME=	${PORTNAME}-2.23-08-src
 DISTFILES=	${DISTNAME}.tgz:main
 
 MAINTAINER?=	dinoex@FreeBSD.org
@@ -129,7 +129,7 @@ USES+=			iconv
 #	see http://tyche.pu-toyama.ac.jp/~a-urasim/webalizer/
 EXTRA_PATCHES+=		${FILESDIR}/webalizer-a-urasim_2.patch
 CONFIGURE_ARGS+=	--enable-mininls
-CONFIGURE_ENV+=		LIBS="-L${LOCALBASE}/lib -liconv"
+CONFIGURE_ENV+=		LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 CFLAGS+=		-I${LOCALBASE}/include
 .endif
 
