@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-HTTP-Async/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-Async/Makefile 325576 2013-08-29 09:26:32Z tobez $
 
 PORTNAME=	HTTP-Async
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
