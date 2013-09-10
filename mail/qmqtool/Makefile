@@ -2,7 +2,7 @@
 # Date created:				Sat Apr 9 09:45:30 EDT 2005
 # Whom:					Matthew Will <mwill@spingen.com>
 #
-# $FreeBSD: ports/mail/qmqtool/Makefile,v 1.4 2012/11/17 05:59:13 svnexp Exp $
+# $FreeBSD: mail/qmqtool/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	qmqtool
@@ -18,7 +18,7 @@ COMMENT=	Tool to manipulate contents of a qmail queue
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/qmqtool ${PREFIX}/bin
