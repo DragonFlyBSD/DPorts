@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-ToIdentifier-EN/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-String-ToIdentifier-EN/Makefile 325531 2013-08-28 14:02:11Z sunpoet $
 
 PORTNAME=	String-ToIdentifier-EN
-PORTVERSION=	0.10
+PORTVERSION=	0.11
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
