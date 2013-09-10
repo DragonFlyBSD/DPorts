@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Prototyped/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Class-Prototyped/Makefile 325577 2013-08-29 09:27:40Z tobez $
 
 PORTNAME=	Class-Prototyped
-PORTVERSION=	1.11
+PORTVERSION=	1.13
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
