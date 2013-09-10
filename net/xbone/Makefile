@@ -2,7 +2,7 @@
 # Date created:         19 Jan 2001
 # Whom:                 Yu-Shun Wang <xbone@isi.edu>
 #
-# $FreeBSD: ports/net/xbone/Makefile,v 1.28 2012/11/17 06:00:25 svnexp Exp $
+# $FreeBSD: net/xbone/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	XBone
@@ -42,7 +42,7 @@ BUILD_DEPENDS=	p5-AppConfig>=0:${PORTSDIR}/devel/p5-AppConfig \
 USE_GMAKE=	yes
 #IS_INTERACTIVE=	yes
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_OPENLDAP=	yes
 
 INSTALL_TARGET=	node
