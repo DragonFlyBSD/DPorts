@@ -1,9 +1,9 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion16/Makefile.common 322371 2013-07-06 09:03:04Z ohauer $
+# $FreeBSD: devel/subversion16/Makefile.common 326073 2013-09-02 20:10:18Z ohauer $
 
 PORTNAME=	subversion
 PORTVERSION=	#please edit Makefile.inc for PORTVERSION, so ../svnmerge can stay in sync.
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES+=	devel
 MASTER_SITES=	http://subversion.tigris.org/downloads/:main \
 		http://svnbook.red-bean.com/en/1.5/:book
