@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/ecore-x11/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: x11/ecore-x11/Makefile 325997 2013-09-02 13:54:45Z bapt $
 
 PORTNAME=	x11
 PORTVERSION=	1.7.8
@@ -17,7 +17,7 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_EFL=	ecore libtool_hack
 USE_EFL_ECORE=	input
 USE_LDCONFIG=	yes
