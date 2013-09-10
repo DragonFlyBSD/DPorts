@@ -1,7 +1,7 @@
 # New ports collection makefile for:  Catalyst-Controller-ActionRole
 # Whom: mons
 # Date created: 07 December 2009
-# $FreeBSD: ports/www/p5-Catalyst-Controller-ActionRole/Makefile,v 1.8 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Controller-ActionRole/Makefile 325960 2013-09-02 09:44:14Z az $
 # Generated with portupload. Do not edit directly, please
 
 PORTNAME=	Catalyst-Controller-ActionRole
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.71001:${PORTSDIR}/www/p5-Catalyst-Runtime 
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Controller::ActionRole.3
 
