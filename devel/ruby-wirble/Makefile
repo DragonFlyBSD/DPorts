@@ -2,7 +2,7 @@
 # Date created:		09 Jan 2007
 # Whom:			Christopher Boumenot <boumenot@gmail.com>
 #
-# $FreeBSD: ports/devel/ruby-wirble/Makefile,v 1.6 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: devel/ruby-wirble/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	wirble
