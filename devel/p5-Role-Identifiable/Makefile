@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Role-Identifiable
-# Date created:				2011-09-19
-# Whom:					Geraud CONTINSOUZAS <geraud@gcu.info>
-#
-# $FreeBSD: ports/devel/p5-Role-Identifiable/Makefile,v 1.2 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
+# $FreeBSD: devel/p5-Role-Identifiable/Makefile 326725 2013-09-08 13:29:44Z az $
 
 PORTNAME=	Role-Identifiable
 PORTVERSION=	0.005
@@ -21,7 +17,8 @@ LICENSE_COMB=	dual
 RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Role::Identifiable::HasIdent.3 \
 	Role::Identifiable::HasTags.3
