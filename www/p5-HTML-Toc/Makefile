@@ -2,7 +2,7 @@
 # Date created:				26 December 2009
 # Whom:					Alex Deiter <Alex.Deiter@Gmail.COM>
 #
-# $FreeBSD: ports/www/p5-HTML-Toc/Makefile,v 1.3 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Toc/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	HTML-Toc
@@ -18,6 +18,7 @@ BUILD_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
