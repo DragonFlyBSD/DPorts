@@ -2,7 +2,7 @@
 # Date created:				June 26th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: devel/p5-Proc-Simple/Makefile 313868 2013-03-11 11:39:25Z demon $
+# $FreeBSD: devel/p5-Proc-Simple/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	Proc-Simple
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Perl5 module to launch and control background processes
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Proc::Simple.3
 
