@@ -2,7 +2,7 @@
 # Date created:                        Wed Jun 15 12:44:11 CDT 2005
 # Whom:                                        Jim Pirzyk pirzyk@freebsd.org
 #
-# $FreeBSD: ports/sysutils/p5-Unix-Mknod/Makefile,v 1.7 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Unix-Mknod/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	Unix-Mknod
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	pirzyk@FreeBSD.org
 COMMENT=	Perl5 module to create special files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Unix::Mknod.3
 
