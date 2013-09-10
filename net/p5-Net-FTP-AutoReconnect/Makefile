@@ -2,7 +2,7 @@
 # Date created:				2010-11-10
 # Whom:					Jase Thew <freebsd@beardz.net>
 #
-# $FreeBSD: ports/net/p5-Net-FTP-AutoReconnect/Makefile,v 1.4 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-FTP-AutoReconnect/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-FTP-AutoReconnect
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jase@FreeBSD.org
 COMMENT=	A Perl5 FTP client class with automatic reconnect on failure
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::FTP::AutoReconnect.3
 
