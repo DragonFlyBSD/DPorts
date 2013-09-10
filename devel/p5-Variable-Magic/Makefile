@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Variable-Magic/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Variable-Magic/Makefile 325910 2013-09-01 19:30:54Z tobez $
 
 PORTNAME=	Variable-Magic
-PORTVERSION=	0.52
+PORTVERSION=	0.53
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
