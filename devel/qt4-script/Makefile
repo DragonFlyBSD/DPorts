@@ -1,14 +1,16 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-script/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/qt4-script/Makefile 326562 2013-09-06 23:18:53Z rakuco $
 
 PORTNAME=	script
 DISTVERSION=	${QT4_VERSION}
+PORTREVISION=	1
 CATEGORIES?=	devel
 PKGNAMEPREFIX=	qt4-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt script
 
+USES=		pkgconfig
 USE_QT4=	qmake_build moc_build corelib
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
