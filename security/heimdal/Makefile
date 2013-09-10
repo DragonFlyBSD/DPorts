@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.ORG
-# $FreeBSD: security/heimdal/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/heimdal/Makefile 325745 2013-08-31 00:11:06Z bapt $
 
 PORTNAME=	heimdal
 PORTVERSION=	1.5.2
@@ -28,9 +28,8 @@ CRACKLIB_DESC=	Use CrackLib for password quality checking
 X11_DESC=	Build X11 utilies
 
 USE_AUTOTOOLS=	autoconf autoheader libtool
-USE_GNOME=	gnomehack pkgconfig
 USE_OPENSSL=	yes
-USES=		gettext
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
