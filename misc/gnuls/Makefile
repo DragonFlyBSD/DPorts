@@ -1,5 +1,5 @@
 # Created by: bmc@WillsCreek.COM
-# $FreeBSD: ports/misc/gnuls/Makefile,v 1.33 2012/12/31 12:15:45 svnexp Exp $
+# $FreeBSD: misc/gnuls/Makefile 325959 2013-09-02 09:36:29Z az $
 
 PORTNAME=	gnuls
 PORTVERSION=	8.20
@@ -18,7 +18,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes # Required for tests and man page generation
+USES=		perl5
+USE_PERL5=	build
 
 MAN1=		gnuls.1 dircolors.1 dir.1 vdir.1
 
