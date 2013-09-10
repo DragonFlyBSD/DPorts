@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-expectations/Makefile 322957 2013-07-13 17:54:09Z swills $
+# $FreeBSD: devel/rubygem-rspec-expectations/Makefile 326693 2013-09-07 21:36:23Z sunpoet $
 
 PORTNAME=	rspec-expectations
-PORTVERSION=	2.14.0
+PORTVERSION=	2.14.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
