@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: textproc/libwps/Makefile 319901 2013-06-04 19:53:28Z jkim $
+# $FreeBSD: textproc/libwps/Makefile 326025 2013-09-02 16:21:38Z bapt $
 
 PORTNAME=	libwps
 PORTVERSION=	0.2.9
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	DOCS
 CONFIGURE_ARGS=	--disable-werror
 CPPFLAGS+=	-I${LOCALBASE}/include
 USE_AUTOTOOLS=	libtool
+USES=		pkgconfig
 USE_GNOME=	gnomehack gnomeprefix ltverhack
 USE_LDCONFIG=	yes
 
