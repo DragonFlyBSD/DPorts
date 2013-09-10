@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/ethumb/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/ethumb/Makefile 326194 2013-09-03 18:33:11Z antoine $
 
 PORTNAME=	ethumb
 PORTVERSION=	1.7.8
@@ -17,7 +17,7 @@ LIB_DEPENDS=	exif:${PORTSDIR}/graphics/libexif
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_EFL=	eina evas ecore edje libtool_hack
 USE_EFL_ECORE=	evas file x11 input_evas
 USE_LDCONFIG=	yes
