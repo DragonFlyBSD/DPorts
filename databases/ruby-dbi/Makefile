@@ -2,7 +2,7 @@
 # Date created:		3 June 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/databases/ruby-dbi/Makefile,v 1.23 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/ruby-dbi/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	dbi
