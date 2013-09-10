@@ -1,8 +1,5 @@
-# New ports collection makefile for:	empty
-# Date created:		17 September 2005
-# Whom:			Mikhail Zakharov <zmey20000@yahoo.com>
-#
-# $FreeBSD: ports/net/empty/Makefile,v 1.11 2012/11/17 06:00:00 svnexp Exp $
+# Created by: Mikhail Zakharov <zmey20000@yahoo.com>
+# $FreeBSD: net/empty/Makefile 325408 2013-08-26 17:31:14Z bapt $
 
 PORTNAME=	empty
 PORTVERSION=	0.6.18b
@@ -17,6 +14,7 @@ MAN1=		empty.1
 DOCS=		CHANGELOG COPYRIGHT README README.CYGWIN
 EXAMPLES=	README em_ssh.sh em_ssh_2.sh em_sh.sh \
 		em_telnet.sh em_telnet_2.sh emsu.sh runtests.sh
+MAKE_ARGS+=	CC=${CC}
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
