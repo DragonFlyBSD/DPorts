@@ -2,7 +2,7 @@
 # Date created:		27 Aug 2005
 # Whom:			Andrew Khlebutin <andrey@hm.perm.ru>
 #
-# $FreeBSD: ports/sysutils/pwgen/Makefile,v 1.16 2012/11/17 06:01:42 svnexp Exp $
+# $FreeBSD: sysutils/pwgen/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	pwgen
@@ -15,7 +15,8 @@ MAINTAINER=	andrey@hm.perm.ru
 COMMENT=	A small, powerful, GPL'ed password generator
 
 GNU_CONFIGURE=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 MAN1=		pwgen.1
 PLIST_FILES=	bin/pwgen
