@@ -2,7 +2,7 @@
 # Date created:		20 Feb 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Engine-Middleware/Makefile,v 1.14 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Engine-Middleware/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	HTTP-Engine-Middleware
@@ -23,7 +23,8 @@ RUN_DEPENDS=	\
 	p5-libwww>0:${PORTSDIR}/www/p5-libwww \
 	p5-DateTime>0:${PORTSDIR}/devel/p5-DateTime
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTTP::Engine::Middleware.3 \
 	HTTP::Engine::Middleware::AccessLog.3 \
