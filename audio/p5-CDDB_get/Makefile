@@ -1,5 +1,5 @@
 # Created by: Oyvind Moll <oyvindmo@initio.no>
-# $FreeBSD: audio/p5-CDDB_get/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: audio/p5-CDDB_get/Makefile 326019 2013-09-02 15:59:19Z sunpoet $
 
 PORTNAME=	CDDB_get
 PORTVERSION=	2.28
@@ -11,6 +11,10 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	High-level interface to the Compact Disc Database
+
+LICENSE=	GPLv2
+
+PORTSCOUT=	skipv:2.28.1
 
 USES=		perl5
 USE_PERL5=	configure
