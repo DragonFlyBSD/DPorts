@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Sereal-Encoder/Makefile 319139 2013-05-26 22:19:56Z kuriyama $
+# $FreeBSD: converters/p5-Sereal-Encoder/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Sereal-Encoder
 PORTVERSION=	0.36
@@ -15,7 +15,8 @@ TEST_DEPENDS=	\
 	p5-Test-Warn>0:${PORTSDIR}/devel/p5-Test-Warn \
 	p5-Sereal-Decoder>0:${PORTSDIR}/converters/p5-Sereal-Decoder
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sereal::Encoder.3
 
