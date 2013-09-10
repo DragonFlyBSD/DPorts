@@ -1,5 +1,5 @@
 # Created by: demon@FreeBSD.org
-# $FreeBSD: graphics/gource/Makefile 321729 2013-06-25 10:18:27Z demon $
+# $FreeBSD: graphics/gource/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	gource
 PORTVERSION=	0.40
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:${PORTSDIR}/math/glm
 
 GNU_CONFIGURE=	yes
 USE_GCC=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 MANCOMPRESSED=	yes
 
 CONFIGURE_ARGS+=--with-boost-system=boost_system \
