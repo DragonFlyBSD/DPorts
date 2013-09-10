@@ -1,5 +1,5 @@
 # Created by: Nate Underwood <natey@natey.com>
-# $FreeBSD: mail/libpst/Makefile 325017 2013-08-19 20:34:42Z tota $
+# $FreeBSD: mail/libpst/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	libpst
 PORTVERSION=	0.6.61
@@ -15,10 +15,9 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	gsf-1:${PORTSDIR}/devel/libgsf
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		iconv pathfix
+USES=		iconv pathfix gmake pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=	--disable-python --enable-libpst-shared
 USE_LDCONFIG=	yes
 
