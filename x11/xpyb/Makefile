@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/xpyb/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xpyb/Makefile 325998 2013-09-02 14:11:19Z bapt $
 
 PORTNAME=	xpyb
 PORTVERSION=	1.3.1
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xcb-proto.pc:${PORTSDIR}/x11/xcb-p
 USE_BZIP2=	yes
 USE_PYTHON=	2.5+
 USE_XORG=	xcb
-USES=	pathfix
+USES=	pathfix pkgconfig
 PORTDOCS=	README COPYING INSTALL NEWS XcbPythonBinding.txt
 
 GNU_CONFIGURE=	yes
