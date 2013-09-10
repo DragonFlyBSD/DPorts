@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lrzip
-# Date created:		2011-04-08
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: archivers/lrzip/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: archivers/lrzip/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	lrzip
 PORTVERSION=	0.614
@@ -24,9 +20,8 @@ CONFIGURE_ARGS+=	--enable-asm
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=	pathfix
-USE_PERL5_BUILD=	yes
+USES=	gmake pathfix perl5
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 
 MAN1=		lrunzip.1 \
