@@ -1,7 +1,7 @@
-# $FreeBSD: mail/roundcube/Makefile 321184 2013-06-18 12:41:02Z ale $
+# $FreeBSD: mail/roundcube/Makefile 326780 2013-09-09 07:24:48Z ale $
 
 PORTNAME=	roundcube
-DISTVERSION=	0.9.2
+DISTVERSION=	0.9.4
 PORTEPOCH=	1
 CATEGORIES?=	mail www
 MASTER_SITES=	SF/${PORTNAME}mail/${PORTNAME}mail/${DISTVERSION:tu}
@@ -13,7 +13,6 @@ COMMENT=	Fully skinnable XHTML/CSS webmail written in PHP
 LICENSE=	GPLv3
 
 NO_BUILD=	yes
-CONFLICTS=	ja-roundcube-[0-9]*
 
 RCUBECOMP=	.htaccess SQL config index.php installer logs plugins program robots.txt skins temp
 PORTDOCS=	CHANGELOG INSTALL README.md UPGRADING
@@ -23,7 +22,7 @@ SCRIPTS_ENV=	SHAREOWN=${SHAREOWN} SHAREGRP=${SHAREGRP} \
 		WWWDIR=${WWWDIR}
 
 WANT_PHP_WEB=	yes
-USE_PHP=	pcre mbstring session iconv dom xml json intl zip
+USE_PHP=	pcre mbstring session iconv dom xml json intl zip filter
 IGNORE_WITH_PHP=52
 
 OPTIONS_DEFINE=	SSL LDAP GD PSPELL NSC
