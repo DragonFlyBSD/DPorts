@@ -2,7 +2,7 @@
 # Date created:			August 16 2001
 # Whom:	      			Michael Lyngbøl <lyngbol@wheel.dk>
 #
-# $FreeBSD: ports/net-mgmt/p5-Telnet-Cisco/Makefile,v 1.8 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Telnet-Cisco/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	Net-Telnet-Cisco
@@ -18,7 +18,8 @@ COMMENT=	Perl5 module to telnet to Cisco routers
 RUN_DEPENDS=	p5-Net-Telnet>=3.02:${PORTSDIR}/net/p5-Net-Telnet \
 		p5-Term-ReadKey>=2:${PORTSDIR}/devel/p5-Term-ReadKey
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Telnet::Cisco.3
 
