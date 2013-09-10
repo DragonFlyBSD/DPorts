@@ -1,5 +1,5 @@
 # Created by: Oleg R. Muhutdinov <mor@WhiteLuna.com>
-# $FreeBSD: converters/p5-Convert-Bencode/Makefile 314057 2013-03-13 10:53:06Z bapt $
+# $FreeBSD: converters/p5-Convert-Bencode/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Convert-Bencode
 PORTVERSION=	1.03
@@ -12,7 +12,8 @@ MAINTAINER=	mor@WhiteLuna.com
 COMMENT=	Module to encode and decode bencoded strings
 BUILD_DEPENDS=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Convert::Bencode.3
 
