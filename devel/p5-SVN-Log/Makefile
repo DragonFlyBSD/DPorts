@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-SVN-Log/Makefile 319461 2013-05-31 01:46:04Z miwi $
+# $FreeBSD: devel/p5-SVN-Log/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	SVN-Log
 PORTVERSION=	0.03
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-subversion>=0:${PORTSDIR}/devel/p5-subversion \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	SVN::Log.3
 
