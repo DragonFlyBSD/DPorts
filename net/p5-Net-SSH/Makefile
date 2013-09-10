@@ -2,7 +2,7 @@
 # Date created:				23 Jan 2001
 # Whom:	      				Vadim Belman <vab@lflat.vas.mobilix.dk>
 #
-# $FreeBSD: ports/net/p5-Net-SSH/Makefile,v 1.12 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-SSH/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-SSH
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Perl5 module to access and use ssh protocol
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SSH.3
 
