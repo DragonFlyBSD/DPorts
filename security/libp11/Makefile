@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/libp11/Makefile 320331 2013-06-09 13:01:20Z miwi $
+# $FreeBSD: security/libp11/Makefile 325745 2013-08-31 00:11:06Z bapt $
 #
 
 PORTNAME=	libp11
@@ -16,7 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_AUTOTOOLS=	libltdl libtool
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig ltverhack
+USES=		pkgconfig
+USE_GNOME=	ltverhack
 USE_LDCONFIG=	yes
 
 CONFIGURE_ENV=	LTLIB_CFLAGS="-I${LOCALBASE}/include" \
