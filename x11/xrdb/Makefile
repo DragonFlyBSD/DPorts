@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xrdb/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xrdb/Makefile 326808 2013-09-09 12:24:04Z zeising $
 
 PORTNAME=	xrdb
-PORTVERSION=	1.0.9
+PORTVERSION=	1.1.0
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
