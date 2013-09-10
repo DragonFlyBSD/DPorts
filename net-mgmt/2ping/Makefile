@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/2ping/Makefile,v 1.5 2013/02/07 15:12:10 svnexp Exp $
+# $FreeBSD: net-mgmt/2ping/Makefile 326244 2013-09-04 03:24:02Z az $
 
 PORTNAME=	2ping
 PORTVERSION=	2.0
@@ -16,7 +16,7 @@ RUN_DEPENDS=	p5-Digest-CRC>=0:${PORTSDIR}/security/p5-Digest-CRC \
 		p5-IO-Socket-INET6>=0:${PORTSDIR}/net/p5-IO-Socket-INET6
 
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 MAN8=		2ping.8 2ping6.8
 

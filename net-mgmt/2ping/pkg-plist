@@ -1,3 +1,3 @@
-@comment $FreeBSD: ports/net-mgmt/2ping/pkg-plist,v 1.2 2012/11/17 06:00:30 svnexp Exp $
+@comment $FreeBSD: net-mgmt/2ping/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/2ping
 bin/2ping6
