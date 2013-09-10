@@ -2,7 +2,7 @@
 # Date created:		2008-03-23
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/ports-mgmt/p5-FreeBSD-Ports-INDEXhash/Makefile,v 1.6 2012/11/17 06:00:45 svnexp Exp $
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports-INDEXhash/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 
 PORTNAME=	FreeBSD-Ports-INDEXhash
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Make a hash out of the index file for the ports tree
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		FreeBSD::Ports::INDEXhash.3
 
