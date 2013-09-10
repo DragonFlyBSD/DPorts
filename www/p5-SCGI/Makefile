@@ -2,7 +2,7 @@
 # Date created:				Fri Jan  5 13:55:53 EST 2007
 # Whom:					Vivek Khera <vivek@khera.org>
 #
-# $FreeBSD: ports/www/p5-SCGI/Makefile,v 1.6 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-SCGI/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	SCGI
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vivek@khera.org
 COMMENT=	SCGI server interface
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	SCGI.3 SCGI::Request.3
 
