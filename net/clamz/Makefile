@@ -1,5 +1,5 @@
 # Created by: Helko Glathe <glathe.helko@googlemail.com>
-# $FreeBSD: net/clamz/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/clamz/Makefile 325749 2013-08-31 00:26:08Z bapt $
 
 PORTNAME=	clamz
 PORTVERSION=	0.5
@@ -18,7 +18,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 
 MAN1=		${PORTNAME}.1
 
