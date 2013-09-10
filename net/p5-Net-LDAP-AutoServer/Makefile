@@ -2,7 +2,7 @@
 # Date created:		2010-02-18
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-LDAP-AutoServer/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LDAP-AutoServer/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	Net-LDAP-AutoServer
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap \
 		p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-Net-DNS-RR-SRV-Helper>=0:${PORTSDIR}/dns/p5-Net-DNS-RR-SRV-Helper
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::AutoServer.3
 
