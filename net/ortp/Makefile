@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ortp
-# Date created:				20 October 2003
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/net/ortp/Makefile,v 1.15 2012/11/17 06:00:09 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: net/ortp/Makefile 325749 2013-08-31 00:26:08Z bapt $
 
 PORTNAME=	ortp
 PORTVERSION=	0.13.0
@@ -15,7 +11,8 @@ MASTER_SITE_SUBDIR=	linphone/ortp/sources
 MAINTAINER=	sobomax@FreeBSD.org
 COMMENT=	A Real-time Transport Protocol (RTP) stack
 
-USE_GNOME=	glib20 pkgconfig gnomehack
+USES=		pathfix pkgconfig
+USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 USE_LDCONFIG=	yes

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/ortp/files/patch-src::stun.c,v 1.2 2012/11/17 06:00:09 svnexp Exp $
+$FreeBSD: net/ortp/files/patch-src::stun.c 300897 2012-07-14 14:29:18Z beat $
 
 --- src/stun.c
 +++ src/stun.c
