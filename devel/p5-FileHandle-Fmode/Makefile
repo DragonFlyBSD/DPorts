@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/devel/p5-FileHandle-Fmode/Makefile,v 1.6 2013/01/09 20:04:35 svnexp Exp $
+# $FreeBSD: devel/p5-FileHandle-Fmode/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	FileHandle-Fmode
 PORTVERSION=	0.11
@@ -12,6 +12,7 @@ COMMENT=	Module to determine if a filehandle is opened for reading, writing
 
 MAN3=		FileHandle::Fmode.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
