@@ -1,9 +1,5 @@
-# New ports collection makefile for:  lttoolbox
-# Date created:                14 April 2009
-# Whom:                        Mykola Dzham <freebsd@levsha.org.ua>
-#
-# $FreeBSD: ports/textproc/lttoolbox/Makefile,v 1.4 2012/11/17 06:02:02 svnexp Exp $
-#
+# Created by: Mykola Dzham <freebsd@levsha.org.ua>
+# $FreeBSD: textproc/lttoolbox/Makefile 325739 2013-08-30 23:52:24Z bapt $
 
 PORTNAME=	lttoolbox
 PORTVERSION=	${APVER}.${APREV}
@@ -21,7 +17,7 @@ APREV=	0
 GNU_CONFIGURE=	yes
 
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 
 PLIST_SUB+=	APVER="${APVER}"
 MAN1=	lt-comp.1 lt-expand.1 lt-proc.1 lt-tmxcomp.1 lt-tmxproc.1
