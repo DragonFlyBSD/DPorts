@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Adapter
-# Date created:		2006-08-13
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-Class-Adapter/Makefile,v 1.10 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: devel/p5-Class-Adapter/Makefile 326728 2013-09-08 13:59:48Z az $
 
 PORTNAME=	Class-Adapter
 PORTVERSION=	1.08
@@ -17,7 +13,8 @@ COMMENT=	Perl implementation of the "Adapter" Design Pattern
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Adapter.3 \
 		Class::Adapter::Builder.3 \
