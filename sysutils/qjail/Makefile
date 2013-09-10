@@ -1,8 +1,8 @@
 # Created by: Joe Barbish
-# $FreeBSD: sysutils/qjail/Makefile 322339 2013-07-05 16:21:49Z pawel $
+# $FreeBSD: sysutils/qjail/Makefile 326199 2013-09-03 18:51:57Z pawel $
 
 PORTNAME=	qjail
-PORTVERSION=	3.1
+PORTVERSION=	3.2
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -11,10 +11,11 @@ COMMENT=	Utility to quickly deploy and manage jails
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
+SUB_FILES=	pkg-message
 
 MAN8=		qjail.8 qjail-intro.8 qjail-howto.8
 
-CONFLICTS_INSTALL=	qjail-1.* qjail-2.*
+CONFLICTS_INSTALL=	qjail-2.*
 
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} \
@@ -35,9 +36,9 @@ do-install:
 	@(cd ${WRKSRC}/examples/ \
 	    && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
 
+# Note: Has to be done this way or package version will not contain any
+# comments added with @${ECHO_MSG} command.
 post-install:
-	@${ECHO_MSG} "#"
 	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG} "#"
 
 .include <bsd.port.mk>
