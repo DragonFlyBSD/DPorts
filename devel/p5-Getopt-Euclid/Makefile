@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Getopt-Euclid/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Getopt-Euclid/Makefile 325692 2013-08-30 13:21:45Z tobez $
 
 PORTNAME=	Getopt-Euclid
-PORTVERSION=	0.4.3
+PORTVERSION=	0.4.4
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
