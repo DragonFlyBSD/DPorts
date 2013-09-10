@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: www/lynx/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: www/lynx/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	lynx
 PORTVERSION=	2.8.7.2
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS='@comment '
 .else
 USES+=		gettext iconv
-CONFIGURE_ARGS+=--enable-nls --with-libiconv-prefix="${LOCALBASE}"
+CONFIGURE_ARGS+=--enable-nls ${ICONV_CONFIGURE_ARG}
 PLIST_SUB+=	NLS=''
 .endif
 
