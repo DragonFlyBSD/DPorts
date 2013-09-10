@@ -2,7 +2,7 @@
 # Date created:		2010-03-03
 # Whom:			Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: ports/devel/p5-Config-YAML/Makefile,v 1.5 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: devel/p5-Config-YAML/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	Config-YAML
@@ -17,7 +17,8 @@ COMMENT=	Simple configuration automation
 BUILD_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Config::YAML.3
 
