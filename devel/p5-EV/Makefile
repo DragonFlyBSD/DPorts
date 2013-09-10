@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: devel/p5-EV/Makefile 322627 2013-07-10 07:56:19Z culot $
+# $FreeBSD: devel/p5-EV/Makefile 326335 2013-09-04 23:16:09Z bapt $
 
 PORTNAME=	EV
 PORTVERSION=	4.15
@@ -15,8 +15,8 @@ COMMENT=	Perl interface to libev, a high performance full-featured event loop
 RUN_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 BUILD_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 
-USE_GCC=	any
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV=	PERL_MM_USE_DEFAULT="YES"
 
 MAN3=		EV.3 \
