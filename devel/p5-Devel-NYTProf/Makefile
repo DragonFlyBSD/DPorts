@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: ports/devel/p5-Devel-NYTProf/Makefile,v 1.21 2013/01/03 16:00:00 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-NYTProf/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	Devel-NYTProf
 PORTVERSION=	4.23
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	nytprofhtml.1 \
 	nytprofcsv.1 \
