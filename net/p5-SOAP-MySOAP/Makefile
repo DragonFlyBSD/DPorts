@@ -2,7 +2,7 @@
 # Date created:		2007-04-30
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-SOAP-MySOAP/Makefile,v 1.3 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-SOAP-MySOAP/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	SOAP-MySOAP
@@ -19,7 +19,8 @@ COMMENT=	An extremely basic SOAP client module
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SOAP::MySOAP.3
 
