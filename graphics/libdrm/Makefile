@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: graphics/libdrm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/libdrm/Makefile 325944 2013-09-02 06:39:37Z bapt $
 
 PORTNAME=	libdrm
 PORTVERSION=	${LIBDRM_VERSION}
@@ -13,6 +13,7 @@ COMMENT=	Userspace interface to kernel Direct Rendering Module services
 LIB_DEPENDS=	pciaccess:${PORTSDIR}/devel/libpciaccess \
 		pthread-stubs:${PORTSDIR}/devel/libpthread-stubs
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -20,7 +21,7 @@ USE_LDCONFIG=	yes
 
 .if defined(WITH_NEW_XORG)
 
-USE_GMAKE=	yes
+USES+=		gmake
 
 OPTIONS_DEFINE=	KMS MANPAGES
 OPTIONS_DEFAULT=KMS
