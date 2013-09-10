@@ -1,9 +1,5 @@
-# New ports collection makefile for:	autoconf
-# Date created:		7th December 2006
-# Whom:			ade@FreeBSD.org
-#
-# $FreeBSD: ports/devel/autoconf/Makefile,v 1.52 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: ade@FreeBSD.org
+# $FreeBSD: devel/autoconf/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	autoconf
 PORTVERSION=	2.69
@@ -24,7 +20,7 @@ BUILD_VERSION=	2.69
 PLIST_SUB=	BUILD_VERSION=${BUILD_VERSION}
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 INFO=		autoconf
 
 GNU_CONFIGURE=	yes
