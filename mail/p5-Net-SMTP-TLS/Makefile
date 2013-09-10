@@ -2,7 +2,7 @@
 # Date created:		2006-07-10
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/mail/p5-Net-SMTP-TLS/Makefile,v 1.7 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Net-SMTP-TLS/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	Net-SMTP-TLS
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC \
 		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
 		p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SMTP::TLS.3
 
