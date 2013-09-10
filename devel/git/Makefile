@@ -1,8 +1,8 @@
 # Created by: Eric Anholt
-# $FreeBSD: devel/git/Makefile 324872 2013-08-17 22:13:24Z mva $
+# $FreeBSD: devel/git/Makefile 326683 2013-09-07 19:49:41Z bsam $
 
 PORTNAME=	git
-PORTVERSION=	1.8.3.4
+PORTVERSION=	1.8.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
@@ -30,6 +30,7 @@ MAN1=		git.1 \
 		git-cat-file.1 \
 		git-check-attr.1 \
 		git-check-ignore.1 \
+		git-check-mailmap.1 \
 		git-check-ref-format.1 \
 		git-checkout-index.1 \
 		git-checkout.1 \
@@ -256,8 +257,8 @@ PLIST_SUB+=	PERLSUB="@comment "
 .if ${PORT_OPTIONS:MICONV}
 USES+=		iconv
 MAKE_ENV+=	NEEDS_LIBICONV=yes \
-		ICONVDIR=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-iconv=${LOCALBASE}
+		ICONVDIR=${ICONV_PREFIX}
+CONFIGURE_ARGS+=	--with-iconv=${ICONV_PREFIX}
 .else
 MAKE_ENV+=	NO_ICONV=1
 .endif
