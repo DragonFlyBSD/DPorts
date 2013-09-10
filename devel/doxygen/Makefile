@@ -1,5 +1,5 @@
 # Created by: Joep Grooten <joep@di.nl>
-# $FreeBSD: devel/doxygen/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: devel/doxygen/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	doxygen
 PORTVERSION=	1.8.3.1
@@ -77,7 +77,7 @@ PLIST_FILES+=	bin/doxywizard
 
 pre-configure:
 	@cd ${WRKSRC};for pro in src/*.pro.in addon/doxywizard/doxywizard.pro.in;do \
-		${ECHO} "unix:LIBS += -liconv" >> $$pro; done
+		${ECHO} "unix:LIBS += ${ICONV_LIB}" >> $$pro; done
 	@${CHMOD} +x ${WRKSRC}/configure
 
 post-configure:
