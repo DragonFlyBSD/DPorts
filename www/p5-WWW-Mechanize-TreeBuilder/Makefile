@@ -2,7 +2,7 @@
 # Date created:				25 December 2009
 # Whom:					Alex Deiter <Alex.Deiter@Gmail.COM>
 #
-# $FreeBSD: ports/www/p5-WWW-Mechanize-TreeBuilder/Makefile,v 1.7 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Mechanize-TreeBuilder/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	WWW-Mechanize-TreeBuilder
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-MooseX-Role-Parameterized>=0:${PORTSDIR}/devel/p5-MooseX-Role-
 		p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WWW::Mechanize::TreeBuilder.3
 
