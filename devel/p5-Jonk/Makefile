@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Jonk
-# Date created:		21 Dec 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Jonk/Makefile,v 1.4 2012/11/17 05:56:20 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Jonk/Makefile 326725 2013-09-08 13:29:44Z az $
 
 PORTNAME=	Jonk
 PORTVERSION=	0.05
@@ -20,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Jonk.3 \
 	Jonk::Client.3 \
