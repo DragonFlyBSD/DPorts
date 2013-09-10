@@ -3,7 +3,7 @@
 # Date created:			Apr 17, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: devel/styx/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/styx/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	styx
@@ -20,7 +20,7 @@ USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/${PORTNAME}
 USE_LDCONFIG=	yes
 
