@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/devel/rubygem-formatador/Makefile,v 1.3 2013/01/23 22:07:51 svnexp Exp $
+# $FreeBSD: devel/rubygem-formatador/Makefile 310903 2013-01-23 21:54:29Z swills $
 
 PORTNAME=	formatador
 PORTVERSION=	0.2.4
