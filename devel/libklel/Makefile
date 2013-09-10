@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libklel/Makefile 316626 2013-04-26 16:46:35Z pawel $
+# $FreeBSD: devel/libklel/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	libklel
 PORTVERSION=	1.1.0
@@ -11,7 +11,8 @@ COMMENT=	KoreLogic Expression Language library
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=--with-pcre=${LOCALBASE}
