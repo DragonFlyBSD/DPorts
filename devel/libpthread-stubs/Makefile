@@ -1,9 +1,5 @@
-# New ports collection makefile for:   libpthread-stubs
-# Date created:		24 January 2007
-# Whom:			wahjava
-#
-# $FreeBSD: ports/devel/libpthread-stubs/Makefile,v 1.10 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: wahjava
+# $FreeBSD: devel/libpthread-stubs/Makefile 325967 2013-09-02 10:10:58Z bapt $
 
 PORTNAME=	libpthread-stubs
 PORTVERSION=	0.3
@@ -14,9 +10,9 @@ MASTER_SITES=	http://xcb.freedesktop.org/dist/
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	This library provides weak aliases for pthread functions
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
+USE_GNOME=	gnomehack
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes

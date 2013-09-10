@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libpthread-stubs/files/patch-Makefile.in,v 1.4 2012/11/17 05:55:56 svnexp Exp $
+$FreeBSD: devel/libpthread-stubs/files/patch-Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- Makefile.in.orig
 +++ Makefile.in
