@@ -1,9 +1,4 @@
-# New ports collection makefile for:	MouseX::Getopt
-# Date created:		22 Jan 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MouseX-Getopt/Makefile,v 1.12 2012/11/17 05:56:24 svnexp Exp $
-#
+# $FreeBSD: devel/p5-MouseX-Getopt/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	MouseX-Getopt
 PORTVERSION=	${DISTVERSION}00
@@ -22,7 +17,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MouseX::Getopt.3 \
 		MouseX::Getopt::Basic.3 \
