@@ -1,12 +1,7 @@
-# New ports collection makefile for:	p5-WWW-Shorten
-# Date created:				August 29 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: www/p5-WWW-Shorten/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# $FreeBSD: www/p5-WWW-Shorten/Makefile 326640 2013-09-07 14:52:07Z lth $
 
 PORTNAME=	WWW-Shorten
-PORTVERSION=	3.03
+PORTVERSION=	3.04
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
