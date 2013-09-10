@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/p5-AppConfig-Std/Makefile 323431 2013-07-22 06:51:24Z culot $
+# $FreeBSD: devel/p5-AppConfig-Std/Makefile 326639 2013-09-07 14:36:58Z az $
 
 PORTNAME=	AppConfig-Std
 PORTVERSION=	1.08
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 RUN_DEPENDS=	p5-AppConfig>=1.52:${PORTSDIR}/devel/p5-AppConfig
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AppConfig::Std.3
 
