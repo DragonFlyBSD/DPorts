@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/toolame/Makefile 315573 2013-03-29 21:19:12Z pawel $
+# $FreeBSD: audio/toolame/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	toolame
 PORTVERSION=	0.2l
@@ -14,7 +14,7 @@ COMMENT=	Optimized mpeg 1/2 layer 2 audio encoder
 
 LICENSE=	LGPL21
 
-USE_GMAKE=	yes
+USES=		gmake
 ALL_TARGET=	${PORTNAME}
 MAKE_ARGS=	CC="${CC}" TWEAKS="${CFLAGS}" ARCH="" PG="" OPTIM=""
 USE_CSTD=	gnu89
