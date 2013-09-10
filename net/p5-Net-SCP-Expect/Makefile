@@ -2,7 +2,7 @@
 # Date created:                        27 Feb 2006
 # Whom:                                Simun Mikecin <numisemis@yahoo.com>
 #
-# $FreeBSD: ports/net/p5-Net-SCP-Expect/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-SCP-Expect/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-SCP-Expect
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Expect>=1.14:${PORTSDIR}/lang/p5-Expect \
 		p5-Term-ReadPassword>=0.01:${PORTSDIR}/devel/p5-Term-ReadPassword
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SCP::Expect.3
 
