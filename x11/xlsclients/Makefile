@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xlsclients/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xlsclients/Makefile 326806 2013-09-09 12:18:27Z zeising $
 
 PORTNAME=	xlsclients
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.3
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
