@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-HTML/Makefile 313085 2013-02-28 10:27:28Z culot $
+# $FreeBSD: devel/p5-IO-HTML/Makefile 326818 2013-09-09 15:55:47Z az $
 
 PORTNAME=	IO-HTML
 PORTVERSION=	1.00
@@ -13,7 +13,8 @@ COMMENT=	Open an HTML file with automatic charset detection
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::HTML.3
 
