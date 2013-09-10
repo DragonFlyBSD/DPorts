@@ -2,7 +2,7 @@
 # Date created:		2009-10-31
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-LDAP-posixGroup/Makefile,v 1.5 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LDAP-posixGroup/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-LDAP-posixGroup
@@ -17,7 +17,8 @@ COMMENT=	Creates new Net::LDAP::Entry objects for a posixGroup entry
 
 RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::posixGroup.3
 
