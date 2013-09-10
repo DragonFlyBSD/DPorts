@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/libmodplug/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/libmodplug/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	libmodplug
 PORTVERSION=	0.8.8.4
@@ -9,15 +9,12 @@ MASTER_SITES=	SF/modplug-xmms/${PORTNAME}/${PORTVERSION} CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	ModPlug mod-like music shared libraries
 
-USES=		gmake
+USES=		gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_GNOME=	pkgconfig
 GNU_CONFIGURE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^CXXFLAGS=/d' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|{libdir}/pkgconfig|{prefix}/libdata/pkgconfig|' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
