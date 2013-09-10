@@ -1,8 +1,5 @@
-# New ports collection Makefile for:   cmt
-# Date created:                        11 May 2002
-# Whom:                                Tilman Linneweh <arved@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/cmt/Makefile,v 1.14 2012/11/17 05:54:29 svnexp Exp $
+# Created by: Tilman Linneweh <arved@FreeBSD.org>
+# $FreeBSD: audio/cmt/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	cmt
 PORTVERSION=	1.16
@@ -20,7 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 WRKSRC=		${WRKDIR}/${PORTNAME}
 BUILD_WRKSRC=	${WRKDIR}/${PORTNAME}/src
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKEFILE=	makefile
 MAKE_ARGS=	CXX="${CXX}" \
 		CXXFLAGS="${CXXFLAGS} -fPIC -I${LOCALBASE}/include"
