@@ -2,7 +2,7 @@
 # Date created:		2008-09-01
 # Whom:			Vladimir Timofeev <vovkasm@gmail.com>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Model-Adaptor/Makefile,v 1.8 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Model-Adaptor/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	Catalyst-Model-Adaptor
@@ -20,7 +20,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok \
 		p5-Test-WWW-Mechanize-Catalyst>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize-Catalyst
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Helper::Model::Adaptor.3 \
 	Catalyst::Helper::Model::Factory.3 \
