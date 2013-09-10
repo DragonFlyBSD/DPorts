@@ -1,5 +1,5 @@
 # Created by: spn
-# $FreeBSD: x11-wm/fluxbox/Makefile 321627 2013-06-23 11:47:09Z beat $
+# $FreeBSD: x11-wm/fluxbox/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	fluxbox
 PORTVERSION=	1.3.5
@@ -16,7 +16,7 @@ LICENSE=	MIT
 RUN_DEPENDS=	xmessage:${PORTSDIR}/x11/xmessage
 
 USE_XORG=	xextproto xft xpm xrandr
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 
@@ -79,7 +79,7 @@ CONFIGURE_ARGS+=	--enable-xinerama
 
 .if ${PORT_OPTIONS:MNLS}
 USES+=			iconv
-CONFIGURE_ENV=		LIBS="-L${LOCALBASE}/lib -liconv"
+CONFIGURE_ENV=		LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=		NLS=""
