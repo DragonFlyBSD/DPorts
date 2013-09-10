@@ -1,5 +1,5 @@
 # Created by: Alan E <alane@FreeBSD.org>
-# $FreeBSD: ports/misc/kenny/Makefile,v 1.14 2012/12/10 22:04:18 svnexp Exp $
+# $FreeBSD: misc/kenny/Makefile 325959 2013-09-02 09:36:29Z az $
 
 PORTNAME=	kenny
 PORTVERSION=	1.7
@@ -16,7 +16,7 @@ PROJECTHOST=	ak-various-projects
 
 CONFLICTS=	filters-*
 
-USE_PERL5=	yes
+USES=		perl5
 EXTRACT_CMD=	${GZCAT}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	> ${WRKDIR}/${PORTNAME}
