@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Sys::Sendfile::FreeBSD
-# Date created:				Jan 21, 2009
-# Whom:					Mykola Marzhan <delgod@portaone.com>
-#
-# $FreeBSD: ports/devel/p5-Sys-Sendfile-FreeBSD/Makefile,v 1.2 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Mykola Marzhan <delgod@portaone.com>
+# $FreeBSD: devel/p5-Sys-Sendfile-FreeBSD/Makefile 326802 2013-09-09 11:01:46Z az $
 
 PORTNAME=	Sys-Sendfile-FreeBSD
 PORTVERSION=	0.01
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	delgod@portaone.com
 COMMENT=	Wrapper for the FreeBSD sendfile(2) function
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::Sendfile::FreeBSD.3
 
