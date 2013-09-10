@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-Data-Throttler/Makefile 321548 2013-06-22 07:39:17Z culot $
+# $FreeBSD: devel/p5-Data-Throttler/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	Data-Throttler
 PORTVERSION=	0.06
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Log-Log4perl>=1:${PORTSDIR}/devel/p5-Log-Log4perl \
 		p5-YAML>=0.62:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Throttler.3
 
