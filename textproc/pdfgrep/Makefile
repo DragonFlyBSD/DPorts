@@ -1,5 +1,5 @@
 # Created by: Michael Ranner <michael@ranner.eu>
-# $FreeBSD: textproc/pdfgrep/Makefile 318528 2013-05-19 14:34:47Z rakuco $
+# $FreeBSD: textproc/pdfgrep/Makefile 326071 2013-09-02 20:02:01Z bapt $
 
 PORTNAME=	pdfgrep
 PORTVERSION=	1.3.0
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	poppler:${PORTSDIR}/graphics/poppler
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 CONFIGURE_ARGS=	poppler_CFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/poppler"
 
 PLIST_FILES=	bin/pdfgrep
