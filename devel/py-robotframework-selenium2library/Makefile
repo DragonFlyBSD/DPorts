@@ -1,8 +1,8 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework-selenium2library/Makefile 317718 2013-05-08 23:00:47Z rm $
+# $FreeBSD: devel/py-robotframework-selenium2library/Makefile 326588 2013-09-07 09:59:40Z rm $
 
 PORTNAME=	robotframework-selenium2library
-PORTVERSION=	1.2.0
+PORTVERSION=	1.4.0
 CATEGORIES=	devel www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
