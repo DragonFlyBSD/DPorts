@@ -2,7 +2,7 @@
 # Date created:        14 January 2008
 # Whom:                Terry Sposato
 #
-# $FreeBSD: ports/mail/prepflog/Makefile,v 1.3 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/prepflog/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	prepflog
@@ -17,7 +17,7 @@ COMMENT=	Prepares logfiles in a sanitised format for pflogsumm and awstats
 PLIST_FILES=	bin/prepflog
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
