@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 326760 2013-09-08 16:36:01Z tobez $
 
 PORTNAME=	Text-Autoformat
-PORTVERSION=	1.669.003
+PORTVERSION=	1.669.004
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN/Text/DCONWAY
 PKGNAMEPREFIX=	p5-
