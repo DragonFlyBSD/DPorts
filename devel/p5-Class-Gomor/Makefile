@@ -2,7 +2,7 @@
 # Date created:				17 May 2006
 # Whom:					Christopher Boumenot <boumenot@gmail.com>
 #
-# $FreeBSD: ports/devel/p5-Class-Gomor/Makefile,v 1.7 2012/11/17 05:56:07 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Gomor/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	Class-Gomor
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	spry@anarchy.in.the.ph
 COMMENT=	Class and object builder
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Class::Gomor.3 \
 	Class::Gomor::Hash.3 \
