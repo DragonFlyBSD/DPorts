@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-IO-Null
-# Date created:				06/06/2006
-# Whom:					Rouslan Iskhakov <rouslan@rshell.net>
-#
-# $FreeBSD: ports/devel/p5-IO-Null/Makefile,v 1.3 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Rouslan Iskhakov <rouslan@rshell.net>
+# $FreeBSD: devel/p5-IO-Null/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	IO-Null
 PORTVERSION=	1.01
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	rouslan@rshell.net
 COMMENT=	IO::Null - class for null filehandles
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::Null.3
 
