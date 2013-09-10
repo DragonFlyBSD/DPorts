@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-Toolkit
-# Date created:		2006-07-12
-# Whom:			Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-#
-# $FreeBSD: devel/p5-IO-Toolkit/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
+# $FreeBSD: devel/p5-IO-Toolkit/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	IO-Toolkit
 PORTVERSION=	1.008
@@ -19,7 +15,8 @@ COMMENT=	IO::Toolkit - Perl extension to create logfiles
 BUILD_DEPENDS=	p5-Crypt-RC6>=0:${PORTSDIR}/security/p5-Crypt-RC6
 RUN_DEPENDS=	p5-Crypt-RC6>=0:${PORTSDIR}/security/p5-Crypt-RC6
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	IO::Toolkit.3
 
