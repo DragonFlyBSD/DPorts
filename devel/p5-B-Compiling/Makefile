@@ -1,9 +1,4 @@
-# New ports collection makefile for:	B::Compiling
-# Date created:		21 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-B-Compiling/Makefile,v 1.3 2012/11/17 05:56:05 svnexp Exp $
-#
+# $FreeBSD: devel/p5-B-Compiling/Makefile 326823 2013-09-09 17:31:07Z az $
 
 PORTNAME=	B-Compiling
 PORTVERSION=	0.02
@@ -18,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Sub-Exporter>0:${PORTSDIR}/devel/p5-Sub-Exporter
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	B::Compiling.3
 
