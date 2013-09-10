@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-Domain-TLD/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: dns/p5-Net-Domain-TLD/Makefile 326881 2013-09-10 09:33:38Z tobez $
 
 PORTNAME=	Net-Domain-TLD
-PORTVERSION=	1.69
+PORTVERSION=	1.70
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
