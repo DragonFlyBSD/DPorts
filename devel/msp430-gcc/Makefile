@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-gcc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/msp430-gcc/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}.${LTSVERSION}
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=--target=${PKGNAMEPREFIX:S/-$//} \
 		--enable-languages=c,c++ \
 		--enable-lto \
 		--with-gmp=${LOCALBASE} --with-mpfr=${LOCALBASE} \
-		--with-mpc=${LOCALBASE} --with-libiconv-prefix=${LOCALBASE} \
+		--with-mpc=${LOCALBASE} ${ICONV_CONFIGURE_ARG} \
 		--with-system-zlib --disable-nls \
 		--with-pkgversion="MSPGCC_${LTSVERSION}"
 INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
