@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: ports/converters/p5-Net-IDN-Nameprep/Makefile,v 1.6 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Net-IDN-Nameprep/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Net-IDN-Nameprep
 PORTVERSION=	1.101
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-Unicode-Stringprep>=0:${PORTSDIR}/converters/p5-Unicode-Stringpr
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::IDN::Nameprep.3
 
