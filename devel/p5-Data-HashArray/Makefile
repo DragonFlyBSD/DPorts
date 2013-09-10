@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Data::HashArray
-# Date created:		2009-08-27
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-HashArray/Makefile,v 1.3 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: devel/p5-Data-HashArray/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	Data-HashArray
 PORTVERSION=	1.0
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	glarkin@FreeBSD.org
 COMMENT=	Array class of hashes with properties via overloading and AUTOLOAD
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::HashArray.3
 
