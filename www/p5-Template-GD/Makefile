@@ -2,7 +2,7 @@
 # Date created:		22 June 2006
 # Whom:			Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Template-GD/Makefile,v 1.7 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-GD/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	Template-GD
@@ -17,7 +17,8 @@ COMMENT=	Template Toolkit plugin to interface with GD modules
 BUILD_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Template::Plugin::GD.3 \
 		Template::Plugin::GD::Constants.3 \
