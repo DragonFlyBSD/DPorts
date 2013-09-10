@@ -1,5 +1,5 @@
 # Created by: Jun-ichiro itojun Hagino <itojun@itojun.org>
-# $FreeBSD: ports-mgmt/portlint/Makefile 322990 2013-07-14 16:15:21Z marcus $
+# $FreeBSD: ports-mgmt/portlint/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 # This port is self contained in the src directory.
 #
@@ -16,7 +16,8 @@ COMMENT=	A verifier for FreeBSD port directory
 USES=		shebangfix
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/src
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 SRC=		${.CURDIR}/src
 
