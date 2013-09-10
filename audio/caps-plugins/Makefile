@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/caps-plugins/Makefile 320969 2013-06-14 22:22:31Z bapt $
+# $FreeBSD: audio/caps-plugins/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	caps-plugins
 PORTVERSION=	0.4.5
@@ -20,7 +20,7 @@ LICENSE_COMB=	dual
 
 WRKSRC=		${WRKDIR}/caps-${PORTVERSION}
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CC="${CXX}" CFLAGS="${CXXFLAGS} -fPIC -DPIC"
 
 PLIST_FILES=	lib/ladspa/caps.so share/ladspa/rdf/caps.rdf
