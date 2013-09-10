@@ -2,7 +2,7 @@
 # Date created:		09 Sep 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-URI-Match/Makefile,v 1.3 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-URI-Match/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	URI-Match
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 	p5-URI>0:${PORTSDIR}/net/p5-URI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	URI::Match.3
 
