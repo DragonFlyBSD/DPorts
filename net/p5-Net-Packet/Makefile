@@ -2,7 +2,7 @@
 # Date created:				01 Feb 2005
 # Whom:					GomoR <netpkt@gomor.org>
 #
-# $FreeBSD: ports/net/p5-Net-Packet/Makefile,v 1.14 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Packet/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	Net-Packet
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-Bit-Vector>=6.4:${PORTSDIR}/math/p5-Bit-Vector \
 		p5-Socket6>=0.19:${PORTSDIR}/net/p5-Socket6
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
 MAN3=	Net::Packet.3 Net::Packet::ARP.3 Net::Packet::CDP.3 Net::Packet::CDP::Address.3 \
