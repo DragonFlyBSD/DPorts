@@ -1,9 +1,5 @@
-# New ports collection makefile for:    wv
-# Date created:         Fri Nov  6 09:06:33 PST 1998
-# Whom:                 sumikawa@kame.net
-#
-# $FreeBSD: ports/textproc/wv/Makefile,v 1.63 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: sumikawa@kame.net
+# $FreeBSD: textproc/wv/Makefile 326025 2013-09-02 16:21:38Z bapt $
 
 PORTNAME=	wv
 PORTVERSION=	1.2.9
@@ -17,7 +13,7 @@ COMMENT=	A library and executables to access Microsoft Word files
 LIB_DEPENDS=	wmf.2:${PORTSDIR}/graphics/libwmf
 
 USE_GNOME=	libgsf
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
