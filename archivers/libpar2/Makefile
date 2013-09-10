@@ -1,5 +1,5 @@
 # Created by: Jeff Burchell <toxic@doobie.com>
-# $FreeBSD: archivers/libpar2/Makefile 319977 2013-06-05 11:15:06Z wg $
+# $FreeBSD: archivers/libpar2/Makefile 326277 2013-09-04 13:47:08Z bapt $
 
 PORTNAME=	libpar2
 PORTVERSION=	0.3
@@ -23,6 +23,11 @@ USE_LDCONFIG=	yes
 USES=		pkgconfig
 
 .include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e "s/-lstdc++//g" \
+		${WRKSRC}/Makefile.in \
+		${WRKSRC}/configure
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
