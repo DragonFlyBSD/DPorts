@@ -1,5 +1,5 @@
 # Created by: Po-Chien Lin <linpc@cs.nctu.edu.tw>
-# $FreeBSD: ports/devel/p5-syntax/Makefile,v 1.2 2013/02/13 06:44:03 svnexp Exp $
+# $FreeBSD: devel/p5-syntax/Makefile 326787 2013-09-09 09:45:12Z az $
 
 PORTNAME=	syntax
 PORTVERSION=	0.004
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Data-OptList>=0.104:${PORTSDIR}/devel/p5-Data-OptList \
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	syntax.3
 
