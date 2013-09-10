@@ -2,7 +2,7 @@
 # Date created:				2004-06-23 18:16:13
 # Whom:	      				Jean-Baptiste Quenot <jb.quenot@caraldi.com>
 #
-# $FreeBSD: ports/mail/p5-MIME-Lite-HTML/Makefile,v 1.8 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-MIME-Lite-HTML/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	MIME-Lite-HTML
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MIME::Lite::HTML.3
 
