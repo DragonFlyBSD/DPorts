@@ -2,7 +2,7 @@
 # Date created:				Jun 11 2005
 # Whom:					koma2@lovepeers.org
 #
-# $FreeBSD: ports/sysutils/topless/Makefile,v 1.7 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/topless/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	topless
@@ -13,7 +13,8 @@ MASTER_SITES=	http://people.freebsd.org/~daichi/src/
 MAINTAINER=	koma2@lovepeers.org
 COMMENT=	Display command output on the whole screen like "top"
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 MAN1=		topless.1
 PLIST_FILES=	bin/topless
