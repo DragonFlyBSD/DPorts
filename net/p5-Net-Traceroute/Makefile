@@ -2,7 +2,7 @@
 # Date created:				April 7nd 2001
 # Whom:					kuriyama
 #
-# $FreeBSD: ports/net/p5-Net-Traceroute/Makefile,v 1.13 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Traceroute/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-Traceroute
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl module to parse traceroute(8)
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Traceroute.3
 
