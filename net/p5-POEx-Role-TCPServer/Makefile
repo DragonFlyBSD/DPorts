@@ -2,7 +2,7 @@
 # Date created:		10 Oct 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-POEx-Role-TCPServer/Makefile,v 1.4 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-POEx-Role-TCPServer/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	POEx-Role-TCPServer
@@ -25,7 +25,8 @@ RUN_DEPENDS=	\
 	p5-aliased>0:${PORTSDIR}/devel/p5-aliased
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POEx::Role::TCPServer.3
 
