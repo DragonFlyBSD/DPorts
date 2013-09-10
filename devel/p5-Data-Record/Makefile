@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Record/Makefile 315515 2013-03-29 01:31:43Z miwi $
+# $FreeBSD: devel/p5-Data-Record/Makefile 326581 2013-09-07 08:23:45Z az $
 
 PORTNAME=	Data-Record
 PORTVERSION=	0.02
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-MRO-Compat>=0.09:${PORTSDIR}/devel/p5-MRO-Compat \
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Scope-Guard>=0.20:${PORTSDIR}/devel/p5-Scope-Guard
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Record.3
 
