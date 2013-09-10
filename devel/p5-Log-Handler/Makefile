@@ -1,23 +1,20 @@
-# New ports collection makefile for:	Log::Handler
-# Date created:				7 Nov 2009
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: ports/devel/p5-Log-Handler/Makefile,v 1.14 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: devel/p5-Log-Handler/Makefile 326535 2013-09-06 18:27:15Z tobez $
 
 PORTNAME=	Log-Handler
-PORTVERSION=	0.75
+PORTVERSION=	0.79
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	sahil@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	An object-oriented handler for logging, tracing, and debugging in Perl
 
 BUILD_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Log::Handler.3 \
 		Log::Handler::Config.3 \
