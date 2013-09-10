@@ -1,5 +1,5 @@
 # Created by: David K. Gerry
-# $FreeBSD: accessibility/yasr/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: accessibility/yasr/Makefile 325643 2013-08-30 00:47:20Z bapt $
 
 PORTNAME=	yasr
 PORTVERSION=	0.6.9
@@ -12,8 +12,8 @@ COMMENT=	General-purpose console screen reader
 
 LICENSE=	LGPL20
 
+USES=		gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 MAN1=		yasr.1
 PORTDOCS=	AUTHORS BUGS CREDITS ChangeLog NEWS README TODO \
 		README-br README-de README-es README-fr README-ru
