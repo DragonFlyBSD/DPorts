@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Devel-Declare/Makefile 323438 2013-07-22 09:24:01Z culot $
+# $FreeBSD: devel/p5-Devel-Declare/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	Devel-Declare
 PORTVERSION=	0.006014
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-ExtUtils-Depends>=0.302:${PORTSDIR}/devel/p5-ExtUtils-Depends 
 		${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Declare.3
 
