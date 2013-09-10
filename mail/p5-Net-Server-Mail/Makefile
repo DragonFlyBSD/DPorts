@@ -2,7 +2,7 @@
 # Date created:				6th February 2004
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Net-Server-Mail/Makefile,v 1.13 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Net-Server-Mail/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	Net-Server-Mail
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Implementation of SMTP, ESMTP, and LMTP protocols
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Server::Mail.3 \
 		Net::Server::Mail::ESMTP.3 \
