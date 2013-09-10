@@ -1,12 +1,9 @@
-# Ports collection makefile for:  pear-Horde_Crypt
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: security/pear-Horde_Crypt/Makefile 321959 2013-06-28 12:13:35Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: security/pear-Horde_Crypt/Makefile 325479 2013-08-27 18:10:33Z mm $
 #
 
 PORTNAME=	Horde_Crypt
-PORTVERSION=	2.2.1
+PORTVERSION=	2.2.2
 CATEGORIES=	security www pear
 PKGNAMEPREFIX=	pear-
 
