@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-Types-Signal
-# Date created:	   16 Dec 2010
-# Whom:		   Denis Pokataev <catone@cpan.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Types-Signal/Makefile,v 1.4 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Denis Pokataev <catone@cpan.org>
+# $FreeBSD: devel/p5-MooseX-Types-Signal/Makefile 326823 2013-09-09 17:31:07Z az $
 
 PORTNAME=	MooseX-Types-Signal
 PORTVERSION=	1.101932
@@ -23,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Moose>0:${PORTSDIR}/devel/p5-Moose
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Types::Signal.3
 
