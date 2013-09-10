@@ -1,13 +1,8 @@
-# New ports collection makefile for:	dejavu
-# Date created:		Dec 23 2004
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/dejavu/Makefile,v 1.55 2012/11/17 06:03:27 svnexp Exp $
-#    $MCom: ports/x11-fonts/dejavu/Makefile,v 1.1 2006/10/13 23:29:09 ahze Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: x11-fonts/dejavu/Makefile 325468 2013-08-27 16:51:00Z sunpoet $
 
 PORTNAME=	dejavu
-PORTVERSION=	2.33
+PORTVERSION=	2.34
 CATEGORIES=	x11-fonts
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-fonts-ttf-${PORTVERSION}
@@ -16,7 +11,7 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bitstream Vera Fonts clone with a wider range of characters
 
 BUILD_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
-RUN_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	DOCS LINKS
 LINKS_DESC=	Install links of configuration files in conf.d
