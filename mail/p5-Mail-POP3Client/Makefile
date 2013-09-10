@@ -2,7 +2,7 @@
 # Date created:				October 24th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Mail-POP3Client/Makefile,v 1.32 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-POP3Client/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	Mail-POP3Client
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Perl5 module to talk to a POP3 (RFC1939) server
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::POP3Client.3
 
