@@ -2,7 +2,7 @@
 # Date created:				Apr 9th 2003
 # Whom:	      				Michael L. Hostbaek <mich@freebsdcluster.org>
 #
-# $FreeBSD: ports/net/wping/Makefile,v 1.13 2012/12/16 06:16:58 svnexp Exp $
+# $FreeBSD: net/wping/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	wping
@@ -17,7 +17,7 @@ COMMENT=	A Web-based graphical ping log
 RUN_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
 		p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
 
-USE_PERL5=	yes
+USES=		perl5
 USE_BZIP2=	yes
 NO_BUILD=	yes
 
