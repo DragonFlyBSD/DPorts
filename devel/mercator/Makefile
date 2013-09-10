@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: devel/mercator/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/mercator/Makefile 326685 2013-09-07 20:43:45Z oliver $
 
 PORTNAME=	mercator
 PORTVERSION=	0.3.2
@@ -14,6 +14,7 @@ LIB_DEPENDS=	wfmath-1.0.1:${PORTSDIR}/math/wfmath
 USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+USE_GCC=	yes
 
 CXXFLAGS+=	-include wchar.h
 CONFIGURE_ARGS+="CXXFLAGS=${CXXFLAGS}"
