@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/cyrus-sasl2/Makefile 325707 2013-08-30 15:47:17Z ume $
 
 PORTNAME=	cyrus-sasl
 PORTVERSION=	2.1.26
@@ -14,7 +14,6 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	${PORTNAME}2
-
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
@@ -53,6 +52,8 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-rc4=openssl \
 		--with-saslauthd=${SASLAUTHD_RUNPATH} \
 		--disable-krb4
+
+MAKE_JOBS_UNSAFE=	yes
 
 NO_OPTIONS_SORT=	yes
 OPTIONS_DEFINE=		ALWAYSTRUE AUTHDAEMOND KEEP_DB_OPEN \
