@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/exabgp/files/exabgp.in 321293 2013-06-19 16:53:56Z zi $
+# $FreeBSD: net/exabgp/files/exabgp.in 326243 2013-09-04 03:15:15Z zi $
 #
 # PROVIDE: exabgp
 # REQUIRE: LOGIN
@@ -43,7 +43,7 @@ exabgp_start()
 	install -d -o _bgpd -g _bgpd -m 755 /var/log/${name}
 	rm -f ${pidfile}
 
-	${procname} ${command} -c %%ETCDIR%% ${exabgp_conf}
+	${procname} ${command} --folder %%ETCDIR%% ${exabgp_conf}
 }
 
 run_rc_command "$1"
