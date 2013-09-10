@@ -2,7 +2,7 @@
 # Date created:		2006-09-25
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-HTML-RSSAutodiscovery/Makefile,v 1.7 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-RSSAutodiscovery/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	HTML-RSSAutodiscovery
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::RSSAutodiscovery.3
 
