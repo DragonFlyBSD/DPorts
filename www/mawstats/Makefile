@@ -1,8 +1,5 @@
-# New ports collection makefile for:    mawstats
-# Date created:                         Mon Apr 26 19:03:51 CEST 2010
-# Whom:                                 Frank Wall <fw@moov.de>
-#
-# $FreeBSD: ports/www/mawstats/Makefile,v 1.2 2012/11/17 06:02:39 svnexp Exp $
+# Created by: Frank Wall <fw@moov.de>
+# $FreeBSD: www/mawstats/Makefile 325858 2013-09-01 14:36:31Z itetcu $
 #
 
 PORTNAME=	mawstats
@@ -14,6 +11,9 @@ MAINTAINER=	fw@moov.de
 COMMENT=	MAWStats is a Free Web Site Statistics tool
 
 RUN_DEPENDS=	awstats>=6.8:${PORTSDIR}/www/awstats
+
+DEPRECATED=	Upstream development dead, use www/[j]awstats instead
+EXPIRATION_DATE=2014-01-01
 
 NO_BUILD=	yes
 USE_PHP=	yes
