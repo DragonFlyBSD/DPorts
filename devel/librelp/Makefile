@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/librelp/Makefile 319068 2013-05-25 19:12:28Z brd $
+# $FreeBSD: devel/librelp/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	librelp
 PORTVERSION=	1.0.7
@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.rsyslog.com/librelp/
 MAINTAINER=	brd@FreeBSD.org
 COMMENT=	Reliable event logging protocol library
 
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
