@@ -1,8 +1,8 @@
 # Created by: mandree@FreeBSD.org
-# $FreeBSD: ports/textproc/wiggle/Makefile,v 1.5 2013/02/05 23:44:18 svnexp Exp $
+# $FreeBSD: textproc/wiggle/Makefile 326842 2013-09-09 21:10:47Z mandree $
 
 PORTNAME=	wiggle
-PORTVERSION=	0.9.1
+PORTVERSION=	1.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://neil.brown.name/wiggle/
 
