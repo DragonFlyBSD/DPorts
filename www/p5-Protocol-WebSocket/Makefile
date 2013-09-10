@@ -2,7 +2,7 @@
 # Date created:				20 March 2010
 # Whom:					Stefan `Sec` Zehl <sec@42.org>
 #
-# $FreeBSD: ports/www/p5-Protocol-WebSocket/Makefile,v 1.5 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Protocol-WebSocket/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	Protocol-WebSocket
@@ -19,7 +19,8 @@ COMMENT=	Client/server WebSocket message and frame parser/constructor
 BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Protocol::WebSocket.3 \
 		Protocol::WebSocket::Cookie.3 \
