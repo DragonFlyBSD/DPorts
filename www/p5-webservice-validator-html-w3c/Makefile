@@ -2,7 +2,7 @@
 # Date created:				Oct 10, 2005
 # Whom:					toni.viemero@iki.fi
 #
-# $FreeBSD: ports/www/p5-webservice-validator-html-w3c/Makefile,v 1.11 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-webservice-validator-html-w3c/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	WebService-Validator-HTML-W3C
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WebService::Validator::HTML::W3C::Error.3 \
 	WebService::Validator::HTML::W3C.3
