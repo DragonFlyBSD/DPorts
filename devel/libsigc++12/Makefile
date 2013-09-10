@@ -1,9 +1,5 @@
-# New ports collection makefile for:   libsigc++
-# Date created:        30 September 2002
-# Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-#
-# $FreeBSD: ports/devel/libsigc++12/Makefile,v 1.39 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
+# $FreeBSD: devel/libsigc++12/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	libsigc++
 PORTVERSION=	1.2.7
@@ -19,10 +15,9 @@ COMMENT=	Callback Framework for C++
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 LATEST_LINK=	libsigc++12
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
