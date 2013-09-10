@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/mecab/Makefile 324569 2013-08-11 05:20:29Z tota $
+# $FreeBSD: japanese/mecab/Makefile 326154 2013-09-03 14:32:13Z bapt $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
@@ -17,6 +17,7 @@ USES=		iconv gettext:build perl5
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+CONFIGURE_ENV+=	ac_cv_lib_stdcpp_main=no
 
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I ${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
