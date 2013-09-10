@@ -1,10 +1,10 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: net/py-netlib/Makefile 325141 2013-08-21 14:42:17Z wg $
+# $FreeBSD: net/py-netlib/Makefile 326766 2013-09-08 18:32:34Z sunpoet $
 
 PORTNAME=	netlib
-PORTVERSION=	0.9.1
+PORTVERSION=	0.9.2
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	gaod@hychen.org
