@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	blop
-# Date created:			15 May 2002
-# Whom:				Tilman Linneweh <arved@FreeBSD.org>
-#
-# $FreeBSD: audio/blop/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Tilman Linneweh <arved@FreeBSD.org>
+# $FreeBSD: audio/blop/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	blop
 PORTVERSION=	0.2.8
@@ -15,7 +12,7 @@ COMMENT=	Bandlimited oscillator plugins for LADSPA-aware audio applications
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ladspa-prefix="${LOCALBASE}"
 
