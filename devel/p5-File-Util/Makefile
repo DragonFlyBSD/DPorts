@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	p5-File-Util
-# Date created:				25th April 2007
-# Whom: 				jeffhung
-#
-# $FreeBSD: ports/devel/p5-File-Util/Makefile,v 1.7 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: jeffhung
+# $FreeBSD: devel/p5-File-Util/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	File-Util
 PORTVERSION=	3.27
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Class-OOorNO>=0.01:${PORTSDIR}/devel/p5-Class-OOorNO \
 		p5-Exception-Handler>=1:${PORTSDIR}/devel/p5-Exception-Handler
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Util.3
 
