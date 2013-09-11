@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: audio/hawkvoice/Makefile 314209 2013-03-15 01:18:05Z jgh $
+# $FreeBSD: audio/hawkvoice/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	hawkvoice
 PORTVERSION=	0.91
@@ -12,7 +12,7 @@ COMMENT=	Portable sound and speech compression library
 
 USE_ZIP=	yes
 USE_DOS2UNIX=	yes
-USE_GMAKE=	yes
+USES=		gmake
 MAKEFILE=	makefile.linux
 USE_CSTD=	gnu89
 USE_LDCONFIG=	yes
