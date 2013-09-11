@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: ports/devel/p5-Shell-Source/Makefile,v 1.5 2012/11/17 05:56:29 svnexp Exp $
+# $FreeBSD: devel/p5-Shell-Source/Makefile 326822 2013-09-09 16:55:31Z az $
 
 PORTNAME=	Shell-Source
 PORTVERSION=	0.01
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Run programs and inherit environment changes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Shell::Source.3
 
