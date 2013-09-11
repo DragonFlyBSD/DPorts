@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-svg/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas-loader-svg/Makefile 326369 2013-09-05 08:31:18Z bapt $
 
 PORTNAME=	loader-svg
 PORTVERSION=	1.7.8
@@ -19,7 +19,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_EFL=	evas esvg librt_hack libtool_hack
 USE_LDCONFIG=	yes
 
