@@ -2,7 +2,7 @@
 # Date created:		Dec 26, 2006
 # Whom:			kuriyama@FreeBSD.org
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-VMethods/Makefile,v 1.5 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-VMethods/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	Template-Plugin-VMethods
@@ -17,7 +17,8 @@ COMMENT=	Install vmethods for Template-Toolkit
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Template-Toolkit>0:${PORTSDIR}/www/p5-Template-Toolkit
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Plugin::VMethods.3
 
