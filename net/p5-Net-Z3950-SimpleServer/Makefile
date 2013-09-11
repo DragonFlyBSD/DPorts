@@ -2,7 +2,7 @@
 # Date created:				12 March 2002
 # Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 314033 2013-03-13 07:09:34Z demon $
+# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	Net-Z3950-SimpleServer
@@ -16,7 +16,8 @@ COMMENT=	A Perl module for developing Z39.50 servers
 
 LIB_DEPENDS=	yaz:${PORTSDIR}/net/yaz
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 
 MAN3=		Net::Z3950::GRS1.3 Net::Z3950::SimpleServer.3
