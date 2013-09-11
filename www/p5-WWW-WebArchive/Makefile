@@ -2,7 +2,7 @@
 # Date created:		2006-08-20
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-WWW-WebArchive/Makefile,v 1.5 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-WebArchive/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	WWW-WebArchive
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-App-Options>=0:${PORTSDIR}/devel/p5-App-Options \
 		p5-App-Trace>=0:${PORTSDIR}/devel/p5-App-Trace \
 		p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::WebArchive.3 WWW::WebArchive::Agent.3 \
 		WWW::WebArchive::WaybackMachine.3
