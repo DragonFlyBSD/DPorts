@@ -2,7 +2,7 @@
 # Date created:		2010-03-03
 # Whom:			Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-Config-YAML/Makefile,v 1.4 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Config-YAML/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	CGI-Application-Plugin-Config-YAML
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-CGI-Application>4.01:${PORTSDIR}/www/p5-CGI-Application \
 RUN_DEPENDS=	p5-CGI-Application>4.01:${PORTSDIR}/www/p5-CGI-Application \
 		p5-Config-YAML>=0:${PORTSDIR}/devel/p5-Config-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Application::Plugin::Config::YAML.3
 
