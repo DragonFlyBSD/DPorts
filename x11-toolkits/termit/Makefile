@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/termit/Makefile 325602 2013-08-29 15:01:46Z pawel $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
@@ -12,19 +12,9 @@ COMMENT=	Small terminal emulator
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		pcre:${PORTSDIR}/devel/pcre \
-		cairo:${PORTSDIR}/graphics/cairo \
-		png15:${PORTSDIR}/graphics/png \
-		freetype:${PORTSDIR}/print/freetype2 \
-		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
-
 USE_BZIP2=	yes
-USES=		cmake pkgconfig iconv
+USES=		cmake pkgconfig
 USE_LUA=	yes
-USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
-		xfixes xi xinerama xrandr xrender
 USE_GNOME=	gdkpixbuf2 vte
 
 CFLAGS+=	-I${LOCALBASE}/include/vte-0.0
