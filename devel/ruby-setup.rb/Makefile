@@ -2,7 +2,7 @@
 # Date created:		11 June 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-setup.rb/Makefile,v 1.22 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-setup.rb/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	setup.rb
