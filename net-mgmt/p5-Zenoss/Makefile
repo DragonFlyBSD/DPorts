@@ -2,7 +2,7 @@
 # Date created:                         25 August 2011
 # Whom:                                 Phil Phillips
 #
-# $FreeBSD: ports/net-mgmt/p5-Zenoss/Makefile,v 1.3 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Zenoss/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	Zenoss
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-Moose>=1.0:${PORTSDIR}/devel/p5-Moose \
 		p5-libwww>=5.0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Zenoss.3 \
 		Zenoss::Connector.3 \
