@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-toolkits/vdk/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11-toolkits/vdk/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	vdk
 PORTVERSION=	2.5.1
@@ -13,7 +13,7 @@ COMMENT=	C++ wrapper for GTK+ toolkit
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=        pathfix
+USES=        pathfix pkgconfig
 USE_GNOME=	gtk20
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-opt=no --enable-doc-html=no --enable-testvdk=no
