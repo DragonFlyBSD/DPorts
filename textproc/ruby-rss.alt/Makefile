@@ -2,7 +2,7 @@
 # Date created:		23 March 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/textproc/ruby-rss.alt/Makefile,v 1.20 2012/11/17 06:02:19 svnexp Exp $
+# $FreeBSD: textproc/ruby-rss.alt/Makefile 302010 2012-08-04 12:24:05Z swills $
 #
 
 PORTNAME=	rss
