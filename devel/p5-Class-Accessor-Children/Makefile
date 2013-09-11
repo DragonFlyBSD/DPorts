@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Accessor-Children
-# Date created:		2010-01-03
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Accessor-Children/Makefile,v 1.2 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Class-Accessor-Children/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	Class-Accessor-Children
 PORTVERSION=	0.02
@@ -16,7 +12,8 @@ COMMENT=	Automated child-class/accessor generation
 
 RUN_DEPENDS=	p5-Class-Accessor>0:${PORTSDIR}/devel/p5-Class-Accessor
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Accessor::Children.3 \
 		Class::Accessor::Children::Fast.3
