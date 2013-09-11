@@ -2,7 +2,7 @@
 # Date created:		2008-02-07
 # Whom:			Tsung-Han Yeh <snowfly@yunteche.du.tw>
 #
-# $FreeBSD: ports/net-mgmt/p5-Net-Telnet-Cisco-IOS/Makefile,v 1.6 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-Telnet-Cisco-IOS/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	Net-Telnet-Cisco-IOS
@@ -18,7 +18,8 @@ COMMENT=	Manage Cisco IOS Devices
 RUN_DEPENDS=	p5-Net-Telnet-Cisco>=0:${PORTSDIR}/net-mgmt/p5-Telnet-Cisco
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Telnet::Cisco::IOS.3
 
