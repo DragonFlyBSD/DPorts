@@ -2,7 +2,7 @@
 # Date created:                19 January 2010
 # Whom:                        Konstantin Menshikov <kostjnspb@yandex.ru>
 #
-# $FreeBSD: ports/www/p5-URI-Escape-JavaScript/Makefile,v 1.2 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-URI-Escape-JavaScript/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	URI-Escape-JavaScript
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kostjnspb@yandex.ru
 COMMENT=	Perl implementation of JavaScript's escape()/unescape() functions
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	URI::Escape::JavaScript.3
 
