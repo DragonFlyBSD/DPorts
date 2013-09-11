@@ -2,7 +2,7 @@
 # Date Created:			01 February 2000
 # Whom:				Dmitry Sivachenko <dima@Chg.RU>
 #
-# $FreeBSD: ports/www/p5-HTML-TableLayout/Makefile,v 1.10 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-TableLayout/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	HTML-TableLayout
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Layout manager for CGI-based web applications
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::TableLayout.3
 
