@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Template-Xslate/Makefile 306964 2012-11-04 13:05:04Z gblach $
+# $FreeBSD: www/p5-Dancer-Template-Xslate/Makefile 326054 2013-09-02 18:41:05Z az $
 
 PORTNAME=	Dancer-Template-Xslate
 PORTVERSION=	0.03
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Dancer>0:${PORTSDIR}/www/p5-Dancer \
 		p5-Text-Xslate>0:${PORTSDIR}/textproc/p5-Text-Xslate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Dancer::Template::Xslate.3
 
