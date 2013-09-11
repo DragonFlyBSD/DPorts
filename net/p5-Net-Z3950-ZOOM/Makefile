@@ -2,7 +2,7 @@
 # Date created:				22 December 2006
 # Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Z3950-ZOOM/Makefile,v 1.12 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Z3950-ZOOM/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Net-Z3950-ZOOM
@@ -18,7 +18,8 @@ LIB_DEPENDS=	yaz.4:${PORTSDIR}/net/yaz
 BUILD_DEPENDS=	p5-MARC-Record>=1.38:${PORTSDIR}/textproc/p5-MARC-Record
 RUN_DEPENDS=	p5-MARC-Record>=1.38:${PORTSDIR}/textproc/p5-MARC-Record
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Z3950::ZOOM.3 ZOOM.3
 
