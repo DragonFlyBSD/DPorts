@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bzapi/Makefile 324913 2013-08-18 13:31:33Z bdrewery $
+# $FreeBSD: devel/bzapi/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	bzapi
 DISTVERSION=	165:82e75bdd00be
@@ -28,7 +28,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.80011:${PORTSDIR}/www/p5-Catalyst-Runtime 
 		bugzilla>=3.6:${PORTSDIR}/devel/bugzilla
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
 do-install:
