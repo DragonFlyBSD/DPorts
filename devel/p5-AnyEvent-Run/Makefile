@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-AnyEvent-Run
-# Date created:	   19 Mar 2010
-# Whom:		   Denis Pokataev <catone@cpan.org>
-#
-# $FreeBSD: ports/devel/p5-AnyEvent-Run/Makefile,v 1.4 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: Denis Pokataev <catone@cpan.org>
+# $FreeBSD: devel/p5-AnyEvent-Run/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	AnyEvent-Run
 PORTVERSION=	0.01
@@ -17,7 +13,8 @@ COMMENT=	Run a process or coderef asynchronously
 RUN_DEPENDS=	p5-AnyEvent>=4.15:${PORTSDIR}/devel/p5-AnyEvent
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AnyEvent::Run.3
 
