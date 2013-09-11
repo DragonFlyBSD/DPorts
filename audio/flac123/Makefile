@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flac123
-# Date created:		2004-05-14
-# Whom:			michael johnson <ahze@ahze.net>
-#
-# $FreeBSD: audio/flac123/Makefile 320405 2013-06-09 19:30:58Z naddy $
-#
+# Created by: michael johnson <ahze@ahze.net>
+# $FreeBSD: audio/flac123/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	flac123
 PORTVERSION=	0.0.11
@@ -18,7 +14,7 @@ LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
 		ao.4:${PORTSDIR}/audio/libao \
 		popt.0:${PORTSDIR}/devel/popt
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 
 PORTDOCS=	README.remote
