@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/xcowsay/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/xcowsay/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	xcowsay
 PORTVERSION=	1.3
@@ -14,8 +14,7 @@ COMMENT=	A graphical configurable talking cow
 OPTIONS_DEFINE=	DBUS
 
 USE_GNOME=	gtk20
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 MAN6=		xcowsay.6
