@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-igd/Makefile 324478 2013-08-10 11:30:09Z sunpoet $
+# $FreeBSD: net/gupnp-igd/Makefile 326614 2013-09-07 10:20:35Z sunpoet $
 
 PORTNAME=	gupnp-igd
 PORTVERSION=	0.2.2
@@ -14,7 +14,7 @@ LICENSE=	LGPL21
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pygobject-2.0.pc:${PORTSDIR}/devel/py-gobject \
 		gobject-introspection>=0.10:${PORTSDIR}/devel/gobject-introspection \
 		gupnp>=0.18:${PORTSDIR}/net/gupnp
-LIB_DEPENDS=	gupnp-1.0:${PORTSDIR}/net/gupnp
+LIB_DEPENDS=	libgupnp-1.0.so:${PORTSDIR}/net/gupnp
 RUN_DEPENDS=	gupnp>=0.18:${PORTSDIR}/net/gupnp
 
 CONFIGURE_ARGS=	--enable-introspection=yes
