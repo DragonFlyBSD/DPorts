@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-POE-Component-IRC-Plugin-QueryDNS
-# Date created:	   20.06.2008
-# Whom:		   Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/irc/p5-POE-Component-IRC-Plugin-QueryDNS/Makefile,v 1.6 2012/11/17 05:58:29 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-QueryDNS/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	POE-Component-IRC-Plugin-QueryDNS
 PORTVERSION=	1.04
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Net-IP>=1.25:${PORTSDIR}/net-mgmt/p5-Net-IP \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PLIST_SUB=	EXAMPLESDIR="share/examples/${PORTNAME}"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Plugin::QueryDNS.3
 
