@@ -1,5 +1,5 @@
 # Created by: steve farrell
-# $FreeBSD: games/xqf/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/xqf/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	xqf
 PORTVERSION=	1.0.5
@@ -13,8 +13,7 @@ COMMENT=	Server browser for many popular 3D action games
 RUN_DEPENDS=	qstat:${PORTSDIR}/games/qstat
 
 USE_GNOME=	intlhack
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 MAN6=		xqf.6
