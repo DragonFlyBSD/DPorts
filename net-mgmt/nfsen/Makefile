@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/nfsen/Makefile 322524 2013-07-08 17:44:07Z feld $
+# $FreeBSD: net-mgmt/nfsen/Makefile 326399 2013-09-05 13:48:34Z feld $
 
 PORTNAME=	nfsen
 PORTVERSION=	1.3.6p1
@@ -19,8 +19,7 @@ RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool \
 		p5-Socket6>=0:${PORTSDIR}/net/p5-Socket6 \
 		nfdump>=0:${PORTSDIR}/net-mgmt/nfdump
 
-USES=		iconv shebangfix
-USE_PERL5=	yes
+USES=	iconv shebangfix perl5
 USE_PHP=	session pcre sockets
 NO_BUILD=	yes
 PLIST_SUB+=	PORTNAME=${PORTNAME}
