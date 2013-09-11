@@ -2,7 +2,7 @@
 # Date created:	       8 December 2007
 # Whom:		       John D. "Trix" Farrar <trix@basement.net>
 #
-# $FreeBSD: sysutils/logwatch/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: sysutils/logwatch/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	logwatch
@@ -18,7 +18,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN8=		logwatch.8
 DOCS=		HOWTO-Customize-LogWatch License README
