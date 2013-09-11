@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/py-gdal/Makefile 325089 2013-08-21 03:47:40Z sunpoet $
+# $FreeBSD: graphics/py-gdal/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
 
 PORTNAME=	gdal
-PORTVERSION=	1.10.0
+PORTVERSION=	1.10.1
 CATEGORIES=	graphics python
 MASTER_SITES=	http://download.osgeo.org/gdal/ \
 		ftp://ftp.remotesensing.org/pub/gdal/ \
@@ -14,7 +14,7 @@ COMMENT=	Python binding for GDAL
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
+LIB_DEPENDS=	libgdal.so:${PORTSDIR}/graphics/gdal
 
 OPTIONS_DEFINE=	NUMPY
 NUMPY_DESC=	Enable array support via NumPy
@@ -22,7 +22,7 @@ NUMPY_DESC=	Enable array support via NumPy
 PYEASYINSTALL_ARCHDEP=	yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:tu}
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/python
 
 .include <bsd.port.options.mk>
