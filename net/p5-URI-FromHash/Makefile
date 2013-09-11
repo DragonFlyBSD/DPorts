@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/p5-URI-FromHash/Makefile 321110 2013-06-17 13:53:08Z culot $
+# $FreeBSD: net/p5-URI-FromHash/Makefile 326468 2013-09-06 07:00:15Z az $
 
 PORTNAME=	URI-FromHash
 DISTVERSION=	0.04
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-URI>=1.22:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		URI::FromHash.3
 
