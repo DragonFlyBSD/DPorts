@@ -1,5 +1,5 @@
 # Created by: Christoph Moench-Tegeder <cmt@burggraben.net>
-# $FreeBSD: devel/librest/Makefile 320509 2013-06-10 22:47:21Z wg $
+# $FreeBSD: devel/librest/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	rest
 PORTVERSION=	0.7.90
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
+USES=		pkgconfig
 USE_XZ=		yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
