@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda-server/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: misc/amanda-server/Makefile 325751 2013-08-31 00:32:33Z bapt $
 
 PORTNAME=	amanda
 PORTVERSION=	3.3.2
@@ -20,11 +20,10 @@ SLAVEDIRS=	misc/amanda-client
 
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig glib20
-USE_GMAKE=	yes
+USES=		gmake pkgconfig perl5
+USE_GNOME=	glib20
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 CONFIGURE_ARGS=	--libexecdir=${PREFIX}/libexec/amanda \
 		--without-amlibexecdir \
 		--with-amandahosts --with-fqdn \
