@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnutls-devel
-# Date created:				8 Jan 2009
-# Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
-#
-# $FreeBSD: security/gnutls-devel/Makefile 317496 2013-05-06 09:39:25Z bapt $
-#
+# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
+# $FreeBSD: security/gnutls-devel/Makefile 325745 2013-08-31 00:11:06Z bapt $
 
 PORTNAME=	gnutls
 PORTVERSION=	2.99.4
@@ -23,8 +19,8 @@ LIB_DEPENDS=	gpg-error.0:${PORTSDIR}/security/libgpg-error \
 CONFLICTS=	gnutls-[0-9]*
 
 USE_XZ=		yes
-USES=		iconv
-USE_GNOME=	pkgconfig ltverhack
+USES=		iconv pkgconfig
+USE_GNOME=	ltverhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
