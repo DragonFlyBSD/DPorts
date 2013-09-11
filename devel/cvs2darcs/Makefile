@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/cvs2darcs/Makefile 323847 2013-07-28 19:48:40Z pgj $
+# $FreeBSD: devel/cvs2darcs/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	cvs2darcs
 PORTVERSION=	0.8
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	darcs:${PORTSDIR}/devel/hs-darcs \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 MAN1=	cvs2darcs.1
 PLIST_FILES=	bin/cvs2darcs share/cvs2darcs/cvs_convert.pl \
