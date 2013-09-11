@@ -2,7 +2,7 @@
 # Date created:        29 May 2007
 # Whom:                issei
 #
-# $FreeBSD: ports/japanese/ctags/Makefile,v 1.5 2012/11/17 05:58:32 svnexp Exp $
+# $FreeBSD: japanese/ctags/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	ctags
