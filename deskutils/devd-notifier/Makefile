@@ -1,9 +1,5 @@
-# New ports collection makefile for:   devd-notifier
-# Date created:                March 30, 2012
-# Whom:                        Florian Unglaub <f.unglaub@googlemail.com>
-#
-# $FreeBSD: ports/deskutils/devd-notifier/Makefile,v 1.2 2012/11/17 05:55:26 svnexp Exp $
-#
+# Created by: Florian Unglaub <f.unglaub@googlemail.com>
+# $FreeBSD: deskutils/devd-notifier/Makefile 326027 2013-09-02 16:29:30Z bapt $
 
 PORTNAME=	devd-notifier
 PORTVERSION=	0.1
@@ -20,6 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify
 
+USES=		pkgconfig
 MAN1=		devd-notifier.1
 PLIST_FILES=	bin/devd-notifier
 MANCOMPRESSED=	yes
