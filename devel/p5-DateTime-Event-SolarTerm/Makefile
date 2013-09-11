@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Event-SolarTerm
-# Date created:		2007-11-06
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Event-SolarTerm/Makefile,v 1.3 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: devel/p5-DateTime-Event-SolarTerm/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	DateTime-Event-SolarTerm
 PORTVERSION=	0.05
@@ -24,7 +20,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Util-Calc>=0.12:${PORTSDIR}/devel/p5-DateTime-Util-Calc \
 		p5-DateTime-Util-Astro>=0.11:${PORTSDIR}/devel/p5-DateTime-Util-Astro
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Event::SolarTerm.3
 
