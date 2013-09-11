@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fyre
-# Date created:				2004 11 July
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: graphics/fyre/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: graphics/fyre/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	fyre
 PORTVERSION=	1.0.1
@@ -22,6 +18,7 @@ GNET_DESC=	Enable GNet support
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	desktopfileutils libglade2
 USE_GMAKE=	yes
