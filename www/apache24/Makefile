@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/apache24/Makefile 326683 2013-09-07 19:49:41Z bsam $
 
 PORTNAME=	apache24
 PORTVERSION=	2.4.6
@@ -74,7 +74,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--with-port=${WITH_HTTP_PORT} \
 		--with-sslport=${WITH_SSL_PORT} \
 		--with-expat=${LOCALBASE} \
-		--with-iconv=${LOCALBASE} \
+		--with-iconv=${ICONV_PREFIX} \
 		--enable-http \
 		--with-pcre=${LOCALBASE} \
 		--with-apr=${APR_CONFIG} \
