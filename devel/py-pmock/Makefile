@@ -2,7 +2,7 @@
 # Date created:		2005-01-13
 # Whom:			Piet Delport <pjd@satori.za.net>
 #
-# $FreeBSD: ports/devel/py-pmock/Makefile,v 1.5 2012/11/17 05:56:49 svnexp Exp $
+# $FreeBSD: devel/py-pmock/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 PORTNAME=	pmock
 PORTVERSION=	0.3
