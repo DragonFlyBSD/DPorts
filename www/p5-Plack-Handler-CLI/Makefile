@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Handler-CLI/Makefile 319085 2013-05-26 01:03:04Z kuriyama $
+# $FreeBSD: www/p5-Plack-Handler-CLI/Makefile 326156 2013-09-03 15:07:52Z az $
 
 PORTNAME=	Plack-Handler-CLI
 PORTVERSION=	0.05
@@ -20,7 +20,8 @@ TEST_DEPENDS=	\
 	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP \
 	p5-Router-Simple>0:${PORTSDIR}/www/p5-Router-Simple
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Plack::Handler::CLI.3
 
