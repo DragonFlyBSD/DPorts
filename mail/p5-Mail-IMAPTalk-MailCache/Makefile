@@ -2,7 +2,7 @@
 # Date created:		2009-09-27
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/mail/p5-Mail-IMAPTalk-MailCache/Makefile,v 1.6 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-IMAPTalk-MailCache/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	Mail-IMAPTalk-MailCache
@@ -18,7 +18,8 @@ COMMENT=	Caches mail information for Mail::IMAPTalk using Mail::Cache
 BUILD_DEPENDS=	p5-Mail-Cache>=0:${PORTSDIR}/mail/p5-Mail-Cache \
 		p5-Mail-IMAPTalk>=0:${PORTSDIR}/mail/p5-Mail-IMAPTalk
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::IMAPTalk::MailCache.3
 
