@@ -2,7 +2,7 @@
 # Date created:				Wed Oct 24 10:09:12 EDT 2007
 # Whom:					Vivek Khera <vivek@khera.org>
 #
-# $FreeBSD: ports/finance/p5-PayflowPro/Makefile,v 1.6 2012/11/17 05:57:26 svnexp Exp $
+# $FreeBSD: finance/p5-PayflowPro/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	PayflowPro
@@ -18,7 +18,8 @@ COMMENT=	Pure Perl PayflowPro payment gateway interface
 RUN_DEPENDS+=	p5-libwww>0.0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS+=	p5-libwww>0.0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ca-bundle.crt ${LOCALBASE}/etc
