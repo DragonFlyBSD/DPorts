@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Config-IniRegEx
-# Date created:		2009-01-30
-# Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-Config-IniRegEx/Makefile,v 1.3 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Murilo Opsfelder <mopsfelder@gmail.com>
+# $FreeBSD: devel/p5-Config-IniRegEx/Makefile 326802 2013-09-09 11:01:46Z az $
 
 PORTNAME=	Config-IniRegEx
 PORTVERSION=	0.01
@@ -16,7 +12,8 @@ COMMENT=	Ini workaround, regex search for parameters and sections
 
 RUN_DEPENDS=	p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::IniRegEx.3
 
