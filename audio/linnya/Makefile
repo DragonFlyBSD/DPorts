@@ -1,4 +1,4 @@
-# $FreeBSD: audio/linnya/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/linnya/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	linnya
 PORTVERSION=	2.3.0
@@ -16,10 +16,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	herenvarno
 GH_COMMIT=	90cf6b8
 
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtoolize libtool
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk30
 USE_SQLITE=	3
 USE_GSTREAMER=	good mp3
