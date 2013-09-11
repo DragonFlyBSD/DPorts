@@ -2,7 +2,7 @@
 # Date created:		2009-09-27
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/sysutils/p5-ZConf-Cron/Makefile,v 1.8 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-ZConf-Cron/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	ZConf-Cron
@@ -26,7 +26,8 @@ RUN_DEPENDS:=	p5-DateTime-Event-Cron>=0:${PORTSDIR}/devel/p5-DateTime-Event-Cron
 		p5-ZConf-GUI>=0:${PORTSDIR}/devel/p5-ZConf-GUI \
 		p5-ZConf>=0:${PORTSDIR}/net/p5-ZConf
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZConf::Cron.3 \
 		ZConf::Cron::GUI.3
