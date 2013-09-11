@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/euler/Makefile 320807 2013-06-13 15:30:22Z bsam $
+# $FreeBSD: science/euler/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	euler
 PORTVERSION=	1.61.0
@@ -13,12 +13,9 @@ COMMENT=	Program computes with real and complex numbers and matrices
 
 LICENSE=	GPLv2
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 .include <bsd.port.pre.mk>
 
