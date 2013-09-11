@@ -2,7 +2,7 @@
 # Date created:		Jun 08 2011
 # Whom:			Dmitry Liakh <dliakh@ukr.net>
 #
-# $FreeBSD: ports/www/p5-HTML-MobileConverter/Makefile,v 1.2 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-MobileConverter/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	HTML-MobileConverter
@@ -17,7 +17,8 @@ COMMENT=	HTML Converter for mobile agent
 RUN_DEPENDS=	p5-HTML-Parser>=3.45:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-URI>=1.33:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::MobileConverter.3
 
