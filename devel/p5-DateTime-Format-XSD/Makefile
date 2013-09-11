@@ -1,9 +1,5 @@
-# New ports collection makefile for:    DateTime-Format-XSD
-# Date created:         29 oct 2009
-# Whom:                 Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Format-XSD/Makefile,v 1.5 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
+# $FreeBSD: devel/p5-DateTime-Format-XSD/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	DateTime-Format-XSD
 PORTVERSION=	0.2
@@ -17,7 +13,8 @@ COMMENT=	Format DateTime according to xsd:dateTime
 BUILD_DEPENDS=	p5-DateTime-Format-ISO8601>=0:${PORTSDIR}/devel/p5-DateTime-Format-ISO8601
 RUN_DEPENDS=	p5-DateTime-Format-ISO8601>=0:${PORTSDIR}/devel/p5-DateTime-Format-ISO8601
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Format::XSD.3
 
