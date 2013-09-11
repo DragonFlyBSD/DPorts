@@ -2,7 +2,7 @@
 # Date created:		2006-07-24
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-WWW-OpenSVN/Makefile,v 1.8 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-OpenSVN/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	WWW-OpenSVN
@@ -17,7 +17,8 @@ COMMENT=	An automated interface for OpenSVN.csie.org
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		WWW::OpenSVN.3
 
