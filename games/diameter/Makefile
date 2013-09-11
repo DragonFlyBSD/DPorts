@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/diameter/Makefile 313648 2013-03-08 13:59:19Z amdmi3 $
+# $FreeBSD: games/diameter/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	diameter
 PORTVERSION=	0.4.0.3
@@ -15,7 +15,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GL=		gl
 USE_SDL=	sdl mixer image
 USE_PYTHON=	yes
