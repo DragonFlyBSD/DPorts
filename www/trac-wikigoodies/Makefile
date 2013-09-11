@@ -2,7 +2,7 @@
 # Date created:				Fri 01 May 2009
 # Whom:					Alexey V. Degtyarev <alexey@renatasystems.org>
 #
-# $FreeBSD: ports/www/trac-wikigoodies/Makefile,v 1.4 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-wikigoodies/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	wikigoodies
@@ -28,7 +28,7 @@ PYDISTUTILS_PKGVERSION=	0.11.${PORTVERSION:R}dev
 PYDISTUTILS_NOEGGINFO=	yes
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION:R} \
-		PYTHONVERSION=${_PYTHON_VERSION}
+		PYTHONVERSION=${PYTHON_VER}
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 .include <bsd.port.mk>
