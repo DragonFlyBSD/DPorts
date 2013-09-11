@@ -2,7 +2,7 @@
 # Date created:			Sep 11, 2002
 # Whom:	      			ijliao
 #
-# $FreeBSD: ports/net/p5-Net-Whois-RIPE/Makefile,v 1.22 2012/11/26 10:55:06 svnexp Exp $
+# $FreeBSD: net/p5-Net-Whois-RIPE/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-Whois-RIPE
@@ -23,7 +23,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Whois::Object.3 \
 		Net::Whois::Object::AsBlock.3 \
