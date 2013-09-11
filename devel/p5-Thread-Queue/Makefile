@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Thread-Queue/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-Thread-Queue/Makefile 326581 2013-09-07 08:23:45Z az $
 
 PORTNAME=	Thread-Queue
 PORTVERSION=	3.02
@@ -13,7 +13,8 @@ COMMENT=	Perl5 thread-safe queues
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Thread::Queue.3
 
