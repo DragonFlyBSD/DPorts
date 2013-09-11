@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/fuse/Makefile 319775 2013-06-03 12:41:32Z rene $
+# $FreeBSD: emulators/fuse/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	fuse
 PORTVERSION=	1.1.1
@@ -16,6 +16,7 @@ LIB_DEPENDS=	spectrum:${PORTSDIR}/emulators/libspectrum \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	libxml2 glib20 gtk20
 
 CONFIGURE_ARGS+=--without-alsa --without-joystick
