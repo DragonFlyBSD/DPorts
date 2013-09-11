@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: news/slrnconf/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: news/slrnconf/Makefile 325955 2013-09-02 09:22:47Z az $
 
 PORTNAME=	slrnconf
 PORTVERSION=	0.8.4
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
+USES=		perl5
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
 do-install:
