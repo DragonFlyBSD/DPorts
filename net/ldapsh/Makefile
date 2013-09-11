@@ -2,7 +2,7 @@
 # Date created:				Jul 28 2004
 # Whom:					Florent Thoumie <flz@xbsd.org>
 #
-# $FreeBSD: ports/net/ldapsh/Makefile,v 1.16 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/ldapsh/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	ldapsh
@@ -29,7 +29,8 @@ MAN1=		ldapsh.1
 MAN3=		Net::LDAP::Shell.3 Net::LDAP::Config.3 \
 		Net::LDAP::Shell::Parse.3 Net::LDAP::Shell::Util.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 post-patch:
 	${REINPLACE_CMD} -e "s,/usr/local/bin/perl,${PERL}," ${WRKSRC}/ldapsh
