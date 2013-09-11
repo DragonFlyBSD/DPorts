@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-Amazon-MechanicalTurk/Makefile,v 1.7 2013/01/17 20:15:05 svnexp Exp $
+# $FreeBSD: net/p5-Net-Amazon-MechanicalTurk/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	Net-Amazon-MechanicalTurk
 PORTVERSION=	1.02
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-Mozilla-CA>=0:${PORTSDIR}/www/p5-Mozilla-CA
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Amazon::MechanicalTurk.3 \
 		Net::Amazon::MechanicalTurk::BulkSupport.3 \
