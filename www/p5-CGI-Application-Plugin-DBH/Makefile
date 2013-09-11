@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-DBH/Makefile,v 1.11 2013/02/12 17:57:19 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-DBH/Makefile 326156 2013-09-03 15:07:52Z az $
 
 PORTNAME=	CGI-Application-Plugin-DBH
 PORTVERSION=	4.01
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		CGI::Application::Plugin::DBH.3
 
