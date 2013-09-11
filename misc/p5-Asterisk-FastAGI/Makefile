@@ -1,5 +1,5 @@
 # Created by: Maksym Sobolyev <sobomax@pbxpress.it>
-# $FreeBSD: misc/p5-Asterisk-FastAGI/Makefile 317172 2013-05-03 06:35:17Z sobomax $
+# $FreeBSD: misc/p5-Asterisk-FastAGI/Makefile 325955 2013-09-02 09:22:47Z az $
 
 PORTNAME=	Asterisk-FastAGI
 PORTVERSION=	0.02
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install \
 RUN_DEPENDS=	p5-Asterisk>=0:${PORTSDIR}/misc/p5-Asterisk \
 		p5-Net-Server>=0:${PORTSDIR}/net/p5-Net-Server
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Asterisk::FastAGI.3
 
