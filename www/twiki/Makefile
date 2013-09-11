@@ -1,5 +1,5 @@
 # Created by: Justin Hawkins <justin@hawkins.id.au>
-# $FreeBSD: www/twiki/Makefile 317803 2013-05-10 14:03:43Z koobs $
+# $FreeBSD: www/twiki/Makefile 326139 2013-09-03 12:27:09Z az $
 
 PORTNAME=	twiki
 PORTVERSION=	5.1.4
@@ -27,7 +27,7 @@ RUN_DEPENDS=	\
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		twiki-TWikiUserMappingContrib>=0:${PORTSDIR}/www/twiki-TWikiUserMappingContrib
 
-USE_PERL5=	yes
+USES=		perl5
 WRKSRC=	${WRKDIR}/twiki
 
 post-extract:
