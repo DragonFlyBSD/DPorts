@@ -17,8 +17,8 @@ COMMENT=	A command-line client for Last.FM
 LIB_DEPENDS=	ao:${PORTSDIR}/audio/libao \
 		mad:${PORTSDIR}/audio/libmad
 
+USES=		gmake pkgconfig
 USE_BZIP2=	true
-USE_GMAKE=	true
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 
