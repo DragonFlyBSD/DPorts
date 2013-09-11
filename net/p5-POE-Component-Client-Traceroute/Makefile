@@ -2,7 +2,7 @@
 # Date created:		2006-08-09
 # Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
 #
-# $FreeBSD: ports/net/p5-POE-Component-Client-Traceroute/Makefile,v 1.7 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-POE-Component-Client-Traceroute/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	POE-Component-Client-Traceroute
@@ -17,7 +17,8 @@ COMMENT=	A non-blocking traceroute client
 RUN_DEPENDS=	p5-POE>=0.11:${PORTSDIR}/devel/p5-POE
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POE::Component::Client::Traceroute.3
 
