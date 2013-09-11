@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-FurlX-Coro/Makefile 320047 2013-06-06 01:51:53Z kuriyama $
+# $FreeBSD: www/p5-FurlX-Coro/Makefile 326053 2013-09-02 18:23:34Z az $
 
 PORTNAME=	FurlX-Coro
 PORTVERSION=	1.02
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	\
 	${RUN_DEPENDS} \
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	FurlX::Coro.3 \
 	FurlX::Coro::HTTP.3
