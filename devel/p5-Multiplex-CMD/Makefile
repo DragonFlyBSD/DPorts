@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Multiplex-CMD
-# Date created:		21 March 2011
-# Whom:			Andrey Ignatov <rdna@rdna.ru>
-#
-# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Andrey Ignatov <rdna@rdna.ru>
+# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	Multiplex-CMD
 PORTVERSION=	0.03
@@ -15,7 +11,8 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	rdna@rdna.ru
 COMMENT=	Perl5 module which provides Multiplexed Fork Client
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Multiplex::CMD.3
 
