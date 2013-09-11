@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: chinese/pcmanx/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: chinese/pcmanx/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	pcmanx
 PORTVERSION=	1.2
@@ -14,8 +14,7 @@ LICENSE=	GPLv2
 
 USE_XZ=		yes
 USE_GNOME=	gtk20 intlhack
-USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	NLS DEBUG DOCKLET NOTIFIER LIBNOTIFY NANCY MOUSE EXTERNAL IPLOOKUP PROXY
