@@ -2,7 +2,7 @@
 # Date Created:				26 January 2006
 # Whom:					Simun Mikecin <numisemis@yahoo.com>
 #
-# $FreeBSD: ports/net/p5-Apache2-SOAP/Makefile,v 1.12 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-Apache2-SOAP/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Apache2-SOAP
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2 \
 		p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_APACHE=	22+
 
 MAN3=		Apache2::SOAP.3
