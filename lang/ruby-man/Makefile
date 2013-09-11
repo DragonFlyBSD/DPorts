@@ -2,7 +2,7 @@
 # Date created:			Sat Aug 17 17:10:02 CEST 2000
 # Whom:				olgeni@uli.it
 #
-# $FreeBSD: ports/lang/ruby-man/Makefile,v 1.16 2012/11/17 05:58:56 svnexp Exp $
+# $FreeBSD: lang/ruby-man/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	ruby-man
