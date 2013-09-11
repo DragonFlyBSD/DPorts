@@ -2,7 +2,7 @@
 # Date created:				13 April 2001
 # Whom:					Sergey A. Osokin <osa@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/pflogsumm/Makefile,v 1.36 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/pflogsumm/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	pflogsumm
@@ -18,7 +18,7 @@ COMMENT=	Postfix Log Entry Summarizer
 RUN_DEPENDS=	p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/pflogsumm
 .if !defined(NOPORTDOCS)
 PORTDOCS=	README ToDo pflogsumm-faq.txt
