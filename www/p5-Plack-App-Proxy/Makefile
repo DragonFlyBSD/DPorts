@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 313353 2013-03-03 14:45:06Z kuriyama $
+# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 326139 2013-09-03 12:27:09Z az $
 
 PORTNAME=	Plack-App-Proxy
 PORTVERSION=	0.27
@@ -19,7 +19,8 @@ TEST_DEPENDS=	\
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires \
 	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::App::Proxy.3 \
 	Plack::App::Proxy::Backend.3 \
