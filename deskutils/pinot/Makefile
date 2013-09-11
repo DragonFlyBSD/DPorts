@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: deskutils/pinot/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: deskutils/pinot/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	pinot
 PORTVERSION=	1.06
@@ -47,7 +47,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 USE_DOS2UNIX=	textcat32_conf.txt
 USE_XORG=	pixman
-USES=		gettext
+USES=		gettext pkgconfig
 USE_SQLITE=	3
 USE_PYTHON=	yes
 USE_OPENSSL=	yes
