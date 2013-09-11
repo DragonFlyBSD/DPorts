@@ -1,9 +1,5 @@
-# New ports collection makefile for:	uf-view
-# Date created:				30 May 2001
-# Whom:				Jonathan McGee <mcgee@wam.umd.edu>
-#
-# $FreeBSD: ports/misc/uf-view/Makefile,v 1.31 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: Jonathan McGee <mcgee@wam.umd.edu>
+# $FreeBSD: misc/uf-view/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	uf-view
 PORTVERSION=	2.4
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.hadess.net/files/software/uf-view/
 MAINTAINER=	mcgee@wam.umd.edu
 COMMENT=	A gTK+ viewer for the User Friendly and several other popular comics
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack gnomehier gnomevfs2 gnomedesktop libgnomeui
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
