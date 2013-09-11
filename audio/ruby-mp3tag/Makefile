@@ -2,7 +2,7 @@
 # Date created:		30 July 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/audio/ruby-mp3tag/Makefile,v 1.9 2012/11/17 05:54:43 svnexp Exp $
+# $FreeBSD: audio/ruby-mp3tag/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	mp3tag
