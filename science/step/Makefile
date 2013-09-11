@@ -1,7 +1,8 @@
-# $FreeBSD: science/step/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: science/step/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	step
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	science kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -11,7 +12,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE 4 interactive physics simulator
 
 LIB_DEPENDS=	qalculate.5:${PORTSDIR}/math/libqalculate \
-		gsl.16:${PORTSDIR}/math/gsl
+		gsl:${PORTSDIR}/math/gsl
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen2.pc:${PORTSDIR}/math/eigen2
 
