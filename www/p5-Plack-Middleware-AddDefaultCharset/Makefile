@@ -2,7 +2,7 @@
 # Date created:		02 Nov 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-AddDefaultCharset/Makefile,v 1.3 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-AddDefaultCharset/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	Plack-Middleware-AddDefaultCharset
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 	p5-Plack>=0.9925:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::AddDefaultCharset.3
 
