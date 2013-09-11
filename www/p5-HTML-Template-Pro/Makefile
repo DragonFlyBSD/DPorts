@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Template-Pro/Makefile 318724 2013-05-21 22:19:05Z kuriyama $
+# $FreeBSD: www/p5-HTML-Template-Pro/Makefile 326054 2013-09-02 18:41:05Z az $
 
 PORTNAME=	HTML-Template-Pro
 PORTVERSION=	0.9510
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-JSON>=2:${PORTSDIR}/converters/p5-JSON
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::Template::PerlInterface.3 \
 	HTML::Template::Pro.3 \
