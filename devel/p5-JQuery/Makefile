@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-JQuery
-# Date created:		2007-07-14
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-JQuery/Makefile,v 1.6 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-JQuery/Makefile 326810 2013-09-09 14:13:20Z az $
 
 PORTNAME=	JQuery
 PORTVERSION=	1.06
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		JQuery.3 \
 		JQuery::Accordion.3 \
