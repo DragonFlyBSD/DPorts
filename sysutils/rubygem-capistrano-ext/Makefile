@@ -2,7 +2,7 @@
 # Date created:		2011-08-24
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/rubygem-capistrano-ext/Makefile,v 1.3 2012/11/17 06:01:44 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-capistrano-ext/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	capistrano-ext
