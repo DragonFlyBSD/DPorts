@@ -2,7 +2,7 @@
 # Date created:		2006-08-20
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-BBS-UserInfo/Makefile,v 1.4 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-BBS-UserInfo/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	BBS-UserInfo
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Base class of BBS::UserInfo::XXX
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		BBS::UserInfo.3
 
