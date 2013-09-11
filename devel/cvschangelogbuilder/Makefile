@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvschangelogbuilder
-# Date created:				Sun Mar  5 16:43:25 EST 2006
-# Whom:					Matthew Will <mwill@spingen.com>
-#
-# $FreeBSD: ports/devel/cvschangelogbuilder/Makefile,v 1.14 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Matthew Will <mwill@spingen.com>
+# $FreeBSD: devel/cvschangelogbuilder/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	cvschangelogbuilder
 PORTVERSION=	2.5
@@ -18,7 +14,7 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	p5-GD-Graph>=0:${PORTSDIR}/graphics/p5-GD-Graph
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	bin/cvschangelogbuilder
 PORTDOCS=	*
