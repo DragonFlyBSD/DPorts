@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-MooseX-MultiInitArg/Makefile 322754 2013-07-11 06:56:41Z culot $
+# $FreeBSD: devel/p5-MooseX-MultiInitArg/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	MooseX-MultiInitArg
 PORTVERSION=	0.02
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Module-Build-Tiny>=0.023:${PORTSDIR}/devel/p5-Module-Build-Tiny
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		MooseX::MultiInitArg.3 \
 		MooseX::MultiInitArg::Trait.3 \
