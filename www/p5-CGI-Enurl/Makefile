@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Enurl/Makefile 314456 2013-03-17 15:31:06Z crees $
+# $FreeBSD: www/p5-CGI-Enurl/Makefile 326033 2013-09-02 16:56:12Z az $
 
 PORTNAME=	CGI-Enurl
 PORTVERSION=	1.07
@@ -11,7 +11,8 @@ COMMENT=	Perl module for URL-encoding strings and hashes
 
 RUN_DEPENDS=	p5-CGI.pm>=0:${PORTSDIR}/www/p5-CGI.pm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Enurl.3
 
