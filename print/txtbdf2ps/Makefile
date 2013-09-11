@@ -3,7 +3,7 @@
 # Date created:			Aug 10, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/print/txtbdf2ps/Makefile,v 1.11 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/txtbdf2ps/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	txtbdf2ps
@@ -19,7 +19,7 @@ COMMENT=	Translator TXT + BDF to PS
 PROJECTHOST=	ak-various-projects
 
 PLIST_FILES=	bin/txtbdf2ps
-USE_PERL5=	yes
+USES=		perl5
 EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	${WRKDIR}
