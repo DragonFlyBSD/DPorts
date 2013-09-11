@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11-wm/qlwm/Makefile,v 1.22 2013/01/27 06:41:43 svnexp Exp $
+# $FreeBSD: x11-wm/qlwm/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
 
 PORTNAME=	qlwm
 PORTVERSION=	4.3
