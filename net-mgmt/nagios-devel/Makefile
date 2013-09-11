@@ -1,5 +1,5 @@
 # Created by: Jarrod Sayers <jarrod@netleader.com.au>
-# $FreeBSD: net-mgmt/nagios-devel/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: net-mgmt/nagios-devel/Makefile 325905 2013-09-01 19:12:18Z az $
 
 PORTNAME=	nagios
 DISTVERSIONPREFIX=HEAD-
@@ -94,7 +94,7 @@ SUB_LIST=	PREFIX=${PREFIX} \
 USE_PHP=	yes
 
 .if ${PORT_OPTIONS:MEMBEDDED_PERL}
-USE_PERL5=	yes
+USE_PERL5+=	run
 CONFIGURE_ARGS+=	--enable-embedded-perl \
 		--with-perlcache
 PLIST_SUB+=	EMBEDDED_PERL=""
