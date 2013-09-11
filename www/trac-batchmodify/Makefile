@@ -2,7 +2,7 @@
 # Date created:                      Jan 29 2009
 # Whom:                              Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/www/trac-batchmodify/Makefile,v 1.7 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: www/trac-batchmodify/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	batchmodify
@@ -25,7 +25,7 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=    BatchModify
 PYDISTUTILS_PKGVERSION= ${PORTVERSION:R}_trac0.12
-PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${_PYTHON_VERSION}
+PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/BatchModify-%%EGGVERSION%%_trac0.12-py%%PYTHONVERSION%%.egg
 
