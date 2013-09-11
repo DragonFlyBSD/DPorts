@@ -1,5 +1,5 @@
 # Created by: chuckr@freebsd.org
-# $FreeBSD: math/octave/Makefile 324788 2013-08-16 01:29:00Z maho $
+# $FreeBSD: math/octave/Makefile 326178 2013-09-03 17:08:29Z antoine $
 
 PORTNAME=	octave
 PORTVERSION=	3.6.4
@@ -32,7 +32,7 @@ LIB_DEPENDS=	GraphicsMagick:${PORTSDIR}/graphics/GraphicsMagick \
 		umfpack.1:${PORTSDIR}/math/suitesparse \
 		glpk:${PORTSDIR}/math/glpk
 
-USES=		charsetfix
+USES=		charsetfix pkgconfig
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
 USE_GMAKE=	yes
