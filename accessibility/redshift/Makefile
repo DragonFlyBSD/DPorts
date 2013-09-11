@@ -1,9 +1,5 @@
-# New ports collection makefile for:   redshift
-# Date created:        Wed Nov 24 12:35:17 CST 2010
-# Whom:                Mark Felder <feld@FreeBSD.org>
-#
-# $FreeBSD: accessibility/redshift/Makefile 323891 2013-07-29 15:03:58Z feld $
-#
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: accessibility/redshift/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	redshift
 PORTVERSION=	1.7
@@ -15,7 +11,7 @@ MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Adjusts the color temperature of your screen
 
 FETCH_ARGS=	"-pRr"
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
@@ -34,8 +30,8 @@ VIDMODE_DESC=	Support VIDMODE for changing colors (NVIDIA)
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} \
+USES+=		gettext iconv
+CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG} \
                 --with-libintl-prefix=${LOCALBASE}
 PLIST_SUB=	NLS=""
 .else
