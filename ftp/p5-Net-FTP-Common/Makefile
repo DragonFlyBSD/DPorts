@@ -2,7 +2,7 @@
 # Date Created:				17 May, 2003
 # Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/p5-Net-FTP-Common/Makefile,v 1.13 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/p5-Net-FTP-Common/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	Net-FTP-Common
@@ -16,7 +16,8 @@ COMMENT=	Perl module to provide simplify common usages of Net::FTP
 
 RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::FTP::Common.3
 
