@@ -2,7 +2,7 @@
 # Date created:		2006-08-24
 # Whom:			sumikawa
 #
-# $FreeBSD: multimedia/p5-FFmpeg-Command/Makefile 320514 2013-06-11 00:39:03Z sumikawa $
+# $FreeBSD: multimedia/p5-FFmpeg-Command/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	FFmpeg-Command
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 RUN_DEPENDS+=	ffmpeg:${PORTSDIR}/multimedia/ffmpeg
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		FFmpeg::Command.3
 
