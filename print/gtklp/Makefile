@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: print/gtklp/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: print/gtklp/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	gtklp
 PORTVERSION=	1.2.9
@@ -15,6 +15,7 @@ LIB_DEPENDS=	cups.2:${PORTSDIR}/print/cups-client
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	automake:env
