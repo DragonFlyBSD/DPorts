@@ -1,5 +1,5 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: math/ggobi/Makefile 317538 2013-05-06 18:26:22Z glarkin $
+# $FreeBSD: math/ggobi/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	ggobi
 PORTVERSION=	2.1.9
@@ -10,6 +10,7 @@ MASTER_SITES=	http://www.ggobi.org/downloads/
 MAINTAINER=	rhurlin@gwdg.de
 COMMENT=	Data visualization system
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20 libxml2 gnomehack
 USE_LDCONFIG=	yes
