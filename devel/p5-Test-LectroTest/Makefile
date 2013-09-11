@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: devel/p5-Test-LectroTest/Makefile 321710 2013-06-24 19:48:24Z lippe $
+# $FreeBSD: devel/p5-Test-LectroTest/Makefile 326787 2013-09-09 09:45:12Z az $
 
 PORTNAME=	Test-LectroTest
 PORTVERSION=	0.5001
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lippe@FreeBSD.org
 COMMENT=	Easy, automatic, specification-based tests
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::LectroTest.3 \
 		Test::LectroTest::Compat.3 \
