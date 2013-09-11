@@ -2,7 +2,7 @@
 # Date created:        27 November 2005
 # Whom:                Alexander Koch <fbsd@meersau.de>
 #
-# $FreeBSD: ports/www/p5-HTML-Chunks/Makefile,v 1.7 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Chunks/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	HTML-Chunks
@@ -16,7 +16,8 @@ COMMENT=	A simple nested template engine for HTML, XML and XHTML
 
 RUN_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
