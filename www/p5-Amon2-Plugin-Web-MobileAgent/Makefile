@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Amon2-Plugin-Web-MobileAgent/Makefile,v 1.1 2013/01/22 01:54:09 svnexp Exp $
+# $FreeBSD: www/p5-Amon2-Plugin-Web-MobileAgent/Makefile 326042 2013-09-02 17:29:36Z az $
 
 PORTNAME=	Amon2-Plugin-Web-MobileAgent
 PORTVERSION=	0.09
@@ -29,7 +29,8 @@ TEST_DEPENDS=	\
 	p5-String-CamelCase>0:${PORTSDIR}/textproc/p5-String-CamelCase \
 	p5-Module-Find>0:${PORTSDIR}/devel/p5-Module-Find
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Amon2::Plugin::Web::MobileAgent.3 \
 	Amon2::Plugin::Web::MobileCharset.3 \
