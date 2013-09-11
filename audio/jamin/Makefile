@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jamin
-# Date created:		2006-12-06
-# Whom:			trasz <trasz@pin.if.uz.zgora.pl>
-#
-# $FreeBSD: audio/jamin/Makefile 322948 2013-07-13 17:23:19Z deischen $
-#
+# Created by: trasz <trasz@pin.if.uz.zgora.pl>
+# $FreeBSD: audio/jamin/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	jamin
 PORTVERSION=	0.95.0
@@ -22,7 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa \
 BUILD_DEPENDS=	${LOCALBASE}/include/fftw3.h:${PORTSDIR}/math/fftw3
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20 libxml2
 
 MAN1=		jamin.1
