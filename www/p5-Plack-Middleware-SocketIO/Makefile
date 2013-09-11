@@ -2,7 +2,7 @@
 # Date created:		05 Jul 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-SocketIO/Makefile,v 1.4 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-SocketIO/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	Plack-Middleware-SocketIO
@@ -22,7 +22,8 @@ RUN_DEPENDS=	\
 	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::SocketIO.3 \
 	Plack::Middleware::SocketIO::Base.3 \
