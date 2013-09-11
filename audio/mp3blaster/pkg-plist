@@ -1,0 +1,16 @@
+@comment $FreeBSD: audio/mp3blaster/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+bin/mp3blaster
+bin/mp3tag
+bin/nmixer
+bin/splay
+%%DATADIR%%/charmap/README
+%%DATADIR%%/charmap/chargen.c
+%%DATADIR%%/charmap/koi8-r
+%%DATADIR%%/charmap/makefile.charmap
+%%DATADIR%%/charmap/maketbl.c
+%%DATADIR%%/charmap/win1251
+%%DATADIR%%/charmap/win2koi.tbl
+%%DATADIR%%/commands.txt
+%%DATADIR%%/sample.mp3blasterrc
+@dirrm %%DATADIR%%/charmap
+@dirrm %%DATADIR%%
