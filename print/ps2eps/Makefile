@@ -2,7 +2,7 @@
 # Date created:		2005-12-30
 # Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
 #
-# $FreeBSD: ports/print/ps2eps/Makefile,v 1.8 2012/11/17 06:00:53 svnexp Exp $
+# $FreeBSD: print/ps2eps/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	ps2eps
@@ -18,7 +18,8 @@ COMMENT=	Generate Encapsulated Postscript file from Postscript document
 WRKSRC=		${WRKDIR}/ps2eps
 
 USE_GHOSTSCRIPT_RUN=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 MAN1=		ps2eps.1 bbox.1
 
 do-build:
