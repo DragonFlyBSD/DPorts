@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xclipboard/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xclipboard/Makefile 326718 2013-09-08 12:34:14Z zeising $
 
 PORTNAME=	xclipboard
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.3
 PORTEPOCH=	1
 CATEGORIES=	x11
 
