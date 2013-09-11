@@ -1,5 +1,5 @@
 # Created by: eric
-# $FreeBSD: textproc/stardict3/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/stardict3/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	stardict
 PORTVERSION=	3.0.4
@@ -20,10 +20,9 @@ CONFIGURE_ARGS=	--disable-festival \
 		--disable-gucharmap \
 		--disable-espeak \
 		--disable-updateinfo
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack
-USES=		gettext
+USES=		gettext gmake pkgconfig
 CONFIGURE_WRKSRC=	${WRKSRC}/dict
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
 INSTALL_WRKSRC=	${CONFIGURE_WRKSRC}
