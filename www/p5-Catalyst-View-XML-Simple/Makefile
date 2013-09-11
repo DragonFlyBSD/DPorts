@@ -2,7 +2,7 @@
 # Date created:		05 Feb 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-View-XML-Simple/Makefile,v 1.5 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-View-XML-Simple/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	Catalyst-View-XML-Simple
@@ -26,7 +26,8 @@ BUILD_DEPENDS=	\
 	p5-Catalyst-Runtime>0:${PORTSDIR}/www/p5-Catalyst-Runtime \
 	p5-XML-Simple>0:${PORTSDIR}/textproc/p5-XML-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::View::XML::Simple.3
 
