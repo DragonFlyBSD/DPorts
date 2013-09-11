@@ -1,9 +1,5 @@
-# ports collection makefile for:	cwirc
-# Date created:		9 April 2008
-# Whom:			db
-#
-# $FreeBSD: ports/irc/cwirc/Makefile,v 1.7 2012/11/17 05:58:28 svnexp Exp $
-#
+# Created by: db
+# $FreeBSD: irc/cwirc/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	cwirc
 PORTVERSION=	2.0.0
@@ -18,6 +14,8 @@ MAINTAINER=	db@FreeBSD.org
 COMMENT=	X-Chat Morse plugin
 
 BUILD_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
+
+USES=		pkgconfig
 
 post-patch:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
