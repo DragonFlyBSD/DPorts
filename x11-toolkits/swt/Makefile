@@ -1,5 +1,5 @@
 # Created by: Robert C. Noland III <rnoland@FreeBSD.org>
-# $FreeBSD: x11-toolkits/swt/Makefile 320984 2013-06-15 11:10:34Z flo $
+# $FreeBSD: x11-toolkits/swt/Makefile 325736 2013-08-30 23:40:56Z bapt $
 
 PORTNAME=	swt
 DISTVERSION=	3.5.2
@@ -24,7 +24,8 @@ OUTPUT_JAR=	swt.jar
 
 USE_ZIP=	yes
 USE_GL=		yes
-USE_GNOME=	gtk20 pkgconfig
+USES=		pkgconfig
+USE_GNOME=	gtk20
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 JAVA_OS=	native
