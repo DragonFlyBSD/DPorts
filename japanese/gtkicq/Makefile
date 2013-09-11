@@ -1,9 +1,5 @@
-# New ports collection makefile for: ja-gtkicq
-# Date created: 8 MAY 1999
-# Whom: Shuichi Tanaka
-#
-# $FreeBSD: ports/japanese/gtkicq/Makefile,v 1.16 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: Shuichi Tanaka
+# $FreeBSD: japanese/gtkicq/Makefile 326435 2013-09-05 18:24:04Z tabthorpe $
 
 PORTNAME=	gtkicq
 PORTVERSION=	0.60
@@ -15,7 +11,7 @@ PATCH_SITES=	http://keemun.soraneko.com/gtkicq/archives/
 PATCHFILES=	${DISTNAME}-ja.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	stanaka@bb.mbn.or.jp
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Icq clone for Japanese user
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libjcode.a:${PORTSDIR}/japanese/libjcode
