@@ -2,7 +2,7 @@
 # Date created:		2011-04-28
 # Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-VUser-Google-ProvisioningAPI/Makefile,v 1.4 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-VUser-Google-ProvisioningAPI/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	VUser-Google-ProvisioningAPI
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Encode>=0:${PORTSDIR}/converters/p5-Encode \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	VUser::Google::ProvisioningAPI::V2_0::EmailListEntry.3 \
 	VUser::Google::ProvisioningAPI::V2_0::NicknameEntry.3 \
