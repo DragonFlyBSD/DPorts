@@ -2,7 +2,7 @@
 # Date created:				19 Marc 2008
 # Whom:					Edwin Groothuis <edwin@mavetju.org>
 #
-# $FreeBSD: ports/multimedia/subtitleoffsetmodifier/Makefile,v 1.3 2012/11/17 05:59:54 svnexp Exp $
+# $FreeBSD: multimedia/subtitleoffsetmodifier/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	subtitleoffsetmodificator
@@ -15,7 +15,8 @@ DISTFILES=	subtitle-offset-modificator.pl
 MAINTAINER=	edwin@mavetju.org
 COMMENT=	Subtitle offset modificator
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/subtitle-offset-modificator
 
