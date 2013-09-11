@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11-wm/i3/Makefile 325237 2013-08-22 21:58:25Z bapt $
+# $FreeBSD: x11-wm/i3/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	i3
 DISTVERSION=	4.6
@@ -70,6 +70,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/|${PREFIX}/|g' ${WRKSRC}/man/i3-input.1
 	@${REINPLACE_CMD} -e 's|.SILENT||g' ${WRKSRC}/common.mk
 	@${REINPLACE_CMD} -e 's|-Iinclude|-Iinclude -Isrc|g' \
+			  -e 's|-liconv|${ICONV_LIB}|' \
 			  -e 's|/usr/local|${LOCALBASE}|g' ${WRKSRC}/common.mk
 
 do-install:
