@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lincity-ng
-# Date created:		25 June 2005
-# Whom:			Andrej Zverev
-#
-# $FreeBSD: ports/games/lincity-ng/Makefile,v 1.37 2012/11/17 05:57:43 svnexp Exp $
-#
+# Created by: Andrej Zverev
+# $FreeBSD: games/lincity-ng/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	lincity-ng
 PORTVERSION=	2.0
@@ -18,6 +14,7 @@ COMMENT=	Improved rich city simulation game for X
 BUILD_DEPENDS=	jam:${PORTSDIR}/devel/jam
 LIB_DEPENDS=	physfs.1:${PORTSDIR}/devel/physfs
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_SDL=	sdl mixer image ttf gfx
 USE_GL=		yes
