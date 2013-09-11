@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-fonts/fntsample/Makefile 325153 2013-08-21 15:10:25Z sunpoet $
+# $FreeBSD: x11-fonts/fntsample/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME?=	fntsample
 PORTVERSION=	3.2
@@ -16,7 +16,7 @@ COMMENT?=	Show Unicode coverage of a font
 LICENSE=	GPLv3
 
 USE_PERL5=	run
-USES=		perl5
+USES=		perl5 pkgconfig
 
 MAN1=		${PORTNAME}.1
 
