@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: ftp/py-tftpy/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: ftp/py-tftpy/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
 
 PORTNAME=	tftpy
 PORTVERSION=	0.6.0
@@ -12,6 +12,6 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure Python TFTP Implementation
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
 
 .include <bsd.port.mk>
