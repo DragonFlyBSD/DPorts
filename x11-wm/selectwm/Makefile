@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/selectwm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-wm/selectwm/Makefile 325734 2013-08-30 23:31:49Z bapt $
 
 PORTNAME=	selectwm
 PORTVERSION=	0.4.1
@@ -7,10 +7,11 @@ CATEGORIES=	x11-wm
 MASTER_SITES=	http://ordiluc.net/selectwm/
 
 MAINTAINER=	bhaga@absoludicrous.com
-COMMENT=	A GTK application to let you select a window manager when starting X
+COMMENT=	GTK application to let you select a window manager when starting X
 
 MAN1=		selectwm.1
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
