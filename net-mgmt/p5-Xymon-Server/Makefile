@@ -2,7 +2,7 @@
 # Date created:		2012-05-07
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net-mgmt/p5-Xymon-Server/Makefile,v 1.2 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Xymon-Server/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	Xymon-Server
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Xymon Server Interface
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Xymon::Server.3
 
