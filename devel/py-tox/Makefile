@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-tox/Makefile 322420 2013-07-07 07:37:19Z koobs $
+# $FreeBSD: devel/py-tox/Makefile 326565 2013-09-07 00:36:05Z koobs $
 
 PORTNAME=	tox
-PORTVERSION=	1.5.0
+PORTVERSION=	1.6.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
