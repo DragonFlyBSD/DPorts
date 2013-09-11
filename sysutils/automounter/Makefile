@@ -1,8 +1,8 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: sysutils/automounter/Makefile 324960 2013-08-19 08:48:51Z culot $
+# $FreeBSD: sysutils/automounter/Makefile 325726 2013-08-30 22:43:08Z rm $
 
 PORTNAME=	automounter
-PORTVERSION=	1.4.6
+PORTVERSION=	1.4.7
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/bsdadminscripts/${PORTNAME}
 EXTRACT_SUFX=	.tar.xz
@@ -20,10 +20,12 @@ MAN8=		${PORTNAME}.8
 
 plist: patch
 		@cd ${WRKSRC}; ./plist.sh -nodoc > ${PLIST}
-		@${ECHO} "@dirrmtry etc/devd" >> ${PLIST}
 
+# Use "amd -S" to avoid a vm locking panic, the scope of which has not yet
+# been determined. See kern/181590.
 do-install:
-		@cd ${WRKSRC}; ./install.sh -prefix=${PREFIX}
+		@cd ${WRKSRC}; ./install.sh -prefix=${PREFIX} \
+			-amd="/usr/sbin/amd -S"
 
 post-install:
 		@${JOT} -s- -b- 39
