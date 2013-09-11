@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-user_special_mailboxes-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-user_special_mailboxes-plugin/Makefile 326248 2013-09-04 05:52:04Z az $
 
 PORTNAME=	user_special_mailboxes
 PORTVERSION=	0.1
@@ -11,7 +11,8 @@ MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Lets define folders to be displayed at the top of the folders list
 
 USE_SM_COMPAT=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
