@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers-Hadley <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Script-isAperlScript/Makefile 315517 2013-03-29 01:51:02Z miwi $
+# $FreeBSD: net/p5-Script-isAperlScript/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	Script-isAperlScript
 PORTVERSION=	1.0.0
@@ -13,7 +13,8 @@ COMMENT=	Checks if something is a Perl script
 
 RUN_DEPENDS=	p5-Error-Helper>=1.0.0:${PORTSDIR}/devel/p5-Error-Helper
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Script::isAperlScript.3
 
