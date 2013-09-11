@@ -2,7 +2,7 @@
 # Date created:			June 10, 2003
 # Whom:				at@rominet.net
 #
-# $FreeBSD: net/ssltunnel-client/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net/ssltunnel-client/Makefile 326683 2013-09-07 19:49:41Z bsam $
 #
 
 PORTNAME=	ssltunnel
@@ -17,7 +17,7 @@ COMMENT=	PPP over SSL virtual private networking (client part)
 
 LICENSE=	BSD
 
-CONFIGURE_ARGS=	--disable-server --with-iconv=${LOCALBASE}
+CONFIGURE_ARGS=	--disable-server --with-iconv=${ICONV_PREFIX}
 GNU_CONFIGURE=	yes
 USES=		iconv
 
