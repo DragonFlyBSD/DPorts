@@ -1,5 +1,5 @@
 # Created by: Carl Makin <carl@stagecraft.cx>
-# $FreeBSD: comms/hamfax/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: comms/hamfax/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	hamfax
 PORTVERSION=	0.8.1
@@ -15,7 +15,7 @@ USE_QT4=	gui moc_build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	CPPFLAGS="-I${LOCALBASE}/include" \
 					LDFLAGS="-L${LOCALBASE}/lib"
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 
 
