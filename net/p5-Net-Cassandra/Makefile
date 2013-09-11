@@ -2,7 +2,7 @@
 # Date created:		2009-07-15
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Net-Cassandra/Makefile,v 1.4 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Cassandra/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-Cassandra
@@ -19,6 +19,7 @@ RUN_DEPENDS=	p5-Moose>0:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-StrictConstructor>0:${PORTSDIR}/devel/p5-MooseX-StrictConstructor
 
 MAN3=		Net::Cassandra.3
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
