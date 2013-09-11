@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Log::Dispatch::Screen::Color
-# Date created:		23 Sep 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Log-Dispatch-Screen-Color/Makefile,v 1.5 2012/11/17 05:56:21 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Log-Dispatch-Screen-Color/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	Log-Dispatch-Screen-Color
 PORTVERSION=	0.04
@@ -20,7 +15,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-IO-stringy>0:${PORTSDIR}/devel/p5-IO-stringy
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Log::Dispatch::Screen::Color.3
 
