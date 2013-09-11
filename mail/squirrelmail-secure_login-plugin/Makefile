@@ -1,5 +1,5 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: mail/squirrelmail-secure_login-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-secure_login-plugin/Makefile 326271 2013-09-04 12:28:16Z az $
 
 PORTNAME=	secure_login
 PORTVERSION=	1.4
@@ -12,7 +12,8 @@ COMMENT=	This plugin will automatically turn on SSL security during login
 
 LICENSE=	GPLv2
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 .include <bsd.port.mk>
