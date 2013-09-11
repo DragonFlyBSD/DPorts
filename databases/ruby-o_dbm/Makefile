@@ -2,7 +2,7 @@
 # Date created:		16 March 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/databases/ruby-o_dbm/Makefile,v 1.10 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/ruby-o_dbm/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	o_dbm
