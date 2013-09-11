@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/xdx/Makefile 321188 2013-06-18 13:52:06Z zi $
+# $FreeBSD: comms/xdx/Makefile 326095 2013-09-02 21:32:24Z bapt $
 
 PORTNAME=	xdx
 PORTVERSION=	2.4
@@ -14,7 +14,7 @@ COMMENT=	Amateur Radio DX cluster monitor
 
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 MAN1=		xdx.1
 LICENSE=	GPLv2
