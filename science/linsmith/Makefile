@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/linsmith/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: science/linsmith/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	linsmith
 PORTVERSION=	0.99.26
@@ -11,7 +11,7 @@ COMMENT=	Smith charting program
 
 LICENSE=	GPLv2 # (or later)
 
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GNOME=	libgnomeui libxml2
 GNU_CONFIGURE=	yes
 
