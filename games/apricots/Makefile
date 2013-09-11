@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/apricots/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/apricots/Makefile 325554 2013-08-28 21:15:09Z amdmi3 $
 
 PORTNAME=	apricots
 PORTVERSION=	0.2.6
@@ -39,13 +39,14 @@ USE_OPENAL=	al alut
 .endif
 
 post-patch:
+	@${CP} -pP ${WRKSRC}/configure.in ${WRKSRC}/configure.in.in
 .if ${PORT_OPTIONS:MOPENAL}
 	@${REINPLACE_CMD} -e '/^LIBS = / s|$$| -lopenal -lalut|' \
 		${WRKSRC}/apricots/Makefile.in
 .else
 	@${REINPLACE_CMD} -e 's|-DAP_AUDIO_OPENAL||' ${WRKSRC}/configure
 .endif
-	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/configure ${WRKSRC}/ac*.m4
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
