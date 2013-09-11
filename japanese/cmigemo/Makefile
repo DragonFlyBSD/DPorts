@@ -2,7 +2,7 @@
 # Date created:        22 August 2011
 # Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
 #
-# $FreeBSD: japanese/cmigemo/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: japanese/cmigemo/Makefile 326890 2013-09-10 10:27:53Z az $
 #
 
 PORTNAME=	cmigemo
@@ -31,8 +31,7 @@ PORTDOCS=	README_j.txt
 .endif
 
 USE_ZIP=	yes
-USE_GMAKE=	yes
-USES=		iconv
+USES+=		iconv gmake
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
