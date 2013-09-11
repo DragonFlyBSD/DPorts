@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Carp-Datum
-# Date created:				Aug 5th 2002
-# Whom:	      				kuriyama
-#
-# $FreeBSD: ports/devel/p5-Carp-Datum/Makefile,v 1.8 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: kuriyama
+# $FreeBSD: devel/p5-Carp-Datum/Makefile 326734 2013-09-08 14:47:37Z az $
 
 PORTNAME=	Carp-Datum
 PORTVERSION=	0.1.3
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Log-Agent>=0:${PORTSDIR}/devel/p5-Log-Agent \
 		p5-Getargs-Long>=0:${PORTSDIR}/devel/p5-Getargs-Long
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		datum_strip.1
 MAN3=		Carp::Datum::Assert.3 \
