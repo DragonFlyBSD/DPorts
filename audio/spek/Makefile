@@ -1,5 +1,5 @@
 # Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
-# $FreeBSD: audio/spek/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/spek/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	spek
 PORTVERSION=	0.8.2
@@ -18,8 +18,7 @@ MAN1=		spek.1
 
 USE_XZ=		yes
 USE_GCC=	4.7+
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake
 USE_GNOME=	desktopfileutils intltool
 USE_WX=	2.8+
 WX_UNICODE=	yes
