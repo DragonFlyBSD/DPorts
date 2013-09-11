@@ -2,7 +2,7 @@
 # Date created:		6 October 2008
 # Whom:			stas
 #
-# $FreeBSD: ports/textproc/ruby-liquid/Makefile,v 1.5 2012/11/17 06:02:19 svnexp Exp $
+# $FreeBSD: textproc/ruby-liquid/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	liquid
