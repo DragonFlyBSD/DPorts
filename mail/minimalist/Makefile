@@ -2,7 +2,7 @@
 # Date created:        15 September 1999
 # Whom:                gmarco@scotty.masternet.it
 #
-# $FreeBSD: ports/mail/minimalist/Makefile,v 1.18 2012/11/17 05:59:06 svnexp Exp $
+# $FreeBSD: mail/minimalist/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	minimalist
@@ -15,7 +15,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/r/-/}
 MAINTAINER=	gmarco@gufi.org
 COMMENT=	A minimalistic mailing list manager
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 EXTRA_SUB_FILES=docs/README minimalist.conf-sample minimalist.pl \
 		contrib/minimalist_request.pl
