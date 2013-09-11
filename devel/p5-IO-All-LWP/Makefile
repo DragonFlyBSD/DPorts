@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-All-LWP
-# Date created:		2009-04-21
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-IO-All-LWP/Makefile,v 1.3 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-IO-All-LWP/Makefile 326734 2013-09-08 14:47:37Z az $
 
 PORTNAME=	IO-All-LWP
 PORTVERSION=	0.14
@@ -18,7 +14,8 @@ COMMENT=	IO::All interface to LWP
 RUN_DEPENDS=	p5-IO-All>=0.30:${PORTSDIR}/devel/p5-IO-All \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::All::FTP.3 \
 		IO::All::HTTP.3 \
