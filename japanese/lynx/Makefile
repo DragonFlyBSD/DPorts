@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: japanese/lynx/Makefile 323682 2013-07-26 05:41:36Z danfe $
+# $FreeBSD: japanese/lynx/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
@@ -41,7 +41,7 @@ COLOR_STYLE_DESC=	Enable color style (ncurses/curses)
 DEFAULT_COLORS_DESC=	Enable default colors (ncurses/slang)
 
 JAPANESE_UTF8_USES=		iconv
-JAPANESE_UTF8_CONFIGURE_ON=	--with-libiconv-prefix=${LOCALBASE}
+JAPANESE_UTF8_CONFIGURE_ON=	${ICONV_CONFIGURE_ARG}
 JAPANESE_UTF8_CONFIGURE_ENABLE=	japanese-utf8
 COLOR_STYLE_CONFIGURE_ENABLE=	color-style
 DEFAULT_COLORS_CONFIGURE_ENABLE=default-colors
