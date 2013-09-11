@@ -2,7 +2,7 @@
 # Date created:		13 April 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/www/ruby-google/Makefile,v 1.15 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/ruby-google/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	google
