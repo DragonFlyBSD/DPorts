@@ -1,8 +1,9 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: graphics/inkscape/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/inkscape/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	inkscape
 PORTVERSION=	0.48.4
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION}
