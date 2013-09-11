@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2-scrobbler/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/xmms2-scrobbler/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xmms2-scrobbler
 PORTVERSION=	0.4.0
@@ -15,8 +15,7 @@ LICENSE=	MIT
 LIB_DEPENDS=	xmmsclient.6:${PORTSDIR}/audio/xmms2 \
 		curl:${PORTSDIR}/ftp/curl
 
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 LDFLAGS+=	${PTHREAD_LIBS}
 
 PLIST_FILES=	bin/xmms2-scrobbler
