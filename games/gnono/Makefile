@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/gnono/Makefile 318544 2013-05-19 18:12:27Z kwm $
+# $FreeBSD: games/gnono/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gnono
 PORTVERSION=	1.9.1
@@ -12,8 +12,7 @@ COMMENT=	Uno card game
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk20 libgnomeui
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
