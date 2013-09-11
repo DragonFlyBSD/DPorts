@@ -1,5 +1,5 @@
 # Created by: dgilbert@velocet.ca
-# $FreeBSD: print/gutenprint-base/Makefile 319189 2013-05-27 09:25:53Z bapt $
+# $FreeBSD: print/gutenprint-base/Makefile 326219 2013-09-03 19:39:57Z antoine $
 #    $MCom: ports/print/gutenprint-base/Makefile,v 1.8 2007/03/30 16:45:02 ahze Exp $
 
 PORTNAME?=	gutenprint
@@ -16,8 +16,7 @@ LICENSE=	GPLv2
 CONFLICTS=	gimp-print-[0-9]*
 
 USE_BZIP2=	yes
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomehack gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=--with-gimp=no --with-gimp2=no
