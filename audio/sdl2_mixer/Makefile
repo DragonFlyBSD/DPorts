@@ -1,4 +1,4 @@
-# $FreeBSD: audio/sdl2_mixer/Makefile 324741 2013-08-14 17:23:35Z mva $
+# $FreeBSD: audio/sdl2_mixer/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	sdl2_mixer
 PORTVERSION=	2.0.0
@@ -11,8 +11,7 @@ COMMENT=	A sample multi-channel audio mixer library
 
 LICENSE=	ZLIB
 
-USES=		pathfix pkgconfig:build
-USE_GMAKE=	yes
+USES=		gmake pathfix pkgconfig
 USE_SDL=	sdl2
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
