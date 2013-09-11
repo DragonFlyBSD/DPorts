@@ -2,7 +2,7 @@
 # Date created:		2006-07-17
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-WWW-Google-News-TW/Makefile,v 1.8 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Google-News-TW/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	WWW-Google-News-TW
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Google::News::TW.3
 
