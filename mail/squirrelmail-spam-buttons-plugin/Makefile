@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-spam-buttons-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-spam-buttons-plugin/Makefile 326249 2013-09-04 06:06:59Z az $
 
 PORTNAME=	spam-buttons
 PORTVERSION=	2.3.1
@@ -10,7 +10,8 @@ MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Provides buttons with customizable action (for reporting spam, etc.)
 
 USE_SM_COMPAT=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
