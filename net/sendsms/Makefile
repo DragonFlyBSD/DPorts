@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: net/sendsms/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: net/sendsms/Makefile 326361 2013-09-05 07:29:05Z az $
 
 PORTNAME=	sendsms
 PORTVERSION=	0.2.4
@@ -22,7 +22,7 @@ CONFLICTS=	gnokii-[0-9]* smstools-[0-9]*
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 post-patch:
 	@${REINPLACE_CMD} -e "s,/usr/bin/perl,${PERL},g" ${WRKSRC}/${PORTNAME}
