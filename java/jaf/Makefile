@@ -1,5 +1,5 @@
 # Created by: Jose Marques
-# $FreeBSD: ports/java/jaf/Makefile,v 1.21 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jaf/Makefile 325598 2013-08-29 14:16:03Z bdrewery $
 
 PORTNAME=	jaf
 PORTVERSION=	1.1.1
@@ -28,7 +28,7 @@ PORTDOCS=	${DOCFILES1} ${DOCFILES2}
 PLIST_FILES=	%%JAVAJARDIR%%/activation.jar
 
 .include <bsd.port.pre.mk>
-.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}) && !defined(PACKAGE_BUILDING)
+.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
 IGNORE=		you must manually fetch the distribution from ${DOWNLOAD_URL} and place it in ${DISTDIR} then run make again
 .endif
 
