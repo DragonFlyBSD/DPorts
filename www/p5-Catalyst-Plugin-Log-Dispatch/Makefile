@@ -2,7 +2,7 @@
 # Date created:				2008-07-02
 # Whom:					Oleg Mamontov <oleg@mamontov.net>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Log-Dispatch/Makefile,v 1.6 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Log-Dispatch/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-Log-Dispatch
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Log-Dispatch>=2.13:${PORTSDIR}/devel/p5-Log-Dispatch		\
 		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::Log::Dispatch.3
 
