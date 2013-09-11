@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-XML-Pastor/Makefile,v 1.5 2013/01/17 19:55:26 svnexp Exp $
+# $FreeBSD: devel/p5-XML-Pastor/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	XML-Pastor
 PORTVERSION=	1.0.4
@@ -58,6 +58,7 @@ MAN3=	XML::Pastor.3 \
 	XML::Pastor::Stack.3 \
 	XML::Pastor::Type.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
