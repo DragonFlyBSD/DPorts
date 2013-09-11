@@ -2,7 +2,7 @@
 # Date created:		2007-11-22
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: net/p5-Net-GrowlClient/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net/p5-Net-GrowlClient/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	Net-GrowlClient
@@ -16,7 +16,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	markun@onohara.to
 COMMENT=	Perl implementation of Growl Network Notification Protocol
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::GrowlClient.3
 
