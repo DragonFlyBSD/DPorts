@@ -1,8 +1,8 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: www/py-rhodecode/Makefile 320805 2013-06-13 14:57:30Z wg $
+# $FreeBSD: www/py-rhodecode/Makefile 326200 2013-09-03 18:56:27Z wg $
 
 PORTNAME=	rhodecode
-PORTVERSION=	1.7.1
+PORTVERSION=	1.7.2
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -32,6 +32,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pylons>=1.0:${PORTSDIR}/www/py-pylons \
 		${PYTHON_PKGNAMEPREFIX}bcrypt>=0.2:${PORTSDIR}/security/py-bcrypt \
 		${PYTHON_PKGNAMEPREFIX}simplejson>=2.5.2:${PORTSDIR}/devel/py-simplejson \
 		${PYTHON_PKGNAMEPREFIX}PasteScript>=1.6.3:${PORTSDIR}/www/py-pastescript \
+		${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz \
+		${PYTHON_PKGNAMEPREFIX}repoze.lru>=0:${PORTSDIR}/devel/py-repoze.lru \
+		${PYTHON_PKGNAMEPREFIX}celery>=0:${PORTSDIR}/devel/py-celery \
 		mercurial>=2.6:${PORTSDIR}/devel/mercurial
 
 USE_PYTHON=	-2.7
@@ -46,7 +49,6 @@ OPTIONS_DEFINE=		LDAP GIT
 OPTIONS_DEFAULT=	GIT
 
 GIT_DESC=	GIT support
-CELERY_DESC=	Use Celery for better performance
 
 .include <bsd.port.options.mk>
 

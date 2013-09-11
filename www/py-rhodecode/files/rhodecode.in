@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: www/py-rhodecode/files/rhodecode.in 320698 2013-06-12 14:38:13Z wg $
+# $FreeBSD: www/py-rhodecode/files/rhodecode.in 326200 2013-09-03 18:56:27Z wg $
 # PROVIDE: rhodecode
 # REQUIRE: NETWORKING
 #
@@ -21,13 +21,17 @@
 name="rhodecode"
 rcvar=rhodecode_enable
 
-: ${rhodecode_enable="NO"}
-: ${rhodecode_config="%%PREFIX%%/rhodecode/production.ini"}
-: ${rhodecode_user="www"}
-: ${rhodecode_user="www"}
+load_rc_config ${name}
 
-pidfile="/var/run/${name}.pid"
+: ${rhodecode_enable="NO"}
+: ${rhodecode_config="%%PREFIX%%/etc/rhodecode/production.ini"}
+: ${rhodecode_user="www"}
+: ${rhodecode_group="www"}
+
+pidfile="/var/run/${name}/${name}.pid"
+logfile="/var/run/${name}.log"
 command=%%PREFIX%%/bin/paster
+start_precmd="install -d -o ${rhodecode_user} ${pidfile%/*} && install -o ${rhodecode_user} /dev/null ${logfile}"
 start_cmd="rhodecode_start"
 status_cmd="rhodecode_status"
 stop_cmd="rhodecode_stop"
@@ -36,7 +40,8 @@ rhodecode_start() {
 	${command} serve \
 		--user=${rhodecode_user} \
 		--group=${rhodecode_group} \
-		--pid-file=${pidfile}\
+		--pid-file=${pidfile} \
+		--log-file=${logfile} \
 		--daemon \
 		${rhodecode_config}
 }
