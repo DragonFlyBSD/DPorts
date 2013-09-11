@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/mythplugin-mythweb/pkg-plist,v 1.8 2012/11/17 06:02:43 svnexp Exp $
+@comment $FreeBSD: www/mythplugin-mythweb/pkg-plist 325445 2013-08-27 13:37:21Z decke $
 %%WWWDIR%%/INSTALL
 %%WWWDIR%%/LICENSE
 %%WWWDIR%%/README
@@ -303,6 +303,7 @@
 %%WWWDIR%%/modules/video/init.php
 %%WWWDIR%%/modules/video/scan.php
 %%WWWDIR%%/modules/video/set_settings.php
+%%WWWDIR%%/modules/video/stream.php
 %%WWWDIR%%/modules/video/tmpl/default/set_settings.php
 %%WWWDIR%%/modules/video/tmpl/default/video.php
 %%WWWDIR%%/modules/video/tmpl/default/welcome.php

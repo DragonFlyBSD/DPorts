@@ -1,8 +1,8 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: ports/www/mythplugin-mythweb/Makefile,v 1.20 2012/11/17 06:02:43 svnexp Exp $
+# $FreeBSD: www/mythplugin-mythweb/Makefile 325445 2013-08-27 13:37:21Z decke $
 
 PORTNAME=	mythweb
-PORTVERSION=	0.26.0
+PORTVERSION=	0.26.1
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.osuosl.org/pub/mythtv/ \
 		http://ftp.osuosl.org/pub/mythtv/old_releases/ \
