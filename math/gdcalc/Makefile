@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gdcalc
-# Date created:				2002-06-29
-# Whom:				Jan Srocker <Jan.Stocker@t-online.de>
-#
-# $FreeBSD: ports/math/gdcalc/Makefile,v 1.18 2012/11/17 05:59:20 svnexp Exp $
+# Created by: Jan Srocker <Jan.Stocker@t-online.de>
+# $FreeBSD: math/gdcalc/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #    $MCom: ports/math/gdcalc/Makefile,v 1.1 2006/10/04 15:51:37 ahze Exp $
 
 PORTNAME=	gdcalc
@@ -16,6 +13,7 @@ COMMENT=	Gnome-based scientific calculator
 
 RUN_DEPENDS=	${LOCALBASE}/bin/gunits:${PORTSDIR}/math/units
 
+USES=		pkgconfig
 USE_GNOME=	gnomehier libgnomeui
 GNU_CONFIGURE=	yes
 
