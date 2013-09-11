@@ -2,7 +2,7 @@
 # Date created:		2008-04-13
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/net/p5-POE-Component-Client-Twitter/Makefile,v 1.5 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-POE-Component-Client-Twitter/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	POE-Component-Client-Twitter
@@ -25,7 +25,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::Twitter.3
 
