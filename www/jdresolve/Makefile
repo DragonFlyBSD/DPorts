@@ -2,7 +2,7 @@
 # Date created:        15 June 2001
 # Whom:                Christophe Labouisse <christophe@labouisse.org>
 #
-# $FreeBSD: ports/www/jdresolve/Makefile,v 1.12 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/jdresolve/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	jdresolve
@@ -19,7 +19,7 @@ COMMENT=	A IP addresse to hostname program for httpd log files
 BUILD_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MANCOMPRESSED=	no
