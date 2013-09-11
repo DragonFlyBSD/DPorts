@@ -1,5 +1,5 @@
 # Created by: Patrick Gardella <patrick@FreeBSD.org>
-# $FreeBSD: comms/xlog/Makefile 324109 2013-08-01 14:52:58Z wg $
+# $FreeBSD: comms/xlog/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	xlog
 PORTVERSION=	2.0.10
@@ -12,6 +12,7 @@ COMMENT=	Amateur Radio logging application
 
 LICENSE=	GPLv3
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-mime-update
