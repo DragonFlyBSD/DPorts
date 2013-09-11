@@ -2,7 +2,7 @@
 # Date created:		10 Januar 2004
 # Whom:			Andreas Fehlner (fehlner@gmx.de)
 #
-# $FreeBSD: ports/sysutils/usermatic/Makefile,v 1.5 2012/11/17 06:01:49 svnexp Exp $
+# $FreeBSD: sysutils/usermatic/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	usermatic
@@ -16,7 +16,8 @@ MAINTAINER=	fehlner@gmx.de
 COMMENT=	Scripts to automate the maintenance of accounts
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN1=	digestion.pl.1
 MAN8=	hunter-seeker.pl.8 newusers.pl.8 reaper.pl.8
