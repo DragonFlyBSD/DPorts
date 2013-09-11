@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: converters/libiconv/Makefile 322405 2013-07-06 17:45:15Z kwm $
+# $FreeBSD: converters/libiconv/Makefile 326541 2013-09-06 20:02:00Z madpilot $
 
 PORTNAME=	libiconv
 PORTVERSION=	1.14
