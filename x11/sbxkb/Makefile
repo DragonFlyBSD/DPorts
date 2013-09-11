@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/x11/sbxkb/Makefile,v 1.2 2013/01/27 13:14:07 svnexp Exp $
+# $FreeBSD: x11/sbxkb/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	sbxkb
 PORTVERSION=	0.7.6
@@ -14,6 +14,7 @@ LICENSE=	GPLv3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules
 USE_GNOME=	gtk20
+USES=		pkgconfig
 
 post-patch:
 # Remove debug flag (-g) from CFLAGS
