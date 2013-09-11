@@ -2,7 +2,7 @@
 # Date created:		05 Mar 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTML-ExtractContent/Makefile,v 1.7 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-ExtractContent/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	HTML-ExtractContent
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-HTML-Parser>0:${PORTSDIR}/www/p5-HTML-Parser
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::ExtractContent.3
 
