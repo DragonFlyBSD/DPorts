@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: converters/pecl-fribidi/Makefile 319219 2013-05-27 12:16:19Z ale $
+# $FreeBSD: converters/pecl-fribidi/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	fribidi
 PORTVERSION=	1.2
@@ -14,6 +14,7 @@ COMMENT=	A PECL extension for the Unicode Bidi algorithm
 
 LIB_DEPENDS=	fribidi.3:${PORTSDIR}/converters/fribidi
 
+USES=		pkgconfig
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
