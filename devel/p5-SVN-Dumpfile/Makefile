@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SVN::Dumpfile
-# Date created:		2009-04-17
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-SVN-Dumpfile/Makefile,v 1.5 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: devel/p5-SVN-Dumpfile/Makefile 326725 2013-09-08 13:29:44Z az $
 
 PORTNAME=	SVN-Dumpfile
 PORTVERSION=	0.13.107
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Data-GUID>=0:${PORTSDIR}/devel/p5-Data-GUID \
 		p5-Readonly>=1.03:${PORTSDIR}/devel/p5-Readonly
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SVN::Dumpfile.3 \
 		SVN::Dumpfile::Node.3 \
