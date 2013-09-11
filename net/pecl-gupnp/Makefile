@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/pecl-gupnp/Makefile 316002 2013-04-17 18:59:30Z sunpoet $
+# $FreeBSD: net/pecl-gupnp/Makefile 326616 2013-09-07 10:20:42Z sunpoet $
 
 PORTNAME=	gupnp
 PORTVERSION=	1.0.0
@@ -12,10 +12,11 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GUPnP wrapper extension
 
-LIB_DEPENDS=	gupnp-1.0:${PORTSDIR}/net/gupnp
+LIB_DEPENDS=	libgupnp-1.0.so:${PORTSDIR}/net/gupnp
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
+USES=		pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e 's| -ldl||g' ${WRKSRC}/config.m4
