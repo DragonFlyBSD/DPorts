@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/bmpanel2/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11/bmpanel2/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	bmpanel2
 DISTVERSION=	2.1pre1
@@ -11,7 +11,7 @@ COMMENT=	Nice, lightweight NETWM compliant panel for X11
 
 LICENSE=	MIT
 
-USES=		cmake
+USES=		cmake pkgconfig
 USE_GNOME=	pango
 USE_XORG=	x11 xext
 
