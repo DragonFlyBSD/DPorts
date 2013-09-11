@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: devel/p5-File-Tail-Dir/Makefile 314079 2013-03-13 12:44:03Z culot $
+# $FreeBSD: devel/p5-File-Tail-Dir/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	File-Tail-Dir
 PORTVERSION=	0.14
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-File-ChangeNotify>0:${PORTSDIR}/devel/p5-File-ChangeNotify \
 		p5-Moose>0:${PORTSDIR}/devel/p5-Moose \
 		p5-YAML>0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Tail::Dir.3
 
