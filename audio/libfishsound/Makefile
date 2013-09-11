@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libfishsound/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: audio/libfishsound/Makefile 326205 2013-09-03 19:31:29Z sunpoet $
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
@@ -13,21 +13,22 @@ COMMENT=	Programing interface to decode/encode audio data
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
-		speex:${PORTSDIR}/audio/speex \
-		vorbis:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libFLAC.so:${PORTSDIR}/audio/flac \
+		libspeex.so:${PORTSDIR}/audio/speex \
+		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 OPTIONS_DEFINE=	DOCS DOXYGEN
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
+USES=		pathfix pkgconfig
+
+PORTDOCS=	*
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} && ${PORT_OPTIONS:MDOXYGEN}
 BUILD_DEPENDS+=	${LOCALBASE}/bin/doxygen:${PORTSDIR}/devel/doxygen
-PORTDOCS=	*
 .endif
 
 post-patch:
