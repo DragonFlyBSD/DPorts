@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Test-Filename/Makefile,v 1.1 2013/02/16 02:47:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Filename/Makefile 326839 2013-09-09 18:34:59Z az $
 
 PORTNAME=	Test-Filename
 PORTVERSION=	0.03
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 TEST_DEPENDS=	\
 	p5-Test-Tester>0:${PORTSDIR}/devel/p5-Test-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Filename.3
 
