@@ -2,12 +2,12 @@
 # Date Created:				18 March 2004
 # Whom:					NAKATA Maho <maho@FreeBSD.org>
 #
-# $FreeBSD: science/abinit/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: science/abinit/Makefile 325401 2013-08-26 16:06:37Z bf $
 #
 
 PORTNAME=	abinit
 PORTVERSION=	5.7.3
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	science
 MASTER_SITES=	ftp://ftp.abinit.org/pub/abinitio/ABINIT_v${PORTVERSION}/
 
@@ -16,7 +16,7 @@ COMMENT=	Abinit calculates electronic structure of systems
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/numarray/__init__.py:${PORTSDIR}/math/py-numarray
 LIB_DEPENDS=	netcdff.4:${PORTSDIR}/science/netcdf3-ftn	\
-		gsl.16:${PORTSDIR}/math/gsl
+		gsl:${PORTSDIR}/math/gsl
 
 USE_FORTRAN=	yes
 USE_GMAKE=	yes
