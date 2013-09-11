@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-mdbtools
-# Date created:			22 December 2007
-# Whom:				Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/databases/pecl-mdbtools/Makefile,v 1.7 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: databases/pecl-mdbtools/Makefile 326071 2013-09-02 20:02:01Z bapt $
 
 PORTNAME=	mdbtools
 PORTVERSION=	1.0.0
@@ -19,6 +15,7 @@ COMMENT=	A PECL extension for the mdbtools library
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_PHP=	yes
 USE_PHPEXT=	yes
 USE_PHP_BUILD=	yes
