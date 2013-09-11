@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Sub-Alias
-# Date created:				2011-06-06
-# Whom:					Peter Vereshagin <peter@vereshagin.org>
-#
-# $FreeBSD: ports/devel/p5-Sub-Alias/Makefile,v 1.3 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Peter Vereshagin <peter@vereshagin.org>
+# $FreeBSD: devel/p5-Sub-Alias/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	Sub-Alias
 PORTVERSION=	0.03
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
 		p5-Devel-Declare>=0:${PORTSDIR}/devel/p5-Devel-Declare \
 		p5-Devel-BeginLift>=0:${PORTSDIR}/devel/p5-Devel-BeginLift
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 LICENSE=	MIT
 
