@@ -1,22 +1,25 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: devel/py-mongoengine/Makefile 315510 2013-03-29 00:52:44Z lippe $
+# $FreeBSD: devel/py-mongoengine/Makefile 326740 2013-09-08 15:03:44Z wg $
 
 PORTNAME=	mongoengine
-PORTVERSION=	0.7.9
+PORTVERSION=	0.8.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	mail@derzinn.de
-COMMENT=	A Python Object-Document-Mapper for working with MongoDB
+MAINTAINER=	wg@FreeBSD.org
+COMMENT=	Object-Document-Mapper for working with MongoDB
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	pymongo>=2.1:${PORTSDIR}/databases/pymongo
+RUN_DEPENDS=	pymongo>=2.5:${PORTSDIR}/databases/pymongo
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
-PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
+post-patch:
+	@${REINPLACE_CMD} 's|classifiers=CLASSIFIERS,|classifiers=CLASSIFIERS,zip_safe=False,|' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
