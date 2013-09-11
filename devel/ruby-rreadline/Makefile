@@ -2,7 +2,7 @@
 # Date created:		29 June 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-rreadline/Makefile,v 1.8 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-rreadline/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	rreadline
