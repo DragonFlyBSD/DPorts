@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/amb-plugins/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/amb-plugins/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	amb-plugins
 PORTVERSION=	0.8.1
@@ -19,8 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 
 PLIST_FILES=	lib/ladspa/ambisonic0.so lib/ladspa/ambisonic1.so \
 		lib/ladspa/ambisonic2.so lib/ladspa/ambisonic3.so \
