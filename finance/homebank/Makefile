@@ -1,4 +1,4 @@
-# $FreeBSD: finance/homebank/Makefile 325054 2013-08-20 15:00:30Z pawel $
+# $FreeBSD: finance/homebank/Makefile 326405 2013-09-05 14:40:24Z pawel $
 
 PORTNAME=	homebank
 PORTVERSION=	4.5.2
@@ -10,10 +10,10 @@ COMMENT=	Free, easy, personal accounting for everyone
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	osp:${PORTSDIR}/textproc/opensp
+LIB_DEPENDS=	libosp.so:${PORTSDIR}/textproc/opensp
 
 GNU_CONFIGURE=	yes
-USES=		desktop-file-utils gmake shared-mime-info
+USES=		desktop-file-utils gmake pkgconfig shared-mime-info
 USE_GNOME=	gnomehier gtk20
 INSTALLS_ICONS=	yes
 
@@ -26,7 +26,7 @@ OPTIONS_DEFINE=	DOCS OFX
 OFX_DESC=	OFX file format support
 OPTIONS_DEFAULT=OFX
 
-OFX_LIB_DEPENDS=	ofx:${PORTSDIR}/finance/libofx
+OFX_LIB_DEPENDS=	libofx.so:${PORTSDIR}/finance/libofx
 OFX_CONFIGURE_OFF=	--without-ofx
 
 .include <bsd.port.options.mk>
