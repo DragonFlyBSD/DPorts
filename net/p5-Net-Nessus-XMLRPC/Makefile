@@ -2,7 +2,7 @@
 # Date created:				25 January 2011
 # Whom:					Paul Schmehl <pauls@utdallas.edu>
 #
-# $FreeBSD: ports/net/p5-Net-Nessus-XMLRPC/Makefile,v 1.4 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Nessus-XMLRPC/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-Nessus-XMLRPC
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Nessus::XMLRPC.3
 
