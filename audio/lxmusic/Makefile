@@ -1,5 +1,5 @@
 # Created by: Eric Turgeon <ericturgeon.bsd at gmail.com>
-# $FreeBSD: audio/lxmusic/Makefile 321425 2013-06-20 21:12:54Z wg $
+# $FreeBSD: audio/lxmusic/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	lxmusic
 PORTVERSION=	0.4.5
@@ -15,10 +15,9 @@ LICENSE_COMB=	dual
 LIB_DEPENDS=	xmmsclient:${PORTSDIR}/audio/xmms2 \
 		notify:${PORTSDIR}/devel/libnotify
 
-USES=		desktop-file-utils
+USES=		gmake desktop-file-utils pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
