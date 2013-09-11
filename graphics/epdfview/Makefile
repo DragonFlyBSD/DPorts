@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/epdfview/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/epdfview/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	epdfview
 PORTVERSION=	0.1.8
@@ -19,8 +19,7 @@ LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USES=		iconv
-USE_GMAKE=	yes
+USES=		iconv gmake pkgconfig
 USE_GNOME=	gtk20 intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
