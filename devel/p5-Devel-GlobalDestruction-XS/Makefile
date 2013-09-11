@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-GlobalDestruction-XS/Makefile 320085 2013-06-06 12:35:19Z culot $
+# $FreeBSD: devel/p5-Devel-GlobalDestruction-XS/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	Devel-GlobalDestruction-XS
 PORTVERSION=	0.01
@@ -13,7 +13,8 @@ COMMENT=	Faster implementation of the Devel::GlobalDestruction API
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::GlobalDestruction::XS.3
 
