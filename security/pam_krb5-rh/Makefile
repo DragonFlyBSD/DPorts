@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: security/pam_krb5-rh/Makefile 317496 2013-05-06 09:39:25Z bapt $
+# $FreeBSD: security/pam_krb5-rh/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	pam_krb5
-DISTVERSION=	2.4.5
+DISTVERSION=	2.4.6
 CATEGORIES=	security
 MASTER_SITES=	https://fedorahosted.org/released/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
@@ -18,10 +18,11 @@ CONFLICTS=	pam_krb5-4.*
 
 USES=		iconv
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} --without-afs \
+CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG} --without-afs \
 		--with-libintl-prefix=${LOCALBASE} --with-krb4=no \
 		--without-keyutils
 LDFLAGS+=	-L${LOCALBASE}/lib
+MAKE_JOBS_UNSAFE=	yes
 
 MAN5=		pam_krb5.5
 MAN8=		pam_krb5.8 pam_krb5_cchelper.8
