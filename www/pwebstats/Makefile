@@ -2,7 +2,7 @@
 # Date created:         13.07.2003
 # Whom:                 HSIN-HSIUNG CHANG <sexbear@tmu.edu.tw>
 #
-# $FreeBSD: ports/www/pwebstats/Makefile,v 1.7 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/pwebstats/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	pwebstats
@@ -16,7 +16,7 @@ COMMENT=	Analyse a web server log
 
 RUN_DEPENDS=	fly:${PORTSDIR}/graphics/fly
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_BUILD=	yes
 
