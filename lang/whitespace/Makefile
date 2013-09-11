@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: ports/lang/whitespace/Makefile,v 1.10 2013/02/05 22:47:11 svnexp Exp $
+# $FreeBSD: lang/whitespace/Makefile 325942 2013-09-02 06:33:01Z az $
 
 PORTNAME=	whitespace
 PORTVERSION=	0.3
@@ -10,15 +10,16 @@ DISTNAME=	wspace-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	llwang@infor.org
-COMMENT=	An interpreter for the Whitespace programming language
+COMMENT=	Interpreter for the Whitespace programming language
 
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	ghc:${PORTSDIR}/lang/ghc
 LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp \
 		ffi.6:${PORTSDIR}/devel/libffi
-USE_PERL5_BUILD=	5.8+
 
+USES=		perl5
+USE_PERL5=	build
 WRKSRC=	${WRKDIR}/WSpace
 USE_GMAKE=	yes
 ALL_TARGET=	${TARGET}
