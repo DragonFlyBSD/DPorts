@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/dlume/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: deskutils/dlume/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	dlume
 PORTVERSION=	0.2.4
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_TUCOWS}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK2 address book
 
-USES=        pathfix
+USES=        pathfix pkgconfig
 USE_GNOME=	gnomeprefix gtk20 libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
