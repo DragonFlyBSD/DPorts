@@ -2,7 +2,7 @@
 # Date created:				09 October 2000
 # Whom:	      				Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
 #
-# $FreeBSD: ports/news/cleanfeed/Makefile,v 1.19 2012/11/17 06:00:41 svnexp Exp $
+# $FreeBSD: news/cleanfeed/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	cleanfeed
@@ -16,7 +16,7 @@ COMMENT=	Spam filter for Usenet news servers
 RUN_DEPENDS=	${LOCALBASE}/news/bin/innd:${PORTSDIR}/news/inn
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 BINOWN=		news
 BINGRP=		news
 SHAREOWN=	news
