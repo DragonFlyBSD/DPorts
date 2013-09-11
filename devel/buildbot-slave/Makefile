@@ -1,8 +1,8 @@
 # Created by: Frederic Praca <frederic.praca@freebsd-fr.org>
-# $FreeBSD: devel/buildbot-slave/Makefile 313817 2013-03-10 08:51:21Z koobs $
+# $FreeBSD: devel/buildbot-slave/Makefile 325845 2013-09-01 08:55:15Z koobs $
 
 PORTNAME=	buildbot-slave
-PORTVERSION=	0.8.7p1
+PORTVERSION=	0.8.8
 CATEGORIES=	devel python
 MASTER_SITES=	GOOGLE_CODE
 
@@ -23,8 +23,7 @@ USE_TWISTED_RUN=	runner
 MAKE_ENV+=		NO_INSTALL_REQS=1
 
 OPTIONS_DEFINE=		TESTS
-TESTS_DESC=		Install py-mock for unit tests
-# Ports infrastructure bug
+TESTS_DESC=		Install py-mock for test suite
 OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
 
 .include <bsd.port.options.mk>
@@ -38,7 +37,7 @@ MAN1=	buildslave.1
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/buildslave.1 ${MANPREFIX}/man/man1
 
-regression-test:
+regression-test: extract
 	@cd ${WRKSRC} && trial buildslave.test
 
 .include <bsd.port.mk>
