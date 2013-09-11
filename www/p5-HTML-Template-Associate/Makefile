@@ -2,7 +2,7 @@
 # Date created:				2 Sep 2003
 # Whom:					Manuel Rábade <mig@mig-29.net>
 #
-# $FreeBSD: ports/www/p5-HTML-Template-Associate/Makefile,v 1.13 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Template-Associate/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	HTML-Template-Associate
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-HTML-Template>=0:${PORTSDIR}/www/p5-HTML-Template \
 		p5-Data-FormValidator>=0:${PORTSDIR}/textproc/p5-Data-FormValidator
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Template::Associate.3 \
 		HTML::Template::Associate::DBI.3 \
