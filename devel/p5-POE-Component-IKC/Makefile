@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE-Component-IKC/Makefile 318147 2013-05-14 08:49:23Z culot $
+# $FreeBSD: devel/p5-POE-Component-IKC/Makefile 326734 2013-09-08 14:47:37Z az $
 
 PORTNAME=	POE-Component-IKC
 PORTVERSION=	0.2304
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-POE>=1.311:${PORTSDIR}/devel/p5-POE \
 		p5-Proc-ProcessTable>=0:${PORTSDIR}/devel/p5-Proc-ProcessTable
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::IKC.3 POE::Component::IKC::Channel.3 \
 		POE::Component::IKC::Client.3 POE::Component::IKC::ClientLite.3 \
