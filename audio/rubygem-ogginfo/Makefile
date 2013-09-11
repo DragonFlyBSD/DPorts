@@ -2,7 +2,7 @@
 # Date created:		2011-07-09
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/rubygem-ogginfo/Makefile,v 1.5 2012/11/17 05:54:43 svnexp Exp $
+# $FreeBSD: audio/rubygem-ogginfo/Makefile 302869 2012-08-21 15:52:21Z swills $
 #
 
 PORTNAME=	ogginfo
