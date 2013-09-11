@@ -2,7 +2,7 @@
 # Date created:		16 May 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-ConsoleLogger/Makefile,v 1.5 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-ConsoleLogger/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	Plack-Middleware-ConsoleLogger
@@ -19,7 +19,8 @@ RUN_DEPENDS=	\
 	p5-JavaScript-Value-Escape>0:${PORTSDIR}/lang/p5-JavaScript-Value-Escape
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::ConsoleLogger.3
 
