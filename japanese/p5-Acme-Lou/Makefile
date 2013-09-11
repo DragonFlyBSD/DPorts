@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Acme-Lou
-# Date created:		2007-02-06
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/japanese/p5-Acme-Lou/Makefile,v 1.5 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: japanese/p5-Acme-Lou/Makefile 326884 2013-09-10 09:39:11Z az $
 
 PORTNAME=	Acme-Lou
 PORTVERSION=	0.03
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		ja-p5-Text-MeCab>=0:${PORTSDIR}/japanese/p5-Text-MeCab
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Acme::Lou.3
 
