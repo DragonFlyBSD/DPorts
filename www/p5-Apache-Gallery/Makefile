@@ -2,7 +2,7 @@
 # Date created:				October 24 2002
 # Whom:	      				Erwin Lansing <erwin@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Apache-Gallery/Makefile,v 1.43 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-Apache-Gallery/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	Apache-Gallery
@@ -28,7 +28,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-CGI.pm>=0:${PORTSDIR}/www/p5-CGI.pm
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_APACHE=	22+
 
 PLIST_DIRSTRY+=	www/icons
