@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: japanese/kasumi/Makefile 317521 2013-05-06 15:18:38Z bapt $
+# $FreeBSD: japanese/kasumi/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	kasumi
 PORTVERSION=	2.5
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/41436
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	A dictionary management tool for anthy
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehier gtk20
 LIB_DEPENDS=	anthy.1:${PORTSDIR}/japanese/anthy
 
