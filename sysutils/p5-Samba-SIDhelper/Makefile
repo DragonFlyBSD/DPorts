@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: sysutils/p5-Samba-SIDhelper/Makefile 318294 2013-05-16 09:43:47Z miwi $
+# $FreeBSD: sysutils/p5-Samba-SIDhelper/Makefile 326572 2013-09-07 06:13:27Z az $
 
 PORTNAME=	Samba-SIDhelper
 PORTVERSION=	0.0.0
@@ -12,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Create SIDs based on G/UIDs
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Samba::SIDhelper.3
 
