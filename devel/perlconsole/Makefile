@@ -1,9 +1,5 @@
-# New ports collection makefile for:	perlconsole
-# Date created:				9 October 2007
-# Whom:					Philippe Audeoud <jadawin@tuxaco.net>
-#
-# $FreeBSD: ports/devel/perlconsole/Makefile,v 1.9 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: devel/perlconsole/Makefile 325881 2013-09-01 17:10:01Z az $
 
 PORTNAME=	perlconsole
 PORTVERSION=	0.4
@@ -20,8 +16,9 @@ RUN_DEPENDS=	p5-ReadLine-Gnu>=0:${PORTSDIR}/devel/p5-ReadLine-Gnu \
 		p5-Lexical-Persistence>=0:${PORTSDIR}/devel/p5-Lexical-Persistence \
 		p5-B-Keywords>=0:${PORTSDIR}/devel/p5-B-Keywords
 
-USE_PERL5=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5 shebangfix
+USE_PERL5=	configure
+SHEBANG_FILES=	perlconsole
 
 PORTDOCS=	README \
 		AUTHORS \
