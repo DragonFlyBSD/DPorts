@@ -2,7 +2,7 @@
 # Date created:		2005-08-06
 # Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Mixi/Makefile,v 1.18 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Mixi/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	WWW-Mixi
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 				ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Mixi.3 WWW::Mixi::Cookbook.3 WWW::Mixi::Mixi.3
 
