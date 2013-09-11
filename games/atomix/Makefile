@@ -1,10 +1,6 @@
-# New ports collection makefile for:   atomix
-# Date created:        30 January 2000
-# Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
-#
-# $FreeBSD: games/atomix/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
+# $FreeBSD: games/atomix/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $MCom: ports/games/atomix/Makefile,v 1.14 2007/09/10 05:39:33 mezz Exp $
-#
 
 PORTNAME=	atomix
 PORTVERSION=	2.14.0
@@ -16,9 +12,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A yet another little mind game
 
-USE_GMAKE=	yes
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
