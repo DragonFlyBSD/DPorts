@@ -2,7 +2,7 @@
 # Date created:		2006-07-30
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Net-FS-Flickr/Makefile,v 1.12 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-FS-Flickr/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-FS-Flickr
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Flickr-Upload>=0:${PORTSDIR}/www/p5-Flickr-Upload
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		flickrfs.1
 MAN3=		Net::FS::Flickr.3 \
