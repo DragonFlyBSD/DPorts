@@ -1,4 +1,4 @@
-# $FreeBSD: security/scanhill/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/scanhill/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	scanhill
 DISTVERSION=	0.5-p1
@@ -25,6 +25,9 @@ OPTIONS_DEFINE=	MYSQL DOCS
 CONFIGURE_ARGS+=	--enable-mysql
 USE_MYSQL=		yes
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/-liconv/${ICONV_LIB}/' ${WRKSRC}/configure
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scanhill ${PREFIX}/bin
