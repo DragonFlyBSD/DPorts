@@ -2,7 +2,7 @@
 # Date created:		15 March 2001
 # Whom:			killer	<killer@prosalg.no>
 #
-# $FreeBSD: ports/mail/pronto/Makefile,v 1.22 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/pronto/Makefile 326248 2013-09-04 05:52:04Z az $
 
 PORTNAME=	pronto
 PORTVERSION=	2.4.0
@@ -31,7 +31,7 @@ BUILD_DEPENDS+=	p5-Mysql>=0:${PORTSDIR}/databases/p5-Mysql
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
+USES=		perl5
 
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -e \
