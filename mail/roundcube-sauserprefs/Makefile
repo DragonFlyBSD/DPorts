@@ -1,10 +1,11 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: mail/roundcube-sauserprefs/Makefile 319333 2013-05-29 00:38:53Z miwi $
+# $FreeBSD: mail/roundcube-sauserprefs/Makefile 325756 2013-08-31 00:45:21Z bdrewery $
 
 PORTNAME=	sauserprefs
-PORTVERSION=	1.10
+PORTVERSION=	1.10 # PLEASE MIRROR DISTFILE WITH VERSIONED DIR
 CATEGORIES=	mail
-MASTER_SITES=	http://www.tehinterweb.co.uk/roundcube/plugins/
+MASTER_SITES=	http://www.tehinterweb.co.uk/roundcube/plugins/ \
+  		LOCAL/bdrewery/${PORTNAME}/${PORTVERSION}/
 PKGNAMEPREFIX=	roundcube-
 DISTNAME=	${PORTNAME}
 
