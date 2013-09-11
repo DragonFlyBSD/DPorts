@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: ports/devel/p5-Test-Class-Most/Makefile,v 1.5 2013/01/07 13:49:52 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Class-Most/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	Test-Class-Most
 PORTVERSION=	0.08
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Test-Class>=0.38:${PORTSDIR}/devel/p5-Test-Class \
 		p5-Test-Most>=0.31:${PORTSDIR}/devel/p5-Test-Most
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 PLIST_FILES=	%%SITE_PERL%%/Test/Class/Most.pm
 PLIST_DIRSTRY=	%%SITE_PERL%%/Test/Class %%SITE_PERL%%/Test
