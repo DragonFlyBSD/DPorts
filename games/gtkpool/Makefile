@@ -1,9 +1,5 @@
-# New ports collection makefile for:	GTKPool
-# Date created:				31 Jul 2005
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: games/gtkpool/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: games/gtkpool/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	gtkpool
 PORTVERSION=	0.5.0
@@ -15,7 +11,7 @@ MASTER_SITES=	ftp://ftp.seul.org/pub/gtkpool/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A 2D pool game using the GTK+ toolkit
 
-USES=		perl5
+USES=		perl5 pkgconfig
 USE_GNOME=	gtk20
 USE_PERL5=	build
 USE_GMAKE=	yes
