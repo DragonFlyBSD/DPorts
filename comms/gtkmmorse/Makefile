@@ -1,9 +1,5 @@
-# New ports collection makefile for:	morse
-# Date created:		2012-04-26
-# Whom:			Stephen Hurd <shurd@sasktel.net>
-#
-# $FreeBSD: ports/comms/gtkmmorse/Makefile,v 1.2 2012/11/17 05:54:59 svnexp Exp $
-#
+# Created by: Stephen Hurd <shurd@sasktel.net>
+# $FreeBSD: comms/gtkmmorse/Makefile 325963 2013-09-02 09:50:21Z bapt $
 
 PORTNAME=	gtkmmorse
 PORTVERSION=	0.9.27
@@ -20,6 +16,7 @@ LIB_DEPENDS=	ao:${PORTSDIR}/audio/libao \
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 
 PLIST_FILES=	bin/gtkmmorse
 MAN1=		gtkmmorse.1
