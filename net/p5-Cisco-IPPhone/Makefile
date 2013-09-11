@@ -2,7 +2,7 @@
 # Date created:				July 27th 2007
 # Whom:	      				Simun Mikecin < numisemis at yahoo dot com >
 #
-# $FreeBSD: ports/net/p5-Cisco-IPPhone/Makefile,v 1.3 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-Cisco-IPPhone/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Cisco-IPPhone
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	numisemis@yahoo.com
 COMMENT=	Package for creating Cisco IPPhone XML objects
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Cisco::IPPhone.3
 
