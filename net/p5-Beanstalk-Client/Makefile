@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Beanstalk-Client/Makefile,v 1.6 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-Beanstalk-Client/Makefile 326486 2013-09-06 10:47:10Z az $
 
 PORTNAME=	Beanstalk-Client
 PORTVERSION=	1.06
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck \
 				p5-Error>=0:${PORTSDIR}/lang/p5-Error
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Beanstalk::Client.3 \
 		Beanstalk::Pool.3 \
