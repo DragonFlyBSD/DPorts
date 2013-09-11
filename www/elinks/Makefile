@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/elinks/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: www/elinks/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	elinks
 DISTVERSION=	0.11.7
@@ -191,7 +191,7 @@ CONFIGURE_ARGS+=	--disable-sm-scripting --without-spidermonkey
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=			iconv
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 .endif
 
 #
