@@ -2,7 +2,7 @@
 # Date created:				11 Oct 2010
 # Whom:					Bill Brinzer <bill.brinzer@gmail.com>
 #
-# $FreeBSD: ports/mail/p5-Email-Sender-Transport-SQLite/Makefile,v 1.5 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-Sender-Transport-SQLite/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	Email-Sender-Transport-SQLite
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Email-Sender>=0.091660:${PORTSDIR}/mail/p5-Email-Sender
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::Sender::Transport::SQLite.3
 
