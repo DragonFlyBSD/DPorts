@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cxxtest
-# Date created:        14 August 2003
-# Whom:                andrew morton
-#
-# $FreeBSD: ports/devel/cxxtest/Makefile,v 1.6 2012/11/17 05:55:40 svnexp Exp $
-#
+# Created by: andrew morton
+# $FreeBSD: devel/cxxtest/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	cxxtest
 PORTVERSION=	3.10.1
@@ -15,7 +11,8 @@ COMMENT=	Simple and powerful JUnit/CppUnit/xUnit-like framework for C++
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_GMAKE=	yes
 
 DOCS=		README TODO docs/*.html docs/*.png
