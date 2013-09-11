@@ -1,4 +1,4 @@
-# $FreeBSD: net/liboauth/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/liboauth/Makefile 325749 2013-08-31 00:26:08Z bapt $
 
 PORTNAME=	liboauth
 PORTVERSION=	1.0.1
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 
 USE_OPENSSL=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 
 MAN3=		oauth.3
