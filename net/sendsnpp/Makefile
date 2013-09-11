@@ -2,7 +2,7 @@
 # Date created:				2005-12-17
 # Whom:			Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
 #
-# $FreeBSD: ports/net/sendsnpp/Makefile,v 1.9 2012/11/17 06:00:20 svnexp Exp $
+# $FreeBSD: net/sendsnpp/Makefile 326380 2013-09-05 10:32:23Z az $
 # $Tecnik: ports/net/sendsnpp/Makefile,v 1.4 2006/06/11 20:04:50 itetcu Exp $
 
 PORTNAME=	sendSNPP
@@ -16,7 +16,8 @@ MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Tool for sending messages through a RFC1861 compliant SNPP server
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	bin/sendSNPP.pl
 
