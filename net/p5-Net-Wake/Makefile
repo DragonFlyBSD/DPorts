@@ -2,7 +2,7 @@
 # Date created:				15 April 2001
 # Whom:	      				Yoshihiko Sarumaru <mistral@imasy.or.jp>
 #
-# $FreeBSD: ports/net/p5-Net-Wake/Makefile,v 1.7 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Wake/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-Wake
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sarumaru@jp.FreeBSD.org
 COMMENT=	Send Wake On Lan (WOL) packets to power on computers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Wake.3
 
