@@ -2,7 +2,7 @@
 # Date Created:				9 Jan, 2003
 # Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-WebTest/Makefile,v 1.12 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-WebTest/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	HTTP-WebTest
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	\
 	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject \
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN1=		wt.1
