@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/afternoonstalker/Makefile 315963 2013-04-17 13:02:44Z martymac $
+# $FreeBSD: games/afternoonstalker/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	afternoonstalker
 PORTVERSION=	1.1.5
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	flatzebra:${PORTSDIR}/devel/flatzebra
 
+USES=		pkgconfig
 USE_SDL=	mixer sdl
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
