@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: ports/devel/p5-Hash-AutoHash/Makefile,v 1.7 2012/12/16 10:44:33 svnexp Exp $
+# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	Hash-AutoHash
 PORTVERSION=	1.16
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		p5-Tie-ToObject>0:${PORTSDIR}/devel/p5-Tie-ToObject
 TEST_DEPENDS=	p5-Test-Deep>0.11:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Hash::AutoHash.3
 
