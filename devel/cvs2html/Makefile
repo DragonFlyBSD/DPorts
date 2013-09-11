@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvs2html
-# Date created:				Sun 02 Jul 2000
-# Whom:					will
-#
-# $FreeBSD: ports/devel/cvs2html/Makefile,v 1.23 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: devel/cvs2html/Makefile 326734 2013-09-08 14:47:37Z az $
 
 PORTNAME=	cvs2html
 PORTVERSION=	1.98
@@ -21,7 +17,7 @@ COMMENT=	Perl script to turn ``cvs log'' output into HTML
 LICENSE=	GPLv2
 
 PLIST_FILES=	bin/cvs2html
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 do-extract:
