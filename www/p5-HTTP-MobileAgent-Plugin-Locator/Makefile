@@ -2,7 +2,7 @@
 # Date created:		05 Jul 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-MobileAgent-Plugin-Locator/Makefile,v 1.4 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Locator/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	HTTP-MobileAgent-Plugin-Locator
@@ -23,7 +23,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTTP::MobileAgent::Plugin::Locator.3
 
