@@ -2,7 +2,7 @@
 # Date created:		06 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Handler-SCGI/Makefile,v 1.3 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Handler-SCGI/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	Plack-Handler-SCGI
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-Try-Tiny>=0.04:${PORTSDIR}/lang/p5-Try-Tiny
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Handler::SCGI.3
 
