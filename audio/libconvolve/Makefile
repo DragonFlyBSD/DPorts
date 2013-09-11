@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/libconvolve/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/libconvolve/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	libconvolve
 PORTVERSION=	0.0.8
@@ -19,8 +19,7 @@ LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
 		samplerate.1:${PORTSDIR}/audio/libsamplerate \
 		sndfile.1:${PORTSDIR}/audio/libsndfile
 
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
