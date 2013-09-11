@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: graphics/viewnior/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/viewnior/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	viewnior
 PORTVERSION=	1.3
@@ -16,8 +16,8 @@ BUILD_DEPENDS=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 RUN_DEPENDS=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 
 GNU_CONFIGURE=	yes
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	autoconf
-USE_GMAKE=	yes
 USE_GNOME=	glib20 gtk20
 INSTALLS_ICONS=	yes
 
