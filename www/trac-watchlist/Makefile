@@ -1,9 +1,9 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-watchlist/Makefile 324757 2013-08-15 11:10:05Z wg $
+# $FreeBSD: www/trac-watchlist/Makefile 325829 2013-08-31 19:01:59Z rm $
 
 PORTNAME=	watchlist
 PORTVERSION=	1.0.${SVN_REV}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www devel python
 MASTER_SITES=	http://distfiles.cse.tw/ \
 		http://trac-hacks.org/changeset/${SVN_REV}/watchlistplugin?old_path=/&format=zip&filename=/
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-r${SVN_REV}
 
 MAINTAINER=	gaod@hychen.org
-COMMENT=	Provide watchlist feature for wikis and tickets of Trac
+COMMENT=	Watchlist feature for wikis and tickets of Trac
 
 LICENSE=	BSD
 
