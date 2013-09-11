@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/ocsinventory-agent/Makefile,v 1.16 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: net-mgmt/ocsinventory-agent/Makefile 325888 2013-09-01 17:23:33Z az $
 
 PORTNAME=	Ocsinventory
 PORTVERSION=	2.0.5
@@ -20,9 +20,9 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 BUILD_DEPENDS=	dmidecode:${PORTSDIR}/sysutils/dmidecode \
 		lspci:${PORTSDIR}/sysutils/pciutils
 
+USES=		perl5
 FETCH_ARGS=
-USE_PERL5=	yes
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 MAN1=		ocsinventory-agent.1
 MAN3=		Ocsinventory::Agent::XML::Inventory.3 \
