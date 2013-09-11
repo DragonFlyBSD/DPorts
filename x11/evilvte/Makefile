@@ -1,9 +1,5 @@
-# New ports collection makefile for:	evilvte
-# Date created:				2008/06/03
-# Whom:					chinsan
-#
-# $FreeBSD: ports/x11/evilvte/Makefile,v 1.19 2012/11/17 06:03:15 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: x11/evilvte/Makefile 326109 2013-09-02 22:31:37Z bapt $
 
 PORTNAME=	evilvte
 PORTVERSION=	0.5.0
@@ -15,6 +11,7 @@ MASTER_SITES=	http://www.calno.com/${PORTNAME}/ \
 MAINTAINER=	aragon@phat.za.net
 COMMENT=	A VTE based, super lightweight terminal emulator
 
+USES=		pkgconfig
 USE_XZ=		yes
 USE_GMAKE=	yes
 HAS_CONFIGURE=	yes
