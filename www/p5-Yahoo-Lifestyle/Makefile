@@ -2,7 +2,7 @@
 # Date created:				16 Jan 2008
 # Whom:					Rong-En Fan <rafan@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Yahoo-Lifestyle/Makefile,v 1.5 2012/12/16 06:17:00 svnexp Exp $
+# $FreeBSD: www/p5-Yahoo-Lifestyle/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	Yahoo-Lifestyle
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Yahoo-BBAuth>=0:${PORTSDIR}/security/p5-Yahoo-BBAuth \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
 		p5-libwww>0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Yahoo::Lifestyle.3
 
