@@ -1,8 +1,5 @@
-# New ports collection makefile for:	hupnp
-# Date created:				2010-12-29
-# Whom:					Dima Panov <fluffy@FreeBSD.org>
-#
-# $FreeBSD: ports/net/hupnp/Makefile,v 1.5 2012/11/17 06:00:02 svnexp Exp $
+# Created by: Dima Panov <fluffy@FreeBSD.org>
+# $FreeBSD: net/hupnp/Makefile 326848 2013-09-09 22:41:43Z rakuco $
 
 PORTNAME=	hupnp
 PORTVERSION=	1.0.0
@@ -18,7 +15,7 @@ USE_ZIP=	yes
 USE_GMAKE=	yes
 USE_QT4=	corelib network xml dbus gui \
 		qmake_build moc_build rcc_build uic_build
-QMAKE_ARGS=	PREFIX=${PREFIX} herqq.pro
+QMAKE_ARGS=	PREFIX=${PREFIX} "CONFIG+=DISABLE_AVTESTAPP DISABLE_TESTAPP" herqq.pro
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS} ${QMAKE_ARGS}
