@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/cosmosmash/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/cosmosmash/Makefile 326103 2013-09-02 22:03:38Z bapt $
 
 PORTNAME=	cosmosmash
 DISTVERSION=	1.4.7
@@ -19,7 +19,7 @@ LIB_DEPENDS=	flatzebra:${PORTSDIR}/devel/flatzebra \
 
 USE_SDL=	sdl image mixer
 USE_XORG=	x11 xau xdmcp
-USES=		iconv
+USES=		iconv pkgconfig
 USE_GNOME=	desktopfileutils
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include `${SDL_CONFIG} --cflags`
