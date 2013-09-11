@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: ftp/ftpmirror/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/ftpmirror/Makefile 325961 2013-09-02 09:45:00Z garga $
 
 PORTNAME=	ftpmirror
 PORTVERSION=	1.96
@@ -14,10 +14,9 @@ RUN_DEPENDS=	p5-Socket6>=0:${PORTSDIR}/net/p5-Socket6
 
 OPTIONS_DEFINE=	DOCS
 
-USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	ftpmirror rotate
 
 CONFIGURE_ENV+=	PERL="${PERL}" INSTALL_PROGRAM="${INSTALL_SCRIPT}"
