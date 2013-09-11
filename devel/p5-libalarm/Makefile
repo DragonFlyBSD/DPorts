@@ -1,5 +1,5 @@
 # Created by: Marzhan Mykola <delgod@portaone.com>
-# $FreeBSD: devel/p5-libalarm/Makefile 318281 2013-05-16 08:38:06Z miwi $
+# $FreeBSD: devel/p5-libalarm/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	libalarm
 PORTVERSION=	1.0
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	delgod@portaone.com
 COMMENT=	Allow multiple, queued alarms
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Alarm::_TieSIG.3 \
 		Alarm::Concurrent.3 \
