@@ -2,7 +2,7 @@
 # Date created:		2009-01-07
 # Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
 #
-# $FreeBSD: ports/sysutils/p5-Sys-HostIP/Makefile,v 1.3 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Sys-HostIP/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	Sys-HostIP
@@ -15,7 +15,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 MAINTAINER=	mopsfelder@gmail.com
 COMMENT=	A Perl module to get IP address related info
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::HostIP.3
 
