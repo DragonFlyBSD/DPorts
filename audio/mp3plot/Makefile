@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/mp3plot/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: audio/mp3plot/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	mp3plot
 DISTVERSION=	0.6.0
@@ -21,10 +21,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-boost-program-options=boost_program_options \
 		--with-boost-thread=boost_thread
 CONFIGURE_ENV+=	"LIBS=-lboost_system"
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
