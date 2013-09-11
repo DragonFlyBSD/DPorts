@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: textproc/xmlroff/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/xmlroff/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	xmlroff
 PORTVERSION=	0.6.2
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack libgnomeprint libxslt \
 		libxml2 gtk20 glib20 pango
 USE_LDCONFIG=	yes
