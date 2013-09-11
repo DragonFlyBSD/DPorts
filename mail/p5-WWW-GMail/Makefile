@@ -2,7 +2,7 @@
 # Date created:		2006-07-20
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/mail/p5-WWW-GMail/Makefile,v 1.6 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-WWW-GMail/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	WWW-GMail
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::GMail.3
 
