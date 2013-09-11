@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/evince/Makefile 320837 2013-06-13 20:30:47Z kwm $
+# $FreeBSD: graphics/evince/Makefile 326159 2013-09-03 15:25:41Z bapt $
 #    $MCom: ports/trunk/graphics/evince/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evince
@@ -25,9 +25,8 @@ USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-USES=		desktop-file-utils gettext pathfix
+USES=		desktop-file-utils gettext pathfix gmake pkgconfig
 USE_GNOME=	intlhack gnomeprefix gnomedocutils ltasneededhack gconf2
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
