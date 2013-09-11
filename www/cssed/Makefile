@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/cssed/Makefile 323706 2013-07-26 09:22:16Z bapt $
+# $FreeBSD: www/cssed/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	cssed
 PORTVERSION=	0.4.0
@@ -10,7 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An application to help CSS style sheets creation and maintenance
 
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gtk20 libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
