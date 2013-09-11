@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Test-PerlTidy/Makefile,v 1.1 2013/01/14 09:46:17 svnexp Exp $
+# $FreeBSD: devel/p5-Test-PerlTidy/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	Test-PerlTidy
 PORTVERSION=	20130104
@@ -16,7 +16,8 @@ RUN_DEPENDS=	\
 	p5-Text-Diff>0:${PORTSDIR}/textproc/p5-Text-Diff
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::PerlTidy.3
 
