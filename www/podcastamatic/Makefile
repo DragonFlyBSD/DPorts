@@ -2,7 +2,7 @@
 # Date created:				12 July 2005
 # Whom:					lars.eggert@gmx.net
 #
-# $FreeBSD: ports/www/podcastamatic/Makefile,v 1.9 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/podcastamatic/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	podcastamatic
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-MP3-Info>=0:${PORTSDIR}/audio/p5-MP3-Info \
 		p5-MP4-Info>=0:${PORTSDIR}/multimedia/p5-MP4-Info
 
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 NO_BUILD=	yes
 
