@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/gconf2/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/gconf2/Makefile 326088 2013-09-02 20:51:40Z bapt $
 #   $MCom: ports/devel/gconf2/Makefile,v 1.124 2010/11/15 22:14:03 kwm Exp $
 
 PORTNAME=	gconf2
@@ -24,8 +24,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomehier orbit2 gtk20 libxml2 ltverhack \
 		referencehack intlhack dconf
 USE_LDCONFIG=	yes
