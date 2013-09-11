@@ -1,9 +1,8 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/screenfetch/Makefile 323425 2013-07-22 00:31:31Z jgh $
+# $FreeBSD: sysutils/screenfetch/Makefile 326699 2013-09-07 23:22:58Z jgh $
 
 PORTNAME=	screenFetch
-PORTVERSION=	3.0.5
-PORTREVISION=	1
+PORTVERSION=	3.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	LOCAL/jgh/sysutils/${PORTNAME:tl}/ \
 		GH
@@ -21,7 +20,7 @@ OPTIONS_DEFINE=	DOCS
 NO_BUILD=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	KittyKatt
-GH_TAGNAME=	dcf0dd9
+GH_TAGNAME=	56f2151
 GH_COMMIT=	${GH_TAGNAME}
 
 PLIST_FILES=	bin/screenFetch
