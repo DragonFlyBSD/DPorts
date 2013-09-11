@@ -1,9 +1,9 @@
 # Created by: The 244th namelessness at 2ch.net
-# $FreeBSD: japanese/font-mplus/Makefile 316984 2013-05-01 03:12:55Z hrs $
+# $FreeBSD: japanese/font-mplus/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	mplus
 PORTVERSION=	2.2.4.055
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	SFJP/${PORTNAME}-fonts/5030:bitmap \
 		SFJP/${PORTNAME}-fonts/6650:outline
