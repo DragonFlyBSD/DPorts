@@ -2,7 +2,7 @@
 # Date created:		Sat Sep 01 09:30:00 UTC 2006
 # Whom:			Ganael LAPLANCHE <ganael.laplanche@martymac.org>
 #
-# $FreeBSD: ports/sysutils/evtviewer/Makefile,v 1.12 2012/11/17 06:01:29 svnexp Exp $
+# $FreeBSD: sysutils/evtviewer/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	evtViewer
@@ -18,7 +18,7 @@ COMMENT=	PERL-based Event viewer
 
 LICENSE=	GPLv2
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/evtViewer
