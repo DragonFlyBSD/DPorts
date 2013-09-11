@@ -1,5 +1,5 @@
 # Created by: Lawrence Chen <beastie@tardisi.com>
-# $FreeBSD: www/p5-WWW-Shorten-Yourls/Makefile 323146 2013-07-17 04:08:49Z miwi $
+# $FreeBSD: www/p5-WWW-Shorten-Yourls/Makefile 326150 2013-09-03 13:17:36Z az $
 
 PORTNAME=	WWW-Shorten-Yourls
 PORTVERSION=	0.06
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-JSON-Any>=1.18:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-XML-Simple>=2.18:${PORTSDIR}/textproc/p5-XML-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::Yourls.3
 
