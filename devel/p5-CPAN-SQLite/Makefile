@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Gomor
-# Date created:				09 Jan 2007
-# Whom:					Christopher Boumenot <boumenot@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-CPAN-SQLite/Makefile,v 1.13 2012/11/17 05:56:05 svnexp Exp $
-#
+# Created by: Christopher Boumenot <boumenot@gmail.com>
+# $FreeBSD: devel/p5-CPAN-SQLite/Makefile 326784 2013-09-09 08:21:32Z az $
 
 PORTNAME=	CPAN-SQLite
 PORTVERSION=	0.199
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite	\
 		p5-PathTools>=0:${PORTSDIR}/devel/p5-PathTools
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	cpandb.1
 MAN3=	CPAN::SQLite::Index.3 \
