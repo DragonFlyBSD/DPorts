@@ -2,7 +2,7 @@
 # Date created:		2010-01-17
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: audio/cueplayer/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: audio/cueplayer/Makefile 326709 2013-09-08 08:27:08Z antoine $
 #
 
 PORTNAME=	cueplayer
@@ -16,6 +16,7 @@ COMMENT=	CUE player
 
 LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify
 
+USES=		pkgconfig
 USE_QT4=	gui xml qmake_build uic_build moc_build rcc_build network
 USE_GSTREAMER=	flac good dvd lame ugly ffmpeg taglib ogg vorbis soup libmms wavpack
 
