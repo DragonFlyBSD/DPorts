@@ -2,7 +2,7 @@
 # Date created:		22 Jan 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Router/Makefile,v 1.6 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Router/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	HTTP-Router
@@ -28,7 +28,8 @@ BUILD_DEPENDS=	\
 	p5-URI-Template-Restrict>=0.05:${PORTSDIR}/net/p5-URI-Template-Restrict
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::README.3 \
 		HTTP::Router.3 \
