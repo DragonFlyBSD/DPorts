@@ -2,7 +2,7 @@
 # Date created:				December 18, 2009
 # Whom:					Wen Heping <wen@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Net-IMAP-Server/Makefile,v 1.10 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Net-IMAP-Server/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	Net-IMAP-Server
@@ -26,7 +26,8 @@ BUILD_DEPENDS=	p5-Net-Server-Coro>=0.6:${PORTSDIR}/net/p5-Net-Server-Coro \
 		p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::IMAP::Server.3 \
 	Net::IMAP::Server::Command.3 \
