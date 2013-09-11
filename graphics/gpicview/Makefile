@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: graphics/gpicview/Makefile 323002 2013-07-14 20:46:48Z pawel $
+# $FreeBSD: graphics/gpicview/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	gpicview
 PORTVERSION=	0.2.3
@@ -11,7 +11,7 @@ COMMENT=	Simple and Fast Image Viewer for X
 
 LICENSE=	GPLv2
 
-USES=		desktop-file-utils gmake
+USES=		desktop-file-utils gmake pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
