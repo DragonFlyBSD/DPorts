@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-WebService-BuzzurlAPI/Makefile 315981 2013-04-17 16:02:36Z crees $
+# $FreeBSD: www/p5-WebService-BuzzurlAPI/Makefile 326042 2013-09-02 17:29:36Z az $
 
 PORTNAME=	WebService-BuzzurlAPI
 PORTVERSION=	0.02
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0.25:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Readonly>=1.01:${PORTSDIR}/devel/p5-Readonly \
 		p5-UNIVERSAL-require>=0.10:${PORTSDIR}/devel/p5-UNIVERSAL-require
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WebService::BuzzurlAPI.3 \
 		WebService::BuzzurlAPI::Util.3 \
