@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/japanese/font-motoya-al/pkg-plist,v 1.2 2012/11/17 05:58:33 svnexp Exp $
+@comment $FreeBSD: japanese/font-motoya-al/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%DATADIR%%/MTLc3m.ttf
 %%DATADIR%%/MTLmr3m.ttf
 @dirrm %%DATADIR%%
