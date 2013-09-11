@@ -1,4 +1,4 @@
-# $FreeBSD: net/samba36/Makefile 324799 2013-08-16 16:47:50Z timur $
+# $FreeBSD: net/samba36/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME=		${SAMBA_BASENAME}36
 PORTVERSION=		3.6.18
@@ -95,7 +95,7 @@ BUILD_DEPENDS+=		tevent>=0.9.11:${PORTSDIR}/devel/tevent
 RUN_DEPENDS+=		tevent>=0.9.11:${PORTSDIR}/devel/tevent
 CONFIGURE_ARGS+=	--without-libtevent --enable-external-libtevent
 # These options are common for all (sub)ports
-CONFIGURE_ARGS+=	--with-libiconv="${LOCALBASE}" \
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_BASE} \
 			--disable-as-needed
 
 .if !defined(SAMBA_SUBPORT)
