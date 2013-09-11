@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aacplusenc
-# Date created:				28 July 2007
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: audio/aacplusenc/Makefile 322581 2013-07-09 21:26:48Z pav $
-#
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: audio/aacplusenc/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	aacplusenc
 PORTVERSION=	0.17.5
@@ -14,7 +10,7 @@ DISTFILES=	${DISTNAME:S,-,_,}${EXTRACT_SUFX}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An aacPlus v2 command-line encoder
 
-USE_GMAKE=	yes
+USES=		gmake
 
 RESTRICTED=	unclear legal status, probably need licenses from 3GPP, Via Licensing and Coding Technologies
 
