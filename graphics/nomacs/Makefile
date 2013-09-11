@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/nomacs/Makefile 323176 2013-07-17 15:20:23Z wg $
+# $FreeBSD: graphics/nomacs/Makefile 325924 2013-09-01 22:40:22Z bapt $
 
 PORTNAME=	nomacs
 PORTVERSION=	1.4.0
@@ -15,7 +15,7 @@ LIB_DEPENDS=	exiv2:${PORTSDIR}/graphics/exiv2 \
 		sysinfo:${PORTSDIR}/devel/libsysinfo
 
 USE_BZIP2=	yes
-USES=		cmake desktop-file-utils
+USES=		cmake desktop-file-utils pkgconfig
 USE_QT4=	gui network linguist_build moc_build \
 		qmake_build rcc_build uic_build
 LDFLAGS+=	-lsysinfo -lkvm
