@@ -1,5 +1,5 @@
 # Created by: ade, archie
-# $FreeBSD: x11-fm/nautilus/Makefile 324219 2013-08-04 07:26:19Z az $
+# $FreeBSD: x11-fm/nautilus/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #   $MCom: ports/x11-fm/nautilus/Makefile,v 1.212 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	nautilus
@@ -21,13 +21,12 @@ CONFLICTS=	nautilus-3.[0-9]*
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext desktop-file-utils shared-mime-info
+USES=		gettext desktop-file-utils shared-mime-info gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
 		librsvg2 ltverhack gvfs ltasneededhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -liconv" \
+CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib ${ICONV_LIB}" \
 		LIBPNG="-L${LOCALBASE}/lib -lpng -lz"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--enable-static --disable-packagekit
