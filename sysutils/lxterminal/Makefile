@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: sysutils/lxterminal/Makefile 321474 2013-06-21 15:14:00Z wg $
+# $FreeBSD: sysutils/lxterminal/Makefile 326105 2013-09-02 22:11:23Z bapt $
 
 PORTNAME=	lxterminal
 PORTVERSION=	0.1.11
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	vte:${PORTSDIR}/x11-toolkits/vte
 
-USES=		iconv
+USES=		iconv pkgconfig
 USE_GNOME=	gtk20 intlhack
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
