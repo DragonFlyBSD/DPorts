@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tie-iCal
-# Date created:				13 June 2005
-# Whom:	      				TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: ports/devel/p5-Tie-iCal/Makefile,v 1.9 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: devel/p5-Tie-iCal/Makefile 325940 2013-09-02 06:23:30Z az $
 
 PORTNAME=	Tie-iCal
 PORTVERSION=	0.15
@@ -18,8 +14,8 @@ COMMENT=	Tie iCal files to Perl hashes
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
-USE_PERL5_REASON=	requires newer version of Perl with Tie::File 0.97 or later
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Tie::iCal.3
 
