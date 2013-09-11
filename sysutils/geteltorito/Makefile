@@ -2,7 +2,7 @@
 # Date created:				Wed Apr 15 11:35:12 PDT 2009
 # Whom:					Valerio Daelli <valerio.daelli@gmail.com>
 #
-# $FreeBSD: ports/sysutils/geteltorito/Makefile,v 1.2 2012/11/17 06:01:32 svnexp Exp $
+# $FreeBSD: sysutils/geteltorito/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	geteltorito
@@ -16,7 +16,8 @@ MAINTAINER=	valerio.daelli@gmail.com
 COMMENT=	El Torito image extractor
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	bin/${PORTNAME}
 
