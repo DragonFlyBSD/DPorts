@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: x11-fm/gentoo/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-fm/gentoo/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	gentoo
 PORTVERSION=	0.19.13
@@ -14,7 +14,7 @@ COMMENT=	Gtk+ based, file manager inspired by DirectoryOpus
 OPTIONS_DEFINE=	FAM DOCS
 
 USE_GNOME=	gnomehack gtk20
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MKDIR_P="${MKDIR}"
 
