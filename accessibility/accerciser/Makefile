@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: accessibility/accerciser/Makefile 322550 2013-07-09 09:01:41Z bapt $
+# $FreeBSD: accessibility/accerciser/Makefile 326449 2013-09-05 21:32:14Z antoine $
 #   $MCom: ports/accessibility/accerciser/Makefile,v 1.36 2010/04/27 21:38:19 kwm Exp $
 
 PORTNAME=	accerciser
@@ -15,7 +15,7 @@ COMMENT=	Interactive Python accessibility explorer for GNOME
 USE_BZIP2=	yes
 USE_GNOME=	pygnomedesktop atspi intlhack
 USE_PYTHON=	yes
-USES=		gettext gmake display:configure
+USES=		display:configure gettext gmake pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
