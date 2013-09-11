@@ -2,7 +2,7 @@
 # Date created:        8 March 2007
 # Whom:                Zane C. Bowers
 #
-# $FreeBSD: ports/mail/qar-bufo/Makefile,v 1.5 2012/11/17 05:59:12 svnexp Exp $
+# $FreeBSD: mail/qar-bufo/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	qar-bufo
@@ -16,7 +16,7 @@ EXTRACT_ONLY=
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Generates the Qmail assign and recipients file based on unix groups
 
-USE_PERL5=	yes
+USES=		perl5
 NO_WRKSUBDIR=	yes
 
 MAN1=		qar-bufo.1
