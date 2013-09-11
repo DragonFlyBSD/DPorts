@@ -2,7 +2,7 @@
 # Date created:		2010-03-14
 # Whom:			TERAMOTO Masahiro <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-WWW-Tumblr/Makefile,v 1.3 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Tumblr/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	WWW-Tumblr
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Tumblr.3
 
