@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/p5-Shape/files/patch-Shape.xs,v 1.3 2012/11/17 05:56:29 svnexp Exp $
+$FreeBSD: devel/p5-Shape/files/patch-Shape.xs 300896 2012-07-14 13:54:48Z beat $
 
 --- Shape.xs.orig	Tue Mar  4 14:18:00 2003
 +++ Shape.xs	Mon Aug 23 16:42:18 2004
