@@ -2,7 +2,7 @@
 # Date created:				2012-02-27
 # Whom:					Yi-Hsuan Hsin <mhsin@mhsin.org>
 #
-# $FreeBSD: ports/www/p5-WWW-LongURL/Makefile,v 1.2 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-LongURL/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	WWW-LongURL
@@ -25,7 +25,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-LWP-Online>0:${PORTSDIR}/www/p5-LWP-Online
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::LongURL.3
 
