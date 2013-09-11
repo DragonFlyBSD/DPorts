@@ -1,5 +1,5 @@
 # Created by: Walter Hop <walter@binity.com>
-# $FreeBSD: audio/xmms-musepack/Makefile 314661 2013-03-19 16:07:45Z tabthorpe $
+# $FreeBSD: audio/xmms-musepack/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xmms-musepack
 PORTVERSION=	1.8.0
@@ -13,7 +13,7 @@ COMMENT=	XMMS input plugin for playing MPC Musepack (.mpc, .mp+) files
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 PLIST_FILES=	lib/xmms/Input/xmms-mpegplus-1.8.0.so
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
