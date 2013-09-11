@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unidesc
-# Date created:		Sun 15 May 2005
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: sysutils/uniutils/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: sysutils/uniutils/Makefile 326365 2013-09-05 08:06:33Z thierry $
 
 PORTNAME=	uniutils
 PORTVERSION=	2.27
@@ -13,6 +9,8 @@ MASTER_SITES=	http://billposer.org/Software/Downloads/
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Unicode Description Utilities
+
+LICENSE=	GPLv3
 
 RUN_DEPENDS=	ascii2binary:${PORTSDIR}/converters/ascii2binary
 
