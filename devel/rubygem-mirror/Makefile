@@ -2,7 +2,7 @@
 # Date created:		2012-05-10
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-mirror/Makefile,v 1.3 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: devel/rubygem-mirror/Makefile 303106 2012-08-25 00:53:16Z jgh $
 #
 
 PORTNAME=	mirror
