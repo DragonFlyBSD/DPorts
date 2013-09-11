@@ -1,13 +1,9 @@
-# New ports collection makefile for:    libvmime
-# Date created:				September 17, 2005
-# Whom:					delphij@FreeBSD.org
-#
-# $FreeBSD: mail/libvmime/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: delphij@FreeBSD.org
+# $FreeBSD: mail/libvmime/Makefile 326456 2013-09-06 00:17:45Z delphij $
 
 PORTNAME=	libvmime
 PORTVERSION=	0.9.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	SF/vmime/vmime/0.9
 
@@ -18,8 +14,7 @@ LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
 LIB_DEPENDS+=	gsasl:${PORTSDIR}/security/gsasl
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
