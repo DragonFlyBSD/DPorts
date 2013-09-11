@@ -1,4 +1,4 @@
-# $FreeBSD: ports/irc/p5-POE-Component-IRC-Plugin-Karma/Makefile,v 1.1 2013/02/20 02:46:08 svnexp Exp $
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Karma/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	POE-Component-IRC-Plugin-Karma
 PORTVERSION=	0.003
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Plugin::Karma.3
 
