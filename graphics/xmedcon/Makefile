@@ -1,5 +1,5 @@
 # Created by: Paul Everlund
-# $FreeBSD: graphics/xmedcon/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/xmedcon/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	xmedcon
 PORTVERSION=	0.13.0
@@ -25,6 +25,7 @@ INTERFILE_DESC=	With InterFile 3.3
 INW_DESC=	With INW (RUG)
 
 USE_BZIP2=	yes
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/xmedcon \
 		--enable-llcheck
