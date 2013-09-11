@@ -3,7 +3,7 @@
 # Date created:                   Thu Jun 13, 2002
 # Whom:                           Michael L. Hostbaek (mich@freebsdcluster.org)
 #
-# $FreeBSD: ports/misc/translate/Makefile,v 1.11 2012/11/17 05:59:45 svnexp Exp $
+# $FreeBSD: misc/translate/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	translate
@@ -16,7 +16,7 @@ COMMENT=	Translates string using Babelfish
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
