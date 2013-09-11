@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-odepkg/Makefile 322356 2013-07-05 20:59:44Z stephen $
+# $FreeBSD: math/octave-forge-odepkg/Makefile 326241 2013-09-04 01:38:17Z stephen $
 
 PORTNAME=	octave-forge-odepkg
 PORTVERSION=	0.8.4
@@ -7,6 +7,8 @@ CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+
+MAKE_JOBS_UNSAFE=	yes
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
