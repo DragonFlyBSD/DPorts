@@ -1,9 +1,5 @@
-# New ports collection makefile for:	varnish-nagios
-# Date created:				2012-04-15
-# Whom:					anders
-#
-# $FreeBSD: ports/www/varnish-nagios/Makefile,v 1.4 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: anders
+# $FreeBSD: www/varnish-nagios/Makefile 325737 2013-08-30 23:47:19Z bapt $
 
 PORTNAME=	varnish-nagios
 DISTVERSION=	1.1
@@ -20,7 +16,7 @@ LICENSE=	BSD
 
 GNU_CONFIGURE=	yes
 
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 
 PLIST_DIRSTRY=	libexec/nagios
 PLIST_FILES=	libexec/nagios/check_varnish
