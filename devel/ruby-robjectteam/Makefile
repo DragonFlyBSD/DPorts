@@ -2,7 +2,7 @@
 # Date created:		9 November 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-robjectteam/Makefile,v 1.12 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-robjectteam/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	robjectteam
