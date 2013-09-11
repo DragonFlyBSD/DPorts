@@ -2,7 +2,7 @@
 # Date created:		6 February 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/mail/ruby-rfilter/Makefile,v 1.7 2012/11/17 05:59:13 svnexp Exp $
+# $FreeBSD: mail/ruby-rfilter/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	rfilter
