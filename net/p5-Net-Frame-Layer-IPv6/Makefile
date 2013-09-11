@@ -1,5 +1,5 @@
 # Created by: Mars G Miro <spry@anarchy.in.the.ph>
-# $FreeBSD: ports/net/p5-Net-Frame-Layer-IPv6/Makefile,v 1.7 2012/12/28 23:10:23 svnexp Exp $
+# $FreeBSD: net/p5-Net-Frame-Layer-IPv6/Makefile 326481 2013-09-06 09:21:19Z az $
 
 PORTNAME=	Net-Frame-Layer-IPv6
 PORTVERSION=	1.05
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Bit-Vector>=0:${PORTSDIR}/math/p5-Bit-Vector \
     		p5-Class-Gomor>=1.00:${PORTSDIR}/devel/p5-Class-Gomor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Frame::Layer::IPv6.3 \
 		Net::Frame::Layer::IPv6::Fragment.3 \
