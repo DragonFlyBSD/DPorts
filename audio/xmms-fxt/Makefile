@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: audio/xmms-fxt/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: audio/xmms-fxt/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xmms-fxt
 PORTVERSION=	0.4
@@ -13,7 +13,7 @@ COMMENT=	Surround/Echo effect plugin for XMMS
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	gtk12
 
 PLIST_FILES=	lib/xmms/Effect/libfxt.la \
