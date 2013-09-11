@@ -28,7 +28,8 @@
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/generate.png.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/generate.sh.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/generate.svg.sh
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/html.labels.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/html.labels.1.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/html.labels.2.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/jointed.edges.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/macro.1.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/macro.2.pl
@@ -59,6 +60,7 @@
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/report.nodes.and.edges.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/report.valid.attributes.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/sqlite.foreign.keys.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sub.graph.frames.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/sub.graph.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/sub.sub.graph.pl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/trivial.pl
