@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Plack-Middleware-Precompressed/Makefile,v 1.5 2013/01/19 10:43:31 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-Precompressed/Makefile 326156 2013-09-03 15:07:52Z az $
 
 PORTNAME=	Plack-Middleware-Precompressed
 PORTVERSION=	1.101
@@ -15,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Array-RefElem>0:${PORTSDIR}/misc/p5-Array-RefElem
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Precompressed.3
 
