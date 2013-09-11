@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: ports/www/p5-Nginx-Simple/Makefile,v 1.1 2012/12/19 14:40:03 svnexp Exp $
+# $FreeBSD: www/p5-Nginx-Simple/Makefile 325960 2013-09-02 09:44:14Z az $
 
 PORTNAME=	Nginx-Simple
 PORTVERSION=	0.07
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	simond@irrelevant.org
 COMMENT=	Perl 5 module for easy to use interface for Nginx Perl Module
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Nginx::Simple::Dispatch.3 Nginx::Simple::Cookie.3 \
 		Nginx::Simple::Ajax.3 Nginx::Simple.3 \
