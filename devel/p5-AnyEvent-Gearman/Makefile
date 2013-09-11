@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/p5-AnyEvent-Gearman/Makefile,v 1.3 2013/02/07 06:41:34 svnexp Exp $
+# $FreeBSD: devel/p5-AnyEvent-Gearman/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	AnyEvent-Gearman
 PORTVERSION=	0.10
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-Object-Container>=0:${PORTSDIR}/devel/p5-Object-Container \
 		p5-Object-Event>=0:${PORTSDIR}/devel/p5-Object-Event
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AnyEvent::Gearman.3 \
 		AnyEvent::Gearman::Client.3 \
