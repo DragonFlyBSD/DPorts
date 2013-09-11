@@ -2,7 +2,7 @@
 # Date created:		19 August 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-Comma/Makefile,v 1.10 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-Comma/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	Template-Plugin-Comma
@@ -17,7 +17,8 @@ COMMENT=	TT Plugin to commify numbers
 BUILD_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Template::Plugin::Comma.3
 
