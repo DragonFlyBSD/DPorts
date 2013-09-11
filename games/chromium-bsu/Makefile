@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: games/chromium-bsu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/chromium-bsu/Makefile 325962 2013-09-02 09:45:05Z bapt $
 
 PORTNAME=	chromium-bsu
 PORTVERSION=	0.9.15.1
@@ -14,6 +14,7 @@ LIB_DEPENDS=	glpng:${PORTSDIR}/graphics/glpng \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GL=		gl glu
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
