@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/hitori/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/hitori/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	hitori
 PORTVERSION=	0.4.0
@@ -22,7 +22,7 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	glib20 gtk30
 INSTALLS_ICONS=	yes
 
