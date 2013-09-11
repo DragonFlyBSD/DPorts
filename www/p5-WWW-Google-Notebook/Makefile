@@ -2,7 +2,7 @@
 # Date created:		2006-10-15
 # Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Google-Notebook/Makefile,v 1.6 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Google-Notebook/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	WWW-Google-Notebook
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Google::Notebook.3 WWW::Google::Notebook::Note.3 WWW::Google::Notebook::Notebook.3
 
