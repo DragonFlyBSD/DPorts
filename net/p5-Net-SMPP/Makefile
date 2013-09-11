@@ -2,7 +2,7 @@
 # Date created:		20 May 2002
 # Whom:			jhay
 #
-# $FreeBSD: ports/net/p5-Net-SMPP/Makefile,v 1.13 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-SMPP/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-SMPP
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jhay@FreeBSD.org
 COMMENT=	Net::SMPP - pure Perl implementation of SMPP 3.4 over TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SMPP.3
 
