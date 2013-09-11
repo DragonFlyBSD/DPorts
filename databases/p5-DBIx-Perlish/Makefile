@@ -1,10 +1,11 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Perlish/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: databases/p5-DBIx-Perlish/Makefile 325524 2013-08-28 12:39:15Z tobez $
 
 PORTNAME=	DBIx-Perlish
-PORTVERSION=	0.59
+PORTVERSION=	0.60
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:GRUBER
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tobez@FreeBSD.org
