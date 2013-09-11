@@ -2,7 +2,7 @@
 # Date created:		2010-11-06
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: net/p5-Net-Todoist/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net/p5-Net-Todoist/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	Net-Todoist
@@ -17,7 +17,8 @@ COMMENT=	Todoist API
 RUN_DEPENDS=	p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Todoist.3
 
