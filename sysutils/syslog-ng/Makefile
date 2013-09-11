@@ -1,5 +1,5 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng/Makefile 324735 2013-08-14 15:40:29Z cy $
+# $FreeBSD: sysutils/syslog-ng/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	syslog-ng
 PORTVERSION=	3.4.3
@@ -31,6 +31,8 @@ PCRE_DESC=		Build with PCRE support
 SMTP_DESC=		Build with SMTP support
 JSON_DESC=		Build with JSON-C support
 GEOIP_DESC=		Build with GeoIP support
+
+USES=		pkgconfig
 
 .include <bsd.port.options.mk>
 
