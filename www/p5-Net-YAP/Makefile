@@ -2,7 +2,7 @@
 # Date created:		2010-01-21
 # Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Net-YAP/Makefile,v 1.4 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Net-YAP/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	Net-YAP
@@ -17,7 +17,8 @@ COMMENT=	Conduit to communicate with the Yahoo! Application Platform
 BUILD_DEPENDS=	p5-Net-OAuth-Simple>=1.0:${PORTSDIR}/net/p5-Net-OAuth-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::YAP.3
 
