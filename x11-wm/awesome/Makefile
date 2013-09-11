@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11-wm/awesome/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-wm/awesome/Makefile 325761 2013-08-31 01:17:11Z bapt $
 
 PORTNAME=	awesome
 PORTVERSION=	3.5.1
@@ -34,7 +34,7 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 		execinfo:${PORTSDIR}/devel/libexecinfo
 
 USE_XZ=		yes
-USES=		cmake iconv
+USES=		cmake iconv pkgconfig
 CMAKE_ARGS+=	-DSYSCONFDIR=${PREFIX}/etc
 USE_EFL=	imlib2
 USE_GNOME=	glib20 pango
