@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-MIME-Lite-TT-HTML
-# Date created:				22 March 2008
-# Whom:					Tuc <freebsd-ports@t-b-o-h.net>
-#
-# $FreeBSD: mail/p5-MIME-Lite-TT-HTML/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Tuc <freebsd-ports@t-b-o-h.net>
+# $FreeBSD: mail/p5-MIME-Lite-TT-HTML/Makefile 325906 2013-09-01 19:14:36Z az $
 
 PORTNAME=	MIME-Lite-TT-HTML
 PORTVERSION=	0.04
@@ -26,8 +22,7 @@ RUN_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
 		p5-HTML-FormatText-WithLinks>=0:${PORTSDIR}/textproc/p5-HTML-FormatText-WithLinks
 
 USES=		perl5
-USE_PERL5=	configure
-PERL_MODBUILD=	yes
+USE_PERL5=	modbuild
 
 MAN3=	MIME::Lite::TT::HTML.3
 
