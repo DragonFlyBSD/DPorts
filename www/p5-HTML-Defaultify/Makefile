@@ -1,5 +1,5 @@
 # Created by: Takefu <takefu@airport.fm>
-# $FreeBSD: ports/www/p5-HTML-Defaultify/Makefile,v 1.4 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Defaultify/Makefile 326139 2013-09-03 12:27:09Z az $
 
 PORTNAME=	HTML-Defaultify
 PORTVERSION=	1.01
@@ -13,7 +13,8 @@ COMMENT=	Perl module to populate HTML forms with default values
 
 RUN_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		HTML::Defaultify.3
 
 .include <bsd.port.mk>
