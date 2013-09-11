@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-ExtUtils-Command/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-ExtUtils-Command/Makefile 326874 2013-09-10 08:31:46Z tobez $
 
 PORTNAME=	ExtUtils-Command
-PORTVERSION=	1.17
+PORTVERSION=	1.18
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
