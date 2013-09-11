@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AnyEvent::DBus
-# Date created:				2010-06-21
-# Whom:					Sahil Tandon <sahil@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-AnyEvent-DBus/Makefile,v 1.4 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: Sahil Tandon <sahil@FreeBSD.org>
+# $FreeBSD: devel/p5-AnyEvent-DBus/Makefile 326818 2013-09-09 15:55:47Z az $
 
 PORTNAME=	AnyEvent-DBus
 PORTVERSION=	0.31
@@ -23,6 +19,7 @@ RUN_DEPENDS=	p5-AnyEvent>=5:${PORTSDIR}/devel/p5-AnyEvent \
 
 MAN3=		AnyEvent::DBus.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
