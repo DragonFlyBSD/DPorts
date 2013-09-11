@@ -2,7 +2,7 @@
 # Date created:				2008-04-02
 # Whom:					Steven Kreuzer <skreuzer@exit2shel.com>
 #
-# $FreeBSD: ports/www/p5-Net-FireEagle/Makefile,v 1.11 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Net-FireEagle/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	Net-FireEagle
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Net-OAuth-Simple>=1.0:${PORTSDIR}/net/p5-Net-OAuth-Simple \
 		p5-Net-SSLeay>=1.30:${PORTSDIR}/security/p5-Net-SSLeay
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		fireeagle.1
 MAN3=		Net::FireEagle.3
