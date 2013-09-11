@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: ports/audio/libcanberra/Makefile,v 1.27 2012/12/30 00:37:15 svnexp Exp $
+# $FreeBSD: audio/libcanberra/Makefile 326103 2013-09-02 22:03:38Z bapt $
 #   $MCom: ports/audio/libcanberra/Makefile,v 1.28 2011/06/11 18:55:56 mezz Exp $
 
 PORTNAME=	libcanberra
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LGPL
 
 LIB_DEPENDS=	vorbisfile:${PORTSDIR}/audio/libvorbis
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack gtk20 ltverhack gconf2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool libltdl
