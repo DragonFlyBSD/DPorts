@@ -2,7 +2,7 @@
 # Date created:		7 April 2009
 # Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
 #
-# $FreeBSD: ports/devel/rubygem-deeptest/Makefile,v 1.4 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: devel/rubygem-deeptest/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	deep_test
