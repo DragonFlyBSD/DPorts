@@ -1,5 +1,5 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: ports/devel/p5-Algorithm-Bucketizer/Makefile,v 1.11 2013/01/16 20:27:21 svnexp Exp $
+# $FreeBSD: devel/p5-Algorithm-Bucketizer/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Algorithm-Bucketizer
 PORTVERSION=	0.13
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Algorithm-Permute>=0:${PORTSDIR}/devel/p5-Algorithm-Permute \
 		p5-Sysadm-Install>=0.23:${PORTSDIR}/sysutils/p5-Sysadm-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		bucketize.1
 MAN3=		Algorithm::Bucketizer.3
