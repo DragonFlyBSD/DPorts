@@ -1,5 +1,5 @@
 # Created by: stb
-# $FreeBSD: net/netatalk3/Makefile 324929 2013-08-18 16:13:02Z marcus $
+# $FreeBSD: net/netatalk3/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME=	netatalk
 PORTVERSION=	3.0.5
@@ -17,21 +17,17 @@ LATEST_LINK=	netatalk3
 USE_AUTOTOOLS=	libtool
 USE_BDB=	46+
 USE_BZIP2=	yes
-USES=		iconv
+USES=		iconv gmake pkgconfig perl5
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_PERL5=	yes
-USE_GNOME=	pkgconfig
-WANT_GNOME=	yes
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	netatalk
 
 CONFIGURE_ARGS+=	--enable-tcp-wrappers \
 			--with-pkgconfdir=${PREFIX}/etc \
-			--with-libiconv=${LOCALBASE} \
 			--with-libgcrypt-dir=${LOCALBASE} \
 			--with-uams-path=${PREFIX}/libexec/netatalk-uams \
 			--with-bdb=${LOCALBASE} \
+			${ICONV_CONFIGURE_BASE} \
 			--localstatedir=/var \
 			--disable-bundled-libevent \
 			--with-libevent-header=${LOCALBASE}/include \
@@ -54,8 +50,6 @@ MAN5=		afp.conf.5 afp_signature.conf.5 afp_voluuid.conf.5 \
 MAN8=		afpd.8 cnid_dbd.8 cnid_metad.8 netatalk.8
 
 CONFLICTS=	bigloo-2.* cap-6.0.* tct-1.* netatalk-[12]* yudit-[0-9]*
-
-.include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MKRB5}
 CONFIGURE_ARGS+=	--enable-krbV-uam
@@ -88,7 +82,6 @@ PLIST_SUB+=		NETATALKPAM="@comment "
 CONFIGURE_ARGS+=	--enable-zeroconf=${LOCALBASE}
 CFLAGS+=		-I${LOCALBASE}/include -L${LOCALBASE}/lib
 LIB_DEPENDS+=		avahi-client:${PORTSDIR}/net/avahi-app
-USE_GNOME+=		pkgconfig
 SUB_LIST+=		ZEROCONF="avahi_daemon"
 .else
 CONFIGURE_ARGS+=	--disable-zerconf
@@ -139,4 +132,4 @@ post-install:
 		${INSTALL_DATA} -c ${PREFIX}/etc/extmap.conf.dist ${PREFIX}/etc/extmap.conf
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
