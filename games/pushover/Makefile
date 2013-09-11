@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/pushover/Makefile 325247 2013-08-23 01:10:45Z amdmi3 $
+# $FreeBSD: games/pushover/Makefile 326112 2013-09-02 22:52:04Z bapt $
 
 PORTNAME=	pushover
 PORTVERSION=	0.0.5
@@ -12,12 +12,11 @@ COMMENT=	A puzzle game where the goal is to push over all dominoes
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_SDL=	sdl mixer ttf
 USE_LUA=	5.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USES=		gettext
+USES=		gettext gmake pkgconfig
 
 PORTDOCS=	*
 
