@@ -2,7 +2,7 @@
 # Date created:        2006-07-21
 # Whom:                Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
 #
-# $FreeBSD: ports/mail/p5-Mail-OpenRelay-Simple/Makefile,v 1.6 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-OpenRelay-Simple/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	Mail-OpenRelay-Simple
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0.25:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Net-Telnet>=3.03:${PORTSDIR}/net/p5-Net-Telnet
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Mail::OpenRelay::Simple.3
 
