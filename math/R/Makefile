@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: math/R/Makefile 324786 2013-08-15 22:13:42Z bf $
+# $FreeBSD: math/R/Makefile 326303 2013-09-04 17:39:25Z antoine $
 
 PORTNAME?=	R
 PORTVERSION=	3.0.1
@@ -198,6 +198,7 @@ PLIST_SUB+=		LIBR="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPANGOCAIRO}
+USES+=			pkgconfig
 USE_GNOME+=		pango
 PLIST_SUB+=		PANGOCAIRO=""
 .else
