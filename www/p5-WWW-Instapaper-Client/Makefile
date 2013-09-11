@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/p5-WWW-Instapaper-Client/Makefile 320269 2013-06-08 16:26:10Z miwi $
+# $FreeBSD: www/p5-WWW-Instapaper-Client/Makefile 326033 2013-09-02 16:56:12Z az $
 
 PORTNAME=	WWW-Instapaper-Client
 PORTVERSION=	0.901
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-Base>=0:${PORTSDIR}/devel/p5-Class-Base \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		WWW::Instapaper::Client.3
 
