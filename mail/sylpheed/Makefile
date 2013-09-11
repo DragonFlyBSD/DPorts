@@ -1,5 +1,5 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: mail/sylpheed/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
@@ -13,7 +13,7 @@ COMMENT=	Lightweight, featureful, and fast GTK+ based e-mail client
 
 RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 
-USES=		gettext iconv gmake
+USES=		gettext iconv gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
@@ -101,7 +101,7 @@ MAKEFILES=	Makefile.in ac/Makefile.in faq/Makefile.in faq/de/Makefile.in \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS:S/"//g}|g; \
-		s|-lresolv||g; s|-lpisock\"|-liconv &|g;' \
+		s|-lresolv||g; s|-lpisock\"|${ICONV_LIB} &|g;' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/etc|${LOCALBASE}&|g' \
 		${WRKSRC}/libsylph/procmime.c
