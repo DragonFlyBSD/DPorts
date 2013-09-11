@@ -2,7 +2,7 @@
 # Date created:				2011-08-19
 # Whom:					Alexander Moisseev <moiseev@mezonplus.ru>
 #
-# $FreeBSD: ports/mail/postfix-logwatch/Makefile,v 1.4 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/postfix-logwatch/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	postfix-logwatch
@@ -22,7 +22,8 @@ PORTEXAMPLES=	${PORTNAME}.conf ${PORTNAME}.conf-topn
 
 MAN1=		${PORTNAME}.1
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 post-patch:
