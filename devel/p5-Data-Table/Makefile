@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-Table
-# Date created:				10 November 2004
-# Whom:					Aaron Dalton <aaron@daltons.ca>
-#
-# $FreeBSD: ports/devel/p5-Data-Table/Makefile,v 1.15 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@daltons.ca>
+# $FreeBSD: devel/p5-Data-Table/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	Data-Table
 PORTVERSION=	1.68
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Data type related to database tables, HTML table displays, etc
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Table.3
 
