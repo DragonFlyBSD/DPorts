@@ -2,7 +2,7 @@
 # Date created:		2006-08-05
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-Net-Flickr-Backup/Makefile,v 1.12 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Net-Flickr-Backup/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	Net-Flickr-Backup
@@ -26,7 +26,8 @@ BUILD_DEPENDS=	p5-File-Find-Rule>=0:${PORTSDIR}/devel/p5-File-Find-Rule \
 		p5-libwww>=1.38:${PORTSDIR}/www/libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Flickr::Backup.3
 
