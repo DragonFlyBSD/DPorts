@@ -2,7 +2,7 @@
 # Date created:				Jul 28 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/www/feedjack/Makefile,v 1.8 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/feedjack/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	feedjack
@@ -23,6 +23,6 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Feedjack
 
 PLIST_SUB=	FEEDJACKVER=${PORTVERSION}	\
-		PYTHONVER=${_PYTHON_VERSION}
+		PYTHONVER=${PYTHON_VER}
 
 .include <bsd.port.mk>
