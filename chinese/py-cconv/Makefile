@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: chinese/py-cconv/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: chinese/py-cconv/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
 
 PORTNAME=	cconv
 PORTVERSION=	0.5.0
@@ -15,7 +15,7 @@ LIB_DEPENDS=	cconv:${PORTSDIR}/chinese/cconv
 
 CFLAGS+=	-I${LOCALBASE}/include
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/${PORTNAME}.so
 
