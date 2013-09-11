@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: math/gnumeric/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/gnumeric/Makefile 326105 2013-09-02 22:11:23Z bapt $
 #   $MCom: ports/trunk/math/gnumeric/Makefile 18444 2013-05-11 12:51:26Z kwm $
 
 PORTNAME=	gnumeric
@@ -20,8 +20,7 @@ LIB_DEPENDS=	goffice-0.10:${PORTSDIR}/devel/goffice010 \
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_XZ=		yes
-USES=		desktop-file-utils gettext pathfix shared-mime-info
-USE_GMAKE=	yes
+USES=		desktop-file-utils gettext pathfix shared-mime-info gmake pkgconfig
 USE_GNOME=	gnomehier gnomeprefix intlhack libgsf pygobject3
 USE_PYTHON=	-2.7
 INSTALLS_OMF=	yes
