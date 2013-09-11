@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-Hipparcos/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-Hipparcos/Makefile 325811 2013-08-31 14:23:18Z az $
 
 PORTNAME=	Astro-Hipparcos
 PORTVERSION=	0.09
@@ -13,7 +13,7 @@ COMMENT=	Perl extension for reading the Hipparcos star catalog
 BUILD_DEPENDS=	p5-ExtUtils-XSpp>=0.06:${PORTSDIR}/devel/p5-ExtUtils-XSpp \
 		p5-ExtUtils-ParseXS>=2.22:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
 
-MAKE_ARGS+=	"CC=g++"
+MAKE_ARGS+=	CC="${CXX}"
 USES=		perl5
 USE_PERL5=	configure
 
