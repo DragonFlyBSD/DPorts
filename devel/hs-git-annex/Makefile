@@ -1,5 +1,5 @@
 # Created by: frase@frase.id.au
-# $FreeBSD: devel/hs-git-annex/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-git-annex/Makefile 326823 2013-09-09 17:31:07Z az $
 
 PORTNAME=	git-annex
 PORTVERSION=	4.20130601
@@ -16,7 +16,8 @@ USE_CABAL=	bloomfilter dataenc dlist edit-distance extensible-exceptions \
 		SafeSemaphore SHA text unix-compat utf8-string uuid
 
 USE_GMAKE=		yes
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 
 BUILD_DEPENDS+=	rsync:${PORTSDIR}/net/rsync \
 		git:${PORTSDIR}/devel/git \
