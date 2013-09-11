@@ -2,7 +2,7 @@
 # Date created:			Jun 24, 2004
 # Whom:				toni.viemero@iki.fi
 #
-# $FreeBSD: ports/www/p5-W3C-LogValidator/Makefile,v 1.17 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-W3C-LogValidator/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	W3C-LogValidator
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		${LOCALBASE}/bin/checklink:${PORTSDIR}/www/p5-W3C-LinkChecker
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	W3C::LogValidator.3 \
 	W3C::LogValidator::Basic.3 \
