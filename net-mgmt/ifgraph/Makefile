@@ -2,7 +2,7 @@
 # Date created:				Sep 18 2003
 # Whom:                                 Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/net-mgmt/ifgraph/Makefile,v 1.17 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/ifgraph/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	ifgraph
@@ -19,7 +19,7 @@ RUN_DEPENDS=	rrdtool:${PORTSDIR}/databases/rrdtool \
 		p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
