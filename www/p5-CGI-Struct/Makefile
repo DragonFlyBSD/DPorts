@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Struct/Makefile 319065 2013-05-25 18:26:12Z az $
+# $FreeBSD: www/p5-CGI-Struct/Makefile 326139 2013-09-03 12:27:09Z az $
 
 PORTNAME=	CGI-Struct
 PORTVERSION=	1.21
@@ -13,7 +13,8 @@ LICENSE=	BSD
 
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Struct.3
 
