@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-StatusMessage/Makefile,v 1.1 2012/12/30 12:50:04 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-StatusMessage/Makefile 325984 2013-09-02 12:52:42Z az $
 
 PORTNAME=	Catalyst-Plugin-StatusMessage
 PORTVERSION=	1.002000
@@ -12,7 +12,8 @@ COMMENT=	Handle passing of status (success and error) messages
 BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::StatusMessage.3
 
