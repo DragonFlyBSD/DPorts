@@ -2,7 +2,7 @@
 # Date created:		31 Dec 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-GunghoX-FollowLinks/Makefile,v 1.4 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-GunghoX-FollowLinks/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	GunghoX-FollowLinks
@@ -25,7 +25,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Class-Null>0:${PORTSDIR}/devel/p5-Class-Null
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	GunghoX::FollowLinks.3 \
 	GunghoX::FollowLinks::Filter.3 \
