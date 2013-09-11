@@ -2,7 +2,7 @@
 # Date created:				Wed May  3 17:26:19 MSD 2006
 # Whom:					Denis Shaposhnikov <dsh@vlink.ru>
 #
-# $FreeBSD: ports/net-mgmt/nagiosgraph/Makefile,v 1.20 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: net-mgmt/nagiosgraph/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	nagiosgraph
@@ -17,7 +17,8 @@ COMMENT=	Generate rrdtool\'s graphs by performance data from nagios plugins
 RUN_DEPENDS=	${LOCALBASE}/bin/nagios:${PORTSDIR}/net-mgmt/nagios \
 		rrdtool>=0:${PORTSDIR}/databases/rrdtool
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 PORTDOCS=	AUTHORS CHANGELOG INSTALL README TODO
