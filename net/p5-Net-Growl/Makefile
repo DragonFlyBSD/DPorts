@@ -2,7 +2,7 @@
 # Date created:		2007-04-05
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/net/p5-Net-Growl/Makefile,v 1.3 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Growl/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-Growl
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	markun@onohara.to
 COMMENT=	Growl Notifications over the network
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Growl.3
 
