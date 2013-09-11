@@ -1,5 +1,5 @@
 # Created by: John Hixson <john@pcbsd.org>
-# $FreeBSD: audio/pianobar/Makefile 320126 2013-06-06 20:30:57Z wg $
+# $FreeBSD: audio/pianobar/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	pianobar
 PORTVERSION=	2013.05.19
@@ -23,8 +23,8 @@ MAN_COMPRESSED=	no
 
 PLIST_FILES=	bin/pianobar
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 MAKE_ARGS+=	CC="${CC}"
 
 CFLAGS+=	-I${LOCALBASE}/include -std=c99
