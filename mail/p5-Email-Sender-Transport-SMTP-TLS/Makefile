@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: mail/p5-Email-Sender-Transport-SMTP-TLS/Makefile 321703 2013-06-24 18:38:25Z lippe $
+# $FreeBSD: mail/p5-Email-Sender-Transport-SMTP-TLS/Makefile 326257 2013-09-04 07:19:56Z az $
 
 PORTNAME=	Email-Sender-Transport-SMTP-TLS
 PORTVERSION=	0.14
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-Email-Sender>=0.091660:${PORTSDIR}/mail/p5-Email-Sender \
 		p5-Net-SMTP-TLS-ButMaintained>=0.2:${PORTSDIR}/mail/p5-Net-SMTP-TLS-ButMaintained
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::Sender::Transport::SMTP::TLS.3
 
