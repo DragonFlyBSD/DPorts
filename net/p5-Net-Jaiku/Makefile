@@ -3,7 +3,7 @@
 # Date created:		Jun 3, 2008
 # Whom:			Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Net-Jaiku/Makefile,v 1.2 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Jaiku/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-Jaiku
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-libwww>=5.805:${PORTSDIR}/www/p5-libwww \
 		p5-JSON-Any>0:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-Params-Validate>0:${PORTSDIR}/devel/p5-Params-Validate
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Jaiku.3
 
