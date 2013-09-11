@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Plack-Middleware-Reproxy/Makefile,v 1.5 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-Reproxy/Makefile 326053 2013-09-02 18:23:34Z az $
 
 PORTNAME=	Plack-Middleware-Reproxy
 PORTVERSION=	0.00004
@@ -15,7 +15,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-TEST-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Reproxy.3 \
 	Plack::Middleware::Reproxy::Callback.3 \
