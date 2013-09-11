@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: audio/xmms-wma/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: audio/xmms-wma/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xmms-wma
 PORTVERSION=	1.0.5
@@ -12,8 +12,8 @@ COMMENT=	WMA plugin for xmms
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 CFLAGS+=	-fPIC -DPIC
 ONLY_FOR_ARCHS=	i386 amd64 sparc64
 USE_XORG=	xi xext x11
