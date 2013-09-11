@@ -2,7 +2,7 @@
 # Date created:		20 Jan 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Path-Class-URI/Makefile,v 1.4 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Path-Class-URI/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	Path-Class-URI
@@ -21,7 +21,8 @@ RUN_DEPENDS=	\
 	p5-Exporter-Lite>0:${PORTSDIR}/devel/p5-Exporter-Lite
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Path::Class::URI.3 \
 		Path::Class::Unicode.3
