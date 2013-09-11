@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/totem-pl-parser/Makefile 317223 2013-05-03 17:37:13Z ehaupt $
+# $FreeBSD: multimedia/totem-pl-parser/Makefile 326103 2013-09-02 22:03:38Z bapt $
 #   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.45 2011/02/21 19:10:03 kwm Exp $
 
 PORTNAME=	totem-pl-parser
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext pkgconfig
 USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
