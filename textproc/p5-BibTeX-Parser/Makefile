@@ -1,8 +1,8 @@
 # Created by: Wen Heping<wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-BibTeX-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-BibTeX-Parser/Makefile 326225 2013-09-03 20:04:29Z tobez $
 
 PORTNAME=	BibTeX-Parser
-PORTVERSION=	0.64
+PORTVERSION=	0.65
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:GERHARD
