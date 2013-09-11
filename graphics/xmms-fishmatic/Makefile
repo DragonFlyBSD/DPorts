@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-fishmatic/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-fishmatic/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	xmms-fishmatic
 PORTVERSION=	0.0.1
@@ -16,7 +16,7 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 PLIST_FILES=	lib/xmms/Visualization/libfishmatic.so
 USE_GNOME=      gtk12
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=  yes
 USE_GL=		glut
 USE_XORG=	xext
