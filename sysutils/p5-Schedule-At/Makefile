@@ -2,7 +2,7 @@
 # Date created:				10th Jan 2001
 # Whom:					kuriyama
 #
-# $FreeBSD: ports/sysutils/p5-Schedule-At/Makefile,v 1.20 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Schedule-At/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	Schedule-At
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	OS independent interface to the Unix 'at' command
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Schedule::At.3
 
