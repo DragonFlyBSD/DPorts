@@ -1,8 +1,9 @@
 # Created by: cartola@openit.com.br
-# $FreeBSD: graphics/enblend/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: graphics/enblend/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	enblend
 PORTVERSION=	4.1.1
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/enblend/enblend-enfuse/enblend-enfuse-${PORTVERSION:R}
 DISTNAME=	enblend-enfuse-${PORTVERSION}
