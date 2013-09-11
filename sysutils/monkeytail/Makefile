@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/monkeytail/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: sysutils/monkeytail/Makefile 326573 2013-09-07 06:47:20Z az $
 
 PORTNAME=	monkeytail
 PORTVERSION=	0.3.2
@@ -14,7 +14,8 @@ COMMENT=	A multi-file tail on both local and remote hosts
 RUN_DEPENDS=	p5-Config-General>=0:${PORTSDIR}/devel/p5-Config-General \
 		p5-Getopt-Declare>=0:${PORTSDIR}/devel/p5-Getopt-Declare
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 NO_BUILD=	yes
 
