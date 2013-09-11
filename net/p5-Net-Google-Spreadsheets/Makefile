@@ -2,7 +2,7 @@
 # Date created:				23 March 2010
 # Whom:					Gunter Wambaugh <gunter@six-two.net>
 #
-# $FreeBSD: net/p5-Net-Google-Spreadsheets/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net/p5-Net-Google-Spreadsheets/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Net-Google-Spreadsheets
@@ -27,7 +27,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-MockModule>=0:${PORTSDIR}/devel/p5-Test-MockModule \
 		p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Google::Spreadsheets.3 \
 		Net::Google::Spreadsheets::Cell.3 \
