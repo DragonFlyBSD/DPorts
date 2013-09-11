@@ -2,7 +2,7 @@
 # Date created:		2006-07-18
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/py-gitpython/Makefile,v 1.6 2012/11/17 05:56:47 svnexp Exp $
+# $FreeBSD: devel/py-gitpython/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	GitPython
