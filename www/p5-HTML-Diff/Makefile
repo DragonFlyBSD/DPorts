@@ -2,7 +2,7 @@
 # Date created:			2004.07.16
 # Whom:				Travis Campbell <hcoyote@ghostar.org>
 #
-# $FreeBSD: ports/www/p5-HTML-Diff/Makefile,v 1.6 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Diff/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	HTML-Diff
@@ -17,7 +17,8 @@ COMMENT=	A Perl module for finding changes between two strings of HTML
 BUILD_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Diff.3
 
