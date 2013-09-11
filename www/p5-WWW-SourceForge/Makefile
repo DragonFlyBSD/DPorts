@@ -2,7 +2,7 @@
 # Date created:				21 Oct 2004
 # Whom:					Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
 #
-# $FreeBSD: ports/www/p5-WWW-SourceForge/Makefile,v 1.10 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-SourceForge/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	WWW-SourceForge
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WWW::SourceForge.3 WWW::SourceForge::Project.3
 
