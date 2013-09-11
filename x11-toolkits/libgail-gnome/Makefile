@@ -2,7 +2,7 @@
 # Date Created:			12 April 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgail-gnome/Makefile,v 1.56 2012/11/17 06:03:36 svnexp Exp $
+# $FreeBSD: x11-toolkits/libgail-gnome/Makefile 326415 2013-09-05 17:01:12Z antoine $
 #   $MCom: ports-stable/x11-toolkits/libgail-gnome/Makefile,v 1.1 2010/06/23 12:27:01 kwm Exp $
 #
 
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An implementation of the ATK interfaces for GNOME widgets
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 GNOME_DESKTOP_VERSION=2
