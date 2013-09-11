@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: ports/audio/akode/Makefile,v 1.34 2012/12/17 19:26:54 svnexp Exp $
+# $FreeBSD: audio/akode/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	akode
 PORTVERSION=	2.0.2
@@ -26,10 +26,10 @@ MPC_DESC=	Monkey's Audio decoder plugin
 RESAMPLER_DESC=	Resampler processing plugin
 XIPH_DESC=	FLAC/Speex/Vorbis decoder plugin
 
+USES=		gmake
 USE_AUTOTOOLS=	libltdl libtool
 USE_BZIP2=	yes
 USE_GCC=	any
-USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_LDCONFIG=	yes
 
