@@ -19,5 +19,6 @@ LIB_DEPENDS=	gts.5:${PORTSDIR}/graphics/gts
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
+USES=			pkgconfig
 
 .include <bsd.port.mk>
