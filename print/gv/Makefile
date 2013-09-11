@@ -1,5 +1,5 @@
 # Created by: tg@freebsd.org
-# $FreeBSD: print/gv/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: print/gv/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	gv
 PORTVERSION=	3.7.4
@@ -20,7 +20,7 @@ USE_PERL5_BUILD=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ENV +=	LDFLAGS="${LDFLAGS}" LIBS="-liconv"
+CONFIGURE_ENV +=	LDFLAGS="${LDFLAGS}" LIBS="${ICONV_LIB}"
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/X11 \
 			--enable-setenv-code \
 			--enable-SIGCHLD-fallback
