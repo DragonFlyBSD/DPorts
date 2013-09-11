@@ -2,7 +2,7 @@
 # Date created:				Fri 12 Jun 2009
 # Whom:					Alexey V. Degtyarev
 #
-# $FreeBSD: ports/net-mgmt/nagios-check_clamav/Makefile,v 1.3 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-check_clamav/Makefile 326167 2013-09-03 16:18:49Z az $
 #
 
 PORTNAME=	check_clamav
@@ -16,7 +16,8 @@ MAINTAINER=	alexey@renatasystems.org
 COMMENT=	Nagios plugin that verifies ClamAV local signature database revision
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 RUN_DEPENDS+=	${LOCALBASE}/libexec/nagios/utils.pm:${PORTSDIR}/net-mgmt/nagios-plugins \
 		clamav>=0:${PORTSDIR}/security/clamav \
