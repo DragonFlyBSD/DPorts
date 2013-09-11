@@ -2,7 +2,7 @@
 # Date created:		2006-09-05
 # Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Net-Analysis/Makefile,v 1.14 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Analysis/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-Analysis
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Net-Pcap>=0:${PORTSDIR}/net/p5-Net-Pcap \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Analysis.3 \
 		Net::Analysis::Constants.3 \
