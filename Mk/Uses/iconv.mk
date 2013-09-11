@@ -16,7 +16,8 @@ _INCLUDE_USES_ICONV_MK=	yes
 iconv_ARGS=     lib
 .endif
 
-.if !exists(/usr/include/iconv.h) && ${OSVERSION} < 1000043
+# Change DF 5.0 to really number when iconv fixed
+.if ${DFLYVERSION} < 500000
 
 ICONV_CMD=	${LOCALBASE}/bin/iconv
 ICONV_LIB=	-liconv
