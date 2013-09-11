@@ -1,5 +1,5 @@
 # Created by: lichray@gmail.com
-# $FreeBSD: graphics/pinpoint/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: graphics/pinpoint/Makefile 326109 2013-09-02 22:31:37Z bapt $
 
 PORTNAME=	pinpoint
 DISTVERSION=	0.1.4
@@ -20,7 +20,7 @@ USE_GL=		gl
 USE_GMAKE=	yes
 USE_GNOME=	librsvg2
 GNU_CONFIGURE=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 
 OPTIONS_DEFINE=	GST
 GST_DESC=	Live videos as slide backgrounds
