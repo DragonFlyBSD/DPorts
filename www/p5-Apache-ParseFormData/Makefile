@@ -2,7 +2,7 @@
 # Date created:                13-Jul-2004
 # Whom:                        Jon Nistor <nistor@snickers.org>
 #
-# $FreeBSD: ports/www/p5-Apache-ParseFormData/Makefile,v 1.12 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-Apache-ParseFormData/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	Apache-ParseFormData
@@ -18,7 +18,8 @@ COMMENT=	Module allows you to easily decode/parse form and query data
 BUILD_DEPENDS=	${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_APACHE=	22+
 
 MAN3=		Apache::ParseFormData.3
