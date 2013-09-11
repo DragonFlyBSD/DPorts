@@ -2,7 +2,7 @@
 # Date created:		29 September 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/security/ruby-gpgme/Makefile,v 1.9 2012/11/17 06:01:19 svnexp Exp $
+# $FreeBSD: security/ruby-gpgme/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	gpgme
