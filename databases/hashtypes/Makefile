@@ -1,8 +1,9 @@
 # Created by: Sevan Janiyan <venture37@geeklan.co.uk>
-# $FreeBSD: databases/hashtypes/Makefile 323551 2013-07-23 21:02:49Z pawel $
+# $FreeBSD: databases/hashtypes/Makefile 326055 2013-09-02 18:52:48Z pawel $
 
 PORTNAME=	hashtypes
 PORTVERSION=	0.1.1
+PORTREVISION=	1
 CATEGORIES=	databases security
 MASTER_SITES=	http://api.pgxn.org/dist/hashtypes/${PORTVERSION}/ \
 		http://oss-files.dreamindustries.co/mirror/
@@ -14,6 +15,11 @@ USE_PGSQL=	yes
 USE_GMAKE=	yes
 USE_ZIP=	yes
 
-MAKE_ARGS=	USE_PGXS=1
+MAKE_ARGS=	USE_PGXS=1 MODULEDIR=extension
+MODULEDIR=	${PREFIX}/share/postgresql/extension
+
+post-install:
+	@[ -f ${MODULEDIR}/${PORTNAME}.control ] || \
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.control ${MODULEDIR}
 
 .include <bsd.port.mk>
