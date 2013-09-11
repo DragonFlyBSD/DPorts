@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libamrnb
-# Date created:	30 May 2007
-# Whom:		Tatsuki Makino <tatsuki_makino@hotmail.com>
-#
-# $FreeBSD: ports/audio/libamrnb/Makefile,v 1.12 2012/11/17 05:54:35 svnexp Exp $
-#
+# Created by: Tatsuki Makino <tatsuki_makino@hotmail.com>
+# $FreeBSD: audio/libamrnb/Makefile 326828 2013-09-09 18:19:09Z sunpoet $
 
 PORTNAME=	libamrnb
-PORTVERSION=	10.0.0.0
+PORTVERSION=	11.0.0.0
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://ftp.penguin.cz/pub/users/utx/amr/ \
@@ -26,7 +22,7 @@ LICENSE_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 RESTRICTED=	license prohibits redistribution
 RESTRICTED_FILES=	${SRC3GPP}
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	libtool
 PORTDOCS=	AUTHORS COPYING ChangeLog NEWS README TODO readme.txt
 SUB_FILES=	pkg-message
@@ -34,18 +30,19 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LANG=C
 MAKE_ENV=	LANG=C
 USE_LDCONFIG=	yes
+OPTIONS_DEFINE=	DOCS
 
-SRC3GPP=	26104-a00.zip
+SRC3GPP=	26104-b00.zip
+
+.include <bsd.port.options.mk>
 
 post-extract:
 	@${CP} ${DISTDIR}/${SRC3GPP} ${WRKSRC}/
 
 post-install:
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
-. for FILE in ${PORTDOCS}
-		${INSTALL_DATA} ${WRKSRC}/${FILE} ${DOCSDIR}
-. endfor
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 .endif
 	@${CAT} ${PKGMESSAGE}
 
