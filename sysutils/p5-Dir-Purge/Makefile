@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Dir-Purge/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/p5-Dir-Purge/Makefile 326572 2013-09-07 06:13:27Z az $
 
 PORTNAME=	Dir-Purge
 PORTVERSION=	1.02
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Purge directories to a given number of files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Dir::Purge.3
 
