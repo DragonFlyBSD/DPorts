@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-SVN-S4/Makefile 313993 2013-03-12 17:43:25Z culot $
+# $FreeBSD: devel/p5-SVN-S4/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	SVN-S4
 PORTVERSION=	1.055
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Config-Tiny>=0:${PORTSDIR}/devel/p5-Config-Tiny \
 		p5-IO-AIO>=0:${PORTSDIR}/devel/p5-IO-AIO \
 		p5-subversion>=0:${PORTSDIR}/devel/p5-subversion
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN1=		s4.1
