@@ -2,11 +2,12 @@
 # Date created:        14 November 2008
 # Whom:                bf <bf2006a@yahoo.com>
 #
-# $FreeBSD: ports/math/dieharder/Makefile,v 1.23 2012/11/17 05:59:20 svnexp Exp $
+# $FreeBSD: math/dieharder/Makefile 325401 2013-08-26 16:06:37Z bf $
 #
 
 PORTNAME=	dieharder
 PORTVERSION=	3.31.1
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.phy.duke.edu/~rgb/General/dieharder/ LOCAL/bf
 EXTRACT_SUFX=	.tgz
