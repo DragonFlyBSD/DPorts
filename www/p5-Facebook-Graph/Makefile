@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Facebook-Graph/Makefile 318762 2013-05-22 11:32:28Z kuriyama $
+# $FreeBSD: www/p5-Facebook-Graph/Makefile 325974 2013-09-02 11:04:10Z az $
 
 PORTNAME=	Facebook-Graph
 PORTVERSION=	1.0600
@@ -21,7 +21,8 @@ RUN_DEPENDS=	\
 	p5-URI>=1.54:${PORTSDIR}/net/p5-URI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Facebook::Graph.3 \
 	Facebook::Graph::AccessToken.3 \
