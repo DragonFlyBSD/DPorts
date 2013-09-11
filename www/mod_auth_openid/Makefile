@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: www/mod_auth_openid/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_auth_openid/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	mod_auth_openid
 PORTVERSION=	0.7
@@ -17,7 +17,7 @@ LIB_DEPENDS=	opkele:${PORTSDIR}/devel/libopkele \
 PLIST_FILES=	${APACHEMODDIR}/mod_auth_openid.so
 
 USE_APACHE=	22
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-pcre=${LOCALBASE}
 
