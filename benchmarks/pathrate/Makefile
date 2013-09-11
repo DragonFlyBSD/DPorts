@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pathrate
-# Date created:			19 May 2005
-# Whom:				dikshie <dikshie@lapi.itb.ac.id>
-#
-# $FreeBSD: ports/benchmarks/pathrate/Makefile,v 1.4 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: dikshie <dikshie@lapi.itb.ac.id>
+# $FreeBSD: benchmarks/pathrate/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	pathrate
 PORTVERSION=	2.4.1
@@ -15,7 +11,7 @@ MAINTAINER=	dikshie@lapi.itb.ac.id
 COMMENT=	A measurement tool for capacity estimation of network paths
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 MAKEFILE=	makefile
