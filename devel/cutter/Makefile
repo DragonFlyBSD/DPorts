@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: devel/cutter/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/cutter/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	cutter
 PORTVERSION=	1.2.2
@@ -16,8 +16,7 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 CPPFLAGS+=	"-I${LOCALBASE}/include"
 CONFIGURE_ARGS=	--disable-gtk-doc-html --with-html-dir=${PREFIX}/share/doc
 GNU_CONFIGURE=	yes
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 USE_GNOME=	intltool gnomehack glib20 gtk20
 USE_LDCONFIG=	yes
 WANT_GSTREAMER=	yes
