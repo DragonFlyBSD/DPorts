@@ -2,7 +2,7 @@
 # Date created:				31 March 2006
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Mail-MboxParser/Makefile,v 1.10 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-MboxParser/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	Mail-MboxParser
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-MIME-Tools>=0:${PORTSDIR}/mail/p5-MIME-Tools \
 		p5-Mail-Mbox-MessageParser>=0:${PORTSDIR}/mail/p5-Mail-Mbox-MessageParser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::MboxParser.3 Mail::MboxParser::Base.3 \
 		Mail::MboxParser::Mail.3 \
