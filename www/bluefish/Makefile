@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: www/bluefish/Makefile 317448 2013-05-05 23:01:49Z jgh $
+# $FreeBSD: www/bluefish/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	bluefish
 PORTVERSION=	2.2.3
@@ -19,7 +19,7 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk20 gnomevfs2 gnomemimedata desktopfileutils
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
