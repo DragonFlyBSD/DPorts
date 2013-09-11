@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: ports/net-mgmt/p5-BigIP-iControl/Makefile,v 1.2 2012/11/27 16:02:15 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-BigIP-iControl/Makefile 326167 2013-09-03 16:18:49Z az $
 
 PORTNAME=	BigIP-iControl
 PORTVERSION=	0.095
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite \
 		p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		BigIP::iControl.3
 
