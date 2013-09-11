@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/p5-PerlIO-via-Unidecode/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# $FreeBSD: converters/p5-PerlIO-via-Unidecode/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	PerlIO-via-Unidecode
 PORTVERSION=	1.01
@@ -13,7 +13,8 @@ COMMENT=	A perlio layer for Unidecode
 BUILD_DEPENDS=	p5-Text-Unidecode>=0:${PORTSDIR}/converters/p5-Text-Unidecode
 RUN_DEPENDS=	p5-Text-Unidecode>=0:${PORTSDIR}/converters/p5-Text-Unidecode
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PerlIO::via::Unidecode.3
 
