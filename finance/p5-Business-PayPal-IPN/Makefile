@@ -2,7 +2,7 @@
 # Date created:		08 September 2008
 # Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/finance/p5-Business-PayPal-IPN/Makefile,v 1.3 2012/11/17 05:57:26 svnexp Exp $
+# $FreeBSD: finance/p5-Business-PayPal-IPN/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	Business-PayPal-IPN
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Crypt-SSLeay>=0.56:${PORTSDIR}/security/p5-Crypt-SSLeay \
 RUN_DEPENDS=	p5-Crypt-SSLeay>=0.56:${PORTSDIR}/security/p5-Crypt-SSLeay \
 		p5-libwww>=5.805:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::PayPal::IPN.3
 
