@@ -1,8 +1,7 @@
-# $FreeBSD: net-im/twirssi/Makefile 315417 2013-03-27 21:57:42Z gjb $
+# $FreeBSD: net-im/twirssi/Makefile 325975 2013-09-02 11:11:59Z garga $
 
 PORTNAME=	twirssi
-PORTVERSION=	2.5.1
-PORTREVISION=	1
+PORTVERSION=	2.6.0
 CATEGORIES=	net-im
 MASTER_SITES=	http://twirssi.com/
 EXTRACT_SUFX=	.pl
