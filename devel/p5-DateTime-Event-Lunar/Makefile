@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Event-Lunar
-# Date created:		2007-11-04
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Event-Lunar/Makefile,v 1.4 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: devel/p5-DateTime-Event-Lunar/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	DateTime-Event-Lunar
 PORTVERSION=	0.06
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-Math-Round>=0:${PORTSDIR}/math/p5-Math-Round
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Event::Lunar.3
 
