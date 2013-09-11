@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-cpan-listchanges/Makefile 318709 2013-05-21 14:28:13Z kuriyama $
+# $FreeBSD: devel/p5-cpan-listchanges/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	cpan-listchanges
 PORTVERSION=	0.06
@@ -19,7 +19,8 @@ RUN_DEPENDS=	\
 	p5-YAML>0:${PORTSDIR}/textproc/p5-YAML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=	cpan-listchanges.1
 MAN3=	App::cpanlistchanges.3
