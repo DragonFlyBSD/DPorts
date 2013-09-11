@@ -2,7 +2,7 @@
 # Date created:				October 24th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Mail-Folder/Makefile,v 1.33 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Folder/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	Mail-Folder
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools \
 		p5-MIME-Tools>=0:${PORTSDIR}/mail/p5-MIME-Tools
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Folder.3 Mail::Folder::Emaul.3 Mail::Folder::Mbox.3 \
 		Mail::Folder::NNTP.3 Mail::Folder::Maildir.3
