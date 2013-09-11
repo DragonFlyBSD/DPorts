@@ -2,7 +2,7 @@
 # Date created:		2011-01-13
 # Whom:			Kurt Lidl <kurt.lidl@cello.com>
 #
-# $FreeBSD: ports/www/p5-Template-Mustache/Makefile,v 1.5 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Mustache/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	Template-Mustache
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-YAML-Syck>=1.15:${PORTSDIR}/textproc/p5-YAML-Syck
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS:=	p5-Test-Mini-Unit>=v1.0.3:${PORTSDIR}/devel/p5-Test-Mini-Unit
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Mustache.3
 
