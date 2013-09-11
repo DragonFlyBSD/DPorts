@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: lang/mdk/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/mdk/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	mdk
 PORTVERSION=	1.2.6
@@ -15,8 +15,7 @@ OPTIONS_DEFINE=	GLADE GUILE
 OPTIONS_DEFAULT=GLADE GUILE
 
 USE_GNOME=	glib20 intltool
-USES=		gettext ncurses readline
-USE_GMAKE=	yes
+USES=		gettext ncurses readline gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
