@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-salut/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-im/telepathy-salut/Makefile 326113 2013-09-02 22:58:16Z bapt $
 #   $MCom: ports/net-im/telepathy-salut/Makefile,v 1.9 2012/08/17 19:06:46 kwm Exp $
 
 PORTNAME=	telepathy-salut
@@ -14,7 +14,7 @@ LIB_DEPENDS=	avahi-glib.1:${PORTSDIR}/net/avahi-app \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 GNU_CONFIGURE=	yes
-USEs=		pkgconfig
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 libxslt:build
 USE_OPENSSL=	yes
