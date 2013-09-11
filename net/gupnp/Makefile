@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp/Makefile 325155 2013-08-21 16:03:24Z sunpoet $
+# $FreeBSD: net/gupnp/Makefile 326612 2013-09-07 10:20:28Z sunpoet $
 
 PORTNAME=	gupnp
-PORTVERSION=	0.20.5
+PORTVERSION=	0.20.6
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -12,9 +12,9 @@ COMMENT=	Framework for UPnP devices
 LICENSE=	LGPL20
 
 BUILD_DEPENDS=	gobject-introspection>=0.6.4:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gssdp-1.0:${PORTSDIR}/net/gssdp \
-		soup-2.4:${PORTSDIR}/devel/libsoup \
-		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libgssdp-1.0.so:${PORTSDIR}/net/gssdp \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 CONFIGURE_ARGS=	--enable-introspection=yes
 CONFIGURE_ENV=	VAPIGEN=""
