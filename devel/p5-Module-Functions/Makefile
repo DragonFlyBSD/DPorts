@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Functions/Makefile 319088 2013-05-26 01:24:21Z kuriyama $
+# $FreeBSD: devel/p5-Module-Functions/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	Module-Functions
 PORTVERSION=	2.1.3
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Sub-Identify>=0.04:${PORTSDIR}/devel/p5-Sub-Identify
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Module::Functions.3
 
