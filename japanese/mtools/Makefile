@@ -2,7 +2,7 @@
 # Date created:		6 October 1997
 # Whom:			WATANABE junya <junya-w@remus.dti.ne.jp>
 #
-# $FreeBSD: ports/japanese/mtools/Makefile,v 1.16 2012/11/17 05:58:37 svnexp Exp $
+# $FreeBSD: japanese/mtools/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	mtools
