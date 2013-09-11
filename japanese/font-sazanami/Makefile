@@ -1,8 +1,8 @@
-# $FreeBSD: japanese/font-sazanami/Makefile 316976 2013-04-30 23:51:33Z hrs $
+# $FreeBSD: japanese/font-sazanami/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	sazanami
 PORTVERSION=	20040629
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	SFJP/efont/10087
 PKGNAMEPREFIX=	ja-font-
