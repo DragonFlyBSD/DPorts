@@ -2,7 +2,7 @@
 # Date created:		2006-08-20
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-BBS-UserInfo-Ptt/Makefile,v 1.7 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-BBS-UserInfo-Ptt/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	BBS-UserInfo-Ptt
@@ -17,7 +17,8 @@ COMMENT=	Get user information of PTT-style BBS
 
 RUN_DEPENDS=	p5-Expect>=0:${PORTSDIR}/lang/p5-Expect
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		BBS::UserInfo::Ptt.3
 
