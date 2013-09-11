@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmimms
-# Date created:		3 Jul 2007
-# Whom:                	Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-#
-# $FreeBSD: ports/multimedia/gmimms/Makefile,v 1.10 2013/01/23 15:05:36 svnexp Exp $
-#
+# Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
+# $FreeBSD: multimedia/gmimms/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	gmimms
 DISTVERSION=	0.0.9
@@ -16,6 +12,7 @@ COMMENT=	Frontend to MiMMS (Multimedia Stream ripper)
 
 RUN_DEPENDS=	mimms:${PORTSDIR}/multimedia/mimms
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
