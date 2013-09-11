@@ -2,7 +2,7 @@
 # Date created:		20 July 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/converters/ruby-dump.rb/Makefile,v 1.8 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: converters/ruby-dump.rb/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	dump.rb
