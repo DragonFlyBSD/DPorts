@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/gnome-vfs/Makefile 317508 2013-05-06 11:13:56Z kwm $
+# $FreeBSD: devel/gnome-vfs/Makefile 326100 2013-09-02 21:55:45Z bapt $
 #   $MCom: ports/devel/gnome-vfs/Makefile,v 1.191 2010/09/29 12:30:29 kwm Exp $
 
 PORTNAME=	gnome-vfs
@@ -18,8 +18,7 @@ USE_BZIP2=	yes
 
 RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack gnomemimedata gconf2 \
 		ltverhack referencehack
 USE_AUTOTOOLS=	libtool
