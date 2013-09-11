@@ -2,7 +2,7 @@
 # Date created:			11 Nov 2003
 # Whom:					Joseph Scott <joseph@randomnetworks.com>
 #
-# $FreeBSD: ports/devel/activitymail/Makefile,v 1.8 2012/11/17 05:55:32 svnexp Exp $
+# $FreeBSD: devel/activitymail/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	activitymail
@@ -14,7 +14,8 @@ MASTER_SITE_SUBDIR=	CPAN:DWHEELER/activitymail
 MAINTAINER=	joseph@randomnetworks.com
 COMMENT=	A program for sending email messages for CVS repository commits
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 PLIST_FILES=	bin/activitymail
 MAN1=		activitymail.1
