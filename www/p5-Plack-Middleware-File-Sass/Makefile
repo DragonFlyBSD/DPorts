@@ -2,7 +2,7 @@
 # Date created:		09 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-File-Sass/Makefile,v 1.4 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-File-Sass/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	Plack-Middleware-File-Sass
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 # Now, sass gem can be used instead of p5-Text-Sass.
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::File::Sass.3
 
