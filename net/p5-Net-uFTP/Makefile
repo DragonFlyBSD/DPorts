@@ -2,7 +2,7 @@
 # Date created:				2010-11-10
 # Whom:					Jase Thew <freebsd@beardz.net>
 #
-# $FreeBSD: ports/net/p5-Net-uFTP/Makefile,v 1.5 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-uFTP/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-uFTP
@@ -25,7 +25,8 @@ BUILD_DEPENDS=	p5-Class-Accessor-Fast-XS>=0:${PORTSDIR}/devel/p5-Class-Accessor-
 		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::uFTP.3
 
