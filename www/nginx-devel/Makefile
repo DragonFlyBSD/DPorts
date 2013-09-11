@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx-devel/Makefile 325467 2013-08-27 16:25:55Z osa $
+# $FreeBSD: www/nginx-devel/Makefile 326622 2013-09-07 10:31:24Z osa $
 
 PORTNAME=	nginx
 PORTVERSION=	1.5.4
@@ -436,7 +436,7 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_notice_module.c
 .if ${PORT_OPTIONS:MHTTP_PERL}
 CATEGORIES+=	perl5
 CONFIGURE_ARGS+=--with-http_perl_module
-USE_PERL5=	yes
+USES+=		perl5
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_PUSH}
@@ -655,7 +655,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	4.0.14
+PASSENGER_VERSION=	4.0.16
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
@@ -854,7 +854,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/calio-form-input-nginx-module-${GIT_FORMI
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-LIB_DEPENDS+=	iconv:${PORTSDIR}/converters/libiconv
+USES+=		iconv
 NGINX_ICONV_VERSION=	0.10
 GIT_ICONV_VERSION=	0-gb37efb5
 FETCH_ARGS=	-pRr
