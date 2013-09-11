@@ -2,7 +2,7 @@
 # Date created:				March 7, 2003
 # Whom:					Eric W. Bates
 #
-# $FreeBSD: ports/mail/pop-before-smtp/Makefile,v 1.15 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/pop-before-smtp/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	pop-before-smtp
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_RC_SUBR=	pop-before-smtp
 SUB_FILES=	pkg-message
 SUB_LIST=	PERL=${PERL}
