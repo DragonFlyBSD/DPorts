@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: audio/xmms-defx/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: audio/xmms-defx/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xmms-defx
 PORTVERSION=	0.9.9
@@ -12,7 +12,7 @@ COMMENT=	Multi-effects processor plug-in for XMMS
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	gtk12
 
 PLIST_FILES=	lib/xmms/Effect/libdefx.so
