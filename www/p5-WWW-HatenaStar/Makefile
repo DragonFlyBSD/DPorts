@@ -2,7 +2,7 @@
 # Date created:		2009-04-07
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-WWW-HatenaStar/Makefile,v 1.4 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-HatenaStar/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	WWW-HatenaStar
@@ -24,6 +24,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		WWW::HatenaStar.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
