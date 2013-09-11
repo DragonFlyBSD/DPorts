@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer
-# $FreeBSD: www/p5-Business-PayPal/Makefile 322585 2013-07-09 21:47:52Z skreuzer $
+# $FreeBSD: www/p5-Business-PayPal/Makefile 325974 2013-09-02 11:04:10Z az $
 
 PORTNAME=	Business-PayPal
 PORTVERSION=	0.11
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Net-SSLeay>=1.35:${PORTSDIR}/security/p5-Net-SSLeay \
 		p5-Digest-MD5>=2.52:${PORTSDIR}/security/p5-Digest-MD5
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::PayPal.3
 
