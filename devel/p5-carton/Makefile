@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-carton/Makefile 318702 2013-05-21 14:15:23Z kuriyama $
+# $FreeBSD: devel/p5-carton/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	carton
 PORTVERSION=	0.9.15
@@ -24,7 +24,8 @@ RUN_DEPENDS=	\
 	p5-local-lib>=1.008:${PORTSDIR}/devel/p5-local-lib
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Carton.3 \
 	Carton::Doc::Check.3 \
