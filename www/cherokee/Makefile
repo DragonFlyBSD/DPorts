@@ -1,5 +1,5 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: www/cherokee/Makefile 325322 2013-08-25 02:03:45Z rakuco $
+# $FreeBSD: www/cherokee/Makefile 326461 2013-09-06 05:22:36Z rm $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
@@ -8,15 +8,14 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SAMBA}
 MASTER_SITE_SUBDIR=cherokee/1.2/${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extremely fast and flexible web server
 
-USES=	pathfix pkgconfig gettext
+USES=		gettext gmake pathfix pkgconfig
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	cherokee
 SUB_FILES=	pkg-install pkg-message
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread
