@@ -1,8 +1,8 @@
 # Created by: Xin Li <delphij@FreeBSD.org>
-# $FreeBSD: ports/devel/py-ujson/Makefile,v 1.6 2012/11/17 05:56:51 svnexp Exp $
+# $FreeBSD: devel/py-ujson/Makefile 326356 2013-09-05 06:31:35Z delphij $
 
 PORTNAME=	ujson
-PORTVERSION=	1.23
+PORTVERSION=	1.33
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
