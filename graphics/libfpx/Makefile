@@ -1,17 +1,10 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/libfpx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/libfpx/Makefile 325934 2013-09-02 05:22:58Z mi $
 
 PORTNAME=	libfpx
-DISTVERSION=	1.3.1-1
+DISTVERSION=	1.3.1-2
 CATEGORIES=	graphics
-MASTER_SITES=	http://imagemagick.mirrorcatalogs.com/delegates/	\
-		http://www.imagemagick.org/download/delegates/	\
-		ftp://mirror.aarnet.edu.au/pub/imagemagick/delegates/	\
-		ftp://gd.tuwien.ac.at/pub/graphics/ImageMagick/delegates/ \
-		http://servingzone.com/mirrors/ImageMagick/delegates/	\
-		http://mirror.checkdomain.de/imagemagick/delegates/	\
-		ftp://mirror.checkdomain.de/imagemagick/delegates/	\
-		http://image_magick.veidrodis.com/image_magick/delegates/
+MASTER_SITES=	http://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/delegates/
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Library routines for working with Flashpix images
