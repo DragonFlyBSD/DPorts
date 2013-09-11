@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/neverball/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -41,7 +41,8 @@ post-patch:
 		s|./locale|${PREFIX}/share/locale|g; \
 		s|sdl-config|${SDL_CONFIG}|g; \
 		s| -O2| ${CFLAGS}|g; \
-		s|%%LOCALBASE%%|${LOCALBASE}|g' \
+		s|%%LOCALBASE%%|${LOCALBASE}|g; \
+		s|%%ICONV_LIB%%|${ICONV_LIB}|' \
 			${WRKSRC}/Makefile
 
 do-install:
