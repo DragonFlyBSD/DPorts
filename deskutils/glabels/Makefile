@@ -1,10 +1,6 @@
-# New ports collection makefile for:	glabels
-# Date created:		29 September 2002
-# Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-#
-# $FreeBSD: deskutils/glabels/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
+# $FreeBSD: deskutils/glabels/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $MCom: ports/deskutils/glabels/Makefile,v 1.10 2010/04/03 19:25:49 kwm Exp $
-#
 
 PORTNAME=	glabels
 PORTVERSION=	2.2.8
@@ -15,12 +11,11 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program to create labels and business cards
 
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix libgnomeui \
 		desktopfileutils intlhack ltverhack
 WANT_GNOME=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
