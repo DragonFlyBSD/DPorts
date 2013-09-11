@@ -1,8 +1,8 @@
 # Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-# $FreeBSD: net-im/ejabberd/Makefile 318883 2013-05-23 16:10:43Z jgh $
+# $FreeBSD: net-im/ejabberd/Makefile 326814 2013-09-09 14:48:31Z ashish $
 
 PORTNAME=	ejabberd
-PORTVERSION=	2.1.11
+PORTVERSION=	2.1.13
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PORTVERSION}/
 EXTRACT_SUFX=	.tgz
@@ -21,8 +21,7 @@ USERS=		ejabberd
 GROUPS=		${USERS}
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv gmake pkgconfig
 USE_RC_SUBR=	${PORTNAME}
 NOPRECIOUSMAKEVARS=	yes
 
