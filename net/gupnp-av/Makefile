@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-av/Makefile 324477 2013-08-10 11:29:45Z sunpoet $
+# $FreeBSD: net/gupnp-av/Makefile 326613 2013-09-07 10:20:31Z sunpoet $
 
 PORTNAME=	gupnp-av
 PORTVERSION=	0.12.2
@@ -13,7 +13,7 @@ LICENSE=	LGPL20
 
 BUILD_DEPENDS=	gobject-introspection>=0.9.5:${PORTSDIR}/devel/gobject-introspection \
 		gupnp>=0.19.0:${PORTSDIR}/net/gupnp
-LIB_DEPENDS=	gupnp-1.0:${PORTSDIR}/net/gupnp
+LIB_DEPENDS=	libgupnp-1.0.so:${PORTSDIR}/net/gupnp
 RUN_DEPENDS=	gupnp>=0.19.0:${PORTSDIR}/net/gupnp
 
 CONFIGURE_ARGS=	--enable-introspection=yes
