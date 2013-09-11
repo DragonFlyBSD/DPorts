@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Shape
-# Date created:				June 25th 2003
-# Whom:	      				Leif Pedersen <pedersen@meridian-enviro.com>
-#
-# $FreeBSD: ports/devel/p5-Parse-PerlConfig/Makefile,v 1.6 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Leif Pedersen <pedersen@meridian-enviro.com>
+# $FreeBSD: devel/p5-Parse-PerlConfig/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	Parse-PerlConfig
 PORTVERSION=	0.05
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	pedersen@meridian-enviro.com
 COMMENT=	Perl5 module to use perl scripts as config files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::PerlConfig.3
 
