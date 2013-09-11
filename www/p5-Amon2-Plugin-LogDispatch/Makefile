@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Amon2-Plugin-LogDispatch/Makefile,v 1.1 2013/01/20 12:46:37 svnexp Exp $
+# $FreeBSD: www/p5-Amon2-Plugin-LogDispatch/Makefile 326054 2013-09-02 18:41:05Z az $
 
 PORTNAME=	Amon2-Plugin-LogDispatch
 PORTVERSION=	0.01
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 TEST_DEPENDS=	\
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Amon2::Plugin::LogDispatch.3 \
 	Amon2::Plugin::README.3
