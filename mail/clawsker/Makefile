@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/clawsker/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: mail/clawsker/Makefile 325602 2013-08-29 15:01:46Z pawel $
 
 PORTNAME=	clawsker
 PORTVERSION=	0.7.10
@@ -15,9 +15,8 @@ RUN_DEPENDS=	claws-mail>=3.9.1:${PORTSDIR}/mail/claws-mail \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
 
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	${PORTNAME}
-USE_PERL5=	yes
 
 MAN1=		clawsker.1
 PORTDOCS=	NEWS README
