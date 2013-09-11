@@ -2,7 +2,7 @@
 # Date created:		2010-11-09
 # Whom:			Phil Phillips
 #
-# $FreeBSD: ports/www/p5-CGI-Thin/Makefile,v 1.2 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Thin/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	CGI-Thin
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	pphillips@experts-exchange.com
 COMMENT=	A very lightweight Parser for CGI Forms
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Thin.3 \
 		CGI::Thin::Cookies.3
