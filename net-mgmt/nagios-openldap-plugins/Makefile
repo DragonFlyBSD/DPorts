@@ -2,7 +2,7 @@
 # Date created: 			26 Feb 2012
 # Whom:					Ryan Steinmetz <zi@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/nagios-openldap-plugins/Makefile,v 1.4 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-openldap-plugins/Makefile 326167 2013-09-03 16:18:49Z az $
 
 PORTNAME=	openldap-plugins
 PORTVERSION=	0.3
@@ -24,7 +24,8 @@ RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap \
 PORTSCOUT=	ignore:1
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	libexec/nagios/check_ldap_dn.pl \
 		libexec/nagios/check_ldap_query.pl \
