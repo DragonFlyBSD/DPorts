@@ -2,7 +2,7 @@
 # Date created:		15 April 2003
 # Whom:	      		Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: ports/chinese/p5-Encode-HanConvert/Makefile,v 1.18 2012/12/16 06:16:53 svnexp Exp $
+# $FreeBSD: chinese/p5-Encode-HanConvert/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	Encode-HanConvert
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	Traditional and Simplified Chinese mappings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		b2g.pl.1 g2b.pl.1
 
