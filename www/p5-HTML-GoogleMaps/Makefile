@@ -3,7 +3,7 @@
 # Date created:				2008-11-06
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTML-GoogleMaps/Makefile,v 1.6 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-GoogleMaps/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	HTML-GoogleMaps
@@ -18,7 +18,8 @@ COMMENT=	A simple wrapper around the Google Maps API
 RUN_DEPENDS=	p5-Geo-Coder-Google>=0.02:${PORTSDIR}/misc/p5-Geo-Coder-Google
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::GoogleMaps.3
 
