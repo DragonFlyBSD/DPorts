@@ -2,7 +2,7 @@
 # Date created:		13 Oct 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Server-ReverseHTTP/Makefile,v 1.5 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Server-ReverseHTTP/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	Plack-Server-ReverseHTTP
@@ -21,7 +21,8 @@ RUN_DEPENDS=	\
 	p5-Plack>0:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Server::ReverseHTTP.3
 
