@@ -2,7 +2,7 @@
 # Date created:				27 Jun 2006
 # Whom:					Simun Mikecin <numisemis@yahoo.com>
 #
-# $FreeBSD: ports/net/p5-Net-SFTP-Foreign/Makefile,v 1.16 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-SFTP-Foreign/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Net-SFTP-Foreign
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-File-Which>=0:${PORTSDIR}/sysutils/p5-File-Which
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SFTP::Foreign.3 \
 		Net::SFTP::Foreign::Attributes.3 \
