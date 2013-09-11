@@ -2,7 +2,7 @@
 # Date created:				28 May 2005
 # Whom:					Gruen Christian <kiki@bsdro.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-View-HTML-Template/Makefile,v 1.7 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-View-HTML-Template/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	Catalyst-View-HTML-Template
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-HTML-Template>0:${PORTSDIR}/www/p5-HTML-Template
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Catalyst::Helper::View::HTML::Template.3 \
 		Catalyst::View::HTML::Template.3
