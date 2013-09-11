@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: www/p5-URI-Encode/Makefile 319188 2013-05-27 09:24:30Z culot $
+# $FreeBSD: www/p5-URI-Encode/Makefile 326021 2013-09-02 16:07:56Z az $
 
 PORTNAME=	URI-Encode
 PORTVERSION=	0.09
@@ -14,7 +14,8 @@ COMMENT=	Simple URI Encoding/Decoding
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		URI::Encode.3
 
