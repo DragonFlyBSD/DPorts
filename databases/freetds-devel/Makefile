@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: databases/freetds-devel/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: databases/freetds-devel/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	freetds
 PORTVERSION=	0.91
@@ -14,8 +14,7 @@ COMMENT=	Sybase/Microsoft TDS protocol library
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 TDS_VER?=	5.0
-USES=		iconv
-USE_GMAKE=	yes
+USES=		gmake iconv pkgconfig
 GNU_GONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf:env libtool
 CPPFLAGS+=	"-I${LOCALBASE}/include"
@@ -94,7 +93,8 @@ post-patch:
 		 s|/freetds.conf|/freetds.conf.dist|g ; \
 		 s|/locales.conf|/locales.conf.dist|g ; \
 		 s|/pool.conf|/pool.conf.dist|g ; \
-		 s| common.h||g'
+		 s| common.h||g ; \
+		 s|%%ICONV_LIB%%|${ICONV_LIB}|'
 
 post-install:
 .if !defined(NOPORTDOCS)
