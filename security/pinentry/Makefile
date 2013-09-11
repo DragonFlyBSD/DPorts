@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: security/pinentry/Makefile 325273 2013-08-23 16:12:31Z makc $
+# $FreeBSD: security/pinentry/Makefile 326013 2013-09-02 15:39:17Z bapt $
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.3
@@ -17,7 +17,7 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 CONFLICTS_INSTALL?=	pinentry-[a-z]*
 
 USE_BZIP2=	yes
-USES=		iconv gmake
+USES=		iconv gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-pinentry-qt
 INFO=		pinentry
