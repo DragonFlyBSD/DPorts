@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/devel/oniguruma/Makefile,v 1.46 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/oniguruma/Makefile 306100 2012-10-18 19:46:21Z dinoex $
 
 PORTNAME=	oniguruma
 PORTVERSION=	2.5.8
