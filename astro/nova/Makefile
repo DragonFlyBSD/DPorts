@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/astro/nova/Makefile,v 1.31 2013/02/25 11:44:09 svnexp Exp $
+# $FreeBSD: astro/nova/Makefile 325939 2013-09-02 06:20:09Z bapt $
 
 PORTNAME=	nova
 PORTVERSION=	0.4
@@ -21,6 +21,7 @@ LIB_DEPENDS=	sigc-1.2.5:${PORTSDIR}/devel/libsigc++12 \
 		nova:${PORTSDIR}/astro/libnova
 RUN_DEPENDS=	${LOCALBASE}/share/nova/catalogs/sky2000.ncd:${PORTSDIR}/astro/sky2000
 
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
