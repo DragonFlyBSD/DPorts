@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Google-SAML-Response/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Google-SAML-Response/Makefile 325815 2013-08-31 15:47:33Z tobez $
 
 PORTNAME=	Google-SAML-Response
-PORTVERSION=	0.12
+PORTVERSION=	0.13
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
