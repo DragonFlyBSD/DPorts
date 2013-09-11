@@ -2,7 +2,7 @@
 # Date Created:				19 May, 2006
 # Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-UNIVERSAL-which/Makefile,v 1.7 2012/11/17 05:56:36 svnexp Exp $
+# $FreeBSD: devel/p5-UNIVERSAL-which/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	UNIVERSAL-which
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for telling fully qualified name of the method
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		UNIVERSAL::which.3
 
 .include <bsd.port.mk>
