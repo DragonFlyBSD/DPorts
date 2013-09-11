@@ -1,10 +1,11 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: mail/roundcube-contextmenu/Makefile 324113 2013-08-01 15:43:22Z wg $
+# $FreeBSD: mail/roundcube-contextmenu/Makefile 325757 2013-08-31 00:46:47Z bdrewery $
 
 PORTNAME=	contextmenu
-PORTVERSION=	1.10
+PORTVERSION=	1.10 # PLEASE MIRROR DISTFILE WITH VERSIONED DIR
 CATEGORIES=	mail
-MASTER_SITES=	http://www.tehinterweb.co.uk/roundcube/plugins/
+MASTER_SITES=	http://www.tehinterweb.co.uk/roundcube/plugins/ \
+		LOCAL/bdrewery/${PORTNAME}/${PORTVERSION}/
 PKGNAMEPREFIX=	roundcube-
 DISTNAME=	${PORTNAME}
 
