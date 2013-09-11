@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/xmlstarlet/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/xmlstarlet/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	xmlstarlet
 PORTVERSION=	1.4.2
@@ -17,7 +17,7 @@ USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libxml-prefix=${LOCALBASE} \
 		--with-libxslt-prefix=${LOCALBASE} \
-		--with-libiconv-prefix=${LOCALBASE} \
+		${ICONV_CONFIGURE_ARG} \
 		--disable-static-libs
 
 MAN1=		xmlstarlet.1
