@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jacode.pl
-# Date created:		2011-05-11
-# Whom:			Takefu
-#
-# $FreeBSD: ports/japanese/jacode.pl/Makefile,v 1.4 2012/11/17 05:58:35 svnexp Exp $
-#
+# Created by: Takefu
+# $FreeBSD: japanese/jacode.pl/Makefile 326884 2013-09-10 09:39:11Z az $
 
 PORTNAME=	jacode.pl
 PORTVERSION=	2.13.4.10
@@ -18,7 +14,8 @@ COMMENT=	Perl library for Japanese character code conversion
 LICENSE=	GPLv1 ART10
 LICENSE_COMB=	dual
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 PLIST_FILES=	${SITE_PERL_REL}/${PORTNAME}
 NO_BUILD=	yes
 
