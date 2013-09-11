@@ -2,7 +2,7 @@
 # Date created:                21 October 2005
 # Whom:                        Sergey Matveychuk <sem@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-DHCPClient/Makefile,v 1.4 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-DHCPClient/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-DHCPClient
@@ -15,7 +15,8 @@ MAINTAINER=	sem@FreeBSD.org
 COMMENT=	A Perl implementation of a DHCP client API
 
 RUN_DEPENDS+=	p5-Net-RawIP>=0:${PORTSDIR}/net/p5-Net-RawIP
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
