@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/xmmsctrl/Makefile,v 1.9 2012/11/17 05:54:49 svnexp Exp $
+# $FreeBSD: audio/xmmsctrl/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xmmsctrl
 PORTVERSION=	1.8
@@ -17,7 +17,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
