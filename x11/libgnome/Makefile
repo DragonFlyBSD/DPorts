@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: x11/libgnome/Makefile 317508 2013-05-06 11:13:56Z kwm $
+# $FreeBSD: x11/libgnome/Makefile 326122 2013-09-03 06:36:41Z bapt $
 #   $MCom: ports/x11/libgnome/Makefile,v 1.135 2010/09/27 20:06:45 kwm Exp $
 
 PORTNAME=	libgnome
@@ -20,10 +20,9 @@ BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack esound libbonobo \
 		gnomevfs2 ltverhack referencehack
-USES=		bison pathfix gettext
+USES=		bison pathfix gettext gmake pkgconfig
 USE_XORG=	xpm
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
