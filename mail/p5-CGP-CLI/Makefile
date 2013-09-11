@@ -2,7 +2,7 @@
 # Date created:	   01 Jun 2010
 # Whom:		   Alexander Kriventsov <avk@vl.ru>
 #
-# $FreeBSD: ports/mail/p5-CGP-CLI/Makefile,v 1.3 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/p5-CGP-CLI/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	CGP-CLI
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	avk@vl.ru
 COMMENT=	CommunigatePro Command Line Interface perl module
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGP::CLI.3
 
