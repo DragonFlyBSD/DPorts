@@ -1,8 +1,8 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/moreutils/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: sysutils/moreutils/Makefile 325464 2013-08-27 16:06:26Z sunpoet $
 
 PORTNAME=	moreutils
-PORTVERSION=	0.49
+PORTVERSION=	0.50
 CATEGORIES=	sysutils
 MASTER_SITES=	DEBIAN_POOL
 DISTNAME=	${PORTNAME}_${PORTVERSION}
