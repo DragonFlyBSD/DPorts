@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Devel-Events-Objects
-# Date created:	   			23 Oct 2008
-# Whom:		   			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Devel-Events-Objects/Makefile,v 1.4 2012/11/17 05:56:13 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: devel/p5-Devel-Events-Objects/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	Devel-Events-Objects
 PORTVERSION=	0.05
@@ -25,7 +21,8 @@ RUN_DEPENDS:=	p5-Devel-Events>=0:${PORTSDIR}/devel/p5-Devel-Events \
 		p5-Variable-Magic>=0:${PORTSDIR}/devel/p5-Variable-Magic
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Events::Generator::Objects.3 \
 		Devel::Events::Handler::ObjectTracker.3 \
