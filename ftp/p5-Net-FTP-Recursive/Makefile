@@ -2,7 +2,7 @@
 # Date Created:				11 April, 2005
 # Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/p5-Net-FTP-Recursive/Makefile,v 1.6 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/p5-Net-FTP-Recursive/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	Net-FTP-Recursive
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::FTP::Recursive.3
 
