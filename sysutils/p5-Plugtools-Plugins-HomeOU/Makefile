@@ -2,7 +2,7 @@
 # Date created:		2010-02-26
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/sysutils/p5-Plugtools-Plugins-HomeOU/Makefile,v 1.4 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Plugtools-Plugins-HomeOU/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	Plugtools-Plugins-HomeOU
@@ -17,7 +17,8 @@ COMMENT=	Automatically handles the home OU for when adding/removing users
 
 RUN_DEPENDS=	p5-Plugtools>=0:${PORTSDIR}/sysutils/p5-Plugtools
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Plugtools::Plugins::HomeOU.3 \
 		Plugtools::Plugins::HomeOUremove.3
