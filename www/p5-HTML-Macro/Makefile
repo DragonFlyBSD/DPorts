@@ -2,7 +2,7 @@
 # Date created:				January 27th, 2008
 # Whom:	      				Groovis <groovis@groovis.net>
 #
-# $FreeBSD: ports/www/p5-HTML-Macro/Makefile,v 1.2 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Macro/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	HTML-Macro
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	groovis@groovis.net
 COMMENT=	Process HTML templates with loops, conditionals, macros and more
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Macro.3 HTML::Macro::Loop.3
 
