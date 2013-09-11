@@ -2,7 +2,7 @@
 # Date created:		2006-07-20
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Net-FS-Gmail/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-FS-Gmail/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-FS-Gmail
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Mail-Webmail-Gmail>=0:${PORTSDIR}/mail/p5-Mail-Webmail-Gmail \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		gmailfs.1
 MAN3=		Net::FS::Gmail.3
