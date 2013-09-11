@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-iconv
-# Date created:		11 September 2001
-# Whom:			Hye-Shik Chang <perky@python.or.kr>
-#
-# $FreeBSD: converters/py-iconv/Makefile 316654 2013-04-27 08:50:46Z mva $
+# Created by: Hye-Shik Chang <perky@python.or.kr>
+# $FreeBSD: converters/py-iconv/Makefile 326690 2013-09-07 21:30:12Z bsam $
 
 PORTNAME=	iconv
 PORTVERSION=	1.0
@@ -14,15 +11,20 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	python
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An iconv wrapper with Unicode codec for Python
+COMMENT=	Iconv wrapper with Unicode codec for Python
 
 USES=		iconv
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PLIST_SUB=	PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR:S|^${LOCALBASE}/||g}
 
+.if empty(ICONV_LIB)
+SETUPINFO=	,library_dirs=["${LOCALBASE}/lib"],\
+		include_dirs=["${LOCALBASE}/include"]
+.else
 SETUPINFO=	,libraries=["iconv"],library_dirs=["${LOCALBASE}/lib"],\
 		include_dirs=["${LOCALBASE}/include"]
+.endif
 
 post-patch:
 	cd ${WRKSRC} && ${SED} 's!^\(.*ext_mod.*\)\()]\)$$!\1${SETUPINFO}\2!g'\
