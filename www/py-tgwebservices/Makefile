@@ -2,7 +2,7 @@
 # Date created:		2007-02-14
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/www/py-tgwebservices/Makefile,v 1.12 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-tgwebservices/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	tgwebservices
