@@ -2,7 +2,7 @@
 # Date created:				14 Nov 2000
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: net/zebra-server/Makefile 323575 2013-07-24 07:30:43Z gahr $
+# $FreeBSD: net/zebra-server/Makefile 326683 2013-09-07 19:49:41Z bsam $
 #
 
 PORTNAME=	zebra-server
@@ -20,7 +20,7 @@ LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2 \
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-yaz=${LOCALBASE}/bin \
 		--with-tclconfig=${TCL_LIBDIR} \
-		--with-iconv=${LOCALBASE} --with-expat=${LOCALBASE}
+		--with-iconv=${ICONV_PREFIX} --with-expat=${LOCALBASE}
 
 USES=		iconv
 USE_LDCONFIG=	yes
