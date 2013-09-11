@@ -1,5 +1,5 @@
 # Created by: David Romano <unobe@cpan.org>
-# $FreeBSD: devel/libparserutils/Makefile 319339 2013-05-29 04:46:28Z jgh $
+# $FreeBSD: devel/libparserutils/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	libparserutils
 PORTVERSION=	0.1.1
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	unobe@cpan.org
 COMMENT=	Library useful when writing parsers (formerly a part of NetSurf)
 
-USE_GMAKE=	yes
+USES=		gmake
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -25,13 +25,14 @@ OPTIONS_DEFAULT=	ICONV STATIC TEST DOXYGEN
 
 .if ${PORT_OPTIONS:MICONV}
 CFLAGS+=	-DWITH_ICONV_FILTER
-LDFLAGS+=	-liconv
+LDFLAGS+=	${ICONV_LIB}
 .endif
 
 .if ${PORT_OPTIONS:MSTATIC}
 PLIST_SUB+=	NO_STATIC="@comment " STATIC=""
 .else
-USE_PERL5_BUILD=yes
+USES+=		perl5
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 COMPONENT_TYPE=	lib-shared
 MAKE_ENV+=	COMPONENT_TYPE=${COMPONENT_TYPE}
@@ -39,7 +40,8 @@ PLIST_SUB+=	NO_STATIC="" STATIC="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MTEST}
-USE_PERL5_BUILD=yes
+USES+=		perl5
+USE_PERL5=	build
 ALL_TARGET+=	test
 .endif
 
