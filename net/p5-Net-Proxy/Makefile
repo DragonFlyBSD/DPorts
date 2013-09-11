@@ -2,7 +2,7 @@
 # Date created:				2008-01-03
 # Whom:					Philippe Audeoud <jadawin@tuxaco.net>
 #
-# $FreeBSD: ports/net/p5-Net-Proxy/Makefile,v 1.4 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Proxy/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-Proxy
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Framework for proxying network connections in many ways
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Proxy.3 \
 	Net::Proxy::Connector.3 \
