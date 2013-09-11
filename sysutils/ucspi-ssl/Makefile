@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: sysutils/ucspi-ssl/Makefile 323714 2013-07-26 12:25:46Z az $
+# $FreeBSD: sysutils/ucspi-ssl/Makefile 326574 2013-09-07 07:11:48Z az $
 
 PORTNAME=	ucspi-ssl
 PORTVERSION?=	0.70
@@ -19,7 +19,7 @@ RUN_DEPENDS=	tcpserver:${PORTSDIR}/sysutils/ucspi-tcp \
 
 CONFLICTS?=	ucspi-ssl-tls-[0-9]*
 
-USE_PERL5=	yes
+USES=		perl5
 
 RESTRICTED=	Non-explicit licensing terms
 
