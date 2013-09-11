@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	csmash
-# Date created:			Nov 11, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: games/csmash/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: ijliao
+# $FreeBSD: games/csmash/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	csmash
 PORTVERSION=	0.6.6
@@ -15,7 +10,7 @@ MASTER_SITES=	SF/cannonsmash/CannonSmash/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A 3D tabletennis game
 
-USES=		gettext
+USES=		gettext pkgconfig
 USE_SDL=	image mixer sdl
 USE_GL=		yes
 USE_GNOME=	gtk20
