@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Net-Divert/Makefile,v 1.7 2012/12/12 21:45:13 svnexp Exp $
+# $FreeBSD: net/p5-Net-Divert/Makefile 326380 2013-09-05 10:32:23Z az $
 
 PORTNAME=	Net-Divert
 PORTVERSION=	0.01
@@ -11,7 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ecu@200ok.org
 COMMENT=	A module to deal with divert(4) sockets
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Divert.3
 
