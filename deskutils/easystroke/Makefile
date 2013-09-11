@@ -1,5 +1,5 @@
 # Created by: Tobias Kortkamp <tobias.kortkamp@gmail.com>
-# $FreeBSD: deskutils/easystroke/Makefile 319119 2013-05-26 16:18:04Z wg $
+# $FreeBSD: deskutils/easystroke/Makefile 326711 2013-09-08 08:44:57Z antoine $
 
 PORTNAME=	easystroke
 PORTVERSION=	0.6.0
@@ -21,8 +21,7 @@ MAN1=		easystroke.1
 
 USE_GCC=	any
 USE_XORG=	x11 xtst
-USE_GMAKE=	yes
-USES+=		gettext
+USES=		gettext gmake pkgconfig
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	NLS
