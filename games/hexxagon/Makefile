@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/hexxagon/Makefile,v 1.16 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/hexxagon/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	hexxagon
 PORTVERSION=	1.0.1
@@ -11,6 +11,7 @@ COMMENT=	Strategy hexagon game
 
 LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
