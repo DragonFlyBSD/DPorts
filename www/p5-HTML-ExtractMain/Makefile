@@ -2,7 +2,7 @@
 # Date created:				2011-12-23
 # Whom:					Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
 #
-# $FreeBSD: ports/www/p5-HTML-ExtractMain/Makefile,v 1.3 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-ExtractMain/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	HTML-ExtractMain
@@ -24,7 +24,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-File-Slurp>=9999.12:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-HTML-Format>=2.04:${PORTSDIR}/textproc/p5-HTML-Format
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::ExtractMain.3
 
