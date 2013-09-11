@@ -2,7 +2,7 @@
 # Date created:		2010-11-10
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Net-IP-RangeCompare/Makefile,v 1.2 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-IP-RangeCompare/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-IP-RangeCompare
@@ -17,7 +17,8 @@ COMMENT=	Perl extension for IP Range Comparisons
 RUN_DEPENDS=	p5-Data-IPV4-Range-Parse>=0.05:${PORTSDIR}/net/p5-Data-IPV4-Range-Parse \
 		p5-Data-Range-Compare>=1.030:${PORTSDIR}/devel/p5-Data-Range-Compare
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::IP::RangeCompare.3
 
