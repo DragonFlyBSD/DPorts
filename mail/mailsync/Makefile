@@ -2,7 +2,7 @@
 # Date created:		03 Feb 2003
 # Whom:			Maxim Tulyuk <mt@primats.org.ua>
 #
-# $FreeBSD: ports/mail/mailsync/Makefile,v 1.15 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mailsync/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	mailsync
