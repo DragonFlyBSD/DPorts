@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Plack-Middleware-XForwardedFor/Makefile 319029 2013-05-25 05:47:47Z az $
+# $FreeBSD: www/p5-Plack-Middleware-XForwardedFor/Makefile 326021 2013-09-02 16:07:56Z az $
 
 PORTNAME=	Plack-Middleware-XForwardedFor
 PORTVERSION=	0.103060
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Net-Netmask>=1.9015:${PORTSDIR}/net-mgmt/p5-Net-Netmask \
 		p5-Regexp-Common>=2010010201:${PORTSDIR}/textproc/p5-Regexp-Common
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Plack::Middleware::XForwardedFor.3
 
