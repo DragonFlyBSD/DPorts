@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/gregexp/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/gregexp/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gregexp
 PORTVERSION=	0.3
@@ -13,6 +13,7 @@ COMMENT=	Graphical regular expression explorer
 
 LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
+USES=		pkgconfig
 USE_GNOME=	gnomeprefix libgnomeui
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
