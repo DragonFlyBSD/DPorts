@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Aggregate/Makefile 325060 2013-08-20 16:28:14Z mat $
+# $FreeBSD: devel/p5-Test-Aggregate/Makefile 325953 2013-09-02 09:13:17Z tobez $
 
 PORTNAME=	Test-Aggregate
-PORTVERSION=	0.368
+PORTVERSION=	0.370
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
