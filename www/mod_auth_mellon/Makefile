@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: www/mod_auth_mellon/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/mod_auth_mellon/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=		mod_auth_mellon
 PORTVERSION=		0.5.0
@@ -14,6 +14,7 @@ COMMENT=		Apache auth module for identifying SSO users
 LIB_DEPENDS=		lasso.8:${PORTSDIR}/security/lasso \
 			curl:${PORTSDIR}/ftp/curl
 
+USES=			pkgconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs2=${APXS}
 CONFIGURE_ENV+=		OPENSSL_CFLAGS="-Wall" OPENSSL_LIBS="-lssl"
