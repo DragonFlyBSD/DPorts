@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.org
-# $FreeBSD: x11-toolkits/wxgtk26/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/wxgtk26/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	wx
 PORTVERSION=	2.6.4
@@ -18,7 +18,7 @@ LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png\
 		expat.6:${PORTSDIR}/textproc/expat2\
 		mspack.1:${PORTSDIR}/archivers/libmspack
 
-USES=		iconv
+USES=		iconv pkgconfig
 USE_BZIP2=	yes
 USE_XORG=	x11 sm xxf86vm xinerama
 USE_GL=		glu
@@ -38,7 +38,7 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"\
 		X11BASE="${LOCALBASE}"
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 NO_LATEST_LINK=	yes
 PLIST=		${.CURDIR}/pkg-plist
 
