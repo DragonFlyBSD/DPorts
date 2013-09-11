@@ -2,7 +2,7 @@
 # Date created:				2006-07-16
 # Whom:					Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-WWW-Shorten-KUSO/Makefile,v 1.6 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Shorten-KUSO/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	WWW-Shorten-KUSO
@@ -17,7 +17,8 @@ COMMENT=	Shorten URL using http://KUSO.CC/
 BUILD_DEPENDS=	p5-WWW-Shorten>=0:${PORTSDIR}/www/p5-WWW-Shorten
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::KUSO.3
 
