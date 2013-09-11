@@ -1,9 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/SciPlot/Makefile 322621 2013-07-10 06:55:28Z bapt $
+# $FreeBSD: graphics/SciPlot/Makefile 326044 2013-09-02 17:47:54Z thierry $
 
 PORTNAME=	SciPlot
 PORTVERSION=	1.36
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	widgets
@@ -11,8 +11,10 @@ MASTER_SITE_SUBDIR=	widgets
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Full-featured Xt widget to display 2D data in a graph
 
+LICENSE=	GPLv2
+
 USES=		imake motif
-USE_XORG=	xp
+USE_XORG=	xp xt x11
 MAKE_ENV=	EXTRA_DEFINES="-fPIC" LIBNAME=${LIBNAME}
 USE_LDCONFIG=	yes
 
@@ -36,6 +38,8 @@ post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+.endif
+.if !defined(NOPORTEXAMPLES)
 	${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${EXDATA:S|^|${WRKSRC}/|} ${EXAMPLESDIR}
 	${INSTALL_PROGRAM} ${EXBINS:S|^|${WRKSRC}/|} ${EXAMPLESDIR}

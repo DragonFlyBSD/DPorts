@@ -1,7 +1,7 @@
 --- Imakefile.orig	Thu Sep  5 04:32:58 1996
 +++ Imakefile	Sun Nov 28 18:14:34 2004
 @@ -1,3 +1,4 @@
-+# $FreeBSD: graphics/SciPlot/files/patch-Imakefile 300896 2012-07-14 13:54:48Z beat $
++# $FreeBSD: graphics/SciPlot/files/patch-Imakefile 326044 2013-09-02 17:47:54Z thierry $
  XCOMM Imakefile for widget demo programs
  
  #ifdef LinuxArchitecture
@@ -18,7 +18,7 @@
  
  MOTIFDEPS = $(DEPXMLIB) $(DEPXMULIB) $(DEPXTOOLLIB) $(DEPXLIB)
 -MOTIFLIBS = $(MOTIF) $(XMULIB) $(XTOOLLIB) $(XLIB)
-+# MOTIFLIBS = $(MOTIF) $(XMULIB) $(XTOOLLIB) $(XLIB)
++MOTIFLIBS = $(MOTIFLIB) $(XTOOLONLYLIB) $(XONLYLIB)
  SYS_LIBRARIES = -lm
  CDEBUGFLAGS = 
  
@@ -32,20 +32,15 @@
  SRCS = SciPlot.c SciPlotUtil.c xyplot.c realtime.c
  HDRS = SciPlot.h SciPlotP.h SciPlotUtil.h
  OBJS = $(SRCS:.c=.o)
-@@ -54,10 +58,10 @@
+@@ -54,7 +58,7 @@
  	$(HDOC) $*.hdoc > $*.html
  
  
 -AllTarget(sciplot realtime)
 +AllTarget(sciplot realtime libs)
  
--NormalProgramTarget(sciplot,$(PLOTOBJS),$(MOTIFDEPS),$(MOTIFLIBS),$(SYS_LIBRARIES))
--NormalProgramTarget(realtime,$(RTOBJS),$(MOTIFDEPS),$(MOTIFLIBS),$(SYS_LIBRARIES))
-+NormalProgramTarget(sciplot,$(PLOTOBJS),$(MOTIFDEPS),$(MOTIFLIB),$(SYS_LIBRARIES))
-+NormalProgramTarget(realtime,$(RTOBJS),$(MOTIFDEPS),$(MOTIFLIB),$(SYS_LIBRARIES))
- 
- doc:	$(HOBJS) $(HDOC)
- 	@echo "Updated html."
+ NormalProgramTarget(sciplot,$(PLOTOBJS),$(MOTIFDEPS),$(MOTIFLIBS),$(SYS_LIBRARIES))
+ NormalProgramTarget(realtime,$(RTOBJS),$(MOTIFDEPS),$(MOTIFLIBS),$(SYS_LIBRARIES))
 @@ -79,9 +83,16 @@
  	tar cfv $(TARFILE).tar $(TARFILES)
  	compress $(TARFILE).tar
@@ -54,7 +49,7 @@
 +	$(AR) $(LIBNAME).a $(WIDGET).o $(WIDGET)Util.o
 +	$(RANLIB) $(LIBNAME).a
 +	$(CC) $(SHLIBLDFLAGS) -o $(SONAME).$(SONUM) $(WIDGET).o $(WIDGET)Util.o	\
-+		$(LDFLAGS) $(MOTIFLIB) $(LDLIBS)
++		$(LDFLAGS) $(MOTIFLIBS) $(LDLIBS)
 +
  # Dependencies:
  
