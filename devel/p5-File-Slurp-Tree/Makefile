@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-File-Slurp-Tree
-# Date created:		2006-07-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-File-Slurp-Tree/Makefile,v 1.5 2012/11/17 05:56:16 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-File-Slurp-Tree/Makefile 326728 2013-09-08 13:59:48Z az $
 
 PORTNAME=	File-Slurp-Tree
 PORTVERSION=	1.24
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-File-Find-Rule>=0:${PORTSDIR}/devel/p5-File-Find-Rule \
 		p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Slurp::Tree.3
 
