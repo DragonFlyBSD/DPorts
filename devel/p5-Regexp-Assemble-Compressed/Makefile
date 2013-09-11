@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Regexp::Assemble::Compressed
-# Date created:		27 Dec 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Regexp-Assemble-Compressed/Makefile,v 1.3 2012/11/17 05:56:27 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Regexp-Assemble-Compressed/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	Regexp-Assemble-Compressed
 PORTVERSION=	0.02
@@ -18,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Regexp-Assemble>0:${PORTSDIR}/devel/p5-Regexp-Assemble
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Regexp::Assemble::Compressed.3
 
