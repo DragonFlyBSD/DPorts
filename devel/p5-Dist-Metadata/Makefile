@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Dist-Metadata/Makefile,v 1.6 2013/02/16 11:22:46 svnexp Exp $
+# $FreeBSD: devel/p5-Dist-Metadata/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	Dist-Metadata
 PORTVERSION=	0.925
@@ -23,7 +23,8 @@ TEST_DEPENDS=	\
 	p5-Test-MockObject>0:${PORTSDIR}/devel/p5-Test-MockObject \
 	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Dist::Metadata.3 \
 	Dist::Metadata::Archive.3 \
