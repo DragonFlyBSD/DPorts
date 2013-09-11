@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/aspathtree/files/patch-lib_ASmain.pl,v 1.2 2012/11/17 06:00:30 svnexp Exp $
+$FreeBSD: net-mgmt/aspathtree/files/patch-lib_ASmain.pl 300897 2012-07-14 14:29:18Z beat $
 
 --- lib/ASmain.pl.orig
 +++ lib/ASmain.pl

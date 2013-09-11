@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/net-mgmt/aspathtree/Makefile,v 1.12 2013/01/09 20:05:03 svnexp Exp $
+# $FreeBSD: net-mgmt/aspathtree/Makefile 326245 2013-09-04 03:27:37Z az $
 
 PORTNAME=	aspathtree
 PORTVERSION=	4.2
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/ASpath-tree-v${PORTVERSION}/
 RESTRICTED=		not redistributable, license agreement required
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 SCRIPTS_ENV+=	PERL5=${PERL5}
 SUB_FILES=	pkg-message
 CONFIG_FILES=	ASpath-tree.config

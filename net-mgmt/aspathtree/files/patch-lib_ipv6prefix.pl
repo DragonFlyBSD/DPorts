@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/aspathtree/files/patch-lib_ipv6prefix.pl,v 1.2 2012/11/17 06:00:30 svnexp Exp $
+$FreeBSD: net-mgmt/aspathtree/files/patch-lib_ipv6prefix.pl 300897 2012-07-14 14:29:18Z beat $
 
 --- lib/ipv6prefix.pl.orig
 +++ lib/ipv6prefix.pl
