@@ -2,7 +2,7 @@
 # Date created:				24 October 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Mail-Spool/Makefile,v 1.16 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Spool/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	Mail-Spool
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-File-NFSLock>=0:${PORTSDIR}/devel/p5-File-NFSLock \
 		p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Spool.3 Mail::Spool::Handle.3 Mail::Spool::Node.3
 
