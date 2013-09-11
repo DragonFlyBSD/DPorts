@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <kevin@caomhin.demon.co.uk>
-# $FreeBSD: www/webstats/Makefile 323742 2013-07-26 18:02:28Z az $
+# $FreeBSD: www/webstats/Makefile 326148 2013-09-03 13:06:13Z az $
 
 PORTNAME=	webstats
 PORTVERSION=	0.3
@@ -16,7 +16,7 @@ RUN_DEPENDS=	analog:${PORTSDIR}/www/analog \
 		${LOCALBASE}/reportmagic/rmagic.pl:${PORTSDIR}/www/reportmagic
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|%%PREFIX%%|${PREFIX}|' \
