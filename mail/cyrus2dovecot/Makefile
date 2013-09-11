@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: mail/cyrus2dovecot/Makefile 323548 2013-07-23 20:35:11Z pawel $
+# $FreeBSD: mail/cyrus2dovecot/Makefile 326265 2013-09-04 09:48:54Z az $
 
 PORTNAME=	cyrus2dovecot
 PORTVERSION=	1.2
@@ -14,7 +14,7 @@ COMMENT=	Convert Cyrus folders to Dovecot
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
-USE_PERL5=	yes
+USES=		perl5
 NO_WRKSUBDIR=	yes
 
 post-extract:
