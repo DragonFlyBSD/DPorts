@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: net/py-smb/Makefile 322452 2013-07-07 16:45:24Z rm $
+# $FreeBSD: net/py-smb/Makefile 325581 2013-08-29 10:09:37Z rm $
 
 PORTNAME=	smb
-PORTVERSION=	1.1.5
+PORTVERSION=	1.1.6
 CATEGORIES=	net python
 MASTER_SITES=	http://miketeo.net/files/Projects/py${PORTNAME}/ \
 		CHEESESHOP
@@ -14,7 +14,6 @@ COMMENT=	SMB/CIFS library written in Python
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>=0:${PORTSDIR}/devel/py-asn1
 
-# Python3 ready
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	py${PORTNAME}
