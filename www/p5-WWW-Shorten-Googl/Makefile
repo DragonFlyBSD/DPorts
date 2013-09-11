@@ -2,7 +2,7 @@
 # Date created:				September 9 2011
 # Whom:					Jonathan Pater <cowboyneal@gmail.com>
 #
-# $FreeBSD: ports/www/p5-WWW-Shorten-Googl/Makefile,v 1.2 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Shorten-Googl/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	WWW-Shorten-Googl
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-WWW-Shorten>=1.98:${PORTSDIR}/www/p5-WWW-Shorten \
 		p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::Googl.3
 
