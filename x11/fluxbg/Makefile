@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fluxbg
-# Date created:				30 September 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: x11/fluxbg/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: x11/fluxbg/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	fluxbg
 PORTVERSION=	0.7
@@ -17,7 +13,7 @@ COMMENT=	Background changer for fluxbox/blackbox
 LIB_DEPENDS=	gtkmm-2.0:${PORTSDIR}/x11-toolkits/gtkmm20
 
 GNU_CONFIGURE=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 
 .include <bsd.port.pre.mk>
 
