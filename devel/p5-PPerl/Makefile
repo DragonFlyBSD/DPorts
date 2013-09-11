@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-PPerl
-# Date created:			Aug 4, 2002
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/devel/p5-PPerl/Makefile,v 1.14 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-PPerl/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	PPerl
 PORTVERSION=	0.25
@@ -17,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	Make perl scripts persistent in memory
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	pperl.1
 MAN3=	PPerl.3
