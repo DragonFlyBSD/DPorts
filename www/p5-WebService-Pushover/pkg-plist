@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/p5-WebService-Pushover/pkg-plist,v 1.1 2013/01/03 10:01:23 svnexp Exp $
+@comment $FreeBSD: www/p5-WebService-Pushover/pkg-plist 309861 2013-01-03 09:32:47Z jadawin $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/WebService/Pushover/.packlist
 %%SITE_PERL%%/WebService/Pushover.pm
 @dirrmtry %%SITE_PERL%%/WebService

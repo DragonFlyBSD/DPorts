@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/www/p5-WebService-Pushover/Makefile,v 1.1 2013/01/03 10:01:23 svnexp Exp $
+# $FreeBSD: www/p5-WebService-Pushover/Makefile 325965 2013-09-02 10:00:38Z az $
 
 PORTNAME=	WebService-Pushover
 DISTVERSION=	v0.0.6
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-WebService-Simple>=0:${PORTSDIR}/www/p5-WebService-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WebService::Pushover.3
 
