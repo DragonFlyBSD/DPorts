@@ -2,7 +2,7 @@
 # Date created:		2011-02-16
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-Emplacken/Makefile,v 1.3 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Emplacken/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	Emplacken
@@ -29,7 +29,8 @@ RUN_DEPENDS=	p5-Class-Load>=0:${PORTSDIR}/devel/p5-Class-Load \
 		p5-autodie>=0:${PORTSDIR}/devel/p5-autodie \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Emplacken.3 \
 		Emplacken::Types.3
