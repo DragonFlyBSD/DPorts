@@ -1,5 +1,5 @@
 # Created by: Alex Povolotsky <tarkhil@over.ru>
-# $FreeBSD: www/cadaver/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/cadaver/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	cadaver
 PORTVERSION=	0.23.3
@@ -49,7 +49,7 @@ post-install:
 
 .if ${PORT_OPTIONS:MNLS}
 USES=		gettext iconv
-CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} \
+CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG} \
 		--with-libintl-prefix=${LOCALBASE}
 LANGS=en@quot es it
 .for lang in ${LANGS}
