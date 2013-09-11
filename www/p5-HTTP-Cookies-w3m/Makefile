@@ -2,7 +2,7 @@
 # Date created:		2006-08-27
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-HTTP-Cookies-w3m/Makefile,v 1.8 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Cookies-w3m/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	HTTP-Cookies-w3m
@@ -20,6 +20,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		HTTP::Cookies::w3m.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
