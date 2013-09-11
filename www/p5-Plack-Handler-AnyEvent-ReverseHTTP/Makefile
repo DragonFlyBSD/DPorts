@@ -2,7 +2,7 @@
 # Date created:		02 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Handler-AnyEvent-ReverseHTTP/Makefile,v 1.3 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Handler-AnyEvent-ReverseHTTP/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	Plack-Handler-AnyEvent-ReverseHTTP
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-Plack>=0.99:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Handler::AnyEvent::ReverseHTTP.3
 
