@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xcb-util-cursor/Makefile 324375 2013-08-07 23:43:22Z zeising $
+# $FreeBSD: x11/xcb-util-cursor/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	xcb-util-cursor
-PORTVERSION=	0.0.99
+PORTVERSION=	0.1.0
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
@@ -10,7 +10,8 @@ COMMENT=	XCB cursor library
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xcb-util.pc:${PORTSDIR}/x11/xcb-util \
 		${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util-renderutil \
-		${LOCALBASE}/libdata/pkgconfig/xcb-image.pc:${PORTSDIR}/x11/xcb-util-image
+		${LOCALBASE}/libdata/pkgconfig/xcb-image.pc:${PORTSDIR}/x11/xcb-util-image \
+		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf
 		
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xcb-util.pc:${PORTSDIR}/x11/xcb-util \
 		${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util-renderutil \
@@ -19,9 +20,10 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xcb-util.pc:${PORTSDIR}/x11/xcb-util
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	xcb xorg-macros
-USES=		gmake
+USES=		gmake pkgconfig
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	GPERF="${LOCALBASE}/bin/gperf"
 
 post-patch:
 	@${REINPLACE_CMD} -e \
