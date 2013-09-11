@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: ports/security/keychain/Makefile,v 1.36 2012/12/17 13:36:42 svnexp Exp $
+# $FreeBSD: security/keychain/Makefile 325961 2013-09-02 09:45:00Z garga $
 
 PORTNAME=	keychain
 PORTVERSION=	2.7.1
@@ -12,11 +12,11 @@ COMMENT=	User-friendly front-end to ssh-agent(1)
 
 LICENSE=	GPLv2
 
+USES=		gmake perl5
+USE_PERL5=	build
 OPTIONS_DEFINE=	DOCS
 FETCH_ARGS?=	-Fpr
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
 
 MAN1=		keychain.1
 
