@@ -2,7 +2,7 @@
 # Date created:		2006-08-20
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-BBS-UserInfo-SOB/Makefile,v 1.7 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-BBS-UserInfo-SOB/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	BBS-UserInfo-SOB
@@ -17,7 +17,8 @@ COMMENT=	Get user information of SOB-style BBS
 
 RUN_DEPENDS=	p5-Expect>=0:${PORTSDIR}/lang/p5-Expect
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		BBS::UserInfo::SOB.3
 
