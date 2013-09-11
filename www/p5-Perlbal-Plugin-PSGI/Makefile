@@ -2,7 +2,7 @@
 # Date created:		23 Nov 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Perlbal-Plugin-PSGI/Makefile,v 1.5 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Perlbal-Plugin-PSGI/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	Perlbal-Plugin-PSGI
@@ -22,7 +22,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Perlbal::Plugin::PSGI.3
 
