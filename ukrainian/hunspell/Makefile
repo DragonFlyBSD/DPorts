@@ -1,4 +1,4 @@
-# $FreeBSD: ukrainian/hunspell/Makefile 324225 2013-08-04 12:47:44Z az $
+# $FreeBSD: ukrainian/hunspell/Makefile 325937 2013-09-02 05:41:50Z bsam $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.6.5
@@ -12,9 +12,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Ukrainian hunspell dictionaries
 
-BUILD_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
-
-USES=		shebangfix perl5
+USES=		iconv:build shebangfix perl5
 ALL_TARGET=	myspell
 USE_GMAKE=	yes
 USE_PERL5=	build
