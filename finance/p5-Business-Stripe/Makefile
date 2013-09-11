@@ -1,5 +1,5 @@
 # Created by: Vick Khera <vivek@khera.org>
-# $FreeBSD: ports/finance/p5-Business-Stripe/Makefile,v 1.1 2012/12/18 15:24:45 svnexp Exp $
+# $FreeBSD: finance/p5-Business-Stripe/Makefile 325960 2013-09-02 09:44:14Z az $
 
 PORTNAME=	Business-Stripe
 PORTVERSION=	0.04
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-HTTP-Message>=0.0:${PORTSDIR}/www/p5-HTTP-Message \
 
 WRKSRC=		${WRKDIR}/aquaron-Business-Stripe-c067843
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::Stripe.3 Business::README.3
 
