@@ -1,8 +1,8 @@
 # Created by: Jacob Atzen <jatzen@gmail.com>
-# $FreeBSD: www/rubygem-passenger/Makefile 325028 2013-08-20 04:45:54Z osa $
+# $FreeBSD: www/rubygem-passenger/Makefile 326622 2013-09-07 10:31:24Z osa $
 
 PORTNAME=	passenger
-PORTVERSION=	4.0.14
+PORTVERSION=	4.0.16
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMEPREFIX=	rubygem-
@@ -79,7 +79,7 @@ post-install:
 		s!#{PlatformInfo.debugging_cflags}!${CFLAGS}!g; \
 		s!-O2!!g; \
 		s! -feliminate-unused-debug-symbols -feliminate-unused-debug-types!!g; \
-		196,198s!true!false!' \
+		199,201s!true!false!' \
 		${PREFIX}/${GEM_LIB_DIR}/build/basics.rb
 .if ${PORT_OPTIONS:NDEBUG}
 	@${REINPLACE_CMD} \
