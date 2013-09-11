@@ -2,7 +2,7 @@
 # Date created:		05 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Handler-AnyEvent-HTTPD/Makefile,v 1.5 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Handler-AnyEvent-HTTPD/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	Plack-Handler-AnyEvent-HTTPD
@@ -22,7 +22,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Handler::AnyEvent::HTTPD.3
 
