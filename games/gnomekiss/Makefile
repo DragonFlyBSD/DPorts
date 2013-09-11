@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnomekiss
-# Date created:				4 Apr 2001
-# Whom:					UMENO Takashi <umeno@rr.iij4u.or.jp>
-#
-# $FreeBSD: ports/games/gnomekiss/Makefile,v 1.27 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: UMENO Takashi <umeno@rr.iij4u.or.jp>
+# $FreeBSD: games/gnomekiss/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gnomekiss
 PORTVERSION=	2.0
@@ -16,6 +12,7 @@ COMMENT=	GNOME version of Kisekae Set System
 
 RUN_DEPENDS=	lha:${PORTSDIR}/archivers/lha
 
+USES=		pkgconfig
 USE_GNOME=	gnomeprefix gnomehack libgnomeui
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
