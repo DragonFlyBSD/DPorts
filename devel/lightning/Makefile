@@ -1,0 +1,38 @@
+# Created by: ijliao
+# $FreeBSD: devel/lightning/Makefile 326040 2013-09-02 17:17:28Z rm $
+
+PORTNAME=	lightning
+PORTVERSION=	2.0.0
+CATEGORIES=	devel
+MASTER_SITES=	GNU
+MASTER_SITE_SUBDIR=	${PORTNAME}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Generates assembly language code at run-time
+
+OPTIONS_DEFINE=	ASSERTIONS
+ASSERTIONS_DESC=Enable runtime code generation assertions
+
+ONLY_FOR_ARCHS=	i386 amd64 arm ia64 powerpc sparc64 mips
+
+USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-disassembler=no
+
+PLIST_SUB+=	JIT_ARCH=${ARCH:S/i386/x86/:S/amd64/x86/:S/sparc64/sparc/:S/powerpc/ppc/}
+
+INFO=		lightning
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MASSERTIONS}
+CONFIGURE_ARGS+=--enable-assertions=yes
+.else
+CONFIGURE_ARGS+=--enable-assertions=no
+.endif
+
+regression-test: build
+	(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} \
+		${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check)
+
+.include <bsd.port.mk>
