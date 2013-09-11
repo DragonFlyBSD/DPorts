@@ -2,7 +2,7 @@
 # Date created:				2011-04-07
 # Whom:					milki <milki@rescomp.berkeley.edu>
 #
-# $FreeBSD: ports/www/p5-LWP-Online/Makefile,v 1.3 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-LWP-Online/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	LWP-Online
@@ -21,7 +21,8 @@ LICENSE_COMB=	dual
 RUN_DEPENDS+=	p5-libwww>=5.805:${PORTSDIR}/www/p5-libwww \
 		p5-URI>=1.35:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		LWP::Online.3
 
