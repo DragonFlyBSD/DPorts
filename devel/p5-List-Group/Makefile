@@ -1,9 +1,5 @@
-# New ports collection makefile for:	List-Group
-# Date created:			Thu Oct 14 2004
-# Whom:					Tillman Hodgson <tillman@seekingfire.com>
-#
-# $FreeBSD: ports/devel/p5-List-Group/Makefile,v 1.4 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Tillman Hodgson <tillman@seekingfire.com>
+# $FreeBSD: devel/p5-List-Group/Makefile 326839 2013-09-09 18:34:59Z az $
 
 PORTNAME=	List-Group
 PORTVERSION=	1.3
@@ -16,7 +12,8 @@ COMMENT=	Perl module that allows you to group a list by columns or rows
 
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		List::Group.3
 
