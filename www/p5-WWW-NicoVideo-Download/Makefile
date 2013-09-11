@@ -2,7 +2,7 @@
 # Date created:		2009-03-03
 # Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/www/p5-WWW-NicoVideo-Download/Makefile,v 1.11 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-NicoVideo-Download/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	WWW-NicoVideo-Download
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::NicoVideo::Download.3
 
