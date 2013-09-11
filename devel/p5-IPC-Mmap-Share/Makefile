@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IPC-Mmap-Share
-# Date created:		2006-07-17
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-IPC-Mmap-Share/Makefile,v 1.7 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-IPC-Mmap-Share/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	IPC-Mmap-Share
 PORTVERSION=	0.03
@@ -17,7 +13,8 @@ COMMENT=	Safely share structures among processes using anonymous mmap
 RUN_DEPENDS=	p5-IPC-Mmap>=0:${PORTSDIR}/devel/p5-IPC-Mmap
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IPC::Mmap::Share.3
 
