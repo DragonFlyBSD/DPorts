@@ -2,7 +2,7 @@
 # Date created:		2006-09-11
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/sysutils/p5-Proc-PidUtil/Makefile,v 1.3 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Proc-PidUtil/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	Proc-PidUtil
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	PID file management utilities
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Proc::PidUtil.3
 
