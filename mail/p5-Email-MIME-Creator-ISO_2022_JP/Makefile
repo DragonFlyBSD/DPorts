@@ -2,7 +2,7 @@
 # Date created:		19 Nov 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Email-MIME-Creator-ISO_2022_JP/Makefile,v 1.4 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-MIME-Creator-ISO_2022_JP/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	Email-MIME-Creator-ISO_2022_JP
@@ -21,7 +21,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Classy>=0:${PORTSDIR}/devel/p5-Test-Classy \
 		p5-Test-UseAllModules>=0:${PORTSDIR}/devel/p5-Test-UseAllModules
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::MIME::Creator::ISO_2022_JP.3
 
