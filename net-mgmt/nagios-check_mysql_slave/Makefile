@@ -2,7 +2,7 @@
 # Date created: 	15 May 2011
 # Whom:			Ryan Steinmetz
 #
-# $FreeBSD: ports/net-mgmt/nagios-check_mysql_slave/Makefile,v 1.6 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-check_mysql_slave/Makefile 326245 2013-09-04 03:27:37Z az $
 
 PORTNAME=	check_mysql_slave
 PORTVERSION=	0.1.1
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-DBI>=1.60.7:${PORTSDIR}/databases/p5-DBI \
 PORTSCOUT=	ignore:1
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 DOC_FILES=	check_mysql_slave.html check_mysql_slave.pod
 
 do-install:
