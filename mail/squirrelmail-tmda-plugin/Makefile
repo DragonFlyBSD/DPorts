@@ -2,7 +2,7 @@
 # Date created:			2006-06-10
 # Whom:				Raul Pollicino <email-freebsd@def-defying.com>
 #
-# $FreeBSD: ports/mail/squirrelmail-tmda-plugin/Makefile,v 1.3 2012/11/17 05:59:16 svnexp Exp $
+# $FreeBSD: mail/squirrelmail-tmda-plugin/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	squirrelmail-tmda-plugin
@@ -19,7 +19,7 @@ COMMENT=	Adds TMDA support to SquirrelMail
 RUN_DEPENDS=	tmda-filter:${PORTSDIR}/mail/tmda \
 		${SQUIRRELDIR}/index.php:${PORTSDIR}/mail/squirrelmail
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 SQUIRREL_PLUGIN_NAME=	tmdatools
