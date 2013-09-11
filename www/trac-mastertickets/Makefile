@@ -2,7 +2,7 @@
 # Date created:                      May 18 2007
 # Whom:                              Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/www/trac-mastertickets/Makefile,v 1.13 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-mastertickets/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	mastertickets
@@ -26,7 +26,7 @@ PYDISTUTILS_PKGNAME=	TracMasterTickets
 PYDISTUTILS_NOEGGINFO=	yes
 
 PLIST_SUB+=		PORTVERSION=${PORTVERSION} \
-			PYTHONVERSION=${_PYTHON_VERSION}
+			PYTHONVERSION=${PYTHON_VER}
 PLIST_FILES+=		%%PYTHON_SITELIBDIR%%/TracMasterTickets-%%PORTVERSION%%-py%%PYTHONVERSION%%.egg
 
 .include <bsd.port.mk>
