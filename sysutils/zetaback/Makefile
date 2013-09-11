@@ -2,7 +2,7 @@
 # Date created:				Wed Aug 13 21:50:57 PDT 2008
 # Whom:					Cy Schubert <cy@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/zetaback/Makefile,v 1.11 2012/11/17 06:01:51 svnexp Exp $
+# $FreeBSD: sysutils/zetaback/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	zetaback
@@ -14,7 +14,8 @@ MASTER_SITES=	https://labs.omniti.com/zetaback/tags/1.0/
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Zetaback ZFS backup and recovery management system
 
-USE_PERL5_RUN=	YES
+USES=		perl5
+USE_PERL5=	run
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
 
