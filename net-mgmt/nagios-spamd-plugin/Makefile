@@ -2,7 +2,7 @@
 # Date created:				2005-10-29
 # Whom:					arved
 #
-# $FreeBSD: ports/net-mgmt/nagios-spamd-plugin/Makefile,v 1.10 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-spamd-plugin/Makefile 326248 2013-09-04 05:52:04Z az $
 
 PORTNAME=	nagios-spamd-plugin
 PORTVERSION=	1.4
@@ -17,7 +17,7 @@ COMMENT=	Nagios plugin for checking SpamAssassins spamd
 
 RUN_DEPENDS+=	${LOCALBASE}/${NAGIOS_PLUGIN_DIR}/utils.pm:${PORTSDIR}/net-mgmt/nagios-plugins
 
-USE_PERL5=	yes
+USES=		perl5
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_FILES=	${NAGIOS_PLUGIN_DIR}/check_spamd.pl
