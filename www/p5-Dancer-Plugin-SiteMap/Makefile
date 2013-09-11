@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Dancer-Plugin-SiteMap/Makefile,v 1.6 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Dancer-Plugin-SiteMap/Makefile 326003 2013-09-02 15:12:10Z az $
 
 PORTNAME=	Dancer-Plugin-SiteMap
 PORTVERSION=	0.11
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Dancer>=1.175:${PORTSDIR}/www/p5-Dancer \
 RUN_DEPENDS=	p5-Dancer>=1.175:${PORTSDIR}/www/p5-Dancer \
 		p5-XML-Simple>0:${PORTSDIR}/textproc/p5-XML-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Dancer::Plugin::SiteMap.3
 
