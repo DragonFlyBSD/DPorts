@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: devel/libglade2/Makefile 315652 2013-04-01 14:46:13Z bdrewery $
+# $FreeBSD: devel/libglade2/Makefile 326099 2013-09-02 21:53:45Z bapt $
 #   $MCom: ports/devel/libglade2/Makefile,v 1.26 2007/08/01 16:13:48 mezz Exp $
 
 PORTNAME=	libglade2
@@ -20,9 +20,8 @@ USE_BZIP2=	yes
 
 RUN_DEPENDS=	xmlcatmgr:${PORTSDIR}/textproc/xmlcatmgr
 
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		pathfix gmake pkgconfig
 USE_GNOME=	libxml2 gtk20 referencehack
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
