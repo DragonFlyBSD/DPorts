@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: audio/pure-audio/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: audio/pure-audio/Makefile 325703 2013-08-30 15:04:54Z amdmi3 $
 
 PORTNAME=	pure-audio
 PORTVERSION=	0.5
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MAINTAINER=	lichray@gmail.com
 COMMENT=	A digital audio interface for the Pure language
 
-LIB_DEPENDS=	portaudio:${PORTSDIR}/audio/portaudio2 \
+LIB_DEPENDS=	portaudio.2:${PORTSDIR}/audio/portaudio2 \
 		samplerate:${PORTSDIR}/audio/libsamplerate \
 		sndfile:${PORTSDIR}/audio/libsndfile \
 		fftw3:${PORTSDIR}/math/fftw3
