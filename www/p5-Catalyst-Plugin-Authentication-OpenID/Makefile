@@ -2,7 +2,7 @@
 # Date created:		2007-05-04
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Authentication-OpenID/Makefile,v 1.4 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Authentication-OpenID/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-Authentication-OpenID
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Net-OpenID-Consumer>=0:${PORTSDIR}/net/p5-Net-OpenID-Consumer
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::Authentication::OpenID.3
 
