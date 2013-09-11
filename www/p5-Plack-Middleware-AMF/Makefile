@@ -2,7 +2,7 @@
 # Date created:		22 May 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-AMF/Makefile,v 1.3 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-AMF/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	Plack-Middleware-AMF
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-UNIVERSAL-require>0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::AMF.3
 
