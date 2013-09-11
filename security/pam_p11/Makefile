@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pam_p11
-# Date created:			1 Jun 2006
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pam_p11/Makefile,v 1.10 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: security/pam_p11/Makefile 325745 2013-08-31 00:11:06Z bapt $
 
 PORTNAME=	pam_p11
 PORTVERSION=	0.1.5
@@ -19,7 +15,7 @@ LIB_DEPENDS=	p11.2:${PORTSDIR}/security/libp11
 USE_AUTOTOOLS=	libtool
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl"
