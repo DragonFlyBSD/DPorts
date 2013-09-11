@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: deskutils/notification-daemon/Makefile 318962 2013-05-24 12:04:36Z bapt $
+# $FreeBSD: deskutils/notification-daemon/Makefile 326122 2013-09-03 06:36:41Z bapt $
 #   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
 
 PORTNAME=	notification-daemon
@@ -18,8 +18,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack gtk30
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
