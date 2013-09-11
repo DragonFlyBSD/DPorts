@@ -1,8 +1,8 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: deskutils/xchm/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/xchm/Makefile 325808 2013-08-31 14:02:08Z rm $
 
 PORTNAME=	xchm
-PORTVERSION=	1.22
+PORTVERSION=	1.23
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME}/xCHM/${PORTNAME}-${PORTVERSION}
 
