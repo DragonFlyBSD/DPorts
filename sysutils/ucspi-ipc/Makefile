@@ -2,7 +2,7 @@
 # Date created:		2004-07-07
 # Whom:			David Thiel <lx@redundancy.redundancy.org>
 #
-# $FreeBSD: ports/sysutils/ucspi-ipc/Makefile,v 1.7 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/ucspi-ipc/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	ucspi-ipc
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.superscript.com/ucspi-ipc/
 MAINTAINER=	lx@redundancy.redundancy.org
 COMMENT=	UCSPI tools for building local-domain client-server applications
 
-USE_PERL5=	yes
+USES=		perl5
 
 DISABLE_SIZE=	yes
 
