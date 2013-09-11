@@ -2,7 +2,7 @@
 # Date created:				5 December 2006
 # Whom:					mj <systemoperator@gmail.com>
 #
-# $FreeBSD: ports/net/kojoney/Makefile,v 1.8 2012/11/17 06:00:03 svnexp Exp $
+# $FreeBSD: net/kojoney/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	kojoney
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/kojoney
 USE_PYTHON=	2.5+
 USE_TWISTED=	conch
 USE_OPENSSL=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 .include <bsd.port.mk>
