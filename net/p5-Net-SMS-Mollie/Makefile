@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-SMS-Mollie/Makefile 315613 2013-03-30 13:26:19Z miwi $
+# $FreeBSD: net/p5-Net-SMS-Mollie/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	Net-SMS-Mollie
 PORTVERSION=	0.04
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	b.smeelen@ose.nl
 COMMENT=	Send SMS messages via the mollie.nl service
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 BUILD_DEPENDS+= p5-ExtUtils-MakeMaker>=0:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
 RUN_DEPENDS+=	p5-Test-Simple>=0.44:${PORTSDIR}/devel/p5-Test-Simple \
