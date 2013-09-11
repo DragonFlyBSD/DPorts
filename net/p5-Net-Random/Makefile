@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Random/Makefile 325186 2013-08-22 11:47:24Z mat $
+# $FreeBSD: net/p5-Net-Random/Makefile 326813 2013-09-09 14:44:22Z sunpoet $
 
 PORTNAME=	Net-Random
 PORTVERSION=	2.3
@@ -10,10 +10,15 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to get random data from online sources
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
+
+PORTSCOUT=	skipv:2.21,2.22
 
 USES=		perl5
 USE_PERL5=	configure
