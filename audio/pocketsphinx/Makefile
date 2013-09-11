@@ -1,5 +1,5 @@
 # Created by: Richard Neese
-# $FreeBSD: audio/pocketsphinx/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/pocketsphinx/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	pocketsphinx
 PORTVERSION=	0.8
@@ -11,9 +11,8 @@ COMMENT=	Speech recognition system
 
 LIB_DEPENDS=	sphinxad:${PORTSDIR}/audio/sphinxbase
 
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 
 CONFIGURE_ARGS+=	--without-python
