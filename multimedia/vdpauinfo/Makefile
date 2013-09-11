@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vdpauinfo
-# Date created:				2010-09-08
-# Whom:					Anonymous <swell.k@gmail.com>
-#
-# $FreeBSD: multimedia/vdpauinfo/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Anonymous <swell.k@gmail.com>
+# $FreeBSD: multimedia/vdpauinfo/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	vdpauinfo
 PORTVERSION=	0.0.6
@@ -15,6 +11,7 @@ COMMENT=	A tool to query VDPAU capabilities
 
 LIB_DEPENDS=	vdpau.1:${PORTSDIR}/multimedia/libvdpau
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 
 LICENSE=	MIT
