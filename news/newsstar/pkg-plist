@@ -1,0 +1,34 @@
+bin/newsstar
+libexec/newsstar/newsstar.bin
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%%%DOCSDIR%%/QuickStart
+%%PORTDOCS%%%%DOCSDIR%%/manual.txt
+%%PORTDOCS%%%%DOCSDIR%%/news.html
+%%PORTDOCS%%%%DOCSDIR%%/index.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s02.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s03.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s04.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s05.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s06.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s07.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s08.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s09.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s10.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s11.html
+%%PORTDOCS%%%%DOCSDIR%%/ar01s12.html
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/cf.server.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/curses.cf.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/filter.pl.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/main.cf.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/master.ignore.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/master.score.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/newsrc.sample
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm lib/newsstar
+@dirrm etc/newsstar
+@dirrm libexec/newsstar
