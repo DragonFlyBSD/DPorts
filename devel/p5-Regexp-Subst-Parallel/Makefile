@@ -2,7 +2,7 @@
 # Date created:		30 April 2010
 # Whom:			Kevin Lo <kevlo@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Regexp-Subst-Parallel/Makefile,v 1.2 2012/11/17 05:56:28 svnexp Exp $
+# $FreeBSD: devel/p5-Regexp-Subst-Parallel/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	Regexp-Subst-Parallel
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kevlo@FreeBSD.org
 COMMENT=	Perform multiple substitutions on a string in parallel
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Regexp::Subst::Parallel.3
 
