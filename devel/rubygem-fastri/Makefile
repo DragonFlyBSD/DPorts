@@ -2,7 +2,7 @@
 # Date created:		2011-07-09
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-fastri/Makefile,v 1.2 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: devel/rubygem-fastri/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	fastri
