@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: news/newsgrab/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: news/newsgrab/Makefile 325955 2013-09-02 09:22:47Z az $
 
 PORTNAME=	newsgrab
 PORTVERSION=	0.4.0
@@ -17,7 +17,7 @@ RUN_DEPENDS=	p5-NNTPClient>=0:${PORTSDIR}/news/p5-NNTPClient \
 		p5-Time-modules>=0:${PORTSDIR}/devel/p5-Time-modules
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/usr/bin/perl|#!${PERL}|' ${WRKSRC}/newsgrab.pl
