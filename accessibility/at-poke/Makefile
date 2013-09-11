@@ -1,9 +1,5 @@
-# New ports collection makefile for:	at-poke
-# Date created:				24 Oct 2006
-# Whom:					Marcus von Appen <mva@sysfault.org>
-#
-# $FreeBSD: accessibility/at-poke/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Marcus von Appen <mva@sysfault.org>
+# $FreeBSD: accessibility/at-poke/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	at-poke
 PORTVERSION=	0.2.3
@@ -15,7 +11,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Accessibility testing and poking tool
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix libglade2 libgailgnome
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
