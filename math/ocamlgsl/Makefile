@@ -2,11 +2,12 @@
 # Date created:				2011/04/10
 # Whom:					Klaus T. Aehlig <aehlig@linta.de>
 #
-# $FreeBSD: ports/math/ocamlgsl/Makefile,v 1.3 2012/11/17 05:59:23 svnexp Exp $
+# $FreeBSD: math/ocamlgsl/Makefile 325401 2013-08-26 16:06:37Z bf $
 #
 
 PORTNAME=	ocamlgsl
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://oandrieu.nerim.net/ocaml/gsl/
 
@@ -27,6 +28,7 @@ USE_GMAKE=	YES
 USE_GCC=	4.2+
 USE_OCAML=	YES
 MAKE_ENV+=	OCAMLDIR=${OCAML_LIBDIR}
+MAKE_JOBS_UNSAFE=	yes
 NO_OCAML_BUILDDEPENDS=	yes
 USE_OCAML_LDCONFIG=	yes
 
