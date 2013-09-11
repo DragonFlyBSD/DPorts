@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/mlt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/mlt/Makefile 326637 2013-09-07 14:08:09Z madpilot $
 
 PORTNAME=	mlt
 PORTVERSION=	0.9.0
@@ -21,10 +21,9 @@ CONFLICTS_INSTALL=	freeze-[0-9]*
 
 USE_GNOME=	libxml2
 USE_SDL=	image
-USES=		pathfix pkgconfig
+USES=		gmake iconv pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gpl --enable-gpl3
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
 .ifndef(WITH_DEBUG)
@@ -183,6 +182,7 @@ pre-configure:
 		${WRKSRC}/src/modules/jackrack/plugin_mgr.c \
 		${WRKSRC}/src/modules/linsys/Makefile
 	@${REINPLACE_CMD} -e 's,-lpthread,-pthread,' \
+			-e 's,-liconv,${ICONV_LIB},' \
 		${WRKSRC}/src/framework/Makefile \
 		${WRKSRC}/src/melt/Makefile \
 		${WRKSRC}/src/modules/*/Makefile
