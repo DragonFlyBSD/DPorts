@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-Amazon-EC2/Makefile,v 1.20 2013/01/17 19:57:45 svnexp Exp $
+# $FreeBSD: net/p5-Net-Amazon-EC2/Makefile 326526 2013-09-06 17:02:34Z az $
 
 PORTNAME=	Net-Amazon-EC2
 PORTVERSION=	0.23
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Amazon::EC2.3 \
 		Net::Amazon::EC2::Attachment.3 \
