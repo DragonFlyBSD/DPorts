@@ -2,7 +2,7 @@
 # Date created:				2008-08-22
 # Whom:					Oleg Mamontov <oleg@mamontov.net>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-AtomServer/Makefile,v 1.2 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-AtomServer/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-AtomServer
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime	\
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1		\
 		p5-XML-Atom>=0:${PORTSDIR}/textproc/p5-XML-Atom
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::AtomServer.3					\
 		Catalyst::Plugin::Authentication::Credential::Atom.3		\
