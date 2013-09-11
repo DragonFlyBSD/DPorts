@@ -1,5 +1,5 @@
 # Created by: Zahatski Aliaksandr <zag@cpan.org>
-# $FreeBSD: ports/www/p5-WebDAO/Makefile,v 1.6 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-WebDAO/Makefile 326156 2013-09-03 15:07:52Z az $
 
 PORTNAME=	WebDAO
 PORTVERSION=	2.14
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-DateTime>=0.37:${PORTSDIR}/devel/p5-DateTime \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Class>=0:${PORTSDIR}/devel/p5-Test-Class
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		wd_fcgi.fpl.1 \
 		wd_shell.pl.1
