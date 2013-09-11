@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: converters/p5-Convert-Recode/Makefile 323639 2013-07-25 12:45:10Z az $
+# $FreeBSD: converters/p5-Convert-Recode/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Convert-Recode
 PORTVERSION=	1.04
@@ -14,7 +14,8 @@ COMMENT=	Front end to the GNU recode program
 BUILD_DEPENDS=	recode:${PORTSDIR}/converters/recode
 RUN_DEPENDS=	recode:${PORTSDIR}/converters/recode
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Convert::Recode.3
 
