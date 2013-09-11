@@ -1,5 +1,5 @@
 # Created by: lewiz <purple@lewiz.net>
-# $FreeBSD: accessibility/dasher/Makefile 318974 2013-05-24 14:17:38Z bapt $
+# $FreeBSD: accessibility/dasher/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $MCom: ports/accessibility/dasher/Makefile,v 1.66 2009/03/18 04:59:21 marcus Exp $
 
 PORTNAME=	dasher
@@ -18,8 +18,7 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_BZIP2=	yes
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier libgnomeui atspi \
 		libwnck gnomedocutils
 WANT_GNOME=	yes
