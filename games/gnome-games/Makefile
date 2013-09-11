@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: games/gnome-games/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: games/gnome-games/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #   $MCom: ports/games/gnome-games/Makefile,v 1.240 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	gnome-games
@@ -24,9 +24,8 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 USE_GL=		gl
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack librsvg2 desktopfileutils \
 		pygnomedesktop gnomedocutils
 USE_GSTREAMER=	vorbis ogg
