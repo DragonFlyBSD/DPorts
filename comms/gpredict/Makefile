@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/gpredict/Makefile 323040 2013-07-15 14:46:19Z miwi $
+# $FreeBSD: comms/gpredict/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	gpredict
 PORTVERSION=	1.3
@@ -15,9 +15,8 @@ LIB_DEPENDS=	hamlib:${PORTSDIR}/comms/hamlib \
 		curl:${PORTSDIR}/ftp/curl \
 		goocanvas:${PORTSDIR}/graphics/goocanvas
 
-USES=		gettext pathfix
+USES=		gettext pathfix gmake pkgconfig
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 MAN1=		gpredict.1
