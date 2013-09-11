@@ -1,5 +1,5 @@
 # Created by: Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
-# $FreeBSD: science/dcl/Makefile 322670 2013-07-10 11:54:55Z bapt $
+# $FreeBSD: science/dcl/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	dcl
 PORTVERSION=	5.4.7
@@ -12,6 +12,7 @@ MAINTAINER=	murashin@gfd-dennou.org
 COMMENT=	Scientific graphic library for geoscience
 
 MAKE_JOBS_UNSAFE=	yes
+USES=		pkgconfig
 USE_XORG=	x11 xext
 USE_FORTRAN=	yes
 USE_GNOME=	gtk20 gdkpixbuf2
