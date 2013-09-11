@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Hash::MultiKey
-# Date created:				Feb 28, 2008
-# Whom:					Marzhan Mykola <delgod@portaone.com>
-#
-# $FreeBSD: ports/devel/p5-Hash-MultiKey/Makefile,v 1.2 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Marzhan Mykola <delgod@portaone.com>
+# $FreeBSD: devel/p5-Hash-MultiKey/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	Hash-MultiKey
 PORTVERSION=	0.06
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	delgod@portaone.com
 COMMENT=	Hashes whose keys can be multiple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Hash::MultiKey.3
 
