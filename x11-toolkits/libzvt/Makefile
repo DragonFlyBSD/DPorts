@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libzvt/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11-toolkits/libzvt/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	libzvt
 PORTVERSION=	2.0.1
@@ -13,8 +13,7 @@ COMMENT=	Library components for Zed's Virtual Terminal
 
 USE_BZIP2=	yes
 USE_XORG=	x11
-USE_GMAKE=	yes
-USES=		bison pathfix
+USES=		bison pathfix gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix gtk20 libartlgpl2
