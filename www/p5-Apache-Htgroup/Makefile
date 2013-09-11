@@ -2,7 +2,7 @@
 # Date created:				Fri Mar 19 11:05:42 BRT 2010
 # Whom:					otaviof@gmail.com
 #
-# $FreeBSD: ports/www/p5-Apache-Htgroup/Makefile,v 1.3 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-Apache-Htgroup/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	Apache-Htgroup
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	otaviof@gmail.com
 COMMENT=	Manage Apache authentication group files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Apache::Htgroup.3
 
