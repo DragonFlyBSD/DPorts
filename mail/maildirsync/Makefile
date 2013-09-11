@@ -2,7 +2,7 @@
 # Date created:		09 Oct 2002
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/mail/maildirsync/Makefile,v 1.13 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/maildirsync/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	maildirsync
@@ -13,7 +13,7 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Online synchronizer for Maildir-format mailboxes
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		maildirsync.1
 
