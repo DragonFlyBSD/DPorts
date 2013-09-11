@@ -1,7 +1,7 @@
-# $FreeBSD: www/qupzilla/Makefile 319764 2013-06-03 09:27:24Z danfe $
+# $FreeBSD: www/qupzilla/Makefile 326443 2013-09-05 20:13:50Z wg $
 
 PORTNAME=	qupzilla
-PORTVERSION=	1.4.3
+PORTVERSION=	1.4.4
 CATEGORIES=	www
 MASTER_SITES=	http://www.qupzilla.com/uploads/
 DISTNAME=	QupZilla-${PORTVERSION}
@@ -11,7 +11,7 @@ COMMENT=	Modern web browser based on WebKit core and Qt Framework
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	hunspell:${PORTSDIR}/textproc/hunspell
+LIB_DEPENDS=	libhunspell-1.3.so:${PORTSDIR}/textproc/hunspell
 
 HAS_CONFIGURE=	yes
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build webkit \
