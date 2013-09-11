@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Gladiator/Makefile 319878 2013-06-04 16:55:36Z miwi $
+# $FreeBSD: devel/p5-Devel-Gladiator/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Devel-Gladiator
 PORTVERSION=	0.04
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Perl 5 module to walk Perls arena
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Gladiator.3
 
