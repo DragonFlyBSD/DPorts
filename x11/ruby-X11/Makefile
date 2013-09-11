@@ -2,7 +2,7 @@
 # Date created:		31 May 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/x11/ruby-X11/Makefile,v 1.10 2012/11/17 06:03:19 svnexp Exp $
+# $FreeBSD: x11/ruby-X11/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	X11
