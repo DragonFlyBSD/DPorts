@@ -1,5 +1,5 @@
 # Created by: brandoncash@gmail.com
-# $FreeBSD: x11-themes/rezlooks/Makefile 320137 2013-06-06 22:10:16Z bapt $
+# $FreeBSD: x11-themes/rezlooks/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	rezlooks
 PORTVERSION=	0.6
@@ -14,6 +14,7 @@ COMMENT=	GTK+ 2.x engine based on Clearlooks
 WRKSRC=		${WRKDIR}/rezlooks-${PORTVERSION}
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	gtk20
 
 OPTIONS_DEFINE=	ANIMATION
