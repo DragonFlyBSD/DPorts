@@ -2,7 +2,7 @@
 # Date created:		2009-01-31
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/net-mgmt/p5-NetApp/Makefile,v 1.6 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-NetApp/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	NetApp
@@ -26,7 +26,8 @@ RUN_DEPENDS=	p5-IPC-Cmd>=0:${PORTSDIR}/devel/p5-IPC-Cmd \
 		p5-Clone>=0:${PORTSDIR}/devel/p5-Clone
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		NetApp::Aggregate.3 \
 		NetApp::Aggregate::Plex.3 \
