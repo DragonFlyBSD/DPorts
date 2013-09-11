@@ -2,7 +2,7 @@
 # Date created:		2006-07-19
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-WWW-Google-Video/Makefile,v 1.8 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Google-Video/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	WWW-Google-Video
@@ -17,7 +17,8 @@ COMMENT=	An interface to fetch the Google Video Information
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Google::Video.3
 
