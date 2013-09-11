@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: ports/lang/diveintopython/Makefile,v 1.26 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: lang/diveintopython/Makefile 307274 2012-11-10 12:27:38Z pawel $
 
 PORTNAME=	diveintopython
 PORTVERSION=	5.4
