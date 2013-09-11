@@ -2,7 +2,7 @@
 # Date created:		30 August 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/irc/ruby-rice/Makefile,v 1.7 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/ruby-rice/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	rice
