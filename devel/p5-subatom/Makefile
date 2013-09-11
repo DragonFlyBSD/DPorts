@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-subatom
-# Date created:		2006-09-26
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-subatom/Makefile,v 1.7 2012/11/17 05:56:37 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-subatom/Makefile 326728 2013-09-08 13:59:48Z az $
 
 PORTNAME=	subatom
 PORTVERSION=	0.12
@@ -18,7 +14,8 @@ COMMENT=	Produce an atom feed from subversion commits
 BUILD_DEPENDS=	p5-XML-Atom-SimpleFeed>=0:${PORTSDIR}/textproc/p5-XML-Atom-SimpleFeed
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 PLIST_FILES=	bin/subatom
 
 MAN1=		subatom.1
