@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-AnyEvent-RPC/Makefile 322176 2013-07-02 15:24:11Z danfe $
+# $FreeBSD: devel/p5-AnyEvent-RPC/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	AnyEvent-RPC
 PORTVERSION=	0.05
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-lib-abs>=0.90:${PORTSDIR}/devel/p5-lib-abs
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		AnyEvent::RPC.3 AnyEvent::RPC::Enc::YAML.3 \
 		AnyEvent::RPC::Enc::REST.3
 
