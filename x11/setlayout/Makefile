@@ -16,6 +16,7 @@ MAINTAINER=	oleg@bsdpower.com
 COMMENT=	Arrange desktops in an MxN grid layout
 
 USE_XORG=	x11
+USES=		pkgconfig
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
