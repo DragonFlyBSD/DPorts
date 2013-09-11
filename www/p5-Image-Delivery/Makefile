@@ -2,7 +2,7 @@
 # Date created:                                08 September 2007
 # Whom:                                        TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/www/p5-Image-Delivery/Makefile,v 1.6 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-Image-Delivery/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	Image-Delivery
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-Test-ClassAPI>=1.04:${PORTSDIR}/devel/p5-Test-ClassAPI \
 		p5-Params-Coerce>=0.13:${PORTSDIR}/devel/p5-Params-Coerce
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Image::Delivery.3 Image::Delivery::Provider.3
 
