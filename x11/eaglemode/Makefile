@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: x11/eaglemode/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: x11/eaglemode/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	eaglemode
 PORTVERSION=	0.84.0
@@ -14,8 +14,9 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		tiff:${PORTSDIR}/graphics/tiff \
 		freetype:${PORTSDIR}/print/freetype2
 
+USES=		perl5 pkgconfig
 USE_BZIP2=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_XORG=	x11 xext xxf86vm
 SUB_FILES=	eaglemode.sh
 
