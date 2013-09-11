@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Algorithm-Binpack/Makefile,v 1.3 2013/01/29 20:02:05 svnexp Exp $
+# $FreeBSD: devel/p5-Algorithm-Binpack/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	Algorithm-BinPack
 PORTVERSION=	0.5
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	wblock@FreeBSD.org
 COMMENT=	Efficiently pack items into bins
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::BinPack.3
 
