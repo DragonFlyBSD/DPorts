@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-ISO8601/Makefile 313168 2013-03-01 21:34:33Z des $
+# $FreeBSD: devel/p5-MooseX-Types-ISO8601/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	MooseX-Types-ISO8601
 PORTVERSION=	0.14
@@ -22,7 +22,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Types::ISO8601.3
 
