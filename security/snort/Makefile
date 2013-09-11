@@ -1,8 +1,8 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/snort/Makefile 316721 2013-04-28 13:46:15Z zi $
+# $FreeBSD: security/snort/Makefile 326414 2013-09-05 16:55:34Z zi $
 
 PORTNAME=	snort
-PORTVERSION=	2.9.4.6
+PORTVERSION=	2.9.5.3
 CATEGORIES=	security
 MASTER_SITES=	SF/snort/snort \
 		http://mirrors.rit.edu/zi/
@@ -23,7 +23,7 @@ RUN_DEPENDS=	daq>=2.0.0:${PORTSDIR}/net/daq \
 
 OPTIONS_DEFINE=	IPV6 MPLS GRE TARGETBASED ZLIB NORMALIZER REACT \
 		PERFPROFILE FLEXRESP3 LRGPCAP SNORTSAM SOURCEFIRE \
-		DBGSNORT BARNYARD PULLEDPORK
+		DBGSNORT BARNYARD PULLEDPORK NONETHER
 OPTIONS_DEFAULT=IPV6 MPLS GRE ZLIB NORMALIZER REACT PERFPROFILE \
 		FLEXRESP3 SOURCEFIRE TARGETBASED PULLEDPORK \
 		BARNYARD
@@ -31,6 +31,7 @@ OPTIONS_DEFAULT=IPV6 MPLS GRE ZLIB NORMALIZER REACT PERFPROFILE \
 GRE_DESC=		Enable GRE support
 TARGETBASED_DESC=	Enable targetbased support
 ZLIB_DESC=		Enable GZIP support
+NONETHER_DESC=		Enable non-Ethernet Decoders
 NORMALIZER_DESC=	Enable normalizer
 REACT_DESC=		Enable react
 PERFPROFILE_DESC=	Enable performance profiling
@@ -75,8 +76,8 @@ LIBNET_INCDIR=	${LIBNET_CFLAGS:M-I*:S/-I//}
 LIBNET_LIBDIR=	${LIBNET_LIBS:M-L*:S/-L//}
 
 CFLAGS+=	-fstack-protector
-CONFIGURE_ARGS=	--enable-dynamicplugin --enable-build-dynamic-examples \
-		--enable-reload --enable-reload-error-restart \
+CONFIGURE_ARGS=	--enable-dynamicplugin --enable-reload \
+		--enable-reload-error-restart \
 		--with-dnet-includes=${LIBNET_INCDIR} \
 		--with-dnet-libraries=${LIBNET_LIBDIR}
 
@@ -113,6 +114,10 @@ CONFIGURE_ARGS+=--disable-ipv6
 CONFIGURE_ARGS+=--disable-gre
 .endif
 
+.if ${PORT_OPTIONS:MNONETHER}
+CONFIGURE_ARGS+=--enable-non-ether-decoders
+.endif
+
 .if empty(PORT_OPTIONS:MMPLS)
 CONFIGURE_ARGS+=--disable-mpls
 .endif
@@ -136,7 +141,7 @@ CONFIGURE_ARGS+=--enable-react
 .if ${PORT_OPTIONS:MSNORTSAM}
 BROKEN=		current snortsam patch fails to apply
 USE_AUTOTOOLS+=	automake
-USE_GNOME=	pkgconfig
+USES+=		pkgconfig
 PATCH_SITES+=	http://www.snortsam.net/files/snort-plugin/:snortsam
 PATCHFILES+=	snortsam-2.9.2.2.diff.gz:snortsam
 .endif
