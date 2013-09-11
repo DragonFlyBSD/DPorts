@@ -2,7 +2,7 @@
 # Date created:				21 February 2007
 # Whom:					Kay Abendroth <kay.abendroth@raxion.net>
 #
-# $FreeBSD: ports/mail/p5-Email-Reply/Makefile,v 1.8 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-Reply/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	Email-Reply
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Email-Abstract>=2.01:${PORTSDIR}/mail/p5-Email-Abstract \
 		p5-Email-MIME>=1.82:${PORTSDIR}/mail/p5-Email-MIME \
 		p5-Email-Simple>=2.100:${PORTSDIR}/mail/p5-Email-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::Reply.3
 
