@@ -2,7 +2,7 @@
 # Date created:				Jan 10 2006
 # Whom:					Christopher Boumenot <boumenot@gmail.com>
 #
-# $FreeBSD: ports/net/p5-Net-TiVo/Makefile,v 1.13 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-TiVo/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	Net-TiVo
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::TiVo.3 \
 		Net::TiVo::Show.3 \
