@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/audio/mp3asm/Makefile,v 1.14 2013/01/26 16:56:07 svnexp Exp $
+# $FreeBSD: audio/mp3asm/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	mp3asm
 PORTVERSION=	0.1.3.1
@@ -15,8 +15,8 @@ LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.1
 
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 post-extract:
