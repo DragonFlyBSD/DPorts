@@ -1,5 +1,5 @@
 # Created by: Sébastien Santoro <dereckson@gmail.com>
-# $FreeBSD: ports/devel/p5-ReadLine-TTYtter/Makefile,v 1.6 2012/12/28 20:50:45 svnexp Exp $
+# $FreeBSD: devel/p5-ReadLine-TTYtter/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	ReadLine-TTYtter
 PORTVERSION=	1.4
@@ -15,6 +15,7 @@ COMMENT=	Perl5 module for Term::ReadLine allowing rich editing
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
