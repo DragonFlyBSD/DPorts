@@ -2,7 +2,7 @@
 # Date created:				28 April 2005
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Server-Simple-Mason/Makefile,v 1.11 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Server-Simple-Mason/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	HTTP-Server-Simple-Mason
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-HTTP-Server-Simple>=0:${PORTSDIR}/www/p5-HTTP-Server-Simple \
 		p5-Hook-LexWrap>=0:${PORTSDIR}/devel/p5-Hook-LexWrap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTTP::Server::Simple::Mason.3
 
