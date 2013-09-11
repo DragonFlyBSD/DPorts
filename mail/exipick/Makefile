@@ -2,7 +2,7 @@
 # Date created:				29 Sep 2004
 # Whom:					Vsevolod Stakhov <vsevolod@highsecure.ru>
 #
-# $FreeBSD: ports/mail/exipick/Makefile,v 1.10 2012/11/17 05:59:02 svnexp Exp $
+# $FreeBSD: mail/exipick/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	exipick
@@ -17,7 +17,8 @@ COMMENT=	Display messages from Exim queue based on a variety of criteria
 
 PLIST_FILES=	bin/${PORTNAME}
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 do-extract:
 	@${RM} -rf ${WRKDIR}
