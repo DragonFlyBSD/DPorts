@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-JavaScript-SpiderMonkey
-# Date created:				25 February 2005
-# Whom:	      				kappa@freebsd.org.ua
-#
-# $FreeBSD: lang/p5-JavaScript-SpiderMonkey/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
-#
+# Created by: kappa@FreeBSD.org.ua
+# $FreeBSD: lang/p5-JavaScript-SpiderMonkey/Makefile 325466 2013-08-27 16:24:56Z sunpoet $
 
 PORTNAME=	JavaScript-SpiderMonkey
 PORTVERSION=	0.21
