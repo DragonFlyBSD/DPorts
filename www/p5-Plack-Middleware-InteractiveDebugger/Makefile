@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-InteractiveDebugger/Makefile 319095 2013-05-26 07:22:39Z kuriyama $
+# $FreeBSD: www/p5-Plack-Middleware-InteractiveDebugger/Makefile 326021 2013-09-02 16:07:56Z az $
 
 PORTNAME=	Plack-Middleware-InteractiveDebugger
 PORTVERSION=	0.01
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::InteractiveDebugger.3
 
