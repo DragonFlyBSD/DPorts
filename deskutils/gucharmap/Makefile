@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gucharmap
-# Date created:				02 Mar 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: deskutils/gucharmap/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: deskutils/gucharmap/Makefile 326103 2013-09-02 22:03:38Z bapt $
 #   $MCom: ports/deskutils/gucharmap/Makefile,v 1.75 2010/11/13 13:05:08 kwm Exp $
-#
 
 PORTNAME=	gucharmap
 PORTVERSION=	2.32.1
@@ -19,7 +15,7 @@ COMMENT=	A Unicode/ISO10646 character map and font viewer
 LIB_DEPENDS=	rarian.0:${PORTSDIR}/textproc/rarian
 
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk20 gnomedocutils gconf2
 GNU_CONFIGURE=	yes
