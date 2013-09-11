@@ -1,8 +1,5 @@
-# New ports collection makefile for:	POE-Componenet-IRC-Plugin-Hailo
-# Date created:	   2011-07-19
-# Whom:		   milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: ports/irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile,v 1.4 2013/01/13 21:45:04 svnexp Exp $
+# Created by: milki <milki@rescomp.berkeley.edu>
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	POE-Component-IRC-Plugin-Hailo
 PORTVERSION=	0.18
@@ -25,7 +22,8 @@ BUILD_DEPENDS=	p5-IRC-Utils>=0.05:${PORTSDIR}/irc/p5-IRC-Utils \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Script>=1.07:${PORTSDIR}/devel/p5-Test-Script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	irchailo-seed.1
 
