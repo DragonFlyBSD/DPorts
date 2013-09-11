@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: x11/zenity/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/zenity/Makefile 326088 2013-09-02 20:51:40Z bapt $
 #   $MCom: ports/x11/zenity/Makefile,v 1.119 2013/01/09 18:51:14 kwm Exp $
 
 PORTNAME=	zenity
@@ -15,8 +15,7 @@ COMMENT=	Display GNOME dialogs from the command line
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk20 gnomedocutils intlhack
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
