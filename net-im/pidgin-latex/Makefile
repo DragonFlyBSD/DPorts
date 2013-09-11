@@ -23,8 +23,8 @@ RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin \
 WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}${PORTNAME}
 
 CFLAGS+=	"-fPIC"
+USES=		gmake pkgconfig
 USE_TEX=	latex
-USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_BZIP2=	yes
 
