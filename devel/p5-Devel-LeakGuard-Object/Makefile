@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Devel-LeakGuard-Object
-# Date created:		2009-07-19
-# Whom:			TERAMOTO Masahiro <markun@onohara.to>
-#
-# $FreeBSD: ports/devel/p5-Devel-LeakGuard-Object/Makefile,v 1.5 2012/11/17 05:56:13 svnexp Exp $
-#
+# Created by: TERAMOTO Masahiro <markun@onohara.to>
+# $FreeBSD: devel/p5-Devel-LeakGuard-Object/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Devel-LeakGuard-Object
 PORTVERSION=	0.06
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-latest>0:${PORTSDIR}/devel/p5-latest
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Devel::LeakGuard::Object.3 \
 		Devel::LeakGuard::Object::State.3
