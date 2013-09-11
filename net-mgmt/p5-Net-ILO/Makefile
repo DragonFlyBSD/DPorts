@@ -2,7 +2,7 @@
 # Date created:				2012-04-03
 # Whom:					Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/net-mgmt/p5-Net-ILO/Makefile,v 1.2 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-ILO/Makefile 326167 2013-09-03 16:18:49Z az $
 #
 
 PORTNAME=	Net-ILO
@@ -23,7 +23,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::ILO.3
 
