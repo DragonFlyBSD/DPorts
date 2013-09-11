@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Another HTML-lint
-# Date created:		29 Sep 2000
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/another-htmllint/Makefile,v 1.14 2012/11/17 05:58:31 svnexp Exp $
-#
+# $FreeBSD: japanese/another-htmllint/Makefile 326884 2013-09-10 09:39:11Z az $
 
 PORTNAME=	another-htmllint
 PORTVERSION=	20060601
@@ -16,7 +11,7 @@ COMMENT=	Another HTML-lint (all messages are written in Japanese)
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode
 
-USE_PERL5=	YES
+USES=		perl5
 USE_ZIP=	YES
 WRKSRC=		${WRKDIR}
 EXTRACT_BEFORE_ARGS=	-a -q
