@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sopwith
-# Date created:			1 July 2002
-# Whom:				Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/games/sopwith/Makefile,v 1.33 2012/11/17 05:57:53 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: games/sopwith/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	sopwith
 PORTVERSION=	1.7.4
@@ -14,8 +10,8 @@ MASTER_SITES=	SF/sdl-${PORTNAME}/sdl_${PORTNAME}/${PORTVERSION}
 MAINTAINER=	edwin@mavetju.org
 COMMENT=	A classic WW1 biplane game
 
+USES=		gmake pkgconfig
 USE_SDL=	sdl
-USE_GMAKE=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 
