@@ -2,7 +2,7 @@
 # Date created:		24 Marth 2008
 # Whom:			Stanislav Sedov <stas@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/ruby-multi/Makefile,v 1.5 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-multi/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	multi
