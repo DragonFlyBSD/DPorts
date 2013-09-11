@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: mail/p5-Mail-DeliveryStatus-BounceParser/Makefile 323864 2013-07-29 01:53:34Z zi $
+# $FreeBSD: mail/p5-Mail-DeliveryStatus-BounceParser/Makefile 326265 2013-09-04 09:48:54Z az $
 
 PORTNAME=	Mail-DeliveryStatus-BounceParser
 PORTVERSION=	1.5.34
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-MIME-Tools>=5.418:${PORTSDIR}/mail/p5-MIME-Tools \
 		p5-Mail-Tools>=2.04:${PORTSDIR}/mail/p5-Mail-Tools
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::DeliveryStatus::BounceParser.3
 
