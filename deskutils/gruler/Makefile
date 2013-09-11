@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gruler
-# Date created:				24 October 2004
-# Whom:					Piotr Smyrak <smyru@heron.pl>
-#
-# $FreeBSD: deskutils/gruler/Makefile 318333 2013-05-16 20:07:39Z rakuco $
-#
+# Created by: Piotr Smyrak <smyru@heron.pl>
+# $FreeBSD: deskutils/gruler/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gruler
 PORTVERSION=	0.6
@@ -14,6 +10,7 @@ MASTER_SITES=	http://linuxadvocate.org/projects/gruler/downloads/
 MAINTAINER=	ps.ports@smyrak.com
 COMMENT=	A simple customizable GTK screen ruler
 
+USES=		pkgconfig
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libglade2
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
