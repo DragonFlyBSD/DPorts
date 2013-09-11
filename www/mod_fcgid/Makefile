@@ -1,17 +1,16 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/mod_fcgid/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_fcgid/Makefile 325503 2013-08-28 05:05:06Z ohauer $
 
 PORTNAME=	mod_fcgid
-PORTVERSION=	2.3.6
-PORTREVISION=	1
+PORTVERSION=	2.3.7
 CATEGORIES=	www
 MASTER_SITES=		${MASTER_SITE_APACHE_HTTPD}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
+DIST_SUBDIR=	apache2
 
-MAINTAINER=	hemi@puresimplicity.net
-COMMENT=	An alternative FastCGI module for Apache2
-
+MAINTAINER=	freebsd.ports@webstyle.ch
+COMMENT=	Alternative FastCGI module for Apache2
 
 USE_APACHE=	22+
 
