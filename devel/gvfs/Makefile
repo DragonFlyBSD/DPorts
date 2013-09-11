@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/gvfs/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: devel/gvfs/Makefile 326129 2013-09-03 08:49:46Z bapt $
 #   $MCom: ports/devel/gvfs/Makefile,v 1.85 2012/12/14 16:09:28 kwm Exp $
 
 PORTNAME=	gvfs
@@ -17,10 +17,9 @@ LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
 		gcrypt:${PORTSDIR}/security/libgcrypt \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_XZ=		yes
 USE_GNOME=	glib20 gnomehack gnomeprefix intlhack intltool
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
