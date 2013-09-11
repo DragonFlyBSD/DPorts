@@ -2,7 +2,7 @@
 # Date created:		Wed Sep 26 20:23:38 MSD 2007
 # Whom:			Denis Shaposhnikov <dsh@vlink.ru>
 #
-# $FreeBSD: ports/sysutils/ispman/Makefile,v 1.6 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: sysutils/ispman/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 
 PORTNAME=	ispman
@@ -37,7 +37,7 @@ RUN_DEPENDS=	p5-Text-Balanced>=0:${PORTSDIR}/textproc/p5-Text-Balanced\
 		p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite
 
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 ALL_TARGET=	ispman
 HAS_CONFIGURE=	yes
