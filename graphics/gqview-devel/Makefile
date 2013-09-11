@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gqview
-# Date Created:				27 Oct 1998
-# Whom:					Vanilla Pooh Shu <vanilla@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/gqview-devel/Makefile,v 1.35 2012/11/17 05:58:08 svnexp Exp $
-#
+# Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
+# $FreeBSD: graphics/gqview-devel/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	gqview
 PORTVERSION=	2.1.5
@@ -16,6 +12,7 @@ COMMENT=	Another gtk2-based graphic file viewer
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
+USES=		pkgconfig
 USE_GNOME=	gnomehier gtk20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
