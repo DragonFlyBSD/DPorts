@@ -2,7 +2,7 @@
 # Date created:				June 7th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Whois/Makefile,v 1.19 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Whois/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-Whois
@@ -16,7 +16,8 @@ COMMENT=	A perl5 module to get information using the Whois protocol
 
 RUN_DEPENDS=	p5-Locale-Codes>=0:${PORTSDIR}/misc/p5-Locale-Codes
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Whois.3
 
