@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: editors/emacs/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/emacs/Makefile 326133 2013-09-03 10:23:55Z bapt $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}
@@ -21,7 +21,7 @@ CONFLICTS=	emacs-19.* emacs-21.* emacs-22.* emacs-23.* \
 
 EMACS_VER=	24.3
 GNU_CONFIGURE=	yes
-USES=		ncurses gmake
+USES=		ncurses gmake pkgconfig
 USE_XZ=		yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
