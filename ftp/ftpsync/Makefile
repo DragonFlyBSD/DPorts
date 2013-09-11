@@ -2,7 +2,7 @@
 # Date created:		31 August 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/ftpsync/Makefile,v 1.11 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ftp/ftpsync/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	ftpsync
@@ -19,7 +19,7 @@ RUN_DEPENDS=	p5-libwww>=5.805:${PORTSDIR}/www/p5-libwww
 
 NO_BUILD=	yes
 USE_BZIP2=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/${PORTNAME}.pl
 PORTDOCS=	README
 
