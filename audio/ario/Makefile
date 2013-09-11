@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: audio/ario/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/ario/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	ario
 PORTVERSION=	1.5.1
@@ -22,9 +22,9 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
 		mpdclient:${PORTSDIR}/audio/libmpdclient
 
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk20 gnomehack
 INSTALLS_ICONS=	yes
 
