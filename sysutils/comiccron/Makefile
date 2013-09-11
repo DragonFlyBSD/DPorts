@@ -2,7 +2,7 @@
 # Date created:        12 February 2007
 # Whom:                Zane C. Bowers
 #
-# $FreeBSD: ports/sysutils/comiccron/Makefile,v 1.4 2012/11/17 06:01:27 svnexp Exp $
+# $FreeBSD: sysutils/comiccron/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	comiccron
@@ -21,7 +21,7 @@ RUN_DEPENDS=	p5-DateTime-Event-Cron>=0:${PORTSDIR}/devel/p5-DateTime-Event-Cron 
 		p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Format-Strptime>=0:${PORTSDIR}/devel/p5-DateTime-Format-Strptime
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_WRKSUBDIR=	yes
 
