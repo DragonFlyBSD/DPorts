@@ -2,7 +2,7 @@
 # Date created:				16 Oct 2010
 # Whom:	      				Zane C. Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Phone-Info/Makefile,v 1.4 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-Phone-Info/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Phone-Info
@@ -17,7 +17,8 @@ COMMENT=	Provides a nicer CLI interface to Net::WhitePages
 
 RUN_DEPENDS=	p5-Net-WhitePages>=0:${PORTSDIR}/net/p5-Net-WhitePages
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Phone::Info.3
 
