@@ -2,7 +2,7 @@
 # Date created:                        Thu May 25 21:12:53 CDT 2006
 # Whom:                                        Jim Pirzyk pirzyk@freebsd.org
 #
-# $FreeBSD: ports/sysutils/p5-Sys-Filesystem/Makefile,v 1.11 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Sys-Filesystem/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	Sys-Filesystem
@@ -18,7 +18,8 @@ COMMENT=	Perl module to Retrieve list of filesystems and their properties
 RUN_DEPENDS=	p5-Params-Util>=1.0:${PORTSDIR}/devel/p5-Params-Util
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Sys::Filesystem::Mswin32.3 \
 		Sys::Filesystem.3 \
