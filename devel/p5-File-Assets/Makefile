@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-File-Assets
-# Date created:		2011-05-01
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-File-Assets/Makefile,v 1.4 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-File-Assets/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	File-Assets
 PORTVERSION=	0.064
@@ -41,7 +37,8 @@ RUN_DEPENDS=	p5-Test-Memory-Cycle>0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 	p5-CSS-Minifier-XS>=0:${PORTSDIR}/textproc/p5-CSS-Minifier-XS \
 	p5-JavaScript-Minifier-XS>=0:${PORTSDIR}/textproc/p5-JavaScript-Minifier-XS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::Assets.3 File::Assets::Asset.3
 
