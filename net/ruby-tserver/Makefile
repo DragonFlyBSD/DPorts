@@ -2,7 +2,7 @@
 # Date created:		13 November 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/net/ruby-tserver/Makefile,v 1.12 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/ruby-tserver/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	tserver
