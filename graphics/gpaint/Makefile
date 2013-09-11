@@ -1,8 +1,6 @@
-# New ports collection makefile for:	gpaint
-# Date created:				18 October 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/gpaint/Makefile,v 1.24 2012/11/17 05:58:08 svnexp Exp $
+# $FreeBSD: graphics/gpaint/Makefile 326133 2013-09-03 10:23:55Z bapt $
 #
 
 PORTNAME=	gpaint
@@ -16,6 +14,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A small-scale painting program for GNOME
 
+USES=		pkgconfig
 USE_GNOME=	libgnomeprint libgnomeprintui
 GNU_CONFIGURE=	yes
 
