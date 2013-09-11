@@ -2,7 +2,7 @@
 # Date created:				2012-04-04
 # Whom:					Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Net-sFlow/Makefile,v 1.2 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-sFlow/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	Net-sFlow
@@ -16,7 +16,8 @@ COMMENT=	Decode sFlow datagrams
 
 LICENSE=	ART10
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::sFlow.3
 
