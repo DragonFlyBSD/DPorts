@@ -1,9 +1,5 @@
-# New ports collection makefile for:    Devel-Size-Report
-# Date created:                         Wed 04 Nov 2009
-# Whom:                                 Alexey V. Degtyarev
-#
-# $FreeBSD: ports/devel/p5-Devel-Size-Report/Makefile,v 1.5 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: devel/p5-Devel-Size-Report/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	Devel-Size-Report
 PORTVERSION=	0.13
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Array-RefElem>=1.00:${PORTSDIR}/misc/p5-Array-RefElem \
 		p5-Devel-Size>=0.69:${PORTSDIR}/devel/p5-Devel-Size
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Size::Report.3
 
