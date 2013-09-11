@@ -2,7 +2,7 @@
 # Date created:		2006-02-15
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: ports/print/easylatex/Makefile,v 1.11 2012/11/17 06:00:49 svnexp Exp $
+# $FreeBSD: print/easylatex/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	easylatex
@@ -18,7 +18,7 @@ COMMENT=	Perl script which transforms "pseudo-LaTeX" into proper LaTeX
 RUN_DEPENDS=	p5-Getopt-Declare>=0:${PORTSDIR}/devel/p5-Getopt-Declare
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/lib/easylatex,${DATADIR},' \
