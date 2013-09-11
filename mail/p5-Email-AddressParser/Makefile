@@ -2,7 +2,7 @@
 # Date created: Jun 6 2011
 # Whom: dliakh
 #
-# $FreeBSD: ports/mail/p5-Email-AddressParser/Makefile,v 1.2 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/p5-Email-AddressParser/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	Email-AddressParser
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	dliakh@ukr.net
 COMMENT=	RFC 2822 Address Parsing and Creation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::AddressParser.3
 
