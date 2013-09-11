@@ -2,7 +2,7 @@
 # Date created:				10/03/2000
 # Whom:					nectar@FreeBSD.org
 #
-# $FreeBSD: ports/devel/py-xoltar-toolkit/Makefile,v 1.11 2012/11/17 05:56:52 svnexp Exp $
+# $FreeBSD: devel/py-xoltar-toolkit/Makefile 301510 2012-07-25 06:32:06Z cs $
 #
 
 PORTNAME=	xoltar-toolkit
