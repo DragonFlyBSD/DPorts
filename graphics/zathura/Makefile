@@ -1,5 +1,5 @@
 # Created by: Quentin Stievenart <acieroid@awesom.eu>
-# $FreeBSD: graphics/zathura/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/zathura/Makefile 326348 2013-09-05 05:32:44Z antoine $
 
 PORTNAME=	zathura
 PORTVERSION=	0.2.2
@@ -13,7 +13,7 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 		girara-gtk2:${PORTSDIR}/x11-toolkits/girara
 
 USE_GNOME=	glib20 gtk20
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 MAKE_ENV=	SFLAGS="${STRIP}"
 
 OPTIONS_DEFINE=	DOCS NLS SQLITE
