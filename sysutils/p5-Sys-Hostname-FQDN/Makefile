@@ -2,7 +2,7 @@
 # Date created:		2006-07-23
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/sysutils/p5-Sys-Hostname-FQDN/Makefile,v 1.7 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Sys-Hostname-FQDN/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 
 PORTNAME=	Sys-Hostname-FQDN
@@ -16,7 +16,8 @@ COMMENT=	Get the short or long hostname
 
 LICENSE=	ART20
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::Hostname::FQDN.3
 
