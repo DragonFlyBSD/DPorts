@@ -2,7 +2,7 @@
 # Date created:				2 January 2004
 # Whom:					Attila Nagy <bra@fsn.hu>
 #
-# $FreeBSD: ports/mail/p5-Mail-CheckUser/Makefile,v 1.8 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-CheckUser/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	Mail-CheckUser
@@ -18,7 +18,8 @@ COMMENT=	Perl module to check email addresses for validity
 BUILD_DEPENDS=  p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		cufilter.1
 MAN3=           Mail::CheckUser.3
