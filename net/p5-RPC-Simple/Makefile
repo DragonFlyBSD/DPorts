@@ -2,7 +2,7 @@
 # Date created:		2006-08-19
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-RPC-Simple/Makefile,v 1.3 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-RPC-Simple/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	RPC-Simple
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Perl classes to handle simple asynchronous RPC calls with call-back
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		RPC::Simple.3 RPC::Simple::Agent.3 RPC::Simple::AnyLocal.3 \
 		RPC::Simple::AnyRemote.3 RPC::Simple::AnyWhere.3 \
