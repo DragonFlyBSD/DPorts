@@ -14,6 +14,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Minesweeper with a couple of grid types
 
+USES=		pkgconfig
 USE_XORG=	xaw7
 
 MAN6=		xbomb.6
