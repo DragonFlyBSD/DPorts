@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/glade2/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/glade2/Makefile 326513 2013-09-06 15:28:27Z bapt $
 #   $MCom: ports/devel/glade2/Makefile,v 1.20 2007/08/04 03:51:29 marcus Exp $
 
 PORTNAME=	glade
@@ -18,9 +18,8 @@ LIB_DEPENDS=	rarian.0:${PORTSDIR}/textproc/rarian
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk20 desktopfileutils
-USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
