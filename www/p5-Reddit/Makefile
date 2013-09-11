@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-Reddit/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: www/p5-Reddit/Makefile 326053 2013-09-02 18:23:34Z az $
 
 PORTNAME=	Reddit
 PORTVERSION=	0.3.02.20120418
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-HTTP-Cookies>=6:${PORTSDIR}/www/p5-HTTP-Cookies \
 		p5-libwww>=5.829:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Reddit.3
 
