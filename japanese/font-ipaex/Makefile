@@ -1,8 +1,8 @@
-# $FreeBSD: japanese/font-ipaex/Makefile 316978 2013-04-30 23:55:58Z hrs $
+# $FreeBSD: japanese/font-ipaex/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	ipaex
 PORTVERSION=	00201
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	http://info.openlab.ipa.go.jp/ipafont/fontdata/7bf84182a04a9632268dbcb03f100d05/
 PKGNAMEPREFIX=	ja-font-
