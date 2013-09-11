@@ -2,7 +2,7 @@
 # Date created:		2011-04-03
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/rubygem-xslt/Makefile,v 1.3 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: textproc/rubygem-xslt/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	xslt
