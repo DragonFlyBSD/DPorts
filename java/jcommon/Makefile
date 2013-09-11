@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: ports/java/jcommon/Makefile,v 1.22 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jcommon/Makefile 325788 2013-08-31 10:38:58Z olgeni $
 
 PORTNAME=	jcommon
-PORTVERSION=	1.0.18
+PORTVERSION=	1.0.19
 CATEGORIES=	java devel
 MASTER_SITES=	SF/jfreechart/3.%20JCommon/${PORTVERSION}
 
