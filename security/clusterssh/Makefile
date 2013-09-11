@@ -1,5 +1,5 @@
 # Created by: lx
-# $FreeBSD: security/clusterssh/Makefile 315614 2013-03-30 13:26:51Z miwi $
+# $FreeBSD: security/clusterssh/Makefile 325900 2013-09-01 18:18:40Z az $
 
 PORTNAME=	clusterssh
 PORTVERSION=	4.01
@@ -16,14 +16,13 @@ BUILD_DEPENDS=	p5-File-Which>=0:${PORTSDIR}/sysutils/p5-File-Which \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage \
 		p5-Test-Trap>=0:${PORTSDIR}/devel/p5-Test-Trap \
 		p5-Module-Manifest>=0:${PORTSDIR}/devel/p5-Module-Manifest
-
 RUN_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk \
 		p5-X11-Protocol>=0:${PORTSDIR}/x11/p5-X11-Protocol \
 		p5-Exception-Class>=0:${PORTSDIR}/devel/p5-Exception-Class \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 
-USE_PERL5=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		cssh.1 ccon.1 crsh.1 ctel.1
 MAN3=		App::ClusterSSH.3 \
