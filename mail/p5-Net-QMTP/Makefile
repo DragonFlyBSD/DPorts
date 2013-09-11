@@ -2,7 +2,7 @@
 # Date created:				15 October 2003
 # Whom:					James Raftery <james@now.ie>
 #
-# $FreeBSD: ports/mail/p5-Net-QMTP/Makefile,v 1.5 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Net-QMTP/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	Net-QMTP
@@ -17,7 +17,8 @@ COMMENT=	Perl module to provide a Quick Mail Transfer Protocol (QMTP) client
 BUILD_DEPENDS=	p5-Text-Netstring>=0:${PORTSDIR}/textproc/p5-Text-Netstring
 RUN_DEPENDS=	p5-Text-Netstring>=0:${PORTSDIR}/textproc/p5-Text-Netstring
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::QMTP.3
 
