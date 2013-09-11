@@ -1,5 +1,5 @@
 # Created by: Mathias Monnerville <mathias@monnerville.com>
-# $FreeBSD: ports/astro/sextractor/Makefile,v 1.3 2012/12/18 03:45:41 svnexp Exp $
+# $FreeBSD: astro/sextractor/Makefile 325648 2013-08-30 01:15:20Z bapt $
 
 PORTNAME=	sextractor
 PORTVERSION=	2.5.0
@@ -11,7 +11,7 @@ MAINTAINER=	mathias@monnerville.com
 COMMENT=	Catalogue of objects builder from astronomical images
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 MAN1=	sex.1
 MANX=	sex.x
