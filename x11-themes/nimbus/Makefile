@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nimbus
-# Date created:		2011-04-07
-# Whom:			Karsten Pedersen <kpedersen@opencde.org>
-#
-# $FreeBSD: ports/x11-themes/nimbus/Makefile,v 1.18 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Karsten Pedersen <kpedersen@opencde.org>
+# $FreeBSD: x11-themes/nimbus/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=		nimbus
 PORTVERSION=		0.1.7
@@ -21,7 +17,7 @@ RUN_DEPENDS=		${LOCALBASE}/bin/gtk-demo:${PORTSDIR}/x11-toolkits/gtk20
 
 USE_BZIP2=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USES=			gmake pkgconfig
 INSTALLS_ICONS=		yes
 USE_LDCONFIG=		yes
 USE_GNOME=		gtk20
