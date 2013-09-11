@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Stream-Reader
-# Date created:		2009-08-12
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Stream-Reader/Makefile,v 1.3 2012/11/17 05:56:29 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: devel/p5-Stream-Reader/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Stream-Reader
 PORTVERSION=	0.09
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl module for reading data from streams
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Stream::Reader.3
 
