@@ -2,7 +2,7 @@
 # Date created:				10 December 2004
 # Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/news/p5-News-Article-NoCeM/Makefile,v 1.10 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/p5-News-Article-NoCeM/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	News-Article-NoCeM
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-News-Article>=0:${PORTSDIR}/news/p5-News-Article \
 		p5-PGP-Sign>=0:${PORTSDIR}/security/p5-PGP-Sign
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		News::Article::NoCeM.3
 
