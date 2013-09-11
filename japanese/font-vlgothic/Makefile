@@ -1,11 +1,10 @@
 # Created by: NIIMI Satoshi <sa2c@sa2c.net>
-# $FreeBSD: japanese/font-vlgothic/Makefile 316977 2013-04-30 23:53:03Z hrs $
+# $FreeBSD: japanese/font-vlgothic/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	vlgothic
-PORTVERSION=	20130422
-PORTREVISION=	1
+PORTVERSION=	20130607
 CATEGORIES=	japanese x11-fonts
-MASTER_SITES=	SFJP/vlgothic/58671
+MASTER_SITES=	SFJP/vlgothic/58961
 PKGNAMEPREFIX=	ja-font-
 DISTNAME=	VLGothic-${PORTVERSION}
 
