@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: print/p5-Net-Printer/Makefile 317915 2013-05-11 21:09:57Z rakuco $
+# $FreeBSD: print/p5-Net-Printer/Makefile 326272 2013-09-04 13:07:40Z az $
 
 PORTNAME=	Net-Printer
 PORTVERSION=	1.12
@@ -12,7 +12,8 @@ COMMENT=	Perl extension for direct-to-lpd printing
 
 LICENSE=	BSD
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Printer.3
 
