@@ -1,9 +1,5 @@
-# New ports collection makefile for:	giram
-# Date created:				17 June 1999
-# Whom:					Brandon Fosdick <bfoz@glue.umd.edu>
-#
-# $FreeBSD: graphics/giram/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Brandon Fosdick <bfoz@glue.umd.edu>
+# $FreeBSD: graphics/giram/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	giram
 PORTVERSION=	0.3.5
@@ -18,10 +14,9 @@ LIB_DEPENDS=	3ds-1.3:${PORTSDIR}/graphics/lib3ds
 BUILD_DEPENDS=	povray:${PORTSDIR}/graphics/povray-meta
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		gettext perl5
+USES=		gettext perl5 pkgconfig gmake
 USE_PERL5=	build
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	INTLTOOL_PERL="${PERL}"
 LDFLAGS+=	-L${LOCALBASE}/lib
