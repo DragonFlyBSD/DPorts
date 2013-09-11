@@ -1,4 +1,4 @@
-# $FreeBSD: www/fswiki/Makefile 323887 2013-07-29 14:20:21Z kuriyama $
+# $FreeBSD: www/fswiki/Makefile 326148 2013-09-03 13:06:13Z az $
 
 PORTNAME=	fswiki
 PORTVERSION=	3.6.2
@@ -15,7 +15,7 @@ RUN_DEPENDS=	ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode \
 	p5-HTML-Template>=0:${PORTSDIR}/www/p5-HTML-Template
 
 USE_ZIP=	yes
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 post-extract:
