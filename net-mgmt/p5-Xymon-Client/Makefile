@@ -2,7 +2,7 @@
 # Date created:		2012-05-07
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net-mgmt/p5-Xymon-Client/Makefile,v 1.2 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Xymon-Client/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	Xymon-Client
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Interface to xymon/hobbit client
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Xymon::Client.3
 
