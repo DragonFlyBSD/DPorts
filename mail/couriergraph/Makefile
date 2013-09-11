@@ -2,7 +2,7 @@
 # Date created:			11 September 2005
 # Whom:				Xavier Beaudouin (kiwi@oav.net)
 #
-# $FreeBSD: ports/mail/couriergraph/Makefile,v 1.13 2012/11/17 05:59:00 svnexp Exp $
+# $FreeBSD: mail/couriergraph/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	couriergraph
@@ -19,7 +19,7 @@ RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool	\
 		p5-File-Tail>=0:${PORTSDIR}/devel/p5-File-Tail
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 DATADIR?=	/var/db/couriergraph
 COURIERGRAPH_USER?=	${WWWOWN}
