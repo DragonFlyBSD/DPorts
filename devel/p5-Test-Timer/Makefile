@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Timer
-# Date created:		2011-10-06
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Timer/Makefile,v 1.3 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Timer/Makefile 326868 2013-09-10 06:44:11Z az $
 
 PORTNAME=	Test-Timer
 PORTVERSION=	0.05
@@ -22,7 +18,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 
 PKGNAMEPREFIX=	p5-
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Timer.3 Test::Timer::TimeoutException.3
 
