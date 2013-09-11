@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xfindproxy/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xfindproxy/Makefile 326722 2013-09-08 12:35:41Z zeising $
 
 PORTNAME=	xfindproxy
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
