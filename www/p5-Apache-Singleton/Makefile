@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: ports/www/p5-Apache-Singleton/Makefile,v 1.7 2013/01/18 14:54:38 svnexp Exp $
+# $FreeBSD: www/p5-Apache-Singleton/Makefile 326054 2013-09-02 18:41:05Z az $
 
 PORTNAME=	Apache-Singleton
 PORTVERSION=	0.15
@@ -15,7 +15,8 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-Class-Singleton>=0:${PORTSDIR}/devel/p5-Class-Singleton
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Apache::Singleton.3 \
 	Apache::Singleton::Process.3 \
