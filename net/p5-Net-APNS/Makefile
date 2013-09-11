@@ -2,7 +2,7 @@
 # Date created:		14 Aug 2012
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-APNS/Makefile,v 1.2 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-APNS/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-APNS
@@ -21,7 +21,8 @@ RUN_DEPENDS=	\
 	p5-Sub-Exporter>=0.982:${PORTSDIR}/devel/p5-Sub-Exporter
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::APNS.3 \
 	Net::APNS::Notification.3
