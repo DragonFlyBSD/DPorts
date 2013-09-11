@@ -1,8 +1,8 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: portuguese/hunspell/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: portuguese/hunspell/Makefile 326788 2013-09-09 10:08:26Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20130331
+PORTVERSION=	20130902
 CATEGORIES=	portuguese textproc
 MASTER_SITES=	http://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/ \
 		http://www.broffice.org/files/:BR \
