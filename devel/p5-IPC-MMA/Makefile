@@ -1,9 +1,5 @@
-# New ports collection makefile for:	IPC-MMA
-# Date created:	   24 May 2011
-# Whom:		   Peter Vereshagin <peter@vereshagin.org>
-#
-# $FreeBSD: ports/devel/p5-IPC-MMA/Makefile,v 1.3 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Peter Vereshagin <peter@vereshagin.org>
+# $FreeBSD: devel/p5-IPC-MMA/Makefile 326639 2013-09-07 14:36:58Z az $
 
 PORTNAME=	IPC-MMA
 PORTVERSION=	0.81
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Devel-CheckOS>=0:${PORTSDIR}/devel/p5-Devel-CheckOS
 LIB_DEPENDS=	mm.14:${PORTSDIR}/devel/mm
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IPC::MMA.3
 
