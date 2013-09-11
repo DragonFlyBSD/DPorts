@@ -2,7 +2,7 @@
 # Date created:				December 14th 2006
 # Whom:	      				Xavier Beaudouin <kiwi@oav.net>
 #
-# $FreeBSD: ports/net-mgmt/routers2-extensions/Makefile,v 1.8 2012/11/17 06:00:37 svnexp Exp $
+# $FreeBSD: net-mgmt/routers2-extensions/Makefile 326167 2013-09-03 16:18:49Z az $
 #
 
 PORTNAME=	routers2-extensions
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/www/routers2/routers2.cgi:${PORTSDIR}/net-mgmt/routers
 
 WRKSRC=		${WRKDIR}/routers2-v${PORTVERSION}/extensions
 
-USE_PERL5=	YES
+USES=		perl5
 
 NO_BUILD=	YES
 
