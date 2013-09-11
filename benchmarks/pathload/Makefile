@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pathload
-# Date created:			19 May 2005
-# Whom:				dikshie <dikshie@lapi.itb.ac.id>
-#
-# $FreeBSD: ports/benchmarks/pathload/Makefile,v 1.5 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: dikshie <dikshie@lapi.itb.ac.id>
+# $FreeBSD: benchmarks/pathload/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	pathload
 PORTVERSION=	1.3.2
@@ -15,7 +11,7 @@ MAINTAINER=	dikshie@lapi.itb.ac.id
 COMMENT=	A measurement tool for network path available bandwidth estimation
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 MAKEFILE=	makefile
