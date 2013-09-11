@@ -1,8 +1,8 @@
-# $FreeBSD: japanese/font-mona-ipa/Makefile 316975 2013-04-30 23:49:46Z hrs $
+# $FreeBSD: japanese/font-mona-ipa/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	mona-ipa
 PORTVERSION=	1.0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	http://www.geocities.jp/ipa_mona/
 PKGNAMEPREFIX=	ja-font-
