@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/p5-WeakRef/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: devel/p5-WeakRef/Makefile 326728 2013-09-08 13:59:48Z az $
 
 PORTNAME=	WeakRef
 PORTVERSION=	0.01
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	An API to the Perl weak references
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WeakRef.3
 
