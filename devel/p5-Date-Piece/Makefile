@@ -1,5 +1,5 @@
 # Created by:	      				Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Piece/Makefile 317018 2013-05-01 12:53:25Z erwin $
+# $FreeBSD: devel/p5-Date-Piece/Makefile 326581 2013-09-07 08:23:45Z az $
 
 PORTNAME=	Date-Piece
 PORTVERSION=	0.0.3
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Date-Simple>=3.03:${PORTSDIR}/devel/p5-Date-Simple
 RUN_DEPENDS=	p5-Date-Simple>=3.03:${PORTSDIR}/devel/p5-Date-Simple
 #TEST_DEPENDS=	p5-Test-Inter>=0:${PORTSDIR}/devel/p5-Test-Inter
 
-PERL_MODBUILD=	YES
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=	day.1
 MAN3=	Date::Piece.3
