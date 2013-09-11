@@ -2,7 +2,7 @@
 # Date created:		2006-09-25
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/chinese/p5-Lingua-ZH-HanDetect/Makefile,v 1.3 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/p5-Lingua-ZH-HanDetect/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	Lingua-ZH-HanDetect
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Guess Chinese text\'s variant and encoding
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Lingua::ZH::HanDetect.3
 
