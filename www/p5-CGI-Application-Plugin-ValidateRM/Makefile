@@ -1,0 +1,25 @@
+# Created by: Espen Tagestad <espen@tagestad.no>
+# $FreeBSD: www/p5-CGI-Application-Plugin-ValidateRM/Makefile 326455 2013-09-05 23:57:35Z lippe $
+
+PORTNAME=	CGI-Application-Plugin-ValidateRM
+PORTVERSION=	2.5
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	lippe@FreeBSD.org
+COMMENT=	Help validate forms with the CGI::Application framework
+
+BUILD_DEPENDS=	p5-HTML-FillInForm>=0:${PORTSDIR}/www/p5-HTML-FillInForm \
+		p5-Data-FormValidator>=0:${PORTSDIR}/textproc/p5-Data-FormValidator \
+		p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USES=		perl5
+USE_PERL5=	modbuild
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+MAN3=		CGI::Application::Plugin::ValidateRM.3
+
+.include <bsd.port.mk>
