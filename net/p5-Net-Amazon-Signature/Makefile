@@ -2,7 +2,7 @@
 # Date created:		2008-03-20
 # Whom:			Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Amazon-Signature/Makefile,v 1.4 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Amazon-Signature/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-Amazon-Signature
@@ -19,7 +19,8 @@ TEST_DEPENDS=	p5-Spiffy>=0:${PORTSDIR}/devel/p5-Spiffy \
 		p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Amazon::Signature.3
 
