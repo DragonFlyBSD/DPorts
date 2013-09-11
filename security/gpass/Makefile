@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: security/gpass/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/gpass/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gpass
 PORTVERSION=	0.5.1
@@ -15,11 +15,10 @@ LIB_DEPENDS=	mcrypt:${PORTSDIR}/security/mcrypt \
 
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -export-dynamic
-USE_GMAKE=	yes
 
 MAN1=		gpass.1 gpass.ja.1 gpass-convert.1 gpass-convert.ja.1
 
-USES=        pathfix
+USES=        pathfix gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk20 libgnomeui intltool libglade2
 GCONF_SCHEMAS=	gpass.schemas
 
