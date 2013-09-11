@@ -2,7 +2,7 @@
 # Date created:				24 July 2009
 # Whom:					Bill Brinzer <bill.brinzer@gmail.com>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Controller-RequestToken/Makefile,v 1.7 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Controller-RequestToken/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	Catalyst-Controller-RequestToken
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Catalyst-Action-RenderView>=0:${PORTSDIR}/www/p5-Catalyst-Acti
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Controller::RequestToken.3 \
 	Catalyst::Controller::RequestToken::Action::CreateToken.3 \
