@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: astro/p5-Astro-Sunrise/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: astro/p5-Astro-Sunrise/Makefile 326732 2013-09-08 14:43:19Z tobez $
 
 PORTNAME=	Astro-Sunrise
-PORTVERSION=	0.91
+PORTVERSION=	0.92
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
