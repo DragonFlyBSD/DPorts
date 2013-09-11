@@ -602,9 +602,15 @@
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_search.py
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_search.pyc
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_search.pyo
+%%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_serienjunkies.py
+%%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_serienjunkies.pyc
+%%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_serienjunkies.pyo
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_stmusic.py
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_stmusic.pyc
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_stmusic.pyo
+%%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_torrent411.py
+%%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_torrent411.pyc
+%%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_torrent411.pyo
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_torrentleech.py
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_torrentleech.pyc
 %%PYTHON_SITELIBDIR%%/flexget/plugins/urlrewrite_torrentleech.pyo
