@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-LoadAllModules/Makefile 318694 2013-05-21 13:31:40Z kuriyama $
+# $FreeBSD: devel/p5-Test-LoadAllModules/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	Test-LoadAllModules
 PORTVERSION=	0.022
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-List-MoreUtils>0:${PORTSDIR}/lang/p5-List-MoreUtils
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::LoadAllModules.3
 
