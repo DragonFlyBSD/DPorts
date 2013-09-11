@@ -1,17 +1,13 @@
-# New ports collection makefile for:	AnyEvent::Twitter
-# Date created:				07 Nov 2009
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: net/p5-AnyEvent-Twitter/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: net/p5-AnyEvent-Twitter/Makefile 326068 2013-09-02 19:32:09Z az $
 
 PORTNAME=	AnyEvent-Twitter
-PORTVERSION=	0.62
+PORTVERSION=	0.64
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	sahil@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Implementation of the Twitter API for AnyEvent
 
 BUILD_DEPENDS=	p5-AnyEvent>=5.34:${PORTSDIR}/devel/p5-AnyEvent \
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-AnyEvent>=5.34:${PORTSDIR}/devel/p5-AnyEvent \
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AnyEvent::Twitter.3
 
