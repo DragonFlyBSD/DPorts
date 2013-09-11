@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.ORG
-# $FreeBSD: x11-toolkits/wxgtk28/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/wxgtk28/Makefile 326133 2013-09-03 10:23:55Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.8.12
@@ -17,11 +17,10 @@ LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png\
 		tiff.4:${PORTSDIR}/graphics/tiff\
 		expat.6:${PORTSDIR}/textproc/expat2
 
-USES=		iconv
+USES=		iconv gmake pkgconfig
 USE_BZIP2=	yes
-USE_XORG=	x11 sm xxf86vm xinerama 
+USE_XORG=	x11 sm xxf86vm xinerama
 USE_GL=		glu
-USE_GMAKE=	yes
 USE_GNOME=	gtk20 pangox-compat
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libpng=sys\
