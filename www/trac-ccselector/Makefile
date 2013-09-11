@@ -2,7 +2,7 @@
 # Date created:                      Dec 10 2008
 # Whom:                              glarkin
 #
-# $FreeBSD: ports/www/trac-ccselector/Makefile,v 1.6 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-ccselector/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	ccselector
@@ -26,7 +26,7 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=    cc_selector
 PYDISTUTILS_PKGVERSION= ${PORTVERSION:R}
-PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${_PYTHON_VERSION}
+PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
 post-install:
