@@ -1,5 +1,5 @@
 # Created by: Manuel Creach <manuel.creach@icloud.com>
-# $FreeBSD: ports/audio/libshairport/Makefile,v 1.1 2013/02/18 04:49:58 svnexp Exp $
+# $FreeBSD: audio/libshairport/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	libshairport
 PORTVERSION=	1.2.0.20310
@@ -11,7 +11,7 @@ MAINTAINER=	manuel.creach@icloud.com
 COMMENT=	An Airport Extreme Emulator
 
 FETCH_ARGS=	-pRr
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtoolize
 ACLOCAL_ARGS=	-I.
 AUTOMAKE_ARGS=	--add-missing
