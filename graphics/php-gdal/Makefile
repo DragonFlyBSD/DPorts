@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/php-gdal/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
+# $FreeBSD: graphics/php-gdal/Makefile 326666 2013-09-07 17:29:08Z sunpoet $
 
 PORTNAME=	gdal
-PORTVERSION=	1.10.0
+PORTVERSION=	1.10.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.osgeo.org/gdal/ \
 		ftp://ftp.remotesensing.org/pub/gdal/ \
@@ -15,7 +15,7 @@ COMMENT=	PHP binding for GDAL
 LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/swig2.0:${PORTSDIR}/devel/swig20
-LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
+LIB_DEPENDS=	libgdal.so:${PORTSDIR}/graphics/gdal
 
 ALL_TARGET=	php_gdal.so php_gdalconst.so php_ogr.so php_osr.so
 CFLAGS+=	-I${LOCALBASE}/include -fPIC
