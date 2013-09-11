@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/mail/anomy-sanitizer/Makefile,v 1.10 2013/01/09 20:04:53 svnexp Exp $
+# $FreeBSD: mail/anomy-sanitizer/Makefile 326265 2013-09-04 09:48:54Z az $
 
 PORTNAME=	anomy-sanitizer
 PORTVERSION=	1.76
@@ -10,7 +10,7 @@ MASTER_SITES=	http://mailtools.anomy.net/dist/
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Sanitize and clean incoming/outgoing mail
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/anomy
