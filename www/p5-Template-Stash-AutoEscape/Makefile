@@ -2,7 +2,7 @@
 # Date created:		04 Sep 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Template-Stash-AutoEscape/Makefile,v 1.5 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Stash-AutoEscape/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	Template-Stash-AutoEscape
@@ -21,7 +21,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Stash::AutoEscape.3
 
