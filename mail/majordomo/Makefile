@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: mail/majordomo/Makefile 320155 2013-06-07 07:01:23Z az $
+# $FreeBSD: mail/majordomo/Makefile 326319 2013-09-04 20:27:13Z anders $
 
 PORTNAME=	majordomo
 PORTVERSION=	1.94.5
@@ -27,6 +27,11 @@ PKGMESSAGE=	${FILESDIR}/post-install-notes
 DOCSDIR=	${PREFIX}/${PORTNAME}/doc
 
 .include <bsd.port.pre.mk>
+
+pre-fetch:
+.if !defined(BATCH) && !defined(PACKAGE_BUILDING)
+	${DIALOG} --yesno "WARNING: Majordomo is a really old mail list manager. The last version was released in january 2000, and there does not seem to be any updates coming. You might want to consider using mailman instead. Are you sure you want to install majordomo?" 8 70 || ${FALSE}
+.endif
 
 post-patch:
 .if defined(WITH_POSTFIX_APPROVE_PATCH)
