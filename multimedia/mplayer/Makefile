@@ -1,5 +1,5 @@
 # Created by: Thomas E. Zander with help from Vladimir Kushnir
-# $FreeBSD: multimedia/mplayer/Makefile 324745 2013-08-14 22:52:44Z ak $
+# $FreeBSD: multimedia/mplayer/Makefile 326088 2013-09-02 20:51:40Z bapt $
 
 PORTNAME=	mplayer
 PORTVERSION=	${MPLAYER_PORT_VERSION}
@@ -43,6 +43,7 @@ MANCOMPRESSED=	no
 SUB_FILES=	pkg-message
 
 CONFFILES=	example.conf input.conf menu.conf dvb-menu.conf
+USES=		pkgconfig
 
 .include <bsd.port.pre.mk>
 
