@@ -1,5 +1,5 @@
 # Created by: pauls@utdallas.edu
-# $FreeBSD: www/p5-CIF-Client/Makefile 319063 2013-05-25 18:00:45Z az $
+# $FreeBSD: www/p5-CIF-Client/Makefile 325974 2013-09-02 11:04:10Z az $
 
 PORTNAME=	CIF-Client
 PORTVERSION=	0.21
@@ -34,7 +34,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0.31:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Text-Table>=1.114:${PORTSDIR}/textproc/p5-Text-Table
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CIF::Client.3
 
