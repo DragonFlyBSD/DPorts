@@ -2,7 +2,7 @@
 # Date created:		29 October 2009
 # Whom:			Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/ruby-dbd_sqlite3/Makefile,v 1.3 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/ruby-dbd_sqlite3/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	dbd_sqlite3
