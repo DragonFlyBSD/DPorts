@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Growl-GNTP/Makefile,v 1.6 2012/12/02 20:11:44 svnexp Exp $
+# $FreeBSD: net/p5-Growl-GNTP/Makefile 326481 2013-09-06 09:21:19Z az $
 
 PORTNAME=	Growl-GNTP
 PORTVERSION=	0.16
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Data-UUID>=0:${PORTSDIR}/devel/p5-Data-UUID \
 		p5-Crypt-CBC>=0:${PORTSDIR}/security/p5-Crypt-CBC
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Growl::GNTP.3
 
