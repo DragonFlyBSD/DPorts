@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter-gtk/Makefile 318546 2013-05-19 19:40:06Z kwm $
+# $FreeBSD: graphics/clutter-gtk/Makefile 326088 2013-09-02 20:51:40Z bapt $
 
 PORTNAME=	clutter-gtk
 PORTVERSION=	0.10.8
@@ -14,9 +14,8 @@ COMMENT=	GTK+ Integration library for Clutter
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GL=		gl
-USES=		gettext pathfix
+USES=		gettext pathfix gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20 ltverhack gnomeprefix
 USE_XORG=	xp x11
