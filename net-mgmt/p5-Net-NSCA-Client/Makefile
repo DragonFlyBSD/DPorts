@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/p5-Net-NSCA-Client/Makefile,v 1.2 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-NSCA-Client/Makefile 326248 2013-09-04 05:52:04Z az $
 
 PORTNAME=	Net-NSCA-Client
 PORTVERSION=	0.009002
@@ -40,7 +40,8 @@ TEST_DEPENDS=	p5-Test-Class>=0.37:${PORTSDIR}/devel/p5-Test-Class \
 		p5-Test-Requires>=0.06:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-TCP>=1.17:${PORTSDIR}/devel/p5-Test-TCP
 		
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::NSCA::Client.3 \
 		Net::NSCA::Client::DataPacket.3 \
