@@ -2,7 +2,7 @@
 # Date created:	       10 december 2009
 # Whom:		       joris
 #
-# $FreeBSD: ports/net-mgmt/p5-SNMP-Trapinfo/Makefile,v 1.3 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-SNMP-Trapinfo/Makefile 326167 2013-09-03 16:18:49Z az $
 #
 
 PORTNAME=	SNMP-Trapinfo
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	joris.dedieu@gmail.com
 COMMENT=	Process an SNMP trap with perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SNMP::Trapinfo.3
 
