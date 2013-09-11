@@ -2,7 +2,7 @@
 # Date created:		2010-03-11
 # Whom:			Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: ports/www/p5-CGI-EncryptForm/Makefile,v 1.5 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-EncryptForm/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	CGI-EncryptForm
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Crypt-HCE_SHA>=0:${PORTSDIR}/security/p5-Crypt-HCE_SHA \
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::EncryptForm.3
 
