@@ -18,6 +18,7 @@ COMMENT=	Embed Xine player into browser
 
 LIB_DEPENDS=	xine.2:${PORTSDIR}/multimedia/libxine
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_NPAPI=	native
