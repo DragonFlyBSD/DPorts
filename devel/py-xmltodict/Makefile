@@ -1,8 +1,8 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-xmltodict/Makefile 325344 2013-08-25 12:54:34Z olivierd $
+# $FreeBSD: devel/py-xmltodict/Makefile 325672 2013-08-30 11:48:18Z wg $
 
 PORTNAME=	xmltodict
-PORTVERSION=	0.6.0
+PORTVERSION=	0.7.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ COMMENT=	XML parser that returns python dictionaries
 
 LICENSE=	MIT
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
 .include <bsd.port.pre.mk>
