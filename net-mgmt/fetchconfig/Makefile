@@ -2,7 +2,7 @@
 # Date created:				21 December 2008
 # Whom:					salexanov@gmail.com
 #
-# $FreeBSD: ports/net-mgmt/fetchconfig/Makefile,v 1.11 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/fetchconfig/Makefile 326167 2013-09-03 16:18:49Z az $
 #
 
 PORTNAME=	fetchconfig
@@ -19,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	p5-Net-Telnet>=0:${PORTSDIR}/net/p5-Net-Telnet
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MODULES=	model/Abstract.pm model/CiscoCAT.pm model/CiscoIOS.pm \
