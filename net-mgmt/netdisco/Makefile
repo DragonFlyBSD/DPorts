@@ -1,8 +1,8 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: net-mgmt/netdisco/Makefile 323092 2013-07-16 05:45:38Z miwi $
+# $FreeBSD: net-mgmt/netdisco/Makefile 326420 2013-09-05 17:19:32Z wg $
 
 PORTNAME=	netdisco
-PORTVERSION=	1.3.1
+PORTVERSION=	1.3.2
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF
 
@@ -31,7 +31,7 @@ RUN_DEPENDS+=	${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2 \
 USERS=		netdisco
 GROUPS=		netdisco
 
-USE_PERL5=	yes
+USES=		perl5
 USE_PGSQL=	yes
 USE_APACHE_RUN=	22+
 
