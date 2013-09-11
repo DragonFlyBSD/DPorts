@@ -2,7 +2,7 @@
 # Date created:         November 8, 2010
 # Whom:                 pgollucci@p6m7g8.com
 #
-# $FreeBSD: ports/net-mgmt/check_mysql_health/Makefile,v 1.5 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/check_mysql_health/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	check_mysql_health
@@ -26,7 +26,7 @@ CONFIGURE_ARGS=	--with-statefiles-dir=${NAGIOSDIR} \
 		--libexecdir=${PREFIX}/libexec/nagios \
 		--with-perl=${PERL}
 
-USE_PERL5=	yes
+USES=		perl5
 
 NAGIOSUSER?=	nagios
 NAGIOSGROUP?=	nagios
