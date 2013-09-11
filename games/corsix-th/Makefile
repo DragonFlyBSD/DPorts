@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/corsix-th/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: games/corsix-th/Makefile 326377 2013-09-05 09:57:52Z madpilot $
 
 PORTNAME=	corsixth
 PORTVERSION=	0.21
@@ -14,9 +14,9 @@ COMMENT=	Open source clone of Theme Hospital
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
-USES=		cmake
+USES=		cmake pkgconfig
 USE_LUA=	yes
 USE_SDL=	mixer
 USE_DOS2UNIX=	CMake/FindFFmpeg.cmake \
