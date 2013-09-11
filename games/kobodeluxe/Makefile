@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: games/kobodeluxe/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/kobodeluxe/Makefile 325494 2013-08-27 23:36:12Z bapt $
 
 PORTNAME=	kobodeluxe
 PORTVERSION=	0.5.1
@@ -16,10 +16,6 @@ USE_BZIP2=	yes
 USE_SDL=	image sdl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sharedstatedir=${SCOREDIR} --enable-oss
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 MAN6=		kobodl.6
 
@@ -56,6 +52,8 @@ post-patch:
 		s|-lSDL$$||; s|SDL/SDL|SDL|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|$$(datadir)/games/kobo-deluxe|${DATADIR}|' \
 		${WRKSRC}/data/Makefile.in
+	@${REINPLACE_CMD} -e 's|pipe2|kobopipe2|g' ${WRKSRC}/enemies.h \
+		${WRKSRC}/enemy.cpp
 
 post-install:
 	${CHGRP} games ${PREFIX}/bin/kobodl
