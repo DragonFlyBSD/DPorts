@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net::LibLO
-# Date created:		01 May 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: audio/p5-Net-LibLO/Makefile 322948 2013-07-13 17:23:19Z deischen $
-#
+# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
+# $FreeBSD: audio/p5-Net-LibLO/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	Net-LibLO
 PORTVERSION=	0.06
@@ -17,8 +13,8 @@ COMMENT=	Perl extension for liblo Lightweight OSC library
 
 LIB_DEPENDS=	lo:${PORTSDIR}/audio/liblo
 
-PERL_CONFIGURE=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig perl5
+USE_PERL5=	configure
 
 MAN3=	\
 	Net::LibLO.3 \
