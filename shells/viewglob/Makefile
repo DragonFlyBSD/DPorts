@@ -1,9 +1,5 @@
-# New ports collection makefile for:	viewglob
-# Date created:			06 Oct 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/shells/viewglob/Makefile,v 1.19 2012/11/17 06:01:24 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: shells/viewglob/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	viewglob
 PORTVERSION=	2.0.4
@@ -17,6 +13,7 @@ COMMENT=	A GTK+ add-on to bash and zsh
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
+USES=		pkgconfig
 USE_XORG=	x11
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
