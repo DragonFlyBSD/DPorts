@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/p5-jmx4perl/Makefile 322206 2013-07-02 22:09:53Z zi $
+# $FreeBSD: net-mgmt/p5-jmx4perl/Makefile 326245 2013-09-04 03:27:37Z az $
 
 PORTNAME=	jmx4perl
 PORTVERSION=	1.07
@@ -38,7 +38,8 @@ RUN_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1 =	cacti_jmx4perl.1 \
 	check_jmx4perl.1 \
