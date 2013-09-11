@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: benchmarks/expedite/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: benchmarks/expedite/Makefile 326373 2013-09-05 09:15:49Z bapt $
 
 PORTNAME=	expedite
 PORTVERSION=	1.7.8
@@ -15,6 +15,7 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_EFL=	evas
 USE_EFL_EVAS_ENGINES=	buffer
 USE_LDCONFIG=	yes
