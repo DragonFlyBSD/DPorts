@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gnote/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/gnote/Makefile 326507 2013-09-06 14:30:42Z bapt $
 #   $MCom: ports/deskutils/gnote/Makefile,v 1.14 2010/11/15 16:21:49 kwm Exp $
 
 PORTNAME=	gnote
@@ -19,11 +19,10 @@ LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		boost_filesystem:${PORTSDIR}/devel/boost-libs \
 		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
 
-USE_GMAKE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomehack gnomeprefix gconf2 gtk20 intltool libxml2 libxslt \
 		ltverhack gnomepanel
-USES=		gettext
+USES=		gettext gmake pkgconfig
 INSTALLS_OMF=	yes
 GCONF_SCHEMAS=	gnote.schemas
 USE_AUTOTOOLS=	libtool
