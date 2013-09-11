@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Plack-Middleware-IEnosniff/Makefile,v 1.5 2013/01/14 22:54:02 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-IEnosniff/Makefile 325965 2013-09-02 10:00:38Z az $
 
 PORTNAME=	Plack-Middleware-IEnosniff
 PORTVERSION=	0.02
@@ -14,7 +14,8 @@ RUN_DEPENDS=	\
 	p5-Plack>0:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::IEnosniff.3
 
