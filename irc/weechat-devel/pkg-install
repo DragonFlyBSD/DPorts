@@ -1,0 +1,6 @@
+#!/bin/sh
+# $FreeBSD: irc/weechat-devel/pkg-install 325835 2013-08-31 22:47:13Z jase $
+
+if [ "${2}" = "POST-INSTALL" ]; then
+	ln -sf ${PKG_PREFIX}/bin/weechat ${PKG_PREFIX}/bin/weechat-curses
+fi
