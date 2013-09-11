@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: games/gnmm/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/gnmm/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	gnmm
 PORTVERSION=	0.1.2
@@ -16,6 +16,6 @@ USES=		pathfix gettext iconv
 USE_GNOME=	gnomeprefix gnomelibs gdkpixbuf
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--with-libiconv-prefix=${LOCALBASE}"
+CONFIGURE_ARGS=	"${ICONV_CONFIGURE_ARG}"
 
 .include <bsd.port.mk>
