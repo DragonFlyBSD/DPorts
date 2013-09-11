@@ -2,7 +2,7 @@
 # Date created:				22 Jul 2004
 # Whom:					Bruce M Simpson <bms@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/nagios-silfreed-plugins/Makefile,v 1.9 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-silfreed-plugins/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	nagios-silfreed-plugins
@@ -33,7 +33,7 @@ RUN_DEPENDS+=	\
 	${LOCALBASE}/bin/expect:${PORTSDIR}/lang/expect
 .endif
 
-USE_PERL5=	yes
+USES=		perl5
 NO_WRKSUBDIR=	yes
 
 NAGIOS_PLUGIN_DIR=	${PREFIX}/libexec/nagios
