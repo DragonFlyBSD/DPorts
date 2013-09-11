@@ -2,7 +2,7 @@
 # Date created:		Dec 26, 2006
 # Whom:			kuriyama@FreeBSD.org
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-JSON/Makefile,v 1.10 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-JSON/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	Template-Plugin-JSON
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-JSON>=2.12:${PORTSDIR}/converters/p5-JSON \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Plugin::JSON.3
 
