@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: devel/librcc/Makefile 318958 2013-05-24 11:46:11Z bdrewery $
+# $FreeBSD: devel/librcc/Makefile 326220 2013-09-03 19:45:46Z antoine $
 
 PORTNAME=	librcc
 PORTVERSION=	0.2.9
@@ -21,8 +21,7 @@ LIB_DEPENDS=	rcd.1:${PORTSDIR}/devel/librcd \
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	lthack libxml2
-USE_GMAKE=	yes
-USES=		pathfix iconv
+USES=		gmake iconv pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoheader
 
