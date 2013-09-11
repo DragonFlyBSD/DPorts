@@ -1,5 +1,5 @@
 # Created by: Zastupov Stepan [RedChrom] <redchrom@mail.ru>
-# $FreeBSD: multimedia/audacious/Makefile 324331 2013-08-07 06:35:24Z oliver $
+# $FreeBSD: multimedia/audacious/Makefile 326105 2013-09-02 22:11:23Z bapt $
 
 PORTNAME=	audacious
 PORTVERSION=	3.4
@@ -14,6 +14,7 @@ LIB_DEPENDS=	mcs:${PORTSDIR}/devel/libmcs \
 		xml2:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_XORG=	x11 sm
 USE_BZIP2=	yes
