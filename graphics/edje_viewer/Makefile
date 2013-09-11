@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: graphics/edje_viewer/Makefile 318567 2013-05-20 03:05:29Z gblach $
+# $FreeBSD: graphics/edje_viewer/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	edje_viewer
 PORTVERSION=	20130520
@@ -9,6 +9,7 @@ MASTER_SITES=	LOCAL/gblach/e17/extra/
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	A simple viewer for .edj files
 
+USES=		pkgconfig
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
