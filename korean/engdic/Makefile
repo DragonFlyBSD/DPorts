@@ -1,20 +1,27 @@
 # Created by: Oh Junseon <hollywar@mail.holywar.net>
-# $FreeBSD: korean/engdic/Makefile 321493 2013-06-21 18:20:19Z bsam $
+# $FreeBSD: korean/engdic/Makefile 326196 2013-09-03 18:40:12Z jkim $
 
 PORTNAME=	engdic
 PORTVERSION=	0.2
+PORTREVISION=	1
 CATEGORIES=	korean deskutils
-MASTER_SITES=	ftp://ftp.holywar.net/pub/engdic/ \
-		ftp://ftp.kr.freebsd.org/pub/FreeBSD-kr/distfiles/
+MASTER_SITES=	ftp://ftp.kr.freebsd.org/pub/FreeBSD-kr/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	English dictionary utility for Korean
 
-ALL_TARGET=	clean all
+EXTRACT_AFTER_ARGS=	--exclude '*.o'
+MAKE_ARGS=	CC="${CC}"
+PLIST_FILES=	bin/edic bin/engdic
+PORTDATA=	[a-z].dic.gz
 
 post-patch:
-	@for f in ${WRKSRC}/Makefile ${WRKSRC}/engdic.h; do \
-		${REINPLACE_CMD} -e 's,/usr/local,${PREFIX},g' $$f; \
-	done
+	${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|' ${WRKSRC}/engdic.h
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/engdic ${PREFIX}/bin
+	${LN} -sf ${PREFIX}/bin/engdic ${PREFIX}/bin/edic
+	${MKDIR} ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/data/[a-z].dic.gz ${DATADIR}
 
 .include <bsd.port.mk>
