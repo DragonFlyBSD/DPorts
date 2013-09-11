@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ljit
-# Date created:				09 Sep 2004
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: deskutils/ljit/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: deskutils/ljit/Makefile 326504 2013-09-06 14:23:20Z bapt $
 
 PORTNAME=	ljit
 PORTVERSION=	0.2.5
@@ -23,7 +19,7 @@ RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GNOME=	gtk20
 
 PLIST_FILES=	bin/ljit share/locale/ru/LC_MESSAGES/ljit.mo
