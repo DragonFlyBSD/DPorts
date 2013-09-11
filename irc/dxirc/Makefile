@@ -1,4 +1,4 @@
-# $FreeBSD: irc/dxirc/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: irc/dxirc/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	dxirc
 PORTVERSION=	1.10.0
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	FOX-1.6:${PORTSDIR}/x11-toolkits/fox16
 
 USE_XORG=	xft
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
