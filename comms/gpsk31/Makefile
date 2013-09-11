@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gpsk31
-# Date created:		2005-05-27
-# Whom:				Søren Straarup <xride@x12.dk>
-#
-# $FreeBSD: ports/comms/gpsk31/Makefile,v 1.15 2012/11/17 05:54:59 svnexp Exp $
+# Created by: Søren Straarup <xride@x12.dk>
+# $FreeBSD: comms/gpsk31/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	gpsk31
 PORTVERSION=	0.3
@@ -13,6 +10,7 @@ MASTER_SITES=	http://www.qsl.net/pg4i/download/
 MAINTAINER=	xride@FreeBSD.org
 COMMENT=	A gtk psk31 client
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 
