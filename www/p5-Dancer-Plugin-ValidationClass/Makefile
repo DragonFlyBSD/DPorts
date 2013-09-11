@@ -2,7 +2,7 @@
 # Date created:		27 Jul 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Dancer-Plugin-ValidationClass/Makefile,v 1.7 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Dancer-Plugin-ValidationClass/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	Dancer-Plugin-ValidationClass
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-Validation-Class>0:${PORTSDIR}/devel/p5-Validation-Class
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Dancer::Plugin::ValidationClass.3
 
