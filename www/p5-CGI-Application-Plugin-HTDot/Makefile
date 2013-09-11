@@ -2,7 +2,7 @@
 # Date created:				05 March 2006
 # Whom:					Espen Tagestad <espen@tagestad.no>
 #
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-HTDot/Makefile,v 1.10 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-HTDot/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	CGI-Application-Plugin-HTDot
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-CGI-Application>=4.0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Application::Plugin::HTDot.3
 
