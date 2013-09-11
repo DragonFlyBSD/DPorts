@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-SMS-SMS77
-# Date created:				2010-02-04
-# Whom:					Frank Steinborn <steinex@nognu.de>
-#
-# $FreeBSD: ports/comms/p5-SMS-SMS77/Makefile,v 1.4 2012/11/17 05:55:00 svnexp Exp $
+# Created by: Frank Steinborn <steinex@nognu.de>
+# $FreeBSD: comms/p5-SMS-SMS77/Makefile 325894 2013-09-01 18:09:54Z az $
 
 PORTNAME=	SMS-SMS77
 PORTVERSION=	0.01
@@ -19,7 +16,7 @@ MAN1=		sms77send.1
 MAN3=		SMS::SMS77::Message.3 \
 		SMS::SMS77.3
 
-USE_PERL5=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
