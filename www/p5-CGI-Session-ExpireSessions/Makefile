@@ -2,7 +2,7 @@
 # Date created:		11 March 2009
 # Whom:			Gerard Seibert <gerard@seibercom.net>
 #
-# $FreeBSD: www/p5-CGI-Session-ExpireSessions/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/p5-CGI-Session-ExpireSessions/Makefile 326150 2013-09-03 13:17:36Z az $
 #
 
 PORTNAME=	CGI-Session-ExpireSessions
@@ -23,6 +23,7 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
 MAN3=	CGI::Session::ExpireSessions.3
 MANCOMPRESSED=	no
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
