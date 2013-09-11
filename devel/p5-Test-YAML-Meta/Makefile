@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-Test-YAML-Meta/Makefile 321715 2013-06-24 20:25:23Z lippe $
+# $FreeBSD: devel/p5-Test-YAML-Meta/Makefile 326818 2013-09-09 15:55:47Z az $
 
 PORTNAME=	Test-YAML-Meta
 PORTVERSION=	0.20
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Test-YAML-Valid>=0:${PORTSDIR}/devel/p5-Test-YAML-Valid \
 		p5-Test-CPAN-Meta-YAML>=0.17:${PORTSDIR}/devel/p5-Test-CPAN-Meta-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::YAML::Meta.3
 
