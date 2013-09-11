@@ -1,7 +1,7 @@
-# $FreeBSD: japanese/font-ume/Makefile 321174 2013-06-18 08:13:08Z hrs $
+# $FreeBSD: japanese/font-ume/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	ume
-PORTVERSION=	0.0.452
+PORTVERSION=	0.0.455
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=	${PORTNAME}-font/22212
