@@ -2,7 +2,7 @@
 # Date created:                2005-11-02
 # Whom:                        Choe, Cheng-Dae
 #
-# $FreeBSD: ports/databases/py-dbutils/Makefile,v 1.12 2012/11/17 05:55:22 svnexp Exp $
+# $FreeBSD: databases/py-dbutils/Makefile 301510 2012-07-25 06:32:06Z cs $
 #
 
 PORTNAME=	dbutils
