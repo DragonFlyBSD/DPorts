@@ -2,7 +2,7 @@
 # Date created:                      May 18 2007
 # Whom:                              Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/www/trac-tocmacro/Makefile,v 1.14 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-tocmacro/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	tocmacro
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracTocMacro
-PLIST_SUB+=	PORTVERSION=${PORTVERSION} PYTHONVERSION=${_PYTHON_VERSION}
+PLIST_SUB+=	PORTVERSION=${PORTVERSION} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
 .include <bsd.port.mk>
