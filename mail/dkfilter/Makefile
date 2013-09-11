@@ -2,7 +2,7 @@
 # Date created:				3 Nov 2005
 # Whom:					Yoshisato YANAGISAWA
 #
-# $FreeBSD: ports/mail/dkfilter/Makefile,v 1.14 2012/11/17 05:59:01 svnexp Exp $
+# $FreeBSD: mail/dkfilter/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	dkfilter
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	p5-Crypt-OpenSSL-RSA>=0:${PORTSDIR}/security/p5-Crypt-OpenSSL-RSA
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	dkfilter_in dkfilter_out
 
 USERS=		${DKFILTER_USERNAME}
