@@ -1,19 +1,19 @@
 # Created by: chinsan
-# $FreeBSD: devel/paexec/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: devel/paexec/Makefile 325645 2013-08-30 00:59:01Z jgh $
 
 PORTNAME=	paexec
-PORTVERSION=	0.18.0
+PORTVERSION=	0.19.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Parallel executor, distributes tasks over network
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	mk-configure>=0.23:${PORTSDIR}/devel/mk-configure
-LIB_DEPENDS=	maa:${PORTSDIR}/devel/libmaa
-RUN_DEPENDS=	runawk:${PORTSDIR}/lang/runawk
+BUILD_DEPENDS=	mkcmake:${PORTSDIR}/devel/mk-configure \
+		runawk:${PORTSDIR}/lang/runawk
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
@@ -50,5 +50,8 @@ do-build:
 do-install:
 	@${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/mkcmake -C ${WRKSRC} \
 		${INSTALL_TARGET}
+.if ${PORT_OPTIONS:MDOCS}
+	${INSTALL_DATA} ${WRKSRC}/presentation/${PORTNAME}.pdf ${DOCSDIR}
+.endif
 
 .include <bsd.port.mk>
