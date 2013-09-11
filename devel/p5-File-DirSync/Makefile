@@ -1,9 +1,5 @@
-# New ports collection makefile for:	File::DirSync
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/devel/p5-File-DirSync/Makefile,v 1.14 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: devel/p5-File-DirSync/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	File-DirSync
 PORTVERSION=	1.22
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	mhjacks@swbell.net
 COMMENT=	Perl5 module for synchronizing two directories rapidly
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		dirsync.1
 MAN3=		File::DirSync.3
