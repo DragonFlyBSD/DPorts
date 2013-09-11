@@ -2,7 +2,7 @@
 # Date created:                                13 Dec 2004
 # Whom:                                        Jon Nistor <nistor@snickers.org>
 #
-# $FreeBSD: ports/net/p5-Net-Rsh/Makefile,v 1.4 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Rsh/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Net-Rsh
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	nistor@snickers.org
 COMMENT=	Perl5 module to access and use rsh protocol
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Rsh.3
 
