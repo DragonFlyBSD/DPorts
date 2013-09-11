@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: irc/irssi-xmpp/Makefile 325098 2013-08-21 08:46:00Z jadawin $
+# $FreeBSD: irc/irssi-xmpp/Makefile 325664 2013-08-30 07:45:58Z danfe $
 
 PORTNAME=	irssi-xmpp
 PORTVERSION=	0.52
@@ -7,25 +7,32 @@ CATEGORIES=	irc
 MASTER_SITES=	http://cybione.org/~irssi-xmpp/files/
 
 MAINTAINER=	jadawin@FreeBSD.org
-COMMENT=	Irssi-xmpp is an irssi plugin to connect to the Jabber network
+COMMENT=	Irssi plugin to connect to Jabber network
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
-RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
-LIB_DEPENDS=	loudmouth:${PORTSDIR}/net-im/loudmouth
+LIB_DEPENDS=	libloudmouth-1.so:${PORTSDIR}/net-im/loudmouth
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		pkgconfig
 USE_LDCONFIG=	yes
+MAKE_ARGS=	CC="${CC}"
+DATADIR=	${PREFIX}/share/irssi
+DOCSDIR=	${PREFIX}/share/doc/irssi
 
-MAKE_JOBS_UNSAFE=yes
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
 post-patch:
+# Try to unbreak parallel builds (-jX)
+	@${REINPLACE_CMD} -E 's|cd (.+) && (\$${MAKE})|\2 -C \1|' \
+		${WRKSRC}/Makefile ${WRKSRC}/src/Makefile
+# Uphold CFLAGS
+	@${REINPLACE_CMD} -e 's|CFLAGS =|CFLAGS +=|' ${WRKSRC}/config.mk
 .if ! ${PORT_OPTIONS:MDOCS}
-	${REINPLACE_CMD} -e 's/ doc-install / /g' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|doc-install ||' ${WRKSRC}/Makefile
 .endif
 
 .include <bsd.port.mk>
