@@ -2,7 +2,7 @@
 # Date created:				28 April 2005
 # Whom:					Loren M. Lang
 #
-# $FreeBSD: ports/sysutils/dirvish/Makefile,v 1.9 2012/11/17 06:01:28 svnexp Exp $
+# $FreeBSD: sysutils/dirvish/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	dirvish
@@ -24,7 +24,8 @@ MAN8=		dirvish.8 dirvish-expire.8 dirvish-locate.8 dirvish-runall.8
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN5=		dirvish.conf.5
 MAN8=		dirvish.8 dirvish-expire.8 dirvish-locate.8  dirvish-runall.8
