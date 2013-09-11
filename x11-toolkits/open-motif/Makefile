@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/open-motif/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: x11-toolkits/open-motif/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	open-motif
@@ -23,7 +23,7 @@ CONFLICTS=	lesstif-[0-9]*
 # WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 WRKSRC=		${WRKDIR}/motif-${PORTVERSION}
 
-USES=		iconv gmake
+USES=		iconv gmake pkgconfig
 USE_AUTOTOOLS=	libtool autoconf:env automake:env
 USE_XORG=	xaw xbitmaps xft
 GNU_CONFIGURE=	yes
