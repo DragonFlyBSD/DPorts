@@ -2,7 +2,7 @@
 # Date created:		01 Mar 2011
 # Whom:			Alexander Kriventsov <avk@vl.ru>
 #
-# $FreeBSD: ports/net-mgmt/p5-Nagios-Plugin-LDAP/Makefile,v 1.4 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Nagios-Plugin-LDAP/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	Nagios-Plugin-LDAP
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	avk@vl.ru
 COMMENT=	Nagios plugin to observe LDAP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 BUILD_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap \
 		p5-Nagios-Plugin>=0:${PORTSDIR}/net-mgmt/p5-Nagios-Plugin \
