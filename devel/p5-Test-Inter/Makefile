@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Inter/Makefile 315875 2013-04-16 18:12:45Z culot $
+# $FreeBSD: devel/p5-Test-Inter/Makefile 326706 2013-09-08 08:16:43Z az $
 
 PORTNAME=	Test-Inter
 PORTVERSION=	1.05
@@ -13,7 +13,8 @@ COMMENT=	Framework for more readable interactive test scripts
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Test::Inter.3
 
