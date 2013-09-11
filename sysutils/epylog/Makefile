@@ -2,7 +2,7 @@
 # Date created:				3 July 2005
 # Whom:					Alan Snelson <alan@wave2.co.uk>
 #
-# $FreeBSD: ports/sysutils/epylog/Makefile,v 1.7 2012/11/17 06:01:29 svnexp Exp $
+# $FreeBSD: sysutils/epylog/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	epylog
@@ -24,7 +24,7 @@ MAN8=		epylog.8
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-lynx=${LOCALBASE}/bin/lynx
-USE_PERL5=	yes
+USES=		perl5
 USE_PYTHON=	yes
 
 LOCAL_CONF_FILES=	epylog.conf \
