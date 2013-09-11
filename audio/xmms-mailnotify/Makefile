@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xmms-mailnotify
-# Date created:			03.02.2002
-# Whom:				Tilman Linneweh <arved@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/xmms-mailnotify/Makefile,v 1.23 2012/11/17 05:54:48 svnexp Exp $
+# Created by: Tilman Linneweh <arved@FreeBSD.org>
+# $FreeBSD: audio/xmms-mailnotify/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xmms-mailnotify
 PORTVERSION=	0.2.0
@@ -20,7 +17,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	gtk12
 USE_LDCONFIG=	yes
 
