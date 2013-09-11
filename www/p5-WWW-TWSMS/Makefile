@@ -2,7 +2,7 @@
 # Date created:		2006-08-11
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-WWW-TWSMS/Makefile,v 1.6 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-TWSMS/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	WWW-TWSMS
@@ -17,7 +17,8 @@ COMMENT=	A Perl interface for sending sms by TWSMS
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::TWSMS.3
 
