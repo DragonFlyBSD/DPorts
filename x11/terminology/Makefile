@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11/terminology/Makefile 315409 2013-03-27 19:32:33Z gblach $
+# $FreeBSD: x11/terminology/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	terminology
 PORTVERSION=	0.3.0
@@ -12,6 +12,7 @@ COMMENT=	EFL Terminal Emulator
 
 LICENSE=	BSD
 
+USES=		pkgconfig
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
