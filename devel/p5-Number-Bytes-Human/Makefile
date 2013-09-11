@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Number::Bytes::Human
-# Date created:				2006-10-19
-# Whom:					Sulev-Madis Silber <madis555@hot.ee>
-#
-# $FreeBSD: ports/devel/p5-Number-Bytes-Human/Makefile,v 1.5 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Sulev-Madis Silber <madis555@hot.ee>
+# $FreeBSD: devel/p5-Number-Bytes-Human/Makefile 326802 2013-09-09 11:01:46Z az $
 
 PORTNAME=	Number-Bytes-Human
 PORTVERSION=	0.07
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	madis555@hot.ee
 COMMENT=	Convert byte count to human readable format
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Number::Bytes::Human.3
 
