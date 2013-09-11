@@ -2,7 +2,7 @@
 # Date created:				25 Nov 2007
 # Whom:					Xavier Beaudouin <kiwi@oav.net>
 #
-# $FreeBSD: ports/misc/p5-Test-Dir/Makefile,v 1.6 2012/11/17 05:59:43 svnexp Exp $
+# $FreeBSD: misc/p5-Test-Dir/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	Test-Dir
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Test directory attributes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Dir.3 \
 		Test::Dir::Base.3 \
