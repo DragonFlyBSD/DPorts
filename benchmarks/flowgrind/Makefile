@@ -1,8 +1,9 @@
 # Created by: Lars Eggert <lars@eggert.org>
-# $FreeBSD: benchmarks/flowgrind/Makefile 323542 2013-07-23 17:21:32Z pawel $
+# $FreeBSD: benchmarks/flowgrind/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	flowgrind
 PORTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	https://launchpad.net/flowgrind/trunk/${PORTNAME}-0.6.1/+download/
 
