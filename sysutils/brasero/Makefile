@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/brasero/Makefile 321255 2013-06-19 14:33:28Z miwi $
+# $FreeBSD: sysutils/brasero/Makefile 326159 2013-09-03 15:25:41Z bapt $
 #    $MCom: ports/sysutils/brasero/Makefile,v 1.83 2010/11/15 21:53:38 kwm Exp $
 
 PORTNAME=	brasero
@@ -24,9 +24,8 @@ CONFLICTS=	brasero-3.[0-9]*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_XORG=	sm
-USES=		pathfix gettext shared-mime-info
+USES=		pathfix gettext shared-mime-info gmake pkgconfig
 USE_GNOME=	intlhack gnomeprefix gnomedocutils
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	gconf core
