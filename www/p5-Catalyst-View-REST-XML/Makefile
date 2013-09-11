@@ -2,7 +2,7 @@
 # Date created:		05 Feb 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-View-REST-XML/Makefile,v 1.4 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-View-REST-XML/Makefile 326053 2013-09-02 18:23:34Z az $
 #
 
 PORTNAME=	Catalyst-View-REST-XML
@@ -19,7 +19,8 @@ RUN_DEPENDS=	\
 	p5-XML-Simple>0:${PORTSDIR}/textproc/p5-XML-Simple
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::View::REST::XML.3
 
