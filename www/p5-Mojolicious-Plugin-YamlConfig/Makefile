@@ -2,7 +2,7 @@
 # Date created:		2012-04-25
 # Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Mojolicious-Plugin-YamlConfig/Makefile,v 1.4 2012/12/16 06:17:00 svnexp Exp $
+# $FreeBSD: www/p5-Mojolicious-Plugin-YamlConfig/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	Mojolicious-Plugin-YamlConfig
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Mojolicious>=1.80:${PORTSDIR}/www/p5-Mojolicious \
 		p5-YAML-Tiny>=1.51:${PORTSDIR}/textproc/p5-YAML-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mojolicious::Plugin::YamlConfig.3
 
