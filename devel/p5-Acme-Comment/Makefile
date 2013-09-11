@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Acme-Comment
-# Date created:				2012-07-18
-# Whom:					Marcello Coutinho <marcellocoutinho@gmail.com>
-#
-# $FreeBSD: devel/p5-Acme-Comment/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Marcello Coutinho <marcellocoutinho@gmail.com>
+# $FreeBSD: devel/p5-Acme-Comment/Makefile 326704 2013-09-08 07:03:32Z az $
 
 PORTNAME=	Acme-Comment
 PORTVERSION=	1.04
@@ -17,7 +13,8 @@ COMMENT=	Allow multi-line comments which are filtered out
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Acme::Comment.3
 
