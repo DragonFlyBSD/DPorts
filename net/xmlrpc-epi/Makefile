@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: net/xmlrpc-epi/Makefile 321111 2013-06-17 13:55:34Z wg $
+# $FreeBSD: net/xmlrpc-epi/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	xmlrpc-epi
 PORTVERSION=	0.54.2
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS=	--program-transform="s|^|xre-|"
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README
