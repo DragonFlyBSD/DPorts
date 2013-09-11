@@ -2,7 +2,7 @@
 # Date created:		9 February 2004
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/www/ruby-amazon/Makefile,v 1.12 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/ruby-amazon/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	amazon
