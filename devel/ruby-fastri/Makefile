@@ -2,7 +2,7 @@
 # Date created:		16 June 2009
 # Whom:			stas
 #
-# $FreeBSD: ports/devel/ruby-fastri/Makefile,v 1.5 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-fastri/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	fastri
