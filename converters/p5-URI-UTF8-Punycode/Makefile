@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-URI-UTF8-Punycode/Makefile 318084 2013-05-13 14:24:44Z culot $
+# $FreeBSD: converters/p5-URI-UTF8-Punycode/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	URI-UTF8-Punycode
 PORTVERSION=	0.97
@@ -12,7 +12,8 @@ COMMENT=	Punycode conversion of UTF-8 string
 
 LICENSE=	GPLv3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		URI::UTF8::Punycode.3
 
