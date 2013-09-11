@@ -1,5 +1,5 @@
 # Created by: sumikawa@FreeBSD.org
-# $FreeBSD: textproc/p5-Plagger/Makefile 323714 2013-07-26 12:25:46Z az $
+# $FreeBSD: textproc/p5-Plagger/Makefile 325902 2013-09-01 18:53:54Z az $
 
 PORTNAME=	Plagger
 PORTVERSION=	0.7.17
@@ -259,7 +259,7 @@ BUILD_DEPENDS+=	p5-URI-Find>=0:${PORTSDIR}/textproc/p5-URI-Find
 .endif
 
 .if ${PORT_OPTIONS:MKINOSEARCH}
-BUILD_DEPENDS+=	p5-KinoSearch>=0:${PORTSDIR}/textproc/p5-KinoSearch
+BUILD_DEPENDS+=	p5-KinoSearch1>=0:${PORTSDIR}/textproc/p5-KinoSearch1
 .endif
 
 .if ${PORT_OPTIONS:MPUBLISHGMAIL}
