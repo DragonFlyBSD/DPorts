@@ -2,7 +2,7 @@
 # Date created:		1 July 2001
 # Whom:			minter
 #
-# $FreeBSD: ports/x11-toolkits/p5-Tk-FileDialog/Makefile,v 1.13 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Tk-FileDialog/Makefile 325959 2013-09-02 09:36:29Z az $
 
 PORTNAME=	Tk-FileDialog
 PORTVERSION=	1.3
@@ -16,7 +16,8 @@ COMMENT=	Tk::FileDialog - A file selector dialog for perl/Tk
 
 BUILD_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Tk::FileDialog.3
 
 PLIST_SUB=	PERL_VERSION=${PERL_VERSION}
