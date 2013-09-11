@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Perl-Metrics-Simple/Makefile,v 1.6 2013/01/14 15:08:50 svnexp Exp $
+# $FreeBSD: devel/p5-Perl-Metrics-Simple/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	Perl-Metrics-Simple
 PORTVERSION=	0.17
@@ -18,7 +18,8 @@ TEST_DEPENDS=	\
 	p5-Test-Pod>0:${PORTSDIR}/devel/p5-Test-Pod \
 	p5-Test-Pod-Coverage>0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	countperl.1
 MAN3=	Perl::Metrics::Simple.3 \
