@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-# $FreeBSD: sysutils/usbutils/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: sysutils/usbutils/Makefile 325741 2013-08-30 23:57:36Z bapt $
 
 PORTNAME=	usbutils
 PORTVERSION=	0.86
@@ -16,8 +16,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--datadir=${DATADIR} --enable-zlib
-USE_GMAKE=	yes
-USE_GNOME=	pkgconfig
+USES=		gmake pkgconfig
 
 MAN1=		usb-devices.1
 MAN8=		lsusb.8
