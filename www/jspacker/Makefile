@@ -2,7 +2,7 @@
 # Date created:		2009-07-04
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/www/jspacker/Makefile,v 1.3 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/jspacker/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	jspacker
@@ -20,7 +20,8 @@ JSPACKER=	jsPacker.pl
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_ZIP=	yes
 
 SUB_FILES=	${PORTNAME}

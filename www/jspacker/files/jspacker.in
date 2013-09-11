@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/jspacker/files/jspacker.in,v 1.2 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/jspacker/files/jspacker.in 300897 2012-07-14 14:29:18Z beat $
 #
 %%PERL5%% -I%%DATADIR%% %%DATADIR%%/%%JSPACKER%% $@
