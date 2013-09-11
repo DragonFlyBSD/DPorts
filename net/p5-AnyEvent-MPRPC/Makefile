@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-AnyEvent-MPRPC/Makefile 318554 2013-05-19 22:32:31Z kuriyama $
+# $FreeBSD: net/p5-AnyEvent-MPRPC/Makefile 326486 2013-09-06 10:47:10Z az $
 
 PORTNAME=	AnyEvent-MPRPC
 PORTVERSION=	0.20
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::MPRPC.3 \
 	AnyEvent::MPRPC::Client.3 \
