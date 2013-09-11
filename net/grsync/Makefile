@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: net/grsync/Makefile 322822 2013-07-12 08:31:30Z martymac $
+# $FreeBSD: net/grsync/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	grsync
 PORTVERSION=	1.2.4
@@ -16,10 +16,9 @@ RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync \
 		bash:${PORTSDIR}/shells/bash
 
 USE_GNOME=	gtk20
-USES=	desktop-file-utils shared-mime-info
+USES=		desktop-file-utils gmake shared-mime-info pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-unity
-USE_GMAKE=	yes
 
 INSTALLS_ICONS=	yes
 
