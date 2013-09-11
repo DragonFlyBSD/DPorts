@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-FCGI-Client/Makefile 320171 2013-06-07 07:54:32Z az $
+# $FreeBSD: www/p5-FCGI-Client/Makefile 326167 2013-09-03 16:18:49Z az $
 
 PORTNAME=	FCGI-Client
 PORTVERSION=	0.08
@@ -15,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	FCGI::Client.3 \
 	FCGI::Client::Connection.3 \
