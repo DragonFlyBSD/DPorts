@@ -1,5 +1,5 @@
 # Created by: n-shigemura@ensure.jp
-# $FreeBSD: japanese/p5-Number-Phone-JP/Makefile 320057 2013-06-06 07:36:34Z culot $
+# $FreeBSD: japanese/p5-Number-Phone-JP/Makefile 326884 2013-09-10 09:39:11Z az $
 
 PORTNAME=	Number-Phone-JP
 PORTVERSION=	0.20130603
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 RUN_DEPENDS=	p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Number::Phone::JP.3 \
 		Number::Phone::JP::Table.3 \
