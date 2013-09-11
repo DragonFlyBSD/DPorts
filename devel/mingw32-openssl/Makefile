@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mingw32-openssl
-# Date created:		5 December 2011
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/mingw32-openssl/Makefile,v 1.5 2013/02/25 16:00:38 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/mingw32-openssl/Makefile 326870 2013-09-10 07:12:35Z az $
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.0k
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	makedepend:${PORTSDIR}/devel/makedepend \
 		${LOCALBASE}/mingw32/include/stdlib.h:${PORTSDIR}/devel/${PKGNAMEPREFIX}bin-msvcrt \
 		${LOCALBASE}/mingw32/lib/libz.a:${PORTSDIR}/devel/mingw32-zlib
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 MAKE_JOBS_UNSAFE=	yes
 CONFIGURE_PREFIX=	${PREFIX}/mingw32
 OPENSSLDIR=		${CONFIGURE_PREFIX}/openssl
