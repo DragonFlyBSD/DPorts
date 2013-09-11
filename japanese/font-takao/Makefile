@@ -1,7 +1,8 @@
-# $FreeBSD: japanese/font-takao/Makefile 316985 2013-05-01 03:19:09Z hrs $
+# $FreeBSD: japanese/font-takao/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	takao
 PORTVERSION=	003.02.01
+PORTREVISION=	1
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	http://launchpadlibrarian.net/40218948/
 PKGNAMEPREFIX=	ja-font-
