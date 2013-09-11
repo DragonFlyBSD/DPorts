@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-TableContentParser/Makefile 319512 2013-05-31 15:16:13Z miwi $
+# $FreeBSD: www/p5-HTML-TableContentParser/Makefile 325965 2013-09-02 10:00:38Z az $
 
 PORTNAME=	HTML-TableContentParser
 PORTVERSION=	0.13
@@ -12,7 +12,8 @@ COMMENT=	Do interesting things with the contents of tables
 
 RUN_DEPENDS=	p5-HTML-Parser>=3.68:${PORTSDIR}/www/p5-HTML-Parser
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::TableContentParser.3
 
