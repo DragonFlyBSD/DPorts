@@ -2,7 +2,7 @@
 # Date created: 			13 December 2007
 # Whom:					Matthew Luckie <mjl@luckie.org.nz>
 #
-# $FreeBSD: ports/net/p5-Net-IPTrie/Makefile,v 1.7 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-IPTrie/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Net-IPTrie
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-NetAddr-IP>=4.00.7:${PORTSDIR}/net-mgmt/p5-NetAddr-IP \
 		p5-version>=0:${PORTSDIR}/devel/p5-version
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::IPTrie.3 Net::IPTrie::Node.3
 
