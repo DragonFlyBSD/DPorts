@@ -2,7 +2,7 @@
 # Date created:					Oct 27 2003
 # Whom:						clsung@dragon2.net
 #
-# $FreeBSD: x11-toolkits/p5-Gtk2/Makefile 321371 2013-06-20 11:38:20Z swills $
+# $FreeBSD: x11-toolkits/p5-Gtk2/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Gtk2
@@ -24,7 +24,8 @@ RUN_DEPENDS=	p5-Pango>=0:${PORTSDIR}/x11-toolkits/p5-Pango \
 		p5-Glib2>=0:${PORTSDIR}/devel/p5-Glib2
 
 USE_GNOME=	gtk20 pango
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_GMAKE=	yes
 CONFIGURE_ENV+=	FORCE_GMAKE=yes
 MAKE_ENV+=	LANG=C
