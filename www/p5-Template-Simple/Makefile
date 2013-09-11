@@ -2,7 +2,7 @@
 # Date created:		02 December 2011
 # Whom:			Ken McGlothlen <ken.mcglothlen@gmail.com>
 #
-# $FreeBSD: ports/www/p5-Template-Simple/Makefile,v 1.4 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Simple/Makefile 326161 2013-09-03 15:28:40Z az $
 
 PORTNAME=	Template-Simple
 PORTVERSION=	0.06
@@ -18,7 +18,8 @@ LICENSE=	ART20
 BUILD_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Template::Simple.3
 
