@@ -2,7 +2,7 @@
 # Date created:				2008-07-09
 # Whom:					Oleg Mamontov <oleg@mamontov.net>
 #
-# $FreeBSD: ports/www/p5-WWW-Mechanize-Meta/Makefile,v 1.4 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Mechanize-Meta/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	WWW-Mechanize-Meta
@@ -17,7 +17,8 @@ COMMENT=	Adds HEAD tag parsing to WWW::Mechanize
 RUN_DEPENDS=	p5-WWW-Mechanize>=1.20:${PORTSDIR}/www/p5-WWW-Mechanize
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Mechanize::Meta.3
 
