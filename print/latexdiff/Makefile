@@ -2,7 +2,7 @@
 # Date created:                        01 Oct 2005
 # Whom:                                Maxim Loginov <Zeliboba@mail.ru>
 #
-# $FreeBSD: ports/print/latexdiff/Makefile,v 1.6 2012/11/17 06:00:52 svnexp Exp $
+# $FreeBSD: print/latexdiff/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	latexdiff
@@ -18,7 +18,8 @@ COMMENT=	Determine and mark up significant differences between latex files
 
 RUN_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_ZIP=	yes
 NO_BUILD=	yes
 
