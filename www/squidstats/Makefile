@@ -2,7 +2,7 @@
 # Whom: Adrian Chadd <adrian@FreeBSD.org>
 # Date Created: 10-December-2008
 #
-# $FreeBSD: ports/www/squidstats/Makefile,v 1.4 2012/11/17 06:03:06 svnexp Exp $
+# $FreeBSD: www/squidstats/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	squidstats
@@ -19,7 +19,7 @@ RUN_DEPENDS=	p5-Config-IniFiles>=2.39:${PORTSDIR}/devel/p5-Config-IniFiles \
 		p5-RRD-Simple>=1.44:${PORTSDIR}/databases/p5-RRD-Simple \
 		p5-SNMP_Session>=1.11:${PORTSDIR}/net-mgmt/p5-SNMP_Session
 
-USE_PERL5=	yes
+USES=		perl5
 
 SQUID_UID?=	squid
 SQUID_GID?=	squid
