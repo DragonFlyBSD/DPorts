@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/varnish2/Makefile,v 1.49 2012/12/10 19:24:06 svnexp Exp $
+# $FreeBSD: www/varnish2/Makefile 326321 2013-09-04 20:46:54Z anders $
 
 PORTNAME=	varnish
 PORTVERSION=	2.1.5
@@ -9,6 +9,9 @@ MASTER_SITES=	http://repo.varnish-cache.org/source/
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	The Varnish high-performance HTTP accelerator
 
+DEPRECATED=	No update since january 2011. Upgrade to Varnish 3.
+EXPIRATION_DATE=	2013-10-01
+
 LICENSE=	BSD
 
 LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
@@ -17,11 +20,10 @@ LATEST_LINK=	varnish2
 CONFLICTS=	varnish-3.*
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 CONFIGURE_ARGS=	--localstatedir=${PREFIX}
 CONFIGURE_ENV=	RST2MAN=true
 USE_LDCONFIG=	yes
-USE_GNOME=	pkgconfig
 
 MAN1=		varnishadm.1 varnishd.1 varnishhist.1 varnishlog.1 \
 		varnishncsa.1 varnishreplay.1 varnishsizes.1 \
