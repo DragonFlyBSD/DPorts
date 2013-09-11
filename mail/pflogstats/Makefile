@@ -2,7 +2,7 @@
 # Date created:			30 April 2003
 # Whom:				Andrew J. Caines <A.J.Caines@halplant.com>
 #
-# $FreeBSD: ports/mail/pflogstats/Makefile,v 1.14 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/pflogstats/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	pflogstats
@@ -22,7 +22,7 @@ RUN_DEPENDS=	p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc \
 		p5-XML-Dumper>=0:${PORTSDIR}/textproc/p5-XML-Dumper
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 SITE_PERL_INST=	${SITE_PERL:S/${LOCALBASE}/${PREFIX}/}
 
 post-patch:
