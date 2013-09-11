@@ -2,7 +2,7 @@
 # Date created:		2010-03-03
 # Whom:			Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-JSON/Makefile,v 1.4 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-JSON/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	CGI-Application-Plugin-JSON
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-CGI-Application>4.01:${PORTSDIR}/www/p5-CGI-Application \
 		p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::JSON.3
 
