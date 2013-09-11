@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@FreeBSD.org>
-# $FreeBSD: ports/astro/wmsolar/Makefile,v 1.11 2013/02/25 11:44:09 svnexp Exp $
+# $FreeBSD: astro/wmsolar/Makefile 325648 2013-08-30 01:15:20Z bapt $
 
 PORTNAME=	wmsolar
 PORTVERSION=	1.0
@@ -13,7 +13,7 @@ COMMENT=	Dockapp that displays the Solar System viewed from the top
 PLIST_FILES=	bin/wmSolar
 WRKSRC=		${WRKDIR}/wmSolar
 USE_XORG=	x11 xext xpm
-USE_GMAKE=	yes
+USES=		gmake
 
 pre-patch:
 	@${REINPLACE_CMD} -e 's|values.h|float.h|; s|MAXDOUBLE|DBL_MAX|g' \
