@@ -2,7 +2,7 @@
 # Date created:				8 October 2007
 # Whom: 				Daniel Bond
 #
-# $FreeBSD: ports/sysutils/rsyncbackup/Makefile,v 1.4 2012/11/17 06:01:43 svnexp Exp $
+# $FreeBSD: sysutils/rsyncbackup/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	rsyncbackup
@@ -21,7 +21,7 @@ CONFIGSRC=	${WRKSRC}/config
 CONFIGFILES=	backupset.conf config.conf destinations.conf sources.conf
 
 USE_ZIP=	yes
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
