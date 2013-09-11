@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gdmap
-# Date created:		13 Oct 2005
-# Whom:			Rodrigo Graeff <delphus@gmail.com>
-#
-# $FreeBSD: ports/sysutils/gdmap/Makefile,v 1.19 2012/11/17 06:01:32 svnexp Exp $
-#
+# Created by: Rodrigo Graeff <delphus@gmail.com>
+# $FreeBSD: sysutils/gdmap/Makefile 326095 2013-09-02 21:32:24Z bapt $
 
 PORTNAME=	gdmap
 PORTVERSION=	0.7.5
@@ -17,8 +13,7 @@ COMMENT=	Graphical disk map Utility
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 USE_GNOME=	gnomeprefix gnomehack gtk20
-USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		gmake perl5 pkgconfig
 GNU_CONFIGURE=	yes
 
 MAN1=	gdmap.1
