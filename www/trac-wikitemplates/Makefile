@@ -2,7 +2,7 @@
 # Date created:                      May 18 2007
 # Whom:                              Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/www/trac-wikitemplates/Makefile,v 1.13 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-wikitemplates/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	wikitemplates
@@ -18,7 +18,7 @@ MAINTAINER=	glarkin@FreeBSD.org
 COMMENT=	Templates for the Trac wiki
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
-#		${PYTHON_SITELIBDIR}/TracCtxtnavAdd-2.0-py${_PYTHON_VERSION}.egg:${PORTSDIR}/www/trac-ctxtnavadd
+#		${PYTHON_SITELIBDIR}/TracCtxtnavAdd-2.0-py${PYTHON_VER}.egg:${PORTSDIR}/www/trac-ctxtnavadd
 
 WRKSRC=		${WRKDIR}/${PORTNAME}plugin
 USE_PYTHON=	yes
