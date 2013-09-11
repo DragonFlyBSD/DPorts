@@ -2,7 +2,7 @@
 # Date created:		2009-01-07
 # Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
 #
-# $FreeBSD: ports/mail/p5-Data-Validate-Email/Makefile,v 1.3 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/p5-Data-Validate-Email/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	Data-Validate-Email
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Data-Validate-Domain>=0:${PORTSDIR}/dns/p5-Data-Validate-Domain 
 		p5-Email-Address>=0:${PORTSDIR}/mail/p5-Email-Address \
 		p5-Net-Domain-TLD>=0:${PORTSDIR}/dns/p5-Net-Domain-TLD
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Validate::Email.3
 
