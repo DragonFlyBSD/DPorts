@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/scite/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/scite/Makefile 326375 2013-09-05 09:38:08Z madpilot $
 
 PORTNAME=	scite
 PORTVERSION=	3.3.3
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Full-featured SCIntilla based text editor for GTK/GNOME
 
-LIB_DEPENDS=	scintilla:${PORTSDIR}/x11-toolkits/scintilla
+LIB_DEPENDS=	libscintilla.so:${PORTSDIR}/x11-toolkits/scintilla
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
 OPTIONS_DEFINE=	DOCS FULL_BUFFER_MENU
@@ -19,7 +19,7 @@ FULL_BUFFER_MENU_DESC=	Show all files in buffer menu
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/gtk
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 MAKEFILE=	makefile
 
