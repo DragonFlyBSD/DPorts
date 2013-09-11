@@ -1,4 +1,4 @@
-# $FreeBSD: mail/claws-mail/Makefile.claws 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: mail/claws-mail/Makefile.claws 326400 2013-09-05 14:03:52Z pawel $
 
 PORTVERSION=	3.9.2
 CATEGORIES?=	mail
@@ -9,9 +9,8 @@ MAINTAINER=	pawel@FreeBSD.org
 LICENSE=	GPLv3
 
 USE_BZIP2=	yes
-USES+=		gmake
+USES+=		gmake pkgconfig
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 		--disable-dbus
