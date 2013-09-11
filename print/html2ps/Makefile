@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@FreeBSD.org>
-# $FreeBSD: print/html2ps/Makefile 316729 2013-04-28 15:11:37Z hrs $
+# $FreeBSD: print/html2ps/Makefile 326272 2013-09-04 13:07:40Z az $
 
 PORTNAME=	html2ps
 DISTVERSION=	1.0b7
@@ -21,7 +21,7 @@ RUN_DEPENDS=	mogrify:${PORTSDIR}/graphics/ImageMagick \
 		paperconf:${PORTSDIR}/print/libpaper
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_GHOSTSCRIPT_RUN=	yes
 
 SUB_FILES=	html2psrc
