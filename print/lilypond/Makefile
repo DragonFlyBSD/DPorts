@@ -1,5 +1,5 @@
 # Created by: patrick, trevor
-# $FreeBSD: print/lilypond/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/lilypond/Makefile 326133 2013-09-03 10:23:55Z bapt $
 
 PORTNAME=	lilypond
 PORTVERSION=	2.16.1
@@ -39,8 +39,7 @@ INFO=		lilypond-notation \
 		music-glossary \
 		internals
 
-USES=		bison:build gettext
-USE_GMAKE=	yes
+USES=		bison:build gettext gmake pkgconfig
 USE_GHOSTSCRIPT=9
 USE_TEX=	latex
 USE_PYTHON=	yes
