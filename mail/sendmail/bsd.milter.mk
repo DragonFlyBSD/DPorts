@@ -2,7 +2,7 @@
 # Date created:		08 Nov 2006
 # Whom:			dinoex
 #
-# $FreeBSD: mail/sendmail/bsd.milter.mk 318274 2013-05-16 05:28:01Z dinoex $
+# $FreeBSD: mail/sendmail/bsd.milter.mk 326726 2013-09-08 13:47:40Z dinoex $
 #
 # a port shall includes this file after bsd.ports.pre.mk
 # .include "${PORTSDIR}/${PKGCATEGORY}/sendmail/bsd.milter.mk"
@@ -75,8 +75,7 @@ CFLAGS=${MILTERINC}
 .endif
 .endif
 
-
-.if defined(SENDMAIL_WITHOUT_MILTER)
+.if defined(WITHOUT_MILTER)
 pre-everything::
 	@${ECHO_MSG}
 	@${ECHO_MSG} You must unset variable SENDMAIL_WITHOUT_MILTER,
