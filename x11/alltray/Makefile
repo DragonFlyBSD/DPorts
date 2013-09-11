@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: x11/alltray/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11/alltray/Makefile 326111 2013-09-02 22:50:21Z bapt $
 
 PORTNAME=	alltray
 PORTVERSION=	0.70
@@ -10,6 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Dock any application with no native tray icon
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
