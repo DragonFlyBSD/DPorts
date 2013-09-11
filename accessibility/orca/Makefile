@@ -1,10 +1,6 @@
-# New ports collection makefile for:	orca
-# Date created:				25 Jul 2006
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: accessibility/orca/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: accessibility/orca/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #   $MCom: ports/accessibility/orca/Makefile,v 1.90 2010/11/16 12:00:48 avl Exp $
-#
 
 PORTNAME=	orca
 PORTVERSION=	2.32.1
@@ -27,9 +23,8 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 LATEST_LINK=	gnome-orca
 
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gmake gettext pkgconfig
 USE_PYTHON=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui gnomespeech pygnome2 \
 		pygnomedesktop
 INSTALLS_ICONS=	yes
