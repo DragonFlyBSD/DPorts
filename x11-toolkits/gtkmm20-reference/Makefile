@@ -1,15 +1,11 @@
-# New ports collection makefile for:	gtkmm20-reference
-# Date created:				09 May 2006
-# Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/gtkmm20-reference/Makefile,v 1.12 2012/11/17 06:03:35 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: x11-toolkits/gtkmm20-reference/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTREVISION=	7
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtkmm-2.0.pc:${PORTSDIR}/x11-toolkits/gtkmm20
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/gtkmm-2.0
