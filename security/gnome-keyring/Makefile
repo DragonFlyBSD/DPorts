@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: security/gnome-keyring/Makefile 317223 2013-05-03 17:37:13Z ehaupt $
+# $FreeBSD: security/gnome-keyring/Makefile 326103 2013-09-02 22:03:38Z bapt $
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	2.32.1
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gtk20 ltverhack intlhack
 USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-pam-dir="${PREFIX}/lib" \
