@@ -1,4 +1,4 @@
-# $FreeBSD: math/galculator/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: math/galculator/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	galculator
 PORTVERSION=	2.1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	SF
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	GTK-based scientific calculator
 
-USES=		gmake
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
