@@ -2,7 +2,7 @@
 # Date created:		2007-10-31
 # Whom:			Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Amazon-SQS-Simple/Makefile,v 1.14 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	Amazon-SQS-Simple
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Amazon::SQS::Simple::Message.3 \
 		Amazon::SQS::Simple::Queue.3 \
