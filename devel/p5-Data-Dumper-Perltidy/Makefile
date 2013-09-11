@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-Dumper-Perltidy
-# Date created:		2009-01-30
-# Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-Data-Dumper-Perltidy/Makefile,v 1.3 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: Murilo Opsfelder <mopsfelder@gmail.com>
+# $FreeBSD: devel/p5-Data-Dumper-Perltidy/Makefile 326802 2013-09-09 11:01:46Z az $
 
 PORTNAME=	Data-Dumper-Perltidy
 PORTVERSION=	0.01
@@ -16,7 +12,8 @@ COMMENT=	Stringify and pretty print Perl data structures
 
 RUN_DEPENDS=	perltidy>=0:${PORTSDIR}/devel/perltidy
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Dumper::Perltidy.3
 
