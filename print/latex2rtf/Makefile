@@ -2,7 +2,7 @@
 # Date created:         14 Dec 1999
 # Whom:                 Joerg Wunsch <joerg@FreeBSD.org>
 #
-# $FreeBSD: ports/print/latex2rtf/Makefile,v 1.13 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex2rtf/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	latex2rtf
@@ -18,7 +18,8 @@ COMMENT=	Translator from LaTeX to RTF
 MAN1=		latex2rtf.1 latex2png.1
 INFO=		latex2rtf
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 INSTALL_TARGET=	install install-info
 
