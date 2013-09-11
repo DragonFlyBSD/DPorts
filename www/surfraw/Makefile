@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/surfraw/Makefile,v 1.25 2012/11/17 06:03:06 svnexp Exp $
+# $FreeBSD: www/surfraw/Makefile 326003 2013-09-02 15:12:10Z az $
 
 PORTNAME=	surfraw
 PORTVERSION=	2.2.8
@@ -10,7 +10,7 @@ COMMENT=	Command line interface to popular WWW search engines
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=	elvi.1sr \
 	opensearch-discover.1 \
