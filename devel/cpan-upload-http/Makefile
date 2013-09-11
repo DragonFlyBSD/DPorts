@@ -1,9 +1,4 @@
-# New ports collection makefile for:	cpan::upload::http
-# Date created:		01 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/cpan-upload-http/Makefile,v 1.4 2012/11/17 05:55:38 svnexp Exp $
-#
+# $FreeBSD: devel/cpan-upload-http/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	cpan-upload-http
 PORTVERSION=	2.4
@@ -20,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Term-ReadKey>0:${PORTSDIR}/devel/p5-Term-ReadKey
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	cpan-upload-http.1
 
