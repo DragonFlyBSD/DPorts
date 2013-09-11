@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-MemoryUsage/Makefile 318773 2013-05-22 15:03:11Z kuriyama $
+# $FreeBSD: www/p5-Plack-Middleware-MemoryUsage/Makefile 325965 2013-09-02 10:00:38Z az $
 
 PORTNAME=	Plack-Middleware-MemoryUsage
 PORTVERSION=	0.03
@@ -15,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Plack>0:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::MemoryUsage.3
 
