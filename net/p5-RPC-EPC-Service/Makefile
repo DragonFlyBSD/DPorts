@@ -2,7 +2,7 @@
 # Date created:		19 Mar 2012
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-RPC-EPC-Service/Makefile,v 1.3 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-RPC-EPC-Service/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	RPC-EPC-Service
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-Data-SExpression>=0.41:${PORTSDIR}/devel/p5-Data-SExpression
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	RPC::EPC::Service.3
 
