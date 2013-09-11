@@ -2,7 +2,7 @@
 # Date created:		12 Jul 2007
 # Whom:			Yinghong.Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: textproc/qstardict/Makefile 315222 2013-03-25 13:59:18Z makc $
+# $FreeBSD: textproc/qstardict/Makefile 326422 2013-09-05 17:37:22Z antoine $
 #
 
 PORTNAME=	qstardict
@@ -13,6 +13,7 @@ MASTER_SITES=	http://qstardict.ylsoftware.com/files/
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Dictionary program written in Qt4
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_QT4=	gui network xml qmake_build uic_build moc_build rcc_build
 QMAKE_ARGS+=	-recursive
