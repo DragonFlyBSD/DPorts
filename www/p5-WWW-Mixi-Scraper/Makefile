@@ -2,7 +2,7 @@
 # Date created:		2007-12-28
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-WWW-Mixi-Scraper/Makefile,v 1.18 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Mixi-Scraper/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	WWW-Mixi-Scraper
@@ -25,7 +25,8 @@ RUN_DEPENDS=	p5-Module-Find>=0:${PORTSDIR}/devel/p5-Module-Find \
 		p5-WWW-Mechanize>=1.50:${PORTSDIR}/www/p5-WWW-Mechanize
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 
 MAN3=		WWW::Mixi::Scraper::Utils.3 \
