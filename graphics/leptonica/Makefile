@@ -1,8 +1,9 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/leptonica/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/leptonica/Makefile 326850 2013-09-09 22:49:20Z mm $
 
 PORTNAME=	leptonica
 PORTVERSION=	1.69
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GOOGLE_CODE
 
