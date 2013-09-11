@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/rubrica/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/rubrica/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	rubrica
 PORTVERSION=	2.0.10
@@ -18,9 +18,8 @@ LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_BZIP2=	yes
-USES=        pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gconf2 gnomeprefix libglade2
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 
 GCONF_SCHEMAS=	rubrica2.schemas
