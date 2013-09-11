@@ -2,7 +2,7 @@
 # Date created:		05 Aug 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-AnyEvent-Mojo/Makefile,v 1.4 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-AnyEvent-Mojo/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	AnyEvent-Mojo
@@ -23,7 +23,8 @@ RUN_DEPENDS=	\
 #	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::Mojo.3 \
 	AnyEvent::Mojo::Server.3 \
