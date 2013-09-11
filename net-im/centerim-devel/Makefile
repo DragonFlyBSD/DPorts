@@ -1,5 +1,5 @@
 # Created by: Frank Altpeter <frank@altpeter.de>
-# $FreeBSD: net-im/centerim-devel/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net-im/centerim-devel/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	centerim
 PORTVERSION=	4.22.10.11
@@ -16,11 +16,10 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
-USE_PERL5_RUN=	yes
 USE_PYTHON_RUN=	yes
-USES=		iconv
+USES=		iconv gmake perl5 pkgconfig
+USE_PERL5=	run
 USE_OPENSSL=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ssl --with-openssl
 CONFLICTS=	centericq-[0-9]* centerim-[0-9]*
