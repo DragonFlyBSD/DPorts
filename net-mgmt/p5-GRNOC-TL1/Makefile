@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: net-mgmt/p5-GRNOC-TL1/Makefile 318180 2013-05-14 17:18:39Z culot $
+# $FreeBSD: net-mgmt/p5-GRNOC-TL1/Makefile 326244 2013-09-04 03:24:02Z az $
 
 PORTNAME=	GRNOC-TL1
 PORTVERSION=	1.3.10
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	p5-Date-Calc>0:${PORTSDIR}/devel/p5-Date-Calc \
 		p5-Net-Telnet>0:${PORTSDIR}/net/p5-Net-Telnet
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
