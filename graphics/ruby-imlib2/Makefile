@@ -2,7 +2,7 @@
 # Date created:		7 April 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/graphics/ruby-imlib2/Makefile,v 1.25 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/ruby-imlib2/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	imlib2
