@@ -1,20 +1,18 @@
-# New ports collection makefile for:	cursor-chameleon-darkskyblue
-# Date created:		2009-11-14
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: x11-themes/cursor-chameleon-darkskyblue/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: x11-themes/cursor-chameleon-darkskyblue/Makefile 326965 2013-09-11 11:59:59Z vg $
 
 PORTNAME=	chameleon
 PORTVERSION=	0.5
 CATEGORIES=	x11-themes
-MASTER_SITES=	http://www.egregorion.net/works/
+MASTER_SITES=	LOCAL/vg
 PKGNAMEPREFIX=	cursor-
 PKGNAMESUFFIX=	-darkskyblue
 DISTNAME=	Chameleon-DarkSkyBlue-${PORTVERSION}
 
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Chameleon Xcursors theme
+
+LICENSE=	GPLv2
 
 THEME=		DarkSkyBlue
 
