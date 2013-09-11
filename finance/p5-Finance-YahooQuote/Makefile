@@ -2,7 +2,7 @@
 # Date created:				2009-10-06
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/finance/p5-Finance-YahooQuote/Makefile,v 1.4 2012/11/17 05:57:26 svnexp Exp $
+# $FreeBSD: finance/p5-Finance-YahooQuote/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Finance-YahooQuote
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-HTML-Parser>=2.2:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-libwww>=1.62:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		yahooquote.1
 MAN3=		Finance::YahooQuote.3
