@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@FreeBSD.org>
-# $FreeBSD: games/warmux/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/warmux/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	warmux
 DISTVERSION=	11.04.1
@@ -18,7 +18,7 @@ CONFLICTS_INSTALL=	wormux-*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_SDL=	sdl image mixer ttf gfx net
 USE_DOS2UNIX=	fixed_class.h
 
