@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: devel/p5-Sort-Array/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: devel/p5-Sort-Array/Makefile 326639 2013-09-07 14:36:58Z az $
 
 PORTNAME=	Sort-Array
 DISTVERSION=	0.26
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Powerful array sorting Perl interface
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sort::Array.3
 
