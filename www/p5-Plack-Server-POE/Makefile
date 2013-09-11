@@ -2,7 +2,7 @@
 # Date created:		23 Dec 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Server-POE/Makefile,v 1.4 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Server-POE/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	Plack-Server-POE
@@ -23,7 +23,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Server::POE.3
 
