@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/audio/festvox-kal8/Makefile,v 1.16 2013/01/27 06:41:36 svnexp Exp $
+# $FreeBSD: audio/festvox-kal8/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
 
 PORTNAME=	festvox-kal8
 PORTVERSION=	1.4.0
