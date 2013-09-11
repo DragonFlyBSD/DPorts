@@ -2,7 +2,7 @@
 # Date created:				2007-03-20
 # Whom:					ecronin@gizmolabs.org
 #
-# $FreeBSD: ports/net-mgmt/nagios-certexp-plugin/Makefile,v 1.4 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-certexp-plugin/Makefile 326167 2013-09-03 16:18:49Z az $
 
 PORTNAME=	nagios-certexp-plugin
 PORTVERSION=	1.1
@@ -18,7 +18,7 @@ RUN_DEPENDS+=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
 		p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip \
 		p5-Getopt-Long>=0:${PORTSDIR}/devel/p5-Getopt-Long
 
-USE_PERL5=	yes
+USES=		perl5
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_FILES=	${NAGIOS_PLUGIN_DIR}/check_certexp.pl
