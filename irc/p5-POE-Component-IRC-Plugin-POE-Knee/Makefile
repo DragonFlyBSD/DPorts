@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-IRC-Plugin-POE-Knee
-# Date created:	   31 may 2008
-# Whom:		   Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/irc/p5-POE-Component-IRC-Plugin-POE-Knee/Makefile,v 1.4 2012/11/17 05:58:29 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-POE-Knee/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	POE-Component-IRC-Plugin-POE-Knee
 PORTVERSION=	1.08
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Math-Random>=0.69:${PORTSDIR}/math/p5-Math-Random \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PLIST_SUB=	EXAMPLESDIR="share/examples/${PORTNAME}"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Plugin::POE::Knee.3
 
