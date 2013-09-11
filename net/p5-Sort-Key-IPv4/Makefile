@@ -2,7 +2,7 @@
 # Date created:                                15 November 2008
 # Whom:					Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Sort-Key-IPv4/Makefile,v 1.6 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-Sort-Key-IPv4/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Sort-Key-IPv4
@@ -17,7 +17,8 @@ COMMENT=	Perl extension for sorting IPv4 addresses
 BUILD_DEPENDS=	p5-Sort-Key>=0:${PORTSDIR}/devel/p5-Sort-Key
 RUN_DEPENDS=	p5-Sort-Key>=0:${PORTSDIR}/devel/p5-Sort-Key
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sort::Key::IPv4.3
 
