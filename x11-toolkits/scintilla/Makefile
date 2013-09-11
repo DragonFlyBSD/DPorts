@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/scintilla/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/scintilla/Makefile 326375 2013-09-05 09:38:08Z madpilot $
 
 PORTNAME=	scintilla
 PORTVERSION=	3.3.3
@@ -13,8 +13,7 @@ COMMENT=	Full-featured free source code editing component for GTK+
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/gtk
 
-USES=		iconv
-USE_GMAKE=	yes
+USES=		gmake iconv pkgconfig
 MAKEFILE=	makefile
 USE_LDCONFIG=	yes
 USE_GNOME=	gtk20
