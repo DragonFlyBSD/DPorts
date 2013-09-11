@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/unique/Makefile 324186 2013-08-03 10:29:52Z kwm $
+# $FreeBSD: x11-toolkits/unique/Makefile 326088 2013-09-02 20:51:40Z bapt $
 #   $MCom: ports/x11-toolkits/unique/Makefile,v 1.12 2012/09/03 16:28:30 mezz Exp $
 
 PORTNAME=	unique
@@ -16,8 +16,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 USE_XORG=	ice
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20 gnomeprefix introspection:build ltverhack:2
