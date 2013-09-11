@@ -1,5 +1,5 @@
 # Created by: Jose Marques
-# $FreeBSD: java/infobus/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: java/infobus/Makefile 325598 2013-08-29 14:16:03Z bdrewery $
 
 PORTNAME=	infobus
 PORTVERSION=	1.2
@@ -23,7 +23,7 @@ PORTDOCS=	*
 .endif
 
 .include <bsd.port.pre.mk>
-.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}) && !defined(PACKAGE_BUILDING)
+.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
 IGNORE=	You must manually fetch the distribution from http://java.sun.com/products/archive/javabeans/infobus/downloads.html and place it in ${DISTDIR} then run make again
 .endif
 
