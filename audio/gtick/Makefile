@@ -1,5 +1,5 @@
 # Created by: Liam J. Foy <liamfoy@sepulcrum.org>
-# $FreeBSD: audio/gtick/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/gtick/Makefile 325654 2013-08-30 02:03:46Z bapt $
 
 PORTNAME=	gtick
 PORTVERSION=	0.5.2
@@ -14,6 +14,7 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	sndfile:${PORTSDIR}/audio/libsndfile \
 		pulse-simple:${PORTSDIR}/audio/pulseaudio
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
 LDFLAGS+=	-L${LOCALBASE}/lib
