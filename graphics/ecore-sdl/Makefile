@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/ecore-sdl/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/ecore-sdl/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	sdl
 PORTVERSION=	1.7.8
@@ -17,7 +17,7 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_EFL=	ecore libtool_hack
 USE_EFL_ECORE=	input
 USE_SDL=	sdl
