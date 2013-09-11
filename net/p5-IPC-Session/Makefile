@@ -2,7 +2,7 @@
 # Date created:	   01 Jun 2010
 # Whom:		   Alexander Kriventsov <avk@vl.ru>
 #
-# $FreeBSD: ports/net/p5-IPC-Session/Makefile,v 1.2 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-IPC-Session/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	IPC-Session
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	avk@vl.ru
 COMMENT=	Drive ssh or other interactive shell, local or remote (like 'expect')
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	IPC::Session.3
 
