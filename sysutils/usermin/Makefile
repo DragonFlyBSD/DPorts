@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/usermin/Makefile 323714 2013-07-26 12:25:46Z az $
+# $FreeBSD: sysutils/usermin/Makefile 326575 2013-09-07 07:44:26Z az $
 
 PORTNAME=	usermin
 PORTVERSION=	1.550
@@ -18,7 +18,7 @@ RUN_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
 		p5-Authen-PAM>=0:${PORTSDIR}/security/p5-Authen-PAM
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	usermin
 SUB_LIST=	PERL5=${PERL}
 SUB_FILES=	pkg-message
