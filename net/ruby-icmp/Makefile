@@ -2,7 +2,7 @@
 # Date created:		1 Nov 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/net/ruby-icmp/Makefile,v 1.11 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/ruby-icmp/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	icmp
