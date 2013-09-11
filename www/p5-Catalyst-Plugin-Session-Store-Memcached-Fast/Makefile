@@ -2,7 +2,7 @@
 # Date created:				11 Dec 2008
 # Whom:					Denis Pokataev <catone@cpan.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Session-Store-Memcached-Fast/Makefile,v 1.5 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-Memcached-Fast/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-Session-Store-Memcached-Fast
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Cache-Memcached-Fast>=0:${PORTSDIR}/databases/p5-Cache-Memcach
 		p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Catalyst::Plugin::Session::Store::Memcached::Fast.3
 
