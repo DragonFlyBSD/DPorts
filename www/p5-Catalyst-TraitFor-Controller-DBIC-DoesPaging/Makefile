@@ -2,7 +2,7 @@
 # Date created:		2010-07-28
 # Whom:			Alex Bakhtin <Alex.Bakhtin@gmail.com>
 #
-# $FreeBSD: ports/www/p5-Catalyst-TraitFor-Controller-DBIC-DoesPaging/Makefile,v 1.4 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-TraitFor-Controller-DBIC-DoesPaging/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	Catalyst-TraitFor-Controller-DBIC-DoesPaging
@@ -24,7 +24,8 @@ TEST_DEPENDS=	p5-Catalyst-View-JSON>=0:${PORTSDIR}/www/p5-Catalyst-View-JSON \
 		p5-SQL-Translator>=0:${PORTSDIR}/databases/p5-SQL-Translator \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::TraitFor::Controller::DBIC::DoesPaging.3
 
