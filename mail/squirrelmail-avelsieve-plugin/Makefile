@@ -1,5 +1,5 @@
 # Created by: Neil Darlow <neil@darlow.co.uk>
-# $FreeBSD: mail/squirrelmail-avelsieve-plugin/Makefile 321866 2013-06-27 07:12:45Z bapt $
+# $FreeBSD: mail/squirrelmail-avelsieve-plugin/Makefile 326257 2013-09-04 07:19:56Z az $
 
 PORTNAME=	avelsieve
 PORTVERSION=	1.9.7
@@ -9,7 +9,8 @@ DIST_SUBDIR=	squirrelmail
 MAINTAINER=	neil@darlow.co.uk
 COMMENT=	SquirrelMail plugin for Server-Side Mail Filtering management
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
