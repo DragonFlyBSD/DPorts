@@ -2,7 +2,7 @@
 # Date created:		2010-10-20
 # Whom:			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/zfs-stats/Makefile,v 1.9 2012/11/17 06:01:51 svnexp Exp $
+# $FreeBSD: sysutils/zfs-stats/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	zfs-stats
@@ -15,7 +15,7 @@ COMMENT=	Display human-readable ZFS statistics
 
 LICENSE=	BSD
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_BUILD=	yes
 
