@@ -2,7 +2,7 @@
 # Date created:		03 Jun 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CGI-Pager/Makefile,v 1.3 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Pager/Makefile 326033 2013-09-02 16:56:12Z az $
 #
 
 PORTNAME=	CGI-Pager
@@ -18,7 +18,8 @@ COMMENT=	Perl extension to generate HTML pagination linkage easily
 BUILD_DEPENDS=	p5-URI>0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Pager.3
 
