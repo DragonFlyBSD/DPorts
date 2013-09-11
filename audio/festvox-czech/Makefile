@@ -1,9 +1,5 @@
-# New ports collection makefile for:   festvox-czech
-# Date created:        2008-04-29
-# Whom:                František Dvořák <valtri@civ.zcu.cz>
-#
-# $FreeBSD: ports/audio/festvox-czech/Makefile,v 1.2 2012/11/17 05:54:31 svnexp Exp $
-#
+# Created by: František Dvořák <valtri@civ.zcu.cz>
+# $FreeBSD: audio/festvox-czech/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	festvox-czech
 PORTVERSION=	0.1
@@ -18,7 +14,7 @@ COMMENT=	Czech male voice for Festival
 RUN_DEPENDS=	${LOCALBASE}/share/festival/lib/dicts/czech-lexicon.out:${PORTSDIR}/audio/festlex-czech
 
 NO_BUILD=	yes
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	festival_voices_path=${PREFIX}/share/festival/lib/voices
 
 .include <bsd.port.mk>
