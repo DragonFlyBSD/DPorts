@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@nonsensss.de>
-# $FreeBSD: graphics/xsane/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/xsane/Makefile 326258 2013-09-04 07:55:49Z bsam $
 
 PORTNAME=	xsane
 PORTVERSION=	0.998
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+USES=		pkgconfig
 
 MAN1=		xsane.1
 
