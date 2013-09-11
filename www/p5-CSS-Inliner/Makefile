@@ -2,7 +2,7 @@
 # Date created:                         Sat Oct 10 17:28:20 EDT 2009
 # Whom:                                 Vivek Khera <vivek@khera.org>
 #
-# $FreeBSD: ports/www/p5-CSS-Inliner/Makefile,v 1.13 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CSS-Inliner/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	CSS-Inliner
@@ -25,7 +25,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CSS::Inliner.3 CSS::Inliner::Parser.3
 PLIST_FILES=	%%SITE_PERL%%/CSS/Inliner.pm \
