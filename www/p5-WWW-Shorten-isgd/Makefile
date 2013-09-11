@@ -2,7 +2,7 @@
 # Date created:				May 18, 2009
 # Whom:					Masafumi NAKANE <max@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Shorten-isgd/Makefile,v 1.4 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Shorten-isgd/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	WWW-Shorten-isgd
@@ -17,7 +17,8 @@ COMMENT=	Abstract interface to is.gd, one of URL shortening sites
 BUILD_DEPENDS=	p5-WWW-Shorten>=1.97:${PORTSDIR}/www/p5-WWW-Shorten
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::isgd.3
 
