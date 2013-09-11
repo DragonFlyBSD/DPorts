@@ -2,7 +2,7 @@
 # Date created:		02 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-POE-Component-Server-PSGI/Makefile,v 1.4 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-POE-Component-Server-PSGI/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	POE-Component-Server-PSGI
@@ -17,7 +17,8 @@ COMMENT=	Perl extension to PSGI Server implementation for POE
 RUN_DEPENDS=	p5-POEx-Role-PSGIServer>0:${PORTSDIR}/www/p5-POEx-Role-PSGIServer
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POE::Component::Server::PSGI.3 \
 	Plack::Server::POE.3
