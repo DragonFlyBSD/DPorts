@@ -1,4 +1,4 @@
-# $FreeBSD: x11/guake/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11/guake/Makefile 326151 2013-09-03 14:08:55Z bapt $
 
 PORTNAME=	guake
 PORTVERSION=	0.4.4.0
@@ -27,6 +27,8 @@ INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	MANPAGES NLS
 OPTIONS_DEFAULT=	MANPAGES NLS
+
+USES=		pkgconfig
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
