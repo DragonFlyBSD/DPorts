@@ -1,5 +1,5 @@
 # Created by: Bartoletti <coder@tuxfamily.org>
-# $FreeBSD: audio/lingot/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/lingot/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	lingot
 PORTVERSION=	0.9.1
@@ -15,9 +15,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GNOME=	gtk20 libglade2
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
