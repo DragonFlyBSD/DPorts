@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iStream
-# Date created:				31 August 2009
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: audio/istream/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: audio/istream/Makefile 326504 2013-09-06 14:23:20Z bapt $
 
 PORTNAME=	istream
 PORTVERSION=	0.10
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.jochen-baier.de/istream/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet radio player applet for GNOME Panel
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomepanel libgnomeui
 USE_GSTREAMER=	yes
 USE_XORG=	xtst
