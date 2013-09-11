@@ -1,7 +1,7 @@
-# $FreeBSD: japanese/ajaxzip2-data/Makefile 322147 2013-07-01 22:18:43Z kuriyama $
+# $FreeBSD: japanese/ajaxzip2-data/Makefile 326884 2013-09-10 09:39:11Z az $
 
 PORTNAME=	ajaxzip2
-PORTVERSION=	20130628
+PORTVERSION=	20130830
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	kuriyama
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	ja-ajaxzip2-core>0:${PORTSDIR}/japanese/ajaxzip2-core \
 
 NO_WRKSUBDIR=	yes
 USE_LHA=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 PORTVERSION_K?=	${PORTVERSION}
 PORTVERSION_J?=	${PORTVERSION}
 
