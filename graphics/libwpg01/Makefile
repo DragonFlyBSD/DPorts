@@ -1,9 +1,5 @@
-# New ports collection makefile for:	graphics/libwpg
-# Date created:		2009-01-09
-# Whom:			Dima Panov <fluffy@Fluffy.Khv.RU>
-#
-# $FreeBSD: ports/graphics/libwpg01/Makefile,v 1.15 2012/11/17 05:58:14 svnexp Exp $
-#
+# Created by: Dima Panov <fluffy@Fluffy.Khv.RU>
+# $FreeBSD: graphics/libwpg01/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	libwpg
 PORTVERSION=	0.1.3
@@ -22,7 +18,7 @@ LICENSE=	LGPL20
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix gnomehack ltverhack
-USE_PERL5=	yes
+USES=		perl5 pkgconfig
 USE_LDCONFIG=	yes
 
 post-patch:
