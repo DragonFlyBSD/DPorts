@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Blog-Spam/Makefile 319027 2013-05-25 05:44:34Z az $
+# $FreeBSD: www/p5-Blog-Spam/Makefile 326053 2013-09-02 18:23:34Z az $
 
 PORTNAME=	Blog-Spam
 PORTVERSION=	1.0.2
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Net-CIDR-Lite>=0:${PORTSDIR}/net/p5-Net-CIDR-Lite \
 		p5-URI-Find>=0:${PORTSDIR}/textproc/p5-URI-Find \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		blogspam.1
 MAN3=		Blog::Spam::API.3 \
