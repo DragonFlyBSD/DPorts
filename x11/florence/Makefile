@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: x11/florence/Makefile 322227 2013-07-03 12:44:17Z wg $
+# $FreeBSD: x11/florence/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	florence
 PORTVERSION=	0.6.0
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
-USES=		desktop-file-utils iconv pathfix
+USES=		desktop-file-utils iconv pathfix pkgconfig
 USE_XORG=	xtst xext
 USE_GNOME=	gtk30 cairo intlhack gnomedocutils librsvg2
 USE_GSTREAMER=	yes
