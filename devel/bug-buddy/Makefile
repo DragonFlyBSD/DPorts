@@ -1,10 +1,6 @@
-# New ports collection makefile for:	bugbuddy2
-# Date created:				14 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: devel/bug-buddy/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: devel/bug-buddy/Makefile 326133 2013-09-03 10:23:55Z bapt $
 #   $MCom: ports/devel/bug-buddy/Makefile,v 1.86 2010/11/16 18:17:55 kwm Exp $
-#
 
 PORTNAME=	bug-buddy
 PORTVERSION=	2.32.0
@@ -20,9 +16,8 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libbonobo \
 		gnomedocutils evolutiondataserver
