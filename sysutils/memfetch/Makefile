@@ -2,7 +2,7 @@
 # Date created:         		25 Nov 2004
 # Whom:					Yonatan <onatan@gmail.com>
 #
-# $FreeBSD: ports/sysutils/memfetch/Makefile,v 1.4 2012/11/17 06:01:38 svnexp Exp $
+# $FreeBSD: sysutils/memfetch/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	memfetch
@@ -16,7 +16,8 @@ MAINTAINER=	onatan@gmail.com
 COMMENT=	Utility to dump process memory
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 CFLAGS+=	${CPPFLAGS}
 
