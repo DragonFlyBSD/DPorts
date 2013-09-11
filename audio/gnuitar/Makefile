@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: audio/gnuitar/Makefile 317263 2013-05-03 21:30:20Z bapt $
+# $FreeBSD: audio/gnuitar/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=		gnuitar
 PORTVERSION=		0.3.2
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=--with-gtk2 \
 TXT_DOCS=	AUTHORS COPYING FAQ INSTALL NEWS README TODO ChangeLog
 HTML_DOCS=	faq.html index.html install.html readme.html
 PORTDOCS=	${TXT_DOCS} ${HTML_DOCS}
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 OPTIONS_DEFINE=	SUID DOCS
 OPTIONS_DEFAULT=	SUID
