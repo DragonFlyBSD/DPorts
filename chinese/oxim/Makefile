@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: chinese/oxim/Makefile 321140 2013-06-17 16:18:54Z antoine $
+# $FreeBSD: chinese/oxim/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	oxim
 PORTVERSION=	1.2.2
@@ -19,14 +19,14 @@ GTK2_DESC=	 GTK2 input method module
 CHEWING_DESC=	 Chewing input module
 UNICODE_DESC=	 Unicode input module
 
-USES=		iconv
+USES=		iconv pkgconfig
 USE_XORG=	x11 xft xpm xtst
 WANT_GNOME=	yes
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=--disable-bimsphone-module \
 		--disable-static \
 		--with-conf-dir=${PREFIX}/etc/${PORTNAME} \
