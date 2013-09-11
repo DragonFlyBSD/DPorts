@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <timur@FreeBSD.org>
-# $FreeBSD: ports/converters/p5-Encode-Punycode/Makefile,v 1.6 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Encode-Punycode/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Encode-Punycode
 PORTVERSION=	1.001
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-Net-IDN-Encode>=0:${PORTSDIR}/textproc/p5-Net-IDN-Encode
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Encode::Punycode.3
 
