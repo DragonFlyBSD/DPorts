@@ -2,7 +2,7 @@
 # Date created:		2010-03-08
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Net-LimeLight-Purge/Makefile,v 1.2 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LimeLight-Purge/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-LimeLight-Purge
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-DateTime-Format-ISO8601>=0.06:${PORTSDIR}/devel/p5-DateTime-Form
 		p5-MooseX-AttributeHelpers>=0.14:${PORTSDIR}/devel/p5-MooseX-AttributeHelpers \
 		p5-SOAP-Lite>=0.710.08:${PORTSDIR}/net/p5-SOAP-Lite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LimeLight::Purge.3 \
 		Net::LimeLight::Purge::Request.3 \
