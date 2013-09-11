@@ -2,7 +2,7 @@
 # Date created:        02 June 2002
 # Whom:                Philippe Casidy <pcasidy@casidy.com>
 #
-# $FreeBSD: ports/sysutils/whatpix/Makefile,v 1.8 2012/11/17 06:01:49 svnexp Exp $
+# $FreeBSD: sysutils/whatpix/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	whatpix
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 
 NO_BUILD=	yes
 PLIST_FILES=	bin/whatpix
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/whatpix ${PREFIX}/bin
