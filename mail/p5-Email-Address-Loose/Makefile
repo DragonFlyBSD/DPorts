@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-Address-Loose/Makefile 319103 2013-05-26 08:57:18Z kuriyama $
+# $FreeBSD: mail/p5-Email-Address-Loose/Makefile 326257 2013-09-04 07:19:56Z az $
 
 PORTNAME=	Email-Address-Loose
 PORTVERSION=	0.10
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Email-Address>=1.88.9:${PORTSDIR}/mail/p5-Email-Address
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::Address::Loose.3
 
