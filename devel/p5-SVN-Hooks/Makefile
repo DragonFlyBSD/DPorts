@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Hooks/Makefile 323908 2013-07-29 20:14:03Z glarkin $
+# $FreeBSD: devel/p5-SVN-Hooks/Makefile 326857 2013-09-10 03:32:30Z az $
 
 PORTNAME=	SVN-Hooks
 PORTVERSION=	1.21
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Data-Util>=0:${PORTSDIR}/devel/p5-Data-Util \
 		subversion>=1.4.0:${PORTSDIR}/devel/subversion
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SVN::Hooks.3 \
 		SVN::Hooks::AllowLogChange.3 \
