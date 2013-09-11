@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Parsepp/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: textproc/p5-XML-Parsepp/Makefile 326624 2013-09-07 10:53:30Z sunpoet $
 
 PORTNAME=	XML-Parsepp
 PORTVERSION=	0.06
@@ -13,7 +13,7 @@ COMMENT=	Simplified pure Perl parser for XML
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-USE_PERL5=	5.14.0+ configure
+USE_PERL5=	5.14+ configure
 USES=		perl5
 
 MAN3=		XML::Parsepp.3
