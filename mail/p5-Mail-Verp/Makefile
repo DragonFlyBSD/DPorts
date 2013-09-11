@@ -2,7 +2,7 @@
 # Date created:				Wed Aug  2 17:15:13 EDT 2006
 # Whom:					Vivek Khera <vivek@khera.org>
 #
-# $FreeBSD: ports/mail/p5-Mail-Verp/Makefile,v 1.3 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Verp/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	Mail-Verp
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vivek@khera.org
 COMMENT=	Encodes and decodes Variable Envelope Return Paths (VERP) addresses
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Mail::Verp.3
 
