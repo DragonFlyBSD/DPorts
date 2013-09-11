@@ -1,9 +1,4 @@
-# New ports collection makefile for:	YAML::AppConfig
-# Date created:		26 Aug 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-YAML-AppConfig/Makefile,v 1.4 2012/11/17 05:56:36 svnexp Exp $
-#
+# $FreeBSD: devel/p5-YAML-AppConfig/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	YAML-AppConfig
 PORTVERSION=	0.16
@@ -20,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-YAML-Syck>0:${PORTSDIR}/textproc/p5-YAML-Syck
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	YAML::AppConfig.3
 
