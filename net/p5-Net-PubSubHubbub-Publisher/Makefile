@@ -2,7 +2,7 @@
 # Date created:		2010-12-05
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Net-PubSubHubbub-Publisher/Makefile,v 1.2 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-PubSubHubbub-Publisher/Makefile 326468 2013-09-06 07:00:15Z az $
 #
 
 PORTNAME=	Net-PubSubHubbub-Publisher
@@ -16,7 +16,8 @@ COMMENT=	Client library to ping a PubSubHubbub hub
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::PubSubHubbub::Publisher.3
 
