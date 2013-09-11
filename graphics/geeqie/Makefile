@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@rwxrwxrwx.net>
-# $FreeBSD: graphics/geeqie/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/geeqie/Makefile 326133 2013-09-03 10:23:55Z bapt $
 
 PORTNAME=	geeqie
 PORTVERSION=	1.1
@@ -13,7 +13,6 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 USE_GNOME=	gtk20 desktopfileutils
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 CONFIGURE_ARGS=	--docdir="${DOCSDIR}" \
 		--htmldir="${DOCSDIR}/html" \
 		--with-htmldir="${DOCSDIR}/html" \
@@ -25,7 +24,7 @@ MAKE_ARGS+=	top_builddir="${WRKSRC}"
 
 PORTDOCS=	*
 MAN1=		geeqie.1
-USES=		gettext
+USES=		gettext gmake pkgconfig
 
 OPTIONS_DEFINE=	EXIV2 LCMS LIRC GPS DOCS
 OPTIONS_DEFAULT=EXIV2 LCMS
