@@ -2,7 +2,7 @@
 # Date created:				2010-10-4
 # Whom:					Tom Judge <tom@tomjudge.com>
 #
-# $FreeBSD: ports/sysutils/p5-File-Log/Makefile,v 1.3 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: sysutils/p5-File-Log/Makefile 326573 2013-09-07 06:47:20Z az $
 
 PORTNAME=		File-Log
 PORTVERSION=		1.05
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		tj@FreeBSD.org
 COMMENT=		A simple Object Orientated Logger
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			File::Log.3
 
