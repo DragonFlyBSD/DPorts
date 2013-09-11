@@ -2,7 +2,7 @@
 # Date created:		2009-01-14
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/mail/p5-ZConf-Mail/Makefile,v 1.16 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-ZConf-Mail/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	ZConf-Mail
@@ -32,7 +32,8 @@ BUILD_DEPENDS=	p5-Config-Tiny>=0:${PORTSDIR}/devel/p5-Config-Tiny \
 		p5-ZConf>=0:${PORTSDIR}/net/p5-ZConf
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZConf::Mail.3
 
