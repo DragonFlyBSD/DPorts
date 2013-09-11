@@ -2,7 +2,7 @@
 # Date created:		14 Feb 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-I18N-AcceptLanguage/Makefile,v 1.2 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-I18N-AcceptLanguage/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	I18N-AcceptLanguage
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to matches language preference (HTTP Accept-Language)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	I18N::AcceptLanguage.3
 
