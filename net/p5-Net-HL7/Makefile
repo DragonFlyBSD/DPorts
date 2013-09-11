@@ -2,7 +2,7 @@
 # Date created:				26 Jul 2005
 # Whom:					Brent B. Powers <bbp2006@columbia.edu>
 #
-# $FreeBSD: ports/net/p5-Net-HL7/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-HL7/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	Net-HL7
@@ -16,7 +16,8 @@ COMMENT=	Net::HL7 - A simple yet flexible API for non-XML HL7 applications
 
 PORTDOCS=	README
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::HL7.3 \
 		Net::HL7::Request.3 \
