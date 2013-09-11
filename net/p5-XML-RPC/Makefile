@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: net/p5-XML-RPC/Makefile 318302 2013-05-16 09:44:20Z miwi $
+# $FreeBSD: net/p5-XML-RPC/Makefile 326526 2013-09-06 17:02:34Z az $
 
 PORTNAME=	XML-RPC
 PORTVERSION=	0.9
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-XML-TreePP>=0:${PORTSDIR}/textproc/p5-XML-TreePP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::RPC.3
 
