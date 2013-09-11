@@ -2,7 +2,7 @@
 # Date created:			30 Aug 2000
 # Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/lang/ruby-usersguide/Makefile,v 1.28 2012/11/17 05:58:56 svnexp Exp $
+# $FreeBSD: lang/ruby-usersguide/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	usersguide
