@@ -2,7 +2,7 @@
 # Date created:			19 Aug 2000
 # Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/japanese/ruby-man/Makefile,v 1.8 2012/11/17 05:58:39 svnexp Exp $
+# $FreeBSD: japanese/ruby-man/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 MASTERDIR=	${.CURDIR}/../../lang/ruby-man
