@@ -2,7 +2,7 @@
 # Date created:		2008-03-20
 # Whom:			Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Amazon-Thumbnail/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Amazon-Thumbnail/Makefile 326481 2013-09-06 09:21:19Z az $
 #
 
 PORTNAME=	Net-Amazon-Thumbnail
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-XML-XPath>=0:${PORTSDIR}/textproc/p5-XML-XPath
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::Amazon::Thumbnail.3
 
