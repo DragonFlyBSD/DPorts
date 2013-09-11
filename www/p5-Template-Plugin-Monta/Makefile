@@ -2,7 +2,7 @@
 # Date created:				14 June 2005
 # Whom:					TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-Monta/Makefile,v 1.8 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-Monta/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	Template-Plugin-Monta
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		p5-Acme-Monta>=0:${PORTSDIR}/www/p5-Acme-Monta
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Template::Plugin::Monta.3
 
