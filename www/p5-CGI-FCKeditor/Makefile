@@ -2,7 +2,7 @@
 # Date created:		2007-04-05
 # Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-CGI-FCKeditor/Makefile,v 1.5 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-FCKeditor/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	CGI-FCKeditor
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	This's FCKeditor Controller for Perl OOP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::FCKeditor.3
 
