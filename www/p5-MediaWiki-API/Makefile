@@ -2,7 +2,7 @@
 # Date created:		23.09.2008
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-MediaWiki-API/Makefile,v 1.22 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-MediaWiki-API/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	MediaWiki-API
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MediaWiki::API.3
 
