@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-OpenCA-CRL/Makefile 324993 2013-08-19 13:48:21Z mat $
+# $FreeBSD: security/p5-OpenCA-CRL/Makefile 326022 2013-09-02 16:14:38Z sunpoet $
 
 PORTNAME=	OpenCA-CRL
 PORTVERSION=	0.9.6
@@ -12,12 +12,14 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	CRL Management module
 
+PORTSCOUT=	skipv:0.9.17
+
 USES=		perl5
 USE_PERL5=	configure
 
 P5MAN3=		OpenCA::CRL.3
 
 post-patch:
-	@${MV} ${WRKSRC}/prova.pl  ${WRKSRC}/prova.pl.sample
+	@${MV} ${WRKSRC}/prova.pl ${WRKSRC}/prova.pl.sample
 
 .include <bsd.port.mk>
