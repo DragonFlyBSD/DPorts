@@ -2,7 +2,7 @@
 # Date created:				July 12 2004
 # Whom:	      				Andrea Venturoli <freebsd@netfence.it>
 #
-# $FreeBSD: ports/mail/p5-Mail-Field-Received/Makefile,v 1.6 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Field-Received/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	Mail-Field-Received
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Differences>0:${PORTSDIR}/devel/p5-Test-Differences
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Field::Received.3
 
