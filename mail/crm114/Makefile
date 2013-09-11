@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: mail/crm114/Makefile 319665 2013-06-02 14:42:23Z danfe $
+# $FreeBSD: mail/crm114/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	crm114
 PORTVERSION=	20100106
@@ -30,7 +30,7 @@ MAKE_ARGS=	CC="${CC}" prefix="${PREFIX}" \
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-LIBS+=		-L${LOCALBASE}/lib -liconv -lintl
+LIBS+=		-L${LOCALBASE}/lib ${ICONV_LIB} -lintl
 
 CFLAGS+=	-DVERSION='\"${PORTVERSION}-${CRM114RELEASENAME}\"'
 CFLAGS+=	-DNO_LOGL
