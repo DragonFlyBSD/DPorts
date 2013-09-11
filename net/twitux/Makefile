@@ -1,9 +1,5 @@
-# New ports collection makefile for:   twitux
-# Date created:        25 August 2008
-# Whom:                Arnaud Berthomier
-#
-# $FreeBSD: net/twitux/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Arnaud Berthomier
+# $FreeBSD: net/twitux/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=		twitux
 PORTVERSION=	0.69
@@ -24,8 +20,7 @@ USE_GNOME=		glib20 gtk20 gconf2 libxml2 gnomedocutils
 INSTALLS_OMF=	yes
 USE_BZIP2=		yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=		yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 CONFIGURE_ENV+=	GMSGFMT="${LOCALBASE}/bin/msgfmt"
 GCONF_SCHEMAS=	twitux.schemas
 INSTALLS_ICONS=	yes
