@@ -1,23 +1,20 @@
-# New ports collection makefile for:    p5-XML-RSS-JavaScript
-# Date created:				31 Oct 2003
-# Whom:					Foxfair Hu <foxfair@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-RSS-JavaScript/Makefile,v 1.13 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Foxfair Hu <foxfair@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-RSS-JavaScript/Makefile 326068 2013-09-02 19:32:09Z az $
 
 PORTNAME=	XML-RSS-JavaScript
-PORTVERSION=	0.63
+PORTVERSION=	0.64
 CATEGORIES=	textproc www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	sahil@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to serialize your RSS as JavaScript
 
 RUN_DEPENDS=	p5-XML-RSS>=1.31:${PORTSDIR}/textproc/p5-XML-RSS
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::RSS::JavaScript.3
 
