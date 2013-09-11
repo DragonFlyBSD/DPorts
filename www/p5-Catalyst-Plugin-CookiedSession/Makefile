@@ -2,7 +2,7 @@
 # Date created:	   21 Nov 2008
 # Whom:		   Denis Pokataev <catone@cpan.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-CookiedSession/Makefile,v 1.7 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-CookiedSession/Makefile 326139 2013-09-03 12:27:09Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-CookiedSession
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::CookiedSession.3
 
