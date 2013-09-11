@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Cache-BDB
-# Date created:		2006-07-22
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/databases/p5-Cache-BDB/Makefile,v 1.6 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: databases/p5-Cache-BDB/Makefile 326892 2013-09-10 10:51:10Z az $
 
 PORTNAME=	Cache-BDB
 PORTVERSION=	0.04
@@ -17,7 +13,8 @@ COMMENT=	An object caching wrapper around BerkeleyDB
 BUILD_DEPENDS=	p5-BerkeleyDB>=0:${PORTSDIR}/databases/p5-BerkeleyDB
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cache::BDB.3
 
