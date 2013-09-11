@@ -2,7 +2,7 @@
 # Date created:				9 January 2004
 # Whom:					Garrett Wollman <wollman@FreeBSD.org>
 #
-# $FreeBSD: ports/net/entitymib/Makefile,v 1.7 2012/11/17 06:00:00 svnexp Exp $
+# $FreeBSD: net/entitymib/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	entitymib
@@ -21,7 +21,8 @@ COMMENT=Display the Entity MIB of an SNMP agent
 RUN_DEPENDS=	p5-Tree-DAG_Node>=0:${PORTSDIR}/devel/p5-Tree-DAG_Node \
 		net-snmp>=0:${PORTSDIR}/net-mgmt/net-snmp
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 MAN1=		entitymib.1
 
 NO_BUILD=	nope
