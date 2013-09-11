@@ -2,7 +2,7 @@
 # Date created:				Wed Jul  17 08:00:30 2001
 # Whom:					Michael L. Hostbaek (mich@freebsdcluster.org)
 #
-# $FreeBSD: ports/www/p5-WWW-IMDb/Makefile,v 1.8 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-IMDb/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	IMDb
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IMDb.3 IMDb::People.3 IMDb::Title.3
 
