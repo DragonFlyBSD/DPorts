@@ -2,7 +2,7 @@
 # Date created:                         9 March 2007
 # Whom:                                 Anatoliy Dmytriyev <tolid@plab.ku.dk>
 #
-# $FreeBSD: ports/www/p5-WWW-TV/Makefile,v 1.8 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-TV/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	WWW-TV
@@ -16,7 +16,8 @@ COMMENT=	Perl interface to the database of series/episodes at TV.com
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::TV.3 WWW::TV::Episode.3 WWW::TV::Series.3
 
