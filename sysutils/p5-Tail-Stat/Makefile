@@ -1,5 +1,5 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: sysutils/p5-Tail-Stat/Makefile 323164 2013-07-17 12:56:23Z culot $
+# $FreeBSD: sysutils/p5-Tail-Stat/Makefile 326530 2013-09-06 17:55:21Z az $
 
 PORTNAME=	Tail-Stat
 PORTVERSION=	0.21
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 USE_RC_SUBR=	tstatd
 SUB_LIST+=	RC_SUBR_SUFFIX=${RC_SUBR_SUFFIX}
