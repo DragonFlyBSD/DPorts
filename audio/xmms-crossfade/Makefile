@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: audio/xmms-crossfade/Makefile 324085 2013-08-01 05:47:58Z bapt $
+# $FreeBSD: audio/xmms-crossfade/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	crossfade
 PORTVERSION=	0.3.14
@@ -16,6 +16,7 @@ LIB_DEPENDS?=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 HAS_CONFIGURE=	yes
 USE_CSTD=	gnu89
+USES=		pkgconfig
 APP?=		xmms
 .if ${APP} == bmp
 PORTVERSION=	0.3.12
