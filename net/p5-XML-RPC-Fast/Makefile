@@ -2,7 +2,7 @@
 # Whom:					gugu
 # Date created:				08 December 2009
 #
-# $FreeBSD: ports/net/p5-XML-RPC-Fast/Makefile,v 1.7 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-XML-RPC-Fast/Makefile 326384 2013-09-05 11:09:23Z az $
 #
 
 PORTNAME=	XML-RPC-Fast
@@ -23,7 +23,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::RPC::Enc.3 \
 		XML::RPC::Enc::LibXML.3 \
