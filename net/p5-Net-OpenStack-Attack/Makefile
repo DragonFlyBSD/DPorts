@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Net-OpenStack-Attack/Makefile,v 1.1 2013/02/07 07:45:15 svnexp Exp $
+# $FreeBSD: net/p5-Net-OpenStack-Attack/Makefile 326481 2013-09-06 09:21:19Z az $
 
 PORTNAME=	Net-OpenStack-Attack
 PORTVERSION=	1.0500
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-Net-HTTPS-NB>=0:${PORTSDIR}/net/p5-Net-HTTPS-NB \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		stackattack.1
 MAN3=		Net::OpenStack::Attack.3
