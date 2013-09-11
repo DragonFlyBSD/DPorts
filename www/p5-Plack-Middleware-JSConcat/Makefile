@@ -2,7 +2,7 @@
 # Date created:		07 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-JSConcat/Makefile,v 1.4 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-JSConcat/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	Plack-Middleware-JSConcat
@@ -19,7 +19,8 @@ RUN_DEPENDS=	\
 	p5-Plack>0:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::JSConcat.3
 
