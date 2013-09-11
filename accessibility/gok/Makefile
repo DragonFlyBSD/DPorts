@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gok
-# Date created:			12 April 2003
-# Whom:				Adam Weinberger <adamw@freebsd.org>
-#
-# $FreeBSD: accessibility/gok/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Adam Weinberger <adamw@freebsd.org>
+# $FreeBSD: accessibility/gok/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #    $MCom: ports/accessibility/gok/Makefile,v 1.112 2010/09/29 07:37:57 kwm Exp $
-#
 
 PORTNAME=	gok
 PORTVERSION=	2.30.1
@@ -21,11 +17,10 @@ LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gmake gettext pkgconfig
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui atspi libwnck \
 		gnomespeech libxml2
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
