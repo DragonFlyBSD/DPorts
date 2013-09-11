@@ -2,7 +2,7 @@
 # Date created:		2011-01-14
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-Web-oEmbed/Makefile,v 1.2 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-Web-oEmbed/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	Web-oEmbed
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-XML-LibXML-Simple>=0:${PORTSDIR}/textproc/p5-XML-LibXML-Simple \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Web::oEmbed.3
 
