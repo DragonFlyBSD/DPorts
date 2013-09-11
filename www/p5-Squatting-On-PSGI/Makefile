@@ -2,7 +2,7 @@
 # Date created:		17 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Squatting-On-PSGI/Makefile,v 1.6 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Squatting-On-PSGI/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	Squatting-On-PSGI
@@ -23,7 +23,8 @@ TEST_DEPENDS=	\
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires \
 	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Squatting::On::PSGI.3
 
