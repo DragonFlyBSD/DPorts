@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
-# $FreeBSD: devel/p5-Time-Format/Makefile 314892 2013-03-22 05:31:12Z culot $
+# $FreeBSD: devel/p5-Time-Format/Makefile 326810 2013-09-09 14:13:20Z az $
 
 PORTNAME=	Time-Format
 PORTVERSION=	1.12
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	Sergey.Dyatko@gmail.com
 COMMENT=	Easy-to-use date/time formatting
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Time::Format.3
 
