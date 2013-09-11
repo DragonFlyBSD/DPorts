@@ -20,5 +20,6 @@ MAN1=		paps.1
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	pango
+USES=		pkgconfig
 
 .include <bsd.port.mk>
