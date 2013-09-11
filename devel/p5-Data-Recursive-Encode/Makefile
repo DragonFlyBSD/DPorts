@@ -2,7 +2,7 @@
 # Date created:		23 Jan 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Data-Recursive-Encode/Makefile,v 1.3 2012/11/17 05:56:10 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Recursive-Encode/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	Data-Recursive-Encode
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to encode/decode values in a structure
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Recursive::Encode.3
 
