@@ -2,7 +2,7 @@
 # Date created:				Sat 13 Jun 2009
 # Whom:					Alexey V. Degtyarev
 #
-# $FreeBSD: ports/net-mgmt/nagios-snmp-plugins-extras/Makefile,v 1.4 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-snmp-plugins-extras/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	nagios-snmp-plugins-extras
@@ -15,7 +15,8 @@ MAINTAINER=	alexey@renatasystems.org
 COMMENT=	A set of Nagios plugins written in Perl to check devices with SNMP
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 RUN_DEPENDS+=	p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP \
 		${LOCALBASE}/libexec/nagios/utils.pm:${PORTSDIR}/net-mgmt/nagios-plugins
