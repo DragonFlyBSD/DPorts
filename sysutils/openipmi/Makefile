@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <alex.deiter@gmail.com>
-# $FreeBSD: sysutils/openipmi/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/openipmi/Makefile 325741 2013-08-30 23:57:36Z bapt $
 
 PORTNAME=	openipmi
 PORTVERSION=	2.0.19
@@ -13,10 +13,9 @@ COMMENT=	Complex IPMI management software
 
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	pkgconfig
 USE_AUTOTOOLS=	autoconf autoheader automake aclocal libtool
 
 AUTOMAKE_ARGS+=	--add-missing --copy --foreign
