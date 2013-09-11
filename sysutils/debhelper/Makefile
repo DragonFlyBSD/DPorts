@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/sysutils/debhelper/Makefile,v 1.1 2013/02/08 12:05:00 svnexp Exp $
+# $FreeBSD: sysutils/debhelper/Makefile 326572 2013-09-07 06:13:27Z az $
 
 PORTNAME=	debhelper
 PORTVERSION=	9.20120909
@@ -12,7 +12,7 @@ COMMENT=	Helper programs for debian/rules
 
 MAKE_ENV+=	SITE_PERL_REL=${SITE_PERL_REL}
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 .include <bsd.port.mk>
