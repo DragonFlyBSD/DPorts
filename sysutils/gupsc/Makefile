@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/gupsc/Makefile 323714 2013-07-26 12:25:46Z az $
+# $FreeBSD: sysutils/gupsc/Makefile 326572 2013-09-07 06:13:27Z az $
 
 PORTNAME=	gupsc
 PORTVERSION=	0.3.1
@@ -13,7 +13,8 @@ COMMENT=	A free Gnome client for the Network UPS Tools
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomelibs gnomehier
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
