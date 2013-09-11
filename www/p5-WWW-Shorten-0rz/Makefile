@@ -2,7 +2,7 @@
 # Date created:				2006-07-16
 # Whom:					Tsung-Han Yeh <snowfly@yuntech.edu.tw>
 #
-# $FreeBSD: ports/www/p5-WWW-Shorten-0rz/Makefile,v 1.11 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Shorten-0rz/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	WWW-Shorten-0rz
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-WWW-Shorten>=0:${PORTSDIR}/www/p5-WWW-Shorten \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::0rz.3
 
