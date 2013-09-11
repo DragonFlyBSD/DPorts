@@ -2,7 +2,7 @@
 # Date created:        07 July 2004
 # Whom:                snowchyld
 #
-# $FreeBSD: ports/mail/p5-Mail-Alias/Makefile,v 1.6 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Alias/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	Mail-Alias
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	chifeng@gmail.com
 COMMENT=	Mail::Alias
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Alias.3
 
