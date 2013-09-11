@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-CheckDeps/Makefile 321745 2013-06-25 13:58:41Z culot $
+# $FreeBSD: devel/p5-Test-CheckDeps/Makefile 326725 2013-09-08 13:29:44Z az $
 
 PORTNAME=	Test-CheckDeps
 PORTVERSION=	0.006
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-CPAN-Meta>=2.120920:${PORTSDIR}/devel/p5-CPAN-Meta \
 		p5-Module-Build-Tiny>=0.021:${PORTSDIR}/devel/p5-Module-Build-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Test::CheckDeps.3
 
