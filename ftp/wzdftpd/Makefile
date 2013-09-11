@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: ftp/wzdftpd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/wzdftpd/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	wzdftpd
 PORTVERSION=	0.8.3
@@ -38,7 +38,7 @@ MAN8=		wzdftpd.8
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=		iconv
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 .else
 CONFIGURE_ARGS+=	--disable-utf8
 .endif
