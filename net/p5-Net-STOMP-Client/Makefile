@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Net-STOMP-Client/Makefile,v 1.5 2013/02/04 15:34:21 svnexp Exp $
+# $FreeBSD: net/p5-Net-STOMP-Client/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	Net-STOMP-Client
 PORTVERSION=	2.0
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::STOMP::Client.3 \
 	Net::STOMP::Client::Auth.3 \
