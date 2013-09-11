@@ -1,17 +1,13 @@
-# New ports collection makefile for:	fuel
-# Date created:				2012-04-26
-# Whom:					Hakisho Nukama <nukama@gmail.com>
-#
-# $FreeBSD: devel/fuel/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Hakisho Nukama <nukama@gmail.com>
+# $FreeBSD: devel/fuel/Makefile 325831 2013-08-31 20:23:20Z rm $
 
 PORTNAME=	fuel
 DISTVERSION=	0.9.6
 CATEGORIES=	devel
 MASTER_SITES=	https://fuel-scm.googlecode.com/files/
 
-MAINTAINER=	nukama@gmail.com
-COMMENT=	A GUI front-end to fossil SCM tool
+MAINTAINER=	nukama+maintainer@gmail.com
+COMMENT=	GUI front-end to fossil SCM tool
 
 LICENSE=	GPLv2
 
