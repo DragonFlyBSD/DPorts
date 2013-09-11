@@ -2,7 +2,7 @@
 # Date created:			Oct 15, 2006
 # Whom:				Alex Samorukov, samm@os2.kiev.ua
 #
-# $FreeBSD: ports/net-mgmt/flowviewer/Makefile,v 1.16 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/flowviewer/Makefile 326245 2013-09-04 03:27:37Z az $
 
 PORTNAME=	flowviewer
 PORTVERSION=	3.3.1
@@ -29,7 +29,7 @@ SUB_LIST+=	"FLOWVIEWERDIR=${FLOWVIEWERDIR}" \
 		"PKGNAME=${PKGNAME}"
 SUB_FILES=	pkg-message
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PORTDOCS=	README
