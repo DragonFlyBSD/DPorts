@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/ripperx/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: audio/ripperx/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	ripperx
 PORTVERSION=	2.7.3
@@ -16,8 +16,7 @@ RUN_DEPENDS=	cdparanoia:${PORTSDIR}/audio/cdparanoia
 
 GNU_CONFIGURE=	yes
 CFLAGS+=	-L${LOCALBASE}/lib
-USE_GMAKE=	yes
-USES=		pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gtk20
 MAN1=		ripperX.1
 
