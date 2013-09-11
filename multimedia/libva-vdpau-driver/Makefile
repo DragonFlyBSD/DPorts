@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libva-vdpau-driver/Makefile 322342 2013-07-05 17:37:24Z madpilot $
+# $FreeBSD: multimedia/libva-vdpau-driver/Makefile 326109 2013-09-02 22:31:37Z bapt $
 
 PORTNAME=	libva-vdpau-driver
 PORTVERSION=	0.7.4
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/libva.pc:${PORTSDIR}/multimedia/li
 
 LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
-USES=		gmake
+USES=		gmake pkgconfig
 USE_GL=		gl
 
 GNU_CONFIGURE=	yes
