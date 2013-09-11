@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gerbv/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: cad/gerbv/Makefile 326095 2013-09-02 21:32:24Z bapt $
 
 PORTNAME=	gerbv
 PORTVERSION=	2.6.0
@@ -13,7 +13,7 @@ COMMENT=	A Free Gerber Viewer
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=        pathfix
+USES=        pathfix pkgconfig
 USE_GNOME=	desktopfileutils gtk20
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
