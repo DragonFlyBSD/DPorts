@@ -2,7 +2,7 @@
 # Date created:                      May 18 2007
 # Whom:                              Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: www/trac-iniadmin/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-iniadmin/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	iniadmin
@@ -23,7 +23,7 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	IniAdmin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}
-PLIST_SUB+=	PORTVERSION=${PORTVERSION:R} PYTHONVERSION=${_PYTHON_VERSION}
+PLIST_SUB+=	PORTVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
 .include <bsd.port.mk>
