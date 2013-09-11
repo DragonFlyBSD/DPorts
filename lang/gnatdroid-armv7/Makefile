@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-armv7/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: lang/gnatdroid-armv7/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	armv7
 PORTVERSION=	${SNAPSHOT}
@@ -109,7 +109,7 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-gmp=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-mpfr=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-mpc=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 CONFIGURE_ARGS+=	--with-sysroot=${SRPREFIX}
 CONFIGURE_ARGS+=	--with-float=soft
 CONFIGURE_ARGS+=	--with-fpu=${FPU}
