@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SVN::Hook
-# Date created:		2008-02-12
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-SVN-Hook/Makefile,v 1.4 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: devel/p5-SVN-Hook/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	SVN-Hook
 PORTVERSION=	0.28
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 BUILD_DEPENDS=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		svnhook.1
 MAN3=		SVN::Hook.3
