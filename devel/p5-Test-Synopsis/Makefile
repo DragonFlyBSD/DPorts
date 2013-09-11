@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Synopsis
-# Date created:		2010-01-17
-# Whom:			Takuya Tsuchida <tsucchi@cpan.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Synopsis/Makefile,v 1.2 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Takuya Tsuchida <tsucchi@cpan.org>
+# $FreeBSD: devel/p5-Test-Synopsis/Makefile 326636 2013-09-07 14:07:59Z az $
 
 PORTNAME=	Test-Synopsis
 PORTVERSION=	0.06
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Filter>=1.35:${PORTSDIR}/devel/p5-Filter \
 RUN_DEPENDS=	p5-Filter>=1.35:${PORTSDIR}/devel/p5-Filter \
 		p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Test::Synopsis.3
 
 .include <bsd.port.mk>
