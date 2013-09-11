@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter-box2d/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: graphics/clutter-box2d/Makefile 326070 2013-09-02 19:55:48Z bapt $
 
 PORTNAME=	clutter-box2d
 PORTVERSION=	0.10.0
@@ -12,9 +12,8 @@ COMMENT=	Clutter Box2D integration library
 
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	ltverhack gnomeprefix
 USE_GL=		gl
 USE_XORG=	xp x11
