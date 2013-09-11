@@ -1,10 +1,6 @@
-# New ports collection makefile for:   PolicyKit-gnome
-# Date Created:			20 January 2008
-# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: sysutils/policykit-gnome/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: sysutils/policykit-gnome/Makefile 326107 2013-09-02 22:23:53Z bapt $
 #   $MCom: ports/sysutils/policykit-gnome/Makefile,v 1.6 2008/10/03 17:19:43 marcus Exp $
-#
 
 PORTNAME=	policykit-gnome
 PORTVERSION=	0.9.2
@@ -20,7 +16,7 @@ LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GNOME=	gnomehack intlhack gnomedocutils gconf2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
