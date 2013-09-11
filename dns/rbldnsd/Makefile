@@ -1,63 +1,49 @@
-# New ports collection makefile for:	rbldnsd
-# Date created:				Fri Jun 13 05:30:12 EDT 2003
-# Whom:					Paul Chvostek <paul@it.ca>
-#
-# $FreeBSD: ports/dns/rbldnsd/Makefile,v 1.17 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: Paul Chvostek <paul@it.ca>
+# $FreeBSD: dns/rbldnsd/Makefile 326153 2013-09-03 14:21:09Z feld $
 
 PORTNAME=	rbldnsd
-PORTVERSION=	0.996b
-PORTREVISION=	1
+PORTVERSION=	0.997a
 CATEGORIES=	dns
-MASTER_SITES=	http://www.corpit.ru/mjt/rbldnsd/:0 \
-		http://www.it.ca/~paul/src/:0
-DISTFILES=	${PORTNAME}_${PORTVERSION}${EXTRACT_SUFX}:0
+MASTER_SITES=	http://www.corpit.ru/mjt/rbldnsd/ \
+		ftp://ftp.renatasystems.org/pub/FreeBSD/ports/distfiles/
 
 MAINTAINER=	alexey@renatasystems.org
 COMMENT=	Small and fast DNS daemon especially for DNSBL zones
 
-.if !defined(NOPORTDOCS)
-EXTRACT_ONLY+=	${PORTNAME}_${PORTVERSION}${EXTRACT_SUFX}
-MASTER_SITES+=	http://www.corpit.ru/mjt/:1 \
-		http://www.it.ca/~paul/src/:1
-DISTFILES+=	rbldnsd.html:1
-IGNOREFILES+=	rbldnsd.html
-.endif
-
 RBLDNSUSER=	rbldns
 RBLDNSGROUP=	${RBLDNSUSER}
-ROOTDIR=	${PREFIX}/etc/rbldnsd/
+ROOTDIR=	${PREFIX}/etc/rbldnsd
 
-MAN8=		rbldnsd.8
+MAN8=	rbldnsd.8
 
 HAS_CONFIGURE=	yes
 USE_RC_SUBR=	rbldnsd
-USERS=		rbldns
-GROUPS=		${USERS}
+USERS=	rbldns
+GROUPS=	${USERS}
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+.include <bsd.port.options.mk>
+
 do-install:
-		@if [ ! -d ${ROOTDIR} ]; then \
-			${MKDIR} ${ROOTDIR}; \
-			${CHMOD} 710 ${ROOTDIR}; \
-			${CHOWN} ${RBLDNSUSER}:${RBLDNSGROUP} ${ROOTDIR}; \
-		fi
-		@${INSTALL_DATA} -o ${RBLDNSUSER} -g ${RBLDNSGROUP} -m 640 \
-			${FILESDIR}/example ${PREFIX}/etc/rbldnsd/
-		@${INSTALL_PROGRAM} ${WRKSRC}/rbldnsd ${PREFIX}/sbin/
-		@${INSTALL_MAN} ${WRKSRC}/rbldnsd.8 ${PREFIX}/man/man8/
-.if !defined(NOPORTDOCS)
-		@${MKDIR} ${DOCSDIR}/
-		@${INSTALL_DATA} ${WRKSRC}/CHANGES-0.81 ${DOCSDIR}
-		@${INSTALL_DATA} ${WRKSRC}/TODO ${DOCSDIR}
-		@${INSTALL_DATA} ${WRKSRC}/NEWS ${DOCSDIR}
-		@${INSTALL_DATA} ${WRKSRC}/debian/changelog ${DOCSDIR}
-		@${INSTALL_DATA} ${WRKSRC}/debian/copyright ${DOCSDIR}
-		@${INSTALL_DATA} ${WRKSRC}/debian/rbldnsd.default ${DOCSDIR}
-		@${INSTALL_DATA} ${WRKSRC}/debian/rbldnsd.init ${DOCSDIR}
-		@${INSTALL_DATA} ${WRKSRC}/rbldnsd.spec ${DOCSDIR}
-		@${INSTALL_DATA} ${DISTDIR}/rbldnsd.html ${DOCSDIR}
+	if [ ! -d ${ROOTDIR} ]; then \
+		${INSTALL} -d -o ${RBLDNSUSER} -g ${RBLDNSGROUP} \
+		-m 710 ${ROOTDIR}; \
+	fi
+	${INSTALL_DATA} -o ${RBLDNSUSER} -g ${RBLDNSGROUP} -m 640 \
+		${FILESDIR}/example ${ROOTDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/rbldnsd ${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/${MAN8} ${MAN8PREFIX}/man/man8
+.if ${PORT_OPTIONS:MDOCS}
+	${INSTALL} -d ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGES-0.81 ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/TODO ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/debian/changelog ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/debian/copyright ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/debian/rbldnsd.default ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/debian/rbldnsd.init ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/rbldnsd.spec ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
