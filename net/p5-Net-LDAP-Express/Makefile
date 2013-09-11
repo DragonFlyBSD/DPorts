@@ -2,7 +2,7 @@
 # Date created:		2008-03-07
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/net/p5-Net-LDAP-Express/Makefile,v 1.4 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-LDAP-Express/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Net-LDAP-Express
@@ -18,7 +18,8 @@ COMMENT=	A module to simplify connecting up to a LDAP server
 BUILD_DEPENDS=	p5-perl-ldap>=0.23:${PORTSDIR}/net/p5-perl-ldap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::Express.3
 
