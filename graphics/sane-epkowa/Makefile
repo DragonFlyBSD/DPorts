@@ -1,5 +1,5 @@
 # Created by: luigi@FreeBSD.org
-# $FreeBSD: graphics/sane-epkowa/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: graphics/sane-epkowa/Makefile 326095 2013-09-02 21:32:24Z bapt $
 
 # Maintainers:		Luigi Rizzo <luigi@FreeBSD.org>
 #
@@ -71,7 +71,7 @@ USE_GNOME=	gtk20
 
 # The original uses gmake and ./configure
 # Also pass appropriate flags to configure to use FreeBSD locations.
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=  --prefix=${PREFIX} LDFLAGS="-L${PREFIX}/lib -lgetline" CPPFLAGS=-I${PREFIX}/include
 
