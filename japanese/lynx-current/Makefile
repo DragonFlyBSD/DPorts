@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: japanese/lynx-current/Makefile 322735 2013-07-10 21:32:34Z bapt $
+# $FreeBSD: japanese/lynx-current/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=--with-screen=ncurses --with-zlib --libdir="${L_LIB}" \
 
 .if !defined(WITHOUT_JAPANESE_UTF8)
 USES+=		iconv
-CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} \
+CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG} \
 		--enable-japanese-utf8
 .else
 CONFIGURE_ARGS+=--disable-japanese-utf8
