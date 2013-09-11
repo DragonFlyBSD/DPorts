@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: irc/xchat1/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: irc/xchat1/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=		xchat
 PORTVERSION=		1.8.11
@@ -22,7 +22,7 @@ USE_GNOME=		gtk12
 WANT_GNOME=		yes
 GNU_CONFIGURE=		yes
 # Assign with `+=' for slave ports
-CONFIGURE_ENV+=		LIBS="-L${LOCALBASE}/lib -lintl -liconv"
+CONFIGURE_ENV+=		LIBS="-L${LOCALBASE}/lib -lintl ${ICONV_LIB}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-included-gettext \
 			--enable-nls \
