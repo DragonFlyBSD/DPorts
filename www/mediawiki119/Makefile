@@ -1,8 +1,8 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/mediawiki119/Makefile 324302 2013-08-06 06:47:13Z wen $
+# $FreeBSD: www/mediawiki119/Makefile 326578 2013-09-07 08:01:09Z wen $
 
 PORTNAME=	mediawiki
-PORTVERSION=	1.19.7
+PORTVERSION=	1.19.8
 CATEGORIES=	www
 MASTER_SITES=	http://dumps.wikimedia.org/mediawiki/${PORTVERSION:R}/
 
@@ -11,7 +11,7 @@ COMMENT=	The wiki engine used by Wikipedia
 
 LICENSE=	GPLv2
 
-CONFLICTS=	mediawiki-1.1[0-8].* mediawiki-1.2[0-9].*
+CONFLICTS=	mediawiki-1.2[0-9].*
 
 FETCH_ARGS=	-pr
 NO_LATEST_LINK=	yes
