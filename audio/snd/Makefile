@@ -1,8 +1,9 @@
 # Created by: trevor
-# $FreeBSD: audio/snd/Makefile 322579 2013-07-09 21:20:28Z bapt $
+# $FreeBSD: audio/snd/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	snd
 PORTVERSION=	13.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ccrma-ftp.stanford.edu/pub/Lisp/ \
 		http://mirror.mcx2.org/
@@ -42,7 +43,7 @@ CONFIGURE_ARGS+=	--without-fftw
 .endif
 
 .if ${PORT_OPTIONS:MGSL}
-LIB_DEPENDS+=	gsl.16:${PORTSDIR}/math/gsl
+LIB_DEPENDS+=	gsl:${PORTSDIR}/math/gsl
 .else
 CONFIGURE_ARGS+=	--without-gsl
 .endif
