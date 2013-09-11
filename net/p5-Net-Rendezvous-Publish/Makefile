@@ -2,7 +2,7 @@
 # Date created:		2009-07-12
 # Whom:			TERAMOTO Masahiro <markun@onohara.to>
 #
-# $FreeBSD: ports/net/p5-Net-Rendezvous-Publish/Makefile,v 1.4 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Rendezvous-Publish/Makefile 326526 2013-09-06 17:02:34Z az $
 #
 
 PORTNAME=	Net-Rendezvous-Publish
@@ -18,7 +18,8 @@ COMMENT=	Publish Rendezvous services
 BUILD_DEPENDS=	p5-Class-Accessor-Lvalue>=0:${PORTSDIR}/devel/p5-Class-Accessor-Lvalue
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Rendezvous::Publish.3 \
 		Net::Rendezvous::Publish::Service.3
