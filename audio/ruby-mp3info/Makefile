@@ -2,7 +2,7 @@
 # Date created:		24 March 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/audio/ruby-mp3info/Makefile,v 1.18 2012/11/17 05:54:43 svnexp Exp $
+# $FreeBSD: audio/ruby-mp3info/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	mp3info
