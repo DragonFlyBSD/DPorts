@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-hpt/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-hpt/Makefile 325955 2013-09-02 09:22:47Z az $
 
 PORTNAME=	hpt
 PORTVERSION=	1.2.4
@@ -17,7 +17,7 @@ CONFLICTS=	husky-hpt-devel-[0-9]*
 
 .if !defined(WITHOUT_PERL)
 MAKE_ARGS+=	PERL=1
-USE_PERL5=	yes
+USES=		perl5
 .else
 MAKE_ARGS+=	PERL=0
 .endif
