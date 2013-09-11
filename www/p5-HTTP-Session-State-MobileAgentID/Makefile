@@ -2,7 +2,7 @@
 # Date created:		01 Aug 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Session-State-MobileAgentID/Makefile,v 1.10 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Session-State-MobileAgentID/Makefile 325984 2013-09-02 12:52:42Z az $
 #
 
 PORTNAME=	HTTP-Session-State-MobileAgentID
@@ -22,7 +22,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTTP::Session::State::MobileAgentID.3
 
