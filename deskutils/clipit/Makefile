@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/clipit/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/clipit/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	clipit
 PORTVERSION=	1.4.2
@@ -10,7 +10,7 @@ COMMENT=	Lightweight GTK+ clipboard manager forked from parcellite
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 
 OPTIONS_DEFINE=	NLS XDOTOOL
