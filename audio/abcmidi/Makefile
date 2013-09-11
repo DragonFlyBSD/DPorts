@@ -1,9 +1,5 @@
-# New ports collection makefile for:   abcmidi
-# Date created:			10 March 2002
-# Whom:				Sue Blake <sue@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/abcmidi/Makefile,v 1.50 2012/11/17 05:54:27 svnexp Exp $
-#
+# Created by: Sue Blake <sue@FreeBSD.org>
+# $FreeBSD: audio/abcmidi/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	abcmidi
 PORTVERSION=	2011.04.29
@@ -21,7 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 EXTRACT_BEFORE_ARGS=	-aqo
 
 USE_ZIP=	yes
-USE_GMAKE=	yes
+USES=		gmake
 MAKEFILE=	makefiles/unix.mak
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DANSILIBS -c" LNK="${CC}"
 
