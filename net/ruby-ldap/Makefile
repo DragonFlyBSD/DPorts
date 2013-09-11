@@ -2,7 +2,7 @@
 # Date created:		25 Sep 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/net/ruby-ldap/Makefile,v 1.45 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/ruby-ldap/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	ldap
