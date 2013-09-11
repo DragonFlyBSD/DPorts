@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: www/p5-WebService-Google-Reader/Makefile 324969 2013-08-19 09:33:00Z culot $
+# $FreeBSD: www/p5-WebService-Google-Reader/Makefile 326150 2013-09-03 13:17:36Z az $
 
 PORTNAME=	WebService-Google-Reader
 PORTVERSION=	0.22
@@ -27,7 +27,8 @@ BUILD_DEPENDS=	p5-JSON-XS>=2:${PORTSDIR}/converters/p5-JSON-XS \
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WebService::Google::Reader.3 \
 		WebService::Google::Reader::Constants.3 \
