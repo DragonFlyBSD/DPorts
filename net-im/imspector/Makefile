@@ -1,5 +1,5 @@
 # Created by: Ilja Dejs <ilja.dejs@gmail.com>
-# $FreeBSD: net-im/imspector/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net-im/imspector/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	imspector
 PORTVERSION=	20111108
@@ -43,6 +43,8 @@ post-patch:
 		${WRKSRC}/main.cpp
 	@${REINPLACE_CMD} -e 's,= SSLv23_method(),= (SSL_METHOD *) SSLv23_method(),g' \
 		${WRKSRC}/sslstate.cpp
+	@${REINPLACE_CMD} -e 's,%%ICONV_LIB%%,${ICONV_LIB},' \
+		${WRKSRC}/Makefile
 
 post-install:
 .for f in ${CONFIG_FILES}
