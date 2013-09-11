@@ -2,7 +2,7 @@
 # Date created:				2011-11-01
 # Whom:					Masaki TAGAWA <masaki@club.kyutech.ac.jp>
 #
-# $FreeBSD: ports/mail/amavis-logwatch/Makefile,v 1.5 2012/11/17 05:58:58 svnexp Exp $
+# $FreeBSD: mail/amavis-logwatch/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	amavis-logwatch
@@ -22,7 +22,8 @@ PORTEXAMPLES=	${PORTNAME}.conf
 
 MAN1=		${PORTNAME}.1
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 post-patch:
