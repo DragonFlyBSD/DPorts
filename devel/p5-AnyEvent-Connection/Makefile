@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-AnyEvent-Connection/Makefile 322174 2013-07-02 14:51:55Z danfe $
+# $FreeBSD: devel/p5-AnyEvent-Connection/Makefile 326839 2013-09-09 18:34:59Z az $
 
 PORTNAME=	AnyEvent-Connection
 PORTVERSION=	0.06
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-AnyEvent>=5:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-Object-Event>=1.21:${PORTSDIR}/devel/p5-Object-Event \
 		p5-common-sense>=2:${PORTSDIR}/devel/p5-common-sense
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		AnyEvent::Connection.3
 
 .include <bsd.port.mk>
