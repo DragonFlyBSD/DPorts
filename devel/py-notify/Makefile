@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-notify/Makefile,v 1.13 2012/12/31 17:09:07 svnexp Exp $
+# $FreeBSD: devel/py-notify/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	notify
 PORTVERSION=	0.1.1
@@ -14,7 +14,7 @@ COMMENT=	A python bindings for libnotify
 LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack pygtk2
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
