@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: x11-toolkits/libgnomeuimm/Makefile 323784 2013-07-27 13:25:14Z kwm $
+# $FreeBSD: x11-toolkits/libgnomeuimm/Makefile 326132 2013-09-03 09:59:01Z bapt $
 
 PORTNAME=	libgnomeuimm
 PORTVERSION=	2.0.0
@@ -17,7 +17,7 @@ LIB_DEPENDS=	gnomemm-2.0:${PORTSDIR}/x11/libgnomemm \
 		glademm-2.0:${PORTSDIR}/devel/libglademm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-USES=		gmake pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	libgnomeui
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
