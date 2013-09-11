@@ -2,7 +2,7 @@
 # Date created:				November 24 2009
 # Whom:					Sahil Tandon <sahil@tandon.net>
 #
-# $FreeBSD: ports/www/p5-WWW-Shorten-NotLong/Makefile,v 1.4 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Shorten-NotLong/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	WWW-Shorten-NotLong
@@ -21,6 +21,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		WWW::Shorten::NotLong.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
