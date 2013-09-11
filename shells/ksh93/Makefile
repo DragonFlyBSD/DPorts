@@ -1,4 +1,4 @@
-# $FreeBSD: shells/ksh93/Makefile 325331 2013-08-25 08:20:14Z sunpoet $
+# $FreeBSD: shells/ksh93/Makefile 326674 2013-09-07 18:13:59Z sunpoet $
 
 # Make sure that your configuration DOES NOT set ANY gcc-related
 # variables.  ksh93 will not compile if you set even the seemingly
@@ -43,7 +43,7 @@ MAKE_ENV+=	LDFLAGS+=-static
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' \
+	@${REINPLACE_CMD} -e 's|-lpthread|-pthread|' \
 		${WRKSRC}/bin/package ${WRKSRC}/src/cmd/INIT/package.sh
 
 do-build:
