@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/sysutils/p5-MogileFS-Utils/Makefile,v 1.25 2013/01/16 15:44:25 svnexp Exp $
+# $FreeBSD: sysutils/p5-MogileFS-Utils/Makefile 326575 2013-09-07 07:44:26Z az $
 
 PORTNAME=	MogileFS-Utils
 PORTVERSION=	2.27
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-MogileFS-Client>=1.16:${PORTSDIR}/sysutils/p5-MogileFS-Client 
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		mogadm.1 \
 		mogdelete.1 \
