@@ -2,7 +2,7 @@
 # Date created:		2006-05-15
 # Whom:			Yi-Hsuan Hsin <mhsin@mhsin.org>
 #
-# $FreeBSD: ports/net/p5-Net-Google-Calendar/Makefile,v 1.17 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Google-Calendar/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-Google-Calendar
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-XML-Atom>=0.37:${PORTSDIR}/textproc/p5-XML-Atom \
 		p5-Net-Google-AuthSub>=0:${PORTSDIR}/net/p5-Net-Google-AuthSub
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::Google::Calendar.3 Net::Google::Calendar::Base.3 \
 		Net::Google::Calendar::Calendar.3 Net::Google::Calendar::Comments.3 \
