@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: x11/wbar/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11/wbar/Makefile 325761 2013-08-31 01:17:11Z bapt $
 
 PORTNAME=	wbar
 PORTVERSION=	2.3.4
@@ -14,6 +14,8 @@ COMMENT=	A quick launch bar for fluxbox, WindowMaker, Xfce, etc
 LICENSE=	GPLv3
 
 CONFIGURE_ARGS=	--exec-prefix=${PREFIX}
+
+USES=		pkgconfig
 
 GNU_CONFIGURE=	yes
 
