@@ -2,7 +2,7 @@
 # Date created:                      Dec 09 2008
 # Whom:                              glarkin
 #
-# $FreeBSD: ports/www/trac-tweakui/Makefile,v 1.11 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-tweakui/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	tweakui
@@ -32,7 +32,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracTweakUI
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}
-PLIST_SUB+=	EGGVERSION="${PORTVERSION:R}" PYTHONVERSION=${_PYTHON_VERSION}
+PLIST_SUB+=	EGGVERSION="${PORTVERSION:R}" PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
 post-install:
