@@ -1,5 +1,5 @@
 # Created by: Eric Turgeon <ericturgeon.bsd@gmail.com>
-# $FreeBSD: x11/lxrandr/Makefile 322272 2013-07-04 12:40:41Z wg $
+# $FreeBSD: x11/lxrandr/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	lxrandr
 PORTVERSION=	0.1.2
@@ -11,11 +11,10 @@ COMMENT=	LXDE screen manager
 
 LICENSE=	GPLv2
 
-USES=		desktop-file-utils
+USES=		desktop-file-utils gmake pkgconfig
 USE_GNOME=	gtk20
 USE_XORG=	xrandr
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 
 MAN1=		lxrandr.1
