@@ -1,5 +1,5 @@
 # Created by: glewis@FreeBSD.org
-# $FreeBSD: games/ldmud/Makefile 322991 2013-07-14 16:16:58Z johans $
+# $FreeBSD: games/ldmud/Makefile 326013 2013-09-02 15:39:17Z bapt $
 
 PORTNAME=	ldmud
 PORTVERSION=	3.3.720
@@ -16,7 +16,7 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
-USES=		iconv
+USES=		iconv pkgconfig
 CONFIGURE_ARGS+=--libdir=${DATADIR} \
 		--bindir=${PREFIX}/sbin \
 		--enable-use-pcre \
