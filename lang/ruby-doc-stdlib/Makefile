@@ -2,7 +2,7 @@
 # Date created:		2006-08-04
 # Whom:			Alexander Novitsky <alecn2002@yandex.ru>
 #
-# $FreeBSD: ports/lang/ruby-doc-stdlib/Makefile,v 1.4 2012/11/17 05:58:56 svnexp Exp $
+# $FreeBSD: lang/ruby-doc-stdlib/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	stdlib
