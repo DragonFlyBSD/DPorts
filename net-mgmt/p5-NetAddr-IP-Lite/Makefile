@@ -2,7 +2,7 @@
 # Date created:		2006-06-07
 # Whom:			Yuan-Chung Hsiao <ychsiao@ychsiao.org>
 #
-# $FreeBSD: ports/net-mgmt/p5-NetAddr-IP-Lite/Makefile,v 1.6 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-NetAddr-IP-Lite/Makefile 326167 2013-09-03 16:18:49Z az $
 #
 
 PORTNAME=	NetAddr-IP-Lite
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	IPv4/6 and 128 bit number utilities
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 CONFIGURE_ARGS=	-noxs
 
