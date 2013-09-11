@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Model-Tester/Makefile 325316 2013-08-24 21:57:23Z sunpoet $
+# $FreeBSD: devel/p5-Config-Model-Tester/Makefile 326747 2013-09-08 15:43:03Z sunpoet $
 
 PORTNAME=	Config-Model-Tester
-PORTVERSION=	2.043
+PORTVERSION=	2.044
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,6 +12,7 @@ COMMENT=	Test framework for Config::Model
 
 LICENSE=	LGPL21
 
+# Do not add p5-Config-Model to TEST_DEPENDS to avoid cyclic dependency
 BUILD_DEPENDS=	p5-File-Copy-Recursive>=0:${PORTSDIR}/devel/p5-File-Copy-Recursive \
 		p5-File-HomeDir>=0:${PORTSDIR}/devel/p5-File-HomeDir \
 		p5-Log-Log4perl>=1.11:${PORTSDIR}/devel/p5-Log-Log4perl \
