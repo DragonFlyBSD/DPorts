@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Singleton
-# Date created:		2006-07-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Singleton/Makefile,v 1.6 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Test-Singleton/Makefile 326725 2013-09-08 13:29:44Z az $
 
 PORTNAME=	Test-Singleton
 PORTVERSION=	1.03
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Class-Singleton>=0:${PORTSDIR}/devel/p5-Class-Singleton \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Singleton.3
 
