@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libgnomemm
-# Date created:         22 May 2003
-# Whom:                 Alexander Nedotsukov <bland@mail.ru>
-#
-# $FreeBSD: ports/x11/libgnomemm/Makefile,v 1.28 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: Alexander Nedotsukov <bland@mail.ru>
+# $FreeBSD: x11/libgnomemm/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	libgnomemm
 PORTVERSION=	2.0.1
@@ -19,7 +15,7 @@ LIB_DEPENDS=	gtkmm-2.0:${PORTSDIR}/x11-toolkits/gtkmm20
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack libgnome
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
