@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: multimedia/mpv/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/mpv/Makefile 326545 2013-09-06 20:31:50Z bapt $
 
 PORTNAME=	mpv
 PORTVERSION=	20130711
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	ffmpeg1:${PORTSDIR}/multimedia/ffmpeg1 \
 RUN_DEPENDS=	ffmpeg1:${PORTSDIR}/multimedia/ffmpeg1
 
 USE_XZ=		yes
-USES=		gmake iconv
+USES=		gmake iconv pkgconfig
 USE_XORG=	x11 xv xxf86vm
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
