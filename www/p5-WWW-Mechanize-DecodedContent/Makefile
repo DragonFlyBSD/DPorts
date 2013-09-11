@@ -2,7 +2,7 @@
 # Date created:		2007-12-28
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-WWW-Mechanize-DecodedContent/Makefile,v 1.6 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Mechanize-DecodedContent/Makefile 325965 2013-09-02 10:00:38Z az $
 #
 
 PORTNAME=	WWW-Mechanize-DecodedContent
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize \
 		p5-HTTP-Response-Encoding>=0:${PORTSDIR}/www/p5-HTTP-Response-Encoding
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Mechanize::DecodedContent.3
 
