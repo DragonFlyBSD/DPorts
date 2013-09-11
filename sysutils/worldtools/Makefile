@@ -2,7 +2,7 @@
 # Date created:		13 august 2003
 # Whom:			anarcat
 #
-# $FreeBSD: ports/sysutils/worldtools/Makefile,v 1.5 2012/11/17 06:01:50 svnexp Exp $
+# $FreeBSD: sysutils/worldtools/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	worldtools
@@ -14,7 +14,8 @@ MASTER_SITES=	http://anarcat.ath.cx/software/distfiles/
 MAINTAINER=	anarcat@anarcat.ath.cx
 COMMENT=	Handy tools for living with make world
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN8=		buildit.8 upgrade.8 whereintheworld.8
 
