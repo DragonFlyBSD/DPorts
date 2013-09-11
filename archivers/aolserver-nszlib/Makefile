@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/archivers/aolserver-nszlib/Makefile,v 1.8 2012/12/31 15:29:23 svnexp Exp $
+# $FreeBSD: archivers/aolserver-nszlib/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	nszlib
 PORTVERSION=	1.1
@@ -22,7 +22,7 @@ AOLSERVERBASE?=	aolserver
 BUILD_DEPENDS+=	${LOCALBASE}/${AOLSERVERBASE}/bin/nsd:${PORTSDIR}/www/aolserver
 RUN_DEPENDS+=	${LOCALBASE}/${AOLSERVERBASE}/bin/nsd:${PORTSDIR}/www/aolserver
 
-USE_GMAKE=	yes
+USES=		gmake
 
 MAKE_ARGS=	AOLSERVER="${LOCALBASE}/${AOLSERVERBASE}" \
 		DLLLIBS="-lz" MODLIBS="-lz"
