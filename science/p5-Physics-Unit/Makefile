@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Physics-Unit
-# Date created:				2010-09-03
-# Whom:					Frederic Culot <frederic@culot.org>
-#
-# $FreeBSD: ports/science/p5-Physics-Unit/Makefile,v 1.4 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Frederic Culot <frederic@culot.org>
+# $FreeBSD: science/p5-Physics-Unit/Makefile 326873 2013-09-10 08:26:53Z az $
 
 PORTNAME=	Physics-Unit
 PORTVERSION=	0.53
@@ -17,7 +13,8 @@ COMMENT=	Manipulate Physics units and dimensions
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		physics-unit.1
 MAN3=		Physics::Unit.3 \
