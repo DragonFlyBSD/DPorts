@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-File-Dir-Dumper
-# Date created:				November 18th 2008
-# Whom:                                 Anatoliy Dmytriyev <tolid@tolid.eu.org>
-#
-# $FreeBSD: ports/devel/p5-File-Dir-Dumper/Makefile,v 1.6 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Anatoliy Dmytriyev <tolid@tolid.eu.org>
+# $FreeBSD: devel/p5-File-Dir-Dumper/Makefile 326865 2013-09-10 05:48:19Z az $
 
 PORTNAME=	File-Dir-Dumper
-PORTVERSION=	0.0.7
+PORTVERSION=	0.0.8
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-File-Find-Object>0:${PORTSDIR}/devel/p5-File-Find-Object \
 		p5-Devel-CheckOS>0:${PORTSDIR}/devel/p5-Devel-CheckOS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		dir-dump.1
 MAN3=		File::Dir::Dumper.3 File::Dir::Dumper::App.3 File::Dir::Dumper::Base.3 File::Dir::Dumper::Scanner.3 \
