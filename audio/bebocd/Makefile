@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/bebocd/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: audio/bebocd/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	bebocd
 PORTVERSION=	0.4
@@ -13,9 +13,8 @@ COMMENT=	GTK2 CD Player
 LIB_DEPENDS=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
 
 USE_XORG=	x11
-USES=        pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
