@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/opencdk/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/opencdk/Makefile 325745 2013-08-31 00:11:06Z bapt $
 
 PORTNAME=	opencdk
 PORTVERSION=	0.6.6
@@ -16,7 +16,8 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig ltverhack
+USES=		pkgconfig
+USE_GNOME=	ltverhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-libgcrypt-prefix=${LOCALBASE}
