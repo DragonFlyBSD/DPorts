@@ -2,7 +2,7 @@
 # Date created:		2006-07-20
 # Whom:			Steven Kreuzer <skreuzer@f2o.org>
 #
-# $FreeBSD: ports/mail/p5-WWW-Hotmail/Makefile,v 1.8 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-WWW-Hotmail/Makefile 326257 2013-09-04 07:19:56Z az $
 #
 
 PORTNAME=	WWW-Hotmail
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize \
 		p5-Mail-Audit>=0:${PORTSDIR}/mail/p5-Mail-Audit
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Hotmail.3
 
