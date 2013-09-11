@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: irc/xchat/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: irc/xchat/Makefile 326103 2013-09-02 22:03:38Z bapt $
 #   $MCom: ports/irc/xchat/Makefile,v 1.7 2008/08/06 07:59:00 kwm Exp $
 
 PORTNAME=	xchat
@@ -19,7 +19,7 @@ CONFLICTS=	xchat-1* xchat-systray-plugin-[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GNOME=	gnomehack gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
