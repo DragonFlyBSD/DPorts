@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xmms-jack
-# Date created:				13 Mar 2004
-# Whom:					David Yeske <dyeske@gmail.com>
-#
-# $FreeBSD: ports/audio/xmms-jack/Makefile,v 1.20 2012/11/17 05:54:48 svnexp Exp $
+# Created by: David Yeske <dyeske@gmail.com>
+# $FreeBSD: audio/xmms-jack/Makefile 326111 2013-09-02 22:50:21Z bapt $
 
 PORTNAME=	xmms-jack
 PORTVERSION=	0.19
@@ -20,7 +17,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_GNOME=	gtk12
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 
 PLIST_FILES=	lib/xmms/Output/libjackout.so
