@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Dispatch-File-Rolling/Makefile 305997 2012-10-17 02:06:42Z tj $
+# $FreeBSD: devel/p5-Log-Dispatch-File-Rolling/Makefile 326815 2013-09-09 15:01:27Z az $
 
 PORTNAME=	Log-Dispatch-File-Rolling
 PORTVERSION=	1.06
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Log-Dispatch>=0:${PORTSDIR}/devel/p5-Log-Dispatch \
 RUN_DEPENDS=	p5-Log-Dispatch>=0:${PORTSDIR}/devel/p5-Log-Dispatch \
 		p5-Log-Log4perl>=1.38:${PORTSDIR}/devel/p5-Log-Log4perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Log::Dispatch::File::Rolling.3
 
