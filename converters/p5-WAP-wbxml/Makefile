@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-WAP-wbxml/Makefile 323639 2013-07-25 12:45:10Z az $
+# $FreeBSD: converters/p5-WAP-wbxml/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	WAP-wbxml
 PORTVERSION=	1.13
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_DOS2UNIX=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		wbxmlc.1
 MAN3=		WAP::wbxml.3 WAP::wbxml::WbRules.3
