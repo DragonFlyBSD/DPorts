@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bygfoot
-# Date created:				6th July 2004
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: games/bygfoot/Makefile 322581 2013-07-09 21:26:48Z pav $
-#
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: games/bygfoot/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	bygfoot
 PORTVERSION=	2.2.1
@@ -19,6 +15,7 @@ COMMENT=	Football (soccer) management game
 RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 		unzip:${PORTSDIR}/archivers/unzip
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
