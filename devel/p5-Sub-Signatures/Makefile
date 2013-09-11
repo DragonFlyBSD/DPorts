@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Sub-Signatures/Makefile,v 1.4 2012/11/17 05:56:30 svnexp Exp $
+# $FreeBSD: devel/p5-Sub-Signatures/Makefile 326818 2013-09-09 15:55:47Z az $
 
 PORTNAME=	Sub-Signatures
 PORTVERSION=	0.21
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Sub-Uplevel>=0.12:${PORTSDIR}/devel/p5-Sub-Uplevel
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sub::Signatures.3
 
