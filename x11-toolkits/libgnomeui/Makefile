@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreBSD.org>
-# $FreeBSD: x11-toolkits/libgnomeui/Makefile 317223 2013-05-03 17:37:13Z ehaupt $
+# $FreeBSD: x11-toolkits/libgnomeui/Makefile 326132 2013-09-03 09:59:01Z bapt $
 #   $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.129 2010/09/27 20:16:41 kwm Exp $
 
 PORTNAME=	libgnomeui
@@ -21,8 +21,7 @@ LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring \
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_XORG=	sm
-USE_GMAKE=	yes
-USES=		bison pathfix gettext
+USES=		bison pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehier libbonoboui ltverhack \
 		referencehack gvfs
 USE_LDCONFIG=	yes
