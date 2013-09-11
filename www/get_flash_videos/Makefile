@@ -2,7 +2,7 @@
 # Date created:		Sun Jul 22 20:49:07 UTC 2012
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/www/get_flash_videos/Makefile,v 1.3 2012/12/16 06:16:59 svnexp Exp $
+# $FreeBSD: www/get_flash_videos/Makefile 325974 2013-09-02 11:04:10Z az $
 
 PORTNAME=	get_flash_videos
 DISTVERSION=	1.24.${DISTFILE_DATE}
@@ -29,7 +29,7 @@ RUN_DEPENDS=	\
 		rtmpdump>=2.4.0:${PORTSDIR}/multimedia/rtmpdump
 
 FETCH_ARGS=	-Fpr	# work around 302 redirect at github
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
