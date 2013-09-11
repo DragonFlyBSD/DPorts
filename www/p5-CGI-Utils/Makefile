@@ -2,7 +2,7 @@
 # Date created:		2009-01-05
 # Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
 #
-# $FreeBSD: ports/www/p5-CGI-Utils/Makefile,v 1.2 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Utils/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	CGI-Utils
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	mopsfelder@gmail.com
 COMMENT=	Utilities for retrieving information through the CGI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Utils.3 \
 		CGI::Utils::UploadFile.3
