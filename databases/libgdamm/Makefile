@@ -1,10 +1,6 @@
-# New ports collection makefile for:    libglademm
-# Date created:         1 Oct 2003
-# Whom:                 Alexander Nedotsukov <bland@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/libgdamm/Makefile,v 1.39 2012/11/17 05:55:10 svnexp Exp $
+# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
+# $FreeBSD: databases/libgdamm/Makefile 326105 2013-09-02 22:11:23Z bapt $
 #   $MCom: ports/databases/libgdamm/Makefile,v 1.21 2010/10/23 16:04:08 kwm Exp $
-#
 
 PORTNAME=	libgdamm
 PORTVERSION=	3.99.21
@@ -21,6 +17,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack libgda4
 GNU_CONFIGURE=	yes
