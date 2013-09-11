@@ -2,7 +2,7 @@
 # Date created:		06 Jun 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Ark/Makefile,v 1.5 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-Ark/Makefile 326156 2013-09-03 15:07:52Z az $
 #
 
 PORTNAME=	Ark
@@ -38,7 +38,8 @@ RUN_DEPENDS=	\
 	p5-Text-SimpleTable>=0.05:${PORTSDIR}/textproc/p5-Text-SimpleTable \
 	p5-URI>0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Ark::Command.3 \
 	Ark::Command::Controller.3 \
