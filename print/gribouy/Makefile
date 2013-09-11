@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gribouy
-# Date created:				20 Nov 2003
-# Whom:					bland@FreeBSD.org
-#
-# $FreeBSD: ports/print/gribouy/Makefile,v 1.16 2012/11/17 06:00:50 svnexp Exp $
-#
+# Created by: bland@FreeBSD.org
+# $FreeBSD: print/gribouy/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gribouy
 PORTVERSION=	0.0.8
@@ -17,7 +13,7 @@ MASTER_SITE_SUBDIR=	bland
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gribouy is a Type1 font editor
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=      gnomeprefix gnomehack libglade2 libgnomeui
 GNU_CONFIGURE=	yes
 
