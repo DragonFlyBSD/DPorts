@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/mail/postfix-postfwd/files/postfwd.in,v 1.6 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/postfix-postfwd/files/postfwd.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: postfwd
 # REQUIRE: LOGIN cleanvar

@@ -2,12 +2,11 @@
 # Date created:				8 May 2008
 # Whom:					Sahil Tandon <sahil@tandon.net>
 #
-# $FreeBSD: ports/mail/postfix-postfwd/Makefile,v 1.17 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/postfix-postfwd/Makefile 326061 2013-09-02 19:15:19Z sahil $
 #
 
 PORTNAME=	postfwd
-PORTVERSION=	1.32
-PORTREVISION=	1
+PORTVERSION=	1.35
 CATEGORIES=	mail
 MASTER_SITES=	http://www.${PORTNAME}.org/old/
 PKGNAMEPREFIX=	postfix-
