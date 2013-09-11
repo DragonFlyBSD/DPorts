@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/milter-manager/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/milter-manager/Makefile 326095 2013-09-02 21:32:24Z bapt $
 
 PORTNAME=	milter-manager
 PORTVERSION=	1.8.6
@@ -22,7 +22,7 @@ MAKE_ARGS+=	pkgconfigdir=${PREFIX}/libdata/pkgconfig
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		--with-libev \
 		LDFLAGS="-L${LOCALBASE}/lib -lintl"
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	glib20 intltool
 USE_LDCONFIG=	yes
 USE_RUBY=	yes
