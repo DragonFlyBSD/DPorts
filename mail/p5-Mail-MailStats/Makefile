@@ -2,7 +2,7 @@
 # Date created:				Wed Jan  3 15:09:46 2001
 # Whom:					will
 #
-# $FreeBSD: ports/mail/p5-Mail-MailStats/Makefile,v 1.12 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-MailStats/Makefile 326271 2013-09-04 12:28:16Z az $
 #
 
 PORTNAME=	MailStats
@@ -17,7 +17,8 @@ COMMENT=	Perl module to detect newer messages in procmail-generated mailboxes
 BUILD_DEPENDS=	p5-AppConfig>=0:${PORTSDIR}/devel/p5-AppConfig
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Stats::Record.3 Mail::Stats.3
 
