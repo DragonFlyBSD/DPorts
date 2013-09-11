@@ -1,5 +1,5 @@
 # Created by: Saulius Menkevicius <bob@nulis.lt>
-# $FreeBSD: net-im/vqcc-gtk/Makefile 323708 2013-07-26 09:38:03Z bapt $
+# $FreeBSD: net-im/vqcc-gtk/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	vqcc-gtk
 PORTVERSION=	0.5
@@ -12,7 +12,7 @@ COMMENT=	LAN chat client compatible with quickChat and Vypress Chat (TM)
 
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
-USES=		pathfix gmake gettext
+USES=		pathfix gmake gettext pkgconfig
 USE_GNOME=	gnomeprefix gtk20
 GNU_CONFIGURE=	yes
 
