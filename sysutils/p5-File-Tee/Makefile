@@ -2,7 +2,7 @@
 # Date created:                30 December 2010
 # Whom:                        Konstantin Menshikov <kostjnspb@yandex.ru>
 #
-# $FreeBSD: ports/sysutils/p5-File-Tee/Makefile,v 1.3 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-File-Tee/Makefile 326573 2013-09-07 06:47:20Z az $
 #
 
 PORTNAME=	File-Tee
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kostjnspb@yandex.ru
 COMMENT=	Replicate data sent to a Perl stream
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::Tee.3
 
