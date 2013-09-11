@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: audio/tempest_for_eliza/Makefile 314041 2013-03-13 09:06:35Z danfe $
+# $FreeBSD: audio/tempest_for_eliza/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	tempest_for_eliza
 PORTVERSION=	1.0.5
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.erikyyy.de/tempest/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program to send AM radio signals using a PC monitor
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 
