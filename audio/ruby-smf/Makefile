@@ -2,7 +2,7 @@
 # Date created:		31 March 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/audio/ruby-smf/Makefile,v 1.17 2012/11/17 05:54:43 svnexp Exp $
+# $FreeBSD: audio/ruby-smf/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	smf
