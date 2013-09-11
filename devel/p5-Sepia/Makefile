@@ -2,7 +2,7 @@
 # Date created:		2011-12-01
 # Whom:			Ashish SHUKLA <ashish@FreeBSD.org>
 #
-# $FreeBSD: devel/p5-Sepia/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: devel/p5-Sepia/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	Sepia
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Devel-Size>=0:${PORTSDIR}/devel/p5-Devel-Size \
 		p5-BSD-Resource>=0:${PORTSDIR}/devel/p5-BSD-Resource
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_EMACS=	yes
 USE_GMAKE=	yes
 
