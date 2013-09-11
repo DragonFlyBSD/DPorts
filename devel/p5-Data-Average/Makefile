@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-Average
-# Date created:	   01 Jun 2010
-# Whom:		   Alexander Kriventsov <avk@vl.ru>
-#
-# $FreeBSD: ports/devel/p5-Data-Average/Makefile,v 1.3 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Alexander Kriventsov <avk@vl.ru>
+# $FreeBSD: devel/p5-Data-Average/Makefile 326810 2013-09-09 14:13:20Z az $
 
 PORTNAME=	Data-Average
 PORTVERSION=	0.03000
@@ -18,7 +14,8 @@ COMMENT=	Hold Data Set To Calculate Average
 BUILD_DEPENDS=	p5-UNIVERSAL-isa>=0:${PORTSDIR}/devel/p5-UNIVERSAL-isa
 RUN_DEPENDS=	p5-UNIVERSAL-isa>=0:${PORTSDIR}/devel/p5-UNIVERSAL-isa
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Average::Bounded.3 Data::Average::BoundedExpires.3 Data::Average::Expires.3 Data::Average.3
 
