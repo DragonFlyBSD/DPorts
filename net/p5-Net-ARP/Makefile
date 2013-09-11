@@ -2,7 +2,7 @@
 # Date created:		2006-11-01
 # Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Net-ARP/Makefile,v 1.13 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-ARP/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	Net-ARP
@@ -17,7 +17,8 @@ COMMENT=	Perl extension for creating ARP packets
 
 BUILD_DEPENDS=	p5-Net-Pcap>=0:${PORTSDIR}/net/p5-Net-Pcap
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
