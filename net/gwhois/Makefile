@@ -2,7 +2,7 @@
 # Date created:		28 August 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gwhois/Makefile,v 1.17 2012/11/26 12:05:42 svnexp Exp $
+# $FreeBSD: net/gwhois/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	gwhois
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-libwww>=5.805:${PORTSDIR}/www/p5-libwww \
 		curl:${PORTSDIR}/ftp/curl
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 PLIST_FILES=	bin/${PORTNAME} %%DATADIR%%/pattern
 PLIST_DIRS=	%%DATADIR%%
