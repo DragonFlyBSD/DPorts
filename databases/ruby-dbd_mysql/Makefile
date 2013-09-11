@@ -2,7 +2,7 @@
 # Date created:		3 June 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/databases/ruby-dbd_mysql/Makefile,v 1.18 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/ruby-dbd_mysql/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	dbd_mysql
