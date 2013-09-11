@@ -1,5 +1,5 @@
 # Created by: Mikhail T. (m.tsatsenko@gmail.com)
-# $FreeBSD: mail/imaputils/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: mail/imaputils/Makefile 325883 2013-09-01 17:15:21Z az $
 
 PORTNAME=	imaputils
 PORTVERSION=	1.0.2
@@ -7,14 +7,15 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
 MAINTAINER=	m.tsatsenko@gmail.com
-COMMENT=	A number of tools and scripts for use with IMAP servers
+COMMENT=	Number of tools and scripts for use with IMAP servers
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_PERL5_RUN=	yes
+USES=		perl5 shebangfix
+USE_PERL5=	configure
 NO_BUILD=	yes
-PERL_CONFIGURE=	yes
+SHEBANG_FILES=	bin/*
 
 OPTIONS_DEFINE=	SSL UNICODE
 
