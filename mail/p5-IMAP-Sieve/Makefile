@@ -2,7 +2,7 @@
 # Date created:				25 Apr 2003
 # Whom:				Oliver Eikemeier <eikemeier@fillmore-labs.com>
 #
-# $FreeBSD: ports/mail/p5-IMAP-Sieve/Makefile,v 1.10 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-IMAP-Sieve/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	IMAP-Sieve
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
 
 WRKSRC=		${WRKDIR}/${PERLSIEVENAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 PERLSIEVENAME=	perlsieve-${PORTVERSION}
 PERLSIEVESUFX=	b
