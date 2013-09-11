@@ -2,7 +2,7 @@
 # Date created:				Fri 09 Oct 2009
 # Whom:					Alexey V. Degtyarev <alexey@renatasystems.org>
 #
-# $FreeBSD: ports/net/ldap-stats/Makefile,v 1.2 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/ldap-stats/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	ldap-stats
@@ -16,7 +16,7 @@ COMMENT=	Program to generate OpenLDAP statistics reports
 RUN_DEPENDS=	p5-Getopt-Long>=0:${PORTSDIR}/devel/p5-Getopt-Long
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	bin/ldap-stats
 
