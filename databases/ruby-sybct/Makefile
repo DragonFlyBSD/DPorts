@@ -2,7 +2,7 @@
 # Date created:				10 September 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: databases/ruby-sybct/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: databases/ruby-sybct/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	sybct
@@ -24,6 +24,7 @@ USES=		iconv
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+		-e 's|%%ICONV_LIB%%|${ICONV_LIB}|' \
 		${WRKSRC}/extconf.rb
 
 post-install:
