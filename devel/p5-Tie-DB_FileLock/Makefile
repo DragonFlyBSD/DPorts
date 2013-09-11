@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tie-DB_FileLock
-# Date created:				August 17 2000
-# Whom:	      				Josh Tiefenbach <josh@zipperup.org>
-#
-# $FreeBSD: ports/devel/p5-Tie-DB_FileLock/Makefile,v 1.7 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Josh Tiefenbach <josh@zipperup.org>
+# $FreeBSD: devel/p5-Tie-DB_FileLock/Makefile 326671 2013-09-07 17:58:27Z az $
 
 PORTNAME=	Tie-DB_FileLock
 PORTVERSION=	0.11
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	josh@zipperup.org
 COMMENT=	Locking access to Berkeley DB v1.x
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Tie::DB_FileLock.3
 
