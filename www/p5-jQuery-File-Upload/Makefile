@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-jQuery-File-Upload/Makefile 319092 2013-05-26 07:09:45Z kuriyama $
+# $FreeBSD: www/p5-jQuery-File-Upload/Makefile 326150 2013-09-03 13:17:36Z az $
 
 PORTNAME=	jQuery-File-Upload
 PORTVERSION=	0.16
@@ -16,7 +16,8 @@ RUN_DEPENDS=	\
 	p5-URI>0:${PORTSDIR}/net/p5-URI
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	jQuery::File::Upload.3
 
