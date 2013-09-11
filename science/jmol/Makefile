@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: ports/science/jmol/Makefile,v 1.14 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: science/jmol/Makefile 308605 2012-12-10 13:43:43Z bapt $
 
 PORTNAME=	jmol
 PORTVERSION=	12.2.23
