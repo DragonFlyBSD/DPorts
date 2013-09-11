@@ -1,5 +1,5 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
-# $FreeBSD: graphics/ufraw/Makefile 324591 2013-08-11 14:45:59Z bsam $
+# $FreeBSD: graphics/ufraw/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	ufraw
 PORTVERSION=	0.19.2
@@ -18,7 +18,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules --enable-extras
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GMAKE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
