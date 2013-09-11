@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/seed/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/seed/Makefile 326159 2013-09-03 15:25:41Z bapt $
 #   $MCom: ports/devel/seed/Makefile,v 1.35 2013/01/29 16:33:10 kwm Exp $
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
@@ -25,12 +25,11 @@ CONFLICTS=	seed-3.[0-9]*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomehack gtk20 intltool libxml2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_SQLITE=	yes
-USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--enable-gtk-doc=no --with-webkit=1.0
