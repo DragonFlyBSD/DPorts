@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Storable-AMF
-# Date created:		2009-02-04
-# Whom:			Vladimir Timofeev <vovkasm@gmail.com>
-#
-# $FreeBSD: ports/converters/p5-Storable-AMF/Makefile,v 1.11 2012/12/16 06:16:53 svnexp Exp $
-#
+# Created by: Vladimir Timofeev <vovkasm@gmail.com>
+# $FreeBSD: converters/p5-Storable-AMF/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Storable-AMF
 PORTVERSION=	1.00
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vovkasm@gmail.com
 COMMENT=	Perl extension for serialize/deserialize AMF0/AMF3 data
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Storable::AMF.3 \
 	Storable::AMF0.3 \
