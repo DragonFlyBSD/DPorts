@@ -2,7 +2,7 @@
 # Date created:				2012-01-21
 # Whom:					Denis Pokataev <catone@cpan.org>
 #
-# $FreeBSD: ports/net/p5-Net-Server-SS-PreFork/Makefile,v 1.2 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Server-SS-PreFork/Makefile 326380 2013-09-05 10:32:23Z az $
 #
 
 PORTNAME=	Net-Server-SS-PreFork
@@ -26,7 +26,8 @@ TEST_DEPENDS=	p5-HTTP-Server-Simple>0:${PORTSDIR}/www/p5-HTTP-Server-Simple \
 		p5-Test-TCP>=0.06:${PORTSDIR}/devel/p5-Test-TCP \
 		p5-libwww>0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Server::SS::PreFork.3
 
