@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libzvbi
-# Date created:				15 May 2003
-# Whom:					Oliver Lehmann <oliver@freebsd.org>
-#
-# $FreeBSD: devel/libzvbi/Makefile 324620 2013-08-12 09:27:35Z oliver $
-#
+# Created by: Oliver Lehmann <oliver@freebsd.org>
+# $FreeBSD: devel/libzvbi/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	libzvbi
 PORTVERSION=	0.2.34
@@ -17,9 +13,8 @@ COMMENT=	Routines to access raw VBI capture devices
 LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png \
 		unicode.0:${PORTSDIR}/devel/libunicode
 
-USES=		gettext
+USES=		gettext pathfix pkgconfig
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAN1=		zvbi-ntsc-cc.1
