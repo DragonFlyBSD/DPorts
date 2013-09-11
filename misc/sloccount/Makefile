@@ -3,7 +3,7 @@
 # Date created:			May 21, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/misc/sloccount/Makefile,v 1.13 2012/11/17 05:59:45 svnexp Exp $
+# $FreeBSD: misc/sloccount/Makefile 325955 2013-09-02 09:22:47Z az $
 #
 
 PORTNAME=	sloccount
@@ -14,7 +14,7 @@ MASTER_SITES=	http://www.dwheeler.com/sloccount/
 MAINTAINER=	freaky@aagh.net
 COMMENT=	Counts physical Source Lines of Code (SLOC)
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAKEFILE=	makefile
 INSTALL_TARGET=	install_programs install_man
