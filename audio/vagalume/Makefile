@@ -1,5 +1,5 @@
 # Created by: Bernhard Fröhlich <decke@bluelife.at>
-# $FreeBSD: audio/vagalume/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/vagalume/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	vagalume
 PORTVERSION=	0.8.5
@@ -16,8 +16,7 @@ LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
 		curl:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=	yes
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 USE_GSTREAMER=	good mad gconf
 INSTALLS_ICONS=	yes
