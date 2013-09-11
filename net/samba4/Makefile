@@ -1,5 +1,5 @@
 # Created by: timur@FreeBSD.org
-# $FreeBSD: net/samba4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/samba4/Makefile 326444 2013-09-05 20:18:30Z bsam $
 
 PORTNAME?=		${SAMBA4_PORTNAME}
 PORTVERSION?=		${SAMBA4_VERSION}
@@ -157,7 +157,7 @@ CONFIGURE_ARGS+=	\
 			--with-iconv \
 			--with-sendfile-support \
 			--builtin-libraries=smbclient \
-			--with-libiconv="${LOCALBASE}" \
+			${ICONV_CONFIGURE_BASE} \
 			--with-gettext="${LOCALBASE}"
 
 # for libexecinfo: (so that __builtin_frame_address() finds the top of the stack)
