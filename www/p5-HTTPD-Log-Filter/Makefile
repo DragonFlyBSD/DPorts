@@ -2,7 +2,7 @@
 # Date created:		15 Feb 2002
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTPD-Log-Filter/Makefile,v 1.9 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTPD-Log-Filter/Makefile 325974 2013-09-02 11:04:10Z az $
 #
 
 PORTNAME=	HTTPD-Log-Filter
@@ -18,7 +18,8 @@ COMMENT=	Perl module to filter entries out of an httpd log
 BUILD_DEPENDS=	p5-IO-Zlib>=0:${PORTSDIR}/archivers/p5-IO-Zlib
 RUN_DEPENDS=	p5-IO-Zlib>=0:${PORTSDIR}/archivers/p5-IO-Zlib
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN1=		exclude_robots.1
 MAN3=		HTTPD::Log::Filter.3
 
