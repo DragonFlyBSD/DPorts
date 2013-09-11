@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-TAP-Harness-JUnit/Makefile 313699 2013-03-09 09:33:11Z kuriyama $
+# $FreeBSD: devel/p5-TAP-Harness-JUnit/Makefile 326592 2013-09-07 10:16:46Z az $
 
 PORTNAME=	TAP-Harness-JUnit
 PORTVERSION=	0.41
@@ -15,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Test-Deep>0:${PORTSDIR}/devel/p5-Test-Deep
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	TAP::Harness::JUnit.3
 
