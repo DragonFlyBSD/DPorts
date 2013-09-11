@@ -2,7 +2,7 @@
 # Date created:                      Jan 11 2008
 # Whom:                              Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/www/trac-customfieldadmin/Makefile,v 1.16 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-customfieldadmin/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	customfieldadmin
@@ -27,7 +27,7 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=    TracCustomFieldAdmin
 PYDISTUTILS_PKGVERSION= ${PORTVERSION:R}
-PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${_PYTHON_VERSION}
+PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
 post-install:
