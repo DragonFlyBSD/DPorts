@@ -2,7 +2,7 @@
 # Date created:				7 December 2011
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/nagios-check_netsnmp/Makefile,v 1.3 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-check_netsnmp/Makefile 326245 2013-09-04 03:27:37Z az $
 #
 
 PORTNAME=	check_netsnmp
@@ -18,7 +18,8 @@ COMMENT=	Nagios plug-in to get some common NetSNMP-exported information
 RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/utils.pm:${PORTSDIR}/net-mgmt/nagios-plugins \
 		p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	libexec/nagios/check_netsnmp %%DOCSDIR%%/check_netsnmp.html
 PLIST_DIRS=	%%DOCSDIR%%
