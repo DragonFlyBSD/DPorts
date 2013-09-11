@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gstreamer-plugins-buzztard
-# Date created:		2007-06-24
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/gstreamer-plugins-buzztard/Makefile,v 1.11 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: multimedia/gstreamer-plugins-buzztard/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	buzztard
 PORTVERSION=	0.6.0
@@ -17,6 +13,7 @@ COMMENT=	Buzztard gstreamer plugins
 
 LIB_DEPENDS=	fluidsynth.1:${PORTSDIR}/audio/fluidsynth
 
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GSTREAMER=	yes
 USE_GNOME=	gnomehack ltverhack
