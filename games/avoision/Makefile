@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/avoision/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/avoision/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	avoision
 PORTVERSION=	1.1
@@ -23,6 +23,7 @@ LIB_DEPENDS=	lua-5.1:${PORTSDIR}/lang/lua \
 		physfs.1:${PORTSDIR}/devel/physfs
 RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
+USES=		pkgconfig
 USE_SDL=	sdl sound
 USE_GL=		glu
 GNU_CONFIGURE=	yes
