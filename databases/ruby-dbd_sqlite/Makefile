@@ -2,7 +2,7 @@
 # Date created:		15 November 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/databases/ruby-dbd_sqlite/Makefile,v 1.22 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/ruby-dbd_sqlite/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	dbd_sqlite
