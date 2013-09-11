@@ -2,7 +2,7 @@
 # Date created:		2006-06-26
 # Whom:			Yuichiro AIZAWA <yaizawa@mdbl.sfc.keio.ac.jp>
 #
-# $FreeBSD: ports/print/p5-PDF-Template/Makefile,v 1.6 2012/11/17 06:00:53 svnexp Exp $
+# $FreeBSD: print/p5-PDF-Template/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	PDF-Template
@@ -18,7 +18,8 @@ BUILD_DEPENDS+=	pdflib-perl>=0:${PORTSDIR}/print/pdflib-perl \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PDF::Template::Element::Weblink.3 \
 		PDF::Template::Container::Scope.3 \
