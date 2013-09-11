@@ -2,7 +2,7 @@
 # Date created:		04 Dec 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Fliggy/Makefile,v 1.4 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Fliggy/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	Fliggy
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Fliggy.3 \
 	Fliggy::Server.3 \
