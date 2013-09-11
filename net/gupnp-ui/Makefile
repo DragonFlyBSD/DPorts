@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-ui/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/gupnp-ui/Makefile 326615 2013-09-07 10:20:39Z sunpoet $
 
 PORTNAME=	gupnp-ui
 PORTVERSION=	0.1.1
@@ -13,8 +13,8 @@ COMMENT=	Framework for UPnP devices
 LICENSE=	LGPL20
 
 BUILD_DEPENDS=	gupnp>=0.3:${PORTSDIR}/net/gupnp
-LIB_DEPENDS=	gupnp-1.0:${PORTSDIR}/net/gupnp \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libgupnp-1.0.so:${PORTSDIR}/net/gupnp \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	yes
