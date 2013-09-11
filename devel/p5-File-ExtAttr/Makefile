@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: ports/devel/p5-File-ExtAttr/Makefile,v 1.9 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: devel/p5-File-ExtAttr/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=		File-ExtAttr
 PORTVERSION=		1.09
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		5u623l20@gmail.com
 COMMENT=		Access to extended attributes of the files
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			File::ExtAttr.3 File::ExtAttr::Tie.3
 
