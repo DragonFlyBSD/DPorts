@@ -2,7 +2,7 @@
 # Date created:		28 Dec 2011
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Google-Analytics/Makefile,v 1.5 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Google-Analytics/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	Net-Google-Analytics
@@ -21,7 +21,8 @@ RUN_DEPENDS=	\
 	p5-URI>0:${PORTSDIR}/net/p5-URI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Google::Analytics.3 \
 	Net::Google::Analytics::OAuth2.3 \
