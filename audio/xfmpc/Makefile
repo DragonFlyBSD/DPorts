@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: audio/xfmpc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/xfmpc/Makefile 325727 2013-08-30 23:01:05Z bapt $
 #
 
 PORTNAME=	xfmpc
@@ -16,9 +16,8 @@ COMMENT=	Graphical MPD client focusing on low footprint
 LIB_DEPENDS=	mpd:${PORTSDIR}/audio/libmpd
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USES=		gettext pkgconfig
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil
