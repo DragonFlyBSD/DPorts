@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-LWP-Authen-OAuth/Makefile,v 1.4 2013/02/18 00:08:20 svnexp Exp $
+# $FreeBSD: www/p5-LWP-Authen-OAuth/Makefile 326021 2013-09-02 16:07:56Z az $
 
 PORTNAME=	LWP-Authen-OAuth
 PORTVERSION=	1.02
@@ -14,7 +14,8 @@ RUN_DEPENDS=	\
 	p5-URI>0:${PORTSDIR}/net/p5-URI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	LWP::Authen::OAuth.3
 
