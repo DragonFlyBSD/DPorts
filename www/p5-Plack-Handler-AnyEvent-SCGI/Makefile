@@ -2,7 +2,7 @@
 # Date created:		17 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Handler-AnyEvent-SCGI/Makefile,v 1.4 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Handler-AnyEvent-SCGI/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	Plack-Handler-AnyEvent-SCGI
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Handler::AnyEvent::SCGI.3
 
