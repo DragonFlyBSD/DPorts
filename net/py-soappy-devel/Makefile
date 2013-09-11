@@ -2,7 +2,7 @@
 # Date created:		2 Aug 2004
 # Whom:	      		Alexander Leidinger
 #
-# $FreeBSD: ports/net/py-soappy-devel/Makefile,v 1.9 2012/11/17 06:00:16 svnexp Exp $
+# $FreeBSD: net/py-soappy-devel/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=		soappy
