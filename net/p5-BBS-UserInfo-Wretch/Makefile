@@ -2,7 +2,7 @@
 # Date created:		2006-08-20
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-BBS-UserInfo-Wretch/Makefile,v 1.8 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-BBS-UserInfo-Wretch/Makefile 326486 2013-09-06 10:47:10Z az $
 #
 
 PORTNAME=	BBS-UserInfo-Wretch
@@ -17,7 +17,8 @@ COMMENT=	Get user information of Wretch-style BBS
 
 RUN_DEPENDS=	p5-Expect>=0:${PORTSDIR}/lang/p5-Expect
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		BBS::UserInfo::Wretch.3
 
