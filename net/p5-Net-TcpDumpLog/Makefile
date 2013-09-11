@@ -2,7 +2,7 @@
 # Date created:		2010-10-07
 # Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-TcpDumpLog/Makefile,v 1.2 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-TcpDumpLog/Makefile 326522 2013-09-06 16:11:30Z az $
 #
 
 PORTNAME=	Net-TcpDumpLog
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Read tcpdump/libpcap network packet logs
 
-PERL_CONFIGURE= yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::TcpDumpLog.3
 
