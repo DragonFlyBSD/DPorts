@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: net/liferea/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/liferea/Makefile 326422 2013-09-05 17:37:22Z antoine $
 
 PORTNAME=	liferea
 PORTVERSION=	1.8.15
@@ -16,7 +16,7 @@ LIB_DEPENDS=	webkitgtk-1.0:${PORTSDIR}/www/webkit-gtk2 \
 		json-glib-1.0:${PORTSDIR}/devel/json-glib
 
 USE_BZIP2=	yes
-USES=		gmake pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix gconf2
 USE_AUTOTOOLS=	libtool
 USE_SQLITE=	3
