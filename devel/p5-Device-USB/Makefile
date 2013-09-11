@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: devel/p5-Device-USB/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: devel/p5-Device-USB/Makefile 326702 2013-09-08 05:43:26Z az $
 
 PORTNAME=	Device-USB
 PORTVERSION=	0.35
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 RUN_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 
 MAKE_JOBS_UNSAFE=yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Device::USB.3 \
 		Device::USB::Bus.3 \
