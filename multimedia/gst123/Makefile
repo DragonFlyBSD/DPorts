@@ -1,5 +1,5 @@
 # Created by: Herbert J. Skuhra <h.skuhra@gmail.com>
-# $FreeBSD: multimedia/gst123/Makefile 317266 2013-05-03 21:36:29Z rakuco $
+# $FreeBSD: multimedia/gst123/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	gst123
 PORTVERSION=	0.3.2
@@ -12,7 +12,7 @@ COMMENT=	A command-line tool to play audio and video files
 LICENSE=	LGPL20
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 CONFIGURE_ENV=	NCURSES5_CONFIG=/usr/bin/true
