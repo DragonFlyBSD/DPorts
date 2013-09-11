@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: java/jboss72/Makefile 317332 2013-05-04 18:27:34Z crees $
+# $FreeBSD: java/jboss72/Makefile 326770 2013-09-08 20:56:37Z crees $
 
 PORTNAME=	jboss72
 PORTVERSION=	7.2.0
@@ -54,6 +54,9 @@ do-build:
 
 do-install:
 	${MKDIR} ${PREFIX}/${DISTNAME} && cd ${JBOSSOUTPUT} && ${FIND} . | ${CPIO} -pdmu -R ${USER}:${GROUP} ${PREFIX}/${DISTNAME}
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.pre.mk>
 
