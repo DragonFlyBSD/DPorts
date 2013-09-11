@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/lxtask/Makefile 321472 2013-06-21 13:59:25Z wg $
+# $FreeBSD: sysutils/lxtask/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	lxtask
 PORTVERSION=	0.1.4
@@ -12,10 +12,9 @@ COMMENT=	Lightweight desktop-independent task manager
 
 LICENSE=	GPLv2
 
-USES=		iconv
+USES=		iconv gmake pkgconfig
 USE_GNOME=	gtk20 intlhack
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
 PORTDOCS=	AUTHORS README TODO
