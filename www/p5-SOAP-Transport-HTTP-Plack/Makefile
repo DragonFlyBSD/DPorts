@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-SOAP-Transport-HTTP-Plack/Makefile,v 1.1 2013/02/04 05:49:30 svnexp Exp $
+# $FreeBSD: www/p5-SOAP-Transport-HTTP-Plack/Makefile 326161 2013-09-03 15:28:40Z az $
 
 PORTNAME=	SOAP-Transport-HTTP-Plack
 PORTVERSION=	0.03
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-SOAP-Lite>0:${PORTSDIR}/net/p5-SOAP-Lite
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	SOAP::Transport::HTTP::Plack.3 \
 	XMLRPC::Transport::HTTP::Plack.3
