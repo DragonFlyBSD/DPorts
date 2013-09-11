@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iconv
-# Date created:				10 September 2000
-# Whom:			Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-#
-# $FreeBSD: ports/converters/iconv-rfc1345/Makefile,v 1.9 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
+# $FreeBSD: converters/iconv-rfc1345/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	iconv-rfc1345
 PORTVERSION=	2.0
@@ -16,6 +12,6 @@ COMMENT=	Additional charset modules for the iconv library (from RFC1345)
 
 LIB_DEPENDS=	biconv.2:${PORTSDIR}/converters/iconv
 
-USE_PERL5=	yes
+USES=		perl5
 
 .include <bsd.port.mk>
