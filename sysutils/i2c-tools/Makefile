@@ -2,7 +2,7 @@
 # Date created:		2012-04-18
 # Whom:			Andriy Gapon <avg@icyb.net.ua>
 #
-# $FreeBSD: ports/sysutils/i2c-tools/Makefile,v 1.2 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: sysutils/i2c-tools/Makefile 326574 2013-09-07 07:11:48Z az $
 #
 
 PORTNAME=	i2c-tools
@@ -15,7 +15,8 @@ COMMENT=	A heterogeneous set of I2C tools
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	sbin/decode-dimms
 
