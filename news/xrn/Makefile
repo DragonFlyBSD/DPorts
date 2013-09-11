@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: news/xrn/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: news/xrn/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	xrn
 DISTVERSION=	10.00-beta-3
@@ -13,8 +13,7 @@ COMMENT=	Usenet News reader for the X Window System
 MAN1=		xrn.1
 MANCOMPRESSED=	no
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		bison
+USES=		bison gmake pkgconfig
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 
 DOCS=		COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog
