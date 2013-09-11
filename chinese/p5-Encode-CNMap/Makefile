@@ -2,7 +2,7 @@
 # Date created:		2008-03-18
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/chinese/p5-Encode-CNMap/Makefile,v 1.4 2012/12/16 06:16:53 svnexp Exp $
+# $FreeBSD: chinese/p5-Encode-CNMap/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	Encode-CNMap
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Enhanced Chinese encodings with Simplified-Traditional auto-mapping
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		cnmap.1 cnmapdir.1 cnmapwx.1
 
