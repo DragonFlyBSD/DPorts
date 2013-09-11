@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/grig/Makefile 321188 2013-06-18 13:52:06Z zi $
+# $FreeBSD: comms/grig/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	grig
 PORTVERSION=	0.8.0
@@ -16,8 +16,7 @@ LIB_DEPENDS=	hamlib:${PORTSDIR}/comms/hamlib
 
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 
 MAN1=		grig.1
 
