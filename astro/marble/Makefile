@@ -1,4 +1,4 @@
-# $FreeBSD: astro/marble/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: astro/marble/Makefile 325648 2013-08-30 01:15:20Z bapt $
 
 PORTNAME=	marble
 PORTVERSION=	${KDE4_VERSION}
@@ -13,12 +13,11 @@ COMMENT=	Virtual globe and world atlas for KDE
 CONFLICTS=	kdeedu-4.4.[0-4]
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4 sharedmime
-USES=		cmake:outsource
+USES=		cmake:outsource gmake
 USE_QT4=	corelib dbus declarative designer_build gui network phonon \
 		qtestlib script sql svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 CMAKE_ARGS=	-DMOBILE:BOOL=FALSE
