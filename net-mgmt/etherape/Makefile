@@ -1,5 +1,5 @@
 # Created by: Holger Lamm <holger@eit.uni-kl.de>
-# $FreeBSD: net-mgmt/etherape/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net-mgmt/etherape/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	etherape
 PORTVERSION=	0.9.9
@@ -11,7 +11,7 @@ MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	A graphical network traffic visualization tool for gnome
 
 USE_GNOME=	libglade2 libgnomeui gnomehack gnomeprefix
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
