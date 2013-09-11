@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-AnyEvent-Worker/Makefile 322177 2013-07-02 15:38:36Z danfe $
+# $FreeBSD: devel/p5-AnyEvent-Worker/Makefile 326644 2013-09-07 15:51:29Z az $
 
 PORTNAME=	AnyEvent-Worker
 PORTVERSION=	0.06
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-AnyEvent>=5:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-lib-abs>=0.90:${PORTSDIR}/devel/p5-lib-abs
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		AnyEvent::Worker.3 AnyEvent::Worker::Pool.3
 
 .include <bsd.port.mk>
