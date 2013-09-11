@@ -1,9 +1,5 @@
-# New ports collection makefile for:   w3m-image
-# Date Created:                22 July 2001
-# Whom:                        MANTANI Nobutaka <nobutaka@nobutaka.com>
-#
-# $FreeBSD: ports/www/w3m-img/Makefile,v 1.7 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
+# $FreeBSD: www/w3m-img/Makefile 325261 2013-08-23 12:30:16Z nobutaka $
 
 PKGNAMESUFFIX=	-img
 
@@ -14,7 +10,8 @@ MASTERDIR=	${.CURDIR}/../../www/w3m
 PKGDIR=		${.CURDIR}
 PLIST=		${MASTERDIR}/pkg-plist
 
-WITH_INLINE_IMAGE=	yes
-CONFLICTS=	ja-w3m-0.5.* ja-w3m-img-0.5.* w3m-0.5.* w3m-m17n-0.5.* w3m-m17n-img-0.5.*
+OPTIONS_SLAVE=	DOCS INLINE_IMAGE
+NO_DIALOG=	yes
+CONFLICTS=	ja-w3m-0.5.* ja-w3m-img-0.5.* w3m-0.5.*0
 
 .include "${MASTERDIR}/Makefile"
