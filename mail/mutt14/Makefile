@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: mail/mutt14/Makefile 323108 2013-07-16 14:43:38Z miwi $
+# $FreeBSD: mail/mutt14/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	mutt
 PORTVERSION=	1.4.2.3
@@ -123,7 +123,7 @@ PLIST_SUB+=	NLS="@comment "
 .if ! ${PORT_OPTIONS:MMUTT_ICONV} && ! ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=	--disable-iconv
 .else
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 .endif
 .if ${PORT_OPTIONS:MSLANG}
 CONFIGURE_ARGS+=	--with-slang=${PREFIX}
