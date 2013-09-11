@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	p5-Path-Class-File-Lockable
-# Date created: 			2012-01-22
-# Whom:					Tatsuya Ueda <ml+freebsd@tatsuya.info>
-#
-# $FreeBSD: ports/devel/p5-Path-Class-File-Lockable/Makefile,v 1.3 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Tatsuya Ueda <ml+freebsd@tatsuya.info>
+# $FreeBSD: devel/p5-Path-Class-File-Lockable/Makefile 326803 2013-09-09 11:55:30Z az $
 
 PORTNAME=	Path-Class-File-Lockable
 PORTVERSION=	0.03
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-File-NFSLock>0:${PORTSDIR}/devel/p5-File-NFSLock \
 		p5-Path-Class>0:${PORTSDIR}/devel/p5-Path-Class
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Path::Class::File::Lockable.3
 
