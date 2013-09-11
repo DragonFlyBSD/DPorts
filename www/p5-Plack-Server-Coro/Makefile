@@ -2,7 +2,7 @@
 # Date created:		14 Oct 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Server-Coro/Makefile,v 1.6 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Server-Coro/Makefile 326054 2013-09-02 18:41:05Z az $
 #
 
 PORTNAME=	Plack-Server-Coro
@@ -23,7 +23,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Server::Coro.3
 
