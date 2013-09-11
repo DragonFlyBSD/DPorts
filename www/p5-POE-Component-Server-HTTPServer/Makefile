@@ -2,7 +2,7 @@
 # Date created:		23 Feb 2005
 # Whom:			Zach Thompson <lin-chi@lastamericanempire.com>
 #
-# $FreeBSD: ports/www/p5-POE-Component-Server-HTTPServer/Makefile,v 1.7 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-POE-Component-Server-HTTPServer/Makefile 325960 2013-09-02 09:44:14Z az $
 #
 
 PORTNAME=	POE-Component-Server-HTTPServer
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-MIME-Types>=0:${PORTSDIR}/mail/p5-MIME-Types
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Server::HTTPServer.3 \
 		POE::Component::Server::HTTPServer::BasicAuthenHandler.3 \
