@@ -2,7 +2,7 @@
 # Date created:				07 October 2007
 # Whom:					Cory R. King <coryking@mozimedia.com>
 #
-# $FreeBSD: ports/net/p5-Net-Trackback/Makefile,v 1.2 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Trackback/Makefile 326506 2013-09-06 14:30:23Z az $
 
 PORTNAME=	Net-Trackback
 PORTVERSION=	1.01
@@ -26,6 +26,7 @@ MAN3=		Net::Trackback.3 \
 		Net::Trackback::Ping.3 \
 		Net::Trackback::Server.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
