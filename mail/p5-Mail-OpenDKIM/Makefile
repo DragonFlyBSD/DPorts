@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: mail/p5-Mail-OpenDKIM/Makefile 321230 2013-06-19 05:58:50Z az $
+# $FreeBSD: mail/p5-Mail-OpenDKIM/Makefile 326257 2013-09-04 07:19:56Z az $
 
 PORTNAME=	Mail-OpenDKIM
 PORTVERSION=	4040
@@ -19,7 +19,8 @@ RUN_DEPENDS=	opendkim>=2.5.0:${PORTSDIR}/mail/opendkim
 TEST_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-Test-Kwalitee>=0:${PORTSDIR}/devel/p5-Test-Kwalitee
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::OpenDKIM.3 Mail::OpenDKIM::DKIM.3 \
 		Mail::OpenDKIM::PrivateKey.3 Mail::OpenDKIM::Signature.3 \
