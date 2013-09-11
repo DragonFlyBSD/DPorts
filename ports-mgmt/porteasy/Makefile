@@ -1,4 +1,4 @@
-# $FreeBSD: ports/ports-mgmt/porteasy/Makefile,v 1.53 2012/11/17 06:00:46 svnexp Exp $
+# $FreeBSD: ports-mgmt/porteasy/Makefile 326530 2013-09-06 17:55:21Z az $
 
 PORTNAME=	porteasy
 PORTVERSION=	2.8.5
@@ -11,7 +11,7 @@ COMMENT=	A tool for fetching and building ports
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 SRC=		${.CURDIR}/src
 
