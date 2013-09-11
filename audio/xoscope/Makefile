@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xoscope/Makefile 306989 2012-11-05 00:05:15Z db $
+# $FreeBSD: audio/xoscope/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	xoscope
 PORTVERSION=	2.0
@@ -11,7 +11,7 @@ COMMENT=	Sound card oscilloscope
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --sysconfdir=${PREFIX}
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 USE_XORG=	x11
 
