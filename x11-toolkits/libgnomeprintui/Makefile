@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreBSD.org>
-# $FreeBSD: x11-toolkits/libgnomeprintui/Makefile 316813 2013-04-29 12:59:35Z bapt $
+# $FreeBSD: x11-toolkits/libgnomeprintui/Makefile 326129 2013-09-03 08:49:46Z bapt $
 #   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.75 2010/09/28 16:07:36 kwm Exp $
 
 PORTNAME=	libgnomeprintui
@@ -17,8 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xpm
-USE_GMAKE=	yes
-USES=		bison pathfix gettext
+USES=		bison pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix libgnomeprint libgnomecanvas \
 		intlhack ltverhack
 USE_LDCONFIG=	yes
