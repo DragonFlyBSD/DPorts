@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: multimedia/gmerlin/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/gmerlin/Makefile 325803 2013-08-31 13:04:58Z bapt $
 
 PORTNAME=	gmerlin
 PORTVERSION=	1.2.0
@@ -25,7 +25,7 @@ OPTIONS_DEFAULT=	CDDB CDIO JACK JPEG LIBVISUAL \
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-v4l --disable-v4l2 --disable-v4lconvert \
 		--without-doxygen --with-cpuflags=none --disable-musicbrainz
-USES=        pathfix gettext
+USES=		pathfix gettext pkgconfig
 USE_GNOME=	gtk20 libxml2
 USE_XORG=	x11 xext xfixes xinerama xv
 USE_GL=		gl
