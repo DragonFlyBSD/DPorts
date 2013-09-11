@@ -1,8 +1,8 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: german/mythes/Makefile 324961 2013-08-19 08:53:30Z sunpoet $
+# $FreeBSD: german/mythes/Makefile 326790 2013-09-09 10:08:35Z sunpoet $
 
 PORTNAME=	mythes
-PORTVERSION=	2013.08.18
+PORTVERSION=	2013.09.08
 CATEGORIES=	german textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 DISTNAME=	Deutscher-Thesaurus-${PORTVERSION:C/\.//g}
