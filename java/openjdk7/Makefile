@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: java/openjdk7/Makefile 325372 2013-08-26 06:35:58Z bapt $
+# $FreeBSD: java/openjdk7/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${PORT_MINOR_VERSION}.${PORT_BUILD_NUMBER}
@@ -149,6 +149,13 @@ post-patch:
 .if ${PORT_OPTIONS:MPOLICY}
 	@${REINPLACE_CMD} 's|build-policy install-limited|build-policy install-unlimited|' \
 		${WRKSRC}/jdk/make/javax/crypto/Makefile
+.endif
+.if empty(ICONV_LIB)
+	@${REINPLACE_CMD} 's| -liconv||' \
+		${WRKSRC}/Makefile \
+		${WRKSRC}/jdk/make/sun/splashscreen/Makefile \
+		${WRKSRC}/jdk/make/java/npt/Makefile \
+		${WRKSRC}/jdk/make/java/instrument/Makefile
 .endif
 
 # override do-build to filter out _MAKE_JOBS to enable parallel build
