@@ -2,7 +2,7 @@
 # Date created:		05 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CGI-Application-PSGI/Makefile,v 1.3 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-PSGI/Makefile 326003 2013-09-02 15:12:10Z az $
 #
 
 PORTNAME=	CGI-Application-PSGI
@@ -19,7 +19,8 @@ RUN_DEPENDS=	\
 	p5-CGI-PSGI>0:${PORTSDIR}/www/p5-CGI-PSGI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Application::PSGI.3
 
