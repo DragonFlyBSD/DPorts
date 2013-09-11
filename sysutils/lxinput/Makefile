@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: sysutils/lxinput/Makefile 321342 2013-06-19 23:51:05Z wen $
+# $FreeBSD: sysutils/lxinput/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	lxinput
 PORTVERSION=	0.3.2
@@ -9,12 +9,11 @@ MASTER_SITES=	SF/lxde/LXInput%20%28Kbd%20and%20amp_%20mouse%20config%29/LXInput%
 MAINTAINER=	nemysis@gmx.ch
 COMMENT=	Keyboard and mouse config tool from the LXDE project
 
-USES=		iconv
+USES=		iconv gmake pkgconfig
 USE_GNOME=	gtk20 intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-USE_GMAKE=	yes
 
 MAN1=		lxinput.1
 
