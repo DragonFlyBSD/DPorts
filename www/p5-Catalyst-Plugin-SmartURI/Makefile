@@ -2,7 +2,7 @@
 # Date created:				2008-07-09
 # Whom:					Oleg Mamontov <oleg@mamontov.net>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-SmartURI/Makefile,v 1.5 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-SmartURI/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-SmartURI
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7007:${PORTSDIR}/www/p5-Catalyst-Runtime	\
 		p5-parent>=0:${PORTSDIR}/devel/p5-parent
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::SmartURI.3
 
