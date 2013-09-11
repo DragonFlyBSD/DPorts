@@ -1,5 +1,5 @@
 # Created by: Andreas Kohout <shanee@augusta.de>
-# $FreeBSD: editors/asedit/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: editors/asedit/Makefile 325992 2013-09-02 13:26:34Z tijl $
 
 PORTNAME=	asedit
 PORTVERSION=	1.3.2
@@ -12,9 +12,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Text editor for X/Motif
 
-USES=		imake motif
+USES=		imake:notall motif
 USE_XORG=	ice sm x11 xext xmu xp xt
-XMKMF=		xmkmf
 
 MAN1=		asedit.1
 
