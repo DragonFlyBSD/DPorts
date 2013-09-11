@@ -2,7 +2,7 @@
 # Date created:		27 Oct 2009
 # Whom:			Motomichi Matsuzaki <mzaki@m.u-tokyo.ac.jp>
 #
-# $FreeBSD: ports/biology/velvet/Makefile,v 1.3 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: biology/velvet/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	velvet
@@ -22,7 +22,8 @@ MAXKMERLENGTH?=	31
 VELVET_CATEGORIES?=	2
 MAKE_ENV+=	MAXKMERLENGTH=${MAXKMERLENGTH} CATEGORIES=${VELVET_CATEGORIES}
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 BINARIES=	velvetg velveth
 SCRIPTS=	shuffleSequences_fasta.pl shuffleSequences_fastq.pl \
