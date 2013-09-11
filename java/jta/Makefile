@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/java/jta/Makefile,v 1.5 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jta/Makefile 325598 2013-08-29 14:16:03Z bdrewery $
 
 PORTNAME=	jta
 PORTVERSION=	1.0.1
@@ -23,7 +23,7 @@ PORTDOCS=	${DISTNAME}.pdf javadocs
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 .include <bsd.port.pre.mk>
-.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}) && !defined(PACKAGE_BUILDING)
+.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
 IGNORE=		you must manually fetch the distribution from ${DOWNLOAD_URL} and place it in ${DISTDIR} then run make again
 .endif
 
