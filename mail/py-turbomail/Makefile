@@ -2,7 +2,7 @@
 # Date created:		2007-01-24
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/py-turbomail/Makefile,v 1.11 2012/11/17 05:59:12 svnexp Exp $
+# $FreeBSD: mail/py-turbomail/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	turbomail
