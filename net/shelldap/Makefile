@@ -1,5 +1,5 @@
 # Created by: Mahlon E. Smith <mahlon@martini.nu>
-# $FreeBSD: net/shelldap/Makefile 314762 2013-03-20 21:08:03Z pawel $
+# $FreeBSD: net/shelldap/Makefile 326384 2013-09-05 11:09:23Z az $
 
 PORTNAME=	shelldap
 PORTVERSION=	1.0.0
@@ -17,7 +17,7 @@ RUN_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff \
 		p5-ReadLine-Gnu>=0:${PORTSDIR}/devel/p5-ReadLine-Gnu \
 		p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		shelldap.1
 
