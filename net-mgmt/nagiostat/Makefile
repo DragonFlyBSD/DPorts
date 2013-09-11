@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/net-mgmt/nagiostat/Makefile,v 1.16 2013/01/09 20:05:03 svnexp Exp $
+# $FreeBSD: net-mgmt/nagiostat/Makefile 326244 2013-09-04 03:24:02Z az $
 
 PORTNAME=	nagiostat
 PORTVERSION=	1.0.0
@@ -14,7 +14,7 @@ COMMENT=	Nagiostat parses performance-data from Nagios and generates graphs
 RUN_DEPENDS=	rrdtool:${PORTSDIR}/databases/rrdtool \
 		nagios:${PORTSDIR}/net-mgmt/nagios
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 NAGIOSDIR?=	/var/spool/nagios

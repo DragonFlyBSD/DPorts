@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/nagiostat/files/patch-nagiostat,v 1.2 2012/11/17 06:00:34 svnexp Exp $
+$FreeBSD: net-mgmt/nagiostat/files/patch-nagiostat 300897 2012-07-14 14:29:18Z beat $
 
 --- nagiostat.orig	Tue Jul 20 17:30:18 2004
 +++ nagiostat	Tue Jul 20 18:01:53 2004
