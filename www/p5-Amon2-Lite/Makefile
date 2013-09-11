@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Amon2-Lite/Makefile,v 1.1 2013/01/20 14:48:07 svnexp Exp $
+# $FreeBSD: www/p5-Amon2-Lite/Makefile 326053 2013-09-02 18:23:34Z az $
 
 PORTNAME=	Amon2-Lite
 PORTVERSION=	0.09
@@ -23,7 +23,8 @@ TEST_DEPENDS=	\
 	p5-Tiffany>0:${PORTSDIR}/textproc/p5-Tiffany \
 	p5-Plack-Middleware-ReverseProxy>0:${PORTSDIR}/www/p5-Plack-Middleware-ReverseProxy
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Amon2::Lite.3 \
 	Amon2::Setup::Flavor::Lite.3
