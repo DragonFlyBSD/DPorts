@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-Geo-Point
-# Date created:        27 December 2005
-# Whom:                estith
-#
-# $FreeBSD: ports/devel/p5-Geo-ShapeFile/Makefile,v 1.7 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: estith
+# $FreeBSD: devel/p5-Geo-ShapeFile/Makefile 326810 2013-09-09 14:13:20Z az $
 
 PORTNAME=	Geo-ShapeFile
 PORTVERSION=	2.52
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lippe@FreeBSD.org
 COMMENT=	Perl extension for handling ESRI GIS Shapefiles
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Geo::ShapeFile.3 Geo::ShapeFile::Point.3 Geo::ShapeFile::Shape.3
 
