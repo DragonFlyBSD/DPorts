@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-VCS-CVS
-# Date created:				15 May 2001
-# Whom:					Anatoliy Dmytriyev <tolid@plab.ku.dk>
-#
-# $FreeBSD: ports/devel/p5-VCS-CVS/Makefile,v 1.8 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Anatoliy Dmytriyev <tolid@plab.ku.dk>
+# $FreeBSD: devel/p5-VCS-CVS/Makefile 326639 2013-09-07 14:36:58Z az $
 
 PORTNAME=	VCS-CVS
 PORTVERSION=	2.06
@@ -18,7 +14,8 @@ COMMENT=	Perl module that provides a simple interface to CVS
 
 BUILD_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 MAN3=		VCS::CVS.3
 
 .include <bsd.port.mk>
