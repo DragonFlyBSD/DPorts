@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Test-EOL
-# Date created:				2011-02-15
-# Whom:	      				milki@rescomp.berkeley.edu
-#
-# $FreeBSD: ports/devel/p5-Test-EOL/Makefile,v 1.9 2012/11/17 05:56:32 svnexp Exp $
-#
+# Created by: milki@rescomp.berkeley.edu
+# $FreeBSD: devel/p5-Test-EOL/Makefile 326703 2013-09-08 06:18:53Z az $
 
 PORTNAME=	Test-EOL
 PORTVERSION=	1.5
@@ -22,7 +18,8 @@ TEST_DEPENDS=	p5-Pod-Coverage>=1.08:${PORTSDIR}/devel/p5-Pod-Coverage \
 		p5-Pod-Coverage-TrustPod>=0:${PORTSDIR}/devel/p5-Pod-Coverage-TrustPod \
 		p5-Test-Pod>=1.41:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::EOL.3
 
