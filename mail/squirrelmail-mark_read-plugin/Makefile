@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-mark_read-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-mark_read-plugin/Makefile 326257 2013-09-04 07:19:56Z az $
 
 PORTNAME=	mark_read
 PORTVERSION=	1.4.2
@@ -11,7 +11,8 @@ MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Provides one-click link to mark read/unread all mails in a folder
 
 USE_SM_COMPAT=	YES
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
