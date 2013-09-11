@@ -2,7 +2,7 @@
 # Date created:			30 August 2002
 # Whom:				Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
 #
-# $FreeBSD: ports/mail/mailgraph/Makefile,v 1.45 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mailgraph/Makefile 326248 2013-09-04 05:52:04Z az $
 #
 
 PORTNAME=	mailgraph
@@ -19,7 +19,7 @@ RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool	\
 		p5-File-Tail>=0:${PORTSDIR}/devel/p5-File-Tail
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 CGIDIR?=	${PREFIX}/www/cgi-bin
 DATADIR?=	/var/db/mailgraph
