@@ -1,5 +1,5 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: mail/squirrelmail-vlogin-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-vlogin-plugin/Makefile 326271 2013-09-04 12:28:16Z az $
 
 PORTNAME=	vlogin
 PORTVERSION=	3.10.2
@@ -13,7 +13,8 @@ DIST_SUBDIR=	squirrelmail
 MAINTAINER=	neil@darlow.co.uk
 COMMENT=	Adds multi-site-hosting capabilities to SquirrelMail
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_SM_COMPAT=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
