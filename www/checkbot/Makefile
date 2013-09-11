@@ -2,7 +2,7 @@
 # Date created:				2. Feb 1998
 # Whom:	      				wosch@FreeBSD.org
 #
-# $FreeBSD: ports/www/checkbot/Makefile,v 1.46 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/checkbot/Makefile 326021 2013-09-02 16:07:56Z az $
 #
 
 PORTNAME=	checkbot
@@ -26,7 +26,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Time-Duration>=0:${PORTSDIR}/devel/p5-Time-Duration
 
 MAN1=		checkbot.1
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 PLIST_FILES=	bin/checkbot ${SITE_PERL:S!${LOCALBASE}/!!}/${PERL_ARCH}/auto/checkbot/.packlist
 PLIST_DIRS=	${SITE_PERL:S!${LOCALBASE}/!!}/${PERL_ARCH}/auto/checkbot
