@@ -2,7 +2,7 @@
 # Date created:		03 Apr 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-WWW-Mechanize-PSGI/Makefile,v 1.3 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-WWW-Mechanize-PSGI/Makefile 326581 2013-09-07 08:23:45Z az $
 #
 
 PORTNAME=	Test-WWW-Mechanize-PSGI
@@ -20,7 +20,8 @@ RUN_DEPENDS=	\
 	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::WWW::Mechanize::PSGI.3
 
