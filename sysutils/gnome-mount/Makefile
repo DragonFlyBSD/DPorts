@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-mount/Makefile 317222 2013-05-03 16:56:48Z ehaupt $
+# $FreeBSD: sysutils/gnome-mount/Makefile 326122 2013-09-03 06:36:41Z bapt $
 #   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.28 2011/03/08 19:25:20 kwm Exp $
 
 PORTNAME=	gnome-mount
@@ -17,8 +17,7 @@ LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/polkit-gnome.pc:${PORTSDIR}/sysutils/policykit-gnome
 
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gtk20
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nautilus-extension
 CPPFLAGS+=	-I${LOCALBASE}/include
