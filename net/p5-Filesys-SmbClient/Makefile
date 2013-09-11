@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: net/p5-Filesys-SmbClient/Makefile 323711 2013-07-26 10:46:37Z az $
+# $FreeBSD: net/p5-Filesys-SmbClient/Makefile 326380 2013-09-05 10:32:23Z az $
 
 PORTNAME=	Filesys-SmbClient
 PORTVERSION=	3.2
@@ -13,7 +13,8 @@ COMMENT=	Interface for access Samba filesystem with libsmclient.so
 LIB_DEPENDS=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
 BUILD_DEPENDS=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Filesys::SmbClient.3
 
