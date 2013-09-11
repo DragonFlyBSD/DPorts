@@ -2,11 +2,11 @@
 # Date created:		2009-10-13
 # Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/slf4j/Makefile,v 1.5 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/slf4j/Makefile 326446 2013-09-05 20:28:43Z skreuzer $
 #
 
 PORTNAME=	slf4j
-PORTVERSION=	1.6.6
+PORTVERSION=	1.7.5
 CATEGORIES=	devel java
 MASTER_SITES=	http://www.slf4j.org/dist/
 
