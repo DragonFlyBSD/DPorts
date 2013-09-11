@@ -1,5 +1,5 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: mail/p5-Net-POP3-SSLWrapper/Makefile 320154 2013-06-07 06:55:05Z az $
+# $FreeBSD: mail/p5-Net-POP3-SSLWrapper/Makefile 326271 2013-09-04 12:28:16Z az $
 
 PORTNAME=	Net-POP3-SSLWrapper
 PORTVERSION=	0.06
@@ -13,7 +13,8 @@ COMMENT=	Perl extension for simple POP3S wrapper for Net::POP3
 BUILD_DEPENDS=	p5-IO-Socket-SSL>=1.34:${PORTSDIR}/security/p5-IO-Socket-SSL
 RUN_DEPENDS=	p5-IO-Socket-SSL>=1.34:${PORTSDIR}/security/p5-IO-Socket-SSL
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::POP3::SSLWrapper.3
 
