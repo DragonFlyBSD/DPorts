@@ -18,7 +18,7 @@ COMMENT=	Syobon Action is a platform game as Super Mario Bros
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_DOS2UNIX=	*.txt
 ALL_TARGET=	${PORTNAME}
 USE_SDL=	sdl gfx image mixer ttf
