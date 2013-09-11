@@ -1,7 +1,8 @@
-# $FreeBSD: japanese/font-migmix/Makefile 316983 2013-05-01 03:05:18Z hrs $
+# $FreeBSD: japanese/font-migmix/Makefile 326328 2013-09-04 21:15:21Z hrs $
 
 PORTNAME=	migmix
 PORTVERSION=	1.0.20130430
+PORTREVISION=	1
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	SFJP/mix-mplus-ipa/58721
 PKGNAMEPREFIX=	ja-font-
