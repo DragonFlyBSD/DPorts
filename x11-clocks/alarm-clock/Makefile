@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: x11-clocks/alarm-clock/Makefile 317470 2013-05-06 06:41:15Z bapt $
+# $FreeBSD: x11-clocks/alarm-clock/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	alarm-clock
 PORTVERSION=	1.4
@@ -15,8 +15,7 @@ LIB_DEPENDS=	unique-1:${PORTSDIR}/x11-toolkits/unique \
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gettext pathfix
-USE_GMAKE=	yes
+USES=		gettext pathfix gmake pkgconfig
 USE_GSTREAMER=	yes
 USE_GNOME=	gtk20
 
