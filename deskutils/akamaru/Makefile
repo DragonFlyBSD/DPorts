@@ -1,9 +1,5 @@
-# New ports collection makefile for:	akamaru
-# Date created:		2006 10 10
-# Whom:			Phillip Neumann <pneumann@gmail.com>
-#
-# $FreeBSD: ports/deskutils/akamaru/Makefile,v 1.9 2012/11/17 05:55:26 svnexp Exp $
-#
+# Created by: Phillip Neumann <pneumann@gmail.com>
+# $FreeBSD: deskutils/akamaru/Makefile 326711 2013-09-08 08:44:57Z antoine $
 
 PORTNAME=	akamaru
 PORTVERSION=	0.1
@@ -19,7 +15,7 @@ BUILD_DEPENDS=	gtk-demo:${PORTSDIR}/x11-toolkits/gtk20
 RUN_DEPENDS=	gtk-demo:${PORTSDIR}/x11-toolkits/gtk20 \
 		xcompmgr:${PORTSDIR}/x11-wm/xcompmgr
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gconf2 gnomehier
 GCONF_SCHEMAS=	kiba.schemas
 
