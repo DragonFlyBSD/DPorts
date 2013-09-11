@@ -2,7 +2,7 @@
 # Date created:        9 August 2001
 # Whom:                Christopher Elkins <chrise@scardini.com>
 #
-# $FreeBSD: ports/mail/gotmail/Makefile,v 1.35 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: mail/gotmail/Makefile 326265 2013-09-04 09:48:54Z az $
 #
 
 PORTNAME=	gotmail
@@ -19,7 +19,7 @@ RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		p5-Net>=0:${PORTSDIR}/net/p5-Net
 
 MAN1=		${PORTNAME}.1
-USE_PERL5=	yes
+USES=		perl5
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.man \
