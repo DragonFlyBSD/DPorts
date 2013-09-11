@@ -2,7 +2,7 @@
 # Date created:				08 November 2007
 # Whom:					Alex Stangl <alex@stangl.us>
 #
-# $FreeBSD: ports/ports-mgmt/portupdate-scan/Makefile,v 1.4 2012/11/17 06:00:46 svnexp Exp $
+# $FreeBSD: ports-mgmt/portupdate-scan/Makefile 326530 2013-09-06 17:55:21Z az $
 #
 # This port is self contained in the files directory.
 
@@ -16,7 +16,8 @@ MAINTAINER=	alex@stangl.us
 COMMENT=	Display pertinent parts of {PORTSDIR}/UPDATING
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	sbin/portupdate-scan
 SRC=		${.CURDIR}/src
