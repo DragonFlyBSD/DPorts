@@ -2,7 +2,7 @@
 # Date created:				2 February 2001
 # Whom:					Oyvind Albrigtsen
 #
-# $FreeBSD: ports/x11-themes/fvwm-themes/Makefile,v 1.22 2012/11/17 06:03:31 svnexp Exp $
+# $FreeBSD: x11-themes/fvwm-themes/Makefile 326575 2013-09-07 07:44:26Z az $
 #
 
 PORTNAME=	fvwm-themes
@@ -23,7 +23,7 @@ RUN_DEPENDS=	fvwm2:${PORTSDIR}/x11-wm/fvwm2
 USE_BZIP2=	yes
 USE_XORG=	xpm
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 
 MAN1=		fvwm-themes-config.1 fvwm-themes-menuapp.1 fvwm-themes-com.1 \
