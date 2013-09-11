@@ -2,7 +2,7 @@
 # Date created:				18 Apr 2012
 # Whom:					brix@FreeBSD.org
 #
-# $FreeBSD: ports/net/p5-WebService-Prowl/Makefile,v 1.4 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-WebService-Prowl/Makefile 326506 2013-09-06 14:30:23Z az $
 #
 
 PORTNAME=	WebService-Prowl
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WebService::Prowl.3 WebService::Prowl::AnyEventHTTP.3
 
