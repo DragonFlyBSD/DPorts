@@ -1,9 +1,5 @@
-# New ports collection makefile for:    emms
-# Date created:		10 May 2006
-# Whom:			Dryice Liu <dryice@dryice.name>
-#
-# $FreeBSD: audio/emms/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Dryice Liu <dryice@dryice.name>
+# $FreeBSD: audio/emms/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	emms
 PORTVERSION=	3.0
@@ -16,8 +12,8 @@ COMMENT=	The Emacs Multi-Media System
 
 LICENSE=	GPLv3
 
+USES=		gmake
 USE_EMACS=	yes
-USE_GMAKE=	yes
 MAKE_ENV+=	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} \
 		EMACS_SITE_LISPDIR=${EMACS_SITE_LISPDIR}
 INFO=		emms
