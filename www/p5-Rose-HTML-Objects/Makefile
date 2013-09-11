@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-Rose-HTML-Objects/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Rose-HTML-Objects/Makefile 326600 2013-09-07 10:19:38Z sunpoet $
 
 PORTNAME=	Rose-HTML-Objects
-PORTVERSION=	0.618
+PORTVERSION=	0.619
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
