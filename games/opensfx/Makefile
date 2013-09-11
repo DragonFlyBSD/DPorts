@@ -2,7 +2,7 @@
 # Date created:				2010-11-04
 # Whom:					Ilya A. Arhipov <admin@gorodkirov.ru>
 #
-# $FreeBSD: ports/games/opensfx/Makefile,v 1.4 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/opensfx/Makefile 325410 2013-08-26 17:43:16Z eadler $
 #
 
 PORTNAME=	opensfx
@@ -14,7 +14,7 @@ MASTER_SITES=	http://hu.binaries.openttd.org/binaries/extra/${PORTNAME}/${PORTVE
 		http://cz.binaries.openttd.org/openttd/binaries/extra/${PORTNAME}/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-all
 
-MAINTAINER=	micro@heavennet.ru
+MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Free alternative sounds for OpenTTD game engine
 
 USE_ZIP=	yes
