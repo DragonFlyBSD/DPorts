@@ -2,7 +2,7 @@
 # Date created:				25 March 2004
 # Whom:					Bruce M Simpson <bms@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/bigsister/Makefile,v 1.21 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-mgmt/bigsister/Makefile 326244 2013-09-04 03:24:02Z az $
 #
 
 PORTNAME=	bigsister
@@ -23,7 +23,7 @@ RUN_DEPENDS=	net-snmp>=0:${PORTSDIR}/net-mgmt/net-snmp \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	${PORTNAME}
 NO_BUILD=	yes
 HAS_CONFIGURE=	yes
