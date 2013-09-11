@@ -2,7 +2,7 @@
 # Date created:		2009-04-06
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/www/p5-WWW-HatenaDiary/Makefile,v 1.3 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-HatenaDiary/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	WWW-HatenaDiary
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck \
 		p5-Web-Scraper>=0:${PORTSDIR}/www/p5-Web-Scraper
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::HatenaDiary.3
 
