@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: games/gcompris/Makefile 322517 2013-07-08 17:10:56Z bapt $
+# $FreeBSD: games/gcompris/Makefile 325964 2013-09-02 09:59:05Z bapt $
 
 PORTNAME=	gcompris
 PORTVERSION=	12.11
@@ -24,7 +24,7 @@ RUN_DEPENDS=	gnuchess:${PORTSDIR}/games/gnuchess \
 		gnucap:${PORTSDIR}/cad/gnucap
 
 USE_BZIP2=	yes
-USES=		gettext gmake display:configure
+USES=		gettext gmake display:configure pkgconfig
 GNU_CONFIGURE=	yes
 USE_GSTREAMER=	yes
 USE_PYTHON=	-2.7
