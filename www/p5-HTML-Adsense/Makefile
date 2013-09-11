@@ -2,7 +2,7 @@
 # Date created:		2007-06-29
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-HTML-Adsense/Makefile,v 1.4 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Adsense/Makefile 326148 2013-09-03 13:06:13Z az $
 #
 
 PORTNAME=	HTML-Adsense
@@ -17,7 +17,8 @@ COMMENT=	Create adsense widgets easily
 
 RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Adsense.3
 
