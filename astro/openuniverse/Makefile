@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openuniverse
-# Date created:				4 August 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/astro/openuniverse/Makefile,v 1.38 2013/02/08 03:22:30 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: astro/openuniverse/Makefile 325648 2013-08-30 01:15:20Z bapt $
 
 PORTNAME=	openuniverse
 DISTVERSION=	1.0beta3
@@ -18,9 +14,9 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
 
 USE_GL=		glut
 
+USES=		gmake
 USE_XORG=	sm ice xmu xi xext x11
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
 CONFIGURE_ARGS=	--includedir="${LOCALBASE}/include" \
 		--libdir="${LOCALBASE}/lib" \

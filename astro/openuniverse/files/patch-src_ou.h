@@ -1,4 +1,4 @@
-$FreeBSD: ports/astro/openuniverse/files/patch-src_ou.h,v 1.2 2012/11/17 05:54:25 svnexp Exp $
+$FreeBSD: astro/openuniverse/files/patch-src_ou.h 300895 2012-07-14 12:56:14Z beat $
 
 --- src/ou.h.orig	Sun Jun  4 12:35:09 2000
 +++ src/ou.h	Tue Nov  5 12:17:24 2002
