@@ -2,7 +2,7 @@
 # Date created:                      Oct 08 2008
 # Whom:                              Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/www/trac-advancedticketworkflow/Makefile,v 1.6 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: www/trac-advancedticketworkflow/Makefile 325711 2013-08-30 16:49:43Z mva $
 #
 
 PORTNAME=	advancedticketworkflow
@@ -24,7 +24,7 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	AdvancedTicketWorkflowPlugin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}dev
 
-PLIST_SUB+=	PORTVERSION=${PORTVERSION:R}dev PYTHONVERSION=${_PYTHON_VERSION}
+PLIST_SUB+=	PORTVERSION=${PORTVERSION:R}dev PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
 .include <bsd.port.mk>
