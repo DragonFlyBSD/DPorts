@@ -1,9 +1,9 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/nip2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/nip2/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME=	nip2
 PORTVERSION=	7.26.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/${PORTVERSION:R}/
 
@@ -14,9 +14,8 @@ LIB_DEPENDS=	vips.3[0-9]:${PORTSDIR}/graphics/vips	\
 		gsl:${PORTSDIR}/math/gsl	\
 		xml2:${PORTSDIR}/textproc/libxml2
 
-USES=		bison
-USE_GMAKE=	yes
-USE_GNOME=	gnomemimedata glib20 pkgconfig gtk20
+USES=		bison gmake pkgconfig
+USE_GNOME=	gnomemimedata glib20 gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 # This port has no man-pages. It installs a number of HTML files,
