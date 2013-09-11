@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libopendaap
-# Date created:		2004-03-10
-# Whom:			Michael Johnson <ahze@ahze.net>
-#
-# $FreeBSD: ports/devel/libopendaap/Makefile,v 1.27 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@ahze.net>
+# $FreeBSD: devel/libopendaap/Makefile 325945 2013-09-02 06:45:47Z bapt $
 
 PORTNAME=	libopendaap
 PORTVERSION=	0.4.0
@@ -16,7 +12,7 @@ COMMENT=	C lib used to connect to iTunes(R) music shares
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
