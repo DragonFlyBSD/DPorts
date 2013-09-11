@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/pkcs11-helper/Makefile 320662 2013-06-12 06:16:42Z miwi $
+# $FreeBSD: security/pkcs11-helper/Makefile 325745 2013-08-31 00:11:06Z bapt $
 
 PORTNAME=	pkcs11-helper
 PORTVERSION=	1.09
@@ -18,7 +18,7 @@ LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING.GPL
 USE_BZIP2=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
