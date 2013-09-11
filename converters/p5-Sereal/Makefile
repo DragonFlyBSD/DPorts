@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Sereal/Makefile 319139 2013-05-26 22:19:56Z kuriyama $
+# $FreeBSD: converters/p5-Sereal/Makefile 326872 2013-09-10 07:55:33Z az $
 
 PORTNAME=	Sereal
 PORTVERSION=	0.360
@@ -15,7 +15,8 @@ RUN_DEPENDS=	\
 	p5-Sereal-Encoder>=0.36:${PORTSDIR}/converters/p5-Sereal-Encoder
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sereal.3
 
