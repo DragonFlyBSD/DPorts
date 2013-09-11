@@ -2,7 +2,7 @@
 # Date created:	   10 Oct 2008
 # Whom:		   Denis Pokataev <catone@cpan.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Cache-Memcached-Fast/Makefile,v 1.6 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Cache-Memcached-Fast/Makefile 326161 2013-09-03 15:28:40Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-Cache-Memcached-Fast
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Cache-Memcached-Fast>=0:${PORTSDIR}/databases/p5-Cache-Memcach
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::Cache::Memcached::Fast.3
 
