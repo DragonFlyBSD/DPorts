@@ -1,5 +1,5 @@
 # Created by: dterry@digifonica.com
-# $FreeBSD: ports/net/sip_scenario/Makefile,v 1.5 2013/01/27 13:04:03 svnexp Exp $
+# $FreeBSD: net/sip_scenario/Makefile 326522 2013-09-06 16:11:30Z az $
 
 PORTNAME=	sip_scenario
 PORTVERSION=	1.2.7
@@ -13,7 +13,8 @@ COMMENT=	SIP call flow creator (HTML format)
 LICENSE=	AL2
 
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 WRKSRC=		${WRKDIR}
 
