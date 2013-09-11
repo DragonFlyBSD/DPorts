@@ -2,7 +2,7 @@
 # Date created:		11 Januari 2011
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libproxy-perl/Makefile,v 1.2 2012/11/17 06:00:05 svnexp Exp $
+# $FreeBSD: net/libproxy-perl/Makefile 326468 2013-09-06 07:00:15Z az $
 #    $MCom: ports/net/libproxy-perl/Makefile,v 1.1 2011/01/12 13:10:53 kwm Exp $
 
 PORTREVISION=	0
@@ -17,7 +17,7 @@ LIB_DEPENDS=	proxy.1:${PORTSDIR}/net/libproxy
 MASTERDIR=	${.CURDIR}/../libproxy
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
-USE_PERL5=	yes
+USES=		perl5
 
 LIBPROXY_SLAVE=	perl
 
