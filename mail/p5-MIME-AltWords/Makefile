@@ -2,7 +2,7 @@
 # Date created:		Jun 06 2011
 # Whom:			Dmitry Liakh <dliakh@ukr.net>
 #
-# $FreeBSD: ports/mail/p5-MIME-AltWords/Makefile,v 1.2 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-MIME-AltWords/Makefile 326249 2013-09-04 06:06:59Z az $
 #
 
 PORTNAME=	MIME-AltWords
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	dliakh@ukr.net
 COMMENT=	Perl module for encoding and decoding MIME words
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MIME::AltWords.3 \
 		MIME::AltWords0.3
