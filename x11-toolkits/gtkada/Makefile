@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkada/Makefile 323381 2013-07-21 13:02:08Z marino $
+# $FreeBSD: x11-toolkits/gtkada/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	gtkada
 PORTVERSION=	2.24.4.0
@@ -15,9 +15,9 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_GNOME=	gtk20
-USES=		ada gmake
+USES=		ada gmake perl5 pkgconfig
 
 DESTINY=	${WRKDIR}/destino
 MAKE_ENV+=	DESTDIR=${DESTINY} \
