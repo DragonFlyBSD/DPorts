@@ -2,7 +2,7 @@
 # Date created:                19 January 2010
 # Whom:                        Konstantin Menshikov <kostjnspb@yandex.ru>
 #
-# $FreeBSD: ports/sysutils/p5-Sys-Load/Makefile,v 1.2 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Sys-Load/Makefile 326572 2013-09-07 06:13:27Z az $
 #
 
 PORTNAME=	Sys-Load
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kostjnspb@yandex.ru
 COMMENT=	Getting the current system load and uptime
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sys::Load.3
 
