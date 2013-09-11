@@ -2,7 +2,7 @@
 # Date created:		01 Nov 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Plack-Middleware-Status/Makefile,v 1.3 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-Status/Makefile 326042 2013-09-02 17:29:36Z az $
 #
 
 PORTNAME=	Plack-Middleware-Status
@@ -19,7 +19,8 @@ RUN_DEPENDS=	\
 	p5-Plack>0:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Status.3
 
