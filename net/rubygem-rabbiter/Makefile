@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net/rubygem-rabbiter/Makefile 323590 2013-07-24 11:22:09Z tota $
+# $FreeBSD: net/rubygem-rabbiter/Makefile 325640 2013-08-29 23:02:09Z tota $
 
 PORTNAME=	rabbiter
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
