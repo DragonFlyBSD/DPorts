@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmpc-alarm
-# Date created:		September 30 2008
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: audio/gmpc-alarm/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: audio/gmpc-alarm/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	gmpc-alarm
 PORTVERSION=	11.8.16
@@ -19,8 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gmpc.pc:${PORTSDIR}/audio/gmpc
 RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack pkgconfig glib20 gtk20 intltool
-USES=		gettext
+USE_GNOME=	glib20 gtk20 intltool
+USES=		gmake gettext pathfix pkgconfig
 
 .include <bsd.port.mk>
