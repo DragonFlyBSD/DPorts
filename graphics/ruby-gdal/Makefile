@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/ruby-gdal/Makefile 325110 2013-08-21 12:03:51Z sunpoet $
+# $FreeBSD: graphics/ruby-gdal/Makefile 326668 2013-09-07 17:29:15Z sunpoet $
 
 PORTNAME=	gdal
-PORTVERSION=	1.10.0
+PORTVERSION=	1.10.1
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://download.osgeo.org/gdal/ \
 		ftp://ftp.remotesensing.org/pub/gdal/ \
@@ -15,7 +15,7 @@ COMMENT=	Ruby binding for GDAL
 LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/swig2.0:${PORTSDIR}/devel/swig20
-LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
+LIB_DEPENDS=	libgdal.so:${PORTSDIR}/graphics/gdal
 
 LIBTOOLFILES=	# empty
 MAKE_ARGS=	USER_DEFS=-fPIC
