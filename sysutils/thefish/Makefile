@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: sysutils/thefish/Makefile 322210 2013-07-02 22:59:11Z rene $
+# $FreeBSD: sysutils/thefish/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	thefish
 PORTVERSION=	0.6.6
@@ -11,6 +11,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gtk+/ncurses rc.conf editor/management tool
 
+USES=		pkgconfig
 WANT_GNOME=	yes
 
 #OPTIONS_SINGLE=		X11
