@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-svg/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas_generic_loaders-svg/Makefile 326105 2013-09-02 22:11:23Z bapt $
 
 PORTNAME=	svg
 PORTVERSION=	1.7.8
@@ -14,6 +14,7 @@ COMMENT=	Additional loader for Evas (svg)
 
 LICENSE=	GPLv2
 
+USES=		pkgconfig
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
