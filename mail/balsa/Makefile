@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <gljohns@bellsouth.net>
-# $FreeBSD: mail/balsa/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/balsa/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #   $MCom: ports-stable/mail/balsa/Makefile,v 1.3 2007/12/02 19:18:50 marcus Exp $
 
 PORTNAME=	balsa
@@ -19,13 +19,11 @@ LIB_DEPENDS=	aspell:${PORTSDIR}/textproc/aspell \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
 		canberra-gtk:${PORTSDIR}/audio/libcanberra
 
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-USE_PERL5=	yes
 USE_OPENSSL=	yes
-USES=		pathfix gettext iconv
+USES=		pathfix gettext iconv perl5 pkgconfig gmake
 USE_GNOME=	gnomeprefix intlhack libgnomeui gtkhtml3 \
 		libgnomeprintui
 USE_AUTOTOOLS=	libltdl
@@ -35,7 +33,7 @@ CONFIGURE_ARGS=	--enable-threads \
 		--with-ssl \
 		--without-nm \
 		--with-canberra
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -liconv ${PTHREAD_LIBS}"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${ICONV_LIB} ${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 
 MAN1=		balsa.1
