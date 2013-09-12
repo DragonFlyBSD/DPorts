@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gai-leds
-# Date created:				2007-06-12
-# Whom:					Douglas Thrift <douglas@douglasthrift.net>
-#
-# $FreeBSD: ports/sysutils/gai-leds/Makefile,v 1.13 2012/11/17 06:01:32 svnexp Exp $
-#
+# Created by: Douglas Thrift <douglas@douglasthrift.net>
+# $FreeBSD: sysutils/gai-leds/Makefile 326504 2013-09-06 14:23:20Z bapt $
 
 PORTNAME=	gai-leds
 PORTVERSION=	0.6
@@ -19,6 +15,7 @@ LIB_DEPENDS=	gai:${PORTSDIR}/x11-toolkits/gai
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix
 
