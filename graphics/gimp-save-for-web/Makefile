@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/gimp-save-for-web/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/gimp-save-for-web/Makefile 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	gimp-save-for-web
 PORTVERSION=	0.29.3
@@ -14,10 +14,9 @@ LIB_DEPENDS=	gimp-2.0:${PORTSDIR}/graphics/gimp-app
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomehack intltool
 
 post-patch:
