@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: emulators/nonpareil/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: emulators/nonpareil/Makefile 327021 2013-09-12 00:48:38Z marino $
 
 PORTNAME=	nonpareil
 PORTVERSION=	0.79
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USES=		bison
+USES=		bison pkgconfig
 USE_GNOME=	gtk20 libxml2
 USE_SDL=	sdl
 USE_SCONS=	yes
