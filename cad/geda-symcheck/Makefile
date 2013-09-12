@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geda
-# Date created:			4 April 2001
-# Whom:				bruno schwander <bruno@tinkerbox.org>
-#
-# $FreeBSD: ports/cad/geda-symcheck/Makefile,v 1.30 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: bruno schwander <bruno@tinkerbox.org>
+# $FreeBSD: cad/geda-symcheck/Makefile 326111 2013-09-02 22:50:21Z bapt $
 
 PORTNAME=	symcheck
 PORTVERSION=	1.4.3
@@ -25,6 +21,7 @@ DOCSDIR=	${PREFIX}/share/doc/geda
 DATADIR=	${PREFIX}/share/geda
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	gtk20
 CONFIGURE_ARGS=	--with-docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
