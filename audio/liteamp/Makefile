@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: audio/liteamp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/liteamp/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	liteamp
 PORTVERSION=	0.2.4.2
@@ -18,9 +18,8 @@ LIB_DEPENDS=	id3tag.0:${PORTSDIR}/audio/libid3tag \
 		mad.2:${PORTSDIR}/audio/libmad \
 		vorbisfile.6:${PORTSDIR}/audio/libvorbis
 
-USES=        pathfix gettext
+USES=		gmake pathfix gettext pkgconfig
 USE_GNOME=	libgnomeui
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	LDFLAGS="${LDFLAGS}"
 
