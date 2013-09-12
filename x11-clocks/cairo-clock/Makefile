@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-clocks/cairo-clock/Makefile 317470 2013-05-06 06:41:15Z bapt $
+# $FreeBSD: x11-clocks/cairo-clock/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	cairo-clock
 PORTVERSION=	0.3.4
@@ -11,8 +11,7 @@ MAINTAINER=	daichi@FreeBSD.org
 COMMENT=	MacSlow's Cairo-Clock
 
 USE_GNOME=	gtk20 intlhack libglade2 librsvg2
-USE_GMAKE=	yes
-USES=		pathfix iconv
+USES=		pathfix iconv gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAN1=		cairo-clock.1
