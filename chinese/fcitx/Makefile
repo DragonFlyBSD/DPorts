@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/fcitx/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: chinese/fcitx/Makefile 326181 2013-09-03 17:12:06Z antoine $
 
 PORTNAME=	fcitx
 PORTVERSION=	4.2.6.1
@@ -33,7 +33,7 @@ USE_XZ=		yes
 USE_GNOME=	pango intltool libxml2 introspection
 USE_XORG=	x11 xext xkbfile
 USE_LDCONFIG=	yes
-USES=		cmake gettext pathfix
+USES=		cmake gettext pathfix pkgconfig
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	GTK2 GTK3 QT4 OPENCC TPUNC
