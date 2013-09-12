@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: databases/php5-pdo_cassandra/Makefile 318115 2013-05-13 15:47:47Z miwi $
+# $FreeBSD: databases/php5-pdo_cassandra/Makefile 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	pdo_cassandra
 PORTVERSION=	0.2.1
@@ -21,6 +21,7 @@ GITHUB_USER=	mkoppanen
 FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/${GITHUB_USER}-php-${PORTNAME}-${GITREVISION}
 
+USES=		pkgconfig
 USE_PHP_BUILD=	yes
 USE_PHP=	pdo
 USE_PHPEXT=	yes
