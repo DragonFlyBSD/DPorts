@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ja-uim-tomoe-gtk
-# Date created:        9 Apr 2007
-# Whom:                Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: japanese/uim-tomoe-gtk/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: japanese/uim-tomoe-gtk/Makefile 326373 2013-09-05 09:15:49Z bapt $
 
 PORTNAME=	uim-tomoe-gtk
 PORTVERSION=	0.6.0
@@ -19,8 +15,7 @@ LIB_DEPENDS=	tomoe.1:${PORTSDIR}/japanese/tomoe \
 		uim.8:${PORTSDIR}/textproc/uim
 
 USE_GNOME=	lthack gtk20
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/uim-tomoe-gtk \
