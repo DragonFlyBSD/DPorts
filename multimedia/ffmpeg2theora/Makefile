@@ -1,8 +1,5 @@
-# New ports collection makefile for:	ffmpeg2theora
-# Date created:				Sat 19 Oct 2008
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: multimedia/ffmpeg2theora/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: multimedia/ffmpeg2theora/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	ffmpeg2theora
 PORTVERSION=	0.29
@@ -19,7 +16,7 @@ LIB_DEPENDS=	avcodec:${PORTSDIR}/multimedia/ffmpeg \
 		theora:${PORTSDIR}/multimedia/libtheora
 
 USE_BZIP2=	yes
-USES=		iconv
+USES=		iconv pkgconfig
 USE_SCONS=	yes
 SCONS_BUILDENV=	CC="${CC}" CCFLAGS="${CFLAGS}" \
 		APPEND_CCFLAGS="${CPPFLAGS}" APPEND_LINKFLAGS="${LDFLAGS}"
