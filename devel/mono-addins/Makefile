@@ -1,4 +1,4 @@
-# $FreeBSD: devel/mono-addins/Makefile 318653 2013-05-21 07:52:14Z romain $
+# $FreeBSD: devel/mono-addins/Makefile 325946 2013-09-02 06:54:15Z bapt $
 
 PORTNAME=	mono-addins
 PORTVERSION=	0.6.2
@@ -16,8 +16,8 @@ RUN_DEPENDS+=	${LIB_PC_DEPENDS}
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		gmake pathfix pkgconfig
+WANT_GNOME=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	GTK2
