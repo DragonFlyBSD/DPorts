@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-TreeDumper-Renderer-GTK/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: devel/p5-Data-TreeDumper-Renderer-GTK/Makefile 326839 2013-09-09 18:34:59Z az $
 
 PORTNAME=	Data-TreeDumper-Renderer-GTK
 PORTVERSION=	0.02
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Data-TreeDumper>=0:${PORTSDIR}/devel/p5-Data-TreeDumper \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::TreeDumper::Renderer::GTK.3
 
