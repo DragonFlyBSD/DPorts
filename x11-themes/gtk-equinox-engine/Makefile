@@ -1,5 +1,5 @@
 # Created by: Deni Shaposhnikov <dsh@bamus.cz>
-# $FreeBSD: x11-themes/gtk-equinox-engine/Makefile 314462 2013-03-17 16:45:03Z kwm $
+# $FreeBSD: x11-themes/gtk-equinox-engine/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	equinox
 PORTVERSION=	1.50
@@ -18,6 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-t
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2 \
 		${LOCALBASE}/share/icons/Faenza/index.theme:${PORTSDIR}/x11-themes/gnome-icons-faenza
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/equinox-${PORTVERSION}
