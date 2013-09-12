@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-gconf/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-gconf/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	gconf
 PORTVERSION=	0.12.1.1
@@ -10,6 +10,7 @@ COMMENT=	Binding to the GNOME configuration database system
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_CABAL=	glib>=0.12 gtk2hs-buildtools
 USE_GNOME=	gconf2
 
