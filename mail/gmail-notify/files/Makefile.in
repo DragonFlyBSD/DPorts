@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/gmail-notify/files/Makefile.in,v 1.2 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: mail/gmail-notify/files/Makefile.in 300896 2012-07-14 13:54:48Z beat $
 # Makefile to build trayicon.so
 
 CFLAGS = `pkg-config --cflags gtk+-2.0 pygtk-2.0` -I@PYTHON_INCLUDEDIR@ -I. -Wall -I${LOCALBASE}/share/pygtk/2.0 -I${LOCALBASE}/libdata/pkgconfig -DEGG_COMPILATION -fPIC
