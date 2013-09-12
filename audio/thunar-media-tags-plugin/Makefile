@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: audio/thunar-media-tags-plugin/Makefile 317898 2013-05-11 17:50:05Z olivierd $
+# $FreeBSD: audio/thunar-media-tags-plugin/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	thunar-media-tags-plugin
 PORTVERSION=	0.2.1
@@ -13,9 +13,8 @@ COMMENT=	Media Tags Plugin
 
 LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib
 
-USES=		pkgconfig gettext
+USES=		gmake pkgconfig gettext
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libexo thunar
