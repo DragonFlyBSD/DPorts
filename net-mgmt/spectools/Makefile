@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <henrik@brixandersen.dk>
-# $FreeBSD: net-mgmt/spectools/Makefile 317197 2013-05-03 11:50:39Z bdrewery $
+# $FreeBSD: net-mgmt/spectools/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	spectools
 PORTVERSION=	201004.r1
@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 PORTDOCS=	README
 
