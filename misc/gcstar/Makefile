@@ -1,5 +1,5 @@
 # Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-# $FreeBSD: ports/misc/gcstar/Makefile,v 1.16 2012/11/17 05:59:37 svnexp Exp $
+# $FreeBSD: misc/gcstar/Makefile 325959 2013-09-02 09:36:29Z az $
 
 PORTNAME=	gcstar
 PORTVERSION=	1.7.0
@@ -35,7 +35,8 @@ MAN1=		gcstar.1
 MANCOMPRESSED=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_GNOME=	desktopfileutils
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 NO_BUILD=	yes
 
