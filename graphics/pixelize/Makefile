@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	pixelize
-# Date created:			Oct 20, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/pixelize/Makefile,v 1.19 2012/11/17 05:58:19 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/pixelize/Makefile 327021 2013-09-12 00:48:38Z marino $
 
 PORTNAME=	pixelize
 PORTVERSION=	1.0.0
@@ -19,6 +14,8 @@ MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Use many scaled down images to try to duplicate another image
 
 LICENSE=	GPLv2
+
+USES=		pkgconfig
 USE_GNOME=	gtk20 imlib
 PLIST_FILES=	bin/make_db bin/pixelize
 
