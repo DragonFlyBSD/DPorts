@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	cuttlefish
-# Date created:				20 March 2006
-# Whom:					Matthew Luckie <mjl@luckie.org.nz>
-#
-# $FreeBSD: ports/graphics/cuttlefish/Makefile,v 1.8 2012/11/17 05:58:02 svnexp Exp $
-#
+# Created by: Matthew Luckie <mjl@luckie.org.nz>
+# $FreeBSD: graphics/cuttlefish/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	cuttlefish
 PORTVERSION=	1.3
@@ -18,7 +14,8 @@ RUN_DEPENDS+=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
 		convert:${PORTSDIR}/graphics/ImageMagick \
 		gifsicle:${PORTSDIR}/graphics/gifsicle
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 IMAGES=		caida_logo.gif caida_logo_gray.gif \
