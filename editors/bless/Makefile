@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/bless/Makefile,v 1.33 2012/12/31 17:09:08 svnexp Exp $
+# $FreeBSD: editors/bless/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	bless
 PORTVERSION=	0.6.0
@@ -10,8 +10,8 @@ MASTER_SITES=	http://download.gna.org/bless/
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A high quality, full featured hex editor
 
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gnomeprefix gnomedocutils gtksharp20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 .if !defined(NOPORTDOCS)
