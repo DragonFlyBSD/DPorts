@@ -1,5 +1,5 @@
 # Created by: Rene Ladan
-# $FreeBSD: x11-toolkits/ocaml-lablgtk2/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: x11-toolkits/ocaml-lablgtk2/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	lablgtk2
 PORTVERSION=	2.16.0
@@ -14,7 +14,7 @@ COMMENT=	An Objective Caml interface to GTK+ 2.x
 
 LICENSE=	LGPL21
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 USE_OCAML=	yes
 USE_OCAML_FINDLIB=	yes
