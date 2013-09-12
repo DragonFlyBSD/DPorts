@@ -1,8 +1,8 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/mitmproxy/Makefile 325711 2013-08-30 16:49:43Z mva $
+# $FreeBSD: www/mitmproxy/Makefile 326905 2013-09-10 14:38:14Z wg $
 
 PORTNAME=	mitmproxy
-PORTVERSION=	0.9.1
+PORTVERSION=	0.9.2
 CATEGORIES=	www python
 MASTER_SITES=	http://mitmproxy.org/download/
 
