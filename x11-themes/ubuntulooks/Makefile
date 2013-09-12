@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ubuntulooks
-# Date created:		2006-04-09
-# Whom:			Phillip Neumann <pneumann@gmail.com>
-#
-# $FreeBSD: ports/x11-themes/ubuntulooks/Makefile,v 1.13 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Phillip Neumann <pneumann@gmail.com>
+# $FreeBSD: x11-themes/ubuntulooks/Makefile 326111 2013-09-02 22:50:21Z bapt $
 
 PORTNAME=	ubuntulooks
 PORTVERSION=	0.9.12
@@ -19,6 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-t
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
