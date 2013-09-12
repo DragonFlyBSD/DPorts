@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/ocre/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/ocre/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	ocre
 PORTVERSION=	0.042
