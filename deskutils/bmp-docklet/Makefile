@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/bmp-docklet/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: deskutils/bmp-docklet/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	bmp-docklet
 PORTVERSION=	1.3
@@ -18,7 +18,7 @@ RUN_DEPENDS=	beep-media-player:${PORTSDIR}/multimedia/beep-media-player
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
