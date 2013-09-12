@@ -1,5 +1,5 @@
 # Created by: John Prather
-# $FreeBSD: net-im/pidgin-sipe/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net-im/pidgin-sipe/Makefile 326504 2013-09-06 14:23:20Z bapt $
 
 PORTNAME=	pidgin-sipe
 PORTVERSION=	1.13.1
@@ -16,7 +16,7 @@ RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	${PREFIX}/lib/pidgin
 PORTDOCS=	AUTHORS ChangeLog COPYING HACKING INSTALL NEWS README TODO VERSION
