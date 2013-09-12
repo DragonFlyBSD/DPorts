@@ -1,0 +1,2 @@
+USES+= iconv
+LDFLAGS+= ${ICONV_LIB}
