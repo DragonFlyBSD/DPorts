@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/solfege/Makefile 322521 2013-07-08 17:16:47Z bapt $
+# $FreeBSD: audio/solfege/Makefile 326129 2013-09-03 08:49:46Z bapt $
 #   $MCom: ports/audio/solfege/Makefile,v 1.7 2007/09/09 23:47:50 mezz Exp $
 
 PORTNAME=	solfege
@@ -14,11 +14,10 @@ COMMENT=	Free eartraining software
 BUILD_DEPENDS=	${STYLESHEET}:${PORTSDIR}/textproc/docbook-xsl \
 		txt2man:${PORTSDIR}/textproc/txt2man
 
-USE_GNOME=	gnomehack pygtk2
+USE_GNOME=	pygtk2
 WANT_GNOME=	yes
 USE_PYTHON=	yes
-USES=		gettext display
-USE_GMAKE=	yes
+USES=		gettext gmake display pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_XML2PO=""
 CONFIGURE_ARGS=	--disable-oss-sound \
