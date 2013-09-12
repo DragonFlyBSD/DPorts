@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: security/pam_krb5-rh/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: security/pam_krb5-rh/Makefile 326960 2013-09-11 10:57:19Z zi $
 
 PORTNAME=	pam_krb5
-DISTVERSION=	2.4.6
+DISTVERSION=	2.4.7
 CATEGORIES=	security
 MASTER_SITES=	https://fedorahosted.org/released/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
