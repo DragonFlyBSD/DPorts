@@ -2,7 +2,7 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: databases/libgnomedb/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: databases/libgnomedb/Makefile 326422 2013-09-05 17:37:22Z antoine $
 #   $MCom: ports/databases/libgnomedb/Makefile,v 1.32 2008/02/05 13:09:24 kwm Exp $
 #
 
@@ -21,10 +21,9 @@ USE_BZIP2=	yes
 .if !defined(REFERENCE_PORT)
 
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libgda3 gtksourceview \
 		intlhack referencehack
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
