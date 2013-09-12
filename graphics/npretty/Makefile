@@ -1,5 +1,5 @@
 # Created by: Peter Ankerstal <peter@pean.org>
-# $FreeBSD: ports/graphics/npretty/Makefile,v 1.12 2012/12/13 18:44:02 svnexp Exp $
+# $FreeBSD: graphics/npretty/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	npretty
 PORTVERSION=	0.9.3
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Image-ExifTool>=0:${PORTSDIR}/graphics/p5-Image-ExifTool \
 LIB_DEPENDS+=	Magick.*:${PORTSDIR}/graphics/ImageMagick
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 post-patch:
 	@ ${REINPLACE_CMD} -e "s|/etc/|${PREFIX}/etc/|" ${WRKSRC}/npretty.pl
