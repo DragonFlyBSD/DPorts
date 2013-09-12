@@ -2,7 +2,7 @@
 # Date created:		2009-10-19
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2-PathButtonBar/Makefile,v 1.7 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk2-PathButtonBar/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Gtk2-PathButtonBar
@@ -18,7 +18,8 @@ COMMENT=	Creates a bar for path manipulation
 
 RUN_DEPENDS=	p5-Gtk2>=1.060:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Gtk2::PathButtonBar.3
 
