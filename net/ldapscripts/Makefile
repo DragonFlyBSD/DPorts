@@ -1,8 +1,8 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net/ldapscripts/Makefile 323515 2013-07-23 06:44:45Z martymac $
+# $FreeBSD: net/ldapscripts/Makefile 326902 2013-09-10 13:59:30Z martymac $
 
 PORTNAME=	ldapscripts
-PORTVERSION=	2.0.4
+PORTVERSION=	2.0.5
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/ldapscripts/
