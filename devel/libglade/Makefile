@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libglade
-# Date created:				18 August 1999
-# Whom:					Ade Lovett <ade@lovett.com>
-#
-# $FreeBSD: ports/devel/libglade/Makefile,v 1.53 2012/11/17 05:55:54 svnexp Exp $
-#
+# Created by: Ade Lovett <ade@lovett.com>
+# $FreeBSD: devel/libglade/Makefile 326626 2013-09-07 10:57:48Z az $
 
 PORTNAME=	libglade
 PORTVERSION=	0.17
@@ -14,7 +10,7 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME glade library
 
-USE_PERL5=	yes
+USES=		perl5
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomehier gnomedb
 USE_LDCONFIG=	yes

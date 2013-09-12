@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libglade/files/patch-glade::glade-gnomedb.c,v 1.4 2012/11/17 05:55:54 svnexp Exp $
+$FreeBSD: devel/libglade/files/patch-glade::glade-gnomedb.c 300896 2012-07-14 13:54:48Z beat $
 
 --- glade/glade-gnomedb.c.orig	Tue Feb 13 03:37:54 2001
 +++ glade/glade-gnomedb.c	Tue Aug 14 11:07:27 2001
