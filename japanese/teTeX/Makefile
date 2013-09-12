@@ -1,8 +1,8 @@
-# $FreeBSD: japanese/teTeX/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: japanese/teTeX/Makefile 326442 2013-09-05 20:09:25Z hrs $
 
 PORTNAME=	teTeX
 PORTVERSION=	1.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	japanese print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,14 +11,10 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A meta port for teTeX suite for Japanese (including pTeX and JTeX)
 
-RUN_DEPENDS=	jtex:${PORTSDIR}/japanese/texfamily \
-		${JTEXVF}:${PORTSDIR}/japanese/texfamily-vfn2a
-
 USE_TEX=	base texmf dvipsk ptex
 .if !defined(WITHOUT_X11)
 USE_TEX+=	xdvik
 .endif
-JTEXVF=		${LOCALBASE}/share/texmf-local/fonts/vf/n2a/dmjsy5.vf
 TEXMFLOCAL_LSR=	${LOCALBASE}/share/texmf-local/ls-R
 TEXMFDISTDIR=	share/texmf-dist
 
