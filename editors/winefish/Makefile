@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/winefish/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: editors/winefish/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	winefish
 DISTVERSION=	1.3.3
@@ -24,7 +24,7 @@ MANCOMPRESSED=	no
 
 CONFIGURE_ARGS+=	--with-freedesktop_org-menu=${GNOME_LOCALSTATEDIR}/applications --with-icon-path=${GNOME_LOCALSTATEDIR}/pixmaps
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	libgnomeui desktopfileutils gnomehier
 USE_TEX=	latex
 
