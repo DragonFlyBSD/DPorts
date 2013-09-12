@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/empathy/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: net-im/empathy/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #    $MCom: ports/net-im/empathy/Makefile,v 1.90 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	empathy
@@ -30,9 +30,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	empathy-3.[0-9]*
 
-USE_GMAKE=	yes
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver gnomehack gnomeprefix pygtk2 ltverhack
 USE_GSTREAMER=	yes
