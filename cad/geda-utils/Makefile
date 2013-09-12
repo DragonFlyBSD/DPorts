@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geda
-# Date created:			4 April 2001
-# Whom:				bruno schwander <bruno@tinkerbox.org>
-#
-# $FreeBSD: cad/geda-utils/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: bruno schwander <bruno@tinkerbox.org>
+# $FreeBSD: cad/geda-utils/Makefile 326111 2013-09-02 22:50:21Z bapt $
 
 PORTNAME=	utils
 PORTVERSION=	1.4.3
@@ -24,7 +20,7 @@ LIB_DEPENDS=	geda.33:${PORTSDIR}/cad/libgeda
 DOCSDIR=	${PREFIX}/share/doc/geda
 DATADIR=	${PREFIX}/share/geda
 
-USES=		perl5
+USES=		perl5 pkgconfig
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
