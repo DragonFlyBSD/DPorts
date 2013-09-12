@@ -1,10 +1,6 @@
-# New ports collection makefile for:    libgnomeuimm
-# Date created:         22 May 2003
-# Whom:                 Alexander Nedotsukov <bland@mail.ru>
-#
-# $FreeBSD: ports/x11-toolkits/libgnomeuimm26/Makefile,v 1.41 2012/11/17 06:03:36 svnexp Exp $
+# Created by: Alexander Nedotsukov <bland@mail.ru>
+# $FreeBSD: x11-toolkits/libgnomeuimm26/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $MCom: ports/x11-toolkits/libgnomeuimm26/Makefile,v 1.20 2009/09/22 21:23:48 kwm Exp $
-#
 
 PORTNAME=	libgnomeuimm
 PORTVERSION=	2.28.0
@@ -28,7 +24,7 @@ LATEST_LINK=	libgnomeuimm26
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_XORG=	x11
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack libgnomeui
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
