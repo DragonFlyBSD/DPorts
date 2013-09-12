@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: print/qpdfview/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: print/qpdfview/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	qpdfview
 PORTVERSION=	0.4.3
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	poppler-qt4:${PORTSDIR}/graphics/poppler-qt4 \
 		cups:${PORTSDIR}/print/cups-client
 
+USES=		pkgconfig
 USE_QT4=	corelib dbus gui imageformats linguist_build moc_build \
 		qmake_build rcc_build sql sql-sqlite3_run svg xml
 QMAKEFLAGS+=	QMAKE_CFLAGS_RELEASE="" QMAKE_CXXFLAGS_RELEASE=""
