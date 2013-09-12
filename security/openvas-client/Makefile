@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openvas-client
-# Date created:		2008-04-27
-# Whom:			Tomoyuki Sakurai <cherry@trombik.org>
-#
-# $FreeBSD: security/openvas-client/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Tomoyuki Sakurai <cherry@trombik.org>
+# $FreeBSD: security/openvas-client/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	openvas-client
 PORTVERSION=	2.0.4
@@ -17,7 +13,7 @@ COMMENT=	A GUI client for OpenVAS
 MAN1=		OpenVAS-Client.1 openvasclient-mkcert.1
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 
 .include "${.CURDIR}/../../security/openvas-libraries/Makefile.common"
