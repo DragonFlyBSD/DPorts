@@ -1,5 +1,5 @@
 # Created by: kipz <somicide@gmail.com>
-# $FreeBSD: devel/gitg/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/gitg/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	gitg
 PORTVERSION=	0.0.8
@@ -17,9 +17,8 @@ RUN_DEPENDS=	git>=1.7.0.2:${PORTSDIR}/devel/git
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gconf2 gtk20 gtksourceview2 gnomehack
-USES=		gettext
+USES=		gettext gmake pkgconfig
 
 INSTALLS_ICONS=	yes
 GCONF_SCHEMAS=	gitg.schemas
