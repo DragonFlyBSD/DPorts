@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-poppler
-# Date created:		2008-04-14
-# Whom:			Romain Tartiere <romain@blogreen.org>
-#
-# $FreeBSD: ports/graphics/py-poppler/Makefile,v 1.18 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Romain Tartiere <romain@blogreen.org>
+# $FreeBSD: graphics/py-poppler/Makefile 325928 2013-09-01 22:50:06Z bapt $
 
 PORTNAME=	poppler
 PORTVERSION=	0.12.1
@@ -21,7 +17,7 @@ LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib
 
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	pkgconfig atk pygtk2
+USES=		gmake pkgconfig
+USE_GNOME=	atk pygtk2
 
 .include <bsd.port.mk>
