@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-goocanvas
-# Date created:		2006-09-20
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/py-goocanvas/Makefile,v 1.14 2012/11/17 05:58:20 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: graphics/py-goocanvas/Makefile 326129 2013-09-03 08:49:46Z bapt $
 #    $MCom: ports/graphics/py-goocanvas/Makefile,v 1.6 2008/09/22 09:14:41 kwm Exp $
 
 PORTNAME=	goocanvas
@@ -27,7 +24,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomehack pygtk2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(PYGOBJECT_PYGDOCS)/style.css||; \
