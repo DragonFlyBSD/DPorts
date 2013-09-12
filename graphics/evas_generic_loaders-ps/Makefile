@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-ps/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas_generic_loaders-ps/Makefile 326025 2013-09-02 16:21:38Z bapt $
 
 PORTNAME=	ps
 PORTVERSION=	1.7.8
@@ -19,6 +19,7 @@ LIB_DEPENDS=	spectre:${PORTSDIR}/print/libspectre
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_EFL=	eina
 USE_LDCONFIG=	yes
 
