@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/gmencoder/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: multimedia/gmencoder/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	gmencoder
 PORTVERSION=	0.1.0
@@ -17,9 +17,8 @@ RUN_DEPENDS=	mencoder:${PORTSDIR}/multimedia/mencoder
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix libgnomeui
-USES=		pathfix
+USES=		pathfix gmake pkgconfig
 
 MAN1=		gmencoder.1
 
