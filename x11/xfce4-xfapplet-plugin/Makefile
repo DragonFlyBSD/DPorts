@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xfapplet plugin for xfce4
-# Date created:				29 April 2006
-# Whom:					Martin Wilke (miwi@FreeBSD.org)
-#
-# $FreeBSD: x11/xfce4-xfapplet-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: x11/xfce4-xfapplet-plugin/Makefile 325735 2013-08-30 23:38:43Z bapt $
 
 PORTNAME=	xfce4-xfapplet-plugin
 PORTVERSION=	0.1.0
@@ -20,9 +16,8 @@ LIB_DEPENDS=	panelappletmm-2.6:${PORTSDIR}/x11-toolkits/libpanelappletmm
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gettext
-USE_GMAKE=	yes
-USE_GNOME=	gtk20 intltool intlhack orbit2 pkgconfig
+USES=		gettext gmake pkgconfig
+USE_GNOME=	gtk20 intltool intlhack orbit2
 USE_XFCE=	configenv libgui libutil panel
 
 .include <bsd.port.mk>
