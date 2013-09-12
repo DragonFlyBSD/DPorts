@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: ports/astro/roadnav/Makefile,v 1.12 2012/11/17 05:54:26 svnexp Exp $
+# $FreeBSD: astro/roadnav/Makefile 325648 2013-08-30 01:15:20Z bapt $
 
 PORTNAME=	roadnav
 PORTVERSION=	0.19
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libroadnav.a:${PORTSDIR}/astro/libroadnav
 
 USE_WX=		2.6+
 WX_COMPS=	wx contrib
-USE_GMAKE=	yes
+USES=		gmake
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-wx-prefix=${LOCALBASE} --with-wx-config=${WX_CONFIG}
