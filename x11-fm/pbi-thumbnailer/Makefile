@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pbi-thumbnailer
-# Date created:				08 June 2008
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fm/pbi-thumbnailer/Makefile,v 1.8 2012/11/17 06:03:26 svnexp Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: x11-fm/pbi-thumbnailer/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	pbi-thumbnailer
 PORTVERSION=	0.9.2
@@ -14,6 +10,7 @@ MASTER_SITES=	http://www.marcuscom.com/pbi-thumbnailer/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generates icon thumbnails for PC-BSD installer files
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20 gconf2
 MAKE_ENV=	GCONF_CONFIG_SOURCE=${GCONF_CONFIG_SOURCE}
