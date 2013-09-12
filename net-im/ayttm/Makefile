@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/ayttm/Makefile 319896 2013-06-04 19:04:59Z bapt $
+# $FreeBSD: net-im/ayttm/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	ayttm
 PORTVERSION=	0.5.0.111
@@ -16,7 +16,7 @@ LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile \
 		gpgme.19:${PORTSDIR}/security/gpgme \
 		pspell.16:${PORTSDIR}/textproc/aspell
 
-OPTIONS_DEFINE=	ARTS ESOUND AIM_TOC ICQ_TOC
+OPTIONS_DEFINE=	ESOUND AIM_TOC ICQ_TOC
 AIM_TOC_DESC=	Include aim-toc service
 ICQ_TOC_DESC=	Include icq-toc service
 
@@ -24,9 +24,10 @@ USE_BZIP2=	yes
 USE_XORG=	xpm xscrnsaver
 USE_GNOME=	gtk20
 USE_OPENSSL=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libltdl libtool
-CONFIGURE_ARGS=	--enable-oscar --disable-workwizu --enable-smtp --enable-lj
+CONFIGURE_ARGS=	--enable-oscar --disable-workwizu --enable-smtp --enable-lj \
+		--disable-arts
 
 MAN1=		ayttm.1
 
@@ -34,12 +35,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MARTS}
-LIB_DEPENDS+=	artsc:${PORTSDIR}/audio/arts
-.else
-CONFIGURE_ARGS+=	--disable-arts
-.endif
 
 .if ${PORT_OPTIONS:MESOUND}
 USE_GNOME+=	esound
