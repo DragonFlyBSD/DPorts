@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/eog-plugins/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: graphics/eog-plugins/Makefile 326491 2013-09-06 12:12:00Z bapt $
 #   $MCom: ports/graphics/eog-plugins/Makefile,v 1.14 2010/09/04 18:09:30 kwm Exp $
 
 PORTNAME=	eog-plugins
@@ -17,11 +17,10 @@ LIB_DEPENDS=	gdata.7:${PORTSDIR}/devel/libgdata
 RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GL=		gl
 USE_GNOME=	gnomeprefix intlhack gtk20
 WANT_GNOME=	yes
-USES=		gettext pathfix
+USES=		gettext pathfix gmake pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
