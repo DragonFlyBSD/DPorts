@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-toolkits/libsexymm/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: x11-toolkits/libsexymm/Makefile 326113 2013-09-02 22:58:16Z bapt $
 
 PORTNAME=	libsexymm
 PORTVERSION=	0.1.9
@@ -16,7 +16,7 @@ LIB_DEPENDS=	gtkmm-2:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		sexy:${PORTSDIR}/x11-toolkits/libsexy
 
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
+USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
