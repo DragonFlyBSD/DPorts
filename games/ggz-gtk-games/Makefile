@@ -1,5 +1,5 @@
 # Created by: yinjieh
-# $FreeBSD: games/ggz-gtk-games/Makefile 323493 2013-07-22 18:57:44Z marino $
+# $FreeBSD: games/ggz-gtk-games/Makefile 326109 2013-09-02 22:31:37Z bapt $
 
 PORTNAME=	ggz-gtk-games
 PORTVERSION=	${GGZ_VERSION}
@@ -11,6 +11,7 @@ COMMENT=	The GGZ Gaming Zone - GTK+ Games
 
 RUN_DEPENDS=	${LOCALBASE}/bin/ggz-gtk:${PORTSDIR}/games/ggz-gtk-client
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-debug
