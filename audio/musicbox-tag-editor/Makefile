@@ -1,6 +1,7 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/musicbox-tag-editor/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: audio/musicbox-tag-editor/Makefile 326122 2013-09-03 06:36:41Z bapt $
 #   $MCom: ports/audio/musicbox-tag-editor/Makefile,v 1.5 2007/09/10 05:13:24 mezz Exp $
+
 PORTNAME=	musicbox-tag-editor
 PORTVERSION=	0.2.3
 PORTREVISION=	15
@@ -13,7 +14,7 @@ COMMENT=	Simple GTK+ audio tag editor
 
 LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib
 
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gnomeprefix libglade2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
