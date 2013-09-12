@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/gnotime/Makefile 323471 2013-07-22 15:32:41Z miwi $
+# $FreeBSD: deskutils/gnotime/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gnotime
 PORTVERSION=	2.4.1
@@ -16,7 +16,7 @@ LICENSE=	GPLv2 # (or later)
 
 LIB_DEPENDS=	guile:${PORTSDIR}/lang/guile
 
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_XORG=	xscrnsaver
 USE_GNOME=	gnomeprefix gtkhtml3 intlhack libgnomeui
 USE_AUTOTOOLS=	libtool libltdl
