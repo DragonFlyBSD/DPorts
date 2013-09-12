@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gphpedit
-# Date created:		2004-11-21
-# Whom:			Roman Bogorodskiy <bogorodskiy@inbox.ru>
-#
-# $FreeBSD: ports/editors/gphpedit/Makefile,v 1.22 2012/11/17 05:57:14 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
+# $FreeBSD: editors/gphpedit/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gphpedit
 PORTVERSION=	0.9.80
@@ -16,7 +12,7 @@ MASTER_SITES=	http://www.gphpedit.org/download/store/ \
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	PHP, HTML, and CSS development environment for GNOME 2.x
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libgtkhtml
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
