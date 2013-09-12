@@ -1,4 +1,4 @@
-# $FreeBSD: finance/gnucash/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: finance/gnucash/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $MCom: ports/finance/gnucash/Makefile,v 1.26 2008/12/31 03:25:18 mezz Exp $
 
 PORTNAME=	gnucash
@@ -30,9 +30,7 @@ LOCALE_TAX_DESC=	Enable localized tax categories
 WEBKIT_DESC=	Use webkit instead of gtkhtml for the HTML engine
 
 USE_BZIP2=	yes
-USES=		gettext
-USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		gettext gmake pkgconfig perl5
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix libglade2 libgnomeui
 GNU_CONFIGURE=	yes
