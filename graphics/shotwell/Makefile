@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org> et al.
-# $FreeBSD: graphics/shotwell/Makefile 320757 2013-06-13 11:25:14Z wg $
+# $FreeBSD: graphics/shotwell/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	shotwell
 PORTVERSION=	0.14.1
@@ -26,10 +26,9 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		rest:${PORTSDIR}/devel/librest
 
 USE_XZ=		yes
-USES=		shebangfix gettext desktop-file-utils
+USES=		shebangfix gettext desktop-file-utils gmake pkgconfig
 USE_GNOME=	gnomehier gconf2 gtk20 librsvg2
 USE_SQLITE=	3
-USE_GMAKE=	yes
 USE_GSTREAMER1=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --disable-icon-update
