@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hippo-canvas
-# Date created:		2008-05-27
-# Whom:			Ashish Shukla <wahjava@gmail.com>
-#
-# $FreeBSD: ports/x11-toolkits/hippo-canvas/Makefile,v 1.12 2012/11/17 06:03:35 svnexp Exp $
-#
+# Created by: Ashish Shukla <wahjava@gmail.com>
+# $FreeBSD: x11-toolkits/hippo-canvas/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	hippo-canvas
 PORTVERSION=	0.3.0
@@ -22,7 +18,7 @@ LIB_DEPENDS=	croco-0.6.3:${PORTSDIR}/textproc/libcroco \
 		rsvg-2.2:${PORTSDIR}/graphics/librsvg2
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gtk20 glib20 pygtk2 pango
 USE_PYTHON=	2.5+
