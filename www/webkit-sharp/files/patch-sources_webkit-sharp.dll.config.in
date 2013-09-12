@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/webkit-sharp/files/patch-sources_webkit-sharp.dll.config.in,v 1.2 2012/11/17 06:03:10 svnexp Exp $
+$FreeBSD: www/webkit-sharp/files/patch-sources_webkit-sharp.dll.config.in 300897 2012-07-14 14:29:18Z beat $
 
 --- sources/webkit-sharp.dll.config.in.orig
 +++ sources/webkit-sharp.dll.config.in
