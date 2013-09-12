@@ -1,11 +1,13 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-# $FreeBSD: sysutils/rsyslog6-relp/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/rsyslog6-relp/Makefile 326992 2013-09-11 16:49:09Z wg $
+
+PORTREVISION=	1
 
 COMMENT=	RELP input/output module for rsyslog
 MASTERDIR=	${.CURDIR}/../rsyslog6
 
 MNAME=	relp
-LIB_DEPENDS=	relp.0:${PORTSDIR}/devel/librelp
+LIB_DEPENDS=	librelp.so:${PORTSDIR}/devel/librelp
 
 USES=		pkgconfig
 
