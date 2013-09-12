@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: misc/gnome-osd/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: misc/gnome-osd/Makefile 326151 2013-09-03 14:08:55Z bapt $
 
 PORTNAME=	gnome-osd
 PORTVERSION=	0.20.0
@@ -11,10 +11,9 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	On-Screen-Display infrastructure using Pango text rendering
 
-USES=        pathfix
+USES=        pathfix gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack pygnome2
 USE_PYTHON=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 GCONF_SCHEMAS=	gnome-osd.schemas
