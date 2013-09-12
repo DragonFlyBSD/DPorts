@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mypaint/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/mypaint/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	mypaint
 PORTVERSION=	1.1.0
@@ -24,7 +24,7 @@ USE_GNOME=	glib20 pygtk2
 USE_PYTHON=	yes
 USE_SCONS=	yes
 SCONS_ARGS=	prefix="${PREFIX}"
-USES=		gettext
+USES=		gettext pkgconfig
 INSTALLS_ICONS=	yes
 
 SUB_FILES=	pkg-install
