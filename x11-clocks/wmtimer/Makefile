@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net> et al
-# $FreeBSD: x11-clocks/wmtimer/Makefile 324074 2013-07-31 22:52:54Z bapt $
+# $FreeBSD: x11-clocks/wmtimer/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	wmtimer
 PORTVERSION=	2.92
@@ -15,7 +15,7 @@ COMMENT=	Multi-Function timer dockapp for WindowMaker
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmtimer
 PORTDOCS=	README
 PLIST_FILES=	bin/wmtimer
-USES=		gmake
+USES=		gmake pkgconfig
 USE_CSTD=	gnu89
 USE_XORG=	x11 xau xcomposite xcursor xdamage xdmcp xext xfixes xi \
 		xinerama xpm xrandr xrender
