@@ -1,5 +1,5 @@
 # Created by: Jesse <jessefrgsmith@yahoo.ca>
-# $FreeBSD: multimedia/imagination/Makefile 317038 2013-05-01 18:17:36Z jgh $
+# $FreeBSD: multimedia/imagination/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	imagination
 PORTVERSION=	3.0
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/gtk-2.0:${PORTSDIR}/x11-toolkits/gtk20 \
 RUN_DEPENDS=	${LOCALBASE}/bin/ffmpeg:${PORTSDIR}/multimedia/ffmpeg
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 INSTALLS_ICONS=	yes
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
