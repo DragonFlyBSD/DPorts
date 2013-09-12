@@ -1,9 +1,5 @@
-# New ports collection makefile for:   yalias
-# Date created:        8 September 2003
-# Whom:                Tim Bishop <tim@bishnet.net>
-#
-# $FreeBSD: ports/x11/yalias/Makefile,v 1.20 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: Tim Bishop <tim@bishnet.net>
+# $FreeBSD: x11/yalias/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	yalias
 PORTVERSION=	0.7
@@ -16,6 +12,7 @@ MASTER_SITES=	http://offog.org/files/ \
 MAINTAINER=	tdb@FreeBSD.org
 COMMENT=	An enhanced execution box with regex pattern matching
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 
 ALL_TARGET=	yalias
