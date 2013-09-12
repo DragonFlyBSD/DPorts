@@ -1,4 +1,4 @@
-# $FreeBSD: security/pidgin-otr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/pidgin-otr/Makefile 326555 2013-09-06 22:12:01Z jgh $
 
 PORTNAME=	otr
 PORTVERSION=	4.0.0
@@ -13,15 +13,13 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Allows deniable private conversations using Pidgin
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/pidgin:${PORTSDIR}/net-im/pidgin \
-		pkgconf>0:${PORTSDIR}/devel/pkgconf
-LIB_DEPENDS=	otr:${PORTSDIR}/security/libotr \
-		gcrypt:${PORTSDIR}/security/libgcrypt \
-		purple:${PORTSDIR}/net-im/libpurple
-
+BUILD_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
+LIB_DEPENDS=	libotr.so:${PORTSDIR}/security/libotr \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libpurple.so:${PORTSDIR}/net-im/libpurple
 
 USE_GNOME=	intltool
-USES=		gettext gmake
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
