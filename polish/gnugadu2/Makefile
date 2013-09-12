@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: polish/gnugadu2/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: polish/gnugadu2/Makefile 325970 2013-09-02 10:31:45Z bapt $
 
 PORTNAME=	gnugadu2
 PORTVERSION=	2.3.0
@@ -17,8 +17,7 @@ LIB_DEPENDS=	gadu.3:${PORTSDIR}/polish/libgadu \
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USES=		gettext perl5
-USE_GMAKE=	yes
+USES=		gettext gmake perl5 pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xaw ice xscrnsaver
@@ -37,6 +36,7 @@ CONFIGURE_ARGS=	--disable-esdtest \
 		--with-oss \
 		--with-sms \
 		--with-update \
+		--without-arts \
 		--without-gnutls \
 		--without-perl \
 		--without-remote
@@ -44,7 +44,7 @@ CONFIGURE_ARGS=	--disable-esdtest \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS_DEFINE=	ARTS AUTODETECT DBUS DOCKAPP DOCKLET ESOUND \
+OPTIONS_DEFINE=	AUTODETECT DBUS DOCKAPP DOCKLET ESOUND \
 		GTKSPELL JABBER TLEN XOSD
 OPTIONS_DEFAULT=DOCKLET
 
@@ -60,10 +60,6 @@ XOSD_DESC=	Enable On-Screen-Display messages
 .include <bsd.port.pre.mk> # can't change this untile HAVE_GNOME has been fixed
 
 .if ${PORT_OPTIONS:MAUTODETECT}
-#detect arts
-.if exists(${LOCALBASE}/lib/libartsc.so) && !${PORT_OPTIONS:MARTS}
-PORT_OPTIONS+=	ARTS
-.endif
 #detect dbus - only works with old versions
 .if exists(${LOCALBASE}/lib/libdbus-1.so)  && !${PORT_OPTIONS:MDBUS}
 PORT_OPTIONS+=	DBUS
@@ -137,15 +133,6 @@ PLIST_SUB+=	ESOUND:=""
 .else
 CONFIGURE_ARGS+=	--without-esd
 PLIST_SUB+=	ESOUND:="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MARTS}
-LIB_DEPENDS+=	artsc.0:${PORTSDIR}/audio/arts
-CONFIGURE_ARGS+=	--with-arts
-PLIST_SUB+=	ARTS:=""
-.else
-CONFIGURE_ARGS+=	--without-arts
-PLIST_SUB+=	ARTS:="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MXOSD}
