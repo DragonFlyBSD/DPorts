@@ -1,10 +1,10 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: net/py-netaddr/Makefile 325084 2013-08-21 03:03:05Z wen $
+# $FreeBSD: net/py-netaddr/Makefile 326898 2013-09-10 12:34:27Z wen $
 
 PORTNAME=	netaddr
 PORTVERSION=	0.7.10
 CATEGORIES=	net python
-MASTER_SITES=	https://github.com/drkjam/${PORTNAME}/downloads/
+MASTER_SITES=	https://github.com/downloads/drkjam/netaddr/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
