@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gdesklets/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/gdesklets/Makefile 326172 2013-09-03 16:56:25Z bapt $
 
 PORTNAME=	gdesklets
 PORTVERSION=	0.36.2
@@ -21,8 +21,7 @@ WRKSRC=		${WRKDIR}/gDesklets-${PORTVERSION}
 
 USE_GNOME=	gnomehack gnomeprefix intlhack librsvg2 pygnomeextras
 USE_PYTHON=	yes
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
