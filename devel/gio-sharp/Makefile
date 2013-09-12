@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: devel/gio-sharp/Makefile 324693 2013-08-14 10:54:04Z marino $
+# $FreeBSD: devel/gio-sharp/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	gio-sharp
 PORTVERSION=	2.22.3
@@ -12,7 +12,7 @@ COMMENT=	GIO bindings not available in gtk-sharp
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		gmake
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gtksharp20
 
 MAKE_JOBS_UNSAFE=yes
