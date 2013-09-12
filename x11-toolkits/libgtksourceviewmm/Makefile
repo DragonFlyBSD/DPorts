@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libgtksourceviewmm
-# Date created:		2006-11-11
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: x11-toolkits/libgtksourceviewmm/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: x11-toolkits/libgtksourceviewmm/Makefile 326107 2013-09-02 22:23:53Z bapt $
 #    $MCom: ports/x11-toolkits/libgtksourceviewmm/Makefile,v 1.4 2008/08/08 21:59:44 kwm Exp $
 
 PORTNAME=	libgtksourceviewmm
@@ -16,6 +13,7 @@ COMMENT=	C++ binding of GtkSourceView
 
 LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtksourceview2 gnomeprefix gnomehack
