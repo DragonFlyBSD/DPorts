@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/gtk-sharp-beans/Makefile,v 1.2 2012/11/17 06:03:35 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtk-sharp-beans/Makefile 326132 2013-09-03 09:59:01Z bapt $
 
 PORTNAME=	gtk-sharp-beans
 PORTVERSION=	2.14.1
@@ -12,8 +12,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gio-sharp-2.0.pc:${PORTSDIR}/devel
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	yes
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 
 .include <bsd.port.pre.mk>
 
