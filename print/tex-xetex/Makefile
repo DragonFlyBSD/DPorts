@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-xetex/Makefile 318464 2013-05-18 22:54:31Z hrs $
+# $FreeBSD: print/tex-xetex/Makefile 326258 2013-09-04 07:55:49Z bsam $
 
 PORTNAME=	xetex
 PORTVERSION=	0.9999
@@ -26,6 +26,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_TEX=	texlive kpathsea web2c texmf formats fmtutil
+USES=		pkgconfig
 EXTRACT_AFTER_ARGS=	${EXTRACT_FILES:S,^,${DISTNAME}/,}
 EXTRACT_FILES= \
 	build-aux \
