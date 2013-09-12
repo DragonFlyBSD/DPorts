@@ -1,30 +1,33 @@
 # Created by: hendrik@scholz.net
-# $FreeBSD: x11-wm/fluxconf/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-wm/fluxconf/Makefile 326989 2013-09-11 15:53:29Z bsam $
 
 PORTNAME=	fluxconf
 PORTVERSION=	0.9.9
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://devaux.fabien.free.fr/flux/
 
 MAINTAINER=	alfredoj69@gmail.com
-COMMENT=	A configuration program for the fluxbox window manager
+COMMENT=	Fluxbox window manager configuration program
 
 USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
+CFLAGS+=	-Wno-error
 
 PORTDOCS=	fluxconf.png fluxkeys.png fluxmenu.png index.html
 PLIST_FILES=	bin/fluxbare bin/fluxconf bin/fluxkeys bin/fluxmenu \
 		share/locale/fi/LC_MESSAGES/fluxconf.mo \
 		share/locale/fr/LC_MESSAGES/fluxconf.mo
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-.for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/docs/${file} ${DOCSDIR}
-.endfor
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/docs/,} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
