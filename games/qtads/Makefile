@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiwang27@gmail.com>
-# $FreeBSD: games/qtads/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/qtads/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	qtads
 PORTVERSION=	2.1.6
@@ -11,8 +11,8 @@ COMMENT=	Cross-platform multimedia interpreter for TADS games
 
 LICENSE=	GPLv2
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_QT4=	gui moc_build network qmake_build rcc_build uic_build
 USE_SDL=	sdl mixer sound
 
