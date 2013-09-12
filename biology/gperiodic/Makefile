@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: biology/gperiodic/Makefile 321310 2013-06-19 19:05:47Z bsam $
+# $FreeBSD: biology/gperiodic/Makefile 326710 2013-09-08 08:29:00Z antoine $
 #    $MCom: ports/biology/gperiodic/Makefile,v 1.1 2006/09/29 23:42:13 ahze Exp $
 
 PORTNAME=	gperiodic
@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Displays a periodic table of the elements
 
 USE_GNOME=	gtk20
-USES=		gettext
+USES=		gettext pkgconfig
 
 LANGS=		da fr gl it pl ru sv tr
 
