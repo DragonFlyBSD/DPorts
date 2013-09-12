@@ -1,5 +1,5 @@
 # Created by: Roland Jesse <roland.jesse@gmx.net>
-# $FreeBSD: ports/graphics/pho/Makefile,v 1.25 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/pho/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	pho
 DISTVERSION=	0.9.8
@@ -11,7 +11,7 @@ COMMENT=	Lightweight image viewer
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 MAKE_ARGS=	INSTALLPREFIX="${PREFIX}"
 ALL_TARGET=	${PORTNAME}
