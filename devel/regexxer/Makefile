@@ -1,5 +1,5 @@
 # Created by: Rui Lopes <rui@ruilopes.com>
-# $FreeBSD: devel/regexxer/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: devel/regexxer/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=		regexxer
 PORTVERSION=		0.9
@@ -15,8 +15,7 @@ LIB_DEPENDS=		gconfmm-2.6:${PORTSDIR}/devel/gconfmm26 \
 			pcre.3:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
-USES=        pathfix gettext
+USES=			pathfix gettext gmake pkgconfig
 USE_GNOME=		gnomeprefix intltool intlhack
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
