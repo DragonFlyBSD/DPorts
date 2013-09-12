@@ -1,5 +1,5 @@
 # Created by: markand
-# $FreeBSD: archivers/squeeze/Makefile 317696 2013-05-08 16:08:36Z olivierd $
+# $FreeBSD: archivers/squeeze/Makefile 325646 2013-08-30 01:02:57Z bapt $
 
 PORTNAME=	squeeze
 PORTVERSION=	0.2.3
@@ -19,12 +19,11 @@ LIB_DEPENDS=	thunar-vfs-1:${PORTSDIR}/x11-fm/thunar-vfs
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
-USES=		pkgconfig gettext pathfix desktop-file-utils
+USES=		pkgconfig gmake gettext pathfix desktop-file-utils
 USE_XFCE=	configenv libutil thunar
 USE_XORG=	x11
 USE_GNOME=	gtk20 glib20 intltool intlhack
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOB_SAFE=	yes
 
