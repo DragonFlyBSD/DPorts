@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtkchtheme
-# Date created:				18 June 2004
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/gtkchtheme/Makefile,v 1.14 2012/11/17 06:03:16 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: x11/gtkchtheme/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	gtkchtheme
 PORTVERSION=	0.3.1
@@ -16,7 +12,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	GTK2 theme changer
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gnomeprefix gtk20
 
 PLIST_FILES=	bin/gtk-chtheme
