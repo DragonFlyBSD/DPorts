@@ -2,7 +2,7 @@
 # Date created:                27 February 2009
 # Whom:                        Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/finance/openerp-server/Makefile,v 1.24 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/openerp-server/Makefile 326223 2013-09-03 20:00:55Z tabthorpe $
 #
 
 PORTNAME=	openerp-server
@@ -12,7 +12,7 @@ PORTEPOCH=	1
 CATEGORIES=	finance python
 MASTER_SITES=	http://www.openerp.com/download/stable/source/
 
-MAINTAINER=	laurent@ospowa.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source application ERP & CRM in Python using Postgresql
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
