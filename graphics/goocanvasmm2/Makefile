@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/goocanvasmm2/Makefile 320087 2013-06-06 12:52:22Z kwm $
+# $FreeBSD: graphics/goocanvasmm2/Makefile 326070 2013-09-02 19:55:48Z bapt $
 #   $MCom: ports/trunk/graphics/goocanvasmm2/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	goocanvasmm
@@ -13,7 +13,7 @@ COMMENT=	C++ bindings for the goocanvas widget for GTK
 
 LIB_DEPENDS=	goocanvas-2.0:${PORTSDIR}/graphics/goocanvas2
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	ltverhack gtkmm30
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
