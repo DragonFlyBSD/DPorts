@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: science/chemical-mime-data/Makefile 322589 2013-07-09 22:06:15Z kwm $
+# $FreeBSD: science/chemical-mime-data/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	chemical-mime-data
 PORTVERSION=	0.1.94
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_BZIP2=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gnomemimedata intltool libxslt:build
 GNU_CONFIGURE=	yes
