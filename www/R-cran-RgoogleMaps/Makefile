@@ -1,14 +1,16 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/R-cran-RgoogleMaps/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: www/R-cran-RgoogleMaps/Makefile 326561 2013-09-06 23:17:34Z tota $
 
 PORTNAME=	RgoogleMaps
-PORTVERSION=	1.2.0.3
-PORTREVISION=	1
+PORTVERSION=	1.2.0.4
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Overlays on Google map tiles in R
+
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	R-cran-png>0:${PORTSDIR}/graphics/R-cran-png
 
