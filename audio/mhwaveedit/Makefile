@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mhwaveedit/Makefile 323767 2013-07-26 23:46:21Z bapt $
+# $FreeBSD: audio/mhwaveedit/Makefile 325657 2013-08-30 02:06:44Z bapt $
 #
 
 PORTNAME=	mhwaveedit
@@ -12,6 +12,7 @@ COMMENT=	A graphical program for editing sound files
 
 LICENSE=	GPLv2
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gtk20
 WANT_GNOME=	yes
@@ -21,7 +22,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-optimization --without-alsalib \
 		--without-arts
-
 
 PLIST_FILES=	bin/mhwaveedit \
 		share/locale/de/LC_MESSAGES/mhwaveedit.mo \
