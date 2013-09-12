@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: audio/xfce4-mixer/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: audio/xfce4-mixer/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	xfce4-mixer
 PORTVERSION=	4.10.0
@@ -17,9 +17,8 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS= yes
-USES=		pkgconfig gettext pathfix
+USES=		gmake pkgconfig gettext pathfix
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel xfconf
 USE_GSTREAMER=	good
