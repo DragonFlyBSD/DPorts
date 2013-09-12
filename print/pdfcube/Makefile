@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: print/pdfcube/Makefile 314849 2013-03-21 15:44:33Z lwhsu $
+# $FreeBSD: print/pdfcube/Makefile 326095 2013-09-02 21:32:24Z bapt $
 
 PORTNAME=	pdfcube
 PORTVERSION=	0.0.5
@@ -13,6 +13,7 @@ LIB_DEPENDS=	gtkglext:${PORTSDIR}/x11-toolkits/gtkglext \
 		poppler-glib:${PORTSDIR}/graphics/poppler-glib \
 		boost_program_options:${PORTSDIR}/devel/boost-libs
 
+USES=		pkgconfig
 USE_GL=		glut
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${LOCALBASE}/lib --includedir=${LOCALBASE}/include
