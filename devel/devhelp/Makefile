@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: devel/devhelp/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/devhelp/Makefile 326438 2013-09-05 19:29:18Z antoine $
 #   $MCom: ports/devel/devhelp/Makefile,v 1.45 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	devhelp
@@ -20,8 +20,7 @@ CONFLICTS=	devhelp-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_XORG=	x11
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomeprefix libgnomeui libwnck
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
