@@ -1,5 +1,5 @@
 # Created by: Dave McKay <dave@mu.org>
-# $FreeBSD: security/seahorse/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/seahorse/Makefile 326122 2013-09-03 06:36:41Z bapt $
 #   $MCom: ports/security/seahorse/Makefile,v 1.109 2012/09/01 23:02:12 mezz Exp $
 
 PORTNAME=	seahorse
@@ -25,8 +25,7 @@ CONFLICTS=	libcryptui-3.[0-9]* seahorse-3.[0-9]*
 USE_XORG=	sm
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	intlhack gnomeprefix gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
