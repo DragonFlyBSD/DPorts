@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/m17n-im-config/Makefile 317494 2013-05-06 09:26:23Z bapt $
+# $FreeBSD: textproc/m17n-im-config/Makefile 325739 2013-08-30 23:52:24Z bapt $
 
 PORTNAME=	m17n-im-config
 PORTVERSION=	0.9.0
@@ -16,8 +16,8 @@ LIB_DEPENDS=	m17n.4:${PORTSDIR}/devel/m17n-lib
 MAKE_JOBS_UNSAFE=	yes
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gtk20 intltool intlhack pkgconfig glib20
-USES=		gettext
+USE_GNOME=	gtk20 intltool intlhack glib20
+USES=		gettext pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
