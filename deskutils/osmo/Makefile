@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951#comcast.net>
-# $FreeBSD: deskutils/osmo/Makefile 323696 2013-07-26 06:51:58Z bapt $
+# $FreeBSD: deskutils/osmo/Makefile 326132 2013-09-03 09:59:01Z bapt $
 
 PORTNAME=	osmo
 PORTVERSION=	0.2.10
@@ -18,7 +18,7 @@ LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
 		gtkhtml:${PORTSDIR}/www/libgtkhtml
 
 USE_GNOME=	gtk20
-USES=		gettext gmake
+USES=		gettext gmake pkgconfig
 INSTALLS_ICONS=	yes
 
 GNU_CONFIGURE=	yes
