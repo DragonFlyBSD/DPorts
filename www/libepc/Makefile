@@ -1,9 +1,5 @@
-# New ports collection makefile for:   libepc
-# Date created:			24 Mar 2008
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: www/libepc/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: www/libepc/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	libepc
 PORTVERSION=	0.3.11
@@ -19,8 +15,7 @@ LIB_DEPENDS=	uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		avahi-ui.0:${PORTSDIR}/net/avahi-gtk
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack gtk20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
