@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/tex-omegaware-old/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/tex-omegaware-old/Makefile 326361 2013-09-05 07:29:05Z az $
 
 PORTNAME=	tex-omegaware-old
 PORTVERSION=	2.0.2
@@ -21,7 +21,8 @@ DIST_SUBDIR=	teTeX
 WRKSRC=		${WRKDIR}/tetex-src-${PORTVERSION}/texk/web2c
 CONFIGURE_WRKSRC=	${WRKDIR}/tetex-src-${PORTVERSION}
 USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 
 TETEX_SRC=	tetex-src-${PORTVERSION}.tar.gz
 TETEX_TEXMF=	tetex-texmf-${PORTVERSION}.tar.gz
