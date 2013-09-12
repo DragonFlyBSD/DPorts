@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxmath/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/tuxmath/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	tuxmath
 PORTVERSION=	2.0.3
@@ -23,7 +23,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}_w_fonts-${PORTVERSION}
 
 USE_GNOME=	libxml2
 USE_SDL=	image mixer net pango sdl
-USES=		iconv gmake perl5
+USES=		iconv gmake perl5 pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	T4K_COMMON_CFLAGS="-I${T4K_WRKSRC}/src" \
 		T4K_COMMON_LIBS="${T4K_WRKSRC}/src/.libs/libt4k_common.a" \
@@ -31,7 +31,7 @@ CONFIGURE_ENV=	T4K_COMMON_CFLAGS="-I${T4K_WRKSRC}/src" \
 
 CPPFLAGS+=	$$(pkg-config --cflags SDL_Pango) -I${LOCALBASE}/include \
 		-DHAVE_ALPHASORT -DHAVE_SCANDIR -DHAVE_FSYNC -DICONV_CONST=""
-LDFLAGS+=	$$(pkg-config --libs SDL_Pango) -L${LOCALBASE}/lib -liconv -lpng15
+LDFLAGS+=	$$(pkg-config --libs SDL_Pango) -L${LOCALBASE}/lib ${ICONV_LIB} -lpng15
 
 T4K_NAME=	t4k_common
 T4K_VERSION=	0.1.1
