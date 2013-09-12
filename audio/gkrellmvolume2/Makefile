@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gkrellmvolume
-# Date Created:		Jun 22 2000
-# Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/gkrellmvolume2/Makefile,v 1.35 2012/11/17 05:54:32 svnexp Exp $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: audio/gkrellmvolume2/Makefile 326709 2013-09-08 08:27:08Z antoine $
 
 PORTNAME=	gkrellmvolume
 PORTVERSION=	2.1.13
@@ -29,7 +25,7 @@ PLIST_FILES=	libexec/gkrellm2/plugins/volume.so \
 		share/locale/pl/LC_MESSAGES/gkrellm-volume.mo \
 		share/locale/ru/LC_MESSAGES/gkrellm-volume.mo
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 MAKE_ENV+=	PLUGIN_DIR=${PREFIX}/libexec/gkrellm2/plugins \
 		LOCALEDIR=${PREFIX}/share/locale \
