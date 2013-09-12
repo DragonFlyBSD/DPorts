@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: emulators/uae/Makefile 324145 2013-08-02 06:36:43Z danfe $
+# $FreeBSD: emulators/uae/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	uae
 PORTVERSION=	0.8.29
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 CONFLICTS=	e-uae-[0-9]*
 
 USE_BZIP2=	yes
-USES=		gmake
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	autoconf
 CONFIGURE_ARGS=	--enable-sound
 USE_GNOME=	gtk20
