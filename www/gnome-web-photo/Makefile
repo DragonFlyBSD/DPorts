@@ -1,11 +1,6 @@
-# New ports collection makefile for:	gnome-web-photo
-# Date created:		2005-11-30
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: www/gnome-web-photo/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: www/gnome-web-photo/Makefile 326934 2013-09-10 21:31:33Z antoine $
 #   $MCom: ports/www/gnome-web-photo/Makefile,v 1.5 2007/08/07 03:27:32 mezz Exp $
-#
-#
 
 PORTNAME=	gnome-web-photo
 PORTVERSION=	0.10.3
@@ -23,8 +18,7 @@ LIB_DEPENDS=	webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
 
 USE_XZ=		yes
 USE_GNOME=	gconf2 gnomehack gnomeprefix
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules \
 		--with-gtk=2.0
