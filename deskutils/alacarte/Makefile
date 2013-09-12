@@ -1,10 +1,6 @@
-# New ports collection makefile for:	menueditor
-# Date created:				22 March 2005
-# Whom:					FreeBSD GNOME Team
-#
-# $FreeBSD: deskutils/alacarte/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: FreeBSD GNOME Team
+# $FreeBSD: deskutils/alacarte/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #    $MCom: ports/deskutils/alacarte/Makefile,v 1.25 2010/03/29 13:19:00 avl Exp $
-#
 
 PORTNAME=	alacarte
 PORTVERSION=	0.13.2
@@ -18,8 +14,7 @@ COMMENT=	An editor for the freedesktop.org menu specification
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix pygnomedesktop intlhack
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_PYTHON=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
