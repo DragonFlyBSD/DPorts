@@ -2,7 +2,7 @@
 # Date created:		2007-11-19
 # Whom:			Koji Yokota <yokota@res.otaru-uc.ac.jp>
 #
-# $FreeBSD: japanese/platex-japanese/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: japanese/platex-japanese/Makefile 325937 2013-09-02 05:41:50Z bsam $
 #
 
 PORTNAME=	japanese
@@ -18,10 +18,9 @@ DIST_SUBDIR=	latex
 MAINTAINER=	yokota@res.otaru-uc.ac.jp
 COMMENT=	pLaTeX package that literally provides Japanese option to babel
 
-BUILD_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
-
 USE_ZIP=	yes
 USE_TEX=	latex ptex
+USES=		iconv:build
 
 TEXMFDIR=	share/texmf
 STYDIR=		tex/generic/babel
@@ -33,7 +32,6 @@ SAMPLEFILE=	sample.tex
 PDFFILE=	sample.pdf
 TEXTFILE=	README
 ENCODING?=	EUC-JP
-ICONV=		${LOCALBASE}/bin/iconv
 MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 
 .SILENT::
@@ -49,7 +47,7 @@ post-configure:
 	   ${SED} -e 's/\(sample\.tex\)/j\1/g' ${INSFILE:S/$/.orig/} \
 	   > ${INSFILE} && \
 	   ${MV} ${DTXFILE} ${DTXFILE}.orig && \
-	   ${ICONV} -f ISO-2022-JP -t ${ENCODING} ${DTXFILE}.orig > ${DTXFILE} )
+	   ${ICONV_CMD} -f ISO-2022-JP -t ${ENCODING} ${DTXFILE}.orig > ${DTXFILE} )
 
 do-build:
 	( cd ${WRKSRC} && platex ${INSFILE} && \
