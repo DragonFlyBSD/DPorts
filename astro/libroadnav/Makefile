@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: ports/astro/libroadnav/Makefile,v 1.12 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/libroadnav/Makefile 325648 2013-08-30 01:15:20Z bapt $
 
 PORTNAME=	libroadnav
 PORTVERSION=	0.19
@@ -12,7 +12,7 @@ COMMENT=	Helper library for Roadnav (3D GPS mapping program)
 
 USE_WX=		2.6+
 WX_COMPS=	wx contrib
-USE_GMAKE=	yes
+USES=		gmake
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-wx-prefix=${LOCALBASE} --with-wx-config=${WX_CONFIG}
