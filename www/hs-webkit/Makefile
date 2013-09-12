@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-webkit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-webkit/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	webkit
 PORTVERSION=	0.12.4
@@ -10,6 +10,7 @@ COMMENT=	Binding to the Webkit library
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_CABAL=	cairo>=0.12 glib>=0.12 gtk>=0.12 mtl pango>=0.12
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/webkit-1.0.pc:${PORTSDIR}/www/webkit-gtk2
 
