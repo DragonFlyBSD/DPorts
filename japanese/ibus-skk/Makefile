@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ibus-skk
-# Date created:	4 January 2010
-# Whom:		Hiroto Kagotani <hiroto.kagotani@gmail.com>
-#
-# $FreeBSD: japanese/ibus-skk/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
+# $FreeBSD: japanese/ibus-skk/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	ibus-skk
 PORTVERSION=	1.4.1
@@ -19,9 +15,7 @@ LIB_DEPENDS=	skk:${PORTSDIR}/japanese/libskk \
 		ibus-1.0:${PORTSDIR}/textproc/ibus
 
 USE_PYTHON=	yes
-USES=		gettext
-
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 USE_GNOME=	intltool
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	DATADIRNAME=share
