@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: misc/gkrellmlaunch2/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/gkrellmlaunch2/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gkrellmlaunch
 PORTVERSION=	0.5
@@ -14,6 +14,7 @@ COMMENT=	Application launcher plugin for GKrellM2
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
+USES=		pkgconfig
 PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmlaunch.so
 ALL_TARGET=	${PORTNAME}.so
 
