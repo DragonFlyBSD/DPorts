@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: finance/grisbi/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: finance/grisbi/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	grisbi
 PORTVERSION=	0.8.9
@@ -15,8 +15,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	ofx.5:${PORTSDIR}/finance/libofx
 
 USE_BZIP2=	yes
-USES=		iconv
-USE_GMAKE=	yes
+USES=		gmake iconv pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 glib20 libxml2
 USE_OPENSSL=	yes
