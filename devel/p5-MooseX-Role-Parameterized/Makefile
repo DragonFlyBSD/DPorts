@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Role-Parameterized/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Role-Parameterized/Makefile 326917 2013-09-10 16:26:41Z sunpoet $
 
 PORTNAME=	MooseX-Role-Parameterized
-PORTVERSION=	1.00
+PORTVERSION=	1.01
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SARTAK
@@ -14,9 +14,9 @@ COMMENT=	Roles with composition parameters
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Moose>=2.0300:${PORTSDIR}/devel/p5-Moose
-RUN_DEPENDS=	p5-Moose>=2.0300:${PORTSDIR}/devel/p5-Moose
-
+BUILD_DEPENDS=	p5-Module-Runtime>=0:${PORTSDIR}/devel/p5-Module-Runtime \
+		p5-Moose>=2.0300:${PORTSDIR}/devel/p5-Moose
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USES=		perl5
