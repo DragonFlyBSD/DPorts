@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net/remmina/Makefile 324125 2013-08-01 20:45:53Z bapt $
+# $FreeBSD: net/remmina/Makefile 326124 2013-09-03 07:09:24Z bapt $
 
 PORTNAME=	remmina
 PORTVERSION=	1.0.0
@@ -11,8 +11,7 @@ COMMENT=	The GTK+ Remote Desktop Client
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/${PORTNAME}/COPYING
 
-USES=		cmake desktop-file-utils
-USE_GMAKE=	yes
+USES=		cmake desktop-file-utils gmake pkgconfig
 USE_GNOME=	atk gdkpixbuf2 glib20 gtk20 pango
 INSTALLS_ICONS=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} -Wl,-rpath -Wl,${LOCALBASE}/lib -lX11 \
@@ -44,6 +43,7 @@ CMAKE_ARGS+=	-DGTK_VERSION=2
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 PLIST_SUB+=	NLS=""
+LDFLAGS+=	-lintl
 .else
 PLIST_SUB+=	NLS="@comment "
 .endif
