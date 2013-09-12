@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.3.7
@@ -22,7 +22,7 @@ RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USES=		gmake
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	librsvg2
 USE_LDCONFIG=	yes
