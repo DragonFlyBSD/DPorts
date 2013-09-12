@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-Geo-GDAL/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: graphics/p5-Geo-GDAL/Makefile 326665 2013-09-07 17:29:04Z sunpoet $
 
 PORTNAME=	Geo-GDAL
-PORTVERSION=	1.10.0
+PORTVERSION=	1.10.1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://download.osgeo.org/gdal/ \
 		ftp://ftp.remotesensing.org/pub/gdal/ \
@@ -15,7 +15,7 @@ COMMENT=	Perl binding for GDAL
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
+LIB_DEPENDS=	libgdal.so:${PORTSDIR}/graphics/gdal
 
 USES=		perl5
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/perl
