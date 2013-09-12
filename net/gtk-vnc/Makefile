@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/gtk-vnc/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: net/gtk-vnc/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	gtk-vnc
 PORTVERSION=	0.3.10
@@ -18,8 +18,7 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 CONFLICTS=	gtk-vnc-0.4.[0-9]*
 
 USE_GNOME=	pygtk2 gnomehack
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
