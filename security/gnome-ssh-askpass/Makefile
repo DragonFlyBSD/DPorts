@@ -1,5 +1,5 @@
 # Created by: Mark Hannon <markhannon@optusnet.com.au>
-# $FreeBSD: security/gnome-ssh-askpass/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/gnome-ssh-askpass/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gnome-ssh-askpass
 PORTVERSION=	5.8p2
@@ -18,6 +18,7 @@ BUILD_WRKSRC=	${WRKSRC}/contrib
 ALL_TARGET=	gnome-ssh-askpass2
 
 PLIST_FILES=	bin/gnome-ssh-askpass2
+USES=		pkgconfig
 USE_GNOME=	gtk20
 
 .include <bsd.port.pre.mk>
