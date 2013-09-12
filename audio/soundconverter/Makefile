@@ -1,5 +1,5 @@
 # Created by: Jona Joachim <jaj@hcl-club.lu>
-# $FreeBSD: audio/soundconverter/Makefile 320523 2013-06-11 02:18:35Z miwi $
+# $FreeBSD: audio/soundconverter/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	soundconverter
 PORTVERSION=	1.5.4
@@ -14,8 +14,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gst-0.10/gst/__init__.py:${PORTSDIR}/multimedi
 
 LICENSE=	GPLv3
 
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	pygtk2 pygnome2
