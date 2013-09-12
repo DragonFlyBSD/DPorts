@@ -1,5 +1,5 @@
 # Created by: Chris Petrik (chris@officialunix.com)
-# $FreeBSD: ftp/bareftp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/bareftp/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	bareftp
 PORTVERSION=	0.3.10
@@ -16,9 +16,8 @@ CONFIGURE_ARGS=	--datarootdir="${PREFIX}/share" \
 		--includedir="${LOCALBASE}/include"
 
 INSTALLS_ICONS=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gtksharp20 gnomesharp20
-USE_GMAKE=	yes
 
 USE_LDCONFIG=	yes
 
