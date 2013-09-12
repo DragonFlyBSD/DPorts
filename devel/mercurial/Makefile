@@ -1,9 +1,8 @@
 # Created by: Andreas Kohn
-# $FreeBSD: devel/mercurial/Makefile 324454 2013-08-09 17:52:02Z olivierd $
+# $FreeBSD: devel/mercurial/Makefile 326982 2013-09-11 14:49:11Z olivierd $
 
 PORTNAME=	mercurial
-PORTVERSION=	2.7
-PORTREVISION=	1
+PORTVERSION=	2.7.1
 CATEGORIES=	devel python
 MASTER_SITES=	http://mercurial.selenic.com/release/
 
