@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: ports/sysutils/gtk-send-pr/Makefile,v 1.45 2013/01/23 15:05:38 svnexp Exp $
+# $FreeBSD: sysutils/gtk-send-pr/Makefile 326422 2013-09-05 17:37:22Z antoine $
 
 PORTNAME=	gtk-send-pr
 PORTVERSION=	0.4.9
@@ -13,6 +13,7 @@ COMMENT=	GTK2 send-pr tool
 
 LIB_DEPENDS=	esmtp.7:${PORTSDIR}/mail/libesmtp
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 
 MAN1=		gtk-send-pr.1
