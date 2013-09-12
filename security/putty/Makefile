@@ -1,4 +1,4 @@
-# $FreeBSD: security/putty/Makefile 324357 2013-08-07 16:11:17Z mandree $
+# $FreeBSD: security/putty/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	putty
 PORTVERSION=	0.63
@@ -12,7 +12,7 @@ MASTER_SITE_SUBDIR=	${PORTVERSION}
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Secure shell and telnet client
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 MAKEFILE=	Makefile.gtk
 
