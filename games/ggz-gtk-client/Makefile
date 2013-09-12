@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/ggz-gtk-client/Makefile 323493 2013-07-22 18:57:44Z marino $
+# $FreeBSD: games/ggz-gtk-client/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	ggz-gtk-client
 PORTVERSION=	${GGZ_VERSION}
@@ -14,6 +14,7 @@ USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-debug
 USE_GGZ=	client
+USES=		pkgconfig
 
 MAN6=	ggz-gtk.6
 
