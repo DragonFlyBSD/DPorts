@@ -1,8 +1,9 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/publican/Makefile 322554 2013-07-09 09:14:53Z bapt $
+# $FreeBSD: textproc/publican/Makefile 326940 2013-09-11 05:46:21Z az $
 
 PORTNAME=	publican
 PORTVERSION=	2.8
+PORTREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/publican/Publican-${PORTVERSION}.tar.gz/1ddcf8e93e96d0e49868f21df41b53a4/
 DISTNAME=	Publican-${PORTVERSION}
@@ -11,7 +12,8 @@ MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	Single source publishing tool based on DocBook XML.
 
 USE_JAVA=	yes
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAKE_JOBS_UNSAFE=	yes
 
