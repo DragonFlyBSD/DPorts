@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: science/v_sim/Makefile 320899 2013-06-14 12:00:22Z miwi $
+# $FreeBSD: science/v_sim/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	v_sim
 PORTVERSION=	3.6.1.1
@@ -17,11 +17,11 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_FORTRAN=	yes
 USE_GNOME=	gtk20
 USE_GL=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	${CFLAGS} -I${LOCALBASE}/include
