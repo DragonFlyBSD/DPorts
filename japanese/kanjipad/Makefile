@@ -1,5 +1,5 @@
 # Created by: Christophe Juniet <cjuniet@entreview.com>
-# $FreeBSD: japanese/kanjipad/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/kanjipad/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	kanjipad
 PORTVERSION=	2.0.0
@@ -10,9 +10,8 @@ MASTER_SITES=	http://fishsoup.net/software/kanjipad/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Japanese Handwriting recognition
 
-USES=		perl5
+USES=		perl5 gmake pkgconfig
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 MAKE_ARGS=	OPTIMIZE="${CFLAGS}" PREFIX="${PREFIX}" \
 		GTKINC="`pkg-config --cflags gtk+-2.0`"
 
