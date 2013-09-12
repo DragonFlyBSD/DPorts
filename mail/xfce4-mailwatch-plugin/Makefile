@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: mail/xfce4-mailwatch-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: mail/xfce4-mailwatch-plugin/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	xfce4-mailwatch-plugin
 PORTVERSION=	1.1.0
@@ -16,9 +16,8 @@ LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix
+USES=		gettext pathfix gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libgui libutil panel
