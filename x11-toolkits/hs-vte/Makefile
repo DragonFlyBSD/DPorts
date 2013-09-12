@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-vte/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11-toolkits/hs-vte/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	vte
 PORTVERSION=	0.12.1
@@ -10,6 +10,7 @@ COMMENT=	Binding to the VTE library
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_CABAL=	glib>=0.12 gtk>=0.12 mtl pango>=0.12
 USE_GNOME=	vte
 
