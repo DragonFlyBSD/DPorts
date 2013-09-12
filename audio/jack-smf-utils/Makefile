@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jack-smf-utils
-# Date created:		2008-05-15
-# Whom:			Edward Tomasz Napierala <trasz@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/jack-smf-utils/Makefile,v 1.9 2012/11/17 05:54:35 svnexp Exp $
-#
+# Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
+# $FreeBSD: audio/jack-smf-utils/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	jack-smf-utils
 PORTVERSION=	1.0
@@ -17,6 +13,7 @@ COMMENT=	Standard MIDI File file player and recorder for JACK MIDI
 LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 		lash.2:${PORTSDIR}/audio/lash
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 
