@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/gps/Makefile 323382 2013-07-21 13:03:48Z marino $
+# $FreeBSD: devel/gps/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gps
 PORTVERSION=	5.2.1
@@ -20,11 +20,10 @@ LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp
 LATEST_LINK=		gps-ide
 
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
 USE_BZIP2=		yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=		build
 ALL_TARGET=		default
-USES=			ada
+USES=			ada gmake perl5 pkgconfig
 WRKSRC=			${WRKDIR}/gps-release-ide-${PORTVERSION}-src
 
 CONFIGURE_ENV+=		AWK=/usr/bin/awk
