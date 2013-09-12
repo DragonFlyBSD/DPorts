@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: audio/pidgin-musictracker/Makefile 320820 2013-06-13 16:39:08Z bsam $
+# $FreeBSD: audio/pidgin-musictracker/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	musictracker
 PORTVERSION=	0.4.1
@@ -18,7 +18,7 @@ RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-return-type
