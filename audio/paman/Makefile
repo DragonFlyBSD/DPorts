@@ -1,9 +1,5 @@
-# Ports collection Makefile for: paman
-# Date created:		2008-01-15
-# Whom:			Romain Tartiere <romain@blogreen.org>
-#
-# $FreeBSD: audio/paman/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Romain Tartiere <romain@blogreen.org>
+# $FreeBSD: audio/paman/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	paman
 PORTVERSION=	0.9.4
@@ -18,8 +14,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 		pulse.0:${PORTSDIR}/audio/pulseaudio
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=	pathfix
+USES=		gmake pathfix pkgconfig
 
 CONFIGURE_ARGS=	--disable-lynx
 
