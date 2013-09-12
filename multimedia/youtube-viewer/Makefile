@@ -2,7 +2,7 @@
 # Date created:		2010-08-17
 # Whom:			Dennis Herrmann <dhn@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/youtube-viewer/Makefile,v 1.13 2012/11/17 05:59:55 svnexp Exp $
+# $FreeBSD: multimedia/youtube-viewer/Makefile 326361 2013-09-05 07:29:05Z az $
 #
 
 PORTNAME=	youtube
@@ -25,7 +25,8 @@ RUN_DEPENDS=	p5-XML-Fast>=0:${PORTSDIR}/net/p5-XML-Fast \
 		mplayer:${PORTSDIR}/multimedia/mplayer
 
 PROJECTHOST=	trizen
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/youtube-viewer
 
