@@ -1,5 +1,5 @@
 # Created by: Zahemszky, Gábor <Gabor@Zahemszky.HU>
-# $FreeBSD: multimedia/xfce4-xmms-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: multimedia/xfce4-xmms-plugin/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	xfce4-xmms-plugin
 PORTVERSION=	0.5.3
@@ -14,8 +14,7 @@ COMMENT=	Xfce4 XMMS control plugin for xfce4-panel
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gettext pathfix
-USE_GMAKE=	yes
+USES=		gettext pathfix gmake pkgconfig
 USE_GNOME=	gtk20 intltool intlhack pango
 USE_XFCE=	configenv libgui libutil panel
 
