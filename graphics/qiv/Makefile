@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/qiv/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/qiv/Makefile 327030 2013-09-12 02:37:17Z jgh $
 
 PORTNAME=	qiv
 PORTVERSION=	2.2.4
@@ -12,13 +12,12 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small, fast GDK/Imlib2 image viewer
 
-LIB_DEPENDS=	Imlib2.5:${PORTSDIR}/graphics/imlib2
-
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
-USE_GNOME=	gtk20
+LIB_DEPENDS=	libImlib2.so:${PORTSDIR}/graphics/imlib2
 
+USES=		gmake pkgconfig
+USE_GNOME=	gtk20
 
 OPTIONS_DEFINE=	XINERAMA
 
@@ -28,7 +27,7 @@ USE_XORG+=	x11
 
 .include <bsd.port.options.mk>
 
-pre-configure:
+post-patch-script:
 .if ${PORT_OPTIONS:MXINERAMA}
 USE_XORG+=	xinerama
 .else
