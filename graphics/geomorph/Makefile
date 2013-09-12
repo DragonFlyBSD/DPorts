@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/geomorph/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: graphics/geomorph/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	geomorph
 PORTVERSION=	0.50
@@ -14,8 +14,8 @@ COMMENT=	Height field generator and editor
 LIB_DEPENDS=	gtkglext-x11-1.0:${PORTSDIR}/x11-toolkits/gtkglext \
 		png15:${PORTSDIR}/graphics/png
 
+USES=		gmake pkgconfig
 USE_GL=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libintl-prefix="${LOCALBASE}"
 
