@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/epiphany-extensions/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/epiphany-extensions/Makefile 326349 2013-09-05 05:34:16Z antoine $
 #   $MCom: ports/www/epiphany-extensions/Makefile,v 1.140 2012/12/13 20:33:05 kwm Exp $
 
 PORTNAME=	epiphany-extensions
@@ -19,12 +19,11 @@ RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
 CONFLICTS=	epiphany-extensions-3.[0-9]*
 
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -pthread"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
