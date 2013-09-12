@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: benchmarks/autobench/Makefile 323639 2013-07-25 12:45:10Z az $
+# $FreeBSD: benchmarks/autobench/Makefile 325728 2013-08-30 23:09:24Z bapt $
 
 PORTNAME=	autobench
 PORTVERSION=	2.1.2
@@ -17,8 +17,7 @@ RUN_DEPENDS=	httperf:${PORTSDIR}/benchmarks/httperf \
 
 LICENSE=	GPLv2
 
-USE_PERL5=	yes
-USE_GMAKE=	yes
+USES=		gmake perl5
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" DEBUG_FLAGS= \
 		PREFIX=${PREFIX}
 
