@@ -1,9 +1,5 @@
-# Ports collection Makefile for: pavumeter
-# Date created:		July 21, 2007
-# Whom:			Romain Tartière <romain@blogreen.org>
-#
-# $FreeBSD: ports/audio/pavucontrol/Makefile,v 1.12 2012/11/17 05:54:41 svnexp Exp $
-#
+# Created by: Romain Tartière <romain@blogreen.org>
+# $FreeBSD: audio/pavucontrol/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	pavucontrol
 PORTVERSION=	0.9.10
@@ -19,7 +15,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 		canberra:${PORTSDIR}/audio/libcanberra
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	intltool
 
 CONFIGURE_ARGS=	--disable-lynx
