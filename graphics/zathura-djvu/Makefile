@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: ports/graphics/zathura-djvu/Makefile,v 1.5 2013/01/23 19:50:33 svnexp Exp $
+# $FreeBSD: graphics/zathura-djvu/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	zathura-djvu
 PORTVERSION=	0.2.2
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	zathura:${PORTSDIR}/graphics/zathura
 RUN_DEPENDS=	zathura:${PORTSDIR}/graphics/zathura
 
 USE_GNOME=	glib20 gtk20
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 PLIST_FILES=	lib/zathura/djvu.so
 PLIST_DIRSTRY=	lib/zathura
