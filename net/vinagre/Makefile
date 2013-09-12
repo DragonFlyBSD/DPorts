@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/vinagre/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: net/vinagre/Makefile 326159 2013-09-03 15:25:41Z bapt $
 #   $MCom: ports/net/vinagre/Makefile,v 1.48 2012/09/01 23:02:11 mezz Exp $
 
 PORTNAME=	vinagre
@@ -21,9 +21,8 @@ LIB_DEPENDS=	gtk-vnc-1.0:${PORTSDIR}/net/gtk-vnc \
 CONFLICTS=	vinagre-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack vte gconf2 gnomedocutils gnomepanel
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
