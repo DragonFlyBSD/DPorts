@@ -1,4 +1,4 @@
-# $FreeBSD: print/texlive-base/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/texlive-base/Makefile 325999 2013-09-02 14:19:47Z bapt $
 
 PORTNAME=	texlive
 PORTVERSION=	20120701
@@ -25,10 +25,10 @@ LIB_DEPENDS=	icuio:${PORTSDIR}/devel/icu \
 
 USE_TEX=	texlive web2c kpathsea ptexenc texhash-bootstrap
 USE_XZ=		yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig perl5
 USE_AUTOTOOLS=	autoconf
 USE_GHOSTSCRIPT=yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xmu xaw
 EXCLUDE_FILES=	${DISTNAME}/texk/web2c \
