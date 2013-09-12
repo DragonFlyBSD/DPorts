@@ -1,5 +1,5 @@
 # Created by: pneumann@gmail.com
-# $FreeBSD: deskutils/gimmie/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: deskutils/gimmie/Makefile 326711 2013-09-08 08:44:57Z antoine $
 
 PORTNAME=	gimmie
 PORTVERSION=	0.2.7
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libgnomecups-1.0.a:${PORTSDIR}/print/libgnomecup
 		${PYTHON_SITELIBDIR}/dbus/_dbus.py:${PORTSDIR}/devel/py-dbus
 
 USE_GNOME=	gnomehack gnomeprefix pygnome2 pygnomedesktop pygnomeextras
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_PYTHON=	yes
 GCONF_SCHEMAS=	gimmie.schemas
 INSTALLS_ICONS=	yes
