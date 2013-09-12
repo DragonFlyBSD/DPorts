@@ -2,7 +2,7 @@
 # Date created:        21 Aug 2003
 # Whom:                mig
 #
-# $FreeBSD: ports/security/ssh_askpass_gtk2/Makefile,v 1.21 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: security/ssh_askpass_gtk2/Makefile 326258 2013-09-04 07:55:49Z bsam $
 #
 
 PORTNAME=	ssh_askpass_gtk2
@@ -19,6 +19,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GNOME=	gtk20
+USES=		pkgconfig
 
 PLIST_FILES=	bin/ssh-askpass-fullscreen
 
