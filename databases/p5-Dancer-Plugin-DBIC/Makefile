@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: databases/p5-Dancer-Plugin-DBIC/Makefile 318138 2013-05-14 06:57:41Z culot $
+# $FreeBSD: databases/p5-Dancer-Plugin-DBIC/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	Dancer-Plugin-DBIC
 PORTVERSION=	0.1802
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Dancer::Plugin::DBIC.3
 
