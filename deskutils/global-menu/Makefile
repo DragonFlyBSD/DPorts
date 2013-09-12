@@ -1,5 +1,5 @@
 # Created by: Gustavo Perez
-# $FreeBSD: deskutils/global-menu/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/global-menu/Makefile 326507 2013-09-06 14:30:42Z bapt $
 
 PORTNAME=		gnome-globalmenu
 PORTVERSION=		0.7.10
@@ -17,7 +17,7 @@ USE_GNOME=		gnomepanel gnomedesktop
 USE_BZIP2=		yes
 USE_LDCONFIG=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USES=			gmake pkgconfig
 USE_AUTOTOOLS=		libtool automake:env autoheader:env
 INSTALLS_ICONS=		yes
 CPPFLAGS+=	-I${LOCALBASE}/include
