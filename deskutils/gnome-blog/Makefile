@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomeblog
-# Date created:				20 September 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: deskutils/gnome-blog/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: deskutils/gnome-blog/Makefile 326142 2013-09-03 12:50:18Z bapt $
 #   $MCom: ports/deskutils/gnome-blog/Makefile,v 1.5 2007/08/08 21:52:36 mezz Exp $
-#
 
 PORTNAME=	gnome-blog
 PORTVERSION=	0.9.1
@@ -18,9 +14,8 @@ COMMENT=	GNOME app to post to blogs
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix pygnome2 intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
