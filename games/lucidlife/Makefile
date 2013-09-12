@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lucidlife
-# Date created:		18 Aug 2005
-# Whom:			Marcin Wisnicki <mwisnicki+freebsd@gmail.com>
-#
-# $FreeBSD: ports/games/lucidlife/Makefile,v 1.14 2012/11/17 05:57:45 svnexp Exp $
-#
+# Created by: Marcin Wisnicki <mwisnicki+freebsd@gmail.com>
+# $FreeBSD: games/lucidlife/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	lucidlife
 PORTVERSION=	0.9.2
@@ -14,7 +10,7 @@ MASTER_SITES=	http://offload1.icculus.org:9090/~jcspray/LucidLife/
 MAINTAINER=	mwisnicki+freebsd@gmail.com
 COMMENT=	A GTK2 implementation of Conway's Game of Life
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20 gnomevfs2 intlhack
 GNU_CONFIGURE=	yes
 
