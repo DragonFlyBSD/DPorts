@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/gnocl/Makefile,v 1.44 2013/02/06 10:15:53 svnexp Exp $
+# $FreeBSD: x11-toolkits/gnocl/Makefile 325736 2013-08-30 23:40:56Z bapt $
 
 PORTNAME=	gnocl
 DISTVERSION=	${BASE_VERSION}-${NIGHTLY_BUILD}
@@ -16,9 +16,9 @@ LIB_DEPENDS=	canberra:${PORTSDIR}/audio/libcanberra \
    		notify:${PORTSDIR}/devel/libnotify \
 		gtkimageview:${PORTSDIR}/x11-toolkits/gtkimageview
 
-USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gtk20 libglade2 pkgconfig
+USES=		gmake pkgconfig
+USE_GNOME=	gtk20 libglade2
 USE_TCL=	84+
 USE_LDCONFIG=	yes
 CFLAGS+=	-I${TCL_INCLUDEDIR} -L${TCL_LIBDIR}
