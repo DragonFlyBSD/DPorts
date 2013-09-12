@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/libgeda/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: cad/libgeda/Makefile 326088 2013-09-02 20:51:40Z bapt $
 
 PORTNAME=	libgeda
 PORTVERSION=	1.4.3
@@ -16,8 +16,7 @@ LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gmake pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-update-mime-database \
