@@ -1,5 +1,5 @@
 # Created by: Holger Lamm <holger@e-gitt.net>
-# $FreeBSD: net-p2p/mldonkey/Makefile 324449 2013-08-09 16:25:48Z cperciva $
+# $FreeBSD: net-p2p/mldonkey/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	mldonkey
 PORTVERSION=	3.1.3
@@ -27,7 +27,7 @@ ALL_TARGET=	opt
 MAKE_ENV+=	OCAMLRUNPARAM="l=256M"
 MAKE_JOBS_UNSAFE=	yes
 
-CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG}
 CONFIGURE_ENV+=	NEWCXX="${CXX}" \
 		PTHREAD_LIBS="-pthread"
 CPPFLAGS+=	-I${LOCALBASE}/include
