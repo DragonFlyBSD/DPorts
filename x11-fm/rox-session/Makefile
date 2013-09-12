@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fm/rox-session/Makefile 311016 2013-01-26 14:50:30Z olgeni $
+# $FreeBSD: x11-fm/rox-session/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	rox-session
 PORTVERSION=	0.40.0
@@ -19,6 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/rox:${PORTSDIR}/x11-fm/rox-filer \
 WRKSRC=		${WRKDIR}/ROX-Session
 DATADIR=	${PREFIX}/apps/ROX-Session
 
+USES=		pkgconfig
 USE_GNOME=	gtk20 libxml2
 USE_XORG=	x11 xext xtst xxf86vm
 USE_PYTHON=	yes
