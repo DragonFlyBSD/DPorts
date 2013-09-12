@@ -1,5 +1,5 @@
 # Created by: Dmitry Klimov <lazyklimm@gmail.com>
-# $FreeBSD: x11-themes/qtcurve-gtk2/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-themes/qtcurve-gtk2/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	qtcurve
 PORTVERSION=	1.8.16
@@ -13,7 +13,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	QtCurve GTK2 Theme Engine
 
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake pkgconfig
 USE_GNOME=	gtk20
 
 .include <bsd.port.pre.mk>
