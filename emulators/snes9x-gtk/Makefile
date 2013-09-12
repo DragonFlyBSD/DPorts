@@ -1,5 +1,5 @@
 # Created by: okeeblow <root@cooltrainer.org>
-# $FreeBSD: emulators/snes9x-gtk/Makefile 316753 2013-04-28 21:20:28Z bapt $
+# $FreeBSD: emulators/snes9x-gtk/Makefile 325930 2013-09-01 22:57:27Z bapt $
 
 PORTNAME=	snes9x
 PORTVERSION=	1.52r79
@@ -14,13 +14,11 @@ COMMENT=	Super Nintendo Entertainment System(SNES) Emulator
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USE_PERL5=	yes
 USE_BZIP2=	yes
 USE_XORG=	x11 sm ice xext
-USE_GMAKE=	yes
-USE_GNOME=	gtk20 desktopfileutils pkgconfig intltool libglade2 libxml2
+USES=		gettext gmake perl5 desktop-file-utils pkgconfig
+USE_GNOME=	gtk20 intltool libglade2 libxml2
 GNU_CONFIGURE=	yes
-USES=		gettext
 USE_SDL=	sdl
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
