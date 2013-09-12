@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-gtkglext/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11-toolkits/hs-gtkglext/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	gtkglext
 PORTVERSION=	0.12.1
@@ -12,6 +12,7 @@ LIB_DEPENDS=	gtkglext:${PORTSDIR}/x11-toolkits/gtkglext
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_CABAL=	glib>=0.12 gtk>=0.12 mtl pango>=0.12
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
