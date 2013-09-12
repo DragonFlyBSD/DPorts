@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/mergeant/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: databases/mergeant/Makefile 326507 2013-09-06 14:30:42Z bapt $
 #   $MCom: ports/databases/mergeant/Makefile,v 1.20 2008/02/05 13:30:46 kwm Exp $
 
 PORTNAME=	mergeant
@@ -13,8 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provide uniform access to data sources for the GNOME 2 environment
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack libgnomedb
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
