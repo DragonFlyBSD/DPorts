@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/gsculpt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/gsculpt/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gsculpt
 PORTVERSION=	0.99.47
@@ -19,6 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}opengl>0:${PORTSDIR}/graphics/py-opengl \
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S,-src,,}
 
+USES=		pkgconfig
 USE_GNOME=	pygtk2
 USE_GL=		glu
 USE_XORG=	x11
