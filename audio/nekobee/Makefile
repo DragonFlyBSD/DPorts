@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/nekobee/Makefile 323647 2013-07-25 15:06:52Z marino $
+# $FreeBSD: audio/nekobee/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	nekobee
 PORTVERSION=	0.1.8
@@ -21,6 +21,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	gordonjcp
 GH_COMMIT=	3f4737f
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 
 CPPFLAGS+=	-I${LOCALBASE}/include/dssi -I${LOCALBASE}/include
