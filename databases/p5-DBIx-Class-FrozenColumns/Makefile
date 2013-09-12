@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DBIx-Class-FrozenColumns
-# Date created:		2008-07-22
-# Whom:			Vladimir Timofeev <vovkasm@gmail.com>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-FrozenColumns/Makefile,v 1.6 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Vladimir Timofeev <vovkasm@gmail.com>
+# $FreeBSD: databases/p5-DBIx-Class-FrozenColumns/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	DBIx-Class-FrozenColumns
 PORTVERSION=	0.09
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-DBIx-Class>=0.07003:${PORTSDIR}/databases/p5-DBIx-Class \
 		p5-Storable>=2.15:${PORTSDIR}/devel/p5-Storable
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::FrozenColumns.3
 
