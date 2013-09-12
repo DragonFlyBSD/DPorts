@@ -2,7 +2,7 @@
 # Date created:		2012-06-14
 # Whom:			lbartoletti <coder@tuxfamily.org>
 #
-# $FreeBSD: databases/spatialite_gui/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: databases/spatialite_gui/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 
 PORTNAME=	spatialite_gui
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=		pkgconfig iconv
 CPPFLAGS+=	-I${LOCALBASE}/include `${WX_CONFIG} --cppflags`
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv `${WX_CONFIG} --libs`
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB} `${WX_CONFIG} --libs`
 CONFIGURE_ARGS+=CFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	yes
 
