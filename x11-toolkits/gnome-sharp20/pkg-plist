@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11-toolkits/gnome-sharp20/pkg-plist,v 1.4 2012/11/17 06:03:34 svnexp Exp $
+@comment $FreeBSD: x11-toolkits/gnome-sharp20/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/gconfsharp2-schemagen
 lib/gtk-sharp-2.0/gconfsharp-schemagen.exe
 lib/libgnomesharpglue-2.a

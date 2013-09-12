@@ -2,7 +2,7 @@
 # Date created:         		20061025
 # Whom:                 		Tom McLaughlin <tmclaugh@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gnome-sharp20/Makefile,v 1.19 2012/11/17 06:03:34 svnexp Exp $
+# $FreeBSD: x11-toolkits/gnome-sharp20/Makefile 326415 2013-09-05 17:01:12Z antoine $
 #
 
 PORTNAME=	gnome-sharp
@@ -18,8 +18,8 @@ LATEST_LINK=	gnome-sharp20
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
-USE_PERL5_RUN=	yes
+USES=		gmake perl5 pkgconfig
+USE_PERL5=	run
 USE_GNOME=	gnomehack gnomepanel gtksharp20 librsvg2 vte libgnomeprintui \
 		libgnomeui
 MAKE_JOBS_UNSAFE=	yes
