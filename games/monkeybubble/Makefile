@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: games/monkeybubble/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: games/monkeybubble/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	monkeybubble
 PORTVERSION=	0.4.0
@@ -11,11 +11,10 @@ DISTNAME=	monkey-bubble-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK2 Puzzle Bobble clone with monkeys
 
-USES=        pathfix
+USES=        pathfix gmake pkgconfig
 USE_GNOME=	gnomedocutils gnomeprefix intlhack \
 		librsvg2 libgnomeui
 USE_GSTREAMER=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
