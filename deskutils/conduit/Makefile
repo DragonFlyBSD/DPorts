@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/conduit/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/conduit/Makefile 326175 2013-09-03 17:05:18Z bapt $
 #    $MCom: ports/deskutils/conduit/Makefile,v 1.7 2008/03/18 14:53:42 ahze Exp $
 
 PORTNAME=	conduit
@@ -25,9 +25,8 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/goocanvasmodule.so:${PORTSDIR}/graphics/py-goo
 		xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USE_PYTHON=	2.5+
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
