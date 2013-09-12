@@ -1,8 +1,8 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: astro/stellarium/Makefile 324271 2013-08-05 12:09:07Z danfe $
+# $FreeBSD: astro/stellarium/Makefile 326785 2013-09-09 09:24:02Z danfe $
 
 PORTNAME=	stellarium
-PORTVERSION=	0.12.2
+PORTVERSION=	0.12.3
 CATEGORIES=	astro
 MASTER_SITES=	SF/${PORTNAME}/Stellarium-sources/${PORTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -22,9 +22,10 @@ INSTALLS_ICONS=	yes
 MAN1=		${PORTNAME}.1
 PORTDOCS=	AUTHORS ChangeLog README
 
-OPTIONS_DEFINE=	MORE_STARS SOUND DOCS
-OPTIONS_DEFAULT=	SOUND
+OPTIONS_DEFINE=		MORE_STARS MULTIMEDIA DOCS
+OPTIONS_DEFAULT=	MULTIMEDIA
 MORE_STARS_DESC=	Install extra star catalogs (1.2GB)
+MULTIMEDIA_DESC=	Sound and video support (via Phonon)
 
 .include <bsd.port.options.mk>
 
@@ -40,7 +41,7 @@ PLIST_SUB+=	MORE_STARS=""
 PLIST_SUB+=	MORE_STARS="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MSOUND}
+.if ${PORT_OPTIONS:MMULTIMEDIA}
 USE_QT4+=	phonon
 .else
 CMAKE_ARGS+=	-DENABLE_SOUND:BOOL=OFF
