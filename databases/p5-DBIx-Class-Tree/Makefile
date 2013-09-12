@@ -1,9 +1,4 @@
-# New ports collection makefile for:	DBIx::Class::Tree
-# Date created:		17 Mar 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-Tree/Makefile,v 1.5 2012/11/17 05:55:15 svnexp Exp $
-#
+# $FreeBSD: databases/p5-DBIx-Class-Tree/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	DBIx-Class-Tree
 PORTVERSION=	0.03003
@@ -20,7 +15,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::Tree.3 \
 	DBIx::Class::Tree::AdjacencyList.3 \
