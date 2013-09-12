@@ -1,6 +1,7 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: deskutils/gtweakui/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: deskutils/gtweakui/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #    $MCom: ports/deskutils/gtweakui/Makefile,v 1.2 2007/05/19 21:36:03 marcus Exp $
+
 PORTNAME=	gTweakUI
 PORTVERSION=	0.4.0
 PORTREVISION=	11
@@ -12,9 +13,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A collection of simple dialogs as a front end to GConf
 
 USE_BZIP2=	yes
-USES=        pathfix
+USES=        pathfix gmake pkgconfig
 USE_GNOME=	gnomeprefix libgnomeui gconf2 libglade2 intlhack
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 DESKTOP_FILES=	gtweakui-galeon.desktop.in \
