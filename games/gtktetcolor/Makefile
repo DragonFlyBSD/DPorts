@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/gtktetcolor/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/gtktetcolor/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	gtktetcolor
 PORTVERSION=	0.6.4
@@ -14,9 +14,8 @@ COMMENT=	Game for GNOME that resembles well-known Tetris and Columns
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USES=        pathfix
+USES=        pathfix gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack libgnomeui
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
