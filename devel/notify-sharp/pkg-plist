@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/notify-sharp/pkg-plist,v 1.2 2012/11/17 05:56:01 svnexp Exp $
+@comment $FreeBSD: devel/notify-sharp/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/mono/gac/notify-sharp/0.4.0.0__2df29c54e245917a/notify-sharp.dll
 lib/mono/gac/notify-sharp/0.4.0.0__2df29c54e245917a/notify-sharp.dll.config
 lib/mono/notify-sharp/notify-sharp.dll
