@@ -1,5 +1,5 @@
 # Created by:	Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng2/Makefile 314525 2013-03-18 06:08:24Z dinoex $
+# $FreeBSD: sysutils/syslog-ng2/Makefile 327041 2013-09-12 08:41:52Z marino $
 #
 
 PORTNAME=	syslog-ng
@@ -19,6 +19,7 @@ MAN5=		syslog-ng.conf.5
 MAN8=		syslog-ng.8
 
 USE_RC_SUBR=	syslog-ng
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 SUB_FILES=	pkg-message
