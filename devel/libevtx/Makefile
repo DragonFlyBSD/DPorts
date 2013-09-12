@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevtx/Makefile 323923 2013-07-29 21:19:27Z antoine $
+# $FreeBSD: devel/libevtx/Makefile 327004 2013-09-11 19:27:59Z antoine $
 
 PORTNAME=	libevtx
-DISTVERSION=	alpha-20130727
+DISTVERSION=	alpha-20130909
 CATEGORIES=	devel
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSRnQ0SExzX3JjdFE/ \
 		LOCAL/antoine
