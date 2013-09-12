@@ -1,17 +1,12 @@
-# New ports collection makefile for:	gkrellkam2
-# Date Created:		24 Nov 2002
-# Whom:			Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/graphics/gkrellkam2/Makefile,v 1.22 2012/11/17 05:58:07 svnexp Exp $
-# $Id: Makefile,v 1.1.1.1 2002/11/24 03:37:56 jylefort Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: graphics/gkrellkam2/Makefile 327041 2013-09-12 08:41:52Z marino $
 
-PORTNAME=		gkrellkam
-PORTVERSION=		2.0.0
+PORTNAME=	gkrellkam
+PORTVERSION=	2.0.0
 PORTREVISION=	12
-CATEGORIES=		graphics
-MASTER_SITES=		SF/${PORTNAME}/${PORTNAME}2/${PORTVERSION}
-DISTNAME=		${PORTNAME}_${PORTVERSION}
+CATEGORIES=	graphics
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}2/${PORTVERSION}
+DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GKrellM plugin that display thumbnails of periodically updated images
@@ -20,7 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkre
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 LATEST_LINK=	gkrellkam2
 
 MAN5=		gkrellkam-list.5
