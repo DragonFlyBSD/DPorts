@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/gimp-lqr-plugin/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/gimp-lqr-plugin/Makefile 325761 2013-08-31 01:17:11Z bapt $
 
 PORTNAME=	gimp-lqr-plugin
 PORTVERSION=	0.7.1
@@ -16,8 +16,7 @@ LIB_DEPENDS=	gimp-2.0:${PORTSDIR}/graphics/gimp-app \
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gtk20
 
 PLUGIN_DIR?=	libexec/gimp/2.2/plug-ins
