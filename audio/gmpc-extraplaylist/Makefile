@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmpc-extraplaylist
-# Date created:		March 27 2008
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/gmpc-extraplaylist/Makefile,v 1.16 2012/11/17 05:54:32 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: audio/gmpc-extraplaylist/Makefile 325966 2013-09-02 10:06:03Z bapt $
 
 PORTNAME=	gmpc-extraplaylist
 PORTVERSION=	0.20.0
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gmpc.pc:${PORTSDIR}/audio/gmpc
 RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig glib20 gtk20 libglade2 libxml2
+USES=		pkgconfig
+USE_GNOME=	glib20 gtk20 libglade2 libxml2
 
 PLIST_FILES=	lib/gmpc/plugins/libextraplaylist.la \
 		lib/gmpc/plugins/libextraplaylist.so
