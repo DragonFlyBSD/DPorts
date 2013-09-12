@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gdm/Makefile 320125 2013-06-06 20:24:27Z ohauer $
+# $FreeBSD: x11/gdm/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #   $MCom: ports/x11/gdm/Makefile,v 1.192 2012/09/03 16:28:28 mezz Exp $
 
 PORTNAME=	gdm
@@ -36,8 +36,7 @@ USE_XORG=	dmx dmxproto
 INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GNOME_SUBR=	yes
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	intlhack gnomehier gconf2 librsvg2 \
 		gnomedocutils gnomeprefix gnomepanel
 GCONF_SCHEMAS=	gdm-simple-greeter.schemas
