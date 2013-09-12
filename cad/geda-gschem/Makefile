@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-gschem/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: cad/geda-gschem/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	gschem
 PORTVERSION=	1.4.3
@@ -21,7 +21,7 @@ DOCSDIR=	${PREFIX}/share/doc/geda
 DATADIR=	${PREFIX}/share/geda
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-gdgeda --with-docdir=${DOCSDIR} \
