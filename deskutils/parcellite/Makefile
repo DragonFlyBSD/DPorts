@@ -1,5 +1,5 @@
 # Created by: Joey Mingrone <joey@mingrone.org>
-# $FreeBSD: deskutils/parcellite/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/parcellite/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	parcellite
 PORTVERSION=	1.0.1
@@ -12,7 +12,7 @@ MAINTAINER=	jrm@ftfl.ca
 COMMENT=	A lightweight GTK+ clipboard manager
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 
 .include <bsd.port.options.mk>
