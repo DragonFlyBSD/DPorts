@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: science/gchemutils/Makefile 321879 2013-06-27 11:42:57Z kwm $
+# $FreeBSD: science/gchemutils/Makefile 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	gchemutils
 PORTVERSION=	0.14.2
@@ -24,8 +24,7 @@ PORTSCOUT=	limitw:1,even
 USE_XZ=		yes
 USE_XORG=	x11
 USE_GNOME=	gnomedocutils gtk30 intlhack libgsf libxml2
-USE_GMAKE=	yes
-USES=		desktop-file-utils gettext pathfix shared-mime-info
+USES=		desktop-file-utils gettext pathfix shared-mime-info gmake pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
