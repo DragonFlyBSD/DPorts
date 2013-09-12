@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pidgin-audacious-remote
-# Date created:         30 August 2011
-# Whom:                 Anton Hryciuk <gnixua@gmail.com>
-#
-# $FreeBSD: net-im/pidgin-audacious-remote/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Anton Hryciuk <gnixua@gmail.com>
+# $FreeBSD: net-im/pidgin-audacious-remote/Makefile 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	pidgin-audacious-remote
 PORTVERSION=	0.5
@@ -20,6 +16,7 @@ BUILD_DEPENDS=	audacious>=2.2:${PORTSDIR}/multimedia/audacious \
 		pidgin:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 
 
