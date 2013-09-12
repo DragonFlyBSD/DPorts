@@ -1,5 +1,5 @@
 # Created by: Dominik Rothert <dr@domix.de>
-# $FreeBSD: x11-wm/wmakerconf/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-wm/wmakerconf/Makefile 326090 2013-09-02 21:16:30Z bapt $
 #    $MCom: ports/x11-wm/wmakerconf/Makefile,v 1.2 2006/10/05 07:31:44 mezz Exp $
 PORTNAME=	wmakerconf
 PORTVERSION=	2.12
@@ -19,9 +19,7 @@ RUN_DEPENDS=	rpm:${PORTSDIR}/archivers/rpm
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_GNOME=	gtk20
-USE_PERL5=	yes
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext pkgconfig perl5 gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-wmakerdataprefix="${LOCALBASE}/share" \
 		--with-wmakeretcprefix="${LOCALBASE}/share"
