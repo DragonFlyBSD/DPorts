@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Image-Heatmap
-# Date created:		2009-07-20
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-Image-Heatmap/Makefile,v 1.12 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: graphics/p5-Image-Heatmap/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	Image-Heatmap
 PORTVERSION=	0.565
@@ -21,7 +17,8 @@ LICENSE=	ART20 GPLv1
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Image::Heatmap.3
 
