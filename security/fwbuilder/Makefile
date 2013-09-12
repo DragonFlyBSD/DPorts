@@ -2,13 +2,13 @@
 # Date Created:				3 Feb 2001
 # Whom:					Roman Shterenzon <roman@xpert.com>
 #
-# $FreeBSD: ports/security/fwbuilder/Makefile,v 1.96 2012/11/17 06:01:04 svnexp Exp $
+# $FreeBSD: security/fwbuilder/Makefile 326938 2013-09-11 00:48:44Z cy $
 #
 
 PORTNAME=	fwbuilder
 DISTVERSION=	5.1.0
 PORTVERSION=	${DISTVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 BUILD=		3599
 # XXX in developement version of this port: PKGNAMESUFFIX=	-devel
