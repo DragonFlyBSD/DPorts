@@ -1,9 +1,9 @@
 # Created by: Douglas K. Rand <rand@meridian-enviro.com>
-# $FreeBSD: graphics/mapserver/Makefile 325086 2013-08-21 03:46:21Z sunpoet $
+# $FreeBSD: graphics/mapserver/Makefile 326981 2013-09-11 13:58:27Z wg $
 
 PORTNAME=		mapserver
 PORTVERSION=		6.2.1
-PORTREVISION=		2
+PORTREVISION=		3
 CATEGORIES=		graphics www geography
 MASTER_SITES=		http://download.osgeo.org/mapserver/
 
