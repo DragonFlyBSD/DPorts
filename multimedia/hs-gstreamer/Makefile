@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/hs-gstreamer/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: multimedia/hs-gstreamer/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.12.1.2
@@ -12,6 +12,7 @@ LIB_DEPENDS=	gstreamer:${PORTSDIR}/multimedia/gstreamer
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_CABAL=	glib>=0.12 mtl
 
 BUILD_DEPENDS+=	gstreamer-plugins>=0.10:${PORTSDIR}/multimedia/gstreamer-plugins
