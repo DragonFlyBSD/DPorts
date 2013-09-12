@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-LibXML-PrettyPrint/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-XML-LibXML-PrettyPrint/Makefile 326969 2013-09-11 12:37:57Z sunpoet $
 
 PORTNAME=	XML-LibXML-PrettyPrint
-PORTVERSION=	0.003
+PORTVERSION=	0.004
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
