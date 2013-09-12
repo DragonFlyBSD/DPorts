@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: mail/thunderbird/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/thunderbird/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	thunderbird
 DISTVERSION=	17.0.8
@@ -31,7 +31,7 @@ QT_NONSTANDARD=	yes
 ALL_TARGET=	default
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GL=		gl
 
 MOZ_PROTOCOLS=	http,ftp,file,viewsource,res,data,wyciwyg,websocket
