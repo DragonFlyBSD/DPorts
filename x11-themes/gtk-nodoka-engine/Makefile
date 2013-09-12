@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: ports/x11-themes/gtk-nodoka-engine/Makefile,v 1.9 2012/12/30 06:16:31 svnexp Exp $
+# $FreeBSD: x11-themes/gtk-nodoka-engine/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	gtk-nodoka-engine
 PORTVERSION=	0.7.5
@@ -15,7 +15,7 @@ ANIMATION_DESC=		Animation support
 ANIMATIONTOLEFT_DESC=	Animation from right to left
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
 

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11-themes/gtk-nodoka-engine/pkg-plist,v 1.2 2012/11/17 06:03:31 svnexp Exp $
+@comment $FreeBSD: x11-themes/gtk-nodoka-engine/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 lib/gtk-2.0/2.10.0/engines/libnodoka.la
 lib/gtk-2.0/2.10.0/engines/libnodoka.so
 share/themes/Nodoka-Aqua/gtk-2.0/gtkrc
