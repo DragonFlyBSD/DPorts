@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/dvdisaster/Makefile 321782 2013-06-26 04:35:10Z ak $
+# $FreeBSD: sysutils/dvdisaster/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	dvdisaster
 PORTVERSION=	0.72.4
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 MAKEFILE=	GNUmakefile
 
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GNOME=	gtk20
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--docsubdir="/" \
