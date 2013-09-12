@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xmms-scrobbler
-# Date created:							2004-12-06
-# Whom:									arved
-#
-# $FreeBSD: audio/scrobbler/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# Created by: arved
+# $FreeBSD: audio/scrobbler/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME?=	scrobbler
 PORTVERSION=	0.3.8.1
@@ -20,10 +17,10 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 CONFLICTS=	bmp-scrobbler-[0-9]* \
 		xmms-scrobbler-[0-9]*
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GCC=	any
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
