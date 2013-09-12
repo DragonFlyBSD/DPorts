@@ -1,13 +1,13 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-fancy/Makefile 317877 2013-05-11 14:10:28Z pawel $
+# $FreeBSD: mail/claws-mail-fancy/Makefile 325602 2013-08-29 15:01:46Z pawel $
 
 PORTNAME=	fancy
 PORTREVISION=	0
 
 COMMENT=	Webkit based HTML renderer plugin for Claws Mail
 
-LIB_DEPENDS=	soup-gnome:${PORTSDIR}/devel/libsoup-gnome \
-		webkitgtk:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
+		libwebkitgtk-1.0.so:${PORTSDIR}/www/webkit-gtk2
 
 CLAWS_PLUGINS_BUILD=	fancy
 
