@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/lafontaine/Makefile 319859 2013-06-04 13:58:44Z bapt $
+# $FreeBSD: lang/lafontaine/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	lafontaine
 PORTVERSION=	0.4.1
@@ -13,9 +13,8 @@ COMMENT=	Graphical logo interpreter
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.4
 
-USES=        pathfix
+USES=		pathfix gmake pkgconfig
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_CSTD=	gnu89
 
