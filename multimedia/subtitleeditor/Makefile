@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/subtitleeditor/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: multimedia/subtitleeditor/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	subtitleeditor
 PORTVERSION=	0.40.0
@@ -19,7 +19,7 @@ LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		enchant:${PORTSDIR}/textproc/enchant \
 		pcre:${PORTSDIR}/devel/pcre
 
-USES=		gmake
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 USE_GSTREAMER=	good
 INSTALLS_ICONS=	yes
