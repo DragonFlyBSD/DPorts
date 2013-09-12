@@ -2,7 +2,7 @@
 # Date created:		22 July 2008
 # Whom:			Paul Schmehl <pauls@utdallas.edu>
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2-GladeXML/Makefile,v 1.7 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk2-GladeXML/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Gtk2-GladeXML
@@ -25,7 +25,8 @@ RUN_DEPENDS=	p5-Glib2>=1.00:${PORTSDIR}/devel/p5-Glib2 \
 
 USE_GNOME=	libglade2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=	${PORTNAME:S/-/::/g}.3
 
 .include <bsd.port.mk>
