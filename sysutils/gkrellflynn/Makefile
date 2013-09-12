@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: sysutils/gkrellflynn/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# $FreeBSD: sysutils/gkrellflynn/Makefile 327021 2013-09-12 00:48:38Z marino $
 
 PORTNAME=	gkrellflynn
 PORTVERSION=	0.8
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkre
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
 PLIST_FILES=	libexec/gkrellm2/plugins/gkrellflynn.so
+USES=		pkgconfig
 USE_GNOME=	gtk20
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -c -fPIC"
 ALL_TARGET=	${PORTNAME}.so
