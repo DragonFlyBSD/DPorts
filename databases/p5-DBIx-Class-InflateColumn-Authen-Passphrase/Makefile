@@ -1,5 +1,4 @@
-# Created by Frank Wall <fw@moov.de>
-# $FreeBSD: ports/databases/p5-DBIx-Class-InflateColumn-Authen-Passphrase/Makefile,v 1.1 2013/02/04 13:04:37 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Class-InflateColumn-Authen-Passphrase/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	DBIx-Class-InflateColumn-Authen-Passphrase
 PORTVERSION=	0.01
@@ -18,7 +17,8 @@ BUILD_DEPENDS:=	p5-DBIx-Class-DynamicDefault>=0.03:${PORTSDIR}/databases/p5-DBIx
 		p5-DBIx-Class>=0.08009:${PORTSDIR}/databases/p5-DBIx-Class \
 		p5-Authen-Passphrase>=0:${PORTSDIR}/security/p5-Authen-Passphrase
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Class::InflateColumn::Authen::Passphrase.3
 
