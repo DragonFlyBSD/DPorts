@@ -1,5 +1,5 @@
 # Created by: Mark Kane <mark@mkproductions.org>
-# $FreeBSD: ports/archivers/xarchive/Makefile,v 1.14 2012/12/18 06:36:07 svnexp Exp $
+# $FreeBSD: archivers/xarchive/Makefile 326095 2013-09-02 21:32:24Z bapt $
 
 PORTNAME=	xarchive
 DISTVERSION=	0.2.8-6
@@ -12,6 +12,7 @@ COMMENT=	GTK+ front end for various archiving tools
 
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
 
