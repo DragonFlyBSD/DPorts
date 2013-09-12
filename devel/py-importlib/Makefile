@@ -1,5 +1,5 @@
 # Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-# $FreeBSD: ports/devel/py-importlib/Makefile,v 1.3 2012/11/17 05:56:47 svnexp Exp $
+# $FreeBSD: devel/py-importlib/Makefile 326924 2013-09-10 19:11:41Z rm $
 
 PORTNAME=	importlib
 PORTVERSION=	1.0.2
@@ -9,6 +9,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	akosiaris+ports@gmail.com
 COMMENT=	Backport of importlib.import_module() from Python 2.7
+
+DEPRECATED=	Python 2.6 port will reach it's EoL upstream soon
+EXPIRATION_DATE=2013-10-01
 
 USE_PYTHON=	2.6
 USE_PYDISTUTILS=	yes
