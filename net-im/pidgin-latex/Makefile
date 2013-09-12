@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Pidgin-LaTeX
-# Date created:				2005-06-22
-# Whom:					Geoffrey Mainland <mainland@apeiron.net>
-#
-# $FreeBSD: net-im/pidgin-latex/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Geoffrey Mainland <mainland@apeiron.net>
+# $FreeBSD: net-im/pidgin-latex/Makefile 326997 2013-09-11 17:20:45Z marino $
 
 PORTNAME=	latex
 PORTVERSION=	1.0
