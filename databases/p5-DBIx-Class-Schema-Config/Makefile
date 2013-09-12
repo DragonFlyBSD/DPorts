@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: ports/databases/p5-DBIx-Class-Schema-Config/Makefile,v 1.1 2012/12/16 14:58:33 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-Config/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	DBIx-Class-Schema-Config
 PORTVERSION=	0.001008
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Config-Any>=0.23:${PORTSDIR}/devel/p5-Config-Any \
 		p5-DBD-SQLite>0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Test-MockObject>=1.09:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Class::Schema::Config.3
 
