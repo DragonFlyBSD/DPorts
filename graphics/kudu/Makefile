@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/kudu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/kudu/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	kudu
 PORTVERSION=	0.1.2
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	gtkglext-x11-1.0:${PORTSDIR}/x11-toolkits/gtkglext
 
+USES=		pkgconfig
 USE_GL=		gl
 USE_PYTHON=	yes
 USE_BZIP2=	yes
