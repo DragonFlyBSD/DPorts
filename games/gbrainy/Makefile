@@ -1,4 +1,4 @@
-# $FreeBSD: games/gbrainy/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/gbrainy/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	gbrainy
 PORTVERSION=	2.1.5
@@ -17,8 +17,7 @@ BUILD_DEPENDS=	mautil:${PORTSDIR}/devel/mono-addins \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GNOME=	desktopfileutils gnomehack gtksharp20 gnomesharp20
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
