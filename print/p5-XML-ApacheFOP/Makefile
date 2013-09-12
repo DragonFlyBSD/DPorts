@@ -2,7 +2,7 @@
 # Date created:                        27 Feb 2006
 # Whom:                                Simun Mikecin <numisemis@yahoo.com>
 #
-# $FreeBSD: ports/print/p5-XML-ApacheFOP/Makefile,v 1.11 2012/11/17 06:00:53 svnexp Exp $
+# $FreeBSD: print/p5-XML-ApacheFOP/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	XML-ApacheFOP
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Java>=0:${PORTSDIR}/devel/p5-Java \
 		${LOCALBASE}/share/java/fop/build/fop.jar:${PORTSDIR}/textproc/fop
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::ApacheFOP.3
 
