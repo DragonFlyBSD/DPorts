@@ -1,5 +1,5 @@
 # Created by: Brad Allen <braddo@tranceaddict.net>
-# $FreeBSD: games/stepmania-devel/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: games/stepmania-devel/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	stepmania
 PORTVERSION=	5.0.a3
@@ -28,7 +28,7 @@ PROJECTHOST=	sm-ssc
 USE_BZIP2=	yes
 USE_XORG=	x11 xau xdmcp xext xrandr xrender xtst
 USE_GL=		gl glu
-USES=		pathfix iconv shebangfix perl5
+USES=		pathfix iconv shebangfix perl5 pkgconfig
 USE_GNOME=	gtk20
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=--without-vorbis
 
 post-patch:
 	@${REINPLACE_CMD} -e \
-		'/^LIBS/s|-lpthread|-liconv|' ${WRKSRC}/src/Makefile.in
+		'/^LIBS/s|-lpthread|${ICONV_LIB}|' ${WRKSRC}/src/Makefile.in
 
 pre-build:
 	@${ECHO_CMD} -n > ${WRKDIR}/stepmania.sh
