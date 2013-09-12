@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: net/gnome-mud/Makefile 323686 2013-07-26 06:10:07Z bapt $
+# $FreeBSD: net/gnome-mud/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	gnome-mud
 PORTVERSION=	0.11.2
@@ -14,7 +14,7 @@ LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre \
 		gnet-2.0.0:${PORTSDIR}/net/gnet2
 
 USE_BZIP2=	yes
-USES=		pathfix gettext gmake
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gconf2 gnomeprefix intlhack libglade2 vte
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
