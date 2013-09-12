@@ -2,7 +2,7 @@
 # Date created:		22 July 2008
 # Whom:			Paul Schmehl <pauls@utdallas.edu>
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2-Ex-Dialogs/Makefile,v 1.7 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-Dialogs/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Gtk2-Ex-Dialogs
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-File-Type>=0:${PORTSDIR}/devel/p5-File-Type \
 		p5-Gtk2-Ex-Utils>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2-Ex-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Gtk2::Ex::Dialogs::Question.3 \
 		Gtk2::Ex::Dialogs::ChooseDirectory.3 \
 		Gtk2::Ex::Dialogs::Message.3 \
