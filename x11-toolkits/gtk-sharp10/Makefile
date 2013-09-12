@@ -1,10 +1,6 @@
-# New ports collection makefile for:    gtk-sharp
-# Date created:         2003-01-01
-# Whom:                 Juli Mallett
-#
-# $FreeBSD: x11-toolkits/gtk-sharp10/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# Created by: Juli Mallett
+# $FreeBSD: x11-toolkits/gtk-sharp10/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $Id: Makefile,v 1.13 2006/10/08 01:57:16 killfill Exp $
-#
 
 PORTNAME=	gtk-sharp
 PORTVERSION=	1.0.10
@@ -21,8 +17,8 @@ RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 LATEST_LINK=	gtk-sharp10
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
-USE_PERL5_RUN=	yes
+USES=		gmake pkgconfig perl5
+USE_PERL5=	run
 USE_GNOME=	gnomehack gtkhtml3 vte librsvg2 libgnomecanvas \
 		libgnomeprintui libglade2 libgnomeui
 
