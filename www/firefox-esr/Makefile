@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox-esr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/firefox-esr/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	firefox
 DISTVERSION=	17.0.8
@@ -34,7 +34,7 @@ QT_NONSTANDARD=	yes
 ALL_TARGET=	default
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GL=		gl
 NO_MOZPKGINSTALL=yes
 
