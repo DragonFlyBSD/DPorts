@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gkrellm-wireless
-# Date Created:			17 Mar 2003
-# Whom:				KT Sin <ktsin@acm.org>
-#
-# $FreeBSD: ports/net/gkrellmwireless2/Makefile,v 1.18 2012/11/17 06:00:01 svnexp Exp $
-#
+# Created by: KT Sin <ktsin@acm.org>
+# $FreeBSD: net/gkrellmwireless2/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gkrellmwireless
 PORTVERSION=	2.0.2
@@ -20,6 +16,6 @@ RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 WRKSRC=		${WRKDIR}/gkrellmwireless
 
 USE_XORG=	x11
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 .include <bsd.port.mk>
