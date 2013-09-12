@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fcitx-cloudpinyin
-# Date created:				11 Nov 2011
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: chinese/fcitx-cloudpinyin/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: chinese/fcitx-cloudpinyin/Makefile 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	fcitx-cloudpinyin
 PORTVERSION=	0.3.0
@@ -19,7 +15,7 @@ LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
 		curl:${PORTSDIR}/ftp/curl
 
 USE_XZ=		yes
-USES=		cmake gettext
+USES=		cmake gettext pkgconfig
 USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
