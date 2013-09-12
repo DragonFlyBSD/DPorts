@@ -1,19 +1,18 @@
 # Created by: Jeremy Norris <ishmael272home.com>
-# $FreeBSD: net-im/licq-qt-gui/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net-im/licq-qt-gui/Makefile 325717 2013-08-30 19:24:37Z dinoex $
 
 PORTNAME=	qt4-gui
-PORTVERSION=	1.7.1
-PORTREVISION=	1
+PORTVERSION=	1.8.0
 CATEGORIES=	net-im
 PKGNAMESUFFIX?=	${KDE_SUFFIX}${PKGNAMESUFFIX2}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Qt plugin for licq
 
-LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
-#BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
-
 LICENSE=	GPLv2
+
+LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
+RUN_DEPENDS=	${LOCALBASE}/lib/licq/protocol_icq.so:${PORTSDIR}/${LICQ_PORT}-icq
 
 USE_XORG=	x11 xext ice xscrnsaver
 USES=		cmake
