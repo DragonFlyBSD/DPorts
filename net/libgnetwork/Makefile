@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libgnetwork
-# Date created:				11 December 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: net/libgnetwork/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net/libgnetwork/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	libgnetwork
 PORTVERSION=	0.0.9
@@ -17,11 +13,10 @@ COMMENT=	A GLib-based networking wrapper
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
