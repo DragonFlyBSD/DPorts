@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/reciteword/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: chinese/reciteword/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	reciteword
 PORTVERSION=	0.8.5
@@ -17,9 +17,8 @@ COMMENT=	Education software to help people to study English
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gtk20 esound
-USE_GMAKE=	yes
 CPPFLAGS+=	"-I${LOCALBASE}/include"
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README TODO readme.txt
