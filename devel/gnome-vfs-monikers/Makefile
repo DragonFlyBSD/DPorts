@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gnome-vfs-monikers
-# Date created:		2006-07-11
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/gnome-vfs-monikers/Makefile,v 1.12 2013/02/14 10:22:07 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: devel/gnome-vfs-monikers/Makefile 326122 2013-09-03 06:36:41Z bapt $
 #    $MCom: ports/devel/gnome-vfs-monikers/Makefile,v 1.4 2006/07/18 11:37:57 ahze Exp $
 
 PORTNAME=	gnome-vfs-monikers
@@ -15,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome-vfs monikers module
 
 USE_GNOME=	gnomevfs2 libbonobo
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib #-pthread
