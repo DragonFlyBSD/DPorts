@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gnome-sharp
-# Date created:         		20070531
-# Whom:                 		pneumann@gmail.com
-#
-# $FreeBSD: ports/x11-toolkits/gnome-desktop-sharp20/Makefile,v 1.11 2012/11/17 06:03:34 svnexp Exp $
-#
+# Created by: pneumann@gmail.com
+# $FreeBSD: x11-toolkits/gnome-desktop-sharp20/Makefile 326438 2013-09-05 19:29:18Z antoine $
 
 PORTNAME=	gnome-desktop-sharp
 PORTVERSION=	2.26.0
@@ -17,8 +13,8 @@ COMMENT=	GNOME desktop interfaces for the .NET runtime
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
-USE_PERL5_RUN=	yes
+USES=		gmake perl5 pkgconfig
+USE_PERL5=	run
 USE_GNOME=	gnomehack gnomepanel gtkhtml3 gtksharp20 gnomesharp20 librsvg2 vte \
 		libgnomeprintui gtksourceview2 gnomepanel libwnck nautiluscdburner
 
