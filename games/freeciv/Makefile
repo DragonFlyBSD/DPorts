@@ -1,5 +1,5 @@
 # Created by: ada@bsd.org
-# $FreeBSD: games/freeciv/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/freeciv/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	freeciv
 PORTVERSION=	2.3.4
@@ -11,13 +11,12 @@ COMMENT=	Free turn-based multiplayer strategy
 
 RUN_DEPENDS=	hicolor-icon-theme>=0:${PORTSDIR}/misc/hicolor-icon-theme
 
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake iconv pkgconfig
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--with-libiconv-prefix=${PREFIX} --program-transform-name=
+CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} --program-transform-name=
 
 MAN6=		freeciv-server.6 freeciv-client.6 \
 		freeciv-xaw.6 freeciv-sdl.6 freeciv-gtk2.6 \
