@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net/remmina-applet/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/remmina-applet/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	remmina
 PORTVERSION=	0.8.1
@@ -17,7 +17,7 @@ RUN_DEPENDS=	remmina:${PORTSDIR}/net/remmina
 OPTIONS_DEFINE=	AVAHI
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack glib20 gtk20 gnomepanel
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
