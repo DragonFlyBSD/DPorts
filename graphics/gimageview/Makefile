@@ -1,5 +1,5 @@
 # Created by: TATEISHI Katsuyuki <katsu@iec.hiroshima-u.ac.jp>
-# $FreeBSD: graphics/gimageview/Makefile 316624 2013-04-26 16:39:14Z bapt $
+# $FreeBSD: graphics/gimageview/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	gimageview
 PORTVERSION=	0.2.27
@@ -13,7 +13,7 @@ COMMENT=	Yet another GTK+ based image viewer
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
