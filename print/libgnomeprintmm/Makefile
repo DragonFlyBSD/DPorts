@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libgnomeprintmm
-# Date created:				17 December 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/print/libgnomeprintmm/Makefile,v 1.20 2012/11/17 06:00:52 svnexp Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: print/libgnomeprintmm/Makefile 326107 2013-09-02 22:23:53Z bapt $
 
 PORTNAME=	libgnomeprintmm
 PORTVERSION=	2.5.1
@@ -18,6 +14,7 @@ COMMENT=	C++ bindings for the GNOME print support library
 LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
