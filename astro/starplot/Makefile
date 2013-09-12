@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: astro/starplot/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: astro/starplot/Makefile 326092 2013-09-02 21:27:53Z bapt $
 
 PORTNAME=	starplot
 PORTVERSION=	0.95.5
@@ -10,9 +10,8 @@ MASTER_SITES=	http://starplot.org/downloads/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3-dimensional viewer for star charts
 
-USES=        pathfix gettext
+USES=		gmake pathfix gettext pkgconfig
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
