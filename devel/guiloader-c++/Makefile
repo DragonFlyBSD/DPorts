@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/guiloader-c++/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: devel/guiloader-c++/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	guiloader-c++
 PORTVERSION=	2.19.0
@@ -16,7 +16,7 @@ LIB_DEPENDS=	guiloader.1:${PORTSDIR}/devel/guiloader \
 
 PROJECTHOST=	nothing-personal
 USE_BZIP2=	yes
-USES=        pathfix gettext
+USES=		pathfix gettext pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-hidden-visibility
