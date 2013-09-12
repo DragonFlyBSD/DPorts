@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/qcomicbook/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/qcomicbook/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	qcomicbook
 PORTVERSION=	0.9.0
@@ -17,7 +17,7 @@ RUN_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip \
 		unrar:${PORTSDIR}/archivers/unrar
 USE_QT4=	corelib gui linguist_build moc_build qmake_build rcc_build \
 		uic_build xml
-USES=		cmake
+USES=		cmake pkgconfig
 
 PLIST_FILES=	\
 		${DESKTOPDIR:S,^${PREFIX}/,,}/${PORTNAME}.desktop \
