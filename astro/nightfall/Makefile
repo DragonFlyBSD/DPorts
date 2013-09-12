@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: astro/nightfall/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: astro/nightfall/Makefile 325648 2013-08-30 01:15:20Z bapt $
 
 PORTNAME=	nightfall
 PORTVERSION=	1.70
@@ -14,9 +14,8 @@ OPTIONS_DEFINE=	GNOME PGPLOT OPENGL
 OPTIONS_DEFAULT=	PGPLOT OPENGL
 PGPLOT_DESC=	Enable PGPLOT support
 
-USES=        pathfix gettext perl5
+USES=		gmake pathfix gettext perl5
 USE_GNOME=	gnomehier gtk20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
