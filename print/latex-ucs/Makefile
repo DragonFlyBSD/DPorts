@@ -2,7 +2,7 @@
 # Date created:		23 May 2004
 # Whom:			thierry@FreeBSD.org
 #
-# $FreeBSD: print/latex-ucs/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/latex-ucs/Makefile 326272 2013-09-04 13:07:40Z az $
 
 PORTNAME=	latex-ucs
 PORTVERSION=	20041017
@@ -17,7 +17,8 @@ MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package for using UTF-8 as input encoding
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_TEX=	latex
 PLIST_SUB=	MKTEXLSR="${MKTEXLSR}" CLASSDIR=${CLASSDIR}
 
