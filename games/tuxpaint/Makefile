@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxpaint/Makefile 323669 2013-07-25 21:13:59Z bapt $
+# $FreeBSD: games/tuxpaint/Makefile 326190 2013-09-03 18:16:10Z antoine $
 
 PORTNAME=	tuxpaint
 PORTVERSION=	0.9.21
@@ -17,7 +17,7 @@ OPTIONS_DEFINE=	DOCS
 
 USE_GNOME=	librsvg2
 USE_SDL=	image mixer sdl ttf pango
-USES=		gettext gmake
+USES=		gettext gmake pkgconfig
 MAKE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		PREFIX="${PREFIX}" \
@@ -36,7 +36,7 @@ MAN1=		tp-magic-config.1 tuxpaint.1 tuxpaint-import.1
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 INSTALL_TARGET=	install-bin install-data install-man install-magic-plugins \
 		install-magic-plugin-dev install-icon install-gettext \
 		install-im install-importscript install-default-config \
