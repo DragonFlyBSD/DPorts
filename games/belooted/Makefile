@@ -1,9 +1,5 @@
-# New ports collection makefile for:	belooted
-# Date created:				1 August 2007
-# Whom:					Yinghong Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: ports/games/belooted/Makefile,v 1.14 2012/11/17 05:57:32 svnexp Exp $
-#
+# Created by: Yinghong Liu <relaxbsd@gmail.com>
+# $FreeBSD: games/belooted/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	belooted
 PORTVERSION=	0.1.4.1
@@ -17,8 +13,8 @@ COMMENT=	A popular 32-card trick-taking game played in France
 
 LICENSE=	GPLv2
 
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20 desktopfileutils
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
