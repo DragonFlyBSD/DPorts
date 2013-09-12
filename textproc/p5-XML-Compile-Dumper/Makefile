@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Compile-Dumper
-# Date created:		2010-11-23
-# Whom:			Patrick Powell <papowell@astart.com>
-#
-# $FreeBSD: ports/textproc/p5-XML-Compile-Dumper/Makefile,v 1.3 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Patrick Powell <papowell@astart.com>
+# $FreeBSD: textproc/p5-XML-Compile-Dumper/Makefile 326944 2013-09-11 06:49:58Z az $
 
 PORTNAME=	XML-Compile-Dumper
 PORTVERSION=	0.13
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-Data-Dump-Streamer>=2.08:${PORTSDIR}/devel/p5-Data-Dump-Stream
 		p5-XML-LibXML-Simple>=0.13:${PORTSDIR}/textproc/p5-XML-LibXML-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Compile::Dumper.3
 
