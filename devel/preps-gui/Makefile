@@ -1,5 +1,5 @@
 # Created by: shadow@psoft.net
-# $FreeBSD: devel/preps-gui/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: devel/preps-gui/Makefile 326177 2013-09-03 17:06:57Z bapt $
 
 PORTNAME=	preps
 PORTVERSION=	2.0.4
@@ -15,8 +15,7 @@ COMMENT=	Problem reporting system
 
 RUN_DEPENDS=	prepsdb_tool:${PORTSDIR}/devel/prepstools
 
-USE_GMAKE=	yes
-USES=        pathfix
+USES=        pathfix gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk20 gconf2 libgnomeui
 USE_PGSQL=	yes
 INSTALLS_OMF=	yes
