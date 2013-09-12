@@ -1,7 +1,8 @@
-# $FreeBSD: multimedia/py-openlp/Makefile 314740 2013-03-20 15:22:04Z tabthorpe $
+# $FreeBSD: multimedia/py-openlp/Makefile 325854 2013-09-01 12:58:10Z lwhsu $
 
 PORTNAME=	OpenLP
 PORTVERSION=	2.0.1
+PORTREVISION=	1
 CATEGORIES=	multimedia python
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,7 +27,7 @@ RUN_DEPENDS=	py*-beautifulsoup<3.1:${PORTSDIR}/www/py-beautifulsoup30 \
 		py*-qt4-opengl>=0:${PORTSDIR}/x11/py-qt4-opengl \
 		py*-chardet>=0:${PORTSDIR}/textproc/py-chardet \
 		py*-mako>0:${PORTSDIR}/textproc/py-mako \
-		py*-migrate>=0:${PORTSDIR}/databases/py-migrate \
+		${PYTHON_PKGNAMEPREFIX}sqlalchemy-migrate>=0.6.1:${PORTSDIR}/databases/py-sqlalchemy-migrate \
 		py*-sqlite3>=0:${PORTSDIR}/databases/py-sqlite3
 
 PYDISTUTILS_NOEGGINFO=	yes
