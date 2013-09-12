@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/meshviewer/Makefile 314879 2013-03-21 22:08:45Z beech $
+# $FreeBSD: graphics/meshviewer/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	meshviewer
 PORTVERSION=	0.3.3
@@ -15,9 +15,9 @@ LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/mview-${PORTVERSION}
 
+USES=		gmake pkgconfig
 USE_GL=		glu
 USE_QT4=	corelib gui opengl moc_build
-USE_GMAKE=	yes
 CXXFLAGS+=	-I. -Imesh -Imathvector \
 		`pkg-config --cflags QtOpenGL glu`
 LDFLAGS+=	${PTHREAD_LIBS} \
