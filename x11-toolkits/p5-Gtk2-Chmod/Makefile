@@ -2,7 +2,7 @@
 # Date created:		2009-10-19
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2-Chmod/Makefile,v 1.8 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk2-Chmod/Makefile 325959 2013-09-02 09:36:29Z az $
 #
 
 PORTNAME=	Gtk2-Chmod
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-File-Stat-Bits>=0:${PORTSDIR}/sysutils/p5-File-Stat-Bits \
 		p5-Gtk2>=1.060:${PORTSDIR}/x11-toolkits/p5-Gtk2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Gtk2::Chmod.3
 
