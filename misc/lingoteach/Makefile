@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lingoteach
-# Date created:        01 September 2002
-# Whom:                Marcus von Appen
-#
-# $FreeBSD: ports/misc/lingoteach/Makefile,v 1.30 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: Marcus von Appen
+# $FreeBSD: misc/lingoteach/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	lingoteach
 PORTVERSION=	0.3.9
@@ -24,7 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-ui-${PORTVERSION}
 
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
