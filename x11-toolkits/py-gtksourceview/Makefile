@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.16 2012/12/31 17:09:13 svnexp Exp $
+# $FreeBSD: x11-toolkits/py-gtksourceview/Makefile 326129 2013-09-03 08:49:46Z bapt $
 #   $MCom: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.24 2010/04/19 11:30:28 kwm Exp $
 
 PORTNAME=	gtksourceview
@@ -13,8 +13,8 @@ DISTNAME=	pygtksourceview-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A python bindings for the version 2 of the GtkSourceView library
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix gtksourceview2 pygtk2
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
