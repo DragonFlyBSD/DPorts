@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bmp-song_change
-# Date created:				27 January, 2005
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/bmp-songchange/Makefile,v 1.20 2012/11/17 05:54:29 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: audio/bmp-songchange/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	bmp-songchange
 PORTVERSION=	0.0.2
@@ -18,6 +14,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	beep.2:${PORTSDIR}/multimedia/beep-media-player
+
+USES=		pkgconfig
 
 GNU_CONFIGURE=	yes
 
