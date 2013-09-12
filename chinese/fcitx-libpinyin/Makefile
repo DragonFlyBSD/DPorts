@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-libpinyin/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: chinese/fcitx-libpinyin/Makefile 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	fcitx-libpinyin
 PORTVERSION=	0.2.1
@@ -18,7 +18,7 @@ LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
 
 USE_LDCONFIG=	${PREFIX}/lib/fcitx/
 USE_XZ=		yes
-USES=		cmake gettext
+USES=		cmake gettext pkgconfig
 USE_GNOME=	intltool
 INSTALLS_ICONS=	yes
 
