@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11-toolkits/nucleo/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: x11-toolkits/nucleo/Makefile 326422 2013-09-05 17:37:22Z antoine $
 
 PORTNAME=	nucleo
 PORTVERSION=	0.7.6
@@ -18,7 +18,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 		exif:${PORTSDIR}/graphics/libexif
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GL=		glu
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
