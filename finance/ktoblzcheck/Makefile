@@ -1,8 +1,8 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: finance/ktoblzcheck/Makefile 326388 2013-09-05 11:39:11Z bapt $
+# $FreeBSD: finance/ktoblzcheck/Makefile 327023 2013-09-12 01:11:24Z jhale $
 
 PORTNAME=	ktoblzcheck
-PORTVERSION=	1.40
+PORTVERSION=	1.43
 CATEGORIES=	finance german
 MASTER_SITES=	SF/${PORTNAME}
 
