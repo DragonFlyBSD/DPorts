@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/deskbar-applet/Makefile 322551 2013-07-09 09:03:45Z bapt $
+# $FreeBSD: deskutils/deskbar-applet/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #   $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.116 2010/09/27 19:36:13 kwm Exp $
 
 PORTNAME=	deskbar-applet
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
 
 USE_BZIP2=	yes
-USES=		pathfix gettext gmake
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix pygnomedesktop intlhack
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
