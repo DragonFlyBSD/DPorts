@@ -1,5 +1,5 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/gtkam/Makefile 322581 2013-07-09 21:26:48Z pav $
+# $FreeBSD: graphics/gtkam/Makefile 326111 2013-09-02 22:50:21Z bapt $
 
 PORTNAME=	gtkam
 PORTVERSION=	0.1.18
@@ -14,7 +14,7 @@ LIB_DEPENDS=	exif-gtk:${PORTSDIR}/graphics/libexif-gtk \
 		gphoto2.2:${PORTSDIR}/graphics/libgphoto2
 
 WANT_GNOME=	yes
-USES=        pathfix
+USES=        pathfix pkgconfig
 USE_GNOME=	gnomehier gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
