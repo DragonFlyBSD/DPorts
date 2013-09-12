@@ -2,7 +2,7 @@
 # Date created:				15 Aug 2004
 # Whom:					Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/nvidia-settings/Makefile,v 1.62 2012/11/17 06:03:18 svnexp Exp $
+# $FreeBSD: x11/nvidia-settings/Makefile 326343 2013-09-05 05:24:24Z antoine $
 #
 
 PORTNAME=	nvidia-settings
@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GL=		gl
 USE_XORG=	xv xext
 
