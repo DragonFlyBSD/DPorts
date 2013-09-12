@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: editors/gedit-plugins/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: editors/gedit-plugins/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $MCom: ports/editors/gedit-plugins/Makefile,v 1.48 2010/10/29 14:47:24 kwm Exp $
 
 PORTNAME=	gedit-plugins
@@ -21,9 +21,8 @@ CONFLICTS=	gedit-plugins-3.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack gnomevfs2
 WANT_GNOME=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
