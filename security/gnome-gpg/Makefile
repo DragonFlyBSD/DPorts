@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gnome-gpg
-# Date created:		2006-09-02
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/security/gnome-gpg/Makefile,v 1.12 2012/11/17 06:01:04 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: security/gnome-gpg/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #    $MCom: ports/security/gnome-gpg/Makefile,v 1.1 2006/09/02 15:20:58 ahze Exp $
 
 PORTNAME=	gnome-gpg
@@ -18,6 +15,7 @@ BUILD_DEPENDS=	gpgv:${PORTSDIR}/security/gnupg1
 LIB_DEPENDS=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 RUN_DEPENDS=	gpgv:${PORTSDIR}/security/gnupg1
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	libgnomeui
