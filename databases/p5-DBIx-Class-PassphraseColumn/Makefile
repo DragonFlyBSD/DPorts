@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/p5-DBIx-Class-PassphraseColumn/Makefile,v 1.1 2013/01/05 06:48:11 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Class-PassphraseColumn/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	DBIx-Class-PassphraseColumn
 PORTVERSION=	0.02
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-DBIx-Class-DynamicDefault>=0.03:${PORTSDIR}/databases/p5-DBIx-Cl
 		p5-DBIx-Class>=0.08009:${PORTSDIR}/databases/p5-DBIx-Class
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::PassphraseColumn.3
 
