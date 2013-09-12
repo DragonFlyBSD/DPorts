@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: sysutils/py-pytsk/Makefile 325484 2013-08-27 20:08:40Z antoine $
+# $FreeBSD: sysutils/py-pytsk/Makefile 327005 2013-09-11 19:31:03Z antoine $
 
 PORTNAME=	pytsk
-DISTVERSION=	2013-08-26
+DISTVERSION=	2013-09-10
 CATEGORIES=	sysutils security devel python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
