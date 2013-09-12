@@ -1,8 +1,9 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: math/labplot/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/labplot/Makefile 325401 2013-08-26 16:06:37Z bf $
 
 PORTNAME=	labplot
 DISTVERSION=	2.0.0.alpha3
+PORTREVISION=	1
 CATEGORIES=	math kde
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}
 
