@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: chinese/ibus-pinyin/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: chinese/ibus-pinyin/Makefile 326491 2013-09-06 12:12:00Z bapt $
 
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.4.0
@@ -21,7 +21,7 @@ USE_PYTHON=	yes
 USE_GNOME=	pygtk2
 
 USE_GCC=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking --disable-lua-extension
 
