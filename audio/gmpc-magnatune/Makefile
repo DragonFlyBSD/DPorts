@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmpc-magnatune
-# Date created:		September 14 2007
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: audio/gmpc-magnatune/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: audio/gmpc-magnatune/Makefile 325727 2013-08-30 23:01:05Z bapt $
 
 PORTNAME=	gmpc-magnatune
 PORTVERSION=	11.8.16
@@ -20,8 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gmpc.pc:${PORTSDIR}/audio/gmpc
 RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	pkgconfig intltool glib20 gtk20 libglade2
-USES=		gettext
+USE_GNOME=	intltool glib20 gtk20 libglade2
+USES=		gettext gmake pkgconfig
 
 .include <bsd.port.mk>
