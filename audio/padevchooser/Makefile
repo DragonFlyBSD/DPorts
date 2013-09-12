@@ -1,9 +1,5 @@
-# Ports collection Makefile for: padevchooser
-# Date created:                  July 21, 2007
-# Whom:                          Romain Tartière <romain@blogreen.org>
-#
-# $FreeBSD: ports/audio/padevchooser/Makefile,v 1.9 2012/11/17 05:54:41 svnexp Exp $
-#
+# Created by: Romain Tartière <romain@blogreen.org>
+# $FreeBSD: audio/padevchooser/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	padevchooser
 PORTVERSION=	0.9.3
@@ -21,7 +17,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 RUN_DEPENDES=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 CONFIGURE_ARGS=	--disable-lynx
 
