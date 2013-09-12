@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ibus-anthy
-# Date created:				30 Apr 2009
-# Whom:					Daichi GOTO <daichi@freebsd.org>
-#
-# $FreeBSD: japanese/ibus-anthy/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Daichi GOTO <daichi@freebsd.org>
+# $FreeBSD: japanese/ibus-anthy/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	ibus-anthy
 PORTVERSION=	1.2.7
@@ -23,8 +19,7 @@ LIB_DEPENDS=	anthy.1:${PORTSDIR}/japanese/anthy \
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/pynotify/_pynotify.so:${PORTSDIR}/devel/py-notify
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_PYTHON=	yes
 USE_GNOME=	pygtk2
 
