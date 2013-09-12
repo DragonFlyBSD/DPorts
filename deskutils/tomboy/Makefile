@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: deskutils/tomboy/Makefile 323769 2013-07-27 00:00:00Z marino $
+# $FreeBSD: deskutils/tomboy/Makefile 326447 2013-09-05 20:49:55Z antoine $
 
 PORTNAME=	tomboy
 PORTVERSION=	1.12.2
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/m
 		mautil:${PORTSDIR}/devel/mono-addins
 
 USE_XZ=		yes
-USES=		gettext gmake
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomehack intlhack gnomeprefix gnomedesktopsharp20
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
