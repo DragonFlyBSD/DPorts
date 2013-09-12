@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pidgin-fetion
-# Date created:				17 October 2008
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: net-im/pidgin-fetion/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: net-im/pidgin-fetion/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	fetion
 PORTVERSION=	0.98.5.2
@@ -18,9 +14,9 @@ COMMENT=	Fetion protocol plugin for libpurple
 
 LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple
 
-
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
