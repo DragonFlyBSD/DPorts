@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@gahr.ch>
-# $FreeBSD: graphics/separate/Makefile 314547 2013-03-18 09:46:49Z kwm $
+# $FreeBSD: graphics/separate/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	separate
 PORTVERSION=	0.5.8
@@ -18,7 +18,7 @@ LIB_DEPENDS=	lcms.1:${PORTSDIR}/graphics/lcms \
 		gimp-2.0:${PORTSDIR}/graphics/gimp-app
 
 USE_ZIP=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 BIN_TARGETS=	separate separate_import icc_colorspace
 L10N_TARGETS=	cs es fr ja ko pl ru
