@@ -2,7 +2,7 @@
 # Date created:		26 Feb 2006
 # Whom:			Xin LI <delphij@FreeBSD.org>
 #
-# $FreeBSD: chinese/docproj/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: chinese/docproj/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #
 # This port is self contained in the src directory.
 #
@@ -33,5 +33,9 @@ do-fetch:
 
 pre-patch:
 	@${CP} -R ${SRC} ${WRKDIR}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/-liconv/${ICONV_LIB}/' \
+		${WRKSRC}/cjktexsty/Makefile
 
 .include <bsd.port.mk>
