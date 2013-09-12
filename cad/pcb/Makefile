@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/pcb/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: cad/pcb/Makefile 326316 2013-09-04 20:01:05Z bsam $
 
 PORTNAME=	pcb
 PORTVERSION=	20110918
@@ -19,7 +19,7 @@ RUN_DEPENDS=	m4>=1.4.11:${PORTSDIR}/devel/m4 \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USE_AUTOTOOLS=	autoconf
-USES=		gmake
+USES=		gmake pkgconfig
 USE_TK_RUN=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
@@ -45,7 +45,7 @@ NONE_DESC=	No GUI support
 .if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+= \
 	--enable-nls \
-	--with-libiconv-prefix=${LOCALBASE} \
+	${ICONV_CONFIGURE_ARG} \
 	--with-libintl-prefix=${LOCALBASE}
 USES+=		gettext iconv
 .for L in fr nl ru
