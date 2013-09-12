@@ -1,5 +1,5 @@
 # Created by: Dave McKay <dave@mu.org>
-# $FreeBSD: security/seahorse-plugins/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/seahorse-plugins/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #   $MCom: ports/security/seahorse-plugins/Makefile,v 1.28 2011/07/03 11:57:45 kwm Exp $
 
 PORTNAME=	seahorse-plugins
@@ -16,8 +16,7 @@ LIB_DEPENDS=	cryptui:${PORTSDIR}/security/seahorse \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	intlhack gnomeprefix gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
