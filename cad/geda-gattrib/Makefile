@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/geda-gattrib/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: cad/geda-gattrib/Makefile 326113 2013-09-02 22:58:16Z bapt $
 
 PORTNAME=	gattrib
 PORTVERSION=	1.4.3
@@ -21,6 +21,7 @@ DATADIR=	${PREFIX}/share/geda
 DOCSDIR=	${PREFIX}/share/doc/geda
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	gtk20 glib20
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
