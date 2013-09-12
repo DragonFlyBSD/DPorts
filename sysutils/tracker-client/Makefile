@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/tracker-client/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/tracker-client/Makefile 326133 2013-09-03 10:23:55Z bapt $
 #   $MCom: ports/sysutils/tracker-client/Makefile,v 1.14 2010/05/10 04:21:19 marcus Exp $
 
 PORTNAME=	tracker
@@ -35,8 +35,7 @@ USE_FAM=	yes
 WANT_FAM_SYSTEM=gamin
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomehack gnomeprefix ltasneededhack intltool ltverhack
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	core
 INSTALLS_ICONS=	yes
