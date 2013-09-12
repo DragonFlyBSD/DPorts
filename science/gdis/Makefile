@@ -1,5 +1,5 @@
 # Created y: ijliao
-# $FreeBSD: science/gdis/Makefile 323710 2013-07-26 09:46:53Z bapt $
+# $FreeBSD: science/gdis/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	gdis
 PORTVERSION=	0.90
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	DOCS
 
 USE_GL=		glu
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 MAKEFILE=	GNUmakefile
 
 PORTDOCS=	CHANGELOG README TODO
