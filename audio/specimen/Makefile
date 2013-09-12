@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/specimen/Makefile 323648 2013-07-25 15:08:14Z marino $
+# $FreeBSD: audio/specimen/Makefile 325725 2013-08-30 22:31:38Z bapt $
 
 PORTNAME=	specimen
 DISTVERSION=	0.5.2-rc3
@@ -21,8 +21,8 @@ LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
 		sndfile:${PORTSDIR}/audio/libsndfile \
 		phat:${PORTSDIR}/x11-toolkits/phat
 
+USES=		pkgconfig gmake
 USE_GNOME=	libgnomecanvas libxml2
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-lm
 
