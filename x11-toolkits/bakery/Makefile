@@ -1,8 +1,5 @@
-# New ports collection makefile for:	bakery
-# Date created:				12th September 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: x11-toolkits/bakery/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: x11-toolkits/bakery/Makefile 326129 2013-09-03 08:49:46Z bapt $
 #   $MCom: ports/x11-toolkits/bakery/Makefile,v 1.16 2009/01/09 22:07:11 kwm Exp $
 #
 
@@ -22,8 +19,7 @@ LIB_DEPENDS=	gconfmm-2.6:${PORTSDIR}/devel/gconfmm26 \
 
 USE_GNOME=	gnomehack gnomeprefix intlhack ltverhack
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
