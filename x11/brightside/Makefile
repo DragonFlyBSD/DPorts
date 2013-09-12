@@ -1,9 +1,5 @@
-# New ports collection makefile for:   brightide
-# Date created:        02 July 2004
-# Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/brightside/Makefile,v 1.22 2012/11/17 06:03:14 svnexp Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: x11/brightside/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	brightside
 PORTVERSION=	1.4.0
@@ -14,9 +10,9 @@ MASTER_SITES=	LOCAL/marcus
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	A tool to add reactivity to the edges and corners of the GNOME desktop
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_XORG=	x11 xt
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack libwnck libgnomeui
 CONFIGURE_ARGS=	--enable-tray-icon
