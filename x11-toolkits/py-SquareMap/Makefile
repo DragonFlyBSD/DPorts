@@ -1,8 +1,8 @@
 # Created by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-SquareMap/Makefile 320754 2013-06-13 11:13:57Z sbz $
+# $FreeBSD: x11-toolkits/py-SquareMap/Makefile 325423 2013-08-26 23:33:37Z sbz $
 
 PORTNAME=	SquareMap
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
