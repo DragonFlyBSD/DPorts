@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: graphics/pqiv/Makefile 321130 2013-06-17 15:24:17Z miwi $
+# $FreeBSD: graphics/pqiv/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	pqiv
 PORTVERSION=	0.12
@@ -27,6 +27,7 @@ GH_ACCOUNT=	phillipberndt
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 USE_CSTD=	gnu89
@@ -36,8 +37,8 @@ MAN1=		pqiv.1
 PORTDOCS=	README.markdown
 PLIST_FILES=	bin/pqiv
 
-CPPFLAGS+=	$$(${pkgconfig_DETECT} --cflags gtk+-2.0 gthread-2.0)
-LDFLAGS+=	$$(${pkgconfig_DETECT} --libs gtk+-2.0 gthread-2.0)
+CPPFLAGS+=	`pkg-config --cflags gtk+-2.0 gthread-2.0`
+LDFLAGS+=	`pkg-config --libs gtk+-2.0 gthread-2.0`
 
 .include <bsd.port.options.mk>
 
