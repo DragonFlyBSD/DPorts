@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: editors/leafpad/Makefile 323325 2013-07-19 18:36:42Z jgh $
+# $FreeBSD: editors/leafpad/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	leafpad
 PORTVERSION=	0.8.18.1
@@ -12,7 +12,7 @@ MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	GTK+ based simple text editor
 
 USE_GNOME=	gtk20 intlhack
-USES=		desktop-file-utils gmake
+USES=		desktop-file-utils gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-chooser
 INSTALLS_ICONS=	yes
