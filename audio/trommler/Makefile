@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: ports/audio/trommler/Makefile,v 1.16 2013/02/26 17:34:43 svnexp Exp $
+# $FreeBSD: audio/trommler/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	trommler
 PORTVERSION=	3.8
@@ -13,7 +13,7 @@ COMMENT=	GTK+2 based drum machine
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 
 WRKSRC=		${WRKDIR}/Trommler

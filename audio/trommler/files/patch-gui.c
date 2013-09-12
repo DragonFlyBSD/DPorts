@@ -1,4 +1,4 @@
-$FreeBSD: ports/audio/trommler/files/patch-gui.c,v 1.2 2012/11/17 05:54:46 svnexp Exp $
+$FreeBSD: audio/trommler/files/patch-gui.c 300895 2012-07-14 12:56:14Z beat $
 
 --- gui.c.orig	Thu Feb 20 15:43:08 2003
 +++ gui.c	Thu Feb 20 15:43:21 2003
