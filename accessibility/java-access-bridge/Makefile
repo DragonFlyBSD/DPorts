@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/accessibility/java-access-bridge/Makefile,v 1.14 2012/12/10 13:24:54 svnexp Exp $
+# $FreeBSD: accessibility/java-access-bridge/Makefile 326491 2013-09-06 12:12:00Z bapt $
 #    $MCom: ports/accessibility/java-access-bridge/Makefile,v 1.2 2007/03/06 14:03:02 ahze Exp $
 
 PORTNAME=	java-access-bridge
@@ -15,12 +15,12 @@ COMMENT=	Gnome Java Accessibility Bridge
 BUILD_DEPENDS=	xprop:${PORTSDIR}/x11/xprop
 RUN_DEPENDS=	xprop:${PORTSDIR}/x11/xprop
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	atspi gnomehack
 USE_JAVA=	yes
 JAVA_OS=	native
-USE_GMAKE=	yes
 CONFIGURE_ARGS=	--without-gcj-compile --with-jardir=${JAVAJARDIR}
 MAKE_JOBS_UNSAFE=	yes
 
