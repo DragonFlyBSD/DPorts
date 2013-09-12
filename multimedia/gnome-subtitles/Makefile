@@ -1,5 +1,5 @@
 # Created by: Marcin Simonides <marcin@studio4plus.com>
-# $FreeBSD: multimedia/gnome-subtitles/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: multimedia/gnome-subtitles/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	gnome-subtitles
 PORTVERSION=	1.2
@@ -17,7 +17,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gtksharp20 gnomesharp20 gnomedocutils
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
