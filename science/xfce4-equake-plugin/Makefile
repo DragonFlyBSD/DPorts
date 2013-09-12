@@ -1,12 +1,12 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: science/xfce4-equake-plugin/Makefile 324169 2013-08-02 17:34:39Z olivierd $
+# $FreeBSD: science/xfce4-equake-plugin/Makefile 326984 2013-09-11 15:04:45Z olivierd $
 #
 
 PORTNAME=	xfce4-equake-plugin
-PORTVERSION=	1.3.2
-PORTREVISION=	1
+PORTVERSION=	1.3.3
 CATEGORIES=	science xfce
-MASTER_SITES=	http://www.e-quake.org/wp-uploads/2013/07/
+MASTER_SITES=	http://www.e-quake.org/%SUBDIR%/
+MASTER_SITE_SUBDIR=	wp-uploads/2013/09
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
