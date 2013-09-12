@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnome-main-menu
-# Date created:				06 July 2008
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: deskutils/gnome-main-menu/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: deskutils/gnome-main-menu/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	gnome-main-menu
 PORTVERSION=	0.9.12
@@ -20,8 +16,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomepanel intlhack eel2 gnomedesktop \
 		libgnomeui
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="`pkg-config --libs libgnomeui-2.0`"
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
