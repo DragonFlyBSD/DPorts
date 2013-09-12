@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xzgv
-# Date created:				7 Oct 2000
-# Whom:					Norio Suzuki <nosuzuki@e-mail.ne.jp>
-#
-# $FreeBSD: ports/graphics/xzgv/Makefile,v 1.30 2012/11/17 05:58:26 svnexp Exp $
-#
+# Created by: Norio Suzuki <nosuzuki@e-mail.ne.jp>
+# $FreeBSD: graphics/xzgv/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	xzgv
 PORTVERSION=	0.9
@@ -16,8 +12,8 @@ COMMENT=	An image viewer with thumbnail-based file selector for X
 
 BUILD_DEPENDS=  gawk:${PORTSDIR}/lang/gawk
 
+USES=		gmake pkgconfig
 USE_GNOME=	imlib gdkpixbuf gtk20
-USE_GMAKE=	yes
 
 MAN1=		xzgv.1
 PLIST_FILES=	bin/xzgv
