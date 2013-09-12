@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-haze/Makefile 313986 2013-03-12 17:15:50Z kwm $
+# $FreeBSD: net-im/telepathy-haze/Makefile 326513 2013-09-06 15:28:27Z bapt $
 #   $MCom: ports/net-im/telepathy-haze/Makefile,v 1.7 2012/06/13 00:59:50 mezz Exp $
 
 PORTNAME=	telepathy-haze
@@ -17,7 +17,7 @@ LIB_DEPENDS=	purple:${PORTSDIR}/net-im/libpurple \
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 MAN8=		telepathy-haze.8
 
