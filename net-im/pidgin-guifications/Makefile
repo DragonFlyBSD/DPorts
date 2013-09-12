@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: net-im/pidgin-guifications/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: net-im/pidgin-guifications/Makefile 326513 2013-09-06 15:28:27Z bapt $
 
 PORTNAME=	pidgin-guifications
 PORTVERSION=	2.16
@@ -14,8 +14,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/pidgin/pidgin.h:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=        pathfix gettext
+USES=        pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
