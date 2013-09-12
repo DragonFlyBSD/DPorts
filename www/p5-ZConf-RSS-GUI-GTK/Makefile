@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: www/p5-ZConf-RSS-GUI-GTK/Makefile 320567 2013-06-11 14:41:30Z miwi $
+# $FreeBSD: www/p5-ZConf-RSS-GUI-GTK/Makefile 326053 2013-09-02 18:23:34Z az $
 
 PORTNAME=	ZConf-RSS-GUI-GTK
 PORTVERSION=	0.0.1
@@ -15,7 +15,8 @@ COMMENT=	Provides a GTK backend for ZConf::RSS::GUI
 RUN_DEPENDS=	p5-ZConf-RSS>=0:${PORTSDIR}/www/p5-ZConf-RSS \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZConf::RSS::GUI::GTK.3
 
