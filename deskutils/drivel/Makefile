@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: deskutils/drivel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/drivel/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	drivel
 PORTVERSION=	3.0.5
@@ -18,7 +18,7 @@ OPTIONS_DEFAULT=	GTKSPELL
 GTKSPELL_DESC=	Enable GtkSpell support
 
 USE_BZIP2=	yes
-USES=		desktop-file-utils gettext gmake shared-mime-info
+USES=		desktop-file-utils gettext gmake shared-mime-info pkgconfig
 USE_GNOME=	gconf2 gnomedocutils gnomevfs2 gtksourceview2
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-error-on-warning
