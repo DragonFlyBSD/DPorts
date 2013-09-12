@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: graphics/pornview/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: graphics/pornview/Makefile 326921 2013-09-10 17:39:41Z bapt $
 
 PORTNAME=	pornview
 PORTVERSION=	0.2.0.p.1
@@ -16,6 +16,7 @@ LIB_DEPENDS=	exif:${PORTSDIR}/graphics/libexif \
 		xcb-render-util:${PORTSDIR}/x11/xcb-util-renderutil
 
 USE_XORG=	x11 xi xext xinerama
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk2
