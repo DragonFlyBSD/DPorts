@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox/Makefile 324842 2013-08-17 13:17:58Z flo $
+# $FreeBSD: www/firefox/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	firefox
 DISTVERSION=	23.0.1
@@ -33,7 +33,7 @@ QT_NONSTANDARD=	yes
 ALL_TARGET=	default
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GL=		gl
 USE_DOS2UNIX=	media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
 NO_MOZPKGINSTALL=yes
