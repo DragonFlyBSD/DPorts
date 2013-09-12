@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: archivers/file-roller/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: archivers/file-roller/Makefile 326137 2013-09-03 12:13:23Z bapt $
 #   $MCom: ports/archivers/file-roller/Makefile,v 1.184 2010/11/15 22:58:48 kwm Exp $
 
 PORTNAME=	file-roller
@@ -18,10 +18,9 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gnomedocutils \
 		gtk20 gconf2
 GNOME_DESKTOP_VERSION=2
