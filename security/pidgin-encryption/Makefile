@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/pidgin-encryption/Makefile 317496 2013-05-06 09:39:25Z bapt $
+# $FreeBSD: security/pidgin-encryption/Makefile 326504 2013-09-06 14:23:20Z bapt $
 
 PORTNAME=	pidgin
 PORTVERSION=	3.1
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/pidgin:${PORTSDIR}/net-im/pidgin
 LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple \
 		nss3:${PORTSDIR}/security/nss
 
-USE_GMAKE=	yes
 USE_GNOME=	gtk20
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
