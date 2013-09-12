@@ -1,10 +1,6 @@
-# New ports collection makefile for:    libglademm
-# Date created:         22 May 2003
-# Whom:                 Alexander Nedotsukov <bland@mail.ru>
-#
-# $FreeBSD: ports/devel/libglademm24/Makefile,v 1.36 2012/11/17 05:55:54 svnexp Exp $
+# Created by: Alexander Nedotsukov <bland@mail.ru>
+# $FreeBSD: devel/libglademm24/Makefile 326122 2013-09-03 06:36:41Z bapt $
 #   $MCom: ports/devel/libglademm24/Makefile,v 1.10 2008/09/22 11:42:53 kwm Exp $
-#
 
 PORTNAME=	libglademm
 PORTVERSION=	2.6.7
@@ -23,7 +19,7 @@ LATEST_LINK=	libglademm24
 
 USE_BZIP2=	yes
 USE_XORG=	x11 ice
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	gnomehack libglade2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
