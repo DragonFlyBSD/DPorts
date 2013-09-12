@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/gtkhtml3/Makefile 317508 2013-05-06 11:13:56Z kwm $
+# $FreeBSD: www/gtkhtml3/Makefile 326103 2013-09-02 22:03:38Z bapt $
 #   $MCom: ports/www/gtkhtml3/Makefile,v 1.184 2012/08/17 19:06:47 kwm Exp $
 
 PORTNAME=	gtkhtml3
@@ -21,7 +21,7 @@ LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
-USES=		gettext
+USES=		gettext pkgconfig
 USE_BZIP2=	yes
 USE_XORG=	xinerama xi xrandr xcursor xcomposite xdamage
 USE_GMAKE=	yes
