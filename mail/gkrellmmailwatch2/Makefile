@@ -1,5 +1,5 @@
 # Created by:			Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/mail/gkrellmmailwatch2/Makefile,v 1.21 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: mail/gkrellmmailwatch2/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gkrellmmailwatch
 PORTVERSION=	2.4.3
@@ -18,7 +18,7 @@ RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
 WRKSRC=		${WRKDIR}/gkrellm-mailwatch
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 
 MAKE_ENV+=	PLUGIN_DIR=${PREFIX}/libexec/gkrellm2/plugins
