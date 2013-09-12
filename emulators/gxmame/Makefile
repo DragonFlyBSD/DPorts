@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: emulators/gxmame/Makefile 317474 2013-05-06 07:01:48Z bapt $
+# $FreeBSD: emulators/gxmame/Makefile 326373 2013-09-05 09:15:49Z bapt $
 
 PORTNAME=	gxmame
 DISTVERSION=	0.35beta2
@@ -15,9 +15,8 @@ COMMENT=	GXmame is a GTK frontend for xmame
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 RUN_DEPENDS=	xmame:${PORTSDIR}/emulators/xmame
 
-USES=		pathfix
+USES=		pathfix gmake pkgconfig
 USE_GNOME=	gtk20 intlhack gnomeprefix
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
