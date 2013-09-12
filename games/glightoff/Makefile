@@ -1,5 +1,5 @@
-# Created by:			nemysis@gmx.ch
-# $FreeBSD: games/glightoff/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: games/glightoff/Makefile 326090 2013-09-02 21:16:30Z bapt $
 
 PORTNAME=	glightoff
 PORTVERSION=	1.0.0
@@ -13,7 +13,7 @@ COMMENT=	Simple (but not so easy to solve!) puzzle game
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	glib20 gtk20
 USE_XORG=	x11
 
