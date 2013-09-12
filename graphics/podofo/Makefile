@@ -1,8 +1,9 @@
 # Created by: stas
-# $FreeBSD: graphics/podofo/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: graphics/podofo/Makefile 327014 2013-09-11 21:55:49Z madpilot $
 
 PORTNAME=	podofo
 PORTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}
 
