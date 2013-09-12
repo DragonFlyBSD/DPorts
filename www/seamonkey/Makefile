@@ -1,5 +1,5 @@
 # Created by: eivind/dima/jseger
-# $FreeBSD: www/seamonkey/Makefile 324838 2013-08-17 10:43:22Z flo $
+# $FreeBSD: www/seamonkey/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	seamonkey
 DISTVERSION=	2.20
@@ -25,7 +25,7 @@ USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
 OBJDIR_BUILD=	# in-tree build broken after bug 789837
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GECKO=	gecko
 WANT_GNOME=	yes
 USE_QT4=	# empty
