@@ -1,7 +1,7 @@
-# $FreeBSD: devel/fossil/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/fossil/Makefile 327034 2013-09-12 06:19:31Z bapt $
 
 PORTNAME=	fossil
-PORTVERSION=	20130618210923
+PORTVERSION=	20130911114349
 PORTEPOCH=	1
 CATEGORIES=	devel www
 MASTER_SITES=	http://www.fossil-scm.org/download/
