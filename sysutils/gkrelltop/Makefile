@@ -1,5 +1,5 @@
 # Whom: David Gardner
-# $FreeBSD: sysutils/gkrelltop/Makefile 323756 2013-07-26 22:02:09Z marino $
+# $FreeBSD: sysutils/gkrelltop/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gkrelltop
 PORTVERSION=	2.2.10
@@ -13,7 +13,7 @@ COMMENT=	Plugin for gkrellm 2.x shows top three processes, requires procfs
 RUN_DEPENDS=	gkrellmd:${PORTSDIR}/sysutils/gkrellm2
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-USES=		gmake
+USES=		gmake pkgconfig
 MAKE_ARGS=	INSTALLDIR=${LOCALBASE}/libexec/gkrellm2/plugins \
 		INSTALLDIRD=${PREFIX}/libexec/gkrellm2/plugins-gkrellmd
 
