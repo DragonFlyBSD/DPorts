@@ -1,5 +1,5 @@
 # Created by: dbader@ece.unm.edu
-# $FreeBSD: net/mpich2/Makefile 319824 2013-06-04 06:34:05Z bapt $
+# $FreeBSD: net/mpich2/Makefile 325749 2013-08-31 00:26:08Z bapt $
 
 PORTNAME=	mpich2
 DISTVERSION=	1.3.2p1
@@ -23,16 +23,16 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 GNU_CONFIGURE=	yes
 USE_FORTRAN=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig perl5
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_PYTHON=	yes
 
 OPTIONS_DEFINE_i386=	JAVA
 OPTIONS_DEFINE_x86_64=	JAVA
 OPTIONS_DEFINE=	SMPD X11 DOCS
 OPTIONS_DEFAULT_i386=	JAVA
-OPTIONS_DEFAULT_amd64=	JAVA
+OPTIONS_DEFAULT_x86_64=	JAVA
 OPTIONS_DEFAULT=	X11
 JAVA_DESC=	build MPE Jumpshot-4
 SMPD_DESC=	use SMPD instead of MPD, for a mixed-OS cluster
