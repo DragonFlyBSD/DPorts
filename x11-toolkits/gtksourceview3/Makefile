@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtksourceview3/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11-toolkits/gtksourceview3/Makefile 326049 2013-09-02 18:14:45Z bapt $
 #   $MCom: ports/x11-toolkits/gtksourceview3/Makefile,v 1.21 2012/05/31 11:57:38 kwm Exp $
 
 PORTNAME=	gtksourceview
@@ -17,10 +17,9 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk30 libxml2 intlhack ltverhack referencehack
 CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
 		--enable-introspection
