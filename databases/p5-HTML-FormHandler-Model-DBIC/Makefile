@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-FormHandler-Model-DBIC
-# Date created:		2010-02-02
-# Whom:			Vladimir Timofeev <vovkasm@gmail.com>
-#
-# $FreeBSD: ports/databases/p5-HTML-FormHandler-Model-DBIC/Makefile,v 1.9 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Vladimir Timofeev <vovkasm@gmail.com>
+# $FreeBSD: databases/p5-HTML-FormHandler-Model-DBIC/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	HTML-FormHandler-Model-DBIC
 PORTVERSION=	0.19
@@ -25,7 +21,8 @@ TEST_DEPENDS=	p5-DateTime-Format-MySQL>0:${PORTSDIR}/devel/p5-DateTime-Format-My
 		p5-DateTime-Format-SQLite>0:${PORTSDIR}/devel/p5-DateTime-Format-SQLite \
 		p5-DateTime-Format-W3CDTF>0:${PORTSDIR}/devel/p5-DateTime-Format-W3CDTF
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	form_generator.pl.1
 
