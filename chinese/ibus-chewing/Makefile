@@ -1,5 +1,5 @@
 # Created by: Eric L. Camachat <eric@camachat.org>
-# $FreeBSD: chinese/ibus-chewing/Makefile 321831 2013-06-27 01:48:13Z clsung $
+# $FreeBSD: chinese/ibus-chewing/Makefile 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	ibus-chewing
 PORTVERSION=	1.4.3
@@ -22,7 +22,7 @@ LIB_DEPENDS=	chewing:${PORTSDIR}/chinese/libchewing
 CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PREFIX}/etc \
 		-DLIB_DIR=${PREFIX}/lib
 GCONF_SCHEMAS=	${PORTNAME}.schemas
-USES=		cmake gettext
+USES=		cmake gettext pkgconfig
 USE_GNOME=	gconf2 gtk20
 USE_XORG=	xtst
 
