@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Role-Tiny/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Role-Tiny/Makefile 326913 2013-09-10 15:58:51Z sunpoet $
 
 PORTNAME=	Role-Tiny
-PORTVERSION=	1.003.001
+PORTVERSION=	1.003.002
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:HAARG
