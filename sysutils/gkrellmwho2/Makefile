@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gkrellmwho2
-# Date created:        	12 Nov 2003
-# Whom:            	Alexey Zaytsev
-#
-# $FreeBSD: ports/sysutils/gkrellmwho2/Makefile,v 1.16 2012/11/17 06:01:33 svnexp Exp $
-#
+# Created by: Alexey Zaytsev
+# $FreeBSD: sysutils/gkrellmwho2/Makefile 326426 2013-09-05 17:53:17Z tabthorpe $
 
 PORTNAME=	gkrellmwho2
 PORTVERSION=	0.2.8
@@ -13,7 +9,7 @@ MASTER_SITES=	http://shisha.spb.ru/ \
 		http://users.podolsk.ru/c104598/
 DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
-MAINTAINER=	mangoost@inetcomm.ru
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Displays logged in users
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
@@ -21,6 +17,7 @@ RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
 HAS_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.orig
+USES=		pkgconfig
 
 ALL_TARGET=
 PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmwho2.so
