@@ -1,8 +1,5 @@
-# New ports collection makefile for:   senken
-# Date created:        15 January 2003
-# Whom:                tmartin@andrew.cmu.edu
-#
-# $FreeBSD: ports/games/senken/Makefile,v 1.28 2012/11/17 05:57:52 svnexp Exp $
+# Created by: tmartin@andrew.cmu.edu
+# $FreeBSD: games/senken/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	senken
 PORTVERSION=	0.3.0
@@ -14,6 +11,7 @@ MASTER_SITE_SUBDIR=	distfiles
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A city simulation game
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 USE_SDL=	image sdl
 GNU_CONFIGURE=	yes
