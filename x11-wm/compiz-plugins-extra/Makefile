@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compiz-plugins-extra/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11-wm/compiz-plugins-extra/Makefile 326449 2013-09-05 21:32:14Z antoine $
 
 PORTNAME=	compiz-plugins-extra
 PORTVERSION=	0.8.4
@@ -20,8 +20,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 GNU_CONFIGURE=	yes
 USE_GL=		yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=        pathfix gettext
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intltool
 USE_XORG=	glproto
 USE_LDCONFIG=	yes
