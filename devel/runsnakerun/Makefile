@@ -1,8 +1,8 @@
 # Created by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: devel/runsnakerun/Makefile 321033 2013-06-16 10:37:34Z sbz $
+# $FreeBSD: devel/runsnakerun/Makefile 325419 2013-08-26 22:36:14Z sbz $
 
 PORTNAME=	runsnakerun
-DISTVERSION=	2.0.2b1
+DISTVERSION=	2.0.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 DISTNAME=	${PORTNAME:C/r/R/g:C/s/S/}-${DISTVERSION}
