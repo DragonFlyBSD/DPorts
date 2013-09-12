@@ -1,5 +1,5 @@
 # Created by: Maciek Korzen <eaquer@ceti.pl>
-# $FreeBSD: polish/tleenx2/Makefile 304688 2012-09-22 15:42:59Z tabthorpe $
+# $FreeBSD: polish/tleenx2/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	tleenx2
 PORTVERSION=	20040214
@@ -13,6 +13,7 @@ COMMENT=	Client for polish IM service called Tlen.pl
 
 LIB_DEPENDS=	tlen.1:${PORTSDIR}/polish/libtlen
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_XORG=	xscrnsaver
