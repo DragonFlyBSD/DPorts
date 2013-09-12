@@ -1,5 +1,5 @@
 # Created by: Putrya Statislav
-# $FreeBSD: ports/audio/gtmixer/Makefile,v 1.2 2013/02/12 16:25:15 svnexp Exp $
+# $FreeBSD: audio/gtmixer/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	gtmixer
 PORTVERSION=	1.0.2
@@ -15,6 +15,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	svagner
 GH_COMMIT=	9e22be7
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 
 MAN1=	gtmixer.1
