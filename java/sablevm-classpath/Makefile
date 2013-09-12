@@ -1,5 +1,5 @@
 # Created by:	Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: ports/java/sablevm-classpath/Makefile,v 1.15 2012/11/17 05:58:46 svnexp Exp $
+# $FreeBSD: java/sablevm-classpath/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	sablevm-classpath
 PORTVERSION=	1.13
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	jikes:${PORTSDIR}/java/jikes
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 USE_XORG=	x11 ice xtst sm
 WANT_GNOME=	yes
