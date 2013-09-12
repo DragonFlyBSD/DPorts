@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-toolkits/pure-gtk/Makefile 322933 2013-07-13 14:04:36Z bapt $
+# $FreeBSD: x11-toolkits/pure-gtk/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	pure-gtk
 PORTVERSION=	0.11
@@ -10,6 +10,7 @@ COMMENT=	A set of Pure language bindings for GTK+
 
 LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 
+USES=		pkgconfig
 USE_PURE=	ffi
 USE_GNOME=	glib20 gtk20 atk pango
 
