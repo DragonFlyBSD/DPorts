@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: mail/evolution/Makefile 320061 2013-06-06 08:39:45Z kwm $
+# $FreeBSD: mail/evolution/Makefile 326159 2013-09-03 15:25:41Z bapt $
 #   $MCom: ports/trunk/mail/evolution/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution
@@ -20,8 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORT
 CONFLICTS=	evolution-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		bison desktop-file-utils gettext pathfix
+USES=		bison desktop-file-utils gettext pathfix gmake pkgconfig
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver gtkhtml3 \
 		gnomedocutils ltasneededhack gnomedesktop
 USE_AUTOTOOLS=	libtool
