@@ -1,5 +1,5 @@
 # Created by: Patrick Seal <patseal@hyperhost.net>
-# $FreeBSD: ports/x11-wm/bbkeys/Makefile,v 1.30 2012/12/17 10:24:49 svnexp Exp $
+# $FreeBSD: x11-wm/bbkeys/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	bbkeys
 PORTVERSION=	0.9.1
@@ -14,7 +14,8 @@ LICENSE=	MIT
 
 BUILD_DEPENDS=	blackbox:${PORTSDIR}/x11-wm/blackbox
 
-USE_PERL5_BUILD=	yes
+USES=		perl5 pkgconfig
+USE_PERL5=	build
 USE_XORG=	x11 xext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	`pkg-config --cflags xft`
