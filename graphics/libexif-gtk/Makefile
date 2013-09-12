@@ -1,5 +1,5 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/libexif-gtk/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: graphics/libexif-gtk/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
 PORTNAME=	libexif-gtk
 PORTVERSION=	0.4.0
@@ -14,7 +14,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	exif:${PORTSDIR}/graphics/libexif
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gtk20
 USE_AUTOTOOLS=	autoconf libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
