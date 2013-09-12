@@ -1,9 +1,5 @@
-# New ports collection makefile for:    wxPython
-# Date created:         		September 18, 1999
-# Whom:					nectar@FreeBSD.ORG
-#
-# $FreeBSD: x11-toolkits/py-wxPython28/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: nectar@FreeBSD.org
+# $FreeBSD: x11-toolkits/py-wxPython28/Makefile 326188 2013-09-03 18:09:33Z antoine $
 
 PORTNAME=	wxPython
 PORTVERSION=	2.8.12.1
@@ -22,11 +18,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/wxPython
 
 DIST_SUBDIR=	python
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PLIST_SUB=	PYTHON_VER=${PYTHON_VER}
-USES=		gettext
+USES=		gettext gmake pkgconfig
 
 PYDISTUTILS_BUILDARGS=	\
 			WX_CONFIG="${WX_CONFIG}" \
