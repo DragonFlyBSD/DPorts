@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ftp/filezilla/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/filezilla/Makefile 326491 2013-09-06 12:12:00Z bapt $
 #
 
 PORTNAME=	filezilla
@@ -24,7 +24,7 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_SQLITE=	3
 USE_WX=		2.8
 WX_CONF_ARGS=	relative
