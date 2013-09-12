@@ -1,5 +1,5 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
-# $FreeBSD: multimedia/totem/Makefile 319951 2013-06-05 06:53:35Z jgh $
+# $FreeBSD: multimedia/totem/Makefile 326151 2013-09-03 14:08:55Z bapt $
 #   $MCom: ports/multimedia/totem/Makefile,v 1.151 2010/09/27 19:04:37 kwm Exp $
 
 PORTNAME=	totem
@@ -24,7 +24,7 @@ CONFLICTS=	totem-3.[0-9]*
 
 USE_PYTHON=	yes
 USE_BZIP2=	yes
-USES=		pathfix gettext desktop-file-utils
+USES=		pathfix gettext desktop-file-utils pkgconfig
 USE_GNOME=	gnomeprefix intlhack nautilus2 \
 		ltverhack pygtk2 gnomehier
 USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly python gio
