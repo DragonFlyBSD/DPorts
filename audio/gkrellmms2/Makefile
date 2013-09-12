@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gkrellmms
-# Date Created:		Jun 22 2000
-# Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/gkrellmms2/Makefile,v 1.49 2012/11/17 05:54:32 svnexp Exp $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: audio/gkrellmms2/Makefile 326709 2013-09-08 08:27:08Z antoine $
 
 PORTNAME=	gkrellmms
 PORTVERSION=	2.1.22
@@ -27,7 +23,7 @@ PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmms.so \
 		share/locale/nl/LC_MESSAGES/gkrellmms.mo \
 		share/locale/ru/LC_MESSAGES/gkrellmms.mo
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 MAKE_ENV+=	PLUGIN_DIR=${PREFIX}/libexec/gkrellm2/plugins \
 		LOCALEDIR=${PREFIX}/share/locale \
