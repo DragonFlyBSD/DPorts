@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: deskutils/genius/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: deskutils/genius/Makefile 326122 2013-09-03 06:36:41Z bapt $
 
 PORTNAME=	genius
 PORTVERSION=	1.0.12
@@ -20,7 +20,7 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 USE_CSTD=	gnu89
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomevfs2 gtksourceview2 intlhack vte
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
