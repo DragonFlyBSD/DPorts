@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xnecview
-# Date created:		2006-03-18
-# Whom:				Søren Straarup <xride@x12.dk>
-#
-# $FreeBSD: ports/comms/xnecview/Makefile,v 1.18 2012/11/17 05:55:02 svnexp Exp $
+# Created by: Søren Straarup <xride@x12.dk>
+# $FreeBSD: comms/xnecview/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	xnecview
 PORTVERSION=	1.36
@@ -17,8 +14,8 @@ COMMENT=	A X viewer of nec2c data
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 RUN_DEPENDS=	nec2c:${PORTSDIR}/comms/nec2c
 
+USES=		gmake pkgconfig
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 
 MAN1=		xnecview.1
 PLIST_FILES=	bin/xnecview
