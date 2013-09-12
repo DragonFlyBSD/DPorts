@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/sharpconstruct/Makefile 323503 2013-07-22 22:50:30Z amdmi3 $
+# $FreeBSD: graphics/sharpconstruct/Makefile 326129 2013-09-03 08:49:46Z bapt $
 
 PORTNAME=	sharpconstruct
 PORTVERSION=	0.11
@@ -13,9 +13,9 @@ COMMENT=	3D modeller for organic shapes
 LIB_DEPENDS=	gtkglextmm-x11-1.2:${PORTSDIR}/x11-toolkits/gtkglextmm \
 		glademm-2.4:${PORTSDIR}/devel/libglademm24
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GL=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
