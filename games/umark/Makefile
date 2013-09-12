@@ -1,9 +1,5 @@
-# New ports collection makefile for:	UMark
-# Date created:				31 Jul 2005
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/games/umark/Makefile,v 1.13 2012/11/17 05:57:55 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: games/umark/Makefile 327021 2013-09-12 00:48:38Z marino $
 
 PORTNAME=	umark
 DISTVERSION=	2.0.0-Beta3
@@ -17,6 +13,7 @@ COMMENT=	Unreal Tournament 200x series benchmark utility
 
 LICENSE=	GPLv2
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
 WRKSRC=		${WRKDIR}/UMark/src
 MAKEFILE=	${FILESDIR}/Makefile
