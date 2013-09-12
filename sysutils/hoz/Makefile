@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: sysutils/hoz/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/hoz/Makefile 326995 2013-09-11 17:17:35Z antoine $
 
 PORTNAME=	hoz
 PORTVERSION=	1.65
@@ -12,7 +12,7 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	File splitter, GTK and CLI versions
 
 USE_GNOME=	#
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 PORTDOCS=	README
 
