@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/darktable/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: graphics/darktable/Makefile 326840 2013-09-09 18:54:28Z antoine $
 
 PORTNAME=	darktable
 PORTVERSION=	1.2.2
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libexiv2.so:${PORTSDIR}/graphics/exiv2 \
 ONLY_FOR_ARCHS=	i386 amd64
 ONLY_FOR_ARCHS_REASON=	uses SSE extensions
 
-USES=		cmake:outsource
+USES=		cmake:outsource pkgconfig
 USE_XZ=		yes
 USE_GNOME=	librsvg2
 USE_SQLITE=	yes
