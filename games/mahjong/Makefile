@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:   mahjong
-# Date created:                Jan 31, 2001
-# Whom:                        Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: games/mahjong/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: games/mahjong/Makefile 327021 2013-09-12 00:48:38Z marino $
 
 PORTNAME=	mahjong
 PORTVERSION=	1.12.1
@@ -19,10 +14,9 @@ COMMENT=	A networked Mah Jong program, together with a computer player
 
 LICENSE=	GPLv2 # (or later)
 
-USES=		perl5
+USES=		perl5 gmake pkgconfig
 USE_GNOME=	gtk20
 USE_PERL5=	build
-USE_GMAKE=	yes
 MAKE_ENV=	CCLINK="${CC}" CDEBUGFLAGS="${CFLAGS}" PERL="${PERL}" \
 		INCLUDES="-I."
 
