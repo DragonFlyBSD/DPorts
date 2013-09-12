@@ -2,7 +2,7 @@
 # Date created:		2011-09-11
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: print/p5-Net-CUPS/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: print/p5-Net-CUPS/Makefile 326272 2013-09-04 13:07:40Z az $
 #
 
 PORTNAME=	Net-CUPS
@@ -18,7 +18,8 @@ COMMENT=	Interface to the CUPS API
 BUILD_DEPENDS=	cups-config:${PORTSDIR}/print/cups-client
 LIB_DEPENDS=	cupsimage.2:${PORTSDIR}/print/cups-image
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::CUPS.3 \
 		Net::CUPS::Destination.3 \
