@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/gretl/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: math/gretl/Makefile 326934 2013-09-10 21:31:33Z antoine $
 
 PORTNAME=	gretl
 PORTVERSION=	1.9.12
@@ -15,9 +15,8 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_FORTRAN=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix
+USES=		gmake pathfix pkgconfig
 WANT_GNOME=	yes
 
 ALL_TARGET=		# empty
