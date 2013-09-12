@@ -1,14 +1,14 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Std/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Config-Std/Makefile 326950 2013-09-11 07:42:42Z tobez $
 
 PORTNAME=	Config-Std
-DISTVERSION=	0.900
+PORTVERSION=	0.901
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BRICKER
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Load and save configuration files in a standard format
 
 LICENSE=	ART10 GPLv1
