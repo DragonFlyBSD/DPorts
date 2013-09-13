@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/libsvg-cairo/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: graphics/libsvg-cairo/Makefile 326025 2013-09-02 16:21:38Z bapt $
 #   $MCom: ports/graphics/libsvg-cairo/Makefile,v 1.5 2005/08/09 04:49:38 ahze Exp $
 
 PORTNAME=	libsvg-cairo
@@ -17,7 +17,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
 PLIST_FILES=	include/svg-cairo.h \
 		lib/libsvg-cairo.a \
