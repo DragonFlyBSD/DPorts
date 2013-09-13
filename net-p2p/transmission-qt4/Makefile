@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-qt4/Makefile 313230 2013-03-02 13:48:31Z crees $
+# $FreeBSD: net-p2p/transmission-qt4/Makefile 325674 2013-08-30 12:11:48Z crees $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt4
@@ -18,8 +18,8 @@ QT_NONSTANDARD=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build gui dbus network
 USE_GNOME=	desktopfileutils
 
-QMAKEFLAGS+=	QMAKE_LFLAGS="-lcrypto -L${LOCALBASE}/lib -liconv"
-
+QMAKEFLAGS+=	QMAKE_LFLAGS="-lcrypto -L${LOCALBASE}/lib ${ICONV_LIB}"
+USES+= iconv
 EXTRA_CONF_ARGS=--disable-cli \
 		--disable-daemon \
 		--without-gtk \
