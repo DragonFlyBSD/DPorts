@@ -35,8 +35,8 @@ GEN_LIB_DEPENDS=curl:${PORTSDIR}/ftp/curl \
 		event-2.0.6:${PORTSDIR}/devel/libevent2
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:${PORTSDIR}/www/transmission-web
 
-USE_GMAKE=	yes
-USES=		pkgconfig
+# USES+= because this is a master port
+USES+=		gmake pkgconfig
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -48,6 +48,9 @@ EXTRA_CONF_ARGS?=--enable-cli \
 		 --without-gtk \
 		 --disable-mac \
 		 --disable-nls
+
+USES+= 		iconv
+LDFLAGS+=	${ICONV_LIB}
 
 .if ${PORT_OPTIONS:MLITE}
 CONFIGURE_ARGS+=--enable-lightweight
