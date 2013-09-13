@@ -2,12 +2,12 @@
 # Date created:				11 July 2008
 # Whom:					Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: databases/spatialite/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: databases/spatialite/Makefile 326981 2013-09-11 13:58:27Z wg $
 #
 
 PORTNAME=	spatialite
 PORTVERSION=	3.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
@@ -15,7 +15,7 @@ DISTNAME=	lib${PORTNAME}-${PORTVERSION}
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	Spatial Extensions for SQLite
 
-LIB_DEPENDS=	geos_c.8:${PORTSDIR}/graphics/geos \
+LIB_DEPENDS=	geos_c.9:${PORTSDIR}/graphics/geos \
 		proj.7:${PORTSDIR}/graphics/proj \
 		freexl.1:${PORTSDIR}/textproc/freexl
 
