@@ -1,29 +1,38 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/nathive/Makefile 322366 2013-07-06 07:59:09Z bapt $
+# $FreeBSD: graphics/nathive/Makefile 327024 2013-09-12 01:26:34Z amdmi3 $
 
 PORTNAME=	nathive
-PORTVERSION=	0.813
-PORTREVISION=	5
+PORTVERSION=	0.924
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.nathive.org/packages/ \
+MASTER_SITES=	http://www.nathive.org/dl/ \
 		http://mirror.amdmi3.ru/distfiles/
-DISTNAME=	${PORTNAME}_${PORTVERSION}_source
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Lightweight image editor
 
-USES=		pkgconfig
-USE_GNOME=	glib20 gtk20
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py:${PORTSDIR}/x11-toolkits/py-gtk2
+
+USES=		gmake
+USE_PYTHON=	yes
+MAKEFILE=	makefile
 ALL_TARGET=	default
 
-post-patch:
-	@${REINPLACE_CMD} -e '/define.*PATH/ s|".*"|"${DATADIR}/"|' \
-		${WRKSRC}/main.c
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nathive ${PREFIX}/bin
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC} && \
-		${COPYTREE_SHARE} "cfg img lang palettes text" ${DATADIR}
+PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e '/BASE =/ s|=.*|= ${PREFIX}/|; \
+		s|cp -r \([^ ]*\)/|cp -R \1|' ${WRKSRC}/${MAKEFILE}
+	@${REINPLACE_CMD} -e 's|/usr/share/nathive|${DATADIR}|' \
+		${WRKSRC}/${PORTNAME}.desktop
+.if ! ${PORT_OPTIONS:MDOCS}
+	@${REINPLACE_CMD} -e '/install.*DOC/ d' ${WRKSRC}/${MAKEFILE}
+.endif
 
 .include <bsd.port.mk>
