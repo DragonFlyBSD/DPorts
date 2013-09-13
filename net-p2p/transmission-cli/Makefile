@@ -1,8 +1,8 @@
-# $FreeBSD: net-p2p/transmission-cli/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net-p2p/transmission-cli/Makefile 325667 2013-08-30 08:19:28Z crees $
 
 PORTNAME=	transmission
-PORTVERSION=	2.80
-PORTREVISION?=	1
+PORTVERSION=	2.82
+PORTREVISION?=	0
 CATEGORIES?=	net-p2p
 #MASTER_SITES=	http://download.m0k.org/${PORTNAME}/files/
 MASTER_SITES=	http://transmission.cachefly.net/

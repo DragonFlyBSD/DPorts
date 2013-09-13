@@ -1,2 +1,2 @@
 USES+=		iconv
-LDFLAGS+=	-liconv
+LDFLAGS+=	${ICONV_LIB}
