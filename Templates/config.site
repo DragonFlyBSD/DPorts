@@ -51,8 +51,8 @@
 : ${ac_cv_header_minix_config_h=no}
 : ${ac_cv_header_net_if_h=yes}
 : ${ac_cv_header_net_if_media_h=yes}
-: ${ac_cv_header_net_if_tap_h=yes}
-: ${ac_cv_header_net_if_tun_h=yes}
+#: ${ac_cv_header_net_if_tap_h=yes}
+#: ${ac_cv_header_net_if_tun_h=yes}
 : ${ac_cv_header_netdb_h=yes}
 : ${ac_cv_header_netinet_in_h=yes}
 : ${ac_cv_header_paths_h=yes}
