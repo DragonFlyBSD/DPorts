@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gwenhywfar/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/gwenhywfar/Makefile 327134 2013-09-13 08:21:56Z bapt $
 
 PORTNAME=	gwenhywfar
 PORTVERSION=	4.3.3
@@ -20,15 +20,14 @@ OPTIONS_DEFINE=	DOXYGEN MEMDEBUG
 MEMDEBUG_DESC=	Enable memory debugger statistic
 .endif
 
-USES=		pathfix pkgconfig gettext
-USE_GMAKE=	yes
+USES=		pathfix pkgconfig gettext gmake
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release="yes" \
 		--with-guis="${SLAVEPORT}"
-CPPFLAGS+=	-DGCRYPT_NO_DEPRECATED
+CPPFLAGS+=	-DGCRYPT_NO_DEPRECATED -I${LOCALBASE}/include
 
 PLIST_SUB=	GWEN_SHLIB_VER="${GWEN_SHLIB_VER}"
 USE_LDCONFIG=	yes
