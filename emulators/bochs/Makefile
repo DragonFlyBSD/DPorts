@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: emulators/bochs/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/bochs/Makefile 327018 2013-09-12 00:21:10Z marino $
 
 PORTNAME=	bochs
 PORTVERSION=	2.6.2
@@ -74,7 +74,7 @@ VMX_DESC=	Enable Virtialization extensions
 VOODOO_DESC=	Enable 3dfx Voodoo Graphics emulation
 X86_64_DESC=	Enable x86-64 instructions support
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	ac_cv_header_alsa_asoundlib_h=no
 CONFIGURE_ARGS=	--disable-docbook --disable-instrumentation
