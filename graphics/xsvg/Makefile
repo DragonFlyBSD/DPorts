@@ -1,10 +1,6 @@
-# New ports collection makefile for:	xsvg
-# Date created:		2005-02-16
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/xsvg/Makefile,v 1.13 2012/11/17 05:58:26 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: graphics/xsvg/Makefile 326039 2013-09-02 17:12:11Z bapt $
 #   $MCom: ports/graphics/xsvg/Makefile,v 1.3 2005/08/09 05:09:09 ahze Exp $
-#
 
 PORTNAME=	xsvg
 PORTVERSION=	0.2.1
@@ -17,6 +13,7 @@ COMMENT=	X11 SVG viewer
 
 LIB_DEPENDS=	svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/xsvg
