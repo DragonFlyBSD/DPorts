@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/delatt/Makefile 317591 2013-05-07 08:57:37Z ehaupt $
+# $FreeBSD: mail/delatt/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	delatt
 DISTVERSION=	1.1.3
@@ -14,8 +14,8 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 SHEBANG_FILES=	delatt
