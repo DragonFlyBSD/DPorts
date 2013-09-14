@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Yahoo-BBAuth
-# Date created:		2007-07-06
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/security/p5-Yahoo-BBAuth/Makefile,v 1.4 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: security/p5-Yahoo-BBAuth/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	Yahoo-BBAuth
 PORTVERSION=	0.50
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Yahoo::BBAuth.3
 
