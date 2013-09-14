@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: devel/xmltooling/Makefile 325939 2013-09-02 06:20:09Z bapt $
+# $FreeBSD: devel/xmltooling/Makefile 327150 2013-09-13 14:09:10Z bapt $
 
 PORTNAME=	xmltooling
 PORTVERSION=	1.5.3
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	boost-libs>=0:${PORTSDIR}/devel/boost-libs
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-log4shib=${LOCALBASE} --with-openssl=${OPENSSLBASE} --with-curl=${LOCALBASE} --disable-doxygen-doc
 USES=		gmake pkgconfig
-USE_GCC=	any
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 
