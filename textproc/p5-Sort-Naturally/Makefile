@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sort-Naturally
-# Date created:				30 December 2004
-# Whom:					Aaron Dalton <aaron@daltons.ca>
-#
-# $FreeBSD: ports/textproc/p5-Sort-Naturally/Makefile,v 1.6 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@daltons.ca>
+# $FreeBSD: textproc/p5-Sort-Naturally/Makefile 326944 2013-09-11 06:49:58Z az $
 
 PORTNAME=	Sort-Naturally
 PORTVERSION=	1.03
@@ -17,7 +13,8 @@ COMMENT=	Sort lexically, but sort numeral parts numerically
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sort::Naturally.3
 
