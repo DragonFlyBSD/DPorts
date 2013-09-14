@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/p5-Kwalify/Makefile 320404 2013-06-09 19:27:00Z miwi $
+# $FreeBSD: textproc/p5-Kwalify/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	Kwalify
 PORTVERSION=	1.22
@@ -14,6 +14,7 @@ COMMENT=	Implementation of Kwalify parser, validator and data binding tool
 MAN1=		pkwalify.1
 MAN3=		Kwalify.3 Schema::Kwalify.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
