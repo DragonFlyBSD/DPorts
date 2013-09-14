@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Tags
-# Date created:		2006-07-10
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Tags/Makefile,v 1.5 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/p5-Text-Tags/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	Text-Tags
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Parses folksonomy space-separated tags
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Tags.3 Text::Tags::Parser.3
 
