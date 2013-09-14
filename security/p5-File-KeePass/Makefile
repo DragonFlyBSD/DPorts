@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: ports/security/p5-File-KeePass/Makefile,v 1.3 2012/12/25 10:58:46 svnexp Exp $
+# $FreeBSD: security/p5-File-KeePass/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	File-KeePass
 PORTVERSION=	2.03
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Crypt-Rijndael>=1.0:${PORTSDIR}/security/p5-Crypt-Rijndael \
 		p5-MIME-Base64>=1.0:${PORTSDIR}/converters/p5-MIME-Base64
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::KeePass.3
 
