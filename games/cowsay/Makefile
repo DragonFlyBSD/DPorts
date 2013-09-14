@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cowsay
-# Date created:		01 Sep 2000
-# Whom:			Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/games/cowsay/Makefile,v 1.14 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: games/cowsay/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	cowsay
 PORTVERSION=	3.03
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.nog.net/~tony/warez/
 MAINTAINER=	wxs@FreeBSD.org
 COMMENT=	Configurable talking characters in ASCII art
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_BUILD=	# defined
 
