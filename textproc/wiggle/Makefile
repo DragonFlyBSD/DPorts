@@ -1,5 +1,5 @@
 # Created by: mandree@FreeBSD.org
-# $FreeBSD: textproc/wiggle/Makefile 326842 2013-09-09 21:10:47Z mandree $
+# $FreeBSD: textproc/wiggle/Makefile 327118 2013-09-12 23:46:20Z mandree $
 
 PORTNAME=	wiggle
 PORTVERSION=	1.0
@@ -13,6 +13,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
+USE_GCC=	4.2+	# uses nested functions
 USE_GMAKE=	yes
 
 MAKE_ARGS+=	CFLAGS="${CFLAGS} -I. -Wall -Wstrict-prototypes -Wextra -Wno-unused-parameter"
