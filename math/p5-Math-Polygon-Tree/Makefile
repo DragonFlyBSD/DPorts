@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Polygon-Tree/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: math/p5-Math-Polygon-Tree/Makefile 327032 2013-09-12 05:53:03Z az $
 
 PORTNAME=	Math-Polygon-Tree
 PORTVERSION=	0.05
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple \
 		p5-Math-Geometry-Planar-GPC-Polygon>=0:${PORTSDIR}/math/p5-Math-Geometry-Planar-GPC-Polygon
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Polygon::Tree.3
 
