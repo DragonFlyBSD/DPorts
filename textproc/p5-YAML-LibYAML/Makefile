@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: textproc/p5-YAML-LibYAML/Makefile 314537 2013-03-18 08:14:38Z culot $
+# $FreeBSD: textproc/p5-YAML-LibYAML/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	YAML-LibYAML
 PORTVERSION=	0.41
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Filter>0:${PORTSDIR}/devel/p5-Filter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		YAML::XS::LibYAML.3 \
 		YAML::XS.3
