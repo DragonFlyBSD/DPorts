@@ -1,5 +1,5 @@
 # Created by: bauerm
-# $FreeBSD: ports/math/ntl/Makefile,v 1.21 2013/02/17 02:43:20 svnexp Exp $
+# $FreeBSD: math/ntl/Makefile 327032 2013-09-12 05:53:03Z az $
 
 PORTNAME=	ntl
 PORTVERSION=	6.0.0
@@ -16,7 +16,8 @@ LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 CONFIGURE_ARGS=	NTL_GMP_LIP=on
 .endif
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	AR="${AR}" \
 		CC="${CC}" CFLAGS="${CFLAGS}" \
