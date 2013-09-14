@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Text-Sass/Makefile,v 1.11 2013/01/14 22:51:31 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Sass/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	Text-Sass
 PORTVERSION=	0.97
@@ -16,7 +16,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Text::Sass.3 \
 	Text::Sass::Expr.3 \
