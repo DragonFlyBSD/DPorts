@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Text::Patch
-# Date created:		20 Dec 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Patch/Makefile,v 1.4 2012/11/17 06:02:10 svnexp Exp $
-#
+# $FreeBSD: textproc/p5-Text-Patch/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	Text-Patch
 PORTVERSION=	1.8
@@ -17,7 +12,8 @@ COMMENT=	Perl extension to patch text with given patch
 RUN_DEPENDS=	p5-Text-Diff>0:${PORTSDIR}/textproc/p5-Text-Diff
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Patch.3
 
