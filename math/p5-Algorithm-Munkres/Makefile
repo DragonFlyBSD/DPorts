@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Algorithm-Munkres
-# Date created:		2009-01-26
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/p5-Algorithm-Munkres/Makefile,v 1.2 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: math/p5-Algorithm-Munkres/Makefile 327032 2013-09-12 05:53:03Z az $
 
 PORTNAME=	Algorithm-Munkres
 PORTVERSION=	0.08
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	Perl Extension for Munkres' Solution to Classical Assignment Problem
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::Munkres.3
 
