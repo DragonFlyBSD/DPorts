@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Palm
-# Date created:				29 April 2000
-# Whom:					Andrew Arensburger <arensb+freebsd-ports@ooblick.com>
-#
-# $FreeBSD: ports/palm/p5-Palm/Makefile,v 1.10 2012/11/17 06:00:44 svnexp Exp $
-#
+# Created by: Andrew Arensburger <arensb+freebsd-ports@ooblick.com>
+# $FreeBSD: palm/p5-Palm/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	p5-Palm
 PORTVERSION=	1.3.0
@@ -13,7 +9,8 @@ MASTER_SITES=	http://www.coldsync.org/download/
 MAINTAINER=	arensb@ooblick.com
 COMMENT=	Perl 5 modules for reading and writing Palm database files
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/p5-Palm-1.003_000
 
 # Just so that the .packlist conforms to reality
