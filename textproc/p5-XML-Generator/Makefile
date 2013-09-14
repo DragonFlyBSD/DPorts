@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Generator
-# Date created:				22 January 2004
-# Whom:					Andreas Heil <ah@linux-hq.de>
-#
-# $FreeBSD: ports/textproc/p5-XML-Generator/Makefile,v 1.11 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Andreas Heil <ah@linux-hq.de>
+# $FreeBSD: textproc/p5-XML-Generator/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	XML-Generator
 PORTVERSION=	1.04
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM
 
 TEST_DEPENDS=	p5-Tie-IxHash>=0:${PORTSDIR}/devel/p5-Tie-IxHash
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Generator.3 XML::Generator::DOM.3
 
