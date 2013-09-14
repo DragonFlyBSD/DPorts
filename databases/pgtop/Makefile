@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pgtop
-# Date created:				30 May 2006
-# Whom:					Bartek Rutkowski <r@robakdesign.com>
-#
-# $FreeBSD: ports/databases/pgtop/Makefile,v 1.9 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Bartek Rutkowski <r@robakdesign.com>
+# $FreeBSD: databases/pgtop/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	pgtop
 PORTVERSION=	0.05
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Term-ReadKey>=2.10:${PORTSDIR}/devel/p5-Term-ReadKey \
 		p5-DBD-Pg>=1.22:${PORTSDIR}/databases/p5-DBD-Pg \
 		p5-DBI>=1.16:${PORTSDIR}/databases/p5-DBI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	pgtop.1
 
