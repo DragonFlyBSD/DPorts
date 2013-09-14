@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Inflect-Phrase/Makefile,v 1.10 2013/01/13 03:22:09 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Phrase/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	Lingua-EN-Inflect-Phrase
 PORTVERSION=	0.18
@@ -20,7 +20,8 @@ TEST_DEPENDS=	\
 	p5-Lingua-EN-Number-IsOrdinal>0:${PORTSDIR}/textproc/p5-Lingua-EN-Number-IsOrdinal \
 	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::EN::Inflect::Phrase.3
 
