@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Crypt-URandom/Makefile 318711 2013-05-21 14:57:43Z kuriyama $
+# $FreeBSD: security/p5-Crypt-URandom/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	Crypt-URandom
 PORTVERSION=	0.34
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to provide non blocking randomness
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Crypt::URandom.3
 
