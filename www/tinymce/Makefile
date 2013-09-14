@@ -1,8 +1,8 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce/Makefile 326217 2013-09-03 19:37:12Z sunpoet $
+# $FreeBSD: www/tinymce/Makefile 327244 2013-09-14 08:51:03Z sunpoet $
 
 PORTNAME=	tinymce
-PORTVERSION=	4.0.5
+PORTVERSION=	4.0.6
 CATEGORIES=	www
 MASTER_SITES=	http://download.moxiecode.com/${PORTNAME}/ \
 		LOCAL/sunpoet
