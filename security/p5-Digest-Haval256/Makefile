@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-Haval256
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-Haval256/Makefile,v 1.9 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-Haval256/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	Digest-Haval256
 PORTVERSION=	1.0.5
@@ -15,7 +13,8 @@ COMMENT=	Perl extension for Haval256 hash algorithm
 BUILD_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::Haval256.3
 
