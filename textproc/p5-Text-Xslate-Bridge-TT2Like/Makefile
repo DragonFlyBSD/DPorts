@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Text-Xslate-Bridge-TT2Like/Makefile,v 1.1 2013/01/20 06:54:17 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Xslate-Bridge-TT2Like/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	Text-Xslate-Bridge-TT2Like
 PORTVERSION=	0.00010
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Text-Xslate>=1.3000:${PORTSDIR}/textproc/p5-Text-Xslate
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Xslate::Bridge::TT2Like.3
 
