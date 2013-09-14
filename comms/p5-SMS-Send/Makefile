@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SMS-Send
-# Date created:		2006-08-26
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: ports/comms/p5-SMS-Send/Makefile,v 1.9 2012/11/17 05:55:00 svnexp Exp $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: comms/p5-SMS-Send/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	SMS-Send
 PORTVERSION=	1.06
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Class-Adapter>=1.05:${PORTSDIR}/devel/p5-Class-Adapter \
 		p5-Params-Util>=1.00:${PORTSDIR}/devel/p5-Params-Util
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SMS::Send.3 \
 		SMS::Send::AU::Test.3 \
