@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Crypt-Rijndael
-# Date created:				Wed Jan  3 16:15:20 2001
-# Whom:					will
-#
-# $FreeBSD: ports/security/p5-Crypt-Rijndael/Makefile,v 1.23 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: security/p5-Crypt-Rijndael/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	Crypt-Rijndael
 PORTVERSION=	1.11
@@ -17,7 +13,8 @@ COMMENT=	Perl module that implements the Rijndael cipher
 
 BUILD_DEPENDS=	p5-Test-Manifest>1.14:${PORTSDIR}/devel/p5-Test-Manifest
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Rijndael.3
 
