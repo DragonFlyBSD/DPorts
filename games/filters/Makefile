@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: games/filters/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: games/filters/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	filters
 PORTVERSION=	2.49
@@ -14,8 +14,7 @@ COMMENT=	Collection of filters, including B1FF, and the Swedish Chef
 CONFLICTS=	talkfilters-[0-9]* jive-[0-9]* chef-[0-9]* kenny-[0-9]* \
 		lolcat-[0-9]*
 
-USES=		shebangfix gmake
-USE_PERL5=	yes
+USES=		shebangfix gmake perl5
 USE_GCC=	any
 MAKE_JOBS_UNSAFE=	yes
 
