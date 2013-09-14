@@ -1,4 +1,4 @@
-$FreeBSD: ports/textproc/p5-XML-Parser/files/patch-CheckLib.pm,v 1.1 2013/01/12 03:22:58 svnexp Exp $
+$FreeBSD: textproc/p5-XML-Parser/files/patch-CheckLib.pm 310260 2013-01-12 03:06:37Z kuriyama $
 
 --- inc/Devel/CheckLib.pm.orig	2013-01-11 11:43:02.293444337 +0900
 +++ inc/Devel/CheckLib.pm	2013-01-11 11:48:47.556449831 +0900
