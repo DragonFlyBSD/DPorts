@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-Perl-MD5
-# Date created:				21 Dec, 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-Perl-MD5/Makefile,v 1.7 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-Perl-MD5/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	Digest-Perl-MD5
 PORTVERSION=	1.8
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for MD5 hash algorithm in pure Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::Perl::MD5.3
 
