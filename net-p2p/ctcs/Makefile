@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ctcs
-# Date created:                         7 July 2009
-# Whom:                                 Dereckson <dereckson@gmail.com>
-#
-# $FreeBSD: ports/net-p2p/ctcs/Makefile,v 1.3 2012/11/17 06:00:39 svnexp Exp $
-#
+# Created by: Dereckson <dereckson@gmail.com>
+# $FreeBSD: net-p2p/ctcs/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	ctcs
 PORTVERSION=	1.4.1
@@ -14,7 +10,8 @@ MAINTAINER=	dereckson@gmail.com
 COMMENT=	CTorrent monitoring and managing interface
 
 NO_BUILD=	#
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 PLIST_FILES=	bin/ctcs share/doc/ctcs/readme.txt
 PLIST_DIRS=	share/doc/ctcs
 WRKSRC=		${WRKDIR}/ctcs-${PORTVERSION}
