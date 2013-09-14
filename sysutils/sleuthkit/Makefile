@@ -1,5 +1,5 @@
 # Created by: Pieter Danhieux <opr@bsdaemon.be>
-# $FreeBSD: sysutils/sleuthkit/Makefile 324183 2013-08-03 09:24:26Z antoine $
+# $FreeBSD: sysutils/sleuthkit/Makefile 327186 2013-09-13 21:28:42Z antoine $
 
 PORTNAME=	sleuthkit
 PORTVERSION=	4.1.0
@@ -8,6 +8,15 @@ MASTER_SITES=	SF
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Tools and library for filesystem forensic analysis
+
+LICENSE=	CPL IBM GPLv2
+LICENSE_COMB=	multi
+LICENSE_NAME_CPL=Common Public License
+LICENSE_NAME_IBM=IBM Public License
+LICENSE_FILE_CPL=${WRKSRC}/licenses/cpl1.0.txt
+LICENSE_FILE_IBM=${WRKSRC}/licenses/IBM-LICENSE
+LICENSE_PERMS_CPL=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE_PERMS_IBM=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 RUN_DEPENDS=	p5-DateTime-TimeZone>=0:${PORTSDIR}/devel/p5-DateTime-TimeZone \
 		exif:${PORTSDIR}/graphics/exif
