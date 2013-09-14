@@ -1,9 +1,5 @@
-# ports collection makefile for:	perl extension for dynamically building snort rules
-# Date created:				30 January 2008
-# Whom:					Paul Schmehl <pauls@utdallas.edu>
-#
-# $FreeBSD: ports/security/p5-Snort-Rule/Makefile,v 1.5 2012/11/17 06:01:13 svnexp Exp $
-#
+# Created by: Paul Schmehl <pauls@utdallas.edu>
+# $FreeBSD: security/p5-Snort-Rule/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	Snort-Rule
 PORTVERSION=	1.07
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	pauls@utdallas.edu
 COMMENT=	Perl5 extension for dynamically building snort rules
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 PLIST_FILES=	%%SITE_PERL%%/Snort/Rule.pm \
 		%%SITE_PERL%%/mach/auto/Snort/Rule/.packlist
