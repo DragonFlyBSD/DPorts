@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-CanonicalizeXML
-# Date created:		2009-08-06
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-CanonicalizeXML/Makefile,v 1.2 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/p5-XML-CanonicalizeXML/Makefile 326920 2013-09-10 17:26:57Z az $
 
 PORTNAME=	XML-CanonicalizeXML
 PORTVERSION=	0.03
@@ -17,7 +13,8 @@ COMMENT=	Extension for inclusive/exclusive canonicalization of XML
 
 LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::CanonicalizeXML.3
 
