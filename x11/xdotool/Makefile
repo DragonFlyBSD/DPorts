@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdotool/Makefile 325735 2013-08-30 23:38:43Z bapt $
+# $FreeBSD: x11/xdotool/Makefile 327091 2013-09-12 17:07:08Z az $
 
 PORTNAME=	xdotool
 DISTVERSION=	2.20110530.1
@@ -9,10 +9,10 @@ MASTER_SITES=	http://semicomplete.googlecode.com/files/
 MAINTAINER=	wxs@FreeBSD.org
 COMMENT=	Programmatically simulate keyboard input or mouse activity
 
-USE_PERL5_BUILD=	yes
 USE_LDCONFIG=	yes
-USES=		gmake pkgconfig
+USES=		gmake pkgconfig perl5
 USE_XORG=	x11 xtst xinerama
+USE_PERL5=	build
 
 MAN1=		xdotool.1
 PLIST_FILES=	bin/xdotool lib/libxdo.so lib/libxdo.so.2 include/xdo.h
