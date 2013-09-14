@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog6/Makefile 325982 2013-09-02 12:32:28Z bapt $
+# $FreeBSD: sysutils/rsyslog6/Makefile 327263 2013-09-14 10:45:36Z bapt $
 
 PORTNAME=	rsyslog
 PORTVERSION=	6.6.0
@@ -98,10 +98,6 @@ CONFIGURE_ARGS+=	--disable-rsyslogd --disable-klog --disable-testbench --disable
 
 DESCR?=		${.CURDIR}/../rsyslog6/pkg-descr
 DISTINFO_FILE?=	${.CURDIR}/../rsyslog6/distinfo
-.endif
-
-.if ${OSVERSION} < 700042
-USE_GCC=	4.2+
 .endif
 
 .include <bsd.port.post.mk>
