@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/readline.mk 323917 2013-07-29 20:51:23Z bapt $
+# $FreeBSD: Mk/Uses/readline.mk 327271 2013-09-14 10:59:34Z bapt $
 #
 # handle dependency on the readline port
 #
@@ -12,9 +12,7 @@
 .if !defined(_INCLUDE_USES_READLINE_MK)
 _INCLUDE_USES_READLINE_MK=	yes
 
-.if ${OSVERSION} > 1000000
 readline_ARGS=	port
-.endif
 
 .if defined(readline_ARGS) && ${readline_ARGS} == port
 LIB_DEPENDS+=		libreadline.so.6:${PORTSDIR}/devel/readline

@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 326016 2013-09-02 15:45:53Z lippe $
+# $FreeBSD: GIDs 327064 2013-09-12 13:49:24Z feld $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -260,6 +260,7 @@ colord:*:970:
 shibd:*:971:
 plex:*:972:
 boinc:*:973:
+radicale:*:974:
 avenger:*:60149:
 nogroup:*:65533:
 nobody:*:65534:

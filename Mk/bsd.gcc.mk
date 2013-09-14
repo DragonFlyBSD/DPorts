@@ -5,22 +5,28 @@
 #
 # Created by: Edwin Groothuis <edwin@freebsd.org>
 #
-# For port developers:
+# To request the use of a current version of GCC, specify USE_GCC=yes in
+# your port/system configuration.  This is the preferred use of USE_GCC.
+# It defines a canonical, default version of GCC; the same version of
+# GCC is also implied by USE_FORTRAN=yes.
+# 
 # If your port needs a specific (minimum) version of GCC, you can easily
-# specify that with a "USE_GCC=" statement.  Unless absolutely necessary
-# do so by specifying "USE_GCC=X.Y+" which requests at least GCC version
+# specify that with a USE_GCC= statement.  Unless absolutely necessary
+# do so by specifying USE_GCC=X.Y+ which requests at least GCC version
 # X.Y.  To request a specific version omit the trailing + sign.  Use of
 # a Fortran compiler is declared by the USE_FORTRAN knob, not USE_GCC.
 #
 # Examples:
+#   USE_GCC=	yes			# port requires a current version of GCC
+#							# (4.6 as of today, subject to change).
 #   USE_GCC=	4.2+		# port requires GCC 4.2 or later.
-#   USE_GCC=	4.7		# port requires GCC 4.7.
+#   USE_GCC=	4.7			# port requires GCC 4.7.
 #
 # If your port needs a Fortran compiler, please specify that with the
 # USE_FORTRAN= knob.  Here is the list of options for that knob:
 #
-#   USE_FORTRAN=	yes	# use gfortran47 (lang/gcc-aux)
-#   USE_FORTRAN=	g77	# use g77-34 (lang/gcc34)
+#   USE_FORTRAN=	yes		# use gfortran47 (lang/gcc-aux)
+#   USE_FORTRAN=	g77		# use g77-34 (lang/gcc34)
 #   USE_FORTRAN=	ifort	# use the Intel compiler (lang/ifc)
 #
 # Due to object file incompatiblity between Fortran compilers, we strongly
@@ -38,29 +44,29 @@ GCC_Include_MAINTAINER=		gerald@FreeBSD.org
 # ascending order and in sync with the table below. 
 GCCVERSIONS=	030402 040200 040400 040600 040700 040800
 
-# The first field if the DLYVERSION in which it appeared in the base.
+# The first field if the DFLYVERSION in which it appeared in the base.
 # The second field is the DFLYVERSION in which it disappeared from the base.
 # The third field is the version as USE_GCC would use.
 # This doesn't work so well with DragonFly due to dual compilers
-# The logic has been changed -- the versions overlap and base compilers
-# take presidence over port compilers.
-# CCVER switches between base compilers
 # DPorts wasn't supported until DragonFly 3.3.
-GCCVERSION_030402=	100000	200000 3.4
-GCCVERSION_040100=	200000	300200 4.1
-GCCVERSION_040200=	     0	     0 4.2
-GCCVERSION_040400=	200400	999999 4.4
-GCCVERSION_040600=	     0	     0 4.6
-GCCVERSION_040700=	300200  999999 4.7
+GCCVERSION_030402=	100000  200000 3.4
+GCCVERSION_040100=	200000  300200 4.1
+GCCVERSION_040200=	     0       0 4.2
+GCCVERSION_040400=	300200  300400 4.4
+GCCVERSION_040600=	     0       0 4.6
+GCCVERSION_040700=	300400 9999999 4.7
 GCCVERSION_040800=	     0       0 4.8
 
-GCC_DEFAULT_VERSION=	4.6
-DRAGONFLY_MIN_VERSION=	44
-DRAGONFLY_MAX_VERSION=	47
+GCC_DEFAULT_VERSION=	4.7
+DFLY_DEFAULT_VERSION=	47
 GCC_DEFAULT_V=	${GCC_DEFAULT_VERSION:S/.//}
 
 # No configurable parts below this. ####################################
 #
+
+.if defined(USE_GCC) && ${USE_GCC} == yes
+USE_GCC=	${GCC_DEFAULT_VERSION}
+.endif
 
 # Extract the fields from GCCVERSION_...
 .for v in ${GCCVERSIONS}
@@ -83,17 +89,16 @@ _GCCVERSION_${v}_V=	${j}
 
 # The default case, with a current lang/gcc port.
 . if ${USE_FORTRAN} == yes
-BUILD_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
+BUILD_DEPENDS+= ${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
 RUN_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
-_USE_GCC:=	${DRAGONFLY_MAX_VERSION}  # dummy to avoid further depends
+_USE_GCC:=	${GCC_DEFAULT_VERSION}  # dummy to avoid further depends
 _GCC_RUNTIME:=	${LOCALBASE}/gcc-aux/lib
 FC:=		${LOCALBASE}/gcc-aux/bin/gfortran
 F77:=		${LOCALBASE}/gcc-aux/bin/gfortran
 CC:=		${LOCALBASE}/gcc-aux/bin/gcc
 CXX:=		${LOCALBASE}/gcc-aux/bin/g++
 CPP:=		${LOCALBASE}/gcc-aux/bin/cpp
-LDFLAGS+=	-L${LOCALBASE}/gcc-aux/lib
-LDFLAGS+=	-Wl,-rpath,${LOCALBASE}/gcc-aux/lib
+LDFLAGS+=	-L${LOCALBASE}/gcc-aux/lib -Wl,-rpath,${LOCALBASE}/gcc-aux/lib
 
 # Intel Fortran compiler from lang/ifc.
 . elif ${USE_FORTRAN} == ifort
@@ -117,11 +122,13 @@ MAKE_ENV+=		F77="${F77}" FC="${FC}" FFLAGS="${FFLAGS}"
 
 
 .if defined(USE_GCC) && !defined(FORCE_BASE_CC_FOR_TESTING)
+
 . if empty(USE_GCC) || ${USE_GCC} == any || ${USE_GCC:tl} == "yes"
 
-# enable the clang-is-cc workaround.  default to the oldest gcc in base
-_USE_GCC:=	4.4
-_GCC_ORLATER:=	true
+# Enable the clang-is-cc workaround.  Default to the last GCC imported
+# into base.
+_USE_GCC:=	${GCC_DEFAULT_VERSION}
+_GCC_ORLATER:=	false
 
 . else # ${USE_GCC} == any
 
@@ -133,33 +140,14 @@ _GCC_ORLATER:=	true
 
 . endif # ${USE_GCC} == any
 
-# Determine current GCCVERSION
-# DragonFly has two compilers -- check value of CCVER and DRAGONFLY_CCVER
-# These have to match, otherwise base match is not accomplished.
-# This gets us back to one base compiler on which the following logic depends
-# If the requested GCC version is greater than value of 4.4, then 4.7
-# will automatically be selected.
-#
-
-.if ${_USE_GCC:S/.//} > ${DRAGONFLY_MIN_VERSION}
-_DFLY_CCVER=gcc${DRAGONFLY_MAX_VERSION}
-_BASE_VER=${DRAGONFLY_MAX_VERSION}
-.elif defined(DRAGONFLY_CCVER)
-_DFLY_CCVER=${DRAGONFLY_CCVER}
-_BASE_VER=${DRAGONFLY_CCVER:S/gcc//}
-.else
-_DFLY_CCVER=gcc${DRAGONFLY_MIN_VERSION}
-_BASE_VER=${DRAGONFLY_MIN_VERSION}
-.endif
-
 # Initialize _GCC_FOUND${v}.  In parallel, check if USE_GCC points to a
 # valid version to begin with.
+# Set USE_GCC=3.4(4.2, 4.4, 4.6) all to base compiler (4.7)
 .for v in ${GCCVERSIONS}
 . if ${DFLYVERSION} >= ${_GCCVERSION_${v}_L} \
-  && ${DFLYVERSION} < ${_GCCVERSION_${v}_R} \
-  && ${_BASE_VER} == ${_GCCVERSION_${v}_V:S/.//}
+  && ${DFLYVERSION} <  ${_GCCVERSION_${v}_R} \
+  && ${DFLY_DEFAULT_VERSION} <= ${_GCCVERSION_${v}_V:S/.//}
 _GCC_FOUND${v}=	base
-_GCCVERSION:=		${v}
 . elif exists(${LOCALBASE}/bin/gcc${_GCCVERSION_${v}_V:S/.//})
 _GCC_FOUND${v}=	port
 . endif
@@ -179,7 +167,7 @@ IGNORE=	Unknown version of GCC specified (USE_GCC=${USE_GCC})
 #
 .if defined(_GCC_ORLATER)
 . for v in ${GCCVERSIONS}
-.  if ${_USE_GCC} <= ${_GCCVERSION_${v}_V}
+.  if ${_USE_GCC} == ${_GCCVERSION_${v}_V}
 _GCC_MIN1:=	true
 .  endif
 .  if defined(_GCC_MIN1) && defined(_GCC_FOUND${v}) && ${_GCC_FOUND${v}}=="base" && !defined(_GCC_FOUND)
@@ -211,9 +199,7 @@ _USE_GCC:=	${GCC_DEFAULT_VERSION}
 # dependencies, CC, CXX, CPP, and flags.
 .for v in ${GCCVERSIONS}
 . if ${_USE_GCC} == ${_GCCVERSION_${v}_V}
-.  if ${_GCCVERSION_${v}_R} == 0 \
-   || ${DFLYVERSION} < ${_GCCVERSION_${v}_L} \
-   || ${DFLYVERSION} > ${_GCCVERSION_${v}_R}
+.  if ${DFLYVERSION} < ${_GCCVERSION_${v}_L} || ${DFLYVERSION} > ${_GCCVERSION_${v}_R}
 V:=			${_GCCVERSION_${v}_V:S/.//}
 _GCC_PORT_DEPENDS:=	gcc${V}
 .   if ${_USE_GCC} == ${GCC_DEFAULT_VERSION}
@@ -226,12 +212,12 @@ CXX:=			g++${V}
 CPP:=			cpp${V}
 .   if ${_USE_GCC} != 3.4
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
-CFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
-CXXFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
-LDFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
+CFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
+CXXFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
+LDFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 .    if defined (USE_FORTRAN)
 .    if ${USE_FORTRAN} == yes
-FFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
+FFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 .    endif
 .    endif
 # The following is for the sakes of some ports which use this without
@@ -242,8 +228,8 @@ _GCC_BUILD_DEPENDS:=	${_GCC_PORT_DEPENDS}
 CC:=			gcc
 CXX:=			g++
 CPP:=			cpp
-CONFIGURE_ENV+= 	CCVER=${_DFLY_CCVER}
-MAKE_ENV+=		CCVER=${_DFLY_CCVER}
+CONFIGURE_ENV+=		CCVER=gcc${DFLY_DEFAULT_VERSION}
+MAKE_ENV+=		CCVER=gcc${DFLY_DEFAULT_VERSION}
 .  endif # Use GCC in base.
 . endif # ${_USE_GCC} == ${_GCCVERSION_${v}_V}
 .endfor
@@ -253,6 +239,11 @@ MAKE_ENV+=		CCVER=${_DFLY_CCVER}
 BUILD_DEPENDS+=	${_GCC_PORT_DEPENDS}:${PORTSDIR}/lang/${_GCC_PORT}
 . if ${_USE_GCC} != 3.4
 RUN_DEPENDS+=	${_GCC_PORT_DEPENDS}:${PORTSDIR}/lang/${_GCC_PORT}
+.  if ${_USE_GCC:S/.//} > ${GCC_DEFAULT_VERSION}
+# Later GCC ports already depend on binutils; make sure whatever we
+# build leverages this as well.
+USE_BINUTILS=	yes
+.  endif
 . endif
 .endif
 .endif # defined(_USE_GCC) && !defined(FORCE_BASE_CC_FOR_TESTING)

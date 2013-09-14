@@ -1680,13 +1680,8 @@ EXTRACT_DEPENDS+=	unmakeself:${PORTSDIR}/archivers/unmakeself
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .else
 .  if !defined(USE_GNUSTEP)
-.    if defined(DRAGONFLY_CCVER)
-CONFIGURE_ENV+= 	CCVER=${DRAGONFLY_CCVER}
-MAKE_ENV+=		CCVER=${DRAGONFLY_CCVER}
-.    else
-CONFIGURE_ENV+= 	CCVER=gcc44
-MAKE_ENV+=		CCVER=gcc44
-.    endif
+CONFIGURE_ENV+= 	CCVER=gcc47
+MAKE_ENV+=		CCVER=gcc47
 .  endif
 .endif
 
