@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Vroom
-# Date created:		2010-04-24
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Vroom/Makefile,v 1.9 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: textproc/p5-Vroom/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	Vroom
 PORTVERSION=	0.27
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-File-HomeDir>=0:${PORTSDIR}/devel/p5-File-HomeDir \
 		p5-YAML-LibYAML>=0:${PORTSDIR}/textproc/p5-YAML-LibYAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Vroom.3 Vroom::Vroom.3
 
