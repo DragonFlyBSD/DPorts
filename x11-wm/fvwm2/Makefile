@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: x11-wm/fvwm2/Makefile 326395 2013-09-05 13:21:52Z madpilot $
+# $FreeBSD: x11-wm/fvwm2/Makefile 327182 2013-09-13 19:39:38Z bsam $
 
 PORTNAME=	fvwm
 PORTVERSION=	2.6.5
@@ -48,8 +48,8 @@ DISTFILES+=	${FVWM_ICONS}.tar.bz2
 CONFIGURE_ARGS+=	--disable-iconv
 .else
 USES+=			iconv
-CONFIGURE_ARGS+=	--with-iconv-library=${LOCALBASE}/lib \
-			--with-iconv-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--with-iconv-library=${ICONV_PREFIX}/lib \
+			--with-iconv-includes=${ICONV_PREFIX}/include
 .endif
 
 .if ${PORT_OPTIONS:MSTROKE}
