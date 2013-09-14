@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xbomb
-# Date created:         20 Feb 1998
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/games/xbomb/Makefile,v 1.21 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: games/xbomb/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	xbomb
 PORTVERSION=	2.2a
