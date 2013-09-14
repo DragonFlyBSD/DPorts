@@ -1,5 +1,5 @@
 # Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
-# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 323541 2013-07-23 17:15:43Z culot $
+# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	Unicode-LineBreak
 PORTVERSION=	2012.10
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAKE_JOBS_UNSAFE=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 CONFIGURE_ARGS+=	--with-bundled-sombok \
 			--disable-libthai
