@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-TEA
-# Date created:				18 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-TEA/Makefile,v 1.7 2012/11/17 06:01:11 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-TEA/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	Crypt-TEA
 PORTVERSION=	1.25
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl extension to Tiny Encryption Algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::TEA.3
 
