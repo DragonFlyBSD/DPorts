@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk12/Makefile 317470 2013-05-06 06:41:15Z bapt $
+# $FreeBSD: x11-toolkits/gtk12/Makefile 327099 2013-09-12 17:55:41Z az $
 #    $MCom: ports/x11-toolkits/gtk12/Makefile,v 1.3 2006/10/09 19:31:53 ahze Exp $
 
 PORTNAME=	gtk
@@ -13,7 +13,8 @@ DISTNAME=	gtk+-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (previous stable version)
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 USE_XORG=	x11 ice xext sm inputproto xi
 USE_GNOME=	glib12
 USE_LDCONFIG=	yes
