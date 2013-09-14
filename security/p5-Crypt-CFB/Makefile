@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-CFB
-# Date created:				18 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-CFB/Makefile,v 1.8 2012/11/17 06:01:10 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-CFB/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	Crypt-CFB
 PORTVERSION=	0.02
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for encrypting data in Cipher Feedback Mode
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::CFB.3
 
