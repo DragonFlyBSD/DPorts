@@ -1,4 +1,0 @@
-USE_GCC= 4.7
-
-# We can't use libgomp, "pragma omp atomic" doesn't work
-#CXXFLAGS+= -fopenmp
