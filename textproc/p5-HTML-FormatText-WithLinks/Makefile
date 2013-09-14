@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-FormatText-WithLinks
-# Date created:		2007-08-10
-# Whom:			loader <loader@freebsdmall.com>
-#
-# $FreeBSD: ports/textproc/p5-HTML-FormatText-WithLinks/Makefile,v 1.6 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: loader <loader@freebsdmall.com>
+# $FreeBSD: textproc/p5-HTML-FormatText-WithLinks/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	HTML-FormatText-WithLinks
 PORTVERSION=	0.14
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-HTML-Format>=0:${PORTSDIR}/textproc/p5-HTML-Format \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		HTML::FormatText::WithLinks.3
 
 .include <bsd.port.mk>
