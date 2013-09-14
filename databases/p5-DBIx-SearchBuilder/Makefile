@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-DBIx-SearchBuilder
-# Date created:				29 May 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-SearchBuilder/Makefile,v 1.60 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: databases/p5-DBIx-SearchBuilder/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	DBIx-SearchBuilder
 PORTVERSION=	1.63
@@ -26,7 +22,8 @@ BUILD_DEPENDS=	p5-Class-ReturnValue>=0:${PORTSDIR}/devel/p5-Class-ReturnValue \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::SearchBuilder.3 DBIx::SearchBuilder::Handle.3 \
 	DBIx::SearchBuilder::Handle::Informix.3 \
