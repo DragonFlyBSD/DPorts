@@ -1,5 +1,5 @@
 # Created by: ejc@bazzle.com
-# $FreeBSD: devel/omniORB/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/omniORB/Makefile 327092 2013-09-12 17:20:46Z bapt $
 
 PORTNAME=	omniORB
 PORTVERSION=	4.1.6
@@ -9,7 +9,6 @@ MAINTAINER=	sem@FreeBSD.org
 COMMENT=	A robust high performance CORBA ORB for C++ and Python
 
 PLIST_SUB+=	SONUM=${PORTVERSION:C/.*\.//}
-USE_GCC=	any
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
 USE_OPENSSL=	yes
