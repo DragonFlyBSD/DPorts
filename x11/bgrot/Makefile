@@ -1,5 +1,5 @@
 # Created by: Matthew Fuller <fullermd@futuresouth.com>
-# $FreeBSD: x11/bgrot/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: x11/bgrot/Makefile 327091 2013-09-12 17:07:08Z az $
 
 PORTNAME=	bgrot
 PORTVERSION=	1.30
@@ -13,8 +13,7 @@ COMMENT=	A program to handle your X background to prevent boredom
 
 RUN_DEPENDS=	xv:${PORTSDIR}/graphics/xv
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 SHEBANG_FILES=	*.pl
 
 MAN1=		bgrot.1
