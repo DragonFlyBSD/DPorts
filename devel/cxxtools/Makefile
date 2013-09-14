@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cxxtools
-# Date created:		Wed Apr 14 18:11:42 CEST 2010
-# Whom:			Juergen Lock <nox@freebsd.org>
-#
-# $FreeBSD: devel/cxxtools/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Juergen Lock <nox@FreeBSD.org>
+# $FreeBSD: devel/cxxtools/Makefile 327180 2013-09-13 19:27:05Z nox $
 
 PORTNAME=	cxxtools
 PORTVERSION=	2.1.1
