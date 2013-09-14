@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: net/p5-RPC-XML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-RPC-XML/Makefile 327253 2013-09-14 09:03:34Z sunpoet $
 
 PORTNAME=	RPC-XML
 PORTVERSION=	0.77
@@ -13,11 +13,9 @@ COMMENT=	XML-RPC client and server library for Perl
 
 BUILD_DEPENDS=	p5-XML-Parser>=2.31:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-libwww>=5.834:${PORTSDIR}/www/p5-libwww
-RUN_DEPENDS=	p5-XML-Parser>=2.31:${PORTSDIR}/textproc/p5-XML-Parser \
-		p5-libwww>=5.834:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_GMAKE=	yes
-USES=		perl5
+USES=		gmake perl5
 USE_PERL5=	configure
 
 MAN1=		make_method.1
