@@ -1,5 +1,5 @@
 # Created by: Tod McQuillin <devin@spamcop.net>
-# $FreeBSD: ports/graphics/p5-Image-ExifTool/Makefile,v 1.54 2012/12/18 15:03:49 svnexp Exp $
+# $FreeBSD: graphics/p5-Image-ExifTool/Makefile 326963 2013-09-11 11:44:41Z az $
 
 # Note: This port tracks the "production release" of ExifTool as given
 # by http://www.sno.phy.queensu.ca/~phil/exiftool/history.html
@@ -25,7 +25,8 @@ LICENSE_COMB=	dual
 
 CONFLICTS=	p5-Image-ExifTool-devel-[0-9]*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MANTAGS=	AES AFCP AIFF APE APP12 ASF BMP BigTIFF BuildTagLookup	\
 		BZZ Canon CanonCustom CanonRaw CanonVRD Casio Charset	\
