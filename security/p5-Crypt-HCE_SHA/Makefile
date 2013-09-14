@@ -1,5 +1,5 @@
 # Created by: Gregory Neil Shapiro <gshapiro@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-HCE_SHA/Makefile 319497 2013-05-31 14:43:45Z miwi $
+# $FreeBSD: security/p5-Crypt-HCE_SHA/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Crypt-HCE_SHA
 PORTVERSION=	0.70
@@ -13,7 +13,8 @@ COMMENT=	Perl5 interface to one way hash chaining block cipher
 BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::HCE_SHA.3
 
