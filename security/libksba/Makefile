@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	libksba
-# Date created:				July 17 2002
-# Whom:					Tilman Linneweh <arved@FreeBSD.org>
-#
-# $FreeBSD: ports/security/libksba/Makefile,v 1.53 2012/11/17 06:01:07 svnexp Exp $
+# Created by: Tilman Linneweh <arved@FreeBSD.org>
+# $FreeBSD: security/libksba/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	libksba
 PORTVERSION=	1.3.0
@@ -22,7 +19,8 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-static
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 INFO=		ksba
 
