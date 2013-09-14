@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: textproc/p5-PPIx-Regexp/Makefile 320158 2013-06-07 07:05:37Z az $
+# $FreeBSD: textproc/p5-PPIx-Regexp/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	PPIx-Regexp
 PORTVERSION=	0.029
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-List-MoreUtils>0:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-Task-Weaken>0:${PORTSDIR}/devel/p5-Task-Weaken
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PPIx::Regexp.3 \
 	PPIx::Regexp::Constant.3 \
