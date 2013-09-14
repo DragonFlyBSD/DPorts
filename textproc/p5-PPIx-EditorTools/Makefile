@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/textproc/p5-PPIx-EditorTools/Makefile,v 1.11 2013/02/13 06:44:08 svnexp Exp $
+# $FreeBSD: textproc/p5-PPIx-EditorTools/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	PPIx-EditorTools
 PORTVERSION=	0.18
@@ -21,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-Test-Most>=0.88:${PORTSDIR}/devel/p5-Test-Most
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PPIx::EditorTools.3 \
 	PPIx::EditorTools::FindUnmatchedBrace.3 \
