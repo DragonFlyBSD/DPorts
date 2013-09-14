@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: textproc/p5-String-HexConvert/Makefile 321700 2013-06-24 18:32:07Z lippe $
+# $FreeBSD: textproc/p5-String-HexConvert/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	String-HexConvert
 PORTVERSION=	0.01
@@ -13,7 +13,8 @@ COMMENT=	String::HexConver - Converts ascii strings to hex and reverse
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	String::HexConvert.3
 
