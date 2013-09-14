@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jade
-# Date created:		June 19, 1997
-# Whom:			jfieber
-#
-# $FreeBSD: ports/textproc/jade/Makefile,v 1.57 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: jfieber
+# $FreeBSD: textproc/jade/Makefile 327156 2013-09-13 15:06:48Z bapt $
 
 PORTNAME=	jade
 PORTVERSION=	1.2.1
@@ -25,8 +21,7 @@ RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr
 CONFLICTS=	sp-1.*
 
 USE_AUTOTOOLS=	libtool
-USE_GCC=	any
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-default-catalog=${PREFIX}/share/sgml/catalog
