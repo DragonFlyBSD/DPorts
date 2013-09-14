@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libdasm/Makefile 324133 2013-08-01 21:40:20Z antoine $
+# $FreeBSD: devel/libdasm/Makefile 327186 2013-09-13 21:28:42Z antoine $
 
 PORTNAME=	libdasm
 PORTVERSION=	1.5
@@ -9,6 +9,8 @@ MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Simple x86 disassembly library
+
+LICENSE=	BSD
 
 USE_LDCONFIG=	yes
 
