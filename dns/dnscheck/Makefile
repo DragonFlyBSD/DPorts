@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dnscheck
-# Date created:				25 September 2005
-# Whom:					Jarrod Sayers <jarrod@netleader.com.au>
-#
-# $FreeBSD: ports/dns/dnscheck/Makefile,v 1.7 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: Jarrod Sayers <jarrod@netleader.com.au>
+# $FreeBSD: dns/dnscheck/Makefile 326955 2013-09-11 08:56:53Z az $
 
 PORTNAME=	dnscheck
 PORTVERSION=	1.3
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.downtools.com.au/~jarrod/projects/dnscheck/download/
 MAINTAINER=	jarrod@downtools.com.au
 COMMENT=	DNS zone sanity checker
 
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	bin/dnscheck
 
