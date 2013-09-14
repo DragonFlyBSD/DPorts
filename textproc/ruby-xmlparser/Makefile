@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-xmlparser/Makefile 319737 2013-06-03 00:45:20Z swills $
+# $FreeBSD: textproc/ruby-xmlparser/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	xmlparser
 PORTVERSION=	0.7.3
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/uconv.so:${PORTSDIR}/japanese/ruby-uconv \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 # to utilize encoding maps included in p5-XML-Parser
 
-USE_PERL5=	yes
+USES=		perl5
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 
