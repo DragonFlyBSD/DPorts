@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/textmaze/Makefile 317587 2013-05-07 08:42:29Z ehaupt $
+# $FreeBSD: games/textmaze/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	textmaze
 PORTVERSION=	1.2
@@ -13,8 +13,7 @@ COMMENT=	Generates mazes on a text terminal and lets you traverse them
 
 RUN_DEPENDS=	p5-Curses>=0:${PORTSDIR}/devel/p5-Curses
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
 
 SHEBANG_FILES=	textmaze
