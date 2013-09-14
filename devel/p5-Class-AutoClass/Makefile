@@ -1,25 +1,26 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: devel/p5-Class-AutoClass/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Class-AutoClass/Makefile 327239 2013-09-14 08:01:54Z sunpoet $
 
 PORTNAME=	Class-AutoClass
-PORTVERSION=	1.01
+PORTVERSION=	1.55
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	autoclass_v${PORTVERSION:S/./_/}
-EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Automatically define simple get and set methods in an inheritance structure
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Create get and set methods and simplify object initialization
 
-RUN_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
-BUILD_DEPENDS:=	${RUN_DEPENDS} \
-		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
+BUILD_DEPENDS=	p5-Hash-AutoHash-Args>=1.10:${PORTSDIR}/devel/p5-Hash-AutoHash-Args
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-IO-stringy>=2.1:${PORTSDIR}/devel/p5-IO-stringy \
+		p5-Test-Deep>=0.098:${PORTSDIR}/devel/p5-Test-Deep
+
+USE_PERL5=	modbuild
 USES=		perl5
-USE_PERL5=	configure
-WRKSRC=		${WRKDIR}/AutoClass
 
-MAN3=		Class::AutoClass::Root.3 Class::AutoClass.3 Class::AutoClass::Args.3
+MAN3=		Class::AutoClass.3
 
 .include <bsd.port.mk>
