@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/mvdsv/Makefile 314450 2013-03-17 14:55:28Z danfe $
+# $FreeBSD: games/mvdsv/Makefile 327066 2013-09-12 13:53:53Z danfe $
 
 PORTNAME?=	mvdsv
 PORTVERSION=	0.29
@@ -17,9 +17,9 @@ USE_ZIP=	yes
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	${OPSYS} ${ARCH:C/.*(64)/\1/}
+MAKE_ARGS=	CC="${CC}"
 ALL_TARGET=	${PORTNAME}
 WRKSRC=		${WRKDIR}/mvdsv
-MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
@@ -44,6 +44,9 @@ MAKE_ARGS+=	-DNOKQUEUE
 .if ! ${PORT_OPTIONS:MASM}
 MAKE_ARGS+=	-DWITHOUT_X86_ASM
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,^inline ,,' ${WRKSRC}/source/sv_sys_unix.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
