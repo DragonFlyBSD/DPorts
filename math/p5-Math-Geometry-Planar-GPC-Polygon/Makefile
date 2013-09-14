@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 327032 2013-09-12 05:53:03Z az $
 
 PORTNAME=	Math-Geometry-Planar-GPC-Polygon
 PORTVERSION=	0.05
@@ -14,7 +14,8 @@ COMMENT=	OO wrapper to gpc library
 BUILD_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 RUN_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=	yes
 
 MAN3=		Math::Geometry::Planar::GPC::Polygon.3
