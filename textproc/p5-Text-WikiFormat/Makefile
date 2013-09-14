@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: textproc/p5-Text-WikiFormat/Makefile 314055 2013-03-13 10:46:08Z bapt $
+# $FreeBSD: textproc/p5-Text-WikiFormat/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	Text-WikiFormat
 PORTVERSION=	0.80
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-URI>0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Text::WikiFormat.3 \
 		Text::WikiFormat::Blocks.3
