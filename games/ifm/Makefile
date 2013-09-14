@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ifm
-# Date created:				Mon Oct 12 12:32:07 EDT 1998
-# Whom:					Dave Chapeskie <dchapes@ddm.on.ca>
-#
-# $FreeBSD: ports/games/ifm/Makefile,v 1.34 2012/11/17 05:57:41 svnexp Exp $
-#
+# Created by: Dave Chapeskie <dchapes@ddm.on.ca>
+# $FreeBSD: games/ifm/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	ifm
 PORTVERSION=	5.4
@@ -16,7 +12,7 @@ COMMENT=	Interactive Fiction mapper and walkthrough generator
 
 RUN_DEPENDS=	wish8.4:${PORTSDIR}/x11-toolkits/tk84
 
-USE_PERL5=	yes
+USES=		perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	WISH=${LOCALBASE}/bin/wish8.4
