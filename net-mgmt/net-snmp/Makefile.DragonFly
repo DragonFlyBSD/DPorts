@@ -1,7 +1,5 @@
 # Port requires libssp*
-# This is only available on the gcc 4.7 base compiler
-
-USE_GCC=		4.7
+# This is only available on the gcc 4.7 base compiler (now default)
 
 MAKE_ENV+=		OPSYS=${OPSYS}
 MAKE_ENV+=		MIB_SYSTEM_LIBS="-lkinfo"
