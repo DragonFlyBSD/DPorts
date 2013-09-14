@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Memcached-libmemcached
-# Date created:				2008-01-24
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-Memcached-libmemcached/Makefile,v 1.11 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: databases/p5-Memcached-libmemcached/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	Memcached-libmemcached
 PORTVERSION=	0.44.06
@@ -16,7 +12,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Thin fast full interface to the libmemcached client API
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_LDCONFIG=	yes
 
 MAN3=		Memcached::libmemcached.3 \
