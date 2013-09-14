@@ -1,5 +1,5 @@
 # Created by: Joshua D. Abraham <jabra@ccs.neu.edu>
-# $FreeBSD: security/p5-Nmap-Parser/Makefile 316902 2013-04-30 08:53:05Z jadawin $
+# $FreeBSD: security/p5-Nmap-Parser/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Nmap-Parser
 PORTVERSION=	1.31
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-XML-Twig>=3.16:${PORTSDIR}/textproc/p5-XML-Twig \
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		nmap:${PORTSDIR}/security/nmap
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Nmap::Parser.3
 
