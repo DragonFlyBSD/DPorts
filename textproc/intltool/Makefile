@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: textproc/intltool/Makefile 318118 2013-05-13 16:02:31Z kwm $
+# $FreeBSD: textproc/intltool/Makefile 327088 2013-09-12 16:41:28Z az $
 #   $MCom: ports/trunk/textproc/intltool/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	intltool
@@ -14,9 +14,7 @@ COMMENT=	Tools to internationalize various kinds of data files
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
-USE_GMAKE=	yes
-USES=		iconv
-USE_PERL5=	yes
+USES=		iconv gmake perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir="${PREFIX}/libdata"
 
