@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: textproc/p5-XML-LibXML-Simple/Makefile 314535 2013-03-18 08:03:49Z culot $
+# $FreeBSD: textproc/p5-XML-LibXML-Simple/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	XML-LibXML-Simple
 PORTVERSION=	0.93
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-XML-LibXML>=1.64:${PORTSDIR}/textproc/p5-XML-LibXML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::LibXML::Simple.3
 
