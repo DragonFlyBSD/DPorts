@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-SinFP
-# Date created:		26 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Net-SinFP/Makefile,v 1.19 2012/11/17 06:01:13 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: security/p5-Net-SinFP/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME?=	Net-SinFP
 PORTVERSION=	2.09
@@ -38,7 +34,8 @@ BUILD_DEPENDS+=	p5-Class-Gomor>=1.00:${PORTSDIR}/devel/p5-Class-Gomor \
 		p5-Net-Packet-Target>=1.00:${PORTSDIR}/net/p5-Net-Packet-Target
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN3=	Net::SinFP.3 \

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/p5-Net-SinFP/pkg-plist,v 1.5 2012/11/17 06:01:13 svnexp Exp $
+@comment $FreeBSD: security/p5-Net-SinFP/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%SITE_PERL%%/Net/SinFP.pm
 %%SITE_PERL%%/Net/SinFP/Consts.pm
 %%SITE_PERL%%/Net/SinFP/DB.pm
