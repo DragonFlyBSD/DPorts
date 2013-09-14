@@ -1,9 +1,5 @@
-# New ports collection makefile for: qar-bufo
-# Date created:        18 April 2007
-# Whom:                Zane C. Bowers
-#
-# $FreeBSD: ports/dns/ldnsm/Makefile,v 1.4 2012/11/17 05:57:09 svnexp Exp $
-#
+# Created by: Zane C. Bowers
+# $FreeBSD: dns/ldnsm/Makefile 326955 2013-09-11 08:56:53Z az $
 
 PORTNAME=	ldnsm
 PORTVERSION=	0.2.1
@@ -14,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Manages LDAP enteries for the BIND9 SDB LDAP patch
 
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	bin/ldnsm
 
