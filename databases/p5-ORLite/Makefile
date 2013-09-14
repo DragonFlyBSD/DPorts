@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: databases/p5-ORLite/Makefile 320165 2013-06-07 07:32:23Z az $
+# $FreeBSD: databases/p5-ORLite/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	ORLite
 PORTVERSION=	1.98
@@ -20,7 +20,8 @@ BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.59:${PORTSDIR}/devel/p5-ExtUtils-MakeMa
 
 TEST_DEPENDS=	p5-Test-Script>=1.06:${PORTSDIR}/devel/p5-Test-Script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	ORLite.3
 
