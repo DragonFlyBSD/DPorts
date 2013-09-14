@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ding
-# Date created:							5/25/2001
-# Whom:									n@nectar.com
-#
-# $FreeBSD: ports/german/ding/Makefile,v 1.18 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: n@nectar.com
+# $FreeBSD: german/ding/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	ding
 PORTVERSION=	1.7
@@ -17,7 +13,7 @@ COMMENT=	A German-English dictionary program for X windows/Unix
 RUN_DEPENDS=	wish8.4:${PORTSDIR}/x11-toolkits/tk84 \
 		agrep:${PORTSDIR}/textproc/agrep
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		ding.1
 
