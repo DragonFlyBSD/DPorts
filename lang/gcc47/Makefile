@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc47/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: lang/gcc47/Makefile 327052 2013-09-12 10:20:45Z marino $
 
 PORTNAME=	gcc
 PORTVERSION=	4.7.4.20130831
@@ -29,7 +29,7 @@ GCC_VERSION=	${PORTVERSION:C/(.+)\.[0-9]{8}/\1/}
 SUFFIX=		${PORTVERSION:C/([0-9]+).([0-9]+).*/\1\2/}
 LATEST_LINK=	gcc${SUFFIX}${PKGNAMESUFFIX}
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
-USES=		gmake iconv
+USES=		bison gmake iconv
 USE_BINUTILS=	yes
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
@@ -42,7 +42,7 @@ OPTIONS_DEFINE_i386=	JAVA
 OPTIONS_DEFINE_x86_64=	JAVA
 OPTIONS_DEFAULT=	BOOTSTRAP
 OPTIONS_DEFAULT_i386=	JAVA
-OPTIONS_DEFAULT_amd64=	JAVA
+OPTIONS_DEFAULT_x86_64=	JAVA
 BOOTSTRAP_DESC=		Build using a full bootstrap
 
 .include <bsd.port.pre.mk>
