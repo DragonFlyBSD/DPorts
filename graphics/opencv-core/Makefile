@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/graphics/opencv-core/Makefile,v 1.4 2012/11/17 05:58:15 svnexp Exp $
+# $FreeBSD: graphics/opencv-core/Makefile 327060 2013-09-12 13:00:12Z bapt $
 
 _BUILDING_OPENCV_CORE=	yes
 MASTERDIR=	${.CURDIR}/../opencv
