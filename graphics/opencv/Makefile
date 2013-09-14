@@ -1,5 +1,5 @@
 # Created by: Marc Abramowitz (http://marc.abramowitz.info)
-# $FreeBSD: graphics/opencv/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/opencv/Makefile 327060 2013-09-12 13:00:12Z bapt $
 
 PORTNAME?=	opencv
 PORTVERSION=	2.3.1
@@ -27,6 +27,12 @@ NOT_FOR_ARCHS_REASON_sparc64=	does not compile on sparc64
 
 DATADIR=	${PREFIX}/share/OpenCV
 PLIST_SUB+=	VERSION=${DISTVERSION}
+
+_COMPVERSION!= ${CC} --version
+.if ${_COMPVERSION:Mclang}
+USE_CXXSTD=	gnu++11
+CXXFLAGS+=	-Wno-error -Wno-c++11-narrowing
+.endif
 
 .if !defined(_BUILDING_OPENCV_CORE) && !defined(_BUILDING_OPENCV_PYTHON)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-opencv
