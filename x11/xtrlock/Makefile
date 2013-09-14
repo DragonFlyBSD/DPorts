@@ -1,16 +1,18 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/xtrlock/Makefile 326514 2013-09-06 15:30:07Z wg $
+# $FreeBSD: x11/xtrlock/Makefile 327224 2013-09-14 06:51:03Z sunpoet $
 
 PORTNAME=	xtrlock
 PORTVERSION=	2.3
 CATEGORIES=	x11
-MASTER_SITES=	DEBIAN
+MASTER_SITES=	DEBIAN \
+		http://www.skysmurf.nl/comp/FreeBSD/distfiles/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	freebsd@skysmurf.nl
 COMMENT=	X Transparent Lock
 
-LICENSE=	GPLv2 # (or later)
+LICENSE=	GPLv2 GPLv3	# GPLv2 or later
+LICENSE_COMB=	dual
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
