@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-POD2-Base
-# Date created:		2010-05-25
-# Whom:			Ashish SHUKLA <wahjava@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-POD2-Base/Makefile,v 1.4 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Ashish SHUKLA <wahjava@gmail.com>
+# $FreeBSD: textproc/p5-POD2-Base/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	POD2-Base
 PORTVERSION=	0.043
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Base module for translations of Perl documentation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POD2::Base.3 \
 	POD2::PT::POD2::Base.3
