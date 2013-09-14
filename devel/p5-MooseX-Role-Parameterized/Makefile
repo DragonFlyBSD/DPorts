@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Role-Parameterized/Makefile 326917 2013-09-10 16:26:41Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Role-Parameterized/Makefile 327071 2013-09-12 14:28:27Z sunpoet $
 
 PORTNAME=	MooseX-Role-Parameterized
-PORTVERSION=	1.01
+PORTVERSION=	1.02
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SARTAK
