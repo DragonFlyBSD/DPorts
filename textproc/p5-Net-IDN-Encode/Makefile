@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: ports/textproc/p5-Net-IDN-Encode/Makefile,v 1.6 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: textproc/p5-Net-IDN-Encode/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	Net-IDN-Encode
 PORTVERSION=	2.003
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-Net-IDN-Nameprep>=0:${PORTSDIR}/converters/p5-Net-IDN-Nameprep
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::IDN::Encode.3 Net::IDN::Overview.3 Net::IDN::Punycode.3 \
 		Net::IDN::Punycode::PP.3 Net::IDN::Standards.3 \
