@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: dns/vizone/Makefile 317608 2013-05-07 13:53:08Z ehaupt $
+# $FreeBSD: dns/vizone/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	vizone
 PORTVERSION=	0.1
@@ -9,8 +9,8 @@ MASTER_SITES=	CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Updates the serial number in one or more zonefiles
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 SHEBANG_FILES=	updserial
