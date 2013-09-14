@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: audio/p5-Audio-MPD-Common/Makefile 320258 2013-06-08 14:55:15Z miwi $
+# $FreeBSD: audio/p5-Audio-MPD-Common/Makefile 326958 2013-09-11 09:54:08Z az $
 
 PORTNAME=	Audio-MPD-Common
 PORTVERSION=	1.120881
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Moose>=0.92:${PORTSDIR}/devel/p5-Moose \
 		p5-String-Formatter>=0:${PORTSDIR}/devel/p5-String-Formatter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Audio::MPD::Common.3 \
 		Audio::MPD::Common::Item.3 \
