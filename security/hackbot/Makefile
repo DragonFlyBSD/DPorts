@@ -1,6 +1,5 @@
 # Created by: mich@freebsdcluster.org
-# $FreeBSD: security/hackbot/Makefile 324164 2013-08-02 13:23:34Z mich $
-#
+# $FreeBSD: security/hackbot/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	hackbot
 PORTVERSION=	2.21
@@ -12,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	mich@FreeBSD.org
 COMMENT=	Host exploration tool and bannergrabber
 
-USE_PERL5=	YES
+USES=		perl5
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
