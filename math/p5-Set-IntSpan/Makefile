@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: math/p5-Set-IntSpan/Makefile 316181 2013-04-21 14:59:27Z bdrewery $
+# $FreeBSD: math/p5-Set-IntSpan/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	Set-IntSpan
 PORTVERSION=	1.19
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Manages sets of integers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Set::IntSpan.3
 
