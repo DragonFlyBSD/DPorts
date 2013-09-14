@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro
-# $FreeBSD: x11-fonts/mkbold/Makefile 317753 2013-05-09 22:40:50Z bapt $
+# $FreeBSD: x11-fonts/mkbold/Makefile 327091 2013-09-12 17:07:08Z az $
 
 PORTNAME=	mkbold
 PORTVERSION=	1.0
@@ -14,9 +14,8 @@ COMMENT=	Perl script to make BDF font bold
 CONFLICTS=	mkbold-mkitalic-[0-9]*
 
 PLIST_FILES=	bin/mkbold
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	mkbold
-USE_PERL5=	yes
 EXTRACT_CMD=	${BZCAT}
 EXTRACT_BEFORE_ARGS=	#
 EXTRACT_AFTER_ARGS=	> ${WRKSRC}/mkbold
