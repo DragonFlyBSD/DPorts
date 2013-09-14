@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Crypt::RC4
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/security/p5-Crypt-RC4/Makefile,v 1.9 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: security/p5-Crypt-RC4/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=		Crypt-RC4
 PORTVERSION=		2.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		skreuzer@FreeBSD.org
 COMMENT=	Perl implementation of the RC4 encryption algorithm
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Crypt::RC4.3
 
