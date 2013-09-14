@@ -1,19 +1,15 @@
-# New ports collection makefile for:	crafty
-# Date created:				31 May 1998
-# Whom:					Stefan Eggers <seggers@semyam.dinoco.de>
-#
-# $FreeBSD: ports/games/crafty/Makefile,v 1.56 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: Stefan Eggers <seggers@semyam.dinoco.de>
+# $FreeBSD: games/crafty/Makefile 327183 2013-09-13 20:43:00Z flo $
 
 PORTNAME=	crafty
 PORTVERSION=	23.4
 CATEGORIES=	games
 MASTER_SITES=	http://www.craftychess.com/:src \
-		ftp://ftp.cis.uab.edu/pub/hyatt/pgn/:data \
-		ftp://ftp.cis.uab.edu/pub/hyatt/documentation/:doc \
-		ftp://ftp.cis.uab.edu/pub/hyatt/source/:src \
-		ftp://ftp.cis.uab.edu/pub/hyatt/book/:utils \
-		ftp://ftp.cis.uab.edu/pub/hyatt/book/:books
+		http://www.cis.uab.edu/hyatt/crafty/pgn/:data \
+		http://www.cis.uab.edu/hyatt/crafty/documentation/:doc \
+		http://www.cis.uab.edu/hyatt/crafty/source/:src \
+		http://www.cis.uab.edu/hyatt/crafty/book/:utils \
+		http://www.cis.uab.edu/hyatt/crafty/book/:books
 DISTFILES=	crafty-${PORTVERSION}.zip:src \
 		start.pgn:data
 DIST_SUBDIR=	crafty
