@@ -1,5 +1,5 @@
 # Created by: fenner
-# $FreeBSD: textproc/gtk-doc/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: textproc/gtk-doc/Makefile 327088 2013-09-12 16:41:28Z az $
 #    $MCom: ports/trunk/textproc/gtk-doc/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk-doc
@@ -26,9 +26,8 @@ XMLCATMGR=		${LOCALBASE}/bin/xmlcatmgr
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
 USE_XZ=		yes
-USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-USES=		gmake pathfix pkgconfig shebangfix
+USES=		gmake pathfix pkgconfig shebangfix perl5
 USE_GNOME=	gnomeprefix libxslt gnomedocutils
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS=	--with-xml-catalog=${LOCALBASE}/share/xml/catalog.ports
