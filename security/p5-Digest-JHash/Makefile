@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-JHash
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-JHash/Makefile,v 1.11 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-JHash/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	Digest-JHash
 PORTVERSION=	0.07
@@ -14,7 +12,8 @@ COMMENT=	Perl extension for JHash hash algorithm
 
 LICENSE=	ART20
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::JHash.3
 
