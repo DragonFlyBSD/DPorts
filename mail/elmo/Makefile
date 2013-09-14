@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/elmo/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/elmo/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.0
@@ -15,9 +15,9 @@ CONFLICTS=	elmo-devel-[0-9]*
 OPTIONS_DEFINE=	NLS
 
 GNU_CONFIGURE=	yes
-USES=		iconv shebangfix
+USES=		iconv shebangfix perl5
 USE_OPENSSL=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 SHEBANG_FILES=	src/elmoconf.pl
 
 LICENSE=	GPLv2
