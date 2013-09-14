@@ -1,9 +1,4 @@
-# New ports collection makefile for:	DBIx::Skinny
-# Date created:		19 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Skinny/Makefile,v 1.8 2012/11/17 05:55:15 svnexp Exp $
-#
+# $FreeBSD: databases/p5-DBIx-Skinny/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	DBIx-Skinny
 PORTVERSION=	0.0742
@@ -24,7 +19,8 @@ RUN_DEPENDS=	\
 	p5-Class-Load>0:${PORTSDIR}/devel/p5-Class-Load
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Skinny.3 \
 	DBIx::Skinny::Iterator.3 \
