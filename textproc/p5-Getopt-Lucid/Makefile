@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: textproc/p5-Getopt-Lucid/Makefile 321712 2013-06-24 20:02:41Z lippe $
+# $FreeBSD: textproc/p5-Getopt-Lucid/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	Getopt-Lucid
 PORTVERSION=	1.05
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Exception-Class>=1.23:${PORTSDIR}/devel/p5-Exception-Class \
 RUN_DEPENDS=	p5-Exception-Class>=1.23:${PORTSDIR}/devel/p5-Exception-Class \
 		p5-Storable>=2.16:${PORTSDIR}/devel/p5-Storable
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Getopt::Lucid.3 Getopt::Lucid::Exception.3
 
