@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ppars
-# Date created:		2004-06-29
-# Whom:			Joe Barbish <fbsd_user@a1poweruser.com>
-#
-# $FreeBSD: ports/security/ppars/Makefile,v 1.4 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Joe Barbish <fbsd_user@a1poweruser.com>
+# $FreeBSD: security/ppars/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	ppars
 PORTVERSION=	1.0
@@ -16,7 +12,7 @@ COMMENT=	Proactive Probing Abuse Reporting System
 
 RUN_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask
 
-USE_PERL5=	yes
+USES=		perl5
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
