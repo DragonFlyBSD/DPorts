@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-vCard/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: textproc/p5-Text-vCard/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=		Text-vCard
 PORTVERSION=		2.13
@@ -14,7 +14,8 @@ BUILD_DEPENDS=		p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 			p5-Text-vFile-asData>=0:${PORTSDIR}/devel/p5-Text-vFile-asData
 RUN_DEPENDS:=		${BUILD_DEPENDS}
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Text::vCard::Node.3 Text::vCard.3 \
 			Text::vCard::Addressbook.3
