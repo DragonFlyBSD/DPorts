@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::RSS
-# Date created:				4th September 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-RSS/Makefile,v 1.40 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-RSS/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	XML-RSS
 PORTVERSION=	1.49
@@ -22,7 +18,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 BUILD_DEPENDS+=	p5-Test-Manifest>=0.9:${PORTSDIR}/devel/p5-Test-Manifest
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::RSS.3
 
