@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Time-modules/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Time-modules/Makefile 327140 2013-09-13 09:51:02Z sunpoet $
 
 PORTNAME=	Time-modules
-PORTVERSION=	2011.0517
+PORTVERSION=	2013.0912
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
