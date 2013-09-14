@@ -1,9 +1,5 @@
-# New ports collection makefile for:	koi8rPS
-# Date created:				Oct 30, 2000
-# Whom:					mi@aldan.algebra.com
-#
-# $FreeBSD: ports/x11-fonts/geminifonts/Makefile,v 1.13 2012/11/17 06:03:28 svnexp Exp $
-#
+# Created by: mi@aldan.algebra.com
+# $FreeBSD: x11-fonts/geminifonts/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	gemini
 PORTVERSION=	1.0
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 USE_XORG=	x11
 NO_WRKSUBDIR=	yes
 
