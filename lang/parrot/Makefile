@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: lang/parrot/Makefile 324190 2013-08-03 12:51:18Z mat $
+# $FreeBSD: lang/parrot/Makefile 327219 2013-09-14 06:21:24Z sunpoet $
 
 PORTNAME=	parrot
 PORTVERSION=	${PARROT_VERSION}
@@ -33,9 +33,8 @@ CONFIGURE_SCRIPT=	Configure.pl
 INSTALL_TARGET=	install-dev
 MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		bison perl5
+USES=		bison gmake perl5
 
 MAN1=		ops2c.1 \
 		parrot.1 \
