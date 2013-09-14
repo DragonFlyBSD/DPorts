@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-MySQL
-# Date created:				17 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-MySQL/Makefile,v 1.9 2012/11/17 06:01:11 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-MySQL/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	Crypt-MySQL
 PORTVERSION=	0.04
@@ -14,7 +12,8 @@ COMMENT=	Perl extension to compare MySQL passwords without libmysqlclient
 
 RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Crypt::MySQL.3
 
