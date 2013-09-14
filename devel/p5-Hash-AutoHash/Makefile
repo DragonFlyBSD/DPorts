@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 327226 2013-09-14 06:54:11Z sunpoet $
 
 PORTNAME=	Hash-AutoHash
 PORTVERSION=	1.16
@@ -13,11 +13,11 @@ COMMENT=	Object-oriented access to real and tied hashes
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Tie-Hash-MultiValue>0:${PORTSDIR}/devel/p5-Tie-Hash-MultiValue
-RUN_DEPENDS:=	${BUILD_DEPENDS} \
-		p5-List-MoreUtils>=0.09:${PORTSDIR}/lang/p5-List-MoreUtils \
+BUILD_DEPENDS=	p5-List-MoreUtils>=0.09:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-Tie-ToObject>0:${PORTSDIR}/devel/p5-Tie-ToObject
-TEST_DEPENDS=	p5-Test-Deep>0.11:${PORTSDIR}/devel/p5-Test-Deep
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Deep>=0.11:${PORTSDIR}/devel/p5-Test-Deep \
+		p5-Tie-Hash-MultiValue>0:${PORTSDIR}/devel/p5-Tie-Hash-MultiValue
 
 USES=		perl5
 USE_PERL5=	modbuild
