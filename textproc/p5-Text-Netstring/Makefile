@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Text-Netstring
-# Date created:				15 October 2003
-# Whom:					James Raftery <james@now.ie>
-#
-# $FreeBSD: ports/textproc/p5-Text-Netstring/Makefile,v 1.5 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: James Raftery <james@now.ie>
+# $FreeBSD: textproc/p5-Text-Netstring/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	Text-Netstring
 PORTVERSION=	0.07
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	james@now.ie
 COMMENT=	Perl module to create and manipulate netstring encoded strings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Netstring.3
 
