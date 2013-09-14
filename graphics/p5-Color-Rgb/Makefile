@@ -1,9 +1,5 @@
-# New ports collection makefile for:	graphics/p5-Color-Rgb
-# Date created:				Sep 17 2004
-# Whom:					Rong-En Fan <rafan@infor.org>
-#
-# $FreeBSD: ports/graphics/p5-Color-Rgb/Makefile,v 1.5 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: Rong-En Fan <rafan@infor.org>
+# $FreeBSD: graphics/p5-Color-Rgb/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	Color-Rgb
 PORTVERSION=	1.4
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	Simple rgb.txt parsing class
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Color::Rgb.3
 
