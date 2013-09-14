@@ -1,10 +1,5 @@
-# New ports collection makefile for:	cdif
-# Date created:		July 22, 2000
-# Whom:			Yoshiro MIHIRA <sanpei@sanpei.org>
-#
-# $NetBSD: Makefile,v 1.3 2000/08/27 02:46:07 jlam Exp $
-# $FreeBSD: ports/textproc/cdif/Makefile,v 1.7 2012/11/17 06:01:52 svnexp Exp $
-#
+# Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
+# $FreeBSD: textproc/cdif/Makefile 326920 2013-09-10 17:26:57Z az $
 
 PORTNAME=		cdif
 PORTVERSION=		1.19
@@ -15,7 +10,7 @@ EXTRACT_SUFX=		# empty
 MAINTAINER=		sanpei@FreeBSD.org
 COMMENT=		Word context diff
 
-USE_PERL5=		yes
+USES=		perl5
 
 NO_WRKSUBDIR=		yes
 NO_BUILD=		yes
