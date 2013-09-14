@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Tiny/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: www/p5-HTTP-Tiny/Makefile 327159 2013-09-13 15:41:43Z sunpoet $
 
 PORTNAME=	HTTP-Tiny
-PORTVERSION=	0.034
+PORTVERSION=	0.035
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
@@ -16,7 +16,6 @@ LICENSE_COMB=	dual
 
 OPTIONS_DEFINE=	COOKIE HTTPS
 OPTIONS_DEFAULT=COOKIE HTTPS
-COOKIE_DESC=	Cookie support
 
 USE_PERL5=	configure
 USES=		perl5
