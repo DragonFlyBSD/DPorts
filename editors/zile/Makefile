@@ -1,5 +1,5 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD: ports/editors/zile/Makefile,v 1.90 2012/11/17 05:57:19 svnexp Exp $
+# $FreeBSD: editors/zile/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	zile
 PORTVERSION=	2.4.9
@@ -13,7 +13,8 @@ LIB_DEPENDS=	gc:${PORTSDIR}/devel/boehm-gc
 BUILD_DEPENDS=	${LOCALBASE}/bin/help2man:${PORTSDIR}/misc/help2man
 
 USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-included-regex
 
