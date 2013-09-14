@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: hebrew/hspell/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: hebrew/hspell/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	hspell
 PORTVERSION=	1.1
@@ -11,9 +11,8 @@ MASTER_SITE_SUBDIR=	makc
 MAINTAINER=	onatan@gmail.com
 COMMENT=	Hebrew spellchecker and morphology engine
 
-USES=		shebangfix
-USE_PERL5_BUILD=	yes
-USE_GMAKE=	yes
+USES=		shebangfix gmake perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CFLAGS+=	-fPIC
 SHEBANG_FILES=	pmerge
