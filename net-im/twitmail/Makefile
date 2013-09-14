@@ -1,9 +1,5 @@
-# New ports collection makefile for:	twitmail
-# Date created:		2010-02-13
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/twitmail/Makefile,v 1.4 2012/11/17 06:00:30 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: net-im/twitmail/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	twitmail
 PORTVERSION=	0.42
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-DBD-SQLite>=1.12:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-TimeDate>=2.24:${PORTSDIR}/devel/p5-TimeDate \
 		p5-Getopt-GUI-Long>=0.91:${PORTSDIR}/devel/p5-Getopt-GUI-Long
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		twitmail.1
 
