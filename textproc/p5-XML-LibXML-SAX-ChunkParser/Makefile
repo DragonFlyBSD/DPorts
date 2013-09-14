@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: ports/textproc/p5-XML-LibXML-SAX-ChunkParser/Makefile,v 1.6 2013/02/13 06:44:08 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-LibXML-SAX-ChunkParser/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	XML-LibXML-SAX-ChunkParser
 PORTVERSION=	0.00006
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-XML-LibXML>=1.66:${PORTSDIR}/textproc/p5-XML-LibXML \
 		p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::LibXML::SAX::ChunkParser.3
 
