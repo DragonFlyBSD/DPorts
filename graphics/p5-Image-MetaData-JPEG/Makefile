@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Image-MetaData-JPEG
-# Date created:		2006-08-05
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: ports/graphics/p5-Image-MetaData-JPEG/Makefile,v 1.5 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: graphics/p5-Image-MetaData-JPEG/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	Image-MetaData-JPEG
 PORTVERSION=	0.153
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	Perl extension for showing/modifying JPEG (meta)data]
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Image::MetaData::JPEG.3 \
 		Image::MetaData::JPEG::MakerNotes.3 \
