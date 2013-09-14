@@ -1,5 +1,5 @@
 # Created by: Joe Kelsey
-# $FreeBSD: ports/devel/libical/Makefile,v 1.26 2012/12/30 12:10:38 svnexp Exp $
+# $FreeBSD: devel/libical/Makefile 327099 2013-09-12 17:55:41Z az $
 
 PORTNAME=	libical
 PORTVERSION=	0.48
@@ -9,11 +9,11 @@ MASTER_SITES=	SF/freeassociation/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An implementation of the IETF Calendaring and Scheduling protocols
 
+USES=		gmake perl5
+USE_PERL5=	build
 USE_GNOME=	gnomehack ltverhack
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 
