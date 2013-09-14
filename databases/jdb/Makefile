@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jdb
-# Date created:				28 June 2002
-# Whom:					Lars Eggert <larse@isi.edu>
-#
-# $FreeBSD: ports/databases/jdb/Makefile,v 1.9 2012/11/17 05:55:08 svnexp Exp $
-#
+# Created by: Lars Eggert <larse@isi.edu>
+# $FreeBSD: databases/jdb/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	jdb
 PORTVERSION=	1.14
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/JDB/
 MAINTAINER=	lars.eggert@gmx.net
 COMMENT=	JDB manipulates flat-ASCII databases from shell scripts
 
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --datadir=${PREFIX}/lib/jdb
 
