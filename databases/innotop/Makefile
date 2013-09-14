@@ -1,9 +1,5 @@
-# New ports collection makefile for:	innotop
-# Date created:				23 October 2006
-# Whom:	      				Steven Kreuzer <skreuzer@f2o.org>
-#
-# $FreeBSD: databases/innotop/Makefile 323497 2013-07-22 20:24:55Z skreuzer $
-#
+# Created by: Steven Kreuzer <skreuzer@f2o.org>
+# $FreeBSD: databases/innotop/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	innotop
 PORTVERSION=	1.9.1
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql \
 		p5-DBI>=1.46:${PORTSDIR}/databases/p5-DBI \
 		p5-Term-ReadKey>=2.10:${PORTSDIR}/devel/p5-Term-ReadKey
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_MYSQL=	yes
 
 MAN1=		innotop.1
