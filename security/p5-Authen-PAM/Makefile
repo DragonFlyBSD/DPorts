@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Authen-PAM
-# Date created:				Mon Oct  4 1999
-# Whom:	      				Matt Behrens <matt@zigg.com>
-#
-# $FreeBSD: ports/security/p5-Authen-PAM/Makefile,v 1.18 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: Matt Behrens <matt@zigg.com>
+# $FreeBSD: security/p5-Authen-PAM/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Authen-PAM
 PORTVERSION=	0.16
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	des@FreeBSD.org
 COMMENT=	A Perl interface to the PAM library
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	-DPAM_STRERROR_NEEDS_PAMH
 
 MAN3=		Authen::PAM.3 \
