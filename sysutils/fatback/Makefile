@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/fatback/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/fatback/Makefile 327262 2013-09-14 10:43:40Z bapt $
 
 PORTNAME=	fatback
 PORTVERSION=	1.3
@@ -11,7 +11,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Recover deleted files from FAT filesystems
 
 GNU_CONFIGURE=	yes
-USE_GCC=	any
 
 MAN1=		fatback.1
 INFO=		fatback-manual
@@ -21,6 +20,9 @@ EXTRACT_AFTER_ARGS=	--exclude 'getopt*'	\
 OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e "s/-Werror//g" ${WRKSRC}/Makefile.in
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
