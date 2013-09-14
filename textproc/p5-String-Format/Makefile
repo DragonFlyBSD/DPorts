@@ -1,5 +1,5 @@
 # Created by: Matt Mills <matt_mills@btopenworld.com>
-# $FreeBSD: ports/textproc/p5-String-Format/Makefile,v 1.7 2013/02/21 17:08:26 svnexp Exp $
+# $FreeBSD: textproc/p5-String-Format/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	String-Format
 PORTVERSION=	1.17
@@ -12,7 +12,8 @@ COMMENT=	Perl module for sprintf-like string formatting capability
 
 LICENSE=	GPLv2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::Format.3
 
