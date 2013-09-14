@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: editors/mined/Makefile 325005 2013-08-19 16:40:36Z thierry $
+# $FreeBSD: editors/mined/Makefile 327085 2013-09-12 16:10:31Z thierry $
 
 PORTNAME=	mined
 PORTVERSION=	2012.23
@@ -21,7 +21,7 @@ PORTDOCS=	*
 USE_GMAKE=	yes
 MAKEFILE=	makefile
 REINPLACE_ARGS=	-i ""
-MAKE_ARGS=	GMAKE=${GMAKE} CC=${CC:T} OPT="${CFLAGS}"
+MAKE_ARGS=	GMAKE=${MAKE_CMD} CC=${CC:T} OPT="${CFLAGS}"
 INSTALL_TARGET=	localinstall
 MAKE_JOBS_UNSAFE=	yes
 
