@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-Convert-Color/Makefile 318708 2013-05-21 14:27:39Z kuriyama $
+# $FreeBSD: graphics/p5-Convert-Color/Makefile 326958 2013-09-11 09:54:08Z az $
 
 PORTNAME=	Convert-Color
 PORTVERSION=	0.09
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-List-UtilsBy>0:${PORTSDIR}/devel/p5-List-UtilsBy
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Convert::Color.3 \
 	Convert::Color::CMY.3 \
