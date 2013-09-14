@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: devel/libsigc++20/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: devel/libsigc++20/Makefile 327099 2013-09-12 17:55:41Z az $
 #   $MCom: ports/trunk/devel/libsigc++20/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	libsigc++
@@ -14,10 +14,10 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_AUTOTOOLS=	libtool
 USE_XZ=		yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 LATEST_LINK=	libsigc++20
 USE_LDCONFIG=	yes
-USES=		gmake pathfix
+USES=		gmake pathfix perl5
 GNU_CONFIGURE=	yes
 
 PLIST_SUB=	VERSION="2.0" API_VERSION="2.0"
