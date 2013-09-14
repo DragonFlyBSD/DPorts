@@ -1,6 +1,3 @@
-# Requires libssp
-USE_GCC= 4.7
-
 # Remove AUDIT from options list
 OPTIONS_DEFINE=		LDAP INSULTS DISABLE_ROOT_SUDO DISABLE_AUTH \
 			NOARGS_SHELL OPIE NLS
