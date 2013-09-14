@@ -1,8 +1,8 @@
 # Created by: will
-# $FreeBSD: devel/viewvc/Makefile 316446 2013-04-24 16:11:16Z ohauer $
+# $FreeBSD: devel/viewvc/Makefile 327258 2013-09-14 10:00:51Z ohauer $
 
 PORTNAME=	viewvc
-PORTVERSION=	1.1.20
+PORTVERSION=	1.1.21
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.viewvc.org/ \
 		LOCAL/ohauer
