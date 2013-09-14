@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-CSV-Encoded
-# Date Created:				18 September 2010
-# Whom:					Dereckson <dereckson@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-Text-CSV-Encoded/Makefile,v 1.3 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Dereckson <dereckson@gmail.com>
+# $FreeBSD: textproc/p5-Text-CSV-Encoded/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	Text-CSV-Encoded
 PORTVERSION=	0.10
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-IO>=0:${PORTSDIR}/devel/p5-IO \
 		p5-Text-CSV>=0:${PORTSDIR}/textproc/p5-Text-CSV
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::CSV::Encoded.3 Text::CSV::Encoded::Coder::Base.3 Text::CSV::Encoded::Coder::Encode.3 Text::CSV::Encoded::Coder::EncodeGuess.3
 
