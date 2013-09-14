@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-toolkits/mygui/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: x11-toolkits/mygui/Makefile 326957 2013-09-11 09:36:48Z marino $
 
 PORTNAME=	mygui
 PORTVERSION=	3.2.0
