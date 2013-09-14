@@ -1,4 +1,4 @@
-# $FreeBSD: security/kpcli/Makefile 322560 2013-07-09 14:25:56Z feld $
+# $FreeBSD: security/kpcli/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	kpcli
 PORTVERSION=	2.3
@@ -23,7 +23,7 @@ RUN_DEPENDS=	p5-Crypt-Rijndael>=1.08:${PORTSDIR}/security/p5-Crypt-Rijndael \
 
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-USE_PERL5=	yes
+USES=		perl5
 MAN1=	${PORTNAME}.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/kpcli
