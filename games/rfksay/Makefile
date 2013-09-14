@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  rfksay
-# Date created:                   Thu Jul 18, 2002
-# Whom:                           Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/games/rfksay/Makefile,v 1.5 2012/11/17 05:57:51 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: games/rfksay/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	rfksay
 PORTVERSION=	0.1
@@ -15,7 +10,7 @@ DISTNAME=	rfksay
 MAINTAINER=	mich@FreeBSD.org
 COMMENT=	Generates a kitten finding robot with a text bubble
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
