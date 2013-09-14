@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/igor/Makefile 320645 2013-06-11 21:23:04Z rakuco $
+# $FreeBSD: textproc/igor/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	igor
 PORTVERSION=	1.376
@@ -10,7 +10,8 @@ COMMENT=	FreeBSD Documentation Project sanity check script
 
 LICENSE=	BSD
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 NO_BUILD=	yes
 
