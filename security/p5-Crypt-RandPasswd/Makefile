@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Crypt::RandPasswd
-# Date created:				24 October 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Crypt-RandPasswd/Makefile,v 1.14 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: security/p5-Crypt-RandPasswd/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	Crypt-RandPasswd
 PORTVERSION=	0.02
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	An implementation of the Automated Password Generator standard
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::RandPasswd.3
 
