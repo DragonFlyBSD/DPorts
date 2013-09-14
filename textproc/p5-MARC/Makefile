@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MARC
-# Date created:				23 December 2001
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-MARC/Makefile,v 1.6 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: textproc/p5-MARC/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	MARC
 PORTVERSION=	1.15
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	A module for manipulating bibliographic records in the USMARC format
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MARC.3
 
