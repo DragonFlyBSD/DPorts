@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Config-Tiny/Makefile 326478 2013-09-06 08:28:57Z tobez $
+# $FreeBSD: devel/p5-Config-Tiny/Makefile 327232 2013-09-14 07:19:28Z sunpoet $
 
 PORTNAME=	Config-Tiny
-PORTVERSION=	2.16
+PORTVERSION=	2.17
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
