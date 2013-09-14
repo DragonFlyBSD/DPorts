@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 326602 2013-09-07 10:19:47Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 327095 2013-09-12 17:30:43Z sunpoet $
 
 PORTNAME=	Catalyst-Action-REST
-PORTVERSION=	1.11
+PORTVERSION=	1.12
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
