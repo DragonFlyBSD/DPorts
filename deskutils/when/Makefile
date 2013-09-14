@@ -1,9 +1,5 @@
-# New ports collection makefile for:	when
-# Date created:		1 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/when/Makefile,v 1.18 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: deskutils/when/Makefile 326975 2013-09-11 12:59:14Z az $
 
 PORTNAME=	when
 PORTVERSION=	1.1.22
@@ -13,7 +9,8 @@ MASTER_SITES=	LOCAL/culot
 MAINTAINER=	culot@FreeBSD.org
 COMMENT=	A very simple personal calendar
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
