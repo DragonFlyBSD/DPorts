@@ -1,5 +1,5 @@
 # Created by: Russell A. Jackson <raj@csub.edu>
-# $FreeBSD: deskutils/wyrd/Makefile 325085 2013-08-21 03:32:47Z danfe $
+# $FreeBSD: deskutils/wyrd/Makefile 327147 2013-09-13 13:35:24Z wg $
 
 PORTNAME=	wyrd
 PORTVERSION=	1.4.6
@@ -26,6 +26,9 @@ OPTIONS_DEFINE=	UTF8 DOCS
 UTF8_CONFIGURE_ENABLE=	utf8
 
 .include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} 's|gcc|${CC}|' ${WRKSRC}/curses/curses.ml
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wyrd.opt ${PREFIX}/bin/wyrd
