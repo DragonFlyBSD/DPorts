@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-String-CamelCase
-# Date created:		2007-10-30
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: ports/textproc/p5-String-CamelCase/Makefile,v 1.3 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: textproc/p5-String-CamelCase/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	String-CamelCase
 PORTVERSION=	0.02
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kaoru@kaisei.org
 COMMENT=	Perl module for camelcase, de-camelcase
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::CamelCase.3
 
