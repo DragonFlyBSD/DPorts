@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: shells/psh/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: shells/psh/Makefile 327035 2013-09-12 06:27:41Z az $
 
 PORTNAME=	psh
 PORTVERSION=	1.8.1
@@ -11,7 +11,8 @@ MASTER_SITE_SUBDIR=	CPAN:GREGOR
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	New shell made entirely out of a Perl script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 SUB_FILES=	pkg-install pkg-deinstall
 
