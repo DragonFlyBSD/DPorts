@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SGML-Parser-OpenSP
-# Date created:				27 August 2007
-# Whom:					Naram Qashat <cyberbotx@cyberbotx.com>
-#
-# $FreeBSD: ports/textproc/p5-SGML-Parser-OpenSP/Makefile,v 1.9 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Naram Qashat <cyberbotx@cyberbotx.com>
+# $FreeBSD: textproc/p5-SGML-Parser-OpenSP/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	SGML-Parser-OpenSP
 PORTVERSION=	0.994
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	onsgmls:${PORTSDIR}/textproc/opensp \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_DOS2UNIX=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CC=		${CXX}
 CONFIGURE_ARGS+="INC=-I${LOCALBASE}/include"
 
