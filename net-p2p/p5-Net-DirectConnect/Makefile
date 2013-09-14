@@ -1,5 +1,5 @@
 # Created by: Oleg Alexeenkov <proler@gmail.com>
-# $FreeBSD: net-p2p/p5-Net-DirectConnect/Makefile 319257 2013-05-27 15:44:15Z az $
+# $FreeBSD: net-p2p/p5-Net-DirectConnect/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	Net-DirectConnect
 PORTVERSION=	0.13
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Sys-Sendfile-FreeBSD>=0:${PORTSDIR}/devel/p5-Sys-Sendfile-FreeBSD
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		dcget.1 dcshare.1
 MAN3=		Net::DirectConnect.3 Net::DirectConnect::filelist.3
