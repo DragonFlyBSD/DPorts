@@ -1,16 +1,10 @@
-# New ports collection makefile for:	libmusicbrainz3
-# Date Created:				2007-05-17
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: audio/libmusicbrainz3/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: audio/libmusicbrainz3/Makefile 327040 2013-09-12 08:00:37Z jhale $
 
 PORTNAME=	libmusicbrainz
 PORTVERSION=	3.0.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
-		http://uk.musicbrainz.org/pub/musicbrainz/ \
 		http://ftp.osuosl.org/pub/musicbrainz/
 
 MAINTAINER=	jhale@FreeBSD.org
@@ -25,7 +19,6 @@ LATEST_LINK=	${PORTNAME}3
 
 USES=		cmake
 USE_LDCONFIG=	yes
-
 
 post-patch:
 	${REINPLACE_CMD} -e '/pkgconfig/s|$${LIB_INSTALL_DIR}|libdata|' \
