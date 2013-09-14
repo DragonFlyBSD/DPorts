@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: textproc/p5-Data-SpreadPagination/Makefile 313266 2013-03-02 15:55:17Z miwi $
+# $FreeBSD: textproc/p5-Data-SpreadPagination/Makefile 326920 2013-09-10 17:26:57Z az $
 
 PORTNAME=	Data-SpreadPagination
 PORTVERSION=	0.1.2
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	\
 	p5-Math-Round>=0:${PORTSDIR}/math/p5-Math-Round
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::SpreadPagination.3
 
