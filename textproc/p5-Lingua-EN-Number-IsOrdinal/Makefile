@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Number-IsOrdinal/Makefile,v 1.2 2013/01/19 11:42:21 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-EN-Number-IsOrdinal/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	Lingua-EN-Number-IsOrdinal
 PORTVERSION=	0.04
@@ -16,7 +16,8 @@ TEST_DEPENDS=	\
 	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal \
 	p5-Try-Tiny:${PORTSDIR}/lang/p5-Try-Tiny
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::EN::Number::IsOrdinal.3
 
