@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Text-Textile
-# Date created:			May 4, 2005
-# Whom:				Travis Campbell <hcoyote@ghostar.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Textile/Makefile,v 1.6 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Travis Campbell <hcoyote@ghostar.org>
+# $FreeBSD: textproc/p5-Text-Textile/Makefile 326944 2013-09-11 06:49:58Z az $
 
 PORTNAME=	Text-Textile
 PORTVERSION=	2.12
@@ -15,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	hcoyote@ghostar.org
 COMMENT=	A perl-based implementation of the Textile syntax by Dean Allen
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Textile.3
 
