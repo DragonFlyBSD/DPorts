@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: astro/p5-GPS/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: astro/p5-GPS/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	GPS
 PORTVERSION=	0.17
@@ -14,7 +14,8 @@ COMMENT=	Perl interface to GPS receivers
 BUILD_DEPENDS=	p5-Device-SerialPort>=0.07:${PORTSDIR}/comms/p5-Device-SerialPort
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		GPS::Serial.3 \
 		GPS::NMEA.3 \
