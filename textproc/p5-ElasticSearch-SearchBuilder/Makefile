@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: textproc/p5-ElasticSearch-SearchBuilder/Makefile 321212 2013-06-18 18:57:26Z tj $
+# $FreeBSD: textproc/p5-ElasticSearch-SearchBuilder/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	ElasticSearch-SearchBuilder
 PORTVERSION=	0.18
@@ -16,7 +16,8 @@ TEST_DEPENDS=	p5-Test-Deep>=:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ElasticSearch::SearchBuilder.3
 
