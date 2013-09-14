@@ -1,5 +1,5 @@
 # Created by: Lev Walkin <vlm@lionet.info>
-# $FreeBSD: lang/asn1c/Makefile 318447 2013-05-18 20:05:57Z rene $
+# $FreeBSD: lang/asn1c/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	asn1c
 PORTVERSION=	0.9.24
@@ -11,7 +11,7 @@ MAINTAINER=	vlm@lionet.info
 COMMENT=	Modern ASN.1 to C compiler
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 SUB_FILES=	pkg-message
 .if defined(.PARSEDIR)
 USE_GMAKE=	yes
