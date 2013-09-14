@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Teng/Makefile 313142 2013-03-01 07:51:12Z kuriyama $
+# $FreeBSD: databases/p5-Teng/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	Teng
 PORTVERSION=	0.18
@@ -28,7 +28,8 @@ TEST_DEPENDS=	\
 	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple \
 	p5-Class-Method-Modifiers>0:${PORTSDIR}/devel/p5-Class-Method-Modifiers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Teng.3 \
 	Teng::Iterator.3 \
