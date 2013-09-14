@@ -1,4 +1,4 @@
-$FreeBSD: ports/textproc/p5-XML-AutoWriter/files/patch-Makefile.PL,v 1.1 2012/12/23 03:10:11 svnexp Exp $
+$FreeBSD: textproc/p5-XML-AutoWriter/files/patch-Makefile.PL 309411 2012-12-23 02:58:37Z kuriyama $
 
 --- Makefile.PL.orig	2012-12-23 11:07:17.511361339 +0900
 +++ Makefile.PL	2012-12-23 11:09:35.165438990 +0900

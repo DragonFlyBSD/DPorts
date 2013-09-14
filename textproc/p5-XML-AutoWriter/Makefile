@@ -1,9 +1,4 @@
-# New ports collection makefile for:	XML::AutoWriter
-# Date created:		9 Jan 2004
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-AutoWriter/Makefile,v 1.10 2012/11/17 06:02:11 svnexp Exp $
-#
+# $FreeBSD: textproc/p5-XML-AutoWriter/Makefile 326944 2013-09-11 06:49:58Z az $
 
 PORTNAME=	XML-AutoWriter
 PORTVERSION=	0.40
@@ -17,7 +12,8 @@ COMMENT=	Perl module for DOCTYPE based XML output
 
 TEST_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::AutoWriter.3 \
 		XML::Doctype::AttDef.3 \
