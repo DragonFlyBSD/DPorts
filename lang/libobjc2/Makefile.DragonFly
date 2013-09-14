@@ -1,2 +1,0 @@
-#Make sure it's linked with latest symbols (not gcc 4.4)
-USE_GCC= 4.7
