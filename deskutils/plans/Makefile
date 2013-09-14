@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: deskutils/plans/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: deskutils/plans/Makefile 326975 2013-09-11 12:59:14Z az $
 
 PORTNAME=	plans
 PORTVERSION=	8.2.1
@@ -31,7 +31,8 @@ LICENSE=	GPLv2
 
 USE_ZIP=	yes
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
