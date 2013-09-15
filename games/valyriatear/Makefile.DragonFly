@@ -1,2 +1,1 @@
-USES+= iconv
 LDFLAGS+= -L${LOCALBASE}/lib ${ICONV_LIB} -lintl
