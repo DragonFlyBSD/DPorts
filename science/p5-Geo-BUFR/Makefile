@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Geo-BUFR/Makefile 325630 2013-08-29 18:45:50Z sunpoet $
+# $FreeBSD: science/p5-Geo-BUFR/Makefile 327231 2013-09-14 07:19:23Z sunpoet $
 
 PORTNAME=	Geo-BUFR
-PORTVERSION=	1.24
+PORTVERSION=	1.25
 CATEGORIES=	science perl5 geography
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PSANNES
