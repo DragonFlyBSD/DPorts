@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textogif
-# Date created:		2006-02-04
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: textproc/textogif/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: textproc/textogif/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	textogif
 PORTVERSION=	1.1
@@ -20,7 +16,8 @@ RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 
 NO_BUILD=	yes
 USE_TEX=	latex dvipsk
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 do-install:
 	@cd ${WRKDIR};\
