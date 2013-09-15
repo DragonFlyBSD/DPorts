@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: comms/p5-SMS-Send-TW-Socket2Air/Makefile 319102 2013-05-26 08:54:37Z az $
+# $FreeBSD: comms/p5-SMS-Send-TW-Socket2Air/Makefile 327035 2013-09-12 06:27:41Z az $
 
 PORTNAME=	SMS-Send-TW-Socket2Air
 PORTVERSION=	0.01
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-SMS-Send>=0:${PORTSDIR}/comms/p5-SMS-Send \
 		p5-Text-Iconv>=0:${PORTSDIR}/converters/p5-Text-Iconv
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SMS::Send::TW::Socket2Air.3
 
