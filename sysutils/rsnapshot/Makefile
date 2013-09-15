@@ -1,5 +1,5 @@
 # Created by: Ralf van Dooren <r.vdooren@snow.nl>
-# $FreeBSD: sysutils/rsnapshot/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: sysutils/rsnapshot/Makefile 327086 2013-09-12 16:11:43Z az $
 
 PORTNAME=	rsnapshot
 PORTVERSION=	1.3.1
@@ -14,8 +14,7 @@ BUILD_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync \
 		p5-Lchown>=0:${PORTSDIR}/sysutils/p5-Lchown
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 GNU_CONFIGURE=	yes
 SHEBANG_FILES=	rsnapshot-program.pl
 
