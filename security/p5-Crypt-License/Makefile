@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-License
-# Date created:				20 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-License/Makefile,v 1.8 2012/11/17 06:01:11 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-License/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Crypt-License
 PORTVERSION=	2.04
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension to examine a license
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::License.3 Crypt::License::Util.3 Crypt::License::Notice.3
 
