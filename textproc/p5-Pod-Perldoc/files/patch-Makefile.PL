@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/p5-Pod-Perldoc/files/patch-Makefile.PL,v 1.3 2012/11/17 06:02:07 svnexp Exp $
+$FreeBSD: textproc/p5-Pod-Perldoc/files/patch-Makefile.PL 300897 2012-07-14 14:29:18Z beat $
 
 --- Makefile.PL.orig
 +++ Makefile.PL
