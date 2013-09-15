@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-HikiDoc/Makefile 318698 2013-05-21 13:52:56Z tota $
+# $FreeBSD: textproc/p5-Text-HikiDoc/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	Text-HikiDoc
 PORTVERSION=	1.021
@@ -13,7 +13,8 @@ COMMENT=	Pure Perl implementation of 'HikiDoc'
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Text::HikiDoc::Plugin.3 Text::HikiDoc.3
 
