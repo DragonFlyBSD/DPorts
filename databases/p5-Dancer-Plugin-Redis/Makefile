@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-Dancer-Plugin-Redis/Makefile,v 1.5 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: databases/p5-Dancer-Plugin-Redis/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	Dancer-Plugin-Redis
 PORTVERSION=	0.02
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Dancer>=1.1750:${PORTSDIR}/www/p5-Dancer \
 RUN_DEPENDS=	p5-Dancer>=1.1750:${PORTSDIR}/www/p5-Dancer \
 		p5-Redis>=1.902:${PORTSDIR}/databases/p5-Redis
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Dancer::Plugin::Redis.3
 
