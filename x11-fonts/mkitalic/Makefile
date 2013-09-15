@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro
-# $FreeBSD: x11-fonts/mkitalic/Makefile 323800 2013-07-27 17:20:42Z az $
+# $FreeBSD: x11-fonts/mkitalic/Makefile 327091 2013-09-12 17:07:08Z az $
 
 PORTNAME=	mkitalic
 PORTVERSION=	1.0
@@ -14,13 +14,12 @@ COMMENT=	Perl script to make BDF font italic
 CONFLICTS=	mkbold-mkitalic-[0-9]*
 
 PLIST_FILES=	bin/mkitalic
-USE_PERL5=	yes
 EXTRACT_CMD=	${BZCAT}
 EXTRACT_BEFORE_ARGS=	#
 EXTRACT_AFTER_ARGS=	> ${WRKSRC}/mkitalic
 NO_WRKSUBDIR=	yes
 USE_BZIP2=	yes
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	mkitalic
 
 do-build:
