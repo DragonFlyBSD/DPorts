@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Statistics-Lite
-# Date created:				1 December 2004
-# Whom:					Sergey A. Osokin <osa@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Statistics-Lite/Makefile,v 1.7 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Sergey A. Osokin <osa@FreeBSD.org>
+# $FreeBSD: math/p5-Statistics-Lite/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	Statistics-Lite
 PORTVERSION=	3.2
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	The lightweight and functional object-oriented statistics
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 
 MAN3=		Statistics::Lite.3
