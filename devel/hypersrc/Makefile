@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/hypersrc/Makefile 323795 2013-07-27 16:06:25Z az $
+# $FreeBSD: devel/hypersrc/Makefile 327086 2013-09-12 16:11:43Z az $
 
 PORTNAME=	hypersrc
 PORTVERSION=	5.4.21
@@ -16,12 +16,10 @@ RUN_DEPENDS=	exctags:${PORTSDIR}/devel/ctags
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USE_PERL5=	yes
 USE_GNOME=	gnomelibs
-USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
 MAKE_ARGS=	CC="${CC}" C_OPTIMIZE="${CFLAGS}"
-USES=		shebangfix
+USES=		shebangfix gmake perl5
 SHEBANG_FILES=	Hypersrc.pl
 
 MAN1=		hypersrc.1
