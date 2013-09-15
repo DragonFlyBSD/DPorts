@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Authen-OATH
-# Date created:				2012-01-12
-# Whom:	      				Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/security/p5-Authen-OATH/Makefile,v 1.2 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: security/p5-Authen-OATH/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	Authen-OATH
 PORTVERSION=	1.0.0
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-Digest-HMAC>0:${PORTSDIR}/security/p5-Digest-HMAC \
 		p5-Moose>0:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Authen::OATH.3
 
