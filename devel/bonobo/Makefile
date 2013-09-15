@@ -2,7 +2,7 @@
 # Date created:				8th October 1999
 # Whom:					Ade Lovett <ade@lovett.com>
 #
-# $FreeBSD: devel/bonobo/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/bonobo/Makefile 327086 2013-09-12 16:11:43Z az $
 #   $MCom: ports/devel/bonobo/Makefile,v 1.5 2007/05/19 21:36:04 marcus Exp $
 #
 
@@ -17,10 +17,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The component and compound document system for GNOME
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix oaf gnomehier gnomeprint
-USES=		gettext
+USES=		gettext gmake perl5
 GNOME_HTML_DIR=	${PREFIX}/share/doc/bonobo
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
