@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/nathive/Makefile 327024 2013-09-12 01:26:34Z amdmi3 $
+# $FreeBSD: graphics/nathive/Makefile 327127 2013-09-13 01:50:09Z amdmi3 $
 
 PORTNAME=	nathive
 PORTVERSION=	0.924
@@ -32,7 +32,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/nathive|${DATADIR}|' \
 		${WRKSRC}/${PORTNAME}.desktop
 .if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e '/install.*DOC/ d' ${WRKSRC}/${MAKEFILE}
+	@${REINPLACE_CMD} -e '/install.*DOC/ d; /mkdir -p.*BASE.*DOC/ d' \
+		${WRKSRC}/${MAKEFILE}
 .endif
 
 .include <bsd.port.mk>
