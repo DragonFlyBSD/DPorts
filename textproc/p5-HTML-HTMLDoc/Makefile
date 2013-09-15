@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-HTML-HTMLDoc
-# Date created:                13 January 2010
-# Whom:                        Konstantin Menshikov <kostjnspb@yandex.ru>
-#
-# $FreeBSD: ports/textproc/p5-HTML-HTMLDoc/Makefile,v 1.4 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
+# $FreeBSD: textproc/p5-HTML-HTMLDoc/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	HTML-HTMLDoc
 PORTVERSION=	0.10
@@ -19,7 +15,8 @@ COMMENT=	Perl interface to the htmldoc program
 BUILD_DEPENDS=	htmldoc>0:${PORTSDIR}/textproc/htmldoc
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::HTMLDoc.3 HTML::HTMLDoc::PDF.3
 
