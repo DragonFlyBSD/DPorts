@@ -1,9 +1,9 @@
 # Created by: delphij@FreeBSD.org
-# $FreeBSD: mail/libvmime/Makefile 326456 2013-09-06 00:17:45Z delphij $
+# $FreeBSD: mail/libvmime/Makefile 327101 2013-09-12 18:36:20Z delphij $
 
 PORTNAME=	libvmime
 PORTVERSION=	0.9.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	SF/vmime/vmime/0.9
 
