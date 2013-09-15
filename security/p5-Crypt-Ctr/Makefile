@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-Ctr
-# Date created:				18 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-Ctr/Makefile,v 1.9 2012/11/17 06:01:10 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-Ctr/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	Crypt-Ctr
 PORTVERSION=	0.01
@@ -16,7 +14,8 @@ COMMENT=	Perl extension for encrypting data in Counter Mode
 BUILD_DEPENDS=	p5-Crypt-CFB>=0:${PORTSDIR}/security/p5-Crypt-CFB
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Ctr.3
 
