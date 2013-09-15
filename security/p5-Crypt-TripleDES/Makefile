@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Crypt-TripleDES
-# Date created:				Wed Jan  3 16:20:30 2001
-# Whom:					will
-#
-# $FreeBSD: ports/security/p5-Crypt-TripleDES/Makefile,v 1.11 2012/11/17 06:01:12 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: security/p5-Crypt-TripleDES/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	Crypt-TripleDES
 PORTVERSION=	0.24
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl module implementing the Triple-DES cipher
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::TripleDES.3
 
