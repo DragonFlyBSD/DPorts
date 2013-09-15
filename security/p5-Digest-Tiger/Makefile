@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-Tiger
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-Tiger/Makefile,v 1.8 2012/11/17 06:01:13 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-Tiger/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Digest-Tiger
 PORTVERSION=	0.03
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl extension for Tiger hash algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::Tiger.3
 
