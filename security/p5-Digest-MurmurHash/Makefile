@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Digest::MurmurHash
-# Date created:		31 Dec 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Digest-MurmurHash/Makefile,v 1.2 2012/11/17 06:01:12 svnexp Exp $
-#
+# $FreeBSD: security/p5-Digest-MurmurHash/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	Digest-MurmurHash
 PORTVERSION=	0.11
@@ -14,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for XS interface to the MurmurHash algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::MurmurHash.3
 
