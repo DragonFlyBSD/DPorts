@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/oyranos/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: graphics/oyranos/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	oyranos
 PORTVERSION=	0.9.4
@@ -24,7 +24,7 @@ LIB_DEPENDS=	raw:${PORTSDIR}/graphics/libraw \
 		lcms2:${PORTSDIR}/graphics/lcms2 \
 		Xcm:${PORTSDIR}/x11/libXcm
 
-USES=		cmake gettext pkgconfig
+USES=		cmake gettext iconv pkgconfig
 USE_BZIP2=	yes
 USE_GL=		yes
 USE_LDCONFIG=	yes
@@ -45,7 +45,7 @@ MAN3=		oyranos-config.3 oyranos.3
 CC=		/usr/bin/clang
 CXX=		/usr/bin/clang++
 .else
-USE_GCC=	4.6+
+USE_GCC=	yes
 .endif
 
 .include <bsd.port.post.mk>
