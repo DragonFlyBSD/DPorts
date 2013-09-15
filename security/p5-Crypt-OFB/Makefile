@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Crypt-OFB
-# Date created:				Nov 2 2003
-# Whom:	      				clsung
-#
-# $FreeBSD: ports/security/p5-Crypt-OFB/Makefile,v 1.8 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: clsung
+# $FreeBSD: security/p5-Crypt-OFB/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	Crypt-OFB
 PORTVERSION=	0.01
@@ -17,7 +13,8 @@ COMMENT=	Encrypt Data using OFB Mode
 BUILD_DEPENDS=	p5-Crypt-ECB>=0:${PORTSDIR}/security/p5-Crypt-ECB
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::OFB.3
 
