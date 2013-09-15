@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pam_pGina
-# Date created:		Thu Apr 29 16:03:45 UTC 2004
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: security/pam_pgina/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: security/pam_pgina/Makefile 326975 2013-09-11 12:59:14Z az $
 
 PORTNAME=	pam_pGina
 PORTVERSION=	1.1.3
@@ -20,7 +16,8 @@ LICENSE_FILE=	${WRKSRC}/GPL
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 post-patch:
 # PREFIX safeness
