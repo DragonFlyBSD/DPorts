@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: databases/p5-Redis-hiredis/Makefile 315971 2013-04-17 15:27:24Z gblach $
+# $FreeBSD: databases/p5-Redis-hiredis/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	Redis-hiredis
 PORTVERSION=	0.11.0
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	A Simple wrapper around hiredis C client
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Redis::hiredis.3
 
