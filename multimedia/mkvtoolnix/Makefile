@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/mkvtoolnix/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: multimedia/mkvtoolnix/Makefile 327132 2013-09-13 06:18:11Z bapt $
 
 PORTNAME=	mkvtoolnix
 PORTVERSION=	6.3.0
@@ -22,7 +22,6 @@ LIB_DEPENDS=	vorbis:${PORTSDIR}/audio/libvorbis \
 
 USES=		pkgconfig gettext iconv
 USE_XZ=		yes
-USE_GCC=	yes
 GNU_CONFIGURE=	yes
 USE_RAKE=	yes
 USE_RUBY=	yes
@@ -41,6 +40,11 @@ MAN1=		mkvextract.1 mkvinfo.1 mkvmerge.1 mkvpropedit.1
 
 OPTIONS_DEFINE=	WXGTK FLAC CURL
 OPTIONS_DEFAULT=WXGTK FLAC CURL
+
+_CCVERSION=	${CC} --version
+.if !${_CCVERSION:MCLANG} || ${OSVERSION} < 1000054
+USE_GCC=	yes
+.endif
 
 .include <bsd.port.pre.mk>
 
