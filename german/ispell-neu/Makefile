@@ -1,9 +1,5 @@
-# New ports collection makefile for:    deneu-ispell
-# Date created:                         10 February 2000
-# Whom:                                 Alexander Langer <alex@big.endian.de>
-#
-# $FreeBSD: ports/german/ispell-neu/Makefile,v 1.15 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Alexander Langer <alex@big.endian.de>
+# $FreeBSD: german/ispell-neu/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	ispell
 CATEGORIES=	german
@@ -13,7 +9,7 @@ MAINTAINER=	office@FreeBSD.org
 
 ISPELL_DENEU=	yes
 MASTERDIR=	${.CURDIR}/../../textproc/ispell
-USE_PERL5=	yes
+USES=		perl5
 
 .if exists(${.CURDIR}/Makefile.local)
 .include "${.CURDIR}/Makefile.local"
