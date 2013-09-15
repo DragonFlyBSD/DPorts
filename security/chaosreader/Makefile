@@ -1,6 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/chaosreader/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/chaosreader/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	chaosreader
 PORTVERSION=	0.94
@@ -15,7 +14,8 @@ MAINTAINER=	pauls@utdallas.edu
 COMMENT=	Tool to extract data from tcpdump logs
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	bin/${PORTNAME} bin/sshkeydata
 
