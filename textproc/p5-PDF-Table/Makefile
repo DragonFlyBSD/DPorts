@@ -1,5 +1,5 @@
 # Created by: scheidell@secnap.net
-# $FreeBSD: textproc/p5-PDF-Table/Makefile 319024 2013-05-25 02:08:24Z bdrewery $
+# $FreeBSD: textproc/p5-PDF-Table/Makefile 326944 2013-09-11 06:49:58Z az $
 
 PORTNAME=	PDF-Table
 DISTVERSION=	0.9.6_h3
@@ -13,7 +13,8 @@ COMMENT=	A utility class for building table layouts in a PDF::API2 object
 BUILD_DEPENDS=	p5-PDF-API2>=0:${PORTSDIR}/textproc/p5-PDF-API2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION:C/\.h3//}
 
