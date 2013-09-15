@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtkparasite
-# Date created:		2009-02-19
-# Whom:			Ashish Shukla <wahjava@gmail.com>
-#
-# $FreeBSD: ports/devel/gtkparasite/Makefile,v 1.11 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Ashish Shukla <wahjava@gmail.com>
+# $FreeBSD: devel/gtkparasite/Makefile 327124 2013-09-13 01:21:55Z marino $
 
 PORTNAME=	gtkparasite
 PORTVERSION=	20090819
@@ -15,6 +11,7 @@ MASTER_SITE_SUBDIR=	pav
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	GTK+ UI debugging tool
 
+USES=		pkgconfig
 USE_PYTHON=	2.5+
 USE_GNOME=	gtk20 pygtk2
 WRKSRC=		${WRKDIR}/chipx86-gtkparasite-a3d862d4a91ea27222e4273a6797f3e47efe6e83
