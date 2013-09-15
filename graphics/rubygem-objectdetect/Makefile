@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: graphics/rubygem-objectdetect/Makefile 317391 2013-05-04 23:10:25Z tota $
+# $FreeBSD: graphics/rubygem-objectdetect/Makefile 327124 2013-09-13 01:21:55Z marino $
 
 PORTNAME=	objectdetect
 PORTVERSION=	0.0.3
@@ -14,6 +14,7 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	opencv_legacy:${PORTSDIR}/graphics/opencv
 
+USES=		pkgconfig
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
