@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mysqlidxchk
-# Date created:				29 April 2009
-# Whom:					Andrey Ignatov <rdna@rdna.ru>
-#
-# $FreeBSD: ports/databases/mysqlidxchk/Makefile,v 1.4 2012/11/17 05:55:12 svnexp Exp $
-#
+# Created by: Andrey Ignatov <rdna@rdna.ru>
+# $FreeBSD: databases/mysqlidxchk/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	mysqlidxchk
 PORTVERSION=	1.0
@@ -21,7 +17,7 @@ RUN_DEPENDS=	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey \
 
 NO_WRKSUBDIR=	yes
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/mysqlidxchk
