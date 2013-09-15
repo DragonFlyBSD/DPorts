@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DBICx-MapMaker
-# Date created:	   			23 Oct 2008
-# Whom:		   			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBICx-MapMaker/Makefile,v 1.12 2012/11/17 05:55:14 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: databases/p5-DBICx-MapMaker/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	DBICx-MapMaker
 PORTVERSION=	0.03
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-DBIx-Class>=0.07003:${PORTSDIR}/databases/p5-DBIx-Class \
 		p5-Moose>=0.39:${PORTSDIR}/devel/p5-Moose
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBICx::MapMaker.3
 
