@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-Pearson-PurePerl
-# Date created:				21 Dec, 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-Pearson-PurePerl/Makefile,v 1.7 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-Pearson-PurePerl/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	Digest-Pearson-PurePerl
 PORTVERSION=	1.00
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for Peter K. Pearson's hash algorithm in pure Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::Pearson::PurePerl.3
 
