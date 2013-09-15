@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: www/py-django-devel/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/py-django-devel/Makefile 327083 2013-09-12 16:07:01Z lwhsu $
 
 PORTNAME=	django
 PORTVERSION=	${SNAPSHOTDATE}
@@ -17,7 +17,7 @@ COMMENT=	High-level Python Web framework
 
 LICENSE=	BSD
 
-SNAPSHOTDATE=	20130106
+SNAPSHOTDATE=	20130912
 
 USE_XZ=	yes
 USES=		gettext
@@ -25,7 +25,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 PYDISTUTILS_PKGNAME=	Django
-PYDISTUTILS_PKGVERSION=	1.6
+PYDISTUTILS_PKGVERSION=	1.7
 
 CONFLICTS=	py2[0-9]-django-[0-9]*
 
