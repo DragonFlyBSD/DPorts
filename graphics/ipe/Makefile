@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: graphics/ipe/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: graphics/ipe/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	ipe
 PORTVERSION=	7.1.4
@@ -20,10 +20,9 @@ OPTIONS_DEFINE=	DOCS
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
-USES=		pkgconfig
+USES=		gmake iconv pkgconfig
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 USE_TEX=	latex
-USE_GMAKE=	yes
 MAKE_ENV=	DLL_CFLAGS="-fPIC" \
 		ICONV_CFLAGS="-I${LOCALBASE}/include" \
 		ICONV_LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}" \
