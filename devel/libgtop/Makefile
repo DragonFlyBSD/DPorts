@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libgtop/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: devel/libgtop/Makefile 327086 2013-09-12 16:11:43Z az $
 #   $MCom: ports/trunk/devel/libgtop/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgtop
@@ -12,9 +12,9 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 top library
 
 USE_XZ=		yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_XORG=	xau
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig perl5
 USE_GNOME=	gnomeprefix glib20 ltverhack intlhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
