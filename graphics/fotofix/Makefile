@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fotofix
-# Date created:		7 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/fotofix/Makefile,v 1.8 2012/11/17 05:58:05 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: graphics/fotofix/Makefile 326958 2013-09-11 09:54:08Z az $
 
 PORTNAME=	fotofix
 PORTVERSION=	0.01.1.79
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Prima>=1.21:${PORTSDIR}/x11-toolkits/p5-Prima \
 		IPA>=1.03:${PORTSDIR}/graphics/IPA
 
 USE_BZIP2=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
