@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Unicode-CheckUTF8
-# Date created:				2006-07-23
-# Whom:					Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Unicode-CheckUTF8/Makefile,v 1.6 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: textproc/p5-Unicode-CheckUTF8/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	Unicode-CheckUTF8
 DISTVERSION=	1.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Check if scalar is valid UTF-8
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Unicode::CheckUTF8.3
 
