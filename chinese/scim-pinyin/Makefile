@@ -1,5 +1,5 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: chinese/scim-pinyin/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: chinese/scim-pinyin/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	scim-pinyin
 PORTVERSION=	0.5.92
@@ -13,8 +13,7 @@ BUILD_DEPENDS=	scim>=1.2.0:${PORTSDIR}/textproc/scim
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GNOME=	lthack
-USES=		pathfix iconv
-USE_GMAKE=	yes
+USES=		pathfix iconv gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 
 CONFIGURE_ARGS+=	--disable-skim-support
