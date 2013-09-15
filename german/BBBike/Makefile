@@ -1,5 +1,5 @@
 # Created by: Slaven Rezic <eserte@cs.tu-berlin.de>
-# $FreeBSD: german/BBBike/Makefile 322373 2013-07-06 09:18:27Z lme $
+# $FreeBSD: german/BBBike/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	BBBike
 PORTVERSION=	3.18
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline \
 RUN_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk \
 		${BUILD_DEPENDS}
 
-USE_PERL5=	YES
+USES=		perl5
 POD2MAN=	pod2man
 
 MAN1=		bbbike.1
