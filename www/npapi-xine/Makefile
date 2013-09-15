@@ -1,9 +1,5 @@
-# New ports collection makefile for:	npapi-xine
-# Date created:		03 February 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/npapi-xine/Makefile,v 1.17 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/npapi-xine/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	xine
 PORTVERSION=	1.0.2
