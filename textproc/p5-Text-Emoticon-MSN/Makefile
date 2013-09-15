@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Text-Emoticon-MSN
-# Date created:				26 December 2009
-# Whom:					Alex Deiter <Alex.Deiter@Gmail.COM>
-#
-# $FreeBSD: textproc/p5-Text-Emoticon-MSN/Makefile 323776 2013-07-27 10:19:30Z marino $
-#
+# Created by: Alex Deiter <Alex.Deiter@Gmail.COM>
+# $FreeBSD: textproc/p5-Text-Emoticon-MSN/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	Text-Emoticon-MSN
 PORTVERSION=	0.04
@@ -20,7 +16,8 @@ EXPIRATION_DATE=2013-10-31
 BUILD_DEPENDS=	p5-Text-Emoticon>=0.02:${PORTSDIR}/textproc/p5-Text-Emoticon
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Emoticon::MSN.3
 
