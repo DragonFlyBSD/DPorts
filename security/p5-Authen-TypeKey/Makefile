@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Authen-TypeKey
-# Date created:		2006-03-19
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/security/p5-Authen-TypeKey/Makefile,v 1.8 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: security/p5-Authen-TypeKey/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	Authen-TypeKey
 PORTVERSION=	0.05
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Authen::TypeKey.3
 
