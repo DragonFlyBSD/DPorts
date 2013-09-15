@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/mirrormagic/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/mirrormagic/Makefile 327020 2013-09-12 00:26:05Z amdmi3 $
 
 PORTNAME=	mirrormagic
 PORTVERSION=	2.0.2
@@ -39,6 +39,7 @@ post-patch:
 		${WRKSRC}/src/libgame/sound.h
 	@${REINPLACE_CMD} -e 's|machine/joystick.h|sys/joystick.h|' \
 		${WRKSRC}/src/tools.c
+	@${REINPLACE_CMD} -e 's|inline||' ${WRKSRC}/src/libgame/*.[ch]
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mirrormagic ${PREFIX}/bin
