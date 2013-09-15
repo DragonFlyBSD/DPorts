@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/p5-Amon2-DBI/Makefile,v 1.1 2013/01/20 10:41:48 svnexp Exp $
+# $FreeBSD: databases/p5-Amon2-DBI/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	Amon2-DBI
 PORTVERSION=	0.32
@@ -21,7 +21,8 @@ TEST_DEPENDS=	\
 	p5-Amon2>0:${PORTSDIR}/www/p5-Amon2 \
 	p5-Test-Memory-Cycle>0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Amon2::DBI.3
 
