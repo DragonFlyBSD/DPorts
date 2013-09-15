@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-DJB
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-DJB/Makefile,v 1.8 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-DJB/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	Digest-DJB
 PORTVERSION=	1.00
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for D.J Bernstein's hash algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::DJB.3
 
