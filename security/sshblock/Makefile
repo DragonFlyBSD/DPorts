@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sshblock
-# Date created:				03 December 2006
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: ports/security/sshblock/Makefile,v 1.4 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: security/sshblock/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	sshblock
 PORTVERSION=	1.0
@@ -20,7 +16,7 @@ RUN_DEPENDS=	p5-File-Tail>=0:${PORTSDIR}/devel/p5-File-Tail
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	sbin/sshblock
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	sshblock
 SUB_LIST=	PERL=${PERL}
 EXTRACT_CMD=	${CP}
