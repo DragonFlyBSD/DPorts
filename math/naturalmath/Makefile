@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith
-# $FreeBSD: math/naturalmath/Makefile 323702 2013-07-26 07:33:41Z az $
+# $FreeBSD: math/naturalmath/Makefile 327091 2013-09-12 17:07:08Z az $
 
 PORTNAME=	naturalmath
 PORTVERSION=	0.5
@@ -10,9 +10,8 @@ MASTER_SITES=	http://www.math.missouri.edu/~stephen/naturalmath/
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Script to turn intuitively written math into latex
 
-USE_PERL5=	yes
 USE_TEX=	latex:build dvipsk:build
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	naturalmath
 
 do-build:
