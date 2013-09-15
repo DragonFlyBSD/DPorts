@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asciiquarium
-# Date created:				16 Sep 2005
-# Whom:					Max Khon <fjoe@FreeBSD.org>
-#
-# $FreeBSD: ports/games/asciiquarium/Makefile,v 1.4 2012/11/17 05:57:32 svnexp Exp $
-#
+# Created by: Max Khon <fjoe@FreeBSD.org>
+# $FreeBSD: games/asciiquarium/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	asciiquarium
 PORTVERSION=	1.0
@@ -18,7 +14,7 @@ RUN_DEPENDS=	p5-Term-Animation>=0:${PORTSDIR}/devel/p5-Term-Animation
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/asciiquarium
 
 do-install:
