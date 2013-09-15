@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/chord2html/Makefile 323702 2013-07-26 07:33:41Z az $
+# $FreeBSD: misc/chord2html/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	chord2html
 PORTVERSION=	1.3
@@ -12,9 +12,8 @@ COMMENT=	Convert CHORD input files to HTML
 
 RUN_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
-USES=		shebangfix
 SHEBANG_FILES=	chord2html
 
 MAN1=	chord2html.1
