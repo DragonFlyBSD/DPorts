@@ -1,9 +1,5 @@
-# New ports collection makefile for:  pecl-perl
-# Date created:			  2007-3-3
-# Whom:				  Luke Jee
-#
-# $FreeBSD: ports/lang/pecl-perl/Makefile,v 1.5 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: Luke Jee
+# $FreeBSD: lang/pecl-perl/Makefile 326955 2013-09-11 08:56:53Z az $
 
 PORTNAME=	perl
 DISTVERSION=	1.0.0
@@ -22,6 +18,6 @@ USE_PHPEXT=	yes
 USE_PHP_BUILD=	yes
 DEFAULT_PHP_VER=53
 
-USE_PERL5=	yes
+USES=		perl5
 
 .include <bsd.port.mk>
