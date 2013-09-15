@@ -1,5 +1,5 @@
 # Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-# $FreeBSD: print/p5-Font-FreeType/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: print/p5-Font-FreeType/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	Font-FreeType
 PORTVERSION=	0.03
@@ -12,8 +12,8 @@ COMMENT=	Perl extension to read font files and render glyphs using FreeType2
 
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 
-PERL_CONFIGURE=	yes
-USES=		pkgconfig
+USES=		pkgconfig perl5
+USE_PERL5=	configure
 
 MAN3=	Font::FreeType.3 \
 	Font::FreeType::Face.3 \
