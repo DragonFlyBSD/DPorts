@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: games/neverball/Makefile 327214 2013-09-14 03:06:04Z amdmi3 $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -20,9 +20,12 @@ USE_GL=		gl
 USE_SDL=	sdl ttf
 USE_GMAKE=	yes
 MAKE_ENV+=	ENABLE_WII=0
+USE_XORG=	x11
 
 PORTDOCS=	CHANGES COPYING README
 MAN6=		neverball.6 neverputt.6
+
+LDFLAGS+=	-lX11 # calls X functions directly, but doesn't link libX11
 
 .include <bsd.port.options.mk>
 
