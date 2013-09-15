@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Class-DBI-Plugin-Iterator
-# Date created:		26 Oct 2005
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-Plugin-Iterator/Makefile,v 1.6 2012/11/17 05:55:13 svnexp Exp $
-#
+# $FreeBSD: databases/p5-Class-DBI-Plugin-Iterator/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	Class-DBI-Plugin-Iterator
 PORTVERSION=	0.13
@@ -18,7 +13,8 @@ BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI
 TEST_DEPENDS=	p5-DBD-SQLite>=1.27:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Class-DBI-Pager>=0:${PORTSDIR}/databases/p5-Class-DBI-Pager
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Class::DBI::Plugin::Iterator.3 \
 		Class::DBI::Plugin::Iterator::Nihongo.3
 
