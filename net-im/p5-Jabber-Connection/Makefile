@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Jabber-Connection
-# Date created:				01 October 2003
-# Whom:	      				Lars Eggert
-#
-# $FreeBSD: ports/net-im/p5-Jabber-Connection/Makefile,v 1.7 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: Lars Eggert
+# $FreeBSD: net-im/p5-Jabber-Connection/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	Jabber-Connection
 PORTVERSION=	0.04
@@ -17,7 +13,8 @@ COMMENT=	Jabber Perl library for client/component connectivity
 RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Jabber::Connection.3 Jabber::NS.3 Jabber::NodeFactory.3
 
