@@ -1,9 +1,5 @@
-# New ports collection makefile for:	setlayout
-# Date created:	17 December 2007
-# Whom:	oleg@bsdpower.com
-#
-# $FreeBSD: ports/x11/setlayout/Makefile,v 1.3 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: oleg@bsdpower.com
+# $FreeBSD: x11/setlayout/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	setlayout
 DISTVERSION=	20080210
@@ -15,8 +11,8 @@ EXTRACT_ONLY=	#none
 MAINTAINER=	oleg@bsdpower.com
 COMMENT=	Arrange desktops in an MxN grid layout
 
-USE_XORG=	x11
 USES=		pkgconfig
+USE_XORG=	x11
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
