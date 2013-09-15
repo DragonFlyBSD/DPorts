@@ -1,5 +1,5 @@
 # Created by: Rick van der Zwet <info@rickvanderzwet.nl>
-# $FreeBSD: textproc/p5-XML-TinyXML/Makefile 317369 2013-05-04 21:58:05Z bapt $
+# $FreeBSD: textproc/p5-XML-TinyXML/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	XML-TinyXML
 PORTVERSION=	0.30
@@ -10,10 +10,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	info@rickvanderzwet.nl
 COMMENT=	Little and efficient Perl module to manage xml data
 
-USES=		iconv
+USES=		iconv perl5
+USE_PERL5=	configure
 
 MAKE_ARGS+=	LIBS='-L${LOCALBASE}/lib' INC='-I. -I${LOCALBASE}/include'
-PERL_CONFIGURE=	yes
 
 MAN3=		XML::TinyXML.3 \
 		XML::TinyXML::Node.3 \
