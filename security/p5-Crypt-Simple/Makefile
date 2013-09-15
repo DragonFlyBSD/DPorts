@@ -1,5 +1,5 @@
 # Created by: Alexander Kriventsov <avk@vl.ru>
-# $FreeBSD: security/p5-Crypt-Simple/Makefile 319439 2013-05-30 17:53:04Z az $
+# $FreeBSD: security/p5-Crypt-Simple/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	Crypt-Simple
 PORTVERSION=	0.06
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Crypt-Blowfish>=0:${PORTSDIR}/security/p5-Crypt-Blowfish \
 		p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64 \
 		p5-FreezeThaw>=0:${PORTSDIR}/devel/p5-FreezeThaw
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Crypt::Simple.3
 
