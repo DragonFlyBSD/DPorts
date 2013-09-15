@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ja-scim-tomoe
-# Date created:				18 Dec 2005
-# Whom:					Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: japanese/scim-tomoe/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: japanese/scim-tomoe/Makefile 327188 2013-09-13 21:39:06Z antoine $
 
 PORTNAME=	scim-tomoe
 PORTVERSION=	0.6.0
@@ -19,8 +15,7 @@ LIB_DEPENDS=	tomoe.1:${PORTSDIR}/japanese/tomoe \
 		tomoe-gtk.1:${PORTSDIR}/japanese/libtomoe-gtk
 
 USE_GNOME=	lthack intlhack
-USES=		gettext iconv
-USE_GMAKE=	yes
+USES=		gettext gmake iconv pkgconfig
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
