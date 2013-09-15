@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/hlstatsx/Makefile,v 1.14 2012/11/17 05:57:41 svnexp Exp $
+# $FreeBSD: games/hlstatsx/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	hlstatsx
 DISTVERSION=	1.20RC2
@@ -13,7 +13,8 @@ COMMENT=	Real-time player and clan rankings and statistics for HL2 and mods
 NO_BUILD=	yes
 USE_APACHE_RUN=	22+
 USE_PHP=	gd mysql
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_ZIP=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
