@@ -1,5 +1,5 @@
 # Created by: tj@FreeBSD.org
-# $FreeBSD: textproc/p5-Text-CSV-Hashify/Makefile 322708 2013-07-10 16:13:00Z tj $
+# $FreeBSD: textproc/p5-Text-CSV-Hashify/Makefile 326918 2013-09-10 16:48:41Z az $
 
 PORTNAME=	Text-CSV-Hashify
 PORTVERSION=	0.05
@@ -14,7 +14,8 @@ COMMENT=	Composition and decomposition of comma-separated values into hashes
 BUILD_DEPENDS=	p5-Text-CSV>=0:${PORTSDIR}/textproc/p5-Text-CSV
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::CSV::Hashify.3
 
