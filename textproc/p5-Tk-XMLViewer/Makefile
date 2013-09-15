@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tk-XMLViewer
-# Date created:				May 28 2001
-# Whom:					vanilla
-#
-# $FreeBSD: ports/textproc/p5-Tk-XMLViewer/Makefile,v 1.23 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: textproc/p5-Tk-XMLViewer/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	Tk-XMLViewer
 PORTVERSION=	0.21
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Tk::XMLViewer.3
 MAN1=		tkxmlview.1
