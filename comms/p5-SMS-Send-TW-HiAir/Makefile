@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SMS-Send-TW-HiAir
-# Date created:		2010-01-06
-# Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/comms/p5-SMS-Send-TW-HiAir/Makefile,v 1.4 2012/11/17 05:55:00 svnexp Exp $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: comms/p5-SMS-Send-TW-HiAir/Makefile 327035 2013-09-12 06:27:41Z az $
 
 PORTNAME=	SMS-Send-TW-HiAir
 PORTVERSION=	0.02
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-SMS-Send>=0:${PORTSDIR}/comms/p5-SMS-Send \
 		p5-Text-Iconv>=0:${PORTSDIR}/converters/p5-Text-Iconv
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SMS::Send::TW::HiAir.3
 
