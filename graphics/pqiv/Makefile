@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: graphics/pqiv/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: graphics/pqiv/Makefile 327112 2013-09-12 21:46:30Z marino $
 
 PORTNAME=	pqiv
 PORTVERSION=	0.12
