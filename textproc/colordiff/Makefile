@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/colordiff/Makefile 317591 2013-05-07 08:57:37Z ehaupt $
+# $FreeBSD: textproc/colordiff/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	colordiff
 PORTVERSION=	1.0.13
@@ -11,8 +11,7 @@ COMMENT=	Tool to colorize diff output
 
 LICENSE=	GPLv2
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
 
 SHEBANG_FILES=	colordiff.pl
