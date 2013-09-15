@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: net/xrdp/Makefile 321348 2013-06-20 03:56:14Z swills $
+# $FreeBSD: net/xrdp/Makefile 327124 2013-09-13 01:21:55Z marino $
 
 PORTNAME=	xrdp
 PORTVERSION=	0.6.0
@@ -19,6 +19,7 @@ COMMENT=	An open source Remote Desktop Protocol (RDP) server
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		pkgconfig
 USE_XORG=	x11 xfixes
 USE_AUTOTOOLS=	autoconf:env automake:env libtool
 GNU_CONFIGURE=	yes
