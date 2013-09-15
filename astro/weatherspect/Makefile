@@ -1,9 +1,5 @@
-# New ports collection makefile for:	weatherspect
-# Date created:		2006-05-16
-# Whom:			Simon Olofsson <simon@olofsson.de>
-#
-# $FreeBSD: ports/astro/weatherspect/Makefile,v 1.10 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Simon Olofsson <simon@olofsson.de>
+# $FreeBSD: astro/weatherspect/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	weatherspect
 PORTVERSION=	1.9
@@ -24,7 +20,7 @@ RUN_DEPENDS=	p5-Term-Animation>=0:${PORTSDIR}/devel/p5-Term-Animation \
 PORTSCOUT=	skipv:1.31	# Wrong versioning upstream
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/weatherspect
 
 do-install:
