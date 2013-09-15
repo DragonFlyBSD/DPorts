@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/zynaddsubfx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/zynaddsubfx/Makefile 326957 2013-09-11 09:36:48Z marino $
 
 PORTNAME=	zynaddsubfx
 PORTVERSION=	2.4.3
