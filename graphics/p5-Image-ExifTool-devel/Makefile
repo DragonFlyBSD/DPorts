@@ -1,5 +1,5 @@
 # Created by: Tod McQuillin <devin@spamcop.net>
-# $FreeBSD: graphics/p5-Image-ExifTool-devel/Makefile 313316 2013-03-03 01:32:12Z swills $
+# $FreeBSD: graphics/p5-Image-ExifTool-devel/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	Image-ExifTool
 PORTVERSION=	9.20
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 
 CONFLICTS=	p5-Image-ExifTool-[0-9]*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		exiftool.1
 MAN3=		File::RandomAccess.3 Image::ExifTool.3 \
