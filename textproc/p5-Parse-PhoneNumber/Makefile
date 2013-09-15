@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Parse-PhoneNumber/Makefile,v 1.8 2013/01/03 16:29:43 svnexp Exp $
+# $FreeBSD: textproc/p5-Parse-PhoneNumber/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	Parse-PhoneNumber
 PORTVERSION=	1.9
@@ -13,7 +13,8 @@ COMMENT=	Parse phone numbers
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Parse::PhoneNumber.3
 
