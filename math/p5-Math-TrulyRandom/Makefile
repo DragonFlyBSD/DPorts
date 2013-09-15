@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math::TrulyRandom
-# Date created:				17 March 2002
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-TrulyRandom/Makefile,v 1.5 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: math/p5-Math-TrulyRandom/Makefile 327032 2013-09-12 05:53:03Z az $
 
 PORTNAME=	Math-TrulyRandom
 PORTVERSION=	1.0
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	Perl interface to a truly random number generator function
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::TrulyRandom.3
 
