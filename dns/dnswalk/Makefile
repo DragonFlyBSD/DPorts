@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dnswalk
-# Date created:				17 January 1998
-# Whom:					Matthew Hunt <mph@pobox.com>
-#
-# $FreeBSD: ports/dns/dnswalk/Makefile,v 1.19 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@pobox.com>
+# $FreeBSD: dns/dnswalk/Makefile 326955 2013-09-11 08:56:53Z az $
 
 PORTNAME=	dnswalk
 PORTVERSION=	2.0.2
@@ -18,7 +14,7 @@ RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 
 NO_WRKSUBDIR=	YES
 NO_BUILD=	YES
-USE_PERL5=	YES
+USES=		perl5
 
 MAN1=		dnswalk.1
 
