@@ -1,9 +1,5 @@
-# New ports collection makefile for: shell-fm
-# Date created:	15 December 2006
-# Whom:		Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-#
-# $FreeBSD: ports/multimedia/shell-fm/Makefile,v 1.12 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
+# $FreeBSD: multimedia/shell-fm/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	shell-fm
 PORTVERSION=	0.7
