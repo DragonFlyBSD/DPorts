@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: sysutils/colorize/Makefile 323711 2013-07-26 10:46:37Z az $
+# $FreeBSD: sysutils/colorize/Makefile 327086 2013-09-12 16:11:43Z az $
 
 PORTNAME=	colorize
 PORTVERSION=	0.3.4
@@ -16,9 +16,8 @@ RUN_DEPENDS=	p5-Term-ANSIColor>=0:${PORTSDIR}/devel/p5-Term-ANSIColor
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 
 NO_BUILD=	yes
-USE_PERL5=	yes
 SUB_FILES=	pkg-message
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	colorize
 
 MAN1=		colorize.1
