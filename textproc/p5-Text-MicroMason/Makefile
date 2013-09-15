@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Text-MicroMason/Makefile,v 1.1 2013/01/19 02:56:57 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-MicroMason/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	Text-MicroMason
 PORTVERSION=	2.13
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Class-MixinFactory>=0.9:${PORTSDIR}/devel/p5-Class-MixinFactory
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::MicroMason.3 \
 	Text::MicroMason::AllowGlobals.3 \
