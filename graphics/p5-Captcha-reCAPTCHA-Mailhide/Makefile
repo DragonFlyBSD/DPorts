@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Captcha-reCAPTCHA-Mailhide
-# Date created:				7 January 2009
-# Whom:					gerard
-#
-# $FreeBSD: ports/graphics/p5-Captcha-reCAPTCHA-Mailhide/Makefile,v 1.4 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: gerard
+# $FreeBSD: graphics/p5-Captcha-reCAPTCHA-Mailhide/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	Captcha-reCAPTCHA-Mailhide
 PORTVERSION=	0.94
@@ -22,6 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		Captcha::reCAPTCHA::Mailhide.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
