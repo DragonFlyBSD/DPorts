@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog7-devel/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: sysutils/rsyslog7-devel/Makefile 327263 2013-09-14 10:45:36Z bapt $
 
 PORTNAME=	rsyslog
 PORTVERSION=	7.3.15
@@ -171,9 +171,5 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/doc/rsyslog-example.conf ${EXAMPLESDIR}
 .endif
 	@${CAT} ${PKGMESSAGE}
-
-.if ${OSVERSION} < 700042
-USE_GCC=	4.2+
-.endif
 
 .include <bsd.port.post.mk>
