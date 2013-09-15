@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Crypt-NULL
-# Date created:		2005-08-06
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: ports/security/p5-Crypt-NULL/Makefile,v 1.3 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: security/p5-Crypt-NULL/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	Crypt-NULL
 PORTVERSION=	1.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kaoru@kaisei.org
 COMMENT=	Perl implementation of the NULL encryption algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Crypt::NULL.3
 
