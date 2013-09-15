@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Jabber-Lite
-# Date created:		2007-09-03
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/net-im/p5-Jabber-Lite/Makefile,v 1.4 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net-im/p5-Jabber-Lite/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	Jabber-Lite
 PORTVERSION=	0.8
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 		p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL \
 		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Jabber::Lite.3
 
