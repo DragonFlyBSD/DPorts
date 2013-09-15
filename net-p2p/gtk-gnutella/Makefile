@@ -1,5 +1,5 @@
 # Created by: rbt@zort.on.ca
-# $FreeBSD: net-p2p/gtk-gnutella/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net-p2p/gtk-gnutella/Makefile 327124 2013-09-13 01:21:55Z marino $
 
 #
 # A quick note on configurable make symbols:
@@ -54,7 +54,7 @@ ONLY_FOR_ARCHS=	i386 amd64
 
 USE_BZIP2=	yes
 USE_GNOME=	glib20 libxml2
-USES=		bison perl5
+USES=		bison perl5 pkgconfig
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS=	-O -Dyacc='bison -y' -Dprefix=${PREFIX} \
