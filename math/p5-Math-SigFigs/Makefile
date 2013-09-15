@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Math-SigFigs
-# Date created:		2010-03-04
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: ports/math/p5-Math-SigFigs/Makefile,v 1.4 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: math/p5-Math-SigFigs/Makefile 327032 2013-09-12 05:53:03Z az $
 
 PORTNAME=	Math-SigFigs
 PORTVERSION=	1.09
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 RUN_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Math::SigFigs.3
 
