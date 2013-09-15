@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Spreadsheet-Read
-# Date created:		2010-03-08
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: ports/textproc/p5-Spreadsheet-Read/Makefile,v 1.11 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: textproc/p5-Spreadsheet-Read/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	Spreadsheet-Read
 PORTVERSION=	0.47
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-IO-stringy>0:${PORTSDIR}/devel/p5-IO-stringy \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-NoWarnings>0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Spreadsheet::Read.3
 
