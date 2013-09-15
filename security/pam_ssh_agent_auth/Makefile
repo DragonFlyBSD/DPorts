@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/pam_ssh_agent_auth/Makefile 323142 2013-07-17 04:02:02Z miwi $
+# $FreeBSD: security/pam_ssh_agent_auth/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	pam_ssh_agent_auth
 PORTVERSION=	0.9.5
@@ -13,7 +13,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_func_strnvis=no
 CONFIGURE_ARGS=	--libexecdir=${LOCALBASE}/lib
-USE_PERL5=	yes
+USES=		perl5
 
 MAN8=		pam_ssh_agent_auth.8
 PLIST_FILES=	lib/pam_ssh_agent_auth.so
