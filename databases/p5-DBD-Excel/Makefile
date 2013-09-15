@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DBD::Excel
-# Date created:				24 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/databases/p5-DBD-Excel/Makefile,v 1.14 2012/12/11 19:59:24 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: databases/p5-DBD-Excel/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	DBD-Excel
 PORTVERSION=	0.06
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-SQL-Statement>=0:${PORTSDIR}/databases/p5-SQL-Statement \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 EXAMPLESDIR?=	${PREFIX}/share/examples/${PORTNAME}
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBD::Excel.3
 
