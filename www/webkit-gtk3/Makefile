@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/webkit-gtk3/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/webkit-gtk3/Makefile 327099 2013-09-12 17:55:41Z az $
 #   $MCom: ports/www/webkit-gtk3/Makefile,v 1.32 2013/03/09 09:12:39 kwm Exp $
 
 PORTNAME=	webkit
@@ -24,12 +24,10 @@ LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 USE_XZ=		yes
 USE_GSTREAMER=	yes
 USE_XORG=	xt
-USES=		bison pkgconfig gettext
-USE_GMAKE=	yes
+USES=		bison gmake pkgconfig gettext perl5
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk30 libxslt ltverhack
 USE_SQLITE=	yes
-USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
@@ -64,6 +62,12 @@ CONFIGURE_ARGS+=--disable-webgl
 CONFIGURE_ARGS+=--enable-debug
 .else
 CONFIGURE_ARGS+=--disable-debug
+.endif
+
+CCISCLANG!=     ${CC} --version
+
+.if !empty(CCISCLANG:M*clang*)
+CPPFLAGS+=	-Wno-c++11-extensions
 .endif
 
 .include <bsd.port.pre.mk>
