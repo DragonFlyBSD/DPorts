@@ -1,5 +1,5 @@
 # Created by: Oliver Heesakkers <dev2@heesakkers.info>
-# $FreeBSD: graphics/zbar/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: graphics/zbar/Makefile 327155 2013-09-13 14:50:53Z bapt $
 
 PORTNAME=	zbar
 PORTVERSION=	0.10
@@ -13,9 +13,8 @@ COMMENT=	ZBar barcode reader
 LICENSE=	LGPL21
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		iconv
+USES=		iconv gmake pkgconfig
 
 OPTIONS_DEFINE=	X11 IMAGEMAGICK V4L PYTHON GTK2 QT4
 OPTIONS_DEFAULT=	X11 IMAGEMAGICK
