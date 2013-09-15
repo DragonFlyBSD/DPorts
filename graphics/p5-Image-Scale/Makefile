@@ -1,5 +1,5 @@
 # Created by: Mark Atkinson <atkin901@gmail.com>
-# $FreeBSD: graphics/p5-Image-Scale/Makefile 321061 2013-06-16 17:08:41Z az $
+# $FreeBSD: graphics/p5-Image-Scale/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	Image-Scale
 PORTVERSION=	0.08
@@ -20,6 +20,7 @@ TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
 MAN3=		Image::Scale.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
