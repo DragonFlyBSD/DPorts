@@ -1,6 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-DRI/Makefile 323891 2013-07-29 15:03:58Z feld $
-#
+# $FreeBSD: dns/p5-Net-DRI/Makefile 326955 2013-09-11 08:56:53Z az $
 
 PORTNAME=	Net-DRI
 PORTVERSION=	0.96
@@ -29,7 +28,8 @@ RUN_DEPENDS=	p5-DateTime>0:${PORTSDIR}/devel/p5-DateTime \
 		p5-Net-DNS>0:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-MIME-Tools>0:${PORTSDIR}/mail/p5-MIME-Tools
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include "${.CURDIR}/Makefile.man"
 
