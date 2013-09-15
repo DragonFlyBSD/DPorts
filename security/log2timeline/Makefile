@@ -1,6 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: security/log2timeline/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/log2timeline/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	log2timeline
 PORTVERSION=	0.64
@@ -39,7 +38,8 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
 MAN1=	l2t_process.1 \
