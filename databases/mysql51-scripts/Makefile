@@ -1,9 +1,5 @@
-# New ports collection makefile for:    MySQL-scripts
-# Date created:         28 Jan 2006
-# Whom:                 Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/mysql51-scripts/Makefile,v 1.14 2012/11/17 05:55:12 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: databases/mysql51-scripts/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	mysql
 PKGNAMESUFFIX=	-scripts
@@ -17,6 +13,6 @@ PKGMESSAGE=	mustnotexist
 PLIST=		${PKGDIR}/pkg-plist.scripts
 
 SCRIPTS_ONLY=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 .include "${MASTERDIR}/Makefile"
