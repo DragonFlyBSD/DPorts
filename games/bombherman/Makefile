@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/bombherman/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/bombherman/Makefile 327124 2013-09-13 01:21:55Z marino $
 
 PORTNAME=	bomb-her-man
 PORTVERSION=	0.3
@@ -24,11 +24,11 @@ GH_PROJECT=	Bomb-her-man
 GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	8f5aa22
 
+USES=		gmake pkgconfig
 USE_SDL=	sdl image mixer ttf
 USE_GNOME=	intltool librsvg2
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	automake:env
-USE_GMAKE=	yes
 ALL_TARGET=	# empty
 
 CFLAGS+=	-I${LOCALBASE}/include
