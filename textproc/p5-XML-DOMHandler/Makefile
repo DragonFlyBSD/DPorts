@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML-DOMHandler
-# Date created: 	4 August 2009
-# Whom: 		Stefan Pauly <stefan@fh-mainz.de>
-#
-# $FreeBSD: ports/textproc/p5-XML-DOMHandler/Makefile,v 1.2 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Stefan Pauly <stefan@fh-mainz.de>
+# $FreeBSD: textproc/p5-XML-DOMHandler/Makefile 326942 2013-09-11 06:27:41Z az $
 
 PORTNAME=	XML-DOMHandler
 PORTVERSION=	1.0
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	stefan@fh-mainz.de
 COMMENT=	A call-back interface to DOM
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::DOMHandler.3
 
