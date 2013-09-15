@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/xmlformat/pkg-plist,v 1.2 2012/11/17 06:02:25 svnexp Exp $
+@comment $FreeBSD: textproc/xmlformat/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/xmlformat
 %%PORTDOCS%%%%DOCSDIR%%/docs/examples/doc2.conf1
 %%PORTDOCS%%%%DOCSDIR%%/docs/examples/doc2.conf2

@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xmlformat
-# Date created:		8 Feb 2004
-# Whom:			Hiroki Sato <hrs@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/xmlformat/Makefile,v 1.4 2012/11/17 06:02:25 svnexp Exp $
+# Created by: Hiroki Sato <hrs@FreeBSD.org>
+# $FreeBSD: textproc/xmlformat/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	xmlformat
 PORTVERSION=	1.04
@@ -13,7 +10,7 @@ MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	An XML Document Formatter
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 DOCSRCDIR1=	${WRKSRC}
 DOC_FILES1=	BUGS ChangeLog INSTALL LICENSE README TODO
