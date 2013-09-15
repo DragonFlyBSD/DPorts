@@ -1,9 +1,4 @@
-# New ports collection makefile for:	TokyoCabinet
-# Date created:		03 May 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-TokyoCabinet/Makefile,v 1.4 2012/11/17 05:55:17 svnexp Exp $
-#
+# $FreeBSD: databases/p5-TokyoCabinet/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	TokyoCabinet
 PORTVERSION=	1.34
@@ -19,7 +14,8 @@ COMMENT=	Perl extension for TokyoCabinet
 
 LIB_DEPENDS=	tokyocabinet:${PORTSDIR}/databases/tokyocabinet
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	TokyoCabinet.3
 
