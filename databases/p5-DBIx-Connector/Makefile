@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Connector/Makefile 318631 2013-05-20 22:45:18Z kuriyama $
+# $FreeBSD: databases/p5-DBIx-Connector/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	DBIx-Connector
 PORTVERSION=	0.53
@@ -14,7 +14,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockModule>=0:${PORTSDIR}/devel/p5-Test-MockModule
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	DBIx::Connector.3 \
 	DBIx::Connector::Driver.3 \
