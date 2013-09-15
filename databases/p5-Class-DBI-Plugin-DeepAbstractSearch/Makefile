@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-DBI-Plugin-DeepAbstractSearch
-# Date created:		2011-02-15
-# Whom:			milki <milki@rescomp.berkeley.edy>
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-Plugin-DeepAbstractSearch/Makefile,v 1.4 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: milki <milki@rescomp.berkeley.edy>
+# $FreeBSD: databases/p5-Class-DBI-Plugin-DeepAbstractSearch/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	Class-DBI-Plugin-DeepAbstractSearch
 PORTVERSION=	0.08
@@ -25,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Class::DBI::Plugin::DeepAbstractSearch.3
 
 .include <bsd.port.mk>
