@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: textproc/p5-libsoldout/Makefile 318950 2013-05-24 10:17:00Z az $
+# $FreeBSD: textproc/p5-libsoldout/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	libsoldout
 PORTVERSION=	0.02
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	soldout:${PORTSDIR}/textproc/libsoldout
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_LDCONFIG=	yes
 
 MAN3=		libsoldout.3
