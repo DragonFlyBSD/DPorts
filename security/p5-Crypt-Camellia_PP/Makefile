@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-Camellia_PP
-# Date created:				Thu Jul 12 16:35:39 JST 2007
-# Whom:	      				Yoshisato YANAGISAWA
-# $FreeBSD: ports/security/p5-Crypt-Camellia_PP/Makefile,v 1.3 2012/11/17 06:01:10 svnexp Exp $
+# Created by: Yoshisato YANAGISAWA
+# $FreeBSD: security/p5-Crypt-Camellia_PP/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	Crypt-Camellia_PP
 PORTVERSION=	0.02
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	yanagisawa@csg.is.titech.ac.jp
 COMMENT=	Perl extension for Camellia Encryption Algorithm in pure Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Camellia_PP.3
 
