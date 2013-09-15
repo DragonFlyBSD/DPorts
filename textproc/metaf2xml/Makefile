@@ -1,9 +1,5 @@
-# New ports collection makefile for:	metaf2xml
-# Date created:		2006-08-11
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/metaf2xml/Makefile,v 1.26 2012/11/17 06:02:02 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/metaf2xml/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	metaf2xml
 PORTVERSION=	1.42
@@ -20,7 +16,8 @@ MAKE_ARGS=	CGI_BIN_DIR=${PREFIX}/www/metaf2xml/cgi-bin \
 		METAF2XML_LIB=${PREFIX}/${SITE_PERL_REL} \
 		METAF2XML_XSL=${DATADIR}
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 pre-install:
 	${MKDIR} ${PREFIX}/www/metaf2xml/cgi-bin \
