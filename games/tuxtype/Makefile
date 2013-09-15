@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: games/tuxtype/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: games/tuxtype/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	tuxtype
 PORTVERSION=	1.8.1
@@ -33,7 +33,7 @@ CONFIGURE_ENV=	T4K_COMMON_CFLAGS="-I${T4K_WRKSRC}/src" \
 
 CPPFLAGS+=	$$(pkg-config --cflags SDL_Pango) -I${LOCALBASE}/include \
 		-DHAVE_ALPHASORT -DHAVE_SCANDIR -DHAVE_FSYNC -DICONV_CONST=""
-LDFLAGS+=	$$(pkg-config --libs SDL_Pango) -L${LOCALBASE}/lib
+LDFLAGS+=	$$(pkg-config --libs SDL_Pango) -L${LOCALBASE}/lib ${ICONV_LIB}
 
 T4K_NAME=	t4k_common
 T4K_VERSION=	0.1.1
