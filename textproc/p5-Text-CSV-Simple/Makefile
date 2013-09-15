@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Text-CSV-Simple
-# Date Created:				17 Dec, 2005
-# Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-CSV-Simple/Makefile,v 1.5 2012/11/17 06:02:09 svnexp Exp $
-#
+# $FreeBSD: textproc/p5-Text-CSV-Simple/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	Text-CSV-Simple
 PORTVERSION=	1.00
@@ -19,7 +14,8 @@ BUILD_DEPENDS=	p5-Text-CSV_XS>=0:${PORTSDIR}/textproc/p5-Text-CSV_XS \
 		p5-Class-Trigger>=0:${PORTSDIR}/devel/p5-Class-Trigger
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::CSV::Simple.3
 
