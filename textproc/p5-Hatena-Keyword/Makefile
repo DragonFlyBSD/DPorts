@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: textproc/p5-Hatena-Keyword/Makefile 318293 2013-05-16 09:43:40Z miwi $
+# $FreeBSD: textproc/p5-Hatena-Keyword/Makefile 326920 2013-09-10 17:26:57Z az $
 
 PORTNAME=	Hatena-Keyword
 PORTVERSION=	0.05
@@ -27,7 +27,8 @@ RUN_DEPENDS=	p5-Cache>=0:${PORTSDIR}/devel/p5-Cache \
 		p5-RPC-XML>=0:${PORTSDIR}/net/p5-RPC-XML \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Hatena::Keyword.3
 
