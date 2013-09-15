@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xml-i18n-tools
-# Date created:				19th January 2001
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/xml-i18n-tools/Makefile,v 1.19 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: textproc/xml-i18n-tools/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	xml-i18n-tools
 PORTVERSION=	0.9
@@ -15,7 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Xml internationalization support for GNOME, and others
 
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 
 CONFLICTS=	intltool-[0-9]*
