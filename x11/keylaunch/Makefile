@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: x11/keylaunch/Makefile 323742 2013-07-26 18:02:28Z az $
+# $FreeBSD: x11/keylaunch/Makefile 327036 2013-09-12 06:36:45Z az $
 
 PORTNAME=	keylaunch
 PORTVERSION=	1.3.0
@@ -12,7 +12,8 @@ COMMENT=	An X utility for binding commands to a hot key
 
 WRKSRC=		${WRKDIR}/keylaunch
 USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 USE_XORG=	x11
 
 PKGMESSAGE=	${WRKSRC}/pkg-message
