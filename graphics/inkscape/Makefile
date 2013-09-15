@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: graphics/inkscape/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: graphics/inkscape/Makefile 327099 2013-09-12 17:55:41Z az $
 
 PORTNAME=	inkscape
 PORTVERSION=	0.48.4
@@ -25,12 +25,10 @@ RUN_DEPENDS=	p5-XML-XQL>=0:${PORTSDIR}/textproc/p5-XML-XQL
 
 USE_BZIP2=	yes
 USE_GCC=	any
-USE_GMAKE=	yes
 WANT_GNOME=	yes
 USE_GNOME=	gnomehack desktopfileutils intlhack libxslt
-USES=		gettext
+USES=		gettext gmake perl5
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
