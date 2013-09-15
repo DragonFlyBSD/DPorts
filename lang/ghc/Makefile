@@ -1,5 +1,5 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: lang/ghc/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: lang/ghc/Makefile 327114 2013-09-12 22:02:32Z pgj $
 
 PORTNAME=	ghc
 PORTVERSION=	7.6.3
@@ -16,7 +16,7 @@ COMMENT=	Compiler for the functional language Haskell
 ONLY_FOR_ARCHS=	i386 amd64
 
 GHC_VERSION=		${PORTVERSION}
-HSCOLOUR_VERSION=	1.20.2
+HSCOLOUR_VERSION=	1.20.3
 
 DATADIR=	${PREFIX}/share/ghc-${GHC_VERSION}
 EXAMPLESDIR=	${PREFIX}/share/examples/ghc-${GHC_VERSION}
@@ -64,7 +64,7 @@ OPTIONS_DEFINE+=	BOOT
 OPTIONS_DEFINE+=	BOOTH
 .endif
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDYNAMIC}
 LIB_DEPENDS+=	ffi.6:${PORTSDIR}/devel/libffi
@@ -73,33 +73,39 @@ LIB_DEPENDS+=	ffi.6:${PORTSDIR}/devel/libffi
 .if empty(PORT_OPTIONS:MBOOT)
 
 .if ${OPSYS} == "FreeBSD"
+.if empty(ICONV_LIB)
+BOOT_GHC_VERSION=	7.6.3
+.else
+BOOT_GHC_VERSION=	7.4.1
+.endif
+
+EXTRA_PATCHES=		${PATCHDIR}/nopatch-.._ghc-${BOOT_GHC_VERSION}-boot_rts_package.conf.in
+
 .if ${ARCH} == "i386"
 
-.if ${OSVERSION} >= 900000
+.if ${OSVERSION} >= 1000043
+DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-freebsd10-boot${EXTRACT_SUFX}:boot
+.elif ${OSVERSION} >= 900000
 DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-freebsd9-boot${EXTRACT_SUFX}:boot
 .elif ${OSVERSION} >= 800000
 DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-freebsd8-boot${EXTRACT_SUFX}:boot
-.elif ${OSVERSION} >= 700000
-DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-freebsd7-boot${EXTRACT_SUFX}:boot
 .else
 IGNORE=		unsupported
 .endif
 
 .elif ${ARCH:S///} == "amd64"
 
-.if ${OSVERSION} >= 900000
+.if ${OSVERSION} >= 1000043
+DISTFILES+=	ghc-${BOOT_GHC_VERSION}-amd64-freebsd10-boot${EXTRACT_SUFX}:boot
+.elif ${OSVERSION} >= 900000
 DISTFILES+=	ghc-${BOOT_GHC_VERSION}-amd64-freebsd9-boot${EXTRACT_SUFX}:boot
 .elif ${OSVERSION} >= 800000
 DISTFILES+=	ghc-${BOOT_GHC_VERSION}-amd64-freebsd8-boot${EXTRACT_SUFX}:boot
-.elif ${OSVERSION} >= 700000
-DISTFILES+=	ghc-${BOOT_GHC_VERSION}-amd64-freebsd7-boot${EXTRACT_SUFX}:boot
 .else
 IGNORE=		unsupported
 .endif
 
 .endif		# FreeBSD platform list
-BOOT_GHC_VERSION=	7.4.1
-EXTRA_PATCHES=	${PATCHDIR}/nopatch-.._ghc-${BOOT_GHC_VERSION}-boot_rts_package.conf.in
 
 .elif ${OPSYS} == "DragonFly"
 
@@ -134,9 +140,12 @@ HACKAGE_ARCH?=		packages/archive/
 CONFIGURE_ARGS=		--with-gcc=${CC} \
 			--with-ld=${LD} \
 			--with-gmp-includes=${LOCALBASE}/include \
-			--with-gmp-libraries=${LOCALBASE}/lib \
-			--with-iconv-includes=${LOCALBASE}/include \
+			--with-gmp-libraries=${LOCALBASE}/lib
+
+.if !empty(ICONV_LIB)
+CONFIGURE_ARGS+=	--with-iconv-includes=${LOCALBASE}/include \
 			--with-iconv-libraries=${LOCALBASE}/lib
+.endif
 
 .if ${PORT_OPTIONS:MDYNAMIC}
 CONFIGURE_ARGS+=	--with-system-libffi \
@@ -339,4 +348,4 @@ post-install:
 	@${LN} -sf ${PREFIX}/bin/haddock-ghc-${GHC_VERSION} ${PREFIX}/bin/haddock
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
