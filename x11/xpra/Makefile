@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: x11/xpra/Makefile 325356 2013-08-25 16:14:26Z olgeni $
+# $FreeBSD: x11/xpra/Makefile 327041 2013-09-12 08:41:52Z marino $
 
 PORTNAME=	xpra
 PORTVERSION=	0.8.8
