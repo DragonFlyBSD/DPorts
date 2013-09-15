@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Text-MicroTemplate-Extended/Makefile,v 1.1 2013/01/19 03:31:27 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-MicroTemplate-Extended/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	Text-MicroTemplate-Extended
 PORTVERSION=	0.17
@@ -13,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Text-MicroTemplate>=0.18:${PORTSDIR}/textproc/p5-Text-MicroTemplate
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::MicroTemplate::Extended.3 \
 	Text::MicroTemplate::Extended.ja.3
