@@ -1,7 +1,8 @@
-# $FreeBSD: www/mod_wsgi3/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_wsgi3/Makefile 327109 2013-09-12 20:21:31Z ohauer $
 
 PORTNAME=	mod_wsgi
 PORTVERSION=	3.4
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -10,7 +11,6 @@ MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Python WSGI adapter module for Apache
 
 LICENSE=	AL2
-
 
 #LATEST_LINK=	mod_wsgi
 CONFLICTS=	${PKGNAMEPREFIX}mod_wsgi-2.* mod_wsgi-2.*
