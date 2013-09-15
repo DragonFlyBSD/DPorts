@@ -59,10 +59,6 @@ ALL_TARGET=	generic
 BROKEN=		Does not compile on sparc64
 .endif
 
-.if ${PORT_OPTIONS:MOPENMP}
-USE_GCC=	4.7
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|= gcc|= ${CC}|' \
 		-e '/^CFLAGS =/s|-O2|${CFLAGS}|' ${WRKSRC}/src/Makefile
