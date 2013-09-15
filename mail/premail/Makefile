@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: mail/premail/Makefile 323680 2013-07-26 05:33:51Z az $
+# $FreeBSD: mail/premail/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	premail
 PORTVERSION=	0.46
@@ -14,9 +14,8 @@ COMMENT=	E-mail privacy package, support anon remailers, PGP, nyms
 BUILD_DEPENDS+=	pgp:${PORTSDIR}/security/pgp
 
 WRKSRC=		${WRKDIR}/premail
-USE_PERL5=	yes
 NO_BUILD=	yes
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	premail
 
 do-install:
