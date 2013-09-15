@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Image-Imgur
-# Date created:		2010-10-27
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/graphics/p5-Image-Imgur/Makefile,v 1.2 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: graphics/p5-Image-Imgur/Makefile 326975 2013-09-11 12:59:14Z az $
 
 PORTNAME=	Image-Imgur
 PORTVERSION=	0.01
@@ -18,7 +14,8 @@ COMMENT=	Perl extension for uploading images to http://imgur.com
 RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Image::Imgur.3
 
