@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DBIx-Abstract
-# Date created:				6 Jan 2006
-# Whom:					Jon Nistor <nistor@snickers.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Abstract/Makefile,v 1.6 2012/11/17 05:55:14 svnexp Exp $
-#
+# Created by: Jon Nistor <nistor@snickers.org>
+# $FreeBSD: databases/p5-DBIx-Abstract/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	DBIx-Abstract
 PORTVERSION=	1.010
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Check-ISA>=0:${PORTSDIR}/devel/p5-Check-ISA \
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Abstract.3
 
