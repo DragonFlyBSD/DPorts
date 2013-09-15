@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-BaseCnv
-# Date created:		3rd June, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/p5-Math-BaseCnv/Makefile,v 1.2 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: math/p5-Math-BaseCnv/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	Math-BaseCnv
 PORTVERSION=	1.4.75
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 RUN_DEPENDS=	p5-Memoize>=0:${PORTSDIR}/devel/p5-Memoize
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::BaseCnv.3
 
