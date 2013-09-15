@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-MD5-Reverse/Makefile 320858 2013-06-13 23:48:20Z miwi $
+# $FreeBSD: security/p5-Digest-MD5-Reverse/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Digest-MD5-Reverse
 PORTVERSION=	1.3
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension that looks for MD5 hashes in several databases
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Digest::MD5::Reverse.3
 
