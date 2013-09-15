@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-EMAC
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-EMAC/Makefile,v 1.10 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-EMAC/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	Digest-EMAC
 PORTVERSION=	1.2
@@ -16,7 +14,8 @@ BUILD_DEPENDS=	p5-Crypt-CBC>=0:${PORTSDIR}/security/p5-Crypt-CBC \
 		p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::EMAC.3
 
