@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Server-Mail-ESMTP-AUTH
-# Date created:				20th July 2007
-# Whom:					Zane C. Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports/security/p5-Net-Server-Mail-ESMTP-AUTH/Makefile,v 1.4 2012/11/17 06:01:13 svnexp Exp $
-#
+# Created by: Zane C. Bowers <vvelox@vvelox.net>
+# $FreeBSD: security/p5-Net-Server-Mail-ESMTP-AUTH/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	Net-Server-Mail-ESMTP-AUTH
 PORTVERSION=	0.1
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Net-Server-Mail>=0:${PORTSDIR}/mail/p5-Net-Server-Mail \
 		p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Server::Mail::ESMTP::AUTH.3
 
