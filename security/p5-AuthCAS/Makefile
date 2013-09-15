@@ -1,5 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: ports/security/p5-AuthCAS/Makefile,v 1.4 2012/11/17 06:01:10 svnexp Exp $
+# $FreeBSD: security/p5-AuthCAS/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	AuthCAS
 PORTVERSION=	1.6
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AuthCAS.3
 
