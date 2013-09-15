@@ -1,14 +1,14 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: www/wordpress/Makefile 324361 2013-08-07 17:44:15Z sunpoet $
+# $FreeBSD: www/wordpress/Makefile 327093 2013-09-12 17:24:41Z sunpoet $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.6
+PORTVERSION=	3.6.1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://wordpress.org/
 
 MAINTAINER=	ychsiao@ychsiao.org
-COMMENT=	A state-of-the-art semantic personal publishing platform
+COMMENT=	State-of-the-art semantic personal publishing platform
 
 LICENSE=	GPLv2
 
