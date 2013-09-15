@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SQL-Tokenizer
-# Date created:				2011-02-12
-# Whom:					milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: ports/textproc/p5-SQL-Tokenizer/Makefile,v 1.4 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: milki <milki@rescomp.berkeley.edu>
+# $FreeBSD: textproc/p5-SQL-Tokenizer/Makefile 326920 2013-09-10 17:26:57Z az $
 
 PORTNAME=	SQL-Tokenizer
 PORTVERSION=	0.24
@@ -18,7 +14,8 @@ COMMENT=	Simple regular expressions based SQL tokenizer
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SQL::Tokenizer.3
 
