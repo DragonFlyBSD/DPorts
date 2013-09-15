@@ -2,7 +2,7 @@
 # Date created:				26 February 2001
 # Whom:					RaRa Rasputin <rasputin@submonkey.net>
 #
-# $FreeBSD: security/steghide/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: security/steghide/Makefile 327091 2013-09-12 17:07:08Z az $
 #
 
 PORTNAME=	steghide
@@ -21,8 +21,7 @@ LIB_DEPENDS=	mcrypt.8:${PORTSDIR}/security/libmcrypt \
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gettext
-USE_PERL5=	yes
+USES=		gettext perl5
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl -lmcrypt"
