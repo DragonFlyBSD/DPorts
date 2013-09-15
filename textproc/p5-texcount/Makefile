@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <Nukama@gmail.com>
-# $FreeBSD: textproc/p5-texcount/Makefile 321876 2013-06-27 08:56:18Z wen $
+# $FreeBSD: textproc/p5-texcount/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	texcount
 PORTVERSION=	2.3
@@ -16,7 +16,8 @@ COMMENT=	Perl module for LaTeX statistics
 NO_BUILD=	yes
 
 USE_ZIP=	YES
-USE_PERL5_RUN=	YES
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES+=	bin/texcount
 
