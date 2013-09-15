@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Cache-Memcached-libmemcached
-# Date created:		Jun 06 2011
-# Whom:			Dmitry Liakh <dliakh@ukr.net>
-#
-# $FreeBSD: ports/databases/p5-Cache-Memcached-libmemcached/Makefile,v 1.3 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Dmitry Liakh <dliakh@ukr.net>
+# $FreeBSD: databases/p5-Cache-Memcached-libmemcached/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	Cache-Memcached-libmemcached
 PORTVERSION=	0.02011
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Memcached-libmemcached>=0.42.01:${PORTSDIR}/databases/p5-Memca
 		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cache::Memcached::libmemcached.3
 
