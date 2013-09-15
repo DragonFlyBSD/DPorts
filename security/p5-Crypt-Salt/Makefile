@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-Salt
-# Date created:				20 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-Salt/Makefile,v 1.7 2012/11/17 06:01:11 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-Salt/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	Crypt-Salt
 PORTVERSION=	0.01
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension to generate a salt to be fed into crypt
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Salt.3
 
