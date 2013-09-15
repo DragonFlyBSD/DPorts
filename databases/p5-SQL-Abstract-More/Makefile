@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: databases/p5-SQL-Abstract-More/Makefile 319423 2013-05-30 12:51:11Z culot $
+# $FreeBSD: databases/p5-SQL-Abstract-More/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	SQL-Abstract-More
 PORTVERSION=	1.15
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-MRO-Compat>0:${PORTSDIR}/devel/p5-MRO-Compat \
 		p5-SQL-Abstract>=1.73:${PORTSDIR}/databases/p5-SQL-Abstract
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SQL::Abstract::More.3
 
