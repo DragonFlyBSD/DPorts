@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/scintilla/Makefile 326375 2013-09-05 09:38:08Z madpilot $
+# $FreeBSD: x11-toolkits/scintilla/Makefile 327053 2013-09-12 11:34:39Z madpilot $
 
 PORTNAME=	scintilla
-PORTVERSION=	3.3.3
+PORTVERSION=	3.3.5
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/scintilla/SciTE/${PORTVERSION}
 DISTNAME=	scite${PORTVERSION:S/.//g}
@@ -28,8 +28,17 @@ PICFLAG?=	-fPIC
 PICFLAG?=	-fpic
 .endif
 
+CCISCLANG!=     ${CC} --version
+
+.if empty(CCISCLANG:M*clang*)
+CPPSTDRE=	-e 's|--std=c++0x||'
+.else
+CPPSTDRE=	
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|[(]CC[)]|(CXX)|g ; s|[(]CCOMP[)]|(CC)|g' \
+		${CPPSTDRE} \
 		${WRKSRC}/makefile
 
 do-install:
