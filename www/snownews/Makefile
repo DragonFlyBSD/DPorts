@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/snownews/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/snownews/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 
 PORTNAME=	snownews
 PORTVERSION=	1.5.12
@@ -11,7 +11,7 @@ MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A text mode RSS newsreader
 
 USE_PERL5_BUILD=yes
-USE_GMAKE=	yes
+USES=		gmake iconv
 USE_GNOME=	libxml2
 HAS_CONFIGURE=	yes
 
@@ -44,6 +44,7 @@ MANLANG=	"" de nl fr it ru_RU.KOI8-R
 post-patch:
 	@${REINPLACE_CMD} -e 's|#!/usr/bin/perl|#!${PERL}|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|ncurses|ncursesw|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-liconv|${ICONV_LIB}|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|make|${GMAKE}|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|share/man|man|' ${WRKSRC}/Makefile
