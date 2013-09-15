@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/testdisk/Makefile,v 1.32 2012/11/17 06:01:47 svnexp Exp $
+# $FreeBSD: sysutils/testdisk/Makefile 327007 2013-09-11 19:33:01Z madpilot $
 
 PORTNAME=	testdisk
 PORTVERSION=	6.13
@@ -39,7 +39,7 @@ PROGSREISERFS_DESC=	Use reiserfs extensions
 #.endif
 
 .if ${PORT_OPTIONS:MICONV}
-LIB_DEPENDS+=   iconv:${PORTSDIR}/converters/libiconv
+USES=		iconv
 .else
 CONFIGURE_ARGS+=--without-iconv
 .endif
