@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: textproc/gladtex/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: textproc/gladtex/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	gladtex
 PORTVERSION=	1.3
@@ -27,7 +27,7 @@ MAKE_ENV+=	BINPATH=${BINPATH} INCPATH="${INCPATH}" LIBPATH="${LIBPATH}"
 MAN1=	${PORTNAME}.1
 .endif
 
-USE_PERL5=	yes
+USES=		perl5
 
 do-install:
 	@cd ${WRKSRC}; \
