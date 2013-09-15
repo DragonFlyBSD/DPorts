@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: textproc/p5-Text-Capitalize/Makefile 319797 2013-06-03 18:02:24Z amdmi3 $
+# $FreeBSD: textproc/p5-Text-Capitalize/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	Text-Capitalize
 PORTVERSION=	1.3
@@ -12,7 +12,8 @@ COMMENT=	Capitalize strings ("to WORK AS titles" becomes "To Work as Titles")
 
 TEST_DEPENDS=	p5-PerlIO-locale>=0:${PORTSDIR}/devel/p5-PerlIO-locale
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Capitalize.3
 
