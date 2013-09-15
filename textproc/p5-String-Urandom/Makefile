@@ -1,9 +1,4 @@
-# New ports collection makefile for:	String::Urandom
-# Date created:		31 Dec 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-String-Urandom/Makefile,v 1.3 2012/11/17 06:02:08 svnexp Exp $
-#
+# $FreeBSD: textproc/p5-String-Urandom/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	String-Urandom
 PORTVERSION=	0.16
@@ -18,7 +13,8 @@ RUN_DEPENDS=	\
 	p5-Params-Validate>0:${PORTSDIR}/devel/p5-Params-Validate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	String::Urandom.3
 
