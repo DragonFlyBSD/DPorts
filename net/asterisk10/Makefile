@@ -1,9 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk10/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/asterisk10/Makefile 325551 2013-08-28 20:51:32Z flo $
 
 PORTNAME=	asterisk
-PORTVERSION=	10.12.2
-PORTREVISION=	2
+PORTVERSION=	10.12.3
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -55,7 +54,7 @@ OPTIONS_DEFINE_x86_64=	DAHDI
 OPTIONS_DEFINE_sparc64=	DAHDI
 
 OPTIONS_DEFAULT_i386=	DAHDI
-OPTIONS_DEFAULT_amd64=	DAHDI
+OPTIONS_DEFAULT_x86_64=	DAHDI
 OPTIONS_DEFAULT_sparc64=	DAHDI
 
 EXCHANGE_DESC?=	Exchange calendar support
