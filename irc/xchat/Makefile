@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: irc/xchat/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: irc/xchat/Makefile 327099 2013-09-12 17:55:41Z az $
 #   $MCom: ports/irc/xchat/Makefile,v 1.7 2008/08/06 07:59:00 kwm Exp $
 
 PORTNAME=	xchat
@@ -18,14 +18,12 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 CONFLICTS=	xchat-1* xchat-systray-plugin-[0-9]*
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext pkgconfig
+USES=		gettext pkgconfig gmake
 USE_GNOME=	gnomehack gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 CONFIGURE_ARGS=	--enable-ipv6
-WANT_PERL=	yes
 
 OPTIONS_DEFINE=	DBUS NOTIFY PERL PYTHON SOCKS TCL
 OPTIONS_DEFAULT=DBUS GTKSPELL PERL
@@ -66,7 +64,7 @@ RUN_DEPENDS+=	notify-send:${PORTSDIR}/devel/libnotify \
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=--enable-perl
 PLIST_SUB+=	PERL=""
 .else
