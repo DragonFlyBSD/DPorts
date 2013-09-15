@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@Chg.RU>
-# $FreeBSD: www/calamaris/Makefile 323742 2013-07-26 18:02:28Z az $
+# $FreeBSD: www/calamaris/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	calamaris
 PORTVERSION=	2.59
@@ -10,9 +10,8 @@ MASTER_SITES=	http://cord.de/tools/squid/calamaris/
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	A perl script to produce statistics out of Squid log files
 
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
-USES=		shebangfix
 SHEBANG_FILES=	calamaris
 
 MAN1=		calamaris.1
