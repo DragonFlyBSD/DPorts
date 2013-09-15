@@ -1,5 +1,5 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine35/Makefile 322874 2013-07-12 23:47:58Z gjb $
+# $FreeBSD: sysutils/cfengine35/Makefile 327260 2013-09-14 10:35:26Z bapt $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.5.1
@@ -24,8 +24,8 @@ USE_RC_SUBR=	cf-execd cf-serverd
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GCC=	any
+USES=		gmake
+CFLAGS+=	-Wno-return-type
 # EXAMPLESDIR=	${PREFIX}/share/examples/cfengine3
 DOCSDIR=	${PREFIX}/share/doc/cfengine
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
