@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-ZConf-Runner
-# Date created:		2009-01-14
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports/deskutils/p5-ZConf-Runner/Makefile,v 1.10 2012/11/17 05:55:29 svnexp Exp $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: deskutils/p5-ZConf-Runner/Makefile 326975 2013-09-11 12:59:14Z az $
 
 PORTNAME=	ZConf-Runner
 PORTVERSION=	2.1.4
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-ZConf>=6.1.0:${PORTSDIR}/net/p5-ZConf \
 		p5-String-ShellQuote>=1.04:${PORTSDIR}/textproc/p5-String-ShellQuote
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ZConf::Runner.3 \
 		ZConf::Runner::GUI.3 \
