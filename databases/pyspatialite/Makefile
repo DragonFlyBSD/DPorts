@@ -1,8 +1,9 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: databases/pyspatialite/Makefile 326495 2013-09-06 13:07:07Z madpilot $
+# $FreeBSD: databases/pyspatialite/Makefile 326981 2013-09-11 13:58:27Z wg $
 
 PORTNAME=	pyspatialite
 PORTVERSION=	3.0.1
+PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP:pyspatialite \
 		http://www.gaia-gis.it/gaia-sins/libspatialite-sources/:amalgam
