@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/makepatch/Makefile,v 1.11 2013/02/12 16:18:11 svnexp Exp $
+# $FreeBSD: textproc/makepatch/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	makepatch
 PORTVERSION=	2.05
@@ -9,7 +9,8 @@ MASTER_SITE_SUBDIR=	CPAN:JV
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	Perl scripts to assist in the generation and application of patches
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		makepatch.1 applypatch.1
 
