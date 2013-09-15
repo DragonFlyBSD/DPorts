@@ -1,5 +1,5 @@
 # Created by: cy
-# $FreeBSD: ports/graphics/qxv/Makefile,v 1.5 2012/12/18 23:19:34 svnexp Exp $
+# $FreeBSD: graphics/qxv/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	qxv
 PORTVERSION=	0.2
