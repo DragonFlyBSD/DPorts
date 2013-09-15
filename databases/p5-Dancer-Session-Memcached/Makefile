@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-Dancer-Session-Memcached/Makefile,v 1.6 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: databases/p5-Dancer-Session-Memcached/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	Dancer-Session-Memcached
 PORTVERSION=	0.2.02
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Cache-Memcached>=0:${PORTSDIR}/databases/p5-Cache-Memcached \
 RUN_DEPENDS=	p5-Cache-Memcached>=0:${PORTSDIR}/databases/p5-Cache-Memcached \
 		p5-Dancer>=0:${PORTSDIR}/www/p5-Dancer
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Dancer::Session::Memcached.3
 
