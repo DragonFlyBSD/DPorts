@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk20/Makefile 326049 2013-09-02 18:14:45Z bapt $
+# $FreeBSD: x11-toolkits/gtk20/Makefile 327099 2013-09-12 17:55:41Z az $
 #   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.237 2013/03/04 17:44:38 kwm Exp $
 # Remember to update graphics/gtk-update-icon-cache too.
 
@@ -29,12 +29,11 @@ RUN_DEPENDS+=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
 		python:${PORTSDIR}/lang/python
 
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
-USES=		gettext pkgconfig
+USES=		gettext gmake pkgconfig perl5
+USE_PERL5=	build
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
