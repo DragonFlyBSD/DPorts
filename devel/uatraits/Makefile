@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/uatraits/Makefile 316917 2013-04-30 11:43:35Z demon $
+# $FreeBSD: devel/uatraits/Makefile 327124 2013-09-13 01:21:55Z marino $
 
 PORTNAME=	uatraits
 PORTVERSION=	20130430
@@ -16,6 +16,7 @@ LIB_DEPENDS=	boost_python:${PORTSDIR}/devel/boost-python-libs \
 		pcre:${PORTSDIR}/devel/pcre \
 		xml2:${PORTSDIR}/textproc/libxml2
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
 USE_OPENSSL=	yes
