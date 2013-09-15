@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-Crc32
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-Crc32/Makefile,v 1.8 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-Crc32/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	Digest-Crc32
 PORTVERSION=	0.01
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for calculating 32-bit CRC checksums
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::Crc32.3
 
