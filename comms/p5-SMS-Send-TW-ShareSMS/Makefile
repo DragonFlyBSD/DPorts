@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SMS-Send-TW-ShareSMS
-# Date created:		2007-10-06
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: ports/comms/p5-SMS-Send-TW-ShareSMS/Makefile,v 1.4 2012/11/17 05:55:00 svnexp Exp $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: comms/p5-SMS-Send-TW-ShareSMS/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	SMS-Send-TW-ShareSMS
 PORTVERSION=	0.02
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-SMS-Send>=0.03:${PORTSDIR}/comms/p5-SMS-Send \
 		p5-libwww>=2:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SMS::Send::TW::ShareSMS.3
 
