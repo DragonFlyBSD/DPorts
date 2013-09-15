@@ -1,9 +1,5 @@
-# New ports collection makefile for:	color-mate for emacs
-# Date created:		99/09/29
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/editors/color-mate/Makefile,v 1.13 2012/11/17 05:57:12 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: editors/color-mate/Makefile 326904 2013-09-10 14:35:48Z az $
 
 PORTNAME=	color-mate
 PORTVERSION=	10.6.4
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.netlab.is.tsukuba.ac.jp/~yokota/archive/
 MAINTAINER=	sarumaru@jp.FreeBSD.org
 COMMENT=	Color customizing module for Emacsen
 
-USE_PERL5=	yes
+USES=		perl5
 
 EMACSDIR=	${PREFIX}/share/emacs/site-lisp
 ELISPDIR=	${EMACSDIR}/color-mate
