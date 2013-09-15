@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mysqlsla
-# Date created:			2006-11-23
-# Whom:				Alexander Zhuravlev <zaa@zaa.pp.ru>
-#
-# $FreeBSD: ports/databases/mysqlsla/Makefile,v 1.9 2012/11/17 05:55:12 svnexp Exp $
+# Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
+# $FreeBSD: databases/mysqlsla/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	mysqlsla
 PORTVERSION=	2.03
@@ -16,7 +13,7 @@ COMMENT=	Mysqlsla analyzes general, slow, and raw MySQL statement logs
 RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
 		p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/mysqlsla
