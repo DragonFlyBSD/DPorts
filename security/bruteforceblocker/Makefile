@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bruteforceblocker
-# Date created:				20 April 2005
-# Whom:					Daniel Gerzo <danger@rulez.sk>
-#
-# $FreeBSD: ports/security/bruteforceblocker/Makefile,v 1.14 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: Daniel Gerzo <danger@rulez.sk>
+# $FreeBSD: security/bruteforceblocker/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	bruteforceblocker
 PORTVERSION=	1.2.3
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Unix-Syslog>=0:${PORTSDIR}/sysutils/p5-Unix-Syslog \
 		p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PKGMESSAGE=	${WRKDIR}/pkg-message
