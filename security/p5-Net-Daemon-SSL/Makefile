@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Daemon-SSL
-# Date created:				25 April 2005
-# Whom:	      				Simon Dick <simond@irrelevant.org>
-#
-# $FreeBSD: ports/security/p5-Net-Daemon-SSL/Makefile,v 1.4 2012/11/17 06:01:13 svnexp Exp $
-#
+# Created by: Simon Dick <simond@irrelevant.org>
+# $FreeBSD: security/p5-Net-Daemon-SSL/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	Net-Daemon-SSL
 PORTVERSION=	1.0
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	simond@irrelevant.org
 COMMENT=	Perl5 extension for portable daemons
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 BUILD_DEPENDS+=	p5-Net-Daemon>=0:${PORTSDIR}/net/p5-Net-Daemon \
 		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
