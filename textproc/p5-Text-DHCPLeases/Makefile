@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Text-DHCPLeases/Makefile,v 1.3 2013/01/14 22:46:39 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-DHCPLeases/Makefile 326920 2013-09-10 17:26:57Z az $
 
 PORTNAME=	Text-DHCPLeases
 PORTVERSION=	1.0
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to parse DHCP leases file from ISC dhcpd
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Text::DHCPLeases.3 \
 	Text::DHCPLeases::Object.3 \
