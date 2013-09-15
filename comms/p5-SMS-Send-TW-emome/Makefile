@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SMS-Send-TW-emome
-# Date created:		2007-10-10
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: ports/comms/p5-SMS-Send-TW-emome/Makefile,v 1.10 2012/11/17 05:55:01 svnexp Exp $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: comms/p5-SMS-Send-TW-emome/Makefile 327035 2013-09-12 06:27:41Z az $
 
 PORTNAME=	SMS-Send-TW-emome
 PORTVERSION=	0.04
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-SMS-Send>=0.03:${PORTSDIR}/comms/p5-SMS-Send \
 		p5-Text-Iconv>=:${PORTSDIR}/converters/p5-Text-Iconv
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SMS::Send::TW::emome.3
 
