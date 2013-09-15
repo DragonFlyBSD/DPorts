@@ -1,5 +1,5 @@
 # Created by: Dikshie <dikshie@sfc.wide.ad.jp>
-# $FreeBSD: net-mgmt/yaf/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-mgmt/yaf/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	yaf
 PORTVERSION=	2.1.1
@@ -17,10 +17,9 @@ LIB_DEPENDS=	fixbuf:${PORTSDIR}/net/libfixbuf \
 		pcre.3:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
-USES=		pkgconfig
+USES=		pkgconfig perl5
 USE_GNOME=	glib20 gnomehack
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 CONFIOGURE_ARGS+=	--disable-doxygen
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
