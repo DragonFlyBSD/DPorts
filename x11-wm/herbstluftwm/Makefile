@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/herbstluftwm/Makefile 322120 2013-07-01 09:49:34Z danfe $
+# $FreeBSD: x11-wm/herbstluftwm/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	herbstluftwm
 PORTVERSION=	0.5.2
