@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CSS-Simple
-# Date created:				Thu Oct 28 09:56:23 EDT 2010
-# Whom:					Vivek Khera <vivek@khera.org>
-#
-# $FreeBSD: ports/textproc/p5-CSS-Simple/Makefile,v 1.3 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Vivek Khera <vivek@khera.org>
+# $FreeBSD: textproc/p5-CSS-Simple/Makefile 326944 2013-09-11 06:49:58Z az $
 
 PORTNAME=	CSS-Simple
 PORTVERSION=	3211
@@ -17,7 +13,8 @@ COMMENT=	Interface through which to read/write/manipulate CSS files
 BUILD_DEPENDS=	p5-Tie-IxHash>=0:${PORTSDIR}/devel/p5-Tie-IxHash
 RUN_DEPENDS=	p5-Tie-IxHash>=0:${PORTSDIR}/devel/p5-Tie-IxHash
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CSS::Simple.3
 PLIST_FILES=	%%SITE_PERL%%/CSS/Simple.pm \
