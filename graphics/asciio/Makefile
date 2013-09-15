@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/asciio/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: graphics/asciio/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	asciio
 PORTVERSION=	1.02.71
@@ -33,7 +33,8 @@ BUILD_DEPENDS=	p5-Directory-Scratch>=0:${PORTSDIR}/devel/p5-Directory-Scratch \
 		p5-Check-ISA>=0:${PORTSDIR}/devel/p5-Check-ISA
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		App::Asciio::setup::import_export::perl.3 \
 		App::Asciio.3 \
