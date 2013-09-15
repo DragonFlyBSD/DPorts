@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: ports/databases/p5-Relations-Query/Makefile,v 1.7 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: databases/p5-Relations-Query/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	Relations-Query
 PORTVERSION=	0.93
@@ -13,7 +13,8 @@ COMMENT=	Object for building queries with DBI/DBD::mysql
 BUILD_DEPENDS=	p5-Relations>=0:${PORTSDIR}/databases/p5-Relations
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Relations::Query.3
 
