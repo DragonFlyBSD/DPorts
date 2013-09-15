@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MARC-Lint
-# Date created:				31 May 2007
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: textproc/p5-MARC-Lint/Makefile 313971 2013-03-12 11:47:59Z demon $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: textproc/p5-MARC-Lint/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	MARC-Lint
 PORTVERSION=	1.46
@@ -23,6 +19,7 @@ MAN3=		MARC::Lint.3 MARC::Lint::CodeData.3
 
 WRKSRC=		${WRKDIR}/marc-lint
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
