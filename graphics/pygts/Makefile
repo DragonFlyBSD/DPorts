@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pygts
-# Date created:		17 May, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: graphics/pygts/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: graphics/pygts/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	pygts
 PORTVERSION=	0.3.1
