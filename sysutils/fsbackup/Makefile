@@ -1,5 +1,5 @@
 # Created by: samm
-# $FreeBSD: sysutils/fsbackup/Makefile 317610 2013-05-07 14:02:30Z bapt $
+# $FreeBSD: sysutils/fsbackup/Makefile 327086 2013-09-12 16:11:43Z az $
 
 PORTNAME=	fsbackup
 PORTVERSION=	1.2.1
@@ -13,8 +13,7 @@ COMMENT=	File system backup and synchronization utility
 
 RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 SHEBANG_FILES=	contrib/*.pl \
 		*.pl
 
