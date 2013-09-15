@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: www/linklint/Makefile 317614 2013-05-07 14:27:41Z ehaupt $
+# $FreeBSD: www/linklint/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	linklint
 DISTVERSION=	2.3.6.d
@@ -10,8 +10,8 @@ MASTER_SITES=	http://www.linklint.org/download/ \
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Perl script that checks links on web sites
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 SHEBANG_FILES=	${DISTNAME}
