@@ -1,5 +1,5 @@
 # Created by: Shinya Esu <esu@yk.rim.or.jp>
-# $FreeBSD: games/macopix/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: games/macopix/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	macopix
 PORTVERSION=	1.7.4
@@ -30,13 +30,13 @@ RESTRICTED_FILES=	\
 		macopix-mascot-HxB-euc-ja-0.30.tar.gz
 
 WANT_GNOME=	yes
-USES=		gettext gmake pkgconfig
+USES=		gettext gmake iconv pkgconfig
 GNU_CONFIGURE=	yes
 
 MAN1=		macopix.1
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 .if defined(WITH_GNUTLS)
 LIB_DEPENDS+=	gnutls.26:${PORTSDIR}/security/gnutls
