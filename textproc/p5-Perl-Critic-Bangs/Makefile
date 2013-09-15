@@ -1,8 +1,5 @@
-# Ports collection makefile for:       Perl::Critic::Bangs
-# Date created:                        Jun 06, 2008
-# Whom:                                Vany <ivan@serezhkin.com>
-#
-# $FreeBSD: ports/textproc/p5-Perl-Critic-Bangs/Makefile,v 1.8 2012/11/17 06:02:06 svnexp Exp $
+# Created by: Vany <ivan@serezhkin.com>
+# $FreeBSD: textproc/p5-Perl-Critic-Bangs/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	Perl-Critic-Bangs
 PORTVERSION=	1.08
@@ -18,7 +15,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Perl-Critic>=0:${PORTSDIR}/textproc/p5-Test-Perl-Critic \
 		p5-Perl-Critic-Deprecated>=0:${PORTSDIR}/devel/p5-Perl-Critic-Deprecated
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Perl::Critic::Bangs.3 \
 	Perl::Critic::Policy::Bangs::ProhibitUselessRegexModifiers.3 \
