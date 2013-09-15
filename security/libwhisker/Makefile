@@ -1,5 +1,5 @@
 # Created by: pandzilla
-# $FreeBSD: security/libwhisker/Makefile 320718 2013-06-12 19:20:40Z az $
+# $FreeBSD: security/libwhisker/Makefile 326994 2013-09-11 17:07:20Z az $
 
 PORTNAME=	libwhisker
 PORTVERSION=	2.5
@@ -13,7 +13,7 @@ COMMENT=	Perl module to create HTTP test scripts
 WRKSRC=		${WRKDIR}/${PORTNAME}2-${PORTVERSION}
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	${SITE_PERL_REL}/LW2.pm
 
