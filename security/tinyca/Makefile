@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/security/tinyca/Makefile,v 1.25 2013/01/09 20:05:09 svnexp Exp $
+# $FreeBSD: security/tinyca/Makefile 327002 2013-09-11 19:02:50Z az $
 
 PORTNAME=	tinyca
 PORTVERSION=	0.7.5
@@ -18,7 +18,7 @@ RUN_DEPENDS=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_OPENSSL=	yes
 NO_BUILD=	yes
 DOC_FILES=	INSTALL

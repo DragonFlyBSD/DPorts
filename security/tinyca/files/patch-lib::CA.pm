@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/tinyca/files/patch-lib::CA.pm,v 1.3 2012/11/17 06:01:21 svnexp Exp $
+$FreeBSD: security/tinyca/files/patch-lib::CA.pm 300897 2012-07-14 14:29:18Z beat $
 
 --- lib/CA.pm.orig
 +++ lib/CA.pm
