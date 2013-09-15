@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-Chimera
-# Date created:				20 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-Chimera/Makefile,v 1.7 2012/11/17 06:01:10 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-Chimera/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Crypt-Chimera
 PORTVERSION=	1.01
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl extension for Chimera key exchange protocol
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Chimera.3
 
