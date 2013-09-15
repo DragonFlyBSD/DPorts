@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-cyrillic
-# Date created:				13 May 2002
-# Whom:					Anatoliy Dmytriyev
-#
-# $FreeBSD: ports/russian/p5-cyrillic/Makefile,v 1.6 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Anatoliy Dmytriyev
+# $FreeBSD: russian/p5-cyrillic/Makefile 326975 2013-09-11 12:59:14Z az $
 
 PORTNAME=	cyrillic
 PORTVERSION=	2.09
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tolid@plab.ku.dk
 COMMENT=	Library for fast and easy Cyrillic text manipulation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	cyrillic.3
 
