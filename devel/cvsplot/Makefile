@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsplot/Makefile 323795 2013-07-27 16:06:25Z az $
+# $FreeBSD: devel/cvsplot/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	cvsplot
 PORTVERSION=	1.7.4
@@ -14,10 +14,9 @@ RUN_DEPENDS=	p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip \
 		p5-String-ShellQuote>=0:${PORTSDIR}/textproc/p5-String-ShellQuote \
 		gnuplot:${PORTSDIR}/math/gnuplot
 
-USE_PERL5=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/cvsplot
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	cvsplot.pl
 
 do-install:
