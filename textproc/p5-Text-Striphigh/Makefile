@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Text-Striphigh
-# Date created:				Mon Nov 10 2003
-# Whom:	      				kai
-#
-# $FreeBSD: ports/textproc/p5-Text-Striphigh/Makefile,v 1.5 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: kai
+# $FreeBSD: textproc/p5-Text-Striphigh/Makefile 326944 2013-09-11 06:49:58Z az $
 
 PORTNAME=	Text-Striphigh
 PORTVERSION=	0.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kai@xs4all.nl
 COMMENT=	Perl extension to strip the high bit off of ISO-8859-1 text
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/Striphigh-${PORTVERSION}
 
 MAN3=		Text::Striphigh.3
