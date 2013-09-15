@@ -1,0 +1,54 @@
+# New ports collection makefile for:   snmp4nagios
+# Date created:        22 June 2008
+# Whom:                Ryan Steinmetz
+#
+# $FreeBSD: ports/net-mgmt/snmp4nagios/Makefile,v 1.8 2012/11/17 06:00:38 svnexp Exp $
+#
+
+PORTNAME=	SNMP4Nagios
+PORTVERSION=	0.4
+PORTREVISION=	1
+CATEGORIES=	net-mgmt
+MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTVERSION}
+
+MAINTAINER=	zi@FreeBSD.org
+COMMENT=	Vendor specific SNMP plugins for Nagios
+
+BUILD_DEPENDS=	snmpcheck:${PORTSDIR}/net-mgmt/net-snmp
+RUN_DEPENDS=	snmpcheck:${PORTSDIR}/net-mgmt/net-snmp
+
+GNU_CONFIGURE=	yes
+
+NAGIOSWWWDIR?=	www/nagios
+NAGIOSDIR?=	/var/spool/nagios
+
+OPTIONS_DEFINE=	RRDTOOL
+RRDTOOL_DESC=	Build with rrdtool support
+
+.include <bsd.port.options.mk>
+
+CONFIGURE_ARGS=	--sbindir=${PREFIX}/${NAGIOSWWWDIR}/cgi-bin \
+		--bindir=${PREFIX}/libexec/nagios \
+		--libexecdir=${PREFIX}/libexec/nagios \
+		--datadir=${PREFIX}/share \
+		--sysconfdir=${PREFIX}/etc/nagios \
+		--localstatedir=${NAGIOSDIR} \
+		--with-rrddir=${NAGIOSDIR}/snmp4nagios/rrd \
+		--with-pngdir=${NAGIOSDIR}/snmp4nagios/png \
+		--prefix=${PREFIX}
+
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
+CFLAGS+=	-I${LOCALBASE}/include
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MRRDTOOL}
+LIB_DEPENDS+=	rrd:${PORTSDIR}/databases/rrdtool
+CONFIGURE_ARGS+=--with-rrd
+PLIST_SUB+=	RRD=""
+.else
+CONFIGURE_ARGS+=--with-rrd=no
+PLIST_SUB+=	RRD="@comment "
+.endif
+
+.include <bsd.port.post.mk>
