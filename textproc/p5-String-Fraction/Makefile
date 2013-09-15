@@ -1,9 +1,5 @@
-# New ports collection makefile for:	String-Fraction
-# Date created:				16 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-String-Fraction/Makefile,v 1.8 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-String-Fraction/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	String-Fraction
 PORTVERSION=	0.30
@@ -22,6 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	String::Fraction.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
