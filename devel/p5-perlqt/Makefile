@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-perlqt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/p5-perlqt/Makefile 327086 2013-09-12 16:11:43Z az $
 
 PORTNAME=	perlqt
 PORTVERSION=	${KDE4_VERSION}
@@ -15,11 +15,10 @@ LIB_DEPENDS=	qscintilla2:${PORTSDIR}/devel/qscintilla2 \
 		qwt.5:${PORTSDIR}/x11-toolkits/qwt5
 
 USE_XZ=		yes
-USE_PERL5=	yes
 USE_KDE4=	kdehier kdeprefix smokeqt qimageblitz
 USE_QT4=	corelib dbus gui network xml \
 		qmake_build moc_build uic_build rcc_build
-USES=		cmake:outsource
+USES=		cmake:outsource perl5
 
 
 # Respect PREFIX
