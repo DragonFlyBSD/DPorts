@@ -1,9 +1,5 @@
-# New ports collection makefile for:    de-ispell
-# Date created:                         10 February 2000
-# Whom:                                 Alexander Langer <alex@big.endian.de>
-#
-# $FreeBSD: ports/german/ispell/Makefile,v 1.17 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Alexander Langer <alex@big.endian.de>
+# $FreeBSD: german/ispell/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	ispell
 CATEGORIES=	german
@@ -11,7 +7,7 @@ PKGNAMESUFFIX=	-20071211
 
 MAINTAINER=	office@FreeBSD.org
 
-USE_PERL5=	yes
+USES=		perl5
 
 ISPELL_DEALT=	yes
 ISPELL_DENEU=	yes
