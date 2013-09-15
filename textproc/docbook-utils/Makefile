@@ -1,9 +1,5 @@
-# New ports collection makefile for:	docbook-utils
-# Date created:				3 May 2004
-# Whom:					Brian Candler <B.Candler@pobox.com>
-#
-# $FreeBSD: textproc/docbook-utils/Makefile 317903 2013-05-11 18:45:42Z hrs $
-#
+# Created by: Brian Candler <B.Candler@pobox.com>
+# $FreeBSD: textproc/docbook-utils/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	docbook-utils
 PORTVERSION=	0.6.14
@@ -25,7 +21,8 @@ RUN_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-d
 
 CONFLICTS=	docbook2X-*
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_TEX=	jadetex
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
