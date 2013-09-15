@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: converters/p5-Text-Bidi/Makefile 327000 2013-09-11 18:06:31Z sunpoet $
+# $FreeBSD: converters/p5-Text-Bidi/Makefile 327138 2013-09-13 09:50:53Z sunpoet $
 
 PORTNAME=	Text-Bidi
-PORTVERSION=	2.01
+PORTVERSION=	2.02
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
