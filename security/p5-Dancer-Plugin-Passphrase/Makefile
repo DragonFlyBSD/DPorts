@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: security/p5-Dancer-Plugin-Passphrase/Makefile 326583 2013-09-07 09:03:47Z gblach $
+# $FreeBSD: security/p5-Dancer-Plugin-Passphrase/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	Dancer-Plugin-Passphrase
 PORTVERSION=	2.0.0
@@ -24,7 +24,8 @@ RUN_DEPENDS=	p5-Dancer>0:${PORTSDIR}/www/p5-Dancer \
 		p5-Digest-Bcrypt>0:${PORTSDIR}/security/p5-Digest-Bcrypt \
 		p5-Digest-SHA>=5.008:${PORTSDIR}/security/p5-Digest-SHA
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Dancer::Plugin::Passphrase.3
 
