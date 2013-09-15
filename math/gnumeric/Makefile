@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: math/gnumeric/Makefile 326105 2013-09-02 22:11:23Z bapt $
+# $FreeBSD: math/gnumeric/Makefile 327099 2013-09-12 17:55:41Z az $
 #   $MCom: ports/trunk/math/gnumeric/Makefile 18444 2013-05-11 12:51:26Z kwm $
 
 PORTNAME=	gnumeric
@@ -45,7 +45,7 @@ PERL_DESC=	Support Perl as extension language
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=		yes
+USES+=			perl5
 PLIST_SUB+=		PERL=""
 .else
 CONFIGURE_ARGS+=	--without-perl
