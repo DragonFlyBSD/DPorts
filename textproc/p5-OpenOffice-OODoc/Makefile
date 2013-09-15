@@ -1,9 +1,5 @@
-# New ports collection makefile for:	OpenOffice::OODoc
-# Date created:		10 October 2009
-# Whom:			meyser@xenet.de
-#
-# $FreeBSD: ports/textproc/p5-OpenOffice-OODoc/Makefile,v 1.5 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: meyser@xenet.de
+# $FreeBSD: textproc/p5-OpenOffice-OODoc/Makefile 326949 2013-09-11 07:40:59Z az $
 
 PORTNAME=	OpenOffice-OODoc
 PORTVERSION=	2.124
@@ -17,7 +13,8 @@ COMMENT=	The Perl Open OpenDocument Connector
 RUN_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 		p5-XML-Twig>=0:${PORTSDIR}/textproc/p5-XML-Twig
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS+=	--noprompt
 
 MAN1=		odf2pod.1 odf_set_fields.1 odf_set_title.1 odfbuild.1 \
