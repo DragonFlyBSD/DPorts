@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/p5-Cairo/Makefile 314383 2013-03-16 19:41:30Z swills $
+# $FreeBSD: graphics/p5-Cairo/Makefile 326963 2013-09-11 11:44:41Z az $
 
 PORTNAME=	Cairo
 PORTVERSION=	1.103
@@ -20,7 +20,8 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 TEST_DEPENDS=	p5-Font-FreeType>=0:${PORTSDIR}/print/p5-Font-FreeType \
 		p5-Test-Number-Delta>=1:${PORTSDIR}/devel/p5-Test-Number-Delta
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cairo.3
 
