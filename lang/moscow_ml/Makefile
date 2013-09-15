@@ -1,5 +1,5 @@
 # Created by: Chuck Robey <chuckr@FreeBSD.org>
-# $FreeBSD: lang/moscow_ml/Makefile 323775 2013-07-27 08:34:48Z danfe $
+# $FreeBSD: lang/moscow_ml/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	moscow_ml
 PORTVERSION=	2.01
@@ -16,7 +16,7 @@ LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
 
 RESTRICTED=	Restrictions on for-profit distribution
 
-USE_PERL5=	yes	# XXX: shouldn't it be changed to USE_PERL5_BUILD?
+USES=		perl5
 ALL_TARGET=	world
 MAKE_ARGS=	MOSMLHOME="${MOSMLHOME}" DOCSDIR="${DOCSDIR}" \
 		LD_RUN_PATH="${PREFIX}/lib/mosml"
