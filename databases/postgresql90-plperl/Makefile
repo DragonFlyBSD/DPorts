@@ -1,9 +1,5 @@
-# New ports collection makefile for:	PostgreSQL PL/Perl 
-# Date created:		January 14, 2002
-# Whom:			Palle Girgensohn <girgen@partitur.se>
-#
-# $FreeBSD: ports/databases/postgresql90-plperl/Makefile,v 1.4 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: Palle Girgensohn <girgen@partitur.se>
+# $FreeBSD: databases/postgresql90-plperl/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	postgresql
 CATEGORIES=	databases perl5
@@ -18,7 +14,7 @@ MASTERDIR=	${.CURDIR}/../../databases/postgresql${WANT_PGSQL_VER}-server
 
 WANT_PGSQL_VER?=90
 
-USE_PERL5=	yes
+USES=		perl5
 CONFIGURE_ARGS=	--with-perl
 
 BUILD_DIRS=	src/backend src/pl/plperl
