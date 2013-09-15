@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: security/p5-Crypt-GCrypt/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/p5-Crypt-GCrypt/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	Crypt-GCrypt
 PORTVERSION=	1.25
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS+=	GCRYPTLIBPATH=${LOCALBASE}/lib \
 		GCRYPTINCPATH=${LOCALBASE}/include
 
