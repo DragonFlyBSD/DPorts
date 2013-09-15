@@ -1,8 +1,8 @@
 # Created by: Takefu
-# $FreeBSD: japanese/wordpress/Makefile 324658 2013-08-13 11:40:47Z wg $
+# $FreeBSD: japanese/wordpress/Makefile 327069 2013-09-12 14:27:21Z sunpoet $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.6
+PORTVERSION=	3.6.1
 CATEGORIES=	japanese www
 MASTER_SITES=	http://ja.wordpress.org/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-ja
@@ -27,6 +27,8 @@ PORTDOCS=	license.txt readme.html
 
 OPTIONS_DEFINE=	DOCS
 
+.include <bsd.port.options.mk>
+
 pre-everything::
 	@${ECHO_CMD} "If you want to upgrade, you must read upgrade document."
 	@${ECHO_CMD} ""
@@ -38,8 +40,6 @@ pre-install:
 		${FIND} -d . -type d | ${SED} -e 's|^\.|@dirrm %%WWWDIR%%|') > ${PLIST}
 	if [ ! -f ${WRKSRC}/wp-config-sample.php ]; then ${CP} \
 		${WRKSRC}/wp-config.php.sample ${WRKSRC}/wp-config.php; fi
-
-.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL} -d -g ${WWWGRP} -m 755 -o ${WWWOWN} ${WWWDIR}/
