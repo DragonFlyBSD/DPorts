@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Amazon-SimpleDB
-# Date created:		2009-02-02
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/databases/p5-Amazon-SimpleDB/Makefile,v 1.4 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: databases/p5-Amazon-SimpleDB/Makefile 326894 2013-09-10 11:32:20Z az $
 
 PORTNAME=	Amazon-SimpleDB
 PORTVERSION=	0.03
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Digest-HMAC>0:${PORTSDIR}/security/p5-Digest-HMAC \
 		p5-libwww>0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Amazon::SimpleDB.3 \
 		Amazon::SimpleDB::Domain.3 \
