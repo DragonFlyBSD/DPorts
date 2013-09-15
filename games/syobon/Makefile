@@ -1,9 +1,5 @@
-# New Ports collection makefile for:	Syobon Action
-# Date created:		2012-05-06
-# Whom:			nemysis@gmx.ch
-#
-# $FreeBSD: games/syobon/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: nemysis@gmx.ch
+# $FreeBSD: games/syobon/Makefile 326997 2013-09-11 17:20:45Z marino $
 
 PORTNAME=	syobon
 PORTVERSION=	1.0.1
