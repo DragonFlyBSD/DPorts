@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Text-Pipe/Makefile,v 1.1 2013/01/18 14:47:50 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Pipe/Makefile 326941 2013-09-11 06:03:56Z az $
 
 PORTNAME=	Text-Pipe
 PORTVERSION=	0.10
@@ -16,7 +16,8 @@ RUN_DEPENDS=	\
 	p5-UNIVERSAL-require>0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 # Hack to avoid invoking CPAN.pm downloading...
 CONFIGURE_ENV=	PERL5_CPANPLUS_IS_RUNNING=1
 
