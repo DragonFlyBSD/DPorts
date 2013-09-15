@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: textproc/p5-Excel-Template/Makefile 320160 2013-06-07 07:13:13Z az $
+# $FreeBSD: textproc/p5-Excel-Template/Makefile 326945 2013-09-11 07:12:18Z az $
 
 PORTNAME=	Excel-Template
 PORTVERSION=	0.34
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Excel::Template.3 \
 		Excel::Template::Base.3 \
