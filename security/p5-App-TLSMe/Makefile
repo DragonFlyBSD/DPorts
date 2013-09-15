@@ -1,9 +1,4 @@
-# New ports collection makefile for:	App::TLSMe
-# Date created:		06 Dec 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-App-TLSMe/Makefile,v 1.4 2012/11/17 06:01:10 svnexp Exp $
-#
+# $FreeBSD: security/p5-App-TLSMe/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	App-TLSMe
 PORTVERSION=	0.100000
@@ -21,7 +16,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	tlsme.1
 MAN3=	App::TLSMe.3 \
