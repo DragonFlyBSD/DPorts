@@ -1,17 +1,16 @@
 # Created by: Mihail Timofeev <9267096@gmail.com>
-# $FreeBSD: russian/wordpress/Makefile 324304 2013-08-06 07:48:03Z wen $
+# $FreeBSD: russian/wordpress/Makefile 327072 2013-09-12 14:29:29Z sunpoet $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.6
+PORTVERSION=	3.6.1
 CATEGORIES=	russian www
 MASTER_SITES=	http://ru.wordpress.org/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-ru_RU
 
 MAINTAINER=	9267096@gmail.com
-COMMENT=	A state-of-the-art semantic personal publishing platform
+COMMENT=	State-of-the-art semantic personal publishing platform
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/license.txt
 
 CONFLICTS_INSTALL=	wordpress-3.* de-wordpress-3.* ja-wordpress-3.*
 
