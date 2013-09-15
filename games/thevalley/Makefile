@@ -1,8 +1,5 @@
-# New ports collection makefile for:	thevalley
-# Date created:				28 March 2004
-# Whom:					Edwin Groothuis
-#
-# $FreeBSD: ports/games/thevalley/Makefile,v 1.16 2012/11/17 05:57:54 svnexp Exp $
+# Created by: Edwin Groothuis
+# $FreeBSD: games/thevalley/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	thevalley
 PORTVERSION=	0.98
@@ -18,7 +15,8 @@ USE_AUTOTOOLS=	libtool
 HAS_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_SDL=	sdl
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CXXFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
 
