@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: textproc/scim/Makefile 326221 2013-09-03 19:51:12Z antoine $
+# $FreeBSD: textproc/scim/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	scim
 PORTVERSION=	1.4.9
@@ -24,7 +24,7 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
-LDFLAGS+=	-L${LOCALBASE}/lib -lintl
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl ${ICONV_LIB}
 
 post-patch:
 	${REINPLACE_CMD} -e '/^libscim@SCIM_EPOCH@_la_LDFLAGS/s|=|= ${PTHREAD_LIBS}|' \
