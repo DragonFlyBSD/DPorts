@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/databases/rrdman/Makefile,v 1.13 2013/01/09 20:04:30 svnexp Exp $
+# $FreeBSD: databases/rrdman/Makefile 326896 2013-09-10 12:14:21Z az $
 
 PORTNAME=	rrdman
 PORTVERSION=	1.0.1
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	rrdtool:${PORTSDIR}/databases/rrdtool
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	YES
-USE_PERL5=	YES
+USES=		perl5
 PLIST_FILES=	bin/rrd_hwreapply
 MAN1=		rrd_hwreapply.1
 
