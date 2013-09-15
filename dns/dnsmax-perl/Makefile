@@ -1,9 +1,5 @@
-# New ports collection makefile for:    dnsmax-perl
-# Date created:                         Sun Jan 23 20:27:00 CST 2005
-# Whom:                                 Dan Smith <dan@algenta.com>
-#
-# $FreeBSD: ports/dns/dnsmax-perl/Makefile,v 1.5 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: Dan Smith <dan@algenta.com>
+# $FreeBSD: dns/dnsmax-perl/Makefile 326955 2013-09-11 08:56:53Z az $
 
 PORTNAME=	dnsmax-perl
 PORTVERSION=	1.0.1
@@ -20,7 +16,7 @@ BUILD_DEPENDS=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay \
 
 USE_ZIP=	yes
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	bin/dnsmax-perl
 PORTDOCS=	LICENSE INSTALL README
