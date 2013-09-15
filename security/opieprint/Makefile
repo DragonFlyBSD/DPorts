@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: security/opieprint/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: security/opieprint/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	opieprint
 PORTVERSION=	1.0
@@ -14,7 +14,8 @@ COMMENT=	Output postscript with 100 OPIE passwords credit card sized
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	bin/opieprint
 
