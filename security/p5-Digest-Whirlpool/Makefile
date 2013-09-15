@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-Whirlpool
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-Whirlpool/Makefile,v 1.12 2012/11/17 06:01:13 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-Whirlpool/Makefile 326999 2013-09-11 18:03:40Z az $
 
 PORTNAME=	Digest-Whirlpool
 PORTVERSION=	1.09
@@ -15,7 +13,8 @@ COMMENT=	Perl extension for Whirlpool hash algorithm
 BUILD_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	whirlpoolsum.1
 MAN3=	Digest::Whirlpool.3
