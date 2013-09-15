@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-BitTorrent
-# Date created:		2006-08-02
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: ports/net-p2p/p5-WWW-BitTorrent/Makefile,v 1.6 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: net-p2p/p5-WWW-BitTorrent/Makefile 326954 2013-09-11 08:15:53Z az $
 
 PORTNAME=	WWW-BitTorrent
 PORTVERSION=	0.01
@@ -17,7 +13,8 @@ COMMENT=	Search and Download .torrent(s) files from BitTorrents boards
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::BitTorrent.3
 
