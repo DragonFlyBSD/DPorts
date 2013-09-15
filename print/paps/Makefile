@@ -1,9 +1,5 @@
-# New ports collection makefile for:	paps
-# Date created:				8 January 2008
-# Whom:					johans
-#
-# $FreeBSD: ports/print/paps/Makefile,v 1.7 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: johans
+# $FreeBSD: print/paps/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	paps
 PORTVERSION=	0.6.8
