@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Warnings/Makefile 326749 2013-09-08 15:46:36Z sunpoet $
+# $FreeBSD: devel/p5-Test-Warnings/Makefile 327074 2013-09-12 14:35:02Z sunpoet $
 
 PORTNAME=	Test-Warnings
-PORTVERSION=	0.008
+PORTVERSION=	0.009
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
