@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/www/shellinabox/files/shellinaboxd.in,v 1.9 2012/11/18 16:55:52 svnexp Exp $
+# $FreeBSD: www/shellinabox/files/shellinaboxd.in 307542 2012-11-18 16:33:31Z hrs $
 #
 # Shell in a Box Daemon startup script
 #
