@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-NetCDF
-# Date created:				2003-11-17
-# Whom:	      				Douglas K. Rand (rand@meridian-enviro.com)
-#
-# $FreeBSD: ports/math/p5-NetCDF/Makefile,v 1.12 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Douglas K. Rand (rand@meridian-enviro.com)
+# $FreeBSD: math/p5-NetCDF/Makefile 327033 2013-09-12 06:03:58Z az $
 
 PORTNAME=	NetCDF
 PORTVERSION=	1.2.4
@@ -24,7 +20,7 @@ LIB_DEPENDS=	netcdf.7:${PORTSDIR}/science/netcdf4
 LIB_DEPENDS=	netcdf.4:${PORTSDIR}/science/netcdf
 .endif
 
-USE_PERL5=	yes
+USES=		perl5
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=	yes
