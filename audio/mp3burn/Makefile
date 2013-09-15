@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-# $FreeBSD: audio/mp3burn/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: audio/mp3burn/Makefile 326958 2013-09-11 09:54:08Z az $
 
 PORTNAME=	mp3burn
 PORTVERSION=	0.4.2
@@ -20,7 +20,7 @@ RUN_DEPENDS=	mpg123:${PORTSDIR}/audio/mpg123 \
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/mp3burn
