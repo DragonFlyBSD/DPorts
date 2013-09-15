@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: security/silktools/Makefile 319390 2013-05-29 19:43:10Z lx $
+# $FreeBSD: security/silktools/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	silktools
 PORTVERSION=	2.5.0
@@ -20,7 +20,8 @@ USE_PYTHON=	yes
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CC}" GCC_FLAGS="" CFLAGS_RELEASE=""
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 MAN1=	mapsid.1 num2dot.1 rwaddrcount.1 rwappend.1 \
 	rwbag.1 rwbagbuild.1 rwbagcat.1 rwbagtool.1 \
