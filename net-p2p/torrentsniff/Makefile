@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: net-p2p/torrentsniff/Makefile 323702 2013-07-26 07:33:41Z az $
+# $FreeBSD: net-p2p/torrentsniff/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	torrentsniff
 PORTVERSION=	0.3.0
@@ -12,9 +12,8 @@ COMMENT=	Commandline tool for getting status of torrent
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 
-USE_PERL5=	yes
 NO_BUILD=	yes
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	torrentsniff
 
 do-install:
