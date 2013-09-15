@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dns/p5-Net-DNS-Check
-# Date created:				2011-05-30
-# Whom:					Ryan Steinmetz <rpsfa@rit.edu>
-#
-# $FreeBSD: ports/dns/p5-Net-DNS-Check/Makefile,v 1.4 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Ryan Steinmetz <rpsfa@rit.edu>
+# $FreeBSD: dns/p5-Net-DNS-Check/Makefile 326955 2013-09-11 08:56:53Z az $
 
 PORTNAME=	Net-DNS-Check
 PORTVERSION=	0.45
@@ -16,7 +12,8 @@ COMMENT=	Module for easy domain name checking
 
 RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::DNS::Check::Test::ns_count.3 Net::DNS::Check::Test::soa_expire_compare.3 \
 	Net::DNS::Check::NSQuery.3 Net::DNS::Check::Test::soa_master_compare.3 \
