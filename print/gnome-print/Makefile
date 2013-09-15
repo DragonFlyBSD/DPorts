@@ -2,7 +2,7 @@
 # Date created:				15 Jan 1999
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: print/gnome-print/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: print/gnome-print/Makefile 327077 2013-09-12 15:23:58Z az $
 #   $MCom: ports/print/gnome-print/Makefile,v 1.6 2007/09/24 19:40:45 mezz Exp $
 #
 
@@ -26,10 +26,8 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USE_PERL5=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomehier gnomelibs gnomecanvas
-USES=		gettext
+USES=		gettext gmake perl5
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
