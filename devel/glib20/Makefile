@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib20/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: devel/glib20/Makefile 327099 2013-09-12 17:55:41Z az $
 #   $MCom: ports/trunk/devel/glib20/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	glib
@@ -25,10 +25,9 @@ LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		gettext gmake iconv pathfix pkgconfig shebangfix
+USES=		gettext gmake iconv pathfix pkgconfig shebangfix perl5
 USE_GNOME=	ltverhack
 USE_PYTHON=	2.5+
-USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--disable-man --without-xml-catalog \
@@ -54,7 +53,7 @@ CONFIGURE_ARGS+=--disable-dtrace
 #CONFIGURE_ARGS+=--enable-dtrace
 #.endif
 
-.if exists(/usr/include/iconv.h) && ${OSVERSION} >= 1000043 
+.if empty(ICONV_LIB)
 CONFIGURE_ARGS+=	--with-libiconv=native
 .else
 CONFIGURE_ARGS+=	--with-libiconv=gnu
