@@ -1,5 +1,5 @@
 # Created by: Alan Snelson <Alan@Wave2.org>
-# $FreeBSD: ports/databases/p5-DBIx-VersionedDDL/Makefile,v 1.8 2012/12/08 09:49:37 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-VersionedDDL/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	DBIx-VersionedDDL
 PORTVERSION=	0.17
@@ -24,7 +24,8 @@ RUN_DEPENDS=	p5-DBD-SQLite>=1.31:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-MooseX-Attribute-ENV>=0.01:${PORTSDIR}/devel/p5-MooseX-Attribute-ENV \
 		p5-MooseX-Object-Pluggable>=0:${PORTSDIR}/devel/p5-MooseX-Object-Pluggable
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	migrate_schema.1
 MAN3=	DBIx::VersionedDDL.3 \
