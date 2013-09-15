@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: ports/security/munge/Makefile,v 1.3 2012/11/17 06:01:08 svnexp Exp $
+# $FreeBSD: security/munge/Makefile 326996 2013-09-11 17:17:46Z az $
 
 PORTNAME=	munge
 PORTVERSION=	0.5.10
@@ -12,7 +12,7 @@ COMMENT=	Authentication service for creating and validating credentials
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	munged
 
