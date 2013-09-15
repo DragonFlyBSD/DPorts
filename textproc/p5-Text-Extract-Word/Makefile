@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Extract-Word
-# Date created:				April 07 2010
-# Whom:					jupengfei <jupengfei@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-Text-Extract-Word/Makefile,v 1.5 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: jupengfei <jupengfei@gmail.com>
+# $FreeBSD: textproc/p5-Text-Extract-Word/Makefile 326939 2013-09-11 05:29:55Z az $
 
 PORTNAME=	Text-Extract-Word
 PORTVERSION=	0.04
@@ -19,7 +15,8 @@ LICENSE=	ART20
 BUILD_DEPENDS=	p5-OLE-Storage_Lite>0:${PORTSDIR}/devel/p5-OLE-Storage_Lite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Extract::Word.3
 
