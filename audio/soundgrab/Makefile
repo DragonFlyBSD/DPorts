@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	soundgrab
-# Date created:			May 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/audio/soundgrab/Makefile,v 1.17 2012/11/17 05:54:44 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: audio/soundgrab/Makefile 326956 2013-09-11 09:36:43Z az $
 
 PORTNAME=	soundgrab
 PORTVERSION=	1.0.1
@@ -25,7 +20,7 @@ RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox \
 
 LICENSE=	GPLv2
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MAN1=	soundgrab.1
