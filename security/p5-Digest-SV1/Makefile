@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-SV1
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-SV1/Makefile,v 1.10 2012/11/17 06:01:13 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-SV1/Makefile 326980 2013-09-11 13:54:50Z az $
 
 PORTNAME=	Digest-SV1
 PORTVERSION=	0.01
@@ -15,7 +13,8 @@ COMMENT=	Perl extension for SV1 hash algorithm
 BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 		p5-Digest-Haval256>=0:${PORTSDIR}/security/p5-Digest-Haval256
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Digest::SV1.3
 
