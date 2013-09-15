@@ -1,6 +1,6 @@
 # Created by:	Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: textproc/multimarkdown/Makefile 324584 2013-08-11 12:36:12Z adamw $
+# $FreeBSD: textproc/multimarkdown/Makefile 327111 2013-09-12 21:33:54Z adamw $
 #
 
 PORTNAME=	multimarkdown
@@ -29,7 +29,8 @@ PORTDOCS=	LICENSE README.markdown
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -E "/CFLAGS/s/-arch [[:alnum:]]+//; /CFLAGS/s/\?=/\+=/" \
+	@${REINPLACE_CMD} -E "/CFLAGS/s/-arch [[:alnum:]]+//; /CFLAGS/s/\?=/\+=/; \
+		s/CC=gcc//" \
 		${WRKSRC}/Makefile
 
 do-install:
