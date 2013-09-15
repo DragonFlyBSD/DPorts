@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Image-MetaData-GQview
-# Date created:		2006-08-14
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/graphics/p5-Image-MetaData-GQview/Makefile,v 1.5 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: graphics/p5-Image-MetaData-GQview/Makefile 326975 2013-09-11 12:59:14Z az $
 
 PORTNAME=	Image-MetaData-GQview
 PORTVERSION=	1.9
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Perl extension for GQview image metadata
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Image::MetaData::GQview.3
 
