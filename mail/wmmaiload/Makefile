@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmmaiload
-# Date created:				Sat Sep 21 01:48:10 EDT 2002
-# Whom:					pat
-#
-# $FreeBSD: ports/mail/wmmaiload/Makefile,v 1.24 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: pat
+# $FreeBSD: mail/wmmaiload/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	wmmaiload
 PORTVERSION=	2.2.1
