@@ -1,5 +1,5 @@
 # Created by: Andrew McNaughton <andrew@scoop.co.nz>
-# $FreeBSD: ports/databases/p5-MySQL-Diff/Makefile,v 1.7 2012/12/11 19:59:24 svnexp Exp $
+# $FreeBSD: databases/p5-MySQL-Diff/Makefile 326900 2013-09-10 13:04:01Z az $
 
 PORTNAME=	MySQL-Diff
 PORTVERSION=	0.43
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-MakeMethods>=0:${PORTSDIR}/devel/p5-Class-MakeMethods \
 		p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		mysqldiff.1
 MAN3=		MySQL::Diff.3 \
