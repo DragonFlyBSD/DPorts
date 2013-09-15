@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-Elf
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-Elf/Makefile,v 1.9 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-Elf/Makefile 326998 2013-09-11 17:56:03Z az $
 
 PORTNAME=	Digest-Elf
 PORTVERSION=	1.4
@@ -12,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for ElfHash hash algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Digest::Elf.3
 
