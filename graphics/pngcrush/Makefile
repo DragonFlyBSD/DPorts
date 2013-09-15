@@ -1,10 +1,11 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: graphics/pngcrush/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/pngcrush/Makefile 326931 2013-09-10 20:36:27Z marino $
 
 PORTNAME=	pngcrush
 PORTVERSION=	1.7.59
 CATEGORIES=	graphics
-MASTER_SITES=	SF/pmt/${PORTNAME}/old-versions/1.7/${PORTVERSION}/
+MASTER_SITES=	SF/pmt/${PORTNAME}/${PORTVERSION}/ \
+		SF/pmt/${PORTNAME}/old-versions/1.7/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-nolib
 
 MAINTAINER=	jsa@FreeBSD.org
