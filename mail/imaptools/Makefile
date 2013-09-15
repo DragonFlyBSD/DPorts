@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: mail/imaptools/Makefile 319031 2013-05-25 07:46:10Z bsam $
+# $FreeBSD: mail/imaptools/Makefile 327077 2013-09-12 15:23:58Z az $
 
 PORTNAME=	imaptools
 PORTVERSION=	1.135
@@ -17,9 +17,9 @@ CONFLICTS=	imaputils-[0-9]*
 
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	*.pl
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/*.pl ${PREFIX}/bin
