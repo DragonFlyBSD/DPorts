@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/p5-DR-Tarantool/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: databases/p5-DR-Tarantool/Makefile 326901 2013-09-10 13:50:14Z az $
 
 PORTNAME=	DR-Tarantool
 PORTVERSION=	0.37
@@ -13,7 +13,8 @@ COMMENT=	Perl driver for Tarantool
 
 LICENSE=	ART10
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	\
 	DR::README.3 \
