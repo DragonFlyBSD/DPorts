@@ -1,13 +1,13 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gnustep-gui/Makefile 325025 2013-08-20 01:08:17Z linimon $
+# $FreeBSD: x11-toolkits/gnustep-gui/Makefile 325725 2013-08-30 22:31:38Z bapt $
 
 PORTNAME=	gnustep-gui
-PORTVERSION=	0.22.0
+PORTVERSION=	0.23.1
 CATEGORIES=	x11-toolkits gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	theraven@FreeBSD.org
 COMMENT=	GNUstep GUI library
 
 .if !defined(NOPORTDOCS)
@@ -33,6 +33,8 @@ CONFIGURE_ARGS+=	--with-jpeg-include=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-x-include=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-x-include=${LOCALBASE}/lib
+
+USES=		pkgconfig
 USE_GNUSTEP=	yes
 USE_GNUSTEP_CONFIGURE=	yes
 USE_GNUSTEP_BUILD=	yes
@@ -43,6 +45,7 @@ USE_XORG=	x11 xt
 NOPORTDOCS=	dvi2pdf broken
 
 EXTRA_PATCHES+=	${FILESDIR}/GNUmakefile.patch
+EXTRA_PATCHES+=	${FILESDIR}/GNUmakefile.speech.patch
 EXTRA_PATCHES+=	${FILESDIR}/AudioOutputSink.m.patch
 MAKE_FLAGS+=	OPTFLAG="${CFLAGS}"
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
@@ -50,12 +53,6 @@ BREAKS_IF_PEDANTIC=	yes
 PLIST_SUB+=	BASEVERSION=${PORTVERSION:C/[.][0-9]*$//1}
 
 ADDITIONAL_INCLUDE_DIRS+=	-I${LOCALBASE}/include/libpng15
-
-.if defined(WITHOUT_GNUSTEP_FAKEMAIN)
-.if !exists(/proc/curproc)
-IGNORE=		requires procfs mounted to build or run, for details see procfs(5)
-.endif
-.endif
 
 .if !defined(WITHOUT_CUPS)
 LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
