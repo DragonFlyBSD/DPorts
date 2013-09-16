@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: textproc/gnome-spell/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: textproc/gnome-spell/Makefile 327088 2013-09-12 16:41:28Z az $
 #   $MCom: ports/textproc/gnome-spell/Makefile,v 1.13 2007/10/15 17:17:18 mezz Exp $
 
 PORTNAME=	gnome-spell
@@ -15,10 +15,8 @@ COMMENT=	A GNOME/Bonobo component for spell checking
 LIB_DEPENDS=	aspell.16:${PORTSDIR}/textproc/aspell
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
-USES=		gettext gmake pkgconfig
+USES=		gettext gmake pkgconfig perl5
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
