@@ -1,1 +1,2 @@
+USE_GCC=	4.8
 USES+=		readline
