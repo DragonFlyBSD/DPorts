@@ -1,5 +1,5 @@
 # Created by: Takashi Kato <townwear@gmail.com>
-# $FreeBSD: japanese/jd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: japanese/jd/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=		jd
 PORTVERSION=		2.8.5
@@ -20,12 +20,13 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 		gcrypt:${PORTSDIR}/security/libgcrypt \
 		gtkmm:${PORTSDIR}/x11-toolkits/gtkmm24
 
-USE_GMAKE=	yes
+USES=		gmake iconv
 USE_AUTOTOOLS=	autoconf automake libtool
 USE_GNOME=	gtk20 libgnomeui
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-sessionlib=gnomeui
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 OPTIONS_DEFINE=	ONIGURUMA PANGOLAYOUT
 ONIGURUMA_DESC=	Use oniguruma regular expressions library
