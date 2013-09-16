@@ -1,4 +1,4 @@
-# $FreeBSD: games/wesnoth/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/wesnoth/Makefile 326957 2013-09-11 09:36:48Z marino $
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.10.6
