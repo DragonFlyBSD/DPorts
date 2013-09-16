@@ -1,5 +1,5 @@
 # Created by: ada@bsd.org
-# $FreeBSD: games/freeciv/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: games/freeciv/Makefile 327148 2013-09-13 13:59:02Z bapt $
 
 PORTNAME=	freeciv
 PORTVERSION=	2.3.4
@@ -16,6 +16,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} --program-transform-name=
 
 MAN6=		freeciv-server.6 freeciv-client.6 \
