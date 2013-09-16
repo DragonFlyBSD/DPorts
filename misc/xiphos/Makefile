@@ -1,4 +1,4 @@
-# $FreeBSD: misc/xiphos/Makefile 320984 2013-06-15 11:10:34Z flo $
+# $FreeBSD: misc/xiphos/Makefile 327124 2013-09-13 01:21:55Z marino $
 
 PORTNAME=	xiphos
 PORTVERSION=	3.1.5
@@ -19,7 +19,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		nspr>=4.8:${PORTSDIR}/devel/nspr
 
 USE_PYTHON_BUILD=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomehack gnomeprefix gtkhtml3 intlhack libgsf
