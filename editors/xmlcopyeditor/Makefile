@@ -1,5 +1,5 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
-# $FreeBSD: editors/xmlcopyeditor/Makefile 324353 2013-08-07 13:59:55Z gahr $
+# $FreeBSD: editors/xmlcopyeditor/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	xmlcopyeditor
 PORTVERSION=	1.2.0.9
@@ -16,7 +16,7 @@ USE_WX=		2.8+
 WX_COMPS=	wx contrib
 WX_CONF_ARGS=	absolute
 WX_UNICODE=	yes
-USES=		gettext
+USES=		gettext iconv
 USE_DOS2UNIX=	yes
 
 BUILD_DEPENDS+=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
@@ -32,6 +32,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include \
 		-I${LOCALBASE}/include/libxml2 ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} ${ICONV_LIB}
 
 .include <bsd.port.mk>
