@@ -1,5 +1,5 @@
 # Created by: fluffy@
-# $FreeBSD: editors/kate/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/kate/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	kate
 PORTVERSION=	${KDE4_VERSION}
@@ -17,8 +17,8 @@ CONFLICTS=	kdebase-4.[0-6].* kdelibs-4.[0-6].* kdesdk-4.[0-6].*
 
 USE_XZ=		yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4 kactivities
-USES=		cmake:outsource gettext
-USE_PERL5_BUILD=	yes
+USES=		cmake:outsource gettext perl5
+USE_PERL5=	build
 USE_QT4=	dbus gui script sql webkit xml \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
