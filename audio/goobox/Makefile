@@ -1,10 +1,10 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: audio/goobox/Makefile 326709 2013-09-08 08:27:08Z antoine $
+# $FreeBSD: audio/goobox/Makefile 327040 2013-09-12 08:00:37Z jhale $
 #   $MCom: ports/audio/goobox/Makefile,v 1.25 2007/08/15 03:03:09 mezz Exp $
 
 PORTNAME=	goobox
 PORTVERSION=	2.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
