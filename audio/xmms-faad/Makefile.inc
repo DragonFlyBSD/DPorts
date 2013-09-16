@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-faad/Makefile.inc 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: audio/xmms-faad/Makefile.inc 327044 2013-09-12 09:07:08Z marino $
 
 PORTNAME=	faad2
 PORTVERSION=	2.7
@@ -11,6 +11,7 @@ RUN_DEPENDS=	faad2>=2.7:${PORTSDIR}/audio/faad
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/plugins/xmms/src
 
+USES+=		pkgconfig
 USE_BZIP2=	yes
 WANT_GNOME=	yes
 
