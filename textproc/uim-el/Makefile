@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@freebsd.org>
-# $FreeBSD: textproc/uim-el/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
+# $FreeBSD: textproc/uim-el/Makefile 327088 2013-09-12 16:41:28Z az $
 
 PORTNAME=	uim-el
 PORTVERSION=	1.8.5
@@ -19,10 +19,9 @@ CONFLICTS?=	uim-el-xemacs21-mule-[0-9]* \
 RUN_DEPENDS=	uim-el-agent:${PORTSDIR}/textproc/uim
 
 USE_BZIP2=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_GNOME=	intltool
-USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv gmake perl5
 USE_EMACS=	yes
 GNU_CONFIGURE=	yes
 
