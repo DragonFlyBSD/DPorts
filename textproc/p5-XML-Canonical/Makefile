@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Canonical
-# Date created:		2007-07-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Canonical/Makefile,v 1.5 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/p5-XML-Canonical/Makefile 326991 2013-09-11 16:45:58Z marino $
 
 PORTNAME=	XML-Canonical
 PORTVERSION=	0.10
@@ -20,8 +16,8 @@ BUILD_DEPENDS=	p5-XML-GDOME>=0:${PORTSDIR}/textproc/p5-XML-GDOME
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 LIB_DEPENDS=	gdome:${PORTSDIR}/textproc/gdome2
 
-USES=		pkgconfig
-PERL_CONFIGURE=	yes
+USES=		perl5 pkgconfig
+USE_PERL5=	configure
 
 MAN3=		XML::Canonical.3
 
