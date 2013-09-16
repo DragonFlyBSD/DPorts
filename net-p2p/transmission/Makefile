@@ -1,7 +1,7 @@
-# $FreeBSD: net-p2p/transmission/Makefile 322138 2013-07-01 18:40:19Z crees $
+# $FreeBSD: net-p2p/transmission/Makefile 325667 2013-08-30 08:19:28Z crees $
 
 PORTNAME=	transmission
-PORTVERSION=	2.80
+PORTVERSION=	2.82
 CATEGORIES=	net-p2p
 MASTER_SITES=	# empty
 DISTFILES=	# empty
