@@ -1,19 +1,16 @@
-# New ports collection makefile for:    addresses
-# Date created:         13 Nov 2004
-# Whom:                 Miguel Mendez <flynn@energyhq.es.eu.org>
-#
-# $FreeBSD: ports/mail/addresses/Makefile,v 1.16 2012/11/17 05:58:58 svnexp Exp $
+# Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
+# $FreeBSD: mail/addresses/Makefile 325546 2013-08-28 18:26:01Z theraven $
 #
 
 PORTNAME=	addresses
-PORTVERSION=	0.4.7
-PORTREVISION=	2
+PORTVERSION=	0.4.8
+PORTREVISION=	0
 CATEGORIES=	mail gnustep
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	gap
 DISTNAME=	Addresses-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	theraven@FreeBSD.org
 COMMENT=	A versatile addressbook for GNUstep
 
 LICENSE=	LGPL21
@@ -23,7 +20,5 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
-
-WRKSRC=		${WRKDIR}/Addresses
 
 .include <bsd.port.mk>
