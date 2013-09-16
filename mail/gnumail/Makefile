@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: mail/gnumail/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: mail/gnumail/Makefile 325546 2013-08-28 18:26:01Z theraven $
 
 PORTNAME=	gnumail
 PORTVERSION=	1.2.0
@@ -8,7 +8,7 @@ CATEGORIES=	mail gnustep
 MASTER_SITES=	http://download.gna.org/gnustep-nonfsf/
 DISTNAME=	GNUMail-${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	theraven@FreeBSD.org
 COMMENT=	GNUstep mail client
 
 LICENSE=	GPLv2
@@ -17,13 +17,10 @@ USE_GNUSTEP=	yes
 USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
-USE_GNUSTEP_LOCAL_LIBS+=	Pantomime:${PANTOMIME_PORT}
-USE_GNUSTEP_LOCAL_LIBS+=	Addresses:${ADDRESSES_PORT}
+USE_GNUSTEP_LOCAL_LIBS+=	Pantomime:mail/pantomime
+USE_GNUSTEP_LOCAL_LIBS+=	Addresses:mail/addresses
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DIR=${GNUSTEP_LOCAL_ROOT}
-
-PANTOMIME_PORT?=	mail/pantomime
-ADDRESSES_PORT?=	mail/addresses
 
 .include <bsd.port.mk>
