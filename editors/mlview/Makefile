@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: editors/mlview/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: editors/mlview/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	mlview
 PORTVERSION=	0.8
@@ -13,10 +13,10 @@ COMMENT=	A tree oriented XML editor for Gnome
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	autoconf libtool
-USES=        pathfix gmake pkgconfig
+USES=		pathfix gmake iconv pkgconfig
 USE_GNOME=	eel2 gnomeprefix gtksourceview libgnomeui
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib `pkg-config --libs gnome-vfs-2.0 libgnomeui-2.0`"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib `pkg-config --libs gnome-vfs-2.0 libgnomeui-2.0` ${ICONV_LIB}"
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags gnome-vfs-2.0 libgnomeui-2.0`
 
 GCONF_SCHEMAS=	mlview.schemas
