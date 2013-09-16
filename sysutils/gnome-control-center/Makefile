@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-control-center/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: sysutils/gnome-control-center/Makefile 327108 2013-09-12 20:18:06Z kwm $
 #   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.214 2010/11/18 11:46:09 kwm Exp $
 
 PORTNAME=	gnome-control-center
@@ -59,6 +59,8 @@ post-patch:
 	    	${WRKSRC}/capplets/common/gnome-theme-info.c
 	@${REINPLACE_CMD} -e 's|/usr/sbin|${PREFIX}/sbin|g' \
 		${WRKSRC}/capplets/display/org.gnome.randr.policy.in
+	@${REINPLACE_CMD} -e 's|"libslab"|"libnoslab"|g' \
+		${WRKSRC}/configure
 
 post-install:
 	@-update-desktop-database
