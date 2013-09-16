@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@marcuscom.com>
-# $FreeBSD: palm/gnome-pilot/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: palm/gnome-pilot/Makefile 327168 2013-09-13 17:14:53Z madpilot $
 
 PORTNAME=	gnome-pilot
 PORTVERSION=	2.0.17
@@ -14,9 +14,8 @@ COMMENT=	PalmPilot conduit system for GNOME 2
 BUILD_DEPENDS=	gob2:${PORTSDIR}/devel/gob2
 LIB_DEPENDS=	pisock.9:${PORTSDIR}/palm/pilot-link
 
-USES=		pathfix pkgconfig gettext
+USES=		gmake iconv pathfix pkgconfig gettext
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehier gnomepanel intlhack \
 		ltverhack libgnomeui
 USE_AUTOTOOLS=	libtool
@@ -24,7 +23,7 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-pisock=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 MAN1=		gpilot-install-file.1
 GCONF_SCHEMAS=	pilot.schemas
