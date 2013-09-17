@@ -51,8 +51,6 @@
 : ${ac_cv_header_minix_config_h=no}
 : ${ac_cv_header_net_if_h=yes}
 : ${ac_cv_header_net_if_media_h=yes}
-#: ${ac_cv_header_net_if_tap_h=yes}
-#: ${ac_cv_header_net_if_tun_h=yes}
 : ${ac_cv_header_netdb_h=yes}
 : ${ac_cv_header_netinet_in_h=yes}
 : ${ac_cv_header_paths_h=yes}
@@ -60,7 +58,6 @@
 : ${ac_cv_header_pwd_h=yes}
 : ${ac_cv_header_readpassphrase_h=yes}
 : ${ac_cv_header_resolv_h=yes}
-: ${ac_cv_header_rpc_types_h=yes}
 : ${ac_cv_header_sched_h=yes}
 : ${ac_cv_header_search_h=yes}
 : ${ac_cv_header_security_pam_appl_h=yes}
@@ -75,7 +72,6 @@
 : ${ac_cv_header_stdlib_h=yes}
 : ${ac_cv_header_string_h=yes}
 : ${ac_cv_header_strings_h=yes}
-: ${ac_cv_header_sys_acl_h=yes}
 : ${ac_cv_header_sys_cdefs_h=yes}
 : ${ac_cv_header_sys_dir_h=yes}
 : ${ac_cv_header_sys_fcntl_h=yes}
@@ -245,16 +241,6 @@
 : ${ac_cv_func__getshort=yes}
 : ${ac_cv_func__getshort=yes}
 : ${ac_cv_func__stat=yes}
-: ${ac_cv_func_acl_create_entry_np=yes}
-: ${ac_cv_func_acl_delete_def_file=yes}
-: ${ac_cv_func_acl_delete_fd_np=yes}
-: ${ac_cv_func_acl_delete_file_np=yes}
-: ${ac_cv_func_acl_free=yes}
-: ${ac_cv_func_acl_from_text=yes}
-: ${ac_cv_func_acl_get_fd=yes}
-: ${ac_cv_func_acl_get_file=yes}
-: ${ac_cv_func_acl_set_fd=yes}
-: ${ac_cv_func_acl_set_file=yes}
 : ${ac_cv_func_alarm=yes}
 : ${ac_cv_func_alloca=yes}
 : ${ac_cv_func_arc4random=yes}
@@ -304,7 +290,6 @@
 : ${ac_cv_func_getpeereid=yes}
 : ${ac_cv_func_getpgid=yes}
 : ${ac_cv_func_getpgrp=yes}
-: ${ac_cv_func_getpgrp_void=yes}
 : ${ac_cv_func_getpid=yes}
 : ${ac_cv_func_getrlimit=yes}
 : ${ac_cv_func_getrusage=yes}
@@ -343,7 +328,6 @@
 : ${ac_cv_func_mkstemp=yes}
 : ${ac_cv_func_mlock=yes}
 : ${ac_cv_func_mmap=yes}
-: ${ac_cv_func_mmap_fixed_mapped=yes}
 : ${ac_cv_func_mprotect=yes}
 : ${ac_cv_func_munlock=yes}
 : ${ac_cv_func_munmap=yes}
