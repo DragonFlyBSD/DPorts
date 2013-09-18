@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.database.mk 324283 2013-08-05 19:43:39Z mandree $
+# $FreeBSD: Mk/bsd.database.mk 327409 2013-09-16 15:19:15Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)
@@ -504,9 +504,6 @@ _SQLITE_VER=	 ${USE_SQLITE}
 
 # USE_SQLITE is specified incorrectly, so mark this as IGNORE
 .if ${_SQLITE_VER} == "3"
-LIB_DEPENDS+=	sqlite3.8:${PORTSDIR}/databases/sqlite${_SQLITE_VER}
-SQLITE_VER=	${_SQLITE_VER}
-.elif ${_SQLITE_VER} == "34"
 LIB_DEPENDS+=	sqlite3.8:${PORTSDIR}/databases/sqlite${_SQLITE_VER}
 SQLITE_VER=	${_SQLITE_VER}
 .elif ${_SQLITE_VER} == "2"
