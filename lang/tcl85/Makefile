@@ -1,12 +1,13 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: lang/tcl85/Makefile 318766 2013-05-22 13:04:58Z gahr $
+# $FreeBSD: lang/tcl85/Makefile 327575 2013-09-18 21:01:43Z gahr $
 
 PORTNAME=	tcl
-PORTVERSION=	8.5.14
-PORTREVISION=	1
+DISTVERSION=	8.5.15
 CATEGORIES=	lang
-MASTER_SITES=	SF/tcl/Tcl/${PORTVERSION}
-DISTNAME=	tcl${PORTVERSION}-src
+MASTER_SITES=	${MASTER_SITE_TCLTK} \
+		SF/tcl/Tcl/${PORTVERSION}
+MASTER_SITE_SUBDIR=tcl8_5
+DISTNAME=	${PORTNAME}${DISTVERSION}-src
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Tool Command Language
