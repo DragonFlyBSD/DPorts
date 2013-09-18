@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: net/tsclient/Makefile 320847 2013-06-13 22:48:26Z bapt $
+# $FreeBSD: net/tsclient/Makefile 326494 2013-09-06 13:01:53Z bapt $
 
 PORTNAME=	tsclient
 PORTVERSION=	0.150
@@ -14,8 +14,7 @@ RUN_DEPENDS=	rdesktop:${PORTSDIR}/net/rdesktop
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="`pkg-config --libs libgnomeui-2.0`"
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
