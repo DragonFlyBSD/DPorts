@@ -1,9 +1,5 @@
-# New ports collection makefile for:    scim-kmfl-imengine
-# Date created:		10 October 2007
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: textproc/scim-kmfl-imengine/Makefile 316683 2013-04-27 18:25:24Z mva $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/scim-kmfl-imengine/Makefile 327338 2013-09-15 12:27:30Z antoine $
 
 PORTNAME=	scim-kmfl-imengine
 PORTVERSION=	0.9.9
@@ -28,7 +24,7 @@ RUN_DEPENDS=	kmflcomp:${PORTSDIR}/textproc/kmflcomp \
 USE_XORG=	x11 xkbfile xproto
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	glib20 gtk20 intlhack
-USES=		gettext iconv
+USES=		gettext iconv pkgconfig
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
