@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib20/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: devel/glib20/Makefile 327477 2013-09-17 13:05:12Z bapt $
 #   $MCom: ports/trunk/devel/glib20/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	glib
@@ -14,7 +14,6 @@ COMMENT=	Some useful routines of C programming (current stable version)
 
 LICENSE=	LGPL20
 
-LATEST_LINK=	glib20
 USE_XZ=		yes
 PORTSCOUT=	limitw:1,even
 
