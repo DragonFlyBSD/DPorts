@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: news/newsstar/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: news/newsstar/Makefile 327278 2013-09-14 12:04:18Z az $
 
 PORTNAME=	newsstar
 PORTVERSION=	1.5.6
@@ -15,9 +15,8 @@ LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm
 BUILD_DEPENDS=	xmlto:${PORTSDIR}/textproc/xmlto \
 		${LOCALBASE}/share/xml/docbook/4.5/docbookx.dtd:${PORTSDIR}/textproc/docbook-xml
 
-USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-USES=		iconv
+USES=		iconv perl5
 
 OPTIONS_DEFINE=		SSL
 OPTIONS_DEFAULT=	SSL
@@ -27,7 +26,7 @@ CONFIGURE_ARGS+=--prefix=${PREFIX} \
 		--with-rc-dir=/var/spool/newsstar/lib \
 		--with-incoming-dir=/var/spool/newsstar/incoming
 
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 .include <bsd.port.options.mk>
