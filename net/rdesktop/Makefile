@@ -16,11 +16,13 @@ COMMENT=	RDP client for Windows NT/2000/2003 Terminal Server
 
 LICENSE=	GPLv3
 USE_XORG=	x11
-USE_GMAKE=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 DOCS=		doc/AUTHORS doc/TODO doc/*.txt
 MAN1=		rdesktop.1
+
+USES+=		gmake iconv
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 
 .include <bsd.port.pre.mk>
 
@@ -34,11 +36,6 @@ LIB_DEPENDS+=	samplerate.1:${PORTSDIR}/audio/libsamplerate
 
 .if !defined(WITHOUT_RDESKTOP_IPV6) && !defined(WITHOUT_IPV6)
 CONFIGURE_ARGS+=	--with-ipv6
-.endif
-
-.if defined(WITH_ICONV)
-USES+=		iconv
-CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 .endif
 
 .if defined(WITH_RDESKTOP_DEBUG)
