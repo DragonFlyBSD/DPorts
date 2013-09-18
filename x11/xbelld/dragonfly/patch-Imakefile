@@ -5,7 +5,7 @@
  INCLUDES+= $(ESD_CFLAGS)
  SYS_LIBRARIES = $(XTOOLLIB) $(XTRAPLIB) $(XMULIBONLY)
 -EXTRA_LIBRARIES = $(ESD_LIBS)
-+EXTRA_LIBRARIES = $(ESD_LIBS) -lX11 -laudiofile
++EXTRA_LIBRARIES = $(ESD_LIBS) -lX11 -laudiofile -lm
  SingleProgramTarget(xbell, xbell.o, , $(XTOOLLIB))
  AllTarget(xbell)
  SimpleProgramTarget(xbelld)
