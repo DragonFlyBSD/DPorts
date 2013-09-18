@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@langille.org>
-# $FreeBSD: sysutils/bacula-bat/Makefile 324549 2013-08-10 16:32:46Z marck $
+# $FreeBSD: sysutils/bacula-bat/Makefile 326071 2013-09-02 20:02:01Z bapt $
 
 PORTNAME=	bacula
 PKGNAMESUFFIX=	-bat
@@ -10,6 +10,7 @@ COMMENT=	Network backup solution (GUI)
 LIB_DEPENDS+=	qwt.5:${PORTSDIR}/x11-toolkits/qwt5 \
 		bac:${PORTSDIR}/sysutils/bacula-client
 
+USES=		pkgconfig
 USE_QT4=	qmake_build uic_build moc_build rcc_build
 WITH_BAT=	yes
 
