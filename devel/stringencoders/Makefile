@@ -2,7 +2,7 @@
 # Date created:        11 June 2007
 # Whom:                Steven Kreuzer <skreuzer@exit2shell.com>
 #
-# $FreeBSD: ports/devel/stringencoders/Makefile,v 1.11 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/stringencoders/Makefile 327376 2013-09-16 10:28:33Z az $
 #
 
 PORTNAME=	stringencoders
@@ -14,7 +14,7 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Collection of high performance c-string transformations
 
-USE_PERL5=	yes
+USES=		perl5
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
