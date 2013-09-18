@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@inec.ru>
-# $FreeBSD: net/xrdesktop/Makefile 315513 2013-03-29 00:59:45Z eadler $
+# $FreeBSD: net/xrdesktop/Makefile 326481 2013-09-06 09:21:19Z az $
 
 PORTNAME=	xrdesktop
 PORTVERSION=	1.2
@@ -14,7 +14,7 @@ RUN_DEPENDS=	rdesktop:${PORTSDIR}/net/rdesktop \
 		p5-Gtk>=0:${PORTSDIR}/x11-toolkits/p5-Gtk
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	bin/xrdesktop
 
