@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2013-09-18 15:29:45.200531000 +0000
++++ Makefile
+@@ -12,7 +12,7 @@ DESTDIR =
+ CC := gcc
+ GTKFLAGS := $(shell pkg-config gtk+-2.0 --cflags)
+ CFLAGS := $(CFLAGS) -fPIC -Wall $(GTKFLAGS)
+-LDFLAGS := -shared -Wl
++LDFLAGS := -shared
+ INST_DIR=${PREFIX}/libexec/gkrellm2/plugins
+ USER_INST_DIR := $(DESTDIR)$(HOME)/.gkrellm2/plugins
+ MANPAGES := gkrellkam-list.5
