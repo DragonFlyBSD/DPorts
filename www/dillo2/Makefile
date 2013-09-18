@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: www/dillo2/Makefile 316023 2013-04-18 07:02:42Z bf $
+# $FreeBSD: www/dillo2/Makefile 327169 2013-09-13 17:27:07Z marino $
 
 PORTNAME=	dillo
 DISTVERSION=	3.0.3
@@ -20,9 +20,9 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk
 RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 
+USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 MAN1=		dillo.1
 CONFIGURE_ARGS=	--libdir=${PREFIX}/libexec
 CONFLICTS=	dillo-i18n-[0-9]* \
