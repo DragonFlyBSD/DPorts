@@ -1,9 +1,8 @@
-# Created by:	Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: devel/mdds/Makefile 321762 2013-06-25 20:03:21Z jkim $
+# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
+# $FreeBSD: devel/mdds/Makefile 326795 2013-09-09 10:08:55Z sunpoet $
 
 PORTNAME=	mdds
-PORTVERSION=	0.8.1
-PORTREVISION=	1
+PORTVERSION=	0.9.0
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}_${PORTVERSION}
