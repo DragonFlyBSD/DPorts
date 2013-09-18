@@ -1,9 +1,5 @@
-# New ports collection makefile for:	grdesktop
-# Date created:				Jan 3 2003
-# Whom:					Florent Thoumie <flz@xbsd.org>
-#
-# $FreeBSD: ports/net/grdesktop/Makefile,v 1.20 2012/11/17 06:00:01 svnexp Exp $
-#
+# Created by: Florent Thoumie <flz@xbsd.org>
+# $FreeBSD: net/grdesktop/Makefile 326137 2013-09-03 12:13:23Z bapt $
 
 PORTNAME=	grdesktop
 PORTVERSION=	0.23
@@ -18,7 +14,7 @@ COMMENT=	GNOME frontend for the remote desktop client (rdesktop)
 RUN_DEPENDS=	rdesktop:${PORTSDIR}/net/rdesktop
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_GNOME=	libgnomeui gnomeprefix gnomehack
 GCONF_SCHEMAS=	grdesktop.schemas
 INSTALLS_OMF=	yes
