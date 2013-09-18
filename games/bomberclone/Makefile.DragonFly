@@ -1,1 +1,2 @@
+CONFIGURE_ARGS+= --disable-werror
 LDFLAGS+= -lm
