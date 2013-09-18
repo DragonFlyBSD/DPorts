@@ -1,0 +1,10 @@
+--- pfe/configure.orig	2009-10-17 17:50:54.000000000 +0000
++++ pfe/configure
+@@ -20482,7 +20482,6 @@ opt_level="$WITHVAL_OPT"
+ if test "$GCC" = "yes" ; then
+    OPTIM="-O$opt_level"
+    DEBUG=" -W -Wshadow"
+-   LDFLAGS="$LDFLAGS -W,--warn-common" # -Wl,-S
+    # GCC_WARN="$GCC_WARN -Wtraditional"
+    # GCC_WARN="$GCC_WARN -Wconversion"
+ elif test ".$am_cv_CC_dependencies_compiler_type" = ".aix" ; then
