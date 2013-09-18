@@ -1,0 +1,4 @@
+post-extract:
+#	${REINPLACE_CMD} -e 's|$${wl}|Wl,|g' -e 's|Wl,--rpath|Wl,-rpath|g' \
+#		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's|Wl, --|Wl,--|g' ${WRKSRC}/src/Makefile.in
