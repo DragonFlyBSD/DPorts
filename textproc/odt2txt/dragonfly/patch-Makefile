@@ -1,0 +1,14 @@
+--- Makefile.orig	2008-06-23 19:32:28.000000000 +0000
++++ Makefile
+@@ -29,6 +29,11 @@ BINDIR  = $(PREFIX)/bin
+ MANDIR  = $(PREFIX)/share/man
+ MAN1DIR = $(MANDIR)/man1
+ 
++ifeq ($(UNAME_S),DragonFly)
++	CFLAGS += -DICONV_CHAR="char" -I/usr/local/include
++	LDFLAGS += -L/usr/local/lib
++	LIBS += -liconv
++endif
+ ifeq ($(UNAME_S),FreeBSD)
+ 	CFLAGS += -DICONV_CHAR="const char" -I/usr/local/include
+ 	LDFLAGS += -L/usr/local/lib
