@@ -1,5 +1,5 @@
 # Created by: chinsan	<chinsan@mail2000.com.tw>
-# $FreeBSD: textproc/scim-input-pad/Makefile 317494 2013-05-06 09:26:23Z bapt $
+# $FreeBSD: textproc/scim-input-pad/Makefile 327338 2013-09-15 12:27:30Z antoine $
 
 PORTNAME=	scim-input-pad
 PORTVERSION=	0.1.3.1
@@ -14,7 +14,7 @@ COMMENT=	SCIM add-on to input various symbols with customisable on-screen pad
 LIB_DEPENDS=	scim-1.0.10:${PORTSDIR}/textproc/scim
 
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
 LDFLAGS+=	-L${LOCALBASE}/lib
