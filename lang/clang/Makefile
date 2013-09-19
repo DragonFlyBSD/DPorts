@@ -1,9 +1,5 @@
-# New ports collection makefile for:	clang
-# Date created:		24 Oct 2009
-# Whom:			Brooks Davis
-#
-# $FreeBSD: lang/clang/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Brooks Davis
+# $FreeBSD: lang/clang/Makefile 327454 2013-09-17 06:51:04Z bapt $
 
 PORTNAME=	clang
 PORTVERSION=	3.2
@@ -36,9 +32,8 @@ BUILD_DEPENDS+=	runtest:${PORTSDIR}/misc/dejagnu
 .endif
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake perl5
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 USE_PYTHON=	yes
 
 MAKE_ARGS=	CLANG_TBLGEN=${WRKSRC}/${RELTYPE}/bin/clang-tblgen \
