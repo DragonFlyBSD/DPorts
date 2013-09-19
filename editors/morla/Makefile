@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/morla/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: editors/morla/Makefile 327530 2013-09-18 08:00:44Z bapt $
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gconf=auto
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GNOME=	gconf2 libgtkhtml libxslt
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 
