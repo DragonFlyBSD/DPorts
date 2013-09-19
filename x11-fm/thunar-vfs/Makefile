@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: x11-fm/thunar-vfs/Makefile 316994 2013-05-01 07:20:26Z jgh $
+# $FreeBSD: x11-fm/thunar-vfs/Makefile 327419 2013-09-16 17:07:26Z bapt $
 
 PORTNAME=	thunar-vfs
 PORTVERSION=	1.2.0
@@ -19,13 +19,11 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libutil libexo
 USE_XORG=	x11
-USES=		pkgconfig pathfix
+USES=		gmake pathfix perl5 pkgconfig
 
 CONFIGURE_ARGS=	--disable-debug
 
