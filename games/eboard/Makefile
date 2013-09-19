@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: games/eboard/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: games/eboard/Makefile 327451 2013-09-17 06:28:07Z bapt $
 
 PORTNAME=	eboard
 PORTVERSION=	1.1.1
@@ -19,10 +19,10 @@ COMMENT=	GTK+ chess board interface (mainly for FICS and chessd)
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 EXTRAS=		1pl2 2
-USES=		shebangfix pkgconfig
+USES=		shebangfix pkgconfig perl5
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_GNOME=	gtk20
 SHEBANG_FILES=	configure
 
