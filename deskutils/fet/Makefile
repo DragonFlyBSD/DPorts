@@ -1,9 +1,8 @@
 # Created by: Leinier Cruz Salfran <salfrancl@yahoo.es>
-# $FreeBSD: deskutils/fet/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/fet/Makefile 327501 2013-09-17 19:04:58Z makc $
 
 PORTNAME=	fet
-PORTVERSION=	5.18.2
-PORTREVISION=	1
+PORTVERSION=	5.19.3
 CATEGORIES=	deskutils kde
 MASTER_SITES=	http://lalescu.ro/liviu/fet/download/ \
 		http://lalescu.ro/liviu/fet/download/old/ \
@@ -50,6 +49,7 @@ do-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fet ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/fet-cl ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/fet.1 ${MANPREFIX}/man/man1
 .if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}
