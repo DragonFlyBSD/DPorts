@@ -1,7 +1,5 @@
-# ex:ts=8
-# Created by:	David O'Brien <obrien@cs.ucdavis.edu>
-# Created:	Sat June 29, 1996
-# $FreeBSD: editors/vim/Makefile 322817 2013-07-12 06:36:02Z obrien $
+# Created by: David O'Brien <obrien@cs.ucdavis.edu>
+# $FreeBSD: editors/vim/Makefile 327459 2013-09-17 09:00:42Z bapt $
 
 PORTNAME?=	vim
 #		! _NEVER_ reduce or lower PATCHLEVEL, even if the PATCHLEVEL
@@ -109,7 +107,7 @@ MAKE_ARGS+=	CONF_OPT_LUA_PREFIX="--with-lua-prefix=${LOCALBASE}"
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES=	perl5
 MAKE_ARGS+=	CONF_OPT_PERL="--enable-perlinterp"
 .endif
 
