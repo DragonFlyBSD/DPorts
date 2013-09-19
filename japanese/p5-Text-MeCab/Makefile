@@ -2,7 +2,7 @@
 # Date created:		30 July 2006
 # Whom:			TAOKA Fumiyoshi <fmysh@iijmio-mail.jp>
 #
-# $FreeBSD: ports/japanese/p5-Text-MeCab/Makefile,v 1.13 2012/11/17 05:58:38 svnexp Exp $
+# $FreeBSD: japanese/p5-Text-MeCab/Makefile 327410 2013-09-16 15:42:40Z az $
 #
 
 PORTNAME=		Text-MeCab
@@ -28,7 +28,8 @@ MAN3=			Text::MeCab.3 \
 			Text::MeCab::Dict.3 \
 			Text::MeCab::Node.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 
 # dictionary encoding (euc-jp, shift_jis, utf-8)
