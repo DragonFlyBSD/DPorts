@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: print/foomatic-filters/Makefile 319897 2013-06-04 19:05:00Z crees $
+# $FreeBSD: print/foomatic-filters/Makefile 327334 2013-09-15 08:15:41Z az $
 
 PORTNAME=	foomatic-filters
 PORTVERSION=	4.0.7
@@ -13,8 +13,8 @@ COMMENT=	Foomatic wrapper scripts
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		perl5
 USE_AUTOTOOLS=	autoheader
-USE_PERL5=	yes
 USE_GHOSTSCRIPT=yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_A2PS=${LOCALBASE}/bin/a2ps \
