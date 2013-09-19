@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: net/packter-agent/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/packter-agent/Makefile 327365 2013-09-16 06:30:31Z az $
 
 PORTNAME=	packter-agent
 PORTVERSION=	2.5
@@ -32,7 +32,8 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if ${PORT_OPTIONS:MPACKTERTC}
-USE_PERL5_RUN=	yes
+USES+=		perl5
+USE_PERL5=	run
 RUN_DEPENDS+=	p5-XML-Pastor>=0:${PORTSDIR}/devel/p5-XML-Pastor
 PLIST_SUB+=	PACKTERTC=""
 .else
