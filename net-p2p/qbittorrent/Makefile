@@ -1,20 +1,20 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-p2p/qbittorrent/Makefile 327432 2013-09-16 18:05:14Z nemysis $
 
 PORTNAME=	qbittorrent
-PORTVERSION=	3.0.10
-PORTREVISION?=	1
+PORTVERSION=	3.0.11
+PORTREVISION?=	0
 CATEGORIES=	net-p2p ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT?=	Bittorrent client using Qt4 and libtorrent-rasterbar
 
 LICENSE=	GPLv2
 
 # ABI versions specified on purpose for libtorrent-rasterbar
-LIB_DEPENDS=	torrent-rasterbar.7:${PORTSDIR}/net-p2p/libtorrent-rasterbar-16 \
-		execinfo:${PORTSDIR}/devel/libexecinfo \
+LIB_DEPENDS=	libtorrent-rasterbar.so:${PORTSDIR}/net-p2p/libtorrent-rasterbar-16 \
+		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 
 USES=		pkgconfig
 HAS_CONFIGURE=	yes
@@ -24,7 +24,7 @@ QT_NONSTANDARD=	yes
 MAN1?=		qbittorrent.1
 
 .if !defined(QB_NOX_SLAVE)
-LIB_DEPENDS+=	GeoIP:${PORTSDIR}/net/GeoIP
+LIB_DEPENDS+=	libGeoIP.so:${PORTSDIR}/net/GeoIP
 USE_QT4+=	gui xml uic_build
 INSTALLS_ICONS=	yes
 OPTIONS_DEFINE=	DBUS
