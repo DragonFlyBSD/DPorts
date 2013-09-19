@@ -2,15 +2,15 @@
 # Date created:				18 October 2009
 # Whom:					Mikolaj Golub <to.my.trociny@gmail.com>
 #
-# $FreeBSD: ports/sysutils/bsdcrashtar/Makefile,v 1.4 2012/11/17 06:01:26 svnexp Exp $
+# $FreeBSD: sysutils/bsdcrashtar/Makefile 327341 2013-09-15 13:42:07Z trociny $
 #
 
 PORTNAME=	bsdcrashtar
-PORTVERSION=	0.1.2
+PORTVERSION=	0.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	to.my.trociny@gmail.com
+MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Archive FreeBSD kernel crash files
 
 PLIST_FILES=	sbin/bsdcrashtar
