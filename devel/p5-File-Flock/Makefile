@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Flock/Makefile 327160 2013-09-13 15:41:48Z sunpoet $
+# $FreeBSD: devel/p5-File-Flock/Makefile 327488 2013-09-17 16:28:31Z sunpoet $
 
 PORTNAME=	File-Flock
-PORTVERSION=	2013.09
+PORTVERSION=	2013.11
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
