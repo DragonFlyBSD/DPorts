@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.ORG
-# $FreeBSD: x11-toolkits/wxgtk29/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: x11-toolkits/wxgtk29/Makefile 327374 2013-09-16 09:39:26Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.9.4
@@ -21,7 +21,6 @@ LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png\
 
 USES+=		iconv gmake pkgconfig
 USE_BZIP2=	yes
-USE_GCC=	any
 USE_XORG=	x11 sm xxf86vm xinerama
 USE_GL=		glu
 USE_GNOME=	gtk20
