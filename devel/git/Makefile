@@ -1,5 +1,5 @@
 # Created by: Eric Anholt
-# $FreeBSD: devel/git/Makefile 326683 2013-09-07 19:49:41Z bsam $
+# $FreeBSD: devel/git/Makefile 327376 2013-09-16 10:28:33Z az $
 
 PORTNAME=	git
 PORTVERSION=	1.8.4
@@ -195,7 +195,6 @@ MAKE_ENV+=	V=1
 MAKE_ARGS+=	prefix="${PREFIX}"
 USE_OPENSSL=	yes
 USE_RC_SUBR=	git_daemon
-WANT_PERL=	yes
 
 CONFIGURE_ARGS=	--enable-pthreads=-pthread
 
@@ -235,7 +234,7 @@ PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 MAKE_ENV+=	PERL_PATH=${PERL}
 BUILD_DEPENDS+=	p5-Error>=0:${PORTSDIR}/lang/p5-Error
 RUN_DEPENDS+=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
