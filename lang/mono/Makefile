@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: lang/mono/Makefile 324730 2013-08-14 14:59:50Z romain $
+# $FreeBSD: lang/mono/Makefile 327452 2013-09-17 06:40:21Z bapt $
 
 PORTNAME=	mono
 PORTVERSION=	3.2.1
@@ -13,9 +13,9 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
-USES=		bison pathfix gettext gmake
+USES=		bison gettext gmake pathfix perl5
 USE_GNOME=	glib20
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
