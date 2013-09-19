@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: misc/mc/Makefile 323813 2013-07-28 07:56:47Z fjoe $
+# $FreeBSD: misc/mc/Makefile 327278 2013-09-14 12:04:18Z az $
 
 PORTNAME=	mc
 PORTVERSION=	4.8.8
@@ -16,10 +16,8 @@ LIB_DEPENDS=	ssh2:${PORTSDIR}/security/libssh2
 
 CONFLICTS=	mc-light-4*
 
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		gmake perl5 pkgconfig
 USE_GNOME=	glib20
-USE_PERL5=	yes
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ZIP=${UNZIP_CMD} UNZIP=${UNZIP_CMD}
