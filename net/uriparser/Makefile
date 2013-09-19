@@ -1,8 +1,8 @@
-# Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: ports/net/uriparser/Makefile,v 1.16 2012/11/17 06:00:24 svnexp Exp $
+# Created by: Ed Schouten <ed@FreeBSD.org>
+# $FreeBSD: net/uriparser/Makefile 327337 2013-09-15 11:15:04Z ed $
 
 PORTNAME=	uriparser
-PORTVERSION=	0.7.7
+PORTVERSION=	0.7.9
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Sources/${PORTVERSION}
 
