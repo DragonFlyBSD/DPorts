@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: emulators/qemu-devel/Makefile 326423 2013-09-05 17:39:25Z nox $
+# $FreeBSD: emulators/qemu-devel/Makefile 327414 2013-09-16 16:45:35Z bapt $
 
 PORTNAME=	qemu
 PORTVERSION=	1.6.0
@@ -18,8 +18,8 @@ LIB_DEPENDS=	pixman-1:${PORTSDIR}/x11/pixman
 
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gmake pkgconfig bison
-USE_PERL5_BUILD=	yes
+USES=		gmake pkgconfig bison perl5
+USE_PERL5=	build
 USE_PYTHON_BUILD=	-2.7
 USE_GNOME+=	glib20
 PATCH_STRIP=	-p1
