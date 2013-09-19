@@ -1,6 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: editors/mousepad/Makefile 316383 2013-04-23 17:43:17Z olivierd $
-#
+# $FreeBSD: editors/mousepad/Makefile 327459 2013-09-17 09:00:42Z bapt $
 
 PORTNAME=	mousepad
 PORTVERSION=	0.3.0
@@ -14,11 +13,9 @@ COMMENT=	Simple text editor for the Xfce Desktop
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=	desktop-file-utils gettext pathfix pkgconfig
+USES=	desktop-file-utils gettext gmake pathfix pkgconfig perl5
 USE_GNOME=	glib20 gtk20 intltool intlhack gtksourceview2
 USE_XFCE=	configenv
-USE_PERL5=	yes
 
 OPTIONS_DEFINE=	DBUS
 OPTIONS_DEFAULT=	DBUS
