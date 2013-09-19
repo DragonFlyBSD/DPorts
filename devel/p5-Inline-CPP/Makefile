@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline-CPP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Inline-CPP/Makefile 327558 2013-09-18 15:22:17Z sunpoet $
 
 PORTNAME=	Inline-CPP
-PORTVERSION=	0.44
+PORTVERSION=	0.45
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,8 +12,9 @@ COMMENT=	Write Perl subroutines and classes in C++
 
 LICENSE=	ART10
 
-RUN_DEPENDS=	p5-Inline>=0.53:${PORTSDIR}/devel/p5-Inline \
+BUILD_DEPENDS=	p5-Inline>=0.53:${PORTSDIR}/devel/p5-Inline \
 		p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
@@ -23,6 +24,6 @@ MAN3=		Inline::CPP.3 \
 		Inline::CPP::grammar.3
 
 post-patch:
-	@${REINPLACE_CMD} -e 's/g++/${CXX}/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -e 's|g++|${CXX}|' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
