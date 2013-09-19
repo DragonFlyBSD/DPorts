@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-fortran
-# Date created:			Jul 24, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-fortran/Makefile,v 1.8 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-fortran/Makefile 327431 2013-09-16 18:03:35Z antoine $
 
 PORTNAME=	fortran
 PORTVERSION=	8.5.3
@@ -16,11 +11,10 @@ DISTNAME=	Pyfort-${PORTVERSION}
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	Creating extensions to the Python language with Fortran routines
 
-RUN_DEPENDS=	${PYNUMERIC}:${PORTSDIR}/math/py-numeric
+RUN_DEPENDS=	${PYNUMERIC}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Pyfort
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include <bsd.port.mk>
