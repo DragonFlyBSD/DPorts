@@ -1,5 +1,5 @@
 # Created by: xaa@stack.nl
-# $FreeBSD: games/xboard/Makefile 320822 2013-06-13 17:24:09Z johans $
+# $FreeBSD: games/xboard/Makefile 327532 2013-09-18 08:17:23Z bapt $
 
 PORTNAME=	xboard
 PORTVERSION=	4.7.1
@@ -20,7 +20,7 @@ GNUCHESS_DESC=	Install GnuChess engine
 KNIGHTCAP_DESC=	Install KnightCap engine
 PHALANX_DESC=	Install phalanx engine
 
-USES=		desktop-file-utils pkgconfig shared-mime-info
+USES=		desktop-file-utils perl5 pkgconfig shared-mime-info
 USE_XORG=	xt xpm xaw
 USE_GNOME=	librsvg2
 GNU_CONFIGURE=	yes
@@ -29,7 +29,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAN6=		xboard.6
 INFO=		xboard
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 INSTALLS_ICONS=	yes
 DATADIR=	${PREFIX}/share/games/${PORTNAME}
 
