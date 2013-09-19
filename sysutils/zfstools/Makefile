@@ -1,7 +1,7 @@
-# $FreeBSD: ports/sysutils/zfstools/Makefile,v 1.5 2013/02/04 23:45:24 svnexp Exp $
+# $FreeBSD: sysutils/zfstools/Makefile 327539 2013-09-18 11:06:27Z bdrewery $
 
 PORTNAME=	zfstools
-PORTVERSION=	0.2.2
+PORTVERSION=	0.3.0
 CATEGORIES=	sysutils ruby
 MASTER_SITES=	GH \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bdrewery
-GH_COMMIT=	924b60c
+GH_COMMIT=	05b95b5
 GH_TAGNAME=	v${DISTVERSION}
 
 USE_RUBY=	yes
