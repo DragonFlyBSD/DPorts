@@ -1,15 +1,15 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/libcmime/Makefile 324537 2013-08-10 14:49:45Z wg $
+# $FreeBSD: mail/libcmime/Makefile 327497 2013-09-17 17:55:30Z wg $
 
 PORTNAME=	libcmime
-PORTVERSION=	0.1.7
+PORTVERSION=	0.1.8
 CATEGORIES=	mail
 MASTER_SITES=	http://www.libcmime.org/files/
 
 MAINTAINER=	ast@treibsand.com
 COMMENT=	Lightweight C mime library
 
-LICENSE=	LGPL3
+LICENSE=	MIT
 
 BUILD_DEPENDS=	bison>=1.8:${PORTSDIR}/devel/bison \
 		flex>=2.5.33:${PORTSDIR}/textproc/flex
