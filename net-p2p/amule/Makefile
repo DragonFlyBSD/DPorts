@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net-p2p/amule/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: net-p2p/amule/Makefile 327521 2013-09-18 06:44:12Z bapt $
 
 PORTNAME=	amule
 PORTVERSION=	2.3.1
@@ -22,8 +22,8 @@ BUILD_DEPENDS=	${FLEX}:${PORTSDIR}/textproc/flex \
 CONFLICTS=	amule-devel-[0-9]*
 
 USE_BZIP2=	yes
-USES=		bison pkgconfig
-USE_GMAKE=	yes
+USES=		bison gmake pkgconfig perl5
+USE_PERL5=	build
 USE_WX=		2.8
 WX_CONF_ARGS=	absolute
 GNU_CONFIGURE=	yes
