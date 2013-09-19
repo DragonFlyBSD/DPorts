@@ -1,4 +1,4 @@
-# $FreeBSD: java/icedtea-web/Makefile 323136 2013-07-16 23:29:58Z jkim $
+# $FreeBSD: java/icedtea-web/Makefile 327334 2013-09-15 08:15:41Z az $
 
 PORTNAME=	icedtea-web
 PORTVERSION=	1.4
@@ -21,9 +21,9 @@ USE_JAVA=	yes
 JAVA_OS=	native
 JAVA_VENDOR=	openjdk
 JAVA_VERSION=	1.6+
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_XORG=	x11
-USES=		gmake pkgconfig shebangfix
+USES=		gmake pkgconfig shebangfix perl5
 SHEBANG_FILES=	javac.in jrunscript.in
 
 WANT_GNOME=	yes
