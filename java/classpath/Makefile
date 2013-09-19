@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: java/classpath/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: java/classpath/Makefile 327334 2013-09-15 08:15:41Z az $
 
 PORTNAME=	classpath
 PORTVERSION=	0.99
@@ -17,10 +17,9 @@ COMMENT=	A GNU project to create a free Java class library
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USES=		pkgconfig iconv
-USE_GMAKE=	yes
+USES=		gmake pkgconfig iconv perl5
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_XORG=	x11 ice xtst xaw xproto xext
 WANT_GNOME=	yes
 
