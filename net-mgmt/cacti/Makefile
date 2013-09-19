@@ -1,10 +1,10 @@
 # Created by: Vincent Tantardini <vinc@freebsd-fr.org>
-# $FreeBSD: net-mgmt/cacti/Makefile 325587 2013-08-29 12:46:55Z az $
+# $FreeBSD: net-mgmt/cacti/Makefile 327304 2013-09-14 17:06:54Z sem $
 #
 
 PORTNAME=	cacti
 PORTVERSION=	0.8.8b${PATCHLEVEL}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	http://www.cacti.net/downloads/
 DISTNAME=	${PORTNAME}-${SITEDISTVERSION}
