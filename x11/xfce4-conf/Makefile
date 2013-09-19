@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11/xfce4-conf/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: x11/xfce4-conf/Makefile 327411 2013-09-16 16:32:07Z bapt $
 
 PORTNAME=	xfce4-conf
 PORTVERSION=	4.10.0
@@ -17,13 +17,12 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_XFCE=	configenv libutil
 USE_XORG=	x11
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig perl5
 
 OPTIONS_DEFINE=		DOCS PERL NLS
 
