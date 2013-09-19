@@ -1,11 +1,12 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib12/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/glib12/Makefile 327477 2013-09-17 13:05:12Z bapt $
 
 PORTNAME=	glib
 PORTVERSION=	1.2.10
 PORTREVISION=	13
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	12
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Some useful routines of C programming (previous stable version)
