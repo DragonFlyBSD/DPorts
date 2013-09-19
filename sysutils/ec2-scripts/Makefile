@@ -1,8 +1,8 @@
 # Created by: Colin Percival
-# $FreeBSD: sysutils/ec2-scripts/Makefile 314617 2013-03-19 05:21:30Z cperciva $
+# $FreeBSD: sysutils/ec2-scripts/Makefile 327509 2013-09-18 02:59:40Z cperciva $
 
 PORTNAME=	ec2-scripts
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freebsd-ec2-dist.s3.amazonaws.com/
 EXTRACT_SUFX=	.tgz
