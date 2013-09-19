@@ -1,4 +1,4 @@
-# $FreeBSD: print/ghostscript9/Makefile 323630 2013-07-25 09:25:16Z hrs $
+# $FreeBSD: print/ghostscript9/Makefile 327519 2013-09-18 06:35:24Z hrs $
 
 PORTNAME=	ghostscript
 PORTVERSION=	9.06
@@ -37,7 +37,7 @@ CONFLICTS_INSTALL= \
 		ghostscript9-agpl-[0-9]* \
 		ghostscript9-agpl-nox11-[0-9]*
 
-USES=		gmake
+USES=		gmake pkgconfig:build
 USE_BZIP2=	yes
 WANT_GNOME=	yes
 USE_LDCONFIG=	yes
