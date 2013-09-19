@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 326745 2013-09-08 15:28:15Z dinoex $
+# $FreeBSD: graphics/graphviz/Makefile 327419 2013-09-16 17:07:26Z bapt $
 
 PORTNAME=	graphviz
 PORTVERSION=	2.34.0
@@ -334,7 +334,7 @@ CONFIGURE_ENV+=		SWIG="/nonexistent"
 .if ${PORT_OPTIONS:MPERL}
 CONFIGURE_ARGS+=	--enable-perl
 PLIST_SUB+=		WITH_PERL=""
-USE_PERL5=	yes
+USES+=			perl5
 MAN3+=			gv.3perl
 .else
 CONFIGURE_ARGS+=	--disable-perl
