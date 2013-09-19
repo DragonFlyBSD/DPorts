@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: audio/gnormalize/Makefile 317573 2013-05-07 06:31:06Z bapt $
+# $FreeBSD: audio/gnormalize/Makefile 327419 2013-09-16 17:07:26Z bapt $
 
 PORTNAME=	gnormalize
 PORTVERSION=	0.63
@@ -13,8 +13,8 @@ COMMENT=	An alternative for replaygain
 RUN_DEPENDS+=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		wavegain:${PORTSDIR}/audio/wavegain
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		perl5 shebangfix
+USE_PERL5=	run
 INSTALLS_ICONS=	yes
 
 SHEBANGFILES=	${PORTNAME}
