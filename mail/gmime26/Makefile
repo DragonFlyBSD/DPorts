@@ -1,8 +1,8 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime26/Makefile 326162 2013-09-03 15:59:29Z wg $
+# $FreeBSD: mail/gmime26/Makefile 327505 2013-09-17 22:23:13Z wg $
 
 PORTNAME=	gmime
-PORTVERSION=	2.6.17
+PORTVERSION=	2.6.18
 PORTREVISION?=	0
 CATEGORIES?=	mail
 MASTER_SITES=	GNOME
@@ -12,8 +12,6 @@ MAINTAINER?=	ahicks@p-o.co.uk
 COMMENT?=	Library (written in C) for parsing and creating messages using MIME
 
 LICENSE=	LGPL21
-
-CONFLICTS=	gmime-1.0.*
 
 SLAVEDIRS=	mail/gmime26-sharp
 
