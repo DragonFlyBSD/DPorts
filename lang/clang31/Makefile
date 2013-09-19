@@ -1,9 +1,5 @@
-# New ports collection makefile for:	clang
-# Date created:		24 Oct 2009
-# Whom:			Brooks Davis
-#
-# $FreeBSD: lang/clang31/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Brooks Davis
+# $FreeBSD: lang/clang31/Makefile 327454 2013-09-17 06:51:04Z bapt $
 
 PORTNAME=	clang31
 PORTVERSION=	3.1
@@ -38,10 +34,9 @@ BUILD_DEPENDS+=	f2c:${PORTSDIR}/lang/f2c
 .endif
 
 GNU_CONFIGURE=	yes
+USES=		gmake perl5
 USE_GCC=	4.2+
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 USE_PYTHON=	yes
 
 MAKE_ARGS=	CLANG_TBLGEN=${WRKSRC}/${RELTYPE}/bin/clang-tblgen \
