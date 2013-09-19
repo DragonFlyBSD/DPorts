@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: www/xombrero/Makefile 320968 2013-06-14 22:18:25Z zeising $
+# $FreeBSD: www/xombrero/Makefile 327283 2013-09-14 13:38:20Z az $
 
 PORTNAME=	xombrero
 PORTVERSION=	1.6.0
@@ -15,8 +15,8 @@ LICENSE=	ISCL
 LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 		soup-2.4:${PORTSDIR}/devel/libsoup
 
-USES=		pkgconfig
-USE_PERL5_BUILD=yes
+USES=		pkgconfig perl5
+USE_PERL5=	build
 INSTALLS_ICONS=	yes
 
 MAN1=		xombrero.1
