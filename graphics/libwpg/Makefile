@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libwpg/Makefile 318637 2013-05-21 02:35:34Z fluffy $
+# $FreeBSD: graphics/libwpg/Makefile 327419 2013-09-16 17:07:26Z bapt $
 
 PORTNAME=	libwpg
 PORTVERSION=	0.2.2
@@ -14,10 +14,9 @@ LICENSE_COMB=	dual
 LIB_DEPENDS=	wpd-0.9:${PORTSDIR}/textproc/libwpd
 
 USE_AUTOTOOLS=	libtool
-USES=		pkgconfig
+USES=		pkgconfig perl5
 USE_GNOME=	gnomeprefix gnomehack ltverhack
 USE_BZIP2=	yes
-USE_PERL5=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-werror
 
