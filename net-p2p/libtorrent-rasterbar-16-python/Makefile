@@ -1,13 +1,13 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-rasterbar-16-python/Makefile 325006 2013-08-19 16:41:05Z nemysis $
+# $FreeBSD: net-p2p/libtorrent-rasterbar-16-python/Makefile 327554 2013-09-18 15:05:23Z nemysis $
 
 CATEGORIES=	net-p2p python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 COMMENT=	Python bindings for libtorrent-rasterbar-16
 
-LIB_DEPENDS=	torrent-rasterbar:${PORTSDIR}/net-p2p/libtorrent-rasterbar-16 \
-		boost_python:${PORTSDIR}/devel/boost-python-libs
+LIB_DEPENDS=	libtorrent-rasterbar.so:${PORTSDIR}/net-p2p/libtorrent-rasterbar-16 \
+		libboost_python.so:${PORTSDIR}/devel/boost-python-libs
 
 MASTERDIR=	${.CURDIR}/../libtorrent-rasterbar-16
 
