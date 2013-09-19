@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: math/R/Makefile 326303 2013-09-04 17:39:25Z antoine $
+# $FreeBSD: math/R/Makefile 327411 2013-09-16 16:32:07Z bapt $
 
 PORTNAME?=	R
 PORTVERSION=	3.0.1
@@ -66,7 +66,8 @@ OPTIONS_DEFAULT+=	ICU PCRE_PORT THREADS
 RUN_DEPENDS+=		${LOCALBASE}/bin/gsed:${PORTSDIR}/textproc/gsed
 USE_LDCONFIG=		${PREFIX}/lib/R/lib
 #now only used to build the R.1 manpage:
-USE_PERL5_BUILD=	yes
+USES+=			perl5
+USE_PERL5=		build
 
 MAN1=			R.1 Rscript.1
 
