@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: ports/www/igal2/Makefile,v 1.6 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/igal2/Makefile 327283 2013-09-14 13:38:20Z az $
 
 PORTNAME=	igal2
 PORTVERSION=	2.1
@@ -15,7 +15,7 @@ OPTIONS_DEFINE=	EXIF
 EXIF_DESC=	Support EXIF data (-e option)
 
 CONFLICTS=	igal-1.*
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MAN1=		igal2.1
