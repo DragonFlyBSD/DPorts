@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: x11/kdelibs4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/kdelibs4/Makefile 327411 2013-09-16 16:32:07Z bapt $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_VERSION}
@@ -42,9 +42,8 @@ USE_FAM=	yes
 USE_GNOME=	libxml2 libxslt
 USE_KDE4=	kdehier kdeprefix oxygen \
 		attica automoc4 ontologies sharedmime soprano strigi
-USES=		cmake:outsource gettext
+USES=		cmake:outsource gettext perl5
 USE_OPENSSL=	yes
-USE_PERL5=	yes
 USE_QT4=	corelib dbus declarative designer_build gui \
 		network opengl phonon qt3support \
 		qtestlib script sql svg webkit xml \
