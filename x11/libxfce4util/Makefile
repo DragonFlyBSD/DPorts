@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11/libxfce4util/Makefile 317669 2013-05-08 14:59:29Z olivierd $
+# $FreeBSD: x11/libxfce4util/Makefile 327411 2013-09-16 16:32:07Z bapt $
 
 PORTNAME=	libxfce4util
 PORTVERSION=	4.10.1
@@ -13,12 +13,10 @@ COMMENT=	Extension library for the Xfce desktop environment
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20 intltool intlhack
-USE_PERL5=	yes
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv
-USES=		pathfix pkgconfig
+USES=		gmake pathfix perl5 pkgconfig
 
 OPTIONS_DEFINE=		NLS DOCS
 
