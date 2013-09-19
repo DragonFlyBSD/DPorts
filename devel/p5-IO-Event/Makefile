@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Event/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-IO-Event/Makefile 327555 2013-09-18 15:22:04Z sunpoet $
 
 PORTNAME=	IO-Event
-PORTVERSION=	0.812
+PORTVERSION=	0.813
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
