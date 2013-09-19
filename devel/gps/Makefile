@@ -1,11 +1,12 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/gps/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: devel/gps/Makefile 327402 2013-09-16 14:18:21Z bapt $
 
 PORTNAME=	gps
 PORTVERSION=	5.2.1
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTNAME=	gps-5.2.1-1-src
+PKGNAMESUFFIX=	-ide
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	marino@FreeBSD.org
@@ -16,8 +17,6 @@ BUILD_DEPENDS=	gtkada>=2.24:${PORTSDIR}/x11-toolkits/gtkada \
 		gprbuild>=20120510:${PORTSDIR}/devel/gprbuild \
 		sphinx-build:${PORTSDIR}/textproc/py-sphinx
 LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp
-
-LATEST_LINK=		gps-ide
 
 GNU_CONFIGURE=		yes
 USE_BZIP2=		yes
