@@ -2,7 +2,7 @@
 # Date created:				18 Dec 2005
 # Whom:					Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: japanese/tomoe/Makefile 326183 2013-09-03 17:15:08Z antoine $
+# $FreeBSD: japanese/tomoe/Makefile 327410 2013-09-16 15:42:40Z az $
 #
 
 PORTNAME=	tomoe
@@ -18,11 +18,10 @@ COMMENT=	Tegaki Online MOji-ninshiki Engine
 
 USE_GNOME=	lthack gnomehack
 GNU_CONFIGURE=	yes
-USES=		gettext pkgconfig
-USE_GMAKE=	yes
+USES=		gettext pkgconfig gmake perl5
 USE_LDCONFIG=	yes
 USE_RUBY=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 
 BUILD_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/glib2.so:${PORTSDIR}/devel/ruby-glib2 \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
