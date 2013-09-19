@@ -1,8 +1,9 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: sysutils/sg3_utils/Makefile 319923 2013-06-04 22:08:43Z delphij $
+# $FreeBSD: sysutils/sg3_utils/Makefile 327507 2013-09-17 22:48:50Z delphij $
 
 PORTNAME=	sg3_utils
 PORTVERSION=	1.36
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://sg.danny.cz/sg/p/
 EXTRACT_SUFX=	.tgz
