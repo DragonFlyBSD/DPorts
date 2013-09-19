@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/lasso/Makefile 326013 2013-09-02 15:39:17Z bapt $
+# $FreeBSD: security/lasso/Makefile 327414 2013-09-16 16:45:35Z bapt $
 
 PORTNAME=	lasso
 PORTVERSION=	2.1.1
@@ -28,7 +28,7 @@ OPTIONS_DEFINE=	PERL PHP PYTHON
 .if !empty(PORT_OPTIONS:MPERL)
 CONFIGURE_ARGS+=	--enable-perl
 PLIST_SUB+=	WITH_PERL=""
-USE_PERL5=	yes
+USES+=		perl5
 .else
 CONFIGURE_ARGS+=	--disable-perl
 PLIST_SUB+=	WITH_PERL="@comment "
