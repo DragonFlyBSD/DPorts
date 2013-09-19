@@ -1,14 +1,17 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/ffmpeg/Makefile 327343 2013-09-15 14:54:36Z az $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.7.15
 PORTEPOCH=	1
+PORTREVISION=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Realtime audio/video encoder/converter and streaming server
+
+CONFLICTS=	libav-[0-9]*
 
 LICENSE=		GPLv2 LGPL21
 LICENSE_COMB=		multi
@@ -21,11 +24,10 @@ BUILD_DEPENDS=	yasm:${PORTSDIR}/devel/yasm \
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	config.err
-USES=		pkgconfig
+USES=		gmake perl5 pkgconfig
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 WANT_SDL=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 
 OPTIONS_DEFINE=	AACPLUS ALSA AMR_NB AMR_WB CELT DEBUG DIRAC FAAC \
 		FFSERVER FREETYPE FREI0R GSM LAME OPENCV OPENJPEG \
