@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/rescue/files/rescue.in,v 1.2 2012/11/17 05:57:51 svnexp Exp $
+# $FreeBSD: games/rescue/files/rescue.in 305790 2012-10-12 17:26:26Z pawel $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
