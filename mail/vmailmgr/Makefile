@@ -1,5 +1,5 @@
 # Created by: Mij <mij@bitchx.it>
-# $FreeBSD: mail/vmailmgr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/vmailmgr/Makefile 327311 2013-09-14 18:12:50Z az $
 
 PORTNAME=	vmailmgr
 PORTVERSION=	0.97
@@ -20,10 +20,10 @@ MAN7=	vmailmgr.7
 MAN8=	vmailmgrd.8
 
 # get python paths (PYTHON_SITELIBDIR) in case we install the python API
-USE_GMAKE=			yes
+USES=			gmake perl5
 USE_AUTOTOOLS=		autoconf autoheader automake aclocal
-USE_PYTHON=			yes
-USE_PERL5_BUILD=	yes
+USE_PYTHON=		yes
+USE_PERL5=		build
 AUTOMAKE_ARGS+=		--add-missing -Wno-portability
 
 OPTIONS_DEFINE=		PYTHONLIBS
