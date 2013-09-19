@@ -22,8 +22,6 @@ USE_XORG=	x11
 USE_QT4=	qmake_build uic_build moc_build rcc_build \
 		corelib svg xml opengl network
 
-QMAKEFLAGS+=	QMAKE_LFLAGS="-L${LOCALBASE}/lib -lX11"
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/games/jag|${DATADIR}|' \
 		${WRKSRC}/main.cpp ${WRKSRC}/Game.pro
