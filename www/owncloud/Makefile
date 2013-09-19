@@ -1,8 +1,7 @@
-# $FreeBSD: www/owncloud/Makefile 324752 2013-08-15 06:19:57Z kevlo $
+# $FreeBSD: www/owncloud/Makefile 327466 2013-09-17 09:37:49Z kevlo $
 
 PORTNAME=	owncloud
-PORTVERSION=	5.0.10
-PORTREVISION=	1
+PORTVERSION=	5.0.11
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 
