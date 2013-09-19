@@ -1,8 +1,8 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: dns/opendnssec/Makefile 322168 2013-07-02 13:12:23Z wg $
+# $FreeBSD: dns/opendnssec/Makefile 327451 2013-09-17 06:28:07Z bapt $
 
 PORTNAME=	opendnssec
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	dns
 MASTER_SITES=	http://dist.opendnssec.org/source/
 
@@ -15,7 +15,7 @@ LIB_DEPENDS=	ldns:${PORTSDIR}/dns/ldns
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	opendnssec
 USE_GNOME=	libxml2
-USE_PERL5=	yes
+USES=		perl5
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
