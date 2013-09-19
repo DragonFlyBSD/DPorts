@@ -1,8 +1,8 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: www/uwsgi/Makefile 325583 2013-08-29 11:10:05Z demon $
+# $FreeBSD: www/uwsgi/Makefile 327494 2013-09-17 17:24:43Z demon $
 
 PORTNAME=	uwsgi
-PORTVERSION=	1.9.15
+PORTVERSION=	1.9.16
 CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
 
@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_PYTHON=	yes
 USE_RC_SUBR=	uwsgi
+
+LDFLAGS+=	"-L${LOCALBASE}/lib"
 
 PLIST_FILES=	bin/uwsgi \
 		%%PYTHON_SITELIBDIR%%/uwsgidecorators.py
