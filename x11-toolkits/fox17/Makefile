@@ -1,8 +1,8 @@
 # Created by: gahr
-# $FreeBSD: x11-toolkits/fox17/Makefile 326850 2013-09-09 22:49:20Z mm $
+# $FreeBSD: x11-toolkits/fox17/Makefile 327565 2013-09-18 16:01:48Z gahr $
 
 PORTNAME=	fox
-PORTVERSION=	1.7.41
+PORTVERSION=	1.7.42
 PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://ftp.fox-toolkit.org/pub/ \
