@@ -1,9 +1,5 @@
-# New ports collection makefile for:	 latex2html
-# Date created:		3 May 1998
-# Whom:			brett@peloton.physics.montana.edu
-#
-# $FreeBSD: textproc/latex2html/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: brett@peloton.physics.montana.edu
+# $FreeBSD: textproc/latex2html/Makefile 327454 2013-09-17 06:51:04Z bapt $
 
 PORTNAME=	latex2html
 PORTVERSION=	2008
@@ -21,7 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	ja-latex2html-[0-9]*
 
-USE_PERL5=		yes
+USES=			perl5
 USE_GHOSTSCRIPT=	yes
 USE_TEX=		latex dvipsk
 GNU_CONFIGURE=		yes
