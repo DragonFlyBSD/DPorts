@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: x11/fluxbg/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: x11/fluxbg/Makefile 327564 2013-09-18 15:58:10Z jgh $
 
 PORTNAME=	fluxbg
 PORTVERSION=	0.7
@@ -7,25 +7,25 @@ PORTREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Background changer for fluxbox/blackbox
 
-LIB_DEPENDS=	gtkmm-2.0:${PORTSDIR}/x11-toolkits/gtkmm20
+LIB_DEPENDS=	libgtkmm-2.0.so:${PORTSDIR}/x11-toolkits/gtkmm20
+RUN_DEPENDS=	fbsetbg:${PORTSDIR}/x11-wm/fluxbox
 
 GNU_CONFIGURE=	yes
-USES=	pathfix pkgconfig
-
-.include <bsd.port.pre.mk>
-
-.if !exists(${LOCALBASE}/bin/fbsetbg)
-RUN_DEPENDS=	fbsetbg:${PORTSDIR}/x11-wm/fluxbox
-.endif
+USES=		pathfix pkgconfig
+PLIST_FILES=	bin/fluxbg \
+		bin/fluxbgd \
+		bin/fluxbg_conf
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|/usr/X11R6|${LOCALBASE}|g' ${WRKSRC}/src/fluxbg_conf.cc
 
 post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${ECHO_CMD}
+	@${ECHO_MSG} "Execution of ${PREFIX}/bin/${PORTNAME}_conf is a prerequisite of running ${PORTNAME}!"
+	@${ECHO_CMD}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
