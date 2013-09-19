@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net/silc-client/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/silc-client/Makefile 327343 2013-09-15 14:54:36Z az $
 
 PORTNAME=	silc
 PORTVERSION=	1.1.8
@@ -23,12 +23,10 @@ CONFLICTS=	silc-toolkit-1.1.* silc-irssi-plugin-1.1.*
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 		--without-libtoolfix
-WANT_PERL=	yes
 
 OPTIONS_DEFINE=	PTHREADS IPV6 ICONV PERL
 OPTIONS_DEFINE_i386=	ASM
@@ -94,7 +92,7 @@ CONFIGURE_ARGS+=	--without-iconv
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=		yes
+USES+=			perl5
 .  if exists(${LOCALBASE}/bin/perl)
 PERL_ARCHNAME!=		perl -V:archname 2>/dev/null || ${ECHO_CMD}
 PLIST_SUB+=		WITH_PERL="" PERL_ARCHNAME="${PERL_ARCHNAME:S/archname='//:S/';//}"
