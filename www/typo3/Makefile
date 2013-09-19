@@ -1,8 +1,8 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo3/Makefile 324294 2013-08-05 21:56:56Z ohauer $
+# $FreeBSD: www/typo3/Makefile 327285 2013-09-14 14:10:37Z sunpoet $
 
 PORTNAME=	typo3
-PORTVERSION=	6.1.3
+PORTVERSION=	6.1.5
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/TYPO3%20Source%20and%20Dummy/TYPO3%20${PORTVERSION}
 
