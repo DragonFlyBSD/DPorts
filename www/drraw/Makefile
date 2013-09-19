@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: www/drraw/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/drraw/Makefile 327283 2013-09-14 13:38:20Z az $
 
 PORTNAME=	drraw
 DISTVERSION=	2.2b2
@@ -16,7 +16,8 @@ RUN_DEPENDS+=	rrdtool>=0:${PORTSDIR}/databases/rrdtool
 OPTIONS_DEFINE=	ZOOM_PATCH
 ZOOM_PATCH_DESC=	Zoom support using jQuery via external patch
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 PORTDOCS=	CHANGES INSTALL LICENSE README.EVENTS
