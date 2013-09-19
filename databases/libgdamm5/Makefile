@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: databases/libgdamm5/Makefile 326490 2013-09-06 11:43:34Z kwm $
+# $FreeBSD: databases/libgdamm5/Makefile 327326 2013-09-15 03:48:52Z bland $
 #   $MCom: ports/trunk/databases/libgdamm5/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgdamm
@@ -12,6 +12,8 @@ MAINTAINER=	bland@FreeBSD.org
 COMMENT=	C++ wrapper for libgda5 library
 
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
+
+LATEST_LINK=	libgdamm5
 
 USE_AUTOTOOLS=	libtool
 USE_XZ=		yes
