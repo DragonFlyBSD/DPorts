@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gitolite2/Makefile 316472 2013-04-24 19:19:25Z swills $
+# $FreeBSD: devel/gitolite2/Makefile 327371 2013-09-16 08:39:20Z az $
 
 PORTNAME=	gitolite
 PORTVERSION=	2.3.1
@@ -16,7 +16,7 @@ RUN_DEPENDS=	git>=0:${PORTSDIR}/devel/git
 LATEST_LINK=	gitolite2
 CONFLICTS=	gitolite-[^2]*
 
-USE_PERL5=	yes
+USES=		perl5
 
 SUB_FILES=	pkg-message
 
