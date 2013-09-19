@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libalkimia
-# Date created:				2011-02-28
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: finance/libalkimia/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Jason E. Hale <bsdkaffee@gmail.com>
+# $FreeBSD: finance/libalkimia/Makefile 327530 2013-09-18 08:00:44Z bapt $
 
 PORTNAME=	libalkimia
 PORTVERSION=	4.3.2
@@ -20,7 +16,7 @@ LICENSE=	LGPL21
 LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake pkgconfig
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
