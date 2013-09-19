@@ -1,8 +1,8 @@
 # Created by: Olli Hauer <ohauer@FreeBSD.org>
-# $FreeBSD: sysutils/monitorix/Makefile 319893 2013-06-04 18:52:55Z crees $
+# $FreeBSD: sysutils/monitorix/Makefile 327503 2013-09-17 20:56:33Z crees $
 
 PORTNAME=	monitorix
-PORTVERSION=	3.2.1
+PORTVERSION=	3.3.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.monitorix.org/ \
 		http://www.monitorix.org/old_versions/ \
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-ParallelUA>=0:${PORTSDIR}/www/p5-ParallelUA \
 		p5-HTTP-Server-Simple>=0:${PORTSDIR}/www/p5-HTTP-Server-Simple \
 		p5-Config-General>=0:${PORTSDIR}/devel/p5-Config-General
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 MAN5=		monitorix.conf.5
 MAN8=		monitorix.8
 MANCOMPRESSED=	no
