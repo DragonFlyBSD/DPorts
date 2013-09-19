@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/cbview/Makefile,v 1.18 2012/12/31 17:09:08 svnexp Exp $
+# $FreeBSD: graphics/cbview/Makefile 327419 2013-09-16 17:07:26Z bapt $
 
 PORTNAME=	cbview
 PORTVERSION=	0.06
@@ -17,7 +17,7 @@ RUN_DEPENDS=	unrar:${PORTSDIR}/archivers/unrar \
 		p5-String-ShellQuote>=0:${PORTSDIR}/textproc/p5-String-ShellQuote
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST_FILES=	bin/${PORTNAME}
 
