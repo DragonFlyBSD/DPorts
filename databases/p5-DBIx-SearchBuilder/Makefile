@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: databases/p5-DBIx-SearchBuilder/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-DBIx-SearchBuilder/Makefile 327379 2013-09-16 10:53:08Z demon $
 
 PORTNAME=	DBIx-SearchBuilder
-PORTVERSION=	1.63
+PORTVERSION=	1.65
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -38,6 +38,7 @@ MAN3=	DBIx::SearchBuilder.3 DBIx::SearchBuilder::Handle.3 \
 	DBIx::SearchBuilder::Record::Cachable.3 \
 	DBIx::SearchBuilder::SchemaGenerator.3 \
 	DBIx::SearchBuilder::Union.3 \
-	DBIx::SearchBuilder::Unique.3
+	DBIx::SearchBuilder::Unique.3 \
+	DBIx::SearchBuilder::Util.3
 
 .include <bsd.port.mk>
