@@ -1,8 +1,8 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/wireshark/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/wireshark/Makefile 327343 2013-09-15 14:54:36Z az $
 
 PORTNAME?=	wireshark
-PORTVERSION=	1.10.1
+PORTVERSION=	1.10.2
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
 		http://ftp.uni-kl.de/pub/wireshark/src/ \
@@ -19,11 +19,10 @@ COMMENT?=	Powerful network analyzer/capture tool
 
 DATADIR_NAME=	wireshark
 
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_PYTHON_BUILD=yes
-USES=		iconv gettext pkgconfig
+USES=		iconv gettext pkgconfig gmake perl5
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 WANT_GNOME=	yes
 USE_OPENSSL=	yes
 CONFIGURE_ENV=	LIBS="${WIRESHARK_LIBS}"
