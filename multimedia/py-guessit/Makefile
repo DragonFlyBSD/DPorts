@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-guessit/Makefile 323112 2013-07-16 15:40:48Z wg $
+# $FreeBSD: multimedia/py-guessit/Makefile 327549 2013-09-18 14:38:15Z wg $
 
 PORTNAME=	guessit
-PORTVERSION=	0.6
+PORTVERSION=	0.6.1
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
