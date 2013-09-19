@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/net/freeradius2/files/pkg-install.in,v 1.7 2012/11/17 06:00:00 svnexp Exp $
+# $FreeBSD: net/freeradius2/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
 
 PATH=/usr/sbin:/usr/bin:/bin ; export PATH
 

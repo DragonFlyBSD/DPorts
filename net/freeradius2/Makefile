@@ -2,7 +2,7 @@
 # Date created:         May 9 2002
 # Whom:                 Brian Somers <brian@FreeBSD.org>
 #
-# $FreeBSD: ports/net/freeradius2/Makefile,v 1.112 2012/12/19 17:56:02 svnexp Exp $
+# $FreeBSD: net/freeradius2/Makefile 327343 2013-09-15 14:54:36Z az $
 #
 # $Id$
 #
@@ -33,8 +33,9 @@ CONFLICTS=	gnu-radius-[0-9].* openradius-[0-9].* radiusd-cistron-[0-9].* \
 		freeradius-mysql-[0-9].* freeradius-[013-9].*
 
 USE_RC_SUBR=	radiusd
+
+USES=		gmake
 USE_AUTOTOOLS=	libltdl libtool autoconf
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_OPENSSL=	yes
 MAKE_ARGS+=	LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
@@ -176,7 +177,7 @@ EXPM=		yes
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=--with-rlm_perl
 PLIST_SUB+=	RLMPERL=""
 .else
