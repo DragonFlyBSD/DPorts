@@ -1,8 +1,8 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: devel/pecl-APCu/Makefile 317992 2013-05-13 02:29:11Z miwi $
+# $FreeBSD: devel/pecl-APCu/Makefile 327351 2013-09-15 18:26:43Z sunpoet $
 
 PORTNAME=	APCu
-PORTVERSION=	4.0.1
+PORTVERSION=	4.0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
