@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: textproc/uim/Makefile 326222 2013-09-03 19:57:19Z antoine $
+# $FreeBSD: textproc/uim/Makefile 327454 2013-09-17 06:51:04Z bapt $
 
 PORTNAME=	uim
 PORTVERSION=	1.8.5
@@ -17,8 +17,8 @@ USE_LDCONFIG=	yes
 WANT_GNOME=	yes
 USE_GNOME+=	glib20 intltool
 USE_AUTOTOOLS=	libtool
-USES=		gettext gmake iconv pkgconfig
-USE_PERL5_BUILD=yes
+USES=		gettext gmake iconv pkgconfig perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 
 .if !defined(WITHOUT_X11)
