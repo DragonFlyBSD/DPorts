@@ -1,9 +1,8 @@
-# Created by:	Rong-En Fan <rafan@infor.org>
-#
-# $FreeBSD: converters/p5-Encode/Makefile 324007 2013-07-31 06:54:09Z az $
+# Created by: Rong-En Fan <rafan@infor.org>
+# $FreeBSD: converters/p5-Encode/Makefile 327362 2013-09-16 02:43:52Z rafan $
 
 PORTNAME=	Encode
-PORTVERSION=	2.49
+PORTVERSION=	2.55
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DANKOGAI
@@ -15,8 +14,8 @@ COMMENT=	Provides interfaces between strings and the rest of the system
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-USES=	perl5
-USE_PERL5=	patch configure
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Encode.3 \
 		Encode::Alias.3 \
@@ -38,11 +37,7 @@ MAN3=		Encode.3 \
 		encoding.3
 
 post-patch:
-	${PERL} -pi -e '$$_="" if $$.>=24 && $$.<=26; $$_="my \@exe_files=();\n" if $$.==25' ${WRKSRC}/Makefile.PL
-
-post-configure:
-	@${FIND} ${WRKSRC}/ -name Makefile -exec \
-		${REINPLACE_CMD} -e 's,^CC =,CC ?=,' {} \;
+	@${REINPLACE_CMD} -e 's|bin/enc2xs||; s|bin/piconv||' ${WRKSRC}/Makefile.PL
 
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
