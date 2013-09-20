@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: textproc/p5-Text-VimColor/Makefile 320162 2013-06-07 07:27:14Z az $
+# $FreeBSD: textproc/p5-Text-VimColor/Makefile 327454 2013-09-17 06:51:04Z bapt $
 
 PORTNAME=	Text-VimColor
 PORTVERSION=	0.14
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-File-ShareDir>=0:${PORTSDIR}/devel/p5-File-ShareDir \
 		p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 		${LOCALBASE}/bin/vim:${PORTSDIR}/editors/vim
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		text-vimcolor.1
 MAN3=		Text::VimColor.3
