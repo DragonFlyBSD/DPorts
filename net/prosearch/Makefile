@@ -1,4 +1,4 @@
-# $FreeBSD: net/prosearch/Makefile 320053 2013-06-06 06:05:22Z bapt $
+# $FreeBSD: net/prosearch/Makefile 327365 2013-09-16 06:30:31Z az $
 
 PORTNAME=	prosearch
 PORTVERSION=	0.19.2
@@ -9,8 +9,9 @@ MASTER_SITES=	http://pro.setun.net/search/download/ SF/pro-search/pro-search/${P
 MAINTAINER=	proler@gmail.com
 COMMENT=	Powerful file search
 
+USES=		perl5
+USE_PERL5=	run
 USE_BZIP2=	yes
-WANT_PERL=	yes
 SUB_FILES=	pkg-message
 SUB_LIST=	SEARCHDIR=${SEARCHDIR}
 NO_BUILD=	yes
@@ -18,8 +19,6 @@ SEARCHDIR?=	www/search
 PLIST_SUB+=	SEARCHDIR=${SEARCHDIR}
 
 SAMBA_PORT?=	net/samba36
-
-USE_PERL5_RUN=	YES
 
 #todo
 # user and group for crawler, nginx
