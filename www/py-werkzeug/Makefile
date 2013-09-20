@@ -1,9 +1,9 @@
 # Created by: Moggie <moggie@elasticmind.net>
-# $FreeBSD: www/py-werkzeug/Makefile 323984 2013-07-30 19:27:24Z olivierd $
+# $FreeBSD: www/py-werkzeug/Makefile 327369 2013-09-16 07:36:43Z olivierd $
 #
 
 PORTNAME=	werkzeug
-PORTVERSION=	0.9.3
+PORTVERSION=	0.9.4
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
