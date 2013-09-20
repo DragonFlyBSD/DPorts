@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Random/Makefile 327288 2013-09-14 14:10:50Z sunpoet $
 
 PORTNAME=	Data-Random
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,7 +16,7 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-YAML-Tiny>=0:${PORTSDIR}/textproc/p5-YAML-Tiny
 
 OPTIONS_DEFINE=	DATE_CALC GD
-OPTIONS_DEFAULT=	DATE_CALC
+OPTIONS_DEFAULT=DATE_CALC
 DATE_CALC_DESC=	Support for rand_date()
 GD_DESC=	Support for rand_image()
 
