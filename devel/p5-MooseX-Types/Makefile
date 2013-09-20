@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types/Makefile 326782 2013-09-09 08:01:28Z tobez $
+# $FreeBSD: devel/p5-MooseX-Types/Makefile 327485 2013-09-17 16:28:18Z sunpoet $
 
 PORTNAME=	MooseX-Types
-PORTVERSION=	0.37
+PORTVERSION=	0.38
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ETHER
