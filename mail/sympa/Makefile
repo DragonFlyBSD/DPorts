@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: mail/sympa/Makefile 319862 2013-06-04 14:17:16Z bapt $
+# $FreeBSD: mail/sympa/Makefile 327311 2013-09-14 18:12:50Z az $
 
 PORTNAME=	sympa
 PORTVERSION=	6.1.17
@@ -42,8 +42,8 @@ PORTSCOUT=	limit:^[0-9]+(\.[0-9]+)*$$
 
 USERS=		sympa
 GROUPS=		sympa
+USES=		perl5
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 ICONSDIR?=	www/icons
 CONFIGURE_ARGS+=--bindir=${PREFIX}/libexec/${PORTNAME}	\
 		--libexecdir=${PREFIX}/libexec/${PORTNAME} \
