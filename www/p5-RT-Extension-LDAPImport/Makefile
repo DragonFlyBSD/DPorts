@@ -1,8 +1,8 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 324134 2013-08-01 22:04:01Z matthew $
+# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 327314 2013-09-14 19:43:27Z matthew $
 
 PORTNAME=	RT-Extension-LDAPImport
-PORTVERSION=	0.34
+PORTVERSION=	0.35
 CATEGORIES=	www net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
