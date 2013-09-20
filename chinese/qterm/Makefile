@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/qterm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: chinese/qterm/Makefile 327334 2013-09-15 08:15:41Z az $
 
 PORTNAME=	qterm
 PORTVERSION=	0.5.12
@@ -10,8 +10,8 @@ MAINTAINER=	kaiwang27@gmail.com
 COMMENT=	BBS client for BSD/Linux
 
 USE_BZIP2=	yes
-USES=		cmake
-USE_PERL5_BUILD=	yes
+USES=		cmake perl5
+USE_PERL5=	build
 USE_QT4=	codecs-cn_run codecs-tw_run gui help-tools_build \
 		linguist_build moc_build network qt3support_build \
 		qmake_build rcc_build uic_build xml
