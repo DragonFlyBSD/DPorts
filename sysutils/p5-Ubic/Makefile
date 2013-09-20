@@ -2,7 +2,7 @@
 # Date created:		21 Sep 2011
 # Whom:			Dmitry Yashin <dmitry@yashin.su>
 #
-# $FreeBSD: ports/sysutils/p5-Ubic/Makefile,v 1.6 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Ubic/Makefile 327368 2013-09-16 07:29:08Z az $
 #
 
 PORTNAME=	Ubic
@@ -29,7 +29,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Class>=0:${PORTSDIR}/devel/p5-Test-Class \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 REINPLACE_ARGS=	-i ''
 
 MAN1=		ubic.1 \
