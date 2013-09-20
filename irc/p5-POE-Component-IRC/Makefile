@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/irc/p5-POE-Component-IRC/Makefile,v 1.73 2013/02/04 10:37:22 svnexp Exp $
+# $FreeBSD: irc/p5-POE-Component-IRC/Makefile 327418 2013-09-16 17:03:42Z az $
 
 PORTNAME=	POE-Component-IRC
 PORTVERSION=	6.81
@@ -25,7 +25,8 @@ RUN_DEPENDS=	p5-POE>=1.311:${PORTSDIR}/devel/p5-POE \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 PORTEXAMPLES=	*
 
