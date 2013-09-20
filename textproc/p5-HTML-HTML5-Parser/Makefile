@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: textproc/p5-HTML-HTML5-Parser/Makefile 322761 2013-07-11 09:30:44Z culot $
+# $FreeBSD: textproc/p5-HTML-HTML5-Parser/Makefile 327459 2013-09-17 09:00:42Z bapt $
 
 PORTNAME=	HTML-HTML5-Parser
 PORTVERSION=	0.301
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-HTML-HTML5-Entities>=0.002:${PORTSDIR}/textproc/p5-HTML-HTML5-
 		p5-XML-LibXML>=1.94:${PORTSDIR}/textproc/p5-XML-LibXML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::HTML5::Parser.3 \
 		HTML::HTML5::Parser::Error.3 \
