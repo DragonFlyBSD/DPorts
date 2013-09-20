@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim4-runtime/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/kdepim4-runtime/Makefile 327474 2013-09-17 12:50:49Z bapt $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,7 @@ LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 
 CONFLICTS=		akonadi-google-0.*
-CONFLICTS_INSTALL=	kdepim-runtime-4.4.*
+CONFLICTS_INSTALL=	kdepim-runtime44-4.*
 
 USE_XZ=		yes
 USE_GNOME=	libxml2
