@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: math/proofgeneral/Makefile 315806 2013-04-15 18:55:01Z bdrewery $
+# $FreeBSD: math/proofgeneral/Makefile 327411 2013-09-16 16:32:07Z bapt $
 
 PORTNAME=	proofgeneral
 PORTVERSION=	4.1
@@ -20,9 +20,8 @@ BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_EMACS=	yes
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USE_PERL5=	yes
+USES=		gmake perl5
 
 .include <bsd.port.pre.mk>
 
