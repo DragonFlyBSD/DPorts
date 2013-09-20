@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Acme-MetaSyntactic/Makefile 325047 2013-08-20 13:38:48Z mat $
+# $FreeBSD: devel/p5-Acme-MetaSyntactic/Makefile 327486 2013-09-17 16:28:23Z sunpoet $
 
 PORTNAME=	Acme-MetaSyntactic
-PORTVERSION=	1.010
+PORTVERSION=	1.011
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
