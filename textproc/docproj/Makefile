@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: textproc/docproj/Makefile 323397 2013-07-21 14:48:50Z hrs $
+# $FreeBSD: textproc/docproj/Makefile 327454 2013-09-17 06:51:04Z bapt $
 
 PORTNAME=	docproj
 PORTVERSION=	1.17
@@ -12,7 +12,8 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	The "meta-port" for the FreeBSD Documentation Project
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 # This dependency list should be kept in sync with the list of
 # required ports in src/release/Makefile.inc.docports.
