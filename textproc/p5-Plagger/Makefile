@@ -1,5 +1,5 @@
 # Created by: sumikawa@FreeBSD.org
-# $FreeBSD: textproc/p5-Plagger/Makefile 325902 2013-09-01 18:53:54Z az $
+# $FreeBSD: textproc/p5-Plagger/Makefile 327511 2013-09-18 03:36:26Z az $
 
 PORTNAME=	Plagger
 PORTVERSION=	0.7.17
@@ -11,8 +11,6 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sumikawa@FreeBSD.org
 COMMENT=	Pluggable RSS/Atom feed aggregator written in Perl
-
-USE_PERL5=	yes
 
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
@@ -39,6 +37,10 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-HTML-ResolveLink>=0:${PORTSDIR}/www/p5-HTML-ResolveLink \
 		p5-URI-Fetch>=0:${PORTSDIR}/www/p5-URI-Fetch \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
+
+USES=		perl5
+USE_PERL5=	configure
+
 
 OPTIONS_DEFINE=	BETTERENCODING PODTESTING COOKIESHARING LIBERALXML XPATH BETTERHTML PRSJPNDATE \
 		PRSJPNDATE PUBLISHEXCEL FILTERPIPE PUBLISHPLANET PUBLISHCSV FILDEGYT AUTHORNAME \
@@ -375,7 +377,6 @@ BUILD_DEPENDS+=	p5-Text-Original>=0:${PORTSDIR}/textproc/p5-Text-Original
 .endif
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-PERL_CONFIGURE=	yes
 
 MAN3=		Plagger.3 \
 		Plagger::Cookies.3 \
