@@ -2,11 +2,11 @@
 # Date created:		November 13, 1998
 # Whom:			Marc G. Fournier <scrappy@FreeBSD.org>
 #
-# $FreeBSD: databases/postgresql93-server/Makefile 326817 2013-09-09 15:45:43Z girgen $
+# $FreeBSD: databases/postgresql93-server/Makefile 327537 2013-09-18 08:56:50Z girgen $
 #
 
 DISTVERSION?=	9.3.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 PKGNAMESUFFIX?=	-server
 
 MAINTAINER?=	pgsql@FreeBSD.org
@@ -24,5 +24,12 @@ MAN7=		ALTER_COLLATION.7 ALTER_EVENT_TRIGGER.7 ALTER_EXTENSION.7 \
 		DROP_MATERIALIZED_VIEW.7 REFRESH_MATERIALIZED_VIEW.7 SECURITY_LABEL.7
 
 .endif
+
+INSTALL_DIRS?=	src/common src/timezone src/backend \
+		src/backend/utils/mb/conversion_procs \
+		src/backend/snowball src/backend/replication/libpqwalreceiver \
+		src/bin/initdb src/bin/pg_ctl \
+		src/bin/pg_controldata src/bin/pg_resetxlog src/pl \
+		src/bin/pg_basebackup
 
 .include "${.CURDIR}/../postgresql92-server/Makefile"
