@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gnocl/Makefile 325736 2013-08-30 23:40:56Z bapt $
+# $FreeBSD: x11-toolkits/gnocl/Makefile 327457 2013-09-17 08:36:00Z gahr $
 
 PORTNAME=	gnocl
 DISTVERSION=	${BASE_VERSION}-${NIGHTLY_BUILD}
@@ -24,7 +24,7 @@ USE_LDCONFIG=	yes
 CFLAGS+=	-I${TCL_INCLUDEDIR} -L${TCL_LIBDIR}
 
 BASE_VERSION=	0.9.96
-NIGHTLY_BUILD=	31-01-13
+NIGHTLY_BUILD=	31-08-13
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${BASE_VERSION}
 BUILD_WRKSRC=	${WRKSRC}/src
