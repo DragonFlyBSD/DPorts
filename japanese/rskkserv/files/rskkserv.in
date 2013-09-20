@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# $FreeBSD: japanese/rskkserv/files/rskkserv.in 302141 2012-08-05 23:19:36Z dougb $
+#
+# PROVIDE: rskkserv
+# REQUIRE: DAEMON
+# BEFORE: LOGIN
+# KEYWORD: shutdown
+
+prefix=%%PREFIX%%
+
+rskkserv_enable=${rskkserv_enable:-"NO"}
+rskkserv_flags=${rskkserv_flags:-""}
+
+. /etc/rc.subr
+
+name="rskkserv"
+rcvar=rskkserv_enable
+command="${prefix}/sbin/${name}"
+command_interpreter="${prefix}/bin/ruby"
+pidfile="/var/run/${name}.pid"
+required_files="${prefix}/etc/${name}.conf"
+
+load_rc_config $name
+run_rc_command "$1"
