@@ -1,9 +1,9 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: www/shellinabox/Makefile 327240 2013-09-14 08:03:43Z sunpoet $
+# $FreeBSD: www/shellinabox/Makefile 327308 2013-09-14 17:16:04Z sunpoet $
 
 PORTNAME=	shellinabox
 PORTVERSION=	2.14
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	GOOGLE_CODE
 
@@ -12,8 +12,9 @@ COMMENT=	Publish command line shell through AJAX interface
 
 LICENSE=	GPLv2
 
-OPTIONS_DEFINE=	CORES DOCS
+OPTIONS_DEFINE=	CORES DOCS NOLOGIN
 CORES_DESC=	Patch shellinaboxd to enable core dumps
+NOLOGIN_DESC=	Login through ssh (not through login)
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	\
