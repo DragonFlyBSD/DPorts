@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/kdenlive/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/kdenlive/Makefile 327530 2013-09-18 08:00:44Z bapt $
 
 PORTNAME=	kdenlive
 PORTVERSION=	0.9.6
@@ -20,7 +20,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4 sharedmime
 USE_QT4=	dbus gui opengl script svg xml \
 		moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11
-USES=		cmake
+USES=		cmake pkgconfig
 USE_BZIP2=	yes
 CMAKE_ARGS=	-DFFMPEG_SUFFIX:STRING="${FFMPEG_SUFX}"
 
