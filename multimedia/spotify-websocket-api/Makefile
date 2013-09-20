@@ -1,9 +1,9 @@
 # Created by: rene@FreeBSD.org
-# $FreeBSD: multimedia/spotify-websocket-api/Makefile 326933 2013-09-10 21:07:38Z rene $
+# $FreeBSD: multimedia/spotify-websocket-api/Makefile 327317 2013-09-14 20:48:48Z rene $
 
 PORTNAME=	SpotifyWebsocketAPI
 PORTVERSION=	0.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	multimedia python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
