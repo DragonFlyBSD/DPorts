@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-TryCatch/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: lang/p5-TryCatch/Makefile 327452 2013-09-17 06:40:21Z bapt $
 
 PORTNAME=	TryCatch
 PORTVERSION=	1.003002
@@ -30,7 +30,8 @@ OPTIONS_DEFINE=	AUTHOR
 
 AUTHOR_DESC=	Include dependencies for AUTHORING
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		TryCatch.3
 
