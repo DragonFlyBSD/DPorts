@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-memoryprofiler/Makefile 326959 2013-09-11 10:17:53Z koobs $
+# $FreeBSD: devel/py-memoryprofiler/Makefile 327281 2013-09-14 12:53:08Z koobs $
 
 PORTNAME=	memoryprofiler
 PORTVERSION=	0.27
@@ -25,5 +25,10 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}-psutil>0:${PORTSDIR}/sysutils/py-psutil
 USE_PYTHON=		2.6+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	memory_profiler
+
+PLIST_FILES+=	bin/mprofile \
+		%%PYTHON_SITELIBDIR%%/memory_profiler.py \
+		%%PYTHON_SITELIBDIR%%/memory_profiler.pyo \
+		%%PYTHON_SITELIBDIR%%/memory_profiler.pyc
 
 .include <bsd.port.mk>
