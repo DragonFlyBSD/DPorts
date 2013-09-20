@@ -2,7 +2,7 @@
 # Date created:		2011-02-16
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: devel/p5-MooseX-Types-Perl/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-MooseX-Types-Perl/Makefile 327380 2013-09-16 10:58:05Z az $
 #
 
 PORTNAME=	MooseX-Types-Perl
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-MooseX-Types>=0:${PORTSDIR}/devel/p5-MooseX-Types \
 		p5-Params-Util>=0:${PORTSDIR}/devel/p5-Params-Util
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Types::Perl.3
 
