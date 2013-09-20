@@ -1,8 +1,8 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: polish/hunspell/Makefile 326791 2013-09-09 10:08:39Z sunpoet $
+# $FreeBSD: polish/hunspell/Makefile 327392 2013-09-16 13:38:03Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20130908
+PORTVERSION=	20130915
 CATEGORIES=	polish textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}
 DISTNAME=	sjp-myspell-pl-${PORTVERSION}
