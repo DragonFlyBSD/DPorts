@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-Test-XPath/Makefile 316473 2013-04-24 19:30:42Z swills $
+# $FreeBSD: lang/p5-Test-XPath/Makefile 327454 2013-09-17 06:51:04Z bapt $
 
 PORTNAME=	Test-XPath
 PORTVERSION=	0.16
@@ -15,7 +15,8 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-XML-LibXML>=1.70:${PORTSDIR}/textproc/p5-XML-LibXML
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Test::XPath.3
 
