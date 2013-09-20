@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/hgview/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: devel/hgview/Makefile 327568 2013-09-18 17:25:46Z amdmi3 $
 
 PORTNAME=	hgview
 PORTVERSION=	1.6.2
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	LOGILAB
 
-MAINTAINER=	amdmi3@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A fast Mercurial log navigator written in pyqt4
 
 RUN_DEPENDS=	hg:${PORTSDIR}/devel/mercurial \
