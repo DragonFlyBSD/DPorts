@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <henrik@brixandersen.dk>
-# $FreeBSD: www/ikiwiki/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/ikiwiki/Makefile 327292 2013-09-14 14:47:56Z az $
 
 PORTNAME=	ikiwiki
 PORTVERSION=	3.20110608
@@ -33,9 +33,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 LICENSE=	GPLv2
-PERL_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext perl5 gmake
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	PO4A SEARCH W3M
 OPTIONS_DEFAULT=	PO4A SEARCH
