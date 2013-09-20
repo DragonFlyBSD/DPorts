@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde-gtk-config/Makefile 322362 2013-07-06 02:52:28Z rakuco $
+# $FreeBSD: x11-themes/kde-gtk-config/Makefile 327535 2013-09-18 08:38:20Z bapt $
 
 PORTNAME=	kde-gtk-config
 PORTVERSION=	2.2.1
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION}/src
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	GTK2 and GTK3 Configurator for KDE
 
-USES=		cmake:outsource
+USES=		cmake:outsource pkgconfig
 USE_GNOME=	gtk20 gtk30
 USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
