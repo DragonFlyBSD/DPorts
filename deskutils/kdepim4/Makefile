@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: deskutils/kdepim4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/kdepim4/Makefile 327474 2013-09-17 12:50:49Z bapt $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE4_VERSION}
@@ -20,8 +20,7 @@ LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 RUN_DEPENDS=	${KDE4_PREFIX}/bin/accountwizard:${PORTSDIR}/deskutils/kdepim4-runtime
 
-LATEST_LINK=	${PORTNAME}4
-CONFLICTS_INSTALL=	kdepim-4.4.*
+CONFLICTS_INSTALL=	kdepim44-4.*
 
 USE_XZ=		yes
 USE_GNOME=	libxml2
