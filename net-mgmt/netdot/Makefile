@@ -2,7 +2,7 @@
 # Date created:				16 January 2012
 # Whom:					Nick Hilliard
 #
-# $FreeBSD: net-mgmt/netdot/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net-mgmt/netdot/Makefile 327311 2013-09-14 18:12:50Z az $
 #
 
 PORTNAME=	netdot
@@ -44,9 +44,8 @@ RUN_DEPENDS=	p5-libapreq2>=0:${PORTSDIR}/www/p5-libapreq2 \
 		rrdtool:${PORTSDIR}/databases/rrdtool \
 		netdisco-mibs>=0:${PORTSDIR}/net-mgmt/netdisco-mibs
 
+USES=		gmake perl5
 NO_BUILD=	yes
-USE_PERL5=	yes
-USE_GMAKE=	yes
 USE_MYSQL=	yes
 
 SUB_FILES=	pkg-message pkg-install
