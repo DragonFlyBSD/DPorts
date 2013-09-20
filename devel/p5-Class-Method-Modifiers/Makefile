@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Method-Modifiers/Makefile 326947 2013-09-11 07:23:55Z tobez $
+# $FreeBSD: devel/p5-Class-Method-Modifiers/Makefile 327556 2013-09-18 15:22:08Z sunpoet $
 
 PORTNAME=	Class-Method-Modifiers
-PORTVERSION=	2.05
+PORTVERSION=	2.06
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,12 +13,13 @@ COMMENT=	Provides Moose-like method modifiers
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
-		p5-Test-CheckDeps>=0:${PORTSDIR}/devel/p5-Test-CheckDeps \
+TEST_DEPENDS=	p5-CPAN-Meta-Check>=0.007:${PORTSDIR}/devel/p5-CPAN-Meta-Check \
+		p5-Test-CheckDeps>=0.006:${PORTSDIR}/devel/p5-Test-CheckDeps \
+		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Warnings>=0:${PORTSDIR}/devel/p5-Test-Warnings
 
 USES=		perl5
-USE_PERL5=	modbuildtiny
+USE_PERL5=	configure
 
 MAN3=		Class::Method::Modifiers.3
 
