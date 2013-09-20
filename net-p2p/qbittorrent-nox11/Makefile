@@ -1,4 +1,5 @@
-# $FreeBSD: ports/net-p2p/qbittorrent-nox11/Makefile,v 1.3 2012/11/17 06:00:41 svnexp Exp $
+# Created by: Doug Barton <dougb@FreeBSD.org>
+# $FreeBSD: net-p2p/qbittorrent-nox11/Makefile 327432 2013-09-16 18:05:14Z nemysis $
 
 PKGNAMESUFFIX=	-nox11
 
@@ -8,6 +9,7 @@ MASTERDIR=	${.CURDIR}/../qbittorrent
 
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
+PLIST_FILES+=	bin/qbittorrent-nox
 
 MAN1=		qbittorrent-nox.1
 
