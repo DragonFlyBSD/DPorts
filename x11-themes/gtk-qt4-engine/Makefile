@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kris@pcbsd.org>
-# $FreeBSD: x11-themes/gtk-qt4-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-themes/gtk-qt4-engine/Makefile 327535 2013-09-18 08:38:20Z bapt $
 
 PORTNAME=	gtk-qt-engine
 PORTVERSION=	1.1
@@ -13,7 +13,7 @@ COMMENT=	GTK+ 2.x theme engine allowing to use Qt/KDE styles
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 USE_QT4=	corelib gui moc_build rcc_build uic_build qmake_build
-USES=		cmake gettext
+USES=		cmake gettext pkgconfig
 USE_KDE4=	kdelibs kdeprefix automoc4
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
