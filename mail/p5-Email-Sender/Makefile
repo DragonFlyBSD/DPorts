@@ -2,7 +2,7 @@
 # Date created:				23 June 2009
 # Whom:					Bill Brinzer <bill.brinzer@gmail.com>
 #
-# $FreeBSD: ports/mail/p5-Email-Sender/Makefile,v 1.13 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-Sender/Makefile 327333 2013-09-15 07:14:12Z az $
 #
 
 PORTNAME=	Email-Sender
@@ -28,7 +28,8 @@ TEST_DEPENDS=	p5-Capture-Tiny>=0.08:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-Sub-Override>=0:${PORTSDIR}/devel/p5-Sub-Override \
 		p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::Sender.3 \
 	Email::Sender::Failure.3 \
