@@ -1,11 +1,12 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: irc/irssi-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: irc/irssi-devel/Makefile 327447 2013-09-16 23:50:58Z bdrewery $
 
 PORTNAME=	irssi
-PORTVERSION=	20120624
-PORTREVISION=	1
+PORTVERSION=	20130915
 CATEGORIES=	irc
-MASTER_SITES=	http://bsdcrew.de/distfiles/
+MASTER_SITES=	http://mirror.shatow.net/freebsd/${PORTNAME}/ \
+		http://bsdcrew.de/distfiles/ \
+		http://mirror.irssi.org/snapshots/
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	miwi@FreeBSD.org
@@ -16,9 +17,7 @@ LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20
 CONFLICTS=	irssi-0.8*
 
 GNU_CONFIGURE=	yes
-USES=		pkgconfig
-USE_GMAKE=	yes
-WANT_PERL=	yes
+USES=		pkgconfig gmake
 
 MAN1=		irssi.1
 
@@ -27,7 +26,7 @@ SOCKS_DESC=	Socks proxy support
 BOT_DESC=	Bot support
 OPTIONS_DEFAULT=	PERL IPV6 SSL
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-0.8.15-svn
+WRKSRC=		${WRKDIR}/${PORTNAME}-0.8.16-rc1
 
 .include <bsd.port.options.mk>
 
@@ -40,7 +39,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=	--with-perl-lib=site
 PLIST_SUB+=	WITH_PERL=""
 .else
