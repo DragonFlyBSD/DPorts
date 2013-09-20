@@ -2,7 +2,7 @@
 # Date created:		20 Feb 2009
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-MobileAgent-Plugin-Charset/Makefile,v 1.5 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Charset/Makefile 327283 2013-09-14 13:38:20Z az $
 #
 
 PORTNAME=	HTTP-MobileAgent-Plugin-Charset
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 	p5-HTTP-MobileAgent>=0.26:${PORTSDIR}/www/p5-HTTP-MobileAgent
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTTP::MobileAgent::Plugin::Charset.3
 
