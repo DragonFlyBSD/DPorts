@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: www/MT/Makefile 322410 2013-07-06 19:58:51Z wxs $
+# $FreeBSD: www/MT/Makefile 327283 2013-09-14 13:38:20Z az $
 
 PORTNAME=	MT
 PORTVERSION=	5.2.7
@@ -45,7 +45,8 @@ SUB_LIST+=	DATADIR=${DATADIR}\
 		WWWOWN=${WWWOWN}\
 		WWWGRP=${WWWGRP}
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 MT_DOCS_URL?=	http://www.movabletype.org/documentation/
 MT_UPGRADE_URL?=http://www.movabletype.org/documentation/installation/upgrade-movable-type.html
