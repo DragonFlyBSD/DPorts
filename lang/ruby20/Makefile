@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby20/Makefile 321362 2013-06-20 08:41:57Z knu $
+# $FreeBSD: lang/ruby20/Makefile 327412 2013-09-16 16:34:10Z bapt $
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -60,7 +60,6 @@ _SUF2=	,${PORTEPOCH}
 _SUF1=	_${PORTREVISION}
 .endif
 
-PKGNAMESUFFIX=	#empty
 CFLAGS+=	${PTHREAD_CFLAGS}	# Keep this, else ruby will fail to load
 LDFLAGS+=	${PTHREAD_LIBS}		# libraries dependent op libpthread.
 
@@ -85,6 +84,7 @@ CONFIGURE_ENV=	CFLAGS="-I${LOCALBASE}/include ${CFLAGS}" \
 MLINKS=		${RUBY_NAME}.1 ruby.1
 PLIST_SUB+=	IF_DEFAULT=""
 .else
+PKGNAMESUFFIX=	${RUBY_VER:C/\.//}
 PLIST_SUB+=	IF_DEFAULT="@comment "
 .endif
 
