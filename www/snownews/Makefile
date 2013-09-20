@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/snownews/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: www/snownews/Makefile 327283 2013-09-14 13:38:20Z az $
 
 PORTNAME=	snownews
 PORTVERSION=	1.5.12
@@ -10,8 +10,8 @@ MASTER_SITES=	http://kiza.kcore.de/media/software/snownews/
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A text mode RSS newsreader
 
-USE_PERL5_BUILD=yes
-USES=		gmake iconv
+USES=		gmake iconv perl5
+USE_PERL5=	build
 USE_GNOME=	libxml2
 HAS_CONFIGURE=	yes
 
