@@ -2,7 +2,7 @@
 # Date created:				2011-03-16
 # Whom:					Jase Thew <freebsd@beardz.net>
 #
-# $FreeBSD: devel/p5-Reflex/Makefile 317894 2013-05-11 16:57:07Z jase $
+# $FreeBSD: devel/p5-Reflex/Makefile 327380 2013-09-16 10:58:05Z az $
 #
 
 PORTNAME=	Reflex
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-POE>=1.294:${PORTSDIR}/devel/p5-POE \
 		p5-MooseX-Role-Parameterized>=0.23:${PORTSDIR}/devel/p5-MooseX-Role-Parameterized
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
