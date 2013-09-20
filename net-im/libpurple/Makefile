@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/libpurple/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: net-im/libpurple/Makefile 327454 2013-09-17 06:51:04Z bapt $
 #   $MCom: ports/net-im/libpurple/Makefile,v 1.32 2010/05/10 04:21:19 marcus Exp $
 
 PORTNAME?=	libpurple
@@ -194,7 +194,7 @@ PLIST_SUB+=		DBUS="@comment not installed: "
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=		yes
+USES+=			perl5
 CONFIGURE_ARGS+=	--with-perl-lib=site
 PLIST_SUB+=		PERL:=""
 .if !defined(PIDGIN_SLAVE)
