@@ -1,5 +1,5 @@
 # Created by: Russell Cloran <russell@rucus.ru.ac.za>
-# $FreeBSD: textproc/redland-bindings/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/redland-bindings/Makefile 327492 2013-09-17 17:16:52Z bapt $
 
 PORTNAME=	redland-bindings
 PORTVERSION=	1.0.16.1
@@ -16,10 +16,12 @@ GNU_CONFIGURE=	yes
 OPTIONS_DEFINE=	PERL PHP PYTHON RUBY
 OPTIONS_DEFAULT=PYTHON
 
+USES=		pkgconfig
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=--with-perl
 PLIST_SUB+=	WITH_PERL=""
 MANPREFIX=	${LOCALBASE}/lib/perl5/${PERL_VER}
