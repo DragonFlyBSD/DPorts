@@ -1,4 +1,4 @@
-# $FreeBSD: finance/kmymoney-kde4/Makefile 323850 2013-07-28 20:28:32Z dbn $
+# $FreeBSD: finance/kmymoney-kde4/Makefile 327278 2013-09-14 12:04:18Z az $
 
 PORTNAME=	kmymoney
 PORTVERSION=	4.6.3
@@ -71,7 +71,8 @@ PLIST_SUB+=	OFX="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MQUOTES}
-USE_PERL5_RUN=	yes
+USES+=		perl5
+USE_PERL5=	run
 RUN_DEPENDS+=	p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip \
 		p5-Finance-Quote>=0:${PORTSDIR}/finance/p5-Finance-Quote \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
