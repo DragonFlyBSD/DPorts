@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: ports/japanese/p5-WWW-MobileCarrierJP/Makefile,v 1.26 2012/12/16 06:16:56 svnexp Exp $
+# $FreeBSD: japanese/p5-WWW-MobileCarrierJP/Makefile 327410 2013-09-16 15:42:40Z az $
 
 PORTNAME=	WWW-MobileCarrierJP
 PORTVERSION=	0.63
@@ -26,7 +26,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-LWP-Online>=1.07:${PORTSDIR}/www/p5-LWP-Online \
 		p5-Test-Base>0:${PORTSDIR}/devel/p5-Test-Base
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		www-mobilecarrierjp-dump_all.pl.1
 MAN3=		WWW::MobileCarrierJP::EZWeb::PictogramInfo.3 \
