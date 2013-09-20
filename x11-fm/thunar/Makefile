@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11-fm/thunar/Makefile 317673 2013-05-08 15:14:25Z olivierd $
+# $FreeBSD: x11-fm/thunar/Makefile 327419 2013-09-16 17:07:26Z bapt $
 
 PORTNAME=	Thunar
 PORTVERSION=	1.6.3
@@ -16,13 +16,11 @@ LIB_DEPENDS=	tumbler-1:${PORTSDIR}/deskutils/xfce4-tumbler
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_PERL5=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack gdkpixbuf2
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv libexo libmenu libutil
 USE_XORG=	sm x11
-USES=		desktop-file-utils pathfix pkgconfig
+USES=		desktop-file-utils gmake pathfix perl5 pkgconfig
 
 OPTIONS_DEFINE=	DBUS DOCS GVFS NLS NOTIFY STARTUP
 OPTIONS_GROUP=	PLUGINS
