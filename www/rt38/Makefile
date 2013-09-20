@@ -1,4 +1,4 @@
-# $FreeBSD: www/rt38/Makefile 318848 2013-05-23 07:24:40Z matthew $
+# $FreeBSD: www/rt38/Makefile 327292 2013-09-14 14:47:56Z az $
 
 # TODO:
 # o etc/rt38 files permissions
@@ -40,7 +40,7 @@ BUILD_DEPENDS+=	${CORE_DEPS} \
 
 RUN_DEPENDS+=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
+USES=		perl5
 USE_AUTOTOOLS=	autoconf
 
 .include <bsd.port.options.mk>
