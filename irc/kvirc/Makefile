@@ -1,5 +1,5 @@
 # Created by: Michael Ranner
-# $FreeBSD: irc/kvirc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: irc/kvirc/Makefile 327450 2013-09-17 06:12:35Z bapt $
 
 PORTNAME=	kvirc
 PORTVERSION=	4.2.0
@@ -23,10 +23,10 @@ CONFLICTS_INSTALL=	kvirc-qt4-4.*
 
 USE_BZIP2=	yes
 USE_OPENSSL=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_QT4=	moc_build qmake_build rcc_build uic_build \
 		dbus gui network sql xml
-USES=		cmake gettext
+USES=		cmake gettext perl5
 CMAKE_ARGS=	-DWANT_ESD=no -DWANT_DOXYGEN=no \
 		-DMANDIR=${MANPREFIX}
 INSTALLS_ICONS=	yes
@@ -97,7 +97,7 @@ PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5_RUN=	yes
+USE_PERL5+=	run
 PLIST_SUB+=	PERL=""
 .else
 CMAKE_ARGS+=	-DWANT_PERL=no
