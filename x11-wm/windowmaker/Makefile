@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11-wm/windowmaker/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-wm/windowmaker/Makefile 327417 2013-09-16 16:58:41Z bapt $
 
 PORTNAME=	windowmaker
 PORTVERSION=	0.95.4
@@ -21,10 +21,9 @@ LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
 		wraster:${PORTSDIR}/x11-wm/libwraster
 RUN_DEPENDS=	${LOCALBASE}/share/WindowMaker/Themes/LeetWM.themed/style:${PORTSDIR}/graphics/wmicons
 
-USES=		pathfix pkgconfig
+USES=		pathfix perl5 pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 USE_XORG=	xft xinerama xmu xpm
 CONFIGURE_ARGS=	--with-pixmapdir=${PREFIX}/include/X11/pixmaps \
 		--with-nlsdir=${PREFIX}/share/locale \
