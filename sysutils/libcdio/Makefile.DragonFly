@@ -1,0 +1,1 @@
+CONFIGURE_ENV+= am_cv_func_iconv_works=yes
