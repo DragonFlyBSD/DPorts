@@ -1,6 +1,6 @@
---- libstdc++-v3/config/os/bsd/dragonfly/ctype_noninline.h.orig	2013-09-12 14:44:03.000000000 +0000
+--- libstdc++-v3/config/os/bsd/dragonfly/ctype_noninline.h.orig	2013-09-24 12:45:38.152815000 +0000
 +++ libstdc++-v3/config/os/bsd/dragonfly/ctype_noninline.h
-@@ -0,0 +1,94 @@
+@@ -0,0 +1,98 @@
 +// Locale support -*- C++ -*-
 +
 +// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2009, 2010
@@ -37,7 +37,11 @@
 +
 +// Information as gleaned from /usr/include/ctype.h
 +
++#ifdef _CTYPE_S
++  extern "C" const unsigned long __libc_C_ctype_[];
++#else
 +  extern "C" const __uint16_t __libc_C_ctype_[];
++#endif
 +
 +  const ctype_base::mask*
 +  ctype<char>::classic_table() throw()

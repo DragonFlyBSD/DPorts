@@ -1,6 +1,6 @@
---- libstdc++-v3/config/os/bsd/dragonfly/ctype_inline.h.orig	2013-09-12 14:44:03.000000000 +0000
+--- libstdc++-v3/config/os/bsd/dragonfly/ctype_inline.h.orig	2013-09-24 12:45:38.142816000 +0000
 +++ libstdc++-v3/config/os/bsd/dragonfly/ctype_inline.h
-@@ -0,0 +1,127 @@
+@@ -0,0 +1,144 @@
 +// Locale support -*- C++ -*-
 +
 +// Copyright (C) 2000, 2003, 2004, 2005, 2009, 2010
@@ -79,7 +79,11 @@
 +  ctype<wchar_t>::
 +  do_is(mask __m, wchar_t __c) const
 +  {
++#ifdef _CTYPE_S
++    return __istype (__c, __m);
++#else
 +    return __libc_ctype_ [__c + 1] & __m;
++#endif
 +  }
 +
 +  inline const wchar_t*
@@ -87,6 +91,10 @@
 +  do_is(const wchar_t* __lo, const wchar_t* __hi, mask* __vec) const
 +  {
 +    for (; __lo < __hi; ++__vec, ++__lo)
++#ifdef _CTYPE_S
++      *__vec = __maskrune (*__lo, upper | lower | alpha | digit | xdigit
++			   | space | print | graph | cntrl | punct | alnum);
++#else
 +    {
 +      mask __m = 0;
 +      if (isupper (*__lo)) __m |= _CTYPEMASK_U;
@@ -104,6 +112,7 @@
 +
 +      *__vec = __m;
 +    }
++#endif
 +    return __hi;
 +  }
 +
@@ -111,7 +120,11 @@
 +  ctype<wchar_t>::
 +  do_scan_is(mask __m, const wchar_t* __lo, const wchar_t* __hi) const
 +  {
++#ifdef _CTYPE_S
++    while (__lo < __hi && ! __istype (*__lo, __m))
++#else
 +    while (__lo < __hi && !(__libc_ctype_ [*__lo + 1] & __m))
++#endif
 +      ++__lo;
 +    return __lo;
 +  }
@@ -120,7 +133,11 @@
 +  ctype<wchar_t>::
 +  do_scan_not(mask __m, const char_type* __lo, const char_type* __hi) const
 +  {
++#ifdef _CTYPE_S
++    while (__lo < __hi && __istype (*__lo, __m))
++#else
 +    while (__lo < __hi && (__libc_ctype_ [*__lo + 1] & __m))
++#endif
 +      ++__lo;
 +    return __lo;
 +  }
