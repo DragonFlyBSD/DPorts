@@ -1,8 +1,6 @@
-$NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/01/31 20:07:17 marino Exp $
-
---- libstdc++-v3/config/os/bsd/dragonfly/ctype_inline.h.orig	2012-06-22 10:35:30.000000000 +0000
+--- libstdc++-v3/config/os/bsd/dragonfly/ctype_inline.h.orig	2013-09-24 10:38:27.475921000 +0000
 +++ libstdc++-v3/config/os/bsd/dragonfly/ctype_inline.h
-@@ -0,0 +1,161 @@
+@@ -0,0 +1,187 @@
 +// Locale support -*- C++ -*-
 +
 +// Copyright (C) 2000, 2003, 2004, 2005, 2009, 2010
@@ -51,7 +49,11 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +    if (_M_table)
 +      return _M_table[static_cast<unsigned char>(__c)] & __m;
 +    else
++#ifdef _CTYPE_S
++      return __istype(__c, __m);
++#else
 +      return __libc_ctype_ [__c + 1] & __m;
++#endif
 +  }
 +
 +  const char*
@@ -64,6 +66,10 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +    else
 +      for (;__low < __high; ++__vec, ++__low)
 +	{
++#ifdef _CTYPE_S
++	  *__vec = __maskrune (*__low, upper | lower | alpha | digit | xdigit
++			       | space | print | graph | cntrl | punct | alnum);
++#else
 +	  mask __m = 0;
 +	  if (this->is(upper, *__low))  __m |= upper;
 +	  if (this->is(lower, *__low))  __m |= lower;
@@ -78,6 +84,7 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +	  // Do not include explicit line for alnum mask since it is a
 +	  // pure composite of masks on DragonFly.
 +	  *__vec = __m;
++#endif
 +	}
 +    return __high;
 +  }
@@ -115,7 +122,11 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +  ctype<wchar_t>::
 +  do_is(mask __m, wchar_t __c) const
 +  {
++#ifdef _CTYPE_S
++    return __istype (__c, __m);
++#else
 +    return __libc_ctype_ [__c + 1] & __m;
++#endif
 +  }
 +
 +  inline const wchar_t*
@@ -123,6 +134,10 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +  do_is(const wchar_t* __lo, const wchar_t* __hi, mask* __vec) const
 +  {
 +    for (; __lo < __hi; ++__vec, ++__lo)
++#ifdef _CTYPE_S
++      *__vec = __maskrune (*__lo, upper | lower | alpha | digit | xdigit
++			   | space | print | graph | cntrl | punct | alnum);
++#else
 +    {
 +      mask __m = 0;
 +      if (isupper (*__lo)) __m |= _CTYPEMASK_U;
@@ -140,6 +155,7 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +
 +      *__vec = __m;
 +    }
++#endif
 +    return __hi;
 +  }
 +
@@ -147,7 +163,11 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +  ctype<wchar_t>::
 +  do_scan_is(mask __m, const wchar_t* __lo, const wchar_t* __hi) const
 +  {
++#ifdef _CTYPE_S
++    while (__lo < __hi && ! __istype (*__lo, __m))
++#else
 +    while (__lo < __hi && !(__libc_ctype_ [*__lo + 1] & __m))
++#endif
 +      ++__lo;
 +    return __lo;
 +  }
@@ -156,7 +176,11 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h,v 1.2 2013/0
 +  ctype<wchar_t>::
 +  do_scan_not(mask __m, const char_type* __lo, const char_type* __hi) const
 +  {
++#ifdef _CTYPE_S
++    while (__lo < __hi && __istype (*__lo, __m))
++#else
 +    while (__lo < __hi && (__libc_ctype_ [*__lo + 1] & __m))
++#endif
 +      ++__lo;
 +    return __lo;
 +  }
