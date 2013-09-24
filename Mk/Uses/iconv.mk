@@ -16,8 +16,7 @@ _INCLUDE_USES_ICONV_MK=	yes
 iconv_ARGS=     lib
 .endif
 
-# Change DF 5.0 to really number when iconv fixed
-.if ${DFLYVERSION} < 500000
+.if ${DFLYVERSION} < 300503
 
 ICONV_CMD=	${LOCALBASE}/bin/iconv
 ICONV_LIB=	-liconv
