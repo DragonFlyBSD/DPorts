@@ -122,7 +122,11 @@ SECURITY_ICONS= security-icon-bw16.png \
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500
+.  if ${DFLYVERSION} < 300503
 BOOTSTRAP_DISTFILE= bootstrap-openjdk-7.21.11.dfly-3.5-${JDK_ARCH}.tar.xz
+.  else
+BOOTSTRAP_DISTFILE= bootstrap-openjdk-7.25.15.dfly-3.5-${JDK_ARCH}.tar.xz
+.  endif
 .endif
 
 .if empty(PORT_OPTIONS:MDEBUG)

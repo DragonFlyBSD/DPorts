@@ -10,3 +10,7 @@ SHA256 (bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = f891bab203444745a15ab
 SIZE (bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = 20011172
 SHA256 (bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = 34c2be58609d52da5a4660d49033ab1d16387e253c67a91e2469da8273a74b36
 SIZE (bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = 21142004
+SHA256 (bootstrap-openjdk-7.25.15.dfly-3.5-amd64.tar.xz) = 59899e3a55037eb14282bda0f5507a9740f2210d087a8a7bfe7e47e14793c38b
+SIZE (bootstrap-openjdk-7.25.15.dfly-3.5-amd64.tar.xz) = 20036896
+SHA256 (bootstrap-openjdk-7.25.15.dfly-3.5-i386.tar.xz) = d96a6bf70d6db66163c73225737cf1bbe580a6f157515a8e6f81cec689eaa5fc
+SIZE (bootstrap-openjdk-7.25.15.dfly-3.5-i386.tar.xz) = 21561488
