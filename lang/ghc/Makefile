@@ -5,7 +5,7 @@ PORTNAME=	ghc
 PORTVERSION=	7.6.3
 CATEGORIES=	lang haskell
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
-		http://goetz-isenmann.de/dfly/:dflyboot \
+		http://leaf.dragonflybsd.org/~marino/dports-src/:dflyboot \
 		${MASTER_SITE_LOCAL:S/$/:boot/}
 MASTER_SITE_SUBDIR=	pgj/:boot
 DISTFILES=	ghc-${PORTVERSION}-src${EXTRACT_SUFX}:source
@@ -109,18 +109,19 @@ IGNORE=		unsupported
 
 .elif ${OPSYS} == "DragonFly"
 
+.if empty(ICONV_LIB)
+BOOT_GHC_VERSION=	7.6.3
+.else
 .  if ${DFLYVERSION} > 300500
 BUILD_DEPENDS+=  ${LOCALBASE}/lib/compat/libm.so.3:${PORTSDIR}/misc/compat34x
 .  endif
-.  if ${ARCH} == "i386"
-DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-dragonfly-boot${EXTRACT_SUFX}:dflyboot
-.  elif ${ARCH} == "x86_64"
-DISTFILES+=	ghc-${BOOT_GHC_VERSION}-x86_64-dragonfly-boot${EXTRACT_SUFX}:dflyboot
-.  endif	# DragonFly platform list
-
-CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
 BOOT_GHC_VERSION=	7.4.2
 EXTRA_PATCHES=	${DFLY_PATCHDIR}/nopatch-ghc-${BOOT_GHC_VERSION}-boot_rts_package.conf.in
+.endif
+
+DISTFILES+=	ghc-${BOOT_GHC_VERSION}-${ARCH}-dragonfly-boot${EXTRACT_SUFX}:dflyboot
+CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
+CONFIGURE_ENV+=		BOOTDIR=${BOOT_DIR}
 
 .else
 IGNORE=		unsupported ${OPSYS} Operating System
