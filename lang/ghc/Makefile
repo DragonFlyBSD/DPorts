@@ -1,5 +1,5 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: lang/ghc/Makefile 327114 2013-09-12 22:02:32Z pgj $
+# $FreeBSD: lang/ghc/Makefile 327452 2013-09-17 06:40:21Z bapt $
 
 PORTNAME=	ghc
 PORTVERSION=	7.6.3
@@ -27,9 +27,8 @@ USE_BZIP2=	yes
 LIB_DEPENDS+=	gmp.10:${PORTSDIR}/math/gmp
 
 USE_AUTOTOOLS=		autoconf autoheader
-USE_PERL5_BUILD=	yes
-USE_GMAKE=		yes
-USES=			iconv ncurses
+USE_PERL5=		build
+USES=			gmake iconv perl5 ncurses
 USE_BINUTILS=		yes
 USE_GCC=		yes
 
@@ -64,7 +63,7 @@ OPTIONS_DEFINE+=	BOOT
 OPTIONS_DEFINE+=	BOOTH
 .endif
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDYNAMIC}
 LIB_DEPENDS+=	ffi.6:${PORTSDIR}/devel/libffi
@@ -349,4 +348,4 @@ post-install:
 	@${LN} -sf ${PREFIX}/bin/haddock-ghc-${GHC_VERSION} ${PREFIX}/bin/haddock
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
