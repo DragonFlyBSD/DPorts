@@ -40,6 +40,7 @@ PORTEXAMPLES=	omega.conf
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=		iconv
+LDFLAGS+=	${ICONV_LIB}
 CONFIGURE_ARGS+=--with-iconv
 .else
 CONFIGURE_ARGS+=--without-iconv
