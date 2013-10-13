@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 327339 2013-09-15 12:52:28Z mva $
+# $FreeBSD: Mk/bsd.python.mk 329164 2013-10-03 09:25:37Z mva $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -14,8 +14,9 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 # language. It's automatically included when USE_PYTHON is defined in
 # the ports' makefile. If your port requires only some set of Python
 # versions, you can define USE_PYTHON as [min]-[max] or min+ or -max
-# or as an explicit version (eg. 3.1-3.2 for [min]-[max],
-# 2.7+ or -3.2 for min+ and -max or 2.6 for an explicit version).
+# or as an explicit version or as a meta port version (eg. 3.1-3.2
+# for [min]-[max], 2.7+ or -3.2 for min+ and -max, 2.6 for an
+# explicit version or 3 for a meta port version).
 #
 # The variables:
 #
@@ -86,25 +87,15 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #
 # PYTHON_DEFAULT_VERSION
 #					- Version of the default python binary in your ${PATH}, in
-#					  the format "python2.7". Set this in your /etc/make.conf
-#					  in case you want to use a specific version as a default.
-#					  default: python2.7
+#					  the format "python2.7".
 #
 # PYTHON2_DEFAULT_VERSION
 #					- Version of the default python2 binary in your ${PATH}, in
-#					  the format "python2.7". Set this in your /etc/make.conf
-#					  in case you want to use a specific version as a default.
-#					  Note that PYTHON_DEFAULT_VERSION always will have precedence
-#					  before this value, if it matches "python2*"
-#					  default: python2.7
+#					  the format "python2.7".
 #
 # PYTHON3_DEFAULT_VERSION
 #					- Version of the default python3 binary in your ${PATH}, in
-#					  the format "python3.2". Set this in your /etc/make.conf
-#					  in case you want to use a specific version as a default.
-#					  Note that PYTHON_DEFAULT_VERSION always will have precedence
-#					  before this value, if it matches "python3*"
-#					  default: python3.3
+#					  the format "python3.2".
 #
 # PYTHON_MAJOR_VER	- Python version major number. 2 for python-2.x,
 #					  3 for python-3.x and so on.
@@ -138,6 +129,17 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #
 # PYSETUP			- Name of the setup script used by the distutils package.
 #					  default: setup.py
+#
+# PYDISTUTILS_AUTOPLIST
+#					- Generate the packaging list for distutils based ports
+#					  (including easy_install) automatically.
+#
+# PYTHON_PY3K_PLIST_HACK
+#					- Automatically replaces .pyc and .pyo package list entries
+#					  with the relevant __pycache__ entries for Python 3.x.
+#					  This should only be used for ports, which do not use one
+#					  of Python's default package installation mechanisms and
+#					  which are guaranteed to work with any python version.
 #
 # PYDISTUTILS_PKGNAME
 #					- Internal name in the distutils for egg-info.
@@ -210,99 +212,50 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #
 # USE_TWISTED_RUN	- Same as USE_TWISTED but add only run dependency.
 #
-# USE_ZOPE			- Use Zope - an object-based web application platform, this
-#					  also sets up:
-# SZOPEBASEDIR		- relative base directory of zope server
-# ZOPEBASEDIR		- absolute base directory of zope that is
-#					  ${LOCALBASE}/${SZOPEBASEDIR} by default,
-# ZOPEPRODUCTDIR	- directory, where products for zope can be found
-#
-# ZOPE_VERSION		- Version of zope that will be used in the port. Set this
-#					  in your /etc/make.conf in case you want to use a
-#					  specific version of zope.
-#
 
 _PYTHON_PORTBRANCH=		2.7
 _PYTHON_ALLBRANCHES=	2.7 2.6 3.3 3.2 3.1	# preferred first
-_ZOPE_PORTBRANCH=		2.13
-_ZOPE_ALLBRANCHES=		2.13
-
-
-# Determine version number of Zope to use
-.if defined(USE_ZOPE)
-.if defined(ZOPE_VERSION)
-_ZOPE_VERSION:=			${ZOPE_VERSION}
-.else
-_ZOPE_VERSION:=			${_ZOPE_PORTBRANCH}
-.endif
-
-# Validate Zope version whether it meets USE_ZOPE version restriction.
-_ZOPE_VERSION_CHECK:=		${USE_ZOPE:C/^([1-9]\.[0-9]*)$/\1-\1/}
-_ZOPE_VERSION_MINIMUM_TMP:=	${_ZOPE_VERSION_CHECK:C/([1-9]\.[0-9]*)[-+].*/\1/}
-_ZOPE_VERSION_MINIMUM:=		${_ZOPE_VERSION_MINIMUM_TMP:M[1-9].[0-9]}
-_ZOPE_VERSION_MAXIMUM_TMP:=	${_ZOPE_VERSION_CHECK:C/.*-([1-9]\.[0-9]*)/\1/}
-_ZOPE_VERSION_MAXIMUM:=		${_ZOPE_VERSION_MAXIMUM_TMP:M[1-9].[0-9]}
-
-.if !empty(_ZOPE_VERSION_MINIMUM) && ( \
-		${_ZOPE_VERSION} < ${_ZOPE_VERSION_MINIMUM})
-_ZOPE_VERSION_NONSUPPORTED=	${_ZOPE_VERSION_MINIMUM} at least
-.elif !empty(_ZOPE_VERSION_MAXIMUM) && ( \
-		${_ZOPE_VERSION} > ${_ZOPE_VERSION_MAXIMUM})
-_ZOPE_VERSION_NONSUPPORTED=	${_ZOPE_VERSION_MAXIMUM} at most
-.endif
-
-# If we have an unsupported version of Zope, try another.
-.if defined(_ZOPE_VERSION_NONSUPPORTED)
-.if defined(ZOPE_VERSION)
-IGNORE=				needs Zope ${_ZOPE_VERSION_NONSUPPORTED}.\
-					But you specified ${_ZOPE_VERSION}
-.else
-.undef _ZOPE_VERSION
-.for ver in ${_ZOPE_ALLBRANCHES}
-__VER=		${ver}
-.if !defined(_ZOPE_VERSION) && \
-	!(!empty(_ZOPE_VERSION_MINIMUM) && ( \
-		${__VER} < ${_ZOPE_VERSION_MINIMUM})) && \
-	!(!empty(_ZOPE_VERSION_MAXIMUM) && ( \
-		${__VER} > ${_ZOPE_VERSION_MAXIMUM}))
-_ZOPE_VERSION=	${ver}
-.endif
-.endfor
-.if !defined(_ZOPE_VERSION)
-IGNORE=				needs an unsupported version of Zope
-_ZOPE_VERSION=	${_ZOPE_PORTBRANCH} # just to avoid version sanity checking.
-.endif
-.endif	# defined(ZOPE_VERSION)
-.endif	# defined(_ZOPE_VERSION_NONSUPPORTED)
-
-ZOPE_VERSION?=	${_ZOPE_VERSION}
-
-PYTHON_VERSION=	python2.7
-.endif	# defined(USE_ZOPE)
-
 
 # Determine version number of Python to use
-.if !defined(PYTHON_DEFAULT_VERSION)
-. if exists(${LOCALBASE}/bin/python)
+.include "${PORTSDIR}/Mk/bsd.default-versions.mk"
+
+.if defined(PYTHON_DEFAULT_VERSION)
+WARNING+=	"PYTHON_DEFAULT_VERSION is defined, consider using DEFAULT_VERSIONS=python=${PYTHON_DEFAULT_VERSION:S/^python//} instead"
+.endif
+.if defined(PYTHON2_DEFAULT_VERSION)
+WARNING+=	"PYTHON2_DEFAULT_VERSION is defined, consider using DEFAULT_VERSIONS=python2=${PYTHON2_DEFAULT_VERSION:S/^python//} instead"
+.endif
+.if defined(PYTHON3_DEFAULT_VERSION)
+WARNING+=	"PYTHON3_DEFAULT_VERSION is defined, consider using DEFAULT_VERSIONS=python3=${PYTHON3_DEFAULT_VERSION:S/^python//} instead"
+.endif
+
+.if exists(${LOCALBASE}/bin/python)
 _PYTHON_DEFAULT_VERSION!=	(${LOCALBASE}/bin/python -c \
 							'import sys; print(sys.version[:3])' 2> /dev/null \
 							|| ${ECHO_CMD} ${_PYTHON_PORTBRANCH}) | ${TAIL} -1
-. else
-_PYTHON_DEFAULT_VERSION=	${_PYTHON_PORTBRANCH}
-. endif
-PYTHON_DEFAULT_VERSION=		python${_PYTHON_DEFAULT_VERSION}
+.if defined(PYTHON_DEFAULT) && (${PYTHON_DEFAULT} != ${_PYTHON_DEFAULT_VERSION})
+WARNING+=	"Your requested default python version ${PYTHON_DEFAULT} is different from the installed default python interpreter version ${_PYTHON_DEFAULT_VERSION}"
 .endif
+PYTHON_DEFAULT_VERSION=		python${_PYTHON_DEFAULT_VERSION}
+.else
+PYTHON_DEFAULT_VERSION=		python${PYTHON_DEFAULT}
+.endif # exists(${LOCALBASE}/bin/python)
 
-.if ${PYTHON_DEFAULT_VERSION:R} == "python2"
+# Is only a meta-port version defined?
+.if ${PYTHON_DEFAULT_VERSION} == "python2"
+PYTHON2_DEFAULT_VERSION?=	python${PYTHON2_DEFAULT}
+.elif ${PYTHON_DEFAULT_VERSION:R} == "python2"
 PYTHON2_DEFAULT_VERSION=	${PYTHON_DEFAULT_VERSION}
 .else
-PYTHON2_DEFAULT_VERSION?=	python2.7
+PYTHON2_DEFAULT_VERSION?=	python${PYTHON2_DEFAULT}
 .endif
 
-.if ${PYTHON_DEFAULT_VERSION:R} == "python3"
-PYTHON3_DEFAULT_VERSION=	${PYTHON_DEFAULT_VERSION}
+.if ${PYTHON_DEFAULT_VERSION} == "python3"
+PYTHON3_DEFAULT_VERSION?=	python${PYTHON3_DEFAULT}
+.elif ${PYTHON_DEFAULT_VERSION:R} == "python3"
+ PYTHON3_DEFAULT_VERSION=	${PYTHON_DEFAULT_VERSION}
 .else
-PYTHON3_DEFAULT_VERSION?=	python3.3
+PYTHON3_DEFAULT_VERSION?=	python${PYTHON3_DEFAULT}
 .endif
 
 .if defined(PYTHON_VERSION)
@@ -325,6 +278,14 @@ USE_PYTHON=		yes
 USE_PYTHON_BUILD=	yes
 USE_PYTHON_RUN=		yes
 .endif	# !defined(USE_PYTHON)
+
+.if ${USE_PYTHON} == "2"
+USE_PYTHON=			${PYTHON2_DEFAULT_VERSION:S/^python//}
+_WANTS_META_PORT=	2
+.elif ${USE_PYTHON} == "3"
+USE_PYTHON=			${PYTHON3_DEFAULT_VERSION:S/^python//}
+_WANTS_META_PORT=	3
+.endif  # ${USE_PYTHON} == "2"
 
 # Validate Python version whether it meets USE_PYTHON version restriction.
 _PYTHON_VERSION_CHECK:=			${USE_PYTHON:C/^([1-9]\.[0-9])$/\1-\1/}
@@ -534,12 +495,16 @@ PYSETUP?=				setup.py
 PYDISTUTILS_CONFIGUREARGS?=
 PYDISTUTILS_BUILDARGS?=
 PYDISTUTILS_INSTALLARGS?=	-c -O1 --prefix=${PREFIX}
+.if !defined(NO_STAGE)
+PYDISTUTILS_INSTALLARGS+=	--root=${STAGEDIR}
+.endif
 PYDISTUTILS_PKGNAME?=	${PORTNAME}
 PYDISTUTILS_PKGVERSION?=${PORTVERSION}
 PYDISTUTILS_EGGINFO?=	${PYDISTUTILS_PKGNAME:C/[^A-Za-z0-9.]+/_/g}-${PYDISTUTILS_PKGVERSION:C/[^A-Za-z0-9.]+/_/g}-py${PYTHON_VER}.egg-info
 PYDISTUTILS_EGGINFODIR?=${PYTHONPREFIX_SITELIBDIR}
 
 .if !defined(PYDISTUTILS_NOEGGINFO) && \
+	!defined(PYDISTUTILS_AUTOPLIST) && \
 	(defined(INSTALLS_EGGINFO) ||	\
 		(defined(USE_PYDISTUTILS) && \
 		 ${USE_PYDISTUTILS} != "easy_install")) && \
@@ -549,22 +514,57 @@ PLIST_FILES+=	${PYDISTUTILS_EGGINFODIR:S;${PREFIX}/;;}/${egg}
 . endfor
 .endif
 
+.if defined(PYDISTUTILS_AUTOPLIST) && defined(USE_PYDISTUTILS)
+_PYTHONPKGLIST=				${WRKDIR}/.PLIST.pymodtmp
+PYDISTUTILS_INSTALLARGS:=	--record ${_PYTHONPKGLIST} \
+							${PYDISTUTILS_INSTALLARGS}
+
+_RELSITELIBDIR=	${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}
+_RELLIBDIR=		${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
+
+add-plist-post:	add-plist-pymod
+add-plist-pymod:
+	@{ ${ECHO_CMD} "#mtree"; ${CAT} ${MTREE_FILE}; } | ${TAR} tf - | \
+		${SED} '/^\.$$/d' > ${WRKDIR}/.localmtree
+	@${ECHO_CMD} "${_RELSITELIBDIR}" >> ${WRKDIR}/.localmtree
+	@${ECHO_CMD} "${_RELLIBDIR}" >> ${WRKDIR}/.localmtree
+	@${SED} 's|^${PREFIX}/||' ${_PYTHONPKGLIST} | ${SORT} >> ${TMPPLIST}
+	@${SED} -e 's|^${PREFIX}/\(.*\)/\(.*\)|\1|' ${_PYTHONPKGLIST} | \
+		${AWK} '{ num = split($$0, a, "/"); res=""; \
+					for(i = 1; i <= num; ++i) { \
+						if (i == 1) res = a[i]; \
+						else res = res "/" a[i]; \
+						print res; \
+					} \
+				}' | \
+		while read line; do \
+			${GREP} -qw "^$${line}$$" ${WRKDIR}/.localmtree || { \
+				[ -n "$${line}" ] && \
+				${ECHO_CMD} "@unexec rmdir \"%D/$${line}\" 2>/dev/null || true"; \
+			}; \
+		done | ${SORT} | uniq | ${SORT} -r >> ${TMPPLIST}
+
+.else
+.if ${PYTHON_REL} >= 320 && defined(PYTHON_PY3K_PLIST_HACK)
+# When Python version is 3.2+ we rewrite all the filenames
+# of TMPPLIST that end with .py[co], so that they conform
+# to PEP 3147 (see http://www.python.org/dev/peps/pep-3147/)
+PYMAGICTAG=		${PYTHON_CMD} -c 'import imp; print(imp.get_tag())'
+add-plist-post:
+	@${AWK} '\
+		/\.py[co]$$/ && !($$0 ~ "/" pc "/") {id = match($$0, /\/[^\/]+\.py[co]$$/); if (id != 0) {d = substr($$0, 1, RSTART - 1); dirs[d] = 1}; sub(/\.py[co]$$/,  "." mt "&"); sub(/[^\/]+\.py[co]$$/, pc "/&"); print; next} \
+		/^@dirrm / {d = substr($$0, 8); if (d in dirs) {print $$0 "/" pc}; print $$0; next} \
+		{print} \
+		END {if (sp in dirs) {print "@dirrm " sp "/" pc}} \
+		' \
+		pc="__pycache__" mt="$$(${PYMAGICTAG})" sp="${PYTHON_SITELIBDIR:S,${PYTHONBASE}/,,g}" \
+		${TMPPLIST} > ${TMPPLIST}.pyc_tmp
+	@${MV} ${TMPPLIST}.pyc_tmp ${TMPPLIST}
+.endif # ${PYTHON_REL} >= 320 && defined(PYTHON_PY3K_PLIST_HACK)
+.endif # defined(PYDISTUTILS_AUTOPLIST) && defined(USE_PYDISTUTILS)
+
 # Fix for programs that build python from a GNU auto* environment
 CONFIGURE_ENV+=	PYTHON="${PYTHON_CMD}"
-
-# Zope-related variables
-.if defined(USE_ZOPE)
-.if ${ZOPE_VERSION} == "2.13"
-ZOPE_DEPENDS=	zope213>0:${PORTSDIR}/www/zope213
-.else
-check-makevars::
-	@${ECHO} "Makefile error: bad value for ZOPE_VERSION: ${ZOPE_VERSION}."
-	@${ECHO} "Legal values are: 2.13 (default)"
-	@${FALSE}
-.endif
-ZOPEBASEDIR?=			${PREFIX}/${SZOPEBASEDIR}
-ZOPEPRODUCTDIR?=		Products
-.endif
 
 # Python 3rd-party modules
 PYGAME=			${PYTHON_PKGNAMEPREFIX}game>0:${PORTSDIR}/devel/py-game
@@ -578,17 +578,19 @@ PYTHON_NO_DEPENDS?=		NO
 .if ${PYTHON_NO_DEPENDS} == "NO"
 .if defined(USE_PYTHON_BUILD)
 BUILD_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR} \
-		python:${PORTSDIR}/lang/python
+				python:${PORTSDIR}/lang/python
+.if defined(_WANTS_META_PORT)
+BUILD_DEPENDS+=	python${_WANTS_META_PORT}:${PORTSDIR}/lang/python${_WANTS_META_PORT}
+.endif
 .endif
 .if defined(USE_PYTHON_RUN)
 RUN_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR} \
-		python:${PORTSDIR}/lang/python
+				python:${PORTSDIR}/lang/python
+.if defined(_WANTS_META_PORT)
+RUN_DEPENDS+=	python${_WANTS_META_PORT}:${PORTSDIR}/lang/python${_WANTS_META_PORT}
+.endif
 .endif
 .endif		# ${PYTHON_NO_DEPENDS} == "NO"
-
-.if defined(USE_ZOPE)
-RUN_DEPENDS+=	${ZOPE_DEPENDS}
-.endif
 
 # set $PREFIX as Python's one
 .if defined(USE_PYTHON_PREFIX)
@@ -603,12 +605,6 @@ PLIST_SUB+=		PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;} \
 				PYTHON_PLATFORM=${PYTHON_PLATFORM} \
 				PYTHON_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;} \
 				PYTHON_VERSION=${PYTHON_VERSION}
-
-# Zope specific substitutions
-.if defined(USE_ZOPE)
-PLIST_SUB+=		ZOPEBASEDIR=${SZOPEBASEDIR} \
-				ZOPEPRODUCTDIR=${SZOPEBASEDIR}/${ZOPEPRODUCTDIR}
-.endif
 
 # Twisted specific routines
 .if defined(USE_TWISTED) || defined(USE_TWISTED_BUILD) || defined(USE_TWISTED_RUN)

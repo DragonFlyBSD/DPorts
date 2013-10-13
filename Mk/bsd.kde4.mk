@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.kde4.mk 322300 2013-07-04 23:34:32Z rakuco $
+# $FreeBSD: Mk/bsd.kde4.mk 329768 2013-10-08 09:28:52Z makc $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Kde_Pre_Include)
 
@@ -305,7 +305,9 @@ IGNORE=				can't be installed: unknown USE_KDE4 component '${component}'
 post-install:	post-install-sharedmime
 . if !target(post-install-sharedmime)
 post-install-sharedmime:
+.  if defined(NO_STAGE)
 	@-${LOCALBASE}/bin/update-mime-database ${KDE4_PREFIX}/share/mime
+.  endif
 	@${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-mime-database %D/share/mime > /dev/null || /usr/bin/true" >> ${TMPPLIST}
 	@${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-mime-database %D/share/mime > /dev/null || /usr/bin/true" >> ${TMPPLIST}
 . endif

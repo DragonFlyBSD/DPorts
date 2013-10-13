@@ -1,6 +1,6 @@
 #
 # $MBSDlabs: portmk/bsd.efl.mk,v 1.17 2006/10/02 14:57:48 stas Exp $
-# $FreeBSD: Mk/bsd.efl.mk 322288 2013-07-04 20:31:44Z gblach $
+# $FreeBSD: Mk/bsd.efl.mk 328658 2013-09-29 09:31:56Z gblach $
 #
 # bsd.efl.mk - Support for Enlightenment Foundation Libraries (EFL)
 #
@@ -344,7 +344,7 @@ _USE_EFL_ECORE_UQ+=	${COMP}
 . endfor
 
 . for COMP in ${_USE_EFL_ECORE_UQ}
-LIB_DEPENDS+=	${_ecore_${COMP}_NAME}.${_ecore_VERSION}:${PORTSDIR}/${_ecore_${COMP}_CATEGORY}/${_ecore_${COMP}_PORTNAME}
+LIB_DEPENDS+=	lib${_ecore_${COMP}_NAME}.so.${_ecore_VERSION}:${PORTSDIR}/${_ecore_${COMP}_CATEGORY}/${_ecore_${COMP}_PORTNAME}
 . endfor
 
 .endif #USE_EFL_ECORE
@@ -388,7 +388,7 @@ _USE_EFL_UQ+=	${LIB}
 # define dependencies
 #
 .for LIB in ${_USE_EFL_UQ}
-LIB_DEPENDS+=	${_${LIB}_SLIB}.${_${LIB}_VERSION}:${PORTSDIR}/${_${LIB}_CATEGORY}/${_${LIB}_PORTNAME}
+LIB_DEPENDS+=	lib${_${LIB}_SLIB}.so.${_${LIB}_VERSION}:${PORTSDIR}/${_${LIB}_CATEGORY}/${_${LIB}_PORTNAME}
 .endfor
 
 #

@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl
 #
-# $FreeBSD: ports/Tools/make_index,v 1.15 2012/11/17 05:54:18 svnexp Exp $
+# $FreeBSD: Tools/make_index 329740 2013-10-07 21:32:30Z bdrewery $
 #
 # INDEX builds visit each port once and write out each port's
 # *-depends as a list of directories, using 'make describe'.  This

@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 325846 2013-09-01 09:09:00Z koobs $
+# $FreeBSD: Mk/bsd.sites.mk 329208 2013-10-03 16:34:28Z flo $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -54,11 +54,6 @@ MASTER_SITE_AFTERSTEP+= \
 
 .if !defined(IGNORE_MASTER_SITE_ALSA)
 MASTER_SITE_ALSA+= \
-	ftp://ftp.silug.org/pub/alsa/%SUBDIR%/ \
-	ftp://ftp.task.gda.pl/pub/linux/misc/alsa/%SUBDIR%/ \
-	ftp://gd.tuwien.ac.at/opsys/linux/alsa/%SUBDIR%/ \
-	http://dl.ambiweb.de/mirrors/ftp.alsa-project.org/%SUBDIR%/ \
-	http://mirrors.zerg.biz/alsa/%SUBDIR%/ \
 	http://alsa.cybermirror.org/%SUBDIR%/ \
 	ftp://ftp.alsa-project.org/pub/%SUBDIR%/
 .endif

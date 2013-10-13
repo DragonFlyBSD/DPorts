@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.licenses.mk,v 1.14 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.licenses.mk 328289 2013-09-25 13:29:12Z bdrewery $
 
 Licenses_Include_MAINTAINER=         portmgr@FreeBSD.org
 
@@ -749,19 +749,18 @@ PLIST_FILES+=	${_LICENSE_DIR_REL}/${lic}
 .endif
 
 install-license:
-	@${MKDIR} ${_LICENSE_DIR}
-	@${INSTALL_DATA} ${_LICENSE_CATALOG_TMP} ${_LICENSE_CATALOG}
-	@${INSTALL_DATA} ${_LICENSE_REPORT_TMP} ${_LICENSE_REPORT}
+	@${MKDIR} ${STAGEDIR}${_LICENSE_DIR}
+	@${INSTALL_DATA} ${_LICENSE_CATALOG_TMP} ${STAGEDIR}${_LICENSE_CATALOG}
+	@${INSTALL_DATA} ${_LICENSE_REPORT_TMP} ${STAGEDIR}${_LICENSE_REPORT}
 .if ${_LICENSE_COMB} == "single"
-	@${INSTALL_DATA} ${_LICENSE_FILE} ${_LICENSE_DIR}/${_LICENSE}
+	@${INSTALL_DATA} ${_LICENSE_FILE} ${STAGEDIR}${_LICENSE_DIR}/${_LICENSE}
 .else
 .	for lic in ${_LICENSE}
-	@${INSTALL_DATA} ${_LICENSE_FILE_${lic}} ${_LICENSE_DIR}/${lic}
+	@${INSTALL_DATA} ${_LICENSE_FILE_${lic}} ${STAGEDIR}${_LICENSE_DIR}/${lic}
 .	endfor
 .endif
 # XXX @dirrmtry entry must be here (no way to do with PLIST_* vars)
-# XXX Important, keep the whitespace behind "@cwd "!
-	@${ECHO_CMD} "@cwd " >> ${TMPPLIST}
+	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dirrm ${_LICENSE_DIR_REL}" >> ${TMPPLIST}
 	@${ECHO_CMD} "@unexec rmdir %D/share/licenses 2>/dev/null || true" >> ${TMPPLIST}
 

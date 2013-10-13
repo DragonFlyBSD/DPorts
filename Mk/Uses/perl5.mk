@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/perl5.mk 326295 2013-09-04 16:54:39Z az $
+# $FreeBSD: Mk/Uses/perl5.mk 328373 2013-09-26 15:52:38Z sunpoet $
 #
 # Provide support to use perl5
 #
@@ -46,7 +46,18 @@ USE_PERL5?=	run build
 PERL_VERSION!=	perl -e 'printf "%vd\n", $$^V;'
 .endif
 .else
-PERL_VERSION?=	5.14.4
+.include "${PORTSDIR}/Mk/bsd.default-versions.mk"
+.if ${PERL5_DEFAULT} == 5.12
+PERL_VERSION=	5.12.5
+.elif ${PERL5_DEFAULT} == 5.14
+PERL_VERSION=	5.14.4
+.elif ${PERL5_DEFAULT} == 5.16
+PERL_VERSION=	5.16.3
+.elif ${PERL5_DEFAULT} == 5.18
+PERL_VERSION=	5.18.1
+.else
+IGNORE=	Invalid perl5 version ${PERL5_DEFAULT}
+.endif
 .endif
 
 PERL_VER?=	${PERL_VERSION:C/\.[0-9]+$//}
@@ -141,14 +152,16 @@ _INCLUDE_USES_PERL5_POST_MK=	yes
 PLIST_SUB+=	PERL_VERSION=${PERL_VERSION} \
 		PERL_VER=${PERL_VER} \
 		PERL_ARCH=${PERL_ARCH} \
+		PERL5_MAN3=lib/perl5/${PERL_VER}/man/man3 \
 		SITE_PERL=${SITE_PERL_REL}
 
 # handle perl5 specific manpages
-.for sect in 1 2 3 4 5 6 7 8 9
+.for sect in 3
 .if defined(P5MAN${sect})
 _MANPAGES+=	${P5MAN${sect}:S%^%${PREFIX}/lib/perl5/${PERL_VER}/man/man${sect}/%}
 .endif
 .endfor
+MANDIRS+=	${PREFIX}/lib/perl5/${PERL_VER}
 
 .if ${_USE_PERL5:Mmodbuild} || ${_USE_PERL5:Mmodbuildtiny}
 _USE_PERL5+=		configure

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/shared-mime-info.mk 315953 2013-04-17 09:26:39Z kwm $
+# $FreeBSD: Mk/Uses/shared-mime-info.mk 328714 2013-09-29 17:17:57Z kwm $
 #
 # handle dependency depends on shared-mime-info and package regen
 #
@@ -23,8 +23,10 @@ RUN_DEPENDS+=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 post-install: shared-mime-post-install
 
 shared-mime-post-install:
+.if defined(NO_STAGE)
 # run for port post-install
 	@-update-mime-database ${PREFIX}/share/mime
+.endif
 # plist entries for packages.
 	@${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-mime-database %D/share/mime" \
 		>> ${TMPPLIST}; \

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.options.mk 324101 2013-08-01 12:32:52Z mat $
+# $FreeBSD: Mk/bsd.options.mk 329293 2013-10-04 11:42:38Z bdrewery $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -70,7 +70,7 @@
 # WITHOUT					- Unset options from the command line
 #
 #
-# The following knobs are there to simplfy the handling of OPTIONS in simple
+# The following knobs are there to simplify the handling of OPTIONS in simple
 # cases :
 #
 # OPTIONS_SUB				When defined it will add to PLIST_SUB:
@@ -93,13 +93,17 @@
 # ${opt}_CMAKE_OFF			When option is disabled, it will add its content to
 #							the CMAKE_ARGS.
 #
-# For each of CFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ENV USES DISTFILES,
-# defining ${opt}_${variable} will add it to the actual variable when the
-# option is enabled.
+# ${opt}_USE=	FOO=bar		When option is enabled, it will  enable
+#							USE_FOO+= bar
+#
+# For each of CFLAGS CPPFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ARGS MAKE_ENV
+# ALL_TARGET INSTALL_TARGET USES DISTFILES PLIST_FILES PLIST_DIRS PLIST_DIRSTRY
+# EXTRA_PATCHES PATCHFILES PATCH_SITES CATEGORIES, defining ${opt}_${variable}
+# will add its content to the actual variable when the option is enabled.
 #
 # For each of the depends target PKG EXTRACT PATCH FETCH BUILD LIB RUN,
-# defining ${opt}_${deptype}_DEPENDS will add it to the actual dependency when
-# the option is enabled.
+# defining ${opt}_${deptype}_DEPENDS will add its content to the actual
+# dependency when the option is enabled.
 
 ##
 # Set all the options available for the ports, beginning with the
@@ -368,7 +372,7 @@ WITH_${opt}:=  true
 .endfor
 ###
 
-.for opt in ${COMPLETE_OPTIONS_LIST}
+.for opt in ${COMPLETE_OPTIONS_LIST} ${OPTIONS_SLAVE}
 # PLIST_SUB
 PLIST_SUB?=
 .  if defined(OPTIONS_SUB)
@@ -382,6 +386,12 @@ PLIST_SUB:=	${PLIST_SUB} ${opt}="@comment "
 .  endif
 
 .  if ${PORT_OPTIONS:M${opt}}
+.    if defined(${opt}_USE)
+.      for option in ${${opt}_USE}
+_u=		${option:C/=.*//g}
+USE_${_u:tu}+=	${option:C/.*=//g}
+.      endfor
+.    endif
 .    if defined(${opt}_CONFIGURE_ENABLE)
 CONFIGURE_ARGS+=	--enable-${${opt}_CONFIGURE_ENABLE}
 .    endif
@@ -394,7 +404,9 @@ CONFIGURE_ARGS+=	${${opt}_CONFIGURE_ON}
 .    if defined(${opt}_CMAKE_ON)
 CMAKE_ARGS+=	${${opt}_CMAKE_ON}
 .    endif
-.    for flags in CFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ENV USES DISTFILES
+.    for flags in CFLAGS CPPFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ARGS MAKE_ENV \
+                  ALL_TARGET INSTALL_TARGET USES DISTFILES PLIST_FILES PLIST_DIRS PLIST_DIRSTRY \
+                  EXTRA_PATCHES PATCHFILES PATCH_SITES CATEGORIES
 .      if defined(${opt}_${flags})
 ${flags}+=	${${opt}_${flags}}
 .      endif

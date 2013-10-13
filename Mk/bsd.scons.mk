@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.scons.mk,v 1.15 2012/11/17 05:54:18 svnexp Exp $
+# $FreeBSD: Mk/bsd.scons.mk 329119 2013-10-02 22:33:27Z bapt $
 #
 # bsd.scons.mk - Python-based SCons build system interface.
 # Author: Alexander Botero-Lowry <alexbl@FreeBSD.org>
@@ -61,6 +61,10 @@ SCONS_ENV?=	CCFLAGS="${CCFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 SCONS_ARGS?=
 SCONS_BUILDENV?=
 SCONS_TARGET?=
+
+.if !defined(NO_STAGE)
+SCONS_ARGS+=	${DESTDIRNAME}=${STAGEDIR}
+.endif
 
 #
 # SCONS_INSTALL_TARGET is the default target to be used when

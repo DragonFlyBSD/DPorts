@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.pbi.mk 313850 2013-03-11 00:51:39Z bdrewery $
+# $FreeBSD: Mk/bsd.pbi.mk 328450 2013-09-27 10:10:29Z kmoore $
 #
 # Creates a PBI file from a port with just 'make pbi'
 #
@@ -19,7 +19,7 @@ check-pbimanager:
 
 	@set -- chk=""; \
 	if [ -z "`which pbi_info`" ] ; then \
-		cd ${PORTSDIR}/ports-mgmt/pbi-manager && make install clean; \
+		cd ${PORTSDIR}/sysutils/pcbsd-utils && make install clean; \
 	fi
 
 pbi: pbi-generate

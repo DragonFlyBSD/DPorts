@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/desktop-file-utils.mk 323663 2013-07-25 19:07:37Z kwm $
+# $FreeBSD: Mk/Uses/desktop-file-utils.mk 328714 2013-09-29 17:17:57Z kwm $
 #
 # handle dependency depends on desktop-file-utils and package regen
 #
@@ -23,8 +23,10 @@ RUN_DEPENDS+=	update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 post-install: desktop-file-post-install
 
 desktop-file-post-install:
+.if defined(NO_STAGE)
 # run for port post-install
 	@-update-desktop-database -q
+.endif
 # plist entries for packages.
 	@${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database -q > /dev/null || /usr/bin/true" \
 		>> ${TMPPLIST}; \

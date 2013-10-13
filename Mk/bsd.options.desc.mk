@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 327151 2013-09-13 14:31:11Z sunpoet $
+# $FreeBSD: Mk/bsd.options.desc.mk 328005 2013-09-23 14:01:51Z rm $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -266,7 +266,9 @@ LIBEDIT_DESC?=		Command line editing via libedit
 LIBEV_DESC?=		High-performance events support via libev
 LIBEXIF_DESC?=		EXIF metadata support via libexif
 LIBEXTRACTOR_DESC?=	libextractor support
+LIBLO_DESC?=		Open Sound Control support via liblo
 LIBMNG_DESC?=		MNG animated images support via libmng
+LIBOIL_DESC?=		Inner loop optimizations support via liboil
 LIBPAPER_DESC?=		libpaper support
 LIBRSVG2_DESC?=		SVG vector graphics support via librsvg2
 LIBVIRT_DESC?=		libvirt support
@@ -469,4 +471,5 @@ XVIDEO_DESC?=		X11 Video extension library support
 XVMC_DESC?=		X11 XvMC video extension support
 YAML_DESC?=		YAML format or parser support
 ZLIB_DESC?=		zlib compression support
+ZOPE_DESC?=		Zope support
 ZSH_DESC?=		Install programmable completions for zsh

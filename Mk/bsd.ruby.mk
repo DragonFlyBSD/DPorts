@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.ruby.mk 322794 2013-07-11 20:07:33Z swills $
+# $FreeBSD: Mk/bsd.ruby.mk 328432 2013-09-27 06:18:40Z sunpoet $
 #
 
 .if !defined(Ruby_Include)
@@ -137,7 +137,13 @@ Ruby_Include_MAINTAINER=	ruby@FreeBSD.org
 # RUBY_ELISPDIR		- Installation path for emacs lisp files.
 #
 
-RUBY_DEFAULT_VER?=	1.9
+.include "${PORTSDIR}/Mk/bsd.default-versions.mk"
+
+.if defined(RUBY_DEFAULT_VER)
+WARNING+=	"RUBY_DEFAULT_VER is defined, consider using DEFAULT_VERSIONS=ruby=${RUBY_DEFAULT_VER} instead"
+.endif
+
+RUBY_DEFAULT_VER?=	${RUBY_DEFAULT}
 
 RUBY_VER?=		${RUBY_DEFAULT_VER}
 

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.linux-rpm.mk 319410 2013-05-30 09:11:52Z rene $
+# $FreeBSD: Mk/bsd.linux-rpm.mk 329540 2013-10-06 09:08:22Z antoine $
 #
 
 # Variables:
@@ -152,9 +152,9 @@ pre-install: linux-rpm-generate-plist
 
 .    if !target(linux-rpm-generate-plist)
 linux-rpm-generate-plist:
-	@cd ${WRKSRC} && \
-	${FIND} * ! -type d | ${SORT} > ${PLIST} && \
-	${FIND} * -type d | ${SORT} | ${SED} -e 's|^|@dirrm |' > ${PLIST}.dirs
+	cd ${WRKSRC} && \
+	${FIND} * ! -path "stage/*" ! -type d | ${SORT} > ${PLIST} && \
+	${FIND} * ! -path "stage*" -type d | ${SORT} | ${SED} -e 's|^|@dirrm |' > ${PLIST}.dirs
 	@${GREP} '^@dirrm' ${PORTSDIR}/emulators/linux_base-${_LINUX_BASE_SUFFIX}/pkg-plist | ${SED} 's:^@dirrmtry:@dirrm:g' | ${SORT} > ${PLIST}.shared-dirs
 	@${COMM} -1 -3 ${PLIST}.shared-dirs ${PLIST}.dirs | ${SORT} -r >> ${PLIST}
 .    endif
@@ -170,16 +170,16 @@ do-install:
 .	if ${BRANDELF_FILES}
 		@cd ${WRKSRC} && ${BRANDELF} -t Linux ${BRANDELF_FILES}
 .	endif
-	cd ${WRKSRC} && ${FIND} * -type d -exec ${MKDIR} "${PREFIX}/{}" \;
-	cd ${WRKSRC} && ${FIND} * ! -type d | ${CPIO} -pm -R root:wheel ${PREFIX}
+	cd ${WRKSRC} && ${FIND} * ! -path "stage*" -type d -exec ${MKDIR} "${STAGEDIR}${PREFIX}/{}" \;
+	cd ${WRKSRC} && ${FIND} * ! -path "stage/*" ! -type d | ${CPIO} -pm -R root:wheel ${STAGEDIR}${PREFIX}
 .  endif
 
 .  if !target(new-plist)
 new-plist: build
 	@${RM} -f ${PLIST}.new
 	@cd ${WRKSRC} && \
-		${FIND} * ! -type d | ${SORT} > ${PLIST}.new; \
-		${FIND} -d * -type d | ${SED} -e 's|^|@dirrm |' >> ${PLIST}.new; \
+		${FIND} * ! -path "stage/*" ! -type d | ${SORT} > ${PLIST}.new; \
+		${FIND} -d * ! -path "stage*" -type d | ${SED} -e 's|^|@dirrm |' >> ${PLIST}.new; \
 	done
 .  endif
 

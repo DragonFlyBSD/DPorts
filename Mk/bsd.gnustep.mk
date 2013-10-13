@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.gnustep.mk 325593 2013-08-29 13:03:20Z theraven $
+# $FreeBSD: Mk/bsd.gnustep.mk 329677 2013-10-07 10:32:02Z theraven $
 #
 # This file contains some variable definitions that are supposed to
 # make your life easier when dealing with ports related to the GNUstep.
@@ -418,11 +418,11 @@ do-install:
 .if defined(USE_GNUSTEP_MAKE_DIRS)
 .for i in ${USE_GNUSTEP_MAKE_DIRS}
 	@(cd ${INSTALL_WRKSRC}/${i}; . ${GNUSTEP_MAKEFILES}/GNUstep.sh; \
-		${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+		${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .endfor
 .else
 	@(cd ${INSTALL_WRKSRC}; . ${GNUSTEP_MAKEFILES}/GNUstep.sh; \
-		${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+		${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .endif
 .if defined(PACKAGE_BUILDING) || defined(BATCH) || defined(CLEAN_ROOT)
 	rm -rf /root/GNUstep
