@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: devel/boost-jam/Makefile 317037 2013-05-01 18:15:28Z bapt $
+# $FreeBSD: devel/boost-jam/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	boost-jam
 COMMENT=	Build tool from the boost.org
@@ -10,6 +10,7 @@ PLIST_FILES=	bin/bjam
 
 EXTRACT_AFTER_ARGS=	${DISTNAME}/tools/build/v2/engine
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../boost-all/common.mk"
 
 do-build:
