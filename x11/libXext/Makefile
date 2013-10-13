@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXext/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXext/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXext
 PORTVERSION=	1.3.2
@@ -77,4 +77,5 @@ MAN3=		DBE.3 \
 		XShmQueryExtension.3 \
 		XShmQueryVersion.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
