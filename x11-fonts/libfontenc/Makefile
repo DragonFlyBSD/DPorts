@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: x11-fonts/libfontenc/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/libfontenc/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libfontenc
 PORTVERSION=	1.1.2
