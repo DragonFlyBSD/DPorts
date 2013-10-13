@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: graphics/jpeg/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/jpeg/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	jpeg
 PORTVERSION=	8
@@ -17,8 +17,9 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	IJG's jpeg compression utilities
 
 CONFLICTS=	libjpeg-turbo-[0-9]*
-WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION2}
+NO_STAGE=	yes
 
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION2}
 DISTVERSION2=	8d
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
