@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/lcms2/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: graphics/lcms2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lcms2
 PORTVERSION=	2.5
@@ -27,6 +27,7 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 UTILS=		linkicc psicc transicc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJPEGICC}
