@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/mkfontdir/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/mkfontdir/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	mkfontdir
 PORTVERSION=	1.0.7
@@ -15,4 +15,5 @@ XORG_CAT=	app
 PLIST_FILES=	bin/mkfontdir
 MAN1=		mkfontdir.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
