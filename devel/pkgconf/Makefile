@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pkgconf/Makefile 325278 2013-08-23 19:35:53Z bapt $
+# $FreeBSD: devel/pkgconf/Makefile 327964 2013-09-23 10:14:09Z bapt $
 
 PORTNAME=	pkgconf
 PORTVERSION=	0.9.3
@@ -20,6 +20,6 @@ USE_BZIP2=	yes
 CONFLICTS_INSTALL=	pkg-config-*
 
 post-install:
-	${LN} -sf ${PREFIX}/bin/pkgconf ${PREFIX}/bin/pkg-config
+	${LN} -sf pkgconf ${STAGEDIR}${PREFIX}/bin/pkg-config
 
 .include <bsd.port.mk>
