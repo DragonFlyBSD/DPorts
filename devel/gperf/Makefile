@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/gperf/Makefile,v 1.21 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: devel/gperf/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	gperf
 PORTVERSION=	3.0.3
@@ -10,7 +10,9 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Generates perfect hash functions for sets of keywords
 
 LICENSE=	GPLv2
+
 CONFLICTS=	ace+tao-[0-9]*
+NO_STAGE=	yes
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
