@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: x11/xtrans/Makefile 325381 2013-08-26 10:07:01Z zeising $
+# $FreeBSD: x11/xtrans/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	xtrans
 PORTVERSION=	1.2.7
@@ -7,8 +7,6 @@ CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Abstract network code for X
-
-CONFLICTS=	libXtrans
 
 LICENSE=	MIT
 
