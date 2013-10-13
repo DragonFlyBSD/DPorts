@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/graphite2/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: graphics/graphite2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	graphite2
 PORTVERSION=	1.2.3
@@ -13,6 +13,7 @@ USES=		cmake iconv
 USE_LDCONFIG=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/pkgconfig,data/pkgconfig,g' ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e 's/.$${GRAPHITE_API_REVISION}.$${GRAPHITE_API_AGE}//g' ${WRKSRC}/src/CMakeLists.txt
