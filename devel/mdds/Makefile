@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: devel/mdds/Makefile 326795 2013-09-09 10:08:55Z sunpoet $
+# $FreeBSD: devel/mdds/Makefile 329286 2013-10-04 10:40:52Z bapt $
 
 PORTNAME=	mdds
 PORTVERSION=	0.9.0
@@ -24,13 +23,13 @@ do-configure:
 	    ${WRKSRC}/misc/mdds.pc.in > ${WRKSRC}/misc/mdds.pc
 
 do-install:
-	@${MKDIR} ${PREFIX}/include/mdds
-	@${MKDIR} ${PREFIX}/include/mdds/compat
-	@${MKDIR} ${PREFIX}/include/mdds/hash_container
-	@${INSTALL_DATA} ${WRKSRC}/include/mdds/*.hpp ${PREFIX}/include/mdds
-	@${INSTALL_DATA} ${WRKSRC}/include/mdds/*.inl ${PREFIX}/include/mdds
-	@${INSTALL_DATA} ${WRKSRC}/include/mdds/compat/*.hpp ${PREFIX}/include/mdds/compat
-	@${INSTALL_DATA} ${WRKSRC}/include/mdds/hash_container/*.hpp ${PREFIX}/include/mdds/hash_container
-	@${INSTALL_DATA} ${WRKSRC}/misc/mdds.pc ${PREFIX}/libdata/pkgconfig
+	@${MKDIR} ${STAGEDIR}${PREFIX}/include/mdds
+	@${MKDIR} ${STAGEDIR}${PREFIX}/include/mdds/compat
+	@${MKDIR} ${STAGEDIR}${PREFIX}/include/mdds/hash_container
+	@${INSTALL_DATA} ${WRKSRC}/include/mdds/*.hpp ${STAGEDIR}${PREFIX}/include/mdds
+	@${INSTALL_DATA} ${WRKSRC}/include/mdds/*.inl ${STAGEDIR}${PREFIX}/include/mdds
+	@${INSTALL_DATA} ${WRKSRC}/include/mdds/compat/*.hpp ${STAGEDIR}${PREFIX}/include/mdds/compat
+	@${INSTALL_DATA} ${WRKSRC}/include/mdds/hash_container/*.hpp ${STAGEDIR}${PREFIX}/include/mdds/hash_container
+	@${INSTALL_DATA} ${WRKSRC}/misc/mdds.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig
 
 .include <bsd.port.mk>
