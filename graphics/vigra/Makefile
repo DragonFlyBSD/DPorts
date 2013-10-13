@@ -1,5 +1,5 @@
-# Created by:                cartola (Carlos E. G. Carvalho)
-# $FreeBSD: graphics/vigra/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# Created by: cartola (Carlos E. G. Carvalho)
+# $FreeBSD: graphics/vigra/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	vigra
 PORTVERSION=	1.9.0
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=		HDF5 OPENEXR NUMPY
 OPTIONS_DEFAULT=	HDF5 OPENEXR
 NUMPY_DESC=		NumPy mathematical computing (USE Fortran/GCC46+)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHDF5}
