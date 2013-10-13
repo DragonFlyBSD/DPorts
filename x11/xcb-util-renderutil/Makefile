@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-renderutil/Makefile 326011 2013-09-02 15:26:23Z bapt $
+# $FreeBSD: x11/xcb-util-renderutil/Makefile 328166 2013-09-24 16:47:23Z garga $
 
 PORTNAME=	xcb-util-renderutil
 PORTVERSION=	0.3.8
@@ -8,19 +8,16 @@ MASTER_SITES=	http://xcb.freedesktop.org/dist/
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Convenience functions for the Render extension
 
-LIB_DEPENDS=	xcb-util:${PORTSDIR}/x11/xcb-util
-#BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf
+LIB_DEPENDS=	libxcb-util.so:${PORTSDIR}/x11/xcb-util
 
 USE_BZIP2=	yes
 USES=		gmake pkgconfig
 USE_XORG=	xcb xorg-macros
 USE_LDCONFIG=	yes
-#USE_XORG=	xau xdmcp
-#USE_AUTOTOOLS=	libtool
 
 GNU_CONFIGURE=	yes
-#CONFIGURE_ENV=	GPERF="${LOCALBASE}/bin/gperf"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$${libdir}/pkgconfig|$${prefix}/libdata/pkgconfig|' \
