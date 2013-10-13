@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: devel/readline/Makefile 321623 2013-06-23 08:46:58Z johans $
+# $FreeBSD: devel/readline/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	readline
 PORTVERSION=	6.2.${PATCHLEVEL}
@@ -33,6 +33,7 @@ PATCH_FILES+=	${PORTNAME}${PORTVERSION:R:S/.//}-${p:C/.*(...)$/\1/}
 .endfor
 PATCHLEVEL=	${PATCHES:Q:S/ /./g:E}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-configure:
