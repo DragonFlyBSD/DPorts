@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11/xcb-util/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: x11/xcb-util/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcb-util
 PORTVERSION=	0.3.9
@@ -19,6 +19,7 @@ USE_AUTOTOOLS=	libtool
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$${libdir}/pkgconfig|$${prefix}/libdata/pkgconfig|' \
