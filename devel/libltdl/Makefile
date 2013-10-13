@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libltdl
-# Date created:		23 January 2002
-# Whom:			Jeremy Norris <ishmael27x@yahoo.com>
-#
-# $FreeBSD: ports/devel/libltdl/Makefile,v 1.7 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: Jeremy Norris <ishmael27x@yahoo.com>
+# $FreeBSD: devel/libltdl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libltdl
 MASTERDIR=	${.CURDIR}/../../devel/libtool
@@ -25,4 +21,5 @@ DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
 INFO=		# empty
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
