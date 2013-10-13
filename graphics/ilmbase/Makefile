@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: graphics/ilmbase/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/ilmbase/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ilmbase
 PORTVERSION=	1.0.3
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=		THREAD
 OPTIONS_DEFAULT=	THREAD
 THREAD_DESC=		Enable multithreaded file I/O support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTHREAD}
