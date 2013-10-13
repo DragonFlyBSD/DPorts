@@ -1,5 +1,5 @@
 # Created by: Horance Chou <horance@freedom.ie.cycu.edu.tw>
-# $FreeBSD: devel/libffi/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/libffi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libffi
 PORTVERSION=	3.0.13
@@ -15,6 +15,7 @@ TEST_DEPENDS=	runtest:${PORTSDIR}/misc/dejagnu
 OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Include tools for test suite
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
