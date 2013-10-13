@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-fonts/dejavu/Makefile 325468 2013-08-27 16:51:00Z sunpoet $
+# $FreeBSD: x11-fonts/dejavu/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	dejavu
 PORTVERSION=	2.34
@@ -28,6 +28,7 @@ PORTDOCS=	README langcover.txt status.txt unicover.txt
 SUB_FILES=	pkg-message
 SUB_LIST=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLINKS}
