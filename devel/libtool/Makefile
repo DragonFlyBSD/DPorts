@@ -1,13 +1,9 @@
-# New ports collection makefile for:	libtool
-# Date created:		6 May 1998
-# Whom:			Motoyuki Kasahara <m-kasahr@sra.co.jp>
-#
-# $FreeBSD: devel/libtool/Makefile 325855 2013-09-01 13:02:56Z decke $
-#
+# Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
+# $FreeBSD: devel/libtool/Makefile 330102 2013-10-11 20:47:43Z ade $
 
 PORTNAME?=	libtool
 PORTVERSION=	2.4.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	libtool
@@ -28,6 +24,11 @@ INFO?=		libtool
 .if ${PORTNAME} != "libltdl"
 MAN1=		libtool.1 libtoolize.1
 .endif
+
+NO_STAGE=	yes
+
+post-extract:
+	@${RM} -f ${WRKSRC}/doc/*.info*
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|sed gsed|sed|g' \
