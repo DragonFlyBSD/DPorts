@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/mythes/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/mythes/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	mythes
 PORTVERSION=	1.2.3
