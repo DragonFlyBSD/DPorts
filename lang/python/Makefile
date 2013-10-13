@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: lang/python/Makefile 325399 2013-08-26 14:34:21Z lwhsu $
+# $FreeBSD: lang/python/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	python
 PORTVERSION=	${PYTHON_VER}
@@ -25,6 +25,7 @@ PLIST_FILES=	bin/2to3 \
 		bin/python-shared \
 		bin/python-shared-config
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_MAJOR_VER} == 2
