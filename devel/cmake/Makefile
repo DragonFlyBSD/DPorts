@@ -1,5 +1,5 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/cmake/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cmake
 PORTVERSION=	2.8.11.2
@@ -37,6 +37,7 @@ MAN1=		ccmake.1 \
 		ctest.1
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@(${FIND} ${WRKSRC}/Modules -name "*.cmake" -print0; \
 		${FIND} ${WRKSRC}/Tests -name "CMakeLists.txt" -print0 ) | \
