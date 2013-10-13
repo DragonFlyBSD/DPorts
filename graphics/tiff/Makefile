@@ -1,5 +1,5 @@
 # Created by: Richard Hwang <rhwang@bigpanda.com>, Mikhail Teterin <mi@aldan.algebra.com>, Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: graphics/tiff/Makefile 316270 2013-04-22 20:04:57Z dinoex $
+# $FreeBSD: graphics/tiff/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	tiff
 PORTVERSION=	4.0.3
@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		jbig:${PORTSDIR}/graphics/jbigkit
+
+NO_STAGE=	yes
 
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
