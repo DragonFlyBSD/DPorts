@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite3/Makefile 326593 2013-09-07 10:19:06Z sunpoet $
+# $FreeBSD: databases/sqlite3/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlite3
 PORTVERSION=	3.8.0.2
@@ -45,6 +45,7 @@ UNLOCK_NOTIFY_DESC=	Enable notification on unlocking
 THREADSAFE_DESC=	Build thread-safe library
 EXTENSION_DESC=		Allow loadable extensions
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PLIST_FILES=	bin/sqlite3 include/sqlite3.h include/sqlite3ext.h \
