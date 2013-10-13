@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libXmu/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-toolkits/libXmu/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	libXmu
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 PORTEPOCH=	1
 CATEGORIES=	x11-toolkits
 
@@ -12,4 +12,5 @@ COMMENT=	X Miscellaneous Utilities libraries
 XORG_CAT=	lib
 USE_XORG=	xproto:both x11 xt xext
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
