@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: x11-fonts/gentium-basic/Makefile 323427 2013-07-22 06:44:10Z bapt $
+# $FreeBSD: x11-fonts/gentium-basic/Makefile 328417 2013-09-26 21:37:32Z matthew $
 
 PORTNAME=	GentiumBasic
 PORTVERSION=	110
@@ -19,7 +19,7 @@ USE_TGZ=	yes
 XORG_CAT=	font
 
 FONTLIBPATH=	lib/X11/fonts
-FONTROOTDIR=	${PREFIX}/${FONTLIBPATH}
+FONTROOTDIR=	${STAGEDIR}${PREFIX}/${FONTLIBPATH}
 INSTALLS_TTF=	yes
 MEDIA_ID=	${PORTNAME}_${PORTVERSION}_tar
 NO_BUILD=	yes
@@ -34,7 +34,7 @@ PLIST_FILES=	${FONTLIBPATH}/${FONTDIR}/GenBasB.ttf \
 		${FONTLIBPATH}/${FONTDIR}/GenBkBasI.ttf \
 		${FONTLIBPATH}/${FONTDIR}/GenBkBasR.ttf
 
-SUB_LIST=	"FONTPATH=${FONTROOTDIR}/${FONTDIR}"
+SUB_LIST=	"FONTPATH=${PREFIX}/${FONTLIBPATH}/${FONTDIR}"
 SUB_FILES=	pkg-message
 
 DOCSLIST=	FONTLOG.txt GENTIUM-FAQ.txt OFL-FAQ.txt
@@ -48,9 +48,6 @@ do-configure:
 	@${DO_NADA}
 
 do-install: install-fonts install-docs
-	${ECHO_MSG}
-	${CAT} ${PKGMESSAGE}
-	${ECHO_MSG}
 
 install-fonts:
 	${MKDIR} ${FONTROOTDIR}/${FONTDIR}
@@ -58,8 +55,8 @@ install-fonts:
 
 install-docs:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${DOCSLIST:S,^,${WRKSRC}/,} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DOCSLIST:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
