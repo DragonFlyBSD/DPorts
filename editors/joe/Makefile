@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: editors/joe/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: editors/joe/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	joe
 PORTVERSION=	3.7
@@ -28,6 +28,7 @@ MAN1=		${PORTNAME}.1
 
 MANLANG=	"" ru
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
