@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-Parser/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/p5-XML-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Parser
 PORTVERSION=	2.41
@@ -34,6 +34,7 @@ EUCJP=		"@comment "
 SJIS=		"@comment "
 .endif
 
+NO_STAGE=	yes
 post-patch:
 .if defined(XMLPARSER_EUCJP)
 	@cd ${WRKSRC}/Parser/Encodings; \
