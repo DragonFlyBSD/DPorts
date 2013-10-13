@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libsigsegv
-# Date created:		28 May 2004
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/devel/libsigsegv/Makefile,v 1.19 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: Hye-Shik Chang
+# $FreeBSD: devel/libsigsegv/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libsigsegv
 PORTVERSION=	2.10
