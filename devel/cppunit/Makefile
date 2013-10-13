@@ -1,5 +1,5 @@
 # Created by: Graeme Cross <gcross@netspace.net.au>
-# $FreeBSD: devel/cppunit/Makefile 324853 2013-08-17 16:33:26Z bdrewery $
+# $FreeBSD: devel/cppunit/Makefile 329899 2013-10-09 13:47:48Z bdrewery $
 
 PORTNAME=	cppunit
 PORTVERSION=	1.12.1
@@ -9,27 +9,21 @@ MASTER_SITES=	SF
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	C++ port of the JUnit framework for unit testing
 
+OPTIONS_DEFINE=	DOXYGEN
+
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-.if defined(WITH_DOXYGEN)
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOXYGEN}
+BUILD_DEPENDS+=		doxygen:${PORTSDIR}/devel/doxygen
 CONFIGURE_ARGS+=	--enable-doc --enable-doxygen --enable-html-docs
-PLIST_SUB+=	HTMLDOCS="" PORTDOCS=""
+PLIST_SUB+=		HTMLDOCS="" PORTDOCS=""
 .else
 CONFIGURE_ARGS+=	--disable-doc --disable-doxygen
-PLIST_SUB+=	HTMLDOCS="@comment "
-.endif
-
-MAN1=		cppunit-config.1
-#MANCOMPRESSED=	no
-
-pre-everything::
-.if !defined(WITH_DOXYGEN)
-	@${ECHO_MSG}
-	@${ECHO_MSG} "You could define WITH_DOXYGEN if you want HTML documentation"
-	@${ECHO_MSG}
+PLIST_SUB+=		HTMLDOCS="@comment "
 .endif
 
 post-patch:
@@ -37,15 +31,13 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 post-install:
-	@${FIND} ${PREFIX}/include/cppunit ! -type d | \
-		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
-	@${FIND} ${PREFIX}/include/cppunit -type d | ${SORT} -r | \
-		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
-.if !defined(NOPORTDOCS) || defined(WITH_DOXYGEN)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/doc/FAQ ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/NEWS ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${FIND} ${STAGEDIR}${PREFIX}/include/cppunit ! -type d | \
+		${SED} 's,^${STAGEDIR}${PREFIX}/,,' >> ${TMPPLIST}
+	@${FIND} ${STAGEDIR}${PREFIX}/include/cppunit -type d | ${SORT} -r | \
+		${SED} 's,^${STAGEDIR}${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/doc/FAQ ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/NEWS ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
