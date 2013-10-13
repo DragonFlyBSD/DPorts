@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/font-misc-meltho/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/font-misc-meltho/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	font-misc-meltho
 PORTVERSION=	1.0.3
@@ -11,4 +11,5 @@ XORG_CAT=	font
 INSTALLS_TTF=	yes
 FONTDIR=	OTF
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
