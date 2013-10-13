@@ -1,7 +1,7 @@
 # Created by: gahr
-# $FreeBSD: devel/cmake-modules/Makefile 314670 2013-03-19 18:00:29Z makc $
+# $FreeBSD: devel/cmake-modules/Makefile 328700 2013-09-29 14:41:11Z rakuco $
 
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-modules
 LATEST_LINK=	cmake-modules
 
@@ -9,6 +9,7 @@ COMMENT=	Modules and Templates for CMake
 
 CMAKE_MODULES=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/Modules
 	${MKDIR} ${DATADIR}/Templates
