@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: math/fftw3/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: math/fftw3/Makefile 327746 2013-09-20 20:55:04Z bapt $
 #    $MCom: ports-experimental/math/fftw3/Makefile,v 1.1 2006/03/28 00:08:57 ahze Exp $
 
 PORTNAME=	fftw3
@@ -19,8 +19,8 @@ FFTW3_FLAVOR?=	default
 FFTW3_SUFX=
 
 GNU_CONFIGURE=	yes
-USES=	pathfix pkgconfig
-USE_PERL5_BUILD=yes
+USES=		pathfix perl5 pkgconfig
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS =	--enable-shared --enable-threads --disable-fortran
@@ -44,6 +44,7 @@ OPENMP_DESC=		Build OpenMP multithreaded libraries
 
 OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MOPENMP}
