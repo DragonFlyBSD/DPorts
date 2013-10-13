@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-backends/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/sane-backends/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.23
@@ -48,6 +48,7 @@ GROUPS=	saned
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include "Makefile.man"
 .include <bsd.port.options.mk>
 
