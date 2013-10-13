@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: x11-fonts/liberation-fonts-ttf/Makefile 323427 2013-07-22 06:44:10Z bapt $
+# $FreeBSD: x11-fonts/liberation-fonts-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	liberation-fonts-ttf
 PORTVERSION=	2.00.1
@@ -35,6 +35,7 @@ INSTDAT=	AUTHORS fonts.dir fonts.scale
 MKFONTSCL_CMD=	${LOCALBASE}/bin/mkfontscale
 MKFONTDIR_CMD=	${LOCALBASE}/bin/mkfontdir
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${MKFONTSCL_CMD}
 	${REINPLACE_CMD} -e 's|-misc-|-redhat-|' ${WRKSRC}/fonts.scale
