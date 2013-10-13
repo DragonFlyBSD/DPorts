@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: archivers/unzip/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: archivers/unzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	unzip
 PORTVERSION=	6.0
@@ -20,6 +20,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 CONFLICTS?=	unzip-iconv-[0-9]* zh-unzip-[0-9]* ko-unzip-[0-9]* ru-unzip-[0-9]*
 
+NO_STAGE=	yes
 MAKEFILE=	unix/Makefile
 MAKE_ARGS=	LF2="${STRIP}"
 .if defined(INSTALL_AS_INFOUNZIP)
