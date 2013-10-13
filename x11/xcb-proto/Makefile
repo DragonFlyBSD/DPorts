@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/xcb-proto/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xcb-proto/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcb-proto
 PORTVERSION=	1.8
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 
 DATADIR=	${PREFIX}/share/xcb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
