@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: math/lp_solve/Makefile 315797 2013-04-13 18:03:34Z bdrewery $
+# $FreeBSD: math/lp_solve/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	lp_solve
 PORTVERSION=	5.5.2.0
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 BUILDENV=	${SETENV} TMPDIR="${TMPDIR}"
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386" || ${ARCH} == "powerpc"
