@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: archivers/zip/Makefile 327223 2013-09-14 06:50:59Z sunpoet $
+# $FreeBSD: archivers/zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zip
 PORTVERSION=	3.0
@@ -17,6 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic
 
