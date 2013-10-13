@@ -1,8 +1,8 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 326389 2013-09-05 11:39:57Z bdrewery $
+# $FreeBSD: ports-mgmt/pkg/Makefile 329483 2013-10-05 17:52:42Z bapt $
 
 PORTNAME=	pkg
 DISTVERSION=	1.1.4
-PORTREVISION=	2
+PORTREVISION=	7
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://files.etoilebsd.net/pkg/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
@@ -19,50 +19,13 @@ USE_XZ=		yes
 # With no dependency at all
 NO_CCACHE=	yes
 USE_LDCONFIG=	yes
-MANCOMPRESSED=	yes
+USES=		uidfix
 
 MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null \
 		PORTREVISION=${PORTREVISION}
-USE_STAGE=	yes
 # Use a submake as 'deinstall install' needs to reevaluate PKG_CMD
 # so that pkg-static is used from the wrkdir
 USE_SUBMAKE=	yes
-
-MAN8=	pkg.8 \
-	pkg-add.8 \
-	pkg-annotate.8 \
-	pkg-autoremove.8 \
-	pkg-audit.8 \
-	pkg-backup.8 \
-	pkg-check.8 \
-	pkg-clean.8 \
-	pkg-convert.8 \
-	pkg-create.8 \
-	pkg-delete.8 \
-	pkg-fetch.8 \
-	pkg-info.8 \
-	pkg-install.8 \
-	pkg-lock.8 \
-	pkg-query.8 \
-	pkg-register.8 \
-	pkg-repo.8 \
-	pkg-rquery.8 \
-	pkg-search.8 \
-	pkg-set.8 \
-	pkg-shell.8 \
-	pkg-shlib.8 \
-	pkg-stats.8 \
-	pkg-update.8 \
-	pkg-updating.8 \
-	pkg-upgrade.8 \
-	pkg-version.8 \
-	pkg-which.8
-MAN5=	pkg.conf.5 \
-	pkg-repository.5
-MAN3=	pkg_printf.3
-MLINKS=	pkg-delete.8 pkg-remove.8 \
-	pkg-lock.8 pkg-unlock.8 \
-	pkg.8 pkg-static.8
 
 .include <bsd.port.pre.mk>
 
@@ -117,7 +80,6 @@ PERIODIC_SECURITY=	410.pkg-audit 460.pkg-checksum
 PERIODIC_ALL=		${PERIODIC_DAILY} ${PERIODIC_SECURITY}
 
 post-install:
-	@${INSTALL_DATA} ${WRKSRC}/pkg/pkg.conf.sample ${PREFIX}/etc
-	@${CAT} ${PKGMESSAGE}
+	@${INSTALL_DATA} ${WRKSRC}/pkg/pkg.conf.sample ${STAGEDIR}${PREFIX}/etc
 
 .include <bsd.port.post.mk>

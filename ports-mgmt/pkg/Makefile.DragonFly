@@ -1,1 +1,7 @@
 MAKE_ENV+= WITH_BUNDLED_LIBELF=yes
+
+post-stage:
+	@${INSTALL_DATA} ${WRKSRC}/libpkg/pkg_printf.3 \
+		${STAGEDIR}${PREFIX}/man/man3/
+	@${INSTALL_DATA} ${WRKSRC}/libpkg/pkg-repository.5 \
+		${STAGEDIR}${PREFIX}/man/man5/
