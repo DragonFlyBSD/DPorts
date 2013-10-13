@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dmake
-# Date created:		31 July 1995
-# Whom:			nils@guru.ims.uni-stuttgart.de
-#
-# $FreeBSD: ports/devel/dmake/Makefile,v 1.33 2012/11/17 05:55:41 svnexp Exp $
-#
+# Created by: nils@guru.ims.uni-stuttgart.de
+# $FreeBSD: devel/dmake/Makefile 329283 2013-10-04 10:25:40Z bapt $
 
 PORTNAME=	dmake
 PORTVERSION=	4.12.2
@@ -20,9 +16,7 @@ USE_BZIP2=        yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--datarootdir=${DATADIR}
 
-MAN1=		dmake.1
-
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/dmake.tf ${PREFIX}/man/man1/dmake.1
+	${INSTALL_MAN} ${WRKSRC}/man/dmake.tf ${STAGEDIR}${PREFIX}/man/man1/dmake.1
 
 .include <bsd.port.mk>
