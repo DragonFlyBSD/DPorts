@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-fonts/libXfont/Makefile 324721 2013-08-14 13:59:30Z zeising $
+# $FreeBSD: x11-fonts/libXfont/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	libXfont
 PORTVERSION=	1.4.6
@@ -16,4 +16,5 @@ USE_XORG=	xproto:both xtrans fontsproto:both fontenc
 
 CONFIGURE_ARGS=--without-xmlto --disable-devel-docs
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
