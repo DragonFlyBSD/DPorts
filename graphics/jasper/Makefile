@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/jasper/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/jasper/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	jasper
 PORTVERSION=	1.900.1
@@ -15,6 +15,8 @@ COMMENT=	An implementation of the codec specified in the JPEG-2000 standard
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
 
 LICENSE=	MIT
+
+NO_STAGE=	yes
 
 USE_AUTOTOOLS=	libtool
 USE_ZIP=	yes
