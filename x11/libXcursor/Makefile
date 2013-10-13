@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXcursor/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXcursor/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXcursor
 PORTVERSION=	1.1.14
@@ -49,4 +49,5 @@ MAN3=		Xcursor.3 \
 		XcursorSetTheme.3 \
 		XcursorGetTheme.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
