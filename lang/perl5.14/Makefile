@@ -1,9 +1,9 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.14/Makefile 325216 2013-08-22 17:03:43Z sunpoet $
+# $FreeBSD: lang/perl5.14/Makefile 329776 2013-10-08 11:52:54Z az $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	CPAN \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -27,6 +27,7 @@ CONFLICTS=	perl-5.12.* perl-threaded-5.12.* \
 OPTIONS_DEFINE=	DEBUG GDBM PERL_MALLOC PERL_64BITINT THREADS PTHREAD \
 		MULTIPLICITY SITECUSTOMIZE USE_PERL
 OPTIONS_DEFAULT=	PERL_64BITINT PTHREAD USE_PERL
+OPTIONS_SUB=
 GDBM_DESC=	GDBM_File extension
 PERL_MALLOC_DESC=	Use Perl malloc
 PERL_64BITINT_DESC=	Use 64 bit integers (on i386)
@@ -66,7 +67,6 @@ LOCALE_CLEANUP=	LANG="" LC_ALL="" LC_COLLATE="" LC_CTYPE="" \
 CONFIGURE_ENV+=	${LOCALE_CLEANUP} UNAME_v="$$(uname -v | sed 'y/=/ /')"
 MAKE_ENV+=	${LOCALE_CLEANUP}
 
-.include "Makefile.man"
 .include <bsd.port.pre.mk>
 
 .if defined(PERL_VENDOR_PREFIX)
@@ -79,9 +79,13 @@ CONFIGURE_ARGS+=	\
 	-Dvendorman1dir=${PERL_VENDOR_PREFIX}/man/man1
 .endif
 
+MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}/perl
+MANDIRS+=	${MAN3PREFIX}
+
 PLIST_SUB+=	PERL_VERSION=${PERL_VERSION} \
 		PERL_VER=${PERL_VER} \
 		PERL_ARCH=${PERL_ARCH} \
+		MAN3=${MAN3PREFIX:S|^${LOCALBASE}/||}/man/man3 \
 		SITE_PERL=${SITE_PERL:S|^${LOCALBASE}/||}
 
 .if ${PORT_OPTIONS:MDEBUG}
@@ -94,11 +98,9 @@ CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 
 .if ${PORT_OPTIONS:MGDBM}
 CONFIGURE_ARGS+=	-Di_gdbm
-LIB_DEPENDS+=		gdbm:${PORTSDIR}/databases/gdbm
-PLIST_SUB+=		GDBM=""
+LIB_DEPENDS+=		libgdbm.so:${PORTSDIR}/databases/gdbm
 .else
 CONFIGURE_ARGS+=	-Ui_gdbm
-PLIST_SUB+=		GDBM="@comment "
 .endif
 
 .if ${OSVERSION} >= 900022
@@ -112,7 +114,6 @@ PLIST_SUB+=	MANCONF="@comment "
 #XXX IGNORE=	Threaded perl does not pass tests on ${ARCH}
 #XXX .endif
 CONFIGURE_ARGS+=	-Dusethreads=y
-PKGNAMESUFFIX=		-threaded
 WITH_PTHREAD=		yes
 # it seems perl malloc has problems with threaded perl on FreeBSD
 PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
@@ -147,11 +148,6 @@ LINK_USRBIN=	no
 
 LATEST_LINK=	perl
 
-.if ${PORT_OPTIONS:MGDBM}
-MAN3+=	GDBM_File.3
-.endif
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}/perl
-
 BSDPAN_DEST=	${PREFIX}/lib/perl5/${PERL_VER}/BSDPAN
 BSDPAN_FILES=	BSDPAN.pm BSDPAN/Override.pm Config.pm \
 		ExtUtils/MM_Unix.pm \
@@ -168,7 +164,7 @@ post-patch:
 		-e 's|%%PERL_VERSION%%|${PERL_VERSION}|g;' \
 		-e 's|%%PERL_VER%%|${PERL_VER}|g;' \
 		-e 's|%%PERL_ARCH%%|${PERL_ARCH}|g;' \
-		-e 's|%%MAKE_CONF%%|${__MAKE_CONF}|g;' \
+		-e 's|%%PERL5_SIGNATURE%%|${LOCALBASE}/etc/perl5_version|g;' \
 		-e 's|%%LINK_USRBIN%%|${LINK_USRBIN}|g;' \
 		${FILESDIR}/use.perl \
 		> ${WRKDIR}/use.perl
@@ -193,23 +189,21 @@ post-patch:
 		${WRKSRC}/hints/freebsd.sh
 .endif
 
-pre-su-install:
-	@${RM} -f ${PREFIX}/bin/perl${PERL_VERSION}
-	@${RM} -f ${PREFIX}/bin/perl
-
 post-install:
-	@${STRIP_CMD} ${PREFIX}/bin/perl${PERL_VERSION}
-	@${STRIP_CMD} ${PREFIX}/bin/perl
-	@${LN} -sf ${PREFIX}/bin/perl${PERL_VERSION} ${PREFIX}/bin/perl5
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/man/man3
+	@${MKDIR} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto
+	@${MKDIR} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/machine
+	@${MKDIR} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/sys
+	@${MKDIR} ${STAGEDIR}${SITE_PERL}/auto
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/perl${PERL_VERSION}
 .if ${OSVERSION} >= 900022
-	@${INSTALL_DATA} ${WRKDIR}/perl-man.conf ${PREFIX}/etc/man.d/perl${PERL_VER}.conf
+	@${INSTALL_DATA} ${WRKDIR}/perl-man.conf ${STAGEDIR}${PREFIX}/etc/man.d/perl${PERL_VER}.conf
 .endif
 .for files in ${BSDPAN_FILES}
-	${MKDIR} ${BSDPAN_DEST}/${files:H}
-	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${NOBINMODE} \
-		${BSDPAN_WRKSRC}/${files} ${BSDPAN_DEST}/${files}
+	${MKDIR} ${STAGEDIR}${BSDPAN_DEST}/${files:H}
+	${INSTALL_DATA} \
+		${BSDPAN_WRKSRC}/${files} ${STAGEDIR}${BSDPAN_DEST}/${files}
 .endfor
-	PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
  AZ:
 test: build
