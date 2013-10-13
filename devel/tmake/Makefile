@@ -1,5 +1,5 @@
 # Created by: jesse@cs.uni-magdeburg.de
-# $FreeBSD: devel/tmake/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/tmake/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tmake
 PORTVERSION=	1.13
@@ -14,6 +14,7 @@ NO_BUILD=	yes
 REINPLACE_ARGS=	-i ''
 USES=		perl5
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/bin/tmake.orig ${WRKSRC}/lib/unix/generic.t.orig
 	@${REINPLACE_CMD} \
