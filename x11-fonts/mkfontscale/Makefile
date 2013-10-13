@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/mkfontscale/Makefile 323178 2013-07-17 15:38:27Z zeising $
+# $FreeBSD: x11-fonts/mkfontscale/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	mkfontscale
 PORTVERSION=	1.1.1
@@ -18,4 +18,5 @@ CONFIGURE_ARGS+=--disable-maintainer-mode
 PLIST_FILES=	bin/mkfontscale
 MAN1=		mkfontscale.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
