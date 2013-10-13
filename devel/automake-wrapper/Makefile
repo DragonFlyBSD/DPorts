@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/automake-wrapper/Makefile,v 1.3 2012/11/17 05:55:34 svnexp Exp $
+# $FreeBSD: devel/automake-wrapper/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	automake-wrapper
 
