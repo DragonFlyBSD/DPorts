@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libX11/Makefile 324717 2013-08-14 13:08:58Z zeising $
+# $FreeBSD: x11/libX11/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	libX11
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 PORTEPOCH=	1
 CATEGORIES=	x11
 
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib \
 			--disable-specs
 CONFIGURE_ENV+=	ac_cv_path_PS2PDF=""
 
+NO_STAGE=	yes
 .include "${.CURDIR}/manpages"
 
 post-patch:
