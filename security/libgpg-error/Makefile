@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/libgpg-error/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: security/libgpg-error/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libgpg-error
 PORTVERSION=	1.12
@@ -17,6 +17,7 @@ USE_LDCONFIG=		yes
 GNU_CONFIGURE=		yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
