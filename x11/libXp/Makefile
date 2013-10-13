@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXp/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXp/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXp
 PORTVERSION=	1.0.2
@@ -50,4 +50,5 @@ MAN3=	XpCancelDoc.3 \
 	XpStartPage.3 \
 	libXp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
