@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: security/libgcrypt/Makefile 325029 2013-08-20 05:31:34Z rpaulo $
+# $FreeBSD: security/libgcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libgcrypt
 PORTVERSION=	1.5.3
@@ -28,6 +28,7 @@ DOCS=		AUTHORS ChangeLog ChangeLog-2011 INSTALL NEWS README \
 INFO=		gcrypt
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
