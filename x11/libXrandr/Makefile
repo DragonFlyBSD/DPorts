@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXrandr/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXrandr/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	libXrandr
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -29,4 +29,5 @@ MAN3=		Xrandr.3 \
 		XRRSetScreenConfig.3 \
 		XRRSetScreenConfigAndRate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
