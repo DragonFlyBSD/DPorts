@@ -1,8 +1,8 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: devel/gettext/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: devel/gettext/Makefile 330100 2013-10-11 20:20:59Z ade $
 
 PORTNAME=	gettext
-PORTVERSION=	0.18.3
+PORTVERSION=	0.18.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gettext
@@ -36,6 +36,7 @@ INFO=		autosprintf gettext
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
