@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: graphics/OpenEXR/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/OpenEXR/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	OpenEXR
 PORTVERSION=	1.7.1
@@ -37,6 +37,7 @@ DOC_FILES2=	MultiViewOpenEXR.pdf OpenEXRFileLayout.pdf \
 OPTIONS_DEFINE=		LARGE_STACK
 LARGE_STACK_DESC=	Enable sys-dependant large stack optimizations
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLARGE_STACK}
