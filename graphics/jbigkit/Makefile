@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jbig
-# Date created:		19 November 1996
-# Whom:			mi
-#
-# $FreeBSD: ports/graphics/jbigkit/Makefile,v 1.26 2012/11/17 05:58:10 svnexp Exp $
-#
+# Created by: mi
+# $FreeBSD: graphics/jbigkit/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jbigkit
 PORTVERSION=	1.6
@@ -20,6 +16,7 @@ MAN1=	jbgtopbm.1 pbmtojbg.1
 
 DOCSDIR?=	${PREFIX}/share/doc/jbig
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
