@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: devel/patch/Makefile 314556 2013-03-18 11:40:04Z bapt $
+# $FreeBSD: devel/patch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	patch
 PORTVERSION=	2.7
@@ -22,4 +22,5 @@ USES=		charsetfix
 MAN1=		gpatch.1
 PLIST_FILES=	bin/gpatch
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
