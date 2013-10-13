@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: lang/gawk/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: lang/gawk/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gawk
 PORTVERSION=	4.1.0
@@ -29,6 +29,7 @@ MAN3=		filefuncs.3am fnmatch.3am fork.3am ordchr.3am readdir.3am \
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
