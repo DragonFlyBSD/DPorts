@@ -1,7 +1,4 @@
-# New ports collection makefile for:	linuxlibertine-G
-# Date created:				24 April 2012
-# Whom:					Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: ports/x11-fonts/linuxlibertine-g/Makefile,v 1.2 2012/11/17 06:03:29 svnexp Exp $
+# $FreeBSD: x11-fonts/linuxlibertine-g/Makefile 329310 2013-10-04 14:13:50Z bapt $
 
 PORTNAME=	linuxlibertine-g
 PORTVERSION=	20120116
@@ -39,15 +36,8 @@ do-build:
 	cd ${WRKSRC} && ${MKFONTDIR_CMD}
 
 do-install:
-	${MKDIR} ${FONTDIR}
+	${MKDIR} ${STAGEDIR}${FONTDIR}
 	cd ${WRKSRC} &&	\
-		${INSTALL_DATA} ${INSTDAT} ${WRKSRC}/*.ttf ${FONTDIR}
-
-post-install:
-	${ECHO_MSG} "===> Running fc-cache"
-	-${LOCALBASE}/bin/fc-cache -f -v ${FONTDIR}
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+		${INSTALL_DATA} ${INSTDAT} ${WRKSRC}/*.ttf ${STAGEDIR}${FONTDIR}
 
 .include <bsd.port.mk>
