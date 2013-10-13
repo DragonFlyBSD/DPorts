@@ -1,5 +1,5 @@
 # Created by: dom
-# $FreeBSD: devel/pcre/Makefile 319821 2013-06-04 02:48:27Z bf $
+# $FreeBSD: devel/pcre/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pcre
 PORTVERSION=	8.33
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	STACK_RECURSION
 
 STACK_RECURSION_DESC=	Use the stack for recursion during matching
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} != "sparc64" && ${ARCH} != "ia64"
