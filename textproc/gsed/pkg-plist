@@ -1,5 +1,5 @@
-@comment $FreeBSD: textproc/gsed/pkg-plist 321705 2013-06-24 18:54:47Z johans $
 bin/gsed
+man/man1/gsed.1.gz
 %%EXAMPLESDIR%%/binary.sed
 %%EXAMPLESDIR%%/binary2.sed
 %%EXAMPLESDIR%%/binary3.sed
@@ -43,5 +43,5 @@ bin/gsed
 %%NLS%%share/locale/vi/LC_MESSAGES/sed.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/sed.mo
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/sed.mo
-@dirrmtry %%NLS%%share/locale/ast/LC_MESSAGES
-@dirrmtry %%NLS%%share/locale/ast
+%%NLS%%@dirrmtry share/locale/ast/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ast

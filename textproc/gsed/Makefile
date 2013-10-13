@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: textproc/gsed/Makefile 321705 2013-06-24 18:54:47Z johans $
+# $FreeBSD: textproc/gsed/Makefile 329651 2013-10-07 05:02:18Z johans $
 
 PORTNAME=	sed
 PORTVERSION=	4.2.2
@@ -13,16 +13,14 @@ COMMENT=	The GNU stream editor
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	MAKEINFO="makeinfo --no-split"
 
-USES=		charsetfix
+USES=		charsetfix gmake
 PATCH_SUBDIRS=	. doc lib sed
 DATADIR=	${PREFIX}/share/${PKGBASE}
 SAMP_FILES=	binary*.sed dc.sed
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGBASE}
 PORTDOCS=	AUTHORS BUGS COPYING COPYING.DOC NEWS README THANKS
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
-USE_GMAKE=	yes
 INFO=		sed
-MAN1=		gsed.1
 
 OPTIONS_DEFINE=	NLS DOCS
 
@@ -49,14 +47,14 @@ post-configure:
 .endfor
 
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 .for f in ${SAMP_FILES}
-	@${INSTALL_DATA} ${WRKSRC}/testsuite/${f} ${EXAMPLESDIR}
+	@${INSTALL_DATA} ${WRKSRC}/testsuite/${f} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
