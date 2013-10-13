@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: graphics/png/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/png/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	png
 PORTVERSION=	1.5.17
@@ -12,6 +12,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Library for manipulating PNG images
 
 PORTSCOUT=	limit:^1\.5\.
+NO_STAGE=	yes
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
