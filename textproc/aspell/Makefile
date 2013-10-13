@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: textproc/aspell/Makefile 324225 2013-08-04 12:47:44Z az $
+# $FreeBSD: textproc/aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	aspell
 PORTVERSION=	0.60.6.1
@@ -34,6 +34,7 @@ SUB_FILES=		aspell.ver
 PLIST_SUB=		VER=${VERINST}
 SUB_LIST=		VERINST=${VERINST}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
