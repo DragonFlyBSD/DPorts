@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: textproc/libxml2/Makefile 326683 2013-09-07 19:49:41Z bsam $
+# $FreeBSD: textproc/libxml2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 #    $MCom: ports/textproc/libxml2/Makefile,v 1.15 2012/11/26 19:55:23 kwm Exp $
 
 PORTNAME=	libxml2
@@ -38,6 +38,7 @@ MEM_DEBUG_DESC= Memory debugging (DEVELOPERS ONLY!)
 XMLLINT_HIST_DESC= History for xmllint
 THREAD_ALLOC_DESC= Per-thread memory (DEVELOPERS ONLY!)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MSCHEMA}
