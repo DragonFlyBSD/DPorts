@@ -1,5 +1,5 @@
 # Created by: mikeh@FreeBSD.org
-# $FreeBSD: devel/libcheck/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: devel/libcheck/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libcheck
 PORTVERSION=	0.9.10
@@ -22,6 +22,7 @@ USES=		gmake pathfix
 INFO=		check
 MAN1=		checkmk.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
