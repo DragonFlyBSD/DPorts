@@ -1,8 +1,9 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: dns/libidn/Makefile 326767 2013-09-08 18:32:38Z sunpoet $
+# $FreeBSD: dns/libidn/Makefile 328685 2013-09-29 12:53:16Z mandree $
 
 PORTNAME=	libidn
 PORTVERSION=	1.28
+PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	GNU
 
@@ -20,6 +21,7 @@ USES=		iconv pathfix perl5 pkgconfig
 
 INFO=		libidn
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -38,6 +40,9 @@ post-patch:
 .if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^install-data-am: / s| install-imagesDATA||' \
 		${WRKSRC}/doc/Makefile.in
+.endif
+.if ${PORT_OPTIONS:MNLS}
+	@${REINPLACE_CMD} -e 's/-lidn/& -lintl/' ${WRKSRC}/libidn.pc.in
 .endif
 
 post-install:
