@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: devel/gmake/Makefile 326779 2013-09-09 05:35:02Z johans $
+# $FreeBSD: devel/gmake/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gmake
 PORTVERSION=	3.82
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=--program-prefix=g
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
