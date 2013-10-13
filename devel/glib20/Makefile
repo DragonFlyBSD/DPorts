@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib20/Makefile 327477 2013-09-17 13:05:12Z bapt $
+# $FreeBSD: devel/glib20/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/trunk/devel/glib20/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	glib
@@ -41,6 +41,7 @@ SHEBANG_FILES=	*/*.pl glib/gen-iswide-table.py
 OPTIONS_DEFINE=	COLLATION_FIX DEBUG
 COLLATION_FIX_DESC=	fix string collation
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # doesn't build yet
