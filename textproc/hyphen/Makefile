@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hyphen/Makefile 324225 2013-08-04 12:47:44Z az $
+# $FreeBSD: textproc/hyphen/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2.8.6
@@ -35,6 +35,7 @@ CONFIGURE_ENV+=	ac_cv_prog_AWK=gawk
 PLIST_FILES+=	%%DATADIR%%/hyph_${ALIAS}.dic
 .endfor
 
+NO_STAGE=	yes
 post-install:
 .for ALIAS in ${USALIASES}
 	${LN} -s hyph_en_US.dic ${DATADIR}/hyph_${ALIAS}.dic
