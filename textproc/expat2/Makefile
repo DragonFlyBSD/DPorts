@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: textproc/expat2/Makefile 323896 2013-07-29 17:12:54Z tijl $
+# $FreeBSD: textproc/expat2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	expat
 PORTVERSION=	2.1.0
@@ -20,6 +20,7 @@ SHLIB_MAJOR=	6
 
 PLIST_SUB=	SHLIB_MAJOR="${SHLIB_MAJOR}"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's/@LIBCURRENT.*@/${SHLIB_MAJOR}/' \
