@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/rasqal/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/rasqal/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rasqal
 PORTVERSION=	0.9.30
@@ -13,12 +13,11 @@ COMMENT=	High-level interface for RDF
 LIB_DEPENDS=	raptor2:${PORTSDIR}/textproc/raptor2 \
 		pcre:${PORTSDIR}/devel/pcre
 
-USE_GNOME=	gnomehack lthack
+USE_GNOME=	lthack
 USE_OPENSSL=	yes
-USE_PERL5_BUILD=yes
-USES=		pkgconfig
+USE_PERL5=	build
+USES=		gmake pathfix pkgconfig perl5
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
 MAN1=		rasqal-config.1 roqet.1
@@ -30,6 +29,7 @@ OPTIONS_RADIO_DEC=	GMP MPFR
 GMP_DESC=	Use GMP library for decimals
 MPFR_DESC=	Use MPFR library for decimals
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMPFR}
