@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-gettext
-# Date created:			1 February 2000
-# Whom:				Dmitry Sivachenko <dima@Chg.RU>
-#
-# $FreeBSD: devel/p5-Locale-gettext/Makefile 327086 2013-09-12 16:11:43Z az $
-#
+# Created by: Dmitry Sivachenko <dima@Chg.RU>
+# $FreeBSD: devel/p5-Locale-gettext/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Locale-gettext
 PORTVERSION=	1.05
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Locale::gettext.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
