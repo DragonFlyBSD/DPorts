@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: textproc/libxslt/Makefile 318108 2013-05-13 15:36:50Z kwm $
+# $FreeBSD: textproc/libxslt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libxslt
 PORTVERSION=	1.1.28
@@ -38,6 +38,7 @@ MEM_DEBUG_DESC=	Enable memory debugging
 CRYPTO_DESC=	Enable crypto support for exslt
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMEM_DEBUG}
