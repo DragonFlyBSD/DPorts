@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: archivers/p5-Archive-Zip/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-Archive-Zip/Makefile 328247 2013-09-25 03:31:19Z vanilla $
 
 PORTNAME=	Archive-Zip
 PORTVERSION=	1.30
@@ -13,7 +13,5 @@ COMMENT=	Perl module to create, manipulate, read, and write Zip archive files
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Archive::Zip.3 Archive::Zip::Tree.3 Archive::Zip::FAQ.3 Archive::Zip::MemberRead.3
 
 .include <bsd.port.mk>
