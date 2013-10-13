@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/help2man/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: misc/help2man/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	help2man
 PORTVERSION=	1.43.3
@@ -21,6 +21,7 @@ INFO=		${PORTNAME}
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
