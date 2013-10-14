@@ -1,4 +1,4 @@
-# $FreeBSD: net/krdc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/krdc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	krdc
 PORTVERSION=	${KDE4_VERSION}
@@ -26,4 +26,5 @@ USE_LDCONFIG=	yes
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
