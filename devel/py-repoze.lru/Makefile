@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-repoze.lru
-# Date created:				2011-03-21
-# Whom:	      				Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: devel/py-repoze.lru/Makefile 320945 2013-06-14 14:59:38Z miwi $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/py-repoze.lru/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	repoze.lru
 PORTVERSION=	0.6
@@ -17,4 +13,5 @@ COMMENT=	A tiny LRU cache implementation and decorator
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
