@@ -1,5 +1,5 @@
 # Created by: Gerhard Haering <gerhard.haering@gmx.de>
-# $FreeBSD: ports/databases/py-pyPgSQL/Makefile,v 1.22 2013/01/08 07:48:46 svnexp Exp $
+# $FreeBSD: databases/py-pyPgSQL/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pyPgSQL
 PORTVERSION=	2.5.1
@@ -29,6 +29,7 @@ BYTEA_CONN_DESC=	Apply Bytea connection patch
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBYTEA_CONN}
