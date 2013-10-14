@@ -1,6 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-toolkits/libxfce4gui/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: x11-toolkits/libxfce4gui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libxfce4gui
 PORTVERSION=	4.10.0
@@ -31,6 +30,7 @@ OPTIONS_DEFINE=		DOCS NLS STARTUP
 OPTIONS_DEFAULT=	STARTUP
 STARTUP_DESC=		Use libstartup-notification
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
