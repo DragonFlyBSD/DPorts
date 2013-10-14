@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libdvdread
-# Date created:				24 Jun 2001
-# Whom:					Marc van Woerkom <3d@freebsd.org>
-#
-# $FreeBSD: ports/multimedia/libdvdread/Makefile,v 1.43 2012/11/17 05:59:50 svnexp Exp $
-#
+# Created by: Marc van Woerkom <3d@FreeBSD.org>
+# $FreeBSD: multimedia/libdvdread/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libdvdread
 PORTVERSION=	4.2.0
@@ -40,6 +36,7 @@ OPTIONS_DEFAULT=	DVDCSS
 # DVDCSS version hardcoded in src/dvd_input.c (dlopen'ed)
 DVDCSS_LIBVERSION=	3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDVDCSS}
