@@ -1,5 +1,5 @@
 # Created by: Maxim Maximov (mcsi@agava.com)
-# $FreeBSD: devel/p5-enum/Makefile 326476 2013-09-06 08:26:28Z tobez $
+# $FreeBSD: devel/p5-enum/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	enum
 PORTVERSION=	1.050
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		enum.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
