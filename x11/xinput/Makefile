@@ -1,8 +1,8 @@
 # Created by: Martin Ranne <gasp@ridcully.dnsalias.org>
-# $FreeBSD: x11/xinput/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xinput/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	xinput
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -15,4 +15,5 @@ PLIST_FILES=	bin/xinput
 
 MAN1=		xinput.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
