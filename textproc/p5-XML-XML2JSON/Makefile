@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-XML2JSON/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: textproc/p5-XML-XML2JSON/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	XML-XML2JSON
 PORTVERSION=	0.06
@@ -26,8 +26,6 @@ JSON_DWIW_DESC=	Use JSON::DWIW
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		XML::XML2JSON.3
 
 .include <bsd.port.options.mk>
 
