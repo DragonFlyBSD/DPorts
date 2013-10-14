@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/freeglut/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: graphics/freeglut/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	freeglut
 PORTVERSION=	2.8.1
@@ -28,6 +28,7 @@ DOCS=	download.html freeglut.html freeglut_logo.png		\
 	progress.html structure.html
 BINS=	CallbackMaker Fractals Fractals_random Lorenz One shapes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-configure:
