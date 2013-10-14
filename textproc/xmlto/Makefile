@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: ports/textproc/xmlto/Makefile,v 1.30 2013/01/24 18:46:24 svnexp Exp $
+# $FreeBSD: textproc/xmlto/Makefile 329737 2013-10-07 20:48:03Z mandree $
 
 PORTNAME=	xmlto
 PORTVERSION=	0.0.25
@@ -29,13 +29,13 @@ PASSIVETEX_DESC=	Add dependency on PassiveTeX
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	BASH=${BASH_CMD} GETOPT=${GETOPT_CMD} PDFXMLTEX=${PDFXMLTEX_CMD}
+MAKE_ENV+=	HOME=/dev/null
 
 BASH_CMD=	${LOCALBASE}/bin/bash
 GETOPT_CMD=	${LOCALBASE}/bin/getopt
 XSL_DIR=	${LOCALBASE}/share/xsl/docbook
 PDFXMLTEX_CMD=	${LOCALBASE}/bin/pdftex
 
-MAN1=		xmlif.1 xmlto.1
 PORTDOCS=	AUTHORS COPYING ChangeLog NEWS THANKS
 # these two documentation files do not convey information useful for
 # the FreeBSD port at this time:
@@ -67,8 +67,8 @@ post-patch:
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.post.mk>
