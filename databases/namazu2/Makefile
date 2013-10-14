@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/namazu2/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: databases/namazu2/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	namazu
 PORTVERSION=	${NAMAZU_PORTVERSION}
@@ -20,6 +20,7 @@ CONFIGURE_ARGS=	--with-perl5="${PERL}" \
 		${ICONV_CONFIGURE_ARG}
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 
 MAN1=		namazu.1 mknmz.1
