@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/rubygem-httpclient/Makefile 321752 2013-06-25 17:56:22Z swills $
+# $FreeBSD: www/rubygem-httpclient/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	httpclient
 PORTVERSION=	2.3.3
@@ -15,4 +14,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/httpclient
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
