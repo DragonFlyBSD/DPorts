@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/java/jakarta-commons-cli/Makefile,v 1.19 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-commons-cli/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-cli
 PORTVERSION=	1.2
@@ -29,6 +29,7 @@ PORTDOCS=	*
 DOC_FILES=	LICENSE.txt NOTICE.txt RELEASE-NOTES.txt
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${DESTJARFILE}..."
 	@${INSTALL_DATA} ${WRKSRC}/${JARFILE} ${JAVAJARDIR}/${DESTJARFILE}
