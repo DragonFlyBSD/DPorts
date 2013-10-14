@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-curl
-# Date created:				2 July 2001
-# Whom:					Hye-Shik Chang
-#
-# $FreeBSD: ftp/py-curl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: Hye-Shik Chang
+# $FreeBSD: ftp/py-curl/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	curl
 PORTVERSION=	7.19.0
@@ -28,6 +24,7 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	pycurl
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's@data_files=@#data_files=t@' \
