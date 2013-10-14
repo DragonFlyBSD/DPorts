@@ -1,5 +1,5 @@
 # Created by: obraun@FreeBSD.org
-# $FreeBSD: devel/hs-cpphs/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-cpphs/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	cpphs
 PORTVERSION=	1.16
@@ -13,5 +13,6 @@ LICENSE=	LGPL21
 
 EXECUTABLE=	cpphs
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
