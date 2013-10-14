@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Filter-BufferText/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Filter-BufferText/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Filter-BufferText
 PORTVERSION=	1.01
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::Filter::BufferText.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
