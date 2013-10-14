@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: deskutils/orage/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: deskutils/orage/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	orage
 PORTVERSION=	4.8.4
@@ -31,6 +31,7 @@ ICAL_DESC=	libical support
 
 MAN1=		globaltime.1 orage.1 tz_convert.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBDB}
