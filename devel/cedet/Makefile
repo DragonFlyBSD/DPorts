@@ -1,5 +1,5 @@
 # Created by: Dryice Liu
-# $FreeBSD: devel/cedet/Makefile 316364 2013-04-23 15:33:16Z mva $
+# $FreeBSD: devel/cedet/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cedet
 PORTVERSION=	1.1
@@ -28,6 +28,7 @@ SEMANTIC_INFOS=	bovine-cedet.info grammar-fw.info semantic-appdev.info \
 
 CONFLICTS=	eieio-[0-9]* semantic-[0-9]* speedbar-[0-9]*
 
+NO_STAGE=	yes
 pre-build:
 #cleanup info
 	${RM} -f ${WRKSRC}/ede/ede.info
