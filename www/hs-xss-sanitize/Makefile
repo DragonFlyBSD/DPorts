@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-xss-sanitize/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-xss-sanitize/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xss-sanitize
 PORTVERSION=	0.3.3
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_CABAL=	attoparsec>=0.10.0.3 css-text>=0.1.1 network>=2 \
 		tagsoup>=0.12.2 text>=0.11 utf8-string>=0.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
