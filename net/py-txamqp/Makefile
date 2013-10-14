@@ -1,5 +1,5 @@
 # Created by: Bruce Simpson
-# $FreeBSD: net/py-txamqp/Makefile 319405 2013-05-30 07:07:38Z delphij $
+# $FreeBSD: net/py-txamqp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	txamqp
 PORTVERSION=	0.3
@@ -28,6 +28,7 @@ PLIST_SUB=		PORTNAME="${PORTNAME}"
 # TODO: Install txAMQP examples.
 
 # Don't try to install Twisted yourself, txAMQP. thx!
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/install_requires/s/^/#/' ${WRKSRC}/setup.py
 
