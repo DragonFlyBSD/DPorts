@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/djvulibre/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/djvulibre/Makefile 328492 2013-09-27 15:17:26Z madpilot $
 
 PORTNAME=	djvulibre
 PORTVERSION=	3.5.25.3
@@ -17,6 +17,7 @@ LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg \
 
 USES=		pathfix iconv
 GNU_CONFIGURE=	yes
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ENV=	JPEG_CFLAGS="-I${LOCALBASE}/include" \
 		JPEG_LIBS="-L${LOCALBASE}/lib -ljpeg" \
 		TIFF_CFLAGS="-I${LOCALBASE}/include" \
@@ -36,6 +37,7 @@ MAN1=		bzz.1 c44.1 cjb2.1 cpaldjvu.1 csepdjvu.1 ddjvu.1 djvm.1 \
 		djvused.1 djvuserve.1 djvutxt.1
 MAN1_EN=	djvutoxml.1 djvuxml.1 djvuxmlparser.1 djvudigital.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANY2DJVU}
