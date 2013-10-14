@@ -1,9 +1,5 @@
-# New ports collection makefile for:	elisa8x8
-# Date created:		17 Aug. 1998
-# Whom: Toshihiko SHIMOKAWA <toshi@tea.forus.or.jp> & ELISA Font Project
-#
-# $FreeBSD: japanese/elisa8x8/Makefile 301684 2012-07-29 11:17:02Z cs $
-#
+# Created by: Toshihiko SHIMOKAWA <toshi@tea.forus.or.jp> & ELISA Font Project
+# $FreeBSD: japanese/elisa8x8/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	elisa8x8
 PORTVERSION=	1.0
@@ -19,6 +15,7 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 NO_WRKSUBDIR=	yes
