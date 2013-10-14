@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: devel/libvanessa_logger/Makefile 323967 2013-07-30 13:45:39Z bapt $
+# $FreeBSD: devel/libvanessa_logger/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libvanessa_logger
 PORTVERSION=	0.0.10
