@@ -1,5 +1,5 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: security/regripper/Makefile 324182 2013-08-03 09:23:18Z antoine $
+# $FreeBSD: security/regripper/Makefile 329217 2013-10-03 18:08:50Z antoine $
 
 PORTNAME=	regripper
 DISTVERSION=	2.8
@@ -20,6 +20,7 @@ USE_DOS2UNIX=	yes
 NO_BUILD=	yes
 USES=		perl5
 USE_PERL5=	run
+
 PLIST_FILES=	bin/rip.pl
 
 post-patch:
@@ -28,6 +29,6 @@ post-patch:
 		s|require "plugins/|require "${DATADIR}plugins/|' ${WRKSRC}/rip.pl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/rip.pl ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/rip.pl ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
