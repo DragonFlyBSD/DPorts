@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Mail-POP3Client
-# Date created:				October 24th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: mail/p5-Mail-POP3Client/Makefile 326271 2013-09-04 12:28:16Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: mail/p5-Mail-POP3Client/Makefile 329554 2013-10-06 12:31:21Z demon $
 
 PORTNAME=	Mail-POP3Client
-PORTVERSION=	2.18
+PORTVERSION=	2.19
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::POP3Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
