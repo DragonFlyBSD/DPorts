@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Pg/Makefile 326765 2013-09-08 17:07:30Z tobez $
+# $FreeBSD: devel/p5-DateTime-Format-Pg/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Format-Pg
 PORTVERSION=	0.16.009
@@ -21,4 +21,5 @@ USE_PERL5=	modbuild
 
 MAN3=		DateTime::Format::Pg.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
