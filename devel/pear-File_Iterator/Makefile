@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/devel/pear-File_Iterator/Makefile,v 1.8 2013/01/12 13:19:32 svnexp Exp $
+# $FreeBSD: devel/pear-File_Iterator/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File_Iterator
 PORTVERSION=	1.3.3
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 PEAR_CHANNEL=	phpunit
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
