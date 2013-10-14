@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/libmaitretarot/Makefile 325988 2013-09-02 13:07:49Z bapt $
+# $FreeBSD: games/libmaitretarot/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		libmaitretarot
 PORTVERSION=		0.1.98
@@ -18,4 +18,5 @@ GNU_CONFIGURE=		yes
 USE_GNOME=		glib20 libxml2 lthack
 USE_LDCONFIG=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
