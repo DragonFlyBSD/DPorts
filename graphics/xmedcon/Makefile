@@ -1,5 +1,5 @@
 # Created by: Paul Everlund
-# $FreeBSD: graphics/xmedcon/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: graphics/xmedcon/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmedcon
 PORTVERSION=	0.13.0
@@ -38,6 +38,7 @@ MAN1=		medcon.1 xmedcon-config.1
 MAN3=		medcon.3
 MAN4=		m-acr.4 m-anlz.4 m-ecat.4 m-gif.4 m-intf.4 m-inw.4
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
