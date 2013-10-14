@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: textproc/p5-Pod-Abstract/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: textproc/p5-Pod-Abstract/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Abstract
 PORTVERSION=	0.20
@@ -37,4 +37,5 @@ MAN3=		Pod::Abstract.3 \
 		Pod::Abstract::Serial.3 \
 		Pod::Abstract::Tree.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
