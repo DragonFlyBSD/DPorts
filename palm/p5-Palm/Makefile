@@ -1,5 +1,5 @@
 # Created by: Andrew Arensburger <arensb+freebsd-ports@ooblick.com>
-# $FreeBSD: palm/p5-Palm/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: palm/p5-Palm/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	p5-Palm
 PORTVERSION=	1.3.0
@@ -25,4 +25,5 @@ MAN3=		Palm::Address.3 \
 		Palm::StdAppInfo.3 \
 		Palm::ToDo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
