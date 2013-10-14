@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/libosip/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/libosip/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libosip
 PORTVERSION=	3.6.0
