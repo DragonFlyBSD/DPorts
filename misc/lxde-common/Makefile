@@ -1,5 +1,5 @@
 # Created by: sahne
-# $FreeBSD: misc/lxde-common/Makefile 322129 2013-07-01 14:42:37Z wg $
+# $FreeBSD: misc/lxde-common/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	lxde-common
 PORTVERSION=	0.5.5
@@ -32,6 +32,7 @@ PORTDOCS=	AUTHORS README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
