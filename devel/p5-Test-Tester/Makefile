@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: devel/p5-Test-Tester/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-Tester/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Test-Tester
 PORTVERSION=	0.10.9
@@ -15,6 +15,7 @@ COMMENT=	Helps to test various Test::Builder derivatives
 USES=		perl5
 USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
+NO_STAGE=	yes
 
 MAN3=		Test::Tester.3 Test::Tester::Capture.3 \
 		Test::Tester::CaptureRunner.3
