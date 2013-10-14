@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/zillion/Makefile,v 1.12 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: net/zillion/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	zillion
 PORTVERSION=	0.1
@@ -19,6 +19,7 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|^CC=|# CC=|' ${WRKSRC}/GNUmakefile
 
