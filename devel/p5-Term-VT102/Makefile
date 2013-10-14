@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Term-VT102/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Term-VT102/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Term-VT102
 PORTVERSION=	0.91
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Term::VT102.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
