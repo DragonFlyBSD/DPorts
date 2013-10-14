@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Validator/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Data-Validator/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Validator
 PORTVERSION=	1.03
@@ -30,6 +30,7 @@ MAN3=		Data::Validator.3 \
 		Data::Validator::Role::Sequenced.3 \
 		Data::Validator::Role::StrictSequenced.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
