@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Trim/Makefile 325943 2013-09-02 06:35:34Z az $
+# $FreeBSD: textproc/p5-Text-Trim/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Trim
 PORTVERSION=	1.02
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Text::Trim.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
