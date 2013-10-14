@@ -1,4 +1,4 @@
-# $FreeBSD: lang/python33/Makefile 326729 2013-09-08 14:05:18Z koobs $
+# $FreeBSD: lang/python33/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	python33
 PORTVERSION=	3.3.2
@@ -22,9 +22,9 @@ USE_LDCONFIG=	yes
 INSTALL_TARGET=	altinstall
 MAN1=		${PYTHON_VERSION}.1
 
-USE_GMAKE=	yes
 USE_XZ=		yes
 USE_PYTHON=	yes
+USES=		gmake
 PYTHON_VERSION=	python3.3
 PYTHON_NO_DEPENDS=	yes
 
@@ -53,6 +53,7 @@ OPTIONS_DEFAULT=	THREADS PYMALLOC IPV6
 
 NLS_DESC=	Enable Gettext support for the locale module
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
