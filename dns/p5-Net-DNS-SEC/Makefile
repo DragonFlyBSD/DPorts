@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: dns/p5-Net-DNS-SEC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-Net-DNS-SEC/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS-SEC
 PORTVERSION=	0.16
@@ -30,4 +30,5 @@ MAN3=		Net::DNS::Keyset.3 Net::DNS::RR::DS.3 Net::DNS::RR::KEY.3 \
 		Net::DNS::RR::NSEC.3 Net::DNS::RR::DNSKEY.3 \
 		Net::DNS::RR::NSEC3.3 Net::DNS::RR::NSEC3PARAM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
