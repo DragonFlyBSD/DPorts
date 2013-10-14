@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: comms/p5-Device-Modem/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: comms/p5-Device-Modem/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	Device-Modem
 PORTVERSION=	1.56
@@ -23,6 +23,7 @@ MAN3=		Device::Modem.3 \
 		Device::Modem::Protocol::Xmodem.3 \
 		Device::Modem::UsRobotics.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
