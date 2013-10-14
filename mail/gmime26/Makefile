@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime26/Makefile 327505 2013-09-17 22:23:13Z wg $
+# $FreeBSD: mail/gmime26/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gmime
 PORTVERSION=	2.6.18
@@ -35,6 +35,7 @@ LATEST_LINK?=	${PORTNAME}26
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
