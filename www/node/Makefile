@@ -1,8 +1,8 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: www/node/Makefile 325249 2013-08-23 05:02:37Z delphij $
+# $FreeBSD: www/node/Makefile 328753 2013-09-29 22:51:06Z swills $
 
 PORTNAME=	node
-PORTVERSION=	0.10.17
+PORTVERSION=	0.10.19
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
@@ -10,14 +10,12 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	linpct@gmail.com
 COMMENT=	V8 JavaScript for client and server
 
-LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
-
-MAN1=		node.1
+LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	2.7
-USE_GMAKE=	yes
+USES=		gmake
 
 CONFLICTS=	node-0.[02-9][0-9]* node-devel-0.[0-9]*
 
@@ -32,9 +30,9 @@ post-patch:
 		${WRKSRC}/deps/v8/tools/gyp/v8.gyp
 
 post-install:
-	${MKDIR} ${PREFIX}/lib/node_modules/
-	${TOUCH} ${PREFIX}/lib/node_modules/.keepme
-	${CHMOD} ${MANMODE} ${PREFIX}/man/man1/node.1
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/node_modules/
+	${TOUCH} ${STAGEDIR}${PREFIX}/lib/node_modules/.keepme
+	${CHMOD} ${MANMODE} ${STAGEDIR}${PREFIX}/man/man1/node.1
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Note: If you need npm (Node Package Manager), please install www/npm."
 	@${ECHO_MSG}
