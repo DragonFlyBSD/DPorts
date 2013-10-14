@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Devel-CheckLib/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Devel-CheckLib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-CheckLib
 PORTVERSION=	1.01
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN1=		use-devel-checklib.1
 MAN3=		Devel::CheckLib.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
