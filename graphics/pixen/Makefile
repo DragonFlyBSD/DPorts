@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/pixen/Makefile,v 1.10 2012/11/17 05:58:19 svnexp Exp $
+# $FreeBSD: graphics/pixen/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pixen
 PORTVERSION=	0.1
@@ -20,4 +20,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 ADDITIONAL_OBJCFLAGS+=	-Dlog2=logb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
