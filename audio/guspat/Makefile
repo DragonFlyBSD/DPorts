@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: ports/audio/guspat/Makefile,v 1.8 2012/11/17 05:54:34 svnexp Exp $
+# $FreeBSD: audio/guspat/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	guspat
 PORTVERSION=	20000706
@@ -20,6 +20,7 @@ RUN_DEPENDS=	timidity:${PORTSDIR}/audio/timidity++
 NO_CDROM=	Some of the patches are marked no-commercial-use
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 WRKSRC=		${WRKDIR}/timidity
 PLIST_SUB=	TIMIDITY_DATADIR=${TIMIDITY_DATADIR}
