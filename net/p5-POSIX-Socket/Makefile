@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-POSIX-Socket/Makefile 324544 2013-08-10 15:30:16Z kuriyama $
+# $FreeBSD: net/p5-POSIX-Socket/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POSIX-Socket
 PORTVERSION=	0.09
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	POSIX::Socket.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
