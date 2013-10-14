@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: devel/libglade2/Makefile 326099 2013-09-02 21:53:45Z bapt $
+# $FreeBSD: devel/libglade2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/libglade2/Makefile,v 1.26 2007/08/01 16:13:48 mezz Exp $
 
 PORTNAME=	libglade2
@@ -36,6 +36,7 @@ PLIST_SUB=	XMLCATALOG="${LOCALBASE}/bin/xmlcatalog" \
 OPTIONS_DEFINE=	PYTHON
 OPTIONS_DEFAULT=PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
