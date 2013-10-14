@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/ruby-flvtool2/Makefile 319648 2013-06-02 11:16:49Z swills $
+# $FreeBSD: multimedia/ruby-flvtool2/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	flvtool2
 PORTVERSION=	1.0.6
@@ -15,4 +15,5 @@ COMMENT=	Manipulation tool for Macromedia Flash Video files
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
