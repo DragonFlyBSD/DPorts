@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-Paranoid/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-Paranoid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Paranoid
 PORTVERSION=	0.36
@@ -44,4 +44,5 @@ MAN3=		Paranoid::Data.3 \
 		Paranoid::Log::Buffer.3 \
 		Paranoid::Debug.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
