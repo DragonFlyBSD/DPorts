@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/py-plone.fieldsets/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plone.fieldsets/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	plone.fieldsets
 PORTVERSION=	2.0.2
@@ -19,7 +19,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.formlib>=0:${PORTSDIR}/devel/py-five.fo
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
