@@ -1,11 +1,5 @@
-# New ports collection makefile for:	portconf
-# Date created:			7 Jun 2006
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports-mgmt/portconf/Makefile 324628 2013-08-12 13:05:07Z ale $
-#
-# This port is self contained in the files directory.
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: ports-mgmt/portconf/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	portconf
 PORTVERSION=	1.6
@@ -21,6 +15,7 @@ SUB_FILES=	pkg-message ${PORTNAME}.sh
 
 PLIST_FILES=	libexec/${PORTNAME}
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
