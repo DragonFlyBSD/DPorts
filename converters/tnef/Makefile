@@ -1,5 +1,5 @@
 # Created by: Cyrus Rahman <cr@jcmax.com>
-# $FreeBSD: converters/tnef/Makefile 326406 2013-09-05 14:59:29Z bapt $
+# $FreeBSD: converters/tnef/Makefile 328488 2013-09-27 14:49:58Z garga $
 
 PORTNAME=	tnef
 PORTVERSION=	1.4.9
@@ -13,16 +13,16 @@ OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
 
-MAN1=		tnef.1
 PORTDOCS=	AUTHORS NEWS README THANKS TODO
-PLIST_FILES=	bin/tnef
+PLIST_FILES=	bin/tnef \
+		man/man1/tnef.1.gz
 
 .include <bsd.port.pre.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 # This target is intended to be run by the port maintainer.
