@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libfb
-# Date created:				12 Jan 2010
-# Whom:					Max Khon <fjoe@FreeBSD.org>
-#
-# $FreeBSD: ports/net/libfb/Makefile,v 1.5 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: Max Khon <fjoe@FreeBSD.org>
+# $FreeBSD: net/libfb/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libfb
 PORTVERSION=	2.0.2
@@ -31,4 +27,5 @@ LIBNET_CPPFLAGS=	-I${LOCALBASE}/include/libnet11
 LIBNET_LIBS=		-L${LOCALBASE}/lib/libnet11
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
