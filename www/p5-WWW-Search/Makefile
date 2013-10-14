@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Search/Makefile 327367 2013-09-16 07:27:13Z culot $
+# $FreeBSD: www/p5-WWW-Search/Makefile 329785 2013-10-08 13:44:59Z culot $
 
 PORTNAME=	WWW-Search
-PORTVERSION=	2.512
+PORTVERSION=	2.513
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -38,18 +38,5 @@ TEST_DEPENDS=	p5-IO-Capture>=0:${PORTSDIR}/devel/p5-IO-Capture \
 USES=		perl5
 USE_PERL5=	configure
 USE_DOS2UNIX=	yes
-
-MAN1=		AutoSearch.1 \
-		WebSearch.1
-MAN3=		WWW::Search.3 \
-		WWW::SearchResult.3 \
-		WWW::Search::Null.3 \
-		WWW::Search::Null::Count.3 \
-		WWW::Search::Null::Empty.3 \
-		WWW::Search::Null::Error.3 \
-		WWW::Search::Null::NoVersion.3 \
-		WWW::Search::Result.3 \
-		WWW::Search::Simple.3 \
-		WWW::Search::Test.3
 
 .include <bsd.port.mk>
