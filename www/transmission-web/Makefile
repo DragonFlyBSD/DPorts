@@ -1,4 +1,4 @@
-# $FreeBSD: www/transmission-web/Makefile 313230 2013-03-02 13:48:31Z crees $
+# $FreeBSD: www/transmission-web/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	www net-p2p
@@ -17,6 +17,7 @@ PORTDOCS=	*
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC}/web -name Makefile.* -delete
 
