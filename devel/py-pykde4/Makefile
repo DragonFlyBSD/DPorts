@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pykde4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/py-pykde4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pykde4
 PORTVERSION=	${KDE4_VERSION}
@@ -42,6 +42,7 @@ PLIST_SUB+=	SIPDIR=share/sip
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
