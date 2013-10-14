@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Net-FastCGI/Makefile 326054 2013-09-02 18:41:05Z az $
+# $FreeBSD: www/p5-Net-FastCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Net-FastCGI
 PORTVERSION=	0.14
@@ -21,4 +21,5 @@ MAN3=	Net::FastCGI.3 \
 	Net::FastCGI::IO.3 \
 	Net::FastCGI::Protocol.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
