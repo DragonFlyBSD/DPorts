@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: editors/apel/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: editors/apel/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	apel
 PORTVERSION=	${APEL_VER}
@@ -34,6 +34,7 @@ MAKE_ARGS+=	PREFIX="${LOCALBASE}" \
 OPTIONS_DEFINE=	DOCS
 OPTINOS_DEFAULT=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
