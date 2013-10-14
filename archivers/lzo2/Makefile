@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: archivers/lzo2/Makefile 325635 2013-08-29 21:58:49Z mandree $
+# $FreeBSD: archivers/lzo2/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	lzo2
 PORTVERSION=	2.06
@@ -13,6 +13,7 @@ COMMENT=	Portable speedy, lossless data compression library
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared --docdir=${DOCSDIR}
