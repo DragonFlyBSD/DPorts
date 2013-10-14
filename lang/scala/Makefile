@@ -1,5 +1,5 @@
 # Created by: Mitsuru YOSHIDA <mitsuru@riken.jp>
-# $FreeBSD: lang/scala/Makefile 321646 2013-06-23 18:45:19Z rakuco $
+# $FreeBSD: lang/scala/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	scala
 PORTVERSION=	2.10.2
@@ -37,6 +37,7 @@ PORTDATA=	*
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 pre-patch:
 	@${ECHO_MSG} "Installation settings:"
 	@${ECHO_MSG} "   SCALA_HOME:    ${SCALA_HOME}"
