@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: net/rubygem-whois/Makefile 323799 2013-07-27 17:10:26Z swills $
+# $FreeBSD: net/rubygem-whois/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	whois
 PORTVERSION=	3.2.1
@@ -15,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/ruby-whois
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
