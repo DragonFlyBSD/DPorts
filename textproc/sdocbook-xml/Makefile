@@ -1,9 +1,5 @@
-# New ports collection makefile for:	"Simplified" DocBook XML DTD
-# Date created:		25 December 2000
-# Whom:			KIRIYAMA Kazuhiko <kiri@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/sdocbook-xml/Makefile,v 1.12 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: KIRIYAMA Kazuhiko <kiri@FreeBSD.org>
+# $FreeBSD: textproc/sdocbook-xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sdocbook-xml
 PORTVERSION= 	1.1
@@ -35,6 +31,7 @@ FILES=		sdbcent.mod sdbhier.mod sdbpool.mod sdocbook-custom.dtd \
 		sdocbook.css sdocbook.dtd sdocbookref-custom.dtd \
 		sdocbookref.dtd sinclist.mod
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}; \
 	(cd ${WRKDIR} && ${UNZIP_CMD} ${EXTRACT_BEFORE_ARGS} ${DISTDIR}/${DISTFILES})
