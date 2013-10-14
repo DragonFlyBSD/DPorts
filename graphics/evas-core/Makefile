@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-core/Makefile 326411 2013-09-05 16:25:38Z bapt $
+# $FreeBSD: graphics/evas-core/Makefile 329577 2013-10-06 14:48:21Z gblach $
 
 PORTNAME=	core
 PORTVERSION=	1.7.8
@@ -14,7 +14,7 @@ COMMENT=	A hardware accelerated canvas API (core library)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
@@ -35,14 +35,14 @@ EET_DESC=	EET font loader
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFONTCONFIG}
-LIB_DEPENDS+=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS+=	libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 CONFIGURE_ARGS+=--enable-fontconfig
 .else
 CONFIGURE_ARGS+=--disable-fontconfig
 .endif
 
 .if ${PORT_OPTIONS:MFRIBIDI}
-LIB_DEPENDS+=	fribidi:${PORTSDIR}/converters/fribidi
+LIB_DEPENDS+=	libfribidi.so:${PORTSDIR}/converters/fribidi
 CONFIGURE_ARGS+=--enable-fribidi
 .else
 CONFIGURE_ARGS+=--disable-fribidi
@@ -64,10 +64,5 @@ CONFIGURE_ARGS+=--disable-install-examples
 post-patch:
 	@${REINPLACE_CMD} -e 's|= \$$(datadir)/\$$(PACKAGE)/examples|= $$(datadir)/examples/$$(PACKAGE)|' \
 		${WRKSRC}/src/examples/Makefile.in
-
-post-install:
-.if empty(PORT_OPTIONS:MEXAMPLES)
-	@${RMDIR} ${EXAMPLESDIR}
-.endif
 
 .include <bsd.port.mk>
