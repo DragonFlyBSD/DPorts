@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/p5-RunApp/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-RunApp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	RunApp
 PORTVERSION=	0.13
@@ -31,4 +31,5 @@ MAN3=		App::Control::Apache.3 \
 		RunApp::Template.3 \
 		RunApp::Template::Apache.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
