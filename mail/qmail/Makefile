@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: mail/qmail/Makefile 325421 2013-08-26 23:30:41Z bdrewery $
+# $FreeBSD: mail/qmail/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION?=	${QMAIL_VERSION}
@@ -19,6 +19,7 @@ CONFLICTS?=	qmail-ldap-[0-9]* qmail-mysql-[0-9]* qmail-spamcontrol-[0-9]* qmail-
 CONFLICTS+=	qmail-vida-[0-9]*
 
 USES=		qmail:vars
+NO_STAGE=	yes
 PREFIX?=	${QMAIL_PREFIX}
 
 MAKE_JOBS_UNSAFE=	yes
@@ -694,6 +695,7 @@ post-patch:
 	@cd ${UCSPISRC}/src && ${PATCH} -p0 < ${DISTDIR}/${DIST_SUBDIR}/ucspi-ssl-0.70_ucspitls-0.6.patch_
 	@${ECHO_CMD} "${UCSPISRC}/compile" > ${WRKSRC}/conf-ucspissl
 	${ECHO_CMD} "${CC} ${CFLAGS}" > ${UCSPISRC}/src/conf-cc
+	${ECHO_CMD} "${CC} ${STRIP} ${LDFLAGS}" > ${UCSPISRC}/src/conf-ld
 	${ECHO_CMD} "${PREFIX}" > ${UCSPISRC}/src/conf-home
 	${ECHO_CMD} "${PREFIX}/bin" > ${UCSPISRC}/src/conf-tcpbin
 	${ECHO_CMD} "/etc/ssl" > ${UCSPISRC}/src/conf-cadir
