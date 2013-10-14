@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/py-gtksourceview/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11-toolkits/py-gtksourceview/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.24 2010/04/19 11:30:28 kwm Exp $
 
 PORTNAME=	gtksourceview
@@ -20,4 +20,5 @@ USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
