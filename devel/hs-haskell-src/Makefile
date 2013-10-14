@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-haskell-src/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-haskell-src/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	haskell-src
 PORTVERSION=	1.0.1.5
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_HAPPY=	yes
 USE_CABAL=	syb
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
