@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-VectorReal/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: math/p5-Math-VectorReal/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-VectorReal
 PORTVERSION=	1.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Math::VectorReal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
