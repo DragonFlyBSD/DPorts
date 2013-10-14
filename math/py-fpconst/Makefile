@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-fpconst
-# Date created:				7 Oct 2003
-# Whom:					Rui Lopes <rui@ruilopes.com>
-#
-# $FreeBSD: ports/math/py-fpconst/Makefile,v 1.9 2012/11/17 05:59:29 svnexp Exp $
+# Created by: Rui Lopes <rui@ruilopes.com>
+# $FreeBSD: math/py-fpconst/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=		fpconst
 PORTVERSION=		0.7.2
@@ -17,4 +14,5 @@ COMMENT=		Utilities for handling IEEE 754 floating point special values
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
