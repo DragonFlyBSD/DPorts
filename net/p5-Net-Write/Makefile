@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Gomor
-# Date created:				17 May 2006
-# Whom:					Christopher Boumenot <boumenot@gmail.com>
-#
-# $FreeBSD: net/p5-Net-Write/Makefile 326361 2013-09-05 07:29:05Z az $
-#
+# Created by: Christopher Boumenot <boumenot@gmail.com>
+# $FreeBSD: net/p5-Net-Write/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Write
 PORTVERSION=	1.05
@@ -28,4 +24,5 @@ MAN3=	Net::Write.3 \
 	Net::Write::Layer3.3 \
 	Net::Write::Layer4.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
