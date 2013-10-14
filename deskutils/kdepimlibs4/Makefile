@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: deskutils/kdepimlibs4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/kdepimlibs4/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	kdepimlibs
 PORTVERSION=	${KDE4_VERSION}
@@ -30,6 +30,7 @@ USE_QT4=	corelib dbus declarative designer_build gui network sql xml \
 		qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${PATCH_WRKSRC}/cmake/modules/*.cmake
