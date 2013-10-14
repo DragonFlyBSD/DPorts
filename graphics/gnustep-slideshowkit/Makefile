@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/gnustep-slideshowkit/Makefile,v 1.12 2012/11/17 05:58:08 svnexp Exp $
+# $FreeBSD: graphics/gnustep-slideshowkit/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	slideshowkit
 PORTVERSION=	0.0.1
@@ -17,4 +17,5 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
