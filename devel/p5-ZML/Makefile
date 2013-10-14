@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: devel/p5-ZML/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-ZML/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ZML
 PORTVERSION=	1.0.0
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		ZML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
