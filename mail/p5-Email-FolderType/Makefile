@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Email-FolderType
-# Date created:				August 31 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: mail/p5-Email-FolderType/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: mail/p5-Email-FolderType/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-FolderType
 PORTVERSION=	0.8.13
@@ -25,4 +21,5 @@ MAN3=		Email::FolderType.3 \
 		Email::FolderType::Maildir.3 \
 		Email::FolderType::Mbox.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
