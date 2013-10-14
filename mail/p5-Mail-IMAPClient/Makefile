@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 326257 2013-09-04 07:19:56Z az $
+# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-IMAPClient
 PORTVERSION=	3.33
@@ -26,4 +26,5 @@ MAN3=	Mail::IMAPClient.3 \
 	Mail::IMAPClient::MessageSet.3 \
 	Mail::IMAPClient::Thread.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
