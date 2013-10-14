@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-attoparsec-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-attoparsec-conduit/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	attoparsec-conduit
 PORTVERSION=	1.0.1
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	attoparsec>=0.10 conduit>=1.0 text>=0.11 transformers>=0.2.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
