@@ -1,24 +1,20 @@
-# New ports collection makefile for:	py-zconfig
-# Date created:		8 September 2005
-# Whom:			Landon Fuller <landonf@opendarwin.org>
-#
-# $FreeBSD: ports/devel/py-zconfig/Makefile,v 1.11 2012/11/17 05:56:52 svnexp Exp $
+# Created by: Landon Fuller <landonf@opendarwin.org>
+# $FreeBSD: devel/py-zconfig/Makefile 327705 2013-09-20 14:29:14Z rm $
 
 PORTNAME=	zconfig
-PORTVERSION=	2.9.0
-PORTREVISION=	1
+PORTVERSION=	2.9.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	ZConfig-${PORTVERSION}
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	zope@FreeBSD.org
 COMMENT=	General use python configuration library
 
 LICENSE=	ZPL21
 
-USE_ZIP=	yes
-USE_PYTHON=	2.5-2.7
+NO_STAGE=	yes
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	ZConfig
 
