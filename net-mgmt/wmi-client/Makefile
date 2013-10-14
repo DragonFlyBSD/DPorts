@@ -1,5 +1,5 @@
 # Created by: KIKUCHI Koichiro <koichiro@rworks.jp>
-# $FreeBSD: net-mgmt/wmi-client/Makefile 324643 2013-08-13 01:19:08Z zi $
+# $FreeBSD: net-mgmt/wmi-client/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=		wmi
 PORTVERSION=		1.3.16
@@ -25,4 +25,5 @@ MAKEFILE=		GNUmakefile
 MAKE_ENV=		ZENHOME="${PREFIX}" PY_LIBDIR="${PYTHONPREFIX_SITELIBDIR}"
 ALL_TARGET=		build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
