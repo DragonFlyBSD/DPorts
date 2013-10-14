@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/www/py-django-classy-tags/Makefile,v 1.5 2013/02/04 09:44:02 svnexp Exp $
+# $FreeBSD: www/py-django-classy-tags/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-classy-tags
 PORTVERSION=	0.4
@@ -16,4 +16,5 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
