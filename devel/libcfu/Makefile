@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libcfu/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: devel/libcfu/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libcfu
 DISTVERSION=	0.04a
@@ -25,6 +25,7 @@ INFO=		${PORTNAME}
 
 # XXX: work around an issue with automake-1.13 erroring out on a
 #      non-existent m4 directory before libtoolize creates it
+NO_STAGE=	yes
 pre-configure::
 	@${MKDIR} ${WRKSRC}/m4
 
