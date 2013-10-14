@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/p5-File-MMagic/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-MMagic/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-MMagic
 PORTVERSION=	1.30
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		File::MMagic.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
