@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/omake/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: devel/omake/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	omake
 DISTVERSION=	0.9.8.6-0.rc1
@@ -17,6 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 INFO=		omake-doc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
