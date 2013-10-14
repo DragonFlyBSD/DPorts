@@ -1,9 +1,5 @@
-# New ports collection makefile for:	peps
-# Date created:				5 July 2001
-# Whom:					petef@FreeBSD.org
-#
-# $FreeBSD: graphics/peps/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: petef@FreeBSD.org
+# $FreeBSD: graphics/peps/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	peps
 PORTVERSION=	2.0
@@ -31,6 +27,7 @@ ALL_TARGET=	peps
 PLIST_FILES+=	bin/xpeps
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/peps ${PREFIX}/bin
 .if !defined(WITHOUT_X11)
