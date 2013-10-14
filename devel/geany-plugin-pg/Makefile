@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-pg/Makefile 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD: devel/geany-plugin-pg/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	geany-plugin-pg
 PORTVERSION=	${GEANY_VER}
@@ -10,5 +10,6 @@ COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
 LIB_DEPENDS=	gpgme.19:${PORTSDIR}/security/gpgme
 RUN_DEPENDS=	gpg2:${PORTSDIR}/security/gnupg
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
