@@ -1,9 +1,4 @@
-# New ports collection makefile for:	php53-xmlreader
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/php53-xmlreader/Makefile,v 1.2 2012/11/17 06:02:16 svnexp Exp $
-#
+# $FreeBSD: textproc/php53-xmlreader/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 CATEGORIES=	textproc
 
@@ -11,4 +6,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-xmlreader
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
