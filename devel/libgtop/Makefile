@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libgtop/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: devel/libgtop/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/trunk/devel/libgtop/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgtop
@@ -26,6 +26,7 @@ INFO=		libgtop2
 
 PKGMESSAGE=	${FILESDIR}/pkg-message
 
+NO_STAGE=	yes
 post-configure:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH} -f
 
