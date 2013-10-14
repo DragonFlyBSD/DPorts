@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: security/p5-GSSAPI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-GSSAPI/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	GSSAPI
 PORTVERSION=	0.28
@@ -19,6 +19,7 @@ MAN3=		GSSAPI.3 \
 		GSSAPI::OID::Set.3 \
 		GSSAPI::Status.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800000
