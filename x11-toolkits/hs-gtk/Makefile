@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-gtk/Makefile 326202 2013-09-03 19:12:37Z antoine $
+# $FreeBSD: x11-toolkits/hs-gtk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtk
 PORTVERSION=	0.12.4
@@ -14,5 +14,6 @@ USES=		pkgconfig
 USE_CABAL=	cairo>=0.12.0 gio>=0.12.0 glib>=0.12.0 mtl pango>=0.12.0
 USE_GNOME=	gtk20
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
