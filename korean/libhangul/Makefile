@@ -1,5 +1,5 @@
 # Created by: Hyogeol, Lee <hyogeollee@gmail.com>
-# $FreeBSD: korean/libhangul/Makefile 321708 2013-06-24 19:05:53Z jkim $
+# $FreeBSD: korean/libhangul/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libhangul
 PORTVERSION=	0.1.0
