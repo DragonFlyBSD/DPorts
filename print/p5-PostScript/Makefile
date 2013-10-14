@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-PostScript
 # Created by: Fernan Aguero <fernan.aguero@gmail.com>
-# $FreeBSD: print/p5-PostScript/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: print/p5-PostScript/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	PostScript
 PORTVERSION=	0.06
@@ -16,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	PostScript::TextBlock.3 PostScript::Elements.3 PostScript::Metrics.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
