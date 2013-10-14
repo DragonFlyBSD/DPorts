@@ -1,7 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-#
-# $FreeBSD: devel/dbus-sharp/Makefile 316333 2013-04-23 10:13:19Z bapt $
-#
+# $FreeBSD: devel/dbus-sharp/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dbus-sharp
 PORTVERSION=	0.7.0
@@ -19,5 +17,6 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=	pathfix pkgconfig
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
