@@ -1,5 +1,5 @@
 # Created by: Robert Jenssen
-# $FreeBSD: math/qrupdate/Makefile 322830 2013-07-12 12:49:09Z bapt $
+# $FreeBSD: math/qrupdate/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	qrupdate
 PORTVERSION=	1.1.2
@@ -16,6 +16,7 @@ FETCH_ARGS=	-p
 
 USES=		gmake
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
