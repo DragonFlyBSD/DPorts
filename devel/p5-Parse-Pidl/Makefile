@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Parse-Pidl/Makefile 325162 2013-08-21 17:18:06Z timur $
+# $FreeBSD: devel/p5-Parse-Pidl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=		Parse-Pidl
 PORTVERSION=		${SAMBA4_VERSION}
@@ -33,6 +33,7 @@ MAN3=			Parse::Pidl::Dump.3 Parse::Pidl::NDR.3 \
 			Parse::Pidl::Util.3 Parse::Pidl::Wireshark::Conformance.3 \
 			Parse::Pidl::Wireshark::NDR.3
 
+NO_STAGE=	yes
 post-extract:
 			@${RM} -rf ${WRKSRC}/lib/Parse/Yapp ${WRKSRC}/lib/wscript_build
 
