@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: misc/qt4-qtdemo/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: misc/qt4-qtdemo/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	qtdemo
 DISTVERSION=	${QT4_VERSION}
@@ -42,6 +42,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/app +=/s|"assistant"|"assistant-qt4"|' \
 		${BUILD_WRKSRC}/${PORTNAME}/menumanager.cpp \
