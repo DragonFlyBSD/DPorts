@@ -1,10 +1,6 @@
-# New ports collection makefile for:   mutter
-# Date created:        14 Aug 2009
-# Whom:                Pawel Worach <pawel.worach@gmail.com>
-#
-# $FreeBSD: x11-wm/mutter/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Pawel Worach <pawel.worach@gmail.com>
+# $FreeBSD: x11-wm/mutter/Makefile 327786 2013-09-21 00:01:16Z bapt $
 #   $MCom: ports/x11-wm/mutter/Makefile,v 1.14 2010/06/29 21:14:07 kwm Exp $
-#
 
 PORTNAME=	mutter
 PORTVERSION=	2.31.2
@@ -24,8 +20,7 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 gconf2 ltverhack
 USE_LDCONFIG=	yes
@@ -37,6 +32,7 @@ GCONF_SCHEMAS=	mutter.schemas
 MAN1=		mutter-message.1 mutter-theme-viewer.1 \
 		mutter-window-demo.1 mutter.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
