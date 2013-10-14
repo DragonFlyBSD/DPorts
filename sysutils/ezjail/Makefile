@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ezjail/Makefile 316158 2013-04-20 16:19:40Z culot $
+# $FreeBSD: sysutils/ezjail/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ezjail
 PORTVERSION=	3.3
@@ -14,6 +14,7 @@ MAN5=		ezjail.conf.5
 MAN7=		ezjail.7
 MAN8=		ezjail-admin.8
 
+NO_STAGE=	yes
 post-install:
 	[ -f ${PREFIX}/etc/${PORTNAME}.conf ] || \
 		${CP} -p ${PREFIX}/etc/${PORTNAME}.conf.sample \
