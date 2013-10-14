@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 326760 2013-09-08 16:36:01Z tobez $
+# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Autoformat
 PORTVERSION=	1.669.004
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Autoformat.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
