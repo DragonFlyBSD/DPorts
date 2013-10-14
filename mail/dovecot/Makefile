@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dominic.marks@btinternet.com>
-# $FreeBSD: mail/dovecot/Makefile 319871 2013-06-04 15:47:06Z bapt $
+# $FreeBSD: mail/dovecot/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dovecot
 PORTVERSION=	1.2.17
@@ -59,6 +59,7 @@ KQUEUE_DESC=		kqueue(2) support
 MANAGESIEVE_DESC=	ManageSieve support
 VPOPMAIL_DESC=		VPopMail support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "arm"
