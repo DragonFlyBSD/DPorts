@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xmltex
-# Date created:         9 May 2002
-# Whom:                 Nik Clayton <nik@FreeBSD.org>
-#
-# $FreeBSD: print/xmltex/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Nik Clayton <nik@FreeBSD.org>
+# $FreeBSD: print/xmltex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=		xmltex
 PORTVERSION=		1.9
@@ -22,6 +18,7 @@ LIB_DEPENDS=		png15:${PORTSDIR}/graphics/png
 
 USE_TEX=	tex
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} CLASSDIR=${CLASSDIR} WEB2CDIR=${WEB2CDIR}
