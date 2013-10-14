@@ -1,9 +1,5 @@
-# New ports collection makefile for:	clustalw
-# Date created:				6 July 2000
-# Whom:					dbader@eece.unm.edu
-#
-# $FreeBSD: ports/biology/clustalw/Makefile,v 1.19 2012/11/17 05:54:51 svnexp Exp $
-#
+# Created by: dbader@eece.unm.edu
+# $FreeBSD: biology/clustalw/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	clustalw
 PORTVERSION=	2.1
@@ -24,6 +20,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/clustalw bin/clustalw2
 
+NO_STAGE=	yes
 post-install:
 	${LN} -sf clustalw2 ${PREFIX}/bin/clustalw
 
