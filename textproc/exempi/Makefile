@@ -1,10 +1,6 @@
-# New ports collection makefile for:	exempi
-# Date created:		2008-02-26
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: textproc/exempi/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: textproc/exempi/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 #   $MCom: ports/textproc/exempi/Makefile,v 1.1 2008/02/26 18:50:26 ahze Exp $
-#
 
 PORTNAME=	exempi
 PORTVERSION=	2.1.1
