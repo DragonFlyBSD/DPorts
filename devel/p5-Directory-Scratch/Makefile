@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Directory-Scratch/Makefile 326742 2013-09-08 15:07:35Z tobez $
+# $FreeBSD: devel/p5-Directory-Scratch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Directory-Scratch
 PORTVERSION=	0.15
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Directory::Scratch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
