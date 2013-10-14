@@ -1,5 +1,5 @@
 # Created by: futatuki
-# $FreeBSD: sysutils/cdrdao/Makefile 325741 2013-08-30 23:57:36Z bapt $
+# $FreeBSD: sysutils/cdrdao/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME?=	cdrdao
 PORTVERSION=	1.2.3
@@ -61,6 +61,7 @@ CONFIGURE_ARGS+=	--without-pcctsbin --without-pcctsinc \
 MAKE_ENV=		CCOM=cc LANG=C
 SCSILIBTARGET=		${ARCH:S/powerpc64/powerpc/}-freebsd-cc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
