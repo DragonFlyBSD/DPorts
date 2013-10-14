@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-AnyEvent-AIO/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-AnyEvent-AIO/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyEvent-AIO
 PORTVERSION=	1.1
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	AnyEvent::AIO.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
