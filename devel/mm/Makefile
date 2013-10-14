@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall
-# $FreeBSD: ports/devel/mm/Makefile,v 1.43 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/mm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mm
 PORTVERSION=	1.4.2
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 MAN1=		mm-config.1
 MAN3=		mm.3
 
+NO_STAGE=	yes
 post-build:
 	@${ECHO_MSG} "===>  Use 'make test' to run a quick test suite."
 
