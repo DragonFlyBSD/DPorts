@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/igor/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/igor/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	igor
 PORTVERSION=	1.376
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/local|${PREFIX}|' ${WRKSRC}/${PORTNAME} ${WRKSRC}/${PORTNAME}.1
 
