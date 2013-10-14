@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: mail/pear-Mail/Makefile 314275 2013-03-15 07:20:17Z miwi $
+# $FreeBSD: mail/pear-Mail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail
 DISTVERSION=	1.2.0
@@ -18,6 +18,7 @@ LATEST_LINK=	pear-${PORTNAME}
 OPTIONS_DEFINE=	PEAR_NET_SMTP
 PEAR_NET_SMTP_DESC=	PEAR::Net_SMTP support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_NET_SMTP}
