@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: x11-toolkits/gtkmm30/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: x11-toolkits/gtkmm30/Makefile 329070 2013-10-02 16:24:19Z kwm $
 #   $MCom: ports/trunk/x11-toolkits/gtkmm30/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtkmm
@@ -7,13 +7,13 @@ PORTVERSION=	3.8.1
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	30
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Gtk+3
 
 USE_XZ=		yes
-LATEST_LINK=	gtkmm30
 
 .if !defined(REFERENCE_PORT)
 
@@ -31,6 +31,7 @@ CONFIGURE_ARGS=	--disable-documentation \
 
 PLIST_SUB=	VERSION="3.0" API_VERSION="3.0"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/tests//' \
 		${WRKSRC}/Makefile.in
