@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/gnome_subr/files/gnome.subr,v 1.3 2012/11/17 06:01:33 svnexp Exp $
+# $FreeBSD: sysutils/gnome_subr/files/gnome.subr 300897 2012-07-14 14:29:18Z beat $
 
 # Add the following to /etc/rc.conf to start GNOME services (dbus,
 # hald, gdm, and so on) at boot time:
