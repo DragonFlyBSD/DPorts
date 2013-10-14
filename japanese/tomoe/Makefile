@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ja-tomoe
-# Date created:				18 Dec 2005
-# Whom:					Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: japanese/tomoe/Makefile 327410 2013-09-16 15:42:40Z az $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: japanese/tomoe/Makefile 330183 2013-10-12 20:10:42Z ume $
 
 PORTNAME=	tomoe
 PORTVERSION=	0.6.0
@@ -27,46 +23,31 @@ BUILD_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/glib2.so:${PORTSDIR}/devel/ruby-glib2 \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/glib2.so:${PORTSDIR}/devel/ruby-glib2
 
+
 OPTIONS_DEFINE=		DICT_RUBY EST MYSQL PYTHON UNIHAN
 OPTIONS_DEFAULT=	PYTHON
+OPTIONS_SUB=		yes
 DICT_RUBY_DESC=		Enable Ruby based dictionary module
+DICT_RUBY_CONFIGURE_ENABLE=	dict-ruby
 EST_DESC=		Enable Hyper Estraier dictionary module
+EST_CONFIGURE_WITH=	est
 MYSQL_DESC=		Enable MySQL dictionary module
+MYSQL_CONFIGURE_WITH=	mysql
 PYTHON_DESC=		Enable Python module
+PYTHON_CONFIGURE_OFF=	--with-python=no
 UNIHAN_DESC=		Enable Unihan database dictionary module
+UNIHAN_CONFIGURE_ENABLE=	unihan
 
 .include <bsd.port.pre.mk>
 
-.if ${PORT_OPTIONS:MDICT_RUBY}
-CONFIGURE_ARGS+=--enable-dict-ruby
-PLIST_SUB+=	DICT_RUBY=""
-.else
-PLIST_SUB+=	DICT_RUBY="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MEST}
-CONFIGURE_ARGS+=--with-est
-PLIST_SUB+=	EST=""
-.else
-PLIST_SUB+=	EST="@comment "
-.endif
-
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=	yes
-CONFIGURE_ARGS+=--with-mysql
-PLIST_SUB+=	MYSQL=""
-.else
-PLIST_SUB+=	MYSQL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
 USE_GNOME+=	pygtk2
-PLIST_SUB+=	PYTHON=""
-.else
-CONFIGURE_ARGS+=--with-python=no
-PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MUNIHAN}
@@ -79,10 +60,6 @@ EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 BUILD_DEPENDS+=	\
 	${RUBY_SITEARCHLIBDIR}/uconv.so:${PORTSDIR}/japanese/ruby-uconv \
 	${RUBY_SITELIBDIR}/suikyo/suikyo.rb:${PORTSDIR}/japanese/suikyo
-PLIST_SUB+=	UNIHAN=""
-.else
-CONFIGURE_ARGS+=--disable-unihan
-PLIST_SUB+=	UNIHAN="@comment "
 .endif
 
 CONFIGURE_ENV+=	PYTHON_VERSION=${PYTHON_VERSION:S;python;;} \
