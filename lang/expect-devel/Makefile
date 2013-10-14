@@ -1,8 +1,5 @@
-# New ports collection makefile for:	expect-devel
-# Date created:		17 October 2007
-# Whom:			mm
-#
-# $FreeBSD: ports/lang/expect-devel/Makefile,v 1.16 2012/11/17 05:58:49 svnexp Exp $
+# Created by: mm
+# $FreeBSD: lang/expect-devel/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	expect
 PORTVERSION=	5.44.1.15
@@ -34,6 +31,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_SUB+=	EXPECT_VER="${EXPECT_VER}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITHOUT_X11)
