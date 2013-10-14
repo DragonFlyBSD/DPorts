@@ -1,5 +1,5 @@
 # Created by: Graham Todd <gtodd@bellanet.org>
-# $FreeBSD: textproc/py-markdown/Makefile 315090 2013-03-24 03:08:36Z koobs $
+# $FreeBSD: textproc/py-markdown/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		markdown
 PORTVERSION=		2.3.1
@@ -23,4 +23,5 @@ PYDISTUTILS_PKGNAME=	Markdown
 regression-test: build
 	@cd ${WRKSRC} && nosetests
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
