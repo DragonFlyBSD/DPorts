@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: devel/gconfmm/Makefile 326105 2013-09-02 22:11:23Z bapt $
+# $FreeBSD: devel/gconfmm/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gconfmm
 PORTVERSION=	2.0.2
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
 		${WRKSRC}/gconf/gconfmm/client.cc
