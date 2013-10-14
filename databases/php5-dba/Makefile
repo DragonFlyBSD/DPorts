@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-dba
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/php5-dba/Makefile,v 1.2 2012/11/17 05:55:19 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: databases/php5-dba/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 CATEGORIES=	databases
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-dba
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
