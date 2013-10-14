@@ -1,5 +1,5 @@
 # Created by: spn
-# $FreeBSD: x11-wm/fluxbox/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: x11-wm/fluxbox/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	fluxbox
 PORTVERSION=	1.3.5
@@ -38,6 +38,7 @@ SYSTRAY_DESC=	Enable systray feature
 TOOLBAR_DESC=	Enable toolbar feature
 XRENDER_DESC=	Enable xrender support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
