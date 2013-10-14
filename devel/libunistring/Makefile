@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: devel/libunistring/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/libunistring/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libunistring
 PORTVERSION=	0.9.3
@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INFO=		${PORTNAME}
 
+NO_STAGE=	yes
 pre-patch:
 .if defined(NOPORTDOCS)
 	cd ${WRKSRC}/doc && ${REINPLACE_CMD}\
