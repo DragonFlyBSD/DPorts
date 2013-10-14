@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ncurses-ruby
-# Date created:		7 February 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-ncurses/Makefile,v 1.16 2012/11/17 05:56:57 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-ncurses/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ncurses
 PORTVERSION=	1.2.4
@@ -26,6 +22,7 @@ INSTALL_TARGET=	site-install
 
 DOCS=		COPYING Changes README THANKS TODO
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODDOCDIR}
