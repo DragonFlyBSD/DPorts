@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 325761 2013-08-31 01:17:11Z bapt $
+# $FreeBSD: x11-wm/e16/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	e16
 PORTVERSION=	1.0.13.001
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-rpath --enable-mans SHELL=/bin/sh
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSOUND}
