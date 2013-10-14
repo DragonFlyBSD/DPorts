@@ -1,4 +1,4 @@
-# $FreeBSD: ports/lang/gscheme/Makefile,v 1.13 2012/11/17 05:58:51 svnexp Exp $
+# $FreeBSD: lang/gscheme/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gscheme
 PORTVERSION=	0.6
@@ -21,6 +21,7 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|setMark:|setMarkScheme:|' \
 		${WRKSRC}/SchemeTypes.h ${WRKSRC}/SchemeTypes.m
