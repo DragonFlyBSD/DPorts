@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@ciam.ru>
-# $FreeBSD: devel/argp-standalone/Makefile 326332 2013-09-04 23:00:51Z bapt $
+# $FreeBSD: devel/argp-standalone/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	argp-standalone
 PORTVERSION=	1.3
@@ -23,6 +23,7 @@ PLIST_FILES=	lib/libargp.la lib/libargp.a \
 		lib/libargp.so lib/libargp.so.0 \
 		include/argp.h
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-configure:
