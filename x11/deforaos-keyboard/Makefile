@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-keyboard/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/deforaos-keyboard/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	keyboard
 PORTVERSION=	0.2.1
@@ -21,4 +21,5 @@ USES=		pkgconfig gettext
 USE_XORG=	xtst
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
