@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: www/p5-Apache-Session/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Apache-Session/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-Session
 PORTVERSION=	1.90
@@ -49,4 +49,5 @@ MAN3=		Apache::Session.3 \
 		Apache::Session::Store::Sybase.3 \
 		Apache::Session::Sybase.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
