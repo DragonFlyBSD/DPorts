@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: ports/textproc/xml-commons/Makefile,v 1.4 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/xml-commons/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xml-commons
 PORTVERSION=	1.4.01
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 PLIST_FILES=	%%JAVAJARDIR%%/xml-apis-ext.jar \
 		%%JAVAJARDIR%%/xml-apis.jar
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/xml-apis-ext.jar ${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/xml-apis.jar ${JAVAJARDIR}
