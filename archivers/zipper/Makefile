@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: archivers/zipper/Makefile 317840 2013-05-10 20:43:23Z lme $
+# $FreeBSD: archivers/zipper/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zipper
 PORTVERSION=	1.5
@@ -11,6 +11,7 @@ DISTNAME=	Zipper-${PORTVERSION}
 MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Tool for inspecting the contents of a compressed archive
 
+NO_STAGE=	yes
 USE_GNUSTEP=	yes
 USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
