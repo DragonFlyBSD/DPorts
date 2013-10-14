@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dev86
-# Date created:				25 October 2007
-# Whom:					Philip Schulz <phs@deadc0.de>
-#
-# $FreeBSD: devel/dev86/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Philip Schulz <phs@deadc0.de>
+# $FreeBSD: devel/dev86/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dev86
 PORTVERSION=	0.16.18
@@ -23,6 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		as86.1 bcc.1 elks.1 elksemu.1 ld86.1
 
+NO_STAGE=	yes
 post-patch:
 # Respect CFLAGS in Makefiles.
 	@${GREP} -Rl 'CFLAGS=' ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -i "" \
