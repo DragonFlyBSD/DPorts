@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-MooX-Types-MooseLike-Numeric/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: devel/p5-MooX-Types-MooseLike-Numeric/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooX-Types-MooseLike-Numeric
 PORTVERSION=	1.01
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 
 MAN3=		MooX::Types::MooseLike::Numeric.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
