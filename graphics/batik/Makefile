@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/batik/Makefile,v 1.14 2012/11/17 05:58:01 svnexp Exp $
+# $FreeBSD: graphics/batik/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	batik
 PORTVERSION=	1.7
@@ -26,6 +26,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 PORTDOCS=	CHANGES NOTICE README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
