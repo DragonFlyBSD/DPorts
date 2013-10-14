@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-UNIVERSAL-can/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-UNIVERSAL-can/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	UNIVERSAL-can
 PORTVERSION=	1.20120726
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		UNIVERSAL::can.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
