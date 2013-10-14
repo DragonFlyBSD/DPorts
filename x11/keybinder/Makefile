@@ -1,5 +1,4 @@
-# $FreeBSD: x11/keybinder/Makefile 318413 2013-05-18 06:38:20Z olivierd $
-#
+# $FreeBSD: x11/keybinder/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	keybinder
 PORTVERSION=	0.3.0
@@ -27,6 +26,7 @@ OPTIONS_DEFAULT=	PYTHON
 # Override LUA description
 LUA_DESC=	Lua bindings
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
