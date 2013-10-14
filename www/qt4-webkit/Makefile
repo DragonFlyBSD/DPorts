@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: www/qt4-webkit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/qt4-webkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webkit
 DISTVERSION=	${QT4_VERSION}
@@ -47,6 +47,7 @@ OPTIONS_DEFAULT=	GSTREAMER
 
 GSTREAMER_DESC=	HTML5 audio and video via GStreamer
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGSTREAMER}
