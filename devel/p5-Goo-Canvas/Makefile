@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar Teixeira <sylvio@FreeBSD.org>
-# $FreeBSD: devel/p5-Goo-Canvas/Makefile 325171 2013-08-21 23:21:46Z wg $
+# $FreeBSD: devel/p5-Goo-Canvas/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Goo-Canvas
 PORTVERSION=	0.06
@@ -59,4 +59,5 @@ MAN3=		Goo::Canvas::Item.3 \
 		Goo::Canvas::Points.3 \
 		Goo::Canvas::ItemSimple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
