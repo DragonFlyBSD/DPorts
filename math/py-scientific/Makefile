@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-scientific
-# Date created:		29 July 1999
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/math/py-scientific/Makefile,v 1.26 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: math/py-scientific/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	scientific
 PORTVERSION=	2.8
@@ -26,6 +22,7 @@ PYDISTUTILS_PKGNAME=	ScientificPython
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
