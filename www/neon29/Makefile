@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: www/neon29/Makefile 317472 2013-05-06 06:54:19Z bapt $
+# $FreeBSD: www/neon29/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	neon29
 PORTVERSION=	0.29.6
@@ -30,6 +30,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared \
 		--with-libs=${LOCALBASE}:${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXPAT}
