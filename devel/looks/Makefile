@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: devel/looks/Makefile 318410 2013-05-17 22:06:14Z erwin $
+# $FreeBSD: devel/looks/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	looks
 PORTVERSION=	2.5.2
@@ -27,6 +27,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE} \
 DOCFILES=	README.html RELEASE-NOTES.txt
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
