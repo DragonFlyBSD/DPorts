@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kanji18
-# Date created:		23 November 1999
-# Whom:			Yoshiro MIHIRA <sanpei@sanpei.org>
-#
-# $FreeBSD: japanese/kanji18/Makefile 317651 2013-05-08 11:29:45Z sanpei $
-#
+# Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
+# $FreeBSD: japanese/kanji18/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kanji
 PORTVERSION?=	1.0
@@ -26,6 +22,7 @@ BUILD_DEPENDS+= bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf
 FONTSDIR=	lib/X11/fonts/local
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGINSTALL=	${WRKSRC}/INSTALL
