@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/comms/py-serial/pkg-plist,v 1.7 2012/11/17 05:55:01 svnexp Exp $
+@comment $FreeBSD: comms/py-serial/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/miniterm.py
 %%PYTHON_SITELIBDIR%%/serial/__init__.py
 %%PYTHON_SITELIBDIR%%/serial/__init__.pyc

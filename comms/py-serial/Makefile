@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pySerial
-# Date created:				26 February 2002
-# Whom:					Hye-Shik Chang <perky@fallin.lv>
-#
-# $FreeBSD: ports/comms/py-serial/Makefile,v 1.27 2012/11/17 05:55:01 svnexp Exp $
-#
+# Created by: Hye-Shik Chang <perky@fallin.lv>
+# $FreeBSD: comms/py-serial/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	serial
 PORTVERSION=	2.6
@@ -23,6 +19,7 @@ PYDISTUTILS_PKGNAME=	py${PORTNAME}
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
