@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/libvncserver/Makefile 320925 2013-06-14 14:11:51Z bapt $
+# $FreeBSD: net/libvncserver/Makefile 327929 2013-09-23 06:14:29Z bapt $
 
 PORTNAME=	libvncserver
 PORTVERSION=	0.9.9
@@ -13,8 +13,8 @@ COMMENT=	Provide an easy API to write one's own vnc server
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 USES=	pathfix
 USE_LDCONFIG=	yes
@@ -54,6 +54,6 @@ post-patch:
 		'/^SUBDIRS/s|x11vnc||g' ${WRKSRC}/Makefile.in
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/rfb/default8x16.h ${PREFIX}/include/rfb
+	${INSTALL_DATA} ${WRKSRC}/rfb/default8x16.h ${STAGEDIR}${PREFIX}/include/rfb
 
 .include <bsd.port.mk>
