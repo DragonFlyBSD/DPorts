@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/ktimer/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-clocks/ktimer/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	ktimer
 PORTVERSION=	${KDE4_VERSION}
@@ -17,4 +17,5 @@ USE_KDE4=	kdeprefix kdehier automoc4 kdelibs
 USES=		cmake:outsource
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
