@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/py-scipy/Makefile 325081 2013-08-21 01:03:00Z wen $
+# $FreeBSD: science/py-scipy/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	scipy
 PORTVERSION=	0.12.0
@@ -34,6 +34,7 @@ OPTIONS_DEFAULT=SUITESPARSE
 ATLAS_DESC=	Use optimized blas library
 SUITESPARSE_DESC=	Use AMD and UMFPACK in SuiteSparse
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lR "malloc\.h" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
 		-e "s@malloc\.h@stdlib.h@"
