@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/ncurses/Makefile 320239 2013-06-08 06:57:50Z rafan $
+# $FreeBSD: devel/ncurses/Makefile 327793 2013-09-21 06:57:40Z rafan $
 
 PORTNAME=	ncurses
 PORTVERSION=	${RELEASE}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	rafan@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for terminal-independent, full-screen output
 
 CONFLICTS=	ncurses-devel-*
@@ -80,6 +80,7 @@ EXAMPLES_CPP=	Makefile NEWS PROBLEMS README-first cursesapp.cc \
 		cursesw.h cursslk.cc cursslk.h demo.cc etip.h \
 		internal.h
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include "${.CURDIR}/Makefile.man"
