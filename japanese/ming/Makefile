@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ming/Makefile 318993 2013-05-24 16:35:30Z bapt $
+# $FreeBSD: japanese/ming/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ming
 PORTVERSION=	0.1.5
@@ -37,6 +37,7 @@ DOCS=		CHANGES \
 DOCS_UTIL=	README \
 		TODO
 
+NO_STAGE=	yes
 post-extract:
 	${SED} -e 's:"\.\./\.\./ming\.h":<ming.h>:g' \
 		${WRKSRC}/ming.h > ${WRKSRC}/mingpp.h
