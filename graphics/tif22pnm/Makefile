@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/tif22pnm/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/tif22pnm/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tif22pnm
 PORTVERSION=	0.14
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/png22pnm bin/tif22pnm
 TIF22PNM_SRCS=	ptspnm.c minigimp.c miniglib.c ptstiff3.c tif22pnm.c
 PNG2PNM_SRCS=	png22pnm.c
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} \
 		&& ${CC} ${CFLAGS} -DNDEBUG -I${LOCALBASE}/include \
