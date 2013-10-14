@@ -1,5 +1,5 @@
 # Created by: Gen Otsuji<otsuji@users.sourceforge.jp>
-# $FreeBSD: japanese/suikyo/Makefile 325755 2013-08-31 00:41:48Z bapt $
+# $FreeBSD: japanese/suikyo/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	suikyo
 PORTVERSION=	2.1.0
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-rubydir=${RUBY_SITELIBDIR}
 USE_AUTOTOOLS=	automake autoconf
 
+NO_STAGE=	yes
 pre-configure:
 	@(cd ${CONFIGURE_WRKSRC} && ${SETENV} ${AUTOTOOLS_ENV} ${ACLOCAL})
 
