@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/varconf/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/varconf/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	varconf
 PORTVERSION=	1.0.0
@@ -16,6 +16,7 @@ USE_BZIP2=	yes
 USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
