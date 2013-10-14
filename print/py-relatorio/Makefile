@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: print/py-relatorio/Makefile 324973 2013-08-19 11:21:36Z wen $
+# $FreeBSD: print/py-relatorio/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	relatorio
 PORTVERSION=	0.6.0
@@ -18,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycha>=0.5.0:${PORTSDIR}/graphics/py-pycha \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
