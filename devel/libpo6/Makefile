@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/libpo6/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/libpo6/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libpo6
 PORTVERSION=	0.3.1
