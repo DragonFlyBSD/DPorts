@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/ecore-imf_evas/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: x11/ecore-imf_evas/Makefile 329513 2013-10-05 22:01:13Z gblach $
 
 PORTNAME=	imf_evas
 PORTVERSION=	1.7.8
@@ -17,10 +17,9 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_EFL=	ecore evas libtool_hack
 USE_EFL_ECORE=	imf
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_imf_evas
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
@@ -42,6 +41,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ecore-imf-evas.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
