@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-libxslt
-# Date created:				2 Jun 2004
-# Whom:					Alexander Nedotsukov <bland@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/py-libxslt/Makefile,v 1.7 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
+# $FreeBSD: textproc/py-libxslt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 CATEGORIES=	textproc gnome python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,6 +22,7 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 DOCSDIR=	${PREFIX}/share/doc/py-libxslt
 EXAMPLESDIR=	${PREFIX}/share/examples/py-libxslt
 
+NO_STAGE=	yes
 post-install:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}
 	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}
