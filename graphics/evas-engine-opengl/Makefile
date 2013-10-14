@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-opengl/Makefile 326045 2013-09-02 18:03:16Z antoine $
+# $FreeBSD: graphics/evas-engine-opengl/Makefile 329584 2013-10-06 15:10:45Z gblach $
 
 PORTNAME=	engine-opengl
 PORTVERSION=	1.7.8
@@ -14,7 +14,7 @@ COMMENT=	A hardware accelerated canvas API (OpenGL engine)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
@@ -43,6 +43,6 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/evas-opengl-x11.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
