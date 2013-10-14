@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/xlhtml/files/patch-ac,v 1.4 2012/11/17 06:02:25 svnexp Exp $
+$FreeBSD: textproc/xlhtml/files/patch-ac 300897 2012-07-14 14:29:18Z beat $
 
 --- xlhtml/xlhtml.c	2002/02/27 18:10:01	1.1
 +++ xlhtml/xlhtml.c	2002/02/27 18:12:58
