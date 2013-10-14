@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/p5-Net-IP-Minimal/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-IP-Minimal/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-IP-Minimal
 PORTVERSION=	0.06
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::IP::Minimal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
