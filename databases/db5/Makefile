@@ -1,11 +1,12 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: databases/db5/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/db5/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	db5
 PORTVERSION=	5.3.21.0
 CATEGORIES=	databases java
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 PKGNAMEPREFIX?=
+NO_STAGE=	yes
 # the distfiles aren't named db5-* but db-*:
 DISTNAME=	db-${PORTVERSION:R}
 DIST_SUBDIR=	bdb
