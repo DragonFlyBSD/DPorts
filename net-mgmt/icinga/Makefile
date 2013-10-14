@@ -1,5 +1,5 @@
 # Created by: Chin-San Huang <chinsan@FreeBSD.org>
-# $FreeBSD: net-mgmt/icinga/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: net-mgmt/icinga/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	icinga
 PORTVERSION=	1.9.3
@@ -87,10 +87,12 @@ UNHANDLED_HACK_DESC=	Display passive checks in unhandled queries
 IDOUTILS_DESC=		Enable Icinga Data Objects support
 APACHE_DESC=		Depend on Apache and install webconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEMBEDDED_PERL}
-USE_PERL5_BUILD=	yes
+USES+=			perl5
+USE_PERL5=		build
 CONFIGURE_ARGS+=	--enable-embedded-perl \
 		--with-perlcache
 PLIST_SUB+=	EMBEDDED_PERL=""
