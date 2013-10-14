@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-Proc-ProcessTable/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Proc-ProcessTable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Proc-ProcessTable
 PORTVERSION=	0.48
@@ -20,6 +20,7 @@ MAN3=		Proc::ProcessTable::Process.3 \
 		Proc::Killfam.3
 PORTDOCS=	README README.freebsd-kvm README.freebsd-procfs
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
