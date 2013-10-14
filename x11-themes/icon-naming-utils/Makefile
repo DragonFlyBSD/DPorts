@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icon-naming-utils/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: x11-themes/icon-naming-utils/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	icon-naming-utils
 PORTVERSION=	0.8.90
@@ -18,4 +18,5 @@ USES=		pathfix pkgconfig perl5
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
