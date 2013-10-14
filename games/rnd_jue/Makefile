@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/rnd_jue/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/rnd_jue/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	rnd_jue
 PORTVERSION=	3.3.0.0
@@ -51,6 +51,7 @@ ICON_SIZES=	32x32 48x48 64x64 72x72 96x96
 DESKTOP_ENTRIES="R'n'D jue" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract-script:
