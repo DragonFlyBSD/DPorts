@@ -1,5 +1,5 @@
 # Created by: Stephen J. Roznowski <sjr@home.net>
-# $FreeBSD: devel/p5-Time-HiRes/Makefile 326755 2013-09-08 16:18:45Z tobez $
+# $FreeBSD: devel/p5-Time-HiRes/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-HiRes
 PORTVERSION=	1.9726
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Time::HiRes.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
