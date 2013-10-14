@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXres/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXres/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXres
 PORTVERSION=	1.0.7
@@ -20,4 +20,5 @@ MAN3=		XRes.3 \
 		XResQueryExtension.3 \
 		XResQueryVersion.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
