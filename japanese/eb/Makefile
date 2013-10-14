@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: japanese/eb/Makefile 326698 2013-09-07 22:09:49Z bsam $
+# $FreeBSD: japanese/eb/Makefile 328621 2013-09-28 19:09:26Z antoine $
 
 PORTNAME=	eb
 PORTVERSION=	4.4.3
@@ -8,7 +8,6 @@ CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/old/eb-${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}/
 DISTFILES=	${EBFILES} \
-		${LISTFILES} \
 		${APPENDIXFILES}
 EXTRACT_ONLY=	${EBFILES}
 
@@ -99,12 +98,10 @@ post-extract:
 .endfor
 
 post-install:
-	(cd ${WRKDIR}/appendix && ${COPYTREE_SHARE} \* ${APPENDIXDIR} )
+	(cd ${WRKDIR}/appendix && ${COPYTREE_SHARE} . ${STAGEDIR}${APPENDIXDIR} )
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${doc} ${DOCSDIR}
-.endfor
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/doc/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
