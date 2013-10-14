@@ -1,4 +1,4 @@
-# $FreeBSD: audio/openal-soft/Makefile 319704 2013-06-02 18:07:32Z mva $
+# $FreeBSD: audio/openal-soft/Makefile 328680 2013-09-29 11:31:53Z mva $
 
 PORTNAME=	openal-soft
 PORTVERSION=	1.15.1
@@ -25,7 +25,7 @@ PULSEAUDIO_DESC=	Enable sound streaming using PulseAudio
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
-LIB_DEPENDS+=	pulse-simple:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS+=	libpulse-simple.so:${PORTSDIR}/audio/pulseaudio
 CFLAGS+=	-Iinclude -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CMAKE_ARGS+=	-DPULSEAUDIO:BOOL=ON
