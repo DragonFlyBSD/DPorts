@@ -1,10 +1,6 @@
-# New ports collection makefile for:	py-xdg
-# Date created:		2004-06-25
-# Whom:			michael johnson <ahze@ahze.net>
-#
-# $FreeBSD: ports/devel/py-xdg/Makefile,v 1.25 2012/11/17 05:56:52 svnexp Exp $
+# Created by: michael johnson <ahze@ahze.net>
+# $FreeBSD: devel/py-xdg/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/py-xdg/Makefile,v 1.4 2007/09/10 05:35:05 mezz Exp $
-#
 
 PORTNAME=	xdg
 PORTVERSION=	0.19
@@ -20,6 +16,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	pyxdg
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|%%LOCALBASE%%|${LOCALBASE}|g' \
