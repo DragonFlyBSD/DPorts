@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ftp/lftp/Makefile 326251 2013-09-04 06:20:39Z martymac $
+# $FreeBSD: ftp/lftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	lftp
 PORTVERSION=	4.4.9
@@ -38,6 +38,7 @@ OPTIONS_RADIO=	SSL
 OPTIONS_RADIO_SSL=	OPENSSL GNUTLS
 OPTIONS_DEFAULT=	SSL OPENSSL NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
