@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-IniFiles/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-Config-IniFiles/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-IniFiles
 PORTVERSION=	2.82
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Config::IniFiles.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
