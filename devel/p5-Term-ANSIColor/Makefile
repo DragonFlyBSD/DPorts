@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: devel/p5-Term-ANSIColor/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-Term-ANSIColor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Term-ANSIColor
 PORTVERSION=	3.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Term::ANSIColor.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
