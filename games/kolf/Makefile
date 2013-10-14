@@ -1,4 +1,4 @@
-# $FreeBSD: games/kolf/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/kolf/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kolf
 PORTVERSION=	${KDE4_VERSION}
@@ -18,5 +18,6 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <${.CURDIR}/../kdegames4/Makefile.common>
 .include <bsd.port.mk>
