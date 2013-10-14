@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: security/libgnome-keyring/Makefile 319722 2013-06-02 19:15:39Z bapt $
+# $FreeBSD: security/libgnome-keyring/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libgnome-keyring
 PORTVERSION=	2.32.0
@@ -22,4 +22,5 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
