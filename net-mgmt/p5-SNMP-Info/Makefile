@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: net-mgmt/p5-SNMP-Info/Makefile 326244 2013-09-04 03:24:02Z az $
+# $FreeBSD: net-mgmt/p5-SNMP-Info/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	SNMP-Info
 PORTVERSION=	3.05
@@ -70,4 +70,5 @@ MAN3=	SNMP::Info.3 SNMP::Info::AdslLine.3 SNMP::Info::Airespace.3 \
 	SNMP::Info::Layer2::NWSS2300.3 \
 	SNMP::Info::Layer3::Lantronix.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
