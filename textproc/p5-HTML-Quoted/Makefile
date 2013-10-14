@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-HTML-Quoted/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: textproc/p5-HTML-Quoted/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-Quoted
 PORTVERSION=	0.04
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::Quoted.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
