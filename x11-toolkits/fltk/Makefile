@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@Chg.RU>
-# $FreeBSD: x11-toolkits/fltk/Makefile 321172 2013-06-18 06:43:13Z gahr $
+# $FreeBSD: x11-toolkits/fltk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	fltk
 PORTVERSION=	1.3.2
@@ -34,6 +34,7 @@ PORTDOCS=	*
 MAN1=	fltk-config.1 fluid.1
 MAN3=	fltk.3
 
+NO_STAGE=	yes
 post-patch:
 	prefix="${PREFIX}" ; plength=$$(($${#prefix}+10)) ; \
 	${REINPLACE_CMD} -e "\|/etc/fltk|{s||${PREFIX}&|;s|10|$${plength}|;}" \
