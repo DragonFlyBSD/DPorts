@@ -1,5 +1,5 @@
 # Created by: jasone
-# $FreeBSD: ports/devel/libedit/Makefile,v 1.19 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/libedit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libedit
 PORTVERSION=	2.6.10
@@ -35,6 +35,7 @@ MLINKS=		editline.3 el_init.3 \
 		editline.3 history.3
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 post-extract:
 	${MV} ${WRKSRC}/readline ${WRKSRC}/editline
 
