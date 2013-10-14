@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: java/jcommon/Makefile 325788 2013-08-31 10:38:58Z olgeni $
+# $FreeBSD: java/jcommon/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jcommon
 PORTVERSION=	1.0.19
@@ -27,6 +27,7 @@ PORTDOCS=	*
 
 PLIST_FILES=	%%JAVAJARDIR%%/jcommon.jar %%JAVAJARDIR%%/jcommon-xml.jar
 
+NO_STAGE=	yes
 pre-fetch:
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You may use the following build options:"
