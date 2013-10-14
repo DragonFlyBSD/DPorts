@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rpm2cpio
-# Date created:		Sun Jul 18 21:51:23 MET DST 1999
-# Whom:			Juergen Lock <nox@jelal.kn-bremen.de>
-#
-# $FreeBSD: ports/archivers/rpm2cpio/Makefile,v 1.19 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: Juergen Lock <nox@jelal.kn-bremen.de>
+# $FreeBSD: archivers/rpm2cpio/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	rpm2cpio
 PORTVERSION=	1.3
@@ -17,7 +13,8 @@ COMMENT=	Convert .rpm files for extraction with /usr/bin/cpio, needs just perl
 
 NO_WRKSUBDIR=	yes
 
-USE_PERL5=	yes
+USES=		perl5
+NO_STAGE=	yes
 NO_BUILD=	yes
 REINPLACE_ARGS=
 
