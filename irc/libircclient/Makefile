@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: ports/irc/libircclient/Makefile,v 1.6 2013/01/06 21:46:49 svnexp Exp $
+# $FreeBSD: irc/libircclient/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	libircclient
 PORTVERSION=	1.6
@@ -15,6 +15,7 @@ OPTIONS_DEFAULT=	OPENSSL
 BUILD_WRKSRC=	${WRKSRC}/src
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
