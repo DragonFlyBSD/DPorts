@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wxgtk26-unicode-contrib
-# Date created:         		June 27, 2004
-# Whom:					fjoe@FreeBSD.ORG
-#
-# $FreeBSD: ports/x11-toolkits/wxgtk28-unicode-contrib/Makefile,v 1.11 2012/11/17 06:03:40 svnexp Exp $
-#
+# Created by: fjoe@FreeBSD.org
+# $FreeBSD: x11-toolkits/wxgtk28-unicode-contrib/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 MAINTAINER=	fjoe@FreeBSD.org
 COMMENT=	The wxWidgets GUI toolkit contributed libraries (Unicode)
@@ -11,4 +7,5 @@ COMMENT=	The wxWidgets GUI toolkit contributed libraries (Unicode)
 WXGTK_FLAVOR=	gtk2-unicode-contrib
 MASTERDIR=	${.CURDIR}/../wxgtk28
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
