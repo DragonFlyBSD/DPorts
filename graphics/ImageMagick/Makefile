@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 326850 2013-09-09 22:49:20Z mm $
+# $FreeBSD: graphics/ImageMagick/Makefile 329273 2013-10-04 09:32:54Z bapt $
 
 PORTNAME=	ImageMagick
 PORTREVISION=	1
@@ -38,6 +38,7 @@ USE_XZ=		yes
 USE_PERL5=	run build patch
 WANT_GNOME=	yes
 USE_AUTOTOOLS=	libltdl
+NO_STAGE=	yes
 # For some reason, using our libtool breaks the build into pieces:
 #USE_AUTOTOOLS+=	libtool
 GNU_CONFIGURE=	yes
@@ -349,10 +350,10 @@ USE_GHOSTSCRIPT=	yes
 .endif
 
 .if defined(WITHOUT_X11)
-PKGNAMESUFFIX+=		-nox11
 CONFIGURE_ARGS+=	--without-x
 CONFLICTS+=		ImageMagick-6*
 PLIST_SUB+=		X11='@comment '
+PKGNAMESUFFIX=		-nox11
 .else
 CONFLICTS+=		ImageMagick-nox11-6*
 CONFLICTS+=		display-[0-9]*
