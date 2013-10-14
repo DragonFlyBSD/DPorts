@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: net-mgmt/mrtg/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: net-mgmt/mrtg/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	mrtg
 PORTVERSION=	2.17.4
@@ -26,7 +26,7 @@ CONFIGURE_ARGS=	--with-gd-lib=${LOCALBASE}/lib \
 USERS=		mrtg
 GROUPS=		mrtg
 
-USE_PERL5=	YES
+USES=		perl5
 MAKE_ENV+=	PERL=${PERL}
 MRTG_RUNDIR?=	/var/run/mrtg
 
@@ -68,6 +68,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES IPV6 SNMPV3
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
