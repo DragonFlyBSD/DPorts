@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xproxymanagementprotocol/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xproxymanagementprotocol/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	xproxymanagementprotocol
 PORTVERSION=	1.0.3
