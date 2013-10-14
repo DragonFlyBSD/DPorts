@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal7/Makefile 318768 2013-05-22 14:30:51Z miwi $
+# $FreeBSD: www/drupal7/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	drupal7
 PORTVERSION=	7.22
@@ -33,6 +33,7 @@ DOCS=		CHANGELOG.txt INSTALL.mysql.txt INSTALL.sqlite.txt \
 SUB_FILES+=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLITE3}
