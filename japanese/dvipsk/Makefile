@@ -1,5 +1,5 @@
 # Created by: Makoto WATANABE <watanabe@zlab.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/dvipsk/Makefile 319148 2013-05-27 01:56:56Z hrs $
+# $FreeBSD: japanese/dvipsk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	dvipsk
 PORTVERSION=	5.95b
@@ -84,6 +84,7 @@ UPDMAP_SYS=	${LOCALBASE}/bin/updmap-sys --progname=ptex
 TEXCONFIGBIN=	${SETENV} TEXCONFIGINPUTS=\$$TEXMF/texconfig/ptex/ \
 			${LOCALBASE}/bin/texconfig-sys
 
+NO_STAGE=	yes
 post-configure:
 	cd ${PATCH_WRKSRC} && \
 		${RM} -rf udvipsk && ${CP} -R dvipsk udvipsk
