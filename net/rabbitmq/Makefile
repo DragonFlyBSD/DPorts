@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: net/rabbitmq/Makefile 325310 2013-08-24 20:04:01Z olgeni $
+# $FreeBSD: net/rabbitmq/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rabbitmq
 PORTVERSION=	3.1.5
@@ -35,6 +35,7 @@ SCRIPTS_DIR=	${WRKSRC}/scripts/
 MAKE_ENV+=	TARGET_DIR="${PREFIX}/lib/erlang/lib/rabbitmq_server-${PORTVERSION}" SBIN_DIR="${PREFIX}/sbin/" \
 		MAN_DIR="${PREFIX}/man"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/rabbitmq|${PREFIX}/etc/rabbitmq|g ; s|/var/lib|/var/db|g ; s|erl|${LOCALBASE}/bin/erl|g' \
 		${SCRIPTS_DIR}/rabbitmq-server ${SCRIPTS_DIR}/rabbitmqctl \
