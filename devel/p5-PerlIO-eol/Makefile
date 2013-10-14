@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-PerlIO-eol/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-PerlIO-eol/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PerlIO-eol
 PORTVERSION=	0.14
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		PerlIO::eol.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
