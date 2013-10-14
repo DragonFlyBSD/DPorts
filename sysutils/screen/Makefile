@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: sysutils/screen/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/screen/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	screen
 PORTVERSION=	4.0.3
@@ -24,6 +24,7 @@ XTERM_256_DESC=		Enable support for 256 colour xterm
 HOSTINLOCKED_DESC=	Print user@host in locked message
 SHOWENC_DESC=		Show encoding on the status line
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 GNU_CONFIGURE=	yes
