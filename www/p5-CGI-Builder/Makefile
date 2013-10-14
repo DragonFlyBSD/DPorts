@@ -1,9 +1,5 @@
-# New ports collection makefile for:    CGI::Builder
-# Date created:                         20 Oct 2004
-# Whom:                                 Daniel Wijnands <daniel@itxl.nl>
-#
-# $FreeBSD: www/p5-CGI-Builder/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Daniel Wijnands <daniel@itxl.nl>
+# $FreeBSD: www/p5-CGI-Builder/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Builder
 PORTVERSION=	1.36
@@ -27,4 +23,5 @@ MAN3=	Bundle::CGI::Builder::Complete.3 \
 	CGI::Builder::Const.3 \
 	CGI::Builder::Test.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
