@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: ports/lang/jython/Makefile,v 1.23 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: lang/jython/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	jython
 PORTVERSION=	2.5.2
@@ -26,6 +26,7 @@ PLIST_SUB+=	JYTHON_DIR=${INST_TARGET}
 
 CACHEDIR_SPEC=	-Dpython.cachedir=${WRKDIR}/jython-cachedir
 
+NO_STAGE=	yes
 do-install:
 	@# Do tons of backflips so that the cachedir is put into the user's home
 	@# directory (it's irritating to not be able to cache stuff if you're
