@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-ExtUtils-XSpp/Makefile,v 1.11 2013/02/13 06:44:03 svnexp Exp $
+# $FreeBSD: devel/p5-ExtUtils-XSpp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ExtUtils-XSpp
 PORTVERSION=	0.16.03
@@ -14,7 +14,8 @@ COMMENT=	XS for C++ in Perl
 BUILD_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base \
 		p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		xspp.1
 MAN3=		ExtUtils::XSpp.3 \
@@ -40,6 +41,7 @@ MAN3=		ExtUtils::XSpp.3 \
 		ExtUtils::XSpp::Plugin.3 \
 		ExtUtils::XSpp::Typemap.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501301
