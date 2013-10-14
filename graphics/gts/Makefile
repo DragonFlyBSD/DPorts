@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/gts/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/gts/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gts
 PORTVERSION=	0.7.6
@@ -21,6 +21,7 @@ NETPBM_DESC=	Build with libnetpbm support
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNETPBM}
