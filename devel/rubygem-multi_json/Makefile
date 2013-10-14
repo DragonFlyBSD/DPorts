@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-multi_json/Makefile 321435 2013-06-21 01:42:57Z swills $
+# $FreeBSD: devel/rubygem-multi_json/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	multi_json
 PORTVERSION=	1.7.7
@@ -19,6 +19,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJSON}
