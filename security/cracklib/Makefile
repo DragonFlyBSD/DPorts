@@ -1,5 +1,5 @@
 # Created by: ajk@iu.edu
-# $FreeBSD: security/cracklib/Makefile 320515 2013-06-11 00:52:47Z sbz $
+# $FreeBSD: security/cracklib/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	cracklib
 PORTVERSION=	2.9.0
@@ -20,6 +20,7 @@ DICTFILE=	${DICTPATH}/pw_dict
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=--with-default-dict=${DICTPATH}
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 
 .if defined(PYTHON_SLAVEPORT)
 USE_PYTHON=	yes
