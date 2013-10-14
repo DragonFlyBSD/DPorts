@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: www/py-qpy/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: www/py-qpy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	qpy
 PORTVERSION=	1.8
@@ -17,6 +17,7 @@ MAKE_ENV=	USE_DISTUTILS=yes
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
