@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: textproc/dict/Makefile 321935 2013-06-28 03:08:29Z clsung $
+# $FreeBSD: textproc/dict/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dict
 PORTVERSION=	1.12.1
@@ -24,6 +24,7 @@ ALL_TARGET=	dict
 INSTALL_TARGET=	install.dict
 MAN1=		dict.1 dictl.1 dict_lookup.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' ${WRKSRC}/dict.1.in
 
