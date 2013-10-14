@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Fast
-# Date created:		2012-02-04
-# Whom:			Dennis Herrmann <dhn@FreeBSD.org>
-#
-# $FreeBSD: net/p5-XML-Fast/Makefile 326380 2013-09-05 10:32:23Z az $
-#
+# Created by: Dennis Herrmann <dhn@FreeBSD.org>
+# $FreeBSD: net/p5-XML-Fast/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	XML-Fast
 PORTVERSION=	0.11
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	XML::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
