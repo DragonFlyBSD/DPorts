@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/autogen/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: devel/autogen/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	autogen
 PORTVERSION=	5.12
@@ -35,4 +35,5 @@ MAN3=	ao_string_tokenize.3 configFileLoad.3 optionFileLoad.3 \
 
 INFO=	autogen
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
