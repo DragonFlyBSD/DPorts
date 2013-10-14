@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-paste
-# Date created:		14 December 2006
-# Whom:			Dryice Liu	<dryice@dryice.name>
-#
-# $FreeBSD: ports/www/py-paste/Makefile,v 1.21 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Dryice Liu	<dryice@dryice.name>
+# $FreeBSD: www/py-paste/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Paste
 PORTVERSION=	1.7.5.1
@@ -20,6 +16,7 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 post-install:
