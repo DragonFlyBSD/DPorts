@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnat_util/Makefile 323388 2013-07-21 14:12:28Z marino $
+# $FreeBSD: lang/gnat_util/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gnat_util
 PORTVERSION=	${SNAPSHOT}
@@ -19,6 +19,7 @@ DESTINY=	${WRKDIR}/destino
 MAKE_ENV=	DESTDIR=${DESTINY} \
 		MAKEOBJDIR=${WRKSRC}/obj
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.sources"
 .include "${.CURDIR}/../gcc-aux/Makefile.version"
 .include <bsd.port.pre.mk>
