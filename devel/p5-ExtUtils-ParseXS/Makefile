@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ExtUtils::ParseXS
-# Date created:				29 June 2003
-# Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-ExtUtils-ParseXS/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: devel/p5-ExtUtils-ParseXS/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ExtUtils-ParseXS
 PORTVERSION=	3.18
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Converts Perl XS code into C code
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ExtUtils::ParseXS.3 \
 		ExtUtils::ParseXS::Constants.3 \
@@ -26,6 +23,7 @@ MAN3=		ExtUtils::ParseXS.3 \
 		ExtUtils::Typemaps::OutputMap.3 \
 		ExtUtils::Typemaps::Type.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
