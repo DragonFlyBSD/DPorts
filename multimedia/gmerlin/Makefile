@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: multimedia/gmerlin/Makefile 325803 2013-08-31 13:04:58Z bapt $
+# $FreeBSD: multimedia/gmerlin/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gmerlin
 PORTVERSION=	1.2.0
@@ -43,6 +43,7 @@ MAN1=		gmerlin.1 \
 		gmerlin_transcoder_remote.1 \
 		gmerlin-record.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MALSA}
