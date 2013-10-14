@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-imap
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/php5-imap/Makefile,v 1.4 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: mail/php5-imap/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 CATEGORIES=	mail
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-imap
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
