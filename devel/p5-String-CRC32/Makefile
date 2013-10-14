@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: devel/p5-String-CRC32/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-String-CRC32/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	String-CRC32
 PORTVERSION=	1.4
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		String::CRC32.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
