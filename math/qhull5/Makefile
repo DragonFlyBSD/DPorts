@@ -1,8 +1,5 @@
-# New ports collection makefile for:	qhull
-# Date created:				3 March 2004
-# Whom:					pusto@web.de
-#
-# $FreeBSD: ports/math/qhull5/Makefile,v 1.21 2012/11/17 05:59:29 svnexp Exp $
+# Created by: pusto@web.de
+# $FreeBSD: math/qhull5/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	qhull
 PORTVERSION=	1.0
@@ -30,6 +27,7 @@ GNU_CONFIGURE=	yes
 MAN1=		qhull.1 rbox.1
 .endif
 
+NO_STAGE=	yes
 pre-configure:
 .if defined(NOPORTDOCS)
 	@${REINPLACE_CMD} -e "s|src html eg config|src config|"		\
