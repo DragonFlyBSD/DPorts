@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Locale/Makefile 326413 2013-09-05 16:34:46Z culot $
+# $FreeBSD: devel/p5-DateTime-Locale/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Locale
 PORTVERSION=	0.45
@@ -490,6 +490,7 @@ MAN3=	\
 	DateTime::Locale::zu_ZA.3 \
 	DateTime::LocaleCatalog.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
