@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/p5-Kwalify/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-Kwalify/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Kwalify
 PORTVERSION=	1.22
@@ -17,4 +17,5 @@ MAN3=		Kwalify.3 Schema::Kwalify.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
