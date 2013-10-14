@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: audio/wavegain/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/wavegain/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	wavegain
 PORTVERSION=	1.2.8
@@ -10,9 +10,10 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}srcs${EXTRACT_SUFFIX}
 MAINTAINER=	darcsis@gmail.com
 COMMENT=	A program that applies ReplayGain to wave files
 
-LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile
+LIB_DEPENDS=	libsndfile.so:${PORTSDIR}/audio/libsndfile
 
 USES=		gmake
+NO_STAGE=	yes
 USE_ZIP=	yes
 USE_DOS2UNIX=	audio.c wavegain.c
 
@@ -25,6 +26,9 @@ WRKSRC=	${WRKDIR}/WaveGain-${PORTVERSION}
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
 BROKEN=		Does not compile on ia64, powerpc, or sparc64
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e "s|%%LOCALBASE%%|${LOCALBASE}|" ${WRKSRC}/Makefile.linux
 
 do-configure:
 	@cd ${WRKSRC} && ${CP} Makefile.linux Makefile
