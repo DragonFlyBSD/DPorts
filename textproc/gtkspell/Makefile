@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: textproc/gtkspell/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: textproc/gtkspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 #   $MCom: ports/textproc/gtkspell/Makefile,v 1.2 2006/09/10 00:51:13 mezz Exp $
 
 PORTNAME=	gtkspell
@@ -23,6 +23,7 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS/ s|docs||' ${WRKSRC}/Makefile.in
 
