@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtksourceview3/Makefile 326049 2013-09-02 18:14:45Z bapt $
+# $FreeBSD: x11-toolkits/gtksourceview3/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/gtksourceview3/Makefile,v 1.21 2012/05/31 11:57:38 kwm Exp $
 
 PORTNAME=	gtksourceview
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|--warn-all||g' \
 		${WRKSRC}/gtksourceview/Makefile.in
