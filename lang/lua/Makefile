@@ -1,5 +1,5 @@
 # Created by: Richard Kiss
-# $FreeBSD: lang/lua/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/lua/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	lua
 PORTVERSION=	5.1.5
@@ -49,6 +49,7 @@ LUA_TEST=	README bisect.lua cf.lua echo.lua env.lua factorial.lua \
 		printf.lua readonly.lua sieve.lua sort.lua table.lua \
 		trace-calls.lua trace-globals.lua xd.lua
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "powerpc"
