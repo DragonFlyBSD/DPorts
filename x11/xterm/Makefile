@@ -1,8 +1,8 @@
 # Created by: krion
-# $FreeBSD: x11/xterm/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: x11/xterm/Makefile 329033 2013-10-02 10:20:41Z ehaupt $
 
 PORTNAME=	xterm
-PORTVERSION=	296
+PORTVERSION=	297
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/:src1 \
 		CRITICAL:src1 CRITICAL:src2
@@ -37,6 +37,7 @@ WCHAR_DESC=	Enable wide-character support
 
 OPTIONS_DEFAULT=WCHAR LUIT 256COLOR
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:M256COLOR}
