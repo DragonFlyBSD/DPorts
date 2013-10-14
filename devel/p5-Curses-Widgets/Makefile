@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Curses-Widgets
-# Date created:				5 July 2001
-# Whom:					petef@FreeBSD.org
-#
-# $FreeBSD: devel/p5-Curses-Widgets/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: petef@FreeBSD.org
+# $FreeBSD: devel/p5-Curses-Widgets/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Curses-Widgets
 PORTVERSION=	1.997
@@ -35,4 +31,5 @@ MAN3=	Curses::Widgets::Label.3 \
 	Curses::Widgets::ListBox::MultiColumn.3 \
 	Curses::Widgets::Tutorial::Creation.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
