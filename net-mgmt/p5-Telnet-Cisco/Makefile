@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Telnet-Cisco
-# Date created:			August 16 2001
-# Whom:	      			Michael Lyngbøl <lyngbol@wheel.dk>
-#
-# $FreeBSD: net-mgmt/p5-Telnet-Cisco/Makefile 326245 2013-09-04 03:27:37Z az $
-#
+# Created by: Michael Lyngbøl <lyngbol@wheel.dk>
+# $FreeBSD: net-mgmt/p5-Telnet-Cisco/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-Telnet-Cisco
 PORTVERSION=	1.10
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Telnet::Cisco.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
