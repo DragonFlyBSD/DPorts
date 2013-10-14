@@ -1,9 +1,5 @@
-# New ports collection makefile for:	async
-# Date created:				March 15, 2011
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-async/Makefile,v 1.2 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-async/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	async
 PORTVERSION=	0.6.1
@@ -17,4 +13,5 @@ COMMENT=	Framework to process interdependent tasks in a pool of workers
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
