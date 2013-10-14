@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: graphics/p5-Image-Info/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Image-Info/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Info
 PORTVERSION=	1.36
@@ -36,4 +36,5 @@ MAN3=		Bundle::Image::Info::Everything.3 \
 		Image::Info::XBM.3 \
 		Image::Info::XPM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
