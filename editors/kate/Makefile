@@ -1,5 +1,5 @@
 # Created by: fluffy@
-# $FreeBSD: editors/kate/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: editors/kate/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	kate
 PORTVERSION=	${KDE4_VERSION}
@@ -28,4 +28,5 @@ MAN1=		kate.1
 # editors/kate-plugin-pate installs pate
 CMAKE_ARGS+=	-DBUILD_pate=off
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
