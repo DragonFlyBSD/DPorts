@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/libtorrent/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-p2p/libtorrent/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	libtorrent
 PORTVERSION=	0.13.2
@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	KQUEUE IPV6
 OPTIONS_DEFAULT=	KQUEUE
 KQUEUE_DESC=	Use kqueue(2) support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_OPENSSL_BASE)
