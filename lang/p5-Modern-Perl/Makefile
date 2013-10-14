@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: lang/p5-Modern-Perl/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: lang/p5-Modern-Perl/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Modern-Perl
 PORTVERSION=	1.03
@@ -16,4 +16,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Modern::Perl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
