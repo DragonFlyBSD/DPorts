@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Contrib/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Tk-Contrib/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-Contrib
 PORTVERSION=	0.07
@@ -18,4 +18,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Tk::Axis.3 Tk::Dial.3 Tk::OlWm.3 Tk::TiedListbox.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
