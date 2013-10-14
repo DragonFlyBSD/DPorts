@@ -1,8 +1,8 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/gmsh/Makefile 324253 2013-08-04 22:27:55Z stephen $
+# $FreeBSD: cad/gmsh/Makefile 328513 2013-09-27 20:28:16Z stephen $
 
 PORTNAME=	gmsh
-PORTVERSION=	2.8.2
+PORTVERSION=	2.8.3
 CATEGORIES=	cad
 MASTER_SITES=	http://www.geuz.org/gmsh/src/ \
 		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
@@ -31,6 +31,8 @@ USES=		cmake
 USE_GMAKE=	yes
 USE_GL=		yes
 ALL_TARGET=	all
+
+MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		gmsh.1
 
@@ -122,6 +124,7 @@ CONFLICTS=	gmsh-occ-2.*
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
