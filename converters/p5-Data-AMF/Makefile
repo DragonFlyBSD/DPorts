@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Data-AMF/Makefile 326872 2013-09-10 07:55:33Z az $
+# $FreeBSD: converters/p5-Data-AMF/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Data-AMF
 PORTVERSION=	0.09
@@ -35,4 +35,5 @@ MAN3=	Data::AMF.3 \
 	Data::AMF::Type::ByteArray.3 \
 	Data::AMF::Type::Null.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
