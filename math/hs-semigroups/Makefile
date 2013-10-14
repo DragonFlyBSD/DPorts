@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-semigroups/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-semigroups/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	semigroups
 PORTVERSION=	0.9.1
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	nats>=0.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
