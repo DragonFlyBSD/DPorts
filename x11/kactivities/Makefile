@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kactivities/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/kactivities/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kactivities
 PORTVERSION=	${KDE4_VERSION}
@@ -18,6 +18,7 @@ USES=		cmake:outsource
 USE_QT4=	declarative moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/pkgconfig/s,$${LIB_INSTALL_DIR},libdata,' \
 		${WRKSRC}/src/lib/core/CMakeLists.txt \
