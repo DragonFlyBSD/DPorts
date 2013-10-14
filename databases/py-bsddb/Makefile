@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: databases/py-bsddb/Makefile 326659 2013-09-07 17:21:44Z sunpoet $
+# $FreeBSD: databases/py-bsddb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	bsddb
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -33,6 +33,7 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-py${PYTHON_SUFFIX}-_bsddb.c
 
 PLIST_FILES=	%%PYTHON_LIBDIR%%/lib-dynload/_bsddb.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 300
