@@ -1,5 +1,5 @@
 # Created by: Stepan Zastupov [RedChrom] <redchrom@gmail.com>
-# $FreeBSD: audio/libmpd/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/libmpd/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libmpd
 PORTVERSION=	11.8.17
@@ -10,6 +10,7 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Abstraction around libmpdclient
 
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USES=		pathfix pkgconfig
 USE_GNOME=	glib20
