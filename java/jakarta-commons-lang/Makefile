@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: java/jakarta-commons-lang/Makefile 317123 2013-05-02 14:34:29Z bapt $
+# $FreeBSD: java/jakarta-commons-lang/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-lang
 PORTVERSION=	2.6
@@ -29,6 +29,7 @@ JARFILE=	${PORTNAME}-${PORTVERSION}.jar
 DESTJARFILE=	${PORTNAME}.jar
 PLIST_FILES=	%%JAVAJARDIR%%/${DESTJARFILE}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 JDK_API!=	(${FIND} -s ${LOCALBASE}/share/doc/jdk1.? -maxdepth 1 -name api -type d 2>/dev/null || ${ECHO_CMD}) | ${TAIL} -n 1
