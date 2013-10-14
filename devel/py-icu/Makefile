@@ -1,5 +1,5 @@
 # Created by: bland@FreeBSD.org
-# $FreeBSD: ports/devel/py-icu/Makefile,v 1.10 2012/12/18 23:22:05 svnexp Exp $
+# $FreeBSD: devel/py-icu/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	icu
 PORTVERSION=	1.5
@@ -25,4 +25,5 @@ MAKE_ENV+= \
 
 LIB_DEPENDS+=	icudata:${PORTSDIR}/devel/icu
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
