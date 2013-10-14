@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/libuninum/pkg-plist,v 1.7 2012/11/17 05:55:57 svnexp Exp $
+@comment $FreeBSD: devel/libuninum/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/NumberConverter.tcl
 bin/numconv
 include/uninum/uninum.h
