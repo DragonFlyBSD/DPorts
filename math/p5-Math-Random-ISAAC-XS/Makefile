@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Random-ISAAC-XS/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: math/p5-Math-Random-ISAAC-XS/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Random-ISAAC-XS
 PORTVERSION=	1.004
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Math::Random::ISAAC::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
