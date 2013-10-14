@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/cl-trivial-gray-streams/Makefile,v 1.4 2013/01/26 15:07:24 svnexp Exp $
+# $FreeBSD: devel/cl-trivial-gray-streams/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	trivial-gray-streams
 PORTVERSION=	2008.11.02
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ASDF_PATHNAME}
 	@${INSTALL_DATA} ${WRKSRC}/*.lisp ${ASDF_PATHNAME}
