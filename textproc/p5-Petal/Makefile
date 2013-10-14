@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Petal/Makefile 326209 2013-09-03 19:31:47Z sunpoet $
+# $FreeBSD: textproc/p5-Petal/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Petal
 PORTVERSION=	2.23
@@ -25,4 +25,5 @@ MAN3=		Petal.3 \
 		Petal::Hash::Test.3 \
 		Petal::I18N.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
