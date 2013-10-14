@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmake
-# Date created:		28 March 1997
-# Whom:			dlowe
-#
-# $FreeBSD: ports/devel/xmake/Makefile,v 1.11 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: dlowe
+# $FreeBSD: devel/xmake/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xmake
 PORTVERSION=	1.06
@@ -18,6 +14,7 @@ WRKSRC=		${WRKDIR}/xmake
 MAN1=		xmake.1
 PLIST_FILES=	bin/xmake
 
+NO_STAGE=	yes
 pre-build:
 	@${RM} -rf ${WRKSRC}/obj
 
