@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-XPath/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-XPath/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-XPath
 PORTVERSION=	1.13
@@ -25,4 +25,5 @@ MAN3=		XML::XPath.3 XML::XPath::Boolean.3 XML::XPath::Builder.3 \
 		XML::XPath::PerlSAX.3 XML::XPath::XMLParser.3
 
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
