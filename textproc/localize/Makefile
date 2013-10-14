@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/localize/Makefile,v 1.9 2012/11/17 06:02:02 svnexp Exp $
+# $FreeBSD: textproc/localize/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	localize
 PORTVERSION=	0.0.1
@@ -19,4 +19,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Localize
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
