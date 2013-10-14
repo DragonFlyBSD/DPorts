@@ -1,8 +1,4 @@
-# Ports collection makefile for:	rubygem-xml-simple
-# Date created:				21 April 2009
-# Whom:						pgollucci@p6m7g8.com
-#
-# $FreeBSD: textproc/rubygem-xml-simple/Makefile 322110 2013-07-01 01:52:10Z swills $
+# $FreeBSD: textproc/rubygem-xml-simple/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xml-simple
 PORTVERSION=	1.1.2
@@ -16,4 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
