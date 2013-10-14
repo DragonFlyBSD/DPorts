@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/toolboxkit/Makefile,v 1.11 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/toolboxkit/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	toolbox
 PORTVERSION=	0.8
@@ -24,4 +24,5 @@ USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 WRKSRC=		${WRKDIR}/Toolbox
 USE_GNUSTEP_MAKE_DIRS+=	Toolbox
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
