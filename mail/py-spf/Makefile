@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/py-spf/Makefile 324321 2013-08-06 15:58:43Z sunpoet $
+# $FreeBSD: mail/py-spf/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spf
 PORTVERSION=	2.0.8
@@ -24,6 +24,7 @@ PYDISTUTILS_PKGNAME=	py${PORTNAME}
 
 PORTDOCS=	CHANGELOG README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
