@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/py-pathtools/pkg-plist,v 1.2 2012/11/17 05:56:49 svnexp Exp $
+@comment $FreeBSD: devel/py-pathtools/pkg-plist 304139 2012-09-12 09:04:32Z nivit $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 %%PORTDOCS%%%%DOCSDIR%%/.buildinfo
 %%PORTDOCS%%%%DOCSDIR%%/_modules/index.html
