@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-forks/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-forks/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	forks
 PORTVERSION=	0.34
@@ -29,4 +29,5 @@ MAN3=		forks.3 forks::signals.3 \
 		threads::shared::hash.3 \
 		threads::shared::scalar.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
