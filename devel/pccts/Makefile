@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	pccts
-# Date created:				22 June 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: devel/pccts/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: devel/pccts/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pccts
 PORTVERSION=	1.33.33
@@ -26,6 +21,7 @@ ALL_TARGET=	# empty
 
 MAN1=		antlr.1 dlg.1
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.c" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|<varargs.h>|<stdarg.h>|g'
