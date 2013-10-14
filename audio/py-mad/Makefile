@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: audio/py-mad/Makefile 315057 2013-03-23 17:58:06Z miwi $
+# $FreeBSD: audio/py-mad/Makefile 328530 2013-09-27 22:36:11Z mva $
 
 PORTNAME=	mad
 PORTVERSION=	0.7
@@ -14,14 +14,13 @@ COMMENT=	Python module that provides the MPEG Audio Decoder interface
 
 LICENSE=	LGPL20
 
-LIB_DEPENDS=	mad:${PORTSDIR}/audio/mad
+LIB_DEPENDS=	libmad.so:${PORTSDIR}/audio/mad
 
-USE_PYTHON=	yes
+USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
 USE_PYTHON_PREFIX=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	pymad
-
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/madmodule.so
 
 do-configure:
 	@cd ${WRKSRC} && ${MAKE_ENV} ${PYTHON_CMD} config_unix.py \
