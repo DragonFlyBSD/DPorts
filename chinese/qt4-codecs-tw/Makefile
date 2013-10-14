@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: chinese/qt4-codecs-tw/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: chinese/qt4-codecs-tw/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	codecs
 DISTVERSION=	${QT4_VERSION}
@@ -38,6 +38,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
