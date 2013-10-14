@@ -1,4 +1,4 @@
-# $FreeBSD: databases/hs-persistent/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: databases/hs-persistent/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	persistent
 PORTVERSION=	1.2.0.1
@@ -16,5 +16,6 @@ USE_CABAL=	aeson>=0.5 attoparsec base64-bytestring blaze-html>=0.5 \
 		transformers>=0.2.1 transformers-base unordered-containers \
 		vector
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
