@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Variable-Magic/Makefile 325910 2013-09-01 19:30:54Z tobez $
+# $FreeBSD: devel/p5-Variable-Magic/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Variable-Magic
 PORTVERSION=	0.53
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Variable::Magic.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
