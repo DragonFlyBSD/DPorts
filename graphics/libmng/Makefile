@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/libmng/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/libmng/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libmng
 PORTVERSION=	1.0.10
@@ -26,6 +26,7 @@ USE_LDCONFIG=	yes
 MAN3=		libmng.3
 MAN5=		mng.5 jng.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MMNG_OPTIMIZE}
 MAKE_ARGS+=	WITH_MNG_OPTIMIZE=true
