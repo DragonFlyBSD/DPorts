@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: textproc/freexl/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: textproc/freexl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	freexl
 DISTVERSION=	1.0.0e
@@ -18,6 +18,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile.in
