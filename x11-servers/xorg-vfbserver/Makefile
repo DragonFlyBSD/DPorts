@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 327782 2013-09-20 23:52:24Z bapt $
 
 PORTNAME=	xorg-vfbserver
 
@@ -23,6 +23,7 @@ SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xvfb
 MAN1=		Xvfb.1
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}/hw/vfb; ${MAKE} install
 
