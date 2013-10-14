@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-msgpack/Makefile 319108 2013-05-26 13:36:40Z kuriyama $
+# $FreeBSD: devel/rubygem-msgpack/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	msgpack
 PORTVERSION=	0.5.5
@@ -12,4 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
