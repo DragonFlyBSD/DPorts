@@ -1,9 +1,5 @@
-# New ports collection makefile for:    arc
-# Date created:         31 Dec 1994
-# Whom:                 ache
-#
-# $FreeBSD: ports/archivers/arc/Makefile,v 1.25 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: archivers/arc/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	arc
 PORTVERSION=	5.21p
@@ -13,6 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Create & extract files from DOS .ARC files
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/arc bin/marc
 PORTDOCS=	Arc521.doc
 MAN1=		arc.1
