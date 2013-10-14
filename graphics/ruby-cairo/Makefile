@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ruby-cairo/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/ruby-cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/ruby-cairo/Makefile,v 1.9 2008/10/19 23:20:49 mezz Exp $
 
 PORTNAME=	cairo
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=--ruby=${RUBY}
 
 DOCS=		AUTHORS COPYING GPL NEWS
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${RUBY_MODEXAMPLESDIR}/agg
