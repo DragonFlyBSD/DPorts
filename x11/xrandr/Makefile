@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xrandr/Makefile 323160 2013-07-17 11:46:14Z zeising $
+# $FreeBSD: x11/xrandr/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xrandr
 PORTVERSION=	1.4.1
@@ -15,4 +15,5 @@ PLIST_FILES=	bin/xrandr \
 
 MAN1=		xrandr.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
