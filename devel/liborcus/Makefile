@@ -1,4 +1,4 @@
-# $FreeBSD: devel/liborcus/Makefile 321769 2013-06-25 21:52:08Z jkim $
+# $FreeBSD: devel/liborcus/Makefile 329292 2013-10-04 11:40:35Z bapt $
 
 PORTNAME=	liborcus
 PORTVERSION=	0.5.1
@@ -11,14 +11,13 @@ COMMENT=	Standalone file import filter library for spreadsheet documents
 LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/include/mdds/global.hpp:${PORTSDIR}/devel/mdds
-LIB_DEPENDS=	zip:${PORTSDIR}/archivers/libzip \
-		boost_system:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libzip.so:${PORTSDIR}/archivers/libzip \
+		libboost_system.so:${PORTSDIR}/devel/boost-libs
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 
 CONFIGURE_ARGS=	--disable-spreadsheet-model --disable-werror \
 		--with-boost="${LOCALBASE}" \
