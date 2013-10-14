@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net-im/libnice/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: net-im/libnice/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #    $MCom$
 
 PORTNAME=	libnice
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--without-gstreamer --with-gstreamer-0.10
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_GETIFADDRS
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 	    	's|-Wno-missing-field-initializers|#|g'
