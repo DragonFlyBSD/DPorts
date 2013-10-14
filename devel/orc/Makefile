@@ -1,12 +1,12 @@
 # Created by: mm
-# $FreeBSD: devel/orc/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/orc/Makefile 327754 2013-09-20 21:56:00Z kwm $
 
 PORTNAME=	orc
 PORTVERSION=	0.4.18
 CATEGORIES=	devel
-MASTER_SITES=	http://code.entropywave.com/download/orc/
+MASTER_SITES= 	http://gstreamer.freedesktop.org/data/src/orc/
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Library and toolset to operate arrays of data
 
 LICENSE=	BSD
@@ -27,6 +27,7 @@ EXAMPLES_EXEC=	example1 example2 example3 mt19937ar volscale
 OPTIONS_DEFINE=	DOCS EXAMPLES
 DOCS_DESC=	Include gtk-doc documentation
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
