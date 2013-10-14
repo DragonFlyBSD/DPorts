@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-pyro/Makefile 325608 2013-08-29 15:40:41Z rm $
+# $FreeBSD: devel/py-pyro/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pyro
 PORTVERSION=	4.22
@@ -20,6 +20,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Pyro4
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
