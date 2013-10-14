@@ -1,5 +1,5 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: devel/py-gevent/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: devel/py-gevent/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gevent
 PORTVERSION=	0.13.8
@@ -19,4 +19,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_BUILDARGS=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
