@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: devel/p5-Locale-Maketext/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Locale-Maketext/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Locale-Maketext
 PORTVERSION=	1.23
@@ -25,4 +25,5 @@ MAN3=		Locale::Maketext.3 \
 		Locale::Maketext::GutsLoader.3 \
 		Locale::Maketext::TPJ13.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
