@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libtre/Makefile 319665 2013-06-02 14:42:23Z danfe $
+# $FreeBSD: textproc/libtre/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libtre
 PORTVERSION=	0.8.0
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	NLS OPTIMIZED_CFLAGS PGO DOCS
 
 MAN1=	tre_agrep.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
