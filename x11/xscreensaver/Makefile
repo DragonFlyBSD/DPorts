@@ -1,5 +1,5 @@
 # Created by: dom@myrddin.demon.co.uk
-# $FreeBSD: x11/xscreensaver/Makefile 325979 2013-09-02 12:05:58Z zeising $
+# $FreeBSD: x11/xscreensaver/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xscreensaver
 PORTVERSION=	5.22
@@ -46,6 +46,7 @@ XMOUN_DESC=	Add extra port graphics/xmountains
 XPLAN_DESC=	Add extra port astro/xplanet
 XSNOW_DESC=	Add extra port x11/xsnow
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKERBEROS}
