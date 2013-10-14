@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@FreeBSD.org>
-# $FreeBSD: multimedia/libdvbcsa/Makefile 326735 2013-09-08 14:50:34Z decke $
+# $FreeBSD: multimedia/libdvbcsa/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libdvbcsa
 PORTVERSION=	1.1.0
