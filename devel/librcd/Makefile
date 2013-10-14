@@ -1,9 +1,5 @@
-# New ports collection makefile for:	librcd
-# Date created:			30-12-2007
-# Whom:				Ulrich Spoerlein <uspoerlein@gmail.com>
-#
-# $FreeBSD: ports/devel/librcd/Makefile,v 1.11 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
+# $FreeBSD: devel/librcd/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	librcd
 PORTVERSION=	0.1.13
