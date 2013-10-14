@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-hpricot
-# Date created:				Jan 19, 2007
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-hpricot/Makefile,v 1.15 2012/11/17 06:03:04 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: www/rubygem-hpricot/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hpricot
 PORTVERSION=	0.8.6
@@ -16,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
