@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: french/med/Makefile 314949 2013-03-22 17:58:26Z thierry $
+# $FreeBSD: french/med/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	med
 DISTVERSION=	3.0.6
@@ -37,6 +37,7 @@ TST2FIX=	c f
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 pre-configure:
 .for ext in am in
 . if defined(NOPORTDOCS)
