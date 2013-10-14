@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/aqsis/Makefile 320576 2013-06-11 14:47:02Z miwi $
+# $FreeBSD: graphics/aqsis/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	aqsis
 PORTVERSION=	1.8.2
@@ -29,4 +29,5 @@ PLIST_SUB+=	LIBVERS=${PORTVERSION:R}
 
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
