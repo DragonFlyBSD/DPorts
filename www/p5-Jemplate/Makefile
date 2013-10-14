@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Jemplate
-# Date created:				05 April 2007
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Jemplate/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: www/p5-Jemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Jemplate
 PORTVERSION=	0.270
@@ -30,4 +26,5 @@ MAN3=	Jemplate.3 \
 	Jemplate::Runtime.3 \
 	Jemplate::Runtime::Compact.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
