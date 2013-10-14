@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: textproc/asciidoc/Makefile 327222 2013-09-14 06:48:02Z sunpoet $
+# $FreeBSD: textproc/asciidoc/Makefile 329978 2013-10-10 08:57:13Z sunpoet $
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.8
@@ -17,13 +17,12 @@ RUN_DEPENDS=	python2:${PORTSDIR}/lang/python2
 
 OPTIONS_DEFINE=	VIM
 OPTIONS_DEFAULT=VIM
+OPTIONS_SUB=	yes
 VIM_DESC=	Install Vim ftdetect & syntax files
 
 GNU_CONFIGURE=	yes
 USE_PYTHON=	-2.7
 USES=		gmake
-
-MAN1=		a2x.1 asciidoc.1
 
 CONF_FILES=	asciidoc.conf docbook45.conf \
 		filters/code/code-filter.conf \
@@ -42,10 +41,10 @@ CONF_FILES=	asciidoc.conf docbook45.conf \
 
 .if ${PORT_OPTIONS:MVIM}
 MAKE_ENV+=	vimdir=${PREFIX}/share/vim/${VIM_DATADIR}
-PLIST_SUB+=	VIM="" VIM_DATADIR=${VIM_DATADIR}
+PLIST_SUB+=	VIM_DATADIR=${VIM_DATADIR}
 VIM__DATADIR!=	${MAKE} -C ../../editors/vim/ -V _DATADIR
 .else
-PLIST_SUB+=	VIM="@comment " VIM_DATADIR=""
+PLIST_SUB+=	VIM_DATADIR=""
 .endif
 
 post-patch:
@@ -58,13 +57,13 @@ post-patch:
 
 pre-install:
 .if ${PORT_OPTIONS:MVIM}
-	@${MKDIR} ${PREFIX}/share/vim/${VIM_DATADIR}/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/vim/${VIM_DATADIR}/
 .endif
 
 post-install:
 .for conf_file in ${CONF_FILES}
-	@if [ ! -f ${ETCDIR}/${conf_file} ]; then \
-		${CP} -p ${ETCDIR}/${conf_file}.sample ${ETCDIR}/${conf_file} ; \
+	@if [ ! -f ${STAGEDIR}${ETCDIR}/${conf_file} ]; then \
+		${CP} -p ${STAGEDIR}${ETCDIR}/${conf_file}.sample ${STAGEDIR}${ETCDIR}/${conf_file} ; \
 	fi
 .endfor
 
