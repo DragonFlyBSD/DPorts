@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Parse-CPAN-Meta
-# Date created:				26 February 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Parse-CPAN-Meta/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Parse-CPAN-Meta/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Parse-CPAN-Meta
 PORTVERSION=	1.44.04
@@ -24,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		Parse::CPAN::Meta.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501600
