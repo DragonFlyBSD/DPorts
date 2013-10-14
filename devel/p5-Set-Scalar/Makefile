@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-Scalar/Makefile 326752 2013-09-08 16:06:41Z tobez $
+# $FreeBSD: devel/p5-Set-Scalar/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Set-Scalar
 PORTVERSION=	1.26
@@ -22,4 +22,5 @@ MAN3=		Set::Scalar.3 \
 		Set::Scalar::ValuedUniverse.3 \
 		Set::Scalar::Universe.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
