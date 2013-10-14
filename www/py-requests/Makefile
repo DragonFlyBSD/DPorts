@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: www/py-requests/Makefile 320241 2013-06-08 11:28:15Z koobs $
+# $FreeBSD: www/py-requests/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	requests
 PORTVERSION=	1.2.3
@@ -18,4 +18,5 @@ USE_PYDISTUTILS=	easy_install
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} test_requests.py
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
