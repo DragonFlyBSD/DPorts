@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: devel/cvsgraph/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: devel/cvsgraph/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsgraph
 PORTVERSION=	1.7.0
@@ -27,9 +27,10 @@ SUB_FILES=	pkg-message
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gd-inc=${LOCALBASE}/include \
 		--with-gd-lib=${LOCALBASE}/lib CFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-lm -L${PREFIX}/lib"
+		LDFLAGS="-L${PREFIX}/lib"
 REINPLACE_ARGS=	-i ""
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e "s:/home/bertho/tmp/cvstest:/home/ncvs:g" ${WRKSRC}/cvsgraph.conf
 
