@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework/Makefile 323041 2013-07-15 14:47:07Z miwi $
+# $FreeBSD: devel/py-robotframework/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	robotframework
 PORTVERSION=	2.8.1
@@ -15,4 +15,5 @@ LICENSE=	AL2
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
