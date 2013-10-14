@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: net-mgmt/devmon/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: net-mgmt/devmon/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	devmon
 DISTVERSION=	0.3.1-beta1
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-SNMP_Session>0:${PORTSDIR}/net-mgmt/p5-SNMP_Session
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 USE_RC_SUBR=	devmon
 
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	MYSQL
 
 REINPLACE_ARGS=	-i ''
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
