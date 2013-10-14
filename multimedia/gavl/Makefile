@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/gavl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/gavl/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gavl
 PORTVERSION=	1.4.0
@@ -24,6 +24,7 @@ PORTDOCS=	README
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS PNG
 OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS PNG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPNG}
