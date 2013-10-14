@@ -1,5 +1,5 @@
 # Created by: Qian Jin <eric.siroh@gmail.com>
-# $FreeBSD: finance/py-vatnumber/Makefile 320238 2013-06-08 06:42:00Z culot $
+# $FreeBSD: finance/py-vatnumber/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	vatnumber
 PORTVERSION=	1.1
@@ -17,4 +17,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
