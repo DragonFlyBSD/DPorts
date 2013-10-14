@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/plopfolio/Makefile,v 1.11 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/plopfolio/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	plopfolio
 PORTVERSION=	0.1.0
@@ -19,6 +19,7 @@ USE_GNUSTEP_INSTALL=	yes
 
 FIXME=	Channel.m PlopFolio.m PreferencesPanelController.m
 
+NO_STAGE=	yes
 post-patch:
 .for i in ${FIXME}
 	${REINPLACE_CMD} -e 's|Foundation/GSXML.h|GNUstepBase/GSXML.h|' \
