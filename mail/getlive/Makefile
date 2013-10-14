@@ -1,9 +1,5 @@
-# New ports collection makefile for:	GetLive
-# Date created:				20 April 2008
-# Whom:					ayunyan <ayunyan@gmail.com>
-#
-# $FreeBSD: mail/getlive/Makefile 326249 2013-09-04 06:06:59Z az $
-#
+# Created by: ayunyan <ayunyan@gmail.com>
+# $FreeBSD: mail/getlive/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	getlive
 DISTVERSION=	2_7
@@ -27,6 +23,7 @@ USE_PERL5=	run
 PLIST_FILES=	bin/getlive etc/getlive.conf.sample
 PORTDOCS=	ChangeLog License Manual
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/GetLive.pl ${PREFIX}/bin/getlive
 	${INSTALL_DATA} ${FILESDIR}/getlive.conf.sample ${PREFIX}/etc
