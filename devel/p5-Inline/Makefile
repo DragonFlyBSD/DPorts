@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Inline/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Inline
 PORTVERSION=	0.53
@@ -30,6 +30,7 @@ MAN3=		Inline.3 \
 		Inline::C::ParseRecDescent.3 \
 		Inline::C::ParseRegExp.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} >= 501400
