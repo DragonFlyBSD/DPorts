@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/java/jfreechart/Makefile,v 1.23 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jfreechart/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jfreechart
 PORTVERSION=	1.0.14
@@ -30,6 +30,7 @@ PORTDOCS=	*
 PLIST_FILES=	%%JAVAJARDIR%%/jfreechart.jar \
 		%%JAVAJARDIR%%/gnujaxp.jar
 
+NO_STAGE=	yes
 pre-fetch:
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You may use the following build options:"
