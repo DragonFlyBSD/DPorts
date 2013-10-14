@@ -1,8 +1,5 @@
-# New ports collection makefile for:	docbook-430
-# Date created:		02 Apr 2004
-# Whom:			hrs
-#
-# $FreeBSD: ports/textproc/docbook-430/Makefile,v 1.4 2012/11/17 06:01:54 svnexp Exp $
+# Created by: hrs
+# $FreeBSD: textproc/docbook-430/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook
 PORTVERSION=	4.3
@@ -39,6 +36,7 @@ DTD_FILES=	calstblx.dtd catalog.xml dbcentx.mod dbgenent.mod \
 		dbhierx.mod dbnotnx.mod dbpoolx.mod docbook.cat docbook.dcl \
 		docbook.dtd docbookx.dtd htmltblx.mod soextblx.dtd catalog
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${WRKSRC}/docbook.cat ${WRKSRC}/catalog
 
