@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/unique/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: x11-toolkits/unique/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/unique/Makefile,v 1.12 2012/09/03 16:28:30 mezz Exp $
 
 PORTNAME=	unique
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--disable-maintainer-flags
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libdir)/pkgconfig|prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/configure ${WRKSRC}/Makefile.in
