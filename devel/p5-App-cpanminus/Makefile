@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-cpanminus/Makefile 324488 2013-08-10 11:53:31Z kuriyama $
+# $FreeBSD: devel/p5-App-cpanminus/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-cpanminus
 PORTVERSION=	1.6940
@@ -17,4 +17,5 @@ MAN1=	cpanm.1
 MAN3=	App::cpanminus.3 \
 	App::cpanminus::fatscript.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
