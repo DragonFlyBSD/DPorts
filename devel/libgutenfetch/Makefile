@@ -1,5 +1,5 @@
 # Created by: Russell Francis <johntabularasa@users.sf.net>
-# $FreeBSD: devel/libgutenfetch/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: devel/libgutenfetch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libgutenfetch
 PORTVERSION=	1.2
@@ -43,4 +43,5 @@ PLIST_FILES=	include/gutenfetch.h \
 
 PLIST_DIRS=	share/libgutenfetch
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
