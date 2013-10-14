@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: graphics/pgplot/Makefile 319430 2013-05-30 14:25:02Z bf $
+# $FreeBSD: graphics/pgplot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pgplot
 PORTVERSION=	5.2.2
@@ -25,6 +25,7 @@ SHEBANG_FILES=	makehtml maketex
 SUFFIXES=	flib clib bin
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH:M*64*}
@@ -40,7 +41,8 @@ DOCS=	cpg/cpgplot.doc pgplot-routines.tex pgplot.doc pgplot.html \
 	readme.pgdisp rgb.txt
 SUFFIXES+=	doc
 PORTDOCS=	${DOCS:C|.*/||}
-USE_PERL5_BUILD=	yes
+USES+=		perl5
+USE_PERL5=	build
 .endif
 
 .if ${PORT_OPTIONS:MEXAMPLES}
