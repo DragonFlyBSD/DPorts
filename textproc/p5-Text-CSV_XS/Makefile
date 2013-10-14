@@ -1,5 +1,5 @@
 # Created by: Ache
-# $FreeBSD: textproc/p5-Text-CSV_XS/Makefile 324528 2013-08-10 14:28:55Z kuriyama $
+# $FreeBSD: textproc/p5-Text-CSV_XS/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-CSV_XS
 PORTVERSION=	1.01
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::CSV_XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
