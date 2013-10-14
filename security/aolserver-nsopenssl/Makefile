@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aolserver-nsopenssl
-# Date created:		12 Oct 2006
-# Whom:			Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/security/aolserver-nsopenssl/Makefile,v 1.7 2012/11/17 06:01:00 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: security/aolserver-nsopenssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	aolserver-nsopenssl
 PORTVERSION=	3.0.b26
@@ -35,6 +31,7 @@ MAKE_ARGS=	AOLSERVER=${LOCALBASE}/${AOLSERVERBASE} OPENSSL=${OPENSSLBASE}
 PORTDOCS=	ChangeLog README TODO
 .endif
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@ ${MKDIR} ${DOCSDIR}
