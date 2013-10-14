@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: sysutils/ucspi-tcp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/ucspi-tcp/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ucspi-tcp
 PORTVERSION=	0.88
@@ -49,6 +49,7 @@ SCRIPTS=	date@ \
 		who@ \
 		tcpcat
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # SSL and LIMITS can't coexist
