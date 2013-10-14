@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	File::Copy::Recursive
 # Created by: ijliao
-# $FreeBSD: devel/p5-File-Copy-Recursive/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-Copy-Recursive/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Copy-Recursive
 PORTVERSION=	0.38
@@ -17,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Copy::Recursive.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
