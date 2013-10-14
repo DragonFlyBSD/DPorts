@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-MicroTemplate/Makefile 324530 2013-08-10 14:29:39Z kuriyama $
+# $FreeBSD: textproc/p5-Text-MicroTemplate/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-MicroTemplate
 PORTVERSION=	0.20
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 MAN3=	Text::MicroTemplate.3 \
 	Text::MicroTemplate::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
