@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: audio/deforaos-mixer/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: audio/deforaos-mixer/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mixer
 PORTVERSION=	0.1.1
@@ -17,6 +17,7 @@ LIB_DEPENDS=	Desktop:${PORTSDIR}/x11/deforaos-libdesktop
 
 MAKE_ARGS=	PREFIX=${PREFIX}
 USES=		pkgconfig gettext
+NO_STAGE=	yes
 USE_GNOME=	gtk20 desktopfileutils
 PLIST_FILES=	bin/mixer \
 		share/applications/mixer.desktop \
