@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libiptcdata
-# Date created:				3rd December 2006
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: graphics/libiptcdata/Makefile 322581 2013-07-09 21:26:48Z pav $
-#
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: graphics/libiptcdata/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libiptcdata
 PORTVERSION=	1.0.4
@@ -14,12 +10,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for manipulating IPTC metadata stored in image files
 
 USE_AUTOTOOLS=	libtool
-USES=		pkgconfig iconv
+USES=		pkgconfig iconv pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|' ${WRKSRC}/libiptcdata/Makefile.in
 
 .include <bsd.port.mk>
