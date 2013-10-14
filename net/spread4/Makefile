@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: net/spread4/Makefile 313372 2013-03-03 18:12:06Z ohauer $
+# $FreeBSD: net/spread4/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	spread4
 PORTVERSION=	4.2.0
@@ -40,6 +40,7 @@ MAN3=		SP_connect.3 SP_disconnect.3 SP_equal_group_ids.3 \
 		SP_scat_get_vs_sets_info.3 SP_scat_multicast.3 \
 		SP_scat_receive.3 SP_version.3 libspread.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
