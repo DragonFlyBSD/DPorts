@@ -1,9 +1,4 @@
-# New ports collection makefile for:	amanda-perl-wrapper
-# Date created:		1 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/amanda-perl-wrapper/Makefile,v 1.3 2012/11/17 05:59:32 svnexp Exp $
-#
+# $FreeBSD: misc/amanda-perl-wrapper/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	amanda-perl-wrapper
 PORTVERSION=	1.01
@@ -14,12 +9,14 @@ DISTFILES=	# empty
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl wrapper to use with Amanda (with libthr.so.* linked)
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 SUB_FILES=	perl-amanda.c
 SUB_LIST=	PREFIX=${LOCALBASE}
 PLIST_FILES=	bin/perl-amanda
 WRKSRC=		${WRKDIR}
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
