@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-filesystem-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-filesystem-conduit/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	filesystem-conduit
 PORTVERSION=	1.0.0
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_CABAL=	conduit>=1.0 system-fileio>=0.3.3 system-filepath>=0.4.3 \
 		text>=0.11 transformers>=0.2.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
