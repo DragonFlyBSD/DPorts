@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: graphics/p5-Color-Rgb/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Color-Rgb/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Color-Rgb
 PORTVERSION=	1.4
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Color::Rgb.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
