@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-MonadRandom/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-MonadRandom/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	MonadRandom
 PORTVERSION=	0.1.9
@@ -9,5 +9,6 @@ COMMENT=	Random-number generation monad
 
 USE_CABAL=	mtl random
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
