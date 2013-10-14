@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/libxklavier/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: x11/libxklavier/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/libxklavier/Makefile,v 1.53 2010/01/12 02:18:34 avl Exp $
 
 PORTNAME=	libxklavier
@@ -33,6 +33,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|== "yes|= "yes|g' \
 		${WRKSRC}/configure
