@@ -1,5 +1,5 @@
-# Whom:	Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: sysutils/rubygem-bundler/Makefile 323313 2013-07-19 15:52:59Z swills $
+# Created by: Robert Gogolok <gogo@cs.uni-sb.de>
+# $FreeBSD: sysutils/rubygem-bundler/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bundler
 PORTVERSION=	1.3.5
@@ -15,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/bundle
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
