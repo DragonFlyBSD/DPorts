@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/pangox-compat/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: x11-toolkits/pangox-compat/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/trunk/x11-toolkits/pangox-compat/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	pangox-compat
@@ -22,4 +22,5 @@ USE_GNOME=	glib20 pango
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
