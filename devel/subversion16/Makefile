@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion16/Makefile 322371 2013-07-06 09:03:04Z ohauer $
+# $FreeBSD: devel/subversion16/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
@@ -37,6 +37,7 @@ GNOME_KEYRING_DESC=	Build with GNOME Keyring auth support
 KDE_KWALLET_DESC=	Build with KDE KWallet auth support
 BOOK_DESC=		Install the Subversion Book
 
+NO_STAGE=	yes
 .include "Makefile.common"
 
 SVNREPOS?=	/home/svn/repos
