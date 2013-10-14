@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libunicode
-# Date created:				28th June 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libunicode/Makefile,v 1.23 2012/11/17 05:55:57 svnexp Exp $
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: devel/libunicode/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/libunicode/Makefile,v 1.4 2007/09/10 05:27:38 mezz Exp $
-#
 
 PORTNAME=	libunicode
 PORTVERSION=	0.4
@@ -27,4 +23,5 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
