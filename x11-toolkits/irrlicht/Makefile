@@ -1,21 +1,20 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: x11-toolkits/irrlicht/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11-toolkits/irrlicht/Makefile 329011 2013-10-02 02:04:16Z acm $
 
 PORTNAME=	irrlicht
-PORTVERSION=	1.7.3
-PORTREVISION=	1
+PORTVERSION=	1.8
 CATEGORIES=	x11-toolkits graphics
-MASTER_SITES=	SF/${PORTNAME}/Irrlicht%20SDK/1.7/${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/Irrlicht%20SDK/${PORTVERSION}/
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	High performance realtime 3D engine
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
+LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
 USE_ZIP=	yes
 USE_DOS2UNIX=	Makefile *.cpp *.h *.txt
-USE_GMAKE=	yes
+USES=		gmake
 USE_GL=		yes
 USE_LDCONFIG=	yes
 CFLAGS+=	-I${LOCALBASE}/include/libpng15
@@ -34,6 +33,7 @@ EXAMPLEDIRS=	01.HelloWorld 02.Quake3Map 03.CustomSceneNode 04.Movement 05.UserIn
 OPTIONS_DEFINE=	DEBUG EXAMPLES JOYSTICK
 JOYSTICK_DESC=	Support for Linux Joystick
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if (${ARCH} == "x86_64") || (${ARCH} == "ia64")
@@ -60,7 +60,7 @@ MAKE_ENV+=	NDEBUG=1
 .endif
 
 post-extract:
-	@${RM} ${WRKSRC}/media/Thumbs.db
+#	@${RM} ${WRKSRC}/media/Thumbs.db
 
 post-patch:
 	@${REINPLACE_CMD} -e '/#define.*_IRR_USE_NON_SYSTEM_JPEG_LIB_/ d' \
