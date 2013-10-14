@@ -1,4 +1,4 @@
-# $FreeBSD: net/samba36/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# $FreeBSD: net/samba36/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=		${SAMBA_BASENAME}36
 PORTVERSION=		3.6.18
@@ -126,6 +126,7 @@ WINBIND_DESC=		WinBIND support
 # !SAMBA_SUBPORT
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # There are reports that on ARM PIE makes binaries to core dump(#149186)
