@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: graphics/py-pillow/Makefile 316516 2013-04-25 13:49:31Z koobs $
+# $FreeBSD: graphics/py-pillow/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pillow
 PORTVERSION=	2.0.0
@@ -31,4 +31,5 @@ regression-test: extract
 	${PYTHON_CMD} ${PYSETUP} build_ext -i && \
 	${PYTHON_CMD} selftest.py
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
