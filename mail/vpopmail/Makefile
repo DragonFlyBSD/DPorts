@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/vpopmail/Makefile 323537 2013-07-23 16:01:03Z bdrewery $
+# $FreeBSD: mail/vpopmail/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	vpopmail
 PORTVERSION=	5.4.32
@@ -19,6 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/tcprules:${PORTSDIR}/sysutils/ucspi-tcp
 
 PATCH_STRIP=	-p1
 
+NO_STAGE=	yes
 USES=		qmail gmake
 
 CONFLICTS=	vpopmail-devel-5.*
