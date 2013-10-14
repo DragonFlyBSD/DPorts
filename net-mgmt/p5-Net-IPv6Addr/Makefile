@@ -1,5 +1,5 @@
 # Created by: JJ Behrens <jj@nttmcl.com>
-# $FreeBSD: net-mgmt/p5-Net-IPv6Addr/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: net-mgmt/p5-Net-IPv6Addr/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-IPv6Addr
 PORTVERSION=	0.2
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::IPv6Addr.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
