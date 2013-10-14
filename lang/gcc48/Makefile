@@ -1,8 +1,8 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc48/Makefile 327052 2013-09-12 10:20:45Z marino $
+# $FreeBSD: lang/gcc48/Makefile 328099 2013-09-24 07:53:54Z gerald $
 
 PORTNAME=	gcc
-PORTVERSION=	4.8.2.s20130822
+PORTVERSION=	4.8.2.s20130919
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	snapshots/${DISTVERSION}
@@ -29,10 +29,11 @@ GCC_VERSION=	${PORTVERSION:C/(.+)\.s[0-9]{8}/\1/}
 SUFFIX=		${PORTVERSION:C/([0-9]+).([0-9]+).*/\1\2/}
 LATEST_LINK=	gcc${SUFFIX}${PKGNAMESUFFIX}
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
-USES=		bison gmake iconv
+USES=		bison gmake iconv perl5
 USE_BINUTILS=	yes
 USE_BZIP2=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
+SSP_UNSAFE=	yes
 
 PATCH_WRKSRC=	${SRCDIR}
 CONFIGURE_SCRIPT=	../${SRCDIR:S/${WRKDIR}\///}/configure
@@ -45,6 +46,7 @@ OPTIONS_DEFAULT_i386=	JAVA
 OPTIONS_DEFAULT_x86_64=	JAVA
 BOOTSTRAP_DESC=		Build using a full bootstrap
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
