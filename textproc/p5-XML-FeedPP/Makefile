@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: textproc/p5-XML-FeedPP/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-XML-FeedPP/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-FeedPP
 PORTVERSION=	0.43
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::FeedPP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
