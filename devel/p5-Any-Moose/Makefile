@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Any-Moose/Makefile 317876 2013-05-11 13:49:05Z bapt $
+# $FreeBSD: devel/p5-Any-Moose/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Any-Moose
 PORTVERSION=	0.21
@@ -12,7 +12,8 @@ COMMENT=	Perl extension for/to use Moose or Mouse modules
 
 #TEST_DEPENDS=	p5-Moose>0:${PORTSDIR}/devel/p5-Moose
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Any::Moose.3
 
@@ -21,6 +22,7 @@ OPTIONS_DEFAULT=	MOUSE
 MOOSE_DESC=	Use Moose
 MOUSE_DESC=	Use Mouse
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMOOSE}
