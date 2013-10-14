@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-runtime/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/kde4-runtime/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -45,6 +45,7 @@ NEPOMUK_DESC=	Nepomuk semantic desktop via Virtuoso
 PULSEAUDIO_DESC=Audio configuration via PulseAudio
 ZEITGEIST_DESC=	Event logging via Zeitgeist
 
+NO_STAGE=	yes
 # Explicitly disable ALSA, see for details:
 # http://mail.kde.org/pipermail/kde-freebsd/2010-March/008015.html
 CMAKE_ARGS+=	-DWITH_ALSA:BOOL=OFF
