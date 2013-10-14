@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Unicode-Map
-# Date created:				9 April 2002
-# Whom:					Ryan T. Dean <rtdean@cytherianage.net>
-#
-# $FreeBSD: converters/p5-Unicode-Map/Makefile 324171 2013-08-02 18:21:05Z az $
+# Created by: Ryan T. Dean <rtdean@cytherianage.net>
+# $FreeBSD: converters/p5-Unicode-Map/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-Map
 PORTVERSION=	0.112
@@ -19,4 +16,5 @@ USE_PERL5=	configure
 MAN1=		map.1 mkmapfile.1
 MAN3=		Unicode::Map.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
