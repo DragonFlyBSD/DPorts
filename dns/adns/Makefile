@@ -1,5 +1,5 @@
 # Created by: Kostya Lukin <lukin@okbmei.msk.su>
-# $FreeBSD: dns/adns/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: dns/adns/Makefile 329945 2013-10-10 00:03:44Z madpilot $
 
 PORTNAME=	adns
 PORTVERSION=	1.4
@@ -7,26 +7,21 @@ PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~ian/adns/ftp/
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Easy to use asynchronous-capable DNS client library and utilities
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-USES=	gmake
+USES=		gmake
 
 LIBVERSION=	1
 PLIST_SUB+=	LIBVERSION="${LIBVERSION}"
 
 DOCS=		COPYING GPL-vs-LGPL INSTALL LICENCE.WAIVERS README README.html TODO changelog
 
-.include <bsd.port.options.mk>
-
 post-install:
-	${STRIP_CMD} ${PREFIX}/bin/adnslogres ${PREFIX}/bin/adnshost
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
-.endif
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/adnslogres ${STAGEDIR}${PREFIX}/bin/adnshost
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@(cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
