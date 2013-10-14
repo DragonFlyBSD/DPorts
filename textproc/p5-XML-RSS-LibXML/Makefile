@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-RSS-LibXML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-RSS-LibXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-RSS-LibXML
 PORTVERSION=	0.31.02
@@ -30,6 +30,7 @@ MAN3=		XML::RSS::LibXML.3 \
 		XML::RSS::LibXML::MagicElement.3 \
 		XML::RSS::LibXML::Namespaces.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	${MKDIR} ${EXAMPLESDIR}/
