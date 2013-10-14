@@ -1,5 +1,5 @@
 # Created by: cartola@openit.com.br
-# $FreeBSD: graphics/enblend/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: graphics/enblend/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	enblend
 PORTVERSION=	4.1.1
@@ -42,6 +42,7 @@ INFO=		enfuse enblend
 MAN1=		enblend.1 enfuse.1
 PLIST_FILES=	bin/enblend bin/enfuse
 
+NO_STAGE=	yes
 post-install:
 		${INSTALL_DATA} ${WRKSRC}/doc/*.info ${PREFIX}/${INFO_PATH}
 
