@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Array-Iterator/Makefile 327574 2013-09-18 20:54:24Z sunpoet $
+# $FreeBSD: devel/p5-Array-Iterator/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	Array-Iterator
 PORTVERSION=	0.11
@@ -15,10 +15,5 @@ TEST_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Array::Iterator.3 \
-		Array::Iterator::BiDirectional.3 \
-		Array::Iterator::Circular.3 \
-		Array::Iterator::Reusable.3
 
 .include <bsd.port.mk>
