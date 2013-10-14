@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Webware
-# Date created:		9 July 2002
-# Whom:			Stefan Schwarzer <sschwarzer@sschwarzer.net>
-#
-# $FreeBSD: www/py-webware/Makefile 315453 2013-03-28 09:32:14Z miwi $
-#
+# Created by: Stefan Schwarzer <sschwarzer@sschwarzer.net>
+# $FreeBSD: www/py-webware/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webware
 DISTVERSION=	1.1.1
@@ -33,6 +29,7 @@ INSTALL_ENV=	PKG_PREFIX=${PREFIX} \
 
 PLIST_SUB+=	WEBWARE_MASTER_DIR=${WEBWARE_MASTER_DIR:S,^${PREFIX}/,,}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
