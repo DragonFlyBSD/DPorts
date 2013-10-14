@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/m17n-db/Makefile 322366 2013-07-06 07:59:09Z bapt $
+# $FreeBSD: devel/m17n-db/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	m17n-db
 PORTVERSION=	1.6.4
@@ -19,6 +19,7 @@ USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-charmaps=${CHARMAPSDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
