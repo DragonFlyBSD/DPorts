@@ -1,4 +1,4 @@
-# $FreeBSD: converters/libticonv/Makefile 316410 2013-04-24 08:01:28Z tijl $
+# $FreeBSD: converters/libticonv/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	libticonv
 PORTVERSION=	1.1.4
@@ -17,4 +17,5 @@ USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USES=		pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
