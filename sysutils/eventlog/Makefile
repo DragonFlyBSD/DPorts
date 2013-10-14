@@ -1,5 +1,5 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/eventlog/Makefile 325741 2013-08-30 23:57:36Z bapt $
+# $FreeBSD: sysutils/eventlog/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	eventlog
 PORTVERSION=	0.2.12
