@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Factory-Util/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Factory-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Factory-Util
 PORTVERSION=	1.7
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Class::Factory::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
