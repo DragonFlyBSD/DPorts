@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/py-imaging/Makefile 318829 2013-05-23 02:35:26Z jgh $
+# $FreeBSD: graphics/py-imaging/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imaging
 PORTVERSION=	1.1.7
@@ -35,6 +35,7 @@ TKINTER_DESC=	tkinter for X support
 
 OPTIONS_DEFAULT=	TKINTER
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTKINTER}
