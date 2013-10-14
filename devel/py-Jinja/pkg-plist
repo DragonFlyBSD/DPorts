@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/py-Jinja/pkg-plist,v 1.4 2012/11/17 05:56:44 svnexp Exp $
+@comment $FreeBSD: devel/py-Jinja/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt

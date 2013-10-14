@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jinja
-# Date created:		2007-02-14
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-Jinja/Makefile,v 1.7 2012/11/17 05:56:44 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: devel/py-Jinja/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Jinja
 PORTVERSION=	1.2
@@ -18,6 +14,7 @@ COMMENT=	A fast and easy to use stand-alone template engine
 
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
+NO_STAGE=	yes
 
 PYEASYINSTALL_ARCHDEP=	yes
 PYEASYINSTALL_INSTALLARGS=	-N ${PYTHON_SITELIBDIR}/${PYEASYINSTALL_EGG}
