@@ -1,20 +1,20 @@
 # Created by: "Choe, Cheng-Dae" whitekid
-# $FreeBSD: databases/py-sqlobject/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: databases/py-sqlobject/Makefile 330136 2013-10-12 16:15:07Z wg $
 
 PORTNAME=	sqlobject
-PORTVERSION=	1.3.2
+PORTVERSION=	1.5.0
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	SQLObject-${PORTVERSION}
 
-MAINTAINER=	wen@FreeBSD.org
-COMMENT=	A python object for manipulation with SQL table row
+MAINTAINER=	wg@FreeBSD.org
+COMMENT=	Python object for manipulation with SQL table row
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}formencode>=1.2.2:${PORTSDIR}/www/py-formencode
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	SQLObject
 PYDISTUTILS_NOEGGINFO=	yes
@@ -32,6 +32,7 @@ PLIST_SUB+=	PORTDOCS="@comment "
 PLIST_SUB+=	PORTDOCS=""
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MMYSQL}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}MySQLdb>=0:${PORTSDIR}/databases/py-MySQLdb
