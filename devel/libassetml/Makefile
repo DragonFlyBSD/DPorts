@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: devel/libassetml/Makefile 326484 2013-09-06 10:24:11Z bapt $
+# $FreeBSD: devel/libassetml/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libassetml
 PORTVERSION=	1.2.1
@@ -23,6 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 INFO=	libassetml
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${PREFIX}/share/assetml
 
