@@ -1,9 +1,5 @@
-# New ports collection makefile for:	musepack
-# Date created:				2004-04-16
-# Whom:					Stefan Ehmann <shoesoft@gmx.net>
-#
-# $FreeBSD: ports/audio/musepack/Makefile,v 1.21 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: Stefan Ehmann <shoesoft@gmx.net>
+# $FreeBSD: audio/musepack/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	musepack
 PORTVERSION=	2009.03.01
@@ -16,6 +12,7 @@ MAINTAINER=	shoesoft@gmx.net
 COMMENT=	Decoder, encoder, and replaygain for musepack (mpc)
 
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 USE_AUTOTOOLS=	aclocal autoheader libtoolize automake autoconf libtool
 ACLOCAL_ARGS=	-I. -I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
