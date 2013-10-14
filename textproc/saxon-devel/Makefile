@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: textproc/saxon-devel/Makefile 314789 2013-03-21 00:24:34Z jgh $
+# $FreeBSD: textproc/saxon-devel/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	saxon
 PORTVERSION=	9.1.0.8
@@ -36,6 +36,7 @@ PLIST_FILES+=	${JARFILES:S,^,%%JAVAJARDIR%%/,} bin/saxon bin/saxon-xquery
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
