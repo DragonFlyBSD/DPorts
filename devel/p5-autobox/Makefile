@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: devel/p5-autobox/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-autobox/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	autobox
 PORTVERSION=	2.77
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	autobox.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
