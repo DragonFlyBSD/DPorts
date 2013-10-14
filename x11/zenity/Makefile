@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: x11/zenity/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: x11/zenity/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/zenity/Makefile,v 1.119 2013/01/09 18:51:14 kwm Exp $
 
 PORTNAME=	zenity
@@ -32,6 +32,7 @@ CONFLICTS=	gtkada-1.2.*
 OPTIONS_DEFINE=	NOTIFY
 OPTIONS_DEFAULT=NOTIFY
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !defined(WITHOUT_NOTIFY)
