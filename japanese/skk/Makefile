@@ -1,9 +1,5 @@
-# New ports collection makefile for:	skk
-# Date created:		04 Mar 1997
-# Whom:			Makoto Matsushita <matusita@jp.freebsd.org>
-#
-# $FreeBSD: ports/japanese/skk/Makefile,v 1.25 2012/11/17 05:58:40 svnexp Exp $
-#
+# Created by: Makoto Matsushita <matusita@jp.freebsd.org>
+# $FreeBSD: japanese/skk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	skk
 PORTVERSION=	9.6
@@ -27,4 +23,5 @@ SKKJISYO?=	SKK-JISYO.${SKKJISYO_SIZE}
 
 do-install:	# empty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
