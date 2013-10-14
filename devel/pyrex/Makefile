@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pyrex
-# Date created:		11 April 2002
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/devel/pyrex/Makefile,v 1.40 2012/11/17 05:56:54 svnexp Exp $
-#
+# Created by: Hye-Shik Chang
+# $FreeBSD: devel/pyrex/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pyrex
 PORTVERSION=	0.9.9
@@ -19,6 +15,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	Pyrex
 
+NO_STAGE=	yes
 post-install:
 	@# precompile lexicon pickle
 	@cd ${WRKSRC}/Demos && ${PYTHON_CMD} ${PREFIX}/bin/pyrexc primes.pyx
