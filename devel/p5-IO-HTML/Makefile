@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-HTML/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-IO-HTML/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IO-HTML
 PORTVERSION=	1.00
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		IO::HTML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
