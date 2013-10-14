@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/libshhcards/Makefile 318993 2013-05-24 16:35:30Z bapt $
+# $FreeBSD: games/libshhcards/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	libshhcards
 PORTVERSION=	1.0.5
@@ -16,6 +16,7 @@ MAKEFILE=	${FILESDIR}/Makefile.lib
 USE_LDCONFIG=	yes
 MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
