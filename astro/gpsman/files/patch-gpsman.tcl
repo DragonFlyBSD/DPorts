@@ -1,4 +1,4 @@
-$FreeBSD: astro/gpsman/files/patch-gpsman.tcl 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: astro/gpsman/files/patch-gpsman.tcl 329659 2013-10-07 07:31:55Z gahr $
 
 diff -ruN gpsman.tcl gpsman.tcl
 --- gpsman.tcl	Tue May  9 02:37:24 2006
@@ -7,7 +7,7 @@ diff -ruN gpsman.tcl gpsman.tcl
  #!/bin/sh
  # This is a Tcl/Tk script to be interpreted by wish (Tk8.3 or better): \
 -exec wish "$0" -- "$@"
-+exec wish8.4 "$0" -- "$@"
++exec %%WISH%% "$0" -- "$@"
  
  #
  #  gpsman --- GPS Manager: a manager for GPS receiver data
@@ -16,7 +16,7 @@ diff -ruN gpsman.tcl gpsman.tcl
  
   # path to directory containing program files
 -set SRCDIR gmsrc
-+set SRCDIR %%PREFIX%%/share/gpsman/gmsrc
++set SRCDIR %%GPSMANDIR%%/gmsrc
  
  # all other defaults configuration is now done in file $SRCDIR/config.tcl
  
