@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-uniplate/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-uniplate/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	uniplate
 PORTVERSION=	1.6.10
@@ -15,5 +15,6 @@ USE_CABAL=	hashable>=1.1.2.3 syb unordered-containers>=0.2.1
 
 INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/uniplate.htm ${DATADIR}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
