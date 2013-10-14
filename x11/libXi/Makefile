@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXi/Makefile 322220 2013-07-03 11:35:50Z zeising $
+# $FreeBSD: x11/libXi/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXi
 PORTVERSION=	1.7.2
@@ -95,4 +95,5 @@ MAN3=		XAllowDeviceEvents.3 \
 		XUngrabDeviceButton.3 \
 		XUngrabDeviceKey.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
