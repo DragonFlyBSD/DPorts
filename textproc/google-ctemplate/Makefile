@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/google-ctemplate/Makefile 325739 2013-08-30 23:52:24Z bapt $
+# $FreeBSD: textproc/google-ctemplate/Makefile 328232 2013-09-25 01:35:23Z vanilla $
 
 PORTNAME=	google-ctemplate
 PORTVERSION=	2.2
@@ -11,23 +11,21 @@ DISTNAME=	ctemplate-${PORTVERSION}
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	A simple but powerful template language for C++
 
+OPTIONS_DEFINE=	DOCS
+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USES=		pkgconfig
 
-.if !defined(NOPORTDOCS)
-PORTDOCS=	*
-.endif
+.include <bsd.port.options.mk>
 
 post-patch:
-	${REINPLACE_CMD} -e 's|^pkgconfigdir.*|pkgconfigdir = $${PREFIX}/libdata/pkgconfig|' \
+	@${REINPLACE_CMD} -e 's|^pkgconfigdir.*|pkgconfigdir = $${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
-
-.if !defined(NOPORTDOCS)
 	@${REINPLACE_CMD} -e \
 		's|$$(prefix)/share/doc/$$(PACKAGE)-$$(VERSION)|${DOCSDIR}|' \
 		${WRKSRC}/Makefile.in
-.else
+.if empty(PORT_OPTIONS:MDOCS)
 	@${REINPLACE_CMD} -e \
 		'/install-data-am/ s|install-dist_docDATA||' \
 		${WRKSRC}/Makefile.in
