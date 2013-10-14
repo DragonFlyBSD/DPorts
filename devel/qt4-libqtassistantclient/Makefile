@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-libqtassistantclient/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-libqtassistantclient/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	libQtAssistantClient
 PORTVERSION=	4.6.3
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/src/version/}
 BUILD_WRKSRC=	${WRKSRC}/lib
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|$$$$\[QT_INSTALL_HEADERS]|${PREFIX}/${QT_INCDIR_REL}|g' \
 		-e 's|$$$$\[QT_INSTALL_LIBS]|${PREFIX}/${QT_LIBDIR_REL}|g' \
