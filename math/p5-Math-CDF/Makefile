@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: math/p5-Math-CDF/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/p5-Math-CDF/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-CDF
 PORTVERSION=	0.1
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::CDF.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
