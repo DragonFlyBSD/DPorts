@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 328923 2013-10-01 05:54:24Z amdmi3 $
 
 PORTNAME=	Math-Geometry-Planar-GPC-Polygon
 PORTVERSION=	0.05
@@ -17,7 +17,5 @@ RUN_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 USES=		perl5
 USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=	yes
-
-MAN3=		Math::Geometry::Planar::GPC::Polygon.3
 
 .include <bsd.port.mk>
