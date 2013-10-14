@@ -1,4 +1,4 @@
-# $FreeBSD: games/kajongg/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: games/kajongg/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kajongg
 PORTVERSION=	${KDE4_VERSION}
@@ -21,5 +21,6 @@ USE_TWISTED_RUN=	yes
 USE_XZ=		yes
 CMAKE_ARGS=	-DINSTALL_KAJONGG:BOOL=TRUE
 
+NO_STAGE=	yes
 .include <${.CURDIR}/../kdegames4/Makefile.common>
 .include <bsd.port.mk>
