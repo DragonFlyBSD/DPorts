@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: graphics/p5-Image-PBMlib/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Image-PBMlib/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-PBMlib
 PORTVERSION=	2.00
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Image::PBMlib.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
