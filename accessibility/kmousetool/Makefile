@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/kmousetool/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: accessibility/kmousetool/Makefile 327684 2013-09-20 11:02:49Z bapt $
 
 PORTNAME=	kmousetool
 PORTVERSION=	${KDE4_VERSION}
@@ -12,6 +12,7 @@ COMMENT=	Automatic mouse click tool for KDE
 
 CONFLICTS_INSTALL=	kdeaccessibility-4.[0-7].*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USES=		cmake:outsource
