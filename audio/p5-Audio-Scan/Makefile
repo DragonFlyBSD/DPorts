@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: audio/p5-Audio-Scan/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: audio/p5-Audio-Scan/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Audio-Scan
 PORTVERSION=	0.93
@@ -16,6 +16,7 @@ LICENSE=	GPLv2
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN3=		Audio::Scan.3
