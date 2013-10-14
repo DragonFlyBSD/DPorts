@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/raptor2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/raptor2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	raptor2
 PORTVERSION=	2.0.9
@@ -31,4 +31,5 @@ USE_LDCONFIG=	yes
 MAN1=		rapper.1
 MAN3=		libraptor2.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
