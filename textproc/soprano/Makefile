@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: textproc/soprano/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/soprano/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	soprano
 PORTVERSION=	2.9.3
@@ -21,6 +21,7 @@ CMAKE_ARGS+=	-DSOPRANO_DISABLE_CLUCENE_INDEX=yes \
 		-DSOPRANO_DISABLE_SESAME2_BACKEND=yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,$${LIB_SUFFIX}/pkgconfig,data/pkgconfig,' \
 		${WRKSRC}/CMakeLists.txt
