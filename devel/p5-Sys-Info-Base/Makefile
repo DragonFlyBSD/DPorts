@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Sys-Info-Base/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Sys-Info-Base/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Sys-Info-Base
 PORTVERSION=	0.78.02
@@ -16,13 +16,6 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Sys::Info::Base.3 \
-		Sys::Info::Constants.3 \
-		Sys::Info::Device.3 \
-		Sys::Info::Device::CPU.3 \
-		Sys::Info::Driver.3 \
-		Sys::Info::OS.3
 
 regression-test test: build
 	cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE} test
