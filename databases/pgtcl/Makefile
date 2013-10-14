@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pgtcl
-# Date created:				February 13, 2007
-# Whom:					Mikhail Teterin
-#
-# $FreeBSD: ports/databases/pgtcl/Makefile,v 1.10 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Mikhail Teterin
+# $FreeBSD: databases/pgtcl/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgtcl
 PORTVERSION=	2.0.0
@@ -32,6 +28,7 @@ DISTFILES+=	pgtcldocs-${MANUALREL}.zip:doc
 MASTER_SITES+=	SF/pgtclng/Manual/${MANUALREL}:doc
 .endif
 
+NO_STAGE=	yes
 post-configure:
 	${REINPLACE_CMD} -e 's,tclstub,tcl,g' \
 	    -e 's,-DUSE_TCL_STUBS=1,-UUSE_TCL_STUBS,g' \
