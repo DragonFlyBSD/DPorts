@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: security/p5-Crypt-RC4/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/p5-Crypt-RC4/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		Crypt-RC4
 PORTVERSION=		2.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Crypt::RC4.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
