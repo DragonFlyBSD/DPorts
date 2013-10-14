@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/p5-SQL-Interp/Makefile 325099 2013-08-21 09:13:12Z mat $
+# $FreeBSD: databases/p5-SQL-Interp/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	SQL-Interp
 PORTVERSION=	1.22
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		DBIx::Interp.3 SQL::Interp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
