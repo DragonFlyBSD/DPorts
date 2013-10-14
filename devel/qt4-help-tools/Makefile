@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: devel/qt4-help-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/qt4-help-tools/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	help
 DISTVERSION=	${QT4_VERSION}
@@ -39,6 +39,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|assistant||' \
 		${BUILD_WRKSRC}/tools.pro
