@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-xmltex/Makefile 318464 2013-05-18 22:54:31Z hrs $
+# $FreeBSD: print/tex-xmltex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xmltex
 PORTVERSION=	1.9
@@ -26,6 +26,7 @@ NO_WRKSRC=	yes
 NO_BUILD=	yes
 TEX_FORMATS=	xmltex
 
+NO_STAGE=	yes
 do-install:
 	${CAT} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} \
 		${EXTRACT_AFTER_ARGS}
