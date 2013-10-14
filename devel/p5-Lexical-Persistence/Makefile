@@ -1,6 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Lexical-Persistence/Makefile 325100 2013-08-21 09:17:02Z jadawin $
-#
+# $FreeBSD: devel/p5-Lexical-Persistence/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Lexical-Persistence
 PORTVERSION=	1.023
@@ -20,4 +19,5 @@ MAN3=	Lexical::Persistence.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
