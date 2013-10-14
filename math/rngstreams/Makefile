@@ -1,9 +1,5 @@
-# New ports collection makefile for:   rngstreams
-# Date created:        9 November 2008
-# Whom:                bf <bf2006a@yahoo.com>
-#
-# $FreeBSD: ports/math/rngstreams/Makefile,v 1.5 2012/11/17 05:59:30 svnexp Exp $
-#
+# Created by: bf <bf2006a@yahoo.com>
+# $FreeBSD: math/rngstreams/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	rngstreams
 PORTVERSION=	1.0.1
@@ -24,6 +20,7 @@ PLIST_FILES=	lib/librngstreams.a \
 PORTDOCS=	rngstreams.txt
 PORTEXAMPLES=	example1.c
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
