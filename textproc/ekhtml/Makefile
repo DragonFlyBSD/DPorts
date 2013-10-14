@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ekhtml
-# Date created:        21 December 2007
-# Whom:                Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/textproc/ekhtml/Makefile,v 1.7 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: textproc/ekhtml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ekhtml
 PORTVERSION=	0.3.2
@@ -25,4 +21,5 @@ PLIST_FILES=	include/ekhtml.h lib/libekhtml.a \
 		lib/libekhtml.la lib/libekhtml.so \
 		lib/libekhtml.so.0
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
