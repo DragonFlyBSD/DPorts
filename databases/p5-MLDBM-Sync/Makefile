@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: databases/p5-MLDBM-Sync/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-MLDBM-Sync/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	MLDBM-Sync
 PORTVERSION=	0.30
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		MLDBM::Sync.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
