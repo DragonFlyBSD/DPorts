@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/nextgo/Makefile,v 1.12 2012/11/17 05:57:47 svnexp Exp $
+# $FreeBSD: games/nextgo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	nextgo
 PORTVERSION=	3.0
@@ -18,6 +18,7 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
 		${WRKSRC}/GNUmakefile
