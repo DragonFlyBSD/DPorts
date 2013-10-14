@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tevent/Makefile 324884 2013-08-18 01:06:21Z mva $
+# $FreeBSD: devel/tevent/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=		tevent
 PORTVERSION=		0.9.18
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 OPTIONS_DEFINE=		PYTHON
 OPTIONS_DEFAULT=	PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PLIST_FILES=		include/tevent.h \
@@ -51,10 +52,8 @@ RUN_DEPENDS:=		${BUILD_DEPENDS}
 CONFIGURE_ARGS+=	--bundled-libraries=!talloc
 
 .if !defined(DISABLE_MAKE_JOBS) && !defined(MAKE_JOBS_UNSAFE)
-.if defined(MAKE_JOBS_SAFE) || defined(FORCE_MAKE_JOBS)
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS_NUMBER}
 _MAKE_JOBS=		--jobs=${MAKE_JOBS_NUMBER}
-.endif
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
