@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: net-mgmt/p5-Cflow/Makefile 317790 2013-05-10 11:28:32Z bapt $
+# $FreeBSD: net-mgmt/p5-Cflow/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Cflow
 PORTVERSION=	1.053
@@ -15,6 +15,10 @@ COMMENT=	Analyze raw flow files written by cflowd (Cisco NetFlow data)
 OPTIONS_DEFINE=	FLOW_TOOLS
 FLOW_TOOLS_DESC=	Enable flow-tools support
 
+USES=		perl5
+USE_PERL5=	configure
+
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFLOW_TOOLS}
@@ -26,7 +30,6 @@ CONFIGURE_ARGS+=	\
 	"LDDLFLAGS= -shared -L${LOCALBASE}/lib -lft -lz" \
 	"INC= -I${LOCALBASE}/include" "LDLOADLIBS= -L${LOCALBASE}/lib -lft -lz"
 .endif
-PERL_CONFIGURE=	YES
 
 MAN1=		flowdumper.1
 MAN3=		Cflow.3
