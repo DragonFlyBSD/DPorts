@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11-fonts/croscorefonts-fonts-ttf/Makefile 316180 2013-04-21 14:33:09Z sunpoet $
+# $FreeBSD: x11-fonts/croscorefonts-fonts-ttf/Makefile 329309 2013-10-04 14:10:59Z bapt $
 
 PORTNAME=	croscorefonts
 PORTVERSION=	1.23.0
@@ -13,7 +13,7 @@ COMMENT=	Fonts created from by Google for ChromeOS to replace MS TTF
 #LICENSE=	OFL
 #LICENSE_NAME=	SIL OPEN FONT LICENSE Version 1.1
 #LICENSE_FILE=	${WRKSRC}/LICENSE
-#LICENSE_PERMS=	auto-accept
+#LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
@@ -41,13 +41,8 @@ do-build:
 	cd ${WRKSRC} && ${MKFONTDIR_CMD}
 
 do-install:
-	${MKDIR} ${FONTDIR}
+	${MKDIR} ${STAGEDIR}${FONTDIR}
 	cd ${WRKSRC} &&	\
-	${INSTALL_DATA} ${INSTDAT} *.ttf ${FONTDIR}
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+	${INSTALL_DATA} ${INSTDAT} *.ttf ${STAGEDIR}${FONTDIR}
 
 .include <bsd.port.mk>
