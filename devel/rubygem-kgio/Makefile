@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-kgio
-# Date created:		2011-11-16
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-kgio/Makefile,v 1.7 2013/01/25 22:42:56 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-kgio/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	kgio
 PORTVERSION=	2.8.0
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
