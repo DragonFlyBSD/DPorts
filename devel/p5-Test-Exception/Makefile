@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Exception/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-Exception/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Exception
 PORTVERSION=	0.32
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::Exception.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
