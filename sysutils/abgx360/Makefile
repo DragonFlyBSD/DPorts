@@ -1,9 +1,5 @@
-# New ports collection makefile for:   abgx360
-# Date created:        21 November 2009
-# Whom:                okeeblow <root@cooltrainer.org>
-#
-# $FreeBSD: ports/sysutils/abgx360/Makefile,v 1.8 2012/11/17 06:01:24 svnexp Exp $
-#
+# Created by: okeeblow <root@cooltrainer.org>
+# $FreeBSD: sysutils/abgx360/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	abgx360
 PORTVERSION=	1.0.6
@@ -20,6 +16,7 @@ PLIST_FILES=	bin/abgx360
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/abgx360 ${PREFIX}/bin
 
