@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-bcrypt-ruby/Makefile 322966 2013-07-13 19:44:38Z swills $
+# $FreeBSD: security/rubygem-bcrypt-ruby/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	bcrypt-ruby
 PORTVERSION=	3.1.1
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
