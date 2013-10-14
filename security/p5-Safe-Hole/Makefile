@@ -1,5 +1,5 @@
 # Created by: Seth Kingsley <sethk@meowfishies.com>
-# $FreeBSD: security/p5-Safe-Hole/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-Safe-Hole/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Safe-Hole
 PORTVERSION=	0.13
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Safe::Hole.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
