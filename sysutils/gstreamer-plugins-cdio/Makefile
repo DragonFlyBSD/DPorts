@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gstreamer-plugins-cdio
-# Date created:			5 July 2005
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/gstreamer-plugins-cdio/Makefile,v 1.10 2012/11/17 06:01:33 svnexp Exp $
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: sysutils/gstreamer-plugins-cdio/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 CATEGORIES=	sysutils
 PORTREVISION=	0
@@ -14,4 +10,5 @@ GST_PLUGIN=	cdio
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
