@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11/qimageblitz/Makefile 322184 2013-07-02 17:06:21Z rakuco $
+# $FreeBSD: x11/qimageblitz/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	qimageblitz
 PORTVERSION=	0.0.6
@@ -16,6 +16,7 @@ USE_LDCONFIG=	yes
 USE_QT4=	corelib gui qmake_build moc_build uic_build rcc_build
 USES=		cmake
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e \
 		's,$${LIB_INSTALL_DIR}/pkgconfig,libdata/pkgconfig,' \
