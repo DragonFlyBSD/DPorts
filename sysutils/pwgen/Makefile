@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pwgen2
-# Date created:		27 Aug 2005
-# Whom:			Andrew Khlebutin <andrey@hm.perm.ru>
-#
-# $FreeBSD: sysutils/pwgen/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: Andrew Khlebutin <andrey@hm.perm.ru>
+# $FreeBSD: sysutils/pwgen/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pwgen
 PORTVERSION=	2.06
@@ -21,4 +17,5 @@ USE_PERL5=	build
 MAN1=		pwgen.1
 PLIST_FILES=	bin/pwgen
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
