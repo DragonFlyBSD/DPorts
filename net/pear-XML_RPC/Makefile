@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-XML_RPC
-# Date created:		7 Feb 2007
-# Whom:			Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/net/pear-XML_RPC/Makefile,v 1.9 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: net/pear-XML_RPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	XML_RPC
 PORTVERSION=	1.5.5
@@ -18,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 USE_PHP=	xml
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
