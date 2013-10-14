@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-qt4-declarative/Makefile 311475 2013-02-03 18:16:07Z makc $
+# $FreeBSD: devel/py-qt4-declarative/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	declarative
 PORTVERSION=	${PYQT4_VERSION}
@@ -37,6 +37,7 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
