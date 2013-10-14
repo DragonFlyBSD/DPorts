@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/fcitx/Makefile 326181 2013-09-03 17:12:06Z antoine $
+# $FreeBSD: chinese/fcitx/Makefile 328529 2013-09-27 22:32:06Z madpilot $
 
 PORTNAME=	fcitx
 PORTVERSION=	4.2.6.1
@@ -33,8 +33,9 @@ USE_XZ=		yes
 USE_GNOME=	pango intltool libxml2 introspection
 USE_XORG=	x11 xext xkbfile
 USE_LDCONFIG=	yes
-USES=		cmake gettext pathfix pkgconfig
+USES=		cmake gettext iconv pathfix pkgconfig
 INSTALLS_ICONS=	yes
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 OPTIONS_DEFINE=	GTK2 GTK3 QT4 OPENCC TPUNC
 OPTIONS_DEFAULT=GTK2
@@ -45,6 +46,7 @@ QT4_DESC=	Enable Qt4 IM module
 OPENCC_DESC=	Enable OpenCC for Chinese Transform
 TPUNC_DESC=	Use traditional quotation marks
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CMAKE_ARGS+=	-DENABLE_XDGAUTOSTART=OFF -DFORCE_ENCHANT=ON
