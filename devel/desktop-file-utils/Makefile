@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: devel/desktop-file-utils/Makefile 325869 2013-09-01 15:50:18Z kwm $
+# $FreeBSD: devel/desktop-file-utils/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/trunk/devel/desktop-file-utils/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	desktop-file-utils
@@ -31,6 +31,7 @@ MIMEDIRS=	${PORT_MIMEDIRS}
 
 RMDIRS=		${PORT_MIMEDIRS}
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e 's|%%MIMEDIRS%%|${MIMEDIRS}| ;\
 		s|%%RMDIRS%%|${RMDIRS}| ; \
