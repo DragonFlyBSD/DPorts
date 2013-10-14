@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: science/libint/Makefile 326873 2013-09-10 08:26:53Z az $
+# $FreeBSD: science/libint/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	libint
 PORTVERSION=	1.1.4
@@ -17,6 +17,7 @@ ALL_TARGET=	# empty
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
