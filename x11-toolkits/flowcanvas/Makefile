@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/flowcanvas/Makefile 326352 2013-09-05 05:39:29Z antoine $
+# $FreeBSD: x11-toolkits/flowcanvas/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	flowcanvas
 PORTVERSION=	0.7.1
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(BATCH) || defined(PACKAGE_BUILDING)
