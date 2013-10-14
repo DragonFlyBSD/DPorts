@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: devel/py-pycerberus/Makefile 324617 2013-08-12 08:08:40Z culot $
+# $FreeBSD: devel/py-pycerberus/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pycerberus
 PORTVERSION=	0.5
@@ -15,4 +15,5 @@ LICENSE=	MIT
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
