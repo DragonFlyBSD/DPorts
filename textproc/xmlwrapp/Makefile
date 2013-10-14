@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/xmlwrapp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/xmlwrapp/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmlwrapp
 PORTVERSION=	0.7.0
@@ -26,6 +26,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lboost_system
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXSLT}
