@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: textproc/p5-URI-Find/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-URI-Find/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	URI-Find
 PORTVERSION=	20111103
@@ -20,4 +20,5 @@ MAN1=		urifind.1
 MAN3=		URI::Find.3 \
 		URI::Find::Schemeless.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
