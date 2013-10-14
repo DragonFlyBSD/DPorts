@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/www/servlet-api/Makefile,v 1.12 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/servlet-api/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	servlet-api
 PORTVERSION=	2.5
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${_DISTDIR}/${DISTFILES} ${JAVAJARDIR}/${PORTNAME}.jar
