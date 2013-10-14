@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-# $FreeBSD: graphics/libcaca/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/libcaca/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libcaca
 DISTVERSION=	0.99.beta18
@@ -32,6 +32,7 @@ OPTIONS_DEFINE=	X11 IMLIB2 SLANG DOCS
 OPTIONS_DEFAULT=	X11 IMLIB2
 X11_DESC=	X11 and OpenGL support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
