@@ -1,13 +1,12 @@
-# Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: x11/menu-cache/Makefile 322225 2013-07-03 12:38:31Z wg $
+# Created by: Kris Moore <kmoore@FreeBSD.org>
+# $FreeBSD: x11/menu-cache/Makefile 329402 2013-10-04 23:10:53Z nemysis $
 
 PORTNAME=	menu-cache
-PORTVERSION=	0.4.1
-PORTREVISION=	1
+PORTVERSION=	0.5.0
 CATEGORIES=	x11
-MASTER_SITES=	SF/lxde/menu-cache/menu-cache%20${PORTVERSION}/
+MASTER_SITES=	SF/lxde/menu-cache/menu-cache%20${PORTVERSION:S/.0/.x/}/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	The menu-cache portion of LXDE
 
 USES=		pkgconfig
