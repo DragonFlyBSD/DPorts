@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  stow
-# Date created:			  6 June 2000
-# Whom:				  Cyrille Lefevre <clefevre@citeweb.net>
-#
-# $FreeBSD: sysutils/stow/Makefile 326572 2013-09-07 06:13:27Z az $
-#
+# Created by: Cyrille Lefevre <clefevre@citeweb.net>
+# $FreeBSD: sysutils/stow/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	stow
 PORTVERSION=	2.2.0
@@ -36,6 +31,7 @@ PLIST_FILES=	bin/chkstow \
 		%%SITE_PERL%%/Stow/Util.pm
 PLIST_DIRS=	%%SITE_PERL%%/Stow
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
