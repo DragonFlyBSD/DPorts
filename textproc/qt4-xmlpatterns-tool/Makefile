@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmlpatterns-tool
 DISTVERSION=	${QT4_VERSION}
@@ -37,6 +37,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 #	${REINPLACE_CMD} -e 's|^TARGET.*|TARGET=xmlpatterns|g' \
