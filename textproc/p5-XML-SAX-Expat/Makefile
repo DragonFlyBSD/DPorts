@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-SAX-Expat
 PORTVERSION=	0.50
@@ -20,6 +20,7 @@ USE_PERL5=	configure patch
 
 MAN3=		XML::SAX::Expat.3
 
+NO_STAGE=	yes
 post-patch:
 		@${PERL} -pi -e "s/(?<=XML::SAX::Base          => ')1\.00(?=')/0.25/;" ${WRKSRC}/Makefile.PL
 
