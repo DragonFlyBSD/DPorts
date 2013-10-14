@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cross-gdb
-# Date created:		11 June 2007
-# Whom:			Stanislav Sedov <stas@FreeBSD.org>
-#
+# Created by: Stanislav Sedov <stas@FreeBSD.org>
 # $FreeBSD: ports/devel/cross-gdb/Makefile,v 1.12 2012/11/17 05:55:38 svnexp Exp $
-#
 
 PORTNAME=	gdb
 PORTVERSION=	7.2
@@ -30,8 +26,9 @@ BUILD_DEPENDS=	${OURTARGET}-as:${PORTSDIR}/devel/cross-binutils
 .endif
 .endif
 
+USES=		gmake
+NO_STAGE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all info
 DATADIR=	${PREFIX}/share/${PKGNAMEPREFIX}${PORTNAME}

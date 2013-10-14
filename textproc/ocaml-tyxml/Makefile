@@ -1,7 +1,4 @@
-# New ports collection makefile for:	ocaml-tyxml
-# Date created:				December 14, 2011
-# Whom:					Jaap Boender <jaapb@kerguelen.org>
-#
+# Created by: Jaap Boender <jaapb@kerguelen.org>
 # $FreeBSD: ports/textproc/ocaml-tyxml/Makefile,v 1.2 2012/11/17 06:02:03 svnexp Exp $
 
 PORTNAME=	tyxml
@@ -13,7 +10,8 @@ PKGNAMEPREFIX=	ocaml-
 MAINTAINER=	jaapb@kerguelen.org
 COMMENT=	OCaml XML typing library
 
-USE_GMAKE=		yes
+USES=			gmake
+NO_STAGE=		yes
 
 USE_OCAML=		yes
 USE_OCAML_FINDLIB=	yes

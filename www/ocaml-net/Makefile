@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ocaml-net
-# Date created:        01 March 2003
-# Whom:                Stephane Legrand <stephane@freebsd.org>
-#
+# Created by: Stephane Legrand <stephane@freebsd.org>
 # $FreeBSD: ports/www/ocaml-net/Makefile,v 1.31 2012/11/17 06:02:43 svnexp Exp $
-#
 
 PORTNAME=	net
 PORTVERSION=	3.6.3
@@ -20,7 +16,7 @@ RUN_DEPENDS=	${BUILD_DEPENDS}
 
 CONFLICTS=	ocaml-equeue-2* ocaml-netclient-0*
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_OCAML=	yes
 USE_OCAML_FINDLIB=	yes
 USE_OCAML_LDCONFIG=	yes
@@ -46,35 +42,36 @@ OCAML_PKGDIRS=	netsys netshm equeue shell netstring rpc-generator \
 OCAML_PKGDIRS+= netstring-pcre
 OCAML_LDLIBS=	${OCAML_PKGDIRS:S/^/${OCAML_SITELIBDIR}\//}
 
-OPTIONS=	SSL "Enable SSL support" ON \
-		NETHTTPD "Enable the integrated HTTP daemon" OFF \
-		AUTH_DH "Enable Diffie-Hellman authorization support" OFF \
-		GTK2 "Enable GTK2 support" OFF \
-		APACHE "Enable Apache mod connector (experimental)" OFF \
-		ZIP "Enable compression support" OFF \
-		SCRAM "Enable SCRAM support" OFF
+OPTIONS_DEFINE=	SSL NETHTTPD AUTH_DH GTK2 APACHE ZIP SCRAM EXAMPLES DOCS
+OPTIONS_DEFAULT=	SSL
+AUTH_DH_DESC=	Diffie-Hellman authorization support
+NETHTTPD_DESC=	Integrated HTTP daemon
+SCRAM_DESC=	SCRAM support
+ZIP_DESC=	Compression support
+APACHE_DESC=	Apache mod connector (experimental)
 
 CONFIGURE_ARGS+=	-disable-gtk -enable-pcre
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-.if defined(WITHOUT_SSL)
-CONFIGURE_ARGS+=	-disable-ssl
-.else
+.if ${PORT_OPTIONS:MSSL}
 CONFIGURE_ARGS+=	-enable-ssl
 BUILD_DEPENDS+=		${SA_DIR}/ssl/ssl.a:${PORTSDIR}/security/ocaml-ssl
 RUN_DEPENDS+=		${SA_DIR}/ssl/ssl.a:${PORTSDIR}/security/ocaml-ssl
 OCAML_PKGDIRS+=		equeue-ssl rpc-ssl
+.else
+CONFIGURE_ARGS+=	-disable-ssl
 .endif
 
-.if defined(WITH_NETHTTPD)
+.if ${PORT_OPTIONS:MNETHTTPD}
 CONFIGURE_ARGS+=	-with-nethttpd
 OCAML_PKGDIRS+=		nethttpd nethttpd-for-netcgi2
 .else
 CONFIGURE_ARGS+=	-without-nethttpd
 .endif
 
-.if defined(WITH_AUTH_DH)
+.if ${PORT_OPTIONS:MAUTH_DH}
 CONFIGURE_ARGS+=	-with-rpc-auth-dh
 BUILD_DEPENDS+=		${SA_DIR}/cryptgps/cryptgps.a:${PORTSDIR}/security/ocaml-cryptgps
 RUN_DEPENDS+=		${SA_DIR}/cryptgps/cryptgps.a:${PORTSDIR}/security/ocaml-cryptgps
@@ -83,7 +80,7 @@ OCAML_PKGDIRS+=		rpc-auth-dh
 CONFIGURE_ARGS+=	-without-rpc-auth-dh
 .endif
 
-.if defined(WITH_GTK2)
+.if ${PORT_OPTIONS:MGTK2}
 CONFIGURE_ARGS+=	-enable-gtk2
 BUILD_DEPENDS+=		lablgtk2:${PORTSDIR}/x11-toolkits/ocaml-lablgtk2
 RUN_DEPENDS+=		lablgtk2:${PORTSDIR}/x11-toolkits/ocaml-lablgtk2
@@ -92,7 +89,7 @@ OCAML_PKGDIRS+=		equeue-gtk2
 CONFIGURE_ARGS+=	-disable-gtk2
 .endif
 
-.if defined(WITH_APACHE)
+.if ${PORT_OPTIONS:MAPACHE}
 USE_APACHE=		22+
 CONFIGURE_ARGS+=	-enable-apache -apxs ${APXS} -apache ${HTTPD}
 OCAML_PKGDIRS+=		netcgi_apache
@@ -100,7 +97,7 @@ OCAML_PKGDIRS+=		netcgi_apache
 CONFIGURE_ARGS+=	-disable-apache
 .endif
 
-.if defined(WITH_ZIP)
+.if ${PORT_OPTIONS:MZIP}
 CONFIGURE_ARGS+=	-enable-zip
 BUILD_DEPENDS+=		${SA_DIR}/zip/zip.a:${PORTSDIR}/archivers/ocaml-zip
 RUN_DEPENDS+=		${SA_DIR}/zip/zip.a:${PORTSDIR}/archivers/ocaml-zip
@@ -109,7 +106,7 @@ OCAML_PKGDIRS+=		netzip
 CONFIGURE_ARGS+=	-disable-zip
 .endif
 
-.if defined(WITH_SCRAM)
+.if ${PORT_OPTIONS:MSCRAM}
 CONFIGURE_ARGS+=	-enable-crypto
 BUILD_DEPENDS+=		${SA_DIR}/cryptokit/cryptokit.a:${PORTSDIR}/security/ocaml-cryptokit
 RUN_DEPENDS+=		${SA_DIR}/cryptokit/cryptokit.a:${PORTSDIR}/security/ocaml-cryptokit
@@ -127,11 +124,11 @@ post-patch:
 		${WRKSRC}/src/netzip/Makefile
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}/
 	@(cd ${WRKSRC}/doc/ && ${COPYTREE_SHARE} \* ${DOCSDIR}/)
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}/
 	@(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}/)
 .endif

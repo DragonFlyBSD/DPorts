@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ocaml
-# Date created:		24 December 1996
-# Whom:			Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-#
+# Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
 # $FreeBSD: ports/lang/ocaml/Makefile,v 1.79 2013/02/06 19:12:19 svnexp Exp $
-#
 
 PORTNAME=	ocaml
 PORTVERSION=	4.00.1
@@ -26,12 +22,13 @@ PKGNAMESUFFIX=	${SFX}
 MAINTAINER?=	michael.grunewald@laposte.net
 COMMENT?=	The Objective Caml compiler and programming environment
 
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 REINPLACE_ARGS=	-i ""
 HAS_CONFIGURE=	yes
 ALL_TARGET=	world.opt
 STRIP=
+SSP_UNSAFE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 CONFIGURE_ARGS=	-verbose -prefix "${PREFIX}" \
@@ -39,14 +36,16 @@ CONFIGURE_ARGS=	-verbose -prefix "${PREFIX}" \
                 -as "${AS} ${ASFLAGS}" \
 		-aspp "${CC} -c" \
                 -partialld "${LD} -r"
-OPTIONS=	X11	"Build with X11 support" on \
-		TK	"Build LablTk library (requires X11 support)" on \
-		THREADS	"Build with Posix threads support" on \
-		OPT_DEF	"Use system-optimized binaries by default" off
+OPTIONS_DEFINE= X11 TK THREADS OPT_DEF
+OPTIONS_DEFAULT=X11 TK THREADS
+TK_DESC=	LablTk library (requires X11 support)
+CMP_LIB_DESC=	Install compiler libraries
+OPT_DEF_DESC=	Use system-optimizes binaries by default
 
 MODOPT=		camlp4o camlp4r ocamlc ocamldep ocamldoc ocamllex ocamlopt
 PATTERN=	[[:space:]]*(do|then)?[[:space:]]*)(\$$\(CP\)|cp)([[:space:]]
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(NOPORTDOCS)
@@ -65,7 +64,7 @@ PLIST_SUB+=	PROF=""
 
 .include "${FILESDIR}/manfiles"
 
-.if !defined(WITHOUT_THREADS)
+.if ${PORT_OPTIONS:MTHREADS}
 PLIST_SUB+=	THREADS=""
 THR_CPP=	${PTHREAD_CFLAGS}
 THR_LD=		${PTHREAD_LIBS}
@@ -76,7 +75,7 @@ THR_LD=		#empty
 CONFIGURE_ARGS+=-no-pthread
 .endif
 
-.if !defined(WITHOUT_X11)
+.if ${PORT_OPTIONS:MX11}
 PLIST_SUB+=	X11=""
 USE_XORG=	x11
 CONFIGURE_ARGS+=-x11include ${LOCALBASE}/include -x11lib ${LOCALBASE}/lib
@@ -88,9 +87,9 @@ CONFLICTS+=	ocaml-[0-9]* ocaml-notk-[0-9]*
 CONFIGURE_ARGS+=-no-x11
 .endif
 
-.if defined(WITHOUT_TK)
+.if ! ${PORT_OPTIONS:MTK}
 PLIST_SUB+=	TK="@comment "
-.if !defined(WITHOUT_X11)
+.if ${PORT_OPTIONS:MX11}
 SFX=		-notk
 CONFLICTS+=	ocaml-[0-9]* ocaml-nox11-[0-9]*
 .endif
@@ -98,30 +97,16 @@ CONFIGURE_ARGS+=-no-tk
 .else
 USE_TK=		84+
 INVALID_TK_VER =	86
-.if defined(WITH_THREADS)
-USE_TK_THREADS =	yes
-.endif
 .include "${PORTSDIR}/Mk/bsd.tcl.mk"
 PLIST_SUB+=	TK=""
 CONFLICTS+=	ocaml-nox11-[0-9]* ocaml-notk-[0-9]*
 CONFIGURE_ARGS+=	-tkdefs \
-			"-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR} ${THR_CPP}" \
-			-tklibs "-L${LOCALBASE}/lib -ltk${TK_VER:S|.||}${_TCL_THREADS_SUFFIX} \
-			-ltcl${TCL_VER:S|.||}${_TCL_THREADS_SUFFIX} ${THR_LD}"
+			"-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR} ${THR_CPP}"
 .endif
 
-OCAML_ARCH= ${ARCH}
-.if ${ARCH} == sparc64
-BROKEN=	ocamlc.opt seg-faults on ${ARCH}, please try to fix
-OCAML_ARCH= sparc
-.elif ${ARCH} == "x86_64"
-OCAML_ARCH= amd64
-.endif
+OCAML_ARCH= ${ARCH:S/x86_64/amd64/}
 
 post-extract:
-.if ${ARCH} == power
-	${MV} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
-.endif
 .if !defined(NOPORTDOCS)
 	@if ! (cd ${WRKDIR} && \
 	  ${TAR} xf ${_DISTDIR}${DOCSDISTNAME}-refman-html.tar.gz \
@@ -144,7 +129,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|$$(CC)|' \
 		${WRKSRC}/*/Makefile \
 		${WRKSRC}/*/*/Makefile
-.if defined(WITH_TK)
+.if ${PORT_OPTIONS:MTK}
 	@${REINPLACE_CMD} -e 's|/usr/bin/wish|${WISH}|' \
 		${WRKSRC}/otherlibs/labltk/examples_labltk/hello.tcl
 .endif
@@ -175,7 +160,7 @@ check test: install
 
 post-install:
 	@${TOUCH} ${PREFIX}/lib/ocaml/ocamldoc/custom/.keep
-.if !defined(WITHOUT_TK)
+.if ${PORT_OPTIONS:MTK}
 	@${MKDIR} ${EXAMPLESDIR}
 	@(cd ${WRKSRC}/otherlibs/labltk && \
 		${COPYTREE_SHARE} examples_labltk ${EXAMPLESDIR} \
@@ -205,7 +190,7 @@ post-install:
 
 .endif
 # Do we want .opt version of tools to be the default ?
-.if defined(WITH_OPT_DEF)
+.if ${PORT_OPTIONS:MOPT_DEF}
 . for module in ${MODOPT}
 #	First, we save bytecode version
 	@${MV} ${PREFIX}/bin/${module} ${PREFIX}/bin/${module}.byte

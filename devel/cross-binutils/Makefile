@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cross-binutils
-# Date created:		8 August 2006
-# Whom:			Stanislav Sedov <stas@FreeBSD.org>
-#
+# Created by: Stanislav Sedov <stas@FreeBSD.org>
 # $FreeBSD: ports/devel/cross-binutils/Makefile,v 1.21 2012/11/17 05:55:38 svnexp Exp $
-#
 
 PORTNAME=	binutils
 PORTVERSION=	2.21
@@ -18,8 +14,9 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU binutils port for cross-target development
 
+USES=		gmake
+NO_STAGE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all info
 MAKE_JOBS_UNSAFE=	yes

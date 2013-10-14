@@ -13,6 +13,7 @@ COMMENT=	Library giving userland programs access to USB devices
 OPTIONS_DEFINE=	SGML
 SGML_DESC=	Install developer guide from SGML
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 DEPRECATED=	has been already included into base system
