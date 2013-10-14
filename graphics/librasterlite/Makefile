@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: graphics/librasterlite/Makefile 326981 2013-09-11 13:58:27Z wg $
+# $FreeBSD: graphics/librasterlite/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	librasterlite
 PORTVERSION=	1.1e
@@ -29,6 +29,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|$$(prefix)/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
