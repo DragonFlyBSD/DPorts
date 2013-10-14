@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: science/netcdf/Makefile 316757 2013-04-28 22:08:22Z bapt $
+# $FreeBSD: science/netcdf/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	netcdf
 PORTVERSION=	3.6.3
@@ -28,6 +28,7 @@ MAN3=		netcdf.3
 OPTIONS_DEFINE=	FORTRAN DOCS
 FORTRAN_DESC=	Build library for Fortran
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
