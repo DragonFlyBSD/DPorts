@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: palm/synce-librra/Makefile 326096 2013-09-02 21:36:52Z antoine $
+# $FreeBSD: palm/synce-librra/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	librra
 PORTVERSION=	0.14
@@ -27,6 +27,7 @@ USES=		pathfix pkgconfig iconv
 CONFIGURE_ARGS+=	--with-libsynce="${LOCALBASE}" \
 			--with-libmimedir="${LOCALBASE}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(RRA_SLAVE) && ${RRA_SLAVE} == "pythonb"
