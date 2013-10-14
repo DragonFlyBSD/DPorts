@@ -1,4 +1,4 @@
-# $FreeBSD: security/ykclient/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/ykclient/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ykclient
 PORTVERSION=	2.9
@@ -32,4 +32,5 @@ MAKE_JOBS_UNSAFE=	yes
 regression-test: build
 	@(cd ${WRKSRC}; ${MAKE} check)
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
