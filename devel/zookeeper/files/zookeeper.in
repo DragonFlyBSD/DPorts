@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/devel/zookeeper/files/zookeeper.in,v 1.3 2012/11/17 05:57:07 svnexp Exp $
+# $FreeBSD: devel/zookeeper/files/zookeeper.in 304838 2012-09-25 14:47:21Z lwhsu $
 #
 # PROVIDE: zookeeper
 # REQUIRE: LOGIN
