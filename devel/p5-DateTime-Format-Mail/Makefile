@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Mail/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Mail/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Format-Mail
 PORTVERSION=	0.30.01
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=		DateTime::Format::Mail.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
