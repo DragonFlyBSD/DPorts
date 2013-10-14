@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-pytest-runner/Makefile 320793 2013-06-13 12:25:51Z wg $
+# $FreeBSD: devel/py-pytest-runner/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pytest-runner
 PORTVERSION=	2.0
@@ -18,4 +18,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
