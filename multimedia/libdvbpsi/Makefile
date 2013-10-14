@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	libdvbpsi
-# Date created:			Aug 8, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: multimedia/libdvbpsi/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/libdvbpsi/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libdvbpsi
 PORTVERSION=	0.2.2
