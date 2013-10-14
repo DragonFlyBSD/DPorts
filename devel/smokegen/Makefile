@@ -1,4 +1,4 @@
-# $FreeBSD: devel/smokegen/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/smokegen/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	smokegen
 PORTVERSION=	${KDE4_VERSION}
@@ -19,6 +19,7 @@ USES=		cmake:outsource
 CMAKE_ARGS+=	-DSMOKE_CMAKE_MODULE_DIR:PATH=${PREFIX}/lib/cmake/smoke
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|share/smoke/cmake|lib/cmake/smoke|g' \
 		${WRKSRC}/smokebase/CMakeLists.txt
