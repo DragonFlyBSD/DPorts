@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: graphics/pfstools/Makefile 322192 2013-07-02 19:06:29Z rene $
+# $FreeBSD: graphics/pfstools/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pfstools
 PORTVERSION=	1.6.4
@@ -68,6 +68,7 @@ MLINKS=		pfsoutppm.1 \
 		pfsoutppm.1 \
 		pfsoutrgbe.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNETPBM}
