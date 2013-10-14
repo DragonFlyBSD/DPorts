@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 321660 2013-06-24 02:43:38Z fluffy $
+# $FreeBSD: net/freerdp/Makefile 329700 2013-10-07 13:07:16Z fluffy $
 
 PORTNAME=	freerdp
 PORTVERSION=	1.0.2
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	CUPS PULSEAUDIO X11
 X11_DESC=	Build FreeRDP X11 client
 DIRECTFB_DESC=	Build FreeRDP DirectFB client
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
@@ -52,6 +53,7 @@ PLIST_SUB+=	DIRECTFB="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MALSA}
+LIB_DEPENDS+=	asound:${PORTSDIR}/audio/alsa-lib
 PLIST_SUB+=	ALSA=""
 .else
 PLIST_SUB+=	ALSA="@comment "
