@@ -1,8 +1,5 @@
-# New ports collection makefile for:   synce-libsynce
-# Date created:                14 June 2003
-# Whom:                        Sam Lawrance <boris@brooknet.com.au>
-#
-# $FreeBSD: palm/synce-libsynce/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# Created by: Sam Lawrance <boris@brooknet.com.au>
+# $FreeBSD: palm/synce-libsynce/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	libsynce
 PORTVERSION=	0.14
@@ -41,4 +38,5 @@ MAN7=		synce.7
 
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
