@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-EN-Numbers-Ordinate/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Lingua-EN-Numbers-Ordinate/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		Lingua-EN-Numbers-Ordinate
 PORTVERSION=		1.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Lingua::EN::Numbers::Ordinate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
