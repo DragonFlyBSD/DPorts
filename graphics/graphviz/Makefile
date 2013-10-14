@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: graphics/graphviz/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	graphviz
 PORTVERSION=	2.34.0
@@ -15,6 +15,8 @@ LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		expat:${PORTSDIR}/textproc/expat2 \
 		gd:${PORTSDIR}/${GD_PORT}
+
+NO_STAGE=	yes
 
 USES=		bison gmake pkgconfig
 USE_AUTOTOOLS=	libltdl libtool
