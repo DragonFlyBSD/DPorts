@@ -1,4 +1,4 @@
-# $FreeBSD: astro/kstars/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: astro/kstars/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	kstars
 PORTVERSION=	${KDE4_VERSION}
@@ -20,6 +20,7 @@ RUN_DEPENDS=	xplanet:${PORTSDIR}/astro/xplanet
 
 CONFLICTS=	kdeedu-4.[0-6].*
 
+NO_STAGE=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USES=		cmake:outsource
 USE_QT4=	opengl qmake_build moc_build rcc_build uic_build
