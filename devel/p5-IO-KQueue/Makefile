@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-IO-KQueue/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-IO-KQueue/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	IO-KQueue
 PORTVERSION=	0.34
@@ -11,6 +11,7 @@ COMMENT=	Perl interface to the BSD kqueue system call
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		IO::KQueue.3
 
