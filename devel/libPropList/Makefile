@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libPropList
-# Date Created:				6 December 1998
-# Whom:					Glenn Johnson
-#
-# $FreeBSD: ports/devel/libPropList/Makefile,v 1.30 2012/11/17 05:55:52 svnexp Exp $
-#
+# Created by: Glenn Johnson
+# $FreeBSD: devel/libPropList/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libproplist
 PORTVERSION=	0.10.1
