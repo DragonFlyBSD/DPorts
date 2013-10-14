@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/ocaml-res/Makefile 321121 2013-06-17 15:00:02Z miwi $
+# $FreeBSD: devel/ocaml-res/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	res
 PORTVERSION=	4.0.3
@@ -29,6 +29,7 @@ EXAMPLESDIR=	${OCAML_EXAMPLESDIR}/${PORTNAME}
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
