@@ -1,5 +1,5 @@
-# Created by:	Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Test-Output/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Test-Output/Makefile 329411 2013-10-05 06:05:25Z sunpoet $
 
 PORTNAME=	Test-Output
 PORTVERSION=	1.02
@@ -10,16 +10,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Utilities to test STDOUT and STDERR messages
 
-RUN_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
-BUILD_DEPENDS:=	${RUN_DEPENDS}
-BUILD_DEPENDS+=	p5-Test-Tester>=0.10.7:${PORTSDIR}/devel/p5-Test-Tester
+BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Capture-Tiny>=0.17:${PORTSDIR}/devel/p5-Capture-Tiny \
+		p5-Test-Tester>=0.10.7:${PORTSDIR}/devel/p5-Test-Tester
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Test::Output.3
-
-post-patch:
-	@${REINPLACE_CMD} -e '/File::Temp/d' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
 .include <bsd.port.mk>
