@@ -1,14 +1,14 @@
-# $FreeBSD: ports/ftp/gnustep-ftp/Makefile,v 1.13 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ftp/gnustep-ftp/Makefile 329799 2013-10-08 15:47:49Z theraven $
 
 PORTNAME=	ftp
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	ftp gnustep
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	gap
 PKGNAMEPREFIX=	gnustep-
 DISTNAME=	FTP-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	theraven@FreeBSD.org
 COMMENT=	Compact and handy FTP client for GNUstep
 
 LICENSE=	GPLv2
