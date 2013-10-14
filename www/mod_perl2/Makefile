@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: www/mod_perl2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_perl2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_perl
 PORTVERSION=	2.0.8
@@ -19,8 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 SUB_FILES=	pkg-message
 SUB_LIST=	APACHEMODDIR=${APACHEMODDIR}
 USE_APACHE=	22+
-PERL_CONFIGURE=	yes
-GMAKE=		yes
+USES=		gmake perl5
+USE_PERL5=	configure
 USE_CSTD=	gnu89
 
 MAN3=		APR.3 APR::Base64.3 APR::Brigade.3 APR::Bucket.3 \
@@ -57,6 +57,7 @@ MAN3=		APR.3 APR::Base64.3 APR::Brigade.3 APR::Bucket.3 \
 		ModPerl::Util.3 mod_perl2.3 Apache2::ConnectionUtil.3 \
 		APR::ThreadRWLock.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${APACHE_VERSION} > 22
