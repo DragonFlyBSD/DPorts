@@ -1,9 +1,5 @@
-# New ports collection makefile for:	poslib
-# Date created:		2003-08-03
-# Whom:			Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: devel/poslib/Makefile 312209 2013-02-14 09:42:12Z gahr $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: devel/poslib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	poslib
 PORTVERSION=	1.0.6
@@ -23,6 +19,7 @@ PLIST_SUB=	VERSION="${PORTVERSION}"
 DOCS=		AUTHORS ChangeLog NEWS README TODO
 EXAMPLES=	examples/*.cpp
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
