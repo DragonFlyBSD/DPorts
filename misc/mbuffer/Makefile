@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: misc/mbuffer/Makefile 321549 2013-06-22 07:40:17Z mm $
+# $FreeBSD: misc/mbuffer/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	mbuffer
 PORTVERSION=	2013.02.20
@@ -27,6 +27,7 @@ MHASH_DESC=	Use mhash for hash generation
 
 OPTIONS_DEFAULT=	MHASH
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMHASH}
