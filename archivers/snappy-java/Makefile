@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@filez.com>
-# $FreeBSD: archivers/snappy-java/Makefile 325407 2013-08-26 17:28:28Z bapt $
+# $FreeBSD: archivers/snappy-java/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 # Note to committers:
 # With each version update, a new maven repository must be created and distributed
@@ -31,6 +31,7 @@ GH_TAGNAME=	snappy-java-${PORTVERSION}
 GH_COMMIT=	487f82d
 USE_GITHUB=	yes
 
+NO_STAGE=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.7
 USES=		gmake
