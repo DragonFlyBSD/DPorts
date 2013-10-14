@@ -1,9 +1,5 @@
-# New ports collection makefile for: ultragetopt
-# Date created:        20 Mar 2012
-# Whom:                Timothy Beyer <beyert@cs.ucr.edu>
-#
-# $FreeBSD: ports/devel/ultragetopt/Makefile,v 1.2 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: Timothy Beyer <beyert@cs.ucr.edu>
+# $FreeBSD: devel/ultragetopt/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ultragetopt
 PORTVERSION=	0.6.0
@@ -23,4 +19,5 @@ PLIST_FILES=	include/ultragetopt.h lib/libultragetopt.a \
 		lib/libultragetopt.la lib/libultragetopt.so \
 		lib/libultragetopt.so.0
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
