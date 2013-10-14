@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: finance/R-cran-timeSeries/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: finance/R-cran-timeSeries/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	timeSeries
 PORTVERSION=	3010.97
@@ -18,4 +18,5 @@ RUN_DEPENDS=	R-cran-timeDate>=2150.95:${PORTSDIR}/finance/R-cran-timeDate
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
