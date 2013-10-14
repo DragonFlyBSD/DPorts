@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/archivers/lha/Makefile,v 1.35 2013/01/26 16:56:07 svnexp Exp $
+# $FreeBSD: archivers/lha/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	lha
 PORTVERSION=	1.14i
@@ -12,6 +12,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Archive files using LZSS and Huffman compression (.lzh files)
 
 CONFLICTS=	lha-ac-1*
+NO_STAGE=	yes
 
 MAN1=		lha.1
 MANLANG=	ja
