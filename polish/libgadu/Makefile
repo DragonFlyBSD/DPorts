@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@BSDGuru.org>
-# $FreeBSD: polish/libgadu/Makefile 325970 2013-09-02 10:31:45Z bapt $
+# $FreeBSD: polish/libgadu/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libgadu
 DISTVERSION=	1.11.2
