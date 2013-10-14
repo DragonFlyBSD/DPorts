@@ -1,5 +1,5 @@
 # Created by: Chuck Robey <chuckr@FreeBSD.org>
-# $FreeBSD: graphics/plotutils/Makefile 324754 2013-08-15 07:35:19Z danfe $
+# $FreeBSD: graphics/plotutils/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	plotutils
 PORTVERSION=	2.6
@@ -30,4 +30,5 @@ test: build
 
 regression-test: test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
