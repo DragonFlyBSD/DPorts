@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xmodmap/Makefile 326807 2013-09-09 12:21:54Z zeising $
+# $FreeBSD: x11/xmodmap/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xmodmap
 PORTVERSION=	1.0.8
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xmodmap
 
 MAN1=		xmodmap.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
