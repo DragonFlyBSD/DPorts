@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Clone/Makefile 326432 2013-09-05 18:15:29Z tobez $
+# $FreeBSD: devel/p5-Clone/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Clone
 PORTVERSION=	0.35
@@ -14,6 +14,7 @@ USE_PERL5=	patch configure
 
 MAN3=		Clone.3
 
+NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e 'm.OPTIMIZE.&&s,.,,sg' ${WRKSRC}/Makefile.PL
 
