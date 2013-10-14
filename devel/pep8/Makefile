@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/pep8/Makefile 323232 2013-07-18 13:31:19Z sbz $
+# $FreeBSD: devel/pep8/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pep8
 PORTVERSION=	1.4.6
@@ -22,4 +22,5 @@ regression-test: extract
 	@(cd ${WRKSRC}; ${PYTHON_CMD} ${PORTNAME}.py \
 		--doctest --testsuite=testsuite)
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
