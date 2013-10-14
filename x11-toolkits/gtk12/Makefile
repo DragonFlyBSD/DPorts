@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk12/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: x11-toolkits/gtk12/Makefile 329070 2013-10-02 16:24:19Z kwm $
 #    $MCom: ports/x11-toolkits/gtk12/Makefile,v 1.3 2006/10/09 19:31:53 ahze Exp $
 
 PORTNAME=	gtk
@@ -8,6 +8,7 @@ PORTREVISION=	22
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/1.2
+PKGNAMESUFFIX=	1
 DISTNAME=	gtk+-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -28,6 +29,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 INFO=		gdk gtk
 MAN1=		gtk-config.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
