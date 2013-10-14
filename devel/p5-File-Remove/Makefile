@@ -1,5 +1,5 @@
 # Created by: Justin Stanford <jus@security.za.net>
-# $FreeBSD: devel/p5-File-Remove/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-Remove/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Remove
 PORTVERSION=	1.52
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Remove.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
