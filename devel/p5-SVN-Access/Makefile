@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Access/Makefile 323901 2013-07-29 19:46:32Z glarkin $
+# $FreeBSD: devel/p5-SVN-Access/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Access
 PORTVERSION=	0.09
@@ -15,12 +15,14 @@ BUILD_DEPENDS=	p5-subversion>=0:${PORTSDIR}/devel/p5-subversion \
 RUN_DEPENDS=	p5-subversion>=0:${PORTSDIR}/devel/p5-subversion \
 		p5-Tie-IxHash>=1.21:${PORTSDIR}/devel/p5-Tie-IxHash
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SVN::Access.3 \
 		SVN::Access::Group.3 \
 		SVN::Access::Resource.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
