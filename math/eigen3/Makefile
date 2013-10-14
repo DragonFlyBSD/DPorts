@@ -1,4 +1,4 @@
-# $FreeBSD: math/eigen3/Makefile 323844 2013-07-28 18:14:57Z rakuco $
+# $FreeBSD: math/eigen3/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	eigen
 PORTVERSION=	3.2.0
@@ -18,8 +18,7 @@ USES=		cmake:outsource
 CMAKE_ENV+=	PKG_CONFIG_LIBDIR="${LOCALBASE}/libdata"
 NO_BUILD=	yes
 
-LATEST_LINK=	${PORTNAME}3
-
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-ffa86ffb5570
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
