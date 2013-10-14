@@ -1,5 +1,5 @@
-# Created by: Joerg Wunsch <joerg@freebsd.org>
-# $FreeBSD: devel/avr-binutils/Makefile 325509 2013-08-28 07:07:18Z bapt $
+# Created by: Joerg Wunsch <joerg@FreeBSD.org>
+# $FreeBSD: devel/avr-binutils/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	binutils
 PORTVERSION=	2.20.1
@@ -47,6 +47,7 @@ MAN1=	\
 INFO=		as binutils gprof ld bfd standards configure
 INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
 
+NO_STAGE=	yes
 add-plist-post:
 	@${ECHO_CMD} "@unexec rm %D/${INFO_PATH}/dir 2> /dev/null || true" >> ${TMPPLIST}
 	@${ECHO_CMD} "@unexec rmdir %D/${INFO_PATH} 2> /dev/null || true" >> ${TMPPLIST}
