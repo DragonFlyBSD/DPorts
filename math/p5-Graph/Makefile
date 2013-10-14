@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: math/p5-Graph/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Graph/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Graph
 PORTVERSION=	0.96
@@ -35,4 +35,5 @@ MAN3=		Graph.3 \
 		Heap071::Elem.3 \
 		Heap071::Fibonacci.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
