@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: comms/p5-Nexmo-SMS/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: comms/p5-Nexmo-SMS/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	Nexmo-SMS
 PORTVERSION=	0.06
@@ -31,4 +31,5 @@ MAN3=		Nexmo::SMS.3 \
 		Nexmo::SMS::TextMessage.3 \
 		Nexmo::SMS::WAPPushMessage.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
