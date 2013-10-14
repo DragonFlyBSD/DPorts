@@ -1,6 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: textproc/py-pygments/Makefile 322463 2013-07-07 22:46:13Z nivit $
-#
+# $FreeBSD: textproc/py-pygments/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pygments
 PORTVERSION=	1.6
@@ -25,6 +24,7 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 MAN1=	pygmentize.1
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
