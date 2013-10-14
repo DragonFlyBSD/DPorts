@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-SSH2/Makefile 326001 2013-09-02 14:36:22Z jadawin $
+# $FreeBSD: net/p5-Net-SSH2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SSH2
 PORTVERSION=	0.53
@@ -23,4 +23,5 @@ MAN3=		Net::SSH2.3 Net::SSH2::Channel.3 \
 		Net::SSH2::Listener.3 Net::SSH2::PublicKey.3 \
 		Net::SSH2::SFTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
