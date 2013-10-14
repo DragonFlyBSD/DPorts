@@ -1,9 +1,5 @@
-# New ports collection makefile for:	raptor
-# Date created:			Nov 22, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: textproc/raptor/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/raptor/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	raptor
 PORTVERSION=	1.4.21
@@ -30,6 +26,7 @@ USE_LDCONFIG=	yes
 MAN1=		raptor-config.1
 MAN3=		libraptor.3
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's|utils ||' \
 		${WRKSRC}/Makefile.in
