@@ -1,6 +1,5 @@
 # Created by: Sverrir Valgeirsson <e96sv@yahoo.se> and 
-#             Amar Takhar <verm@drunkmonk.net> et al
-# $FreeBSD: net-p2p/dclib/Makefile 326642 2013-09-07 15:45:23Z gahr $
+# $FreeBSD: net-p2p/dclib/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	dclib
 PORTVERSION=	0.3.23
@@ -22,6 +21,7 @@ USE_GNOME=	libxml2
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 1000015
