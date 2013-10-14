@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/sdl12/Makefile 325547 2013-08-28 18:29:38Z itetcu $
+# $FreeBSD: devel/sdl12/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	sdl
 PORTVERSION=	1.2.15
@@ -42,6 +42,7 @@ VGL_DESC=		Video Graphics Lib support
 OPTIONS_DEFAULT+=	VGL
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAN3!=		${CAT} ${FILESDIR}/man3
@@ -111,7 +112,6 @@ DISPLAY_MSG=		${DO_NADA}
 .if ${PORT_OPTIONS:MX11}
 USE_XORG=		x11 xrender xrandr xextproto
 .else
-PKGNAMESUFFIX=		-nox11
 CONFIGURE_ARGS+=	--disable-video-x11
 .endif
 
