@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-xts/Makefile 325759 2013-08-31 01:09:44Z tota $
+# $FreeBSD: math/R-cran-xts/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	xts
 DISTVERSION=	0.9-7
@@ -17,4 +17,5 @@ RUN_DEPENDS=	R-cran-zoo>=1.7.10:${PORTSDIR}/math/R-cran-zoo
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
