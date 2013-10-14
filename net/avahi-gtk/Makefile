@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-gtk/Makefile 323218 2013-07-18 10:29:51Z kwm $
+# $FreeBSD: net/avahi-gtk/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/avahi-gtk/Makefile,v 1.9 2012/07/09 18:22:19 kwm Exp $
 
 PORTREVISION=	1
@@ -26,6 +26,7 @@ MLINKS+=	bssh.1 bvnc.1 \
 		bssh.1 bshell.1
 USE_GNOME+=	libglade2
 
+NO_STAGE=	yes
 post-build:
 	@(cd ${WRKSRC}/avahi-discover-standalone; \
 		${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
