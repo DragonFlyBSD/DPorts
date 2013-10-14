@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: ports/devel/py-decorator/Makefile,v 1.12 2013/01/13 20:50:17 svnexp Exp $
+# $FreeBSD: devel/py-decorator/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	decorator
 PORTVERSION=	3.4.0
@@ -15,4 +15,5 @@ LICENSE=	BSD
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
