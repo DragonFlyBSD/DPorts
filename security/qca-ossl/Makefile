@@ -1,8 +1,5 @@
-# New ports collection makefile for:	qca-ossl
-# Date created:				2008-07-13
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/security/qca-ossl/Makefile,v 1.8 2012/11/17 06:01:18 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: security/qca-ossl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	qca-ossl
 DISTVERSION=	2.0.0-beta3
@@ -33,6 +30,7 @@ CONFIGURE_ARGS+=--debug
 PLIST_SUB+=	DEBUG=""
 .endif
 
+NO_STAGE=	yes
 post-install:
 	${STRIP_CMD} ${PREFIX}/${QT_PLUGINDIR_REL}/crypto/libqca-ossl.so
 
