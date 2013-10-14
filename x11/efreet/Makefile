@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/efreet/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: x11/efreet/Makefile 329514 2013-10-05 22:03:36Z gblach $
 
 PORTNAME=	efreet
 PORTVERSION=	1.7.8
