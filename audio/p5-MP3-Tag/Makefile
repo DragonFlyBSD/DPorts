@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: audio/p5-MP3-Tag/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/p5-MP3-Tag/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	MP3-Tag
 PORTVERSION=	1.13
@@ -11,6 +11,7 @@ MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Module for reading tags of MP3 audio files
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN1=		audio_rename.1 typeset_audio_dir.1 mp3info2.1
