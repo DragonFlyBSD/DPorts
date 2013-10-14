@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/py-kid/pkg-plist,v 1.8 2012/11/17 05:56:48 svnexp Exp $
+@comment $FreeBSD: devel/py-kid/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/kid
 bin/kidc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO

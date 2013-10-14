@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-kid
-# Date created:		2005-11-02
-# Whom:			Choe, Cheng-Dae
-#
-# $FreeBSD: ports/devel/py-kid/Makefile,v 1.13 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: Choe, Cheng-Dae
+# $FreeBSD: devel/py-kid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kid
 PORTVERSION=	0.9.6
@@ -24,6 +20,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
