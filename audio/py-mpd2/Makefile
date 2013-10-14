@@ -1,5 +1,5 @@
 # Created by: rene@FreeBSD.org (repocopied from audio/py-mpd)
-# $FreeBSD: audio/py-mpd2/Makefile 315214 2013-03-25 10:39:51Z rene $
+# $FreeBSD: audio/py-mpd2/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpd2
 PORTVERSION=	0.5.1
@@ -11,6 +11,7 @@ MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Fork of the Python MPD client library
 
 USE_GITHUB=	yes
+NO_STAGE=	yes
 GH_ACCOUNT=	Mic92
 GH_PROJECT=	python-${PORTNAME}
 GH_TAGNAME=	v${PORTVERSION}
