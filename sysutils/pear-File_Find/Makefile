@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: sysutils/pear-File_Find/Makefile 313226 2013-03-02 11:53:19Z miwi $
+# $FreeBSD: sysutils/pear-File_Find/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	File_Find
 PORTVERSION=	1.3.1
@@ -13,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
