@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-jsmin/Makefile 320411 2013-06-09 21:38:59Z swills $
+# $FreeBSD: textproc/rubygem-jsmin/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jsmin
 PORTVERSION=	1.0.1
@@ -13,4 +13,5 @@ USE_PYTHON=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
