@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: graphics/silgraphite/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/silgraphite/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	silgraphite
 PORTVERSION=	2.3.1
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-xft --without-pangographite
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFREETYPE}
