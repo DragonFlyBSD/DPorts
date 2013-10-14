@@ -1,5 +1,5 @@
 # Created by: Adam David <adam@FreeBSD.org>
-# $FreeBSD: mail/procmail/Makefile 325339 2013-08-25 12:19:29Z danfe $
+# $FreeBSD: mail/procmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	procmail
 PORTVERSION=	3.22
@@ -28,6 +28,7 @@ PORTEXAMPLES=	1procmailrc 1rmail 2procmailrc 2rmail 3procmailrc 3rmail \
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
