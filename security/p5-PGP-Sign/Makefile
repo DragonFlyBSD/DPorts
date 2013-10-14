@@ -1,9 +1,5 @@
-# New ports collection makefile for: p5-PGP-Sign
-# Date created:		January 2, 1998
-# Whom:			Don Croyle <croyle@gelemna.org>
-#
-# $FreeBSD: security/p5-PGP-Sign/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Don Croyle <croyle@gelemna.org>
+# $FreeBSD: security/p5-PGP-Sign/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	PGP-Sign
 PORTVERSION=	0.20
@@ -25,6 +21,7 @@ MAN3=		PGP::Sign.3
 # the values that this process assigns to PGP (or PGPV and PGPS) and
 # PGPSTYLE, they can be predefined.
 #
+NO_STAGE=	yes
 # Currently useful values for DEFAULTPGP are:
 # PGP2 - PGP 2.6.* or a reasonable facsimile thereof
 # PGP5 - PGP 5 or a work-alike
