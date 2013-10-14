@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	rlwrap
-# Date created:			Aug 12, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/rlwrap/Makefile,v 1.34 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/rlwrap/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rlwrap
 PORTVERSION=	0.37
@@ -27,6 +22,7 @@ PORTDOCS=	AUTHORS BUGS NEWS PLEA README TODO
 post-patch:	.SILENT
 	${REINPLACE_CMD} 's|/dev/ptmx|${NONEXISTENT}|' ${WRKSRC}/configure
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
