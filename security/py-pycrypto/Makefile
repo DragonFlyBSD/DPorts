@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: security/py-pycrypto/Makefile 316139 2013-04-20 11:31:42Z koobs $
+# $FreeBSD: security/py-pycrypto/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pycrypto
 PORTVERSION=	2.6
@@ -24,6 +24,7 @@ GMP_DESC=	Use GMP for faster DSA/RSA operations
 
 OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGMP}
