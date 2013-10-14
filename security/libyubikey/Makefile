@@ -1,4 +1,4 @@
-# $FreeBSD: security/libyubikey/Makefile 314693 2013-03-19 20:36:34Z pawel $
+# $FreeBSD: security/libyubikey/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libyubikey
 PORTVERSION=	1.10
