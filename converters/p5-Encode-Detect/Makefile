@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: converters/p5-Encode-Detect/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Encode-Detect/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Encode-Detect
 PORTVERSION=	1.01
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Encode::Detect.3 Encode::Detect::Detector.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
