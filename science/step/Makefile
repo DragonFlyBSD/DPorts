@@ -1,4 +1,4 @@
-# $FreeBSD: science/step/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: science/step/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	step
 PORTVERSION=	${KDE4_VERSION}
@@ -23,6 +23,7 @@ USES=		cmake:outsource
 USE_QT4=	opengl moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 
+NO_STAGE=	yes
 pre-configure:
 	# Avoid building translations, should the user pass
 	# CURRENT_LANG to CMake.
