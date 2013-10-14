@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: graphics/icon-slicer/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/icon-slicer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	icon-slicer
 PORTVERSION=	0.3
@@ -24,6 +24,7 @@ PLIST_FILES=	bin/icon-slicer
 
 PORTDOCS=	AUTHORS ChangeLog README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
