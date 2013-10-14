@@ -1,5 +1,5 @@
 # Created by: Marc Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: converters/p5-Convert-ASN1/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Convert-ASN1/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Convert-ASN1
 PORTVERSION=	0.26
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Convert::ASN1.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
