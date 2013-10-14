@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/nspr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/nspr/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	nspr
 DISTVERSION=	4.10
@@ -22,6 +22,7 @@ MAKE_ENV=	DIST=${WRKSRC}/dist
 
 LIBS=		libnspr4.so.1 libplc4.so.1 libplds4.so.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "arm"
