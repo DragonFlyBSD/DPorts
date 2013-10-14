@@ -1,5 +1,5 @@
-# Whom:	Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-rake/Makefile 319595 2013-06-01 21:23:29Z swills $
+# Created by: Jonathan Weiss (<jw@innerewut.de>)
+# $FreeBSD: devel/rubygem-rake/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rake
 PORTVERSION=	10.0.4
@@ -16,6 +16,7 @@ RUBYGEM_AUTOPLIST=	yes
 MANCOMPRESSED=	yes
 MAN1=		rake.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 PLIST_FILES=	bin/rake
 
