@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/agrep/files/patch-follow.c,v 1.2 2012/11/17 06:01:51 svnexp Exp $
+$FreeBSD: textproc/agrep/files/patch-follow.c 300897 2012-07-14 14:29:18Z beat $
 
 --- follow.c.orig	Fri Jan 17 20:14:42 1992
 +++ follow.c	Sun Jul 21 03:50:47 2002

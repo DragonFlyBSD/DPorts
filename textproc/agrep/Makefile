@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: ports/textproc/agrep/Makefile,v 1.19 2013/01/26 16:56:13 svnexp Exp $
+# $FreeBSD: textproc/agrep/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	agrep
 PORTVERSION=	2.04
@@ -14,6 +14,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Approximate grep (fast approximate pattern-matching tool)
 
 NO_CDROM=	no redistribution for profit
+NO_STAGE=	yes
 
 ALL_TARGET=
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
