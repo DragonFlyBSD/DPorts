@@ -1,9 +1,5 @@
-# New ports collection makefile for:	The Netwide Assembler
-# Date created:				7 April 1998
-# Whom:					Murray Stokely <murray@cdrom.com>
-#
-# $FreeBSD: ports/devel/nasm/Makefile,v 1.47 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: Murray Stokely <murray@cdrom.com>
+# $FreeBSD: devel/nasm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	nasm
 PORTVERSION=	2.10.03
@@ -26,6 +22,7 @@ MAN1=		ldrdf.1 nasm.1 ndisasm.1 rdf2bin.1 rdf2com.1 rdf2ihx.1 \
 		rdf2ith.1 rdf2srec.1 rdfdump.1 rdflib.1 rdx.1
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
