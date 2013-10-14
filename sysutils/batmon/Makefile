@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/batmon/Makefile,v 1.16 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: sysutils/batmon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	batmon
 PORTVERSION=	0.6
@@ -16,6 +16,7 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
 		${WRKSRC}/GNUmakefile
