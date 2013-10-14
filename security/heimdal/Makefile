@@ -1,5 +1,5 @@
-# Created by: nectar@FreeBSD.ORG
-# $FreeBSD: security/heimdal/Makefile 325745 2013-08-31 00:11:06Z bapt $
+# Created by: nectar@FreeBSD.org
+# $FreeBSD: security/heimdal/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	heimdal
 PORTVERSION=	1.5.2
@@ -43,6 +43,7 @@ MAKE_ENV+=	INSTALL_CATPAGES=no
 INFO=		heimdal hx509
 PLIST=		${WRKDIR}/PLIST
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64"
