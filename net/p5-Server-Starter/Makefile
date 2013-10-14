@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Server-Starter/Makefile 324526 2013-08-10 14:22:49Z kuriyama $
+# $FreeBSD: net/p5-Server-Starter/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Server-Starter
 PORTVERSION=	0.15
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 MAN1=	start_server.1
 MAN3=	Server::Starter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
