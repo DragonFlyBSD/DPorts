@@ -1,5 +1,5 @@
 # Created by: chuck@pkix.net
-# $FreeBSD: sysutils/dvd+rw-tools/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/dvd+rw-tools/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dvd+rw-tools
 PORTVERSION=	7.1
@@ -26,6 +26,7 @@ BIN_FILES=	growisofs dvd+rw-format dvd+rw-booktype dvd+rw-mediainfo dvd-ram-cont
 PLIST_FILES=	${BIN_FILES:S|^|bin/|}
 PORTDOCS=	index.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
