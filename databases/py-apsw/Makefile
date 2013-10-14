@@ -1,5 +1,5 @@
 # Created by: Rusty Nejdl
-# $FreeBSD: databases/py-apsw/Makefile 327055 2013-09-12 11:44:05Z madpilot $
+# $FreeBSD: databases/py-apsw/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	apsw
 PORTVERSION=	3.8.0.2
@@ -21,4 +21,5 @@ USE_ZIP=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
