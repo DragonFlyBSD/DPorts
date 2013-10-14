@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Pod-Spell/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: textproc/p5-Pod-Spell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Spell
 PORTVERSION=	1.05
@@ -19,4 +19,5 @@ MAN1=	podspell.1
 MAN3=	Pod::Spell.3 \
 	Pod::Wordlist.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
