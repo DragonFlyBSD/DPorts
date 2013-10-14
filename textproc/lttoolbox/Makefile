@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <freebsd@levsha.org.ua>
-# $FreeBSD: textproc/lttoolbox/Makefile 325739 2013-08-30 23:52:24Z bapt $
+# $FreeBSD: textproc/lttoolbox/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	lttoolbox
 PORTVERSION=	${APVER}.${APREV}
@@ -22,4 +22,5 @@ USES=		pathfix pkgconfig
 PLIST_SUB+=	APVER="${APVER}"
 MAN1=	lt-comp.1 lt-expand.1 lt-proc.1 lt-tmxcomp.1 lt-tmxproc.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
