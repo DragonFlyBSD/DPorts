@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: graphics/inkscape/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: graphics/inkscape/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	inkscape
 PORTVERSION=	0.48.4
@@ -41,6 +41,7 @@ OPTIONS_DEFAULT=POPPLER
 POPPLER_DESC=	PDF preview rendering
 GNOMEVFS_DESC=	Use gnomevfs for loading files
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOMEVFS}
