@@ -1,5 +1,5 @@
 # Created by: Mathias Monnerville <mathias@monnerville.com>
-# $FreeBSD: www/glpi/Makefile 317577 2013-05-07 06:51:54Z culot $
+# $FreeBSD: www/glpi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	glpi
 PORTVERSION=	0.83.8
@@ -24,6 +24,7 @@ GLPIDIR?=	www/${PORTNAME}
 OPTIONS_DEFINE=	LDAP IMAP
 IMAP_DESC=	IMAP support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
