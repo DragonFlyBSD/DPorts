@@ -1,4 +1,4 @@
-# $FreeBSD: devel/lua-lgi/Makefile 324297 2013-08-06 01:01:30Z mandree $
+# $FreeBSD: devel/lua-lgi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lgi
 PORTVERSION=	0.7.1
@@ -22,4 +22,5 @@ USE_GMAKE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include/${LUA_SUBDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
