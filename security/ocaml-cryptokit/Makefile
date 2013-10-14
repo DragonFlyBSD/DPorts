@@ -1,6 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: security/ocaml-cryptokit/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: security/ocaml-cryptokit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cryptokit
 PORTVERSION=	1.6
@@ -20,6 +19,7 @@ USE_OCAMLFIND_PLIST=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
