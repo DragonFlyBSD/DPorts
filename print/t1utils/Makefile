@@ -1,9 +1,5 @@
-# New ports collection makefile for:   t1utils
-# Date created:        2 September 1999
-# Whom:                Mike Meyer <mwm@mired.org>
-#
-# $FreeBSD: ports/print/t1utils/Makefile,v 1.13 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: Mike Meyer <mwm@mired.org>
+# $FreeBSD: print/t1utils/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	t1utils
 PORTVERSION=	1.32
@@ -17,4 +13,5 @@ MAN1=		t1ascii.1 t1binary.1 t1asm.1 t1disasm.1 t1unmac.1 t1mac.1
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
