@@ -1,12 +1,5 @@
-# New ports collection makefile for:	docbook-420
-# Date created:		29 Oct 2003
-# Whom:			kutulu
-#
-# Based on murray's docbook-410 port
-#     which is based on niks' docbook-310 port
-#
-# $FreeBSD: ports/textproc/docbook-420/Makefile,v 1.6 2012/11/17 06:01:54 svnexp Exp $
-#
+# Created by: kutulu
+# $FreeBSD: textproc/docbook-420/Makefile 328943 2013-10-01 12:35:34Z crees $
 
 PORTNAME=	docbook
 PORTVERSION=	4.2
@@ -37,11 +30,12 @@ CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
 LATEST_LINK=	docbook-420
 
+NO_STAGE=	yes
 pre-su-install:
 	@[ -d ${INSTDIR}/${PORTVERSION} ] || ${MKDIR} ${INSTDIR}/${PORTVERSION}
 
 do-install:
-	@${UNZIP_CMD} ${EXTRACT_BEFORE_ARGS} ${DISTDIR}/${DISTFILES} -d ${INSTDIR}/${PORTVERSION}
+	@unzip ${EXTRACT_BEFORE_ARGS} ${DISTDIR}/${DISTFILES} -d ${INSTDIR}/${PORTVERSION}
 	@${INSTALL_DATA} ${FILESDIR}/catalog ${INSTDIR}/${PORTVERSION}/catalog
 	@${ECHO_CMD} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/${PORTVERSION}/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/${PORTVERSION}/*
