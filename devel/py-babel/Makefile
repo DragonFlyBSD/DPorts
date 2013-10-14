@@ -1,5 +1,5 @@
 # Created by: Dryice Liu<dryice@dryice.name>
-# $FreeBSD: devel/py-babel/Makefile 325762 2013-08-31 01:18:12Z dryice $
+# $FreeBSD: devel/py-babel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Babel
 PORTVERSION=	1.3
@@ -18,6 +18,7 @@ USE_PYDISTUTILS=	easy_install
 
 PORTDOCS=	docs/*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
