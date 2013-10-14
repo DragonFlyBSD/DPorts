@@ -1,4 +1,4 @@
-# $FreeBSD: security/shishi/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/shishi/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	shishi
 PORTVERSION=	1.0.2
@@ -15,8 +15,8 @@ LIB_DEPENDS=	idn:${PORTSDIR}/dns/libidn \
 		gnutls:${PORTSDIR}/security/gnutls
 
 USE_AUTOTOOLS=	libtool
-USE_PERL5_BUILD=	yes
-USES=		pathfix pkgconfig iconv
+USE_PERL5=	build
+USES=		pathfix pkgconfig iconv perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 CONFIGURE_ARGS=	--with-db-dir=/var/shishi
@@ -29,6 +29,7 @@ SUB_FILES=	pkg-message
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include "Makefile.man"
 .include <bsd.port.options.mk>
 
