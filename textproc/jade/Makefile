@@ -1,5 +1,5 @@
 # Created by: jfieber
-# $FreeBSD: textproc/jade/Makefile 327156 2013-09-13 15:06:48Z bapt $
+# $FreeBSD: textproc/jade/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jade
 PORTVERSION=	1.2.1
@@ -32,6 +32,7 @@ MAKE_JOBS_UNSAFE=	yes
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 XMLCATMGR=	${LOCALBASE}/bin/xmlcatmgr
 
+NO_STAGE=	yes
 post-extract:
 	@${CHMOD} u+w ${WRKSRC}/configure
 
