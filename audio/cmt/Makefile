@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/cmt/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/cmt/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cmt
 PORTVERSION=	1.16
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 BUILD_WRKSRC=	${WRKDIR}/${PORTNAME}/src
 
 USES=		gmake
+NO_STAGE=	yes
 MAKEFILE=	makefile
 MAKE_ARGS=	CXX="${CXX}" \
 		CXXFLAGS="${CXXFLAGS} -fPIC -I${LOCALBASE}/include"
