@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/epydoc/Makefile 319793 2013-06-03 16:37:29Z rene $
+# $FreeBSD: devel/epydoc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	epydoc
 PORTVERSION=	3.0.1
@@ -15,6 +15,7 @@ OPTIONS_DEFINE=	DOCS UTF8
 
 UTF8_DESC=	Use UTF-8 instead of iso-8859-1 in HTMLs
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_PYTHON=	yes
