@@ -1,5 +1,5 @@
 # Created by: Aaron Hurt <ahurt@anbcs.com>
-# $FreeBSD: devel/protobuf-c/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/protobuf-c/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	protobuf-c
 PORTVERSION=	0.15
@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|GREP "\\-L"|GREP "bin/ld"|g' ${WRKSRC}/configure
 
