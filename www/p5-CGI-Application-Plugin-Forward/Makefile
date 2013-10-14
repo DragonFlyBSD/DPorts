@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Forward/Makefile 326042 2013-09-02 17:29:36Z az $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Forward/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-Forward
 PORTVERSION=	1.06
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::Forward.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
