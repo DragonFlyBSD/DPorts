@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/appwrapper/Makefile,v 1.11 2012/11/17 05:55:26 svnexp Exp $
+# $FreeBSD: deskutils/appwrapper/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	appwrapper
 PORTVERSION=	0.1
@@ -19,6 +19,7 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/AppWrapper
 
+NO_STAGE=	yes
 post-patch:
 	${RMDIR} ${WRKSRC}/AppWrapper.app/ix86/linux-gnu
 	${RMDIR} ${WRKSRC}/AppWrapper.app/ix86
