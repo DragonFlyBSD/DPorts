@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: net/desktop-data-model/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: net/desktop-data-model/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	desktop-data-model
 PORTVERSION=	1.2.4
@@ -28,6 +28,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-maemo=no
 USE_XORG=	xscrnsaver
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e s,%%LOCALBASE%%,${LOCALBASE}, ${WRKSRC}/Makefile.in
 
