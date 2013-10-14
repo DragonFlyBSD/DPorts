@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: www/xsp/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/xsp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xsp
 PORTVERSION=	2.10.2
@@ -25,6 +25,7 @@ MAN1=		asp-state.1 dbsessmgr.1 mod-mono-server.1 xsp.1 \
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 pre-su-install:
 	${MKDIR} ${XSP_DOCROOT}
 
