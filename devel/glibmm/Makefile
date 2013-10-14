@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: devel/glibmm/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: devel/glibmm/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/trunk/devel/glibmm/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	glibmm
@@ -27,6 +27,7 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static --disable-documentation
 
+NO_STAGE=	yes
 post-patch:
 .for d in docs examples tests
 	@${REINPLACE_CMD} -e '/^SUBDIRS = /s/${d}//' ${WRKSRC}/Makefile.in
