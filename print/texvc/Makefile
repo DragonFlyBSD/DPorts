@@ -1,9 +1,4 @@
-# New ports collection makefile for:	texvc
-# Date created:		2008-06-14
-# Whom:			Max Brazhnikov <makc@issp.ac.ru>
-#
-# $FreeBSD: print/texvc/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# $FreeBSD: print/texvc/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	texvc
 PORTVERSION=	20050202
@@ -26,6 +21,7 @@ OPTIONS_DEFINE=	RASTER
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 RASTER_DESC=	rasterization support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRASTER}
