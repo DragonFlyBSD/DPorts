@@ -1,8 +1,5 @@
-# New ports collection makefile for:	tvdb api
-# Date created:		Sun Jul 24 20:23:58 UTC 2011
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-tvdb_api/Makefile,v 1.3 2012/11/17 06:03:02 svnexp Exp $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: www/py-tvdb_api/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tvdb_api
 PORTVERSION=	1.6.2
@@ -20,4 +17,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
