@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-directory-tree/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-directory-tree/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	directory-tree
 PORTVERSION=	0.11.0
@@ -10,5 +10,6 @@ COMMENT=	Simple directory-like tree datatype, with useful IO functions
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
