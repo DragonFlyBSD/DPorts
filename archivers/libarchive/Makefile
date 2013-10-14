@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/libarchive/Makefile 315047 2013-03-23 17:09:43Z glewis $
+# $FreeBSD: archivers/libarchive/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	libarchive
 PORTVERSION=	3.1.2
@@ -16,6 +16,7 @@ LIBXML2_DESC=	Support writing xar via libxml2
 LZO_DESC=	Support lzo compression via liblzo2
 NETTLE_DESC=	Use Nettle instead of OpenSSL
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack
