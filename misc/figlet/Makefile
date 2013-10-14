@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: misc/figlet/Makefile 324092 2013-08-01 06:36:46Z bapt $
+# $FreeBSD: misc/figlet/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	figlet
 PORTVERSION=	2.2.5
@@ -19,6 +19,7 @@ MAKE_ARGS=	LD=${CC}
 
 MAN6=		chkfont.6 figlet.6 figlist.6 showfigfonts.6
 
+NO_STAGE=	yes
 regression-test:
 	@ cd ${WRKSRC} && ${MAKE} check
 
