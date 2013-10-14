@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-mimeparse
-# Date created:				08 May 2012
-# Whom:					William Grzybowski
-#
-# $FreeBSD: devel/py-mimeparse/Makefile 318257 2013-05-15 19:33:14Z wg $
-#
+# Created by: William Grzybowski
+# $FreeBSD: devel/py-mimeparse/Makefile 328313 2013-09-25 20:19:42Z wg $
 
 PORTNAME=	mimeparse
 PORTVERSION=	0.1.3
@@ -14,9 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Basic functions for handling mime-types in Python
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-
-PLIST_SUB=	VERSION=${PORTVERSION} PYVER=${PYTHON_VERSION:S/python//}
 
 .include <bsd.port.mk>
