@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: www/p5-URI-Escape-XS/Makefile 326161 2013-09-03 15:28:40Z az $
+# $FreeBSD: www/p5-URI-Escape-XS/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	URI-Escape-XS
 PORTVERSION=	0.10
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	URI::Escape::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
