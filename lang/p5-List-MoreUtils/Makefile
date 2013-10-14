@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lang/p5-List-MoreUtils
-# Date created:				24 March 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: lang/p5-List-MoreUtils/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: lang/p5-List-MoreUtils/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	List-MoreUtils
 DISTVERSION=	0.33
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	List::MoreUtils.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
