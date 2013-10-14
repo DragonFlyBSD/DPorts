@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/frei0r/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/frei0r/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	frei0r
 PORTVERSION=	1.3
