@@ -1,5 +1,5 @@
 # Created by: pauls@utdallas.edu
-# $FreeBSD: ports/math/p5-Parse-Range/Makefile,v 1.1 2012/11/26 09:38:52 svnexp Exp $
+# $FreeBSD: math/p5-Parse-Range/Makefile 329624 2013-10-06 18:54:13Z sunpoet $
 
 PORTNAME=	Parse-Range
 PORTVERSION=	0.96
@@ -14,16 +14,13 @@ COMMENT=	Parses range definitions and returns an array
 LICENSE=	ART10 BSD
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Module-Build>=0.4:${PORTSDIR}/devel/p5-Module-Build \
-		p5-ExtUtils-MakeMaker>=6.6:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker \
-		p5-List-MoreUtils>=0.3:${PORTSDIR}/lang/p5-List-MoreUtils
-
+BUILD_DEPENDS=	p5-List-MoreUtils>=0.22:${PORTSDIR}/lang/p5-List-MoreUtils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Parse::Range.3
 
-.include <bsd.port.pre.mk>
-
-.include <bsd.port.post.mk>
+NO_STAGE=	yes
+.include <bsd.port.mk>
