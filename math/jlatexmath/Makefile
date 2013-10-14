@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: ports/math/jlatexmath/Makefile,v 1.11 2012/12/13 08:06:53 svnexp Exp $
+# $FreeBSD: math/jlatexmath/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	jlatexmath
 PORTVERSION=	0.9.7
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	FOP EXAMPLES
 OPTIONS_DEFAULT=	FOP
 FOP_DESC=	textproc/fop plugin (required for math/scilab)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFOP}
