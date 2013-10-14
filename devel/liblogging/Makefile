@@ -1,9 +1,5 @@
-# New ports collection makefile for:	liblogging
-# Date created:		9 July 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/liblogging/Makefile,v 1.4 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: devel/liblogging/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	liblogging
 PORTVERSION=	0.7.1
