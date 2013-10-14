@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Geo-Coordinates-Converter/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: science/p5-Geo-Coordinates-Converter/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Geo-Coordinates-Converter
 PORTVERSION=	0.13
@@ -30,4 +30,5 @@ MAN3=		Geo::Coordinates::Converter::Datum.3 \
 		Geo::Coordinates::Converter::Format.3 \
 		Geo::Coordinates::Converter::Format::ISO6709.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
