@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Unicode-MapUTF8
-# Date created:				28 February 2002
-# Whom:					Ryan T. Dean <rtdean@cytherianage.net>
-#
-# $FreeBSD: converters/p5-Unicode-MapUTF8/Makefile 324171 2013-08-02 18:21:05Z az $
+# Created by: Ryan T. Dean <rtdean@cytherianage.net>
+# $FreeBSD: converters/p5-Unicode-MapUTF8/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-MapUTF8
 PORTVERSION=	1.11
@@ -24,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Unicode::MapUTF8.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
