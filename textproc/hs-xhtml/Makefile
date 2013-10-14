@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-xhtml/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-xhtml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xhtml
 PORTVERSION=	3000.2.1
@@ -10,5 +10,6 @@ COMMENT=	XHTML combinator library
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
