@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/liboop/Makefile 315360 2013-03-27 08:57:02Z wen $
+# $FreeBSD: devel/liboop/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	liboop
 PORTVERSION=	1.0
@@ -26,6 +26,7 @@ MAKE_JOBS_UNSAFE=yes
 CPPFLAGS+=	-I${TCL_INCLUDEDIR} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|8\.4|${TCL_VER:S/.//}|g' ${WRKSRC}/configure
 
