@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/libshhmsg/Makefile 318989 2013-05-24 16:09:26Z bapt $
+# $FreeBSD: devel/libshhmsg/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libshhmsg
 PORTVERSION=	1.4.1
@@ -14,6 +14,7 @@ MAKEFILE=	${FILESDIR}/Makefile.lib
 USE_LDCONFIG=	yes
 MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
