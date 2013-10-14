@@ -1,4 +1,4 @@
-# $FreeBSD: devel/qjson/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/qjson/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qjson
 PORTVERSION=	0.8.1
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
