@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: misc/p5-Software-License/Makefile 324054 2013-07-31 14:36:21Z az $
+# $FreeBSD: misc/p5-Software-License/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Software-License
 PORTVERSION=	0.103005
@@ -56,4 +56,5 @@ MAN3=		Software::License.3 \
 		Software::License::Zlib.3 \
 		Software::LicenseUtils.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
