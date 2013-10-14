@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: x11/hs-X11/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11/hs-X11/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	X11
 PORTVERSION=	1.6.1.1
@@ -19,6 +19,7 @@ OPTIONS_DEFAULT=	XINERAMA
 
 XINERAMA_DESC=	Build with Xinerama support
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MXINERAMA}
