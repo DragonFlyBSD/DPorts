@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@FreeBSD.org>)
-# $FreeBSD: sysutils/pear-Cache/Makefile 314397 2013-03-17 05:53:53Z miwi $
+# $FreeBSD: sysutils/pear-Cache/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Cache
 PORTVERSION=	1.5.6
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/HTTP/Request.php:${PORTSDIR}/www/pear-HTTP_Request
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
