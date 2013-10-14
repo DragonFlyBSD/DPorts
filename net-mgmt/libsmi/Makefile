@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@system.pl>
-# $FreeBSD: net-mgmt/libsmi/Makefile 325747 2013-08-31 00:15:18Z bapt $
+# $FreeBSD: net-mgmt/libsmi/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	libsmi
 PORTVERSION=	0.4.8
@@ -25,4 +25,5 @@ MAN3=	libsmi.3 smi_attribute.3 smi_class.3 smi_config.3 smi_event.3 \
 	smi_identity.3 smi_module.3 smi_macro.3 smi_node.3 smi_type.3 \
 	smi_render.3 smi_util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
