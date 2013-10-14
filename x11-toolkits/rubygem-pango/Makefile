@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/rubygem-pango/Makefile 320378 2013-06-09 18:44:25Z swills $
+# $FreeBSD: x11-toolkits/rubygem-pango/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	pango
 PORTVERSION=	2.0.2
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
