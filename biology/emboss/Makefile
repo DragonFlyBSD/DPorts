@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/emboss/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: biology/emboss/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	emboss
 PORTVERSION=	6.2.0
@@ -47,6 +47,7 @@ CONFIGURE_ARGS+= --without-x
 DOC_DIRS=	doc/manuals doc/tutorials doc/programs/text doc/programs/html
 CONFIG_FILE=	${WRKSRC}/emboss/emboss.default.template
 
+NO_STAGE=	yes
 pre-install:
 	@ ${REINPLACE_CMD} -e 's#%%DATADIR%%#${DATADIR}#' ${CONFIG_FILE}
 
