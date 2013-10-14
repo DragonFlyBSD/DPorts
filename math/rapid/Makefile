@@ -1,12 +1,5 @@
-############################################################################
-# New ports collection Makefile for:   RAPID
-# Date created:        18 July 2006
-# Whom:                Jason W. Bacon <jwbacon@tds.net>
-#
-# $FreeBSD: ports/math/rapid/Makefile,v 1.5 2012/11/17 05:59:30 svnexp Exp $
-#
-#
-############################################################################
+# Created by: Jason W. Bacon <jwbacon@tds.net>
+# $FreeBSD: math/rapid/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	rapid
 PORTVERSION=	2.01
@@ -28,6 +21,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=	rapid.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
