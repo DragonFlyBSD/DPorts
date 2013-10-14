@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-unix-time/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-unix-time/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	unix-time
 PORTVERSION=	0.1.8
@@ -9,5 +9,6 @@ COMMENT=	Unix time parser/formatter and utilities
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
