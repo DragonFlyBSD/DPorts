@@ -1,21 +1,22 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql91-server/Makefile 322415 2013-07-07 00:15:47Z jgh $
+# $FreeBSD: databases/postgresql91-server/Makefile 330109 2013-10-12 00:59:50Z girgen $
 
 PORTNAME?=	postgresql
-DISTVERSION?=	9.1.9
+DISTVERSION?=	9.1.10
 PORTREVISION?=	0
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL
 MASTER_SITE_SUBDIR=	source/v${DISTVERSION}
-PKGNAMESUFFIX?=	-server
+PKGNAMESUFFIX?=	${DISTV:S/.//}-server
+DISTV=	${DISTVERSION:R}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 COMMENT?=	The most advanced open-source database available anywhere
 
-CONFLICTS?=	${PORTNAME}-client-[^${PORTVERSION:R:R}].* \
-		${PORTNAME}${PKGNAMESUFFIX}-[^${PORTVERSION:R:R}].* \
-		${PORTNAME}-client-9.[^${PORTVERSION:R:E}].* \
-		${PORTNAME}${PKGNAMESUFFIX}-9.[^${PORTVERSION:R:E}].*
+CONFLICTS?=	${PORTNAME}[^${PORTVERSION:R:R}]?-client* \
+		${PORTNAME}${COMPONENT}-[^${PORTVERSION:R:R}].* \
+		${PORTNAME}9[^${PORTVERSION:R:E}]-client* \
+		${PORTNAME}${COMPONENT}-9.[^${PORTVERSION:R:E}].*
 
 WRKSRC=		${WRKDIR}/postgresql-${DISTVERSION}
 DIST_SUBDIR=	postgresql
@@ -24,13 +25,11 @@ ICU_PATCHFILE?=	pg-910-icu-2012-12-19.diff.gz
 
 .if !defined(SLAVE_ONLY)
 UNIQUENAME?=	${PORTNAME}${DISTVERSION:R:S/.//}
-LATEST_LINK?=	${PKGNAMEPREFIX}${UNIQUENAME}${PKGNAMESUFFIX}
 .else # Contrib has different options from -client/-server
 UNIQUENAME?=	${PORTNAME}${DISTVERSION:R:S/.//}${PKGNAMESUFFIX}
-LATEST_LINK?=	${PKGNAMEPREFIX}${UNIQUENAME}
 .endif
 
-PKGINSTALL?=	${PKGDIR}/pkg-install${PKGNAMESUFFIX}
+PKGINSTALL?=	${PKGDIR}/pkg-install${COMPONENT}
 USE_BZIP2=	yes
 .if !defined(NO_BUILD)
 USES+=	gmake
@@ -51,7 +50,7 @@ CONFIGURE_ENV+=	INCLUDES="${INCLUDES}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		LDFLAGS_SL="${LDFLAGS_SL}"
 
-PLIST=		${PKGDIR}/pkg-plist${PKGNAMESUFFIX}
+PLIST=		${PKGDIR}/pkg-plist${COMPONENT}
 
 INSTALL_DIRS?=	src/timezone src/backend \
 		src/backend/utils/mb/conversion_procs \
@@ -62,6 +61,7 @@ INSTALL_DIRS?=	src/timezone src/backend \
 BUILD_DIRS?=	src/port ${INSTALL_DIRS}
 
 .if !defined(CLIENT_ONLY) && !defined(SLAVE_ONLY)
+COMPONENT=	-server
 SERVER_ONLY=	yes
 USE_RC_SUBR=	postgresql
 USE_PGSQL=	yes
@@ -110,6 +110,7 @@ SSL_DESC=	Build with OpenSSL support
 OPTIONS_DEFAULT=	NLS XML TZDATA INTDATE SSL
 .endif # !SLAVE_ONLY
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
@@ -340,12 +341,12 @@ do-build:
 		cd ${WRKSRC}/$${dir} && ${SETENV} ${MAKE_ENV} ${GMAKE}; \
 	done
 
-.  if exists(${FILESDIR}/pkg-message${PKGNAMESUFFIX}.in)
-SUB_FILES+=	pkg-message${PKGNAMESUFFIX}
-PKGMESSAGE=	${WRKSRC}/pkg-message${PKGNAMESUFFIX}
+.  if exists(${FILESDIR}/pkg-message${COMPONENT}.in)
+SUB_FILES+=	pkg-message${COMPONENT}
+PKGMESSAGE=	${WRKSRC}/pkg-message${COMPONENT}
 .  endif
-.  if exists(${FILESDIR}/pkg-install${PKGNAMESUFFIX}.in)
-SUB_FILES+=	pkg-install${PKGNAMESUFFIX}
+.  if exists(${FILESDIR}/pkg-install${COMPONENT}.in)
+SUB_FILES+=	pkg-install${COMPONENT}
 PLIST_SUB+=	PG_USER=${PG_USER}
 .  endif
 
@@ -373,7 +374,7 @@ do-install:
 .  endif
 	@ if [ -r ${PKGMESSAGE} ]; then \
 		${MKDIR} ${DOCSDIR} ;\
-		${INSTALL_DATA} ${PKGMESSAGE} ${DOCSDIR}/README${PKGNAMESUFFIX} ;\
+		${INSTALL_DATA} ${PKGMESSAGE} ${DOCSDIR}/README${COMPONENT} ;\
 		${CAT} ${PKGMESSAGE} ;\
 	fi
 .endif # !NO_BUILD
