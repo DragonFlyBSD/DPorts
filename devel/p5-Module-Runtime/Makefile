@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Module-Runtime/Makefile 326803 2013-09-09 11:55:30Z az $
+# $FreeBSD: devel/p5-Module-Runtime/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Runtime
 PORTVERSION=	0.013
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Module::Runtime.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
