@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-File-Find-Rule/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-Find-Rule/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Find-Rule
 PORTVERSION=	0.33
@@ -21,4 +21,5 @@ MAN1=		findrule.1
 MAN3=		File::Find::Rule.3 File::Find::Rule::Extending.3 \
 		File::Find::Rule::Procedural.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
