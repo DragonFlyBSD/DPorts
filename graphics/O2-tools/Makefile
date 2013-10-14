@@ -1,9 +1,5 @@
-# New ports collection makefile for:	O2-tools
-# Date created:		2009-05-20
-# Whom:			Hiroto Kagotani <hiroto.kagotani@gmail.com>
-#
-# $FreeBSD: graphics/O2-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
+# $FreeBSD: graphics/O2-tools/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	O2-tools
 PORTVERSION=	2.00
@@ -18,4 +14,5 @@ GNU_CONFIGURE=	yes
 MAN1=		bmptopnm-O2.1 breduce.1 lpsmooth.1 makecr.1 makepr.1 prlst2ps.1
 MAN4=		d4file.4
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
