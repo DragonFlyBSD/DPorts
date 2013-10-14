@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: databases/pymongo/Makefile 326629 2013-09-07 11:50:47Z wg $
+# $FreeBSD: databases/pymongo/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pymongo
 PORTVERSION=	2.6.2
@@ -16,6 +16,7 @@ USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
