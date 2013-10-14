@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Data-Section/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Section/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Section
 PORTVERSION=	0.101622
@@ -23,6 +23,7 @@ USE_PERL5=	configure
 
 MAN3=	Data::Section.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
