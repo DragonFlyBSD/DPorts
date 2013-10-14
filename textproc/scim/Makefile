@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: textproc/scim/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: textproc/scim/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scim
 PORTVERSION=	1.4.9
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
