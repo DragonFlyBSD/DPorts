@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/dssi/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/dssi/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	dssi
 PORTVERSION=	1.1.1
@@ -23,6 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 OPTIONS_DEFINE=	QT4
 
+NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 
