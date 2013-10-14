@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/preferences/Makefile 305832 2012-10-13 13:39:56Z dinoex $
+# $FreeBSD: deskutils/preferences/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	preferences
 PORTVERSION=	1.2.0
@@ -26,6 +26,7 @@ MODIFY=		GNUmakefile.preamble PrefsModule/GNUmakefile.preamble \
 		Modules/Keyboard/GNUmakefile.preamble \
 		Modules/PrefsApp/GNUmakefile.preamble
 
+NO_STAGE=	yes
 post-patch:
 .for i in ${MODIFY}
 	@${MV} ${WRKSRC}/${i} ${WRKSRC}/${i}.sed
