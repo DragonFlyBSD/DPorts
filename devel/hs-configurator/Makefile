@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-configurator/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-configurator/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	configurator
 PORTVERSION=	0.2.0.2
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_CABAL=	attoparsec>=0.10.0.2 hashable text>=0.11.1.0 unix-compat \
 		unordered-containers
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
