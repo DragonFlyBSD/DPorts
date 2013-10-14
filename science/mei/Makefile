@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mei
-# Date created:		Wed 18 apr 2012
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/science/mei/Makefile,v 1.2 2012/11/17 06:00:58 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: science/mei/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	mei
 PORTVERSION=	1.0.3
@@ -24,6 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_ZIP=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-bft=${LOCALBASE}
 
