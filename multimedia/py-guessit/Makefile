@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-guessit/Makefile 327549 2013-09-18 14:38:15Z wg $
+# $FreeBSD: multimedia/py-guessit/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	guessit
 PORTVERSION=	0.6.1
@@ -15,4 +15,5 @@ LICENSE=	LGPL3
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
