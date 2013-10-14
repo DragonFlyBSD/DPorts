@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Requires/Makefile 324515 2013-08-10 13:54:14Z kuriyama $
+# $FreeBSD: devel/p5-Test-Requires/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Requires
 PORTVERSION=	0.07
@@ -14,4 +14,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Test::Requires.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
