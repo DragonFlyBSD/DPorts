@@ -1,5 +1,5 @@
-# Created by: 			ijliao
-# $FreeBSD: devel/ocaml-findlib/Makefile 320893 2013-06-14 11:30:21Z johans $
+# Created by: ijliao
+# $FreeBSD: devel/ocaml-findlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	findlib
 PORTVERSION=	1.4
@@ -34,6 +34,7 @@ PATTERN=	[[:space:]]*(do|then)?[[:space:]]*)cp([[:space:]]
 MAN1=	ocamlfind.1
 MAN5=	META.5 findlib.conf.5 site-lib.5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,(${PATTERN}+.*INSTALLDIR),\1\$${BSD_INSTALL_DATA} \3,' \
