@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	tap-plugins
-# Date created:				2004-05-19
-# Whom:					arved
-#
-# $FreeBSD: ports/audio/tap-plugins/Makefile,v 1.9 2012/11/17 05:54:45 svnexp Exp $
+# Created by: arved
+# $FreeBSD: audio/tap-plugins/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	tap-plugins
 PORTVERSION=	0.7.2
@@ -14,6 +11,7 @@ COMMENT=	LADSPA Plugins by Tom Szilagy
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I. -c -fPIC -DPIC" \
 		LDFLAGS="-nostartfiles -shared -Wl,-Bsymbolic -lm"
 
