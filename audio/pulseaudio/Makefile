@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/pulseaudio/Makefile 325725 2013-08-30 22:31:38Z bapt $
+# $FreeBSD: audio/pulseaudio/Makefile 327706 2013-09-20 14:36:35Z bapt $
 #   $MCom: ports-stable/audio/pulseaudio/Makefile,v 1.7 2010/06/25 20:35:01 kwm Exp $
 
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
@@ -25,6 +25,7 @@ LIB_DEPENDS=	samplerate.1:${PORTSDIR}/audio/libsamplerate \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
 
 USE_GNOME=	gnomehack glib20 intltool ltverhack
+NO_STAGE=	yes
 USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
 USES=		gettext gmake pkgconfig
