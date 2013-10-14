@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: devel/gnome-vfsmm/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: devel/gnome-vfsmm/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/devel/gnome-vfsmm/Makefile,v 1.31 2009/03/17 15:22:21 kwm Exp $
 
 PORTNAME=	gnome-vfsmm
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.6" API_VERSION="2.6"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples// ; \
 	    	/^SUBDIRS =/s/docs//' \
