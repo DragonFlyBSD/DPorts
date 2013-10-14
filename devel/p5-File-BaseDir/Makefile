@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-File-BaseDir/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-File-BaseDir/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-BaseDir
 PORTVERSION=	0.03
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		File::BaseDir.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
