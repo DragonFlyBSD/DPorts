@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-DNS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-Net-DNS/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS
 PORTVERSION=	0.72
@@ -48,6 +48,7 @@ MAN3=		Net::DNS.3 Net::DNS::Domain.3 Net::DNS::DomainName.3 \
 		Net::DNS::Text.3 Net::DNS::Update.3 Net::DNS::ZoneFile.3
 PORTDOCS=	Changes README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIDN}
