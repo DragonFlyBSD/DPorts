@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Manip/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-Date-Manip/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date-Manip
 PORTVERSION=	6.34
@@ -34,5 +34,6 @@ MAN3=	Date::Manip.3 Date::Manip::Base.3 Date::Manip::Calc.3 \
 	Date::Manip::TZ.3 Date::Manip::TZ_Base.3 \
 	Date::Manip::TZdata.3 Date::Manip::Zones.3
 
+NO_STAGE=	yes
 .include "extramanpages.mk"
 .include <bsd.port.mk>
