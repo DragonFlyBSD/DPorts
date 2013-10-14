@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: devel/p5-Java/Makefile 326803 2013-09-09 11:55:30Z az $
+# $FreeBSD: devel/p5-Java/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Java
 PORTVERSION=	4.7
@@ -19,6 +19,7 @@ JAVA_VERSION=	1.6+
 
 MAN3=		Java.3 JavaArray.3
 
+NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/java_server_install.pl
 
