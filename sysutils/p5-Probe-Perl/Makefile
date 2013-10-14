@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: sysutils/p5-Probe-Perl/Makefile 326572 2013-09-07 06:13:27Z az $
+# $FreeBSD: sysutils/p5-Probe-Perl/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Probe-Perl
 PORTVERSION=	0.02
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Probe::Perl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
