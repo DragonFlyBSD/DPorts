@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/quesoglc/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/quesoglc/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	quesoglc
 PORTVERSION=	0.7.2
@@ -28,6 +28,7 @@ CONFIGURE_ARGS=	--without-glew --with-fribidi
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
