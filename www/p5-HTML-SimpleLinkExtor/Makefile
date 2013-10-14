@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-SimpleLinkExtor/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-SimpleLinkExtor/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-SimpleLinkExtor
 PORTVERSION=	1.25
@@ -24,6 +24,7 @@ USE_PERL5=	configure
 MAN1=		linktractor.1
 MAN3=		HTML::SimpleLinkExtor.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
