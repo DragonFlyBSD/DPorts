@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: x11-toolkits/libgdiplus/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: x11-toolkits/libgdiplus/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libgdiplus
 PORTVERSION=	2.10
@@ -30,5 +30,6 @@ PLIST_FILES=	lib/libgdiplus.a \
 		lib/libgdiplus.so.0 \
 		libdata/pkgconfig/libgdiplus.pc
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
