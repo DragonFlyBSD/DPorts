@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.traversing
-# Date created:				Nov 15, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.traversing/Makefile,v 1.3 2012/11/17 05:56:54 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.traversing/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.traversing
 PORTVERSION=	3.14.0
@@ -28,5 +23,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
