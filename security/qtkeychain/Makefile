@@ -1,4 +1,4 @@
-# $FreeBSD: security/qtkeychain/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/qtkeychain/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	qtkeychain
 PORTVERSION=	0.1.0
@@ -20,4 +20,5 @@ USE_QT4=	corelib dbus moc_build qmake_build rcc_build
 USE_LDCONFIG=	yes
 
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
