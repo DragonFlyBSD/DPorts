@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: ports/japanese/skk-jisyo/Makefile,v 1.52 2013/02/17 20:04:46 svnexp Exp $
+# $FreeBSD: japanese/skk-jisyo/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	skk-jisyo
 PORTVERSION=	201302
@@ -39,6 +39,7 @@ CDBSUFFIX=		#empty
 NO_BUILD=		yes
 .endif
 
+NO_STAGE=	yes
 post-extract:
 	@(cd ${WRKDIR}; ${BZIP2_CMD} -d *.bz2)
 
