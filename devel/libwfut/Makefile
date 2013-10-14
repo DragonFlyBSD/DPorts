@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann
-# $FreeBSD: devel/libwfut/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: devel/libwfut/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libwfut
 PORTVERSION=	0.2.2
@@ -19,6 +19,7 @@ USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
 MAN1=		wfut.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/ python//g' ${WRKSRC}/Makefile.in
 
