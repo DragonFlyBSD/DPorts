@@ -1,5 +1,5 @@
 # Created by: erikhb@bgnett.no
-# $FreeBSD: databases/libiodbc/Makefile 325950 2013-09-02 09:01:51Z bapt $
+# $FreeBSD: databases/libiodbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libiodbc
 PORTVERSION=	3.52.8
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--disable-gui
 PLIST_SUB+=	GUI="@comment "
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^SUBDIRS/s|samples||' ${WRKSRC}/Makefile.in
