@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/libpurple/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: net-im/libpurple/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #   $MCom: ports/net-im/libpurple/Makefile,v 1.32 2010/05/10 04:21:19 marcus Exp $
 
 PORTNAME?=	libpurple
@@ -79,6 +79,7 @@ OPTIONSFILE=	${PORT_DBDIR}/${UNIQUENAME}/options
 
 CONFIGURE_ARGS+=--disable-doxygen
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTCLTK}
