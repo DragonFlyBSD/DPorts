@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-gmp
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/math/php5-gmp/Makefile,v 1.6 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: math/php5-gmp/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 CATEGORIES=	math
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-gmp
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
