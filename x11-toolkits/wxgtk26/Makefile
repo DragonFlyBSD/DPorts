@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.org
-# $FreeBSD: x11-toolkits/wxgtk26/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: x11-toolkits/wxgtk26/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.6.4
@@ -39,6 +39,7 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		X11BASE="${LOCALBASE}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
+NO_STAGE=	yes
 NO_LATEST_LINK=	yes
 PLIST=		${.CURDIR}/pkg-plist
 
