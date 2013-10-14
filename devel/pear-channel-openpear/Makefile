@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pear-channel-openpear
-# Date created:		2011-12-03
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-channel-openpear/Makefile,v 1.2 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: devel/pear-channel-openpear/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	openpear
 PORTVERSION=	20111203
@@ -15,6 +11,7 @@ COMMENT=	PEAR channel ${PEAR_CHANNEL_HOST}
 
 PEAR_CHANNEL_HOST=	openpear.org
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.channel.mk"
 .include <bsd.port.post.mk>
