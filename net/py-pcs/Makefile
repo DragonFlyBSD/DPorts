@@ -1,9 +1,5 @@
-# Ports collection Makefile for:   pcs
-# Date created:        15 July 2006
-# Whom:                gnn
-#
-# $FreeBSD: ports/net/py-pcs/Makefile,v 1.9 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: gnn
+# $FreeBSD: net/py-pcs/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pcs
 PORTVERSION=	0.6
@@ -23,6 +19,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_PYTHON_PREFIX=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
