@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libixp
-# Date created:		17 February 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libixp/Makefile,v 1.9 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: devel/libixp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libixp
 PORTVERSION=	0.5
@@ -21,6 +17,7 @@ MAKE_ARGS=	PREFIX="${PREFIX}" CC="${CC} -c" LD="${CC}" \
 
 MAN1=		ixpc.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\.a|.so|g; s|(AR)|(LD) -shared -fPIC -o|' \
 		${WRKSRC}/mk/lib.mk ${WRKSRC}/mk/hdr.mk
