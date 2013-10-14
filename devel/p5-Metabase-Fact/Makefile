@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Metabase-Fact/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Metabase-Fact/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Metabase-Fact
 PORTVERSION=	0.021
@@ -37,4 +37,5 @@ MAN3=	Metabase::Fact.3 Metabase::Resource::metabase.3 \
 	Metabase::User::Profile.3 \
 	Metabase::Report.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
