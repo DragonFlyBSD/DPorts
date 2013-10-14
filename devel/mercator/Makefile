@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: devel/mercator/Makefile 326685 2013-09-07 20:43:45Z oliver $
+# $FreeBSD: devel/mercator/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mercator
 PORTVERSION=	0.3.2
@@ -19,4 +19,5 @@ USE_GCC=	yes
 CXXFLAGS+=	-include wchar.h
 CONFIGURE_ARGS+="CXXFLAGS=${CXXFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
