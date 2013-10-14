@@ -1,8 +1,4 @@
-# Ports collection makefile for:	rubygem-amqp
-# Date created:				Dec 16, 2011
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>	
-#
-# $FreeBSD: ports/net/rubygem-amqp067/Makefile,v 1.4 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/rubygem-amqp067/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	amqp
 PORTVERSION=	0.6.7
@@ -21,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
