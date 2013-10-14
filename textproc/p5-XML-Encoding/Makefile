@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-Encoding/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Encoding/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Encoding
 PORTVERSION=	2.08
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN1=		compile_encoding.1 make_encmap.1
 MAN3=		XML::Encoding.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
