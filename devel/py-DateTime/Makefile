@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-DateTime
-# Date created:				10 October, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-DateTime/Makefile,v 1.6 2012/11/17 05:56:44 svnexp Exp $
-#
+# $FreeBSD: devel/py-DateTime/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	DateTime
-PORTVERSION=	3.0
+PORTVERSION=	3.0.3
 PORTEPOCH=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
@@ -24,5 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz \
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
