@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/openbabel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: science/openbabel/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	openbabel
 PORTVERSION=	2.3.2
@@ -41,6 +41,7 @@ OPTIONS_DEFINE=	CAIRO PYTHON
 OPTIONS_DEFAULT=	PYTHON
 CAIRO_DESC=	PNG support via cairo library
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCAIRO}
