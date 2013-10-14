@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@FreeBSD.org>
-# $FreeBSD: mail/cclient/Makefile 318826 2013-05-23 02:19:02Z jgh $
+# $FreeBSD: mail/cclient/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	cclient
 PORTVERSION=	2007f
@@ -25,6 +25,7 @@ MBX_DEFAULT_DESC=	Use MBX as default mailbox format
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
