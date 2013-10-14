@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize/Makefile 325687 2013-08-30 13:15:31Z tobez $
+# $FreeBSD: www/p5-WWW-Mechanize/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Mechanize
 PORTVERSION=	1.73
@@ -42,6 +42,7 @@ MAN3=		WWW::Mechanize.3 WWW::Mechanize::Cookbook.3 \
 DOCS=		Changes etc/www-mechanize-logo.png
 PORTDOCS=	${DOCS:T}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}/
