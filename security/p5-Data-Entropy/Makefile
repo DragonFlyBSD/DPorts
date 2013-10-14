@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/p5-Data-Entropy/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Data-Entropy/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Data-Entropy
 PORTVERSION=	0.007
@@ -26,4 +26,5 @@ MAN3=		Data::Entropy.3 \
 		Data::Entropy::RawSource::RandomnumbersInfo.3 \
 		Data::Entropy::Source.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
