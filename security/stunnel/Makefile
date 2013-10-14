@@ -1,5 +1,5 @@
 # Created by: Martti Kuparinen <martti.kuparinen@ericsson.com>
-# $FreeBSD: security/stunnel/Makefile 324411 2013-08-08 23:24:39Z zi $
+# $FreeBSD: security/stunnel/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	stunnel
 PORTVERSION=	4.56
@@ -44,6 +44,7 @@ FORK_DESC=	Use the fork(3) threading model
 PTHREAD_DESC=	Use the pthread(3) threading model
 UCONTEXT_DESC=	Use the ucontext(3) threading model
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 STUNNEL_USER?=	stunnel
