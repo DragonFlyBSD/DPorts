@@ -1,5 +1,5 @@
 # Created by: jmacd
-# $FreeBSD: misc/xdelta/Makefile 316452 2013-04-24 16:53:54Z eadler $
+# $FreeBSD: misc/xdelta/Makefile 330209 2013-10-13 06:01:55Z eadler $
 
 PORTNAME=	xdelta
 PORTVERSION=	1.1.4
@@ -8,16 +8,12 @@ CATEGORIES=	misc devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
 MAINTAINER=	eadler@FreeBSD.org
-COMMENT=	A diff/patch utility for binary files
+COMMENT=	Diff/patch utility for binary files
 
 USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-MAN1=		xdelta.1
-
-NO_LATEST_LINK=	yes
 
 .include <bsd.port.mk>
