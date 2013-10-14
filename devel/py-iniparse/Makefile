@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-iniparse/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: devel/py-iniparse/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	iniparse
 PORTVERSION=	0.4
@@ -13,6 +13,7 @@ COMMENT=	A better INI parser for Python
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+NO_STAGE=	yes
 
 PORTDOCS=	Changelog README
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
