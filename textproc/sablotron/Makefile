@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/sablotron/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: textproc/sablotron/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Sablot
 PORTVERSION=	1.0.3
@@ -45,6 +45,7 @@ USE_PERL5=	build patch
 
 MAN1=	sabcmd.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 DOCSLIST=	README README_JS RELEASE doc/misc/DEBUGGER doc/misc/NOTES
