@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: security/libssh/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/libssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libssh
 PORTVERSION=	0.5.2
@@ -26,6 +26,7 @@ USE_LDCONFIG=	yes
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCRYPT}
