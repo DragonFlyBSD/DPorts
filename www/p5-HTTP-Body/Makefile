@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Body/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-Body/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Body
 PORTVERSION=	1.17
@@ -31,4 +31,5 @@ MAN3=		HTTP::Body.3 \
 		HTTP::Body::XForms.3 \
 		HTTP::Body::XFormsMultipart.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
