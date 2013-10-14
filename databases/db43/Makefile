@@ -1,9 +1,5 @@
-# ports collection makefile for:	Berkeley DB v4.3
-# Date created:				2004-11-10
-# Whom:					Matthias Andree <matthias.andree@gmx.de>
-#
-# $FreeBSD: ports/databases/db43/Makefile,v 1.84 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: Matthias Andree <matthias.andree@gmx.de>
+# $FreeBSD: databases/db43/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	db43
 PORTVERSION=	4.3.29
@@ -37,6 +33,7 @@ INSTALL_TARGET+=	install_docs docdir=${DOCSDIR}
 PORTDOCS=		*
 .endif
 
+NO_STAGE=	yes
 pre-patch:
 	${REINPLACE_CMD} -Ee 's|-l?pthread|${PTHREAD_LIBS}|g; s,/usr/bin/objformat \|\| echo aout,/usr/bin/objformat || echo elf,' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
