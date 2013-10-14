@@ -1,4 +1,4 @@
-# $FreeBSD: misc/qt4-l10n/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: misc/qt4-l10n/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	l10n
 DISTVERSION=	${QT4_VERSION}
@@ -14,6 +14,7 @@ QT_NONSTANDARD=	yes
 
 EXTRACT_AFTER_ARGS+=	--include '${DISTNAME}/translations'
 
+NO_STAGE=	yes
 do-build:
 	${LOCALBASE}/bin/lrelease-qt4 ${WRKSRC}/translations/*.ts
 
