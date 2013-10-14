@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gnustep-gui/Makefile 325725 2013-08-30 22:31:38Z bapt $
+# $FreeBSD: x11-toolkits/gnustep-gui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gnustep-gui
 PORTVERSION=	0.23.1
@@ -69,6 +69,7 @@ PLIST_SUB+=	WITH_ASPELL=""
 PLIST_SUB+=	WITH_ASPELL="@comment "
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s|libpng/png.h|png.h|" ${WRKSRC}/configure
 
