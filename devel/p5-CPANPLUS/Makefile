@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: devel/p5-CPANPLUS/Makefile 324947 2013-08-19 07:27:36Z culot $
+# $FreeBSD: devel/p5-CPANPLUS/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPANPLUS
 PORTVERSION=	0.9142
@@ -63,6 +63,7 @@ MAN3=		CPANPLUS.3 \
 		CPANPLUS::Shell::Default::Plugins::Remote.3 \
 		CPANPLUS::Shell::Default::Plugins::Source.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTEST_REPORTER}
