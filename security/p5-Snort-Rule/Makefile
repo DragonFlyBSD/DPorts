@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: security/p5-Snort-Rule/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/p5-Snort-Rule/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Snort-Rule
 PORTVERSION=	1.07
@@ -22,4 +22,5 @@ PLIST_DIRS=	%%SITE_PERL%%/mach/auto/Snort/Rule \
 
 MAN3=		Snort::Rule.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
