@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Spreadsheet-WriteExcel
 PORTVERSION=	2.39
@@ -43,6 +43,7 @@ MAN3=		Spreadsheet::WriteExcel.3 \
 		Spreadsheet::WriteExcel::Workbook.3 \
 		Spreadsheet::WriteExcel::Worksheet.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
