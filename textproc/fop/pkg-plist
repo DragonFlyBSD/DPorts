@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/fop/pkg-plist,v 1.14 2012/11/17 06:01:56 svnexp Exp $
+@comment $FreeBSD: textproc/fop/pkg-plist 306355 2012-10-24 21:26:48Z rakuco $
 bin/fop
 %%DATADIR%%/fop
 %%DATADIR%%/status.xml

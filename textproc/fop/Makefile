@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@FreeBSD.org>
-# $FreeBSD: ports/textproc/fop/Makefile,v 1.28 2013/02/06 11:16:08 svnexp Exp $
+# $FreeBSD: textproc/fop/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	fop
 PORTVERSION=	1.1
@@ -26,6 +26,7 @@ USE_ANT=	yes
 # Prevent out of memory error during build
 MAKE_ENV+=	"ANT_OPTS=-Xmx512m"
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKDIR} && ${UNZIP_CMD} ${DISTDIR}/offo-hyphenation_v2.0.zip
 	@${CP} ${WRKDIR}/offo-hyphenation/hyph/*.xml ${WRKSRC}/hyph
