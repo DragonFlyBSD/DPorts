@@ -1,5 +1,5 @@
 # Created by: Geoffroy Desvernay <dgeo@centrale-marseille.fr>
-# $FreeBSD: net-mgmt/netdisco-mibs/Makefile 324937 2013-08-18 20:54:02Z nox $
+# $FreeBSD: net-mgmt/netdisco-mibs/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	netdisco-mibs
 PORTVERSION=	1.4
@@ -12,6 +12,7 @@ COMMENT=	Mibs for use with ports-mgmt/netdisco (and snmp)
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include "bsd.port.netdisco.mk"
 
 do-install:
