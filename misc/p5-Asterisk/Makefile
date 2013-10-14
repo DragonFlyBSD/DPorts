@@ -1,5 +1,5 @@
 # Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-# $FreeBSD: misc/p5-Asterisk/Makefile 324054 2013-07-31 14:36:21Z az $
+# $FreeBSD: misc/p5-Asterisk/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Asterisk
 PORTVERSION=	1.03
@@ -21,4 +21,5 @@ MAN3=		Asterisk::AGI.3 \
 		Asterisk::Outgoing.3 \
 		Asterisk::Voicemail.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
