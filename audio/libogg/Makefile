@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/libogg/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: audio/libogg/Makefile 328156 2013-09-24 16:15:33Z naddy $
 
 PORTNAME=	libogg
 PORTVERSION=	1.3.1
@@ -16,14 +16,6 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
-MAKE_ENV=	DOC=doc
-.else
-MAKE_ENV=	DOC=""
-.endif
 
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
