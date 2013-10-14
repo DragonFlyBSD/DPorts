@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: math/eigen2/Makefile 327474 2013-09-17 12:50:49Z bapt $
+# $FreeBSD: math/eigen2/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	eigen
 PORTVERSION=	2.0.17
@@ -18,6 +18,7 @@ USES=		cmake
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-b23437e61a07
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/pkgconfig|libdata/pkgconfig|g' \
 		${WRKSRC}/CMakeLists.txt
