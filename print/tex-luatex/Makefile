@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-luatex/Makefile 326258 2013-09-04 07:55:49Z bsam $
+# $FreeBSD: print/tex-luatex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	luatex
 PORTVERSION=	0.70.2
@@ -87,6 +87,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 MAKE_JOBS_UNSAFE=	yes
 TEX_FORMATS=	luatex
 
+NO_STAGE=	yes
 pre-configure:
 	for D in libs/obsdcompat libs/xpdf; do \
 		cd ${WRKDIR}/${DISTNAME}/$$D && \
