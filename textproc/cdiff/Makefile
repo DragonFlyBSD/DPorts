@@ -1,7 +1,5 @@
 # Created by: eivind
-# $FreeBSD: textproc/cdiff/Makefile 325961 2013-09-02 09:45:00Z garga $
-# This port is self contained in the src directory.
-#
+# $FreeBSD: textproc/cdiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	cdiff
 PORTVERSION=	1.5
@@ -21,6 +19,7 @@ SRC=		${.CURDIR}/src
 MAN1=		cdiff.1
 PLIST_FILES=	bin/cdiff
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
