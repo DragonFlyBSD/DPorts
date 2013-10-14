@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/java/jakarta-commons-beanutils/Makefile,v 1.19 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-commons-beanutils/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-beanutils
 PORTVERSION=	1.8.3
@@ -34,6 +34,7 @@ OTHERDOCS=	LICENSE.txt NOTICE.txt README.txt RELEASE-NOTES.txt
 PORTDOCS=	${APIDOCS} ${OTHERDOCS}
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${JARFILE}..."
 	@${INSTALL_DATA} ${WRKSRC}/dist/${PORTNAME}-${PORTVERSION}.jar ${JAVAJARDIR}/${JARFILE}
