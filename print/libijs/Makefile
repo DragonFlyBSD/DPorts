@@ -1,4 +1,4 @@
-# $FreeBSD: print/libijs/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: print/libijs/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	libijs
 PORTVERSION=	0.35
@@ -20,4 +20,5 @@ USE_LDCONFIG=	yes
 
 MAN1=		ijs-config.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
