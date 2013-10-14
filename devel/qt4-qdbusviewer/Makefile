@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-qdbusviewer/Makefile 326035 2013-09-02 17:06:54Z bapt $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-qdbusviewer/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qdbusviewer
 DISTVERSION=	${QT4_VERSION}
@@ -45,6 +45,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 post-patch:
 	${MKDIR} ${WRKSRC}/mkspecs
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
