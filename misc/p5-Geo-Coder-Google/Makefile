@@ -1,8 +1,8 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Google/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Google/Makefile 329421 2013-10-05 06:06:18Z sunpoet $
 
 PORTNAME=	Geo-Coder-Google
-PORTVERSION=	0.12
+PORTVERSION=	0.13
 CATEGORIES=	misc geography perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ARCANEZ
@@ -24,9 +24,5 @@ TEST_DEPENDS=	p5-Test-Number-Delta>=0:${PORTSDIR}/devel/p5-Test-Number-Delta
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Geo::Coder::Google.3 \
-		Geo::Coder::Google::V2.3 \
-		Geo::Coder::Google::V3.3
 
 .include <bsd.port.mk>
