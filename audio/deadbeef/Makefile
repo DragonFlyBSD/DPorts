@@ -1,9 +1,9 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: audio/deadbeef/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/deadbeef/Makefile 329848 2013-10-08 23:01:38Z wg $
 
 PORTNAME=	deadbeef
 PORTVERSION=	0.5.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -19,6 +19,7 @@ LIB_DEPENDS=	samplerate:${PORTSDIR}/audio/libsamplerate \
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig gettext iconv shebangfix
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 CONFIGURE_ARGS=	--disable-alsa --disable-nullout \
@@ -165,9 +166,10 @@ PLIST_SUB+=	OGG="@comment "
 
 .if ${PORT_OPTIONS:MFFMPEG}
 PLIST_SUB+=	FFMPEG=""
-LIB_DEPENDS+=	avcodec:${PORTSDIR}/multimedia/ffmpeg \
-		avformat:${PORTSDIR}/multimedia/ffmpeg \
-		avutil:${PORTSDIR}/multimedia/ffmpeg
+LIB_DEPENDS+=	libavcodec0.so:${PORTSDIR}/multimedia/ffmpeg0 \
+		libavformat0.so:${PORTSDIR}/multimedia/ffmpeg0 \
+		libavutil0.so:${PORTSDIR}/multimedia/ffmpeg0
+CONFIGURE_ARGS+=	--enable-ffmpeg
 .else
 CONFIGURE_ARGS+=	--disable-ffmpeg
 PLIST_SUB+=	FFMPEG="@comment "
@@ -358,6 +360,11 @@ post-patch:
 		${WRKSRC}/plugins/supereq/Makefile.in
 	@${REINPLACE_CMD} -e 's,/etc/timidity++/timidity-freepats.cfg:/etc/timidity/freepats.cfg:/etc/timidity/,${LOCALBASE}/share/,' \
 		${WRKSRC}/plugins/wildmidi/wildmidiplug.c
+	@${REINPLACE_CMD} \
+		-e 's,libavcodec ,libavcodec0 ,g' \
+		-e 's,libavutil ,libavutil0 ,g' \
+		-e 's,libavformat ,libavformat0 ,g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.pre.mk>
 
