@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-argh/Makefile,v 1.4 2013/02/03 15:57:52 svnexp Exp $
+# $FreeBSD: devel/py-argh/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	argh
 PORTVERSION=	0.23.0
@@ -18,4 +18,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
