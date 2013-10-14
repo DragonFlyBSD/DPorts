@@ -1,9 +1,4 @@
-# New ports collection makefile for:	povray-meta
-# Date created:		2011-06-19
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/povray-meta/Makefile,v 1.3 2012/11/17 05:58:19 svnexp Exp $
-#
+# $FreeBSD: graphics/povray-meta/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	povray-meta
 PORTVERSION=	0.1
@@ -41,6 +36,7 @@ POVRAY${ver}_DESC=	Install graphics/povray${ver}
 DEFAULT${ver}_DESC=	Create link bin/povray -> bin/povray${ver}
 .endfor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for ver in ${POV_VERSIONS_ALL}
