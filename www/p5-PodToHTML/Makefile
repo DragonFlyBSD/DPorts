@@ -1,8 +1,5 @@
-# New ports collection makefile for:   p5-PodToHTML
-# Date created:                27 February 2004
-# Whom:                        hrs@FreeBSD.org
-#
-# $FreeBSD: www/p5-PodToHTML/Makefile 325974 2013-09-02 11:04:10Z az $
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: www/p5-PodToHTML/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	PodToHTML
 PORTVERSION=	0.08
@@ -28,4 +25,5 @@ MAN1=		podtohtml.1
 MAN3=		Pod::HTML_Elements.3 \
 		Pod::Links.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
