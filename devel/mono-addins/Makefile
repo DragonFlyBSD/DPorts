@@ -1,4 +1,4 @@
-# $FreeBSD: devel/mono-addins/Makefile 325946 2013-09-02 06:54:15Z bapt $
+# $FreeBSD: devel/mono-addins/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mono-addins
 PORTVERSION=	0.6.2
@@ -27,6 +27,7 @@ MAN1=		mautil.1
 
 PLIST_SUB+=	VER=0.6.0
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 
