@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: net/p5-SOAP-Lite/Makefile 326827 2013-09-09 18:18:57Z sunpoet $
+# $FreeBSD: net/p5-SOAP-Lite/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	SOAP-Lite
 PORTVERSION=	0.716
@@ -66,4 +66,5 @@ MAN3=		Apache::SOAP.3 \
 SHEBANG_FILES=	bin/* t/*.pl t/*.t
 perl_OLD_CMD=	.*perl
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
