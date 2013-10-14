@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-liblarch/Makefile 315493 2013-03-28 19:08:17Z rm $
+# $FreeBSD: devel/py-liblarch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	liblarch
 PORTVERSION=	2.1.0
@@ -19,4 +19,5 @@ GH_ACCOUNT=	${PORTNAME}
 GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	76d6490
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
