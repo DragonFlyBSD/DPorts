@@ -1,5 +1,5 @@
 # Created by: wolman@cs.washington.edu
-# $FreeBSD: databases/p5-SQL-Statement/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: databases/p5-SQL-Statement/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	SQL-Statement
 PORTVERSION=	1.405
@@ -38,4 +38,5 @@ MAN3=		SQL::Dialects::ANSI.3 \
 		SQL::Statement::TermFactory.3 \
 		SQL::Statement::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
