@@ -1,5 +1,4 @@
-# Created by:	Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Load/Makefile 324224 2013-08-04 12:39:45Z az $
+# $FreeBSD: devel/p5-Class-Load/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Load
 PORTVERSION=	0.20
@@ -29,4 +28,5 @@ USE_PERL5=	configure
 
 MAN3=	Class::Load.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
