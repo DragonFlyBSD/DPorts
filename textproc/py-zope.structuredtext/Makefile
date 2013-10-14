@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.structuredtext
-# Date created:				Nov 14, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/textproc/py-zope.structuredtext/Makefile,v 1.3 2012/11/17 06:02:18 svnexp Exp $
-#
+# $FreeBSD: textproc/py-zope.structuredtext/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.structuredtext
 PORTVERSION=	3.5.1
@@ -19,5 +14,7 @@ LICENSE=	ZPL21
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
