@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@ipass.net>
-# $FreeBSD: graphics/py-opengl/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: graphics/py-opengl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	opengl
 PORTVERSION=	3.0.1
@@ -30,6 +30,7 @@ PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/.b/b/}
 
 USE_DOS2UNIX=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTKINTER}
