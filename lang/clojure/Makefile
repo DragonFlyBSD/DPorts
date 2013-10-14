@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/clojure/Makefile 314865 2013-03-21 19:13:29Z madpilot $
+# $FreeBSD: lang/clojure/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	clojure
 PORTVERSION=	1.5.1
@@ -23,6 +23,7 @@ JLINE_DESC=	jline support for the REPL
 PLIST_FILES=	bin/clojure \
 		%%JAVAJARDIR%%/clojure.jar
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJLINE}
