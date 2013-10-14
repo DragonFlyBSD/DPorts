@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang
-# $FreeBSD: net/x11vnc/Makefile 325944 2013-09-02 06:39:37Z bapt $
+# $FreeBSD: net/x11vnc/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	x11vnc
 PORTVERSION=	0.9.13
@@ -16,9 +16,10 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		dbus:${PORTSDIR}/devel/dbus \
 		pthread-stubs:${PORTSDIR}/devel/libpthread-stubs
 
+NO_STAGE=	yes
+
 USE_XORG=	x11 xcb xdamage xfixes xrandr xinerama xext xtst xau xrender \
 		xdmcp recordproto
-
 # Sets LDFLAGS and adds to CONFIGURE_ENV, therefore we set LDFLAGS
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_OPENSSL=	yes
