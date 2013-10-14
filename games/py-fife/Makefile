@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: games/py-fife/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: games/py-fife/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		fife
 PORTVERSION=		0.3.4
@@ -41,6 +41,7 @@ USE_GL=			gl
 
 USES=			pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's/X11R6/local/g; s/libpng/ligpng15/g' ${WRKSRC}/build/openbsd4-config.py && \
 		${MV} ${WRKSRC}/build/openbsd4-config.py ${WRKSRC}/build/${PYTHON_PLATFORM}-config.py
