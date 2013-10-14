@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/py-mpd/pkg-plist,v 1.2 2012/11/17 05:54:42 svnexp Exp $
+@comment $FreeBSD: audio/py-mpd/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 %%PYTHON_SITELIBDIR%%/mpd.py
 %%PYTHON_SITELIBDIR%%/mpd.pyc
 %%PYTHON_SITELIBDIR%%/mpd.pyo
