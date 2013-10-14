@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-arrayfields/Makefile 323937 2013-07-30 03:15:57Z swills $
+# $FreeBSD: devel/rubygem-arrayfields/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	arrayfields
 PORTVERSION=	4.9.0
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
