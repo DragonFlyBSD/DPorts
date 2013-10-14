@@ -1,4 +1,4 @@
-# $FreeBSD: arabic/kde4-l10n/Makefile 322618 2013-07-10 06:33:41Z bapt $
+# $FreeBSD: arabic/kde4-l10n/Makefile 327685 2013-09-20 11:04:48Z bapt $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
@@ -9,5 +9,6 @@ COMMENT=	Arabic messages and documentation for KDE SC 4
 
 KDE4_L10N=	ar
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../misc/kde4-l10n/files/bsd.l10n.mk"
 .include <bsd.port.mk>
