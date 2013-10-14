@@ -1,9 +1,5 @@
-# New ports collection makefile for:	enscript (letter)
-# Date created:			24 Jul, 1997
-# Whom:				kline
-#
-# $FreeBSD: ports/print/enscript-letter/Makefile,v 1.36 2012/11/17 06:00:49 svnexp Exp $
-#
+# Created by: kline
+# $FreeBSD: print/enscript-letter/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	enscript
 PORTVERSION=	1.6.4
@@ -18,6 +14,7 @@ COMMENT=	ASCII to PostScript filter
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls --with-media=${PS}
+NO_STAGE=	yes
 
 CONFLICTS?=	enscript-a4-* enscript-letterdj-*
 
