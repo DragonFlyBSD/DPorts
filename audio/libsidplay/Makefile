@@ -1,5 +1,5 @@
 # Created by: Stefan Zehl <sec@42.org>
-# $FreeBSD: audio/libsidplay/Makefile 326543 2013-09-06 20:16:39Z bapt $
+# $FreeBSD: audio/libsidplay/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libsidplay
 PORTVERSION=	1.36.59
