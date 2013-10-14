@@ -1,5 +1,5 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: sysutils/duplicity/Makefile 325842 2013-09-01 02:38:20Z jase $
+# $FreeBSD: sysutils/duplicity/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	duplicity
 PORTVERSION=	0.6.22
@@ -31,6 +31,7 @@ S3_DESC=	Install Amazon S3 backend
 SSH_DESC=	Install SSH/SCP/SFTP backend
 U1_DESC=	Install Ubuntu One backend
 
+NO_STAGE=	yes
 .include "bsd.port.options.mk"
 
 .if ${PORT_OPTIONS:MNLS}
