@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: multimedia/beep-media-player/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/beep-media-player/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	beep-media-player
 PORTVERSION=	0.9.7.1
@@ -30,6 +30,7 @@ OPTIONS_MULTI_OUTPUT=	ALSA ESOUND OSS
 OPTIONS_DEFINE=		NLS GCONF GNOMEVFS2 IPV6 VORBIS
 OPTIONS_DEFAULT=	OSS VORBIS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
