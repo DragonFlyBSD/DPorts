@@ -1,4 +1,4 @@
-# $FreeBSD: audio/gstreamer1-plugins-vorbis/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: audio/gstreamer1-plugins-vorbis/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	audio
@@ -9,5 +9,6 @@ GST_PLUGIN=	vorbis
 DIST=		base
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
+NO_STAGE=	yes
 
 .include "${MASTERDIR}/Makefile"
