@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/licq-icq/Makefile 325717 2013-08-30 19:24:37Z dinoex $
+# $FreeBSD: net-im/licq-icq/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	icq
 PORTVERSION=	1.8.0
@@ -21,6 +21,7 @@ PLIST_DIRS=	%%PORTDOCS%%%%DOCSDIR%%
 
 LICQ_PORT?=	net-im/licq
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .include "${PORTSDIR}/${LICQ_PORT}/Makefile.inc"
