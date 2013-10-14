@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: net-mgmt/p5-FusionInventory-Agent/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	FusionInventory-Agent
 PORTVERSION=	2.2.5
@@ -38,8 +38,8 @@ ZLIB_DESC=	Zlib compression
 DMIDECODE_DESC=	Dmidecode hardware information
 PCIUTILS_DESC=	Pciutils hardware information
 
-PERL_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake perl5
+USE_PERL5=	configure
 
 MAN1=		fusioninventory-agent.1 \
 		fusioninventory-injector.1
@@ -82,6 +82,7 @@ MAN3=		FusionInventory::Agent.3 \
 		FusionInventory::Agent::XML::Query::Prolog.3 \
 		FusionInventory::Agent::XML::Response.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
