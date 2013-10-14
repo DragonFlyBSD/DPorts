@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: ports/security/py-tlslite/Makefile,v 1.7 2012/11/17 06:01:17 svnexp Exp $
+# $FreeBSD: security/py-tlslite/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tlslite
 PORTVERSION=	0.4.3
@@ -13,4 +13,5 @@ COMMENT=	Python module implementing SSL 3.0, TLS 1.0, and TLS 1.1
 USE_PYTHON=		2.6-2.7
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
