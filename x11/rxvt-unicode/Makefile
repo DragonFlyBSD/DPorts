@@ -1,5 +1,5 @@
 # Created by: gpalmer@FreeBSD.org
-# $FreeBSD: x11/rxvt-unicode/Makefile 327451 2013-09-17 06:28:07Z bapt $
+# $FreeBSD: x11/rxvt-unicode/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	rxvt-unicode
 PORTVERSION=	9.18
@@ -58,6 +58,7 @@ MAN7=		urxvt.7
 PORTDOCS1=	Changes README.FAQ README.configure
 PORTDOCS=	README.xvt ${PORTDOCS1}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMLOCALE_FIX}
