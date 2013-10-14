@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mp3info
-# Date created:				19 June 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/audio/mp3info/Makefile,v 1.24 2013/01/07 12:54:38 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: audio/mp3info/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	mp3info
 PORTVERSION=	0.8.5
@@ -29,14 +25,13 @@ PLIST_FILES=	bin/mp3info \
 		%%WITH_GTK%%bin/gmp3info
 
 MAN1=		mp3info.1
+NO_STAGE=	yes
 
 ALL_TARGET=	doc mp3info
 
-.include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
-PKGNAMESUFFIX=	-gtk
 USE_GNOME+=	gtk20
 ALL_TARGET+=	gmp3info
 MAKE_ARGS=	install-gmp3info
@@ -55,4 +50,4 @@ do-install:
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
