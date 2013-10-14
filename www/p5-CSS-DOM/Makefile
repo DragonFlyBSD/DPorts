@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-CSS-DOM/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CSS-DOM/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CSS-DOM
 PORTVERSION=	0.15
@@ -43,4 +43,5 @@ MAN3=		CSS::DOM.3 \
 		CSS::DOM::Value::List.3 \
 		CSS::DOM::Value::Primitive.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
