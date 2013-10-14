@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xhost/Makefile 323172 2013-07-17 14:21:10Z zeising $
+# $FreeBSD: x11/xhost/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xhost
 PORTVERSION=	1.0.6
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xhost
 
 MAN1=		xhost.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
