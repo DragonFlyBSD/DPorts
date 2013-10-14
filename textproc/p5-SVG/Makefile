@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-SVG/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-SVG/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	SVG
 PORTVERSION=	2.59
@@ -22,6 +22,7 @@ USE_DOS2UNIX=	yes
 MAN3=		SVG.3 SVG::DOM.3 SVG::Element.3 SVG::Extension.3 \
 		SVG::XML.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
