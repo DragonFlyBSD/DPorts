@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-TCP/Makefile 324518 2013-08-10 14:04:36Z kuriyama $
+# $FreeBSD: devel/p5-Test-TCP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-TCP
 PORTVERSION=	2.00
@@ -22,6 +22,7 @@ MAN3=	Net::EmptyPort.3 \
 	Test::TCP.3 \
 	Test::TCP::CheckPort.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
