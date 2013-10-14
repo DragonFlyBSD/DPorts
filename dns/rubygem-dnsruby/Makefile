@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: dns/rubygem-dnsruby/Makefile 321618 2013-06-23 05:14:11Z swills $
+# $FreeBSD: dns/rubygem-dnsruby/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnsruby
 PORTVERSION=	1.54
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
