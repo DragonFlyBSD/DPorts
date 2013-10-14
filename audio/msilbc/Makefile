@@ -1,4 +1,4 @@
-# $FreeBSD: audio/msilbc/Makefile 325998 2013-09-02 14:11:19Z bapt $
+# $FreeBSD: audio/msilbc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	msilbc
 PORTVERSION=	2.0.3
@@ -12,6 +12,7 @@ LIB_DEPENDS=	ortp.8:${PORTSDIR}/net/linphone-base \
 		mediastreamer.0:${PORTSDIR}/net/linphone-base \
 		ilbc.0:${PORTSDIR}/net/ilbc
 
+NO_STAGE=	yes
 USES=		pkgconfig
 
 GNU_CONFIGURE=	yes
