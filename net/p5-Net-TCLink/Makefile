@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net::TCLink
-# Date created:				24 October 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-TCLink/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: net/p5-Net-TCLink/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-TCLink
 PORTVERSION=	3.4
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::TCLink.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
