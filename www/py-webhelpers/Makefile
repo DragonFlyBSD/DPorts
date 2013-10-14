@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: ports/www/py-webhelpers/Makefile,v 1.11 2012/12/31 00:10:46 svnexp Exp $
+# $FreeBSD: www/py-webhelpers/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webhelpers
 PORTVERSION=	1.3
@@ -20,4 +20,5 @@ USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	WebHelpers
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
