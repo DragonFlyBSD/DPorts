@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsps/Makefile 313763 2013-03-09 22:14:53Z eadler $
+# $FreeBSD: devel/cvsps/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsps
 PORTVERSION=	2.1
@@ -15,6 +15,7 @@ CONFLICTS=	cvsps-devel-[0-9]*
 MAN1=		cvsps.1
 PLIST_FILES=	bin/cvsps
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
