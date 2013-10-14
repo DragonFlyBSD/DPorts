@@ -1,5 +1,4 @@
-# Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 325057 2013-08-20 15:08:00Z mat $
+# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Mixin-Linewise
 PORTVERSION=	0.004
@@ -34,4 +33,5 @@ PLIST_DIRS+=	%%SITE_PERL%%/Mixin/Linewise \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mixin/Linewise \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mixin
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
