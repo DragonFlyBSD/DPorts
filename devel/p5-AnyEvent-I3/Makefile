@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: devel/p5-AnyEvent-I3/Makefile 324006 2013-07-31 06:47:15Z bapt $
+# $FreeBSD: devel/p5-AnyEvent-I3/Makefile 327916 2013-09-23 06:05:41Z bapt $
 
 PORTNAME=	AnyEvent-I3
 PORTVERSION=	0.15
@@ -17,7 +17,5 @@ RUN_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		AnyEvent::I3.3
 
 .include <bsd.port.mk>
