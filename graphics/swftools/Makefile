@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/swftools/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/swftools/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	swftools
 PORTVERSION=	0.9.2
@@ -20,6 +20,8 @@ LIB_DEPENDS=	t1.5:${PORTSDIR}/devel/t1lib \
 		freetype.9:${PORTSDIR}/print/freetype2 \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
 
+NO_STAGE=	yes
+
 OPTIONS_DEFINE=	LAME PDF
 
 USES=		pkgconfig
@@ -27,7 +29,6 @@ USE_GL=		glut
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_lib_zzip_zzip_file_open=no
-
 
 MAN1=		as3compile.1 font2swf.1 gif2swf.1 jpeg2swf.1 pdf2swf.1 \
 		png2swf.1 swfbbox.1 swfc.1 swfcombine.1 swfdump.1 \
