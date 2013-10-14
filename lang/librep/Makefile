@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: lang/librep/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/librep/Makefile 328402 2013-09-26 18:23:42Z eadler $
 
 PORTNAME=	librep
 PORTVERSION=	0.92.3
@@ -12,26 +12,23 @@ COMMENT=	Emacs Lisp like runtime library
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm \
-		ffi:${PORTSDIR}/devel/libffi \
-    		gmp:${PORTSDIR}/math/gmp
+LIB_DEPENDS=	libgdbm.so:${PORTSDIR}/databases/gdbm \
+		libffi.so:${PORTSDIR}/devel/libffi \
+    		libgmp.so:${PORTSDIR}/math/gmp
 RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar
 
 USE_CSTD=	gnu89
 
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig readline
-USE_GMAKE=	yes
+USES=		gettext pathfix pkgconfig readline gmake
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-aclocaldir=${PREFIX}/share/aclocal \
 		--with-stack-direction=-1
 USE_LDCONFIG=	yes
 
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib -pthread
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
-MANCOMPRESSED=	yes
-MAN1=		rep.1 rep-remote.1 rep-xgettext.1 repdoc.1
 INFO=		librep
 
 .include <bsd.port.pre.mk>
