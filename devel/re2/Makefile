@@ -1,9 +1,5 @@
-# New ports collection makefile for:	re2
-# Date created:		2010-09-01
-# Whom:			Julien Laffaye <kimelto@gmail.com>
-#
-# $FreeBSD: ports/devel/re2/Makefile,v 1.6 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: Julien Laffaye <kimelto@gmail.com>
+# $FreeBSD: devel/re2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	re2
 PORTVERSION=	20120226
@@ -20,4 +16,5 @@ USE_GMAKE=	yes
 MAKE_ENV=	prefix=${PREFIX}
 MAKE_ARGS+=	-e
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
