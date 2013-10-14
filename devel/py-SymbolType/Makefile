@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-SymbolType
-# Date created:		23 June, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-SymbolType/Makefile,v 1.2 2012/11/17 05:56:44 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-SymbolType/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SymbolType
 PORTVERSION=	1.0
@@ -19,4 +15,5 @@ USE_ZIP=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
