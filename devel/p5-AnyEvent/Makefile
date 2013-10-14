@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-AnyEvent/Makefile 325313 2013-08-24 20:41:19Z sunpoet $
+# $FreeBSD: devel/p5-AnyEvent/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyEvent
 PORTVERSION=	7.05
@@ -47,4 +47,5 @@ MAN3=		AE.3 \
 		AnyEvent::TLS.3 \
 		AnyEvent::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
