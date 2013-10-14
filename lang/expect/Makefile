@@ -1,8 +1,5 @@
-# New ports collection makefile for:	expect
-# Date created:		20 November 1994
-# Whom:			pst
-#
-# $FreeBSD: lang/expect/Makefile 319928 2013-06-04 22:20:51Z bf $
+# Created by: pst
+# $FreeBSD: lang/expect/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	expect
 PORTVERSION=	5.43.0
@@ -31,6 +28,7 @@ PLIST_SUB+=	LIBEXPECT_VER="${LIBEXPECT_VER}"
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=	X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
