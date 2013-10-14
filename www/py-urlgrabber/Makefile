@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/py-urlgrabber/Makefile 324776 2013-08-15 16:21:27Z nivit $
+# $FreeBSD: www/py-urlgrabber/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	urlgrabber
 PORTVERSION=	3.9.1
@@ -25,6 +25,7 @@ DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
