@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-enzyme/Makefile 318257 2013-05-15 19:33:14Z wg $
+# $FreeBSD: multimedia/py-enzyme/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	enzyme
 PORTVERSION=	0.2
@@ -17,4 +17,5 @@ USE_PYDISTUTILS=easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
