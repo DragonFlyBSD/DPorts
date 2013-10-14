@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: net/p5-Net-Patricia/Makefile 326270 2013-09-04 11:50:29Z tobez $
+# $FreeBSD: net/p5-Net-Patricia/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Patricia
 PORTVERSION=	1.21
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Patricia.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
