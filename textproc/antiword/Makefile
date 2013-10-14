@@ -1,6 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: textproc/antiword/Makefile 323485 2013-07-22 17:43:42Z leeym $
-#
+# $FreeBSD: textproc/antiword/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	antiword
 PORTVERSION=	0.37
@@ -21,6 +20,7 @@ PORTDOCS=	COPYING ChangeLog Emacs Exmh FAQ History Mozilla Mutt Netscape \
 
 CFLAGS+=	-DNDEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
