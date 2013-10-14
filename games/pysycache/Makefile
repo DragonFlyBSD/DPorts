@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pysycache
-# Date created:		2006-02-22
-# Whom:			Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-#
-# $FreeBSD: ports/games/pysycache/Makefile,v 1.8 2012/11/17 05:57:49 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
+# $FreeBSD: games/pysycache/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pysycache
 PORTVERSION=	2.0
@@ -24,6 +20,7 @@ NO_BUILD=	yes
 WRKSRC=	${WRKDIR}/${PORTNAME}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|g' ${WRKSRC}/datas.py ${WRKSRC}/datas.py \
 		${WRKSRC}/datasclass.py ${WRKSRC}/pysybuttons.py ${WRKSRC}/pysyclick.py ${WRKSRC}/pysymove.py \
