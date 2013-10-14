@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: archivers/quazip/Makefile 325540 2013-08-28 15:40:54Z nivit $
+# $FreeBSD: archivers/quazip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	quazip
 PORTVERSION=	0.5.1
@@ -12,6 +12,7 @@ COMMENT=	Qt/C++ wrapper for ZIP/UNZIP package
 
 LICENSE=	LGPL21
 
+NO_STAGE=	yes
 QMAKE_ARGS=	PREFIX=${PREFIX} ${QMAKE_PRO}
 QMAKE_PRO=	${WRKSRC}/${PORTNAME}.pro
 
