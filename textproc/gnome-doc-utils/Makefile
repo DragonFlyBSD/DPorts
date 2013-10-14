@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/gnome-doc-utils/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: textproc/gnome-doc-utils/Makefile 327773 2013-09-20 23:17:30Z bapt $
 #   $MCom: ports/trunk/textproc/gnome-doc-utils/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-doc-utils
@@ -31,6 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		xml2po.1
 
+NO_STAGE=	yes
 post-install:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}/xml2po
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}/xml2po/modes
