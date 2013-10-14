@@ -1,5 +1,5 @@
 # Created by: mike
-# $FreeBSD: ports/textproc/xp/Makefile,v 1.12 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/xp/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xp
 PORTVERSION=	0.5
@@ -24,6 +24,7 @@ PORTDOCS=	api copying.txt index.html
 JARFILE=	${PORTNAME}.jar
 PLIST_FILES+=	%%JAVAJARDIR%%/${JARFILE}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_CMD} -n ">> Installing JAR as ${JAVAJARDIR}/${JARFILE}..."
 	@${MKDIR} ${JAVAJARDIR}
