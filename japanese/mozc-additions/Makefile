@@ -1,5 +1,5 @@
 # Created by: Daichi GOTO <daichi@FreeBSD.org>
-# $FreeBSD: japanese/mozc-additions/Makefile 323333 2013-07-20 04:02:49Z hrs $
+# $FreeBSD: japanese/mozc-additions/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	mozc-additions
 PORTVERSION=	1.11.1502.102
@@ -24,6 +24,7 @@ PLIST_FILES=	bin/ibus-daemon_restart \
 		bin/mozc_tool_hand_writing \
 		bin/mozc_tool_word_register
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${PLIST_FILES:S,bin/,${FILESDIR}/,} ${PREFIX}/bin
 
