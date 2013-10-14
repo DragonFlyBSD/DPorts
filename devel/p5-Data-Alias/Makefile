@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Alias/Makefile 324439 2013-08-09 14:26:21Z culot $
+# $FreeBSD: devel/p5-Data-Alias/Makefile 327851 2013-09-22 05:39:35Z sunpoet $
 
 PORTNAME=	Data-Alias
-PORTVERSION=	1.17
+PORTVERSION=	1.18
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,6 +13,7 @@ COMMENT=	Comprehensive set of aliasing operations
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
+NO_STAGE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
