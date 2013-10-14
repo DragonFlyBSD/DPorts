@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: textproc/syck/Makefile 315052 2013-03-23 17:51:36Z miwi $
+# $FreeBSD: textproc/syck/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	syck
 PORTVERSION=	0.70
@@ -14,4 +14,5 @@ USES=		bison
 CFLAGS+=	-fPIC
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
