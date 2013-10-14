@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: www/py-textile/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: www/py-textile/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	textile
 PORTVERSION=	2.1.5
@@ -17,4 +17,5 @@ PROJECTHOST=	pytextile
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
