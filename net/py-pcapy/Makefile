@@ -1,5 +1,5 @@
 # Created by: Marcin Jessa <yazzy@yazzy.org>
-# $FreeBSD: net/py-pcapy/Makefile 316758 2013-04-28 22:08:43Z antoine $
+# $FreeBSD: net/py-pcapy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pcapy
 PORTVERSION=	0.10.8
@@ -25,6 +25,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pcapy.so
 PORTDOCS=	README pcapy.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
