@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: devel/libsigc++12/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/libsigc++12/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libsigc++
 PORTVERSION=	1.2.7
@@ -20,4 +20,5 @@ USE_LDCONFIG=	yes
 USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
