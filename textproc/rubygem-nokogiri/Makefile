@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: textproc/rubygem-nokogiri/Makefile 323857 2013-07-28 22:31:09Z swills $
+# $FreeBSD: textproc/rubygem-nokogiri/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	nokogiri
 PORTVERSION=	1.6.0
@@ -19,4 +18,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/nokogiri
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
