@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: databases/freetds/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: databases/freetds/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	freetds
 PORTVERSION=	0.64
@@ -32,6 +32,7 @@ OPTIONS_RADIO=	ODBC
 OPTIONS_RADIO_ODBC=	IODBC UNIXODBC
 MSDBLIB_DESC=	MS SQL Server support (breaks databases/sybtcl)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
