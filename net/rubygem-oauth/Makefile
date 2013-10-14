@@ -1,5 +1,5 @@
 # Created by: wenheping <wenheping@gmail.com>
-# $FreeBSD: net/rubygem-oauth/Makefile 321604 2013-06-23 02:02:41Z swills $
+# $FreeBSD: net/rubygem-oauth/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	oauth
 PORTVERSION=	0.4.7
@@ -14,4 +14,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=		bin/oauth
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
