@@ -1,4 +1,4 @@
-# $FreeBSD: devel/delta/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: devel/delta/Makefile 328635 2013-09-29 00:07:26Z eadler $
 
 PORTNAME=	delta
 PORTVERSION=	2006.08.03
@@ -12,12 +12,12 @@ LICENSE=	BSD
 
 PLIST_FILES=	bin/delta bin/multidelta bin/topformflat
 
-USES=	gmake
+USES=		gmake
 
 do-install:
 .for file in delta multidelta
-	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/topformflat ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/topformflat ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
