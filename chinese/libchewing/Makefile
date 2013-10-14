@@ -1,5 +1,5 @@
 # Created by: Kuang-che Wu <kcwu@csie.org>
-# $FreeBSD: chinese/libchewing/Makefile 322366 2013-07-06 07:59:09Z bapt $
+# $FreeBSD: chinese/libchewing/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	libchewing
 PORTVERSION=	0.3.4
@@ -19,6 +19,7 @@ USE_BZIP2=	yes
 DATADIR=	${PREFIX}/share/chewing
 PROJECTHOST=	chewing
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
