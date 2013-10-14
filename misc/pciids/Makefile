@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/pciids/Makefile 325345 2013-08-25 13:06:45Z sunpoet $
+# $FreeBSD: misc/pciids/Makefile 330007 2013-10-10 14:36:11Z sunpoet $
 
 PORTNAME=	pciids
-PORTVERSION=	20130823
+PORTVERSION=	20131010
 CATEGORIES=	misc
 MASTER_SITES=	LOCAL/sunpoet
 
@@ -12,14 +12,15 @@ COMMENT=	Database of all known IDs used in PCI devices
 LICENSE=	BSD GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_XZ=		yes
 NO_BUILD=	yes
+USE_XZ=		yes
+
 PLIST_FILES=	%%DATADIR%%/pci.ids
 PLIST_DIRS=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/pci.ids ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/pci.ids ${STAGEDIR}${DATADIR}/
 
 # maintainer section:
 
