@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-aleph/Makefile 318464 2013-05-18 22:54:31Z hrs $
+# $FreeBSD: print/tex-aleph/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	aleph
 PORTVERSION=	0.0.r.4
@@ -75,6 +75,7 @@ MLINKS=	aleph.1 lamed.1 \
 	dvitype.1 odvitype.1 \
 	tangle.1 otangle.1
 
+NO_STAGE=	yes
 pre-configure:
 	for D in libs/obsdcompat libs/xpdf; do \
 		cd ${WRKDIR}/${DISTNAME}/$$D && \
