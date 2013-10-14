@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-OpenSSL-Bignum/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-OpenSSL-Bignum/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-OpenSSL-Bignum
 PORTVERSION=	0.04
@@ -17,4 +17,5 @@ MAKE_ARGS+=	PASTHRU_INC=-I${OPENSSLINC}
 
 MAN3=		Crypt::OpenSSL::Bignum::CTX.3 Crypt::OpenSSL::Bignum.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
