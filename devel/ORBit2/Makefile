@@ -1,5 +1,5 @@
 # Created by: Chia-liang Kao <clkao@CirX.ORG>
-# $FreeBSD: devel/ORBit2/Makefile 321730 2013-06-25 10:34:38Z kwm $
+# $FreeBSD: devel/ORBit2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 #   $MCom: ports/trunk/devel/ORBit2/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	ORBit2
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/src/orb/orb-core/orbit-typelib.c
