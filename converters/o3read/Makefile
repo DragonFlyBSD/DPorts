@@ -1,9 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	o3read
-# Date created:                 Aug 07, 2008
-# Whom:				samm
-#
-# $FreeBSD: ports/converters/o3read/Makefile,v 1.2 2012/11/17 05:55:03 svnexp Exp $
+# Created by: samm
+# $FreeBSD: converters/o3read/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	o3read
 PORTVERSION=	0.0.4
@@ -20,6 +16,7 @@ MLINKS=		o3read.1 o3totxt.1 o3read.1 o3tohtml.1
 PORTDOCS=	README COPYING ChangeLog
 PLIST_FILES=	bin/o3read bin/o3totxt bin/o3tohtml bin/utf8tolatin1
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/o3read ${PREFIX}/bin
 	@${INSTALL_PROGRAM} ${WRKSRC}/o3totxt ${PREFIX}/bin
