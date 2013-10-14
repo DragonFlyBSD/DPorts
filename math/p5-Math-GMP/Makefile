@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Math-GMP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-GMP/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-GMP
 PORTVERSION=	2.06
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::GMP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
