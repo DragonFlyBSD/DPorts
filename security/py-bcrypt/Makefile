@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/py-bcrypt/Makefile 315349 2013-03-27 04:56:27Z miwi $
+# $FreeBSD: security/py-bcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	bcrypt
 PORTVERSION=	0.3
@@ -24,4 +24,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PROJECTHOST=	py-bcrypt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
