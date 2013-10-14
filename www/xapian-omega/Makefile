@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-# $FreeBSD: www/xapian-omega/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: www/xapian-omega/Makefile 328855 2013-09-30 19:58:20Z bsam $
 
 PORTNAME=	xapian-omega
 PORTVERSION=	1.2.15
@@ -36,6 +36,7 @@ PORTDOCS=	cgiparams.html index.html omegascript.html overview.html \
 		${MORE_PORTDOCS}
 PORTEXAMPLES=	omega.conf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONV}
