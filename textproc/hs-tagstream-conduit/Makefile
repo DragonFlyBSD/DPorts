@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-tagstream-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-tagstream-conduit/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	tagstream-conduit
 PORTVERSION=	0.5.4
@@ -14,5 +14,6 @@ USE_CABAL=	attoparsec attoparsec-conduit>=0.5 blaze-builder \
 		blaze-builder-conduit>=0.5 case-insensitive conduit>=0.5 \
 		text transformers>=0.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
