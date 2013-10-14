@@ -1,5 +1,5 @@
-# Created by:	KOMATSU Shinichiro <koma2@jiro.c.u-tokyo.ac.jp>
-# $FreeBSD: ports/japanese/skk-jisyo-cdb/Makefile,v 1.10 2012/12/09 18:13:48 svnexp Exp $
+# Created by: KOMATSU Shinichiro <koma2@jiro.c.u-tokyo.ac.jp>
+# $FreeBSD: japanese/skk-jisyo-cdb/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 MAINTAINER=	meta+ports@vmeta.jp
 COMMENT=	CDB jisyo (dictionary) files for the SKK Japanese-input software
@@ -10,4 +10,5 @@ MASTERDIR=	${.CURDIR}/../skk-jisyo
 
 DESCR=		${.CURDIR}/pkg-descr
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
