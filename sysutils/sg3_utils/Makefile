@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: sysutils/sg3_utils/Makefile 327507 2013-09-17 22:48:50Z delphij $
+# $FreeBSD: sysutils/sg3_utils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sg3_utils
 PORTVERSION=	1.36
@@ -66,4 +66,5 @@ MAN8+=		sg_write_buffer.8
 MAN8+=		sg_write_long.8
 MAN8+=		sg_write_same.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
