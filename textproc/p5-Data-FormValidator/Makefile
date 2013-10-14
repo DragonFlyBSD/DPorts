@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Data-FormValidator/Makefile 325270 2013-08-23 13:53:12Z mat $
+# $FreeBSD: textproc/p5-Data-FormValidator/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Data-FormValidator
 PORTVERSION=	4.81
@@ -31,4 +31,5 @@ MAN3=		Data::FormValidator.3 \
 		Data::FormValidator::Filters.3 \
 		Data::FormValidator::Results.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
