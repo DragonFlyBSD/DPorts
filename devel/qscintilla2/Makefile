@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/qscintilla2/Makefile 311475 2013-02-03 18:16:07Z makc $
+# $FreeBSD: devel/qscintilla2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qscintilla2
 PORTVERSION=	${QSCI2_VERSION}
@@ -23,6 +23,7 @@ QMAKE_ARGS=	-unix PREFIX=${PREFIX}
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
