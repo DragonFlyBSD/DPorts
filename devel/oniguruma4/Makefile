@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/devel/oniguruma4/Makefile,v 1.48 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/oniguruma4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	oniguruma
 PORTVERSION=	4.7.1
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 DOCS=		HISTORY README doc/*
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|echo aout|echo elf|' \
 		-e 's|freebsd1|freebsd1.|' \
