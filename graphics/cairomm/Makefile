@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/cairomm/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: graphics/cairomm/Makefile 327888 2013-09-22 18:05:04Z bapt $
 #   $MCom: ports/graphics/cairomm/Makefile,v 1.19 2011/06/07 14:00:26 kwm Exp $
 
 PORTNAME=	cairomm
@@ -23,6 +23,7 @@ USE_GNOME=	gnomehack ltverhack
 CONFIGURE_ENV=	AUTOMAKE="${TRUE}" AUTOCONF="${TRUE}" DOXYGEN="${TRUE}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+NO_STAGE=	yes
 
 .if defined(NOPORTDOCS)
 CONFIGURE_ARGS+=	--disable-documentation
