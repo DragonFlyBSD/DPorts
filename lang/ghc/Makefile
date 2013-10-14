@@ -1,5 +1,5 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: lang/ghc/Makefile 327452 2013-09-17 06:40:21Z bapt $
+# $FreeBSD: lang/ghc/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ghc
 PORTVERSION=	7.6.3
@@ -63,6 +63,7 @@ OPTIONS_DEFINE+=	BOOT
 OPTIONS_DEFINE+=	BOOTH
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDYNAMIC}

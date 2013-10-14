@@ -1,5 +1,5 @@
 #
-# $FreeBSD: lang/ghc/bsd.cabal.mk 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: lang/ghc/bsd.cabal.mk 327461 2013-09-17 09:28:01Z bapt $
 #
 # bsd.cabal.mk -- Support for ports based on Haskell Cabal.
 #
@@ -137,7 +137,8 @@ RUN_DEPENDS+=	${dependencies}
 .endif
 
 .if defined(USE_GHC_NATIVE)
-USE_PERL5_BUILD=	5.8+
+USES+=		perl5
+USE_PERL5=	build
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
