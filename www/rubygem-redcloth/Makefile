@@ -1,8 +1,5 @@
-# Ports collection makefile for:	gem-redcloth
-# Date created:				27 Mai 2005
-# Whom:					Jonathan Weiss (<jw@innerewut.de>)
-#
-# $FreeBSD: ports/www/rubygem-redcloth/Makefile,v 1.22 2012/11/17 06:03:04 svnexp Exp $
+# Created by: Jonathan Weiss (<jw@innerewut.de>)
+# $FreeBSD: www/rubygem-redcloth/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	redcloth
 PORTVERSION=	4.2.9
@@ -19,4 +16,5 @@ GEM_NAME=	${DISTNAME}
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/redcloth
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
