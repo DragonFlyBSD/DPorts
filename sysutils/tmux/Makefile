@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: sysutils/tmux/Makefile 323874 2013-07-29 08:30:06Z gahr $
+# $FreeBSD: sysutils/tmux/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tmux
 PORTVERSION=	1.8
@@ -30,6 +30,7 @@ LIBEVENT2_DESC=	Use libevent version 2
 LIBEVENT_STATIC_DESC=	Build with static libevent
 BACKSPACE_DESC=	Build with tty/keys patch
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBEVENT2}
