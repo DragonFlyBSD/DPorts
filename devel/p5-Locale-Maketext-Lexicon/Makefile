@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Locale-Maketext-Lexicon
 PORTVERSION=	0.96
@@ -37,6 +37,7 @@ MAN3=		Locale::Maketext::Extract.3 \
 		Locale::Maketext::Lexicon::Msgcat.3 \
 		Locale::Maketext::Lexicon::Tie.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
