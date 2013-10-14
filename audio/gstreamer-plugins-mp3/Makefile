@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gstreamer-plugins-mp3
-# Date created:		2007-06-07
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/gstreamer-plugins-mp3/Makefile,v 1.5 2012/11/17 05:54:34 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: audio/gstreamer-plugins-mp3/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gstreamer-plugins
 PORTVERSION=	0.10.0
@@ -24,6 +20,7 @@ OPTIONS_MULTI=	MP3
 OPTIONS_MULTI_MP3=	MAD FLUENDO
 OPTIONS_DEFAULT=	MAD
 FLUENDO_DESC=	Use Fluendo Mp3 decoder
+NO_STAGE=	yes
 
 .include <bsd.port.options.mk>
 
