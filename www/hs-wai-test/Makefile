@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-wai-test/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-wai-test/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wai-test
 PORTVERSION=	1.3.1
@@ -14,5 +14,6 @@ USE_CABAL=	blaze-builder>=0.2.1.4 blaze-builder-conduit>=0.5 \
 		http-types>=0.7 HUnit>=1.2 network text>=0.7 \
 		transformers>=0.2.2 wai>=1.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
