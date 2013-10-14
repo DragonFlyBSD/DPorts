@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-CPAN-Inject/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-CPAN-Inject/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPAN-Inject
 PORTVERSION=	1.14
@@ -28,4 +28,5 @@ USE_PERL5=	configure
 MAN1=		cpaninject.1
 MAN3=		CPAN::Inject.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
