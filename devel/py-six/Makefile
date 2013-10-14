@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/py-six/Makefile 326590 2013-09-07 10:00:50Z rm $
+# $FreeBSD: devel/py-six/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	six
 PORTVERSION=	1.4.1
@@ -13,10 +13,19 @@ COMMENT=	Python 2 and 3 compatibility utilities
 LICENSE=	MIT
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/six.py \
 		%%PYTHON_SITELIBDIR%%/six.pyc \
 		%%PYTHON_SITELIBDIR%%/six.pyo
 
-.include <bsd.port.mk>
+NO_STAGE=	yes
+
+.include <bsd.port.pre.mk>
+
+post-install:
+.if ${PYTHON_REL} >= 320
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
+.endif
+
+.include <bsd.port.post.mk>
