@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: graphics/p5-GraphViz/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-GraphViz/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GraphViz
 PORTVERSION=	2.14
@@ -37,4 +37,5 @@ regression-test: build
 	cd ${WRKSRC} && ${MAKE} test
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
