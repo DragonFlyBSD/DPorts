@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: www/libapreq2/Makefile 324019 2013-07-31 09:14:11Z bapt $
+# $FreeBSD: www/libapreq2/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	libapreq2
 PORTVERSION=	2.13
@@ -15,6 +15,7 @@ USE_APACHE=	22+
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf libtool
+NO_STAGE=	yes
 CONFIGURE_ARGS+=	--with-apache2-apxs=${APXS} --with-expat=${LOCALBASE}
 
 MAKE_ENV+=     MAKE=${GMAKE} ## MakeMaker blows it without this
