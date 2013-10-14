@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ogmtools
-# Date created:		Sun Oct 20 13:06:13 UTC 2002
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: multimedia/ogmtools/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: multimedia/ogmtools/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	ogmtools
 PORTVERSION=	1.5
@@ -27,6 +23,7 @@ OPTIONS_DEFINE=	DVDREAD
 OPTIONS_DEFAULT=	DVDREAD
 DVDREAD_DESC=	DVD title chapter extraction via libdvdread
 
+NO_STAGE=	yes
 post-patch:
 # disable GNU auto* tools
 	@${FIND} ${WRKSRC} -type f -name "Makefile.in" | ${XARGS} \
