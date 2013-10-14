@@ -1,6 +1,5 @@
 # Created by: Moggie <moggie@elasticmind.net>
-# $FreeBSD: www/py-werkzeug/Makefile 327369 2013-09-16 07:36:43Z olivierd $
-#
+# $FreeBSD: www/py-werkzeug/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	werkzeug
 PORTVERSION=	0.9.4
@@ -22,6 +21,7 @@ PYDISTUTILS_NOEGGINFO=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
