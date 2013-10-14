@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/stratagus/Makefile 326035 2013-09-02 17:06:54Z bapt $
+# $FreeBSD: games/stratagus/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	stratagus
 PORTVERSION=	2.2.7
@@ -32,6 +32,7 @@ MAN6=		stratagus.6
 PORTDOCS=	*
 PLIST_FILES=	bin/png2stratagus bin/stratagus sbin/metaserver
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMIKMOD}
