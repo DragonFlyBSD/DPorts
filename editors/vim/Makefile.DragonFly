@@ -1,0 +1,3 @@
+.if defined(LITE)
+PORT_OPTIONS+= CSCOPE EXUBERANT_CTAGS
+.endif

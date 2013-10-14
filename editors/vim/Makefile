@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: editors/vim/Makefile 327459 2013-09-17 09:00:42Z bapt $
+# $FreeBSD: editors/vim/Makefile 328318 2013-09-25 21:16:43Z obrien $
 
 PORTNAME?=	vim
 #		! _NEVER_ reduce or lower PATCHLEVEL, even if the PATCHLEVEL
@@ -32,6 +32,7 @@ MAINTAINER?=	obrien@FreeBSD.org
 COMMENT?=	Vi "workalike", with many additional features
 
 SLAVEDIRS=	editors/vim-lite
+NO_STAGE=	yes
 
 .if !defined(LITE)
 .if defined(WITH_OPTIONS) || defined(WITH_VIM_OPTIONS)
@@ -234,6 +235,9 @@ post-install:
 
 show-options:
 	@${MAKE} -DWITH_OPTIONS showconfig
+	@${ECHO_CMD} ""
+	@${ECHO_CMD} "Put \"WITH_OPTIONS=yes\" -or- \"WITH_VIM_OPTIONS=yes\""
+	@${ECHO_CMD} "in your /etc/make.conf or /etc/ports.conf file to enable OPTIONS processing.
 
 .if defined(ONT_CHECKSUM)
 checksum:
