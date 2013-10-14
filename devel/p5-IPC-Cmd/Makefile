@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-IPC-Cmd/Makefile 326744 2013-09-08 15:14:17Z tobez $
+# $FreeBSD: devel/p5-IPC-Cmd/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IPC-Cmd
 PORTVERSION=	0.84
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	IPC::Cmd.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
