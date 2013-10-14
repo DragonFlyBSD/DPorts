@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: x11-fm/thunar-vfs/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: x11-fm/thunar-vfs/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	thunar-vfs
 PORTVERSION=	1.2.0
@@ -33,6 +33,7 @@ OPTIONS_DEFAULT=	NLS HAL DBUS STARTUP APIDOCS
 APIDOCS_DESC=	Install api documentation
 STARTUP_DESC=	Enable startup notification support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
