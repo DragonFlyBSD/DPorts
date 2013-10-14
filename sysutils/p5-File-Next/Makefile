@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: sysutils/p5-File-Next/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: sysutils/p5-File-Next/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	File-Next
 PORTVERSION=	1.12
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Next.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
