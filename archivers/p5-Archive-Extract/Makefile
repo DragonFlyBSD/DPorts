@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Extract/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-Archive-Extract/Makefile 328598 2013-09-28 17:12:17Z sunpoet $
 
 PORTNAME=	Archive-Extract
 PORTVERSION=	0.68
@@ -15,8 +15,6 @@ LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Archive::Extract.3
 
 .include <bsd.port.pre.mk>
 
