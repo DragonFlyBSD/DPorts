@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: security/openvas-libraries/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/openvas-libraries/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openvas-libraries
 PORTVERSION=	2.0.3
@@ -21,6 +21,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		libopenvas-config.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 
 .include <bsd.port.mk>
