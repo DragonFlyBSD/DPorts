@@ -1,4 +1,4 @@
-# $FreeBSD: math/kig/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/kig/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	kig
 PORTVERSION=	${KDE4_VERSION}
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	PYTHON
 OPTIONS_DEFAULT=	PYTHON
 PYTHON_DESC=	Support for Python scripting (requires Boost)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
