@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: misc/gctpc/Makefile 320351 2013-06-09 16:57:14Z miwi $
+# $FreeBSD: misc/gctpc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gctpc
 PORTVERSION=	2.0
@@ -20,6 +20,7 @@ ALL_TARGET=	libgctpc.so.1
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
