@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: devel/p5-EV/Makefile 326335 2013-09-04 23:16:09Z bapt $
+# $FreeBSD: devel/p5-EV/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	EV
 PORTVERSION=	4.15
@@ -23,4 +23,5 @@ MAN3=		EV.3 \
 		EV::MakeMaker.3 \
 		EV::libev.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
