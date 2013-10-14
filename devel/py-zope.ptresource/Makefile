@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.ptresource
-# Date created:				Nov 16, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.ptresource/Makefile,v 1.3 2012/11/17 05:56:54 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.ptresource/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.ptresource
 PORTVERSION=	3.9.0
@@ -25,5 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.browserresource>=0:${PORTSDIR}/devel/py
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
