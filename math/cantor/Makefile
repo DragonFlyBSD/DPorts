@@ -1,4 +1,4 @@
-# $FreeBSD: math/cantor/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/cantor/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	cantor
 PORTVERSION=	${KDE4_VERSION}
@@ -28,6 +28,7 @@ MAXIMA_DESC=	Maxima backend
 OCTAVE_DESC=	Octave backend
 R_DESC=		R backend
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMAXIMA}
