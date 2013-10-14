@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/py-formencode/Makefile 318585 2013-05-20 08:55:29Z miwi $
+# $FreeBSD: www/py-formencode/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	formencode
 PORTVERSION=	1.2.6
@@ -25,6 +25,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
