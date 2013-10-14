@@ -1,5 +1,4 @@
-# Creatd by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: devel/py-meliae/Makefile 320848 2013-06-13 23:02:59Z sbz $
+# $FreeBSD: devel/py-meliae/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	meliae
 PORTVERSION=	0.4.0
@@ -22,4 +21,5 @@ PYDISTUTILS_PKGVERSION=	${PORTVERSION}.final.0
 regression-test: extract
 	(cd ${WRKSRC}; ${MAKE} check)
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
