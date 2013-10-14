@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/pear-channel-symfony2/bsd.symfony2.mk,v 1.1 2012/11/18 08:03:23 svnexp Exp $
+# $FreeBSD: devel/pear-channel-symfony2/bsd.symfony2.mk 307519 2012-11-17 17:15:03Z pawel $
 
 MASTER_SITES?=	http://pear.symfony.com/get/
 PKGNAMEPREFIX?=	pear-
