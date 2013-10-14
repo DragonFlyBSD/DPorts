@@ -1,4 +1,4 @@
-# $FreeBSD: ports/converters/cl-babel/Makefile,v 1.5 2013/01/26 15:07:23 svnexp Exp $
+# $FreeBSD: converters/cl-babel/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	babel
 PORTVERSION=	2010.01.16
@@ -22,6 +22,7 @@ NO_BUILD=	yes
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ASDF_PATHNAME}
 	@${MKDIR} ${ASDF_PATHNAME}/src
