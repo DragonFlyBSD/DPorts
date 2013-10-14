@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/java/jdom/Makefile,v 1.22 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jdom/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jdom
 PORTVERSION=	1.1.1
@@ -29,6 +29,7 @@ MAKE_ENV+=	CLASSPATH=${JAVALIBDIR}/jaxen-jdom.jar
 
 PLIST_FILES=	%%JAVAJARDIR%%/jdom.jar
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/jdom.jar..."
 	@${MKDIR} ${JAVAJARDIR}
