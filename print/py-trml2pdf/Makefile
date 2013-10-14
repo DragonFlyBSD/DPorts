@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-trml2pdf
-# Date created:				22 November 2009
-# Whom:					Kevin Golding <ports@caomhin.org>
-#
-# $FreeBSD: ports/print/py-trml2pdf/Makefile,v 1.3 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: Kevin Golding <ports@caomhin.org>
+# $FreeBSD: print/py-trml2pdf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	trml2pdf
 PORTVERSION=	1.2
@@ -26,6 +22,7 @@ USE_PYTHON=	yes
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PYTHON_SITELIBDIR}/trml2pdf
 	@${INSTALL_SCRIPT} ${WRKSRC}/trml2pdf/* ${PYTHON_SITELIBDIR}/trml2pdf
