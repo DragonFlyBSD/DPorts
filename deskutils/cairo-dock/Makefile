@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/cairo-dock/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: deskutils/cairo-dock/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	cairo-dock
 DISTVERSION=	3.2.1
@@ -24,13 +24,13 @@ USE_GNOME=	gnomehack glib20 gtk20 librsvg2 libxml2
 USE_LDCONFIG=	yes
 USE_XORG=	xrender xtst
 USES=		cmake gettext pkgconfig
-MAKE_JOBS_SAFE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CMAKE_ARGS+=	-Dinstall-pc-path:STRING="${LOCALBASE}/libdata/pkgconfig"
 
 MAN1=		cairo-dock.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -type f -name "*" | ${XARGS} ${REINPLACE_CMD} -e \
 	    's|/usr/share/pixmaps/|${LOCALBASE}/share/pixmaps/|g; \
