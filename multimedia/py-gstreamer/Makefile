@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/py-gstreamer/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/py-gstreamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.20 2008/07/26 17:21:38 marcus Exp $
 
 PORTNAME=	gstreamer
@@ -30,6 +30,7 @@ PLIST_SUB=	VERSION="${GST_VERSION}"
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE} ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|DLFCN|dl|g' ${WRKSRC}/gst/__init__.py
 	@${REINPLACE_CMD} -e 's|alsasink|osssink|g' -e 's|alsasrc|osssrc|g' \
