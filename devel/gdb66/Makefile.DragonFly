@@ -12,5 +12,5 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's/$$/ [GDB v${PORTVERSION} for ${OPSYS}]/' \
 		${WRKSRC}/gdb/version.in
-	@${REINPLACE_CMD} -e 's,^LIBICONV =.*,LIBICONV=-L${LOCALBASE}/lib -liconv,' \
+	@${REINPLACE_CMD} -e 's,^LIBICONV =.*,LIBICONV=-L${LOCALBASE}/lib ${ICONV_LIB},' \
 		${WRKSRC}/gdb/Makefile.in

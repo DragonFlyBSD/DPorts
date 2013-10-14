@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/gdb66/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: devel/gdb66/Makefile 329689 2013-10-07 10:56:41Z bapt $
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
@@ -13,7 +13,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}:gdb
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT?=	GNU GDB of newer version than comes with the system
 
-LATEST_LINK?=	gdb66
+PKGNAMESUFFIX=	66
 
 OPTIONS_DEFINE=	INSIGHT
 INSIGHT_DESC=	Tcl/Tk GUI (experimental!)
@@ -36,6 +36,7 @@ VER=	${PORTVERSION:S/.//}
 PLIST_SUB=	VER=${VER}
 MAN1=	gdb${VER}.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MINSIGHT}
