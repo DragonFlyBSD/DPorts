@@ -1,5 +1,5 @@
 # Created by: Paul Traina <pst@FreeBSD.org>
-# $FreeBSD: palm/pilot-link/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# $FreeBSD: palm/pilot-link/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	pilot-link
 PORTVERSION=	0.12.5
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 OPTIONS_DEFINE=	PNG THREADS USB
 USB_DESC=	Compile with USB via libusb support (READ MANUAL!)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTHREADS}
