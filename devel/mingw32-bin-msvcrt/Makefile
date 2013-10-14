@@ -1,5 +1,5 @@
 # Created by: Lev A. Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: ports/devel/mingw32-bin-msvcrt/Makefile,v 1.25 2012/11/17 05:56:00 svnexp Exp $
+# $FreeBSD: devel/mingw32-bin-msvcrt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	bin-msvcrt
 PORTVERSION=	r${RUNTIMEVERSION}.a${APIVERSION:S/-/./}
@@ -27,6 +27,7 @@ NO_WRKSUBDIR=	yes
 MAKE_ARGS+=	INSTALL_AS_USER=yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ( (${OSVERSION} >= 900000 && ${OSVERSION} < 900012) || ${OSVERSION} < 800505 )
