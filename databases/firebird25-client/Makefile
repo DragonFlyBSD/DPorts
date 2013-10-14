@@ -1,8 +1,9 @@
 # Created by: Alonso Cárdenas Márquez <acm@FreeBSD.org>
-# $FreeBSD: ports/databases/firebird25-client/Makefile,v 1.3 2012/12/18 23:19:31 svnexp Exp $
+# $FreeBSD: databases/firebird25-client/Makefile 329147 2013-10-03 06:56:20Z acm $
 
 PORTNAME=	firebird
-PKGNAMESUFFIX=	-client
+PORTREVISION=	2
+PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}-client
 
 COMMENT=	Firebird-2 database client
 
@@ -12,4 +13,5 @@ PLIST=		${PKGDIR}/pkg-plist.client
 
 CLIENT_ONLY=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
