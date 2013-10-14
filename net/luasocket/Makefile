@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	luasocket
-# Date created:				17 December 2002
-# Whom:					Jan Hornyak <pav@oook.cz>
-#
-# $FreeBSD: ports/net/luasocket/Makefile,v 1.15 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Jan Hornyak <pav@oook.cz>
+# $FreeBSD: net/luasocket/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	luasocket
 PORTVERSION=	2.0.2
@@ -28,6 +24,7 @@ MAKE_ENV=	COMPATDIR="${COMPAT_SRC}" \
 		COMPAT_OBJ="${COMPAT_SRC}/compat-5.1.o"
 .endif
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/makefile ${WRKSRC}/Makefile
 
