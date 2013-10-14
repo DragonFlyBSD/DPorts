@@ -1,9 +1,5 @@
-# New ports collection makefile for: svmlight
-# Date created:	    2006-07-18
-# Whom:	    Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/science/svmlight/Makefile,v 1.8 2012/11/17 06:01:00 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: science/svmlight/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	svmlight
 PORTVERSION=	6.02
@@ -26,6 +22,7 @@ NO_WRKSUBDIR=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/include/svmlight
 	${INSTALL_DATA} ${WRKSRC}/*.h ${PREFIX}/include/svmlight
