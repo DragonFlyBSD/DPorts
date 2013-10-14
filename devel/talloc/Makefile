@@ -1,4 +1,4 @@
-# $FreeBSD: devel/talloc/Makefile 324881 2013-08-17 23:51:12Z mva $
+# $FreeBSD: devel/talloc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=		talloc
 PORTVERSION=		2.0.8
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 OPTIONS_DEFINE=		PYTHON
 OPTIONS_DEFAULT=	PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAN3=			talloc.3
@@ -48,10 +49,8 @@ CONFIGURE_ENV+=		NOCOLOR=yes
 MAKE_ENV+=		NOCOLOR=yes
 
 .if !defined(DISABLE_MAKE_JOBS) && !defined(MAKE_JOBS_UNSAFE)
-.if defined(MAKE_JOBS_SAFE) || defined(FORCE_MAKE_JOBS)
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS_NUMBER}
 _MAKE_JOBS=		--jobs=${MAKE_JOBS_NUMBER}
-.endif
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
