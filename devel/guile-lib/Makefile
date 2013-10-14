@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/guile-lib/Makefile 313246 2013-03-02 14:46:09Z miwi $
+# $FreeBSD: devel/guile-lib/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	guile-lib
 PORTVERSION=	0.2.2
@@ -17,4 +17,5 @@ GNU_CONFIGURE=	yes
 
 INFO=	guile-library
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
