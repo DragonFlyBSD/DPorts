@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-orbit/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/py-orbit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/py-orbit/Makefile,v 1.1 2008/09/23 20:08:04 mezz Exp $
 
 PORTNAME=	orbit
@@ -24,4 +24,5 @@ USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 ORBIT_CONFIG=	${LOCALBASE}/bin/orbit2-config
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
