@@ -1,5 +1,5 @@
 # Created by: Andrey Zonov <andrey@zonov.org>
-# $FreeBSD: ports/devel/py-msgpack/Makefile,v 1.5 2012/12/16 20:15:01 svnexp Exp $
+# $FreeBSD: devel/py-msgpack/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	msgpack
 PORTVERSION=	0.2.2
@@ -19,4 +19,5 @@ PYDISTUTILS_INSTALLARGS=	-O 1 -N -Z -S ${PYTHON_SITELIBDIR} -d ${PYEASYINSTALL_S
 PYDISTUTILS_PKGNAME=	${PORTNAME}_python
 PYEASYINSTALL_ARCHDEP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
