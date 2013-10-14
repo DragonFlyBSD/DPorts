@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@netcologne.de>
-# $FreeBSD: devel/libowfat/Makefile 317875 2013-05-11 13:15:45Z bapt $
+# $FreeBSD: devel/libowfat/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libowfat
 PORTVERSION=	0.29
@@ -18,6 +18,7 @@ MAKEFILE=	GNUmakefile
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS DOCS
 OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAKE_ENV+=	INSTALL="${INSTALL}"
