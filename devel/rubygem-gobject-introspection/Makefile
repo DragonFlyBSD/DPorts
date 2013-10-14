@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-gobject-introspection/Makefile 320381 2013-06-09 18:46:35Z swills $
+# $FreeBSD: devel/rubygem-gobject-introspection/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	2.0.2
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
