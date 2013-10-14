@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: security/py-m2crypto/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: security/py-m2crypto/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	m2crypto
 PORTVERSION=	0.21.1
@@ -21,6 +21,7 @@ USE_PYDISTUTILS=yes
 PYDISTUTILS_BUILDARGS=	build_ext --openssl="${OPENSSLBASE}"
 PYDISTUTILS_PKGNAME=	M2Crypto
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|setuptools|do_not_use_&|; /test_suite/d' ${WRKSRC}/${PYSETUP}
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|; s|$$(PYVER)|${PYTHON_VER}|' ${WRKSRC}/SWIG/Makefile
