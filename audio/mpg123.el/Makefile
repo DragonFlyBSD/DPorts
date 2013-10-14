@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: audio/mpg123.el/Makefile 320212 2013-06-07 15:23:26Z wg $
+# $FreeBSD: audio/mpg123.el/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpg123.el
 PORTVERSION=	1.52
@@ -23,6 +23,7 @@ XELISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
 FETCH_ARGS=	-AR
 FETCH_BEFORE_ARGS=	-o mpg123el.cgi?${PORTVERSION}
+NO_STAGE=	yes
 
 do-install:
 	${MKDIR} ${ELISPDIR}
