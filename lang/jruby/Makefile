@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/jruby/Makefile 319404 2013-05-30 05:55:03Z knu $
+# $FreeBSD: lang/jruby/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	jruby
 PORTVERSION=	1.7.4
@@ -26,6 +26,7 @@ SHEBANG_FILES=	rake spec spec_translator Rakefile '*.rb'
 
 PLIST_SUB+=	PORTNAME=${PORTNAME} PORTVERSION=${PORTVERSION} JRUBY_HOME=${JRUBY_HOME:S,${PREFIX}/,,}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-patch:
