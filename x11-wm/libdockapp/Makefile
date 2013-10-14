@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DockApp Library
-# Date created:		17 July 1999
-# Whom:			Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: x11-wm/libdockapp/Makefile 322787 2013-07-11 17:13:36Z xride $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: x11-wm/libdockapp/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	libdockapp
 PORTVERSION=	0.6.2
@@ -20,6 +16,7 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--without-font --without-examples
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${PREFIX}/lib/X11/fonts/dockapp
 .for file in fonts.alias fonts.dir *.pcf.gz
