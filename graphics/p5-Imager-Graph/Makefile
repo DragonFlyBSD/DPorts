@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: graphics/p5-Imager-Graph/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Imager-Graph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Imager-Graph
 PORTVERSION=	0.10
@@ -27,4 +27,5 @@ MAN3=		Imager::Graph.3 \
 		Imager::Graph::Util.3 \
 		Imager::Graph::Vertical.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
