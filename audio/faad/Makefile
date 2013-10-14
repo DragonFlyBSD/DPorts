@@ -1,5 +1,5 @@
 # Created by: Sean McGovern <sean@sfarc.net>
-# $FreeBSD: audio/faad/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/faad/Makefile 328006 2013-09-23 14:04:36Z bapt $
 
 PORTNAME=	faad2
 PORTVERSION=	2.7
@@ -21,10 +21,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 USE_LDCONFIG=	yes
 
-MAN1=		faad.1
-
-.include <bsd.port.pre.mk>
-
 post-extract:
 	@${LN} -sf faad.man ${WRKSRC}/frontend/faad.1
 
@@ -43,4 +39,4 @@ post-patch:
 pre-configure:
 	@cd ${WRKSRC}; ${SETENV} ${AUTOTOOLS_ENV} ${LIBTOOLIZE} --automake
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
