@@ -1,4 +1,4 @@
-# $FreeBSD: audio/opus/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: audio/opus/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	opus
 PORTVERSION=	1.0.3
@@ -21,10 +21,10 @@ CONFIGURE_ARGS=	--enable-custom-modes \
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${ARCH} == "arm"
 CONFIGURE_ARGS+=--enable-fixed-point
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
