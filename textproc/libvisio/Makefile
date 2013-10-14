@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libvisio/Makefile 326836 2013-09-09 18:20:04Z sunpoet $
+# $FreeBSD: textproc/libvisio/Makefile 328065 2013-09-23 21:46:48Z bapt $
 
 PORTNAME=	libvisio
 PORTVERSION=	0.0.31
