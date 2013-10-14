@@ -1,5 +1,5 @@
 # Created by: FreeBSD GNOME Team <gnome@FreeBSD.org>
-# $FreeBSD: devel/ndesk-dbus/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/ndesk-dbus/Makefile 327888 2013-09-22 18:05:04Z bapt $
 #   $MCom: ports/devel/ndesk-dbus/Makefile,v 1.2 2008/01/14 22:35:41 mezz Exp $
 
 PORTNAME=	ndesk-dbus
@@ -16,6 +16,7 @@ RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 USE_GMAKE=	yes
 USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 DOCS=		AUTHORS COPYING README
 
