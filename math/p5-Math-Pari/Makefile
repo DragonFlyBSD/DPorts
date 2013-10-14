@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Pari/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-Pari/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Pari
 PORTVERSION=	2.01080605
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	parilib="-L${LOCALBASE}/lib -lpari" \
 
 MAN3=		Math::Pari.3 Math::libPARI.3 Math::PariInit.3
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's/2001004/2003000/' ${WRKSRC}/Makefile.PL
 
