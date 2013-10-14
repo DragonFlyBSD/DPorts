@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@FreeBSD.org>
-# $FreeBSD: www/py-beaker/Makefile 323086 2013-07-16 05:02:29Z wen $
+# $FreeBSD: www/py-beaker/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	beaker
 PORTVERSION=	1.6.4
@@ -15,4 +15,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Beaker
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
