@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/asis/Makefile 323389 2013-07-21 14:17:04Z marino $
+# $FreeBSD: lang/asis/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	asis
 PORTVERSION=	2011
@@ -20,6 +20,7 @@ DESTINY=	${WRKDIR}/destino
 MAKE_ENV=	DESTDIR=${DESTINY} \
 		PROCESSORS=${MAKE_JOBS_NUMBER}
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e 's|OPSYS|ASISOPSYS|g' \
 		${WRKSRC}/Makefile \
