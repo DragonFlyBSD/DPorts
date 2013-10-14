@@ -1,5 +1,5 @@
 # Created by: vsevolod
-# $FreeBSD: devel/libev/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/libev/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libev
 PORTVERSION=	4.15
@@ -19,6 +19,7 @@ MAN3=		ev.3
 
 PKGCONFIGDIR?=	${PREFIX}/libdata/pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e 's|%PREFIX%|${PREFIX}|g ; s|%VERSION%|${PORTVERSION}|g' \
 		${FILESDIR}/libev.pc.in > ${WRKDIR}/libev.pc
