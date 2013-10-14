@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: devel/boost-all/Makefile 321850 2013-06-27 06:23:36Z bapt $
+# $FreeBSD: devel/boost-all/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	boost-all
 
@@ -17,6 +17,7 @@ PYTHON_DESC=	Boost.Python - interfacing Python and C++
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include "common.mk"
 
 LIBRARIES_RUN_DEPENDS=	${LOCALBASE}/lib/libboost_thread.so:${PORTSDIR}/devel/boost-libs
