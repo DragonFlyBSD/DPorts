@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-Tie-ToObject/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-Tie-ToObject/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-ToObject
 PORTVERSION=	0.03
@@ -18,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		Tie::ToObject.3
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e '/Test::/d' ${WRKSRC}/Makefile.PL
 
