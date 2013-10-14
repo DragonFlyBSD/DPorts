@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tinyxml
-# Date created:	   28 July 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/tinyxml/Makefile,v 1.13 2012/11/17 06:02:23 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/tinyxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	tinyxml
 PORTVERSION=	2.6.2
@@ -27,6 +23,7 @@ PLIST_SUB+=	PROFILE="@comment "
 PLIST_SUB+=	PROFILE=""
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.prev
 	@${SED} -e "s=%%SHLIB_MAJOR%%=${SHLIB_MAJOR}=g" \

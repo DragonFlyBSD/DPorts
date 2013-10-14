@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/tinyxml/files/Makefile,v 1.2 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/tinyxml/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 # $Id$
 
 LIB = 	tinyxml
