@@ -1,5 +1,5 @@
 # Created by: Pete French <pete@twisted.org.uk>
-# $FreeBSD: lang/libobjc2/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: lang/libobjc2/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	libobjc2
 PORTVERSION=	1.7
@@ -9,6 +9,9 @@ MASTER_SITES=	http://download.gna.org/gnustep/
 MAINTAINER=	theraven@FreeBSD.org
 COMMENT=	Replacement Objective-C runtime supporting modern Objective-C features
 
+SSP_UNSAFE=	yes
+
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USES=		cmake
