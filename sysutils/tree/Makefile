@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: ports/sysutils/tree/Makefile,v 1.23 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/tree/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tree
 PORTVERSION=	1.6.0
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/tree
 
 PORTDOCS=	CHANGES README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
