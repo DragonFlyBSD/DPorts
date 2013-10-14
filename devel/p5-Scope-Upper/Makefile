@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Scope-Upper/Makefile 326899 2013-09-10 12:55:09Z tobez $
+# $FreeBSD: devel/p5-Scope-Upper/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Scope-Upper
 PORTVERSION=	0.24
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Scope::Upper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
