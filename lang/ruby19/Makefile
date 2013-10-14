@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby19/Makefile 322794 2013-07-11 20:07:33Z swills $
+# $FreeBSD: lang/ruby19/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -48,6 +48,7 @@ OPTIONS_DEFINE=	RDOC DEBUG
 RDOC_DESC=	Build and install Rdoc indexes
 DEBUG_DESC=	Compile-in debug info
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # PORTEPOCH/PORTREVISION hack
@@ -60,7 +61,6 @@ _SUF2=	,${PORTEPOCH}
 _SUF1=	_${PORTREVISION}
 .endif
 
-PKGNAMESUFFIX=	#empty
 CFLAGS+=	${PTHREAD_CFLAGS}	# Keep this, else ruby will fail to load
 LDFLAGS+=	${PTHREAD_LIBS}		# libraries dependent op libpthread.
 
@@ -81,6 +81,7 @@ CONFIGURE_ENV=	CFLAGS="-I${LOCALBASE}/include ${CFLAGS}" \
 MLINKS=		${RUBY_NAME}.1 ruby.1
 PLIST_SUB+=	IF_DEFAULT=""
 .else
+PKGNAMESUFFIX=	${RUBY_VER:C/\.//}
 PLIST_SUB+=	IF_DEFAULT="@comment "
 .endif
 
