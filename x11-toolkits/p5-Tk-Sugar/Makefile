@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Sugar/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: x11-toolkits/p5-Tk-Sugar/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
 
 PORTNAME=	Tk-Sugar
 PORTVERSION=	1.093.190
@@ -16,7 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Tk::Sugar.3
 
 .include <bsd.port.mk>
