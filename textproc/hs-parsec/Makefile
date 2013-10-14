@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-parsec/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-parsec/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	parsec
 PORTVERSION=	3.1.3
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	mtl text>=0.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
