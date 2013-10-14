@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <demon@gpad.ac.ru>
-# $FreeBSD: textproc/man2html/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/man2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	man2html
 PORTVERSION=	3.0.1
@@ -20,6 +20,7 @@ CGIDIR=		${PREFIX}/www/cgi-bin
 MAN1=		man2html.1
 PLIST_FILES=	bin/man2html
 
+NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e "s#/usr/local/bin/perl#${PERL5}#" ${WRKSRC}/man.cgi ${WRKSRC}/man2html
 
