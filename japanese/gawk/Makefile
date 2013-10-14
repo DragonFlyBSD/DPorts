@@ -1,5 +1,5 @@
 # Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-# $FreeBSD: japanese/gawk/Makefile 322852 2013-07-12 16:32:50Z bapt $
+# $FreeBSD: japanese/gawk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	gawk
 PORTVERSION=	3.0.6
@@ -24,6 +24,7 @@ MAN1=		gawk.1 igawk.1
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
