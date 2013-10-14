@@ -1,9 +1,5 @@
-# Ports collection makefile for:  xmlcatmgr
-# Date created:			  Sat May 24, 2003
-# Whom:				  Hiroki Sato <hrs@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/xmlcatmgr/Makefile,v 1.14 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: Hiroki Sato <hrs@FreeBSD.org>
+# $FreeBSD: textproc/xmlcatmgr/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmlcatmgr
 PORTVERSION=	2.2
@@ -38,6 +34,7 @@ CATALOG_PORTS_SGML?=	${PREFIX}/share/sgml/catalog.ports
 CATALOG_MASTER_XML?=	${PREFIX}/share/xml/catalog
 CATALOG_PORTS_XML?=	${PREFIX}/share/xml/catalog.ports
 
+NO_STAGE=	yes
 post-install:
 	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 	@${CAT} ${PKGMESSAGE}
