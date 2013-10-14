@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: java/classpath/Makefile 327334 2013-09-15 08:15:41Z az $
+# $FreeBSD: java/classpath/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	classpath
 PORTVERSION=	0.99
@@ -58,6 +58,7 @@ GMP_DESC=	Enable native java.math.BigInteger
 GTK2_DESC=	Enable Gtk+ AWT peer
 QT4_DESC=	Enable Qt AWT peer
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MECJ}
