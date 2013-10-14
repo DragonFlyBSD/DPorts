@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: graphics/gdk-pixbuf2/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: graphics/gdk-pixbuf2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/trunk/graphics/gdk-pixbuf2/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	gdk-pixbuf
@@ -29,6 +29,7 @@ MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
 OPTIONS_DEFINE=	JASPER JPEG PNG TIFF
 OPTIONS_DEFAULT=JASPER JPEG PNG TIFF
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
