@@ -1,11 +1,5 @@
-# New ports collection makefile for:	fixrtf
-# Date created:		3 Mar 2006
-# Whom:			Xin LI <delphij@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/fixrtf/Makefile,v 1.4 2012/11/17 06:01:56 svnexp Exp $
-#
-# This port is self contained in the src directory.
-#
+# Created by: Xin LI <delphij@FreeBSD.org>
+# $FreeBSD: textproc/fixrtf/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	fixrtf
 PORTVERSION=	0.1.20060303
@@ -26,6 +20,7 @@ WRKSRC=		${WRKDIR}/src
 
 SRC=		${.CURDIR}/src
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
