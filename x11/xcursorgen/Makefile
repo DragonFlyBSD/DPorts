@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xcursorgen/Makefile,v 1.10 2013/02/04 03:35:58 svnexp Exp $
+# $FreeBSD: x11/xcursorgen/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcursorgen
 PORTVERSION=	1.0.5
@@ -18,4 +18,5 @@ PLIST_FILES=	bin/xcursorgen
 
 MAN1=		xcursorgen.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
