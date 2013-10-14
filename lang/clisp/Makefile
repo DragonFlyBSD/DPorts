@@ -1,5 +1,5 @@
 # Created by: Jeff Brown <jabrown@caida.org>
-# $FreeBSD: lang/clisp/Makefile 317572 2013-05-07 06:01:00Z jgh $
+# $FreeBSD: lang/clisp/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	clisp
 PORTVERSION=	2.49
@@ -54,6 +54,7 @@ OPTIONS_DEFAULT=	RAWSOCK WILDCARD ZLIB
 MAN1=		clisp.1 clisp-link.1
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Semgentation fault in amd64 when using 'mmap(2)', errno = EINVAL.
