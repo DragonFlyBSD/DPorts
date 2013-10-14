@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: ports/textproc/cl-meta/Makefile,v 1.13 2013/02/18 14:40:00 svnexp Exp $
+# $FreeBSD: textproc/cl-meta/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	meta
 PORTVERSION=	0.1
@@ -20,6 +20,7 @@ NO_BUILD=	yes
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ASDF_PATHNAME}
 	@${INSTALL_DATA} ${WRKSRC}/*.lisp ${ASDF_PATHNAME}

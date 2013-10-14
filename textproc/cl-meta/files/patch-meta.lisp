@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/cl-meta/files/patch-meta.lisp,v 1.2 2012/11/17 06:01:53 svnexp Exp $
+$FreeBSD: textproc/cl-meta/files/patch-meta.lisp 300897 2012-07-14 14:29:18Z beat $
 
 --- meta.lisp.orig
 +++ meta.lisp
