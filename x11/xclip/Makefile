@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xclip/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: x11/xclip/Makefile 328541 2013-09-28 02:34:19Z eadler $
 
 PORTNAME=	xclip
 PORTVERSION=	0.12
@@ -17,8 +17,7 @@ USE_XORG=	x11 xmu
 USES=	gmake
 GNU_CONFIGURE=	yes
 
-MAN1=		xclip.1 xclip-copyfile.1
-PLIST_FILES=	bin/xclip bin/xclip-copyfile bin/xclip-cutfile bin/xclip-pastefile
+PLIST_FILES=	bin/xclip bin/xclip-copyfile bin/xclip-cutfile bin/xclip-pastefile man/man1/xclip.1.gz man/man1/xclip-copyfile.1.gz
 
 pre-configure:
 	@cd ${WRKSRC}; ./bootstrap
