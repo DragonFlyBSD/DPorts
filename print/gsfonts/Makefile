@@ -1,5 +1,5 @@
 # Created by: giffunip
-# $FreeBSD: print/gsfonts/Makefile 316982 2013-05-01 02:55:55Z hrs $
+# $FreeBSD: print/gsfonts/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	gsfonts
 PORTVERSION=	8.11
@@ -28,6 +28,7 @@ CJKFONTS?=	std.ja_JP/Ryumin-Light \
 		std.zh_CN/STSong-Light \
 		std.zh_CN/MSung-Light
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${FONTSDIR}
 	cd ${WRKSRC}/fonts && \
