@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: net-p2p/eiskaltdcpp-lib/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: net-p2p/eiskaltdcpp-lib/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	eiskaltdcpp-lib
 PORTVERSION=	2.2.4
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	LUA PCRE IDN DHT
 OPTIONS_DEFAULT=	IDN DHT
 DHT_DESC=	DHT support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CMAKE_ARGS+=	-DINSTALL_HEADERS:BOOL=ON
