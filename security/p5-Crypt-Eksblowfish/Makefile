@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-Eksblowfish/Makefile 326999 2013-09-11 18:03:40Z az $
+# $FreeBSD: security/p5-Crypt-Eksblowfish/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Eksblowfish
 PORTVERSION=	0.009
@@ -25,4 +25,5 @@ MAN3=	Crypt::Eksblowfish.3 \
 	Crypt::Eksblowfish::Subkeyed.3 \
 	Crypt::Eksblowfish::Uklblowfish.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
