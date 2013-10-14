@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: emulators/bochs/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: emulators/bochs/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	bochs
 PORTVERSION=	2.6.2
@@ -90,6 +90,7 @@ MAN5=		bochsrc.5
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MTERM) && empty(PORT_OPTIONS:MWXGTK) && empty(PORT_OPTIONS:MX11)
