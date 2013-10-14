@@ -1,5 +1,5 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: devel/hs-happy/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-happy/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	happy
 PORTVERSION=	1.18.10
@@ -21,5 +21,6 @@ EXECUTABLE=	happy
 
 INSTALL_PORTEXAMPLES=	@(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
