@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Builder/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Builder/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Format-Builder
 PORTVERSION=	0.81
@@ -35,6 +35,7 @@ MAN3=		DateTime::Format::Builder.3 DateTime::Format::Builder::Parser.3 \
 PORTDOCS=	Changes README
 PORTEXAMPLES=	Apache.pm Fall.pm ICal.pm MySQL.pm Simple.pm Tivoli.pm W3CDTF.pm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
