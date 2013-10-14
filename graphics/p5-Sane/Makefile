@@ -1,6 +1,5 @@
-# Ports collection makefile for:	Sane
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Sane/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Sane/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Sane
 PORTVERSION=	0.05
@@ -20,6 +19,7 @@ USE_PERL5=	configure
 
 MAN3=		Sane.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^my $$inc = / s|-I\.|& -I${LOCALBASE}/include|' ${WRKSRC}/Makefile.PL
 
