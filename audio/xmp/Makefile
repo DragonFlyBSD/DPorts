@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: audio/xmp/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/xmp/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmp
 PORTVERSION=	4.0.6
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	xmp:${PORTSDIR}/audio/libxmp
 
 USES=		pkgconfig gmake
+NO_STAGE=	yes
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 
