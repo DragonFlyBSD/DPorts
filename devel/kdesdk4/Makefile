@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/kdesdk4/Makefile 327380 2013-09-16 10:58:05Z az $
+# $FreeBSD: devel/kdesdk4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdesdk
 PORTVERSION=	${KDE4_VERSION}
@@ -64,6 +64,7 @@ ANTLR_DESC=	Support for po2xml and swappo tools
 KATE_DESC=	Install Kate advanced text editor
 KATE_PATE_DESC=	Support for Python plugins in Kate
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANTLR}
