@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-rasterbar-16-python/Makefile 327554 2013-09-18 15:05:23Z nemysis $
+# $FreeBSD: net-p2p/libtorrent-rasterbar-16-python/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 CATEGORIES=	net-p2p python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,4 +27,5 @@ OPTIONS_EXCLUDE=	DOCS EXAMPLES
 CONFIGURE_ENV=	PYTHON_INCLUDEDIR="${PYTHON_INCLUDEDIR}" \
 		PYTHON_VERSION="${PYTHON_VERSION}"
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
