@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: benchmarks/httperf/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/httperf/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	httperf
 PORTVERSION=	0.9.0
@@ -23,6 +23,7 @@ PORTDOCS=	ChangeLog NEWS README TODO
 .endif
 MAN1=		httperf.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
