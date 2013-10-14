@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/rubygem-bin_utils/Makefile 324334 2013-08-07 08:36:50Z vg $
+# $FreeBSD: devel/rubygem-bin_utils/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	bin_utils
 PORTVERSION=	0.0.4
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
