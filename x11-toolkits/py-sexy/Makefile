@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-sexy/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/py-sexy/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	sexy
 PORTVERSION=	0.1.9
@@ -20,4 +20,5 @@ USE_PYTHON=	yes
 USES=		pkgconfig
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
