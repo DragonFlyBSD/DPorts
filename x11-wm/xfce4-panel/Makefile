@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-panel/Makefile 327417 2013-09-16 16:58:41Z bapt $
+# $FreeBSD: x11-wm/xfce4-panel/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	xfce4-panel
 PORTVERSION=	4.10.1
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=--enable-gio-unix
 
 OPTIONS_DEFINE=		NLS DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
