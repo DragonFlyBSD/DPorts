@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-crypto-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-crypto-conduit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	crypto-conduit
 PORTVERSION=	0.5.2
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	cereal>=0.3 conduit>=1.0 crypto-api>=0.9 transformers>=0.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
