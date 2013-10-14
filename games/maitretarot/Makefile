@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/maitretarot/Makefile 326013 2013-09-02 15:39:17Z bapt $
+# $FreeBSD: games/maitretarot/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		maitretarot
 PORTVERSION=		0.1.98
@@ -22,4 +22,5 @@ CONFIGURE_ARGS=		--with-default-config-file=${PREFIX}/etc/maitretarotrc.xml
 
 PLIST_FILES=		bin/maitretarot_server
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
