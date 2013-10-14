@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: ports/devel/libee/Makefile,v 1.5 2012/11/17 05:55:53 svnexp Exp $
+# $FreeBSD: devel/libee/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libee
 PORTVERSION=	0.4.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.libee.org/files/download/
 MAINTAINER=	brd@FreeBSD.org
 COMMENT=	An event expression library inspired by CEE
 
-LIB_DEPENDS=	estr:${PORTSDIR}/devel/libestr
+LIB_DEPENDS=	libestr.so:${PORTSDIR}/devel/libestr
 
 MAKE_JOBS_UNSAFE=	yes
 
