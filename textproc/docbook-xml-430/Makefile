@@ -1,8 +1,5 @@
-# New ports collection makefile for:	docbook-xml-430
-# Date created:		02 Apr 2004
-# Whom:			hrs
-#
-# $FreeBSD: ports/textproc/docbook-xml-430/Makefile,v 1.4 2012/11/17 06:01:54 svnexp Exp $
+# Created by: hrs
+# $FreeBSD: textproc/docbook-xml-430/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.3
@@ -43,6 +40,7 @@ ENT_FILES=	iso-amsa.ent iso-amsb.ent iso-amsc.ent iso-amsn.ent \
 		iso-grk3.ent iso-grk4.ent iso-lat1.ent iso-lat2.ent \
 		iso-num.ent iso-pub.ent iso-tech.ent
 
+NO_STAGE=	yes
 pre-install:
 	(for F in ${ENT_FILES}; do \
 			${ECHO_CMD} "${ENTDIR}/$${F}"; \
