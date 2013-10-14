@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/uthash/Makefile 321676 2013-06-24 11:50:20Z zi $
+# $FreeBSD: devel/uthash/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	uthash
 PORTVERSION=	1.9.8p2
@@ -24,6 +24,7 @@ PORTDOCS=	ChangeLog.txt todo.txt userguide.txt utarray.txt \
 PLIST_FILES=	include/utarray.h include/uthash.h include/utlist.h \
 		include/utstring.h
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
