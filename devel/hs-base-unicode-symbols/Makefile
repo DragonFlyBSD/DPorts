@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-base-unicode-symbols/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-base-unicode-symbols/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	base-unicode-symbols
 PORTVERSION=	0.2.2.4
@@ -10,5 +10,6 @@ COMMENT=	Unicode alternatives for common functions and operators
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
