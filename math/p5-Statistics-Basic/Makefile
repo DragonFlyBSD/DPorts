@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Basic/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Statistics-Basic/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-Basic
 PORTVERSION=	1.6607
@@ -31,4 +31,5 @@ MAN3=	Statistics::Basic.3 \
 	Statistics::Basic::_OneVectorBase.3 \
 	Statistics::Basic::_TwoVectorBase.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
