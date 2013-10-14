@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: mail/py-twistedMail/Makefile 326648 2013-09-07 16:15:31Z sunpoet $
+# $FreeBSD: mail/py-twistedMail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	twistedMail
 PORTVERSION=	13.1.0
@@ -23,4 +23,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
