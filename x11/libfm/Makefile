@@ -1,8 +1,9 @@
-# Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: x11/libfm/Makefile 327433 2013-09-16 18:12:58Z nemysis $
+# Created by: Kris Moore <kmoore@FreeBSD.org>
+# $FreeBSD: x11/libfm/Makefile 329402 2013-10-04 23:10:53Z nemysis $
 
 PORTNAME=	libfm
 PORTVERSION=	1.1.2.2
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	SF/pcmanfm/PCManFM%20%2B%20Libfm%20%28tarball%20release%29/libfm%20%28required%20by%20PCManFM%29/
 
@@ -24,8 +25,6 @@ USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-MAN1=		libfm-pref-apps.1
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
@@ -51,11 +50,10 @@ pre-install:
 	@(cd ${WRKDIR}/libfm-${PORTVERSION} && ${CHMOD} 755 install-sh)
 
 post-install:
-	@${MKDIR} ${PREFIX}/etc/xdg/libfm
-	${INSTALL_DATA} ${WRKSRC}/data/libfm.conf ${PREFIX}/etc/xdg/libfm/libfm.conf.sample
-	${INSTALL_DATA} ${WRKSRC}/data/pref-apps.conf ${PREFIX}/etc/xdg/libfm/pref-apps.conf.sample
-	@[ -f ${PREFIX}/etc/xdg/libfm/libfm.conf ] || \
-		${INSTALL_DATA} ${WRKSRC}/data/libfm.conf ${PREFIX}/etc/xdg/libfm/libfm.conf
-	@[ -f ${PREFIX}/etc/xdg/libfm/pref-apps.conf ] || \
-		${INSTALL_DATA} ${WRKSRC}/data/pref-apps.conf ${PREFIX}/etc/xdg/libfm/pref-apps.conf
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/xdg/libfm
+	${INSTALL_DATA} ${WRKSRC}/data/libfm.conf \
+		${STAGEDIR}${PREFIX}/etc/xdg/libfm/libfm.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/data/pref-apps.conf \
+		${STAGEDIR}${PREFIX}/etc/xdg/libfm/pref-apps.conf.sample
+
 .include <bsd.port.mk>
