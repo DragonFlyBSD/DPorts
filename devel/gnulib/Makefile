@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gnulib/Makefile 324739 2013-08-14 16:23:29Z johans $
+# $FreeBSD: devel/gnulib/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gnulib
 PORTVERSION=	20130805
@@ -21,6 +21,7 @@ PORTDATA=	*
 IGNORE=		gnulib requires port data, unset NOPORTDATA to install
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
