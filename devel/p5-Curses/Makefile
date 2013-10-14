@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Curses/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Curses/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Curses
 PORTVERSION=	1.28
@@ -22,6 +22,7 @@ CONFIGURE_ENV=	CURSES_CFLAGS="-I${WRKSRC}/usr/include/ncurses"
 
 MAN3=		Curses.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNCURSESW}
