@@ -1,5 +1,5 @@
 # Created by: ejc@bazzle.com
-# $FreeBSD: devel/omniORB/Makefile 327092 2013-09-12 17:20:46Z bapt $
+# $FreeBSD: devel/omniORB/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	omniORB
 PORTVERSION=	4.1.6
@@ -30,6 +30,7 @@ PLIST_SUB+=	STATIC=""
 MAN1=		catior.1 convertior.1 genior.1 nameclt.1 omniidl.1
 MAN8=		omniMapper.8 omniNames.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's#-O2#${CFLAGS}#g' ${WRKSRC}/mk/beforeauto.mk.in
 
