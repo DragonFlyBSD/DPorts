@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Exporter-Easy/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: devel/p5-Exporter-Easy/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Exporter-Easy
 PORTVERSION=	0.16
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Exporter::Easy.3 Exporter::Easiest.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
