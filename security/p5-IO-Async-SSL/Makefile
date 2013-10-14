@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: security/p5-IO-Async-SSL/Makefile 326908 2013-09-10 15:10:28Z sunpoet $
+# $FreeBSD: security/p5-IO-Async-SSL/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
 
 PORTNAME=	IO-Async-SSL
 PORTVERSION=	0.12
@@ -23,8 +23,5 @@ TEST_DEPENDS=	${LOCALBASE}/bin/socat:${PORTSDIR}/net/socat \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		IO::Async::SSL.3 \
-		IO::Async::SSLStream.3
 
 .include <bsd.port.mk>
