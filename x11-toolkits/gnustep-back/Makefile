@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/gnustep-back/Makefile 326074 2013-09-02 20:19:06Z antoine $
+# $FreeBSD: x11-toolkits/gnustep-back/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gnustep-back
 PORTVERSION=	0.23.0
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	--disable-glitz
 PLIST_SUB+=		BACK=cairo-${BACKVERSION}
 BACK_SUFFIX?=		-cairo
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAKE_FLAGS+=		messages=yes
