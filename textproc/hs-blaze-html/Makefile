@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-blaze-html/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-blaze-html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	blaze-html
 PORTVERSION=	0.6.1.1
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	blaze-builder>=0.2 blaze-markup>=0.5.1 text>=0.10
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
