@@ -1,7 +1,7 @@
-# $FreeBSD: security/gnupg1/Makefile 323640 2013-07-25 13:12:27Z kuriyama $
+# $FreeBSD: security/gnupg1/Makefile 329469 2013-10-05 15:41:25Z kuriyama $
 
 PORTNAME=	gnupg
-PORTVERSION=	1.4.14
+PORTVERSION=	1.4.15
 #PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
@@ -36,6 +36,7 @@ LIBUSB_DESC=	use libusb
 SUID_GPG_DESC=	install GPG with suid
 CURL_DESC=	use libcurl for the keyserver interface
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${CC} == "clang" || ${OSVERSION} >= 1000024
