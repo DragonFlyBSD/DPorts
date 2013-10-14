@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/love07/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: devel/love07/Makefile 329173 2013-10-03 12:52:08Z amdmi3 $
 
 PORTNAME=	love
 PORTVERSION=	0.7.2
@@ -7,24 +7,23 @@ PORTREVISION=	3
 CATEGORIES=	devel games
 MASTER_SITES=	http://cdn.bitbucket.org/rude/love/downloads/ \
 		http://mirror.amdmi3.ru/distfiles/
+PKGNAMESUFFIX=	07
 DISTNAME=	${PORTNAME}-${PORTVERSION}-linux-src
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Open-source 2D game engine
 
-LIB_DEPENDS=	IL:${PORTSDIR}/graphics/devil \
-		modplug:${PORTSDIR}/audio/libmodplug \
-		mpg123:${PORTSDIR}/audio/mpg123 \
-		vorbisfile:${PORTSDIR}/audio/libvorbis \
-		physfs:${PORTSDIR}/devel/physfs \
-		freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libIL.so:${PORTSDIR}/graphics/devil \
+		libmodplug.so:${PORTSDIR}/audio/libmodplug \
+		libmpg123.so:${PORTSDIR}/audio/mpg123 \
+		libvorbisfile.so:${PORTSDIR}/audio/libvorbis \
+		libphysfs.so:${PORTSDIR}/devel/physfs \
+		libfreetype.so:${PORTSDIR}/print/freetype2
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
-
-LATEST_LINK=	${PORTNAME}07
 
 PORTSCOUT=	limit:^0\.7\.
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_OPENAL=	yes
 USE_SDL=	sdl mixer
 USE_GL=		gl glu
@@ -51,9 +50,9 @@ post-patch:
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in changes.txt readme.txt
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
