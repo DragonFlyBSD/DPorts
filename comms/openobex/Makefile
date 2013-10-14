@@ -1,4 +1,4 @@
-# $FreeBSD: comms/openobex/Makefile 324327 2013-08-06 23:46:04Z madpilot $
+# $FreeBSD: comms/openobex/Makefile 328666 2013-09-29 10:44:54Z madpilot $
 
 PORTNAME=	openobex
 PORTVERSION=	1.7.1
@@ -20,14 +20,8 @@ OPTIONS_DEFINE=	DOXYGEN
 OPTIONS_DEFAULT+=	DOXYGEN
 .endif
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOXYGEN}
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
-PLIST_SUB+=	DOXYGEN=""
-.else
-CMAKE_ARGS+=	-DBUILD_DOCUMENTATION=OFF
-PLIST_SUB+=	DOXYGEN="@comment "
-.endif
+OPTIONS_SUB=yes
+DOXYGEN_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
+DOXYGEN_CMAKE_OFF=	-DBUILD_DOCUMENTATION=OFF
 
 .include <bsd.port.mk>
