@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/popup/Makefile,v 1.10 2012/11/17 06:02:16 svnexp Exp $
+# $FreeBSD: textproc/popup/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	popup
 PORTVERSION=	0.5
@@ -17,4 +17,5 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
