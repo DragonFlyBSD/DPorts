@@ -1,5 +1,5 @@
-# Created by:	Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/devel/apache-ant/Makefile,v 1.59 2012/12/10 11:29:53 svnexp Exp $
+# Created by: Ernst de Haan <znerd@FreeBSD.org>
+# $FreeBSD: devel/apache-ant/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	apache-ant
 PORTVERSION=	1.8.4
@@ -45,6 +45,7 @@ MAN5=		build.xml.5
 
 SUB_FILES=	ant.sh
 
+NO_STAGE=	yes
 post-extract:
 	@${TAR} -C ${WRKSRC} -xzf ${DISTDIR}/${MANPAGE_DISTFILE}
 

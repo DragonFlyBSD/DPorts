@@ -7,7 +7,7 @@
 #
 # See: http://ant.apache.org/
 #
-# $FreeBSD: ports/devel/apache-ant/files/ant.sh.in,v 1.8 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: devel/apache-ant/files/ant.sh.in 300896 2012-07-14 13:54:48Z beat $
 #
 
 
