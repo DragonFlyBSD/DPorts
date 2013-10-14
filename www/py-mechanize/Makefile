@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-mechanize
-# Date created:			Apr 29, 2005
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/py-mechanize/Makefile,v 1.16 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/py-mechanize/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mechanize
 PORTVERSION=	0.2.5
@@ -21,4 +16,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
