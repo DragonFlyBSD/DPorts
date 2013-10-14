@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/textproc/xom/Makefile,v 1.10 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/xom/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xom
 PORTVERSION=	1.1
@@ -26,6 +26,7 @@ PLIST_FILES+=	%%EXAMPLESDIR%%/xom-samples.jar
 PLIST_DIRS=	%%EXAMPLESDIR%%
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${MKDIR} ${JAVAJARDIR}
