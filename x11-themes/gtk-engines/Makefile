@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gtk-engines
-# Date Created:				23 Dec 1998
-# Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gtk-engines/Makefile,v 1.50 2012/11/17 06:03:31 svnexp Exp $
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
+# $FreeBSD: x11-themes/gtk-engines/Makefile 327783 2013-09-20 23:54:03Z bapt $
 #    $MCom: ports/x11-themes/gtk-engines/Makefile,v 1.1 2006/07/18 16:32:36 ahze Exp $
 
 PORTNAME=	gtk-engines
@@ -19,6 +16,7 @@ GNU_CONFIGURE=	yes
 
 THEMES=		metal notif pixmap raleigh redmond95
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/ltconfig
 	@for theme in ${THEMES}; do \
