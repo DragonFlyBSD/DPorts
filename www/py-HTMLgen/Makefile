@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	HTMLgen
-# Date created:				03/20/1999
-# Whom:					nectar@FreeBSD.org
-#
-# $FreeBSD: www/py-HTMLgen/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: nectar@FreeBSD.org
+# $FreeBSD: www/py-HTMLgen/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	HTMLgen
 PORTVERSION=	2.2.2
@@ -20,6 +16,7 @@ COMMENT=	A Python library for the generation of HTML documents
 
 USE_PYTHON=	-2.7
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	*
