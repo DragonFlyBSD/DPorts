@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shiboken
-# Date created:		2011-03-21
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: devel/shiboken/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: devel/shiboken/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	shiboken
 PORTVERSION=	1.1.1
@@ -36,6 +32,7 @@ ALL_TARGET=	all
 OPTIONS_DEFINE=	DOCS MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
