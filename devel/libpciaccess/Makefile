@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libpciaccess/Makefile 324712 2013-08-14 12:40:32Z zeising $
+# $FreeBSD: devel/libpciaccess/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libpciaccess
 PORTVERSION=	0.13.2
@@ -14,4 +14,5 @@ CONFIGURE_ARGS+=	--with-pciids-path=${LOCALBASE}/share/pciids
 
 XORG_CAT=	lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
