@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pyasn1
-# Date created:				Sat Apr  8 21:37:32 CDT 2006
-# Whom:					Martin Jackson <mhjacks@swbell.net>
-#
-# $FreeBSD: ports/devel/py-asn1/Makefile,v 1.18 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Martin Jackson <mhjacks@swbell.net>
+# $FreeBSD: devel/py-asn1/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	asn1
 PORTVERSION=	0.1.4
@@ -32,6 +28,7 @@ BASEDOCS=	CHANGES \
 
 DOCDOCS=	pyasn1-tutorial.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
