@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/xfontsel/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/xfontsel/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	xfontsel
 PORTVERSION=	1.0.5
@@ -12,4 +12,5 @@ USE_XORG=	xt xaw
 
 MAN1=		xfontsel.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
