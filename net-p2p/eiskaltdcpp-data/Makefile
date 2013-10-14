@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: net-p2p/eiskaltdcpp-data/Makefile 317832 2013-05-10 17:34:56Z fjoe $
+# $FreeBSD: net-p2p/eiskaltdcpp-data/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	eiskaltdcpp-data
 PORTVERSION=	2.2.4
@@ -26,6 +26,7 @@ EXAMPLES_DESC=		Install script examples
 LUASCRIPTS_DESC=	Install lua script examples
 SOUNDS_DESC=		Install sound files
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DATA_DIR=	${PREFIX}/share/eiskaltdcpp
