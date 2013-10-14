@@ -1,5 +1,5 @@
 # Created by: Peter Avalos <pavalos@theshell.com>
-# $FreeBSD: databases/p5-DBIx-DBSchema/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-DBSchema/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	DBIx-DBSchema
 PORTVERSION=	0.40
@@ -16,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=	DBIx::DBSchema.3 DBIx::DBSchema::ColGroup.3 \
 	DBIx::DBSchema::ColGroup::Index.3 DBIx::DBSchema::ColGroup::Unique.3 \
