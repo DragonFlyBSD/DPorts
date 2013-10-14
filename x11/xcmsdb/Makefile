@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xcmsdb/Makefile,v 1.6 2013/02/04 02:44:41 svnexp Exp $
+# $FreeBSD: x11/xcmsdb/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcmsdb
 PORTVERSION=	1.0.4
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xcmsdb
 
 MAN1=		xcmsdb.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
