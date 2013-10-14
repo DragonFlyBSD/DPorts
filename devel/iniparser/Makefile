@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/iniparser/Makefile 324095 2013-08-01 06:43:44Z bapt $
+# $FreeBSD: devel/iniparser/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	iniparser
 PORTVERSION=	3.1
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	include/dictionary.h include/iniparser.h lib/libiniparser.a \
 		lib/libiniparser.so lib/libiniparser.so.0
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/dictionary.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/src/iniparser.h ${PREFIX}/include
