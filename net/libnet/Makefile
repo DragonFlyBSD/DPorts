@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: net/libnet/Makefile 322516 2013-07-08 16:51:29Z dinoex $
+# $FreeBSD: net/libnet/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	libnet
 PORTVERSION=	1.1.6
@@ -13,6 +13,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	A C library for creating IP packets
 
 LATEST_LINK=	${PORTNAME}${SHORT_VER}
+NO_STAGE=	yes
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
