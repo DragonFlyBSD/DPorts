@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: textproc/urlview/Makefile 323101 2013-07-16 12:15:05Z madpilot $
+# $FreeBSD: textproc/urlview/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	urlview
 PORTVERSION=	0.9
@@ -20,6 +20,7 @@ MAN1=		urlview.1
 PLIST_FILES=	bin/urlview \
 		etc/urlview.conf.sample
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \
 		-e 's/url_handler.sh/firefox/' \
