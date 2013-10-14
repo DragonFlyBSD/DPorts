@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-SNMP
-# Date created:				30 June 2000
-# Whom:					Christopher N. Harrell <cnh@ivmg.net>
-#
-# $FreeBSD: net-mgmt/p5-Net-SNMP/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Christopher N. Harrell <cnh@ivmg.net>
+# $FreeBSD: net-mgmt/p5-Net-SNMP/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-SNMP
 PORTVERSION=	6.0.1
@@ -28,4 +24,5 @@ CONFLICTS=	p5-Net-SNMP3-[0-9]*
 MAN1=		snmpkey.1
 MAN3=		Net::SNMP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
