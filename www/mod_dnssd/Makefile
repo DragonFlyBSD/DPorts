@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/mod_dnssd/Makefile 326035 2013-09-02 17:06:54Z bapt $
+# $FreeBSD: www/mod_dnssd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_dnssd
 PORTVERSION=	0.6
@@ -22,6 +22,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-lynx
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}/
