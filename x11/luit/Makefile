@@ -1,4 +1,4 @@
-# $FreeBSD: x11/luit/Makefile 321804 2013-06-26 17:42:21Z zeising $
+# $FreeBSD: x11/luit/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	luit
 PORTVERSION=	1.1.1
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/luit
 
 MAN1=		luit.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
