@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: graphics/exif/Makefile 327162 2013-09-13 15:41:58Z sunpoet $
+# $FreeBSD: graphics/exif/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	exif
 PORTVERSION=	0.6.21
@@ -18,6 +18,7 @@ CONFIGURE_ENV=	POPT_CFLAGS=-I${LOCALBASE}/include POPT_LIBS="-L${LOCALBASE}/lib 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
