@@ -1,9 +1,5 @@
-# New ports collection makefile for:	misc/p5-Geography-Countries
-# Date created:				05 June 2005
-# Whom:					dikshie <dikshie@lapi.itb.ac.id>
-#
-# $FreeBSD: misc/p5-Geography-Countries/Makefile 325959 2013-09-02 09:36:29Z az $
-#
+# Created by: dikshie <dikshie@lapi.itb.ac.id>
+# $FreeBSD: misc/p5-Geography-Countries/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Geography-Countries
 PORTVERSION=	2009041301
@@ -20,4 +16,5 @@ CONFIGURE_ARGS+=	INSTALLDIRS='site'
 
 MAN3=		Geography::Countries.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
