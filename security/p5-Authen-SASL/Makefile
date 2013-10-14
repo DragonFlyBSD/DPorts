@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: security/p5-Authen-SASL/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Authen-SASL/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Authen-SASL
 PORTVERSION=	2.16
@@ -30,6 +30,7 @@ MAN3=		Authen::SASL.3 \
 		Authen::SASL::Perl::LOGIN.3 \
 		Authen::SASL::Perl::PLAIN.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKERBEROS}
