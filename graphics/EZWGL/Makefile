@@ -1,9 +1,5 @@
-# New ports collection makefile for:	EZWGL
-# Date created:				4 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/graphics/EZWGL/Makefile,v 1.46 2012/11/17 05:58:00 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: graphics/EZWGL/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	EZWGL
 PORTVERSION=	1.50
@@ -25,6 +21,7 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
 NOPRECIOUSMAKEVARS=	yes # Otherwise 'make readmes' is broken
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .include "${FILESDIR}/manpages"
