@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk/Makefile 324827 2013-08-17 00:16:12Z cy $
+# $FreeBSD: x11-toolkits/p5-Tk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk
 PORTVERSION=	804.031
@@ -144,6 +144,7 @@ MAN3=		Tie::Watch.3 \
 		Tk::tkvars.3 \
 		Tk::widgets.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXFT}
