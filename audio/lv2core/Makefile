@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD: audio/lv2core/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/lv2core/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	lv2core
 PORTVERSION=	6.0
@@ -13,6 +13,7 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=	yes
 
