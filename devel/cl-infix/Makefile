@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: ports/devel/cl-infix/Makefile,v 1.10 2013/02/18 14:39:08 svnexp Exp $
+# $FreeBSD: devel/cl-infix/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	infix
 PORTVERSION=	19960628
@@ -21,6 +21,7 @@ NO_CDROM=	No fees or compensation can be charged
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/infix.cl ${WRKSRC}/infix.lisp
 

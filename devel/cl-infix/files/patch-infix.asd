@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/cl-infix/files/patch-infix.asd,v 1.2 2012/11/17 05:55:37 svnexp Exp $
+$FreeBSD: devel/cl-infix/files/patch-infix.asd 300896 2012-07-14 13:54:48Z beat $
 
 --- infix.asd.orig
 +++ infix.asd
