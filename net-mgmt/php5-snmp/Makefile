@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-snmp
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/net-mgmt/php5-snmp/Makefile,v 1.5 2012/11/17 06:00:36 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: net-mgmt/php5-snmp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 CATEGORIES=	net-mgmt
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-snmp
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
