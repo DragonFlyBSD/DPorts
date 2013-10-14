@@ -1,5 +1,5 @@
 # Created by: Joe Kelsey
-# $FreeBSD: devel/libical/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: devel/libical/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libical
 PORTVERSION=	0.48
@@ -19,6 +19,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 OPTIONS_DEFINE=	PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
