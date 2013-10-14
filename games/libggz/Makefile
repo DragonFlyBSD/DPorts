@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/libggz/Makefile 323493 2013-07-22 18:57:44Z marino $
+# $FreeBSD: games/libggz/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	libggz
 PORTVERSION=	${GGZ_VERSION}
@@ -30,5 +30,6 @@ USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-tls=OpenSSL
 .endif
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../libggz/bsd.ggz.mk"
 .include <bsd.port.mk>
