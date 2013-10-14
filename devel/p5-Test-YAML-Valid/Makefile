@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-YAML-Valid/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Test-YAML-Valid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-YAML-Valid
 PORTVERSION=	0.04
@@ -22,6 +22,7 @@ MAN3=	Test::YAML::Valid.3
 OPTIONS_DEFINE=	YAMLSYCK
 YAMLSYCK_DESC=	Use YAML::Syck for testing
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e '/auto_install.*/d' \
 		${WRKSRC}/Makefile.PL
