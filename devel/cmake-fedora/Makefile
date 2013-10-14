@@ -1,12 +1,8 @@
-# New ports collection makefile for:	cmake-fedora
-# Date created:		2 Jan, 2012
-# Whom:			buganini@gmail.com
-#
-# $FreeBSD: ports/devel/cmake-fedora/Makefile,v 1.3 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: buganini@gmail.com
+# $FreeBSD: devel/cmake-fedora/Makefile 327826 2013-09-21 15:41:43Z sunpoet $
 
 PORTNAME=	cmake-fedora
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.5
 CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/c/m/cmake-fedora/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-modules-only
@@ -18,9 +14,11 @@ LICENSE=	BSD
 
 WRKSRC=		${WRKDIR}/Modules
 NO_BUILD=	yes
+NO_STAGE=	yes
+REINPLACE_ARGS=	-i ''
 
 post-patch:
-	@${FIND} ${WRKSRC} -name '*.orig' -delete
+	@${REINPLACE_CMD} -e 's|date --utc|date -u|' ${WRKSRC}/DateTimeFormat.cmake
 
 do-install:
 	${MKDIR} ${PREFIX}/share/cmake/Modules
