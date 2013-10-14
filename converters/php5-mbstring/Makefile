@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-mbstring
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/php5-mbstring/Makefile,v 1.2 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: converters/php5-mbstring/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 CATEGORIES=	converters
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-mbstring
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
