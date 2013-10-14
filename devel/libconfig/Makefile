@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: devel/libconfig/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/libconfig/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libconfig
 PORTVERSION=	1.4.9
@@ -18,4 +18,5 @@ USE_GMAKE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${INFO_PATH}
 INFO=		libconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
