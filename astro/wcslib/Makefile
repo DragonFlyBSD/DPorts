@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonymaher@optusnet.com.au>
-# $FreeBSD: astro/wcslib/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/wcslib/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	wcslib
 PORTVERSION=	4.13.4
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.atnf.csiro.au/pub/software/wcslib/
 MAINTAINER=	tonymaher@optusnet.com.au
 COMMENT=	Library for parsing/generating FITS headers
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake
