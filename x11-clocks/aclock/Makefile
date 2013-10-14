@@ -1,9 +1,5 @@
-# New ports collection makefile for:    aclock
-# Date created:         6 Oct 2006
-# Whom:                 gurkan@phys.ethz.ch
-#
-# $FreeBSD: ports/x11-clocks/aclock/Makefile,v 1.16 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: gurkan@phys.ethz.ch
+# $FreeBSD: x11-clocks/aclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	aclock
 PORTVERSION=	0.4.0
@@ -24,4 +20,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
