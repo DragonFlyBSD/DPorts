@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Nls
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: devel/pear-Horde_Nls/Makefile 319377 2013-05-29 15:02:18Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_Nls/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Nls
 PORTVERSION=	2.0.3
@@ -19,6 +16,7 @@ USE_HORDE_RUN=	Horde_Translation \
 OPTIONS_DEFINE=	GEOIP
 GEOIP_DESC=	Depend on geoip PHP extension
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEOIP}
