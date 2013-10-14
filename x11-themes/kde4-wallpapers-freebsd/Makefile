@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde4-wallpapers-freebsd/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: x11-themes/kde4-wallpapers-freebsd/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	kde4-wallpapers-freebsd
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ USE_KDE4=	kdehier kdeprefix
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/apps/plasma-desktop/init
 	${INSTALL_DATA} ${FILESDIR}/05-freebsdWallpaper.js \
