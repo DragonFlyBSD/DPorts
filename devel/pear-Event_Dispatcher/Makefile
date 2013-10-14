@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-Event_Dispatcher/Makefile 314204 2013-03-15 00:51:42Z miwi $
+# $FreeBSD: devel/pear-Event_Dispatcher/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Event_Dispatcher
 PORTVERSION=	1.1.0
@@ -13,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 post-extract:
 .for file in ${FILES}
 	@${REINPLACE_CMD} -e "s|@package_version@|${PORTVERSION}|" ${WRKSRC}/${file}
