@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	ipa
 # Created by: ijliao
-# $FreeBSD: graphics/IPA/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/IPA/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	IPA
 PORTVERSION=	1.08
@@ -24,4 +22,5 @@ MAN1=		iterm.1
 MAN3=		IPA.3 IPA::Geometry.3 IPA::Global.3 IPA::Local.3 IPA::Misc.3 \
 		IPA::Morphology.3 IPA::Point.3 IPA::Region.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
