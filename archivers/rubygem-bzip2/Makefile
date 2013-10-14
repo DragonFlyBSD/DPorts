@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-bzip2
-# Date created:		2011-03-29
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: archivers/rubygem-bzip2/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: archivers/rubygem-bzip2/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	bzip2
 PORTVERSION=	0.2.7
@@ -14,6 +10,7 @@ DISTNAME=	${PORTNAME}-ruby-${PORTVERSION}
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby C bindings to libbzip2
 
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 GEM_NAME=	${PORTNAME}-ruby-${PORTVERSION}
