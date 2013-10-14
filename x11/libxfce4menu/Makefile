@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11/libxfce4menu/Makefile 317901 2013-05-11 18:15:40Z olivierd $
+# $FreeBSD: x11/libxfce4menu/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libxfce4menu
 PORTVERSION=	4.10.0
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--with-vendor-info=FreeBSD
 OPTIONS_DEFINE=		DOCS NLS NOTIFY GLADE
 OPTIONS_DEFAULT=	NOTIFY
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
