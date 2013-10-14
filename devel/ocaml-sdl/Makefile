@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/ocaml-sdl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/ocaml-sdl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	sdl
 PORTVERSION=	0.9.1
@@ -39,6 +39,7 @@ DOCSDIR=	${OCAML_DOCSDIR}/${PORTNAME}
 INFO=		ocamlsdl
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSDL_GFX}
