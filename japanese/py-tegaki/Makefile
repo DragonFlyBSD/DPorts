@@ -1,9 +1,9 @@
-# New ports collection makefile for:	py-tegaki
+# $FreeBSD: japanese/py-tegaki/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 # Date created:				15 Aug 2010
 # Whom:					Timothy Beyer <beyert@cs.ucr.edu>
 #
-# $FreeBSD: ports/japanese/py-tegaki/Makefile,v 1.2 2012/11/17 05:58:39 svnexp Exp $
+# $FreeBSD: japanese/py-tegaki/Makefile 327737 2013-09-20 18:47:54Z bapt $
 #
 
 PORTNAME=	tegaki
@@ -26,4 +26,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	${PORTNAME}_python
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
