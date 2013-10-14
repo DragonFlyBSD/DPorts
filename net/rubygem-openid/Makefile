@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openid
-# Date created:				Dec 19, 2006
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: net/rubygem-openid/Makefile 319808 2013-06-03 21:21:10Z swills $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: net/rubygem-openid/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	openid
 PORTVERSION=	2.2.3
@@ -22,4 +18,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
