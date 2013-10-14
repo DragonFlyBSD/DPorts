@@ -1,9 +1,5 @@
-# New ports collection makefile for:	darts
-# Date created:		2 April 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/darts/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/darts/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	darts
 PORTVERSION=	0.32
@@ -18,6 +14,7 @@ GNU_CONFIGURE=	yes
 EXAMPLES=	darts.cpp mkdarts.cpp
 DOCS=		AUTHORS ChangeLog README doc
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
