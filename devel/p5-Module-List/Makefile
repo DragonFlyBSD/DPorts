@@ -1,5 +1,5 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: devel/p5-Module-List/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-Module-List/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-List
 PORTVERSION=	0.003
@@ -17,4 +17,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Module::List.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
