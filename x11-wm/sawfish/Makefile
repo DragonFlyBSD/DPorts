@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-wm/sawfish/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: x11-wm/sawfish/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	sawfish
 PORTVERSION=	1.9.1
@@ -36,6 +36,7 @@ INFO=		sawfish
 
 PORTSCOUT=	limit:^1\.9\.[0-9]
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/dnsdomainname/d' ${WRKSRC}/build-info
