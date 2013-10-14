@@ -1,9 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/goffice/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/trunk/devel/goffice/Makefile 17268 2013-04-01 05:13:11Z marcus $
-#
-# !!! When updating goffice, don't forget to update pkg-plist in:
-#     science/gchemutils
 
 PORTNAME=	goffice
 PORTVERSION=	0.8.17
@@ -36,6 +33,7 @@ PLIST_SUB=	VERSION=${PORTVERSION} \
 OPTIONS_DEFINE=	GCONF
 OPTIONS_DEFAULT=GCONF
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCONF}
