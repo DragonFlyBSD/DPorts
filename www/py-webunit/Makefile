@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-webunit
-# Date created:		Mar. 03, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/www/py-webunit/Makefile,v 1.8 2012/11/17 06:03:02 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: www/py-webunit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webunit
 PORTVERSION=	1.3.10
@@ -20,6 +16,7 @@ USE_PYDISTUTILS=	yes
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 .if !defined(NOPORTEXAMPLES)
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/run_tests ${EXAMPLESDIR}
