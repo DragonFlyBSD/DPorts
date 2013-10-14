@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/sdl_ttf/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/sdl_ttf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sdl_ttf
 PORTVERSION=	2.0.11
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 USE_GL=		yes
 .endif
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/.libs/glfont ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/.libs/showfont ${PREFIX}/bin/sdl-showfont
