@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/simpleagenda/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: deskutils/simpleagenda/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	simpleagenda
 PORTVERSION=	0.43
@@ -23,6 +23,7 @@ USE_GNUSTEP_INSTALL=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|SimpleAgenda|SimpleAgenda.m|' ${WRKSRC}/configure
 	${REINPLACE_CMD} -e 's|-luuid||' ${WRKSRC}/GNUmakefile.preamble
