@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-fast-logger/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-fast-logger/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fast-logger
 PORTVERSION=	0.3.1
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	blaze-builder date-cache>=0.3 text unix-time
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
