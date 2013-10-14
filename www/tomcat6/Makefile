@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: www/tomcat6/Makefile 317620 2013-05-07 15:49:00Z ale $
+# $FreeBSD: www/tomcat6/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tomcat
 PORTVERSION=	6.0.37
@@ -53,6 +53,7 @@ SUB_LIST=	AJP_1_3_PORT=${AJP_1_3_PORT} \
 		TOMCAT_VERSION=${MAJOR_VER:S/.//} \
 		USER=${TOMCAT_USER}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-patch:
