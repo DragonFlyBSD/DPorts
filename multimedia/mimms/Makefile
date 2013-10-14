@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mimms
-# Date created:		3 Jul 2007
-# Whom:                	Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-#
-# $FreeBSD: ports/multimedia/mimms/Makefile,v 1.4 2012/11/17 05:59:51 svnexp Exp $
-#
+# Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
+# $FreeBSD: multimedia/mimms/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mimms
 DISTVERSION=	3.2.1
@@ -26,6 +22,7 @@ PYDISTUTILS_PKGVERSION=	3.2
 MAN1=		mimms.1
 PORTDOCS=	AUTHORS COPYING NEWS README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/man/man1|man/man1|' ${WRKSRC}/setup.py
 
