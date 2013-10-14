@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevt/Makefile 327003 2013-09-11 19:27:16Z antoine $
+# $FreeBSD: devel/libevt/Makefile 328172 2013-09-24 17:29:30Z antoine $
 
 PORTNAME=	libevt
-DISTVERSION=	alpha-20130909
+DISTVERSION=	alpha-20130923
 CATEGORIES=	devel
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSYm01VnUtLXNUZ2M/ \
 		LOCAL/antoine
@@ -13,33 +13,28 @@ COMMENT=	Library and tooling to access the Windows Event Log (EVT) format
 LICENSE=	LGPL3
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-python
+CONFIGURE_ARGS=	--enable-python --with-libintl-prefix=${LOCALBASE} ${ICONV_CONFIGURE_ARG}
 USES=		gettext iconv pathfix
 USE_PYTHON=	-2.7
 USE_LDCONFIG=	yes
-
-LDFLAGS+=	-L${LOCALBASE}/lib
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:E}
-
-MAN1=		evtexport.1 evtinfo.1
-MAN3=		libevt.3
-
-OPTIONS_DEFINE=	DOCS EXAMPLES
 
 PORTDOCS=	AUTHORS ChangeLog
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/${PORTNAME}/* \
-		${WRKSRC}/examples/${PORTNAME:S,lib,py,}/* ${EXAMPLESDIR}
+		${WRKSRC}/examples/${PORTNAME:S,lib,py,}/* ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
