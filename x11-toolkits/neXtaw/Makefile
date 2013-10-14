@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/neXtaw/Makefile 313760 2013-03-09 21:43:02Z bapt $
+# $FreeBSD: x11-toolkits/neXtaw/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	neXtaw
 PORTVERSION=	0.15.1
@@ -17,6 +17,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|version-info.*$$|version-info 8:0:0|g' \
 		${WRKSRC}/X11/neXtaw/Makefile.in
