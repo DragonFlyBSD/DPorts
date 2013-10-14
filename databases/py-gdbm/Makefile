@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: databases/py-gdbm/Makefile 326660 2013-09-07 17:21:47Z sunpoet $
+# $FreeBSD: databases/py-gdbm/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	gdbm
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -30,6 +30,7 @@ PYDISTUTILS_NOEGGINFO=	yes
 
 PLIST_FILES=	%%PYTHON_LIBDIR%%/lib-dynload/gdbm.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
