@@ -1,4 +1,4 @@
-# $FreeBSD: devel/dbus-sharp-glib/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/dbus-sharp-glib/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dbus-sharp-glib
 PORTVERSION=	0.5.0
@@ -15,4 +15,5 @@ USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
