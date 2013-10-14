@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: textproc/libebml/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/libebml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libebml
 PORTVERSION=	1.3.0
@@ -21,6 +21,7 @@ USE_LDCONFIG=	yes
 # Installs dir with proper permissions
 INSTALL_DATA_DIR=	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m 755
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} -E \
 		-e 's|^(prefix)[[:space:]]*=.*$$|\1=${PREFIX}|; \
