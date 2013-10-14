@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: deskutils/notification-daemon/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/notification-daemon/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
 
 PORTNAME=	notification-daemon
@@ -28,4 +28,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 CONFLICTS=	xfce4-notification-daemon-[0-9]* xfce4-notifyd-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
