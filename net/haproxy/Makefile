@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	haproxy
-# Date created:				Apr 30, 2003
-# Whom:					Clement Laforet
-#
-# $FreeBSD: net/haproxy/Makefile 321116 2013-06-17 14:38:06Z demon $
-#
+# Created by: Clement Laforet
+# $FreeBSD: net/haproxy/Makefile 329875 2013-10-09 08:24:40Z demon $
 
 PORTNAME=	haproxy
 PORTVERSION=	1.4.24
@@ -18,8 +14,8 @@ LICENSE_COMB=	multi
 
 CONFLICTS=	haproxy-devel-[0-9]*
 
+USES=		gmake
 USE_RC_SUBR=	haproxy
-USE_GMAKE=	yes
 SUB_FILES=	pkg-message
 MAN1=		haproxy.1
 
@@ -30,19 +26,18 @@ DPCRE_DESC=	Link dynamically
 SPCRE_DESC=	Link statically
 OPTIONS_DEFAULT=PCRE DPCRE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAKE_ARGS=	TARGET=freebsd DEFINE=-DFREEBSD_PORTS CC=${CC}
 
-.if ${PORT_OPTIONS:MPCRE}
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
-
 .if ${PORT_OPTIONS:MDPCRE}
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 MAKE_ARGS+=	"USE_PCRE=1"
 .endif
 .if ${PORT_OPTIONS:MSPCRE}
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libpcre.a:${PORTSDIR}/devel/pcre
 MAKE_ARGS+=	"USE_STATIC_PCRE=1"
-.endif
 .endif
 
 do-install:
