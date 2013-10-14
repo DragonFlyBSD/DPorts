@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-PSGI/Makefile 324541 2013-08-10 15:28:06Z kuriyama $
+# $FreeBSD: www/p5-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	PSGI
 PORTVERSION=	1.102
@@ -17,4 +17,5 @@ MAN3=	PSGI::Extensions.3 \
 	PSGI::FAQ.3 \
 	PSGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
