@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenhping@gmail.com>
-# $FreeBSD: lang/cython/Makefile 323271 2013-07-19 08:28:34Z wen $
+# $FreeBSD: lang/cython/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	cython
 PORTVERSION=	0.19.1
@@ -15,4 +15,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Cython
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
