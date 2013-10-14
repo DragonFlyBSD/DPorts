@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/rubygem-simple_oauth/Makefile 320940 2013-06-14 14:43:53Z miwi $
+# $FreeBSD: net/rubygem-simple_oauth/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	simple_oauth
 PORTVERSION=	0.2.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
