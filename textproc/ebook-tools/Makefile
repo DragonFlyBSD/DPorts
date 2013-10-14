@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/ebook-tools/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: textproc/ebook-tools/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ebook-tools
 PORTVERSION=	0.2.2
@@ -15,4 +15,5 @@ USES=		cmake
 USE_LDCONFIG=	yes
 USE_GNOME=	libxml2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
