@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-CSS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-CSS/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	CSS
 PORTVERSION=	1.09
@@ -20,4 +20,5 @@ MAN3=	CSS.3 CSS::Value.3 CSS::Parse::Compiled.3 CSS::Property.3 CSS::Parse::Heav
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
