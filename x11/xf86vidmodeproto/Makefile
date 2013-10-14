@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/xf86vidmodeproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xf86vidmodeproto/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	xf86vidmodeproto
 PORTVERSION=	2.3.1
