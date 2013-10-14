@@ -1,8 +1,5 @@
-# New ports collection makefile for:	docbook-440
-# Date created:		12 Jul 2008
-# Whom:			Gabor Kovesdan <gabor@kovesdan.org>
-#
-# $FreeBSD: ports/textproc/docbook-440/Makefile,v 1.7 2012/11/17 06:01:54 svnexp Exp $
+# Created by: Gabor Kovesdan <gabor@kovesdan.org>
+# $FreeBSD: textproc/docbook-440/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook
 PORTVERSION=	4.4
@@ -41,6 +38,7 @@ DTD_FILES=	calstblx.dtd catalog.xml dbcentx.mod dbgenent.mod \
 		docbook.dtd docbookx.dtd htmltblx.mod soextblx.dtd catalog
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}/${PORTVERSION}
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${WRKSRC}/docbook.cat ${WRKSRC}/catalog
 
