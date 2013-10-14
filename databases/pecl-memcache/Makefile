@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: databases/pecl-memcache/Makefile 316066 2013-04-18 17:42:12Z sunpoet $
+# $FreeBSD: databases/pecl-memcache/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	memcache
 PORTVERSION=	3.0.8
@@ -22,6 +22,7 @@ USE_PHPEXT=	yes
 USE_PHPIZE=	yes
 USE_CSTD=	gnu89
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
