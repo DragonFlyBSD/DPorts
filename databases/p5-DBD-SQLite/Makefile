@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: databases/p5-DBD-SQLite/Makefile 324106 2013-08-01 13:37:21Z jadawin $
+# $FreeBSD: databases/p5-DBD-SQLite/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBD-SQLite
 PORTVERSION=	1.40
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		DBD::SQLite.3 DBD::SQLite::Cookbook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
