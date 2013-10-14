@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-zope.i18n
-# Date created:				Aug 10, 2011
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: devel/py-zope.i18n/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: devel/py-zope.i18n/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.i18n
 PORTVERSION=	3.8.0
@@ -22,7 +18,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.event>=0:${PORTSDIR}/devel/py-zope.even
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
 USES=		gettext
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYTHON=	yes
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
