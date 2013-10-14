@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Build/Makefile 326206 2013-09-03 19:31:33Z sunpoet $
+# $FreeBSD: devel/p5-Module-Build/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Build
 PORTVERSION=	0.4007
@@ -49,6 +49,7 @@ MAN3=		inc::latest.3 \
 		Module::Build::YAML.3
 PORTDOCS=	Changes INSTALL README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
