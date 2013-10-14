@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  ncftp3
-# Date created:			  4 Nov 1994
-# Whom:				  ache
-#
-# $FreeBSD: ports/ftp/ncftp3/Makefile,v 1.117 2012/11/17 05:57:30 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: ftp/ncftp3/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	ncftp
 PORTVERSION=	3.2.5
@@ -25,6 +20,7 @@ COMMENT=	ftp replacement with advanced user interface
 
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(INSTALL_AS_NCFTP3)

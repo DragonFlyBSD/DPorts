@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/ftp/ncftp3/pkg-plist,v 1.17 2012/11/17 05:57:30 svnexp Exp $
+@comment $FreeBSD: ftp/ncftp3/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/libStrn.so
 lib/libStrn.so.1
 lib/libncftp.so
