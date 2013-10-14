@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: sysutils/polkit-gnome/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: sysutils/polkit-gnome/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.20 2012/12/18 13:05:11 kwm Exp $
 
 PORTNAME=	polkit-gnome
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
