@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdpyinfo/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xdpyinfo/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xdpyinfo
 PORTVERSION=	1.3.1
@@ -17,4 +17,5 @@ PLIST_FILES=	bin/xdpyinfo
 
 MAN1=		xdpyinfo.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
