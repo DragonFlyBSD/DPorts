@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/libshhopt/Makefile 319443 2013-05-30 18:09:52Z antoine $
+# $FreeBSD: devel/libshhopt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libshhopt
 PORTVERSION=	1.1.7
@@ -13,6 +13,7 @@ COMMENT=	A library for parsing command line options
 MAKEFILE=	${FILESDIR}/Makefile.lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
