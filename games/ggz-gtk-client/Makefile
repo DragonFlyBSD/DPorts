@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/ggz-gtk-client/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: games/ggz-gtk-client/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ggz-gtk-client
 PORTVERSION=	${GGZ_VERSION}
@@ -21,6 +21,7 @@ MAN6=	ggz-gtk.6
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
