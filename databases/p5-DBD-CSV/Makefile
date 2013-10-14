@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBD-CSV/Makefile 324105 2013-08-01 13:28:58Z jadawin $
+# $FreeBSD: databases/p5-DBD-CSV/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBD-CSV
 PORTVERSION=	0.41
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN3=		Bundle::DBD::CSV.3 \
 		DBD::CSV.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
