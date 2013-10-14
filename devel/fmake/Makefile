@@ -1,4 +1,4 @@
-# $FreeBSD: devel/fmake/Makefile 321300 2013-06-19 18:00:51Z crees $
+# $FreeBSD: devel/fmake/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fmake
 PORTVERSION=	r250982
@@ -14,6 +14,7 @@ MAN1=		${PORTNAME}.1
 
 MAKE_ARGS+=	PROG=fmake NO_MAN=yes
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 		${INSTALL_MAN} ${WRKSRC}/make.1 \
