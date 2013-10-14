@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-PPPort/Makefile 325053 2013-08-20 14:31:37Z mat $
+# $FreeBSD: devel/p5-Devel-PPPort/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Devel-PPPort
 DISTVERSION=	3.21
@@ -15,6 +15,7 @@ LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		Devel::PPPort.3
 
