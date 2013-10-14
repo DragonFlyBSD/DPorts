@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-PP/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: converters/p5-JSON-PP/Makefile 329604 2013-10-06 17:24:06Z sunpoet $
 
 PORTNAME=	JSON-PP
 PORTVERSION=	2.27202
@@ -17,12 +17,6 @@ LICENSE_COMB=	dual
 USE_PERL5=	configure
 USES=		perl5
 
-MAN1=		p5json_pp.1
-MAN3=		JSON::PP.3 \
-		JSON::PP::Boolean.3
-
-SUB_FILES=	pkg-install
-
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
@@ -36,6 +30,8 @@ pre-patch:
 	@${REINPLACE_CMD} -e 's|bin/json_pp|bin/p5json_pp|' ${WRKSRC}/MANIFEST ${WRKSRC}/Makefile.PL
 
 post-install:
-	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+.if ${PERL_LEVEL} < 501400
+	${CP} -p ${STAGEDIR}${PREFIX}/bin/p5json_pp ${STAGEDIR}${PREFIX}/bin/json_pp
+.endif
 
 .include <bsd.port.post.mk>
