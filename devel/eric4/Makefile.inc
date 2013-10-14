@@ -1,12 +1,12 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile.inc 325254 2013-08-23 08:28:08Z bsam $
+# $FreeBSD: devel/eric4/Makefile.inc 329900 2013-10-09 13:56:49Z bsam $
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric4:
 # french/eric4, german/eric4, russian/eric4
 
 PORTNAME=	eric4
-PORTVERSION=	4.5.14
+PORTVERSION=	4.5.15
 MASTER_SITES=	SF/eric-ide/${PORTNAME}/stable/${PORTVERSION}
 DISTNAME?=	${PORTNAME}-i18n-${I18N_LANG}-${PORTVERSION}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -19,11 +19,12 @@ LICENSE=	GPLv3
 RUN_DEPENDS?=	${PREFIX}/bin/eric4:${PORTSDIR}/devel/eric4
 
 I18N_LANG?=	ru
-INSTALL_CMD?=	install-i18n.py
+INSTALL_CMD?=	install-i18n.py -p ${STAGEDIR}
 
 USE_PYTHON=	2.5+
 NO_BUILD=	yes
 PLIST_FILES?=	%%DATADIR%%/i18n/${PORTNAME}_${I18N_LANG}.qm
+EXTRA_PATCHES?=	${.CURDIR}/../../devel/eric4/files/extra-patch-install-i18n.py
 
 do-install:
 	@(cd ${WRKSRC}; \
