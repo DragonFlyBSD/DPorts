@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Pid/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/p5-File-Pid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Pid
 PORTVERSION=	1.01
@@ -19,6 +19,7 @@ USE_PERL5=	configure
 
 MAN3=		File::Pid.3
 
+NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/lib/File/Pid.pm.orig
 
