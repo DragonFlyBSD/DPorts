@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin
-# $FreeBSD: devel/p5-ShipIt/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-ShipIt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ShipIt
 PORTVERSION=	0.60
@@ -20,4 +20,5 @@ MAN3=		ShipIt.3 ShipIt::Conf.3 ShipIt::ProjectType.3 \
 		ShipIt::VC.3 ShipIt::VC::Git.3 ShipIt::VC::Mercurial.3 \
 		ShipIt::VC::SVK.3 ShipIt::VC::SVN.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
