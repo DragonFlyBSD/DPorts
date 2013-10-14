@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ttmkfdir
-# Date created:		September 08, 1998
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: x11-fonts/ttmkfdir/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: x11-fonts/ttmkfdir/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	ttmkfdir
 PORTVERSION=	3.0.9
@@ -23,6 +19,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_XORG=	x11
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin
 
