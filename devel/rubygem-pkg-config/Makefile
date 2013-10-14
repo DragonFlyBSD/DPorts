@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-pkg-config
-# Date created:		2010-10-05
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-pkg-config/Makefile,v 1.10 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-pkg-config/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	pkg-config
 PORTVERSION=	1.1.4
@@ -18,4 +14,5 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
