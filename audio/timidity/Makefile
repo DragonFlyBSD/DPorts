@@ -1,4 +1,4 @@
-# $FreeBSD: audio/timidity/Makefile 314098 2013-03-13 17:23:05Z pawel $
+# $FreeBSD: audio/timidity/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	timidity
 PORTVERSION=	0.2i
@@ -17,6 +17,7 @@ CONFLICTS=	timidity++-2.13.*
 TIINS=		goemon.tgz
 INSTALL_TARGET=	install.all
 MAN1=		timidity.1
+NO_STAGE=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e 's,machine/soundcard.h,sys/soundcard.h,' \
