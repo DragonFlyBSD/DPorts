@@ -1,13 +1,14 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/tk85/Makefile 327575 2013-09-18 21:01:43Z gahr $
+# $FreeBSD: x11-toolkits/tk85/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	tk
-DISTVERSION=	8.5.15
+PORTVERSION=	8.5.15
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_TCLTK} \
 		SF/tcl/Tcl/${PORTVERSION}
 MASTER_SITE_SUBDIR=tcl8_5
-DISTNAME=	${PORTNAME}${DISTVERSION}-src
+PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}
+DISTNAME=	${PORTNAME}${PORTVERSION}-src
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Graphical toolkit for Tcl
@@ -16,7 +17,7 @@ LICENSE=	BSD
 
 LICENSE_TERMS=	${WRKSRC}/../license.terms
 
-LATEST_LINK=	tk85
+USES+=		tcl:${SHORT_TK_VER}
 USE_XORG=	x11 xft xscrnsaver
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}/unix
@@ -32,7 +33,6 @@ CONFIGURE_ARGS=	--enable-shared \
 
 CONFIGURE_ENV=	PORTSDIR=${PORTSDIR} TK_LIB_FILE=libtk${SHORT_TK_VER}.so.1 \
 		ac_cv_path_tclsh="${LOCALBASE}/bin/tclsh${TK_VER}"
-LATEST_LINK=	${PORTNAME}${SHORT_TK_VER}
 MAN_SUFFIX=	${LATEST_LINK}
 
 INSTALL_TARGET=	install
@@ -44,8 +44,6 @@ MANCOMPRESSED=	no
 DATADIR=	${PREFIX}/share/${PORTNAME}${TK_VER}
 SUB_FILES=	pkgIndex.tcl
 
-USE_TCL=	${SHORT_TK_VER}
-
 OPTIONS_DEFINE=	TK85_MAN DEMOS THREADS
 OPTIONS_DEFAULT=THREADS
 TK85_MAN_DESC=	Install tk 8.5 function manpages
@@ -53,6 +51,7 @@ DEMOS_DESC=	Install demos
 
 SUB_LIST+=	TCLPATCHLEVEL="${PORTVERSION}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 DATADIR=	${PREFIX}/share/${PORTNAME}${TCL_VER}
