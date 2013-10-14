@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: net/p5-PlRPC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-PlRPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	PlRPC
 PORTVERSION=	0.2020
@@ -23,6 +23,7 @@ MAN3=		Bundle::PlRPC.3 \
 		RPC::PlClient.3 \
 		RPC::PlServer.3
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name ".svn" | ${XARGS} ${RM} -rf
 	@${REINPLACE_CMD} -i '' -e 's/perldoc -t/echo perldoc -t/' \
