@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: audio/faac/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/faac/Makefile 328001 2013-09-23 13:33:59Z bapt $
 
 PORTNAME=	faac
 PORTVERSION=	1.28
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	MPEG-2 and MPEG-4 AAC audio encoder
 
-LIB_DEPENDS=	mp4v2.10:${PORTSDIR}/multimedia/mp4v2
+LIB_DEPENDS=	libmp4v2.so:${PORTSDIR}/multimedia/mp4v2
 
 RESTRICTED=	Distribution in binary form is prohibited
 
@@ -25,10 +25,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
-MAN1=		faac.1
-
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${ECHO_CMD} "" >> ${WRKSRC}/libfaac/psych.h
 	@${REINPLACE_CMD} -e 's|<mp4\.h>|<mp4v2/mp4v2.h>|g' \
@@ -37,4 +33,4 @@ post-patch:
 pre-configure:
 	@cd ${WRKSRC}; ${SETENV} ${AUTOTOOLS_ENV} ${LIBTOOLIZE} --automake
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
