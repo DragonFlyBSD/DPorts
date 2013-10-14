@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-MRO-Define/Makefile 326366 2013-09-05 08:20:25Z tobez $
+# $FreeBSD: devel/p5-MRO-Define/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MRO-Define
 PORTVERSION=	0.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		MRO::Define.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
