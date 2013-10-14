@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtksourceview2/Makefile 326049 2013-09-02 18:14:45Z bapt $
+# $FreeBSD: x11-toolkits/gtksourceview2/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/gtksourceview2/Makefile,v 1.96 2010/09/29 12:42:49 kwm Exp $
 
 PORTNAME=	gtksourceview2
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
 
 .endif
