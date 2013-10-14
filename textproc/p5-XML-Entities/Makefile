@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: textproc/p5-XML-Entities/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-XML-Entities/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Entities
 PORTVERSION=	1.0001
@@ -21,4 +21,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN3=		XML::Entities.3pm XML::Entities::Data.3pm download-entities.pl.3pm
 MAN1=		download-entities.pl.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
