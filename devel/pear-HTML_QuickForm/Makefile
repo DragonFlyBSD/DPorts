@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<gerrit@beine-computer.de>)
-# $FreeBSD: ports/devel/pear-HTML_QuickForm/Makefile,v 1.17 2013/02/04 09:25:46 svnexp Exp $
+# $FreeBSD: devel/pear-HTML_QuickForm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_QuickForm
 PORTVERSION=	3.2.13
@@ -13,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/HTML/Common.php:${PORTSDIR}/devel/pear-HTML_Common
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
