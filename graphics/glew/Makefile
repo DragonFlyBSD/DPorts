@@ -1,8 +1,9 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/glew/Makefile 323612 2013-07-24 17:26:21Z mva $
+# $FreeBSD: graphics/glew/Makefile 330016 2013-10-10 16:37:02Z mva $
 
 PORTNAME=	glew
 PORTVERSION=	1.10.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
@@ -17,6 +18,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
