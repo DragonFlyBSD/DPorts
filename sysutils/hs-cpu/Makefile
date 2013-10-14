@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/hs-cpu/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: sysutils/hs-cpu/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cpu
 PORTVERSION=	0.1.1
@@ -10,5 +10,6 @@ COMMENT=	Cpu information and properties helpers
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
