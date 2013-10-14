@@ -1,9 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/py-eventlet/Makefile 323986 2013-07-30 19:33:24Z cs $
-#
+# $FreeBSD: net/py-eventlet/Makefile 327840 2013-09-21 20:20:08Z cs $
 
 PORTNAME=	eventlet
-PORTVERSION=	0.13.0
+PORTVERSION=	0.14.0
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP \
 		http://www.c-s.li/ports/
@@ -23,4 +22,5 @@ USE_PYDISTUTILS=	easy_install
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
