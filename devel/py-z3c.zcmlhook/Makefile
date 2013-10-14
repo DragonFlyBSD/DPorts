@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-z3c.zcmlhook
-# Date created:				18 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-z3c.zcmlhook/Makefile,v 1.3 2012/11/17 05:56:52 svnexp Exp $
-#
+# $FreeBSD: devel/py-z3c.zcmlhook/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	z3c.zcmlhook
 PORTVERSION=	1.0b1
@@ -23,6 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
