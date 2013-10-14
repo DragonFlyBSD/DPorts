@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: security/p5-Apache-Htpasswd/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Apache-Htpasswd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Apache-Htpasswd
 PORTVERSION=	1.8
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Apache::Htpasswd.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
