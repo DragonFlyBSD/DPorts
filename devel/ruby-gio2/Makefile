@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-gio2
-# Date created:		2011-08-17
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: devel/ruby-gio2/Makefile 303740 2012-09-06 05:28:49Z swills $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: devel/ruby-gio2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gio2
 PORTVERSION=	${RUBY_GNOME_PORTVERSION}
@@ -29,6 +25,7 @@ CONFIGURE_ARGS=	--with-pkg-config-dir=${LOCALBASE}/libdata/pkgconfig
 MASTERDIR=	${.CURDIR}/../../x11/ruby-gnome2
 PKGDIR=		${.CURDIR}
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 WRKSRC=	${RUBY_GNOME_WRKSRC}/${PORTNAME}
