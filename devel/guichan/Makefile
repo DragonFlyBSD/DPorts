@@ -1,5 +1,5 @@
 # Created by: Tobias Gion <freebsd@gionet.de>
-# $FreeBSD: devel/guichan/Makefile 318789 2013-05-22 19:19:03Z mva $
+# $FreeBSD: devel/guichan/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	guichan
 PORTVERSION=	0.8.2
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=		SDL ALLEGRO OPENGL
 OPTIONS_DEFAULT=	SDL OPENGL
 ALLEGRO_DESC=	Allegro support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSDL}
