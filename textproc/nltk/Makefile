@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/nltk/Makefile 321944 2013-06-28 04:29:03Z clsung $
+# $FreeBSD: textproc/nltk/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	nltk
 PORTVERSION=	2.0.4
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>=0:${PORTSDIR}/x11-toolkits/py-tkint
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
