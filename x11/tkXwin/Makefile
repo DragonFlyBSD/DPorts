@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tkXwin
-# Date created:				Tue Aug  9 14:32:29 MSD 2005
-# Whom:					Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: ports/x11/tkXwin/Makefile,v 1.11 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: x11/tkXwin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	tkXwin
 PORTVERSION=	1.0
@@ -26,4 +22,5 @@ CONFIGURE_ARGS=	--with-tcl=${TCL_LIBDIR} \
 		--with-tkinclude=${TK_INCLUDEDIR}
 CONFIGURE_ENV=	INSTALL="${INSTALL_DATA}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
