@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/mecab/Makefile 326154 2013-09-03 14:32:13Z bapt $
+# $FreeBSD: japanese/mecab/Makefile 328624 2013-09-28 19:36:55Z antoine $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
@@ -25,8 +25,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 ACLOCAL_ARGS=	--system-acdir=${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
 
-MAN1=		mecab.1
-
 PORTDOCS=	AUTHORS README *.html
 
 OPTIONS_DEFINE=	DOCS
@@ -45,16 +43,10 @@ pre-install:
 	${CHMOD} a+x ${WRKSRC}/install-sh
 
 post-install:
-	@if [ ! -f ${PREFIX}/etc/mecabrc ]; then \
-		${INSTALL_DATA} ${PREFIX}/etc/mecabrc.dist ${PREFIX}/etc/mecabrc; \
-	fi
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS:N*.html}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
-.endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:N*.html:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${STAGEDIR}${DOCSDIR}
 .endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
