@@ -1,5 +1,5 @@
 # Created by: Martin Wilke 	<miwi@FreeBSD.org>
-# $FreeBSD: databases/py-psycopg2/Makefile 322774 2013-07-11 15:21:14Z miwi $
+# $FreeBSD: databases/py-psycopg2/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	psycopg2
 PORTVERSION=	2.5.1
@@ -26,6 +26,7 @@ EXAMPLES=	binary.py copy_from.py copy_to.py cursor.py dialtone.py \
 
 DOCS=		AUTHORS INSTALL README NEWS PKG-INFO
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
