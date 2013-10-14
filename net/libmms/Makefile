@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net/libmms/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/libmms/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libmms
 PORTVERSION=	0.6.2
@@ -16,4 +16,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
