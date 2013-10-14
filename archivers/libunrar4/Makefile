@@ -1,5 +1,5 @@
 # Created by: Joris Vandalon
-# $FreeBSD: archivers/libunrar4/Makefile 324100 2013-08-01 11:57:14Z bapt $
+# $FreeBSD: archivers/libunrar4/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	libunrar4
 PORTVERSION=	4.2.4
@@ -12,6 +12,7 @@ COMMENT=	Library to work with RAR archives
 
 WRKSRC=		${WRKDIR}/unrar
 
+NO_STAGE=	yes
 USES=		gmake
 MAKE_ARGS=	CC="${CC}" CXX="${CXX}"
 MAKEFILE=	makefile.unix
