@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: graphics/gpicview/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: graphics/gpicview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gpicview
 PORTVERSION=	0.2.3
@@ -24,6 +24,7 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
