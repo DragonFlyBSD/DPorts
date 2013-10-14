@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Regexp-RegGrp/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Regexp-RegGrp/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Regexp-RegGrp
 PORTVERSION=	1.002.001
@@ -15,7 +15,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1.22:${PORTSDIR}/devel/p5-Test-Pod
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Regexp::RegGrp.3
 
 .include <bsd.port.mk>
