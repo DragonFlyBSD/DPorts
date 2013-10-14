@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Dir-Self/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-Dir-Self/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Dir-Self
 PORTVERSION=	0.10
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Dir::Self.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
