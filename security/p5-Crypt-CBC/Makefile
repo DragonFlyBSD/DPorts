@@ -1,5 +1,5 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-CBC/Makefile 324984 2013-08-19 12:40:53Z mat $
+# $FreeBSD: security/p5-Crypt-CBC/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-CBC
 PORTVERSION=	2.33
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::CBC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
