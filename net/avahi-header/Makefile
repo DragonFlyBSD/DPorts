@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-header/Makefile 323006 2013-07-14 21:17:21Z kwm $
+# $FreeBSD: net/avahi-header/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/avahi-header/Makefile,v 1.4 2012/07/09 18:22:19 kwm Exp $
 
 PORTREVISION=	0
@@ -20,6 +20,7 @@ AVAHI_SLAVE=	header
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/include/avahi-ui
 	${INSTALL_DATA} ${BUILD_WRKSRC}/avahi-ui.h \
