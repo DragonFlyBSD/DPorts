@@ -1,5 +1,5 @@
 # Created by: Shuichi Tanaka
-# $FreeBSD: japanese/libjcode/Makefile 326435 2013-09-05 18:24:04Z tabthorpe $
+# $FreeBSD: japanese/libjcode/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	libjcode
 PORTVERSION=	1.00
@@ -13,6 +13,7 @@ COMMENT=	Japanese charset conversion library
 MAKE_ARGS=	CC=${CC}
 WRKSRC=		${WRKDIR}/${DISTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA}	${WRKSRC}/libjcode.a	${PREFIX}/lib/libjcode.a
 	${INSTALL_DATA}	${WRKSRC}/jlib.h	${PREFIX}/include/jlib.h
