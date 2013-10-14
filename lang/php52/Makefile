@@ -1,5 +1,5 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: lang/php52/Makefile 325833 2013-08-31 21:30:08Z rm $
+# $FreeBSD: lang/php52/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	php52
 PORTVERSION=	5.2.17
@@ -63,6 +63,7 @@ CONFLICTS=	php53-5* php5-5*
 
 MAN1=		php-config.1 phpize.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PATCH_DIST_STRIP=	-p1
