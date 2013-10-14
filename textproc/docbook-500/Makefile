@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@kovesdan.org>
-# $FreeBSD: textproc/docbook-500/Makefile 316718 2013-04-28 13:34:26Z bapt $
+# $FreeBSD: textproc/docbook-500/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook
 PORTVERSION=	5.0
@@ -40,6 +40,7 @@ NVDL_DESC=		NVDL description
 TOOLS_DESC=		Tools for working with DocBook
 XMLCHARENT_DESC=	Install ISO 8879 XML entites
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDTD}
