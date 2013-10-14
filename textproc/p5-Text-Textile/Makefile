@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: textproc/p5-Text-Textile/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-Text-Textile/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Textile
 PORTVERSION=	2.12
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Text::Textile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
