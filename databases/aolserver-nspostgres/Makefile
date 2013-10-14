@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/databases/aolserver-nspostgres/Makefile,v 1.14 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: databases/aolserver-nspostgres/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	nspostgres
 PORTVERSION=	4.1
@@ -37,6 +37,7 @@ PLIST_FILES=	${AOLSERVERBASE}/bin/nspostgres.so \
 PORTDOCS=	ChangeLog README
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e '/^MODOBJS   =.*/{n;s/.*/OBJS  = $$(MODOBJS)/g;G;}' \
