@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-GlobalDestruction/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Devel-GlobalDestruction/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-GlobalDestruction
 PORTVERSION=	0.11
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 
 MAN3=		Devel::GlobalDestruction.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
