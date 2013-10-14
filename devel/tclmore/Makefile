@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tclmore
-# Date created:				Tue Apr 25 16:20:49 MSD 2006
-# Whom:					Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: devel/tclmore/Makefile 319774 2013-06-03 12:08:40Z gahr $
-#
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: devel/tclmore/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tclmore
 PORTVERSION=	0.7b1
@@ -26,4 +22,5 @@ INFO=		${PORTNAME}
 CONFIGURE_ARGS+=--with-tcl=${TCL_LIBDIR} \
 		--enable-threads
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
