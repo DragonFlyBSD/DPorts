@@ -1,5 +1,5 @@
 # Created by: Dave Glowacki <dglo@ssec.wisc.edu>
-# $FreeBSD: ports/java/jakarta-oro/Makefile,v 1.18 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-oro/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jakarta-oro
 PORTVERSION=	2.0.8
@@ -23,6 +23,7 @@ JAVALIBNAME=	${PORTNAME}-${PORTVERSION}
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && \
 		${SETENV} JAVA_HOME=${JAVA_HOME} ant jar javadocs
