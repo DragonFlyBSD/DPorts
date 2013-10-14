@@ -1,9 +1,5 @@
-# New ports collection makefile for:   eawpats
-# Date created:        3 September 2003
-# Whom:                Jonathan Lennox <lennox@cs.columbia.edu>
-#
-# $FreeBSD: ports/audio/eawpats/Makefile,v 1.13 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: Jonathan Lennox <lennox@cs.columbia.edu>
+# $FreeBSD: audio/eawpats/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	eawpats
 PORTVERSION=	12
@@ -19,6 +15,7 @@ COMMENT=	Eric A. Welsh's collection of Gravis Ultrasound MIDI patches
 RESTRICTED=	Some of the patches are marked no-commercial-use
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 PATCH_SUBDIRS=	ethnic mazpat/fx gsdrum08 gsdrum25 gsdrum40 gus power sfx wime
 DOC_SUBDIRS=	ethnic gsdrum08 gsdrum25 gsdrum40 power wime
