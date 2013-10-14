@@ -1,5 +1,5 @@
 # Created by: Carey Jones <mcj@acquiesce.org>
-# $FreeBSD: audio/mpg123/Makefile 319692 2013-06-02 17:18:34Z novel $
+# $FreeBSD: audio/mpg123/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpg123
 PORTVERSION=	1.15.4
@@ -13,6 +13,7 @@ COMMENT=	Command-line player for MPEG Layer 1, 2, and 3 audio files
 LICENSE=	LGPL21
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool libltdl
 USE_GNOME=	gnomehack ltverhack
 USE_LDCONFIG=	yes
