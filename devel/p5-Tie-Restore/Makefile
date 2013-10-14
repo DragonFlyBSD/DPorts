@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-Restore/Makefile 326802 2013-09-09 11:01:46Z az $
+# $FreeBSD: devel/p5-Tie-Restore/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-Restore
 PORTVERSION=	0.11
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Tie::Restore.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
