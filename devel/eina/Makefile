@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: devel/eina/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: devel/eina/Makefile 328746 2013-09-29 21:57:01Z gblach $
 
 PORTNAME=	eina
 PORTVERSION=	1.7.8
@@ -32,10 +32,5 @@ CONFIGURE_ARGS+=--disable-install-examples
 post-patch:
 	@${REINPLACE_CMD} -e 's|= \$$(datadir)/\$$(PACKAGE)/examples|= $$(datadir)/examples/$$(PACKAGE)|' \
 		${WRKSRC}/src/examples/Makefile.in
-
-post-install:
-.if empty(PORT_OPTIONS:MEXAMPLES)
-	@${RMDIR} ${EXAMPLESDIR}
-.endif
 
 .include <bsd.port.mk>
