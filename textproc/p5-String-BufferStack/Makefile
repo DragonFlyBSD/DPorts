@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-BufferStack/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-String-BufferStack/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	String-BufferStack
 PORTVERSION=	1.16
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	String::BufferStack.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
