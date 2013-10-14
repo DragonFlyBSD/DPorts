@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/dbus-qt4/Makefile 326034 2013-09-02 17:03:17Z antoine $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/dbus-qt4/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dbus
 DISTVERSION=	${QT4_VERSION}
@@ -42,6 +42,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Without this workaround, qdbus crashes.
