@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/libtomoe-gtk/Makefile 326203 2013-09-03 19:16:46Z antoine $
+# $FreeBSD: japanese/libtomoe-gtk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	libtomoe-gtk
 PORTVERSION=	0.6.0
@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 
 #OPTIONS=	GUCHARMAP	"Compile with gucharmap"		on
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 #.if defined(WITHOUT_GUCHARMAP)
