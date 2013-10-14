@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon-gstreamer/Makefile 326141 2013-09-03 12:42:48Z bapt $
+# $FreeBSD: multimedia/phonon-gstreamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	phonon
 PORTVERSION=	4.6.3
@@ -38,6 +38,7 @@ GST_PLUGINS_DESC=	Install GStreamer plugins
 
 OPTIONS_DEFAULT=
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGST_PLUGINS}
