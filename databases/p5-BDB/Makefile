@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-BDB/Makefile 326676 2013-09-07 18:20:39Z sunpoet $
+# $FreeBSD: databases/p5-BDB/Makefile 328812 2013-09-30 15:27:09Z sunpoet $
 
 PORTNAME=	BDB
 PORTVERSION=	1.90
@@ -22,8 +22,6 @@ LDFLAGS+=	-pthread
 USE_BDB=	43+
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		BDB.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '18 s|-lpthread -ldb|-l${BDB_LIB_NAME} -pthread|' ${WRKSRC}/Makefile.PL
