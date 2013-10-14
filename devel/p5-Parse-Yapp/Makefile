@@ -1,5 +1,5 @@
 # Created by: Michael Lyngbøl <lyngbol@wheel.dk>
-# $FreeBSD: devel/p5-Parse-Yapp/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-Parse-Yapp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Parse-Yapp
 PORTVERSION=	1.05
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 MAN1=		yapp.1
 MAN3=		Parse::Yapp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
