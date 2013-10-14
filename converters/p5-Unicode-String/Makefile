@@ -1,5 +1,5 @@
 # Created by: Ilia Chipitsine <ilia@jane.cgu.chel.su>
-# $FreeBSD: converters/p5-Unicode-String/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Unicode-String/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-String
 PORTVERSION=	2.09
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Unicode::CharName.3 Unicode::String.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
