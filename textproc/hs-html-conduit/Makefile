@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-html-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-html-conduit/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	html-conduit
 PORTVERSION=	1.1.0
@@ -14,5 +14,6 @@ USE_CABAL=	conduit>=1.0 filesystem-conduit>=1.0 resourcet>=0.3 \
 		system-filepath>=0.4 tagstream-conduit>=0.4 text \
 		transformers xml-conduit>=1.1 xml-types>=0.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
