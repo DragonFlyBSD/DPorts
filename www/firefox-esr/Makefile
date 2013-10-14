@@ -1,13 +1,13 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox-esr/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: www/firefox-esr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	firefox
-DISTVERSION=	17.0.8
+DISTVERSION=	17.0.9
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source
-DISTNAME=	${PORTNAME}-${DISTVERSION}esr.source
 PKGNAMESUFFIX=	-esr
+DISTNAME=	${PORTNAME}-${DISTVERSION}esr.source
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
@@ -21,7 +21,6 @@ BUILD_DEPENDS=	nspr>=4.9.2:${PORTSDIR}/devel/nspr \
 
 USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
-LATEST_LINK=	firefox-esr
 USE_GECKO=	gecko
 CONFLICTS=	firefox-2[0-35-9].* firefox-1[1-689].*
 MOZ_PKGCONFIG_FILES=	# empty
@@ -34,7 +33,6 @@ QT_NONSTANDARD=	yes
 ALL_TARGET=	default
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gmake pkgconfig
 USE_GL=		gl
 NO_MOZPKGINSTALL=yes
 
@@ -44,6 +42,7 @@ MOZ_OPTIONS=	--program-transform-name='s/firefox/${MOZILLA}/' \
 		--enable-application=browser \
 		--enable-official-branding
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 .include <bsd.port.pre.mk>
 
