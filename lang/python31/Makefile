@@ -1,4 +1,4 @@
-# $FreeBSD: lang/python31/Makefile 326729 2013-09-08 14:05:18Z koobs $
+# $FreeBSD: lang/python31/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	python31
 PORTVERSION=	3.1.5
@@ -54,6 +54,7 @@ OPTIONS_DEFAULT=	THREADS UCS4 PYMALLOC IPV6
 
 NLS_DESC=	Enable Gettext support for the locale module
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
