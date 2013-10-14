@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-Polygon/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-Polygon/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Polygon
 PORTVERSION=	1.02
@@ -23,4 +23,5 @@ MAN3=		Math::Polygon.3 \
 		Math::Polygon::Transform.3 \
 		Math::Polygon::Convex.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
