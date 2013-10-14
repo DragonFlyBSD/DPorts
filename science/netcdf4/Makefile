@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: science/netcdf4/Makefile 325111 2013-08-21 12:08:40Z sunpoet $
+# $FreeBSD: science/netcdf4/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	netcdf
 PORTVERSION=	4.1.3
@@ -36,6 +36,7 @@ INFO=		netcdf netcdf-c netcdf-cxx netcdf-f77 netcdf-f90 \
 MAN1=		nccopy.1 ncdump.1 ncgen.1 ncgen3.1
 MAN3=		netcdf.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDAP}
