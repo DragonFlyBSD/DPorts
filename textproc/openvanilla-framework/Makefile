@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openvanilla-framework
-# Date Created:				3 September 2005
-# Whom:					Leland Wang <llwang@infor.org>
-#
-# $FreeBSD: ports/textproc/openvanilla-framework/Makefile,v 1.6 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Leland Wang <llwang@infor.org>
+# $FreeBSD: textproc/openvanilla-framework/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	openvanilla-framework
 PORTVERSION=	0.7.2.20070514
@@ -17,6 +13,7 @@ COMMENT=	Development header files for OpenVanilla
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/include/OpenVanilla
 	@${INSTALL_DATA} ${WRKSRC}/Framework/Headers/* ${PREFIX}/include/OpenVanilla
