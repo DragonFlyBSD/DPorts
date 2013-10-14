@@ -1,5 +1,5 @@
 # Created by: Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-XS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-JSON-XS/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	JSON-XS
 PORTVERSION=	2.34
@@ -21,4 +21,5 @@ MAN3=		JSON::XS.3 JSON::XS::Boolean.3
 
 PORTSCOUT=	skipv:2.232
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
