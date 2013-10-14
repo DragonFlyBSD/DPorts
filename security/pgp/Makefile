@@ -1,9 +1,5 @@
-# New ports collection makefile for: pgp
-# Date created:         8 Jul 1995
-# Whom:                 ache
-#
-# $FreeBSD: ports/security/pgp/Makefile,v 1.52 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: security/pgp/Makefile 329641 2013-10-06 23:34:30Z marino $
 
 PORTNAME=	pgp
 PORTVERSION=	2.6.3i
@@ -15,14 +11,15 @@ DISTNAME=	pgp263is
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PGP International version - Public-Key encryption for the masses
 
-WRKSRC=		${WRKDIR}/src
+ONLY_FOR_ARCHS=	i386 alpha amd64 sparc64
+NO_STAGE=	yes
 
+WRKSRC=		${WRKDIR}/src
 MAKEFILE=	makefile
-ALL_TARGET=	freebsd-${ARCH}
+ALL_TARGET=	freebsd-${ARCH:S/x86_64/amd64/}
 MAKE_ENV=	OS_CFLAGS="${CFLAGS}"
 PGPLIB=		${PREFIX}/share/pgp
 MAN1=		pgp.1 pgp2.1
-ONLY_FOR_ARCHS=	i386 alpha amd64 sparc64
 
 do-install:
 	cd ${WRKSRC}; ${INSTALL_PROGRAM} -c -o bin -g bin -m 555 pgp ${PREFIX}/bin
