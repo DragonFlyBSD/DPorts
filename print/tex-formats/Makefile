@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-formats/Makefile 319561 2013-06-01 12:39:21Z hrs $
+# $FreeBSD: print/tex-formats/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	formats
 PORTVERSION=	20120701
@@ -18,6 +18,7 @@ TEXHASHDIRS=	${TEXMFVARDIR}
 TEX_FORMATS=	amstex context cslatex eplain latex-bin \
 		metafont mex mltex mptopdf pdftex tex texsis
 
+NO_STAGE=	yes
 do-install:
 	@${DO_NADA}
 
