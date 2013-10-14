@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mcrypt
-# Date created:		Mon Jun 28 18:02:04 PDT 1999
-# Whom:			nsayer@freebsd.org
-#
-# $FreeBSD: security/libmcrypt/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: nsayer@FreeBSD.org
+# $FreeBSD: security/libmcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libmcrypt
 PORTVERSION=	2.5.8
@@ -19,4 +15,5 @@ USE_LDCONFIG=	yes
 
 MAN3=		mcrypt.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
