@@ -1,5 +1,5 @@
 # Created by: NECDET COKYAZICI <cokyazici@yahoo.co.uk>
-# $FreeBSD: devel/libnaji/Makefile 324130 2013-08-01 21:33:53Z bapt $
+# $FreeBSD: devel/libnaji/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libnaji
 PORTVERSION=	0.6.4
@@ -13,6 +13,7 @@ MAKE_ARGS=	cc=${CC}
 
 DISTVERSIONSUFFIX=	.src
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libnaji.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/libnaji.a ${PREFIX}/lib
