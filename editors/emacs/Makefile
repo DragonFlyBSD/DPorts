@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: editors/emacs/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: editors/emacs/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}
@@ -70,6 +70,7 @@ OPTIONS_DEFAULT=DBUS GCONF GIF GTK2 JPEG M17N OTF PNG SOUND SOURCES SVG TIFF SYN
 		SCROLLBARS XFT XIM XML XPM MAGICK GNUTLS GSETTINGS
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCANNA}
