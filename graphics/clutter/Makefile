@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: graphics/clutter/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #  $MCom: ports/graphics/clutter/Makefile,v 1.34 2010/09/24 16:35:42 kwm Exp $
 
 PORTNAME=	clutter
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	--with-x --enable-conformance=no
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|G_CONST_RETURN|const|g' \
 		${WRKSRC}/clutter/cally/*.c \
