@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gracula
-# Date created:				30 May 1999
-# Whom:					G. Adam Stanislav <adam@whizkidtech.net>
-#
-# $FreeBSD: ports/graphics/gracula/Makefile,v 1.11 2012/11/17 05:58:08 svnexp Exp $
-#
+# Created by: G. Adam Stanislav <adam@whizkidtech.net>
+# $FreeBSD: graphics/gracula/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gracula
 PORTVERSION=	3.0
@@ -17,6 +13,7 @@ COMMENT=	A Graphic Counter Language compiler/interpreter
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gracula ${PREFIX}/bin
 	$(INSTALL_PROGRAM) ${WRKSRC}/sec2000 ${PREFIX}/bin
