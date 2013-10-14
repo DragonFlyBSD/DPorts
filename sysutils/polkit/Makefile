@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: sysutils/polkit/Makefile 323169 2013-07-17 14:15:56Z miwi $
+# $FreeBSD: sysutils/polkit/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/polkit/Makefile,v 1.23 2012/12/18 13:01:54 kwm Exp $
 
 PORTNAME=	polkit
@@ -36,6 +36,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	MANPAGES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
