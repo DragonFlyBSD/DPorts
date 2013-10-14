@@ -1,12 +1,12 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/vo-aacenc/Makefile 323861 2013-07-28 22:48:07Z mm $
+# $FreeBSD: audio/vo-aacenc/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	vo-aacenc
 PORTVERSION=	0.1.3
 CATEGORIES=	audio
 MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	VisualOn AAC encoder library
 
 LICENSE=	AL2
