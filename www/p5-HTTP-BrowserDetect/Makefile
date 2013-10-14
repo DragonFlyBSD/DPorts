@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-BrowserDetect/Makefile 326550 2013-09-06 21:22:16Z tobez $
+# $FreeBSD: www/p5-HTTP-BrowserDetect/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-BrowserDetect
 PORTVERSION=	1.61
@@ -24,6 +24,7 @@ USE_PERL5=	configure
 
 MAN3=		HTTP::BrowserDetect.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
