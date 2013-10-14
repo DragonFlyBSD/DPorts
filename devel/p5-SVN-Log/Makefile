@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-SVN-Log/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-SVN-Log/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Log
 PORTVERSION=	0.03
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=	SVN::Log.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
