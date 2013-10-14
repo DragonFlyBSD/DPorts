@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnat-aux/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: lang/gnat-aux/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gnat-aux
 PORTVERSION=	${SNAPSHOT}
@@ -12,6 +12,7 @@ DISTFILES=	gcc-core-${GCC_VERSION}.tar.bz2
 MAINTAINER=	marino@FreeBSD.org
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 
 LANGS=			c
