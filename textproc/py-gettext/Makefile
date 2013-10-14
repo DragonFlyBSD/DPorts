@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/py-gettext/Makefile,v 1.4 2013/02/12 19:30:34 svnexp Exp $
+# $FreeBSD: textproc/py-gettext/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	gettext
 PORTVERSION=	2.1
@@ -18,6 +18,7 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	python-${PORTNAME}
 USE_ZIP=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} <= 300
