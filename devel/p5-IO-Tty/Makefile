@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: devel/p5-IO-Tty/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-IO-Tty/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IO-Tty
 PORTVERSION=	1.10
@@ -17,4 +17,5 @@ MAN3=		IO::Pty.3 \
 		IO::Tty.3 \
 		IO::Tty::Constant.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
