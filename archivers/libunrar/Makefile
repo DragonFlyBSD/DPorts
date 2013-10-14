@@ -1,5 +1,5 @@
 # Created by: samm@os2.kiev.ua
-# $FreeBSD: archivers/libunrar/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/libunrar/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	libunrar
 PORTVERSION=	3.9.10
@@ -13,6 +13,7 @@ COMMENT=	Library to work with RAR archives
 
 WRKSRC=		${WRKDIR}/unrar
 
+NO_STAGE=	yes
 USES=		gmake
 MAKEFILE=	makefile.unix
 ALL_TARGET=	lib
