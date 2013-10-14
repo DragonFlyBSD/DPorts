@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev
-# $FreeBSD: devel/p5-Heap/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-Heap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Heap
 PORTVERSION=	0.80
@@ -18,4 +18,5 @@ MAN3=		Heap.3 Heap::Binary.3 Heap::Binomial.3 Heap::Elem::Num.3 \
 		Heap::Elem::Str.3 Heap::Elem::StrRev.3 Heap::Elem.3 \
 		Heap::Fibonacci.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
