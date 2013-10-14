@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/redland/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/redland/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	redland
 PORTVERSION=	1.0.16
@@ -13,14 +13,13 @@ LIB_DEPENDS=	raptor2:${PORTSDIR}/textproc/raptor2 \
 		rasqal:${PORTSDIR}/textproc/rasqal
 
 USE_AUTOTOOLS=	libltdl
-USE_GNOME=	gnomehack libxml2 lthack
+USE_GNOME=	libxml2 lthack
 USE_OPENSSL=	yes
-USE_PERL5_BUILD=	yes
-USES=		pkgconfig:both
+USE_PERL5=	build
+USES=		gmake pathfix perl5 pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-raptor=system \
 		--with-threestore=no
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
 MAN1=		rdfproc.1 redland-config.1 \
@@ -34,6 +33,7 @@ OPTIONS_DEFAULT=	BDB
 #		SQLITE "Use SQLite instead of BDB" off \
 #		VIRTUOSO "Use Virtoso instead of BDB" off
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBDB}
