@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/py-MySQLdb/pkg-plist,v 1.15 2012/11/17 05:55:21 svnexp Exp $
+@comment $FreeBSD: databases/py-MySQLdb/pkg-plist 301054 2012-07-18 00:59:20Z db $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt

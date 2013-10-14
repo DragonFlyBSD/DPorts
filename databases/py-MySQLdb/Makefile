@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-MySQLdb
-# Date created:				04 April 2000
-# Whom:                 		Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/py-MySQLdb/Makefile,v 1.44 2012/11/17 05:55:21 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: databases/py-MySQLdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	MySQLdb
 DISTVERSION=	1.2.3
@@ -33,6 +29,7 @@ OPTIONS_DEFINE=	DOCS MYSQLCLIENT_R
 OPTIONS_DEFAULT=	DOCS MYSQLCLIENT_R
 MYSQLCLIENT_R_DESC=	Use libmysqlclient_r (thread safe)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
