@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-blinker/Makefile 322422 2013-07-07 08:21:48Z koobs $
+# $FreeBSD: devel/py-blinker/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	blinker
 PORTVERSION=	1.3
@@ -20,4 +20,5 @@ USE_PYDISTUTILS=	yes
 regression-test: build
 	@cd ${WRKSRC} && nosetests
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
