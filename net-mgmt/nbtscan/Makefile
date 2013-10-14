@@ -1,9 +1,5 @@
-# Ports collection makefile for:  nbtscan
-# Date created:			  22 Aug 2001
-# Whom:				  Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: net-mgmt/nbtscan/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: net-mgmt/nbtscan/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nbtscan
 PORTVERSION=	1.5.1
@@ -24,6 +20,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}a
 ALL_TARGET=	nbtscan
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nbtscan ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
