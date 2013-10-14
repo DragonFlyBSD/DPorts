@@ -1,5 +1,5 @@
 # Created by: J.F. Dockes
-# $FreeBSD: databases/xapian-core/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: databases/xapian-core/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	xapian-core
 PORTVERSION=	1.2.15
@@ -31,6 +31,7 @@ MAN1=		xapian-check.1 \
 		xapian-replicate-server.1 \
 		xapian-tcpsrv.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MSSE2}
