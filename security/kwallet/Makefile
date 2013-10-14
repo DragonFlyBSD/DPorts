@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/kwallet/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/kwallet/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	kwallet
 PORTVERSION=	${KDE4_VERSION}
@@ -18,4 +18,5 @@ USE_KDE4=	kdeprefix kdehier automoc4 kdelibs
 USES=		cmake:outsource
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
