@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	vorbisgain
-# Date created:			Jan 3, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/audio/vorbisgain/Makefile,v 1.21 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: audio/vorbisgain/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	vorbisgain
 PORTVERSION=	0.37
@@ -18,6 +13,7 @@ COMMENT=	Calculates the perceived sound level of an Ogg Vorbis file
 LIB_DEPENDS=	vorbis.4:${PORTSDIR}/audio/libvorbis
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
