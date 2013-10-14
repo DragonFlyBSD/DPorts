@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-eggtestinfo/Makefile,v 1.2 2012/11/17 05:56:46 svnexp Exp $
+# $FreeBSD: devel/py-eggtestinfo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	eggtestinfo
 PORTVERSION=	0.3
@@ -16,4 +16,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
