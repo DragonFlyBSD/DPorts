@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-execjs
-# Date created:		2011-09-11
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-execjs/Makefile,v 1.7 2012/11/17 05:56:59 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-execjs/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	execjs
 PORTVERSION=	1.4.0
@@ -19,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
