@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/liba52/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/liba52/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	liba52
 PORTVERSION=	0.7.4
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-oss --enable-shared
