@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-Cache-Memcached-Managed/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: databases/p5-Cache-Memcached-Managed/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Cache-Memcached-Managed
 PORTVERSION=	0.24
@@ -24,6 +24,7 @@ MAN3=	Cache::Memcached::Managed.3 \
 	Cache::Memcached::Managed::Inactive.3 \
 	Cache::Memcached::Managed::Multi.3
 
+NO_STAGE=	yes
 post-extract:
 	@${PERL} -i.bak -ne 'print unless m,^BEGIN, .. m,^},' ${WRKSRC}/Makefile.PL
 
