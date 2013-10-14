@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: mail/gnumail/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: mail/gnumail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gnumail
 PORTVERSION=	1.2.0
@@ -23,4 +23,5 @@ USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DIR=${GNUSTEP_LOCAL_ROOT}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
