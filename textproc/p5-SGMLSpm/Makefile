@@ -1,5 +1,5 @@
 # Created by: Brian Candler <B.Candler@pobox.com>
-# $FreeBSD: textproc/p5-SGMLSpm/Makefile 324190 2013-08-03 12:51:18Z mat $
+# $FreeBSD: textproc/p5-SGMLSpm/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	SGMLSpm
 PORTVERSION=	1.03
@@ -25,6 +25,7 @@ SHEBANG_FILES=	sgmlspl.pl \
 INSTALL_TARGET=	install BINDIR=${PREFIX}/bin \
 		PERL5DIR=${SITE_PERL} SPECDIR=${EXAMPLESDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
