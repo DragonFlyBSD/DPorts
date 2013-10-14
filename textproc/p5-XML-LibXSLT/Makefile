@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: textproc/p5-XML-LibXSLT/Makefile 326428 2013-09-05 17:55:45Z sunpoet $
+# $FreeBSD: textproc/p5-XML-LibXSLT/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-LibXSLT
 PORTVERSION=	1.81
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::LibXSLT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
