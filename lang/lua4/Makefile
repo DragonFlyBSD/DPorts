@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	lua
-# Date created:				27 June 1999
-# Whom:					Richard Kiss <him@richardkiss.com>
-#
-# $FreeBSD: ports/lang/lua4/Makefile,v 1.26 2012/11/17 05:58:52 svnexp Exp $
-#
+# Created by: Richard Kiss <him@richardkiss.com>
+# $FreeBSD: lang/lua4/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	lua
 PORTVERSION=	4.0.1
@@ -33,6 +29,7 @@ LUA_MAN=	${LUA_BIN:S/$/.1/}
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
