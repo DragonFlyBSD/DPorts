@@ -1,4 +1,4 @@
-# $FreeBSD: databases/ldb/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/ldb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=		ldb
 PORTVERSION=		1.1.16
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 			--mandir=${MANPREFIX}/man \
 			--infodir=${PREFIX}/${INFO_PATH}/${INFO_SUBDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 BUILD_DEPENDS+=		talloc>=2.0.8:${PORTSDIR}/devel/talloc \
@@ -87,10 +88,8 @@ CONFIGURE_ENV+=		NOCOLOR=yes
 MAKE_ENV+=		NOCOLOR=yes
 
 .if !defined(DISABLE_MAKE_JOBS) && !defined(MAKE_JOBS_UNSAFE)
-.if defined(MAKE_JOBS_SAFE) || defined(FORCE_MAKE_JOBS)
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS_NUMBER}
 _MAKE_JOBS=		--jobs=${MAKE_JOBS_NUMBER}
-.endif
 .endif
 
 USE_PYTHON_RUN=		yes
