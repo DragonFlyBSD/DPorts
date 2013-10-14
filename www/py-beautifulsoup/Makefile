@@ -1,11 +1,10 @@
 # Created by: Mike Meyer
-# $FreeBSD: www/py-beautifulsoup/Makefile 318257 2013-05-15 19:33:14Z wg $
+# $FreeBSD: www/py-beautifulsoup/Makefile 329403 2013-10-05 01:02:13Z wg $
 
 PORTNAME=	beautifulsoup
-PORTVERSION=	4.1.3
-PORTREVISION=	1
+PORTVERSION=	4.3.2
 CATEGORIES=	www python
-MASTER_SITES=	http://www.crummy.com/software/BeautifulSoup/bs4/download/
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	beautifulsoup4-${PORTVERSION}
 
@@ -15,11 +14,7 @@ COMMENT=	HTML/XML Parser for Python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	beautifulsoup4
+PYDISTUTILS_AUTOPLIST=	yes
+PYTHON_PY3K_PLIST_HACK=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
