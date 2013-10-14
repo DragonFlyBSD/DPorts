@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: www/p5-Apache-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Apache-DBI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-DBI
 PORTVERSION=	1.12
@@ -31,4 +31,5 @@ PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache/DBI
 PLIST_DIRSTRY=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache \
 		%%SITE_PERL%%/Apache
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
