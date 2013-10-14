@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-ffi/Makefile 322847 2013-07-12 16:24:55Z bapt $
+# $FreeBSD: devel/pure-ffi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pure-ffi
 PORTVERSION=	0.12
@@ -16,5 +16,6 @@ USE_PURE=	yes
 PLIST_FILES=	lib/pure/ffi.pure \
 		lib/pure/ffi.so
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
