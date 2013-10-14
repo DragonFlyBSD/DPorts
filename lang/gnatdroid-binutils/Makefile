@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-binutils/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/gnatdroid-binutils/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=		binutils
 PORTVERSION=		2.21.1
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--with-gmp=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-mpfr=${LOCALBASE}
 CONFIGURE_ARGS+=	--disable-nls
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${BR2_PREFIX}
 	(cd ${BR1_PREFIX} && ${COPYTREE_BIN} \* ${BR2_PREFIX})
