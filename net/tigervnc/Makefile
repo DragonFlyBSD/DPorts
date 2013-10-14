@@ -1,8 +1,9 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net/tigervnc/Makefile 326978 2013-09-11 13:20:02Z wg $
+# $FreeBSD: net/tigervnc/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	tigervnc
 PORTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	net x11-servers
 MASTER_SITES=	SF:tigervnc
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}/:tigervnc
@@ -49,6 +50,7 @@ OPTIONS_DEFAULT=	GNUTLS NLS PAM VIEWER
 VIEWER_DESC=		Build vncviewer
 HPJPG_DESC=		Build with High-Performance JPEG support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CMAKE_ARGS=	-G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=${PREFIX}
