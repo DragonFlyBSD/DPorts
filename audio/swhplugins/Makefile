@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/swhplugins/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/swhplugins/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	swhplugins
 PORTVERSION=	0.4.15
@@ -20,6 +20,7 @@ LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float
 ONLY_FOR_ARCHS=	i386 amd64
 
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
