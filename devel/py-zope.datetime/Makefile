@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.datetime
-# Date created:				11 October, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.datetime/Makefile,v 1.5 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.datetime/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.datetime
 PORTVERSION=	3.4.1
@@ -19,5 +14,7 @@ LICENSE=	ZPL21
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
