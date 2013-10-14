@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: devel/p5-MouseX-Types-Path-Class/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-MouseX-Types-Path-Class/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MouseX-Types-Path-Class
 PORTVERSION=	0.07
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=		MouseX::Types::Path::Class.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
