@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-blaze-builder-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-blaze-builder-conduit/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	blaze-builder-conduit
 PORTVERSION=	1.0.0
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_CABAL=	blaze-builder>=0.2.1.4 conduit>=1.0 text>=0.11 \
 		transformers>=0.2.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
