@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: www/libgtkhtml/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: www/libgtkhtml/Makefile 327776 2013-09-20 23:36:50Z bapt $
 #   $MCom: ports/www/libgtkhtml/Makefile,v 1.41 2008/08/23 18:23:00 mezz Exp $
 
 PORTNAME=	libgtkhtml
@@ -20,4 +20,5 @@ USE_AUTOTOOLS=  libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
