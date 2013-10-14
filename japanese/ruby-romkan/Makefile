@@ -1,9 +1,5 @@
-# Ports collection makefile for:	Ruby/Romkan
-# Date created:			1 May 2001
-# Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: japanese/ruby-romkan/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: japanese/ruby-romkan/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	romkan
 PORTVERSION=	0.4
@@ -29,6 +25,7 @@ DOCS_EN=	ChangeLog \
 DOCS_JA=	${RUBY_RD_FILES:M*.ja.rd} \
 		${RUBY_RD_HTML_FILES:M*.ja.html}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}${RUBY_PKGNAMEPREFIX}
