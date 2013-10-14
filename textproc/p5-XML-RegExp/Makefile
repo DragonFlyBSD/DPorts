@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-RegExp/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-RegExp/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-RegExp
 PORTVERSION=	0.04
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::RegExp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
