@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11-wm/windowmaker/Makefile 327417 2013-09-16 16:58:41Z bapt $
+# $FreeBSD: x11-wm/windowmaker/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	windowmaker
 PORTVERSION=	0.95.4
@@ -40,6 +40,7 @@ PORTDOCS=	AUTHORS BUGFORM BUGS ChangeLog FAQ FAQ.I18N INSTALL \
 
 OPTIONS_DEFINE=	DOCS NLS XRANDR
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == x86_64 && ${OSVERSION} < 800000
