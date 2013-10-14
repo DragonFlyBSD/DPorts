@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/cdk/Makefile 322325 2013-07-05 13:44:31Z bapt $
+# $FreeBSD: devel/cdk/Makefile 328216 2013-09-24 23:37:31Z bapt $
 
 PORTNAME=	cdk
 PORTVERSION=	5.0.20120323
@@ -21,19 +21,12 @@ GNU_CONFIGURE=	yes
 PORTDOCS=	COPYING EXPANDING INSTALL NOTES README TODO
 MAKE_JOBS_UNSAFE=	yes
 
-.include <bsd.port.options.mk>
-
 CONFIGURE_ARGS+=--with-ncurses
 ALL_TARGET=	default examples demos cli cdkshlib
 INSTALL_TARGET=	install installCDKSHLibrary
 USE_LDCONFIG=	yes
 
-.include "${.CURDIR}/maninfo.mk"
-
-post-extract:
-.if ! ${PORT_OPTIONS:MDOCS}
-EXTRA_PATCHES+=      ${FILESDIR}/extra-patch-Makefile.in
-.endif
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/doc/cdk|/share/doc/cdk| ; s|VERSION)|VERSION_MAJOR)|' \
@@ -43,16 +36,15 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${INSTALL} -d ${EXAMPLESDIR}
-	${INSTALL} -d ${EXAMPLESDIR}/cli
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/cli
 	cd ${WRKSRC}/cli; \
-	${FIND} . | ${CPIO} -pdm -R ${LIBOWN}:${LIBGRP} ${EXAMPLESDIR}/cli
-	${INSTALL} -d ${EXAMPLESDIR}/demos
+	${FIND} . | ${CPIO} -pdm -R ${LIBOWN}:${LIBGRP} ${STAGEDIR}${EXAMPLESDIR}/cli
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/demos
 	cd ${WRKSRC}/demos; \
-	${FIND} . | ${CPIO} -pdm -R ${LIBOWN}:${LIBGRP} ${EXAMPLESDIR}/demos
-	${INSTALL} -d ${EXAMPLESDIR}/examples
+	${FIND} . | ${CPIO} -pdm -R ${LIBOWN}:${LIBGRP} ${STAGEDIR}${EXAMPLESDIR}/demos
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/examples
 	cd ${WRKSRC}/examples; \
-	${FIND} . | ${CPIO} -pdm -R ${LIBOWN}:${LIBGRP} ${EXAMPLESDIR}/examples
+	${FIND} . | ${CPIO} -pdm -R ${LIBOWN}:${LIBGRP} ${STAGEDIR}${EXAMPLESDIR}/examples
 .endif
 
 .include <bsd.port.mk>
