@@ -1,5 +1,5 @@
 # Created by: Abel Chow <achow@transoft.net>
-# $FreeBSD: ports/www/tidy/Makefile,v 1.31 2013/01/26 16:56:14 svnexp Exp $
+# $FreeBSD: www/tidy/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	tidy4
 PORTVERSION=	20000804
@@ -14,6 +14,8 @@ COMMENT=	Fixes and tidies up HTML files
 
 LICENSE=	BSD
 LICENSE_FILE=	${FILESDIR}/COPYRIGHT
+
+NO_STAGE=	yes
 
 MAN1=		tidy4.1
 ALL_TARGET=	tidy
