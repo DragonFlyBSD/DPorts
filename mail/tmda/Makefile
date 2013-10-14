@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tmda
-# Date created:				08 June 2001
-# Whom:					Jason R. Mastaler <jason@mastaler.com>
-#
-# $FreeBSD: mail/tmda/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Jason R. Mastaler <jason@mastaler.com>
+# $FreeBSD: mail/tmda/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	tmda
 PORTVERSION=	1.1.12
@@ -32,6 +28,7 @@ SCRIPTS=	collectaddys def2html printcdb printdbm sendit.sh \
 		update-internaldomains vadduser-tmda vmailmgr-vdir.sh \
 		vpopmail-vdir.sh wrapfd3.sh
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${PYTHON_CMD} ./compileall
 
