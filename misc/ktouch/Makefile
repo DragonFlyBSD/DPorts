@@ -1,4 +1,4 @@
-# $FreeBSD: misc/ktouch/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/ktouch/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	ktouch
 PORTVERSION=	${KDE4_VERSION}
@@ -21,4 +21,5 @@ USE_XORG=	xkbfile
 
 MAN1=		ktouch.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
