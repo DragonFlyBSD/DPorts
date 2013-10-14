@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/archivers/cabextract/Makefile,v 1.23 2012/12/21 06:04:16 svnexp Exp $
+# $FreeBSD: archivers/cabextract/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	cabextract
 PORTVERSION=	1.4
@@ -11,6 +11,7 @@ COMMENT=	Program to extract Microsoft cabinet (.CAB) files
 
 LICENSE=	GPLv3
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
 MANLANG=	"" ja
