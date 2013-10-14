@@ -1,9 +1,5 @@
-# ports collection makefile for:	Berkeley DB v4
-# Date created:				2003-01-04
-# Whom:					Matthias Andree <matthias.andree@gmx.de>
-#
-# $FreeBSD: ports/databases/db41/Makefile,v 1.70 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: Matthias Andree <matthias.andree@gmx.de>
+# $FreeBSD: databases/db41/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	db41
 PORTVERSION=	4.1.25
@@ -35,6 +31,7 @@ INSTALL_TARGET=	install install_docs
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64
