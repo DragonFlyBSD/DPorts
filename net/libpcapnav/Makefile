@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libpcapnav
-# Date created:		2004-04-23
-# Whom:			Yann Berthier <yb@sainte-barbe.org>
-#
-# $FreeBSD: ports/net/libpcapnav/Makefile,v 1.14 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Yann Berthier <yb@sainte-barbe.org>
+# $FreeBSD: net/libpcapnav/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libpcapnav
 PORTVERSION=	0.8
