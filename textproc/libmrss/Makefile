@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/libmrss/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: textproc/libmrss/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libmrss
 PORTVERSION=	0.19.2
@@ -20,4 +20,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 USES=	pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
