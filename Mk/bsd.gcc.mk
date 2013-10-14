@@ -35,14 +35,14 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: Mk/bsd.gcc.mk 315538 2013-03-29 11:26:14Z gerald $
+# $FreeBSD: Mk/bsd.gcc.mk 330254 2013-10-13 21:23:35Z gerald $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
 
 # All GCC versions supported by the ports framework.  Keep them in
 # ascending order and in sync with the table below. 
-GCCVERSIONS=	030402 040200 040400 040600 040700 040800
+GCCVERSIONS=	030402 040200 040400 040600 040700 040800 040900
 
 # The first field if the DFLYVERSION in which it appeared in the base.
 # The second field is the DFLYVERSION in which it disappeared from the base.
@@ -56,6 +56,7 @@ GCCVERSION_040400=	300200  300400 4.4
 GCCVERSION_040600=	     0       0 4.6
 GCCVERSION_040700=	300400 9999999 4.7
 GCCVERSION_040800=	     0       0 4.8
+GCCVERSION_040900=	     0       0 4.9
 
 GCC_DEFAULT_VERSION=	4.7
 DFLY_DEFAULT_VERSION=	47

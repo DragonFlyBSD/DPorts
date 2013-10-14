@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 328005 2013-09-23 14:01:51Z rm $
+# $FreeBSD: Mk/bsd.options.desc.mk 330247 2013-10-13 19:06:40Z zi $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -377,6 +377,7 @@ QUICKTIME_DESC?=	QuickTime support
 RADIUS_DESC?=		RADIUS protocol support
 RAW_DESC?=		RAW format support
 READLINE_DESC?=		Command line editing via libreadline
+REDIS_DESC?=		Redis support
 RESIN3_DESC?=		Resin 3.x support
 RTMP_DESC?=		RTMP protocol support via librtmp
 RUBY_DESC?=		Ruby bindings or support
