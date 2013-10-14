@@ -1,9 +1,5 @@
-# New ports collection makefile for:   GraphicsMagick
-# Date created:        25 july 2005
-# Whom:                Ron van Daal
-#
-# $FreeBSD: graphics/GraphicsMagick/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: Ron van Daal
+# $FreeBSD: graphics/GraphicsMagick/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.1.15
@@ -63,6 +59,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 test check:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
 
@@ -79,7 +76,6 @@ CONFIGURE_ARGS+=	--with-windows-font-dir="${WINDOWS_FONT_DIR}"
 .endif
 
 .if ${PORT_OPTIONS:MX11} == ""
-PKGNAMESUFFIX+=	-nox11
 CONFIGURE_ARGS+=--without-x
 LIB_DEPENDS+=	wmflite:${PORTSDIR}/graphics/libwmf-nox11
 .else
