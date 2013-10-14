@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jam
-# Date created:		10 July 1998
-# Whom:			Jeffrey Hsu <hsu@freebsd.org>
-#
-# $FreeBSD: ports/devel/jam/Makefile,v 1.24 2012/11/17 05:55:51 svnexp Exp $
-#
+# Created by: Jeffrey Hsu <hsu@FreeBSD.org>
+# $FreeBSD: devel/jam/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	jam
 PORTVERSION=	2.5
@@ -17,6 +13,7 @@ COMMENT=	A build utility like make(1)
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
