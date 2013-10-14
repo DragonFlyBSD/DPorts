@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-SHA/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-SHA/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	SHA
 PORTVERSION=	1.6.1
@@ -14,6 +14,7 @@ OPTIONS_DEFINE=		EXE
 
 EXE_DESC=		Build a SHA2-384 executable similar to 'md5sum'
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 CONFIGURE_ARGS+=	--flags="-Test"
