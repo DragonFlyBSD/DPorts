@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Object-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Object-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Object-Simple
 PORTVERSION=	3.0900
@@ -21,4 +21,5 @@ MAN3=		Object::Simple.3 \
 		Object::Simple::Accessor.3 \
 		Object::Simple::Guide.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
