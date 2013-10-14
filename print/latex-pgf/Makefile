@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-pgf
-# Date created:		24 Jan 2004
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: print/latex-pgf/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: print/latex-pgf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pgf
 PORTVERSION=	2.10
@@ -31,6 +28,7 @@ TEXMFDIR_LSR=	${LOCALBASE}/${TEXMFDIR}/ls-R
 MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 CLASSDIR=	${TEXMFDIR}/tex
 
+NO_STAGE=	yes
 do-install:
 .for C in generic latex plain
 	${MKDIR} ${PREFIX}/${CLASSDIR}/${C}
