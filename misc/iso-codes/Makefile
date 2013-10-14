@@ -1,8 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: misc/iso-codes/Makefile 321216 2013-06-18 19:26:54Z kwm $
+# $FreeBSD: misc/iso-codes/Makefile 328948 2013-10-01 13:38:11Z kwm $
 
 PORTNAME=	iso-codes
-PORTVERSION=	3.43
+PORTVERSION=	3.46
 CATEGORIES=	misc
 MASTER_SITES=	http://pkg-isocodes.alioth.debian.org/downloads/
 
@@ -12,8 +12,7 @@ COMMENT=	Lists of the country, language, and currency iso names
 LICENSE=	LGPL21
 
 USE_XZ=		yes
-USES=		pathfix gettext
-USE_GMAKE=	yes
+USES=		pathfix gettext gmake
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
