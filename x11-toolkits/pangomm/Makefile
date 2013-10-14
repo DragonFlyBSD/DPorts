@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/pangomm/Makefile 326032 2013-09-02 16:55:04Z bapt $
+# $FreeBSD: x11-toolkits/pangomm/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/trunk/x11-toolkits/pangomm/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	pangomm
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	--disable-documentation \
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="1.4"
 
+NO_STAGE=	yes
 post-patch:
 .for d in tests
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/${d}//' \
