@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-# $FreeBSD: print/tex-xdvik/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/tex-xdvik/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.86
@@ -48,6 +48,7 @@ PORTDOCS=	BUGS CHANGES INSTALL README README.CVS README.coding \
 		README.config README.cross README.distro README.hacking \
 		README.layout README.xdvik README_maintainer TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
