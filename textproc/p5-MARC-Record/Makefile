@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: textproc/p5-MARC-Record/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-MARC-Record/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	MARC-Record
 PORTVERSION=	2.0.5
@@ -18,4 +18,5 @@ MAN3=		MARC::Batch.3 MARC::Doc::Tutorial.3 MARC::Field.3 \
 		MARC::File::Encode.3 MARC::File.3 MARC::File::MicroLIF.3 \
 		MARC::File::USMARC.3 MARC::Record.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
