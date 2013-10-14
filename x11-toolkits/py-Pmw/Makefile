@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-Pmw/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: x11-toolkits/py-Pmw/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Pmw
 PORTVERSION=	1.3.2
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 PMWVERSION=	${DISTNAME:R:S/./_/g}
 PLIST_SUB=	PMWVERSION="${PMWVERSION}"
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${DATADIR}
 	@(cd ${WRKSRC}/Pmw/${PMWVERSION}/bin; ${TAR} cf - .) | \
