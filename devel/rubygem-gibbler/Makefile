@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-gibbler/Makefile 320768 2013-06-13 11:50:16Z sunpoet $
+# $FreeBSD: devel/rubygem-gibbler/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gibbler
 PORTVERSION=	0.9.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
