@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/linphone-base/Makefile 325173 2013-08-21 23:26:34Z wg $
+# $FreeBSD: net/linphone-base/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	linphone
 PORTVERSION=	3.2.1
@@ -32,6 +32,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
