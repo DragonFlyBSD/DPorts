@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sgmlformat
-# Date created:		July 16, 1997
-# Whom:			jfieber
-#
-# $FreeBSD: ports/textproc/sgmlformat/Makefile,v 1.37 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: jfieber
+# $FreeBSD: textproc/sgmlformat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sgmlformat
 PORTVERSION=	1.7
@@ -15,7 +11,8 @@ MASTER_SITE_SUBDIR=	kuriyama
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Generates groff and HTML from linuxdoc and docbook SGML documents
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN1=		instant.1 sgmlfmt.1
 MAN5=		transpec.5
@@ -24,6 +21,7 @@ MANCOMPRESSED=	yes
 # There are two ports that satisfy the nsgmls requirement.
 # Jade is preferred.
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${MACHINE_ARCH} != "i386"
