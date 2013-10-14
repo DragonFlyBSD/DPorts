@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxpaint/Makefile 326190 2013-09-03 18:16:10Z antoine $
+# $FreeBSD: games/tuxpaint/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tuxpaint
 PORTVERSION=	0.9.21
@@ -34,6 +34,7 @@ MAKE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 MANCOMPRESSED=	yes
 MAN1=		tp-magic-config.1 tuxpaint.1 tuxpaint-import.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
