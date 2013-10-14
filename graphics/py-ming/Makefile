@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/py-ming/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: graphics/py-ming/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ming
 PORTREVISION=	0
@@ -23,4 +23,5 @@ SLAVEPORT=	py
 PYDISTUTILS_PKGNAME=	mingc
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
