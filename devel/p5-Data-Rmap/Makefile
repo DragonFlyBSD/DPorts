@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Data-Rmap/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-Data-Rmap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Rmap
 PORTVERSION=	0.62
@@ -17,4 +17,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Data::Rmap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
