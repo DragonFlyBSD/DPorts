@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: accessibility/atkmm/Makefile 325643 2013-08-30 00:47:20Z bapt $
+# $FreeBSD: accessibility/atkmm/Makefile 327684 2013-09-20 11:02:49Z bapt $
 #   $MCom: ports/accessibility/atkmm/Makefile,v 1.12 2012/09/01 23:02:08 mezz Exp $
 
 PORTNAME=	atkmm
@@ -10,6 +10,7 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for ATK API library
 
+NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_LDCONFIG=	yes
