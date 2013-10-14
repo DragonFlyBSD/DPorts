@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: graphics/scr2png/Makefile 325362 2013-08-25 16:32:50Z eadler $
+# $FreeBSD: graphics/scr2png/Makefile 330210 2013-10-13 06:07:30Z eadler $
 
 PORTNAME=	scr2png
 PORTVERSION=	1.2
@@ -11,13 +11,11 @@ MASTER_SITE_SUBDIR=	nik
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Converts the output of "vidcontrol -p" to PNG
 
-LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	libgd.so:${PORTSDIR}/graphics/gd
 
 NO_WRKSUBDIR=	yes
 
-MAN1=		scr2png.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/scr2png
+PLIST_FILES=	bin/scr2png man/man1/scr2png.1.gz
 MAKE_ARGS=	BINDIR=${PREFIX}/bin SHAREDIR=${PREFIX}
 
 pre-patch:
