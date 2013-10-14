@@ -1,5 +1,5 @@
 # Created by: Neil Booth
-# $FreeBSD: security/py-slowaes/Makefile 320620 2013-06-11 18:24:08Z rm $
+# $FreeBSD: security/py-slowaes/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	slowaes
 DISTVERSION=	0.1a1
@@ -18,4 +18,5 @@ PYDISTUTILS_PKGVERSION=	${DISTVERSION}
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
