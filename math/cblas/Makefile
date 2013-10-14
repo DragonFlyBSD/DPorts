@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/cblas/Makefile 319993 2013-06-05 14:11:19Z bapt $
+# $FreeBSD: math/cblas/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	cblas
 PORTVERSION=	1.0
@@ -32,6 +32,7 @@ WRKSRC_PROFILE =	${WRKSRC}_PROFILE
 WRKSRC_SHARED=		${WRKSRC}_SHARED
 WRKSRC_STATIC=		${WRKSRC}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if make(makesum) || ${PORT_OPTIONS:MDOCS}
