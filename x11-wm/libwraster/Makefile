@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/libwraster/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-wm/libwraster/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	libwraster
 PORTVERSION=	0.95.4
@@ -37,6 +37,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		get-wraster-flags.1
 
+NO_STAGE=	yes
 pre-build:
 	cd ${WRKSRC} && ${MAKE} config-paths.h
 
