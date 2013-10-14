@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: devel/swig13/Makefile 327401 2013-09-16 13:59:20Z bapt $
+# $FreeBSD: devel/swig13/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	swig
 PORTVERSION=	1.3.40
@@ -28,6 +28,7 @@ PLIST_SUB+=	VER="${VER}"
 OPTIONS_DEFINE=	LUA DOCS EXAMPLES
 LUA_DESC=	Enable Lua support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLUA}
