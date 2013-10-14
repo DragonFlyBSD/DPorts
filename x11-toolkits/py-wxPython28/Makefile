@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: x11-toolkits/py-wxPython28/Makefile 326188 2013-09-03 18:09:33Z antoine $
+# $FreeBSD: x11-toolkits/py-wxPython28/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	wxPython
 PORTVERSION=	2.8.12.1
@@ -36,6 +36,7 @@ WXPORT=		gtk2
 
 CONFIGURE_ARGS+=	--enable-aui
 
+NO_STAGE=	yes
 post-extract:
 # only keep the scripts we need
 	@${RM} ${WRKSRC}/scripts/*.py
