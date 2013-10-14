@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: multimedia/p5-Net-UPnP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: multimedia/p5-Net-UPnP/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	Net-UPnP
 PORTVERSION=	1.4.2
@@ -32,4 +31,5 @@ MAN3=	Net::UPnP::HTTP.3 \
 	Net::UPnP::ActionResponse.3 \
 	Net::UPnP::ControlPoint.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
