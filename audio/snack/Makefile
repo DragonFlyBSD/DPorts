@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/snack/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: audio/snack/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	snack
 PORTVERSION=	2.2.10
@@ -14,6 +14,7 @@ COMMENT=	A sound toolkit for scripting languages
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 
 USE_TK=		84+
+NO_STAGE=	yes
 
 OPTIONS_DEFINE=	VORBIS DOCS
 
