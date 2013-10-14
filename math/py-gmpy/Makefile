@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/py-gmpy/Makefile 324922 2013-08-18 14:49:48Z wen $
+# $FreeBSD: math/py-gmpy/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gmpy
 PORTVERSION=	1.17
@@ -18,6 +18,7 @@ USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/gmpy.so
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's#/usr/local#${LOCALBASE}#g' \
 		${WRKSRC}/setup.py
