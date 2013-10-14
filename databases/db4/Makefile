@@ -1,9 +1,5 @@
-# ports collection makefile for:	Berkeley DB v4
-# Date created:				16 August 2000
-# Whom:					Sergey Osokin aka oZZ <ozz@FreeBSD.org.ru>
-#
-# $FreeBSD: ports/databases/db4/Makefile,v 1.65 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: Sergey Osokin aka oZZ <ozz@FreeBSD.org.ru>
+# $FreeBSD: databases/db4/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	db4
 PORTVERSION=	4.0.14
@@ -32,6 +28,7 @@ PORTDOCS=	*
 .endif
 
 # the db install_docs target installs an empty directory, kill it
+NO_STAGE=	yes
 # (it's not packaged and it's not needed):
 .if !defined(NOPORTDOCS)
 post-install:
