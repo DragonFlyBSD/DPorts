@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/binutils/Makefile 321747 2013-06-25 14:55:37Z zeising $
+# $FreeBSD: devel/binutils/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	binutils
 PORTVERSION=	2.23.2
@@ -64,6 +64,7 @@ INFO=		as \
 		configure \
 		ld
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Actual earliest version may differ slightly
