@@ -1,4 +1,4 @@
-# $FreeBSD: devel/llvm33/Makefile 326284 2013-09-04 15:23:52Z brooks $
+# $FreeBSD: devel/llvm33/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	llvm
 PORTVERSION=	3.3
@@ -18,11 +18,10 @@ DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 LATEST_LINK=	${PORTNAME}${LLVM_SUFFIX}
 
+USES=		gmake perl5
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_PREFIX=	${LLVM_PREFIX}
-USE_GMAKE=	yes
 USE_LDCONFIG=	${LLVM_PREFIX}/lib
-USE_PERL5=	yes
 USE_PYTHON_BUILD=	yes
 
 SUB_FILES=	llvm-wrapper.sh
@@ -78,6 +77,7 @@ FIRST_COMMAND=	${COMMANDS:C/^/XXXX/1:MXXXX*:C/^XXXX//}
 # Enable AMD r600 backend used by the r600/radeonsi graphics/dri gallium drivers
 CONFIGURE_ARGS+=--enable-experimental-targets=R600
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASSERTS}
