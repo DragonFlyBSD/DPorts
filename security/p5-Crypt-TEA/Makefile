@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-TEA/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-Crypt-TEA/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-TEA
 PORTVERSION=	1.25
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::TEA.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
