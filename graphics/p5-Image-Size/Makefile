@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Size/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: graphics/p5-Image-Size/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Size
 PORTVERSION=	3.232
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 MAN1=		imgsize.1
 MAN3=		Image::Size.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
