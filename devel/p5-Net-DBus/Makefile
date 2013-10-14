@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: devel/p5-Net-DBus/Makefile 326158 2013-09-03 15:22:33Z bapt $
+# $FreeBSD: devel/p5-Net-DBus/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Net-DBus
 PORTVERSION=	1.0.0
@@ -36,4 +36,5 @@ MAN3=	Net::DBus::ASyncReply.3 Net::DBus::Annotation.3 Net::DBus::Tutorial.3 \
 	Net::DBus::Error.3 Net::DBus::Test::MockIterator.3 \
 	Net::DBus::Test::MockMessage.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
