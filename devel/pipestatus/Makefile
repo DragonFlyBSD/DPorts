@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/pipestatus/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: devel/pipestatus/Makefile 328543 2013-09-28 03:14:41Z eadler $
 
 PORTNAME=	pipestatus
 PORTVERSION=	0.6.0
@@ -11,18 +11,11 @@ COMMENT=	UNIX/POSIX shell helper for running pipes safely
 
 NO_BUILD=	yes
 
-PORTDOCS=	ChangeLog README NEWS
 PLIST_FILES=	bin/${PORTNAME}
 
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
-.endfor
-.endif
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
