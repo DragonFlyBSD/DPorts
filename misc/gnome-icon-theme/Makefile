@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: misc/gnome-icon-theme/Makefile 327375 2013-09-16 10:01:06Z kwm $
+# $FreeBSD: misc/gnome-icon-theme/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/trunk/misc/gnome-icon-theme/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-icon-theme
@@ -24,4 +24,5 @@ CONFIGURE_ARGS=	--enable-icon-mapping
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
