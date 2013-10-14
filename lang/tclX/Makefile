@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tclX
-# Date created:		6 February 1996
-# Whom:			jkh
-#
-# $FreeBSD: lang/tclX/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: jkh
+# $FreeBSD: lang/tclX/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	tclX
 PORTVERSION=	8.4
@@ -29,6 +25,7 @@ PLIST_SUB=	TCLX_VER=${PORTVERSION}
 ALL_TARGET=	binaries libraries
 INSTALL_TARGET=	install-binaries install-libraries
 
+NO_STAGE=	yes
 #check test regression-check:
 #	#
 #	# Define TCLX_NO_SELF_TESTS to disable automatic
