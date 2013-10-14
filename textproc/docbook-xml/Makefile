@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DocBook XML DTD
-# Date created:		28 March 1999
-# Whom:			kuriyama
-#
-# $FreeBSD: ports/textproc/docbook-xml/Makefile,v 1.26 2012/11/17 06:01:54 svnexp Exp $
-#
+# Created by: kuriyama
+# $FreeBSD: textproc/docbook-xml/Makefile 329556 2013-10-06 12:34:47Z crees $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.2
@@ -32,11 +28,12 @@ XMLCATMGR=	${LOCALBASE}/bin/xmlcatmgr
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 CATALOG_PORTS_XML=	${PREFIX}/share/xml/catalog.ports
 
+NO_STAGE=	yes
 pre-su-install:
 	@[ -d ${DOCBOOKDIR}/ent ] || ${MKDIR} ${DOCBOOKDIR}/ent
 
 do-install:
-	for file in `${UNZIP_CMD} -l ${DISTDIR}/${DISTFILES}|${AWK} '/:[0-9].*[^\/]$$/{print $$4}'`; do \
+	for file in `unzip -l ${DISTDIR}/${DISTFILES}|${AWK} '/:[0-9].*[^\/]$$/{print $$4}'`; do \
 		${INSTALL_DATA} ${WRKSRC}/$$file ${DOCBOOKDIR}/$$file; \
 	done
 
