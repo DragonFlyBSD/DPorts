@@ -1,5 +1,5 @@
 # Created by: FUJIMOTO Kensaku <fujimoto@oscar.elec.waseda.ac.jp>
-# $FreeBSD: devel/automake14/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/automake14/Makefile 329276 2013-10-04 09:40:59Z bapt $
 
 PORTNAME=	automake
 PORTVERSION=	1.4.6
@@ -8,6 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	automake
 DISTNAME=	automake-1.4-p6
+PKGNAMESUFFIX=	14
 
 # note: before committing to this port, contact portmgr to arrange for an
 # experimental ports run.  Untested commits may be backed out at portmgr's
@@ -21,7 +22,6 @@ RUN_DEPENDS=	${AUTOCONF_DEPENDS} \
 USE_AUTOTOOLS=	autoconf:env
 BUILD_VERSION=	1.4
 PLIST_SUB=	BUILD_VERSION=${BUILD_VERSION}
-LATEST_LINK=	automake14
 USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
@@ -31,12 +31,6 @@ INFO=		automake-${BUILD_VERSION}
 STRIP=		# none
 
 post-patch:
-	@${RM} ${WRKSRC}/*.info*
 	@${MV} ${WRKSRC}/automake.texi ${WRKSRC}/automake-${BUILD_VERSION}.texi
-
-pre-su-install:
-	@${RM} -fr ${PREFIX}/share/automake-${BUILD_VERSION}
-	@${MKDIR} ${PREFIX}/share/automake-${BUILD_VERSION}
-	@${MKDIR} ${PREFIX}/share/aclocal-${BUILD_VERSION}
 
 .include <bsd.port.mk>
