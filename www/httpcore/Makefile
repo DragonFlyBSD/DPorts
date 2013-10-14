@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/httpcore/Makefile 324635 2013-08-12 15:40:24Z ale $
+# $FreeBSD: www/httpcore/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	httpcore
 DISTVERSION=	4.3
@@ -25,6 +25,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar %%JAVAJARDIR%%/${PORTNAME}-nio.jar
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
