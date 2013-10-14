@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/py-webob/pkg-plist,v 1.8 2012/11/17 06:03:02 svnexp Exp $
+@comment $FreeBSD: www/py-webob/pkg-plist 303936 2012-09-08 22:56:22Z nivit $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 %%PORTDOCS%%%%DOCSDIR%%/.buildinfo
 %%PORTDOCS%%%%DOCSDIR%%/_sources/comment-example.txt

@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/py-webob/Makefile,v 1.19 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: www/py-webob/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webob
 PORTVERSION=	1.2.2
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	DOCS TESTS
 
 TESTS_DESC=	Run tests with Nose
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
