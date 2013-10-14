@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: net/py-libdnet/Makefile 324895 2013-08-18 08:56:22Z mva $
+# $FreeBSD: net/py-libdnet/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -28,4 +28,5 @@ regression-test: install
 	${PYTHON_CMD} ${INSTALL_WRKSRC}/test.py
 .endif
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
