@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-local-lib/Makefile 324524 2013-08-10 14:21:25Z kuriyama $
+# $FreeBSD: devel/p5-local-lib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	local-lib
 PORTVERSION=	1.008011
@@ -20,4 +20,5 @@ MAN3=	POD2::DE::local::lib.3 \
 	lib::core::only.3 \
 	local::lib.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
