@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-Animation/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-Term-Animation/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Term-Animation
 PORTVERSION=	2.6
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Term::Animation.3 Term::Animation::Entity.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
