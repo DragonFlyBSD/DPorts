@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-TableMatrix/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Tk-TableMatrix/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-TableMatrix
 PORTVERSION=	1.23
@@ -22,4 +22,5 @@ MAN3=		Tk::TableMatrix.3 \
 		Tk::TableMatrix::Spreadsheet.3 \
 		Tk::TableMatrix::SpreadsheetHideRows.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
