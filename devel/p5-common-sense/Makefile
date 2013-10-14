@@ -1,5 +1,5 @@
 # Created by: Mons Anderson <mons@cpan.org>
-# $FreeBSD: devel/p5-common-sense/Makefile 326802 2013-09-09 11:01:46Z az $
+# $FreeBSD: devel/p5-common-sense/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	common-sense
 PORTVERSION=	3.6
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		common::sense.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
