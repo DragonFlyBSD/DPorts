@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libXt/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11-toolkits/libXt/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libXt
 PORTVERSION=	1.1.4
@@ -282,6 +282,7 @@ MAN3=	MenuPopdown.3 \
 	XtWindowOfObject.3 \
 	XtWindowToWidget.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's/test.*-traditional.*;/true;/' \
 		${WRKSRC}/configure
