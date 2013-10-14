@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Net-OAuth2/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: net/p5-Net-OAuth2/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
 
 PORTNAME=	Net-OAuth2
 PORTVERSION=	0.55
@@ -25,12 +25,5 @@ TEST_DEPENDS=	p5-Test-Mock-LWP-Dispatch>=0:${PORTSDIR}/devel/p5-Test-Mock-LWP-Di
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Net::OAuth2.3 \
-		Net::OAuth2::AccessToken.3 \
-		Net::OAuth2::Client.3 \
-		Net::OAuth2::Profile.3 \
-		Net::OAuth2::Profile::Password.3 \
-		Net::OAuth2::Profile::WebServer.3
 
 .include <bsd.port.mk>
