@@ -1,8 +1,4 @@
-# Ports collection makefile for:	rubygem-ruby-termios
-# Date created:				June 25, 2011
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/comms/rubygem-ruby-termios/Makefile,v 1.2 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: comms/rubygem-ruby-termios/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	ruby-termios
 PORTVERSION=	0.9.6
@@ -16,4 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
