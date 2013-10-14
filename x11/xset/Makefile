@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xset/Makefile 324726 2013-08-14 14:39:26Z zeising $
+# $FreeBSD: x11/xset/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xset
 PORTVERSION=	1.2.3
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xset
 
 MAN1=		xset.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
