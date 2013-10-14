@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: textproc/p5-POD2-Base/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-POD2-Base/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	POD2-Base
 PORTVERSION=	0.043
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 MAN3=	POD2::Base.3 \
 	POD2::PT::POD2::Base.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
