@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-UDCode/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-UDCode/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	UDCode
 PORTVERSION=	1.03
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	UDCode.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
