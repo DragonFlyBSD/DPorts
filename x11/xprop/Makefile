@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xprop/Makefile 324725 2013-08-14 14:39:01Z zeising $
+# $FreeBSD: x11/xprop/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xprop
 PORTVERSION=	1.2.2
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xprop
 
 MAN1=		xprop.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
