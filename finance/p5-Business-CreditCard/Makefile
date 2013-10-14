@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-CreditCard/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: finance/p5-Business-CreditCard/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-CreditCard
 PORTVERSION=	0.32
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Business::CreditCard.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
