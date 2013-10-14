@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/libprelude/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/libprelude/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
@@ -33,6 +33,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		prelude-admin.1
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
