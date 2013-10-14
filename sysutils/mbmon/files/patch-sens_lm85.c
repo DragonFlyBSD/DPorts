@@ -1,4 +1,4 @@
-$FreeBSD: ports/sysutils/mbmon/files/patch-sens_lm85.c,v 1.2 2012/11/17 06:01:38 svnexp Exp $
+$FreeBSD: sysutils/mbmon/files/patch-sens_lm85.c 300897 2012-07-14 14:29:18Z beat $
 
 --- sens_lm85.c	Mon Oct 13 10:12:58 2003
 +++ sens_lm85.c	Wed Dec 21 15:37:56 2005

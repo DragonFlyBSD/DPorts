@@ -1,5 +1,5 @@
 # Created by: kaz@kobe1995.net (NAKAMURA Kauzushi)
-# $FreeBSD: ports/sysutils/mbmon/Makefile,v 1.33 2012/11/17 06:01:38 svnexp Exp $
+# $FreeBSD: sysutils/mbmon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME?=	mbmon
 PORTVERSION=	205
@@ -33,6 +33,7 @@ SMB_DESC=	"Enable smb(4) support"
 USE_RC_SUBR=	mbmon
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASUS}

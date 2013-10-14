@@ -1,4 +1,4 @@
-$FreeBSD: ports/sysutils/mbmon/files/patch-pci_pm.h,v 1.3 2012/11/17 06:01:38 svnexp Exp $
+$FreeBSD: sysutils/mbmon/files/patch-pci_pm.h 300897 2012-07-14 14:29:18Z beat $
 
 --- pci_pm.h	Wed Jul 14 18:02:49 2004
 +++ pci_pm.h	Fri Dec 30 23:06:26 2005

@@ -1,4 +1,4 @@
-$FreeBSD: ports/sysutils/mbmon/files/patch-testsmb.c,v 1.4 2012/11/17 06:01:38 svnexp Exp $
+$FreeBSD: sysutils/mbmon/files/patch-testsmb.c 300897 2012-07-14 14:29:18Z beat $
 
 --- testsmb.c	Thu Aug 12 07:34:48 2004
 +++ testsmb.c	Fri Dec 30 23:11:29 2005

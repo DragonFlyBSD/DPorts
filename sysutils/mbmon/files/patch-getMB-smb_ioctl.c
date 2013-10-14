@@ -1,4 +1,4 @@
-$FreeBSD: ports/sysutils/mbmon/files/patch-getMB-smb_ioctl.c,v 1.2 2012/11/17 06:01:38 svnexp Exp $
+$FreeBSD: sysutils/mbmon/files/patch-getMB-smb_ioctl.c 300897 2012-07-14 14:29:18Z beat $
 
 --- getMB-smb_ioctl.c.orig	Sat Jul  5 18:15:24 2003
 +++ getMB-smb_ioctl.c	Fri Dec 16 17:56:54 2005
