@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: devel/libbinio/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: devel/libbinio/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libbinio
 PORTVERSION=	1.4
