@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-rr/Makefile 321848 2013-06-27 05:16:59Z swills $
+# $FreeBSD: devel/rubygem-rr/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rr
 PORTVERSION=	1.1.1
@@ -13,4 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
