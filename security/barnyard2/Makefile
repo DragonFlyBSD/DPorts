@@ -1,4 +1,4 @@
-# $FreeBSD: security/barnyard2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/barnyard2/Makefile 327850 2013-09-22 05:32:10Z sunpoet $
 
 PORTNAME=	barnyard2
 PORTVERSION=	1.12
@@ -37,6 +37,7 @@ ACLOCAL_ARGS=	-I m4 -I ${LOCALBASE}/share/aclocal
 
 USE_RC_SUBR=	barnyard2
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 SUB_FILES=	pkg-message
 
@@ -124,7 +125,7 @@ CONFIGURE_ARGS+=	--without-postgresql
 .endif
 
 .if ${PORT_OPTIONS:MTCL}
-USE_TCL=		yes
+USES+=			tcl
 CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib/tcl${TCL_VER}
 .else
 CONFIGURE_ARGS+=	--without-tcl
