@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fcgi-devkit
-# Date created:        13 May 1999
-# Whom:                kbyanc
-#
-# $FreeBSD: ports/www/fcgi/Makefile,v 1.26 2012/11/17 06:02:33 svnexp Exp $
-#
+# Created by: kbyanc
+# $FreeBSD: www/fcgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fcgi
 PORTVERSION=	2.4.0
@@ -23,6 +19,7 @@ MAN1=		cgi-fcgi.1
 MAN3=		FCGI_Accept.3 FCGI_Finish.3 FCGI_SetExitStatus.3 \
 		FCGI_StartFilterData.3
 
+NO_STAGE=	yes
 post-install:
 .for y in ${MAN1}
 	@${INSTALL_MAN} ${WRKSRC}/doc/${y} ${MANPREFIX}/man/man1
