@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-omniorb
-# Date created:		14 November 2000
-# Whom:			Johann Visagie <johann@egenetics.com>
-#
-# $FreeBSD: ports/devel/py-omniorb/Makefile,v 1.39 2013/02/14 10:22:21 svnexp Exp $
-#
+# Created by: Johann Visagie <johann@egenetics.com>
+# $FreeBSD: devel/py-omniorb/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	omniorb
 PORTVERSION=	3.6
@@ -42,6 +38,7 @@ CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ENV+=	PYTHON=${PYTHON_CMD}
 CONFIGURE_ARGS=	--with-openssl=${OPENSSLBASE} --with-omniorb=${LOCALBASE}
 
+NO_STAGE=	yes
 pre-configure:
 	@${MKDIR} ${CONFIGURE_WRKSRC}
 	@cd ${OMNIORB_WRKSRC} && ${FIND} idl | ${CPIO} --quiet -pdum ${WRKSRC}
