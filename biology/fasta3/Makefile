@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/fasta3/Makefile 323293 2013-07-19 14:08:02Z wen $
+# $FreeBSD: biology/fasta3/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	fasta3
 PORTVERSION=	36.3.6
@@ -37,6 +37,7 @@ MLINKS=		fasta36.1 tfasta35.1 fasta36.1 fastx35.1 fasta36.1 tfastx35.1 \
 		fasta36.1 lalign35.1 fasta36.1 prss35.1 fasta36.1 prfx35.1
 PLIST_SUB=	VER=${PORTVERSION:R:R}
 
+NO_STAGE=	yes
 post-patch:
 	@ ${CP} ${WRKSRC}/make/${MAKEFILE} ${BUILD_WRKSRC}/
 post-install:
