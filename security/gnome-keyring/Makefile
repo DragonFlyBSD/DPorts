@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: security/gnome-keyring/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: security/gnome-keyring/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	2.32.1
@@ -27,4 +27,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.crypto.cache.gschema.xml \
 		org.gnome.crypto.pgp.gschema.xml
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
