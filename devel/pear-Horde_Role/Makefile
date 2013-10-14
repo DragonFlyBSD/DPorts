@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Role
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Horde_Role/Makefile,v 1.6 2012/12/12 12:37:41 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_Role/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Role
 PORTVERSION=	1.0.1
@@ -14,6 +10,7 @@ COMMENT=	PEAR installer role for Horde components
 
 PATCH_WRKSRC=	${WRKDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 
