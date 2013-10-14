@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: audio/libmpdclient/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/libmpdclient/Makefile 328503 2013-09-27 17:34:27Z gblach $
 
 PORTNAME=	libmpdclient
 PORTVERSION=	2.8
