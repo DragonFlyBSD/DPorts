@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 325825 2013-08-31 18:29:55Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile 11404 2013-04-26 19:05:50Z kwm $
 
 PORTNAME=	gstreamer
@@ -67,6 +67,7 @@ DEFAULT_AUDIOSRC?=	osssrc
 IGNORE=		DIST not specified
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH}=="i386"
