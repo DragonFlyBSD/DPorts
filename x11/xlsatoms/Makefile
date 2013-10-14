@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xlsatoms/Makefile,v 1.5 2013/02/04 04:42:43 svnexp Exp $
+# $FreeBSD: x11/xlsatoms/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xlsatoms
 PORTVERSION=	1.1.1
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xlsatoms
 
 MAN1=		xlsatoms.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
