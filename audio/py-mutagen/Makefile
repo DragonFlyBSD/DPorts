@@ -1,5 +1,5 @@
 # Created by: Byung-Hee HWANG <bh@izb.knu.ac.kr>
-# $FreeBSD: audio/py-mutagen/Makefile 321575 2013-06-22 14:49:53Z swills $
+# $FreeBSD: audio/py-mutagen/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mutagen
 PORTVERSION=	1.21
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PYTHON=	yes
+NO_STAGE=	yes
 USE_PYDISTUTILS=	yes
 
 MAN1=		mid3iconv.1 \
