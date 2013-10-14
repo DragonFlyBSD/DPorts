@@ -1,21 +1,17 @@
-# New ports collection makefile for:	libtlen
-# Date created:		25 September 2003
-# Whom:			Piotr Smyrak <smyru@heron.pl> and
-#                       Maciek Korzen <eaquer@ceti.pl>
-#
-# $FreeBSD: polish/libtlen/Makefile 318333 2013-05-16 20:07:39Z rakuco $
-#
+# Created by: Piotr Smyrak <smyru@heron.pl> and
+# $FreeBSD: polish/libtlen/Makefile 328410 2013-09-26 20:08:38Z eadler $
 
 PORTNAME=	libtlen
 PORTVERSION=	20041113
 CATEGORIES=	polish net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@freebsd.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Backend for interoperability with Tlen.pl, Polish IM network
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 post-install:
