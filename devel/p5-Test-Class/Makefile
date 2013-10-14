@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-Class/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Class
 PORTVERSION=	0.39
@@ -21,4 +21,5 @@ MAN3=		Test::Class.3 \
 		Test::Class::Load.3 \
 		Test::Class::MethodInfo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
