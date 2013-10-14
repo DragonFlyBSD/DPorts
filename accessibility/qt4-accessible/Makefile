@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: accessibility/qt4-accessible/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: accessibility/qt4-accessible/Makefile 327768 2013-09-20 22:52:20Z bapt $
 
 PORTNAME=	accessible
 DISTVERSION=	${QT4_VERSION}
@@ -9,6 +9,7 @@ PKGNAMEPREFIX=	qt4-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt accessibility widgets
 
+NO_STAGE=	yes
 USE_QT4=	qmake_build moc_build qt3support corelib gui network sql xml
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
