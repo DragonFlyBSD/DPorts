@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-racc
-# Date created:		2012-02-07
-# Whom:			Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-#
-# $FreeBSD: ports/devel/rubygem-racc/Makefile,v 1.4 2013/01/22 03:21:32 svnexp Exp $
-#
+# Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
+# $FreeBSD: devel/rubygem-racc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	racc
 PORTVERSION=	1.4.9
@@ -22,4 +18,5 @@ PLIST_FILES=	bin/racc bin/racc2y bin/y2racc
 
 CONFLICTS=	ruby1[89]-racc-1\.4\*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
