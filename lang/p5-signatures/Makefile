@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-signatures/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: lang/p5-signatures/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	signatures
 PORTVERSION=	0.07
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	signatures.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
