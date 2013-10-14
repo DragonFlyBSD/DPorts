@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: x11/libgnomemm/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11/libgnomemm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libgnomemm
 PORTVERSION=	2.0.1
@@ -21,4 +21,5 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
