@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-Bonjour/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-Net-Bonjour/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-Bonjour
 PORTVERSION=	0.96
@@ -26,6 +25,7 @@ MAN3=	Net::Rendezvous.3        \
 	Net::Rendezvous::Entry.3 \
 	Net::Bonjour.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/my $$ans = .*/my $$ans = "n";/g' ${WRKSRC}/Makefile.PL
 
