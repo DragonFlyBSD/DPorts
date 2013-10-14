@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11/ecore-input/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: x11/ecore-input/Makefile 329510 2013-10-05 21:41:26Z gblach $
 
 PORTNAME=	input
 PORTVERSION=	1.7.8
@@ -17,9 +17,8 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_EFL=	ecore libtool_hack
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_input
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
@@ -36,6 +35,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ecore-input.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
