@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-xetex/Makefile 326258 2013-09-04 07:55:49Z bsam $
+# $FreeBSD: print/tex-xetex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xetex
 PORTVERSION=	0.9999
@@ -80,6 +80,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 MAKE_JOBS_UNSAFE=	yes
 TEX_FORMATS=	xetex
 
+NO_STAGE=	yes
 pre-configure:
 	for D in libs/harfbuzz libs/xpdf; do \
 		cd ${WRKDIR}/${DISTNAME}/$$D && \
