@@ -1,10 +1,10 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/cairo/Makefile 319100 2013-05-26 08:48:28Z kwm $
+# $FreeBSD: graphics/cairo/Makefile 328711 2013-09-29 17:01:41Z zeising $
 #   $MCom: ports/graphics/cairo/Makefile,v 1.101 2010/10/29 15:40:04 kwm Exp $
 
 PORTNAME=	cairo
 PORTVERSION=	1.10.2
-PORTREVISION=	5
+PORTREVISION=	6
 PORTEPOCH?=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -35,6 +35,7 @@ OPTIONS_DEFAULT=	XCB GLIB X11
 XCB_DESC=	Enable XCB (X C-language Binding) Support
 GLIB_DESC=	Enable GObject Functions Feature
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "arm"
