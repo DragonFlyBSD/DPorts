@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net-im/folks04/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: net-im/folks04/Makefile 329278 2013-10-04 09:44:40Z bapt $
 #   $MCom: ports/net-im/folks04/Makefile,v 1.2 2012/04/27 13:28:44 kwm Exp $
 
 PORTNAME=	folks
@@ -18,7 +18,7 @@ LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee06 \
 
 CONFLICTS=	folks-0.[6-9].[0-9]*
 
-LATEST_LINK=	${PORTNAME}04
+PKGNAMESUFFIX=	04
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=		pathfix gettext gmake pkgconfig
@@ -29,4 +29,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=22
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
