@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Continuity/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-Continuity/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Continuity
 PORTVERSION=	1.5
@@ -31,4 +31,5 @@ MAN3=	Continuity.3 \
 	Continuity::Request.3 \
 	Continuity::RequestCallbacks.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
