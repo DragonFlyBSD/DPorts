@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libvolume_id/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/libvolume_id/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libvolume_id
 PORTVERSION=	0.81.1
@@ -21,6 +21,7 @@ PLIST_FILES=	include/libvolume_id.h \
 		lib/libvolume_id.so.0 \
 		libdata/pkgconfig/libvolume_id.pc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
