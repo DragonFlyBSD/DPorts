@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/etl/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/etl/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	etl
 PORTVERSION=	0.04.15
@@ -13,6 +13,7 @@ COMMENT=	Voria Extended Class and Template Library
 USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
