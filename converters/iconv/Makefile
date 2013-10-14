@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv/Makefile 325126 2013-08-21 13:11:02Z wg $
+# $FreeBSD: converters/iconv/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	iconv
 PORTVERSION=	2.0
@@ -27,6 +27,7 @@ OPTIONS_SUB=	yes
 
 CCSUTIL_DESC=	Install Coded character set (CCS) util
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCCSUTIL}
