@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/tesseract/Makefile 313487 2013-03-06 00:30:39Z bf $
+# $FreeBSD: graphics/tesseract/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tesseract
 PORTVERSION=	3.02.02
@@ -26,6 +26,7 @@ CONFIGURE_ENV=	LIBLEPT_HEADERSDIR="${LOCALBASE}/include/leptonica" \
 		LIBS="${PTHREAD_LIBS}"
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .ifndef NOPORTDATA
