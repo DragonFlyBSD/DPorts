@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-mixlib-authentication
-# Date created:				18 Mar 2010
-# Whom:					renchap@cocoa-x.com
-#
-# $FreeBSD: ports/devel/rubygem-mixlib-authentication/Makefile,v 1.9 2013/01/08 00:51:21 svnexp Exp $
-#
+# Created by: renchap@cocoa-x.com
+# $FreeBSD: devel/rubygem-mixlib-authentication/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	mixlib-authentication
 PORTVERSION=	1.3.0
@@ -19,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
