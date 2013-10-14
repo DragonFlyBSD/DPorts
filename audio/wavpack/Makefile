@@ -1,9 +1,5 @@
-# New ports collection makefile for:	WavPack
-# Date created:				Fri Jun 24 20:30:04 CEST 2005
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: audio/wavpack/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: audio/wavpack/Makefile 329376 2013-10-04 20:14:17Z bapt $
 
 PORTNAME=	wavpack
 PORTVERSION=	4.60.1
@@ -21,8 +17,6 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-MAN1=		wavpack.1 wvgain.1 wvunpack.1
 
 .if ${MACHINE_CPU:Mmmx}
 CONFIGURE_ARGS=	--enable-mmx
