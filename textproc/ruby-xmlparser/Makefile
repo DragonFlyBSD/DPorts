@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-xmlparser/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/ruby-xmlparser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmlparser
 PORTVERSION=	0.7.3
@@ -25,6 +25,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 CONFIGURE_ARGS=	--with-perl-enc-map=${SITE_PERL}/${PERL_ARCH}/XML/Parser/Encodings
 INSTALL_TARGET=	site-install
 
+NO_STAGE=	yes
 post-extract:
 	${FIND} ${WRKSRC} -name CVS -type d -exec ${RM} -r {} ';' -prune
 
