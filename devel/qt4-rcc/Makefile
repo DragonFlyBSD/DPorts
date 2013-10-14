@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-rcc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-rcc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rcc
 DISTVERSION=	${QT4_VERSION}
@@ -37,6 +37,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|target.path.*|target.path=${PREFIX}/bin|g' \
 		${BUILD_WRKSRC}/${PORTNAME}.pro
