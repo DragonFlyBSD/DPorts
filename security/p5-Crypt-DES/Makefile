@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-DES/Makefile 324966 2013-08-19 09:01:00Z mat $
+# $FreeBSD: security/p5-Crypt-DES/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-DES
 PORTVERSION=	2.07
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::DES.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
