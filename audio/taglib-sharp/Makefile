@@ -1,5 +1,4 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: audio/taglib-sharp/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/taglib-sharp/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	taglib-sharp
 PORTVERSION=	2.0.3.7
@@ -16,6 +15,7 @@ RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|}
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
+NO_STAGE=	yes
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}" \
 		VERSIONSUFX="db62eba44689b5b0"
