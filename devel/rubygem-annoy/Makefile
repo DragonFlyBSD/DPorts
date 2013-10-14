@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/devel/rubygem-annoy/Makefile,v 1.1 2012/11/23 22:53:57 svnexp Exp $
+# $FreeBSD: devel/rubygem-annoy/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	annoy
 PORTVERSION=	0.5.6
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
