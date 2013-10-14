@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libvdpau/Makefile 326080 2013-09-02 20:27:53Z antoine $
+# $FreeBSD: multimedia/libvdpau/Makefile 328672 2013-09-29 10:55:12Z madpilot $
 
 PORTNAME=	libvdpau
 PORTVERSION=	0.7
@@ -43,11 +43,5 @@ post-patch:	.SILENT
 	cd ${WRKSRC}/src && ${MV} vdpau_wrapper.cfg vdpau_wrapper.cfg.sample
 	${REINPLACE_CMD} 's/vdpau_wrapper.cfg/&.sample/' \
 		${WRKSRC}/src/Makefile.am
-
-post-install:
-	if [ ! -f ${PREFIX}/etc/vdpau_wrapper.cfg ]; then \
-		${INSTALL_DATA} ${PREFIX}/etc/vdpau_wrapper.cfg.sample \
-			${PREFIX}/etc/vdpau_wrapper.cfg; \
-	fi
 
 .include <bsd.port.post.mk>
