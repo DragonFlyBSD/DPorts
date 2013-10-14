@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-notify/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: devel/py-notify/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	notify
 PORTVERSION=	0.1.1
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 
 DOCS=		AUTHORS COPYING ChangeLog NEWS
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} ${WRKSRC}/src/pynotify.c
 
