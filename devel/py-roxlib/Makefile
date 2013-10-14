@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-roxlib/Makefile,v 1.36 2013/01/26 15:07:25 svnexp Exp $
+# $FreeBSD: devel/py-roxlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	roxlib
 PORTVERSION=	2.0.6
@@ -17,6 +17,7 @@ USE_PYTHON=	yes
 RUN_DEPENDS=	${LOCALBASE}/bin/rox:${PORTSDIR}/x11-fm/rox-filer \
 		${PYTHON_SITELIBDIR}/pygtk.py:${PORTSDIR}/x11-toolkits/py-gtk2
 
+NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} -m compileall ${WRKSRC}
 	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
