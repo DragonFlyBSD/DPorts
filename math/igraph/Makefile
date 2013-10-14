@@ -1,9 +1,5 @@
-# New ports collection makefile for:	igarph
-# Date created:				07 July 2008
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/igraph/Makefile,v 1.10 2012/11/17 05:59:21 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: math/igraph/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	igraph
 PORTVERSION=	0.5.4
@@ -25,6 +21,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@libdir@/pkgconfig|@prefix@/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
