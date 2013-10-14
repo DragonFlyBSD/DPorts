@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Event/Makefile 327555 2013-09-18 15:22:04Z sunpoet $
+# $FreeBSD: devel/p5-IO-Event/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	IO-Event
 PORTVERSION=	0.813
@@ -24,9 +24,6 @@ ANYEVENT_DESC=	Use AnyEvent as underlying event handler
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		IO::Event.3 \
-		IO::Event::Callback.3
 
 .include <bsd.port.options.mk>
 
