@@ -1,4 +1,4 @@
-# $FreeBSD: net/hs-network/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: net/hs-network/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	network
 PORTVERSION=	2.4.1.2
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	parsec>=3.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
