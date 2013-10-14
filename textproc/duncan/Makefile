@@ -1,9 +1,5 @@
-# New ports collection makefile for:    duncan
-# Date created:         30 Oct 2006
-# Whom:                 gurkan@phys.ethz.ch
-#
-# $FreeBSD: ports/textproc/duncan/Makefile,v 1.13 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: gurkan@phys.ethz.ch
+# $FreeBSD: textproc/duncan/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	duncan
 PORTVERSION=	0.1
@@ -25,4 +21,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Duncan
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
