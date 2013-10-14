@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/p5-App-Control/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-App-Control/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-Control
 PORTVERSION=	1.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		App::Control.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
