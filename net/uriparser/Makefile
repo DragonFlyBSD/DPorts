@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@FreeBSD.org>
-# $FreeBSD: net/uriparser/Makefile 327337 2013-09-15 11:15:04Z ed $
+# $FreeBSD: net/uriparser/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	uriparser
 PORTVERSION=	0.7.9
