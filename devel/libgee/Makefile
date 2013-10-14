@@ -1,5 +1,5 @@
 # Created by: Frank Steinborn <steinex@nognu.de>
-# $FreeBSD: devel/libgee/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/libgee/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #    $MCom: ports/devel/libgee/Makefile,v 1.13 2012/10/14 20:47:22 kwm Exp $
 
 PORTNAME=	libgee
@@ -20,4 +20,5 @@ USE_GNOME=	glib20 gnomehier gnomehack
 USES=		pkgconfig
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
