@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libXScrnSaver/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXScrnSaver/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXScrnSaver
 PORTVERSION=	1.2.2
@@ -23,4 +23,5 @@ MAN3=		Xss.3 \
 		XScreenSaverUnregister.3 \
 		XScreenSaverUnsetAttributes.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
