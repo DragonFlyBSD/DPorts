@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: textproc/py-MarkupSafe/Makefile 322464 2013-07-07 22:51:15Z nivit $
+# $FreeBSD: textproc/py-MarkupSafe/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		MarkupSafe
 PORTVERSION=		0.18
@@ -16,6 +16,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	no
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_VERSION} == python3.2
