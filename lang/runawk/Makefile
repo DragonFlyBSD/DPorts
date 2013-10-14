@@ -1,9 +1,5 @@
-# New ports collection makefile for:	runawk
-# Date created:				28 March 2010
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: lang/runawk/Makefile 326060 2013-09-02 19:15:12Z sahil $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: lang/runawk/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	runawk
 PORTVERSION=	1.4.4
@@ -39,6 +35,7 @@ SUBPRJ_DFLT+=	examples
 MAKE_ENV+=	EGDIR="${EXAMPLESDIR}"
 .endif
 
+NO_STAGE=	yes
 do-build:
 	@${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/mkcmake -C ${WRKSRC}
 
