@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-xmpppy
-# Date created:				21 April 2006
-# Whom:					Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: net-im/py-xmpppy/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: net-im/py-xmpppy/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	xmpppy
 PORTVERSION=	0.5.0
@@ -21,6 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dnspython>=1.7.1:${PORTSDIR}/dns/py-dnspytho
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lr '/usr/bin/python' ${WRKSRC} | \
 		${XARGS} ${REINPLACE_CMD} -e "s,^#!/usr/bin/python,#!${PYTHON_CMD},"
