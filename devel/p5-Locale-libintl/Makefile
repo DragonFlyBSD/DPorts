@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Locale-libintl/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Locale-libintl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Locale-libintl
 PORTVERSION=	1.23
@@ -165,4 +165,5 @@ MAN3=		Locale::Messages.3 \
 		Locale::gettext_xs.3 \
 		Locale::libintlFAQ.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
