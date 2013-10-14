@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/trayer/Makefile 326325 2013-09-04 21:09:33Z madpilot $
+# $FreeBSD: x11/trayer/Makefile 328669 2013-09-29 10:49:03Z madpilot $
 
 PORTNAME=	trayer
 PORTVERSION=	1.1.5
@@ -19,19 +19,17 @@ MAKE_ARGS=	"PREFIX=${PREFIX}"
 WRKSRC=		${WRKDIR}/sargon-${PORTNAME}-srg-${GITVERSION:S/^0-g//}
 
 PORTDOCS=	README CREDITS CHANGELOG
-MAN1=		trayer.1
 
-PLIST_FILES=	bin/trayer
+PLIST_FILES=	bin/trayer man/man1/trayer.1.gz
 
-.include <bsd.port.options.mk>
+post-patch:
+	@${REINPLACE_CMD} -e 's|$$(PREFIX)/|$$(DESTDIR)&|' ${WRKSRC}/Makefile
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
