@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/avahi/Makefile 323006 2013-07-14 21:17:21Z kwm $
+# $FreeBSD: net/avahi/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/avahi/Makefile,v 1.30 2011/03/13 17:23:19 kwm Exp $
 
 PORTNAME=	avahi
@@ -24,6 +24,7 @@ LIBDNS_DESC=	Apple's mDNSResponder compatibility library
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAUTOIPD}
