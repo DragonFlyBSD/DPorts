@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/archivers/ucl/Makefile,v 1.27 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/ucl/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	ucl
 PORTVERSION=	1.03
@@ -12,6 +12,7 @@ COMMENT=	Data compression library with low memory usage
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
