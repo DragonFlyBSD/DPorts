@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-five.formlib
-# Date created:				20 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-five.formlib/Makefile,v 1.3 2012/11/17 05:56:46 svnexp Exp $
-#
+# $FreeBSD: devel/py-five.formlib/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	five.formlib
 PORTVERSION=	1.0.4
@@ -32,7 +27,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}transaction>=0:${PORTSDIR}/devel/py-transact
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
