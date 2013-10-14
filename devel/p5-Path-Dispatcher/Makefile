@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Dispatcher/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Path-Dispatcher/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Path-Dispatcher
 PORTVERSION=	1.05
@@ -43,4 +42,5 @@ MAN3=		Path::Dispatcher.3 \
 		Path::Dispatcher::Rule::Tokens.3 \
 		Path::Dispatcher::Rule::Under.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
