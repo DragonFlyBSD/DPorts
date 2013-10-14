@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-Bond-Find/Makefile 326873 2013-09-10 08:26:53Z az $
+# $FreeBSD: science/p5-Chemistry-Bond-Find/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Chemistry-Bond-Find
 PORTVERSION=	0.23
@@ -19,4 +19,5 @@ MAN3=	Chemistry::Bond::Find.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
