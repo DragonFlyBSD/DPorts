@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Memoize/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Memoize/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Memoize
 PORTVERSION=	1.03
@@ -23,4 +23,5 @@ MAN3=		Memoize.3 \
 		Memoize::SDBM_File.3 \
 		Memoize::Storable.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
