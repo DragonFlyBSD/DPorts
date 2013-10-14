@@ -1,5 +1,5 @@
-# Created by:	ijliao
-# $FreeBSD: net-mgmt/py-ipy/Makefile 316911 2013-04-30 10:25:23Z wen $
+# Created by: ijliao
+# $FreeBSD: net-mgmt/py-ipy/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ipy
 PORTVERSION=	0.81
@@ -18,4 +18,5 @@ PYDISTUTILS_PKGNAME=	IPy
 test: install
 	${PYTHON_CMD} ${WRKSRC}/test/test_IPy.py
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
