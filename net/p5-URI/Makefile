@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: net/p5-URI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-URI/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	URI
 PORTVERSION=	1.60
@@ -29,4 +29,5 @@ MAN3=		URI.3 \
 		URI::file.3 \
 		URI::ldap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
