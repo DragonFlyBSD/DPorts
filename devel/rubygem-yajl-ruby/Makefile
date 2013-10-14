@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-yajl-ruby
-# Date created:		2010-11-14
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-yajl-ruby/Makefile,v 1.10 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: devel/rubygem-yajl-ruby/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	yajl-ruby
 PORTVERSION=	1.1.0
@@ -19,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
