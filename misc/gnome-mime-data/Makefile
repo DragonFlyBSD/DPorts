@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/gnome-mime-data/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: misc/gnome-mime-data/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #    $MCom: ports/misc/gnome-mime-data/Makefile,v 1.14 2007/05/22 04:59:18 marcus Exp $
 
 PORTNAME=	gnome-mime-data
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|[(]datadir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 	    	${WRKSRC}/Makefile.in
