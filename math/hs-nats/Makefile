@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-nats/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-nats/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	nats
 PORTVERSION=	0.1
@@ -10,5 +10,6 @@ COMMENT=	Haskell 98 natural numbers
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
