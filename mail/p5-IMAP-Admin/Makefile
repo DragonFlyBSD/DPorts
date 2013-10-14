@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IMAP-Admin
-# Date created:		Sun Sep 26 09:25:38 EEST 1999
-# Whom:	      		Martti Kuparinen <martti.kuparinen@ericsson.com>
-#
-# $FreeBSD: mail/p5-IMAP-Admin/Makefile 326257 2013-09-04 07:19:56Z az $
-#
+# Created by: Martti Kuparinen <martti.kuparinen@ericsson.com>
+# $FreeBSD: mail/p5-IMAP-Admin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	IMAP-Admin
 PORTVERSION=	1.6.7
@@ -22,6 +18,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${UNIQUENAME}
 
 .if !defined(NOPORTEXAMPLES)
 PORTEXAMPLES=	create.pl delete.pl
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@cd ${WRKSRC}/examples && ${INSTALL_DATA} ${PORTEXAMPLES} ${EXAMPLESDIR}
