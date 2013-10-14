@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: textproc/p5-XML-Elemental/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Elemental/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Elemental
 PORTVERSION=	2.11
@@ -27,4 +27,5 @@ MAN3=	XML::Elemental.3 \
 	XML::Elemental::Util.3 \
 	XML::Parser::Style::Elemental.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
