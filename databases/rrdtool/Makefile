@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool/Makefile 327476 2013-09-17 13:03:10Z bapt $
+# $FreeBSD: databases/rrdtool/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.4.7
@@ -42,6 +42,7 @@ PERL_MODULE_DESC=	Build PERL module
 PYTHON_MODULE_DESC=	Build PYTHON bindings
 RUBY_MODULE_DESC=	Build RUBY bindings
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON_MODULE}
