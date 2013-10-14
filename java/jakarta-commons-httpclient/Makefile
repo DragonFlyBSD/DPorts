@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: java/jakarta-commons-httpclient/Makefile 313961 2013-03-12 10:39:30Z ale $
+# $FreeBSD: java/jakarta-commons-httpclient/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-httpclient
 DISTVERSION=	3.1
@@ -32,6 +32,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
