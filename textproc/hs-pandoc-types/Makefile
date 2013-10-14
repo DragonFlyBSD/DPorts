@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-pandoc-types/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-pandoc-types/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pandoc-types
 PORTVERSION=	1.10
@@ -12,5 +12,6 @@ LICENSE=	GPLv2
 
 USE_CABAL=	syb
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
