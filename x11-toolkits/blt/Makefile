@@ -1,5 +1,5 @@
 # Created by: Kenjiro Cho <kjc@csl.sony.co.jp>
-# $FreeBSD: x11-toolkits/blt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/blt/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	blt
 PORTVERSION=	2.4z
@@ -33,6 +33,7 @@ USE_TK=		84+
 INVALID_TK_VER=	86
 USE_XORG=	x11
 
+NO_STAGE=	yes
 post-install:
 	${LN} -sf libBLT24.so.3 ${PREFIX}/lib/libBLT24.so
 	${LN} -sf libBLTlite24.so.3 ${PREFIX}/lib/libBLTlite24.so
