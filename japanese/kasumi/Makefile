@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: japanese/kasumi/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: japanese/kasumi/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kasumi
 PORTVERSION=	2.5
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		kasumi.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
