@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: textproc/p5-HTML-FormatText-WithLinks/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-HTML-FormatText-WithLinks/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-FormatText-WithLinks
 PORTVERSION=	0.14
@@ -18,4 +18,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		HTML::FormatText::WithLinks.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
