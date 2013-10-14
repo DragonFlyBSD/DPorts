@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: ports/comms/lrzsz/Makefile,v 1.33 2013/01/26 16:56:08 svnexp Exp $
+# $FreeBSD: comms/lrzsz/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	lrzsz
 PORTVERSION=	0.12.20
@@ -9,6 +9,8 @@ MASTER_SITES=	http://ohse.de/uwe/releases/
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
+
+NO_STAGE=	yes
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all # vcheck
