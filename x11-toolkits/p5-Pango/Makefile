@@ -1,9 +1,5 @@
-# New ports collection makefile for:		x11-toolkits/p5-Pango
-# Date created:					Oct 30 2009
-# Whom:						Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: x11-toolkits/p5-Pango/Makefile 325959 2013-09-02 09:36:29Z az $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: x11-toolkits/p5-Pango/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Pango
 PORTVERSION=	1.223
@@ -27,6 +23,7 @@ USES=		perl5
 USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 post-install:
 	@cd ${WRKSRC}/blib/man3 && ${FIND} * -name "*.3" | ${SED} \
 		's,^,${MAN3PREFIX:S,^${PREFIX}/,,}/man/man3/,' >> ${TMPPLIST}
