@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-Twofish/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-Twofish/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Twofish
 PORTVERSION=	2.17
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Twofish.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
