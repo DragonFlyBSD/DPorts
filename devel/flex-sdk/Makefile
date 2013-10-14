@@ -1,5 +1,4 @@
-# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-# $FreeBSD: ports/devel/flex-sdk/Makefile,v 1.10 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/flex-sdk/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	flex-sdk
 PORTVERSION=	4.6.0.23201
@@ -24,6 +23,7 @@ SUB_LIST=	PORTNAME=${PORTNAME}
 SCRIPTS=	aasdoc acompc amxmlc asdoc compc copylocale digest \
 		fcsh fdb mxmlc optimizer
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
