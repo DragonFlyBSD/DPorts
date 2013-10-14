@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/jbig2dec/Makefile 323910 2013-07-29 20:20:56Z bapt $
+# $FreeBSD: graphics/jbig2dec/Makefile 327920 2013-09-23 06:08:53Z bapt $
 
 PORTNAME=	jbig2dec
 PORTVERSION=	0.11
@@ -19,8 +19,6 @@ OPTIONS_DEFINE=	PNG TESTS
 OPTIONS_DEFAULT=	PNG
 
 TESTS_DESC=	Download and use test-images for post-build testing
-
-MAN1=		jbig2dec.1
 
 EXTRACT_AFTER_ARGS+=	--exclude sha1.h --exclude 'getopt*'
 
