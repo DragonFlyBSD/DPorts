@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/ftgl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/ftgl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ftgl
 DISTVERSION=	2.1.3-rc5
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:S/-/~/}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/SUBDIRS/ s|docs||; /SUBDIRS/ s|demo||' \
 		${WRKSRC}/Makefile.in
