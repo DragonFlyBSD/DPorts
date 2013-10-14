@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@luna2.org>
-# $FreeBSD: audio/timidity++/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/timidity++/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	timidity++
 PORTVERSION=	2.13.2
@@ -20,6 +20,7 @@ CONFLICTS=	timidity-0.*
 .endif
 
 USES=		gmake
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
