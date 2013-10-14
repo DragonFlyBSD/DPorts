@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: x11-toolkits/sdl_pango/Makefile 326032 2013-09-02 16:55:04Z bapt $
+# $FreeBSD: x11-toolkits/sdl_pango/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	sdl_pango
 PORTVERSION=	0.1.2
@@ -21,4 +21,5 @@ USE_GNOME=	pango
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
