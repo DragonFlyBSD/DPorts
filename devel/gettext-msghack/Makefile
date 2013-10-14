@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gettext-msghack
-# Date created:		30 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/gettext-msghack/Makefile,v 1.3 2012/11/17 05:55:45 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: devel/gettext-msghack/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	msghack
 PORTVERSION=	0.2
@@ -20,6 +16,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '1s|/usr/bin/python|${PYTHON_CMD}|'\
 		${WRKSRC}/${PORTNAME}.py
