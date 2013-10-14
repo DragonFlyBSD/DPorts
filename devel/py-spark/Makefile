@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	spark
-# Date created:			Mar 15, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-spark/Makefile,v 1.6 2012/11/17 05:56:50 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-spark/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	spark
 PORTVERSION=	0.6.1
@@ -19,6 +14,7 @@ COMMENT=	Scanning, Parsing, and Rewriting Kit
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/spark.py ${PYTHON_SITELIBDIR}
 .if !defined(NOPORTDOCS)
