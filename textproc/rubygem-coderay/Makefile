@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-coderay/Makefile 325844 2013-09-01 08:23:05Z tota $
+# $FreeBSD: textproc/rubygem-coderay/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	coderay
 PORTVERSION=	1.1.0
@@ -16,4 +16,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/coderay
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
