@@ -1,5 +1,5 @@
 # Created by: Mark Linimon <linimon@lonesome.com>
-# $FreeBSD: dns/py-dns/Makefile 317633 2013-05-07 19:45:38Z rm $
+# $FreeBSD: dns/py-dns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dns
 PORTVERSION=	2.3.6
@@ -24,6 +24,7 @@ PYDISTUTILS_PKGNAME=	pydns
 DOCS=		README.txt README-guido.txt
 DOCSDIR=	${PREFIX}/share/doc/py-dns
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
