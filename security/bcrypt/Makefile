@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/bcrypt/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: security/bcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	bcrypt
 PORTVERSION=	1.1
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/bcrypt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
