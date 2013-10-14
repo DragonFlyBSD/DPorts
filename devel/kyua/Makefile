@@ -1,5 +1,5 @@
-# Created by: Alan Somers <asomers@freebsd.org>
-# $FreeBSD: devel/kyua/Makefile 321052 2013-06-16 14:22:13Z bdrewery $
+# Created by: Alan Somers <asomers@FreeBSD.org>
+# $FreeBSD: devel/kyua/Makefile 328410 2013-09-26 20:08:38Z eadler $
 
 PORTNAME=	kyua
 PORTVERSION=	0.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PROJECTHOST=	kyua
 DISTNAME=	kyua-cli-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
-MAINTAINER=	asomers@freebsd.org
+MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Kyua (automated testing framework) - Command line interface
 
 LICENSE=	BSD
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 USES=		pkgconfig
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--without-doxygen
