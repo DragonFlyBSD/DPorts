@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: databases/mysql-connector-java/Makefile 324144 2013-08-02 06:09:04Z matthew $
+# $FreeBSD: databases/mysql-connector-java/Makefile 328439 2013-09-27 08:14:22Z matthew $
 
 
 PORTNAME=	mysql-connector-java
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${JAVALIBDIR}/log4j.jar:${PORTSDIR}/devel/log4j
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 BUILDDIR=	${WRKDIR}/${DISTNAME}
-APIDOCSDIR=	${DOCSDIR}/javadoc
+APIDOCSDIR=	${STAGEDIR}${DOCSDIR}/javadoc
 SRCDIR=		${WRKDIR}/${DISTNAME}/src
 JAVADOCDIR=	${WRKDIR}/${DISTNAME}/javadoc
 DESTJARFILE=	${PORTNAME}.jar
@@ -46,7 +46,7 @@ do-install: do-install-jar do-install-apidocs
 
 do-install-jar:
 	@${ECHO_MSG} -n ">> Installing .jar files..."
-	@${INSTALL_DATA} ${BUILDDIR}/${JARFILE} ${JAVAJARDIR}/${DESTJARFILE}
+	@${INSTALL_DATA} ${BUILDDIR}/${JARFILE} ${STAGEDIR}${JAVAJARDIR}/${DESTJARFILE}
 	@${ECHO_MSG} " [ DONE ]"
 
 do-install-apidocs:
@@ -62,7 +62,7 @@ do-install-apidocs:
 	    fi \
 	done
 	@for extradoc in ${EXTRADOCS} ; do                          \
-	  ${INSTALL_DATA} ${INSTALL_WRKSRC}/$$extradoc ${DOCSDIR} ; \
+	  ${INSTALL_DATA} ${INSTALL_WRKSRC}/$$extradoc ${STAGEDIR}${DOCSDIR} ; \
 	done
 	@${ECHO_MSG} " [ DONE ]"
 .endif
