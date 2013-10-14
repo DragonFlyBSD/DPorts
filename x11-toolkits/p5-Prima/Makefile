@@ -1,5 +1,5 @@
 # Created by: dmitry@karasik.eu.org
-# $FreeBSD: x11-toolkits/p5-Prima/Makefile 326339 2013-09-05 03:30:41Z sunpoet $
+# $FreeBSD: x11-toolkits/p5-Prima/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Prima
 PORTVERSION=	1.37
@@ -132,6 +132,7 @@ MAN3=		Prima.3 \
 		pod::Prima::tutorial.3 \
 		pod::gencls.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXFT}
