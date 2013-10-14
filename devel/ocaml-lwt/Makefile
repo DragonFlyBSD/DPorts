@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ocaml-lwt
-# Date created:				7 July 2008
-# Whom:					jaapb@kerguelen.org
-#
-# $FreeBSD: ports/devel/ocaml-lwt/Makefile,v 1.4 2012/11/17 05:56:02 svnexp Exp $
-#
+# Created by: jaapb@kerguelen.org
+# $FreeBSD: devel/ocaml-lwt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lwt
 PORTVERSION=	1.1.0
@@ -32,6 +28,7 @@ RUN_DEPENDS+=		${SA_DIR}/ssl/ssl.a:${PORTSDIR}/security/ocaml-ssl
 
 SA_DIR=         	${PREFIX}/${OCAML_SITELIBDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
