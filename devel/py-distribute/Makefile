@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-distribute/Makefile 321041 2013-06-16 11:46:51Z koobs $
+# $FreeBSD: devel/py-distribute/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	distribute
 PORTVERSION=	0.6.35
@@ -27,6 +27,7 @@ EASYINSTALL_PTH=	${PYTHON_SITELIBDIR}/easy-install.pth
 SITE_PY=	${PYTHON_SITELIBDIR}/site.py
 PYFILES=	site.py
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
