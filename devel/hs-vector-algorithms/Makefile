@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-vector-algorithms/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-vector-algorithms/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	vector-algorithms
 PORTVERSION=	0.5.4.2
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	primitive>=0.3 vector>=0.6
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
