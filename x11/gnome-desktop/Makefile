@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-desktop/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11/gnome-desktop/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gnome-desktop/Makefile,v 1.190 2010/11/17 12:03:52 kwm Exp $
 
 PORTNAME=	gnome-desktop
@@ -32,6 +32,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=	gnome-about.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|xsltproc -o| xsltproc --nonet -o|g' \
 		${WRKSRC}/desktop-docs/fdl/Makefile.in \
