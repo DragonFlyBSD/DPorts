@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-flup
-# Date created:		2006-12-16
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/www/py-flup/Makefile,v 1.10 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: www/py-flup/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	flup
 PORTVERSION=	1.0.2
@@ -19,4 +15,5 @@ COMMENT=	Random assortment of WSGI servers, middleware
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
