@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: net/pear-Net_IPv4/Makefile 314270 2013-03-15 07:13:56Z miwi $
+# $FreeBSD: net/pear-Net_IPv4/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_IPv4
 DISTVERSION=	1.3.4
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
