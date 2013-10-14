@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/liblo/Makefile 325729 2013-08-30 23:10:18Z bapt $
+# $FreeBSD: audio/liblo/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	liblo
 PORTVERSION=	0.27
@@ -14,6 +14,7 @@ LICENSE=	LGPL21
 BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
 
 USES=		gmake pathfix
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
