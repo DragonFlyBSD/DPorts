@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: textproc/hs-texmath/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-texmath/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	texmath
 PORTVERSION=	0.6.1.5
@@ -16,6 +16,7 @@ OPTIONS_DEFINE=		CGI
 
 CGI_DESC=		Compile CGI executable
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MCGI}
