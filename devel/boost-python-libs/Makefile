@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: ports/devel/boost-python-libs/Makefile,v 1.16 2013/02/14 10:22:05 svnexp Exp $
+# $FreeBSD: devel/boost-python-libs/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	boost-python-libs
 COMMENT=	Framework for interfacing Python and C++
@@ -9,6 +9,7 @@ USE_PYTHON=	yes
 OPTIONS_DEFINE=	VERBOSE_BUILD DEBUG OPTIMIZED_CFLAGS
 VERBOSE_BUILD_DESC=	Show compiler messages
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../boost-all/common.mk"
 
 .include <bsd.port.pre.mk>
