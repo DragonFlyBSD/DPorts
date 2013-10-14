@@ -1,9 +1,5 @@
-# New ports collection makefile for:    camera
-# Date created:         11 Sep 2006
-# Whom:                 gurkan@phys.ethz.ch
-#
-# $FreeBSD: ports/graphics/camera/Makefile,v 1.15 2012/11/17 05:58:01 svnexp Exp $
-#
+# Created by: gurkan@phys.ethz.ch
+# $FreeBSD: graphics/camera/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	camera
 PORTVERSION=	0.8
@@ -28,4 +24,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Camera
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
