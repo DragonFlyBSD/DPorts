@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/textproc/xstream/Makefile,v 1.10 2012/11/26 10:56:51 svnexp Exp $
+# $FreeBSD: textproc/xstream/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xstream
 PORTVERSION=	1.4.3
@@ -21,6 +21,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/lib/${DISTNAME}.jar ${JAVAJARDIR}/${PORTNAME}.jar
