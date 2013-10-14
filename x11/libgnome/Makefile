@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: x11/libgnome/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11/libgnome/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/libgnome/Makefile,v 1.135 2010/09/27 20:06:45 kwm Exp $
 
 PORTNAME=	libgnome
@@ -52,6 +52,7 @@ GCONF_SCHEMAS=	desktop_gnome_accessibility_keyboard.schemas \
 		desktop_gnome_thumbnailers.schemas \
 		desktop_gnome_typing_break.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/libgnome/libgnome-2.0.pc.in
