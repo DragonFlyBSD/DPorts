@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/libxml++26/Makefile 325739 2013-08-30 23:52:24Z bapt $
+# $FreeBSD: textproc/libxml++26/Makefile 327773 2013-09-20 23:17:30Z bapt $
 #   $MCom: ports/textproc/libxml++26/Makefile,v 1.43 2011/04/18 19:58:29 kwm Exp $
 
 PORTNAME=	libxml++
@@ -28,6 +28,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static --disable-documentation
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
