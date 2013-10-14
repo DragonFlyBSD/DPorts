@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: security/p5-Module-Signature/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Module-Signature/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Module-Signature
 PORTVERSION=	0.73
@@ -27,6 +27,7 @@ OPTIONS_MULTI_GPG=	GPG1 GPG2
 GPG1_DESC=	Use GnuPG version 1
 GPG2_DESC=	Use GnuPG version 2
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MGPG1}
