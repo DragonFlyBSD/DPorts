@@ -1,5 +1,5 @@
 # Created by: steve
-# $FreeBSD: textproc/p5-XML-SimpleObject/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/p5-XML-SimpleObject/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-SimpleObject
 PORTVERSION=	0.53
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	DIR='Enhanced'
 
 MAN3=		XML::SimpleObject.3
 
+NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e 's/^our\s+([\$$\@\%]\w+)/use vars qw($$1);$$1/;' \
 		${WRKSRC}/SimpleObject.pm ${WRKSRC}/LibXML/LibXML.pm
