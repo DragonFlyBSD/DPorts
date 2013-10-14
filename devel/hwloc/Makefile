@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hwloc/Makefile 326525 2013-09-06 16:28:19Z wg $
+# $FreeBSD: devel/hwloc/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hwloc
 PORTVERSION=	1.7.2
@@ -29,6 +29,7 @@ ONLY_FOR_ARCHS_REASON=	has not been ported to this architecture
 
 OPTIONS_DEFINE=	DOCS CAIRO
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.man"
 .include <bsd.port.options.mk>
 
