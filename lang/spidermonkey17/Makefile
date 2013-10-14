@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: lang/spidermonkey17/Makefile 319870 2013-06-04 15:13:42Z bapt $
+# $FreeBSD: lang/spidermonkey17/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	spidermonkey17
 DISTVERSION=	1.7.0
@@ -43,6 +43,7 @@ EXTRACT_AFTER_ARGS= --exclude js/jsd
 
 OPTIONS_DEFINE=	UTF8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUTF8}
