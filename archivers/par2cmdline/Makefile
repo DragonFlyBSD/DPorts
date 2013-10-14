@@ -1,9 +1,5 @@
-# New ports collection makefile for:	par2cmdline
-# Whom:					Chris Larsen <darth@vader.dk>
-# Date created:				24 July 2003
-#
-# $FreeBSD: ports/archivers/par2cmdline/Makefile,v 1.19 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Chris Larsen <darth@vader.dk>
+# $FreeBSD: archivers/par2cmdline/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	par2cmdline
 PORTVERSION=	0.4
@@ -16,6 +12,7 @@ COMMENT=	Tools for using Parity v2 Archive files
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
 PORTDOCS=	README
