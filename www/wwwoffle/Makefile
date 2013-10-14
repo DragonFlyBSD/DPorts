@@ -1,5 +1,4 @@
-# Creaed by: Peter Mutsaers
-# $FreeBSD: www/wwwoffle/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/wwwoffle/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wwwoffle
 PORTVERSION=	2.9i
@@ -41,6 +40,7 @@ MAN1=		wwwoffle.1
 MAN5=		wwwoffle.conf.5
 MAN8=		wwwoffled.8
 
+NO_STAGE=	yes
 post-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config.pl ${WWWOFFLE_SPOOL}
 	@${CAT} ${PKGMESSAGE}
