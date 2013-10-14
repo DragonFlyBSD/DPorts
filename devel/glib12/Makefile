@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib12/Makefile 327477 2013-09-17 13:05:12Z bapt $
+# $FreeBSD: devel/glib12/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	glib
 PORTVERSION=	1.2.10
@@ -20,6 +20,7 @@ CONFIGURE_ARGS=	--includedir=${PREFIX}/include/glib12
 MAN1=		glib-config.1
 INFO=		glib
 
+NO_STAGE=	yes
 post-install:
 	${LN} -sf ${PREFIX}/bin/glib-config ${PREFIX}/bin/glib12-config
 .for lib in glib gmodule gthread
