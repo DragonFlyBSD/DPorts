@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-PAL/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: astro/p5-Astro-PAL/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Astro-PAL
 PORTVERSION=	1.05
@@ -14,6 +14,7 @@ LICENSE=	GPLv3
 
 USE_PERL5=	modbuild
 USES=		perl5
+NO_STAGE=	yes
 
 MAN1=		stime.1
 MAN3=		Astro::PAL.3
