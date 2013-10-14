@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance
-# $FreeBSD: graphics/libgeotiff/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: graphics/libgeotiff/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libgeotiff
 PORTVERSION=	1.4.0
@@ -32,4 +32,5 @@ USE_LDCONFIG=	yes
 
 MAN1=		listgeo.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
