@@ -1,9 +1,5 @@
-# New ports collection makefile for:	html
-# Date created:		Sept 19, 1997
-# Whom:			jfieber
-#
-# $FreeBSD: ports/textproc/html/Makefile,v 1.19 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: jfieber
+# $FreeBSD: textproc/html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	html
 PORTVERSION=	4.01
@@ -29,6 +25,7 @@ INSTDIR=	${PREFIX}/share/sgml/html
 XMLCATMGR=	${LOCALBASE}/bin/xmlcatmgr
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
+NO_STAGE=	yes
 pre-su-install:
 	@[ -d ${INSTDIR} ] || ${MKDIR} ${INSTDIR}
 
