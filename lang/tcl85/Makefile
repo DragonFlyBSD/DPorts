@@ -1,13 +1,15 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: lang/tcl85/Makefile 327575 2013-09-18 21:01:43Z gahr $
+# $FreeBSD: lang/tcl85/Makefile 328369 2013-09-26 14:53:12Z bdrewery $
 
 PORTNAME=	tcl
-DISTVERSION=	8.5.15
+PORTVERSION=	8.5.15
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_TCLTK} \
 		SF/tcl/Tcl/${PORTVERSION}
 MASTER_SITE_SUBDIR=tcl8_5
-DISTNAME=	${PORTNAME}${DISTVERSION}-src
+DISTNAME=	${PORTNAME}${PORTVERSION}-src
+PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Tool Command Language
@@ -20,6 +22,7 @@ TCLMAN_DESC=	Install Tcl function manpages
 TZDATA_DESC=	Install Tcl timezone data
 MODULES_DESC=	Install Tcl common modules
 
+NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}/unix
 ALL_TARGET=	all
 INSTALL_TARGET=	install install-libraries
@@ -33,7 +36,6 @@ CONFIGURE_ENV=	PORTSDIR=${PORTSDIR}
 
 TCL_VER=	8.5
 SHORT_TCL_VER=	${TCL_VER:S/8./8/}
-LATEST_LINK=	${PORTNAME}${SHORT_TCL_VER}
 MAN_SUFFIX=	${LATEST_LINK}
 
 MAKE_ENV=	SHORT_TCL_VER=${SHORT_TCL_VER} \
