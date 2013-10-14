@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: misc/qt4-qtconfig/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: misc/qt4-qtconfig/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	qtconfig
 DISTVERSION=	${QT4_VERSION}
@@ -41,6 +41,7 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake translations \
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHONON}
