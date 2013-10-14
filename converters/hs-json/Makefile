@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: converters/hs-json/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: converters/hs-json/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	json
 PORTVERSION=	0.7
@@ -15,5 +15,6 @@ USE_CABAL=	mtl syb>=0.3.3 text
 
 CONFIGURE_ARGS+=	--flags="split-base generic -parsec -pretty -mapdict"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
