@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: x11-toolkits/phat/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/phat/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	phat
 PORTVERSION=	0.4.1
@@ -17,6 +17,7 @@ USES=		pathfix pkgconfig
 USE_GNOME=	gtk20 libgnomecanvas
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
 		-e 's|-Werror||g' \
