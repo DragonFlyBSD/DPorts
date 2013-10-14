@@ -1,5 +1,5 @@
 # Created by: scrappy
-# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 324055 2013-07-31 14:39:18Z jadawin $
+# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	IO-Socket-SSL
 PORTVERSION=	1.953
@@ -25,6 +25,7 @@ MAN3=		IO::Socket::SSL.3 IO::Socket::SSL::Intercept.3 \
 		IO::Socket::SSL::Utils.3
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIDN}
