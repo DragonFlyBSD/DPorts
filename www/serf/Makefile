@@ -1,5 +1,5 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD: www/serf/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/serf/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	serf
 PORTVERSION=	1.2.1
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}/bin/apr-1-config \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
