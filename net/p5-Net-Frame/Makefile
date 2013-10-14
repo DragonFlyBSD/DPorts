@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Frame/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Frame/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Frame
 PORTVERSION=	1.09
@@ -30,4 +30,5 @@ MAN3=		Net::Frame.3 Net::Frame::Layer.3 \
 		Net::Frame::Layer::TCP.3 \
 		Net::Frame::Layer::UDP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
