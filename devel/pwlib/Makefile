@@ -1,5 +1,5 @@
-# Created by: Roger Hardiman <roger@freebsd.org>
-# $FreeBSD: devel/pwlib/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# Created by: Roger Hardiman <roger@FreeBSD.org>
+# $FreeBSD: devel/pwlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pwlib
 PORTVERSION=	1.12.0
@@ -28,6 +28,7 @@ USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "arm"
