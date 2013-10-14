@@ -1,5 +1,5 @@
 # Created by: Brian Feldman & Matt Heckaman
-# $FreeBSD: net-im/licq/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: net-im/licq/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	base
 PORTVERSION=	${LICQ_VER}
@@ -13,6 +13,8 @@ COMMENT=	A popular ICQ-compatible plugin-based program
 LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
 
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 USES=		cmake iconv
 WRKSRC=		${WRKDIR}/${DISTNAME}
