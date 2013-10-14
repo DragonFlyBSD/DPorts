@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ConfigReader-Simple
-# Date created:	   14 March 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: devel/p5-ConfigReader-Simple/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-ConfigReader-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ConfigReader-Simple
 PORTVERSION=	1.28
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		ConfigReader::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
