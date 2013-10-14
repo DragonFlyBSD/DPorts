@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-BSD-Resource/Makefile 326736 2013-09-08 14:50:53Z tobez $
+# $FreeBSD: devel/p5-BSD-Resource/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	BSD-Resource
 PORTVERSION=	1.2907
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		BSD::Resource.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
