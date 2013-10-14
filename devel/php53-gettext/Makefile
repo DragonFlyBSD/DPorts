@@ -1,9 +1,4 @@
-# New ports collection makefile for:	php53-gettext
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/php53-gettext/Makefile,v 1.4 2012/11/17 05:56:41 svnexp Exp $
-#
+# $FreeBSD: devel/php53-gettext/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 CATEGORIES=	devel
 
@@ -11,4 +6,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-gettext
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
