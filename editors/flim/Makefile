@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: editors/flim/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: editors/flim/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	flim
 PORTVERSION=	${FLIM_VER}
@@ -43,6 +43,7 @@ MAKE_ARGS+=	PREFIX="${LOCALBASE}" \
 		LISPDIR="${FLIM_LISPDIR}" \
 		VERSION_SPECIFIC_LISPDIR="${FLIM_VERSION_SPECIFIC_LISPDIR}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(EMACS_PORT_NAME)
