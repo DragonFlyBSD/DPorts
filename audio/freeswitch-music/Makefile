@@ -1,5 +1,5 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: ports/audio/freeswitch-music/Makefile,v 1.11 2012/12/07 22:29:21 svnexp Exp $
+# $FreeBSD: audio/freeswitch-music/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	freeswitch
 PORTVERSION=	1.0.8
@@ -15,6 +15,7 @@ COMMENT=	FreeSwitch Music - All Bitrates
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 USERS=		${PORTNAME}
+NO_STAGE=	yes
 GROUPS=		${USERS}
 SHAREOWN=	${USERS}
 SHAREGRP=	${SHAREOWN}
