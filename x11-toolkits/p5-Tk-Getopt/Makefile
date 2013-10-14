@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: x11-toolkits/p5-Tk-Getopt/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Tk-Getopt/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-Getopt
 PORTVERSION=	0.50
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Tk::Getopt.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
