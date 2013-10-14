@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ocaml-calendar
-# Date created:				Feb 26, 2007
-# Whom:					Jaap Boender <jaapb@kerguelen.org>
-#
-# $FreeBSD: ports/textproc/ocaml-csv/Makefile,v 1.7 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Jaap Boender <jaapb@kerguelen.org>
+# $FreeBSD: textproc/ocaml-csv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ocaml-csv
 PORTVERSION=	1.2.1
@@ -23,4 +19,5 @@ USE_OCAML=	yes
 USE_OCAML_FINDLIB=	yes
 OCAML_PKGDIRS=	csv
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
