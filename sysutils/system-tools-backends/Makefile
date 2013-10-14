@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/system-tools-backends/Makefile 326163 2013-09-03 15:59:59Z bapt $
+# $FreeBSD: sysutils/system-tools-backends/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.60 2010/04/01 22:21:53 kwm Exp $
 
 PORTNAME=	system-tools-backends
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--with-stb-group=wheel \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -e 's|@GETTEXT_PACKAGE@|system-tools-backends|g' \
 		${WRKSRC}/po/Makefile
