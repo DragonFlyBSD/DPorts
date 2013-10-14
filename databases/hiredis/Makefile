@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/databases/hiredis/Makefile,v 1.8 2012/12/01 16:34:58 svnexp Exp $
+# $FreeBSD: databases/hiredis/Makefile 328633 2013-09-29 00:02:58Z gblach $
 
 PORTNAME=	hiredis
 PORTVERSION=	0.11.0
@@ -15,7 +15,8 @@ GH_ACCOUNT=	redis
 GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	0fff0f1
 
-USE_GMAKE=	yes
+USES=		gmake
+MAKE_ARGS+=	PREFIX=${STAGEDIR}${PREFIX}
 CFLAGS+=	-fPIC
 USE_LDCONFIG=	yes
 
