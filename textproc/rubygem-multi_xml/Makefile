@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-multi_xml/Makefile 321835 2013-06-27 02:29:31Z clsung $
+# $FreeBSD: textproc/rubygem-multi_xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	multi_xml
 PORTVERSION=	0.5.4
@@ -16,6 +16,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOKOGIRI}
