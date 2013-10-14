@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: net/tcpwatch/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: net/tcpwatch/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpwatch
 PORTVERSION=	1.3
@@ -19,4 +19,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGVERSION=	1.2.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
