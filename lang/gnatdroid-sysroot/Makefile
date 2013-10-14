@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-sysroot/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: lang/gnatdroid-sysroot/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	sysroot
 PORTVERSION=	9
@@ -19,6 +19,7 @@ NO_MTREE=	YES
 WRKSRC=		${WRKDIR}/android-${PORTVERSION}-arm
 PREFIX=		${LOCALBASE}/android9
 
+NO_STAGE=	yes
 do-install:
 	(cd ${WRKSRC} && ${FIND} usr/ -type d -exec ${MKDIR} ${PREFIX}/{} \;)
 	(cd ${WRKSRC} && ${FIND} usr/ -type f -exec \
