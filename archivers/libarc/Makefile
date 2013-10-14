@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libarc
-# Date Created:				20 June 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: archivers/libarc/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: archivers/libarc/Makefile 328241 2013-09-25 02:59:32Z vanilla $
 
 PORTNAME=	libarc
 PORTVERSION=	2.0.2
@@ -19,16 +15,14 @@ SOVERSION=	1
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I." LN="${LN} -sf" \
 		SOLIB="${SOLIB}" SOVERSION="${SOVERSION}"
-
-
 USE_LDCONFIG=	yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/arccat ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/${SOLIB}.${SOVERSION} ${PREFIX}/lib
-	${LN} -sf ${PREFIX}/lib/${SOLIB}.${SOVERSION} ${PREFIX}/lib/${SOLIB}
-	@${MKDIR} ${PREFIX}/include/libarc
-	${INSTALL_DATA} ${WRKSRC}/libarc/* ${PREFIX}/include/libarc
-	(cd ${WRKSRC} && ${INSTALL_DATA} unlzh.h zip.h ${PREFIX}/include/libarc)
+	${INSTALL_PROGRAM} ${WRKSRC}/arccat ${STAGEDIR}/${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${SOLIB}.${SOVERSION} ${STAGEDIR}/${PREFIX}/lib
+	${LN} -sf ${PREFIX}/lib/${SOLIB}.${SOVERSION} ${STAGEDIR}/${PREFIX}/lib/${SOLIB}
+	@${MKDIR} ${STAGEDIR}/${PREFIX}/include/libarc
+	${INSTALL_DATA} ${WRKSRC}/libarc/* ${STAGEDIR}/${PREFIX}/include/libarc
+	(cd ${WRKSRC} && ${INSTALL_DATA} unlzh.h zip.h ${STAGEDIR}/${PREFIX}/include/libarc)
 
 .include <bsd.port.mk>
