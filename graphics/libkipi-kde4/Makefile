@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: graphics/libkipi-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/libkipi-kde4/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libkipi
 PORTVERSION=	${KDE4_VERSION}
@@ -21,6 +21,7 @@ USES=		cmake:outsource
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e '/pkgconfig/ s/$${LIB_INSTALL_DIR}/libdata/' \
 		-e 's/${PORTNAME}.pc\([^.]\)/${PORTNAME}-kde4.pc\1/g' \
