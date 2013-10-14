@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/py-rsa/pkg-plist,v 1.4 2012/11/17 06:01:17 svnexp Exp $
+@comment $FreeBSD: security/py-rsa/pkg-plist 328367 2013-09-26 14:40:36Z koobs $
 bin/pyrsa-encrypt-bigfile
 bin/pyrsa-encrypt
 bin/pyrsa-verify
@@ -26,6 +26,9 @@ bin/pyrsa-decrypt-bigfile
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/_version200.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/_version200.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/_version200.pyo
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/asn1.py
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/asn1.pyc
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/asn1.pyo
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/bigfile.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/bigfile.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/rsa/bigfile.pyo

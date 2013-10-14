@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/security/py-rsa/Makefile,v 1.5 2013/02/09 15:59:42 svnexp Exp $
+# $FreeBSD: security/py-rsa/Makefile 328367 2013-09-26 14:40:36Z koobs $
 
 PORTNAME=	rsa
-PORTVERSION=	3.1.1
+PORTVERSION=	3.1.2
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,9 +12,16 @@ COMMENT=	Pure-Python RSA implementation
 
 LICENSE=	AL2
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>=0.1.3:${PORTSDIR}/devel/py-asn1
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>=0.1.3:${PORTSDIR}/devel/py-asn1
+TEST_DEPENDS:=	${PYTHON_PKGNAMEPREFIX}unittest2>0:${PORTSDIR}/devel/py-unittest2 \
+		${RUN_DEPENDS}
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	easy_install
+
+NO_STAGE=	yes
+
+regression-test: build
+	@cd ${WRKSRC} && ${PYTHON_CMD} run_tests.py
 
 .include <bsd.port.mk>
