@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: math/glpk/Makefile 324324 2013-08-06 19:08:57Z bf $
+# $FreeBSD: math/glpk/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	glpk
 PORTVERSION=	4.52.1
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-gmp
 CONFLICTS=	goblin-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIODBC} || ${PORT_OPTIONS:MMYSQL}
