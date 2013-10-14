@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/enlightenment/Makefile 326433 2013-09-05 18:20:35Z gblach $
+# $FreeBSD: x11-wm/enlightenment/Makefile 330193 2013-10-12 23:02:59Z gblach $
 
 PORTNAME=	enlightenment
 PORTVERSION=	0.17.4
@@ -14,8 +14,8 @@ COMMENT=	A very artistic X window manager
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
-		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms
+LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
+		libxcb-keysyms.so:${PORTSDIR}/x11/xcb-util-keysyms
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
@@ -60,9 +60,6 @@ post-patch:
 		${WRKSRC}/src/bin/Makefile.in
 	@${REINPLACE_CMD} -e 's|@E_FM_LIBS@|@E_FM_LIBS@ -lehal -leukit|' \
 		${WRKSRC}/src/bin/e_fm/Makefile.in
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .if ${ARCH} == "sparc64"
 BROKEN=		Does not install on sparc64: signal 10
