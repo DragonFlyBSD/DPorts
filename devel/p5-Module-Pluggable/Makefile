@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Pluggable/Makefile 324354 2013-08-07 14:10:21Z vsevolod $
+# $FreeBSD: devel/p5-Module-Pluggable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Pluggable
 PORTVERSION=	4.8
@@ -16,4 +16,5 @@ MAN3=		Devel::InnerPackage.3 \
 		Module::Pluggable.3 \
 		Module::Pluggable::Object.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
