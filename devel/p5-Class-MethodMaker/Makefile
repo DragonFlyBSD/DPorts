@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: devel/p5-Class-MethodMaker/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-MethodMaker/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=		Class-MethodMaker
 PORTVERSION=		2.18
@@ -25,4 +25,5 @@ MAN3=	Class::MethodMaker.3 \
 	Class::MethodMaker::hash.3 \
 	Class::MethodMaker::scalar.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
