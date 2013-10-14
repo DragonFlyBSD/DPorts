@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-Domain-TLD/Makefile 326881 2013-09-10 09:33:38Z tobez $
+# $FreeBSD: dns/p5-Net-Domain-TLD/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-Domain-TLD
 PORTVERSION=	1.70
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::Domain::TLD.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
