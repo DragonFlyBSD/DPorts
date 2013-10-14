@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Template-Plugin-JavaScript/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Template-Plugin-JavaScript/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Plugin-JavaScript
 PORTVERSION=	0.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Template::Plugin::JavaScript.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
