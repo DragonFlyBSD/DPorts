@@ -1,9 +1,5 @@
-# New ports collection makefile for:    POV-Ray
-# Date created:         3 Dec 1996
-# Whom:                 paulo@isr.uc.pt
-#
-# $FreeBSD: graphics/povray36/Makefile 313434 2013-03-05 03:10:10Z maho $
-#
+# Created by: paulo@isr.uc.pt
+# $FreeBSD: graphics/povray36/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	povray
 PORTVERSION=	3.6.1
@@ -32,6 +28,7 @@ GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
 LATEST_LINK=	${PORTNAME}36
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if (${ARCH} == "i386")
