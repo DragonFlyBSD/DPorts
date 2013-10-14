@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/hs-cairo/Makefile 326298 2013-09-04 17:10:07Z antoine $
+# $FreeBSD: graphics/hs-cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cairo
 PORTVERSION=	0.12.4
@@ -15,5 +15,6 @@ USE_CABAL=	gtk2hs-buildtools mtl
 
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/cairo-pdf.pc:${PORTSDIR}/graphics/cairo
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
