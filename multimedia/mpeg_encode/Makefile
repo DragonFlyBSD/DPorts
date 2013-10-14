@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mpeg_encode
-# Date created:
-# Whom:                 erich@FreeBSD.org
-#
-# $FreeBSD: ports/multimedia/mpeg_encode/Makefile,v 1.24 2012/11/17 05:59:51 svnexp Exp $
-#
+# Created by: erich@FreeBSD.org
+# $FreeBSD: multimedia/mpeg_encode/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mpeg_encode
 PORTVERSION=	1.5b
@@ -18,6 +14,7 @@ MAN1=		mpeg_encode.1
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@(${GREP} -R -l "malloc.h" ${WRKSRC}/* | \
 	    ${XARGS} ${REINPLACE_CMD} -e "s/malloc.h/stdlib.h/")

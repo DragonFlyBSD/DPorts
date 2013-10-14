@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/mpeg_encode/files/patch-opts.c,v 1.2 2012/11/17 05:59:51 svnexp Exp $
+$FreeBSD: multimedia/mpeg_encode/files/patch-opts.c 300896 2012-07-14 13:54:48Z beat $
 
 --- opts.c	2002/10/21 11:32:56	1.1
 +++ opts.c	2002/10/21 11:33:04
