@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/ladspa/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/ladspa/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ladspa
 PORTVERSION=	1.13
@@ -16,6 +16,7 @@ LICENSE_FILE=	${WRKSRC}/doc/COPYING
 
 WRKSRC=		${WRKDIR}/ladspa_sdk
 USES=		gmake
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 PROGRAM_FILES=	analyseplugin applyplugin listplugins
 PLUGIN_FILES=	amp.so delay.so filter.so noise.so sine.so
