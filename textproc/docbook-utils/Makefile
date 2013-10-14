@@ -1,5 +1,5 @@
 # Created by: Brian Candler <B.Candler@pobox.com>
-# $FreeBSD: textproc/docbook-utils/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/docbook-utils/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-utils
 PORTVERSION=	0.6.14
@@ -43,6 +43,7 @@ MLINKS=		jw.1 docbook2dvi.1 \
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/sgml/catalog|${PREFIX}/share/sgml/catalog|g' \
 		${WRKSRC}/doc/HTML/Makefile.in
