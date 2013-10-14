@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cl-cffi/Makefile 314955 2013-03-22 19:40:37Z olgeni $
+# $FreeBSD: devel/cl-cffi/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cffi
 PORTVERSION=	0.11.0
@@ -31,6 +31,7 @@ NO_BUILD=	yes
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
