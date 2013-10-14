@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libmemcache
-# Date created:		November 29, 2004
-# Whom:			Sean Chittenden <seanc@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/libmemcache/Makefile,v 1.20 2012/11/17 05:55:10 svnexp Exp $
-#
+# Created by: Sean Chittenden <seanc@FreeBSD.org>
+# $FreeBSD: databases/libmemcache/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libmemcache
 DISTVERSION=	1.4.0.rc2
