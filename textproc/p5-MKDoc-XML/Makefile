@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-MKDoc-XML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-MKDoc-XML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	MKDoc-XML
 PORTVERSION=	0.75
@@ -28,4 +28,5 @@ MAN3=	MKDoc::XML.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
