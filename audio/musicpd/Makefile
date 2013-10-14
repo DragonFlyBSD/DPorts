@@ -1,4 +1,4 @@
-# $FreeBSD: audio/musicpd/Makefile 325725 2013-08-30 22:31:38Z bapt $
+# $FreeBSD: audio/musicpd/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	musicpd
 PORTVERSION=	0.17.3
@@ -16,6 +16,7 @@ LIB_DEPENDS+=	mad.2:${PORTSDIR}/audio/libmad \
 LICENSE=	GPLv2
 
 USE_STAGE=	yes
+NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
