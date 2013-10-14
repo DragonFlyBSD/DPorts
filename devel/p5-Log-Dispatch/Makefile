@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Log-Dispatch/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Log-Dispatch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Dispatch
 PORTVERSION=	2.41
@@ -47,6 +47,7 @@ MAN3=		Log::Dispatch.3 \
 		Log::Dispatch::Syslog.3
 PORTDOCS=	Changes README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHELOG}
