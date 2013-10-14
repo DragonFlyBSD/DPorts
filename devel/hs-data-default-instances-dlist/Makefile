@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-data-default-instances-dlist/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-data-default-instances-dlist/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	data-default-instances-dlist
 PORTVERSION=	0.0.1
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	data-default-class dlist
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
