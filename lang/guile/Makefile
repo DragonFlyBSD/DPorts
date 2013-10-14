@@ -1,5 +1,5 @@
 # Created by: jseger@FreeBSD.org
-# $FreeBSD: lang/guile/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: lang/guile/Makefile 329950 2013-10-10 00:20:42Z madpilot $
 #    $MCom: ports/lang/guile/Makefile,v 1.1 2006/09/12 14:57:06 ahze Exp $
 
 PORTNAME=	guile
@@ -11,11 +11,10 @@ MASTER_SITE_SUBDIR=	guile
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU Ubiquitous Intelligent Language for Extension
 
-LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp
+LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp
 
 USE_AUTOTOOLS=	autoconf libltdl
-USE_GMAKE=	yes
-USES=		gettext ncurses
+USES=		gettext gmake ncurses
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -23,8 +22,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 GUILE_VER=	1.8
 PLIST_SUB=	GUILE_VER=${GUILE_VER}
-
-MAN1=		guile.1
 
 REINPLACE_FILES=	libguile/smob.c libguile/filesys.c libguile/gc.c \
 			libguile/mallocs.c libguile/eval.c libguile/gc-malloc.c \
