@@ -1,5 +1,5 @@
 # Created by: Elisey Savateev <b3k@mail.ru>
-# $FreeBSD: www/c-icap/Makefile 323989 2013-07-30 20:14:27Z mm $
+# $FreeBSD: www/c-icap/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	c-icap
 PORTVERSION=	0.2.5
@@ -40,6 +40,7 @@ MAN8=		c-icap-client.8 \
 CONFIGURE_ARGS+=	--enable-static \
 			--sysconfdir="${PREFIX}/etc/c-icap"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBDB}
@@ -63,7 +64,7 @@ USE_OPENLDAP=	YES
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 .endif
 
 .include <bsd.port.pre.mk>
