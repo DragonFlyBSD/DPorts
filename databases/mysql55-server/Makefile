@@ -1,13 +1,13 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql55-server/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/mysql55-server/Makefile 329549 2013-10-06 10:25:40Z marino $
 
 PORTNAME?=	mysql
-PORTVERSION=	5.5.33
+PORTVERSION=	5.5.34
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	${MASTER_SITE_MYSQL}
 MASTER_SITE_SUBDIR=	MySQL-5.5
-PKGNAMESUFFIX?=	-server
+PKGNAMESUFFIX?=	55-server
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
@@ -48,6 +48,7 @@ SHEBANG_FILES=	scripts/*.pl* scripts/*.sh
 .error You have `USE_MYSQL' variable defined either in environment or in make(1) arguments. Please undefine and try again.
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
@@ -62,9 +63,7 @@ CMAKE_ARGS+=	-DWITH_FAST_MUTEXES=1
 USE_MYSQL=	yes
 WANT_MYSQL_VER=	55
 
-LATEST_LINK=	mysql55-server
-
-CONFLICTS_INSTALL=	mysql-server-[34].* mysql-server-5.[0-46-9].* mariadb-server-5.* percona-server-5.*
+CONFLICTS_INSTALL=	mysql5.[0-46-9]-server-* mysql[0-46-9][0-9]-server-* mariadb[0-9][0-9]-server-* percona[0-9][0-9]-server-*
 
 USE_RC_SUBR=	mysql-server
 
