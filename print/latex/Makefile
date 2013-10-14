@@ -1,9 +1,5 @@
-# New ports collection makefile for:    latex
-# Date created:         29 September 1994
-# Whom:                 jmz
-#
-# $FreeBSD: ports/print/latex/Makefile,v 1.61 2012/11/17 06:00:51 svnexp Exp $
-#
+# Created by: jmz
+# $FreeBSD: print/latex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex2e
 PORTVERSION=	2003.12
@@ -27,6 +23,7 @@ CONFLICTS=	teTeX*
 
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-build:
 	@${RM} ${WRKSRC}/tfm/dummy.tfm  ${WRKSRC}/mf/cmex9.mf
 	@(cd ${WRKSRC}/base; TEXINPUTS=${WRKSRC}/base: export TEXINPUTS; tex --ini unpack.ins)
