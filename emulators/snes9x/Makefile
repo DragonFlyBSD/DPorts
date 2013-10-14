@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai<Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: emulators/snes9x/Makefile 317692 2013-05-08 15:59:11Z bdrewery $
+# $FreeBSD: emulators/snes9x/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	snes9x
 PORTVERSION=	1.51
@@ -39,6 +39,7 @@ MMX_DESC=	Enable MMX
 JMA_DESC=	Enable JMA archive decompression support
 NETPLAY_DESC=	Enable network support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
