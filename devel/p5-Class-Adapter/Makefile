@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: devel/p5-Class-Adapter/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-Class-Adapter/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Adapter
 PORTVERSION=	1.08
@@ -20,4 +20,5 @@ MAN3=		Class::Adapter.3 \
 		Class::Adapter::Builder.3 \
 		Class::Adapter::Clear.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
