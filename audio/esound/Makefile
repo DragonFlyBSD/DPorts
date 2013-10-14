@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: audio/esound/Makefile 326709 2013-09-08 08:27:08Z antoine $
+# $FreeBSD: audio/esound/Makefile 327706 2013-09-20 14:36:35Z bapt $
 #   $MCom: ports/audio/esound/Makefile,v 1.1 2008/11/20 19:38:24 marcus Exp $
 
 PORTNAME=	esound
@@ -15,6 +15,7 @@ COMMENT=	A sound library for enlightenment package
 LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile
 
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		pathfix pkgconfig:both
 USE_LDCONFIG=	yes
