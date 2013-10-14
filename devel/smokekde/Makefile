@@ -1,4 +1,4 @@
-# $FreeBSD: devel/smokekde/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/smokekde/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	smokekde
 PORTVERSION=	${KDE4_VERSION}
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 OPTIONS_DEFINE=	ATTICA
 ATTICA_DESC=	Bindings for libattica (may crash build)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Attica bindings often cause the build to coredump.
