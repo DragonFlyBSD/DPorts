@@ -1,9 +1,5 @@
-# New ports collection makefile for:	darcsver
-# Date created:		5th June, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-darcsver/Makefile,v 1.12 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-darcsver/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	darcsver
 PORTVERSION=	1.7.4
@@ -18,6 +14,7 @@ COMMENT=	Generate a version number from darcs history
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's#(doc_loc, data_fnames)##g' ${WRKSRC}/setup.py
 
