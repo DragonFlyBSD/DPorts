@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-openssl
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/security/php5-openssl/Makefile,v 1.2 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: security/php5-openssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 CATEGORIES=	security
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-openssl
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
