@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-Coords/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: astro/p5-Astro-Coords/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Astro-Coords
 PORTVERSION=	0.18
@@ -22,6 +22,7 @@ TEST_DEPENDS=	p5-Test-Number-Delta>=0:${PORTSDIR}/devel/p5-Test-Number-Delta \
 
 USE_PERL5=	modbuild
 USES=		perl5
+NO_STAGE=	yes
 
 MAN3=		Astro::Coords.3 \
 		Astro::Coords::Angle.3 \
