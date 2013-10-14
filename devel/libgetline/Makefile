@@ -1,5 +1,5 @@
 # Created by: roberto
-# $FreeBSD: devel/libgetline/Makefile 313274 2013-03-02 16:44:28Z miwi $
+# $FreeBSD: devel/libgetline/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	getline
 PORTVERSION=	3.9
@@ -16,4 +16,5 @@ WRKSRC=		${WRKDIR}/getline-39
 
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
