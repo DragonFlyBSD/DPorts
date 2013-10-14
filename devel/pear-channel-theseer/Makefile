@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-channel-theseer/Makefile,v 1.2 2012/12/17 07:43:41 svnexp Exp $
+# $FreeBSD: devel/pear-channel-theseer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	theseer
 PORTVERSION=	20120501
@@ -11,6 +11,7 @@ COMMENT=	PEAR channel ${PEAR_CHANNEL_HOST}
 
 PEAR_CHANNEL_HOST=	pear.netpirates.net
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.channel.mk"
 .include <bsd.port.post.mk>
