@@ -1,5 +1,5 @@
 # Created by: Ronald Kuehn <rk@ronald.org>
-# $FreeBSD: graphics/ocaml-lablgl/Makefile 318829 2013-05-23 02:35:26Z jgh $
+# $FreeBSD: graphics/ocaml-lablgl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lablgl
 PORTVERSION=	20120306
@@ -35,6 +35,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/ocaml/lablgl
 
 CONFLICTS=	ocaml-notk-[0-9]* ocaml-nox11-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_TK=		84+
