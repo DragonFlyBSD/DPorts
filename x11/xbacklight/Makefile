@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xbacklight/Makefile 324239 2013-08-04 15:05:40Z bapt $
+# $FreeBSD: x11/xbacklight/Makefile 328647 2013-09-29 04:36:59Z eadler $
 
 PORTNAME=	xbacklight
 PORTVERSION=	1.2.0
@@ -14,7 +14,6 @@ LIB_DEPENDS=	libxcb-util.so:${PORTSDIR}/x11/xcb-util
 XORG_CAT=	app
 USE_XORG=	x11 xrender xrandr xcb
 
-MAN1=		xbacklight.1
-PLIST_FILES=	bin/xbacklight
+PLIST_FILES=	bin/xbacklight man/man1/xbacklight.1.gz
 
 .include <bsd.port.mk>
