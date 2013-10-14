@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/libntlm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/libntlm/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libntlm
 PORTVERSION=	1.3
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README THANKS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
