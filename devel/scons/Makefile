@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: devel/scons/Makefile 324878 2013-08-17 22:55:46Z mva $
+# $FreeBSD: devel/scons/Makefile 329039 2013-10-02 11:42:02Z bsam $
 
 PORTNAME=	scons
 PORTVERSION=	2.3.0
@@ -7,13 +7,9 @@ CATEGORIES=	devel python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	gavin@16degrees.com.au
-COMMENT=	A build tool alternative to make
+COMMENT=	Build tool alternative to make
 
 RUN_DEPENDS+=	python2:${PORTSDIR}/lang/python2
-
-.if !defined (NO_INSTALL_MANPAGES)
-MAN1=		scons.1 sconsign.1 scons-time.1
-.endif
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
@@ -23,10 +19,4 @@ PLIST_SUB+=	SCONS_VER=${PORTVERSION}
 
 USE_PYTHON=	-2.7
 
-.include <bsd.port.pre.mk>
-
-.if defined (NO_INSTALL_MANPAGES)
-PYDISTUTILS_INSTALLARGS+=	--no-install-man
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
