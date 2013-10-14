@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/libktorrent/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-p2p/libktorrent/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	libktorrent
 DISTVERSION=	1.3.1
@@ -24,4 +24,5 @@ SHLIB_VER=	5.0.1
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER} \
 		SHLIB_SHVER=${SHLIB_VER:R:R}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
