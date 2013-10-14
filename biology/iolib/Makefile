@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/iolib/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: biology/iolib/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	io_lib
 PORTVERSION=	1.13.0
@@ -30,4 +30,5 @@ MAN3=	read_scf_header.3 read_allocate.3 ExperimentFile.3 \
 	read2exp.3 fread_scf.3
 MAN4=	Read.4
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
