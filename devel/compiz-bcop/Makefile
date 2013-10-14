@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: devel/compiz-bcop/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/compiz-bcop/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	compiz-bcop
 PORTVERSION=	0.8.4
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_GNOME=	libxslt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
