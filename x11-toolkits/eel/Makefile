@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: x11-toolkits/eel/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: x11-toolkits/eel/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/eel/Makefile,v 1.90 2010/09/28 09:15:49 kwm Exp $
 
 PORTNAME=	eel
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--enable-shared --enable-static
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
