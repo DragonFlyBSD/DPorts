@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/radius-engine/Makefile 326032 2013-09-02 16:55:04Z bapt $
+# $FreeBSD: graphics/radius-engine/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	radius-engine
 PORTVERSION=	1.1
@@ -27,6 +27,7 @@ PLIST_FILES=	include/radius.h \
 		libdata/pkgconfig/radius-engine.pc
 PLIST_DIRSTRY=	libdata/pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|lua5.1|lua-5.1|g' \
 		${WRKSRC}/acinclude.m4 ${WRKSRC}/configure
