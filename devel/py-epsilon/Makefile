@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-epsilon
-# Date created:				10 Apr 2006
-# Whom:					Alexander Botero-Lowry <alex@foxybanana.com>
-#
-# $FreeBSD: ports/devel/py-epsilon/Makefile,v 1.21 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
+# $FreeBSD: devel/py-epsilon/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	epsilon
 PORTVERSION=	0.6.0
@@ -26,4 +22,5 @@ PYDISTUTILS_PKGNAME=	Epsilon
 USE_TWISTED=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
