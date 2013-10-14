@@ -1,5 +1,5 @@
 # Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
-# $FreeBSD: dns/idnkit2/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# $FreeBSD: dns/idnkit2/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	idnkit
 PORTVERSION=	2.2
@@ -33,6 +33,7 @@ MAN3=	idn_checkname.3 idn_comparenames.3 idn_comparenames2.3 \
 MAN5=	idn2.conf.5 idn2rc.5 idnalias.conf.5 idnlang.conf.5
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-liconv|${ICONV_LIB}|' \
 		${WRKSRC}/configure
