@@ -1,12 +1,9 @@
-# New ports collection makefile for:	php5-zip
-# Date created:			10 Dec 2008
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/php5-zip/Makefile,v 1.2 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: archivers/php5-zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 CATEGORIES=	archivers
 
+NO_STAGE=	yes
 MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-zip
