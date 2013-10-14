@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/FreeWnn-lib/Makefile 317168 2013-05-02 22:27:58Z hrs $
+# $FreeBSD: japanese/FreeWnn-lib/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	FreeWnn
 PORTVERSION=	1.1.1.a021
@@ -106,4 +106,5 @@ ${M}+=	${${M}.${WNNTYPE}}
 . endif
 .endfor
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
