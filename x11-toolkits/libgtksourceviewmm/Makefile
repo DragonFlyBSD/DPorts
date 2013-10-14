@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libgtksourceviewmm/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: x11-toolkits/libgtksourceviewmm/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #    $MCom: ports/x11-toolkits/libgtksourceviewmm/Makefile,v 1.4 2008/08/08 21:59:44 kwm Exp $
 
 PORTNAME=	libgtksourceviewmm
@@ -23,6 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBAS}/lib
 CONFIGURE_ARGS=	--disable-docs
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
 		${WRKSRC}/gtksourceview/gtksourceviewmm/sourceiter.cc \
