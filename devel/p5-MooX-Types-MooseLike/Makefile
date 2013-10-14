@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooX-Types-MooseLike/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-MooX-Types-MooseLike/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MooX-Types-MooseLike
 PORTVERSION=	0.25
@@ -21,9 +21,6 @@ TEST_DEPENDS=	p5-Moo>=0.091010:${PORTSDIR}/devel/p5-Moo \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		MooX::Types::MooseLike.3 \
-		MooX::Types::MooseLike::Base.3
 
 .include <bsd.port.pre.mk>
 
