@@ -1,4 +1,4 @@
-# $FreeBSD: print/latex-ifluatex/Makefile 319892 2013-06-04 18:45:47Z pgj $
+# $FreeBSD: print/latex-ifluatex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-ifluatex
 PORTVERSION=	1.3
@@ -26,6 +26,7 @@ CLASS_FILES=	ifluatex.dtx ifluatex.sty
 
 DOC_FILES=	ifluatex.pdf
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC}
