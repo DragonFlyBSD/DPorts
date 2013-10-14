@@ -1,5 +1,5 @@
 # Created by: <glewis@FreeBSD.org>
-# $FreeBSD: ports/textproc/dom4j/Makefile,v 1.8 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/dom4j/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dom4j
 PORTVERSION=	1.6.1
@@ -19,6 +19,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR in ${JAVAJARDIR}..."
 	@cd ${WRKSRC} && \
