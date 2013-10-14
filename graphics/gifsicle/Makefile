@@ -1,5 +1,5 @@
 # Created by: Brad Hendrickse <bradh@iafrica.com>
-# $FreeBSD: graphics/gifsicle/Makefile 323893 2013-07-29 16:25:39Z wg $
+# $FreeBSD: graphics/gifsicle/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	gifsicle
 PORTVERSION=	1.71
@@ -22,10 +22,10 @@ OPTIONS_DEFAULT=X11
 
 OPTIONS_SUB=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MX11}
-PKGNAMESUFFIX=	-nox11
 CONFIGURE_ARGS+=	--without-x --disable-gifview
 .else
 USE_XORG=	x11
