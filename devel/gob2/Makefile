@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/gob2/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/gob2/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gob2
 PORTVERSION=	2.0.17
@@ -31,6 +31,7 @@ EXAMPLES=	GNOME_Foo_SomeInterface.idl \
 		my-glade.gob \
 		my-person.gob
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
