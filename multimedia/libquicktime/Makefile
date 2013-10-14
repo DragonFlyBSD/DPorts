@@ -1,13 +1,13 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/libquicktime/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/libquicktime/Makefile 329667 2013-10-07 09:21:13Z koobs $
 
 PORTNAME=	libquicktime
 PORTVERSION=	1.2.4
-PORTREVISION?=	4
+PORTREVISION?=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A library for reading and writing quicktime files
 
 .if !defined(_BUILDING_LIBQUICKTIME_PLUGINS)
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--without-x --enable-gpl --without-doxygen
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
@@ -129,7 +130,7 @@ CONFIGURE_ARGS+=	--without-faad2
 .endif
 
 .if ${PORT_OPTIONS:MX264}
-LIB_DEPENDS+=	x264.125:${PORTSDIR}/multimedia/x264
+LIB_DEPENDS+=	x264:${PORTSDIR}/multimedia/x264
 PLIST_SUB+=	X264=""
 CONFIGURE_ARGS+=	--with-x264
 .else
