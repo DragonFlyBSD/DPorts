@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/eet/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: devel/eet/Makefile 328735 2013-09-29 21:38:55Z gblach $
 
 PORTNAME=	eet
 PORTVERSION=	1.7.8
@@ -13,7 +13,7 @@ COMMENT=	Enlightenment Data Handling Library
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
@@ -39,6 +39,7 @@ post-patch:
 		${WRKSRC}/src/examples/Makefile.in
 
 post-install:
-	@${REINPLACE_CMD} -i '' -e 's/ openssl//' ${PREFIX}/libdata/pkgconfig/eet.pc
+	@${REINPLACE_CMD} -i '' -e 's/ openssl//' \
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/eet.pc
 
 .include <bsd.port.mk>
