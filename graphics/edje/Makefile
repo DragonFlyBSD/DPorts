@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/edje/Makefile 326093 2013-09-02 21:29:44Z antoine $
+# $FreeBSD: graphics/edje/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	edje
 PORTVERSION=	1.7.8
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=	--without-vim
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e "/^SUBDIRS[[:space:]]+=/s/utils//" \
 	    ${WRKSRC}/Makefile.in
