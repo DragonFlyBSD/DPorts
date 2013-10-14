@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/grubik/Makefile,v 1.14 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: games/grubik/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	grubik
 PORTVERSION=	0.1
@@ -18,6 +18,7 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${RM} -rf ${WRKSRC}/GRubik.app/ix86
 	${REINPLACE_CMD} -e 's|^//|# //|' ${WRKSRC}/GNUmakefile
