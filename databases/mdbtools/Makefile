@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: databases/mdbtools/Makefile 316313 2013-04-23 07:08:32Z bapt $
+# $FreeBSD: databases/mdbtools/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mdbtools
 PORTVERSION=	0.5
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 DOCS=		AUTHORS ChangeLog HACKING NEWS README TODO
 MAN1=		mdb-ver.1 mdb-tables.1 mdb-schema.1 mdb-sql.1 mdb-export.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mlibgnomeui}!=""
