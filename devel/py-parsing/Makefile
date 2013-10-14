@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-parsing/Makefile 323263 2013-07-19 00:53:43Z wen $
+# $FreeBSD: devel/py-parsing/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	parsing
 PORTVERSION=	2.0.1
@@ -18,6 +18,7 @@ PYDISTUTILS_PKGNAME=	pyparsing
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
