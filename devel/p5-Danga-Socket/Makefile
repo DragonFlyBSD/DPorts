@@ -1,5 +1,5 @@
 # Created by: Jacques Marneweck <jacques@php.net>
-# $FreeBSD: devel/p5-Danga-Socket/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Danga-Socket/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Danga-Socket
 PORTVERSION=	1.61
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Danga::Socket.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
