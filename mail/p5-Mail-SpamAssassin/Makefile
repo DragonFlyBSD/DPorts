@@ -1,5 +1,5 @@
 # Created by: Anthony Kim
-# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 326056 2013-09-02 19:00:24Z az $
+# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 328912 2013-10-01 05:20:36Z beech $
 
 PORTNAME=	Mail-SpamAssassin
 PORTVERSION=	3.3.2
@@ -38,7 +38,7 @@ CONFIGURE_ARGS=	SYSCONFDIR="${PREFIX}/etc" \
 		LOCALSTATEDIR="${DBDIR}/spamassassin"
 
 OPTIONS_DEFINE=	AS_ROOT SPAMC SACOMPILE DKIM SSL GNUPG MYSQL PGSQL RAZOR \
-		SPF_QUERY RELAY_COUNTRY DCC
+		SPF_QUERY RELAY_COUNTRY DCC IPV6
 OPTIONS_DEFAULT=	AS_ROOT SPAMC DKIM SSL GNUPG RAZOR
 AS_ROOT_DESC=		Run spamd as root (recommended)
 SPAMC_DESC=		Build spamd/spamc (not for amavisd)
@@ -50,10 +50,12 @@ RAZOR_DESC=		Add Vipul's Razor support
 SPF_QUERY_DESC=		Add SPF query support
 RELAY_COUNTRY_DESC=	Relay country support
 DCC_DESC=		Add DCC support (see LICENSE)
+IPV6_DESC=		IPv6 sockets support
 
 SUB_FILES=	pkg-install
 SUB_LIST=	USER=${USERS} GROUP=${GROUPS} INSTALL="${INSTALL}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
