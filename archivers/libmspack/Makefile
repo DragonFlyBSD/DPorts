@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: ports/archivers/libmspack/Makefile,v 1.20 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/libmspack/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libmspack
 PORTVERSION=	0.3
@@ -15,8 +15,6 @@ LICENSE=	LGPL21
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's,$$(libdir)/pkgconfig,@prefix@/libdata/pkgconfig,g' ${WRKSRC}/Makefile.in
+USES=		pathfix
 
 .include <bsd.port.mk>
