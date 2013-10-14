@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: security/libksba/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/libksba/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libksba
 PORTVERSION=	1.3.0
@@ -27,4 +27,5 @@ INFO=		ksba
 verify: checksum
 	gpg --verify ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}.sig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
