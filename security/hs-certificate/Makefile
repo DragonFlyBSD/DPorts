@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-certificate/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-certificate/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	certificate
 PORTVERSION=	1.3.7
@@ -16,6 +16,7 @@ OPTIONS_DEFINE=		EXECUTABLE
 
 EXECUTABLE_DESC=	Build the executable
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MEXECUTABLE}
