@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/py-goocanvas/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: graphics/py-goocanvas/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/graphics/py-goocanvas/Makefile,v 1.6 2008/09/22 09:14:41 kwm Exp $
 
 PORTNAME=	goocanvas
@@ -26,6 +26,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs
 USES=		gmake pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(PYGOBJECT_PYGDOCS)/style.css||; \
 		s|demo docs|demo|' \
