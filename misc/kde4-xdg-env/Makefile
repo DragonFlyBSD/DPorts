@@ -1,4 +1,4 @@
-# $FreeBSD: ports/misc/kde4-xdg-env/Makefile,v 1.16 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kde4-xdg-env/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xdg
 PORTVERSION=	1.0.1
@@ -23,6 +23,7 @@ SUB_FILES=	xdg-env.sh
 PLIST_FILES=	env/xdg-env.sh
 PLIST_DIRSTRY=	env
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/env
 	${INSTALL_SCRIPT} ${WRKDIR}/xdg-env.sh ${PREFIX}/env
