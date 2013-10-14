@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Base/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Test-Base/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Base
 PORTVERSION=	0.60
@@ -23,4 +23,5 @@ MAN3=	Test::Base.3 \
 	Test::Base::Filter.3 \
 	Module::Install::TestBase.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
