@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-GUID/Makefile 326738 2013-09-08 14:56:37Z tobez $
+# $FreeBSD: devel/p5-Data-GUID/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-GUID
 PORTVERSION=	0.047
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::GUID.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
