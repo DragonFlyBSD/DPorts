@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: converters/recode/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: converters/recode/Makefile 328213 2013-09-24 22:53:40Z madpilot $
 
 PORTNAME=	recode
 PORTVERSION=	3.6
@@ -25,6 +25,7 @@ INFO=		recode
 
 post-extract: copy-po-files remove-info-files
 
+NO_STAGE=	yes
 copy-po-files:
 	@${CP} ${FILESDIR}/ru.po ${WRKSRC}/i18n
 
