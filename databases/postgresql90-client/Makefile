@@ -1,15 +1,10 @@
-# New ports collection makefile for:	PostgreSQL-client
-# Date created:				2009-07-08
-# Whom:					Palle Girgensohn <girgen@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/postgresql90-client/Makefile,v 1.10 2012/11/17 05:55:20 svnexp Exp $
-#
-# To depend on postgresql-client, set USE_PGSQL=yes.
-# See Mk/bsd.databases.mk for more info
+# Created by: Palle Girgensohn <girgen@FreeBSD.org>
+# $FreeBSD: databases/postgresql90-client/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
-PKGNAMESUFFIX=	-client
+PKGNAMESUFFIX?=	${DISTV:S/.//}-client
+DISTV=	${DISTVERSION:R}
 
 COMMENT=	PostgreSQL database (client)
 
@@ -20,6 +15,8 @@ BUILD_DIRS=	config src/include src/interfaces src/port \
 		doc src/makefiles
 INSTALL_DIRS=	${BUILD_DIRS}
 CLIENT_ONLY=	yes
+COMPONENT=	-client
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
