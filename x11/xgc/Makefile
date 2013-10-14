@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xgc/Makefile,v 1.7 2013/02/04 03:57:55 svnexp Exp $
+# $FreeBSD: x11/xgc/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xgc
 PORTVERSION=	1.0.4
@@ -14,4 +14,5 @@ USE_XORG=	xt xaw
 
 MAN1=		xgc.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
