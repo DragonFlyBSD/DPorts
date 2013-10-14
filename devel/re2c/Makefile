@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: devel/re2c/Makefile 326684 2013-09-07 20:42:39Z sunpoet $
+# $FreeBSD: devel/re2c/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	re2c
 PORTVERSION=	0.13.6
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/re2c
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
