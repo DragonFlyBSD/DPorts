@@ -1,5 +1,5 @@
 # Created by: max
-# $FreeBSD: japanese/p5-nkf/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/p5-nkf/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
@@ -24,4 +24,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/NKF.mod
 
 MAN3=		NKF.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
