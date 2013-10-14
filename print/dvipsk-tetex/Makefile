@@ -1,4 +1,4 @@
-# $FreeBSD: print/dvipsk-tetex/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/dvipsk-tetex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	dvipsk-tetex
 PORTVERSION=	5.95a
@@ -89,6 +89,7 @@ PKGINSTALL_SUB=	PAPERSIZE=${PAPERSIZE} \
 # dvipsk is not compatible with -funroll-loops on 5.x
 CFLAGS:=	${CFLAGS:N-funroll-loops}
 
+NO_STAGE=	yes
 pre-build:
 	${SED} ${PKGINSTALL_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} \
 		< ${FILESDIR}/pkg-install.in > ${PKGINSTALL}
