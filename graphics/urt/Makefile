@@ -1,5 +1,5 @@
 # Created by: cfs@ing.puc.cl (original)
-# $FreeBSD: graphics/urt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/urt/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	urt
 PORTVERSION=	3.1b1
@@ -58,6 +58,7 @@ MAN3=	buildmap.3 bwdithermap.3 colorquant.3 dither.3 ditherbw.3	\
 MAN5=	rle.5
 MLINKS=	rle.5 RLE.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
