@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/libpcap/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/libpcap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libpcap
 PORTVERSION=	1.4.0
@@ -114,6 +114,7 @@ DAG_DESC=	Support for Endace DAG hardware
 
 OPTIONS_DEFAULT=	IPV6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
