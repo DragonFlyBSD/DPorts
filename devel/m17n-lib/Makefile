@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/m17n-lib/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: devel/m17n-lib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	m17n-lib
 PORTVERSION=	1.6.4
@@ -36,6 +36,7 @@ ANTHY_DESC=	Kana-Kanji conversion support via Anthy
 ISPELL_DESC=	Spell checking support via Ispell
 THAI_DESC=	Thai language support via libThai
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANTHY}
