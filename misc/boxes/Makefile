@@ -1,5 +1,5 @@
 # Created by: Patrick Seal <patseal@hyperhost.net>
-# $FreeBSD: misc/boxes/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: misc/boxes/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	boxes
 PORTVERSION=	1.1.1
@@ -29,6 +29,7 @@ MAN1=		boxes.1
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
