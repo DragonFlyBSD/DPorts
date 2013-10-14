@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	libdbi
-# Date created:			Nov 4, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/databases/libdbi/Makefile,v 1.25 2012/11/17 05:55:09 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: databases/libdbi/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libdbi
 PORTVERSION=	0.8.4
@@ -18,6 +13,7 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|-O20|${CFLAGS}|g" -e "s|-std=gnu99||g" \
 		 ${WRKSRC}/configure
