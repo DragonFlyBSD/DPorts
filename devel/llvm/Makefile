@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/llvm/Makefile 327090 2013-09-12 17:02:54Z bapt $
+# $FreeBSD: devel/llvm/Makefile 329790 2013-10-08 14:54:40Z tijl $
 
 PORTNAME=	llvm
 PORTVERSION=	3.2
@@ -26,11 +26,6 @@ USES=		gmake perl5
 USE_LDCONFIG=	yes
 USE_PYTHON_BUILD=	yes
 
-_CCVERSION=	${CC} --version
-.if ${_CCVERSION:Mclang}
-USE_CXXSTD=	c++11
-.endif
-
 # Suggested tweaks from http://llvm.org/docs/Packaging.html
 CONFIGURE_ARGS+=	--enable-shared
 MAKE_ARGS+=		REQUIRES_RTTI=1
@@ -48,6 +43,7 @@ OPTIONS_DEFAULT=	MANPAGES
 
 PLIST_SUB+=		PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASSERTS}
