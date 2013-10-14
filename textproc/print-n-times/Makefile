@@ -1,7 +1,5 @@
-# New ports collection makefile for:	print-n-times
-# Date created:                		August 03 2004
-# Whom:                        		Aaron Straup Cope
-# $FreeBSD: ports/textproc/print-n-times/Makefile,v 1.5 2012/11/17 06:02:16 svnexp Exp $
+# Created by: Aaron Straup Cope
+# $FreeBSD: textproc/print-n-times/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	print-n-times
 PORTVERSION=	1.0
@@ -14,6 +12,7 @@ COMMENT=	Print a string (n) times
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} "Installing in ${PREFIX}/share/xsl/string/"
 	@${MKDIR} ${PREFIX}/share/xsl/string
