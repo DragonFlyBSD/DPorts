@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Notification
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Horde_Notification/Makefile,v 1.5 2012/12/12 15:19:48 svnexp Exp $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_Notification/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Notification
 PORTVERSION=	2.0.1
@@ -15,6 +12,7 @@ USE_HORDE_RUN=	Horde_Exception \
 		Horde_Util
 USE_PHP=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
