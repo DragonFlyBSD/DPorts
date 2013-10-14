@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Redis/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Redis
 PORTVERSION=	1.9610
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		Redis.3 Redis::Hash.3 Redis::List.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
