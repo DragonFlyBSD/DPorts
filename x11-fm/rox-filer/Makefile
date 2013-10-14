@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fm/rox-filer/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-fm/rox-filer/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	rox-filer
 PORTVERSION=	2.11
@@ -24,6 +24,7 @@ HAS_CONFIGURE=	yes
 
 MAN1=		rox.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ENV=		APP_DIR=${WRKSRC}/ROX-Filer
