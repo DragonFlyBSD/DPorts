@@ -1,5 +1,5 @@
 # Created by: fenner
-# $FreeBSD: textproc/gtk-doc/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: textproc/gtk-doc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 #    $MCom: ports/trunk/textproc/gtk-doc/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk-doc
@@ -37,6 +37,7 @@ PLIST_SUB=	XMLCATMGR=${XMLCATMGR} \
 		CATALOG_PORTS_SGML=${CATALOG_PORTS_SGML} \
 		CATALOG_DIR=${CATALOG_DIR}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${LOCALBASE}/bin/perl|g' \
 		${WRKSRC}/tests/tools.sh
