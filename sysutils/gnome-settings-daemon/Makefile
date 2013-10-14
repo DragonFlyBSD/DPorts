@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-settings-daemon/Makefile 326179 2013-09-03 17:09:34Z antoine $
+# $FreeBSD: sysutils/gnome-settings-daemon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.75 2011/04/25 19:56:57 mezz Exp $
 
 PORTNAME=	gnome-settings-daemon
@@ -43,6 +43,7 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_housekeeping.schemas \
 		desktop_gnome_peripherals_touchpad.schemas \
 		gnome-settings-daemon.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
