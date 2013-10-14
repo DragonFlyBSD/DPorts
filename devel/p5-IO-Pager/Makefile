@@ -1,8 +1,8 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-IO-Pager/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-IO-Pager/Makefile 327795 2013-09-21 07:41:30Z rafan $
 
 PORTNAME=	IO-Pager
-PORTVERSION=	0.24
+PORTVERSION=	0.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -18,5 +18,10 @@ MAN3=		IO::Pager::Buffered.3 \
 		IO::Pager::Page.3 \
 		IO::Pager::Unbuffered.3 \
 		IO::Pager.3
+
+NO_STAGE=	yes
+
+regression-test:
+	@cd ${WRKSRC} && ${MAKE} test
 
 .include <bsd.port.mk>
