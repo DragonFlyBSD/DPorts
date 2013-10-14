@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-grizzled
-# Date created:				29 March, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-grizzled/Makefile,v 1.3 2012/11/17 05:56:47 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: devel/py-grizzled/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	grizzled
 PORTVERSION=	0.9.4
@@ -17,4 +13,5 @@ COMMENT=	The Grizzled Python Utility Library
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
