@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-fcgi
-# Date created:		18 July 2002
-# Whom:			JunSeon Oh <hollywar@mail.holywar.net>
-#
-# $FreeBSD: ports/www/py-fcgi/Makefile,v 1.4 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: JunSeon Oh <hollywar@mail.holywar.net>
+# $FreeBSD: www/py-fcgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fcgi
 PORTVERSION=	0.1
@@ -21,6 +17,7 @@ COMMENT=	Python FastCGI interface library
 USE_PYTHON=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${INSTALL_DATA} ${DISTDIR}/fcgi.py ${WRKSRC}
 
