@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-keyczar/Makefile 319331 2013-05-29 00:36:46Z miwi $
+# $FreeBSD: security/py-keyczar/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	keyczar
 PORTVERSION=	0.71c
@@ -19,4 +19,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
