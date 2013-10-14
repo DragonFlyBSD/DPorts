@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simage
-# Date created:				10 May 2002
-# Whom:					roland.jesse@gmx.net
-#
-# $FreeBSD: graphics/simage/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: roland.jesse@gmx.net
+# $FreeBSD: graphics/simage/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	simage
 PORTVERSION=	1.7.0
@@ -29,4 +25,5 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
