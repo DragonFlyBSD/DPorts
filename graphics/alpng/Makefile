@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: graphics/alpng/Makefile 324131 2013-08-01 21:38:39Z bapt $
+# $FreeBSD: graphics/alpng/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	alpng
 PORTVERSION=	1.3
@@ -23,6 +23,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 PLIST_FILES=	include/alpng.h \
 		lib/libalpng.a
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} -e "s/gcc/${CC}/g" ${WRKSRC}/makefile
 
