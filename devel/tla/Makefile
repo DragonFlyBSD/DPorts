@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tla
-# Date created:				August 17th, 2003
-# Whom:					Sean Chittenden <seanc@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/tla/Makefile,v 1.21 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: Sean Chittenden <seanc@FreeBSD.org>
+# $FreeBSD: devel/tla/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tla
 PORTVERSION=	1.3.5
@@ -37,6 +33,7 @@ WRKSRC=		${ORIGWRKSRC}/=build
 PLIST=		${WRKDIR}/plist
 PLIST_FILES=	bin/tla bin/tla-gpg-check
 
+NO_STAGE=	yes
 pre-patch:
 	${MKDIR} ${WRKSRC}
 
