@@ -1,9 +1,5 @@
-# New ports collection makefile for:    buildtool
-# Date created:         Tue Aug 27 22:11:08 PDT 2002
-# Whom:                 Jos Backus <jos@catnook.com>
-#
-# $FreeBSD: ports/devel/buildtool/Makefile,v 1.21 2012/11/17 05:55:35 svnexp Exp $
-#
+# Created by: Jos Backus <jos@catnook.com>
+# $FreeBSD: devel/buildtool/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	buildtool
 PORTVERSION=	0.16
@@ -18,4 +14,5 @@ CONFIGURE_ARGS=	-p ${PREFIX} -d ${DOCSDIR}
 
 MAN1=		buildtool.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
