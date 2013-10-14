@@ -1,5 +1,4 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: net/mono-zeroconf/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/mono-zeroconf/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	mono-zeroconf
 PORTVERSION=	0.9.0
@@ -19,6 +18,7 @@ CONFIGURE_ARGS+=	--program-transform-name="" \
 			--disable-mdnsresponder
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 
