@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Getopt-Long-Descriptive/Makefile 326431 2013-09-05 18:13:46Z tobez $
+# $FreeBSD: devel/p5-Getopt-Long-Descriptive/Makefile 329417 2013-10-05 06:05:58Z sunpoet $
 
 PORTNAME=	Getopt-Long-Descriptive
-PORTVERSION=	0.094
+PORTVERSION=	0.096
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,13 +16,11 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Params-Validate>=0.97:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-Sub-Exporter>=0.972:${PORTSDIR}/devel/p5-Sub-Exporter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
+		p5-Test-Warnings>=0.005:${PORTSDIR}/devel/p5-Test-Warnings
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Getopt::Long::Descriptive.3 \
-		Getopt::Long::Descriptive::Opts.3 \
-		Getopt::Long::Descriptive::Usage.3
 
 .include <bsd.port.pre.mk>
 
