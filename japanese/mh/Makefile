@@ -1,5 +1,5 @@
 # Created by: Akito FUJITA <fujita@zoo.ncl.omron.co.jp>
-# $FreeBSD: japanese/mh/Makefile 325404 2013-08-26 17:14:16Z bapt $
+# $FreeBSD: japanese/mh/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	mh
 PORTVERSION=	${VERSION}.j${JP_VERSION}
@@ -42,6 +42,7 @@ READMES=	00.READ.ME.1ST CHANGES.JP COMMANDS.JP FAQ.JP FEATURES.JP \
 
 CONFLICTS=	nmh-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
