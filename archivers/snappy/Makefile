@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/archivers/snappy/Makefile,v 1.13 2013/02/20 22:18:58 svnexp Exp $
+# $FreeBSD: archivers/snappy/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	snappy
 PORTVERSION=	1.1.0
