@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-toolkits/vdk/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: x11-toolkits/vdk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	vdk
 PORTVERSION=	2.5.1
@@ -24,6 +24,7 @@ MAN1=		vdk-config-2.1
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
