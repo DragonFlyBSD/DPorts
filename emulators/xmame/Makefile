@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: emulators/xmame/Makefile 326336 2013-09-04 23:24:55Z bapt $
+# $FreeBSD: emulators/xmame/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME?=	xmame
 PORTVERSION?=	0.106
@@ -101,6 +101,7 @@ ALLDOCS=	${GENERALDOCS} ${XMESSDOCS}
 #
 # Various options are processed here.
 #
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
