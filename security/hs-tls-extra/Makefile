@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-tls-extra/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-tls-extra/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tls-extra
 PORTVERSION=	0.6.1
@@ -14,5 +14,6 @@ USE_CABAL=	certificate>=1.3.5 cipher-aes>=0.1 cipher-rc4 crypto-pubkey \
 		crypto-random-api cryptohash>=0.6 mtl network>=2.3 \
 		pem>=0.1.0 text>=0.5 tls>=1.1.0 vector
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
