@@ -1,5 +1,5 @@
 # Created by: ismail@enderunix.org
-# $FreeBSD: mail/eps/Makefile 323955 2013-07-30 12:18:53Z bapt $
+# $FreeBSD: mail/eps/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	eps
 PORTVERSION=	1.7
@@ -14,6 +14,7 @@ OPTIONS_DEFINE=	DOCS
 
 USE_CSTD=	gnu89
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
