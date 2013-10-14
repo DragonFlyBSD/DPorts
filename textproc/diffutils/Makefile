@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: textproc/diffutils/Makefile 317399 2013-05-05 07:20:28Z johans $
+# $FreeBSD: textproc/diffutils/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	diffutils
 PORTVERSION=	3.3
@@ -20,6 +20,7 @@ CONFIGURE_ARGS=	--program-prefix=g
 INFO=		diffutils
 MAN1=		gcmp.1 gdiff.1 gdiff3.1 gsdiff.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^mkdir/s:@mkdir_p@:${MKDIR}:' \
 		${WRKSRC}/po/Makefile.in.in
