@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: deskutils/p5-Data-ICal/Makefile 325038 2013-08-20 09:52:55Z mat $
+# $FreeBSD: deskutils/p5-Data-ICal/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	Data-ICal
 PORTVERSION=	0.21
@@ -41,6 +41,7 @@ MAN3=	Data::ICal.3 \
 	Data::ICal::Entry::Todo.3 \
 	Data::ICal::Property.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^auto_install/d' ${WRKSRC}/Makefile.PL
 
