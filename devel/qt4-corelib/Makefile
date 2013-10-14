@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-corelib/Makefile 326778 2013-09-09 01:01:18Z rakuco $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-corelib/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	corelib
 DISTVERSION=	${QT4_VERSION}
@@ -43,6 +43,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/qt4/files/Makefile.options"
 
 .if empty(QT4_OPTIONS:MCUPS)
