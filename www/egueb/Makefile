@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/egueb/Makefile 325737 2013-08-30 23:47:19Z bapt $
+# $FreeBSD: www/egueb/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	egueb
 PORTVERSION=	20121003
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS=	--disable-static
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|@LEX@|${LOCALBASE}/bin/flex|" \
 		${WRKSRC}/ecss/lib/Makefile.in
