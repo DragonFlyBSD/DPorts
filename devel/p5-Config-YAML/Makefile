@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Config-YAML
-# Date created:		2010-03-03
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: devel/p5-Config-YAML/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: devel/p5-Config-YAML/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-YAML
 PORTVERSION=	1.42
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Config::YAML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
