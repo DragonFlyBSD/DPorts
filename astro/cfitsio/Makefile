@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: astro/cfitsio/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: astro/cfitsio/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	cfitsio
 PORTVERSION=	3.330
@@ -20,6 +20,7 @@ LIB_DEPENDS=	f2c:${PORTSDIR}/lang/f2c
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 ALL_TARGET=	shared
 CONFIGURE_ARGS=	ac_cv_prog_FC="f2c"
 GNU_CONFIGURE=	yes
