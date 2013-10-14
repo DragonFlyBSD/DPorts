@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Hash::AsObject
 # Created by: ijliao
-# $FreeBSD: devel/p5-Hash-AsObject/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Hash-AsObject/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Hash-AsObject
 PORTVERSION=	0.13
@@ -17,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Hash::AsObject.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
