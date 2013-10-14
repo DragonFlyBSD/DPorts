@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: textproc/py-genshi/Makefile 319489 2013-05-31 12:36:02Z nivit $
+# $FreeBSD: textproc/py-genshi/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Genshi
 PORTVERSION=	0.7
@@ -26,6 +26,7 @@ USE_PYDISTUTILS=	easy_install
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBABEL}
