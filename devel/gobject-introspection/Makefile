@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/gobject-introspection/Makefile 324926 2013-08-18 15:37:57Z kwm $
+# $FreeBSD: devel/gobject-introspection/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/trunk/devel/gobject-introspection/Makefile 18652 2013-08-18 15:14:13Z kwm $
 
 PORTNAME=	gobject-introspection
@@ -32,6 +32,7 @@ MAKE_ENV=	HOME=${WRKDIR}
 
 MAN1=		g-ir-compiler.1 g-ir-generate.1 g-ir-scanner.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|'gcc'|'cc'|g' \
 		${WRKSRC}/giscanner/dumper.py
