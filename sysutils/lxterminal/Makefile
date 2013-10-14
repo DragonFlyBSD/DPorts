@@ -1,5 +1,5 @@
-# Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: sysutils/lxterminal/Makefile 326105 2013-09-02 22:11:23Z bapt $
+# Created by: Kris Moore <kmoore@FreeBSD.org>
+# $FreeBSD: sysutils/lxterminal/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	lxterminal
 PORTVERSION=	0.1.11
@@ -27,6 +27,7 @@ PORTDOCS=	AUTHORS README
 
 OPTIONS_DEFINE=	DOCS NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
