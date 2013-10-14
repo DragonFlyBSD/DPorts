@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/lfcbase/Makefile 325994 2013-09-02 13:45:06Z culot $
+# $FreeBSD: devel/lfcbase/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lfcbase
 PORTVERSION=	1.5.7
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf:env
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|-O3||g' ${WRKSRC}/src/Makefile.in
 
