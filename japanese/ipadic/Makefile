@@ -1,10 +1,5 @@
-# New ports collection makefile for:	ipadic
-# Date created:		23 Jul 2001
-# Whom:			kuriyama
-#
-# $NetBSD: Makefile,v 1.10 2001/04/13 14:54:07 kei Exp $
-# $FreeBSD: ports/japanese/ipadic/Makefile,v 1.15 2012/11/17 05:58:35 svnexp Exp $
-#
+# Created by: kuriyama
+# $FreeBSD: japanese/ipadic/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ipadic
 PORTVERSION=	2.7.0
@@ -22,6 +17,7 @@ CONFIGURE_ARGS=	--with-dicdir=${PREFIX}/share/chasen/dic
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/chasenrc \
 		${PREFIX}/share/chasen/dic/ipadic/chasenrc.example
