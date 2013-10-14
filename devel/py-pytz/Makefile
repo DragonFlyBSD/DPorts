@@ -1,5 +1,5 @@
 # Created by: Khairil Yusof <kaeru@inigo-tech.com>
-# $FreeBSD: devel/py-pytz/Makefile 326724 2013-09-08 12:44:08Z lwhsu $
+# $FreeBSD: devel/py-pytz/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pytz
 PORTVERSION=	2013d
@@ -14,6 +14,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
