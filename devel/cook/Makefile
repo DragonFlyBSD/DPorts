@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	cook
-# Date created:		31 January 2000
-# Whom:			jasone
-#
-# $FreeBSD: devel/cook/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: jasone
+# $FreeBSD: devel/cook/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cook
 PORTVERSION=	2.30
@@ -28,6 +24,7 @@ MANCOMPRESSED=	no
 USES=		gettext
 
 # Make sure that the whole directory tree exists.
+NO_STAGE=	yes
 pre-install:
 	${MKDIR} ${PREFIX}/share/cook/en/man1
 	${MKDIR} ${PREFIX}/lib/cook/en/LC_MESSAGES
