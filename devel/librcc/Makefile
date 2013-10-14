@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: devel/librcc/Makefile 326220 2013-09-03 19:45:46Z antoine $
+# $FreeBSD: devel/librcc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	librcc
 PORTVERSION=	0.2.9
@@ -37,6 +37,7 @@ TOOLS_DESC=	Recode configuration utility
 
 OPTIONS_DEFAULT=	TOOLS GTK1 GTK2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBDB}
