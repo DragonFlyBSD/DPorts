@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-RDF-Core/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-RDF-Core/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	RDF-Core
 PORTVERSION=	0.51
@@ -34,6 +34,7 @@ MAN3=		RDF::Core.3 RDF::Core::Constants.3 RDF::Core::Enumerator.3 \
 DOCSUBDIR=	/ RDF RDF/Core RDF/Core/Enumerator RDF/Core/Model \
 		RDF/Core/Storage
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
