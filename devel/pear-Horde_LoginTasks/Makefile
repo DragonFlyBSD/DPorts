@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_LoginTasks
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Horde_LoginTasks/Makefile,v 1.8 2013/01/10 10:41:44 svnexp Exp $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_LoginTasks/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_LoginTasks
 PORTVERSION=	2.0.2
@@ -13,6 +10,7 @@ COMMENT=	Horde Login Tasks System
 
 USE_HORDE_RUN=	Horde_Translation
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
