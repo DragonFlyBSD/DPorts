@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-HTTP-Async/Makefile 327042 2013-09-12 08:50:03Z tobez $
+# $FreeBSD: www/p5-HTTP-Async/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Async
 PORTVERSION=	0.22
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		HTTP::Async.3 HTTP::Async::Polite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
