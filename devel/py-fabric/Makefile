@@ -1,8 +1,8 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-fabric/Makefile 326482 2013-09-06 09:31:00Z koobs $
+# $FreeBSD: devel/py-fabric/Makefile 329030 2013-10-02 10:07:31Z koobs $
 
 PORTNAME=	fabric
-PORTVERSION=	1.7.0
+PORTVERSION=	1.8.0
 PORTEPOCH=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install nose for test suite
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
