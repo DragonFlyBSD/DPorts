@@ -1,5 +1,5 @@
 # Created by: Laurent Courty
-# $FreeBSD: astro/gpsbabel/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: astro/gpsbabel/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	gpsbabel
 PORTVERSION=	1.4.4
@@ -12,6 +12,7 @@ COMMENT=	GPS file translating tool
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-expathdr=${LOCALBASE}/include \
