@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/okular/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/okular/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	okular
 PORTVERSION=	${KDE4_VERSION}
@@ -34,6 +34,7 @@ MAN1=		okular.1
 OPTIONS_DEFINE=	DVI
 DVI_DESC=	Support DVI files (requires teTeX)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVI}
