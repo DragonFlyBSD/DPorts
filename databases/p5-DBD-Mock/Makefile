@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: databases/p5-DBD-Mock/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/p5-DBD-Mock/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBD-Mock
 PORTVERSION=	1.45
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		DBD::Mock.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
