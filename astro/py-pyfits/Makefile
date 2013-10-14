@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pyfits
-# Date created:		2008-10-28
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/astro/py-pyfits/Makefile,v 1.4 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: astro/py-pyfits/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	pyfits
 PORTVERSION=	2.3
@@ -16,6 +12,7 @@ COMMENT=	Python Interface to FITS Formatted Files
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/numpy/core/numeric.py:${PORTSDIR}/math/py-numpy
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+NO_STAGE=	yes
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
