@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-ucs
-# Date created:		23 May 2004
-# Whom:			thierry@FreeBSD.org
-#
-# $FreeBSD: print/latex-ucs/Makefile 326272 2013-09-04 13:07:40Z az $
+# Created by: thierry@FreeBSD.org
+# $FreeBSD: print/latex-ucs/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-ucs
 PORTVERSION=	20041017
@@ -41,6 +38,7 @@ CONTRIB_FILES= UnicodeT.sfd autofe.sty c00enc.def c10enc.def		\
 	mkrhadas.fd mkromega.fd mkrrashi.fd t2dcmr.fd t2denc.def	\
 	tengwarDS.enc xscmr.fd xsenc.def
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${PLSCRIPTS:S@^@${WRKSRC}/@} ${PREFIX}/bin
 	${MKDIR} ${PREFIX}/${CLASSDIR}
