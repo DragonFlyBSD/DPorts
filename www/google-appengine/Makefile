@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/google-appengine/Makefile 323081 2013-07-15 21:22:15Z nivit $
+# $FreeBSD: www/google-appengine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	google-appengine
 PORTVERSION=	1.8.1
@@ -27,6 +27,7 @@ USES=		gettext
 OPTIONS_DEFINE=	EXAMPLES MYSQL
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 WRKSRC=	${WRKDIR}/${PORTNAME:S,-,_,}
