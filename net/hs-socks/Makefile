@@ -1,4 +1,4 @@
-# $FreeBSD: net/hs-socks/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: net/hs-socks/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	socks
 PORTVERSION=	0.5.1
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	cereal>=0.3.1 network>=2.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
