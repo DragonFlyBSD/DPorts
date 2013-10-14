@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-tweepy/Makefile 321437 2013-06-21 03:24:55Z clsung $
+# $FreeBSD: net/py-tweepy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tweepy
 PORTVERSION=	2.0
@@ -15,4 +15,5 @@ LICENSE=	MIT
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
