@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Array-Group/Makefile 325048 2013-08-20 13:41:04Z mat $
+# $FreeBSD: devel/p5-Array-Group/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Array-Group
 PORTVERSION=	3.0
@@ -18,4 +18,5 @@ MAN3=		Array::Group.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
