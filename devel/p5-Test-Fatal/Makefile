@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Fatal/Makefile 327470 2013-09-17 12:24:54Z culot $
+# $FreeBSD: devel/p5-Test-Fatal/Makefile 328100 2013-09-24 07:58:22Z culot $
 
 PORTNAME=	Test-Fatal
-PORTVERSION=	0.011
+PORTVERSION=	0.013
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,7 +19,5 @@ TEST_DEPENDS=	p5-Capture-Tiny>0:${PORTSDIR}/devel/p5-Capture-Tiny
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Test::Fatal.3
 
 .include <bsd.port.mk>
