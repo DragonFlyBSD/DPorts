@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-openid
-# Date created:				Dec 19, 2006
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/security/py-openid/Makefile,v 1.8 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: security/py-openid/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openid
 PORTVERSION=	2.2.5
@@ -20,4 +16,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	python-openid
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
