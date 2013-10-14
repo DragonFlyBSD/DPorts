@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libstrfunc
-# Date created:				2001-07-19
-# Whom:					Lev Walkin <vlm@lionet.info>
-#
-# $FreeBSD: ports/devel/libstrfunc/Makefile,v 1.16 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: Lev Walkin <vlm@lionet.info>
+# $FreeBSD: devel/libstrfunc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libstrfunc
 PORTVERSION=	8.3
@@ -41,4 +37,5 @@ MAN3=	\
 	countstr.3 replace.3 replace_detach.3 limittextwidth.3 strndup.3 \
 	sf_strdup.3 sf_malloc.3 sf_calloc.3 sf_realloc.3 strfunc_ctl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
