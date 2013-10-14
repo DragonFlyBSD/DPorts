@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/preferencepanes/Makefile,v 1.11 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/preferencepanes/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	preferencepanes
 PORTVERSION=	1.1.0
@@ -23,4 +23,5 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/PreferencePanes
 
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
