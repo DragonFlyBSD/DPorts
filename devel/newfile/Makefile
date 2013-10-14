@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: devel/newfile/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: devel/newfile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	newfile
 PORTVERSION=	1.0.14
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 MAN1=		newfile.1
 PORTDOCS=	newfile.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
