@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: archivers/nwreckdum/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: archivers/nwreckdum/Makefile 328246 2013-09-25 03:26:07Z vanilla $
 
 PORTNAME=	nwreckdum
 PORTVERSION=	0.0.6
@@ -19,6 +19,6 @@ GH_COMMIT=	22cbc47
 PLIST_FILES=	bin/${PORTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
