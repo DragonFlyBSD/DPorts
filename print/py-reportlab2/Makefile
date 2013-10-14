@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: print/py-reportlab2/Makefile 314921 2013-03-22 12:40:32Z bapt $
+# $FreeBSD: print/py-reportlab2/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	reportlab2
 PORTVERSION=	2.5
@@ -38,6 +38,7 @@ DOCS=		reportlab-graphics-reference.pdf \
 		reportlab-reference.pdf \
 		reportlab-userguide.pdf
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/ports/distfiles|${DISTDIR}|g' ${WRKSRC}/setup.py
 	@${REINPLACE_CMD} -e 's|pfbfer.zip|pfbfer-${PFBFER_VERSION}.zip|g' ${WRKSRC}/setup.py
