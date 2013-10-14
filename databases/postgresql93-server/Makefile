@@ -1,13 +1,10 @@
-# New ports collection makefile for:	PostgreSQL
-# Date created:		November 13, 1998
-# Whom:			Marc G. Fournier <scrappy@FreeBSD.org>
-#
-# $FreeBSD: databases/postgresql93-server/Makefile 327537 2013-09-18 08:56:50Z girgen $
-#
+# Created by: Marc G. Fournier <scrappy@FreeBSD.org>
+# $FreeBSD: databases/postgresql93-server/Makefile 330109 2013-10-12 00:59:50Z girgen $
 
-DISTVERSION?=	9.3.0
-PORTREVISION?=	1
-PKGNAMESUFFIX?=	-server
+DISTVERSION?=	9.3.1
+PORTREVISION?=	0
+PKGNAMESUFFIX?=	${DISTV:S/.//}-server
+DISTV=	${DISTVERSION:R}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 
@@ -32,4 +29,5 @@ INSTALL_DIRS?=	src/common src/timezone src/backend \
 		src/bin/pg_controldata src/bin/pg_resetxlog src/pl \
 		src/bin/pg_basebackup
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../postgresql92-server/Makefile"
