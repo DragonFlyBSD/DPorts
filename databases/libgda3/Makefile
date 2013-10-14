@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libgda2
-# Date created:				02 June 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: databases/libgda3/Makefile 326036 2013-09-02 17:07:10Z antoine $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: databases/libgda3/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/databases/libgda3/Makefile,v 1.11 2008/03/01 02:35:38 mezz Exp $
-#
 
 PORTNAME=	libgda3
 PORTVERSION?=	3.0.4
@@ -36,6 +32,7 @@ CONFIGURE_ARGS=	--without-bdb --without-sybase
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
 CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${LIBGDA3_SLAVE}=="no"
