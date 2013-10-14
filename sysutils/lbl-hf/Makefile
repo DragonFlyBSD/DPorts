@@ -1,17 +1,11 @@
-# @(#) $Id: Makefile,v 1.3 2008/04/26 04:19:19 leres Exp $ (LBL)
-# New ports collection makefile for: lbl-hf
-# Date created:	24 Apr 2008
-# Whom:		leres@ee.lbl.gov
-# $FreeBSD: ports/sysutils/lbl-hf/Makefile,v 1.6 2012/11/17 06:01:36 svnexp Exp $
-#
+# Created by: Craig Leres <leres@ee.lbl.gov>
+# $FreeBSD: sysutils/lbl-hf/Makefile 327808 2013-09-21 11:20:53Z bdrewery $
 
 PORTNAME=	hf
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ee.lbl.gov/ \
-		ftp://ftp.tux.org/sites/ftp.ee.lbl.gov/ \
-		ftp://ftp.xemacs.org/sites/ftp.ee.lbl.gov/ \
-		http://ftp.riken.go.jp/pub/net/lbl/
+		ftp://ftp4.uk.freebsd.org/pub/FreeBSD/
 PKGNAMEPREFIX=	lbl-
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}.asc
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -33,6 +27,7 @@ verify: checksum
 	gpg --verify ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}.asc
 
 # Only install hf
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hf ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/hf.1 ${PREFIX}/man/man1
