@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/audio/festlex-poslex/Makefile,v 1.20 2013/01/27 06:41:36 svnexp Exp $
+# $FreeBSD: audio/festlex-poslex/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festlex-poslex
 PORTVERSION=	1.4.1
@@ -15,6 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	English lexicon for Festival
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 FHOME=		${PREFIX}/share/festival
 
 do-install:
