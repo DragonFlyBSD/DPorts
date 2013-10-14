@@ -1,5 +1,5 @@
 # Created by: Oleg Ukraincev <oleg@ht-systems.ru>
-# $FreeBSD: devel/py-polib/Makefile 324903 2013-08-18 12:57:40Z wg $
+# $FreeBSD: devel/py-polib/Makefile 328313 2013-09-25 20:19:42Z wg $
 
 PORTNAME=	polib
 PORTVERSION=	1.0.3
