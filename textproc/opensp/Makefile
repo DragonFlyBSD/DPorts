@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: textproc/opensp/Makefile 317494 2013-05-06 09:26:23Z bapt $
+# $FreeBSD: textproc/opensp/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	OpenSP
 PORTVERSION=	1.5.2
@@ -10,17 +10,16 @@ MASTER_SITES=	SF/openjade/${PORTNAME:tl}/${PORTVERSION}
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	This package is a collection of SGML/XML tools called OpenSP
 
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		iconv
+USES=		gmake iconv perl5
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-default-catalog=${PREFIX}/share/sgml/catalog \
 		--datadir=${PREFIX}/share/sgml/openjade \
 		--disable-doc-build
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
