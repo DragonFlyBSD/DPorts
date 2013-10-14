@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/nepomuk-widgets/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/nepomuk-widgets/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	nepomuk-widgets
 PORTVERSION=	${KDE4_VERSION}
@@ -16,4 +16,5 @@ USE_QT4=	corelib dbus gui moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
