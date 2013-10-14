@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/p5-Sys-User-UIDhelper
-# Date created:		2009-10-31
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: sysutils/p5-Sys-User-UIDhelper/Makefile 326574 2013-09-07 07:11:48Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: sysutils/p5-Sys-User-UIDhelper/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-User-UIDhelper
 PORTVERSION=	0.0.1
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Sys::User::UIDhelper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
