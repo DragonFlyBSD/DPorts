@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: devel/p5-ReadLine-Perl/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-ReadLine-Perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ReadLine-Perl
 PORTVERSION=	1.0303
@@ -16,4 +16,5 @@ COMMENT=	Perl 5 module for Term::ReadLine editing without GNU readline
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
