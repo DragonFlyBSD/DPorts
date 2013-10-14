@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/libboard/Makefile 315161 2013-03-24 20:50:56Z thierry $
+# $FreeBSD: graphics/libboard/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=		libboard
 DISTVERSION=		0.9.0
@@ -25,6 +25,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/-.$//}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != i386
