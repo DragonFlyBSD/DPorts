@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: dns/py-dnspython/Makefile 323227 2013-07-18 12:24:09Z rm $
+# $FreeBSD: dns/py-dnspython/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnspython
 PORTVERSION=	1.11.0
@@ -27,6 +27,7 @@ EXAMPLE_FILES=	ddns.py e164.py mx.py name.py reverse.py reverse_name.py \
 		xfr.py zonediff.py
 EXAMPLESDIR=	${PREFIX}/share/examples/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_MAJOR_VER} < 3
