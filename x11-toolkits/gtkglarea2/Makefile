@@ -1,5 +1,5 @@
 # Created by: Marc Recht <marc@informatik.uni-bremen.de>
-# $FreeBSD: x11-toolkits/gtkglarea2/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: x11-toolkits/gtkglarea2/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #    $MCom: ports/x11-toolkits/gtkglarea2/Makefile,v 1.2 2006/09/10 00:51:17 mezz Exp $
 
 PORTNAME=	gtkglarea
@@ -22,4 +22,5 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-lib-GL
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
