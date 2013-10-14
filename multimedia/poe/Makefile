@@ -1,4 +1,4 @@
-# $FreeBSD: ports/multimedia/poe/Makefile,v 1.16 2012/11/17 05:59:53 svnexp Exp $
+# $FreeBSD: multimedia/poe/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	poe
 PORTVERSION=	0.5.1
@@ -21,6 +21,7 @@ USE_GNUSTEP_INSTALL=	yes
 
 PORTSCOUT=	skipv:0.5.2
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|-lvorbisfile$$|-lvorbisfile -logg|' \
 		${WRKSRC}/GNUmakefile
