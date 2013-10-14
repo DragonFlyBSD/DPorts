@@ -1,5 +1,5 @@
 # Created by: Anders F Bjorklund <afb@rpm5.org>
-# $FreeBSD: devel/py-yum-metadata-parser/Makefile 325990 2013-09-02 13:16:00Z bapt $
+# $FreeBSD: devel/py-yum-metadata-parser/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	yum-metadata-parser
 PORTVERSION=	1.1.4
@@ -18,4 +18,5 @@ USES=		pkgconfig
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
