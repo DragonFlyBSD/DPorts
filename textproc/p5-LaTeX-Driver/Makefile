@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-LaTeX-Driver/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-LaTeX-Driver/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	LaTeX-Driver
 PORTVERSION=	0.12
@@ -24,6 +24,7 @@ MAN3=	LaTeX::Driver.3 \
 	LaTeX::Driver::Paths.3 \
 	LaTeX::Driver::FilterProgram.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 post-extract:
 	@${REINPLACE_CMD} -e 's#<STDIN>#"\r"#g' ${WRKSRC}/Makefile.PL
