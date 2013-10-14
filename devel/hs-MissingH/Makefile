@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-MissingH/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-MissingH/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	MissingH
 PORTVERSION=	1.2.0.0
@@ -13,5 +13,6 @@ LICENSE=	BSD
 
 USE_CABAL=	hslogger HUnit mtl network parsec random regex-compat
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
