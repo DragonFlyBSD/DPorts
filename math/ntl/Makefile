@@ -1,5 +1,5 @@
 # Created by: bauerm
-# $FreeBSD: math/ntl/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/ntl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ntl
 PORTVERSION=	6.0.0
@@ -30,6 +30,7 @@ CFLAGS+=	-fPIC
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 MAKEFILE=	makefile
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/include/NTL
 	${INSTALL_DATA} ${WRKSRC}/../include/NTL/*  ${PREFIX}/include/NTL/
