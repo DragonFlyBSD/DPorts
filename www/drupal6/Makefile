@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6/Makefile 320363 2013-06-09 17:44:17Z miwi $
+# $FreeBSD: www/drupal6/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	drupal6
 PORTVERSION=	6.28
@@ -29,6 +29,7 @@ DOCS=		CHANGELOG.txt INSTALL.txt LICENSE.txt MAINTAINERS.txt \
 SUB_FILES+=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
