@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net/Sockets/Makefile 324934 2013-08-18 20:35:21Z rakuco $
+# $FreeBSD: net/Sockets/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Sockets
 PORTVERSION=	2.3.9.9
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 ALL_TARGET=	all shared
 INSTALL_TARGET=	install_shared
 
+NO_STAGE=	yes
 post-patch:
 # PREFIX safeness
 	@${CP} ${PATCHDIR}/Makefile.Defines.freebsd ${WRKSRC}
