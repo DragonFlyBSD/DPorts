@@ -1,9 +1,5 @@
-# New ports collection makefile for:	PARI
-# Date created:		19 January 1999
-# Whom:	Yoshiaki UCHIKAWA <yoshiaki@kt.rim.or.jp>
-#
-# $FreeBSD: ports/math/pari/Makefile,v 1.57 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Yoshiaki UCHIKAWA <yoshiaki@kt.rim.or.jp>
+# $FreeBSD: math/pari/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	pari
 PORTVERSION=	2.3.5
@@ -35,6 +31,7 @@ PLIST_SUB=	GP_VERSION=${GP_VERSION} PORTVERSION=${PORTVERSION}
 
 GP_VERSION=	${PORTVERSION:R}
 
+NO_STAGE=	yes
 post-install:
 	@if [ -L ${MAN1PREFIX}/man/man1/pari.1 ]; then \
 		${RM} -f ${MAN1PREFIX}/man/man1/pari.1 ;\
