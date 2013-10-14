@@ -1,9 +1,5 @@
-# New ports collection makefile for:	skalibs
-# Date created:		2003-06-25
-# Whom:			Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: ports/devel/skalibs/Makefile,v 1.16 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: devel/skalibs/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	skalibs
 PORTVERSION=	0.47
@@ -22,6 +18,7 @@ WRKSRC=		${WRKDIR}/prog/${DISTNAME}
 
 DOCS=		package/CHANGES package/README package/THANKS doc/*.html
 
+NO_STAGE=	yes
 do-configure:
 	${ECHO_CMD} "${CC} ${CFLAGS}"	> ${WRKSRC}/conf-compile/conf-cc
 	${ECHO_CMD} "${CC} ${LDFLAGS}"	> ${WRKSRC}/conf-compile/conf-ld
