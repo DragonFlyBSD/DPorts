@@ -1,9 +1,5 @@
-# New ports collection makefile for:   shorten
-# Date created:        17 Feb 1999
-# Whom:                Stefan Zehl <sec@42.org>
-#
-# $FreeBSD: ports/audio/shorten/Makefile,v 1.17 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: Stefan Zehl <sec@42.org>
+# $FreeBSD: audio/shorten/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	shorten
 PORTVERSION=	3.6.1
@@ -16,6 +12,7 @@ COMMENT=	Fast and optionally lossless compression for waveform files
 RESTRICTED=	May not be sold, may not be used commercially.
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 MAN1=		shorten.1
 PLIST_FILES=	bin/shorten
