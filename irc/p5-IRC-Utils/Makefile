@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: irc/p5-IRC-Utils/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/p5-IRC-Utils/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	IRC-Utils
 PORTVERSION=	0.12
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		IRC::Utils.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
