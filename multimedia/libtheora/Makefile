@@ -1,9 +1,5 @@
-# New ports collection makefile for:	theora
-# Date created:				09 februari 2003
-# Whom:					Koop Mast <kwm@rainbow-runner.nl>
-#
-# $FreeBSD: multimedia/libtheora/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Koop Mast <kwm@rainbow-runner.nl>
+# $FreeBSD: multimedia/libtheora/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libtheora
 PORTVERSION=	1.1.1
@@ -15,7 +11,7 @@ MASTER_SITES=	http://downloads.xiph.org/releases/theora/ \
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Theora video codec for the Ogg multimedia streaming system
 
-LIB_DEPENDS=	vorbis.4:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
