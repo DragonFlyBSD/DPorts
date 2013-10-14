@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tex-kpathsea/Makefile 318747 2013-05-22 08:26:53Z hrs $
+# $FreeBSD: devel/tex-kpathsea/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	kpathsea
 PORTVERSION=	6.1.0
@@ -26,4 +26,5 @@ INFO=	kpathsea
 MAN1=	kpseaccess.1 kpsereadlink.1 kpsestat.1 kpsewhich.1 mktexlsr.1 \
 	mktexmf.1 mktexpk.1 mktextfm.1 texhash.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
