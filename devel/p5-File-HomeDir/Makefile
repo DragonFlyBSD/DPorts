@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-File-HomeDir/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-HomeDir/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-HomeDir
 PORTVERSION=	1.00
@@ -30,4 +30,5 @@ MAN3=		File::HomeDir.3 \
 		File::HomeDir::Unix.3 \
 		File::HomeDir::Windows.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
