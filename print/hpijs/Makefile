@@ -1,4 +1,4 @@
-# $FreeBSD: print/hpijs/Makefile 324279 2013-08-05 16:03:36Z az $
+# $FreeBSD: print/hpijs/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	hpijs
 PORTVERSION=	2.1.4
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	CUPS DOCS FOOMATIC
 OPTIONS_DEFAULT=	CUPS FOOMATIC
 FOOMATIC_DESC=	Install foomatic-rip and PPD files
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS} || ${PORT_OPTIONS:MFOOMATIC}
