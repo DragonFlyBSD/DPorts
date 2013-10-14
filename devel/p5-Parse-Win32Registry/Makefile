@@ -1,5 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: devel/p5-Parse-Win32Registry/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-Parse-Win32Registry/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Parse-Win32Registry
 PORTVERSION=	1.0
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Parse::Win32Registry.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
