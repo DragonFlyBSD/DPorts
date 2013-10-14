@@ -1,5 +1,5 @@
 # Created by: Parv <parv@pair.org>
-# $FreeBSD: devel/p5-Data-Swap/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: devel/p5-Data-Swap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Swap
 PORTVERSION=	0.08
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::Swap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
