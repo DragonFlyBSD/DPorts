@@ -1,5 +1,5 @@
-# Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: x11/lxmenu-data/Makefile 321470 2013-06-21 13:20:24Z wg $
+# Created by: Kris Moore <kmoore@FreeBSD.org>
+# $FreeBSD: x11/lxmenu-data/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	lxmenu-data
 PORTVERSION=	0.1.2
@@ -26,6 +26,7 @@ PORTDOCS=	AUTHORS README TODO
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
