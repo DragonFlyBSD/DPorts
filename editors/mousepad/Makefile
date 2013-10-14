@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: editors/mousepad/Makefile 327459 2013-09-17 09:00:42Z bapt $
+# $FreeBSD: editors/mousepad/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	mousepad
 PORTVERSION=	0.3.0
@@ -20,6 +20,7 @@ USE_XFCE=	configenv
 OPTIONS_DEFINE=	DBUS
 OPTIONS_DEFAULT=	DBUS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBUS}
