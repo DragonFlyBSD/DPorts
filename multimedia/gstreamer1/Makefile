@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1/Makefile 325825 2013-08-31 18:29:55Z kwm $
+# $FreeBSD: multimedia/gstreamer1/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.5 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1
@@ -41,6 +41,7 @@ MAN1=	gst-inspect-${GST10_VERSION}.1 gst-launch-${GST10_VERSION}.1 \
 OPTIONS_DEFINE=	LIBCHECK
 LIBCHECK_DESC=	Unit tests support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} < 1000033
