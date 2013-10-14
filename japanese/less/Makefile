@@ -1,5 +1,5 @@
 # Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-# $FreeBSD: japanese/less/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: japanese/less/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	less
 PORTVERSION=	382.262
@@ -37,6 +37,7 @@ MAN1=		jless.1 jlesskey.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
