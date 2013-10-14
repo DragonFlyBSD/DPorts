@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/ocaml-cfg/Makefile 309286 2012-12-20 05:45:04Z araujo $
+# $FreeBSD: devel/ocaml-cfg/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	cfg
 PORTVERSION=	2.0.1
@@ -31,6 +31,7 @@ EXAMPLESDIR=	${OCAML_EXAMPLESDIR}/${PORTNAME}
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
