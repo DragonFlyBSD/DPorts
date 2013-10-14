@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/synfig/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/synfig/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	synfig
 DISTVERSION=	0.63.05
@@ -30,6 +30,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 ALL_TARGET=	-j`${SYSCTL} -n hw.ncpu`
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/optimization_flags/s|CXXFLAGS=|#CXXFLAGS=| ; \
 		 /optimization_flags/s|CFLAGS=|#CFLAGS=|' -e \
