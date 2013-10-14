@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	PyXML
-# Date created:				04/17/1999
-# Whom:					nectar@FreeBSD.org
-#
-# $FreeBSD: ports/textproc/py-xml/Makefile,v 1.33 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: nectar@FreeBSD.org
+# $FreeBSD: textproc/py-xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		xml
 PORTVERSION=		0.8.4
@@ -20,6 +16,7 @@ USE_PYTHON=		2.1+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyXML
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CPIOARGS=		--quiet -pdum -R
