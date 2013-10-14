@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-recaptcha
-# Date created:				20 Mar 2009
-# Whom:					Philip Paeps <philip@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-recaptcha/Makefile,v 1.3 2012/11/17 06:03:01 svnexp Exp $
+# Created by: Philip Paeps <philip@FreeBSD.org>
+# $FreeBSD: www/py-recaptcha/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	recaptcha
 PORTVERSION=	1.0.5
@@ -22,4 +19,5 @@ PYDISTUTILS_NOEGGINFO=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py${PYTHON_VER}.egg
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
