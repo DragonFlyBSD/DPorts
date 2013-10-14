@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Tools/Makefile 326271 2013-09-04 12:28:16Z az $
+# $FreeBSD: mail/p5-Mail-Tools/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Tools
 PORTVERSION=	2.12
@@ -30,4 +30,5 @@ MAN3=		Mail::Address.3 \
 		Mail::Send.3 \
 		Mail::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
