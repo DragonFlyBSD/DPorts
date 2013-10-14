@@ -1,5 +1,5 @@
 # Created by: Hardy Schumacher <hardy.schumacher@gmx.de>
-# $FreeBSD: devel/z80ex/Makefile 315880 2013-04-16 18:30:10Z madpilot $
+# $FreeBSD: devel/z80ex/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	z80ex
 PORTVERSION=	1.1.20.1
@@ -13,6 +13,7 @@ COMMENT=	ZiLOG Z80 CPU emulator library
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/$$(TOOLS_PREFIX)gcc/$${CC}/' \
 		-e 's/$$(TOOLS_PREFIX)ar/$${AR}/' \
