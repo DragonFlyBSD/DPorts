@@ -1,9 +1,5 @@
-# New ports collection makefile for:   whirlgif
-# Date created:         20 Oct 1996
-# Whom:                 Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/graphics/whirlgif/Makefile,v 1.11 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: graphics/whirlgif/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	whirlgif
 PORTVERSION=	3.04
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}/whirlgif-3.04.orig
 MAN1=		whirlgif.1
 PLIST_FILES=	bin/whirlgif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/whirlgif ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/whirlgif.1 ${PREFIX}/man/man1
