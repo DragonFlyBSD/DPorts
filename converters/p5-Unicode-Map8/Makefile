@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Unicode-Map8
-# Date created:				20 September 2000
-# Whom:					Ilia Chipitsine <ilia@jane.cgu.chel.su>
-#
-# $FreeBSD: converters/p5-Unicode-Map8/Makefile 324171 2013-08-02 18:21:05Z az $
+# Created by: Ilia Chipitsine <ilia@jane.cgu.chel.su>
+# $FreeBSD: converters/p5-Unicode-Map8/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-Map8
 PORTVERSION=	0.13
@@ -22,4 +19,5 @@ USE_PERL5=	configure
 MAN1=		umap.1
 MAN3=		Unicode::Map8.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
