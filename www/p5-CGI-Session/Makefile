@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-Session
-# Date created:				12 June 2002
-# Whom:					Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: www/p5-CGI-Session/Makefile 326003 2013-09-02 15:12:10Z az $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: www/p5-CGI-Session/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Session
 PORTVERSION=	4.48
@@ -37,4 +33,5 @@ MAN3=		\
 		CGI::Session::Test::Default.3 \
 		CGI::Session::Tutorial.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
