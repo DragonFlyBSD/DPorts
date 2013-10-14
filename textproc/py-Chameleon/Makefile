@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/py-Chameleon/Makefile 321942 2013-06-28 04:21:24Z clsung $
+# $FreeBSD: textproc/py-Chameleon/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Chameleon
 DISTVERSION=	2.11
@@ -13,4 +13,5 @@ COMMENT=	A Python HTML/XML template language compiler
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
