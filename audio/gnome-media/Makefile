@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/gnome-media/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: audio/gnome-media/Makefile 327706 2013-09-20 14:36:35Z bapt $
 #   $MCom: ports/audio/gnome-media/Makefile,v 1.164 2012/09/01 23:02:08 mezz Exp $
 
 PORTNAME=	gnome-media
@@ -19,6 +19,7 @@ LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
 CONFLICTS=	gnome-control-center-3.[0-9]* libgnome-media-profiles-3.[0-9]*
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
