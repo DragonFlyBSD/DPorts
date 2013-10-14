@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc46/Makefile 327052 2013-09-12 10:20:45Z marino $
+# $FreeBSD: lang/gcc46/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	4.6.4
@@ -30,10 +30,11 @@ GCC_VERSION=	${PORTVERSION:C/(.+)\.[0-9]{8}/\1/}
 SUFFIX=		${PORTVERSION:C/([0-9]+).([0-9]+).*/\1\2/}
 LATEST_LINK=	gcc${SUFFIX}${PKGNAMESUFFIX}
 ONLY_FOR_ARCHS=	amd64 i386 ia64 powerpc sparc64
-USES=		bison gmake iconv
+USES=		bison gmake iconv perl5
 USE_BINUTILS=	yes
 USE_BZIP2=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
+SSP_UNSAFE=	yes
 
 PATCH_WRKSRC=	${SRCDIR}
 CONFIGURE_SCRIPT=	../${SRCDIR:S/${WRKDIR}\///}/configure
@@ -45,6 +46,7 @@ OPTIONS_DEFAULT_i386=	JAVA
 OPTIONS_DEFAULT_x86_64=	JAVA
 BOOTSTRAP_DESC=		Build using a full bootstrap
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
