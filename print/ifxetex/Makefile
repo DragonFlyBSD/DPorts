@@ -1,8 +1,5 @@
-# New ports collection makefile for:    ifxetex
-# Date created:         2008-09-24
-# Whom:                 Martin Dieringer <martin.dieringer@gmx.de>
-#
-# $FreeBSD: print/ifxetex/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: Martin Dieringer <martin.dieringer@gmx.de>
+# $FreeBSD: print/ifxetex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ifxetex
 PORTVERSION=	20090124
@@ -26,6 +23,7 @@ MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 CLASSDIR=	${TEXMFDIR}/tex/latex/${PORTNAME}
 CLASS_FILES=	${PORTNAME}.sty
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}  && latex ${PORTNAME}.ins
 
