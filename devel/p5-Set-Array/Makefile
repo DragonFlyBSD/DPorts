@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: devel/p5-Set-Array/Makefile 327560 2013-09-18 15:22:25Z sunpoet $
+# $FreeBSD: devel/p5-Set-Array/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Set-Array
 PORTVERSION=	0.30
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		Set::Array.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
