@@ -1,5 +1,5 @@
 # Created by: aturetta@commit.it
-# $FreeBSD: devel/p5-Test-WWW-Mechanize/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-WWW-Mechanize/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-WWW-Mechanize
 PORTVERSION=	1.44
@@ -27,6 +27,7 @@ USE_PERL5=	configure
 
 MAN3=		Test::WWW::Mechanize.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
