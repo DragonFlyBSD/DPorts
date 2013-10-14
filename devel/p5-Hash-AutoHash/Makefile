@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 327226 2013-09-14 06:54:11Z sunpoet $
+# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 329711 2013-10-07 16:07:29Z culot $
 
 PORTNAME=	Hash-AutoHash
-PORTVERSION=	1.16
+PORTVERSION=	1.17
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,15 +13,16 @@ COMMENT=	Object-oriented access to real and tied hashes
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-List-MoreUtils>=0.09:${PORTSDIR}/lang/p5-List-MoreUtils \
-		p5-Tie-ToObject>0:${PORTSDIR}/devel/p5-Tie-ToObject
+BUILD_DEPENDS=	p5-List-MoreUtils>=0.33:${PORTSDIR}/lang/p5-List-MoreUtils \
+		p5-Tie-ToObject>=0.03:${PORTSDIR}/devel/p5-Tie-ToObject
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0.11:${PORTSDIR}/devel/p5-Test-Deep \
-		p5-Tie-Hash-MultiValue>0:${PORTSDIR}/devel/p5-Tie-Hash-MultiValue
+		p5-Tie-Hash-MultiValue>=1.02:${PORTSDIR}/devel/p5-Tie-Hash-MultiValue
 
 USES=		perl5
 USE_PERL5=	modbuild
 
 MAN3=		Hash::AutoHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
