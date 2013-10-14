@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: print/pecl-pdflib/Makefile 316347 2013-04-23 11:08:06Z ale $
+# $FreeBSD: print/pecl-pdflib/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pdflib
 PORTVERSION=	2.1.10
@@ -21,4 +21,5 @@ PHP_MODNAME=	pdf
 
 CONFIGURE_ARGS=	--with-pdflib=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
