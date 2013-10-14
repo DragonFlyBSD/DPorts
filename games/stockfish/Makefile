@@ -1,5 +1,5 @@
 # Created by: Gautam Mani <execve@gmail.com>
-# $FreeBSD: games/stockfish/Makefile 322063 2013-06-29 21:39:34Z antoine $
+# $FreeBSD: games/stockfish/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	stockfish
 PORTVERSION=	3
@@ -19,7 +19,7 @@ LICENSE=	GPLv3
 
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_GMAKE=	yes
+USES=		gmake
 MYARCH=		${ARCH}
 BOOKDIR=	.
 PORTDOCS=	Readme.txt polyglot.ini
@@ -39,6 +39,7 @@ OPTIONS_DEFINE=	DOCS POPCNT_ENABLED PROFILE_BUILD
 POPCNT_ENABLED_DESC=	Use the POPCNT instruction
 PROFILE_BUILD_DESC=	Make a Profile build
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPROFILE_BUILD}
@@ -68,6 +69,13 @@ ALL_TARGET=	${TGTBLD} ARCH=${MYARCH} COMP=${MYCC}
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
 BROKEN=		Does not compile on ia64, powerpc, or sparc64
 .endif
+
+.if exists(/usr/bin/clang) && ${OSVERSION} > 1000024
+MYCC=	clang
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e "s/^PREFIX =/PREFIX ?=/" ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stockfish ${PREFIX}/bin/stockfish
