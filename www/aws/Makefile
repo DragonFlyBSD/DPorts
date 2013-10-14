@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: www/aws/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/aws/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	aws
 PORTVERSION=	3.1.0.0
@@ -45,6 +45,7 @@ CONF_ARGS+=	prefix=${PREFIX}
 CONF_ARGS+=	LPATH=${PREFIX}/lib
 CONF_ARGS+=	ZPATH=/usr/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 ###################
