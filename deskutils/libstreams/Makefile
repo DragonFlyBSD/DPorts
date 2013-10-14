@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/libstreams/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/libstreams/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	libstreams
 PORTVERSION=	${STRIGI_VERSION}
@@ -11,6 +11,7 @@ COMMENT=	Strigi desktop search: streams library
 USES=		iconv
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e \
 		's,$${LIB_DESTINATION}/pkgconfig,libdata/pkgconfig,' \
