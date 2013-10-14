@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libcdr/Makefile 318555 2013-05-19 22:32:47Z bapt $
+# $FreeBSD: graphics/libcdr/Makefile 329307 2013-10-04 13:46:58Z bapt $
 
 PORTNAME=	libcdr
 PORTVERSION=	0.0.14
@@ -12,10 +12,10 @@ LICENSE=	LGPL21 MPL GPLv2
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/optional.hpp:${PORTSDIR}/devel/boost-libs
-LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu \
-		wpd-0.9:${PORTSDIR}/textproc/libwpd \
-		wpg-0.2:${PORTSDIR}/graphics/libwpg \
-		lcms2:${PORTSDIR}/graphics/lcms2
+LIB_DEPENDS=	libicui18n.so:${PORTSDIR}/devel/icu \
+		libwpd-0.9.so:${PORTSDIR}/textproc/libwpd \
+		libwpg-0.2.so:${PORTSDIR}/graphics/libwpg \
+		liblcms2.so:${PORTSDIR}/graphics/lcms2
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
