@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-Size/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Devel-Size/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-Size
 PORTVERSION=	0.79
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Devel::Size.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
