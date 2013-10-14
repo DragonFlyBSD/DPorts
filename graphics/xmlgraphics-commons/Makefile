@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: graphics/xmlgraphics-commons/Makefile 318222 2013-05-15 08:17:23Z miwi $
+# $FreeBSD: graphics/xmlgraphics-commons/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmlgraphics-commons
 PORTVERSION=	1.5
@@ -20,6 +20,7 @@ USE_ANT=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/build/${PORTNAME}-${PORTVERSION}.jar \
 		${JAVAJARDIR}/${PORTNAME}.jar
