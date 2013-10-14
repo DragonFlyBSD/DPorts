@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-Server-Coro/Makefile 326506 2013-09-06 14:30:23Z az $
+# $FreeBSD: net/p5-Net-Server-Coro/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Server-Coro
 PORTVERSION=	1.3
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::Server::Coro.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
