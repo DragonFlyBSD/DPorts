@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: editors/semi/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: editors/semi/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	semi
 PORTVERSION=	${SEMI_VER}
@@ -43,6 +43,7 @@ MAKE_ARGS+=	PREFIX="${LOCALBASE}" \
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
