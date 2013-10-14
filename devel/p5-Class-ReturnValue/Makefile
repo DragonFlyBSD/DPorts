@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: devel/p5-Class-ReturnValue/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Class-ReturnValue/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-ReturnValue
 PORTVERSION=	0.55
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::ReturnValue.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
