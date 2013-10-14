@@ -1,5 +1,5 @@
 # Created by: vj562001@yahoo.de
-# $FreeBSD: print/latex-etoolbox/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/latex-etoolbox/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	etoolbox
 DISTVERSION=	2.1
@@ -32,6 +32,7 @@ DOC_FILES=	README etoolbox.pdf etoolbox.tex
 
 WRKSRC=		${WRKDIR}/${CLASSNAME}
 
+NO_STAGE=	yes
 pre-install:
 	(for F in ${CLASS_FILES}; do \
 			${ECHO_CMD} "${CLASSDIR}/$${F}"; \
