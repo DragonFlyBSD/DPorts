@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@partitur.se>
-# $FreeBSD: ports/databases/postgresql-jdbc/Makefile,v 1.37 2013/02/18 08:21:06 svnexp Exp $
+# $FreeBSD: databases/postgresql-jdbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	postgresql
 PORTVERSION=	9.1.902
@@ -23,6 +23,7 @@ PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's,/usr/local/pgsql/share/java,${JAVAJARDIR},' ${WRKSRC}/README
 
