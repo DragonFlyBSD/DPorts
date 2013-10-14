@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/strigidaemon/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/strigidaemon/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	strigidaemon
 PORTVERSION=	${STRIGI_VERSION}
@@ -17,5 +17,6 @@ USE_FAM=	yes
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <${.CURDIR}/../strigi/Makefile.common>
 .include <bsd.port.mk>
