@@ -1,9 +1,5 @@
-# New ports collection makefile for:    zoo
-# Date created:         18 October 1994
-# Whom:                 jmz
-#
-# $FreeBSD: ports/archivers/zoo/Makefile,v 1.17 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: jmz
+# $FreeBSD: archivers/zoo/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zoo
 PORTVERSION=	2.10.1
@@ -15,6 +11,7 @@ DISTNAME=	zoo-2.10pl1
 MAINTAINER=	gabor@FreeBSD.org
 COMMENT=	Manipulate archives of files in compressed form
 
+NO_STAGE=	yes
 NO_WRKSUBDIR=	yes
 ALL_TARGET=	bsdansi
 MAKEFILE=	makefile
