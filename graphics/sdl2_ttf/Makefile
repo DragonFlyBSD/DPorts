@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/sdl2_ttf/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/sdl2_ttf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sdl2_ttf
 PORTVERSION=	2.0.12
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	OPENGL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENGL}
