@@ -1,5 +1,5 @@
 # Created by: Rui Lopes <rui@ruilopes.com>
-# $FreeBSD: devel/regexxer/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: devel/regexxer/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=		regexxer
 PORTVERSION=		0.9
@@ -24,6 +24,7 @@ GCONF_SCHEMAS=		regexxer.schemas
 INSTALLS_ICONS=		regexxer.png
 
 # This target is only meant to be used by the port maintainer.
+NO_STAGE=	yes
 x-generate-plist:
 	(${PORTSDIR}/Tools/scripts/plist -d -m ${MTREE_FILE} ${PREFIX}|${GREP} regexxer) > temp-pkg-plist
 
