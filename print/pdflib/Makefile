@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pdflib
-# Date created:		Wed Jan 9 12:27:54 CET 2002
-# Whom:			Alex Dupre <sysadmin@alexdupre.com>
-#
-# $FreeBSD: ports/print/pdflib/Makefile,v 1.65 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Alex Dupre <sysadmin@alexdupre.com>
+# $FreeBSD: print/pdflib/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pdflib
 PORTVERSION=	7.0.5
@@ -21,13 +17,14 @@ OPTIONS_DEFINE=	PERL JAVA
 PERL_DESC=	Build perl bindings
 JAVA_DESC=	Build Java bindings
 
+USES=		gmake
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-py=no --with-ruby=no --with-tcl=no
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64" || ${ARCH} == "sparc64"
@@ -35,7 +32,7 @@ CONFIGURE_ARGS+=--enable-64bit
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 PLIST_SUB=	PERL=""
 CONFIGURE_ARGS+=--with-perl=${PERL}
 .else
