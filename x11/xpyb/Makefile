@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/xpyb/Makefile 325998 2013-09-02 14:11:19Z bapt $
+# $FreeBSD: x11/xpyb/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xpyb
 PORTVERSION=	1.3.1
@@ -24,6 +24,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(NOPORTDOCS)
