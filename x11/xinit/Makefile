@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xinit/Makefile 326804 2013-09-09 12:09:30Z zeising $
+# $FreeBSD: x11/xinit/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xinit
 PORTVERSION=	1.3.3
@@ -15,6 +15,7 @@ USE_XORG=	x11
 
 MAN1=		startx.1 xinit.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's/test.*-traditional.*;/true;/' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|hexdump|/usr/bin/hexdump|' ${WRKSRC}/startx.cpp
