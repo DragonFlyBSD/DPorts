@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11/xfce4-conf/Makefile 327411 2013-09-16 16:32:07Z bapt $
+# $FreeBSD: x11/xfce4-conf/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfce4-conf
 PORTVERSION=	4.10.0
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=		DOCS PERL NLS
 
 MAN3PREFIX?=	${PREFIX}/lib/perl5/${PERL_VER}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
