@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pecl-radius
-# Date created:				09 March 2005
-# Whom:					Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-#
-# $FreeBSD: ports/net/pecl-radius/Makefile,v 1.6 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+# $FreeBSD: net/pecl-radius/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	radius
 PORTVERSION=	1.2.5
@@ -18,6 +14,7 @@ COMMENT=	Radius client library for PHP
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
+NO_STAGE=	yes
 
 CONFIGURE_ARGS=	--enable-radius
 
