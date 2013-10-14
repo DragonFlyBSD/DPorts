@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/sqlrelay/Makefile 320961 2013-06-14 20:24:11Z antoine $
+# $FreeBSD: databases/sqlrelay/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	${SQLRELAY_PORTNAME}
 PORTVERSION=	${SQLRELAY_PORTVERSION}
@@ -28,6 +28,7 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 
 OPTIONS_DEFINE=	MSQL MYSQL ODBC PGSQL SQLITE2 FREETDS INTERBASE GTK1 DOCS
