@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: www/pear-HTTP/Makefile 314198 2013-03-15 00:42:37Z miwi $
+# $FreeBSD: www/pear-HTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP
 PORTVERSION=	1.4.1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
