@@ -1,5 +1,5 @@
 # Created by: Eiji-usagi-MATSUmoto <usagi@ruby.club.or.jp>
-# $FreeBSD: japanese/k10/Makefile 321265 2013-06-19 14:50:24Z miwi $
+# $FreeBSD: japanese/k10/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	naga10
 PORTVERSION=	1.1
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	mkbold:${PORTSDIR}/x11-fonts/mkbold-mkitalic \
 RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 FONTSDIR=	lib/X11/fonts/local
