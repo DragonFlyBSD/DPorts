@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	trio
-# Date created:			Jun 3, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/trio/Makefile,v 1.19 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/trio/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	trio
 PORTVERSION=	1.14
@@ -16,6 +11,7 @@ COMMENT=	A fully matured and stable set of printf and string functions
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
