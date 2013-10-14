@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: www/weblint/Makefile 318131 2013-05-13 20:58:05Z dinoex $
+# $FreeBSD: www/weblint/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	weblint
 PORTVERSION=	1.020
@@ -12,4 +12,5 @@ COMMENT=	HTML validator and sanity checker
 
 MAN1=		weblint.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
