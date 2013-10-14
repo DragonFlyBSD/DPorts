@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Yadis/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Yadis/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Yadis
 PORTVERSION=	1.0
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Yadis.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
