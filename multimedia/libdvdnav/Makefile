@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libdvdnav
-# Date created:         21 May 2002
-# Whom:                 MANTANI Nobutaka <nobutaka@nobutaka.com>
-#
-# $FreeBSD: ports/multimedia/libdvdnav/Makefile,v 1.43 2012/11/17 05:59:50 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
+# $FreeBSD: multimedia/libdvdnav/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libdvdnav
 PORTVERSION=	4.2.0
@@ -37,6 +33,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
