@@ -1,4 +1,4 @@
-# $FreeBSD: lang/clang33/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/clang33/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	clang
 DISTVERSION=	3.3
@@ -32,9 +32,8 @@ LATEST_LINK=	${PORTNAME}${LLVM_SUFFIX}
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_PREFIX=	${LLVM_PREFIX}
-USE_GMAKE=	yes
+USES=		gmake perl5
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 USE_PYTHON_BUILD=	yes
 
 MAKE_ARGS=	CLANG_TBLGEN=${WRKSRC}/${RELTYPE}/bin/clang-tblgen \
@@ -66,6 +65,7 @@ COMMANDS=	c-index-test \
 		clang-tblgen
 FIRST_COMMAND=	${COMMANDS:C/^/XXXX/1:MXXXX*:C/^XXXX//}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASSERTS}
