@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/databases/pear-MDB2/Makefile,v 1.12 2013/02/04 08:54:54 svnexp Exp $
+# $FreeBSD: databases/pear-MDB2/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	MDB2
 DISTVERSION=	2.5.0b4
@@ -13,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
