@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/hcode/Makefile 321494 2013-06-21 18:25:08Z bsam $
+# $FreeBSD: korean/hcode/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	hcode
 PORTVERSION=	2.1.3
@@ -15,6 +15,7 @@ COMMENT=	Hangul code conversion utility
 
 PLIST_FILES=	bin/hcode
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hcode ${PREFIX}/bin
 
