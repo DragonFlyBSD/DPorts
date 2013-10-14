@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: math/cln/Makefile 325752 2013-08-31 00:35:35Z bapt $
+# $FreeBSD: math/cln/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	cln
 PORTVERSION=	1.3.2
@@ -29,6 +29,7 @@ CFLAGS+=	-fPIC
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
