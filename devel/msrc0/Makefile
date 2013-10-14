@@ -1,9 +1,5 @@
-# New ports collection makefile for: msrc0
-# Date created:        17 November 1999
-# Whom:                ajk@waterspout.com
-#
-# $FreeBSD: ports/devel/msrc0/Makefile,v 1.13 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: ajk@waterspout.com
+# $FreeBSD: devel/msrc0/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	msrc0
 PORTVERSION=	0.7
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/makeme
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.6
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/makeme ${PREFIX}/bin
 
