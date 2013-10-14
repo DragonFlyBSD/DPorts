@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: ports/devel/cl-uffi/Makefile,v 1.18 2013/02/18 14:39:09 svnexp Exp $
+# $FreeBSD: devel/cl-uffi/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	uffi
 PORTVERSION=	2.0.0
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ASDF_PATHNAME}
 	@${MKDIR} ${ASDF_PATHNAME}/src
