@@ -1,5 +1,5 @@
 # Created by: glewis
-# $FreeBSD: science/szip/Makefile 321376 2013-06-20 13:01:27Z bsam $
+# $FreeBSD: science/szip/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	szip
 PORTVERSION=	2.1
@@ -26,6 +26,7 @@ PORTDOCS=	Release_notes_2_0.pdf
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
