@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Locale-Codes
-# Date created:				June 26th 1997
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: misc/p5-Locale-Codes/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: misc/p5-Locale-Codes/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Locale-Codes
 PORTVERSION=	3.26
@@ -32,4 +28,5 @@ MAN3=	Locale::Codes.3 Locale::Codes::API.3 Locale::Codes::Changes.3 \
 	Locale::Currency.3 Locale::Codes::Currency_Retired.3 \
 	Locale::Language.3 Locale::Script.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
