@@ -1,9 +1,5 @@
-# New ports collection makefile for:	games/atris
-# Date created:			9 Aug 2005
-# Whom:				Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/atris/Makefile,v 1.11 2012/11/17 05:57:32 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/atris/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	atris
 PORTVERSION=	1.0.7
@@ -23,6 +19,7 @@ CONFIGURE_ARGS=	--program-transform-name=""
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOMAKE="${TRUE}" \
 		AUTOHEADER="${TRUE}"
 
+NO_STAGE=	yes
 post-patch:
 # Fix path to ${DATADIR}
 	${REINPLACE_CMD} -e 's|\(GAME_INSTALLDIR=\).*|\1"${DATADIR}"|' \
