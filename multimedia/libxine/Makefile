@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: multimedia/libxine/Makefile 326549 2013-09-06 21:21:41Z nox $
+# $FreeBSD: multimedia/libxine/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	xine
 PORTVERSION=	1.2.2
@@ -80,6 +80,7 @@ DVDCSS_LIBVERSION=	3
 
 PATCH_DIST_ARGS=	-d ${WRKSRC} -p1 --forward --quiet
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "i386"
