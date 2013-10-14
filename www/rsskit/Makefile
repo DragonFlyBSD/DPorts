@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/rsskit/Makefile,v 1.4 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/rsskit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rsskit
 PORTVERSION=	0.4
@@ -16,4 +16,5 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
