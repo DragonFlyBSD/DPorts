@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: www/p5-HTML-Tree/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-Tree/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Tree
 PORTVERSION=	5.03
@@ -26,4 +26,5 @@ MAN3=		HTML::Parse.3 HTML::TreeBuilder.3 HTML::AsSubs.3 \
 		HTML::Tree::Scanning.3 HTML::Tree::AboutObjects.3 \
 		HTML::Tree::AboutTrees.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
