@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/cego/Makefile 326409 2013-09-05 16:17:00Z culot $
+# $FreeBSD: databases/cego/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	cego
 PORTVERSION=	2.19.6
@@ -28,6 +28,7 @@ GROUPS=	cego
 
 PLIST_SUB+=	USER=${USERS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,-O3,,g' \
 		${WRKSRC}/src/Makefile.in \
