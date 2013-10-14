@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cssselect
-# Date created:		2012-05-02
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-cssselect/Makefile,v 1.4 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: www/py-cssselect/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cssselect
 PORTVERSION=	0.7.1
@@ -23,6 +19,7 @@ LICENSE=	BSD
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Python3 ready
