@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/xlsfonts/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/xlsfonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	xlsfonts
 PORTVERSION=	1.0.4
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xlsfonts
 
 MAN1=		xlsfonts.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
