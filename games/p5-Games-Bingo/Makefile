@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: games/p5-Games-Bingo/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: games/p5-Games-Bingo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	Games-Bingo
 PORTVERSION=	0.15
@@ -20,6 +20,7 @@ MAN3=		Games::Bingo.3 \
 		Games::Bingo::ColumnCollection.3 \
 		Games::Bingo::Constants.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
