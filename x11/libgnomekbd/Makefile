@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11/libgnomekbd/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: x11/libgnomekbd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/libgnomekbd/Makefile,v 1.48 2010/09/28 08:01:11 kwm Exp $
 
 PORTNAME=	libgnomekbd
@@ -26,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	desktop_gnome_peripherals_keyboard_xkb.schemas
 
+NO_STAGE=	yes
 #post-patch:
 #	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 #	    	's|-Werror||g'
