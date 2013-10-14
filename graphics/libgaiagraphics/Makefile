@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: graphics/libgaiagraphics/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: graphics/libgaiagraphics/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libgaiagraphics
 PORTVERSION=	0.4b
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile.in
