@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkextra2/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/gtkextra2/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtkextra
 PORTVERSION=	2.1.2
@@ -23,6 +23,7 @@ DOCSDIR=	${PREFIX}/share/doc/gtkextra2
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
