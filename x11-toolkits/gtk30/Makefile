@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk30/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: x11-toolkits/gtk30/Makefile 329070 2013-10-02 16:24:19Z kwm $
 #   $MCom: ports/trunk/x11-toolkits/gtk30/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk
@@ -8,6 +8,7 @@ PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+PKGNAMESUFFIX=	3
 DISTNAME=	gtk+-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
@@ -17,7 +18,6 @@ COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
 LICENSE=	LGPL20
 
 USE_XZ=		yes
-LATEST_LINK=	gtk30
 
 .if !defined(REFERENCE_PORT)
 
@@ -50,6 +50,7 @@ OPTIONS_DEFINE=	CUPS COLORD DEBUG
 OPTIONS_DEFAULT=CUPS COLORD
 COLORD_DESC=	Color profile support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
