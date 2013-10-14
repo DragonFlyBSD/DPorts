@@ -1,9 +1,5 @@
-# New ports collection makefile for:	itk
-# Date created:		Aug 17 1996
-# Whom:			chuckr
-#
-# $FreeBSD: x11-toolkits/itk/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: chuckr
+# $FreeBSD: x11-toolkits/itk/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	itk
 PORTVERSION=	3.3
@@ -36,6 +32,7 @@ MANN=		Archetype.n Toplevel.n Widget.n itk.n itkvars.n usual.n
 
 ITK_LIB_FILE=	${ITK_LIB}.${SHLIB_MAJOR}
 
+NO_STAGE=	yes
 .if defined(DISPLAY)
 post-build:	test
 .else
