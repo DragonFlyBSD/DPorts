@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Tie-RefHash
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-RefHash/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Tie-RefHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-RefHash
 PORTVERSION=	1.39
@@ -19,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Tie::RefHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
