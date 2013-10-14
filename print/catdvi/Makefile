@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	catdvi
-# Date created:			Feb 10, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: print/catdvi/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: ijliao
+# $FreeBSD: print/catdvi/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	catdvi
 PORTVERSION=	0.14
@@ -28,6 +23,7 @@ PLIST_FILES=	bin/catdvi
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/catdvi ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/catdvi.1 ${MANPREFIX}/man/man1
