@@ -1,8 +1,8 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: sysutils/file/Makefile 314969 2013-03-22 22:10:18Z bf $
+# $FreeBSD: sysutils/file/Makefile 328271 2013-09-25 12:12:41Z bf $
 
 PORTNAME=	file
-PORTVERSION=	5.14
+PORTVERSION=	5.15
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.astron.com/pub/file/ \
 		ftp://ftp.fu-berlin.de/unix/tools/file/
@@ -23,6 +23,7 @@ MAN1=		file.1
 MAN3=		libmagic.3
 MAN5=		magic.5
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800000
@@ -30,7 +31,7 @@ CONFIGURE_ENV+=	gl_cv_cc_visibility=no
 .endif
 
 check regression-test test: build
-	@( cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} check ; )
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} check
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$(datadir)/misc|$(datadir)/${PORTNAME}|g' \
