@@ -1,5 +1,5 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: www/awstats/Makefile 322676 2013-07-10 12:08:05Z wg $
+# $FreeBSD: www/awstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	awstats
 PORTVERSION=	7.2
@@ -14,8 +14,9 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-Net-XWhois>=0:${PORTSDIR}/net/p5-Net-XWhois
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_DOS2UNIX=	tools/*.pl \
 		wwwroot/cgi-bin/awstats.model.conf \
 		wwwroot/cgi-bin/*.pl \
@@ -33,6 +34,7 @@ SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	DOCS IPV6
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
