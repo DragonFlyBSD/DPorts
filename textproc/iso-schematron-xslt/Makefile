@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/iso-schematron-xslt/Makefile 315673 2013-04-02 13:23:04Z gabor $
+# $FreeBSD: textproc/iso-schematron-xslt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	iso-schematron-xslt
 PORTVERSION=	20130313
@@ -14,6 +14,7 @@ COMMENT=	The Leading Implementation of ISO Schematron
 USE_ZIP=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}/xslt1
 	${MKDIR} ${WRKDIR}/xslt2
