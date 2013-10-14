@@ -1,5 +1,5 @@
 # Created by: Marc Abramowitz (http://marc.abramowitz.info)
-# $FreeBSD: graphics/opencv/Makefile 327060 2013-09-12 13:00:12Z bapt $
+# $FreeBSD: graphics/opencv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME?=	opencv
 PORTVERSION=	2.3.1
@@ -50,6 +50,7 @@ TBB_DESC=	TBB support
 
 OPTIONS_DEFAULT=	EIGEN2 JASPER JPEG PNG TIFF V4L
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
