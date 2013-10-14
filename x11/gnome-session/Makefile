@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-session/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: x11/gnome-session/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gnome-session/Makefile,v 1.187 2010/11/17 12:00:11 kwm Exp $
 
 PORTNAME=	gnome-session
@@ -39,4 +39,5 @@ MAN1=		gnome-session.1 gnome-wm.1 gnome-session-properties.1 \
 		gnome-session-save.1
 GCONF_SCHEMAS=	gnome-session.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
