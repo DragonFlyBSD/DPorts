@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Default/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Class-Default/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Default
 PORTVERSION=	1.51
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Default.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
