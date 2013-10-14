@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libdmx/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libdmx/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libdmx
 PORTVERSION=	1.1.3
@@ -29,4 +29,5 @@ MAN3=		DMX.3 \
 		DMXRemoveScreen.3 \
 		DMXSync.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
