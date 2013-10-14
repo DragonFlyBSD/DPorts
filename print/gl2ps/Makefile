@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: print/gl2ps/Makefile 319203 2013-05-27 10:23:39Z araujo $
+# $FreeBSD: print/gl2ps/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	gl2ps
 PORTVERSION=	1.3.8
@@ -15,6 +15,7 @@ USE_XORG=	x11 xmu xi
 USE_LDCONFIG=	yes
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}-source
 
+NO_STAGE=	yes
 pre-build:
 	@${CP} ${FILESDIR}/Makefile.lib ${WRKSRC}/Makefile
 
