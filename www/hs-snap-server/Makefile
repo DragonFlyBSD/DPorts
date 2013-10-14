@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-snap-server/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-snap-server/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	snap-server
 PORTVERSION=	0.9.3.3
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=		OPENSSL
 
 OPENSSL_DESC=		Enable HTTPS support using the HsOpenSSL library
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MOPENSSL}
