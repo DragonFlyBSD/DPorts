@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/adobe-cmaps/pkg-plist,v 1.8 2012/11/17 06:00:48 svnexp Exp $
+@comment $FreeBSD: print/adobe-cmaps/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%CMAPDIR%%/ac15/cid2code.txt
 %%CMAPDIR%%/ac15/CMap/Adobe-CNS1-0
 %%CMAPDIR%%/ac15/CMap/Adobe-CNS1-1
