@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-perlqt/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: devel/p5-perlqt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	perlqt
 PORTVERSION=	${KDE4_VERSION}
@@ -30,6 +30,7 @@ SUB_FILES=	perl-kdebindings-env.sh pkg-message
 SUB_LIST+=	PERL5LIBDIR="${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}:\
 				${PREFIX}/${SITE_PERL_REL}"
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${PREFIX}/env
 	${INSTALL_SCRIPT} ${WRKDIR}/perl-kdebindings-env.sh ${PREFIX}/env
