@@ -1,7 +1,5 @@
 # Created by: vanhu <vanhu@netasq.com>
-# $FreeBSD: ports/net/scapy/Makefile,v 1.14 2013/01/09 12:02:20 svnexp Exp $
-#
-# TODO: - configurable --enable-xxx for various additional dependancies
+# $FreeBSD: net/scapy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	scapy
 PORTVERSION=	2.2.0
@@ -31,6 +29,7 @@ NMAP_DESC=	nmap OS signatures database
 MANUF_DESC=	wireshark's MANUF MAC database
 SOX_DESC=	Support for VoIP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYX}
