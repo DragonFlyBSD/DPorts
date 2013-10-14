@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Acme-Monta
-# Date created:				14 June 2005
-# Whom:	      				TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: www/p5-Acme-Monta/Makefile 326167 2013-09-03 16:18:49Z az $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: www/p5-Acme-Monta/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Acme-Monta
 PORTVERSION=	0.01
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Acme::Monta.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
