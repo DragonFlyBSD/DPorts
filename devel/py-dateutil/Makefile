@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: devel/py-dateutil/Makefile 317532 2013-05-06 16:57:13Z antoine $
+# $FreeBSD: devel/py-dateutil/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	dateutil
 PORTVERSION=	2.1
@@ -22,6 +22,7 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	python-dateutil
 
 # Fix incorrect permissions
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -type f -exec ${CHMOD} ${SHAREMODE} {} ";"
 	@${REINPLACE_CMD} -e 's|import winreg|from six.moves import winreg|' ${WRKSRC}/dateutil/tzwin.py
