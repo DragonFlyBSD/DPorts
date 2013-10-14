@@ -1,5 +1,5 @@
 # Created by: Brion Moss <brion@queeg.com>
-# $FreeBSD: textproc/catdoc/Makefile 316351 2013-04-23 11:51:52Z gahr $
+# $FreeBSD: textproc/catdoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	catdoc
 PORTVERSION=	0.94.2
@@ -26,6 +26,7 @@ OPTIONS_DEFAULT=	WORDVIEW
 CFLAGS+=	-DLATIN1=1
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},' ${WRKSRC}/doc/catdoc.1.in
 
