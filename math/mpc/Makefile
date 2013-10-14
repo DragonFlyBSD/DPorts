@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpc
-# Date created:			05 April, 2009
-# Whom:				Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/mpc/Makefile,v 1.16 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: math/mpc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	mpc
 PORTVERSION=	0.9
@@ -32,4 +28,5 @@ LATEST_LINK=	math_mpc
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
