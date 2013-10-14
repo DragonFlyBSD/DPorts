@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-ipaddr
-# Date created:		2008-10-03
-# Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
-#
-# $FreeBSD: ports/devel/py-ipaddr/Makefile,v 1.8 2012/11/17 05:56:47 svnexp Exp $
-#
+# Created by: Murilo Opsfelder <mopsfelder@gmail.com>
+# $FreeBSD: devel/py-ipaddr/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ipaddr
 PORTVERSION=	2.1.10
@@ -23,4 +19,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/ipaddr.py \
 		%%PYTHON_SITELIBDIR%%/ipaddr.pyc \
 		%%PYTHON_SITELIBDIR%%/ipaddr.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
