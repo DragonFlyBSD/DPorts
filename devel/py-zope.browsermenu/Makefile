@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.browsermenu
-# Date created:				Nov 15, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.browsermenu/Makefile,v 1.3 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.browsermenu/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.browsermenu
 PORTVERSION=	3.9.1
@@ -31,5 +26,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.browser>=0:${PORTSDIR}/devel/py-zope.br
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
