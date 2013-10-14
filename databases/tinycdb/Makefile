@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/tinycdb/Makefile 315457 2013-03-28 11:50:04Z ohauer $
+# $FreeBSD: databases/tinycdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	tinycdb
 PORTVERSION=	0.78
@@ -20,4 +20,5 @@ MAN5=		cdb.5
 
 PLIST_FILES=	bin/cdb include/cdb.h lib/libcdb.a
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
