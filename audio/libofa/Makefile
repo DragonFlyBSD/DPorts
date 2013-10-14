@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libofa
-# Date created:		2006-04-01
-# Whom:			Alexander Botero-Lowry <alex@foxybanana.com>
-#
-# $FreeBSD: audio/libofa/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
+# $FreeBSD: audio/libofa/Makefile 329874 2013-10-09 08:01:13Z jhale $
 
 PORTNAME=	libofa
 PORTVERSION=	0.9.3
@@ -21,14 +17,14 @@ LICENSE_NAME_APL1=	Adaptive Public License version 1.0
 LICENSE_FILE_APL1=	${WRKSRC}/COPYING
 LICENSE_PERMS_APL1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
-		expat:${PORTSDIR}/textproc/expat2 \
-		curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3 \
+		libexpat.so:${PORTSDIR}/textproc/expat2 \
+		libcurl.so:${PORTSDIR}/ftp/curl
 
 PROJECTHOST=	musicip-libofa
 USE_DOS2UNIX=	yes
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
+USES=		pathfix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
