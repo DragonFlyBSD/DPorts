@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xev/Makefile,v 1.6 2013/02/04 03:37:46 svnexp Exp $
+# $FreeBSD: x11/xev/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xev
 PORTVERSION=	1.2.1
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xev
 
 MAN1=		xev.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
