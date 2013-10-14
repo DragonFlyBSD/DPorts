@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: ports/java/javahelp/Makefile,v 1.5 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/javahelp/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	javahelp
 PORTVERSION=	2.0.05
@@ -20,6 +20,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/jh2.0
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|$$JAVAHELP_HOME/javahelp/bin/|${JAVAJARDIR}/|' ${WRKSRC}/javahelp/bin/jhindexer
 	${REINPLACE_CMD} -e 's|$$JAVAHELP_HOME/javahelp/bin/|${JAVAJARDIR}/|' ${WRKSRC}/javahelp/bin/jhsearch
