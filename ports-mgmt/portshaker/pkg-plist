@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/ports-mgmt/portshaker/pkg-plist,v 1.2 2012/11/17 06:00:46 svnexp Exp $
+@comment $FreeBSD: ports-mgmt/portshaker/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/portshaker
 etc/portshaker.conf.sample
 %%DATADIR%%/merge-updating.awk

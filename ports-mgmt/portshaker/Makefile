@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: ports/ports-mgmt/portshaker/Makefile,v 1.12 2013/01/30 12:45:50 svnexp Exp $
+# $FreeBSD: ports-mgmt/portshaker/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME?=	portshaker
 PORTVERSION=	1.0.8
@@ -33,6 +33,7 @@ TEXLIVE_DESC=		Enable TeXLive ports (Experimental)
 XORG_DESC=		Enable Xorg development ports
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORTNAME} == "portshaker"
