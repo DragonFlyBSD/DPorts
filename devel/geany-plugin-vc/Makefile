@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-vc/Makefile 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD: devel/geany-plugin-vc/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	geany-plugin-vc
 PORTVERSION=	${GEANY_VER}
@@ -11,6 +11,7 @@ OPTIONS_DEFINE=	GTKSPELL
 OPTIONS_DEFAULT=	GTKSPELL
 GTKSPELL_DESC=	Spell checking support via GtkSpell
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 # bsd.port.options.mk is already included
 
