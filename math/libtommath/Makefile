@@ -1,4 +1,4 @@
-# $FreeBSD: math/libtommath/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/libtommath/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libtommath
 PORTVERSION=	0.42.0
@@ -22,6 +22,7 @@ PORTDOCS=	*
 PLIST_FILES=	include/tommath.h include/tommath_class.h \
 		include/tommath_superclass.h lib/libtommath.a
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
