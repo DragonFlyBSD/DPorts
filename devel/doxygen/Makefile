@@ -1,5 +1,5 @@
 # Created by: Joep Grooten <joep@di.nl>
-# $FreeBSD: devel/doxygen/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: devel/doxygen/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	doxygen
 PORTVERSION=	1.8.3.1
@@ -18,11 +18,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	tmake:${PORTSDIR}/devel/tmake
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USES=		bison iconv
+USES=		bison iconv perl5 gmake
 ALL_TARGET=	all
-USE_PERL5=	yes
 HAS_CONFIGURE=	yes
-USE_GMAKE=	yes
 QT_NONSTANDARD=	yes	# non-standard configure arguments
 CONFIGURE_ARGS=	--prefix ${PREFIX} --perl ${PERL} --make ${GMAKE} \
 		--install "${INSTALL}"
@@ -43,6 +41,7 @@ QT4_DESC=	Install Doxywizard GUI
 HTMLDOCS_DESC=	Install documentation in HTML format
 PDFDOCS_DESC=	Install documentation in PDF format
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTMLDOCS}
