@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: audio/opencore-amr/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/opencore-amr/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	opencore-amr
 PORTVERSION=	0.1.3
@@ -13,6 +13,7 @@ LICENSE=	AL2
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
