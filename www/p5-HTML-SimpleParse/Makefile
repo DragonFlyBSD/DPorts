@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-SimpleParse
-# Date created:				May 26 2001
-# Whom:					vanilla
-#
-# $FreeBSD: www/p5-HTML-SimpleParse/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: vanilla
+# $FreeBSD: www/p5-HTML-SimpleParse/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-SimpleParse
 PORTVERSION=	0.12
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::SimpleParse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
