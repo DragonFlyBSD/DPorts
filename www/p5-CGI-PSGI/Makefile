@@ -1,9 +1,4 @@
-# New ports collection makefile for:	CGI::PSGI
-# Date created:		13 Oct 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-CGI-PSGI/Makefile 326156 2013-09-03 15:07:52Z az $
-#
+# $FreeBSD: www/p5-CGI-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-PSGI
 PORTVERSION=	0.15
@@ -20,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	CGI::PSGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
