@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/hal/Makefile 326032 2013-09-02 16:55:04Z bapt $
+# $FreeBSD: sysutils/hal/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/hal/Makefile,v 1.81 2010/04/13 02:49:07 mezz Exp $
 
 PORTNAME=	hal
@@ -70,6 +70,7 @@ MAN8=		hald.8
 OPTIONS_DEFINE=	FIXED_MOUNTPOINTS
 FIXED_MOUNTPOINTS_DESC=	use fixed mountpoints
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFIXED_MOUNTPOINTS}
