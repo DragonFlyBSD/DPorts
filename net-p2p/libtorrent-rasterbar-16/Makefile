@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-rasterbar-16/Makefile 325006 2013-08-19 16:41:05Z nemysis $
+# $FreeBSD: net-p2p/libtorrent-rasterbar-16/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	libtorrent-rasterbar
 PORTVERSION=	0.16.11
@@ -12,8 +12,8 @@ COMMENT?=	C++ library implementing a BitTorrent client
 
 LICENSE=	BSD
 
-LIB_DEPENDS+=	boost_date_time:${PORTSDIR}/devel/boost-libs \
-		GeoIP:${PORTSDIR}/net/GeoIP
+LIB_DEPENDS+=	libboost_date_time.so:${PORTSDIR}/devel/boost-libs \
+		libGeoIP.so:${PORTSDIR}/net/GeoIP
 
 USES=		pathfix pkgconfig iconv
 USE_OPENSSL=	yes
@@ -49,6 +49,7 @@ PORTEXAMPLES=	*.cpp
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(SLAVE_PORT) && ${SLAVE_PORT:tl} == "yes" && defined(USE_PYTHON)
