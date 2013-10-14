@@ -1,5 +1,5 @@
 # Created by: gno@yahoo-inc.com
-# $FreeBSD: devel/json-c/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/json-c/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	json-c
 PORTVERSION=	0.9
@@ -15,4 +15,5 @@ USES=		gmake pathfix pkgconfig
 
 CONFLICTS=	cocaine-core-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
