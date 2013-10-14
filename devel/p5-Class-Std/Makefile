@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Std/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: devel/p5-Class-Std/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Std
 DISTVERSION=	0.011
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Std.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
