@@ -1,5 +1,5 @@
 # Created by: Freddie Cash <fcash@sd73.bc.ca>
-# $FreeBSD: ports/textproc/ripole/Makefile,v 1.6 2012/11/17 06:02:19 svnexp Exp $
+# $FreeBSD: textproc/ripole/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ripole
 PORTVERSION=	0.2.2
@@ -13,6 +13,7 @@ ALL_TARGET=	default
 
 PLIST_FILES=	bin/ripole
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^CFLAGS/d' ${WRKSRC}/Makefile
 
