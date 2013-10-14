@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-XSAccessor/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-XSAccessor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-XSAccessor
 PORTVERSION=	1.18
@@ -22,4 +22,5 @@ MAN3=		Class::XSAccessor.3 \
     		Class::XSAccessor::Array.3 \
     		Class::XSAccessor::Heavy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
