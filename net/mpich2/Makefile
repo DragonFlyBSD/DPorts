@@ -1,5 +1,5 @@
 # Created by: dbader@ece.unm.edu
-# $FreeBSD: net/mpich2/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/mpich2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	mpich2
 DISTVERSION=	1.3.2p1
@@ -61,6 +61,7 @@ VERSOM=		${VERSO:R}
 PLIST_SUB=	VER=${VERSO} VERM=${VERSOM}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
