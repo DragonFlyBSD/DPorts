@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bdelta
-# Date created:		2005-05-18
-# Whom:			Roman Bogorodskiy <novel@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/bdelta/Makefile,v 1.5 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
+# $FreeBSD: misc/bdelta/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	bdelta
 PORTVERSION=	0.1.0
@@ -21,6 +17,7 @@ PLIST_FILES=	bin/bdelta \
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bdelta ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bpatch ${PREFIX}/bin
