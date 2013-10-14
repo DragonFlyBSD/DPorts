@@ -1,5 +1,5 @@
 # Created by: Matthieu Guegan <matt.guegan@free.fr>
-# $FreeBSD: x11-wm/hs-xmonad/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11-wm/hs-xmonad/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	xmonad
 PORTVERSION=	0.11
@@ -19,5 +19,6 @@ MAN1SRC=	man
 
 EXECUTABLE=	xmonad
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
