@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-fastthread
-# Date created:				28 February 2007
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/devel/rubygem-fastthread/Makefile,v 1.12 2012/11/17 05:56:59 svnexp Exp $
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: devel/rubygem-fastthread/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	fastthread
 PORTVERSION=	1.0.7
@@ -16,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
