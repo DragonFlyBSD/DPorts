@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-SQL-Maker/Makefile 324491 2013-08-10 12:08:21Z kuriyama $
+# $FreeBSD: databases/p5-SQL-Maker/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	SQL-Maker
 PORTVERSION=	1.12
@@ -29,4 +29,5 @@ MAN3=	SQL::Maker.3 \
 	SQL::Maker::Select.3 \
 	SQL::Maker::SelectSet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
