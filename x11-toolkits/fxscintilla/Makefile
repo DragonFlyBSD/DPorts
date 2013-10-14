@@ -1,9 +1,9 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: x11-toolkits/fxscintilla/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/fxscintilla/Makefile 329703 2013-10-07 13:15:43Z gahr $
 
 PORTNAME=	fxscintilla
 PORTVERSION=	2.28.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SAVANNAH
 
@@ -20,4 +20,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
