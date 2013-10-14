@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/sysutils/rubygem-hiera/Makefile,v 1.7 2013/01/17 22:45:37 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-hiera/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hiera
 PORTVERSION=	1.1.2
@@ -17,6 +17,7 @@ RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/hiera
 HIERA_DBDIR=	/var/db/hiera
 
+NO_STAGE=	yes
 post-install:
 	@${REINPLACE_CMD} "s!/etc/hiera.yaml!${PREFIX}/etc/hiera.yaml!" \
 		${PREFIX}/${GEM_LIB_DIR}/bin/hiera \
