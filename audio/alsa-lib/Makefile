@@ -1,12 +1,8 @@
-# New ports collection makefile for:   alsa-lib
-# Date created:                June 29, 2009
-# Whom:                        Aragon Gouveia <aragon@phat.za.net>
-#
-# $FreeBSD: ports/audio/alsa-lib/Makefile,v 1.6 2012/11/17 05:54:27 svnexp Exp $
-#
+# Created by: Aragon Gouveia <aragon@phat.za.net>
+# $FreeBSD: audio/alsa-lib/Makefile 329208 2013-10-03 16:34:28Z flo $
 
 PORTNAME=	alsa-lib
-PORTVERSION=	1.0.26
+PORTVERSION=	1.0.27.2
 CATEGORIES=	audio
 MASTER_SITES=	ALSA/lib \
 		GENTOO/distfiles
@@ -17,11 +13,22 @@ COMMENT=	ALSA compatibility library
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--disable-aload --disable-python \
-		--with-pkgconfdir="${PREFIX}/libdata/pkgconfig"
+CONFIGURE_ARGS=	--with-pkgconfdir="\$${prefix}/libdata/pkgconfig"
+
+OPTIONS_DEFINE=	PYTHON
+OPTIONS_SUB=	${OPTIONS_DEFINE}
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MPYTHON}
+USE_PYTHON=	-2.7
+.else
+CONFIGURE_ARGS+=--disable-python
+.endif
 
 post-patch:	.SILENT
 	${REINPLACE_CMD} -e '/LIBS/ { s/-ldl//g; s/-lrt//g; }' \
+		-e 's/python-config/${PYTHON_CMD:T}-config/g' \
 		-e '/-D_GNU_SOURCE/d' \
 		-e '/lt_cv_dlopen/s/-ldl//g' ${WRKSRC}/configure
 	${REINPLACE_CMD} '/LIBADD/s/-ldl//g' \
@@ -30,10 +37,10 @@ post-patch:	.SILENT
 		${WRKSRC}/src/conf/alsa.conf
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/asound.conf.sample ${PREFIX}/etc
+	${INSTALL_DATA} ${FILESDIR}/asound.conf.sample ${STAGEDIR}${PREFIX}/etc
 	@if [ ! -f ${PREFIX}/etc/asound.conf ]; then \
-		${CP} -p ${PREFIX}/etc/asound.conf.sample \
-			${PREFIX}/etc/asound.conf ; \
+		${CP} -p ${STAGEDIR}${PREFIX}/etc/asound.conf.sample \
+			${STAGEDIR}${PREFIX}/etc/asound.conf ; \
 	fi
 
 .include <bsd.port.mk>
