@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-HTML-Tiny/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-HTML-Tiny/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-Tiny
 PORTVERSION=	1.05
@@ -16,4 +16,5 @@ MAN3=		HTML::Tiny.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
