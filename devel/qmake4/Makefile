@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org, mi@aldan.algebra.com
-# $FreeBSD: devel/qmake4/Makefile 324773 2013-08-15 15:39:05Z rakuco $
+# Created by: lofi@FreeBSD.org, mi@aldan.algebra.com
+# $FreeBSD: devel/qmake4/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qmake
 DISTVERSION=	${QT4_VERSION}
@@ -37,6 +37,7 @@ EXTRACT_AFTER_ARGS= \
 	'${DISTNAME}/tools/shared/symbian' \
 	'${DISTNAME}/tools/shared/windows'
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2|${CXXFLAGS}|' \
 		-e 's|/usr/local|${LOCALBASE}|' \
