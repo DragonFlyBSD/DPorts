@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/libXfontcache/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/libXfontcache/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	libXfontcache
 PORTVERSION=	1.0.5
@@ -17,4 +17,5 @@ MAN3=		FontCacheChangeCacheSettings.3 \
 		FontCacheGetCacheStatistics.3 \
 		Xfontcache.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
