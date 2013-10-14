@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: textproc/rman/Makefile 314601 2013-03-18 21:06:42Z eadler $
+# $FreeBSD: textproc/rman/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rman
 PORTVERSION=	3.2
@@ -15,6 +15,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" \
 MAN1=		rman.1
 PLIST_FILES=	bin/rman
 
+NO_STAGE=	yes
 post-install:
 	@${STRIP_CMD} ${PREFIX}/bin/rman
 
