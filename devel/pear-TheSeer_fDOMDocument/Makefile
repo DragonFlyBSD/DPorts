@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-TheSeer_fDOMDocument/Makefile,v 1.2 2013/01/03 11:57:25 svnexp Exp $
+# $FreeBSD: devel/pear-TheSeer_fDOMDocument/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	fDOMDocument
 PORTVERSION=	1.3.2
@@ -23,6 +23,7 @@ PEAR_AUTOINSTALL=	yes
 
 IGNORE_WITH_PHP=52
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
