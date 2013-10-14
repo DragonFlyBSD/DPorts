@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/flickrnet/files/patch-flickrnet.pc.in,v 1.2 2012/11/17 05:55:43 svnexp Exp $
+$FreeBSD: devel/flickrnet/files/patch-flickrnet.pc.in 300896 2012-07-14 13:54:48Z beat $
 
 --- /dev/null
 +++ flickrnet.pc.in

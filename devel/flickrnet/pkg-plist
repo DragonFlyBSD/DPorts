@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/flickrnet/pkg-plist,v 1.2 2012/11/17 05:55:43 svnexp Exp $
+@comment $FreeBSD: devel/flickrnet/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/mono/flickrnet/FlickrNet.dll
 libdata/pkgconfig/flickrnet.pc
 @dirrm lib/mono/flickrnet

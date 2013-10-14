@@ -1,9 +1,5 @@
-# New ports collection makefile for:    flickrnet
-# Date created:         2008-10-09
-# Whom:                 Romain Tartiere <romain@blogreen.org>
-#
-# $FreeBSD: ports/devel/flickrnet/Makefile,v 1.3 2012/11/17 05:55:43 svnexp Exp $
-#
+# Created by: Romain Tartiere <romain@blogreen.org>
+# $FreeBSD: devel/flickrnet/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	flickrnet
 PORTVERSION=	2.2.0
@@ -22,6 +18,7 @@ USE_ZIP=	yes
 USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/FlickrNet
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${LOCALBASE}/bin/gmcs -t:library -out:FlickrNet.dll -r:System.Data -r:System.Web -r:System.Drawing *.cs
 
