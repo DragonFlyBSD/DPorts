@@ -1,5 +1,5 @@
 # Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-General/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-Config-General/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-General
 PORTVERSION=	2.52
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN3=		Config::General::Extended.3 Config::General::Interpolated.3 \
 		Config::General.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
