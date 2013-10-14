@@ -1,8 +1,8 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: textproc/ibus/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: textproc/ibus/Makefile 329135 2013-10-03 01:09:54Z delphij $
 
 PORTNAME=	ibus
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
@@ -37,6 +37,7 @@ GTK3_DESC=	Install GTK3 client
 VALA_DESC=	Install vala binding
 GINTRO_DESC=	Install GObject Introspection data
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MISOCODES}
