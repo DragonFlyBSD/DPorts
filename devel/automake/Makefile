@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/automake/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/automake/Makefile 328071 2013-09-23 22:03:42Z bapt $
 
 PORTNAME=	automake
 PORTVERSION=	1.14
@@ -23,17 +23,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-suffix=-${BUILD_VERSION}
 CONFIGURE_ENV+=	MAKEINFO="makeinfo --no-split"
 INFO=		automake
-MAN1=		aclocal-${BUILD_VERSION}-${BUILD_VERSION}.1 \
-		aclocal-${BUILD_VERSION}.1 \
-		automake-${BUILD_VERSION}-${BUILD_VERSION}.1 \
-		automake-${BUILD_VERSION}.1
-
-post-patch:
-	@${RM} ${WRKSRC}/doc/*.info
-
-pre-su-install:
-	@${RM} -fr ${PREFIX}/share/automake-${BUILD_VERSION}
-	@${MKDIR} ${PREFIX}/share/automake-${BUILD_VERSION}
-	@${MKDIR} ${PREFIX}/share/aclocal-${BUILD_VERSION}
 
 .include <bsd.port.mk>
