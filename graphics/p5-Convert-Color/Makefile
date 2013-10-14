@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-Convert-Color/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: graphics/p5-Convert-Color/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Convert-Color
 PORTVERSION=	0.09
@@ -27,4 +27,5 @@ MAN3=	Convert::Color.3 \
 	Convert::Color::VGA.3 \
 	Convert::Color::X11.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
