@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11-toolkits/hippo-canvas/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11-toolkits/hippo-canvas/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	hippo-canvas
 PORTVERSION=	0.3.0
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--enable-python
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's/^SUBDIRS =.*$$/SUBDIRS = ./g' ${WRKSRC}/Makefile.in
 
