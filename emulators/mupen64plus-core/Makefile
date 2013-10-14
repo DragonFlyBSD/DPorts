@@ -1,9 +1,9 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: emulators/mupen64plus-core/Makefile 326079 2013-09-02 20:27:18Z bapt $
+# $FreeBSD: emulators/mupen64plus-core/Makefile 329344 2013-10-04 17:18:44Z acm $
 
 PORTNAME=	mupen64plus
-PORTVERSION?=	1.99.4
-PORTREVISION?=	5
+PORTVERSION?=	2.0
+PORTREVISION?=	0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		${MASTER_SITE_LOCAL:S,$,acm/${PORTNAME}/,} \
@@ -15,16 +15,19 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER?=	acm@FreeBSD.org
 COMMENT?=	A fork of Mupen64 Nintendo 64 emulator
 
-PROJECTHOST=	bsdistfiles
+#PROJECTHOST=	bsdistfiles
 USES=		gmake pkgconfig
 USE_GL?=	yes
 USE_SDL?=	yes
 USE_LDCONFIG?=	yes
 ONLY_FOR_ARCHS=	i386 amd64
 
-MAKE_ENV+=	PTHREAD_LIBS="${PTHREAD_LIBS}"
+OPTFLAGS=	#
+
+MAKE_ENV+=	PTHREAD_LIBS="${PTHREAD_LIBS}" OPTFLAGS="${OPTFLAGS}"
 OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}${PKGNAMESUFFIX}/options
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .include "${MASTERDIR}/Makefile.common"
