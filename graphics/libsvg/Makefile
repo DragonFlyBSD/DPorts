@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: graphics/libsvg/Makefile 327133 2013-09-13 08:13:31Z bsam $
+# $FreeBSD: graphics/libsvg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/libsvg/Makefile,v 1.3 2005/07/04 00:11:29 marcus Exp $
 
 PORTNAME=	libsvg
@@ -29,4 +29,5 @@ PLIST_FILES=	include/svg.h \
 		lib/libsvg.so.1 \
 		libdata/pkgconfig/libsvg.pc
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
