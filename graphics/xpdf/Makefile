@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/xpdf/Makefile 322813 2013-07-12 04:33:25Z cy $
+# $FreeBSD: graphics/xpdf/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -31,6 +31,7 @@ LIBPAPER_DESC=	Enable libpaper
 TYPE1_DESC=	Ghostscript type1 fonts
 OPTIONS_DEFAULT=	TYPE1 X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTYPE1}
@@ -57,7 +58,6 @@ USES+=			motif
 MAN1+=			xpdf.1
 PLIST_SUB+=		X11=""
 .else
-PKGNAMESUFFIX+=		-nox11
 CONFIGURE_ARGS+=	--without-x
 PLIST_SUB+=		X11="@comment "
 .endif
