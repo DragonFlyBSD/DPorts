@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/R-cran-RSQLite/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: databases/R-cran-RSQLite/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	RSQLite
 PORTVERSION=	0.11.2
@@ -18,4 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
