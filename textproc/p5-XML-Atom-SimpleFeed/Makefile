@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Atom-SimpleFeed/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-XML-Atom-SimpleFeed/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Atom-SimpleFeed
 PORTVERSION=	0.86
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	XML::Atom::SimpleFeed.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
