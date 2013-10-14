@@ -1,5 +1,5 @@
 # Created by: freebsd-ports@evilcode.net
-# $FreeBSD: multimedia/mediainfo/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: multimedia/mediainfo/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mediainfo
 PORTVERSION=	0.7.52
@@ -26,6 +26,7 @@ PLIST_FILES=	bin/mediainfo \
 		lib/libzen.so \
 		lib/libzen.so.0
 
+NO_STAGE=	yes
 do-build:
 	@(cd ${WRKSRC}/ZenLib/Project/GNU/Library/ && ${SH} ./autogen)
 	@(cd ${WRKSRC}/MediaInfoLib/Project/GNU/Library/ && ${SH} ./autogen)
