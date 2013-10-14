@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: lang/pure/Makefile 324440 2013-08-09 14:29:39Z danfe $
+# $FreeBSD: lang/pure/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	pure
 PORTVERSION=	0.55
@@ -33,6 +33,7 @@ EMACS_DESC=	Compile pure-mode.el with Emacs
 MAN1=		pure.1
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEMACS}
