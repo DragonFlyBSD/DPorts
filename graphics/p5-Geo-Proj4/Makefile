@@ -1,5 +1,5 @@
 # Created by: Eric Stith
-# $FreeBSD: graphics/p5-Geo-Proj4/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Geo-Proj4/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Geo-Proj4
 PORTVERSION=	1.04
@@ -18,4 +18,5 @@ MAKE_ENV=	INC=-I${LOCALBASE}/include
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
