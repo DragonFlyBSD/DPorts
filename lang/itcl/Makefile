@@ -1,5 +1,5 @@
 # Created by: chuckr
-# $FreeBSD: lang/itcl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/itcl/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	itcl
 PORTVERSION=	3.4.1
@@ -34,6 +34,7 @@ MANN=		body.itcl class.itcl code.itcl configbody.itcl delete.itcl ensemble.itcl 
 		is.itcl itcl.itcl itclvars.itcl local.itcl scope.itcl
 MAN3=		Itcl_RegisterC.3 Itcl_Stack.3 Itcl_Class.3 Itcl_List.3 Itcl_Object.3 Itcl_Preserve.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
