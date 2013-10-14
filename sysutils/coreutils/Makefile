@@ -1,5 +1,5 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: sysutils/coreutils/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/coreutils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	coreutils
 PORTVERSION=	8.20
@@ -26,10 +26,10 @@ CONFIGURE_ARGS=	--program-prefix=g	\
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib" FORCE_UNSAFE_CONFIGURE=1
 CPPFLAGS+=	"-I${LOCALBASE}/include"
 
+USES=		gmake perl5
+USE_PERL5=	build	# build - required for tests and man page generation
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=	yes # Required for tests and man page generation
 #USE_BISON=	yes
 
 INFO=		coreutils
@@ -52,6 +52,7 @@ MAN1=	gbasename.1 gcat.1 gchcon.1 gchgrp.1 gchmod.1 gchown.1 gchroot.1 \
 OPTIONS_DEFINE=	GMP NLS
 OPTIONS_DEFAULT=NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
