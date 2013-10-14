@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/avahi-app/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: net/avahi-app/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/avahi-app/Makefile,v 1.25 2012/09/01 23:02:11 mezz Exp $
 
 PORTNAME=	avahi
@@ -60,6 +60,7 @@ DAEMON_CONFIG_FILES=	hosts avahi-daemon.conf
 USE_RC_SUBR=yes
 .endif # !avahi-header
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${AVAHI_SLAVE} != header
