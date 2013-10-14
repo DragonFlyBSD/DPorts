@@ -1,9 +1,5 @@
-# New ports collection makefile for:   jinput
-# Date created:                        Mar 25 2012
-# Whom:                                loader <loader@freebsdmall.com>
-#
-# $FreeBSD: games/jinput/Makefile 313987 2013-03-12 17:16:37Z sunpoet $
-#
+# Created by: loader <loader@freebsdmall.com>
+# $FreeBSD: games/jinput/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	jinput
 DISTVERSION=	20110801.r247
@@ -27,6 +23,7 @@ ALL_TARGET=	simple_linux
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}/${PORTNAME}.jar
 PLIST_DIRS=	%%JAVAJARDIR%%/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${LN} -sf ${JAVALIBDIR}/jutils/jutils.jar ${WRKSRC}/lib/
 
