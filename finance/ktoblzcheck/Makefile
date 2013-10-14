@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: finance/ktoblzcheck/Makefile 327023 2013-09-12 01:11:24Z jhale $
+# $FreeBSD: finance/ktoblzcheck/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	ktoblzcheck
 PORTVERSION=	1.43
@@ -19,6 +19,7 @@ MAN1=		ktoblzcheck.1
 
 OPTIONS_DEFINE=	PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
