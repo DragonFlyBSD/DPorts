@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/xf86dgaproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xf86dgaproto/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	xf86dgaproto
 PORTVERSION=	2.1
