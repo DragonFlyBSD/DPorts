@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 327481 2013-09-17 16:11:06Z pawel $
+# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	c++-gtk-utils
 PORTVERSION=	2.2.3
@@ -27,13 +27,5 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DEBUG DOCS
 
 DEBUG_CONFIGURE_ON=	--enable-debug
-
-.include <bsd.port.options.mk>
-
-post-configure:
-.if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} '/^SUBDIRS/ s|docs|| ; /^pkgdoc_DATA/d' \
-		${WRKSRC}/Makefile
-.endif
 
 .include <bsd.port.mk>
