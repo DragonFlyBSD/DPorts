@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ksnapshot/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/ksnapshot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ksnapshot
 PORTVERSION=	${KDE4_VERSION}
@@ -18,4 +18,5 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11 xext xfixes
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
