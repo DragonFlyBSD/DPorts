@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: devel/cl-port/Makefile 312502 2013-02-18 12:34:39Z olgeni $
+# $FreeBSD: devel/cl-port/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	port
 PORTVERSION=	2002.10.02.1
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ASDF_PATHNAME}
 	@${INSTALL_DATA} ${WRKSRC}/clocc-port.asd ${ASDF_PATHNAME}/port.asd
