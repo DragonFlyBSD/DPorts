@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pthsem
-# Date Created:				6 Dec 2007
-# Whom:					Björn König <bkoenig@alpha-tierchen.de>
-#
-# $FreeBSD: ports/devel/pthsem/Makefile,v 1.3 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Björn König <bkoenig@alpha-tierchen.de>
+# $FreeBSD: devel/pthsem/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pthsem
 PORTVERSION=	2.0.7
@@ -22,4 +18,5 @@ MAN3=		pthsem.3
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
