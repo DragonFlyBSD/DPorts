@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-hs-bibutils/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-hs-bibutils/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	hs-bibutils
 PORTVERSION=	5.0
@@ -14,5 +14,6 @@ RUN_DEPENDS=	bibutils>=5.0:${PORTSDIR}/textproc/bibutils
 
 USE_CABAL=	syb
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
