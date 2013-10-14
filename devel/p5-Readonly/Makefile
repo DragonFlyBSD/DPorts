@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Readonly/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Readonly/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Readonly
 PORTVERSION=	1.03
@@ -20,6 +20,7 @@ PORTVERSION_XS=	1.05
 
 MAN3=		Readonly.3 Readonly::XS.3
 
+NO_STAGE=	yes
 post-patch:
 	${MV} ${WRKDIR}/${PORTNAME}-XS-${PORTVERSION_XS} ${WRKSRC}
 	${RM} ${WRKSRC}/*.pl
