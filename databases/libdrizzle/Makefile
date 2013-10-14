@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: databases/libdrizzle/Makefile 314857 2013-03-21 17:46:11Z bapt $
+# $FreeBSD: databases/libdrizzle/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libdrizzle
 PORTVERSION=	0.8
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 SAMPLE_PROGS=	client pipe_query proxy server simple \
 		simple_multi sqlite_server
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} && ${PORT_OPTIONS:MDOXYGEB}
