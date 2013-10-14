@@ -1,5 +1,5 @@
 # Created by: Yamashiro Jun <yamajun@ofug.net>
-# $FreeBSD: textproc/uim-qt4/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
+# $FreeBSD: textproc/uim-qt4/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PKGNAMESUFFIX=	-qt4
 
@@ -25,6 +25,7 @@ UIM_SLAVE=	yes
 IGNORE=		cannot be built without X11. Please, unset WITHOUT_X11
 .endif
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}/uim && ${SETENV} ${MAKE_ENV} ${GMAKE} libuim-x-util.la libuim-counted-init.la)
 	(cd ${WRKSRC}/replace && ${SETENV} ${MAKE_ENV} ${GMAKE})
