@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-stevedore/Makefile 325673 2013-08-30 12:11:16Z nivit $
+# $FreeBSD: devel/py-stevedore/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	stevedore
 PORTVERSION=	0.11
@@ -28,6 +28,7 @@ TOX_CMD=	${LOCALBASE}/bin/tox
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
