@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/gtkdatabox/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/gtkdatabox/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtkdatabox
 PORTVERSION=	0.9.2.0
@@ -26,6 +26,7 @@ USE_LDCONFIG=	yes
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGLADE}
