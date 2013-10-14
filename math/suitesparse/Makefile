@@ -1,5 +1,5 @@
 # Created by: Maho Nakata <maho@FreeBSD.org>
-# $FreeBSD: math/suitesparse/Makefile 322492 2013-07-08 11:45:14Z bapt $
+# $FreeBSD: math/suitesparse/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	suitesparse
 PORTVERSION=	4.0.2
@@ -24,6 +24,7 @@ RESTRICTED=	GPL and METIS licenses are contradictory
 
 CONFLICTS=	umfpack-*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libopenblas.so)
