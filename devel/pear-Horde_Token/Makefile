@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Date
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: devel/pear-Horde_Token/Makefile 317889 2013-05-11 15:37:47Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_Token/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Token
 PORTVERSION=	2.0.4
@@ -17,6 +14,7 @@ USE_HORDE_RUN=	Horde_Exception \
 		Horde_Util
 USE_PHP=	hash
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
