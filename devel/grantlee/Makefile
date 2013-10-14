@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: devel/grantlee/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/grantlee/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	grantlee
 DISTVERSION=	0.3.0
@@ -21,6 +21,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOXYGEN
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOXYGEN}
