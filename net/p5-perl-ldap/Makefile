@@ -1,5 +1,5 @@
-# Created by: scrappy@freebsd.org
-# $FreeBSD: net/p5-perl-ldap/Makefile 325194 2013-08-22 13:06:31Z mat $
+# Created by: scrappy@FreeBSD.org
+# $FreeBSD: net/p5-perl-ldap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	perl-ldap
 PORTVERSION=	0.5700
@@ -75,4 +75,5 @@ MAN3=		Bundle::Net::LDAP.3 \
 		Net::LDAPI.3 \
 		Net::LDAPS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
