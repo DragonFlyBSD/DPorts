@@ -1,5 +1,5 @@
 # Created by: Jim Geovedi <jim@corebsd.or.id>
-# $FreeBSD: security/xmlsec1/Makefile 317206 2013-05-03 13:44:47Z bapt $
+# $FreeBSD: security/xmlsec1/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	xmlsec1
 PORTVERSION=	1.2.19
@@ -33,6 +33,7 @@ MAKE_ARGS+=	-EABS_BUILDDIR
 .endif
 USE_AUTOTOOLS=	libltdl
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
