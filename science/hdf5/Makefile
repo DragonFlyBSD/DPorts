@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/hdf5/Makefile 323491 2013-07-22 18:17:31Z marino $
+# $FreeBSD: science/hdf5/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	hdf5
 PORTVERSION=	1.6.9
@@ -31,6 +31,7 @@ CONFIGURE_ARGS=	--disable-debug \
 ALL_TARGET=	lib progs
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_FORTRAN)
