@@ -1,4 +1,4 @@
-# $FreeBSD: lang/python3/Makefile 324925 2013-08-18 15:25:24Z mva $
+# $FreeBSD: lang/python3/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	python3
 PORTVERSION=	${PYTHON_MAJOR_VER}
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/2to3-${PYTHON_MAJOR_VER} \
 		bin/python-shared${PYTHON_MAJOR_VER} \
 		bin/python-shared${PYTHON_MAJOR_VER}-config
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 RUN_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR}
