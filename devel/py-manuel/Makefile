@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-manuel/Makefile,v 1.5 2013/02/12 19:19:46 svnexp Exp $
+# $FreeBSD: devel/py-manuel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	manuel
 PORTVERSION=	1.6.1
@@ -18,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>=0:${PORTSDIR}/devel/py-six
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
