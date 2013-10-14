@@ -1,5 +1,5 @@
 # Created by: Bernd Rosauer <br@netland.inka.de>
-# $FreeBSD: print/teTeX/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/teTeX/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	teTeX
 PORTVERSION=	3.0
@@ -18,6 +18,7 @@ USE_TEX=	base texmf dvipsk dvipdfmx
 OPTIONS_DEFINE=	LETTERSIZE X11
 LETTERSIZE_DESC=	Use letter size by default
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
