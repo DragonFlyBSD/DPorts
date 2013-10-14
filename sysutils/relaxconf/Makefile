@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: sysutils/relaxconf/Makefile 317492 2013-05-06 09:22:47Z bapt $
+# $FreeBSD: sysutils/relaxconf/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	relaxconf
 PORTVERSION=	1.1.1
@@ -16,6 +16,7 @@ RUN_DEPENDS=	cdialog:${PORTSDIR}/devel/cdialog \
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
