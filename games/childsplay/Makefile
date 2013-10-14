@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pyassetml
-# Date created:				6 July 2004
-# Whom:					bruno
-#
-# $FreeBSD: ports/games/childsplay/Makefile,v 1.17 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: bruno
+# $FreeBSD: games/childsplay/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	childsplay
 PORTVERSION=	0.90.2
@@ -28,6 +24,7 @@ MAKE_ENV=	LANG=C
 MAN6=		childsplay.6 letters-trans.6
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s@PREFIX=/usr/local@PREFIX=${PREFIX}@g " ${WRKSRC}/INSTALL.sh
 	@${REINPLACE_CMD} -e "s@ASSETMLROOT = '/usr/local@ASSETMLROOT= '${PREFIX}@g" ${WRKSRC}/pyassetml.py
