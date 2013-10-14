@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-utf8-string/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-utf8-string/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	utf8-string
 PORTVERSION=	0.3.7
@@ -10,5 +10,6 @@ COMMENT=	Support for reading/writing UTF-8 strings for Haskell programs
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
