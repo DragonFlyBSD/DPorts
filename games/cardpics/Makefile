@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cardpics
-# Date created:		Mon 8 mar 2004
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/games/cardpics/Makefile,v 1.2 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: games/cardpics/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=		cardpics
 PORTVERSION=		0.4
