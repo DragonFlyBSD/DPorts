@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/ecore-imf/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: x11/ecore-imf/Makefile 329512 2013-10-05 21:58:10Z gblach $
 
 PORTNAME=	imf
 PORTVERSION=	1.7.8
@@ -17,9 +17,8 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_EFL=	ecore libtool_hack
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_imf
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
@@ -39,6 +38,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ecore-imf.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
