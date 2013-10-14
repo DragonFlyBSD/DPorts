@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: devel/gconfmm26/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: devel/gconfmm26/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports-stable/devel/gconfmm26/Makefile,v 1.1 2010/06/24 07:51:01 kwm Exp $
 
 PORTNAME=	gconfmm
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	--enable-static --disable-documentation
 
 PLIST_SUB=	VERSION="2.6" API_VERSION="2.6"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
