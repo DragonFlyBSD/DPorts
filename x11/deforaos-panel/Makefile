@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-panel/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/deforaos-panel/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	deforaos-panel
 PORTVERSION=	0.2.17
@@ -35,6 +35,7 @@ MAN1=	panel-embed.1 \
 	panel.1 \
 	panelctl.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/|/libdata/|g' \
 		${WRKSRC}/data/pkgconfig.sh
