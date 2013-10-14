@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: ports/devel/boost-docs/Makefile,v 1.4 2013/01/31 13:51:19 svnexp Exp $
+# $FreeBSD: devel/boost-docs/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	boost-docs
 COMMENT=	Documentation for libraries from boost.org
@@ -9,6 +9,7 @@ UNIQ=		/usr/bin/uniq
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/..//boost-all/common.mk"
 
 do-install:
