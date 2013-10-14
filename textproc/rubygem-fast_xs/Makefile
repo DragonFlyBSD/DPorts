@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: textproc/rubygem-fast_xs/Makefile 322149 2013-07-02 02:02:58Z swills $
+# $FreeBSD: textproc/rubygem-fast_xs/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	fast_xs
 PORTVERSION=	0.8.0
@@ -16,4 +16,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
