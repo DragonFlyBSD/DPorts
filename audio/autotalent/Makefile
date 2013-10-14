@@ -1,11 +1,10 @@
 # Created by: Rich Neese <r.neese@gmail.com>
-# $FreeBSD: audio/autotalent/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/autotalent/Makefile 328795 2013-09-30 14:23:02Z bdrewery $
 
 PORTNAME=	autotalent
 PORTVERSION=	0.2
 CATEGORIES=	audio
 MASTER_SITES=	http://web.mit.edu/tbaran/www/
-DISTNAME=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Real-time pitch correction plugin for LADSPA
@@ -13,6 +12,7 @@ COMMENT=	Real-time pitch correction plugin for LADSPA
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+NO_STAGE=	yes
 USES=		gmake
 
 MAKE_ARGS=	CXX="${CXX}" CC=${CC} CPP=${CPP} \
