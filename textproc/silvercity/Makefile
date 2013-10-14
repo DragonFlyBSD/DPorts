@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	silvercity
-# Date created:			Dec 29, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/silvercity/Makefile,v 1.9 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/silvercity/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	silvercity
 PORTVERSION=	0.9.7
@@ -20,4 +15,5 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	SilverCity
 USE_DOS2UNIX=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
