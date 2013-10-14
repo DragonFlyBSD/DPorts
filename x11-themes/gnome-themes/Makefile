@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-themes/gnome-themes/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11-themes/gnome-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 #   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.183 2010/11/15 22:11:44 kwm Exp $
 
 PORTNAME=	gnome-themes
@@ -26,4 +26,5 @@ USE_GNOME=	gnomehack gnomeprefix intlhack metacity gtk20
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
