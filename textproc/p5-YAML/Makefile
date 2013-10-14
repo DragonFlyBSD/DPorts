@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-YAML/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-YAML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	YAML
 PORTVERSION=	0.84
@@ -26,4 +26,5 @@ MAN3=	\
 	YAML::Tag.3 \
 	YAML::Types.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
