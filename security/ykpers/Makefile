@@ -1,4 +1,4 @@
-# $FreeBSD: security/ykpers/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: security/ykpers/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ykpers
 PORTVERSION=	1.12.0
@@ -41,6 +41,7 @@ MAKE_JOBS_UNSAFE=yes
 
 LDFLAGS+=	-L/usr/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^pkgconfigdir = .*|pkgconfigdir = /usr/local/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile.in
