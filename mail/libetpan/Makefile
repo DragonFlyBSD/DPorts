@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/libetpan/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: mail/libetpan/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	libetpan
 PORTVERSION=	1.1
