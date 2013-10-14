@@ -1,5 +1,5 @@
 # Created by: tabthorpe
-# $FreeBSD: devel/p5-Locale-PO/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Locale-PO/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Locale-PO
 PORTVERSION=	0.23
@@ -23,4 +23,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		Locale::PO.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
