@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Data-Validate-Domain/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: dns/p5-Data-Validate-Domain/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Data-Validate-Domain
 PORTVERSION=	0.10
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::Validate::Domain.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
