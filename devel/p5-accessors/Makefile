@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-accessors/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-accessors/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	accessors
 PORTVERSION=	1.01
@@ -17,4 +17,5 @@ USE_PERL5=	modbuild
 MAN3=		accessors.3 accessors::chained.3 accessors::classic.3 \
 		accessors::ro.3 accessors::rw.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
