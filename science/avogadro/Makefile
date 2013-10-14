@@ -1,5 +1,5 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: science/avogadro/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: science/avogadro/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	avogadro
 PORTVERSION=	1.1.0
@@ -31,6 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		avogadro.1 avopkg.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
