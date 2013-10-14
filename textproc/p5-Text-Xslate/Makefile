@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Xslate/Makefile 326762 2013-09-08 16:40:43Z tobez $
+# $FreeBSD: textproc/p5-Text-Xslate/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Xslate
 PORTVERSION=	2.0009
@@ -56,6 +56,7 @@ MAN3=	Text::Xslate.3 \
 	Text::Xslate::Type::Raw.3 \
 	Text::Xslate::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501600
