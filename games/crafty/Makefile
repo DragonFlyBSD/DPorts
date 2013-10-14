@@ -1,5 +1,5 @@
 # Created by: Stefan Eggers <seggers@semyam.dinoco.de>
-# $FreeBSD: games/crafty/Makefile 327183 2013-09-13 20:43:00Z flo $
+# $FreeBSD: games/crafty/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	crafty
 PORTVERSION=	23.4
@@ -45,6 +45,7 @@ OPT=		-DCPUS=4 -DHASHSTATS -DTRACE -DBOOKDIR=\\\"${WITH_BOOKDIR}\\\" \
 		-DTBDIR=\\\"${WITH_TBDIR}\\\" \
 		-DPERSDIR=\\\"${WITH_PERSDIR}\\\" -DSKILL
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
