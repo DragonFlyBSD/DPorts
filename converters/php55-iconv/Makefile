@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: converters/php55-iconv/Makefile 321684 2013-06-24 14:32:11Z ale $
+# $FreeBSD: converters/php55-iconv/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 CATEGORIES=	converters
 
@@ -7,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-iconv
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
