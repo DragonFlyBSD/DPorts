@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-MessagePack/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-Data-MessagePack/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-MessagePack
 PORTVERSION=	0.47
@@ -23,4 +23,5 @@ MAN3=	Data::MessagePack.3 \
 	Data::MessagePack::PP.3 \
 	Data::MessagePack::Unpacker.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
