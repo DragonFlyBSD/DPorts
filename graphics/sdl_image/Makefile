@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/sdl_image/Makefile 326850 2013-09-09 22:49:20Z mm $
+# $FreeBSD: graphics/sdl_image/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sdl_image
 PORTVERSION=	1.2.12
@@ -25,6 +25,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lm
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/.libs/showimage ${PREFIX}/bin
 
