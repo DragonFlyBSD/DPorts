@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: devel/py-nose/Makefile 320340 2013-06-09 15:06:41Z koobs $
+# $FreeBSD: devel/py-nose/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	nose
 PORTVERSION=	1.3.0
@@ -21,6 +21,7 @@ PLIST_SUB+=	PYTHON_VER=${PYTHON_VER}
 .if !defined(NO_INSTALL_MANPAGES)
 MAN1=		nosetests.1
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/nosetests.1 ${MANPREFIX}/man/man1
 .endif
