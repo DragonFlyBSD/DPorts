@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: textproc/p5-libxml/Makefile 325604 2013-08-29 15:32:25Z sunpoet $
+# $FreeBSD: textproc/p5-libxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libxml
 PORTVERSION=	0.08
@@ -25,4 +25,5 @@ MAN3=		Data::Grove.3 Data::Grove::Parent.3 Data::Grove::Visitor.3 \
 		XML::PatAct::MatchName.3 XML::PatAct::PatternTempl.3 \
 		XML::PatAct::ToObjects.3 XML::Perl2SAX.3 XML::SAX2Perl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
