@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: textproc/py-mako/Makefile 323098 2013-07-16 06:57:38Z wen $
+# $FreeBSD: textproc/py-mako/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	mako
 PORTVERSION=	0.8.1
@@ -21,4 +21,5 @@ USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Mako
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
