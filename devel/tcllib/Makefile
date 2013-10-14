@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: devel/tcllib/Makefile 323251 2013-07-18 18:14:51Z gahr $
+# $FreeBSD: devel/tcllib/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tcllib
 PORTVERSION=	1.15
@@ -12,8 +12,7 @@ COMMENT=	A collection of utility modules for Tcl
 
 OPTIONS_DEFINE=	DOCS MANPAGES
 
-USE_TCL=	84+
-
+USES+=		tcl
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_path_tclsh="${TCLSH}"
 ALL_TARGET=	all
@@ -24,6 +23,7 @@ INSTALL_ARGS=	-pkgs -pkg-path ${PREFIX}/lib/tcllib \
 		-apps -app-path ${PREFIX}/bin \
 		-no-wait -no-gui -no-examples
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 #
