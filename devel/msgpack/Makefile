@@ -1,9 +1,4 @@
-# New ports collection makefile for:	msgpack
-# Date created:		18 Jan 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: devel/msgpack/Makefile 324851 2013-08-17 16:27:24Z gerald $
-#
+# $FreeBSD: devel/msgpack/Makefile 329871 2013-10-09 06:58:43Z bapt $
 
 PORTNAME=	msgpack
 PORTVERSION=	0.5.7
@@ -21,8 +16,6 @@ USE_LDCONFIG=	yes
 .if ${ARCH} == "sparc64"
 # required for __sync _* atomic operations on sparc
 USE_GCC=	yes
-.else
-USE_GCC=	4.2+
 .endif
 
 .if ${ARCH} == "i386"
