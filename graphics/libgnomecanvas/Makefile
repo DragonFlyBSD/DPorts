@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/libgnomecanvas/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/libgnomecanvas/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.79 2010/09/28 07:31:27 kwm Exp $
 
 PORTNAME=	libgnomecanvas
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
 
 .endif
