@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tk-wrapper
-# Date created:				16 April 2007
-# Whom:					Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/tk-wrapper/Makefile,v 1.4 2012/11/26 18:26:00 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: x11-toolkits/tk-wrapper/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 MAINTAINER=	tcltk@FreeBSD.org
 
@@ -11,4 +7,5 @@ BUILDING_TK_WRAPPER=	yes
 
 MASTERDIR=	${.CURDIR}/../../lang/tcl-wrapper
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
