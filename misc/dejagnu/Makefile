@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: misc/dejagnu/Makefile 319928 2013-06-04 22:20:51Z bf $
+# $FreeBSD: misc/dejagnu/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	dejagnu
 PORTVERSION=	1.5.1
@@ -21,4 +21,5 @@ GNU_CONFIGURE=	yes
 MAN1=		runtest.1
 INFO=		${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
