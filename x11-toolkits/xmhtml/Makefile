@@ -1,5 +1,5 @@
-# Created by: Peter Hawkins <thepish@freebsd.org>
-# $FreeBSD: x11-toolkits/xmhtml/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# Created by: Peter Hawkins <thepish@FreeBSD.org>
+# $FreeBSD: x11-toolkits/xmhtml/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	XmHTML
 PORTVERSION=	1.1.7
@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 USE_XORG=	xmu
 CFLAGS+=	-I${LOCALBASE}/include/libpng15
 
+NO_STAGE=	yes
 do-configure:
 	@${DO_NADA}
 
