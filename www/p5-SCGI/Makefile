@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SCGI
-# Date created:				Fri Jan  5 13:55:53 EST 2007
-# Whom:					Vivek Khera <vivek@khera.org>
-#
-# $FreeBSD: www/p5-SCGI/Makefile 326054 2013-09-02 18:41:05Z az $
-#
+# Created by: Vivek Khera <vivek@khera.org>
+# $FreeBSD: www/p5-SCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	SCGI
 PORTVERSION=	0.6
@@ -23,4 +19,5 @@ MAN3=	SCGI.3 SCGI::Request.3
 PLIST_FILES=	${SITE_PERL_REL}/SCGI.pm ${SITE_PERL_REL}/SCGI/Request.pm
 PLIST_DIRS=	${SITE_PERL_REL}/SCGI
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
