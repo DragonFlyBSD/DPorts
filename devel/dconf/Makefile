@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/dconf/Makefile 325712 2013-08-30 17:28:32Z kwm $
+# $FreeBSD: devel/dconf/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/trunk/devel/dconf/Makefile 18669 2013-08-29 21:14:12Z kwm $
 
 PORTNAME?=	dconf
@@ -42,6 +42,7 @@ MAN1=		dconf-editor.1 dconf-service.1 dconf.1
 MAN7=		dconf.7
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' \
 		${WRKSRC}/engine/dconf-engine.c \
