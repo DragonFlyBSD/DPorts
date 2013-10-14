@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-qvfb/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-qvfb/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qvfb
 DISTVERSION=	${QT4_VERSION}
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	-I../../include/Qt -I../../include
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 	${REINPLACE_CMD} -e 's|^TARGET.*|TARGET=qvfb-qt4|g' \
