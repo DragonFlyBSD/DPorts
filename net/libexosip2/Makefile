@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libeXosip2
-# Date created:				12 April 2006
-# Whom:					Muhammad Moinur Rahman <bd_subzero@yahoo.com>
-#
-# $FreeBSD: ports/net/libexosip2/Makefile,v 1.13 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: Muhammad Moinur Rahman <bd_subzero@yahoo.com>
+# $FreeBSD: net/libexosip2/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libeXosip2
 PORTVERSION=	3.6.0
