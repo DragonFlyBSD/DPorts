@@ -1,9 +1,5 @@
-# Ports collection makefile for:	fget
-# Date created:				27 January 2002
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/ftp/fget/Makefile,v 1.8 2012/11/17 05:57:29 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: ftp/fget/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	fget
 PORTVERSION=	1.3.3
@@ -30,4 +26,5 @@ MLINKS=	ftp_connect.3 ftp_login.3 ftp_connect.3 ftp_quit.3 \
 	ftp_site.3 ftp_site_open.3 ftp_stat.3 ftp_lstat.3 \
 	ftp_systype.3 ftp_status.3 ftp_whoami.3 ftp_get_host.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
