@@ -1,8 +1,8 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-simplejson/Makefile 324841 2013-08-17 13:08:13Z dryice $
+# $FreeBSD: devel/py-simplejson/Makefile 329614 2013-10-06 18:28:48Z sunpoet $
 
 PORTNAME=	simplejson
-PORTVERSION=	3.3.0
+PORTVERSION=	3.3.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,9 +13,9 @@ COMMENT=	Simple, fast, extensible JSON encoder/decoder
 LICENSE=	MIT
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
 
-regression-test: build
-	@(cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test)
+regression-test test: build
+	cd ${WRKSRC}/ && ${PYTHON_CMD} ${PYSETUP} test
 
 .include <bsd.port.mk>
