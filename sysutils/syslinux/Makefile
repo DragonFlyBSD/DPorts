@@ -1,5 +1,5 @@
 # Created by: luigi@FreeBSD.org
-# $FreeBSD: sysutils/syslinux/Makefile 324200 2013-08-03 19:12:45Z nox $
+# $FreeBSD: sysutils/syslinux/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	syslinux
 PORTVERSION=	6.01
@@ -26,6 +26,7 @@ MAN1=		syslinux.1
 
 PLIST_FILES+=	bin/syslinux
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # convert elf_i386 to elf_i386_fbsd
