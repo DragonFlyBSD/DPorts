@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-Apache-AuthCookie/Makefile 324259 2013-08-05 05:58:29Z az $
+# $FreeBSD: www/p5-Apache-AuthCookie/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-AuthCookie
 PORTVERSION=	3.19
@@ -19,6 +19,7 @@ USE_APACHE=	22+
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CURUSER?=	`whoami`
