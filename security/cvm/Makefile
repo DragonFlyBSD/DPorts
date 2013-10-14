@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: security/cvm/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: security/cvm/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cvm
 PORTVERSION=	0.96
@@ -25,6 +25,7 @@ DOCS=		NEWS README TODO *.html
 OPTIONS_DEFINE=	VCHKPW
 VCHKPW_DESC=	Compile cvm-vchkpw
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 ALL_TARGET=all
