@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold
-# $FreeBSD: devel/p5-IO-Pipely/Makefile 325324 2013-08-25 03:37:30Z sunpoet $
+# $FreeBSD: devel/p5-IO-Pipely/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IO-Pipely
 PORTVERSION=	0.005
@@ -23,6 +23,7 @@ USES=		perl5
 
 MAN3=		IO::Pipely.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
