@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/flac/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/flac/Makefile 328198 2013-09-24 21:39:26Z naddy $
 
 PORTNAME=	flac
 PORTVERSION=	1.3.0
@@ -10,10 +10,11 @@ MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Free lossless audio codec
 
-LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
+LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg
 
 USES=		pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
+USE_LDCONFIG=	yes
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-sse \
@@ -25,24 +26,12 @@ CONFIGURE_ARGS=	--enable-sse \
 OPTIONS_DEFINE=	DOCS ICONV
 OPTIONS_DEFAULT=ICONV
 
+ICONV_USES=	iconv
+ICONV_CPPFLAGS=	-I${ICONV_PREFIX}/include
+ICONV_LDFLAGS=	-L${ICONV_PREFIX}/lib
+ICONV_CONFIGURE_OFF=	am_cv_func_iconv=no
+
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MICONV}
-USES+=		iconv
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-.endif
-
-.if ${PORT_OPTIONS:MDOCS}
-MAKE_ENV+=	DOC=doc
-.else
-MAKE_ENV+=	DOC=""
-.endif
-
-USE_LDCONFIG=	yes
-MAN1=		flac.1 metaflac.1
-
-.include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
 BUILD_DEPENDS+=	nasm:${PORTSDIR}/devel/nasm
@@ -58,4 +47,4 @@ post-build:
 regression-test: build
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} check
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
