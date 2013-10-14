@@ -1,12 +1,13 @@
 # Created by: Thomas E. Zander
-# $FreeBSD: multimedia/mencoder/Makefile 315816 2013-04-16 15:01:00Z bdrewery $
+# $FreeBSD: multimedia/mencoder/Makefile 329667 2013-10-07 09:21:13Z koobs $
 
 PORTNAME=	mencoder
 PORTVERSION=	${MPLAYER_PORT_VERSION}
-PORTREVISION=	0
+PORTREVISION=	1
 
 COMMENT=	Convenient video file and movie encoder
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../mplayer/Makefile.shared"
 
 OPTIONS_DEFINE= AMR_NB AMR_WB BLURAY CDIO CDPARANOIA DEBUG DIRAC \
@@ -87,7 +88,7 @@ CONFIGURE_ARGS+=	--disable-faac
 .endif
 
 .if ${PORT_OPTIONS:MX264}
-LIB_DEPENDS+=		x264.125:${PORTSDIR}/multimedia/x264
+LIB_DEPENDS+=		x264:${PORTSDIR}/multimedia/x264
 .else
 CONFIGURE_ARGS+=	--disable-x264
 .endif
