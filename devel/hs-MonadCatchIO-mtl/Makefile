@@ -1,5 +1,5 @@
-# Created by:  Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-MonadCatchIO-mtl/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
+# $FreeBSD: devel/hs-MonadCatchIO-mtl/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	MonadCatchIO-mtl
 PORTVERSION=	0.3.0.5
@@ -13,5 +13,6 @@ LICENSE=	BSD
 
 USE_CABAL=	extensible-exceptions mtl
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
