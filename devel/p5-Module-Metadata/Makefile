@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Metadata/Makefile 324504 2013-08-10 13:22:07Z kuriyama $
+# $FreeBSD: devel/p5-Module-Metadata/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Metadata
 PORTVERSION=	1.000014
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=	Module::Metadata.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
