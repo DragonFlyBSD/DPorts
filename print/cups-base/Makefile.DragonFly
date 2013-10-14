@@ -1,3 +1,2 @@
 RUN_DEPENDS+=		pdftops:${PORTSDIR}/graphics/poppler-utils
 CONFIGURE_ARGS+=	--with-pdftops=${PREFIX}/bin/pdftops
-MAKE_JOBS_SAFE=		yes

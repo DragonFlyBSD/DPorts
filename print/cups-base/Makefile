@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: print/cups-base/Makefile 324428 2013-08-09 12:10:34Z crees $
+# $FreeBSD: print/cups-base/Makefile 328212 2013-09-24 22:53:11Z madpilot $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
@@ -80,6 +80,7 @@ GHOSTSCRIPT_DESC=	Build pdftops with GHOSTSCRIPT
 XPDF_DESC=		Build pdftops with XPDF
 XDG_OPEN_DESC=		Build with XDG_OPEN as browser
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(CUPS_CLIENT)
@@ -91,6 +92,9 @@ LDFLAGS+=	${ICONV_LIB}
 USE_LDCONFIG=	yes
 PKGMESSAGE=	${NONEXISTENT}
 DESCR=		${MASTERDIR}/pkg-descr.client
+.if !empty(ICONV_LIB)
+CONFIGURE_ENV+=	ac_cv_search_iconv_open=-liconv
+.endif
 .elif defined(CUPS_IMAGE)
 LIB_DEPENDS+=	cups:${PORTSDIR}/${PKGCATEGORY}/cups-client \
 		jpeg:${PORTSDIR}/graphics/jpeg \
