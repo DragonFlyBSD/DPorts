@@ -1,4 +1,4 @@
-# $FreeBSD: java/jakarta-commons-codec/Makefile 316828 2013-04-29 15:50:38Z ale $
+# $FreeBSD: java/jakarta-commons-codec/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-codec
 PORTVERSION=	1.8
@@ -24,6 +24,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
