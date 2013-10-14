@@ -1,7 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/graphics/py-opencv/Makefile,v 1.3 2012/11/17 05:58:20 svnexp Exp $
+# $FreeBSD: graphics/py-opencv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 _BUILDING_OPENCV_PYTHON=	yes
 MASTERDIR=	${.CURDIR}/../opencv
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
