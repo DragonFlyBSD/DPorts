@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: devel/p5-File-Temp/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-File-Temp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Temp
 PORTVERSION=	0.23.01
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Temp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
