@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/e_dbus/Makefile 326094 2013-09-02 21:32:23Z antoine $
+# $FreeBSD: devel/e_dbus/Makefile 328749 2013-09-29 22:17:22Z gblach $
 
 PORTNAME=	e_dbus
 PORTVERSION=	1.7.8
@@ -13,7 +13,7 @@ COMMENT=	EFL DBUS connectivity library
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
