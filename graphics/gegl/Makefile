@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: graphics/gegl/Makefile 321146 2013-06-17 19:26:33Z kwm $
+# $FreeBSD: graphics/gegl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gegl
 PORTVERSION=	0.2.0
@@ -42,6 +42,7 @@ EXAMPLES=	2geglbuffer csugar float-lookup \
 
 SHEBANG_FILES=	tools/xml_insert.sh
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPIXBUF}
