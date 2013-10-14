@@ -1,9 +1,5 @@
-# New ports collection makefile for:	google-sparsehash
-# Date created:				23 June 2005
-# Whom:					Vasil Dimov <vd@datamax.bg>
-#
-# $FreeBSD: ports/devel/google-sparsehash/Makefile,v 1.19 2013/01/28 03:51:40 svnexp Exp $
-#
+# Created by: Vasil Dimov <vd@datamax.bg>
+# $FreeBSD: devel/google-sparsehash/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	google-sparsehash
 PORTVERSION=	2.0.2
