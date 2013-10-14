@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tex-web2c/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/tex-web2c/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	web2c
 PORTVERSION=	20120701
@@ -63,6 +63,7 @@ MLINKS=	cweb.1 ctangle.1 \
 	mf.1 mf-nowin.1 \
 	pdftex.1 pdflatex.1
 
+NO_STAGE=	yes
 pre-configure:
 	for D in libs/obsdcompat libs/xpdf; do \
 		cd ${WRKDIR}/${DISTNAME}/$$D && \
