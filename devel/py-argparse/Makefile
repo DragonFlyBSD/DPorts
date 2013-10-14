@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-argparse
-# Date created:		Jan. 05, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/devel/py-argparse/Makefile,v 1.15 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: devel/py-argparse/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	argparse
 PORTVERSION=	1.1
@@ -23,4 +19,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/argparse.py \
 		%%PYTHON_SITELIBDIR%%/argparse.pyc \
 		%%PYTHON_SITELIBDIR%%/argparse.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
