@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/libsndfile/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/libsndfile/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libsndfile
 PORTVERSION=	1.0.25
@@ -14,6 +14,7 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gmake pathfix pkgconfig
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-gcc-pipe \
 		--disable-sqlite \
