@@ -1,9 +1,5 @@
-# New ports collection makefile for:	naev-data
-# Date created:		2009-04-26
-# Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-#
-# $FreeBSD: ports/games/naev-data/Makefile,v 1.8 2012/11/17 05:57:46 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
+# $FreeBSD: games/naev-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	0.5.3
@@ -25,6 +21,7 @@ DATADIR=	${PREFIX}/share/${PKGNAMEPREFIX:S/-//}
 PLIST_FILES=	share/${PKGNAMEPREFIX:S/-//}/${PORTNAME:S/^/n/}-${PORTVERSION}
 PLIST_DIRS=	share/${PKGNAMEPREFIX:S/-//}
 
+NO_STAGE=	yes
 do-extract:
 	@@${MKDIR} ${WRKSRC}
 	@${CP} ${_DISTDIR}/${DISTFILES} ${WRKSRC}
