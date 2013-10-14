@@ -1,5 +1,5 @@
 # Created by: Dryice Liu
-# $FreeBSD: devel/ipython/Makefile 326893 2013-09-10 10:52:18Z olgeni $
+# $FreeBSD: devel/ipython/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	ipython
 PORTVERSION=	1.1.0
@@ -26,6 +26,7 @@ OPTIONS_DEFAULT=X11 ZMQ
 HTML_NOTEBOOK_DESC=	HTML notebook support
 ZMQ_DESC=		ZMQ support (parallel computing, qt console, notebook)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
