@@ -1,5 +1,5 @@
 # Created by: Rouslan Iskhakov <rouslan@rshell.net>
-# $FreeBSD: devel/p5-IPC-Signal/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-IPC-Signal/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IPC-Signal
 PORTVERSION=	1.00
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		IPC::Signal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
