@@ -1,5 +1,5 @@
 # Created by: Dean Freeman (wfreeman@sourcefire.com)
-# $FreeBSD: net/daq/Makefile 325417 2013-08-26 21:00:40Z zi $
+# $FreeBSD: net/daq/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	daq
 PORTVERSION=	2.0.1
@@ -27,4 +27,5 @@ MAKE_JOBS_UNSAFE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
