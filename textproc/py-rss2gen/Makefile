@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-rss2gen
-# Date created:				30 Sep 2004
-# Whom:					"Choe, Cheng-Dae" whitekid
-#
-# $FreeBSD: ports/textproc/py-rss2gen/Makefile,v 1.6 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: "Choe, Cheng-Dae" whitekid
+# $FreeBSD: textproc/py-rss2gen/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rss2gen
 PORTVERSION=	1.0.0
@@ -19,4 +15,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	PyRSS2Gen
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
