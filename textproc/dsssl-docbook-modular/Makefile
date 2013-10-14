@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DSSSL stylesheets for DocBook
-# Date created:		16 March 1998
-# Whom:			Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
-#
-# $FreeBSD: ports/textproc/dsssl-docbook-modular/Makefile,v 1.62 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
+# $FreeBSD: textproc/dsssl-docbook-modular/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dsssl-docbook-modular
 PORTVERSION=	1.79
@@ -33,6 +29,7 @@ CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 PLIST_SUB=	XMLCATMGR=${XMLCATMGR} DTDDIR=${RELDIR} \
 		CATALOG_PORTS_SGML=${CATALOG_PORTS_SGML}
 
+NO_STAGE=	yes
 do-build:
 	${RM} -Rf ${WRKSRC}/docsrc
 
