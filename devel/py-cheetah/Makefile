@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-cheetah
-# Date created:		26 November 2003
-# Whom:	      		Hye-Shik Chang <perky@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-cheetah/Makefile,v 1.23 2012/11/17 05:56:45 svnexp Exp $
+# Created by: Hye-Shik Chang <perky@FreeBSD.org>
+# $FreeBSD: devel/py-cheetah/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	cheetah
 PORTVERSION=	2.4.4
@@ -23,4 +20,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Cheetah
 PYEASYINSTALL_ARCHDEP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
