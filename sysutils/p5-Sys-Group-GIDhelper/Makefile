@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/p5-Sys-Group-GIDhelper
-# Date created:		2009-10-31
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: sysutils/p5-Sys-Group-GIDhelper/Makefile 326530 2013-09-06 17:55:21Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: sysutils/p5-Sys-Group-GIDhelper/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-Group-GIDhelper
 PORTVERSION=	0.0.2
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Sys::Group::GIDhelper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
