@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libmpeg3
-# Date created:		06 Feb 2005
-# Whom:			Igor Pokrovsky <ip@doom.homeunix.org>
-#
-# $FreeBSD: multimedia/libmpeg3/Makefile 300947 2012-07-16 11:58:02Z bapt $
-#
+# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
+# $FreeBSD: multimedia/libmpeg3/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libmpeg3
 PORTVERSION=	1.8
@@ -39,6 +35,7 @@ LDFLAGS+=	-lm -L${LOCALBASE}/lib -la52 ${PTHREAD_LIBS}
 
 NASM?=		${LOCALBASE}/bin/nasm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMMX}
