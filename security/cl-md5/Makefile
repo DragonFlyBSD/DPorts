@@ -1,4 +1,4 @@
-# $FreeBSD: security/cl-md5/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/cl-md5/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	md5
 PORTVERSION=	1.8.5
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 
 USE_ASDF=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ASDF_PATHNAME}
 	@${INSTALL_DATA} ${WRKSRC}/*.lisp ${ASDF_PATHNAME}
