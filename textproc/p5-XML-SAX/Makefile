@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-SAX/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-SAX
 PORTVERSION=	0.99
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	WRITE_INI_OK
 
 WRITE_INI_OK_DESC=	Alter ParserDetails.ini information
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWRITE_INI_OK}
