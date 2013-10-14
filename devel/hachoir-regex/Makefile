@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hachoir-regex
-# Date created:		13 July 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/hachoir-regex/Makefile,v 1.5 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: devel/hachoir-regex/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hachoir-regex
 PORTVERSION=	1.0.5
@@ -16,4 +12,5 @@ COMMENT=	Regular expression manipulation library
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
