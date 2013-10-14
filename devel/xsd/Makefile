@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: devel/xsd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/xsd/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xsd
 PORTVERSION=	3.3.0
@@ -31,6 +31,7 @@ USE_GMAKE=	yes
 
 MAN1=		xsdcxx.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
