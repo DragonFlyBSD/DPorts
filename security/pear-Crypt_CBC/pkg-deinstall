@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/pear-Crypt_CBC/pkg-deinstall,v 1.2 2012/11/17 06:01:14 svnexp Exp $
+# $FreeBSD: security/pear-Crypt_CBC/pkg-deinstall 300897 2012-07-14 14:29:18Z beat $
 #
 # Remove package declaration from PEAR's registry.
 

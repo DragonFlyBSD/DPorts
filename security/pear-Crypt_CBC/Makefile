@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Crypt_CBC
-# Date created:			  28 November 2002
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: ports/security/pear-Crypt_CBC/Makefile,v 1.17 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: security/pear-Crypt_CBC/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt_CBC
 PORTVERSION=	1.0.1
@@ -17,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
