@@ -1,5 +1,5 @@
 # Created by: Jeremy Iverson <jeremy@algenta.com>
-# $FreeBSD: www/drupal6-token/Makefile 313224 2013-03-02 11:20:15Z miwi $
+# $FreeBSD: www/drupal6-token/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	token
 DISTVERSION=	6.x-1.12
@@ -23,4 +23,5 @@ MODULE_DIRS=	translations
 
 DOC_FILES=	API.txt LICENSE.txt README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
