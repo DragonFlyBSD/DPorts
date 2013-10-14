@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-binutils/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/msp430-binutils/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	binutils
 PORTVERSION=	${BINUTILVERSION}.${LTSVERSION}
@@ -60,6 +60,7 @@ PLIST_SUB+=	BINUTILS_TARG=${PKGNAMEPREFIX:S/-$//}
 BINARIES=	addr2line ar as c++filt elfedit gprof ld nm objcopy objdump \
 		ranlib readelf size strings strip
 
+NO_STAGE=	yes
 pre-patch:
 	@cd ${WRKSRC} && ${PATCH} -s -p1 < ../mspgcc-${LTSVERSION}/${PKGNAMEPREFIX}${PORTNAME}-${BINUTILVERSION}-${PATCHVERSION}.patch
 
