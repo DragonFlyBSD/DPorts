@@ -1,12 +1,8 @@
-# New ports collection makefile for:	MySQL-client
-# Date created:				28 Jan 2006
-# Whom:					Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: databases/mysql55-client/Makefile 317032 2013-05-01 16:33:00Z ale $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: databases/mysql55-client/Makefile 329247 2013-10-03 23:18:52Z flo $
 
 PORTNAME=	mysql
-PKGNAMESUFFIX=	-client
+PKGNAMESUFFIX=	55-client
 
 COMMENT=	Multithreaded SQL database (client)
 
@@ -16,9 +12,7 @@ PKGMESSAGE=	mustnotexist
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${.CURDIR}/pkg-plist
 
-LATEST_LINK=	mysql55-client
-
-CONFLICTS_INSTALL=	mysql-client-[34].* mysql-client-5.[0-46-9].* mariadb-client-5.* percona-client-5.*
+CONFLICTS_INSTALL=	mysql5.[0-46-9]-client-* mysql[0-46-9][0-9]-client-* mariadb[0-9][0-9]-client-* percona[0-9][0-9]-client-*
 
 CMAKE_ARGS+=	-DWITHOUT_SERVER=1
 
@@ -30,4 +24,5 @@ MAN1=		comp_err.1 msql2mysql.1 mysql.1 mysql_config.1 mysql_find_rows.1 \
 
 CLIENT_ONLY=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
