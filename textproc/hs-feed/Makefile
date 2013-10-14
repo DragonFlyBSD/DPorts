@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: textproc/hs-feed/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-feed/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	feed
 PORTVERSION=	0.3.8
@@ -13,5 +13,6 @@ LICENSE=	BSD
 
 USE_CABAL=	utf8-string xml>=1.2.6
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
