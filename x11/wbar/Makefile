@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: x11/wbar/Makefile 325761 2013-08-31 01:17:11Z bapt $
+# $FreeBSD: x11/wbar/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	wbar
 PORTVERSION=	2.3.4
@@ -27,6 +27,7 @@ OPTIONS_DEFAULT=	NLS WBARCONFIG
 
 WBARCONFIG_DESC=	Build the GTK+ configuration interface
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
