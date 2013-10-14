@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/hs-zlib-bindings/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: archivers/hs-zlib-bindings/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zlib-bindings
 PORTVERSION=	0.1.1.3
@@ -11,6 +11,7 @@ COMMENT=	Low-level bindings to the zlib package
 LICENSE=	BSD
 
 USE_CABAL=	zlib>=0.5.2.0
+NO_STAGE=	yes
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
