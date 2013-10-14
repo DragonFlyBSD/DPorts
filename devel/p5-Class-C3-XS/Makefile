@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-C3-XS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-C3-XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-C3-XS
 PORTVERSION=	0.13
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::C3::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
