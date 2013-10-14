@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: net/py-netlib/Makefile 326766 2013-09-08 18:32:34Z sunpoet $
+# $FreeBSD: net/py-netlib/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netlib
 PORTVERSION=	0.9.2
@@ -18,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>0:${PORTSDIR}/devel/py-asn1 \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
