@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-regex-base/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-regex-base/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	regex-base
 PORTVERSION=	0.93.2
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	mtl
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
