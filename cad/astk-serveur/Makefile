@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: cad/astk-serveur/Makefile 314690 2013-03-19 20:34:59Z thierry $
+# $FreeBSD: cad/astk-serveur/Makefile 328008 2013-09-23 14:21:53Z gahr $
 
 PORTNAME=	astk
 PORTVERSION=	1.11.0
@@ -14,6 +14,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	Graphical interface for Code_Aster (server side)
 
 #-----------------------------------------------------------------------
+NO_STAGE=	yes
 # You may define these options:
 #
 # - WITH_ZSH or WITH_BASH or WITH_KSH: select a shell among
@@ -32,9 +33,9 @@ LICENSE=	GPLv2
 
 .if !defined(CLIENT_SEUL)
 USE_PYTHON=	yes
-USE_TK_BUILD=	yes
+USES+=		tk:build
 .else
-USE_TK=		yes
+USES+=		tk
 .endif
 NO_BUILD=	yes
 REINPLACE_ARGS=	-i ""
