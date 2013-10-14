@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall <rse@gnu.org>
-# $FreeBSD: devel/pth/Makefile 317876 2013-05-11 13:49:05Z bapt $
+# $FreeBSD: devel/pth/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pth
 PORTVERSION=	2.0.7
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
 
 CONFLICTS?=	pth-hard-2.*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PKGNAMESUFFIX} == "-hard"
