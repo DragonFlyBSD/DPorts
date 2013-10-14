@@ -1,5 +1,5 @@
 # Created by: Matt Behrens <matt@zigg.com>
-# $FreeBSD: security/p5-Authen-PAM/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/p5-Authen-PAM/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Authen-PAM
 PORTVERSION=	0.16
@@ -18,4 +18,5 @@ CONFIGURE_ARGS=	-DPAM_STRERROR_NEEDS_PAMH
 MAN3=		Authen::PAM.3 \
 		Authen::PAM::FAQ.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
