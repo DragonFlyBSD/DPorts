@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-case-insensitive/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-case-insensitive/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	case-insensitive
 PORTVERSION=	1.0.0.2
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	hashable>=1.0 text>=0.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
