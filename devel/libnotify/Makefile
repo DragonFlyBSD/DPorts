@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: devel/libnotify/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: devel/libnotify/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/trunk/devel/libnotify/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libnotify
@@ -21,4 +21,5 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
