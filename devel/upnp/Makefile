@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: devel/upnp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/upnp/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	upnp
 PORTVERSION=	1.6.18
