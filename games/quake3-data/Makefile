@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: games/quake3-data/Makefile 317955 2013-05-12 13:00:07Z danfe $
+# $FreeBSD: games/quake3-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 DISTVERSION=	1.32b-3
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=	TEAMARENA
 
 TEAMARENA_DESC=		Install Quake III Team Arena data files
 
+NO_STAGE=	yes
 .include "Makefile.include"	# must be included before bsd.port.options.mk
 .include <bsd.port.options.mk>
 
