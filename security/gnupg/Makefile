@@ -1,7 +1,7 @@
-# $FreeBSD: security/gnupg/Makefile 324990 2013-08-19 13:29:42Z kuriyama $
+# $FreeBSD: security/gnupg/Makefile 329582 2013-10-06 15:04:10Z antoine $
 
 PORTNAME=	gnupg
-PORTVERSION=	2.0.21
+PORTVERSION=	2.0.22
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	gnupg
@@ -23,13 +23,12 @@ LIB_DEPENDS=	assuan:${PORTSDIR}/security/libassuan \
 		pth:${PORTSDIR}/devel/pth
 
 USE_BZIP2=	YES
-USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
-USES=		iconv
+USES=		gmake iconv
 USE_LDCONFIG=	YES
 CONFIGURE_ARGS+=	--enable-symcryptrun
 
-OPTIONS_DEFINE=		PINENTRY LDAP SCDAEMON CURL GPGSM KDNS STD_SOCKET NLS
+OPTIONS_DEFINE=		PINENTRY LDAP SCDAEMON CURL GPGSM KDNS STD_SOCKET NLS DOCS SUID_GPG
 PINENTRY_DESC=		Use pinentry
 LDAP_DESC=		LDAP keyserver interface
 SCDAEMON_DESC=		Enable Smartcard daemon (with libusb)
@@ -37,18 +36,16 @@ CURL_DESC=		Use the real curl library (worked around if no)
 GPGSM_DESC=		Enable GPGSM (requires LDAP)
 KDNS_DESC=		Use DNS CERT helper
 STD_SOCKET_DESC=	Use standard socket for agent
+SUID_GPG_DESC=		Install GPG with suid
 OPTIONS_DEFAULT=	CURL
 NO_OPTIONS_SORT=	YES
+OPTIONS_SUB=		YES
 
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
 CONFIGURE_ARGS+=	--disable-doc
 .else
-MAN1=		gpg2.1 gpgsm.1 gpgv2.1 gpg-agent.1 scdaemon.1 watchgnupg.1 \
-		gpgconf.1 gpg-preset-passphrase.1 gpg-connect-agent.1 \
-		gpgparsemail.1 symcryptrun.1 gpgsm-gencert.sh.1
-MAN8=		addgnupghome.8 applygnupgdefaults.8
 INFO=		gnupg
 .endif
 
@@ -59,27 +56,21 @@ RUN_DEPENDS+=	pinentry>0:${PORTSDIR}/security/pinentry
 .if ${PORT_OPTIONS:MGPGSM}
 RUN_DEPENDS+=	dirmngr:${PORTSDIR}/security/dirmngr
 PORT_OPTIONS+=	LDAP
-PLIST_SUB+=	GPGSM=""
 .else
 CONFIGURE_ARGS+=--disable-gpgsm
-PLIST_SUB+=	GPGSM="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MLDAP}
 USE_OPENLDAP=	YES
 CONFIGURE_ARGS+=--with-ldap=${LOCALBASE}
-PLIST_SUB+=	LDAP=""
 .else
 CONFIGURE_ARGS+=--disable-ldap
-PLIST_SUB+=	LDAP="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MKDNS}
 LIB_DEPENDS+=	adns:${PORTSDIR}/dns/adns
-PLIST_SUB+=	ADNS=""
 .else
 CONFIGURE_SUB=	-e '/GPGKEYS_KDNS=/s/".*"/""/'
-PLIST_SUB+=	ADNS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSTD_SOCKET}
@@ -89,18 +80,14 @@ CONFIGURE_ARGS+=--enable-standard-socket
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
-PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSCDAEMON}
 CONFIGURE_ARGS+=--enable-scdaemon
-PLIST_SUB+=	SCDAEMON=""
 .else
 CONFIGURE_ARGS+=--disable-scdaemon
-PLIST_SUB+=	SCDAEMON="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MCURL}
@@ -118,12 +105,5 @@ post-patch:
 		${WRKSRC}/acinclude.m4 ${WRKSRC}/aclocal.m4 ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e "/#include <utmp.h>/d" \
 		${WRKSRC}/tools/symcryptrun.c
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.if defined(WITH_SUID_GPG)
-	${CHMOD} u+s ${PREFIX}/bin/gpg2
-.endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
