@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-Unicode-Stringprep/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Unicode-Stringprep/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-Stringprep
 PORTVERSION=	1.104
@@ -27,4 +27,5 @@ MAN3=		Unicode::Stringprep.3 \
 		Unicode::Stringprep::Unassigned.3 \
 		Unicode::Stringprep::_Common.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
