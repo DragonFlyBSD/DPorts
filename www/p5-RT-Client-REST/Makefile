@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-RT-Client-REST/Makefile 326021 2013-09-02 16:07:56Z az $
+# $FreeBSD: www/p5-RT-Client-REST/Makefile 327986 2013-09-23 12:07:45Z culot $
 
 PORTNAME=	RT-Client-REST
-PORTVERSION=	0.43
+PORTVERSION=	0.44
 PORTEPOCH=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
@@ -10,12 +10,16 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Perl modules designed to talk to RT installation using REST protocol
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-Exception-Class>=0:${PORTSDIR}/devel/p5-Exception-Class \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
-		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
-		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
+		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-DateTime-Format-DateParse>0:${PORTSDIR}/devel/p5-DateTime-Format-DateParse \
+		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 USES=		perl5
 USE_PERL5=	configure
@@ -31,4 +35,5 @@ MAN3=	RT::Client::REST.3 \
 	RT::Client::REST::Transaction.3 \
 	RT::Client::REST::User.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
