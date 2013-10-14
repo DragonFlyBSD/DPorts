@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/gprbuild/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: devel/gprbuild/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gprbuild
 PORTVERSION=	${SNAPSHOT}
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES+=		ada
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == "FreeBSD"
