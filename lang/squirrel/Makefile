@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: lang/squirrel/Makefile 325709 2013-08-30 15:50:42Z amdmi3 $
+# $FreeBSD: lang/squirrel/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	squirrel
 PORTVERSION=	2.2.5
@@ -15,6 +15,7 @@ USE_DOS2UNIX=	yes
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/SQUIRREL2
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64 || ${ARCH} == sparc64 || ${ARCH} == ia64
