@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Glib2/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-Glib2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Glib2
 PORTVERSION=	1.280
@@ -32,6 +32,7 @@ MAN3=	Glib.3 Glib::BookmarkFile.3 Glib::Boxed.3 Glib::CodeGen.3 \
 	Glib::ParamSpec.3 Glib::ParseXSDoc.3 Glib::Signal.3 Glib::Type.3 \
 	Glib::Utils.3 Glib::devel.3 Glib::index.3 Glib::version.3 Glib::xsapi.3
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "--------------------------------------------------------"
 	@${ECHO_MSG} "Some functions of this module require a threaded perl."
