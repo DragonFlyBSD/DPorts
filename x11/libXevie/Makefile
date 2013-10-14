@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libXevie/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXevie/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXevie
 PORTVERSION=	1.0.3
@@ -19,4 +19,5 @@ MAN3=		Xevie.3 \
 		XevieSendEvent.3 \
 		XevieStart.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
