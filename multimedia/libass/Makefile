@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libass/Makefile 316284 2013-04-22 22:33:35Z bapt $
+# $FreeBSD: multimedia/libass/Makefile 327927 2013-09-23 06:12:57Z bapt $
 
 PORTNAME=	libass
 PORTVERSION=	0.10.1
@@ -10,11 +10,11 @@ COMMENT=	Portable ASS/SSA subtitle renderer
 
 LICENSE=	ISCL
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
-		enca:${PORTSDIR}/converters/enca \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		expat:${PORTSDIR}/textproc/expat2 \
-		fribidi:${PORTSDIR}/converters/fribidi
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libenca.so:${PORTSDIR}/converters/enca \
+		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
+		libexpat.so:${PORTSDIR}/textproc/expat2 \
+		libfribidi.so:${PORTSDIR}/converters/fribidi
 
 USES=	pathfix pkgconfig
 USE_XZ=	yes
