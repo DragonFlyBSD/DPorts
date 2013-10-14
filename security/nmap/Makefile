@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: security/nmap/Makefile 325091 2013-08-21 04:57:14Z ohauer $
+# $FreeBSD: security/nmap/Makefile 328590 2013-09-28 15:50:43Z ohauer $
 
 PORTNAME=	nmap
 DISTVERSION=	6.40
@@ -57,9 +57,6 @@ NDCC=	true
 .endif
 
 PORTDOCS=	CHANGELOG HACKING
-MANLANG=	"" de es fr hr hu it ja pl pt_BR pt_PT ro ru sk zh
-MAN1=		nmap.1
-MAN1_EN=	ncat.1 nping.1
 
 # PR: ports/159376  Workaround if OS is build with WITHOUT_INET6
 .if ! ${PORT_OPTIONS:MIPV6}
@@ -82,8 +79,8 @@ post-configure:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 # gcc from ports is in use
