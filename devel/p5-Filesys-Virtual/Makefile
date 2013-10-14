@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Filesys-Virtual
-# Date created:        27 June 2004
-# Whom:                Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Filesys-Virtual/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Filesys-Virtual/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Filesys-Virtual
 PORTVERSION=	0.06
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Filesys::Virtual.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
