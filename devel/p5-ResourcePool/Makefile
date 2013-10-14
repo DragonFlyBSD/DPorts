@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-ResourcePool/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-ResourcePool/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ResourcePool
 PORTVERSION=	1.0107
@@ -28,6 +28,7 @@ MAN3=	ResourcePool.3 \
 	ResourcePool::Singleton.3 \
 	ResourcePool::UML.3
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
