@@ -1,9 +1,5 @@
-# New ports collection makefile for:   siod
-# Date created:        28 April 1999
-# Whom:                jkoshy
-#
-# $FreeBSD: lang/siod/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: jkoshy
+# $FreeBSD: lang/siod/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	siod
 PORTVERSION=	3.4
@@ -28,4 +24,5 @@ MAN1=	siod.1 snapshot-dir.1 snapshot-compare.1 http-get.1 \
 	cp-build.1 ftp-cp.1 csiod.1 ftp-put.1 ftp-test.1 ftp-get.1 \
 	http-stress.1 proxy-server.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
