@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: audio/madplay/Makefile 323645 2013-07-25 14:43:20Z marino $
+# $FreeBSD: audio/madplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	madplay
 PORTVERSION=	0.15.2b
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lz
 ALL_TARGET=	all madtime
+NO_STAGE=	yes
 
 MAN1=		abxtest.1 madplay.1
 
