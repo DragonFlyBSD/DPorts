@@ -1,5 +1,5 @@
 # Created by: Justin Stanford <jus@security.za.net>
-# $FreeBSD: ports/mail/ripmime/Makefile,v 1.26 2013/01/26 16:56:11 svnexp Exp $
+# $FreeBSD: mail/ripmime/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	ripmime
 PORTVERSION=	1.4.0.10
@@ -12,6 +12,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Extracts attached files out of a MIME encoded email package
 
 MAKE_JOBS_UNSAFE=	yes
+NO_STAGE=	yes
 
 PLIST_FILES=	bin/ripmime
 MAN1=		ripmime.1
