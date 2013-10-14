@@ -1,4 +1,4 @@
-# $FreeBSD: x11/qt4-graphicssystems-opengl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/qt4-graphicssystems-opengl/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	graphicssystems
 DISTVERSION=	${QT4_VERSION}
@@ -38,6 +38,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
