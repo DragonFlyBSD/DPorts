@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Sort-Versions/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Sort-Versions/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sort-Versions
 PORTVERSION=	1.5
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Sort::Versions.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
