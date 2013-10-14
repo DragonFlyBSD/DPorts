@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-XPathEngine/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-XPathEngine/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-XPathEngine
 PORTVERSION=	0.14
@@ -22,6 +22,7 @@ MAN3=		XML::XPathEngine.3 \
 
 # For errors like
 # Bareword "XML::XPathEngine::Step::..." not allowed while "strict subs" in use at ...
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -Ee 's,(use strict;),\1 no strict "subs";,' ${WRKSRC}/lib/XML/XPathEngine.pm
 
