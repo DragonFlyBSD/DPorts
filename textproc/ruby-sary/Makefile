@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-sary/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/ruby-sary/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sary
 PORTVERSION=	1.2.0
@@ -32,6 +32,7 @@ DOCS_JA=	${RUBY_RD_FILES:M*.ja.rd} \
 post-install: doc-install
 	${INSTALL_SCRIPT} ${WRKSRC}/rsary.rb ${PREFIX}/bin/
 
+NO_STAGE=	yes
 doc-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODDOCDIR}/ja
