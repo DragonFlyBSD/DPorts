@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/lfcxml/Makefile 324378 2013-08-08 07:43:45Z culot $
+# $FreeBSD: devel/lfcxml/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lfcxml
 PORTVERSION=	1.1.5
@@ -19,4 +19,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf:env
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
