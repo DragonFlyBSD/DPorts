@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IP-Anonymous
-# Date created:		27 January 2011
-# Whom:			Paul Schmehl <pauls@utdallas.edu>
-#
-# $FreeBSD: net/p5-IP-Anonymous/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Paul Schmehl <pauls@utdallas.edu>
+# $FreeBSD: net/p5-IP-Anonymous/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	IP-Anonymous
 PORTVERSION=	0.04
@@ -21,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		IP::Anonymous.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
