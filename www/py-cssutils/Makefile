@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/py-cssutils/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: www/py-cssutils/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cssutils
 PORTVERSION=	0.9.9
@@ -18,6 +18,7 @@ USE_PYDISTUTILS=	easy_install
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 .if !defined(NOPORTEXAMPLES)
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
