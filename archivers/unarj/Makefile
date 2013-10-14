@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: archivers/unarj/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: archivers/unarj/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	unarj
 PORTVERSION=	2.65
@@ -12,6 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Allows files to be extracted from ARJ archives
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/unarj
 PORTDOCS=	unarj.txt technote.txt
 
