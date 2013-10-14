@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/ocaml-images/Makefile 324318 2013-08-06 15:23:12Z johans $
+# $FreeBSD: graphics/ocaml-images/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	images
 PORTVERSION=	4.0.1
@@ -40,6 +40,7 @@ MAKE_JOBS_UNSAFE=	yes
 OPTIONS_DEFINE=	PNG JPEG TIFF XPM GIF FREETYPE GHOSTSCRIPT GTK2 DOCS
 OPTIONS_DEFAULT=	PNG JPEG TIFF XPM GIT FREETYPE GHOSTSCRIPT
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPNG}
