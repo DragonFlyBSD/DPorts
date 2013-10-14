@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: x11-toolkits/py-qt4-gui/Makefile 311475 2013-02-03 18:16:07Z makc $
+# $FreeBSD: x11-toolkits/py-qt4-gui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gui
 PORTVERSION=	${PYQT4_VERSION}
@@ -39,6 +39,7 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
