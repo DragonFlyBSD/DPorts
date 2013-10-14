@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: devel/libglademm24/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: devel/libglademm24/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/libglademm24/Makefile,v 1.10 2008/09/22 11:42:53 kwm Exp $
 
 PORTNAME=	libglademm
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
