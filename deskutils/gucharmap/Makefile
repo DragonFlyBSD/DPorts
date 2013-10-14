@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gucharmap/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: deskutils/gucharmap/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #   $MCom: ports/deskutils/gucharmap/Makefile,v 1.75 2010/11/13 13:05:08 kwm Exp $
 
 PORTNAME=	gucharmap
@@ -26,4 +26,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gucharmap.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
