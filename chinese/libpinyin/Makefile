@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/libpinyin/Makefile 325952 2013-09-02 09:04:38Z bapt $
+# $FreeBSD: chinese/libpinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	libpinyin
 PORTVERSION=	0.7.91
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=CPPFLAGS="-I${LOCALBASE}/include \
 
 PLIST_SUB+=	VER=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800107
