@@ -1,4 +1,4 @@
-# $FreeBSD: ports/news/lusernet/Makefile,v 1.10 2012/11/17 06:00:42 svnexp Exp $
+# $FreeBSD: news/lusernet/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	lusernet
 PORTVERSION=	0.4.2
@@ -21,4 +21,5 @@ USE_GNUSTEP_LOCAL_LIBS+=	Pantomime:${PANTOMIME_PORT}
 
 PANTOMIME_PORT?=	mail/pantomime
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
