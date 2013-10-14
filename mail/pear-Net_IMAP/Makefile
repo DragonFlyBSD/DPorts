@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: mail/pear-Net_IMAP/Makefile 314446 2013-03-17 14:21:48Z miwi $
+# $FreeBSD: mail/pear-Net_IMAP/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net_IMAP
 PORTVERSION=	1.1.0
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
