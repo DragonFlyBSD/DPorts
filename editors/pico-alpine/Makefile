@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/pico-alpine/Makefile,v 1.8 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/pico-alpine/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	pico-alpine
 PORTREVISION=	1
@@ -20,6 +20,7 @@ PICO_ALPINE_SLAVE=	yes
 
 MAN1=		pico.1 pilot.1
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} ${WRKSRC}/imap/Makefile ${WRKSRC}/imap/Makefile.presed
 	@${SED}	-e "s#^\(all:.*\) bundled\$$#\1#" \
