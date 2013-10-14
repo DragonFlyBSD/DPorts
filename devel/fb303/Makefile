@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/fb303/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/fb303/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fb303
 PORTVERSION=	${THRIFT_PORTVERSION}
@@ -30,6 +30,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/contrib/fb303
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}" PYTHON_VER="${PYTHON_VER}"
 
+NO_STAGE=	yes
 post-build:
 	(cd ${WRKSRC} && ${LOCALBASE}/bin/thrift --gen perl ${WRKSRC}/if/fb303.thrift)
 
