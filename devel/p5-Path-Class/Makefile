@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: devel/p5-Path-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Path-Class/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Path-Class
 PORTVERSION=	0.32
@@ -25,6 +25,7 @@ MAN3=		Path::Class.3 \
 		Path::Class::File.3
 PORTDOCS=	Changes README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
