@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libproxy
-# Date created:		26 February 2009
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: net/libproxy/Makefile 326472 2013-09-06 07:24:27Z az $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net/libproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #    $MCom: ports/net/libproxy/Makefile,v 1.1 2011/01/12 13:10:52 kwm Exp $
 
 PORTNAME=	libproxy
@@ -67,6 +64,7 @@ CMAKE_ARGS+=	-DWITH_MOZJS:BOOL=OFF
 . endif
 .endif
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${PREFIX}/lib/libproxy/${PORTVERSION}/modules/
 
