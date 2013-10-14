@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/sk1libs/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/sk1libs/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sk1libs
 PORTVERSION=	0.9.1
@@ -22,6 +22,7 @@ PYDISTUTILS_BUILD_TARGET=build_ext
 PYDISTUTILS_BUILDARGS=	-L${LOCALBASE}/lib \
 			-I${LOCALBASE}/include:${LOCALBASE}/include/freetype2
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/src/utils/fs.py
 
