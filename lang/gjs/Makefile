@@ -1,5 +1,5 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
-# $FreeBSD: lang/gjs/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: lang/gjs/Makefile 327741 2013-09-20 19:53:09Z bapt $
 #   $MCom: ports/trunk/lang/gjs/Makefile 18581 2013-06-23 10:50:00Z kwm $
 
 PORTNAME=	gjs
@@ -28,4 +28,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 SHEBANG_FILES=	scripts/make-tests
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
