@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/xblas/Makefile 324413 2013-08-09 01:49:55Z danfe $
+# $FreeBSD: math/xblas/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	xblas
 PORTVERSION=	1.0.248
@@ -29,6 +29,7 @@ PLIST_FILES=	${HEADERS:S|^|${HDIR}/|}
 SHLIB_MAJOR=	0
 WRKSRC =	${WRKDIR}/xblas-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 M4?=	m4
