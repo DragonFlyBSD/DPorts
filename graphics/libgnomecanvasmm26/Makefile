@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: graphics/libgnomecanvasmm26/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: graphics/libgnomecanvasmm26/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/libgnomecanvasmm26/Makefile,v 1.22 2009/03/17 15:05:06 kwm Exp $
 
 PORTNAME=	libgnomecanvasmm
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.6" API_VERSION="2.6"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
