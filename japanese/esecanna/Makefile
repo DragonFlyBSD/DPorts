@@ -1,9 +1,5 @@
-# New ports collection Makefile for: esecanna
-# Date created:		24 February 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: japanese/esecanna/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: japanese/esecanna/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	esecanna
 PORTVERSION=	1.0.1
@@ -26,6 +22,7 @@ CONFIGURE_ARGS=	--with-piddir="/var/run/esecanna"
 
 DOCS=		CREDITS CHANGES.jp README.First.jp README.jp
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e " \
 		s,!!PREFIX!!,${PREFIX},g; \
