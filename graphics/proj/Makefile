@@ -1,8 +1,5 @@
-# New ports collection makefile for:	proj
-# Date created:				15 November 2001
-# Whom:					jedgar@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/proj/Makefile,v 1.22 2012/11/17 05:58:19 svnexp Exp $
+# Created by: jedgar@FreeBSD.org
+# $FreeBSD: graphics/proj/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	proj
 PORTVERSION=	4.8.0
@@ -28,6 +25,7 @@ USE_ZIP=	yes
 MAN1=		cs2cs.1 geod.1 proj.1
 MAN3=		pj_init.3
 
+NO_STAGE=	yes
 post-extract:
 	@${UNZIP_CMD} -q ${DISTDIR}/${DATUM_GRID_FILES} -d ${WRKSRC}/nad
 
