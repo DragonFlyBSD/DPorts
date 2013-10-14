@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: astro/libroadnav/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/libroadnav/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	libroadnav
 PORTVERSION=	0.19
@@ -14,6 +14,7 @@ USE_WX=		2.6+
 WX_COMPS=	wx contrib
 USES=		gmake
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-wx-prefix=${LOCALBASE} --with-wx-config=${WX_CONFIG}
 CPPFLAGS+=	-I${LOCALBASE}/include
