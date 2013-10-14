@@ -1,4 +1,4 @@
-# $FreeBSD: security/pinentry-qt4/Makefile 325273 2013-08-23 16:12:31Z makc $
+# $FreeBSD: security/pinentry-qt4/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pinentry
 PORTREVISION=	0
@@ -13,4 +13,5 @@ PORT_OPTIONS+=	QT4
 
 MASTERDIR=	${.CURDIR}/../pinentry
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
