@@ -1,4 +1,4 @@
-# $FreeBSD: mail/alpine/Makefile 321103 2013-06-17 12:03:14Z bapt $
+# $FreeBSD: mail/alpine/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME?=	alpine
 PORTVERSION=	2.00
@@ -44,6 +44,7 @@ MAKE_ARGS+=	CC="${CC}" CXX="${CXX}" GCCCFLAGS="${CFLAGS}"
 
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTHREADS}
