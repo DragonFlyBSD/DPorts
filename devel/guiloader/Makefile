@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/guiloader/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: devel/guiloader/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	guiloader
 PORTVERSION=	2.19.0
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-hidden-visibility
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
