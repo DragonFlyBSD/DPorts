@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/aumix/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/aumix/Makefile 329268 2013-10-04 07:18:59Z bapt $
 
 PORTNAME=	aumix
 PORTVERSION=	2.9.1
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	--includedir="${LOCALBASE}/include" \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 MAN1=		aumix.1 xaumix.1 mute.1
 PLIST_DIRS=	share/aumix
 PLIST_FILES=	bin/aumix bin/mute bin/xaumix
@@ -45,7 +46,6 @@ CONFIGURE_ARGS+=--disable-nls
 .endif
 
 .if ${PORT_OPTIONS:MGTK2}
-PKGNAMESUFFIX=	-gtk
 USE_GNOME=	gtk20
 .else
 CONFIGURE_ARGS+=--without-gtk
