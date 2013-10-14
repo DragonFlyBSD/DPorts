@@ -1,8 +1,5 @@
-# New ports collection makefile for:	autotools
-# Date created:				14th April 2007
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: devel/autotools/Makefile 323088 2013-07-16 05:42:36Z ade $
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: devel/autotools/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	autotools
 PORTVERSION=	20130627
@@ -26,6 +23,7 @@ PLIST_FILES=	share/${PORTNAME}
 NO_BUILD=	yes
 NO_FETCH=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_CMD} "Placeholder file" > ${PREFIX}/${PLIST_FILES}
 
