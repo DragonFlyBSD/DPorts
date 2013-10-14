@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-File-Find-Rule-Perl
-# Date created:				13 October 2008
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-File-Find-Rule-Perl/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-File-Find-Rule-Perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Find-Rule-Perl
 PORTVERSION=	1.13
@@ -28,4 +24,5 @@ MAN3=	File::Find::Rule::Perl.3
 regression-test: build
 	cd ${WRKSRC}/ && ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
