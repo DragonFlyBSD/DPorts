@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Flow/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Data-Flow/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Flow
 PORTVERSION=	1.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::Flow.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
