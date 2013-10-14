@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Feed-Find
-# Date created:				28 July 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Feed-Find/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: www/p5-Feed-Find/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Feed-Find
 PORTVERSION=	0.07
@@ -26,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Feed::Find.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
