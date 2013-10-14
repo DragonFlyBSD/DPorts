@@ -1,4 +1,4 @@
-# $FreeBSD: print/kde4-print-manager/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/kde4-print-manager/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	print-manager
 PORTVERSION=	${KDE4_VERSION}
@@ -17,4 +17,5 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	network qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
