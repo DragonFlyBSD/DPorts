@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-zopeevent
-# Date created:				15 Dec, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-zope.event/Makefile,v 1.11 2012/11/17 05:56:53 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-zope.event/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.event
 PORTVERSION=	3.5.2
@@ -19,6 +15,8 @@ LICENSE=	ZPL21
 
 # Python3 ready
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
