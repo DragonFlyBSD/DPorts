@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Simple/Makefile 325904 2013-09-01 19:04:56Z az $
+# $FreeBSD: www/p5-CGI-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Simple
 PORTVERSION=	1.113
@@ -21,4 +21,5 @@ MAN3=		CGI::Simple.3 \
 		CGI::Simple::Standard.3 \
 		CGI::Simple::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
