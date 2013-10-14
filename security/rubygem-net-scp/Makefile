@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: security/rubygem-net-scp/Makefile 319620 2013-06-02 01:26:51Z swills $
+# $FreeBSD: security/rubygem-net-scp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	net-scp
 PORTVERSION=	1.1.1
@@ -15,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
