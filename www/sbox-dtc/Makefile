@@ -1,5 +1,5 @@
 # Created by: Thomas Goirand
-# $FreeBSD: ports/www/sbox-dtc/Makefile,v 1.9 2012/12/20 03:05:53 svnexp Exp $
+# $FreeBSD: www/sbox-dtc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	sbox
 PORTVERSION=	1.10
@@ -30,6 +30,7 @@ PLIST_DIRS=	www/cgi-bin
 
 PATCH_STRIP=	-p1
 
+NO_STAGE=	yes
 pre-su-install:
 	${MKDIR} ${PREFIX}/www/cgi-bin
 
