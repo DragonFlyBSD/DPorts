@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/rgb/Makefile,v 1.5 2013/02/04 06:16:03 svnexp Exp $
+# $FreeBSD: x11/rgb/Makefile 328645 2013-09-29 03:16:52Z eadler $
 
 PORTNAME=	rgb
 PORTVERSION=	1.0.5
@@ -12,8 +12,6 @@ CONFIGURE_ARGS=	--with-rgb-db-dir=${PREFIX}/lib/X11/rgb
 XORG_CAT=	app
 USE_XORG=	x11 xproto
 
-PLIST_FILES=	bin/showrgb lib/X11/rgb.txt
-
-MAN1=		showrgb.1
+PLIST_FILES=	bin/showrgb lib/X11/rgb.txt man/man1/showrgb.1.gz
 
 .include <bsd.port.mk>
