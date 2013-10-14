@@ -1,10 +1,6 @@
-# New ports collection makefile for:	Bitstream Vera Font Family
-# Date created:		February 18 2003
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/bitstream-vera/Makefile,v 1.21 2012/11/17 06:03:27 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: x11-fonts/bitstream-vera/Makefile 327781 2013-09-20 23:51:14Z bapt $
 #   $MCom: ports/x11-fonts/bitstream-vera/Makefile,v 1.2 2005/10/14 20:39:59 adamw Exp $
-#
 
 PORTNAME=	bitstream-vera
 PORTVERSION=	1.10
@@ -36,6 +32,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 FONTNAME=	${PORTNAME}
 FONTSDIR?=	${PREFIX}/lib/X11/fonts/${FONTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .SILENT:
