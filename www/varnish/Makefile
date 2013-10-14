@@ -1,4 +1,4 @@
-# $FreeBSD: www/varnish/Makefile 326323 2013-09-04 21:03:18Z anders $
+# $FreeBSD: www/varnish/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	varnish
 PORTVERSION=	3.0.4
@@ -37,6 +37,7 @@ BAD_TESTS+=	r00832
 EXTRA_PATCHES+=	${FILESDIR}/no-inet6.patch
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\$$(libdir)/pkgconfig|\$$(prefix)/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.am
