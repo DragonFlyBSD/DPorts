@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libmusicbrainz3/Makefile 327040 2013-09-12 08:00:37Z jhale $
+# $FreeBSD: audio/libmusicbrainz3/Makefile 329873 2013-10-09 07:50:58Z jhale $
 
 PORTNAME=	libmusicbrainz
 PORTVERSION=	3.0.3
@@ -6,16 +6,15 @@ PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
 		http://ftp.osuosl.org/pub/musicbrainz/
+PKGNAMESUFFIX=	3
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	MusicBrainz client library for audio metadata lookup
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	discid:${PORTSDIR}/audio/libdiscid \
-		neon:${PORTSDIR}/www/neon29
-
-LATEST_LINK=	${PORTNAME}3
+LIB_DEPENDS=	libdiscid.so:${PORTSDIR}/audio/libdiscid \
+		libneon.so:${PORTSDIR}/www/neon29
 
 USES=		cmake
 USE_LDCONFIG=	yes
