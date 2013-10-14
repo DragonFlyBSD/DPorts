@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/rexx-regina/Makefile 321320 2013-06-19 20:12:38Z linimon $
+# $FreeBSD: lang/rexx-regina/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	regina
 PORTVERSION=	3.7
@@ -22,6 +22,7 @@ USE_RC_SUBR=	rxstack
 
 MAN1=	regina.1 regina-config.1 rxqueue.1 rxstack.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|-pthread|${PTHREAD_LIBS}|g" ${WRKSRC}/configure
 
