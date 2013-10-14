@@ -1,5 +1,5 @@
 # Created by: saper@system.pl
-# $FreeBSD: graphics/dia/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: graphics/dia/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/dia/Makefile,v 1.16 2007/10/11 02:49:12 mezz Exp $
 
 PORTNAME=	dia
@@ -26,6 +26,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-gnome
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
