@@ -1,5 +1,5 @@
 # Created by: takefu <takefu@airport.fm>
-# $FreeBSD: audio/libaacplus/Makefile 326796 2013-09-09 10:09:00Z sunpoet $
+# $FreeBSD: audio/libaacplus/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libaacplus
 PORTVERSION=	2.0.2
@@ -19,6 +19,7 @@ RESTRICTED=	unclear legal status, probably need licenses from 3GPP, Via Licensin
 CONFLICTS=	aacplusenc-0*
 
 USE_CSTD=	gnu89
+NO_STAGE=	yes
 USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool libtoolize aclocal autoheader automake
