@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: textproc/libxml/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: textproc/libxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libxml
 PORTVERSION=	1.8.17
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 pre-patch:
 	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|malloc\.h|stdlib.h|g'
