@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: japanese/libskk/Makefile 318656 2013-05-21 08:12:14Z miwi $
+# $FreeBSD: japanese/libskk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	libskk
 PORTVERSION=	1.0.0
@@ -27,6 +27,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
