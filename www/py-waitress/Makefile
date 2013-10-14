@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: www/py-waitress/Makefile 325615 2013-08-29 17:42:01Z olivierd $
-#
+# $FreeBSD: www/py-waitress/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	waitress
 PORTVERSION=	0.8.7
@@ -16,6 +15,7 @@ LICENSE=	ZPL21
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
