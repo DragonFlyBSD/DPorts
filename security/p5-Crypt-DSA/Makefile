@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-DSA/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-DSA/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-DSA
 PORTVERSION=	1.17
@@ -23,4 +23,5 @@ MAN3=		Crypt::DSA::Key::SSH2.3 Crypt::DSA.3 Crypt::DSA::Key.3 \
 		Crypt::DSA::Key::PEM.3 Crypt::DSA::Signature.3 \
 		Crypt::DSA::KeyChain.3 Crypt::DSA::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
