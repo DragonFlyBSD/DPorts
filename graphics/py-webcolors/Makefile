@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-webcolors
-# Date created:		2011-08-02
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/py-webcolors/Makefile,v 1.3 2012/11/17 05:58:21 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: graphics/py-webcolors/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	webcolors
 PORTVERSION=	1.4
@@ -16,6 +12,7 @@ COMMENT=	Library working with the sRGB color space as used in the HTML and CSS
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+NO_STAGE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${UNIQUENAME}
 PORTDOCS=	README
