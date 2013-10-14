@@ -1,8 +1,8 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-CPAN-Meta/Makefile 326799 2013-09-09 10:09:11Z sunpoet $
+# $FreeBSD: devel/p5-CPAN-Meta/Makefile 330076 2013-10-11 14:09:03Z sunpoet $
 
 PORTNAME=	CPAN-Meta
-PORTVERSION=	2.132510
+PORTVERSION=	2.132830
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,14 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		CPAN::Meta.3 \
-		CPAN::Meta::Converter.3 \
-		CPAN::Meta::Feature.3 \
-		CPAN::Meta::History.3 \
-		CPAN::Meta::Prereqs.3 \
-		CPAN::Meta::Spec.3 \
-		CPAN::Meta::Validator.3
 
 .include <bsd.port.pre.mk>
 
