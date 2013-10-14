@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-json/Makefile 319593 2013-06-01 21:22:45Z swills $
+# $FreeBSD: devel/rubygem-json/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	json
 PORTVERSION=	1.8.0
@@ -13,6 +13,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${RUBY_VER} < 1.9
