@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/stfl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/stfl/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	stfl
 PORTVERSION=	0.22
@@ -22,6 +22,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDLIBS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	LDLIBS="${LDLIBS}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
