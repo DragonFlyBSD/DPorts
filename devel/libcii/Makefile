@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@photino.com>
-# $FreeBSD: ports/devel/libcii/Makefile,v 1.12 2013/01/12 13:02:13 svnexp Exp $
+# $FreeBSD: devel/libcii/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libcii
 PORTVERSION=	1.1
@@ -26,6 +26,7 @@ SAMPLES=	double calc ids	mpcalc wf xref cref iref kref \
 		idents words basename dirname
 I386_SAMPLES=	sort spin sieve
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"
