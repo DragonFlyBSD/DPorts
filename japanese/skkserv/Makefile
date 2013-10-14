@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skkserv/Makefile 317419 2013-05-05 15:53:04Z hrs $
+# $FreeBSD: japanese/skkserv/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	skkserv
 PORTVERSION=	9.6
@@ -26,6 +26,7 @@ GROUPS=		skkserv
 SKKJISYO_SIZE?=	L
 SKKJISYO?=	SKK-JISYO.${SKKJISYO_SIZE}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/skkserv/skkserv ${PREFIX}/sbin
 
