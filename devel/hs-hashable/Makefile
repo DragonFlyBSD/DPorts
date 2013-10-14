@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-hashable/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-hashable/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hashable
 PORTVERSION=	1.1.2.5
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	text>=0.11.0.5
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
