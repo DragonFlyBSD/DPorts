@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-SVN-Simple
-# Date created:				Mar  2004
-# Whom:					Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: ports/devel/p5-SVN-Simple/Makefile,v 1.21 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/p5-SVN-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Simple
 PORTVERSION=	0.28
@@ -18,10 +14,12 @@ COMMENT=	Simple interface to SVN::Delta::Editor
 BUILD_DEPENDS=	p5-subversion>=0:${PORTSDIR}/devel/p5-subversion
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SVN::Simple::Edit.3 SVN::Simple::Editor.3
 
+NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
 
