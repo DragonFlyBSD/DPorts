@@ -1,5 +1,5 @@
 # Created by: pb@FreeBSD.org
-# $FreeBSD: multimedia/dvdauthor/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/dvdauthor/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dvdauthor
 PORTVERSION=	0.7.1
@@ -45,6 +45,7 @@ PAL_DESC=	Default video format PAL
 
 SUB_FILES=	README.FreeBSD
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNTSC}
