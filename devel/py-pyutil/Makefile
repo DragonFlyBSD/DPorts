@@ -1,5 +1,5 @@
 # Created by: Chao Shin <quakelee@cn.FreeBSD.org>
-# $FreeBSD: devel/py-pyutil/Makefile 327274 2013-09-14 11:11:53Z rm $
+# $FreeBSD: devel/py-pyutil/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pyutil
 PORTVERSION=	1.9.7
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>=2.1.1:${PORTSDIR}/devel/py-simpl
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type f -name "*.py~" -delete
 
