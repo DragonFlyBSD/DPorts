@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-channel-ezc/Makefile,v 1.1 2012/12/03 13:26:07 svnexp Exp $
+# $FreeBSD: devel/pear-channel-ezc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ezc
 PORTVERSION=	20060124
@@ -10,6 +10,7 @@ COMMENT=	PEAR channel ${PEAR_CHANNEL_HOST}
 
 PEAR_CHANNEL_HOST=	components.ez.no
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.channel.mk"
 .include <bsd.port.post.mk>
