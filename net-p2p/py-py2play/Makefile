@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-py2play
-# Date created:				2005-10-05
-# Whom:					Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-#
-# $FreeBSD: ports/net-p2p/py-py2play/Makefile,v 1.10 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
+# $FreeBSD: net-p2p/py-py2play/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	py2play
 PORTVERSION=	0.1.10
@@ -21,6 +17,7 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Py2Play
 EXAMPLESDIR=	${PREFIX}/share/examples/py-py2play
 
+NO_STAGE=	yes
 post-install:
 .ifndef NOPORTEXAMPLES
 	@${MKDIR} ${EXAMPLESDIR}
