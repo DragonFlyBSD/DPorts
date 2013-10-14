@@ -1,9 +1,5 @@
-# New ports collection makefile for:	String::LRC
-# Date created:				24 October 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-String-LRC/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: devel/p5-String-LRC/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	String-LRC
 PORTVERSION=	1.01
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		String::LRC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
