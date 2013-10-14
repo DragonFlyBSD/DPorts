@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: french/eficas/Makefile 314687 2013-03-19 20:33:25Z thierry $
+# $FreeBSD: french/eficas/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	eficas
 DISTVERSION=	6.6.0-2
@@ -44,6 +44,7 @@ FIXUBIN=	Openturns_Study/prefs_OPENTURNS_STUDY.py	\
 		Openturns_Wrapper/prefs_OPENTURNS_WRAPPER.py.in	\
 		Aster/prefs_ASTER.py
 
+NO_STAGE=	yes
 pre-configure:
 .for FILE in ${FIXSHQT4}
 	${REINPLACE_CMD} -e "s|/usr/bin/sh|/bin/sh|" ${WRKSRC}/InterfaceQT4/${FILE}
