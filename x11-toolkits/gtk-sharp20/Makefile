@@ -1,6 +1,5 @@
 # Created by: Juli Mallett
-# $FreeBSD: x11-toolkits/gtk-sharp20/Makefile 326122 2013-09-03 06:36:41Z bapt $
-#   $Id: Makefile,v 1.27 2007/10/03 00:48:49 killfill Exp $
+# $FreeBSD: x11-toolkits/gtk-sharp20/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtk-sharp
 PORTVERSION=	2.12.10
@@ -23,6 +22,7 @@ USES=		perl5 gmake pkgconfig
 USE_PERL5=	run
 USE_GNOME=	gnomehack gtk20 libglade2
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^#!/usr/bin/perl|#!${PERL}|'
