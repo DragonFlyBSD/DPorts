@@ -1,8 +1,5 @@
-# New ports collection makefile for:	ptex
-# Date created:		9 Feb 2004
-# Whom:			hrs
-#
-# $FreeBSD: japanese/ptex/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs
+# $FreeBSD: japanese/ptex/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ptex
 PORTVERSION=	3.1.10
@@ -87,6 +84,7 @@ SUB_LIST=	PREFIX=${PREFIX} \
 
 DOC_FILES=	COPYRIGHT COPYRIGHT.jis Changes.txt README.txt
 
+NO_STAGE=	yes
 post-extract:
 	${MV} ${WRKDIR}/ptex-src-${VER_PTEX} ${WRKSRC}
 	${MKDIR} ${WRKDIR}/ptex-texmf/fonts/map/ptex/dvips \
