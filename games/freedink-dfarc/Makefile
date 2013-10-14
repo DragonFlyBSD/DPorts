@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: games/freedink-dfarc/Makefile 324777 2013-08-15 17:26:03Z wg $
+# $FreeBSD: games/freedink-dfarc/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	freedink-dfarc
 PORTVERSION=	3.10
@@ -20,4 +20,5 @@ CONFIGURE_ARGS=	--with-wx-config=${WX_CONFIG} --disable-upx --disable-static
 
 MAN1=		dfarc.1 freedink-dfarc.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
