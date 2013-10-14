@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: ports/math/jeuclid/Makefile,v 1.5 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: math/jeuclid/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	jeuclid
 PORTVERSION=	3.1.9
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|BASEDIR=`dirname $$0`/..|BASEDIR=${DATADIR}|g' ${WRKSRC}/bin/foprep
 	${REINPLACE_CMD} -e 's|BASEDIR=`dirname $$0`/..|BASEDIR=${DATADIR}|g' ${WRKSRC}/bin/listfonts
