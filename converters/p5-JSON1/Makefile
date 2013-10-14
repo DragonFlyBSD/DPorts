@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-JSON1/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: converters/p5-JSON1/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	JSON
 PORTVERSION=	1.15
@@ -20,4 +20,5 @@ MAN3=		Apache::JSONRPC.3 JSON.3 JSON::Converter.3 \
 		JSON::PP.3 JSON::PP5005.3 JSON::PP56.3 JSON::Parser.3 \
 		JSONRPC.3 JSONRPC::Transport::HTTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
