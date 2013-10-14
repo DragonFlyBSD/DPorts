@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/glog/Makefile 321203 2013-06-18 16:25:47Z wg $
+# $FreeBSD: devel/glog/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	glog
 PORTVERSION=	0.3.3
@@ -20,6 +20,7 @@ PROJECTHOST=	google-glog
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
