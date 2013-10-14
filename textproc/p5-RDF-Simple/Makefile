@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope <ascope@cpan.org>
-# $FreeBSD: textproc/p5-RDF-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-RDF-Simple/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	RDF-Simple
 PORTVERSION=	0.41.5
@@ -31,4 +31,5 @@ MAN3=	RDF::Simple.3 \
 	RDF::Simple::Serialiser.3 \
 	RDF::Simple::Serializer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
