@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: graphics/p5-GD-Graph3d/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-GD-Graph3d/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GD-Graph3d
 PORTVERSION=	0.63
@@ -20,4 +20,5 @@ USE_DOS2UNIX=	lib/GD/Graph3d.pm # pod2man doesn't work without this
 
 MAN3=		GD::Graph3d.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
