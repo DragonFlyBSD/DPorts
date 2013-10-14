@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Protocol-WebSocket
-# Date created:				20 March 2010
-# Whom:					Stefan `Sec` Zehl <sec@42.org>
-#
-# $FreeBSD: www/p5-Protocol-WebSocket/Makefile 326150 2013-09-03 13:17:36Z az $
-#
+# Created by: Stefan `Sec` Zehl <sec@42.org>
+# $FreeBSD: www/p5-Protocol-WebSocket/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Protocol-WebSocket
 PORTVERSION=	0.00906
@@ -36,4 +32,5 @@ MAN3=		Protocol::WebSocket.3 \
 		Protocol::WebSocket::Stateful.3 \
 		Protocol::WebSocket::URL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
