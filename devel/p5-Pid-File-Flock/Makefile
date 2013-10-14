@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: devel/p5-Pid-File-Flock/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-Pid-File-Flock/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Pid-File-Flock
 PORTVERSION=	0.08
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Pid::File::Flock.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
