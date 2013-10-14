@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/poppler-glib/Makefile 321988 2013-06-28 21:19:31Z bapt $
+# $FreeBSD: graphics/poppler-glib/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/poppler-glib/Makefile,v 1.4 2012/10/14 23:04:21 kwm Exp $
 
 PORTREVISION=	0
@@ -13,6 +13,7 @@ SLAVEPORT=	glib
 PLIST=	${.CURDIR}/pkg-plist
 MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
+NO_STAGE=	yes
 pre-build:
 	@cd ${WRKSRC}/poppler && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		Makefile ${MAKE_ARGS} libpoppler-cairo.la
