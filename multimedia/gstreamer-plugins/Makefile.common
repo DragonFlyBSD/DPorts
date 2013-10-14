@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 320462 2013-06-10 11:04:03Z naddy $
+# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 329695 2013-10-07 11:51:29Z koobs $
 #    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.81 2010/03/16 19:33:10 mezz Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
@@ -582,7 +582,7 @@ gst_vp8_PLIST_FILES=	${GST_LIB_DIR}/libgstvp8.la \
 gst_vp8_DIST=		bad
 
 # x264
-gst_x264_LIB_DEPENDS+=	x264.125:${PORTSDIR}/multimedia/x264
+gst_x264_LIB_DEPENDS+=	x264:${PORTSDIR}/multimedia/x264
 gst_x264_PLIST_FILES=	${GST_LIB_DIR}/libgstx264.la \
 		${GST_LIB_DIR}/libgstx264.so \
 		share/gstreamer-${VERSION}/presets/GstX264Enc.prs
