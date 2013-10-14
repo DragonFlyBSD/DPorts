@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/gnustep-sudoku/Makefile,v 1.8 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: games/gnustep-sudoku/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sudoku
 PORTVERSION=	0.7
@@ -19,4 +19,5 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
