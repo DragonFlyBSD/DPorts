@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iso8879
-# Date created:		June 19, 1997
-# Whom:			jfieber
-#
-# $FreeBSD: ports/textproc/iso8879/Makefile,v 1.28 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: jfieber
+# $FreeBSD: textproc/iso8879/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	iso8879
 PORTVERSION=	1986
@@ -28,6 +24,7 @@ INSTDIR=	${PREFIX}/share/sgml/iso8879
 XMLCATMGR=	${LOCALBASE}/bin/xmlcatmgr
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${INSTDIR}
 	@${INSTALL_DATA} ${WRKSRC}/ISO* ${INSTDIR}
