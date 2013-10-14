@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lwp
-# Date created:				Tue Mar 21 17:51:25 EST 2000
-# Whom:					jaharkes
-#
-# $FreeBSD: ports/devel/lwp/Makefile,v 1.33 2012/11/17 05:55:59 svnexp Exp $
-#
+# Created by: jaharkes
+# $FreeBSD: devel/lwp/Makefile 329175 2013-10-03 12:55:00Z bsam $
 
 PORTNAME=	lwp
 PORTVERSION=	2.6
@@ -14,15 +10,10 @@ MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/ \
 		ftp://ftp.nctu.edu.tw/mirror/Coda/src/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A userspace thread library
+COMMENT=	Userspace thread library
 
-USE_GMAKE=	yes
+USES=		gmake pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-post-extract:
-	@${REINPLACE_CMD} -e \
-		's#(libdir)#{prefix}/libdata#g' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
