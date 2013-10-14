@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: net/qtweetlib/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net/qtweetlib/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	qtweetlib
 PORTVERSION=	0.5
@@ -23,4 +23,5 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 USE_QT4=	gui moc_build network qmake_build rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
