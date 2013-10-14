@@ -1,5 +1,5 @@
 # Created by: jessekempf@gmail.com
-# $FreeBSD: ports/devel/py-mock/Makefile,v 1.5 2012/12/02 10:45:15 svnexp Exp $
+# $FreeBSD: devel/py-mock/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mock
 PORTVERSION=	1.0.1
@@ -20,6 +20,7 @@ OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
