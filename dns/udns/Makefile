@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: dns/udns/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: dns/udns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	udns
 PORTVERSION=	0.2
@@ -26,6 +26,7 @@ SHLIB_MAJOR=	0
 MAN1=		dnsget.1 rblcheck.1
 MAN3=		udns.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
