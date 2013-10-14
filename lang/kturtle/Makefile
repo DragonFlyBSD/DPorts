@@ -1,4 +1,4 @@
-# $FreeBSD: lang/kturtle/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/kturtle/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	kturtle
 PORTVERSION=	${KDE4_VERSION}
@@ -17,4 +17,5 @@ USES=		cmake:outsource
 USE_QT4=	corelib gui xml moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
