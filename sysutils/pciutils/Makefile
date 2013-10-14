@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: sysutils/pciutils/Makefile 324998 2013-08-19 15:31:30Z sunpoet $
+# $FreeBSD: sysutils/pciutils/Makefile 330009 2013-10-10 14:36:32Z sunpoet $
 
 PORTNAME=	pciutils
 PORTVERSION=	3.2.0
@@ -14,25 +14,25 @@ COMMENT=	PCI configuration utilities
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	pci:${PORTSDIR}/devel/libpci
+LIB_DEPENDS=	libpci.so:${PORTSDIR}/devel/libpci
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 
-ALL_TARGET=	${BINS} ${MAN8}
+ALL_TARGET=	lspci lspci.8 setpci setpci.8
 CPPFLAGS+=	-fPIC
 LDFLAGS+=	-L${LOCALBASE}/lib -lpci
 MAKE_ENV=	LANG=C
 USES=		gmake
 
-BINS=		lspci setpci
-MAN8=		lspci.8 setpci.8
-PLIST_FILES=	${BINS:S/^/bin\//}
+PLIST_FILES=	bin/lspci \
+		bin/setpci \
+		man/man8/lspci.8.gz \
+		man/man8/setpci.8.gz
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^CC=/d; /^CFLAGS=/ s|=|+=|; /^IDSDIR=/ s|$$|/pciids|; /^OPT=/d; /^PREFIX=/d; s| lib/$$(PCILIB)||' ${WRKSRC}/Makefile
 
 do-install:
-	cd ${WRKSRC}/ && \
-		${INSTALL_PROGRAM} ${BINS} ${PREFIX}/bin/ && \
-		${INSTALL_MAN} ${MAN8} ${PREFIX}/man/man8/
+	cd ${WRKSRC}/ && ${INSTALL_PROGRAM} lspci setpci ${STAGEDIR}${PREFIX}/bin/
+	cd ${WRKSRC}/ && ${INSTALL_MAN} lspci.8 setpci.8 ${STAGEDIR}${PREFIX}/man/man8/
 
 .include <bsd.port.mk>
