@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-pbr/Makefile 323819 2013-07-28 10:58:11Z koobs $
+# $FreeBSD: devel/py-pbr/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pbr
 PORTVERSION=	0.5.19
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-git>=0.4:${PORTSDIR}/devel/py-set
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
