@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php55/Makefile 325459 2013-08-27 15:11:22Z ale $
+# $FreeBSD: lang/php55/Makefile 328471 2013-09-27 14:15:09Z ale $
 
 PORTNAME=	php55
-PORTVERSION=	5.5.3
+PORTVERSION=	5.5.4
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -57,6 +57,7 @@ CONFLICTS=	php52-5* php53-5* php54-5* php5-5*
 
 MAN1=		php-config.1 phpize.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PATCH_DIST_STRIP=	-p1
