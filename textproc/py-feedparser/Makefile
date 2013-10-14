@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-feedparser/Makefile 323231 2013-07-18 13:26:16Z sbz $
+# $FreeBSD: textproc/py-feedparser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	feedparser
 PORTVERSION=	5.1.3
@@ -22,6 +22,7 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	NEWS PKG-INFO README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
