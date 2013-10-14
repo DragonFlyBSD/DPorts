@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi
-# $FreeBSD: games/ninix-aya/Makefile 321201 2013-06-18 16:09:58Z antoine $
+# $FreeBSD: games/ninix-aya/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ninix-aya
 PORTVERSION=	4.4
@@ -26,6 +26,7 @@ USE_GMAKE=	yes
 
 OPTIONS_DEFINE=	DOCS NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
