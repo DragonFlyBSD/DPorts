@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-zoo/Makefile 321512 2013-06-22 01:20:17Z tota $
+# $FreeBSD: math/R-cran-zoo/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	zoo
 DISTVERSION=	1.7-10
@@ -14,4 +14,5 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
