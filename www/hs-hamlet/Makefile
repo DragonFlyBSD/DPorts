@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-hamlet/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-hamlet/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hamlet
 PORTVERSION=	1.1.7.1
@@ -12,5 +12,6 @@ LICENSE=	MIT
 USE_CABAL=	blaze-builder>=0.2 blaze-html>=0.5 blaze-markup>=0.5.1 \
 		failure>=0.1 parsec>=2 shakespeare>=1.0.1 text>=0.7
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
