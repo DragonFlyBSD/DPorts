@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-glib/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: net-im/telepathy-glib/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #    $MCom: ports/trunk/net-im/telepathy-glib/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	telepathy-glib
@@ -24,4 +24,5 @@ MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-vala-bindings
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
