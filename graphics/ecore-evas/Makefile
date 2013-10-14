@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/ecore-evas/Makefile 326075 2013-09-02 20:21:23Z antoine $
+# $FreeBSD: graphics/ecore-evas/Makefile 329506 2013-10-05 21:16:36Z gblach $
 
 PORTNAME=	evas
 PORTVERSION=	1.7.8
@@ -86,6 +86,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ecore-evas.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
