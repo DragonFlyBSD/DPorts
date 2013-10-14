@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: astro/gpsd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: astro/gpsd/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	gpsd
 PORTVERSION=	3.9
@@ -12,6 +12,7 @@ COMMENT=	Daemon that monitors one or more GPSes attached to a host computer
 BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl \
 		xsltproc:${PORTSDIR}/textproc/libxslt
 
+NO_STAGE=	yes
 USES=		pathfix pkgconfig
 USE_SCONS=	yes
 USE_RC_SUBR=	gpsd
