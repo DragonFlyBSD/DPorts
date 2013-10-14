@@ -1,8 +1,8 @@
 # Created by: Andreas Kohn
-# $FreeBSD: devel/mercurial/Makefile 326982 2013-09-11 14:49:11Z olivierd $
+# $FreeBSD: devel/mercurial/Makefile 329637 2013-10-06 23:05:05Z sunpoet $
 
 PORTNAME=	mercurial
-PORTVERSION=	2.7.1
+PORTVERSION=	2.7.2
 CATEGORIES=	devel python
 MASTER_SITES=	http://mercurial.selenic.com/release/
 
@@ -14,8 +14,12 @@ LICENSE=	GPLv2
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
-OPTIONS_DEFINE=	CA_BUNDLE NLS
+OPTIONS_DEFINE=	CA_BUNDLE DATA DOCS NLS
+OPTIONS_DEFAULT=DATA
+OPTIONS_SUB=	yes
 CA_BUNDLE_DESC=	Install CA Certificates
+
+SUB_FILES=	pkg-message
 
 CONTRIB_FILES=	bash_completion \
 		casesmash.py \
@@ -51,53 +55,37 @@ CONTRIB_FILES=	bash_completion \
 		vim/hgtest.vim \
 		vim/patchreview.txt \
 		vim/patchreview.vim
+DOCS=		CONTRIBUTORS README
 
-DOCS=	CONTRIBUTORS README
-
-MAN1=	hg.1
-MAN5=	hgignore.5 hgrc.5
-
-SUB_FILES=	pkg-message
+CA_BUNDLE_RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+NLS_USES=		gettext
 
 .include <bsd.port.options.mk>
 
-post-patch:
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
+.if !${PORT_OPTIONS:MNLS}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-setup.py
-PLIST_SUB+=	NLS="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MCA_BUNDLE}
-RUN_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/doc/*.5 ${PREFIX}/man/man5/
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	for f in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${DOCSDIR}; \
-	done
-.endif
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}
-	${MKDIR} ${DATADIR}/contrib
-	${MKDIR} ${DATADIR}/contrib/hgfixes
-	${MKDIR} ${DATADIR}/contrib/hgsh
-	${MKDIR} ${DATADIR}/contrib/vim
+	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${STAGEDIR}${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/*.5 ${STAGEDIR}${PREFIX}/man/man5/
+.if ${PORT_OPTIONS:MDATA}
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${MKDIR} ${STAGEDIR}${DATADIR}/contrib
+	${MKDIR} ${STAGEDIR}${DATADIR}/contrib/hgfixes
+	${MKDIR} ${STAGEDIR}${DATADIR}/contrib/hgsh
+	${MKDIR} ${STAGEDIR}${DATADIR}/contrib/vim
 	for f in ${CONTRIB_FILES}; do \
-		${CP} -p ${WRKSRC}/contrib/$${f} ${DATADIR}/contrib/$${f}; \
+		${CP} -p ${WRKSRC}/contrib/$${f} ${STAGEDIR}${DATADIR}/contrib/$${f}; \
 	done
-	${MKDIR} ${DATADIR}/www
-	${INSTALL_DATA} ${WRKSRC}/*.cgi ${DATADIR}/www
-	${INSTALL_DATA} ${WRKSRC}/contrib/hgweb.fcgi ${DATADIR}/www
-	${INSTALL_DATA} ${WRKSRC}/contrib/hgweb.wsgi ${DATADIR}/www
-
-	@${CAT} ${PKGMESSAGE}
+	${MKDIR} ${STAGEDIR}${DATADIR}/www
+	${INSTALL_DATA} ${WRKSRC}/*.cgi ${STAGEDIR}${DATADIR}/www
+	${INSTALL_DATA} ${WRKSRC}/contrib/hgweb.fcgi ${STAGEDIR}${DATADIR}/www
+	${INSTALL_DATA} ${WRKSRC}/contrib/hgweb.wsgi ${STAGEDIR}${DATADIR}/www
+.endif
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
