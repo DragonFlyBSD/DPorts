@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libmowgli
-# Date Created:				06 Sep 2007
-# Whom:					Oliver Lehmann <oliver@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libmowgli/Makefile,v 1.11 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: Oliver Lehmann <oliver@FreeBSD.org>
+# $FreeBSD: devel/libmowgli/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libmowgli
 PORTVERSION=	1.0.0
@@ -18,6 +14,7 @@ USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|$${libdir}/pkgconfig|$${prefix}/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile
