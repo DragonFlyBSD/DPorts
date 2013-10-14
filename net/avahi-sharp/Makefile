@@ -1,6 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@FreeBSD.org>
-# $FreeBSD: net/avahi-sharp/Makefile 323006 2013-07-14 21:17:21Z kwm $
-#   $Id: Makefile,v 1.2 2006/02/15 19:15:40 tmclau02 Exp $
+# $FreeBSD: net/avahi-sharp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	net dns
@@ -22,6 +21,7 @@ PLIST=		${.CURDIR}/pkg-plist
 AVAHI_SLAVE=	sharp
 AVAHI_PKGCONFIG=avahi-sharp.pc
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|@CLIENT_DLNAME@|libavahi-client.so|g; \
 		s|@COMMON_DLNAME@|libavahi-common.so|g; \
