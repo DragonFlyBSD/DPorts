@@ -1,6 +1,5 @@
 # Created by: truckman
-# $FreeBSD: security/chrootuid/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/chrootuid/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	chrootuid
 PORTVERSION=	1.3
@@ -14,6 +13,7 @@ COMMENT=	Simple wrapper that combines chroot(8) and su(1) into  one  program
 
 MAN8=		chrootuid.8
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
