@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-OOTools/Makefile 325064 2013-08-20 16:57:19Z mat $
+# $FreeBSD: devel/p5-OOTools/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	OOTools
 PORTVERSION=	2.30
@@ -25,4 +25,5 @@ MAN3=		Class::constr.3 \
 		Package::groups.3 \
 		Package::props.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
