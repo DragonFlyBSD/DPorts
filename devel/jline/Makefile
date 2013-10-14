@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer <mkamm@gmx.net>
-# $FreeBSD: devel/jline/Makefile 317875 2013-05-11 13:15:45Z bapt $
+# $FreeBSD: devel/jline/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=		jline
 PORTVERSION=		0.9.94
@@ -18,6 +18,7 @@ OPTIONS_DEFINE=	JLINEPATCH
 JLINEPATCH_DESC=	Allow ConsoleRunner customized completion
 JLINEJAR=	${WRKSRC}/jline-${PORTVERSION}.jar
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Update jar archive with patched jline.ConsoleRunner class.
