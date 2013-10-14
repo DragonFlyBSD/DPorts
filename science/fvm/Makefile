@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/fvm/Makefile 314691 2013-03-19 20:35:32Z thierry $
+# $FreeBSD: science/fvm/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	fvm
 PORTVERSION=	0.15.3
@@ -51,6 +51,7 @@ MAN1=		fvm-config.1
 
 TESTSBIN=	fvm_file_test fvm_interface_test fvm_selector_postfix_test fvm_selector_test
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|-lmpich|-lmpich -lmpl|'	\
 		${WRKSRC}/${CONFIGURE_SCRIPT}
