@@ -1,9 +1,5 @@
-# New ports collection Makefile for: 	cfortran
-# Date created:				5 December 2008
-# Whom:					gahr
-#
-# $FreeBSD: ports/lang/cfortran/Makefile,v 1.3 2012/11/17 05:58:48 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: lang/cfortran/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	cfortran
 PORTVERSION=	4.3
@@ -22,6 +18,7 @@ COMMENT=	An easy-to-use powerful bridge between C and FORTRAN
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
+NO_STAGE=	yes
 post-extract:
 .for dfile in ${DISTFILES}
 	${CP} ${_DISTDIR}/${dfile} ${WRKSRC}
