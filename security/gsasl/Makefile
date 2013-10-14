@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/gsasl/Makefile 325745 2013-08-31 00:11:06Z bapt $
+# $FreeBSD: security/gsasl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gsasl
 PORTVERSION=	1.8.0
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 
 INFO=	gsasl
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
