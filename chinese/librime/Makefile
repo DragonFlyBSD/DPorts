@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/librime/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: chinese/librime/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	librime
 PORTVERSION=	0.9.7
@@ -30,6 +30,7 @@ post-patch:     .SILENT
 	${FIND} ${WRKSRC} \( -name '*.cc' -or -name '*.h' \) \
 		-exec ${PERL} -i -pe '$$. == 1 && s/^\xef\xbb\xbf//;' '{}' \;
 
+NO_STAGE=	yes
 post-build:
 	@echo "building rime data."
 	@${MKDIR} ${DATASRC}
