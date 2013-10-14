@@ -1,9 +1,5 @@
-# New ports collection makefile for:	yadis
-# Date created:				Dec 19, 2006
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: net/rubygem-yadis/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: net/rubygem-yadis/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	yadis
 PORTVERSION=	0.3.4
@@ -19,4 +15,5 @@ USE_RUBYGEMS=	yes
 GEM_NAME=	${DISTNAME}
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
