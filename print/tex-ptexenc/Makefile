@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-ptexenc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/tex-ptexenc/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ptexenc
 PORTVERSION=	1.3.0
@@ -25,4 +25,5 @@ CONFIGURE_ARGS=	--with-system-kpathsea \
 		--with-kpathsea-includes=${LOCALBASE}/include \
 		--with-kpathsea-libdir=${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
