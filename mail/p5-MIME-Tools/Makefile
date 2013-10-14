@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: mail/p5-MIME-Tools/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-MIME-Tools/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	MIME-Tools
 PORTVERSION=	5.504
@@ -24,6 +24,7 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=	MIME::Body.3 \
 	MIME::Decoder.3	\
