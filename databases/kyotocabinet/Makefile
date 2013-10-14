@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/kyotocabinet/Makefile 325351 2013-08-25 16:12:33Z sunpoet $
+# $FreeBSD: databases/kyotocabinet/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	kyotocabinet
 PORTVERSION=	1.2.76
@@ -37,6 +37,7 @@ MAN1=		kccachetest.1 \
 		kcutilmgr.1 \
 		kcutiltest.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386" && !defined(CPUTYPE)
