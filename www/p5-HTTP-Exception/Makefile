@@ -1,9 +1,4 @@
-# New ports collection makefile for:	HTTP::Exception
-# Date created:		22 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTTP-Exception/Makefile 325974 2013-09-02 11:04:10Z az $
-#
+# $FreeBSD: www/p5-HTTP-Exception/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Exception
 PORTVERSION=	0.04004
@@ -34,4 +29,5 @@ MAN3=	HTTP::Exception.3 \
 	HTTP::Exception::Base.3 \
 	HTTP::Exception::Loader.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
