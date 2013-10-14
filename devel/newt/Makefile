@@ -1,4 +1,4 @@
-# $FreeBSD: devel/newt/Makefile 324395 2013-08-08 12:48:53Z bdrewery $
+# $FreeBSD: devel/newt/Makefile 328446 2013-09-27 09:29:19Z gahr $
 
 PORTNAME=	newt
 PORTVERSION=	0.52.16
@@ -6,14 +6,14 @@ CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/n/e/newt/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Not Erik's Windowing Toolkit: console I/O handling library
+COMMENT=	Not Eriks Windowing Toolkit: console I/O handling library
 
-LIB_DEPENDS=	slang:${PORTSDIR}/devel/libslang2 \
-		popt:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libslang.so:${PORTSDIR}/devel/libslang2 \
+		libpopt.so:${PORTSDIR}/devel/popt
 
 OPTIONS_DEFINE=	PYTHON TCL NLS
 
-USE_GMAKE=	yes
+USES+=		gmake
 GNU_CONFIGURE=	yes
 MAKE_ENV=	PCFLAGS="${CFLAGS}" TCLVERSION="tcl${TCL_VER}"
 USE_LDCONFIG=	yes
@@ -26,8 +26,6 @@ PLIST_SUB=	SOVERSION="${SOVERSION}" \
 		VERSION="${PORTVERSION}"
 
 SUB_LIST=	VERSION="${PORTVERSION}"
-
-MAN1=		whiptail.1
 
 SOVERSION=	${PORTVERSION:R:E}
 
@@ -51,7 +49,7 @@ PLIST_SUB+=	PYTHONOPT="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MTCL}
-USE_TCL=	84+
+USES+=		tcl
 MAKE_ENV+=	TCL_LIBDIR=${TCL_LIBDIR:Q}
 CPPFLAGS+=	-I${TCL_INCLUDEDIR:Q}
 SUB_FILES+=	pkgIndex.tcl
@@ -71,7 +69,7 @@ post-patch:
 		 /^pkgconfigdir/s|=.*|=${PREFIX}/libdata/pkgconfig| ; \
 		 s| -g | |g ; \
 		 /make -C/s|^|#| ; \
-		 /whiptcl.so/s|install|${TRUE}|' ${WRKSRC}/Makefile.in
+		 /whiptcl.$$(SOEXT)/s|install|${TRUE}|' ${WRKSRC}/Makefile.in
 
 post-build:	apply-slist
 .if ${PORT_OPTIONS:MPYTHON}
@@ -81,24 +79,24 @@ post-build:	apply-slist
 .endif
 
 post-install:
-	@${STRIP_CMD} ${PREFIX}/bin/whiptail
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/whiptail
 .if ${PORT_OPTIONS:MNLS}
 	@(cd ${WRKSRC}/po && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		${MAKEFILE} ${MAKE_ARGS} datadir=${PREFIX}/share \
+		${MAKEFILE} ${MAKE_ARGS} datadir=${STAGEDIR}${PREFIX}/share \
 		${INSTALL_TARGET})
 .endif
 .if ${PORT_OPTIONS:MPYTHON}
 	@(cd ${WRKSRC} && ${MAKE_ENV} ${PYTHON_CMD} ${WRKDIR}/setup.py \
-		install --prefix=${PREFIX})
+		install --prefix=${STAGEDIR}${PREFIX})
 .endif
 .if ${PORT_OPTIONS:MTCL}
-	@${MKDIR} ${TCL_LIBDIR}/whip
-	(cd ${WRKSRC} && ${INSTALL_DATA} whiptcl.so ${TCL_LIBDIR}/whip)
-	(cd ${WRKDIR} && ${INSTALL_DATA} pkgIndex.tcl ${TCL_LIBDIR}/whip)
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/whip${PORTVERSION}
+	(cd ${WRKSRC} && ${INSTALL_DATA} whiptcl.so ${STAGEDIR}${PREFIX}/lib/whip${PORTVERSION})
+	(cd ${WRKDIR} && ${INSTALL_DATA} pkgIndex.tcl ${STAGEDIR}${PREFIX}/lib/whip${PORTVERSION})
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	(cd ${WRKSRC} && ${INSTALL_SCRIPT} peanuts.py popcorn.py ${EXAMPLESDIR})
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC} && ${INSTALL_SCRIPT} peanuts.py popcorn.py ${STAGEDIR}${EXAMPLESDIR})
 .endif
 
 .include <bsd.port.mk>
