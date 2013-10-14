@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: emulators/mtools/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: emulators/mtools/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	mtools
 PORTVERSION=	4.0.10
@@ -32,6 +32,7 @@ INFO=		mtools
 OPTIONS_DEFINE=	ICONV X11
 OPTIONS_DEFAULT=ICONV X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONV}
