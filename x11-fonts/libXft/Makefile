@@ -1,5 +1,4 @@
-#Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-fonts/libXft/Makefile 314712 2013-03-20 05:49:00Z mezz $
+# $FreeBSD: x11-fonts/libXft/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	libXft
 PORTVERSION=	2.3.1
@@ -17,6 +16,7 @@ USE_XORG=	xproto:both xrender
 
 MAN3=		Xft.3
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${FILESDIR}/xft-config.in \
 		${WRKSRC}/xft-config.in
