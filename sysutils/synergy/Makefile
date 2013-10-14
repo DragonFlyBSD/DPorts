@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/synergy/Makefile 327047 2013-09-12 09:45:44Z kevlo $
+# $FreeBSD: sysutils/synergy/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	synergy
 PORTVERSION=	1.3.8
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/synergys bin/synergyc
 PORTEXAMPLES=	synergy.conf.example synergy.conf.example-basic \
 		synergy.conf.example-advanced
 
+NO_STAGE=	yes
 do-install:
 .for f in synergys synergyc
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${f} ${PREFIX}/bin
