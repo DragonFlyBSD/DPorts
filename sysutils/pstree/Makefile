@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: sysutils/pstree/Makefile 317275 2013-05-03 21:59:14Z jgh $
+# $FreeBSD: sysutils/pstree/Makefile 328337 2013-09-26 06:51:21Z jgh $
 
 PORTNAME=	pstree
 PORTVERSION=	2.36
@@ -20,6 +20,6 @@ do-build:
 	cd ${WRKDIR} && ${CC} ${CFLAGS} -o pstree pstree.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/pstree ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/pstree ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
