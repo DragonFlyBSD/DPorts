@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-logger/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-im/telepathy-logger/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.14 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	telepathy-logger
@@ -27,6 +27,7 @@ USE_SQLITE=	yes
 USE_PYTHON_BUILD=	yes
 GLIB_SCHEMAS=	org.freedesktop.Telepathy.Logger.gschema.xml
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|/usr/bin/env python|g' \
 		${WRKSRC}/tools/*.py
