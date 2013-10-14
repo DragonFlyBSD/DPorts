@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/vte/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: x11-toolkits/vte/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/vte/Makefile,v 1.117 2010/11/13 13:16:58 kwm Exp $
 
 PORTNAME=	vte
@@ -33,6 +33,7 @@ OPTIONS_DEFINE=	GLX
 GLX_DESC=	Support for DRI/GLX rendering
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGLX} && !defined(MASTERDIR)
