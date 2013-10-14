@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: security/p5-Digest-SHA/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Digest-SHA/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-SHA
 PORTVERSION=	5.85
@@ -21,6 +21,7 @@ USE_PERL5=	configure
 
 MAN3=		Digest::SHA.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
 
