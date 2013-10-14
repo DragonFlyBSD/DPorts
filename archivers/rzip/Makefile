@@ -1,8 +1,5 @@
-# New ports collection makefile for:	rzip
-# Date created:			9 April 2004
-# Whom:				Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: archivers/rzip/Makefile 322581 2013-07-09 21:26:48Z pav $
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: archivers/rzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	rzip
 PORTVERSION=	2.1
@@ -14,6 +11,7 @@ COMMENT=	Compression program similar to gzip or bzip2
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 MAN1=		rzip.1
 PLIST_FILES=	bin/rzip
 
