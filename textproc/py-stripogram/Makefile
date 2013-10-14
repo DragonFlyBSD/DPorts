@@ -1,9 +1,5 @@
-# New ports collection makefile for:   py-stripogram
-# Date created:        10 January 2008
-# Whom:                Oleg Ukraincev <oleg@ht-systems.ru>
-#
-# $FreeBSD: ports/textproc/py-stripogram/Makefile,v 1.4 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Oleg Ukraincev <oleg@ht-systems.ru>
+# $FreeBSD: textproc/py-stripogram/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	stripogram
 PORTVERSION=	1.4
@@ -21,4 +17,5 @@ WRKSRC=		${WRKDIR}/stripogram
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
