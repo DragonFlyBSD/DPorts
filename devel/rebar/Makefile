@@ -1,7 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rebar/Makefile,v 1.3 2013/02/09 15:59:06 svnexp Exp $
-#
+# $FreeBSD: devel/rebar/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rebar
 PORTVERSION=	2.0.0
@@ -22,6 +20,7 @@ PLIST_FILES=	bin/${PORTNAME}
 GITVERSION=	1c98f6c
 FETCH_ARGS=	-Fpr
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 
