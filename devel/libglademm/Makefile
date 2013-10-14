@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: devel/libglademm/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: devel/libglademm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libglademm
 PORTVERSION=	2.1.3
@@ -21,6 +21,7 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
