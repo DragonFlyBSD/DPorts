@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: multimedia/libvpx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/libvpx/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libvpx
 PORTVERSION=	1.1.0
@@ -13,11 +13,11 @@ COMMENT=	VP8 Codec SDK
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		yasm:${PORTSDIR}/devel/yasm
 
+USES=		gmake perl5
 USE_BZIP2=	yes
 PROJECTHOST=	webm
 HAS_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 
 LICENSE=	BSD
@@ -33,6 +33,7 @@ ALL_TARGET=
 CONFIGURE_ARGS+=	--enable-pic --disable-install-srcs --enable-vp8 --disable-install-docs
 MAKE_ARGS+=	DIST_DIR=${PREFIX} verbose=yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
