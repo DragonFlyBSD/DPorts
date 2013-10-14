@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: biology/primer3/Makefile 325508 2013-08-28 06:04:51Z bapt $
+# $FreeBSD: biology/primer3/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	primer3
 PORTVERSION=	2.3.5
@@ -16,6 +16,7 @@ MAKE_ARGS=	CC=${CC} CPP=${CXX}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 PLIST_FILES=	bin/primer3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's#^CFLAGS.*#CFLAGS  += \$$\(CC_OPTS\)#;' \
