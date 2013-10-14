@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/p5-URI-FromHash/Makefile 326468 2013-09-06 07:00:15Z az $
+# $FreeBSD: net/p5-URI-FromHash/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	URI-FromHash
 DISTVERSION=	0.04
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		URI::FromHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
