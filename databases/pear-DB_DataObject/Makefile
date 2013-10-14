@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@php.net>)
-# $FreeBSD: databases/pear-DB_DataObject/Makefile 319876 2013-06-04 16:54:54Z miwi $
+# $FreeBSD: databases/pear-DB_DataObject/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DB_DataObject
 PORTVERSION=	1.11.2
@@ -22,6 +22,7 @@ PEAR_VALIDATE_DESC=	"PEAR::Validate support"
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPEAR_MDB2}
