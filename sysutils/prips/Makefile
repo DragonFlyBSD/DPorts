@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: sysutils/prips/Makefile 319275 2013-05-27 16:54:49Z bsam $
+# $FreeBSD: sysutils/prips/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	prips
 PORTVERSION=	0.9.9
@@ -21,6 +21,7 @@ MAKE_ENV+=	CFLAGS_WARN="-Wall -W"
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
