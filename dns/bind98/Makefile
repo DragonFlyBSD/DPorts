@@ -1,7 +1,7 @@
-# $FreeBSD: dns/bind98/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# $FreeBSD: dns/bind98/Makefile 328564 2013-09-28 12:32:53Z erwin $
 
 PORTNAME=	bind98
-PORTVERSION=	9.8.5.2
+PORTVERSION=	9.8.6
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
@@ -13,7 +13,7 @@ COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 LICENSE=	ISCL
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.8.5-P2
+ISCVERSION=	9.8.6
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -27,7 +27,7 @@ CONFLICTS=	bind9*-9.[45679].* bind9*-sdb-9.[45679].* bind-tools-9.*
 OPTIONS_DEFAULT=	IPV6 SSL LINKS XML THREADS
 OPTIONS_DEFINE=		SSL LINKS XML IDN REPLACE_BASE LARGE_FILE \
 			FIXED_RRSET RPZ_NSIP RPZ_NSDNAME RPZRRL_PATCH \
-			SIGCHASE IPV6 THREADS
+			SIGCHASE IPV6 THREADS GSSAPI FILTER_AAAA
 OPTIONS_GROUP=		DLZ
 OPTIONS_GROUP_DLZ=	DLZ_POSTGRESQL DLZ_MYSQL DLZ_BDB \
 			DLZ_LDAP DLZ_FILESYSTEM DLZ_STUB
@@ -42,6 +42,7 @@ FIXED_RRSET_DESC=	Enable fixed rrset ordering
 RPZ_NSIP_DESC=		Enable RPZ NSIP trigger rules
 RPZ_NSDNAME_DESC=	Enable RPZ NSDNAME policy records
 RPZRRL_PATCH_DESC=	RPZ improvements + RRL patch (experimental)
+FILTER_AAAA_DESC=	Enable filtering of AAAA records
 DLZ_DESC=		Dynamically Loadable Zones
 DLZ_POSTGRESQL_DESC=	DLZ Postgres driver
 DLZ_MYSQL_DESC=		DLZ MySQL driver (no threading)
@@ -50,6 +51,7 @@ DLZ_LDAP_DESC=		DLZ LDAP driver
 DLZ_FILESYSTEM_DESC=	DLZ filesystem driver
 DLZ_STUB_DESC=		DLZ stub driver
 
+NO_STAGE=		yes
 .include <bsd.port.options.mk>
 
 .if (${ARCH} == "x86_64")
@@ -97,6 +99,10 @@ CONFIGURE_ARGS+=	STD_CDEFINES="-DDIG_SIGCHASE=1"
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+.if ${PORT_OPTIONS:MFILTER_AAAA}
+CONFIGURE_ARGS+=	--enable-filter-aaaa
+.endif
+
 .if ${PORT_OPTIONS:MFIXED_RRSET}
 CONFIGURE_ARGS+=	--enable-fixed-rrset
 .endif
@@ -110,7 +116,7 @@ CONFIGURE_ARGS+=	--enable-rpz-nsdname
 .endif
 
 .if ${PORT_OPTIONS:MRPZRRL_PATCH}
-PATCHFILES=		9.8.5-rpz+rl.13208.13-P2.patch
+PATCHFILES=		rpz2+rl-9.8.6.patch
 PATCH_SITES=		http://ss.vix.com/~vjs/
 .endif
 
@@ -146,6 +152,12 @@ CONFIGURE_ARGS+=	--with-dlz-stub=yes
 CONFIGURE_ARGS+=	--enable-threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
+.endif
+
+.if ${PORT_OPTIONS:MGSSAPI}
+CONFIGURE_ARGS+=	--with-gssapi
+.else
+CONFIGURE_ARGS+=	--without-gssapi
 .endif
 
 .if ${PORT_OPTIONS:MREPLACE_BASE}
