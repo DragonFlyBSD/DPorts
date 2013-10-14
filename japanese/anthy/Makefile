@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: japanese/anthy/Makefile 318179 2013-05-14 17:06:06Z nobutaka $
+# $FreeBSD: japanese/anthy/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	anthy
 PORTVERSION=	9100h
@@ -35,6 +35,7 @@ OPTIONS_DEFAULT=	DOCS
 ODIC_DESC=	Okinawa Dictionary
 GSKKDIC_DESC=	SKK Dictionary
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:M2CHDIC}
