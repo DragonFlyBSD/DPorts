@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: lang/gnustep-base/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: lang/gnustep-base/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gnustep-base
 PORTVERSION=	1.24.5
@@ -47,6 +47,7 @@ ETCDIR=		${LOCALBASE}/etc
 
 PLIST_SUB+=	BASEVERSION=${PORTVERSION:C/[.][0-9]*$//1}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PATH:=	${PREFIX}/System/Tools:${PATH}
