@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite2/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: databases/sqlite2/Makefile 328258 2013-09-25 09:32:09Z gahr $
 
 PORTNAME=	sqlite
 PORTVERSION=	2.8.17
@@ -10,8 +10,7 @@ MASTER_SITES=	http://www.sqlite.org/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An SQL database engine in a C library
 
-USES=		pkgconfig
-USE_GMAKE=	YES
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	YES
 
@@ -26,14 +25,15 @@ EXTRACT_AFTER_ARGS=	--exclude CVS
 
 OPTIONS_DEFINE=	TCL THREADS DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTCL}
-USE_TCL=		84+
+USES+=		tcl
 .else
 .if ${PORT_OPTIONS:MDOCS}
-USE_TCL_BUILD=		84+
-. endif
+USES+=		tcl:build
+.endif
 .endif
 
 .include <bsd.port.pre.mk>
