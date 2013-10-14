@@ -1,5 +1,5 @@
 # Created by: <dmagda+libsamplerate@ee.ryerson.ca>
-# $FreeBSD: audio/libsamplerate/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/libsamplerate/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libsamplerate
 PORTVERSION=	0.1.8
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=	pathfix pkgconfig
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
