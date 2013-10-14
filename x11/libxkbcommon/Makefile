@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libxkbcommon/Makefile 326018 2013-09-02 15:58:29Z bapt $
+# $FreeBSD: x11/libxkbcommon/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libxkbcommon
 PORTVERSION=	0.3.1
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--without-default-layout \
 		--without-default-variant \
 		--without-doxygen
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
