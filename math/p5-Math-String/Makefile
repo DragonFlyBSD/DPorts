@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: math/p5-Math-String/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-String/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-String
 PORTVERSION=	1.28
@@ -22,4 +22,5 @@ MAN3=		Math::String.3 \
 		Math::String::Charset::Nested.3 \
 		Math::String::Sequence.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
