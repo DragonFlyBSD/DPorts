@@ -1,5 +1,5 @@
 # Created by: Oliver Braun
-# $FreeBSD: devel/libvc/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/libvc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libvc
 PORTVERSION=	003
@@ -23,6 +23,7 @@ PLIST_FILES=	lib/libvc.a \
 		include/vc.h
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
