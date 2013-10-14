@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: x11-toolkits/attica/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/attica/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	attica
 PORTVERSION=	0.4.2
@@ -19,6 +19,7 @@ USES=		cmake
 CMAKE_ARGS=	-DATTICA_ENABLE_TESTS:BOOL=OFF \
 		-DQT4_BUILD:BOOL=ON
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's,$${LIB_DESTINATION}/pkgconfig,libdata/pkgconfig,' \
