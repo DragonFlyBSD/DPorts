@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-clio
-# Date created:		2011-07-07
-# Whom:			Loic Pefferkorn <loic-freebsd@loicp.eu>
-#
-# $FreeBSD: ports/devel/rubygem-clio/Makefile,v 1.2 2012/11/17 05:56:58 svnexp Exp $
-#
+# Created by: Loic Pefferkorn <loic-freebsd@loicp.eu>
+# $FreeBSD: devel/rubygem-clio/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	clio
 PORTVERSION=	0.3.0
@@ -19,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
