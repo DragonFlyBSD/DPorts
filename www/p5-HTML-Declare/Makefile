@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Declare/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/p5-HTML-Declare/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	HTML-Declare
 PORTVERSION=	2.4
@@ -15,10 +15,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		HTML::Declare.3
-PLIST_FILES=	%%SITE_PERL%%/HTML/Declare.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Declare/.packlist
-PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Declare
 
 .include <bsd.port.mk>
