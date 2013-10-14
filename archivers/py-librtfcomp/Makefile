@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-librtfcomp
-# Date Created:				13 June 2008
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/archivers/py-librtfcomp/Makefile,v 1.5 2013/02/20 16:45:20 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: archivers/py-librtfcomp/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 CATEGORIES=	archivers python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,6 +12,7 @@ BUILD_DEPENDS=	pyrexc:${PORTSDIR}/devel/pyrex
 
 MASTERDIR=	${.CURDIR}/../librtfcomp
 
+NO_STAGE=	yes
 USE_PYTHON=	yes
 
 PLIST=		${.CURDIR}/pkg-plist
