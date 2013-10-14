@@ -1,4 +1,4 @@
-# $FreeBSD: mail/spmfilter/Makefile 323328 2013-07-19 20:57:59Z cs $
+# $FreeBSD: mail/spmfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spmfilter
 PORTVERSION=	0.4.2
@@ -32,6 +32,7 @@ DB4_DESC=	DB4 backend
 # Default requirement for spmfilter rc script
 _REQUIRE=	LOGIN
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDB4}
