@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-transactionsimple/Makefile 321916 2013-06-28 01:12:39Z swills $
+# $FreeBSD: devel/rubygem-transactionsimple/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	transactionsimple
 PORTVERSION=	1.4.0.2
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
