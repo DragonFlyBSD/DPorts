@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: sysutils/auto-admin/Makefile 324965 2013-08-19 08:55:18Z culot $
+# $FreeBSD: sysutils/auto-admin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	auto-admin
 PORTVERSION=	0.3.2
@@ -40,6 +40,7 @@ MAN1=		auto-admin.1 \
 		auto-update-xorg.conf.1 \
 		auto-xdm-toggle.1
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/sbin ${DATADIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/Common/* ${PREFIX}/sbin
