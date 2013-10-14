@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars_Koeller@odie.physik2.uni-rostock.de>
-# $FreeBSD: mail/faces/Makefile 319615 2013-06-01 23:18:19Z bapt $
+# $FreeBSD: mail/faces/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	faces
 PORTVERSION=	1.7.7
@@ -25,6 +25,7 @@ MLINKS=		compface.1 uncompface.1 \
 		compface.3 uncompface.3
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ! ${PORT_OPTIONS:MX11}
