@@ -1,5 +1,5 @@
 # Created by: Olexandr Davydenko <o.davydenko@gmail.com>
-# $FreeBSD: devel/libftdi/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/libftdi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libftdi
 PORTVERSION=	0.20
@@ -21,6 +21,7 @@ USES=			pathfix pkgconfig
 
 PORTDOCS=		COPYING.LIB ChangeLog README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBOOST}
