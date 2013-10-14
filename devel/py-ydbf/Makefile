@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ydbf
-# Date created:        10 May 2009
-# Whom:                Andrey Polyakov <andrey.polyakov@unix.net>
-#
-# $FreeBSD: ports/devel/py-ydbf/Makefile,v 1.3 2012/11/17 05:56:52 svnexp Exp $
-#
+# Created by: Andrey Polyakov <andrey.polyakov@unix.net>
+# $FreeBSD: devel/py-ydbf/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ydbf
 PORTVERSION=	0.0.1
@@ -23,4 +19,5 @@ PYDISTUTILS_NOEGGINFO=	yes
 PYDISTUTILS_PKGNAME=	YDbf
 PYDISTUTILS_PKGVERSION=	0.0.1dev_20080514
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
