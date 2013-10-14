@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Look/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-SVN-Look/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Look
 PORTVERSION=	0.38
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		SVN::Look.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
