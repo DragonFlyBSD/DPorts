@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notifyd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: deskutils/xfce4-notifyd/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xfce4-notifyd
 PORTVERSION=	0.2.4
@@ -31,6 +31,7 @@ MAN1=	xfce4-notifyd-config.1
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
