@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: www/w3m/Makefile 325211 2013-08-22 16:30:42Z nobutaka $
+# $FreeBSD: www/w3m/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	w3m
 PORTVERSION=	0.5.3
@@ -31,6 +31,7 @@ JAPANESE_DESC=		Japanese messages and migemo support
 INLINE_IMAGE_DESC=	Inline image support
 KEY_LYNX_DESC=		Keymap like lynx browser
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJAPANESE}
