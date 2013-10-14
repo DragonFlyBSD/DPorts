@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/samba-libsmbclient/Makefile,v 1.33 2013/01/31 17:03:14 svnexp Exp $
+# $FreeBSD: net/samba-libsmbclient/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTREVISION=		0
 PORTEPOCH=		0
@@ -24,6 +24,7 @@ MAN7=			libsmbclient.7
 
 ALL_TARGET=		${SAMBA_INSTALL_LIBS}
 
+NO_STAGE=	yes
 do-install:
 			-@${MKDIR} ${MAN7PREFIX}/man/man7
 .for man in ${MAN7}
