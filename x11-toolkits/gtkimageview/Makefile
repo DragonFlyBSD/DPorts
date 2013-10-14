@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkimageview/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: x11-toolkits/gtkimageview/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtkimageview
 PORTVERSION=	1.6.4
@@ -17,6 +17,7 @@ USES=		pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^gtkimageview-marshal.[ch]:/s|$$[(]GLIB_GENMARSHAL[)]||'\
 		${WRKSRC}/src/Makefile.in
