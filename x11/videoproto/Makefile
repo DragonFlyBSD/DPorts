@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: x11/videoproto/Makefile 324210 2013-08-04 00:03:33Z bapt $
+# $FreeBSD: x11/videoproto/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	videoproto
 PORTVERSION=	2.3.2
