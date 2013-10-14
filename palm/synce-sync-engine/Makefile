@@ -1,8 +1,5 @@
-# New ports collection makefile for:	synce-sync-engine
-# Date created:				27 September 2008
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/palm/synce-sync-engine/Makefile,v 1.8 2013/02/20 16:45:25 svnexp Exp $
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: palm/synce-sync-engine/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME?=	sync-engine
 PORTVERSION=	0.14
@@ -32,6 +29,7 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	synce_sync_engine
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(ENGINE_VER) && defined(PLUGINDIR)
