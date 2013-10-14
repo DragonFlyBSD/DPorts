@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-wm/lxsession/Makefile 324880 2013-08-17 23:34:19Z nemysis $
+# $FreeBSD: x11-wm/lxsession/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	lxsession
 PORTVERSION=	0.4.6.1
@@ -30,6 +30,7 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
