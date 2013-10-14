@@ -1,5 +1,5 @@
-# Created by: Joerg Wunsch <joerg@freebsd.org>
-# $FreeBSD: devel/avr-gcc/Makefile 326554 2013-09-06 22:04:10Z bapt $
+# Created by: Joerg Wunsch <joerg@FreeBSD.org>
+# $FreeBSD: devel/avr-gcc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	4.5.1
@@ -32,12 +32,13 @@ CONFIGURE_WRKSRC=	${BUILD_WRKSRC}
 INSTALL_WRKSRC=		${BUILD_WRKSRC}
 CONFIGURE_SCRIPT=	../gcc-${PORTVERSION}/configure
 
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_BZIP2=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-USES=		bison gettext gmake
+USES=		bison gettext gmake perl5
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if (${ARCH} == "x86_64")
