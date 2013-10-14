@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org> and David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: print/psutils/Makefile 326361 2013-09-05 07:29:05Z az $
+# $FreeBSD: print/psutils/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	psutils
 PORTVERSION=	1.17
@@ -28,4 +28,5 @@ MAN1=		psbook.1 psselect.1 pstops.1 epsffit.1 psnup.1 psresize.1 \
 SCRIPTS_ENV+=	PERL5=${PERL5} CC=${CC} DATADIR=${DATADIR} \
 		MANPREFIX=${MANPREFIX} PAPER=dummy
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
