@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-extensible-exceptions/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-extensible-exceptions/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	extensible-exceptions
 PORTVERSION=	0.1.1.4
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 CABAL_SETUP=	Setup.hs
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
