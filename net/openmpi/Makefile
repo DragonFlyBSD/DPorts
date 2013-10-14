@@ -1,5 +1,6 @@
-# $FreeBSD: net/openmpi/Makefile 326717 2013-09-08 11:19:00Z wg $
+# $FreeBSD: net/openmpi/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
+NO_STAGE=	yes
 # TODO:
 #  - etc/*.sample support
 
