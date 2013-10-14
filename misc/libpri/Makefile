@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libpri
-# Date created:				25 Oct 2004
-# Whom:					Alexander Timoshenko <gonzo@univ.kiev.ua>
-#
-# $FreeBSD: ports/misc/libpri/Makefile,v 1.26 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
+# $FreeBSD: misc/libpri/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	libpri
 PORTVERSION=	1.4.13
@@ -21,6 +17,7 @@ PLIST_FILES=	include/libpri.h lib/libpri.a lib/libpri.so lib/libpri.so.1
 
 ONLY_FOR_ARCHS=	amd64 i386 sparc64
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/^all:/s/$$(UTILITIES)//' ${WRKSRC}/Makefile
 
