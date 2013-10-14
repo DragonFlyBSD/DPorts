@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 322514 2013-07-08 16:00:24Z culot $
+# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-TimeZone
 PORTVERSION=	1.60
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Class-Load>0:${PORTSDIR}/devel/p5-Class-Load \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Output>0:${PORTSDIR}/devel/p5-Test-Output
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::TimeZone.3 DateTime::TimeZone::Floating.3 \
 		DateTime::TimeZone::Local.3 DateTime::TimeZone::Local::Unix.3 \
@@ -29,6 +30,7 @@ MAN3=		DateTime::TimeZone.3 DateTime::TimeZone::Floating.3 \
 
 PORTDOCS=	Changes README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
