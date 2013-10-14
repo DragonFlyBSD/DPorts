@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Net::OAuth
-# Date created:			Oct 24, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: net/p5-Net-OAuth/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: ijliao
+# $FreeBSD: net/p5-Net-OAuth/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-OAuth
 PORTVERSION=	0.28
@@ -50,4 +45,5 @@ MAN3=	Net::OAuth.3 \
 	Net::OAuth::XauthAccessTokenRequest.3 \
 	Net::OAuth::YahooAccessTokenRefreshRequest.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
