@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: security/p5-Net-SSLeay/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Net-SSLeay/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Net-SSLeay
 PORTVERSION=	1.55
@@ -25,6 +25,7 @@ USE_OPENSSL=	yes
 MAN3=		Net::SSLeay.3 Net::SSLeay::Handle.3
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
