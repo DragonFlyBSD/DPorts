@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-system-filepath/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-system-filepath/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	system-filepath
 PORTVERSION=	0.4.7
@@ -12,5 +12,6 @@ LICENSE=	MIT
 
 USE_CABAL=	text>=0.7.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
