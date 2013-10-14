@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: security/libsectok/Makefile 324132 2013-08-01 21:39:42Z bapt $
+# $FreeBSD: security/libsectok/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libsectok
 PORTVERSION=	20030619
@@ -18,6 +18,7 @@ MAKE_ARGS=	CC=${CC}
 
 MAN3=		sectok.3
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/sectok.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/libsectok.a ${PREFIX}/lib
