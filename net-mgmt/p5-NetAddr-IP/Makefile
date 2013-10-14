@@ -1,5 +1,5 @@
 # Created by: Christopher N. Harrell <cnh@ivmg.net>
-# $FreeBSD: net-mgmt/p5-NetAddr-IP/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: net-mgmt/p5-NetAddr-IP/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	NetAddr-IP
 PORTVERSION=	4.069
@@ -20,6 +20,7 @@ MAN3=		NetAddr::IP.3 \
 	NetAddr::IP::Util.3 \
 	NetAddr::IP::UtilPP.3
 
+NO_STAGE=	yes
 post-patch:
 	${PERL} -ni -e 'print unless /^=head1/../^=cut/' ${WRKSRC}/Lite/Util/Makefile.PL
 
