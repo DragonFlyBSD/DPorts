@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kgeography/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/kgeography/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	kgeography
 PORTVERSION=	${KDE4_VERSION}
@@ -17,4 +17,5 @@ USES=		cmake:outsource
 USE_QT4=	xml moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
