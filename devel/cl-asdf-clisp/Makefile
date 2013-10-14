@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: ports/devel/cl-asdf-clisp/Makefile,v 1.14 2013/02/18 14:39:08 svnexp Exp $
+# $FreeBSD: devel/cl-asdf-clisp/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	asdf
 PORTVERSION=	2.017
@@ -18,6 +18,7 @@ USE_ASDF=	yes
 FASL_TARGET=	clisp
 FASL_BUILD=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${MKDIR} ${WRKSRC}
 
