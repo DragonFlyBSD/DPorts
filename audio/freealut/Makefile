@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: audio/freealut/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/freealut/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	freealut
 PORTVERSION=	1.1.0
@@ -11,6 +11,7 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	The OpenAL Utility Toolkit
 
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
