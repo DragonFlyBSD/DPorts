@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/p5-Digest-MD4/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Digest-MD4/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-MD4
 PORTVERSION=	1.9
@@ -21,6 +21,7 @@ USE_PERL5=	configure
 MAN3=		Digest::MD4.3
 PORTDOCS=	Changes rfc1320.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
