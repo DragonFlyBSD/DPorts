@@ -1,5 +1,5 @@
 # Created by: znerd@FreeBSD.org
-# $FreeBSD: ports/textproc/xalan-j/Makefile,v 1.28 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/xalan-j/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xalan-j
 PORTVERSION=	2.7.1
@@ -32,6 +32,7 @@ PLIST_FILES=	${JARFILES:S|^|%%JAVAJARDIR%%/|} bin/xalan-j
 
 SUB_FILES=	xalan-j.sh
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR files in ${JAVAJARDIR}..."
 .for jarfile in ${JARFILES}
