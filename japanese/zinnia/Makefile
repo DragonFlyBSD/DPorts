@@ -1,9 +1,9 @@
-# New ports collection makefile for:	zinnia
+# $FreeBSD: japanese/zinnia/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 # Date created:				15 Aug 2010
 # Whom:					Timothy Beyer <beyert@cs.ucr.edu>
 #
-# $FreeBSD: ports/japanese/zinnia/Makefile,v 1.5 2012/11/17 05:58:41 svnexp Exp $
+# $FreeBSD: japanese/zinnia/Makefile 327737 2013-09-20 18:47:54Z bapt $
 #
 
 PORTNAME=	zinnia
@@ -21,6 +21,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
