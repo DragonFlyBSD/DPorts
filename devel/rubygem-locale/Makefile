@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby Locale gem (separated from Ruby GetText Package)
-# Date created:		4 February 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/rubygem-locale/Makefile,v 1.41 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/rubygem-locale/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	locale
 PORTVERSION=	2.0.8
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
