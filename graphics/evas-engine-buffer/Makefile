@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-buffer/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas-engine-buffer/Makefile 329580 2013-10-06 14:55:22Z gblach $
 
 PORTNAME=	engine-buffer
 PORTVERSION=	1.7.8
@@ -14,13 +14,12 @@ COMMENT=	A hardware accelerated canvas API (buffer engine)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_EFL=	evas librt_hack libtool_hack
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/modules/engines/buffer
@@ -37,6 +36,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/evas-software-buffer.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
