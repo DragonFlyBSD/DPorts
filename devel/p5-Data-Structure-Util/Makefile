@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: devel/p5-Data-Structure-Util/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-Data-Structure-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Structure-Util
 PORTVERSION=	0.15
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::Structure::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
