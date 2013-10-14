@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: graphics/py-poppler/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/py-poppler/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	poppler
 PORTVERSION=	0.12.1
@@ -20,4 +20,5 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	atk pygtk2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
