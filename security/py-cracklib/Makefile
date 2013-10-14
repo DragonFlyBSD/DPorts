@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-cracklib/Makefile 320515 2013-06-11 00:52:47Z sbz $
+# $FreeBSD: security/py-cracklib/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,6 +14,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 PYTHON_SLAVEPORT=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	"{s#__version__ = '[^']*'#__version__ = '${PORTVERSION}'#;}" \
