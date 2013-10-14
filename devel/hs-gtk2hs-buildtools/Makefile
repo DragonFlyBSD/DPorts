@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-gtk2hs-buildtools/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-gtk2hs-buildtools/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gtk2hs-buildtools
 PORTVERSION=	0.12.4
@@ -18,5 +18,6 @@ EXECUTABLE=	gtk2hsTypeGen gtk2hsHookGenerator gtk2hsC2hs
 
 STANDALONE=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
