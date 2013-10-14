@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-themes/gtk-engines2/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: x11-themes/gtk-engines2/Makefile 327783 2013-09-20 23:54:03Z bapt $
 #   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.82 2010/04/19 10:51:27 kwm Exp $
 
 PORTNAME=	gtk-engines2
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 OPTIONS_DEFINE=	ANIMATION
 ANIMATION_DESC=	Experimental animated progressbars
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANIMATION}
