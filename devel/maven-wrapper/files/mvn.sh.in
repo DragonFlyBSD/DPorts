@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/maven-wrapper/files/mvn.sh.in,v 1.3 2012/11/17 05:55:59 svnexp Exp $
+# $FreeBSD: devel/maven-wrapper/files/mvn.sh.in 306984 2012-11-04 21:39:41Z hq $
 
 set -e
 
