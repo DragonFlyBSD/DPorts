@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/libclaw/Makefile 325248 2013-08-23 01:35:31Z amdmi3 $
+# $FreeBSD: devel/libclaw/Makefile 328248 2013-09-25 03:47:08Z amdmi3 $
 
 PORTNAME=	libclaw
 PORTVERSION=	1.7.4
@@ -9,14 +9,13 @@ MASTER_SITES=	SF
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	C++ Library Absolutely Wonderful
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/bind.hpp:${PORTSDIR}/devel/boost-libs
 
 USES=		cmake gettext
 CMAKE_ARGS=	-DCLAW_CMAKE_MODULES_INSTALL_PATH="${DATADIR}/cmake"
 USE_LDCONFIG=	yes
-USE_GCC=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e '/subdirs/ s|doc||' ${WRKSRC}/CMakeLists.txt
