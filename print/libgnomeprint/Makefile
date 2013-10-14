@@ -1,8 +1,6 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: print/libgnomeprint/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: print/libgnomeprint/Makefile 327765 2013-09-20 22:43:59Z bapt $
 #   $MCom: ports/print/libgnomeprint/Makefile,v 1.77 2010/09/28 16:38:29 kwm Exp $
-#
-# NOTE: Remind to update comms/gfax plist when PORTVERSION change.
 
 PORTNAME=	libgnomeprint
 PORTVERSION=	2.18.8
@@ -35,6 +33,7 @@ PLIST_SUB=	VERSION=${PORTVERSION} \
 OPTIONS_DEFINE=	CUPS
 OPTIONS_DEFAULT=CUPS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
