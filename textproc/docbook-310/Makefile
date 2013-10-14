@@ -1,11 +1,5 @@
-# New ports collection makefile for:	docbook-310
-# Date created:		7 April 1999
-# Whom:			nik
-#
-# Based heavily on work by jfieber
-#
-# $FreeBSD: ports/textproc/docbook-310/Makefile,v 1.31 2012/11/17 06:01:54 svnexp Exp $
-#
+# Created by: nik
+# $FreeBSD: textproc/docbook-310/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook
 PORTVERSION=	3.1
@@ -41,6 +35,7 @@ SGMLCAT_RM=	${XMLCATMGR} -sc ${SGMLCAT} remove \
 
 LATEST_LINK=	docbook-310
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${DTDDIR}
 	files=$$(${FIND} ${WRKSRC} -type f \! -name '.*'); \
