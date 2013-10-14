@@ -1,5 +1,5 @@
 # Created by: Jesse McConnell <jesse@gallup.com>
-# $FreeBSD: devel/p5-Log-Agent/Makefile 324986 2013-08-19 13:13:42Z culot $
+# $FreeBSD: devel/p5-Log-Agent/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Agent
 PORTVERSION=	1.000
@@ -40,4 +40,5 @@ MAN3=		Log::Agent.3 \
 		Log::Agent::Tag_List.3 \
 		Log::changes.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
