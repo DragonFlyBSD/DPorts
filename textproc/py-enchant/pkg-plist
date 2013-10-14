@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/py-enchant/pkg-plist,v 1.7 2012/11/17 06:02:17 svnexp Exp $
+@comment $FreeBSD: /tmp/pcvs/ports/textproc/py-enchant/pkg-plist,v 1.6 2010-12-13 13:06:07 nivit Exp $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt

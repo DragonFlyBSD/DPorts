@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-enchant
-# Date created:		2006-04-03
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: ports/textproc/py-enchant/Makefile,v 1.24 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: textproc/py-enchant/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	enchant
 PORTVERSION=	1.6.5
@@ -27,4 +23,5 @@ PYDISTUTILS_PKGNAME=	pyenchant
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
