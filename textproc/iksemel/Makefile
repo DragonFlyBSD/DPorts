@@ -1,5 +1,5 @@
 # Created by: trasz
-# $FreeBSD: textproc/iksemel/Makefile 323111 2013-07-16 14:57:23Z miwi $
+# $FreeBSD: textproc/iksemel/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	iksemel
 PORTVERSION=	1.4
@@ -23,6 +23,7 @@ USES=		pkgconfig
 
 INFO=	iksemel
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@setfilename iksemel|@setfilename iksemel.info|' \
 	    ${WRKSRC}/doc/iksemel.texi
