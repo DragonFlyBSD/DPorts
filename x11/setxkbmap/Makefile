@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/setxkbmap/Makefile,v 1.7 2013/02/04 05:30:31 svnexp Exp $
+# $FreeBSD: x11/setxkbmap/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	setxkbmap
 PORTVERSION=	1.3.0
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/setxkbmap
 
 MAN1=		setxkbmap.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
