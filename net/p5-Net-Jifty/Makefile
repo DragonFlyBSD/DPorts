@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Jifty/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Jifty/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Jifty
 PORTVERSION=	0.14
@@ -27,6 +27,7 @@ USE_PERL5=	configure
 
 MAN3=		Net::Jifty.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
