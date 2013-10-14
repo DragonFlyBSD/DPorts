@@ -1,8 +1,8 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-GitHub/Makefile 325852 2013-09-01 12:38:47Z tobez $
+# $FreeBSD: net/p5-Net-GitHub/Makefile 328391 2013-09-26 16:47:39Z sunpoet $
 
 PORTNAME=	Net-GitHub
-DISTVERSION=	0.53
+DISTVERSION=	0.54
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FAYLAND
@@ -29,19 +29,5 @@ TEST_DEPENDS=	p5-Test-MockModule>=0:${PORTSDIR}/devel/p5-Test-MockModule
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Net::GitHub.3 \
-		Net::GitHub::V3.3 \
-		Net::GitHub::V3::Events.3 \
-		Net::GitHub::V3::Gists.3 \
-		Net::GitHub::V3::GitData.3 \
-		Net::GitHub::V3::Issues.3 \
-		Net::GitHub::V3::OAuth.3 \
-		Net::GitHub::V3::Orgs.3 \
-		Net::GitHub::V3::PullRequests.3 \
-		Net::GitHub::V3::Query.3 \
-		Net::GitHub::V3::Repos.3 \
-		Net::GitHub::V3::Search.3 \
-		Net::GitHub::V3::Users.3
 
 .include <bsd.port.mk>
