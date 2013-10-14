@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/rudiments/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/rudiments/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rudiments
 PORTVERSION=	0.41
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 
 MAN1=		rudiments-config.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
