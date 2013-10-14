@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pth-hard
-# Date created:				9 February 2007
-# Whom:					Martin Matuska <martin@matuska.org>
-#
-# $FreeBSD: ports/devel/pth-hard/Makefile,v 1.2 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Martin Matuska <martin@matuska.org>
+# $FreeBSD: devel/pth-hard/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PKGNAMESUFFIX=	-hard
 
@@ -11,4 +7,5 @@ CONFLICTS=	pth-2.*
 
 MASTERDIR=	${.CURDIR}/../pth
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
