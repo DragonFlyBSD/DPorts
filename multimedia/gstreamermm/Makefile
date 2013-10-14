@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamermm/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/gstreamermm/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #    $MCom: ports/multimedia/gstreamermm/Makefile,v 1.6 2009/09/26 13:42:00 marcus Exp $
 
 PORTNAME=	gstreamermm
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--disable-documentation
 USE_LDCONFIG=	yes
 PLIST_SUB=	GST_VERSION="${GST_VERSION}"
 
+NO_STAGE=	yes
 post-patch:
 # Fix the build with clang
 	@${REINPLACE_CMD} -e 's|GREP "\\-L"|GREP "conftest\\.$$objext"|g' \
