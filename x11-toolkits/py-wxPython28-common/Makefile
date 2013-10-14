@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wxPython shared common
-# Date created:		Fri Sep  2 03:37:23 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/py-wxPython28-common/Makefile,v 1.15 2012/11/17 06:03:38 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: x11-toolkits/py-wxPython28-common/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTREVISION=	1
 
@@ -13,4 +9,5 @@ MASTERDIR=	${.CURDIR}/../py-wxPython28
 
 PLIST=	${.CURDIR}/pkg-plist
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
