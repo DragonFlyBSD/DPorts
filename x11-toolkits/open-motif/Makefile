@@ -1,5 +1,4 @@
-# $FreeBSD: x11-toolkits/open-motif/Makefile 326307 2013-09-04 18:06:07Z madpilot $
-#
+# $FreeBSD: x11-toolkits/open-motif/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	open-motif
 PORTVERSION=	2.3.4
@@ -47,6 +46,7 @@ EXTRA_PATCHES+=	${WITH_JDK_PATCH}
 
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "sparc64"
