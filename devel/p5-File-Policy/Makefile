@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Policy/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-Policy/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Policy
 PORTVERSION=	1.005
@@ -22,4 +22,5 @@ MAN3=		File::Policy.3 \
 		File::Policy::Default.3 \
 		File::Slurp::WithinPolicy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
