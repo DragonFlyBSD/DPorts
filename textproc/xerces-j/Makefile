@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak
-# $FreeBSD: ports/textproc/xerces-j/Makefile,v 1.29 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/xerces-j/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xerces-j
 PORTVERSION=	2.11.0
@@ -24,6 +24,7 @@ JARFILES=	xercesImpl.jar xml-apis.jar
 
 PLIST_FILES=	${JARFILES:S,^,%%JAVAJARDIR%%/,}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR files in ${JAVAJARDIR}..."
 .for JARFILE in ${JARFILES}
