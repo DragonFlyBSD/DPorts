@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: ports/java/jakarta-commons-discovery/Makefile,v 1.12 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-commons-discovery/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-discovery
 PORTVERSION=	0.5
@@ -23,6 +23,7 @@ PORTDOCS=	*
 JARFILE=	${PORTNAME}.jar
 PLIST_FILES+=	%%JAVAJARDIR%%/${JARFILE}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${JARFILE}..."
 	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME}-${PORTVERSION}.jar ${JAVAJARDIR}/${JARFILE}
