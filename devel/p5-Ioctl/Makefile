@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Ioctl/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Ioctl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Ioctl
 PORTVERSION=	0.81
@@ -14,4 +14,5 @@ COMMENT=	Perl module that provides a way to get the value of C ioctl constants
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
