@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/p5-AutoLoader/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-AutoLoader/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AutoLoader
 PORTVERSION=	5.73
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		AutoLoader.3 AutoSplit.3
 
+NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
 
