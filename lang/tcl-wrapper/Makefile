@@ -1,9 +1,5 @@
-# Ports collection makefile for: tcl-wrapper
-# Date created:			4 March 2007
-# Whom:	      			Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: lang/tcl-wrapper/Makefile 316351 2013-04-23 11:51:52Z gahr $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: lang/tcl-wrapper/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	wrapper
 PORTVERSION=	1.1
@@ -47,6 +43,7 @@ TX_CONF_FULL=	${PREFIX}/etc/${TX_CONF}
 
 PLIST_FILES=	bin/${TX_SHELL} etc/${TX_CONF}.sample
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(TK_VER)
