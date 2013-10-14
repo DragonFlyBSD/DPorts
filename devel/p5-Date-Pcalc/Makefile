@@ -1,5 +1,5 @@
 # Created by: Gregory Shapiro <gshapiro@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Pcalc/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Date-Pcalc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date-Pcalc
 PORTVERSION=	6.1
@@ -24,4 +24,5 @@ MAN3=		Date::Pcalc.3 \
 		Date::Pcalendar::Profiles.3 \
 		Date::Pcalendar::Year.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
