@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/p5-Package-Stash/Makefile 326261 2013-09-04 08:50:25Z tobez $
+# $FreeBSD: devel/p5-Package-Stash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Package-Stash
 PORTVERSION=	0.36
@@ -30,4 +29,5 @@ MAN3=		Package::Stash.3 \
 		Package::Stash::Conflicts.3 \
 		Package::Stash::PP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
