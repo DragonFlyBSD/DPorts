@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/p5-GnuPG-Interface/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-GnuPG-Interface/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	GnuPG-Interface
 PORTVERSION=	0.46
@@ -34,4 +34,5 @@ MAN3=	GnuPG::Fingerprint.3 \
 	GnuPG::UserAttribute.3 \
 	GnuPG::UserId.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
