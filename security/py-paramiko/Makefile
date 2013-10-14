@@ -1,5 +1,5 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: security/py-paramiko/Makefile 324152 2013-08-02 08:19:28Z sbz $
+# $FreeBSD: security/py-paramiko/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	paramiko
 PORTVERSION=	1.11.0
@@ -19,6 +19,7 @@ USE_PYDISTUTILS=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
