@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-xml
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/php5-xml/Makefile,v 1.2 2012/11/17 06:02:16 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: textproc/php5-xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 CATEGORIES=	textproc
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-xml
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
