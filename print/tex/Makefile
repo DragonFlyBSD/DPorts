@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tex
-# Date created:         29 September 1994
-# Whom:                 jmz
-#
-# $FreeBSD: ports/print/tex/Makefile,v 1.63 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: jmz
+# $FreeBSD: print/tex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	tex
 PORTVERSION=	3.14159
@@ -38,6 +34,7 @@ MAN1=		access.1 amstex.1 bibtex.1 dmp.1 dvicopy.1 dvitype.1 eplain.1 \
 INFO=		kpathsea web2c
 MAKE_FLAGS=	fmts= all_mems=
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
