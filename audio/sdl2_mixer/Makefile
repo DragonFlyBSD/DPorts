@@ -1,7 +1,8 @@
-# $FreeBSD: audio/sdl2_mixer/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/sdl2_mixer/Makefile 327809 2013-09-21 12:02:02Z mva $
 
 PORTNAME=	sdl2_mixer
 PORTVERSION=	2.0.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 DISTNAME=	SDL2_mixer-${PORTVERSION}
@@ -12,48 +13,38 @@ COMMENT=	A sample multi-channel audio mixer library
 LICENSE=	ZLIB
 
 USES=		gmake pathfix pkgconfig
+NO_STAGE=	yes
 USE_SDL=	sdl2
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=		FLUIDSYNTH MODPLUG FLAC VORBIS
+OPTIONS_DEFINE=		FLUIDSYNTH FLAC VORBIS
 OPTIONS_DEFAULT=	FLUIDSYNTH MODPLUG FLAC VORBIS
+OPTIONS_RADIO=		MOD
+OPTIONS_RADIO_MOD=	MIKMOD MODPLUG
 
 FLUIDSYNTH_DESC=	Enable SoundFont2 Midi support via fluidsynth
+MIKMOD_DESC=	Enable MOD music via libMikMod
 MODPLUG_DESC=	Enable MOD music via libModPlug
 FLAC_DESC=	Enable FLAC encoding support via flac
 VORBIS_DESC=	Enable Ogg Vorbis music
 
-.include <bsd.port.options.mk>
+MIKMOD_LIB_DEPENDS=		libmikmod.so:${PORTSDIR}/audio/libmikmod
+MIKMOD_CONFIGURE_ENABLE=	music-mod-mikmod
 
-.if ${PORT_OPTIONS:MMODPLUG}
-LIB_DEPENDS+=		modplug:${PORTSDIR}/audio/libmodplug
-CONFIGURE_ARGS+=	--enable-music-mod --enable-music-mod-modplug
-.else
-CONFIGURE_ARGS+=	--disable-music-mod --disable-music-mod-modplug
-.endif
+MODPLUG_LIB_DEPENDS=		libmodplug.so:${PORTSDIR}/audio/libmodplug
+MODPLUG_CONFIGURE_ENABLE=	music-mod-modplug
 
-.if ${PORT_OPTIONS:MFLAC}
-LIB_DEPENDS+=		FLAC:${PORTSDIR}/audio/flac
-CONFIGURE_ARGS+=	--enable-music-flac
-.else
-CONFIGURE_ARGS+=	--disable-music-flac
-.endif
+FLAC_LIB_DEPENDS=		FLAC:${PORTSDIR}/audio/flac
+FLAC_CONFIGURE_ENABLE=		music-flac
 
-.if ${PORT_OPTIONS:MFLUIDSYNTH}
-LIB_DEPENDS+=		fluidsynth:${PORTSDIR}/audio/fluidsynth
-CONFIGURE_ARGS+=	--enable-music-midi --enable-music-midi-fluidsynth
-.else
-CONFIGURE_ARGS+=	--disable-music-midi --disable-music-midi-fluidsynth
-.endif
+FLUIDSYNTH_LIB_DEPENDS=		fluidsynth:${PORTSDIR}/audio/fluidsynth
+FLUIDSYNTH_CONFIGURE_ON=	--enable-music-midi --enable-music-midi-fluidsynth
+FLUIDSYNTH_CONFIGURE_OFF=	--disable-music-midi --disable-music-midi-fluidsynth
 
-.if ${PORT_OPTIONS:MVORBIS}
-LIB_DEPENDS+=		vorbis:${PORTSDIR}/audio/libvorbis
-CONFIGURE_ARGS+=	--enable-music-ogg
-.else
-CONFIGURE_ARGS+=	--disable-music-ogg
-.endif
+VORBIS_LIB_DEPENDS=		vorbis:${PORTSDIR}/audio/libvorbis
+VORBIS_CONFIGURE_ENABLE=	music-ogg
 
 .include <bsd.port.mk>
