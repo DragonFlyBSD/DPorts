@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/sary/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/sary/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sary
 PORTVERSION=	1.2.0
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 
 MAN1=		sary.1	mksary.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS/s|docs||g' ${WRKSRC}/Makefile.in
 
