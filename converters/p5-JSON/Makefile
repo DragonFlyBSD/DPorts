@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-JSON/Makefile 324470 2013-08-10 10:17:49Z kuriyama $
+# $FreeBSD: converters/p5-JSON/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	JSON
 PORTVERSION=	2.59
@@ -19,4 +19,5 @@ MAN3=		JSON.3 \
 		JSON::backportPP::Compat5005.3 \
 		JSON::backportPP::Compat5006.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
