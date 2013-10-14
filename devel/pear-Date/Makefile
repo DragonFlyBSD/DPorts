@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: devel/pear-Date/Makefile 314195 2013-03-15 00:37:54Z miwi $
+# $FreeBSD: devel/pear-Date/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date
 PORTVERSION=	1.4.7
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
