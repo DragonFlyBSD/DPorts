@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-djblets/Makefile 313467 2013-03-05 18:09:08Z lwhsu $
+# $FreeBSD: www/py-djblets/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	djblets
 PORTVERSION=	0.7.9
@@ -25,4 +25,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Djblets
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
