@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: databases/couchdb/Makefile 323058 2013-07-15 15:05:29Z miwi $
+# $FreeBSD: databases/couchdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	couchdb
 PORTVERSION=	1.3.1
@@ -41,6 +41,7 @@ STRIP=	#empty
 
 MAN1=	couchdb.1 couchjs.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # This stanza could be removed around version 1.7
