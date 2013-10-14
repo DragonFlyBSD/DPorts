@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
-# $FreeBSD: audio/py-ao/Makefile 314039 2013-03-13 08:26:11Z danfe $
+# $FreeBSD: audio/py-ao/Makefile 328530 2013-09-27 22:36:11Z mva $
 
 PORTNAME=	ao
 PORTVERSION=	0.82
@@ -15,13 +15,12 @@ COMMENT=	Python wrapper for audio device abstraction library (libao)
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	ao:${PORTSDIR}/audio/libao
+LIB_DEPENDS=	libao.so:${PORTSDIR}/audio/libao
 
-USE_PYTHON=		yes
+USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	pyao
-
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/aomodule.so
 
 do-configure:
 	@cd ${WRKSRC} && ${MAKE_ENV} ${PYTHON_CMD} config_unix.py \
