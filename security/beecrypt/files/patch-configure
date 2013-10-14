@@ -1,4 +1,4 @@
-$FreeBSD: ports/security/beecrypt/files/patch-configure,v 1.2 2012/11/17 06:01:01 svnexp Exp $
+$FreeBSD: security/beecrypt/files/patch-configure 300897 2012-07-14 14:29:18Z beat $
 
 --- configure.orig	Mon Nov 29 13:50:41 2004
 +++ configure	Mon Nov 29 13:52:11 2004

@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	beecrypt
-# Date created:			Mar 4, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/security/beecrypt/Makefile,v 1.29 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: security/beecrypt/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	beecrypt
 PORTVERSION=	4.2.1
