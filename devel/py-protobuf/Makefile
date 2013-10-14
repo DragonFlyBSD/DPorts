@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: devel/py-protobuf/Makefile 314580 2013-03-18 15:14:27Z vanilla $
+# $FreeBSD: devel/py-protobuf/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	protobuf
 PORTVERSION=	2.5.0
@@ -18,6 +18,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 pre-build:
 	@${MKDIR} ${WRKSRC}/google/protobuf/compiler
 
