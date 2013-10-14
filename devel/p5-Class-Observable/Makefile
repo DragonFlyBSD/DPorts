@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: devel/p5-Class-Observable/Makefile 326803 2013-09-09 11:55:30Z az $
+# $FreeBSD: devel/p5-Class-Observable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Observable
 PORTVERSION=	1.04
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Observable.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
