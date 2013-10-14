@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-toolkits/libsexy/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11-toolkits/libsexy/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libsexy
 PORTVERSION=	0.1.11
@@ -22,4 +22,5 @@ USE_LDCONFIG=	yes
 USES=		pkgconfig gettext
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
