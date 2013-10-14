@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/ois/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/ois/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ois
 PORTVERSION=	1.2.0
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|^pkgconfigdir = .*|pkgconfigdir=$${prefix}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.am
