@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: ports/devel/cld/Makefile,v 1.1 2013/02/08 13:33:12 svnexp Exp $
+# $FreeBSD: devel/cld/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	cld
 PORTVERSION=	0.1
