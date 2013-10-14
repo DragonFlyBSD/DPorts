@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libmatroska/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/libmatroska/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libmatroska
 PORTVERSION=	1.4.0
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 # Installs dir with proper permissions
 INSTALL_DATA_DIR=	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m 755
 
+NO_STAGE=	yes
 post-patch:
 # XXX - revise at every port update
 # the tests are botched. do not run them
