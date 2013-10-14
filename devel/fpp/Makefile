@@ -1,5 +1,5 @@
 # Created by: vazquez@iqm.unicamp.br
-# $FreeBSD: devel/fpp/Makefile 323307 2013-07-19 15:23:55Z wg $
+# $FreeBSD: devel/fpp/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fpp
 PORTVERSION=	1.1
@@ -21,6 +21,7 @@ PORTDOCS=	README fpp_spec fpp_license.ps
 
 PLIST_FILES=	bin/fpp
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
