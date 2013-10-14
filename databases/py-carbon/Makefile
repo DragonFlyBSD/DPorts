@@ -1,11 +1,10 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: ports/databases/py-carbon/Makefile,v 1.7 2012/11/17 05:55:21 svnexp Exp $
+# $FreeBSD: databases/py-carbon/Makefile 328847 2013-09-30 19:24:34Z swills $
 
 PORTNAME=	carbon
-PORTVERSION=	0.9.10
-PORTREVISION=	2
+PORTVERSION=	0.9.12
 CATEGORIES=	databases python
-MASTER_SITES=	http://launchpad.net/graphite/0.9/${PORTVERSION}/+download/
+MASTER_SITES=	https://github.com/graphite-project/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bsdports@wayfair.com
@@ -19,7 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}txamqp>=0.3:${PORTSDIR}/net/py-txamqp \
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 USE_TWISTED_RUN=	yes
-FETCH_ARGS=	-pRr
+FETCH_ARGS=	-o ${DISTNAME}${EXTRACT_SUFX}
 USE_RC_SUBR=	carbon
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
