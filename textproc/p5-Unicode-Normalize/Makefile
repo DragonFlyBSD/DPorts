@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-Normalize/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Unicode-Normalize/Makefile 329410 2013-10-05 06:05:19Z sunpoet $
 
 PORTNAME=	Unicode-Normalize
-PORTVERSION=	1.16
+PORTVERSION=	1.17
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SADAHIRO
@@ -16,7 +16,5 @@ LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Unicode::Normalize.3
 
 .include <bsd.port.mk>
