@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: multimedia/xmms/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/xmms/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	xmms
 PORTVERSION=	1.2.11
@@ -44,6 +44,7 @@ SPEC_DESC=	Visualization opengl_spectrum
 VFILEINFO_DESC=	Enable Extended Vorbis Fileinfo
 RUSXMMS_PATCHES_DESC=	Custom IDv3 patches
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
