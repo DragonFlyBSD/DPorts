@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xauth/Makefile,v 1.8 2013/02/04 00:44:25 svnexp Exp $
+# $FreeBSD: x11/xauth/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xauth
 PORTVERSION=	1.0.7
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xauth
 
 MAN1=		xauth.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
