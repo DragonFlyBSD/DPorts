@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: cad/scotch/Makefile 322831 2013-07-12 13:20:04Z bapt $
+# $FreeBSD: cad/scotch/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	scotch
 DISTVERSION=	5.1.12b_esmumps
@@ -65,6 +65,7 @@ PLIST_SUB+=	MPI=""
 PLIST_SUB+=	MPI="@comment "
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
