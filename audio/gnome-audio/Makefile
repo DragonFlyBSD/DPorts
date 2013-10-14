@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomeaudio2
-# Date created:				10 July 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/gnome-audio/Makefile,v 1.33 2012/11/17 05:54:33 svnexp Exp $
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: audio/gnome-audio/Makefile 327706 2013-09-20 14:36:35Z bapt $
 #   $MCom: ports/audio/gnome-audio/Makefile,v 1.10 2008/05/07 18:52:29 mezz Exp $
-#
 
 PORTNAME=	gnome-audio
 PORTVERSION=	2.22.2
@@ -15,6 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Sound files for use with GNOME 2
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 NO_BUILD=	yes
 USE_GNOME=	gnomehier
 MAKE_ENV=	prefix=${PREFIX}
