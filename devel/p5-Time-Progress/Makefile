@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Time-Progress/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Time-Progress/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-Progress
 PORTVERSION=	1.8
@@ -15,4 +15,5 @@ MAN3=	Time::Progress.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
