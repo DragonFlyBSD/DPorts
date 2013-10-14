@@ -1,5 +1,5 @@
 # Created by: Christoph Kick
-# $FreeBSD: devel/rubygem-ffi/Makefile 321542 2013-06-22 03:48:14Z sunpoet $
+# $FreeBSD: devel/rubygem-ffi/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ffi
 PORTVERSION=	1.9.0
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
