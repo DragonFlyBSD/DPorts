@@ -1,4 +1,4 @@
-# $FreeBSD: devel/allegro/Makefile 323734 2013-07-26 16:04:47Z crees $
+# $FreeBSD: devel/allegro/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	allegro
 DISTVERSION=	4.4.2
@@ -33,6 +33,7 @@ LIB_DEPENDS+=	asound.2:${PORTSDIR}/audio/alsa-lib \
 		jack.0:${PORTSDIR}/audio/jack \
 		png15:${PORTSDIR}/graphics/png
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
