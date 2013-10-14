@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-graphy
-# Date created:				2010-06-01
-# Whom:					Sahil Tandon <sahil@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/py-graphy/Makefile,v 1.2 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Sahil Tandon <sahil@FreeBSD.org>
+# $FreeBSD: graphics/py-graphy/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	graphy
 PORTVERSION=	1.0
@@ -24,6 +20,7 @@ PORTEXAMPLES=	*
 NO_BUILD=	yes
 NO_INSTALL_MANPAGES=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
