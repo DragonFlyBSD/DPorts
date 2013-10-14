@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: textproc/rubygem-diff-lcs/Makefile 319688 2013-06-02 17:02:12Z swills $
+# $FreeBSD: textproc/rubygem-diff-lcs/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	diff-lcs
 PORTVERSION=	1.2.4
@@ -14,4 +14,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 PLIST_FILES=	bin/ldiff bin/htmldiff
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
