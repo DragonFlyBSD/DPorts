@@ -1,9 +1,5 @@
-# New ports collection makefile for:	txt2tags
-# Date created:		2002-12-20
-# Whom:			Alan Eldridge <alane@freebsd.org>
-#
-# $FreeBSD: ports/textproc/txt2tags/Makefile,v 1.17 2012/11/17 06:02:23 svnexp Exp $
-#
+# Created by: Alan Eldridge <alane@FreeBSD.org>
+# $FreeBSD: textproc/txt2tags/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	txt2tags
 PORTVERSION=	2.6
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 PORTDOCS=	ChangeLog README userguide.pdf
 SAMPLE_DIRS=	css img module
 
+NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/doc/userguide.pdf ${WRKSRC}/
 
