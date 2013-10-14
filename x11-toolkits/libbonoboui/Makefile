@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libbonoboui/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11-toolkits/libbonoboui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/libbonoboui/Makefile,v 1.75 2010/09/28 16:03:49 kwm Exp $
 
 PORTNAME=	libbonoboui
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
 
 .endif
