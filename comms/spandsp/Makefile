@@ -1,5 +1,5 @@
 # Created by: wlloyd@slap.net
-# $FreeBSD: comms/spandsp/Makefile 321419 2013-06-20 20:04:50Z bsam $
+# $FreeBSD: comms/spandsp/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	spandsp
 PORTVERSION=	0.0.5
@@ -27,4 +27,5 @@ USE_LDCONFIG=	yes
 
 CONFLICTS=	spandsp-devel-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
