@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-smmap
-# Date created:				11 July 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-smmap/Makefile,v 1.4 2012/11/17 05:56:50 svnexp Exp $
-#
+# $FreeBSD: devel/py-smmap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	smmap
 PORTVERSION=	0.8.2
@@ -20,4 +15,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
