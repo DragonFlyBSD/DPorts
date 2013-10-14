@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-trollop
-# Date created:		06/01/2009
-# Whom:			Dennis Herrmann <adox@mcx2.org>
-#
-# $FreeBSD: ports/devel/rubygem-trollop/Makefile,v 1.12 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Dennis Herrmann <adox@mcx2.org>
+# $FreeBSD: devel/rubygem-trollop/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	trollop
 PORTVERSION=	1.16.2
@@ -18,4 +14,5 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
