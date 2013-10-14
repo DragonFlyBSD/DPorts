@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: graphics/freeimage/Makefile 325385 2013-08-26 10:36:29Z bapt $
+# $FreeBSD: graphics/freeimage/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	freeimage
 PORTVERSION=	3.15.4
@@ -31,6 +31,7 @@ PLIST_FILES=	include/FreeImage.h \
 		lib/libfreeimageplus.so.3 \
 		lib/libfreeimageplus.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
