@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/radiusclient/files/patch-ltmain.sh,v 1.2 2012/11/17 06:00:17 svnexp Exp $
+$FreeBSD: net/radiusclient/files/patch-ltmain.sh 300897 2012-07-14 14:29:18Z beat $
 
 --- ltmain.sh
 +++ ltmain.sh
