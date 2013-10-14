@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/tokyocabinet/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/tokyocabinet/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	tokyocabinet
 PORTVERSION=	1.4.48
@@ -38,6 +38,7 @@ SHARED_DESC=	Shared build
 SWAB_DESC=	Swapping byte-orders build
 UYIELD_DESC=	Detecting race conditions
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
