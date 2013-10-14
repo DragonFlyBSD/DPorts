@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/py-matplotlib/Makefile 322434 2013-07-07 12:20:31Z bapt $
+# $FreeBSD: math/py-matplotlib/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	matplotlib
 PORTVERSION=	1.2.0
@@ -32,6 +32,7 @@ WXAGGBACKEND_DESC=	WXAgg backend support
 
 UNIQUENAME=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(PACKAGE_BUILDING) && \
