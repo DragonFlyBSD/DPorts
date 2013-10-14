@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter-gtk/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: graphics/clutter-gtk/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	clutter-gtk
 PORTVERSION=	0.10.8
@@ -24,4 +24,5 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
