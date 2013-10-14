@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Net-Ident
-# Date created:			Oct 30, 2003
-# Whom:	      			kai
-#
-# $FreeBSD: net/p5-Net-Ident/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: kai
+# $FreeBSD: net/p5-Net-Ident/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Ident
 PORTVERSION=	1.23
@@ -20,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::Ident.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
