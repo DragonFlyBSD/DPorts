@@ -1,5 +1,5 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: x11-toolkits/girara/Makefile 326291 2013-09-04 16:42:19Z bapt $
+# $FreeBSD: x11-toolkits/girara/Makefile 329939 2013-10-09 23:14:35Z madpilot $
 
 PORTNAME=	girara
 PORTVERSION=	0.1.7
@@ -10,27 +10,16 @@ MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	GTK2 Interface Library for Zathura PDF Viewer
 
 USE_GNOME=	glib20 gtk20
-USES=		gmake pkgconfig
+USES=		compiler:c11 gmake pkgconfig
 USE_LDCONFIG=	yes
+LIBDIR=		${PREFIX}/lib
+
+OPTIONS_DEFINE=	NLS
+
+OPTIONS_SUB=	yes
+NLS_USES=	gettext
 
 .include <bsd.port.options.mk>
-
-.if exists(/usr/bin/clang) && ${OSVERSION} > 900014
-CC=		/usr/bin/clang
-CPP=		/usr/bin/clang-cpp
-CXX=		/usr/bin/clang++
-.else
-USE_GCC=	4.6+
-.endif
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-PLIST_SUB+=	NLS="@comment "
-.endif
-
-LIBDIR=		${PREFIX}/lib
 
 post-patch:	.SILENT
 	${REINPLACE_CMD} -e 's|$${LIBDIR}/pkgconfig|${PREFIX}/libdata/pkgconfig|g'\
