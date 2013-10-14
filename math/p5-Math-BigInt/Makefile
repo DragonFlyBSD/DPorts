@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: math/p5-Math-BigInt/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Math-BigInt/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-BigInt
 PORTVERSION=	1.997
@@ -19,4 +19,5 @@ MAN3=		Math::BigFloat.3 \
 		Math::BigInt::Calc.3 \
 		Math::BigInt::CalcEmu.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
