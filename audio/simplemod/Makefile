@@ -1,9 +1,5 @@
-# New ports collection makefile for:   simplemod
-# Date created:        9 june 2003
-# Whom:                Christian Laursen <xi@borderworlds.dk>
-#
-# $FreeBSD: ports/audio/simplemod/Makefile,v 1.5 2012/11/17 05:54:44 svnexp Exp $
-#
+# Created by: Christian Laursen <xi@borderworlds.dk>
+# $FreeBSD: audio/simplemod/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	simplemod
 PORTVERSION=	1.1
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}/simplemod
 
 ALL_TARGET=	simplemod
 PLIST_FILES=	bin/simplemod
+NO_STAGE=	yes
 
 do-install:
 	${INSTALL} -o 0 -g 0 -s ${WRKSRC}/simplemod ${PREFIX}/bin
