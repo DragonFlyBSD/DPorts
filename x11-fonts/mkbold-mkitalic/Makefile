@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mkbold-mkitalic
-# Date created:        			Dec 28 2004
-# Whom:					KOMATSU Shinichiro
-#
-# $FreeBSD: ports/x11-fonts/mkbold-mkitalic/Makefile,v 1.9 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: KOMATSU Shinichiro
+# $FreeBSD: x11-fonts/mkbold-mkitalic/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	mkbold-mkitalic
 PORTVERSION=	0.11
@@ -20,6 +16,7 @@ PLIST_FILES=	bin/mkbold bin/mkitalic bin/mkbolditalic
 PORTDOCS=	ALGORITHM ALGORITHM.eucJP LICENSE README README.eucJP
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
