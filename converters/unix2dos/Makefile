@@ -1,5 +1,5 @@
 # Created by: Oscar Bonilla <obonilla@fisicc-ufm.edu>
-# $FreeBSD: converters/unix2dos/Makefile 313061 2013-02-27 15:24:22Z ehaupt $
+# $FreeBSD: converters/unix2dos/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	unix2dos
 PORTVERSION=	1.3
@@ -13,6 +13,7 @@ MAN1=		unix2dos.1 dos2unix.1
 PLIST_FILES=	bin/dos2unix bin/unix2dos
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/unix2dos ${PREFIX}/bin/unix2dos
 	${LN} -f ${PREFIX}/bin/unix2dos ${PREFIX}/bin/dos2unix
