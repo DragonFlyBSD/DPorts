@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: net/libfixbuf/Makefile 319389 2013-05-29 19:42:08Z lx $
+# $FreeBSD: net/libfixbuf/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libfixbuf
 PORTVERSION=	1.3.0
@@ -15,6 +15,7 @@ USES=		pkgconfig
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
