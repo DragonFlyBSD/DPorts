@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: astro/p5-Misc-Quality/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: astro/p5-Misc-Quality/Makefile 328803 2013-09-30 15:10:28Z sunpoet $
 
 PORTNAME=	Misc-Quality
 PORTVERSION=	0.1
@@ -13,7 +13,5 @@ COMMENT=	Class for handling quality flags for astronomical objects
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Misc::Quality.3
 
 .include <bsd.port.mk>
