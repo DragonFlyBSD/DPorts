@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv-extra/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: converters/iconv-extra/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	iconv-extra
 PORTVERSION=	2.0
@@ -14,4 +14,5 @@ LIB_DEPENDS=	biconv.2:${PORTSDIR}/converters/iconv
 
 USES=		perl5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
