@@ -1,9 +1,5 @@
-# New ports collection makefile for:    elmar-fonts
-# Date created:        23 March 2000
-# Whom:                nadav@cs.technion.ac.il
-#
-# $FreeBSD: ports/hebrew/elmar-fonts/Makefile,v 1.8 2012/11/17 05:58:27 svnexp Exp $
-#
+# Created by: nadav@cs.technion.ac.il
+# $FreeBSD: hebrew/elmar-fonts/Makefile 327734 2013-09-20 18:41:52Z bapt $
 
 PORTNAME=	elmar-fonts
 PORTVERSION=	3.3
@@ -19,6 +15,7 @@ COMMENT=	A collection of Hebrew fonts from El-Mar software Ltd
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/lib/X11/fonts/hebrew
 	${TAR} -C ${PREFIX}/lib/X11/fonts/hebrew -xZpf \
