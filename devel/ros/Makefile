@@ -1,5 +1,5 @@
 # Created by: Rene Ladan <rene@FreeBSD.org>
-# $FreeBSD: devel/ros/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/ros/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ros
 PORTVERSION=	1.4.10
@@ -54,6 +54,7 @@ SUB_LIST=	LOCALBASE=${LOCALBASE} \
 
 PORTDOCS=	AUTHORS README
 
+NO_STAGE=	yes
 post-patch:
 	# fix path to bash
 	${GREP} -l -r "^#\!/bin/bash" ${WRKSRC} | ${XARGS} \
