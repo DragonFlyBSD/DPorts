@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXv/Makefile 321625 2013-06-23 10:06:13Z zeising $
+# $FreeBSD: x11/libXv/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	libXv
-PORTVERSION=	1.0.9
+PORTVERSION=	1.0.10
 PORTEPOCH=	1
 CATEGORIES=	x11
 
@@ -41,4 +41,5 @@ MAN3=	Xv.3 \
 	XvUngrabPort.3 \
 	XvVideoNotify.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
