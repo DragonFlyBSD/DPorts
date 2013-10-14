@@ -1,5 +1,5 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/libumidi/Makefile 324862 2013-08-17 18:41:45Z kwm $
+# $FreeBSD: audio/libumidi/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libumidi
 PORTVERSION=	2.0.8
@@ -12,6 +12,7 @@ COMMENT=	Universal general purpose MIDI library
 
 LICENSE=	BSD
 USE_BZIP2=	yes
+NO_STAGE=	yes
 MAN3=		umidi20.3
 MANCOMPRESSED=	yes
 
