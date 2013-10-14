@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/metis-edf/Makefile 314689 2013-03-19 20:34:49Z thierry $
+# $FreeBSD: math/metis-edf/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	metis-edf
 DISTVERSION=	4.1-2
@@ -28,6 +28,7 @@ DOCS=		CHANGES Doc/manual.ps README_Code_Aster
 FORTRANLIBS=	-lgfortranbegin -lgfortran
 GCCLIBDIR=	-L`${CAT} ${WRKSRC}/LIBDIR` -L`${CAT} ${WRKSRC}/LIBDIR`/../../..
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../french/aster/bsd.aster.mk"
 
