@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-LLHash/Makefile 325879 2013-09-01 17:03:27Z az $
+# $FreeBSD: devel/p5-Tie-LLHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-LLHash
 PORTVERSION=	1.003
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Tie::LLHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
