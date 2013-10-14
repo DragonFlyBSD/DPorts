@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/pear-channel-doctrine/Makefile 321385 2013-06-20 13:52:08Z wg $
+# $FreeBSD: devel/pear-channel-doctrine/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	doctrine
 PORTVERSION=	20130618
@@ -10,6 +10,7 @@ COMMENT=	PEAR channel ${PEAR_CHANNEL_HOST}
 
 PEAR_CHANNEL_HOST=	pear.doctrine-project.org
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.channel.mk"
 .include <bsd.port.post.mk>
