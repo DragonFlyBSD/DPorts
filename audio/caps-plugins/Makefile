@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/caps-plugins/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/caps-plugins/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	caps-plugins
 PORTVERSION=	0.4.5
@@ -20,6 +20,7 @@ LICENSE_COMB=	dual
 
 WRKSRC=		${WRKDIR}/caps-${PORTVERSION}
 
+NO_STAGE=	yes
 USES=		gmake
 MAKE_ARGS=	CC="${CXX}" CFLAGS="${CXXFLAGS} -fPIC -DPIC"
 
