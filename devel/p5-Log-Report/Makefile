@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: devel/p5-Log-Report/Makefile 325416 2013-08-26 20:40:47Z lth $
+# $FreeBSD: devel/p5-Log-Report/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Report
 PORTVERSION=	0.99.4
@@ -44,4 +44,5 @@ MAN3=	Log::Report.3 \
 	Log::Report::Util.3 \
 	Log::Report::Win32Locale.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
