@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-LibXML/Makefile 327559 2013-09-18 15:22:21Z sunpoet $
+# $FreeBSD: textproc/p5-XML-LibXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-LibXML
 PORTVERSION=	2.0106
@@ -64,4 +64,5 @@ MAN3=		XML::LibXML.3 \
 		XML::LibXML::XPathContext.3 \
 		XML::LibXML::XPathExpression.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
