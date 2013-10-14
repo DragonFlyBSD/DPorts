@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@FreeBSD.org>
-# $FreeBSD: multimedia/libxspf/Makefile 325750 2013-08-31 00:29:43Z bapt $
+# $FreeBSD: multimedia/libxspf/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libxspf
 PORTVERSION=	1.2.0
