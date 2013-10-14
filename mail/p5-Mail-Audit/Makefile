@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Audit/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-Audit/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Audit
 PORTVERSION=	2.2.27
@@ -33,6 +33,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 PORTDOCS=	Changes FAQ README
 PORTEXAMPLES=	popread proc2ma
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|/var/spool/mail|/var/mail|g' \
 		${WRKSRC}/lib/Mail/Audit.pm
