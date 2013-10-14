@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/bibutils/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/bibutils/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	bibutils
 PORTVERSION=	5.0
@@ -17,6 +17,7 @@ USE_GMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ./configure --install-dir ${PREFIX}/bin
 
