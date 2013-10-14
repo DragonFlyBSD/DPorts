@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jsMath-fonts
-# Date created:		2006-02-23
-# Whom:			Nicola Vitale <nivit@email.it>
-#
-# $FreeBSD: ports/math/jsmath-fonts/Makefile,v 1.4 2012/11/17 05:59:22 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@email.it>
+# $FreeBSD: math/jsmath-fonts/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	jsMath-fonts
 PORTVERSION=	1.3
@@ -26,6 +22,7 @@ PLIST_SUB+=	D${_i}p=${WWWDIR_REL}/fonts/cm${_i}10/plain
 PLIST_SUB+=	Dcma=${WWWDIR_REL}/fonts/cm-fonts/alpha
 PLIST_SUB+=	Dcmp=${WWWDIR_REL}/fonts/cm-fonts/plain
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL} -d ${WWWDIR}/fonts
 	@${CP} -Rp ${WRKSRC}/fonts/ ${WWWDIR}/fonts/
