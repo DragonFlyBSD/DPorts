@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Tree-Simple-VisitorFactory/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Tree-Simple-VisitorFactory/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tree-Simple-VisitorFactory
 PORTVERSION=	0.10
@@ -38,4 +38,5 @@ MAN3=		Tree::Simple::Visitor::BreadthFirstTraversal.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
