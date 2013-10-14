@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-AnyEvent-SNMP
-# Date created:		2011-06-24
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: net-mgmt/p5-AnyEvent-SNMP/Makefile 326245 2013-09-04 03:27:37Z az $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: net-mgmt/p5-AnyEvent-SNMP/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	AnyEvent-SNMP
 PORTVERSION=	6.0
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	AnyEvent::SNMP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
