@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/GSL
-# Date created:		22 December 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: math/ruby-gsl/Makefile 325401 2013-08-26 16:06:37Z bf $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: math/ruby-gsl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gsl
 PORTVERSION=	1.14.7
@@ -28,6 +24,7 @@ CONFIGURE_ARGS=	-- --with-opt-dir="${LOCALBASE}"
 
 DOCS=		AUTHORS ChangeLog THANKS rdoc
 
+NO_STAGE=	yes
 post-extract:
 	${FIND} ${WRKSRC} '(' -name '.DS_Store' -o -name '*~' ')' -delete
 
