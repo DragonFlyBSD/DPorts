@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Config-MySQL/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-Config-MySQL/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-MySQL
 PORTVERSION=	0.02
@@ -20,4 +20,5 @@ MAN3=	Config::MySQL.3 \
 	Config::MySQL::Reader.3 \
 	Config::MySQL::Writer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
