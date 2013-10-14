@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Grove
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: textproc/p5-XML-Grove/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-XML-Grove/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Grove
 DISTVERSION=	0.46alpha
@@ -32,4 +28,5 @@ MAN3=	XML::DOM-ecmascript.3 \
 	XML::Grove::Subst.3 \
 	XML::Grove::XPointer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
