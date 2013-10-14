@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/flex/Makefile 322739 2013-07-11 04:54:06Z johans $
+# $FreeBSD: textproc/flex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	flex
 PORTVERSION=	2.5.37
@@ -23,6 +23,7 @@ USE_GMAKE=	yes
 MAN1=		flex.1
 INFO=		flex
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
