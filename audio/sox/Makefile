@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: audio/sox/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/sox/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	sox
 PORTVERSION=	14.3.2
@@ -21,6 +21,7 @@ MAN7=		soxformat.7
 MLINKS=		sox.1 play.1 sox.1 rec.1 sox.1 soxeffect.7
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libltdl
 
