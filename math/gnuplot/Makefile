@@ -1,4 +1,4 @@
-# $FreeBSD: math/gnuplot/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/gnuplot/Makefile 328492 2013-09-27 15:17:26Z madpilot $
 
 PORTNAME=	gnuplot
 PORTVERSION=	4.6.3
@@ -9,7 +9,9 @@ MASTER_SITES=	SF
 MAINTAINER=	glewis@FreeBSD.org
 COMMENT=	Command-line driven graphing utility
 
+USES=		iconv
 GNU_CONFIGURE=	yes
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=--with-lasergnu \
 		--with-readline=gnu \
 		--without-linux-vga \
@@ -28,6 +30,7 @@ OPTIONS_DEFAULT=CAIRO GD PDF PLOT TEX WX X11
 
 MAN1=		gnuplot.1 lasergnu.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCAIRO}

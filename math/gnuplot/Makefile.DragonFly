@@ -1,3 +1,2 @@
-USES+=			iconv readline ncurses
+USES+=			readline ncurses
 CONFIGURE_ARGS+=	--with-readline=bsd
-LDFLAGS+=		-L${LOCALBASE}/lib ${ICONV_LIB}
