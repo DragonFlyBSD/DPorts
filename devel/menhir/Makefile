@@ -1,9 +1,5 @@
-# New ports collection makefile for:	menhir
-# Date created:				5 March 2007
-# Whom:					Jaap Boender <jaapb@kerguelen.org>
-#
-# $FreeBSD: ports/devel/menhir/Makefile,v 1.7 2012/11/17 05:55:59 svnexp Exp $
-#
+# Created by: Jaap Boender <jaapb@kerguelen.org>
+# $FreeBSD: devel/menhir/Makefile 328748 2013-09-29 22:03:41Z antoine $
 
 PORTNAME=	menhir
 PORTVERSION=	20080912
@@ -13,7 +9,7 @@ MASTER_SITES=	http://cristal.inria.fr/~fpottier/menhir/
 MAINTAINER=	jaapb@kerguelen.org
 COMMENT=	LR(1) parser generator for OCaml
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_OCAML=	yes
 USE_OCAML_FINDLIB=	yes
 USE_OCAMLFIND_PLIST=	yes
@@ -21,6 +17,7 @@ OCAML_PKGDIRS=		menhirLib
 
 INSTALL_TARGET=	install
 MAKE_ENV+=	mandir="${MANPREFIX}/man/man1"
+MAKE_JOBS_UNSAFE=	yes
 MAN1=		menhir.1
 
 .if !defined(NOPORTDOCS)
@@ -29,4 +26,5 @@ DOCSDIR=	${PREFIX}/share/doc/ocaml/${PORTNAME}
 MAKE_ENV+=	docdir="${DOCSDIR}"
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
