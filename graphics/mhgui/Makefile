@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/mhgui/Makefile 327480 2013-09-17 15:53:01Z amdmi3 $
+# $FreeBSD: graphics/mhgui/Makefile 328214 2013-09-24 23:24:51Z amdmi3 $
 
 PORTNAME=	mhgui
 PORTVERSION=	0.2
@@ -12,16 +12,15 @@ COMMENT=	GUI widget library for MakeHuman
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	animorph:${PORTSDIR}/graphics/animorph \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libanimorph.so:${PORTSDIR}/graphics/animorph \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pkgconfig
+USES=		pkgconfig gmake
 USE_LDCONFIG=	yes
 USE_XORG=	xi xmu ice sm
 USE_GL=		glut
-USE_GCC=	yes # otherwise graphics/makehuman won't link
+USE_GCC=	any # otherwise graphics/makehuman won't link
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -33,8 +32,5 @@ PORTDOCS=	*
 post-patch:
 	@${REINPLACE_CMD} -e '/^libmhguidocdir =/ s|doc/|share/doc/|' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e '/^pkgconfigdir =/ s|\$$(libdir)|\$$(exec_prefix)/libdata|' ${WRKSRC}/Makefile.in
-.if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e '/^install-data-am:/ s|install-libmhguidocDATA||' ${WRKSRC}/Makefile.in
-.endif
 
 .include <bsd.port.mk>
