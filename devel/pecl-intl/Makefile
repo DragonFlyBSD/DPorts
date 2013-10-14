@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/pecl-intl/Makefile 320188 2013-06-07 08:57:04Z miwi $
+# $FreeBSD: devel/pecl-intl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	intl
 PORTVERSION=	3.0.0
@@ -20,4 +20,5 @@ USE_PHP=	yes
 USE_PHPEXT=	yes
 #IGNORE_WITH_PHP=52
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
