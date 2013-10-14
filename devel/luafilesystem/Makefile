@@ -1,5 +1,5 @@
 # Created by: Kelly Hays <kelly.hays@jkhfamily.org>
-# $FreeBSD: ports/devel/luafilesystem/Makefile,v 1.5 2013/01/20 04:00:56 svnexp Exp $
+# $FreeBSD: devel/luafilesystem/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	luafilesystem
 PORTVERSION=	1.5.0
@@ -27,6 +27,7 @@ PORTDOCS=	*
 
 MAKE_ARGS+=	INCS="-I${LOCALBASE}/include/${LUA_SUBDIR}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
