@@ -1,6 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: mail/addresses/Makefile 325546 2013-08-28 18:26:01Z theraven $
-#
+# $FreeBSD: mail/addresses/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	addresses
 PORTVERSION=	0.4.8
@@ -21,4 +20,5 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
