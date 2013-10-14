@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/p5-Sys-Syslog/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: sysutils/p5-Sys-Syslog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-Syslog
 PORTVERSION=	0.33
@@ -15,4 +15,5 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN3=	Sys::Syslog.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
