@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-JE/Makefile 325984 2013-09-02 12:52:42Z az $
+# $FreeBSD: www/p5-JE/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	JE
 PORTVERSION=	0.060
@@ -35,4 +35,5 @@ MAN3=		JE::Object.3 JE::_FieldHash.3 JE::String.3 \
 # Wrong versioning upstream
 PORTSCOUT=	skipv:0.54
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
