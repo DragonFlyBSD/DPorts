@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-IO-Socket-IP/Makefile 327073 2013-09-12 14:34:58Z sunpoet $
+# $FreeBSD: net/p5-IO-Socket-IP/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
 
 PORTNAME=	IO-Socket-IP
-PORTVERSION=	0.23
+PORTVERSION=	0.24
 CATEGORIES=	net ipv6 perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,7 +19,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		IO::Socket::IP.3
 
 .include <bsd.port.mk>
