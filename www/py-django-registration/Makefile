@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-registration/Makefile 326280 2013-09-04 14:35:08Z wg $
+# $FreeBSD: www/py-django-registration/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-registration
 PORTVERSION=	1.0
@@ -20,4 +20,5 @@ USES=		gettext
 
 CONFLICTS_INSTALL=	pootle-*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
