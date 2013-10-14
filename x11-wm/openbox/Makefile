@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/openbox/Makefile 326713 2013-09-08 08:54:25Z novel $
+# $FreeBSD: x11-wm/openbox/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	openbox
 PORTVERSION=	3.5.2
@@ -25,6 +25,7 @@ MAN1=		openbox.1 openbox-session.1 obxprop.1 \
 
 PLIST_SUB=	VERSION=${PORTVERSION:C/.[0-9]+\$//}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
