@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-Kwiki/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Kwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Kwiki
 PORTVERSION=	0.39
@@ -16,6 +16,7 @@ COMMENT=	The Kwiki Wiki Building Framework
 KWIKIDIR?=	kwiki
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${KWIKIDIR}
 	${CP} -RH ${WRKSRC}/ ${PREFIX}/${KWIKIDIR}
