@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: audio/espeak/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/espeak/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	espeak
 PORTVERSION=	1.47.11
@@ -33,6 +33,7 @@ MAKE_ENV+=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 
 CXXFLAGS+=	-I${LOCALBASE}/include
 USES=		gmake
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_ZIP=	yes
 
