@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/quake-data/Makefile 314423 2013-03-17 11:58:23Z danfe $
+# $FreeBSD: games/quake-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	1.0.6
@@ -31,6 +31,7 @@ FULLGAME_DESC=	Install full game version
 QW_DATA_DESC=	Install QuakeWorld data
 QW_SKINS_DESC=	Install QuakeWorld skins
 
+NO_STAGE=	yes
 .include "Makefile.include"	# must be included before bsd.port.options.mk
 .include <bsd.port.options.mk>
 
