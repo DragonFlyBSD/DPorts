@@ -1,5 +1,5 @@
 # Created by: Stefan Pauly <stefan@fh-mainz.de>
-# $FreeBSD: devel/cunit/Makefile 316837 2013-04-29 18:47:57Z jgh $
+# $FreeBSD: devel/cunit/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cunit
 DISTVERSION=	2.1-0
@@ -34,6 +34,7 @@ MEM_DESC=	Internal memory tracking
 
 OPTIONS_DEFAULT=	AUT BAS CON
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/doc/@PACKAGE@|/share/doc/@PACKAGE@|g' ${WRKSRC}/doc/Makefile.in
 	@${REINPLACE_CMD} -e 's|/doc/@PACKAGE@|/share/doc/@PACKAGE@|g' ${WRKSRC}/doc/headers/Makefile.in
