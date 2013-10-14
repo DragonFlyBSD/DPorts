@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: sysutils/p5-File-Listing/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: sysutils/p5-File-Listing/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	File-Listing
 PORTVERSION=	6.04
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Listing.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
