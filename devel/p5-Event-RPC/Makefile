@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: devel/p5-Event-RPC/Makefile 319339 2013-05-29 04:46:28Z jgh $
+# $FreeBSD: devel/p5-Event-RPC/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Event-RPC
 PORTVERSION=	1.03
@@ -13,7 +13,8 @@ COMMENT=	Event based transparent Client/Server RPC framework
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Event::RPC.3 \
 	Event::RPC::Client.3 \
@@ -35,6 +36,7 @@ SSL_DESC=	Dependency to SSL lib
 
 OPTIONS_DEFAULT=	EVENT ANYEVENT SSL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
