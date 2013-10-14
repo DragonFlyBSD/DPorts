@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: devel/p5-Spiffy/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Spiffy/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Spiffy
 PORTVERSION=	0.31
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 MAN3=		Spiffy.3
 PORTDOCS=	Changes README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
