@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: security/cryptopp/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: security/cryptopp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		cryptopp
 PORTVERSION=		5.6.2
@@ -16,6 +16,7 @@ OPTIONS_DEFAULT=	STATIC THREADS
 STATIC_DESC=		Build static version only (no shared libs)
 GCC_DESC=		Build with current GCC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 NO_WRKSUBDIR=		yes
