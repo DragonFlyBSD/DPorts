@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xwd/Makefile 324719 2013-08-14 13:43:49Z zeising $
+# $FreeBSD: x11/xwd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xwd
 PORTVERSION=	1.0.6
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xwd
 
 MAN1=		xwd.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
