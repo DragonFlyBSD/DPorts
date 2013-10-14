@@ -1,4 +1,4 @@
-# $FreeBSD: net/libmediawiki/Makefile 315762 2013-04-08 17:10:56Z makc $
+# $FreeBSD: net/libmediawiki/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libmediawiki
 PORTVERSION=	${DIGIKAM_VER}
@@ -7,6 +7,7 @@ CATEGORIES=	net kde
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE4 library for accessing MediaWiki sites
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../graphics/digikam-kde4/Makefile.common"
 
 USE_LDCONFIG=	yes
