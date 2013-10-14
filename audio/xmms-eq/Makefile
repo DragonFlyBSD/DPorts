@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: audio/xmms-eq/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/xmms-eq/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	eq
 PORTVERSION=	0.7
@@ -15,6 +15,7 @@ COMMENT=	Real-time graphical equalizer plugin for XMMS
 LIB_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
