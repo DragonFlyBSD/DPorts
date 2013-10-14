@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skk-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: japanese/skk-tools/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	skk-tools
 PORTVERSION=	1.3.2
@@ -25,6 +25,7 @@ DOCSDIR=	${PREFIX}/share/doc/skk
 PORTDOCS=	README.skktools
 PLIST_FILES=	bin/skkdic-count bin/skkdic-expr bin/skkdic-sort
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXPR2}
