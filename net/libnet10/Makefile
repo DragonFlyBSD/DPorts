@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: ports/net/libnet10/Makefile,v 1.32 2013/01/26 16:56:11 svnexp Exp $
+# $FreeBSD: net/libnet10/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	libnet
 PORTVERSION=	1.0.2a
@@ -13,6 +13,8 @@ PKGNAMESUFFIX=	10
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	A C library for creating IP packets
+
+NO_STAGE=	yes
 
 CFLAGS+=	-fPIC
 
