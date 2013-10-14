@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: print/p5-Text-PDF/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: print/p5-Text-PDF/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	Text-PDF
 PORTVERSION=	0.29a
@@ -23,6 +23,7 @@ MAN3=		Text::PDF::Pages.3 Text::PDF::Page.3 Text::PDF::Name.3 \
 		Text::PDF::Utils.3 Text::PDF::TTFont.3 Text::PDF::Number.3 \
 		Text::PDF::Null.3 Text::PDF.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/pm_to_blib
 
