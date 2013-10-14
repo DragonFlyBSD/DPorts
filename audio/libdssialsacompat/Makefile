@@ -1,5 +1,5 @@
 # Created by: mahonmesr@googlemail.com
-# $FreeBSD: ports/audio/libdssialsacompat/Makefile,v 1.10 2013/02/15 04:11:05 svnexp Exp $
+# $FreeBSD: audio/libdssialsacompat/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libdssialsacompat
 PORTVERSION=	1.0.8a
@@ -10,11 +10,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Alsa compatibility library to build DSSI
 
 FETCH_ARGS?=	-Fpr
+USES=		pathfix
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
