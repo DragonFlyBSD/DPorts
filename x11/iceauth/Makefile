@@ -1,4 +1,4 @@
-# $FreeBSD: x11/iceauth/Makefile 324209 2013-08-03 23:58:37Z bapt $
+# $FreeBSD: x11/iceauth/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	iceauth
 PORTVERSION=	1.0.6
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/iceauth
 
 MAN1=		iceauth.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
