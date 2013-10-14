@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: ports/graphics/jumpgis/Makefile,v 1.18 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: graphics/jumpgis/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jumpgis
 PORTVERSION=	1.1.2
@@ -27,6 +27,7 @@ PORTDOCS=	*
 
 REINPLACE_ARGS=	-i ""
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgnomelibs}!=""
