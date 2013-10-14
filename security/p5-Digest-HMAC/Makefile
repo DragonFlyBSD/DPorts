@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: security/p5-Digest-HMAC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Digest-HMAC/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-HMAC
 PORTVERSION=	1.03
@@ -17,4 +17,5 @@ MAN3=		Digest::HMAC.3 \
 		Digest::HMAC_MD5.3 \
 		Digest::HMAC_SHA1.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
