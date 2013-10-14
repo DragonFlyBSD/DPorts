@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zh-ttfm
-# Date created:		12 Nov 2000
-# Whom:			Jing-Tang Keith Jang <keith@FreeBSD.org>
-#
-# $FreeBSD: chinese/ttfm/Makefile 321284 2013-06-19 16:03:12Z rafan $
-#
+# Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
+# $FreeBSD: chinese/ttfm/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	ttfm
 PORTVERSION=	0.9.5
@@ -23,6 +19,7 @@ MAKE_ARGS=	FREETYPE_BASE=${LOCALBASE:Q} CC="${CC}"
 PORTDOCS=	README USAGE
 MAN1=		ttfm.sh.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},' \
 		-e 's,%%PREFIX%%,${PREFIX},' \
