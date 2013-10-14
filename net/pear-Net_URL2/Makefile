@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Net_URL2
-# Date created:			  8 May 2007
-# Whom:				  Zhen REN <bg1tpt@gmail.com>
-#
-# $FreeBSD: ports/net/pear-Net_URL2/Makefile,v 1.14 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: Zhen REN <bg1tpt@gmail.com>
+# $FreeBSD: net/pear-Net_URL2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_URL2
 PORTVERSION=	2.0.0
@@ -19,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
