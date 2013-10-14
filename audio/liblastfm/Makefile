@@ -1,5 +1,5 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/liblastfm/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/liblastfm/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	liblastfm
 PORTVERSION=	1.0.6
@@ -28,6 +28,7 @@ TESTS_DESC=		Build liblastfm tests
 OPTIONS_DEFAULT=	FINGERPRINT
 
 USES=		cmake pkgconfig
+NO_STAGE=	yes
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 USE_QT4=	dbus moc_build rcc_build network qmake_build qtestlib sql xml
