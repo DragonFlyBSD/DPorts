@@ -1,4 +1,4 @@
-# $FreeBSD: security/libotr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/libotr/Makefile 330189 2013-10-12 21:13:24Z cs $
 
 PORTNAME=	libotr
 PORTVERSION=	4.0.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.cypherpunks.ca/otr/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}.asc
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Portable OTR Messaging Library and toolkit
 
 BUILD_DEPENDS=	pkgconf>0:${PORTSDIR}/devel/pkgconf
@@ -34,6 +34,7 @@ MLINKS=		otr_toolkit.1 otr_parse.1 \
 verify: checksum
 	gpg --verify ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}.asc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
