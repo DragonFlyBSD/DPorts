@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: net/libnids/Makefile 318350 2013-05-17 02:00:55Z wxs $
+# $FreeBSD: net/libnids/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libnids
 PORTVERSION=	1.24
@@ -29,6 +29,7 @@ GNU_CONFIGURE=	yes
 
 MAN3=		libnids.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
