@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: security/libkpass/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: security/libkpass/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libkpass
 PORTVERSION=	5
@@ -27,4 +27,5 @@ PLIST_FILES=	include/kpass.h \
 		lib/libkpass.la \
 		lib/libkpass.a
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
