@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-oauth2
-# Date created:		                02 Mar,2011
-# Whom:			                Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-oauth2/Makefile,v 1.6 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: net/py-oauth2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	oauth2
 PORTVERSION=	1.5.211
@@ -22,4 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
