@@ -1,9 +1,5 @@
-# New ports collection makefile for:    icons for WindowMaker
-# Date created:         26 Japnuary 1999
-# Whom:                 KIRIYAMA Kazuhiko
-#
-# $FreeBSD: ports/graphics/wmicons/Makefile,v 1.16 2012/11/17 05:58:25 svnexp Exp $
-#
+# Created by: KIRIYAMA Kazuhiko
+# $FreeBSD: graphics/wmicons/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	wmicons
 PORTVERSION=	1.0
@@ -30,6 +26,7 @@ PORTDOCS=	*
 WRKSRC=		${WRKDIR}/WindowMaker-extra-0.1
 WMICONDIR=	${PREFIX}/share/WindowMaker/Pixmaps
 
+NO_STAGE=	yes
 post-extract:
 	${MKDIR} ${WRKDIR}/isiconpack4
 	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${DISTDIR}/isiconpack4.tgz \
