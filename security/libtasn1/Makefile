@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/libtasn1/Makefile 319580 2013-06-01 16:47:48Z novel $
+# $FreeBSD: security/libtasn1/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	libtasn1
 PORTVERSION=	2.14
@@ -14,6 +14,7 @@ USE_LDCONFIG=	yes
 USES=		pkgconfig pathfix
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+NO_STAGE=	yes
 
 DOCS=		AUTHORS NEWS README THANKS doc/TODO \
 		doc/libtasn1.html doc/libtasn1.pdf doc/libtasn1.ps
