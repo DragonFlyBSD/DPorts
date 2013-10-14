@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: sysutils/garcon/Makefile 317671 2013-05-08 15:02:25Z olivierd $
+# $FreeBSD: sysutils/garcon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	garcon
 PORTVERSION=	0.2.1
@@ -20,6 +20,7 @@ USES=		pathfix pkgconfig
 
 OPTIONS_DEFINE=		DOCS NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
