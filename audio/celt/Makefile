@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/celt/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/celt/Makefile 328000 2013-09-23 13:20:58Z bapt $
 
 PORTNAME=	celt
 PORTVERSION=	0.11.3
@@ -13,7 +13,7 @@ COMMENT=	The CELT ultra-low delay audio codec
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
+LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ogg=${LOCALBASE}
