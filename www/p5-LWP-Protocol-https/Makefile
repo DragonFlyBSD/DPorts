@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-LWP-Protocol-https/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: www/p5-LWP-Protocol-https/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	LWP-Protocol-https
 PORTVERSION=	6.04
@@ -18,7 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		LWP::Protocol::https.3
 
 .include <bsd.port.mk>
