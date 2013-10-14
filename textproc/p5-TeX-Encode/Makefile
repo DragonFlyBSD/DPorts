@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-TeX-Encode/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-TeX-Encode/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	TeX-Encode
 PORTVERSION=	1.3
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		TeX::Encode.3 TeX::Encode::BibTeX.3 TeX::Encode::charmap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
