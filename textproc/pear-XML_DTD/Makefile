@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/pear-XML_DTD/Makefile 314368 2013-03-16 16:15:10Z miwi $
+# $FreeBSD: textproc/pear-XML_DTD/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML_DTD
 PORTVERSION=	0.5.2
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 USE_DOS2UNIX=	yes
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
