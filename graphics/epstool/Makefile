@@ -1,5 +1,5 @@
 # Created by: Yuzo FURUKAWA <hurukawa@kuee.kyoto-u.ac.jp>
-# $FreeBSD: graphics/epstool/Makefile 314582 2013-03-18 16:11:34Z bf $
+# $FreeBSD: graphics/epstool/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	epstool
 PORTVERSION=	3.08
@@ -29,6 +29,7 @@ PLIST_FILES=	bin/epstool
 PORTDOCS=	epstool.htm gsview.css
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/epstool ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/epstool.1 ${MANPREFIX}/man/man1
