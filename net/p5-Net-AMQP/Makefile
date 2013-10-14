@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-Net-AMQP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-AMQP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-AMQP
 PORTVERSION=	0.06
@@ -39,4 +39,5 @@ MAN3=		Net::AMQP.3 \
 		Net::AMQP::Protocol::v0_8.3 \
 		Net::AMQP::Value.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
