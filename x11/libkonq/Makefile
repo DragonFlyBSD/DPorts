@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libkonq/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/libkonq/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libkonq
 PORTVERSION=	${KDE4_VERSION}
@@ -25,4 +25,5 @@ DISTINFO_FILE=	${PORTSDIR}/x11/kde4-baseapps/distinfo
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}/lib/konq
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
