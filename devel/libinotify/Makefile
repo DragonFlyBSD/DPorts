@@ -1,9 +1,5 @@
-# New ports collection makefile for:		libinotify
-# Date created:					2011-08-29
-# Whom:						stas
-#
-# $FreeBSD: devel/libinotify/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: stas
+# $FreeBSD: devel/libinotify/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libinotify
 PORTVERSION=	20110829
@@ -25,8 +21,5 @@ USE_LDCONFIG=	yes
 post-configure:
 	@${REINPLACE_CMD} -E -e \
 	'/Install the pseudo-library/,/staticlibs=/s,^,#,' ${WRKSRC}/libtool
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
