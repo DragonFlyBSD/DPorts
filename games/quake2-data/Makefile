@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/quake2-data/Makefile 314424 2013-03-17 12:18:23Z danfe $
+# $FreeBSD: games/quake2-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	3.20
@@ -33,6 +33,7 @@ Q2_DEMO=	q2-314-demo-x86.exe
 Q2_SRC=		q2src${PORTVERSION:S/.//}.shar.Z
 Q2_UPDATE=	q2-${PORTVERSION}-x86-full.exe
 
+NO_STAGE=	yes
 .include "Makefile.include"	# must be included before bsd.port.options.mk
 .include <bsd.port.options.mk>
 
