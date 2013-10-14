@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ctpl/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/ctpl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ctpl
 PORTVERSION=	0.3.3
@@ -15,4 +15,5 @@ USE_LDCONFIG=	yes
 
 MAN1=	ctpl.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
