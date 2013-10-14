@@ -1,15 +1,10 @@
-# New ports collection makefile for:	PostgreSQL-client
-# Date created:				2009-07-08
-# Whom:					Palle Girgensohn <girgen@FreeBSD.org>
-#
-# $FreeBSD: databases/postgresql84-client/Makefile 315734 2013-04-05 15:26:49Z girgen $
-#
-# To depend on postgresql-client, set USE_PGSQL=yes.
-# See Mk/bsd.databases.mk for more info
+# Created by: Palle Girgensohn <girgen@FreeBSD.org>
+# $FreeBSD: databases/postgresql84-client/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
-PKGNAMESUFFIX=	-client
+PKGNAMESUFFIX?=	${DISTV:S/.//}-client
+DISTV=	${DISTVERSION:R}
 
 COMMENT=	PostgreSQL database (client)
 
@@ -19,6 +14,8 @@ BUILD_DIRS=	config src/include src/interfaces src/port \
 		src/bin/pg_dump src/bin/psql src/bin/scripts src/bin/pg_config \
 		doc src/makefiles
 CLIENT_ONLY=	yes
+COMPONENT=	-client
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
