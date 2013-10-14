@@ -1,5 +1,5 @@
-# Created by: Nick Sayer <nsayer@FreeBSD.ORG>
-# $FreeBSD: databases/p5-GDBM/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: Nick Sayer <nsayer@FreeBSD.org>
+# $FreeBSD: databases/p5-GDBM/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	GDBM
 PORTVERSION=	1.14
@@ -25,4 +25,5 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/ext/GDBM_File
 
 MAN3=		GDBM_File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
