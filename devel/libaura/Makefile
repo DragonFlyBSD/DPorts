@@ -1,5 +1,5 @@
 # Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
-# $FreeBSD: ports/devel/libaura/Makefile,v 1.5 2013/01/12 13:02:13 svnexp Exp $
+# $FreeBSD: devel/libaura/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libaura
 PORTVERSION=	3.1.20051222
@@ -28,6 +28,7 @@ PORTDOCS=	README
 
 MAKE_ENV=	SONAME=${SONAME} SOLINK=${SOLINK}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${SONAME} ${PREFIX}/lib/${SONAME}
 	${LN} -s ${PREFIX}/lib/${SONAME} ${PREFIX}/lib/${SOLINK}
