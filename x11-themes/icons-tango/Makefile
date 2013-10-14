@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icons-tango/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: x11-themes/icons-tango/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	icons-tango
 PORTVERSION=	0.8.90
@@ -20,4 +20,5 @@ USE_GNOME=	intlhack
 USES+=		pathfix gmake pkgconfig
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
