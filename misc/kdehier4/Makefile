@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kdehier4/Makefile 322191 2013-07-02 19:04:18Z rakuco $
+# $FreeBSD: misc/kdehier4/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	kdehier4
 PORTVERSION=	1.1.1
@@ -13,6 +13,7 @@ NO_BUILD=	yes
 USE_LDCONFIG=	${KDE4_PREFIX}/lib
 USE_KDE4=	#
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${KDE4_PREFIX} != ${PREFIX}
