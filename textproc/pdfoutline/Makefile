@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/pdfoutline/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: textproc/pdfoutline/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pdfoutline
 PORTREVISION=	0
@@ -12,4 +12,5 @@ DESCR=		${.CURDIR}/pkg-descr
 
 PDFOUTLINE=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
