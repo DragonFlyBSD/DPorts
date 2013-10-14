@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-gio2/Makefile 320383 2013-06-09 18:47:21Z swills $
+# $FreeBSD: devel/rubygem-gio2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gio2
 PORTVERSION=	2.0.2
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
