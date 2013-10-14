@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: x11-toolkits/gtkmm20/Makefile 325939 2013-09-02 06:20:09Z bapt $
+# $FreeBSD: x11-toolkits/gtkmm20/Makefile 329070 2013-10-02 16:24:19Z kwm $
 #    $MCom: ports/x11-toolkits/gtkmm20/Makefile,v 1.11 2006/09/10 00:51:17 mezz Exp $
 
 PORTNAME=	gtkmm
@@ -7,13 +7,13 @@ PORTVERSION=	2.2.12
 PORTREVISION?=	13
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/${PORTNAME}/2.2
+PKGNAMESUFFIX=	20
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Gtk+, Pango, Atk, and Glib
 
 USE_BZIP2=	yes
-LATEST_LINK=	gtkmm2
 
 .if !defined(REFERENCE_PORT)
 
@@ -28,6 +28,7 @@ USE_GNOME=	lthack gtk20
 CONFIGURE_ARGS=	--enable-static=yes \
 		--with-sigc-prefix=${LOCALBASE}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/gmessages.h|glib/gtestutils.h|g' \
 		${WRKSRC}/glib/src/*.ccg ${WRKSRC}/glib/glibmm/*.* \
