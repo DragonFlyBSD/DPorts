@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-App-Rad/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-App-Rad/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-Rad
 PORTVERSION=	1.05
@@ -22,4 +22,5 @@ MAN3=		App::Rad.3 \
 		App::Rad::Include.3 \
 		App::Rad::Plugin.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
