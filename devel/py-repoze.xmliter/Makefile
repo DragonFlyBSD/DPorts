@@ -1,9 +1,4 @@
-# New ports collection makefile for: py-repoze.xmliter
-# Date created: 18 September 2011
-# Whom: Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-repoze.xmliter/Makefile,v 1.3 2012/11/17 05:56:50 svnexp Exp $
-#
+# $FreeBSD: devel/py-repoze.xmliter/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	repoze.xmliter
 PORTVERSION=	0.5
@@ -21,5 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.1.1:${PORTSDIR}/devel/py-lxml
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
