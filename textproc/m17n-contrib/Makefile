@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/m17n-contrib/Makefile 319709 2013-06-02 18:51:59Z pawel $
+# $FreeBSD: textproc/m17n-contrib/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	m17n-contrib
 PORTVERSION=	1.1.14
@@ -16,6 +16,7 @@ RUN_DEPENDS=	m17n-db>=1.6.4:${PORTSDIR}/devel/m17n-db
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
