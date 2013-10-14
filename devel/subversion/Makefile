@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile 326057 2013-09-02 19:04:20Z ohauer $
+# $FreeBSD: devel/subversion/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
@@ -35,6 +35,7 @@ SVNSERVE_WRAPPER_DESC=	Enable svnserve wrapper (umask setter)
 TEST_DESC=		Run subversion test suite
 TOOLS_DESC=		Install several tools (svnauthz-validate and mod_dontdothat are among them)
 
+NO_STAGE=	yes
 .include "Makefile.common"
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
