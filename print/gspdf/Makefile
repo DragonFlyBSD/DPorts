@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/gspdf/Makefile,v 1.13 2012/11/17 06:00:50 svnexp Exp $
+# $FreeBSD: print/gspdf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	gspdf
 PORTVERSION=	0.5
@@ -18,4 +18,5 @@ USE_GHOSTSCRIPT=	yes
 
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
