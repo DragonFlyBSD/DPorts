@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Lint/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-HTML-Lint/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Lint
 PORTVERSION=	2.20
@@ -25,4 +25,5 @@ MAN3=	HTML::Lint.3 \
 	HTML::Lint::Parser.3 \
 	Test::HTML::Lint.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
