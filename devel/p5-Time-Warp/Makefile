@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Time-Warp
-# Date created:				28 April 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Time-Warp/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Time-Warp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-Warp
 PORTVERSION=	0.5
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Time::Warp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
