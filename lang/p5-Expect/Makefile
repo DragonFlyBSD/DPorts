@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: lang/p5-Expect/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: lang/p5-Expect/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Expect
 PORTVERSION=	1.21
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Expect.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
