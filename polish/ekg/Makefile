@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/ekg/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: polish/ekg/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	ekg
 DISTVERSION=	1.8rc2
@@ -25,10 +25,6 @@ CONFIGURE_ARGS= --without-libungif \
 CFLAGS+=	-I/usr/include -I${LOCALBASE}/include
 LDFLAGS+=	-L/usr/lib -lncurses -L${LOCALBASE}/lib -lexecinfo -pthread
 
-MAN1=		ekg.1
-MANLANG=	"" pl
-MANCOMPRESSED=	no
-
 OPTIONS_DEFINE=		ASPELL OPENSSL
 OPTIONS_DEFAULT=	OPENSSL
 
@@ -38,6 +34,6 @@ ASPELL_LIB_DEPENDS=	libaspell.so:${PORTSDIR}/polish/aspell
 OPENSSL_CONFIGURE_OFF=	--without-openssl
 
 post-install:
-	${STRIP_CMD} ${PREFIX}/bin/ekg
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ekg
 
 .include <bsd.port.mk>
