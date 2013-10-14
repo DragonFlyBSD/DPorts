@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-RSS-Feed/Makefile 326598 2013-09-07 10:19:30Z sunpoet $
+# $FreeBSD: textproc/p5-XML-RSS-Feed/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-RSS-Feed
 PORTVERSION=	2.40
@@ -29,4 +29,5 @@ MAN3=		XML::RSS::Feed.3 \
 		XML::RSS::Headline::PerlJobs.3 \
 		XML::RSS::Headline::UsePerlJournals.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
