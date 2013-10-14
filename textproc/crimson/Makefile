@@ -1,9 +1,5 @@
-# New ports collection makefile for:    crimson
-# Date created:		2000-03-21
-# Whom:			Palle Girgensohn
-#
-# $FreeBSD: ports/textproc/crimson/Makefile,v 1.6 2012/11/17 06:01:53 svnexp Exp $
-#
+# Created by: Palle Girgensohn
+# $FreeBSD: textproc/crimson/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	crimson
 PORTVERSION=	1.1.3
@@ -26,6 +22,7 @@ JAVAVM?=	${LOCALBASE}/bin/javavm
 DOCSDIR=	${PREFIX}/share/doc/java/${PORTNAME}
 READMES=	README.html ChangeLog
 
+NO_STAGE=	yes
 do-install:
 	@ ${MKDIR} ${PREFIX}/share/java/classes; \
 	  cd ${INSTALL_WRKSRC}; \
