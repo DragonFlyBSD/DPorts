@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: devel/p5-DateTime-Format-Natural/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-DateTime-Format-Natural/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Format-Natural
 PORTVERSION=	1.01
@@ -43,4 +43,5 @@ MAN3=		DateTime::Format::Natural.3 \
 regression-test: build
 	@cd ${WRKSRC} && ./Build test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
