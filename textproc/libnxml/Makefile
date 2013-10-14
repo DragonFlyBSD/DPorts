@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libnxml
-# Date created:		2006-04-09
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: textproc/libnxml/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: textproc/libnxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libnxml
 PORTVERSION=	0.18.3
@@ -25,6 +21,7 @@ USE_LDCONFIG=	yes
 
 WANT_GNOME=	yes
 
+NO_STAGE=	yes
 pre-patch:
 	${gnomehack_PRE_PATCH}
 
