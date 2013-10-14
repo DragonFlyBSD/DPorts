@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zbase32
-# Date created:		1st,Oct 2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/converters/zbase32/Makefile,v 1.8 2012/11/17 05:55:05 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: converters/zbase32/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	zbase32
 PORTVERSION=	1.1.5
@@ -20,4 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
