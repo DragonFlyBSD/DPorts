@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-uulib/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-uulib/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	uulib
 PORTVERSION=	0.9.15
@@ -11,5 +11,6 @@ COMMENT=	Haskell Utrecht Tools Library
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
