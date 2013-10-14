@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/libgig/Makefile 325656 2013-08-30 02:05:38Z bapt $
+# $FreeBSD: audio/libgig/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libgig
 PORTVERSION=	3.3.0
@@ -18,6 +18,7 @@ LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
 		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
