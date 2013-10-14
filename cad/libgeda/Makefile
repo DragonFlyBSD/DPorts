@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/libgeda/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: cad/libgeda/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	libgeda
 PORTVERSION=	1.4.3
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--disable-update-mime-database \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
