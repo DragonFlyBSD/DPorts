@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/libctl/Makefile 326174 2013-09-03 17:05:11Z skreuzer $
+# $FreeBSD: science/libctl/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	libctl
 PORTVERSION=	3.2.1
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 
 MAN1=		gen-ctl-io.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
