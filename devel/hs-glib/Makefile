@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-glib/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-glib/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	glib
 PORTVERSION=	0.12.4
@@ -14,5 +14,6 @@ USES=		pkgconfig
 USE_CABAL=	gtk2hs-buildtools
 USE_GNOME=	glib20
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
