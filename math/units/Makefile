@@ -1,5 +1,5 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: math/units/Makefile 323165 2013-07-17 13:14:07Z wg $
+# $FreeBSD: math/units/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	units
 PORTVERSION=	2.02
@@ -18,6 +18,7 @@ CONFIGURE_ARGS=	--program-prefix=g
 INFO=		units
 MAN1=		gunits.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	 's|$$(INSTALL_PROGRAM) units_cur|${INSTALL_SCRIPT} units_cur|' \
