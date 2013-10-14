@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/fortytwo-encore/Makefile,v 1.12 2012/11/17 05:55:43 svnexp Exp $
+# $FreeBSD: devel/fortytwo-encore/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	encore
 PORTVERSION=	0.3.1
@@ -24,6 +24,7 @@ USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 WRKSRC=		${WRKDIR}/Encore
 DOCSDIR=	${GNUSTEP_PREFIX}/Local/Library/Documentation/Encore
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
