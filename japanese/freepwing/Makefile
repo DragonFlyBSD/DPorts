@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/freepwing/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/freepwing/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	freepwing
 PORTVERSION=	1.4.4
@@ -17,4 +17,5 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-pkgdocdir=${DOCSDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
