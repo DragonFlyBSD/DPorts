@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/libGLU/Makefile 326020 2013-09-02 16:04:20Z bapt $
+# $FreeBSD: graphics/libGLU/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libGLU
 PORTVERSION=	9.0.0
@@ -17,4 +17,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-static
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
