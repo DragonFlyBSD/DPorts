@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-Tangram/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Tangram/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Tangram
 PORTVERSION=	2.10
@@ -58,4 +58,5 @@ MAN3=	Tangram.3 \
 	Tangram::Type::Set::FromOne.3 \
 	Tangram::Type::TimeAndDate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
