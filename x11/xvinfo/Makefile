@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xvinfo/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xvinfo/Makefile 328643 2013-09-29 03:12:30Z eadler $
 
 PORTNAME=	xvinfo
 PORTVERSION=	1.1.2
@@ -10,8 +10,6 @@ COMMENT=	Print out X-Video extension adaptor information
 XORG_CAT=	app
 USE_XORG=	xv x11
 
-PLIST_FILES=	bin/xvinfo
-
-MAN1=		xvinfo.1
+PLIST_FILES=	bin/xvinfo man/man1/xvinfo.1.gz
 
 .include <bsd.port.mk>
