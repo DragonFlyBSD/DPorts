@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/py-timelib/Makefile,v 1.7 2012/11/17 05:56:51 svnexp Exp $
+# $FreeBSD: devel/py-timelib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	timelib
 PORTVERSION=	0.2.4
@@ -15,4 +15,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
