@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/opencc/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: chinese/opencc/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	opencc
 PORTVERSION=	0.3.0
@@ -16,6 +16,7 @@ MAN1=	opencc.1 opencc_dict.1
 USES=		cmake
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
