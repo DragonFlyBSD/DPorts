@@ -1,5 +1,5 @@
-# Whom: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: databases/rubygem-dm-core/Makefile 321641 2013-06-23 15:27:22Z swills $
+# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
+# $FreeBSD: databases/rubygem-dm-core/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dm-core
 PORTVERSION=	1.2.1
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
