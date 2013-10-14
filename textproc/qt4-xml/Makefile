@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: textproc/qt4-xml/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: textproc/qt4-xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xml
 DISTVERSION=	${QT4_VERSION}
@@ -38,6 +38,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
