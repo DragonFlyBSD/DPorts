@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: lang/p5-Marpa-XS/Makefile 325455 2013-08-27 14:59:46Z sunpoet $
+# $FreeBSD: lang/p5-Marpa-XS/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	Marpa-XS
 PORTVERSION=	1.008000
@@ -26,20 +26,5 @@ TEST_DEPENDS=	p5-Test-Weaken>=3.004000:${PORTSDIR}/devel/p5-Test-Weaken
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Marpa::XS.3 \
-		Marpa::XS::Advanced::Bibliography.3 \
-		Marpa::XS::Advanced::Models.3 \
-		Marpa::XS::Debug.3 \
-		Marpa::XS::Grammar.3 \
-		Marpa::XS::Recognizer.3 \
-		Marpa::XS::Rewrite.3 \
-		Marpa::XS::Semantics.3 \
-		Marpa::XS::Semantics::Infinite.3 \
-		Marpa::XS::Semantics::Null.3 \
-		Marpa::XS::Semantics::Order.3 \
-		Marpa::XS::Support.3 \
-		Marpa::XS::Tracing.3 \
-		Marpa::XS::Vocabulary.3
 
 .include <bsd.port.mk>
