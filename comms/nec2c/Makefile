@@ -1,12 +1,5 @@
-# ports collection makefile for:	splat
-# Date created:		8 July 2005
-# Whom:			db
-#
-# $FreeBSD: ports/comms/nec2c/Makefile,v 1.9 2012/11/17 05:55:00 svnexp Exp $
-# http://5b4az.chronos.org.uk/pkg/nec2/nec2c/nec2c-0.6.tar.gz
-# http://ftp-mirror.internap.com/pub/FreeBSD/distfiles/nec2c/nec2c.tar.gz
-# http://ftp.cerias.purdue.edu/pub/os/FreeBSD/distfiles/nec2c/nec2c.tar.gz
-#
+# Created by: db
+# $FreeBSD: comms/nec2c/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	nec2c
 PORTVERSION=	.9
@@ -21,6 +14,7 @@ COMMENT=	Used to calculate antenna patterns useful to ham radio
 
 LIB_DEPENDS=	ccm:${PORTSDIR}/math/ccmath
 
+NO_STAGE=	yes
 post-patch:
 	${CP} ${FILESDIR}/carg.c  ${WRKSRC}
 
