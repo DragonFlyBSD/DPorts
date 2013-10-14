@@ -1,8 +1,9 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: java/openjdk7/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: java/openjdk7/Makefile 327845 2013-09-22 00:39:22Z glewis $
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${PORT_MINOR_VERSION}.${PORT_BUILD_NUMBER}
+PORTREVISION=	1
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}/promoted/b${JDK_BUILD_NUMBER}/ \
 		http://download.java.net/jaxp/1.4.5/:jaxp \
@@ -119,6 +120,7 @@ SECURITY_ICONS= security-icon-bw16.png \
 		security-icon-yellow32.png \
 		security-icon-yellow48.png
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500

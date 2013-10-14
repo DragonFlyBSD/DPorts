@@ -1,4 +1,4 @@
-$FreeBSD: java/openjdk7/files/patch-src-os-bsd-vm-os_bsd.cpp 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: java/openjdk7/files/patch-src-os-bsd-vm-os_bsd.cpp 327845 2013-09-22 00:39:22Z glewis $
 
 --- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2010-02-21 20:07:54.000000000 -0800
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp	2010-02-21 20:08:41.000000000 -0800
@@ -11,3 +11,11 @@ $FreeBSD: java/openjdk7/files/patch-src-os-bsd-vm-os_bsd.cpp 300896 2012-07-14 1
  #endif
  
  #define EXTENSIONS_DIR  "/lib/ext"
+@@ -3670,6 +3670,7 @@
+   return OS_OK;
+ #elif defined(__FreeBSD__)
+   int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
++  return (ret == 0) ? OS_OK : OS_ERR;
+ #elif defined(__APPLE__) || defined(__NetBSD__)
+   struct sched_param sp;
+   int policy;
