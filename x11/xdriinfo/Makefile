@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdriinfo/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xdriinfo/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xdriinfo
 PORTVERSION=	1.0.4
@@ -14,4 +14,5 @@ USE_XORG=	x11 glproto
 MAN1=		xdriinfo.1
 PLIST_FILES=	bin/xdriinfo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
