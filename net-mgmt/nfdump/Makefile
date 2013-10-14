@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/nfdump/Makefile 315414 2013-03-27 21:08:01Z pawel $
+# $FreeBSD: net-mgmt/nfdump/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nfdump
 PORTVERSION=	1.6.9
@@ -29,6 +29,7 @@ NFTRACK_DESC=		With PortTracker support
 SFLOW_DESC=		Build sflow collector daemon also
 NFDUMP15_DESC=		Enable compatbility with version 1.5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|-ggdb||' ${WRKSRC}/bin/Makefile.in
 
