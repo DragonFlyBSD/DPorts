@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-whoosh
-# Date created:		2012-04-21
-# Whom:			gugabsd <gugabsd@mundounix.com.br>
-#
-# $FreeBSD: ports/textproc/py-whoosh/Makefile,v 1.3 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: gugabsd <gugabsd@mundounix.com.br>
+# $FreeBSD: textproc/py-whoosh/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	whoosh
 PORTVERSION=	2.4.1
@@ -21,4 +17,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Whoosh
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
