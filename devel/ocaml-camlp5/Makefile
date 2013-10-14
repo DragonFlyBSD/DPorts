@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: devel/ocaml-camlp5/Makefile 319133 2013-05-26 20:06:20Z wg $
+# $FreeBSD: devel/ocaml-camlp5/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	camlp5
 PORTVERSION=	6.08.p${PATCHLEVEL}
@@ -24,6 +24,7 @@ OPTIONS_DEFAULT=	STRICT
 TRANSITIONAL_DESC=	Compatible syntax tree with old versions
 STRICT_DESC=		New syntax tree quotations kit
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PATCHLEVEL=	1
