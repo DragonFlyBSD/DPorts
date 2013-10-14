@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/devel/libevent2/Makefile,v 1.18 2013/02/14 10:22:09 svnexp Exp $
+# $FreeBSD: devel/libevent2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libevent2
 PORTVERSION=	2.0.21
@@ -23,6 +23,7 @@ OPTIONS_DEFAULT=	OPENSSL THREADS
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/event2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
