@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-XML_Serializer
-# Date created:			  04 September 2003
-# Whom:				  Alex Miller (<asm@asm.kiev.ua>)
-#
-# $FreeBSD: devel/pear-XML_Serializer/Makefile 314393 2013-03-17 05:24:32Z miwi $
-#
+# Created by: Alex Miller (<asm@asm.kiev.ua>)
+# $FreeBSD: devel/pear-XML_Serializer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	XML_Serializer
 PORTVERSION=	0.20.2
@@ -19,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
