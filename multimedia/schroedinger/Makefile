@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/schroedinger/Makefile 325939 2013-09-02 06:20:09Z bapt $
+# $FreeBSD: multimedia/schroedinger/Makefile 327750 2013-09-20 21:49:30Z mm $
 
 PORTNAME=	schroedinger
 PORTVERSION=	1.0.11
@@ -8,7 +8,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://diracvideo.org/download/schroedinger/
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High-speed Dirac codec
 
 LICENSE=	GPLv2 LGPL20 MIT MPL
@@ -23,6 +23,7 @@ USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^pkgconfigdir=.*|pkgconfigdir="\\$${prefix}/libdata/pkgconfig"|' \
 		-e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
