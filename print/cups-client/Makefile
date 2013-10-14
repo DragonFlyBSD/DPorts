@@ -1,4 +1,4 @@
-# $FreeBSD: print/cups-client/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: print/cups-client/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 CATEGORIES=	print
 
@@ -9,6 +9,7 @@ MASTERDIR?=	${.CURDIR}/../cups-base
 CUPS_CLIENT=	yes
 
 .if exists(${.CURDIR}/Makefile.local)
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.local"
 .endif
 
