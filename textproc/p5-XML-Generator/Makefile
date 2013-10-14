@@ -1,5 +1,5 @@
 # Created by: Andreas Heil <ah@linux-hq.de>
-# $FreeBSD: textproc/p5-XML-Generator/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-XML-Generator/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Generator
 PORTVERSION=	1.04
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		XML::Generator.3 XML::Generator::DOM.3
 
+NO_STAGE=	yes
 regression-test test:
 	@(cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE} test)
 
