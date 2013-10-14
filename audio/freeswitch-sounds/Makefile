@@ -1,5 +1,5 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: audio/freeswitch-sounds/Makefile 318744 2013-05-22 04:21:42Z jgh $
+# $FreeBSD: audio/freeswitch-sounds/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	freeswitch
 DISTVERSION=	1.0.24
@@ -16,6 +16,7 @@ NO_WRKSUBDIR=	yes
 SHAREOWN=	${PORTNAME}
 SHAREGRP=	${SHAREOWN}
 USERS=		${PORTNAME}
+NO_STAGE=	yes
 GROUPS=		${USERS}
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
