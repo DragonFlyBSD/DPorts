@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: textproc/p5-YAPE-Regex/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-YAPE-Regex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	YAPE-Regex
 PORTVERSION=	4.00
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		YAPE::Regex.3 YAPE::Regex::Element.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
