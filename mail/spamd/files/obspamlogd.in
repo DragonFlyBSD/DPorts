@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/spamd/files/obspamlogd.in,v 1.8 2013/01/08 15:42:57 svnexp Exp $
+# $FreeBSD: mail/spamd/files/obspamlogd.in 310092 2013-01-08 14:46:14Z uqs $
 #
 
 # PROVIDE: obspamlogd

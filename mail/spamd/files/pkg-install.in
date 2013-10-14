@@ -3,7 +3,7 @@
 # ex:ts=4:sw=4:noet
 #-*- mode: makefile; tab-width: 4; -*-
 #
-# $FreeBSD: ports/mail/spamd/files/pkg-install.in,v 1.5 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/spamd/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
 
 SPAMDUSER=%%SPAMDUSER%%
 SPAMDGROUP=%%SPAMDGROUP%%

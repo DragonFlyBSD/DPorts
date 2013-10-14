@@ -1,5 +1,5 @@
 # Created by: Max Laier <max@love2party.net>
-# $FreeBSD: ports/mail/spamd/Makefile,v 1.26 2013/01/08 15:42:57 svnexp Exp $
+# $FreeBSD: mail/spamd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spamd
 PORTVERSION=	4.9.1
@@ -50,6 +50,7 @@ SUB_FILES=	pkg-install \
 SUB_LIST=	PREFIX=${PREFIX} \
 		${PLIST_SUB}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-install:
