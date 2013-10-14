@@ -1,9 +1,5 @@
-# New ports collection makefile for:   slib
-# Date created:        01 April 1998
-# Whom:                Yukihiro Nakai <Nakai@technologist.com>
-#
-# $FreeBSD: ports/lang/slib/Makefile,v 1.35 2012/11/17 05:58:56 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@technologist.com>
+# $FreeBSD: lang/slib/Makefile 329950 2013-10-10 00:20:42Z madpilot $
 
 PORTNAME=	slib
 PORTVERSION=	3b3
@@ -15,7 +11,7 @@ DISTFILES=	slib-${PORTVERSION}${EXTRACT_SUFX}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A portable scheme library
 
-USE_GMAKE=	yes
+USES=		gmake
 ALL_TARGET=	slib.info
 INFO=		slib
 
@@ -23,15 +19,13 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/lib/slib|${PREFIX}/share/slib|' ${WRKSRC}/guile.init
 
 do-install:
-	@${MKDIR} ${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/*.scm ${WRKSRC}/*.init ${WRKSRC}/*.txt \
-		${WRKSRC}/*.xyz ${WRKSRC}/*.ps ${DATADIR}
-	${INSTALL_MAN} ${WRKSRC}/slib.info ${MANPREFIX}/info
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+		${WRKSRC}/*.xyz ${WRKSRC}/*.ps ${STAGEDIR}${DATADIR}
+	${INSTALL_MAN} ${WRKSRC}/slib.info ${STAGEDIR}${MANPREFIX}/info
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ANNOUNCE ChangeLog FAQ README
-	${INSTALL_MAN} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
