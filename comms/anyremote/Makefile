@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: comms/anyremote/Makefile 327541 2013-09-18 11:41:14Z madpilot $
+# $FreeBSD: comms/anyremote/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	anyremote
 PORTVERSION=	6.3.1
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 OPTIONS_DEFINE=	DOCS DBUS X11
 OPTIONS_DEFAULT=	DBUS X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDBUS}
