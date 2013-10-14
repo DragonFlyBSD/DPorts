@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-Compress-LZO/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-Compress-LZO/Makefile 328272 2013-09-25 12:19:08Z vanilla $
 
 PORTNAME=	Compress-LZO
 PORTVERSION=	1.08
@@ -19,7 +19,5 @@ USE_PERL5=	configure
 
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/Makefile.PL
-
-MAN3=		Compress::LZO.3
 
 .include <bsd.port.mk>
