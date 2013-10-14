@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/ecore-x11/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: x11/ecore-x11/Makefile 329509 2013-10-05 21:34:51Z gblach $
 
 PORTNAME=	x11
 PORTVERSION=	1.7.8
@@ -99,6 +99,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ecore-x.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
