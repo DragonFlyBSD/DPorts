@@ -1,9 +1,5 @@
-# New ports collection makefile for:    psdim
-# Date created:         22 Apr 2005 17:00:00 CEST
-# Whom:                 e-masson@kisoft-services.com
-#
-# $FreeBSD: ports/print/psdim/Makefile,v 1.10 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: e-masson@kisoft-services.com
+# $FreeBSD: print/psdim/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	psdim
 PORTVERSION=	1.4
@@ -21,4 +17,5 @@ CONFIGURE_ARGS=	--prefix=${PREFIX}
 
 MAN1=		psdim.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
