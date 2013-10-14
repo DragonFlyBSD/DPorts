@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/pear/Makefile 323244 2013-07-18 16:33:02Z miwi $
+# $FreeBSD: devel/pear/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pear
 PORTVERSION=	1.9.4
@@ -19,6 +19,7 @@ USE_PHP_BUILD=	yes
 
 PEARDIR=	${PREFIX}/share/pear
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|" \
 		-e "s|%%BUNDLEDIR%%|${WRKSRC}/go-pear-bundle|" \
