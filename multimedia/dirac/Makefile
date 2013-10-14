@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: multimedia/dirac/Makefile 325750 2013-08-31 00:29:43Z bapt $
+# $FreeBSD: multimedia/dirac/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dirac
 PORTVERSION=	1.0.2
@@ -19,4 +19,5 @@ CONFIGURE_ENV?=	HAVE_LATEX=${FALSE} HAVE_DVIPDFM=${FALSE} \
 		HAVE_DOXYGEN=${FALSE} HAVE_DOT=${FALSE}
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
