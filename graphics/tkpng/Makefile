@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tkpng
-# Date created:		08 October 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/tkpng/Makefile,v 1.14 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: graphics/tkpng/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tkpng
 PORTVERSION=	0.9
@@ -22,6 +18,7 @@ LICENSE_FILE=	${WRKSRC}/license.terms
 USE_TK=		84+
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 CONFIGURE_ARGS=	--with-tcl=${TCL_LIBDIR} \
 		--with-tk=${TK_LIBDIR} \
