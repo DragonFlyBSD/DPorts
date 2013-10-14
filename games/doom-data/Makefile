@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-data/Makefile 311191 2013-01-29 23:00:02Z jgh $
+# $FreeBSD: games/doom-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	1.0
@@ -34,6 +34,7 @@ HERETIC_WAD=	heretic1.wad
 HEXEN_WAD=	hexen.wad
 STRIFE_WAD=	strife0.wad
 
+NO_STAGE=	yes
 .include "Makefile.include"
 
 .include <bsd.port.options.mk>
