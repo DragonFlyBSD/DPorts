@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-CAM-PDF/Makefile 325268 2013-08-23 13:52:50Z mat $
+# $FreeBSD: textproc/p5-CAM-PDF/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	CAM-PDF
 PORTVERSION=	1.60
@@ -22,6 +22,7 @@ TEST_DEPENDS=	p5-Test-Memory-Cycle>=1.02:${PORTSDIR}/devel/p5-Test-Memory-Cycle 
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN1=		appendpdf.pl.1 changepagestring.pl.1 changepdfstring.pl.1 \
 		changerefkeys.pl.1 crunchjpgs.pl.1 deillustrate.pl.1 \
