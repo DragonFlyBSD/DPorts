@@ -1,5 +1,5 @@
 # Created by: Scott Mace <smace@FreeBSD.org>
-# $FreeBSD: x11/xlockmore/Makefile 315000 2013-03-23 06:05:08Z jgh $
+# $FreeBSD: x11/xlockmore/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xlockmore
 PORTVERSION=	5.42
@@ -45,6 +45,7 @@ OPTIONS_RADIO_ONE=	PAM XLOCK_GROUP
 
 NO_OPTIONS_SORT=yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKERBEROS4}
