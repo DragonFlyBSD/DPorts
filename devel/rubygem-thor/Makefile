@@ -1,5 +1,4 @@
-# Whom:	Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-thor/Makefile 319729 2013-06-02 22:20:48Z swills $
+# $FreeBSD: devel/rubygem-thor/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	thor
 PORTVERSION=	0.18.1
@@ -14,4 +13,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/thor
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
