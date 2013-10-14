@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Util/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Module-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Util
 PORTVERSION=	1.09
@@ -16,4 +16,5 @@ USE_PERL5=	modbuild
 MAN1=	pm_which.1
 MAN3=	Module::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
