@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-JavaScript-Minifier-XS/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-JavaScript-Minifier-XS/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	JavaScript-Minifier-XS
 PORTVERSION=	0.09
@@ -19,7 +19,5 @@ TEST_DEPENDS=	p5-JavaScript-Minifier>=0:${PORTSDIR}/textproc/p5-JavaScript-Minif
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		JavaScript::Minifier::XS.3
 
 .include <bsd.port.mk>
