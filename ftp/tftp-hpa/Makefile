@@ -1,9 +1,4 @@
-# Ports collection makefile for:	tftp-hpa
-# Date created:				Tue Jan 14, 2003
-# Whom:					Brooks Davis <brooks@freebsd.org>
-#
-# $FreeBSD: ports/ftp/tftp-hpa/Makefile,v 1.13 2012/11/17 05:57:30 svnexp Exp $
-#
+# $FreeBSD: ftp/tftp-hpa/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	tftp-hpa
 PORTVERSION=	5.2
@@ -31,6 +26,7 @@ MAN1=		tftp.1
 MAN8=		in.tftpd.8
 MLINKS=		in.tftpd.8 tftpd.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,SBINDIR,LIBEXECDIR,; s,sbindir,libexecdir,' \
 	    ${WRKSRC}/MCONFIG.in
