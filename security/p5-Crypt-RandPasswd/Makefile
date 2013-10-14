@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-RandPasswd/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Crypt-RandPasswd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-RandPasswd
 PORTVERSION=	0.02
@@ -16,6 +16,7 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::RandPasswd.3
 
+NO_STAGE=	yes
 post-patch:
 
 	@${RM} ${WRKSRC}/lib/Crypt/RandPasswd.pm.orig
