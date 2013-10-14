@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: archivers/liborange/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: archivers/liborange/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	liborange
 PORTVERSION=	0.4
@@ -22,6 +22,7 @@ VISE_DESC=		Build with expermential VISE support
 MSI_DESC=		Build with expermential MSI support
 
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USES=	iconv pathfix pkgconfig
