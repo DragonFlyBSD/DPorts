@@ -1,4 +1,4 @@
-# $FreeBSD: math/rocs/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/rocs/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	rocs
 PORTVERSION=	${KDE4_VERSION}
@@ -21,4 +21,5 @@ USE_QT4=	gui qtestlib script scripttools webkit xml \
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
