@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-RSS-Parser/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-XML-RSS-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-RSS-Parser
 PORTVERSION=	4.0
@@ -26,4 +26,5 @@ MAN3=		XML::RSS::Parser.3 \
 		XML::RSS::Parser::Feed.3 \
 		XML::RSS::Parser::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
