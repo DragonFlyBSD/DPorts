@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: sysutils/runit/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: sysutils/runit/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	runit
 PORTVERSION=	2.1.1
@@ -27,6 +27,7 @@ DOCS=		package/CHANGES package/README \
 CONFIG=		etc/freebsd/1 etc/2 etc/freebsd/3 etc/freebsd/ctrlaltdel \
 	 	etc/freebsd/getty-ttyv4/run etc/freebsd/getty-ttyv4/finish
 
+NO_STAGE=	yes
 do-configure:
 	${ECHO_CMD} "${CC} ${CFLAGS}" > ${WRKSRC}/src/conf-cc
 
