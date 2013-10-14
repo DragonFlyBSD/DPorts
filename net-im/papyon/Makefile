@@ -1,9 +1,5 @@
-# New ports collection makefile for:	papyon
-# Date created:				August 1 2009
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/papyon/Makefile,v 1.20 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net-im/papyon/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	papyon
 PORTVERSION=	0.5.4
@@ -28,6 +24,7 @@ USE_GNOME=	pygobject
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800000
