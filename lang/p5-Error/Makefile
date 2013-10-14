@@ -1,5 +1,5 @@
 # Created by: Peter van Heusden <pvh@egenetics.com>
-# $FreeBSD: lang/p5-Error/Makefile 325477 2013-08-27 18:09:20Z sunpoet $
+# $FreeBSD: lang/p5-Error/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Error
 PORTVERSION=	0.17021
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Error.3 Error::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
