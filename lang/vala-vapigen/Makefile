@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: lang/vala-vapigen/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: lang/vala-vapigen/Makefile 327741 2013-09-20 19:53:09Z bapt $
 #   $MCom: ports/trunk/lang/vala-vapigen/Makefile 18374 2013-04-15 09:25:19Z kwm $
 
 PORTREVISION=	0
@@ -17,4 +17,5 @@ PLIST=		${.CURDIR}/pkg-plist
 
 VALA_SLAVE=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
