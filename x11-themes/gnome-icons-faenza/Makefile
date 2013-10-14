@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: ports/x11-themes/gnome-icons-faenza/Makefile,v 1.5 2013/01/03 18:47:04 svnexp Exp $
+# $FreeBSD: x11-themes/gnome-icons-faenza/Makefile 329625 2013-10-06 19:02:37Z pawel $
 
 PORTNAME=	faenza
 PORTVERSION=	1.3
@@ -22,23 +22,24 @@ THEMES=		Faenza Faenza-Dark Faenza-Darkest Faenza-Darker \
 		Faenza-Ambiance Faenza-Radiance
 FAENZA_LIGHT=	Faenza
 FAENZA_DARK=	Faenza-Dark
+INSTALLDIR=	${STAGEDIR}${PREFIX}/share/icons
 
 do-install:
+	@${MKDIR} ${INSTALLDIR}
 .for theme in ${THEMES}
-	@cd ${WRKDIR} && ${TAR} -xf ${theme}.tar.gz
+	@cd ${INSTALLDIR} && ${TAR} -xf ${WRKDIR}/${theme}.tar.gz
 
 .if ${FAENZA_LIGHT} == ${theme} || ${FAENZA_DARK} == ${theme}
-	@cd ${WRKDIR}/${theme}/places/scalable && \
+	@cd ${INSTALLDIR}/${theme}/places/scalable && \
 	${LN} -sf start-here-gnome.svg start-here.svg && \
 	${LN} -sf start-here-gnome-symbolic.svg start-here-symbolic.svg
 .for size in 22 24 32 48 64 96
-	@cd ${WRKDIR}/${theme}/places/${size} && \
+	@cd ${INSTALLDIR}/${theme}/places/${size} && \
 	${LN} -sf start-here-gnome.png start-here.png
 .endfor
 .endif
-
-	${CP} -R ${WRKDIR}/${theme} ${PREFIX}/share/icons
-	@cd ${PREFIX} && ${FIND} share/icons/${theme} ! -type d >> ${TMPPLIST} && \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} share/icons/${theme} ! \
+		-type d >> ${TMPPLIST} && \
 		${FIND} share/icons/${theme} -type d | ${SORT} -r | \
 		${SED} 's|^|@dirrm |' >> ${TMPPLIST}
 .endfor
