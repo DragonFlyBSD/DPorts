@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-mixlib-cli
-# Date created:				18 Mar 2010
-# Whom:					renchap@cocoa-x.com
-#
-# $FreeBSD: devel/rubygem-mixlib-cli/Makefile 323288 2013-07-19 13:20:19Z swills $
-#
+# Created by: renchap@cocoa-x.com
+# $FreeBSD: devel/rubygem-mixlib-cli/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	mixlib-cli
 PORTVERSION=	1.3.0
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
