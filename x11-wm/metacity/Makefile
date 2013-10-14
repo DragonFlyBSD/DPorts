@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: x11-wm/metacity/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-wm/metacity/Makefile 327786 2013-09-21 00:01:16Z bapt $
 #   $MCom: ports/x11-wm/metacity/Makefile,v 1.158 2010/09/30 07:04:02 kwm Exp $
 
 PORTNAME=	metacity
@@ -32,6 +32,7 @@ GCONF_SCHEMAS=	metacity.schemas
 MAN1=		metacity-message.1 metacity-theme-viewer.1 \
 		metacity-window-demo.1 metacity.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||g' \
 		${WRKSRC}/configure
