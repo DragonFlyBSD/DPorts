@@ -1,5 +1,5 @@
 # Created by: Thaddeus Covert <tcovert@grimmy.sahuagin.net>
-# $FreeBSD: devel/log4cxx/Makefile 322372 2013-07-06 09:04:54Z ohauer $
+# $FreeBSD: devel/log4cxx/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	log4cxx
 PORTVERSION=	0.10.0
@@ -18,6 +18,7 @@ LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr1
 
 OPTIONS_DEFINE=	BOOST DOCS DOXYGEN
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} && ${PORT_OPTIONS:MDOXYGEN}
