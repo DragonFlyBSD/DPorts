@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/devel/libexecinfo/Makefile,v 1.11 2013/02/05 15:52:09 svnexp Exp $
+# $FreeBSD: devel/libexecinfo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libexecinfo
 PORTVERSION=	1.1
@@ -18,6 +18,7 @@ MAKE_FLAGS=	LIBDIR=${PREFIX}/lib \
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
