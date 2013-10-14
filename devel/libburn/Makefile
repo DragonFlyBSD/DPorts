@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: ports/devel/libburn/Makefile,v 1.14 2013/02/14 10:22:09 svnexp Exp $
+# $FreeBSD: devel/libburn/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libburn
 PORTVERSION=	1.2.4
@@ -17,4 +17,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		cdrskin.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
