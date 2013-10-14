@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/docbook-xml-440/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: textproc/docbook-xml-440/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.4
@@ -42,6 +42,7 @@ ENT_FILES=	isoamsa.ent isoamsb.ent isoamsc.ent isoamsn.ent \
 		isonum.ent isopub.ent isotech.ent
 #DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}/${PORTVERSION}
 
+NO_STAGE=	yes
 pre-install:
 	@${RM} -f ${PLIST}
 .for F in ${ENT_FILES}
