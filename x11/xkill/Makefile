@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xkill/Makefile 326805 2013-09-09 12:14:24Z zeising $
+# $FreeBSD: x11/xkill/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xkill
 PORTVERSION=	1.0.4
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xkill
 
 MAN1=		xkill.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
