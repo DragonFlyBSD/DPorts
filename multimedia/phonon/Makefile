@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/phonon/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	phonon
 PORTVERSION=	4.6.0
@@ -30,6 +30,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	PULSEAUDIO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
