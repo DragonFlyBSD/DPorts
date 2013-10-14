@@ -1,5 +1,5 @@
 # Created by: adam
-# $FreeBSD: ports/news/cnews/Makefile,v 1.66 2013/01/27 13:25:26 svnexp Exp $
+# $FreeBSD: news/cnews/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	cnews
 PORTVERSION=	cr.g
@@ -34,7 +34,9 @@ COMMENT=	An news server
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
+
 MAKE_JOBS_UNSAFE=	yes
+NO_STAGE=	yes
 
 USE_GCC=	any
 
