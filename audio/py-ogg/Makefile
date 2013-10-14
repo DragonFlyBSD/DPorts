@@ -1,9 +1,5 @@
-# New ports collection makefile for: pyogg
-# Date created:		23 Sep 2002
-# Whom:			nbm
-#
-# $FreeBSD: audio/py-ogg/Makefile 301188 2012-07-19 20:15:37Z naddy $
-#
+# Created by: nbm
+# $FreeBSD: audio/py-ogg/Makefile 328530 2013-09-27 22:36:11Z mva $
 
 PORTNAME=	ogg
 PORTVERSION=	1.3
@@ -16,10 +12,11 @@ DISTNAME=	pyogg-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Object-oriented Python bindings for the ogg library
 
-LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
+LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg
 
-USE_PYTHON=		yes
+USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	pyogg
 
 do-configure:
