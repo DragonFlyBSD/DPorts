@@ -1,5 +1,5 @@
 # Created by: Joe Clarke
-# $FreeBSD: net/openslp/Makefile 319824 2013-06-04 06:34:05Z bapt $
+# $FreeBSD: net/openslp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	openslp
 PORTVERSION=	1.2.1
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	SLP_SECURITY ASYNC_API DOCS
 SLP_SECURITY_DESC=	Turn on SLPv2 security support
 ASYNC_API_DESC=		Enable asynchronous communication API
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSLP_SECURITY}
