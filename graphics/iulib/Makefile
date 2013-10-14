@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/iulib/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/iulib/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	iulib
 PORTVERSION=	0.4
@@ -28,6 +28,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSDL}
