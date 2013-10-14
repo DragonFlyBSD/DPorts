@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: lang/ats/Makefile 324708 2013-08-14 12:27:04Z marino $
+# $FreeBSD: lang/ats/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ats
 PORTVERSION=	${ATS_VER}
@@ -26,6 +26,7 @@ PORTEXAMPLES=	AUP INTRO KernighanRitchie MISC MULTICORE TEST
 OPTIONS_DEFINE=		GMP PCRE
 OPTIONS_DEFAULT=	GMP PCRE
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64
