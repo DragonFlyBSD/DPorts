@@ -1,8 +1,9 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/gtk-murrine-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-themes/gtk-murrine-engine/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	murrine
 PORTVERSION=	0.98.2
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 MASTER_SITES=	GNOME
 PKGNAMEPREFIX=	gtk-
@@ -11,18 +12,17 @@ PKGNAMESUFFIX=	-engine
 MAINTAINER=	pneumann@gmail.com
 COMMENT=	Murrine GTK+ 2.x cairo based engine
 
-LIB_DEPENDS=	pixman-1:${PORTSDIR}/x11/pixman
-
 USE_XZ=	yes
-USE_GMAKE=	yes
+USE_XORG=	pixman
 USE_GNOME=	gtk20 intltool intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES=	pkgconfig
+USES=		gmake pkgconfig
 
 OPTIONS_DEFINE=	ANIMATION
 ANIMATION_DESC=	Animation support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANIMATION} 
