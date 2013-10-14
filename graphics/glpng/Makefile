@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/glpng/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/glpng/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	glpng
 PORTVERSION=	1.45
@@ -23,6 +23,7 @@ AR?=		/usr/bin/ar
 
 WRKSRC=		${WRKDIR}/src
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} -fPIC -I${LOCALBASE}/include -I${WRKDIR}/include -c -o ${WRKSRC}/libglpng.o ${WRKSRC}/glpng.c
 	${CC} ${CFLAGS} -fPIC -L${LOCALBASE}/lib -shared -lGL -lpng -lz -lm -o ${WRKSRC}/libglpng.so.1 ${WRKSRC}/libglpng.o
