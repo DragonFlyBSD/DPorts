@@ -1,9 +1,9 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios-plugins/Makefile 323596 2013-07-24 13:32:38Z demon $
+# $FreeBSD: net-mgmt/nagios-plugins/Makefile 328283 2013-09-25 13:06:12Z demon $
 
 PORTNAME=	nagios-plugins
 PORTVERSION=	1.4.16
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/nagiosplug/nagiosplug/${PORTVERSION}
@@ -11,11 +11,9 @@ MASTER_SITES=	SF/nagiosplug/nagiosplug/${PORTVERSION}
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Plugins for Nagios
 
-USES=		charsetfix
+USES=		charsetfix gmake perl5
 CHARSETFIX_MAKEFILEIN=Makefile.am
 USE_SUBMAKE=	yes
-USE_GMAKE=	yes
-USE_PERL5=	yes
 USE_AUTOTOOLS=	libtool aclocal autoconf automake
 ACLOCAL_ARGS=	-I m4 -I gl/m4
 AUTOMAKE_ARGS=	--add-missing
@@ -45,6 +43,7 @@ NAGIOSCGIURL?=	${NAGIOSHTMURL}/cgi-bin
 NAGIOSPOLLIP?=	127.0.0.1
 NAGIOSPOLLIP6?=	::1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS=	--with-nagios-user=${NAGIOSUSER} \
