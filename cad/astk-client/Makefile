@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: cad/astk-client/Makefile 320674 2013-06-12 10:31:12Z miwi $
+# $FreeBSD: cad/astk-client/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	astk
 
@@ -9,4 +9,5 @@ MASTERDIR=	${.CURDIR}/../astk-serveur
 
 CLIENT_SEUL=	oui
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
