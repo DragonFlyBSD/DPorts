@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-YAML-Syck/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-YAML-Syck/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	YAML-Syck
 PORTVERSION=	1.27
@@ -16,4 +16,5 @@ CONFIGURE_ARGS+=	< /dev/null
 
 MAN3=		JSON::Syck.3 YAML::Syck.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
