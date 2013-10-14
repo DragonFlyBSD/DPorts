@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: math/wfmath/Makefile 326685 2013-09-07 20:43:45Z oliver $
+# $FreeBSD: math/wfmath/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	wfmath
 PORTVERSION=	1.0.1
@@ -15,4 +15,5 @@ USE_LDCONFIG=	yes
 USE_GCC=	yes
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
