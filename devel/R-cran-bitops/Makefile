@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-bitops/Makefile 325105 2013-08-21 10:42:59Z tota $
+# $FreeBSD: devel/R-cran-bitops/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	bitops
 DISTVERSION=	1.0-6
@@ -15,4 +15,5 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
