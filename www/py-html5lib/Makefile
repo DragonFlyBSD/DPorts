@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/py-html5lib/Makefile 325908 2013-09-01 19:18:44Z rm $
+# $FreeBSD: www/py-html5lib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	html5lib
 PORTVERSION=	0.95
@@ -16,4 +16,5 @@ LICENSE=	MIT
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
