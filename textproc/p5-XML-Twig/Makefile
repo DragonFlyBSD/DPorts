@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Twig/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Twig/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Twig
 PORTVERSION=	3.44
@@ -32,4 +32,5 @@ CONFIGURE_ARGS=	-y
 MAN1=		xml_grep.1 xml_merge.1 xml_pp.1 xml_spellcheck.1 xml_split.1
 MAN3=		XML::Twig.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
