@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: mail/metamail/Makefile 319197 2013-05-27 09:39:48Z bapt $
+# $FreeBSD: mail/metamail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	metamail
 PORTVERSION=	2.7
@@ -29,6 +29,7 @@ MAN1=		audiocompose.1 audiosend.1 extcompose.1 \
 		showpicture.1 splitmail.1
 MAN4=		mailcap.4
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
