@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: ports/textproc/py-chardet/Makefile,v 1.9 2012/11/17 06:02:17 svnexp Exp $
+# $FreeBSD: textproc/py-chardet/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	chardet
 PORTVERSION=	2.0.1
@@ -27,6 +27,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
