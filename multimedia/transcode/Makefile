@@ -1,9 +1,9 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
-# $FreeBSD: multimedia/transcode/Makefile 326448 2013-09-05 21:04:50Z bsam $
+# $FreeBSD: multimedia/transcode/Makefile 329667 2013-10-07 09:21:13Z koobs $
 
 PORTNAME=	transcode
 PORTVERSION=	1.1.7
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	multimedia
 MASTER_SITES=	http://cdn.bitbucket.org/france/transcode-tcforge/downloads/
 
@@ -44,6 +44,7 @@ LZO_DESC=	LZO compression support
 LIBA52_DESC=	a52 support (as default decoder)
 XML_DESC=	Libxml2 XML support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MX11}
