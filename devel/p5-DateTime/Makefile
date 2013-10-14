@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime
 PORTVERSION=	1.03
@@ -31,6 +31,7 @@ MAN3=		DateTime.3 DateTime::Duration.3 \
 		DateTime::LeapSecond.3
 PORTDOCS=	CREDITS Changes TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
