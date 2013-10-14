@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: ports/graphics/py-exiv2/Makefile,v 1.14 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/py-exiv2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	exiv2
 PORTVERSION=	0.3.2
@@ -25,6 +25,7 @@ SCONS_BUILDENV=	${SCONS_ENV} CXXFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 SCONS_ARGS+=	prefix=${PREFIX} use_env=1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|python_inc_path\]|python_inc_path,\
 	"${PREFIX}/include"\]|' -e 's|LIBS=libs|LIBS=libs,\
