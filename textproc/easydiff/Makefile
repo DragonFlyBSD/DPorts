@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/easydiff/Makefile,v 1.18 2012/11/17 06:01:55 svnexp Exp $
+# $FreeBSD: textproc/easydiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	easydiff
 PORTVERSION=	0.4.0
@@ -17,4 +17,5 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
