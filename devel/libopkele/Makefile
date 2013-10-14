@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: devel/libopkele/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/libopkele/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libopkele
 PORTVERSION=	2.0.4
@@ -29,6 +29,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 # This port needs OpenSSL 0.9.8b which is present in 7.0 and up
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .include "${PORTSDIR}/Mk/bsd.openssl.mk"
