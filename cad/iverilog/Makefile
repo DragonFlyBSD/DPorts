@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: cad/iverilog/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: cad/iverilog/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	iverilog
 PORTVERSION=	0.9.6
@@ -21,4 +21,5 @@ CONFIGURE_ARGS=	--disable-suffix
 
 MAN1=		iverilog-vpi.1 iverilog.1 vvp.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
