@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pam_helper
-# Date created:				09 August 2008
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pam_helper/Makefile,v 1.2 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: security/pam_helper/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	pam_helper
 PORTVERSION=	1.0
