@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Text-Emoticon/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-Text-Emoticon/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Emoticon
 PORTVERSION=	0.04
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Emoticon.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
