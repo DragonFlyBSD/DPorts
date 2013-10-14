@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-Test-Distribution/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/p5-Test-Distribution/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Distribution
 PORTVERSION=	2.00
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Test::Distribution.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
