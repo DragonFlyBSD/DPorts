@@ -1,9 +1,5 @@
-# New ports collection makefile for:	font-amsfonts
-# Date created:		June 13, 2011
-# Whom:			hrs
-#
-# $FreeBSD: ports/print/font-amsfonts/Makefile,v 1.3 2012/11/17 06:00:49 svnexp Exp $
-#
+# Created by: hrs
+# $FreeBSD: print/font-amsfonts/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	amsfonts
 PORTVERSION=	3.02
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 FONTSDIR=	share/fonts/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${FONTSDIR}
 	cd ${PREFIX}/${FONTSDIR} && ${TAR} -x -z -U --strip-components 1 -f \

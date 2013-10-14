@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/font-amsfonts/pkg-plist,v 1.2 2012/11/17 06:00:49 svnexp Exp $
+@comment $FreeBSD: print/font-amsfonts/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%FONTSDIR%%/doc/fonts/amsfonts/OFL-FAQ.txt
 %%FONTSDIR%%/doc/fonts/amsfonts/OFL.txt
 %%FONTSDIR%%/doc/fonts/amsfonts/00README
