@@ -1,4 +1,4 @@
-# $FreeBSD: net/hs-publicsuffixlist/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: net/hs-publicsuffixlist/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	publicsuffixlist
 PORTVERSION=	0.1
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	cereal data-default text>=0.11 utf8-string
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
