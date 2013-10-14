@@ -1,4 +1,4 @@
-# $FreeBSD: print/ghostscript9/Makefile 327519 2013-09-18 06:35:24Z hrs $
+# $FreeBSD: print/ghostscript9/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ghostscript
 PORTVERSION=	9.06
@@ -96,6 +96,7 @@ MLINKS=		gslp.1 gsbj.1 \
 
 EXCLUDE_DIRS=	freetype jbig2dec jpeg expat jasper lcms lcms2 libpng tiff zlib
 
+NO_STAGE=	yes
 .include "Makefile.drivers"
 .include <bsd.port.options.mk>
 
