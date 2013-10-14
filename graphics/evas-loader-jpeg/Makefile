@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-jpeg/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas-loader-jpeg/Makefile 330153 2013-10-12 17:42:53Z gblach $
 
 PORTNAME=	loader-jpeg
 PORTVERSION=	1.7.8
@@ -14,14 +14,13 @@ COMMENT=	A hardware accelerated canvas API (JPEG loader)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_EFL=	evas librt_hack libtool_hack
 USE_LDCONFIG=	yes
 
