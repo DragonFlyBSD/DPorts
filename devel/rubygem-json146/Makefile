@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Ruby replacement for json
-# Date created:		June 23, 2011
-# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/rubygem-json146/Makefile,v 1.6 2012/11/17 05:56:59 svnexp Exp $
-#
+# $FreeBSD: devel/rubygem-json146/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 ## XXX: Legacy for rubygem DM ports
 
@@ -23,4 +18,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/edit_json.rb bin/prettify_json.rb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
