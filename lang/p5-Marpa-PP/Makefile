@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: lang/p5-Marpa-PP/Makefile 325454 2013-08-27 14:59:15Z sunpoet $
+# $FreeBSD: lang/p5-Marpa-PP/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Marpa-PP
 PORTVERSION=	0.014
@@ -39,4 +39,5 @@ MAN3=		Marpa::PP.3 \
 		Marpa::PP::Tracing.3 \
 		Marpa::PP::Vocabulary.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
