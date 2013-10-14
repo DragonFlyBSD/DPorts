@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: ftp/wget/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/wget/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	wget
 DISTVERSION=	1.14
@@ -11,10 +11,9 @@ MASTER_SITE_SUBDIR=	wget
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	Retrieve files from the Net via HTTP(S) and FTP
 
-USES=		charsetfix
+USES=		charsetfix gmake perl5
 USE_XZ=		yes
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 
 OPTIONS_RADIO=	SSL
@@ -24,6 +23,7 @@ OPTIONS_DEFAULT=OPENSSL IDN
 
 PCRE_DESC=	Support Perl regular expressions in addition to POSIX
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
