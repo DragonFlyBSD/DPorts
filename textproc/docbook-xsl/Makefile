@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/docbook-xsl/Makefile 322575 2013-07-09 21:04:41Z gabor $
+# $FreeBSD: textproc/docbook-xsl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-xsl
 PORTVERSION=	1.76.1
@@ -62,6 +62,7 @@ DXVERSIONS=	1.36 1.37 1.38 1.39 1.40 1.41 1.42 1.43 1.44 1.45 1.46 1.47 \
 		1.64.1 1.65.0 1.65.1 1.66.0 1.66.1 1.67.0 1.67.2 1.68.0 \
 		1.68.1 1.69.0 1.69.1 1.70.0 1.70.1 1.71.0 1.71.1 current
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
