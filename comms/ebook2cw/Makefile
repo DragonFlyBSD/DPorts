@@ -1,5 +1,4 @@
-# $FreeBSD: ports/comms/ebook2cw/Makefile,v 1.10 2013/01/16 18:47:49 svnexp Exp $
-#
+# $FreeBSD: comms/ebook2cw/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	ebook2cw
 PORTVERSION=	0.8.2
@@ -16,6 +15,7 @@ LIB_DEPENDS=	mp3lame:${PORTSDIR}/audio/lame \
 
 MAN1=		ebook2cw.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|'g \
 	     ${WRKSRC}/Makefile
