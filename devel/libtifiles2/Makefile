@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libtifiles2/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/libtifiles2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libtifiles2
 PORTVERSION=	1.1.6
@@ -25,6 +25,7 @@ CONFIGURE_ENV=	ARCHIVE_CFLAGS=" " ARCHIVE_LIBS="-larchive"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
