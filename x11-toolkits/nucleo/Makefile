@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11-toolkits/nucleo/Makefile 326422 2013-09-05 17:37:22Z antoine $
+# $FreeBSD: x11-toolkits/nucleo/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	nucleo
 PORTVERSION=	0.7.6
@@ -32,6 +32,7 @@ FFMPEG_DESC=	FFmpeg plugin
 QT4_DESC=	Qt4 plugin
 GD_DESC=	GD plugin
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc" && ${OSVERSION} > 900000
