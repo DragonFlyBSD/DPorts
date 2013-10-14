@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@agava.com>
-# $FreeBSD: math/libqalculate/Makefile 319105 2013-05-26 12:36:34Z bapt $
+# $FreeBSD: math/libqalculate/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libqalculate
 PORTVERSION=	0.9.7
@@ -18,6 +18,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
