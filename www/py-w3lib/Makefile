@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-w3lib/Makefile 319874 2013-06-04 15:52:55Z rm $
+# $FreeBSD: www/py-w3lib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	w3lib
 PORTVERSION=	1.3
@@ -14,4 +14,5 @@ LICENSE=	BSD
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
