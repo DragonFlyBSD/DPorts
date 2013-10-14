@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: science/gtamsanalyzer/Makefile 321377 2013-06-20 13:06:02Z bsam $
+# $FreeBSD: science/gtamsanalyzer/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	gtamsanalyzer
 PORTVERSION=	0.42
@@ -20,6 +20,7 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/Source
 
+NO_STAGE=	yes
 post-patch:
 	${RM} "${WRKSRC}/obj"
 
