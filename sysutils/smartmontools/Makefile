@@ -1,5 +1,5 @@
 # Created by: Eduard Martinescu
-# $FreeBSD: sysutils/smartmontools/Makefile 323770 2013-07-27 03:39:55Z vanilla $
+# $FreeBSD: sysutils/smartmontools/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	smartmontools
 PORTVERSION=	6.2
@@ -27,6 +27,7 @@ MAN8=		smartd.8 smartctl.8
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
