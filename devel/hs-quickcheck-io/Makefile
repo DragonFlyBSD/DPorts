@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-quickcheck-io/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-quickcheck-io/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	quickcheck-io
 PORTVERSION=	0.1.0
@@ -11,5 +11,6 @@ LICENSE=	MIT
 
 USE_CABAL=	HUnit>=1.2.5 QuickCheck>=2.5.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
