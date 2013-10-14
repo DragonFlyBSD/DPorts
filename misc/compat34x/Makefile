@@ -14,6 +14,7 @@ COMMENT=	Convenience package to install the compat34x libraries
 USE_XZ=		yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+NO_STAGE=	yes
 TARGET_DIR=	${PREFIX}/lib/compat
 USE_LDCONFIG=	${TARGET_DIR}
 
