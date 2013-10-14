@@ -1,4 +1,4 @@
-# $FreeBSD: ports/archivers/freetar/Makefile,v 1.9 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/freetar/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	freetar
 PORTVERSION=	0.9
@@ -12,6 +12,7 @@ COMMENT=	TAR archiver for GNUstep
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 USE_GNUSTEP=	yes
 USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
