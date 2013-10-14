@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/botan/Makefile 321200 2013-06-18 16:07:39Z antoine $
+# $FreeBSD: security/botan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	botan
 PORTVERSION=	1.8.13
@@ -31,6 +31,7 @@ PLIST_FILES=	bin/botan-config lib/libbotan.a lib/libbotan.so lib/libbotan.so.0 l
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
