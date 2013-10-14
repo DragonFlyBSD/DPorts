@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: devel/astyle/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: devel/astyle/Makefile 329358 2013-10-04 18:51:10Z lme $
 
 PORTNAME=	astyle
 PORTVERSION=	2.03
@@ -14,7 +14,7 @@ ALL_TARGET=	astyle
 CFLAGS+=	-W -Wall -fno-rtti -fno-exceptions
 LDFLAGS+=	-s
 MAKE_ARGS+=	CFLAGS="${CFLAGS}"
-USE_GMAKE=	yes
+USES=		gmake
 USE_GCC=	yes
 
 WRKSRC=		${WRKDIR}/astyle/build/gcc
@@ -24,16 +24,9 @@ pre-patch:
 
 .include <bsd.port.options.mk>
 
-PLIST_FILES=	bin/astyle
-.if ${PORT_OPTIONS:MDOCS}
-PORTDOCS=	*
-.endif
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/astyle ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKDIR}/astyle/doc/*.html ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/astyle ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/astyle/doc/*.html ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
