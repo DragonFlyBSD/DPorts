@@ -1,5 +1,5 @@
 # Created by: Castor Fu
-# $FreeBSD: ports/devel/cscope/Makefile,v 1.38 2013/02/05 09:50:13 svnexp Exp $
+# $FreeBSD: devel/cscope/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cscope
 PORTVERSION=	15.8a
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 EMACSLISPDIR=	${PREFIX}/share/emacs/site-lisp
 XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXCSCOPE}
