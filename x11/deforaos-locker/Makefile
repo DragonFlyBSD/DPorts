@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-locker/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/deforaos-locker/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	locker
 PORTVERSION=	0.2.1
@@ -27,4 +27,5 @@ MAKE_ENV+=	MANDIR=${MANPREFIX}/man
 
 MAN1=		locker.1 lockerctl.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
