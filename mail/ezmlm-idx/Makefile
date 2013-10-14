@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: mail/ezmlm-idx/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/ezmlm-idx/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ezmlm-idx
 PORTVERSION=	7.1.1
@@ -29,6 +29,7 @@ MYSQL_DESC=		Build the MySQL extension
 PGSQL_DESC=		Build the PostgreSQL extension
 SQLITE_DESC=		Build the SQLite3 extension
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 ALL_TARGET=	it
