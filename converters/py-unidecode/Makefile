@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: converters/py-unidecode/Makefile 319761 2013-06-03 08:21:04Z culot $
+# $FreeBSD: converters/py-unidecode/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	unidecode
 PORTVERSION=	0.04.13
@@ -17,6 +17,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Unidecode
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
