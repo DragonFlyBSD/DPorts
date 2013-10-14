@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-x11/Makefile 326046 2013-09-02 18:05:49Z antoine $
+# $FreeBSD: graphics/evas-engine-x11/Makefile 329593 2013-10-06 15:25:58Z gblach $
 
 PORTNAME=	engine-x11
 PORTVERSION=	1.7.8
@@ -14,7 +14,7 @@ COMMENT=	A hardware accelerated canvas API (X11 engine)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
@@ -37,6 +37,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/evas-software-x11.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
