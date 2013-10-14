@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: ports/lang/bsh/Makefile,v 1.27 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: lang/bsh/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	bsh
 PORTVERSION=	2.0.b4
@@ -23,6 +23,7 @@ SUB_LIST=	JARNAME=${PORTNAME}.jar
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar \
 		bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DISTFILES} ${JAVAJARDIR}/${PORTNAME}.jar
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
