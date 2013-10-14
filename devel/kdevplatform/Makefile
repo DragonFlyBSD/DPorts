@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevplatform/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/kdevplatform/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdevplatform
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -26,6 +26,7 @@ USE_LDCONFIG=	yes
 PLIST_SUB+=	SHLIB_VER=7.0.0 \
 		SHLIB_SHVER=7
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
