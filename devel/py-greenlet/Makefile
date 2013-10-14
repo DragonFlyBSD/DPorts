@@ -1,5 +1,5 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: devel/py-greenlet/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: devel/py-greenlet/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	greenlet
 PORTVERSION=	0.4.1
@@ -17,4 +17,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
