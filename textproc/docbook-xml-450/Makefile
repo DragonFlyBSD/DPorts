@@ -1,8 +1,5 @@
-# New ports collection makefile for:	docbook-xml-450
-# Date created:				2006-10-31
-# Whom:					alepulver
-#
-# $FreeBSD: ports/textproc/docbook-xml-450/Makefile,v 1.3 2012/11/17 06:01:54 svnexp Exp $
+# Created by: alepulver
+# $FreeBSD: textproc/docbook-xml-450/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.5
@@ -43,6 +40,7 @@ ENT_FILES=	isoamsa.ent isoamsb.ent isoamsc.ent isoamsn.ent \
 		isogrk3.ent isogrk4.ent isolat1.ent isolat2.ent \
 		isonum.ent isopub.ent isotech.ent
 
+NO_STAGE=	yes
 pre-install:
 	@${RM} -f ${PLIST}
 .for F in ${ENT_FILES}
