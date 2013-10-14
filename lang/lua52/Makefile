@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: lang/lua52/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/lua52/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	lua
 PORTVERSION=	5.2.2
@@ -36,6 +36,7 @@ MAN1=		lua-${LUA_VER}.1 luac-${LUA_VER}.1
 DOCSDIR=	${PREFIX}/share/doc/${LUA_SUBDIR}
 LATEST_LINK=	${LUA_SUBDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "powerpc"
