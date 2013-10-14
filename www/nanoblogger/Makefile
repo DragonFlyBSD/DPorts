@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	nanoblogger
-# Date created:			Jul 15, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/nanoblogger/Makefile,v 1.17 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/nanoblogger/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	nanoblogger
 PORTVERSION=	3.4.2
@@ -21,6 +16,7 @@ NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX},g" ${WRKSRC}/nb
 	@${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE},g" ${WRKSRC}/nb
