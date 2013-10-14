@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/cl-asdf/bsd.cl-asdf.mk,v 1.8 2012/11/17 05:55:37 svnexp Exp $
+# $FreeBSD: devel/cl-asdf/bsd.cl-asdf.mk 300896 2012-07-14 13:54:48Z beat $
 #
 # bsd.cl-asdf.mk - Common Lisp related macros
 #

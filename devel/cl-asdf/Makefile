@@ -1,6 +1,7 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: ports/devel/cl-asdf/Makefile,v 1.20 2013/02/18 14:39:08 svnexp Exp $
+# $FreeBSD: devel/cl-asdf/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
+NO_STAGE=	yes
 # The source tarball was obtained from the project's GIT repository:
 # wget -O asdf-2.017.tar.gz "http://common-lisp.net/gitweb?p=projects/asdf/asdf.git;a=snapshot;h=db16d0cc1a15697f831bcacc9429cc578304b6cb;sf=tgz"
 
