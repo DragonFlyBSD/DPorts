@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/py-gtkglext/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/py-gtkglext/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtkglext
 PORTVERSION=	1.1.0
@@ -23,4 +23,5 @@ USE_GNOME=	pygtk2
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
