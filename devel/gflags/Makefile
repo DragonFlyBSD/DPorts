@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/gflags/Makefile 325305 2013-08-24 18:30:36Z sunpoet $
+# $FreeBSD: devel/gflags/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gflags
 PORTVERSION=	2.0
@@ -21,6 +21,7 @@ USES=		pathfix
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README README_windows.txt \
 		designstyle.css gflags.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
