@@ -1,5 +1,5 @@
 # Created by: Eric Anholt
-# $FreeBSD: devel/git/Makefile 327376 2013-09-16 10:28:33Z az $
+# $FreeBSD: devel/git/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	git
 PORTVERSION=	1.8.4
@@ -200,7 +200,7 @@ CONFIGURE_ARGS=	--enable-pthreads=-pthread
 
 OPTIONS_DEFINE=	GUI SVN GITWEB CONTRIB P4 CVS HTMLDOCS PERL ICONV CURL \
 		ETCSHELLS NLS
-OPTIONS_DEFAULT=	CONTRIB CVS PERL ICONV CURL ETCSHELLS NLS
+OPTIONS_DEFAULT=	CONTRIB P4 CVS PERL ICONV CURL ETCSHELLS NLS
 
 GITWEB_DESC=	Install gitweb
 CONTRIB_DESC=	Install contributed scripts
@@ -209,6 +209,7 @@ CVS_DESC=	Enable CVS support
 HTMLDOCS_DESC=	Install additional documentation
 ETCSHELLS_DESC=	Modify /etc/shells
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
