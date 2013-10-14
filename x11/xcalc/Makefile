@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xcalc/Makefile,v 1.8 2013/02/04 01:44:37 svnexp Exp $
+# $FreeBSD: x11/xcalc/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcalc
 PORTVERSION=	1.0.5
@@ -17,4 +17,5 @@ USE_XORG=	xt xaw
 
 MAN1=		xcalc.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
