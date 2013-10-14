@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: irc/py-irc/Makefile 324902 2013-08-18 12:48:03Z wg $
+# $FreeBSD: irc/py-irc/Makefile 329163 2013-10-03 09:05:53Z rm $
 
 PORTNAME=	irc
-PORTVERSION=	8.5.1
+PORTVERSION=	8.5.3
 CATEGORIES=	irc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,10 +24,11 @@ PORTEXAMPLES=	irccat.py irccat2.py servermap.py testbot.py \
 		dccreceive.py dccsend.py
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
+
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} < 270
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib>0:${PORTSDIR}/devel/py-importlib
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}argparse>0:${PORTSDIR}/devel/py-argparse
 .endif
 
