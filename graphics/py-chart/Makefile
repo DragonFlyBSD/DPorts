@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	PyChart
-# Date created:			Aug 4, 2002
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/graphics/py-chart/Makefile,v 1.19 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/py-chart/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	chart
 PORTVERSION=	1.39
@@ -23,4 +18,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyChart
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
