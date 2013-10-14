@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Devel-CheckOS/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-Devel-CheckOS/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-CheckOS
 PORTVERSION=	1.71
@@ -82,4 +82,5 @@ MAN3=		Devel::AssertOS.3 \
 		Devel::CheckOS.3 \
 		Devel::CheckOS::Families.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
