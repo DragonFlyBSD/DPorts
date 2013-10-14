@@ -1,5 +1,5 @@
 # Created by: Eugene Ossintsev
-# $FreeBSD: lang/ocaml-nox11/Makefile 324560 2013-08-10 23:05:33Z marino $
+# $FreeBSD: lang/ocaml-nox11/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ocaml-nox11
 CATEGORIES=	lang
@@ -15,4 +15,5 @@ OPTIONS_EXCLUDE=TK X11
 
 SFX=		-nox11
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
