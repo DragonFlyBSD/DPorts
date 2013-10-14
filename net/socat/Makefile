@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/socat/Makefile 324242 2013-08-04 15:57:40Z ehaupt $
+# $FreeBSD: net/socat/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	socat
 PORTVERSION=	1.7.2.2
@@ -26,6 +26,7 @@ PORTDOCS=	EXAMPLES README SECURITY FAQ
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(WITH_OPENSSL_PORT)
