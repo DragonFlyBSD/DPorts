@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: editors/vim-lite/Makefile 315730 2013-04-05 08:23:44Z bapt $
+# $FreeBSD: editors/vim-lite/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 LITE=		yes
 
@@ -10,4 +10,5 @@ COMMENT?=	Vi "workalike", with many additional features (Lite package)
 
 PORTREVISION=	2
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
