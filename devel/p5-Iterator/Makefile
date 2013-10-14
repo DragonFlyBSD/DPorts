@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Iterator/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Iterator/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Iterator
 PORTVERSION=	0.03
@@ -19,4 +19,5 @@ MAN3=	Iterator.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
