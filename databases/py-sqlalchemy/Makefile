@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: databases/py-sqlalchemy/Makefile 323064 2013-07-15 16:31:20Z nivit $
+# $FreeBSD: databases/py-sqlalchemy/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.7.10
@@ -47,6 +47,7 @@ SYBASE_DESC=	Sybase backend
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
