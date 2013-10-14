@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: lang/php53/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/php53/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	php53
 PORTVERSION=	5.3.27
@@ -53,6 +53,7 @@ CONFLICTS=	php52-5* php5-5*
 
 MAN1=		php-config.1 phpize.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PATCH_DIST_STRIP=	-p1
