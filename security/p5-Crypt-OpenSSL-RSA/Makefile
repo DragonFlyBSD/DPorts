@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: security/p5-Crypt-OpenSSL-RSA/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-OpenSSL-RSA/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-OpenSSL-RSA
 PORTVERSION=	0.28
@@ -25,4 +25,5 @@ MAN3=		Crypt::OpenSSL::RSA.3
 regression-test: build
 	cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
