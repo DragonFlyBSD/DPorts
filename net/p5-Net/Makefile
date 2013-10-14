@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: net/p5-Net/Makefile 325181 2013-08-22 11:09:32Z mat $
+# $FreeBSD: net/p5-Net/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net
 PORTVERSION=	1.23
@@ -34,4 +34,5 @@ MAN3=		Net::Cmd.3 \
 		Net::Time.3 \
 		Net::libnetFAQ.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
