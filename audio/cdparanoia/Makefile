@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: audio/cdparanoia/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/cdparanoia/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cdparanoia
 PORTVERSION=	3.9.8
@@ -13,6 +13,7 @@ MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	A CDDA extraction tool (also known as ripper)
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 USES=		gmake
 USE_LDCONFIG=	yes
 
