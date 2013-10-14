@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  mp (letter)
-# Date created:			  11 July 1996
-# Whom:				  David O'Brien <obrien@cs.ucdavis.edu>
-#
-# $FreeBSD: ports/print/mp-letter/Makefile,v 1.26 2012/11/17 06:00:52 svnexp Exp $
-#
+# Created by: David O'Brien <obrien@cs.ucdavis.edu>
+# $FreeBSD: print/mp-letter/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	mp-${PAPERSIZE}
 PORTVERSION=	3.0.1
@@ -29,6 +24,7 @@ PAPERSIZE?=	letter
 INSTALL_TARGET=	install-a4
 .endif
 
+NO_STAGE=	yes
 pre-patch:
 	@${CP} ${WRKSRC}/Makefile.dist ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's/<iostream\.h>/<iostream>using namespace std;/' \
