@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: security/p11-kit/Makefile 319716 2013-06-02 19:06:44Z bapt $
+# $FreeBSD: security/p11-kit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	p11-kit
 PORTVERSION=	0.16.3
@@ -24,6 +24,7 @@ USE_GNOME=	ltverhack gnomehack
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e \
 	's|exampledir = $$(p11_system_config)|exampledir = ${EXAMPLESDIR}|' \
