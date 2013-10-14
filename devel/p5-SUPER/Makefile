@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-SUPER/Makefile 325897 2013-09-01 18:14:40Z az $
+# $FreeBSD: devel/p5-SUPER/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SUPER
 PORTVERSION=	1.17
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=	SUPER.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
