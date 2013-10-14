@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cons
-# Date created:		11 December 1998
-# Whom:			rv@gnu.org
-#
-# $FreeBSD: devel/cons/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: rv@gnu.org
+# $FreeBSD: devel/cons/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cons
 PORTVERSION=	2.2.0
@@ -18,7 +14,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rv@gnu.org
 COMMENT=	A Perl-based Make Replacement
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 PLIST_SUB=	CONS_VER=${PORTVERSION}
 
@@ -28,6 +24,7 @@ DOCS=		CHANGES COPYING COPYRIGHT INSTALL MANIFEST README RELEASE \
 		cons.html TODO
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
