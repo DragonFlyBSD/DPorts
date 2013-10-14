@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/camerakit/Makefile,v 1.11 2012/11/17 05:58:01 svnexp Exp $
+# $FreeBSD: graphics/camerakit/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	camerakit
 PORTVERSION=	0.0.1
@@ -21,4 +21,5 @@ USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
 WRKSRC=		${WRKDIR}/CameraKit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
