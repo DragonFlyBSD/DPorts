@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/p5-AppConfig-Std/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-AppConfig-Std/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AppConfig-Std
 PORTVERSION=	1.08
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		AppConfig::Std.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
