@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Curses-UI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Curses-UI/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Curses-UI
 PORTVERSION=	0.9609
@@ -37,4 +37,5 @@ MAN3=		Curses::UI::Color.3 Curses::UI::Label.3 \
 		Curses::UI::Tutorial.3 Curses::UI::Calendar.3 \
 		Curses::UI::Notebook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
