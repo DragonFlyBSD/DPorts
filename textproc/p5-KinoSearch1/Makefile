@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-KinoSearch1/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-KinoSearch1/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	KinoSearch1
 PORTVERSION=	1.01
@@ -55,4 +55,5 @@ MAN3=	KinoSearch1.3 \
 	KinoSearch1::Store::InvIndex.3 \
 	KinoSearch1::Store::RAMInvIndex.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
