@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-git
-# Date created:				2008-11-09
-# Whom:					Daniel Roethlisberger <daniel@roe.ch>
-#
-# $FreeBSD: ports/devel/rubygem-git/Makefile,v 1.11 2012/11/17 05:56:59 svnexp Exp $
+# Created by: Daniel Roethlisberger <daniel@roe.ch>
+# $FreeBSD: devel/rubygem-git/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	git
 PORTVERSION=	1.2.5
@@ -18,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
