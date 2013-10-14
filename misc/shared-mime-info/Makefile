@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: misc/shared-mime-info/Makefile 317462 2013-05-06 06:05:56Z kwm $
+# $FreeBSD: misc/shared-mime-info/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/trunk/misc/shared-mime-info/Makefile 18394 2013-04-26 21:29:28Z kwm $
 
 PORTNAME=	shared-mime-info
@@ -30,6 +30,7 @@ MIMEDIRS=	${LOCALBASE}/share/mime \
 MIMESUBDIRS=	application audio image inode message model multipart \
 		packages text video x-epoc x-content
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/update-mime-database.c
