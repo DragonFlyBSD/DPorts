@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	rubygem-builder
-# Date created:			Jan 7, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/rubygem-builder/Makefile,v 1.13 2013/01/09 04:43:42 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/rubygem-builder/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	builder
 PORTVERSION=	3.0.4
@@ -18,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
