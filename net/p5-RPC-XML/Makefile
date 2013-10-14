@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: net/p5-RPC-XML/Makefile 327253 2013-09-14 09:03:34Z sunpoet $
+# $FreeBSD: net/p5-RPC-XML/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	RPC-XML
 PORTVERSION=	0.77
@@ -30,4 +30,5 @@ MAN3=		Apache::RPC::Server.3 \
 		RPC::XML::Procedure.3 \
 		RPC::XML::Server.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
