@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ripe-whois
-# Date created:		18th February 2004
-# Whom:			Lars Erik Gullerud <lerik@nolink.net>
-#
-# $FreeBSD: net/ripe-whois/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Lars Erik Gullerud <lerik@nolink.net>
+# $FreeBSD: net/ripe-whois/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ripe-whois
 PORTVERSION=	3.2.2
@@ -22,6 +18,7 @@ GNU_CONFIGURE=	yes
 MAN1=		whois3.1
 PLIST_FILES=	bin/whois3
 
+NO_STAGE=	yes
 post-patch::
 	${REINPLACE_CMD} -E \
 		-e '/^bin_PROGRAMS =/ s/whois\$$\(EXEEXT\)/whois3$$(EXEEXT)/' \
