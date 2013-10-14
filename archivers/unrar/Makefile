@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: archivers/unrar/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: archivers/unrar/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	unrar
 PORTVERSION=	4.20
@@ -19,6 +19,7 @@ OPENSSL_AES_DESC=	Use OpenSSL implementation of AES
 
 CONFLICTS?=	zh-unrar-[0-9].* unrar-iconv-[0-9].*
 
+NO_STAGE=	yes
 MAKE_ARGS=	STRIP=${STRIP_CMD}
 MAKEFILE=	makefile.unix
 USES+=		gmake
