@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/google-gdata/files/patch-.._zlib-1.2.3_configure,v 1.2 2012/11/17 05:55:46 svnexp Exp $
+$FreeBSD: devel/google-gdata/files/patch-.._zlib-1.2.3_configure 300896 2012-07-14 13:54:48Z beat $
 
 --- ../zlib-1.2.3/configure.orig
 +++ ../zlib-1.2.3/configure

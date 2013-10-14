@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/google-gdata/files/patch-misc_gdata-sharp-core.pc.in,v 1.2 2012/11/17 05:55:46 svnexp Exp $
+$FreeBSD: devel/google-gdata/files/patch-misc_gdata-sharp-core.pc.in 300896 2012-07-14 13:54:48Z beat $
 
 --- misc/gdata-sharp-core.pc.in.orig
 +++ misc/gdata-sharp-core.pc.in

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/google-gdata/pkg-plist,v 1.3 2012/11/17 05:55:46 svnexp Exp $
+@comment $FreeBSD: devel/google-gdata/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/mono/GData-Sharp/Google.GData.AccessControl.dll
 lib/mono/GData-Sharp/Google.GData.Apps.dll
 lib/mono/GData-Sharp/Google.GData.Blogger.dll
