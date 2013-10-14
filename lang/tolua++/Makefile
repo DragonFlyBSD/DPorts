@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: lang/tolua++/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: lang/tolua++/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	tolua++
 PORTVERSION=	1.0.93
@@ -18,6 +18,7 @@ SCONS_ARGS=	prefix=${PREFIX} SONAME="libtolua++-${LUA_VER}.so"
 CFLAGS+=	-I${LUA_INCDIR}
 LDFLAGS+=	-L${LUA_LIBDIR}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|'lualib',||" ${WRKSRC}/config_posix.py
 
