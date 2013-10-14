@@ -1,9 +1,5 @@
-# New ports collection makefile for:	utidy
-# Date created:				Wed Aug 29 21:37:35 CEST 2007
-# Whom:					Stefan Esser <se@FreeBSD.org>
-#
-# $FreeBSD: www/py-utidy/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Stefan Esser <se@FreeBSD.org>
+# $FreeBSD: www/py-utidy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	utidy
 PORTVERSION=	0.2
@@ -25,4 +21,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	uTidylib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
