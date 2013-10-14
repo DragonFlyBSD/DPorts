@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libwpg/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: graphics/libwpg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libwpg
 PORTVERSION=	0.2.2
@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	--disable-werror
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
