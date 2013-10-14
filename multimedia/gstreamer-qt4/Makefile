@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-qt4/Makefile 326180 2013-09-03 17:10:36Z antoine $
+# $FreeBSD: multimedia/gstreamer-qt4/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.2
@@ -33,6 +33,7 @@ GST_VERSION=${PORTVERSION:C/..$//}
 CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH:STRING="${LOCALBASE}/include"
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's|$${LIB_INSTALL_DIR}/pkgconfig|libdata/pkgconfig|' \
 		${WRKSRC}/src/CMakeLists.txt
