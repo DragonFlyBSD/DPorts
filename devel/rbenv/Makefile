@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rbenv/Makefile 324606 2013-08-11 22:00:09Z jgh $
+# $FreeBSD: devel/rbenv/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rbenv
 PORTVERSION=	0.4.0
@@ -26,6 +26,7 @@ NO_BUILD=	yes
 
 REINPLACE_ARGS=	-i ''
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|\$$root/completions|${DATADIR}/completions|g" ${WRKSRC}/libexec/rbenv-init
 
