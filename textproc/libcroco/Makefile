@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/libcroco/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: textproc/libcroco/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libcroco
 PORTVERSION=	0.6.8
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--disable-gtk-doc-html
 
 PLIST_SUB=	VERSION="0.6"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900035
