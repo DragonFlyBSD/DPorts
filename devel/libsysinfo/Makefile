@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: devel/libsysinfo/Makefile 320480 2013-06-10 14:35:01Z wg $
+# $FreeBSD: devel/libsysinfo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libsysinfo
 PORTVERSION=	0.0.2
@@ -25,4 +25,5 @@ PLIST_DIRSTRY=	include/sys
 
 MAN3=		sysinfo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
