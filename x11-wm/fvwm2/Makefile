@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: x11-wm/fvwm2/Makefile 327182 2013-09-13 19:39:38Z bsam $
+# $FreeBSD: x11-wm/fvwm2/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	fvwm
 PORTVERSION=	2.6.5
@@ -37,6 +37,7 @@ BIDI_DESC=		Asian bi-directional text support
 IMLIB_DESC=		imlib library (requires gtk12)
 GNOME1_DESC=		GNOME 1 desktop support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONS}
