@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: devel/libeio/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: devel/libeio/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libeio
 PORTVERSION=	4.18.0
@@ -23,4 +23,5 @@ AUTOMAKE_ARGS=	--add-missing
 PLIST_FILES=	include/eio.h lib/libeio.a lib/libeio.la \
 		lib/libeio.so lib/libeio.so.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
