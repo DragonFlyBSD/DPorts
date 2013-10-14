@@ -1,5 +1,5 @@
 # Created by: Bernd Rosauer <br@netland.inka.de>
-# $FreeBSD: print/teTeX-base/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: print/teTeX-base/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	teTeX-base
 PORTVERSION=	3.0
@@ -104,6 +104,7 @@ MLINKS=	dvilj.1 dvilj2p.1 \
 
 INFO=	kpathsea latex web2c
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PLIST_SUB?=
