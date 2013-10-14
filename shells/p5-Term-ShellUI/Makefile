@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: shells/p5-Term-ShellUI/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: shells/p5-Term-ShellUI/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	Term-ShellUI
 PORTVERSION=	0.92
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 MAN3=		Term::ShellUI.3 \
 		Text::Shellwords::Cursor.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	${MKDIR} ${EXAMPLESDIR}/
