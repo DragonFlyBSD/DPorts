@@ -1,5 +1,5 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: devel/bzrtools/Makefile 316837 2013-04-29 18:47:57Z jgh $
+# $FreeBSD: devel/bzrtools/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bzrtools
 PORTVERSION=	2.5
@@ -23,6 +23,7 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	2.5.0
 PYDISTUTILS_PKGNAME=	BzrTools
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGRAPHVIZ}
