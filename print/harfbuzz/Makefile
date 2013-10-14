@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: print/harfbuzz/Makefile 323778 2013-07-27 10:49:39Z kwm $
+# $FreeBSD: print/harfbuzz/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	harfbuzz
 PORTVERSION=	0.9.19
@@ -20,6 +20,7 @@ USE_GNOME=	cairo glib20 ltverhack
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-graphite2
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 1000024
