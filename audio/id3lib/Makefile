@@ -1,9 +1,5 @@
-# New ports collection makefile for:	id3lib
-# Date Created:				26 Oct 2000
-# Whom:					Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: audio/id3lib/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: audio/id3lib/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	id3lib
 PORTVERSION=	3.8.3
