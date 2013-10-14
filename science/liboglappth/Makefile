@@ -1,8 +1,5 @@
-# New ports collection makefile for: liboglappth
-# Date created:			2008/8/21
-# Whom:				Nakata Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: science/liboglappth/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# Created by: Nakata Maho <maho@FreeBSD.org>
+# $FreeBSD: science/liboglappth/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	liboglappth
 PORTVERSION=	1.0.0
@@ -23,4 +20,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 CXXFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
