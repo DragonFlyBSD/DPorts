@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jtopen
-# Date created:		2008-06-13
-# Whom:			Marcin Cieslak <saper@SYSTEM.PL>
-#
-# $FreeBSD: ports/sysutils/jtopen/Makefile,v 1.5 2012/11/17 06:01:35 svnexp Exp $
-#
+# Created by: Marcin Cieslak <saper@SYSTEM.PL>
+# $FreeBSD: sysutils/jtopen/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	jtopen
 PORTVERSION=	6.2
@@ -24,6 +20,7 @@ JAR_FILES=	composer.jar jt400.jar jt400Proxy.jar jt400Servlet.jar jui400.jar \
 		outputwriters.jar reportwriter.jar tes.jar uitools.jar util400.jar
 DOC_FILES=	changes.html license.html readme.html
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:

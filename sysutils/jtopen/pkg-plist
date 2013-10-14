@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/sysutils/jtopen/pkg-plist,v 1.2 2012/11/17 06:01:35 svnexp Exp $
+@comment $FreeBSD: sysutils/jtopen/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%JAVAJARDIR%%/composer.jar
 %%JAVAJARDIR%%/jt400.jar
 %%JAVAJARDIR%%/jt400Proxy.jar
