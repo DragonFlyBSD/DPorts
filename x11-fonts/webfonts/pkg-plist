@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11-fonts/webfonts/pkg-plist,v 1.10 2012/11/17 06:03:29 svnexp Exp $
+@comment $FreeBSD: x11-fonts/webfonts/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DOCSDIR%%/LICENSE
 %%FONTSDIR%%/andalemo.ttf
 %%FONTSDIR%%/arial.ttf
