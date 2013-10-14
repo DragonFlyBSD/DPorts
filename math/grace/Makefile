@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.de>
-# $FreeBSD: math/grace/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/grace/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	grace
 PORTVERSION=	5.1.23
@@ -40,6 +40,7 @@ MAN1=		convcal.1 grace.1 grconvert.1
 MLINKS=		grace.1 gracebat.1 \
 		grace.1 xmgrace.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFFTW}
