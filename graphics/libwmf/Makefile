@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: graphics/libwmf/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/libwmf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libwmf
 PORTVERSION=	0.2.8.4
@@ -30,6 +30,7 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=	X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
