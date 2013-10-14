@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/mail/pear-MIME_Type/Makefile,v 1.13 2012/12/17 02:18:01 svnexp Exp $
+# $FreeBSD: mail/pear-MIME_Type/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	MIME_Type
 PORTVERSION=	1.3.1
@@ -17,6 +17,7 @@ PEAR_SYSTEM_COMMAND_DESC=	PEAR::System_Command support
 
 PEAR_AUTOINSTALL=yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_SYSTEM_COMMAND}
