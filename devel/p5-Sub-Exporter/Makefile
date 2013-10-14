@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Sub-Exporter/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sub-Exporter
 PORTVERSION=	0.986
@@ -26,6 +26,7 @@ MAN3=		Sub::Exporter.3 \
 		Sub::Exporter::Tutorial.3 \
 		Sub::Exporter::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
