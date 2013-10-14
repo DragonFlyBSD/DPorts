@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	pcre++
-# Date created:			Jan 12, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/pcre++/Makefile,v 1.36 2012/12/10 19:24:00 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/pcre++/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pcre++
 PORTVERSION=	0.9.5
@@ -31,6 +26,7 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 
 DOCSDIR=	${PREFIX}/share/doc/lib${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O -g|\@CXXFLAGS\@|g' ${WRKSRC}/Makefile.in
 
