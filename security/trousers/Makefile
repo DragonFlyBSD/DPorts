@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/trousers/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: security/trousers/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	trousers
 PORTVERSION=	0.3.10
@@ -33,6 +33,7 @@ GROUPS=		_tss
 OPTIONS_DEFINE=	EMULATOR DEBUG
 EMULATOR_DESC=	Build for use with the tpm-emulator
 
+NO_STAGE=	yes
 .include "Makefile.man"
 .include <bsd.port.options.mk>
 
