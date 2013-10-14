@@ -1,9 +1,5 @@
-# New ports collection makefile for:	opencsg
-# Date created:				17 August 2011
-# Whom:					Michael Reifenberger <mr@freebsd.org>
-#
-# $FreeBSD: ports/graphics/opencsg/Makefile,v 1.6 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: Michael Reifenberger <mr@FreeBSD.org>
+# $FreeBSD: graphics/opencsg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	opencsg
 PORTVERSION=	1.3.2
@@ -22,6 +18,7 @@ USE_QT4=  qmake_build corelib gui
 PLIST_SUB=      PORTVERSION=${PORTVERSION}
 #MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ${QMAKE} src.pro
 
