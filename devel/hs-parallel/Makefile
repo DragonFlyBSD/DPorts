@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-parallel/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-parallel/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	parallel
 PORTVERSION=	3.2.0.3
@@ -10,5 +10,6 @@ COMMENT=	Parallel programming library
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
