@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXxf86vm/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXxf86vm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXxf86vm
 PORTVERSION=	1.1.3
@@ -36,4 +36,5 @@ MAN3=		XF86VM.3 \
 		XF86VidModeGetViewPort.3 \
 		XF86VidModeValidateModeLine.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
