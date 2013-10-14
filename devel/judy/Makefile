@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/judy/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: devel/judy/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	Judy
 PORTVERSION=	1.0.5
@@ -60,6 +60,7 @@ PLIST_SUB=	SHLIB_MAJOR="${SHLIB_MAJOR}"
 
 LIST_DOCS=	COPYRIGHT README *.htm
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
