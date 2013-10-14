@@ -1,9 +1,5 @@
-# Ports collection makefile for:	Net::OAuth::Simple
-# Date created:			Apr 1, 2009
-# Whom:				skreuzer
-#
-# $FreeBSD: net/p5-Net-OAuth-Simple/Makefile 326506 2013-09-06 14:30:23Z az $
-#
+# Created by: skreuzer
+# $FreeBSD: net/p5-Net-OAuth-Simple/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-OAuth-Simple
 PORTVERSION=	1.5
@@ -25,4 +21,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=	Net::OAuth::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
