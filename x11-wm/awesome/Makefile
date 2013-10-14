@@ -1,9 +1,9 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11-wm/awesome/Makefile 325761 2013-08-31 01:17:11Z bapt $
+# $FreeBSD: x11-wm/awesome/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	awesome
 PORTVERSION=	3.5.1
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
@@ -22,16 +22,16 @@ BUILD_DEPENDS=	asciidoc:${PORTSDIR}/textproc/asciidoc \
 		${LUA_MODLIBDIR}/lgi/corelgilua51.so:${PORTSDIR}/devel/lua-lgi \
 		${LOCALBASE}/share/xml/docbook/4.5/docbookx.dtd:${PORTSDIR}/textproc/docbook-xml-450
 RUN_DEPENDS=	${LUA_MODLIBDIR}/lgi/corelgilua51.so:${PORTSDIR}/devel/lua-lgi
-LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
-		ev:${PORTSDIR}/devel/libev \
-		freetype:${PORTSDIR}/print/freetype2 \
-		startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		xdg-basedir:${PORTSDIR}/x11/libxdg-basedir \
-		xcb-util:${PORTSDIR}/x11/xcb-util \
-		xcb-image:${PORTSDIR}/x11/xcb-util-image \
-		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms \
-		xcb-icccm:${PORTSDIR}/x11/xcb-util-wm \
-		execinfo:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
+		libev.so:${PORTSDIR}/devel/libev \
+		libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libxdg-basedir.so:${PORTSDIR}/x11/libxdg-basedir \
+		libxcb-util.so:${PORTSDIR}/x11/xcb-util \
+		libxcb-image.so:${PORTSDIR}/x11/xcb-util-image \
+		libxcb-keysyms.so:${PORTSDIR}/x11/xcb-util-keysyms \
+		libxcb-icccm.so:${PORTSDIR}/x11/xcb-util-wm \
+		libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 
 USE_XZ=		yes
 USES=		cmake iconv pkgconfig
@@ -53,6 +53,7 @@ PORTDOCS=	AUTHORS BUGS LICENSE README
 OPTIONS_DEFINE=	DBUS DOCS
 OPTIONS_DEFAULT=DBUS DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if	(exists(${LOCALBASE}/libdata/pkgconfig/cairo.pc) && \
@@ -61,7 +62,7 @@ IGNORE=	cannot find dependency: The cairo exists but not with XCB support. Pleas
 .endif
 
 .if ${PORT_OPTIONS:MDBUS}
-LIB_DEPENDS += dbus-1.3:${PORTSDIR}/devel/dbus
+LIB_DEPENDS += libdbus-1.so:${PORTSDIR}/devel/dbus
 CMAKE_ARGS += -DWITH_DBUS=YES
 .else
 CMAKE_ARGS += -DWITH_DBUS=NO
