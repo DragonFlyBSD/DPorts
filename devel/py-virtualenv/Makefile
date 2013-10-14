@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-virtualenv/Makefile 325710 2013-08-30 16:27:50Z nivit $
+# $FreeBSD: devel/py-virtualenv/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	virtualenv
 PORTVERSION=	1.10.1
@@ -24,6 +24,7 @@ USE_PYDISTUTILS=	easy_install
 PIPVER=	1.4.1
 SETUPTOOLSVER=	0.9.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
