@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/mcrypt/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: security/mcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	mcrypt
 PORTVERSION=	2.6.8
@@ -35,6 +35,7 @@ PLIST_DIRS=	%%EXAMPLESDIR%%
 
 PLIST=		${WRKDIR}/pkg-plist
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/malloc\.h/d' ${WRKSRC}/src/rfc2440.c
 
