@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce3/Makefile 326218 2013-09-03 19:37:29Z sunpoet $
+# $FreeBSD: www/tinymce3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tinymce
 PORTVERSION=	3.5.8
@@ -20,6 +20,7 @@ NO_LATEST_LINK=	yes
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	@${TOUCH} \
 	  	${WRKSRC}/jscripts/tiny_mce/plugins/spellchecker/classes/utils/.keepme \
