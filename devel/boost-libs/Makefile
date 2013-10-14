@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: devel/boost-libs/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/boost-libs/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	boost-libs
 COMMENT=	Free portable C++ libraries (without Boost.Python)
@@ -13,6 +13,7 @@ OPTIONS_DEFAULT=	ICU
 VERBOSE_BUILD_DESC=	Show compiler messages
 ICU_DESC=		Boost.Regex with ICU unicode support
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../boost-all/common.mk"
 
 .include <bsd.port.pre.mk>
