@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-fidoconf/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-fidoconf/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	fidoconf
 PORTVERSION=	0.14.4
@@ -29,6 +29,7 @@ MLINKS=		fconf2.1 fconf2aquaed.1 \
 		fconf2.1 fconf2squish.1
 INFO=		fidoconfig
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's^/fido/etc/config^${PREFIX}/etc/fido/config^' \
 		${WRKSRC}/man/dumpfcfg.1
