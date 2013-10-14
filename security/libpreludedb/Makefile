@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: security/libpreludedb/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/libpreludedb/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libpreludedb
 PORTVERSION=	1.0.1p1
@@ -36,6 +36,7 @@ MYSQL_DESC=	MySQL plugin
 PQSQL_DESC=	PostgreSQL plugin
 SQLITE_DESC=	SQLite3 plugin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
