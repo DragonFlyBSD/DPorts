@@ -1,9 +1,5 @@
-# New ports collection makefile for:    py-roman
-# Date created:				Oct 28, 2011
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/math/py-roman/Makefile,v 1.2 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: math/py-roman/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	roman
 PORTVERSION=	1.4.0
@@ -19,4 +15,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
