@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Any/Makefile 327070 2013-09-12 14:27:34Z sunpoet $
+# $FreeBSD: devel/p5-Config-Any/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-Any
 PORTVERSION=	0.24
@@ -28,6 +28,7 @@ MAN3=		Config::Any.3 \
 		Config::Any::XML.3 \
 		Config::Any::YAML.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MINI}
