@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ladder
-# Date created:         11 Sep 2006
-# Whom:                 gurkan@phys.ethz.ch
-#
-# $FreeBSD: ports/games/gnustep-ladder/Makefile,v 1.14 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: gurkan@phys.ethz.ch
+# $FreeBSD: games/gnustep-ladder/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ladder
 PORTVERSION=	1.0
@@ -29,4 +25,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
