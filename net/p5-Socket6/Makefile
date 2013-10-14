@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Socket6
-# Date created:		24 May 2000
-# Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Socket6/Makefile 326522 2013-09-06 16:11:30Z az $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: net/p5-Socket6/Makefile 329332 2013-10-04 15:56:11Z ume $
 
 PORTNAME=	Socket6
 PORTVERSION=	0.23
@@ -14,9 +10,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	IPv6 related part of the C socket.h defines and structure manipulators
 
+LICENSE=	BSD
+
 USES=		perl5
 USE_PERL5=	configure
-CONFIGURE_ENV+=	CC="${CC}" CFLAGS="${CFLAGS}"
+CONFIGURE_ENV+=	CC="${CC}"
 
 PLIST_FILES=	%%SITE_PERL%%/%%PERL_ARCH%%/Socket6.pm \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Socket6/.packlist \
