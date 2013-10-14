@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Time-Local/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Time-Local/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-Local
 PORTVERSION=	1.23.00
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 MAN3=		Time::Local.3
 PORTDOCS=	Changes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
