@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Set/Makefile 325532 2013-08-28 14:02:47Z sunpoet $
+# $FreeBSD: devel/p5-DateTime-Set/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Set
 PORTVERSION=	0.32
@@ -27,6 +27,7 @@ MAN3=		DateTime::Set.3 \
 		Set::Infinite::_recurrence.3
 PORTDOCS=	Changes README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
