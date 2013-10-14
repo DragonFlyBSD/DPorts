@@ -1,12 +1,8 @@
-# New ports collection makefile for:	php53-phar
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/php53-phar/Makefile,v 1.2 2012/11/17 05:54:23 svnexp Exp $
-#
+# $FreeBSD: archivers/php53-phar/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 CATEGORIES=	archivers
 
+NO_STAGE=	yes
 MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-phar
