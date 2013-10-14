@@ -1,9 +1,5 @@
-# New ports collection makefile for:	publib
-# Date created:		25 April 2002
-# Whom:			never@nevermind.kiev.ua
-#
-# $FreeBSD: ports/devel/publib/Makefile,v 1.5 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: never@nevermind.kiev.ua
+# $FreeBSD: devel/publib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	publib
 PORTVERSION=	0.39
@@ -88,6 +84,7 @@ MAN3=		dynarr.3 \
 		strzap.3 \
 		tbuf.3
 
+NO_STAGE=	yes
 pre-configure::
 	${MKDIR} ${WRKSRC}/objs
 	${SED} -e "s;@PREFIX@;${PREFIX};g" \
