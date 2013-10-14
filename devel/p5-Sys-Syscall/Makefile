@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Sys-Syscall/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Sys-Syscall/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sys-Syscall
 PORTVERSION=	0.25
@@ -16,6 +16,7 @@ USE_PERL5=	configure
 
 MAN3=		Sys::Syscall.3 Sys::README.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/lib/Sys/Syscall.pm.orig
 
