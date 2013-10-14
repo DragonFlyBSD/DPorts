@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xrdb/Makefile 326808 2013-09-09 12:24:04Z zeising $
+# $FreeBSD: x11/xrdb/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xrdb
 PORTVERSION=	1.1.0
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xrdb
 
 MAN1=		xrdb.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
