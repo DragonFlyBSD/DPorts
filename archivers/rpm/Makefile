@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: archivers/rpm/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: archivers/rpm/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	rpm
 PORTVERSION=	3.0.6
@@ -16,6 +16,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 CONFLICTS=	rpm-[45].*
 
+NO_STAGE=	yes
 USES=		gmake
 USE_AUTOTOOLS=	automake14 autoconf213 libtool
 CONFIGURE_ARGS=	--with-glob
