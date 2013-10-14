@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: textproc/hevea/Makefile 325146 2013-08-21 14:48:34Z gahr $
+# $FreeBSD: textproc/hevea/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	hevea
 PORTVERSION=	2.09
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml
 
 PLIST_SUB=	HEVEAVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
