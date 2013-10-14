@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: devel/geany/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/geany/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	geany
 PORTVERSION=	1.23.1
@@ -26,6 +26,7 @@ VTE_DESC=	Embedded virtual terminal
 
 MAN1=		geany.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
