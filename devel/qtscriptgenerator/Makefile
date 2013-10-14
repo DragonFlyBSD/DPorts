@@ -1,5 +1,5 @@
 # Created by: Mina R Waheeb <syncer@gmail.com>
-# $FreeBSD: devel/qtscriptgenerator/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/qtscriptgenerator/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qtscriptgenerator
 PORTVERSION=	0.2.0
@@ -24,6 +24,7 @@ USE_QT4=	corelib declarative designer doc help help-tools gui \
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHONON}
