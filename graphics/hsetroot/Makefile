@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@freebsd-fr.org>
-# $FreeBSD: ports/graphics/hsetroot/Makefile,v 1.19 2013/01/24 11:56:09 svnexp Exp $
+# $FreeBSD: graphics/hsetroot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	hsetroot
 PORTVERSION=	1.0.2
@@ -18,4 +18,5 @@ USE_EFL=	imlib2
 
 PLIST_FILES=	bin/hsetroot
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
