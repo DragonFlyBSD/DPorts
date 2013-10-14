@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: mail/hs-mime/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: mail/hs-mime/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mime
 PORTVERSION=	0.3.4
@@ -11,5 +11,6 @@ COMMENT=	Working with MIME types
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
