@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Text-vFile-asData/Makefile 326581 2013-09-07 08:23:45Z az $
+# $FreeBSD: devel/p5-Text-vFile-asData/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Text-vFile-asData
 PORTVERSION=	0.08
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::vFile::asData.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
