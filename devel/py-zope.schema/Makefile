@@ -1,7 +1,7 @@
-# $FreeBSD: devel/py-zope.schema/Makefile 315934 2013-04-17 06:44:00Z rm $
+# $FreeBSD: devel/py-zope.schema/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	zope.schema
-PORTVERSION=	4.2.1
+PORTVERSION=	4.2.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,6 +17,14 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=3.6.0:${PORTSDIR}/devel/py-z
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
 
-.include <bsd.port.mk>
+NO_STAGE=	yes
+
+.include <bsd.port.pre.mk>
+
+post-install:
+.if ${PYTHON_REL} >= 320
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
+.endif
+
+.include <bsd.port.post.mk>
