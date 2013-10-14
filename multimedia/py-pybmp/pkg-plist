@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/multimedia/py-pybmp/pkg-plist,v 1.2 2012/11/17 05:59:53 svnexp Exp $
+@comment $FreeBSD: multimedia/py-pybmp/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/bmp/__init__.py
 %%PYTHON_SITELIBDIR%%/bmp/__init__.pyc
 %%PYTHON_SITELIBDIR%%/bmp/__init__.pyo

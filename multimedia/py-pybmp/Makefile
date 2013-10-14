@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pybmp
-# Date created:		2006-04-30
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: ports/multimedia/py-pybmp/Makefile,v 1.13 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: multimedia/py-pybmp/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	pyBMP
 PORTVERSION=	1.0
@@ -24,6 +20,7 @@ USE_GNOME=	glib12
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-extract:
 	${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${FILESDIR}/setup.cfg.port >> ${WRKSRC}/setup.cfg
 
