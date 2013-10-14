@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter-ForMethods/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: devel/p5-Sub-Exporter-ForMethods/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sub-Exporter-ForMethods
 PORTVERSION=	0.100050
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Sub::Exporter::ForMethods.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
