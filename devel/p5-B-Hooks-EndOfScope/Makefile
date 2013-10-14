@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-B-Hooks-EndOfScope/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-B-Hooks-EndOfScope/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	B-Hooks-EndOfScope
 PORTVERSION=	0.12
@@ -27,4 +27,5 @@ MAN3=		B::Hooks::EndOfScope.3 \
 		B::Hooks::EndOfScope::PP::HintHash.3 \
 		B::Hooks::EndOfScope::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
