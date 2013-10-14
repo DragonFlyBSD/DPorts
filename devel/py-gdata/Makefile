@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/py-gdata/Makefile 321058 2013-06-16 16:26:51Z rm $
+# $FreeBSD: devel/py-gdata/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gdata
 PORTVERSION=	2.0.18
@@ -27,6 +27,7 @@ OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MM2CRYPTO}
