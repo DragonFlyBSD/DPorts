@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-utils
-# Date created:				16 March 2006
-# Whom:					Daniel Bretoi
-#
-# $FreeBSD: ports/devel/py-utils/Makefile,v 1.6 2012/11/17 05:56:51 svnexp Exp $
-#
+# Created by: Daniel Bretoi
+# $FreeBSD: devel/py-utils/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	utils
 PORTVERSION=	0.4.0
@@ -24,6 +20,7 @@ USE_ZIP=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
