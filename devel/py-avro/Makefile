@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/py-avro/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/py-avro/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.4
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/avro \
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lang/py
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} 's|@AVRO_VERSION@|${PORTVERSION}|g' \
 		${WRKSRC}/setup.py
