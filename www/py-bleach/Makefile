@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-bleach/Makefile 320430 2013-06-10 01:48:19Z koobs $
+# $FreeBSD: www/py-bleach/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bleach
 PORTVERSION=	1.2.2
@@ -27,4 +27,5 @@ TEST_DEPENDS:=	${RUN_DEPENDS} \
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
