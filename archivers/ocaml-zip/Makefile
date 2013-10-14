@@ -1,10 +1,5 @@
-# New ports collection makefile for:	ocaml-zip
-# Date created:				2006-08-01
-# Whom:					Stanislav Sedov <ssedov@mbsd.msk.ru>
-#
-# $MBSDlabs$
-# $FreeBSD: archivers/ocaml-zip/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
+# $FreeBSD: archivers/ocaml-zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zip
 PORTVERSION=	1.04
@@ -17,10 +12,11 @@ DISTNAME=	caml${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCaml library to manipulate ZIP/GZIP/JAR archives
 
-#USE_GMAKE=	yes
 USE_OCAML=	yes
 USE_OCAML_LDCONFIG=yes
 USE_OCAML_WASH=	yes
+
+NO_STAGE=	yes
 
 ALL_TARGET=	all allopt
 INSTALL_TARGET=	install installopt
