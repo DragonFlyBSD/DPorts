@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkada/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: x11-toolkits/gtkada/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtkada
 PORTVERSION=	2.24.4.0
@@ -25,6 +25,7 @@ MAKE_ENV+=	DESTDIR=${DESTINY} \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
