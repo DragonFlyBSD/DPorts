@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: net/p5-Net-CIDR-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-CIDR-Lite/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-CIDR-Lite
 PORTVERSION=	0.21
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::CIDR::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
