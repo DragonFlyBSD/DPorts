@@ -1,8 +1,9 @@
 # Created by: Brooks Davis
-# $FreeBSD: lang/clang31/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: lang/clang31/Makefile 329791 2013-10-08 14:59:55Z tijl $
 
 PORTNAME=	clang31
 PORTVERSION=	3.1
+PORTREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PORTVERSION}/
 DISTNAME=	clang-${PORTVERSION}.src
@@ -35,7 +36,6 @@ BUILD_DEPENDS+=	f2c:${PORTSDIR}/lang/f2c
 
 GNU_CONFIGURE=	yes
 USES=		gmake perl5
-USE_GCC=	4.2+
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 
@@ -52,6 +52,7 @@ MAN1=		clang.1
 
 PLIST_SUB+=		PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(MAINTAINER_MODE)
