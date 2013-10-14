@@ -1,9 +1,4 @@
-# New ports collection makefile for:	IO::Zlib
-# Date created:		15 Feb 2002
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: archivers/p5-IO-Zlib/Makefile 326530 2013-09-06 17:55:21Z az $
-#
+# $FreeBSD: archivers/p5-IO-Zlib/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	IO-Zlib
 PORTVERSION=	1.10
@@ -18,6 +13,7 @@ COMMENT=	IO:: style interface to Compress::Zlib
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 MAN3=		IO::Zlib.3
 
 .include <bsd.port.mk>
