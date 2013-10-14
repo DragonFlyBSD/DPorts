@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: security/gnome-keyring-sharp/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: security/gnome-keyring-sharp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gnome-keyring-sharp
 PORTVERSION=	1.0.2
@@ -19,4 +19,5 @@ USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gtksharp20
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
