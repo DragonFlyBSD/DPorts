@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Pod-Readme/Makefile 325817 2013-08-31 17:21:40Z lth $
+# $FreeBSD: textproc/p5-Pod-Readme/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Readme
 PORTVERSION=	0.11
@@ -21,4 +21,5 @@ USE_DOS2UNIX=	yes
 MAN1=		pod2readme.1
 MAN3=		Pod::Readme.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
