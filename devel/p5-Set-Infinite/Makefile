@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Set-Infinite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Set-Infinite/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Set-Infinite
 PORTVERSION=	0.65
@@ -18,6 +18,7 @@ USE_PERL5=	configure
 MAN3=		Set::Infinite.3 Set::Infinite::Arithmetic.3 Set::Infinite::Basic.3
 PORTDOCS=	Changes README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
