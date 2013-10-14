@@ -1,5 +1,5 @@
 # Created by: Jamie Hermans <jamie@hermans.ca>
-# $FreeBSD: graphics/jhead/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/jhead/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jhead
 PORTVERSION=	2.97
@@ -19,6 +19,7 @@ MAN1=		jhead.1
 PLIST_FILES=	bin/jhead
 PORTDOCS=	usage.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
