@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Dist-CheckConflicts
 PORTVERSION=	0.02
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		Dist::CheckConflicts.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
