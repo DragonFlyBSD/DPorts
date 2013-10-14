@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/gmastermind/Makefile,v 1.11 2012/11/17 05:57:39 svnexp Exp $
+# $FreeBSD: games/gmastermind/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gmastermind
 PORTVERSION=	0.6
@@ -17,4 +17,5 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
