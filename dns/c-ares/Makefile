@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: dns/c-ares/Makefile 318253 2013-05-15 18:27:09Z zi $
+# $FreeBSD: dns/c-ares/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	c-ares
 PORTVERSION=	1.10.0
@@ -13,6 +13,8 @@ COMMENT=	An asynchronous DNS resolver library
 
 LICENSE=	MIT
 
+SSP_UNSAFE=	Refuses -l in LDFLAGS
+
 OPTIONS_DEFINE=		CONFIG_INFO DEBUG HIDE_SYMBOLS OPTIMIZED_CFLAGS
 OPTIONS_DEFAULT=	CONFIG_INFO HIDE_SYMBOLS
 
@@ -24,6 +26,7 @@ CONFLICTS=		ares-1.*
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCONFIG_INFO}
