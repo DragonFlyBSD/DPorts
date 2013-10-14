@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: databases/py-sqlalchemy06/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: databases/py-sqlalchemy06/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlalchemy06
 PORTVERSION=	0.6.9
@@ -35,6 +35,7 @@ MSSQL_DESC=	MS SQL Server backend
 NOSE_DESC=	Use Nose for unit tests
 SYBASE_DESC=	Sybase backend
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCEXTENSIONS}
