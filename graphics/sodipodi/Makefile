@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: graphics/sodipodi/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/sodipodi/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/graphics/sodipodi/Makefile,v 1.3 2007/05/30 03:21:43 mezz Exp $
 
 PORTNAME=	sodipodi
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		sodipodi.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<malloc.h>|<stdlib.h>|g' \
 		${WRKSRC}/src/helper/action.c \
