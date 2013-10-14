@@ -1,9 +1,5 @@
-# Ports collection makefile for:	libnova
-# Date created:			Oct 23, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/astro/libnova/Makefile,v 1.38 2012/11/17 05:54:25 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: astro/libnova/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libnova
 PORTVERSION=	0.15.0
