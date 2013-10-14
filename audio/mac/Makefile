@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Monkey's Audio Codec
-# Date created:				8 Aug 2004
-# Whom:			Martin Dieringer <Martin.Dieringer@t-online.de>
-#
-# $FreeBSD: ports/audio/mac/Makefile,v 1.21 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: Martin Dieringer <Martin.Dieringer@t-online.de>
+# $FreeBSD: audio/mac/Makefile 329371 2013-10-04 19:57:12Z bapt $
 
 PORTNAME=	mac
 PORTVERSION=	3.99.4.5
@@ -28,6 +24,6 @@ post-patch:
 
 post-install:
 	cd ${WRKSRC}/src/MACLib && ${INSTALL_DATA} BitArray.h \
-		Prepare.h UnBitArrayBase.h ${PREFIX}/include/mac
+		Prepare.h UnBitArrayBase.h ${STAGEDIR}${PREFIX}/include/mac
 
 .include <bsd.port.post.mk>
