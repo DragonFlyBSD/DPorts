@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: ports/math/matio/Makefile,v 1.5 2012/12/12 19:32:07 svnexp Exp $
+# $FreeBSD: math/matio/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	matio
 PORTVERSION=	1.3.4
@@ -17,6 +17,7 @@ CFLAGS+=	-fPIC
 OPTIONS_DEFINE=	FORTRAN
 FORTRAN_DESC=	Build Fortran bindings
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PLIST_FILES= 	include/matio.h \
