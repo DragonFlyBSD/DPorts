@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTTP-Server-Simple-PSGI
-# Date created:		2010-03-16
-# Whom:			ports@c0decafe.net
-#
-# $FreeBSD: www/p5-HTTP-Server-Simple-PSGI/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ports@c0decafe.net
+# $FreeBSD: www/p5-HTTP-Server-Simple-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Server-Simple-PSGI
 PORTVERSION=	0.14
@@ -21,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		HTTP::Server::Simple::PSGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
