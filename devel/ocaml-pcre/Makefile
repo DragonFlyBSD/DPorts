@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: devel/ocaml-pcre/Makefile 313426 2013-03-04 22:53:15Z johans $
+# $FreeBSD: devel/ocaml-pcre/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pcre
 PORTVERSION=	7.0.2
@@ -23,6 +23,7 @@ EXAMPLESDIR=	${OCAML_EXAMPLESDIR}/${PORTNAME}
 PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/doc/pcre-ocaml
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
