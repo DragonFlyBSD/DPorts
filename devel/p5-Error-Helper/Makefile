@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Error-Helper/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Error-Helper/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	Error-Helper
 PORTVERSION=	1.0.0
@@ -18,7 +18,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1.22:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Error::Helper.3
 
 .include <bsd.port.mk>
