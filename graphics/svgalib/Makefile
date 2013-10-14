@@ -1,5 +1,5 @@
-# Created by:				Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/svgalib/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: graphics/svgalib/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	svgalib
 PORTVERSION=	1.4.3
@@ -20,6 +20,7 @@ MANCOMPRESSED=	yes
 
 ALL_TARGET=	shared static
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"
