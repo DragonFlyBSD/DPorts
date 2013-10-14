@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/libstreamanalyzer/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/libstreamanalyzer/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	libstreamanalyzer
 PORTVERSION=	${STRIGI_VERSION}
@@ -30,6 +30,7 @@ CMAKE_ARGS+=	-DFFMPEG_SUFFIX:STRING="${FFMPEG_SUFFIX}"
 EXTRA_PATCHES+=	${FILESDIR}/extrapatch-libstreamanalyzer__plugins__endplugins__CMakeLists.txt
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e \
 		's,$${LIB_DESTINATION}/pkgconfig,libdata/pkgconfig,' \
