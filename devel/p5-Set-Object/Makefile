@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-Object/Makefile 325013 2013-08-19 18:47:08Z sunpoet $
+# $FreeBSD: devel/p5-Set-Object/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Set-Object
 PORTVERSION=	1.31
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 MAN3=		Set::Changes.3 Set::Object.3 Set::Object::Weak.3
 PORTDOCS=	Changes.pod README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
