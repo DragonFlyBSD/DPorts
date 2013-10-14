@@ -1,9 +1,4 @@
-# New ports collection makefile for:	php53-iconv
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/php53-iconv/Makefile,v 1.2 2012/11/17 05:55:04 svnexp Exp $
-#
+# $FreeBSD: converters/php53-iconv/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 CATEGORIES=	converters
 
@@ -11,4 +6,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-iconv
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
