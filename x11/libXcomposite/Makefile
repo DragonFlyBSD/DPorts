@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXcomposite/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXcomposite/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXcomposite
 PORTVERSION=	0.4.4
@@ -24,4 +24,5 @@ MAN3=		Xcomposite.3 \
 		XCompositeGetOverlayWindow.3 \
 		XCompositeReleaseOverlayWindow.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
