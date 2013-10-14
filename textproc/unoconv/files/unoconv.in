@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/textproc/unoconv/files/unoconv.in,v 1.2 2012/11/17 06:02:24 svnexp Exp $
+# $FreeBSD: textproc/unoconv/files/unoconv.in 304580 2012-09-20 14:22:09Z pawel $
 #
 
 cd "%%DATADIR%%"

@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/unoconv/Makefile,v 1.2 2012/11/17 06:02:24 svnexp Exp $
+# $FreeBSD: textproc/unoconv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	unoconv
 PORTVERSION=	0.6
@@ -30,6 +30,7 @@ MAN1=		${PORTNAME}.1
 
 SUB_FILES=	${PORTNAME} pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
