@@ -1,5 +1,5 @@
 # Created by: greg
-# $FreeBSD: audio/wavplay/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: audio/wavplay/Makefile 328584 2013-09-28 15:35:04Z amdmi3 $
 
 PORTNAME=	wavplay
 PORTVERSION=	1.4
@@ -13,9 +13,9 @@ COMMENT=	A wav player and recorder
 ONLY_FOR_ARCHS=	i386 amd64
 ONLY_FOR_ARCHS_REASON=Doesn't work on !i386 and amd64
 
-MAN1=		wavplay.1
+MAKE_ARGS=	PREFIX="${STAGEDIR}${PREFIX}"
 
-PLIST_FILES=	bin/wavplay bin/wavrec
+PLIST_FILES=	bin/wavplay bin/wavrec man/man1/${PORTNAME}.1.gz
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|u_long|u_int|g' ${WRKSRC}/*.c ${WRKSRC}/*.h
