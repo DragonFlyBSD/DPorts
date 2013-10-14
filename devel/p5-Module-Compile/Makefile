@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: devel/p5-Module-Compile/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Module-Compile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Compile
 PORTVERSION=	0.23
@@ -22,4 +22,5 @@ MAN3=		Module::Compile.3 \
 		Module::Install::PMC.3\
 		Module::Optimize.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
