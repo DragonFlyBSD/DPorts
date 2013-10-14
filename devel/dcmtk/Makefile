@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/dcmtk/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/dcmtk/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dcmtk
 DISTVERSION=	3.6.0
@@ -28,6 +28,7 @@ PLIST_SUB=	SHLIBVER=${SHLIBVER}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
