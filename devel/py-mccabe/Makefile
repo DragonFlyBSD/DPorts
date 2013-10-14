@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-mccabe/Makefile 323242 2013-07-18 16:15:41Z wg $
+# $FreeBSD: devel/py-mccabe/Makefile 328416 2013-09-26 21:27:28Z wg $
 
 PORTNAME=	mccabe
 PORTVERSION=	0.2.1
@@ -11,12 +11,10 @@ MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Ned\'s script to check McCabe complexity
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=yes
+PYTHON_PY3K_PLIST_HACK=	yes
 
-.include <bsd.port.pre.mk>
+post-patch:
+	@${REINPLACE_CMD} -e 's|setuptools|distutils.core|' ${WRKSRC}/${PYSETUP}
 
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
