@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-PAR/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-PAR/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PAR
 PORTVERSION=	1.00.7
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-Archive-Zip>=1.00:${PORTSDIR}/archivers/p5-Archive-Zip \
 		p5-PAR-Dist>=0.32:${PORTSDIR}/devel/p5-PAR-Dist
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PAR.3 \
 		PAR::Environment.3 \
@@ -25,6 +26,7 @@ MAN3=		PAR.3 \
 		PAR::SetupProgname.3 \
 		PAR::SetupTemp.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 regression-test:
