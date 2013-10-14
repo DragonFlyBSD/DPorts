@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-libplist/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/py-libplist/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	devel python
@@ -21,6 +21,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST=		${.CURDIR}/pkg-plist
 FILESDIR=	${.CURDIR}/files
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} ${FILESDIR}/CMakeLists.txt ${WRKSRC}
 	@${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},' \
