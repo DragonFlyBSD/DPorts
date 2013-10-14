@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/textproc/jdictionary/Makefile,v 1.14 2013/01/09 20:05:13 svnexp Exp $
+# $FreeBSD: textproc/jdictionary/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jdictionary
 PORTVERSION=	1.8
@@ -23,6 +23,7 @@ NO_BUILD=	yes
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 SUB_FILES=	jdictionary.sh
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/jdictionary.jar ${DATADIR}/

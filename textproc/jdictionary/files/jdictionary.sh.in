@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/textproc/jdictionary/files/jdictionary.sh.in,v 1.2 2012/11/17 06:02:00 svnexp Exp $
+# $FreeBSD: textproc/jdictionary/files/jdictionary.sh.in 300897 2012-07-14 14:29:18Z beat $
 
 cd "%%DATADIR%%"
 exec "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/jdictionary.jar" "@*"
