@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-MixinFactory
-# Date created:				30 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Class-MixinFactory/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: devel/p5-Class-MixinFactory/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-MixinFactory
 PORTVERSION=	0.92
@@ -25,4 +21,5 @@ MAN3=	Class::MixinFactory.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
