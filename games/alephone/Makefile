@@ -1,5 +1,5 @@
 # Created by: Michael Alyn Miller <malyn@strangeGizmo.com>
-# $FreeBSD: games/alephone/Makefile 326032 2013-09-02 16:55:04Z bapt $
+# $FreeBSD: games/alephone/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	alephone
 PORTVERSION=	20120514
@@ -34,6 +34,7 @@ ZZIP_DESC=	Enable zziplib support
 
 OPTIONS_DEFAULT=	MAD OGG SPEEX SMPEG TTF ZZIP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMAD}
