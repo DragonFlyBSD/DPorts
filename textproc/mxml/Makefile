@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/mxml/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/mxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	mxml
 PORTVERSION=	2.7
@@ -31,6 +31,7 @@ PLIST_FILES=	bin/mxmldoc include/mxml.h \
 		lib/libmxml.so lib/libmxml.so.1 lib/libmxml.so.1.5 \
 		libdata/pkgconfig/mxml.pc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
