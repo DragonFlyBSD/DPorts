@@ -1,4 +1,4 @@
-# $FreeBSD: net/ranch/Makefile 325376 2013-08-26 08:29:46Z olgeni $
+# $FreeBSD: net/ranch/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ranch
 PORTVERSION=	0.8.5
@@ -22,6 +22,7 @@ GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
