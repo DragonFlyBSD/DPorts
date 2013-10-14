@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-zopetesting
-# Date created:		22 Nov, 2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-zope.testing/Makefile,v 1.24 2012/11/17 05:56:54 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-zope.testing/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.testing
 PORTVERSION=	4.1.0
@@ -22,6 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 DIST_SUBDIR=	zope
 # Python3 ready
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
