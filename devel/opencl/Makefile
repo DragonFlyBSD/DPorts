@@ -1,5 +1,5 @@
 # Created by: Oliver Hartmann <ohartman@zedat.fu-berlin.de>
-# $FreeBSD: devel/opencl/Makefile 325857 2013-09-01 14:25:11Z marino $
+# $FreeBSD: devel/opencl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	opencl
 PORTVERSION=	1.2
@@ -23,6 +23,7 @@ PLIST_DIRS+=	include/CL
 PLIST_FILES+=include/CL/$f
 .endfor
 
+NO_STAGE=	yes
 pre-patch:
 		@${MKDIR} ${WRKSRC}
 .for f in ${DISTFILES}
