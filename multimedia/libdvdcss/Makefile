@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	libdvdcss
-# Date created:		Jul 6, 2001
-# Whom:			ijliao
-#
-# $FreeBSD: ports/multimedia/libdvdcss/Makefile,v 1.39 2012/11/27 06:08:28 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/libdvdcss/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libdvdcss
 PORTVERSION=	1.2.12
@@ -15,7 +10,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTVERSION}
 MAINTAINER=	jpaetzel@FreeBSD.org
 COMMENT=	Portable abstraction library for DVD decryption
 
-NO_CDROM=	CSS code may violate the DMCA
+RESTRICTED=	CSS code may violate the DMCA
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
@@ -33,6 +28,7 @@ BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 .if !defined(WITH_DOXYGEN)
 	@${ECHO_MSG} '==> Define WITH_DOXYGEN to build API documentation'
