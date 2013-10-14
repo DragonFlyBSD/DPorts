@@ -1,5 +1,5 @@
 # Created by: Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
-# $FreeBSD: devel/p5-File-Sync/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-File-Sync/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Sync
 PORTVERSION=	0.11
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Sync.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
