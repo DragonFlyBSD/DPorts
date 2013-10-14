@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Chen
-# $FreeBSD: devel/p5-Data-Bind/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-Data-Bind/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Bind
 PORTVERSION=	0.30
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::Bind.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
