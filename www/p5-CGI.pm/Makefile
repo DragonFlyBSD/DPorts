@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI.pm/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-CGI.pm/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI.pm
 PORTVERSION=	3.63
@@ -33,6 +33,7 @@ EXAMPLES=	examples/caution.xbm examples/clickable_image.cgi \
 		examples/popup.cgi examples/save_state.cgi \
 		examples/tryit.cgi examples/wilogo.gif
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@${INSTALL_DATA} ${EXAMPLES:S|^|${WRKSRC}/|} ${EXAMPLESDIR}
