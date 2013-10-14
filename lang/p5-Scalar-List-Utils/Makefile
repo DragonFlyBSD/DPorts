@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: lang/p5-Scalar-List-Utils/Makefile 325847 2013-09-01 10:28:57Z tobez $
+# $FreeBSD: lang/p5-Scalar-List-Utils/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Scalar-List-Utils
 PORTVERSION=	1.32
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		List::Util.3 Scalar::Util.3 List::Util::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
