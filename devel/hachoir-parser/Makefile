@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hachoir-parser
-# Date created:		25 January 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/hachoir-parser/Makefile,v 1.12 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: devel/hachoir-parser/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hachoir-parser
 PORTVERSION=	1.3.4
@@ -19,4 +15,5 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/hachoir_core/__init__.py:${PORTSDIR}/devel/hac
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
