@@ -1,5 +1,5 @@
 # Created by: Samuel Tardieu <sam@inf.enst.fr>
-# $FreeBSD: textproc/ltxml/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/ltxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ltxml
 PORTVERSION=	1.2.9
@@ -22,6 +22,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-zlib=/usr --datadir=${PREFIX}/lib/ltxml12
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
