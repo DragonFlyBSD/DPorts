@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.size
-# Date created:				Nov 10, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.size/Makefile,v 1.5 2012/11/17 05:56:54 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.size/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.size
 PORTVERSION=	3.5.0
@@ -22,5 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.i18nmessageid>=0:${PORTSDIR}/textproc/p
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
