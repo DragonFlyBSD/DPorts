@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: math/cgal/Makefile 315679 2013-04-02 15:38:48Z wen $
+# $FreeBSD: math/cgal/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	cgal
 PORTVERSION=	4.1
@@ -36,6 +36,7 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 
 MAN1=			cgal_create_cmake_script.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
