@@ -1,9 +1,5 @@
-# New ports collection makefile for:    afm
-# Date created:         23 November 1994
-# Whom:                 ljo
-#
-# $FreeBSD: print/afm/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: ljo
+# $FreeBSD: print/afm/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	afm
 PORTVERSION=	1.0
@@ -16,6 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Adobe Font Metrics
 
 
+NO_STAGE=	yes
 pre-patch:
 	@${RM} -rf ${WRKSRC}/RCS
 
