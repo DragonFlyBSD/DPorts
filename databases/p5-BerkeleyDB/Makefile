@@ -1,5 +1,5 @@
 # Created by: T. William Wells <bill@twwells.com>
-# $FreeBSD: databases/p5-BerkeleyDB/Makefile 325037 2013-08-20 09:51:25Z mat $
+# $FreeBSD: databases/p5-BerkeleyDB/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	BerkeleyDB
 PORTVERSION=	0.53
@@ -23,6 +23,7 @@ USE_BDB=	47+
 
 MAN3=		BerkeleyDB.3
 
+NO_STAGE=	yes
 post-patch:
 	@${ECHO} "INCLUDE = ${BDB_INCLUDE_DIR}" > ${WRKSRC}/config.in
 	@${ECHO} "LIB = ${LOCALBASE}/lib" >> ${WRKSRC}/config.in
