@@ -1,13 +1,10 @@
-# New ports collection makefile for:	twiki-BehaviourContrib
-# Date created:		17 April 2008
-#
-# $FreeBSD: ports/www/twiki-BehaviourContrib/Makefile,v 1.3 2012/11/17 06:03:09 svnexp Exp $
-#
+# $FreeBSD: www/twiki-BehaviourContrib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	BehaviourContrib
 SVNREV=		16417
 
 COMMENT=	JavaScript event library
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
