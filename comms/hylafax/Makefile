@@ -1,5 +1,5 @@
-# Created by: Julian Stacey <jhs@freebsd.org>
-# $FreeBSD: comms/hylafax/Makefile 316620 2013-04-26 15:10:57Z bapt $
+# Created by: Julian Stacey <jhs@FreeBSD.org>
+# $FreeBSD: comms/hylafax/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	hylafax
 PORTVERSION=	6.0.6
@@ -15,6 +15,7 @@ LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff \
 		jbig:${PORTSDIR}/graphics/jbigkit
 
 MAKE_JOBS_UNSAFE=	yes
+NO_STAGE=	yes
 
 USE_GHOSTSCRIPT=yes
 HAS_CONFIGURE=	yes
