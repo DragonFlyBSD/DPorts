@@ -1,4 +1,4 @@
-@comment $FreeBSD: archivers/gtar/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+@comment $FreeBSD: archivers/gtar/pkg-plist 329714 2013-10-07 16:53:54Z naddy $
 bin/gtar
 libexec/grmt
 %%NLS%%share/locale/bg/LC_MESSAGES/tar.mo
@@ -7,6 +7,7 @@ libexec/grmt
 %%NLS%%share/locale/da/LC_MESSAGES/tar.mo
 %%NLS%%share/locale/de/LC_MESSAGES/tar.mo
 %%NLS%%share/locale/el/LC_MESSAGES/tar.mo
+%%NLS%%share/locale/eo/LC_MESSAGES/tar.mo
 %%NLS%%share/locale/es/LC_MESSAGES/tar.mo
 %%NLS%%share/locale/et/LC_MESSAGES/tar.mo
 %%NLS%%share/locale/eu/LC_MESSAGES/tar.mo

@@ -1,8 +1,8 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/gtar/Makefile 325019 2013-08-19 20:54:39Z naddy $
+# $FreeBSD: archivers/gtar/Makefile 329714 2013-10-07 16:53:54Z naddy $
 
 PORTNAME=	tar
-PORTVERSION=	1.26
+PORTVERSION=	1.27
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -13,36 +13,33 @@ COMMENT=	GNU version of the traditional tape archiver
 
 INFO=		tar
 
-USES=		iconv
-USE_AUTOTOOLS=	autoconf:env	# autom4te
+USES=		iconv:${STATIC_ARGS}
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=g \
 		--disable-silent-rules
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${LDSTATIC}
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	DEFAULT_ARCHIVE=/dev/sa0 \
 		DEFAULT_RMT_COMMAND=/etc/rmt
 # supply result to skip a test that will abort configure if run as root
 CONFIGURE_ENV+=	gl_cv_func_mknod_works=yes
 
-OPTIONS_DEFINE=	STATIC
+OPTIONS_DEFINE=	NLS STATIC
+OPTIONS_SUB=	yes
+
+NLS_USES=	gettext:${STATIC_ARGS}
+NLS_CONFIGURE_ENABLE=	nls
+
+STATIC_LDFLAGS=	-static
+STATIC_CONFIGURE_ENV=	SHLIBEXT=""
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSTATIC}
-LDSTATIC=	-static
-MAKE_ARGS+=	LIBINTL='$$(LTLIBINTL)' LIBICONV='$$(LTLIBICONV)'
+STATIC_ARGS=	build
 .else
-LDSTATIC=
-.endif
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
+STATIC_ARGS=	lib
 .endif
 
 regression-test: build
