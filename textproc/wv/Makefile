@@ -1,5 +1,5 @@
 # Created by: sumikawa@kame.net
-# $FreeBSD: textproc/wv/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: textproc/wv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	wv
 PORTVERSION=	1.2.9
@@ -28,6 +28,7 @@ MAN1=	wvAbw.1 wvCleanLatex.1 wvDVI.1 wvHtml.1 wvLatex.1 wvMime.1 wvPDF.1 \
 	wvPS.1 wvRTF.1 wvSummary.1 wvText.1 wvVersion.1 wvWare.1 wvWml.1
 MLINKS=	wvWare.1 wvConvert.1
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
