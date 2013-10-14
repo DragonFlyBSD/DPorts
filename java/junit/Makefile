@@ -1,9 +1,5 @@
-# New ports collection makefile for:	JUnit
-# Date created:		Jun 15 1999
-# Whom:			OKAZAKI Tetsurou
-#
-# $FreeBSD: ports/java/junit/Makefile,v 1.20 2012/11/17 05:58:45 svnexp Exp $
-#
+# Created by: OKAZAKI Tetsurou
+# $FreeBSD: java/junit/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	junit
 PORTVERSION=	4.10
@@ -28,6 +24,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 PLIST_FILES=	%%JAVAJARDIR%%/junit.jar %%DATADIR%%/src.jar
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${INSTALL_WRKSRC}/junit-${PORTVERSION}.jar ${JAVAJARDIR}/junit.jar
 	${MKDIR} ${DATADIR}
