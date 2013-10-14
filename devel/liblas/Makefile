@@ -1,7 +1,5 @@
-# New ports collection makefile for:	liblas
-# Date created:				21 June 2008
-# Whom:					Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/liblas/Makefile,v 1.4 2012/11/17 05:55:55 svnexp Exp $
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/liblas/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	liblas
 PORTVERSION=	1.2.1
@@ -19,4 +17,5 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/liblas-src-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
