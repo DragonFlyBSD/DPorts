@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/openssl/Makefile 326837 2013-09-09 18:22:13Z dinoex $
+# $FreeBSD: security/openssl/Makefile 327799 2013-09-21 09:45:25Z dinoex $
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.1
@@ -14,6 +14,10 @@ DIST_SUBDIR=	${DISTNAME}2
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	SSL and crypto library
+
+PATCH_SITES+=	http://www.linuxfromscratch.org/patches/blfs/svn/:pod
+PATCHFILES+=	openssl-1.0.1e-fix_pod_syntax-1.patch:pod
+PATCH_DIST_STRIP=	-p1
 
 .ifdef USE_OPENSSL
 .error You have `USE_OPENSSL' variable defined either in environment or in make(1) arguments. Please undefine and try again.
@@ -48,12 +52,13 @@ MAKE_JOBS_UNSAFE=	yes
 NOPRECIOUSMAKEVARS=	Too many _MLINKS for fetch
 NOPRECIOUSSOFTMAKEVARS=	Too many _MLINKS for fetch
 
-USE_PERL5_BUILD=	yes
-MAKE_ARGS+=		WHOLE_ARCHIVE_FLAG=--whole-archive
-MAKE_ENV+=		LIBRPATH="${PREFIX}/lib"
-SUB_FILES=		pkg-message
-OPENSSLDIR=		${PREFIX}/openssl
-MANPREFIX=		${PREFIX}
+USES=		perl5
+USE_PERL5=	build
+MAKE_ARGS+=	WHOLE_ARCHIVE_FLAG=--whole-archive
+MAKE_ENV+=	LIBRPATH="${PREFIX}/lib"
+SUB_FILES=	pkg-message
+OPENSSLDIR=	${PREFIX}/openssl
+MANPREFIX=	${PREFIX}
 
 MAN1=	CA.pl.1 asn1parse.1 ca.1 ciphers.1 cms.1 crl.1 crl2pkcs7.1 dgst.1 \
 	dhparam.1 dsa.1 dsaparam.1 ec.1 ecparam.1 enc.1 errstr.1 gendsa.1 \
@@ -1048,6 +1053,7 @@ MLINKS=	ASN1_OBJECT_new.3 ASN1_OBJECT_free.3 \
 	ui_compat.3 des_read_pw.3 \
 	ui_compat.3 des_read_pw_string.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 OPENSSL_BASE_SONAME!=	readlink ${DESTDIR}/usr/lib/libcrypto.so || true
@@ -1117,7 +1123,6 @@ PLIST_SUB+=	WITH_RC5="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPADLOCK}
-PATCH_DIST_STRIP=	-p1
 PATCH_SITES+=	http://git.alpinelinux.org/cgit/aports/plain/main/openssl/:padlock
 PATCHFILES+=	0001-crypto-hmac-support-EVP_MD_CTX_FLAG_ONESHOT-and-set-.patch:padlock \
 		0002-engines-e_padlock-backport-cvs-head-changes.patch:padlock \
