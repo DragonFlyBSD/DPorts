@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/hachoir-metadata/Makefile 319470 2013-05-31 09:02:44Z antoine $
+# $FreeBSD: sysutils/hachoir-metadata/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hachoir-metadata
 PORTVERSION=	1.3.3
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/hachoir_parser/__init__.py:${PORTSDIR}/devel/h
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PYDISTUTILS_CONFIGUREARGS+=	--disable-qt
