@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-dbus/Makefile 323195 2013-07-18 03:41:38Z miwi $
+# $FreeBSD: devel/py-dbus/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/trunk/devel/py-dbus/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	dbus
@@ -28,6 +28,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 OPTIONS_DEFINE=HTMLDOCS
 HTMLDOCS_DESC=	build html documentation
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTMLDOCS}
