@@ -1,9 +1,5 @@
-# New ports collection makefile for:   rogue_s
-# Date created:		3 December 1998
-# Whom:			Yoshihiko Sarumaru <mistral@imasy.or.jp>
-#
-# $FreeBSD: ports/japanese/rogue_s/Makefile,v 1.8 2012/11/17 05:58:39 svnexp Exp $
-#
+# Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
+# $FreeBSD: japanese/rogue_s/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	rogue_s
 PORTVERSION=	1.3a
@@ -42,6 +38,7 @@ PLIST_FILES=	bin/rogue_s
 PORTDATA=	mesg mesg_E mesg_fj mesg_utmc
 PORTDOCS=	README README.1st README.doc options.doc rogue.doc
 
+NO_STAGE=	yes
 pre-patch:
 	@(\
 	  cd ${WRKSRC} ; \
