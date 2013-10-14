@@ -1,5 +1,5 @@
 # Created by: 1wardd@airmail.net
-# $FreeBSD: x11-toolkits/lesstif/Makefile 311023 2013-01-26 16:06:35Z dinoex $
+# $FreeBSD: x11-toolkits/lesstif/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	lesstif
 PORTVERSION=	0.95.2
@@ -15,6 +15,8 @@ LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		freetype:${PORTSDIR}/print/freetype2
 
 CONFLICTS?=	open-motif-*
+NO_STAGE=	yes
+
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	automake:env autoconf libtool
 USE_XORG=	sm ice xt xp xext x11 xextproto xrender xft
