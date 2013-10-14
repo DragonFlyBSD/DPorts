@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/php55-json/Makefile 321684 2013-06-24 14:32:11Z ale $
+# $FreeBSD: devel/php55-json/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 CATEGORIES=	devel
 
@@ -7,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-json
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
