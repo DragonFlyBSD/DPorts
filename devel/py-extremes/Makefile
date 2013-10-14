@@ -1,5 +1,5 @@
 # Created by: alexander smishlajev
-# $FreeBSD: devel/py-extremes/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: devel/py-extremes/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Extremes
 PORTVERSION=	1.1.1
@@ -18,4 +18,5 @@ USE_ZIP=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
