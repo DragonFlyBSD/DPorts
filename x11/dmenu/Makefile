@@ -1,5 +1,5 @@
 # Created by: Jeroen Schot <schot@a-eskwadraat.nl>
-# $FreeBSD: x11/dmenu/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11/dmenu/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	dmenu
 PORTVERSION=	4.5
@@ -25,6 +25,7 @@ USE_XORG=	x11
 MAN1=		dmenu.1 stest.1
 PLIST_FILES=	bin/dmenu bin/dmenu_run bin/stest
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXINERAMA}
