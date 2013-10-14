@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars.eggert@gmx.net>
-# $FreeBSD: multimedia/p5-MP4-Info/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: multimedia/p5-MP4-Info/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	MP4-Info
 PORTVERSION=	1.13
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	MP4::Info.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
