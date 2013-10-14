@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: textproc/unrtf/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: textproc/unrtf/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	unrtf
 PORTVERSION=	0.21.5
@@ -29,6 +29,7 @@ PLIST_DIRS=	%%DATADIR%%
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} -X ${WRKSRC} -type f -and -name "*.[1h]" | ${XARGS} \
 		${REINPLACE_CMD} -e \
