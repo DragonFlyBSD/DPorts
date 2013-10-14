@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: devel/chrpath/Makefile 321368 2013-06-20 09:55:12Z rene $
+# $FreeBSD: devel/chrpath/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	chrpath
 PORTVERSION=	0.13
@@ -25,6 +25,7 @@ PORTDOCS=	AUTHORS ChangeLog NEWS README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
