@@ -1,5 +1,5 @@
 # Created by: Colin Percival
-# $FreeBSD: sysutils/tarsnap/Makefile 323658 2013-07-25 18:05:05Z cperciva $
+# $FreeBSD: sysutils/tarsnap/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tarsnap
 PORTVERSION=	1.0.35
@@ -26,6 +26,7 @@ SSE2_DESC=	Use SSE2-optimized code
 SSE2_CONFIGURE_ENABLE=	sse2
 SSE2_CFLAGS=	-msse2
 
+NO_STAGE=	yes
 post-install:
 	@if [ ! -f ${PREFIX}/etc/tarsnap.conf ]; then \
 	    ${CP} -p ${PREFIX}/etc/tarsnap.conf.sample ${PREFIX}/etc/tarsnap.conf ; \
