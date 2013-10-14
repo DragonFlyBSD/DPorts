@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-C3-Componentised/Makefile 325052 2013-08-20 14:24:46Z mat $
+# $FreeBSD: devel/p5-Class-C3-Componentised/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-C3-Componentised
 PORTVERSION=	1.0010
@@ -27,6 +27,7 @@ USE_PERL5=	configure
 
 MAN3=		Class::C3::Componentised.3 Class::C3::Componentised::ApplyHooks.3
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -i '' -e '/Test::/d' ${WRKSRC}/Makefile.PL
 
