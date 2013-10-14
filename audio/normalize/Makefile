@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: audio/normalize/Makefile 322838 2013-07-12 14:20:01Z bapt $
+# $FreeBSD: audio/normalize/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	normalize
 PORTVERSION=	0.7.7
@@ -13,6 +13,7 @@ COMMENT=	A tool for adjusting the volume of wave/MP3 files to a standard level
 LIB_DEPENDS=	mad.2:${PORTSDIR}/audio/libmad
 
 USE_BZIP2=		yes
+NO_STAGE=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-helper-search
 CPPFLAGS+=		-I${LOCALBASE}/include
