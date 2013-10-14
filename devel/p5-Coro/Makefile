@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Coro/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Coro/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Coro
 PORTVERSION=	6.31
@@ -49,6 +49,7 @@ MAN3=		Coro.3 \
 		Coro::Timer.3 \
 		Coro::Util.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}/
