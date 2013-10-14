@@ -1,4 +1,4 @@
-# $FreeBSD: math/analitza/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/analitza/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	analitza
 PORTVERSION=	${KDE4_VERSION}
@@ -20,4 +20,5 @@ USE_QT4=	corelib gui opengl svg xml \
 USE_GL=		glu
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
