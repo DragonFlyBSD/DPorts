@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/markdown/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: textproc/markdown/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	markdown
 PORTVERSION=	1.0.1
@@ -22,6 +22,7 @@ PORTDOCS=	License.text Markdown-Readme.text
 
 PLIST_FILES=	bin/markdown
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Markdown.pl ${PREFIX}/bin/markdown
 .if !defined(NOPORTDOCS)
