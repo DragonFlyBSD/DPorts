@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-PPI/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: textproc/p5-PPI/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	PPI
 PORTVERSION=	1.215
@@ -118,4 +118,5 @@ MAN3=	PPI.3 \
 	PPI::Transform.3 \
 	PPI::Transform::UpdateCopyright.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
