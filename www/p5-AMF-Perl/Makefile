@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-AMF-Perl/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: www/p5-AMF-Perl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	AMF-Perl
 PORTVERSION=	0.15
@@ -25,6 +25,7 @@ MAN3=		AMF::Perl.3 AMF::Perl::App::Executive.3 \
 		AMF::Perl::Sql::MysqlRecordSet.3 AMF::Perl::Util::Object.3 \
 		AMF::Perl::Util::RemotingService.3
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's/=(?==head)//g' ${WRKSRC}/lib/AMF/Perl.pm
 
