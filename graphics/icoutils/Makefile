@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: graphics/icoutils/Makefile 324215 2013-08-04 06:42:42Z az $
+# $FreeBSD: graphics/icoutils/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	icoutils
 PORTVERSION=	0.31.0
@@ -29,6 +29,7 @@ MAN1=		icotool.1 wrestool.1
 PLIST_FILES=	bin/icotool \
 		bin/wrestool
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRESSCRIPTS}
