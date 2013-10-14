@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: graphics/libart_lgpl/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: graphics/libart_lgpl/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libart_lgpl
 PORTVERSION=	2.3.21
