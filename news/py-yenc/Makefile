@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-yenc
-# Date created:				24 Aug 2006
-# Whom:					Alexander Botero-Lowry <alex@foxybanana.com>
-#
-# $FreeBSD: ports/news/py-yenc/Makefile,v 1.8 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
+# $FreeBSD: news/py-yenc/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	yenc
 PORTVERSION=	0.3
@@ -18,4 +14,5 @@ COMMENT=	A yenc decoding module for Python in C
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
