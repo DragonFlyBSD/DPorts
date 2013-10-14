@@ -1,5 +1,5 @@
-# Created By: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-subversion/Makefile 326581 2013-09-07 08:23:45Z az $
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/p5-subversion/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PKGNAMEPREFIX=	p5-
 
@@ -29,6 +29,7 @@ MAN3=		SVN::Base.3 \
 
 SVN_BUILD_BINDINGS=yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 CATEGORIES+=	perl5
