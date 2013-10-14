@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gnucap/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: cad/gnucap/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	gnucap
 PORTVERSION=	2009.12.07
@@ -25,6 +25,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/gnucap bin/gnucap-modelgen
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
