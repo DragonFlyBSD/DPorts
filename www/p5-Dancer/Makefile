@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Dancer/Makefile 324534 2013-08-10 14:39:06Z kuriyama $
+# $FreeBSD: www/p5-Dancer/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Dancer
 PORTVERSION=	1.3117
@@ -38,6 +38,7 @@ TEST_DEPENDS=	\
 OPTIONS_DEFINE=	YAML
 OPTIONS_DEFAULT=	YAML
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MYAML}
