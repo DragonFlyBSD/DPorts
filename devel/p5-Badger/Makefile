@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Badger/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Badger/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Badger
 PORTVERSION=	0.09
@@ -64,4 +64,5 @@ MAN3=	Badger.3 \
 	Badger::Hub::Badger.3 \
 	Badger::URL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
