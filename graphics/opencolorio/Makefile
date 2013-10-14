@@ -1,5 +1,5 @@
 # Created by: Shane Ambler <FreeBSD@Shaneware.biz>
-# $FreeBSD: graphics/opencolorio/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/opencolorio/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME?=	opencolorio
 PORTVERSION=	1.0.8
@@ -38,6 +38,7 @@ OPTIONS_DEFINE=		DOCS SSE
 OPTIONS_DEFAULT=	DOCS SSE
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MDOCS) || defined(OCIO_TOOLS)
