@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/imageviewer/Makefile,v 1.20 2012/11/17 05:58:09 svnexp Exp $
+# $FreeBSD: graphics/imageviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imageviewer
 PORTVERSION=	0.6.3
@@ -20,4 +20,5 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
