@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: net-im/loudmouth/Makefile 322497 2013-07-08 11:55:14Z bapt $
+# $FreeBSD: net-im/loudmouth/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	loudmouth
 PORTVERSION=	1.4.3
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=GNUTLS
 OPTIONS_RADIO=	SSL
 OPTIONS_RADIO_SSL=	GNUTLS OPENSSL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
