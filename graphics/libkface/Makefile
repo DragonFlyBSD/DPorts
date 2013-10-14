@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libkface/Makefile 325926 2013-09-01 22:46:10Z bapt $
+# $FreeBSD: graphics/libkface/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libkface
 PORTVERSION=	${DIGIKAM_VER}
@@ -7,6 +7,7 @@ CATEGORIES=	graphics kde
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE4 library for face recognition
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../digikam-kde4/Makefile.common"
 
 USES+=		pkgconfig
