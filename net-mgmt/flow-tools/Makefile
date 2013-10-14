@@ -1,5 +1,5 @@
 # Created by: @BABOLO <.@babolo.ru>
-# $FreeBSD: net-mgmt/flow-tools/Makefile 319210 2013-05-27 11:22:21Z rene $
+# $FreeBSD: net-mgmt/flow-tools/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	flow-tools
 PORTVERSION=	0.68
@@ -46,6 +46,7 @@ FLOW_CAPTURE_UID=	174
 FLOW_CAPTURE_GID=	174
 FLOW_CAPTURE_PIDDIR=	${VARDIR}/run/flow-capture
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGSQL}
