@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidle.info>
-# $FreeBSD: audio/mpc/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: audio/mpc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpc
 PORTVERSION=	0.22
@@ -17,6 +17,7 @@ OPTIONS_DEFINE=	EXAMPLES DOCS ICONV
 OPTIONS_DEFAULT=	ICONV
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
