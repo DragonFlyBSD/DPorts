@@ -1,5 +1,5 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-GDOME/Makefile 326013 2013-09-02 15:39:17Z bapt $
+# $FreeBSD: textproc/p5-XML-GDOME/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-GDOME
 PORTVERSION=	0.86
@@ -44,4 +44,5 @@ MAN3=		XML::GDOME.3 \
 		XML::GDOME::XPath::Namespace.3 \
 		XML::GDOME::XPath::Result.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
