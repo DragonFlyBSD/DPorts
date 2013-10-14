@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libXaw/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-toolkits/libXaw/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	libXaw
-PORTVERSION=	1.0.11
+PORTVERSION=	1.0.12
 PORTEPOCH=	2
 CATEGORIES=	x11-toolkits
 
@@ -11,9 +11,10 @@ COMMENT=	X Athena Widgets library
 
 XORG_CAT=	lib
 USE_XORG=	printproto:both x11 xau xext xextproto xmu xp xpm xproto:both xt
-USE_GMAKE=	yes
+USES=		gmake
 CONFIGURE_ARGS+=--without-xmlto
 
 MAN3=		Xaw.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
