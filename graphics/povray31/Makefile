@@ -1,5 +1,5 @@
 # Created by: paulo@isr.uc.pt
-# $FreeBSD: graphics/povray31/Makefile 318829 2013-05-23 02:35:26Z jgh $
+# $FreeBSD: graphics/povray31/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	povray
 PORTVERSION=	3.1g
@@ -31,6 +31,7 @@ LATEST_LINK=	povray31
 #   no UNIX source files for POV-Ray 3.1.
 #
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
