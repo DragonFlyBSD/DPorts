@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/scintilla/Makefile 327053 2013-09-12 11:34:39Z madpilot $
+# $FreeBSD: x11-toolkits/scintilla/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	scintilla
 PORTVERSION=	3.3.5
@@ -20,6 +20,7 @@ USE_GNOME=	gtk20
 MAKE_ENV+=	LDFLAGS="${LDFLAGS}"
 CFLAGS+=	-DPIC ${PICFLAG}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
