@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-FieldHash/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: devel/p5-Hash-FieldHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Hash-FieldHash
 PORTVERSION=	0.14
@@ -20,4 +20,5 @@ USES=		perl5
 
 MAN3=		Hash::FieldHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
