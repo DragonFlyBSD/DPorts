@@ -1,5 +1,5 @@
 # Created by: Samuel Tardieu <sam@rfc1149.net>
-# $FreeBSD: devel/gputils/Makefile 318532 2013-05-19 14:50:45Z tijl $
+# $FreeBSD: devel/gputils/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gputils
 PORTVERSION=	1.2.0
@@ -20,4 +20,5 @@ MANLANG=	"" fr
 MAN1=		gpasm.1 gpdasm.1 gplib.1 gplink.1 gpstrip.1 gputils.1 \
 		gpvc.1 gpvo.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
