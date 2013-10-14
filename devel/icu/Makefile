@@ -1,5 +1,5 @@
 # Created by: dwm
-# $FreeBSD: devel/icu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/icu/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	icu
 PORTVERSION=	50.1.2
@@ -55,6 +55,7 @@ MAN8+=	gensprep.8
 ICUMAJOR=	${PORTVERSION:C/\..*//}
 PLIST_SUB+=	ICUMAJOR=${ICUMAJOR} ICUVER=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "arm"
