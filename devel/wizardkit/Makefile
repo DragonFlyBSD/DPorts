@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/wizardkit/Makefile,v 1.9 2012/11/17 05:57:06 svnexp Exp $
+# $FreeBSD: devel/wizardkit/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	wizardkit
 PORTVERSION=	0.1
@@ -17,4 +17,5 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
