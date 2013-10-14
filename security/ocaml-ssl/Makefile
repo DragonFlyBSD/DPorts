@@ -1,8 +1,5 @@
-# New ports collection makefile for: ocaml-ssl
-# Date created: March 14, 2007
-# Whom: Jaap Boender <jaapb@kerguelen.org>
-#
-# $FreeBSD: ports/security/ocaml-ssl/Makefile,v 1.10 2012/11/17 06:01:08 svnexp Exp $
+# Created by: Jaap Boender <jaapb@kerguelen.org>
+# $FreeBSD: security/ocaml-ssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ssl
 PORTVERSION=	0.4.6
@@ -32,6 +29,7 @@ ALL_TARGET=	all doc
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
