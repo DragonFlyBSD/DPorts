@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Params-Check/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Params-Check/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Params-Check
 PORTVERSION=	0.38
@@ -19,6 +19,7 @@ USE_PERL5=	configure
 MAN3=		Params::Check.3
 PORTDOCS=	CHANGES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
