@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pyproj
-# Date created:		Feb 8, 2007
-# Whom:			TAOKA Fumiyoshi
-#
-# $FreeBSD: ports/graphics/py-pyproj/Makefile,v 1.10 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: TAOKA Fumiyoshi
+# $FreeBSD: graphics/py-pyproj/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pyproj
 PORTVERSION=	1.8.8
@@ -22,6 +18,7 @@ PORTDOCS=	Changelog README README.html LICENSE_proj4
 PORTEXAMPLES=	datum_shift.py geodtest.py sample.out \
 		test.py test2.py test_transform.py
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
