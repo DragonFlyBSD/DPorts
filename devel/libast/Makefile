@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: devel/libast/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/libast/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libast
 PORTVERSION=	0.7
@@ -21,6 +21,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_MMX) && (${ARCH} == "i386")
