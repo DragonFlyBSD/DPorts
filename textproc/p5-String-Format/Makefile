@@ -1,5 +1,5 @@
 # Created by: Matt Mills <matt_mills@btopenworld.com>
-# $FreeBSD: textproc/p5-String-Format/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-String-Format/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	String-Format
 PORTVERSION=	1.17
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		String::Format.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
