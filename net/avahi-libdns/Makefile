@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-libdns/Makefile 323006 2013-07-14 21:17:21Z kwm $
+# $FreeBSD: net/avahi-libdns/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	net
@@ -21,4 +21,5 @@ AVAHI_PKGCONFIG=avahi-compat-libdns_sd.pc
 
 CONFLICTS=	mDNSResponder-[0-9]*
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
