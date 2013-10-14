@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xwud/Makefile,v 1.5 2013/02/04 05:22:04 svnexp Exp $
+# $FreeBSD: x11/xwud/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xwud
 PORTVERSION=	1.0.4
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xwud
 
 MAN1=		xwud.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
