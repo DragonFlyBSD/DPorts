@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: graphics/p5-GD-TextUtil/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-GD-TextUtil/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GD-TextUtil
 PORTVERSION=	0.86
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		GD::Text.3 GD::Text::Wrap.3 GD::Text::Align.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
