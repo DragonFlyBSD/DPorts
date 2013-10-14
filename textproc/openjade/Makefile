@@ -1,9 +1,5 @@
-# New ports collection makefile for:	OpenJade
-# Date created:		May 19, 2000
-# Whom:			kuriyama
-#
-# $FreeBSD: textproc/openjade/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: kuriyama
+# $FreeBSD: textproc/openjade/Makefile 329862 2013-10-09 06:03:46Z bapt $
 
 PORTNAME=	openjade
 PORTVERSION=	1.3.3p1
@@ -18,11 +14,8 @@ COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 LIB_DEPENDS=	osp.5:${PORTSDIR}/textproc/opensp
 RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr
 
-USE_GCC=	any
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
-USES=		gettext
+USES=		gettext gmake perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-default-catalog=${PREFIX}/share/sgml/catalog \
 		--datadir=${DATADIR}
@@ -36,6 +29,7 @@ XMLCATMGR=	${LOCALBASE}/bin/xmlcatmgr
 MAN1=		openjade.1
 DATADIR=	${PREFIX}/share/sgml/openjade
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|<iostream.h>|<iostream>|' ${WRKSRC}/style/MultiLineInlineNote.cxx
