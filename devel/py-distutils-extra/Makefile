@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/py-distutils-extra/Makefile 315997 2013-04-17 17:40:23Z sunpoet $
+# $FreeBSD: devel/py-distutils-extra/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	distutils-extra
 PORTVERSION=	2.37
@@ -21,6 +21,7 @@ PYDISTUTILS_NOEGGINFO=	yes
 
 PLIST_SUB=	PYTHON_SUFFIX=${PYTHON_SUFFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
