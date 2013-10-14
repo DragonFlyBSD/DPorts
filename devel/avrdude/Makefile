@@ -1,5 +1,5 @@
 # Created by: Brian Dean <bsd@FreeBSD.org>
-# $FreeBSD: devel/avrdude/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: devel/avrdude/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	avrdude
 PORTVERSION=	5.11
@@ -20,4 +20,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
