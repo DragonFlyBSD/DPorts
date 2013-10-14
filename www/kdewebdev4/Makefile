@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/kdewebdev4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/kdewebdev4/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	kdewebdev
 PORTVERSION=	${KDE4_VERSION}
@@ -24,4 +24,5 @@ USE_QT4=	dbus porting_build \
 		qmake_build moc_build rcc_build uic_build uic3_build
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
