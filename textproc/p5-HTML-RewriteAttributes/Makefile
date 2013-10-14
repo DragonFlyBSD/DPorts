@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: textproc/p5-HTML-RewriteAttributes/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-HTML-RewriteAttributes/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-RewriteAttributes
 PORTVERSION=	0.05
@@ -32,4 +31,5 @@ PLIST_DIRSTRY=	%%SITE_PERL%%/HTML/RewriteAttributes \
 			%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/RewriteAttributes \
 			%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
