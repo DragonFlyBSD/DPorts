@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Log4perl/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Log-Log4perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Log4perl
 PORTVERSION=	1.42
@@ -68,4 +68,5 @@ MAN3=		Log::Log4perl.3 \
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
