@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: graphics/lensfun/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/lensfun/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lensfun
 PORTVERSION=	0.2.7
@@ -40,6 +40,7 @@ post-patch: .SILENT
 		${WRKSRC}/build/tibs/compiler/gcc.mak
 	${REINPLACE_CMD} -e '/GROUPS/s| DOCS||' ${WRKSRC}/build/tibs/rules.mak
 
+NO_STAGE=	yes
 post-install:
 	${LN} -sf lib${PORTNAME}.so \
 		${PREFIX}/lib/lib${PORTNAME}.so.${LIBVERSION}
