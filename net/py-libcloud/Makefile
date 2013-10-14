@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/py-libcloud/Makefile 326419 2013-09-05 17:11:50Z novel $
+# $FreeBSD: net/py-libcloud/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libcloud
 PORTVERSION=	0.13.1
@@ -21,6 +21,7 @@ USE_PYDISTUTILS=yes
 
 PYDISTUTILS_EGGINFO=	apache_${PORTNAME}-${PORTVERSION}-py${PYTHON_VER}.egg-info
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/libcloud/test ${WRKSRC}/test # no need to install tests
 	@${FIND} ${WRKSRC} -name "*.rej" -delete
