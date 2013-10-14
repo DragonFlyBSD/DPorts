@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/p5-Imager/Makefile 325138 2013-08-21 14:19:04Z mat $
+# $FreeBSD: graphics/p5-Imager/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Imager
 PORTVERSION=	0.97
@@ -82,4 +82,5 @@ MAN3=		Imager.3 \
 		Imager::interface.3 \
 		Imager::regmach.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
