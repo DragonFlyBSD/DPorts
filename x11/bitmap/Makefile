@@ -1,4 +1,4 @@
-# $FreeBSD: x11/bitmap/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/bitmap/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	bitmap
 PORTVERSION=	1.0.7
@@ -11,4 +11,5 @@ XORG_CAT=	app
 USE_XORG=	x11 xaw xbitmaps xmu xproto
 MAN1=		atobm.1 bitmap.1 bmtoa.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
