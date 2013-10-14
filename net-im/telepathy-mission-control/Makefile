@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-mission-control/Makefile 326035 2013-09-02 17:06:54Z bapt $
+# $FreeBSD: net-im/telepathy-mission-control/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.23 2012/08/17 19:06:46 kwm Exp $
 
 PORTNAME=	telepathy-mission-control
@@ -27,6 +27,7 @@ MAN8=		mission-control-5.8
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/gtk-doc/html|/${DOCSDIR}|' \
 		${WRKSRC}/configure
