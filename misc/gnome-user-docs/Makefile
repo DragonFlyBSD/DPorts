@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: misc/gnome-user-docs/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: misc/gnome-user-docs/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/misc/gnome-user-docs/Makefile,v 1.62 2010/09/30 06:07:30 kwm Exp $
 
 PORTNAME=	gnome-user-docs
@@ -21,4 +21,5 @@ GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier gnomedocutils
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
