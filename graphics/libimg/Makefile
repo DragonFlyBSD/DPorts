@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson
-# $FreeBSD: graphics/libimg/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/libimg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libimg
 PORTVERSION=	1.2.4
@@ -29,6 +29,7 @@ USE_TK=		84+
 USE_TK_BUILD=	${USE_TK}
 MAKE_ENV+=	TCL_VER=${TCL_VER}
 
+NO_STAGE=	yes
 # We don't need the bundled libraries:
 EXTRACT_AFTER_ARGS=	--exclude '*/libz/*' \
 		--exclude '*/compat/*' --exclude '*/libtiff/*' \
