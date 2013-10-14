@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/gdome2/Makefile 325990 2013-09-02 13:16:00Z bapt $
+# $FreeBSD: textproc/gdome2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	gdome2
 PORTVERSION=	0.8.1
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 
 MAN1=	gdome-config.1
 
+NO_STAGE=	yes
 post-patch:
 .ifndef(NOPORTDOCS)
 	@${REINPLACE_CMD} -E -e \
