@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-ParseWords
 PORTVERSION=	3.29
@@ -22,4 +21,5 @@ PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Text/ParseWords
 PLIST_DIRSTRY=	%%SITE_PERL%%/Text \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Text
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
