@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-Color-Scheme/Makefile 326756 2013-09-08 16:20:06Z tobez $
+# $FreeBSD: graphics/p5-Color-Scheme/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Color-Scheme
 PORTVERSION=	1.05
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Color::Scheme.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
