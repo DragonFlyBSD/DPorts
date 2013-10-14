@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.deferredimport
-# Date created:				Nov 12, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.deferredimport/Makefile,v 1.3 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.deferredimport/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.deferredimport
 PORTVERSION=	3.5.3
@@ -21,5 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.proxy>=0:${PORTSDIR}/net/py-zope.proxy
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
