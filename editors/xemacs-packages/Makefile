@@ -1,9 +1,5 @@
-# New ports collection makefile for:	X-Emacs Packages
-# Date created:		24 Apr 1999
-# Whom:			Michael Elbel (me@FreeBSD.org)
-#
-# $FreeBSD: ports/editors/xemacs-packages/Makefile,v 1.63 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: Michael Elbel (me@FreeBSD.org)
+# $FreeBSD: editors/xemacs-packages/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	xemacs-packages
 PORTVERSION=	14.2
@@ -137,6 +133,7 @@ PACKAGES_SUBDIR=	xemacs-packages
 
 FIXME=	gnus/binhex.elc gnus/uudecode.elc
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 .for f in ${DISTFILES}
