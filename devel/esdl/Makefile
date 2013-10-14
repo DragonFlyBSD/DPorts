@@ -1,4 +1,4 @@
-# $FreeBSD: devel/esdl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/esdl/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	esdl
 PORTVERSION=	1.0.1
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=SDL_TTF SDL_IMAGE
 SDL_TTF_DESC=	SDL_ttf support
 SDL_IMAGE_DESC=	SDL_image support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MSDL_TTF}
