@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-toolkits/rep-gtk2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-toolkits/rep-gtk2/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	rep-gtk2
 PORTVERSION=	0.90.8.1
@@ -25,4 +25,5 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
