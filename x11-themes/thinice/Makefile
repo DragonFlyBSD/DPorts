@@ -1,9 +1,5 @@
-# New ports collection makefile for:	thinice
-# Date Created:				1 June 2000
-# Whom:				 	Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/thinice/Makefile,v 1.26 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: x11-themes/thinice/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	thinice
 PORTVERSION=	1.0.4
@@ -18,4 +14,5 @@ COMMENT=	A clean-looking GTK Theme Engine
 USE_GNOME=	gtk12
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
