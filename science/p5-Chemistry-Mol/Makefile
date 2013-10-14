@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Chemistry-Mol/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: science/p5-Chemistry-Mol/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Chemistry-Mol
 PORTVERSION=	0.37
@@ -21,4 +21,5 @@ MAN3=	Chemistry::Atom.3 Chemistry::Bond.3 \
 	Chemistry::Tutorial.3 Chemistry::File::Dumper.3 \
 	Chemistry::Mol.3 Chemistry::File::Formula.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
