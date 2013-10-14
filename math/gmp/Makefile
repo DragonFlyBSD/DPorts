@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: math/gmp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/gmp/Makefile 329504 2013-10-05 21:04:40Z ale $
 
 PORTNAME=	gmp
-PORTVERSION=	5.1.2
+PORTVERSION=	5.1.3
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gmp
@@ -15,7 +15,7 @@ LICENSE=	LGPL3
 OPTIONS_DEFINE=	CPU_OPTS
 CPU_OPTS_DESC=	Enable assembly optimizations for your CPU
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	no # needed, since the following line would add it
 USE_AUTOTOOLS=	libtool
