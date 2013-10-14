@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/py-cups/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: print/py-cups/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	cups
 PORTVERSION=	1.9.63
@@ -23,6 +23,7 @@ USE_PYTHON=	-2.7
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/cups.so
 PYDISTUTILS_EGGINFO=	py${PORTNAME}-${PORTVERSION}-py${PYTHON_VER}.egg-info
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
