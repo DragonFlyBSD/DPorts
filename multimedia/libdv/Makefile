@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libdv/Makefile 320129 2013-06-06 21:56:18Z bapt $
+# $FreeBSD: multimedia/libdv/Makefile 328064 2013-09-23 21:42:46Z bapt $
 
 PORTNAME=	libdv
 PORTVERSION=	1.0.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
@@ -12,8 +12,8 @@ COMMENT=	Quasar DV codec (libdv): software codec for DV video encoding format
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
-		popt.0:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpopt.so:${PORTSDIR}/devel/popt
 
 USES=	pkgconfig pathfix
 GNU_CONFIGURE=	yes
@@ -22,8 +22,6 @@ CONFIGURE_ENV=	PKG_CONFIG_PATH=${PKG_CONFIG_PATH}:${LOCALBASE}/libdata/pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 USE_LDCONFIG=	yes
-
-MAN1=	dubdv.1 dvconnect.1 encodedv.1
 
 PORTDOCS=	AUTHORS COPYING COPYRIGHT ChangeLog NEWS README \
 		README.dvconnect README.encoder TODO
@@ -60,9 +58,9 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for doc in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
