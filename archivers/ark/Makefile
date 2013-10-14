@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: archivers/ark/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: archivers/ark/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	ark
 PORTVERSION=	${KDE4_VERSION}
@@ -15,6 +15,7 @@ LIB_DEPENDS=	qjson.0:${PORTSDIR}/devel/qjson
 
 CONFLICTS_INSTALL=	kdeutils-4.[0-7].*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_KDE4=	kdeprefix kdehier automoc4 kdelibs libkonq
 USES=		cmake:outsource
