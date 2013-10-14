@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: ports/java/jrosetta/Makefile,v 1.8 2012/12/13 08:01:56 svnexp Exp $
+# $FreeBSD: java/jrosetta/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jrosetta
 PORTVERSION=	1.0.4
@@ -22,6 +22,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/jrosetta-api.jar \
 OPTIONS_DEFINE=	COMPILE
 COMPILE_DESC=	Download and compile source instead of binaries
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCOMPILE}
