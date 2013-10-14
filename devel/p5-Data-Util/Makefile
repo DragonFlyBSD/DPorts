@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Util/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-Data-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Util
 PORTVERSION=	0.62
@@ -26,4 +26,5 @@ MAN3=		Data::Util.3 \
 		Data::Util::JA.3 \
 		Data::Util::PurePerl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
