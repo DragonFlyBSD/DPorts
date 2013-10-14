@@ -1,4 +1,4 @@
-# $FreeBSD: ports/accessibility/ruby-atk/Makefile,v 1.22 2012/12/31 17:19:58 svnexp Exp $
+# $FreeBSD: accessibility/ruby-atk/Makefile 327684 2013-09-20 11:02:49Z bapt $
 #   $MCom: ports/accessibility/ruby-atk/Makefile,v 1.2 2005/10/17 07:05:39 mezz Exp $
 
 PORTNAME=	atk
@@ -17,6 +17,7 @@ BUILD_DEPENDS+=	rubygem-pkg-config>=1.0.7:${PORTSDIR}/devel/rubygem-pkg-config
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR:S/${PREFIX}/${LOCALBASE}/}/glib2.so:${PORTSDIR}/devel/ruby-glib2 \
 		rubygem-pkg-config>=1.0.7:${PORTSDIR}/devel/rubygem-pkg-config
 
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_GNOME=	atk
 USE_RUBY_EXTCONF=	yes
