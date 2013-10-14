@@ -1,5 +1,5 @@
 # Created by: Kuei-Feng Li <thinker@branda.to>
-# $FreeBSD: www/trac/Makefile 325763 2013-08-31 01:22:45Z dryice $
+# $FreeBSD: www/trac/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	trac
 PORTVERSION=	1.0.1
@@ -32,6 +32,7 @@ PYDISTUTILS_NOEGGINFO=	yes
 USE_RC_SUBR=	tracd
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSILVERCITY}
