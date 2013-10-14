@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBI
 PORTVERSION=	1.628
@@ -73,6 +73,7 @@ MAN3=		Bundle::DBI.3 \
 		Win32::DBIODBC.3
 PORTDOCS=	Changes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPROXY}
