@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rcov
-# Date created:				15 April 2008
-# Whom:					Steven Kreuzer
-#
-# $FreeBSD: ports/devel/rubygem-rcov/Makefile,v 1.8 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Steven Kreuzer
+# $FreeBSD: devel/rubygem-rcov/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rcov
 PORTVERSION=	0.9.11
@@ -18,4 +14,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rcov
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
