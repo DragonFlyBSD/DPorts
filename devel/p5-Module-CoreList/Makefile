@@ -1,8 +1,8 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-Module-CoreList/Makefile 325117 2013-08-21 12:43:50Z mat $
+# $FreeBSD: devel/p5-Module-CoreList/Makefile 328522 2013-09-27 20:57:52Z sunpoet $
 
 PORTNAME=	Module-CoreList
-PORTVERSION=	2.97
+PORTVERSION=	2.99
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,12 +16,7 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::CoreList.3 Module::CoreList::Utils.3
-
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
-
-regression-test: build
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
 .include <bsd.port.mk>
