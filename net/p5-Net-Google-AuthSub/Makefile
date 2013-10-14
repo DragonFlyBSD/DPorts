@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Google-AuthSub
-# Date created:		2008-02-21
-# Whom:			Felippe de Meirelles Motta <lippemail@gmail.com>
-#
-# $FreeBSD: net/p5-Net-Google-AuthSub/Makefile 326526 2013-09-06 17:02:34Z az $
-#
+# Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
+# $FreeBSD: net/p5-Net-Google-AuthSub/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Google-AuthSub
 PORTVERSION=	0.5
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 MAN3=		Net::Google::AuthSub::Response.3 \
 		Net::Google::AuthSub.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
