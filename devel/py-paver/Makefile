@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-paver/Makefile 322941 2013-07-13 16:03:23Z wg $
+# $FreeBSD: devel/py-paver/Makefile 328313 2013-09-25 20:19:42Z wg $
 
 PORTNAME=	paver
 PORTVERSION=	1.2.1
