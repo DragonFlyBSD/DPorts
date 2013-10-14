@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-Data-Throttler/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-Data-Throttler/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Throttler
 PORTVERSION=	0.06
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::Throttler.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
