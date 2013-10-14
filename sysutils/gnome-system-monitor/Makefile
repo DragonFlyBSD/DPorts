@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-system-monitor/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: sysutils/gnome-system-monitor/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.147 2012/10/02 15:10:10 kwm Exp $
 
 PORTNAME=	gnome-system-monitor
@@ -30,6 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lutil
 
 GCONF_SCHEMAS=	gnome-system-monitor.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<glib/gtypes.h>|<glib.h>|g' \
 		-e 's|<glib/gmacros.h>|<glib.h>|g' \
