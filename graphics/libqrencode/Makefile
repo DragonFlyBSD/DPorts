@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/libqrencode/Makefile 324657 2013-08-13 11:38:53Z vanilla $
+# $FreeBSD: graphics/libqrencode/Makefile 328162 2013-09-24 16:38:37Z vanilla $
 
 PORTNAME=	libqrencode
 PORTVERSION=	3.4.3
@@ -19,14 +19,13 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 
-MAN1=		qrencode.1
-
 PLIST_FILES=	bin/qrencode \
 		include/qrencode.h \
 		lib/libqrencode.la \
 		lib/libqrencode.so \
 		lib/libqrencode.so.3 \
-		libdata/pkgconfig/libqrencode.pc
+		libdata/pkgconfig/libqrencode.pc \
+		man/man1/qrencode.1.gz
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,libpng12,libpng,' ${WRKSRC}/configure
