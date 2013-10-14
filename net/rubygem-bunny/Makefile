@@ -1,5 +1,5 @@
 # Created by: renchap@cocoa-x.com
-# $FreeBSD: net/rubygem-bunny/Makefile 323791 2013-07-27 14:33:52Z swills $
+# $FreeBSD: net/rubygem-bunny/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bunny
 PORTVERSION=	0.9.7
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
