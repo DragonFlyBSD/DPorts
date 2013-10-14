@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: www/aria2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	aria2
 PORTVERSION=	1.17.1
@@ -37,6 +37,7 @@ PLIST_DIRSTRY=	man/ru/man1 \
 		man/pt/man1 \
 		man/pt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCA_BUNDLE}
