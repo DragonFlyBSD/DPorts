@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mez_xml
-# Date created:		2008-02-27
-# Whom:			Thinker K.F. Li <thinker@branda.to>
-#
-# $FreeBSD: ports/devel/py-mez_xml/Makefile,v 1.4 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: Thinker K.F. Li <thinker@branda.to>
+# $FreeBSD: devel/py-mez_xml/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mez_xml
 PORTVERSION=	0.4
@@ -17,4 +13,5 @@ COMMENT=	A simple template engine for Python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
