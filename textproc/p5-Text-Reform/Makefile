@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: textproc/p5-Text-Reform/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-Reform/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Reform
 PORTVERSION=	1.20
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Reform.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
