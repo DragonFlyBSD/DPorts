@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Data-Serializer/Makefile 325693 2013-08-30 13:23:29Z culot $
+# $FreeBSD: devel/p5-Data-Serializer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Serializer
 PORTVERSION=	0.60
@@ -35,4 +35,5 @@ MAN3=		Data::Serializer.3 Data::Serializer::Bencode.3 \
 		Data::Serializer::XML::Simple.3 Data::Serializer::YAML.3 \
 		Data::Serializer::YAML::Syck.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
