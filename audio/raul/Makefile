@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/raul/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
+# $FreeBSD: audio/raul/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	raul
 PORTVERSION=	0.8.0
@@ -16,6 +16,7 @@ LICENSE_COMB=	dual
 LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	glib20
 USE_PYTHON_BUILD=yes
