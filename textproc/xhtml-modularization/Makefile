@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xhtml-modularization
-# Date created:		Dec 2, 2003
-# Whom:			nectar
-#
-# $FreeBSD: ports/textproc/xhtml-modularization/Makefile,v 1.6 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: nectar
+# $FreeBSD: textproc/xhtml-modularization/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xhtml-modularization
 PORTVERSION=	1.0.${RECDATE}
@@ -46,6 +42,7 @@ SGMLCAT_RM=	${XMLCATMGR} -sc ${SGMLCAT} remove \
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 CATALOG_PORTS_XML=	${PREFIX}/share/xml/catalog.ports
 
+NO_STAGE=	yes
 .include "${.CURDIR}/contents.inc"
 
 # I'd much rather do this stuff in line with the actual installation
