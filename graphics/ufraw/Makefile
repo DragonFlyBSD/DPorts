@@ -1,5 +1,5 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
-# $FreeBSD: graphics/ufraw/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: graphics/ufraw/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ufraw
 PORTVERSION=	0.19.2
@@ -35,6 +35,7 @@ DST_DESC=	Use local time for timestamps
 FITS_DESC=	FITS output support
 GIMP_DESC=	Install GIMP plugin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCONTRAST}
