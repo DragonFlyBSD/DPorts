@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-jslib
-# Date created:			10 October 2010
-# Whom:				Lapo Luchini <lapo@lapo.it>
-#
-# $FreeBSD: ports/www/xpi-jslib/Makefile,v 1.6 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Lapo Luchini <lapo@lapo.it>
+# $FreeBSD: www/xpi-jslib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jslib
 PORTVERSION=	0.1.371
@@ -20,6 +16,7 @@ XPI_ID=		{DF8E5247-8E0A-4de6-B393-0735A39DFD80}
 XPI_FILES=	application.ini chrome/jslib.jar chrome/jsliblive/contents.rdf chrome/jsliblive/jsliblive.xul chrome.manifest components/jslib-dom.js components/jslib-service.js components/jslib.xpt defaults/preferences/prefs.js install.js install.rdf
 XPI_DIRS=	chrome/jsliblive chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -Ee '/Suite/,/Flock/s/>2[.]0[.][*]</>2.4.*</' ${WRKSRC}/install.rdf
 		${RM} -f ${WRKSRC}/install.rdf.bak
