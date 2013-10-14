@@ -1,5 +1,5 @@
 # Created by: John Marino <draco@marino.st>
-# $FreeBSD: textproc/adabrowse/Makefile 323390 2013-07-21 14:22:24Z marino $
+# $FreeBSD: textproc/adabrowse/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	adabrowse
 PORTVERSION=	4.0.3
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 MAKE_ENV=	ADA_INCLUDE_PATH=${LOCALBASE}/lib/asis
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/adabrowse ${PREFIX}/bin/adabrowse
 
