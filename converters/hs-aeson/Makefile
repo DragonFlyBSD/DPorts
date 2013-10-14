@@ -1,4 +1,4 @@
-# $FreeBSD: converters/hs-aeson/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: converters/hs-aeson/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	aeson
 PORTVERSION=	0.6.1.0
@@ -14,5 +14,6 @@ USE_CABAL=	attoparsec>=0.8.6.1 blaze-builder>=0.2.1.4 dlist>=0.2 \
 		hashable>=1.1.2.0 mtl syb text>=0.11.1.0 \
 		unordered-containers>=0.1.3.0 vector>=0.7.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
