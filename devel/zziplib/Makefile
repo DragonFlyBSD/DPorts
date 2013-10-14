@@ -1,7 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-#
-# $FreeBSD: devel/zziplib/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: devel/zziplib/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	zziplib
 PORTVERSION=	0.13.62
@@ -53,6 +51,7 @@ MAN3=		__zzip_fetch_disk_trailer.3 __zzip_parse_root_directory.3 __zzip_try_open
 
 PORTSCOUT=	limit:^0\.
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSDL}
