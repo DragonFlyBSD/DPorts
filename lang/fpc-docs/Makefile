@@ -1,5 +1,5 @@
-# Created by:	John Merryweather Cooper
-# $FreeBSD: lang/fpc-docs/Makefile 314989 2013-03-23 05:25:05Z acm $
+# Created by: John Merryweather Cooper
+# $FreeBSD: lang/fpc-docs/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	docs
 PORTVERSION=	2.6.2
@@ -24,6 +24,7 @@ DOCSDIR=	${PREFIX}/share/doc/fpdocs-${PORTVERSION}
 PORTDOCS=	chart.pdf fcl.pdf fpdoc.pdf prog.pdf ref.pdf rtl.pdf user.pdf
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DOCSDIR}
 	@cd ${WRKDIR}/doc && \
