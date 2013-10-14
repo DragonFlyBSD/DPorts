@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-directory_watcher
-# Date created:				30 Nov 2009
-# Whom:					Ryan Steinmetz (<rpsfa@rit.edu>)
-#
-# $FreeBSD: ports/devel/rubygem-directory_watcher/Makefile,v 1.8 2012/11/17 05:56:58 svnexp Exp $
+# Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
+# $FreeBSD: devel/rubygem-directory_watcher/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	directory_watcher
 PORTVERSION=	1.4.1
@@ -18,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/dw
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
