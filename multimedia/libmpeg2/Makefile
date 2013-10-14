@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libmpeg2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/libmpeg2/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libmpeg2
 PORTVERSION=	0.5.1
@@ -23,6 +23,7 @@ PORTDOCS=	libmpeg2.txt README
 
 OPTIONS_DEFINE=	DOCS SDL X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSDL}
