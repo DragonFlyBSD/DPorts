@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-WWW-Shorten/Makefile 326640 2013-09-07 14:52:07Z lth $
+# $FreeBSD: www/p5-WWW-Shorten/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Shorten
 PORTVERSION=	3.04
@@ -33,4 +33,5 @@ MAN3=		WWW::Shorten.3 \
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
