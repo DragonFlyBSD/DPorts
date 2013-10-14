@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/py-pexpect/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/py-pexpect/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pexpect
 PORTVERSION=	2.4
@@ -14,4 +14,5 @@ COMMENT=	Pure Python Expect-like module
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
