@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gcc-aux/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: lang/gcc-aux/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
@@ -13,6 +13,7 @@ DISTFILES=	gcc-${GCC_VERSION}.tar.bz2
 MAINTAINER=	marino@FreeBSD.org
 COMMENT=	Version of GCC ${GCC_BRANCH} with full Ada support
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 
 LANGS=			c
