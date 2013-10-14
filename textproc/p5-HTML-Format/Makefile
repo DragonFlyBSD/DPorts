@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: textproc/p5-HTML-Format/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-HTML-Format/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-Format
 PORTVERSION=	2.10
@@ -29,6 +29,7 @@ MAN3=		HTML::FormatPS.3 \
 		HTML::FormatText.3 \
 		HTML::Formatter.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
