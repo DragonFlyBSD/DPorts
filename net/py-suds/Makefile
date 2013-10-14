@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-suds
-# Date created:		3 Jan 2011
-# Whom:	      		Corey Smith
-#
-# $FreeBSD: ports/net/py-suds/Makefile,v 1.2 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Corey Smith
+# $FreeBSD: net/py-suds/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	suds
 PORTVERSION=	0.4
@@ -17,4 +13,5 @@ COMMENT=	A SOAP implementation
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
