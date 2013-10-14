@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: x11/gnome-libs/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: x11/gnome-libs/Makefile 329452 2013-10-05 13:23:10Z bapt $
 #   $MCom: ports/x11/gnome-libs/Makefile,v 1.7 2007/08/04 03:51:32 marcus Exp $
 
 PORTNAME=	gnome-libs
@@ -11,6 +11,9 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT=	Libraries for GNOME, a GNU desktop environment
+
+DEPRECATED=	EOLed upstream for very long
+EXPIRATION_DATE=	2013-11-05
 
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
@@ -36,6 +39,7 @@ MAN5=		gnome-mime.5
 
 DOCSDIR=	${PREFIX}/share/doc/gnomelibs
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/gnome-config.in ${WRKSRC}/libgnome/gnome-util.c
