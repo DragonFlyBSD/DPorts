@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-base/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-base/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	base
 PORTVERSION=	1.0
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 USERS=		fido
 GROUPS=		fido
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/etc/fido ${PREFIX}/share/doc/husky
 	@${CHOWN} fido:fido ${PREFIX}/etc/fido
