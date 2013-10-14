@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/gnutls/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/gnutls/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gnutls
 PORTVERSION=	2.12.23
@@ -38,6 +38,7 @@ LZO_DESC=	LZO compression
 
 OPTIONS_DEFAULT=	LIBTASN1 CXX
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBTASN1}
