@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net/fping/Makefile 321077 2013-06-16 21:52:44Z wg $
+# $FreeBSD: net/fping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	fping
 PORTVERSION=	3.5
@@ -18,6 +18,7 @@ OPTIONS_DEFAULT=	IPV4
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--bindir="${PREFIX}/sbin"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV4}
