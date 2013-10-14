@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Proc-PID-File
-# Date created:				Apr 13 2004
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: devel/p5-Proc-PID-File/Makefile 324352 2013-08-07 13:20:32Z az $
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: devel/p5-Proc-PID-File/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Proc-PID-File
 PORTVERSION=	1.27
@@ -18,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Proc::PID::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
