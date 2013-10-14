@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/lasso/Makefile 327414 2013-09-16 16:45:35Z bapt $
+# $FreeBSD: security/lasso/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	lasso
 PORTVERSION=	2.1.1
@@ -23,6 +23,7 @@ USE_PYTHON_BUILD=	yes
 
 OPTIONS_DEFINE=	PERL PHP PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !empty(PORT_OPTIONS:MPERL)
