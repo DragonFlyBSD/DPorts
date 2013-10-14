@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Any/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-Log-Any/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Any
 PORTVERSION=	0.15
@@ -18,4 +18,5 @@ MAN3=	Log::Any.3 \
 	Log::Any::Adapter::Null.3 \
 	Log::Any::Test.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
