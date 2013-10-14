@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Data-Dump-Streamer/Makefile 325051 2013-08-20 14:14:53Z mat $
+# $FreeBSD: devel/p5-Data-Dump-Streamer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Dump-Streamer
 PORTVERSION=	2.36
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 
 MAN3=		DDS.3 Data::Dump::Streamer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
