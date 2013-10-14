@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: www/p5-HTML-FillInForm/Makefile 324985 2013-08-19 12:50:16Z culot $
+# $FreeBSD: www/p5-HTML-FillInForm/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-FillInForm
 PORTVERSION=	2.20
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::FillInForm.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
