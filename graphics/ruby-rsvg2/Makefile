@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/ruby-rsvg2/Makefile,v 1.25 2012/12/31 17:09:09 svnexp Exp $
+# $FreeBSD: graphics/ruby-rsvg2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/ruby-rsvg2/Makefile,v 1.2 2005/10/17 07:05:41 mezz Exp $
 
 PORTNAME=	rsvg2
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--with-pkg-config-dir=${LOCALBASE}/libdata/pkgconfig
 MASTERDIR=	${.CURDIR}/../../x11/ruby-gnome2
 PKGDIR=		${.CURDIR}
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 WRKSRC=		${RUBY_GNOME_WRKSRC}/rsvg2
