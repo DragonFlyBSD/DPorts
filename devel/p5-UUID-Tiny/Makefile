@@ -1,5 +1,5 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: devel/p5-UUID-Tiny/Makefile 325223 2013-08-22 18:16:42Z sunpoet $
+# $FreeBSD: devel/p5-UUID-Tiny/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	UUID-Tiny
 PORTVERSION=	1.04
@@ -15,7 +15,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		UUID::Tiny.3
 
 .include <bsd.port.mk>
