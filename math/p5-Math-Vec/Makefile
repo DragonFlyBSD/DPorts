@@ -1,4 +1,4 @@
-# $FreeBSD: math/p5-Math-Vec/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: math/p5-Math-Vec/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Vec
 PORTVERSION=	1.01
@@ -13,4 +13,5 @@ USES=		perl5
 USE_PERL5=	modbuild
 MAN3=		Math::Vec.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
