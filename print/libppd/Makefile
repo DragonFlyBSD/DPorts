@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libppd
-# Date created:         22 Apr 2005 17:00:00 CEST
-# Whom:                 e-masson@kisoft-services.com
-#
-# $FreeBSD: ports/print/libppd/Makefile,v 1.13 2012/11/17 06:00:52 svnexp Exp $
-#
+# Created by: e-masson@kisoft-services.com
+# $FreeBSD: print/libppd/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	libppd
 PORTVERSION=	0.10
@@ -25,4 +21,5 @@ MAN3=           ppd_check_option_is_marked.3 ppd_emit_to_file.3 \
 		ppd_file_free.3 ppd_file_new.3 ppd_find_choice.3 \
 		ppd_get_num_conflicts.3 ppd_get_page_length.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
