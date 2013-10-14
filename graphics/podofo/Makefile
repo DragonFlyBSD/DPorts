@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: graphics/podofo/Makefile 327014 2013-09-11 21:55:49Z madpilot $
+# $FreeBSD: graphics/podofo/Makefile 328532 2013-09-27 22:56:06Z pawel $
 
 PORTNAME=	podofo
 PORTVERSION=	0.9.2
@@ -22,15 +22,8 @@ CMAKE_ARGS=	-DPODOFO_BUILD_SHARED:BOOL=TRUE \
 		-DPODOFO_BUILD_STATIC:BOOL=FALSE \
 		-DOPENSSL_INCLUDE_DIR:PATH="${OPENSSLINC}" \
 		-DOPENSSL_LIBRARIES:PATH="${OPENSSLDIR}"
-USE_GCC=	any
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
-
-MAN1=		podofobox.1 podofocountpages.1 podofocrop.1 \
-		podofoencrypt.1 podofoimg2pdf.1 podofoimgextract.1 \
-		podofoimpose.1 podofoincrementalupdates.1 podofomerge.1 \
-		podofopages.1 podofopdfinfo.1 podofotxt2pdf.1 \
-		podofotxtextract.1 podofouncompress.1 podofoxmp.1
 
 OPTIONS_DEFINE=		IMPOSE JPEG PNG TIFF
 OPTIONS_DEFAULT=	JPEG PNG TIFF
