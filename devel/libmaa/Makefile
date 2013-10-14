@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/libmaa/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/libmaa/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libmaa
 PORTVERSION=	1.3.2
@@ -31,6 +31,7 @@ PLIST_FILES=	include/maa.h \
 		lib/libmaa.so.3
 PORTDOCS=	${DOCS:T}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
