@@ -1,5 +1,5 @@
 # Created by: darius@dons.net.au
-# $FreeBSD: ports/astro/xplanet/Makefile,v 1.57 2012/11/17 05:54:26 svnexp Exp $
+# $FreeBSD: astro/xplanet/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	xplanet
 PORTVERSION=	1.3.0
@@ -10,6 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Draw pictures of the earth textured by an image
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	xt xscrnsaver
 USE_GNOME=	#
