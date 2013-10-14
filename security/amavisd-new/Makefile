@@ -1,4 +1,4 @@
-# $FreeBSD: security/amavisd-new/Makefile 320167 2013-06-07 07:47:25Z az $
+# $FreeBSD: security/amavisd-new/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	amavisd-new
 PORTVERSION=	2.8.0
@@ -22,7 +22,8 @@ RUN_DEPENDS=	p5-Unix-Syslog>=0:${PORTSDIR}/sysutils/p5-Unix-Syslog \
 		p5-Net-Server>=0.93:${PORTSDIR}/net/p5-Net-Server \
 		p5-Mail-DKIM>=0.33:${PORTSDIR}/mail/p5-Mail-DKIM
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 NO_BUILD=	yes
 
@@ -80,6 +81,7 @@ SUB_LIST+=	AMAVISUSER=${AMAVISUSER} \
 
 PLIST_SUB+=	AMAVIS_NOP0F=${AMAVIS_NOP0F}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_RC_SUBR+=	amavisd
