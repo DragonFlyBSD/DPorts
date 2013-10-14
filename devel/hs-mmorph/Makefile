@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-mmorph/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-mmorph/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	mmorph
 PORTVERSION=	1.0.0
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	transformers>=0.2.0.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
