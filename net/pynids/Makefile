@@ -1,5 +1,5 @@
 # Created by: Corey Smith
-# $FreeBSD: net/pynids/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/pynids/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pynids
 PORTVERSION=	0.6.1
@@ -25,6 +25,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/nidsmodule.so
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LIBNET_CONFIG})
