@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Ouch/Makefile 324517 2013-08-10 14:01:27Z kuriyama $
+# $FreeBSD: devel/p5-Ouch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Ouch
 PORTVERSION=	0.0403
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=	Ouch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
