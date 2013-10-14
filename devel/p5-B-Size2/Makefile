@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-B-Size2/Makefile 324483 2013-08-10 11:47:09Z kuriyama $
+# $FreeBSD: devel/p5-B-Size2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	B-Size2
 PORTVERSION=	2.07
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 MAN3=	B::Size2.3 \
 	B::Size2::Terse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
