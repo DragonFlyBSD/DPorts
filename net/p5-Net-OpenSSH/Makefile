@@ -1,5 +1,4 @@
-# Created by: Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: net/p5-Net-OpenSSH/Makefile 324224 2013-08-04 12:39:45Z az $
+# $FreeBSD: net/p5-Net-OpenSSH/Makefile 328095 2013-09-24 06:17:05Z az $
 
 PORTNAME=	Net-OpenSSH
 PORTVERSION=	0.60
@@ -19,10 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Net::OpenSSH::Constants.3 \
-	Net::OpenSSH::ConnectionCache.3 \
-	Net::OpenSSH::OSTracer.3 \
-	Net::OpenSSH.3
 
 .include <bsd.port.mk>
