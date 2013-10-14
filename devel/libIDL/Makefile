@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libIDL/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: devel/libIDL/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/libIDL/Makefile,v 1.7 2010/04/02 17:27:42 kwm Exp $
 
 PORTNAME=	libIDL
@@ -24,4 +24,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 INFO=		libIDL2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
