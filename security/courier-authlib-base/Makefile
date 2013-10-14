@@ -1,9 +1,5 @@
-# New ports collection makefile for:	courier-authlib-base
-# Date created:				19 Apr 2005
-# Whom:					Oliver Lehmann <oliver@FreeBSD.org>
-#
-# $FreeBSD: ports/security/courier-authlib-base/Makefile,v 1.17 2012/11/17 06:01:02 svnexp Exp $
-#
+# Created by: Oliver Lehmann <oliver@FreeBSD.org>
+# $FreeBSD: security/courier-authlib-base/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PKGNAMESUFFIX=	-base
 
@@ -12,4 +8,5 @@ CATEGORIES=	security mail
 
 MASTERDIR=	${.CURDIR}/../../security/courier-authlib
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
