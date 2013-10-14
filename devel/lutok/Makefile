@@ -1,12 +1,12 @@
-# Created by: Alan Somers <asomers@freebsd.org>
-# $FreeBSD: devel/lutok/Makefile 318484 2013-05-19 04:19:15Z bdrewery $
+# Created by: Alan Somers <asomers@FreeBSD.org>
+# $FreeBSD: devel/lutok/Makefile 328410 2013-09-26 20:08:38Z eadler $
 
 PORTNAME=	lutok
 PORTVERSION=	0.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	asomers@freebsd.org
+MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Lightweight C++ API for Lua
 
 LICENSE=	BSD
@@ -18,6 +18,7 @@ USES=		pkgconfig
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--docdir=${DOCSDIR}
