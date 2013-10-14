@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Sort-Key/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Sort-Key/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sort-Key
 PORTVERSION=	1.32
@@ -20,4 +20,5 @@ MAN3=		Sort::Key.3 \
 		Sort::Key::Register.3 \
 		Sort::Key::Types.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
