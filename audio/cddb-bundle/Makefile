@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/cddb-bundle/Makefile,v 1.13 2012/11/17 05:54:29 svnexp Exp $
+# $FreeBSD: audio/cddb-bundle/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cddb
 PORTVERSION=	0.2
@@ -13,6 +13,7 @@ COMMENT=	CDDB client bundle GNUstep
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNUSTEP=	yes
 USE_GNUSTEP_BACK=	yes
