@@ -1,5 +1,5 @@
 # Created by: jaharkes
-# $FreeBSD: devel/rpc2/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/rpc2/Makefile 329190 2013-10-03 13:46:05Z bsam $
 
 PORTNAME=	rpc2
 PORTVERSION=	2.10
@@ -10,19 +10,12 @@ MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rpc2/src/ \
 		ftp://ftp.nctu.edu.tw/mirror/Coda/src/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An interprocess communication library
+COMMENT=	Interprocess communication library
 
-LIB_DEPENDS=	lwp.2:${PORTSDIR}/devel/lwp
+LIB_DEPENDS=	liblwp.so:${PORTSDIR}/devel/lwp
 
-USES=		pkgconfig perl5
-USE_GMAKE=	yes
+USES=		gmake pathfix perl5 pkgconfig
 GNU_CONFIGURE=	yes
-
 USE_LDCONFIG=	yes
-
-post-extract:
-	@${REINPLACE_CMD} -e \
-		's#(libdir)#{prefix}/libdata#g' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
