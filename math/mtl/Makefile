@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	mtl
-# Date created:			Mar 15, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/math/mtl/Makefile,v 1.12 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: math/mtl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	mtl
 DISTVERSION=	2.1.2-23.tentative
@@ -23,9 +18,11 @@ CONFIGURE_ENV=	CXXCPP="${CXXCPP}"
 CXXCPP?=	${CXX} -E
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 WRKSRC =	${WRKDIR}/${DISTNAME:R}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/gnu\*)/,/;;/{/CXX=/d; /CXX_OPTIMIZE_FLAGS=/d; \
 	s/CXXFLAGS="/&$$ac_cv_env_CXXFLAGS_value /; }' \
