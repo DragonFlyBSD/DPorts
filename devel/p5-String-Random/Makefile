@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-String-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-String-Random/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	String-Random
 PORTVERSION=	0.22
@@ -18,4 +18,5 @@ MAN3=		String::Random.3
 
 PORTSCOUT=	limit:^0\.(\d\.){,2}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
