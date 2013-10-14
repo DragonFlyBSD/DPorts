@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Spooles
-# Date created:         26 Jan 2002
-# Whom:                 Pedro Giffuni <giffunip@asme.org>
-#
-# $FreeBSD: math/spooles/Makefile 313492 2013-03-06 00:56:02Z maho $
-#
+# Created by: Pedro Giffuni <giffunip@asme.org>
+# $FreeBSD: math/spooles/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	spooles
 PORTVERSION=	2.2
@@ -42,6 +38,7 @@ PLIST_SUB+=	MPI="@comment "
 CONFLICTS=	spooles-mpich-2*
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
