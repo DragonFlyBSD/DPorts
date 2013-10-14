@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Clone/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Data-Clone/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	Data-Clone
 PORTVERSION=	0.003
@@ -14,7 +14,5 @@ TEST_DEPENDS=	p5-Test-Requires>=0.03:${PORTSDIR}/devel/p5-Test-Requires
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Data::Clone.3
 
 .include <bsd.port.mk>
