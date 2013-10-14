@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11/babl/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/babl/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	babl
 PORTVERSION=	0.1.10
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--disable-introspection
 
 OPTIONS_DEFINE=	SIMD
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSIMD}
