@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xloadimage/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/xloadimage/Makefile 328308 2013-09-25 19:25:12Z ak $
 
 PORTNAME=	xloadimage
 PORTVERSION=	4.1.21
@@ -14,9 +14,9 @@ COMMENT=	X11 Image Loading Utility
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png \
-		tiff:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libtiff.so:${PORTSDIR}/graphics/tiff
 
 CONFLICTS_INSTALL=	xli-*
 
@@ -32,10 +32,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		xloadimage.1 uufilter.1
-MLINKS=		xloadimage.1 xsetbg.1 \
-		xloadimage.1 xview.1
-
 post-patch:
 	@${CHMOD} a+rx ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|TIFFHeader|TIFFHeaderClassic|g' \
@@ -47,15 +43,16 @@ post-patch:
 		${WRKSRC}/xloadimage.man
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xloadimage ${PREFIX}/bin
-	@cd ${PREFIX}/bin && \
+	${INSTALL_PROGRAM} ${WRKSRC}/xloadimage ${STAGEDIR}${PREFIX}/bin
+	@(cd ${STAGEDIR}${PREFIX}/bin && \
 		${LN} -sf xloadimage xsetbg && \
-		${LN} -sf xloadimage xview
-	${INSTALL_PROGRAM} ${WRKSRC}/uufilter ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xloadimage.man ${MAN1PREFIX}/man/man1/xloadimage.1
-	${INSTALL_MAN} ${WRKSRC}/uufilter.man ${MAN1PREFIX}/man/man1/uufilter.1
-	${INSTALL_DATA} ${WRKSRC}/xloadimagerc ${PREFIX}/etc/xloadimagerc.sample
-	@[ -f ${PREFIX}/etc/xloadimagerc ] || ${CP} -f ${PREFIX}/etc/xloadimagerc.sample \
-                ${PREFIX}/etc/xloadimagerc
+		${LN} -sf xloadimage xview )
+	${INSTALL_PROGRAM} ${WRKSRC}/uufilter ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/uufilter.man ${STAGEDIR}${MAN1PREFIX}/man/man1/uufilter.1
+	${INSTALL_MAN} ${WRKSRC}/xloadimage.man ${STAGEDIR}${MAN1PREFIX}/man/man1/xloadimage.1
+	@(cd ${STAGEDIR}${MAN1PREFIX}/man/man1 && \
+		${LN} -sf xloadimage.1 xsetbg.1 && \
+		${LN} -sf xloadimage.1 xview.1 )
+	${INSTALL_DATA} ${WRKSRC}/xloadimagerc ${STAGEDIR}${PREFIX}/etc/xloadimagerc.sample
 
 .include <bsd.port.mk>
