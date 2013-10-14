@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: comms/p5-SMS-Send/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: comms/p5-SMS-Send/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	SMS-Send
 PORTVERSION=	1.06
@@ -25,4 +25,5 @@ MAN3=		SMS::Send.3 \
 		SMS::Send::Driver.3 \
 		SMS::Send::Test.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
