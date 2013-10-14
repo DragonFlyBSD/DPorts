@@ -1,11 +1,11 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/perltidy/Makefile 325062 2013-08-20 16:54:04Z mat $
+# $FreeBSD: devel/perltidy/Makefile 328179 2013-09-24 17:35:36Z sunpoet $
 
 PORTNAME=	perltidy
-PORTVERSION=	20130806
+PORTVERSION=	20130922
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR= Perl
+MASTER_SITE_SUBDIR=	Perl
 DISTNAME=	Perl-Tidy-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
@@ -15,8 +15,5 @@ LICENSE=	GPLv2
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN1=		perltidy.1
-MAN3=		Perl::Tidy.3
 
 .include <bsd.port.mk>
