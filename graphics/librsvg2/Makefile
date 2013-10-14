@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: graphics/librsvg2/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: graphics/librsvg2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/trunk/graphics/librsvg2/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	librsvg
@@ -30,6 +30,7 @@ CONFIGURE_ARGS=	--with-svgz \
 		--enable-gtk-theme
 MAN1=		rsvg-convert.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|GTK3_REQUIRED=3.0.0|GTK3_REQUIRED=9.90.0|g' \
 		${WRKSRC}/configure
