@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpgtx
-# Date created:			May 15, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/multimedia/mpgtx/Makefile,v 1.21 2012/11/17 05:59:51 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/mpgtx/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mpgtx
 PORTVERSION=	1.3.1
@@ -25,6 +21,7 @@ MLINKS=	mpgtx.1 mpgcat.1 \
 	mpgtx.1 mpgjoin.1 \
 	mpgtx.1 mpgsplit.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-patch:
