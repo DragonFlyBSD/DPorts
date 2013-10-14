@@ -1,5 +1,5 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: devel/bzr/Makefile 323831 2013-07-28 13:59:37Z motoyuki $
+# $FreeBSD: devel/bzr/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bzr
 PORTVERSION=	2.6.0
@@ -25,6 +25,7 @@ USES=		gettext
 
 MAN1=		bzr.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSFTP}
