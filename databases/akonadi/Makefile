@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: databases/akonadi/Makefile 323830 2013-07-28 13:58:10Z rakuco $
+# $FreeBSD: databases/akonadi/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	akonadi
 PORTVERSION=	1.10.2
@@ -40,6 +40,7 @@ SQLITE_DESC=	Enable SQLite backend
 
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
