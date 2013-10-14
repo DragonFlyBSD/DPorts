@@ -1,5 +1,5 @@
 # Created by: dgilbert@velocet.ca
-# $FreeBSD: print/gutenprint-base/Makefile 326219 2013-09-03 19:39:57Z antoine $
+# $FreeBSD: print/gutenprint-base/Makefile 327765 2013-09-20 22:43:59Z bapt $
 #    $MCom: ports/print/gutenprint-base/Makefile,v 1.8 2007/03/30 16:45:02 ahze Exp $
 
 PORTNAME?=	gutenprint
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -I${PREFIX}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -L${PREFIX}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${SLAVE_PORT}=="yes"
