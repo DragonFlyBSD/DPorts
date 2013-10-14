@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Cache/Makefile 324054 2013-07-31 14:36:21Z az $
+# $FreeBSD: misc/p5-Geo-Cache/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Geo-Cache
 PORTVERSION=	0.11
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Geo::Cache.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
