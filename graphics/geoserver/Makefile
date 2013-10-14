@@ -1,5 +1,5 @@
 # Created by: Wen heping<wenheping@gmail.com>
-# $FreeBSD: graphics/geoserver/Makefile 312628 2013-02-20 16:08:58Z fluffy $
+# $FreeBSD: graphics/geoserver/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	geoserver
 PORTVERSION=	2.1.1
@@ -26,6 +26,7 @@ PLIST_SUB=	G="${GEOSERVERDIR:S,^${PREFIX}/,,}" GTVER=2.7.2 MVER=${PORTVERSION}
 SUB_LIST=	GEOSERVERDIR="${GEOSERVERDIR}" JAVA="${JAVA}"
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$GEOSERVER_HOME|${GEOSERVERDIR}|g' \
 		-e 's|%%JAVA%%|${JAVA}|g' \
