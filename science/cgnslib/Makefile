@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/cgnslib/Makefile 322695 2013-07-10 13:40:57Z thierry $
+# $FreeBSD: science/cgnslib/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	cgnslib
 DISTVERSION=	3.1.4
@@ -28,10 +28,11 @@ SZIP_DESC=	SZIP support in HDF5
 
 OPTIONS_DEFAULT=HDF5 TESTS TOOLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHDF5}
-LIB_DEPENDS+=	hdf5.7:${PORTSDIR}/science/hdf5-18
+LIB_DEPENDS+=	libhdf5.so.7:${PORTSDIR}/science/hdf5-18
 CMAKE_ARGS+=	-DENABLE_HDF5:BOOL=TRUE -DHDF5_NEED_ZLIB:BOOL=TRUE	\
 		-DHDF5_INCLUDE_PATH:PATH="${LOCALBASE}/include"
 PLIST_SUB=	HDF5=""
@@ -50,7 +51,7 @@ TESTSBIN=	cgwrite cgread test_partial
 .endif
 
 .if ${PORT_OPTIONS:MTOOLS}
-USE_TK=		yes
+USES+=		tk
 USE_GL=		gl glu
 USE_XORG=	xmu
 CMAKE_ARGS+=	-DBUILD_CGNSTOOLS:BOOL=TRUE			\
