@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-designer/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-designer/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	designer
 DISTVERSION=	${QT4_VERSION}
@@ -44,6 +44,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|^TARGET.*|TARGET=designer-qt4|g' \
 		${BUILD_WRKSRC}/src/${PORTNAME}/${PORTNAME}.pro
