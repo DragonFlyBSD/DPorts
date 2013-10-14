@@ -1,5 +1,5 @@
 # Created by: Jesse van den Kieboom <troplosti@orcaweb.cjb.net>
-# $FreeBSD: sysutils/libgksu/Makefile 319154 2013-05-27 05:38:11Z bsam $
+# $FreeBSD: sysutils/libgksu/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	libgksu
 PORTVERSION=	2.0.12
@@ -25,4 +25,5 @@ GCONF_SCHEMAS=	gksu.schemas
 USE_GMAKE=	yes
 MAN1=		gksu-properties.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
