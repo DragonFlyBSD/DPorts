@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Class-Unload/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Unload/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Unload
 PORTVERSION=	0.08
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Unload.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
