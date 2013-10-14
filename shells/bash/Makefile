@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: shells/bash/Makefile 319053 2013-05-25 13:55:46Z miwi $
+# $FreeBSD: shells/bash/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=		bash
 PATCHLEVEL=		45
@@ -34,6 +34,7 @@ HELP_DESC=		Install the help files
 
 USES+=			bison
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMPLICITCD}
