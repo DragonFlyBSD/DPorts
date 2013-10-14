@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net> et al
-# $FreeBSD: multimedia/xvid/Makefile 317863 2013-05-11 11:14:10Z bapt $
+# $FreeBSD: multimedia/xvid/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	xvid
 PORTVERSION=	1.3.2
@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}/xvidcore/build/generic
 
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
