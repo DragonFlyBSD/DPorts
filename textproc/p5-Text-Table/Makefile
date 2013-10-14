@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: textproc/p5-Text-Table/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/p5-Text-Table/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Table
 PORTVERSION=	1.127
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Table.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
