@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/liboil/Makefile 326333 2013-09-04 23:08:39Z bapt $
+# $FreeBSD: devel/liboil/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 #    $MCom: ports/devel/liboil/Makefile,v 1.7 2008/03/23 06:57:57 marcus Exp $
 
 PORTNAME=	liboil
@@ -7,7 +7,7 @@ PORTVERSION=	0.3.17
 CATEGORIES=	devel
 MASTER_SITES=	http://liboil.freedesktop.org/download/
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library of optimized inner loops
 
 LICENSE=	BSD
