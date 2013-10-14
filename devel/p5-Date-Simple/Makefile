@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: devel/p5-Date-Simple/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/p5-Date-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=		Date-Simple
 PORTVERSION=		3.03
@@ -17,4 +17,5 @@ MAN3=			Date::Simple.3 Date::Simple::NoXS.3 \
 			Date::Simple::D8.3 Date::Simple::Fmt.3 \
 			Date::Simple::ISO.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
