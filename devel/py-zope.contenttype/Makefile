@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.contenttype
-# Date created:				Nov 11, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.contenttype/Makefile,v 1.3 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.contenttype/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.contenttype
 PORTVERSION=	3.5.5
@@ -20,5 +15,7 @@ LICENSE=	ZPL21
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
