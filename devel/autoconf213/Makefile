@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: devel/autoconf213/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/autoconf213/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	autoconf
 PORTVERSION=	2.13.000227
@@ -32,6 +32,7 @@ INFO=		autoconf-${BUILD_VERSION}
 
 STRIP=		# none
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/*.info* >/dev/null 2>&1 || true
 
