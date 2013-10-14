@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: databases/rubygem-mysql/Makefile 314486 2013-03-17 20:22:40Z zi $
+# $FreeBSD: databases/rubygem-mysql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql
 PORTVERSION=	2.9.1
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
