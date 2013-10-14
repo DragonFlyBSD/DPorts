@@ -1,8 +1,8 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/p5-parent/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-parent/Makefile 327796 2013-09-21 08:04:04Z rafan $
 
 PORTNAME=	parent
-PORTVERSION=	0.225
+PORTVERSION=	0.228
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:CORION
@@ -16,6 +16,7 @@ USE_PERL5=	configure
 
 MAN3=		parent.3
 
+NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
 
