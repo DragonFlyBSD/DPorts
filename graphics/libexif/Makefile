@@ -1,5 +1,5 @@
 # Created by: Peter Schmiedeskamp <pschmied@qwest.net>
-# $FreeBSD: graphics/libexif/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: graphics/libexif/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libexif
 PORTVERSION=	0.6.21
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
