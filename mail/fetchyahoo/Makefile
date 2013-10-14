@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/fetchyahoo/Makefile 326271 2013-09-04 12:28:16Z az $
+# $FreeBSD: mail/fetchyahoo/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	fetchyahoo
 PORTVERSION=	2.14.8
@@ -26,6 +26,7 @@ PORTDOCS=	COPYING ChangeLog Credits INSTALL TODO index.html
 NO_BUILD=	yes
 USES=		perl5
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/fetchyahoo ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
