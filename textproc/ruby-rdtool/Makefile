@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-RDtool
-# Date created:		7 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: textproc/ruby-rdtool/Makefile 320536 2013-06-11 07:09:39Z knu $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: textproc/ruby-rdtool/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rdtool
 PORTVERSION=	0.6.38
@@ -31,6 +27,7 @@ RUBY_MODNAME=	rd
 DOCS_EN=	README.rd	doc/rd-draft.rd
 DOCS_JA=	README.rd.ja	doc/rd-draft.rd.ja
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${RUBY_SITELIBDIR}/rd
 	${INSTALL_DATA} ${WRKSRC}/lib/rd/dot.rd2rc ${RUBY_SITELIBDIR}/rd/
