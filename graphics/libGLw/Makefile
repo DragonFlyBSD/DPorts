@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/libGLw/Makefile 322621 2013-07-10 06:55:28Z bapt $
+# $FreeBSD: graphics/libGLw/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	libGLw
 PORTVERSION=	8.0.0
@@ -12,7 +12,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	OpenGL widgets library
 
 USE_BZIP2=	yes
-USES=		pathfix pkgconfig motif
+USES=		motif pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_GL=		gl
 USE_XORG=	x11 xt xext
@@ -21,4 +21,5 @@ CONFIGURE_ARGS=	--disable-static --enable-motif
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
