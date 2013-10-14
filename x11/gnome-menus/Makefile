@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-menus/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11/gnome-menus/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gnome-menus/Makefile,v 1.110 2010/11/17 11:29:19 kwm Exp $
 
 PORTNAME=	gnome-menus
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu||' \
 		${WRKSRC}/layout/Makefile.in
