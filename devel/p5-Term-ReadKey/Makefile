@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-ReadKey/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-Term-ReadKey/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Term-ReadKey
 PORTVERSION=	2.30
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Term::ReadKey.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
