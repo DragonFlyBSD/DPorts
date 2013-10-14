@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-ASCIITable/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: textproc/p5-Text-ASCIITable/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-ASCIITable
 PORTVERSION=	0.20
@@ -16,6 +16,7 @@ USE_PERL5=	configure
 MAN3=	Text::ASCIITable.3 \
 	Text::ASCIITable::Wrap.3
 
+NO_STAGE=	yes
 post-extract:
 	@${MKDIR} ${WRKSRC}/example
 	@${MV} ${WRKSRC}/ansi-example.pl ${WRKSRC}/example
