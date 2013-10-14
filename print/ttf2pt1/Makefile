@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/ttf2pt1/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: print/ttf2pt1/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ttf2pt1
 PORTVERSION=	3.4.4
@@ -36,4 +36,5 @@ CPPFLAGS+=	`pkg-config --cflags freetype2` \
 LDFLAGS+=	`pkg-config --libs freetype2` \
 		-L${LOCALBASE}/lib -lm
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
