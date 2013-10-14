@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-jmespath/Makefile 317839 2013-05-10 20:43:14Z rm $
+# $FreeBSD: devel/py-jmespath/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	jmespath
 PORTVERSION=	0.0.2
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=3.4:${PORTSDIR}/devel/py-ply
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
