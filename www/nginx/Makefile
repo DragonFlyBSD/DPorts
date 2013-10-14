@@ -1,8 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx/Makefile 326987 2013-09-11 15:17:12Z osa $
+# $FreeBSD: www/nginx/Makefile 330122 2013-10-12 07:20:39Z osa $
 
 PORTNAME=	nginx
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
@@ -193,6 +193,7 @@ VIDEO_DESC=			Video module support
 
 WANT_GNOME=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPASSENGER}
@@ -656,7 +657,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	4.0.17
+PASSENGER_VERSION=	4.0.20
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
