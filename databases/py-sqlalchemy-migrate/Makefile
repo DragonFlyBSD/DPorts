@@ -1,5 +1,5 @@
 # Created by: elvstone@gmail.com
-# $FreeBSD: databases/py-sqlalchemy-migrate/Makefile 325853 2013-09-01 12:56:33Z lwhsu $
+# $FreeBSD: databases/py-sqlalchemy-migrate/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlalchemy-migrate
 PORTVERSION=	0.7.2
@@ -20,4 +20,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	sqlalchemy_migrate
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
