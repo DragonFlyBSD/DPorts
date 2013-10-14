@@ -1,8 +1,5 @@
-# New ports collection makefile for:	dmalloc
-# Date created:			7 December 2000
-# Whom:				Jeremy Shaffner <jeremy@external.org>
-#
-# $FreeBSD: ports/devel/dmalloc/Makefile,v 1.20 2012/11/17 05:55:41 svnexp Exp $
+# Created by: Jeremy Shaffner <jeremy@external.org>
+# $FreeBSD: devel/dmalloc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dmalloc
 PORTVERSION=	5.5.2
@@ -27,6 +24,7 @@ INSTALL_TARGET=	install
 INSTALL_TARGET+=installdocs
 .endif
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|\.@shlibext@|\.@shlibext@.1|' ${WRKSRC}/Makefile.in
 
