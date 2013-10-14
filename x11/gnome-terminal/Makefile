@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-terminal/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11/gnome-terminal/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gnome-terminal/Makefile,v 1.137 2010/11/13 13:25:22 kwm Exp $
 
 PORTNAME=	gnome-terminal
@@ -26,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gnome-terminal.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${TOUCH} ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in \
 		${WRKSRC}/configure ${WRKSRC}/config.h.in
