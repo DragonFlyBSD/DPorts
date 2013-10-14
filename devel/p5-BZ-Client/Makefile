@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-BZ-Client/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-BZ-Client/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	BZ-Client
 PORTVERSION=	1.04
@@ -25,4 +25,5 @@ MAN3=		BZ::Client.3 BZ::Client::API.3 BZ::Client::Bug.3 \
 		BZ::Client::Bugzilla.3 BZ::Client::Exception.3 \
 		BZ::Client::Product.3 BZ::Client::Test.3 BZ::Client::XMLRPC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
