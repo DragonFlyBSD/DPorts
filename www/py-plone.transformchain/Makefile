@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.transformchain/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.transformchain/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	plone.transformchain
 PORTVERSION=	1.0.3
@@ -17,7 +17,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
