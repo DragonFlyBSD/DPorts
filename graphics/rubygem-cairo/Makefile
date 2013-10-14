@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-cairo/Makefile 320377 2013-06-09 18:43:27Z swills $
+# $FreeBSD: graphics/rubygem-cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cairo
 PORTVERSION=	1.12.6
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
