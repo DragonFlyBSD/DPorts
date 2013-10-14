@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/affiche/Makefile,v 1.10 2012/11/17 05:55:26 svnexp Exp $
+# $FreeBSD: deskutils/affiche/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	affiche
 PORTVERSION=	0.6.0
@@ -19,4 +19,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Affiche
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
