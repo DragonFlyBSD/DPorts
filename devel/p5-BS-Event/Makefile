@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-BS-Event/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-BS-Event/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	BS-Event
 PORTVERSION=	0.3
@@ -16,6 +16,7 @@ USE_PERL5=	configure
 
 MAN3=		BS::Event.3
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/samples/simple_example ${EXAMPLESDIR}/
