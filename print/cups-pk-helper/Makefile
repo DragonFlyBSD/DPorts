@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/cups-pk-helper/Makefile 327103 2013-09-12 19:42:03Z kwm $
+# $FreeBSD: print/cups-pk-helper/Makefile 327765 2013-09-20 22:43:59Z bapt $
 #   $MCom: ports/print/cups-pk-helper/Makefile,v 1.1 2009/12/29 16:01:07 ahze Exp $
 
 PORTNAME=	cups-pk-helper
@@ -20,4 +20,5 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/libs
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
