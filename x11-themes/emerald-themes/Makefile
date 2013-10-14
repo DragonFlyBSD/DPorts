@@ -1,9 +1,4 @@
-# New ports collection makefile for:	emerald-themes
-# Date created:				Oct 29 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/emerald-themes/Makefile,v 1.12 2012/11/17 06:03:30 svnexp Exp $
-#
+# $FreeBSD: x11-themes/emerald-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	emerald-themes
 PORTVERSION=	0.6.0
@@ -23,6 +18,7 @@ USE_AUTOTOOLS=	autoconf:env automake:env aclocal:env autoheader:env
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/bin/bash|${LOCALBASE}/bin/bash|' \
 			${WRKSRC}/themes/import.sh
