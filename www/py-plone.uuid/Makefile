@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/py-plone.uuid/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plone.uuid/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	plone.uuid
 PORTVERSION=	1.0.3
@@ -18,7 +18,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.browserpage>=0:${PORTSDIR}/devel/py-zop
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
