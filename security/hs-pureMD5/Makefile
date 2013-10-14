@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-pureMD5/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-pureMD5/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pureMD5
 PORTVERSION=	2.1.2.1
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	cereal>=0.2 crypto-api tagged
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
