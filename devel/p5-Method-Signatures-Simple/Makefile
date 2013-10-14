@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Method-Signatures-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Method-Signatures-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Method-Signatures-Simple
 PORTVERSION=	1.07
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Method::Signatures::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
