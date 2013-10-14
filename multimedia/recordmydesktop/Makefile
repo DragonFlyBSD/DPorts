@@ -1,4 +1,4 @@
-# $FreeBSD: ports/multimedia/recordmydesktop/Makefile,v 1.15 2012/11/17 05:59:53 svnexp Exp $
+# $FreeBSD: multimedia/recordmydesktop/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	recordmydesktop
 DISTVERSION=	0.3.8.1
@@ -21,6 +21,7 @@ MAN1=		recordmydesktop.1
 USE_XORG=	ice sm x11 xext xextproto xfixes xdamage
 PLIST_FILES=	bin/recordmydesktop
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' \
 		${WRKSRC}/configure
