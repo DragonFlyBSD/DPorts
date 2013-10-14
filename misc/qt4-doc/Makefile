@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: misc/qt4-doc/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: misc/qt4-doc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	doc
 DISTVERSION=	${QT4_VERSION}
@@ -17,6 +17,7 @@ EXTRACT_AFTER_ARGS=	'${DISTNAME}/doc'
 
 DOCSDIR=	${PREFIX}/share/doc/qt4
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DOCSDIR} && \
 	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${DOCSDIR} && \
