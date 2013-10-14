@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/soundtouch/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/soundtouch/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	soundtouch
 PORTVERSION=	1.7.1
@@ -17,6 +17,7 @@ INTEGER_SAMPLES_DESC=	Use integer sample format
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_AUTOTOOLS=	libtoolize aclocal autoheader automake autoconf
+NO_STAGE=	yes
 ACLOCAL_ARGS=	-I config/m4
 AUTOMAKE_ARGS=	--add-missing --copy --foreign
 USE_LDCONFIG=	yes
