@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/qzeitgeist/Makefile 324898 2013-08-18 10:04:33Z mva $
+# $FreeBSD: sysutils/qzeitgeist/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	qzeitgeist
 PORTVERSION=	0.8.0
@@ -31,6 +31,7 @@ USE_LDCONFIG=	yes
 # To be kept in sync with sysutils/zeitgeist.
 ZEITGEIST_VERSION=	0.8.2
 
+NO_STAGE=	yes
 post-extract:
 	@(cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
 		${_DISTDIR}/zeitgeist-${ZEITGEIST_VERSION}.tar.gz ${EXTRACT_AFTER_ARGS})
