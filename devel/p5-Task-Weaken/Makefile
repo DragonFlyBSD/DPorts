@@ -1,5 +1,5 @@
-# Created by: lbr@freebsd.org
-# $FreeBSD: devel/p5-Task-Weaken/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: lbr@FreeBSD.org
+# $FreeBSD: devel/p5-Task-Weaken/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Task-Weaken
 PORTVERSION=	1.04
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Task::Weaken.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
