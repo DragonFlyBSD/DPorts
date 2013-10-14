@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-rdoc/Makefile 319596 2013-06-01 21:23:47Z swills $
+# $FreeBSD: devel/rubygem-rdoc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rdoc
 PORTVERSION=	3.12.2
@@ -19,6 +18,7 @@ RUBYGEM_AUTOPLIST=	yes
 
 GEM_ENV+=	RUBYLIB=${PREFIX}/${GEM_LIB_DIR}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-install:
