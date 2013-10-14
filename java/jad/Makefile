@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jad
-# Date created:				27 September 2000
-# Whom:	      				Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-#
-# $FreeBSD: ports/java/jad/Makefile,v 1.18 2012/11/17 05:58:43 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
+# $FreeBSD: java/jad/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jad
 PORTVERSION=	1.5.8c
@@ -24,6 +20,7 @@ PORTDOCS=	*
 
 ONLY_FOR_ARCHS=	i386 amd64
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/jad ${PREFIX}/bin/
 .if !defined(NOPORTDOCS)
