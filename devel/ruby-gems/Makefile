@@ -1,5 +1,5 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: ports/devel/ruby-gems/Makefile,v 1.52 2013/02/24 19:42:48 svnexp Exp $
+# $FreeBSD: devel/ruby-gems/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gems
 PORTVERSION=	1.8.25
@@ -37,6 +37,7 @@ GEMS_DOC_DIR=		${GEMS_DOC_BASE_DIR}/${DISTNAME}
 GEMS_DOC_DIR_P=		${GEMS_DOC_BASE_DIR_P}/%%DISTNAME%%
 RUBY_VER_SHORT=		${RUBY_VER:S/.//}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
