@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/xapian-core10/pkg-plist,v 1.24 2012/11/17 05:55:26 svnexp Exp $
+@comment $FreeBSD: databases/xapian-core10/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/quartzcheck
 bin/quartzcompact
 bin/quartzdump

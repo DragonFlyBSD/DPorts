@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xapian-core10
-# Date created:				5 November 2005
-# Whom:					J.F. Dockes
-#
-# $FreeBSD: ports/databases/xapian-core10/Makefile,v 1.40 2012/11/17 05:55:26 svnexp Exp $
-#
+# Created by: J.F. Dockes
+# $FreeBSD: databases/xapian-core10/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	xapian-core10
 PORTVERSION=	1.0.23
@@ -28,6 +24,7 @@ MAN1=		quartzcheck.1 quartzcompact.1 quartzdump.1 \
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:S/10$//}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MSSE2)
