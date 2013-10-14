@@ -1,5 +1,5 @@
 # Created by: Craig Leres <leres@ee.lbl.gov>
-# $FreeBSD: ports/sysutils/lbl-cf/Makefile,v 1.4 2013/02/02 12:48:29 svnexp Exp $
+# $FreeBSD: sysutils/lbl-cf/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cf
 PORTVERSION=	1.2.4
@@ -19,6 +19,7 @@ MAN1=		cf.1
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-install:
 	(cd ${WRKSRC} && make install-man)
 
