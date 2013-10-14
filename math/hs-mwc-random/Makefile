@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-mwc-random/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-mwc-random/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	mwc-random
 PORTVERSION=	0.12.0.1
@@ -15,5 +15,6 @@ USE_CABAL=	primitive vector>=0.7
 
 INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/README.markdown ${DATADIR}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
