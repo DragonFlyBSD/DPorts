@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/libopensync022/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: devel/libopensync022/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libopensync
 PORTVERSION=	0.22
@@ -26,6 +26,7 @@ CONFLICTS=	libopensync-0.[3-9]*
 
 LATEST_LINK=	libopensync022
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "NOTE: You may want to avoid extra dependencies"
 	@${ECHO_MSG} " from devel/swig13 by building with the following"
