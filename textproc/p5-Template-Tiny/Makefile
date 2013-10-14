@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Template-Tiny
-# Date created:		2010-03-17
-# Whom:			ports@c0decafe.net
-#
-# $FreeBSD: textproc/p5-Template-Tiny/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ports@c0decafe.net
+# $FreeBSD: textproc/p5-Template-Tiny/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Template-Tiny
 PORTVERSION=	1.12
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Template::Tiny.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
