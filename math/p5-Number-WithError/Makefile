@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Number-WithError/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: math/p5-Number-WithError/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Number-WithError
 PORTVERSION=	1.01
@@ -21,4 +21,5 @@ MAN3=	Number::WithError.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
