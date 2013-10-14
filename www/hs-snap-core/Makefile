@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-snap-core/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-snap-core/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	snap-core
 PORTVERSION=	0.9.3.1
@@ -17,5 +17,6 @@ USE_CABAL=	attoparsec>=0.10 attoparsec-enumerator>=0.3 \
 		regex-posix>=0.95 text>=0.11 unix-compat>=0.2 \
 		unordered-containers>=0.1.4.3 vector>=0.6 zlib-enum>=0.2.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
