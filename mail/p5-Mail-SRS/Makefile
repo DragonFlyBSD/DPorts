@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-Mail-SRS
-# Date created:        24 May 2004
-# Whom:                snowchyld
-#
-# $FreeBSD: mail/p5-Mail-SRS/Makefile 326271 2013-09-04 12:28:16Z az $
-#
+# Created by: snowchyld
+# $FreeBSD: mail/p5-Mail-SRS/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-SRS
 PORTVERSION=	0.31
@@ -31,4 +27,5 @@ MAN1=	srs.1 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
