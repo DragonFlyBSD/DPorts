@@ -1,5 +1,5 @@
 # Created by: reed@pugetsoundtechnology.com
-# $FreeBSD: textproc/libwpd/Makefile 324817 2013-08-16 21:50:28Z jkim $
+# $FreeBSD: textproc/libwpd/Makefile 328063 2013-09-23 21:39:37Z bapt $
 
 PORTNAME=	libwpd
 PORTVERSION=	0.9.9
@@ -12,9 +12,10 @@ COMMENT=	Tools for importing and exporting WordPerfect(tm) documents
 LICENSE=	LGPL21 MPL
 LICENSE_COMB=	dual
 
+USES=		pathfix
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack libgsf
+USE_GNOME=	libgsf
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS=	--without-docs
