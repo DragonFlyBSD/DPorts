@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: math/coinmp/Makefile 324273 2013-08-05 12:49:55Z wg $
+# $FreeBSD: math/coinmp/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	CoinMP
 PORTVERSION=	1.7.0
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	DEBUG DOCS
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGLPK}
