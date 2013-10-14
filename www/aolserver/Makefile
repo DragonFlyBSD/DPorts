@@ -1,5 +1,5 @@
 # Created by: Matthew Braithwaite <mab@red-bean.com>
-# $FreeBSD: ports/www/aolserver/Makefile,v 1.43 2013/02/06 19:12:45 svnexp Exp $
+# $FreeBSD: www/aolserver/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	aolserver
 PORTVERSION=	4.5.1
@@ -49,6 +49,7 @@ HTMLDOCS_DESC=	Install HTML documentation
 MANPAGES_DESC=	Install manpages
 TESTS_DESC=	Install tests in example directory
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 SUB_LIST+=	MKDIR="${MKDIR}" ECHO_CMD="${ECHO_CMD}" \
