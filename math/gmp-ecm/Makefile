@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmp-ecm
-# Date created:		2006-06-03
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/math/gmp-ecm/Makefile,v 1.10 2012/11/17 05:59:21 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: math/gmp-ecm/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gmp-ecm
 PORTVERSION=	6.3
@@ -29,6 +25,7 @@ CONFIGURE_ARGS=	ac_cv_prog_XSLTPROC=no \
 MAN1=		ecm.1
 PLIST_FILES=	bin/ecm include/ecm.h lib/libecm.a lib/libecm.la
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} s/__GMP_BITS_PER_MP_LIMB/GMP_NUMB_BITS/g \
 		${WRKSRC}/*.c ${WRKSRC}/*.h
