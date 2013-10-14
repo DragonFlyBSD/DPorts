@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: math/GiNaC/Makefile 325752 2013-08-31 00:35:35Z bapt $
+# $FreeBSD: math/GiNaC/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	GiNaC
 PORTVERSION=	1.6.2
@@ -24,6 +24,7 @@ INFO=	ginac ginac-examples
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "alpha"
