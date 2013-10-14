@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@amis.net>
-# $FreeBSD: converters/p5-Convert-UUlib/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Convert-UUlib/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Convert-UUlib
 PORTVERSION=	1.40
@@ -17,6 +17,7 @@ USES=		perl5
 USE_PERL5=	configure
 
 MAN3=		Convert::UUlib.3
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README
