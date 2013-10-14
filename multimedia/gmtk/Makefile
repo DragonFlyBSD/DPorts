@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gmtk/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: multimedia/gmtk/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gmtk
 PORTVERSION=	1.0.8
@@ -25,6 +25,7 @@ PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README
 OPTIONS_DEFINE=	ALSA DOCS GCONF GIO GTK3 NLS PULSEAUDIO
 GIO_DESC=	Use GIO for file I/O
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALSA}
