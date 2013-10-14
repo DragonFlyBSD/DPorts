@@ -1,5 +1,5 @@
 # Created by: Garrett Wollman <wollman@lcs.mit.edu>
-# $FreeBSD: devel/uclmmbase/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/uclmmbase/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	uclmmbase
 PORTVERSION=	1.2.18
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--enable-ipv6
 USE_XZ=		yes
 MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
+NO_STAGE=	yes
 post-configure:
 	@for f in ${FILESDIR}/*.bsd ; do \
 		${LN} -sf $$f ${WRKSRC}/src/`${BASENAME} $$f .bsd` ; \
