@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Date-Easter
-# Date created:				Sun May 23 11:36:48 CEST 2004
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: devel/p5-Date-Easter/Makefile 324352 2013-08-07 13:20:32Z az $
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: devel/p5-Date-Easter/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date-Easter
 PORTVERSION=	1.14
@@ -18,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Date::Easter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
