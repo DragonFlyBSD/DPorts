@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/agg/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/agg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	agg
 PORTVERSION=	2.5
@@ -28,6 +28,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 CXXFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -I../include -L./
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
