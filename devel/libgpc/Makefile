@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gpc
-# Date created:		22 October 2005
-# Whom:			Mikhail Teterin
-#
-# $FreeBSD: ports/devel/libgpc/Makefile,v 1.5 2012/11/17 05:55:54 svnexp Exp $
-#
+# Created by: Mikhail Teterin
+# $FreeBSD: devel/libgpc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libgpc
 PORTVERSION=	2.32
@@ -25,4 +21,5 @@ MAKEFILE=	${FILESDIR}/BSDmakefile
 
 EXTRACT_BEFORE_ARGS=-qoa
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
