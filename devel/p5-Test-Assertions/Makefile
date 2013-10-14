@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Test-Assertions
-# Date created:				27 May 2007
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Test-Assertions/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Assertions/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Assertions
 PORTVERSION=	1.054
@@ -25,4 +21,5 @@ MAN3=	Test::Assertions.3 \
 	Test::Assertions::Manual.3 \
 	Test::Assertions::TestScript.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
