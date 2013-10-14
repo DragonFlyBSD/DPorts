@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/ipa/files/ipa.in,v 1.4 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: sysutils/ipa/files/ipa.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # If some IPA module requires some services, then they should

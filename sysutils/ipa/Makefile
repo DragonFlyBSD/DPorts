@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ipa
-# Date created:				2 December 2000
-# Whom:					Andrey Simonenko
-#
-# $FreeBSD: ports/sysutils/ipa/Makefile,v 1.51 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Andrey Simonenko
+# $FreeBSD: sysutils/ipa/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ipa
 PORTVERSION=	2.1.2
@@ -29,6 +25,7 @@ SUBLIMITS_DESC=		Enable sublimits support
 THRESHOLDS_DESC=	Enable thresholds support
 CTL_CREDS_DESC=		Enable ipactl's messages credentials
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MAUTORULES)
