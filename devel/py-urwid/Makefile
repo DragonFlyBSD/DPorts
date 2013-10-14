@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: ports/devel/py-urwid/Makefile,v 1.25 2012/12/02 10:24:14 svnexp Exp $
+# $FreeBSD: devel/py-urwid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	urwid
 PORTVERSION=	1.1.1
@@ -35,6 +35,7 @@ PORTEXAMPLES=	bigtext.py \
 		treesample.py
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
