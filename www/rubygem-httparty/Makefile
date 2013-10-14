@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/rubygem-httparty/Makefile 319748 2013-06-03 02:19:07Z swills $
+# $FreeBSD: www/rubygem-httparty/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	httparty
 PORTVERSION=	0.11.0
@@ -18,4 +18,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/httparty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
