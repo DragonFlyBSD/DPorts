@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdotool/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: x11/xdotool/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xdotool
 DISTVERSION=	2.20110530.1
@@ -18,6 +18,7 @@ MAN1=		xdotool.1
 PLIST_FILES=	bin/xdotool lib/libxdo.so lib/libxdo.so.2 include/xdo.h
 
 # Older GCC on RELENG_6 doesn't like -Wno-missing-field-initializers
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,-Wno-missing-field-initializers,,' \
 		${WRKSRC}/Makefile
