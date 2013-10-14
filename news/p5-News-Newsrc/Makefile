@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: news/p5-News-Newsrc/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: news/p5-News-Newsrc/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	News-Newsrc
 PORTVERSION=	1.11
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		News::Newsrc.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
