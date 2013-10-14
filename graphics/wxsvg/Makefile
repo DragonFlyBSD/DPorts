@@ -1,12 +1,12 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/wxsvg/Makefile 325556 2013-08-28 21:28:50Z wg $
+# $FreeBSD: graphics/wxsvg/Makefile 328298 2013-09-25 16:05:48Z danilo $
 
 PORTNAME=	wxsvg
-PORTVERSION=	1.1.16
+PORTVERSION=	1.2
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	C++ library to create, manipulate, and render SVG files
 
 LICENSE=	LGPL21 # (or later)
