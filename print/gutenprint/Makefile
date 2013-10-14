@@ -1,10 +1,6 @@
-# ports collection makefile for: gimp-print
-# Date Created: 2002 01 02
-# Whom: dgilbert@velocet.ca
-#
-# $FreeBSD: ports/print/gutenprint/Makefile,v 1.44 2012/11/17 06:00:50 svnexp Exp $
+# Created by: dgilbert@velocet.ca
+# $FreeBSD: print/gutenprint/Makefile 327765 2013-09-20 22:43:59Z bapt $
 #    $MCom: ports/print/gutenprint/Makefile,v 1.8 2007/04/03 17:42:21 ahze Exp $
-#
 
 PORTNAME=	gutenprint
 PORTVERSION=	5.2.8
@@ -27,6 +23,7 @@ FOOMATIC_DESC=		Foomatic data files
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
