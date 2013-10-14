@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Pod-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Parser
 PORTVERSION=	1.61
@@ -20,6 +20,7 @@ USE_DOS2UNIX=	yes
 MAN3=		Pod::Find.3 Pod::InputObjects.3 \
 		Pod::ParseUtils.3 Pod::Parser.3 Pod::PlainText.3 Pod::Select.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
 
