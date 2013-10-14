@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: multimedia/libkate/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/libkate/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libkate
 PORTVERSION=	0.4.1
@@ -31,6 +31,7 @@ KATEDJ_DESC=	Install KateDJ (Huge dependencies list)
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOXYGEN} && ${PORT_OPTIONS:MDOCS}
