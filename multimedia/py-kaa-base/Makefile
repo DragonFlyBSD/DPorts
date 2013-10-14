@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-kaa-base
-# Date created:		2009 January 10
-# Whom:			J.R. Oldroyd <fbsd@opal.com>
-#
-# $FreeBSD: ports/multimedia/py-kaa-base/Makefile,v 1.9 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: J.R. Oldroyd <fbsd@opal.com>
+# $FreeBSD: multimedia/py-kaa-base/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	kaa-base
 PORTVERSION=	0.6.0
@@ -23,4 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
