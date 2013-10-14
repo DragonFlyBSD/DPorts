@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/gtk-update-icon-cache/Makefile 326031 2013-09-02 16:48:01Z bapt $
+# $FreeBSD: graphics/gtk-update-icon-cache/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/trunk/graphics/gtk-update-icon-cache/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk-update-icon-cache
@@ -39,6 +39,7 @@ PLIST_FILES=	bin/gtk-update-icon-cache
 
 MAN1=		gtk-update-icon-cache.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-configure:
