@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: ports/www/cl-lml/Makefile,v 1.17 2013/02/18 14:40:04 svnexp Exp $
+# $FreeBSD: www/cl-lml/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lml
 PORTVERSION=	2.5.7
@@ -20,6 +20,7 @@ USE_ASDF=	yes
 PORTDOCS=	Makefile make.lisp readme.html readme.lml
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ASDF_PATHNAME}
 	@${INSTALL_DATA} ${WRKSRC}/*.lisp ${ASDF_PATHNAME}
