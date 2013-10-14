@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-gflags
-# Date created:		2011-01-10
-# Whom:			Julien Laffaye <kimelto@gmail.com>
-#
-# $FreeBSD: ports/devel/py-gflags/Makefile,v 1.5 2012/11/17 05:56:47 svnexp Exp $
-#
+# Created by: Julien Laffaye <kimelto@gmail.com>
+# $FreeBSD: devel/py-gflags/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gflags
 PORTVERSION=	2.0
@@ -26,6 +22,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/gflags \
 
 PROJECTHOST=	python-gflags
 
+NO_STAGE=	yes
 post-install:
 	${TOUCH} ${PYEASYINSTALL_SITELIBDIR}/gflags
 
