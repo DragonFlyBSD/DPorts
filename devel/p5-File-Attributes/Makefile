@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Attributes/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-File-Attributes/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Attributes
 PORTVERSION=	0.04
@@ -24,4 +24,5 @@ MAN3=	File::Attributes.3 \
 	File::Attributes::Base.3 \
 	File::Attributes::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
