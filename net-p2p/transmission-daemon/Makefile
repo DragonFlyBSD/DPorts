@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-daemon/Makefile 322138 2013-07-01 18:40:19Z crees $
+# $FreeBSD: net-p2p/transmission-daemon/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-daemon
@@ -25,4 +25,5 @@ EXTRA_CONF_ARGS=--disable-cli \
 
 MAN1=		transmission-daemon.1 transmission-remote.1
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
