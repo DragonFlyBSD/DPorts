@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Best/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Best/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Best
 PORTVERSION=	0.15
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Best.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
