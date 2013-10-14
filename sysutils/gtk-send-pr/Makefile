@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: sysutils/gtk-send-pr/Makefile 326422 2013-09-05 17:37:22Z antoine $
+# $FreeBSD: sysutils/gtk-send-pr/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gtk-send-pr
 PORTVERSION=	0.4.9
@@ -25,6 +25,7 @@ DESKTOP_ENTRIES="Send Problem Report" \
 		"System;" \
 		true
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/gtk-send-pr ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/common/gtk-send-pr.1 ${PREFIX}/man/man1
