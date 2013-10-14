@@ -1,5 +1,5 @@
 # Created by: mukai
-# $FreeBSD: devel/ocaml-extlib/Makefile 318599 2013-05-20 13:57:11Z miwi $
+# $FreeBSD: devel/ocaml-extlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	extlib
 PORTVERSION=	1.5.4
@@ -25,6 +25,7 @@ DOCSDIR=	${OCAML_DOCSDIR}/${PORTNAME}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
