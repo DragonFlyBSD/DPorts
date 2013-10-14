@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-RestrictedPython
-# Date created:				10 October, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/security/py-RestrictedPython/Makefile,v 1.6 2012/11/17 06:01:16 svnexp Exp $
-#
+# $FreeBSD: security/py-RestrictedPython/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	RestrictedPython
 PORTVERSION=	3.6.0
@@ -18,9 +13,11 @@ COMMENT=	Restricted execution environment for Python
 
 LICENSE=	ZPL21
 
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.pre.mk>
 
