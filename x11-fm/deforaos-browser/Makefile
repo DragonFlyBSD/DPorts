@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11-fm/deforaos-browser/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-fm/deforaos-browser/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	deforaos-browser
 PORTVERSION=	0.4.10
@@ -35,6 +35,7 @@ MAN1=		browser.1 \
 		properties.1 \
 		view.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/|/libdata/|g' \
 		${WRKSRC}/data/pkgconfig.sh
