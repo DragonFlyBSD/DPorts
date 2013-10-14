@@ -1,5 +1,5 @@
 # Created by: Brent J. Nordquist <bjn@visi.com>
-# $FreeBSD: databases/gdbm/Makefile 321709 2013-06-24 19:30:46Z johans $
+# $FreeBSD: databases/gdbm/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	gdbm
 PORTVERSION=	1.10
@@ -24,6 +24,7 @@ MAN3=		gdbm.3
 OPTIONS_DEFINE=	COMPAT NLS
 COMPAT_DESC=	Enable dbm/ndbm compatibility
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCOMPAT}
