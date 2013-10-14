@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/xine/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: multimedia/xine/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	xine
 PORTVERSION=	0.99.7
@@ -49,6 +49,7 @@ MAN1_PL=	aaxine.1 xine-remote.1 xine.1
 DOCSDIR=	${PREFIX}/share/doc/xine-ui
 XINE_PLUGINSDIR=	lib/xine/plugins/2.2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWIN32_CODECS}
