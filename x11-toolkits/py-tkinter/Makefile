@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-tkinter/Makefile 326662 2013-09-07 17:21:55Z sunpoet $
+# $FreeBSD: x11-toolkits/py-tkinter/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	tkinter
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -30,6 +30,7 @@ PYDISTUTILS_PKGNAME=	Tkinter
 
 PLIST_FILES=	%%PYTHON_LIBDIR%%/lib-dynload/_tkinter.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
