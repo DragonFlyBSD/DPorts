@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-FreeDB
-# Date created:				September 29th, 2005
-# Whom:	      				Peter Pentchev <roam@FreeBSD.org>
-#
-# $FreeBSD: audio/p5-Net-FreeDB/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Peter Pentchev <roam@FreeBSD.org>
+# $FreeBSD: audio/p5-Net-FreeDB/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Net-FreeDB
 PORTVERSION=	0.08
@@ -19,6 +15,7 @@ BUILD_DEPENDS=	p5-CDDB-File>=0:${PORTSDIR}/audio/p5-CDDB-File
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN3=		Net::FreeDB.3
