@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: lang/p5-ExtUtils-F77/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: lang/p5-ExtUtils-F77/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ExtUtils-F77
 PORTVERSION=	1.17
@@ -17,6 +17,7 @@ USE_FORTRAN=	yes
 
 MAN3=		ExtUtils::F77.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|'gfortran44'|'${FC}'|" \
 			  -e "s|'-O2'|'${CFLAGS}'|" \
