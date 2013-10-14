@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@area51.fremont.ca.us>
-# $FreeBSD: audio/libmikmod/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/libmikmod/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	libmikmod
 PORTVERSION=	3.1.12
@@ -10,6 +10,7 @@ MAINTAINER=	neuroworker@gmail.com
 COMMENT=	MikMod Sound Library
 
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 WANT_GNOME=	yes
 USE_GNOME=	lthack
 USES=		gmake
@@ -25,7 +26,6 @@ INFO=		mikmod
 .if ${HAVE_GNOME:Mesound}!=""
 USE_GNOME+=	esound
 CONFIGURE_ARGS+=	--enable-esd
-PKGNAMESUFFIX=	-esound
 .else
 CONFIGURE_ARGS+=	--disable-esd
 .endif
