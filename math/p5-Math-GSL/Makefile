@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: math/p5-Math-GSL/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: math/p5-Math-GSL/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-GSL
 PORTVERSION=	0.27
@@ -77,6 +77,7 @@ MAN3=		Math::GSL.3 \
 		Math::GSL::Wavelet.3 \
 		Math::GSL::Wavelet2D.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
