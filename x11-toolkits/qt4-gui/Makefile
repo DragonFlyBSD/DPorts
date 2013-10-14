@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: x11-toolkits/qt4-gui/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: x11-toolkits/qt4-gui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
@@ -51,6 +51,7 @@ EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 FONTSCALE=	${LOCALBASE}/lib/X11/fonts/TTF/luximb.ttf
 FONTENCOD=	${LOCALBASE}/lib/X11/fonts/encodings/encodings.dir
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/qt4/files/Makefile.options"
 
 .if ${QT4_OPTIONS:MCUPS}
