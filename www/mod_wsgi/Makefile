@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: www/mod_wsgi/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_wsgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_wsgi
 PORTVERSION=	2.8
@@ -31,6 +31,7 @@ SUB_FILES=	pkg-message
 
 PORTSCOUT=	limit:^2\.
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "======================= ATTENTION! ======================"
 	@${ECHO_MSG}
