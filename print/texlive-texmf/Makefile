@@ -1,4 +1,4 @@
-# $FreeBSD: print/texlive-texmf/Makefile 318854 2013-05-23 08:31:09Z hrs $
+# $FreeBSD: print/texlive-texmf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	texlive
 PORTVERSION=	20120701
@@ -164,6 +164,7 @@ EXCLUDE_FILES=	\*/doc/man \
 
 EXTRACT_AFTER_ARGS=| ${TAR} xf - ${EXCLUDE_FILES:S,^,--exclude ${DISTNAME}/,}
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 
