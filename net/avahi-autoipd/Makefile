@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-autoipd/Makefile 323006 2013-07-14 21:17:21Z kwm $
+# $FreeBSD: net/avahi-autoipd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/avahi-autoipd/Makefile,v 1.1 2007/07/31 18:24:12 ahze Exp $
 
 PORTREVISION=	0
@@ -24,4 +24,5 @@ AVAHI_SLAVE=	autoipd
 
 MAN8=		avahi-autoipd.8
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
