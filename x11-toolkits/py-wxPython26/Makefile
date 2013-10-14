@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 326189 2013-09-03 18:14:18Z antoine $
+# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	wxPython
 PORTVERSION=	2.6.3.3
@@ -43,6 +43,7 @@ PYDISTUTILS_EGGINFO=	${WX_PYTHON_DIR}/wxPython-${PORTVERSION}-${PYTHON_VERSION:S
 			wxaddons-${PORTVERSION}-${PYTHON_VERSION:S/thon//}.egg-info
 .endif
 
+NO_STAGE=	yes
 post-extract:
 # only keep the scripts we need
 	@${RM} ${WRKSRC}/scripts/*.py
