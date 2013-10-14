@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/p5-HTML-WikiConverter/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-WikiConverter/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-WikiConverter
 PORTVERSION=	0.68
@@ -27,4 +27,5 @@ MAN3=		HTML::WikiConverter.3 HTML::WikiConverter::Dialects.3 \
 		HTML::WikiConverter::Normalizer.3 \
 		HTML::WikiConverter::WebApp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
