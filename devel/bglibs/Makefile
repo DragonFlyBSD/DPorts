@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: devel/bglibs/Makefile 325170 2013-08-21 23:07:33Z wg $
+# $FreeBSD: devel/bglibs/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bglibs
 PORTVERSION=	1.106
@@ -28,6 +28,7 @@ MAN1=		cli-generate.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
