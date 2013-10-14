@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-RDFStore/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-RDFStore/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	RDFStore
 PORTVERSION=	0.51
@@ -37,6 +37,7 @@ MAN3=		DBD::RDFStore.3 DBMS.3 RDFStore.3 \
 		RDFStore::VirtualModel.3 RDFStore::Vocabulary::Generator.3 \
 		RDQL::Parser.3 Util::BLOB.3
 
+NO_STAGE=	yes
 pre-configure:
 	@${ECHO} "INCLUDE=${BDB_INCLUDE_DIR}" > ${WRKSRC}/arch_conf.in
 	@${ECHO} "LIB=${BDB_LIB_DIR}" >> ${WRKSRC}/arch_conf.in
