@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/rtmpdump/Makefile 325750 2013-08-31 00:29:43Z bapt $
+# $FreeBSD: multimedia/rtmpdump/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	rtmpdump
 PORTVERSION=	2.4
@@ -25,6 +25,7 @@ MAN8=		rtmpgw.8
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OPENSSLBASE} != "/usr"
