@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-vte
-# Date created:		2010-11-19
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/ruby-vte/Makefile,v 1.8 2012/11/17 06:03:39 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: x11-toolkits/ruby-vte/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	vte
 PORTVERSION=	${RUBY_GNOME_PORTVERSION}
@@ -28,6 +24,7 @@ CONFIGURE_ARGS=	--with-pkg-config-dir=${LOCALBASE}/libdata/pkgconfig
 MASTERDIR=	${.CURDIR}/../../x11/ruby-gnome2
 PKGDIR=		${.CURDIR}
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 WRKSRC=		${RUBY_GNOME_WRKSRC}/${PORTNAME}
