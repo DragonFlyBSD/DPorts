@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: audio/kmix/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/kmix/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	kmix
 PORTVERSION=	${KDE4_VERSION}
@@ -16,6 +16,7 @@ LICENSE=	GPLv2
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
 USES=		cmake:outsource
+NO_STAGE=	yes
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	gui phonon xml \
 		moc_build qmake_build rcc_build uic_build
