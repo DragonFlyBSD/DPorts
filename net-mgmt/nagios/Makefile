@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios/Makefile 327450 2013-09-17 06:12:35Z bapt $
+# $FreeBSD: net-mgmt/nagios/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagios
 PORTVERSION=	3.5.1
@@ -83,6 +83,7 @@ NANOSLEEP_DESC=		Use nanosleep in event timing
 EVENT_BROKER_DESC=	Enable event broker functionality
 UNHANDLED_HACK_DESC=	Display passive checks in unhandled queries
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEMBEDDED_PERL}
