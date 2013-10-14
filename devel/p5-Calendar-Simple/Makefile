@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Calendar-Simple/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-Calendar-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Calendar-Simple
 PORTVERSION=	1.21
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Calendar::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
