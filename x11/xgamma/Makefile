@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xgamma/Makefile,v 1.6 2013/02/04 03:42:39 svnexp Exp $
+# $FreeBSD: x11/xgamma/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xgamma
 PORTVERSION=	1.0.5
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xgamma
 
 MAN1=		xgamma.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
