@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: x11/libgnomemm26/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11/libgnomemm26/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/libgnomemm26/Makefile,v 1.24 2010/03/30 13:34:10 avl Exp $
 
 PORTNAME=	libgnomemm
@@ -27,4 +27,5 @@ CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.6" API_VERSION="2.6"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
