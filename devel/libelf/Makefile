@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: devel/libelf/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/libelf/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libelf
 PORTVERSION=	0.8.13
@@ -18,6 +18,7 @@ OPTIONS_DEFAULT=	EXTENDED SANITY
 EXTENDED_DESC=	ELF format extensions
 SANITY_DESC=	Avoid loading invalid ELF files
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 GNU_CONFIGURE=	yes
