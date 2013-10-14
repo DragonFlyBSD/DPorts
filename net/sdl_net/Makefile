@@ -1,7 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: net/sdl_net/Makefile 325749 2013-08-31 00:26:08Z bapt $
-#
+# $FreeBSD: net/sdl_net/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sdl_net
 PORTVERSION=	1.2.8
@@ -20,6 +18,7 @@ USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=--disable-gui
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -e \
 		's|^deplibs_check_method=.*|deplibs_check_method=pass_all|' \
