@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MouseX-Types/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-MouseX-Types/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MouseX-Types
 PORTVERSION=	0.06
@@ -23,4 +23,5 @@ MAN3=		MouseX::Types.3 \
 		MouseX::Types::Moose.3 \
 		MouseX::Types::Mouse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
