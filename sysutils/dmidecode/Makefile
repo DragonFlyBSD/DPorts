@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dmidecode
-# Date created:				19 November 2003
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: sysutils/dmidecode/Makefile 326327 2013-09-04 21:14:14Z anders $
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: sysutils/dmidecode/Makefile 328094 2013-09-24 05:56:53Z bapt $
 
 PORTNAME=	dmidecode
 PORTVERSION=	2.12
@@ -20,6 +16,8 @@ ONLY_FOR_ARCHS=	i386 amd64 ia64
 USE_BZIP2=	yes
 MAKE_ENV+=	DOCSDIR="${DOCSDIR}"
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 .if defined(NOPORTDOCS)
 post-patch:
