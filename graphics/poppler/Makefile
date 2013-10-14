@@ -1,5 +1,5 @@
 # Created by: marcus@FreeBSD.org
-# $FreeBSD: graphics/poppler/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: graphics/poppler/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/poppler/Makefile,v 1.84 2013/03/12 14:53:49 kwm Exp $
 
 PORTNAME=	poppler
@@ -37,6 +37,7 @@ OPTIONS_DEFINE=	CAIRO OPENJPEG
 OPTIONS_DEFAULT=CAIRO OPENJPEG
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(SLAVEPORT)
