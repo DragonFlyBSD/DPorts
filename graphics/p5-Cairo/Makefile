@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/p5-Cairo/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Cairo
 PORTVERSION=	1.103
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		Cairo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
