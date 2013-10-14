@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gdk-pixbuf
-# Date created:		5th October 1999
-# Whom:			Ade Lovett <ade@lovett.com>
-#
-# $FreeBSD: ports/graphics/gdk-pixbuf/Makefile,v 1.60 2012/11/17 05:58:06 svnexp Exp $
+# Created by: Ade Lovett <ade@lovett.com>
+# $FreeBSD: graphics/gdk-pixbuf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/graphics/gdk-pixbuf/Makefile,v 1.2 2006/09/10 00:51:10 mezz Exp $
 
 PORTNAME?=	gdk-pixbuf
@@ -35,6 +32,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 BUILD_CANVAS?=	no
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
