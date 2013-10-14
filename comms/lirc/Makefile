@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mikeh@FreeBSD.org>
-# $FreeBSD: comms/lirc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: comms/lirc/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	lirc
 PORTVERSION=	0.9.0
@@ -39,6 +39,7 @@ PORTDOCS=	html images irxevent.keys lirc.css lirc.hwdb
 PORTEXAMPLES=	remotes
 SUB_FILES=	pkg-message lircd.conf
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libvga.so.1)
