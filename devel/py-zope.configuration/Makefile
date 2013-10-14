@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/py-zope.configuration/Makefile 315934 2013-04-17 06:44:00Z rm $
+# $FreeBSD: devel/py-zope.configuration/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.configuration
 PORTVERSION=	3.8.0
@@ -18,6 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 		${PYTHON_PKGNAMEPREFIX}zope.schema>=0:${PORTSDIR}/devel/py-zope.schema
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
