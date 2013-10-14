@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/gtkglextmm/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: x11-toolkits/gtkglextmm/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtkglextmm
 PORTVERSION=	1.2.0
@@ -20,6 +20,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DGDK_DISABLE_DEPRECATED||g' \
 		-e 's|-DGDK_PIXBUF_DISABLE_DEPRECATED||g' \
