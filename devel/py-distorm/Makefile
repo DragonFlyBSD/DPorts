@@ -1,5 +1,5 @@
 # Created by: Lutz Boehne <lboehne@damogran.de>
-# $FreeBSD: ports/devel/py-distorm/Makefile,v 1.17 2013/01/31 21:44:56 svnexp Exp $
+# $FreeBSD: devel/py-distorm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	distorm
 
@@ -9,4 +9,5 @@ PORTREVISION=		0
 PYTHON_SLAVEPORT=	yes
 MASTERDIR=		${.CURDIR}/../distorm
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
