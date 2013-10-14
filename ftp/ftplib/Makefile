@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/ftplib/Makefile 323037 2013-07-15 14:44:18Z miwi $
+# $FreeBSD: ftp/ftplib/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	ftplib
 PORTVERSION=	4.0
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/ftpdir bin/ftpget bin/ftplist bin/ftprm bin/ftpsend \
 		bin/qftp include/ftplib.h \
 		lib/libftp.a lib/libftp.so lib/libftp.so.4
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^SOVERSION/s|=.*|= $$(SONAME)| ; \
