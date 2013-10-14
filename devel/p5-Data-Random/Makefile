@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Random/Makefile 327288 2013-09-14 14:10:50Z sunpoet $
+# $FreeBSD: devel/p5-Data-Random/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Random
 PORTVERSION=	0.09
@@ -25,6 +25,7 @@ USE_PERL5=	configure
 
 MAN3=		Data::Random.3 Data::Random::WordList.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDATE_CALC}
