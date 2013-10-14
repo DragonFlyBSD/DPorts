@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-tilt/Makefile 319598 2013-06-01 21:24:30Z swills $
+# $FreeBSD: devel/rubygem-tilt/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tilt
 PORTVERSION=	1.4.1
@@ -16,4 +16,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/tilt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
