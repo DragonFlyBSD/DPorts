@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-systemu
-# Date created:				18 Mar 2010
-# Whom:					renchap@cocoa-x.com
-#
-# $FreeBSD: ports/devel/rubygem-systemu/Makefile,v 1.7 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: renchap@cocoa-x.com
+# $FreeBSD: devel/rubygem-systemu/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	systemu
 PORTVERSION=	2.5.2
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
