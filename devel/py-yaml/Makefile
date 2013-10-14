@@ -1,5 +1,5 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD: devel/py-yaml/Makefile 318827 2013-05-23 02:23:34Z jgh $
+# $FreeBSD: devel/py-yaml/Makefile 328034 2013-09-23 19:56:47Z demon $
 
 PORTNAME=	yaml
 PORTVERSION=	3.10
@@ -22,6 +22,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
@@ -30,6 +31,10 @@ post-install:
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${PYTHON_REL} >= 320
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
+.endif
 
 .if ${PORT_OPTIONS:MYAML}
 PYSETUP=	setup.py --with-libyaml
