@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-file-embed/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-file-embed/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	file-embed
 PORTVERSION=	0.0.4.7
@@ -10,5 +10,6 @@ COMMENT=	Use Template Haskell to embed file contents directly
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
