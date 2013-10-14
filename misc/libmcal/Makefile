@@ -1,5 +1,5 @@
 # Created by: thierry@thomas.as
-# $FreeBSD: misc/libmcal/Makefile 318984 2013-05-24 15:52:20Z thierry $
+# $FreeBSD: misc/libmcal/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	libmcal
 PORTVERSION=	0.7
@@ -31,6 +31,7 @@ DOCS=		CHANGELOG FAQ-MCAL FEATURE-IMPLEMENTATION FUNCTION-REF.html \
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-extract:
 	${CP} -pR ${WRKSRCDRV}/mstore ${WRKSRC}
 	${CP} -pR ${WRKSRCDRV}/icap ${WRKSRC}
