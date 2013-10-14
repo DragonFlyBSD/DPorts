@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-xpath/Makefile 319572 2013-06-01 14:28:58Z swills $
+# $FreeBSD: devel/rubygem-xpath/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xpath
 PORTVERSION=	1.0.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
