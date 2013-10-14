@@ -1,9 +1,5 @@
-# New ports collection makefile for:    itk
-# Date created:         Aug 17 1996
-# Whom:                 chuckr
-#
-# $FreeBSD: ports/x11-toolkits/iwidgets/Makefile,v 1.20 2012/11/17 06:03:36 svnexp Exp $
-#
+# Created by: chuckr
+# $FreeBSD: x11-toolkits/iwidgets/Makefile 327849 2013-09-22 05:32:06Z sunpoet $
 
 PORTNAME=	iwidgets
 PORTVERSION=	4.0.1
@@ -19,8 +15,7 @@ LIB_DEPENDS=	itk:${PORTSDIR}/x11-toolkits/itk
 
 NO_BUILD=	yes
 HAS_CONFIGURE=	yes
-USE_TCL=	84+
-USE_TK=		84+
+USES=		tk
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--with-tcl=${TCL_LIBDIR} \
 		--with-tk=${TK_LIBDIR} \
@@ -28,6 +23,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 SUB_LIST=	IWIDGETS=${DISTNAME}
 SUB_FILES=	pkg-message
 PLIST_SUB=	IWIDGETS=${DISTNAME}
+NO_STAGE=	yes
 
 PORTDOCS=	CHANGES ChangeLog README iwidgets.ps
 
