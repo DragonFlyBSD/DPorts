@@ -1,5 +1,5 @@
 # Created by: Willem van Engen <wvengen@stack.nl>
-# $FreeBSD: misc/sword/Makefile 326859 2013-09-10 03:50:32Z danfe $
+# $FreeBSD: misc/sword/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	sword
 PORTVERSION=	1.6.2
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	CURL CLUCENE
 CLUCENE_DESC=	Include indexing capability
 OPTIONS_DEFAULT=CURL CLUCENE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURL}
