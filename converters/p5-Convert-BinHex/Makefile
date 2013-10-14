@@ -1,5 +1,5 @@
 # Created by: Jan-Peter Koopmann <j.koopmann@seceidos.de>
-# $FreeBSD: converters/p5-Convert-BinHex/Makefile 326589 2013-09-07 09:59:42Z tobez $
+# $FreeBSD: converters/p5-Convert-BinHex/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Convert-BinHex
 PORTVERSION=	1.123
@@ -23,4 +23,5 @@ MAN1=		binhex.pl.1 \
 		debinhex.pl.1
 MAN3=		Convert::BinHex.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
