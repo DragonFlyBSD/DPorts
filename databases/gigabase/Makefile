@@ -1,9 +1,5 @@
-# ports collection makefile for:	gigabase
-# Date created:			15 August 2000
-# Whom:				Sergey A. Osokin <osa@FreeBSD.org.ru>
-#
-# $FreeBSD: ports/databases/gigabase/Makefile,v 1.132 2012/11/17 05:55:08 svnexp Exp $
-#
+# Created by: Sergey A. Osokin <osa@FreeBSD.org.ru>
+# $FreeBSD: databases/gigabase/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	gigabase
 PORTVERSION=	3.86
@@ -24,4 +20,5 @@ CPPFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS}
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
