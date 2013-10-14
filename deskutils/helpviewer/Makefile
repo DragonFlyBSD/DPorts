@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/helpviewer/Makefile,v 1.11 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/helpviewer/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	helpviewer
 PORTVERSION=	0.3
@@ -20,6 +20,7 @@ USE_GNUSTEP_INSTALL=	yes
 
 FIXME=	HandlerStructureXLP.h TextFormatterXLP.h
 
+NO_STAGE=	yes
 post-patch:
 .for i in ${FIXME}
 	${REINPLACE_CMD} -e 's|Foundation/GSXML.h|GNUstepBase/GSXML.h|' \
