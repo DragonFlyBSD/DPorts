@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/icmake/pkg-plist,v 1.4 2012/12/04 10:54:13 svnexp Exp $
+@comment $FreeBSD: devel/icmake/pkg-plist 308217 2012-12-04 09:13:30Z pgj $
 bin/icmake
 bin/icmbuild
 bin/icmstart

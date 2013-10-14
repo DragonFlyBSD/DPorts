@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/icmake/Makefile,v 1.8 2012/12/04 19:59:06 svnexp Exp $
+# $FreeBSD: devel/icmake/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	icmake
 PORTVERSION=	7.19.00
@@ -29,6 +29,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 REINPLACE_ARGS=	-I ""
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
