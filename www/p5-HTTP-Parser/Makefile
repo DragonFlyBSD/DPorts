@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTTP-Parser
-# Date created:		2008-01-30
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: www/p5-HTTP-Parser/Makefile 325965 2013-09-02 10:00:38Z az $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: www/p5-HTTP-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Parser
 PORTVERSION=	0.06
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		HTTP::Parser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
