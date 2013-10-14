@@ -1,5 +1,5 @@
 # Created by: r.neese
-# $FreeBSD: audio/sphinxbase/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/sphinxbase/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	sphinxbase
 PORTVERSION=	0.8
@@ -10,6 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CMU Sphinx Speech recognition system base
 
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 USES=		gmake bison
 USE_AUTOTOOLS=	libtool
 
