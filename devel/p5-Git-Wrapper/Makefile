@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Git-Wrapper/Makefile 324994 2013-08-19 14:03:06Z culot $
+# $FreeBSD: devel/p5-Git-Wrapper/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Git-Wrapper
 PORTVERSION=	0.030
@@ -33,4 +33,5 @@ MAN3=		Git::Wrapper.3 \
 		Git::Wrapper::Status.3 \
 		Git::Wrapper::Statuses.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
