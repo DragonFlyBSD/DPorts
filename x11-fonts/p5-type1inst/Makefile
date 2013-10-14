@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: x11-fonts/p5-type1inst/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: x11-fonts/p5-type1inst/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	type1inst
 PORTVERSION=	0.6.1
@@ -24,6 +24,7 @@ PLIST_FILES=	bin/t1embed bin/type1inst
 
 MAN1=	type1inst.1
 
+NO_STAGE=	yes
 pre-install:
 	${REINPLACE_CMD} 's,^#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/type1inst
 
