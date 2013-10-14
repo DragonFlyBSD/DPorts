@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net/remmina/Makefile 326124 2013-09-03 07:09:24Z bapt $
+# $FreeBSD: net/remmina/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	remmina
 PORTVERSION=	1.0.0
@@ -34,6 +34,7 @@ TERM_DESC=	Build with terminal support
 AVAHI_DESC=	Build with Avahi support
 UNIQUE_DESC=	Build with Unique-App support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CMAKE_ARGS+=	--build=build
