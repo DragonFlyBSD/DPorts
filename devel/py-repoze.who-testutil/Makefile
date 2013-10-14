@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-repoze.who-testutil
-# Date created:		3rd August,2009
-# Whom:	      		Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: devel/py-repoze.who-testutil/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-repoze.who-testutil/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	repoze.who-testutil
 PORTVERSION=	1.0.1
@@ -23,4 +19,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	repoze.who_testutil
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
