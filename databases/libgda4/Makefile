@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda4/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: databases/libgda4/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/databases/libgda4/Makefile,v 1.27 2012/09/01 23:02:08 mezz Exp $
 
 PORTNAME=	libgda
@@ -46,6 +46,7 @@ SOUP_DESC=	Web provider
 KEYRING_DESC=	Support gnome-keyring
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 VERSION=	4.0
