@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-Telescope/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: astro/p5-Astro-Telescope/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Astro-Telescope
 PORTVERSION=	0.71
@@ -18,6 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	modbuild
 USES=		perl5
+NO_STAGE=	yes
 
 MAN3=		Astro::Telescope.3
 
