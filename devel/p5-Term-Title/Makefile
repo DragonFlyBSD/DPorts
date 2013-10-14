@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-Title/Makefile 325898 2013-09-01 18:15:29Z az $
+# $FreeBSD: devel/p5-Term-Title/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Term-Title
 PORTVERSION=	0.03
@@ -16,4 +16,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Term::Title.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
