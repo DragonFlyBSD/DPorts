@@ -1,5 +1,4 @@
-# Created by: Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: devel/p5-Eval-Closure/Makefile 324148 2013-08-02 07:30:47Z culot $
+# $FreeBSD: devel/p5-Eval-Closure/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Eval-Closure
 PORTVERSION=	0.11
@@ -27,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=		Eval::Closure.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
