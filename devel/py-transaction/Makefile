@@ -1,6 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-transaction/Makefile 315486 2013-03-28 16:23:05Z cs $
-#
+# $FreeBSD: devel/py-transaction/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	transaction
 PORTVERSION=	1.4.1
@@ -18,4 +17,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
