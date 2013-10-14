@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: cad/ldraw/Makefile 327496 2013-09-17 17:51:28Z nemysis $
+# $FreeBSD: cad/ldraw/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	ldraw
 PORTVERSION=	201301
@@ -29,6 +29,7 @@ OPTIONS_DEFINE=	DOCS
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract-script:
