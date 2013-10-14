@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/lcms/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: graphics/lcms/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lcms
 PORTVERSION=	1.19
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GNOME=	gnomehack lthack
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJPEGICC}
