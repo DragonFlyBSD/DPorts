@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: devel/shapelib/Makefile 325456 2013-08-27 15:03:04Z sunpoet $
+# $FreeBSD: devel/shapelib/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	shapelib
 PORTVERSION=	1.3.0
@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DEBUG DOCS PROJ
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
