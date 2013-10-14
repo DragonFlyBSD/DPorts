@@ -1,7 +1,8 @@
-# $FreeBSD: x11/xkeyboard-config/Makefile 324227 2013-08-04 12:53:54Z az $
+# $FreeBSD: x11/xkeyboard-config/Makefile 329693 2013-10-07 11:24:23Z ak $
 
 PORTNAME=	xkeyboard-config
 PORTVERSION=	2.9
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -14,9 +15,8 @@ BUILD_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp
 XORG_CAT=	data
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	intlhack libxslt:build
-USES=		pathfix perl5
+USES=		gmake pathfix perl5
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
@@ -28,11 +28,12 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN7=		xkeyboard-config.7
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # !nls case doesn't work correctly, comment it out.
 #.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext iconv
+USES+=		gettext:build iconv
 PLIST_SUB+=	NLS=""
 #.else
 #CONFIGURE_ARGS+=--disable-nls
