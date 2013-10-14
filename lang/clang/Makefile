@@ -1,5 +1,5 @@
 # Created by: Brooks Davis
-# $FreeBSD: lang/clang/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: lang/clang/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	clang
 PORTVERSION=	3.2
@@ -51,6 +51,7 @@ MAN1=		clang.1
 
 PLIST_SUB+=		PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASSERTS}
