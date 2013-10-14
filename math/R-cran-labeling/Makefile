@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-labeling/Makefile 321515 2013-06-22 01:44:32Z tota $
+# $FreeBSD: math/R-cran-labeling/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	labeling
 PORTVERSION=	0.2
@@ -14,4 +14,5 @@ LICENSE=	MIT
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
