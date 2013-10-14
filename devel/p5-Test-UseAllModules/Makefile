@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: devel/p5-Test-UseAllModules/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-Test-UseAllModules/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-UseAllModules
 PORTVERSION=	0.14
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::UseAllModules.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
