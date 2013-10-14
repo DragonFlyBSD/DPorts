@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-DNS-ToolKit/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-Net-DNS-ToolKit/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS-ToolKit
 PORTVERSION=	0.47
@@ -49,4 +49,5 @@ MAN3=		Net::DNS::ToolKit.3 \
 		Net::DNS::ToolKit::RR::X25.3 \
 		Net::DNS::ToolKit::Utilities.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
