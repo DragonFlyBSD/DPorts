@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: net/yaz/Makefile 327298 2013-09-14 15:43:43Z pawel $
+# $FreeBSD: net/yaz/Makefile 328018 2013-09-23 16:36:37Z pawel $
 
 PORTNAME=	yaz
-PORTVERSION=	4.2.66
+PORTVERSION=	4.2.68
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
@@ -30,6 +30,7 @@ MAN8=		yaz-ztest.8
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MDOCS}
