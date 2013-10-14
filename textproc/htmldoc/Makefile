@@ -1,5 +1,5 @@
 # Created by: Glenn Trewitt <glenn@trewitt.org>
-# $FreeBSD: textproc/htmldoc/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: textproc/htmldoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	htmldoc
 PORTVERSION=	1.8.27
@@ -23,6 +23,7 @@ HTMLDOCGUI_DESC=	Build GUI front-end
 #USE_BZIP2=	yes
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 # Configure seems broken and ignores these ATM:
 CONFIGURE_ARGS+=--enable-localjpeg --enable-localzlib --enable-localpng
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
