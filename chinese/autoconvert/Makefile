@@ -1,5 +1,5 @@
 # Created by: Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
-# $FreeBSD: chinese/autoconvert/Makefile 324096 2013-08-01 06:46:31Z bapt $
+# $FreeBSD: chinese/autoconvert/Makefile 329149 2013-10-03 06:57:32Z sunpoet $
 
 PORTNAME=	autoconvert
 PORTVERSION=	0.3.16
@@ -31,8 +31,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ChangeLog Readme TODO Thanks Version ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ChangeLog Readme TODO Thanks Version ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
