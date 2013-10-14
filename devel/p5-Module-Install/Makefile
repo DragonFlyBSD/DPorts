@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Module-Install/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-Module-Install/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Install
 PORTVERSION=	1.06
@@ -43,4 +43,5 @@ MAN3=		inc::Module::Install.3 \
 		Module::Install::Share.3 \
 		Module::Install::With.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
