@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/devel/pear-IO_Bit/Makefile,v 1.5 2012/11/17 05:56:39 svnexp Exp $
+# $FreeBSD: devel/pear-IO_Bit/Makefile 329236 2013-10-03 21:19:08Z tota $
 
 PORTNAME=	IO_Bit
-PORTVERSION=	2.1.0
-CATEGORIES=     devel pear
+PORTVERSION=	2.1.1
+CATEGORIES=	devel pear
 MASTER_SITES=	http://openpear.org/get/ \
 		LOCAL
 MASTER_SITE_SUBDIR=	tota/${PKGNAMEPREFIX}${PORTNAME}
@@ -21,6 +21,7 @@ USE_PHP=	yes
 PEAR_CHANNEL=	openpear
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
