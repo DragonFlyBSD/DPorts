@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: lang/elk/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: lang/elk/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	elk
 PORTVERSION=	3.99.8
@@ -23,6 +23,7 @@ MAN1=		elk.1
 CPPFLAGS+=	-I${LOCALBASE}/include/libelf -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
