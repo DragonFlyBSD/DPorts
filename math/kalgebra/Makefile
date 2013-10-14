@@ -1,4 +1,4 @@
-# $FreeBSD: math/kalgebra/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/kalgebra/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	kalgebra
 PORTVERSION=	${KDE4_VERSION}
@@ -22,4 +22,5 @@ USE_QT4=	corelib declarative gui opengl \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
