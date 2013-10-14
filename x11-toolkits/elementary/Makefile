@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-toolkits/elementary/Makefile 326344 2013-09-05 05:25:38Z antoine $
+# $FreeBSD: x11-toolkits/elementary/Makefile 329521 2013-10-06 00:03:50Z gblach $
 
 PORTNAME=	elementary
 PORTVERSION=	1.7.8
