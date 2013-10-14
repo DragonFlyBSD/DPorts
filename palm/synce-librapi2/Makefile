@@ -1,8 +1,5 @@
-# New ports collection makefile for:   synce-librapi2
-# Date created:                14 June 2003
-# Whom:                        Sam Lawrance <boris@brooknet.com.au>
-#
-# $FreeBSD: palm/synce-librapi2/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# Created by: Sam Lawrance <boris@brooknet.com.au>
+# $FreeBSD: palm/synce-librapi2/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	librapi2
 PORTVERSION=	0.14
@@ -23,6 +20,7 @@ USES=		pathfix iconv pkgconfig
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_BASE} --with-libsynce="${LOCALBASE}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(RAPI_SLAVE) && ${RAPI_SLAVE} == "pythonb"
