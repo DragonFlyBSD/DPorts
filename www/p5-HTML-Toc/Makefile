@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-HTML-Toc
-# Date created:				26 December 2009
-# Whom:					Alex Deiter <Alex.Deiter@Gmail.COM>
-#
-# $FreeBSD: www/p5-HTML-Toc/Makefile 325965 2013-09-02 10:00:38Z az $
-#
+# Created by: Alex Deiter <Alex.Deiter@Gmail.COM>
+# $FreeBSD: www/p5-HTML-Toc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Toc
 PORTVERSION=	1.12
@@ -21,4 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
