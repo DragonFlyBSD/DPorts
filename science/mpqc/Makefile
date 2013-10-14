@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpqc
-# Date created:				27 April 2001
-# Whom:					batman <batman@udel.edu>
-#
-# $FreeBSD: science/mpqc/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: batman <batman@udel.edu>
+# $FreeBSD: science/mpqc/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	mpqc
 PORTVERSION=	2.3.1
@@ -14,11 +10,11 @@ MASTER_SITES=	SF
 MAINTAINER=	maho@FreeBSD.org
 COMMENT=	The massively parallel quantum computing library and program
 
-USE_PERL5=	yes
-USE_GMAKE=	yes
+USES=		perl5 gmake
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_ICC)
