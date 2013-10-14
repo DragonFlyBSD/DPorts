@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-conduit/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	conduit
 PORTVERSION=	1.0.5
@@ -13,5 +13,6 @@ USE_CABAL=	lifted-base>=0.1 mmorph monad-control>=0.3.1 resourcet>=0.4.3 \
 		text>=0.11 transformers>=0.2.2 transformers-base>=0.4.1 \
 		void>=0.5.5
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
