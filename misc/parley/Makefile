@@ -1,4 +1,4 @@
-# $FreeBSD: misc/parley/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/parley/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	parley
 PORTVERSION=	${KDE4_VERSION}
@@ -19,4 +19,5 @@ USE_QT4=	corelib gui moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11 xrender
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
