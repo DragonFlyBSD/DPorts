@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/asdcplib/Makefile 315882 2013-04-16 18:37:00Z olgeni $
+# $FreeBSD: multimedia/asdcplib/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	asdcplib
 PORTVERSION=	1.11.49
