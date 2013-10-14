@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/dulwich/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/dulwich/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dulwich
 PORTVERSION=	0.9.0
@@ -24,6 +24,7 @@ OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}/options
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
