@@ -1,5 +1,5 @@
 # Created by: mi@aldan.algebra.com
-# $FreeBSD: x11-fonts/geminifonts/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: x11-fonts/geminifonts/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	gemini
 PORTVERSION=	1.0
@@ -17,6 +17,8 @@ COMMENT=	Ukrainian KOI8 fonts for X11R6 (koi8-u)
 BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
+
+NO_STAGE=	yes
 
 USES=		perl5
 USE_PERL5=	build
