@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/mopac/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/mopac/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	mopac
 PORTVERSION=	7.${MOPAC_SUBVERSION}
@@ -29,6 +29,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/pkgconfig/s|$$(libdir)|$$(prefix)/libdata|g' \
 		${WRKSRC}/Makefile.am
