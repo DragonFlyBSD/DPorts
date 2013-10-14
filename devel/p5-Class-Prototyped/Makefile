@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Prototyped/Makefile 325577 2013-08-29 09:27:40Z tobez $
+# $FreeBSD: devel/p5-Class-Prototyped/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Prototyped
 PORTVERSION=	1.13
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 MAN3=	Class::Prototyped.3 \
 	Class::Prototyped::why.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
