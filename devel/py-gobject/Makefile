@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-gobject/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/py-gobject/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/py-gobject/Makefile,v 1.58 2012/12/30 18:15:16 mezz Exp $
 
 PORTNAME=	gobject
@@ -36,6 +36,7 @@ CONFIGURE_ARGS=	--disable-docs --disable-introspection --with-ffi
 CONFLICTS=	py*-gtk-0*
 PLIST_SUB=	PYTHON_VER="${PYTHON_VER}"
 
+NO_STAGE=	yes
 post-install:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
 		${PREFIX}/share/pygobject/2.0/codegen
