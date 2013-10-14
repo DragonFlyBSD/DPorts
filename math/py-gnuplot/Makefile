@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-gnuplot
-# Date created:				3 July 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/math/py-gnuplot/Makefile,v 1.21 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: math/py-gnuplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gnuplot
 PORTVERSION=	1.8
@@ -24,6 +20,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	gnuplot-py
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
