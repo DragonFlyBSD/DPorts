@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-amqplib
-# Date created:		2012-01-25
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-amqplib/Makefile,v 1.3 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: net/py-amqplib/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	amqplib
 PORTVERSION=	1.0.2
@@ -21,4 +17,5 @@ PROJECTHOST=	py-amqplib
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
