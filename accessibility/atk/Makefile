@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/atk/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: accessibility/atk/Makefile 327684 2013-09-20 11:02:49Z bapt $
 #   $MCom: ports/trunk/accessibility/atk/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	atk
@@ -16,6 +16,7 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USES=		gettext gmake pathfix pkgconfig
