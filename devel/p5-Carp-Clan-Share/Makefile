@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Carp-Clan-Share/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Carp-Clan-Share/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Carp-Clan-Share
 PORTVERSION=	0.013
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Carp::Clan::Share.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
