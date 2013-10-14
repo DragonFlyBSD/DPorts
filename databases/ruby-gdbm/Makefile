@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-gdbm
-# Date created:		24 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/databases/ruby-gdbm/Makefile,v 1.28 2012/11/17 05:55:24 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: databases/ruby-gdbm/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	gdbm
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -26,6 +22,7 @@ USE_RUBY_EXTCONF=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAKE_ARGS=	sitelibdir='$$(rubylibdir)'
