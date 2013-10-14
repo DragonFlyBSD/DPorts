@@ -1,4 +1,4 @@
-# $FreeBSD: net/hs-sendfile/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: net/hs-sendfile/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sendfile
 PORTVERSION=	0.7.9
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	network>=2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
