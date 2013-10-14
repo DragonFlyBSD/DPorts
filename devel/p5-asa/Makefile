@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-asa/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-asa/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	asa
 PORTVERSION=	1.03
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	asa.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
