@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Imlib2/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Image-Imlib2/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Image-Imlib2
 PORTVERSION=	2.03
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	modbuild
 USE_EFL=	imlib2
+NO_STAGE=	yes
 
 MAN3=		Image::Imlib2.3
 
