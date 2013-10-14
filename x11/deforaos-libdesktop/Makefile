@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-libdesktop/Makefile 323751 2013-07-26 19:46:21Z marino $
+# $FreeBSD: x11/deforaos-libdesktop/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libdesktop
 PORTVERSION=	0.0.9
@@ -22,6 +22,7 @@ MAKE_ARGS+=	PREFIX=${PREFIX}
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/|/libdata/|g' \
 		${WRKSRC}/data/pkgconfig.sh
