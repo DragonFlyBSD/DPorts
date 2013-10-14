@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ruby-eb/Makefile 319609 2013-06-01 22:04:34Z swills $
+# $FreeBSD: japanese/ruby-eb/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	eb
 PORTVERSION=	2.6
@@ -21,6 +21,7 @@ INSTALL_TARGET=	site-install
 
 EXAMPLES=	hook2.rb test.rb
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}${RUBY_PKGNAMEPREFIX}
