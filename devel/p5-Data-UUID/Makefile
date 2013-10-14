@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-UUID/Makefile 326068 2013-09-02 19:32:09Z az $
+# $FreeBSD: devel/p5-Data-UUID/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-UUID
 PORTVERSION=	1.219
@@ -16,4 +16,5 @@ CONFIGURE_ARGS=	</dev/null
 
 MAN3=		Data::UUID.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
