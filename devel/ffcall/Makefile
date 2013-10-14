@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ffcall
-# Date created:        21 February 2001
-# Whom:                jagapen@home.com
-#
-# $FreeBSD: ports/devel/ffcall/Makefile,v 1.27 2012/11/17 05:55:42 svnexp Exp $
-#
+# Created by: jagapen@home.com
+# $FreeBSD: devel/ffcall/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	ffcall
 PORTVERSION=	1.10
@@ -27,6 +23,7 @@ MAN3=		avcall.3 callback.3 trampoline.3 trampoline_r.3 vacall.3
 MANCOMPRESSED=	no
 CFLAGS+=	-fPIC
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
