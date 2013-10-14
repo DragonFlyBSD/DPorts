@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-openssl
-# Date created:			Feb 10, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/py-openssl/Makefile,v 1.21 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/py-openssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openssl
 PORTVERSION=	0.13
@@ -27,6 +22,7 @@ USE_OPENSSL=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 pre-configure:
 	@${ECHO_CMD} "[build_ext]" >> ${WRKSRC}/setup.cfg
 	@${ECHO_CMD} "include-dirs = ${OPENSSLINC}" >> ${WRKSRC}/setup.cfg

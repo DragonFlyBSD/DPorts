@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/py-openssl/pkg-plist,v 1.9 2012/11/17 06:01:16 svnexp Exp $
+@comment $FreeBSD: security/py-openssl/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/OpenSSL/SSL.so
 %%PYTHON_SITELIBDIR%%/OpenSSL/__init__.py
 %%PYTHON_SITELIBDIR%%/OpenSSL/__init__.pyc
