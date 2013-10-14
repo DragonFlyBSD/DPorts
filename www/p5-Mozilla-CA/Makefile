@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Mozilla-CA/Makefile 325960 2013-09-02 09:44:14Z az $
+# $FreeBSD: www/p5-Mozilla-CA/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Mozilla-CA
 PORTVERSION=	20130114
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	Mozilla::CA.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
