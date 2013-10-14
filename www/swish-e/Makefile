@@ -1,9 +1,5 @@
-# New ports collection makefile for:    swish-e
-# Date created:         		23 Feb 98
-# Whom:              			Daniel O'Connor <doconnor@gsoft.com.au>
-#
-# $FreeBSD: ports/www/swish-e/Makefile,v 1.28 2012/11/17 06:03:06 svnexp Exp $
-#
+# Created by: Daniel O'Connor <doconnor@gsoft.com.au>
+# $FreeBSD: www/swish-e/Makefile 328498 2013-09-27 16:18:45Z antoine $
 
 PORTNAME=	swish-e
 PORTVERSION=	2.4.7
@@ -27,6 +23,7 @@ PORTDOCS=	*
 
 MAN1=		SWISH-CONFIG.1 SWISH-FAQ.1 SWISH-LIBRARY.1 SWISH-RUN.1 swish-e.1
 
+NO_STAGE=	yes
 .if defined(NOPORTDOCS)
 post-patch:
 	@${REINPLACE_CMD} -E 's/^(install-data-am:) install-docDATA(.*)/\1\2/' \
