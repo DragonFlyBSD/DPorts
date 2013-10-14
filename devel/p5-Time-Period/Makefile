@@ -1,5 +1,5 @@
 # Created by: Nicholas Esborn <nick@netdot.net>
-# $FreeBSD: devel/p5-Time-Period/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Time-Period/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-Period
 PORTVERSION=	1.20
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Time::Period.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
