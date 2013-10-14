@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: news/py-pynzb/Makefile 317826 2013-05-10 16:24:05Z bapt $
+# $FreeBSD: news/py-pynzb/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	pynzb
 PORTVERSION=	0.1.0
@@ -21,6 +21,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	LXML
 LXML_DESC=	Add support for py-lxml
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLXML}
