@@ -1,5 +1,5 @@
 # Created by: Tod McQuillin <devin@spamcop.net>
-# $FreeBSD: graphics/p5-Image-ExifTool/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Image-ExifTool/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 # Note: This port tracks the "production release" of ExifTool as given
 # by http://www.sno.phy.queensu.ca/~phil/exiftool/history.html
@@ -54,6 +54,7 @@ MAN3=		File::RandomAccess.3 Image::ExifTool.3		\
 
 MAN1=		exiftool.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
