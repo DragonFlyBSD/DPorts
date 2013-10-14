@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@saargate.de>
-# $FreeBSD: dns/p5-Net-LibIDN/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: dns/p5-Net-LibIDN/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-LibIDN
 PORTVERSION=	0.12
@@ -19,4 +19,5 @@ CONFIGURE_ARGS+=	--with-libidn=${PREFIX}/lib --with-libidn-inc=${PREFIX}/include
 
 MAN3=		Net::LibIDN.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
