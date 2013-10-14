@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-editobj
-# Date created:				2005-10-05
-# Whom:					Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-#
-# $FreeBSD: ports/graphics/py-editobj/Makefile,v 1.7 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
+# $FreeBSD: graphics/py-editobj/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	editobj
 PORTVERSION=	0.5.7
@@ -22,6 +18,7 @@ PYDISTUTILS_PKGNAME=	EditObj
 WRKSRC=		${WRKDIR}/EditObj-${PORTVERSION}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-editobj
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${EXAMPLESDIR}
