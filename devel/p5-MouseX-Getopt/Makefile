@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MouseX-Getopt/Makefile 326803 2013-09-09 11:55:30Z az $
+# $FreeBSD: devel/p5-MouseX-Getopt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MouseX-Getopt
 PORTVERSION=	${DISTVERSION}00
@@ -31,4 +31,5 @@ MAN3=		MouseX::Getopt.3 \
 		MouseX::Getopt::OptionTypeMap.3 \
 		MouseX::Getopt::Strict.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
