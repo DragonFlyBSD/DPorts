@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libtextcat
-# Date created:		Sat 18 nov 2007
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/textproc/libtextcat/Makefile,v 1.13 2012/11/17 06:02:01 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: textproc/libtextcat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libtextcat
 PORTVERSION=	2.2
@@ -23,6 +19,7 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	LICENSE README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists($(PREFIX)/lib/libtextcat.a)
