@@ -1,5 +1,5 @@
 # Created by: jpaetzel
-# $FreeBSD: databases/py-htsql/Makefile 316728 2013-04-28 14:34:12Z koobs $
+# $FreeBSD: databases/py-htsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	htsql
 PORTVERSION=	2.3.3
@@ -18,6 +18,7 @@ PYDISTUTILS_PKGNAME=	${PORTNAME:tu}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}yaml>0:${PORTSDIR}/devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
