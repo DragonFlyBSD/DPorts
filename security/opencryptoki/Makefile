@@ -1,5 +1,5 @@
 # Created by: Ralf Meister
-# $FreeBSD: security/opencryptoki/Makefile 324061 2013-07-31 16:01:03Z hrs $
+# $FreeBSD: security/opencryptoki/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	opencryptoki
 PORTVERSION=	2.3.2
@@ -46,6 +46,7 @@ MAN8=		pkcsslotd.8
 
 run-autotools:	run-autotools-autoreconf
 
+NO_STAGE=	yes
 run-autotools-autoreconf:
 	@cd ${CONFIGURE_WRKSRC} && ${SETENV} ${AUTOTOOLS_ENV} ${AUTORECONF} -i
 
