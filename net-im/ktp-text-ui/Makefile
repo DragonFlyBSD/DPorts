@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-text-ui/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-im/ktp-text-ui/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	ktp-text-ui
 PORTVERSION=	${KTP_VERSION}
@@ -22,4 +22,5 @@ USES=		cmake gettext
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
