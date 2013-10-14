@@ -1,8 +1,8 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/gdb/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: devel/gdb/Makefile 328393 2013-09-26 17:05:03Z tabthorpe $
 
 PORTNAME=	gdb
-PORTVERSION=	7.6
+PORTVERSION=	7.6.1
 #PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNU
@@ -14,8 +14,7 @@ LICENSE=	GPLv3
 
 USE_BZIP2=	yes
 USE_CSTD=	gnu89
-USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CONFIGURED_M4=m4 CONFIGURED_BISON=byacc
 CONFIGURE_ARGS=	--program-suffix=${PORTVERSION:S/.//g} \
@@ -43,6 +42,7 @@ GDB_LINK_DESC=	Create the gdb link
 TUI_DESC=	Text User Interface enabled
 OPTIONS_DEFAULT=	THREADS TUI GDB_LINK PORT_READLINE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGDB_LINK}
@@ -124,6 +124,7 @@ post-install:
 .if ${PORT_OPTIONS:MPYTHON}
 	${CHMOD} u+w ${PREFIX}/share/gdb${VER}/python/gdb/*.py*
 	${CHMOD} u+w ${PREFIX}/share/gdb${VER}/python/gdb/command/*.py*
+	${CHMOD} u+w ${PREFIX}/share/gdb${VER}/python/gdb/function/*.py*
 .endif
 
 .include <bsd.port.post.mk>
