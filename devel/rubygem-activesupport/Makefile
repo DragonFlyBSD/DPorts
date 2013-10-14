@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-activesupport/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
+# $FreeBSD: devel/rubygem-activesupport/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	activesupport
 PORTVERSION=	3.2.13
@@ -20,4 +20,5 @@ USE_RUBY_FEATURES=	iconv
 
 NOPORTDOCS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
