@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Editor
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/www/pear-Horde_Editor/Makefile,v 1.7 2013/02/12 17:39:04 svnexp Exp $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: www/pear-Horde_Editor/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Horde_Editor
 PORTVERSION=	2.0.3
@@ -19,6 +16,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Exception \
 		Horde_Serialize
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
