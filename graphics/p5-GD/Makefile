@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@FreeBSD.org>
-# $FreeBSD: graphics/p5-GD/Makefile 325131 2013-08-21 13:54:13Z mat $
+# $FreeBSD: graphics/p5-GD/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GD
 PORTVERSION=	2.50
@@ -22,4 +21,5 @@ MAN1=		bdf2gdfont.pl.1
 MAN3=		GD.3 GD::Polyline.3 GD::Simple.3 \
 		GD::Image.3 GD::Polygon.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
