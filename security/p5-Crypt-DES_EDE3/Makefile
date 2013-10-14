@@ -1,5 +1,5 @@
 # Created by: jesper
-# $FreeBSD: security/p5-Crypt-DES_EDE3/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-DES_EDE3/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-DES_EDE3
 PORTVERSION=	0.01
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::DES_EDE3.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
