@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libhtp/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: devel/libhtp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libhtp
 PORTVERSION=	0.3.0
@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG}
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib \
 		${ICONV_LIB}
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -Ee 's,^(pkgconfigdir = ).*,\1$$(exec_prefix)/libdata/pkgconfig,' ${WRKSRC}/Makefile.am
 	@cd ${WRKSRC} && ${SH} ./autogen.sh
