@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: dns/py-twistedNames/Makefile 326649 2013-09-07 16:15:35Z sunpoet $
+# $FreeBSD: dns/py-twistedNames/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	twistedNames
 PORTVERSION=	13.1.0
@@ -22,4 +22,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
