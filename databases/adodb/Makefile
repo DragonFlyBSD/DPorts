@@ -1,5 +1,5 @@
 # Created by: abgoeree@uwnet.nl
-# $FreeBSD: databases/adodb/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/adodb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	adodb
 PORTVERSION=	4.99.2
@@ -25,6 +25,7 @@ ADODB_SUBDIRS=	contrib datadict drivers lang pear perf session xsl
 OPTIONS_DEFINE=	TESTS DOCS
 TESTS_DESC=	Install tests
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 SUB_FILES+=	pkg-message
