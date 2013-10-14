@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/py-funcparserlib/Makefile 317309 2013-05-04 11:40:08Z tota $
+# $FreeBSD: devel/py-funcparserlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	funcparserlib
 PORTVERSION=	0.3.6
@@ -23,6 +23,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 OPTIONS_DEFINE=	DOCS
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
