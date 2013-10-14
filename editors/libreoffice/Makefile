@@ -1,5 +1,6 @@
-# $FreeBSD: editors/libreoffice/Makefile 325232 2013-08-22 20:44:37Z jkim $
+# $FreeBSD: editors/libreoffice/Makefile 327731 2013-09-20 17:46:05Z jkim $
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 
 PORTREVISION=	0
@@ -13,7 +14,7 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 		${LOCALBASE}/lib/libcppunit.so:${PORTSDIR}/devel/cppunit \
 		dmake:${PORTSDIR}/devel/dmake \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
-		${LOCALBASE}/include/mdds/global.hpp:${PORTSDIR}/devel/mdds \
+		mdds>=0.9.0:${PORTSDIR}/devel/mdds \
 		gpatch:${PORTSDIR}/devel/patch \
 		sane-backends>=1.0.23:${PORTSDIR}/graphics/sane-backends \
 		ucpp:${PORTSDIR}/devel/ucpp \
@@ -21,36 +22,36 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 		bash:${PORTSDIR}/shells/bash \
 		gsed:${PORTSDIR}/textproc/gsed
 
-LIB_DEPENDS=	icutu:${PORTSDIR}/devel/icu \
-		langtag:${PORTSDIR}/devel/liblangtag \
-		orcus-0.6:${PORTSDIR}/devel/liborcus \
-		curl:${PORTSDIR}/ftp/curl \
-		cairo.2:${PORTSDIR}/graphics/cairo \
-		graphite2:${PORTSDIR}/graphics/graphite2 \
-		jpeg.11:${PORTSDIR}/graphics/jpeg \
-		cdr:${PORTSDIR}/graphics/libcdr \
-		lcms2:${PORTSDIR}/graphics/lcms2 \
-		wpg-0.2.2:${PORTSDIR}/graphics/libwpg \
-		png15:${PORTSDIR}/graphics/png \
-		poppler:${PORTSDIR}/graphics/poppler \
-		lpsolve55:${PORTSDIR}/math/lp_solve \
-		cmis-0.4:${PORTSDIR}/net/libcmis \
-		ldap-2.4:${PORTSDIR}/net/openldap24-client \
-		mspub-0.0:${PORTSDIR}/print/libmspub \
-		nss3.1:${PORTSDIR}/security/nss \
-		clucene-core:${PORTSDIR}/textproc/clucene \
-		expat.6:${PORTSDIR}/textproc/expat2 \
-		hunspell-1.3.0:${PORTSDIR}/textproc/hunspell \
-		hyphen.2:${PORTSDIR}/textproc/hyphen \
-		exttextcat-2.0.0:${PORTSDIR}/textproc/libexttextcat \
-		visio-0.0.0:${PORTSDIR}/textproc/libvisio \
-		xml2.5:${PORTSDIR}/textproc/libxml2 \
-		xslt.2:${PORTSDIR}/textproc/libxslt \
-		wpd-0.9.9:${PORTSDIR}/textproc/libwpd \
-		wps-0.2.2:${PORTSDIR}/textproc/libwps \
-		mythes-1.2.0:${PORTSDIR}/textproc/mythes \
-		cups:${PORTSDIR}/print/cups-client \
-		rdf.0:${PORTSDIR}/textproc/redland
+LIB_DEPENDS=	libicutu.so:${PORTSDIR}/devel/icu \
+		liblangtag.so:${PORTSDIR}/devel/liblangtag \
+		liborcus-0.6.so:${PORTSDIR}/devel/liborcus \
+		libcurl.so:${PORTSDIR}/ftp/curl \
+		libcairo.so:${PORTSDIR}/graphics/cairo \
+		libgraphite2.so:${PORTSDIR}/graphics/graphite2 \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libcdr-0.0.so:${PORTSDIR}/graphics/libcdr \
+		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
+		libwpg-0.2.so:${PORTSDIR}/graphics/libwpg \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libpoppler.so:${PORTSDIR}/graphics/poppler \
+		liblpsolve55.so:${PORTSDIR}/math/lp_solve \
+		libcmis-0.4.so:${PORTSDIR}/net/libcmis \
+		ldap-2.4.so:${PORTSDIR}/net/openldap24-client \
+		libmspub-0.0.so:${PORTSDIR}/print/libmspub \
+		libnss3.so:${PORTSDIR}/security/nss \
+		libclucene-core.so:${PORTSDIR}/textproc/clucene \
+		libexpat.so:${PORTSDIR}/textproc/expat2 \
+		libhunspell-1.3.so:${PORTSDIR}/textproc/hunspell \
+		libhyphen.so:${PORTSDIR}/textproc/hyphen \
+		libexttextcat-2.0.so:${PORTSDIR}/textproc/libexttextcat \
+		libvisio-0.0.so:${PORTSDIR}/textproc/libvisio \
+		libxml2.so:${PORTSDIR}/textproc/libxml2 \
+		libxslt.so:${PORTSDIR}/textproc/libxslt \
+		libwpd-0.9.so:${PORTSDIR}/textproc/libwpd \
+		libwps-0.2.so:${PORTSDIR}/textproc/libwps \
+		libmythes-1.2.so:${PORTSDIR}/textproc/mythes \
+		cups.so:${PORTSDIR}/print/cups-client \
+		librdf.so:${PORTSDIR}/textproc/redland
 
 RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fonts/dejavu \
 		${LOCALBASE}/lib/X11/fonts/GentiumBasic/GenBasI.ttf:${PORTSDIR}/x11-fonts/gentium-basic \
