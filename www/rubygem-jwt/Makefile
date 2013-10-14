@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/rubygem-jwt/Makefile 315012 2013-03-23 08:12:02Z sunpoet $
+# $FreeBSD: www/rubygem-jwt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jwt
 PORTVERSION=	0.1.8
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
