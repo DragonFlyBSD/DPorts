@@ -1,5 +1,5 @@
 # Created by: Sander Vesik <sander@haldjas.folklore.ee>
-# $FreeBSD: math/p5-MatrixReal/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-MatrixReal/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	MatrixReal
 PORTVERSION=	2.09
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::MatrixReal.3 Math::Kleene.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
