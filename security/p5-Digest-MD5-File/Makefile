@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-MD5-File/Makefile 326999 2013-09-11 18:03:40Z az $
+# $FreeBSD: security/p5-Digest-MD5-File/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-MD5-File
 PORTVERSION=	0.08
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=	Digest::MD5::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
