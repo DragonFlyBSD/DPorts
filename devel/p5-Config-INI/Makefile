@@ -1,5 +1,4 @@
-# Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: devel/p5-Config-INI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Config-INI/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-INI
 PORTVERSION=	0.020
@@ -32,4 +31,5 @@ PLIST_DIRS=	%%SITE_PERL%%/Config/INI \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Config/INI \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Config
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
