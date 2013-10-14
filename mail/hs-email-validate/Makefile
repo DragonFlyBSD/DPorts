@@ -1,4 +1,4 @@
-# $FreeBSD: mail/hs-email-validate/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: mail/hs-email-validate/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	email-validate
 PORTVERSION=	1.0.0
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	attoparsec>=0.10.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
