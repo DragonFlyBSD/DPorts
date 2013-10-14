@@ -1,9 +1,5 @@
-# ports collection makefile for:	unixcw
-# Date created:		24 Dec 2007
-# Whom:			Diane Bruce <db@db.net>
-#
-# $FreeBSD: comms/unixcw/Makefile 323749 2013-07-26 19:21:10Z rene $
-#
+# Created by: Diane Bruce <db@db.net>
+# $FreeBSD: comms/unixcw/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	unixcw
 PORTVERSION=	2.3
@@ -38,6 +34,7 @@ USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 AUTOTOOLSFILES=	configure.ac
 
+NO_STAGE=	yes
 pre-extract:
 .if !defined(WITH_XCWCP)
 	@${ECHO_CMD}
