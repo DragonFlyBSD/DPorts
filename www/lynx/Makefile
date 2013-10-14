@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: www/lynx/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: www/lynx/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lynx
 PORTVERSION=	2.8.7.2
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	DEFAULT_COLORS IPV6 NLS SSL
 OPTIONS_DEFAULT=	SSL
 DEFAULT_COLORS_DESC=	Colors support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MNLS)
