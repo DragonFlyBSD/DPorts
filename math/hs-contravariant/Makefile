@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-contravariant/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-contravariant/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	contravariant
 PORTVERSION=	0.4
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	tagged>=0.4.4 transformers>=0.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
