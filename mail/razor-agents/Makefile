@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: mail/razor-agents/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: mail/razor-agents/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	razor-agents
 PORTVERSION=	2.84
@@ -28,6 +28,7 @@ MAN5=		razor-agents.5 razor-whitelist.5 razor-agent.conf.5
 
 PORTSCOUT=	skipv:2.85
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${PERL} -pi -e 's|/etc/razor|${PREFIX}/etc|g'
 	@${PERL} -pi -e 's,share/man,man,g' ${WRKSRC}/${CONFIGURE_SCRIPT}
