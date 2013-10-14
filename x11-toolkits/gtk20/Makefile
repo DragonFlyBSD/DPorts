@@ -1,7 +1,6 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk20/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: x11-toolkits/gtk20/Makefile 329070 2013-10-02 16:24:19Z kwm $
 #   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.237 2013/03/04 17:44:38 kwm Exp $
-# Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
 PORTVERSION=	2.24.19
@@ -9,6 +8,7 @@ PORTREVISION?=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+PKGNAMESUFFIX=	2
 DISTNAME=	gtk+-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -18,7 +18,6 @@ COMMENT=	Gimp Toolkit for X11 GUI (previous stable version)
 LICENSE=	LGPL20
 
 USE_XZ=		yes
-LATEST_LINK=	gtk20
 
 PORTSCOUT=	limitw:0,even
 
@@ -46,6 +45,7 @@ MAN1=		gtk-query-immodules-2.0.1
 OPTIONS_DEFINE=	CUPS DEBUG
 OPTIONS_DEFAULT=CUPS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
