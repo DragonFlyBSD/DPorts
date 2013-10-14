@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/py-amqp/pkg-plist,v 1.3 2013/02/14 15:09:04 svnexp Exp $
+@comment $FreeBSD: net/py-amqp/pkg-plist 312228 2013-02-14 13:58:35Z koobs $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt

@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/net/py-amqp/Makefile,v 1.4 2013/02/14 15:09:04 svnexp Exp $
+# $FreeBSD: net/py-amqp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	amqp
 PORTVERSION=	1.2.0
@@ -20,4 +20,5 @@ GH_PROJECT=	py-${PORTNAME}
 GH_COMMIT=	10f0ded
 GH_TAGNAME=	v${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
