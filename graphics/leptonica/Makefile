@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/leptonica/Makefile 326850 2013-09-09 22:49:20Z mm $
+# $FreeBSD: graphics/leptonica/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	leptonica
 PORTVERSION=	1.69
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 TESTS?=	generate compare
