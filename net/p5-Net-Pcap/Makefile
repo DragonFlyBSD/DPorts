@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net/p5-Net-Pcap/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Pcap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Pcap
 PORTVERSION=	0.17
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN1=		pcapinfo.1
 MAN3=		Net::Pcap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
