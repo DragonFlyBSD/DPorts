@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: devel/p5-Test-Mock-LWP/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-Test-Mock-LWP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Mock-LWP
 PORTVERSION=	0.06
@@ -20,4 +20,5 @@ MAN3=		Test::Mock::HTTP::Request.3 \
 		Test::Mock::LWP::UserAgent.3 \
 		Test::Mock::LWP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
