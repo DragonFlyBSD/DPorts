@@ -1,4 +1,4 @@
-# $FreeBSD: ports/finance/expense/Makefile,v 1.10 2013/02/03 22:03:11 svnexp Exp $
+# $FreeBSD: finance/expense/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	expense
 PORTVERSION=	0.1
@@ -21,4 +21,5 @@ WRKSRC=		${WRKDIR}/Expense
 
 PORTSCOUT=	ignore:1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
