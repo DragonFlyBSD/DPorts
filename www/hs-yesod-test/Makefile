@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-yesod-test/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-yesod-test/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yesod-test
 PORTVERSION=	1.2.0
@@ -16,5 +16,6 @@ USE_CABAL=	attoparsec>=0.10 blaze-builder blaze-html>=0.5 \
 		transformers>=0.2.2 wai>=1.3 wai-test>=1.3 xml-conduit>=1.0 \
 		xml-types>=0.3 yesod-core>=1.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
