@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-Test-Loops/Makefile 327443 2013-09-16 22:06:10Z jase $
+# $FreeBSD: devel/p5-POE-Test-Loops/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Test-Loops
 PORTVERSION=	1.353
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN1=		poe-gen-tests.1
 MAN3=		POE::Test::Loops.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
