@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: audio/libid3tag/Makefile 326436 2013-09-05 18:24:58Z sunpoet $
+# $FreeBSD: audio/libid3tag/Makefile 329940 2013-10-09 23:51:05Z madpilot $
 
 PORTNAME=	libid3tag
 PORTVERSION=	0.15.1b
@@ -24,6 +24,6 @@ post-build:
 	cd ${WRKSRC} && CONFIG_FILES=id3tag.pc CONFIG_HEADERS= ${SH} ./config.status
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/id3tag.pc ${PREFIX}/libdata/pkgconfig/
+	${INSTALL_DATA} ${WRKSRC}/id3tag.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
