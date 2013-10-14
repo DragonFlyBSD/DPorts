@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline-CPP/Makefile 327558 2013-09-18 15:22:17Z sunpoet $
+# $FreeBSD: devel/p5-Inline-CPP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Inline-CPP
 PORTVERSION=	0.45
@@ -23,6 +23,7 @@ MAN3=		Inline::CPP.3 \
 		Inline::CPP::Config.3 \
 		Inline::CPP::grammar.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|g++|${CXX}|' ${WRKSRC}/Makefile.PL
 
