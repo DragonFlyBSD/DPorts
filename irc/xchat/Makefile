@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: irc/xchat/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: irc/xchat/Makefile 327736 2013-09-20 18:44:49Z bapt $
 #   $MCom: ports/irc/xchat/Makefile,v 1.7 2008/08/06 07:59:00 kwm Exp $
 
 PORTNAME=	xchat
@@ -35,6 +35,7 @@ LIBSEXY_DESC=	Spell check support via libsexy
 .if defined(WITH_PYTHON)
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBUS}
