@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Chart-Graph
-# Date Created:			Aug 30, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: graphics/p5-Chart-Graph/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/p5-Chart-Graph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Chart-Graph
 PORTVERSION=	3.2
@@ -29,6 +24,7 @@ MAN3=	Chart::Graph.3 \
 	Chart::Graph::Xrt2d.3 \
 	Chart::Graph::Xrt3d.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE}," ${WRKSRC}/Makefile.PL
 
