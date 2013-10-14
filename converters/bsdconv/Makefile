@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: converters/bsdconv/Makefile 317057 2013-05-01 23:11:37Z bdrewery $
+# $FreeBSD: converters/bsdconv/Makefile 327827 2013-09-21 15:41:48Z sunpoet $
 
 PORTNAME=	bsdconv
-PORTVERSION=	10.0
+PORTVERSION=	11.1
 CATEGORIES=	converters
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
 
@@ -13,12 +13,13 @@ LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
-GH_COMMIT=	d4bd6ac
+GH_COMMIT=	8ccd7e3
 
 OPTIONS_DEFINE=	CHINESE EBCDIC
 CHINESE_DESC=	Extra Chinese codecs
 EBCDIC_DESC=	EBCDIC codecs
 
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 
 MAKE_ARGS=	PREFIX=${PREFIX}
