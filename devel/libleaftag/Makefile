@@ -1,5 +1,5 @@
 # Created by: Khairil Yusof <kaeru@inigo-tech.com>
-# $FreeBSD: devel/libleaftag/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/libleaftag/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libleaftag
 PORTVERSION=	0.3.1
@@ -19,4 +19,5 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
