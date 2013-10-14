@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/R-cran-coda/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/R-cran-coda/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	coda
 DISTVERSION=	0.16-1
@@ -13,4 +13,5 @@ COMMENT=	Output analysis and diagnostics for MCMC
 USE_R_MOD=		yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
