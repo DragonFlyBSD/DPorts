@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/hs-tar/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: archivers/hs-tar/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	tar
 PORTVERSION=	0.4.0.1
@@ -9,6 +9,8 @@ MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Reading, writing, and manipulating ".tar" archive files
 
 LICENSE=	BSD
+
+NO_STAGE=	yes
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
