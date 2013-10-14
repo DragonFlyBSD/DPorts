@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: print/dvipdfmx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/dvipdfmx/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	dvipdfmx
 PORTVERSION=	20110311
@@ -39,6 +39,7 @@ FONTCMAPDIR=	${TEXMFDIR}/fonts/cmap
 ADOBECMAPDIR=	${LOCALBASE}/share/fonts/adobe-cmaps
 MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${LOCALBASE}/${FONTCMAPDIR}
 	${LN} -s -f ${ADOBECMAPDIR} \
