@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXtst/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXtst/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXtst
 PORTVERSION=	1.2.2
@@ -29,6 +29,7 @@ MAN3=	XTestCompareCurrentCursorWithWindow.3 \
 	XTestSetGContextOfGC.3 \
 	XTestSetVisualIDOfVisual.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} '/^SUBDIRS/,/^$$/ \
 		s/specs//' ${WRKSRC}/Makefile.in
