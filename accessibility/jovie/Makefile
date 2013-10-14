@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/jovie/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: accessibility/jovie/Makefile 327684 2013-09-20 11:02:49Z bapt $
 
 PORTNAME=	jovie
 PORTVERSION=	${KDE4_VERSION}
@@ -14,6 +14,7 @@ LIB_DEPENDS=	speechd.5:${PORTSDIR}/accessibility/speech-dispatcher
 
 CONFLICTS=	ktts-4.[4-6].*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		cmake:outsource
 USE_KDE4=	kdehier kdeprefix kdelibs automoc4
