@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: devel/p5-Gearman/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-Gearman/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Gearman
 PORTVERSION=	1.11
@@ -31,4 +31,5 @@ PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Gearman \
 		%%SITE_PERL%%/Gearman/ResponseParser \
 		%%SITE_PERL%%/Gearman
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
