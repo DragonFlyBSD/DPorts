@@ -1,11 +1,5 @@
-# New ports collection Makefile for: rxvt
-# Date created:         5th December 1994
-# Whom:                 gpalmer@FreeBSD.org
-#
-# $FreeBSD: x11/rxvt/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
-# If possible, please consider updating the simple ports/x11-clocks/rclock
-# when you upgrade rxvt. These ports all use the same distfile.
+# Created by: gpalmer@FreeBSD.org
+# $FreeBSD: x11/rxvt/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	rxvt
 PORTVERSION=	2.6.4
@@ -14,7 +8,7 @@ CATEGORIES+=	x11
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A low memory usage xterm replacement that supports color
+COMMENT=	Low memory usage xterm replacement that supports color
 
 USE_XORG=	xpm
 GNU_CONFIGURE=	yes
@@ -41,6 +35,7 @@ MAN1=		rxvt.1
 PLIST_FILES=	bin/rxvt
 
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # fails to build with new utmpx
