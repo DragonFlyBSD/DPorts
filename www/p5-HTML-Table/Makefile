@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: www/p5-HTML-Table/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-Table/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Table
 PORTVERSION=	2.08a
@@ -18,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		HTML::Table.3
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e 's|2.08a|2.08_1|' ${WRKSRC}/lib/HTML/Table.pm
 	${RM}  ${WRKSRC}/lib/HTML/Table.pm.bak
