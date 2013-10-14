@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: devel/rubygem-mongo/Makefile 322940 2013-07-13 16:03:22Z swills $
+# $FreeBSD: devel/rubygem-mongo/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	mongo
 PORTVERSION=	1.9.1
@@ -16,4 +16,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/mongo_console
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
