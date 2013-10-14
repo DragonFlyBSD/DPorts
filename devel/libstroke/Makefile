@@ -1,9 +1,9 @@
 # Created by: Jerry A! <jerry@thehutt.org>
-# $FreeBSD: devel/libstroke/Makefile 326334 2013-09-04 23:10:19Z bapt $
+# $FreeBSD: devel/libstroke/Makefile 329943 2013-10-09 23:59:14Z madpilot $
 
 PORTNAME=	libstroke
 PORTVERSION=	0.5.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://etla.net/libstroke/
 
@@ -14,20 +14,9 @@ USES=		gmake
 USE_CSTD=	gnu89
 USE_XORG=	x11
 USE_AUTOTOOLS=	libtool
-WANT_GNOME=	yes
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	GTK1
-GTK1_DESC=	Build with legacy Gtk+/GNOME stroke support
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MGTK1} || !empty(HAVE_GNOME:Mgtk12)
-USE_GNOME+=	gtk12
-PLIST_SUB+=	GS=""
-.else
-PLIST_SUB+=	GS="@comment "
-.endif
+CONFIGURE_ARGS=	--disable-gtktest
 
 post-patch:
 	@${REINPLACE_CMD} -e \
