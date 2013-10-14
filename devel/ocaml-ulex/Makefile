@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/ocaml-ulex/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: devel/ocaml-ulex/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ulex
 PORTVERSION=	1.1
@@ -29,6 +29,7 @@ PORTDOCS=	*
 
 PKGDEINSTALL=	${PKGINSTALL}
 
+NO_STAGE=	yes
 post-install:
 	@${FIND} ${PREFIX}/${OCAML_SITELIBDIR}/${PORTNAME} -type f | \
 		${SED} "s,^${PREFIX}/,," >> ${TMPPLIST}
