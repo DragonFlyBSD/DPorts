@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnugo
-# Date created:		29 December 1996
-# Whom:			jseger@scds.com
-#
-# $FreeBSD: ports/games/gnugo/Makefile,v 1.17 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: jseger@scds.com
+# $FreeBSD: games/gnugo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnugo
 PORTVERSION=	3.8
@@ -21,6 +17,7 @@ INFO=		gnugo
 MAN6=		gnugo.6
 PLIST_FILES=	bin/gnugo
 
+NO_STAGE=	yes
 post-extract:
 	${RM} -f ${WRKSRC}/doc/gnugo.info*
 
