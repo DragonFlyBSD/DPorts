@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/adacontrol/Makefile 323392 2013-07-21 14:26:31Z marino $
+# $FreeBSD: lang/adacontrol/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	adacontrol
 PORTVERSION=	1.15r5
@@ -20,6 +20,7 @@ DESTINY=	${WRKDIR}/destino
 BUILD_WRKSRC=	${WRKSRC}/src
 ALL_TARGET=	build
 
+NO_STAGE=	yes
 do-install:
 	# To support DESTDIR in the future, install twice
 	${MKDIR} ${DESTINY}${PREFIX}/bin
