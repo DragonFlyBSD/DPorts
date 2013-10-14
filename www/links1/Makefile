@@ -1,9 +1,5 @@
-# New ports collection makefile for:	links
-# Date created:		21 January 2000
-# Whom:			Michael Vasilenko <acid@stu.cn.ua>
-#
-# $FreeBSD: www/links1/Makefile 314037 2013-03-13 08:04:02Z demon $
-#
+# Created by: Michael Vasilenko <acid@stu.cn.ua>
+# $FreeBSD: www/links1/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	links
 PORTVERSION=	1.03
@@ -22,4 +18,5 @@ CONFLICTS=	links-2*
 
 MAN1=		links.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
