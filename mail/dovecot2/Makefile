@@ -1,8 +1,8 @@
 # Created by: Nagy, Attila <bra@fsn.hu>
-# $FreeBSD: mail/dovecot2/Makefile 324308 2013-08-06 11:56:37Z wg $
+# $FreeBSD: mail/dovecot2/Makefile 329209 2013-10-03 16:39:10Z wg $
 
 PORTNAME=	dovecot
-PORTVERSION=	2.2.5
+PORTVERSION=	2.2.6
 CATEGORIES=	mail ipv6
 MASTER_SITES=	http://www.dovecot.org/releases/${PORTVERSION:R}/
 
@@ -79,9 +79,7 @@ CONFIGURE_ARGS+=	--without-docs
 PLIST_SUB+=	PORT="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MEXAMPLES}
 PORTEXAMPLES=	*
-.endif
 
 ## kqueue(2) support
 #
@@ -132,7 +130,7 @@ PLIST_SUB+=	LDAP="@comment "
 #
 .if ${PORT_OPTIONS:MLUCENE}
 CONFIGURE_ARGS+=--with-lucene
-LIB_DEPENDS+=	clucene-core:${PORTSDIR}/textproc/clucene
+LIB_DEPENDS+=	libclucene-core.so:${PORTSDIR}/textproc/clucene
 PLIST_SUB+=	LUCENE=""
 .else
 PLIST_SUB+=	LUCENE="@comment "
@@ -178,7 +176,7 @@ PLIST_SUB+=	SQL="@comment "
 .if ${PORT_OPTIONS:MSOLR}
 CONFIGURE_ARGS+=--with-solr
 BUILD_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
-LIB_DEPENDS+=	expat:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS+=	libexpat.so:${PORTSDIR}/textproc/expat2
 PLIST_SUB+=	SOLR=""
 .else
 CONFIGURE_ARGS+=--without-solr
@@ -198,43 +196,6 @@ PLIST_SUB+=	LIBWRAP="@comment "
 SUB_LIST=	REQUIRE="${_REQUIRE}"
 SUB_FILES=	pkg-deinstall pkg-message
 
-MAN1=		deliver.1 \
-		doveadm-altmove.1 \
-		doveadm-auth.1 \
-		doveadm-config.1 \
-		doveadm-director.1 \
-		doveadm-dump.1 \
-		doveadm-deduplicate.1 \
-		doveadm-exec.1 \
-		doveadm-expunge.1 \
-		doveadm-fetch.1 \
-		doveadm-flags.1 \
-		doveadm-force-resync.1 \
-		doveadm-help.1 \
-		doveadm-import.1 \
-		doveadm-index.1 \
-		doveadm-instance.1 \
-		doveadm-kick.1 \
-		doveadm-log.1 \
-		doveadm-mailbox.1 \
-		doveadm-mount.1 \
-		doveadm-move.1 \
-		doveadm-penalty.1 \
-		doveadm-purge.1 \
-		doveadm-pw.1 \
-		doveadm-quota.1 \
-		doveadm-reload.1 \
-		doveadm-search.1 \
-		doveadm-stop.1 \
-		doveadm-user.1 \
-		doveadm-who.1 \
-		doveadm.1 \
-		doveconf.1 \
-		dovecot-lda.1 \
-		dovecot.1 \
-		dsync.1
-MAN7=		doveadm-search-query.7
-
 post-patch:
 	@${REINPLACE_CMD} -E -e '${REINPLACE}' \
 		${WRKSRC}/doc/example-config/dovecot.conf
@@ -244,13 +205,10 @@ post-patch:
 		' ${WRKSRC}/*/Makefile.in ${WRKSRC}/Makefile.in
 
 post-install:
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	cd ${WRKSRC}/doc && ${INSTALL_SCRIPT} dovecot-openssl.cnf mkcert.sh ${EXAMPLESDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/doc && ${INSTALL_SCRIPT} dovecot-openssl.cnf mkcert.sh ${STAGEDIR}${EXAMPLESDIR}
 .if ${PORT_OPTIONS:MDOCS}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 .endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
