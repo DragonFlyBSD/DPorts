@@ -1,5 +1,5 @@
 # Created by: Leo Kim <leo@florida.sarang.net>
-# $FreeBSD: audio/p5-MP3-Info/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/p5-MP3-Info/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	MP3-Info
 PORTVERSION=	1.24
@@ -11,6 +11,7 @@ MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Manipulate / fetch info from MP3 audio files
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN3=		MP3::Info.3
