@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/shc/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: misc/shc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	shc
 PORTVERSION=	3.8.9
@@ -14,6 +14,7 @@ COMMENT=	Generic script compiler
 MAN1=		shc.1
 PLIST_FILES=	bin/shc
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} ${WRKSRC}/shc
 
