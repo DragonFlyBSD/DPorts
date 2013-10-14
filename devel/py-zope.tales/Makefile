@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.tales
-# Date created:				20 August 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.tales/Makefile,v 1.4 2012/11/17 05:56:54 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.tales/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.tales
 PORTVERSION=	3.5.2
@@ -22,5 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.tal>=0:${PORTSDIR}/textproc/py-zope.tal
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
