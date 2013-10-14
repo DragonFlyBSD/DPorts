@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: multimedia/smpeg/Makefile 322591 2013-07-09 22:27:55Z wg $
+# $FreeBSD: multimedia/smpeg/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	smpeg
 PORTVERSION=	0.4.4
@@ -30,6 +30,7 @@ CONFIGURE_ARGS=	--disable-opengl-player \
 
 MAN1=		gtv.1 plaympeg.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
