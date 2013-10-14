@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Clean
-# Date created:				March 30th 2001
-# Whom:					Alex Kapranoff <kapr@crosswinds.net>
-#
-# $FreeBSD: www/p5-HTML-Clean/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Alex Kapranoff <kapr@crosswinds.net>
+# $FreeBSD: www/p5-HTML-Clean/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Clean
 PORTVERSION=	0.8
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 MAN1=		htmlclean.1
 MAN3=		HTML::Clean.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
