@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: lang/python26/Makefile 326729 2013-09-08 14:05:18Z koobs $
+# $FreeBSD: lang/python26/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	python26
 PORTVERSION=	2.6.8
@@ -59,6 +59,7 @@ OPTIONS_SINGLE_UCS=	UCS2 UCS4
 
 NLS_DESC=	Enable Gettext support for the locale module
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
