@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-calendar
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/php5-calendar/Makefile,v 1.2 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: misc/php5-calendar/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 CATEGORIES=	misc
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-calendar
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
