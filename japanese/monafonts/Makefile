@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: japanese/monafonts/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/monafonts/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	monafonts
 PORTVERSION=	2.90
@@ -27,6 +27,7 @@ MAKE_ARGS=	PREFIX=${PREFIX}
 
 PLIST_SUB=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 pre-install:
 	@${SETENV} PKG_PREFIX=${PREFIX} \
 		${SH} ${PKGREQ} ${PKGNAME} INSTALL
