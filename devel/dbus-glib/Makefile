@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/dbus-glib/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: devel/dbus-glib/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom$
 
 PORTNAME=	dbus-glib
@@ -28,4 +28,5 @@ DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 
 MAN1=		dbus-binding-tool.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
