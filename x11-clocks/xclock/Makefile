@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/xclock/Makefile 326721 2013-09-08 12:35:20Z zeising $
+# $FreeBSD: x11-clocks/xclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	xclock
 PORTVERSION=	1.0.7
@@ -14,4 +14,5 @@ USES=		iconv
 
 MAN1=		xclock.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
