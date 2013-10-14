@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-ezc_ConsoleTools/Makefile,v 1.1 2012/12/03 18:38:51 svnexp Exp $
+# $FreeBSD: devel/pear-ezc_ConsoleTools/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ConsoleTools
 PORTVERSION=	1.6.1
@@ -22,6 +22,7 @@ RUN_DEPENDS=	pear>=1.4.2:${PORTSDIR}/devel/pear \
 PEAR_CHANNEL=	ezc
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
