@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: www/bluefish/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: www/bluefish/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bluefish
 PORTVERSION=	2.2.3
@@ -40,6 +40,7 @@ WEBLINT_DESC=	Include Weblint syntax and style checker
 
 OPTIONS_DEFAULT=	WEBLINT
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
