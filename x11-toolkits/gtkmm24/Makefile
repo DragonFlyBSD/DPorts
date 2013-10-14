@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: x11-toolkits/gtkmm24/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: x11-toolkits/gtkmm24/Makefile 329070 2013-10-02 16:24:19Z kwm $
 #   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.77 2011/07/16 17:31:29 kwm Exp $
 
 PORTNAME=	gtkmm
@@ -7,13 +7,13 @@ PORTVERSION=	2.24.4
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	24
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Gtk+
 
 USE_XZ=		yes
-LATEST_LINK=	gtkmm24
 
 .if !defined(REFERENCE_PORT)
 
@@ -31,6 +31,7 @@ CONFIGURE_ARGS=	--disable-documentation \
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/tests//' \
 		${WRKSRC}/Makefile.in
