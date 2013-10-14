@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-Writer/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-SAX-Writer/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-SAX-Writer
 PORTVERSION=	0.53
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::SAX::Writer.3 XML::SAX::Writer::XML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
