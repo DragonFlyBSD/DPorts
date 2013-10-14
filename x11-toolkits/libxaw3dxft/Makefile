@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/libxaw3dxft/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: x11-toolkits/libxaw3dxft/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libxaw3dxft
 DISTVERSION=	1.6.2b
@@ -23,6 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include/freetype2
 DOCSDIR=	${LOCALBASE}/share/doc/libXaw3dXft
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} '/^pkgconfigdir/s:=.*:= ${PREFIX}/libdata/pkgconfig:'\
 		${WRKSRC}/Makefile.in
