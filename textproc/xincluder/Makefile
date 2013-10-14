@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/textproc/xincluder/Makefile,v 1.14 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/xincluder/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xincluder
 PORTVERSION=	1.0.d11
@@ -28,6 +28,7 @@ PORTDOCS=	apidoc index.html
 .endif
 SUB_FILES=	xincluder.sh
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${MKDIR} ${JAVAJARDIR}
