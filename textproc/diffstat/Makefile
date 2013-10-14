@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: textproc/diffstat/Makefile 321439 2013-06-21 04:03:57Z clsung $
+# $FreeBSD: textproc/diffstat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	diffstat
 PORTVERSION=	1.57
@@ -16,6 +16,7 @@ MAKEFILE=	makefile
 MAN1=		diffstat.1
 PLIST_FILES=	bin/diffstat
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/diffstat ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MAN1PREFIX}/man/man1
