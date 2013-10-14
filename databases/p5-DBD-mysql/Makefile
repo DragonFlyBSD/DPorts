@@ -1,12 +1,11 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-mysql/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBD-mysql/Makefile 327825 2013-09-21 15:17:31Z sunpoet $
 
 PORTNAME=	DBD-mysql
-PORTVERSION=	4.023
+PORTVERSION=	4.024
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:S/00$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT?=	MySQL driver for the Perl5 Database Interface (DBI)
@@ -16,23 +15,20 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-DBI>=1.08:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-CONFLICTS?=	p5-Mysql-modules-[0-9]* p5-DBD-mysql[45][0-9]-[0-9]*
+CONFLICTS_INSTALL?=	p5-Mysql-modules-[0-9]* p5-DBD-mysql[45][0-9]-[0-9]*
 
+NO_STAGE=	yes
 USE_MYSQL=	yes
-
-USES=		perl5
 USE_PERL5=	configure
+USES=		perl5
 
-MAN3=	Bundle::DBD::mysql.3 DBD::mysql.3 DBD::mysql::INSTALL.3
+MAN3=		Bundle::DBD::mysql.3 DBD::mysql.3 DBD::mysql::INSTALL.3
 
 OPTIONS_DEFINE=	SSL
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MSSL}
-CONFIGURE_ARGS+=	--ssl
-RUN_DEPENDS+=		p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay
-.endif
+SSL_BUILD_DEPENDS=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay
+SSL_RUN_DEPENDS=	${SSL_BUILD_DEPENDS}
+SSL_CONFIGURE_ON=	--ssl
 
 .include <bsd.port.mk>
