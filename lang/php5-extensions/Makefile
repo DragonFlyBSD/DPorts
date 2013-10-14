@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-extensions
-# Date created:			7 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/php5-extensions/Makefile,v 1.28 2012/11/17 05:58:55 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: lang/php5-extensions/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	php5
 PORTVERSION=	1.7
@@ -118,6 +114,7 @@ OPTIONS_DEFAULT=	CTYPE \
 			XMLREADER \
 			XMLWRITER
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for opt in ${OPTIONS_DEFINE}
