@@ -1,25 +1,16 @@
-# New ports collection makefile for: 	bmkdep
-# Date created: 			29 November 2011
-# Whom: 				trociny
-#
-# $FreeBSD: ports/devel/bmkdep/Makefile,v 1.2 2012/11/17 05:55:35 svnexp Exp $
-#
-# This port is self contained in the src directory.
-#
+# Created by: trociny
+# $FreeBSD: devel/bmkdep/Makefile 329992 2013-10-10 13:19:39Z trociny $
 
 PORTNAME=	bmkdep
-PORTVERSION=	20120114
+PORTVERSION=	20131009
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Construct Makefile dependency list
 
-MAKE_ENV=	PKGDIR="${PKGDIR}"
-NO_OBJ=		YES
+MAKE_ENV=	PKGDIR="${PKGDIR}" NO_OBJ=YES
 
-MAN1=		bmkdep.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/bmkdep
+PLIST_FILES=	bin/bmkdep man/man1/bmkdep.1.gz
 
 .include <bsd.port.mk>
