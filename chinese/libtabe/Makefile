@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libtabe
-# Date created:				2 Nov 1999
-# Whom:					Jing-Tang Keith Jang <keith@FreeBSD.org>
-#
-# $FreeBSD: ports/chinese/libtabe/Makefile,v 1.40 2012/11/17 05:54:57 svnexp Exp $
-#
+# Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
+# $FreeBSD: chinese/libtabe/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	libtabe
 PORTVERSION=	0.2.6
@@ -30,6 +26,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--enable-shared
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_X11)
