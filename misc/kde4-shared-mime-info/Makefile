@@ -1,4 +1,4 @@
-# $FreeBSD: ports/misc/kde4-shared-mime-info/Makefile,v 1.12 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kde4-shared-mime-info/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	shared-mime-info
 PORTVERSION=	1.2
@@ -21,6 +21,7 @@ NO_WRKSUBDIR=	yes
 MIMESUBDIRS=	application audio image inode message model multipart \
 		packages text video x-epoc x-content
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${KDE4_PREFIX} != ${LOCALBASE}
