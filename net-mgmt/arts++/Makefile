@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: net-mgmt/arts++/Makefile 319221 2013-05-27 12:28:17Z bapt $
+# $FreeBSD: net-mgmt/arts++/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	arts++
 PORTVERSION=	1.1.a13
@@ -20,6 +20,7 @@ MANL=		artsportagg.l artsports.l artsprotos.l artsnets.l artsdump.l \
 		artsasagg.l artsportms.l artsportmagg.l artsintfms.l \
 		artsintfmagg.l artsnexthops.l artsnexthopagg.l artstos.l
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
