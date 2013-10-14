@@ -1,5 +1,5 @@
 # Created by: Wen Heping
-# $FreeBSD: www/py-WebTest/Makefile 321945 2013-06-28 04:30:04Z cs $
+# $FreeBSD: www/py-WebTest/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebTest
 PORTVERSION=	2.0.4
@@ -26,4 +26,5 @@ USE_ZIP=		yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
