@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Filter/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Filter/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Filter
 PORTVERSION=	1.49
@@ -27,4 +27,5 @@ MAN3=		Filter::Util::Call.3 \
 		Filter::sh.3 \
 		Filter::tee.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
