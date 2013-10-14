@@ -1,9 +1,5 @@
-# New ports collection makefile for:	python-xlib
-# Date created:		5 December 2001
-# Whom:	      		Mike Meyer <mwm@mired.org>
-#
-# $FreeBSD: ports/x11-toolkits/py-xlib/Makefile,v 1.16 2012/11/17 06:03:38 svnexp Exp $
-#
+# Created by: Mike Meyer <mwm@mired.org>
+# $FreeBSD: x11-toolkits/py-xlib/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	xlib
 PORTVERSION=	0.14
@@ -20,4 +16,5 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-xlib
 PYDISTUTILS_PKGVERSION=	0.12
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
