@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@yahoo.com>
-# $FreeBSD: devel/ode/Makefile 318961 2013-05-24 11:53:29Z bdrewery $
+# $FreeBSD: devel/ode/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ode
 PORTVERSION=	0.11.1
@@ -28,6 +28,7 @@ OU_DESC=		Enable Thread-local storage (Experimental)
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
