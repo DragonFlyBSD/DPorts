@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: net-mgmt/gsnmp/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-mgmt/gsnmp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	gsnmp
 PORTVERSION=	0.2.0
@@ -21,4 +21,5 @@ USE_LDCONFIG=	yes
 
 MAN1=		gsnmp-get.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
