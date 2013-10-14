@@ -1,9 +1,4 @@
-# New ports collection makefile for:	AnyEvent::ReverseHTTP
-# Date created:		13 Oct 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-AnyEvent-ReverseHTTP/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# $FreeBSD: www/p5-AnyEvent-ReverseHTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	AnyEvent-ReverseHTTP
 PORTVERSION=	0.05
@@ -27,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	AnyEvent::ReverseHTTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
