@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lockfile
-# Date created:		4th Sep, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: devel/py-lockfile/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-lockfile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lockfile
 PORTVERSION=	0.9.1
@@ -19,4 +15,5 @@ PROJECTHOST=	py${PORTNAME}
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
