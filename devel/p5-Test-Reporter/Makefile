@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Reporter/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Test-Reporter/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Reporter
 PORTVERSION=	1.59
@@ -21,4 +21,5 @@ MAN3=		Test::Reporter.3 \
 		Test::Reporter::Transport::File.3 \
 		Test::Reporter::Transport::Null.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
