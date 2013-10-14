@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXxf86misc/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXxf86misc/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXxf86misc
 PORTVERSION=	1.0.3
@@ -23,4 +23,5 @@ MAN3=		XF86Misc.3 \
 		XF86MiscSetMouseSettings.3 \
 		XF86MiscSetSaver.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
