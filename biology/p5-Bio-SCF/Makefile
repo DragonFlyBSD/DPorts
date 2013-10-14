@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-SCF/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: biology/p5-Bio-SCF/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	Bio-SCF
 PORTVERSION=	1.03
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Bio::SCF.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
