@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: textproc/tinyxml2/Makefile 324407 2013-08-08 18:10:37Z bf $
+# $FreeBSD: textproc/tinyxml2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	tinyxml2
 PORTVERSION=	20130805
@@ -27,6 +27,7 @@ PLIST_FILES=	include/tinyxml2.h \
 		lib/libtinyxml2.so.1.0.11 \
 		libdata/pkgconfig/tinyxml2.pc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
