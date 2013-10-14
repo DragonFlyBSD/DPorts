@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/fortytwo-bdb/Makefile,v 1.11 2012/11/17 05:55:07 svnexp Exp $
+# $FreeBSD: databases/fortytwo-bdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	bdb
 PORTVERSION=	0.2.1
@@ -30,6 +30,7 @@ ADDITIONAL_LDFLAGS+=	-L${BDB_LIB_DIR}
 
 ENCORE_PORT?=	devel/fortytwo-encore
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
