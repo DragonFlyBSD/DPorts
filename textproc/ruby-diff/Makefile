@@ -1,5 +1,5 @@
 # Created by: Makoto Matsushita <matusita@FreeBSD.org>
-# $FreeBSD: textproc/ruby-diff/Makefile 322390 2013-07-06 12:47:52Z swills $
+# $FreeBSD: textproc/ruby-diff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		diff
 PORTVERSION=		0.4
@@ -16,4 +16,5 @@ USE_RUBY=		YES
 USE_RUBY_SETUP=		YES
 RUBY_SETUP=		install.rb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
