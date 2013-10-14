@@ -1,5 +1,5 @@
 # Created by: dikshie <dikshie@lapi.itb.ac.id>
-# $FreeBSD: net/p5-IP-Country/Makefile 326506 2013-09-06 14:30:23Z az $
+# $FreeBSD: net/p5-IP-Country/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	IP-Country
 PORTVERSION=	2.28
@@ -24,4 +24,5 @@ MAN3=		IP::Authority.3 \
 		IP::Country::Slow.3 \
 		IP::Country.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
