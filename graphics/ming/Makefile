@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ming/Makefile 325204 2013-08-22 15:20:57Z sunpoet $
+# $FreeBSD: graphics/ming/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ming
 PORTVERSION=	0.4.5
@@ -34,6 +34,7 @@ USES+=		bison gmake pathfix
 DOCS=		HISTORY NEWS README TODO
 DOCS_UTIL=	README TIPS TODO swftoperl.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
