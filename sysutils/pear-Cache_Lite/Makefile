@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Cache_Lite
-# Date created:			  26 November 2004
-# Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-#
-# $FreeBSD: ports/sysutils/pear-Cache_Lite/Makefile,v 1.20 2012/11/17 06:01:41 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+# $FreeBSD: sysutils/pear-Cache_Lite/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Cache_Lite
 PORTVERSION=	1.7.15
@@ -18,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
