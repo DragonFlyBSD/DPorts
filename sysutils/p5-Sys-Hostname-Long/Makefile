@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sys-Hostname-Long
-# Date created:				March 6th, 2004
-# Whom:					Tim Bishop <tim@bishnet.net>
-#
-# $FreeBSD: sysutils/p5-Sys-Hostname-Long/Makefile 326573 2013-09-07 06:47:20Z az $
-#
+# Created by: Tim Bishop <tim@bishnet.net>
+# $FreeBSD: sysutils/p5-Sys-Hostname-Long/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-Hostname-Long
 PORTVERSION=	1.4
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Sys::Hostname::Long.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
