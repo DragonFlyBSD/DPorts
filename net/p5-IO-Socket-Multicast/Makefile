@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@dante.org.uk
-# $FreeBSD: net/p5-IO-Socket-Multicast/Makefile 326380 2013-09-05 10:32:23Z az $
+# $FreeBSD: net/p5-IO-Socket-Multicast/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	IO-Socket-Multicast
 PORTVERSION=	1.12
@@ -18,6 +18,7 @@ MAN3=		IO::Socket::Multicast.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
