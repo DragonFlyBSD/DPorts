@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geda
-# Date created:			4 April 2001
-# Whom:				bruno schwander <bruno@tinkerbox.org>
-#
-# $FreeBSD: cad/geda-symbols/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: bruno schwander <bruno@tinkerbox.org>
+# $FreeBSD: cad/geda-symbols/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	symbols
 PORTVERSION=	1.4.3
@@ -25,6 +21,7 @@ CONFIGURE_ARGS=	--with-docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e "s,^(DATADIR[[:space:]]*=[[:space:]]*)gEDA,\1geda," \
