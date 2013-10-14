@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/p5-Data-Walk/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Walk/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Walk
 PORTVERSION=	1.00
@@ -25,4 +24,5 @@ PLIST_DIRS=	%%SITE_PERL%%/Data \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Data/Walk \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Data
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
