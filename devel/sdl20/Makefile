@@ -1,7 +1,8 @@
-# $FreeBSD: devel/sdl20/Makefile 325547 2013-08-28 18:29:38Z itetcu $
+# $FreeBSD: devel/sdl20/Makefile 327856 2013-09-22 09:16:46Z mva $
 
 PORTNAME=	sdl2
 PORTVERSION=	2.0.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 DISTNAME=	SDL2-${PORTVERSION}
@@ -51,6 +52,7 @@ SDL_VIDEO_DESC=		Eanble the SDL Video subsystem
 VIDEO_OPENGL_DESC=	OpenGL rendering support
 VIDEO_X11_DESC=		X11 rendering support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALSA}
