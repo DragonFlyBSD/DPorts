@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/httpclient/Makefile 316432 2013-04-24 13:27:14Z ale $
+# $FreeBSD: www/httpclient/Makefile 328481 2013-09-27 14:26:55Z ale $
 
 PORTNAME=	httpclient
-DISTVERSION=	4.2.5
+DISTVERSION=	4.3
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	httpcomponents/${PORTNAME}/binary
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${JAVAJARDIR}/httpcore.jar:${PORTSDIR}/www/httpcore \
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/httpcomponents-client-${DISTVERSION}
+NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar \
 		%%JAVAJARDIR%%/${PORTNAME}-cache.jar \
@@ -31,6 +31,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar \
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
