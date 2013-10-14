@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpg321
-# Date created:			Mar 17, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: audio/mpg321/Makefile 324122 2013-08-01 20:22:27Z naddy $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: audio/mpg321/Makefile 329297 2013-10-04 12:35:10Z naddy $
 
 PORTNAME=	mpg321
 PORTVERSION=	0.2.10
@@ -12,35 +8,25 @@ CATEGORIES=	audio
 MASTER_SITES=	SF
 
 MAINTAINER=	naddy@FreeBSD.org
-COMMENT=	A free command-line mp3 player, compatible with mpg123
+COMMENT=	Command-line MP3 player, compatible with mpg123
 
-LIB_DEPENDS=	ao.4:${PORTSDIR}/audio/libao \
-		id3tag.0:${PORTSDIR}/audio/libid3tag \
-		mad.2:${PORTSDIR}/audio/libmad
-
-.if defined(WITH_MPG321_SCROBBLER_PATCH)
-RUN_DEPENDS=	scrobbler-helper:${PORTSDIR}/audio/p5-Audio-Scrobbler
-
-PATCHFILES+=	mpg321-0.2.10-scrobbler-01.patch:scrobbler
-PATCH_SITES+=	http://people.FreeBSD.org/~roam/ports/audio/:scrobbler \
-		http://devel.ringlet.net/audio/mpg321-scrobbler/:scrobbler
-
-
-MPG321_SCROBBLER_PLUGIN_NAME?=	321
-.endif
+LIB_DEPENDS=	libao.so:${PORTSDIR}/audio/libao \
+		libid3tag.so:${PORTSDIR}/audio/libid3tag \
+		libmad.so:${PORTSDIR}/audio/libmad
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-mpg123-symlink
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		mpg321.1
+PLIST_FILES=	bin/mpg321 man/man1/mpg321.1.gz
 
-PLIST_FILES=	bin/mpg321
+OPTIONS_DEFINE=	SCROBBLER
+SCROBBLER_DESC=	Last.fm Audioscrobbler support
 
-.if defined(WITH_MPG321_SCROBBLER_PATCH)
-post-patch:
-		${REINPLACE_CMD} "s/\"mpg321\"/\"${MPG321_SCROBBLER_PLUGIN_NAME}\"/" ${WRKSRC}/scrobbler.c
-.endif
+SCROBBLER_RUN_DEPENDS=	scrobbler-helper:${PORTSDIR}/audio/p5-Audio-Scrobbler
+SCROBBLER_PATCHFILES=	mpg321-0.2.10-scrobbler-01.patch:scrobbler
+SCROBBLER_PATCH_SITES=	http://people.FreeBSD.org/~roam/ports/audio/:scrobbler \
+		http://devel.ringlet.net/audio/mpg321-scrobbler/:scrobbler
 
 .include <bsd.port.mk>
