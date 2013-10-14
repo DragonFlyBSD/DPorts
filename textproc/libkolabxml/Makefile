@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libkolabxml/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/libkolabxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libkolabxml
 PORTVERSION=	0.8.4
@@ -31,4 +31,5 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
