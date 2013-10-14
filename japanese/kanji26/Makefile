@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kanji26
-# Date created:		23 November 1999
-# Whom:			Yoshiro MIHIRA <sanpei@sanpei.org>
-#
-# $FreeBSD: ports/japanese/kanji26/Makefile,v 1.7 2012/11/17 05:58:35 svnexp Exp $
-#
+# Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
+# $FreeBSD: japanese/kanji26/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PKGNAMESUFFIX=	26
 
@@ -14,4 +10,5 @@ DISTINFO_FILE=	${.CURDIR}/distinfo
 RESIZESED_FILE?=	26to24.sed
 RESIZED_ALIAS_FILE?=	kanji24.alias
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
