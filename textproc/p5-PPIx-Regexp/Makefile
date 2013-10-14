@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: textproc/p5-PPIx-Regexp/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-PPIx-Regexp/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	PPIx-Regexp
 PORTVERSION=	0.029
@@ -78,4 +78,5 @@ MAN3=	PPIx::Regexp.3 \
 	PPIx::Regexp::Tokenizer.3 \
 	PPIx::Regexp::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
