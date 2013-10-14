@@ -1,9 +1,8 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: devel/p5-Gtk2-Spell/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-Gtk2-Spell/Makefile 329062 2013-10-02 16:13:01Z acm $
 
 PORTNAME=	Gtk2-Spell
-PORTVERSION=	1.03
-PORTREVISION=	6
+PORTVERSION=	1.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	SF/gtk2-perl/Gtk2_Spell/${PORTVERSION}
 PKGNAMEPREFIX=	p5-
@@ -23,6 +22,7 @@ USE_PERL5=	configure
 
 MAN3=	Gtk2::Spell.3
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e 's=1.00rc2=1.001=g' ${WRKSRC}/Makefile.PL
 
