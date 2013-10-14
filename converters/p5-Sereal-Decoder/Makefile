@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Sereal-Decoder
 PORTVERSION=	0.36
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Sereal::Decoder.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
