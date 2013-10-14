@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXxf86dga/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXxf86dga/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXxf86dga
 PORTVERSION=	1.1.4
@@ -35,4 +35,5 @@ MAN3=		XDGA.3 \
 		XF86DGA.3 \
 		XFree86-DGA.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
