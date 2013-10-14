@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: net/xprobe/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: net/xprobe/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	xprobe2
 PORTVERSION=	0.3
@@ -20,4 +20,5 @@ post-install:	.SILENT
 			${ETCDIR}/${PORTNAME}.conf; \
 	fi
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
