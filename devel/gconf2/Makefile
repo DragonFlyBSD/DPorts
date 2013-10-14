@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/gconf2/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: devel/gconf2/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/devel/gconf2/Makefile,v 1.124 2010/11/15 22:14:03 kwm Exp $
 
 PORTNAME=	gconf2
@@ -40,6 +40,7 @@ MAN1=		gconftool-2.1 gsettings-data-convert.1 \
 
 OPTIONS_DEFINE=	LDAP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
