@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: devel/log4shib/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/log4shib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	log4shib
 DISTVERSION=	1.0.7
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-html-docs --disable-doxygen
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| -pedantic||g' ${WRKSRC}/configure
 
