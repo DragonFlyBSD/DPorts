@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Cache
-# Date created:				13 December 2004
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Cache/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Cache/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Cache
 PORTVERSION=	2.04
@@ -41,4 +37,5 @@ MAN3=		Cache.3 \
 		Cache::RemovalStrategy::LRU.3 \
 		Cache::Tester.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
