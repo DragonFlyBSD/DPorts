@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mail-Cache
-# Date created:		2009-09-27
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: mail/p5-Mail-Cache/Makefile 326248 2013-09-04 05:52:04Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: mail/p5-Mail-Cache/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Cache
 PORTVERSION=	0.1.2
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::Cache.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
