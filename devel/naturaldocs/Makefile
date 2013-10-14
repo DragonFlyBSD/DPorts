@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	NaturalDocs
-# Date created:			Feb 27, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: devel/naturaldocs/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: ijliao
+# $FreeBSD: devel/naturaldocs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	naturaldocs
 PORTVERSION=	1.52
@@ -24,6 +19,7 @@ NO_BUILD=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/NaturalDocs
 
+NO_STAGE=	yes
 do-configure:
 	@${ECHO_CMD} "#!/bin/sh" > ${WRKDIR}/NaturalDocs.sh
 	@${ECHO_CMD} >> ${WRKDIR}/NaturalDocs.sh
