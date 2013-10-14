@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Cache-Cache/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Cache-Cache/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Cache-Cache
 PORTVERSION=	1.06
@@ -40,4 +40,5 @@ MAN3=	Cache::BaseCache.3 \
 	Cache::SizeAwareMemoryCache.3 \
 	Cache::SizeAwareSharedMemoryCache.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
