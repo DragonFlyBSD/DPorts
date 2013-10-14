@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: ports/archivers/p7zip/Makefile,v 1.49 2013/02/07 15:31:55 svnexp Exp $
+# $FreeBSD: archivers/p7zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	p7zip
 PORTVERSION=	9.20.1
@@ -16,6 +16,7 @@ OPTIONS_DEFAULT=       MODULES
 MINIMAL_DESC=  Support only .7z file format
 MODULES_DESC=  Build modules
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 MAKEFILE=	makefile
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
