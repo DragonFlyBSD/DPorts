@@ -1,5 +1,5 @@
 # Created by: David Barksdale <amatus@gnu.org>
-# $FreeBSD: www/libmicrohttpd/Makefile 321855 2013-06-27 06:58:33Z miwi $
+# $FreeBSD: www/libmicrohttpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	libmicrohttpd
 PORTVERSION=	0.9.27
@@ -14,6 +14,7 @@ LICENSE=	LGPL21
 
 OPTIONS_DEFINE=	GNUTLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
