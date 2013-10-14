@@ -1,5 +1,5 @@
-# Created by: Alexander Leidinger <netchild@freebsd.org>
-# $FreeBSD: security/libssh2/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# Created by: Alexander Leidinger <netchild@FreeBSD.org>
+# $FreeBSD: security/libssh2/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libssh2
 PORTVERSION=	1.4.3
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 OPTIONS_DEFINE=	GCRYPT TRACE ZLIB
 OPTIONS_DEFAULT=	ZLIB
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 TRACE_DESC=	Enable debug packet traces
