@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libXcm/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/libXcm/Makefile 328623 2013-09-28 19:34:21Z bsam $
 
 PORTNAME=	libXcm
 PORTVERSION=	0.5.2
@@ -11,14 +11,7 @@ COMMENT=	X Colour Management Library
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USES=		pkgconfig
+USES=		pathfix pkgconfig
 USE_XORG=	xfixes xmu
-
-MAN3=		Xcm.3 XcmDDC.3 XcmEdidParse.3 XcmEvents.3 XcolorProfile.3 \
-		XcolorRegion.3 libXcm.3
-
-post-patch:
-	@${SED} -I.bak -e 's:{libdir}/pkgconfig:{prefix}/libdata/pkgconfig:g' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
