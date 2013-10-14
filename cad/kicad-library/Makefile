@@ -1,9 +1,5 @@
-# New ports collection makefile for:  kicad-library
-# Date created:               22 May 2010
-# Whom:                       Thierry Thomas <thierry@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/kicad-library/Makefile,v 1.3 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@FreeBSD.org>
+# $FreeBSD: cad/kicad-library/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	kicad
 PORTVERSION=	1.0
@@ -25,6 +21,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${DATADIR})
