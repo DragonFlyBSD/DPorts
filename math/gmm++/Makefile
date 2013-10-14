@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gmm++
-# Date created:		2008-07-23
-# Whom:			Max Brazhnikov <makc@issp.ac.ru>
-#
-# $FreeBSD: ports/math/gmm++/Makefile,v 1.6 2012/11/17 05:59:21 svnexp Exp $
-#
+# $FreeBSD: math/gmm++/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	gmm++
 PORTVERSION=	4.2
