@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	libyaml
-# Date created:			Aug 31, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: textproc/libyaml/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/libyaml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libyaml
 PORTVERSION=	0.1.4
@@ -21,4 +16,5 @@ GNU_CONFIGURE=	yes
 USES=	pathfix
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
