@@ -1,5 +1,5 @@
 # Created by: lbr
-# $FreeBSD: devel/p5-MRO-Compat/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: devel/p5-MRO-Compat/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MRO-Compat
 PORTVERSION=	0.12
@@ -19,6 +19,7 @@ USE_PERL5=	extract configure
 
 MAN3=	MRO::Compat.3
 
+NO_STAGE=	yes
 post-extract:
 	@${PERL} -i.bak -ne 'print unless m,^if, .. m,}$$,' ${WRKSRC}/Makefile.PL
 
