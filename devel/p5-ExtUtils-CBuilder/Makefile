@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-CBuilder/Makefile 326771 2013-09-08 21:06:59Z tobez $
+# $FreeBSD: devel/p5-ExtUtils-CBuilder/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	ExtUtils-CBuilder
 PORTVERSION=	0.2802.12
@@ -15,6 +15,7 @@ COMMENT=	Compile and link C code for Perl modules
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		ExtUtils::CBuilder.3 ExtUtils::CBuilder::Platform::Windows.3
 
