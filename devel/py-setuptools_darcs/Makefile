@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-setuptools_darcs
-# Date created:		30 June, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: devel/py-setuptools_darcs/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-setuptools_darcs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	setuptools_darcs
 PORTVERSION=	1.2.11
@@ -20,4 +16,5 @@ BUILD_DEPENDS=		darcsver:${PORTSDIR}/devel/py-darcsver
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
