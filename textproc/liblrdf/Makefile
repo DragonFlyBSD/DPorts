@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: textproc/liblrdf/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: textproc/liblrdf/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	liblrdf
 PORTVERSION=	0.5.0
@@ -34,6 +34,7 @@ WRKSRC=		${WRKDIR}/swh-LRDF-7ebc032
 
 # XXX: work around an issue with automake-1.13 erroring out on a
 #      partially configured m4 directory before libtoolize creates it
+NO_STAGE=	yes
 pre-configure::
 	@${RM} -rf ${WRKSRC}/m4
 	@${MKDIR} ${WRKSRC}/m4
