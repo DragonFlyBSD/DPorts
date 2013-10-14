@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon
-# $FreeBSD: devel/coccinelle/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: devel/coccinelle/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	coccinelle
 DISTVERSION=	0.2.4rc5
@@ -19,6 +19,7 @@ SHEBANG_FILES=	configure
 
 MAN1=		spatch.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|CAMLreturn0|return 0|' \
 		${WRKSRC}/pycaml/pycaml_ml.c
