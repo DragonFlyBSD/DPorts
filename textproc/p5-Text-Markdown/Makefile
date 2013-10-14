@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: textproc/p5-Text-Markdown/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: textproc/p5-Text-Markdown/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Markdown
 PORTVERSION=	1.000031
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN1=		Markdown.pl.1
 MAN3=		Text::Markdown.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
