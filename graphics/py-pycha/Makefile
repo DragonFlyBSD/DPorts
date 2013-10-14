@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/py-pycha/Makefile 317021 2013-05-01 14:14:22Z wen $
+# $FreeBSD: graphics/py-pycha/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pycha
 PORTVERSION=	0.7.0
@@ -16,6 +16,7 @@ USE_PYDISTUTILS=	easy_install
 OPTIONS_DEFINE=		CAIRO
 OPTIONS_DEFAULT=	CAIRO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCAIRO}
