@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-VCS-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-VCS-Lite/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	VCS-Lite
 PORTVERSION=	0.10
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	VCS::Lite.3 VCS::Lite::Delta.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
