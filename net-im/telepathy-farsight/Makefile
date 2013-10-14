@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-farsight/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: net-im/telepathy-farsight/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #   $MCom$
 
 PORTNAME=	telepathy-farsight
@@ -23,4 +23,5 @@ USE_GNOME=	gnomehack glib20 ltverhack libxslt:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
