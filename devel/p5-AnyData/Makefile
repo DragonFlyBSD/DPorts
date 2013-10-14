@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-AnyData/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-AnyData/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyData
 PORTVERSION=	0.11
@@ -28,4 +28,5 @@ MAN3=	AnyData.3 \
 	AnyData::Format::XML.3 \
 	AnyData::Storage::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
