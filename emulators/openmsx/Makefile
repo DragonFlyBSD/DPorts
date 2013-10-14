@@ -1,4 +1,4 @@
-# $FreeBSD: ports/emulators/openmsx/Makefile,v 1.35 2012/11/17 05:57:22 svnexp Exp $
+# $FreeBSD: emulators/openmsx/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	openmsx
 PORTVERSION=	0.9.1
@@ -39,6 +39,7 @@ IGNORE=		opemsx requires port data, unset NOPORTDATA to install
 MAKE_ARGS+=	INSTALL_DOC_DIR=${WRKSRC}/dummy
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/{TCL_LIB_SPEC}/& $${TCL_LD_FLAGS}/' \
 		${WRKSRC}/build/libraries.py
