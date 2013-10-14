@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: multimedia/emotion/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: multimedia/emotion/Makefile 329522 2013-10-06 00:14:03Z gblach $
 
 PORTNAME=	emotion
 PORTVERSION=	1.7.8
