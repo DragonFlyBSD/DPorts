@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: devel/notify-sharp/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: devel/notify-sharp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	notify-sharp
 PORTVERSION=	0.4.0
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gtksharp20
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
