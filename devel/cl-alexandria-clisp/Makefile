@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/cl-alexandria-clisp/Makefile,v 1.5 2013/01/26 15:07:24 svnexp Exp $
+# $FreeBSD: devel/cl-alexandria-clisp/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	alexandria
 PORTVERSION=	2010.01.16
@@ -17,5 +17,6 @@ USE_ASDF_FASL=	yes
 FASL_TARGET=	clisp
 FASL_BUILD=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
 .include <bsd.port.mk>
