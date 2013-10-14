@@ -1,5 +1,5 @@
 # Created by: patrick@mindstep.com
-# $FreeBSD: security/p5-Crypt-Blowfish/Makefile 324983 2013-08-19 12:40:28Z mat $
+# $FreeBSD: security/p5-Crypt-Blowfish/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Blowfish
 PORTVERSION=	2.14
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Blowfish.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
