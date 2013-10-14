@@ -1,5 +1,5 @@
 # Created by: Harold Gutch <logix@foobar.franken.de>
-# $FreeBSD: multimedia/vcdimager/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/vcdimager/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	vcdimager
 PORTVERSION=	0.7.24
@@ -30,6 +30,7 @@ MAN1=		cdxa2mpeg.1 vcdimager.1 vcdxminfo.1 vcdxrip.1 vcdxgen.1 \
 		vcdxbuild.1 vcd-info.1
 INFO=		vcdimager vcdxrip vcd-info
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libvcd||' ${WRKSRC}/libvcdinfo.pc.in
 
