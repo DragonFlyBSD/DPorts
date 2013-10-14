@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Simple/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: security/p5-Authen-Simple/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
 
 PORTNAME=	Authen-Simple
 PORTVERSION=	0.5
@@ -21,11 +21,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Authen::Simple.3 \
-		Authen::Simple::Adapter.3 \
-		Authen::Simple::Apache.3 \
-		Authen::Simple::Log.3 \
-		Authen::Simple::Password.3
 
 .include <bsd.port.mk>
