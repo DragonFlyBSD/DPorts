@@ -1,4 +1,4 @@
-# $FreeBSD: ports/news/inn/Makefile.layout,v 1.5 2012/11/17 06:00:42 svnexp Exp $
+# $FreeBSD: news/inn/Makefile.layout 300897 2012-07-14 14:29:18Z beat $
 
 INN_LAYOUT?=		old
 
