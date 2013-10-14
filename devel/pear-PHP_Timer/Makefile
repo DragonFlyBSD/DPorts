@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-PHP_Timer/Makefile,v 1.2 2012/12/17 18:02:00 svnexp Exp $
+# $FreeBSD: devel/pear-PHP_Timer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHP_Timer
 PORTVERSION=	1.0.4
@@ -21,6 +21,7 @@ PEAR_AUTOINSTALL=	yes
 DEFAULT_PHP_VER=5
 IGNORE_WITH_PHP=4 52
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
