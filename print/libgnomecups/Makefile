@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <glennpj@charter.net>
-# $FreeBSD: print/libgnomecups/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: print/libgnomecups/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	libgnomecups
 PORTVERSION=	0.2.3
@@ -23,4 +23,5 @@ USE_AUTOTOOLS=  libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
