@@ -1,5 +1,5 @@
 # Created by: rene@FreeBSD.org
-# $FreeBSD: www/py-ws4py/Makefile 327137 2013-09-13 09:27:55Z rene $
+# $FreeBSD: www/py-ws4py/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ws4py
 PORTVERSION=	0.3.2
@@ -31,6 +31,7 @@ CHERRYPY_RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}cherrypy>=3.2.2:${PORTSDIR}/www/py
 GEVENT_RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}gevent>=0.13.8:${PORTSDIR}/devel/py-gevent
 TORNADO_RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}tornado>=3.1:${PORTSDIR}/www/py-tornado
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Do not install files which will not work
