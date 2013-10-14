@@ -1,8 +1,5 @@
-# New ports collection makefile for:	SLIB for Guile
-# Date created:				3 November 2003
-# Whom:					Kimura Fuyuki <fuyuki@nigredo.org>
-#
-# $FreeBSD: ports/lang/slib-guile/Makefile,v 1.14 2012/11/17 05:58:56 svnexp Exp $
+# Created by: Kimura Fuyuki <fuyuki@nigredo.org>
+# $FreeBSD: lang/slib-guile/Makefile 329950 2013-10-10 00:20:42Z madpilot $
 #    $MCom: ports/lang/slib-guile/Makefile,v 1.3 2006/10/13 02:32:48 marcus Exp $
 
 PORTNAME=	slib
@@ -21,10 +18,6 @@ BUILD_DEPENDS=	${LOCALBASE}/share/slib/require.scm:${PORTSDIR}/lang/slib \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 NO_BUILD=	yes
-
-do-install:
-	${LN} -shf ${PREFIX}/share/slib ${LOCALBASE}/share/guile/1.8/slib
-	${LOCALBASE}/bin/guile -q -c \
-	"(use-modules (ice-9 slib))(require 'new-catalog)"
+NO_INSTALL=	yes
 
 .include <bsd.port.mk>
