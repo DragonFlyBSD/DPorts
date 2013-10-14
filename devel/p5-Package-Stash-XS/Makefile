@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Package-Stash-XS/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-Package-Stash-XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Package-Stash-XS
 PORTVERSION=	0.26
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Package::Stash::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
