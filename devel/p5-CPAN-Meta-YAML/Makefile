@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-CPAN-Meta-YAML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-CPAN-Meta-YAML/Makefile 328177 2013-09-24 17:35:27Z sunpoet $
 
 PORTNAME=	CPAN-Meta-YAML
-PORTVERSION=	0.008
+PORTVERSION=	0.010
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +14,5 @@ TEST_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		CPAN::Meta::YAML.3
 
 .include <bsd.port.mk>
