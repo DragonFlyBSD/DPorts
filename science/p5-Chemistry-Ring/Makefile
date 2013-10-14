@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-Ring/Makefile 326873 2013-09-10 08:26:53Z az $
+# $FreeBSD: science/p5-Chemistry-Ring/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Chemistry-Ring
 PORTVERSION=	0.20
@@ -21,4 +21,5 @@ MAN3=	Chemistry::Ring.3 Chemistry::Ring::Find.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
