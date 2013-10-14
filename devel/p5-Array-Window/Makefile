@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Array-Window
-# Date created:	   18 May 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: devel/p5-Array-Window/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Array-Window/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Array-Window
 PORTVERSION=	1.02
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Array::Window.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
