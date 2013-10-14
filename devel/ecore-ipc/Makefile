@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ecore-ipc/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: devel/ecore-ipc/Makefile 329500 2013-10-05 20:33:02Z gblach $
 
 PORTNAME=	ipc
 PORTVERSION=	1.7.8
@@ -17,10 +17,9 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_EFL=	ecore libtool_hack
 USE_EFL_ECORE=	con
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_ipc
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
@@ -54,6 +53,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ecore-ipc.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
