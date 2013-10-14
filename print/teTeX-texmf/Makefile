@@ -1,4 +1,4 @@
-# $FreeBSD: print/teTeX-texmf/Makefile 313378 2013-03-03 20:49:34Z hrs $
+# $FreeBSD: print/teTeX-texmf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	teTeX-texmf
 PORTVERSION=	3.0
@@ -25,6 +25,7 @@ CONFLICTS=	latex2e-[0-9]* tex-[0-9]* dvips-[0-9]* xdvi-[0-9]* \
 		tex-kpathsea-[0-9]* tex-xdvik-[0-9]* \
 		tex-dvipsk-[0-9]* tex-dvipdfmx-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 NO_WRKSUBDIR=	YES
