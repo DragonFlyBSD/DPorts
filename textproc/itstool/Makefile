@@ -1,9 +1,5 @@
-# New ports collection makefile for:   itstool
-# Date Created:			17 Sept 2011
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/itstool/Makefile,v 1.4 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: textproc/itstool/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	itstool
 PORTVERSION=	1.2.0
@@ -21,6 +17,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		itstool.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|g' \
 		${WRKSRC}/itstool.in
