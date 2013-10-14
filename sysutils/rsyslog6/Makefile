@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog6/Makefile 327490 2013-09-17 16:58:27Z bapt $
+# $FreeBSD: sysutils/rsyslog6/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rsyslog
 PORTVERSION=	6.6.0
@@ -49,6 +49,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-rtinst --enable-debug
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
