@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-Chart/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Chart/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Chart
 PORTVERSION=	2.4.6
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Chart.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
