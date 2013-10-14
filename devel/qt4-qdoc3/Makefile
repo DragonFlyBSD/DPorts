@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: devel/qt4-qdoc3/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qt4-qdoc3/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qdoc3
 DISTVERSION=	${QT4_VERSION}
@@ -32,6 +32,7 @@ EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 BUILD_WRKSRC=	${WRKSRC}/tools/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs/modules
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
