@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.i18n/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.app.i18n/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	plone.app.i18n
 PORTVERSION=	2.0.2
@@ -13,7 +13,9 @@ LICENSE=	GPLv2
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
