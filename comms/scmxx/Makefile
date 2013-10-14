@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: comms/scmxx/Makefile 316695 2013-04-27 22:09:15Z bapt $
+# $FreeBSD: comms/scmxx/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	scmxx
 PORTVERSION=	0.9.0
@@ -23,6 +23,7 @@ MANLANG=	"" ru de it
 DOCS=		README docs/*.txt
 EXAMPLES=	sms.txt vCalendar.vcs vCard.vcf
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name 'Makefile*' | ${XARGS} \
 		${REINPLACE_CMD} -e "s|CFLAGS=|CFLAGS+=|g"
