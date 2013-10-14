@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: deskutils/deforaos-todo/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: deskutils/deforaos-todo/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	todo
 PORTVERSION=	0.1.2
@@ -21,4 +21,5 @@ USE_GNOME=	gtk20 desktopfileutils
 INSTALLS_ICONS=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
