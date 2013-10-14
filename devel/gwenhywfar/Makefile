@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gwenhywfar/Makefile 327134 2013-09-13 08:21:56Z bapt $
+# $FreeBSD: devel/gwenhywfar/Makefile 329953 2013-10-10 00:58:16Z jhale $
 
 PORTNAME=	gwenhywfar
 PORTVERSION=	4.3.3
@@ -11,14 +11,8 @@ COMMENT?=	Multi-platform helper library for networking and security applications
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
-		gnutls:${PORTSDIR}/security/gnutls
-
-.if !defined(SLAVEPORT)
-OPTIONS_DEFINE=	DOXYGEN MEMDEBUG
-
-MEMDEBUG_DESC=	Enable memory debugger statistic
-.endif
+LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libgnutls.so:${PORTSDIR}/security/gnutls
 
 USES=		pathfix pkgconfig gettext gmake
 USE_OPENSSL=	yes
@@ -34,25 +28,26 @@ USE_LDCONFIG=	yes
 
 GWEN_SHLIB_VER=	60
 
+.if !defined(SLAVEPORT)
+OPTIONS_DEFINE=			DOXYGEN MEMDEBUG
+
+DOXYGEN_BUILD_DEPENDS=		doxygen:${PORTSDIR}/devel/doxygen \
+				dot:${PORTSDIR}/graphics/graphviz
+DOXYGEN_CONFIGURE_ENABLE=	full-doc
+
+MEMDEBUG_DESC=			Enable memory debugger statistic
+MEMDEBUG_CONFIGURE_ENABLE=	memtrace
+.endif
+
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MDOXYGEN}
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen \
-		dot:${PORTSDIR}/graphics/graphviz
-CONFIGURE_ARGS+=--enable-full-doc
-.endif
-
-.if ${PORT_OPTIONS:MMEMDEBUG}
-CONFIGURE_ARGS+=--enable-memtrace
-.endif
-
 .if defined(SLAVEPORT)
-LIB_DEPENDS+=	gwenhywfar:${PORTSDIR}/devel/gwenhywfar
+LIB_DEPENDS+=	libgwenhywfar.so:${PORTSDIR}/devel/gwenhywfar
 BUILD_WRKSRC=	${WRKSRC}/gui
 INSTALL_WRKSRC=	${WRKSRC}/gui/${SLAVEPORT}
 
 .if ${SLAVEPORT}=="fox16"
-LIB_DEPENDS+=	FOX-1.6:${PORTSDIR}/x11-toolkits/fox16
+LIB_DEPENDS+=	libFOX-1.6.so:${PORTSDIR}/x11-toolkits/fox16
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 .endif
@@ -80,13 +75,13 @@ post-build:
 
 post-install:
 .if ${PORT_OPTIONS:MDOXYGEN}
-	${MKDIR} ${DOCSDIR}/apidoc
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/apidoc
 	cd ${WRKSRC}/apidoc && \
-		${COPYTREE_SHARE} \* ${DOCSDIR}/apidoc
-	@${FIND} -P ${DOCSDIR} -type f 2>/dev/null | \
-		${SED} -ne 's,^${PREFIX}/,,p' >> ${TMPPLIST}
-	@${FIND} -P -d ${DOCSDIR} -type d 2>/dev/null | \
-		${SED} -ne 's,^${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
+		${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR}/apidoc
+	@${FIND} -P ${STAGEDIR}${DOCSDIR} -type f 2>/dev/null | \
+		${SED} -ne 's|^${STAGEDIR}${PREFIX}/||p' >> ${TMPPLIST}
+	@${FIND} -P -d ${STAGEDIR}${DOCSDIR} -type d 2>/dev/null | \
+		${SED} -ne 's|^${STAGEDIR}${PREFIX}/|@dirrm |p' >> ${TMPPLIST}
 .endif
 
 .include <bsd.port.mk>
