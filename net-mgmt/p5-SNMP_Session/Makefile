@@ -1,5 +1,5 @@
 # Created by: Stephen J. Roznowski <sjr@home.net>
-# $FreeBSD: net-mgmt/p5-SNMP_Session/Makefile 324621 2013-08-12 11:15:04Z demon $
+# $FreeBSD: net-mgmt/p5-SNMP_Session/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	SNMP_Session
 PORTVERSION=	1.13
@@ -12,10 +12,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	A perl5 module providing rudimentary access to SNMPv1 and v2 agents
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
