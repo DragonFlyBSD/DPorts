@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kgamma/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/kgamma/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kgamma
 PORTVERSION=	${KDE4_VERSION}
@@ -18,4 +18,5 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11 xxf86vm
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
