@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-Abstract/Makefile 326641 2013-09-07 14:56:48Z lth $
+# $FreeBSD: mail/p5-Email-Abstract/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Abstract
 PORTVERSION=	3.006
@@ -25,4 +25,5 @@ MAN3=		Email::Abstract.3 \
 		Email::Abstract::MailMessage.3 \
 		Email::Abstract::Plugin.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
