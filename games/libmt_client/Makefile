@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/libmt_client/Makefile 326011 2013-09-02 15:26:23Z bapt $
+# $FreeBSD: games/libmt_client/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		libmt_client
 PORTVERSION=		0.1.98
@@ -20,4 +20,5 @@ GNU_CONFIGURE=		yes
 USE_GNOME=		glib20 libxml2 lthack
 USE_LDCONFIG=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
