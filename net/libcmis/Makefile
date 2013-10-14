@@ -1,4 +1,4 @@
-# $FreeBSD: net/libcmis/Makefile 325229 2013-08-22 20:36:52Z jkim $
+# $FreeBSD: net/libcmis/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libcmis
 PORTVERSION=	0.4.1
@@ -23,6 +23,7 @@ USES=		gmake pathfix pkgconfig
 CONFIGURE_ARGS=	--disable-werror --with-boost=${LOCALBASE} --without-man
 PLIST_SUB=	MAJVER=${PORTVERSION:R}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|@WITH_LIBCMIS_MAN_FALSE@|#|g" \
 	    ${WRKSRC}/Makefile.in
