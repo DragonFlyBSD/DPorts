@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: x11-fonts/fontcacheproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/fontcacheproto/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	fontcacheproto
 PORTVERSION=	0.1.3
