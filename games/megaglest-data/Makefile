@@ -1,5 +1,5 @@
 # Created by: Sven Moeller <smoeller@nichthelfer.de>
-# $FreeBSD: ports/games/megaglest-data/Makefile,v 1.6 2012/11/26 21:49:02 svnexp Exp $
+# $FreeBSD: games/megaglest-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	megaglest
 PORTVERSION=	3.7.1
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 PLIST=		${WRKDIR}/pkg-plist
 
+NO_STAGE=	yes
 pre-install:
 	${RM} -f ${PLIST}
 .for DIR in data maps scenarios techs tilesets tutorials
