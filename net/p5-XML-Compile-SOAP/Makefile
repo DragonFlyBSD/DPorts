@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-XML-Compile-SOAP/Makefile 325695 2013-08-30 13:31:33Z tobez $
+# $FreeBSD: net/p5-XML-Compile-SOAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	XML-Compile-SOAP
 PORTVERSION=	2.38
@@ -50,4 +50,5 @@ MAN3=		XML::Compile::SOAP.3 \
 		XML::Compile::XOP.3 \
 		XML::Compile::XOP::Include.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
