@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: textproc/py-libxml2/Makefile 326683 2013-09-07 19:49:41Z bsam $
+# $FreeBSD: textproc/py-libxml2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	textproc gnome python
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--with-iconv=${ICONV_PREFIX} \
 DOCSDIR=	${PREFIX}/share/doc/py-libxml2
 EXAMPLESDIR=	${PREFIX}/share/examples/py-libxml2
 
+NO_STAGE=	yes
 post-install:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}
 	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}
