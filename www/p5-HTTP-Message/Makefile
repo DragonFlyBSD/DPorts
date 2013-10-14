@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Message/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-Message/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Message
 PORTVERSION=	6.06
@@ -33,6 +33,7 @@ MAN3=		HTTP::Config.3 \
 		HTTP::Response.3 \
 		HTTP::Status.3
 
+NO_STAGE=	yes
 post-patch:
 		@${RM} ${WRKSRC}/lib/HTTP/Headers.pm.orig
 
