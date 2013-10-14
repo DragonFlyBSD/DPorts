@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ROTE
-# Date created:				10 Jun 2005
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rote/Makefile,v 1.6 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: devel/rote/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rote
 PORTVERSION=	0.2.8
@@ -21,4 +17,5 @@ PLIST_FILES=	bin/rote-config include/rote/rote.h \
 		lib/librote.so.${PORTVERSION} lib/librote.so.0 lib/librote.so
 PLIST_DIRS=	include/rote
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
