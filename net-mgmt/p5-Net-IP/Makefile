@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net-mgmt/p5-Net-IP/Makefile 324222 2013-08-04 12:30:54Z az $
+# $FreeBSD: net-mgmt/p5-Net-IP/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-IP
 PORTVERSION=	1.26
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		Net::IP.3
 
+NO_STAGE=	yes
 post-configure:
 	${PERL} -pi -e 's/-I\S+PERL\S+ //g if m{PERL_DL_NONLAZY}' ${WRKSRC}/Makefile
 
