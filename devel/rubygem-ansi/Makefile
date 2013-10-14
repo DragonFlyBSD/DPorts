@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-ansi
-# Date created:		2011-10-27
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-ansi/Makefile,v 1.6 2012/11/17 05:56:58 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-ansi/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ansi
 PORTVERSION=	1.4.3
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
