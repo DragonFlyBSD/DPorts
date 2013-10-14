@@ -1,4 +1,4 @@
-# $FreeBSD: games/kdegames4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: games/kdegames4/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kdegames
 PORTVERSION=	${KDE4_VERSION}
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 OPTIONS_DEFINE=	${KDE4_GAMES_ALL}
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
+NO_STAGE=	yes
 .include <${.CURDIR}/Makefile.common>
 
 .for game in ${KDE4_GAMES_ALL}
