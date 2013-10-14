@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-d2to1/Makefile 321180 2013-06-18 11:09:58Z koobs $
+# $FreeBSD: devel/py-d2to1/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	d2to1
 PORTVERSION=	0.2.10
@@ -15,4 +15,5 @@ LICENSE=	BSD
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
