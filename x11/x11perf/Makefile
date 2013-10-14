@@ -1,4 +1,4 @@
-# $FreeBSD: x11/x11perf/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/x11perf/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	x11perf
 PORTVERSION=	1.5.4
@@ -16,4 +16,5 @@ MAN1=		Xmark.1 \
 		x11perf.1 \
 		x11perfcomp.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
