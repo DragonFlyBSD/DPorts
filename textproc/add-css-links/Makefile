@@ -1,7 +1,5 @@
-# New ports collection makefile for:	add-css-links
-# Date created:                		August 03 2004
-# Whom:                        		Aaron Straup Cope
-# $FreeBSD: ports/textproc/add-css-links/Makefile,v 1.4 2012/11/17 06:01:51 svnexp Exp $
+# Created by: Aaron Straup Cope
+# $FreeBSD: textproc/add-css-links/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	add-css-links
 PORTVERSION=	1.0
@@ -14,6 +12,7 @@ COMMENT=	Add one or more CSS <link> elements to an XHTML document
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} "Installing in ${PREFIX}/share/xsl/xhtml/"
 	@${MKDIR} ${PREFIX}/share/xsl/xhtml
