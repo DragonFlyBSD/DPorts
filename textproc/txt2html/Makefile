@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: textproc/txt2html/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/txt2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	txt2html
 PORTVERSION=	2.51
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 MAN1=	txt2html.1
 MAN3=	HTML::TextToHTML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
