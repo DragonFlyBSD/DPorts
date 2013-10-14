@@ -1,9 +1,5 @@
-# New ports collection makefile for:	numpy
-# Date created:		20 April 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/math/py-numeric/Makefile,v 1.57 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: math/py-numeric/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	numeric
 PORTVERSION=	24.2
@@ -32,6 +28,7 @@ WRKSRC=		${WRKDIR}/Numeric-${PORTVERSION}
 DOCSDIR=	${PREFIX}/share/doc/py-numeric
 EXAMPLESDIR=	${PREFIX}/share/examples/py-numeric
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/bin/easy_install-${PYTHON_VER})
