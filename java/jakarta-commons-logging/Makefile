@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/java/jakarta-commons-logging/Makefile,v 1.18 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-commons-logging/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-logging
 PORTVERSION=	1.1.1
@@ -18,6 +18,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(NOPORTDOCS)
