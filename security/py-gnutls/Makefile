@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: ports/security/py-gnutls/Makefile,v 1.26 2013/02/05 16:54:25 svnexp Exp $
+# $FreeBSD: security/py-gnutls/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gnutls
 PORTVERSION=	1.2.4
@@ -20,6 +20,7 @@ PYDISTUTILS_PKGNAME=	python_gnutls
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s|include_dirs=.*|include_dirs=\['${LOCALBASE}/include'\],|" ${WRKSRC}/setup.py
 	${REINPLACE_CMD} -e "s|library_dirs=.*|library_dirs=\['${LOCALBASE}/lib'\],|" ${WRKSRC}/setup.py
