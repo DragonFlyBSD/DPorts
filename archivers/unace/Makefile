@@ -1,5 +1,5 @@
 # Created by: Joao Carlos Mendes Luis <jonny@jonny.eng.br>
-# $FreeBSD: archivers/unace/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/unace/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	unace
 PORTVERSION=	1.2b
@@ -13,6 +13,7 @@ COMMENT=	Extract, view & test ACE archives
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 USES=		gmake
 ALL_TARGET=	clean unace
 PLIST_FILES=	bin/unace
