@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/cowsay/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: games/cowsay/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cowsay
 PORTVERSION=	3.03
@@ -25,6 +25,7 @@ verify: fetch
 	@${ECHO_MSG} "Done"
 .endif
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}; ${SH} install.sh ${PREFIX}
 	@${INSTALL_DATA} ${FILESDIR}/box.cow ${PREFIX}/share/cows
