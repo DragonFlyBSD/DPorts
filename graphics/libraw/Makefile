@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: graphics/libraw/Makefile 326082 2013-09-02 20:31:38Z bapt $
+# $FreeBSD: graphics/libraw/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libraw
 PORTVERSION=	0.14.7
@@ -30,6 +30,7 @@ DEMOSAIC_PACK_GPL3_DESC=	Enable GPLv3 demosaic pack
 OPTIMIZED_CFLAGS_DESC=		Enable optimizations (on x86)
 OPENMP_DESC=			Enable OpenMP (implies GCC 4.6+)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
