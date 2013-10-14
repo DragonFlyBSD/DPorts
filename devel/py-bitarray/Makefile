@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-bitarray/Makefile 315979 2013-04-17 15:54:26Z sbz $
+# $FreeBSD: devel/py-bitarray/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	bitarray
 PORTVERSION=	0.8.1
@@ -22,6 +22,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 PORTDOCS=	AUTHORS CHANGE_LOG LICENSE README.rst
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
