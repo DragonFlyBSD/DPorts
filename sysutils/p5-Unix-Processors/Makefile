@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Unix-Processors
-# Date created:		13 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: sysutils/p5-Unix-Processors/Makefile 326573 2013-09-07 06:47:20Z az $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: sysutils/p5-Unix-Processors/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Unix-Processors
 PORTVERSION=	2.042
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Unix::Processors.3 Unix::Processors::Info.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
