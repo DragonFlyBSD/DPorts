@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: www/pecl-APC/Makefile 320364 2013-06-09 17:48:16Z miwi $
+# $FreeBSD: www/pecl-APC/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	APC
 PORTVERSION=	3.1.14
@@ -32,6 +32,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-3.1.13
 
 PORTDOCS=	CHANGELOG INSTALL NOTICE apc.php
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFILEHITS}
