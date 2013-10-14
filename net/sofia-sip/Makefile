@@ -1,4 +1,4 @@
-# $FreeBSD: net/sofia-sip/Makefile 325300 2013-08-24 15:24:41Z danfe $
+# $FreeBSD: net/sofia-sip/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sofia-sip
 PORTVERSION=	1.12.11
@@ -23,4 +23,5 @@ MAN1=		sip-date.1 \
 		stunc.1 \
 		sip-dig.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
