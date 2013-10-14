@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-IPC-Run/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-IPC-Run/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IPC-Run
 PORTVERSION=	0.92
@@ -27,4 +27,5 @@ MAN3=		IPC::Run.3 \
 		IPC::Run::Win32IO.3 \
 		IPC::Run::Win32Pump.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
