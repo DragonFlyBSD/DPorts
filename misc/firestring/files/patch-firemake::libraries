@@ -1,4 +1,4 @@
-$FreeBSD: ports/misc/firestring/files/patch-firemake::libraries,v 1.2 2012/11/17 05:59:34 svnexp Exp $
+$FreeBSD: misc/firestring/files/patch-firemake::libraries 300896 2012-07-14 13:54:48Z beat $
 
 --- firemake/libraries.orig	Tue Feb 24 13:37:56 2004
 +++ firemake/libraries	Sat May  1 20:10:38 2004

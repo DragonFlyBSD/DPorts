@@ -1,4 +1,4 @@
-$FreeBSD: ports/misc/firestring/files/patch-firemake::makefiletop,v 1.2 2012/11/17 05:59:34 svnexp Exp $
+$FreeBSD: misc/firestring/files/patch-firemake::makefiletop 300896 2012-07-14 13:54:48Z beat $
 
 --- firemake/makefiletop.orig	Sat May  1 20:12:10 2004
 +++ firemake/makefiletop	Sat May  1 20:11:26 2004
