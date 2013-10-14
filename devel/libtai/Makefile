@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: devel/libtai/Makefile 315798 2013-04-13 21:12:26Z bdrewery $
+# $FreeBSD: devel/libtai/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libtai
 PORTVERSION=	0.60
@@ -29,6 +29,7 @@ LIBFILE=	libtai
 PROGRAM_FILES=	easter nowutc leapsecs yearcal
 HEADER_FILES=	caldate.h caltime.h leapsecs.h tai.h taia.h uint64.h
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} -e "s!%%PREFIX%%!${PREFIX}!g" \
 		${WRKSRC}/leapsecs.3 ${WRKSRC}/leapsecs_read.c
