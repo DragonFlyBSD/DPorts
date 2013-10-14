@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Penguin
-# Date created:				May 28th 1997
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Penguin/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: devel/p5-Penguin/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Penguin
 PORTVERSION=	3.00
@@ -19,6 +15,7 @@ RUN_DEPENDS=	pgp:${PORTSDIR}/security/pgp
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 post-install:
 		${MKDIR} ${PREFIX}/lib/perl5/site_perl/Penguin/bin ${PREFIX}/lib/perl5/site_perl/Penguin/misc ${PREFIX}/lib/perl5/site_perl/Penguin/doc
 		${INSTALL_DATA} ${WRKSRC}/bin/.pen ${PREFIX}/lib/perl5/site_perl/Penguin/bin
