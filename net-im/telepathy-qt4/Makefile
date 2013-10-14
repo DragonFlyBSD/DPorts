@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-qt4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-im/telepathy-qt4/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	telepathy-qt4
 PORTVERSION=	0.9.3
@@ -31,6 +31,7 @@ PORTDOCS=	AUTHORS ChangeLog HACKING NEWS README html
 PORTEXAMPLES=	Makefile accounts cm contact-messenger extensions \
 		file-transfer protocols roster stream-tubes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
