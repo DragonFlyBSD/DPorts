@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/colord/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: graphics/colord/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/trunk/graphics/colord/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	colord
@@ -42,6 +42,7 @@ GLIB_SCHEMAS=	org.freedesktop.ColorHelper.gschema.xml
 
 OPTIONS_DEFINE=	MANPAGES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
