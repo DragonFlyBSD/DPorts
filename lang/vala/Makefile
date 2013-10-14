@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: lang/vala/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: lang/vala/Makefile 327741 2013-09-20 19:53:09Z bapt $
 #   $MCom: ports/trunk/lang/vala/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	vala
@@ -35,6 +35,7 @@ MAN1=		vala-gen-introspect.1 vapigen.1
 CONFIGURE_ARGS+=--disable-vapigen
 .endif
 
+NO_STAGE=	yes
 post-patch:
 # We cheat here, because vala records vapigen related stuff in its .pc file
 # This makes vapigen work again, although it might get weird when
