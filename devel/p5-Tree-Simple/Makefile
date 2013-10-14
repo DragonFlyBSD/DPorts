@@ -1,20 +1,22 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-Tree-Simple/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-Tree-Simple/Makefile 330132 2013-10-12 15:11:47Z sunpoet $
 
 PORTNAME=	Tree-Simple
-PORTVERSION=	1.18
+PORTVERSION=	1.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	demon@FreeBSD.org
-COMMENT=	A simple tree object
+COMMENT=	Simple tree object
 
-TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+TEST_DEPENDS=	p5-Test-Exception>=0.15:${PORTSDIR}/devel/p5-Test-Exception
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Tree::Simple.3 Tree::Simple::Visitor.3
 
 .include <bsd.port.mk>
