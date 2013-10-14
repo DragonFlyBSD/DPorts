@@ -1,8 +1,8 @@
-# Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: ports/security/libassuan/Makefile,v 1.24 2012/11/17 06:01:06 svnexp Exp $
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: security/libassuan/Makefile 329010 2013-10-02 01:21:18Z jhale $
 
 PORTNAME=	libassuan
-PORTVERSION=	2.0.3
+PORTVERSION=	2.1.1
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=${PORTNAME}
@@ -12,7 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	IPC library used by GnuPG and gpgme
 
-LIB_DEPENDS=	gpg-error:${PORTSDIR}/security/libgpg-error
+LIB_DEPENDS=	libgpg-error.so:${PORTSDIR}/security/libgpg-error
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
