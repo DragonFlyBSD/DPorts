@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: devel/pear-Console_Table/Makefile 314202 2013-03-15 00:49:35Z miwi $
+# $FreeBSD: devel/pear-Console_Table/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Console_Table
 PORTVERSION=	1.1.4
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
