@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-lafcadio
-# Date created:		09 Jan 2007
-# Whom:			Christopher Boumenot <boumenot@gmail.com>
-#
-# $FreeBSD: devel/ruby-wirble/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Christopher Boumenot <boumenot@gmail.com>
+# $FreeBSD: devel/ruby-wirble/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	wirble
 PORTVERSION=	0.1.3
@@ -18,6 +14,7 @@ DOCS_EN=	README
 
 USE_RUBY=	yes
 
+NO_STAGE=	yes
 do-build:
 
 do-install:
