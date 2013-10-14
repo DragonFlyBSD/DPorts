@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Contextual-Return/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Contextual-Return/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Contextual-Return
 PORTVERSION=	0.004.007
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Contextual::Return.3 Contextual::Return::Failure.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
