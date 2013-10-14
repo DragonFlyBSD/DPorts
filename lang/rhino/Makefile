@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@FreeBSD.org>
-# $FreeBSD: lang/rhino/Makefile 313526 2013-03-06 16:15:30Z nivit $
+# $FreeBSD: lang/rhino/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	rhino
 DISTVERSION=	1_7R4
@@ -33,6 +33,7 @@ LINEDIT_DESC=	Enable line editing in the Rhino shell
 
 OPTIONS_DEFAULT=	LINEDIT
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 RHINOJAR=	${DATADIR}/${PORTNAME}.jar
