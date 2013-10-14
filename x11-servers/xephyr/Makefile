@@ -1,7 +1,6 @@
-# $FreeBSD: x11-servers/xephyr/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-servers/xephyr/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	xephyr
-PORTREVISION=	0
 
 COMMENT=	X server from X.Org based on kdrive
 
@@ -22,6 +21,7 @@ CONFIGURE_ARGS=	--enable-kdrive --enable-xephyr	--disable-dmx --disable-xvfb \
 SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xephyr
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/kdrive/ephyr/Xephyr ${PREFIX}/bin/
 
