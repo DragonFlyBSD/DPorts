@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: ports/audio/gervill/Makefile,v 1.4 2012/12/10 13:24:54 svnexp Exp $
+# $FreeBSD: audio/gervill/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gervill
 PORTVERSION=	1.0
@@ -10,6 +10,7 @@ MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A generic sound synthesizer for Java
 
 USE_ZIP=	yes
+NO_STAGE=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 USE_ANT=	yes
