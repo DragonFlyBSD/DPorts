@@ -1,4 +1,4 @@
-# $FreeBSD: print/libmspub/Makefile 326819 2013-09-09 16:06:52Z sunpoet $
+# $FreeBSD: print/libmspub/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	libmspub
 PORTVERSION=	0.0.6
@@ -25,4 +25,5 @@ CONFIGURE_ARGS=	--disable-werror --without-docs
 CONFIGURE_ENV=	ZLIB_CFLAGS="-I/usr/include" ZLIB_LIBS="-lz"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
