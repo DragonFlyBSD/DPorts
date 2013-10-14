@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qstardict
-# Date created:		12 Jul 2007
-# Whom:			Yinghong.Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: textproc/qstardict/Makefile 326422 2013-09-05 17:37:22Z antoine $
-#
+# Created by: Yinghong.Liu <relaxbsd@gmail.com>
+# $FreeBSD: textproc/qstardict/Makefile 329880 2013-10-09 10:08:04Z makc $
 
 PORTNAME=	qstardict
 PORTVERSION=	1.0.1
@@ -11,12 +7,11 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://qstardict.ylsoftware.com/files/
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	Dictionary program written in Qt4
+COMMENT=	Qt 4 based dictionary program (stardict clone)
 
-USES=		pkgconfig
+USES=		pkgconfig qmake
 USE_BZIP2=	yes
 USE_QT4=	gui network xml qmake_build uic_build moc_build rcc_build
-QMAKE_ARGS+=	-recursive
 USE_DOS2UNIX=	qstardict.pri
 
 DICPATH=	${LOCALBASE}/share/stardict/dic
@@ -49,11 +44,5 @@ post-patch:
 	@${REINPLACE_CMD} -e "s|/usr/share/stardict/dic|${DICPATH}|g" \
 		-e "s|glib.*\.h|glib.h|g" \
 		${WRKSRC}/plugins/stardict/stardict.cpp
-
-do-configure:
-	cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKE_ARGS} ${QMAKEFLAGS}
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
