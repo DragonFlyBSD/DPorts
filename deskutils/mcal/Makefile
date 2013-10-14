@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mcal
-# Date created:		Mon Oct 15 14:13:23 GMT 2001
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/deskutils/mcal/Makefile,v 1.4 2012/11/17 05:55:29 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: deskutils/mcal/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	mcal
 PORTVERSION=	0.3
@@ -17,6 +13,7 @@ LIB_DEPENDS=	mcal.0:${PORTSDIR}/misc/libmcal
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 	@${ECHO} "*****************************************************************************"
 	@${ECHO} ""
