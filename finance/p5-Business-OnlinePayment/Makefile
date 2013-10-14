@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Business-OnlinePayment/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-OnlinePayment
 PORTVERSION=	3.02
@@ -26,4 +26,5 @@ MAN3=		Business::OnlinePayment.3 \
 		Business::FraudDetect::preCharge.3 \
 		Business::OnlinePayment::HTTPS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
