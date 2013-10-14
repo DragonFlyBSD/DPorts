@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Furl/Makefile 324536 2013-08-10 14:44:56Z kuriyama $
+# $FreeBSD: www/p5-Furl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Furl
 PORTVERSION=	2.18
@@ -33,6 +33,7 @@ MAN3=	Furl.3 \
 	Furl::Request.3 \
 	Furl::Response.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
