@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: games/gnuchess/Makefile 315523 2013-03-29 07:07:33Z johans $
+# $FreeBSD: games/gnuchess/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnuchess
 PORTVERSION=	6.0.3
@@ -21,6 +21,7 @@ OPTIONS_DEFINE=		OPENING_BOOK
 OPTIONS_DEFAULT=	OPENING_BOOK
 OPENING_BOOK_DESC=	Install opening book (25 MB download)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENING_BOOK}
