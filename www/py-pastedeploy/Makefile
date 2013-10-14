@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pastedeploy
-# Date created:		15 December 2006
-# Whom:			Dryice Liu	<dryice@dryice.name>
-#
-# $FreeBSD: ports/www/py-pastedeploy/Makefile,v 1.14 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Dryice Liu	<dryice@dryice.name>
+# $FreeBSD: www/py-pastedeploy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	PasteDeploy
 PORTVERSION=	1.5.0
@@ -21,4 +17,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
