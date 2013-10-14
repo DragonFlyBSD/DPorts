@@ -1,5 +1,5 @@
 # Created by: wolman@cs.washington.edu
-# $FreeBSD: ports/graphics/jgraph/Makefile,v 1.9 2013/02/19 11:34:01 svnexp Exp $
+# $FreeBSD: graphics/jgraph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jgraph
 PORTVERSION=	8.3
@@ -23,4 +23,5 @@ MAKE_ENV+=	DATADIR=${DATADIR}
 
 CFLAGS+=	-Wno-return-type
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
