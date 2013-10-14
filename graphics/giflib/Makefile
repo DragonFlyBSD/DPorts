@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/giflib/Makefile 326723 2013-09-08 12:42:14Z dinoex $
+# $FreeBSD: graphics/giflib/Makefile 329724 2013-10-07 19:01:37Z dinoex $
 
 PORTNAME=	giflib
 PORTVERSION=	4.2.3
@@ -50,9 +50,9 @@ post-patch:
 
 .if ${PORT_OPTIONS:MDOCBOOK} && ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.post.mk>
