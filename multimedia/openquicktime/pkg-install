@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/multimedia/openquicktime/pkg-install,v 1.2 2012/11/17 05:59:52 svnexp Exp $
+# $FreeBSD: multimedia/openquicktime/pkg-install 300896 2012-07-14 13:54:48Z beat $
 
 [ $# != 2 ] && exit 1
 PKGNAME=$1
