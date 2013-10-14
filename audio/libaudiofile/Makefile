@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: audio/libaudiofile/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: audio/libaudiofile/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libaudiofile
 PORTVERSION=	0.2.7
