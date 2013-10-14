@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/ruby-bdb/Makefile 316506 2013-04-25 08:34:19Z knu $
+# $FreeBSD: databases/ruby-bdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	bdb
 PORTVERSION=	0.6.6
@@ -36,6 +36,7 @@ PLIST_FILES=	%%RUBY_SITEARCHLIBDIR%%/bdb.so
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
