@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Parser/Makefile 325960 2013-09-02 09:44:14Z az $
+# $FreeBSD: www/p5-HTML-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Parser
 PORTVERSION=	3.71
@@ -24,4 +24,5 @@ MAN3=		HTML::Entities.3 \
 		HTML::PullParser.3 \
 		HTML::TokeParser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
