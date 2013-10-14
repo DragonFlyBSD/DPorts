@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/lxtask/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: sysutils/lxtask/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	lxtask
 PORTVERSION=	0.1.4
@@ -24,6 +24,7 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
