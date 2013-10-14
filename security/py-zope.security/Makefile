@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: security/py-zope.security/Makefile 314810 2013-03-21 06:38:01Z wen $
+# $FreeBSD: security/py-zope.security/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.security
 PORTVERSION=	3.9.0
@@ -26,5 +26,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
