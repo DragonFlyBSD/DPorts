@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-MultiMarkdown/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-MultiMarkdown/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-MultiMarkdown
 PORTVERSION=	1.000034
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 MAN1=		MultiMarkdown.pl.1
 MAN3=		Text::MultiMarkdown.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
