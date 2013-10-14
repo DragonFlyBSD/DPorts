@@ -1,5 +1,5 @@
 # Created by: jfitz
-# $FreeBSD: www/analog/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/analog/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	analog
 PORTVERSION=	6.0
@@ -33,6 +33,7 @@ LIMGDIR?=	www/data/images
 IMGDIR=		${PREFIX}/${LIMGDIR}
 PLIST_SUB=	IMGDIR="${LIMGDIR}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
