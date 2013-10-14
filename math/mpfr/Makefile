@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: math/mpfr/Makefile 314161 2013-03-14 13:55:46Z ale $
+# $FreeBSD: math/mpfr/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	mpfr
 PORTVERSION=	3.1.2
