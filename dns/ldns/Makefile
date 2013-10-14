@@ -1,5 +1,5 @@
 # Created by: Konstantin Saurbier <saurbier@math.uni-bielefeld.de>
-# $FreeBSD: dns/ldns/Makefile 326404 2013-09-05 14:37:34Z sem $
+# $FreeBSD: dns/ldns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	ldns
 PORTVERSION=	1.6.16
@@ -29,6 +29,7 @@ OPTIONS_DEFINE+=	GOST
 
 GOST_DESC=	GOST signatures enabled, requires openssl >= 1.0.0
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(BUILD_PYLDNS)
