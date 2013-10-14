@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-script/Makefile 326562 2013-09-06 23:18:53Z rakuco $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-script/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	script
 DISTVERSION=	${QT4_VERSION}
@@ -40,6 +40,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
