@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: multimedia/projectx/Makefile 316061 2013-04-18 17:36:30Z nox $
+# $FreeBSD: multimedia/projectx/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	projectx
 PORTVERSION=	0.91.0
@@ -22,6 +22,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 WRKSRC=		${WRKDIR}/Project-X_${PORTVERSION}
 EXTRACT_BEFORE_ARGS+=	-aq
 
+NO_STAGE=	yes
 do-configure:
 	${SED} -e "s|^javac|${JAVAC}|" ${WRKSRC}/build.sh >${WRKSRC}/build-fbsd.sh
 
