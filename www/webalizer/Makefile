@@ -1,4 +1,4 @@
-# $FreeBSD: www/webalizer/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: www/webalizer/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	webalizer
 PORTVERSION=	2.23.8
@@ -23,6 +23,7 @@ EXAMPLESDIR?=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 GD_PORT?=	graphics/gd
 
 CONFLICTS=	geolizer-2*
+NO_STAGE=	yes
 
 .if defined(BATCH)
 # no cosmetique spaces allowed
