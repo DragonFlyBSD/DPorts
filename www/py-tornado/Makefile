@@ -1,5 +1,5 @@
 # Created by: Guixing Bai<khsing.cn@gmail.com>
-# $FreeBSD: www/py-tornado/Makefile 323406 2013-07-21 18:07:03Z gblach $
+# $FreeBSD: www/py-tornado/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tornado
 PORTVERSION=	3.1
@@ -15,6 +15,7 @@ LICENSE=	AL2
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} < 300
