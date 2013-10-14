@@ -1,5 +1,5 @@
-# Created by: Roger Hardiman <roger@freebsd.org>
-# $FreeBSD: net/openh323/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# Created by: Roger Hardiman <roger@FreeBSD.org>
+# $FreeBSD: net/openh323/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	openh323
 PORTVERSION=	1.19.0.1
@@ -29,6 +29,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${WRKSRC}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	BUILDTIME="YES"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .ifdef (WITH_FFMPEG)
