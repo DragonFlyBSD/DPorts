@@ -1,5 +1,5 @@
-# Created by: Alfred Perlstein <alfred@freebsd.org>
-# $FreeBSD: net/mDNSResponder/Makefile 327246 2013-09-14 08:51:13Z sunpoet $
+# Created by: Alfred Perlstein <alfred@FreeBSD.org>
+# $FreeBSD: net/mDNSResponder/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	mDNSResponder
 PORTVERSION=	379.38.1
@@ -31,9 +31,7 @@ PLIST_FILES=	bin/dns-sd ${EXTRA_BIN} \
 		lib/libdns_sd.so lib/libdns_sd.so.1 \
 		sbin/mdnsd ${EXTRA_SBIN}
 
-NOT_FOR_ARCHS=	alpha
-NOT_FOR_ARCHS_REASON=	does not compile
-
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/	cc / s|cc|$${CC}|' ${WRKSRC}/Clients/Makefile
 	@${REINPLACE_CMD} -e 's|-lpthread|-pthread|g; s|mDNSResponder.8|mDNSResponderPosix.8|g' ${WRKSRC}/mDNSPosix/Makefile
