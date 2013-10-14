@@ -1,4 +1,4 @@
-# $FreeBSD: devel/qt4-scripttools/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/qt4-scripttools/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	scripttools
 DISTVERSION=	${QT4_VERSION}
@@ -37,6 +37,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
