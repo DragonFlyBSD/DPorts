@@ -1,9 +1,5 @@
-# New ports collection makefile for:	librtfcomp
-# Date Created:				13 June 2008
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: archivers/librtfcomp/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: archivers/librtfcomp/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	librtfcomp
 PORTVERSION=	1.1
