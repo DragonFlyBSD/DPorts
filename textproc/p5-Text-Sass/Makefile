@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Sass/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/p5-Text-Sass/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Sass
 PORTVERSION=	0.97
@@ -23,4 +23,5 @@ MAN3=	Text::Sass.3 \
 	Text::Sass::Expr.3 \
 	Text::Sass::Functions.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
