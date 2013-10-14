@@ -1,6 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: security/libident/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/libident/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libident
 PORTVERSION=	0.32
@@ -18,6 +17,7 @@ USE_LDCONFIG=	yes
 
 MAN3=		ident.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
