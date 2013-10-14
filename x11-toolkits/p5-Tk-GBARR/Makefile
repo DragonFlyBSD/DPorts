@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: x11-toolkits/p5-Tk-GBARR/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Tk-GBARR/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-GBARR
 PORTVERSION=	2.08
@@ -23,4 +23,5 @@ MAN3=		Tk::Cloth.3 \
 		Tk::NumEntryPlain.3 \
 		Tk::TFrame.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
