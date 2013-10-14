@@ -1,13 +1,8 @@
-# New ports collection makefile for:	pecl-imagick
-# Date created:			13 Apr 2007
-# Whom:				Andrey Slusar <anray@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/pecl-imagick/Makefile,v 1.37 2012/12/11 20:58:17 svnexp Exp $
-#
+# Created by: Andrey Slusar <anray@FreeBSD.org>
+# $FreeBSD: graphics/pecl-imagick/Makefile 328352 2013-09-26 12:34:50Z mm $
 
 PORTNAME=	imagick
-DISTVERSION=	3.1.0RC2
-PORTREVISION=	1
+DISTVERSION=	3.1.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -17,17 +12,19 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Provides a wrapper to the ImageMagick/GraphicsMagick library
 
+LICENSE=	PHP301
+
 .if !defined(WITHOUT_X11)
 LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick
 .else
 LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick-nox11
 .endif
 
-LICENSE=	PHP301
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--with-imagick=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
