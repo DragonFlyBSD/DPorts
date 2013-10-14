@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/rubygem-vte/Makefile 320389 2013-06-09 18:50:23Z swills $
+# $FreeBSD: x11-toolkits/rubygem-vte/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	vte
 PORTVERSION=	2.0.2
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
