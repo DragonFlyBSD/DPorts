@@ -1,9 +1,5 @@
-# New ports collection makefile for:	linuxdoc
-# Date created:		July 8, 1997
-# Whom:			jfieber
-#
-# $FreeBSD: ports/textproc/linuxdoc/Makefile,v 1.20 2012/11/17 06:02:02 svnexp Exp $
-#
+# Created by: jfieber
+# $FreeBSD: textproc/linuxdoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	linuxdoc
 PORTVERSION=	1.1
@@ -30,6 +26,7 @@ ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
 XMLCATMGR=	${LOCALBASE}/bin/xmlcatmgr
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
+NO_STAGE=	yes
 pre-su-install:
 	@[ -d ${INSTDIR} ] || ${MKDIR} ${INSTDIR}
 
