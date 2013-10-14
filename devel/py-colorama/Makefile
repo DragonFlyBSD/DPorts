@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-colorama/Makefile 317841 2013-05-10 20:44:03Z rm $
+# $FreeBSD: devel/py-colorama/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	colorama
 PORTVERSION=	0.2.5
@@ -15,4 +15,5 @@ LICENSE=	BSD
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
