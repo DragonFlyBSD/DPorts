@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: math/py-numpy/Makefile 318649 2013-05-21 06:44:17Z demon $
+# $FreeBSD: math/py-numpy/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	numpy
 PORTVERSION=	1.7.0
@@ -34,6 +34,7 @@ MAN1=		f2py.1
 LATEST_LINK=	py-${PORTNAME}
 WRKSRC=	${WRKDIR}/${DISTNAME:S/r/rc/}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if (${OSVERSION} <= 703100 || \
