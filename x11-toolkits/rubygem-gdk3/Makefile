@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/rubygem-gdk3/Makefile 320382 2013-06-09 18:47:04Z swills $
+# $FreeBSD: x11-toolkits/rubygem-gdk3/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gdk3
 PORTVERSION=	2.0.2
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
