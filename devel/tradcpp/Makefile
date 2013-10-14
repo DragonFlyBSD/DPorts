@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tradcpp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/tradcpp/Makefile 328112 2013-09-24 11:26:40Z bapt $
 
 PORTNAME=	tradcpp
 PORTVERSION=	0.4
@@ -10,11 +10,11 @@ COMMENT=	Traditional (K&R-style) C preprocessor
 
 LICENSE=	BSD
 
-MANCOMPRESSED=	yes
+USES=		uidfix
+
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
+
 MAKE_ARGS=	BINDIR=${PREFIX}/bin MANDIR=${MANPREFIX}/man/man
-
-PLIST_FILES=	bin/tradcpp
-
-MAN1=		tradcpp.1
 
 .include <bsd.port.mk>
