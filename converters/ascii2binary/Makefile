@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ascii2binary
-# Date created:		Sun 29 January 2006
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: converters/ascii2binary/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: converters/ascii2binary/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	ascii2binary
 PORTVERSION=	2.14
@@ -27,6 +23,7 @@ PLIST_FILES=	bin/ascii2binary bin/binary2ascii
 
 MAN1=		ascii2binary.1 binary2ascii.1
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e "s|/usr/local|${LOCALBASE}|" ${WRKSRC}/Makefile.in
 
