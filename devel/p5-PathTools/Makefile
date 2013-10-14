@@ -1,5 +1,5 @@
-# Created by: Donald Burr <dburr@FreeBSD.ORG>
-# $FreeBSD: devel/p5-PathTools/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: Donald Burr <dburr@FreeBSD.org>
+# $FreeBSD: devel/p5-PathTools/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PathTools
 PORTVERSION=	3.4000
@@ -19,4 +19,5 @@ MAN3=		Cwd.3 File::Spec.3 File::Spec::Cygwin.3 File::Spec::Epoc.3 \
 		File::Spec::Functions.3 File::Spec::Mac.3 File::Spec::OS2.3 \
 		File::Spec::Unix.3 File::Spec::VMS.3 File::Spec::Win32.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
