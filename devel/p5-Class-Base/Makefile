@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Class-Base
-# Date created:				Nov 23 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: devel/p5-Class-Base/Makefile 324352 2013-08-07 13:20:32Z az $
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: devel/p5-Class-Base/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Base
 PORTVERSION=	0.05
@@ -21,4 +18,5 @@ MAN3=		Class::Base.3
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
