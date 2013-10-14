@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep-make/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: devel/gnustep-make/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gnustep-make
 PORTVERSION=	2.6.5
@@ -25,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE_PREFIX=	${GNUSTEP_PREFIX}
 LIB_DEPENDS+=		objc.4:${PORTSDIR}/lang/libobjc2
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local/|${LOCALBASE}/|' \
 		${WRKSRC}/configure
