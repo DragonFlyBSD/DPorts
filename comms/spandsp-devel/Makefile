@@ -1,4 +1,4 @@
-# $FreeBSD: comms/spandsp-devel/Makefile 318957 2013-05-24 10:46:51Z bapt $
+# $FreeBSD: comms/spandsp-devel/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	spandsp
 DISTVERSION=	0.0.6pre21
@@ -29,6 +29,7 @@ CONFLICTS=	spandsp-[0-9]*
 
 OPTIONS_DEFINE=	DOXYGEN
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOXYGEN} && ${PORT_OPTIONS:MDOCS}
