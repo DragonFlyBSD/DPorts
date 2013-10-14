@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/gnome-vfs/Makefile 326100 2013-09-02 21:55:45Z bapt $
+# $FreeBSD: devel/gnome-vfs/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/devel/gnome-vfs/Makefile,v 1.191 2010/09/29 12:30:29 kwm Exp $
 
 PORTNAME=	gnome-vfs
@@ -44,6 +44,7 @@ OPTIONS_DEFAULT=SAMBA MDNS HAL
 SAMBA_DESC=	Enable SMB volume support
 MDNS_DESC=	Enable Bonjour/Rendezvous support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/lib/libfam.so) || !defined(WITHOUT_FAM)
