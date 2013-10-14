@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-dvipsk/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/tex-dvipsk/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	dvipsk
 PORTVERSION=	5.992
@@ -61,6 +61,7 @@ NO_MANCOMPRESS=	yes
 MAN1=	afm2tfm.1 dvips.1
 INFO=	dvips
 
+NO_STAGE=	yes
 pre-su-install:
 	${CAT} ${DISTDIR}/${DIST_SUBDIR}/texlive-${DISTVERSION_TEXMF}-texmf${EXTRACT_SUFX} \
 		${EXTRACT_AFTER_ARGS_TEXMF}
