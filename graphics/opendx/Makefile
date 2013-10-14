@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/opendx/Makefile 324940 2013-08-19 00:44:56Z stephen $
+# $FreeBSD: graphics/opendx/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	opendx
 PORTVERSION=	4.4.4
@@ -63,6 +63,7 @@ PLIST_SUB+=	JAVA="@comment "
 
 PLIST_SUB+=	UNAMEP=${ARCH}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_JAVA) && ${ARCH} != "i386"
