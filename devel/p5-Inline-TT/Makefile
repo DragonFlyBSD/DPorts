@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Inline-TT/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-Inline-TT/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Inline-TT
 PORTVERSION=	0.07
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Inline::TT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
