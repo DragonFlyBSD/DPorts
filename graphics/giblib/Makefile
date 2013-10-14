@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/giblib/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/giblib/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	giblib
 PORTVERSION=	1.2.4
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|: install-docsDATA|:|g' ${WRKSRC}/Makefile.in
 
