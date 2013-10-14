@@ -1,9 +1,5 @@
-# New ports collection makefile for:  rdesktop
-# Date created:               13 December 2000
-# Whom:                       mwest@uct.ac.za
-#
-# $FreeBSD: net/rdesktop/Makefile 326316 2013-09-04 20:01:05Z bsam $
-#
+# Created by: mwest@uct.ac.za
+# $FreeBSD: net/rdesktop/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rdesktop
 PORTVERSION=	1.7.1
@@ -16,14 +12,13 @@ COMMENT=	RDP client for Windows NT/2000/2003 Terminal Server
 
 LICENSE=	GPLv3
 USE_XORG=	x11
+USE_GMAKE=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 DOCS=		doc/AUTHORS doc/TODO doc/*.txt
 MAN1=		rdesktop.1
 
-USES+=		gmake iconv
-CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
-
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libao.so) || defined(WITH_LIBAO)
@@ -36,6 +31,11 @@ LIB_DEPENDS+=	samplerate.1:${PORTSDIR}/audio/libsamplerate
 
 .if !defined(WITHOUT_RDESKTOP_IPV6) && !defined(WITHOUT_IPV6)
 CONFIGURE_ARGS+=	--with-ipv6
+.endif
+
+.if defined(WITH_ICONV)
+USES+=		iconv
+CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 .endif
 
 .if defined(WITH_RDESKTOP_DEBUG)
