@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: www/p5-Template-Toolkit/Makefile 325338 2013-08-25 11:50:03Z az $
+# $FreeBSD: www/p5-Template-Toolkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Toolkit
 PORTVERSION=	2.25
@@ -26,6 +26,7 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	TT_ACCEPT=y
 
+NO_STAGE=	yes
 .include "Makefile.man"
 
 .include <bsd.port.options.mk>
