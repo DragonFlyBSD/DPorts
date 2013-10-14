@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ksysguardd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/ksysguardd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ksysguardd
 PORTVERSION=	${KDE4_VERSION}
@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/ksysguard/${PORTNAME}
 PLIST_FILES=	bin/${PORTNAME} \
 		etc/${PORTNAME}rc
 
+NO_STAGE=	yes
 pre-build:
 	${REINPLACE_CMD} -e 's/<config-workspace.h>/"config-${PORTNAME}.h"/' \
 		${WRKSRC}/${PORTNAME}.c
