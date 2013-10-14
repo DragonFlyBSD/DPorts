@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.com>
-# $FreeBSD: ports/arabic/kacst_fonts/Makefile,v 1.19 2012/12/23 07:08:39 svnexp Exp $
+# $FreeBSD: arabic/kacst_fonts/Makefile 328292 2013-09-25 13:57:30Z vanilla $
 
 PORTNAME=	kacst_fonts
 PORTVERSION=	2.01
@@ -25,13 +25,8 @@ do-build:
 	cd ${WRKDIR} && ttmkfdir -c -d ${WRKSRC} > ${WRKSRC}/fonts.dir
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/X11/fonts/kacst_fonts
+	@${MKDIR} ${STAGEDIR}/${PREFIX}/lib/X11/fonts/kacst_fonts
 	${INSTALL_DATA} ${WRKSRC}/*.ttf ${WRKSRC}/fonts.dir \
-		${PREFIX}/lib/X11/fonts/kacst_fonts
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+		${STAGEDIR}/${PREFIX}/lib/X11/fonts/kacst_fonts
 
 .include <bsd.port.mk>
