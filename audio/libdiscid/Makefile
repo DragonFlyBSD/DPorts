@@ -1,7 +1,7 @@
-# $FreeBSD: audio/libdiscid/Makefile 327040 2013-09-12 08:00:37Z jhale $
+# $FreeBSD: audio/libdiscid/Makefile 329272 2013-10-04 09:30:19Z jhale $
 
 PORTNAME=	libdiscid
-PORTVERSION=	0.5.2
+PORTVERSION=	0.6.1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/${PORTNAME}/ \
 		http://ftp.osuosl.org/pub/musicbrainz/${PORTNAME}/
