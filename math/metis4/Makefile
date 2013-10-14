@@ -1,9 +1,5 @@
-# New ports collection makefile for:	METIS
-# Date created:         26 Oct 97
-# Whom:                 Pedro Giffuni <giffunip@asme.org>
-#
-# $FreeBSD: ports/math/metis4/Makefile,v 1.23 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Pedro Giffuni <giffunip@asme.org>
+# $FreeBSD: math/metis4/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	metis
 PORTVERSION=	4.0.3
@@ -28,6 +24,7 @@ PORTSCOUT=	limit:4.*
 PROGRAMS=	graphchk kmetis mesh2dual mesh2nodal	\
 		oemetis onmetis partnmesh partdmesh pmetis
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${ARCH} == "sparc64"
 PICFLAG?=	-fPIC
