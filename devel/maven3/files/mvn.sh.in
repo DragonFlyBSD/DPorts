@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/maven3/files/mvn.sh.in,v 1.2 2012/11/17 05:55:59 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/devel/maven3/files/mvn.sh.in,v 1.1 2011-09-01 21:53:01 hq Exp $
 
 if [ -f /etc/mavenrc ] ; then
 	. /etc/mavenrc

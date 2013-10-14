@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/devel/maven3/Makefile,v 1.7 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/maven3/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	maven3
 DISTVERSION=	3.0.4
@@ -26,6 +26,7 @@ INSTANCE_FILE=	030004-${PORTNAME}-${PORTVERSION}
 INSTANCES_DIR=	etc/maven-wrapper/instances.d/
 PLIST_FILES=	${INSTANCES_DIR}/${INSTANCE_FILE}
 
+NO_STAGE=	yes
 post-extract:
 	${RM} -f ${WRKSRC}/bin/*.bat
 	${ECHO_CMD} "${DATADIR}" > ${WRKSRC}/${INSTANCE_FILE}
