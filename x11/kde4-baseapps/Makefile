@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-baseapps/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/kde4-baseapps/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kde-baseapps
 PORTVERSION=	${KDE4_VERSION}
@@ -36,6 +36,7 @@ OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 KONSOLE_DESC=	Install Konsole terminal emulator
 KWRITE_DESC=	Install KWrite text editor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKONSOLE}
