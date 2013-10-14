@@ -1,9 +1,5 @@
-# New ports collection makefile for: pyvorbis
-# Date created:		23 Sep 2002
-# Whom:			makeport.pl
-#
-# $FreeBSD: audio/py-vorbis/Makefile 301188 2012-07-19 20:15:37Z naddy $
-#
+# Created by: makeport.pl
+# $FreeBSD: audio/py-vorbis/Makefile 328530 2013-09-27 22:36:11Z mva $
 
 PORTNAME=	vorbis
 PORTVERSION=	1.4
@@ -18,11 +14,11 @@ COMMENT=	Object-oriented Python bindings for the vorbis library
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/ogg/_ogg.so:${PORTSDIR}/audio/py-ogg
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/ogg/_ogg.so:${PORTSDIR}/audio/py-ogg
-LIB_DEPENDS=	vorbis.4:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libvorbis.so:${PORTSDIR}/audio/libvorbis
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/ogg/vorbis.so
-USE_PYTHON=		yes
+USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	pyvorbis
 
 post-patch:
