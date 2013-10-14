@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Query
-# Date created:				Wed Oct 24 10:09:12 EDT 2007
-# Whom:					Vivek Khera <vivek@khera.org>
-#
-# $FreeBSD: www/p5-HTML-Query/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# Created by: Vivek Khera <vivek@khera.org>
+# $FreeBSD: www/p5-HTML-Query/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Query
 PORTVERSION=	0.08
@@ -26,4 +22,5 @@ PLIST_FILES=	%%SITE_PERL%%/HTML/Query.pm \
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML-Query \
 		%%SITE_PERL%%/HTML
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
