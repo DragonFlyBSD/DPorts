@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	bwidget
-# Date created:				Jan 29, 2002
-# Whom:					Alexander Kabaev <ak03@gte.com>
-#
-# $FreeBSD: ports/x11-toolkits/bwidget/Makefile,v 1.16 2012/11/17 06:03:34 svnexp Exp $
-#
+# Created by: Alexander Kabaev <ak03@gte.com>
+# $FreeBSD: x11-toolkits/bwidget/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	bwidget
 PORTVERSION=	1.9.2
@@ -25,6 +21,7 @@ NO_BUILD=	yes
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@$(MKDIR) ${PREFIX}/lib/bwidget
 	${INSTALL_DATA} ${WRKSRC}/*.tcl ${PREFIX}/lib/bwidget
