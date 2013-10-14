@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: sysutils/nepomuk-core/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/nepomuk-core/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	nepomuk-core
 PORTVERSION=	${KDE4_VERSION}
@@ -30,6 +30,7 @@ SUB_FILES=	nepomuk-env.sh
 # supported versions: ffmpeg1, ffmpeg-devel
 FFMPEG_SUFFIX?=	1
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${PREFIX}/env
 	${INSTALL_SCRIPT} ${WRKDIR}/nepomuk-env.sh ${PREFIX}/env
