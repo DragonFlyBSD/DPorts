@@ -1,5 +1,5 @@
 # Created by: Yuan-Chen Cheng <ycheng@sinica.edu.tw>
-# $FreeBSD: devel/popt/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: devel/popt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	popt
 PORTVERSION=	1.16
@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 
 MAN3=		popt.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
