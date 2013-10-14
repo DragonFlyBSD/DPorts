@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Pod-Coverage/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Pod-Coverage/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Pod-Coverage
 PORTVERSION=	0.23
@@ -26,6 +26,7 @@ MAN3=		Pod::Coverage.3 \
 PORTDOCS=	Changes
 PORTEXAMPLES=	check_installed script-covered
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}/
