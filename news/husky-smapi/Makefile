@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-smapi/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-smapi/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	smapi
 PORTVERSION=	2.2.4
@@ -16,5 +16,6 @@ CONFLICTS=	husky-smapi-devel-[0-9]*
 MAKE_ARGS=	ADDCDEFS=-fPIC
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../husky-base/Makefile.inc"
 .include <bsd.port.mk>
