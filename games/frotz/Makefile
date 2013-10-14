@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/frotz/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/frotz/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	frotz
 PORTVERSION=	2.43d
@@ -21,6 +21,7 @@ PORTDOCS=	AUTHORS BUGS ChangeLog DUMB HOW_TO_PLAY README
 PORTEXAMPLES=	frotz.conf-big frotz.conf-small
 PLIST_FILES=	bin/frotz
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
