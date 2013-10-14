@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/nettle/Makefile 320833 2013-06-13 19:51:53Z johans $
+# $FreeBSD: security/nettle/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	nettle
 PORTVERSION=	2.7.1
@@ -32,6 +32,7 @@ PORTDOCS=	NEWS README TODO nettle.html nettle.pdf
 PORTEXAMPLES=	*.c *.h
 INFO=		nettle
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
