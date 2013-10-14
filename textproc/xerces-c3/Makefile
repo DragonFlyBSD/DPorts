@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: textproc/xerces-c3/Makefile 322512 2013-07-08 15:22:48Z gahr $
+# $FreeBSD: textproc/xerces-c3/Makefile 329973 2013-10-10 08:13:00Z gahr $
 
 PORTNAME=	xerces-c3
 PORTVERSION=	3.1.1
@@ -14,8 +14,7 @@ COMMENT=	Validating XML parser from the Apache XML Project
 
 CONFLICTS=	xerces_c-[0-9]* xerces-c2-[0-9]*
 
-USE_GMAKE=	yes
-USES=	pathfix
+USES=		gmake pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
@@ -23,10 +22,8 @@ CONFIGURE_ARGS+=--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 		--enable-netaccessor-socket
 MAKE_ENV+=	XERCESCROOT=${WRKSRC}
 
-MAKE_JOBS_UNSAFE=yes
-
 post-install:
-	${LN} -sf libxerces-c-${PORTVERSION:R}.so ${PREFIX}/lib/libxerces-c.so.${PORTVERSION:R:R}
+	${LN} -sf libxerces-c-${PORTVERSION:R}.so ${STAGEDIR}${PREFIX}/lib/libxerces-c.so.${PORTVERSION:R:R}
 
 test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
