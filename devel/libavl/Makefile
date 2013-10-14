@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/devel/libavl/Makefile,v 1.7 2013/01/12 13:02:13 svnexp Exp $
+# $FreeBSD: devel/libavl/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libavl
 PORTVERSION=	1.4.0
