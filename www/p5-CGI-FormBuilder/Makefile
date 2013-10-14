@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero
-# $FreeBSD: ports/www/p5-CGI-FormBuilder/Makefile,v 1.12 2013/02/13 06:44:08 svnexp Exp $
+# $FreeBSD: www/p5-CGI-FormBuilder/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-FormBuilder
 PORTVERSION=	3.0800
@@ -15,7 +15,8 @@ COMMENT=	FormBuilder for CGI
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	TT HTML_TEMPLATE TEXT_TEMPLATE CGI_FAST_TEMPLATE CGI_SSI CGI_SESSION
 OPTIONS_DEFAULT=	TT
@@ -43,6 +44,7 @@ MAN3=	CGI::FormBuilder.3 \
 	CGI::FormBuilder::Test.3 \
 	CGI::FormBuilder::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTT}
