@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-utility-ht/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-utility-ht/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	utility-ht
 PORTVERSION=	0.0.9
@@ -10,5 +10,6 @@ COMMENT=	Various small helper functions
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
