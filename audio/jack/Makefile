@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/jack/Makefile 325655 2013-08-30 02:04:52Z bapt $
+# $FreeBSD: audio/jack/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	jackit
 PORTVERSION=	0.121.3
@@ -18,6 +18,7 @@ LIB_DEPENDS=	portaudio:${PORTSDIR}/audio/portaudio \
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 
 CONFIGURE_ENV=	LIBS="-pthread"
