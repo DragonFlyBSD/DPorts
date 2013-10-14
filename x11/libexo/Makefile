@@ -1,6 +1,5 @@
 # Created by: Matt Lancereau
-# $FreeBSD: x11/libexo/Makefile 327411 2013-09-16 16:32:07Z bapt $
-#
+# $FreeBSD: x11/libexo/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libexo
 PORTVERSION=	0.10.2
@@ -33,6 +32,7 @@ OPTIONS_DEFINE=	DOCS NLS
 
 MAN1=		exo-csource.1 exo-open.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
