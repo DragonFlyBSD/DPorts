@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: devel/p5-TimeDate/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-TimeDate/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	TimeDate
 PORTVERSION=	2.30
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN3=		Date::Format.3 Date::Language.3 Date::Language::Bulgarian.3 \
 		Date::Language::Hungarian.3 Date::Parse.3 Time::Zone.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
