@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: devel/gio-sharp/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: devel/gio-sharp/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gio-sharp
 PORTVERSION=	2.22.3
@@ -17,4 +17,5 @@ USE_GNOME=	gnomehack gtksharp20
 
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
