@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-FindBin-libs/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-FindBin-libs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	FindBin-libs
 PORTVERSION=	1.8000
@@ -16,4 +16,5 @@ USE_PERL5=	modbuild
 
 MAN3=		FindBin::libs.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
