@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/R-cran-sp/Makefile 322365 2013-07-06 07:24:37Z tota $
+# $FreeBSD: math/R-cran-sp/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	sp
 DISTVERSION=	1.0-11
@@ -15,4 +15,5 @@ LICENSE_COMB=	dual
 USE_R_MOD=		yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
