@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Config-Auto/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Config-Auto/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-Auto
 PORTVERSION=	0.42
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 OPTIONS_DEFINE=	XMLSIMPLE
 XMLSIMPLE_DESC=	Support for XML config files
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXMLSIMPLE}
