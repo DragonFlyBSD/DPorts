@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-tls/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-tls/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tls
 PORTVERSION=	1.1.2
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_CABAL=	cereal>=0.3 certificate>=1.3.0 crypto-pubkey \
 		crypto-random-api>=0.2 cryptohash>=0.6 mtl network
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
