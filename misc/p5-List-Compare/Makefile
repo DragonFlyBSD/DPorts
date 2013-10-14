@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-List-Compare
-# Date created:				23 Oct 2004
-# Whom:					Dmitry Morozovsky <marck@FreeBSD.org>
-#
-# $FreeBSD: misc/p5-List-Compare/Makefile 325959 2013-09-02 09:36:29Z az $
-#
+# Created by: Dmitry Morozovsky <marck@FreeBSD.org>
+# $FreeBSD: misc/p5-List-Compare/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=		List-Compare
 PORTVERSION=	0.37
@@ -16,6 +12,7 @@ COMMENT=		Perl extension for comparing lists
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 PLIST_FILES=	\
 	${SITE_PERL_REL}/List/Compare.pm \
