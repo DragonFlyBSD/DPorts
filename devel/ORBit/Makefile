@@ -1,9 +1,5 @@
-# New ports collection makefile for:   orbit
-# Date Created:			16 Aug 1998
-# Whom:				Chia-liang Kao <clkao@CirX.ORG>
-#
-# $FreeBSD: devel/ORBit/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Chia-liang Kao <clkao@CirX.ORG>
+# $FreeBSD: devel/ORBit/Makefile 329454 2013-10-05 13:31:28Z bapt $
 
 PORTNAME=	ORBit
 PORTVERSION=	0.5.17
@@ -14,6 +10,9 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	High-performance CORBA ORB with support for the C language
+
+DEPRECATED=	EOLed upstream for very long
+EXPIRATION_DATE=	2013-11-05
 
 USE_BZIP2=	yes
 USES=		gettext
@@ -26,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 INFO=		libIDL
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure ${WRKSRC}/libIDL/configure ${WRKSRC}/popt/configure
 	@${TOUCH} ${WRKSRC}/configure
