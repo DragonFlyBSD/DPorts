@@ -1,9 +1,5 @@
-# Ports collection makefile for:  epm
-# Date created:			  20 Nov 2004
-# Whom:				  NAKATA Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/epm/Makefile,v 1.17 2012/11/17 05:55:42 svnexp Exp $
-#
+# Created by: NAKATA Maho <maho@FreeBSD.org>
+# $FreeBSD: devel/epm/Makefile 329282 2013-10-04 10:18:25Z bapt $
 
 PORTNAME=	epm
 PORTVERSION=	4.2
@@ -13,7 +9,9 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTVERSION}
 EXTRACT_SUFX=	-source.tar.bz2
 
 MAINTAINER=	office@FreeBSD.org
-COMMENT=	A free UNIX software/file packaging program
+COMMENT=	Free UNIX software/file packaging program
+
+OPTIONS_DEFINE=	DOCS
 
 LICENSE=	GPLv2
 
@@ -21,13 +19,5 @@ MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
-
-MAN1=		epm.1 epminstall.1 mkepmlist.1 setup.1
-MAN5=		epm.list.5 setup.types.5
-
-post-patch:
-.if defined(NOPORTDOCS)
-	@${REINPLACE_CMD} -e '/docdir/d' ${WRKSRC}/Makefile.in
-.endif
 
 .include <bsd.port.mk>
