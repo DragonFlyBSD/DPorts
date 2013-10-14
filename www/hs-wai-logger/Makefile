@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-wai-logger/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-wai-logger/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wai-logger
 PORTVERSION=	0.3.0
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_CABAL=	blaze-builder byteorder case-insensitive date-cache>=0.3 \
 		fast-logger>=0.3 http-types network wai
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
