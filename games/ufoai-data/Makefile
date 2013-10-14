@@ -1,5 +1,5 @@
 # Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/ufoai-data/Makefile 313058 2013-02-27 14:37:43Z miwi $
+# $FreeBSD: games/ufoai-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	2.4
@@ -22,6 +22,7 @@ NO_WRKSUBDIR=	yes
 DATADIR=	share/${PKGNAMEPREFIX:S/-//}
 PLIST=		${WRKDIR}/pkg-plist
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKDIR}/base && \
 		${FIND} * -type f -exec ${UNZIP_CMD} "{}" -d ${WRKDIR}/base \;
