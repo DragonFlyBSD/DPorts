@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: ports/devel/libvanessa_adt/Makefile,v 1.25 2012/12/11 14:20:30 svnexp Exp $
+# $FreeBSD: devel/libvanessa_adt/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libvanessa_adt
 PORTVERSION=	0.0.9
