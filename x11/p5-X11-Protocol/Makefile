@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: x11/p5-X11-Protocol/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: x11/p5-X11-Protocol/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	X11-Protocol
 PORTVERSION=	0.56
@@ -30,4 +30,5 @@ MAN3=		X11::Auth.3 \
 		X11::Protocol::Ext::XC_MISC.3 \
 		X11::Protocol::Ext::XFree86_Misc.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
