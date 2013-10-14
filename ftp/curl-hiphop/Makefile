@@ -1,14 +1,12 @@
-# New ports collection makefile for:	curl-hiphop
-# Date created:		16 July 2012
-# Whom:			Martin Matuska <mm@FreeBSd.org>
-#
-# $FreeBSD: ports/ftp/curl-hiphop/Makefile,v 1.2 2012/11/17 05:57:29 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: ftp/curl-hiphop/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PKGNAMESUFFIX=	-hiphop
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Static libcurl with custom patches for HipHop
+
+SSP_UNSAFE=	Refuses -l in LDFLAGS
 
 BUILDING_HIPHOP=	yes
 
@@ -23,6 +21,7 @@ DESCR=		${.CURDIR}/pkg-descr
 
 MASTERDIR=	${.CURDIR}/../curl
 
+NO_STAGE=	yes
 do-install:
 .for dir in include lib
 	@cd ${WRKSRC}/${dir} && \
