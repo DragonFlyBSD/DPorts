@@ -1,9 +1,5 @@
-# New ports collection makefile for:   gnet2
-# Date created:        15 February 2003
-# Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: net/gnet2/Makefile 316355 2013-04-23 14:20:25Z bapt $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net/gnet2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gnet
 PORTVERSION=	2.0.8
@@ -27,6 +23,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${DOCSDIR}
 CONFIGURE_ARGS+=	--without-html-dir
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|GNET_INTERFACE_AGE=0|GNET_INTERFACE_AGE=8|g' \
 		${WRKSRC}/configure
