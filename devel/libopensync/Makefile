@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/libopensync/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/libopensync/Makefile 328424 2013-09-27 01:44:28Z danilo $
 
 PORTNAME=	libopensync
 PORTVERSION=	0.39
@@ -7,11 +7,11 @@ PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
 
-MAINTAINER=	danilogondolfo@gmail.com
-COMMENT=	A PIM data synchronization framework
+MAINTAINER=	danilo@FreeBSD.org
+COMMENT=	PIM data synchronization framework
 
 BUILD_DEPENDS=	swig1.3:${PORTSDIR}/devel/swig13
-LIB_DEPENDS=	exslt:${PORTSDIR}/textproc/libxslt
+LIB_DEPENDS=	libexslt.so:${PORTSDIR}/textproc/libxslt
 
 CONFLICTS=	libopensync-0.22*
 
@@ -26,13 +26,6 @@ CMAKE_ARGS+=	-DPYTHON_INCLUDE_PATH:PATH=${PYTHON_INCLUDEDIR}
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
-PLIST_FILES+=	%%DOCSDIR%%/OpenSync-WhitePaper.pdf
-PLIST_DIRS+=	%%DOCSDIR%%
-.endif
-
 SWIG_VER=	$$(cd ${PORTSDIR}/devel/swig13 && ${MAKE} -V PORTVERSION)
 SWIG_DATADIR=	$$(cd ${PORTSDIR}/devel/swig13 && ${MAKE} -V DATADIR)
 
@@ -46,10 +39,7 @@ post-patch:
 		${WRKSRC}/opensync/common/opensync_list.c
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/OpenSync-WhitePaper.pdf ${DOCSDIR}
-.endif
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/OpenSync-WhitePaper.pdf ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
