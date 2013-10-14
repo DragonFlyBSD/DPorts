@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libkgapi/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/libkgapi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libkgapi
 PORTVERSION=	0.4.4
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 USE_QT4=	corelib network webkit xml \
 		qmake_build moc_build rcc_build uic_build
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e '/pkgconfig/ s/$${LIB_INSTALL_DIR}/libdata/' \
 		${WRKSRC}/libkgapi/CMakeLists.txt
