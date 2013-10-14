@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/laternamagica/Makefile,v 1.9 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: graphics/laternamagica/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	laternamagica
 PORTVERSION=	0.4
@@ -17,4 +17,5 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
