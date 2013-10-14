@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Package-DeprecationManager/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: devel/p5-Package-DeprecationManager/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Package-DeprecationManager
 PORTVERSION=	0.13
@@ -27,6 +27,7 @@ USE_PERL5=	configure extract
 
 MAN3=		Package::DeprecationManager.3
 
+NO_STAGE=	yes
 post-extract:
 	@${PERL} -i -ne "print unless /'BUILD_REQUIRES'/../},/" ${WRKSRC}/Makefile.PL
 
