@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Name/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Sub-Name/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sub-Name
 PORTVERSION=	0.05
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Sub::Name.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
