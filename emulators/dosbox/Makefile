@@ -1,5 +1,5 @@
 # Created by: Tom Carrick <knyghtmare@knyghtmare.com>
-# $FreeBSD: emulators/dosbox/Makefile 325405 2013-08-26 17:23:59Z amdmi3 $
+# $FreeBSD: emulators/dosbox/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	dosbox
 PORTVERSION=	0.74
@@ -32,6 +32,7 @@ OPTIONS_RADIO_DEBUGGER=DEBUGGER_ENABLE DEBUGGER_HEAVY
 DEBUGGER_ENABLE_DESC=Enable internal debugger
 DEBUGGER_HEAVY_DESC=Enable internal debugger with extra features
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUGGER_ENABLE}
