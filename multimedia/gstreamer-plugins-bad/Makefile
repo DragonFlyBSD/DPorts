@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-bad/Makefile 313820 2013-03-10 10:00:27Z kwm $
+# $FreeBSD: multimedia/gstreamer-plugins-bad/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #    $MCom: ports/multimedia/gstreamer-plugins-bad/Makefile,v 1.11 2008/03/19 14:05:35 ahze Exp $
 
 PORTREVISION=	0
@@ -22,6 +22,7 @@ PLIST_SUB=	VERSION="${GST_VERSION}"
 NO_GSTREAMER_COMMON=	yes
 PLIST=	${.CURDIR}/pkg-plist
 
+NO_STAGE=	yes
 do-build:
 .for dir in ${BAD_GST_DIRS}
 	@(cd ${BUILD_WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
