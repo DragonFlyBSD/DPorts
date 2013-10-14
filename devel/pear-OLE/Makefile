@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: devel/pear-OLE/Makefile 322581 2013-07-09 21:26:48Z pav $
+# $FreeBSD: devel/pear-OLE/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	OLE
 DISTVERSION=	1.0.0RC1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
