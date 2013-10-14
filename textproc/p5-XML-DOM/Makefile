@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-DOM/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-XML-DOM/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-DOM
 PORTVERSION=	1.44
@@ -31,4 +31,5 @@ MAN3=		XML::DOM.3 XML::DOM::AttDef.3 XML::DOM::AttlistDecl.3 \
 		XML::DOM::ProcessingInstruction.3 XML::DOM::Text.3 \
 		XML::DOM::XMLDecl.3 XML::Handler::BuildDOM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
