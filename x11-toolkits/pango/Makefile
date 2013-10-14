@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/pango/Makefile 324317 2013-08-06 14:29:01Z kwm $
+# $FreeBSD: x11-toolkits/pango/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/trunk/x11-toolkits/pango/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	pango
@@ -41,6 +41,7 @@ MAN1=		pango-view.1 pango-querymodules.1
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
