@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-game
-# Date created:				14 December 2000
-# Whom:                 		Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-game/Makefile,v 1.51 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: devel/py-game/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	game
 PORTVERSION=	1.9.1
@@ -31,6 +27,7 @@ SDLNOX11=	sdl-nox11-[0-9]*
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^_camera|#_camera|' \
 		-e 's|^pypm|#pypm|' ${WRKSRC}/Setup.in
