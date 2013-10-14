@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-im/libmsn/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-im/libmsn/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	libmsn
 DISTVERSION=	4.2.1
@@ -19,6 +19,7 @@ USES=		cmake
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|lib$${LIB_SUFFIX}/pkgconfig|libdata/pkgconfig|g' \
 		${WRKSRC}/CMakeLists.txt
