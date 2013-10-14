@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/netcdf-ftn/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: science/netcdf-ftn/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	netcdf
 
@@ -11,4 +11,5 @@ MASTERDIR=	${.CURDIR}/../netcdf4
 
 WITH_FORTRAN=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
