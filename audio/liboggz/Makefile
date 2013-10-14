@@ -1,5 +1,4 @@
-# Created  by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/liboggz/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/liboggz/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	liboggz
 DISTVERSION=	1.1.1
@@ -14,6 +13,7 @@ COMMENT=	Simple Ogg API
 LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
 
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 USES=		pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
