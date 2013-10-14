@@ -1,5 +1,5 @@
 # Created by: Philippe Charnier <charnier@lirmm.fr>
-# $FreeBSD: multimedia/mpeg2codec/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: multimedia/mpeg2codec/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mpeg2codec
 PORTVERSION=	1.2
@@ -34,6 +34,7 @@ PLIST_FILES=	bin/mpeg2decode bin/mpeg2encode \
 		%%DATADIR%%/intra.mat
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
