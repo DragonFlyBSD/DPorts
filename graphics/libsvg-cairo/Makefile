@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/libsvg-cairo/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: graphics/libsvg-cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/libsvg-cairo/Makefile,v 1.5 2005/08/09 04:49:38 ahze Exp $
 
 PORTNAME=	libsvg-cairo
@@ -26,4 +26,5 @@ PLIST_FILES=	include/svg-cairo.h \
 		lib/libsvg-cairo.so.1 \
 		libdata/pkgconfig/libsvg-cairo.pc
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
