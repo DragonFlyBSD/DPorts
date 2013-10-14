@@ -1,9 +1,5 @@
-# New ports collection makefile for:	PyRTF
-# Date created:		09 May 2005
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/print/py-rtf/Makefile,v 1.5 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: print/py-rtf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	rtf
 PORTVERSION=	0.45
@@ -21,6 +17,7 @@ PYDISTUTILS_PKGNAME=	PyRTF
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-rtf
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
