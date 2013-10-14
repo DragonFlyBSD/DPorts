@@ -1,5 +1,5 @@
 # Created by: Steven G. Kargl
-# $FreeBSD: lang/f2c/Makefile 319870 2013-06-04 15:13:42Z bapt $
+# $FreeBSD: lang/f2c/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	f2c
 PORTVERSION=	20060810
@@ -27,6 +27,7 @@ LEAD_0_DESC=	Print with leading zeros
 # Set FCNAME to the name of the Fortran 77 / F2C wrapper.
 FCNAME?=	fc
 PLIST_SUB=	FCNAME=${FCNAME}
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFC}
