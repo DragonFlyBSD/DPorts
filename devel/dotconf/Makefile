@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/dotconf/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/dotconf/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dotconf
 PORTVERSION=	1.3
@@ -15,6 +15,7 @@ USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^SUBDIR/s|=.*|= src|' ${WRKSRC}/Makefile.in
