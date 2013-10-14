@@ -1,9 +1,5 @@
-# New ports collection makefile for:    jishyo
-# Date created:         30 Oct 2006
-# Whom:                 gurkan@phys.ethz.ch
-#
-# $FreeBSD: ports/japanese/jishyo/Makefile,v 1.13 2012/11/17 05:58:35 svnexp Exp $
-#
+# Created by: gurkan@phys.ethz.ch
+# $FreeBSD: japanese/jishyo/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	jishyo
 PORTVERSION=	0.1
@@ -25,4 +21,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
