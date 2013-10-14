@@ -1,5 +1,5 @@
 # Created by: Quentin Stievenart <acieroid@awesom.eu>
-# $FreeBSD: graphics/zathura/Makefile 326348 2013-09-05 05:32:44Z antoine $
+# $FreeBSD: graphics/zathura/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	zathura
 PORTVERSION=	0.2.2
@@ -18,6 +18,7 @@ MAKE_ENV=	SFLAGS="${STRIP}"
 
 OPTIONS_DEFINE=	DOCS NLS SQLITE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLITE}
