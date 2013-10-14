@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-File-SMARTS/Makefile 326873 2013-09-10 08:26:53Z az $
+# $FreeBSD: science/p5-Chemistry-File-SMARTS/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Chemistry-File-SMARTS
 PORTVERSION=	0.22
@@ -25,4 +25,5 @@ MAN3=	Chemistry::File::SMARTS.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
