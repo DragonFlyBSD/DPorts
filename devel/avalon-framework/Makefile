@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: devel/avalon-framework/Makefile 308600 2012-12-10 11:25:27Z bapt $
+# $FreeBSD: devel/avalon-framework/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	avalon-framework
 PORTVERSION=	4.2.0
@@ -27,6 +27,7 @@ PORTDOCS=	api basics.html cop cvs-usage.html dependencies.html images \
 JARFILES=	${PORTNAME}.jar ${PORTNAME}-api.jar ${PORTNAME}-impl.jar
 PLIST_FILES+=	${JARFILES:S,^,%%JAVAJARDIR%%/,}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JARs in ${JAVAJARDIR}/..."
 .for jarfile in ${JARFILES}
