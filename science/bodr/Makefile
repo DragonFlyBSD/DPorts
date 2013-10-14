@@ -1,8 +1,5 @@
-# New ports collection makefile for:	bodr
-# Date created:				21 May 2007
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: science/bodr/Makefile 324191 2013-08-03 13:44:00Z mat $
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: science/bodr/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	bodr
 PORTVERSION=	9
@@ -20,6 +17,7 @@ USE_GMAKE=	yes
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|{datadir}/pkgconfig|{prefix}/libdata/pkgconfig|' ${WRKSRC}/Makefile.in
 
