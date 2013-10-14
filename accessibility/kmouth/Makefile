@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/kmouth/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: accessibility/kmouth/Makefile 327684 2013-09-20 11:02:49Z bapt $
 
 PORTNAME=	kmouth
 PORTVERSION=	${KDE4_VERSION}
@@ -12,6 +12,7 @@ COMMENT=	Speech synthesizer frontend for KDE
 
 CONFLICTS_INSTALL=	kdeaccessibility-4.[0-7].*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USES=		cmake:outsource
