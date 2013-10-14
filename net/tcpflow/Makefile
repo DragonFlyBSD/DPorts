@@ -1,5 +1,5 @@
 # Created by: Jose M. Alcaide <jose@we.lc.ehu.es>
-# $FreeBSD: net/tcpflow/Makefile 324931 2013-08-18 17:32:15Z antoine $
+# $FreeBSD: net/tcpflow/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpflow
 PORTVERSION=	1.4.0
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == i386 && ! ${CFLAGS:M-march=*}
