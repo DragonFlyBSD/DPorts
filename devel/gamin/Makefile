@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/gamin/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: devel/gamin/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #    $MCom: ports/trunk/devel/gamin/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	gamin
@@ -32,6 +32,7 @@ LIBINOTIFY_DESC=Use libinotify as the FAM backend
 RUN_AS_EUID_DESC=Drop privileges to effective user
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !defined(GAMIN_SLAVE)
