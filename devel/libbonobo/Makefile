@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libbonobo/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: devel/libbonobo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/trunk/devel/libbonobo/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	libbonobo
@@ -30,6 +30,7 @@ MAKE_ENV=	gnomelocaledir=${PREFIX}/share/locale
 
 MAN1=		bonobo-activation-server.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/configure \
