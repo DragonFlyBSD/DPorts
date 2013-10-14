@@ -1,6 +1,5 @@
-# Ports collection Makefile for:		SVN::Notify
 # Created by: dom@happygiraffe.net
-# $FreeBSD: devel/p5-SVN-Notify/Makefile 325063 2013-08-20 16:56:10Z mat $
+# $FreeBSD: devel/p5-SVN-Notify/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Notify
 PORTVERSION=	2.84
@@ -26,4 +25,5 @@ MAN1=		svnnotify.1
 MAN3=		SVN::Notify.3 SVN::Notify::Alternative.3 SVN::Notify::HTML.3 \
 		SVN::Notify::HTML::ColorDiff.3 SVN::Notify::Filter.3 SVN::Notify::Filter::Trac.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
