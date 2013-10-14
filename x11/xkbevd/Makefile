@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xkbevd/Makefile,v 1.6 2013/02/04 04:31:10 svnexp Exp $
+# $FreeBSD: x11/xkbevd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xkbevd
 PORTVERSION=	1.1.3
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xkbevd
 
 MAN1=		xkbevd.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
