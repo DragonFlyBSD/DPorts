@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/mjpegtools/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/mjpegtools/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mjpegtools
 PORTVERSION=	2.0.0
@@ -46,6 +46,7 @@ DOC_FILES=	AUTHORS BUGS CHANGES ChangeLog HINTS NEWS PLANS README \
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
