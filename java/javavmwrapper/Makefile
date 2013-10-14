@@ -1,7 +1,5 @@
-# Created by:	Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/java/javavmwrapper/Makefile,v 1.39 2012/12/11 05:39:44 svnexp Exp $
-#
-# This port is self contained in the src directory.
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: java/javavmwrapper/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	javavmwrapper
 PORTVERSION=	2.4
@@ -29,6 +27,7 @@ SCRIPTS=	classpath javavmwrapper
 # we can't do that here since it would result in a circular dependency
 JAVALIBDIR=	${LOCALBASE}/share/java/classes
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 

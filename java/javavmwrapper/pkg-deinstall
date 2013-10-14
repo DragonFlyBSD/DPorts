@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/java/javavmwrapper/pkg-deinstall,v 1.5 2012/11/17 05:58:43 svnexp Exp $
+# $FreeBSD: java/javavmwrapper/pkg-deinstall 306872 2012-11-02 17:12:08Z jkim $
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 

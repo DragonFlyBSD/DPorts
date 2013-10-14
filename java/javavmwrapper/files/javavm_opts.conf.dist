@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/java/javavmwrapper/files/javavm_opts.conf.dist,v 1.6 2012/11/17 05:58:43 svnexp Exp $
+# $FreeBSD: java/javavmwrapper/files/javavm_opts.conf.dist 300896 2012-07-14 13:54:48Z beat $
 #
 # javavm_opts.conf.dist
 #
