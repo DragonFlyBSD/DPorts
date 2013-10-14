@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/smake/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: devel/smake/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	smake
 PORTVERSION=	1.2.3
@@ -26,4 +26,5 @@ MAN5=		makefiles.5 makerules.5
 RULEUSED=	"`${WRKSRC}/conf/oarch.sh`"
 PLIST_SUB=	RULESUSED="${RULEUSED}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
