@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul+ports@it.ca>
-# $FreeBSD: textproc/xmlprpr/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: textproc/xmlprpr/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmlprpr
 PORTVERSION=	1.32
@@ -20,6 +20,7 @@ SHEBANG_FILES=	xmlpp.pl
 
 PLIST_FILES=	bin/xmlprpr
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} -f ${_DISTDIR}/${_DISTFILES} ${WRKSRC}
