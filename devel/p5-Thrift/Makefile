@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Thrift/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Thrift/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Thrift
 PORTVERSION=	${THRIFT_PORTVERSION}	# need to keep this in sync with ../thrift see ../thrift/bsd.thrift.mk
@@ -18,6 +18,7 @@ FETCH_DEPENDS+=	${NONEXISTENT}:${PORTSDIR}/devel/thrift:extract
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 post-extract:
 	@${LN} -sfh \
 	`cd ${PORTSDIR}/devel/thrift && ${MAKE} -V WRKSRC`/lib/perl ${WRKSRC}
