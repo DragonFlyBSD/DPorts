@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-ExtUtils-Depends/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/p5-ExtUtils-Depends/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ExtUtils-Depends
 PORTVERSION=	0.304
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		ExtUtils::Depends.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
