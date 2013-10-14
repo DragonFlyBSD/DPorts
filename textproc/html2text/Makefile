@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: textproc/html2text/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: textproc/html2text/Makefile 328547 2013-09-28 03:41:03Z eadler $
 
 PORTNAME=	html2text
 PORTVERSION=	1.3.2a
@@ -15,11 +15,8 @@ LICENSE=	GPLv2
 
 HAS_CONFIGURE=	yes
 
-MANCOMPRESSED=	yes
-MAN1=		html2text.1
-MAN5=		html2textrc.5
 PORTDOCS=	CHANGES CREDITS KNOWN_BUGS README TODO
-PLIST_FILES=	bin/html2text
+PLIST_FILES=	bin/html2text man/man1/html2text.1.gz man/man5/html2textrc.5.gz
 
 CONFLICTS=	py27-html2text-[0-9]*
 
@@ -38,13 +35,13 @@ post-patch:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/html2text ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/html2text.1.gz ${MANPREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/html2textrc.5.gz ${MANPREFIX}/man/man5
+	${INSTALL_PROGRAM} ${WRKSRC}/html2text ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/html2text.1.gz ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/html2textrc.5.gz ${STAGEDIR}${MANPREFIX}/man/man5
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for fle in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${fle} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${fle} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
