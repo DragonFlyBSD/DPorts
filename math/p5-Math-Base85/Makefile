@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Base85/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Math-Base85/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Base85
 PORTVERSION=	0.2
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::Base85.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
