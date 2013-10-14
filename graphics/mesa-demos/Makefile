@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/mesa-demos/Makefile 326050 2013-09-02 18:15:57Z antoine $
+# $FreeBSD: graphics/mesa-demos/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mesa-demos
 PORTVERSION=	8.1.0
@@ -23,6 +23,7 @@ DATADIR=	${PREFIX}/share/${PKGNAMEPREFIX}${PORTNAME}
 OPTIONS_DEFINE=	NVIDIA
 NVIDIA_DESC=	Use NVIDIA's libraries
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ffast-math|${FAST_MATH}|' -e 's|x86_64|amd64|' \
 		${WRKSRC}/configure
