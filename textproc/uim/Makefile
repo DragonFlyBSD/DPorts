@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: textproc/uim/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: textproc/uim/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	uim
 PORTVERSION=	1.8.5
@@ -54,6 +54,7 @@ PLIST_SUB+=	X11="@comment "
 PLIST_SUB+=	X11=""
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
