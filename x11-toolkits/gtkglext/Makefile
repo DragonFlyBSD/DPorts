@@ -1,9 +1,9 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/gtkglext/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: x11-toolkits/gtkglext/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	gtkglext
 PORTVERSION=	1.2.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF
 DIST_SUBDIR=	gnome2
@@ -25,15 +25,15 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 OPTIONS_DEFINE=	DOCS
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_XORG=	ice pixman sm x11 xau xcb xcomposite xcursor xdamage xdmcp \
 		xext xfixes xi xinerama xmu xrandr xrender xt xxf86vm
 USE_GL=		glu
-USES=		gettext iconv pathfix pkgconfig
+USES=		gettext gmake iconv pathfix pkgconfig
 USE_GNOME=	gdkpixbuf2 gtk20 pangox-compat
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
