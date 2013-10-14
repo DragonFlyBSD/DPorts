@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/avro-c/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/avro-c/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lang/c
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 pre-configure:
 	@${REINPLACE_CMD} 's|/bin/bash|/bin/sh|g' \
