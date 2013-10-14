@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-Jinja2/Makefile 325557 2013-08-28 22:38:37Z nivit $
+# $FreeBSD: devel/py-Jinja2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Jinja2
 PORTVERSION=	2.7.1
@@ -32,6 +32,7 @@ BABEL_DESC=	Enable Babel extension
 PY2TO3_CMD=	${LOCALBASE}/bin/2to3-${PYTHON_VER}
 PY2TO3_ARGS=	--fix=all --no-diffs --nobackups --verbose --write
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
