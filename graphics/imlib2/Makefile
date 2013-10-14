@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/imlib2/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/imlib2/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	imlib2
 PORTVERSION=	1.4.5
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 OPTIONS_DEFINE=	JPEG PNG TIFF GIF ID3 X11
 OPTIONS_DEFAULT=	JPEG PNG TIFF GIF ID3 X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "i386" && !empty(MACHINE_CPU:Mmmx)
@@ -41,7 +42,6 @@ CONFIGURE_ARGS+=	--disable-amd64
 
 .if ! ${PORT_OPTIONS:MX11}
 CONFIGURE_ARGS+=	--without-x
-PKGNAMESUFFIX+=	-nox11
 PLIST_SUB=	X11="@comment "
 .else
 USE_XORG=	x11 sm xext
