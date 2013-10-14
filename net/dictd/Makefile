@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/dictd/Makefile 321934 2013-06-28 03:08:13Z clsung $
+# $FreeBSD: net/dictd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dictd
 PORTVERSION=	1.12.1
@@ -31,6 +31,7 @@ USE_GMAKE=	yes
 ALL_TARGET=	dictd dictzip
 INSTALL_TARGET=	install.dictd install.dictzip
 
+NO_STAGE=	yes
 post-patch:
 .for i in Makefile.in dict.1.in dictd.8.in
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/$i
