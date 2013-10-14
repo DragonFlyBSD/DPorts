@@ -1,5 +1,5 @@
 # Created by: Yasuhiro KIMURA <yasu@utahime.org>
-# $FreeBSD: mail/py-authres/Makefile 324615 2013-08-12 07:55:13Z culot $
+# $FreeBSD: mail/py-authres/Makefile 328353 2013-09-26 12:54:08Z wg $
 
 PORTNAME=	authres
 PORTVERSION=	0.602
@@ -12,7 +12,7 @@ COMMENT=	Python module for RFC 5451 Authentication-Results headers
 
 LICENSE=	AL2
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 PLIST_SUB+=	PORTNAME=${PORTNAME}
@@ -21,12 +21,10 @@ FETCH_ARGS=	-pRr
 
 PORTDOCS=	CHANGES README
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
