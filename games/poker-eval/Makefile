@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/poker-eval/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/poker-eval/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	poker-eval
 PORTVERSION=	0.138
@@ -18,6 +18,7 @@ USES=		pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|{libdir}/pkgconfig|(prefix)/libdata/pkgconfig|g' \
