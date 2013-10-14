@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: security/p5-Crypt-CAST5_PP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-CAST5_PP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-CAST5_PP
 PORTVERSION=	1.04
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::CAST5_PP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
