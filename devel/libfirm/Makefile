@@ -1,5 +1,5 @@
 # Created by: Christoph Mallon <christoph.mallon@gmx.de>
-# $FreeBSD: devel/libfirm/Makefile 316955 2013-04-30 17:46:48Z sperber $
+# $FreeBSD: devel/libfirm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libfirm
 PORTVERSION=	1.21.0
@@ -21,6 +21,7 @@ USES=		pkgconfig
 
 OPTIONS_DEFINE=	DEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
