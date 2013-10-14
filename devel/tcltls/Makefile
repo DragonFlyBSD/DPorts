@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tclgetopts
-# Date created:				4 May 2000
-# Whom:					mi@aldan.algebra.com
-#
-# $FreeBSD: devel/tcltls/Makefile 316351 2013-04-23 11:51:52Z gahr $
-#
+# Created by: mi@aldan.algebra.com
+# $FreeBSD: devel/tcltls/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tcltls
 PORTVERSION=	1.6
@@ -32,6 +28,7 @@ REINPLACE_ARGS=	-i ""
 ALL_TARGET=	-j`${SYSCTL} -n hw.ncpu` all
 PLIST_SUB=	TLS_VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e \
 		's,package require tls.*,load ${WRKSRC}/libtls.so;\
