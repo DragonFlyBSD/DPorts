@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/streamripper/Makefile 322494 2013-07-08 11:51:37Z bapt $
+# $FreeBSD: audio/streamripper/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	streamripper
 PORTVERSION=	1.64.6
@@ -23,6 +23,7 @@ OPTIONS_DEFAULT=	FAAD VORBIS
 LICENSE=	GPLv2
 
 USES=		iconv pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-included-libmad \
