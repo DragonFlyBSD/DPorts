@@ -1,5 +1,5 @@
 # Created by: yoshiaki Uchikawa
-# $FreeBSD: audio/lame/Makefile 325729 2013-08-30 23:10:18Z bapt $
+# $FreeBSD: audio/lame/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	lame
 PORTVERSION=	3.99.5
@@ -11,6 +11,7 @@ MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Fast MP3 encoder kit
 
 USES=		gmake iconv
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
