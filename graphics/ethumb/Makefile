@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/ethumb/Makefile 326194 2013-09-03 18:33:11Z antoine $
+# $FreeBSD: graphics/ethumb/Makefile 329523 2013-10-06 00:23:50Z gblach $
 
 PORTNAME=	ethumb
 PORTVERSION=	1.7.8
@@ -12,7 +12,7 @@ COMMENT=	Thumbnail generator library
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	exif:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
