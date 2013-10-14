@@ -1,5 +1,5 @@
 # Created by: Arjan van Leeuwen <avleeuwen@piwebs.com>
-# $FreeBSD: graphics/dcraw/Makefile 324970 2013-08-19 09:34:48Z sunpoet $
+# $FreeBSD: graphics/dcraw/Makefile 330006 2013-10-10 14:36:04Z sunpoet $
 
 PORTNAME=	dcraw
 PORTVERSION=	9.19
@@ -9,23 +9,23 @@ MASTER_SITES=	LOCAL/sunpoet
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Decoder for RAW files from digital cameras
 
-LIB_DEPENDS=	jasper:${PORTSDIR}/graphics/jasper \
-		jpeg:${PORTSDIR}/graphics/jpeg \
-		lcms:${PORTSDIR}/graphics/lcms
+LIB_DEPENDS=	libjasper.so:${PORTSDIR}/graphics/jasper \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		liblcms.so:${PORTSDIR}/graphics/lcms
 
 CFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/jasper
 LDFLAGS+=	-L${LOCALBASE}/lib -lm -ljasper -ljpeg -llcms
 USE_XZ=		yes
 
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
 do-build:
-	cd ${WRKSRC}/ && ${CC} -o ${PORTNAME} ${CFLAGS} ${PORTNAME}.c ${LDFLAGS}
+	@cd ${WRKSRC}/ && ${CC} -o ${PORTNAME} ${CFLAGS} ${PORTNAME}.c ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${PREFIX}/man/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1/
 
 # maintainer section:
 
