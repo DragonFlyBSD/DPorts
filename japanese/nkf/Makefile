@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: japanese/nkf/Makefile 317159 2013-05-02 21:57:28Z hrs $
+# $FreeBSD: japanese/nkf/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
@@ -19,4 +19,5 @@ PLIST_FILES=	bin/nkf
 MAN1=		nkf.1
 MANLANG=	"" ja
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
