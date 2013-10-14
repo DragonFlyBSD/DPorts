@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-pylib/Makefile 322419 2013-07-07 06:36:27Z koobs $
+# $FreeBSD: devel/py-pylib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pylib
 PORTVERSION=	1.4.15
@@ -20,6 +20,7 @@ PYDISTUTILS_PKGNAME=	py
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	CHANGELOG README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
