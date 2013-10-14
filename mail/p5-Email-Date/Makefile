@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Date/Makefile 325151 2013-08-21 14:59:07Z mat $
+# $FreeBSD: mail/p5-Email-Date/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Date
 PORTVERSION=	1.10.4
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Email::Date.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
