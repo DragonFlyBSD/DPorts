@@ -1,9 +1,4 @@
-# New ports collection makefile for:	rubygem-net-ssh-gateway
-# Date created:				June 27, 2008
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/security/rubygem-net-ssh-gateway/Makefile,v 1.12 2012/11/17 06:01:19 svnexp Exp $
-#
+# $FreeBSD: security/rubygem-net-ssh-gateway/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	net-ssh-gateway
 PORTVERSION=	1.1.0
@@ -20,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
