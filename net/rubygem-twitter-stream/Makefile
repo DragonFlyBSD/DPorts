@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net/rubygem-twitter-stream/Makefile 323414 2013-07-21 19:59:36Z tota $
+# $FreeBSD: net/rubygem-twitter-stream/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	twitter-stream
 PORTVERSION=	0.1.16
@@ -18,4 +18,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
