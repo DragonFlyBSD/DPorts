@@ -1,8 +1,5 @@
-# Ports collection makefile for:	gem-cri
-# Date created:				26 Apr 2012
-# Whom:					Ryan Steinmetz <zi@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-cri/Makefile,v 1.4 2012/11/17 05:56:58 svnexp Exp $
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: devel/rubygem-cri/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	cri
 PORTVERSION=	2.3.0
@@ -19,4 +16,5 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
