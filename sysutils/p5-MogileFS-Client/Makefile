@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: sysutils/p5-MogileFS-Client/Makefile 326574 2013-09-07 07:11:48Z az $
+# $FreeBSD: sysutils/p5-MogileFS-Client/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	MogileFS-Client
 PORTVERSION=	1.17
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		MogileFS::Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
