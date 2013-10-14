@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Template-Declare/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-Template-Declare/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Template-Declare
 PORTVERSION=	0.46
@@ -31,4 +31,5 @@ MAN3=	Template::Declare.3 \
 	Template::Declare::TagSet::XUL.3 \
 	Template::Declare::Tags.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
