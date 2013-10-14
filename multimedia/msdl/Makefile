@@ -1,9 +1,5 @@
-# New ports collection makefile for:	msdl
-# Date created:		2009-03-23
-# Whom:			Ashish Shukla <wahjava@gmail.com>
-#
-# $FreeBSD: ports/multimedia/msdl/Makefile,v 1.8 2012/11/17 05:59:52 svnexp Exp $
-#
+# Created by: Ashish Shukla <wahjava@gmail.com>
+# $FreeBSD: multimedia/msdl/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	msdl
 PORTVERSION=	1.2.7
@@ -17,4 +13,5 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/msdl
 MAN1=		msdl.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
