@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: x11-fm/p5-PerlFM/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: x11-fm/p5-PerlFM/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	PerlFM
 PORTVERSION=	0.2.0
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=		PerlFM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
