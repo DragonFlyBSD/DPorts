@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: www/py-qp/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: www/py-qp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	qp
 PORTVERSION=	2.2
@@ -24,6 +24,7 @@ USE_PYDISTUTILS=yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
