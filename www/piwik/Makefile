@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/piwik/Makefile 319763 2013-06-03 09:21:16Z culot $
+# $FreeBSD: www/piwik/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	piwik
 PORTVERSION=	1.12
@@ -22,6 +22,7 @@ PHPMYSQLI_DESC=	Use mysqli php module
 
 OPTIONS_DEFAULT=	PHPPDOMYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHPMYSQLI}
