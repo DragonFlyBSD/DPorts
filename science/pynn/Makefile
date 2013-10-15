@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: science/pynn/Makefile 313196 2013-03-02 05:49:40Z miwi $
+# $FreeBSD: science/pynn/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	pynn
 PORTVERSION=	0.7.5
@@ -18,4 +18,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyNN
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
