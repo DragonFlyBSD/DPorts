@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: editors/uzap/Makefile 321155 2013-06-17 21:17:50Z joerg $
+# $FreeBSD: editors/uzap/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	uzap
 PORTVERSION=	1.0
@@ -18,4 +18,5 @@ NO_WRKSUBDIR=	yes
 MAN1=		uzap.1
 PLIST_FILES=	bin/uzap
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
