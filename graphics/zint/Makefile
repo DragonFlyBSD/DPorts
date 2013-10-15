@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zint
-# Date created:		2010-03-13
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: graphics/zint/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: graphics/zint/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	zint
 PORTVERSION=	2.4.3
@@ -24,4 +20,5 @@ USE_QT4=	gui xml qmake_build uic_build moc_build rcc_build designer
 
 DESKTOP_ENTRIES="Zint" "Barcode generator" "" "zint-qt" "" false
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
