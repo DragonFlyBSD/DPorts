@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/flare/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/flare/Makefile 328915 2013-10-01 05:46:46Z amdmi3 $
 
 PORTNAME=	flare
 PORTVERSION=	0.18
@@ -22,13 +22,14 @@ CMAKE_ARGS=	-DBINDIR="bin" -DDATADIR="share/flare"
 LATEST_LINK=	flare-rpg
 
 PORTDOCS=	*
+PORTDATA=	*
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
