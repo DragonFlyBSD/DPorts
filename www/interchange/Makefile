@@ -1,5 +1,5 @@
 # Created by: Seth Kingsley <sethk@meowfishies.com>
-# $FreeBSD: www/interchange/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/interchange/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	interchange
 PORTVERSION=	5.6.1
@@ -17,12 +17,14 @@ RUN_DEPENDS=	p5-Safe-Hole>=0.10:${PORTSDIR}/security/p5-Safe-Hole \
 		p5-Digest-SHA1>=2.11:${PORTSDIR}/security/p5-Digest-SHA1
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
+USES=		perl5
+USE_PERL5=	configure
 USE_BZIP2=	yes
-PERL_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	MYSQL PGSQL
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_RC_SUBR=	interchange
