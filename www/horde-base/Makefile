@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-base/Makefile 326198 2013-09-03 18:43:02Z mm $
+# $FreeBSD: www/horde-base/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	horde
 PORTVERSION=	5.1.4
@@ -56,6 +56,7 @@ USE_HORDE_RUN=	Horde_Role \
 # Optional in package but we want them in
 USE_HORDE_RUN+=	Horde_Feed
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(WITH_FACEBOOK)
