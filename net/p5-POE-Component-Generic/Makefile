@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Generic/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-POE-Component-Generic/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-Generic
 PORTVERSION=	0.14.03
@@ -23,4 +23,5 @@ MAN3=		POE::Component::Generic.3 \
 		POE::Component::Generic::Net::SSH2.3 \
 		POE::Component::Generic::Object.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
