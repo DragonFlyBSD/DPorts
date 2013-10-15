@@ -1,9 +1,5 @@
-# New ports collection makefile for:  	xbraitenberg
-# Date created:       		28 Mar 2004
-# Whom:  			krion
-#
-# $FreeBSD: ports/emulators/xbraitenberg/Makefile,v 1.9 2012/11/17 05:57:24 svnexp Exp $
-#
+# Created by: krion
+# $FreeBSD: emulators/xbraitenberg/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	xbraitenberg
 PORTVERSION=	0.9
@@ -19,4 +15,5 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/xbraitenberg
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
