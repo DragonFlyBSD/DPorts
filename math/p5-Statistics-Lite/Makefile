@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Lite/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: math/p5-Statistics-Lite/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-Lite
 PORTVERSION=	3.2
@@ -16,4 +16,5 @@ USE_DOS2UNIX=	yes
 
 MAN3=		Statistics::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
