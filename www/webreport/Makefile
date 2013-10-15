@@ -1,9 +1,5 @@
-# New ports collection makefile for:   webreport
-# Date created:       06 Feb 2004
-# Whom:                ismail@enderunix.org
-#
-# $FreeBSD: ports/www/webreport/Makefile,v 1.3 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: ismail@enderunix.org
+# $FreeBSD: www/webreport/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webreport
 PORTVERSION=	1.5
@@ -16,6 +12,7 @@ COMMENT=	WebReport is a web log statistics program  for web hosting sites
 PORTDOCS=	INSTALL
 PLIST_FILES=	bin/webreport etc/webreport.conf-dist
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,ulong,unsigned long,;s,/etc/,${PREFIX}/etc/,' ${WRKSRC}/webreport.h
 
