@@ -1,8 +1,7 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: portuguese/hunspell/Makefile 326788 2013-09-09 10:08:26Z sunpoet $
+# $FreeBSD: portuguese/hunspell/Makefile 330092 2013-10-11 17:51:36Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20130902
+PORTVERSION=	20131006
 CATEGORIES=	portuguese textproc
 MASTER_SITES=	http://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/ \
 		http://www.broffice.org/files/:BR \
@@ -24,8 +23,8 @@ PLIST_FILES=	%%DATADIR%%/pt_BR.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
 	${INSTALL_DATA} ${WRKDIR}/pt_BR.aff ${WRKDIR}/pt_BR.dic \
-	  	${WRKSRC}/pt_PT.aff ${WRKSRC}/pt_PT.dic ${DATADIR}/
+	  	${WRKSRC}/pt_PT.aff ${WRKSRC}/pt_PT.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
