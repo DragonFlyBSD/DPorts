@@ -1,5 +1,5 @@
 # Created by: Steve Atwell
-# $FreeBSD: sysutils/slack/Makefile 326574 2013-09-07 07:11:48Z az $
+# $FreeBSD: sysutils/slack/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	slack
 PORTVERSION=	0.15.2
@@ -26,6 +26,7 @@ MAKE_ARGS=	prefix=${PREFIX} exec_prefix=${PREFIX} \
 		libexecdir=${PREFIX}/libexec mandir=${PREFIX}/man \
 		localstatedir=/var
 
+NO_STAGE=	yes
 pre-build:
 	${REINPLACE_CMD} -e '1s,^#!.*perl,#!${PERL},' ${WRKSRC}/test/gen_config_file
 	
