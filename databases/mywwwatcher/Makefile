@@ -1,5 +1,5 @@
 # Created by: Petr Macek <pm@kostax.cz>
-# $FreeBSD: databases/mywwwatcher/Makefile 318001 2013-05-13 07:00:47Z miwi $
+# $FreeBSD: databases/mywwwatcher/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mywwwatcher
 PORTVERSION=	3.2
@@ -20,6 +20,7 @@ NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${WWWDIR}
 	@${CP} -Rp ${WRKSRC}/* ${WWWDIR}
