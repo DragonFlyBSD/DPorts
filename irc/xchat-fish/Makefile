@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: irc/xchat-fish/Makefile 318102 2013-05-13 15:12:57Z dinoex $
+# $FreeBSD: irc/xchat-fish/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 #    $MCom: ports/irc/xchat-fish/Makefile,v 1.1 2006/10/04 22:30:07 ahze Exp $
 
 PORTNAME=	fish
@@ -16,6 +16,8 @@ COMMENT=	An encryption plugin for XChat
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libmiracl.a:${PORTSDIR}/math/miracl
 RUN_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
+
+NO_STAGE=	yes
 
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
