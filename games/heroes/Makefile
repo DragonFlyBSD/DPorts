@@ -1,9 +1,5 @@
-# New ports collection makefile for:	heroes
-# Date created:				15 August 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: games/heroes/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: games/heroes/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	heroes
 PORTVERSION=	0.21
@@ -51,8 +47,9 @@ MAN6=		heroes.6 heroeslvl.6
 INFO=		heroes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib -lsmpeg ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib -lsmpeg -lm ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 pre-everything::
 .ifndef(WITH_OPTIMIZED_CFLAGS)
 	@${ECHO_MSG} '>>>'
