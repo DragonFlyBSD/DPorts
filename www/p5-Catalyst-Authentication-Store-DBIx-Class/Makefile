@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Authentication-Store-DBIx-Class/Makefile 326139 2013-09-03 12:27:09Z az $
+# $FreeBSD: www/p5-Catalyst-Authentication-Store-DBIx-Class/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Authentication-Store-DBIx-Class
 PORTVERSION=	0.1505
@@ -30,4 +30,5 @@ MAN3=		Catalyst::Authentication::Realm::SimpleDB.3 \
 		Catalyst::Authentication::Store::DBIx::Class.3 \
 		Catalyst::Authentication::Store::DBIx::Class::User.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
