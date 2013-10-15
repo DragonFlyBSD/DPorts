@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ump
-# Date created:		15 Nov 2001
-# Whom:			Leland Wang <llwang@infor.org>
-#
-# $FreeBSD: www/ump/Makefile 316786 2013-04-29 08:57:12Z bapt $
-#
+# Created by: Leland Wang <llwang@infor.org>
+# $FreeBSD: www/ump/Makefile 329266 2013-10-04 06:22:19Z bapt $
 
 PORTNAME=	ump
 PORTVERSION=	1.10
@@ -55,12 +51,12 @@ WEBPLUGINS_FILES=ump.so
 # USE_MOTIF=	yes
 # CONFIGURE_ENV=	MOTIFLIB="${MOTIFLIB}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 
 .if ${HAVE_GNOME:Mesound}!=""
 USE_GNOME=	esound
-PKGNAMESUFFIX=	-esound
 CONFIGURE_ARGS+=	--enable-audio=oss,esd
 .else
 CONFIGURE_ARGS+=	--enable-audio=oss
