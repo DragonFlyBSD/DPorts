@@ -1,9 +1,5 @@
-# New ports collection makefile for:   socketpipe
-# Date created:        29 August 2003
-# Whom:                dds
-#
-# $FreeBSD: ports/net/socketpipe/Makefile,v 1.7 2012/11/17 06:00:21 svnexp Exp $
-#
+# Created by: dds
+# $FreeBSD: net/socketpipe/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	socketpipe
 PORTVERSION=	1.9
@@ -18,4 +14,5 @@ MAN1=		socketpipe.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/socketpipe
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
