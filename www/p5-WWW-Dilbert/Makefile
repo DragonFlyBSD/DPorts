@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-WWW-Dilbert/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Dilbert/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Dilbert
 PORTVERSION=	1.19
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=		WWW::Dilbert.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
