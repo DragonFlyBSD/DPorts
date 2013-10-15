@@ -1,5 +1,5 @@
 # Created by: pgs
-# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 316273 2013-04-22 20:36:25Z dinoex $
+# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	hobbes-icons-xpm3
 PORTVERSION=	1.0
@@ -11,6 +11,7 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Collection of over 3000 icons in XPM3 format
 
+NO_STAGE=	yes
 NO_BUILD=	yes
 
 # Where it will be installed (change pkg/PLIST if you change this)
