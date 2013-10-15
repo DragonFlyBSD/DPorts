@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/ecm/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: archivers/ecm/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	ecm
 PORTVERSION=	1.0
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 
 CONFLICTS=	gmp-ecm-[0-9]*
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/ecm bin/unecm
 PORTDOCS=	format.txt
 
