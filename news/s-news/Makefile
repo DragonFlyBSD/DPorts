@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: news/s-news/Makefile 321397 2013-06-20 16:18:29Z antoine $
+# $FreeBSD: news/s-news/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	s-news
 PORTVERSION=	0.1.11
@@ -31,6 +31,7 @@ PORTDOCS=	README README.conf README.suck TODO
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
