@@ -1,8 +1,5 @@
-# New ports collection makefile for:	qgit
-# Date created:				2009-04-19
-# Whom:				Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/qgit/Makefile,v 1.9 2012/11/17 05:56:55 svnexp Exp $
+# Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
+# $FreeBSD: devel/qgit/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qgit
 PORTVERSION=	2.3
@@ -22,6 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${QMAKE} ${PORTNAME}.pro
 
