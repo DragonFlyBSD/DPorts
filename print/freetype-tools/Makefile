@@ -1,9 +1,5 @@
-# New ports collection makefile for:	print/freetype-tools
-# Date created:				Jul 29, 2005
-# Whom:					rafan@infor.org
-#
-# $FreeBSD: print/freetype-tools/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: rafan@infor.org
+# $FreeBSD: print/freetype-tools/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	freetype-tools
 PORTVERSION=	1.3.1
@@ -35,6 +31,7 @@ MAN1=		ttf2bdf.1 ttf2tfm.1 ttf2pk.1
 
 PORTSCOUT=	limit:^1\.
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
