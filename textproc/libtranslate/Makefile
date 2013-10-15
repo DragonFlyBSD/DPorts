@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: textproc/libtranslate/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: textproc/libtranslate/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		libtranslate
 PORTVERSION=		0.99
@@ -32,6 +32,7 @@ TALKFILTERS_DESC=	talkfilters module
 
 MAN1=			translate.1
 
+NO_STAGE=	yes
 post-patch::
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|'	\
 		-e 's|libsoup-2.2|libsoup-2.4|g' ${WRKSRC}/configure
