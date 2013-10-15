@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: www/arora/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/arora/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	arora
 PORTVERSION=	0.11.0
@@ -19,6 +19,7 @@ QMAKE_ARGS+=	-unix -recursive PREFIX=${PREFIX}
 
 MAN1=		arora.1 arora-cacheinfo.1 arora-placesimport.1 htmlToXBel.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == ia64
