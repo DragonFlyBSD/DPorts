@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mesagl
-# Date created:         Thu 17 Jul 2008
-# Whom:                 pfg
-#
-# $FreeBSD: ports/graphics/mesagl/Makefile,v 1.79 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: pfg
+# $FreeBSD: graphics/mesagl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mesagl
 PORTVERSION=	5.0.2
@@ -33,6 +29,7 @@ MAKEFILE=	Makefile.X11
 ALL_TARGET=	realclean freebsd
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/include/Mesa/GL
 .for i in ${GLINC}
