@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: security/ruby-tcpwrap/Makefile 327290 2013-09-14 14:40:33Z sunpoet $
+# $FreeBSD: security/ruby-tcpwrap/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tcpwrap
 PORTVERSION=	0.6
@@ -29,6 +29,7 @@ INSTALL_TARGET=	site-install
 DOCS_EN=	README.en	doc/tcpwrap.html.en
 DOCS_JA=	README.ja	doc/tcpwrap.html.ja
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
