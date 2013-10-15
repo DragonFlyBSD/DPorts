@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sheerdns
-# Date created:				26 May 2004
-# Whom:					bkhl
-#
-# $FreeBSD: ports/dns/sheerdns/Makefile,v 1.5 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: bkhl
+# $FreeBSD: dns/sheerdns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	sheerdns
 PORTVERSION=	1.0.3
@@ -20,4 +16,5 @@ PLIST_FILES=	sbin/sheerdns sbin/sheerdnshash
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
