@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: x11/xvmcinfo/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xvmcinfo/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xvmcinfo
 PORTVERSION=	0.1
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/xvmcinfo
 
 NO_MAN=		defined
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} \
 	    -I${LOCALBASE}/include -L${LOCALBASE}/lib \
