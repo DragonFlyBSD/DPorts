@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: sysutils/gkrellfire/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: sysutils/gkrellfire/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gkrellfire
 PORTVERSION=	0.4.2
@@ -20,6 +20,7 @@ PLIST_FILES=	libexec/gkrellm2/plugins/${PORTNAME}.so
 USES=		gmake pkgconfig
 MAKE_ARGS=	CC="${CC}"
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.so ${PREFIX}/libexec/gkrellm2/plugins/
 
