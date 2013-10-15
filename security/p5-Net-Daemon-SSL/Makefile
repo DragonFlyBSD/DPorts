@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: security/p5-Net-Daemon-SSL/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-Net-Daemon-SSL/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Net-Daemon-SSL
 PORTVERSION=	1.0
@@ -20,4 +20,5 @@ RUN_DEPENDS+=	p5-Net-Daemon>=0:${PORTSDIR}/net/p5-Net-Daemon \
 
 MAN3=		Net::Daemon::SSL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
