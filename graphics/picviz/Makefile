@@ -1,5 +1,5 @@
 # Created by: Tim Hemel
-# $FreeBSD: graphics/picviz/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/picviz/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	picviz
 PORTVERSION=	0.4
@@ -19,4 +19,5 @@ USES=		bison cmake
 
 MAN1=		pcv.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
