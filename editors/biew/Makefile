@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: editors/biew/Makefile 320463 2013-06-10 11:35:00Z danfe $
+# $FreeBSD: editors/biew/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	biew
 PORTVERSION=	6.1.0
@@ -33,6 +33,7 @@ OPTIONS_DEFAULT=	SLANG
 
 SLANG_DESC=	Use S-Lang based display renderer
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
