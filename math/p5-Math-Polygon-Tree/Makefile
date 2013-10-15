@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Polygon-Tree/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/p5-Math-Polygon-Tree/Makefile 328921 2013-10-01 05:53:51Z amdmi3 $
 
 PORTNAME=	Math-Polygon-Tree
 PORTVERSION=	0.05
@@ -19,7 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Math::Polygon::Tree.3
 
 .include <bsd.port.mk>
