@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-gcc/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: devel/msp430-gcc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}.${LTSVERSION}
@@ -46,9 +46,8 @@ WRKSRC=		${WRKDIR}/build
 PATCH_WRKSRC=	${SRCDIR}
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		bison iconv
-USE_PERL5_BUILD=yes
+USES=		bison iconv gmake perl5
+USE_PERL5=	build
 
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT=../${SRCDIR:S/${WRKDIR}\///}/configure
@@ -72,6 +71,7 @@ INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
 
 BINARIES=	gcc gcc-${GCCVERSION} c++ g++ gcov cpp
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
