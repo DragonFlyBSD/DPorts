@@ -1,9 +1,5 @@
-# New ports collection makefile for:    XBone
-# Date created:         19 Jan 2001
-# Whom:                 Yu-Shun Wang <xbone@isi.edu>
-#
-# $FreeBSD: net/xbone/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Yu-Shun Wang <xbone@isi.edu>
+# $FreeBSD: net/xbone/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	XBone
 PORTVERSION=	3.2
@@ -50,6 +46,7 @@ INSTALL_TARGET=	node
 MAN5=		XB_Params.pm.5 xbone.conf.5
 MAN8=		X-Bone.8 xb-node-daemon.8 xb-node-control.8 xbonectl.8 xb-ldap-config.8
 
+NO_STAGE=	yes
 post-patch:
 	${RM} -rf ${WRKSRC}/ports/*
 
