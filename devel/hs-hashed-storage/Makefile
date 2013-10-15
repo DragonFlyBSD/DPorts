@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-hashed-storage/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-hashed-storage/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hashed-storage
 PORTVERSION=	0.5.10
@@ -14,5 +14,6 @@ USE_CABAL=	dataenc extensible-exceptions mmap>=0.5 mtl zlib
 
 CONFIGURE_ARGS+=	--flags="-test"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
