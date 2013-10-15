@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-NonMoose/Makefile 326687 2013-09-07 21:03:08Z tobez $
+# $FreeBSD: devel/p5-MooseX-NonMoose/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-NonMoose
 PORTVERSION=	0.24
@@ -26,4 +26,5 @@ MAN3=		MooseX::NonMoose.3 \
 		MooseX::NonMoose::Meta::Role::Class.3 \
 		MooseX::NonMoose::Meta::Role::Constructor.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
