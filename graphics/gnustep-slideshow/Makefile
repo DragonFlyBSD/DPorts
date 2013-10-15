@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/gnustep-slideshow/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: graphics/gnustep-slideshow/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	slideshow
 PORTVERSION=	0.3.5
@@ -24,4 +24,5 @@ OBJCFLAGS+=	-Dsel_eq=sel_isEqual
 
 SLIDESHOWKIT_PORT?=	graphics/gnustep-slideshowkit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
