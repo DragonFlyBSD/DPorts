@@ -1,9 +1,5 @@
-# New ports collection makefile for:   scwm-icons
-# Date created:        07 April 1998
-# Whom:                Yukihiro Nakai <nacai@iname.com>
-#
-# $FreeBSD: ports/graphics/scwm-icons/Makefile,v 1.12 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <nacai@iname.com>
+# $FreeBSD: graphics/scwm-icons/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	scwm-icons
 PORTVERSION=	0.99.2
@@ -16,6 +12,7 @@ COMMENT=	An icon collection for the scwm window manager
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/share/scwm/pixmaps
 .for dir in icons mini-icons startup
