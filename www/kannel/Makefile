@@ -1,8 +1,5 @@
-# New ports collection makefile for:   kannel
-# Date created:		19 Jun 2000
-# Whom:			Domas Mituzas <midom@dammit.lt>
-#
-# $FreeBSD: ports/www/kannel/Makefile,v 1.42 2013/02/07 14:08:06 svnexp Exp $
+# Created by: Domas Mituzas <midom@dammit.lt>
+# $FreeBSD: www/kannel/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	kannel
 PORTVERSION=	1.5.0
@@ -33,6 +30,7 @@ MAN8=		kannel.8 run_kannel_box.8
 
 OPTIONS_DEFINE=	MYSQL PGSQL SQLITE3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include

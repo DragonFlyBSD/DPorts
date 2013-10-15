@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/www/kannel/files/kannel.in,v 1.4 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/kannel/files/kannel.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: kannel_smsbox kannel_wapbox kannel_bearerbox
 # REQUIRE: NETWORKING SERVERS 
