@@ -1,5 +1,5 @@
 # Created by: Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: net/linknx/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/linknx/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	linknx
 PORTVERSION=	0.0.1.25
@@ -23,6 +23,7 @@ OPTIONS_DEFAULT=	LIBESMTP
 LIBESMTP_DESC=	Install libesmtp for SMTP support
 LIBCURL_DESC=	Install libcurl for Clickatell SMS support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLIBESMTP}
