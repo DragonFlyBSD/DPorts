@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dancer
-# Date created:		02/01/2003
-# Whom:			Dominic Marks <dom@cus.org.uk>
-#
-# $FreeBSD: ports/irc/dancer/Makefile,v 1.13 2012/12/03 21:08:28 svnexp Exp $
-#
+# Created by: Dominic Marks <dom@cus.org.uk>
+# $FreeBSD: irc/dancer/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	dancer
 PORTVERSION=	4.16
@@ -22,6 +18,7 @@ LDFLAGS+=	-lm
 CPP=		#
 USE_CSTD=	gnu89
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/../${PORTNAME} ${PREFIX}/bin/
