@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@toha.org.ua>
-# $FreeBSD: ports/java/jakarta-struts/Makefile,v 1.10 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-struts/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jakarta-struts
 PORTVERSION=	1.2.4
@@ -21,6 +21,7 @@ JAVASHAREDIR=	share/java
 TDIR=		${JAVASHAREDIR}/${PKGNAME}
 PLIST_SUB+=	T=${TDIR}
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL} -d ${PREFIX}/${TDIR}/'{}' \; && \
 	${FIND} . -type f -exec ${INSTALL_DATA} '{}' ${PREFIX}/${TDIR}/'{}' \;
