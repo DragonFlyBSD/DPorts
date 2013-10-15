@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Config::Fast
-# Date created:				25 Nov 2007
-# Whom:					Xavier Beaudouin <kiwi@oav.net>
-#
-# $FreeBSD: misc/p5-Test-Dir/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# Created by: Xavier Beaudouin <kiwi@oav.net>
+# $FreeBSD: misc/p5-Test-Dir/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Test-Dir
 PORTVERSION=	1.014
@@ -21,4 +17,5 @@ MAN3=		Test::Dir.3 \
 		Test::Dir::Base.3 \
 		Test::Folder.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
