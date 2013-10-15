@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: polish/gnugadu2/Makefile 325970 2013-09-02 10:31:45Z bapt $
+# $FreeBSD: polish/gnugadu2/Makefile 327761 2013-09-20 22:34:42Z bapt $
 
 PORTNAME=	gnugadu2
 PORTVERSION=	2.3.0
@@ -57,6 +57,7 @@ XOSD_DESC=	Enable On-Screen-Display messages
 
 #.if ${${HAVE_GNOME:Mesound}!="" && empty(PORT_OPTIONS:MESOUND)
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk> # can't change this untile HAVE_GNOME has been fixed
 
 .if ${PORT_OPTIONS:MAUTODETECT}
