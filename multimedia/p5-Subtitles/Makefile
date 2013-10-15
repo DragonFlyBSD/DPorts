@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Subtitles
-# Date created:		2005-12-28
-# Whom:			osa
-#
-# $FreeBSD: ports/multimedia/p5-Subtitles/Makefile,v 1.13 2012/11/17 05:59:52 svnexp Exp $
-#
+# Created by: osa
+# $FreeBSD: multimedia/p5-Subtitles/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	Subtitles
 PORTVERSION=	1.04
@@ -14,11 +10,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	A Perl5 backend for fix subtitles timing
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	subs.1
 MAN3=	Subtitles.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_SUBTITLES_SUBPLAY)
