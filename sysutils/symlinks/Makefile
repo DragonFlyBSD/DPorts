@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: ports/sysutils/symlinks/Makefile,v 1.10 2013/02/18 14:39:59 svnexp Exp $
+# $FreeBSD: sysutils/symlinks/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=		symlinks
 PORTVERSION=		1.4
@@ -13,4 +13,5 @@ COMMENT=	Symbolic link maintenance utility
 MAN8=			symlinks.8
 PLIST_FILES=		bin/symlinks
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
