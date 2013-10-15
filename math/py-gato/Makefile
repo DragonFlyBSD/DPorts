@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: math/py-gato/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: math/py-gato/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gato
 PORTVERSION=	1.02
@@ -21,6 +21,7 @@ USE_PYTHON=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^.*__future__.*$$,,' ${WRKSRC}/DataStructures.py
 	@${GREP} -lR "^#!" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
