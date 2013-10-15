@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/libtpl/Makefile 321025 2013-06-16 08:14:35Z culot $
+# $FreeBSD: devel/libtpl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libtpl
 PORTVERSION=	1.6
@@ -27,6 +27,7 @@ PLIST_FILES=	lib/libtpl.la lib/libtpl.a \
 
 PORTDOCS=	ChangeLog.txt examples.txt userguide.txt compiling.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
