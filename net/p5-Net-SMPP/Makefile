@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net-SMPP
-# Date created:		20 May 2002
-# Whom:			jhay
-#
-# $FreeBSD: net/p5-Net-SMPP/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: jhay
+# $FreeBSD: net/p5-Net-SMPP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SMPP
 PORTVERSION=	1.19
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::SMPP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
