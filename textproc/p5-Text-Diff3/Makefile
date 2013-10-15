@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Diff3/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-Diff3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Diff3
 PORTVERSION=	0.10
@@ -26,4 +26,5 @@ MAN3=	Text::Diff3.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
