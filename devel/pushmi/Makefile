@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/pushmi/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/pushmi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pushmi
 PORTVERSION=	1.0.0
@@ -35,4 +35,5 @@ MAN3=		Pushmi.3 \
 		Pushmi::Command::Sync.3 \
 		Pushmi::Command::Verify.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
