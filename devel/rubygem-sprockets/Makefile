@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-sprockets
-# Date created:				31 July 2011
-# Whom:					Mikhail T. <m.tsatsenko@gmail.com>
-#
-# $FreeBSD: ports/devel/rubygem-sprockets/Makefile,v 1.8 2013/01/09 04:43:42 svnexp Exp $
-#
+# Created by: Mikhail T. <m.tsatsenko@gmail.com>
+# $FreeBSD: devel/rubygem-sprockets/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	sprockets
 PORTVERSION=	2.2.2
@@ -26,4 +22,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/sprockets
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
