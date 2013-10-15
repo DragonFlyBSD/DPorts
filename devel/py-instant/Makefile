@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/py-instant/Makefile 316576 2013-04-26 06:48:12Z miwi $
+# $FreeBSD: devel/py-instant/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	instant
 PORTVERSION=	${MMVERSION}.0
@@ -26,6 +26,7 @@ MANCOMPRESSED=	yes
 
 MMVERSION=	1.2
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	's|\[(join("share", "man", "man1"),|\[(join("man", "man1"),|' \
