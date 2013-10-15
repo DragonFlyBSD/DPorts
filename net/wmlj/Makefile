@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmlj
-# Date created:				6 January 2002
-# Whom:				Sergei Barbarash <sgt@outline.ru>
-#
-# $FreeBSD: net/wmlj/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: Sergei Barbarash <sgt@outline.ru>
+# $FreeBSD: net/wmlj/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	wmlj
 PORTVERSION=	0.4.0
@@ -22,6 +18,7 @@ USE_GNOME=	gtk12
 MAN1=		wmlj.1
 PLIST_FILES=	bin/wmlj
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<curl\/types.h>/d' ${WRKSRC}/src/network.c
 
