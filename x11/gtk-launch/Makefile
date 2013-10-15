@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: x11/gtk-launch/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: x11/gtk-launch/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	gtk-launch
 DISTVERSION=	1.1b
@@ -20,6 +20,7 @@ PORTSCOUT=	skipv:1.1
 
 OPTIONS_DEFINE=DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
