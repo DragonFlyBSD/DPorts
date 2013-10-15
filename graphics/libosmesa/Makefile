@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: graphics/libosmesa/Makefile 325514 2013-08-28 08:26:22Z gahr $
+# $FreeBSD: graphics/libosmesa/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libosmesa
 PORTVERSION=	9.2.0
@@ -37,6 +37,7 @@ MAKE_JOBS_UNSAFE=
 
 WRKSRC=		${WRKDIR}/Mesa-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if (empty(CC:T:Mgcc4*) && empty(CC:T:Mclang*)) || (empty(CXX:T:Mg??4*) && empty(CXX:T:Mclang++*))
