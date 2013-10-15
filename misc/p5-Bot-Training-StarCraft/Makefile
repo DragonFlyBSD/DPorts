@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Bot-Training-StarCraft
-# Date created:				2011-07-19
-# Whom:					milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: misc/p5-Bot-Training-StarCraft/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# Created by: milki <milki@rescomp.berkeley.edu>
+# $FreeBSD: misc/p5-Bot-Training-StarCraft/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Bot-Training-StarCraft
 PORTVERSION=	0.02
@@ -27,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	Bot::Training::StarCraft.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
