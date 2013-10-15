@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/gtkhtml3/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: www/gtkhtml3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 #   $MCom: ports/www/gtkhtml3/Makefile,v 1.184 2012/08/17 19:06:47 kwm Exp $
 
 PORTNAME=	gtkhtml3
@@ -33,6 +33,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="3.14"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@INTLTOOL_LIBDIR@|${LOCALBASE}/libdata|' \
 	    	${WRKSRC}/intltool-merge.in
