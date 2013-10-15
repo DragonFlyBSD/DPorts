@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-plone.session/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: security/py-plone.session/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.session
 PORTVERSION=	3.5.3
@@ -18,8 +18,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.protect>=0:${PORTSDIR}/security/py-plo
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-#USE_ZOPE=	yes
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
