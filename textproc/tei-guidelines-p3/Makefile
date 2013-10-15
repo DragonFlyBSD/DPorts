@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tei-p3-guidelines
-# Date created:				29 April 2002
-# Whom:	      				Henrik Motakef <henrik.motakef@web.de>
-#
-# $FreeBSD: ports/textproc/tei-guidelines-p3/Makefile,v 1.6 2012/11/17 06:02:23 svnexp Exp $
-#
+# Created by: Henrik Motakef <henrik.motakef@web.de>
+# $FreeBSD: textproc/tei-guidelines-p3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	tei
 PORTVERSION=	p3
@@ -53,6 +49,7 @@ PLIST_SUB+=	P3X=
 PLIST_SUB+=	P3X="@comment "
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${INSTDIR}
 .if !defined(WITHOUT_HTML)
