@@ -1,5 +1,5 @@
 # Created by: cy@FreeBSD.org
-# $FreeBSD: security/krb5-appl/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/krb5-appl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		krb5-appl
 PORTVERSION=		1.0.3
@@ -22,8 +22,8 @@ CONFLICTS=		krb4-[0-9]* krb5-1.[0-7].* heimdal-[0-9]* srp-[0-9]*
 LATEST_LINK=		${PORTNAME}-1
 KERBEROSV_URL=		http://web.mit.edu/kerberos/
 USE_OPENSSL=		yes
-USE_GMAKE=		yes
-USE_PERL5_BUILD=	yes
+USES=			gmake perl5
+USE_PERL5=		build
 USE_LDCONFIG=		yes
 USE_CSTD=		gnu89
 USE_AUTOTOOLS=		libtool autoheader autoconf
@@ -39,6 +39,7 @@ KRB5_RENAME_RLOGIN_DESC=	Rename rlogin to krlogin
 KRB5_RENAME_RSH_DESC=		Rename rsh to krsh
 KRB5_RENAME_RCP_DESC=		Rename rcp to krcp
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MKRB5_DOC}
