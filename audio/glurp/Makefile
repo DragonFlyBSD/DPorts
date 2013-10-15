@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/glurp/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/glurp/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	glurp
 PORTVERSION=	0.12.3
@@ -14,6 +14,7 @@ LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk20 glib20 libglade2
 MAKE_ARGS+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -export-dynamic" \
