@@ -1,5 +1,5 @@
 # Created by: cracauer@cons.org "Martin Cracauer"
-# $FreeBSD: misc/cstream/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/cstream/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	cstream
 PORTVERSION=	3.0.0
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 MAN1=		cstream.1
 PLIST_FILES=	bin/cstream
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^if \[/s| $$CFLAGS | "$$CFLAGS" |' ${WRKSRC}/configure
