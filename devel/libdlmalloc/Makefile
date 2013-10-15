@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Doug Lea malloc library
-# Date created:		3 June 1995
-# Whom:			roberto
-#
-# $FreeBSD: ports/devel/libdlmalloc/Makefile,v 1.26 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: roberto
+# $FreeBSD: devel/libdlmalloc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	dlmalloc
-PORTVERSION=	2.8.4
+PORTVERSION=	2.8.6
 CATEGORIES=	devel
 MASTER_SITES=	ftp://gee.cs.oswego.edu/pub/misc/ 
 DISTFILES=	malloc-${PORTVERSION}.c malloc-${PORTVERSION}.h
@@ -17,6 +13,7 @@ COMMENT=	Small, fast malloc library by Doug Lea
 NO_WRKSUBDIR=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 .for f in ${DISTFILES}

@@ -11,10 +11,10 @@
 #
 #  working version; unreleased.
 #
-# $FreeBSD: ports/devel/libdlmalloc/files/Makefile,v 1.8 2012/11/17 05:55:53 svnexp Exp $
+# $FreeBSD: devel/libdlmalloc/files/Makefile 327674 2013-09-20 09:42:31Z roberto $
 #
 
-VER=2.8.4
+VER=2.8.6
 
 LIBDIR=${PREFIX}/lib
 INCDIR=${PREFIX}/include/dlmalloc
