@@ -1,9 +1,5 @@
-# New ports collection makefile for:	LiON
-# Date created:		June 2006
-# Whom:			Marco Molteni <molterSPAM@gufiSPAM.org>
-#
-# $FreeBSD: ports/devel/lion/Makefile,v 1.3 2012/11/17 05:55:58 svnexp Exp $
-#
+# Created by: Marco Molteni <molterSPAM@gufiSPAM.org>
+# $FreeBSD: devel/lion/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lion
 DISTVERSION=	20060630
@@ -24,6 +20,7 @@ INCLUDES=	base64.h connections.h io.h lfnmatch.h lgroup.h lion.h \
 		lion_rcsid.h lion_types.h misc.h pipe.h sockets.h \
 		timers.h tls.h udp.h zlib.h
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,<time.h>,<sys/time.h>,' \
 		${WRKSRC}/timers.h
