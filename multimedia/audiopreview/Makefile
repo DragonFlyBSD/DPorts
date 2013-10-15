@@ -1,5 +1,5 @@
 # Created by: kevlo 
-# $FreeBSD: multimedia/audiopreview/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: multimedia/audiopreview/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	audiopreview
 PORTVERSION=	0.6
@@ -20,4 +20,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 PLIST_FILES=	bin/audiopreview
 MAN1=		audiopreview.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
