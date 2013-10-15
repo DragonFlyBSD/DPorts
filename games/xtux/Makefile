@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xtux
-# Date created:        23 December 2000
-# Whom:    Göran Runfeldt <goranrunfeldt@home.se>
-#
-# $FreeBSD: ports/games/xtux/Makefile,v 1.20 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Göran Runfeldt <goranrunfeldt@home.se>
+# $FreeBSD: games/xtux/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xtux
 PORTVERSION=	2003.03.06
@@ -23,6 +19,7 @@ MAKE_ENV=	CPP="${CC} -E"
 
 CFLAGS+=	-DDATADIR=\\\"${DATADIR}\\\"
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC}/src -name "Makefile" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^CC|#CC|g ; \
