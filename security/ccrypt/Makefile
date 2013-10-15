@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/ccrypt/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: security/ccrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ccrypt
 PORTVERSION=	1.10
@@ -10,6 +10,8 @@ MASTER_SITES=	SF \
 MAINTAINER=	dev2@heesakkers.info
 COMMENT=	Command-line utility for encrypting and decrypting files and streams
 
+USES=		gmake
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -17,12 +19,12 @@ PLIST_SUB+=	NLS=""
 USES+=		gettext
 .else
 PLIST_SUB+=	NLS="@comment "
-USE_PERL5_BUILD=	yes
+USES+=		perl5
+USE_PERL5=	build
 CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
 MAN1=	ccrypt.1 ccguess.1
 MLINKS=	ccrypt.1 ccencrypt.1 \
