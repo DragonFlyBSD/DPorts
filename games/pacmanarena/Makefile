@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/pacmanarena/Makefile,v 1.3 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/pacmanarena/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pacmanarena
 PORTVERSION=	0.15
@@ -30,6 +30,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 PORTDATA=	*
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 # Fix data location
 	@${REINPLACE_CMD} -e 's|@prefix@|${DATADIR}|' \
