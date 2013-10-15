@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SOAP
-# Date created:				Wed Jan  3 10:01:46 2001
-# Whom:					will
-#
-# $FreeBSD: net/p5-SOAP/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: will
+# $FreeBSD: net/p5-SOAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	SOAP
 PORTVERSION=	0.28
@@ -33,4 +29,5 @@ MAN3=		SOAP.3 SOAP::SimpleTypeWrapper.3 SOAP::Parser.3 \
 		SOAP::Transport::HTTP::Server.3 SOAP::Defs.3 SOAP::Struct.3 \
 		SOAP::TypeMapper.3 SOAP::Transport::HTTP::Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
