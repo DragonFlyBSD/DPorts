@@ -1,4 +1,4 @@
-# $FreeBSD: mail/horde-imp/Makefile 326197 2013-09-03 18:40:50Z mm $
+# $FreeBSD: mail/horde-imp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	imp
 PORTVERSION=	6.1.4
@@ -51,6 +51,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Util \
 		Horde_View
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
