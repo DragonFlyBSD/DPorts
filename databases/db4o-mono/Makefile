@@ -1,10 +1,5 @@
-# New ports collection makefile for:		Castle.ActiveRecord
-# Date created:                         	17 Dec 2005
-# Whom:                                 	pneumann@gmail.com
-#
-# $FreeBSD: databases/db4o-mono/Makefile 300896 2012-07-14 13:54:48Z beat $
-#   $Id: Makefile,v 1.3 2006/10/09 16:27:03 killfill Exp $
-#
+# Created by: pneumann@gmail.com
+# $FreeBSD: databases/db4o-mono/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	db4o
 PORTVERSION=	${REALVERSION}.20
@@ -25,6 +20,7 @@ REALVERSION=	5.5
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${REALVERSION}
 
+NO_STAGE=	yes
 do-install:
 	@(cd ${WRKSRC}/dll ; ${SETENV} MONO_SHARED_DIR=${WRKDIR} ${LOCALBASE}/bin/gacutil /root ${PREFIX}/lib /gacdir ${PREFIX}/lib /package 1.0 /i db4o.dll)
 
