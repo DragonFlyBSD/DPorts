@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: print/bibview/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/bibview/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	bibview
 PORTVERSION=	2.2
@@ -17,4 +17,5 @@ USE_XORG=	ice sm x11 xaw xext xmu xt
 WRKSRC=		${WRKDIR}/bibview-${PORTVERSION}
 MAN1=		bibview.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
