@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/p5-arclog/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: sysutils/p5-arclog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	arclog
 PORTVERSION=	3.04
@@ -26,4 +26,5 @@ PLIST_FILES=	bin/arclog \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/arclog/.packlist
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/arclog
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
