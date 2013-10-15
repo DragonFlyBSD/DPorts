@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mon
-# Date created:			October 30th, 2000
-# Whom:	      			Nicholas Esborn <nick@netdot.net>
-#
-# $FreeBSD: net-mgmt/p5-Mon/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Nicholas Esborn <nick@netdot.net>
+# $FreeBSD: net-mgmt/p5-Mon/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Mon
 PORTVERSION=	0.11
@@ -22,4 +18,5 @@ MAN3=		Mon::SNMP.3 \
 		Mon::Client.3 \
 		Mon::Protocol.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
