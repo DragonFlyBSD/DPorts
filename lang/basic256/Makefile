@@ -1,5 +1,5 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: lang/basic256/Makefile 325334 2013-08-25 09:14:39Z vg $
+# $FreeBSD: lang/basic256/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	basic256
 PORTVERSION=	0.9.9.64
@@ -26,6 +26,7 @@ HAS_CONFIGURE=	yes
 
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 	${QMAKE} "PREFIX=${PREFIX}" BASIC256.pro
