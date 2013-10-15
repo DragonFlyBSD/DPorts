@@ -1,5 +1,5 @@
 # Created by: Davide D'Amico <dave@gufi.org>
-# $FreeBSD: sysutils/eroaster/Makefile 317388 2013-05-04 22:32:54Z bapt $
+# $FreeBSD: sysutils/eroaster/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	eroaster
 PORTVERSION=	2.2.0.0.6
@@ -29,6 +29,7 @@ BUILD_DEPENDS+=	bchunk:${PORTSDIR}/sysutils/bchunk \
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "===>  You can enable more features by defining WITH_ADDITIONAL_PROGRAMS"
 	@${ECHO_MSG} "===>"
