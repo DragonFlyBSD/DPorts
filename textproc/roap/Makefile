@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection Makefile for:	roap
-# Date created:			Apr 15, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/roap/Makefile,v 1.9 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/roap/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	roap
 PORTVERSION=	0.1.2
@@ -23,6 +18,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Region_Oriented_Ascii_Processor
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/roap ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
