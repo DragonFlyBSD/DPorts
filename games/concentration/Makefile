@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/concentration/Makefile 321066 2013-06-16 19:01:33Z amdmi3 $
+# $FreeBSD: games/concentration/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	concentration
 PORTVERSION=	1.2
@@ -20,4 +20,5 @@ LDFLAGS+=	`${SDL_CONFIG} --libs`
 
 MAN6=		concentration.6
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
