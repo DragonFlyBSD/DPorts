@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/fc++/Makefile,v 1.12 2012/11/17 05:55:42 svnexp Exp $
+# $FreeBSD: devel/fc++/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fc++
 PORTVERSION=	1.5
@@ -14,6 +14,7 @@ OPTIONS_DEFINE=	DOCS
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
