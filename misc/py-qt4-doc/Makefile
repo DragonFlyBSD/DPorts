@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: misc/py-qt4-doc/Makefile 311475 2013-02-03 18:16:07Z makc $
+# $FreeBSD: misc/py-qt4-doc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	doc
 PORTVERSION=	${PYQT4_VERSION}
@@ -19,6 +19,7 @@ USE_PYTHON=	2.5+
 DOCSDIR=	${PREFIX}/share/doc/py-qt4
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} &&\
 		${MKDIR} ${DOCSDIR} &&\
