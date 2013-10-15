@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda-server/Makefile 325751 2013-08-31 00:32:33Z bapt $
+# $FreeBSD: misc/amanda-server/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	amanda
 PORTVERSION=	3.3.2
@@ -69,6 +69,7 @@ SAMBA_DESC=	Enable the use of smbclient
 S3_DESC=	Enable Amazon S3 device support
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTAR}
