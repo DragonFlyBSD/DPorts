@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/stund/files/patch-stun.cxx,v 1.3 2012/11/17 06:00:22 svnexp Exp $
+$FreeBSD: net/stund/files/patch-stun.cxx 300897 2012-07-14 14:29:18Z beat $
 
 --- stun.cxx
 +++ stun.cxx

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/stund/files/patch-server.cxx,v 1.5 2012/11/17 06:00:22 svnexp Exp $
+$FreeBSD: net/stund/files/patch-server.cxx 300897 2012-07-14 14:29:18Z beat $
 
 --- server.cxx.orig
 +++ server.cxx

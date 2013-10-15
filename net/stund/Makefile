@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stund
-# Date created:				9 April 2004
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/net/stund/Makefile,v 1.12 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: net/stund/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	stund
 PORTVERSION=	0.96
@@ -19,6 +15,7 @@ USE_GMAKE=	yes
 USE_RC_SUBR=	stund
 MAKE_ENV=	"CXX=${CXX}"
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKDIR}/${PORTNAME} ${WRKSRC}
 
