@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: emulators/tpm-emulator/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/tpm-emulator/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	tpm-emulator
 PORTVERSION=	0.7.4
@@ -27,6 +27,7 @@ USERS=		_tss
 GROUPS=		_tss
 SUB_LIST=	USERS="${USERS}" GROUPS="${GROUPS}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
