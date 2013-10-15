@@ -1,9 +1,4 @@
-# New ports collection makefile for:	feedjack
-# Date created:				Jul 28 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: www/feedjack/Makefile 325711 2013-08-30 16:49:43Z mva $
-#
+# $FreeBSD: www/feedjack/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	feedjack
 PORTVERSION=	0.9.16
@@ -25,4 +20,5 @@ PYDISTUTILS_PKGNAME=	Feedjack
 PLIST_SUB=	FEEDJACKVER=${PORTVERSION}	\
 		PYTHONVER=${PYTHON_VER}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
