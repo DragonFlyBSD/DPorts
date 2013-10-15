@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tortoisehg2/Makefile 326919 2013-09-10 17:02:43Z wg $
+# $FreeBSD: devel/tortoisehg2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tortoisehg
 PORTVERSION=	2.9.1
@@ -35,6 +35,7 @@ INSTALLS_EGGINFO=yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
