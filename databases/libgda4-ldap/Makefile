@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda4-ldap/Makefile 314630 2013-03-19 10:26:51Z kwm $
+# $FreeBSD: databases/libgda4-ldap/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/databases/libgda4-ldap/Makefile,v 1.3 2011/10/15 15:18:35 kwm Exp $
 
 PORTREVISION=	0
@@ -16,4 +16,5 @@ PLIST=		${.CURDIR}/pkg-plist
 
 LIBGDA4_SLAVE=	ldap
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
