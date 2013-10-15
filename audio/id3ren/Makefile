@@ -1,5 +1,5 @@
 # Created by: Joao Carlos Mendes Luis <jonny@jonny.eng.br>
-# $FreeBSD: audio/id3ren/Makefile 321897 2013-06-27 16:12:44Z crees $
+# $FreeBSD: audio/id3ren/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	id3ren
 PORTVERSION=	1.1b0
@@ -16,6 +16,7 @@ GH_ACCOUNT=	sebcode
 GH_TAGNAME=	322ee77
 GH_COMMIT=	322ee77
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/id3ren
 MAN1=		id3ren.1
 MANCOMPRESSED=	yes
