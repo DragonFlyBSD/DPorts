@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ecromedos
-# Date created:		2006-04-07
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: textproc/ecromedos/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: textproc/ecromedos/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ecromedos
 PORTVERSION=	1.0.1
@@ -34,6 +30,7 @@ ECMDS_CONF=	${WRKSRC}/etc/ecmds.conf
 ECROMEDOC=	${DATADIR}/doc
 ECROMEBIN=	${DATADIR}/bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		     -e 's|%%DATADIR%%|${DATADIR}|g' ${ECMDS_CONF}
