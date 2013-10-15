@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/latex2slides/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/latex2slides/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex2slides
 PORTVERSION=	1.0
@@ -22,6 +22,7 @@ PLIST_SUB=	PORTNAME="${PORTNAME}" PORTVERSION="${PORTVERSION}"
 MANCOMPRESSED=	yes
 MAN1=		latex2slides.1
 
+NO_STAGE=	yes
 post-patch:
 .for file in install latex2slides
 	@${REINPLACE_CMD} -e "s,'/usr/bin/,'${PREFIX}/bin/,g ; \
