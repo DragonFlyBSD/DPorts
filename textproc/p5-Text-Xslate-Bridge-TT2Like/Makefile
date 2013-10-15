@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Xslate-Bridge-TT2Like/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-Text-Xslate-Bridge-TT2Like/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Xslate-Bridge-TT2Like
 PORTVERSION=	0.00010
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Text::Xslate::Bridge::TT2Like.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
