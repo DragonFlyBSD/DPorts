@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFActionIcons/Makefile 313738 2013-03-09 17:54:41Z miwi $
+# $FreeBSD: devel/py-Products.CMFActionIcons/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.CMFActionIcons
 PORTVERSION=	2.1.3
@@ -18,6 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=0:${PORTSDIR}/devel/py-Pro
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
