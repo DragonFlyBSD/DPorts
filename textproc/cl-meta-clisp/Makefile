@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: ports/textproc/cl-meta-clisp/Makefile,v 1.18 2013/02/18 14:40:00 svnexp Exp $
+# $FreeBSD: textproc/cl-meta-clisp/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	meta
 PORTVERSION=	0.1
@@ -19,5 +19,6 @@ USE_ASDF_FASL=	yes
 FASL_TARGET=	clisp
 FASL_BUILD=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
 .include <bsd.port.mk>
