@@ -1,5 +1,5 @@
-# Created by: Sebastien Gioria <gioria@FreeBSD.ORG>
-# $FreeBSD: databases/mantis/Makefile 322253 2013-07-03 20:20:19Z lippe $
+# Created by: Sebastien Gioria <gioria@FreeBSD.org>
+# $FreeBSD: databases/mantis/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mantis
 PORTVERSION=	1.2.15
@@ -16,6 +16,7 @@ USE_PHP=	hash pcre session
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} "Installing in WWWDIR: ${WWWDIR}"
 	${MKDIR} ${WWWDIR}/
