@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Metabase-Client-Simple/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-Metabase-Client-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Metabase-Client-Simple
 PORTVERSION=	0.009
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=	Metabase::Client::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
