@@ -1,5 +1,5 @@
 # Created by: Takuya Tsuchida <tsucchi@cpan.org>
-# $FreeBSD: devel/p5-Test-Synopsis/Makefile 326636 2013-09-07 14:07:59Z az $
+# $FreeBSD: devel/p5-Test-Synopsis/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Synopsis
 PORTVERSION=	0.06
@@ -19,4 +19,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Test::Synopsis.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
