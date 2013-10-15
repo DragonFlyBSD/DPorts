@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: graphics/xwpick/Makefile 321988 2013-06-28 21:19:31Z bapt $
+# $FreeBSD: graphics/xwpick/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xwpick
 PORTVERSION=	2.20
@@ -15,6 +15,7 @@ USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xwpick.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
