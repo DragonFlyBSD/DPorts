@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-GraphViz2/Makefile 326712 2013-09-08 08:54:14Z sunpoet $
+# $FreeBSD: graphics/p5-GraphViz2/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	GraphViz2
 PORTVERSION=	2.22
@@ -49,26 +49,12 @@ OPTIONS_DEFINE=	EXAMPLES
 USE_PERL5=	5.14.2+ configure
 USES=		perl5
 
-MAN3=		GraphViz2.3 \
-		GraphViz2::Config.3 \
-		GraphViz2::DBI.3 \
-		GraphViz2::Data::Grapher.3 \
-		GraphViz2::Filer.3 \
-		GraphViz2::Parse::ISA.3 \
-		GraphViz2::Parse::RecDescent.3 \
-		GraphViz2::Parse::Regexp.3 \
-		GraphViz2::Parse::STT.3 \
-		GraphViz2::Parse::XML.3 \
-		GraphViz2::Parse::Yacc.3 \
-		GraphViz2::Parse::Yapp.3 \
-		GraphViz2::Utils.3
-
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_DATA} ${WRKSRC}/scripts/* ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/scripts/* ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.pre.mk>
