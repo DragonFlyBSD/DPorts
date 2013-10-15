@@ -1,5 +1,5 @@
 # Created by: oleg@bsdpower.com
-# $FreeBSD: x11/setlayout/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: x11/setlayout/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	setlayout
 DISTVERSION=	20080210
@@ -16,6 +16,7 @@ USE_XORG=	x11
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-extract:
