@@ -1,5 +1,5 @@
 # Created by: Glen Campbell
-# $FreeBSD: www/siteframe/Makefile 318768 2013-05-22 14:30:51Z miwi $
+# $FreeBSD: www/siteframe/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	siteframe
 PORTVERSION=	5.0.2
@@ -31,6 +31,7 @@ SITEFRAMEDIR=	${WWWDIR}
 SUB_FILES=	pkg-message
 SUB_LIST=	DIR=${SITEFRAMEDIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${SITEFRAMEDIR}/
 	${CP} -R ${WRKSRC}/* ${SITEFRAMEDIR}/
