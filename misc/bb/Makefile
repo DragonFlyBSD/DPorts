@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/bb/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/bb/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	bb
 PORTVERSION=	1.3.r1
@@ -21,6 +21,7 @@ PORTDOCS=	README
 PLIST_FILES=	bin/bb share/bb/bb.s3m share/bb/bb2.s3m share/bb/bb3.s3m
 PLIST_DIRS=	share/bb
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-patch:
