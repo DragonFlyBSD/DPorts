@@ -1,7 +1,5 @@
-# Created by:	wenheping@gmail.com
-#
-# $FreeBSD: ports/graphics/deegree-wpvs/Makefile,v 1.5 2012/11/17 05:58:03 svnexp Exp $
-#
+# Created by: wenheping@gmail.com
+# $FreeBSD: graphics/deegree-wpvs/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	wpvs
 PORTVERSION=	2.5
@@ -31,6 +29,7 @@ OPTIONS_SINGLE=	AS
 OPTIONS_SINGLE_AS=	TOMCAT6 TOMCAT7
 OPTIONS_DEFAULT=	TOMCAT6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOMCAT6}
