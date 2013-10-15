@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/nglogc/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/nglogc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	nglogc
 PORTVERSION=	1.1.0
@@ -44,4 +44,5 @@ MAN3=	\
 	logc_setLogFormat.3 \
 	logc_setRingbuffer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
