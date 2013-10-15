@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fetchlog
-# Date created:		11 August 2003
-# Whom:			Alexander Haderer <alexander.haderer@loescap.de>
-#
-# $FreeBSD: ports/sysutils/fetchlog/Makefile,v 1.8 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: Alexander Haderer <alexander.haderer@loescap.de>
+# $FreeBSD: sysutils/fetchlog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fetchlog
 PORTVERSION=	1.4
@@ -19,6 +15,7 @@ PORTEXAMPLES=	fetchlog.cfg fetchlog_service.cfg notify.cfg.example
 
 PLIST_FILES=	bin/fetchlog
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fetchlog ${PREFIX}/bin
 	cd ${WRKSRC} && ${INSTALL_MAN} ${MAN1} ${PREFIX}/man/man1
