@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmblueclock
-# Date created:				25 Apr 2003
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: ports/x11-clocks/wmblueclock/Makefile,v 1.7 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: x11-clocks/wmblueclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmblueclock
 PORTVERSION=	0.0
@@ -21,6 +17,7 @@ USE_XORG=	x11 xau xdmcp xext xpm
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/wmblueclock
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
