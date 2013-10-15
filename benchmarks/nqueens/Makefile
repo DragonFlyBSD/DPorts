@@ -1,5 +1,5 @@
 # Created by: NAKAJI Hiroyuki <nakaji@jp.freebsd.org>
-# $FreeBSD: benchmarks/nqueens/Makefile 314854 2013-03-21 17:35:57Z bapt $
+# $FreeBSD: benchmarks/nqueens/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	nqueens
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ OPTIONS_DEFINE=	MPI STATIC OPTIMIZED_CFLAGS
 MPI_DESC=	Build distributed MPI version
 STATIC_DESC=	Link resulting binaries statically
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
