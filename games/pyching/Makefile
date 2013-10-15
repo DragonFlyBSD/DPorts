@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: games/pyching/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: games/pyching/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pyching
 PORTVERSION=	1.2.2
@@ -20,6 +20,7 @@ USE_PYTHON=	yes
 
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC}; ${SED} 's|/usr/share/|${PYTHON_SITELIBDIR}/|g' \
 		< ${PORTNAME}.sh > ${PORTNAME}
