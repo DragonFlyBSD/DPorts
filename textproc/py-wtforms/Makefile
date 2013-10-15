@@ -1,5 +1,5 @@
 # Created by: Moggie <moggie@elasticmind.net>
-# $FreeBSD: textproc/py-wtforms/Makefile 311744 2013-02-06 06:47:41Z culot $
+# $FreeBSD: textproc/py-wtforms/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	WTForms
 PORTVERSION=	1.0.3
@@ -17,4 +17,5 @@ USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
