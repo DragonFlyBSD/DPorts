@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: devel/p5-perlbrew/Makefile 327376 2013-09-16 10:28:33Z az $
+# $FreeBSD: devel/p5-perlbrew/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	perlbrew
 PORTVERSION=	0.59
@@ -32,6 +32,7 @@ USE_PERL5=	configure
 MAN1=		perlbrew.1
 MAN3=		App::perlbrew.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
