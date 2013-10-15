@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ru-aspell
-# Date created:                         1 September 2002
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/russian/aspell/Makefile,v 1.10 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: russian/aspell/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-ru-0.99f7-1
@@ -16,5 +12,6 @@ COMMENT=	Aspell Russian dictionary
 
 DICT=	 	ru
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
