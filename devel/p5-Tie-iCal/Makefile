@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: devel/p5-Tie-iCal/Makefile 325940 2013-09-02 06:23:30Z az $
+# $FreeBSD: devel/p5-Tie-iCal/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-iCal
 PORTVERSION=	0.15
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Tie::iCal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
