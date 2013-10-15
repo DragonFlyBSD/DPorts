@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Meta-Builder/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Meta-Builder/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Meta-Builder
 PORTVERSION=	0.003
@@ -21,4 +21,5 @@ MAN3=	Meta::Builder.3 \
 	Meta::Builder::Base.3 \
 	Meta::Builder::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
