@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-stem
-# Date created:			2006/07/31
-# Whom:				chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/textproc/pecl-stem/Makefile,v 1.7 2012/11/17 06:02:15 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: textproc/pecl-stem/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	stem
 PORTVERSION=	1.5.1
@@ -19,6 +15,7 @@ COMMENT=	A PECL extension which provides word stemming
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 post-configure:
 	echo "#define HAVE_XDL_ALLOCATOR_PRIV 1" >>${WRKSRC}/config.h
 .include <bsd.port.mk>
