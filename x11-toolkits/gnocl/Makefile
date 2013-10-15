@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gnocl/Makefile 327457 2013-09-17 08:36:00Z gahr $
+# $FreeBSD: x11-toolkits/gnocl/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gnocl
 DISTVERSION=	${BASE_VERSION}-${NIGHTLY_BUILD}
@@ -17,9 +17,8 @@ LIB_DEPENDS=	canberra:${PORTSDIR}/audio/libcanberra \
 		gtkimageview:${PORTSDIR}/x11-toolkits/gtkimageview
 
 USE_BZIP2=	yes
-USES=		gmake pkgconfig
+USES=		gmake pkgconfig tcl
 USE_GNOME=	gtk20 libglade2
-USE_TCL=	84+
 USE_LDCONFIG=	yes
 CFLAGS+=	-I${TCL_INCLUDEDIR} -L${TCL_LIBDIR}
 
@@ -35,6 +34,7 @@ PLIST_FILES=	${BASEDIR}/${PORTNAME}.so \
 		${BASEDIR}/pkgIndex.tcl
 PLIST_DIRS=	${BASEDIR}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|tclsh|${TCLSH}|; \
 	    s|%%LOCALBASE%%|${LOCALBASE}|; \
