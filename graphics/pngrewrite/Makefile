@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: graphics/pngrewrite/Makefile 323913 2013-07-29 20:25:33Z bapt $
+# $FreeBSD: graphics/pngrewrite/Makefile 327922 2013-09-23 06:10:26Z bapt $
 
 PORTNAME=	pngrewrite
 PORTVERSION=	1.4.0
@@ -23,6 +23,6 @@ do-build:
 		-o ${WRKSRC}/pngrewrite ${WRKSRC}/pngrewrite.c ${WRKSRC}/libpngrewrite.c -lpng -lz -lm
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pngrewrite ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/pngrewrite ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
