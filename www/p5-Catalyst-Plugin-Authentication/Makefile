@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Authentication/Makefile 326606 2013-09-07 10:20:04Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Plugin-Authentication/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Authentication
 PORTVERSION=	0.10023
@@ -51,4 +51,5 @@ MAN3=	Catalyst::Authentication::Credential::NoPassword.3 \
 	Catalyst::Plugin::Authentication::User.3 \
 	Catalyst::Plugin::Authentication::User::Hash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
