@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/py-mysql2pgsql/Makefile,v 1.2 2012/11/17 05:55:22 svnexp Exp $
+# $FreeBSD: databases/py-mysql2pgsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql2pgsql
 PORTVERSION=	0.1.6
@@ -26,4 +26,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	py_${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
