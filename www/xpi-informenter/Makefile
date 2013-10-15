@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-informenter
-# Date created:		14 September 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-informenter/Makefile,v 1.16 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-informenter/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	informenter
 PORTVERSION=	0.6.3
@@ -18,5 +14,6 @@ XPI_NUM=	673
 XPI_FILES=	chrome/informenter.jar defaults/preferences/informenter.js install.rdf chrome.manifest
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
