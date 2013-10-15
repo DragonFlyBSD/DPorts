@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pdfjam
-# Date created:		Tue Mar 15 17:50:34 EST 2005
-# Whom:			Paul Chvostek <paul@it.ca>
-#
-# $FreeBSD: print/pdfjam/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Paul Chvostek <paul@it.ca>
+# $FreeBSD: print/pdfjam/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pdfjam
 PORTVERSION=	2.08
@@ -27,6 +23,7 @@ PORTDOCS=	PDFjam-README.html pdfdroplets.png
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 .for FILE in ${PROGS}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${FILE} ${PREFIX}/bin
