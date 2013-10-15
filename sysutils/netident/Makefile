@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: sysutils/netident/Makefile 325889 2013-09-01 17:26:14Z az $
+# $FreeBSD: sysutils/netident/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	netident
 PORTVERSION=	0.1.0
@@ -25,6 +25,7 @@ MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 PLIST_DIRS=	etc/netident
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} -v ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
