@@ -1,5 +1,5 @@
 # Created by: Michiel Overtoom <motoom@xs4all.nl>
-# $FreeBSD: x11/xbrightness/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xbrightness/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xbrightness
 PORTVERSION=	0.3
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xbrightness
 
 MAN1=		xbrightness.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
