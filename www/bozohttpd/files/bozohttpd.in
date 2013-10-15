@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/bozohttpd/files/bozohttpd.in,v 1.4 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/bozohttpd/files/bozohttpd.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: bozohttpd
 # REQUIRE: DAEMON

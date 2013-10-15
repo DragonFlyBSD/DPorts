@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/www/bozohttpd/Makefile,v 1.24 2013/01/09 20:05:15 svnexp Exp $
+# $FreeBSD: www/bozohttpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bozohttpd
 PORTVERSION=	20100920
@@ -23,6 +23,7 @@ HTPASSWD_DESC=		Enable htpassword support
 SSL_DESC=		Enable SSL support
 CGI_DESC=		Enable CGI support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTPASSWD}
