@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simplegroupware
-# Date created:				7 January 2011
-# Whom:					jamrich.majo@gmail.com
-#
-# $FreeBSD: ports/deskutils/simplegroupware/Makefile,v 1.10 2012/11/17 05:55:30 svnexp Exp $
-#
+# Created by: jamrich.majo@gmail.com
+# $FreeBSD: deskutils/simplegroupware/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	simplegroupware
 PORTVERSION=	0.745
@@ -23,6 +19,7 @@ USE_PHP=	mysql
 PKGMESSAGE=	${WRKDIR}/${PORTNAME}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}/
 	cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${WWWDIR}/
