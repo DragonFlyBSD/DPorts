@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mathopd HTTPD
-# Date created:         Sun Oct 31 1999
-# Whom:                 tobez@plab.ku.dk
-#
-# $FreeBSD: ports/www/mathopd/Makefile,v 1.26 2012/11/17 06:02:39 svnexp Exp $
-#
+# Created by: tobez@plab.ku.dk
+# $FreeBSD: www/mathopd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mathopd
 PORTVERSION=	1.5p8
@@ -18,6 +14,7 @@ MAKE_ARGS=	CFLAGS="${CFLAGS}"
 
 DOCS=	CHANGES cgi.txt config.txt running.txt sample.cfg syntax.txt
 
+NO_STAGE=	yes
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/doc/sample.cfg ${PREFIX}/etc/mathopd.conf.sample
 .if !defined(NOPORTDOCS)
