@@ -1,5 +1,5 @@
 # Created by: David
-# $FreeBSD: comms/ncid/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: comms/ncid/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	ncid
 PORTVERSION=	0.84
@@ -25,6 +25,7 @@ MAKE_ARGS=	WISH=${WISH} TCLSH=${TCLSH}
 INSTALL_TARGET=	freebsd-install
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKSRC}/FreeBSD;for i in *.rc; do \
 		x=`echo $$i | cut -f 1 -d .`; ${CP} $$i $$x; done
