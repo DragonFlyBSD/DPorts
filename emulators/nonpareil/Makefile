@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: emulators/nonpareil/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: emulators/nonpareil/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	nonpareil
 PORTVERSION=	0.79
@@ -50,6 +50,7 @@ PLIST_FILES=	${PLIST_EXECS} ${PLIST_DATA}
 PLIST_DIRS=	lib/nonpareil
 PORTDOCS=	CREDITS DEBUGGING README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
