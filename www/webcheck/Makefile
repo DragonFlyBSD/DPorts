@@ -1,9 +1,5 @@
-# New ports collection makefile for: webcheck
-# Date created:        10 May, 2002
-# Whom:                Mike Meyer <mwm@mired.org>
-#
-# $FreeBSD: ports/www/webcheck/Makefile,v 1.22 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: Mike Meyer <mwm@mired.org>
+# $FreeBSD: www/webcheck/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webcheck
 PORTVERSION=	1.10.3
@@ -21,6 +17,7 @@ MAN1=		webcheck.1
 
 # what about fancytooltips?
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/*.py ${DATADIR}
