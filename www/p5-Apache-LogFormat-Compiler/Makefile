@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Apache-LogFormat-Compiler/Makefile 326156 2013-09-03 15:07:52Z az $
+# $FreeBSD: www/p5-Apache-LogFormat-Compiler/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-LogFormat-Compiler
 PORTVERSION=	0.13
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Apache::LogFormat::Compiler.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
