@@ -1,5 +1,5 @@
 # Created by: Shuichi Tanaka
-# $FreeBSD: japanese/gtkicq/Makefile 326435 2013-09-05 18:24:04Z tabthorpe $
+# $FreeBSD: japanese/gtkicq/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	gtkicq
 PORTVERSION=	0.60
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--without-gnome --datadir=${PREFIX}/share/gtkicq
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
