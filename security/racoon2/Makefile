@@ -1,5 +1,5 @@
 # Created by: sumikawa
-# $FreeBSD: security/racoon2/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/racoon2/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	racoon2
 PORTVERSION=	20100526a
@@ -22,6 +22,7 @@ CONFIGURE_ENV=	YACC=/usr/bin/yacc
 OPTIONS_DEFINE=	KINK DOCS
 KINK_DESC=	Enable KINK support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-configure:
