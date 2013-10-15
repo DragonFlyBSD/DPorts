@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnofract4d
-# Date created:				30 Dec 1999
-# Whom:					Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: ports/graphics/gnofract4d/Makefile,v 1.67 2012/11/17 05:58:08 svnexp Exp $
-#
+# Created by: Will Andrews <andrews@technologist.com>
+# $FreeBSD: graphics/gnofract4d/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gnofract4d
 PORTVERSION=	3.14
@@ -29,6 +25,7 @@ PORTDOCS=	README COPYING
 INSTALLS_EGGINFO=	yes
 PYDISTUTILS_EGGINFODIR=	${PYTHON_SITELIBDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
