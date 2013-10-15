@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/tovid/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: multimedia/tovid/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	tovid
 PORTVERSION=	0.30
@@ -43,6 +43,7 @@ GNU_CONFIGURE=	yes
 MAN1=		idvid.1 makedvd.1 makemenu.1 makeslides.1 makevcd.1 makexml.1 \
 		postproc.1 pymakexml.1 todisc.1 tovid-stats.1 tovid.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|gawk|${AWK}|' \
