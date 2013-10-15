@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Perl-Version
-# Date created:				10 April 2008
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Perl-Version/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Perl-Version/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Perl-Version
 PORTVERSION=	1.011
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 MAN1=		perl-reversion.1
 MAN3=		Perl::Version.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
