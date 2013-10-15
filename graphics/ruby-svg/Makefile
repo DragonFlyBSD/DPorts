@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/SVG
-# Date created:		8 July 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: graphics/ruby-svg/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: graphics/ruby-svg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	svg
 PORTVERSION=	1.0.3
@@ -24,6 +20,7 @@ NO_BUILD=	yes
 DOCS_EN=	README.en.rd
 DOCS_JA=	README.ja.rd
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${RUBY_SITELIBDIR}/svg
 	${INSTALL_DATA} ${WRKSRC}/lib/svg/*.rb ${RUBY_SITELIBDIR}/svg/
