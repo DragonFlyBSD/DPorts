@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/gnome-netstatus/Makefile 326147 2013-09-03 13:05:02Z bapt $
+# $FreeBSD: net/gnome-netstatus/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/gnome-netstatus/Makefile,v 1.58 2010/09/29 12:35:14 kwm Exp $
 
 PORTNAME=	gnome-netstatus
@@ -24,4 +24,5 @@ CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	netstatus.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
