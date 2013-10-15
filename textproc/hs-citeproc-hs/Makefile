@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-citeproc-hs/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-citeproc-hs/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	citeproc-hs
 PORTVERSION=	0.3.8
@@ -19,6 +19,7 @@ BIBUTILS_DESC=		Use Chris Putnam's Bibutils
 HEXPAT_DESC=		Use hexpat to parse XML
 NETWORK_DESC=		Use network and HTTP to retrieve CSL file
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MBIBUTILS}
