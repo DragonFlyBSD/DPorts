@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: mail/gnubiff/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: mail/gnubiff/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gnubiff
 PORTVERSION=	2.2.13
@@ -43,6 +43,7 @@ PLIST_SUB+=		NLS="@comment "
 # Only install support if gnomepanel is already installed.
 WANT_GNOME=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgnomepanel}!=""
