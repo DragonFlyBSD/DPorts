@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/diacanvas2/Makefile 322929 2013-07-13 13:58:02Z bapt $
+# $FreeBSD: graphics/diacanvas2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	diacanvas2
 PORTVERSION=	0.15.4
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	PRINT
 OPTIONS_DEFAULT=PRINT
 PRINT_DESC=	GNOME print support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPRINT}
