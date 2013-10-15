@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: lang/mmix/Makefile 325108 2013-08-21 11:51:24Z danfe $
+# $FreeBSD: lang/mmix/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	mmix
 PORTVERSION=	20110831
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	ctangle:${PORTSDIR}/devel/cweb
 NO_WRKSUBDIR=	yes
 FILES=		mmix.1 mmix.mp silly.out silly.run
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mmix ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mmixal ${PREFIX}/bin
