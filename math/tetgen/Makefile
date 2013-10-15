@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tetgen
-# Date created:			16 December 2005
-# Whom:				Pedro F. Giffuni
-#
-# $FreeBSD: math/tetgen/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Pedro F. Giffuni
+# $FreeBSD: math/tetgen/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	tetgen
 PORTVERSION=	1.4.3.20110119
@@ -27,6 +23,7 @@ ALL_TARGET=	tetgen tetlib
 PORTEXAMPLES=	example.poly
 PLIST_FILES=	bin/tetgen include/tetgen.h lib/libtet.a
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
