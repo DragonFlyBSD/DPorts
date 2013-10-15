@@ -1,9 +1,5 @@
-# New ports collection makefile for:   dhcpdump
-# Date created:        1 March 2001
-# Whom:                Edwin Groothuis (edwin@mavetju.org)
-#
-# $FreeBSD: net/dhcpdump/Makefile 326384 2013-09-05 11:09:23Z az $
-#
+# Created by: Edwin Groothuis (edwin@mavetju.org)
+# $FreeBSD: net/dhcpdump/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dhcpdump
 PORTVERSION=	1.8
@@ -19,6 +15,7 @@ PLIST_FILES=	bin/dhcpdump
 USES=		perl5
 USE_PERL5=	build
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dhcpdump ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/dhcpdump.8 ${PREFIX}/man/man8
