@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov <andy@icc.surw.chel.su>
-# $FreeBSD: games/omega/Makefile 325601 2013-08-29 14:52:33Z danfe $
+# $FreeBSD: games/omega/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	omega
 PORTVERSION=	0.90.4
@@ -21,6 +21,7 @@ MYPORTDOCS=	buglist.txt docs/compile.all docs/omega.txt docs/readme.1st \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
