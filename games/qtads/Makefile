@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiwang27@gmail.com>
-# $FreeBSD: games/qtads/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: games/qtads/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	qtads
 PORTVERSION=	2.1.6
@@ -20,6 +20,7 @@ QMAKEFLAGS+=	QMAKE_CFLAGS_RELEASE="" QMAKE_CXXFLAGS_RELEASE=""
 
 PLIST_FILES=	bin/qtads
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
