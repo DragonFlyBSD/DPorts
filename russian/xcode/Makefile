@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xcode
-# Date created:		13 January 2000
-# Whom:			Michael Vasilenko <acid@stu.cn.ua>
-#
-# $FreeBSD: ports/russian/xcode/Makefile,v 1.12 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Michael Vasilenko <acid@stu.cn.ua>
+# $FreeBSD: russian/xcode/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	xcode
 PORTVERSION=	4.1
@@ -22,6 +18,7 @@ MAKEFILE=	makefile
 ALL_TARGET=	xcode
 CFLAGS+=	-DD_KOI
 
+NO_STAGE=	yes
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/xcode ${PREFIX}/bin
 
