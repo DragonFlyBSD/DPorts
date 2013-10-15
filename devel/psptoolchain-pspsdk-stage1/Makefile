@@ -1,9 +1,5 @@
-# New ports collection makefile for: psptoolchain-pspsdk-stage1
-# Date created:        7 August 2009
-# Whom:                Tassilo Philipp <tphilipp@potion-studios.com>
-#
-# $FreeBSD: ports/devel/psptoolchain-pspsdk-stage1/Makefile,v 1.7 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Tassilo Philipp <tphilipp@potion-studios.com>
+# $FreeBSD: devel/psptoolchain-pspsdk-stage1/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=		pspsdk
 PORTVERSION=		20111215
@@ -30,6 +26,7 @@ CONFIGURE_ARGS?=	--prefix=${PREFIX}/${PSP_SDK_STAGE_PREFIX} \
 INSTALL_TARGET=		install-data
 NO_BUILD=		yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E 's/^(prefix="\$$pspdev")$$/#\1/' ${WRKSRC}/configure.ac
 	@${REINPLACE_CMD} -E 's/^(psp_targetdir=")psp(")$$/\1.\2/' ${WRKSRC}/configure.ac
