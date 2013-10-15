@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xminehunter/Makefile 322621 2013-07-10 06:55:28Z bapt $
+# $FreeBSD: games/xminehunter/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xminehunter
 PORTVERSION=	0.4
@@ -16,4 +16,5 @@ USE_XORG=	xpm
 WRKSRC=		${WRKDIR}/xminehunter
 ALL_TARGET=	xminehunter
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
