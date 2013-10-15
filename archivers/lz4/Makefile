@@ -1,5 +1,5 @@
 # Created by: Alexey Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: archivers/lz4/Makefile 324828 2013-08-17 02:24:38Z vanilla $
+# $FreeBSD: archivers/lz4/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	lz4
 PORTVERSION=	r101
@@ -10,6 +10,7 @@ MASTER_SITES=	https://dl.dropboxusercontent.com/u/59565338/LZ4/ \
 MAINTAINER=	alexey@renatasystems.org
 COMMENT=	Fast compressor using LZ4 algorithm
 
+NO_STAGE=		yes
 USES=		gmake
 ALL_TARGET=	lz4c
 
