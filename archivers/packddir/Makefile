@@ -1,9 +1,5 @@
-# New ports collection makefile for:	packddir
-# Date created:		2009-08-22
-# Whom:			Ayumi M <ayu@commun.jp>
-#
-# $FreeBSD: ports/archivers/packddir/Makefile,v 1.2 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Ayumi M <ayu@commun.jp>
+# $FreeBSD: archivers/packddir/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	packddir
 PORTVERSION=	0.0.6
@@ -17,6 +13,7 @@ COMMENT=	These trivial utilities can unpack and create PackdDir archives
 
 WRKSRC=		${WRKDIR}/src
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/upackddir
 MAN1=		upackddir.1
 
