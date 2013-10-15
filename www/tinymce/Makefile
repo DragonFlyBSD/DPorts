@@ -1,8 +1,8 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce/Makefile 327244 2013-09-14 08:51:03Z sunpoet $
+# $FreeBSD: www/tinymce/Makefile 330081 2013-10-11 14:09:43Z sunpoet $
 
 PORTNAME=	tinymce
-PORTVERSION=	4.0.6
+PORTVERSION=	4.0.8
 CATEGORIES=	www
 MASTER_SITES=	http://download.moxiecode.com/${PORTNAME}/ \
 		LOCAL/sunpoet
@@ -20,8 +20,8 @@ USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 do-install:
-	cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${WWWDIR}/
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}/
+	cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}/
+	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${STAGEDIR}${WWWDIR}/
 
 # maintainer section:
 
