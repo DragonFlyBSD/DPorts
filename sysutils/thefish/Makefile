@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: sysutils/thefish/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: sysutils/thefish/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	thefish
 PORTVERSION=	0.6.6
@@ -18,6 +18,7 @@ WANT_GNOME=	yes
 #OPTIONS_SINGLE_X11=	GTK2
 #OPTIONS_DEFAULT=	GTK2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 #.if ${PORT_OPTIONS:MGTK2}
