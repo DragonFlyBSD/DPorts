@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: databases/flare/Makefile 327389 2013-09-16 13:11:43Z bapt $
+# $FreeBSD: databases/flare/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	flare
 PORTVERSION=	1.0.9
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_RC_SUBR=	flared flarei
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${INSTALL} -d ${_BINOWNGRP} -m 0750 /var/db/flare
 	@${INSTALL_DATA} ${WRKSRC}/etc/flared.conf ${PREFIX}/etc/flared.conf-dist
