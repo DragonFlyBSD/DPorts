@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: ports/devel/libtap/Makefile,v 1.13 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/libtap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libtap
 PORTVERSION=	1.01
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 
 MAN3=		tap.3
 
+NO_STAGE=	yes
 post-build:
 	@${CAT} ${PKGMESSAGE}
 
