@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/security/py-passlib/Makefile,v 1.4 2013/02/09 15:59:42 svnexp Exp $
+# $FreeBSD: security/py-passlib/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	passlib
 PORTVERSION=	1.6.1
@@ -15,4 +15,5 @@ LICENSE=	BSD
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>

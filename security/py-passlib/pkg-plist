@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/py-passlib/pkg-plist,v 1.2 2012/11/17 06:01:16 svnexp Exp $
+@comment $FreeBSD: security/py-passlib/pkg-plist 302098 2012-08-05 08:29:26Z miwi $
 %%PYTHON_SITELIBDIR%%/passlib/__init__.py
 %%PYTHON_SITELIBDIR%%/passlib/__init__.pyc
 %%PYTHON_SITELIBDIR%%/passlib/__init__.pyo
