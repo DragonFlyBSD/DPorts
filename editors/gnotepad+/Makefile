@@ -1,9 +1,5 @@
-# New ports collection makefile for:	 gnotepad+
-# Date created:		08 March 1999
-# Whom:			brett@peloton.physics.montana.edu
-#
-# $FreeBSD: editors/gnotepad+/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: brett@peloton.physics.montana.edu
+# $FreeBSD: editors/gnotepad+/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	gnotepad+
 PORTVERSION=	1.3.3
@@ -35,6 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 DOCVERSION=	1.2.0
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgnomelibs}!=""
