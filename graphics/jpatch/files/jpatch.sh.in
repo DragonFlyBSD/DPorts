@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/graphics/jpatch/files/jpatch.sh.in,v 1.3 2012/11/17 05:58:10 svnexp Exp $
+# $FreeBSD: graphics/jpatch/files/jpatch.sh.in 300896 2012-07-14 13:54:48Z beat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%JAVAJARDIR%%/jpatch.jar" "$@"

@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/jpatch/Makefile,v 1.12 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: graphics/jpatch/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jpatch
 DISTVERSION=	0.4p1
@@ -24,6 +24,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar \
 
 SUB_FILES=	jpatch.sh
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/jpatch.jar ${JAVAJARDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/jpatch.sh ${PREFIX}/bin/jpatch
