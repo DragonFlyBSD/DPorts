@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: games/atomix/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/atomix/Makefile 327730 2013-09-20 17:36:33Z bapt $
 #   $MCom: ports/games/atomix/Makefile,v 1.14 2007/09/10 05:39:33 mezz Exp $
 
 PORTNAME=	atomix
@@ -19,6 +19,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/games\.games/games:games/' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e '/^$$/d' ${WRKSRC}/po/POTFILES.in
