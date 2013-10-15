@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/hs-dia-functions/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: graphics/hs-dia-functions/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	dia-functions
 PORTVERSION=	0.2.1.3
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	data-pprint>=0.2 dia-base>=0.1 mtl>=2.0 xhtml>=3000.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
