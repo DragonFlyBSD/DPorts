@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Color-Library/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Color-Library/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Color-Library
 PORTVERSION=	0.02.1
@@ -48,4 +48,5 @@ MAN3=		Color::Library.3 \
 		Color::Library::Dictionary::Windows.3 \
 		Color::Library::Dictionary::X11.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
