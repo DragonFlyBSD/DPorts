@@ -1,9 +1,9 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: sysutils/gsmartcontrol/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: sysutils/gsmartcontrol/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	gsmartcontrol
 PORTVERSION=	0.8.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://artificialtime.com/${PORTNAME}/
 
@@ -19,17 +19,8 @@ USE_AUTOTOOLS=	libtool
 USES=		pkgconfig
 INSTALLS_ICONS=	yes
 
-MAN1=		gsmartcontrol.1
-
 CONFIGURE_ARGS=	--disable-libglade
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.options.mk>
-
-post-patch:
-.if !${PORT_OPTIONS:MDOCS}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-Makefile.in
-.endif
 
 .include <bsd.port.mk>
