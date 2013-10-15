@@ -1,9 +1,5 @@
-# New ports collection makefile for:   LaBrea
-# Date created:        20 September 2001
-# Whom:                nick@rogness.net
-#
-# $FreeBSD: ports/security/labrea/Makefile,v 1.10 2012/11/17 06:01:06 svnexp Exp $
-##
+# Created by: nick@rogness.net
+# $FreeBSD: security/labrea/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	LaBrea
 PORTVERSION=	2.4
@@ -20,6 +16,7 @@ BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet10
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|libnet-config|${LIBNET_CONFIG}|; \
