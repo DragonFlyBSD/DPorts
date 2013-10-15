@@ -1,6 +1,5 @@
 # Created by: dsh@vlink.ru
-# $FreeBSD: security/avcheck/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/avcheck/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	avcheck
 PORTVERSION=	0.91
@@ -17,6 +16,7 @@ PORTDOCS=	README.AVP README.AVP.de README.DrWeb README.Exim \
 		README.Postfix README.Postfix.de README.Sendmail eicar.msg \
 		eicar.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/^CC/#CC/g ; s/^CFLAGS/#CFLAGS/g' ${WRKSRC}/Makefile
 
