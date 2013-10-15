@@ -1,9 +1,5 @@
-# New ports collection makefile for: maildirsync
-# Date created:		09 Oct 2002
-# Whom:			Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: mail/maildirsync/Makefile 326248 2013-09-04 05:52:04Z az $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: mail/maildirsync/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	maildirsync
 PORTVERSION=	1.2
@@ -17,6 +13,7 @@ USES=		perl5
 
 MAN1=		maildirsync.1
 
+NO_STAGE=	yes
 do-build:
 	${PERL} -pi -e 's!/usr/bin/perl!${PERL}!' ${WRKSRC}/maildirsync.pl
 	pod2man ${WRKSRC}/maildirsync.pod > ${WRKSRC}/maildirsync.1
