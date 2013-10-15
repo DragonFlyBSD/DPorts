@@ -1,5 +1,5 @@
 # Created by: David
-# $FreeBSD: mail/gmail-notify/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: mail/gmail-notify/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gmail-notify
 PORTVERSION=	1.6.1.1
@@ -16,6 +16,7 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USES=		gmake pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
