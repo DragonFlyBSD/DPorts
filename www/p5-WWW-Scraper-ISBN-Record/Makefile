@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: www/p5-WWW-Scraper-ISBN-Record/Makefile 325526 2013-08-28 13:13:47Z jadawin $
+# $FreeBSD: www/p5-WWW-Scraper-ISBN-Record/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Scraper-ISBN-Record
 PORTVERSION=	0.19
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	WWW::Scraper::ISBN::Record.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
