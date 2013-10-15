@@ -1,4 +1,4 @@
-# $FreeBSD: ports/comms/vrflash/Makefile,v 1.9 2012/11/17 05:55:02 svnexp Exp $
+# $FreeBSD: comms/vrflash/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	vrflash
 PORTVERSION=	0.20
@@ -10,6 +10,8 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Flash kernels and romdisks to the Agenda VR3
 
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 GNU_CONFIGURE=	yes
 DOCS=		agenda-flashing-overview.txt troubleshooting.txt \
