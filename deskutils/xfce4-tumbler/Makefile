@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: deskutils/xfce4-tumbler/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: deskutils/xfce4-tumbler/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tumbler
 PORTVERSION=	0.1.29
@@ -36,6 +36,7 @@ GSTREAMER_DESC=	GStreamer (1.0) thumbnailer plugin
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
