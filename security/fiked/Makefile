@@ -1,6 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: security/fiked/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
-#
+# $FreeBSD: security/fiked/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fiked
 PORTVERSION=	0.0.5
@@ -27,6 +26,7 @@ PORTDOCS=	README NEWS
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|=-g|=|' ${WRKSRC}/${MAKEFILE}
 
