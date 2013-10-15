@@ -1,5 +1,5 @@
 # Created by: Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
-# $FreeBSD: japanese/sj3-lib/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: japanese/sj3-lib/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	sj3
 PORTVERSION=	2.0.1.20
@@ -25,6 +25,7 @@ SUB_LIST=	DESTDIR=${DESTDIR}
 POSTPATCHES=	${FILESDIR}/post-patch-Imakefile \
 		${FILESDIR}/post-patch-include-Const.h
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC} && ${CAT} ${POSTPATCHES} | ${PATCH}
 
