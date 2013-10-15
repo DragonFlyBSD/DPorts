@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: security/libsparkcrypto/Makefile 323394 2013-07-21 14:31:45Z marino $
+# $FreeBSD: security/libsparkcrypto/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libsparkcrypto
 PORTVERSION=	0.1.1
@@ -28,6 +28,7 @@ MAKE_ENV+=	SPARKARCH=${SPARKARCH} \
 
 OPTIONS_DEFINE=		DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
