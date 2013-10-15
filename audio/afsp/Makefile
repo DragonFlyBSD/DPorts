@@ -1,5 +1,5 @@
 # Created by: Kawaguti Ginga <ginga@athena.club.ne.jp>
-# $FreeBSD: audio/afsp/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/afsp/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	afsp
 PORTVERSION=	8.2
@@ -10,6 +10,7 @@ DISTNAME=	AFsp-v8r2
 MAINTAINER=	ginga-freebsd@ginganet.org
 COMMENT=	Audio file conversion utilities and library
 
+NO_STAGE=	yes
 USES=		gmake
 MAKE_JOBS_UNSAFE=	yes
 
