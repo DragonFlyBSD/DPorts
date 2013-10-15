@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: devel/robodoc/Makefile 321285 2013-06-19 16:14:23Z wg $
+# $FreeBSD: devel/robodoc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	robodoc
 PORTVERSION=	4.99.41
@@ -26,6 +26,7 @@ PORTEXAMPLES=	*
 
 PLIST_FILES=	bin/robodoc bin/robohdrs
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
