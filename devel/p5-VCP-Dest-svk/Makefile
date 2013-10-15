@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-VCP-Dest-svk/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-VCP-Dest-svk/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	VCP-Dest-svk
 PORTVERSION=	0.29
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		VCP::Dest::svk.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
