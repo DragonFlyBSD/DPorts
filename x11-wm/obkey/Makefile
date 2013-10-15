@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: x11-wm/obkey/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-wm/obkey/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	obkey
 PORTVERSION=	1.0
@@ -20,6 +20,7 @@ PORTDOCS=	NEWS
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
