@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: dns/dnswall/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: dns/dnswall/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnswall
 PORTVERSION=	0.1.4
@@ -25,6 +25,7 @@ AUTOTOOLSFILES=	aclocal.m4
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
