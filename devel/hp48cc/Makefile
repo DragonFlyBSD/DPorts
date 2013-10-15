@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: devel/hp48cc/Makefile 316569 2013-04-26 06:21:38Z danfe $
+# $FreeBSD: devel/hp48cc/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hp48cc
 PORTVERSION=	1.3
@@ -23,6 +23,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
