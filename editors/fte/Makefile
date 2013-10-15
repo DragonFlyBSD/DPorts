@@ -1,5 +1,5 @@
 # Created by: gelf
-# $FreeBSD: editors/fte/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: editors/fte/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=		fte
 PORTVERSION=		20051115
@@ -20,6 +20,7 @@ USE_ZIP=		yes
 USES=		perl5
 USE_PERL5=	build
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^PREFIX=,PREFIX?=,' \
 		${WRKSRC}/Makefile
