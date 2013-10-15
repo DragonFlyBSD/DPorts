@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fapg
-# Date created:		2006-06-22
-# Whom:			chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/audio/fapg/Makefile,v 1.13 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: audio/fapg/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	fapg
 PORTVERSION=	0.41
@@ -15,7 +11,8 @@ COMMENT=	Fast Audio Playlist Generator
 
 LIB_DEPENDS=	uriparser:${PORTSDIR}/net/uriparser
 
-MAKE_ARGS+=	CC=${CC}
+MAKE_ARGS+=	CC="${CC}"
+NO_STAGE=	yes
 
 MAN1=		fapg.1
 
