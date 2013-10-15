@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/xtic/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xtic/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xtic
 PORTVERSION=	1.12
@@ -17,6 +17,7 @@ USE_XORG=	xaw
 MAN1=		xtic.1
 PLIST_FILES=	bin/xtic
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%LOCALBASE%%|${LOCALBASE}|g" ${WRKSRC}/configure.h
 
