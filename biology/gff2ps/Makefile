@@ -1,5 +1,5 @@
 # Created by: Camson Huynh <chuynh@biolateral.com.au>
-# $FreeBSD: biology/gff2ps/Makefile 321308 2013-06-19 18:56:37Z bsam $
+# $FreeBSD: biology/gff2ps/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	gff2ps
 PORTVERSION=	0.98d
@@ -27,6 +27,7 @@ GFF2PS_MAN=	MANUAL_GFF2PS_v0.96.ps
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
