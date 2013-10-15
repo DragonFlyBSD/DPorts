@@ -1,6 +1,5 @@
 # Created by: Dominic Marks <dom@wirespeed.org.uk>
-# $Tecnik: ports/mail/dspam/Makefile,v 1.18 2006/06/07 23:40:55 itetcu Exp $
-# $FreeBSD: mail/dspam/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: mail/dspam/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 # Note to commiters: If don't commit a maintainer patch and as a result PKGNAME
 # or user variables (WITH*) changes please add an entry in ${FILESDIR}/UPDATING
@@ -73,7 +72,7 @@ OPTIONS_DEFAULT=	SYSLOG DEBUG DAEMON CLAMAV CLAMAV_LOCAL \
 		PGSQL SQLITE3 HASH
 
 MAKE_JOBS_UNSAFE=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -108,6 +107,7 @@ DSPAM_HOME_OWNER?=	${DSPAM_OWNER}
 DSPAM_HOME_GROUP?=	${DSPAM_GROUP}
 DSPAM_HOME_MODE?=	0770
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ARGS+=	--sysconfdir=${DSPAM_ETC}
@@ -381,7 +381,6 @@ RUN_DEPENDS+=	p5-GD-Graph3d>=0:${PORTSDIR}/graphics/p5-GD-Graph3d
 RUN_DEPENDS+=	p5-GD-TextUtil>=0:${PORTSDIR}/graphics/p5-GD-TextUtil
 CONFIGURE_ARGS+=--enable-logging
 CONFIGURE_ARGS+=--enable-user-logging
-USE_PERL5=	yes
 PLIST_SUB+=	WebUI=""
 _SED_SCRIPT+=	-e 's/%%WebUI%%//g'
 _SED_SCRIPT+=	-e 's,%%WWWDIR%%,${WWWDIR},g'
