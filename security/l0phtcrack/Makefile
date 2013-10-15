@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/l0phtcrack/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: security/l0phtcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	l0phtcrack
 PORTVERSION=	1.5
@@ -21,6 +21,7 @@ USE_PERL5=	build
 USE_ZIP=	yes
 USE_DOS2UNIX=	yes
 
+NO_STAGE=	yes
 post-extract:
 	${RM} ${WRKDIR}/*exe
 	${REINPLACE_CMD} -i '' -e 's|ommited|omitted|' ${WRKDIR}/util.c
