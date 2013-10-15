@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: misc/gkrellm-helium/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: misc/gkrellm-helium/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gkrellm-helium
 PORTVERSION=	2.3.1
@@ -21,6 +21,7 @@ PLIST_FILES=	libexec/gkrellm2/plugins/helium.so
 CFLAGS+=	-fPIC -I${LOCALBASE}/include
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/lib/gkrellm2/plugins|${PREFIX}/libexec/gkrellm2/plugins| ; \
 		s|CFLAGS =|CFLAGS?=| ; s|-lcurl|-lcurl -L${LOCALBASE}/lib|' ${WRKSRC}/Makefile
