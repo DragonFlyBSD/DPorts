@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php52-json
-# Date created:			17 Apr 2010
-# Whom:				Alex Keda <admin@lissyara.su>
-#
-# $FreeBSD: ports/devel/php52-json/Makefile,v 1.2 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Alex Keda <admin@lissyara.su>
+# $FreeBSD: devel/php52-json/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 CATEGORIES=	devel
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php52
 
 PKGNAMESUFFIX=	-json
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
