@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
-# $FreeBSD: devel/p5-Time-Format/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-Time-Format/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-Format
 PORTVERSION=	1.12
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Time::Format.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
