@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/oinkmaster/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/oinkmaster/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	oinkmaster
 PORTVERSION=	2.0
@@ -25,6 +25,7 @@ PORTDOCS=	README
 MAN1=		oinkmaster.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/bin/perl,${PERL},g' \
 		-e 's,"tPf","tf",' \
