@@ -1,8 +1,8 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: devel/p5-File-Path-Tiny/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-File-Path-Tiny/Makefile 329422 2013-10-05 07:16:45Z culot $
 
 PORTNAME=	File-Path-Tiny
-PORTVERSION=	0.5
+PORTVERSION=	0.7
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,7 +15,5 @@ LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	File::Path::Tiny.3
 
 .include <bsd.port.mk>
