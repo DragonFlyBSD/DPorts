@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: misc/histring/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/histring/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	histring
 PORTVERSION=	1.1.0
