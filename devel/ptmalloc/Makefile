@@ -1,9 +1,5 @@
-# Ports Collection Makefile for:	ptmalloc
-# Date created:				10 December 2004
-# Who:					Greg 'groggy' Lehey <grog@FreeBSD.org>
-# Whom: is grammatically incorrect in this context.
-#
-# $FreeBSD: ports/devel/ptmalloc/Makefile,v 1.15 2013/02/14 10:22:19 svnexp Exp $
+# Created by: is grammatically incorrect in this context.
+# $FreeBSD: devel/ptmalloc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ptmalloc
 PORTVERSION=	3.0
@@ -34,6 +30,7 @@ do-install:	all
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
