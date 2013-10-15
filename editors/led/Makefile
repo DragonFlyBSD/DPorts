@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/led/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: editors/led/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	led
 PORTVERSION=	2.0
@@ -15,4 +15,5 @@ USES=		perl5
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
