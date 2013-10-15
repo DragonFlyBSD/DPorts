@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: www/hs-http-server/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-http-server/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	http-server
 PORTVERSION=	1.0.2
@@ -19,6 +19,7 @@ INSTALL_PORTEXAMPLES=	cd ${WRKSRC}/example && \
 OPTIONS_DEFINE=		EXAMPLES
 OPTIONS_DEFAULT=	EXAMPLES
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MEXAMPLES}
