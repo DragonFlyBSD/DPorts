@@ -1,5 +1,5 @@
 # Created by: Phil Phillips <pphillips@experts-exchange.com>
-# $FreeBSD: graphics/rubygem-chunky_png/Makefile 322810 2013-07-12 04:00:51Z swills $
+# $FreeBSD: graphics/rubygem-chunky_png/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	chunky_png
 PORTVERSION=	1.2.8
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
