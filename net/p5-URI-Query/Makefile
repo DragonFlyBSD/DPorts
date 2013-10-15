@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-URI-Query/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: net/p5-URI-Query/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
 
 PORTNAME=	URI-Query
 PORTVERSION=	0.10
@@ -18,7 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		URI::Query.3
 
 .include <bsd.port.mk>
