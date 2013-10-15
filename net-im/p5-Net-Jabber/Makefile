@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: net-im/p5-Net-Jabber/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-Net-Jabber/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-Jabber
 PORTVERSION=	2.0
@@ -27,4 +27,5 @@ MAN3=		Net::Jabber.3 Net::Jabber::Client.3 Net::Jabber::Component.3 \
 		Net::Jabber::Server.3 Net::Jabber::Stanza.3 \
 		Net::Jabber::XDB.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
