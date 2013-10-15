@@ -1,8 +1,9 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: textproc/gnugrep/Makefile 321704 2013-06-24 18:53:26Z johans $
+# $FreeBSD: textproc/gnugrep/Makefile 329600 2013-10-06 16:18:29Z johans $
 
 PORTNAME=	grep
 PORTVERSION=	2.14
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	gnu
@@ -17,19 +18,19 @@ CONFLICTS=	bsd-grep-[0-9]*
 USES+=		charsetfix
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		egrep.1 \
-		fgrep.1 \
-		grep.1
 INFO=		grep
 
 OPTIONS_DEFINE=	PCRE NLS
+OPTIONS_DEFAULT=PCRE NLS
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
-LDFLAGS+=	-lintl -L${LOCALBASE}/lib
+LDFLAGS+=	-lintl
 PLIST_SUB+=	NLS=
 .else
 CONFIGURE_ARGS+=	--disable-nls
@@ -37,7 +38,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPCRE}
-LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 .else
 CONFIGURE_ARGS+=	--disable-perl-regexp
 .endif
