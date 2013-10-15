@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gwhich
-# Date created:		20 September 2000
-# Whom:			Jeremy Shaffner <jeremy@external.org>
-#
-# $FreeBSD: ports/misc/gwhich/Makefile,v 1.14 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: Jeremy Shaffner <jeremy@external.org>
+# $FreeBSD: misc/gwhich/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gwhich
 PORTVERSION=	2.20
@@ -23,6 +19,7 @@ INFO=		which
 PORTEXAMPLES=	EXAMPLES
 PLIST_FILES=	bin/gwhich
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
