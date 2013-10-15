@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-fluendo-mpegdemux/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: multimedia/gstreamer-plugins-fluendo-mpegdemux/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gstreamer-plugins-fluendo-mpegdemux
 PORTVERSION=	0.10.71
@@ -20,4 +20,5 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/gstreamer-0.10/libgstflumpegdemux.la \
 		lib/gstreamer-0.10/libgstflumpegdemux.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
