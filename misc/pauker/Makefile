@@ -1,5 +1,5 @@
 # Created by: Alex Stangl <alex@stangl.us>
-# $FreeBSD: ports/misc/pauker/Makefile,v 1.6 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: misc/pauker/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pauker
 DISTVERSION=	1.8RC2
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${DISTDIR}/${DISTNAME}.jar ${JAVAJARDIR}/${PORTNAME}.jar
 	@${SED} -e "s:%%LOCALBASE%%:${LOCALBASE}:" \
