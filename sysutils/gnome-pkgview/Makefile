@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-pkgview/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: sysutils/gnome-pkgview/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-pkgview/Makefile,v 1.6 2007/05/30 03:21:44 mezz Exp $
 
 PORTNAME=	gnome-pkgview
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gnome-pkgview.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/src/config-path.c
