@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/mail/milter-regex/Makefile,v 1.28 2013/01/27 06:41:39 svnexp Exp $
+# $FreeBSD: mail/milter-regex/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	milter-regex
 PORTVERSION=	1.9
@@ -11,6 +11,8 @@ COMMENT=	Milter plugin to sendmail for regular expression filtering
 
 LICENSE=	BSD
 LICENSE_FILE=	${FILESDIR}/COPYRIGHT
+
+NO_STAGE=	yes
 
 MAILUSER?=	mailnull
 MAN8=		milter-regex.8
