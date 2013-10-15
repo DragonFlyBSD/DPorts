@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/seabattle/Makefile 319414 2013-05-30 11:45:14Z antoine $
+# $FreeBSD: games/seabattle/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	seabattle
 PORTVERSION=	1.0
@@ -14,6 +14,7 @@ COMMENT=	Curses based battleship type game
 
 PORTDOCS=	readme.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
