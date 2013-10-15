@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-astroid/Makefile 326707 2013-09-08 08:19:13Z mva $
+# $FreeBSD: devel/py-astroid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	astroid
 PORTVERSION=	1.0.0
@@ -20,6 +20,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	astroid
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
