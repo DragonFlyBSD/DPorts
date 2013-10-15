@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hlfl
-# Date Created:				8 Jun 2001
-# Whom:					Arnaud Launay <alaunay@hlfl.org>
-#
-# $FreeBSD: ports/security/hlfl/Makefile,v 1.5 2012/11/17 06:01:05 svnexp Exp $
-#
+# Created by: Arnaud Launay <alaunay@hlfl.org>
+# $FreeBSD: security/hlfl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	hlfl
 PORTVERSION=	0.60.1
@@ -18,6 +14,7 @@ CONFIGURE_ARGS+=	--datadir=${LOCALBASE}/share/doc
 DOC_FILES=	services.hlfl sample_1.hlfl sample_2.hlfl test.hlfl syntax.txt
 MAN1=		hlfl.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/hlfl ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/doc/${MAN1} ${PREFIX}/man/man1
