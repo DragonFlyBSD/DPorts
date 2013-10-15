@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-FileHandle-Unget/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-FileHandle-Unget/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	FileHandle-Unget
 PORTVERSION=	0.1623
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		FileHandle::Unget.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
