@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-RobotsMETA
-# Date created:		2008-01-29
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: www/p5-HTML-RobotsMETA/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: www/p5-HTML-RobotsMETA/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-RobotsMETA
 PORTVERSION=	0.00004
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 MAN3=		HTML::RobotsMETA.3 \
 		HTML::RobotsMETA::Rules.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
