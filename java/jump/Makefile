@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/java/jump/Makefile,v 1.24 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jump/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jump
 PORTVERSION=	0.5
@@ -27,6 +27,7 @@ PORTDOCS=	*
 
 PLIST_FILES+=	%%JAVAJARDIR%%/${JARFILE}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${JARFILE}..."
 	@${INSTALL_DATA} ${WRKSRC}/build/${JARFILE} ${JAVAJARDIR}/${JARFILE}
