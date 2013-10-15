@@ -1,5 +1,5 @@
 # Created by: Paolo Pisati <flag@libero.it>
-# $FreeBSD: net/wmnet2/Makefile 321999 2013-06-28 22:21:39Z bapt $
+# $FreeBSD: net/wmnet2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	wmnet2
 PORTVERSION=	1.06
@@ -18,4 +18,5 @@ USE_XORG=	x11 xext
 MAN1=		wmnet2.1
 PLIST_FILES=	bin/wmnet2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
