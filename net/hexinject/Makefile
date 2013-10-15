@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: ports/net/hexinject/Makefile,v 1.8 2013/02/25 10:46:52 svnexp Exp $
+# $FreeBSD: net/hexinject/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	hexinject
 PORTVERSION=	1.5
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '2s#-lpcap#-L${LOCALBASE}/lib -lpcap#' ${WRKSRC}/Makefile
 
