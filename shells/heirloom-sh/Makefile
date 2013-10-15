@@ -1,9 +1,5 @@
-# Ports collection makefile for:	heirloom-sh
-# Date created:				2008-03-28
-# Whom:					Danijel Tasov <danielt@pilgerer.org>
-#
-# $FreeBSD: ports/shells/heirloom-sh/Makefile,v 1.3 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: Danijel Tasov <danielt@pilgerer.org>
+# $FreeBSD: shells/heirloom-sh/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	heirloom-sh
 PORTVERSION=	050706
@@ -21,6 +17,7 @@ PORTDOCS=	CALDERA.LICENSE OPENSOLARIS.LICENSE CHANGES README
 PKGINSTALL=	pkg-install
 PKGDEINSTALL=	pkg-deinstall
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && make
 
