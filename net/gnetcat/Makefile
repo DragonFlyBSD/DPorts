@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnetcat
-# Date created:		10 January 2004
-# Whom:			liamfoy@sepulcrum.org
-#
-# $FreeBSD: net/gnetcat/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: liamfoy@sepulcrum.org
+# $FreeBSD: net/gnetcat/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gnetcat
 PORTVERSION=	0.7.1
@@ -24,6 +20,7 @@ MAN1=		gnetcat.1
 MANCOMPRESSED=	no
 PLIST_FILES=	bin/gnetcat
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/netcat ${PREFIX}/bin/gnetcat
 	${INSTALL_MAN} ${WRKSRC}/doc/netcat.1 ${PREFIX}/man/man1/gnetcat.1
