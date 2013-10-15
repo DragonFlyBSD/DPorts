@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann
-# $FreeBSD: sysutils/cdbkup/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: sysutils/cdbkup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cdbkup
 PORTVERSION=	1.0
@@ -25,4 +25,5 @@ CONFIGURE_ENV+=	PATH=${PATH}:${LOCALBASE}/sbin
 MAN1=		cdbkup.1 cdappend.1 cdcat.1 cdrstr.1 cdsplit.1
 PORTDOCS=	README TODO COMPLIANCE
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
