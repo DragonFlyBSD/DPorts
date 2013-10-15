@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qmail-notify
-# Date created:		24 Aug 2002
-# Whom:			Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: mail/qmail-notify/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: mail/qmail-notify/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qmail-notify
 PORTVERSION=	0.93
@@ -19,6 +15,7 @@ CFLAGS+=	-DHAVE_SRANDOM
 DOCS=		NEWS README TODO
 EXAMPLES=	cron.hourly message.txt
 
+NO_STAGE=	yes
 do-configure:
 	${ECHO_CMD} "${PREFIX}/bin"	> ${WRKSRC}/conf-bin
 	${ECHO_CMD} "${CC} ${CFLAGS}"	> ${WRKSRC}/conf-cc
