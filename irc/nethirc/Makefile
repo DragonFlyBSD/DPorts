@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: irc/nethirc/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/nethirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	NetHirc
 PORTVERSION=	0.94
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN1=		nethirc.pl.1
 MAN3=		NetHirc.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
