@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: net/ssvnc/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: net/ssvnc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ssvnc
 PORTVERSION=	1.0.29
@@ -28,6 +28,7 @@ USE_PERL5=	run
 MAN1=		ssvnc.1 ssvncviewer.1 ssvnc-gui.1
 NO_INSTALL_MANPAGES=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MULTRAFTP}
