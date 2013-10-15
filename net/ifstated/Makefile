@@ -1,5 +1,5 @@
 # Created by: Matthew George <mdg@secureworks.net>
-# $FreeBSD: net/ifstated/Makefile 306683 2012-10-30 16:55:15Z pawel $
+# $FreeBSD: net/ifstated/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ifstated
 PORTVERSION=	5.1
@@ -21,6 +21,7 @@ SUB_FILES=	pkg-message
 
 USE_RC_SUBR=	ifstated
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' ${WRKSRC}/ifstated.conf.5
