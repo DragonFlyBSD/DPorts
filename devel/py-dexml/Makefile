@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/devel/py-dexml/Makefile,v 1.13 2012/11/17 05:56:46 svnexp Exp $
+# $FreeBSD: devel/py-dexml/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	dexml
 PORTVERSION=	0.5.1
@@ -15,4 +15,5 @@ LICENSE=	MIT
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
