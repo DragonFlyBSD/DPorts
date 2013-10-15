@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-Exception-Class-TryCatch/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-Exception-Class-TryCatch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Exception-Class-TryCatch
 PORTVERSION=	1.12
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Exception::Class::TryCatch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
