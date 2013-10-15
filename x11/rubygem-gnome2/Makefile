@@ -1,4 +1,4 @@
-# $FreeBSD: x11/rubygem-gnome2/Makefile 320401 2013-06-09 18:54:19Z swills $
+# $FreeBSD: x11/rubygem-gnome2/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	gnome2
 PORTVERSION=	2.0.2
@@ -26,6 +26,7 @@ RUN_DEPENDS=	rubygem-clutter-gtk>=${PORTVERSION}:${PORTSDIR}/graphics/rubygem-cl
 USE_RUBY=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${DO_NADA}
 
