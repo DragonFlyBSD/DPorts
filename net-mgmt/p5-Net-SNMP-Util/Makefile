@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-SNMP-Util
-# Date created:		2011-03-29
-# Whom:			Hsin-Han You <hhyou@cs.nctu.edu.tw>
-#
-# $FreeBSD: net-mgmt/p5-Net-SNMP-Util/Makefile 326245 2013-09-04 03:27:37Z az $
-#
+# Created by: Hsin-Han You <hhyou@cs.nctu.edu.tw>
+# $FreeBSD: net-mgmt/p5-Net-SNMP-Util/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-SNMP-Util
 PORTVERSION=	1.04
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::SNMP::Util.3 Net::SNMP::Util::OID.3 Net::SNMP::Util::TC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
