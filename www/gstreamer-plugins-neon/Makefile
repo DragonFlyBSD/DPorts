@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gstreamer-plugins-neon
-# Date created:			6 July 2006
-# Whom:				Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/www/gstreamer-plugins-neon/Makefile,v 1.13 2012/11/17 06:02:34 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: www/gstreamer-plugins-neon/Makefile 327776 2013-09-20 23:36:50Z bapt $
 #    $MCom: ports/www/gstreamer-plugins-neon/Makefile,v 1.5 2008/03/19 14:05:38 ahze Exp $
-#
 
 PORTREVISION=	0
 CATEGORIES=	www
@@ -15,4 +11,5 @@ GST_PLUGIN=	neon
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
