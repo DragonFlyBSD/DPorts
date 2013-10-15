@@ -1,5 +1,5 @@
 # Created by: krion@FreeBSD.org
-# $FreeBSD: net/icpld/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/icpld/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	icpld
 PORTVERSION=	1.1.5
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/icpld etc/icpld.conf.sample etc/rc.d/icpld.sh.sample
 
 OPTIONS_DEFINE=	IPV6 DOCS
 
+NO_STAGE=	yes
 .include  <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
