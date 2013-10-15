@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@FreeBSD.org>
-# $FreeBSD: net/ohphone/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net/ohphone/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ohphone
 PORTVERSION=	1.4.5
@@ -27,6 +27,7 @@ PLIST_SUB=	PORTNAME=${PORTNAME}
 DOCSDIR=	${PREFIX}/share/doc/openh323
 EXAMPLESDIR=	${PREFIX}/share/examples/openh323
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/obj_r/ohphone ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/ohphone.1 ${PREFIX}/man/man1
