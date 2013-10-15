@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/py-icalendar/Makefile 324956 2013-08-19 08:39:31Z sunpoet $
+# $FreeBSD: devel/py-icalendar/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	icalendar
 PORTVERSION=	3.5
@@ -21,6 +21,7 @@ USE_PYDISTUTILS=easy_install
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
