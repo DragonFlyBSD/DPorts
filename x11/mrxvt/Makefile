@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: x11/mrxvt/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/mrxvt/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	mrxvt
 PORTVERSION=	0.4.2
@@ -9,16 +9,17 @@ MASTER_SITES=	SF/materm/${PORTNAME}%20source/${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A tabbed version of rxvt
+COMMENT=	Tabbed version of rxvt
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libjpeg.so.11:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 CONFLICTS=	mrxvt-0.5.*
 
 GNU_CONFIGURE=	yes
 USE_XORG=	x11
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 900007
