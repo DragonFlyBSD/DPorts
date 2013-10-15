@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gtg/Makefile 323220 2013-07-18 10:42:14Z rm $
+# $FreeBSD: deskutils/gtg/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gtg
 PORTVERSION=	0.3
@@ -29,6 +29,7 @@ OPTIONS_DEFINE=	CHEETAH
 CHEETAH_DESC=	Needed for export plugin to work
 OPTIONS_EXCLUDE=NLS DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCHEETAH}
