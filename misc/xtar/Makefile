@@ -1,5 +1,5 @@
 # Created by: Andreas Kohout <shanee@rabbit.augusta.de>
-# $FreeBSD: misc/xtar/Makefile 324755 2013-08-15 09:16:32Z danfe $
+# $FreeBSD: misc/xtar/Makefile 327748 2013-09-20 21:23:56Z bdrewery $
 
 PORTNAME=	xtar
 PORTVERSION=	1.4
@@ -21,6 +21,7 @@ MAKE_ARGS=	XINC="-I${LOCALBASE}/include" XMLIB="${MOTIFLIB}" \
 		MANDIR="${MAN1PREFIX}/man/man1" OPTIMISATION="${CFLAGS}" \
 		ANSIFLAG=-ansi CC="${CC}" RANLIB=:
 
+NO_STAGE=	yes
 MAN1=		xtar.1
 PLIST_FILES=	bin/xtar lib/X11/xtar/xtar.doc lib/X11/app-defaults/XTar
 PLIST_DIRS=	lib/X11/xtar
