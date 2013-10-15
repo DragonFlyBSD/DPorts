@@ -1,5 +1,5 @@
 # Created by: mark@foster.cc
-# $FreeBSD: dns/scavenge/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/scavenge/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	scavenge
 PORTVERSION=	2.0
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/scavenge
 NO_BUILD=	yes
 USES=		perl5
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/scavenge ${PREFIX}/bin
 
