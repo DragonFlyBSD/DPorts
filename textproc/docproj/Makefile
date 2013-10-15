@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: textproc/docproj/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: textproc/docproj/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docproj
 PORTVERSION=	1.17
@@ -47,6 +47,7 @@ OPTIONS_DEFAULT=	X11 OPENJADE CJK SVN IGOR
 OPTIONS_DEFAULT+=	JADETEX
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSVN}
