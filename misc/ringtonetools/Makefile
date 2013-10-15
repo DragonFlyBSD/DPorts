@@ -1,5 +1,5 @@
 # Created by: Michael A. Kohn <mike@mikekohn.net>
-# $FreeBSD: misc/ringtonetools/Makefile 323280 2013-07-19 10:34:40Z danfe $
+# $FreeBSD: misc/ringtonetools/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	ringtonetools
 PORTVERSION=	2.26
@@ -13,6 +13,7 @@ RESTRICTED=	no-commercial-use
 
 MAKE_ARGS=	CC="${CC}" FLAGS="${CFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
