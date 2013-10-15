@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/ldap2dns/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: net/ldap2dns/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldap2dns
 PORTVERSION=	0.4.2
@@ -37,6 +37,7 @@ PLIST_FILES=	bin/ldap2dns \
 PLIST_DIRS=	%%DATADIR%%
 
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 post-patch:
 	@${REINPLACE_CMD} -e \
