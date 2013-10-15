@@ -1,5 +1,5 @@
 # Created by: Michael Fausten <ports@michael-fausten.de>
-# $FreeBSD: www/smarty3/Makefile 322166 2013-07-02 12:36:41Z wg $
+# $FreeBSD: www/smarty3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	smarty3
 PORTVERSION=	3.1.14
@@ -19,6 +19,7 @@ WANT_PHP_WEB=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 .for f in Smarty.class.php SmartyBC.class.php debug.tpl
