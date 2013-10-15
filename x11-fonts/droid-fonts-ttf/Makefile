@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: x11-fonts/droid-fonts-ttf/Makefile 325466 2013-08-27 16:24:56Z sunpoet $
+# $FreeBSD: x11-fonts/droid-fonts-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	droid-fonts-ttf
 PORTVERSION=	20110324
@@ -23,6 +23,7 @@ PLIST_SUB=	FONTDIR=${FONTDIR}
 SUB_FILES=	pkg-message
 SUB_LIST=	FONTDIR=${FONTDIR}
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}/ && \
 		${LOCALBASE}/bin/mkfontscale && \
