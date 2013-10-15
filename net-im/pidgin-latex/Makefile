@@ -1,5 +1,5 @@
 # Created by: Geoffrey Mainland <mainland@apeiron.net>
-# $FreeBSD: net-im/pidgin-latex/Makefile 326997 2013-09-11 17:20:45Z marino $
+# $FreeBSD: net-im/pidgin-latex/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	latex
 PORTVERSION=	1.0
@@ -26,6 +26,7 @@ USE_BZIP2=	yes
 
 PLIST_FILES=	lib/pidgin/LaTeX.so
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/LaTeX.so ${PREFIX}/lib/pidgin
 
