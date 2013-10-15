@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/mail2procmailrc/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: mail/mail2procmailrc/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mail2procmailrc
 PORTVERSION=	0.9
@@ -17,6 +17,7 @@ RUN_DEPENDS=	p5-Curses>=0:${PORTSDIR}/devel/p5-Curses \
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/generateproc.pl ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mail2procmail.pl ${PREFIX}/bin/mail2procmail
