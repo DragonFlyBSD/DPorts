@@ -1,5 +1,5 @@
 # Created by: Conor McDermottroe <ports@mcdermottroe.com>
-# $FreeBSD: comms/o2sms/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: comms/o2sms/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	o2sms
 PORTVERSION=	3.36
@@ -32,4 +32,5 @@ MAN3=		WWW::SMS::IE::aftsms.3 \
 		WWW::SMS::IE::threesms.3 \
 		WWW::SMS::IE::vodasms.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
