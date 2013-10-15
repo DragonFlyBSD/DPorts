@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: shells/rc/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: shells/rc/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	rc
 PORTVERSION=	1.7.1
@@ -18,6 +18,7 @@ MAN1=		history.1 rc.1
 
 OPTIONS_DEFINE=	READLINE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
