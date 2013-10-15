@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: databases/pgbadger/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/pgbadger/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgbadger
 PORTVERSION=	3.4
@@ -15,4 +15,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN1=		pgbadger.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
