@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Devel/Makefile 326604 2013-09-07 10:19:55Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Devel/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Devel
 PORTVERSION=	1.38
@@ -44,4 +44,5 @@ MAN3=		Catalyst::Devel.3 \
 		Catalyst::Restarter::Win32.3 \
 		Module::Install::Catalyst.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
