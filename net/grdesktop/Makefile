@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: net/grdesktop/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: net/grdesktop/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	grdesktop
 PORTVERSION=	0.23
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--with-keymap-path=${LOCALBASE}/share/rdesktop/keymaps
 
 MAN1=		grdesktop.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(GETTEXT_PACKAGE =\).*|\1 grdesktop|' ${WRKSRC}/po/Makefile.in.in
 
