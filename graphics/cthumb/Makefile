@@ -1,5 +1,5 @@
 # Created by: dom@happygiraffe.net
-# $FreeBSD: graphics/cthumb/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: graphics/cthumb/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cthumb
 PORTVERSION=	4.2
@@ -49,6 +49,7 @@ THEMES=		blue-steel.theme \
 		tv-large.theme \
 		tv.theme
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cthumb ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cthumb.1 ${PREFIX}/man/man1
