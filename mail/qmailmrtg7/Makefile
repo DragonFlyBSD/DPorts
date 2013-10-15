@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: mail/qmailmrtg7/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/qmailmrtg7/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qmailmrtg7
 PORTVERSION=	4.2
@@ -14,6 +14,7 @@ RUN_DEPENDS=	mrtg:${PORTSDIR}/net-mgmt/mrtg
 
 USES=		qmail
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
