@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@rrnet.com>
-# $FreeBSD: math/xlispstat/Makefile 319835 2013-06-04 08:26:46Z miwi $
+# $FreeBSD: math/xlispstat/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	xlispstat
 PORTVERSION=	3.52.23
@@ -19,4 +19,5 @@ CONFIGURE_ENV=	UCFLAGS="${CFLAGS}"
 ALL_TARGET=	${PORTNAME}
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
