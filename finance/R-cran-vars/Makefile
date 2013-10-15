@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-vars/Makefile 323595 2013-07-24 13:13:05Z tota $
+# $FreeBSD: finance/R-cran-vars/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	vars
 DISTVERSION=	1.5-2
@@ -20,4 +20,5 @@ RUN_DEPENDS=	R-cran-strucchange>0:${PORTSDIR}/finance/R-cran-strucchange \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
