@@ -1,5 +1,5 @@
 # Created by: Dan Phillips <dan-ports@dp.id.au>
-# $FreeBSD: french/verbiste/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: french/verbiste/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	verbiste
 PORTVERSION=	0.1.33
@@ -25,6 +25,7 @@ MAN1=		french-conjugator.1 french-deconjugator.1
 MAN3=		verbiste.3
 MANLANG=	"" fr
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
