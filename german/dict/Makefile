@@ -1,9 +1,5 @@
-# New ports collection makefile for: dict
-# Date created:         6 August 1997
-# Whom:                 wosch
-#
-# $FreeBSD: ports/german/dict/Makefile,v 1.17 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: wosch
+# $FreeBSD: german/dict/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	dict
 PORTVERSION=	1.2
@@ -21,6 +17,7 @@ RUN_DEPENDS=	agrep:${PORTSDIR}/textproc/agrep
 dict=		ger-eng.txt
 
 post-extract: ${dict}
+NO_STAGE=	yes
 ${dict}:
 	${GZCAT} < ${DISTDIR}/${dict}.gz > ${WRKSRC}/${.TARGET}
 
