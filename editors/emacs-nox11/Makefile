@@ -1,9 +1,5 @@
-# Ports collection makefile for:  emacs-devel
-# Date created:			  Sep 07 2008
-# Whom:				  phoffman@proper.com
-#
-# $FreeBSD: ports/editors/emacs-nox11/Makefile,v 1.9 2012/11/17 05:57:13 svnexp Exp $
-#
+# Created by: phoffman@proper.com
+# $FreeBSD: editors/emacs-nox11/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTREVISION=		8
 PKGNAMESUFFIX=	-nox11
@@ -33,4 +29,5 @@ EMACS_NO_X11_SLAVE=	yes
 MASTERDIR=	${.CURDIR}/../emacs
 LATEST_LINK=	emacs-nox11
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
