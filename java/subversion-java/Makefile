@@ -1,5 +1,5 @@
 # Created by: Lev Serebryako <lev@FreeBSD.org>
-# $FreeBSD: java/subversion-java/Makefile 321479 2013-06-21 16:41:01Z lev $
+# $FreeBSD: java/subversion-java/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PKGNAMESUFFIX=	-java
 CATEGORIES=	java
@@ -24,6 +24,7 @@ JAVA_RUN=	yes
 
 SVN_BUILD_BINDINGS=yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-javahl --with-jdk=${JAVA_HOME} --with-jikes=no
