@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  plan
-# Date created:			  Sat Jan 31, 1998
-# Whom:				  David O'Brien (obrien@cs.ucdavis.edu)
-#
-# $FreeBSD: ports/japanese/plan/Makefile,v 1.19 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@cs.ucdavis.edu)
+# $FreeBSD: japanese/plan/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	plan
 PORTVERSION=	1.9
@@ -20,6 +15,7 @@ MASTERDIR=	${.CURDIR}/../../deskutils/plan
 PLIST=	${WRKDIR}/PLIST
 EXTRA_PATCHES=	${.CURDIR}/files/patch-*
 
+NO_STAGE=	yes
 post-build:
 .if !defined(NOPORTDOCS)
 	${ECHO_CMD} ${DOCSDIR:S|${PREFIX}/||}/plan_calEUC.ps > ${WRKDIR}/PLIST
