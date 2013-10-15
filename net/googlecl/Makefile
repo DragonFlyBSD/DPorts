@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: ports/net/googlecl/Makefile,v 1.13 2013/01/09 11:12:49 svnexp Exp $
+# $FreeBSD: net/googlecl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	googlecl
 PORTVERSION=	0.9.14
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
