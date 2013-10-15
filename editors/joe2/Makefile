@@ -1,9 +1,5 @@
-# New ports collection makefile for:	joe
-# Date created:		01 Jul 1995
-# Whom:			torstenb@FreeBSD.org
-#
-# $FreeBSD: editors/joe2/Makefile 326307 2013-09-04 18:06:07Z madpilot $
-#
+# Created by: torstenb@FreeBSD.org
+# $FreeBSD: editors/joe2/Makefile 329696 2013-10-07 12:23:05Z bapt $
 
 PORTNAME=	joe
 PORTVERSION=	2.9.8
@@ -15,7 +11,7 @@ COMMENT?=	Joe's Own Editor
 
 RUN_DEPENDS=	ispell:${PORTSDIR}/textproc/ispell
 
-LATEST_LINK?=	joe2
+PKGNAMESUFFIX=	2
 CONFLICTS=	joe-3*
 
 GNU_CONFIGURE=	yes
@@ -27,6 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 ALL_TARGET=	${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
