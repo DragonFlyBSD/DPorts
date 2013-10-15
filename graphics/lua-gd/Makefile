@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: graphics/lua-gd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/lua-gd/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lua-gd
 PORTVERSION=	2.0.33r2
@@ -22,6 +22,7 @@ CFLAGS+=	-I${LUA_INCDIR} -I${LOCALBASE}/include
 LDFLAGS+=	-shared -L${LOCALBASE}/lib -lgd -L${LUA_LIBDIR} -llua -lm
 GDFEATURES=	`gdlib-config --features |sed -e "s/GD_/-DGD_/g"`
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} ==	"x86_64"
