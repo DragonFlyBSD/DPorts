@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-Delegate/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-Delegate/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Session-Store-Delegate
 PORTVERSION=	0.06
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::Session::Store::Delegate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
