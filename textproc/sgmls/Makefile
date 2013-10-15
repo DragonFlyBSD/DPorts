@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sgmls
-# Date created:				Jun 2, 2000
-# Whom:					Eugene Furs <justas@mbank.lv>
-#
-# $FreeBSD: ports/textproc/sgmls/Makefile,v 1.7 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: Eugene Furs <justas@mbank.lv>
+# $FreeBSD: textproc/sgmls/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sgmls
 PORTVERSION=	1.1.91
@@ -24,6 +20,7 @@ MAN1=		sgmls.1 sgmlsasp.1 rast.1
 PROGS=		sgmls sgmlsasp rast
 DOCS=		ChangeLog INSTALL LICENSE NEWS README TODO
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/local,${PREFIX},g' ${WRKSRC}/Makefile
 
