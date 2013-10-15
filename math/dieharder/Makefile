@@ -1,9 +1,5 @@
-# New ports collection makefile for:   dieharder
-# Date created:        14 November 2008
-# Whom:                bf <bf2006a@yahoo.com>
-#
-# $FreeBSD: math/dieharder/Makefile 325401 2013-08-26 16:06:37Z bf $
-#
+# Created by: bf <bf2006a@yahoo.com>
+# $FreeBSD: math/dieharder/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	dieharder
 PORTVERSION=	3.31.1
@@ -29,6 +25,7 @@ USE_LDCONFIG=	yes
 MAN1=		dieharder.1
 MAN3=		libdieharder.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "sparc64"
