@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: benchmarks/lmbench/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/lmbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	lmbench
 PORTVERSION=	3.0.a9
@@ -29,6 +29,7 @@ MAN8=		bw_file_rd.8 bw_mem.8 bw_mem_rd.8 bw_mmap_rd.8 \
 
 USES=		gmake
 
+NO_STAGE=	yes
 # the bindir for the PLIST is:
 # (note that ./os needs to be run inside the work dir, running it
 #  outside will give a different result.)
