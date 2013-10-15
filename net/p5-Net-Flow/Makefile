@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net/p5-Net-Flow/Makefile 326384 2013-09-05 11:09:23Z az $
+# $FreeBSD: net/p5-Net-Flow/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Flow
 PORTVERSION=	1.000
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Flow.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
