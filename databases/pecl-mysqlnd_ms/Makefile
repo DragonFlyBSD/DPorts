@@ -1,5 +1,5 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: databases/pecl-mysqlnd_ms/Makefile 323360 2013-07-20 20:38:41Z miwi $
+# $FreeBSD: databases/pecl-mysqlnd_ms/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysqlnd_ms
 PORTVERSION=	1.5.2
@@ -17,4 +17,5 @@ USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 USE_PHPIZE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
