@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/py-dal/files/patch-dal_dbapi_db__row.py,v 1.2 2012/11/17 05:56:45 svnexp Exp $
+$FreeBSD: devel/py-dal/files/patch-dal_dbapi_db__row.py 300896 2012-07-14 13:54:48Z beat $
 
 --- dal/dbapi/db_row.py
 +++ dal/dbapi/db_row.py
