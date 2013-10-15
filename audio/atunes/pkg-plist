@@ -3,7 +3,7 @@ bin/atunes
 %%DATADIR%%/aTunes.jar
 %%DATADIR%%/changelog.txt
 %%DATADIR%%/lib/asm-4.0.jar
-%%DATADIR%%/lib/atunes-3.1.0.jar
+%%DATADIR%%/lib/atunes-3.1.1.jar
 %%DATADIR%%/lib/commons-beanutils-1.8.3.jar
 %%DATADIR%%/lib/commons-collections-3.2.1.jar
 %%DATADIR%%/lib/commons-io-2.4.jar
@@ -78,7 +78,7 @@ bin/atunes
 %%DATADIR%%/settings/spring/webservices.xml
 %%DATADIR%%/splash.gif
 share/pixmaps/atunes.png
-@dirrm %%DATADIR%%/settings/spring
-@dirrm %%DATADIR%%/settings
-@dirrm %%DATADIR%%/lib
-@dirrm %%DATADIR%%
+@dirrmtry %%DATADIR%%/settings/spring
+@dirrmtry %%DATADIR%%/settings
+@dirrmtry %%DATADIR%%/lib
+@dirrmtry %%DATADIR%%

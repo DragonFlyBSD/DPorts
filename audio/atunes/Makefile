@@ -1,8 +1,8 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: audio/atunes/Makefile 322538 2013-07-08 20:22:33Z lme $
+# $FreeBSD: audio/atunes/Makefile 328345 2013-09-26 09:16:15Z lme $
 
 PORTNAME=	atunes
-PORTVERSION=	3.1.0
+PORTVERSION=	3.1.1
 CATEGORIES=	audio java
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/aTunes%20${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
@@ -40,7 +40,7 @@ RUN_DEPENDS+=	mplayer:${PORTSDIR}/multimedia/mplayer
 .endif
 
 .if ${PORT_OPTIONS:MXINE}
-LIB_DEPENDS+=	xine:${PORTSDIR}/multimedia/libxine
+LIB_DEPENDS+=	libxine.so:${PORTSDIR}/multimedia/libxine
 .endif
 
 .if ${PORT_OPTIONS:MCDDA2WAV}
@@ -71,18 +71,18 @@ INSTALL_FILES=	aTunes.ico aTunes.jar splash.gif changelog.txt
 PIXMAPS=	atunes.png
 
 do-install:
-	@${MKDIR} ${DATADIR}
-	@${MKDIR} ${DATADIR}/lib
-	@${INSTALL_SCRIPT} ${WRKDIR}/atunes ${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}/lib
+	@${INSTALL_SCRIPT} ${WRKDIR}/atunes ${STAGEDIR}${PREFIX}/bin
 .for file in ${INSTALL_FILES}
-	@${INSTALL_DATA} ${WRKSRC}/${file} ${DATADIR}/${file}
+	@${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DATADIR}/${file}
 .endfor
 	@(cd ${WRKSRC} && ${FIND} lib -type f -name "*.jar" -exec ${INSTALL_DATA} {} \
-		${DATADIR}/{} \;)
-	@(cd ${WRKSRC} && ${COPYTREE_SHARE} settings ${DATADIR}/)
-	@${MKDIR} ${PREFIX}/share/pixmaps
+		${STAGEDIR}${DATADIR}/{} \;)
+	@(cd ${WRKSRC} && ${COPYTREE_SHARE} settings ${STAGEDIR}${DATADIR}/)
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 .for file in ${PIXMAPS}
-	@${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/pixmaps
+	@${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/share/pixmaps
 .endfor
 
 .include <bsd.port.mk>
