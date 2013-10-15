@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: sysutils/uniutils/Makefile 326365 2013-09-05 08:06:33Z thierry $
+# $FreeBSD: sysutils/uniutils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	uniutils
 PORTVERSION=	2.27
@@ -27,6 +27,7 @@ PORTDOCS=	AUTHORS NEWS README
 MAN1=		ExplicateUTF8.1 unidesc.1 unifuzz.1 unihist.1 uniname.1	\
 		unireverse.1
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/Makefile.in
 	${REINPLACE_CMD} -e 's|TestData|${EXAMPLESDIR}|' ${WRKSRC}/README
