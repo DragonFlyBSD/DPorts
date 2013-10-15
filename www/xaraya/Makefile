@@ -1,11 +1,5 @@
-# New ports collection makefile for:	xaraya
-# Date created:		2005-07-10
-# Whom:			Vsevolod Stakhov <vsevolod@highsecure.ru>
-#
-# $FreeBSD: ports/www/xaraya/Makefile,v 1.16 2012/11/17 06:03:11 svnexp Exp $
-#
-# Try to specify WITH_PGSQL to use pgsql php extension. Mysql
-# extension would be used by default.
+# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
+# $FreeBSD: www/xaraya/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xaraya
 PORTVERSION=	1.2.3
@@ -28,6 +22,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 # May user to override this
 XARAYADIR?=	www/xaraya
 
+NO_STAGE=	yes
 pre-install:
 	@${RM} -f ${TMPPLIST}
 
