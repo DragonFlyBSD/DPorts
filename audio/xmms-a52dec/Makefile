@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: audio/xmms-a52dec/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: audio/xmms-a52dec/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-a52dec
 PORTVERSION=	1.0
@@ -15,6 +15,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 RUN_DEPENDS=	${LOCALBASE}/lib/xmms/Output/libOSSSurround.so:${PORTSDIR}/audio/xmms-osssurround
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 CFLAGS+=	`xmms-config --cflags` -L${LOCALBASE}/lib
 
