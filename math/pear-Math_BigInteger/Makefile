@@ -1,5 +1,5 @@
 # Created by: Piotr Rybicki <meritus@innervision.pl>
-# $FreeBSD: math/pear-Math_BigInteger/Makefile 314372 2013-03-16 16:19:19Z miwi $
+# $FreeBSD: math/pear-Math_BigInteger/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math_BigInteger
 PORTVERSION=	1.0.0
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 USE_PHP=	pcre
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
