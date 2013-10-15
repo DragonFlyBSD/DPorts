@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/xcursor-themes/Makefile 323168 2013-07-17 14:05:06Z zeising $
+# $FreeBSD: x11-themes/xcursor-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	xcursor-themes
 PORTVERSION=	1.0.4
@@ -16,4 +16,5 @@ USE_XORG=	xextproto
 
 XORG_CAT=	data
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
