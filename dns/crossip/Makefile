@@ -1,5 +1,5 @@
 # Created by: Dan Smith <dan@algenta.com>
-# $FreeBSD: ports/dns/crossip/Makefile,v 1.9 2012/12/10 13:24:56 svnexp Exp $
+# $FreeBSD: dns/crossip/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	crossip
 DISTVERSION=	1.2
@@ -20,6 +20,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 SUB_FILES=	crossip.sh
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${DATADIR}
