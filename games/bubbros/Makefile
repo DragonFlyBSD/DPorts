@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/games/bubbros/Makefile,v 1.17 2013/01/09 20:04:44 svnexp Exp $
+# $FreeBSD: games/bubbros/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bubbros
 PORTVERSION=	1.6
@@ -16,6 +16,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USE_PYTHON=	yes
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		${WRKSRC}/display/setup.py
