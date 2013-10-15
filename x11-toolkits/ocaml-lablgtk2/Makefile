@@ -1,5 +1,5 @@
 # Created by: Rene Ladan
-# $FreeBSD: x11-toolkits/ocaml-lablgtk2/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: x11-toolkits/ocaml-lablgtk2/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	lablgtk2
 PORTVERSION=	2.16.0
@@ -43,6 +43,7 @@ CONFIGURE_ENV=	CAMLP4O="camlp4 pa_o.cmo pa_op.cmo pr_dump.cmo"
 
 PATTERN=	[[:space:]]*(do|then)?[[:space:]]*)cp([[:space:]]
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
