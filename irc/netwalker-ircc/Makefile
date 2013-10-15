@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: irc/netwalker-ircc/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: irc/netwalker-ircc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	netwalker-ircc
 PORTVERSION=	0.5.0
@@ -17,6 +17,7 @@ MAN1=		netwalker.1
 LDFLAGS+=	-lncurses ${PTHREAD_LIBS}
 CFLAGS?=	-O2 -Wall
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e "s|%%PREFIX%%|${PREFIX}|g" \
 	${WRKSRC}/config.h > ${WRKSRC}/config.h.freebsd
