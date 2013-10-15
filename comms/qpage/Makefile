@@ -1,5 +1,5 @@
 # Created by: joes@seaport.net
-# $FreeBSD: comms/qpage/Makefile 315127 2013-03-24 15:12:01Z jgh $
+# $FreeBSD: comms/qpage/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	qpage
 PORTVERSION=	3.3
@@ -19,6 +19,7 @@ IDENT_PATCH_DESC=	Disable libwrap ident lookups
 
 MAN1=		qpage.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
