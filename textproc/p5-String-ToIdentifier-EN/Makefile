@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-ToIdentifier-EN/Makefile 325531 2013-08-28 14:02:11Z sunpoet $
+# $FreeBSD: textproc/p5-String-ToIdentifier-EN/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	String-ToIdentifier-EN
 PORTVERSION=	0.11
@@ -22,8 +22,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		String::ToIdentifier::EN.3 \
-		String::ToIdentifier::EN::Unicode.3
 
 .include <bsd.port.mk>
