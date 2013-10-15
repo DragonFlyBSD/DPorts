@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	sedsed
-# Date created:			Jan 14, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/sedsed/Makefile,v 1.6 2012/11/17 05:57:02 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/sedsed/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	sedsed
 PORTVERSION=	1.0
@@ -25,6 +20,7 @@ NO_BUILD=	yes
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/sedsed
 
