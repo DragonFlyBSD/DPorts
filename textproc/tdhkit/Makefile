@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: ports/textproc/tdhkit/Makefile,v 1.5 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/tdhkit/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	tdhkit
 PORTVERSION=	1.0
@@ -13,6 +13,7 @@ COMMENT=	Set of programs for working with tabular ASCII data
 OPTIONS_DEFINE=	LIBCHRON DOCS
 LIBCHRON_DESC=	Install libchron
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBCHRON}
