@@ -1,9 +1,5 @@
-# New ports collection makefile for:	exmars
-# Date created:				16 Jul 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/exmars/Makefile,v 1.11 2012/11/17 05:57:37 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/exmars/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	exmars
 PORTVERSION=	0.01
@@ -20,6 +16,7 @@ ALL_TARGET=	${PORTNAME}
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 do-install:
 # Program.
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
