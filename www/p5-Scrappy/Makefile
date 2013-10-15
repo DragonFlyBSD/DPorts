@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Scrappy/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-Scrappy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Scrappy
 PORTVERSION=	0.94112090
@@ -41,6 +41,7 @@ MAN3=	Scrappy.3 \
 	Scrappy::Scraper::Parser.3 \
 	Scrappy::Session.3
 
+NO_STAGE=	yes
 post-patch:
 	rm -f ${WRKSRC}/perltidy.pl
 	rm -f ${WRKSRC}/lib/Scrappy.pm.bak
