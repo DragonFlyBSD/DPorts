@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xchadance
-# Date created:		21 August 1998
-# Whom:			issei <issei@jp.FreeBSD.org>
-#
-# $FreeBSD: games/xchadance/Makefile 313600 2013-03-07 17:08:13Z miwi $
-#
+# Created by: issei <issei@jp.FreeBSD.org>
+# $FreeBSD: games/xchadance/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xchadance
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ NO_WRKSUBDIR=	yes
 
 RESTRICTED=	'contains commercial character data'
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC}; \
 	${PATCH} < ${WRKSRC}/xchada01.bug
