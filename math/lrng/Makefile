@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: math/lrng/Makefile 315494 2013-03-28 19:25:12Z bf $
+# $FreeBSD: math/lrng/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	lrng
 PORTVERSION=	20130314
@@ -36,6 +36,7 @@ SRCCONF=	/dev/null
 SRCS=	${DISTFILES:M*.c\:1:Nex1.c\:1:S|:1$||}
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} || make(makesum)
