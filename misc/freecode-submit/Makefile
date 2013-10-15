@@ -1,4 +1,4 @@
-# $FreeBSD: misc/freecode-submit/Makefile 321949 2013-06-28 04:43:11Z cs $
+# $FreeBSD: misc/freecode-submit/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	freecode-submit
 PORTVERSION=	2.5
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/freecode-submit
 MAN1=		freecode-submit.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
