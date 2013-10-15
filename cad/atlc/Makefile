@@ -1,9 +1,5 @@
-# New ports collection makefile for:	atlc
-# Date created:				9 November 2002
-# Whom:					Marc Fonvieille <blackend@FreeBSD.org>
-#
-# $FreeBSD: cad/atlc/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Marc Fonvieille <blackend@FreeBSD.org>
+# $FreeBSD: cad/atlc/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	atlc
 PORTVERSION=	4.6.1
@@ -47,6 +43,7 @@ PLIST_FILES=	bin/atlc bin/coax bin/create_any_bitmap \
 		bin/find_optimal_dimensions_for_microstrip_coupler \
 		bin/locatediff bin/myfilelength bin/mymd5sum bin/readbin
 
+NO_STAGE=	yes
 post-patch:
 .for file in Makefile.in
 	@${REINPLACE_CMD} -e \
