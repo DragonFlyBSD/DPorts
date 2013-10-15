@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Perl-PrereqScanner/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-Perl-PrereqScanner/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Perl-PrereqScanner
 PORTVERSION=	1.014
@@ -35,4 +35,5 @@ MAN3=	Perl::PrereqScanner.3 \
 	Perl::PrereqScanner::Scanner::Perl5.3 \
 	Perl::PrereqScanner::Scanner::TestMore.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
