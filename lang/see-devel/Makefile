@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: lang/see-devel/Makefile 317932 2013-05-12 06:05:03Z bapt $
+# $FreeBSD: lang/see-devel/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	see
 PORTVERSION=	3.0.1376
@@ -19,14 +19,15 @@ SEE_DEBUG_DESC=	Internal SEE library debugging
 
 CONFLICTS=	see-[0-9]*
 
-USES=	pathfix
+USES=		pathfix perl5
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMULTIPLE_THREADS}
