@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: x11-themes/gtk-flat-theme2/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: x11-themes/gtk-flat-theme2/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	gtk-flat-theme2
 PORTVERSION=	0.1
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gtk20
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
