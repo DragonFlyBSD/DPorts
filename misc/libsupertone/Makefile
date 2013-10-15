@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: misc/libsupertone/Makefile 324769 2013-08-15 12:24:09Z danfe $
+# $FreeBSD: misc/libsupertone/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	libsupertone
 PORTVERSION=	0.0.2
@@ -24,6 +24,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 # Add missing dependency in attempt to fix parallel (-jX) builds
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/DEPENDENCIES =/s,$$, $$(lib_LTLIBRARIES),' \
 		${WRKSRC}/Makefile.in
