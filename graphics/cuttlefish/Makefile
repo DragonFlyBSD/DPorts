@@ -1,5 +1,5 @@
 # Created by: Matthew Luckie <mjl@luckie.org.nz>
-# $FreeBSD: graphics/cuttlefish/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/cuttlefish/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cuttlefish
 PORTVERSION=	1.3
@@ -26,6 +26,7 @@ EXAMPLES=	japan-traces-small.config japan-traces.config \
 		nyxem-hosts-both.config \
 		witty-combined-small.config witty-combined.config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|../lib|../lib/cuttlefish|" \
 		${WRKSRC}/bin/cuttlefish.pl
