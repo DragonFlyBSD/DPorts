@@ -1,5 +1,5 @@
 # Created by: Robert C. Noland III <rnoland@FreeBSD.org>
-# $FreeBSD: x11-toolkits/swt/Makefile 325736 2013-08-30 23:40:56Z bapt $
+# $FreeBSD: x11-toolkits/swt/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	swt
 DISTVERSION=	3.5.2
@@ -48,6 +48,7 @@ OPTIONS_DEFAULT=	CAIRO GNOMEVFS
 GNOMEVFS_DESC=	Gnome VFS Support
 BROWSER_DESC=	Gecko Browser Support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCAIRO}
