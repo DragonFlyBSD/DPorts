@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-meld
-# Date created:				2 May 2006
-# Whom:					Alexander Botero-Lowry <alex@foxybanana.com>
-#
-# $FreeBSD: ports/www/py-meld/Makefile,v 1.6 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
+# $FreeBSD: www/py-meld/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	meld
 PORTVERSION=	2.1.4
@@ -25,6 +21,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/PyMeld.py \
 		%%PYTHON_SITELIBDIR%%/PyMeld.pyc \
 		%%PYTHON_SITELIBDIR%%/PyMeld.pyo
 
+NO_STAGE=	yes
 pre-build:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
