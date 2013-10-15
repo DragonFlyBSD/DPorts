@@ -1,5 +1,5 @@
-# Created by: Oliver Lehmann <oliver@freebsd.org>
-# $FreeBSD: devel/libzvbi/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# Created by: Oliver Lehmann <oliver@FreeBSD.org>
+# $FreeBSD: devel/libzvbi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libzvbi
 PORTVERSION=	0.2.34
@@ -22,6 +22,7 @@ MAN1=		zvbi-ntsc-cc.1
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L/usr/lib"
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#cpu (\([^)]*\))|defined(__\1__)|g' \
 		${WRKSRC}/src/misc.h \
