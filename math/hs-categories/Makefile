@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-categories/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-categories/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	categories
 PORTVERSION=	1.0.5
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	void>=0.5.4.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
