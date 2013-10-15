@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-krosspython/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/py-krosspython/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	krosspython
 PORTVERSION=	${KDE4_VERSION}
@@ -23,4 +23,5 @@ CMAKE_ARGS+=	-DBUILD_falcon:BOOL=FALSE \
 
 PLIST_FILES=	lib/kde4/krosspython.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
