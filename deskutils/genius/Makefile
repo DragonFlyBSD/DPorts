@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: deskutils/genius/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/genius/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	genius
 PORTVERSION=	1.0.12
@@ -29,6 +29,7 @@ USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
