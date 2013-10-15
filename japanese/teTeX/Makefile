@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/teTeX/Makefile 326442 2013-09-05 20:09:25Z hrs $
+# $FreeBSD: japanese/teTeX/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	teTeX
 PORTVERSION=	1.6
@@ -22,6 +22,7 @@ TEXMFDISTDIR=	share/texmf-dist
 #      in print/teTeX-base.
 DEPENDS_ARGS+=	BATCH=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
