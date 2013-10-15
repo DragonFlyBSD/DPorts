@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-DBIC/Makefile 324156 2013-08-02 09:23:44Z culot $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-DBIC/Makefile 329187 2013-10-03 13:34:43Z danilo $
 
 PORTNAME=	Catalyst-Plugin-Session-Store-DBIC
 PORTVERSION=	0.14
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Store your sessions via DBIx::Class
 
 LICENSE=	ART10 GPLv1
@@ -23,8 +23,5 @@ TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Catalyst::Plugin::Session::Store::DBIC.3 \
-	Catalyst::Plugin::Session::Store::DBIC::Delegate.3
 
 .include <bsd.port.mk>
