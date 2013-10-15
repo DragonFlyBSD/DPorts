@@ -1,5 +1,5 @@
 # Created by: Chia-liang Kao <clkao@clkao.org>
-# $FreeBSD: devel/p5-Cdk/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/p5-Cdk/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Cdk
 PORTVERSION=	5.20120324
@@ -24,4 +24,5 @@ INSTALL_TARGET=	pure_install
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
