@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/p5-Memcached-libmemcached/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/p5-Memcached-libmemcached/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Memcached-libmemcached
 PORTVERSION=	0.44.06
@@ -44,6 +44,7 @@ MAN3=		Memcached::libmemcached.3 \
 		Memcached::libmemcached::memcached_verbosity.3 \
 		Memcached::libmemcached::memcached_version.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/my $$configure_args/ s|--disable-shared|& --without-memcached --disable-dtrace|' ${WRKSRC}/Makefile.PL
 
