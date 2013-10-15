@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Storage/Makefile 326948 2013-09-11 07:40:01Z tobez $
+# $FreeBSD: devel/p5-MooseX-Storage/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Storage
 PORTVERSION=	0.43
@@ -50,4 +50,5 @@ MAN3=		MooseX::Storage.3 \
 		MooseX::Storage::Traits::OnlyWhenBuilt.3 \
 		MooseX::Storage::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
