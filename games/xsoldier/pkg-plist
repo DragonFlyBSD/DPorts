@@ -1,5 +1,10 @@
-@comment $FreeBSD: games/xsoldier/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+@comment $FreeBSD: games/xsoldier/pkg-plist 329492 2013-10-05 18:17:39Z naddy $
+@group games
+@mode 2555
 bin/xsoldier
+@mode
+@group
+man/man6/xsoldier.6.gz
 share/examples/xsoldier/xsoldier.scores
 @exec cp %D/share/examples/xsoldier/xsoldier.scores %%SCOREFILE%% && chgrp games %%SCOREFILE%% && chmod 664 %%SCOREFILE%%
 @unexec rm -f %%SCOREFILE%%
