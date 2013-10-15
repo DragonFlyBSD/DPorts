@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Atom-Stream/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Atom-Stream/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Atom-Stream
 PORTVERSION=	0.11
@@ -26,4 +26,5 @@ MAN3=	XML::Atom::Stream.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
