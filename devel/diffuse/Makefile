@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/diffuse/Makefile 318217 2013-05-15 07:51:29Z miwi $
+# $FreeBSD: devel/diffuse/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	diffuse
 PORTVERSION=	0.4.7
@@ -29,6 +29,7 @@ MENU_DESC=	Enable a desktop program menu entry
 
 OPTIONS_DEFAULT=DATA MENU
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDATA}
