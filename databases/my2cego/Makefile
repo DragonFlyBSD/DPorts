@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/my2cego/Makefile 318857 2013-05-23 09:31:55Z zeising $
+# $FreeBSD: databases/my2cego/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	my2cego
 PORTVERSION=	1.1.3
@@ -22,4 +22,5 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf:env
 PLIST_FILES=	bin/my2cego
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
