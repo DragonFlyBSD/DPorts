@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: games/xye/Makefile 327105 2013-09-12 19:45:05Z nemysis $
+# $FreeBSD: games/xye/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xye
 PORTVERSION=	0.12.2
@@ -61,6 +61,7 @@ SKINS_DESC=	Install additional skins
 
 OPTIONS_SUB=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract-script:
