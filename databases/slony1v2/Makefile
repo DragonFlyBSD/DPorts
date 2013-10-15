@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: databases/slony1v2/Makefile 316469 2013-04-24 18:50:57Z olgeni $
+# $FreeBSD: databases/slony1v2/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	slony1v2
 PORTVERSION=	2.1.3
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		${LOCALBASE}/bin/postmaster:${PORTSDIR}/databases/postgresql${PGSQL_VER}-server
 
 GNU_CONFIGURE=	yes
-USES=		bison
+USES=		bison gmake
 USE_PGSQL=	yes
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_RC_SUBR=	slon
 
@@ -32,10 +31,11 @@ CONFLICTS?=	slony1-1*
 
 CONFIGURE_ENV+=	FLEX=${LOCALBASE}/bin/flex
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERLTOOLS}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=--with-perltools=${LOCALBASE}/sbin
 RUN_DEPENDS+=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
 BUILD_DEPENDS+=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
