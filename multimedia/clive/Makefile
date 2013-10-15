@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: multimedia/clive/Makefile 326361 2013-09-05 07:29:05Z az $
+# $FreeBSD: multimedia/clive/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	clive
 PORTVERSION=	2.3.3
@@ -29,4 +29,5 @@ PLIST_FILES=	bin/clive \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/clive/.packlist
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/clive
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
