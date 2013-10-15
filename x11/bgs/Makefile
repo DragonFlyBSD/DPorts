@@ -1,9 +1,5 @@
-# New ports collection makefile for:  bgs
-# Date created:                July 14, 2008
-# Whom:                        Julien Laffaye <kimelto@gmail.com>
-#
-# $FreeBSD: ports/x11/bgs/Makefile,v 1.9 2012/11/17 06:03:14 svnexp Exp $
-#
+# Created by: Julien Laffaye <kimelto@gmail.com>
+# $FreeBSD: x11/bgs/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	bgs
 PORTVERSION=	0.5
@@ -21,4 +17,5 @@ USE_EFL=	imlib2
 MAN1=		bgs.1
 PLIST_FILES=	bin/bgs
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
