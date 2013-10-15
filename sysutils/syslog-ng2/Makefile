@@ -1,6 +1,5 @@
-# Created by:	Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng2/Makefile 327041 2013-09-12 08:41:52Z marino $
-#
+# Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
+# $FreeBSD: sysutils/syslog-ng2/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	syslog-ng
 PORTVERSION=	2.0.10
@@ -31,6 +30,7 @@ CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --localstatedir=/var/db \
 LDFLAGS+=	`${LIBNET_CONFIG} --libs`
 CFLAGS+=	`${LIBNET_CONFIG} --cflags`
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} > 900007
