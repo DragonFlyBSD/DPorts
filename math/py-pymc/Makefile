@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pymc
-# Date created:		2008-12-10
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/py-pymc/Makefile,v 1.4 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: math/py-pymc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	pymc
 PORTVERSION=	2.0
@@ -21,4 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
