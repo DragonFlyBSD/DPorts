@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: databases/mysqlreport/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/mysqlreport/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysqlreport
 PORTVERSION=	3.5
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/mysqlreport
 PORTDOCS=	COPYING mysqlreportguide.html mysqlreportdoc.html
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/mysqlreport ${PREFIX}/bin
 
