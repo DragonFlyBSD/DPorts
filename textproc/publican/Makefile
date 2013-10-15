@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/publican/Makefile 326940 2013-09-11 05:46:21Z az $
+# $FreeBSD: textproc/publican/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	publican
 PORTVERSION=	2.8
@@ -75,6 +75,7 @@ MAN3=	Publican.3 Publican::Builder.3 Publican::CreateBook.3 \
 	Publican::CreateBrand.3 Publican::Localise.3 Publican::Translate.3 \
 	Publican::TreeView.3 Publican::WebSite.3 Publican::XmlClean.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' \
 			-e 's,%%DATADIR%%,${DATADIR},g' \
