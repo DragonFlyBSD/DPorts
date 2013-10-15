@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: textproc/p5-Text-ExtractWords/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-ExtractWords/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-ExtractWords
 PORTVERSION=	0.08
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::ExtractWords.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
