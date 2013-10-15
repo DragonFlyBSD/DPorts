@@ -1,9 +1,5 @@
-# New ports collection makefile for:	LDAP logfile Analyzer
-# Date created:				2 May 2001
-# Whom:					Sunagawa Koji <koj@ofug.net>
-#
-# $FreeBSD: net/lla/Makefile 326522 2013-09-06 16:11:30Z az $
-#
+# Created by: Sunagawa Koji <koj@ofug.net>
+# $FreeBSD: net/lla/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	lla
 PORTVERSION=	0.99.1
@@ -28,6 +24,7 @@ EXTRACT_CMD=		${CP}
 EXTRACT_BEFORE_ARGS=	
 EXTRACT_AFTER_ARGS=	./${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin
 
