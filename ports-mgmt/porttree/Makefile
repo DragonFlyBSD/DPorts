@@ -1,9 +1,5 @@
-# New ports collection makefile for:	porttree
-# Date created:			18 Aug 2011
-# Whom:				Vladimir Chukharev
-#
-# $FreeBSD: ports/ports-mgmt/porttree/Makefile,v 1.3 2012/11/17 06:00:46 svnexp Exp $
-#
+# Created by: Vladimir Chukharev
+# $FreeBSD: ports-mgmt/porttree/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	porttree
 PORTVERSION=	0.3.r${SVN_REV}
@@ -31,6 +27,7 @@ NO_BUILD=	yes
 NO_INSTALL=	yes
 PLIST_FILES=	bin/porttree
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/porttree.py ${PREFIX}/bin/porttree
 	${INSTALL_MAN} ${WRKSRC}/src/porttree.1 ${MAN8PREFIX}/man/man1
