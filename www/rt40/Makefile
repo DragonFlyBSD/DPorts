@@ -1,4 +1,4 @@
-# $FreeBSD: www/rt40/Makefile 324221 2013-08-04 12:19:25Z matthew $
+# $FreeBSD: www/rt40/Makefile 328526 2013-09-27 21:53:44Z matthew $
 
 PORTNAME=	rt
 PORTVERSION=	4.0.17
@@ -11,6 +11,7 @@ COMMENT=	RT is an industrial-grade ticketing system written in Perl
 
 CONFLICTS=	rt-3.8* brlcad-[0-9]*
 LATEST_LINK=	rt40
+NEED_ROOT=	yes
 
 # See doc/web_deployment.pod for info on the choices of webserver /
 # webapp combinations.  Note: if using apache, apache-2.2+ is
@@ -194,8 +195,9 @@ CONFIGURE_ARGS+=	--enable-layout=${RT_LAYOUT} \
 CONFIGURE_ENV+=	PERL=${LOCALBASE}/bin/perl
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
-SUB_FILES=	pkg-message
-SUB_LIST=	RT_ETC_PATH=${RT_ETC_PATH}
+SUB_FILES=	pkg-message pkg-install
+SUB_LIST=	RT_ETC_PATH=${RT_ETC_PATH} \
+		CFG_FILE=${RT_ETC_PATH}/RT_SiteConfig.pm
 
 run-autotools:	run-autotools-autoconf
 
@@ -228,12 +230,9 @@ pre-install:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/upgrade
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/upgrade
 	(cd ${WRKSRC}/etc && \
-	    ${COPYTREE_SHARE} upgrade ${DOCSDIR} "! -name *\.in")
+	    ${COPYTREE_SHARE} upgrade ${STAGEDIR}${DOCSDIR} "! -name *\.in")
 .endif
-	@[ -f ${RT_ETC_PATH}/RT_SiteConfig.pm ] || \
-		${CP} -p ${RT_ETC_PATH}/RT_SiteConfig.pm-dist ${RT_ETC_PATH}/RT_SiteConfig.pm
-	${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
