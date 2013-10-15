@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: biology/gperiodic/Makefile 326710 2013-09-08 08:29:00Z antoine $
+# $FreeBSD: biology/gperiodic/Makefile 327709 2013-09-20 15:55:44Z bapt $
 #    $MCom: ports/biology/gperiodic/Makefile,v 1.1 2006/09/29 23:42:13 ahze Exp $
 
 PORTNAME=	gperiodic
@@ -20,6 +20,7 @@ PORTDOCS=	AUTHORS ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} `pkg-config --cflags --libs gtk+-2.0` \
 		gperiodic.c -o gperiodic
