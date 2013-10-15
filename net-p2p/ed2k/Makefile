@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/ed2k/Makefile,v 1.7 2012/11/17 06:00:39 svnexp Exp $
+# $FreeBSD: net-p2p/ed2k/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	ed2k
 PORTVERSION=	1.4
@@ -13,6 +13,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Calculates 'eMule' hashes or producing ed2k:// file links
 
 CONFLICTS=	amule-*
+NO_STAGE=	yes
 
 NO_WRKSUBDIR=	yes
 MAKEFILE=	/dev/null
