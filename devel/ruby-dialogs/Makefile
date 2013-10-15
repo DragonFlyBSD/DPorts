@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubyDialogs
-# Date created:		2 March 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/ruby-dialogs/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-dialogs/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	dialogs
 PORTVERSION=	1.1
@@ -21,6 +17,7 @@ RUBY_NO_BUILD_DEPENDS=	yes
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/dialogs.rb ${RUBY_SITELIBDIR}/
 .if !defined(NOPORTDOCS)
