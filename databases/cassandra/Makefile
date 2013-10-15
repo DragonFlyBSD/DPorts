@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/cassandra/Makefile 321580 2013-06-22 16:30:34Z bdrewery $
+# $FreeBSD: databases/cassandra/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	cassandra
 PORTVERSION=	1.1.12
@@ -43,6 +43,7 @@ DOCS_DESC=	Install javadoc documentation
 
 SUB_FILES=	repaircluster
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 RUN_DEPENDS+=	${JAVALIBDIR}/snappy-java.jar:${PORTSDIR}/archivers/snappy-java
