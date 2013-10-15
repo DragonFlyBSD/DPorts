@@ -1,5 +1,5 @@
 # Created by: pauls@utdallas.edu
-# $FreeBSD: www/p5-CIF-Client/Makefile 325974 2013-09-02 11:04:10Z az $
+# $FreeBSD: www/p5-CIF-Client/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CIF-Client
 PORTVERSION=	0.21
@@ -39,4 +39,5 @@ USE_PERL5=	configure
 
 MAN3=		CIF::Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
