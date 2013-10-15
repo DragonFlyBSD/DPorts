@@ -1,5 +1,5 @@
 # Created by: jabley@automagic.org
-# $FreeBSD: textproc/xml2rfc/Makefile 326171 2013-09-03 16:37:22Z marcus $
+# $FreeBSD: textproc/xml2rfc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xml2rfc
 PORTVERSION=	2.4.2
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.2.8:${PORTSDIR}/devel/py-lxml
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
