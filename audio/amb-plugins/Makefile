@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/amb-plugins/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/amb-plugins/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	amb-plugins
 PORTVERSION=	0.8.1
@@ -19,6 +19,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
+NO_STAGE=	yes
 USES=		gmake
 USE_BZIP2=	yes
 
