@@ -1,5 +1,5 @@
 # Created by: oyvindmo@initio.no
-# $FreeBSD: audio/ripit/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: audio/ripit/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ripit
 PORTVERSION=	3.9.0
@@ -19,6 +19,7 @@ RUN_DEPENDS=	p5-CDDB_get>=0:${PORTSDIR}/audio/p5-CDDB_get \
 	cdparanoia:${PORTSDIR}/audio/cdparanoia \
 
 USES=		perl5 shebangfix
+NO_STAGE=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/ripit
 MAN1=		ripit.1
