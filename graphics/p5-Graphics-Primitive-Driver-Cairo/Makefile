@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Graphics-Primitive-Driver-Cairo
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Graphics-Primitive-Driver-Cairo/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Graphics-Primitive-Driver-Cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Graphics-Primitive-Driver-Cairo
 PORTVERSION=	0.44
@@ -27,4 +26,5 @@ USE_PERL5=	configure
 MAN3=		Graphics::Primitive::Driver::Cairo.3 \
   		Graphics::Primitive::Driver::Cairo::TextLayout.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
