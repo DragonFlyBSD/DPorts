@@ -1,5 +1,5 @@
 # Created by: Rick van der Zwet <info@rickvanderzwet.nl>
-# $FreeBSD: textproc/p5-XML-TinyXML/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: textproc/p5-XML-TinyXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-TinyXML
 PORTVERSION=	0.30
@@ -21,4 +21,5 @@ MAN3=		XML::TinyXML.3 \
 		XML::TinyXML::Selector.3 \
 		XML::TinyXML::Selector::XPath.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
