@@ -1,9 +1,5 @@
-# New ports collection makefile for:	googlemock
-# Date created:			        Dec 12, 2008
-# Whom:				        Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/googlemock/Makefile,v 1.5 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/googlemock/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	googlemock
 PORTVERSION=	1.5.0
@@ -20,4 +16,5 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GCC=	4.2+
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
