@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/xtrlock/Makefile 327224 2013-09-14 06:51:03Z sunpoet $
+# $FreeBSD: x11/xtrlock/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xtrlock
 PORTVERSION=	2.3
@@ -25,6 +25,7 @@ MAN1=		xtrlock.1
 PLIST_FILES=	bin/xtrlock
 BINMODE=	4555
 
+NO_STAGE=	yes
 post-extract:
 	@${LN} -sf xtrlock.man ${WRKSRC}/xtrlock.1
 
