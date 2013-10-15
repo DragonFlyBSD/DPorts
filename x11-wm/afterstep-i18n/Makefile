@@ -1,5 +1,5 @@
 # Created by: issei@jp.FreeBSD.org
-# $FreeBSD: x11-wm/afterstep-i18n/Makefile 322010 2013-06-28 22:57:16Z bapt $
+# $FreeBSD: x11-wm/afterstep-i18n/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	afterstep-i18n
 PORTVERSION=	1.0
@@ -39,6 +39,7 @@ SRCDIRS=	afterstep \
 		modules/Banner modules/Pager modules/Wharf \
 		modules/Wharf/ASSound
 
+NO_STAGE=	yes
 pre-patch:
 	@ ${PATCH} ${PATCH_DIST_ARGS} < ${WRKDIR}/as10+I18N.98Feb27.diff
 
