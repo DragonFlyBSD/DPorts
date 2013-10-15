@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: comms/morse/Makefile 325951 2013-09-02 09:03:40Z bapt $
+# $FreeBSD: comms/morse/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	morse
 PORTVERSION=	2.5
@@ -23,6 +23,7 @@ OSS_DESC=	Beep using OSS (/dev/dsp)
 X11_DESC=	Beep using X server
 PULSEAUDIO_DESC=	Beep using Pulse Audio
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOSS}
