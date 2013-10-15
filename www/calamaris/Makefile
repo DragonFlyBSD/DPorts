@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@Chg.RU>
-# $FreeBSD: www/calamaris/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: www/calamaris/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	calamaris
 PORTVERSION=	2.59
@@ -16,6 +16,7 @@ SHEBANG_FILES=	calamaris
 
 MAN1=		calamaris.1
 
+NO_STAGE=	yes
 do-install:
 	@ ${INSTALL_MAN} ${WRKSRC}/calamaris.1 ${PREFIX}/man/man1/calamaris.1
 	@ ${INSTALL_SCRIPT} ${WRKSRC}/calamaris ${PREFIX}/bin/calamaris
