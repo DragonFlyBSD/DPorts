@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Dodgin' Diamond 2
-# Date created:			15 Jul 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/games/dodgindiamond2/Makefile,v 1.20 2012/11/17 05:57:36 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: games/dodgindiamond2/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		dodgindiamond2
 PORTVERSION=		0.2.2
@@ -19,6 +15,7 @@ USE_SDL=		sdl image mixer
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--localstatedir=/var/games
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
