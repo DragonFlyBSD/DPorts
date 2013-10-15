@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-LongURL
-# Date created:				2012-02-27
-# Whom:					Yi-Hsuan Hsin <mhsin@mhsin.org>
-#
-# $FreeBSD: www/p5-WWW-LongURL/Makefile 326054 2013-09-02 18:41:05Z az $
-#
+# Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
+# $FreeBSD: www/p5-WWW-LongURL/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-LongURL
 PORTVERSION=	0.05
@@ -30,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::LongURL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
