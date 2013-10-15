@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-lens/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-lens/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	lens
 PORTVERSION=	3.9.0.2
@@ -18,5 +18,6 @@ USE_CABAL=	bifunctors>=3 comonad>=3 comonad-transformers>=3 \
 		text>=0.11 transformers>=0.3 unordered-containers>=0.2 \
 		vector>=0.9 void>=0.5
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
