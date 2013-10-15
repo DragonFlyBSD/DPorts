@@ -1,8 +1,5 @@
-# New ports collection makefile for:	linuxlibertine
-# Date created:				17 February 2008
-# Whom:	      				Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: ports/x11-fonts/linuxlibertine/Makefile,v 1.6 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Björn König <bkoenig@alpha-tierchen.de>
+# $FreeBSD: x11-fonts/linuxlibertine/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	linuxlibertine
 PORTVERSION=	4.7.5
@@ -40,6 +37,7 @@ PORTDOCS=	Bugs.txt \
 		Readme.txt \
 		Readme-TEX.txt
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${FONTSDIR}
 .for ext in ttf otf
