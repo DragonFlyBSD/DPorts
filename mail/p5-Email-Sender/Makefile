@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-Email-Sender
-# Date created:				23 June 2009
-# Whom:					Bill Brinzer <bill.brinzer@gmail.com>
-#
-# $FreeBSD: mail/p5-Email-Sender/Makefile 327333 2013-09-15 07:14:12Z az $
-#
+# Created by: Bill Brinzer <bill.brinzer@gmail.com>
+# $FreeBSD: mail/p5-Email-Sender/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Sender
 PORTVERSION=	0.120001
@@ -56,6 +52,7 @@ MAN3=	Email::Sender.3 \
 	Email::Sender::Transport::Wrapper.3 \
 	Email::Sender::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
