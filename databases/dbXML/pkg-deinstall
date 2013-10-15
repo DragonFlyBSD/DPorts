@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/databases/dbXML/pkg-deinstall,v 1.2 2012/11/17 05:55:06 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/databases/dbXML/pkg-deinstall,v 1.1 2002-03-30 11:48:53 znerd Exp $
 #
 
 if [ "$2" != "POST-DEINSTALL" ]; then

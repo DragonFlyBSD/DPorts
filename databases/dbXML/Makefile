@@ -1,9 +1,5 @@
-# Ports collection makefile for:    dbXML
-# Date created:         2001/18/10
-# Whom:                 Richard Stockley <rws@procopia.com>
-#
-# $FreeBSD: ports/databases/dbXML/Makefile,v 1.13 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: Richard Stockley <rws@procopia.com>
+# $FreeBSD: databases/dbXML/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbXML
 PORTVERSION=	2.0
@@ -31,6 +27,7 @@ USERS=		${PORTNAME:tl}
 GROUPS=		${PORTNAME:tl}
 SHAREMODE=	0644
 
+NO_STAGE=	yes
 post-patch:
 .for f in bin/dbxml bin/dbxml-gui install/create-db startup
 	@${REINPLACE_CMD} -e "s:%%DBXML_HOME%%:${DBXML_HOME}:" \

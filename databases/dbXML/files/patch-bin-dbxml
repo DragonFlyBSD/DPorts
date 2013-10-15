@@ -1,4 +1,4 @@
-$FreeBSD: ports/databases/dbXML/files/patch-bin-dbxml,v 1.2 2012/11/17 05:55:06 svnexp Exp $
+$FreeBSD: databases/dbXML/files/patch-bin-dbxml 300896 2012-07-14 13:54:48Z beat $
 
 --- bin/dbxml.orig	2011-06-01 22:00:39.000000000 -0700
 +++ bin/dbxml	2011-06-01 22:05:21.000000000 -0700

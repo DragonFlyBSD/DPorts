@@ -1,4 +1,4 @@
-$FreeBSD: ports/databases/dbXML/files/patch-startup,v 1.2 2012/11/17 05:55:06 svnexp Exp $
+$FreeBSD: databases/dbXML/files/patch-startup 300896 2012-07-14 13:54:48Z beat $
 
 --- startup.orig	2011-06-03 21:32:56.000000000 -0700
 +++ startup	2011-06-03 21:35:33.000000000 -0700
