@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Sunny/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Sunny/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Sunny
 PORTVERSION=	0.21
@@ -30,6 +30,7 @@ USE_PERL5=	modbuild
 MAN3=		DBIx::Sunny.3 \
 		DBIx::Sunny::Schema.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
