@@ -1,5 +1,5 @@
 # Created by: Valerio Daelli <valerio.daelli@gmail.com>
-# $FreeBSD: ports/security/ossec-hids-client/Makefile,v 1.5 2013/01/16 16:42:44 svnexp Exp $
+# $FreeBSD: security/ossec-hids-client/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 COMMENT=	The client port of ossec-hids
 
@@ -9,4 +9,5 @@ MASTERDIR=	${.CURDIR}/../ossec-hids-server
 
 PLIST=	pkg-plist.client
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
