@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/quat-gui/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/quat-gui/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	quat
 PORTVERSION=	1.20
@@ -36,6 +36,7 @@ PLIST_FILES=	bin/quat
 
 DESKTOP_ENTRIES="Quat" "3D Fractal Generator" "" "${PORTNAME}" "" ""
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
