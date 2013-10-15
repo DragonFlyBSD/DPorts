@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libmovtar
-# Date created:		Mon Oct 15 23:35:04 BRST 2001
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/libmovtar/Makefile,v 1.31 2012/11/17 05:59:50 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: multimedia/libmovtar/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libmovtar
 PORTVERSION=	0.1.3
@@ -25,6 +21,7 @@ MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 
 LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
