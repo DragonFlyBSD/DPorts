@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/deskutils/openproj/files/openproj.sh.in,v 1.2 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/deskutils/openproj/files/openproj.sh.in,v 1.1 2008-04-15 08:54:28 dinoex Exp $
 
 FILE="`realpath "$1"`"
 OPENPROJ_HOME="%%DATADIR%%"
