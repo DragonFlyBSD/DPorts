@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-Net-SCP-Expect
-# Date created:                        27 Feb 2006
-# Whom:                                Simun Mikecin <numisemis@yahoo.com>
-#
-# $FreeBSD: net/p5-Net-SCP-Expect/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: Simun Mikecin <numisemis@yahoo.com>
+# $FreeBSD: net/p5-Net-SCP-Expect/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SCP-Expect
 PORTVERSION=	0.16
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::SCP::Expect.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
