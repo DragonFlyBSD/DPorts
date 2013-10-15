@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: irc/irc/Makefile 324559 2013-08-10 22:54:58Z marino $
+# $FreeBSD: irc/irc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irc
 PORTVERSION=	2.11.2p3
@@ -28,6 +28,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 OPTIONS_DEFINE=	IPV6
 OPTIONS_DEFAULT=IPV6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
