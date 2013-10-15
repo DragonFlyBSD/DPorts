@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cppi/Makefile 323885 2013-07-29 13:03:45Z danfe $
+# $FreeBSD: devel/cppi/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cppi
 PORTVERSION=	1.18
@@ -21,6 +21,7 @@ OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CONFIGURE_OFF=	--disable-nls
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's:(libdir)/lib:(libdir):' ${WRKSRC}/Makefile.in
 
