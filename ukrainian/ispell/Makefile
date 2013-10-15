@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: ukrainian/ispell/Makefile 322643 2013-07-10 11:15:09Z bapt $
+# $FreeBSD: ukrainian/ispell/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	ispell-uk
 PORTVERSION=	0.7
@@ -13,10 +13,10 @@ BUILD_DEPENDS=  buildhash:${PORTSDIR}/textproc/ispell
 
 MAKE_JOBS_UNSAFE=	yes
 
-USES=		gmake
+USES=		gmake perl5
 USE_BZIP2=	YES
 ALL_TARGET=	koi
-USE_PERL5=	yes
+NO_STAGE=	yes
 
 # Still need gmake for other reasons :-\
 #post-patch:
