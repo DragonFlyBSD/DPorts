@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-im/libyahoo2/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: net-im/libyahoo2/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	libyahoo2
 PORTVERSION=	1.0.1
@@ -15,6 +15,7 @@ USES=        pathfix
 USE_GNOME=	glib20 gnomehack
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wall -ansi -pedantic||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|-g -Wall||g ; \
