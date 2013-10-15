@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Tiffany/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/p5-Tiffany/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Tiffany
 PORTVERSION=	1.00
@@ -38,4 +38,5 @@ MAN3=	Tiffany.3 \
 	Tiffany::Text::MicroTemplate::File.3 \
 	Tiffany::Text::Xslate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
