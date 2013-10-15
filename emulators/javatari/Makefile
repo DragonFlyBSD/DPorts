@@ -1,4 +1,5 @@
-# $FreeBSD: emulators/javatari/Makefile 318330 2013-05-16 19:46:52Z bdrewery $
+# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
+# $FreeBSD: emulators/javatari/Makefile 328691 2013-09-29 13:45:23Z danilo $
 
 PORTNAME=	javatari
 PORTVERSION=	3.30
@@ -8,7 +9,7 @@ DISTNAME=	${PORTNAME}330
 EXTRACT_SUFX=	.jar
 EXTRACT_ONLY=
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Multiplayer Atari 2600 emulator written in pure Java
 
 EXTRACT_DEPENDS=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
@@ -30,9 +31,9 @@ post-extract:
 		org/javatari/pc/screen/images/LogoIcon32.png)
 
 do-install:
-	${INSTALL_DATA} ${DISTDIR}/${JARFILE} ${JAVAJARDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/javatari ${PREFIX}/bin
+	${INSTALL_DATA} ${DISTDIR}/${JARFILE} ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/javatari ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/org/javatari/pc/screen/images/LogoIcon32.png \
-		${PREFIX}/share/pixmaps/${PORTNAME}.png
+		${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
 
 .include <bsd.port.mk>
