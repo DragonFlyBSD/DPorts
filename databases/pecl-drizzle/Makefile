@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-drizzle
-# Date created:			30 Apr 2010
-# Whom:				Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pecl-drizzle/Makefile,v 1.4 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: databases/pecl-drizzle/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	drizzle
 PORTVERSION=	0.4.2
@@ -24,6 +20,7 @@ USE_PHP=	yes
 USE_PHPEXT=	yes
 DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	README EXPERIMENTAL ChangeLog CREDITS
