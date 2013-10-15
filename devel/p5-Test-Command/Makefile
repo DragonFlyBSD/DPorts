@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Command/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Test-Command/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Test-Command
 PORTVERSION=	0.11
@@ -18,7 +18,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Test::Command.3
 
 .include <bsd.port.mk>
