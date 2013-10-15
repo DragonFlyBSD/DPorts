@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: misc/p5-Array-PrintCols/Makefile 324054 2013-07-31 14:36:21Z az $
+# $FreeBSD: misc/p5-Array-PrintCols/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Array-PrintCols
 PORTVERSION=	2.5
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Array::PrintCols.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
