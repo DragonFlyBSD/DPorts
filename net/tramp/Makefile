@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@FreeBSD.org>
-# $FreeBSD: net/tramp/Makefile 319140 2013-05-26 22:34:05Z kuriyama $
+# $FreeBSD: net/tramp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tramp
 PORTVERSION=	2.2.7
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--with-japanese-manual
 INFO+=		tramp
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_PORT_NAME} == emacs20
