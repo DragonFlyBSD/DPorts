@@ -1,5 +1,5 @@
 # Created by: Ayumi Mitsui <ayu@commun.jp>
-# $FreeBSD: audio/umurmur/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/umurmur/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	umurmur
 PORTVERSION=	0.2.8
@@ -13,6 +13,7 @@ COMMENT=	Minimalistic Murmur (Mumble server)
 LIB_DEPENDS=	config.10:${PORTSDIR}/devel/libconfig \
 		protobuf-c.0:${PORTSDIR}/devel/protobuf-c
 
+NO_STAGE=	yes
 USES=		gmake
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
