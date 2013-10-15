@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/micro_proxy/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net/micro_proxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	micro_proxy
 PORTVERSION=	20021030
@@ -16,6 +16,7 @@ PLIST_FILES=	libexec/micro_proxy
 MAN8=		micro_proxy.8
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} -c ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}.o
 	${CC} ${CFLAGS} ${WRKSRC}/${PORTNAME}.o -o ${WRKSRC}/${PORTNAME}
