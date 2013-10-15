@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-# $FreeBSD: ports/devel/doctorj/Makefile,v 1.15 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/doctorj/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	doctorj
 PORTVERSION=	5.1.2
@@ -19,6 +19,7 @@ ALL_TARGET=	jarfile
 MAN1=		doctorj.1
 PLIST_FILES=	%%JAVAJARDIR%%/doctorj.jar
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/doctorj.jar..."
 	@${MKDIR} ${JAVAJARDIR}
