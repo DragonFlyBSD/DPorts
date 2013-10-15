@@ -1,9 +1,5 @@
-# Ports collection makefile for:	mdp
-# Date created:				September 9, 2008
-# Whom:					Li-Lun Wang <llwang@infor.org>
-#
-# $FreeBSD: ports/science/py-mdp/Makefile,v 1.6 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Li-Lun Wang <llwang@infor.org>
+# $FreeBSD: science/py-mdp/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	mdp
 PORTVERSION=	3.2
@@ -27,6 +23,7 @@ LIBSVM_DESC=	Provide the LibSVMClassifier node
 PP_DESC=	Provide the Parallel Python PPScheduler
 SCIPY_DESC=	Instal SciPy versions of eigensolver, FFT and convolution
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBSVM}
