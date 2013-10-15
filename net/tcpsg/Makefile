@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  tcpsg
-# Date created:                          Tue Oct 30, 2002
-# Whom:                                  Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/net/tcpsg/Makefile,v 1.6 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: net/tcpsg/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpsg
 PORTVERSION=	0.0.2
@@ -14,6 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	mich@FreeBSD.org
 COMMENT=	A simple TCP port forwarder
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|" ${WRKSRC}/tcpsg.c
 
