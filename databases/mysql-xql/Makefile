@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mysql-xql
-# Date created:		Mon Dec 28 2009
-# Whom:			Mina R Waheeb <syncer@gmail.com>
-#
-# $FreeBSD: ports/databases/mysql-xql/Makefile,v 1.3 2012/11/17 05:55:11 svnexp Exp $
+# Created by: Mina R Waheeb <syncer@gmail.com>
+# $FreeBSD: databases/mysql-xql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql-xql
 PORTVERSION=	1.0.0
@@ -27,6 +24,7 @@ PLIST_FILES=	\
 
 PLIST_DIRS=	lib/mysql/plugin
 
+NO_STAGE=	yes
 post-install:
 	${CAT} ${PKGMESSAGE}
 
