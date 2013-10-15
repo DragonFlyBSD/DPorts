@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xsokoban/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xsokoban/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xsokoban
 PORTVERSION=	3.3c
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/xsokoban
 ALL_TARGET=	xsokoban
 MAN1=		xsokoban.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/config.h
 
