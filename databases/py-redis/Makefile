@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/py-redis/Makefile 321029 2013-06-16 09:10:19Z koobs $
+# $FreeBSD: databases/py-redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	redis
 PORTVERSION=	2.7.6
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=		HIREDIS
 HIREDIS_DESC=		Add py-hiredis C extension support
 OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHIREDIS}
