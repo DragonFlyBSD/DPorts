@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-pydasm/Makefile 327186 2013-09-13 21:28:42Z antoine $
+# $FreeBSD: devel/py-pydasm/Makefile 329382 2013-10-04 20:39:27Z antoine $
 
 PORTNAME=	pydasm
 PORTVERSION=	1.5
@@ -18,16 +18,22 @@ WRKSRC_SUBDIR=	${PORTNAME}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+PLIST_FILES=	${PYTHON_SITELIBDIR}/pydasm.so
+PORTDOCS=	README.txt
+PORTEXAMPLES=	das.py
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
 .include <bsd.port.options.mk>
 
 post-install:
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/das.py ${EXAMPLESDIR}
-.endif
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+.endif
+.if ${PORT_OPTIONS:MEXAMPLES}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${PORTEXAMPLES:S,^,${WRKSRC}/,} ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
