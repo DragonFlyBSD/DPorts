@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	scid
-# Date created:			Mar 4, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: games/scid/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: ijliao
+# $FreeBSD: games/scid/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	scid
 PORTVERSION=	4.3
@@ -38,4 +33,5 @@ ALL_TARGET=	all strip
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
