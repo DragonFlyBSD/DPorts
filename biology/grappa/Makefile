@@ -1,9 +1,5 @@
-# New ports collection makefile for:	grappa
-# Date created:		30 June 2001
-# Whom:                 dbader@ece.unm.edu
-#
-# $FreeBSD: ports/biology/grappa/Makefile,v 1.10 2012/11/17 05:54:51 svnexp Exp $
-#
+# Created by: dbader@ece.unm.edu
+# $FreeBSD: biology/grappa/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	grappa
 PORTVERSION=	2.0
@@ -18,6 +14,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	bin/grappa bin/invdist bin/distmat
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/-lpthread/${PTHREAD_LIBS}/g' ${WRKSRC}/${MAKEFILE}
 
