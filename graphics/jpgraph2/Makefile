@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org:
-# $FreeBSD: graphics/jpgraph2/Makefile 320368 2013-06-09 18:11:48Z miwi $
+# $FreeBSD: graphics/jpgraph2/Makefile 327764 2013-09-20 22:43:35Z bapt $
 
 PORTNAME=	jpgraph
 PORTVERSION=	3.0.7
@@ -13,6 +13,7 @@ USE_BZIP2=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USE_PHP=	gd
+NO_STAGE=	yes
 
 NO_CDROM=	The free version cannot be used in a commercial context
 
