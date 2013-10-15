@@ -1,5 +1,5 @@
 # Created by: James Howard
-# $FreeBSD: editors/gate/Makefile 320849 2013-06-13 23:06:34Z wg $
+# $FreeBSD: editors/gate/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	gate
 PORTVERSION=	2.06
@@ -19,6 +19,7 @@ ALL_TARGET=	gate gate.1
 
 MAN1=		gate.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$${res_datadir}|${DATADIR}|g' ${WRKSRC}/configure
