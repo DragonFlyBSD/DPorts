@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/bib2html/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/bib2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	bib2html
 DISTVERSION=	5.1-1
@@ -17,6 +17,7 @@ USES=		perl5
 USE_PERL5=	run
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e \
 		's:= "$$0";:= "${PREFIX}/${SITE_PERL_REL}/Bib2HTML";:g' \
