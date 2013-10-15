@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: www/tikiwiki/Makefile 325272 2013-08-23 15:40:27Z wg $
+# $FreeBSD: www/tikiwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tikiwiki
 PORTVERSION=	11.0
@@ -33,6 +33,7 @@ x-generate-plist: extract
 		${SED} -e 's|^|@dirrm %%TIKIWIKI_DIR%%/|' >> ${TEMP_PLIST} \
 		&& ${ECHO_CMD} "@dirrmtry %%TIKIWIKI_DIR%%" >> ${TEMP_PLIST}
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${TAR} -yxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} -C ${WRKDIR}
