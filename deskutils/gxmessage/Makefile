@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon <avg@icyb.net.ua>
-# $FreeBSD: deskutils/gxmessage/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: deskutils/gxmessage/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gxmessage
 PORTVERSION=	2.12.4
@@ -18,6 +18,7 @@ INSTALLS_ICONS=	yes
 
 MAKE_ARGS+=	INSTALL="${INSTALL_PROGRAM}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
