@@ -1,5 +1,5 @@
 # Created by: lab@fnurt.net
-# $FreeBSD: x11-wm/larswm/Makefile 322010 2013-06-28 22:57:16Z bapt $
+# $FreeBSD: x11-wm/larswm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	larswm
 PORTVERSION=	7.5.3
@@ -18,6 +18,7 @@ PORTDOCS=	ChangeLog README README.9menu README.9wm \
 		sample.larswmrc sample.xsession
 PLIST_FILES=	bin/larsclock bin/larsmenu bin/larsremote bin/larswm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
