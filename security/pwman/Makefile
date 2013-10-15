@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pwman
-# Date created:				23 June 2002
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pwman/Makefile,v 1.16 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: security/pwman/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pwman
 PORTVERSION=	0.4.0
@@ -24,6 +20,7 @@ PLIST_FILES=	bin/convert_pwdb bin/pwdb2csv bin/pwman
 
 PORTDOCS=	AUTHORS COPYING ChangeLog README TODO
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/gpg|${LOCALBASE}/bin/gpg|g' ${WRKSRC}/src/options.c
 
