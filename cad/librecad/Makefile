@@ -1,4 +1,4 @@
-# $FreeBSD: cad/librecad/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: cad/librecad/Makefile 329880 2013-10-09 10:08:04Z makc $
 
 PORTNAME=	librecad
 PORTVERSION=	1.0.3
@@ -12,6 +12,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libmuparser.a:${PORTSDIR}/math/muparser
 
 USE_QT4=	help qt3support help-tools_build moc_build qmake_build \
 		rcc_build uic_build uic3_build
+USES=		qmake
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 USE_GITHUB=	yes
@@ -38,9 +39,6 @@ post-patch:
 		'/^Icon/s,librecad,${PREFIX}/share/pixmaps/librecad.png,' \
 		${WRKSRC}/desktop/librecad.desktop
 
-do-configure:
-	@(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS})
-
 post-build:
 .if ${PORT_OPTIONS:MNLS}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
@@ -52,13 +50,13 @@ post-build:
 		${SH} scripts/postprocess-unix.sh
 
 do-install:
-	${MKDIR} ${PREFIX}/bin && \
-	${INSTALL_PROGRAM} ${WRKSRC}/unix/librecad ${PREFIX}/bin
-	cd ${WRKSRC}/unix/resources && ${COPYTREE_SHARE} . ${DATADIR}
-	${MKDIR} ${PREFIX}/share/applications && \
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/librecad ${STAGEDIR}${PREFIX}/bin
+	cd ${WRKSRC}/unix/resources && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/desktop/librecad.desktop \
-		${PREFIX}/share/applications
-	${MKDIR} ${PREFIX}/share/pixmaps && \
-	${INSTALL_DATA} ${WRKSRC}/res/main/librecad.png ${PREFIX}/share/pixmaps
+		${STAGEDIR}${PREFIX}/share/applications
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/res/main/librecad.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps
 
 .include <bsd.port.mk>
