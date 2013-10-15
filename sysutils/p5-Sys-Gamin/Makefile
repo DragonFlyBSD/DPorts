@@ -1,5 +1,5 @@
 # Created by: Nick Hibma <n_hibma@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Sys-Gamin/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: sysutils/p5-Sys-Gamin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-Gamin
 PORTVERSION=	0.1
@@ -17,6 +17,7 @@ USE_FAM=	yes
 MAN1=	gamin-monitor.1
 MAN3=	Sys::Gamin.3
 
+NO_STAGE=	yes
 pre-configure:
 	# Pass in include in LOCALBASE
 	${PERL} -pi -e 'm/LIBS =>/ && print "  INC => \"-I${LOCALBASE}/include\",\n"' ${WRKSRC}/Makefile.PL
