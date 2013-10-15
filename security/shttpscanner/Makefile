@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shttpscanner
-# Date created:		25 September 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/security/shttpscanner/Makefile,v 1.6 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: security/shttpscanner/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	shttpscanner
 PORTVERSION=	0.4
@@ -20,6 +16,7 @@ USE_DOS2UNIX=	yes
 PLIST_FILES=	bin/${PORTNAME} %%DATADIR%%/requests.txt %%DATADIR%%/subdomains.txt
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E '/^#define/s!([a-z]*\.txt)!${DATADIR}/\1!' ${WRKSRC}/${DISTNAME:tl}.c
 
