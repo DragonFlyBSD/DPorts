@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: math/convertall/Makefile 311476 2013-02-03 18:16:54Z makc $
+# $FreeBSD: math/convertall/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	convertall
 PORTVERSION=	0.5.2
@@ -23,6 +23,7 @@ USE_PYTHON=	2.4+
 DESKTOP_ENTRIES="ConvertAll" "Unit converter" "${DATADIR}/icons/${PORTNAME}.svg" \
 		"${PORTNAME}" "Utility;Calculator;" true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
