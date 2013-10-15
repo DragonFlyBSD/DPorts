@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: x11-clocks/wmitime/Makefile 324072 2013-07-31 22:50:47Z bapt $
+# $FreeBSD: x11-clocks/wmitime/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmitime
 PORTVERSION=	0.3
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/wmitime
 USE_XORG=	xpm
 USE_CSTD=	gnu89
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
