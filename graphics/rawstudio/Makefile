@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: graphics/rawstudio/Makefile 326109 2013-09-02 22:31:37Z bapt $
+# $FreeBSD: graphics/rawstudio/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	rawstudio
 PORTVERSION=	2.0
@@ -32,6 +32,7 @@ USE_GNOME=	gtk20 libxml2 gconf2 desktopfileutils gnomehack
 USE_SQLITE=	3
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's, libssl,,' ${WRKSRC}/configure
 
