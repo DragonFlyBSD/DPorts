@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bargraph
-# Date created:        			9 March 2012
-# Whom:                			Dereckson <dereckson@gmail.com>
-#
-# $FreeBSD: ports/math/bargraph/Makefile,v 1.3 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: Dereckson <dereckson@gmail.com>
+# $FreeBSD: math/bargraph/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	bargraph
 PORTVERSION=	4.7
@@ -24,6 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/fig2dev:${PORTSDIR}/print/transfig \
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
