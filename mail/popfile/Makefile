@@ -1,5 +1,5 @@
 # Created by: matusita@FreeBSD.org
-# $FreeBSD: mail/popfile/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: mail/popfile/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	popfile
 PORTVERSION=	1.1.3
@@ -39,6 +39,7 @@ USE_PERL5=	run
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
