@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-viper/Makefile 318889 2013-05-23 17:55:09Z miwi $
+# $FreeBSD: math/py-viper/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	viper
 PORTVERSION=	${MMVERSION}.1
@@ -23,6 +23,7 @@ MANCOMPRESSED=	yes
 
 MMVERSION=	1.0
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|data_files=\[(join("share", "man", "man1"),|data_files=\[(join("man", "man1"),|' \
 		${WRKSRC}/setup.py
