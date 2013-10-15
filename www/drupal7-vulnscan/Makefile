@@ -1,9 +1,5 @@
-# Ports collection makefile for:	drupal7-vulnscan
-# Date created:				28 Mar 2012
-# Whom:					Shawn Webb <bsdports@wayfair.com>
-#
-# $FreeBSD: ports/www/drupal7-vulnscan/Makefile,v 1.2 2012/11/17 06:02:32 svnexp Exp $
-#
+# Created by: Shawn Webb <bsdports@wayfair.com>
+# $FreeBSD: www/drupal7-vulnscan/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	vulnscan
 DISTVERSION=	7.x-0.1
@@ -17,6 +13,7 @@ LICENSE=	BSD
 
 USE_DRUPAL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DRUPAL_MODULE=	yes
