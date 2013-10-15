@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/anubis/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: mail/anubis/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	anubis
 PORTVERSION=	4.1.1
@@ -37,6 +37,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Default requirement for anubis rc script
