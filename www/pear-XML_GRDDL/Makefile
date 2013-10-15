@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/pear-XML_GRDDL/Makefile 314199 2013-03-15 00:43:16Z miwi $
+# $FreeBSD: www/pear-XML_GRDDL/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	XML_GRDDL
 PORTVERSION=	0.2.0
@@ -22,6 +22,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 USE_PHP+=	xsl tidy
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
