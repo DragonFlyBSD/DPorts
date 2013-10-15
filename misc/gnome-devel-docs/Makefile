@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/gnome-devel-docs/Makefile 326013 2013-09-02 15:39:17Z bapt $
+# $FreeBSD: misc/gnome-devel-docs/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.22 2010/09/29 15:17:53 kwm Exp $
 
 PORTNAME=	gnome-devel-docs
@@ -20,4 +20,5 @@ USES=		gmake pkgconfig
 USE_GNOME=	gnomehier
 INSTALLS_OMF=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
