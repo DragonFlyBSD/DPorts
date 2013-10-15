@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/markdown-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: textproc/markdown-mode.el/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	markdown-mode.el
 PORTVERSION=	2.0
@@ -20,6 +20,7 @@ USE_EMACS=	yes
 
 PLIST_FILES=	${EMACS_SITE_LISPDIR}/markdown-mode.el
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} \
 		${PREFIX}/${EMACS_SITE_LISPDIR}/markdown-mode.el
