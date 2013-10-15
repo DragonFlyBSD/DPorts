@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Google-ProtocolBuffers/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Google-ProtocolBuffers/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	Google-ProtocolBuffers
 PORTVERSION=	0.08
@@ -17,7 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Google::ProtocolBuffers.3
 
 .include <bsd.port.mk>
