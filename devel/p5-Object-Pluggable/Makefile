@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Object-Pluggable
-# Date created:	   2010-09-29
-# Whom:		   Jase Thew <freebsd@beardz.net>
-#
-# $FreeBSD: devel/p5-Object-Pluggable/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Jase Thew <freebsd@beardz.net>
+# $FreeBSD: devel/p5-Object-Pluggable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Object-Pluggable
 PORTVERSION=	1.29
@@ -21,12 +17,14 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Object::Pluggable.3 \
 		Object::Pluggable::Constants.3 \
 		Object::Pluggable::Pipeline.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
