@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 326605 2013-09-07 10:19:59Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Model-DBIC-Schema
 PORTVERSION=	0.61
@@ -44,6 +44,7 @@ MAN3=		Catalyst::Helper::Model::DBIC::Schema.3 \
 		Catalyst::TraitFor::Model::DBIC::Schema::Replicated.3 \
 		Catalyst::TraitFor::Model::DBIC::Schema::SchemaProxy.3
 
+NO_STAGE=	yes
 #post-patch:
 #	@${PERL} -i.bak -ne 'print unless m,^feature, .. m,;$$,' ${WRKSRC}/Makefile.PL
 
