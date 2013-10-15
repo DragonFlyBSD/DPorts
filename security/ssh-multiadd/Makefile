@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: ports/security/ssh-multiadd/Makefile,v 1.14 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: security/ssh-multiadd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ssh-multiadd
 PORTVERSION=	1.3.2
@@ -14,6 +14,7 @@ NO_BUILD=	yes
 MAN1=		ssh-multiadd.1
 PLIST_FILES=	bin/ssh-multiadd
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/usr/bin/python2|${PYTHON_CMD}| ; \
