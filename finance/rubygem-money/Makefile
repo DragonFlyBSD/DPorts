@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: finance/rubygem-money/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: finance/rubygem-money/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	money
 PORTVERSION=	5.1.1
@@ -15,4 +15,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
