@@ -1,5 +1,5 @@
 # Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
-# $FreeBSD: deskutils/x-tile/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: deskutils/x-tile/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	x-tile
 PORTVERSION=	2.2.1
@@ -17,6 +17,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	X_Tile
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
