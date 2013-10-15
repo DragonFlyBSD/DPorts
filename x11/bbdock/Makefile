@@ -1,5 +1,5 @@
 # Created by: Francis Bacque <idroxid01@yahoo.fr>
-# $FreeBSD: x11/bbdock/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/bbdock/Makefile 330197 2013-10-13 01:51:46Z eadler $
 
 PORTNAME=	bbdock
 PORTVERSION=	0.2.9
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://bbdock.nethence.com/download/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An application launcher for Blackbox-like window manager
+COMMENT=	Application launcher for Blackbox-like window manager
 
 LICENSE=	BSD
 
@@ -25,8 +25,8 @@ PLIST_FILES=	bin/bbdock
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
