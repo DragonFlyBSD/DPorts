@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/gtkballs/Makefile 326995 2013-09-11 17:17:35Z antoine $
+# $FreeBSD: games/gtkballs/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gtkballs
 PORTVERSION=	3.1.5
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--localstatedir=${DATADIR}
 
 MAN6=		gtkballs.6x
 
+NO_STAGE=	yes
 post-install:
 	${CHMOD} 2755 ${PREFIX}/bin/gtkballs
 	${CHOWN} root:games ${PREFIX}/bin/gtkballs
