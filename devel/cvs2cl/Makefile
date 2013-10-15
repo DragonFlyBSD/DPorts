@@ -1,5 +1,5 @@
 # Created by: knu@FreeBSD.org
-# $FreeBSD: devel/cvs2cl/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/cvs2cl/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvs2cl
 PORTVERSION=	2.73
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${WRKSRC}/${PORTNAME}
