@@ -1,9 +1,5 @@
-# New ports collection makefile for:	http_post
-# Date created:				9 Sep 2012
-# Whom:					Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-#
-# $FreeBSD: ports/www/http_post/Makefile,v 1.2 2012/11/17 06:02:36 svnexp Exp $
-#
+# Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
+# $FreeBSD: www/http_post/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	http_post
 PORTVERSION=	1.0.20110118
@@ -25,4 +21,5 @@ PLIST_FILES=	bin/http_post
 USE_OPENSSL=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
