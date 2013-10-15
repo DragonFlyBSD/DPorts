@@ -1,7 +1,7 @@
-# $FreeBSD: devel/py-archetypes.referencebrowserwidget/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-archetypes.referencebrowserwidget/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	archetypes.referencebrowserwidget
-PORTVERSION=	2.4.17
+PORTVERSION=	2.4.19
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +19,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
