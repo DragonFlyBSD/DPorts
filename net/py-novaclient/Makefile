@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-novaclient
-# Date created:				2011-12-08
-# Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-novaclient/Makefile,v 1.3 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
+# $FreeBSD: net/py-novaclient/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	novaclient
 PORTVERSION=	2.6.8
@@ -27,6 +23,7 @@ PYDISTUTILS_PKGNAME=	python-${PORTNAME}
 PLIST_FILES=	bin/nova \
 		${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}/${PYEASYINSTALL_EGG}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,install_requires.*,,' ${WRKSRC}/setup.py
 
