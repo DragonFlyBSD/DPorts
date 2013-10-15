@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@wizard.volgograd.ru>
-# $FreeBSD: sysutils/gosa/Makefile 320586 2013-06-11 14:51:51Z miwi $
+# $FreeBSD: sysutils/gosa/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gosa
 PORTVERSION=	2.6.10
@@ -28,6 +28,7 @@ SUB_LIST+=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 MAN1=		update-gosa.1
 MAN5=		gosa.conf.5
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's!"/etc/gosa"!"${ETCDIR}"!g' \
