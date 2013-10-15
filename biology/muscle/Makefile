@@ -1,9 +1,5 @@
-# New ports collection makefile for:	muscle
-# Date created:	6 December 2007
-# Whom:		Motomichi Matsuzaki <mzaki@biol.s.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/biology/muscle/Makefile,v 1.5 2012/11/17 05:54:52 svnexp Exp $
-#
+# Created by: Motomichi Matsuzaki <mzaki@biol.s.u-tokyo.ac.jp>
+# $FreeBSD: biology/muscle/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	muscle
 PORTVERSION=	3.6
@@ -31,6 +27,7 @@ USE_DOS2UNIX=	*.cpp
 
 PLIST_FILES=	bin/muscle
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/muscle ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
