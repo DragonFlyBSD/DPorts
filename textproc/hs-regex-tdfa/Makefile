@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-regex-tdfa/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-regex-tdfa/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	regex-tdfa
 PORTVERSION=	1.1.8
@@ -10,5 +10,6 @@ COMMENT=	Replaces/Enhances Text.Regex
 
 USE_CABAL=	mtl parsec regex-base>=0.93.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
