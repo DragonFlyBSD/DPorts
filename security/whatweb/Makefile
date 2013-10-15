@@ -1,9 +1,5 @@
-# New ports collection makefile for:    whatweb
-# Date created:				2010-04-11
-# Whom:					Niels Heinen
-#
-# $FreeBSD: ports/security/whatweb/Makefile,v 1.10 2012/11/17 06:01:22 svnexp Exp $
-#
+# Created by: Niels Heinen
+# $FreeBSD: security/whatweb/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	whatweb
 PORTVERSION=	0.4.7
@@ -23,6 +19,7 @@ MAN1=		${PORTNAME}.1
 MANCOMPRESSED=	no
 USE_RUBY_FEATURES=	iconv
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
