@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/bmpanel2/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: x11/bmpanel2/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	bmpanel2
 DISTVERSION=	2.1pre1
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib		# XXX should not be needed
 OPTIONS_DEFINE=	TEMPERATURE
 TEMPERATURE_DESC=	Build with temperature widget (for CPU, etc.)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTEMPERATURE}
