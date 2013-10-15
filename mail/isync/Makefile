@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: mail/isync/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: mail/isync/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	isync
 PORTVERSION=	1.0.6
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${BDB_LIB_DIR} -L${OPENSSLLIB} -lssl -lcrypto
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
