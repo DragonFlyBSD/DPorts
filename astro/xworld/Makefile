@@ -1,16 +1,12 @@
-# Ports collection makefile for:  xworld
-# Date created:			  24 Aug 2001
-# Whom:				  Kris Kennaway <kris@FreeBSD.org
-#
-# $FreeBSD: astro/xworld/Makefile 324122 2013-08-01 20:22:27Z naddy $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org
+# $FreeBSD: astro/xworld/Makefile 328150 2013-09-24 15:47:01Z naddy $
 
 PORTNAME=	xworld
 PORTVERSION=	2.0
 PORTREVISION=	2
 CATEGORIES=	astro geography
-MASTER_SITES=	ftp://gutemine.geo.uni-koeln.de/pub/xworld/ \
-		ftp://ftp.Uni-Koeln.DE/misc/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	naddy
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Earth as seen from the direction of the sun
@@ -27,6 +23,6 @@ PLIST_FILES=	bin/xworld
 STRIP=		#don't strip out image data on install
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xworld ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/xworld ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
