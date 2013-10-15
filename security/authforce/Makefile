@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: security/authforce/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/authforce/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	authforce
 PORTVERSION=	0.9.9
@@ -33,6 +33,7 @@ PLIST_FILES=	bin/authforce \
 
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURL}
