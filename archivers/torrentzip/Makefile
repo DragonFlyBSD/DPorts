@@ -1,9 +1,5 @@
-# New ports collection makefile for:    torrentzip
-# Date created:         May 2, 2005
-# Whom:                 swhetzel@gmail.com
-#
-# $FreeBSD: ports/archivers/torrentzip/Makefile,v 1.13 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: swhetzel@gmail.com
+# $FreeBSD: archivers/torrentzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	torrentzip
 PORTVERSION=	0.2
@@ -15,6 +11,7 @@ DISTNAME=	trrntzip_v${PORTVERSION:S/.//}_src
 MAINTAINER=	swhetzel@gmail.com
 COMMENT=	Efficient way to prepare zipfiles for BitTorrent
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	aclocal automake autoheader
 AUTOMAKE_ARGS=		-a
 
