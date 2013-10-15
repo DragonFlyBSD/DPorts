@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: graphics/pixmap/Makefile 321988 2013-06-28 21:19:31Z bapt $
+# $FreeBSD: graphics/pixmap/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pixmap
 PORTVERSION=	2.6
@@ -28,4 +28,5 @@ CFLAGS+=	-D_X_SENTINEL\(x\)= -D_X_ATTRIBUTE_PRINTF\(x,y\)= \
 
 MAN1=		pixmap.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
