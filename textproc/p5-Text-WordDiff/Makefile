@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <ports@rbt.ca>
-# $FreeBSD: textproc/p5-Text-WordDiff/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-WordDiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-WordDiff
 PORTVERSION=	0.08
@@ -26,4 +26,5 @@ MAN3=		Text::WordDiff.3 \
 		Text::WordDiff::HTML.3 \
 		Text::WordDiff::HTMLTwoLines.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
