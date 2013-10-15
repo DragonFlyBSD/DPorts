@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-pQuery/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-pQuery/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pQuery
 PORTVERSION=	0.09
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=	pQuery.3 \
 	pQuery::DOM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
