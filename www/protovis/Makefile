@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/protovis/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/protovis/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	protovis
 PORTVERSION=	3.2
@@ -14,6 +14,7 @@ USE_ZIP=	yes
 
 PROJECTHOST=	${PORTNAME}-js
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DOCSDIR}/ ${EXAMPLESDOR}/ ${WWWDIR}/
 .if !defined(NOPORTDOCS)
