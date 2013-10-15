@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: textproc/rubygem-kwalify/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: textproc/rubygem-kwalify/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	kwalify
 PORTVERSION=	0.7.2
@@ -15,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/kwalify
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
