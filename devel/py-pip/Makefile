@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-pip/Makefile 325716 2013-08-30 19:21:25Z nivit $
+# $FreeBSD: devel/py-pip/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pip
 PORTVERSION=	1.4.1
@@ -30,6 +30,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 USES=		shebangfix
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
