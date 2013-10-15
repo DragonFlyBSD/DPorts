@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/mpb/Makefile 321382 2013-06-20 13:35:33Z bsam $
+# $FreeBSD: science/mpb/Makefile 329631 2013-10-06 21:51:02Z marino $
 
 PORTNAME=	mpb
 PORTVERSION=	1.4.2
@@ -12,6 +12,8 @@ COMMENT=	MIT Photonic-Bands
 
 LICENSE=	GPLv2
 
+MAKE_JOBS_UNSAFE= yes
+
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 LIB_DEPENDS=	fftw:${PORTSDIR}/math/fftw \
 		hdf5:${PORTSDIR}/science/hdf5 \
@@ -20,6 +22,7 @@ LIB_DEPENDS=	fftw:${PORTSDIR}/math/fftw \
 
 USE_FORTRAN=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
