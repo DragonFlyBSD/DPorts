@@ -1,5 +1,5 @@
 # Created by: Alexander Best <arundel@gmx.net>
-# $FreeBSD: emulators/vba/Makefile 323894 2013-07-29 16:54:35Z danfe $
+# $FreeBSD: emulators/vba/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	vba
 PORTVERSION=	1.7.2
@@ -38,6 +38,7 @@ PROFILING_DESC=	Enable profiling
 GTK2_CONFIGURE_ON=	--enable-gtk=2.4
 PROFILING_CONFIGURE_ENABLE=	profiling
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
