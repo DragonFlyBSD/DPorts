@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: net/bmon/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: net/bmon/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bmon
 PORTVERSION=	2.1.0
@@ -25,6 +25,7 @@ MAKEFILE=	GNUmakefile
 MAN1=		bmon.1
 PLIST_FILES=	sbin/bmon
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRRDTOOL}
