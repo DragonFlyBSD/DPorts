@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: deskutils/jlj/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: deskutils/jlj/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	jlj
 PORTVERSION=	2.12
@@ -23,6 +23,7 @@ PLIST_DIRS=	share/examples/jlj
 
 SHEBANG_FILES=	jlj.pl
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
