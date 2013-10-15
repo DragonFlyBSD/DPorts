@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/pigz/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/pigz/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	pigz
 PORTVERSION=	2.3
@@ -10,6 +10,7 @@ MASTER_SITES=	http://www.zlib.net/pigz/ \
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Parallel GZIP
 
+NO_STAGE=	yes
 USES=		gmake
 
 .if !defined(NO_INSTALL_MANPAGES)
