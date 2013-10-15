@@ -1,5 +1,5 @@
 # Created by: nivit@users.sourceforge.net
-# $FreeBSD: ports/www/apache-forrest/Makefile,v 1.15 2012/12/10 17:42:49 svnexp Exp $
+# $FreeBSD: www/apache-forrest/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=		apache-forrest
 PORTVERSION=		0.8
@@ -33,6 +33,7 @@ ANT=		${DATADIR}/tools/ant/bin/ant
 ANT_TARGET=	local-deploy
 PLUGINSDIR=	${DATADIR}/plugins/org.apache.forrest.plugin.output.pdf
 
+NO_STAGE=	yes
 post-patch:
 	@for FILE in ${REPLACE_FILES}; do \
 		${REINPLACE_CMD} -e "/%%JAVA_HOME%%/s//${JAVA_HOME:S/\//\\\//g}/g" \

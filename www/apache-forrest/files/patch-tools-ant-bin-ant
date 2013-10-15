@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/apache-forrest/files/patch-tools-ant-bin-ant,v 1.3 2012/11/17 06:02:27 svnexp Exp $
+$FreeBSD: www/apache-forrest/files/patch-tools-ant-bin-ant 300897 2012-07-14 14:29:18Z beat $
 --- tools/ant/bin/ant	Tue Apr 10 18:18:14 2007
 +++ tools/ant/bin/ant.port	Mon Apr 16 14:27:19 2007
 @@ -78,6 +78,7 @@
