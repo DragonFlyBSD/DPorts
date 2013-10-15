@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-statistics/Makefile 324819 2013-08-16 22:40:22Z stephen $
+# $FreeBSD: math/octave-forge-statistics/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-statistics
 PORTVERSION=	1.2.2
@@ -14,6 +14,7 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 RUN_DEPENDS+=	${TARBALLS_DIR}/io.tar.gz:${PORTSDIR}/math/octave-forge-io
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 do-build:
