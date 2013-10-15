@@ -1,9 +1,5 @@
-# New ports collection makefile for:   blogsum
-# Date created:        2 November 2009
-# Whom:                jhuldtgren
-#
-# $FreeBSD: ports/www/blogsum/Makefile,v 1.11 2012/11/17 06:02:29 svnexp Exp $
-#
+# Created by: jhuldtgren
+# $FreeBSD: www/blogsum/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	blogsum
 PORTVERSION=	1.1
@@ -22,11 +18,12 @@ RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
 		p5-HTTP-Lite>=0:${PORTSDIR}/www/p5-HTTP-Lite \
 		${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
-
+USE_PERL5=	run
 USE_APACHE_RUN=	22+
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 SUB_FILES=	pkg-message
