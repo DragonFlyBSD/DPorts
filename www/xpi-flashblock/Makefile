@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson
-# $FreeBSD: www/xpi-flashblock/Makefile 316188 2013-04-21 17:52:55Z bar $
+# $FreeBSD: www/xpi-flashblock/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	flashblock
 PORTVERSION=	1.5.17
@@ -14,6 +14,7 @@ USE_XPI=	*firefox*
 XPI_ID=		{3d7eb24f-2740-49df-8937-200b1cc08f8a}
 XPI_NUM=	433
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<em:maxVersion>8\.0<|<em:maxVersion>99.*<|' \
 	    ${WRKSRC}/install.rdf
