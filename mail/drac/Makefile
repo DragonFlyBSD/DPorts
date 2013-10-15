@@ -1,9 +1,5 @@
-# New ports collection makefile for:	drac
-# Date created:			07 January 2001
-# Whom:				Anders Nordby <anders@fix.no>
-#
-# $FreeBSD: ports/mail/drac/Makefile,v 1.32 2012/11/17 05:59:01 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@fix.no>
+# $FreeBSD: mail/drac/Makefile 329631 2013-10-06 21:51:02Z marino $
 
 PORTNAME=	drac
 PORTVERSION=	1.12
@@ -17,6 +13,8 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dynamic Relay Authorization Control, a POP-before-SMTP implementation
+
+MAKE_JOBS_UNSAFE= yes
 
 .if defined(WITH_POSTFIX_DB3)
 LIB_DEPENDS+=	db3.3:${PORTSDIR}/databases/db3
@@ -33,6 +31,7 @@ MAN3=		dracauth.3
 MAN1=		rpc.dracd.1
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAKE_ARGS+=	-DWITH_TI_RPC
