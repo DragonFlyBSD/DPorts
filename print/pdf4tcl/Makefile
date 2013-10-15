@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: ports/print/pdf4tcl/Makefile,v 1.2 2013/02/18 13:12:59 svnexp Exp $
+# $FreeBSD: print/pdf4tcl/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pdf4tcl
 PORTVERSION=	0.8
@@ -23,6 +23,7 @@ PLIST_FILES=	lib/${PKGNAME}/glyph2uni.tcl \
 		lib/${PKGNAME}/stdmetrics.tcl
 PLIST_DIRS=	lib/${PKGNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
