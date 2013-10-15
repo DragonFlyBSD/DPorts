@@ -1,7 +1,7 @@
-# $FreeBSD: multimedia/py-openlp/Makefile 325854 2013-09-01 12:58:10Z lwhsu $
+# $FreeBSD: multimedia/py-openlp/Makefile 329169 2013-10-03 12:04:43Z wg $
 
 PORTNAME=	OpenLP
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.3
 PORTREVISION=	1
 CATEGORIES=	multimedia python
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION}
@@ -17,18 +17,23 @@ BUILD_DEPENDS=	py*-sip>=0:${PORTSDIR}/devel/py-sip \
 		py*-qt4-gui>=0:${PORTSDIR}/x11-toolkits/py-qt4-gui \
 		py*-mako>0:${PORTSDIR}/textproc/py-mako \
 		py*-sqlalchemy>=0.5:${PORTSDIR}/databases/py-sqlalchemy
-RUN_DEPENDS=	py*-beautifulsoup<3.1:${PORTSDIR}/www/py-beautifulsoup30 \
+RUN_DEPENDS=	py*-beautifulsoup32>0:${PORTSDIR}/www/py-beautifulsoup32 \
 		py*-lxml>=0:${PORTSDIR}/devel/py-lxml \
+		py*-qt4-core>=0:${PORTSDIR}/devel/py-qt4-core \
 		py*-phonon>=${PYQT4_VERSION}:${PORTSDIR}/multimedia/py-qt4-phonon \
 		py*-sqlalchemy>=0.5:${PORTSDIR}/databases/py-sqlalchemy \
 		py*-qt4-gui>=0:${PORTSDIR}/x11-toolkits/py-qt4-gui \
 		py*-qt4-webkit>=0:${PORTSDIR}/www/py-qt4-webkit \
 		py*-qt4-network>=0:${PORTSDIR}/net/py-qt4-network \
 		py*-qt4-opengl>=0:${PORTSDIR}/x11/py-qt4-opengl \
+		py*-qt4-svg>=0:${PORTSDIR}/graphics/py-qt4-svg \
+		py*-qt4-test>=0:${PORTSDIR}/devel/py-qt4-test \
 		py*-chardet>=0:${PORTSDIR}/textproc/py-chardet \
 		py*-mako>0:${PORTSDIR}/textproc/py-mako \
+		py*-enchant>0:${PORTSDIR}/textproc/py-enchant \
 		${PYTHON_PKGNAMEPREFIX}sqlalchemy-migrate>=0.6.1:${PORTSDIR}/databases/py-sqlalchemy-migrate \
-		py*-sqlite3>=0:${PORTSDIR}/databases/py-sqlite3
+		py*-sqlite3>=0:${PORTSDIR}/databases/py-sqlite3 \
+		unoconv:${PORTSDIR}/textproc/unoconv
 
 PYDISTUTILS_NOEGGINFO=	yes
 USE_PYTHON=	2.6+
@@ -38,6 +43,7 @@ USE_QT4=	linguist phonon-gst
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 QT_LRELEASE=	${LOCALBASE}/bin/lrelease-qt4
 
+NO_STAGE=	yes
 pre-build:
 	@${MKDIR} -p ${WRKSRC}/resources/i18n/qm
 	@set -e; \
