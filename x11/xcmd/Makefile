@@ -1,5 +1,5 @@
 # Created by: Oliver Breuninger <ob@breuninger.org>
-# $FreeBSD: x11/xcmd/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xcmd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcmd
 PORTVERSION=	1.8
@@ -19,4 +19,5 @@ MANCOMPRESSED=	yes
 MAN1=		xcmd.1
 PLIST_FILES=	bin/xcmd
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
