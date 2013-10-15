@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO
-# $FreeBSD: biology/ortep3/Makefile 321317 2013-06-19 20:06:59Z bsam $
+# $FreeBSD: biology/ortep3/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	ortep3
 PORTVERSION=	1.0.3
@@ -28,6 +28,7 @@ PORTEXAMPLES=	*
 OPTIONS_DEFINE=	DOCS EXAMPLES PGPLOT
 PGPLOT_DESC=	Fortran subroutine package for drawing graphs
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGPLOT}
