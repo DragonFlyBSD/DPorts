@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::EN::Syllable
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: textproc/p5-Lingua-EN-Syllable/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-EN-Syllable/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-EN-Syllable
 PORTVERSION=	0.251
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Lingua::EN::Syllable.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
