@@ -1,5 +1,5 @@
 # Created by: geniusj@ods.org
-# $FreeBSD: dns/updatedd/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/updatedd/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	updatedd
 PORTVERSION=	2.6
@@ -24,6 +24,7 @@ MAN5=		updatedd-wrapper.conf.5
 EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-disable-portdocs
 .endif
 
+NO_STAGE=	yes
 post-install:
 	@if [ ! -f ${PREFIX}/etc/updatedd-wrapper.conf ]; then \
 		${CP} -p ${PREFIX}/etc/updatedd-wrapper.conf.sample ${PREFIX}/etc/updatedd-wrapper.conf ; \
