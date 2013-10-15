@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: astro/wmspaceweather/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: astro/wmspaceweather/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	wmspaceweather
 PORTVERSION=	1.04
@@ -18,6 +18,7 @@ RUN_DEPENDS=	p5-Time-modules>=0:${PORTSDIR}/devel/p5-Time-modules
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmSpaceWeather
 
+NO_STAGE=	yes
 USE_XORG=	x11 xext xpm
 ALL_TARGET=	clean all
 MAKE_JOBS_UNSAFE=	yes
