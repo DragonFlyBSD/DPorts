@@ -1,9 +1,5 @@
-# New ports collection makefile for:	webbench
-# Date created:		10 Jan 2004
-# Whom:			Radim Kolar
-#
-# $FreeBSD: ports/benchmarks/webbench/Makefile,v 1.11 2012/11/17 05:54:51 svnexp Exp $
-#
+# Created by: Radim Kolar
+# $FreeBSD: benchmarks/webbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	webbench
 PORTVERSION=	1.5
@@ -26,6 +22,7 @@ PORTDOCS=	copyright changelog
 
 PLIST_FILES=	bin/webbench
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/webbench ${PREFIX}/bin
 .if !defined(NO_INSTALL_MANPAGES)
