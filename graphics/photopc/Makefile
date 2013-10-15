@@ -1,6 +1,5 @@
-# Created by:			Douglas Carmichael <dcarmich@mcs.com>
-#
-# $FreeBSD: graphics/photopc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Douglas Carmichael <dcarmich@mcs.com>
+# $FreeBSD: graphics/photopc/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	photopc
 PORTVERSION=	3.07
@@ -21,6 +20,7 @@ MAN1=		epinfo.1 photopc.1
 
 PORTDOCS=	README protocol.htm usage.htm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
