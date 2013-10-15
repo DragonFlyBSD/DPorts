@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: sysutils/quicksynergy/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: sysutils/quicksynergy/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	quicksynergy
 PORTVERSION=	0.9.0
@@ -22,4 +22,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/quicksynergy \
 		share/locale/pt_BR/LC_MESSAGES/quicksynergy.mo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
