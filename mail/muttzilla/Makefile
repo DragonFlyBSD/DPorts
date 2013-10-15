@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: ports/mail/muttzilla/Makefile,v 1.21 2013/01/09 01:06:15 svnexp Exp $
+# $FreeBSD: mail/muttzilla/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	muttzilla
 PORTVERSION=	0.40
@@ -9,6 +9,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mutt MUA plugin for Netscape for use on "mailto:" URLs
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} \
 		-e "s:/etc/muttzilla.conf:${PREFIX}/etc/muttzilla.conf:g"  \
