@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: www/MT/Makefile 327283 2013-09-14 13:38:20Z az $
+# $FreeBSD: www/MT/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MT
 PORTVERSION=	5.2.7
@@ -30,6 +30,7 @@ PGSQL_DESC=		PostgreSQL database support[obsolete]
 SQLITE_DESC=		SQLite3 database support[obsolete]
 SQLITE2_DESC=		SQLite2 database support[obsolete]
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DATADIR=	www/data
