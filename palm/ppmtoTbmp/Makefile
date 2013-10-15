@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ppmtoTbmp
-# Date created:         30th May 2001
-# Whom:                 Jose Marques <noway@nohow.demon.co.uk>
-#
-# $FreeBSD: ports/palm/ppmtoTbmp/Makefile,v 1.17 2012/11/17 06:00:44 svnexp Exp $
-#
+# Created by: Jose Marques <noway@nohow.demon.co.uk>
+# $FreeBSD: palm/ppmtoTbmp/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	ppmtoTbmp
 PORTVERSION=	1.1
@@ -19,6 +15,7 @@ LIB_DEPENDS=	netpbm.1:${PORTSDIR}/graphics/netpbm
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ARGS=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include" LDLIBS=-lnetpbm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^#include "ppmcmap.h"/d' ${WRKSRC}/ppmtoTbmp.c
 
