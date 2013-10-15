@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: print/qpdfview/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: print/qpdfview/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	qpdfview
 PORTVERSION=	0.4.3
@@ -28,6 +28,7 @@ DJVU_DESC=	DjVu support
 PS_DESC=	PostScript support
 OPTIONS_DEFAULT=	PDF
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDJVU}
