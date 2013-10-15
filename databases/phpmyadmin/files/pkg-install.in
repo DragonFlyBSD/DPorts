@@ -1,11 +1,13 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/phpmyadmin/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: databases/phpmyadmin/files/pkg-install.in 328496 2013-09-27 16:08:12Z matthew $
 #
 
 PATH=/usr/sbin:/usr/bin:/bin ; export PATH
 
 WWWDIR=%%WWWDIR%%
+SUPHP_ENABLED=%%SUPHP_ENABLED%%
+CFG_FILE=%%CFG_FILE%%
 pma_usr=%%PMA_USR%%
 pma_grp=%%PMA_GRP%%
 
@@ -13,10 +15,19 @@ case $2 in
 
     POST-INSTALL)
 
-    	# Change ownership of the phpMyAdm directory
+    	# If suPHP is in use, change ownership of the phpMyAdm
+    	# directory
 
-        echo "===> Adjusting file ownership in $WWWDIR"
-        chown -R $pma_usr:$pma_grp $WWWDIR || exit 1
+	if [ ! -z ${SUPHP_ENABLED} ] ; then
+            echo "===> Adjusting file ownership in $WWWDIR"
+            chown -R $pma_usr:$pma_grp $WWWDIR || exit 1
+	fi
+
+	# Install the config file if it doesn't exist
+
+	if [ ! -f ${CFG_FILE} ] ; then
+	    cp -p ${CFG_FILE}.sample ${CFG_FILE}
+	fi
 	;;
 esac
 
