@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: editors/ted/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/ted/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	ted
 PORTVERSION=	2.23
@@ -43,6 +43,7 @@ DOCSDIR=	${PREFIX}/share/doc/Ted
 AFMDIR=		${DATADIR}/afm
 INDDIR=		${DATADIR}/dfa
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
