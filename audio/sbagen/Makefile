@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@FreeBSD.org>
-# $FreeBSD: audio/sbagen/Makefile 314551 2013-03-18 11:04:01Z gahr $
+# $FreeBSD: audio/sbagen/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	sbagen
 PORTVERSION=	1.4.5
@@ -16,6 +16,7 @@ PORTDOCS=	ChangeLog.txt README.txt SBAGEN.txt TODO.txt focus.txt \
 		focus2.txt holosync.txt theory.txt theory2.txt wave.txt
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
+NO_STAGE=	yes
 
 .include <bsd.port.options.mk>
 
