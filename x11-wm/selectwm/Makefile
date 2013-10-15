@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/selectwm/Makefile 325734 2013-08-30 23:31:49Z bapt $
+# $FreeBSD: x11-wm/selectwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	selectwm
 PORTVERSION=	0.4.1
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/selectwm share/locale/fr/LC_MESSAGES/selectwm.mo
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,-O2,${CFLAGS},g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's,^CFLAGS =,CFLAGS +=,' -e 's,-O2,,' \
