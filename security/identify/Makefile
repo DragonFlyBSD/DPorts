@@ -1,5 +1,5 @@
 # Created by: nsayer@quack.kfu.com
-# $FreeBSD: ports/security/identify/Makefile,v 1.20 2012/11/17 06:01:05 svnexp Exp $
+# $FreeBSD: security/identify/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	identify
 PORTVERSION=	0.7
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libident.a:${PORTSDIR}/security/libident
 PORTDOCS=	README
 PLIST_FILES=	libexec/identify
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
