@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: graphics/eps2png/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/eps2png/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	eps2png
 PORTVERSION=	2.7
@@ -18,4 +18,5 @@ MAKE_ARGS=	INSTLLSCRIPT="${PREFIX}/bin"
 
 MAN1=		eps2png.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
