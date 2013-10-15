@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-Rules/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: textproc/p5-XML-Rules/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Rules
 PORTVERSION=	1.16
@@ -17,4 +17,5 @@ USE_PERL5=	modbuild
 
 MAN3=	XML::Rules.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
