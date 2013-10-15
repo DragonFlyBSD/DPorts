@@ -1,5 +1,5 @@
 # Created by: Martin Neubauer <m.ne@gmx.net>
-# $FreeBSD: misc/p5-Business-EDI/Makefile 325959 2013-09-02 09:36:29Z az $
+# $FreeBSD: misc/p5-Business-EDI/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Business-EDI
 PORTVERSION=	0.05
@@ -32,4 +32,5 @@ MAN3=		Business::EDI.3 \
 		Business::EDI::Composite.3 \
 		Business::EDI::Spec.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
