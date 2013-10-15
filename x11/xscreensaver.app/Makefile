@@ -1,5 +1,5 @@
 # Created by: hemi@puresimplicity.net
-# $FreeBSD: x11/xscreensaver.app/Makefile 323416 2013-07-21 21:33:40Z rene $
+# $FreeBSD: x11/xscreensaver.app/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	XScreenSaver.App
 PORTVERSION=	2.3
@@ -19,4 +19,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lX11
 
 MAKE_ARGS=	"LDFLAGS+=${LDFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
