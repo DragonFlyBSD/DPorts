@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libgooglepinyin
-# Date created:				11 Nov 2011
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: chinese/libgooglepinyin/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: chinese/libgooglepinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	libgooglepinyin
 PORTVERSION=	0.1.2
@@ -17,4 +13,5 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=		cmake
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
