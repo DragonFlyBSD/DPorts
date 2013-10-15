@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng, Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: net/p5-BBS-Client/Makefile 324918 2013-08-18 14:25:16Z az $
+# $FreeBSD: net/p5-BBS-Client/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	BBS-Client
 PORTVERSION=	0.03
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		BBS::Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
