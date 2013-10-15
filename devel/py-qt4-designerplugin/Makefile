@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/py-qt4-designerplugin/Makefile 322573 2013-07-09 20:57:12Z rakuco $
+# $FreeBSD: devel/py-qt4-designerplugin/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	designerplugin
 PORTVERSION=	${PYQT4_VERSION}
@@ -34,6 +34,7 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../py-qt4/bsd.pyqt.mk"
 
 .if defined(WITH_DEBUG)
