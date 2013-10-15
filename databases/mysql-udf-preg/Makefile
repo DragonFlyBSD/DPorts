@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mysql-udf-preg/Makefile 324913 2013-08-18 13:31:33Z bdrewery $
+# $FreeBSD: databases/mysql-udf-preg/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql-udf-preg
 PORTVERSION=	1.0.1
@@ -28,6 +28,7 @@ PLIST_FILES=	lib/mysql/plugin/lib_mysqludf_preg.a \
 				%%DATADIR%%/uninstalldb.sql
 PLIST_DIRS=	${DATADIR_REL} lib/mysql/plugin
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/installdb.sql ${DATADIR}/
