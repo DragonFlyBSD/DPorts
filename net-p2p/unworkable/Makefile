@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unworkable
-# Date created:				06 Oct 2008
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/net-p2p/unworkable/Makefile,v 1.7 2012/11/17 06:00:41 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: net-p2p/unworkable/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	unworkable
 PORTVERSION=	0.53
@@ -24,6 +20,7 @@ PLIST_FILES=	bin/unworkable
 
 MAN1=	unworkable.1
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's#/usr/local#${LOCALBASE}#g' \
 		${WRKSRC}/SConstruct
