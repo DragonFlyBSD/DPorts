@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-SubCalls/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Test-SubCalls/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-SubCalls
 PORTVERSION=	1.09
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Test::SubCalls.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
