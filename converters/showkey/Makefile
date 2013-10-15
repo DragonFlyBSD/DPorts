@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/converters/showkey/Makefile,v 1.7 2013/01/27 06:41:37 svnexp Exp $
+# $FreeBSD: converters/showkey/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	showkey
 PORTVERSION=	1.5
@@ -19,6 +19,7 @@ ALL_TARGET=	showkey
 MAN1=		showkey.1
 PLIST_FILES=	bin/showkey
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/showkey ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/showkey.1 ${MANPREFIX}/man/man1
