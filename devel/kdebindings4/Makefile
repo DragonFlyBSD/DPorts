@@ -1,4 +1,4 @@
-# $FreeBSD: devel/kdebindings4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/kdebindings4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdebindings
 PORTVERSION=	${KDE4_VERSION}
@@ -19,6 +19,7 @@ PERL_DESC=	Perl bindings
 PYTHON_DESC=	Python bindings
 RUBY_DESC=	Ruby bindings
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
