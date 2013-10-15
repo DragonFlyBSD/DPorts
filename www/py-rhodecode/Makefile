@@ -1,5 +1,5 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: www/py-rhodecode/Makefile 326200 2013-09-03 18:56:27Z wg $
+# $FreeBSD: www/py-rhodecode/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rhodecode
 PORTVERSION=	1.7.2
@@ -50,6 +50,7 @@ OPTIONS_DEFAULT=	GIT
 
 GIT_DESC=	GIT support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
