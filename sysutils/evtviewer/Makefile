@@ -1,9 +1,5 @@
-# New ports collection makefile for:    evtViewer
-# Date created:		Sat Sep 01 09:30:00 UTC 2006
-# Whom:			Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-#
-# $FreeBSD: sysutils/evtviewer/Makefile 326572 2013-09-07 06:13:27Z az $
-#
+# Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
+# $FreeBSD: sysutils/evtviewer/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	evtViewer
 PORTVERSION=	0.5
@@ -24,6 +20,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/evtViewer
 
 # Just copy the script
+NO_STAGE=	yes
 do-install:
 	${CP} ${WRKSRC}/evtViewer ${PREFIX}/bin
 
