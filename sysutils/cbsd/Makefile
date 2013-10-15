@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/cbsd/Makefile 323897 2013-07-29 17:55:03Z az $
+# $FreeBSD: sysutils/cbsd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cbsd
 PORTVERSION=	9.2.1
@@ -25,6 +25,7 @@ CBSD_HOME?=	${PREFIX}/cbsd
 
 MAN7=		cbsd.7
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 901000
