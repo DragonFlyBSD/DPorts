@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Data-Rx/Makefile 324654 2013-08-13 09:47:57Z jadawin $
+# $FreeBSD: devel/p5-Data-Rx/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Rx
 PORTVERSION=	0.200004
@@ -45,4 +45,5 @@ MAN3=		Data::Rx.3 \
 		Data::Rx::TypeBundle::Core.3 \
 		Data::Rx::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
