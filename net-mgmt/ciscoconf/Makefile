@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	ciscoconf
-# Date created: 			11 September 1998
-# Whom: 				jabley@clear.co.nz
-#
-# $FreeBSD: ports/net-mgmt/ciscoconf/Makefile,v 1.15 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: jabley@clear.co.nz
+# $FreeBSD: net-mgmt/ciscoconf/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ciscoconf
 PORTVERSION=	1.1
@@ -19,6 +15,7 @@ BUILD_DEPENDS=	makedepend:${PORTSDIR}/devel/makedepend
 ALL_TARGET=	depend all
 MAN8=		ciscoconfd.8 ciscoconfr.8
 
+NO_STAGE=	yes
 post-patch:
 
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.old
