@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/triangle/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: math/triangle/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	triangle
 PORTVERSION=	1.6
@@ -22,6 +22,7 @@ MAKEFILE=	makefile
 
 PLIST_FILES=	bin/triangle bin/showme
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${PLIST_FILES:S|^bin|${WRKSRC}|} ${PREFIX}/bin
 
