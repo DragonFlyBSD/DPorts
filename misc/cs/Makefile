@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	cs
-# Date created:			Jun 30, 2005
-# Whom:				ijliao
-#
-# $FreeBSD: misc/cs/Makefile 322581 2013-07-09 21:26:48Z pav $
-#
+# Created by: ijliao
+# $FreeBSD: misc/cs/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	cs
 PORTVERSION=	0.9.5
@@ -25,6 +20,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/xs
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,/usr/bin/python,${SETENV} python," ${WRKSRC}/xs.py
 
