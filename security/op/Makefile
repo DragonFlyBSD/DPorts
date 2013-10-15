@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: security/op/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: security/op/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	op
 PORTVERSION=	1.32
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		op.1
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${PREFIX}/etc/op.d
 	${INSTALL_DATA} -m 0600 ${WRKSRC}/${PORTNAME}.conf \
