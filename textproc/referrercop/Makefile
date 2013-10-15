@@ -1,5 +1,5 @@
 # Created by: Ryan Grove <ryan@wonko.com>
-# $FreeBSD: textproc/referrercop/Makefile 326437 2013-09-05 18:40:18Z tabthorpe $
+# $FreeBSD: textproc/referrercop/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	referrercop
 PORTVERSION=	1.1.0
@@ -16,6 +16,7 @@ NO_BUILD=		yes
 USE_RUBY=		yes
 USE_RUBY_FEATURES=	fileutils optparse ruby18
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
