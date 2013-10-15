@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: audio/gmusicbrowser/Makefile 313468 2013-03-05 18:27:02Z beech $
+# $FreeBSD: audio/gmusicbrowser/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmusicbrowser
 PORTVERSION=	1.1.10
@@ -12,6 +12,7 @@ COMMENT=	Jukebox for large collections of mp3/ogg/flac/mpc files
 RUN_DEPENDS=	p5-Gtk2>=1.0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 MAN1=		gmusicbrowser.1
 PORTDOCS=	AUTHORS COPYING README NEWS INSTALL layout_doc.html
