@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WebService-CIA/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WebService-CIA/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-CIA
 PORTVERSION=	1.4
@@ -23,4 +23,5 @@ MAN3=		WebService::CIA.3 WebService::CIA::Parser.3 \
 		WebService::CIA::Source.3 WebService::CIA::Source::DBM.3 \
 		WebService::CIA::Source::Web.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
