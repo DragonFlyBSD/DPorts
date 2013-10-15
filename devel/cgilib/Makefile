@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cgilib
-# Date created:				8 May 2005
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/cgilib/Makefile,v 1.6 2012/11/17 05:55:37 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: devel/cgilib/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cgilib
 PORTVERSION=	0.7
@@ -24,6 +20,7 @@ MAN3=		cgiDebug.3 cgiFree.3 cgiFreeList.3 cgiGetCookie.3 cgiEscape.3 \
 		cgiGetVariables.3 cgiHeader.3 cgiInit.3 cgiRedirect.3 \
 		cgiSetHeader.3 cgiSetType.3
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/cgi.h ${PREFIX}/include
 	${INSTALL_MAN} ${WRKSRC}/*.3 ${PREFIX}/man/man3
