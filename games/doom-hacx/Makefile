@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-hacx/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: games/doom-hacx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	hacx
 PORTVERSION=	1.0
@@ -21,6 +21,7 @@ DATADIR=	${DMDIR}/${PORTNAME}
 PLIST_FILES=	%%DATADIR%%/${DISTNAME}
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../doom-data/Makefile.include"
 
 .include <bsd.port.pre.mk>
