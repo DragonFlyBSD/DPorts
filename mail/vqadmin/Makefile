@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: mail/vqadmin/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/vqadmin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	vqadmin
 PORTVERSION=	2.3.6
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--enable-cgibindir=${PREFIX}/${CGIBINDIR} \
 		--enable-htmldir=${PREFIX}/${WEBDATADIR} \
 		--enable-qmaildir=${QMAIL_PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PLIST_SUB+=	CGIBINDIR=${CGIBINDIR} WEBDATADIR=${WEBDATADIR}
