@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: astro/planets/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/planets/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	planets
 PORTVERSION=	0.1.13
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	ocaml:${PORTSDIR}/lang/ocaml
 
+NO_STAGE=	yes
 USES=		gmake
 ALL_TARGET=	${PORTNAME}
 
