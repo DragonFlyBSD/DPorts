@@ -1,9 +1,5 @@
-# New ports collection makefile for:	compiler-rt
-# Date created:		8 Oct 2009
-# Whom:                 Brooks Davis
-#
-# $FreeBSD: devel/compiler-rt/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Brooks Davis
+# $FreeBSD: devel/compiler-rt/Makefile 329870 2013-10-09 06:57:03Z bapt $
 
 PORTNAME=	compiler-rt
 DISTVERSION=	0.r${SVN_REV}
@@ -23,7 +19,6 @@ INSTALL_WRKSRC=		${WRKDIR}/build
 CMAKE_SOURCE_PATH=	${WRKSRC}
 
 USES=		cmake
-USE_GCC=	4.2+
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 MAKE_ARGS=	VERBOSE=1
@@ -42,6 +37,7 @@ PLIST_FILES=	include/Block.h \
 		include/Block_private.h \
 		lib/libBlocksRuntime.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
