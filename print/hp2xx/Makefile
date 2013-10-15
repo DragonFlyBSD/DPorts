@@ -1,9 +1,5 @@
-# New ports collection makefile for:    hp2xx
-# Date created:         17 Jan 1999
-# Whom:                 Lars Koeller
-#
-# $FreeBSD: ports/print/hp2xx/Makefile,v 1.27 2012/11/17 06:00:50 svnexp Exp $
-#
+# Created by: Lars Koeller
+# $FreeBSD: print/hp2xx/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	hp2xx
 PORTVERSION=	3.4.4
@@ -39,4 +35,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lX11
 PREVIEWER=	to_x11
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
