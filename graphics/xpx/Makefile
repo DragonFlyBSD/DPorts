@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: graphics/xpx/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: graphics/xpx/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xpx
 PORTVERSION=	1.41
@@ -20,6 +20,7 @@ DOCSDIR=	${PREFIX}/share/doc/ja/${PORTNAME}
 PORTDOCS=	xpx.doc xpxrc.eg
 PLIST_FILES=	bin/xpx
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|myname|my_name|g' ${WRKSRC}/magtoppm.c
 	@${REINPLACE_CMD} -e '/edit_mode/d' ${WRKSRC}/work.h
