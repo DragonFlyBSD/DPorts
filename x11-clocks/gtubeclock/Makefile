@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi
-# $FreeBSD: x11-clocks/gtubeclock/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: x11-clocks/gtubeclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	gtubeclock
 PORTVERSION=	0.9.1
@@ -15,4 +15,5 @@ USE_XORG=	x11
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk20 libgnomeui
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
