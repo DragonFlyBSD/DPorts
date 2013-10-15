@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Secret
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pear-Horde_Secret/Makefile,v 1.7 2012/12/12 15:19:52 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: security/pear-Horde_Secret/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Horde_Secret
 PORTVERSION=	2.0.2
@@ -18,6 +14,7 @@ USE_HORDE_RUN=	Horde_Crypt_Blowfish \
 		
 USE_PHP=	hash
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
