@@ -1,9 +1,5 @@
-# Ports collection makefile for:  bugmenot-firefox
-# Date created:			  Tue May 24, 2005
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: ports/www/bugmenot-firefox/Makefile,v 1.4 2012/11/17 06:02:29 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: www/bugmenot-firefox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bugmenot
 PORTVERSION=	1.3
@@ -19,5 +15,6 @@ XPI_ID=		{987311C6-B504-4aa2-90BF-60CC49808D42}
 XPI_FILES=	chrome/bugmenot.jar install.js install.rdf license.txt chrome.manifest
 XPI_DIRS=	chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
