@@ -1,9 +1,5 @@
-# New ports collection makefile for:	emil
-# Date created:		21 April 1998
-# Whom:			Josh Gilliam <josh@quick.net>
-#
-# $FreeBSD: ports/mail/emil/Makefile,v 1.15 2012/11/17 05:59:01 svnexp Exp $
-#
+# Created by: Josh Gilliam <josh@quick.net>
+# $FreeBSD: mail/emil/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	emil
 PORTVERSION=	2.1b9
@@ -27,4 +23,5 @@ MAN1=		emil.1 emil.cf.1
 MAKE_ENV=	NOPORTDOCS=${NOPORTDOCS}
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
