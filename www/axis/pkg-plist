@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/axis/pkg-plist,v 1.8 2012/11/17 06:02:28 svnexp Exp $
+@comment $FreeBSD: www/axis/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%JAVAJARDIR%%/axis.jar
 %%JAVAJARDIR%%/jaxrpc.jar
 %%JAVAJARDIR%%/saaj.jar

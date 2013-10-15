@@ -1,5 +1,5 @@
 # Created by: Kensaku MASUDA <greg@greg.rim.or.jp>
-# $FreeBSD: ports/www/axis/Makefile,v 1.25 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/axis/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=		axis
 PORTVERSION=		1.4
@@ -16,6 +16,7 @@ OPTIONS_SINGLE=	AS
 OPTIONS_SINGLE_AS=	TOMCAT6 TOMCAT7
 OPTIONS_DEFAULT=	TOMCAT6
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTOMCAT6}
