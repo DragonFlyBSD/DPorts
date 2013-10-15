@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-django-mezzanine-filebrowser/Makefile 317397 2013-05-05 06:12:26Z koobs $
+# $FreeBSD: www/py-django-mezzanine-filebrowser/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-mezzanine-filebrowser
 PORTVERSION=	0.2.27
@@ -16,4 +16,5 @@ USES=		gettext
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	filebrowser_safe
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
