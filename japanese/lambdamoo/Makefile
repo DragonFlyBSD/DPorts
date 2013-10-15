@@ -1,9 +1,5 @@
-# New ports collection makefile for:	LambdaMOO
-# Date created:		Jul 3 1999
-# Whom:			Seiichirou Hiraoka
-#
-# $FreeBSD: ports/japanese/lambdamoo/Makefile,v 1.15 2012/11/17 05:58:36 svnexp Exp $
-#
+# Created by: Seiichirou Hiraoka
+# $FreeBSD: japanese/lambdamoo/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	lambdamoo
 PORTVERSION=	1.8.1
@@ -28,6 +24,7 @@ GNU_CONFIGURE=	yes
 ALL_TARGET=
 DOCSDIR=	${PREFIX}/share/doc/LambdaMOO
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/moo ${PREFIX}/sbin
 
