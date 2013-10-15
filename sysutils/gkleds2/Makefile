@@ -1,5 +1,5 @@
 # Created by: Jan Stocker <Jan.Stocker@t-online.de>
-# $FreeBSD: sysutils/gkleds2/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/gkleds2/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gkleds2
 PORTVERSION=	0.8.2
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	libexec/gkrellm2/plugins/gkleds.so
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g ; \
 		 s|GK_LDFLAGS|GKM_LDFLAGS|g' ${WRKSRC}/src/Makefile.in
