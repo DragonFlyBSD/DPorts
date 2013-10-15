@@ -1,5 +1,5 @@
 # Created by: Oliver Braun
-# $FreeBSD: ports/mail/mutt_vc_query/Makefile,v 1.10 2013/01/08 22:51:00 svnexp Exp $
+# $FreeBSD: mail/mutt_vc_query/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mutt_vc_query
 PORTVERSION=	002
@@ -21,6 +21,7 @@ MAN1=		mutt_vc_query.1
 PORTDOCS=	*
 PLIST_FILES=	bin/mutt_vc_query
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
