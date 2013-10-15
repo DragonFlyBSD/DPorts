@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-classy-prelude/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-classy-prelude/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	classy-prelude
 PORTVERSION=	0.5.7
@@ -13,5 +13,6 @@ USE_CABAL=	basic-prelude>=0.3.4 hashable lifted-base>=0.2 \
 		system-filepath>=0.4 text transformers unordered-containers \
 		vector
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
