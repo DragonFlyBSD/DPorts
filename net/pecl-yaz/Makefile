@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: net/pecl-yaz/Makefile 319369 2013-05-29 13:49:06Z crees $
+# $FreeBSD: net/pecl-yaz/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	yaz
 PORTVERSION=	1.0.14
@@ -22,6 +22,7 @@ IGNORE_WITH_PHP=5
 
 CONFIGURE_ARGS=	--with-yaz=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-configure:
