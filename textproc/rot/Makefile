@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/rot/Makefile 320789 2013-06-13 11:58:57Z bsam $
+# $FreeBSD: textproc/rot/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rot
 PORTVERSION=	1.2
@@ -17,6 +17,7 @@ CFLAGS+=	-Wno-return-type
 MAN1=		rot.1
 PLIST_FILES=	bin/rot
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} "s:^CFLAGS=:#CFLAGS=:" ${WRKSRC}/Makefile
 
