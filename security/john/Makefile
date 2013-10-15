@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: security/john/Makefile 316807 2013-04-29 11:31:38Z bdrewery $
+# $FreeBSD: security/john/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	john
 DISTVERSION=	1.7.9-jumbo-5
@@ -37,6 +37,7 @@ PORTDOCS=	CHANGES CONFIG EXAMPLES EXTERNAL FAQ MODES OPTIONS README \
 OPTIONS_DEFINE=	OPENMP DOCS
 OPENMP_DESC=	Compile with OpenMP support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
