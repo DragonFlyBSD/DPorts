@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/tthsum/Makefile 324713 2013-08-14 12:44:56Z ehaupt $
+# $FreeBSD: security/tthsum/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tthsum
 PORTVERSION=	1.3.2
@@ -25,4 +25,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} test runtest
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
