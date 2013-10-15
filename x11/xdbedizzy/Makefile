@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdbedizzy/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xdbedizzy/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xdbedizzy
 PORTVERSION=	1.1.0
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xdbedizzy
 
 MAN1=		xdbedizzy.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
