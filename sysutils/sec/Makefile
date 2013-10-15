@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/sec/Makefile 325843 2013-09-01 06:32:42Z rm $
+# $FreeBSD: sysutils/sec/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sec
 PORTVERSION=	2.7.4
@@ -10,9 +10,10 @@ COMMENT=	Simple event (logs) correlator
 
 LICENSE=	GPLv2
 
-USE_PERL5_RUN=	yes
 USE_RC_SUBR=	sec
 
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 MAN8=		sec.8
@@ -25,6 +26,7 @@ PLIST_DIRS+=	%%DATADIR%%
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
