@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/rskkserv/Makefile 327437 2013-09-16 19:43:47Z sunpoet $
+# $FreeBSD: japanese/rskkserv/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	rskkserv
 PORTVERSION=	2.95.4
@@ -46,6 +46,7 @@ MANLANG=	"" ja
 DOCS_EN=	ChangeLog
 DOCS_JA=	TODO
 
+NO_STAGE=	yes
 post-extract:
 	${LN} -s ${WRKSRC}/skkserv.rb.in ${WRKSRC}/rskkserv.in
 
