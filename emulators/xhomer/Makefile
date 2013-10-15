@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xhomer
-# Date created:			24 May 2006
-# Whom:				trasz
-#
-# $FreeBSD: ports/emulators/xhomer/Makefile,v 1.8 2012/11/17 05:57:24 svnexp Exp $
-#
+# Created by: trasz
+# $FreeBSD: emulators/xhomer/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	xhomer
 DISTVERSION=	9-16-06
@@ -28,6 +24,7 @@ PLIST_FILES=	bin/xhomer %%EXAMPLESDIR%%/xhomer.cfg
 PLIST_DIRS=	%%EXAMPLESDIR%%
 PORTDOCS=	README LICENSE SIMH
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
