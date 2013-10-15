@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lmmon
-# Date created:				24 September 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/sysutils/lmmon/Makefile,v 1.21 2012/11/17 06:01:37 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: sysutils/lmmon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	lmmon
 PORTVERSION=	0.65
@@ -25,6 +21,7 @@ LICENSE=	BSD
 
 FIXFILES=	configure configure.in lmmon.c
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,machine/smb.h,dev/smbus/smb.h,' \
 		${FIXFILES:S,^,${WRKSRC}/,}
