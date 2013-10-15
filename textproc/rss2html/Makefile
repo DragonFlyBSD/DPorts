@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rss2html
-# Date created:		2009-02-01
-# Whom:			Dennis Herrmann <adox@mcx2.org>
-#
-# $FreeBSD: textproc/rss2html/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: Dennis Herrmann <adox@mcx2.org>
+# $FreeBSD: textproc/rss2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rss2html
 PORTVERSION=	0.8.2
@@ -25,6 +21,7 @@ MANCOMPRESSED=	no
 PLIST_FILES=	bin/rss2html
 PORTDOCS=	rss2html.links usage.example rss2html.template
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '16,20d' ${WRKSRC}/Makefile.acr
 
