@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: emulators/gxmame/Makefile 326373 2013-09-05 09:15:49Z bapt $
+# $FreeBSD: emulators/gxmame/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	gxmame
 DISTVERSION=	0.35beta2
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-xmame-dir=${LOCALBASE}/share/xmame
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
