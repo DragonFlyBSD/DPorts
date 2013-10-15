@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: misc/qlas/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: misc/qlas/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	qlas
 PORTVERSION=	1.93
@@ -15,6 +15,7 @@ USES=		shebangfix perl5
 SHEBANG_FILES=	qlas
 USE_DOS2UNIX=	qlas qlas.conf.default
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/qlas ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/qlas.conf.default ${PREFIX}/etc/
