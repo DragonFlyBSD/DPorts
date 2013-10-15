@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/tmpreaper/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/tmpreaper/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tmpreaper
 PORTVERSION=	1.6.13
@@ -20,6 +20,7 @@ MAN8=		tmpreaper.8
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
