@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpscheduleit
-# Date created:				4 Januar 2011
-# Whom:					jamrich.majo@gmail.com
-#
-# $FreeBSD: ports/www/phpscheduleit/Makefile,v 1.4 2012/11/17 06:02:58 svnexp Exp $
-#
+# Created by: jamrich.majo@gmail.com
+# $FreeBSD: www/phpscheduleit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpscheduleit
 PORTVERSION=	1.2.12
@@ -31,6 +27,7 @@ PLIST_DIRSTRY=	%%WWWDIR%%
 OPTIONS_DEFINE=	PGSQL APACHE LIGHTTPD
 OPTIONS_DEFAULT=APACHE 
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGSQL}
