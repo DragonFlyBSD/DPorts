@@ -1,5 +1,5 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: databases/beansdb/Makefile 323961 2013-07-30 12:34:07Z bapt $
+# $FreeBSD: databases/beansdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	beansdb
 PORTVERSION=	0.5.3
@@ -16,4 +16,5 @@ CFLAGS+=	${PTHREAD_LIBS}
 MAN1=		beansdb.1
 PLIST_FILES=	bin/beansdb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
