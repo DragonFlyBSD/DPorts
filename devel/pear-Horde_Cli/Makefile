@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Horde_Cli/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: devel/pear-Horde_Cli/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Cli
 PORTVERSION=	2.0.4
@@ -9,6 +9,7 @@ COMMENT=	Horde Command Line Interface API
 
 USE_HORDE_RUN=	Horde_Support Horde_Translation
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
