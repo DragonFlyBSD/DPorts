@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: misc/shuffle-db/Makefile 317657 2013-05-08 12:47:16Z ehaupt $
+# $FreeBSD: misc/shuffle-db/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	shuffle-db
 DISTVERSION=	1.0-rc1
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/rebuild_db
 PLIST_FILES=	bin/rebuild_db.py
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rebuild_db.py ${PREFIX}/bin
 
