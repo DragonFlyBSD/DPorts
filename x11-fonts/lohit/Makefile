@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/lohit/Makefile 323539 2013-07-23 16:11:09Z gabor $
+# $FreeBSD: x11-fonts/lohit/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	Lohit
 PORTVERSION=	20130612
@@ -40,6 +40,7 @@ PLIST_FILES=	${FONTLIBPATH}/${FONTDIR}/Lohit-Assamese.ttf \
 SUB_LIST=	"FONTPATH=${FONTROOTDIR}/${FONTDIR}"
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
