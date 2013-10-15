@@ -1,15 +1,18 @@
 # Created by: Beat Gaetzi <beat@chruetertee.ch>
-# $FreeBSD: ports/deskutils/thinkingrock/Makefile,v 1.11 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: deskutils/thinkingrock/Makefile 328354 2013-09-26 13:14:25Z beat $
 
 PORTNAME=	thinkingrock
 PORTVERSION=	2.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils java
 MASTER_SITES=	SF/${PORTNAME}/ThinkingRock/TR%20${PORTVERSION}
 DISTNAME=	tr-${PORTVERSION}
 
 MAINTAINER=	beat@FreeBSD.org
 COMMENT=	Application for collecting and processing your thoughts
+
+RUN_DEPENDS=	${LOCALBASE}/bin/xdg-open:${PORTSDIR}/devel/xdg-utils \
+		${LOCALBASE}/bin/xdg-email:${PORTSDIR}/devel/xdg-utils
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -28,15 +31,11 @@ post-patch:
 		${WRKSRC}/bin/tr_w.exe ${WRKSRC}/etc/tr.conf.bak
 
 do-install:
-	@${MKDIR} ${PREFIX}/${PORTNAME}
-	@${CP} -r ${WRKSRC}/* ${PREFIX}/${PORTNAME}
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${PORTNAME}
-	@${LN} -sf ${PREFIX}/${PORTNAME}/bin/tr ${PREFIX}/bin/${PORTNAME}
-	@${LN} -sf ${PREFIX}/${PORTNAME}/bin/xdg-email ${PREFIX}/bin/xdg-email
-	@${LN} -sf ${PREFIX}/${PORTNAME}/bin/xdg-open ${PREFIX}/bin/xdg-open
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${PORTNAME}
+	@${CP} -r ${WRKSRC}/* ${STAGEDIR}${PREFIX}/${PORTNAME}
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${PREFIX}/${PORTNAME}
+	@${LN} -sf ${STAGEDIR}${PREFIX}/${PORTNAME}/bin/tr ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	@${ECHO} bin/${PORTNAME} >> ${TMPPLIST}
-	@${ECHO} bin/xdg-email >> ${TMPPLIST}
-	@${ECHO} bin/xdg-open >> ${TMPPLIST}
 	@(cd ${WRKSRC}; ${FIND} . ! -type d) | ${SORT} | ${SED} "s|^.|${PORTNAME}|" >> ${TMPPLIST}
 	@(cd ${WRKSRC}; ${FIND} . -type d) | ${SORT} -r | ${SED} "s|^.|@dirrm ${PORTNAME}|" >> ${TMPPLIST}
 	@(cd ${WRKSRC}; ${FIND} . -type d -empty) | ${SORT} -r | ${SED} "s|^.|@exec mkdir -p ${PORTNAME}|" >> ${TMPPLIST}
