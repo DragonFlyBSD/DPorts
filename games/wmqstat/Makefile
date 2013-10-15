@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/wmqstat/Makefile 326378 2013-09-05 10:07:17Z danfe $
+# $FreeBSD: games/wmqstat/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wmqstat
 PORTVERSION=	0.0.4
@@ -21,6 +21,7 @@ PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Unbreak the build against Clang
