@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Ifconfig-Wrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Ifconfig-Wrapper/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Ifconfig-Wrapper
 PORTVERSION=	0.11
@@ -15,4 +15,5 @@ MAN3=	Net::Ifconfig::Wrapper.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
