@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Snowish Iconset
-# Date created:				13 Feb 2006
-# Whom:					Babak Farrokhi <babak@farrokhi.net>
-#
-# $FreeBSD: ports/x11-themes/gnome-icons-snowish/Makefile,v 1.8 2012/11/17 06:03:31 svnexp Exp $
-#
+# Created by: Babak Farrokhi <babak@farrokhi.net>
+# $FreeBSD: x11-themes/gnome-icons-snowish/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	snowish
 PORTVERSION=	1.0
@@ -20,5 +16,6 @@ USE_BZIP2=	yes
 
 #WRKSRC=		${WRKDIR}/snowish-Icons-${PORTVERSION}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../gnome-icons/bsd.gnome-icons.mk"
 .include <bsd.port.mk>
