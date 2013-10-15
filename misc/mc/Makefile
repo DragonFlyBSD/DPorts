@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: misc/mc/Makefile 327278 2013-09-14 12:04:18Z az $
+# $FreeBSD: misc/mc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	mc
 PORTVERSION=	4.8.8
@@ -31,6 +31,7 @@ SUBSHELL_DESC=	Build with subshell support
 
 OPTIONS_DEFAULT=	SLANG ICONV NLS EDIT X11 SUBSHELL SMB
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's/SUBDIRS = intl/SUBDIRS =/' ${WRKSRC}/Makefile.in
 	${REINPLACE_CMD} -e 's/saved_CPPFLAGS="-ltermcap/saved_CPPFLAGS="/' ${WRKSRC}/configure
