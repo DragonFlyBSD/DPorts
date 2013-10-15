@@ -1,5 +1,5 @@
 # Created by: Corey Smith <corsmith@gmail.com>
-# $FreeBSD: net-mgmt/torrus/Makefile 326244 2013-09-04 03:24:02Z az $
+# $FreeBSD: net-mgmt/torrus/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	torrus
 PORTVERSION=	2.05
@@ -59,6 +59,7 @@ MAN1=		torrus.1 torrus_acledit.1 torrus_buildsearchdb.1 \
 MAN7=		torrus_action_printemail.7 torrus_action_snmptrap.7 \
 		torrus_action_notify.7 torrus_install_plugin.7
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} pkg-message
 
