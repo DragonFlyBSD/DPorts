@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/sunpinyin/Makefile 327251 2013-09-14 08:51:34Z sunpoet $
+# $FreeBSD: chinese/sunpinyin/Makefile 328492 2013-09-27 15:17:26Z madpilot $
 
 PORTNAME=	sunpinyin
 DISTVERSION=	2.0.4rc2
@@ -23,8 +23,10 @@ USE_XZ=		yes
 USE_SCONS=	yes
 SCONS_ARGS+=	--prefix=${PREFIX} --libdatadir=${PREFIX}/share
 USE_LDCONFIG=	yes
-USES=		gmake pkgconfig
+USES=		gmake iconv pkgconfig
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} ${_DISTDIR}/lm_sc.t3g.arpa.tar.bz2 \
 		${_DISTDIR}/dict.utf8.tar.bz2 ${WRKSRC}/raw
