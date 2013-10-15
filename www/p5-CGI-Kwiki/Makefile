@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: www/p5-CGI-Kwiki/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CGI-Kwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Kwiki
 PORTVERSION=	0.18
@@ -34,6 +34,7 @@ MAN3=		CGI::Kwiki.3 \
 		CGI::Kwiki::Slides.3 CGI::Kwiki::Style.3 \
 		CGI::Kwiki::Template.3
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
