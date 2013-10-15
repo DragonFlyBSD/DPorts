@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/matreshka/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: devel/matreshka/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	matreshka
 PORTVERSION=	0.5.0
@@ -27,6 +27,7 @@ MAKE_JOBS_UNSAFE=	yes
 MAKE_ENV+=	SMP_MFLAGS=-j${MAKE_JOBS_NUMBER} \
 		DESTDIR=${DESTINY}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFIREBIRD}
