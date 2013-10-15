@@ -1,9 +1,5 @@
-# New ports collection makefile for:	linpopup
-# Date created:		20 Nov 2000
-# Whom:			Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/net-im/linpopup/Makefile,v 1.25 2013/01/31 19:48:37 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: net-im/linpopup/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	linpopup
 PORTVERSION=	1.2.0
@@ -34,6 +30,7 @@ SUB_FILES=	pkg-message
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-samba3
 .endif
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
