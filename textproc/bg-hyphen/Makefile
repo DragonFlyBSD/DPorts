@@ -1,9 +1,4 @@
-# New ports collection makefile for:	bg-hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/bg-hyphen/Makefile,v 1.5 2012/11/17 06:01:52 svnexp Exp $
-#
+# $FreeBSD: textproc/bg-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	4.3
@@ -27,7 +22,7 @@ PLIST_FILES=	%%DATADIR%%/hyph_bg_BG.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_bg_BG.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_bg_BG.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
