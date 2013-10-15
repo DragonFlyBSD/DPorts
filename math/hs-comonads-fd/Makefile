@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-comonads-fd/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-comonads-fd/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	comonads-fd
 PORTVERSION=	3.0.1
@@ -13,5 +13,6 @@ LICENSE=	BSD
 USE_CABAL=	comonad>=3.0 comonad-transformers>=3.0 mtl>=2.0 \
 		semigroups>=0.8.3.1 transformers>=0.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
