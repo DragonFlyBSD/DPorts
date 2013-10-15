@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gssdp/Makefile 326611 2013-09-07 10:20:24Z sunpoet $
+# $FreeBSD: net/gssdp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gssdp
 PORTVERSION=	0.14.5
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 USE_XZ=		yes
 USES=		gmake pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK3}
