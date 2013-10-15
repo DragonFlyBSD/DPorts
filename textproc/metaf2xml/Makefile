@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/metaf2xml/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/metaf2xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	metaf2xml
 PORTVERSION=	1.42
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 USES=		perl5
 USE_PERL5=	run
 
+NO_STAGE=	yes
 pre-install:
 	${MKDIR} ${PREFIX}/www/metaf2xml/cgi-bin \
 		${PREFIX}/www/metaf2xml/htdocs
