@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-collective.monkeypatcher
-# Date created:				03 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-collective.monkeypatcher/Makefile,v 1.3 2012/11/17 05:56:45 svnexp Exp $
-#
+# $FreeBSD: devel/py-collective.monkeypatcher/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	collective.monkeypatcher
 PORTVERSION=	1.0.1
@@ -18,7 +13,9 @@ LICENSE=	BSD
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
