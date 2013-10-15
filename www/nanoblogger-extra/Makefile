@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	nanoblogger-extra
-# Date created:			Jun 19, 2009
-# Whom:				Tobias Rehbein <tobias.rehbein@web.de>
-#
-# $FreeBSD: ports/www/nanoblogger-extra/Makefile,v 1.5 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Tobias Rehbein <tobias.rehbein@web.de>
+# $FreeBSD: www/nanoblogger-extra/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	nanoblogger-extra
 PORTVERSION=	3.4.2
@@ -21,6 +16,7 @@ DATADIR=	${PREFIX}/share/nanoblogger
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 .for data in default lang plugins
 	@( cd ${WRKSRC}/${data} && ${CHMOD} 777 ${WRKSRC}/${data}/* && \
