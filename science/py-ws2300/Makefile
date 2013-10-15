@@ -1,5 +1,5 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: ports/science/py-ws2300/Makefile,v 1.3 2012/12/09 13:25:29 svnexp Exp $
+# $FreeBSD: science/py-ws2300/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	ws2300
 PORTVERSION=	1.7
@@ -16,6 +16,7 @@ USE_PYDISTUTILS=	yes
 
 MAN1=	ws2300.1
 
+NO_STAGE=	yes
 post-install:
 	#@${LN} -sf ${PYTHONPREFIX_SITELIBDIR}/ws2300.py ${PREFIX}/bin/ws2300
 	@${INSTALL_SCRIPT} ${FILESDIR}/ws2300 ${PREFIX}/bin/ws2300
