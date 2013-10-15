@@ -1,5 +1,6 @@
-@comment $FreeBSD: comms/wy60/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+@comment $FreeBSD: comms/wy60/pkg-plist 328593 2013-09-28 16:14:27Z naddy $
 bin/wy60
 @unexec if cmp %D/etc/wy60.rc.sample %D/etc/wy60.rc 2>/dev/null; then rm -f %D/etc/wy60.rc; fi
 etc/wy60.rc.sample
 @exec if test ! -f %D/etc/wy60.rc; then cp -p %D/etc/wy60.rc.sample %D/etc/wy60.rc; fi
+man/man1/wy60.1.gz

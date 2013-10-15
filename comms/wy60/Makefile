@@ -1,4 +1,4 @@
-# $FreeBSD: comms/wy60/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: comms/wy60/Makefile 328593 2013-09-28 16:14:27Z naddy $
 
 PORTNAME=	wy60
 PORTVERSION=	2.0.9
@@ -12,14 +12,7 @@ GNU_CONFIGURE=	yes
 
 MAKE_ARGS=	etc_DATA=wy60.rc.sample
 
-MAN1=		wy60.1
-
 pre-build:
 	@${CP} ${WRKSRC}/wy60.rc ${WRKSRC}/wy60.rc.sample
-
-post-install:
-	if test ! -f ${PREFIX}/etc/wy60.rc; then \
-		${CP} -p ${PREFIX}/etc/wy60.rc.sample ${PREFIX}/etc/wy60.rc; \
-	fi
 
 .include <bsd.port.mk>
