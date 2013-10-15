@@ -1,9 +1,5 @@
-# New ports collection makefile for:	blender-doc
-# Date created:		09-10-2007
-# Whom:			Alex Ivasyuv <siegerstein@pochta.ru>
-#
-# $FreeBSD: ports/graphics/blender-doc/Makefile,v 1.2 2012/11/17 05:58:01 svnexp Exp $
-#
+# Created by: Alex Ivasyuv <siegerstein@pochta.ru>
+# $FreeBSD: graphics/blender-doc/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	blender
 PORTVERSION=	2.3
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-extract:
 	@${CHMOD} u+rwx ${WRKSRC}/* && ${CHMOD} u+rwx ${WRKSRC}/*/* && \
 		${CHMOD} u+rwx ${WRKSRC}/*/*/* && ${CHMOD} u+rwx ${WRKSRC}/*/*/*/*
