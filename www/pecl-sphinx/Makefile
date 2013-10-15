@@ -1,8 +1,8 @@
 # Created by: Max Baryshnikov <mephius@gmail.com>
-# $FreeBSD: www/pecl-sphinx/Makefile 320361 2013-06-09 17:40:41Z miwi $
+# $FreeBSD: www/pecl-sphinx/Makefile 328641 2013-09-29 02:01:12Z sunpoet $
 
 PORTNAME=	sphinx
-DISTVERSION=	1.2.0
+DISTVERSION=	1.3.0
 CATEGORIES=	www
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -12,7 +12,7 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	mephius@gmail.com
 COMMENT=	Sphinx search engine php client
 
-LIB_DEPENDS=	sphinxclient.0:${PORTSDIR}/textproc/libsphinxclient
+LIB_DEPENDS=	libsphinxclient.so:${PORTSDIR}/textproc/libsphinxclient
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
@@ -21,11 +21,7 @@ PHP_MODNAME=	sphinx
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
-CFLAGS=		-I${LOCALBASE}/include
+CFLAGS+=	-I${LOCALBASE}/include
+NO_STAGE=	yes
 
-.include <bsd.port.pre.mk>
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
