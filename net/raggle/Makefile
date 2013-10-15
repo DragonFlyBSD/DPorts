@@ -1,9 +1,5 @@
-# New ports collection makefile for:	raggle
-# Date created:				04 September 2003
-# Whom:					gslin@ccca.nctu.edu.tw
-#
-# $FreeBSD: ports/net/raggle/Makefile,v 1.12 2012/11/17 06:00:17 svnexp Exp $
-#
+# Created by: gslin@ccca.nctu.edu.tw
+# $FreeBSD: net/raggle/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	raggle
 PORTVERSION=	0.4.4
@@ -25,6 +21,7 @@ DOCS=		AUTHORS BUGS COPYING ChangeLog README TODO \
 		doc/default_config.rb doc/pauls_feeds.opml.gz \
 		doc/theme_documentation.txt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/raggle ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/raggle.1 ${MAN1PREFIX}/man/man1
