@@ -1,9 +1,9 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11-wm/xfce4-session/Makefile 320384 2013-06-09 18:47:34Z rene $
+# $FreeBSD: x11-wm/xfce4-session/Makefile 328057 2013-09-23 21:25:01Z olivierd $
 
 PORTNAME=	xfce4-session
 PORTVERSION=	4.10.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
@@ -15,20 +15,17 @@ COMMENT=	Xfce's session manager
 BUILD_DEPENDS=	iceauth:${PORTSDIR}/x11/iceauth
 RUN_DEPENDS=	iceauth:${PORTSDIR}/x11/iceauth \
 		console-kit-daemon:${PORTSDIR}/sysutils/consolekit
-LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		upower-glib:${PORTSDIR}/sysutils/upower \
-		polkit.2:${PORTSDIR}/sysutils/policykit
-# explicitly add SHLIB version number for policykit to prevent LIB_DEPENDS
-# matching sysutils/polkit instead (which has libpolkit-agent.so.1)
+LIB_DEPENDS=	libwnck-1.so:${PORTSDIR}/x11-toolkits/libwnck \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libupower-glib.so:${PORTSDIR}/sysutils/upower \
+		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk20 glib20 intltool intlhack
-USES=		pathfix pkgconfig
+USES=		pathfix pkgconfig gmake
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv libmenu libutil xfconf
 USE_XORG=	x11 sm ice
@@ -46,6 +43,7 @@ MAN1=		xfce4-session.1 xfce4-session-logout.1
 
 PLIST_SUB=	VERSION="4.6"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
