@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/missey/files/Makefile,v 1.4 2012/11/17 05:59:06 svnexp Exp $
+# $FreeBSD: mail/missey/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 SRCS_M	=	main.c pop3d.c auth.c plcat.c mydaemon.c listen.c mylog.c cfg.c checkip.c
 SRCS_B	=	bent.c

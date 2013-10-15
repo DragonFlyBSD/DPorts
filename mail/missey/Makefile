@@ -1,9 +1,5 @@
-# New ports collection makefile for:	missey
-# Date created:				30 April 2004
-# Whom:					delphij@FreeBSD.org.cn
-#
-# $FreeBSD: ports/mail/missey/Makefile,v 1.11 2012/11/17 05:59:06 svnexp Exp $
-#
+# Created by: delphij@FreeBSD.org.cn
+# $FreeBSD: mail/missey/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	missey
 PORTVERSION=	1.2.0
@@ -27,6 +23,7 @@ PLIST_DIRS=	etc/mps
 
 USE_RC_SUBR=	mps
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKDIR}/mps/src ${WRKSRC}
 	@${RM} -r ${WRKDIR}/mps
