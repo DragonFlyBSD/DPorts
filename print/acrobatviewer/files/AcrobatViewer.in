@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/print/acrobatviewer/files/AcrobatViewer.in,v 1.2 2012/11/17 06:00:47 svnexp Exp $
+# $FreeBSD: print/acrobatviewer/files/AcrobatViewer.in 300897 2012-07-14 14:29:18Z beat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -classpath "%%JAVAJARDIR%%/%%PORTNAME%%/acrobat.jar:%%JAVAJARDIR%%/%%PORTNAME%%/MRJToolkitStubs.jar" com.adobe.acrobat.Viewer "$@"

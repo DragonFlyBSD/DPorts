@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/print/acrobatviewer/Makefile,v 1.15 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: print/acrobatviewer/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	acrobatviewer
 PORTVERSION=	1.1
@@ -35,6 +35,7 @@ ARCHSTART=	1
 ARCHSIZE=	2749762
 ARCHBLOCKS=	84
 
+NO_STAGE=	yes
 do-extract:
 		@${MKDIR} ${WRKSRC} && \
 			cd ${WRKSRC} && \
