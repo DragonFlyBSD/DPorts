@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: ports/math/plman/Makefile,v 1.8 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: math/plman/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	plman
 PORTVERSION=	2.5.1
@@ -28,6 +28,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 FIND_DATA=	lib
 FIND_DOCS=	docs
 
+NO_STAGE=	yes
 post-patch:
 	for FILE in ${REPLACE_FILES}; do \
 	    ${REINPLACE_CMD} -e "/%%DATADIR%%/s//${DATADIR:S/\//\\\//g}/g" $${FILE} ;\

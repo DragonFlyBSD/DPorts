@@ -1,4 +1,4 @@
-$FreeBSD: ports/math/plman/files/patch-bin-plman,v 1.2 2012/11/17 05:59:28 svnexp Exp $
+$FreeBSD: math/plman/files/patch-bin-plman 300896 2012-07-14 13:54:48Z beat $
 --- bin/plman	Tue Nov 23 11:32:50 2004
 +++ bin/plman.port	Mon Dec 12 12:57:36 2005
 @@ -1,6 +1,6 @@
