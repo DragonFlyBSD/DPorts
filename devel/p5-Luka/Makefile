@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Luka/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-Luka/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Luka
 PORTVERSION=	1.08
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=		Luka.3 Luka::Conf.3 Luka::Exceptions.3 Luka::Mailer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
