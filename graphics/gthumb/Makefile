@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/gthumb/Makefile 322581 2013-07-09 21:26:48Z pav $
+# $FreeBSD: graphics/gthumb/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gthumb
 PORTVERSION=	2.14.1
@@ -43,6 +43,7 @@ SOUP_DESC=	Web services uploaders
 BRASERO_DESC=	Write galleries to CD/DVD (large dependency)
 YELP_DESC=	Viewer for built-in help system
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXIV2}
