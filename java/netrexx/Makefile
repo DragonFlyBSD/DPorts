@@ -1,9 +1,5 @@
-# New ports collection makefile for:	NetRexx
-# Date created:		Feb 8, 1999
-# Whom:			Pedro Giffuni
-#
-# $FreeBSD: ports/java/netrexx/Makefile,v 1.26 2012/11/17 05:58:45 svnexp Exp $
-#
+# Created by: Pedro Giffuni
+# $FreeBSD: java/netrexx/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	NetRexx
 PORTVERSION=	2.05
@@ -19,6 +15,7 @@ NO_BUILD=	yes
 USE_ZIP=	yes
 USE_JAVA=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-patch:

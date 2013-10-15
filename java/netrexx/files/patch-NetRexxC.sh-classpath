@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/netrexx/files/patch-NetRexxC.sh-classpath,v 1.2 2012/11/17 05:58:45 svnexp Exp $
+$FreeBSD: java/netrexx/files/patch-NetRexxC.sh-classpath 300896 2012-07-14 13:54:48Z beat $
 
 Add ${JAVA_HOME}/lib/tools.jar to the CLASSPATH.
 

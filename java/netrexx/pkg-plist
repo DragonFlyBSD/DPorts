@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/java/netrexx/pkg-plist,v 1.8 2012/11/17 05:58:45 svnexp Exp $
+@comment $FreeBSD: java/netrexx/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/NetRexxC.sh
 bin/nrc
 %%PORTDOCS%%%%DOCSDIR%%/netrexx/lang/RexxWords.class
