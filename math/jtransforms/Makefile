@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/jtransforms/Makefile,v 1.4 2013/01/26 15:07:27 svnexp Exp $
+# $FreeBSD: math/jtransforms/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	jtransforms
 PORTVERSION=	2.4
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/JTransforms
 
 PLIST_FILES=	%%JAVAJARDIR%%/jtransforms.jar
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/jtransforms-2.4.jar ${JAVAJARDIR}/jtransforms.jar
 
