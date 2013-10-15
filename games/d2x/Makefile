@@ -1,9 +1,5 @@
-# New ports collection makefile for:	d2x
-# Date created:		5 Apr 2004
-# Whom:			Radim Kolar
-#
-# $FreeBSD: ports/games/d2x/Makefile,v 1.21 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: Radim Kolar
+# $FreeBSD: games/d2x/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	d2x
 PORTVERSION=	0.2.5
@@ -30,6 +26,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 .ifndef(WITH_OPENGL)
 	@${ECHO_MSG} ""
