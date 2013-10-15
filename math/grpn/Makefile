@@ -1,9 +1,5 @@
-# New ports collection makefile for:	grpn
-# Date created:				25 October 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/math/grpn/Makefile,v 1.18 2012/11/17 05:59:21 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: math/grpn/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	grpn
 PORTVERSION=	1.1.2
@@ -21,6 +17,7 @@ ALL_TARGET=
 MAN1=		grpn.1
 PLIST_FILES=	bin/grpn
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/grpn ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/grpn.1 ${PREFIX}/man/man1
