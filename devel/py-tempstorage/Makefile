@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-tempstorage/Makefile,v 1.4 2012/12/20 11:13:30 svnexp Exp $
+# $FreeBSD: devel/py-tempstorage/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	tempstorage
 PORTVERSION=	2.12.2
@@ -18,5 +18,7 @@ RUN_DEPENDS=	zodb${PYTHON_PKGNAMESUFFIX}>=3.9.0:${PORTSDIR}/databases/zodb3 \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
