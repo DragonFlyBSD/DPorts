@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: textproc/rubygem-loofah/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: textproc/rubygem-loofah/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	loofah
 PORTVERSION=	1.2.1
@@ -15,4 +15,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
