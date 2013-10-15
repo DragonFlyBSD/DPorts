@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hastymail
-# Date created:		2006-11-04
-# Whom:			Bartlomiej Rutkowski <r@robakdesign.com>
-#
-# $FreeBSD: www/hastymail/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Bartlomiej Rutkowski <r@robakdesign.com>
+# $FreeBSD: www/hastymail/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=		hastymail
 PORTVERSION=		1.5
@@ -24,6 +20,7 @@ PLIST=		${WRKDIR}/pkg-plist
 WANT_PHP_WEB=	yes
 USE_PHP=	session imap pcre
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Don't install automatically CVS directories, patched files and the default config file.
