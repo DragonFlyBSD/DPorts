@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-shoulda-matchers/Makefile 321939 2013-06-28 04:04:08Z swills $
+# $FreeBSD: devel/rubygem-shoulda-matchers/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	shoulda-matchers
 PORTVERSION=	2.2.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
