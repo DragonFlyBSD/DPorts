@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: net-im/jarl/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/jarl/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	jarl
 PORTVERSION=	0.5001
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 
 USES=		perl5
 
+NO_STAGE=	yes
 makeplist:
 	${ECHO_CMD} bin/jarl > ${PLIST}
 	${FIND} ${PREFIX}/share/jarl ! -name "*.orig" -type f -print | ${CUT} -d/ -f4- >> \
