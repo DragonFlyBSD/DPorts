@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-jv
-# Date created:				2009-04-26
-# Whom:					Norikatsu Shigemura <nork@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-jv/Makefile,v 1.5 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Norikatsu Shigemura <nork@FreeBSD.org>
+# $FreeBSD: www/xpi-jv/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jv
 PORTVERSION=	0.51
@@ -24,6 +20,7 @@ XPI_DIRS=	chrome \
 
 REINPLACE_ARGS=	-i ""
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} "/em:maxVersion/s/3\.5\.\*/3.6.*/" ${WRKSRC}/install.rdf
 
