@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/py-salt-api/Makefile 325114 2013-08-21 12:32:56Z wg $
+# $FreeBSD: sysutils/py-salt-api/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	salt-api
 PORTVERSION=	0.8.2
@@ -24,6 +24,7 @@ BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}salt>0:${PORTSDIR}/sysutils/py-salt
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/setup.py
 
