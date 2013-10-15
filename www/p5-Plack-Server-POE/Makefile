@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Server::POE
-# Date created:		23 Dec 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Plack-Server-POE/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# $FreeBSD: www/p5-Plack-Server-POE/Makefile 329435 2013-10-05 10:26:17Z az $
 
 PORTNAME=	Plack-Server-POE
 PORTVERSION=	0.4
@@ -26,6 +21,7 @@ TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Plack::Server::POE.3
+post-patch:
+	@${REINPLACE_CMD} -e '/use_test_base/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
