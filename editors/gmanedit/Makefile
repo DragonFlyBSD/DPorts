@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/gmanedit/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: editors/gmanedit/Makefile 329743 2013-10-07 23:03:12Z marino $
 
 PORTNAME=	gmanedit
 PORTVERSION=	0.4.2
@@ -14,10 +14,11 @@ USES=        pathfix gettext gmake pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lz
 
 MAN1=		gmanedit.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<argz\.h>/d' ${WRKSRC}/src/callbacks.c
 
