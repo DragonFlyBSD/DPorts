@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zh-oicq
-# Date created:		10 Nov 2003
-# Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-#
-# $FreeBSD: chinese/oicq/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
+# $FreeBSD: chinese/oicq/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
 
 PORTNAME=	oicq
 PORTVERSION=	1.6
@@ -20,10 +16,8 @@ BUILD_DEPENDS=	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::OICQ.3
-
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/qq ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/demo1 ${PREFIX}/bin/qq-demo1
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/qq ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/demo1 ${STAGEDIR}${PREFIX}/bin/qq-demo1
 
 .include <bsd.port.mk>
