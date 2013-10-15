@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Static-Simple/Makefile 326877 2013-09-10 08:52:55Z tobez $
+# $FreeBSD: www/p5-Catalyst-Plugin-Static-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Static-Simple
 PORTVERSION=	0.31
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::Static::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
