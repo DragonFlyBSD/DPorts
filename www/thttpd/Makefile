@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: www/thttpd/Makefile 322689 2013-07-10 13:12:03Z bapt $
+# $FreeBSD: www/thttpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	thttpd
 PORTVERSION=	2.25b
@@ -27,6 +27,7 @@ PORTDOCS=	notes.html
 MAN1=		makeweb.1 thttpdpasswd.1
 MAN8=		thttpd.8 redirect.8 ssi.8 syslogtocern.8
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
