@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: www/webkit-sharp/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: www/webkit-sharp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webkit-sharp
 PORTVERSION=	0.3
@@ -20,4 +20,5 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gtksharp20
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
