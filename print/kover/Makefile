@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: print/kover/Makefile 327535 2013-09-18 08:38:20Z bapt $
+# $FreeBSD: print/kover/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	kover
 PORTVERSION=	6
@@ -23,6 +23,7 @@ USES=		cmake gettext perl5 pkgconfig
 
 MAN1=		kover.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/libcdio/s|>=.*)|)|' ${WRKSRC}/src/CMakeLists.txt
