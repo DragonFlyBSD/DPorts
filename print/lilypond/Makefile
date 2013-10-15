@@ -1,5 +1,5 @@
 # Created by: patrick, trevor
-# $FreeBSD: print/lilypond/Makefile 327334 2013-09-15 08:15:41Z az $
+# $FreeBSD: print/lilypond/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	lilypond
 PORTVERSION=	2.16.1
@@ -62,6 +62,7 @@ NOCCACHE=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
