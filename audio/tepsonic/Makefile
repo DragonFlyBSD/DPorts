@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tepsonic
-# Date created:		2010-05-18
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: audio/tepsonic/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: audio/tepsonic/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	tepsonic
 PORTVERSION=	0.98.2
@@ -18,6 +14,7 @@ COMMENT=	TepSonic is a simple and fast audio player
 LIB_DEPENDS=	tag.1:${PORTSDIR}/audio/taglib
 
 USES=		cmake
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_QT4=	gui xml sql phonon network linguist_build \
