@@ -1,5 +1,5 @@
 # Created by: Martin Schuette <info@mschuette.name>
-# $FreeBSD: textproc/libcrm114/Makefile 319208 2013-05-27 11:07:49Z ehaupt $
+# $FreeBSD: textproc/libcrm114/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libcrm114
 PORTVERSION=	20100726
@@ -32,4 +32,5 @@ PLIST_FILES=	lib/libcrm114.so \
 		share/doc/libcrm114/simple_demo.c
 PLIST_DIRS=	share/doc/libcrm114
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
