@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Pithub/Makefile 326157 2013-09-03 15:08:46Z sunpoet $
+# $FreeBSD: devel/p5-Pithub/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Pithub
 PORTVERSION=	0.01.020
@@ -27,45 +27,5 @@ TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Pithub.3 \
-		Pithub::Base.3 \
-		Pithub::Events.3 \
-		Pithub::Gists.3 \
-		Pithub::Gists::Comments.3 \
-		Pithub::GitData.3 \
-		Pithub::GitData::Blobs.3 \
-		Pithub::GitData::Commits.3 \
-		Pithub::GitData::References.3 \
-		Pithub::GitData::Tags.3 \
-		Pithub::GitData::Trees.3 \
-		Pithub::Issues.3 \
-		Pithub::Issues::Assignees.3 \
-		Pithub::Issues::Comments.3 \
-		Pithub::Issues::Events.3 \
-		Pithub::Issues::Labels.3 \
-		Pithub::Issues::Milestones.3 \
-		Pithub::Orgs.3 \
-		Pithub::Orgs::Members.3 \
-		Pithub::Orgs::Teams.3 \
-		Pithub::PullRequests.3 \
-		Pithub::PullRequests::Comments.3 \
-		Pithub::Repos.3 \
-		Pithub::Repos::Collaborators.3 \
-		Pithub::Repos::Commits.3 \
-		Pithub::Repos::Contents.3 \
-		Pithub::Repos::Downloads.3 \
-		Pithub::Repos::Forks.3 \
-		Pithub::Repos::Hooks.3 \
-		Pithub::Repos::Keys.3 \
-		Pithub::Repos::Starring.3 \
-		Pithub::Repos::Stats.3 \
-		Pithub::Repos::Watching.3 \
-		Pithub::Result.3 \
-		Pithub::Search.3 \
-		Pithub::Users.3 \
-		Pithub::Users::Emails.3 \
-		Pithub::Users::Followers.3 \
-		Pithub::Users::Keys.3
 
 .include <bsd.port.mk>
