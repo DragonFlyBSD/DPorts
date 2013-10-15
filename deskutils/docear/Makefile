@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: deskutils/docear/Makefile 327121 2013-09-13 00:59:52Z mandree $
+# $FreeBSD: deskutils/docear/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	docear
 PORTVERSION=	1.0.0.r4
@@ -29,6 +29,7 @@ icon=		${DATADIR}/${PORTNAME}-icon48x48.png
 WRKSRC=		${WRKDIR}/docear-1.0.0.15_rc_build213
 SUB_FILES=	docear.desktop
 
+NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -e 's/readlink -mn/readlink -n/g' \
 		    -e 's,#!/bin/bash,#!/bin/sh,' \
