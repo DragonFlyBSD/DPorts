@@ -1,5 +1,5 @@
 # Created by: Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
-# $FreeBSD: games/yamsweeper/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/yamsweeper/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	yamsweeper
 PORTVERSION=	1.9
@@ -21,6 +21,7 @@ USES=		imake
 USE_XORG=	x11 xaw xext xmu xt xpm sm ice
 MAN1=		yamsweeper.1
 
+NO_STAGE=	yes
 pre-configure:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.old
 	@${CP} ${FILESDIR}/Imakefile ${WRKSRC}
