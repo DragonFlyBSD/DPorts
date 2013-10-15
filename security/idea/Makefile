@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/idea/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: security/idea/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	idea
 PORTVERSION=	1.2
@@ -20,6 +20,7 @@ MANCOMPRESSED=	no
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
