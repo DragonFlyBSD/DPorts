@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: net/xrdp/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: net/xrdp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	xrdp
 PORTVERSION=	0.6.0
@@ -43,6 +43,7 @@ TIGHTVNC_DESC=	Use TightVNC
 TRIDIAVNC_DESC=	Use TridiaVNC
 JP106_DESC=	Install Japanese JP106 keymap
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Which Xserver to use
