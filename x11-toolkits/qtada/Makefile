@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: x11-toolkits/qtada/Makefile 323395 2013-07-21 14:35:00Z marino $
+# $FreeBSD: x11-toolkits/qtada/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	qtada
 PORTVERSION=	3.2.0.0
@@ -22,6 +22,7 @@ MAKE_ENV=	DESTDIR=${DESTINY}
 
 #CONFIGURE_ARGS=	--with-gtkada=NO
 
+NO_STAGE=	yes
 post-install:
 	${MV} ${DESTINY}${PREFIX}/examples ${DESTINY}${PREFIX}/share/
 	${CP} -pR ${DESTINY}${PREFIX}/ ${PREFIX}/
