@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Prompt-Tiny/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-IO-Prompt-Tiny/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	IO-Prompt-Tiny
 PORTVERSION=	0.002
@@ -17,8 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		IO::Prompt::Tiny.3
 
 .include <bsd.port.pre.mk>
 
