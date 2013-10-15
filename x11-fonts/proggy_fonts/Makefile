@@ -1,9 +1,5 @@
-# New ports collection makefile for:	proggy_fonts
-# Date Created:				30 July 2005
-# Whom:					Leland Wang <llwang@infor.org>
-#
-# $FreeBSD: ports/x11-fonts/proggy_fonts/Makefile,v 1.6 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Leland Wang <llwang@infor.org>
+# $FreeBSD: x11-fonts/proggy_fonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	proggy_fonts
 PORTVERSION=	1.0
@@ -41,6 +37,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 XFONTDIR=	${PREFIX}/lib/X11/fonts/local
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${XFONTDIR}
 	@${CP} ${ALREADY_UNZIP} ${WRKDIR}
