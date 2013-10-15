@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: www/p5-Net-eBay/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/p5-Net-eBay/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	Net-eBay
 PORTVERSION=	0.61
@@ -28,8 +28,6 @@ OPTIONS_DEFINE=	EXAMPLES
 USE_PERL5=	configure
 USES=		perl5
 
-MAN3=		Net::eBay.3
-
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -39,8 +37,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/*.pl ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/*.pl ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
