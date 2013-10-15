@@ -1,4 +1,4 @@
-# $FreeBSD: security/spass/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: security/spass/Makefile 328559 2013-09-28 07:33:27Z eadler $
 
 PORTNAME=	spass
 PORTVERSION=	3.0
@@ -11,8 +11,8 @@ COMMENT=	Secure password generator with a true random number generator
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/format.hpp:${PORTSDIR}/devel/boost-libs
-LIB_DEPENDS=	asound:${PORTSDIR}/audio/alsa-lib \
-		boost_program_options:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libasound.so:${PORTSDIR}/audio/alsa-lib \
+		libboost_program_options.so:${PORTSDIR}/devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	guyru
