@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: games/dopewars/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/dopewars/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	dopewars
 PORTVERSION=	1.5.12
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PORTDOCS=	ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL LICENCE NEWS README TODO
 MAN6=	dopewars.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's!/pixmaps!/dopewars/pixmaps!' \
 		${WRKSRC}/src/Makefile.in
