@@ -1,8 +1,5 @@
-# New ports collection makefile for:	skytemplate
-# Date created:		28 Jul 2005
-# Whom:			Mun-Kyo Seo <munggo@gmail.com>
-#
-# $FreeBSD: ports/www/skytemplate/Makefile,v 1.3 2012/11/17 06:03:06 svnexp Exp $
+# Created by: Mun-Kyo Seo <munggo@gmail.com>
+# $FreeBSD: www/skytemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	skytemplate
 PORTVERSION=	1.4.0
@@ -23,6 +20,7 @@ NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 .for f in class.SkyTemplate.php class.SkyTemplate_withDaddy.php
