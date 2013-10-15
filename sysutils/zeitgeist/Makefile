@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: sysutils/zeitgeist/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/zeitgeist/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	zeitgeist
 PORTVERSION=	0.8.2
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=	zeitgeist-daemon.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|g' \
 		${WRKSRC}/extra/rdfxml2py
