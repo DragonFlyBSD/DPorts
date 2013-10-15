@@ -1,9 +1,5 @@
-# New ports collection makefile for:	paintown
-# Date created:		2010-02-04
-# Whom:			Bernhard Froehlich <decke@bluelife.at>
-#
-# $FreeBSD: games/paintown/Makefile 323734 2013-07-26 16:04:47Z crees $
-#
+# Created by: Bernhard Froehlich <decke@bluelife.at>
+# $FreeBSD: games/paintown/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	paintown
 PORTVERSION=	3.6.0
@@ -35,6 +31,7 @@ DESKTOP_ENTRIES="Paintown" "Fighting game similar to Streets of Rage and TMNT" \
 		"${LOCALBASE}/share/icons/hicolor/32x32/apps/paintown.png" \
 		"paintown" "Game;ActionGame;" false
 
+NO_STAGE=	yes
 do-install:
 		${MKDIR} ${DATADIR}
 		(cd ${WRKSRC} && ./install.sh -d ${DATADIR} -b ${PREFIX}/bin)
