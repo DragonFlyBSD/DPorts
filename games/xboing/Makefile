@@ -1,5 +1,5 @@
 # Created by: janek
-# $FreeBSD: games/xboing/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xboing/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	xboing
 PORTVERSION=	2.4
@@ -13,6 +13,8 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	X11 arcade game
 
 LICENSE=	MIT
+
+NO_STAGE=	yes
 
 USES=		imake
 USE_XORG=	xpm xext x11
