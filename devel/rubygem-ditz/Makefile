@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Ditz
-# Date created:		8 Mar 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-ditz/Makefile,v 1.6 2012/11/17 05:56:58 svnexp Exp $
-#
+# $FreeBSD: devel/rubygem-ditz/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ditz
 PORTVERSION=	0.5
@@ -22,4 +17,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/ditz
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
