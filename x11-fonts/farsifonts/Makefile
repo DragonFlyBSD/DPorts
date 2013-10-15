@@ -1,9 +1,5 @@
-# New ports collection makefile for:	farsifonts
-# Date created:				06 FEB 2006
-# Whom:					Babak Farrokhi <babak@farrokhi.net>
-#
-# $FreeBSD: x11-fonts/farsifonts/Makefile 313279 2013-03-02 16:51:44Z miwi $
-#
+# Created by: Babak Farrokhi <babak@farrokhi.net>
+# $FreeBSD: x11-fonts/farsifonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	farsifonts
 PORTVERSION=	0.4
@@ -20,6 +16,7 @@ USE_ZIP=	yes
 PLIST_SUB=	FONTSDIR="${FONTSDIR:S|${PREFIX}/||}"
 FONTSDIR?=	${PREFIX}/lib/X11/fonts/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	@ttmkfdir -c -d ${WRKSRC} -o ${WRKSRC}/fonts.dir
 
