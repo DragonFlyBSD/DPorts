@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chimesnet.com>
-# $FreeBSD: audio/btc/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/btc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	btc
 PORTVERSION=	258
@@ -12,6 +12,7 @@ COMMENT=	Tool for creating bass tablature
 
 WRKSRC=		${WRKDIR}
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/btc
 PORTDOCS=	btc.doc
 
