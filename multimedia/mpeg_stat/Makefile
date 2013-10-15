@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mpeg_stat
-# Date created:         Thu Aug  1 21:52:06 CDT 1996
-# Whom:                 erich@FreeBSD.org
-#
-# $FreeBSD: ports/multimedia/mpeg_stat/Makefile,v 1.17 2012/11/17 05:59:51 svnexp Exp $
-#
+# Created by: erich@FreeBSD.org
+# $FreeBSD: multimedia/mpeg_stat/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mpeg_stat
 PORTVERSION=	2.2b
@@ -19,4 +15,5 @@ MANCOMPRESSED=	yes
 
 WRKSRC=		${WRKDIR}/mpeg_stat
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
