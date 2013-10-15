@@ -1,4 +1,4 @@
-# $FreeBSD: net/pbnc/Makefile 317300 2013-05-04 08:49:36Z hrs $
+# $FreeBSD: net/pbnc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pbnc
 PORTVERSION=	1.0
@@ -14,13 +14,15 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask
 
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
 PLIST_FILES=	etc/pbnc.cfg bin/pbnc.pl
 PORTDOCS= 	pbnc.readme
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-install:
