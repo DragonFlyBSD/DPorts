@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xworm
-# Date created:				18 March 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/xworm/Makefile,v 1.14 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/xworm/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xworm
 PORTVERSION=	1.02
@@ -26,6 +22,7 @@ DATA=		font grid raw
 PLIST_FILES=	bin/xworm ${DATA:S/^/%%DATADIR%%\/xworm./}
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xworm ${PREFIX}/bin
 	@${MKDIR} ${PREFIX}/share/xworm
