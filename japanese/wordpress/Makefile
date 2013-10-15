@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: japanese/wordpress/Makefile 327069 2013-09-12 14:27:21Z sunpoet $
+# $FreeBSD: japanese/wordpress/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	wordpress
 PORTVERSION=	3.6.1
@@ -27,6 +27,7 @@ PORTDOCS=	license.txt readme.html
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-everything::
