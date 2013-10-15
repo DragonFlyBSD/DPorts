@@ -1,9 +1,5 @@
-# New ports collection makefile for: csrd
-# Date created:		99/08/18
-# Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/csrd/Makefile,v 1.6 2012/11/17 05:58:32 svnexp Exp $
-#
+# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
+# $FreeBSD: japanese/csrd/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	csrd
 PORTVERSION=	1.0
@@ -16,6 +12,7 @@ COMMENT=	Utility for Shogakukan Random House English-Japanese Dictionary
 MAKEFILE=	makefile.unx
 ALL_TARGET=	csrd
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/csrd ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/csrd.fmt ${PREFIX}/lib
