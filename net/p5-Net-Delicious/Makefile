@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope <ascope@cpan.org>
-# $FreeBSD: net/p5-Net-Delicious/Makefile 325182 2013-08-22 11:10:08Z mat $
+# $FreeBSD: net/p5-Net-Delicious/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Delicious
 PORTVERSION=	1.1.4
@@ -41,4 +41,5 @@ MAN3=		Net::Delicious.3 \
 		Net::Delicious::Tag.3 \
 		Net::Delicious::User.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
