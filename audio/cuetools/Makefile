@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-# $FreeBSD: audio/cuetools/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/cuetools/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cuetools
 PORTVERSION=	1.3.1
@@ -13,6 +13,7 @@ COMMENT=	Utilities for working with CUE and TOC files
 LICENSE=	GPLv2
 
 USES=		gmake
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
 MAN1=		cuebreakpoints.1 cueconvert.1 cueprint.1
