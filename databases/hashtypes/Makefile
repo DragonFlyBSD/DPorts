@@ -1,5 +1,5 @@
 # Created by: Sevan Janiyan <venture37@geeklan.co.uk>
-# $FreeBSD: databases/hashtypes/Makefile 326055 2013-09-02 18:52:48Z pawel $
+# $FreeBSD: databases/hashtypes/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	hashtypes
 PORTVERSION=	0.1.1
@@ -18,6 +18,7 @@ USE_ZIP=	yes
 MAKE_ARGS=	USE_PGXS=1 MODULEDIR=extension
 MODULEDIR=	${PREFIX}/share/postgresql/extension
 
+NO_STAGE=	yes
 post-install:
 	@[ -f ${MODULEDIR}/${PORTNAME}.control ] || \
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.control ${MODULEDIR}
