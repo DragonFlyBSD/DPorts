@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: security/p5-Crypt-NULL/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-Crypt-NULL/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-NULL
 PORTVERSION=	1.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Crypt::NULL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
