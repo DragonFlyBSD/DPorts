@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ftp/paraget/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: ftp/paraget/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	paraget
 PORTVERSION=	0.3.0
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN1=	paraget.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
