@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Middleware::Debug
-# Date created:		03 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Plack-Middleware-Debug/Makefile 326021 2013-09-02 16:07:56Z az $
-#
+# $FreeBSD: www/p5-Plack-Middleware-Debug/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-Debug
 PORTVERSION=	0.14
@@ -42,4 +37,5 @@ MAN3=	Plack::Middleware::Debug.3 \
 	Plack::Middleware::Debug::Timer.3 \
 	Plack::Middleware::Debug::TrackObjects.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
