@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-jabberbot
-# Date created:		2010-04-04
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: net-im/py-jabberbot/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: net-im/py-jabberbot/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	jabberbot
 PORTVERSION=	0.15
@@ -25,6 +21,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/jabberbot.py  \
 		%%PYTHON_SITELIBDIR%%/jabberbot.pyc \
 		%%PYTHON_SITELIBDIR%%/jabberbot.pyo
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lr '/usr/bin/python' ${WRKSRC} | \
 		${XARGS} ${REINPLACE_CMD} -e "s,^#!/usr/bin/python,#!${PYTHON_CMD},"
