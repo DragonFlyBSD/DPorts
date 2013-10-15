@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: mail/abook/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/abook/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	abook
 PORTVERSION=	0.5.6
@@ -25,6 +25,7 @@ MAN5=		abookrc.5
 PORTDOCS=	ANNOUNCE AUTHORS BUGS ChangeLog FAQ INSTALL NEWS README \
 		THANKS TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
