@@ -1,5 +1,5 @@
 # Created by: Nate Underwood <natey@natey.com>
-# $FreeBSD: mail/libpst/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: mail/libpst/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	libpst
 PORTVERSION=	0.6.61
@@ -29,6 +29,7 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS PST2DII
 PST2DII_DESC=	Allow Summation Document Image Information output
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPST2DII}
