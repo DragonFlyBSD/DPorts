@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: shells/mksh/Makefile 319298 2013-05-28 08:41:18Z miwi $
+# $FreeBSD: shells/mksh/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	mksh
 DISTVERSION=	R46
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAN1=		mksh.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
