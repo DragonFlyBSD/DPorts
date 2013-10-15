@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-core/Makefile 326692 2013-09-07 21:36:19Z sunpoet $
+# $FreeBSD: devel/rubygem-rspec-core/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rspec-core
 PORTVERSION=	2.14.5
@@ -16,4 +16,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/autospec bin/rspec
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
