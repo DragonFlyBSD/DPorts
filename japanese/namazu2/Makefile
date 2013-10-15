@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/namazu2/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/namazu2/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	namazu
 PORTVERSION=	${NAMAZU_PORTVERSION}
@@ -25,6 +25,7 @@ RUN_DEPENDS+=	ja-p5-Text-Kakasi>=0:${PORTSDIR}/japanese/p5-Text-Kakasi
 RUN_DEPENDS+=	ja-p5-MeCab>=0:${PORTSDIR}/japanese/p5-MeCab
 .endif
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../databases/namazu2/Makefile.common"
 
 NO_BUILD=	yes
