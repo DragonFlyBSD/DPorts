@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/benchmarks/flops/Makefile,v 1.5 2013/02/04 12:10:10 svnexp Exp $
+# $FreeBSD: benchmarks/flops/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	flops
 PORTVERSION=	2.0
@@ -16,6 +16,7 @@ NO_WRKSUBDIR=	yes
 PORTDOCS=	flops.doc
 PLIST_FILES=	bin/flops
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
