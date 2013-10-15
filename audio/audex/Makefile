@@ -1,4 +1,4 @@
-# $FreeBSD: audio/audex/Makefile 327031 2013-09-12 02:59:16Z jhale $
+# $FreeBSD: audio/audex/Makefile 329869 2013-10-09 06:55:59Z jhale $
 
 PORTNAME=	audex
 DISTVERSION=	0.77b1
@@ -10,7 +10,7 @@ COMMENT=	KDE4 audio CD ripping utility
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	cdda_paranoia:${PORTSDIR}/audio/cdparanoia
+LIB_DEPENDS=	libcdda_paranoia.so:${PORTSDIR}/audio/cdparanoia
 
 USE_XZ=		yes
 USES=		cmake
@@ -20,38 +20,21 @@ USE_QT4=	gui dbus network svg xml \
 
 OPTIONS_DEFINE=		NLS EYED3 FAAC FLAC LAME VORBIS
 OPTIONS_DEFAULT=	FLAC VORBIS
+OPTIONS_SUB=		yes
 NO_OPTIONS_SORT=	yes
 
+NLS_USES=		gettext
+NLS_CMAKE_OFF=		-DDISABLE_ALL_OPTIONAL_SUBDIRECTORIES=TRUE
+
 EYED3_DESC=		Unicode MP3 tag support via audio/py-eyed3
+EYED3_RUN_DEPENDS=	eyeD3:${PORTSDIR}/audio/py-eyed3
 
-.include <bsd.port.options.mk>
+FAAC_RUN_DEPENDS=	faac:${PORTSDIR}/audio/faac
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CMAKE_ARGS+=	-DDISABLE_ALL_OPTIONAL_SUBDIRECTORIES=TRUE
-PLIST_SUB+=	NLS="@comment "
-.endif
+FLAC_RUN_DEPENDS=	flac:${PORTSDIR}/audio/flac
 
-.if ${PORT_OPTIONS:MEYED3}
-RUN_DEPENDS+=	eyeD3:${PORTSDIR}/audio/py-eyed3
-.endif
+LAME_RUN_DEPENDS=	lame:${PORTSDIR}/audio/lame
 
-.if ${PORT_OPTIONS:MFAAC}
-RUN_DEPENDS+=	faac:${PORTSDIR}/audio/faac
-.endif
-
-.if ${PORT_OPTIONS:MFLAC}
-RUN_DEPENDS+=	flac:${PORTSDIR}/audio/flac
-.endif
-
-.if ${PORT_OPTIONS:MLAME}
-RUN_DEPENDS+=	lame:${PORTSDIR}/audio/lame
-.endif
-
-.if ${PORT_OPTIONS:MVORBIS}
-RUN_DEPENDS+=	oggenc:${PORTSDIR}/audio/vorbis-tools
-.endif
+VORBIS_RUN_DEPENDS=	oggenc:${PORTSDIR}/audio/vorbis-tools
 
 .include <bsd.port.mk>
