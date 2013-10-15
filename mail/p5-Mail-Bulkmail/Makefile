@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Bulkmail/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: mail/p5-Mail-Bulkmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Bulkmail
 PORTVERSION=	3.12
@@ -17,6 +17,7 @@ MAN3=		Mail::Bulkmail.3 Mail::Bulkmail::Dynamic.3 \
 		Mail::Bulkmail::Server.3 Mail::Bulkmail::Object.3 \
 		Mail::Bulkmail::DummyServer.3
 
+NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e '$$_="" if /^use 5/;' \
 		-e '$$_="" if /(use|no) warnings/;' \
