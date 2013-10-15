@@ -1,5 +1,5 @@
 # Created by: dchapes@ddm.on.ca
-# $FreeBSD: emulators/vice/Makefile 325937 2013-09-02 05:41:50Z bsam $
+# $FreeBSD: emulators/vice/Makefile 329281 2013-10-04 10:18:12Z dinoex $
 
 PORTNAME=	vice
 PORTVERSION=	2.4
@@ -12,6 +12,8 @@ PKGNAMESUFFIX?=	${GNOME_SUFFIX}${PKGNAMESUFFIX2}
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Emulator for Commodore C64, C128, VIC20, PET, and CBM-II
 
+LICENSE=	GPLv2
+
 BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
@@ -23,9 +25,9 @@ LIB_DEPENDS+=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 .endif
 
 RESTRICTED=	ROMs are copyrighted by Commodore Business Machines
-LICENSE=	GPLv2
+NO_STAGE=	yes
 
-USES=		pkgconfig
+USES=		iconv:patch pkgconfig
 USE_XORG=	xpm ice sm xext xv xt x11 xmu
 USE_XORG+=	xrender xinerama xi xrandr xcursor xcomposite xdamage xfixes
 USE_GMAKE=	yes
@@ -60,9 +62,6 @@ CONFIGURE_ARGS+=	--enable-fullscreen --enable-ipv6 --disable-dependency-tracking
 #CONFIGURE_ARGS+=	--enable-wiz
 #CONFIGURE_ARGS+=	--enable-parsid
 #CONFIGURE_ARGS+=	--enable-memmap
-
-Optional Features:
-
 
 MAN1=		vice.1 c1541.1 petcat.1
 MLINKS=		vice.1 x64.1 \
@@ -105,7 +104,7 @@ LIB_DEPENDS+=		avcodec:${PORTSDIR}/multimedia/ffmpeg
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USES+=		gettext iconv:patch
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls --localedir=${LOCALBASE}/share/locale
 # causes vice to crash:
 #LDFLAGS+=		-lgettextlib
