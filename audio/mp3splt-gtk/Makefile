@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: audio/mp3splt-gtk/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: audio/mp3splt-gtk/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3splt-gtk
 PORTVERSION=	0.8.1
@@ -20,6 +20,7 @@ LIB_DEPENDS=	mp3splt:${PORTSDIR}/audio/libmp3splt \
 
 INSTALLS_OMF=	yes
 USE_AUTOTOOLS=	libltdl
+NO_STAGE=	yes
 USE_GSTREAMER=	yes
 USE_GNOME=	gnomedocutils gtk20
 GNU_CONFIGURE=	yes
