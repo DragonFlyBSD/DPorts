@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: irc/pure-emacs21/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: irc/pure-emacs21/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	pure
 PORTVERSION=	0.6
@@ -35,6 +35,7 @@ PLIST_SUB=	PURELISP=${LISPDIR} \
 		XEMACS_ONLY=${XEMACS_ONLY} \
 		PUREBIN=${PUREBIN}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|CFLAGS=$$(CFLAGS)|| ; \
