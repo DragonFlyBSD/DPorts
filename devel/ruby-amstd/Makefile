@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-amstd
-# Date created:		7 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/ruby-amstd/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-amstd/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	amstd
 PORTVERSION=	2.0.0
@@ -23,6 +19,7 @@ RUBY_SETUP=	install.rb
 DOCS_EN=	README.en
 DOCS_JA=	README.ja manual.rd.ja
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODDOCDIR}/ja
