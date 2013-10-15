@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-CouchDB-View/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: databases/p5-CouchDB-View/Makefile 328817 2013-09-30 15:31:03Z sunpoet $
 
 PORTNAME=	CouchDB-View
 PORTVERSION=	0.003
@@ -19,9 +19,5 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		CouchDB::View.3 \
-		CouchDB::View::Document.3 \
-		CouchDB::View::Server.3
 
 .include <bsd.port.mk>
