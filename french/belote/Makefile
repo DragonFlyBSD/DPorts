@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: ports/french/belote/Makefile,v 1.8 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: french/belote/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	belote
 PORTVERSION=	20061109
@@ -27,6 +27,7 @@ DESKTOP_ENTRIES="Belote" \
 		"" \
 		false
 
+NO_STAGE=	yes
 post-extract:
 	@${UNZIP_CMD} -qo ${WRKSRC}/data.bin rsc/vp.gif -d ${WRKSRC}
 
