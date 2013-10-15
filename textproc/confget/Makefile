@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/confget/Makefile 325358 2013-08-25 16:14:58Z sunpoet $
+# $FreeBSD: textproc/confget/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	confget
 PORTVERSION=	1.04
@@ -22,6 +22,7 @@ MANCOMPRESSED=	yes
 PLIST_FILES=	bin/confget
 PORTEXAMPLES=	t1.ini t2.ini
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
