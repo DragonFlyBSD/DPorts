@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: mail/popular/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: mail/popular/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	popular
 PORTVERSION=	1.5.5
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	DB4
 OPTIONS_DEFAULT=	DB4
 DB4_DESC=	Build db4 pdm module
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDB4}
