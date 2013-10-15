@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-locale
-# Date created:		15 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/ruby-locale/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-locale/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	locale
 PORTVERSION=	0.2
@@ -25,6 +21,7 @@ USE_RUBY_EXTCONF=	yes
 
 INSTALL_TARGET=	site-install
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODEXAMPLESDIR}
