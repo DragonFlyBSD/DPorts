@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: biology/plinkseq/Makefile 314580 2013-03-18 15:14:27Z vanilla $
+# $FreeBSD: biology/plinkseq/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	plinkseq
 PORTVERSION=	0.08
@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-protobuf=${LOCALBASE}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|PF_INET|AF_INET|g' ${WRKSRC}/browser/mongoose.c
 	${REINPLACE_CMD} -e 's|-ldl||g' \
