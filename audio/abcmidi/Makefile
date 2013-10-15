@@ -1,5 +1,5 @@
 # Created by: Sue Blake <sue@FreeBSD.org>
-# $FreeBSD: audio/abcmidi/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/abcmidi/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	abcmidi
 PORTVERSION=	2011.04.29
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 EXTRACT_BEFORE_ARGS=	-aqo
 
+NO_STAGE=	yes
 USE_ZIP=	yes
 USES=		gmake
 MAKEFILE=	makefiles/unix.mak
