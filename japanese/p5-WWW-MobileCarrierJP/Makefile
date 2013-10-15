@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-WWW-MobileCarrierJP/Makefile 327410 2013-09-16 15:42:40Z az $
+# $FreeBSD: japanese/p5-WWW-MobileCarrierJP/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	WWW-MobileCarrierJP
 PORTVERSION=	0.63
@@ -52,6 +52,7 @@ MAN3=		WWW::MobileCarrierJP::EZWeb::PictogramInfo.3 \
 		WWW::MobileCarrierJP::ThirdForce::UserAgent.3 \
 		WWW::MobileCarrierJP.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
