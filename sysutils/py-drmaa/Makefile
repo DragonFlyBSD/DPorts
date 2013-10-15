@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-drmaa
-# Date created:		2011-02-16
-# Whom:			Mykola Dzham <i@levsha.me>
-#
-# $FreeBSD: ports/sysutils/py-drmaa/Makefile,v 1.2 2012/11/17 06:01:42 svnexp Exp $
-#
+# Created by: Mykola Dzham <i@levsha.me>
+# $FreeBSD: sysutils/py-drmaa/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	drmaa
 PORTVERSION=	0.4b3
@@ -20,4 +16,5 @@ PROJECTHOST=	drmaa-python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
