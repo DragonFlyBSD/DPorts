@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Module-Release/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Module-Release/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	Module-Release
 PORTVERSION=	2.06
@@ -18,21 +18,10 @@ BUILD_DEPENDS=	p5-CACertOrg-CA>=0:${PORTSDIR}/security/p5-CACertOrg-CA \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-libwww>=6.02:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
 		p5-Test-Without-Module>=0:${PORTSDIR}/devel/p5-Test-Without-Module
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		release.1
-MAN3=		Module::Release.3 \
-		Module::Release::FTP.3 \
-		Module::Release::Kwalitee.3 \
-		Module::Release::MANIFEST.3 \
-		Module::Release::PAUSE.3 \
-		Module::Release::Prereq.3 \
-		Module::Release::SVN.3 \
-		Module::Release::SourceForge.3
 
 .include <bsd.port.mk>
