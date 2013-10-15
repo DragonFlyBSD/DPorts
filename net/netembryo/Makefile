@@ -1,5 +1,5 @@
 # Created by: Emmanuel Richiardone (err@tollari.org)
-# $FreeBSD: net/netembryo/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/netembryo/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netembryo
 PORTVERSION=	0.1.1
@@ -25,6 +25,7 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-silent-rules
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
