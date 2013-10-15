@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xgrab/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: x11/xgrab/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xgrab
 PORTVERSION=	2.41
@@ -24,6 +24,7 @@ CFLAGS+=	-Wno-error=return-type
 
 MAN1=		xgrab.1 xgrabsc.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's,\*envp,\*\*envp,g' ${WRKSRC}/xgrabxaw.c
 
