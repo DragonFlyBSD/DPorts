@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-hcluster
-# Date created:		2008-09-04
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/science/py-hcluster/Makefile,v 1.8 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: science/py-hcluster/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	hcluster
 PORTVERSION=	0.2.0
@@ -22,4 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
