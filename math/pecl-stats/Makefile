@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: ports/math/pecl-stats/Makefile,v 1.7 2013/02/04 10:00:21 svnexp Exp $
+# $FreeBSD: math/pecl-stats/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	stats
 PORTVERSION=	1.0.3
@@ -15,4 +15,5 @@ COMMENT=	A PECL extension which with routines for statistical computation
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
