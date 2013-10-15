@@ -1,8 +1,5 @@
-# Ports collection makefile for:	gem_plugin
-# Date created:				20 May 2006
-# Whom:					Rui Lopes (<rgl ruilopes com>)
-#
-# $FreeBSD: ports/devel/rubygem-gem_plugin/Makefile,v 1.14 2012/11/17 05:56:59 svnexp Exp $
+# Created by: Rui Lopes (<rgl ruilopes com>)
+# $FreeBSD: devel/rubygem-gem_plugin/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gem_plugin
 PORTVERSION=	0.2.3
@@ -19,4 +16,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/gpgen
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
