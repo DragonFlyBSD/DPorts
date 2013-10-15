@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/audio/jmusic/Makefile,v 1.11 2013/02/14 08:30:53 svnexp Exp $
+# $FreeBSD: audio/jmusic/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	jmusic
 PORTVERSION=	1.6.4
@@ -18,6 +18,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Composition in Java
 
 USE_JAVA=	yes
+NO_STAGE=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
