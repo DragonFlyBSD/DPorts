@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Resource/Makefile 325877 2013-09-01 16:59:12Z az $
+# $FreeBSD: devel/p5-Path-Resource/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Path-Resource
 PORTVERSION=	0.072
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=	Path::Resource.3 Path::Resource::Base.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
