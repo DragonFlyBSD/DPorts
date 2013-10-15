@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: games/tenebrae/Makefile 314521 2013-03-18 02:45:32Z danfe $
+# $FreeBSD: games/tenebrae/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tenebrae
 PORTVERSION=	1.04
@@ -32,6 +32,7 @@ OPTIONS_DEFAULT_i386=	ASM
 OPTIONS_DEFINE_x86_64=	ASM
 OPTIONS_DEFAULT_x86_64=	ASM
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASM}
