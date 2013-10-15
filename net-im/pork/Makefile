@@ -1,5 +1,5 @@
 # Created by: Bob Bomar <bob@bomar.us>
-# $FreeBSD: net-im/pork/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-im/pork/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=		pork
 PORTVERSION=		0.99.8.1
@@ -14,6 +14,7 @@ USE_OPENSSL=		yes
 
 GNU_CONFIGURE=		yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/^inline //' ${WRKSRC}/src/*.h
 
