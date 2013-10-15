@@ -1,5 +1,5 @@
 # Created by: Espen Volden aka voldern <voldern@hoeggen.net>
-# $FreeBSD: devel/rubygem-ruby_parser/Makefile 323321 2013-07-19 17:22:16Z swills $
+# $FreeBSD: devel/rubygem-ruby_parser/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ruby_parser
 PORTVERSION=	3.2.2
@@ -19,4 +19,5 @@ RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/ruby_parse \
 		bin/ruby_parse_extract_error
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
