@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ftp/pear-Net_FTP/Makefile 314518 2013-03-18 02:20:49Z miwi $
+# $FreeBSD: ftp/pear-Net_FTP/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	Net_FTP
 PORTVERSION=	1.3.7
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 USE_PHP=	ftp
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
