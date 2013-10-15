@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: sysutils/log_analysis/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: sysutils/log_analysis/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	log_analysis
 PORTVERSION=	0.46
@@ -26,6 +26,7 @@ PLIST_FILES=	bin/log_analysis \
 PLIST_DIRS=	%%DATADIR%%/Tk \
 		%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTK}
