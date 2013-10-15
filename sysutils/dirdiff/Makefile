@@ -1,5 +1,5 @@
 # Created by: grog
-# $FreeBSD: sysutils/dirdiff/Makefile 318100 2013-05-13 15:08:04Z gahr $
+# $FreeBSD: sysutils/dirdiff/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dirdiff
 PORTVERSION=	2.1
@@ -13,14 +13,14 @@ COMMENT=	Graphical diff tool
 LICENSE=	GPLv2 # (or later)
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_TCL_BUILD=	yes
+USES+=		tk
 USE_LDCONFIG=	yes
-USE_TK=		yes
 
 PLIST_FILES=	bin/dirdiff lib/libfilecmp.so.0
 
 CFLAGS+=	-fPIC -I${TCL_INCLUDEDIR}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|.0.0|.0|g ; \
