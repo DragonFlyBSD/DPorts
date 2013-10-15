@@ -1,5 +1,5 @@
 # Created by: Julian C. Dunn <jdunn@aquezada.com>
-# $FreeBSD: ports/net-im/ttytter/Makefile,v 1.30 2013/01/02 07:46:01 svnexp Exp $
+# $FreeBSD: net-im/ttytter/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	ttytter
 PORTVERSION=	2.1.00
@@ -21,7 +21,8 @@ RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 OPTIONS_DEFINE=	READLINE RLTTYTTER
 OPTIONS_DEFAULT=READLINE
@@ -30,6 +31,7 @@ RLTTYTTER_DESC=	Use T::R::TTYtter readline driver (beta!)
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
