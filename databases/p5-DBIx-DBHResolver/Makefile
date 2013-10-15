@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-DBHResolver/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-DBIx-DBHResolver/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-DBHResolver
 PORTVERSION=	0.17
@@ -35,4 +35,5 @@ MAN3=	DBIx::DBHResolver.3 \
 	DBIx::DBHResolver::Strategy::Remainder.3 \
 	DBIx::DBHResolver::Strategy::RoundRobin.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
