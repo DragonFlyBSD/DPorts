@@ -1,5 +1,5 @@
 # Created by: Eijiro Shibusawa <ej-sib@ice.uec.ac.jp>
-# $FreeBSD: math/lapacke/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/lapacke/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	lapacke
 PORTVERSION=	3.4.0
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	PROFILE XLAPACKE
 PROFILE_DESC=	Build a profiling library
 XLAPACKE_DESC=	Install interfaces to XLAPACK
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 LAPACKE_SVERSION=	1
