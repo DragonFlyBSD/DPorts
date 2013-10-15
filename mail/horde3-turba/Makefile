@@ -1,9 +1,5 @@
-# Ports collection makefile for:  turba
-# Date created:			  Sat Nov 16, 2001
-# Whom:				  Thierry Thomas (<thierry@thomas.as>)
-#
-# $FreeBSD: mail/horde3-turba/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Thierry Thomas (<thierry@thomas.as>)
+# $FreeBSD: mail/horde3-turba/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	turba
 PORTVERSION=	2.3.6
@@ -20,6 +16,7 @@ USES=		gettext
 
 PORTDOCS=	README CHANGES CREDITS INSTALL LDAP RELEASE_NOTES TODO UPGRADING
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e "s:/usr/bin/ldapadd:${LOCALBASE}/bin/ldapadd:"	\
 		${WRKSRC}/scripts/ldap/addou.pl
