@@ -1,5 +1,5 @@
 # Created by: SAITO Itsuro <saito@miv.t.u-tokyo.ac.jp>
-# $FreeBSD: japanese/a2ps/Makefile 316989 2013-05-01 06:19:25Z hrs $
+# $FreeBSD: japanese/a2ps/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	a2ps
 PORTVERSION=	1.45
@@ -24,6 +24,7 @@ EXTRACT_AFTER_ARGS=	a2ps-j
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's,%%PERL%%,${PERL},' \
