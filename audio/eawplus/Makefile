@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: ports/audio/eawplus/Makefile,v 1.10 2012/12/31 16:40:32 svnexp Exp $
+# $FreeBSD: audio/eawplus/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	eawplus
 PORTVERSION=	12.1
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/eawpats/acbass.pat:${PORTSDIR}/audio/eawpats \
 		${LOCALBASE}/share/guspat/inst/GUS/acbass.pat:${PORTSDIR}/audio/guspat
 
 NO_CDROM=	Some of the patches are marked no-commercial-use
+NO_STAGE=	yes
 
 NO_WRKSUBDIR=	yes
 
