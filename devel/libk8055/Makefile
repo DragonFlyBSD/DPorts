@@ -1,5 +1,5 @@
 # Created by: Jake Smith <jake@xz.cx>
-# $FreeBSD: devel/libk8055/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: devel/libk8055/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libk8055
 PORTVERSION=	0.2
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/k8055 \
 		lib/libk8055.so.0.2 \
 		include/k8055.h
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/libk8055.c.orig
 
