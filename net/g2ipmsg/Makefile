@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: net/g2ipmsg/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/g2ipmsg/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	g2ipmsg
 PORTVERSION=	0.9.6
@@ -30,6 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	g2ipmsg.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOMEPANEL}
