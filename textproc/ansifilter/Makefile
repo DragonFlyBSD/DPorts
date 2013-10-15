@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: textproc/ansifilter/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: textproc/ansifilter/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ansifilter
 PORTVERSION=	1.4
@@ -24,6 +24,7 @@ MANCOMPRESSED=	yes
 PORTDOCS=	ChangeLog README
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
