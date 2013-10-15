@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sslh
-# Date created:		2010-03-29
-# Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: net/sslh/Makefile 307542 2012-11-18 16:33:31Z hrs $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: net/sslh/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sslh
 PORTVERSION=	1.13
@@ -20,8 +16,8 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}b.tar.gz
 
 LIB_DEPENDS=	config:${PORTSDIR}/devel/libconfig
 
-USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USES=		gmake perl5
+USE_PERL5=	build
 
 OPTIONS_DEFINE=	MANPAGES EXAMPLES
 OPTIONS_DEFAULT=	MANPAGES EXAMPLES
@@ -29,6 +25,7 @@ OPTIONS_DEFAULT=	MANPAGES EXAMPLES
 CFLAGS+=	-I${LOCALBASE}/include
 MAKE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
