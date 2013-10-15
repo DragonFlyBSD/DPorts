@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: www/w3m-img/Makefile 325261 2013-08-23 12:30:16Z nobutaka $
+# $FreeBSD: www/w3m-img/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PKGNAMESUFFIX=	-img
 
@@ -14,4 +14,5 @@ OPTIONS_SLAVE=	DOCS INLINE_IMAGE
 NO_DIALOG=	yes
 CONFLICTS=	ja-w3m-0.5.* ja-w3m-img-0.5.* w3m-0.5.*0
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
