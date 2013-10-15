@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <henrik@brixandersen.dk>
-# $FreeBSD: www/ikiwiki/Makefile 327292 2013-09-14 14:47:56Z az $
+# $FreeBSD: www/ikiwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ikiwiki
 PORTVERSION=	3.20110608
@@ -47,6 +47,7 @@ MAN8=		ikiwiki-mass-rebuild.8
 PORTDOCS=	CHANGELOG NEWS README
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPO4A}
