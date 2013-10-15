@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/lander/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: games/lander/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lander
 PORTVERSION=	0.6.4
@@ -34,6 +34,7 @@ DESKTOP_ENTRIES="Lunar Lander" \
 		"Game;ArcadeGame;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
