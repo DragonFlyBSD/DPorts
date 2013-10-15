@@ -1,5 +1,5 @@
 # Created by: niels <niels@FreeBSD.org>
-# $FreeBSD: www/rubygem-robots/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/rubygem-robots/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	robots
 PORTVERSION=	0.10.1
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
