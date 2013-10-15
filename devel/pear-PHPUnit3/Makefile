@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<gerrit.beine@gmx.de>)
-# $FreeBSD: ports/devel/pear-PHPUnit3/Makefile,v 1.44 2013/01/03 10:47:26 svnexp Exp $
+# $FreeBSD: devel/pear-PHPUnit3/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHPUnit
 PORTVERSION=	3.7.6
@@ -42,6 +42,7 @@ TOKENIZER_DESC=	Enable Tokenizer support
 
 USE_PHP=	dom spl pcre
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MJSON}
