@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/font-std/Makefile 316982 2013-05-01 02:55:55Z hrs $
+# $FreeBSD: japanese/font-std/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	std
 PORTVERSION=	0.0.20130501
@@ -31,6 +31,7 @@ STD_GothicBBB-Medium=	${LOCALBASE}/share/font-ipa/ipag.otf
 STD_Ryumin-Light.gs7=	${LOCALBASE}/share/font-mplus-ipa/fonts/ipam.ttf
 STD_GothicBBB-Medium.gs7=	${LOCALBASE}/share/font-mplus-ipa/fonts/ipag.ttf
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
