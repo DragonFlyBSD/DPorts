@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/p5-reslog/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: sysutils/p5-reslog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	reslog
 PORTVERSION=	3.16
@@ -25,4 +25,5 @@ PLIST_FILES=	bin/reslog \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/reslog/.packlist
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/reslog
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
