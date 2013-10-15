@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev <tolid@tolid.eu.org>
-# $FreeBSD: devel/p5-File-Dir-Dumper/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-File-Dir-Dumper/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Dir-Dumper
 PORTVERSION=	0.0.8
@@ -25,4 +25,5 @@ MAN1=		dir-dump.1
 MAN3=		File::Dir::Dumper.3 File::Dir::Dumper::App.3 File::Dir::Dumper::Base.3 File::Dir::Dumper::Scanner.3 \
 		File::Dir::Dumper::Stream::JSON::Reader.3 File::Dir::Dumper::Stream::JSON::Writer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
