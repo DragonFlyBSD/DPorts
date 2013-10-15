@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: print/a2pdf/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: print/a2pdf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	a2pdf
 PORTVERSION=	1.13
@@ -22,4 +22,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN1=	${PORTNAME}.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
