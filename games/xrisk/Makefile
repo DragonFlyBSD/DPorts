@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xrisk/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xrisk/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xrisk
 PORTVERSION=	2.15
@@ -16,4 +16,5 @@ MAN6=		xrisk.6
 
 RESTRICTED=	Possible trademark infringement
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
