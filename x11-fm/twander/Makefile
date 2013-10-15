@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: x11-fm/twander/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: x11-fm/twander/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	twander
 PORTVERSION=	3.231
@@ -18,6 +18,7 @@ USE_PYTHON=	yes
 MANCOMPRESSED=	yes
 MAN1=		twander.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
