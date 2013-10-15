@@ -1,9 +1,5 @@
-# Ports collection makefile for: squidstats
-# Whom: Adrian Chadd <adrian@FreeBSD.org>
-# Date Created: 10-December-2008
-#
-# $FreeBSD: www/squidstats/Makefile 326042 2013-09-02 17:29:36Z az $
-#
+# Created by: Adrian Chadd <adrian@FreeBSD.org>
+# $FreeBSD: www/squidstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	squidstats
 PORTVERSION=	54
@@ -27,6 +23,7 @@ SQUID_GID?=	squid
 SUB_FILES=	pkg-message pkg-install
 SUB_LIST+=	SQUID_UID=${SQUID_UID} SQUID_GID=${SQUID_GID}
 
+NO_STAGE=	yes
 pre-install:
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} \
 		${PKGINSTALL} ${PKGNAME} PRE-INSTALL
