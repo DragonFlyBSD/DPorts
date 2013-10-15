@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: deskutils/teapot/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: deskutils/teapot/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	teapot
 PORTVERSION=	2.3.0
@@ -24,6 +24,7 @@ MAN1=	teapot.1
 # having to generate the pdf and html docs from the LyX sourcecode.
 WRKSRC_DOCS=	${WRKDIR}/${DISTNAME:C/^./T/}-Linux/share/doc/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/man/man1|man/man1|g' \
 		${WRKSRC}/CMakeLists.txt
