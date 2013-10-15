@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libsoup/Makefile 326032 2013-09-02 16:55:04Z bapt $
+# $FreeBSD: devel/libsoup/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/trunk/devel/libsoup/Makefile 18456 2013-05-12 14:40:21Z kwm $
 
 PORTNAME=	libsoup
@@ -43,6 +43,7 @@ BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 CONFIGURE_ARGS+=--without-gnome
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
