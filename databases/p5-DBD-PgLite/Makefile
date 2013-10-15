@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-PgLite/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: databases/p5-DBD-PgLite/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBD-PgLite
 PORTVERSION=	0.11
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN3=	DBD::PgLite.3 \
 	DBD::PgLite::MirrorPgToSQLite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
