@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Net-YASA/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Net-YASA/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Net-YASA
 PORTVERSION=	0.03
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Net::YASA.3 Net::YASA::ConfigData.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
