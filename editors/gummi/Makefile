@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <Nukama@gmail.com>
-# $FreeBSD: editors/gummi/Makefile 323932 2013-07-29 22:37:26Z bapt $
+# $FreeBSD: editors/gummi/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	gummi
 PORTVERSION=	0.6.5
@@ -32,6 +32,7 @@ LATEXMK_DESC=	Use latexmk typesetter
 RUBBER_DESC=	Use rubber typesetter
 TEXCOUNT_DESC=	With texcount statistics
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
