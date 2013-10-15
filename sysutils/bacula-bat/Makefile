@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@langille.org>
-# $FreeBSD: sysutils/bacula-bat/Makefile 326071 2013-09-02 20:02:01Z bapt $
+# $FreeBSD: sysutils/bacula-bat/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bacula
 PKGNAMESUFFIX=	-bat
@@ -29,4 +29,5 @@ CONFIGURE_ARGS+=	--enable-bat \
 OPTIONS_DEFINE=	OPENSSL
 OPTIONS_DEFAULT=OPENSSL
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
