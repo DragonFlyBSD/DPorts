@@ -1,5 +1,5 @@
-# Created by: fjoe@FreeBSD.ORG
-# $FreeBSD: x11-toolkits/wxgtk29/Makefile 327374 2013-09-16 09:39:26Z bapt $
+# Created by: fjoe@FreeBSD.org
+# $FreeBSD: x11-toolkits/wxgtk29/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.9.4
@@ -47,6 +47,7 @@ OPTIONS_DEFINE=	GSTREAMER MSPACK
 OPTIONS_DEFAULT=	GSTREAMER MSPACK
 MSPACK_DESC=	MS archives support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGSTREAMER}
