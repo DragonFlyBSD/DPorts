@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/pkcs11-helper/Makefile 325745 2013-08-31 00:11:06Z bapt $
+# $FreeBSD: security/pkcs11-helper/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pkcs11-helper
 PORTVERSION=	1.09
@@ -31,6 +31,7 @@ MAN8=		pkcs11-helper-1.8
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|' \
 		${WRKSRC}/configure
