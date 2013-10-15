@@ -1,5 +1,5 @@
 # Created by: Girish <girish.rao.dev@gmail.com>
-# $FreeBSD: games/spellathon/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/spellathon/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	spellathon
 PORTVERSION=	6.0
@@ -28,6 +28,7 @@ USE_LDCONFIG=	yes
 
 DESKTOP_ENTRIES="Spellathon" "${COMMENT}" "" "${PORTNAME}" "Education;Languages;" "true"
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|$${CC}|$${CXX}|g ; \
