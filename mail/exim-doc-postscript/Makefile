@@ -1,11 +1,8 @@
-# New ports collection makefile for:	exim-doc-postscript
-# Date created:		27 November 2001
-# Whom:	      		Johann Visagie <wjv@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/exim-doc-postscript/Makefile,v 1.2 2012/11/17 05:59:02 svnexp Exp $
-#
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: mail/exim-doc-postscript/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 DOCFORMAT=	postscript
 MASTERDIR=	${.CURDIR}/../exim-doc-html
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
