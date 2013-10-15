@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ndesk-options/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/ndesk-options/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ndesk-options
 PORTVERSION=	0.2.1
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile.in
