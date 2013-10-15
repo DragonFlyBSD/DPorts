@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gal2/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: x11-toolkits/gal2/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/gal2/Makefile,v 1.54 2007/05/23 14:37:18 ahze Exp $
 
 PORTNAME=	gal2
@@ -30,6 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB=	VERSION="2.6" PORTVERSION=${PORTVERSION} \
 		SHLIBVERSION="2.4"
 
+NO_STAGE=	yes
 post-extract:
 	${TOUCH} -f ${WRKSRC}/gal/util/e-util-private.h
 
