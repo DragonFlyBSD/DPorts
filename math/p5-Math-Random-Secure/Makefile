@@ -1,5 +1,5 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: math/p5-Math-Random-Secure/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/p5-Math-Random-Secure/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Random-Secure
 PORTVERSION=	0.06
@@ -23,4 +23,5 @@ MAN3=		Math::Random::Secure.3 Math::Random::Secure::RNG.3
 
 LICENSE=	ART20
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
