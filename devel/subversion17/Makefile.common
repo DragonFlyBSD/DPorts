@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion17/Makefile.common 326057 2013-09-02 19:04:20Z ohauer $
+# $FreeBSD: devel/subversion17/Makefile.common 327683 2013-09-20 10:54:22Z ak $
 
 PORTNAME=	subversion
 PORTVERSION=	1.7.13
@@ -12,7 +12,6 @@ DIST_SUBDIR=	subversion17
 MASTER_SITE_SUBDIR=	subversion/:main \
 			lev/:book
 
-MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_KDE4=	# Used below if KWallet support is enabled

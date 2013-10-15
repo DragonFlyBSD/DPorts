@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion17/Makefile 326057 2013-09-02 19:04:20Z ohauer $
+# $FreeBSD: devel/subversion17/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 MAINTAINER=	ohauer@FreeBSD.org
 COMMENT=	Version control system
@@ -44,6 +44,7 @@ SVNMUCC_DESC=		Install Multiple URL Command Client
 SVNSERVE_WRAPPER_DESC=	Enable svnserve wrapper (umask setter)
 TEST_DESC=		Run subversion test suite
 
+NO_STAGE=	yes
 .include "Makefile.common"
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
