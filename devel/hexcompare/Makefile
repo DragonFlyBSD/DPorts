@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hexcompare
-# Date created:		2010-07-20
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/hexcompare/Makefile,v 1.4 2012/11/17 05:55:47 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: devel/hexcompare/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hexcompare
 PORTVERSION=	1.0.2
@@ -18,6 +14,7 @@ LICENSE=	GPLv3
 
 PLIST_FILES=	bin/hexcompare
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|gcc|${CC}|g' ${WRKSRC}/Makefile
 
