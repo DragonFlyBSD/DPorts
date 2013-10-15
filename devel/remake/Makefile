@@ -1,8 +1,5 @@
-# New ports collection makefile for:		remake
-# Date created:					2012-02-20
-# Whom:						arved
-#
-# $FreeBSD: devel/remake/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: arved
+# $FreeBSD: devel/remake/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	remake
 PORTVERSION=	0.9
@@ -19,4 +16,5 @@ USES=		gettext
 MAN1=		remake.1
 INFO=		remake
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
