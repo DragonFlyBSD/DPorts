@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compizconfig-backend-gconf/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/compizconfig-backend-gconf/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	compizconfig-backend-gconf
 PORTVERSION=	0.8.4
@@ -22,6 +22,7 @@ USE_AUTOTOOLS=	libtool
 USES=		pathfix pkgconfig
 USE_GNOME=	glib20 gconf2
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|'	\
 		${WRKSRC}/settings-backend/gconf.c	\
