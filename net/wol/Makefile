@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/wol/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: net/wol/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	wol
 PORTVERSION=	0.7.1
@@ -20,6 +20,7 @@ MAN1=		wol.1
 INFO=		wol
 DOCS=		AUTHORS NEWS README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext iconv
