@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/patchage/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: audio/patchage/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	patchage
 PORTVERSION=	0.5.0
@@ -23,6 +23,7 @@ LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 		flowcanvas.5:${PORTSDIR}/x11-toolkits/flowcanvas
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=yes
 INSTALLS_ICONS=	yes
