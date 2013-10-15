@@ -1,5 +1,5 @@
-# Created by:	Jason Bacon
-# $FreeBSD: ports-mgmt/genplist/Makefile 320519 2013-06-11 02:14:25Z tabthorpe $
+# Created by: Jason Bacon
+# $FreeBSD: ports-mgmt/genplist/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	genplist
 PORTVERSION=	1.0
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/genplist
 
 MAN1=		genplist.1
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/genplist ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/genplist.1 ${MAN1PREFIX}/man/man1
