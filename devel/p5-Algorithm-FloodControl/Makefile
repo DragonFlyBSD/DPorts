@@ -1,5 +1,5 @@
 # Created by: Andrey <gugu@zoo.rambler.ru>
-# $FreeBSD: devel/p5-Algorithm-FloodControl/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Algorithm-FloodControl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Algorithm-FloodControl
 PORTVERSION=	2.001000
@@ -25,4 +25,5 @@ MAN3=		Algorithm::FloodControl.3 Algorithm::FloodControl::Backend::Cache::Memcac
 		Algorithm::FloodControl::Backend::Cache::FastMmap.3 \
 		Algorithm::FloodControl::Backend.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
