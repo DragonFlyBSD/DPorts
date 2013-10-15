@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-log4py
-# Date created:			Mar 14, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-log4py/Makefile,v 1.9 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-log4py/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	log4py
 PORTVERSION=	1.3
@@ -17,6 +12,7 @@ COMMENT=	A python logging module
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 post-install:
