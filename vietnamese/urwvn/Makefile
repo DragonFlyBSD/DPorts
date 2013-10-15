@@ -1,9 +1,5 @@
-# New ports collection makefile for:	urwvn
-# Date created:		2007/01/27
-# Whom:			chinsan
-#
-# $FreeBSD: vietnamese/urwvn/Makefile 321284 2013-06-19 16:03:12Z rafan $
-#
+# Created by: chinsan
+# $FreeBSD: vietnamese/urwvn/Makefile 327775 2013-09-20 23:20:31Z bapt $
 
 PORTNAME=	urwvn
 PORTVERSION=	3.04
@@ -32,6 +28,7 @@ TTF=	CMConcrete8v.ttf CMConcreteItalic8v.ttf CMConcreteSlanted8v.ttf \
 	uplb8v.ttf uplbi8v.ttf uplr8v.ttf uplri8v.ttf utmb8v.ttf \
 	utmbi8v.ttf utmr8v.ttf utmri8v.ttf uzcmi8v.ttf
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${FONTSDIR}
 .for i in ${TTF}
