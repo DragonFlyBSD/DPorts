@@ -1,5 +1,5 @@
 # Created by: krion@FreeBSD.org
-# $FreeBSD: games/openmortal/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: games/openmortal/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	openmortal
 PORTVERSION=	0.7
@@ -21,4 +21,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
