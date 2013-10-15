@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/paros/Makefile,v 1.10 2012/12/12 18:51:49 svnexp Exp $
+# $FreeBSD: www/paros/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	paros
 PORTVERSION=	3.2.13
@@ -22,6 +22,7 @@ USE_DOS2UNIX=	release.txt
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|java -jar \(paros.jar\)|cd ${DATADIR} \&\& java -jar ${DATADIR}/\1|g' \
 	${WRKSRC}/startserver.sh
