@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/battfink/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: sysutils/battfink/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	battfink
 PORTVERSION=	0.6.2
@@ -22,4 +22,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	battfink.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
