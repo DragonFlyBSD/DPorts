@@ -1,5 +1,5 @@
 # Created by: Ben Kibbey <bjk@arbornet.org>
-# $FreeBSD: sysutils/userinfo/Makefile 315820 2013-04-16 15:27:52Z zi $
+# $FreeBSD: sysutils/userinfo/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	userinfo
 PORTVERSION=	2.4
@@ -19,4 +19,5 @@ GNU_CONFIGURE=	yes
 MAN1=		ui.1
 MLINKS=		ui.1 userinfo.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
