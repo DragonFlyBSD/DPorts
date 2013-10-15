@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-r128/Makefile 324727 2013-08-14 14:40:17Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-r128/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-r128
 PORTVERSION=	6.9.1
@@ -12,4 +12,5 @@ XORG_CAT=	driver
 USE_XORG=	glproto xf86driproto xf86miscproto xineramaproto
 MAN4=		r128.4x
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
