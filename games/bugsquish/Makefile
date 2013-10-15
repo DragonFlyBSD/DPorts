@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/bugsquish/Makefile 314588 2013-03-18 17:51:43Z beech $
+# $FreeBSD: games/bugsquish/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bugsquish
 PORTVERSION=	0.0.6
@@ -21,6 +21,7 @@ PORTDOCS=	AUTHORS.txt CHANGES.txt README.txt TODO.txt
 DESKTOP_ENTRIES="Bug Squish" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
