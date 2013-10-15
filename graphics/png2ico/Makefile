@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: graphics/png2ico/Makefile 314864 2013-03-21 19:08:10Z beech $
+# $FreeBSD: graphics/png2ico/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	png2ico
 PORTVERSION=	2002.12.08
@@ -21,6 +21,7 @@ PORTDOCS=	bmp.txt
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
