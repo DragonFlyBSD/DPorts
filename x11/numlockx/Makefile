@@ -1,10 +1,5 @@
-# ex:ts=18
-# New ports collection makefile for:  numlockx
-# Whom:                               Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# Date Created:                       2003-09-09 16:05:29
-#
-# $FreeBSD: ports/x11/numlockx/Makefile,v 1.17 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
+# $FreeBSD: x11/numlockx/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	numlockx
 PORTVERSION=	1.2
@@ -25,4 +20,5 @@ PLIST_FILES=	bin/numlockx
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
