@@ -1,5 +1,5 @@
 # Created by: Lukasz Wasikowski <lukasz@wasikowski.net>
-# $FreeBSD: www/mod_macro22/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_macro22/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_macro
 PORTVERSION=	1.1.11
@@ -25,6 +25,7 @@ PORTSCOUT=	limit:^1\.1\.
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
