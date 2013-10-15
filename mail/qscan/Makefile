@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: mail/qscan/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/qscan/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qscan
 PORTVERSION=	1.5
@@ -18,6 +18,7 @@ USES=		qmail:run
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 QMAIL_QUEUE=	${QMAIL_PREFIX}/bin/qmail-queue
