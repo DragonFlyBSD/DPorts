@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-astLib/Makefile 312914 2013-02-25 11:09:19Z danfe $
+# $FreeBSD: astro/py-astLib/Makefile 328525 2013-09-27 21:17:26Z mva $
 
 PORTNAME=	astLib
 PORTVERSION=	0.6.1
@@ -20,5 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
