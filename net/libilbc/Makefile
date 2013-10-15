@@ -1,4 +1,4 @@
-# $FreeBSD: net/libilbc/Makefile 323479 2013-07-22 17:06:58Z mva $
+# $FreeBSD: net/libilbc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libilbc
 DISTVERSION=	1.1.1
@@ -20,6 +20,7 @@ GH_TAGNAME=	${GH_COMMIT}
 USES=		cmake
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|lib/$${CMAKE_LIBRARY_ARCHITECTURE}/pkgconfig|libdata/pkgconfig|' ${WRKSRC}/CMakeLists.txt
 
