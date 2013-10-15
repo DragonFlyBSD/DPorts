@@ -1,9 +1,4 @@
-# New ports collection makefile for:	icons-tango-extras
-# Date created:				Feb 7 2007
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/icons-tango-extras/Makefile,v 1.8 2012/11/17 06:03:32 svnexp Exp $
-#
+# $FreeBSD: x11-themes/icons-tango-extras/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	icons-tango-extras
 PORTVERSION=	0.1.0
@@ -27,4 +22,5 @@ USE_GMAKE=	yes
 USE_GNOME=	intlhack
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
