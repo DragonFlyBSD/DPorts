@@ -1,4 +1,4 @@
-# $FreeBSD: devel/kdevelop-php-docs/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/kdevelop-php-docs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdevelop-php-docs
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -17,6 +17,7 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
 USES=		cmake
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
