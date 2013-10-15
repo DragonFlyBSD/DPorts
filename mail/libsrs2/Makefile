@@ -1,9 +1,5 @@
-# New ports collection makefile for:   libsrs2
-# Date created:        02 July 2004
-# Whom:                snowchyld
-#
-# $FreeBSD: ports/mail/libsrs2/Makefile,v 1.13 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: snowchyld
+# $FreeBSD: mail/libsrs2/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=		libsrs2
 PORTVERSION=		1.0.18
