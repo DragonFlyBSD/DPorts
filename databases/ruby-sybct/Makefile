@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-sybct
-# Date created:				10 September 2008
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: databases/ruby-sybct/Makefile 326307 2013-09-04 18:06:07Z madpilot $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: databases/ruby-sybct/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sybct
 PORTVERSION=	0.2.12
@@ -22,6 +18,7 @@ USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 USES=		iconv
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		-e 's|%%ICONV_LIB%%|${ICONV_LIB}|' \
