@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/qcomicbook/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: graphics/qcomicbook/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	qcomicbook
 PORTVERSION=	0.9.0
@@ -51,6 +51,7 @@ OPTIONS_DEFAULT=7ZIP ACE
 7ZIP_DESC=	7-Zip (.cb7) comic book archives support
 ACE_DESC=	ACE (.cba) comic book archives support
 
+NO_STAGE=	yes
 post-patch:
 # fix man install directory
 	@${REINPLACE_CMD} -E \
