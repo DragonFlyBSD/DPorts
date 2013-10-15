@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: biology/libgenome/Makefile 324692 2013-08-14 09:53:39Z marino $
+# $FreeBSD: biology/libgenome/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	libgenome
 PORTVERSION=	0.5.2
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2|@CXXFLAGS@|g' ${WRKSRC}/src/Makefile.in
 
