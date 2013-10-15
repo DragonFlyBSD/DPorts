@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scr_ipfm
-# Date created:				27 Oct 2003
-# Whom:					HSIN-HSIUNG CHANG
-#
-# $FreeBSD: ports/net/scr_ipfm/Makefile,v 1.6 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: HSIN-HSIUNG CHANG
+# $FreeBSD: net/scr_ipfm/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	scr_ipfm
 PORTVERSION=	0.64
@@ -19,6 +15,7 @@ MYADMDIR?=	www/data/scr_ipfm
 PLIST_SUB=	MYADMDIR=${MYADMDIR}
 PORTDOCS=	BUGS COPYING ChangeLog README README_pl THANKS TODO
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${MYADMDIR}
 	${CP} -R ${WRKSRC}/[a-z]* ${PREFIX}/${MYADMDIR}
