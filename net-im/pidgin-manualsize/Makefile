@@ -1,5 +1,5 @@
 # Created by: Joseph S. Atkinson <jsatkinson@embarqmail.com>
-# $FreeBSD: net-im/pidgin-manualsize/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: net-im/pidgin-manualsize/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	manualsize
 PORTVERSION=	0.7
@@ -24,6 +24,7 @@ USES=		pkgconfig
 USE_BZIP2=	yes
 ALL_TARGET=	manualsize.so
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-g root -m 755|-g wheel -m 755|g' ${WRKSRC}/makefile
 
