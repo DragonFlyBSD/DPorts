@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/sowing/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: textproc/sowing/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sowing
 PORTVERSION=	1.1.16
@@ -30,4 +30,5 @@ regression-test: install
 	${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} testing)
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
