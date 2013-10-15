@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <nukama@gmail.com>
-# $FreeBSD: security/gpgdir/Makefile 326833 2013-09-09 18:19:50Z sunpoet $
+# $FreeBSD: security/gpgdir/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gpgdir
 PORTVERSION=	1.9.5
@@ -23,6 +23,7 @@ USES=		perl5
 MAN1=		gpgdir.1
 PLIST_FILES=	bin/gpgdir
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gpgdir ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/gpgdir.1 ${MANPREFIX}/man/man1/
