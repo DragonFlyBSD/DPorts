@@ -1,9 +1,4 @@
-# New ports collection makefile for:	wmnet2
-# Date created:				7 September 2001
-# Whom:					Paolo Pisati <flag@libero.it>
-#
-# $FreeBSD$
-#
+# Submitted by ftigeot
 
 PORTNAME=	wminet
 PORTVERSION=	1.2
@@ -19,5 +14,7 @@ MAKE_ENV+=	X11BASE=${PREFIX}
 
 MAN1=		wminet.1
 PLIST_FILES=	bin/wminet
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
