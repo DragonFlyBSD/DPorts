@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: textproc/ibus-qt/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: textproc/ibus-qt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ibus-qt
 PORTVERSION=	1.3.2
@@ -28,6 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PROJECTHOST=	ibus
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
