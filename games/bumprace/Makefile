@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/bumprace/Makefile,v 1.17 2013/02/04 06:41:36 svnexp Exp $
+# $FreeBSD: games/bumprace/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bumprace
 PORTVERSION=	1.5.3
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	FAQ README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
