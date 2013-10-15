@@ -1,5 +1,5 @@
-# Created by: Pawel Pekala <pawel@freebsd.org>
-# $FreeBSD: textproc/coccigrep/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# Created by: Pawel Pekala <pawel@FreeBSD.org>
+# $FreeBSD: textproc/coccigrep/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	coccigrep
 PORTVERSION=	1.12
@@ -26,6 +26,7 @@ PORTDOCS=	ChangeLog README.rst
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
