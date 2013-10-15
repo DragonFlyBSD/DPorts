@@ -1,5 +1,5 @@
 # Created by: Slaven Rezic <eserte@cs.tu-berlin.de>
-# $FreeBSD: german/BBBike/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: german/BBBike/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	BBBike
 PORTVERSION=	3.18
@@ -25,6 +25,7 @@ MYDESTDIR=	${PREFIX}/BBBike
 LOCAL_PERL_ARCH=	${PERL_ARCH}
 PLIST_SUB=		LOCAL_PERL_ARCH=${LOCAL_PERL_ARCH}
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}/ext && ${MAKE} PERL=${PERL5} all install
 	cd ${WRKSRC}/ext && ${MAKE} PERL=${PERL5} clean
