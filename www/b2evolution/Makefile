@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan@mail20000.com.tw>
-# $FreeBSD: www/b2evolution/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/b2evolution/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	b2evolution
 PORTVERSION=	4.0.5
@@ -30,6 +30,7 @@ WARNING=	${PKGDIR}/pkg-warning
 OPTIONS_DEFINE=	MYSQL
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
