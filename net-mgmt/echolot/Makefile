@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-mgmt/echolot/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-mgmt/echolot/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	echolot
 PORTVERSION=	0.1.0
@@ -21,6 +21,7 @@ MAN1=		echolot.1
 PORTDOCS=	*
 PLIST_FILES=	bin/echolot
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
