@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/unquote/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: sysutils/unquote/Makefile 328637 2013-09-29 00:13:51Z eadler $
 
 PORTNAME=	unquote
 PORTVERSION=	1.0.b4
@@ -10,9 +10,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.b/pre/}
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Execute a command with safely quoted arguments
 
-MAN1=		unquote.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/unquote
+PLIST_FILES=	bin/unquote man/man1/unquote.1.gz
 
 .if		!defined(NO_RELEASE)
 MAKE_ENV+=	RELEASE=yes
