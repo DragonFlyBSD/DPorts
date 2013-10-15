@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Under a BSDL license. Copyright by Mario S F Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/portuguese/irpf-pt_BR/files/wrapper.sh,v 1.4 2012/11/17 06:00:47 svnexp Exp $
+# $FreeBSD: portuguese/irpf-pt_BR/files/wrapper.sh 300897 2012-07-14 14:29:18Z beat $
 
 export JAVA_VERSION
 
