@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/www/limesurvey/Makefile,v 1.27 2013/02/09 12:22:44 svnexp Exp $
+# $FreeBSD: www/limesurvey/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	limesurvey
 PORTVERSION=	1.91
@@ -21,6 +21,7 @@ GD_DESC=		Install PHP gd extension
 LDAP_DESC=		Install PHP LDAP extension
 ZIP_DESC=		Install PHP zip extension
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # http://docs.limesurvey.org/Installation&structure=English+Instructions+for+LimeSurvey#Make_sure_you_can_use_LimeSurvey_on_your_website
