@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski
-# $FreeBSD: devel/p5-Workflow/Makefile 325941 2013-09-02 06:26:01Z az $
+# $FreeBSD: devel/p5-Workflow/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Workflow
 PORTVERSION=	1.38
@@ -81,6 +81,7 @@ MAN3=	Workflow.3 \
 	Workflow::Validator::InEnumeratedType.3 \
 	Workflow::Validator::MatchesDateFormat.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
