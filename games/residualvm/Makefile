@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: games/residualvm/Makefile 314613 2013-03-19 00:39:45Z fluffy $
+# $FreeBSD: games/residualvm/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	residualvm
 PORTVERSION=	0.1.1
@@ -23,6 +23,7 @@ USE_GMAKE=	yes
 MAN6=		residualvm.6
 NO_MANCOMPRESS=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|{datarootdir}/man|{prefix}/man|' ${WRKSRC}/configure
 
