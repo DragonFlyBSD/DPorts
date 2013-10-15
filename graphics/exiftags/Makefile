@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	exiftags
-# Date created:			Sep 13, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/exiftags/Makefile,v 1.15 2012/11/17 05:58:04 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/exiftags/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	exiftags
 PORTVERSION=	1.01
@@ -20,6 +15,7 @@ MAN1=		exifcom.1 exiftags.1 exiftime.1
 PORTDOCS=	CHANGES README
 PLIST_FILES=	bin/exifcom bin/exiftags bin/exiftime
 
+NO_STAGE=	yes
 do-install:
 .for i in exifcom exiftags exiftime
 	${INSTALL_PROGRAM} ${WRKSRC}/${i} ${PREFIX}/bin
