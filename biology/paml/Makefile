@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: biology/paml/Makefile 319570 2013-06-01 14:22:35Z wen $
+# $FreeBSD: biology/paml/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	paml
 PORTVERSION=	4.4c
@@ -17,6 +17,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 BINARIES=	baseml basemlg chi2 codeml evolver pamp yn00
 DOC_FILES=	MCMCtreeDoc.pdf pamlDOC.pdf pamlFAQs.pdf pamlHistory.txt
 
+NO_STAGE=	yes
 do-install:
 .for f in ${BINARIES}
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
