@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-DKW/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Tk-DKW/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-DKW
 PORTVERSION=	0.03
@@ -22,6 +22,7 @@ DKW_MODULES=	CheckBox Columns ComboEntry CornerBox DockFrame IconCanvas\
 		TableEdit
 MAN3=		${DKW_MODULES:S/^/Tk::/:S/$/.3/}
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/Tk/* ${WRKSRC}/
 	@${RMDIR} ${WRKSRC}/Tk/
