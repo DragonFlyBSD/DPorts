@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: mail/spamstats/Makefile 323702 2013-07-26 07:33:41Z az $
+# $FreeBSD: mail/spamstats/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spamstats
 PORTVERSION=	0.6c
@@ -15,13 +15,13 @@ COMMENT=	A tool to generate statistics for spamd of Mail::SpamAssassin
 RUN_DEPENDS=	p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip \
 		p5-Compress-Bzip2>=2.08:${PORTSDIR}/archivers/p5-Compress-Bzip2
 
-USE_PERL5=	yes
 NO_BUILD=	yes
 PORTDOCS=	QUICK README copyright
 PLIST_FILES=	bin/spamstats.pl
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	${PORTNAME}${PORTVERSION}.pl
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|mail.log|maillog|g' \
 		${WRKSRC}/${PORTNAME}${PORTVERSION}.pl
