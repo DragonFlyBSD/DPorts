@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-POEx-Role-SessionInstantiation/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/p5-POEx-Role-SessionInstantiation/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POEx-Role-SessionInstantiation
 PORTVERSION=	1.102610
@@ -31,4 +31,5 @@ MAN3=	POEx::Role::Event.3 \
 	POEx::Role::SessionInstantiation::Meta::Session::Magic.3 \
 	POEx::Role::SessionInstantiation::Meta::Session::Sugar.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
