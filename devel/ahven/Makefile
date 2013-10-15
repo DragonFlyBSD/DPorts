@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/ahven/Makefile 323393 2013-07-21 14:29:46Z marino $
+# $FreeBSD: devel/ahven/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	ahven
 PORTVERSION=	2.3
@@ -19,6 +19,7 @@ MAKE_ENV+=	DESTDIR=${DESTINY}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
