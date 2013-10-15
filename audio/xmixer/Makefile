@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/audio/xmixer/Makefile,v 1.29 2013/01/27 06:41:36 svnexp Exp $
+# $FreeBSD: audio/xmixer/Makefile 329743 2013-10-07 23:03:12Z marino $
 
 PORTNAME=	xmixer
 PORTVERSION=	0.9.4
@@ -18,11 +18,11 @@ ALL_TARGET=	${PROGRAMS}
 
 MAN1=		xmixer.1
 PLIST_FILES=	bin/xmixer
+NO_STAGE=	yes
 
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgtk12}!=""
-PKGNAMESUFFIX=	-gtk
 USE_GNOME+=	gtk12
 PROGRAMS=	xmixer xgmixer
 MLINKS+=	xmixer.1 xgmixer.1
@@ -30,6 +30,7 @@ PLIST_FILES+=	bin/xgmixer
 .else
 USE_XORG=	x11 xt ice xaw
 PROGRAMS=	xmixer
+LDFLAGS+=	-L${LOCALBASE}/lib -lX11
 .endif
 
 post-patch:

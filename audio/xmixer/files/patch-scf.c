@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/xmixer/files/patch-scf.c,v 1.2 2012/11/17 05:54:48 svnexp Exp $
+$FreeBSD: audio/xmixer/files/patch-scf.c 300895 2012-07-14 12:56:14Z beat $
 
 --- scf.c.orig	Mon Sep  6 11:02:44 2004
 +++ scf.c	Mon Sep  6 11:03:05 2004
