@@ -1,5 +1,5 @@
 # Created by: Javad Kouhi <javad.kouhi@gmail.com>
-# $FreeBSD: math/gkmap/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: math/gkmap/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gkmap
 PORTVERSION=	0.2
@@ -16,4 +16,5 @@ GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_GNOME=	gtk20 libglade2 libxml2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
