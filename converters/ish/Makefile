@@ -1,8 +1,5 @@
-# New ports collection makefile for:	ish
-# Date created:		13 August 1997
-# Whom:			hosokawa
-#
-# $FreeBSD: ports/converters/ish/Makefile,v 1.11 2012/11/17 05:55:03 svnexp Exp $
+# Created by: hosokawa
+# $FreeBSD: converters/ish/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	ish
 PORTVERSION=	2.01a5
@@ -19,6 +16,7 @@ MAKE_ARGS=	CFLAGS="${CFLAGS}" DEST=${PREFIX}/bin
 PLIST_FILES=	bin/ish
 ALL_TARGET=	ish
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
