@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	tvmet
-# Date created:			Jul 25, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/math/tvmet/Makefile,v 1.22 2012/11/17 05:59:31 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: math/tvmet/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	tvmet
 PORTVERSION=	1.7.2
@@ -34,6 +29,7 @@ CXXFLAGS+=	-DTVMET_DEBUG
 CXXFLAGS+=	-DTVMET_OPTIMIZE
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|= -O |= |g' ${WRKSRC}/doc/Makefile.in
 
