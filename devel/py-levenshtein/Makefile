@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-levenshtein
-# Date created:				30 August 2006
-# Whom:					Aron Stansvik <elvstone@gmail.com>
-#
-# $FreeBSD: ports/devel/py-levenshtein/Makefile,v 1.5 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: Aron Stansvik <elvstone@gmail.com>
+# $FreeBSD: devel/py-levenshtein/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	levenshtein
 PORTVERSION=	0.10.1
@@ -26,4 +22,5 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-Levenshtein
 PROJECTHOST=	py${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
