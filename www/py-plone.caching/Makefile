@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-plone.caching
-# Date created:				02 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-plone.caching/Makefile,v 1.3 2012/11/17 06:03:01 svnexp Exp $
-#
+# $FreeBSD: www/py-plone.caching/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.caching
 PORTVERSION=	1.0
@@ -27,8 +22,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}z3c.caching>=0:${PORTSDIR}/devel/py-z3c.cach
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-#USE_ZOPE=	yes
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
