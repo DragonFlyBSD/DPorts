@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/tanglet/Makefile 324873 2013-08-17 22:16:57Z nemysis $
+# $FreeBSD: games/tanglet/Makefile 329815 2013-10-08 17:37:36Z marino $
 
 PORTNAME=	tanglet
 PORTVERSION=	1.2.2
@@ -16,10 +16,12 @@ LICENSE=	GPLv3
 USE_BZIP2=	yes
 USES=		desktop-file-utils
 USE_QT4=	moc_build qmake_build rcc_build gui iconengines imageformats
+QMAKEFLAGS=	QMAKE_LFLAGS="-lz"
 INSTALLS_ICONS=	yes
 
 PORTDOCS=	CREDITS ChangeLog NEWS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
