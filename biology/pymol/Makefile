@@ -1,8 +1,5 @@
-# New ports collection makefile for:	pymol
-# Date created:			July 18, 2002
-# Whom:				Nakata Maho <chat95@mbox.kyoto-inet.or.jp>
-#
-# $FreeBSD: ports/biology/pymol/Makefile,v 1.42 2012/11/17 05:54:53 svnexp Exp $
+# Created by: Nakata Maho <chat95@mbox.kyoto-inet.or.jp>
+# $FreeBSD: biology/pymol/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	pymol
 PORTVERSION=	${VERSION}.${SVNREVISION}
@@ -29,6 +26,7 @@ USE_GMAKE=	yes
 USE_PYTHON=	yes
 PLIST_SUB=	PYMOL_VER=${VERSION} PYTHON_VER=${PYTHON_VER}
 
+NO_STAGE=	yes
 pre-build:
 	@${REINPLACE_CMD} -e "s+%%LOCALBASE%%+${LOCALBASE}+"  ${WRKSRC}/setup.py
 
