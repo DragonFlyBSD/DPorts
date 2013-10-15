@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: chinese/p5-cconv/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: chinese/p5-cconv/Makefile 328804 2013-09-30 15:10:50Z sunpoet $
 
 PORTNAME=	cconv
 PORTVERSION=	0.6.1
@@ -11,12 +11,10 @@ DISTNAME=	${PORTNAME}-perl-${PORTVERSION}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl wrapper for chinese/cconv
 
-LIB_DEPENDS=	cconv:${PORTSDIR}/chinese/cconv
+LIB_DEPENDS=	libcconv.so:${PORTSDIR}/chinese/cconv
 
 CFLAGS+=	-I${LOCALBASE}/include
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		${PORTNAME}.3
 
 .include <bsd.port.mk>
