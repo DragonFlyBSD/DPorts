@@ -1,5 +1,4 @@
-# Created by: Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: net/p5-ZeroMQ/Makefile 327531 2013-09-18 08:14:52Z bapt $
+# $FreeBSD: net/p5-ZeroMQ/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ZeroMQ
 PORTVERSION=	0.21
@@ -40,6 +39,7 @@ MAN3=	\
 	ZeroMQ::Poller.3 \
 	ZeroMQ::Message.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
