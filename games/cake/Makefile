@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Cake
-# Date created:				28 July 2004
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: ports/games/cake/Makefile,v 1.22 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: games/cake/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cake
 PORTVERSION=	2005.12.26
@@ -50,6 +46,7 @@ post-patch: .SILENT
 # Fix for GCC 4.x
 	${REINPLACE_CMD} -e 's/Mat3x2:://' ${WRKSRC}/cake/math.h
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/main ${PREFIX}/bin/cake
 
