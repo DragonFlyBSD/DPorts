@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Imager-Plot
-# Date created:			Aug 31, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: graphics/p5-Imager-Plot/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/p5-Imager-Plot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Imager-Plot
 PORTVERSION=	0.09
@@ -24,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Imager::Plot.3 Imager::Plot::Axis.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
