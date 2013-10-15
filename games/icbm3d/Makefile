@@ -1,9 +1,5 @@
-# New ports collection makefile for:	icbm3d
-# Date created:				20 March 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/icbm3d/Makefile,v 1.16 2012/11/17 05:57:41 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/icbm3d/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	icbm3d
 PORTVERSION=	0.4
@@ -30,6 +26,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 PORTDOCS=	README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
