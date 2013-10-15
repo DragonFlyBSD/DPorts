@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mailcrypt
-# Date created:        29 May 1998
-# Whom:                Murray Stokely <murray@cdrom.com>
-#
-# $FreeBSD: mail/mailcrypt/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Murray Stokely <murray@cdrom.com>
+# $FreeBSD: mail/mailcrypt/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailcrypt
 PORTVERSION=	3.5.9
@@ -22,4 +18,5 @@ USE_GMAKE=	yes
 
 INFO=		mailcrypt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
