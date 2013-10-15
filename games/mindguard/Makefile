@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mindguard
-# Date created:		27 July 2000
-# Whom:			kris
-#
-# $FreeBSD: ports/games/mindguard/Makefile,v 1.16 2012/11/17 05:57:45 svnexp Exp $
-#
+# Created by: kris
+# $FreeBSD: games/mindguard/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	mindguard
 PORTVERSION=	0.0.0.4
@@ -39,6 +35,7 @@ DOCS=	algorithms.html antarctic.html author.html \
 	tikiroom.html un.html usage.html \
 	versions.html
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mindguard ${PREFIX}/bin/mindguard
 	${MKDIR} ${PREFIX}/share/mindguard
