@@ -1,5 +1,5 @@
-# Created by: Patrick Gardella <patrick@freebsd.org>
-# $FreeBSD: ports/graphics/backfract/Makefile,v 1.13 2012/11/17 05:58:01 svnexp Exp $
+# Created by: Patrick Gardella <patrick@FreeBSD.org>
+# $FreeBSD: graphics/backfract/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	backfract
 PORTVERSION=	1.1.2
@@ -19,6 +19,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/backfract
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		"/'-O3'/s|^|#| ; \
