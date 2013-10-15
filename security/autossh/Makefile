@@ -1,9 +1,5 @@
-# New ports collection makefile for:	autossh
-# Date created:				26 December 2002
-# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/security/autossh/Makefile,v 1.12 2012/11/17 06:01:00 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: security/autossh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	autossh
 PORTVERSION=	1.4c
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	yes
 PORTDOCS=	CHANGES README
 MAN1=		autossh.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,cp autossh.1 ,$$\{BSD_INSTALL_MAN\} autossh.1 ,g' ${WRKSRC}/${MAKEFILE}.in
 	@${REINPLACE_CMD} -e 's,cp autossh ,$$\{BSD_INSTALL_PROGRAM\} autossh ,g' ${WRKSRC}/${MAKEFILE}.in
