@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/textproc/xt/files/xt.sh,v 1.2 2012/11/17 06:02:25 svnexp Exp $
+# $FreeBSD: textproc/xt/files/xt.sh 300897 2012-07-14 14:29:18Z beat $
 
 IAM=`basename ${0}`
 

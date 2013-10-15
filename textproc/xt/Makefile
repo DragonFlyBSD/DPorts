@@ -1,5 +1,4 @@
-# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-# $FreeBSD: ports/textproc/xt/Makefile,v 1.27 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/xt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xt
 PORTVERSION=	20020426a
@@ -27,6 +26,7 @@ PORTDOCS=	${OTHERDOCS} api
 SAMPLES=	date.xsl nxml.xsl slides.xml slides.xsl sort-uniq.xml \
 		sort-uniq.xsl split.xml split.xsl textfile.xml textfile.xsl
 
+NO_STAGE=	yes
 do-configure:
 	${SED} -e 's,%%LOCALBASE%%,${LOCALBASE},g' ${FILESDIR}/xt.sh > ${WRKSRC}/xt
 
