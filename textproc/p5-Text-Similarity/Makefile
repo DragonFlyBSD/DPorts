@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Similarity/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-Similarity/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Similarity
 PORTVERSION=	0.10
@@ -20,4 +20,5 @@ MAN3=		Text::OverlapFinder.3 \
 		Text::Similarity.3 \
 		Text::Similarity::Overlaps.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
