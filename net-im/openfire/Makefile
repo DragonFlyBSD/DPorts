@@ -1,5 +1,5 @@
 # Created by: Nikolay Pavlov <qpadla@gmail.com>
-# $FreeBSD: net-im/openfire/Makefile 321674 2013-06-24 10:54:32Z gahr $
+# $FreeBSD: net-im/openfire/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	openfire
 PORTVERSION=	3.8.2
@@ -42,6 +42,7 @@ VARDB=		/var/db/openfire
 USERS=		openfire
 GROUPS=		${USERS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPLUGINS}
