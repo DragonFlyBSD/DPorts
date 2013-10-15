@@ -1,9 +1,5 @@
-# New ports collection makefile for:   remarp
-# Date created:        Tue Apr 1 14:02:35 GMT 2003
-# Whom:                mich@freebsdcluster.org
-#
-# $FreeBSD: net-mgmt/remarp/Makefile 326244 2013-09-04 03:24:02Z az $
-#
+# Created by: mich@freebsdcluster.org
+# $FreeBSD: net-mgmt/remarp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	remarp
 PORTVERSION=	0.05
@@ -22,6 +18,7 @@ NO_BUILD=	YES
 
 REMARP_SPOOL=	/var/spool/remarp
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|; \
 	s|use lib "\$$Bin/../lib";||' ${WRKSRC}/sbin/remarp.pl
