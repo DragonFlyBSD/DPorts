@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/dhcpd-pools/Makefile 317906 2013-05-11 19:15:29Z zi $
+# $FreeBSD: net/dhcpd-pools/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dhcpd-pools
 PORTVERSION=	2.23
@@ -27,6 +27,7 @@ PORTDATA=	dhcpd-pools.cgi snmptest.pl
 
 MAN1=		dhcpd-pools.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/features.h/d' ${WRKSRC}/src/getdata.c
 
