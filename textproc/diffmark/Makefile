@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/diffmark/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: textproc/diffmark/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	diffmark
 PORTVERSION=	0.10
@@ -19,4 +19,5 @@ CONFIGURE_ARGS=	--with-libxml2-incldir=${LOCALBASE}/include/libxml2
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
