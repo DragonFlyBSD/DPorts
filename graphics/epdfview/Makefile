@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/epdfview/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: graphics/epdfview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	epdfview
 PORTVERSION=	0.1.8
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	CUPS NLS
 
 MAN1=	epdfview.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
