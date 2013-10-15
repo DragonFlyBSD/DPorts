@@ -1,9 +1,5 @@
-# New ports collection makefile for:    dontspace
-# Date created:         26-Apr-97
-# Whom:                 johnh@isi.edu
-#
-# $FreeBSD: ports/games/dontspace/Makefile,v 1.18 2012/11/17 05:57:36 svnexp Exp $
-#
+# Created by: johnh@isi.edu
+# $FreeBSD: games/dontspace/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	dontspace
 PORTVERSION=	1.2
@@ -20,4 +16,5 @@ CONFIGURE_ENV=	WISHX=${PREFIX}/bin/wish8.4
 USE_TK=		yes
 MAN6=		dontspace.6
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
