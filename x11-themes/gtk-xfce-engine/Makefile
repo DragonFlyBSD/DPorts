@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: x11-themes/gtk-xfce-engine/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-themes/gtk-xfce-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	gtk-xfce-engine
 PORTVERSION=	3.0.1
@@ -21,4 +21,5 @@ CONFIGURE_ARGS+=--disable-glibtest \
 	--enable-gtk2 \
 	--disable-gtk3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
