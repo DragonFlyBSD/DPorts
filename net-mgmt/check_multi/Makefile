@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/check_multi/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: net-mgmt/check_multi/Makefile 329589 2013-10-06 15:19:24Z dinoex $
 
 PORTNAME=	check_multi
 PORTVERSION=	0.19
@@ -24,11 +24,11 @@ PLUGIN_DIR=	libexec/nagios
 SHEBANG_FILES=	check_multi
 
 do-install:
-	-${MKDIR} ${PREFIX}/${PLUGIN_DIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/check_multi ${PREFIX}/${PLUGIN_DIR}/
+	-${MKDIR} ${STAGEDIR}${PREFIX}/${PLUGIN_DIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/check_multi ${STAGEDIR}${PREFIX}/${PLUGIN_DIR}/
 .if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
-	@${TAR} -C ${WRKSRC}/contrib -cf - . | ${TAR} -C ${EXAMPLESDIR} -xf -
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@${TAR} -C ${WRKSRC}/contrib -cf - . | ${TAR} -C ${STAGEDIR}${EXAMPLESDIR} -xf -
 .endif
 
 .include <bsd.port.mk>
