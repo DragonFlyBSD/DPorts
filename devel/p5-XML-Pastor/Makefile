@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-XML-Pastor/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-XML-Pastor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	XML-Pastor
 PORTVERSION=	1.0.4
@@ -61,4 +61,5 @@ MAN3=	XML::Pastor.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
