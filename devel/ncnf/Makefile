@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/ncnf/Makefile 317823 2013-05-10 15:56:09Z bapt $
+# $FreeBSD: devel/ncnf/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	ncnf
 PORTVERSION=	3.0.1
