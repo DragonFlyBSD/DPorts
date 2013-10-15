@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-DateTime-Calendar-Chinese/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-DateTime-Calendar-Chinese/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Calendar-Chinese
 PORTVERSION=	1.00
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		DateTime::Calendar::Chinese.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
