@@ -1,9 +1,5 @@
-# New ports collection makefile for:	netherearth
-# Date created:				18 May 2008
-# Whom:					Ginzburg Oleg
-#
-# $FreeBSD: ports/games/netherearth/Makefile,v 1.7 2012/11/17 05:57:46 svnexp Exp $
-#
+# Created by: Ginzburg Oleg
+# $FreeBSD: games/netherearth/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	netherearth
 PORTVERSION=	0.51
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_GL=		glut
 USE_SDL=	sdl mixer
 
+NO_STAGE=	yes
 pre-install:
 	if [ ! -d ${PREFIX}/share/netherearth ] ; then \
 		${MKDIR} ${PREFIX}/share/netherearth ;\
