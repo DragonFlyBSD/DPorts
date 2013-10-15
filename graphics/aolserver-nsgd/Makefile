@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aolserver-nsgd
-# Date created:		12 Oct 2006
-# Whom:			Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: graphics/aolserver-nsgd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: graphics/aolserver-nsgd/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	nsgd
 PORTVERSION=	2.0
@@ -31,6 +27,7 @@ USE_GMAKE=	yes
 
 USE_TCL=	84+
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CFLAGS+=	"-I${LOCALBASE}/include"
