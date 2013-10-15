@@ -1,9 +1,4 @@
-# New ports collection makefile for:	openbsm
-# Date created:				Jun 13 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/security/openbsm/Makefile,v 1.14 2013/02/15 07:37:08 svnexp Exp $
-#
+# $FreeBSD: security/openbsm/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openbsm
 DISTVERSION=	1.1-p2
@@ -54,4 +49,5 @@ MAN8=		auditfilterd.8		\
 		audit.8			\
 		auditd.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
