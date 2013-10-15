@@ -1,5 +1,5 @@
 # Created by: Andreev Maxim
-# $FreeBSD: archivers/xarchiver/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/xarchiver/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	xarchiver
 PORTVERSION=	0.5.2
@@ -12,6 +12,7 @@ COMMENT=	Desktop-agnostic GTK+2 frontend to various archiving tools
 
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
+NO_STAGE=	yes
 USES=		gmake pkgconfig desktop-file-utils
 USE_BZIP2=	yes
 USE_GNOME=	glib20 gtk20 intltool
