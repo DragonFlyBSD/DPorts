@@ -1,5 +1,5 @@
 # Created by: bmc@WillsCreek.COM
-# $FreeBSD: misc/gnuls/Makefile 325959 2013-09-02 09:36:29Z az $
+# $FreeBSD: misc/gnuls/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gnuls
 PORTVERSION=	8.20
@@ -28,6 +28,7 @@ PLIST_FILES=	bin/dir \
 		bin/gnuls \
 		bin/vdir
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dir ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dircolors ${PREFIX}/bin
