@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: emulators/joytran/Makefile 317125 2013-05-02 14:46:08Z pawel $
+# $FreeBSD: emulators/joytran/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	joytran
 PORTVERSION=	0.9.5
@@ -22,6 +22,7 @@ USES=		cmake pkgconfig
 CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" -DPREFIX="${PREFIX}"
 USE_XORG=	x11 xtst
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
