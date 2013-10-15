@@ -1,5 +1,5 @@
 # Created by: milki@rescomp.berkeley.edu
-# $FreeBSD: devel/p5-Test-EOL/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-Test-EOL/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-EOL
 PORTVERSION=	1.5
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::EOL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
