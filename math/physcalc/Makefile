@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: math/physcalc/Makefile 320791 2013-06-13 12:22:48Z bsam $
+# $FreeBSD: math/physcalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	physcalc
 PORTVERSION=	2.4
@@ -22,6 +22,7 @@ SRCS=		physconv.c physmain.c physmlib.c physnode.c physoper.c \
 		physsolv.c
 CFLAGS+=	-Wno-return-type
 
+NO_STAGE=	yes
 pre-build:
 	${REINPLACE_CMD} -e "s@void main@int main@g" ${WRKSRC}/physmain.c
 
