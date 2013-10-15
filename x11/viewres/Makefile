@@ -1,4 +1,4 @@
-# $FreeBSD: x11/viewres/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/viewres/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	viewres
 PORTVERSION=	1.0.4
@@ -18,4 +18,5 @@ PLIST_FILES+=	bin/viewres \
 PLIST_DIRS+=	share/X11/app-defaults \
 		share/X11
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
