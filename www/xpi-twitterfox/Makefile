@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-twitterfox
-# Date created:		14 Dezember 2008
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-twitterfox/Makefile,v 1.8 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: www/xpi-twitterfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	twitterfox
 PORTVERSION=	1.8.3
@@ -24,5 +20,6 @@ XPI_FILES=	LICENSE.rtf chrome/TwitterFox.jar chrome.manifest \
 		defaults/twitterfox_1.8.sqlite install.rdf
 XPI_DIRS=	chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
