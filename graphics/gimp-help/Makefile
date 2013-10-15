@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/gimp-help/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/gimp-help/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gimp-help
 PORTVERSION=	2.6.1
@@ -57,6 +57,7 @@ ALL_DESC=	All translations
 OPTIONS_DEFINE+=	${lang:tu}
 .endfor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for lang in ${LANG_ALL}
