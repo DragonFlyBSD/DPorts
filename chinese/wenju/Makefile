@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/wenju/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: chinese/wenju/Makefile 328460 2013-09-27 12:33:07Z vanilla $
 
 PORTNAME=	wenju
 PORTVERSION=	1.6
@@ -26,8 +26,5 @@ PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
-
-post-install:
-	${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${PREFIX}/etc/gtk-2.0/gtk.immodules
 
 .include <bsd.port.mk>
