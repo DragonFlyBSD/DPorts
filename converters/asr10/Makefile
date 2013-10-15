@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asr10
-# Date created:				7 October 2003
-# Whom:					M.Indlekofer@gmx.de
-#
-# $FreeBSD: ports/converters/asr10/Makefile,v 1.3 2012/11/17 05:55:02 svnexp Exp $
-#
+# Created by: M.Indlekofer@gmx.de
+# $FreeBSD: converters/asr10/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=      asr10
 PORTVERSION=   1.0
@@ -13,6 +9,7 @@ MASTER_SITES=  http://members.tripod.com/kmi9000/files/
 MAINTAINER=    M.Indlekofer@gmx.de
 COMMENT=       Access to Ensoniq EPS/EPS+/ASR devices and image files
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/wav2asr ${PREFIX}/bin/
