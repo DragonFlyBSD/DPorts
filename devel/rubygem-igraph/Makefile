@@ -1,9 +1,5 @@
-# New ports collection makefile for:	igraph
-# Date created:		09 May, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/rubygem-igraph/Makefile,v 1.6 2012/11/17 05:56:59 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/rubygem-igraph/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	igraph
 PORTVERSION=	0.9.7
@@ -22,4 +18,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
