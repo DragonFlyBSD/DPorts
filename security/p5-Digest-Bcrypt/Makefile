@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: security/p5-Digest-Bcrypt/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/p5-Digest-Bcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-Bcrypt
 PORTVERSION=	1.0.1
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Digest::Bcrypt.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
