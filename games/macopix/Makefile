@@ -1,5 +1,5 @@
 # Created by: Shinya Esu <esu@yk.rim.or.jp>
-# $FreeBSD: games/macopix/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: games/macopix/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	macopix
 PORTVERSION=	1.7.4
@@ -53,6 +53,7 @@ CONFIGURE_ARGS+=	--with-gtk1
 USE_GNOME+=	gtk20
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/_MAIL } MailStatus/_MAIL } MailStatus2/' ${WRKSRC}/src/main.h
 
