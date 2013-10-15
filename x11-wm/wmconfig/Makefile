@@ -1,8 +1,8 @@
 # Created by: Tommy Scheunemann <net@arrishq.org>
-# $FreeBSD: x11-wm/wmconfig/Makefile 322715 2013-07-10 17:11:12Z skreuzer $
+# $FreeBSD: x11-wm/wmconfig/Makefile 329824 2013-10-08 19:09:06Z antoine $
 
 PORTNAME=	wmconfig
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://www.arrishq.net/files/
 
@@ -14,31 +14,22 @@ LICENSE=	GPLv2
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
-MAN1=		wmconfig.1x
-
 PORTDOCS=	AUTHORS ChangeLog COPYING README TODO
 
 OPTIONS_DEFINE=	NLS DOCS
 
-.include <bsd.port.options.mk>
+OPTIONS_SUB=	yes
+NLS_CONFIGURE_ENABLE=nls
+NLS_CPPFLAGS=	-I${LOCALBASE}/include
+NLS_LDFLAGS=	-L${LOCALBASE}/lib
+NLS_USES=	gettext
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-CONFIGURE_ARGS+=--enable-nls
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
+.include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for i in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
-.endfor
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
