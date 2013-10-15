@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: converters/p5-bsdconv/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: converters/p5-bsdconv/Makefile 327828 2013-09-21 15:41:53Z sunpoet $
 
 PORTNAME=	bsdconv
-PORTVERSION=	10.0.0
+PORTVERSION=	11.1.0
 CATEGORIES=	converters perl5
 PKGNAMEPREFIX=	p5-
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
@@ -12,13 +12,14 @@ COMMENT=	Perl wrapper for bsdconv
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	bsdconv:${PORTSDIR}/converters/bsdconv
+LIB_DEPENDS=	libbsdconv.so:${PORTSDIR}/converters/bsdconv
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
-GH_COMMIT=	092d398
+GH_COMMIT=	75fa7e2
 GH_PROJECT=	perl-${PORTNAME}
 
+NO_STAGE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
