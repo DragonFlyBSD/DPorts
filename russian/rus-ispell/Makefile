@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rus-ispell
-# Date created:				29.01.2001
-# Whom:					ache
-#
-# $FreeBSD: ports/russian/rus-ispell/Makefile,v 1.29 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: russian/rus-ispell/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	rus-ispell
 PORTVERSION=	0.99g5
@@ -16,7 +12,7 @@ COMMENT=	New Russian dictionaries for ispell
 BUILD_DEPENDS=	buildhash:${PORTSDIR}/textproc/ispell
 RUN_DEPENDS=	ispell:${PORTSDIR}/textproc/ispell
 
-USE_GMAKE=	yes
+USES=		gmake
 .if defined(RUS_ISPELL_WITH_YO_ONLY)
 MAKE_ARGS+=	YO=1
 .endif
@@ -30,6 +26,7 @@ ALL_TARGET=	koi
 
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} russian.hash russian.dict russian.aff \
