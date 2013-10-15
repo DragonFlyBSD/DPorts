@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	clarence
-# Date created:			Jan 30, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/math/clarence/Makefile,v 1.28 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: math/clarence/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	clarence
 PORTVERSION=	0.4.4
@@ -22,6 +17,7 @@ NO_BUILD=	yes
 MAN1=		clarence.1
 PLIST_FILES=	bin/clarence
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,#!/usr/bin/python,#!/usr/bin/env python,g" ${WRKSRC}/clarence.py
 
