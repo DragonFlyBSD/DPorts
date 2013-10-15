@@ -1,4 +1,4 @@
-# $FreeBSD: russian/bugzilla42/Makefile 321428 2013-06-20 21:54:02Z ohauer $
+# $FreeBSD: russian/bugzilla42/Makefile 328405 2013-09-26 19:00:40Z ohauer $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.2.6
@@ -19,13 +19,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.ru
 LATEST_LINK=	${PKGNAMEPREFIX}bugzilla42
 
 do-install:
-	${MKDIR} ${WWWDIR}
-	(cd ${WRKSRC}/ && ${PAX} -r -w * ${WWWDIR})
-.if !defined(BATCH)
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
-.endif
+	${MKDIR} ${STAGEDIR}${WWWDIR}
+	(cd ${WRKSRC}/ && ${PAX} -r -w * ${STAGEDIR}${WWWDIR})
 
 # Maintainer
 plist:	patch
