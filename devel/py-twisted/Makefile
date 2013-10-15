@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: devel/py-twisted/Makefile 326655 2013-09-07 16:16:01Z sunpoet $
+# $FreeBSD: devel/py-twisted/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	twisted
 PORTVERSION=	13.1.0
@@ -34,6 +34,7 @@ WORDS_DESC=	Chat and Instant Messaging
 # Bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 do-install:
 	@${DO_NADA}
 
