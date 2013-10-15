@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: games/mahjong/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: games/mahjong/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	mahjong
 PORTVERSION=	1.12.1
@@ -25,6 +25,7 @@ MLINKS=		xmj.1 mj-player.1 \
 		xmj.1 mj-server.1
 PLIST_FILES=	bin/mj-server bin/mj-player bin/xmj
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD}  -e \
 		's|^CC|#CC|g ; \
