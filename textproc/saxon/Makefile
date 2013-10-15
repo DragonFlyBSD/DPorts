@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: ports/textproc/saxon/Makefile,v 1.18 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/saxon/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	saxon
 PORTVERSION=	6.5.5
@@ -35,6 +35,7 @@ PORTDOCS=	api api-guide.html changes.html conditions.html \
 SUB_LIST=	SAXON_JARS="${JARFILES:S,^,${JAVAJARDIR}/,}"
 SUB_FILES=	saxon.sh
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JARs in ${JAVAJARDIR}..."
 .for JARFILE in ${JARFILES}

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/saxon/pkg-plist,v 1.6 2012/11/17 06:02:20 svnexp Exp $
+@comment $FreeBSD: textproc/saxon/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%EXAMPLESDIR%%/data/books.dtd
 %%EXAMPLESDIR%%/data/books.xml
 %%EXAMPLESDIR%%/data/othello.xml
