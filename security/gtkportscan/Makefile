@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: security/gtkportscan/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: security/gtkportscan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gtkportscan
 PORTVERSION=	1.2
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/gtkportscan bin/portscan
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
