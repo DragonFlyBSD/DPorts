@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fist
-# Date created: 	Jan 7 2002
-# Whom:			Steve Wills <steve@stevenwills.com>
-#
-# $FreeBSD: ports/textproc/fist/Makefile,v 1.7 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Steve Wills <steve@stevenwills.com>
+# $FreeBSD: textproc/fist/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	fist
 PORTVERSION=	4.0
@@ -17,4 +13,5 @@ GNU_CONFIGURE=	yes
 MAN1=		fist.1
 PLIST_FILES=	bin/fist
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
