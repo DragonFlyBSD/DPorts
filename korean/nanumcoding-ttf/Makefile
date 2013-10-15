@@ -1,4 +1,4 @@
-# $FreeBSD: korean/nanumcoding-ttf/Makefile 322533 2013-07-08 19:37:05Z jkim $
+# $FreeBSD: korean/nanumcoding-ttf/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	nanumcoding
 PORTVERSION=	2.0
@@ -33,6 +33,7 @@ PLIST_FILES+=	${FONTSDIR}/${f}.ttf
 PLIST_FILES+=	${FONTSDIR}/fonts.dir \
 		${FONTSDIR}/fonts.scale
 
+NO_STAGE=	yes
 post-extract:
 	@# XXX File names are encoded in EUC-KR.
 	${MV} ${WRKSRC}/*-Bold.ttf ${WRKSRC}/NanumGothicCoding-Bold.tmp
