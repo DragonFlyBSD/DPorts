@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Test-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-Parser/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Parser
 PORTVERSION=	1.9
@@ -31,4 +31,5 @@ MAN3=		Test::Metadata.3 Test::Parser.3 Test::Parser::Dbench.3 \
 		Test::Parser::iozone.3 Test::Parser::lhcs_regression.3 \
 		Test::Parser::ltp.3 Test::Parser::newpynfs.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
