@@ -1,9 +1,5 @@
-# New ports collection makefile for:	JTiger
-# Date created:		June 1st , 2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/java/jtiger/Makefile,v 1.5 2012/11/17 05:58:45 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: java/jtiger/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jtiger
 PORTVERSION=	2.1.0376
@@ -17,6 +13,7 @@ USE_JAVA=	1.5
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 SRCFILES=	src test-src
