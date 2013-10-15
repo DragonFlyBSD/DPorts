@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-CPAN-Uploader/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-CPAN-Uploader/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPAN-Uploader
 PORTVERSION=	0.103004
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN1=	cpan-upload.1
 MAN3=	CPAN::Uploader.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
