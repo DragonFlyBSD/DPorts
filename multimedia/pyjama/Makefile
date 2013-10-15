@@ -1,5 +1,5 @@
 # Created by: Kjell Tore Ullavik <ktullavik@gmail.com>
-# $FreeBSD: multimedia/pyjama/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: multimedia/pyjama/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	pyjama
 PORTVERSION=	0.3.0.1
@@ -29,6 +29,7 @@ INSTSUBDIRS=	clLayouts extended_modules images modules plugins themes
 INSTFILES=	about.glade preferences.glade pyjama.cfg pyjama_test.glade \
 		pyjama.doxygen.py pyjama.py pyjama_test.glade
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -i '' 's|path = "locale"|path = "${PREFIX}/share/locale"|' \
 		${WRKSRC}/src/modules/functions.py
