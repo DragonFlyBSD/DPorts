@@ -1,5 +1,5 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: www/cherokee/Makefile 326461 2013-09-06 05:22:36Z rm $
+# $FreeBSD: www/cherokee/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
@@ -54,6 +54,7 @@ INTPCRE_DESC=	Use internal PCRE library
 RRDTOOL_DESC=	Usage graphs support
 UWSGI_DESC=	uWSGI support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MADMIN}
