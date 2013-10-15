@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdf
-# Date created:		2004-10-22
-# Whom:			Charlie & <root@lame.novel.ru>
-#
-# $FreeBSD: ports/sysutils/cdf/Makefile,v 1.8 2012/11/17 06:01:26 svnexp Exp $
-#
+# Created by: Charlie & <root@lame.novel.ru>
+# $FreeBSD: sysutils/cdf/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	cdf
 PORTVERSION=	0.2
