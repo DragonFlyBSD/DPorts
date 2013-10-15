@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/ports-mgmt/bpkg/files/bpkg.sh.in,v 1.33 2012/11/17 06:00:45 svnexp Exp $
+# $FreeBSD: ports-mgmt/bpkg/files/bpkg.sh.in 300897 2012-07-14 14:29:18Z beat $
 
 #  Copyright (c) 2007-2012 Andy Kosela <akosela@andykosela.com>
 #  All rights reserved.

@@ -1,11 +1,5 @@
-# New ports collection makefile for:	bpkg
-# Date created:				24 June 2007
-# Whom:					Andy Kosela <akosela@andykosela.com>
-#
-# $FreeBSD: ports/ports-mgmt/bpkg/Makefile,v 1.34 2012/11/17 06:00:45 svnexp Exp $
-#
-# This port is self contained in the files directory.
-#
+# Created by: Andy Kosela <akosela@andykosela.com>
+# $FreeBSD: ports-mgmt/bpkg/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	bpkg
 PORTVERSION=	2.1.7
@@ -23,6 +17,7 @@ PLIST_FILES=	bin/bpkg
 
 MAN8=		bpkg.8
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/bpkg.sh ${PREFIX}/bin/bpkg
 	${INSTALL_MAN} ${FILESDIR}/bpkg.8 ${MAN8PREFIX}/man/man8
