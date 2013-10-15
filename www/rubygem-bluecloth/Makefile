@@ -1,6 +1,4 @@
-# Ports collection makefile for:	rubygem-bluecloth
-#
-# $FreeBSD: ports/www/rubygem-bluecloth/Makefile,v 1.14 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/rubygem-bluecloth/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bluecloth
 PORTVERSION=	1.0.1
@@ -17,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
