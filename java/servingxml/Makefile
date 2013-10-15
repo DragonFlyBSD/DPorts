@@ -1,5 +1,5 @@
 # Created by: jpbeconne
-# $FreeBSD: ports/java/servingxml/Makefile,v 1.5 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/servingxml/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	servingxml
 PORTVERSION=	1.1.2
@@ -20,6 +20,7 @@ ANT_TARGETS=	dist
 JAVA_BUILD=	yes
 FETCH_ARGS=	-pRr
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${ANT} ${ANT_TARGETS}
 
