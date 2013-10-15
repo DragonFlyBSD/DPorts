@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bbrb
-# Date created:				19 February 2002
-# Whom:					Dan Peck <peckdani@msu.edu>
-#
-# $FreeBSD: ports/graphics/bbrb/Makefile,v 1.17 2012/11/17 05:58:01 svnexp Exp $
-#
+# Created by: Dan Peck <peckdani@msu.edu>
+# $FreeBSD: graphics/bbrb/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	bbrb
 PORTVERSION=	0.4.1
@@ -20,4 +16,5 @@ RUN_DEPENDS=	xv:${PORTSDIR}/graphics/xv \
 USE_GNOME=	imlib
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
