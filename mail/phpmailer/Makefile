@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: mail/phpmailer/Makefile 323052 2013-07-15 14:56:34Z miwi $
+# $FreeBSD: mail/phpmailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	phpmailer
 PORTVERSION=	5.2.6
@@ -21,6 +21,7 @@ USE_PHP=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 .for f in class.phpmailer.php class.pop3.php class.smtp.php composer.json
