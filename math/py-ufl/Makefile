@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-ufl/Makefile 316583 2013-04-26 07:40:40Z miwi $
+# $FreeBSD: math/py-ufl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ufl
 PORTVERSION=	${MMVERSION}0
@@ -28,6 +28,7 @@ MANCOMPRESSED=	yes
 
 MMVERSION=	1.2
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\[(pjoin("share", "man", "man1"),|\[(pjoin("man", "man1"),|' \
 			${WRKSRC}/setup.py
