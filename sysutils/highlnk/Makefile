@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/highlnk/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/highlnk/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	highlnk
 DISTVERSION=	0.2
@@ -18,6 +18,7 @@ MAN1=		highlnk.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
