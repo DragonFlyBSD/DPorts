@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_layout Apache 2 module
-# Date created:				Nov 15 2002
-# Whom:					Clement Laforet <sheepkiller@cultdeadsheep.org>
-#
-# $FreeBSD: www/mod_layout22/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
+# $FreeBSD: www/mod_layout22/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_layout
 PORTVERSION=	5.1
@@ -25,6 +21,7 @@ LATEST_LINK=	mod_layout22
 
 MAKE_ARGS+=	builddir=${WRKSRC}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}/
