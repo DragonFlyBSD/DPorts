@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-hpucode/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-hpucode/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	hpucode
 PORTVERSION=	1.2.4
@@ -17,5 +17,6 @@ MAN1=		hpucode.1
 MANCOMPRESSED=	yes
 INFO=		hpucode
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../husky-base/Makefile.inc"
 .include <bsd.port.mk>
