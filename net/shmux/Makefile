@@ -1,5 +1,5 @@
 # Created by: jamundsen
-# $FreeBSD: net/shmux/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: net/shmux/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	shmux
 DISTVERSION=	1.0.2
@@ -23,6 +23,7 @@ ALL_TARGET=	${PORTNAME}
 MAN1=		shmux.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFPING}
