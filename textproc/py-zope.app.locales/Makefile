@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.app.locales
-# Date created:				23 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/textproc/py-zope.app.locales/Makefile,v 1.4 2012/11/17 06:02:18 svnexp Exp $
-#
+# $FreeBSD: textproc/py-zope.app.locales/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.app.locales
 PORTVERSION=	3.7.3
@@ -24,6 +19,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.i18n>=0:${PORTSDIR}/devel/py-zope.i18n 
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
