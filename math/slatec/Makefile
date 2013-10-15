@@ -1,11 +1,12 @@
 # Created by: Anton Shterenlikht
-# $FreeBSD: math/slatec/Makefile 323101 2013-07-16 12:15:05Z madpilot $
+# $FreeBSD: math/slatec/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	slatec
 PORTVERSION=	4.1
 CATEGORIES=	math
 MASTER_SITES=	NL:slatec,blas
 MASTER_SITE_SUBDIR=	slatec/:slatec blas/:blas
+NO_STAGE=	yes
 # Get d1mach.f, i1mach.f, r1mach.f from BLAS, rather than from Slatec:
 # See Netlib FAQ #2.17: http://netlib.org/misc/faq.html#2.17
 DISTFILES=	guide:slatec slatec_chk.tgz:slatec slatec_src.tgz:slatec \
