@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nvidia-settings
-# Date created:				15 Aug 2004
-# Whom:					Alexander Nedotsukov <bland@FreeBSD.org>
-#
-# $FreeBSD: x11/nvidia-settings/Makefile 326343 2013-09-05 05:24:24Z antoine $
-#
+# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
+# $FreeBSD: x11/nvidia-settings/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	nvidia-settings
 PORTVERSION=	310.14
@@ -41,4 +37,5 @@ post-patch:	.SILENT
 	${REINPLACE_CMD} -e '/^prefix/s/=/?&/' \
 		 -e '/^MANDIR/s|share/||' ${WRKSRC}/utils.mk
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
