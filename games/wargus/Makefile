@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/wargus/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: games/wargus/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wargus
 PORTVERSION=	2.2.5.5
@@ -25,6 +25,7 @@ SUB_FILES=	${PORTNAME} pkg-message
 
 MAKE_ARGS+=	CFLAGS+="-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15" LDFLAGS+=-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin
 	cd ${WRKSRC} && \
