@@ -1,9 +1,5 @@
-# New ports collection makefile for:    fisg
-# Date created:         29 Nov 2004
-# Whom:                 Pasi Hirvonen <psh@iki.fi>
-#
-# $FreeBSD: ports/irc/fisg/Makefile,v 1.6 2012/11/17 05:58:28 svnexp Exp $
-#
+# Created by: Pasi Hirvonen <psh@iki.fi>
+# $FreeBSD: irc/fisg/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	fisg
 PORTVERSION=	0.3.12
@@ -19,6 +15,7 @@ BUILD_WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 PORTDOCS=	README FAQ
 MAN1=		fisg.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^PREFIX|PREFIX?|' \
 	-e 's|^CC|CC?|' -e 's|^CFLAGS|CFLAGS?|' ${WRKSRC}/src/Makefile
