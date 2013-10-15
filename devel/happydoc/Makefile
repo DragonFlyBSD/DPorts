@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/happydoc/Makefile 315193 2013-03-25 06:05:31Z miwi $
+# $FreeBSD: devel/happydoc/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	happydoc
 PORTVERSION=	3.1
@@ -23,6 +23,7 @@ USE_PYTHON=	yes
 
 PLIST=		${WRKDIR}/PLIST
 
+NO_STAGE=	yes
 pre-build:
 	@${FIND} ${WRKSRC} \( -name  ".*" -or -name "*.orig" \) -delete
 
