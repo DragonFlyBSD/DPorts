@@ -1,9 +1,5 @@
-# New ports collection makefile for:    de-aspell
-# Date created:                         1 September 2002
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/german/aspell/Makefile,v 1.8 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: german/aspell/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-de-20030222-1
@@ -15,5 +11,6 @@ COMMENT=	Aspell German dictionary
 
 DICT=	 	de
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
