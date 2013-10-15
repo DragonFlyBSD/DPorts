@@ -1,7 +1,7 @@
-@comment $FreeBSD: ports/chinese/hc/pkg-plist,v 1.6 2012/11/17 05:54:56 svnexp Exp $
-bin/hc
+@comment $FreeBSD: chinese/hc/pkg-plist 328366 2013-09-26 14:35:04Z vanilla $
 bin/b2g
 bin/g2b
-share/chinese/hc.tab
+bin/hc
 share/chinese/hc-supp.tab
+share/chinese/hc.tab
 @dirrmtry share/chinese
