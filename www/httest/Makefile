@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 325360 2013-08-25 16:17:21Z ehaupt $
+# $FreeBSD: www/httest/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	httest
 PORTVERSION=	2.4.8
@@ -32,6 +32,7 @@ USE_LDCONFIG=	yes
 MAN1=		htntlm.1 htproxy.1 htremote.1 httest.1
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|`$$APR_CONFIG --cflags`||' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|' ${WRKSRC}/generate_modules_c.sh
