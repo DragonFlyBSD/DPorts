@@ -1,5 +1,5 @@
-# Whom: David Gardner
-# $FreeBSD: sysutils/gkrelltop/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# Created by: David Gardner
+# $FreeBSD: sysutils/gkrelltop/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gkrelltop
 PORTVERSION=	2.2.10
@@ -27,6 +27,7 @@ PLIST_SUB+=	CLIENT=""
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 
+NO_STAGE=	yes
 post-patch:
 .if defined(GKRELLM_SERVER_ONLY)
 	${REINPLACE_CMD} 's/^\(PKG.*\)gkrellm/\1gkrellmd/' ${WRKSRC}/configure
