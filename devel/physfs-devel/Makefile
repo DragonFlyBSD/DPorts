@@ -1,9 +1,5 @@
-# New ports collection makefile for:	physfs
-# Date Created:		26 July 2003
-# Whom:			Oliver Lehmann <oliver@FreeBSD.org>
-#
-# $FreeBSD: devel/physfs-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Oliver Lehmann <oliver@FreeBSD.org>
+# $FreeBSD: devel/physfs-devel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	physfs
 PORTVERSION=	1.1.1
@@ -19,6 +15,7 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 NO_LATEST_LINK=	yes
 
+NO_STAGE=	yes
 patch-autotools-libtool:
 	@${DO_NADA}
 
