@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gl-aspell
-# Date created:                         13 March 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/gl-aspell/Makefile,v 1.6 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/gl-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-gl-0.5a-2
@@ -16,5 +12,6 @@ COMMENT=	Aspell Galician dictionary
 
 DICT=	 	gl
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
