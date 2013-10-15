@@ -1,5 +1,5 @@
 # Created by: refugee
-# $FreeBSD: games/typespeed/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: games/typespeed/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	typespeed
 PORTVERSION=	0.6.5
@@ -24,6 +24,7 @@ SUB_FILES=	pkg-install pkg-deinstall
 SUB_LIST=	SCOREDIR="${SCOREDIR}" SCOREFILE="${SCOREFILE}" WRKSRC="${WRKSRC}"
 MAN1=		typespeed.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
