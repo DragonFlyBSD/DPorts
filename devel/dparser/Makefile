@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/dparser/Makefile 325391 2013-08-26 12:21:32Z gahr $
+# $FreeBSD: devel/dparser/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dparser
 PORTVERSION=	1.30
@@ -24,6 +24,7 @@ PORTDOCS=	*
 PLIST_FILES=	bin/make_dparser include/dparse.h include/dparse_tables.h \
 		include/dparse_tree.h include/dsymtab.h lib/${LIBDPARSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBOEHM}
