@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-rauth/Makefile 316705 2013-04-28 07:56:41Z koobs $
+# $FreeBSD: devel/py-rauth/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	rauth
 PORTVERSION=	0.5.4
@@ -21,6 +21,7 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install tools for unit testing
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
