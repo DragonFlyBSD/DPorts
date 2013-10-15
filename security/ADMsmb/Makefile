@@ -1,5 +1,5 @@
 # Created by: Jacek Serwatynski <tutus@trynet.eu.org>
-# $FreeBSD: security/ADMsmb/Makefile 324017 2013-07-31 08:33:56Z danfe $
+# $FreeBSD: security/ADMsmb/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ADMsmb
 PORTVERSION=	0.3
@@ -14,6 +14,7 @@ COMMENT=	Security scanner for Samba
 USES=		gmake
 MAKE_ARGS=	CC="${CC}" FLAGS1="${CFLAGS}"
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.o" -delete
 	@${REINPLACE_CMD} -e 's|-O3|${CFLAGS}|' ${WRKSRC}/Makefile
