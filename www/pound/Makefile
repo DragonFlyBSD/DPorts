@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: www/pound/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/pound/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pound
 PORTVERSION=	2.6
@@ -32,6 +32,7 @@ CONFIGURE_ARGS=	--disable-tcmalloc --disable-hoard
 PLIST_FILES=	sbin/pound sbin/poundctl
 PORTDOCS=	README FAQ CHANGELOG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMSDAV}
