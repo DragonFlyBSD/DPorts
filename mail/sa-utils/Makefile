@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports/mail/sa-utils/Makefile,v 1.8 2012/12/15 09:34:26 svnexp Exp $
+# $FreeBSD: mail/sa-utils/Makefile 328436 2013-09-27 08:06:39Z matthew $
 
 PORTNAME=	sa-utils
 PORTVERSION=	0.02
@@ -34,8 +34,8 @@ SUB_LIST+=	SACOMPILE=NO
 .endif
 
 do-install:
-	${MKDIR} ${PREFIX}/${PERIODIC_DAILY}/
+	${MKDIR} ${STAGEDIR}${PREFIX}/${PERIODIC_DAILY}/
 	${INSTALL_SCRIPT} ${WRKDIR}/sa-utils \
-	    ${PREFIX}/${PERIODIC_DAILY}/sa-utils
+	    ${STAGEDIR}${PREFIX}/${PERIODIC_DAILY}/sa-utils
 
 .include <bsd.port.mk>
