@@ -1,5 +1,5 @@
 # Created by: mohacsi
-# $FreeBSD: ports/hungarian/ispell/Makefile,v 1.18 2013/01/09 20:04:49 svnexp Exp $
+# $FreeBSD: hungarian/ispell/Makefile 327735 2013-09-20 18:43:02Z bapt $
 
 PORTNAME=	ispell
 PORTVERSION=	1.6.1
@@ -19,6 +19,7 @@ USE_GMAKE=	yes
 DOCSDIR=	${PREFIX}/share/doc/hu-ispell
 DOCS=		OLVASSEL README GYIK ChangeLog
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/tmp/magyar4ispell.hash ${DATADIR}/magyar.hash
