@@ -1,5 +1,5 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: ports/deskutils/myitcrm/Makefile,v 1.7 2013/01/27 22:43:38 svnexp Exp $
+# $FreeBSD: deskutils/myitcrm/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	myitcrm
 PORTVERSION=	0.2.9.3
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	APACHE
 PHPMOD_DESC=	Use PHP module for Apache
 NGINX_DESC=	Use Nginx
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHPMOD}
