@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/qmars/Makefile 306841 2012-11-02 11:08:29Z pawel $
+# $FreeBSD: games/qmars/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	qmars
 PORTVERSION=	1.1
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_BZIP2=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|g++|$${CXX}| ; \
 		s|-O3|$${CXXFLAGS}|' ${WRKSRC}/${MAKEFILE}
