@@ -1,9 +1,5 @@
-# New ports collection makefile for:	autocutsel
-# Date created:		13 November 2003
-# Whom:			john@jnielsen.net
-#
-# $FreeBSD: ports/deskutils/autocutsel/Makefile,v 1.9 2012/11/17 05:55:26 svnexp Exp $
-#
+# Created by: john@jnielsen.net
+# $FreeBSD: deskutils/autocutsel/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	autocutsel
 PORTVERSION=	0.9.0
@@ -22,4 +18,5 @@ USE_GMAKE=	yes
 PLIST_FILES=	bin/autocutsel \
 		bin/cutsel
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
