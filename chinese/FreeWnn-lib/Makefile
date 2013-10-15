@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libraries of FreeWnn
-# Date created:		00/08/25
-# Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/chinese/FreeWnn-lib/Makefile,v 1.14 2012/11/17 05:54:55 svnexp Exp $
-#
+# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
+# $FreeBSD: chinese/FreeWnn-lib/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 CATEGORIES=	chinese
 PKGNAMESUFFIX=	-lib
@@ -15,4 +11,5 @@ PKGDIR=		${.CURDIR}
 
 WNNTYPE=	CWNN
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
