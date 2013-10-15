@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: www/rubygem-jquery-rails/Makefile 322868 2013-07-12 22:35:46Z jgh $
+# $FreeBSD: www/rubygem-jquery-rails/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jquery-rails
 PORTVERSION=	3.0.1
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
