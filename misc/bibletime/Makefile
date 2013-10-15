@@ -1,4 +1,4 @@
-# $FreeBSD: misc/bibletime/Makefile 326860 2013-09-10 04:08:18Z danfe $
+# $FreeBSD: misc/bibletime/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	bibletime
 PORTVERSION=	2.9.2
@@ -20,4 +20,5 @@ USE_QT4=	corelib dbus gui iconengines network phonon qtestlib script \
 		svg webkit xml linguist_build moc_build qmake_build \
 		rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
