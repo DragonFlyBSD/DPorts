@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: graphics/exiftran/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/exiftran/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	exiftran
 DISTNAME=	fbida-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
@@ -22,6 +22,7 @@ MAKE_ARGS+=	WRKSRC=${WRKSRC} BINDIR=${PREFIX}/bin MANDIR=${MANPREFIX}/man
 PLIST_FILES=	bin/exiftran bin/thumbnail.cgi
 MAN1=		exiftran.1
 
+NO_STAGE=	yes
 post-patch:
 	@${MKDIR} ${WRKSRC}/build/exiftran ${WRKSRC}/build/thumbnail.cgi
 	@${CP} ${FILESDIR}/Makefile ${WRKSRC}/Makefile
