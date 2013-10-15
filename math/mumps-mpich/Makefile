@@ -1,12 +1,9 @@
-# New ports collection makefile for:	mumps-mpich
-# Date created:			23 Jul 2006
-# Whom:				Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/math/mumps-mpich/Makefile,v 1.3 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: math/mumps-mpich/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 MASTERDIR=		${.CURDIR}/../mumps
 
 WITH_MPI=		yes
 
+NO_STAGE=	yes
 .include "../mumps/Makefile"
