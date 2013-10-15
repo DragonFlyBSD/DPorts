@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/devel/pecl-vld/Makefile,v 1.9 2013/02/04 10:07:55 svnexp Exp $
+# $FreeBSD: devel/pecl-vld/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	vld
 PORTVERSION=	0.11.2
@@ -17,4 +17,5 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-vld
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
