@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compiz-plugins-main/Makefile 326415 2013-09-05 17:01:12Z antoine $
+# $FreeBSD: x11-wm/compiz-plugins-main/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	compiz-plugins-main
 PORTVERSION=	0.8.4
@@ -55,4 +55,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
