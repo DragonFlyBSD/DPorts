@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: net-p2p/tribler/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
+# $FreeBSD: net-p2p/tribler/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	tribler
 PORTVERSION=	6.0.3
@@ -46,6 +46,7 @@ TRIBLER_DIR=	${PYTHONPREFIX_SITELIBDIR}/tribler
 APSW_DISTNAME=	apsw-3.7.14.1-r1
 APSW_DISTFILE=	${APSW_DISTNAME}.zip
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
