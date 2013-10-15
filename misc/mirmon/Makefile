@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/mirmon/Makefile 325122 2013-08-21 12:55:12Z jadawin $
+# $FreeBSD: misc/mirmon/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	mirmon
 PORTVERSION=	2.9
@@ -19,6 +19,7 @@ SUB_LIST=	PREFIX=${PREFIX}
 PLIST_FILES=	bin/mirmon bin/probe
 MAN1=		mirmon.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
