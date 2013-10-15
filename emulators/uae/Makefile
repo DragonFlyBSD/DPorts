@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: emulators/uae/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: emulators/uae/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	uae
 PORTVERSION=	0.8.29
@@ -22,6 +22,7 @@ USE_GNOME=	gtk20
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-configure:
