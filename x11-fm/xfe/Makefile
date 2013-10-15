@@ -1,8 +1,9 @@
 # Created by: ptiJo
-# $FreeBSD: x11-fm/xfe/Makefile 325510 2013-08-28 07:28:51Z gahr $
+# $FreeBSD: x11-fm/xfe/Makefile 329703 2013-10-07 13:15:43Z gahr $
 
 PORTNAME=	xfe
 PORTVERSION=	1.35
+PORTREVISION=	1
 CATEGORIES=	x11-fm
 MASTER_SITES=	SF
 
@@ -20,6 +21,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 MAN1=		xfe.1 xfi.1 xfp.1 xfv.1 xfw.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/local/share/xfe|${DATADIR}|g' \
 		${WRKSRC}/src/XFileExplorer.cpp \
