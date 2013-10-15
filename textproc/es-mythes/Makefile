@@ -1,8 +1,7 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: textproc/es-mythes/Makefile 326789 2013-09-09 10:08:30Z sunpoet $
+# $FreeBSD: textproc/es-mythes/Makefile 330093 2013-10-11 17:51:43Z sunpoet $
 
 PORTNAME=	mythes
-PORTVERSION=	20130902
+PORTVERSION=	20131002
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 PKGNAMEPREFIX=	es-
@@ -29,6 +28,7 @@ PLIST_FILES+=	%%DATADIR%%/th_${ALIAS}_v2.dat \
 		%%DATADIR%%/th_${ALIAS}_v2.idx
 .endfor
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_es_ES_v2.dat ${WRKSRC}/th_es_ES_v2.idx ${DATADIR}/
