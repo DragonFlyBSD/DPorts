@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Net-CLI-Interact/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: net/p5-Net-CLI-Interact/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
 
 PORTNAME=	Net-CLI-Interact
 PORTVERSION=	2.123.620
@@ -28,22 +28,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Net::CLI::Interact.3 \
-		Net::CLI::Interact::Action.3 \
-		Net::CLI::Interact::ActionSet.3 \
-		Net::CLI::Interact::Logger.3 \
-		Net::CLI::Interact::Manual::Cookbook.3 \
-		Net::CLI::Interact::Manual::Phrasebook.3 \
-		Net::CLI::Interact::Manual::Tutorial.3 \
-		Net::CLI::Interact::Phrasebook.3 \
-		Net::CLI::Interact::Role::Engine.3 \
-		Net::CLI::Interact::Role::Iterator.3 \
-		Net::CLI::Interact::Role::Prompt.3 \
-		Net::CLI::Interact::Transport::Base.3 \
-		Net::CLI::Interact::Transport::Loopback.3 \
-		Net::CLI::Interact::Transport::SSH.3 \
-		Net::CLI::Interact::Transport::Serial.3 \
-		Net::CLI::Interact::Transport::Telnet.3
 
 .include <bsd.port.mk>
