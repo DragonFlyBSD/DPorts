@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: x11-clocks/wmcalclock/Makefile 317144 2013-05-02 19:51:08Z hrs $
+# $FreeBSD: x11-clocks/wmcalclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmCalClock
 PORTVERSION=	1.26
@@ -22,6 +22,7 @@ MAN1=		wmCalClock.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
