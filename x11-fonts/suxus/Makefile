@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/suxus/Makefile 317380 2013-05-04 22:19:17Z bapt $
+# $FreeBSD: x11-fonts/suxus/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	suxus
 PORTVERSION=	1.5
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 SUB_FILES=	pkg-message
 USE_XORG=	x11
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}-iso-8859-1.bdf.gz ${WRKSRC}
