@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@cs.uoi.gr>
-# $FreeBSD: x11-wm/awesome2/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: x11-wm/awesome2/Makefile 328492 2013-09-27 15:17:26Z madpilot $
 
 PORTNAME=	awesome2
 PORTVERSION=	2.3.6
@@ -32,6 +32,7 @@ MAN5=		awesome2rc.5
 PORTDOCS=	AUTHORS LICENSE README STYLE UPGRADE
 PORTEXAMPLES=	awesomerc
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's, "$$(DESTDIR)$$(docdir)";,;,g' \
 			  -e 's,\([[:space:]]\)install-docDATA ,\1,g' \
