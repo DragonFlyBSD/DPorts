@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: net-im/telepathy-qt/Makefile 326038 2013-09-02 17:09:31Z bapt $
+# $FreeBSD: net-im/telepathy-qt/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	telepathy-qt
 PORTVERSION=	0.14.1
@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/build
 
+NO_STAGE=	yes
 post-extract:
 	${MKDIR} ${WRKSRC}
 
