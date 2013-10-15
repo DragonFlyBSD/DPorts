@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gerbv/Makefile 326095 2013-09-02 21:32:24Z bapt $
+# $FreeBSD: cad/gerbv/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	gerbv
 PORTVERSION=	2.6.0
@@ -26,6 +26,7 @@ PLIST_SUB=	VERSION="${PORTVERSION}"
 
 MAN1=		gerbv.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s|desktop||g' ${WRKSRC}/Makefile.in
 
