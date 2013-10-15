@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/agedu/Makefile 325776 2013-08-31 07:47:41Z sunpoet $
+# $FreeBSD: sysutils/agedu/Makefile 329909 2013-10-09 16:16:48Z sunpoet $
 
 PORTNAME=	agedu
 PORTVERSION=	9723
@@ -15,8 +15,8 @@ LICENSE=	MIT
 
 GNU_CONFIGURE=	yes
 
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|HOST_NAME_MAX|_POSIX_&|' ${WRKSRC}/httpd.c
