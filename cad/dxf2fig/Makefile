@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	dxf2fig
-# Date created:			Aug 26, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/cad/dxf2fig/Makefile,v 1.7 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: cad/dxf2fig/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	dxf2fig
 PORTVERSION=	2.13
@@ -16,6 +11,7 @@ COMMENT=	DXF to FIG converter
 
 PLIST_FILES=	bin/dxf2fig
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS+=|g ; \
 		 s|-O -s||g ; \
