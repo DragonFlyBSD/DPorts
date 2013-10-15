@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Apache-DB/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Apache-DB/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-DB
 PORTVERSION=	0.14
@@ -20,4 +20,5 @@ USE_APACHE_RUN=	22+
 MAN3=		Apache::DB.3 Apache::DProf.3 Apache::perl5db.3 \
 		Apache::SmallProf.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
