@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: multimedia/umplayer/Makefile 323704 2013-07-26 08:44:52Z danfe $
+# $FreeBSD: multimedia/umplayer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	umplayer
 DISTVERSION=	0.97
@@ -25,6 +25,7 @@ MANCOMPRESSED=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
