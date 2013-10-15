@@ -1,5 +1,5 @@
 # Created by: David Bushong <david+ports@bushong.net>
-# $FreeBSD: irc/rbot/Makefile 324855 2013-08-17 16:45:55Z bdrewery $
+# $FreeBSD: irc/rbot/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	rbot
 PORTVERSION=	0.9.15
@@ -14,6 +14,7 @@ COMMENT=	Ruby IRC bot similar to infobot
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/bdb.so:${PORTSDIR}/databases/ruby-bdb \
 		rubygem-gettext>=1.93.0:${PORTSDIR}/devel/rubygem-gettext
 
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
