@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-defusedxml/Makefile 324232 2013-08-04 13:40:11Z wg $
+# $FreeBSD: devel/py-defusedxml/Makefile 328296 2013-09-25 14:33:23Z wg $
 
 PORTNAME=	defusedxml
 PORTVERSION=	0.4.1
@@ -26,10 +26,7 @@ post-install:
 .if ${PYTHON_REL} >= 320
 .include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
 .endif
-
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${DOCS_FILES:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${DOCS_FILES:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.post.mk>
