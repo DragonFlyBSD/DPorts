@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/simple-ccsm/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: x11-wm/simple-ccsm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	simple-ccsm
 PORTVERSION=	0.8.4
@@ -21,4 +21,5 @@ INSTALLS_EGGINFO=	yes
 
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
