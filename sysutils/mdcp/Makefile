@@ -1,9 +1,5 @@
-# New ports collection makefile for:   mdcp
-# Date created:                11 Apr 2008
-# Whom:                        Monzyne, W. <wamonzyne@hotmail.com>
-#
-# $FreeBSD: ports/sysutils/mdcp/Makefile,v 1.3 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Monzyne, W. <wamonzyne@hotmail.com>
+# $FreeBSD: sysutils/mdcp/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mdcp
 PORTVERSION=	0.1.2.2
@@ -20,4 +16,5 @@ PLIST_FILES=	sbin/mdcp
 
 MAN1=		mdcp.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
