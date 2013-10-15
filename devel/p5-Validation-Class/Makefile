@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Validation-Class/Makefile 324512 2013-08-10 13:51:27Z kuriyama $
+# $FreeBSD: devel/p5-Validation-Class/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Validation-Class
 PORTVERSION=	7.900051
@@ -84,4 +84,5 @@ MAN3=	\
 	Validation::Class::Simple::Streamer.3 \
 	Validation::Class::Whitepaper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
