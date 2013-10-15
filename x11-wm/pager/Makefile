@@ -1,5 +1,5 @@
 # Created by: Michael Ebert <ebert@informatik.unibw-muenchen.de>
-# $FreeBSD: x11-wm/pager/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/pager/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	pager
 PORTVERSION=	0.90.3
@@ -24,6 +24,7 @@ PLIST_FILES=	lib/sawfish/sawfishpager \
 		share/sawfish/lisp/sawfish/wm/ext/pager.jl \
 		share/sawfish/lisp/sawfish/wm/ext/pager.jlc
 
+NO_STAGE=	yes
 post-install:
 	@${STRIP_CMD} ${PREFIX}/lib/sawfish/sawfishpager
 	@${CAT} ${PKGMESSAGE}
