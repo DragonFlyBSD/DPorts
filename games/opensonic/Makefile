@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: games/opensonic/Makefile 325838 2013-09-01 00:13:51Z madpilot $
+# $FreeBSD: games/opensonic/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	opensonic
 PORTVERSION=	0.1.4
@@ -30,6 +30,7 @@ LIB_DEPENDS+=	liballeg.so:${PORTSDIR}/devel/allegro \
 		libogg.so:${PORTSDIR}/audio/libogg \
 		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
