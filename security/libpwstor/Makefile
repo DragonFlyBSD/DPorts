@@ -1,6 +1,5 @@
 # Created by: Matt Harris <mattdharris@users.sourceforge.net>
-# $FreeBSD: security/libpwstor/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/libpwstor/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=       libpwstor
 PORTVERSION=    0.1
@@ -36,6 +35,7 @@ MAN3=		pwstor.3 \
 		pws_passwords_checkmulti.3 \
 		pws_passwords_converttomulti.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"
