@@ -1,9 +1,5 @@
-# New ports collection makefile for: smv
-# Date created: 18 November 2003
-# Whom: Marc E.E. van Woerkom <marc.vanwoerkom@fernuni-hagen.de>
-#
-# $FreeBSD: ports/devel/smv/Makefile,v 1.5 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: Marc E.E. van Woerkom <marc.vanwoerkom@fernuni-hagen.de>
+# $FreeBSD: devel/smv/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	smv
 PORTVERSION=	2.5.4.3
@@ -21,6 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		smv.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/smv ${PREFIX}/bin
 	${MKDIR} ${DATADIR}
