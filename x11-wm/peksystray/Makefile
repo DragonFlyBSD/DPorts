@@ -1,9 +1,5 @@
-# New ports collection makefile for:	PekSysTray
-# Date created:				08 Jul 2004
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: ports/x11-wm/peksystray/Makefile,v 1.15 2012/11/17 06:03:43 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: x11-wm/peksystray/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	peksystray
 PORTVERSION=	0.4.0
@@ -22,6 +18,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/peksystray
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@x_includes@|| ; s|@x_libraries@||' \
 		${WRKSRC}/src/Makefile.in
