@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: security/munge/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/munge/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	munge
 PORTVERSION=	0.5.10
@@ -37,4 +37,5 @@ MLINKS=		munge.3 munge_strerror.3 \
 		munge_ctx.3 munge_ctx_set.3 \
 		munge_ctx.3 munge_ctx_strerror.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
