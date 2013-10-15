@@ -1,5 +1,5 @@
 # Created by: Zenin <zenin@archive.rhps.org>
-# $FreeBSD: games/wmeyes/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/wmeyes/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wmeyes
 PORTVERSION=	1.2
@@ -17,6 +17,7 @@ NO_INSTALL_MANPAGES=	yes
 PORTDOCS=	README
 PLIST_FILES=	bin/wmeyes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
