@@ -1,9 +1,5 @@
-# New ports collection makefile for:	deco
-# Date created:				16 Dec 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/misc/deco/Makefile,v 1.22 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: misc/deco/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	deco
 PORTVERSION=	3.9
@@ -22,4 +18,5 @@ CONFIGURE_ENV=	ac_cv_lib_ncurses_tgetent=no
 MAN1=		deco.1
 MANLANG=	"" ru.KOI8-R
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
