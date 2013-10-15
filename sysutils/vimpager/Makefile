@@ -1,5 +1,5 @@
-# Created by:	Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: sysutils/vimpager/Makefile 324585 2013-08-11 12:39:50Z adamw $
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: sysutils/vimpager/Makefile 328325 2013-09-25 23:05:09Z adamw $
 
 PORTNAME=	vimpager
 PORTVERSION=	1.8.2
@@ -13,13 +13,12 @@ RUN_DEPENDS=	vim:${PORTSDIR}/editors/vim
 
 FETCH_ARGS=	-prR
 
-PLIST_FILES=	bin/${PORTNAME} bin/vimcat etc/${PORTNAME}rc
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} bin/vimcat etc/${PORTNAME}rc man/man1/${PORTNAME}.1.gz
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/vimcat ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}rc ${PREFIX}/etc
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/vimcat ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}rc ${STAGEDIR}${PREFIX}/etc
 
 .include <bsd.port.mk>
