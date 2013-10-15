@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: lang/p5-Marpa/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: lang/p5-Marpa/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	Marpa
 PORTVERSION=	0.208
@@ -18,20 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Marpa::Advanced::Algorithm.3 \
-		Marpa::Advanced::Bibliography.3 \
-		Marpa::Advanced::Implementation.3 \
-		Marpa::Advanced::Models.3 \
-		Marpa::Deprecated::Bocage.3 \
-		Marpa::Deprecated::Evaluator.3 \
-		Marpa::Deprecated::Implementation.3 \
-		Marpa::Grammar.3 \
-		Marpa::Marpa.3 \
-		Marpa::Parse_Terms.3 \
-		Marpa::Recognizer.3 \
-		Marpa::Semantics.3 \
-		Marpa::Support.3 \
-		Marpa::Tracing.3
 
 .include <bsd.port.mk>
