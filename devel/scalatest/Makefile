@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scalatest
-# Date created:		Nov 16 2010
-# Whom:			Mitsuru YOSHIDA
-#
-# $FreeBSD: ports/devel/scalatest/Makefile,v 1.5 2012/11/17 05:57:02 svnexp Exp $
-#
+# Created by: Mitsuru YOSHIDA
+# $FreeBSD: devel/scalatest/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	scalatest
 PORTVERSION=	1.6.1
@@ -23,6 +19,7 @@ USE_ZIP=	yes
 USE_JAVA=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(NOPORTDOCS)
