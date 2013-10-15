@@ -1,5 +1,5 @@
 # Created by: Dave McKay <dave@mu.org>
-# $FreeBSD: security/seahorse/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: security/seahorse/Makefile 327769 2013-09-20 22:55:24Z bapt $
 #   $MCom: ports/security/seahorse/Makefile,v 1.109 2012/09/01 23:02:12 mezz Exp $
 
 PORTNAME=	seahorse
@@ -41,6 +41,7 @@ OPTIONS_DEFINE=	LDAP NOTIFY MDNS
 OPTIONS_DEFAULT=LDAP NOTIFY MDNS
 MDNS_DESC=	mDNS key sharing
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
