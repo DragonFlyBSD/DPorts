@@ -1,4 +1,4 @@
-# $FreeBSD: devel/fossil/Makefile 327034 2013-09-12 06:19:31Z bapt $
+# $FreeBSD: devel/fossil/Makefile 327915 2013-09-23 06:05:10Z bapt $
 
 PORTNAME=	fossil
 PORTVERSION=	20130911114349
@@ -12,7 +12,6 @@ COMMENT=	DSCM with built-in wiki, http interface and server, tickets database
 
 LICENSE=	BSD
 
-
 PLIST_FILES=	bin/fossil
 
 HAS_CONFIGURE=	yes
@@ -22,11 +21,5 @@ JSON_DESC=	JSON API support
 
 JSON_CONFIGURE_ON=	--json
 STATIC_CONFIGURE_ON=	--static
-
-do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/fossil ${PREFIX}/bin/fossil
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
