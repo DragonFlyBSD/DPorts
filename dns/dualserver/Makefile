@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: dns/dualserver/Makefile 319000 2013-05-24 17:58:42Z pawel $
+# $FreeBSD: dns/dualserver/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dualserver
 PORTVERSION=	7.02
@@ -15,6 +15,7 @@ USE_DOS2UNIX=	yes
 USE_RC_SUBR=	dualserver
 PLIST_FILES=	sbin/dualserver etc/dualserver.conf.sample
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKDIR}/${PORTNAME} ${WRKSRC}
 
