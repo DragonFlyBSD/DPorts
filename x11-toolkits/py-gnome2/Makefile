@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-gnome2/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: x11-toolkits/py-gnome2/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.60 2010/04/02 20:22:15 kwm Exp $
 
 PORTNAME=	gnome
@@ -34,6 +34,7 @@ EG_DST_DIR=	${PREFIX}/share/examples/py-gnome
 
 CONFLICTS=	py*-gnome-1*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(NOPORTDOCS)
