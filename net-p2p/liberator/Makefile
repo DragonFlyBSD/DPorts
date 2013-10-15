@@ -1,9 +1,5 @@
-# New ports collection makefile for:	liberator
-# Date created:				Fri May 2 04:23:24 UTC 2003
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/net-p2p/liberator/Makefile,v 1.10 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: net-p2p/liberator/Makefile 329631 2013-10-06 21:51:02Z marino $
 
 PORTNAME=	liberator
 PORTVERSION=	2.0.2
@@ -14,6 +10,8 @@ DISTNAME=	ofcp-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command line client to FreeNet Network
+
+MAKE_JOBS_UNSAFE= yes
 
 BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml
 
@@ -28,6 +26,7 @@ LIB_FILES=      fcp.cma hlfi.cma asfi.cma fcp.cmxa hlfi.cmxa asfi.cmxa \
 		fcp.cmi hlfreenet.cmi asfreenet.cmi fieldset.cmi \
 		fstream.cmi
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|; \
 		s|%%DATADIR%%|${DATADIR:S,^${PREFIX}/,,}|' \
