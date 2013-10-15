@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: benchmarks/autobench/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/autobench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	autobench
 PORTVERSION=	2.1.2
@@ -24,6 +24,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" DEBUG_FLAGS= \
 MAN1=	autobench.1 autobench_admin.1 autobenchd.1 bench2graph.1 \
 	crfile.1 sesslog.1
 
+NO_STAGE=	yes
 post-patch:
 .for file in autobench autobench_admin
 	@${REINPLACE_CMD} -i '' -e 's|/etc/|${PREFIX}/etc/|' ${WRKSRC}/${file}
