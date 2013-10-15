@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-base64-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-base64-conduit/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	base64-conduit
 PORTVERSION=	1.0.0
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	base64-bytestring>=0.1.1.1 conduit>=1.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
