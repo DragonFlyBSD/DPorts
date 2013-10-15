@@ -1,5 +1,5 @@
 # Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-# $FreeBSD: misc/newer/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/newer/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	newer
 PORTVERSION=	1.0
@@ -16,6 +16,7 @@ CONFLICTS=	teTeX-base-[0-9]* tex-[0-9]* ja-ptex-base-*
 PLIST_FILES=	bin/newer
 NO_EXTRACT=	yes
 
+NO_STAGE=	yes
 do-build:
 	${CP} ${DISTDIR}/newer.c ${WRKDIR}/newer.c
 	${CC} ${CFLAGS} -o ${WRKDIR}/newer ${WRKDIR}/newer.c
