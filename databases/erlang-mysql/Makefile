@@ -1,9 +1,5 @@
-# New ports collection makefile for:	erlang-mysql
-# Date Created:				2006-05-04
-# Whom:					Shaun Amott <shaun@inerd.com>
-#
-# $FreeBSD: ports/databases/erlang-mysql/Makefile,v 1.11 2012/11/17 05:55:07 svnexp Exp $
-#
+# Created by: Shaun Amott <shaun@inerd.com>
+# $FreeBSD: databases/erlang-mysql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql
 PORTVERSION=	1.0
@@ -26,6 +22,7 @@ ERLANGDIR?=	${PREFIX}/lib/erlang/lib
 PLIST_SUB=	PORTNAME=${PORTNAME} PORTVERSION=${PORTVERSION} \
 		ERLANGDIR=${ERLANGDIR:S/^${PREFIX}\///}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
