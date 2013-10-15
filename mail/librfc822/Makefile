@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	librfc822
-# Date created:			Apr 19, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/mail/librfc822/Makefile,v 1.12 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: mail/librfc822/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	librfc822
 PORTVERSION=	1.2
@@ -19,6 +14,7 @@ GNU_CONFIGURE=	YES
 PORTDOCS=	user-manual.html
 PLIST_FILES=	include/rfc822.hpp lib/librfc822.a
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/rfc822.hpp ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/librfc822.a ${PREFIX}/lib
