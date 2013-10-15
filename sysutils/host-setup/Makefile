@@ -1,9 +1,5 @@
-# New ports collection makefile for:	host-setup
-# Date created:				2012-01-05
-# Whom:					Devin Teske <dteske@vicor.com>
-#
-# $FreeBSD: ports/sysutils/host-setup/Makefile,v 1.3 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Devin Teske <dteske@vicor.com>
+# $FreeBSD: sysutils/host-setup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	host-setup
 PORTVERSION=	4.0.2
@@ -18,6 +14,7 @@ NO_BUILD=	yes
 PLIST_FILES=	sbin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1/
