@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Eval-Context/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Eval-Context/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Eval-Context
 PORTVERSION=	0.09.11
@@ -33,4 +33,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Eval::Context.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
