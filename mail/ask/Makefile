@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ask
-# Date created:				2 November 2005
-# Whom:					Marcelo Araujo <araujobsd@gmail.com>
-#
-# $FreeBSD: ports/mail/ask/Makefile,v 1.7 2012/11/17 05:58:58 svnexp Exp $
-#
+# Created by: Marcelo Araujo <araujobsd@gmail.com>
+# $FreeBSD: mail/ask/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ask
 PORTVERSION=	2.5.3
@@ -22,6 +18,7 @@ MAN1=		askfilter.1 asksenders.1 asksetup.1
 SUB_FILES=	pkg-message
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -E \
 		-e "s,/usr/share/ask/templates,${EXAMPLESDIR},g" \
