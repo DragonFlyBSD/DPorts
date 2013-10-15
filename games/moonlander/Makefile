@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/moonlander/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/moonlander/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	moonlander
 PORTVERSION=	1.0
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/moon-lander
 
 OPTIONS_DEFINE=	SOUND
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 install_dirs=	fonts images
