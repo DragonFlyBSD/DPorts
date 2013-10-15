@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/sbt/Makefile 325523 2013-08-28 12:37:29Z ale $
+# $FreeBSD: devel/sbt/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	sbt
 PORTVERSION=	0.13.0
@@ -24,6 +24,7 @@ PLIST_FILES=	bin/sbt \
 		%%DATADIR%%/sbt-launch.jar
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MADVANCED}
