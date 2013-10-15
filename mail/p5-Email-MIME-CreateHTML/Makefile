@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-MIME-CreateHTML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Email-MIME-CreateHTML/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-MIME-CreateHTML
 PORTVERSION=	1.030
@@ -32,4 +32,5 @@ MAN3=	Email::MIME::CreateHTML.3 \
 	Email::MIME::CreateHTML::Resolver::Filesystem.3 \
 	Email::MIME::CreateHTML::Resolver::LWP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
