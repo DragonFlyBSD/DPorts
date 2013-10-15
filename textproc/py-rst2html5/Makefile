@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: textproc/py-rst2html5/Makefile 321207 2013-06-18 17:36:23Z olivierd $
-#
+# $FreeBSD: textproc/py-rst2html5/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rst2html5
 PORTVERSION=	1.0
@@ -18,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Genshi>=0.7:${PORTSDIR}/textproc/py-genshi \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
