@@ -1,5 +1,5 @@
 # Created by: Vany Serezhkin <ivan@serezhkin.com>
-# $FreeBSD: devel/p5-IO-Lambda/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-IO-Lambda/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IO-Lambda
 PORTVERSION=	1.23
@@ -47,4 +47,5 @@ MAN3=	IO::Lambda.3 \
 	IO::Lambda::Throttle.3 \
 	IO::Lambda::Thread.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
