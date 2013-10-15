@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	JStrack
-# Date created:				2010-06-28
-# Whom:					Chris Rees <utisoft@gmail.com>
-#
-# $FreeBSD: ports/science/jstrack/Makefile,v 1.9 2012/11/17 06:00:58 svnexp Exp $
-#
+# Created by: Chris Rees <utisoft@gmail.com>
+# $FreeBSD: science/jstrack/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	jstrack
 PORTVERSION=	3.3.4
@@ -34,6 +30,7 @@ SUB_LIST=	WISH=${WISH}
 
 PORTDOCS=	00-README_FIRST.txt HISTORY install.txt jstrackdoc-v2.pdf
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/lib/${PORTNAME}
 .for f in filt httpfilt tracker
