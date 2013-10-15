@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nph
-# Date created:				13 May 2006
-# Whom:					Jim Pirzyk <pirzyk@freebsd.org>
-#
-# $FreeBSD: ports/net/nph/Makefile,v 1.5 2012/11/17 06:00:07 svnexp Exp $
-#
+# Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
+# $FreeBSD: net/nph/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nph
 PORTVERSION=	1.2.3
@@ -62,6 +58,7 @@ MAN3=	ph_add.3 \
 		ph_whoami.3 \
 		ph_www_resolve.3
 
+NO_STAGE=	yes
 do-install:
 	@(cd ${BUILD_WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} install-recurse)
 
