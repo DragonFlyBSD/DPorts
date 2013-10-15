@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/ristretto/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: graphics/ristretto/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ristretto
 PORTVERSION=	0.6.3
@@ -25,4 +25,5 @@ INSTALLS_ICONS=	yes
 USE_XFCE=	configenv libmenu libutil xfconf
 USE_XORG=	x11
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
