@@ -1,9 +1,5 @@
-# New ports collection makefile for:	httplog
-# Date created:				25 November 2001
-# Whom:					anders
-#
-# $FreeBSD: ports/sysutils/httplog/Makefile,v 1.8 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: anders
+# $FreeBSD: sysutils/httplog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	httplog
 PORTVERSION=	2.1
@@ -22,6 +18,7 @@ PORTDOCS=	ChangeLog README
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 
+NO_STAGE=	yes
 post-patch:
 	(cd ${WRKSRC} && \
 	${REINPLACE_CMD} -e "s@<wait.h>@<sys/wait.h>@" httplog.c && \
