@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tl-aspell
-# Date created:                         28 August 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/tl-aspell/Makefile,v 1.7 2012/11/17 06:02:23 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/tl-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	5-tl-0.02-1
@@ -16,5 +12,6 @@ COMMENT=	Aspell Tagalog dictionary
 
 DICT=	 	tl
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
