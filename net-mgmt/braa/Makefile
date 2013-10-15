@@ -1,9 +1,5 @@
-# New ports collection makefile for:	braa
-# Date created:				31.05.2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/net-mgmt/braa/Makefile,v 1.25 2012/11/17 06:00:30 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: net-mgmt/braa/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	braa
 PORTVERSION=	0.82
@@ -21,6 +17,7 @@ LDFLAGS+=	-lcompat
 PORTDOCS=	README
 PLIST_FILES=	bin/braa
 
+NO_STAGE=	yes
 post-patch:
 .for file in Makefile
 	@${REINPLACE_CMD} -e \
