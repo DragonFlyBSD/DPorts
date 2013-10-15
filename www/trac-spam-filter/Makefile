@@ -1,5 +1,5 @@
 # Created by: sutra
-# $FreeBSD: ports/www/trac-spam-filter/Makefile,v 1.8 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-spam-filter/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	TracSpamFilter
 PORTVERSION=	0.2.1
@@ -21,4 +21,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}dev
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
