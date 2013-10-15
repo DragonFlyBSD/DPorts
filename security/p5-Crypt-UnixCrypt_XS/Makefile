@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-UnixCrypt_XS/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/p5-Crypt-UnixCrypt_XS/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-UnixCrypt_XS
 PORTVERSION=	0.09
@@ -16,4 +16,5 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN3=	Crypt::UnixCrypt_XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
