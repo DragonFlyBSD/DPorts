@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zc.buildout
-# Date created:				12 October, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zc.buildout/Makefile,v 1.3 2012/11/17 05:56:52 svnexp Exp $
-#
+# $FreeBSD: devel/py-zc.buildout/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zc.buildout
 PORTVERSION=	1.5.2
@@ -19,5 +14,7 @@ LICENSE=	ZPL21
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
