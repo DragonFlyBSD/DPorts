@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-Crc32/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/p5-Digest-Crc32/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-Crc32
 PORTVERSION=	0.01
@@ -17,4 +17,5 @@ MAN3=	Digest::Crc32.3
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION:C/\.//}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
