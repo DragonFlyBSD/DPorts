@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/xsysstats/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: sysutils/xsysstats/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xsysstats
 PORTVERSION=	1.51
@@ -20,6 +20,7 @@ ALL_TARGET=	xsysstats
 
 PLIST_FILES=	bin/xsysstats
 
+NO_STAGE=	yes
 pre-patch:
 	${RM} ${WRKSRC}/headers.h && ${TOUCH} ${WRKSRC}/headers.h
 
