@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nvidia-xconfig
-# Date created:				10 Dec 2005
-# Whom:					Alexander Nedotsukov <bland@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/nvidia-xconfig/Makefile,v 1.31 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
+# $FreeBSD: x11/nvidia-xconfig/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	nvidia-xconfig
 PORTVERSION=	310.14
@@ -33,4 +29,5 @@ post-patch:	.SILENT
 	${REINPLACE_CMD} -e '/^prefix/s/=/?&/' \
 		 -e '/^MANDIR/s|share/||' ${WRKSRC}/utils.mk
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
