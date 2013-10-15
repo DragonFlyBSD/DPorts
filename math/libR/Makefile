@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: ports/math/libR/Makefile,v 1.3 2012/12/18 23:19:34 svnexp Exp $
+# $FreeBSD: math/libR/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libR
 
@@ -12,4 +12,5 @@ PLIST=	${.CURDIR}/pkg-plist
 PLIST_FILES=	lib/R/lib/libR.a
 PLIST_DIRSTRY=	lib/R/lib lib/R
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
