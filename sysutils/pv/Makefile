@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: sysutils/pv/Makefile 315447 2013-03-28 07:52:33Z martymac $
+# $FreeBSD: sysutils/pv/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pv
 PORTVERSION=	1.4.6
@@ -26,6 +26,7 @@ PORTDOCS=	README INSTALL NEWS PACKAGE \
 OPTIONS_DEFINE=	NLS LFS
 OPTIONS_DEFAULT=	LFS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLFS}
