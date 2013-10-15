@@ -1,9 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	ipcalc
-# Date created:			May 21, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: net-mgmt/ipcalc/Makefile 326245 2013-09-04 03:27:37Z az $
+# Created by: ijliao
+# $FreeBSD: net-mgmt/ipcalc/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ipcalc
 PORTVERSION=	0.41
@@ -18,6 +14,7 @@ PLIST_FILES=	bin/ipcalc
 NO_BUILD=	yes
 USES=		perl5
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
 
