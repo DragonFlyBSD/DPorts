@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: www/extsm/Makefile 308605 2012-12-10 13:43:43Z bapt $
+# $FreeBSD: www/extsm/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	extsm
 PORTVERSION=	1.1
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/xsm
 OPTIONS_DEFINE=	TOMCAT6 RESIN3 DOCS EXAMPLES
 OPTIONS_DEFAULT=	TOMCAT6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
