@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: www/middleman/Makefile 322926 2013-07-13 13:32:48Z bapt $
+# $FreeBSD: www/middleman/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	middleman
 PORTVERSION=	1.9.1
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	--enable-mtime
 MMAN_CACHE=	/var/cache/mman
 PLIST_SUB+=	MMAN_CACHE=${MMAN_CACHE}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	's|/usr/bin/mman|${PREFIX}/bin/mman|g ; \
