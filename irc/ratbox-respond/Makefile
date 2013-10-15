@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ratbox-respond
-# Date Created:				2006-04-29
-# Whom:					Shaun Amott <shaun@inerd.com>
-#
-# $FreeBSD: ports/irc/ratbox-respond/Makefile,v 1.7 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Shaun Amott <shaun@inerd.com>
+# $FreeBSD: irc/ratbox-respond/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ratbox-respond
 PORTVERSION=	1.0
@@ -26,6 +22,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/ratbox-respond bin/makekeypair
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/makekeypair ${PREFIX}/bin
