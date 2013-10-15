@@ -1,9 +1,5 @@
-# New ports collection makefile for:    jpeginfo
-# Date created:         9.8.2001
-# Whom:                 ache
-#
-# $FreeBSD: ports/graphics/jpeginfo/Makefile,v 1.16 2012/11/17 05:58:10 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: graphics/jpeginfo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jpeginfo
 PORTVERSION=	1.6.1
@@ -24,4 +20,5 @@ MAKE_ARGS=	mandir=${MANPREFIX}/man
 MAN1=		jpeginfo.1
 PLIST_FILES=	bin/jpeginfo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
