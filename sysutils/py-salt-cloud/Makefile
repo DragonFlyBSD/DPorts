@@ -1,5 +1,5 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-salt-cloud/Makefile 321953 2013-06-28 08:16:17Z culot $
+# $FreeBSD: sysutils/py-salt-cloud/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	salt-cloud
 PORTVERSION=	0.8.9
@@ -27,6 +27,7 @@ BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}salt>=0.13.0:${PORTSDIR}/sysutils/py-salt
 		${PYTHON_PKGNAMEPREFIX}botocore>=0:${PORTSDIR}/devel/py-botocore \
 		sshpass>=0:${PORTSDIR}/security/sshpass
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/setup.py
 
