@@ -1,5 +1,5 @@
 # Created by: Chris Petrik <chris@officialunix.com>
-# $FreeBSD: editors/diakonos/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: editors/diakonos/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	diakonos
 PORTVERSION=	0.9.1
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 SUB_FILES=	installation.rb
 SUB_LIST=	RUBY_SITELIBDIR=${RUBY_SITELIBDIR}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/bin/env ruby|${RUBY}|g' ${WRKSRC}/bin/${PORTNAME}
 
