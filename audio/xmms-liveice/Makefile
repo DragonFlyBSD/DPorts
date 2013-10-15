@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmms-liveice
-# Date created:			5 Febrary 2000
-# Whom:				Espen Skoglund <esk@ira.uka.de>
-#
-# $FreeBSD: ports/audio/xmms-liveice/Makefile,v 1.28 2012/11/17 05:54:48 svnexp Exp $
-#
+# Created by: Espen Skoglund <esk@ira.uka.de>
+# $FreeBSD: audio/xmms-liveice/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-liveice
 PORTVERSION=	1.0.0
@@ -23,6 +19,7 @@ WRKSRC=		${WRKDIR}/LiveIce-${PORTVERSION}
 PLIST_FILES=	lib/xmms/Effect/libliveice.la \
 		lib/xmms/Effect/libliveice.so
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
