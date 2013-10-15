@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/reminiscence/Makefile 318208 2013-05-14 23:31:58Z amdmi3 $
+# $FreeBSD: games/reminiscence/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	REminiscence
 PORTVERSION=	0.2.1
@@ -21,6 +21,7 @@ SUB_FILES=	pkg-message
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
