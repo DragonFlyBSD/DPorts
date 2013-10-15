@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/osd-lyrics/Makefile 323724 2013-07-26 14:31:26Z bapt $
+# $FreeBSD: audio/osd-lyrics/Makefile 329120 2013-10-02 22:48:09Z marino $
 
 PORTNAME=	osdlyrics
 PORTVERSION=	0.4.3
@@ -23,11 +23,12 @@ CONFIGURE_ENV=	DATADIRNAME=share
 # see this bug for details: http://llvm.org/bugs/show_bug.cgi?id=3814
 #CONFIGURE_ARGS=	--with-werror
 USES=		gettext gmake iconv pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk20
 USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
 PORTDOCS=	AUTHORS ChangeLog NEWS README
-LDFLAGS=	-L${LOCALBASE}/lib -liconv
+LDFLAGS=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 OPTIONS_DEFINE=	DOCS MPD XMMS2 AMAROK
 MPD_DESC=	Enable MPD support
