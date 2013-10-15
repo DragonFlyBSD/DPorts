@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/fluctuate/Makefile 321244 2013-06-19 12:43:28Z bsam $
+# $FreeBSD: biology/fluctuate/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	fluctuate
 PORTVERSION=	1.40
@@ -18,6 +18,7 @@ PORTDOCS=	errors.doc fluctuate.doc
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 
