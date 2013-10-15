@@ -1,8 +1,5 @@
-# New ports collection makefile for:    jabber.el
-# Date created:                         26 May 2006
-# Whom:                                 Max N. Boyarov <m.boyarov@bsd.by>
-#
-# $FreeBSD: net-im/jabber.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# Created by: Max N. Boyarov <m.boyarov@bsd.by>
+# $FreeBSD: net-im/jabber.el/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	jabber.el
 PORTVERSION=	0.8.0
@@ -23,6 +20,7 @@ USE_EMACS=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/emacs-jabber \
