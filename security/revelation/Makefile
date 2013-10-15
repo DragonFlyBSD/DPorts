@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/revelation/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/revelation/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	revelation
 PORTVERSION=	0.4.14
@@ -38,6 +38,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 DICTPATH=	${LOCALBASE}/libdata/cracklib/pw_dict
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPPLET}
