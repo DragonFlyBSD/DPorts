@@ -1,5 +1,5 @@
 # Created by: anarcat@anarcat.ath.cx
-# $FreeBSD: finance/ledgersmb12/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: finance/ledgersmb12/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	ledgersmb
 PORTVERSION=	1.2.17
@@ -23,6 +23,7 @@ USE_PERL5=	run build patch
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
