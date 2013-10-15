@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: sysutils/hoz/Makefile 326995 2013-09-11 17:17:35Z antoine $
+# $FreeBSD: sysutils/hoz/Makefile 329930 2013-10-09 21:15:37Z acm $
 
 PORTNAME=	hoz
 PORTVERSION=	1.65
@@ -14,12 +14,15 @@ COMMENT=	File splitter, GTK and CLI versions
 USE_GNOME=	#
 USES=		gmake pkgconfig
 
+MAKE_ARGS=	CC="${CC}"
+
 PORTDOCS=	README
 
 OPTIONS_DEFINE=	CLI GTK2 LANG_ES LANG_EN LANG_FR
 OPTIONS_DEFAULT=	CLI GTK2 LANG_EN
 LANG_EN_DESC=	language support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
