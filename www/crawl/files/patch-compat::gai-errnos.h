@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/crawl/files/patch-compat::gai-errnos.h,v 1.2 2012/11/17 06:02:30 svnexp Exp $
+$FreeBSD: www/crawl/files/patch-compat::gai-errnos.h 300897 2012-07-14 14:29:18Z beat $
 
 --- compat/gai-errnos.h.orig	Fri Mar 12 07:29:36 2004
 +++ compat/gai-errnos.h	Fri Mar 12 07:29:52 2004

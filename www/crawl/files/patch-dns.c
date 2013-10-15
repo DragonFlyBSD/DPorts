@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/crawl/files/patch-dns.c,v 1.3 2012/11/17 06:02:30 svnexp Exp $
+$FreeBSD: www/crawl/files/patch-dns.c 300897 2012-07-14 14:29:18Z beat $
 
 --- dns.c.orig	Sun May 18 10:21:33 2003
 +++ dns.c	Mon May 30 16:20:14 2005
