@@ -1,5 +1,5 @@
 # Created by: n_hibma@qubesoft.com
-# $FreeBSD: mail/mailman/Makefile 326098 2013-09-02 21:52:27Z flo $
+# $FreeBSD: mail/mailman/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailman
 DISTVERSION=	2.1.15
@@ -73,6 +73,7 @@ HTDIG_DESC=	- EXPERIMENTAL - htdig integration patches
 NAMAZU2_DESC=	Make private archives searchable with namazu2
 MTA_DESC=	Integrate with which MTA?
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
