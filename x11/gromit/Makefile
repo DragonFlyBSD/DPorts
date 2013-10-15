@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: x11/gromit/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/gromit/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	gromit
 PORTVERSION=	20041213
@@ -12,9 +12,11 @@ COMMENT=	GRaphics Over Miscellaneous Objects (Gromit)
 
 USE_GNOME=	gtk20
 USES=		pkgconfig
+CFLAGS+=	-lm
 
 DOCS=		AUTHORS ChangeLog README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
