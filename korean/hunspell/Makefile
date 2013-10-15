@@ -1,4 +1,4 @@
-# $FreeBSD: ports/korean/hunspell/Makefile,v 1.5 2012/11/17 05:58:46 svnexp Exp $
+# $FreeBSD: korean/hunspell/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	0.5.6
@@ -26,6 +26,7 @@ PROJECTHOST=	spellcheck-ko
 
 MAKE_ENV+=	PYTHON=${PYTHON_CMD}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/ko.aff ${DATADIR}/ko_KR.aff
