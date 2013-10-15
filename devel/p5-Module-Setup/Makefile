@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Setup/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/p5-Module-Setup/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Setup
 PORTVERSION=	0.09
@@ -44,4 +44,5 @@ MAN3=		Module::MEMOja.3 \
 		Module::Setup::Test::Flavor.3 \
 		Module::Setup::Test::Utils.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
