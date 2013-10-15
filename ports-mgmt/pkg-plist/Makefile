@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: ports/ports-mgmt/pkg-plist/Makefile,v 1.3 2012/11/17 06:00:45 svnexp Exp $
+# $FreeBSD: ports-mgmt/pkg-plist/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	pkg-plist
 PORTVERSION=	1.2
@@ -17,6 +17,7 @@ PLIST_FILES=	bin/pkg-plist
 NO_BUILD=	yes
 FETCH_ARGS=	-Fpr
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg-plist ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/pkg-plist.1 ${MAN1PREFIX}/man/man1/
