@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shout
-# Date created:				14 Jun 2000
-# Whom:					will
-#
-# $FreeBSD: ports/audio/shout/Makefile,v 1.6 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: audio/shout/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	shout
 PORTVERSION=	0.8.0
