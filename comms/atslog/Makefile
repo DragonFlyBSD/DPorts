@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: comms/atslog/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: comms/atslog/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	atslog
 PORTVERSION=	2.1.1
@@ -28,6 +28,7 @@ MAN8=		${USE_RC_SUBR}.8 ${PORTNAME}master.8
 CONFIGS=	${PORTNAME}.conf.default ${PORTNAME}.conf.default.rus
 CONFIGURE_ARGS+=--localstatedir=/var
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWWW}
