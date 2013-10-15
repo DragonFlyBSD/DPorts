@@ -1,15 +1,15 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/ffmpeg-devel/Makefile 329667 2013-10-07 09:21:13Z koobs $
 
 PORTNAME=	ffmpeg
 DISTVERSION=	2012-10-13
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://git.videolan.org/
 PKGNAMESUFFIX=	-devel
 DISTNAME=	ffmpeg-${GIT_SUFFIX}
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Realtime audio/video encoder/converter and streaming server
 
 LICENSE=		GPLv2 LGPL21
@@ -30,10 +30,9 @@ FETCH_URL=	"http://git.videolan.org/?p=ffmpeg.git;a=snapshot;h=${GIT_SNAPSHOT};s
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	config.err
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		gmake perl5 pkgconfig
 WANT_SDL=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 
 OPTIONS_DEFINE=	AACPLUS ALSA AMR_NB AMR_WB ASS CDIO CELT DEBUG FAAC \
 		FDK_AAC FFSERVER FONTCONFIG FREETYPE FREI0R GNUTLS GSM LAME \
@@ -63,6 +62,7 @@ MAN1=		ffmpeg${FFMPEG_SUFFIX}.1 ffprobe${FFMPEG_SUFFIX}.1
 USE_LDCONFIG=	${PREFIX}/lib/ffmpeg${FFMPEG_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # ssl
