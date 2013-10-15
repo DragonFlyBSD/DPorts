@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: databases/rrdman/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/rrdman/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	rrdman
 PORTVERSION=	1.0.1
@@ -18,4 +18,5 @@ USES=		perl5
 PLIST_FILES=	bin/rrd_hwreapply
 MAN1=		rrd_hwreapply.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
