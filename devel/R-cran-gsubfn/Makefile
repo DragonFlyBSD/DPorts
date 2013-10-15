@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/R-cran-gsubfn/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: devel/R-cran-gsubfn/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gsubfn
 DISTVERSION=	0.6-5
@@ -17,4 +17,5 @@ RUN_DEPENDS=    R-cran-proto>=0.3.9.2_6:${PORTSDIR}/devel/R-cran-proto
 USE_R_MOD=      yes
 R_MOD_AUTOPLIST=        yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
