@@ -1,5 +1,5 @@
 # Created by: Aaron VonderHaar <avh4@usa.net>
-# $FreeBSD: games/gnurobots/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: games/gnurobots/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnurobots
 PORTVERSION=	1.2.0
@@ -19,6 +19,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=|#CFLAGS=|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|#include <pty.h>||g' ${WRKSRC}/src/ui-cmdwin.c
