@@ -1,5 +1,5 @@
 # Created by: jhb
-# $FreeBSD: emulators/bfe/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: emulators/bfe/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	bfe2
 PORTVERSION=	20030723
@@ -28,6 +28,7 @@ USE_GNOME+=	gtk12
 CONFIGURE_ARGS+=	--gtk 1.2
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|%%CFLAGS%%|"${CFLAGS}"|g ; \
