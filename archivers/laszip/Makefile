@@ -1,5 +1,5 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: archivers/laszip/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: archivers/laszip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	laszip
 PORTVERSION=	2.1.0
@@ -11,6 +11,7 @@ COMMENT=	Library for lossless LAS compression
 
 LICENSE=	LGPL3
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USES=		cmake
 USE_LDCONFIG=	yes
