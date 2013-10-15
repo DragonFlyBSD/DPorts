@@ -1,9 +1,5 @@
-# New ports collection makefile for:	privoxy+ipv6
-# Date created:				17 June 2003
-# Whom:					Lars Eggert
-#
-# $FreeBSD: ports/www/privoxy+ipv6/Makefile,v 1.16 2012/11/17 06:02:58 svnexp Exp $
-#
+# Created by: Lars Eggert
+# $FreeBSD: www/privoxy+ipv6/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	privoxy+ipv6
 PORTVERSION=	20030523
@@ -34,6 +30,7 @@ MAKEFILE=	GNUmakefile
 
 MAN1=		privoxy.1
 
+NO_STAGE=	yes
 post-install:
 	@for file in config user.action; do \
 		if [ ! -f ${ETCDIR}/$$file ]; then \
