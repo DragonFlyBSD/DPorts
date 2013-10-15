@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/hs-bsd-sysctl/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-bsd-sysctl/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	bsd-sysctl
 PORTVERSION=	1.0.7
@@ -11,5 +11,6 @@ COMMENT=	Access to the BSD sysctl(3) interface
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
