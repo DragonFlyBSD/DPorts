@@ -1,5 +1,5 @@
 # Created by: rene
-# $FreeBSD: lang/bas2tap/Makefile 315209 2013-03-25 10:09:39Z rene $
+# $FreeBSD: lang/bas2tap/Makefile 328129 2013-09-24 13:30:45Z rene $
 
 PORTNAME=	bas2tap
 PORTVERSION=	2.5
@@ -26,11 +26,11 @@ do-build:
 	${CC} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME} -lm ${CFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
