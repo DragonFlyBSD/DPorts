@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/archivers/jzip.org/Makefile,v 1.11 2012/12/10 13:24:54 svnexp Exp $
+# $FreeBSD: archivers/jzip.org/Makefile 328239 2013-09-25 02:54:34Z vanilla $
 
 PORTNAME=	jzip.org
 PORTVERSION=	0.2.0
@@ -27,7 +27,7 @@ do-build:
 			i18n/*.properties jzipdotorg/*.class images/*.png
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
-	@${INSTALL_DATA} ${WRKSRC}/bin/${PORTNAME}.jar ${JAVAJARDIR}
+	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}/${PREFIX}/bin/${PORTNAME}
+	@${INSTALL_DATA} ${WRKSRC}/bin/${PORTNAME}.jar ${STAGEDIR}/${JAVAJARDIR}
 
 .include <bsd.port.mk>
