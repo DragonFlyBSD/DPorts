@@ -1,9 +1,5 @@
-# New ports collection makefile for:	backupme
-# Date created:				21 May 2010
-# Whom:					Yaroslav Berezhinskiy <yaroslav@berezhinskiy.org.ua>
-#
-# $FreeBSD: sysutils/backupme/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: Yaroslav Berezhinskiy <yaroslav@berezhinskiy.org.ua>
+# $FreeBSD: sysutils/backupme/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	backupme
 PORTVERSION=	0.1
@@ -32,6 +28,7 @@ NO_INSTALL_MANPAGES=	yes
 PLIST_FILES=	bin/${PORTNAME} \
 		etc/${PORTNAME}.sample.xml
 
+NO_STAGE=	yes
 do-install:
 	@${CP} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	@${CP} ${WRKSRC}/${PORTNAME}.sample.xml ${PREFIX}/etc/
