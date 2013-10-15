@@ -1,9 +1,5 @@
-# New ports collection makefile for:	KDE iconset Umicons
-# Date created:		Fri Feb 13 11:24:29 UTC 2004
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/kde-icons-umicons/Makefile,v 1.4 2012/11/17 06:03:32 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: x11-themes/kde-icons-umicons/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	umicons
 PORTVERSION=	2.0
@@ -16,4 +12,5 @@ COMMENT=	KDE Umicons iconset
 WRKSRC=		${WRKDIR}/Umicons_${PORTVERSION}
 PORT_SHAREDIR?=	"${PORTNAME}-${PORTVERSION}"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../kde-icons-noia/Makefile.icons"
