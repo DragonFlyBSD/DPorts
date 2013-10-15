@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gconf-editor/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: sysutils/gconf-editor/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.85 2010/09/27 18:22:59 kwm Exp $
 
 PORTNAME=	gconf-editor
@@ -25,4 +25,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		gconf-editor.1
 GCONF_SCHEMAS=	gconf-editor.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
