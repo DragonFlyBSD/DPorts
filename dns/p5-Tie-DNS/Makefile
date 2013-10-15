@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: dns/p5-Tie-DNS/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: dns/p5-Tie-DNS/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Tie-DNS
 PORTVERSION=	0.6.2
@@ -25,6 +25,7 @@ MAN3=		Tie::DNS.3
 
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@${INSTALL_DATA} ${WRKSRC}/eg/* ${EXAMPLESDIR}
