@@ -1,5 +1,5 @@
 # Created by: Jason Burgess <dev@fenux.net>
-# $FreeBSD: converters/p5-Convert-IBM390/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Convert-IBM390/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Convert-IBM390
 PORTVERSION=	0.27
@@ -40,4 +40,5 @@ MAN3=	Convert::IBM390.3 \
 	Convert::IBM390::CP01149.3
 	
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
