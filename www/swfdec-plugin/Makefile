@@ -1,5 +1,5 @@
 # Created by: anholt
-# $FreeBSD: www/swfdec-plugin/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: www/swfdec-plugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	swfdec-plugin
 PORTVERSION=	0.8.2
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 USE_WEBPLUGINS=	gecko*
 WEBPLUGINS_FILES=libswfdecmozilla.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 .include <bsd.port.post.mk>
