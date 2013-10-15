@@ -1,9 +1,5 @@
-# Ports collection makefile for:	bzr-scmproj
-# Date created:				2012-04-13
-# Whom:					Carlo Strub <cs@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/bzr-scmproj/Makefile,v 1.3 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Carlo Strub
+# $FreeBSD: devel/bzr-scmproj/Makefile 329497 2013-10-05 19:05:57Z cs $
 
 PORTNAME=	bzr-scmproj
 PORTVERSION=	0.6.2
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpadlibrarian.net/101701273/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Organise and manage a collection of bzr branches
 
 LICENSE=	GPLv2
@@ -23,4 +19,5 @@ RUN_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
