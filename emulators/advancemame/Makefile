@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: emulators/advancemame/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/advancemame/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	advancemame
 PORTVERSION=	1.2
@@ -52,6 +52,7 @@ PLIST_DIRS=	%%DATADIR%%/snap \
 		%%DATADIR%%/artwork \
 		%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFREETYPE}
