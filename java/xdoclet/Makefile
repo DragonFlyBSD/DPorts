@@ -1,5 +1,5 @@
 # Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-# $FreeBSD: ports/java/xdoclet/Makefile,v 1.14 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/xdoclet/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	xdoclet
 PORTVERSION=	1.2.3
@@ -29,6 +29,7 @@ PLIST_SUB+=	XJAVADOC_VER="${XJAVADOC_VER}"
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}/xdoclet-${PORTVERSION} && ${FIND} lib -name '*xdoclet*' -exec \
 	    ${INSTALL_DATA} \{} ${JAVAJARDIR} \;
