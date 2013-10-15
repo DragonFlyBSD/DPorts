@@ -1,5 +1,5 @@
 # Created by: lbr
-# $FreeBSD: www/p5-Catalyst-Runtime/Makefile 326601 2013-09-07 10:19:43Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Runtime/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Runtime
 PORTVERSION=	5.90042
@@ -14,6 +14,7 @@ COMMENT=	The Elegant MVC Web Application Framework (Runtime)
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
+NO_STAGE=	yes
 # Do not add the following ports to TEST_DEPENDS to avoid cyclic dependencies in tinderbox:
 # - devel/p5-Test-WWW-Mechanize-Catalyst
 # - www/p5-Catalyst-Engine-PSGI
