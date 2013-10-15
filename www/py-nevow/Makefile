@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-nevow
-# Date created:		2005-04-16
-# Whom:			Choe, Cheng-Dae
-#
-# $FreeBSD: www/py-nevow/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Choe, Cheng-Dae
+# $FreeBSD: www/py-nevow/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	nevow
 PORTVERSION=	0.10.0
@@ -29,6 +25,7 @@ PKGMESSAGE=	${WRKSRC}/pkg-message
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${ECHO_CMD} -n ">> Installing documents to ${DOCSDIR}..."
