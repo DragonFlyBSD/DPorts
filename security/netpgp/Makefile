@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/netpgp/Makefile,v 1.13 2012/12/31 14:49:54 svnexp Exp $
+# $FreeBSD: security/netpgp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	netpgp
 PORTVERSION=	20101107
@@ -22,4 +22,5 @@ MAN1+=		netpgp.1 \
 MAN3+=		libnetpgp.3 \
 		libmj.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
