@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-require_all
-# Date created:				2011-06-16
-# Whom:					rpsfa@rit.edu
-#
-# $FreeBSD: ports/devel/rubygem-require_all/Makefile,v 1.5 2012/11/17 05:57:00 svnexp Exp $
+# Created by: rpsfa@rit.edu
+# $FreeBSD: devel/rubygem-require_all/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	require_all
 PORTVERSION=	1.2.1
@@ -16,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
