@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/dina/Makefile,v 1.1 2012/12/09 17:25:26 svnexp Exp $
+# $FreeBSD: x11-fonts/dina/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	dina
 PORTVERSION=	2.89
@@ -22,6 +22,7 @@ FONTDIR=	lib/X11/fonts/${PORTNAME}
 NO_BUILD=	yes
 PLIST_SUB+=	FONTDIR=${FONTDIR}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${FONTDIR}
 	@${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${PREFIX}/${FONTDIR}
