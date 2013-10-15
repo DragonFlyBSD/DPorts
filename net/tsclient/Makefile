@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: net/tsclient/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: net/tsclient/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tsclient
 PORTVERSION=	0.150
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	GNOME
 TIGHTVNC_DESC=	vncviewer support
 XNEST_DESC=	X via Xnest support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOME}
