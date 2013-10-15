@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: x11-wm/windowlab/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-wm/windowlab/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	windowlab
 PORTVERSION=	1.40
@@ -25,6 +25,7 @@ PORTDOCS=	CHANGELOG README
 PLIST_FILES=	bin/windowlab %%ETCDIR%%/menurc
 PLIST_DIRS=	%%ETCDIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXFT}
