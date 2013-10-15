@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libtcp4u
-# Date created:				27 November 2001
-# Whom:					Juraj Lutter <otis@sk.freebsd.org>
-#
-# $FreeBSD: ports/net/libtcp4u/Makefile,v 1.4 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Juraj Lutter <otis@sk.freebsd.org>
+# $FreeBSD: net/libtcp4u/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libtcp4u
 PORTVERSION=	3.3.1
@@ -26,6 +22,7 @@ PLIST_FILES=	include/udp4u.h include/tcp4u.h \
 		include/smtp4u.h include/http4u.h \
 		lib/libtcp4ux.a
 
+NO_STAGE=	yes
 do-configure:
 	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/../Unix/Makefile
 	${CP} ${WRKSRC}/../Unix/Makefile ${WRKSRC}
