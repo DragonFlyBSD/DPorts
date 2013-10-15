@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-geoip/Makefile 319734 2013-06-02 23:43:55Z swills $
+# $FreeBSD: net/rubygem-geoip/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	geoip
 PORTVERSION=	1.2.1
@@ -16,4 +16,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/geoip
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
