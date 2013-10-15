@@ -1,5 +1,5 @@
 # Created by: Matthew Donovan <kitchetech@gmail.com>
-# $FreeBSD: x11/sterm/Makefile 322262 2013-07-04 06:14:25Z jgh $
+# $FreeBSD: x11/sterm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	sterm
 PORTVERSION=	0.4.1
@@ -25,6 +25,7 @@ PLIST_FILES=	bin/st
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-everything::
