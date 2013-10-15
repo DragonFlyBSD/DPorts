@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: security/py-fail2ban/Makefile 325700 2013-08-30 14:23:33Z culot $
+# $FreeBSD: security/py-fail2ban/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fail2ban
 PORTVERSION=	0.8.10
@@ -36,6 +35,7 @@ FILES=	${WRKSRC}/fail2ban-regex \
 		${WRKSRC}/client/configreader.py \
 		${WRKSRC}/fail2ban-client
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
