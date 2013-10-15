@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-Lightbox
-# Date created:		2007-02-14
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-Lightbox/Makefile,v 1.6 2012/11/17 06:02:58 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: www/py-Lightbox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Lightbox
 PORTVERSION=	2.1
@@ -23,4 +19,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
