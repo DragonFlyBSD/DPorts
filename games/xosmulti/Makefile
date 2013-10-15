@@ -1,9 +1,5 @@
-# ports collection makefile for:   xosmulti
-# Date created:        17 February 1999
-# Whom:                Seiichirou Hiraoka
-#
-# $FreeBSD: ports/games/xosmulti/Makefile,v 1.11 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Seiichirou Hiraoka
+# $FreeBSD: games/xosmulti/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xosmulti
 PORTVERSION=	1.00
@@ -20,6 +16,7 @@ COMMENT=	A little girl cartoon on the top of the active window
 WRKSRC=		${WRKDIR}/xosmulti
 USE_XORG=	xbitmaps x11 xt xi
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xosmulti ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
