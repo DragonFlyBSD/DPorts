@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/mod_fcgid/Makefile 325503 2013-08-28 05:05:06Z ohauer $
+# $FreeBSD: www/mod_fcgid/Makefile 330031 2013-10-10 20:02:42Z ohauer $
 
 PORTNAME=	mod_fcgid
-PORTVERSION=	2.3.7
+PORTVERSION=	2.3.9
 CATEGORIES=	www
 MASTER_SITES=		${MASTER_SITE_APACHE_HTTPD}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -29,13 +29,9 @@ INSTALL_TARGET=	install-modules-yes
 DOCSDIR=	${PREFIX}/share/doc/apache${APACHE_VERSION}/mod
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/docs/manual/mod/mod_fcgid.html ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/docs/manual/mod/mod_fcgid.html.en ${DOCSDIR}
-.endif
-	${MKDIR} -m 700 /var/run/fcgidsock
-	${CHOWN} www:www /var/run/fcgidsock
-	@${CAT} ${PKGMESSAGE}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/docs/manual/mod/mod_fcgid.html ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/docs/manual/mod/mod_fcgid.html.en ${STAGEDIR}${DOCSDIR}
+	${MKDIR} -m 700 ${STAGEDIR}/var/run/fcgidsock
 
 .include <bsd.port.mk>
