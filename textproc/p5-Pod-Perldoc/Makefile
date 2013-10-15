@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: textproc/p5-Pod-Perldoc/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-Pod-Perldoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Perldoc
 PORTVERSION=	3.17
@@ -28,4 +28,5 @@ MAN3=		Pod::Perldoc::ToNroff.3 \
 		Pod::Perldoc::ToTerm.3 \
 		Pod::Perldoc::ToANSI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
