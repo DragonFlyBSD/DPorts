@@ -1,9 +1,5 @@
-# New ports collection makefile for:	playd
-# Date created:				Apr 29, 2009
-# Whom:					Aldis Berjoza <killasmurf86@gmail.com>
-#
-# $FreeBSD: ports/multimedia/playd/Makefile,v 1.22 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: Aldis Berjoza <killasmurf86@gmail.com>
+# $FreeBSD: multimedia/playd/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	playd
 PORTVERSION=	1.22.3
@@ -25,6 +21,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/graudeejs-playd-${REV}
 REV=		1e09c80
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/playd.sh ${PREFIX}/bin/playd
 	${INSTALL_MAN} ${WRKSRC}/man/man1/playd.1 ${PREFIX}/man/man1/
