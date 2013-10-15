@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/ruby-gnome2/Makefile.common,v 1.42 2012/11/17 06:03:19 svnexp Exp $
+# $FreeBSD: x11/ruby-gnome2/Makefile.common 303485 2012-09-01 15:41:31Z swills $
 
 RUBY_GNOME_VERSION=		1.1.5
 RUBY_GNOME_PORTVERSION=		${RUBY_GNOME_VERSION}
