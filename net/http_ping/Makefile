@@ -1,5 +1,5 @@
 # Created by: Dima Dorfman <dd@FreeBSD.org>
-# $FreeBSD: net/http_ping/Makefile 313379 2013-03-03 21:01:37Z hrs $
+# $FreeBSD: net/http_ping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	http_ping
 PORTVERSION=	20050629
@@ -17,6 +17,7 @@ MAN1=		http_ping.1
 MANCOMPRESSED=	no
 PLIST_FILES=	bin/http_ping
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/http_ping ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/http_ping.1 ${PREFIX}/man/man1
