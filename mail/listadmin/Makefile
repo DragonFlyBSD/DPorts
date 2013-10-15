@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	listadmin
-# Date Created:			29 May 2010
-# Whom:					Christer Edwards <christer.edwards@gmail.com>
-#
-# $FreeBSD: mail/listadmin/Makefile 326272 2013-09-04 13:07:40Z az $
-#
+# Created by: Christer Edwards <christer.edwards@gmail.com>
+# $FreeBSD: mail/listadmin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	listadmin
 PORTVERSION=	2.40
@@ -24,6 +20,7 @@ USE_PERL5=	run
 PLIST_FILES=	bin/listadmin
 MAN1=		listadmin.1
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/listadmin.pl ${PREFIX}/bin/listadmin
 	@${INSTALL_MAN} ${WRKSRC}/listadmin.man ${MAN1PREFIX}/man/man1/listadmin.1
