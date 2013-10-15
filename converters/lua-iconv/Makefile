@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lua-iconv
-# Date created:			        04 Dec 2009
-# Whom:					vanilla@
-#
-# $FreeBSD: converters/lua-iconv/Makefile 326307 2013-09-04 18:06:07Z madpilot $
-#
+# Created by: vanilla@
+# $FreeBSD: converters/lua-iconv/Makefile 328152 2013-09-24 16:05:33Z vanilla $
 
 PORTNAME=	iconv
 PORTVERSION=	6
@@ -26,6 +22,7 @@ post-patch:
 		s|%%ICONV_LIB%%|${ICONV_LIB}|' ${WRKSRC}/Makefile
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/iconv.so ${LUA_MODLIBDIR}
+	@if [ ! -d ${STAGEDIR}${LUA_MODLIBDIR} ]; then ${MKDIR} ${STAGEDIR}/${LUA_MODLIBDIR}; fi
+	@${INSTALL_PROGRAM} ${WRKSRC}/iconv.so ${STAGEDIR}/${LUA_MODLIBDIR}
 
 .include <bsd.port.mk>
