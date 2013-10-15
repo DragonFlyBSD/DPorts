@@ -1,4 +1,4 @@
-# $FreeBSD: www/gstreamer1-plugins-neon/Makefile 325107 2013-08-21 11:24:07Z kwm $
+# $FreeBSD: www/gstreamer1-plugins-neon/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	www
@@ -10,4 +10,5 @@ DIST=		bad
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
