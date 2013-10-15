@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: dns/p5-POE-Component-Client-DNSBL/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-POE-Component-Client-DNSBL/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	POE-Component-Client-DNSBL
 PORTVERSION=	1.08
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	POE::Component::Client::DNSBL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
