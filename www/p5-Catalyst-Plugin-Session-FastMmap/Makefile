@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-Plugin-Session-FastMmap
-# Date created:				08 May 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-FastMmap/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-FastMmap/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Session-FastMmap
 PORTVERSION=	0.13
@@ -32,4 +28,5 @@ MAN3=	Catalyst::Plugin::Session::FastMmap.3
 regression-test: build
 	cd ${WRKSRC}/ && ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
