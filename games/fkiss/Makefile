@@ -1,9 +1,5 @@
-# ports collection makefile for:	fkiss
-# Date created:		31 Oct 1998
-# Whom:			Seiichirou Hiraoka
-#
-# $FreeBSD: ports/games/fkiss/Makefile,v 1.22 2012/11/17 05:57:38 svnexp Exp $
-#
+# Created by: Seiichirou Hiraoka
+# $FreeBSD: games/fkiss/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	fkiss
 PORTVERSION=	0.33a
@@ -33,6 +29,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/fkiss
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mesound}!=""
