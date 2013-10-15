@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: net/vino/Makefile 326152 2013-09-03 14:16:20Z bapt $
+# $FreeBSD: net/vino/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/vino/Makefile,v 1.81 2010/09/27 13:51:24 kwm Exp $
 
 PORTNAME=	vino
@@ -35,4 +35,5 @@ CONFIGURE_ARGS+=--enable-libnotify=yes
 CONFIGURE_ARGS+=--enable-libnotify=no
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
