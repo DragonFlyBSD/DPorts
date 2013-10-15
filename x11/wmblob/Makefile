@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: x11/wmblob/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/wmblob/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	wmblob
 PORTVERSION=	1.0.3
@@ -19,6 +19,7 @@ GNU_CONFIGURE=	yes
 MAN1=		wmblob.1
 PLIST_FILES=	bin/wmblob
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/wmblob ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/doc/wmblob.1 ${MANPREFIX}/man/man1
