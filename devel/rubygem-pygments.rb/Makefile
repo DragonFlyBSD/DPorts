@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-pygments.rb/Makefile 322096 2013-06-30 19:07:58Z swills $
+# $FreeBSD: devel/rubygem-pygments.rb/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	pygments.rb
 PORTVERSION=	0.5.1
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
