@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Search-Binary/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Search-Binary/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Search-Binary
 PORTVERSION=	0.95
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		Search::Binary.3
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|Seach|Search|' \
 		${WRKSRC}/Binary.pm
