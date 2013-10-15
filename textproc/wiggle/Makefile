@@ -1,5 +1,5 @@
 # Created by: mandree@FreeBSD.org
-# $FreeBSD: textproc/wiggle/Makefile 327118 2013-09-12 23:46:20Z mandree $
+# $FreeBSD: textproc/wiggle/Makefile 329737 2013-10-07 20:48:03Z mandree $
 
 PORTNAME=	wiggle
 PORTVERSION=	1.0
@@ -14,12 +14,9 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 USE_GCC=	4.2+	# uses nested functions
-USE_GMAKE=	yes
+USES=		gmake
 
 MAKE_ARGS+=	CFLAGS="${CFLAGS} -I. -Wall -Wstrict-prototypes -Wextra -Wno-unused-parameter"
-
-MAN1=		wiggle.1
-PLIST_FILES=	bin/wiggle
 
 pre-patch:
 		${REINPLACE_CMD} -Ee 's,\./dotest,bash ./dotest,' ${WRKSRC}/Makefile
@@ -29,7 +26,7 @@ pre-patch:
 		${REINPLACE_CMD} -Ee 's|(^[[:space:]]+[[:<:]])cols = cols;|\1(void)cols;|' ${WRKSRC}/vpatch.c
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/wiggle ${PREFIX}/bin/
-		${INSTALL_MAN} ${WRKSRC}/wiggle.1 ${PREFIX}/man/man1/
+		${INSTALL_PROGRAM} ${WRKSRC}/wiggle ${STAGEDIR}${PREFIX}/bin/
+		${INSTALL_MAN} ${WRKSRC}/wiggle.1 ${STAGEDIR}${PREFIX}/man/man1/
 
 .include <bsd.port.mk>
