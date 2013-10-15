@@ -1,13 +1,9 @@
-# New ports collection makefile for:	QWDtools
-# Date created:				24 Sen 2003
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: ports/games/qwdtools/Makefile,v 1.5 2012/11/17 05:57:51 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: games/qwdtools/Makefile 329800 2013-10-08 15:59:56Z danfe $
 
 PORTNAME=	qwdtools
 CATEGORIES=	games converters
-COMMENT=	Converts QuakeWorld demos from QWD format to MVD format
+COMMENT=	Convert QuakeWorld demos from QWD format to MVD format
 DESCR=		${.CURDIR}/pkg-descr
 PKGMESSAGE=	/nonexistent
 
