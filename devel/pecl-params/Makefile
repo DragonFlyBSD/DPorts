@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-params
-# Date created:			6 Aug 2007
-# Whom:				Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/devel/pecl-params/Makefile,v 1.5 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: devel/pecl-params/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	params
 PORTVERSION=	1.0
@@ -22,4 +18,5 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-params
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
