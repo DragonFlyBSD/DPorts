@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/py-wicked/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: textproc/py-wicked/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	wicked
 PORTVERSION=	1.1.10
@@ -21,4 +21,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
