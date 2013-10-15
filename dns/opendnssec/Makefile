@@ -1,5 +1,5 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: dns/opendnssec/Makefile 327451 2013-09-17 06:28:07Z bapt $
+# $FreeBSD: dns/opendnssec/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	opendnssec
 PORTVERSION=	1.4.2
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=		SOFTHSM MYSQL
 SOFTHSM_DESC=		SoftHSM cryptographic store for PKCS \#11 interface
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
