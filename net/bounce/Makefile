@@ -1,9 +1,5 @@
-# New Ports collection makefile for:  bounce
-# Date created:			  Mon Dec 23, 1998
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: ports/net/bounce/Makefile,v 1.28 2012/11/17 05:59:57 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: net/bounce/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bounce
 PORTVERSION=	1.0
@@ -23,6 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 PLIST_FILES=	sbin/bounce
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
