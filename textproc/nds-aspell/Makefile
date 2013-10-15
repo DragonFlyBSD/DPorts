@@ -1,9 +1,5 @@
-# New ports collection makefile for:    nds-aspell
-# Date created:                         28 December 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/nds-aspell/Makefile,v 1.7 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/nds-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-nds-0.01-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Low Saxon dictionary
 
 DICT=	 	nds
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
