@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/ncdu/Makefile 317888 2013-05-11 15:31:46Z pawel $
+# $FreeBSD: sysutils/ncdu/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	ncdu
 PORTVERSION=	1.10
@@ -12,7 +12,7 @@ COMMENT=	Ncurses du(1)
 LICENSE=	MIT
 
 GNU_CONFIGURE=	yes
-PLIST_FILES=	bin/${PORTNAME}
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
 .include <bsd.port.mk>
