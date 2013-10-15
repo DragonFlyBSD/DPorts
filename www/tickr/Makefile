@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/tickr/Makefile 321049 2013-06-16 13:54:02Z nivit $
+# $FreeBSD: www/tickr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tickr
 PORTVERSION=	0.6.4
@@ -23,6 +23,7 @@ USE_DOS2UNIX=	tickr.h
 USE_GNOME=	desktopfileutils gtk20 libxml2
 USES=		pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} ${WRKSRC}/${PORTNAME}.desktop ${WRKSRC}/src/tickr/tickr.h
 
