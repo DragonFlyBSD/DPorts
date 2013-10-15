@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: x11/wmbutton/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/wmbutton/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	wmbutton
 PORTVERSION=	0.6.1
@@ -8,7 +8,7 @@ CATEGORIES=	x11 windowmaker
 MASTER_SITES=	http://greek0.net/wmbutton/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockapp that displays 9 buttons to run apps of your choice
+COMMENT=	Dockapp that displays 9 buttons to run apps of your choice
 
 LICENSE=	GPLv2
 
@@ -20,6 +20,7 @@ PORTDOCS=	README
 PORTEXAMPLES=	dot.wmbutton
 PLIST_FILES=	bin/wmbutton
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
