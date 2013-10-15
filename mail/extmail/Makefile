@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/extmail/Makefile 319615 2013-06-01 23:18:19Z bapt $
+# $FreeBSD: mail/extmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	extmail
 PORTVERSION=	1.2
@@ -13,12 +13,13 @@ COMMENT=	A high performance webmail system
 
 RUN_DEPENDS=	p5-Unix-Syslog>=0:${PORTSDIR}/sysutils/p5-Unix-Syslog
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 OPTIONS_DEFINE=	MYSQL LDAP
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
