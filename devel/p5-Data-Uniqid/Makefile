@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/p5-Data-Uniqid/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-Data-Uniqid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Uniqid
 PORTVERSION=	0.12
@@ -17,6 +17,7 @@ MAN3=		Data::Uniqid.3
 
 PORTDOCS=	Changes README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
