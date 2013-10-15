@@ -1,9 +1,5 @@
-# New ports collection makefile for:	arpack++
-# Date created:         17 October 2003
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/math/arpack++/Makefile,v 1.10 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: math/arpack++/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	arpack++
 PORTVERSION=	1.2
@@ -47,6 +43,7 @@ USE_GMAKE=	yes
 
 DOCS=		README doc/arpackpp.ps.gz doc/bugs.txt doc/structure.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC}/include -name "*.orig" -delete
 	@${FIND} ${WRKSRC}/examples -name "*.orig" -delete
