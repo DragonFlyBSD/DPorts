@@ -1,9 +1,5 @@
-# New ports collection makefile for:	show
-# Date created:        06 July 2003
-# Whom:                roop
-#
-# $FreeBSD: ports/graphics/show/Makefile,v 1.21 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: roop
+# $FreeBSD: graphics/show/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	show
 PORTVERSION=	2.2
@@ -23,6 +19,7 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg	\
 
 PLIST_FILES=	bin/show
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${PATCHDIR}/Makefile ${WRKSRC}
 	@${RM} ${WRKSRC}/${PORTNAME}

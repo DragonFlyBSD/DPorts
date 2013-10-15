@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/show/files/Makefile,v 1.4 2012/11/17 05:58:23 svnexp Exp $
+# $FreeBSD: graphics/show/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 CC        ?= gcc
 CFLAGS    ?= -g -O2 -Wall
