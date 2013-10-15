@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: x11-toolkits/Xaw3d/Makefile 326273 2013-09-04 13:09:08Z tijl $
+# $FreeBSD: x11-toolkits/Xaw3d/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Xaw3d
 PORTVERSION=	1.5E
@@ -23,6 +23,7 @@ SUB_FILES=	pkg-message
 XAWVER=		8
 SUB_LIST=	XAWVER="${XAWVER}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
