@@ -1,5 +1,5 @@
 # Created by: Sergey Kandaurov <pluknet@gmail.com>
-# $FreeBSD: benchmarks/randomio/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/randomio/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	randomio
 PORTVERSION=	1.4
@@ -13,6 +13,7 @@ USE_BZIP2=	yes
 USES=		gmake
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
 
