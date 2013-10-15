@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pasm/Makefile 324751 2013-08-15 06:12:48Z rpaulo $
+# $FreeBSD: devel/pasm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pasm
 PORTVERSION=	0.84
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}/am335x_pru_package-${PORTNAME}-${PORTVERSION}
 FETCH_ARGS=	"-Fpr"
 PLIST_FILES=	bin/pasm
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}/pru_sw/utils/pasm_source && \
 		${CC} ${CFLAGS} -D_UNIX_ pasm.c pasmpp.c pasmexp.c pasmop.c \
