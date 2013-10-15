@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-ocs/Makefile 322356 2013-07-05 20:59:44Z stephen $
+# $FreeBSD: math/octave-forge-ocs/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-ocs
 PORTVERSION=	0.1.3
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 RUN_DEPENDS+=	${TARBALLS_DIR}/odepkg.tar.gz:${PORTSDIR}/math/octave-forge-odepkg
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
