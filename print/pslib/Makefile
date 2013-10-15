@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/pslib/Makefile 317551 2013-05-06 21:53:56Z ehaupt $
+# $FreeBSD: print/pslib/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pslib
 PORTVERSION=	0.4.5
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	EXAMPLES MAN NLS
 OPTIONS_DEFAULT=	MAN NLS
 MAN_DESC=	Manual pages
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
