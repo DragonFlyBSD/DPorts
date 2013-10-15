@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: security/openssh-askpass/Makefile 323449 2013-07-22 14:02:17Z hrs $
+# $FreeBSD: security/openssh-askpass/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	OpenSSH-askpass
 PORTVERSION=	1.2.4.1
@@ -26,6 +26,7 @@ MLINKS=		x11-ssh-askpass.1 ssh-askpass.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
