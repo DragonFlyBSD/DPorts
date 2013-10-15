@@ -1,5 +1,5 @@
 # Created by: Alexander Pyhalov <alp@sfedu.ru>
-# $FreeBSD: databases/pg_reorg/Makefile 323404 2013-07-21 17:16:14Z marino $
+# $FreeBSD: databases/pg_reorg/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pg_reorg
 PORTVERSION=	1.1.8
@@ -19,6 +19,7 @@ USE_PGSQL=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
