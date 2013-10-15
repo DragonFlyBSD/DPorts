@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: ports/games/wmminichess/Makefile,v 1.19 2013/02/08 08:54:55 svnexp Exp $
+# $FreeBSD: games/wmminichess/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wmminichess
 PORTVERSION=	0.8
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lXpm -lXext -lX11
 PORTDOCS=	README TODO
 PLIST_FILES=	bin/minichess
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
