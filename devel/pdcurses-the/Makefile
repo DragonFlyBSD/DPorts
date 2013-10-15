@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: devel/pdcurses-the/Makefile 313760 2013-03-09 21:43:02Z bapt $
+# $FreeBSD: devel/pdcurses-the/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pdcurses
 PORTVERSION=	3.2
@@ -23,6 +23,7 @@ LATIN1_DESC=	Enable support for Latin1 keys
 NEXTAW_DESC=	Link with NeXtaw
 XAW3D_DESC=	Link with Xaw3d
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for opt in DEBUG LATIN1
