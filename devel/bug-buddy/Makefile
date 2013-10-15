@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/bug-buddy/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: devel/bug-buddy/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/devel/bug-buddy/Makefile,v 1.86 2010/11/16 18:17:55 kwm Exp $
 
 PORTNAME=	bug-buddy
@@ -29,6 +29,7 @@ GCONF_SCHEMAS=	bug-buddy.schemas
 
 MAN1=		bug-buddy.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|' \
 		${WRKSRC}/src/bugzilla.c
