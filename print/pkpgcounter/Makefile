@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	pkpgcounter
-# Date created:				Jan 1 2006
-# Whom:					Rong-En Fan <rafan@FreeBSD.org>
-#
-# $FreeBSD: ports/print/pkpgcounter/Makefile,v 1.21 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Rong-En Fan <rafan@FreeBSD.org>
+# $FreeBSD: print/pkpgcounter/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pkpgcounter
 PORTVERSION=	3.50
@@ -30,6 +26,7 @@ PORTDOCS=	README COPYING BUGS CREDITS NEWS
 _SED_NODOCS=	-e '/^data_files.append.*docfiles/s|.*||'
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e '/^directory.*man1/s|=.*|= "man/man1"|' \
