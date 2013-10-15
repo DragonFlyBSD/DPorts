@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: sysutils/tty-clock/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: sysutils/tty-clock/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=		tty-clock
 PORTVERSION=		2.0.0
@@ -16,6 +16,7 @@ FETCH_ARGS=		-pRr
 WRKSRC=			"${WRKDIR}/xorg62-${PORTNAME}-${DISTNAME}"
 PLIST_FILES=		bin/tty-clock
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/|${PREFIX}/|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|CFLAGS =|CFLAGS \+=|' ${WRKSRC}/Makefile
