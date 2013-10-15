@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ipa_conv
-# Date created:				28 July 2009
-# Whom:					Andrey Simonenko
-#
-# $FreeBSD: ports/misc/ipa_conv/Makefile,v 1.3 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: Andrey Simonenko
+# $FreeBSD: misc/ipa_conv/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	ipa_conv
 PORTVERSION=	1.1
@@ -24,4 +20,5 @@ PLIST_FILES=	lib/ipa_conv.la lib/ipa_conv.so
 MAN8=		ipa_conv.8
 MANLANG=	"" ru.KOI8-R
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
