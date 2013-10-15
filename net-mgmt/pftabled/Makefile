@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: net-mgmt/pftabled/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net-mgmt/pftabled/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	pftabled
 PORTVERSION=	1.09
@@ -22,6 +22,7 @@ OPTIONS_DEFAULT=	PERLC PYTHONC
 PERLC_DESC=	A Sample Perl Client
 PYTHONC_DESC=	A Sample Python Client
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPERLC}
