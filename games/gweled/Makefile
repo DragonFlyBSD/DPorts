@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: games/gweled/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: games/gweled/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gweled
 PORTVERSION=	0.7
@@ -16,6 +16,7 @@ USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui librsvg2
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/var/games|${PREFIX}/share/games|' \
 		${WRKSRC}/configure
