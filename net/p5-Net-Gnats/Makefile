@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Net-Gnats
 # Created by: ijliao
-# $FreeBSD: net/p5-Net-Gnats/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Gnats/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Gnats
 PORTVERSION=	0.06
@@ -18,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::Gnats.3 Net::Gnats::PR.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
