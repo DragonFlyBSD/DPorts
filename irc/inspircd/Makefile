@@ -1,5 +1,5 @@
 # Created by: Craig Edwards <brain@mail1.chatspike.net>
-# $FreeBSD: irc/inspircd/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: irc/inspircd/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	inspircd
 PORTVERSION=	2.0.12
@@ -35,7 +35,8 @@ SUB_LIST+=	PORTNAME=${PORTNAME} \
 		GROUPS=${GROUPS}
 
 # Configure script is written in perl
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cc=${CXX} --config-dir=${ETCDIR} \
@@ -57,6 +58,7 @@ SQLITE_DESC=	Build m_sqlite3 module
 PCRE_DESC=	Build m_regex_pcre module
 POSIX_DESC=	Build m_regex_posix module
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAPAUTH}
