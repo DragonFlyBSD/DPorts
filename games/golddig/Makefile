@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: games/golddig/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/golddig/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	golddig
 PORTVERSION=	3.1
@@ -19,6 +19,7 @@ MAN6=		gdedit.6 golddig.6
 
 DESKTOP_ENTRIES="Gold Digger" "" "" "${PORTNAME}" "" ""
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lR "@PREFIX@" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@PREFIX@|${PREFIX}|'
