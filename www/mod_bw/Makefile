@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_bw/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_bw/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_bw
 PORTVERSION=	0.8
@@ -21,6 +21,7 @@ AP_GENPLIST=	yes
 SRC_FILE=	mod_bw.c
 PORTDOCS=	LICENSE mod_bw.txt
 
+NO_STAGE=	yes
 post-install:
 .ifndef NOPORTDOCS
 	@${MKDIR} ${DOCSDIR}
