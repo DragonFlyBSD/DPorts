@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sanatana.dharma>
-# $FreeBSD: ports/www/trac-bzr/Makefile,v 1.13 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: www/trac-bzr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bzr
 PORTVERSION=	20110228
@@ -24,6 +24,7 @@ PYDISTUTILS_PKGNAME=	TracBzr
 PYDISTUTILS_PKGVERSION=	0.4.2
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|tag_date = 1||' ${WRKSRC}/setup.cfg
 
