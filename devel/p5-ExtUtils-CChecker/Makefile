@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: devel/p5-ExtUtils-CChecker/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-ExtUtils-CChecker/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	ExtUtils-CChecker
 PORTVERSION=	0.08
@@ -14,6 +14,7 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		ExtUtils::CChecker.3
 
