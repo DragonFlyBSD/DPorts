@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geoapi
-# Date created:		07 April 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/graphics/geoapi/Makefile,v 1.4 2012/11/17 05:58:06 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: graphics/geoapi/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	geoapi
 PORTVERSION=	2.1.1
@@ -22,6 +18,7 @@ NO_WRKSUBDIR=	yes
 JARFILES=	geoapi-${PORTVERSION} jsr108-0.01 geoapi-nogenerics-${PORTVERSION}
 DOCS=		README.txt
 
+NO_STAGE=	yes
 do-install:
 .for jar in ${JARFILES}
 	${INSTALL_DATA} ${WRKSRC}/binaries/${jar}.jar ${JAVAJARDIR}
