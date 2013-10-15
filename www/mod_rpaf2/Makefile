@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_rpaf2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_rpaf2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_rpaf2
 PORTVERSION=	0.6
@@ -19,4 +19,5 @@ SHORTMODNAME=	rpaf
 
 SRC_FILE=	mod_rpaf-2.0.c
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
