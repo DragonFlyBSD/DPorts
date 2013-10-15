@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: benchmarks/hpl/Makefile 326867 2013-09-10 06:28:22Z danfe $
+# $FreeBSD: benchmarks/hpl/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	hpl
 PORTVERSION=	2.1
@@ -53,6 +53,7 @@ MAN3=		HPL_abort.3 HPL_all_reduce.3 HPL_barrier.3 HPL_bcast.3 \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
