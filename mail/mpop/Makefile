@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: mail/mpop/Makefile 322306 2013-07-05 06:33:58Z bapt $
+# $FreeBSD: mail/mpop/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mpop
 PORTVERSION=	1.0.27
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-libidn
 MAN1=	mpop.1
 INFO=	mpop
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
