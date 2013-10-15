@@ -1,9 +1,5 @@
-# New ports collection makefile for:	battalion
-# Date created:				17 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: games/battalion/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/battalion/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	battalion
 PORTVERSION=	1.4b
@@ -22,10 +18,11 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LDFLAGS}"
 
 CFLAGS+=	-I${LOCALBASE}/include/X11 -I${LOCALBASE}/include \
 		-DLINUXVERSION -DLINUXAUDIO
-LDFLAGS=	-L${LOCALBASE}/lib
+LDFLAGS=	-L${LOCALBASE}/lib -lX11 -lm
 
 MAN6=		battalion.6
 
+NO_STAGE=	yes
 post-extract:
 	@${GZCAT} ${DISTDIR}/battalionSUN4.tar.gz | \
 		(cd ${WRKDIR} && ${TAR} --unlink -xf -)
