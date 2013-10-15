@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/py-musicbrainz2/Makefile 327040 2013-09-12 08:00:37Z jhale $
+# $FreeBSD: audio/py-musicbrainz2/Makefile 329877 2013-10-09 09:29:59Z jhale $
 
 PORTNAME=	musicbrainz2
 PORTVERSION=	0.7.4
@@ -14,8 +14,9 @@ MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Next Generation Python bindings for MusicBrainz
 
 LICENSE=	BSD
+LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
-LIB_DEPENDS=	discid:${PORTSDIR}/audio/libdiscid
+LIB_DEPENDS=	libdiscid.so:${PORTSDIR}/audio/libdiscid
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
