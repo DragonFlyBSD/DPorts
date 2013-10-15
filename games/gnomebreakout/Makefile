@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/gnomebreakout/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/gnomebreakout/Makefile 329743 2013-10-07 23:03:12Z marino $
 
 PORTNAME=	gnomebreakout
 PORTVERSION=	0.5.3
@@ -11,12 +11,13 @@ DISTNAME=	gnome-breakout-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME version of the classic breakout game
 
-USES=        pathfix pkgconfig
+USES=		pathfix pkgconfig
 USE_GNOME=	gnomeprefix libgnomeui
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|games.games|root:games|g' ${WRKSRC}/Makefile.in
