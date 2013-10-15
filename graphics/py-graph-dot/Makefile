@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: graphics/py-graph-dot/Makefile 324859 2013-08-17 17:19:06Z demon $
+# $FreeBSD: graphics/py-graph-dot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	graph-dot
 PORTVERSION=	1.8.2
@@ -21,4 +21,5 @@ PYDISTUTILS_PKGNAME=	python_graph_dot
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
