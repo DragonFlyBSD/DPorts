@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bluez-firmware
-# Date created:				30 July 2007
-# Whom:					dirkx@webweaving.org
-#
-# $FreeBSD: ports/comms/bluez-firmware/Makefile,v 1.3 2012/11/17 05:54:59 svnexp Exp $
-#
+# Created by: dirkx@webweaving.org
+# $FreeBSD: comms/bluez-firmware/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	bluez-firmware
 PORTVERSION=	1.2
