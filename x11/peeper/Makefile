@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/peeper/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/peeper/Makefile 330213 2013-10-13 06:15:19Z eadler $
 
 PORTNAME=	peeper
 PORTVERSION=	0.1
@@ -11,11 +11,12 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	View an area of the screen at a certain magnification
 
 USE_GNOME=	imlib
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} `${IMLIB_CONFIG} --cflags-gdk`" \
 		LIBS="`${IMLIB_CONFIG} --libs-gdk`"
 ALL_TARGET=	peeper
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
