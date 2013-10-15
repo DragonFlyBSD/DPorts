@@ -1,9 +1,5 @@
-# New ports collection makefile for:    es-ispell
-# Date created:                         21 July 2008
-# Whom:                                 Pedro F. Giffuni <giffunip@tutopia.com>
-#
-# $FreeBSD: ports/textproc/es-ispell/Makefile,v 1.4 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: Pedro F. Giffuni <giffunip@tutopia.com>
+# $FreeBSD: textproc/es-ispell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	es-ispell
 PORTVERSION=	1.10
@@ -14,4 +10,5 @@ ISPELL_ES=	yes
 
 MASTERDIR=	${.CURDIR}/../ispell
 
+NO_STAGE=	yes
 .include        "${MASTERDIR}/Makefile"
