@@ -1,5 +1,5 @@
 # Created by: Max Campos <mcampos@bpsw.biz>
-# $FreeBSD: devel/p5-User-Identity/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-User-Identity/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	User-Identity
 PORTVERSION=	0.93
@@ -28,4 +28,5 @@ MAN3=		Mail::Identity.3 \
 		User::Identity::Location.3 \
 		User::Identity::System.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
