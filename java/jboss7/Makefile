@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: java/jboss7/Makefile 316012 2013-04-17 23:40:57Z ak $
+# $FreeBSD: java/jboss7/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jboss
 PORTVERSION=	${JBOSS_BRANCH}.1
@@ -24,6 +24,7 @@ GROUP=		www
 DIST_SUBDIR=	${DISTNAME}
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
