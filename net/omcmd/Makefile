@@ -1,9 +1,5 @@
-# New ports collection makefile for:	omcmd
-# Date created:				05 Jul 2010
-# Whom:					Pavel Volkov
-#
-# $FreeBSD: ports/net/omcmd/Makefile,v 1.2 2012/11/17 06:00:08 svnexp Exp $
-#
+# Created by: Pavel Volkov
+# $FreeBSD: net/omcmd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	omcmd
 PORTVERSION=	0.4.8
@@ -19,6 +15,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 MAN1=	${PORTNAME}.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
