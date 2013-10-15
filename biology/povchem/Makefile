@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: ports/biology/povchem/Makefile,v 1.20 2013/02/10 11:05:56 svnexp Exp $
+# $FreeBSD: biology/povchem/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	povchem
 PORTVERSION=	1.0
@@ -27,6 +27,7 @@ CPPFLAGS+=	-DDATADIR=\"${DATADIR}\" \
 PLIST_FILES=	bin/povchem etc/povchem.cfg %%DATADIR%%/periodic.tab
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-extract:
 	@(cd ${DISTDIR}/${DIST_SUBDIR} && ${TAR} -cf - ${DISTFILES}) | \
 		(cd ${WRKSRC} && ${TAR} -xf -)

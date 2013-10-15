@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/biology/povchem/files/patch-ab,v 1.5 2013/02/10 11:05:56 svnexp Exp $
+$FreeBSD: biology/povchem/files/patch-ab 312001 2013-02-10 07:55:45Z miwi $
 
 --- povchem.c.orig	Fri Jul 11 11:49:07 2003
 +++ povchem.c	Fri Jul 11 11:59:23 2003
