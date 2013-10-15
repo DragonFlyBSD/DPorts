@@ -1,9 +1,9 @@
 # Created by: gahr
-# $FreeBSD: editors/fxite/Makefile 325571 2013-08-29 07:48:22Z gahr $
+# $FreeBSD: editors/fxite/Makefile 329703 2013-10-07 13:15:43Z gahr $
 
 PORTNAME=	fxite
 PORTVERSION=	0.91
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	editors
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -35,16 +35,19 @@ CONFIGURE_ARGS+=--with-system-lua \
 CONFIGURE_ENV+=	FOX_CFLAGS="${FOX_CFLAGS}" \
 		FOX_LIBS="${FOX_LIBS}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFOX16}
 LIB_DEPENDS+=	FOX-1.6:${PORTSDIR}/x11-toolkits/fox16
+CONFIGURE_ENV+=	RESWRAP=${LOCALBASE}/bin/reswrap
 FOX_CFLAGS+=	`fox-config --cflags`
 FOX_LIBS+=	`fox-config --libs`
 .endif
 
 .if ${PORT_OPTIONS:MFOX17}
 LIB_DEPENDS+=	FOX-1.7:${PORTSDIR}/x11-toolkits/fox17
+CONFIGURE_ENV+=	RESWRAP=${LOCALBASE}/bin/fox-1.7/reswrap
 FOX_CFLAGS+=	`pkgconf fox17 --cflags`
 FOX_LIBS+=	`pkgconf fox17 --libs`
 .endif
