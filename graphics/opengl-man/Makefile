@@ -1,9 +1,5 @@
-# New ports collection makefile for: opengl-manpage
-# Date created:         19990120
-# Whom:                 cracauer@cons.org "Martin Cracauer"
-#
-# $FreeBSD: ports/graphics/opengl-man/Makefile,v 1.13 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: cracauer@cons.org "Martin Cracauer"
+# $FreeBSD: graphics/opengl-man/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	opengl-man
 PORTVERSION=	657.2
@@ -20,6 +16,7 @@ USE_BZIP2=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAN3=	glDisable.3 glDisableClientState.3 glEdgeFlag.3 \
