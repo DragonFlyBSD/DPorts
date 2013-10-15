@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: astro/rmap/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/rmap/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	rmap
 PORTVERSION=	1.2
@@ -15,6 +15,7 @@ LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 MAN1=		rmap.1
 GNU_CONFIGURE=	yes
 USES=		gmake
+NO_STAGE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
