@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-themes/bluecurve-themes/Makefile 323270 2013-07-19 08:26:55Z rene $
+# $FreeBSD: x11-themes/bluecurve-themes/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 # NOTE TO VISITING COMMITTER: if you need to bump the port revisions
 # of the slave ports, you should add PORTREVISION?= to the "master
@@ -11,6 +11,7 @@ CATEGORIES=	x11-themes
 MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	Meta-port for Bluecurve themes
 
+NO_STAGE=	yes
 .if ${PORTNAME} == "bluecurve-themes"	# meta-port
 
 PORTVERSION=	1.0
