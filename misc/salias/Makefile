@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/salias/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: misc/salias/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	salias
 PORTVERSION=	0.3.1
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 MAN1=		salias.1
 DOCS=		NEWS README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
