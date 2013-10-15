@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: deskutils/xpostit/Makefile 321984 2013-06-28 20:56:05Z bapt $
+# $FreeBSD: deskutils/xpostit/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xpostit
 PORTVERSION=	3.3.1
@@ -17,4 +17,5 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 WRKSRC=		${WRKDIR}/xpostit
 MAN1=		xpostit.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
