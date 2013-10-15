@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@FreeBSD.org>
-# $FreeBSD: mail/cvsmail/Makefile 324913 2013-08-18 13:31:33Z bdrewery $
+# $FreeBSD: mail/cvsmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	cvsmail
 PORTVERSION=	2.2
@@ -16,6 +16,7 @@ MANCOMPRESSED=	no
 MAN1=		cvsmail.1
 PLIST_FILES=	bin/cvsmail
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cvsmail ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cvsmail.1 ${PREFIX}/man/man1
