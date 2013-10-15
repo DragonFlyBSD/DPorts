@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/powder/Makefile 322844 2013-07-12 15:51:30Z amdmi3 $
+# $FreeBSD: games/powder/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	powder
 PORTVERSION=	115
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/powder
 
 PORTDOCS=	README.TXT LICENSE.TXT CREDITS.TXT
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
