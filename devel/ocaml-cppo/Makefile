@@ -1,5 +1,5 @@
 # Created by: Michael Grunewald
-# $FreeBSD: devel/ocaml-cppo/Makefile 316012 2013-04-17 23:40:57Z ak $
+# $FreeBSD: devel/ocaml-cppo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	cppo
 PORTVERSION=	0.9.2
@@ -17,4 +17,5 @@ MAKE_JOBS_UNSAFE=	yes
 DOCSDIR=	${PREFIX}/share/doc/ocaml/${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/ocaml/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
