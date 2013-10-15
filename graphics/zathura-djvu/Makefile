@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: graphics/zathura-djvu/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: graphics/zathura-djvu/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	zathura-djvu
 PORTVERSION=	0.2.2
@@ -19,4 +19,5 @@ USES=		gmake pkgconfig
 PLIST_FILES=	lib/zathura/djvu.so
 PLIST_DIRSTRY=	lib/zathura
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
