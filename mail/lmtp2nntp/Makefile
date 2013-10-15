@@ -1,5 +1,5 @@
 # Created by: Thomas Lotterer <thomas.lotterer@cw.com>
-# $FreeBSD: mail/lmtp2nntp/Makefile 325257 2013-08-23 08:50:30Z danfe $
+# $FreeBSD: mail/lmtp2nntp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	lmtp2nntp
 PORTVERSION=	1.4.1
@@ -25,6 +25,7 @@ PORTDOCS=	INSTALL README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Try to fix parallel builds (-jX)
