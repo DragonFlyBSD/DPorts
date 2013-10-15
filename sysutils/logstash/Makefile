@@ -1,5 +1,5 @@
 # Created by: Daniel Solsona <daniel@ish.com.au>, Guido Falsi <madpilot@FreeBSD.org>
-# $FreeBSD: sysutils/logstash/Makefile 323255 2013-07-18 19:57:51Z madpilot $
+# $FreeBSD: sysutils/logstash/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	logstash
 PORTVERSION=	1.1.13
@@ -32,6 +32,7 @@ PLIST_SUB+=	LOGSTASH_HOME=${LOGSTASH_HOME_REL} LOGSTASH_JAR=${LOGSTASH_JAR} \
 		LOGSTASH_RUN=${LOGSTASH_RUN} \
 		LOGSTASH_DATA_DIR=${LOGSTASH_DATA_DIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${LOGSTASH_RUN}
 	${MKDIR} ${ETCDIR}

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/logstash/files/logstash.in 323192 2013-07-17 23:20:21Z madpilot $
+# $FreeBSD: sysutils/logstash/files/logstash.in 327428 2013-09-16 17:42:50Z madpilot $
 #
 # PROVIDE: logstash
 # REQUIRE: LOGIN
@@ -20,7 +20,7 @@
 #     "web": Starts logstash as a web ui
 #     "agent": Justs works as a log shipper 
 #
-# logstash_logging (bool):
+# logstash_log (bool):
 #   Set to "NO" by default.
 #   Set it to "YES" to enable logstash logging to file
 #   Default output to /var/log/logstash.log
