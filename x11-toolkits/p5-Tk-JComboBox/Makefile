@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-JComboBox/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Tk-JComboBox/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-JComboBox
 PORTVERSION=	1.14
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	${PORTNAME:S/-/::/g}.3 Tk::CWidget.3 Tk::JComboBox::tutorial.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
