@@ -1,9 +1,5 @@
-# New ports collection makefile for:   XBlood
-# Date created:        27 Jun 1999
-# Whom:                Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-#
-# $FreeBSD: ports/games/xblood/Makefile,v 1.15 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
+# $FreeBSD: games/xblood/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xblood
 PORTVERSION=	2.0
@@ -20,4 +16,5 @@ MAN1=		xblood.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/xblood
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
