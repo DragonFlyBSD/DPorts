@@ -1,5 +1,5 @@
 # Created by: shanee
-# $FreeBSD: editors/xed/Makefile 321986 2013-06-28 20:59:11Z bapt $
+# $FreeBSD: editors/xed/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	xed
 PORTVERSION=	1.3
@@ -17,6 +17,7 @@ USES=		imake
 USE_XORG=	xaw
 MAN1=		xed.1
 
+NO_STAGE=	yes
 pre-build:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -e \
 		's|extern char \*malloc();|/\* extern char \*malloc(); \*/|g'
