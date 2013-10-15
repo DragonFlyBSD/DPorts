@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: mail/gnarwl/Makefile 321445 2013-06-21 06:19:34Z antoine $
+# $FreeBSD: mail/gnarwl/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gnarwl
 PORTVERSION=	3.6
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--with-docdir=${DOCSDIR}
 MAN8=		damnit.8 gnarwl.8
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
