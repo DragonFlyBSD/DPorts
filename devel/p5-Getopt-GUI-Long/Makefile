@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org
-# $FreeBSD: devel/p5-Getopt-GUI-Long/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/p5-Getopt-GUI-Long/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Getopt-GUI-Long
 PORTVERSION=	0.93
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Getopt::GUI::Long.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
