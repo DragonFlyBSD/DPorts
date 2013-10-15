@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko
-# $FreeBSD: misc/quotes/Makefile 324054 2013-07-31 14:36:21Z az $
+# $FreeBSD: misc/quotes/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	quotes
 DISTVERSION=	1.7-2
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	quotes quotesmailer QuExample.pm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
