@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/sysutils/cpupowerd/pkg-plist,v 1.3 2012/11/17 06:01:27 svnexp Exp $
+@comment $FreeBSD: sysutils/cpupowerd/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 sbin/cpupowerd
 %%PORTDOCS%%%%DOCSDIR%%/CHANGELOG
 %%PORTDOCS%%%%DOCSDIR%%/COPYING
