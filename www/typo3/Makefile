@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo3/Makefile 327285 2013-09-14 14:10:37Z sunpoet $
+# $FreeBSD: www/typo3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	typo3
 PORTVERSION=	6.1.5
@@ -34,6 +34,7 @@ IMAGICK_DESC=	${IMAGEMAGICK_DESC}
 MBSTRING_DESC=	${MULTIBYTE_DESC}
 MYSQL_DESC=	Install MySQL Server
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPC}
