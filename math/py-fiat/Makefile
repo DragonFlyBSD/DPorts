@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-fiat/Makefile 318890 2013-05-23 17:56:04Z miwi $
+# $FreeBSD: math/py-fiat/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	fiat
 PORTVERSION=	${MMVERSION}.0
@@ -24,4 +24,5 @@ FETCH_ARGS=	-F
 
 MMVERSION=	1.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
