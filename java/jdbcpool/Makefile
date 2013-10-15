@@ -1,5 +1,5 @@
 # Created by: Jose Marques
-# $FreeBSD: ports/java/jdbcpool/Makefile,v 1.11 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jdbcpool/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jdbcpool
 PORTVERSION=	0.99
@@ -19,6 +19,7 @@ PORTDOCS=	CHANGES LICENSE README
 PORTDOCS+=	javadoc
 .endif
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name CVS -type dir | ${XARGS} ${RM} -rf
 
