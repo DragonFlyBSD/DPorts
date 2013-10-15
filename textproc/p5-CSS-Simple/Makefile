@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: textproc/p5-CSS-Simple/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-CSS-Simple/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	CSS-Simple
 PORTVERSION=	3211
@@ -23,4 +23,5 @@ PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS/Simple \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS \
 		%%SITE_PERL%%/CSS
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
