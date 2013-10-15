@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ipv6gen
-# Date created:                         4 April 2005
-# Whom:                                 Vladimir Kotal <vlada@devnull.cz>
-#
-# $FreeBSD: net-mgmt/ipv6gen/Makefile 326244 2013-09-04 03:24:02Z az $
-#
+# Created by: Vladimir Kotal <vlada@devnull.cz>
+# $FreeBSD: net-mgmt/ipv6gen/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ipv6gen
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ USE_PERL5=	run
 PLIST_FILES=	bin/${PORTNAME} bin/check-overlap
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL} -o ${SHAREOWN} -g ${SHAREGRP} -m 0755 \
 	${WRKSRC}/ipv6gen.pl ${PREFIX}/bin/ipv6gen
