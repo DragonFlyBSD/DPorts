@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/pengupop/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/pengupop/Makefile 328745 2013-09-29 21:55:31Z amdmi3 $
 
 PORTNAME=	pengupop
 PORTVERSION=	2.2.6
@@ -12,7 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Online multiplayer clone of Bust a Move
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
