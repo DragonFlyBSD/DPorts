@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: archivers/upx/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/upx/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	upx
 PORTVERSION=	3.09
@@ -14,6 +14,7 @@ COMMENT=	The Ultimate Packer for eXecutables
 
 LIB_DEPENDS=	ucl.1:${PORTSDIR}/archivers/ucl
 
+NO_STAGE=	yes
 LZMA_VER=	4.65
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-src
 USE_BZIP2=	yes
