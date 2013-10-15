@@ -1,5 +1,5 @@
 # Created by: kungfuftr <scott@surreytech.co.uk>
-# $FreeBSD: net/p5-SOAP-Data-Builder/Makefile 325195 2013-08-22 13:07:51Z mat $
+# $FreeBSD: net/p5-SOAP-Data-Builder/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	SOAP-Data-Builder
 PORTVERSION=	1
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	SOAP::Data::Builder.3 SOAP::Data::Builder::Element.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
