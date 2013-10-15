@@ -1,5 +1,5 @@
 # Created by: Anton Lysenok <bart@tapolsky.net.ua>
-# $FreeBSD: ports/mail/smfsav/Makefile,v 1.9 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/smfsav/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	smfsav
 PORTVERSION=	1.4.0
@@ -27,6 +27,7 @@ PORTDOCS=	CHANGES README
 PLIST_FILES=	sbin/smfsav \
 		etc/smfsav.conf-dist
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:

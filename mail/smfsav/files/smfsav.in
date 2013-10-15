@@ -6,7 +6,7 @@
 
 # Written for FreeBSD.
 #
-# $FreeBSD: ports/mail/smfsav/files/smfsav.in,v 1.4 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/smfsav/files/smfsav.in 300896 2012-07-14 13:54:48Z beat $
 #
 # Copy this file into /usr/local/etc/rc.d as /usr/local/etc/rc.d/smfsav
 # Add this line to /etc/rc.conf:
