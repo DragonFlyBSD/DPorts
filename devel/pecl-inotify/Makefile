@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pecl-inotify/Makefile,v 1.1 2012/11/22 18:54:02 svnexp Exp $
+# $FreeBSD: devel/pecl-inotify/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	inotify
 PORTVERSION=	0.1.6
@@ -22,4 +22,5 @@ USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 IGNORE_WITH_PHP=4
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
