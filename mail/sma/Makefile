@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sma/Makefile 313435 2013-03-05 06:08:12Z dinoex $
+# $FreeBSD: mail/sma/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	sma
 PORTVERSION=	1.4
@@ -9,6 +9,8 @@ MASTER_SITE_SUBDIR=	dinoex
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Program that analyses Sendmail log entries
+
+NO_STAGE=	yes
 
 MAN8=		sma.8
 DOCSFILES=	BUGS COPYRIGHT HISTORY README TODO
