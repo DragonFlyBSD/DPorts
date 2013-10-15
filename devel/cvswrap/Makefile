@@ -1,9 +1,5 @@
-# New ports collection makefile for:   rioutil
-# Date created:        25 December 2001
-# Whom:                alfred
-#
-# $FreeBSD: ports/devel/cvswrap/Makefile,v 1.11 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: alfred
+# $FreeBSD: devel/cvswrap/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvswrap
 PORTVERSION=	0.2
@@ -19,4 +15,5 @@ GNU_CONFIGURE=	yes
 MAN1=		cvswrap.1
 MAN5=		cvswrap.conf.5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
