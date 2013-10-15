@@ -1,8 +1,5 @@
-# New ports collection makefile for:	truecrack
-# Date created:			 	23 May 2012
-# Whom:					Ryan Steinmetz <zi@FreeBSD.org>
-#
-# $FreeBSD: ports/security/truecrack/Makefile,v 1.2 2012/11/17 06:01:21 svnexp Exp $
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: security/truecrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	truecrack
 PORTVERSION=	0.1
@@ -26,6 +23,7 @@ DICTIONARIES=	dictionary_100k.txt dictionary_10k.txt dictionary.txt
 PORTDATA=	${DICTIONARIES}
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/CFLAGS =/CFLAGS +=/g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's/return ;/return 0;/g' ${WRKSRC}/Main/Utils.c
