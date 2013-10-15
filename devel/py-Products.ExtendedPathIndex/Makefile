@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ExtendedPathIndex/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-Products.ExtendedPathIndex/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.ExtendedPathIndex
 PORTVERSION=	3.1
@@ -17,8 +17,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}AccessControl>0:${PORTSDIR}/security/py-Acce
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-USE_ZOPE=	yes
+USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
