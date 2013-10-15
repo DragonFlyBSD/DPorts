@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: devel/frama-c/Makefile 313561 2013-03-07 03:56:51Z bf $
+# $FreeBSD: devel/frama-c/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=		frama-c
 DISTVERSIONPREFIX=	Oxygen-
@@ -29,6 +29,7 @@ GUI_DESC=	Graphical User Interface (requires PLUGINS)
 USE_GMAKE=	yes
 USE_OCAML=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 FRAMAC_DEFAULT_CPP?=	${CPP} -C -I${DATADIR}/libc -I.
