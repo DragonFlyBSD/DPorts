@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Pipe/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-Text-Pipe/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Pipe
 PORTVERSION=	0.10
@@ -56,4 +56,5 @@ MAN3=	Text::Pipe.3 \
 	Text::Pipe::Uppercase.3 \
 	Text::Pipe::UppercaseFirst.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
