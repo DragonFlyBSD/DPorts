@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/capitalism/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/capitalism/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	capitalism
 PORTVERSION=	0.5.1
@@ -37,6 +37,7 @@ DESKTOP_ENTRIES="Capitalism" "${COMMENT}" "${PORTNAME}" \
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
