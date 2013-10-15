@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: textproc/p5-PPIx-EditorTools/Makefile 326939 2013-09-11 05:29:55Z az $
+# $FreeBSD: textproc/p5-PPIx-EditorTools/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	PPIx-EditorTools
 PORTVERSION=	0.18
@@ -35,4 +35,5 @@ MAN3=	PPIx::EditorTools.3 \
 	PPIx::EditorTools::RenameVariable.3 \
 	PPIx::EditorTools::ReturnObject.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
