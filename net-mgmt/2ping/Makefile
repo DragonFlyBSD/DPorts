@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/2ping/Makefile 326244 2013-09-04 03:24:02Z az $
+# $FreeBSD: net-mgmt/2ping/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	2ping
 PORTVERSION=	2.0
@@ -20,4 +20,5 @@ USES=		perl5
 
 MAN8=		2ping.8 2ping6.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
