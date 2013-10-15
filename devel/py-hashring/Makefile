@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-hashring/Makefile 325082 2013-08-21 02:47:00Z wen $
+# $FreeBSD: devel/py-hashring/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	hashring
 PORTVERSION=	1.3.1
@@ -19,4 +19,5 @@ PYDISTUTILS_PKGNAME=	hash_ring
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
