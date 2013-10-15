@@ -1,5 +1,5 @@
 # Created by: rea@FreeBSD.org
-# $FreeBSD: mail/mu/Makefile 325753 2013-08-31 00:38:29Z bapt $
+# $FreeBSD: mail/mu/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mu
 PORTVERSION=	0.9.9
@@ -29,6 +29,7 @@ CXXFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-gui=none
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}/mu && ${INSTALL_PROGRAM} mu ${PREFIX}/bin
 	cd ${FILESDIR} && ${INSTALL_SCRIPT} mu-ask ${PREFIX}/bin
