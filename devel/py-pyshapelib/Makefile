@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pyshapelib
-# Date created:		03 Feb 2008
-# Whom:			TAOKA Fumiyoshi <fmysh@iijmio-mail.jp>
-#
-# $FreeBSD: ports/devel/py-pyshapelib/Makefile,v 1.2 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: TAOKA Fumiyoshi <fmysh@iijmio-mail.jp>
+# $FreeBSD: devel/py-pyshapelib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pyshapelib
 PORTVERSION=	0.3
@@ -25,6 +21,7 @@ USE_LDCONFIG=	yes
 PORTDOCS=	NEWS README
 PORTEXAMPLES=	pytest.py
 
+NO_STAGE=	yes
 post-extract:
 	${LN} -s ${WRKDIR}/${SHAPELIB} ${WRKDIR}/shapelib
 
