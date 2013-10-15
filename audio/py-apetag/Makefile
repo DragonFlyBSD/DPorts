@@ -1,8 +1,5 @@
-# New ports collection makefile for:    py-apetag
-# Date created:                 February 10, 2007
-# Whom:                         Chao Shin <quakelee@cn.freebsd.org>
-#
-# $FreeBSD: audio/py-apetag/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Chao Shin <quakelee@cn.freebsd.org>
+# $FreeBSD: audio/py-apetag/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	apetag
 PORTVERSION=	1.2
@@ -15,6 +12,7 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Library for APE Tag written in Python
 
 USE_PYTHON=	yes
+NO_STAGE=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	py-ApeTag
 
