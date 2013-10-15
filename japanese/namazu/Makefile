@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: japanese/namazu/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/namazu/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	namazu
 PORTVERSION=	1.3.0.11
@@ -21,4 +21,5 @@ GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
