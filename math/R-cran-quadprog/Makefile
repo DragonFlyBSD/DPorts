@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-quadprog/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/R-cran-quadprog/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	quadprog
 DISTVERSION=	1.5-5
@@ -16,4 +16,5 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
