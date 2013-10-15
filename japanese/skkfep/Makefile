@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	skkfep
-# Date created:		22 Jul 1998
-# Whom:			Yusuke Nawano <azuki@azkey.org>
-#
-# $FreeBSD: ports/japanese/skkfep/Makefile,v 1.25 2012/11/17 05:58:40 svnexp Exp $
-#
+# Created by: Yusuke Nawano <azuki@azkey.org>
+# $FreeBSD: japanese/skkfep/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	skkfep
 PORTVERSION=	0.87
@@ -19,6 +15,7 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/skkserv:${PORTSDIR}/japanese/skk
 MAN1=		skkfep.1
 PLIST_FILES=	bin/skkfep
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/skkfep ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/skkfep.1 ${MANPREFIX}/man/man1
