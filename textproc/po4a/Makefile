@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: textproc/po4a/Makefile 325961 2013-09-02 09:45:00Z garga $
+# $FreeBSD: textproc/po4a/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	po4a
 PORTVERSION=	0.44
@@ -57,4 +57,5 @@ MAN1=		msguntypot.1 \
 
 PORT_VERBS=	${PORTNAME} Po4a msguntypot
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
