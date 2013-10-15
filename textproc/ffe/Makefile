@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/textproc/ffe/Makefile,v 1.22 2013/02/03 19:52:24 svnexp Exp $
+# $FreeBSD: textproc/ffe/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ffe
 PORTVERSION=	0.3.3
@@ -14,6 +14,7 @@ PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 PORTDOCS=	${PORTNAME}.html
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/^install-data-am: install-htmlDATA install-info-am install-man/install-data-am: install-man/' ${WRKSRC}/doc/Makefile.in
 	@${REINPLACE_CMD} -e 's|setmode|setmode123|g' ${WRKSRC}/configure
