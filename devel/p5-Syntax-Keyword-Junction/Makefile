@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Syntax-Keyword-Junction/Makefile 325720 2013-08-30 20:20:53Z lth $
+# $FreeBSD: devel/p5-Syntax-Keyword-Junction/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Syntax-Keyword-Junction
 PORTVERSION=	0.003006
@@ -24,4 +24,5 @@ MAN3=		Syntax::Feature::Junction.3 \
 		Syntax::Keyword::Junction::None.3 \
 		Syntax::Keyword::Junction::One.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
