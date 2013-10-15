@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ubuntu-font
-# Date created:		09 November 2011
-# Whom:			Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/ubuntu-font/Makefile,v 1.5 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: x11-fonts/ubuntu-font/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	ubuntu-font
 PORTVERSION=	0.80
@@ -33,6 +29,7 @@ SUB_FILES=	pkg-message
 SUB_LIST=	FONTSDIR=${FONTSDIR}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
