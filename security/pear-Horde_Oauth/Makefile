@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Oauth
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pear-Horde_Oauth/Makefile,v 1.5 2012/11/17 06:01:15 svnexp Exp $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: security/pear-Horde_Oauth/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Horde_Oauth
 PORTVERSION=	1.0.2
@@ -14,6 +11,7 @@ COMMENT=	Horde OAuth client/server
 USE_HORDE_RUN=	Horde_Exception Horde_Http
 USE_PHP=	hash openssl
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
