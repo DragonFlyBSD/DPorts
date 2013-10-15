@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: ports/security/l5/Makefile,v 1.5 2012/11/17 06:01:06 svnexp Exp $
+# $FreeBSD: security/l5/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	l5
 PORTVERSION=	1.2
@@ -14,6 +14,7 @@ COMMENT=	File Integrity Assessment Tool
 NO_WRKSUBDIR=	true
 ALL_TARGET=	freebsd
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${MKDIR} ${PREFIX}/share/doc/${PORTNAME}
