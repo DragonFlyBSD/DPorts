@@ -1,5 +1,5 @@
 # Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
-# $FreeBSD: editors/emacs-devel/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: editors/emacs-devel/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}.${EMACS_REV}
@@ -75,6 +75,7 @@ OPTIONS_SINGLE_X11TOOLKIT=	GTK2 GTK3 XAW XAW3D MOTIF
 OPTIONS_DEFAULT=ACL DBUS GCONF GIF GTK2 JPEG M17N OTF PNG SOUND SOURCES SVG TIFF SYNC_INPUT \
 		SCROLLBARS XFT XIM XML XPM MAGICK GNUTLS GSETTINGS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DBUS_PTHREAD_LIBS=	${CC} -dumpspecs | ${GREP} -m 1 pthread: | ${SED} -e 's|^.*%{\!pg: %{pthread:||' -e 's|}.*$$||' || ${TRUE}
