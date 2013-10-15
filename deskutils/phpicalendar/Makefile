@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpicalednar
-# Date created:		3 April 2004
-# Whom:			Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: deskutils/phpicalendar/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: deskutils/phpicalendar/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	phpicalendar
 PORTVERSION=	2.24
@@ -19,6 +15,7 @@ USE_PHP=	session pcre
 SUB_FILES=	pkg-message
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/${PORTNAME}/
 
+NO_STAGE=	yes
 post-extract:
 	${FIND} ${WRKDIR} -name .DS_Store -delete
 	${FIND} ${WRKDIR} -name '._*' -delete
