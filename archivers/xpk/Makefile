@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xpk
-# Date created:         21 May 2001
-# Whom:                 Miguel Mendez <flynn@energyhq.homeip.net>
-#
-# $FreeBSD: ports/archivers/xpk/Makefile,v 1.25 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: Miguel Mendez <flynn@energyhq.homeip.net>
+# $FreeBSD: archivers/xpk/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	xpk
 PORTVERSION=	0.1.4
