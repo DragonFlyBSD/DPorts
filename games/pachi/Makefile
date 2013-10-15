@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/pachi/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/pachi/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pachi
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/Pachi
 SCOREDIR=	/var/games/pachi
 SCOREFILE=	${SCOREDIR}/scores.dat
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/var/lib/games/$$PACKAGE|${SCOREDIR}|' \
 		${WRKSRC}/configure
