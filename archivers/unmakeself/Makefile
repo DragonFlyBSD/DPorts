@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unmakeself
-# Date created:			31 Mar 2005
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/archivers/unmakeself/Makefile,v 1.13 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: archivers/unmakeself/Makefile 328287 2013-09-25 13:26:03Z vanilla $
 
 PORTNAME=	unmakeself
 PORTVERSION=	1.1
@@ -31,6 +27,6 @@ do-build:
 		${FILESDIR}/unmakeself.c ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/unmakeself ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/unmakeself ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
