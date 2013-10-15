@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: databases/p5-Text-xSV/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/p5-Text-xSV/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Text-xSV
 PORTVERSION=	0.21
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::xSV.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
