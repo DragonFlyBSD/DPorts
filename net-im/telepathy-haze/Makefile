@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-haze/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: net-im/telepathy-haze/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #   $MCom: ports/net-im/telepathy-haze/Makefile,v 1.7 2012/06/13 00:59:50 mezz Exp $
 
 PORTNAME=	telepathy-haze
@@ -21,4 +21,5 @@ USES=		gmake pkgconfig
 
 MAN8=		telepathy-haze.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
