@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: sysutils/wmfire/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/wmfire/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	wmfire
 PORTVERSION=	1.2.4
@@ -17,11 +17,12 @@ USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_CSTD=	gnu89
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lm
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOHEADER="${TRUE}" \
 		AUTOMAKE="${TRUE}"
 
 MAN1=		wmfire.1
 PLIST_FILES=	bin/wmfire
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
