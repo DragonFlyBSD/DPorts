@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: games/xpacman/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xpacman/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xpacman
 PORTVERSION=	1.0
@@ -18,4 +18,5 @@ USE_XORG=	x11 xext
 MAN1=		pacman.1
 PLIST_FILES=	bin/pacman
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
