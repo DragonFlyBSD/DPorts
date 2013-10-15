@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-fam
-# Date created:		8 October 2002
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/devel/py-fam/Makefile,v 1.11 2012/11/17 05:56:46 svnexp Exp $
+# Created by: Hye-Shik Chang
+# $FreeBSD: devel/py-fam/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	fam
 PORTVERSION=	1.1.1
@@ -21,6 +18,7 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	0.0.0
 USE_FAM=	yes
 
+NO_STAGE=	yes
 pre-patch:
 	${INSTALL_DATA} ${FILESDIR}/setup.py ${WRKSRC}
 

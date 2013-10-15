@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-fam/files/setup.py,v 1.2 2012/11/17 05:56:46 svnexp Exp $
+# $FreeBSD: devel/py-fam/files/setup.py 300896 2012-07-14 13:54:48Z beat $
 from distutils.core import setup, Extension
 import os
 LOCALBASE = os.environ.get('LOCALBASE', '/usr/local')
