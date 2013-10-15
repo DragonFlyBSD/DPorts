@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: ports/www/pmwiki/Makefile,v 1.43 2013/02/19 18:29:22 svnexp Exp $
+# $FreeBSD: www/pmwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pmwiki
 PORTVERSION=	2.2.48
@@ -23,6 +23,7 @@ PLIST_SUB+=	PMWIKIDIR=${PMWIKIDIR}
 SUB_LIST+=	PMWIKIDIR=${PMWIKIDIR}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 pre-fetch:
 .if !defined(PMWIKIDIR)
 	@${ECHO_MSG} ""
