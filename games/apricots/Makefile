@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/apricots/Makefile 325554 2013-08-28 21:15:09Z amdmi3 $
+# $FreeBSD: games/apricots/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	apricots
 PORTVERSION=	0.2.6
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES="Apricots" \
 OPTIONS_DEFINE=	OPENAL
 OPTIONS_DEFAULT=OPENAL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENAL}
