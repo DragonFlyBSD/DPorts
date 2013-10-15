@@ -1,4 +1,4 @@
-# $FreeBSD: net/owamp/Makefile 323552 2013-07-23 21:16:10Z pawel $
+# $FreeBSD: net/owamp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	owamp
 PORTVERSION=	3.3
@@ -17,4 +17,5 @@ MAN1=		aespasswd.1 owfetch.1 owping.1 owstats.1 owup.1 \
 MAN5=		owampd.conf.5 owampd.limits.5 owampd.pfs.5
 MAN8=		owampd.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
