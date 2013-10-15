@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-dbx
-# Date created:		2005-12-18
-# Whom:			David Phillips <david@acz.org>
-#
-# $FreeBSD: ports/databases/pydbx/Makefile,v 1.4 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: David Phillips <david@acz.org>
+# $FreeBSD: databases/pydbx/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pydbx
 PORTVERSION=	0.14
@@ -18,4 +14,5 @@ COMMENT=	Simple SQL database abstraction layer for Python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
