@@ -1,9 +1,4 @@
-# New ports collection makefile for:	hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/vietnamese/hunspell/Makefile,v 1.8 2012/11/17 06:02:26 svnexp Exp $
-#
+# $FreeBSD: vietnamese/hunspell/Makefile 327775 2013-09-20 23:20:31Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20080604
@@ -25,6 +20,7 @@ PLIST_FILES=	%%DATADIR%%/vi_VN.aff \
 		%%DATADIR%%/vi_VN.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/vi_VN.aff ${WRKSRC}/vi_VN.dic ${DATADIR}/
