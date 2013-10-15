@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Catalyst-Plugin-DefaultEnd
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-DefaultEnd/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Plugin-DefaultEnd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-DefaultEnd
 PORTVERSION=	0.08
@@ -19,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Catalyst::Plugin::DefaultEnd.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
