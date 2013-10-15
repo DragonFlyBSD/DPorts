@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/ivan/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/ivan/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ivan
 PORTVERSION=	0.50
@@ -20,6 +20,7 @@ STATEDIR=	/var/games/ivan
 
 PORTSCOUT=	skipv:0.301,0.310,0.311,0.401,0.410,0.420,0.430
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|IvanSave|.IvanSave|g' ${WRKSRC}/Main/Source/game.cpp
 	@${REINPLACE_CMD} -Ee 's|(fearray<type>::~?fearray)<type>|\1|' \
