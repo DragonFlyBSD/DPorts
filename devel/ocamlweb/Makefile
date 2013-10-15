@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ocamlweb
-# Date created:				4 February 2001
-# Whom:					Patrick Doane <patrick@watson.org>
-#
-# $FreeBSD: devel/ocamlweb/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Patrick Doane <patrick@watson.org>
+# $FreeBSD: devel/ocamlweb/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ocamlweb
 PORTVERSION=	1.34
@@ -32,6 +28,7 @@ PORTDOCS=	${PORTNAME}-${PORTVERSION}-man.ps.gz
 
 MAN1=		ocamlweb.1
 
+NO_STAGE=	yes
 post-install:
 	${MKTEXLSR} ${PREFIX}/${TEXMFDIR}
 .if !defined(NOPORTDOCS)
