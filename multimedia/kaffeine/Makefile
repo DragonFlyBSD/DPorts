@@ -1,8 +1,5 @@
-# New ports collection makefile for:	kaffeine
-# Date created:				2003-06-25
-# Whom:					arved
-#
-# $FreeBSD: multimedia/kaffeine/Makefile 316407 2013-04-24 07:35:40Z ak $
+# Created by: arved
+# $FreeBSD: multimedia/kaffeine/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	kaffeine
 PORTVERSION=	1.2.2
@@ -28,6 +25,7 @@ USES=		cmake gettext
 USE_LDCONFIG=		yes
 USE_XORG=	xscrnsaver
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,add_subdirectory(x-test),,' ${WRKSRC}/po/CMakeLists.txt
 
