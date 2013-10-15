@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: x11-toolkits/pangoxsl/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/pangoxsl/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	pangoxsl
 PORTVERSION=	1.6.0.3
@@ -21,4 +21,5 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
