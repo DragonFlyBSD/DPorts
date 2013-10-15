@@ -1,5 +1,5 @@
-# Created by:	will
-# $FreeBSD: security/p5-Crypt-Cracklib/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: will
+# $FreeBSD: security/p5-Crypt-Cracklib/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Cracklib
 PORTVERSION=	1.7
@@ -26,4 +26,5 @@ CONFIGURE_ARGS=	INC="-I${LOCALBASE}/include" DEFINE="-DCRACKLIB_DICTPATH=\\\"${P
 
 MAN3=		Crypt::Cracklib.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
