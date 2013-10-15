@@ -1,7 +1,5 @@
-# New ports collection makefile for: iffinder
-# Date created:		6 June 2007
-# Whom:			dikshie@sfc.wide.ad.jp
-# $FreeBSD: ports/net/iffinder/Makefile,v 1.2 2012/11/17 06:00:02 svnexp Exp $
+# Created by: dikshie@sfc.wide.ad.jp
+# $FreeBSD: net/iffinder/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	iffinder
 PORTVERSION=	1.37
@@ -16,6 +14,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/iffinder
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/iffinder ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
