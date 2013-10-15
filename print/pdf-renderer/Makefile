@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/print/pdf-renderer/Makefile,v 1.5 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: print/pdf-renderer/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pdf-renderer
 PORTVERSION=	0.9.1
@@ -28,6 +28,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR file as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/dist/PDFRenderer.jar ${JAVAJARDIR}/${PORTNAME}.jar
