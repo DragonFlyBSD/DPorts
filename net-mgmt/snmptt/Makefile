@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net-mgmt/snmptt/Makefile 320855 2013-06-13 23:46:45Z miwi $
+# $FreeBSD: net-mgmt/snmptt/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=		snmptt
 PORTVERSION=		1.3
@@ -16,7 +16,7 @@ RUN_DEPENDS=	net-snmp>=0:${PORTSDIR}/net-mgmt/net-snmp \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
-USE_PERL5=	yes
+USES=		perl5
 
 USE_RC_SUBR=	snmptt
 
@@ -25,6 +25,7 @@ SCRIPTS=	snmptt snmptt-net-snmp-test snmpttconvert \
 DOCS=		faqs.html index.html layout1.css snmptt.html \
 		snmpttconvert.html snmpttconvertmib.html
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
