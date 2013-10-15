@@ -1,10 +1,5 @@
-# New ports collection makefile for:    p5-TestGen4Web-Runner
-# Date created:				June 13th, 2006
-# Whom:	      				Conor McDermottroe <ports@mcdermottroe.com>
-# ex:ts=8
-#
-# $FreeBSD: www/p5-TestGen4Web-Runner/Makefile 325974 2013-09-02 11:04:10Z az $
-#
+# Created by: Conor McDermottroe <ports@mcdermottroe.com>
+# $FreeBSD: www/p5-TestGen4Web-Runner/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	TestGen4Web-Runner
 PORTVERSION=	0.11
@@ -27,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		TestGen4Web::Runner.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
