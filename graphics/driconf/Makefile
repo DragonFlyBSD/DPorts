@@ -1,9 +1,5 @@
-# New ports collection makefile for:    driconf
-# Date created:         		1 Apr, 2005
-# Whom:                 anholt@FreeBSD.org
-#
-# $FreeBSD: graphics/driconf/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: anholt@FreeBSD.org
+# $FreeBSD: graphics/driconf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	driconf
 PORTVERSION=	0.9.1
@@ -25,6 +21,7 @@ USES=		gettext
 INSTALLS_EGGINFO=	yes
 PYDISTUTILS_EGGINFODIR=	lib/driconf
 
+NO_STAGE=	yes
 pre-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|/usr/local|${PREFIX}|'
