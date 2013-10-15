@@ -1,5 +1,5 @@
 # Created by: Alex Allan <alex@kamaz.org.uk>
-# $FreeBSD: audio/taglookup/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/taglookup/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	taglookup
 PORTVERSION=	0.2
@@ -15,6 +15,7 @@ LIB_DEPENDS=	cddb.4:${PORTSDIR}/audio/libcddb \
 		tag.1:${PORTSDIR}/audio/taglib
 
 USES=		pkgconfig
+NO_STAGE=	yes
 
 MAN1=		taglookup.1
 PLIST_FILES=	bin/taglookup
