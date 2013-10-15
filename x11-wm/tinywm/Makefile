@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tinywm
-# Date created:				Jan 10 2005
-# Whom:					Florent Thoumie <flz@xbsd.org>
-#
-# $FreeBSD: ports/x11-wm/tinywm/Makefile,v 1.10 2012/11/17 06:03:43 svnexp Exp $
-#
+# Created by: Florent Thoumie <flz@xbsd.org>
+# $FreeBSD: x11-wm/tinywm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	tinywm
 PORTVERSION=	1.3
@@ -19,6 +15,7 @@ PLIST_FILES=	bin/tinywm
 USE_XORG=	x11
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|CC)|CC) ${CFLAGS}|' ${WRKSRC}/Makefile
 
