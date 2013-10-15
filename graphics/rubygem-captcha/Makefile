@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: ports/graphics/rubygem-captcha/Makefile,v 1.14 2013/02/26 21:54:30 svnexp Exp $
+# $FreeBSD: graphics/rubygem-captcha/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	captcha
 PORTVERSION=	1.2.2
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
