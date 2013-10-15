@@ -1,5 +1,5 @@
 # Created by: michaelnottebrock@gmx.net
-# $FreeBSD: security/dirmngr/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/dirmngr/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	dirmngr
 PORTVERSION=	1.1.0
@@ -32,6 +32,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
