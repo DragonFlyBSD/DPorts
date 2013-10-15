@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-self-init/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-self-init/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	self-init
 PORTVERSION=	0.01
@@ -19,4 +19,5 @@ MAN3=	self::init.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
