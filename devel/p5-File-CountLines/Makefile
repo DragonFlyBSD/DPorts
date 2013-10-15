@@ -1,5 +1,5 @@
 # Created by: Anton Berezin
-# $FreeBSD: devel/p5-File-CountLines/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-CountLines/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-CountLines
 PORTVERSION=	0.0.3
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	File::CountLines.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
