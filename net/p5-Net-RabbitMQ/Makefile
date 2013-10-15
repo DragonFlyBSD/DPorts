@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: net/p5-Net-RabbitMQ/Makefile 325886 2013-09-01 17:19:39Z az $
+# $FreeBSD: net/p5-Net-RabbitMQ/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-RabbitMQ
 PORTVERSION=	0.2.0
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::RabbitMQ.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
