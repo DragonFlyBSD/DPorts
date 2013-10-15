@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci
-# $FreeBSD: devel/p5-Const-Fast/Makefile 326275 2013-09-04 13:19:36Z mat $
+# $FreeBSD: devel/p5-Const-Fast/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Const-Fast
 PORTVERSION=	0.014
@@ -25,4 +25,5 @@ USE_PERL5=	modbuildtiny
 
 MAN3=		Const::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
