@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gather
-# Date created:				14 February 2010
-# Whom:					Mikolaj Golub <to.my.trociny@gmail.com>
-#
-# $FreeBSD: sysutils/gather/Makefile 326573 2013-09-07 06:47:20Z az $
-#
+# Created by: Mikolaj Golub <to.my.trociny@gmail.com>
+# $FreeBSD: sysutils/gather/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gather
 PORTVERSION=	0.4.1
@@ -35,6 +31,7 @@ PORTDOCS=	Changelog README
 PORTEXAMPLES=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/gather ${PREFIX}/bin/
 	@${INSTALL_MAN} ${WRKSRC}/gather.1 ${PREFIX}/man/man1
