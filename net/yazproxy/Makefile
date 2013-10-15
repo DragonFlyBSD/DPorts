@@ -1,9 +1,5 @@
-# New ports collection makefile for:	yazproxy
-# Date created:				3 May 2004
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: net/yazproxy/Makefile 313970 2013-03-12 11:42:56Z demon $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: net/yazproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	yazproxy
 PORTVERSION=	1.3.8
@@ -21,4 +17,5 @@ USE_LDCONFIG=	yes
 
 MAN8=		yazproxy.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
