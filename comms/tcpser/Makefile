@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: comms/tcpser/Makefile 321410 2013-06-20 19:09:06Z bsam $
+# $FreeBSD: comms/tcpser/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	tcpser
 DISTVERSION=	1.0rc12
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/tcpser
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
