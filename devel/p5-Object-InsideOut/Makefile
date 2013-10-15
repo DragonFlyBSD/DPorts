@@ -1,8 +1,8 @@
 # Created by: Geraud Continsouzas <geraud@gcu.info>
-# $FreeBSD: ports/devel/p5-Object-InsideOut/Makefile,v 1.51 2012/11/18 06:10:20 svnexp Exp $
+# $FreeBSD: devel/p5-Object-InsideOut/Makefile 329428 2013-10-05 08:41:19Z culot $
 
 PORTNAME=	Object-InsideOut
-PORTVERSION=	3.97
+PORTVERSION=	3.98
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JDHEDDEN
@@ -19,11 +19,8 @@ BUILD_DEPENDS=	p5-Data-Dumper>=2.131:${PORTSDIR}/devel/p5-Data-Dumper \
 		p5-Want>=0.21:${PORTSDIR}/devel/p5-Want
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
-
-MAN3=		Bundle::Object::InsideOut.3 \
-		Object::InsideOut.3 \
-		Object::InsideOut::Metadata.3
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.pre.mk>
 
