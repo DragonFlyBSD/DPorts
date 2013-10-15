@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/c3p0/Makefile,v 1.5 2013/02/09 17:49:19 svnexp Exp $
+# $FreeBSD: databases/c3p0/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	c3p0
 PORTVERSION=	0.9.2
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 JAVA_VERSION=	1.6+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/lib/${PORTNAME}-${PORTVERSION}.jar ${JAVAJARDIR}/${PORTNAME}.jar
 .if !defined(NOPORTDOCS)
