@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde-gtk-config/Makefile 327535 2013-09-18 08:38:20Z bapt $
+# $FreeBSD: x11-themes/kde-gtk-config/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	kde-gtk-config
 PORTVERSION=	2.2.1
@@ -15,6 +15,7 @@ USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/^install/s,KDE4_LIBEXEC_INSTALL_DIR,LIBEXEC_INSTALL_DIR,g' \
 		${WRKSRC}/gtk*proxies/CMakeLists.txt
