@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: devel/p5-Device-USB/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-Device-USB/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Device-USB
 PORTVERSION=	0.35
@@ -27,4 +27,5 @@ MAN3=		Device::USB.3 \
 		Device::USB::FAQ.3 \
 		Device::dump_usb.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
