@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-cryptkit
-# Date created:			Mar 16, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/py-cryptkit/Makefile,v 1.7 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/py-cryptkit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cryptkit
 PORTVERSION=	0.9
@@ -18,4 +13,5 @@ COMMENT=	A Cryptographic Toolkit for Python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
