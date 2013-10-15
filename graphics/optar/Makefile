@@ -1,9 +1,5 @@
-# New ports collection makefile for:   optar
-# Date created:        27 September 2008
-# Whom:                antonakis@gmail.com
-#
-# $FreeBSD: ports/graphics/optar/Makefile,v 1.7 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: antonakis@gmail.com
+# $FreeBSD: graphics/optar/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	optar
 PORTVERSION=	1.0
@@ -25,6 +21,7 @@ WRKSRC=		${WRKDIR}/optar
 
 PLIST_FILES=	bin/optar bin/unoptar bin/pgm2ps
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -v ${WRKSRC}/font.h
 	@${CP} -v ${DISTDIR}/font.h ${WRKSRC}/font.h
