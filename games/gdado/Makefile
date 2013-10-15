@@ -1,5 +1,5 @@
 # Created by: Anish Mistry <amistry@am-productions.biz>
-# $FreeBSD: games/gdado/Makefile 326144 2013-09-03 12:55:07Z bapt $
+# $FreeBSD: games/gdado/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gdado
 PORTVERSION=	2.2
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk20 libgnomeui
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} "s|-O2|${CFLAGS}|" ${WRKSRC}/configure
 
