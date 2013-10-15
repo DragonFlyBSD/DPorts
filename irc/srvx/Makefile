@@ -1,5 +1,5 @@
 # Created by: Walter Venable <weaseal@hotmail.com>
-# $FreeBSD: irc/srvx/Makefile 325176 2013-08-22 08:27:03Z danfe $
+# $FreeBSD: irc/srvx/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	srvx
 PORTVERSION=	1.3.1
@@ -26,6 +26,7 @@ BAHAMUT_DESC=	Enable Bahamut protocol (P10 is default)
 DEBUG_CONFIGURE_ON=	--enable-debug
 BAHAMUT_CONFIGURE_ON=	--with-protocol=bahamut
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
