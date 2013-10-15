@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/brikx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/brikx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	brikx
 PORTVERSION=	0.4.5
@@ -25,6 +25,7 @@ DESKTOP_ENTRIES="Brikx" \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/DIR_DATA/ s|data/|${DATADIR}/|' \
 		${WRKSRC}/src/brikx.h
