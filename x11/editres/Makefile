@@ -1,4 +1,4 @@
-# $FreeBSD: x11/editres/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/editres/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	editres
 PORTVERSION=	1.0.6
@@ -12,4 +12,5 @@ USE_XORG=	x11 xt xmu xaw
 
 MAN1=		editres.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
