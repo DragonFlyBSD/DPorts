@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: net/py-twistedPair/Makefile 326651 2013-09-07 16:15:44Z sunpoet $
+# $FreeBSD: net/py-twistedPair/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	twistedPair
 PORTVERSION=	13.1.0
@@ -22,4 +22,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
