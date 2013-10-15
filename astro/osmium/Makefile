@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/osmium/Makefile 326981 2013-09-11 13:58:27Z wg $
+# $FreeBSD: astro/osmium/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	osmium
 PORTVERSION=	git20130522
@@ -29,6 +29,7 @@ GH_COMMIT=	1a5bb26
 CXXFLAGS+=	-I${LOCALBASE}/include \
 		-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	JAVASCRIPT DOXYGEN DOCS
