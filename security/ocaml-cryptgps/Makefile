@@ -1,10 +1,5 @@
-# New ports collection makefile for:	ocaml-cryptgps
-# Date created:		2006-08-01
-# Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
-#
-# $MBSDlabs$
-# $FreeBSD: security/ocaml-cryptgps/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
+# $FreeBSD: security/ocaml-cryptgps/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cryptgps
 PORTVERSION=	0.2.1
@@ -31,6 +26,7 @@ PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/doc/ocaml/${PORTNAME}
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
