@@ -1,5 +1,5 @@
 # Created by: Anonymous <swell.k@gmail.com>
-# $FreeBSD: ports/graphics/apngasm/Makefile,v 1.11 2012/11/17 05:58:01 svnexp Exp $
+# $FreeBSD: graphics/apngasm/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	apngasm
 PORTVERSION=	2.7
@@ -26,6 +26,7 @@ PORTDOCS=	readme.txt
 
 OPTIONS_DEFINE=	DOCS STATIC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSTATIC}
