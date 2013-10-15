@@ -1,9 +1,5 @@
-# New ports collection makefile for:	buildtool-doc
-# Date created:		2003-07-24
-# Whom:			Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: devel/buildtool-doc/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: devel/buildtool-doc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	buildtool-doc
 PORTVERSION=	0.16
@@ -32,6 +28,7 @@ DOCBOOK_XSL=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl
 
 DOCS=		CHANGES COPYING PEOPLE README README.bt
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && \
 		CATALOG_FILE=${LOCALBASE}/share/xml/catalog.ports \
