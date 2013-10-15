@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: ports/www/hastymail2/Makefile,v 1.17 2012/12/19 16:48:04 svnexp Exp $
+# $FreeBSD: www/hastymail2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hastymail2
 PORTVERSION=	1.1
@@ -34,6 +34,7 @@ OPTIONS_DEFINE=	PGSQL MYSQL DB ICONV MBSTRING
 DB_DESC=	Use older pear DB (instead of MDB2)
 MBSTRING_DESC=	Support multi-byte character sets
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
