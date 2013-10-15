@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: japanese/monafonts-ttf/Makefile 321898 2013-06-27 18:31:06Z antoine $
+# $FreeBSD: japanese/monafonts-ttf/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	monafonts-ttf
 PORTVERSION=	2.90
@@ -18,6 +18,7 @@ FONTSDIR=	lib/X11/fonts/TrueType
 MAKE_ENV=	FONTSDIR=${FONTSDIR}
 PLIST_SUB=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 do-install:
 	${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 	${INSTALL_DATA} ${WRKDIR}/mona.ttf ${FILESDIR}/fonts.dir.mona ${PREFIX}/${FONTSDIR}
