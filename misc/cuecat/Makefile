@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: misc/cuecat/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: misc/cuecat/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	cuecat
 PORTVERSION=	1.1
@@ -23,6 +23,7 @@ MAN1+=		xcuecat.1
 USE_PYTHON=	yes
 WRKSRC=		${WRKDIR}/cuecat
 
+NO_STAGE=	yes
 pre-install:
 	@${MV} ${WRKSRC}/cuecat.py ${WRKSRC}/cuecat.py-orig
 	@${SED} 's;/usr/opt;${PREFIX};' ${WRKSRC}/cuecat.py-orig >${WRKSRC}/cuecat.py
