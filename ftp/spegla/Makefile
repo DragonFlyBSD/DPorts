@@ -1,5 +1,5 @@
 # Created by: Jordan Hubbard <jkh@FreeBSD.org>
-# $FreeBSD: ftp/spegla/Makefile 315271 2013-03-26 09:58:33Z bapt $
+# $FreeBSD: ftp/spegla/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	spegla
 PORTVERSION=	1.1p4
@@ -23,6 +23,7 @@ MAN1=		spegla.1
 
 OPTIONS_DEFINE=	IPV6 NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
