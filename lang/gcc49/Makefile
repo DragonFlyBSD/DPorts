@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc49/Makefile 327452 2013-09-17 06:40:21Z bapt $
+# $FreeBSD: lang/gcc49/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	4.9.0.20130915
@@ -33,6 +33,7 @@ USES=		gmake iconv perl5
 USE_BINUTILS=	yes
 USE_BZIP2=	yes
 USE_PERL5=	build
+SSP_UNSAFE=	yes
 
 PATCH_WRKSRC=	${SRCDIR}
 CONFIGURE_SCRIPT=	../${SRCDIR:S/${WRKDIR}\///}/configure
@@ -45,6 +46,7 @@ OPTIONS_DEFAULT_i386=	JAVA
 OPTIONS_DEFAULT_x86_64=	JAVA
 BOOTSTRAP_DESC=		Build using a full bootstrap
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
