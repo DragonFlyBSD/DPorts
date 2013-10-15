@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: editors/dhex/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: editors/dhex/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	dhex
 PORTVERSION=	0.68
@@ -17,6 +17,7 @@ MAN1=		dhex.1
 MAN5=		dhexrc.5 dhex_markers.5 dhex_searchlog.5
 PLIST_FILES=	bin/dhex
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
