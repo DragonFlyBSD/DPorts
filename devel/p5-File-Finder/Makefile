@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-File-Finder
-# Date created:				Mar 21 2007
-# Whom:					lth@FreeBSD.org
-#
-# $FreeBSD: devel/p5-File-Finder/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: lth@FreeBSD.org
+# $FreeBSD: devel/p5-File-Finder/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Finder
 PORTVERSION=	0.53
@@ -25,4 +21,5 @@ MAN3=		File::Finder.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
