@@ -1,5 +1,4 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: devel/cgit/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: devel/cgit/Makefile 328059 2013-09-23 21:36:09Z madpilot $
 
 PORTNAME=	cgit
 PORTVERSION=	0.9.2
@@ -18,20 +17,19 @@ LICENSE=	GPLv2
 PROJECTHOST=	git-core
 GIT_VERSION=	1.8.2.3
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		iconv shebangfix
+USES=		gmake iconv shebangfix
 SHEBANG_FILES=	filters/html-converters/resources/markdown.pl
-USE_GMAKE=	yes
 USE_OPENSSL=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 MAKE_ARGS+=	CGIT_SCRIPT_PATH=${WWWDIR} \
 		CGIT_CONFIG=${PREFIX}/etc/cgitrc NO_GETTEXT=1
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 SUB_FILES=	pkg-message
 SUB_LIST+=	PORTNAME=${PORTNAME}
 PLIST_SUB+=	PORTNAME=${PORTNAME} WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
