@@ -1,10 +1,10 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: textproc/confetti/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: textproc/confetti/Makefile 329066 2013-10-02 16:16:21Z vg $
 
 PORTNAME=	confetti
 PORTVERSION=	0.0.${DATE}
 CATEGORIES=	textproc
-MASTER_SITES=	http://fbsd.zlonet.ru/distfiles/
+MASTER_SITES=	LOCAL/vg
 
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Configuration file parser generator
@@ -13,14 +13,14 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		bison
-USE_PERL5=	yes
+USES=		bison perl5
 DATE=		20120801
 MAKE_ARGS+=	FLEX=${LOCALBASE}/bin/flex
 MAKE_JOBS_UNSAFE=yes
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
