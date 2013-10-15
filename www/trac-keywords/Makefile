@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: ports/www/trac-keywords/Makefile,v 1.5 2012/12/26 10:48:47 svnexp Exp $
+# $FreeBSD: www/trac-keywords/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	keywords
 PORTVERSION=	0.2
@@ -22,6 +22,7 @@ WRKSRC=			${WRKDIR}/trackeywordsplugin/0.11
 REL=			7273
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-extract:
 # Fix misplaced Genshi template: https://trac-hacks.org/ticket/6104
 	@${MV} ${WRKDIR}/trackeywordsplugin/0.10/trackeywords/templates/keywords.html ${WRKSRC}/trackeywords/templates/
