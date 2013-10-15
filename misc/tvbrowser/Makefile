@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: misc/tvbrowser/Makefile 327416 2013-09-16 16:49:33Z lme $
+# $FreeBSD: misc/tvbrowser/Makefile 329547 2013-10-06 10:04:41Z lme $
 
 PORTNAME=	tvbrowser
 PORTVERSION=	3.3.2
@@ -18,12 +18,16 @@ JAVA_VERSION=	1.6+
 SUB_FILES=	tvbrowser
 
 do-install:
-	@${MKDIR} ${PREFIX}/share/applications/
-	@${REINPLACE_CMD} -e "s/${PORTNAME}\.sh/${PORTNAME}/" ${WRKSRC}/${PORTNAME}.desktop
-	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${PREFIX}/share/applications/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications/
+	@${REINPLACE_CMD} -e "s/${PORTNAME}\.sh/${PORTNAME}/" \
+		${WRKSRC}/${PORTNAME}.desktop
+	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop \
+		${STAGEDIR}${PREFIX}/share/applications/
 	@${RM} ${WRKSRC}/${PORTNAME}.desktop ${WRKSRC}/${PORTNAME}.desktop.bak
-	@cd ${WRKSRC} && ${FIND} . -type d -exec ${MKDIR} "${DATADIR}/{}" \;
-	@cd ${WRKSRC} && ${FIND} . -type f -exec ${INSTALL_DATA} "{}" "${DATADIR}/{}" \;
-	@${INSTALL_SCRIPT} ${WRKDIR}/tvbrowser ${PREFIX}/bin
+	@cd ${WRKSRC} && ${FIND} . -type d -exec \
+		${MKDIR} "${STAGEDIR}${DATADIR}/{}" \;
+	@cd ${WRKSRC} && ${FIND} . -type f -exec \
+		${INSTALL_DATA} "{}" "${STAGEDIR}${DATADIR}/{}" \;
+	@${INSTALL_SCRIPT} ${WRKDIR}/tvbrowser ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
