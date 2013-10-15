@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/festalon/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/festalon/Makefile 329863 2013-10-09 06:17:42Z bapt $
 
 PORTNAME=	festalon
 PORTVERSION=	0.5.5
@@ -17,6 +17,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS+=	samplerate:${PORTSDIR}/audio/libsamplerate
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 
