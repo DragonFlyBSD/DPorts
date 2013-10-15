@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/svg2pdf/Makefile 326071 2013-09-02 20:02:01Z bapt $
+# $FreeBSD: graphics/svg2pdf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/svg2pdf/Makefile,v 1.2 2005/08/08 02:09:09 marcus Exp $
 
 PORTNAME=	svg2pdf
@@ -19,4 +19,5 @@ USES=		pkgconfig
 MAN1=		svg2pdf.1
 PLIST_FILES=	bin/svg2pdf
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
