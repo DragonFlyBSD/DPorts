@@ -1,9 +1,5 @@
-# New ports collection makefile for:	HTML-Pager
-# Date created:				Mon Jan  1 11:59:43 2001
-# Whom:					will
-#
-# $FreeBSD: www/p5-HTML-Pager/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: will
+# $FreeBSD: www/p5-HTML-Pager/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Pager
 PORTVERSION=	0.03
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::Pager.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
