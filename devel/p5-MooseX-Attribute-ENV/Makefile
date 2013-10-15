@@ -1,5 +1,5 @@
 # Created by: alan <Alan@Wave2.org>
-# $FreeBSD: devel/p5-MooseX-Attribute-ENV/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-MooseX-Attribute-ENV/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Attribute-ENV
 PORTVERSION=	0.02
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		MooseX::Attribute::ENV.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
