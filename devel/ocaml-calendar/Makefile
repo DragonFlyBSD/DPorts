@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ocaml-calendar
-# Date created:				Feb 26, 2007
-# Whom:					Jaap Boender <jaapb@kerguelen.org>
-#
-# $FreeBSD: ports/devel/ocaml-calendar/Makefile,v 1.11 2013/02/19 19:07:03 svnexp Exp $
-#
+# Created by: Jaap Boender <jaapb@kerguelen.org>
+# $FreeBSD: devel/ocaml-calendar/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	calendar
 PORTVERSION=	2.03.2
@@ -19,6 +15,7 @@ USE_GMAKE=	yes
 USE_OCAML=	yes
 USE_OCAML_FINDLIB=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${FIND} ${OCAMLFIND_DESTDIR}/${PORTNAME} -type f | \
 		${SED} "s,^${PREFIX}/,," >> ${TMPPLIST}
