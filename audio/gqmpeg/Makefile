@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gqmpeg
-# Date Created:		28 Oct 1998
-# Whom:			Vanilla Pooh Shu <vanilla@FreeBSD.org>
-#
-# $FreeBSD: audio/gqmpeg/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
+# $FreeBSD: audio/gqmpeg/Makefile 329268 2013-10-04 07:18:59Z bapt $
 
 PORTNAME=	gqmpeg
 PORTVERSION=	0.20.0
@@ -26,6 +22,7 @@ RUN_DEPENDS+=	mpg123:${PORTSDIR}/audio/mpg123
 .endif
 
 USE_GNOME=	gdkpixbuf
+NO_STAGE=	yes
 USES=		gettext
 WANT_GNOME=	yes
 USE_AUTOTOOLS=	autoconf213 libtool
@@ -39,7 +36,6 @@ MAN1=		gqmpeg.1
 
 .if ${HAVE_GNOME:Mgnomelibs}!=""
 USE_GNOME+=	gnomeprefix gnomelibs
-PKGNAMESUFFIX=	-gnome
 CONFIGURE_ENV+=	USE_GNOME="yes"
 .else
 CONFIGURE_ENV+=	USE_GNOME=""
