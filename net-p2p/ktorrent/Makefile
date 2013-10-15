@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: net-p2p/ktorrent/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-p2p/ktorrent/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	ktorrent
 DISTVERSION=	4.3.1
@@ -30,6 +30,7 @@ PLIST_SUB+=	SHLIB_VER=${SHLIB_VER} \
 
 CMAKE_ARGS+=	-DENABLE_KIO_MAGNET=1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,ktorrent,$${LIBKTORRENT_LIBRARIES},' \
 		${WRKSRC}/plugins/ipfilter/tests/CMakeLists.txt
