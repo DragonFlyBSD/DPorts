@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lua50-filename
-# Date created:        17 April 2006
-# Whom:                Andrew Turner <andrew+ports@fubar.geek.nz>
-#
-# $FreeBSD: ports/devel/lua-filename/Makefile,v 1.11 2012/11/17 05:55:58 svnexp Exp $
-#
+# Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
+# $FreeBSD: devel/lua-filename/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	filename
 PORTVERSION=	1.2
@@ -27,6 +23,7 @@ NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	%%LUA_MODSHAREDIR%%/filename.lua
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${DISTDIR}/${DISTFILES} ${WRKDIR}/filename.lua
 
