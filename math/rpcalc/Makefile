@@ -1,9 +1,5 @@
-# New ports collection makefile for:    rpcalc
-# Date created:                         31 January 2010
-# Whom:                                 Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: math/rpcalc/Makefile 311476 2013-02-03 18:16:54Z makc $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: math/rpcalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	rpcalc
 PORTVERSION=	0.6.0
@@ -21,6 +17,7 @@ WRKSRC=		${WRKDIR}/rpCalc
 NO_BUILD=	yes
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && ${PYTHON_CMD} install.py
 
