@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-px
-# Date created:		19 July 2002
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/devel/py-px/Makefile,v 1.8 2012/11/17 05:56:49 svnexp Exp $
+# Created by: Hye-Shik Chang
+# $FreeBSD: devel/py-px/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	px
 PORTVERSION=	0.9.5
@@ -30,6 +27,7 @@ PLIST_FILES=	bin/px \
 		%%PYTHON_SITELIBDIR%%/p4lib.pyc \
 		%%PYTHON_SITELIBDIR%%/p4lib.pyo
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
