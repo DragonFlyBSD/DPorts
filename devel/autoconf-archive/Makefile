@@ -1,9 +1,5 @@
-# New ports collection makefile for: autoconf-archive
-# Date Created:	18 October 2006
-# Whom:		Martin Kammerhofer
-#
-# $FreeBSD: ports/devel/autoconf-archive/Makefile,v 1.21 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: Martin Kammerhofer
+# $FreeBSD: devel/autoconf-archive/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	autoconf-archive
 PORTVERSION=	0.${DISTDATE:C/-/./g}
