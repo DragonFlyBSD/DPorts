@@ -1,4 +1,4 @@
-# $FreeBSD: editors/paredit-mode.el/Makefile 316427 2013-04-24 12:59:36Z olgeni $
+# $FreeBSD: editors/paredit-mode.el/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	paredit-mode.el
 PORTVERSION=	23
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	%%EMACS_SITE_LISPDIR%%/paredit.el
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${PREFIX}/${EMACS_SITE_LISPDIR}/paredit.el
 
