@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tkabbur
-# Date created:				06 October 2008
-# Whom:					Dennis Herrmann <adox@mcx2.org>
-#
-# $FreeBSD: ports/net-im/tkabbur/Makefile,v 1.5 2012/11/17 06:00:30 svnexp Exp $
-#
+# Created by: Dennis Herrmann <adox@mcx2.org>
+# $FreeBSD: net-im/tkabbur/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	tkabbur
 PORTVERSION=	0.8
@@ -27,6 +23,7 @@ USE_TK_RUN=	84+
 SUBDIRS=	contrib emoticons ifacetk jabberlib mclistbox \
 		msgs pixmaps plugins sounds tclxml trans
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
