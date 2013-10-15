@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: ports/deskutils/splashsetter/Makefile,v 1.21 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/splashsetter/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	splashsetter
 PORTVERSION=	0.6.5.3
@@ -14,6 +14,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_GNOME=	pygnome2 gnomeprefix
 
+NO_STAGE=	yes
 do-build:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
 		${WRKSRC}/*.py
