@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/games/caph/Makefile,v 1.7 2013/02/04 06:34:22 svnexp Exp $
+# $FreeBSD: games/caph/Makefile 328492 2013-09-27 15:17:26Z madpilot $
 
 PORTNAME=	caph
 PORTVERSION=	1.1
@@ -15,10 +15,10 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/doc/caph/COPYING
 
+USES=		iconv
 USE_BZIP2=	yes
 USE_SDL=	sdl
 USE_GL=		gl
-USES+=		iconv
 
 BUILD_WRKSRC=	${WRKSRC}/src
 
@@ -34,6 +34,7 @@ DESKTOP_ENTRIES="Caph" \
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 OPTIONS_DEFAULT=OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
@@ -42,7 +43,7 @@ CFLAGS+=	-O3 -ffast-math
 
 do-build:
 	cd ${BUILD_WRKSRC} && ${CC} ${CFLAGS} -o caph -I../include *.c \
-	   `${SDL_CONFIG} --libs --cflags` -D_OPENGL -lGL -lpng -lm -liconv
+		`${SDL_CONFIG} --libs --cflags` -D_OPENGL -lGL -lpng ${ICONV_LIB}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|../share/caph|${DATADIR}|' ${BUILD_WRKSRC}/caph.c
