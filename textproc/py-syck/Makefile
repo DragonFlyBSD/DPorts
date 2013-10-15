@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-syck
-# Date created:			2 December 2004
-# Whom:				dd
-#
-# $FreeBSD: ports/textproc/py-syck/Makefile,v 1.10 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: dd
+# $FreeBSD: textproc/py-syck/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	syck
 PORTVERSION=	0.61.2
@@ -22,6 +18,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PySyck
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#include|include|g ; s|#library_dirs|library_dirs|g ; \
 		s|/usr/local|${LOCALBASE}|g ' ${WRKSRC}/setup.cfg
