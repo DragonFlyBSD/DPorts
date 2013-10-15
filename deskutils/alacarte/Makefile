@@ -1,5 +1,5 @@
 # Created by: FreeBSD GNOME Team
-# $FreeBSD: deskutils/alacarte/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: deskutils/alacarte/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #    $MCom: ports/deskutils/alacarte/Makefile,v 1.25 2010/03/29 13:19:00 avl Exp $
 
 PORTNAME=	alacarte
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|' \
 		${WRKSRC}/Alacarte/MenuEditor.py
