@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/webcopy/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: www/webcopy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webcopy
 PORTVERSION=	0.98b7
@@ -13,6 +13,7 @@ COMMENT=	A Web Mirroring Program
 RESTRICTED=	This program cannot be distributed if modified in any way.  Don't sell for profit without written permission
 ALL_TARGET=
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}; ${INSTALL_SCRIPT} webcopy ${PREFIX}/bin
 	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m 755 \
