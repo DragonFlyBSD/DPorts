@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-LWP-Authen-Wsse/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-LWP-Authen-Wsse/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LWP-Authen-Wsse
 PORTVERSION=	0.05
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		LWP::Authen::Wsse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
