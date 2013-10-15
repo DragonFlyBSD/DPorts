@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Whois
-# Date created:				June 7th 1997
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Whois/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Whois/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Whois
 PORTVERSION=	1.9
@@ -21,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Whois.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
