@@ -1,5 +1,5 @@
-# Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: security/pinentry/Makefile 326013 2013-09-02 15:39:17Z bapt $
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: security/pinentry/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.3
@@ -38,6 +38,7 @@ QT4_DESC=	Qt 4 frontend
 PKGNAMESUFFIX=	${PINENTRY_SLAVE}
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQT4}
