@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@php.net>)
-# $FreeBSD: devel/pear-HTML_Form/Makefile 318019 2013-05-13 09:04:18Z miwi $
+# $FreeBSD: devel/pear-HTML_Form/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_Form
 PORTVERSION=	1.3.0
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
