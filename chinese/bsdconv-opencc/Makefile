@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/bsdconv-opencc/Makefile 317058 2013-05-01 23:13:00Z bdrewery $
+# $FreeBSD: chinese/bsdconv-opencc/Makefile 327833 2013-09-21 15:42:16Z sunpoet $
 
 PORTNAME=	opencc
-PORTVERSION=	10.0
+PORTVERSION=	11.1
 CATEGORIES=	chinese converters
 PKGNAMEPREFIX=	bsdconv-
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
@@ -12,15 +12,16 @@ COMMENT=	OpenCC conversion module for bsdconv
 
 LICENSE=	BSD
 
-BUILD_DEPENDS=	bsdconv-mktable:${PORTSDIR}/converters/bsdconv
-LIB_DEPENDS=	bsdconv:${PORTSDIR}/converters/bsdconv \
-		opencc:${PORTSDIR}/chinese/opencc
+BUILD_DEPENDS=	${LOCALBASE}/bin/bsdconv-mktable:${PORTSDIR}/converters/bsdconv
+LIB_DEPENDS=	libbsdconv.so:${PORTSDIR}/converters/bsdconv \
+		libopencc.so:${PORTSDIR}/chinese/opencc
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
 GH_PROJECT=	${PKGNAMEPREFIX}${PORTNAME}
-GH_COMMIT=	38b4a80
+GH_COMMIT=	c48c74c
 
 MAKE_ARGS=	PREFIX=${PREFIX}
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
