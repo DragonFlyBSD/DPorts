@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML-RPC-Fast
-# Whom:					gugu
-# Date created:				08 December 2009
-#
-# $FreeBSD: net/p5-XML-RPC-Fast/Makefile 326384 2013-09-05 11:09:23Z az $
-#
+# Created by: gugu
+# $FreeBSD: net/p5-XML-RPC-Fast/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	XML-RPC-Fast
 PORTVERSION=	0.8
@@ -36,4 +32,5 @@ MAN3=		XML::RPC::Enc.3 \
 		XML::RPC::UA::Curl.3 \
 		XML::RPC::UA::LWP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
