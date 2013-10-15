@@ -1,5 +1,5 @@
 # Created by: Bram Moolenaar <bram@a-a-p.org>
-# $FreeBSD: ports/devel/aap/Makefile,v 1.31 2012/12/16 05:44:22 svnexp Exp $
+# $FreeBSD: devel/aap/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	aap
 PORTVERSION=	1.092
@@ -20,6 +20,7 @@ USE_ZIP=	yes
 USE_PYTHON=	yes
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
