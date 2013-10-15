@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Data-Dumper-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Dumper-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Dumper-Simple
 PORTVERSION=	0.11
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Data::Dumper::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
