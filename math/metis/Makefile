@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/metis/Makefile 316240 2013-04-22 15:30:58Z bf $
+# $FreeBSD: math/metis/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	metis
 PORTVERSION=	5.1.0
@@ -24,6 +24,7 @@ STATIC_DESC=	libmetis archive
 
 OPTIONS_DEFAULT=	SHARED STATIC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENMP}
