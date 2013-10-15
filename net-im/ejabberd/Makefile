@@ -1,5 +1,5 @@
 # Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-# $FreeBSD: net-im/ejabberd/Makefile 326814 2013-09-09 14:48:31Z ashish $
+# $FreeBSD: net-im/ejabberd/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	ejabberd
 PORTVERSION=	2.1.13
@@ -37,6 +37,7 @@ SUB_LIST=	PORTNAME=${PORTNAME} PORTVERSION=${PORTVERSION} \
 		USERS=${USERS} GROUPS=${GROUPS}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 USE_OPENSSL=	yes
