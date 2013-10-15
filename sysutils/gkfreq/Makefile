@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/gkfreq/Makefile 324775 2013-08-15 16:14:02Z ume $
+# $FreeBSD: sysutils/gkfreq/Makefile 329300 2013-10-04 12:40:50Z ume $
 
 PORTNAME=	gkrellm-gkfreq
 PORTVERSION=	2.2
@@ -16,5 +16,12 @@ RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 USES=		pkgconfig
 
 PLIST_FILES=	libexec/gkrellm2/plugins/gkrellm-gkfreq.so
+
+PLUGIN_DIR=	${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins
+
+MAKE_ENV+=	PLUGIN_DIR=${PLUGIN_DIR}
+
+pre-install:
+	@${MKDIR} ${PLUGIN_DIR}
 
 .include <bsd.port.mk>
