@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: ports/misc/xd/Makefile,v 1.12 2013/02/07 20:12:40 svnexp Exp $
+# $FreeBSD: misc/xd/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xd
 PORTVERSION=	2.3
@@ -19,4 +19,5 @@ MAN1=		xd.1
 MANCOMPRESSED=	maybe
 PLIST_FILES=	bin/xd
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
