@@ -1,5 +1,5 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org>
-# $FreeBSD: ports/sysutils/3dm/Makefile,v 1.31 2013/02/16 16:32:27 svnexp Exp $
+# $FreeBSD: sysutils/3dm/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	3dm
 PORTVERSION=	2.11.00.019
@@ -20,6 +20,7 @@ SSLFIX_DESC=	Install KB16625-patched binaries
 
 OPTIONS_DEFAULT=	SSLFIX
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !empty(PORT_OPTIONS:MSSLFIX)
