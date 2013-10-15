@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/xyaku/Makefile 319081 2013-05-26 00:33:54Z jgh $
+# $FreeBSD: japanese/xyaku/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	xyaku
 PORTVERSION=	1.4.0
@@ -19,6 +19,7 @@ USE_XORG=	x11 xt xext ice sm
 OPTIONS_DEFINE=	UTF8
 OPTIONS_DEFAULT=	UTF8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUTF8}
