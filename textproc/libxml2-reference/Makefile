@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: ports/textproc/libxml2-reference/Makefile,v 1.6 2012/11/17 06:02:02 svnexp Exp $
+# $FreeBSD: textproc/libxml2-reference/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTREVISION=	0
 
@@ -15,6 +15,7 @@ PLIST_FILES=	${EXAMPLES:S|^|%%EXAMPLESDIR%%/|}
 PLIST_DIRS=	%%EXAMPLESDIR%%
 .endif
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 .for d in . doc doc/devhelp doc/examples
