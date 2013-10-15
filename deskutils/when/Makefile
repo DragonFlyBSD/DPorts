@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/when/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: deskutils/when/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	when
 PORTVERSION=	1.1.22
@@ -17,6 +17,7 @@ MAN1=		${PORTNAME}.1
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_dist
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	@${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1/
