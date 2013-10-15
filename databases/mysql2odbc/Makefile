@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: databases/mysql2odbc/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/mysql2odbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql2odbc
 PORTVERSION=	0.99.2
@@ -14,6 +14,7 @@ OPTIONS_SINGLE=	ODBC
 OPTIONS_SINGLE_ODBC=	UNIXODBC IODBC
 OPTIONS_DEFAULT=	UNIXODBC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUNIXODBC}
