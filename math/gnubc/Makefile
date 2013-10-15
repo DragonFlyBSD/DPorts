@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bc
-# Date created:				21 Januar 2010
-# Whom:					Gabor Kovesdan <gabor@FreeBSD.org>
-#
-# $FreeBSD: ports/math/gnubc/Makefile,v 1.3 2012/11/17 05:59:21 svnexp Exp $
-#
+# Created by: Gabor Kovesdan <gabor@FreeBSD.org>
+# $FreeBSD: math/gnubc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	bc
 PORTVERSION=	1.06
@@ -29,6 +25,7 @@ PORTEXAMPLES=	ckbook.b \
 		primes.b \
 		twins.b
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	${MKDIR} ${EXAMPLESDIR}
