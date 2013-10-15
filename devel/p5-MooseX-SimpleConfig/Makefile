@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-SimpleConfig/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-MooseX-SimpleConfig/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-SimpleConfig
 PORTVERSION=	0.09
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		MooseX::SimpleConfig.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/auto_install/d' -e '/Test::More/d' \
 		${WRKSRC}/Makefile.PL
