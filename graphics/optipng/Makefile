@@ -1,5 +1,5 @@
 # Created by: Thomas Hurst <freaky@aagh.net>
-# $FreeBSD: graphics/optipng/Makefile 318453 2013-05-18 20:35:07Z rakuco $
+# $FreeBSD: graphics/optipng/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	optipng
 PORTVERSION=	0.7.4
@@ -23,6 +23,7 @@ MAN1=		optipng.1
 PORTDOCS=	history.txt optipng.man.html optipng.man.pdf optipng.man.txt \
 		png_optimization.html todo.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MBUNDLED_LIBPNG)
