@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: graphics/box/Makefile 327122 2013-09-13 01:14:18Z nemysis $
+# $FreeBSD: graphics/box/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	box
 PORTVERSION=	0.4.0
@@ -31,6 +31,7 @@ PLIST_SUB+=	PLIST_VER=${PORTVERSION:R}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
