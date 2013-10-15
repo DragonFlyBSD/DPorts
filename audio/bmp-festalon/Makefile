@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/bmp-festalon/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/bmp-festalon/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PKGNAMEPREFIX=	bmp-
 
@@ -8,6 +8,7 @@ COMMENT=	Beep-media-player plugin for playing .nsf and .hes audio files
 LICENSE=	GPLv2
 
 MASTERDIR=	${.CURDIR}/../festalon
+NO_STAGE=	yes
 
 LIB_DEPENDS=	beep.2:${PORTSDIR}/multimedia/beep-media-player
 
