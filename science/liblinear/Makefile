@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: science/liblinear/Makefile 316757 2013-04-28 22:08:22Z bapt $
+# $FreeBSD: science/liblinear/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	liblinear
 PORTVERSION=	1.80
@@ -23,6 +23,7 @@ TXT_DOCS=	COPYRIGHT README
 
 PLIST_FILES=	bin/train bin/predict
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
