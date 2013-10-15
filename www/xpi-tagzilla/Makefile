@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-firebug
-# Date created:			10 Otcober 2010
-# Whom:				Lapo Luchini <lapo@lapo.it>
-#
-# $FreeBSD: ports/www/xpi-tagzilla/Makefile,v 1.2 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Lapo Luchini <lapo@lapo.it>
+# $FreeBSD: www/xpi-tagzilla/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tagzilla
 PORTVERSION=	0.066.2
@@ -23,5 +19,6 @@ XPI_ID=		{4eac6fec-f68b-4797-be7a-ffeea73e1495}
 XPI_FILES=	chrome/tagzilla.jar chrome.manifest components/tzprefs-service.js defaults/preferences/tagzilla_prefs.js install.js install.rdf release-notes.txt translator.credits.txt
 XPI_DIRS=	chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
