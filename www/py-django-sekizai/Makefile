@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-sekizai/Makefile 314898 2013-03-22 09:22:16Z culot $
+# $FreeBSD: www/py-django-sekizai/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-sekizai
 PORTVERSION=	0.7
@@ -16,4 +16,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>0:${PORTSDIR}/www/py-django \
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
