@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11/xsel-conrad/Makefile 327266 2013-09-14 10:53:19Z bapt $
+# $FreeBSD: x11/xsel-conrad/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xsel
 PORTVERSION=	1.2.0
@@ -26,6 +26,7 @@ PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	ChangeLog README
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|jmp_buf|sigjmp_buf|g' ${WRKSRC}/xsel.c
 	@${REINPLACE_CMD} -e 's|@X_CFLAGS@|${CFLAGS}|;\
