@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mountsmb2
-# Date created:				17 Mar 2006
-# Whom:					Rashid N. Achilov <shelton@granch.ru>
-#
-# $FreeBSD: ports/sysutils/mountsmb2/Makefile,v 1.6 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: Rashid N. Achilov <shelton@granch.ru>
+# $FreeBSD: sysutils/mountsmb2/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mountsmb2
 PORTVERSION=	0.90.2
@@ -25,6 +21,7 @@ SCRIPTS=	smb2nsmbrc mountsmb2
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${SCRIPTS:S,^,${WRKSRC}/,} ${PREFIX}/bin
 .if !defined(NOPORTEXAMPLES)
