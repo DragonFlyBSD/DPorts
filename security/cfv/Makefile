@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/security/cfv/Makefile,v 1.19 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: security/cfv/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cfv
 PORTVERSION=	1.18.3
@@ -18,6 +18,7 @@ MAN1=	cfv.1
 OPTIONS_DEFINE_i386=	PSYCO
 PSYCO_DESC=	Enable devel/py-psyco optimization support
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX},g" ${WRKSRC}/Makefile
 
