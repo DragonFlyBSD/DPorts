@@ -1,5 +1,5 @@
 # Created by: Tony Shadwick <tshadwick@oss-solutions.com>
-# $FreeBSD: net/p5-JavaScript-RPC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-JavaScript-RPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	JavaScript-RPC
 PORTVERSION=	0.3
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	JavaScript::RPC::Server::CGI.3 JavaScript::RPC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
