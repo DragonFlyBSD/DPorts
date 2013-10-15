@@ -1,5 +1,5 @@
 # Created by: Tz-Huan Huang <tzhuan@csie.org>
-# $FreeBSD: math/fann/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/fann/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	fann
 PORTVERSION=	2.2.0
@@ -16,6 +16,7 @@ USES=		cmake
 USE_ZIP=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/pkgconfig|/libdata/pkgconfig|g' ${WRKSRC}/CMakeLists.txt
 
