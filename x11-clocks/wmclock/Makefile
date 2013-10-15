@@ -1,5 +1,5 @@
 # Created by: Per Otterstr=F6m <pelle@fukt.bth.se>
-# $FreeBSD: x11-clocks/wmclock/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-clocks/wmclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmclock
 PORTVERSION=	1.0.14
@@ -17,6 +17,7 @@ MAN1=		wmclock.1
 PLIST_FILES=	bin/wmclock
 WMCLOCK_LANG?=	english
 
+NO_STAGE=	yes
 pre-configure:
 	(cd ${WRKSRC}; \
 	${WRKSRC}/configure --lang ${WMCLOCK_LANG} > /dev/null )
