@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-ExtUtils-Command/Makefile 326874 2013-09-10 08:31:46Z tobez $
+# $FreeBSD: devel/p5-ExtUtils-Command/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ExtUtils-Command
 PORTVERSION=	1.18
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		ExtUtils::Command.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
