@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: lang/angelscript/Makefile 324616 2013-08-12 07:56:01Z vg $
+# $FreeBSD: lang/angelscript/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	angelscript
 PORTVERSION=	2.27.0
@@ -28,6 +28,7 @@ STATIC_DESC=		Build static library
 SHARED_DESC=		Build shared library
 OPTIONS_DEFAULT=	STATIC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSHARED}
