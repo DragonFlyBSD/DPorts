@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/math/truthtable/pkg-plist,v 1.2 2012/11/17 05:59:31 svnexp Exp $
+@comment $FreeBSD: math/truthtable/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/truthtable
 %%JAVASHAREDIR%%/truthtable/TruthTable.jar
 @dirrm %%JAVASHAREDIR%%/truthtable

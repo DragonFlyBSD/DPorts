@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: ports/math/truthtable/Makefile,v 1.8 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: math/truthtable/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	truthtable
 PORTVERSION=	1.2.2
@@ -24,6 +24,7 @@ SUB_LIST=	TRUTHTABLEJAR=${TRUTHTABLEJAR}
 
 TRUTHTABLEJAR=	${DATADIR}/${DISTNAME}${EXTRACT_SUFX}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${DISTDIR}/${DISTFILES} ${DATADIR}
