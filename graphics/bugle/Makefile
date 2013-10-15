@@ -1,5 +1,5 @@
 # Created by: Erik Greenwald <erik@smluc.org>
-# $FreeBSD: graphics/bugle/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/bugle/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	bugle
 PORTVERSION=	0.0.20091026
@@ -15,7 +15,7 @@ AVCODEC_DESC=	LAVC codec support
 
 GNU_CONFIGURE=	yes
 USE_GL=		gl
-USE_PERL5=	yes
+USES=		perl5
 USE_AUTOTOOLS=	libltdl
 USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/${PORTNAME}
 
@@ -35,6 +35,7 @@ MAN7=	bugle-camera.7 bugle-checks.7 bugle-eps.7 bugle-error.7 \
 	bugle-stats_nv.7 bugle-stats_primitives.7 bugle-trace.7 \
 	bugle-unwindstack.7 bugle-wireframe.7
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAVCODEC}
