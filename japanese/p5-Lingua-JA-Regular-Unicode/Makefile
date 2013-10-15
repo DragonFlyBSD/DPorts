@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/p5-Lingua-JA-Regular-Unicode/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/p5-Lingua-JA-Regular-Unicode/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Lingua-JA-Regular-Unicode
 PORTVERSION=	0.12
@@ -17,4 +17,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Lingua::JA::Regular::Unicode.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
