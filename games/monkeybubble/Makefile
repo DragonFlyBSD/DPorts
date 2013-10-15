@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: games/monkeybubble/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: games/monkeybubble/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	monkeybubble
 PORTVERSION=	0.4.0
@@ -22,6 +22,7 @@ INSTALLS_OMF=	yes
 
 GCONF_SCHEMAS=	monkey-bubble.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
