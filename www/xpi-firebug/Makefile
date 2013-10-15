@@ -1,8 +1,8 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-firebug/Makefile 326845 2013-09-09 22:10:47Z bar $
+# $FreeBSD: www/xpi-firebug/Makefile 329613 2013-10-06 18:09:41Z bar $
 
 PORTNAME=	firebug
-PORTVERSION=	1.12.1
+PORTVERSION=	1.12.3
 DISTVERSIONSUFFIX=	-fx
 PORTEPOCH=	3
 CATEGORIES=	www
@@ -15,5 +15,6 @@ LICENSE=	BSD
 XPI_NUM=	1843
 XPI_ID=		firebug@software.joehewitt.com
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
