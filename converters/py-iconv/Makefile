@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: converters/py-iconv/Makefile 326690 2013-09-07 21:30:12Z bsam $
+# $FreeBSD: converters/py-iconv/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	iconv
 PORTVERSION=	1.0
@@ -26,6 +26,7 @@ SETUPINFO=	,libraries=["iconv"],library_dirs=["${LOCALBASE}/lib"],\
 		include_dirs=["${LOCALBASE}/include"]
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC} && ${SED} 's!^\(.*ext_mod.*\)\()]\)$$!\1${SETUPINFO}\2!g'\
 		setup.py > setup.py.tmp && ${CAT} setup.py.tmp > setup.py
