@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-im/p5-Jabber-Lite/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/p5-Jabber-Lite/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Jabber-Lite
 PORTVERSION=	0.8
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Jabber::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
