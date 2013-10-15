@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/asciio/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/asciio/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	asciio
 PORTVERSION=	1.02.71
@@ -41,4 +41,5 @@ MAN3=		App::Asciio::setup::import_export::perl.3 \
 		App::Asciio::setup::hooks::canonize_connections.3 \
 		App::Asciio::Undo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
