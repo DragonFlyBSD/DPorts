@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/npush/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/npush/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	npush
 PORTVERSION=	0.7
@@ -12,6 +12,7 @@ COMMENT=	A curses-based logic game similar to Sokoban and Boulder Dash
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
