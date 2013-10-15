@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: x11-fonts/code2000/Makefile 325390 2013-08-26 12:07:39Z thierry $
+# $FreeBSD: x11-fonts/code2000/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	code2000
 PORTVERSION=	1.171
@@ -33,6 +33,7 @@ FCCACHE_CMD=	${LOCALBASE}/bin/fc-cache -f -v
 
 post-extract: move-fonts rename-license
 
+NO_STAGE=	yes
 move-fonts:
 	${MKDIR} ${WRKSRC}
 	${MV} ${WRKDIR}/CODE2000.TTF ${WRKSRC}/${FONTNAME}.ttf
