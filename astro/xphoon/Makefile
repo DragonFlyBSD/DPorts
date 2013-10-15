@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: astro/xphoon/Makefile 321971 2013-06-28 18:22:43Z bapt $
+# $FreeBSD: astro/xphoon/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	xphoon
 PORTVERSION=	2000.06.13
@@ -11,6 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set the root window to the moon in its current phase
 
+NO_STAGE=	yes
 USES=		imake
 USE_XORG=	x11 xext
 
