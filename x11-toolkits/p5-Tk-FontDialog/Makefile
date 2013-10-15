@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tk-FontDialog
-# Date created:		16 April 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: x11-toolkits/p5-Tk-FontDialog/Makefile 325959 2013-09-02 09:36:29Z az $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: x11-toolkits/p5-Tk-FontDialog/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-FontDialog
 PORTVERSION=	0.15
@@ -22,4 +18,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		${PORTNAME:S/-/::/g}.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
