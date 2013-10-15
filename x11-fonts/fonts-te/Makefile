@@ -1,8 +1,5 @@
-# New ports collection makefile for:	fonts-te
-# Date created:		Jan 24 2007
-# Whom:			Prudhvi Krishna <prudhvikrishna@gmail.com>
-#
-# $FreeBSD: ports/x11-fonts/fonts-te/Makefile,v 1.6 2012/11/17 06:03:28 svnexp Exp $
+# Created by: Prudhvi Krishna <prudhvikrishna@gmail.com>
+# $FreeBSD: x11-fonts/fonts-te/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	fonts-te
 PORTVERSION=	1.0
@@ -23,6 +20,7 @@ PKGMESSAGE=	${PKGDIR}/pkg-message
 FONTSDIR=	${PREFIX}/lib/X11/fonts/${PORTNAME}
 PLIST_SUB=	FONTSDIR=${FONTSDIR:S|^${PREFIX}/||}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${FONTSDIR}
 	${INSTALL_DATA} ${WRKSRC}/Pothana2000.ttf ${FONTSDIR}
