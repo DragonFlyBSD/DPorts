@@ -1,5 +1,5 @@
 # Created by: Yuichiro AIZAWA <yaizawa@mdbl.sfc.keio.ac.jp>
-# $FreeBSD: mail/quickml/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/quickml/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	quickml
 PORTVERSION=	0.7
@@ -33,6 +33,7 @@ OPTIONS_DEFAULT=	ANALOG
 ANALOG_DESC=	quickml-analog
 LIMIT_DESC=	Creators and Members Limitation Patch
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${RUBY_VER} == 1.9
