@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: security/isnprober/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/isnprober/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	isnprober
 PORTVERSION=	1.02
@@ -21,6 +21,7 @@ USES=		perl5
 USE_PERL5=	run
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 .ifndef NOPORTDOCS
