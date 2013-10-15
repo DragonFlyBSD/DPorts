@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ia-aspell
-# Date created:                         31 March 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/ia-aspell/Makefile,v 1.5 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/ia-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	-ia-0.50-1
@@ -16,5 +12,6 @@ COMMENT=	Aspell Interlingua dictionary
 
 DICT=	 	ia
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
