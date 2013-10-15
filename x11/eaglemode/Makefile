@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: x11/eaglemode/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: x11/eaglemode/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	eaglemode
 PORTVERSION=	0.84.0
@@ -32,6 +32,7 @@ OPTIONS_DEFAULT=RSVG PDF
 RSVG_DESC=	SVG support through librsvg
 PDF_DESC=	PDF support through poppler-glib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXINE}
