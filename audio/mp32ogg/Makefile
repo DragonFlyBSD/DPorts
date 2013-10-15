@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mp32ogg/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: audio/mp32ogg/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp32ogg
 PORTVERSION=	0.11
@@ -19,6 +19,7 @@ RUN_DEPENDS=	mpg123:${PORTSDIR}/audio/mpg123 \
 		p5-String-ShellQuote>=0:${PORTSDIR}/textproc/p5-String-ShellQuote
 
 USES=		shebangfix perl5
+NO_STAGE=	yes
 SHEBANG_FILES=	mp32ogg
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${CP}
