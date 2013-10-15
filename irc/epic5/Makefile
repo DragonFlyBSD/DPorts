@@ -1,5 +1,5 @@
 # Created by: Josh Paetzel <josh@tcbug.org>
-# $FreeBSD: irc/epic5/Makefile 326683 2013-09-07 19:49:41Z bsam $
+# $FreeBSD: irc/epic5/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	epic5
 PORTVERSION=	1.1.6
@@ -22,7 +22,6 @@ MAN1=		epic5.1
 USE_OPENSSL=	yes
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 USE_BZIP2=	yes
-WANT_PERL=	yes
 CFLAGS:=	${CFLAGS:C/-O2/-g -O/g}
 
 OPTIONS_DEFINE=	IPV6 TCL PERL SSL TERMCAP DOCS RUBY
@@ -32,6 +31,7 @@ TERMCAP_DESC=	Refuse to use terminfo/ncurses
 CONFIGURE_ARGS+=--with-iconv=${ICONV_PREFIX}
 USES=		iconv
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MIPV6}
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--without-tcl
 #  enable perl5 support (requires perl 5.6.1 or newer)
 #
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=	--with-perl
 .else
 CONFIGURE_ARGS+=	--without-perl
