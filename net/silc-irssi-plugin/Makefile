@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/silc-irssi-plugin/Makefile,v 1.12 2012/12/12 18:51:47 svnexp Exp $
+# $FreeBSD: net/silc-irssi-plugin/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 CATEGORIES=	net irc
 
@@ -14,4 +14,5 @@ CONFLICTS=	silc-toolkit-1.1.* silc-client-1.1.*
 
 IRSSI_PLUGIN=	-irssi
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
