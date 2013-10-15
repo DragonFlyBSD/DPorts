@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libproxy-perl
-# Date created:		11 Januari 2011
-# Whom:			Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: net/libproxy-perl/Makefile 326468 2013-09-06 07:00:15Z az $
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: net/libproxy-perl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #    $MCom: ports/net/libproxy-perl/Makefile,v 1.1 2011/01/12 13:10:53 kwm Exp $
 
 PORTREVISION=	0
@@ -21,6 +18,7 @@ USES=		perl5
 
 LIBPROXY_SLAVE=	perl
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${SITE_PERL}/mach/auto/Net/Libproxy ${SITE_PERL}/mach/Net
 	${INSTALL_LIB} ${WRKSRC}/perl/blib/arch/auto/Net/Libproxy.so \
