@@ -1,5 +1,5 @@
 # Created by: Masafumi Otsune <info@otsune.com>
-# $FreeBSD: ports/mail/bsfilter/Makefile,v 1.22 2013/01/15 00:48:22 svnexp Exp $
+# $FreeBSD: mail/bsfilter/Makefile 330043 2013-10-11 01:51:25Z tabthorpe $
 
 PORTNAME=	bsfilter
 PORTVERSION=	1.0.17
@@ -18,16 +18,13 @@ RUN_DEPENDS=	${RUBY_PKGNAMEPREFIX}gdbm>=0:${PORTSDIR}/databases/ruby-gdbm
 NO_BUILD=	yes
 USE_RUBY=	yes
 
-OPTIONS_DEFINE=	CHASEN DOCS MECAB
+OPTIONS_DEFINE=	DOCS MECAB
 
-CHASEN_DESC=	Japanese Morphological Analysis Support
 MECAB_DESC=	Part-of-Speech and Morphological Analyzer
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MCHASEN}
-RUN_DEPENDS+=	ja-${RUBY_PKGNAMEPREFIX}chasen>=0:${PORTSDIR}/japanese/ruby-chasen
-.endif
 .if ${PORT_OPTIONS:MMECAB}
 RUN_DEPENDS+=	ja-${RUBY_PKGNAMEPREFIX}mecab>=0:${PORTSDIR}/japanese/ruby-mecab
 .endif
