@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: dns/p5-DNS-Zone/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: dns/p5-DNS-Zone/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	DNS-Zone
 PORTVERSION=	0.85
@@ -14,6 +14,7 @@ COMMENT=	DNS::Zone is set of perl modules for name service zone files
 USES=		perl5
 USE_PERL5=	configure patch
 
+NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC} -name '*.pm' -o -name '*.t' -o -name '*.PL' | \
 	${XARGS} ${PERL} -pi -e '$$_="" if /^use 5/;' \
