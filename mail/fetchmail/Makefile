@@ -1,11 +1,5 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: mail/fetchmail/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
-# NOTE:  The fetchmailconf program (an interactive program for
-# writing .fetchmailrc files) requires Python, Tk, X11, etc.
-#
-# The fetchmail program itself does not need Python, but if you
-# want fetchmailconf to work, define the X11 option.
+# $FreeBSD: mail/fetchmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	fetchmail
 PORTVERSION=	6.3.26
@@ -48,6 +42,7 @@ PORTDOCS=	FAQ FEATURES NEWS NOTES README README.SSL \
 		design-notes.html fetchmail-FAQ.html fetchmail-features.html \
 		esrs-design-notes.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Pop2 is obsolete
