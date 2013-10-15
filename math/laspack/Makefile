@@ -1,9 +1,5 @@
-# New ports collection makefile for:    LASPack
-# Date created:         27 July 2005
-# Whom: 		giffunip
-#
-# $FreeBSD: ports/math/laspack/Makefile,v 1.6 2012/11/17 05:59:22 svnexp Exp $
-#
+# Created by: giffunip
+# $FreeBSD: math/laspack/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	laspack
 PORTVERSION=	1.12.2
@@ -20,6 +16,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 MAKEFILE=	makefile
 MAKE_ENV+=	HOME=${PREFIX}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's+/usr/local+${LOCALBASE}+g' ${WRKSRC}/${MAKEFILE}
 
