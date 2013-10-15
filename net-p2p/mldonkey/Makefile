@@ -1,5 +1,5 @@
 # Created by: Holger Lamm <holger@e-gitt.net>
-# $FreeBSD: net-p2p/mldonkey/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: net-p2p/mldonkey/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	mldonkey
 PORTVERSION=	3.1.3
@@ -96,6 +96,7 @@ PORTDOCS=	${DOCFILES}
 ALL_TARGET+=	\
 		mld_hash
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
