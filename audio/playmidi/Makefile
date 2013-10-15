@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/audio/playmidi/Makefile,v 1.27 2013/01/18 11:56:55 svnexp Exp $
+# $FreeBSD: audio/playmidi/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	playmidi
 PORTVERSION=	2.5
@@ -18,6 +18,7 @@ CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ENV=	PREFIX=${PREFIX}
 INSTALL_TARGET=	install.lame install.man
 MAN1=		playmidi.1
+NO_STAGE=	yes
 
 OPTIONS_SINGLE=	DEFAULTDEVICE
 OPTIONS_SINGLE_DEFAULTDEVICE=	EXTERNAL YAMAHA2 YAMAHA4 GRAVISULTRA SBAWE32
