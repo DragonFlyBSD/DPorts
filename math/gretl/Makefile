@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/gretl/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: math/gretl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gretl
 PORTVERSION=	1.9.12
@@ -37,6 +37,7 @@ R_DESC=			libR support
 
 OPTIONS_DEFAULT=	GUI OPENMP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MATLAS}
