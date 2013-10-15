@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	ffproxy
-# Date created:				Jul 20 2003
-# Whom:                			Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: www/ffproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: www/ffproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ffproxy
 PORTVERSION=	1.6
@@ -24,6 +20,7 @@ MAN5=	${PORTNAME}.conf.5
 MAN7=	${PORTNAME}.quick.7
 MAN8=	${PORTNAME}.8
 
+NO_STAGE=	yes
 post-install:
 	@[ -f ${PREFIX}/etc/ffproxy.conf ] || \
 	${CP} ${PREFIX}/etc/ffproxy.conf.sample ${PREFIX}/etc/ffproxy.conf
