@@ -1,9 +1,5 @@
-# New ports collection makefile for:  vqregister
-# Date created:        2003-11-15
-# Whom:                Dan Caescu <daniel@freebsd.ro>
-#
-# $FreeBSD: ports/mail/vqregister/Makefile,v 1.9 2012/11/17 05:59:17 svnexp Exp $
-#
+# Created by: Dan Caescu <daniel@freebsd.ro>
+# $FreeBSD: mail/vqregister/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	vqregister
 PORTVERSION=	2.6
@@ -21,6 +17,7 @@ USE_APACHE_RUN=	22+
 VPOPMAIL_DIR?=	${LOCALBASE}/vpopmail
 
 USE_MYSQL=	yes
+NO_STAGE=	yes
 MAKE_ENV=	VDIR=${VPOPMAIL_DIR} WWWDIR=${WWWDIR}
 
 DOCS=		CONFIG CONTRIBUTORS FORM HISTORY TEMPLATE
