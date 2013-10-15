@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: ports/games/xasteroids/Makefile,v 1.29 2013/02/04 12:54:55 svnexp Exp $
+# $FreeBSD: games/xasteroids/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xasteroids
 PORTVERSION=	5.0
@@ -26,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lXext -lX11 -lm
 MAN6=		xasteroids.6
 PLIST_FILES=	bin/xasteroids
 
+NO_STAGE=	yes
 post-extract:
 	@${LN} -sf xast.man ${WRKSRC}/xasteroids.6
 
