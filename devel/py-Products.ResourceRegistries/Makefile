@@ -1,7 +1,7 @@
-# $FreeBSD: devel/py-Products.ResourceRegistries/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-Products.ResourceRegistries/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.ResourceRegistries
-PORTVERSION=	2.2.7
+PORTVERSION=	2.2.9
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,8 +23,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-USE_ZOPE=	yes
+USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
