@@ -1,5 +1,5 @@
 # Created by: Piotr Florczyk <pf@itwf.pl>
-# $FreeBSD: ports/net/lualdap/Makefile,v 1.1 2013/01/18 00:02:49 svnexp Exp $
+# $FreeBSD: net/lualdap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	lualdap
 PORTVERSION=	1.1.0
@@ -23,6 +23,7 @@ MAKE_ARGS+=	LUA_LIBDIR="${LUA_LIBDIR}" \
 
 ALL_TARGET=
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
