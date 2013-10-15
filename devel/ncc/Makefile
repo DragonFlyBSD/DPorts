@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: devel/ncc/Makefile 313508 2013-03-06 10:50:43Z kwm $
+# $FreeBSD: devel/ncc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ncc
 PORTVERSION=	2.8
@@ -23,6 +23,7 @@ PORTDOCS=	*
 LINKS=		nccar nccld nccc++ nccg++
 MAN1=		ncc.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
