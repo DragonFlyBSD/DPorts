@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: deskutils/vym/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/vym/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	vym
 PORTVERSION=	2.2.4
@@ -27,6 +27,7 @@ DESKTOP_ENTRIES=	"VYM" \
 			"" \
 			false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
