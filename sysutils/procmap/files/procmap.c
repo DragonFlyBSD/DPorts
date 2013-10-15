@@ -31,7 +31,7 @@
  *
  * Reliably print the entire contents of the proc filesystem's "map" files.
  *
- * $FreeBSD: ports/sysutils/procmap/files/procmap.c,v 1.3 2012/11/17 06:01:42 svnexp Exp $
+ * $FreeBSD: sysutils/procmap/files/procmap.c 300897 2012-07-14 14:29:18Z beat $
  *
  ****************************************************************************/
 

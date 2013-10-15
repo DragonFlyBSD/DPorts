@@ -1,9 +1,5 @@
-# New ports collection makefile for:	procmap
-# Date created:		22 March 2000
-# Whom:			Jason Evans <jasone@freebsd.org>
-#
-# $FreeBSD: ports/sysutils/procmap/Makefile,v 1.10 2012/11/17 06:01:42 svnexp Exp $
-#
+# Created by: Jason Evans <jasone@FreeBSD.org>
+# $FreeBSD: sysutils/procmap/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	procmap
 PORTVERSION=	1.0
@@ -24,6 +20,7 @@ MANCOMPRESSED=	yes
 
 procmap_files := procmap.c procmap.8
 
+NO_STAGE=	yes
 post-extract:
 	cd ${FILESDIR} ; \
 		${CP} -p ${procmap_files} ${WRKSRC}
