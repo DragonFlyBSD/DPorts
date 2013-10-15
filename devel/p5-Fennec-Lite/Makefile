@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Fennec-Lite/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-Fennec-Lite/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Fennec-Lite
 PORTVERSION=	0.004
@@ -14,4 +14,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Fennec::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
