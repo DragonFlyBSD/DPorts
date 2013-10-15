@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44-runtime/Makefile 327474 2013-09-17 12:50:49Z bapt $
+# $FreeBSD: deskutils/kdepim44-runtime/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	4.4.11.1
@@ -24,6 +24,7 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build \
 		corelib dbus gui network qtestlib xml
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${GREP} -H -r "#include <q" ${WRKSRC} | ${CUT} -d: -f1 | uniq | \
 		${XARGS} ${REINPLACE_CMD} -f ${FILESDIR}/qt3to4headers.txt
