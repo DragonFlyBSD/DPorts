@@ -1,5 +1,5 @@
 # Created by: Kristopher Zentner <kzentner@u.washington.edu>
-# $FreeBSD: audio/soundtracker/Makefile 325725 2013-08-30 22:31:38Z bapt $
+# $FreeBSD: audio/soundtracker/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	soundtracker
 PORTVERSION=	0.6.8
@@ -17,6 +17,7 @@ LIB_DEPENDS=	sndfile:${PORTSDIR}/audio/libsndfile
 
 GNU_CONFIGURE=	yes
 USES=		pathfix pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	esound gdkpixbuf
 
 CPPFLAGS+=	-I${LOCALBASE}/include
