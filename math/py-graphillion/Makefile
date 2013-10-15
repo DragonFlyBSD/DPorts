@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: math/py-graphillion/Makefile 321557 2013-06-22 09:00:50Z koobs $
+# $FreeBSD: math/py-graphillion/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	graphillion
 PORTVERSION=	0.93
@@ -25,4 +25,5 @@ PYEASYINSTALL_ARCHDEP=	yes
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
