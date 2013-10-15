@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFUid/Makefile 313745 2013-03-09 18:53:53Z miwi $
+# $FreeBSD: devel/py-Products.CMFUid/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.CMFUid
 PORTVERSION=	2.2.1
@@ -18,7 +18,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=0:${PORTSDIR}/devel/py-Pro
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-#USE_ZOPE=	yes
+USE_PYDISTUTILS=easy_install
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
