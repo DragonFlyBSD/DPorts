@@ -1,5 +1,5 @@
 # Created by: Patrick Seal <patseal@hyperhost.net>
-# $FreeBSD: misc/tkregexp/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/tkregexp/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	tkregexp
 PORTVERSION=	3.0
@@ -15,6 +15,7 @@ USE_TK_RUN=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/tkregexp
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|wish8.3|${WISH}|' ${WRKSRC}/visual_regexp.tcl
 
