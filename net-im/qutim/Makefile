@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qutim
-# Date created:		Mon Jun 16 20:42:11 MSD 2008
-# Whom:			webmaster@kibab.com
-#
-# $FreeBSD: net-im/qutim/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: webmaster@kibab.com
+# $FreeBSD: net-im/qutim/Makefile 329755 2013-10-08 05:32:47Z tabthorpe $
 
 PORTNAME=	qutim
 PORTVERSION=	0.2
@@ -15,7 +11,10 @@ MASTER_SITES=	http://dl.kibab.com/distfiles/qutim/ \
 DISTNAME=	qutim_${PORTVERSION}_svn529
 
 MAINTAINER=	webmaster@kibab.com
-COMMENT=	A Qt4-based multiprotocol IM client with advanced features
+COMMENT=	Qt4-based multiprotocol IM client with advanced features
+
+DEPRECATED=	Old version, a new one needs to be ported from scratch
+EXPIRATION_DATE=	2013-11-05
 
 USE_QT4=	designer_build	\
 		gui		\
@@ -33,7 +32,9 @@ USE_XORG=	xscrnsaver
 
 USES=		cmake
 CMAKE_ARGS+=	-DUNIX:BOOL=1 -DBSD:BOOL=1
+LDFLAGS+=	-L${LOCALBASE}/lib -lX11
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
