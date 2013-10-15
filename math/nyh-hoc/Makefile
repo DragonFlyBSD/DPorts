@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hoc
-# Date created:		14 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/math/nyh-hoc/Makefile,v 1.4 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: math/nyh-hoc/Makefile 329631 2013-10-06 21:51:02Z marino $
 
 PORTNAME=	hoc
 PORTVERSION=	9.2
@@ -15,7 +11,10 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High Order Calculator
 
+MAKE_JOBS_UNSAFE= yes
+
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
