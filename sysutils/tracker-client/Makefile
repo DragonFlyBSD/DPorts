@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/tracker-client/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: sysutils/tracker-client/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/tracker-client/Makefile,v 1.14 2010/05/10 04:21:19 marcus Exp $
 
 PORTNAME=	tracker
@@ -48,6 +48,7 @@ CONFIGURE_ARGS=	--enable-video-extractor=gstreamer \
 		--enable-external-qdbm --enable-libexif --enable-libvorbis \
 		--enable-libiptcdata
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(TRACKER_SLAVE)
