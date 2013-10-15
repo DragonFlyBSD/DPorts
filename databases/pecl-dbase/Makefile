@@ -1,5 +1,5 @@
 # Created by: toomas <toomas@median.ee>
-# $FreeBSD: databases/pecl-dbase/Makefile 318115 2013-05-13 15:47:47Z miwi $
+# $FreeBSD: databases/pecl-dbase/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbase
 PORTVERSION=	5.1.0
@@ -17,4 +17,5 @@ LICENSE=	PHP301
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
