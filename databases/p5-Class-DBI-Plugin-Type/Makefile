@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Class-DBI-Plugin-Type
-# Date created:				Apr 3 2004
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: databases/p5-Class-DBI-Plugin-Type/Makefile 324352 2013-08-07 13:20:32Z az $
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: databases/p5-Class-DBI-Plugin-Type/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI-Plugin-Type
 PORTVERSION=	0.02
@@ -22,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::DBI::Plugin::Type.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
