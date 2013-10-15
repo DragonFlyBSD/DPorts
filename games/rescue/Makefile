@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/rescue/Makefile 327569 2013-09-18 17:33:42Z nemysis $
+# $FreeBSD: games/rescue/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	rescue
 PORTVERSION=	1.0.0.3
@@ -28,6 +28,7 @@ SUB_FILES=	${PORTNAME}
 DESKTOP_ENTRIES="Rescue! Max" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;StrategyGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
