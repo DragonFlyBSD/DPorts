@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-ezpyinline
-# Date created:		Feb. 13, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/devel/py-ezpyinline/Makefile,v 1.4 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: devel/py-ezpyinline/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ezpyinline
 PORTVERSION=	0.1
@@ -17,4 +13,5 @@ COMMENT=	Easy embedded Inline C for Python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
