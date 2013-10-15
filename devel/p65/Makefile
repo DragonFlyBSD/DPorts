@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p65/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/p65/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	p65
 PORTVERSION=	1.1
@@ -19,6 +19,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/p65
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${PORTNAME}
 
