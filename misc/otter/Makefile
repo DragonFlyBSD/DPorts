@@ -1,5 +1,5 @@
 # Created by: Garrett Wollman <wollman@FreeBSD.org>
-# $FreeBSD: misc/otter/Makefile 323278 2013-07-19 09:53:08Z danfe $
+# $FreeBSD: misc/otter/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	otter
 PORTVERSION=	3.3f
@@ -17,6 +17,7 @@ PORTDOCS=	README anldp.pdf mace2.pdf otter33.pdf
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
