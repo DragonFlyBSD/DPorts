@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Refcount/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Test-Refcount/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	Test-Refcount
 PORTVERSION=	0.07
@@ -12,7 +12,5 @@ COMMENT=	Assert reference counts on objects
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Test::Refcount.3
 
 .include <bsd.port.mk>
