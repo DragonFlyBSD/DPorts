@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: www/p5-Catalyst-View-Email/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-View-Email/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-View-Email
 PORTVERSION=	0.33
@@ -32,4 +32,5 @@ MAN3=		Catalyst::Helper::View::Email.3 \
 		Catalyst::View::Email.3 \
 		Catalyst::View::Email::Template.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
