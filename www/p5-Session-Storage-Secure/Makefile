@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Session-Storage-Secure/Makefile 324564 2013-08-11 01:54:40Z kuriyama $
+# $FreeBSD: www/p5-Session-Storage-Secure/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Session-Storage-Secure
 PORTVERSION=	0.007
@@ -32,4 +32,5 @@ USE_PERL5=	configure
 
 MAN3=	Session::Storage::Secure.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
