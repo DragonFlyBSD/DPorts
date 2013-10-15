@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: sysutils/installwatch/Makefile 319177 2013-05-27 08:50:04Z bsam $
+# $FreeBSD: sysutils/installwatch/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	installwatch
 PORTVERSION=	0.6.3
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/installwatch lib/installwatch.so
 PORTDOCS=	BUGS CHANGELOG INSTALL README TODO
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
