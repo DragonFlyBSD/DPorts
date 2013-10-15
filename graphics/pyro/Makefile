@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pyro
-# Date created:				07 Sep 2005
-# Whom:					Igor Pokrovsky <ip@doom.homeunix.org>
-#
-# $FreeBSD: ports/graphics/pyro/Makefile,v 1.11 2012/11/17 05:58:21 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
+# $FreeBSD: graphics/pyro/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pyro
 PORTVERSION=	1.5
@@ -25,6 +21,7 @@ PLIST_FILES=	bin/pyro ${EXAMPLES:S|^|%%EXAMPLESDIR%%/|}
 PLIST_DIRS=	%%EXAMPLESDIR%%
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc\.h|stdlib.h|g' ${WRKSRC}/*.c
 
