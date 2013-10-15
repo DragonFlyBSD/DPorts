@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/xsvg/Makefile 326039 2013-09-02 17:12:11Z bapt $
+# $FreeBSD: graphics/xsvg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/xsvg/Makefile,v 1.3 2005/08/09 05:09:09 ahze Exp $
 
 PORTNAME=	xsvg
@@ -19,4 +19,5 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/xsvg
 MAN1=		xsvg.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
