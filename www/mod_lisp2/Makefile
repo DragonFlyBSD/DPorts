@@ -1,5 +1,5 @@
 # Created by: vl
-# $FreeBSD: www/mod_lisp2/Makefile 326434 2013-09-05 18:20:51Z tabthorpe $
+# $FreeBSD: www/mod_lisp2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_lisp2
 PORTVERSION=	1.3.1
@@ -17,4 +17,5 @@ USE_APACHE=	22
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
