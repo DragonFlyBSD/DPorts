@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/p5-Chart-Clicker/Makefile 325130 2013-08-21 13:53:15Z mat $
+# $FreeBSD: graphics/p5-Chart-Clicker/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Chart-Clicker
 PORTVERSION=	2.86
@@ -70,4 +70,5 @@ MAN3=		Chart::Clicker.3 \
 		Chart::Clicker::Renderer::StackedBar.3 \
 		Chart::Clicker::Tutorial.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
