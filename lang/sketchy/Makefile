@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SketchyLISP
-# Date created:				12 May 2005
-# Whom:					Nils M Holm <nmh@t3x.org>
-#
-# $FreeBSD: ports/lang/sketchy/Makefile,v 1.23 2012/11/17 05:58:56 svnexp Exp $
-#
+# Created by: Nils M Holm <nmh@t3x.org>
+# $FreeBSD: lang/sketchy/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	sketchy
 PORTVERSION=	20070218
@@ -20,6 +16,7 @@ MAKE_ENV+=	BINOWN=${BINOWN} \
 MAN1=		sketchy.1 skpp.1
 MLINKS=		sketchy.1 sk.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/sketchy.h
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/src/pp.scm
