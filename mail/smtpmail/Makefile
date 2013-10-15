@@ -1,9 +1,5 @@
-# New ports collection makefile for:  	smtpmail
-# Date created:        	25.06.2003
-# Whom:               	Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/mail/smtpmail/Makefile,v 1.16 2012/11/17 05:59:14 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: mail/smtpmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	smtpmail
 PORTVERSION=	0.4.5
@@ -20,6 +16,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 PLIST_FILES=	bin/smtpmail
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
 
