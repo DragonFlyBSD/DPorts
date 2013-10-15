@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hinfo
-# Date created:				Mon Mar 31 22:37:48 CST 2003
-# Whom:					Mark Linimon <linimon@lonesome.com>
-#
-# $FreeBSD: net/hinfo/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Mark Linimon <linimon@lonesome.com>
+# $FreeBSD: net/hinfo/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	hinfo
 PORTVERSION=	1.0
@@ -35,6 +31,7 @@ NO_BUILD=	yes
 
 # By default, we don't install myhostinfo.cgi.  Install it if you wish; it'll
 # already be patched for you.
+NO_STAGE=	yes
 post-extract:
 .for filename in ${HINFO_SCRIPTS}
 	${REINPLACE_CMD} -E '1s|^#!.+|#!${PERL}|' ${WRKSRC}/${filename}
