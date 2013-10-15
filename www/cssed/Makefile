@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/cssed/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: www/cssed/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cssed
 PORTVERSION=	0.4.0
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--with-plugin-headers
 
 MAN1=		cssed.1
 
+NO_STAGE=	yes
 post-patch:
 .for file in scintilla/gtk/ScintillaGTK.cxx
 	@cd ${WRKSRC} && ${MV} ${file} ${file}.pre_tr \
