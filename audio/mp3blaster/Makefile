@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: audio/mp3blaster/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/mp3blaster/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3blaster
 PORTVERSION=	3.2.5
@@ -10,6 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	MP3 console ncurses-based player
 
+NO_STAGE=	yes
 USES=		gmake
 GNU_CONFIGURE=	yes
 WANT_GNOME=	yes
