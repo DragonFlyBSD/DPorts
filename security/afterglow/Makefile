@@ -1,6 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/afterglow/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/afterglow/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	afterglow
 PORTVERSION=	1.6.2
@@ -22,6 +21,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/data
 	${MKDIR} ${DATADIR}/charts
