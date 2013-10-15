@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tcpmssd
-# Date created:		17 July 2000
-# Whom:			ru
-#
-# $FreeBSD: ports/net/tcpmssd/Makefile,v 1.8 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: ru
+# $FreeBSD: net/tcpmssd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpmssd
 PORTVERSION=	1.1
@@ -21,6 +17,7 @@ SRC=		${.CURDIR}/src
 MAN8=		tcpmssd.8
 PLIST_FILES=	bin/tcpmssd
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 

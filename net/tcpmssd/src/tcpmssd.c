@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: ports/net/tcpmssd/src/tcpmssd.c,v 1.3 2012/11/17 06:00:22 svnexp Exp $
+ * $FreeBSD: net/tcpmssd/src/tcpmssd.c 300897 2012-07-14 14:29:18Z beat $
  */
 
 #include <sys/param.h>
