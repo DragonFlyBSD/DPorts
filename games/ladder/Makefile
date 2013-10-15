@@ -1,5 +1,5 @@
 # Created by: Stefan Zehl <sec@42.org>
-# $FreeBSD: games/ladder/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: games/ladder/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ladder
 PORTVERSION=	1.00
@@ -19,4 +19,5 @@ EXTRACT_CMD=		${TAR}
 EXTRACT_BEFORE_ARGS=	-xf
 EXTRACT_AFTER_ARGS=	# empty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
