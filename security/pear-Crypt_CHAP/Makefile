@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: security/pear-Crypt_CHAP/Makefile 314230 2013-03-15 02:30:52Z miwi $
+# $FreeBSD: security/pear-Crypt_CHAP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt_CHAP
 PORTVERSION=	1.5.0
@@ -15,6 +15,7 @@ USE_PHP=	mcrypt mhash
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
