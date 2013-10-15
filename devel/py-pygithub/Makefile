@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/devel/py-pygithub/Makefile,v 1.7 2013/02/09 15:59:06 svnexp Exp $
+# $FreeBSD: devel/py-pygithub/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pygithub
 PORTVERSION=	1.8.0
@@ -22,4 +22,5 @@ PYDISTUTILS_PKGNAME=	PyGithub
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>

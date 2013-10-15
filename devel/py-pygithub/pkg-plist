@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/py-pygithub/pkg-plist,v 1.5 2012/11/17 05:56:49 svnexp Exp $
+@comment $FreeBSD: devel/py-pygithub/pkg-plist 306059 2012-10-18 11:07:45Z sbz $
 %%PYTHON_SITELIBDIR%%/github/AuthenticatedUser.py
 %%PYTHON_SITELIBDIR%%/github/AuthenticatedUser.pyc
 %%PYTHON_SITELIBDIR%%/github/AuthenticatedUser.pyo
