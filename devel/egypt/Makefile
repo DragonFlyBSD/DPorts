@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/egypt/Makefile 325874 2013-09-01 16:45:59Z az $
+# $FreeBSD: devel/egypt/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	egypt
 PORTVERSION=	1.10
@@ -20,4 +20,5 @@ MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME} %%SITE_PERL%%/%%PERL_ARCH%%/auto/${PORTNAME}/.packlist
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
