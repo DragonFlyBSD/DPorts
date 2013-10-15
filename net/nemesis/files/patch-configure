@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/nemesis/files/patch-configure,v 1.4 2012/11/17 06:00:06 svnexp Exp $
+$FreeBSD: net/nemesis/files/patch-configure 300897 2012-07-14 14:29:18Z beat $
 
 --- configure.orig
 +++ configure
