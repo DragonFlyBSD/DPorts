@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: www/p5-Nginx-Simple/Makefile 325960 2013-09-02 09:44:14Z az $
+# $FreeBSD: www/p5-Nginx-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Nginx-Simple
 PORTVERSION=	0.07
@@ -18,4 +18,5 @@ MAN3=		Nginx::Simple::Dispatch.3 Nginx::Simple::Cookie.3 \
 		Nginx::Simple::Dispatcher::Attributes.3 \
 		Nginx::Simple::Dispatcher.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
