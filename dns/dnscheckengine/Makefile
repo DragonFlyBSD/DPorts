@@ -1,5 +1,5 @@
 # Created by: dnscheckengine-port@academ.com (Stan Barber)
-# $FreeBSD: dns/dnscheckengine/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: dns/dnscheckengine/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnscheckengine
 PORTVERSION=	1.1
@@ -25,7 +25,8 @@ BUILD_DEPENDS=	p5-Crypt-OpenSSL-Random>=0:${PORTSDIR}/security/p5-Crypt-OpenSSL-
 		p5-Mail-RFC822-Address>=0:${PORTSDIR}/mail/p5-Mail-RFC822-Address \
 		p5-MIME-Lite>=0:${PORTSDIR}/mail/p5-MIME-Lite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_SCRIPT+=	Makefile.PL INSTALLSITESCRIPT=${PREFIX}/libexec/dnscheck
 
 WRKSRC=		${WRKDIR}/engine
@@ -38,6 +39,7 @@ SUB_FILES=	pkg-install pkg-deinstall pkg-message
 
 OPTIONS_DEFINE=		MYSQL DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
