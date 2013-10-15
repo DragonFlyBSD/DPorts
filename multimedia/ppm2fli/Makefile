@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ppm2fli
-# Date created:		7 Jan 1998
-# Whom:			giffunip@asme.org
-#
-# $FreeBSD: ports/multimedia/ppm2fli/Makefile,v 1.15 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: giffunip@asme.org
+# $FreeBSD: multimedia/ppm2fli/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	ppm2fli
 PORTVERSION=	2.1
@@ -15,6 +11,7 @@ COMMENT=	Utilities to merge PPM files into animated FLI and backwards
 
 MAN1=	ppm2fli.1 unflick.1
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|^C|#C|g ; \
 		 s|gcc |\$${CC} |g' ${WRKSRC}/Makefile
