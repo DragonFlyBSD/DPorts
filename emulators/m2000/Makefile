@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: emulators/m2000/Makefile 313092 2013-02-28 15:04:48Z miwi $
+# $FreeBSD: emulators/m2000/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	m2000
 PORTVERSION=	0.6
@@ -46,6 +46,7 @@ USE_XORG=	x11 xi
 SUB_FILES=	m2000.sh
 PORTDOCS=	M2000.txt
 
+NO_STAGE=	yes
 post-extract:
 	${MKDIR} ${WRKDIR}/tapeconv
 	${UNZIP_CMD} ${DISTDIR}/${DIST_SUBDIR}/tapeconv.zip -d ${WRKDIR}/tapeconv
