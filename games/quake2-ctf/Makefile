@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake2-ctf/Makefile 317942 2013-05-12 10:20:46Z danfe $
+# $FreeBSD: games/quake2-ctf/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ctf
 PORTVERSION=	1.52
@@ -27,6 +27,7 @@ CTF_SRC=	quake2-r0.16.2.tar.gz
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../quake2-data/Makefile.include"
 .include <bsd.port.options.mk>
 
