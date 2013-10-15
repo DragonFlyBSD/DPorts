@@ -1,9 +1,5 @@
-# Ports collection makefile for:	xwordpy
-# Date created:				Dec. 1, 2008
-# Whom:					bf2006a@yahoo.com
-#
-# $FreeBSD: ports/games/xwordpy/Makefile,v 1.10 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: bf2006a@yahoo.com
+# $FreeBSD: games/xwordpy/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xwordpy
 PORTVERSION=	1.0
@@ -27,6 +23,7 @@ PLIST_FILES=	bin/xwordpy \
 		%%DATADIR%%/crossword-solve.png \
 		%%DATADIR%%/layout-rtb.png
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%DATADIR%%|\'${DATADIR}\'|g" \
 		-e "s|/usr/bin/python|${PYTHON_CMD}|g" \
