@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: games/jzip/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/jzip/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	jzip
 PORTVERSION=	2.0.1g
@@ -20,6 +20,7 @@ MAN1=		jzip.1
 PORTDOCS=	Jzip.doc
 PLIST_FILES=	bin/jzip
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
