@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/rubygem-structured_warnings/Makefile 321856 2013-06-27 06:59:30Z miwi $
+# $FreeBSD: devel/rubygem-structured_warnings/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	structured_warnings
 PORTVERSION=	0.1.4
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
