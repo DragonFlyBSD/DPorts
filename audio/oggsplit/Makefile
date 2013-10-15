@@ -1,6 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: audio/oggsplit/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/oggsplit/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	oggsplit
 PORTVERSION=	0.1.0
@@ -14,6 +13,7 @@ COMMENT=	Split multiplexed (grouped or chained) Ogg files into separate streams
 LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
 
 USES=		gmake
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	automake autoconf
 AUTOMAKE_ARGS=	--add-missing
