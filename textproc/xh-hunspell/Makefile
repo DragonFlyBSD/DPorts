@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xh-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/xh-hunspell/Makefile,v 1.5 2012/11/17 06:02:24 svnexp Exp $
-#
+# $FreeBSD: textproc/xh-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20110323
@@ -28,8 +23,8 @@ PLIST_FILES=	%%DATADIR%%/xh.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/xh-ZA.aff ${DATADIR}/xh.aff
-	${INSTALL_DATA} ${WRKSRC}/xh-ZA.dic ${DATADIR}/xh.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/xh-ZA.aff ${STAGEDIR}${DATADIR}/xh.aff
+	${INSTALL_DATA} ${WRKSRC}/xh-ZA.dic ${STAGEDIR}${DATADIR}/xh.dic
 
 .include <bsd.port.mk>
