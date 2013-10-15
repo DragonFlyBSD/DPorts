@@ -1,9 +1,5 @@
-# New ports collection makefile for:   makejvf-fkr-1.0
-# Date created:        6 Oct 1999
-# Whom:                Kentaro Inagaki <inagaki@tg.rim.or.jp>
-#
-# $FreeBSD: ports/japanese/makejvf/Makefile,v 1.11 2012/11/17 05:58:36 svnexp Exp $
-#
+# Created by: Kentaro Inagaki <inagaki@tg.rim.or.jp>
+# $FreeBSD: japanese/makejvf/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	makejvf-fkr
 PORTVERSION=	1.0
@@ -21,6 +17,7 @@ INSTALL_TARGET=	install-all
 DOCS=		README.1st README.txt \
 		test1.tex test2.tex kuten2jis jy1mch.fd
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
