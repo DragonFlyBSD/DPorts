@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-cms/Makefile 320478 2013-06-10 14:25:07Z wg $
+# $FreeBSD: www/py-django-cms/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-cms
 PORTVERSION=	2.4.1
@@ -27,6 +27,7 @@ OPTIONS_MULTI=	DATABASE
 OPTIONS_DEFAULT=SQLITE
 OPTIONS_MULTI_DATABASE=MYSQL PGSQL SQLITE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
