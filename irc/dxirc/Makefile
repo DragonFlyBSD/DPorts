@@ -1,8 +1,8 @@
-# $FreeBSD: irc/dxirc/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: irc/dxirc/Makefile 329703 2013-10-07 13:15:43Z gahr $
 
 PORTNAME=	dxirc
 PORTVERSION=	1.10.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc
 MASTER_SITES=	GOOGLE_CODE
 
@@ -29,6 +29,7 @@ NOTIFY_DESC=	Libnotify support
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
