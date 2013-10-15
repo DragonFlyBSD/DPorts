@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmms-nas
-# Date created:				29 Sep 2005
-# Whom:					James McNaughton
-#
-# $FreeBSD: ports/audio/xmms-nas/Makefile,v 1.8 2012/11/17 05:54:49 svnexp Exp $
-#
+# Created by: James McNaughton
+# $FreeBSD: audio/xmms-nas/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-nas
 PORTVERSION=	0.2
@@ -18,6 +14,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 		audio.2:${PORTSDIR}/audio/nas
 
 USE_GNOME=	gtk12
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
