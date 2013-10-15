@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/3dc/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: games/3dc/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	3dc
 PORTVERSION=	0.8.1
@@ -21,6 +21,7 @@ USE_PERL5=	build
 USE_XORG=	x11 xaw xext xmu xpm xt
 WRKSRC=		${WRKDIR}/3Dc/src
 
+NO_STAGE=	yes
 post-patch:
 .for file in init.c main.c piece.c stack.c xif.c
 	@${REINPLACE_CMD} -i '' -e 's|malloc.h|stdlib.h|' \
