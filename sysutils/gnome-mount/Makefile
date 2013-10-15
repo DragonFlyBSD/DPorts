@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-mount/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: sysutils/gnome-mount/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.28 2011/03/08 19:25:20 kwm Exp $
 
 PORTNAME=	gnome-mount
@@ -28,4 +28,5 @@ MAN1=		gnome-mount.1
 MLINKS=		gnome-mount.1 gnome-eject.1 \
 		gnome-mount.1 gnome-umount.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
