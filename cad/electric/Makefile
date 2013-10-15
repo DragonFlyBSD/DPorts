@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: cad/electric/Makefile 322587 2013-07-09 21:49:35Z bapt $
+# $FreeBSD: cad/electric/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	electric
 PORTVERSION=	7.0.0
@@ -20,6 +20,7 @@ T1LIB_DESC=	Use T1lib Type1 font library
 
 USES=		motif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 FEATURES+=	MOTIF
