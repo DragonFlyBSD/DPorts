@@ -1,16 +1,11 @@
-# New ports collection makefile for:	font-gost
-# Date created:		2010-01-15
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: x11-fonts/font-gost/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: x11-fonts/font-gost/Makefile 329066 2013-10-02 16:16:21Z vg $
 
 PORTNAME=	gost
-PORTVERSION=	0.1
-PORTREVISION=	1
+PORTVERSION=	0.2
 CATEGORIES=	x11-fonts
 MASTER_SITES=	http://sd.ascon.ru/ftp/Public/Utils/DWG-DXF/ \
-		http://fbsd.zlonet.ru/distfiles/
+		LOCAL/vg
 PKGNAMEPREFIX=	font-
 DISTNAME=	TTF_FON
 
@@ -27,6 +22,7 @@ SUB_FILES=	pkg-message
 SUB_LIST=	FONTSDIR=${FONTSDIR}
 WRKSRC=		${WRKDIR}/Fonts
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${FONTSDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTSDIR}
