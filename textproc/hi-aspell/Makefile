@@ -1,9 +1,5 @@
-# New ports collection makefile for:    hi-aspell
-# Date created:                         02 June 2005
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/hi-aspell/Makefile,v 1.8 2012/11/17 06:01:57 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/hi-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-hi-0.02-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Hindi dictionary
 
 DICT=	 	hi
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
