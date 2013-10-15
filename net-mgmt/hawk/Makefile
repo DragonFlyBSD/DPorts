@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/hawk/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net-mgmt/hawk/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	hawk
 PORTVERSION=	0.6
@@ -23,6 +23,7 @@ USE_RC_SUBR=	hawk
 
 SUB_LIST=	PERL=${PERL}
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e 's#%%PREFIX%%#${PREFIX}#' \
 	    ${WRKSRC}/daemon/hawk > ${WRKSRC}/daemon/hawk.sed
