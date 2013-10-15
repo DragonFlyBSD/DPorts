@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-fits/Makefile 324823 2013-08-16 22:43:15Z stephen $
+# $FreeBSD: math/octave-forge-fits/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-fits
 PORTVERSION=	1.0.3
@@ -16,6 +16,7 @@ WRKSRC=	${WRKDIR}/${OCTSRC}/src
 
 LIB_DEPENDS+=	cfitsio:${PORTSDIR}/astro/cfitsio
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
