@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-Ctr/Makefile 326999 2013-09-11 18:03:40Z az $
+# $FreeBSD: security/p5-Crypt-Ctr/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Ctr
 PORTVERSION=	0.01
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Ctr.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
