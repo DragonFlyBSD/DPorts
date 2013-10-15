@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-HTML-FormFu-Model-DBIC/Makefile 326003 2013-09-02 15:12:10Z az $
+# $FreeBSD: www/p5-HTML-FormFu-Model-DBIC/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-FormFu-Model-DBIC
 PORTVERSION=	0.09010
@@ -29,4 +29,5 @@ USE_PERL5=	configure
 MAN3=		HTML::FormFu::Constraint::DBIC::Unique.3 \
 		HTML::FormFu::Model::DBIC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
