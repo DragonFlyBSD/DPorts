@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-xlwriter
-# Date created:		12 May 2005
-# Whom:			Choe, Cheng-Dae
-#
-# $FreeBSD: ports/textproc/py-xlwriter/Makefile,v 1.5 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Choe, Cheng-Dae
+# $FreeBSD: textproc/py-xlwriter/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xlwriter
 PORTVERSION=	0.4a3
@@ -20,6 +16,7 @@ USE_PYDISTUTILS=	yes
 USE_ZIP=	yes
 PYDISTUTILS_PKGNAME=	pyXLWriter
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${FIND} ${WRKSRC}/examples -type f -exec ${INSTALL_DATA} {} ${EXAMPLESDIR} \;
