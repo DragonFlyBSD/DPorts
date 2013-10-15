@@ -1,5 +1,5 @@
 # Created by: Valerio Daelli <valerio.daelli@gmail.com>
-# $FreeBSD: security/sqlninja/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/sqlninja/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sqlninja
 DISTVERSION=	0.2.6
@@ -22,6 +22,7 @@ USES=		perl5
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${ETCDIR}
 	${MKDIR} ${ETCDIR}/scripts
