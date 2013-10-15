@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/munhwafonts-cid/Makefile 321160 2013-06-17 23:04:51Z jkim $
+# $FreeBSD: korean/munhwafonts-cid/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	munhwafonts-cid
 PORTVERSION=	1.0
@@ -21,6 +21,7 @@ FONTSDIR=	share/fonts/CIDFont
 NO_BUILD=	YES
 PLIST_SUB=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${FONTSDIR}
 	${INSTALL_DATA} ${FILESDIR}/Munhwa-Regular-KSC-EUC-H.gsf \
