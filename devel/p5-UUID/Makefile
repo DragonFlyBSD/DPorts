@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-UUID/Makefile 325880 2013-09-01 17:05:52Z az $
+# $FreeBSD: devel/p5-UUID/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	UUID
 PORTVERSION=	0.04
@@ -19,4 +19,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 
 MAN3=	UUID.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
