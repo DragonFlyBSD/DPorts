@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack/Makefile 324542 2013-08-10 15:28:42Z kuriyama $
+# $FreeBSD: www/p5-Plack/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack
 PORTVERSION=	1.0028
@@ -118,4 +118,5 @@ MAN3=	HTTP::Message::PSGI.3 \
 	Plack::Util.3 \
 	Plack::Util::Accessor.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
