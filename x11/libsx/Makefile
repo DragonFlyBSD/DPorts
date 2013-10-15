@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11/libsx/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/libsx/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libsx
 PORTVERSION=	1.1
@@ -19,6 +19,7 @@ USE_XORG=	x11 xaw xext xmu xt
 ALL_TARGET=	src freq
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
