@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: net/freedbd/Makefile 319986 2013-06-05 12:51:05Z bapt $
+# $FreeBSD: net/freedbd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	freedbd
 PORTVERSION=	0.1
@@ -9,15 +9,17 @@ MASTER_SITES=	http://rink.nu/downloads/projects/
 MAINTAINER=	rink@FreeBSD.org
 COMMENT=	A lightweight daemon for answering FreeDB queries
 
+USES=		perl5
+USE_PERL5=	run
 GNU_CONFIGURE=	yes
 WANT_GNOME=	yes
-USE_PERL5_RUN=	yes
 
 PLIST_FILES=	bin/freedbd bin/freedbd-txt2xml %%EXAMPLESDIR%%/sample_db.txt
 PLIST_DIRS=	%%EXAMPLESDIR%%
 
 OPTIONS_DEFINE=	XML
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MXML}
