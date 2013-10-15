@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-Compress-LZW/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-Compress-LZW/Makefile 328274 2013-09-25 12:24:22Z vanilla $
 
 PORTNAME=	Compress-LZW
 PORTVERSION=	0.01
@@ -13,8 +13,6 @@ COMMENT=	Pure perl implementation of LZW
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Compress::LZW.3
 
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|\@hattmoward|\\@hattmoward|' \
