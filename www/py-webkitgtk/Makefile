@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: www/py-webkitgtk/Makefile 325737 2013-08-30 23:47:19Z bapt $
+# $FreeBSD: www/py-webkitgtk/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webkitgtk
 PORTVERSION=	1.1.8
@@ -25,6 +25,7 @@ USE_GNOME=	glib20 libxslt pygtk2
 USES=		gmake pkgconfig
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
