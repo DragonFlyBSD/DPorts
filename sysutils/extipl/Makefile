@@ -1,9 +1,5 @@
-# New ports collection makefile for:	extipl
-# Date created:		8 January 2001
-# Whom:			KIMURA Takamichi <takamiti@tsden.org>
-#
-# $FreeBSD: ports/sysutils/extipl/Makefile,v 1.11 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: KIMURA Takamichi <takamiti@tsden.org>
+# $FreeBSD: sysutils/extipl/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	extipl
 PORTVERSION=	5.04
@@ -23,6 +19,7 @@ MAN8=		${PORTNAME}.8
 PORTDOCS=	*
 PLIST_FILES=	sbin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC}; \
 	${SED} -e 's|!!DOCDIR!!|${DOCSDIR}|g' \
