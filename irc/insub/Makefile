@@ -1,5 +1,5 @@
-# Created by: Alfred Perlstein <alfred@freebsd.org>
-# $FreeBSD: irc/insub/Makefile 324586 2013-08-11 12:46:55Z adamw $
+# Created by: Alfred Perlstein <alfred@FreeBSD.org>
+# $FreeBSD: irc/insub/Makefile 328792 2013-09-30 14:16:36Z adamw $
 
 PORTNAME=	insub
 PORTVERSION=	15.1
@@ -13,21 +13,21 @@ RUN_DEPENDS=	cowsay:${PORTSDIR}/games/cowsay \
 		figlet:${PORTSDIR}/misc/figlet
 
 USES=	perl5
-
-NO_BUILD=	YES
-
-USE_BZIP2=	YES
 USE_PERL5=	run
+
+USE_BZIP2=	yes
+
+NO_BUILD=	yes
 
 SCRIPT=	${PORTNAME}.pl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${SCRIPT} ${PREFIX}/bin/${SCRIPT:R}
-	${MKDIR} ${PREFIX}/share/irssi/scripts/
+	${INSTALL_SCRIPT} ${WRKSRC}/${SCRIPT} ${STAGEDIR}${PREFIX}/bin/${SCRIPT:R}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/irssi/scripts/
 	${INSTALL_DATA} ${WRKSRC}/${SCRIPT} \
-		${PREFIX}/share/irssi/scripts/${SCRIPT}
-	${MKDIR} ${PREFIX}/share/cows/
+		${STAGEDIR}${PREFIX}/share/irssi/scripts/${SCRIPT}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/cows/
 	cd ${WRKSRC} && \
-		${FIND} cows | ${CPIO} -pdmu ${PREFIX}/share/
+		${FIND} cows | ${CPIO} -pdmu ${STAGEDIR}${PREFIX}/share/
 
 .include <bsd.port.mk>
