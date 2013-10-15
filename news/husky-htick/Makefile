@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-htick/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-htick/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	htick
 PORTVERSION=	1.0.4
@@ -18,6 +18,7 @@ CONFLICTS=	husky-htick-devel-[0-9]*
 MAN1=		htick.1
 INFO=		htick
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's^/fido/etc/config^${PREFIX}/etc/fido/config^' \
 		${WRKSRC}/man/htick.1
