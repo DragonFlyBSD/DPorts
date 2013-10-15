@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Cursor-Cached/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: databases/p5-DBIx-Class-Cursor-Cached/Makefile 328821 2013-09-30 15:49:28Z sunpoet $
 
 PORTNAME=	DBIx-Class-Cursor-Cached
 PORTVERSION=	1.001.001
@@ -20,7 +20,5 @@ TEST_DEPENDS=	p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		DBIx::Class::Cursor::Cached.3
 
 .include <bsd.port.mk>
