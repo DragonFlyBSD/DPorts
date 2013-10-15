@@ -1,9 +1,4 @@
-# New ports collection makefile for:	sr-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/sr-hunspell/Makefile,v 1.6 2012/11/17 06:02:22 svnexp Exp $
-#
+# $FreeBSD: textproc/sr-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	0.18
@@ -30,10 +25,10 @@ PLIST_FILES=	%%DATADIR%%/sh_YU.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/sr-RS-Latn.aff ${DATADIR}/sh_YU.aff
-	${INSTALL_DATA} ${WRKSRC}/sr-RS-Latn.dic ${DATADIR}/sh_YU.dic
-	${INSTALL_DATA} ${WRKSRC}/sr-RS-Cyrl.aff ${DATADIR}/sr_YU.aff
-	${INSTALL_DATA} ${WRKSRC}/sr-RS-Cyrl.dic ${DATADIR}/sr_YU.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/sr-RS-Latn.aff ${STAGEDIR}${DATADIR}/sh_YU.aff
+	${INSTALL_DATA} ${WRKSRC}/sr-RS-Latn.dic ${STAGEDIR}${DATADIR}/sh_YU.dic
+	${INSTALL_DATA} ${WRKSRC}/sr-RS-Cyrl.aff ${STAGEDIR}${DATADIR}/sr_YU.aff
+	${INSTALL_DATA} ${WRKSRC}/sr-RS-Cyrl.dic ${STAGEDIR}${DATADIR}/sr_YU.dic
 
 .include <bsd.port.mk>
