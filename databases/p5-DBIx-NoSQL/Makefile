@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-NoSQL/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-NoSQL/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-NoSQL
 PORTVERSION=	0.0020
@@ -34,4 +34,5 @@ USE_PERL5=	configure
 MAN3=		DBIx::NoSQL.3 \
 		DBIx::NoSQLite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
