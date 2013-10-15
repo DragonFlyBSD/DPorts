@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	PyCXX
-# Date created:			Oct 7, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-cxx/Makefile,v 1.16 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-cxx/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	cxx
 PORTVERSION=	6.0.0
@@ -21,6 +16,7 @@ USE_PYDISTUTILS=	yes
 USE_PYTHON_PREFIX=	yes
 PYDISTUTILS_PKGNAME=	CXX
 PYDISTUTILS_PKGVERSION=	5.3
+NO_STAGE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	*
