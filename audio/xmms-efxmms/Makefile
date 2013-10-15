@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: audio/xmms-efxmms/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/xmms-efxmms/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-efxmms
 PORTVERSION=	0.0.3
@@ -14,6 +14,7 @@ COMMENT=	Send the XMMS audio output through a queue of multiple effect plugins
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 USES=		gmake
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
