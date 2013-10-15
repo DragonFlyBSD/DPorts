@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: dns/p5-Net-DNS-Check/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/p5-Net-DNS-Check/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS-Check
 PORTVERSION=	0.45
@@ -29,4 +29,5 @@ MAN3=	Net::DNS::Check::Test::ns_count.3 Net::DNS::Check::Test::soa_expire_compar
 	Net::DNS::Check::Test.3 Net::DNS::Check::Test::soa_refresh_compare.3 \
 	Net::DNS::Check::Test::soa_serial_syntax.3 Net::DNS::Check.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
