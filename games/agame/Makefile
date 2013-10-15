@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/agame/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/agame/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	agame
 PORTVERSION=	1577
@@ -30,6 +30,7 @@ DESKTOP_ENTRIES="game" \
 		"Game;BlocksGame;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
