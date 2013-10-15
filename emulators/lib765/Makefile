@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/lib765/Makefile 319793 2013-06-03 16:37:29Z rene $
+# $FreeBSD: emulators/lib765/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	lib765
 PORTVERSION=	0.4.2
@@ -20,6 +20,7 @@ LIBDSK_DESC=	Include LibDSK support (recommended)
 
 OPTIONS_DEFAULT=	LIBDSK
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBDSK}
