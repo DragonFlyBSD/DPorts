@@ -1,9 +1,5 @@
-# New ports collection makefile for:	coolmail
-# Date created:			Mon  6 Jul 12:00:06 CEST 1998
-# Whom:				Udo Schweigert <ust@cert.siemens.de>
-#
-# $FreeBSD: ports/mail/coolmail/Makefile,v 1.16 2012/11/17 05:59:00 svnexp Exp $
-#
+# Created by: Udo Schweigert <ust@cert.siemens.de>
+# $FreeBSD: mail/coolmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	coolmail
 PORTVERSION=	1.3
@@ -22,6 +18,7 @@ PATCH_STRIP=	-p1
 MAN1=		coolmail.1
 PLIST_FILES=	bin/coolmail
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/coolmail ${PREFIX}/bin/coolmail
 	${INSTALL_MAN} ${WRKSRC}/coolmail.man ${PREFIX}/man/man1/coolmail.1
