@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: audio/emms/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/emms/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	emms
 PORTVERSION=	3.0
@@ -13,6 +13,7 @@ COMMENT=	The Emacs Multi-Media System
 LICENSE=	GPLv3
 
 USES=		gmake
+NO_STAGE=	yes
 USE_EMACS=	yes
 MAKE_ENV+=	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} \
 		EMACS_SITE_LISPDIR=${EMACS_SITE_LISPDIR}
