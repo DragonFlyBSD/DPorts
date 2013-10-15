@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: games/xhime/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xhime/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xhime
 PORTVERSION=	1.51
@@ -20,6 +20,7 @@ MAN6=		xhime.6
 
 NO_CDROM=	'contains commercial character data'
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
