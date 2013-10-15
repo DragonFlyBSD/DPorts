@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: news/xrn/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: news/xrn/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	xrn
 DISTVERSION=	10.00-beta-3
@@ -19,6 +19,7 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 DOCS=		COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e "s|^#error.+||g" \
 		-e "s|/usr/lib/sendmail|/usr/sbin/sendmail|g" \
