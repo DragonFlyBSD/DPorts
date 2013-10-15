@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: x11/keylaunch/Makefile 327036 2013-09-12 06:36:45Z az $
+# $FreeBSD: x11/keylaunch/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	keylaunch
 PORTVERSION=	1.3.0
@@ -18,6 +18,7 @@ USE_XORG=	x11
 
 PKGMESSAGE=	${WRKSRC}/pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/Makefile
 
