@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin
-# $FreeBSD: devel/lxr/Makefile 317875 2013-05-11 13:15:45Z bapt $
+# $FreeBSD: devel/lxr/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lxr
 PORTVERSION=	0.10.2
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	exctags:${PORTSDIR}/devel/ctags \
 
 PATCH_STRIP=	-p1
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 OPTIONS_DEFINE=	DOCS
@@ -42,6 +42,7 @@ PLIST_SUB+=	LXRTOPDIR=${LXRTOPDIR:S!^${PREFIX}/!!}
 SUB_LIST+=	LXRDIR=${LXRDIR}
 SUB_FILES+=	upgrade-0.9.10-postgres upgrade-0.9.10-mysql
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGSQL}
