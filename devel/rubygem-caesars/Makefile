@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/devel/rubygem-caesars/Makefile,v 1.1 2012/11/23 22:57:53 svnexp Exp $
+# $FreeBSD: devel/rubygem-caesars/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	caesars
 PORTVERSION=	0.7.4
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
