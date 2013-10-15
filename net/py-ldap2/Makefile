@@ -1,4 +1,4 @@
-# $FreeBSD: net/py-ldap2/Makefile 322449 2013-07-07 16:21:03Z rm $
+# $FreeBSD: net/py-ldap2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldap2
 PORTVERSION=	2.4.13
@@ -28,6 +28,7 @@ REPLACE_ARGS=	-e 's,/opt/openldap-RE24/lib,${LOCALBASE}/lib,' \
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	SASL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSASL}
