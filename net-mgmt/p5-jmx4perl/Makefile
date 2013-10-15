@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/p5-jmx4perl/Makefile 326245 2013-09-04 03:27:37Z az $
+# $FreeBSD: net-mgmt/p5-jmx4perl/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	jmx4perl
 PORTVERSION=	1.07
@@ -109,6 +109,7 @@ ETC_FILES=	common.cfg \
 SUB_FILES=	pkg-install pkg-deinstall
 SUB_LIST=	ETC_FILES="${ETC_FILES}"
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${ETCDIR}
 .for f in ${ETC_FILES}
