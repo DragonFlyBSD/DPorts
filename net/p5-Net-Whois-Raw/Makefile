@@ -1,8 +1,8 @@
-# Created by: Alex Kapranoff <kappa@freebsd.org.ua>
-# $FreeBSD: net/p5-Net-Whois-Raw/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: Alex Kapranoff <kappa@FreeBSD.org.ua>
+# $FreeBSD: net/p5-Net-Whois-Raw/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Whois-Raw
-PORTVERSION=	2.46
+PORTVERSION=	2.48
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DESPAIR
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 MAN1=		pwhois.1
 MAN3=		Net::Whois::Raw.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
