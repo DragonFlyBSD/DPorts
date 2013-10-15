@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/rpy/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/rpy/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	rpy
 PORTVERSION=	1.0.3
@@ -22,6 +22,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib/R/modules -L${LOCALBASE}/lib/R/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^statichere ,,' ${WRKSRC}/src/rpymodule.c
 	@${REINPLACE_CMD} -e 's|/usr/share|${LOCALBASE}/lib|' ${WRKSRC}/setup.py
