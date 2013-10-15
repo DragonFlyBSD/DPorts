@@ -1,5 +1,5 @@
 # Created by: anarcat@anarcat.ath.cx
-# $FreeBSD: ports/net-mgmt/nagircbot/Makefile,v 1.5 2012/11/20 19:16:37 svnexp Exp $
+# $FreeBSD: net-mgmt/nagircbot/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagircbot
 PORTVERSION=	0.0.33
@@ -15,4 +15,5 @@ USE_RC_SUBR=	nagircbot
 
 PLIST_FILES=	bin/nagircbot
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
