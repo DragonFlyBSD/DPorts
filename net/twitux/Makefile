@@ -1,5 +1,5 @@
 # Created by: Arnaud Berthomier
-# $FreeBSD: net/twitux/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: net/twitux/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=		twitux
 PORTVERSION=	0.69
@@ -25,4 +25,5 @@ CONFIGURE_ENV+=	GMSGFMT="${LOCALBASE}/bin/msgfmt"
 GCONF_SCHEMAS=	twitux.schemas
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
