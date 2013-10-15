@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: databases/p5-Text-Query-SQL/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: databases/p5-Text-Query-SQL/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Text-Query-SQL
 PORTVERSION=	0.09
@@ -22,6 +22,7 @@ MAN3=		Text::Query::BuildSQLMifluz.3 Text::Query::BuildSQLMySQL.3 \
 		Text::Query::BuildSQLPg.3 Text::Query::SolveSQL.3 \
 		Bundle::Text::Query::BuildSQL.3
 
+NO_STAGE=	yes
 pre-patch:
 	@${PERL} -pi -e '/DBI/ and $$_=""' ${WRKSRC}/Makefile.PL
 
