@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: deskutils/tine20/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: deskutils/tine20/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tine20
 PORTVERSION=	0.0.2012.10.04
@@ -31,6 +31,7 @@ USE_MYSQL=	yes
 USE_PHP=	ctype dom gd iconv json mcrypt mysql pdo_mysql simplexml spl xml zip
 WANT_PHP_WEB=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPC}
