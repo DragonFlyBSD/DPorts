@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pudb
-# Date created:		2009-11-01
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/py-pudb/Makefile,v 1.4 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/py-pudb/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pudb
 PORTVERSION=	0.93.1
@@ -20,4 +16,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pygments>0:${PORTSDIR}/textproc/py-pygments 
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
