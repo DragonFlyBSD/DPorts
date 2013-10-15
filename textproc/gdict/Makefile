@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: ports/textproc/gdict/Makefile,v 1.22 2012/12/29 04:52:00 svnexp Exp $
+# $FreeBSD: textproc/gdict/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	gdict
 PORTVERSION=	0.7
@@ -12,6 +12,7 @@ COMMENT=	Small program that finds definitions of arbitrary (English) words
 
 USE_GNOME=	gtk12
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdict ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/dict ${PREFIX}/bin/cdict
