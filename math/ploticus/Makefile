@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	ploticus
-# Date created:			Jan 23, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: math/ploticus/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: ijliao
+# $FreeBSD: math/ploticus/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ploticus
 PORTVERSION=	2.40
@@ -50,6 +45,7 @@ MAN3=		libploticus.3
 MANCOMPRESSED=	no
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/X11R6,${LOCALBASE},g' \
 		${BUILD_WRKSRC}/Makefile ${BUILD_WRKSRC}/mkapi
