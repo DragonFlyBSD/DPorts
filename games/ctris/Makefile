@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/ctris/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: games/ctris/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ctris
 PORTVERSION=	0.42
@@ -18,6 +18,7 @@ MANCOMPRESSED=	yes
 MAN6=		ctris.6
 PLIST_FILES=	bin/ctris
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|gcc|${CC}|" -e "s|CFLAGS=.*|CFLAGS+=-Wall|" \
 		 ${WRKSRC}/Makefile
