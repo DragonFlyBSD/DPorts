@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-HTML-Element-Library/Makefile 324028 2013-07-31 09:59:23Z bapt $
+# $FreeBSD: www/p5-HTML-Element-Library/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Element-Library
 PORTVERSION=	5.112.170
@@ -29,6 +29,7 @@ USE_PERL5=	patch configure
 MAN3=		HTML::Element::Library::Changes.3 \
 		HTML::Element::Library.3
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} && pod2text lib/HTML/Element/Library.pm > README
 	@cd ${WRKSRC} && pod2text lib/HTML/Element/Library/Changes.pod > CHANGES
