@@ -1,5 +1,5 @@
 # Created by: Janky Jay <ek@purplehat.org>
-# $FreeBSD: security/maia/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/maia/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	maia
 DISTVERSION=	1.0.3-${SVNREVISION}
@@ -27,7 +27,8 @@ RUN_DEPENDS=	p5-Unix-Syslog>=0.94:${PORTSDIR}/sysutils/p5-Unix-Syslog \
 # SVN source: https://www.maiamailguard.com/svn/branches/1.0
 SVNREVISION=	r1575
 WRKSRC=		${WRKDIR}/${PORTNAME}-1.0-${SVNREVISION}
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 DOCS=	LICENSE README maiad.conf.dist maia-mysql.sql maia-pgsql.sql maia.conf.dist
@@ -89,6 +90,7 @@ SUB_LIST+=	MAIAUSER=${USERS} \
 		MAIAQUARANTINE=${MAIAQUARANTINE}
 USE_RC_SUBR+=	maiad
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Code is a bit fiddly here; we can't use USE variables after pre.mk so we have
