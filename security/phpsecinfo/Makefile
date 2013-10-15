@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpsecinfo
-# Date created:				2007/04/01
-# Whom:					chinsan
-#
-# $FreeBSD: ports/security/phpsecinfo/Makefile,v 1.5 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: security/phpsecinfo/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	phpsecinfo
 PORTVERSION=	0.2.1
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-20070406
 TEMP_PLIST=	${WRKDIR}/temp-pkg-plist
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${WWWDIR}
 	@${CP} -R ${WRKSRC}/ ${WWWDIR}/
