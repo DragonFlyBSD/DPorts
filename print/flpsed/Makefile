@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flpsed
-# Date created:				6 January 2005
-# Whom:					Fernan Aguero <fernan@iib.unsam.edu.ar>
-#
-# $FreeBSD: ports/print/flpsed/Makefile,v 1.17 2012/11/17 06:00:49 svnexp Exp $
-#
+# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
+# $FreeBSD: print/flpsed/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	flpsed
 PORTVERSION=	0.7.0
@@ -24,6 +20,7 @@ PLIST_FILES=	bin/flpsed
 MAN1=		flpsed.1
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-configure:
 	@${FIND} -X ${WRKSRC} -type f -name Makefile | ${XARGS} \
 	${REINPLACE_CMD} -e "s|-lpthread|${PTHREAD_LIBS}|g"
