@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/teg/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: games/teg/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	teg
 PORTVERSION=	0.11.2
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--disable-ggz
 
 GCONF_SCHEMAS=	teg.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lR " LIST_NEXT" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
 		's| LIST_NEXT| TEG_LIST_NEXT|g'
