@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/cvs2darcs/Makefile 326636 2013-09-07 14:07:59Z az $
+# $FreeBSD: devel/cvs2darcs/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvs2darcs
 PORTVERSION=	0.8
@@ -25,4 +25,5 @@ PLIST_FILES=	bin/cvs2darcs share/cvs2darcs/cvs_convert.pl \
 		share/cvs2darcs/branch_detect.pl
 PLIST_DIRS=	share/cvs2darcs
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
