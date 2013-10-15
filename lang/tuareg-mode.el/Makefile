@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: lang/tuareg-mode.el/Makefile 316003 2013-04-17 19:19:57Z bdrewery $
+# $FreeBSD: lang/tuareg-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	tuareg-mode
 PORTVERSION=	2.0.6
@@ -30,6 +30,7 @@ PLIST_DIRS=	${DOC_DIR}
 # Operations
 #
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} &&\
 	${EMACS_CMD} -batch -q -f batch-byte-compile ${ELISP_FILES}
