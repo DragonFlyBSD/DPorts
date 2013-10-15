@@ -1,9 +1,5 @@
-# New ports collection makefile for:	duel
-# Date created:				10 Aug 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/duel/Makefile,v 1.18 2012/11/17 05:57:36 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/duel/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	duel
 PORTVERSION=	0.98
@@ -30,6 +26,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 SUB_FILES=	${PORTNAME}-sh
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
