@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xacpim
-# Date created:				25 April 2004
-# Whom:					henriknj@0xmilk.org
-#
-# $FreeBSD: ports/sysutils/xacpim/Makefile,v 1.6 2012/11/17 06:01:50 svnexp Exp $
+# Created by: henriknj@0xmilk.org
+# $FreeBSD: sysutils/xacpim/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xacpim
 PORTVERSION=	0.1.1
@@ -16,6 +13,7 @@ COMMENT=	Utility to display battery status and temperature on the root-display
 USE_XORG=	x11
 PLIST_FILES=	bin/xacpim
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/xacpim ${PREFIX}/bin/xacpim
 
