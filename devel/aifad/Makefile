@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/aifad/Makefile 309281 2012-12-20 05:37:46Z araujo $
+# $FreeBSD: devel/aifad/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	aifad
 PORTVERSION=	2.0.2
@@ -27,6 +27,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 	@${STRIP_CMD} ${PREFIX}/bin/${PORTNAME}
 .if !defined(NOPORTDOCS)
