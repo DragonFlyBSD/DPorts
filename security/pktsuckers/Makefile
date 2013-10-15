@@ -1,5 +1,5 @@
 # Created by: Warren Toomey <wkt@cs.adfa.edu.au>
-# $FreeBSD: ports/security/pktsuckers/Makefile,v 1.13 2012/12/10 05:36:29 svnexp Exp $
+# $FreeBSD: security/pktsuckers/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pktsuckers
 PORTVERSION=	1.2
@@ -12,6 +12,7 @@ COMMENT=	Log contents of unwanted UDP packets and TCP connections
 
 PLIST_FILES=	libexec/tcpsuck libexec/udpsuck
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^void main|int main|' ${WRKSRC}/tcpsuck.c ${WRKSRC}/udpsuck.c
