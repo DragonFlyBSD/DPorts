@@ -1,5 +1,5 @@
 # Created by: Frank Steinborn <steinex@nognu.de>
-# $FreeBSD: comms/p5-SMS-SMS77/Makefile 325894 2013-09-01 18:09:54Z az $
+# $FreeBSD: comms/p5-SMS-SMS77/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	SMS-SMS77
 PORTVERSION=	0.01
@@ -19,4 +19,5 @@ MAN3=		SMS::SMS77::Message.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
