@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-csquotes
-# Date created:		31 Aug 2008
-# Whom:			vj562001@yahoo.de
-#
-# $FreeBSD: print/latex-csquotes/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: vj562001@yahoo.de
+# $FreeBSD: print/latex-csquotes/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	csquotes
 PORTVERSION=	5.0b
@@ -36,6 +33,7 @@ DOC_FILES=	RELEASE README csquotes.pdf csquotes.tex
 
 WRKSRC=		${WRKDIR}/${CLASSNAME}
 
+NO_STAGE=	yes
 pre-install:
 	(for F in ${CLASS_FILES}; do \
 			${ECHO_CMD} "${CLASSDIR}/$${F}"; \
