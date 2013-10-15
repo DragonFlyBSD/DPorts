@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/renrot/Makefile 320418 2013-06-10 00:22:51Z danfe $
+# $FreeBSD: graphics/renrot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	renrot
 PORTVERSION=	1.2.0
@@ -14,7 +14,8 @@ LICENSE=	ART20
 BUILD_DEPENDS=	p5-Image-ExifTool>=0:${PORTSDIR}/graphics/p5-Image-ExifTool
 RUN_DEPENDS:=	${BUILD_DEPENDS} jpegtran:${PORTSDIR}/graphics/jpeg
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	IMAGEMAGICK DOCS
 IMAGEMAGICK_DESC=	Image::Magick Perl module support
@@ -22,6 +23,7 @@ IMAGEMAGICK_DESC=	Image::Magick Perl module support
 MAN1=		${PORTNAME}.1
 PORTDOCS=	AUTHORS README README.russian ChangeLog NEWS TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
