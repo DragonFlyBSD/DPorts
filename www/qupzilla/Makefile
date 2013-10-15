@@ -1,4 +1,4 @@
-# $FreeBSD: www/qupzilla/Makefile 326443 2013-09-05 20:13:50Z wg $
+# $FreeBSD: www/qupzilla/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	qupzilla
 PORTVERSION=	1.4.4
@@ -20,6 +20,7 @@ MAKE_ENV+=	QUPZILLA_PREFIX=${PREFIX}/ USE_LIBPATH=${PREFIX}/lib/
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		${QMAKE} ${QMAKEFLAGS} QupZilla.pro
