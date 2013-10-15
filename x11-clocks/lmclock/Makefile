@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: x11-clocks/lmclock/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: x11-clocks/lmclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	lmclock
 PORTVERSION=	1.2
@@ -15,6 +15,7 @@ USE_XORG=	x11 xext
 
 PLIST_FILES=	bin/lmclock
 
+NO_STAGE=	yes
 post-extract:
 	@${TOUCH} ${WRKSRC}/lmclock.man
 
