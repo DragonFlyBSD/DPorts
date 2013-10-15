@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eyeOS
-# Date created:		2006-04-04
-# Whom:			Nicola Vitale <nivit@email.it>
-#
-# $FreeBSD: ports/www/eyeos/Makefile,v 1.21 2012/11/17 06:02:33 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@email.it>
+# $FreeBSD: www/eyeos/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	eyeOS
 DISTVERSION=	0.9.3-5
@@ -25,6 +21,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 PLIST_SUB+=	EYEDIR="${EYEDIR:S,^${PREFIX}/,,}"
 SUB_LIST+=	EYEDIR=${EYEDIR}
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/DOCS/gpl-license.txt
 	@${MV} ${WRKSRC}/README.txt ${WRKSRC}/DOCS/USER.MANUAL
