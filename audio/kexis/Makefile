@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kexis
-# Date created:		22 July 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/kexis/Makefile,v 1.9 2012/11/17 05:54:35 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: audio/kexis/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	kexis
 PORTVERSION=	0.2.2
@@ -14,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lossless WAV file compressor
 
+NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	bin/kexis
 
