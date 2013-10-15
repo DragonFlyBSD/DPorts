@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libhsclient
-# Date created:		2010-12-15
-# Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/databases/libhsclient/Makefile,v 1.3 2012/11/17 05:55:10 svnexp Exp $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: databases/libhsclient/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libhsclient
 PORTVERSION=	1.0.6
