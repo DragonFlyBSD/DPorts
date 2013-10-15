@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-hptsqfix/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-hptsqfix/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	hptsqfix
 PORTVERSION=	1.2.4
@@ -17,5 +17,6 @@ MAN1=		hptsqfix.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/hptsqfix
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../husky-base/Makefile.inc"
 .include <bsd.port.mk>
