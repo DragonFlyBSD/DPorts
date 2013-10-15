@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/misc/pipe/Makefile,v 1.13 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: misc/pipe/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pipe
 PORTVERSION=	2.5
@@ -23,6 +23,7 @@ SUB_FILES=	pipe.sh
 PORTDOCS=*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/pipe.sh ${PREFIX}/bin/pipe
 	@${MKDIR} ${DATADIR}
