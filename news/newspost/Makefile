@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-# $FreeBSD: news/newspost/Makefile 323779 2013-07-27 11:12:27Z danfe $
+# $FreeBSD: news/newspost/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	newspost
 PORTVERSION=	2.1.1
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Change "cd foo; $(MAKE)" into "$(MAKE) -C foo" to unbreak parallel builds
