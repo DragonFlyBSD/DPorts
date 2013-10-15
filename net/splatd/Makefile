@@ -1,8 +1,5 @@
-# New ports collection makefile for:	splatd
-# Date created:		26 September 2005
-# Whom:			Landon Fuller <landonf@opendarwin.org>
-#
-# $FreeBSD: ports/net/splatd/Makefile,v 1.15 2012/11/17 06:00:21 svnexp Exp $
+# Created by: Landon Fuller <landonf@opendarwin.org>
+# $FreeBSD: net/splatd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	splatd
 PORTVERSION=	1.2
@@ -26,6 +23,7 @@ SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 MAN5=		splat.conf.5
 MAN8=		splatd.8
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/splat.conf ${PREFIX}/etc/splat.conf.sample
 	${MV} -f ${PREFIX}/bin/splatd ${PREFIX}/sbin/splatd
