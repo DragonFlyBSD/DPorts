@@ -1,9 +1,5 @@
-# New ports collection makefile for:    wping
-# Date created:				Apr 9th 2003
-# Whom:	      				Michael L. Hostbaek <mich@freebsdcluster.org>
-#
-# $FreeBSD: net/wping/Makefile 326384 2013-09-05 11:09:23Z az $
-#
+# Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
+# $FreeBSD: net/wping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	wping
 PORTVERSION=	0.1a
@@ -21,6 +17,7 @@ USES=		perl5
 USE_BZIP2=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/wping.pl ${PREFIX}/bin/wping
 		${INSTALL_DATA} ${WRKSRC}/wping.conf ${PREFIX}/etc/wping.conf.sample
