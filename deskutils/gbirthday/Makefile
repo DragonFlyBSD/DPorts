@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/gbirthday/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/gbirthday/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gbirthday
 PORTVERSION=	0.6.7
@@ -20,6 +20,7 @@ USE_XZ=		yes
 USE_PYTHON_RUN=	-2.7
 USE_GNOME=	pygtk2 desktopfileutils
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
