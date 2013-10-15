@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: devel/p5-Moose-Autobox/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-Moose-Autobox/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Moose-Autobox
 PORTVERSION=	0.12
@@ -37,4 +37,5 @@ MAN3=	Moose::Autobox.3 \
 	Moose::Autobox::Undef.3 \
 	Moose::Autobox::Value.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
