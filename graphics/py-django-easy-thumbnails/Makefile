@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-easy-thumbnails
-# Date created:				19 Jun 2012
-# Whom:					Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-#
-# $FreeBSD: ports/graphics/py-django-easy-thumbnails/Makefile,v 1.2 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
+# $FreeBSD: graphics/py-django-easy-thumbnails/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	easy-thumbnails
 PORTVERSION=	1.0.3
@@ -21,6 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=0:${PORTSDIR}/www/py-django
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
