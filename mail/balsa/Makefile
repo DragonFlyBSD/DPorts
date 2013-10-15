@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <gljohns@bellsouth.net>
-# $FreeBSD: mail/balsa/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: mail/balsa/Makefile 327742 2013-09-20 19:59:12Z bapt $
 #   $MCom: ports-stable/mail/balsa/Makefile,v 1.3 2007/12/02 19:18:50 marcus Exp $
 
 PORTNAME=	balsa
@@ -44,6 +44,7 @@ GTKSPELL_DESC=	Spell checking support
 GTKSV_DESC=	GtkSourceview support
 GPG_DESC=	GnuPG support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGPG}
