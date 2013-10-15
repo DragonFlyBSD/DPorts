@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: games/ttraffic/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: games/ttraffic/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ttraffic
 PORTVERSION=	0.8
@@ -22,6 +22,7 @@ SHEBANG_LANG=	wish
 wish_OLD_CMD=	/usr/bin/wish
 wish_CMD=		${LOCALBASE}/bin/wish8.4
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|/usr/local/share/ttraffic/|${DATADIR}/|' \
 		${WRKSRC}/ttraffic.tcl
