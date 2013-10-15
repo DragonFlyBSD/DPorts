@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: biology/p5-Bio-Das-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: biology/p5-Bio-Das-Lite/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	Bio-Das-Lite
 PORTVERSION=	2.11
@@ -21,4 +21,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Bio::Das::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
