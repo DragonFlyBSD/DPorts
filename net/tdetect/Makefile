@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: ports/net/tdetect/Makefile,v 1.19 2012/11/17 06:00:23 svnexp Exp $
+# $FreeBSD: net/tdetect/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tdetect
 PORTVERSION=	0.2
@@ -12,6 +12,7 @@ COMMENT=	Utility for detecting traceroutes and reporting them via syslog
 PLIST_FILES=	sbin/tdetect etc/rc.d/tdetect.sh
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e 's/trdetect/tdetect/g' ${WRKSRC}/config.h
 	@${REINPLACE_CMD} -e 's/LOG_AUTHPRIV/LOG_SECURITY/g' ${WRKSRC}/config.h
