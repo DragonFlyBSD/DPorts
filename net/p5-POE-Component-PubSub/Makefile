@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/p5-POE-Component-PubSub/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-POE-Component-PubSub/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-PubSub
 PORTVERSION=	0.05
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=	POE::Component::PubSub.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
