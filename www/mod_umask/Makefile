@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_umask
-# Date created:				2012-08-28
-# Whom:					Ralf Gebhart <gebhart@secnetix.de>
-#
-# $FreeBSD: www/mod_umask/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Ralf Gebhart <gebhart@secnetix.de>
+# $FreeBSD: www/mod_umask/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_umask
 PORTVERSION=	0.1.0
@@ -24,4 +20,5 @@ AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 SRC_FILE=	src/${PORTNAME}.c
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
