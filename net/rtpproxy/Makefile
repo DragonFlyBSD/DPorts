@@ -1,5 +1,5 @@
 # Created by: sobomax
-# $FreeBSD: ports/net/rtpproxy/Makefile,v 1.7 2012/12/22 18:42:36 svnexp Exp $
+# $FreeBSD: net/rtpproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rtpproxy
 PORTVERSION=	1.2.1
@@ -21,6 +21,7 @@ MAN8=		rtpproxy.8
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
+NO_STAGE=	yes
 post-build:
 	${SED} 's|%%PREFIX%%|${PREFIX}|g ; s|%%RC_SUBR%%|/etc/rc.subr|g' \
 	    ${WRKSRC}/freebsd/rtpproxy.in > ${WRKDIR}/rtpproxy
