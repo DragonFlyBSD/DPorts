@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: accessibility/gnopernicus/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: accessibility/gnopernicus/Makefile 327684 2013-09-20 11:02:49Z bapt $
 #   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.85 2007/07/23 19:03:49 mezz Exp $
 
 PORTNAME=	gnopernicus
@@ -14,6 +14,7 @@ COMMENT=	Collection of accessibility apps for GNOME 2
 
 LIB_DEPENDS=	gnome-mag.2:${PORTSDIR}/accessibility/gnome-mag
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pkgconfig
 USE_LDCONFIG=	yes
