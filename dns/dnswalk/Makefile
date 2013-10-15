@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: dns/dnswalk/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/dnswalk/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnswalk
 PORTVERSION=	2.0.2
@@ -18,6 +18,7 @@ USES=		perl5
 
 MAN1=		dnswalk.1
 
+NO_STAGE=	yes
 pre-configure:
 	${MV} -f ${WRKDIR}/dnswalk ${WRKDIR}/dnswalk.orig
 	${SED} -e "s#/usr/contrib/bin/perl#${PERL5}#"\
