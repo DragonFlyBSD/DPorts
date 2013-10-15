@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tn5250
-# Date created:			20 January 2000
-# Whom:				Elias Mandouvalos <ocean@compulink.gr>
-#
-# $FreeBSD: ports/net/tn5250/Makefile,v 1.33 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: Elias Mandouvalos <ocean@compulink.gr>
+# $FreeBSD: net/tn5250/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tn5250
 PORTVERSION=	0.17.4
@@ -21,6 +17,7 @@ USE_LDCONFIG=	yes
 MAN1=		lp5250d.1 scs2ascii.1 scs2pdf.1 scs2ps.1 tn5250.1
 MAN5=		tn5250rc.5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^SUBDIRS =/s|linux||g' ${WRKSRC}/Makefile.in
