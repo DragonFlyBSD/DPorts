@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/dlume/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: deskutils/dlume/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	dlume
 PORTVERSION=	0.2.4
@@ -19,6 +19,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/dlume share/pixmaps/dlume.png
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g' ${WRKSRC}/src/Makefile.in
 
