@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-ToUnicode/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: textproc/p5-LaTeX-ToUnicode/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	LaTeX-ToUnicode
 PORTVERSION=	0.03
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 MAN3=		LaTeX::ToUnicode::Tables.3 \
 		LaTeX::ToUnicode.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
