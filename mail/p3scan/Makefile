@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: mail/p3scan/Makefile 318975 2013-05-24 14:23:05Z bapt $
+# $FreeBSD: mail/p3scan/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	p3scan
 PORTVERSION=	2.3.2
@@ -29,6 +29,7 @@ MANCOMPRESSED=	yes
 USE_RC_SUBR=	p3scan
 SUB_FILES=	p3scan pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
