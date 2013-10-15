@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nl-hunspell
-# Date created:		2012-02-03
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/nl-hunspell/Makefile,v 1.2 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: textproc/nl-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	2.10
@@ -34,12 +30,12 @@ PLIST_FILES+=	%%DATADIR%%/${ALIAS}.aff \
 .endfor
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/nl_NL.aff ${DATADIR}/nl_NL.aff
-	${INSTALL_DATA} ${WRKSRC}/nl_NL.dic ${DATADIR}/nl_NL.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/nl_NL.aff ${STAGEDIR}${DATADIR}/nl_NL.aff
+	${INSTALL_DATA} ${WRKSRC}/nl_NL.dic ${STAGEDIR}${DATADIR}/nl_NL.dic
 .for ALIAS in ${NLALIASES}
-	${LN} -s nl_NL.aff ${DATADIR}/${ALIAS}.aff
-	${LN} -s nl_NL.dic ${DATADIR}/${ALIAS}.dic
+	${LN} -s nl_NL.aff ${STAGEDIR}${DATADIR}/${ALIAS}.aff
+	${LN} -s nl_NL.dic ${STAGEDIR}${DATADIR}/${ALIAS}.dic
 .endfor
 
 .include <bsd.port.mk>
