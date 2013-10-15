@@ -1,8 +1,5 @@
-# New ports collection makefile for:    py-postmarkup
-# Date created:                 June 7, 2007
-# Whom:                         Chao Shin <quakelee@cn.freebsd.org>
-#
-# $FreeBSD: www/py-postmarkup/Makefile 300897 2012-07-14 14:29:18Z beat $
+# Created by: Chao Shin <quakelee@cn.freebsd.org>
+# $FreeBSD: www/py-postmarkup/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	postmarkup
 PORTVERSION=	1.2.0
@@ -18,4 +15,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
