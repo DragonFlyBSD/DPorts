@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: games/lgeneral/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/lgeneral/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lgeneral
 PORTVERSION=	1.2.3
@@ -31,6 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		lgc-pg.1
 MAN6=		lgeneral.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSOUND}
