@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: www/yii/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: www/yii/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yii
 PORTVERSION=	1.1.13
@@ -27,6 +27,7 @@ PORTDOCS=	CHANGELOG LICENSE README UPGRADE
 
 INSTALL_DIRS=	framework
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREQPHP}
