@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pcnfsd
-# Date created:		Oct 6, 1994
-# Whom:			pst
-#
-# $FreeBSD: ports/net/pcnfsd/Makefile,v 1.20 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: pst
+# $FreeBSD: net/pcnfsd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pcnfsd
 PORTVERSION=	93.02.16
@@ -27,6 +23,7 @@ PLIST_FILES=	libexec/rpc.pcnfsd
 
 NO_WRKSUBDIR=
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${FILESDIR}/Makefile.inc ${WRKSRC}
 

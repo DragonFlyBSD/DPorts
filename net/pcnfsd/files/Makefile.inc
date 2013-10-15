@@ -1,6 +1,6 @@
 #
 # Directories for pcnfsd(8)
-# $FreeBSD: ports/net/pcnfsd/files/Makefile.inc,v 1.4 2012/11/17 06:00:14 svnexp Exp $
+# $FreeBSD: net/pcnfsd/files/Makefile.inc 300897 2012-07-14 14:29:18Z beat $
 #
 BINDIR=	${PREFIX}/libexec
 MANDIR=	${PREFIX}/man/man
