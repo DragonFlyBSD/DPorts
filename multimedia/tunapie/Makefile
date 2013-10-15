@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: multimedia/tunapie/Makefile 319951 2013-06-05 06:53:35Z jgh $
+# $FreeBSD: multimedia/tunapie/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	tunapie
 PORTVERSION=	2.1.18
@@ -36,6 +36,7 @@ PLIST_SUB+=	DESKTOPDIR="${DESKTOPDIR:S,^${PREFIX}/,,}"
 
 FIND_FILES=	-type f -and \( -name "install.sh" -or -name "*.py" \)
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} && ${FIND} . ${FIND_FILES} -exec ${REINPLACE_CMD} \
 		-e 's|%%DATADIR%%|${DATADIR}|g'\
