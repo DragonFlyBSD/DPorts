@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: devel/p5-Config-MVP/Makefile 327557 2013-09-18 15:22:12Z sunpoet $
+# $FreeBSD: devel/p5-Config-MVP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-MVP
 PORTVERSION=	2.200006
@@ -42,6 +42,7 @@ MAN3=		Config::MVP.3 \
 		Config::MVP::Section.3 \
 		Config::MVP::Sequence.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
