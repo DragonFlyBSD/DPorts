@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: ports/games/tank/Makefile,v 1.36 2013/01/10 19:39:47 svnexp Exp $
+# $FreeBSD: games/tank/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tank
 PORTVERSION=	0.4a
@@ -18,6 +18,7 @@ USE_GMAKE=	yes
 MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" PTHREAD_LIBS="${PTHREAD_LIBS}"
 ALL_TARGET=	linux-mesa-elf
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tank ${PREFIX}/bin
 	${MKDIR} ${DATADIR}
