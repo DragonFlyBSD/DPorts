@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libpcd
-# Date created:		2004-08-23
-# Whom:			Andrey Slusar <anray@FreeBSD.org>
-#
-# $FreeBSD: graphics/libpcd/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Andrey Slusar <anray@FreeBSD.org>
+# $FreeBSD: graphics/libpcd/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libpcd
 PORTVERSION=	1.0.1
@@ -20,4 +16,5 @@ USE_GMAKE=	yes
 MAKEFILE=	${WRKSRC}/GNUmakefile
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
