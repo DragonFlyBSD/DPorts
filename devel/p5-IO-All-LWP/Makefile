@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-All-LWP/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-IO-All-LWP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IO-All-LWP
 PORTVERSION=	0.14
@@ -22,4 +22,5 @@ MAN3=		IO::All::FTP.3 \
 		IO::All::HTTPS.3 \
 		IO::All::LWP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
