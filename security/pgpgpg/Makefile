@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pgpgpg
-# Date created:				16 December 1999
-# Whom:					Matt Behrens <matt@zigg.com>
-#
-# $FreeBSD: ports/security/pgpgpg/Makefile,v 1.12 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Matt Behrens <matt@zigg.com>
+# $FreeBSD: security/pgpgpg/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pgpgpg
 PORTVERSION=	0.13
@@ -28,4 +24,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gpg-path=${PREFIX}/bin/gpg
 PLIST_FILES=	bin/pgpgpg
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
