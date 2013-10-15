@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-RSS-Liberal/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-RSS-Liberal/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-RSS-Liberal
 PORTVERSION=	0.04
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		XML::RSS::Liberal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
