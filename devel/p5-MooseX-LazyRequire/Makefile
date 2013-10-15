@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-LazyRequire/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-LazyRequire/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-LazyRequire
 PORTVERSION=	0.10
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN3=		MooseX::LazyRequire.3 \
 		MooseX::LazyRequire::Meta::Attribute::Trait::LazyRequire.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
