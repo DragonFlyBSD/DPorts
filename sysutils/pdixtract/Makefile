@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: sysutils/pdixtract/Makefile 319267 2013-05-27 16:14:55Z bsam $
+# $FreeBSD: sysutils/pdixtract/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pdixtract
 PORTVERSION=	1.5
@@ -19,6 +19,7 @@ USE_ZIP=	yes
 
 PLIST_FILES=	bin/pdixtract
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKDIR}; ${CC} ${CFLAGS} pdixtract.c -o pdixtract
 
