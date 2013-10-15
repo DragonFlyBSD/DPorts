@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Genezzo/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Genezzo/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Genezzo
 PORTVERSION=	0.72
@@ -51,4 +51,5 @@ MAN3=		Genezzo.3 Genezzo::Block::RDBArray.3 \
 		Genezzo::Util.3 Genezzo::XEval.3 Genezzo::XEval::Prepare.3 \
 		Genezzo::XEval::SQLAlter.3 Genezzo::gendba.3 Genezzo::genexp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
