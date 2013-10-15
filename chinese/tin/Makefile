@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	tin
-# Date created:		2 Dev 1997
-# Whom:			Yen-Shuo Su <yssu@CCCA.NCTU.edu.tw>
-#
-# $FreeBSD: ports/chinese/tin/Makefile,v 1.46 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: Yen-Shuo Su <yssu@CCCA.NCTU.edu.tw>
+# $FreeBSD: chinese/tin/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 # Don't reset PORTREVISION and keep bumping it even if PORTVERSION is changed.
 PORTREVISION=	6
@@ -20,6 +15,7 @@ EXTRA_PATCHES=	${.CURDIR}/files/patch-attrib.c \
 MASTERDIR=	${.CURDIR}/../../news/tin
 
 post-patch: post-patch-zh
+NO_STAGE=	yes
 post-patch-zh:
 	${REINPLACE_CMD} -e 's,iso-8859-1,Big5,g' ${WRKSRC}/doc/tin.defaults
 
