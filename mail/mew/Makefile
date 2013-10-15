@@ -1,5 +1,5 @@
 # Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: mail/mew/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/mew/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mew
 PORTVERSION=	6.5
@@ -17,6 +17,7 @@ DATABASE_DESC=	Database feature support (with Ruby & Sqlite3)
 # emacs port setup
 USE_EMACS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDATABASE}
