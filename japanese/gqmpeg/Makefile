@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ja-gqmpeg
-# Date Created:		19 Sep 2001
-# Whom:			TATEISHI Katsuyuki <katsu@iec.hiroshima-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/gqmpeg/Makefile,v 1.15 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: TATEISHI Katsuyuki <katsu@iec.hiroshima-u.ac.jp>
+# $FreeBSD: japanese/gqmpeg/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTREVISION=	2
 CATEGORIES=	japanese
@@ -23,6 +19,7 @@ CONFIGURE_ARGS=	--enable-japanese
 NOMAN=		yes
 
 .if !defined(WITH_SJIS_TAG)
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG}
 	@${ECHO_MSG} "If you want to save ID3 tags as SJIS(default: EUC),"
