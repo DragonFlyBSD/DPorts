@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: security/bro/Makefile 315615 2013-03-30 13:47:49Z miwi $
+# $FreeBSD: security/bro/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	bro
 PORTVERSION=	2.1
@@ -14,8 +14,7 @@ BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison \
 		swig:${PORTSDIR}/devel/swig13
 LIB_DEPENDS=	GeoIP:${PORTSDIR}/net/GeoIP
 
-USE_PERL5=	yes
-USES=		cmake
+USES=		cmake perl5
 CONFIGURE_WRKSRC=	${WRKSRC}/build
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
 INSTALL_WRKSRC=	${CONFIGURE_WRKSRC}
@@ -27,6 +26,7 @@ LBL_CF_DESC=	Unix time to formated time/date filter support
 BROCCOLI_DESC=	Build support for libbroccoli communications
 OPTIONS_EXCLUDE=NLS DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBROCCOLI}
