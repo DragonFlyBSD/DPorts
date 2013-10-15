@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Extension-SLA/Makefile 324134 2013-08-01 22:04:01Z matthew $
+# $FreeBSD: www/p5-RT-Extension-SLA/Makefile 328879 2013-09-30 21:53:55Z matthew $
 
 PORTNAME=	RT-Extension-SLA
 PORTVERSION=	0.07
@@ -34,19 +34,6 @@ RT_VER=		40
 BUILD_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
 RUN_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
 
-MAN3PREFIX=	${PREFIX}
-
-MAN3=		RT::Action::SLA.3                     \
-		RT::Action::SLA_SetDefault.3          \
-		RT::Action::SLA_SetDue.3              \
-		RT::Action::SLA_SetStarts.3           \
-		RT::Condition::SLA.3                  \
-		RT::Condition::SLA_RequireDefault.3   \
-		RT::Condition::SLA_RequireDueSet.3    \
-		RT::Condition::SLA_RequireStartsSet.3 \
-		RT::Extension::SLA.3                  \
-		RT::Queue_SLA.3
-
 PLIST_SUB+=	RTHOME=share/rt${RT_VER}
 
 SUB_LIST+=	RTHOME=share/rt${RT_VER}
@@ -62,8 +49,5 @@ do-configure:
 	    unset PREFIX && \
 	    ${SETENV} ${CONFIGURE_ENV} ${PERL5} -I${SITE_PERL} ./${CONFIGURE_SCRIPT} && \
 	    ${PERL5} -pi -e 's/ doc_(perl|site|\$$\(INSTALLDIRS\))_install$$//' Makefile
-
-post-install:
-	${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
