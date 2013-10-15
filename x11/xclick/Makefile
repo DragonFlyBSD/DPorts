@@ -1,9 +1,5 @@
-# New ports collection makefile for:	click
-# Date created:		Ter 20 Fev 2007 07:53:32 UTC
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: x11/xclick/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: x11/xclick/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xclick
 PORTVERSION=	0.1
@@ -21,6 +17,7 @@ USE_XORG=	x11 xtst xext xfixes xi
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && \
 		${CC} -L${LOCALBASE}/lib -I${LOCALBASE}/include click.c \
