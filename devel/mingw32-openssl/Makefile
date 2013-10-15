@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/mingw32-openssl/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: devel/mingw32-openssl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.0k
@@ -26,6 +26,7 @@ CONFIGURE_PREFIX=	${PREFIX}/mingw32
 OPENSSLDIR=		${CONFIGURE_PREFIX}/openssl
 INSTALL_TARGET=		install_sw
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|m4 -B 8192|m4|g' \
 		${WRKSRC}/crypto/des/Makefile
