@@ -1,8 +1,5 @@
-# Ports collection makefile for:	gem-webby
-# Date created:				06 Nov 2009
-# Whom:					Ryan Steinmetz (<rpsfa@rit.edu>)
-#
-# $FreeBSD: ports/devel/rubygem-webby/Makefile,v 1.8 2012/11/17 05:57:01 svnexp Exp $
+# Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
+# $FreeBSD: devel/rubygem-webby/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	webby
 PORTVERSION=	0.9.4
@@ -30,4 +27,5 @@ USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/webby bin/webby-gen
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
