@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/netsurf/Makefile 327189 2013-09-13 21:45:27Z pawel $
+# $FreeBSD: www/netsurf/Makefile 329813 2013-10-08 16:56:21Z marino $
 
 PORTNAME=	netsurf
 PORTVERSION=	3.0
@@ -20,10 +20,10 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 
 ALL_TARGET=	#empty
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-lssl
+LDFLAGS+=	-lssl -lcrypto -L${LOCALBASE}/lib ${ICONV_LIB}
 MAKE_ARGS=	HOST_CC="${CC}" CC="${CC}" CCOPT="" HOST="${OPSYS}" \
 		WARNFLAGS="" Q="" OPTCFLAGS="${CFLAGS}"
-USES=		bison gmake pkgconfig
+USES=		bison gmake pkgconfig iconv
 USE_GNOME=	librsvg2
 
 NSFB_VERSION=	0.1.0
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	GSTREAMER WEBP
 
 WEBP_LIB_DEPENDS=	libwebp.so:${PORTSDIR}/graphics/webp
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGSTREAMER}
