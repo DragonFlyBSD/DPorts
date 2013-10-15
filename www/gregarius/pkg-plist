@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/gregarius/pkg-plist,v 1.3 2012/11/17 06:02:34 svnexp Exp $
+@comment $FreeBSD: www/gregarius/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 www/gregarius/.htaccess
 www/gregarius/COPYING
 www/gregarius/INSTALL
