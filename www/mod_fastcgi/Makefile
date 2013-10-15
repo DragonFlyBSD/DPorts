@@ -1,5 +1,5 @@
 # Created by: JunSeon Oh <hollywar@mail.holywar.net>
-# $FreeBSD: www/mod_fastcgi/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_fastcgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_fastcgi
 PORTVERSION=	2.4.7
@@ -19,6 +19,7 @@ AP_GENPLIST=	yes
 SRC_FILE=	*.c
 PORTDOCS=	LICENSE.TERMS mod_fastcgi.html
 
+NO_STAGE=	yes
 do-install:
 	@${APXS} -i -a -n ${SHORTMODNAME} ${WRKSRC}/${MODULENAME}.${AP_BUILDEXT}
 
