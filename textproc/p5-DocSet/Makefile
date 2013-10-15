@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-DocSet/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-DocSet/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	DocSet
 PORTVERSION=	0.19
@@ -40,4 +40,5 @@ MAN3=	DocSet.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
