@@ -1,9 +1,5 @@
-# New ports collection makefile for:   weberp
-# Date created:		05 Oct 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: finance/weberp/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: finance/weberp/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	weberp
 PORTVERSION=	4.08.4
@@ -24,6 +20,7 @@ WRKSRC=		${WRKDIR}/webERP${PORTVERSION}
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
