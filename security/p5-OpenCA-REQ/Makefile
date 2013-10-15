@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-OpenCA-REQ/Makefile 324979 2013-08-19 12:35:00Z mat $
+# $FreeBSD: security/p5-OpenCA-REQ/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	OpenCA-REQ
 PORTVERSION=	0.9.60
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		OpenCA::REQ.3
 
+NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/prova.pl  ${WRKSRC}/prova.pl.sample
 
