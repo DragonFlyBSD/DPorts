@@ -1,11 +1,5 @@
-# New ports collection makefile for:	lsknobs
-# Date created:							5 Sep 2007
-# Whom:									Gabriel Linder <linder.gabriel@gmail.com>
-#
-# $FreeBSD: ports/ports-mgmt/lsknobs/Makefile,v 1.2 2012/11/17 06:00:45 svnexp Exp $
-#
-# This port is self contained in the files directory.
-#
+# Created by: Gabriel Linder <linder.gabriel@gmail.com>
+# $FreeBSD: ports-mgmt/lsknobs/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	lsknobs
 PORTVERSION=	1.0
@@ -23,6 +17,7 @@ SUB_FILES=	pkg-message ${PORTNAME}.sh
 
 PLIST_FILES=	sbin/${PORTNAME}
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
