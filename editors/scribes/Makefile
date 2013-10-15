@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: editors/scribes/Makefile 323473 2013-07-22 15:36:11Z miwi $
+# $FreeBSD: editors/scribes/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	scribes
 PORTVERSION=	0.4.b954
@@ -30,6 +30,7 @@ INSTALLS_OMF=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-install:
 	@${PYTHON_CMD} -m compileall ${PREFIX}/lib/scribes
 
