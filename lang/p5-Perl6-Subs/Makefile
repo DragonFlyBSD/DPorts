@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: lang/p5-Perl6-Subs/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: lang/p5-Perl6-Subs/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Perl6-Subs
 PORTVERSION=	0.05
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Perl6::Subs.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
