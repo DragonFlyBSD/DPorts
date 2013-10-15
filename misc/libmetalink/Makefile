@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libmetalink
-# Date created:		Mon 11 Aug 2008 11:28:33 UTC
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: misc/libmetalink/Makefile 324851 2013-08-17 16:27:24Z gerald $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: misc/libmetalink/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	libmetalink
 PORTVERSION=	0.0.3
@@ -36,6 +32,7 @@ EXAMPLES_FILES=	\
 PORTEXAMPLES=	*
 .endif
 
+NO_STAGE=	yes
 post-patch:
 # do not automagically install either documents or examples
 	@${REINPLACE_CMD} -E \
