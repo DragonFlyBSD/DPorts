@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.container
-# Date created:				Nov 15, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.container/Makefile,v 1.3 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.container/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.container
 PORTVERSION=	3.12.0
@@ -38,5 +33,7 @@ PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=		yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
