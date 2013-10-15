@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Convert-BER
-# Date created:				October 27, 2000
-# Whom:	      				Marc Fournier <scrappy@FreeBSD.org>
-#
-# $FreeBSD: converters/p5-Convert-BER/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Marc Fournier <scrappy@FreeBSD.org>
+# $FreeBSD: converters/p5-Convert-BER/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Convert-BER
 PORTVERSION=	1.32
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Convert::BER.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
