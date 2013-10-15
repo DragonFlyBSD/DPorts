@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/dsbl-testers/pkg-plist,v 1.3 2012/11/17 05:59:01 svnexp Exp $
+@comment $FreeBSD: mail/dsbl-testers/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/auth-relaytest
 bin/formmailtest
 bin/getcookie

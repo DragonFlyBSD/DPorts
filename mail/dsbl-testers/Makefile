@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dsbl-testers
-# Date created:		Fri Aug 23 09:00:00 WST 2002
-# Whom:			Dean Hollister <dean@odyssey.apana.org.au>
-#
-# $FreeBSD: ports/mail/dsbl-testers/Makefile,v 1.8 2012/11/17 05:59:01 svnexp Exp $
-#
+# Created by: Dean Hollister <dean@odyssey.apana.org.au>
+# $FreeBSD: mail/dsbl-testers/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dsbl-testers
 PORTVERSION=	0.9.5
@@ -28,6 +24,7 @@ MAN1=	auth-relaytest.1 formmailtest.1 getcookie.1 httptest.1 \
 	relaytest.1 socks4test.1 socks5test.1 spamtrap.1
 MAN5=	dsbl.conf.5
 
+NO_STAGE=	yes
 post-patch:
 	@-${RM} ${WRKSRC}/firemake/*.orig
 	@-${RM} ${WRKSRC}/firedns/firemake/*.orig
