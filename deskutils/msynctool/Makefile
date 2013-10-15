@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/msynctool/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: deskutils/msynctool/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	msynctool
 PORTVERSION=	0.22
@@ -23,4 +23,5 @@ PLIST_FILES=	bin/convtest \
 		bin/convcard \
 		bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
