@@ -1,9 +1,5 @@
-# New ports collection makefile for:	poppy
-# Date created:				13 June 2001
-# Whom:					Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/poppy/Makefile,v 1.4 2012/11/17 05:59:11 svnexp Exp $
-#
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: mail/poppy/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	poppy
 PORTVERSION=	4.01
@@ -17,6 +13,7 @@ NO_BUILD=	yes
 
 #USE_PERL5=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/poppy ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/spamkill ${PREFIX}/bin
