@@ -1,8 +1,5 @@
-# New ports collection makefile for:	cl-clx
-# Date created:				7 Oct 2010
-# Whom:					Anonymous
-#
-# $FreeBSD: ports/x11/cl-clx/Makefile,v 1.6 2012/11/17 06:03:14 svnexp Exp $
+# Created by: Anonymous
+# $FreeBSD: x11/cl-clx/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	clx
 PORTVERSION=	0.7.4
@@ -23,6 +20,7 @@ INFO=		clx
 PLIST_SUB=	ASDF_PATHNAME="${ASDF_PATHNAME:S,^${PREFIX}/,,}" \
 		ASDF_REGISTRY="${ASDF_REGISTRY:S,^${PREFIX}/,,}"
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}/manual && makeinfo --no-split clx.texinfo
 
