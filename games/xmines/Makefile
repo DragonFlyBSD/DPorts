@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xmines/Makefile 319324 2013-05-28 19:38:34Z antoine $
+# $FreeBSD: games/xmines/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xmines
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ CFLAGS+=	-Wno-error=return-type
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
