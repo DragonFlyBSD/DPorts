@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: ftp/wzdftpd/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: ftp/wzdftpd/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	wzdftpd
 PORTVERSION=	0.8.3
@@ -34,6 +34,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		siteconfig.1 siteuptime.1 sitewho.1 wzd-config.1
 MAN8=		wzdftpd.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONV}
