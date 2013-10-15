@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/turses/Makefile 322431 2013-07-07 12:07:19Z koobs $
+# $FreeBSD: net/turses/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	turses
 PORTVERSION=	0.2.15
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install tools for unit tests
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_PYTHON=		-2.7
