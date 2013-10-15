@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cicquin
-# Date created:				6 Jun 2004
-# Whom:					Peter Pentchev
-#
-# $FreeBSD: ports/net-im/cicquin/Makefile,v 1.5 2012/11/17 06:00:26 svnexp Exp $
-#
+# Created by: Peter Pentchev
+# $FreeBSD: net-im/cicquin/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	cicquin
 PORTVERSION=	0.1
@@ -19,4 +15,5 @@ COMMENT=	Look up users in the CenterICQ user database
 
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
