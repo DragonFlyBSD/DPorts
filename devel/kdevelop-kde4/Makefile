@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevelop-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/kdevelop-kde4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdevelop
 DISTVERSION=	${KDEVELOP_VERSION}
@@ -27,6 +27,7 @@ OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 OKTETA_DESC=	Hex editing support via Okteta
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOKTETA}
