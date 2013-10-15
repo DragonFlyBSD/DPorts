@@ -1,8 +1,5 @@
-# Ports collection makefile for:	cuba
-# Date created:				18 March 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-cuba/Makefile,v 1.6 2012/11/17 06:03:03 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: www/rubygem-cuba/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cuba
 PORTVERSION=	3.1.0
@@ -18,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
