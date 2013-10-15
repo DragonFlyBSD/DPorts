@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/ibus-kmfl/Makefile 317494 2013-05-06 09:26:23Z bapt $
+# $FreeBSD: textproc/ibus-kmfl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ibus-kmfl
 PORTVERSION=	1.0.3
@@ -25,6 +25,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
