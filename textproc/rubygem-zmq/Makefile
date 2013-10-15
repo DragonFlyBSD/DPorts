@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-zmq/Makefile 322792 2013-07-11 19:55:46Z swills $
+# $FreeBSD: textproc/rubygem-zmq/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	zmq
 PORTVERSION=	2.1.4
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
