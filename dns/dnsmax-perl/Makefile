@@ -1,5 +1,5 @@
 # Created by: Dan Smith <dan@algenta.com>
-# $FreeBSD: dns/dnsmax-perl/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/dnsmax-perl/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnsmax-perl
 PORTVERSION=	1.0.1
@@ -21,6 +21,7 @@ USES=		perl5
 PLIST_FILES=	bin/dnsmax-perl
 PORTDOCS=	LICENSE INSTALL README
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/dnsmax.pl ${PREFIX}/bin/dnsmax-perl
 .if !defined(NOPORTDOCS)
