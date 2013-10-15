@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: games/supertux/Makefile 313657 2013-03-08 16:10:17Z makc $
+# $FreeBSD: games/supertux/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	supertux
 PORTVERSION=	0.1.3
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=		--disable-debug
 
 PORTSCOUT=	limit:^0\.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,Menu::,,' ${WRKSRC}/src/menu.h
 
