@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Benchmark-Timer/Makefile 324222 2013-08-04 12:30:54Z az $
+# $FreeBSD: devel/p5-Benchmark-Timer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Benchmark-Timer
 PORTVERSION=	0.7102
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Benchmark::Timer.3 Benchmark::delta.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
