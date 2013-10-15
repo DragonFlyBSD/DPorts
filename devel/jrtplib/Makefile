@@ -1,5 +1,5 @@
 # Created by: Petr Holub <hopet@ics.muni.cz>
-# $FreeBSD: devel/jrtplib/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/jrtplib/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	jrtplib
 PORTVERSION=	3.9.1
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	JRTPLIB_VER="${PORTVERSION}"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/pkgconfig/s|$${LIBRARY_INSTALL_DIR}|$${CMAKE_INSTALL_PREFIX}/libdata|' ${WRKSRC}/CMakeLists.txt
