@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/chu/Makefile 317378 2013-05-04 22:12:35Z bapt $
+# $FreeBSD: comms/chu/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	chu
 PORTVERSION=	0.1.29
@@ -13,6 +13,7 @@ COMMENT=	Synchronise computer clock to CHU radio station
 
 MAN8=	chu.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-extract:
