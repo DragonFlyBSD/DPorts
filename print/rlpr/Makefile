@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: print/rlpr/Makefile 316864 2013-04-30 00:52:22Z jgh $
+# $FreeBSD: print/rlpr/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	rlpr
 PORTVERSION=	2.06
@@ -17,6 +17,7 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 # rlpr supports gettext/libintl, but does not currently come with ANY
 # translation .po files. When this changes, it would make sense to
+NO_STAGE=	yes
 # enable the use of gettext in this port:
 #USES=	gettext
 #CONFIGURE_ENV=	CPPFLAGS="-I${PREFIX}/include" LDFLAGS="-L${PREFIX}/lib -lintl"
