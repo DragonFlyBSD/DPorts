@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-django-signals-ahoy
-# Date created:				8 December 2009
-# Whom:					Kevin Golding <ports@caomhin.org>
-#
-# $FreeBSD: ports/www/py-django-signals-ahoy/Makefile,v 1.2 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Kevin Golding <ports@caomhin.org>
+# $FreeBSD: www/py-django-signals-ahoy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-signals-ahoy
 PORTVERSION=	0.1.0
@@ -24,4 +20,5 @@ PYEASYINSTALL_EGG=	${PYDISTUTILS_PKGNAME:C/[^A-Za-z0-9.]+/_/g}-${PORTVERSION:C/(
 PYEASYINSTALL_UNINSTALLARGS=	-q -m -S ${PYTHON_SITELIBDIR} \
 			${PYDISTUTILS_PKGNAME}==${PYDISTUTILS_PKGVERSION:C/([[:digit:]]\.[[:digit:]])\./\1_/g}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
