@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: x11-wm/tvtwm/Makefile 322010 2013-06-28 22:57:16Z bapt $
+# $FreeBSD: x11-wm/tvtwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	tvtwm
 PORTVERSION=	pl11
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/tvtwm
 
 CFLAGS+=	-Wno-return-type
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tvtwm ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/tvtwm.man ${MANPREFIX}/man/man1/tvtwm.1
