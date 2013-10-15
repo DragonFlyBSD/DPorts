@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gdm/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: x11/gdm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gdm/Makefile,v 1.192 2012/09/03 16:28:28 mezz Exp $
 
 PORTNAME=	gdm
@@ -59,6 +59,7 @@ OPTIONS_DEFINE=	IPV6 KEYRING
 OPTIONS_DEFAULT=KEYRING
 KEYRING_DESC=	GnomeKeyring/PAM integration
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKEYRING}
