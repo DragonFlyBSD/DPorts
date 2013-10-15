@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-circuits/Makefile 315176 2013-03-24 22:49:51Z koobs $
+# $FreeBSD: devel/py-circuits/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	circuits
 PORTVERSION=	2.1.0
@@ -18,6 +18,7 @@ USE_PYDISTUTILS=	easy_install
 # Bypass ports infrastructure bug
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 regression-test: build
