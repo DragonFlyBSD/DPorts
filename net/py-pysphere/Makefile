@@ -1,5 +1,5 @@
 # Created by: olli hauer <ohauer@FreeBSD.org>
-# $FreeBSD: net/py-pysphere/Makefile 325367 2013-08-25 18:21:27Z ohauer $
+# $FreeBSD: net/py-pysphere/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pysphere
 PORTVERSION=	0.1.8
@@ -19,4 +19,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
