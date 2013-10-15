@@ -1,4 +1,4 @@
-# $FreeBSD: misc/xiphos/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: misc/xiphos/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xiphos
 PORTVERSION=	3.1.5
@@ -31,6 +31,7 @@ WEBKIT_DESC=		Use webkit for rendering (preferred)
 
 OPTIONS_DEFAULT=	WEBKIT
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWEBKIT}
