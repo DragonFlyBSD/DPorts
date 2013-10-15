@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/kcd/Makefile 324054 2013-07-31 14:36:21Z az $
+# $FreeBSD: misc/kcd/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	kcd
 PORTVERSION=	7.15.0
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
 MAN1=		kcd.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
