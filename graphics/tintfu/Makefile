@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/tintfu/Makefile,v 1.9 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: graphics/tintfu/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tintfu
 PORTVERSION=	0.0.4
@@ -28,6 +28,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${DISTNAME}.jar \
 SUB_FILES=	tintfu.sh
 SUB_LIST=	DISTNAME=${DISTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${JAVAJARDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/tintfu.sh ${PREFIX}/bin/tintfu
