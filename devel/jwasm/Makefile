@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: devel/jwasm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/jwasm/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	jwasm
 PORTVERSION=	210
@@ -24,6 +24,7 @@ MAKEFILE=	GccUnix.mak
 PORTDOCS=	*
 PLIST_FILES=	bin/jwasm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
