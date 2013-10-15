@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: net/echoping/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: net/echoping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	echoping
 PORTVERSION=	6.0.0
@@ -26,6 +26,7 @@ MAN1=		echoping.1 echoping_dns.1 echoping_random.1 echoping_whois.1
 OPTIONS_DEFINE=	LDAP PGSQL
 OPTIONS_DEFAULT=	LDAP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
