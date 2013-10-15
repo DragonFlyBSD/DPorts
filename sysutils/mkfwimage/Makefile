@@ -1,9 +1,5 @@
-# New ports collection Makefile for: mkfwimage
-# Date created:		Wed Jan 26 11:41:23 WST 2011
-# Whom:			Adrian Chadd <adrian@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/mkfwimage/Makefile,v 1.3 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Adrian Chadd <adrian@FreeBSD.org>
+# $FreeBSD: sysutils/mkfwimage/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mkfwimage
 DISTVERSION=	r1
@@ -17,4 +13,5 @@ COMMENT=	Ubiquiti Embedded Board Image Generator
 
 PLIST_FILES=	bin/mkfwimage
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
