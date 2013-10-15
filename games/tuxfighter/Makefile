@@ -1,6 +1,5 @@
-# Created by:	nemysis@gmx.ch
-#
-# $FreeBSD: ports/games/tuxfighter/Makefile,v 1.2 2013/01/23 15:05:34 svnexp Exp $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: games/tuxfighter/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tuxfighter
 PORTVERSION=	54
@@ -35,6 +34,7 @@ SUB_FILES=	${PORTNAME}
 DESKTOP_ENTRIES="TuxFighter" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:

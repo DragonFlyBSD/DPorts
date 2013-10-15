@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/tuxfighter/files/tuxfighter.in,v 1.1 2012/12/02 00:14:35 svnexp Exp $
+# $FreeBSD: games/tuxfighter/files/tuxfighter.in 308082 2012-12-02 00:10:19Z jgh $
 #
 
 cd "%%DATADIR%%"
