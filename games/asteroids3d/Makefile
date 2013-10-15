@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/asteroids3d/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/asteroids3d/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	asteroids3d
 PORTVERSION=	0.5.1
@@ -33,6 +33,7 @@ ICON_SIZES=	32x32 48x48 64x64 72x72 96x96 128x128
 DESKTOP_ENTRIES="Asteroids3D" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 pre-configure:
 	@(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./autogen.sh)
 
