@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: graphics/boxer/Makefile 327123 2013-09-13 01:20:35Z nemysis $
+# $FreeBSD: graphics/boxer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	boxer
 PORTVERSION=	0.4.0
@@ -31,6 +31,7 @@ DESKTOP_ENTRIES="Boxer" "${COMMENT}" "${PORTNAME}" \
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
