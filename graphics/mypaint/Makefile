@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mypaint/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: graphics/mypaint/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mypaint
 PORTVERSION=	1.1.0
@@ -29,6 +29,7 @@ INSTALLS_ICONS=	yes
 
 SUB_FILES=	pkg-install
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,<malloc.h>,<stdlib.h>,' \
 		${WRKSRC}/brushlib/operationqueue.c \
