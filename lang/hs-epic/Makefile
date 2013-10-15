@@ -1,4 +1,4 @@
-# $FreeBSD: lang/hs-epic/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: lang/hs-epic/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	epic
 PORTVERSION=	0.9.3
@@ -20,6 +20,7 @@ RUN_DEPENDS+=	boehm-gc>=7.1:${PORTSDIR}/devel/boehm-gc \
 
 EXECUTABLE=	epic
 
+NO_STAGE=	yes
 post-patch::
 	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/evm/Makefile
