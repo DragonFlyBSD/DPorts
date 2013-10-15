@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpiexec
-# Date created:		2006-11-16
-# Whom:			trasz <trasz@pin.if.uz.zgora.pl>
-#
-# $FreeBSD: ports/sysutils/mpiexec/Makefile,v 1.11 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: trasz <trasz@pin.if.uz.zgora.pl>
+# $FreeBSD: sysutils/mpiexec/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mpiexec
 PORTVERSION=	0.84
@@ -25,4 +21,5 @@ MAN1=		mpiexec.1
 
 CONFLICTS=	mpich2-1.2.*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
