@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: deskutils/akamaru/Makefile 326711 2013-09-08 08:44:57Z antoine $
+# $FreeBSD: deskutils/akamaru/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	akamaru
 PORTVERSION=	0.1
@@ -19,6 +19,7 @@ USES=		gmake pkgconfig
 USE_GNOME=	gconf2 gnomehier
 GCONF_SCHEMAS=	kiba.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	${WRKSRC}/populate-dock.sh
