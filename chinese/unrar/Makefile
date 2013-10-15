@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/unrar/Makefile 325466 2013-08-27 16:24:56Z sunpoet $
+# $FreeBSD: chinese/unrar/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 CATEGORIES=	chinese
 
@@ -12,4 +12,5 @@ EXTRA_PATCHES=	${.CURDIR}/files/patch-arcread.cpp \
 
 CONFLICTS=	unrar-[0-9]* unrar-iconv-[0-9]*
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
