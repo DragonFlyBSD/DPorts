@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11-clocks/kdetoys4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-clocks/kdetoys4/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	kdetoys
 PORTVERSION=	${KDE4_VERSION}
@@ -21,4 +21,5 @@ USE_XZ=		yes
 
 MAN6=	amor.6
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
