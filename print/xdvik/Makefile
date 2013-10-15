@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-# $FreeBSD: print/xdvik/Makefile 322625 2013-07-10 07:40:18Z bapt $
+# $FreeBSD: print/xdvik/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.84.16
@@ -64,6 +64,7 @@ PKGINSTALL_SUB=	MKTEXLSR=${MKTEXLSR} \
 		TEXCONFIGBIN=${TEXCONFIGBIN} \
 		LOCALBASE=${LOCALBASE}
 
+NO_STAGE=	yes
 pre-install:
 	${SED} ${PKGINSTALL_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} \
 		< ${FILESDIR}/pkg-install.in > ${PKGINSTALL}
