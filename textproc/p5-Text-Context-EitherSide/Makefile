@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Context-EitherSide/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-Text-Context-EitherSide/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Context-EitherSide
 PORTVERSION=	1.4
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Text::Context::EitherSide.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
