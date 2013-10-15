@@ -1,10 +1,6 @@
-# New ports collection makefile for:	nscache
-# Date created:		04 March 2000
-# Whom:			Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: www/nscache/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: www/nscache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 #   $MCom: ports/www/nscache/Makefile,v 1.3 2007/08/07 03:35:07 mezz Exp $
-#
 
 PORTNAME=	nscache
 PORTVERSION=	0.6
@@ -29,6 +25,7 @@ MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOMAKE="${TRUE}" \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/nscache.desktop \
 		${PREFIX}/share/gnome/apps/Internet
