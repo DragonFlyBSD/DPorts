@@ -1,5 +1,5 @@
 # Created by: mcglk@artlogix.com
-# $FreeBSD: shells/scponly/Makefile 317053 2013-05-01 21:52:05Z gjb $
+# $FreeBSD: shells/scponly/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	scponly
 PORTVERSION=	4.8.20110526
@@ -32,6 +32,7 @@ SVNSERVE_DESC=	Suversion support for svn+ssh://
 UNISON_DESC=	Unisson support
 WINSCP_DESC=	WinSCP support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if(!exists(/usr/bin/sftp))
