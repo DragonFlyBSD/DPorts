@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: palm/synce-gvfs/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: palm/synce-gvfs/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	synce-gvfs
 PORTVERSION=	0.3.1
@@ -25,6 +25,7 @@ GVFS_PORTDIR=	${PORTSDIR}/devel/gvfs
 GVFS_WRKSRC_CMD=cd ${GVFS_PORTDIR} && ${MAKE} -V WRKSRC
 
 
+NO_STAGE=	yes
 post-extract:
 .for dir in common daemon
 	${CP} `${GVFS_WRKSRC_CMD}`/${dir}/*.[ch] ${WRKSRC}/gvfs/${dir}
