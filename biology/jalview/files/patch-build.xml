@@ -1,4 +1,4 @@
-$FreeBSD: ports/biology/jalview/files/patch-build.xml,v 1.2 2012/11/17 05:54:51 svnexp Exp $
+$FreeBSD: biology/jalview/files/patch-build.xml 300895 2012-07-14 12:56:14Z beat $
 
 This patch removes the webstart support.
 

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/biology/jalview/pkg-plist,v 1.2 2012/11/17 05:54:51 svnexp Exp $
+@comment $FreeBSD: biology/jalview/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/jalview
 %%DATADIR%%/activation.jar
 %%DATADIR%%/xercesImpl.jar

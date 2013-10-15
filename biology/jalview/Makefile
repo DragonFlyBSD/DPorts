@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/biology/jalview/Makefile,v 1.7 2012/12/10 11:29:53 svnexp Exp $
+# $FreeBSD: biology/jalview/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	jalview
 PORTVERSION=	2.07
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 SUB_FILES=	jalview.sh
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/jalview.sh ${PREFIX}/bin/jalview
 	@${MKDIR} ${DATADIR}
