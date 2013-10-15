@@ -1,5 +1,5 @@
 # Created by: Peter Ankerstal <peter@pean.org>
-# $FreeBSD: graphics/npretty/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/npretty/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	npretty
 PORTVERSION=	0.9.3
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 USES=		perl5
 USE_PERL5=	run
 
+NO_STAGE=	yes
 post-patch:
 	@ ${REINPLACE_CMD} -e "s|/etc/|${PREFIX}/etc/|" ${WRKSRC}/npretty.pl
 
