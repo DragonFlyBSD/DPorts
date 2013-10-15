@@ -1,5 +1,4 @@
-# Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: www/p5-WordPress-XMLRPC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WordPress-XMLRPC/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WordPress-XMLRPC
 PORTVERSION=	1.23
@@ -23,4 +22,5 @@ PLIST_DIRS=	%%SITE_PERL%%/WordPress \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WordPress/XMLRPC \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WordPress \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
