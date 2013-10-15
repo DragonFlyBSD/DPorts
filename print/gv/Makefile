@@ -1,5 +1,5 @@
-# Created by: tg@freebsd.org
-# $FreeBSD: print/gv/Makefile 327077 2013-09-12 15:23:58Z az $
+# Created by: tg@FreeBSD.org
+# $FreeBSD: print/gv/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	gv
 PORTVERSION=	3.7.4
@@ -34,6 +34,7 @@ PLIST_FILES=	bin/gv \
 PLIST_DIRS=	%%DATADIR%%/safe-gs-workdir \
 		%%DATADIR%%
 
+NO_STAGE=	yes
 post-install:
 	@${TOUCH} ${DATADIR}/safe-gs-workdir/.keep_me
 
