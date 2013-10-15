@@ -1,5 +1,5 @@
 # Created by: rhwang@bigpanda.com
-# $FreeBSD: sysutils/most/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: sysutils/most/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	most
 PORTVERSION=	5.0.0
@@ -26,6 +26,7 @@ MAN1=		most.1
 
 PORTSCOUT=	skipv:5.0.0a
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<malloc\.h>|<stdlib.h>|' \
 		${WRKSRC}/src/jdmacros.h
