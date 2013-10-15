@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnarr
-# Date created:		13 December 2000
-# Whom:			roam@FreeBSD.org
-#
-# $FreeBSD: ports/games/gnarr/Makefile,v 1.9 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: roam@FreeBSD.org
+# $FreeBSD: games/gnarr/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnarr
 PORTVERSION=	3
@@ -17,4 +13,5 @@ MAN6=		gnarr.6
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
