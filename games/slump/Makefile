@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/slump/Makefile 313188 2013-03-02 05:39:00Z miwi $
+# $FreeBSD: games/slump/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	slump
 PORTVERSION=	0.003.02
@@ -19,6 +19,7 @@ MAKE_ARGS=	FLAGS="${CFLAGS}"
 PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
