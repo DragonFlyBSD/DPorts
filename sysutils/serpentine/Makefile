@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/serpentine/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/serpentine/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #    $MCom: ports/sysutils/serpentine/Makefile,v 1.4 2006/08/31 05:21:45 marcus Exp $
 
 PORTNAME=	serpentine
@@ -22,4 +22,5 @@ USE_GMAKE=	yes
 USE_GSTREAMER=	core gnomevfs python
 USE_PYTHON=	2.4+
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
