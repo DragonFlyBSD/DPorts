@@ -1,9 +1,5 @@
-# New ports collection makefile for:	l2tpd
-# Date created:				22 October 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/net/l2tpd/Makefile,v 1.13 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: net/l2tpd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	l2tpd
 PORTVERSION=	0.69
@@ -17,6 +13,7 @@ COMMENT=	An implementation of the layer two tunneling protocol
 MAN5=	l2tp-secrets.5 l2tpd.conf.5
 MAN8=	l2tpd.8
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-configure:

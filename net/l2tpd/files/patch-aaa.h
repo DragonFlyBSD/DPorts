@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/l2tpd/files/patch-aaa.h,v 1.2 2012/11/17 06:00:04 svnexp Exp $
+$FreeBSD: net/l2tpd/files/patch-aaa.h 300897 2012-07-14 14:29:18Z beat $
 
 --- aaa.h
 +++ aaa.h

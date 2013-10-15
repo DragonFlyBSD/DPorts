@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/l2tpd/files/patch-call.c,v 1.3 2012/11/17 06:00:04 svnexp Exp $
+$FreeBSD: net/l2tpd/files/patch-call.c 300897 2012-07-14 14:29:18Z beat $
 
 --- call.c.orig	Sat Aug 10 03:47:25 2002
 +++ call.c	Thu Oct 16 23:13:51 2003

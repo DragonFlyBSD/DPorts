@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/l2tpd/files/patch-avpsend.c,v 1.2 2012/11/17 06:00:04 svnexp Exp $
+$FreeBSD: net/l2tpd/files/patch-avpsend.c 300897 2012-07-14 14:29:18Z beat $
 
 --- avpsend.c	2002/10/22 09:41:27	1.1
 +++ avpsend.c	2002/10/22 09:43:06

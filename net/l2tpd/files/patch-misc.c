@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/l2tpd/files/patch-misc.c,v 1.2 2012/11/17 06:00:04 svnexp Exp $
+$FreeBSD: net/l2tpd/files/patch-misc.c 300897 2012-07-14 14:29:18Z beat $
 
 --- misc.c	2002/10/22 09:41:27	1.1
 +++ misc.c	2002/10/22 09:43:50

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/l2tpd/files/patch-file.c,v 1.4 2012/11/17 06:00:04 svnexp Exp $
+$FreeBSD: net/l2tpd/files/patch-file.c 300897 2012-07-14 14:29:18Z beat $
 
 --- file.c.orig	Sat Aug 10 03:55:14 2002
 +++ file.c	Wed Apr 16 16:07:19 2003
