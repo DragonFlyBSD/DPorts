@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: audio/paman/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: audio/paman/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	paman
 PORTVERSION=	0.9.4
@@ -15,6 +15,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
+NO_STAGE=	yes
 
 CONFIGURE_ARGS=	--disable-lynx
 
