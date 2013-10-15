@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/gregexp/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: misc/gregexp/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gregexp
 PORTVERSION=	0.3
@@ -19,4 +19,5 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
