@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/magento/Makefile 319746 2013-06-03 02:17:31Z wen $
+# $FreeBSD: www/magento/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	magento
 PORTVERSION=	1.7.0.2
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/magento
 OPTIONS_DEFINE=	MYSQL56
 MYSQL56_DESC=	Add installer patch for MySQL 5.6 server
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL56}
