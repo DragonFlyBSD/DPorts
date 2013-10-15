@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/curlpp/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: ftp/curlpp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	curlpp
 PORTVERSION=	0.7.3
@@ -10,9 +10,9 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C++ wrapper for libcurl
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
-OPTIONS_DEFINE=	BOOST DOCS EXAMPELS
+OPTIONS_DEFINE=	BOOST DOCS EXAMPLES
 
 CONFIGURE_ARGS=	--disable-ewarning
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -21,15 +21,16 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 USES=		pathfix
 
+BOOST_BUILD_DEPENDS=	boost-libs>=1.20.0:${PORTSDIR}/devel/boost-libs
+BOOST_RUN_DEPENDS=	${BOOST_BUILD_DEPENDS}
+BOOST_CONFIGURE_ON=	--with-boost=${LOCALBASE}
+BOOST_CONFIGURE_OFF=	--without-boost
+
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MBOOST}
-BUILD_DEPENDS+=	boost-libs>=1.20.0:${PORTSDIR}/devel/boost-libs
-RUN_DEPENDS+=	boost-libs>=1.20.0:${PORTSDIR}/devel/boost-libs
-CONFIGURE_ARGS+=--with-boost=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=--without-boost
-.endif
+post-patch:
+	@${REINPLACE_CMD} -e 's| -lstdc++||' ${WRKSRC}/configure
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
