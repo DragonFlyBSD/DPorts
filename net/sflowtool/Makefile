@@ -1,13 +1,13 @@
 # Created by: Gregory Edigarov <greg@bestnet.kharkov.ua>
-# $FreeBSD: net/sflowtool/Makefile 315465 2013-03-28 13:03:40Z ohauer $
+# $FreeBSD: net/sflowtool/Makefile 329239 2013-10-03 21:36:02Z ohauer $
 
 PORTNAME=	sflowtool
-PORTVERSION=	3.28
+PORTVERSION=	3.29
 CATEGORIES=	net
 MASTER_SITES=	http://www.inmon.com/bin/
 
 MAINTAINER=	ohauer@FreeBSD.org
-COMMENT=	This is a sFlow capture and sFlow-to-NetFlow conversion tool
+COMMENT=	sFlow capture and sFlow-to-NetFlow conversion tool
 
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	${PORTNAME}
@@ -20,15 +20,9 @@ PORTEXAMPLES=	README ipTopTalkers ipTrafficMatrix sflowRRDChart.cgi \
 .include <bsd.port.options.mk>
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-. for f in ${PORTEXAMPLES}
-	@${INSTALL_DATA} ${WRKSRC}/scripts/$f ${EXAMPLESDIR}/
-. endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/scripts/|} ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
