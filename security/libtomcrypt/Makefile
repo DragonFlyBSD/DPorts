@@ -1,5 +1,5 @@
 # Created by: Yonatan <Yonatan@Xpert.com>
-# $FreeBSD: security/libtomcrypt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/libtomcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libtomcrypt
 PORTVERSION=	1.17
@@ -28,6 +28,7 @@ OPTIONS_MULTI_MATH=	LIBTOMMATH TOMSFASTMATH GMP
 LIBTOMMATH_DESC=	Use LibTomMath
 TOMSFASTMATH_DESC=	Use TomsFastMath
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBTOMMATH}
