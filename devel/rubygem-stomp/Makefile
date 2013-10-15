@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-stomp/Makefile 322961 2013-07-13 18:16:32Z swills $
+# $FreeBSD: devel/rubygem-stomp/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	stomp
 PORTVERSION=	1.2.10
@@ -13,4 +13,5 @@ USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=		bin/catstomp bin/stompcat
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
