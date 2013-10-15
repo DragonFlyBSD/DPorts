@@ -1,9 +1,5 @@
-# ports collection makefile for:	mdbconv
-# Date created:			14 June 2000
-# Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: palm/mdbconv/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: palm/mdbconv/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	mdbconv
 PORTVERSION=	1.6
@@ -17,6 +13,7 @@ COMMENT=	Converts CSV to MobileDB database
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/mdbconv
 
+NO_STAGE=	yes
 pre-build:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 	${RM} ${WRKSRC}/mdbconv
