@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 327095 2013-09-12 17:30:43Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Action-REST
 PORTVERSION=	1.12
@@ -42,4 +42,5 @@ MAN3=		Catalyst::Action::Deserialize.3 \
 		Catalyst::TraitFor::Request::REST.3 \
 		Catalyst::TraitFor::Request::REST::ForBrowsers.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
