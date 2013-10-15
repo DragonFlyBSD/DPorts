@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: audio/cue2toc/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: audio/cue2toc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cue2toc
 PORTVERSION=	0.1
@@ -13,6 +13,7 @@ COMMENT=	Perl script that converts CUE files into TOC files for cdrdao
 RUN_DEPENDS=	p5-Audio-Wav>=0:${PORTSDIR}/audio/p5-Audio-Wav
 
 USES=		perl5
+NO_STAGE=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/cue2toc.pl
 
