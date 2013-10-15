@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-xmlrpc
-# Date created:				22 April 2001
-# Whom:					Hye-Shik Chang <perky@python.or.kr>
-#
-# $FreeBSD: ports/net/py-xmlrpc/Makefile,v 1.20 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Hye-Shik Chang <perky@python.or.kr>
+# $FreeBSD: net/py-xmlrpc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	xmlrpc
 PORTVERSION=	0.8.8.3
@@ -34,6 +30,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/_xmlrpc.so \
 		%%PYTHON_SITELIBDIR%%/xmlrpc.pyc \
 		%%PYTHON_SITELIBDIR%%/xmlrpc.pyo
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}

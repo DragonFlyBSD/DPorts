@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/py-xmlrpc/files/patch-src_rpcClient.c,v 1.2 2012/11/17 06:00:16 svnexp Exp $
+$FreeBSD: net/py-xmlrpc/files/patch-src_rpcClient.c 300897 2012-07-14 14:29:18Z beat $
 
 --- src/rpcClient.c
 +++ src/rpcClient.c
