@@ -1,5 +1,5 @@
 # Created by: Scott Flatman <sf@dsinw.com>
-# $FreeBSD: benchmarks/stream/Makefile 313199 2013-03-02 05:56:28Z miwi $
+# $FreeBSD: benchmarks/stream/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	stream
 PORTVERSION=	5.10
@@ -22,6 +22,7 @@ EXTRACT_AFTER_ARGS=	${WRKDIR}
 PORTDOCS=	stream.c
 PLIST_FILES=	bin/stream_bench
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
