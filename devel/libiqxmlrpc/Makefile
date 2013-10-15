@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: devel/libiqxmlrpc/Makefile 318425 2013-05-18 11:16:22Z fjoe $
+# $FreeBSD: devel/libiqxmlrpc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libiqxmlrpc
 PORTVERSION=	0.12.4
@@ -29,6 +29,7 @@ USE_OPENSSL=	yes
 
 PORTDATA=	*
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,lib/pkgconfig,libdata/pkgconfig,' ${WRKSRC}/libiqxmlrpc/CMakeLists.txt
 	${REINPLACE_CMD} -e 's,share/doc/libiqxmlrpc-$${Libiqxmlrpc_VERSION},share/libiqxmlrpc,' ${WRKSRC}/doc/CMakeLists.txt
