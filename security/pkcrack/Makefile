@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/pkcrack/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: security/pkcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pkcrack
 PORTVERSION=	1.2.2
@@ -18,6 +18,7 @@ PORTDOCS=	README pkzip.ps.gz
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
