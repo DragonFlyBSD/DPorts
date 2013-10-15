@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-bifunctors/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-bifunctors/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	bifunctors
 PORTVERSION=	3.2.0.1
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	semigroupoids semigroups>=0.8.3.1 tagged>=0.4.4
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
