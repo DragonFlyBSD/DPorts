@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope <ascope@cpan.org>
-# $FreeBSD: textproc/p5-XML-XBEL/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: textproc/p5-XML-XBEL/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-XBEL
 PORTVERSION=	1.4
@@ -30,4 +30,5 @@ MAN3=	XML::XBEL.3 \
 	XML::XBEL::thingy.3 \
 	XML::XBEL::url.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
