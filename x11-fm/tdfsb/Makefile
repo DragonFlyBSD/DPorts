@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: x11-fm/tdfsb/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-fm/tdfsb/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	tdfsb
 PORTVERSION=	0.0.10
@@ -27,8 +27,9 @@ CPPFLAGS+=	`${LOCALBASE}/bin/pkgconf --cflags SDL_image gl` \
 		-I ${LOCALBASE}/include
 LDFLAGS+=	`${LOCALBASE}/bin/pkgconf --libs SDL_image gl` \
 		`${LOCALBASE}/bin/smpeg-config --libs` \
-		-L ${LOCALBASE}/lib -lGLU -lglut
+		-L ${LOCALBASE}/lib -lGLU -lglut -lm
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
