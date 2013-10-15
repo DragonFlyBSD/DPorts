@@ -1,9 +1,5 @@
-# Ports collection makefile for:	bzr-builder
-# Date created:				22 Aug 2010
-# Whom:					Carlo Strub <c-s@c-s.li>
-#
-# $FreeBSD: ports/devel/bzr-builder/Makefile,v 1.8 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Carlo Strub <c-s@c-s.li>
+# $FreeBSD: devel/bzr-builder/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-builder
 PORTVERSION=	0.7.3
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpadlibrarian.net/100761063/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A bzr plugin to construct a bzr branch based on a "recipe"
 
 LICENSE=	GPLv3
@@ -26,4 +22,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr_builder
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
