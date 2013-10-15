@@ -1,5 +1,5 @@
 # Created by: Takanori Sawada <tak.swd@gmail.com>
-# $FreeBSD: devel/c-unit/Makefile 316837 2013-04-29 18:47:57Z jgh $
+# $FreeBSD: devel/c-unit/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	c-unit
 DISTVERSION=	1.1.1
@@ -30,6 +30,7 @@ MEM_DESC=	Internal memory tracking
 
 OPTIONS_DEFAULT=	AUT BAS CON
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		's|/@PACKAGE@/Examples/Automated|/examples/@PACKAGE@/Automated|g' \
