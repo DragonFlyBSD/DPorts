@@ -1,10 +1,5 @@
-############################################################################
-# New ports collection Makefile for:   minc 1.x (Medical Imaging NetCDF)
-# Date created:        21 Dec 2005
-# Whom:                jbacon
-#
-# $FreeBSD: ports/science/minc/Makefile,v 1.15 2012/11/17 06:00:58 svnexp Exp $
-#
+# Created by: jbacon
+# $FreeBSD: science/minc/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 ############################################################################
 # http://www.bic.mni.mcgill.ca/software/minc/
@@ -76,6 +71,7 @@ MAN3=	ParseArgv.3
 
 FETCH_ARGS+=	-F
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
