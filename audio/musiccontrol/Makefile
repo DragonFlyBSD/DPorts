@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: ports/audio/musiccontrol/Makefile,v 1.10 2012/12/10 11:29:52 svnexp Exp $
+# $FreeBSD: audio/musiccontrol/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	musiccontrol
 PORTVERSION=	0.3
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/mpg123:${PORTSDIR}/audio/mpg123 \
 		${LOCALBASE}/bin/simplemod:${PORTSDIR}/audio/simplemod
 
 USE_JAVA=	yes
+NO_STAGE=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 PLIST_FILES=	share/java/classes/MusicControl-${PORTVERSION}.jar bin/musiccontrol

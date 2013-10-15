@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/audio/musiccontrol/files/musiccontrol,v 1.5 2012/11/17 05:54:39 svnexp Exp $
+# $FreeBSD: audio/musiccontrol/files/musiccontrol 300895 2012-07-14 12:56:14Z beat $
 
 "%%LOCALBASE%%/bin/java" -jar "%%JAVAJARDIR%%/MusicControl-0.3.jar" "$*"
