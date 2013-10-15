@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	sng
-# Date created:			Mar 20, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/sng/Makefile,v 1.22 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: graphics/sng/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sng
 PORTVERSION=	1.0.5
@@ -28,6 +23,7 @@ CONFIGURE_ARGS=	--with-png-inc=${LOCALBASE}/include \
 MAN1=		sng.1
 PLIST_FILES=	bin/sng bin/sng_regress
 
+NO_STAGE=	yes
 no-pre-patch:
 	@${REINPLACE_CMD} -e 's|-static||g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e '33,34s|^static ||' ${WRKSRC}/sngd.c
