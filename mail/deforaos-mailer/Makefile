@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: mail/deforaos-mailer/Makefile 323755 2013-07-26 21:41:07Z marino $
+# $FreeBSD: mail/deforaos-mailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailer
 PORTVERSION=	0.1.6
@@ -32,6 +32,7 @@ MAKE_JOBS_UNSAFE=	yes
 MAN1=		compose.1 \
 		mailer.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/|/libdata/|g' \
 		${WRKSRC}/data/pkgconfig.sh
