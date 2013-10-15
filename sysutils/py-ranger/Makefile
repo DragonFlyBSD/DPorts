@@ -1,8 +1,8 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: sysutils/py-ranger/Makefile 321755 2013-06-25 18:20:39Z swills $
+# $FreeBSD: sysutils/py-ranger/Makefile 328028 2013-09-23 18:17:04Z swills $
 
 PORTNAME=	ranger
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://ranger.nongnu.org/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,8 @@ USE_PYDISTUTILS=	yes
 
 MAN1=		ranger.1 rifle.1
 
+NO_STAGE=	yes
 post-patch:
-	@${REINPLACE_CMD} -e 's|setuptools|distutils.core|; s|share/man/man|man/man|' ${WRKSRC}/${PYSETUP}
+	@${REINPLACE_CMD} -e 's|setuptools|distutils.core|; s|share/man/man|man/man|;s|share/doc|doc|' ${WRKSRC}/${PYSETUP}
 
 .include <bsd.port.mk>
