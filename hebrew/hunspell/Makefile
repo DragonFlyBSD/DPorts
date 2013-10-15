@@ -1,9 +1,4 @@
-# New ports collection makefile for:	hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: hebrew/hunspell/Makefile 325937 2013-09-02 05:41:50Z bsam $
-#
+# $FreeBSD: hebrew/hunspell/Makefile 327734 2013-09-20 18:41:52Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.2
@@ -16,17 +11,17 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Hebrew hunspell dictionaries
 
-USES=		iconv:build perl5
 ALL_TARGET=	hunspell
 CONFIGURE_ARGS=	--enable-fatverb
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_PERL5=	build
+USES=		gmake iconv:build perl5
 
 PLIST_FILES=	%%DATADIR%%/he.aff \
 		%%DATADIR%%/he.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/bin/perl|${PERL}|g' ${WRKSRC}/pmerge
 
