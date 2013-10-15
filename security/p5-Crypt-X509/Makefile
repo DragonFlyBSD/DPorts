@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-X509/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Crypt-X509/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-X509
 PORTVERSION=	0.51
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::X509.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
