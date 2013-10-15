@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: databases/pear-DB_Table/Makefile 314298 2013-03-15 12:14:30Z miwi $
+# $FreeBSD: databases/pear-DB_Table/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DB_Table
 PORTVERSION=	1.5.6
@@ -20,6 +20,7 @@ PEAR_DB_DESC=	PEAR::DB support
 PEAR_MDB2_DESC=	PEAR::MDB2 support
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_HTML_QUICKFORM}
