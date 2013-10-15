@@ -1,9 +1,5 @@
-# New ports collection makefile for:    is-aspell
-# Date created:                         13 March 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/is-aspell/Makefile,v 1.5 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/is-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	-is-0.51.1-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Icelandic dictionary
 
 DICT=	 	is
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
