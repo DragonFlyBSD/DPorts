@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/prelude-lml/Makefile 322061 2013-06-29 21:35:45Z antoine $
+# $FreeBSD: security/prelude-lml/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	prelude-lml
 PORTVERSION=	1.0.1
@@ -29,6 +29,7 @@ USES=		charsetfix gettext iconv pkgconfig
 
 OPTIONS_DEFINE=	FAM
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFAM}
