@@ -1,4 +1,4 @@
-# $FreeBSD: net/scamper/Makefile 325662 2013-08-30 06:25:58Z culot $
+# $FreeBSD: net/scamper/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	scamper
 PORTVERSION=	20130824
@@ -19,4 +19,5 @@ MAN1=		scamper.1 sc_ally.1 sc_analysis_dump.1 sc_attach.1 \
 MAN3=		libscamperfile.3
 MAN5=		warts.5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
