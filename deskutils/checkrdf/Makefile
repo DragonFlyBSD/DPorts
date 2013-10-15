@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: deskutils/checkrdf/Makefile 319939 2013-06-04 23:27:19Z pgj $
+# $FreeBSD: deskutils/checkrdf/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	checkrdf
 PORTVERSION=	39.4444
@@ -25,6 +25,7 @@ PORTDOCS=	README NEWS blog.news.css bluegreek.css myrdf.css
 OPTIONS_DEFINE=		DOCS
 OPTIONS_DEFAULT=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MDOCS)
