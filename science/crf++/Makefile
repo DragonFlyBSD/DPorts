@@ -1,9 +1,5 @@
-# New ports collection makefile for:	crf++
-# Date created:		2006-07-27
-# Whom:			Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/science/crf++/Makefile,v 1.19 2012/11/17 06:00:57 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: science/crf++/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	crf++
 PORTVERSION=	0.54
