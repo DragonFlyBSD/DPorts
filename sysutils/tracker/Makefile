@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/tracker/Makefile 314607 2013-03-18 22:10:04Z kwm $
+# $FreeBSD: sysutils/tracker/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/tracker/Makefile,v 1.18 2009/08/08 18:46:41 ahze Exp $
 
 PORTNAME=	tracker
@@ -21,6 +21,7 @@ OPTIONS_DEFAULT=GNOME MSOFFICE
 GNOME_DESC=	Gnome preferences, panel applet, and search tool
 MSOFFICE_DESC=	Search support for Microsoft Office Docs (uses gtk)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOME}
