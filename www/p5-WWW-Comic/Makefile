@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/p5-WWW-Comic/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Comic/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Comic
 PORTVERSION=	1.06
@@ -24,4 +24,5 @@ MAN3=		WWW::Comic.3 WWW::Comic::Plugin::uComics.3 \
 		WWW::Comic::Plugin.3 WWW::Comic::Plugin::Dilbert.3 \
 		WWW::Comic::Plugin::Goats.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
