@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/fancybox/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/fancybox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fancybox
 PORTVERSION=	1.3.4
@@ -13,6 +13,7 @@ COMMENT=	JavaScript library for image/html/multimedia content display
 NO_BUILD=	yes
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}/
 	cd ${WRKSRC}/${PORTNAME}/ && ${INSTALL_DATA} * ${WWWDIR}/
