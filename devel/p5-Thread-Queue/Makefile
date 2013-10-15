@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Thread-Queue/Makefile 326581 2013-09-07 08:23:45Z az $
+# $FreeBSD: devel/p5-Thread-Queue/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Thread-Queue
 PORTVERSION=	3.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Thread::Queue.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
