@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-# $FreeBSD: news/plor/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: news/plor/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	plor
 PORTVERSION=	0.3.3
@@ -22,6 +22,7 @@ MAN1=		plor.1
 DOCFILES=	../AUTHORS ../NEWS TODO plor-1.html plor-2.html \
 		plor.html plor.txt
 
+NO_STAGE=	yes
 post-install:
 .if !defined{NOPORTDOCS}
 	@${MKDIR} ${PREFIX}/share/doc/plor
