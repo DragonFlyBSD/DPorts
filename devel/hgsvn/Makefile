@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-hgsvn
-# Date created:				2007-12-12
-# Whom:					Xin LI <delphij@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/hgsvn/Makefile,v 1.12 2012/11/17 05:55:47 svnexp Exp $
-#
+# Created by: Xin LI <delphij@FreeBSD.org>
+# $FreeBSD: devel/hgsvn/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hgsvn
 PORTVERSION=	0.1.9
@@ -22,6 +18,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PLIST_SUB=	VERSION=${PORTVERSION} PYVER=${PYTHON_VERSION:S/python//}
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} && ${MV} setup.py setup.py.orig && ${GREP} -v use_setuptools setup.py.orig > setup.py && cd -
 
