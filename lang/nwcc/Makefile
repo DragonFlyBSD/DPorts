@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  pcc
-# Date created:			  Mon Oct 15, 2007
-# Whom:				  David O'Brien (obrien@NUXI.org)
-#
-# $FreeBSD: ports/lang/nwcc/Makefile,v 1.7 2012/11/17 05:58:53 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@NUXI.org)
+# $FreeBSD: lang/nwcc/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	nwcc
 PORTVERSION=	0.7.5
@@ -22,6 +17,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--installprefix=${PREFIX}
 ALL_TARGET=
 
+NO_STAGE=	yes
 post-build:
 	cd ${WRKSRC} ; ${MAKE} test
 

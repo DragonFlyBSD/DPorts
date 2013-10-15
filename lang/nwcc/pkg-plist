@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/lang/nwcc/pkg-plist,v 1.4 2012/11/17 05:58:53 svnexp Exp $
+@comment $FreeBSD: lang/nwcc/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/nwcc
 bin/nwcc1
 lib/libnwcc.o
