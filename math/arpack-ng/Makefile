@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: math/arpack-ng/Makefile 316107 2013-04-19 14:47:48Z bf $
+# $FreeBSD: math/arpack-ng/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	arpack-ng
 PORTVERSION=	3.1.3
@@ -30,6 +30,7 @@ PLIST_FILES=	bin/dnsimp \
 		lib/libarpack.so.2 \
 		libdata/pkgconfig/arpack.pc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
