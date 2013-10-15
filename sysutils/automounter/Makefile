@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: sysutils/automounter/Makefile 325726 2013-08-30 22:43:08Z rm $
+# $FreeBSD: sysutils/automounter/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	automounter
 PORTVERSION=	1.4.7
@@ -23,6 +23,7 @@ plist: patch
 
 # Use "amd -S" to avoid a vm locking panic, the scope of which has not yet
 # been determined. See kern/181590.
+NO_STAGE=	yes
 do-install:
 		@cd ${WRKSRC}; ./install.sh -prefix=${PREFIX} \
 			-amd="/usr/sbin/amd -S"
