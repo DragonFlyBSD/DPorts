@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: www/ilias/Makefile 314358 2013-03-16 14:24:04Z wen $
+# $FreeBSD: www/ilias/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ilias
 PORTVERSION=	4.3.2
@@ -35,6 +35,7 @@ SUB_LIST=	ILIASDATADIR=${ILIASDATADIR}
 
 OPTIONS_DEFINE=	SCORM2004 Checker Mail Docs
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSCORM2004}
