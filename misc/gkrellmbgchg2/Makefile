@@ -1,5 +1,5 @@
 # Created by: Chris Stuart <firewolf@lightningfire.net>
-# $FreeBSD: misc/gkrellmbgchg2/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: misc/gkrellmbgchg2/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gkrellmbgchg2
 PORTVERSION=	0.1.11
@@ -20,6 +20,7 @@ USE_GNOME=	gtk20
 
 PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmbgchg.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
