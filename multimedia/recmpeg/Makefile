@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	recmpeg
-# Date created:			Mar 24, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/multimedia/recmpeg/Makefile,v 1.19 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/recmpeg/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	recmpeg
 PORTVERSION=	1.0.5
@@ -25,6 +20,7 @@ PLIST_FILES=	bin/recmpeg
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
