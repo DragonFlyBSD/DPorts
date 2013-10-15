@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-Pod/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: textproc/p5-LaTeX-Pod/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	LaTeX-Pod
 PORTVERSION=	0.21
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 MAN1=	latex2pod.1
 MAN3=	LaTeX::Pod.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
