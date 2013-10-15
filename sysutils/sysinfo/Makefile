@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: sysutils/sysinfo/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/sysinfo/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sysinfo
 PORTVERSION=	1.0.1
@@ -21,6 +21,7 @@ OPTIONS_DEFINE=	DMIDECODE PORTAUDIT
 DMIDECODE_DESC=	Include information from the dmidecode tool
 PORTAUDIT_DESC=	Include information from the portaudit tool
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDMIDECODE}
