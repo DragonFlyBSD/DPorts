@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports/ports-mgmt/portbuilder/Makefile,v 1.14 2013/01/16 20:24:44 svnexp Exp $
+# $FreeBSD: ports-mgmt/portbuilder/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	portbuilder
 DISTVERSION=	0.1.5.4
@@ -18,6 +18,7 @@ USE_XZ=		yes
 
 PORTDOCS=	BUGS ChangeLog COPYRIGHT README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
