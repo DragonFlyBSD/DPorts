@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/mtop/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: databases/mtop/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mtop
 PORTVERSION=	0.6.6
@@ -19,6 +19,7 @@ USE_PERL5=	configure
 
 MAN1=	mkill.1 mtop.1
 
+NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/cpan2spec.pl
 
