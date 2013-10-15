@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: java/berkeley-db/Makefile 314337 2013-03-16 07:29:22Z jgh $
+# $FreeBSD: java/berkeley-db/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	je
 PORTVERSION=	3.2.76
@@ -28,6 +28,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/je.jar
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 test:
 	#
 	# Running the vendor-provided self-tests. This may take a while
