@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bsdproxy
-# Date created:		2 November 2001
-# Whom:			roam@FreeBSD.org
-#
-# $FreeBSD: net/bsdproxy/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: roam@FreeBSD.org
+# $FreeBSD: net/bsdproxy/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	bsdproxy
 PORTVERSION=	0.04
@@ -15,6 +11,7 @@ COMMENT=	A TCP proxy, demonstrating use of the kevent(2)/kqueue(2) API
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib12
+NO_STAGE=	yes
 
 DOCS=		ChangeLog README
 
