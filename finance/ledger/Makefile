@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ledger
-# Date created:        June 25th, 2005
-# Whom:                wcarey
-#
-# $FreeBSD: ports/finance/ledger/Makefile,v 1.13 2012/12/10 19:24:01 svnexp Exp $
-#
+# Created by: wcarey
+# $FreeBSD: finance/ledger/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	ledger
 PORTVERSION=	2.6.3
@@ -30,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 NO_INSTALL_MANPAGES=	yes
 INFO=	ledger
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${MKDIR} ${EXAMPLESDIR}/scripts
