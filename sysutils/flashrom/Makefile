@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: sysutils/flashrom/Makefile 325832 2013-08-31 21:13:21Z rm $
+# $FreeBSD: sysutils/flashrom/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	flashrom
 PORTVERSION=	0.9.7
@@ -34,6 +34,7 @@ PLIST_FILES=	bin/${PORTNAME}
 MAN8=		${PORTNAME}.8
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDMIDECODE}
