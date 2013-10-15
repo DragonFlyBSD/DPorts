@@ -1,7 +1,5 @@
-# New ports collection makefile for:	wapiti
-# Date created:                3 October 2007
-# Whom:                        Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/security/wapiti/Makefile,v 1.6 2012/11/17 06:01:22 svnexp Exp $
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: security/wapiti/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	wapiti
 PORTVERSION=	1.1.6
@@ -24,6 +22,7 @@ PLIST_FILES=	bin/wapiti.py \
 		bin/cookie.py \
 		bin/BeautifulSoup.py
 
+NO_STAGE=	yes
 do-install:
 .for i in wapiti.py lswww.py getcookie.py cookie.py BeautifulSoup.py
 	${INSTALL_SCRIPT} ${WRKSRC}/${i} ${PREFIX}/bin/
