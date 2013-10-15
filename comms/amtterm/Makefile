@@ -1,4 +1,4 @@
-# $FreeBSD: comms/amtterm/Makefile 324267 2013-08-05 09:06:31Z crees $
+# $FreeBSD: comms/amtterm/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	amtterm
 PORTVERSION=	1.3
@@ -27,6 +27,7 @@ MAN1=		gamt.1 ${PORTNAME}.1 amttool.1
 MAN7=		amt-howto.7
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/sbin/ldconfig -p,${LDCONFIG} -r,' \
 		${WRKSRC}/mk/Autoconf.mk
