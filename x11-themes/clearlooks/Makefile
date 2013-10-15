@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-themes/clearlooks/Makefile 320138 2013-06-06 22:11:38Z bapt $
+# $FreeBSD: x11-themes/clearlooks/Makefile 327783 2013-09-20 23:54:03Z bapt $
 #   $MCom: ports/x11-themes/clearlooks/Makefile,v 1.8 2007/08/07 04:34:29 mezz Exp $
 
 PORTNAME?=	clearlooks
@@ -27,6 +27,7 @@ ANIMATION_DESC=	Enable experimental animated progressbars
 METACITY_DESC=	Depend on MetaCity Theme
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !defined(PKGNAMESUFFIX)
