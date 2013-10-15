@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-PDF-API3/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-PDF-API3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	PDF-API3
 PORTVERSION=	3.001
@@ -172,4 +172,5 @@ MAN3=	PDF::API3::Compat::API2::Basic::TTF::GDEF.3 \
 	PDF::API3::Compat::API2::Basic::TTF::Kern::CompactClassArray.3 \
 	PDF::API3::Compat::API2::Basic::TTF::Fmtx.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
