@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/gnurobbo/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/gnurobbo/Makefile 328539 2013-09-28 00:46:09Z amdmi3 $
 
 PORTNAME=	gnurobbo
 PORTVERSION=	0.66
@@ -11,21 +11,22 @@ EXTRACT_SUFX=	-source.tar.gz
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Reimplementation of LK Avalon's Robbo for the Atari XE/XL
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl ttf mixer image
 
 MAKE_ENV=	PACKAGE_DATA_DIR="${DATADIR}" \
 		BINDIR="${PREFIX}/bin" \
 		DOCDIR="${DOCSDIR}"
 
+PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
+PORTDATA=	*
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e '/define DEBUG_DUMP_VM_USAGE/ d' ${WRKSRC}/game.c
-.if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e '/DOCDIR/ d' ${WRKSRC}/Makefile
-.endif
+	@${REINPLACE_CMD} -e '/^install:/,$$ s|$$([A-Z_]*DIR)|${STAGEDIR}&| g' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
