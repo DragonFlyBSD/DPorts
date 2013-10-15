@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/xmms-xf86audio/files/patch-xf86audio.c,v 1.2 2012/11/17 05:54:49 svnexp Exp $
+$FreeBSD: audio/xmms-xf86audio/files/patch-xf86audio.c 300895 2012-07-14 12:56:14Z beat $
 
 --- xf86audio.c.orig
 +++ xf86audio.c
