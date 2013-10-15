@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Log-Dispatch-FileRotate
-# Date created:				Tue Jul  1 15:14:38 CEST 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: devel/p5-Log-Dispatch-FileRotate/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: devel/p5-Log-Dispatch-FileRotate/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Dispatch-FileRotate
 PORTVERSION=	1.19
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Log::Dispatch::FileRotate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
