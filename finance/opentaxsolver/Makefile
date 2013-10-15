@@ -1,4 +1,4 @@
-# $FreeBSD: finance/opentaxsolver/Makefile 320722 2013-06-12 19:42:46Z rakuco $
+# $FreeBSD: finance/opentaxsolver/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	${UPPORTNAME:tl}
 PORTVERSION=	10.00
@@ -28,6 +28,7 @@ MAKE_ENV+=	WITHOUT_X11=yes
 SUB_LIST+=	X11="@comment "
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/%%PREFIX%%/${PREFIX:C,/,\/,g}/' \
 	${WRKSRC}/src/GUI/ots_gui.c
