@@ -1,9 +1,5 @@
-# New ports collection makefile for:	parchive
-# Whom:					Chris D. Faulhaber <jedgar@FreeBSD.org>
-# Date created:				26 November 2001
-#
-# $FreeBSD: archivers/parchive/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
+# $FreeBSD: archivers/parchive/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	parchive
 PORTVERSION=	1.1
