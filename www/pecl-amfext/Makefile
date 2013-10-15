@@ -1,9 +1,5 @@
-# New ports collection makefile for:   pecl-amfext
-# Date created:		11 February 2007
-# Whom:			Piotr Rybicki <meritus@innervision.pl>
-#
-# $FreeBSD: ports/www/pecl-amfext/Makefile,v 1.8 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Piotr Rybicki <meritus@innervision.pl>
+# $FreeBSD: www/pecl-amfext/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	amfext
 PORTVERSION=	0.9.2
@@ -25,4 +21,5 @@ IGNORE_WITH_PHP=5
 CONFIGURE_ARGS=	--enable-amf
 CPPFLAGS+=	-I${LOCALBASE}/include/php/ext/standard
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
