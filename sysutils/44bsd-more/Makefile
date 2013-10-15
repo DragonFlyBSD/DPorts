@@ -1,5 +1,5 @@
 # Created by: Tim van der Hoek <hoek@FreeBSD.org>
-# $FreeBSD: sysutils/44bsd-more/Makefile 319243 2013-05-27 13:49:08Z bapt $
+# $FreeBSD: sysutils/44bsd-more/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	44bsd-more
 PORTVERSION=	${RELDATE}
@@ -18,6 +18,7 @@ CFLAGS=		-Wno-return-type
 
 RELDATE=	20000521
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
