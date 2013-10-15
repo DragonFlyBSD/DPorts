@@ -1,7 +1,8 @@
-# $FreeBSD: print/texlive-infra/Makefile 318245 2013-05-15 15:33:02Z hrs $
+# $FreeBSD: print/texlive-infra/Makefile 329447 2013-10-05 12:38:08Z az $
 
 PORTNAME=	texlive
 PORTVERSION=	27610
+PORTREVISION=	1
 CATEGORIES=	print perl5
 MASTER_SITES=	ftp://tug.org/tex-archive/systems/texlive/tlnet/archive/
 PKGNAMESUFFIX=	-infra
@@ -11,11 +12,14 @@ DIST_SUBDIR=	TeX
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Basic TeXLive infrastructure
 
+USES=		perl5
+USE_PERL5=	run
 USE_XZ=		yes
 USE_TEX=	texlive texmf
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${SITE_PERL}/TeXLive
 	${INSTALL_DATA} ${WRKSRC}/tlpkg/TeXLive/*.pm ${SITE_PERL}/TeXLive
