@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libopennet
-# Date created:			21 May 2005
-# Whom:				Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-#
-# $FreeBSD: ports/net/libopennet/Makefile,v 1.8 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
+# $FreeBSD: net/libopennet/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libopennet
 PORTVERSION=	0.9.9
@@ -26,4 +22,5 @@ MAN3=		fopen_net.3 \
 		opennet.3 \
 		read_net.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
