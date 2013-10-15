@@ -1,5 +1,5 @@
 # Created by: vsevolod
-# $FreeBSD: devel/drpython/Makefile 310871 2013-01-23 15:00:18Z makc $
+# $FreeBSD: devel/drpython/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	drpython
 PORTVERSION=	3.11.3
@@ -27,6 +27,7 @@ DESKTOP_ENTRIES=	"DrPython" "Python editor and IDE" \
 			"${PYTHONPREFIX_SITELIBDIR}/drpython/bitmaps/drpython.png" \
 			"drpython" "Development;IDE;" "false"
 
+NO_STAGE=	yes
 post-install:
 	@${ECHO_CMD} '#!/bin/sh' > ${WRKDIR}/drpython.sh
 	@${ECHO_CMD} '(cd ${PYTHONPREFIX_SITELIBDIR}/drpython && ${PYTHON_CMD} drpython.py)' >> ${WRKDIR}/drpython.sh
