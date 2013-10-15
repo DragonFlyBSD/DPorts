@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: dns/ldnsm/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/ldnsm/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	ldnsm
 PORTVERSION=	0.2.1
@@ -21,6 +21,7 @@ MAN5=		dotldnsm.5
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 #nothing to configure
+NO_STAGE=	yes
 do-configure:
 	@${ECHO} -n
 
