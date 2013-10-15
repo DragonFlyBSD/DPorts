@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/gphoto2/Makefile 322615 2013-07-10 05:21:51Z danfe $
+# $FreeBSD: graphics/gphoto2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gphoto2
 PORTVERSION=	2.4.14
@@ -33,6 +33,7 @@ AALIB_CONFIGURE_OFF=	--without-aalib
 NLS_USES=	gettext
 NLS_CONFIGURE_OFF=	--disable-nls
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
