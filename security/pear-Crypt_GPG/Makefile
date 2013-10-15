@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Crypt_GPG
-# Date created:			  14 Jan 2008
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pear-Crypt_GPG/Makefile,v 1.9 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: security/pear-Crypt_GPG/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt_GPG
 PORTVERSION=	1.3.2
@@ -18,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 USE_PHP=	posix
 PEAR_AUTOINSTALL=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
