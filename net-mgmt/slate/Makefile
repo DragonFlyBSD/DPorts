@@ -1,9 +1,5 @@
-# New ports collection makefile for:	slate
-# Date created:				2004 July 19
-# Whom:					Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/net-mgmt/slate/Makefile,v 1.4 2012/11/17 06:00:37 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: net-mgmt/slate/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	slate
 PORTVERSION=	5.0.1
@@ -18,4 +14,5 @@ PLIST_FILES=	bin/sfas
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
