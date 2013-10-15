@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_xmlns/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_xmlns/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_xmlns
 PORTVERSION=	0.97
@@ -19,6 +19,7 @@ USE_APACHE=	22+
 XML2_INC=	${LOCALBASE}/include/libxml2
 XML2_LIB=	${LOCALBASE}/lib
 
+NO_STAGE=	yes
 pre-extract:
 	@${MKDIR} ${WRKDIR}
 
