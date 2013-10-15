@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Find-Rule-Filesys-Virtual/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-File-Find-Rule-Filesys-Virtual/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Find-Rule-Filesys-Virtual
 PORTVERSION=	1.22
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Find::Rule::Filesys::Virtual.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
