@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	nomarch
-# Date created:			Nov 5, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/archivers/nomarch/Makefile,v 1.16 2012/11/17 05:54:21 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: archivers/nomarch/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	nomarch
 PORTVERSION=	1.4
@@ -13,9 +8,10 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	utils/compress
 
 MAINTAINER=	gabor@FreeBSD.org
-COMMENT=	Extracts files from the old `.arc' archive format
+COMMENT=	Extracts files from the old '.arc' archive format
 
 MAN1=	nomarch.1
+NO_STAGE=	yes
 PLIST_FILES=	bin/nomarch
 PORTDOCS=	COPYING ChangeLog NEWS README TODO
 
