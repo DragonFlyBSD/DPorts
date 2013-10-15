@@ -1,4 +1,4 @@
-# $FreeBSD: ports/lang/clojure-contrib/Makefile,v 1.6 2013/01/26 15:26:01 svnexp Exp $
+# $FreeBSD: lang/clojure-contrib/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	clojure-contrib
 PORTVERSION=	1.2.0
@@ -17,6 +17,7 @@ JAVA_VERSION=	1.6+
 
 PLIST_FILES=	%%JAVAJARDIR%%/clojure-contrib-1.2.0.jar
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/target/clojure-contrib-1.2.0.jar ${JAVAJARDIR}
 
