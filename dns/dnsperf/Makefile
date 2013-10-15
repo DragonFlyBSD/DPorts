@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis (edwin@mavetju.org)
-# $FreeBSD: dns/dnsperf/Makefile 323384 2013-07-21 13:23:43Z hrs $
+# $FreeBSD: dns/dnsperf/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnsperf
 PORTVERSION=	2.0.0.0
@@ -28,6 +28,7 @@ CFLAGS+=	-I.
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # This is a workaround for broken isc/stat.h.
