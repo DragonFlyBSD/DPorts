@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: www/http-analyze/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/http-analyze/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	http-analyze
 PORTVERSION=	2.4.4
@@ -32,6 +32,7 @@ LDFLAGS+=	$$(gdlib-config --ldflags) $$(gdlib-config --libs)
 
 MAN1=		http-analyze.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
