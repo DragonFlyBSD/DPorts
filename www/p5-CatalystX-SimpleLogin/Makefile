@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-CatalystX-SimpleLogin/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CatalystX-SimpleLogin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CatalystX-SimpleLogin
 PORTVERSION=	0.18
@@ -52,4 +52,5 @@ MAN3=		Catalyst::ActionRole::NeedsLogin.3 \
 		CatalystX::SimpleLogin::TraitFor::Controller::Login::RenderAsTTTemplate.3 \
 		CatalystX::SimpleLogin::TraitFor::Controller::Login::WithRedirect.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
