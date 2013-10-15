@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fbm
-# Date created:         31 June 2003
-# Whom:			Pedro F. Giffuni <giffunip@asme.org>
-#
-# $FreeBSD: math/fbm/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Pedro F. Giffuni <giffunip@asme.org>
+# $FreeBSD: math/fbm/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	fbm
 PORTVERSION=	20041110
@@ -42,6 +38,7 @@ PROGRAMS =	bvg-grad-test bvg-hist bvg-initial bvg-mc	\
 		net-stepsizes net-tbl rand-seed series
 OTHER=		dft-genp mix-genp
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's+%%CC%%+${CC}+g;' ${WRKSRC}/make.include
 	@${REINPLACE_CMD} -e 's+%%CFLAGS%%+${CFLAGS}+g;' ${WRKSRC}/make.include
