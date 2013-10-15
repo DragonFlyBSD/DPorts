@@ -1,6 +1,5 @@
-# vim:ts=8
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: math/p5-Math-VecStat/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-VecStat/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-VecStat
 PORTVERSION=	0.08
@@ -19,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::VecStat.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
