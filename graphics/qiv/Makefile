@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/qiv/Makefile 327030 2013-09-12 02:37:17Z jgh $
+# $FreeBSD: graphics/qiv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	qiv
 PORTVERSION=	2.2.4
@@ -25,6 +25,7 @@ MAN1=		qiv.1
 PLIST_FILES=	bin/qiv
 USE_XORG+=	x11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch-script:
