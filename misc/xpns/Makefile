@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: misc/xpns/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/xpns/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xpns
 PORTVERSION=	1.0
@@ -26,6 +26,7 @@ PLIST_FILES=	bin/xpns \
 PLIST_DIRS=	%%DATADIR%% \
 		libexec/xpns
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
