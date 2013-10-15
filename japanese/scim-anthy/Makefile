@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/scim-anthy/Makefile 327188 2013-09-13 21:39:06Z antoine $
+# $FreeBSD: japanese/scim-anthy/Makefile 330170 2013-10-12 18:32:05Z ume $
 
 PORTNAME=	scim-anthy
 PORTVERSION=	1.2.7
@@ -8,7 +8,7 @@ CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=scim-imengine/37309
 
-MAINTAINER=	ume@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM IMEngine module using Anthy
 
 BUILD_DEPENDS=	scim:${PORTSDIR}/textproc/scim
@@ -26,6 +26,7 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO}
