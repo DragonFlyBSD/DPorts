@@ -1,5 +1,5 @@
 # Created by: tux@pinguru.net
-# $FreeBSD: ports/devel/svnkit/Makefile,v 1.22 2012/12/10 11:29:55 svnexp Exp $
+# $FreeBSD: devel/svnkit/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	svnkit
 PORTVERSION=	1.3.0
@@ -38,6 +38,7 @@ SUB_FILES=	javasvn.sh svnsync.sh jsvnadmin.sh jsvnlook.sh jsvnversion.sh jsvndum
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 .for file in ${DATA_FILES}

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/svnkit/files/jsvnversion.sh.in,v 1.3 2012/11/17 05:57:04 svnexp Exp $
+# $FreeBSD: devel/svnkit/files/jsvnversion.sh.in 300896 2012-07-14 13:54:48Z beat $
 
 SVNKIT_HOME=${SVNKIT_HOME:-"%%DATADIR%%"}
 SVNKIT_CP=${SVNKIT_HOME}/svnkit.jar:${SVNKIT_HOME}/svnkit-cli.jar:${SVNKIT_HOME}/trilead.jar:${SVNKIT_HOME}/jna.jar
