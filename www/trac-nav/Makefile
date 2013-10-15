@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/www/trac-nav/Makefile,v 1.14 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-nav/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	nav
 PORTVERSION=	4.1
@@ -20,4 +20,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracNav
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
