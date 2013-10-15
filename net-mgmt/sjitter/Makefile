@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sjitter
-# Date created:		2006-10-29
-# Whom:			babak@farrokhi.net
-#
-# $FreeBSD: ports/net-mgmt/sjitter/Makefile,v 1.5 2012/11/17 06:00:37 svnexp Exp $
-#
+# Created by: babak@farrokhi.net
+# $FreeBSD: net-mgmt/sjitter/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	sjitter
 PORTVERSION=	0.18.1b
@@ -20,6 +16,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	sbin/sjitters sbin/sjitterc
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sjitters ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/sjitterc ${PREFIX}/sbin
