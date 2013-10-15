@@ -1,9 +1,4 @@
-# New ports collection makefile for:	scim-bridge
-# Date created:		2008-09-10
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: textproc/scim-bridge/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# $FreeBSD: textproc/scim-bridge/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scim-bridge
 PORTVERSION=	0.4.16
@@ -16,8 +11,7 @@ COMMENT=	Scim-bridge agent (server)
 
 LIB_DEPENDS=	scim-1.0.10:${PORTSDIR}/textproc/scim
 
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 LICENSE=	GPLv2 LGPL21
@@ -36,6 +30,7 @@ CONFIGURE_ARGS+=--with-libintl-prefix=${LOCALBASE} \
 
 PLIST_FILES=	bin/scim-bridge
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lR "<malloc\.h>" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
 		's|<malloc\.h>|<stdlib.h>|g'
