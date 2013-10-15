@@ -1,5 +1,5 @@
 # Created by: Kelley Reynolds <kelley@insidesystems.net>
-# $FreeBSD: ports/www/ismail/Makefile,v 1.12 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/ismail/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ismail
 PORTVERSION=	2.1
@@ -25,6 +25,7 @@ OPTIONS_SINGLE=	DATASTORE
 OPTIONS_SINGLE_DATASTORE=	MYSQL PGSQL
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
