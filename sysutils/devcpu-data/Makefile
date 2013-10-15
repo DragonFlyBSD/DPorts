@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: sysutils/devcpu-data/Makefile 314890 2013-03-22 05:14:26Z eadler $
+# $FreeBSD: sysutils/devcpu-data/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	0.6
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 DATADIR=	${PREFIX}/share/cpucontrol
