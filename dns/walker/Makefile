@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: dns/walker/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/walker/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	walker
 PORTVERSION=	3.8
@@ -19,6 +19,7 @@ MAN1=		walker.1
 PLIST_FILES=	bin/walker
 PORTDOCS=	index.html
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/walker ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MAN1PREFIX}/man/man1
