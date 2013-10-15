@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-url_escape
-# Date created:				13 Dec 2011
-# Whom:					Scott Sanders <scott@jssjr.com>
-#
-# $FreeBSD: ports/www/rubygem-url_escape/Makefile,v 1.2 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Scott Sanders <scott@jssjr.com>
+# $FreeBSD: www/rubygem-url_escape/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	url_escape
 PORTVERSION=	2009.06.24
@@ -17,4 +13,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
