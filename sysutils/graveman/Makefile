@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: sysutils/graveman/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/graveman/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	graveman
 PORTVERSION=	0.3.12.5
@@ -28,6 +28,7 @@ MAN1=		graveman.1
 OPTIONS_DEFINE=	MP3 OGG DVD
 DVD_DESC=	DVD+RW support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMP3}
