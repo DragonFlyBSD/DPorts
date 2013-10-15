@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-View-TT/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-View-TT/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-View-TT
 PORTVERSION=	0.41
@@ -28,4 +28,5 @@ MAN3=		Catalyst::Helper::View::TT.3 \
 		Catalyst::Helper::View::TTSite.3 \
 		Catalyst::View::TT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
