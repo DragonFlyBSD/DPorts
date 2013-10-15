@@ -1,5 +1,5 @@
-# Created by: lbr@freebsd.org
-# $FreeBSD: www/p5-Catalyst-Plugin-Cache/Makefile 324007 2013-07-31 06:54:09Z az $
+# Created by: lbr@FreeBSD.org
+# $FreeBSD: www/p5-Catalyst-Plugin-Cache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Cache
 PORTVERSION=	0.12
@@ -30,6 +30,7 @@ MAN3=	Catalyst::Plugin::Cache.3 \
 	Catalyst::Plugin::Cache::Store.3 \
 	Catalyst::Plugin::Cache::Store::Memory.3
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL} -i.bak -ne 'print unless m,ok|Test::,' ${WRKSRC}/Makefile.PL
 
