@@ -1,5 +1,5 @@
 # Created by: Marcin Jessa <yazzy@yazzy.org>
-# $FreeBSD: net/py-impacket/Makefile 317734 2013-05-09 11:07:26Z antoine $
+# $FreeBSD: net/py-impacket/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	impacket
 PORTVERSION=	0.9.10
@@ -23,6 +23,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
