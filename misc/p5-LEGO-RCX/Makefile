@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@posi.net>
-# $FreeBSD: misc/p5-LEGO-RCX/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: misc/p5-LEGO-RCX/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	LEGO-RCX
 PORTVERSION=	1.01
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		LEGO::RCX.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
