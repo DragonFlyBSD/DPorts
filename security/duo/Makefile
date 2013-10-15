@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: security/duo/Makefile 326104 2013-09-02 22:06:57Z zi $
+# $FreeBSD: security/duo/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	duo
 PORTVERSION=	1.9.4
@@ -25,6 +25,7 @@ MAN8=		login_duo.8 pam_duo.8
 
 OPTIONS=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} >= 1000000
