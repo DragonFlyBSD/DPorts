@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-proctitle
-# Date created:		2010-01-20
-# Whom:			Florian Smeets <flo@smeets.im>
-#
-# $FreeBSD: ports/sysutils/pecl-proctitle/Makefile,v 1.7 2012/11/17 06:01:41 svnexp Exp $
-#
+# Created by: Florian Smeets <flo@smeets.im>
+# $FreeBSD: sysutils/pecl-proctitle/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	proctitle
 PORTVERSION=	0.1.2
@@ -19,4 +15,5 @@ COMMENT=	A PECL extension that allows changing the current process' name
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
