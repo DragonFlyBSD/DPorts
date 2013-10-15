@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/ppmd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: archivers/ppmd/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	ppmd
 PORTVERSION=	20050811
@@ -9,6 +9,7 @@ MASTER_SITES=	CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Fast archiver with good compression ratio
 
+NO_STAGE=	yes
 MAN1=		ppmd.1
 PORTDOCS=	read_me.txt
 PLIST_FILES=	bin/ppmd
