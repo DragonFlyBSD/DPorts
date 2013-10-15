@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: textproc/p5-HTML-HTML5-Entities/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-HTML-HTML5-Entities/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-HTML5-Entities
 PORTVERSION=	0.003
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::HTML5::Entities.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
