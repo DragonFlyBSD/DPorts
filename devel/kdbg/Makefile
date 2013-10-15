@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: devel/kdbg/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/kdbg/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdbg
 PORTVERSION=	2.5.2
@@ -19,6 +19,7 @@ INSTALLS_ICONS=	yes
 OPTIONS_DEFINE=	NLS
 OPTIONS_DEFAULT=NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
