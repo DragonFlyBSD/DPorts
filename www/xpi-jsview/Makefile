@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-jsview
-# Date created:		5 June 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-jsview/Makefile,v 1.17 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-jsview/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jsview
 PORTVERSION=	2.0.8
@@ -23,6 +19,7 @@ XPI_NUM=	2076
 XPI_FILES=	chrome/jsview.jar chrome.manifest defaults/preferences/jsview.js install.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<em:maxVersion>9\.0a1<|<em:maxVersion>99.*<|' ${WRKSRC}/install.rdf
 
