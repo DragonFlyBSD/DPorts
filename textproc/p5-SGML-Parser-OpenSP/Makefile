@@ -1,5 +1,5 @@
 # Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-# $FreeBSD: textproc/p5-SGML-Parser-OpenSP/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-SGML-Parser-OpenSP/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	SGML-Parser-OpenSP
 PORTVERSION=	0.994
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+="INC=-I${LOCALBASE}/include"
 
 MAN3=		SGML::Parser::OpenSP.3 SGML::Parser::OpenSP::Tools.3
 
+NO_STAGE=	yes
 post-patch:
 	(cd ${WRKSRC} ; \
 	 ${REINPLACE_CMD} "s|%%LOCALBASE%%|${LOCALBASE}|g" Makefile.PL )
