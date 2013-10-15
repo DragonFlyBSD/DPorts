@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: astro/mymoon/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/mymoon/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	mymoon
 DISTVERSION=	1.2a
@@ -16,6 +16,7 @@ LIB_DEPENDS=	nova:${PORTSDIR}/astro/libnova
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake
 
