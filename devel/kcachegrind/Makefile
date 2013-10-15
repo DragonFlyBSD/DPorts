@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: devel/kcachegrind/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/kcachegrind/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kcachegrind
 PORTVERSION=	0.7.3
@@ -24,6 +24,7 @@ OPTIONS_DEFAULT=	DOT
 DOT_DESC=	Use GraphViz/dot to render call graphs
 VALGRIND_DESC=	Install devel/valgrind
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOT}
