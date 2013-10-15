@@ -1,5 +1,5 @@
 # Created by: NECDET COKYAZICI <cokyazici@yahoo.co.uk>
-# $FreeBSD: misc/najitool/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/najitool/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	najitool
 PORTVERSION=	0.8.4
@@ -13,6 +13,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libnaji.a:${PORTSDIR}/devel/libnaji
 
 DISTVERSIONSUFFIX=	.src
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|cflags =|cflags = -I${LOCALBASE}/include|; s|libnaji.a|${LOCALBASE}/lib/libnaji.a|' ${WRKSRC}/${MAKEFILE}
 
