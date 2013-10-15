@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/gvfs/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: devel/gvfs/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/devel/gvfs/Makefile,v 1.85 2012/12/14 16:09:28 kwm Exp $
 
 PORTNAME=	gvfs
@@ -36,6 +36,7 @@ SAMBA_DESC=	Samba support
 
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFUSE}
