@@ -1,3 +1,5 @@
+# Submitted to dports by ftigeot
+
 PORTNAME=	libgssglue
 PORTVERSION=	0.4
 CATEGORIES=	net
@@ -10,11 +12,10 @@ LICENSE=	BSD MIT
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtoolize
 ACLOCAL_ARGS=	-I.
 AUTOMAKE_ARGS=	--add-missing
-USES+=		pkgconfig
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
