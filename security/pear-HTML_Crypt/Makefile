@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/pear-HTML_Crypt/Makefile 314255 2013-03-15 06:28:27Z miwi $
+# $FreeBSD: security/pear-HTML_Crypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	HTML_Crypt
 PORTVERSION=	1.3.4
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
