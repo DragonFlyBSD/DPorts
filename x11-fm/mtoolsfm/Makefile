@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: x11-fm/mtoolsfm/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11-fm/mtoolsfm/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	mtoolsfm
 PORTVERSION=	1.9.5
@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	--with-conffile="${PREFIX}/etc/mtoolsfm.conf"
 
 MAN1=		mtoolsfm.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|MToolsFM|mtoolsfm|g' ${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name 'Makefile.in' | ${XARGS} ${REINPLACE_CMD} -e \
