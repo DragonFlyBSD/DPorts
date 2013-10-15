@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: deskutils/aspostit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/aspostit/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	aspostit
 PORTVERSION=	1.3
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 MAN1=		aspostit.1
 PLIST_FILES=	bin/aspostit
 
+NO_STAGE=	yes
 post-extract:
 	@${LN} -sf aspostit.man ${WRKSRC}/aspostit.1
 
