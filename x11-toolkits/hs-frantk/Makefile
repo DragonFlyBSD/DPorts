@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: x11-toolkits/hs-frantk/Makefile 324415 2013-08-09 02:48:34Z danfe $
+# $FreeBSD: x11-toolkits/hs-frantk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	frantk
 PORTVERSION=	1.1
@@ -25,6 +25,7 @@ PLIST_SUB+=	GHC="@comment "
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64"
