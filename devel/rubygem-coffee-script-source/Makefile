@@ -1,5 +1,5 @@
-# Whom:			Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-coffee-script-source/Makefile 322949 2013-07-13 17:28:01Z swills $
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-coffee-script-source/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	coffee-script-source
 PORTVERSION=	1.6.3
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
