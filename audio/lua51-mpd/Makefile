@@ -1,4 +1,4 @@
-# $FreeBSD: audio/lua51-mpd/Makefile 315334 2013-03-26 21:33:33Z mandree $
+# $FreeBSD: audio/lua51-mpd/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpd
 PORTVERSION=	0.1
@@ -20,6 +20,7 @@ GH_PROJECT=	lua-mpd
 GH_TAGNAME=	v0.1
 
 USE_GITHUB=	yes
+NO_STAGE=	yes
 USE_LUA=	5.1
 
 WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-lua-${PORTNAME}-ca32f43
