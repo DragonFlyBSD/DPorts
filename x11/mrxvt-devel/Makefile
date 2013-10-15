@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: x11/mrxvt-devel/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11/mrxvt-devel/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	mrxvt-devel
 PORTVERSION=	0.5.4
@@ -36,6 +36,7 @@ MENUBAR_DESC=		Menubar
 TEXTSHADOW_DESC=	Text shadow
 FRILLS_DESC=		Internal borders and smart resizing
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--enable-utempter
