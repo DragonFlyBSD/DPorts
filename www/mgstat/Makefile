@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mgstat
-# Date created:		11 May 2001
-# Whom:			jeh@FreeBSD.org
-#
-# $FreeBSD: www/mgstat/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: jeh@FreeBSD.org
+# $FreeBSD: www/mgstat/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mgstat
 PORTVERSION=	0.12
@@ -21,6 +17,7 @@ GNU_CONFIGURE=	yes
 PORTDOCS=	Copyright README USAGE
 PLIST_FILES=	bin/mgstat
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
