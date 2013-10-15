@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: x11-fonts/doulos/Makefile 314975 2013-03-22 23:29:18Z bf $
+# $FreeBSD: x11-fonts/doulos/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	DoulosSIL
 PORTVERSION=	4.112
@@ -34,6 +34,7 @@ PORTDOCS=	FONTLOG.txt OFL-FAQ.txt OFL.txt README.txt
 SUB_LIST=	DIR="${FONTROOTDIR}/${FONTDIR}"
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-configure:
 	@${DO_NADA}
 
