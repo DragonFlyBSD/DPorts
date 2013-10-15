@@ -1,5 +1,5 @@
 # Created by: HATANO Tomomi <hatanou@infolab.ne.jp>
-# $FreeBSD: sysutils/mkfile/Makefile 321569 2013-06-22 12:18:39Z wg $
+# $FreeBSD: sysutils/mkfile/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mkfile
 PORTVERSION=	1.1.1
@@ -15,4 +15,5 @@ PLIST_FILES=	sbin/mkfile
 
 MAKE_ARGS=	BINDIR="${PREFIX}/sbin" MANDIR="${PREFIX}/man/man"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
