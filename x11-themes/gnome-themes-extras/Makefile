@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: x11-themes/gnome-themes-extras/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: x11-themes/gnome-themes-extras/Makefile 327783 2013-09-20 23:54:03Z bapt $
 #   $MCom: ports/x11-themes/gnome-themes-extras/Makefile,v 1.18 2007/10/04 02:36:16 mezz Exp $
 
 PORTNAME=	gnome-themes-extras
@@ -24,4 +24,5 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
