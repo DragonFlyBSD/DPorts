@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: print/ggv/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: print/ggv/Makefile 327765 2013-09-20 22:43:59Z bapt $
 #   $MCom: ports/print/ggv/Makefile,v 1.8 2007/09/24 19:40:45 mezz Exp $
 
 PORTNAME=	ggv
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	ggv.schemas
 
+NO_STAGE=	yes
 post-install:
 	@-update-desktop-database > /dev/null
 
