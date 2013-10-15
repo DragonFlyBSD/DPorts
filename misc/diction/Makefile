@@ -1,9 +1,5 @@
-# New ports collection makefile for:	diction
-# Date created:		2 August 1998
-# Whom:			J Han <hjh@best.com>
-#
-# $FreeBSD: ports/misc/diction/Makefile,v 1.23 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: J Han <hjh@best.com>
+# $FreeBSD: misc/diction/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	diction
 PORTVERSION=	1.11
@@ -22,4 +18,5 @@ PLIST_DIRS=	share/diction
 
 MAN1=		diction.1 style.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
