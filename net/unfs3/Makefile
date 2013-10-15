@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: net/unfs3/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net/unfs3/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	unfs3
 PORTVERSION=	0.9.22
@@ -23,4 +23,5 @@ MAKE_JOBS_UNSAFE=	yes
 CONFIGURE_ARGS+=	--enable-cluster
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
