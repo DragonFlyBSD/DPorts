@@ -1,4 +1,4 @@
-$FreeBSD: ports/textproc/html-pretty/files/patch-Makefile.in,v 1.2 2012/11/17 06:01:59 svnexp Exp $
+$FreeBSD: textproc/html-pretty/files/patch-Makefile.in 300897 2012-07-14 14:29:18Z beat $
 
 --- Makefile.in.orig	Sat Aug 25 15:56:14 2001
 +++ Makefile.in	Tue Mar 16 17:58:19 2004

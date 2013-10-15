@@ -1,8 +1,5 @@
-# New ports collection makefile for:	html-pretty
-# Date created:				16 March 2004
-# Whom:					Greg Lewis <glewis@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/html-pretty/Makefile,v 1.3 2012/11/17 06:01:59 svnexp Exp $
+# Created by: Greg Lewis <glewis@FreeBSD.org>
+# $FreeBSD: textproc/html-pretty/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	html-pretty
 PORTVERSION=	1.01
@@ -14,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML and SGML prettyprinter and text-to-HTML/SGML converter
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 MAN1=		html-pretty.1
 
