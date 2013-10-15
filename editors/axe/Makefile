@@ -1,5 +1,5 @@
 # Created by: John Capo <jc@irbs.com>
-# $FreeBSD: editors/axe/Makefile 321986 2013-06-28 20:59:11Z bapt $
+# $FreeBSD: editors/axe/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	aXe
 PORTVERSION=	6.1.2
@@ -21,4 +21,5 @@ MAN1=		axe.1 axinfo.1
 MAKE_JOBS_UNSAFE=	yes
 CFLAGS=		-Wno-return-type
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
