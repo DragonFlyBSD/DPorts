@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/ufc/Makefile 316605 2013-04-26 13:22:55Z miwi $
+# $FreeBSD: math/ufc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ufc
 PORTVERSION=	${MMVERSION}.0
@@ -24,6 +24,7 @@ FETCH_ARGS=	-F
 
 MMVERSION=	2.2
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|lib/pkgconfig|libdata/pkgconfig|g' \
 		${WRKSRC}/CMakeLists.txt
