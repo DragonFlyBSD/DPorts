@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mimelib
-# Date created:				20 November 2000
-# Whom:					never@nevermind.kiev.ua
-#
-# $FreeBSD: ports/converters/mimelib/Makefile,v 1.14 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: never@nevermind.kiev.ua
+# $FreeBSD: converters/mimelib/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	mimelib
 PORTVERSION=	1.1.2
