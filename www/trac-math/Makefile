@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-math/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: www/trac-math/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.1
@@ -22,6 +22,7 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracMath
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-install:
 	${CAT} ${PKGMESSAGE}
 
