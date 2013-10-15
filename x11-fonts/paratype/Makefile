@@ -1,9 +1,5 @@
-# New ports collection makefile for:	paratype-fonts
-# Date created:				05 March 2011
-# Whom:					Alexey Illarionov <littlesavage@rambler.ru>
-#
-# $FreeBSD: ports/x11-fonts/paratype/Makefile,v 1.8 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Alexey Illarionov <littlesavage@rambler.ru>
+# $FreeBSD: x11-fonts/paratype/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	paratype
 PORTVERSION=	2.004
@@ -34,6 +30,7 @@ PLIST_SUB=	FONTDIR="${FONTROOTDIR:S/${PREFIX}\///}/${FONTDIR}"
 SUB_FILES=	pkg-message
 SUB_LIST=	FONTDIR="${FONTROOTDIR:S/${PREFIX}\///}/${FONTDIR}"
 
+NO_STAGE=	yes
 do-configure:
 	@${DO_NADA}
 
