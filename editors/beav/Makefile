@@ -1,9 +1,5 @@
-# New ports collection makefile for:	beav
-# Date created:		01 July 1995
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/editors/beav/Makefile,v 1.31 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: editors/beav/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	beav
 PORTVERSION=	1.40.18
@@ -25,6 +21,7 @@ ALL_TARGET=	beav
 
 MAN1=		beav.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS+=-DUNIX -DBSD -DNOPROTO#|g ; \
 		 s|^CC=|CC?=|g ; \
