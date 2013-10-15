@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: mail/biffer/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: mail/biffer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	biffer
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 MAN1=		biffopt.1
 MAN8=		biffer.8 biffer_comsat.8
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} > 900007
