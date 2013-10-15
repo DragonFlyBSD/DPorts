@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/searchmonkey/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/searchmonkey/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	searchmonkey
 PORTVERSION=	2.0.0
@@ -19,6 +19,7 @@ USE_QT4=	corelib gui moc_build qmake_build rcc_build uic_build
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-configure:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${PORTNAME}_2_0.pro \
 		${QMAKEFLAGS})
