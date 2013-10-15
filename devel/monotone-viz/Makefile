@@ -1,5 +1,5 @@
 # Created by: Tarasov Alexey <master@preved.cn>
-# $FreeBSD: devel/monotone-viz/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: devel/monotone-viz/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	monotone-viz
 PORTVERSION=	1.0.2
@@ -28,4 +28,5 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/monotone-viz
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
