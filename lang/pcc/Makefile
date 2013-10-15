@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.org>
-# $FreeBSD: lang/pcc/Makefile 325935 2013-09-02 05:36:56Z danfe $
+# $FreeBSD: lang/pcc/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	pcc
 PORTVERSION=	1.0.0
@@ -22,6 +22,7 @@ MAN1=		ccom.1 cpp.1 pcc.1
 PLIST_FILES=	bin/pcc libexec/ccom libexec/cpp
 
 # Fix -jX builds: use -C switch instead of cd'ing and add missing dependency
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -E \
 	's/cd (.+)(;| &&) (\$$[{(]MAKE[})][^$$]*)( \$$\(MFLAGS\))?/\3 -C \1/'
