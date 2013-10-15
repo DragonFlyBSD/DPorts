@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-restclient
-# Date created:		26 March, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/py-py-restclient/Makefile,v 1.8 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: www/py-py-restclient/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	py-restclient
 PORTVERSION=	1.3.3
@@ -19,4 +15,5 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}httplib2>=0:${PORTSDIR}/www/py-httplib2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
