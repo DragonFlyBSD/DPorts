@@ -1,5 +1,5 @@
 # Created by: Hizbulin Ildar <hizel@vyborg.ru>
-# $FreeBSD: sysutils/py-supervisor/Makefile 325328 2013-08-25 05:39:31Z koobs $
+# $FreeBSD: sysutils/py-supervisor/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	supervisor
 PORTVERSION=	3.0
@@ -19,6 +19,7 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install mock for running unit tests
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
