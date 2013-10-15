@@ -1,8 +1,8 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: devel/libserver/Makefile 326237 2013-09-04 00:36:53Z tabthorpe $
+# $FreeBSD: devel/libserver/Makefile 329807 2013-10-08 16:20:31Z tabthorpe $
 
 PORTNAME=	libserver
-PORTVERSION=	1.13
+PORTVERSION=	1.17
 CATEGORIES=	devel
 MASTER_SITES=	http://www.mammothcheese.ca/
 
@@ -16,4 +16,5 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
