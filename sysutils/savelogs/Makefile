@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: sysutils/savelogs/Makefile 317068 2013-05-01 23:30:28Z bdrewery $
+# $FreeBSD: sysutils/savelogs/Makefile 328946 2013-10-01 12:51:53Z danilo $
 
 PORTNAME=	savelogs
 PORTVERSION=	1.98
@@ -7,26 +7,19 @@ CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SCOTTW
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Save log files in a nice way
 
-PERL_CONFIGURE=	yes
-
-MAN1=		rotation.1 savelogs.1
+USES=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-.include <bsd.port.options.mk>
-
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/savelogs.conf.sample ${PREFIX}/etc/
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${DOCSDIR}
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/savelogs.conf.lint ${EXAMPLESDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/conf/savelogs.conf.sample ${STAGEDIR}${PREFIX}/etc/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/savelogs.conf.lint ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
