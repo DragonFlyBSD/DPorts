@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: finance/R-cran-lmtest/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: finance/R-cran-lmtest/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	lmtest
 DISTVERSION=	0.9-31
@@ -19,4 +19,5 @@ RUN_DEPENDS=	R-cran-zoo>=0:${PORTSDIR}/math/R-cran-zoo \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
