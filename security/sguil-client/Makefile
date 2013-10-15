@@ -1,8 +1,9 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: ports/security/sguil-client/Makefile,v 1.10 2013/02/18 01:24:54 svnexp Exp $
+# $FreeBSD: security/sguil-client/Makefile 327859 2013-09-22 10:00:21Z sunpoet $
 
 PORTNAME=	sguil-client
 PORTVERSION=	0.8.0
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	SF/sguil/sguil/sguil-${PORTVERSION}
 
@@ -28,8 +29,8 @@ SANCP_DESC=	Use sancp
 WIRESHARK_DESC=	Install wireshark
 
 NO_BUILD=	yes
-USE_TK_WRAPPER=	yes
-USE_TCL=	yes
+NO_STAGE=	yes
+USES=		tk:wrapper
 WRKSRC=		${WRKDIR}/sguil-${PORTVERSION}
 SUB_LIST=	SGUILDIR=${SGUILDIR}
 SUB_FILES=	pkg-message
@@ -40,7 +41,7 @@ PORTDOCS1=	README
 PORTDOCS2=	CHANGES FAQ INSTALL INSTALL.openbsd OPENSSL.README TODO UPGRADE USAGE sguildb.dia
 
 LIBFILES=	SguilUtil.tcl dkffont.tcl email17.tcl extdata.tcl sellib.tcl sancp.tcl \
-		 sound.tcl guilib.tcl qrybuild.tcl qrylib.tcl report.tcl stdquery.tcl whois.tcl
+		sound.tcl guilib.tcl qrybuild.tcl qrylib.tcl report.tcl stdquery.tcl whois.tcl
 
 .include <bsd.port.options.mk>
 
