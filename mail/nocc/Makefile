@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: mail/nocc/Makefile 322759 2013-07-11 08:11:51Z ale $
+# $FreeBSD: mail/nocc/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	nocc
 PORTVERSION=	1.9.3
@@ -27,6 +27,7 @@ NOCCCOMP=	.htaccess favicon.ico robots.txt \
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
