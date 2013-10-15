@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/glsfcave/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/glsfcave/Makefile 328734 2013-09-29 21:38:37Z amdmi3 $
 
 PORTNAME=	glsfcave
 PORTVERSION=	1.0
@@ -16,8 +16,10 @@ USE_GL=		glut
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PORTDOCS=	*
 PLIST_FILES=	bin/glsfcave
+PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
@@ -26,10 +28,10 @@ do-build:
 		-L${LOCALBASE}/lib -lglut -lGL -lGLU
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/glsfcave ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/glsfcave ${STAGEDIR}${PREFIX}/bin
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
