@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/xfs/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/xfs/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	xfs
 PORTVERSION=	1.1.3
@@ -9,13 +9,14 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org font server
 
 XORG_CAT=	app
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	libfs xfont xtrans
 USE_RC_SUBR=	xfs
 CONFIGURE_ARGS=	--without-xmlto --without-fop
 
 MAN1=		xfs.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} '/^config_DATA/d' ${WRKSRC}/config/Makefile.in
 .if defined(WITHOUT_XFS_CACHE)
