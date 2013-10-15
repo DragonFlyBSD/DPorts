@@ -1,9 +1,5 @@
-# New ports collection makefile for:	odt2txt
-# Date created:				2007/01/06
-# Whom:					chinsan
-#
-# $FreeBSD: textproc/odt2txt/Makefile 326307 2013-09-04 18:06:07Z madpilot $
-#
+# Created by: chinsan
+# $FreeBSD: textproc/odt2txt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	odt2txt
 PORTVERSION=	0.4
@@ -26,6 +22,7 @@ PLIST_FILES=	bin/odt2txt
 
 MAN1=		odt2txt.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's#/usr/local#${LOCALBASE}#g' \
 		-e 's#-liconv#${ICONV_LIB}#' ${WRKSRC}/Makefile
