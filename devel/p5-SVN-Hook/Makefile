@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Hook/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-SVN-Hook/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Hook
 PORTVERSION=	0.28
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 MAN1=		svnhook.1
 MAN3=		SVN::Hook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
