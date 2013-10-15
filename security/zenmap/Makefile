@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: security/zenmap/Makefile 327280 2013-09-14 12:35:26Z nemysis $
+# $FreeBSD: security/zenmap/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	zenmap
 PORTVERSION=	6.40
@@ -32,6 +32,7 @@ OPTIONS_SUB=	yes
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
