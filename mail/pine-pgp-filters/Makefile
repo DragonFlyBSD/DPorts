@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/pine-pgp-filters/Makefile,v 1.21 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/pine-pgp-filters/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	pine-pgp-filters
 PORTVERSION=	1.8
@@ -14,6 +14,7 @@ PLIST_FILES=	bin/ppf_mime bin/ppf_mime_decrypt \
 		libexec/ppf_decrypt libexec/ppf_encrypt libexec/ppf_mime \
 		libexec/ppf_mime_decrypt libexec/ppf_sign libexec/ppf_verify
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 RUN_DEPENDS=	alpine:${PORTSDIR}/mail/alpine
