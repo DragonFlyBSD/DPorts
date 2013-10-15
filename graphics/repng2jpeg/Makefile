@@ -1,9 +1,5 @@
-# New ports collection makefile for:	repng2jpeg
-# Date created:		2008-08-17
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: graphics/repng2jpeg/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: graphics/repng2jpeg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	repng2jpeg
 PORTVERSION=	1.0.4
@@ -23,6 +19,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lgd
 PLIST_FILES=	bin/repng2jpeg
 RESTRICTED=	No license text in tarball and website
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/src/repng2jpeg \
 		${WRKSRC}/src/repng2jpeg.c ${LDFLAGS}
