@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xin
-# Date created:			Apr 27, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/sysutils/xin/Makefile,v 1.8 2012/11/17 06:01:50 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: sysutils/xin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xin
 PORTVERSION=	1.0.0
@@ -19,4 +15,5 @@ GNU_CONFIGURE=	yes
 MAN1=		xin.1
 PLIST_FILES=	bin/xin
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
