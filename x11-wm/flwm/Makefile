@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@chg.ru>
-# $FreeBSD: ports/x11-wm/flwm/Makefile,v 1.34 2012/11/29 12:47:52 svnexp Exp $
+# $FreeBSD: x11-wm/flwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	flwm
 PORTVERSION=	1.02
@@ -21,6 +21,7 @@ CFLAGS+=	-DFL_LIBRARY
 MAN1=		flwm.1
 PLIST_FILES=	bin/flwm
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g; /^main/s|^|int |g' ${WRKSRC}/${CONFIGURE_SCRIPT}
 	${REINPLACE_CMD} -e 's|^LIBS =.*|LIBS = `fltk-config --ldflags`|' ${WRKSRC}/Makefile
