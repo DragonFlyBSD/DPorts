@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Locale-Maketext-Gettext/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Locale-Maketext-Gettext/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Locale-Maketext-Gettext
 PORTVERSION=	1.28
@@ -13,6 +13,7 @@ COMMENT=	Joins gettext and Maketext frameworks
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN1=		maketext.1
 MAN3=		Locale::Maketext::Gettext.3 \
