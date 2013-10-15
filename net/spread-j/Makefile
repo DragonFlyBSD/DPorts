@@ -1,5 +1,5 @@
 # Created by: Joshua Goodall <joshua@roughtrade.net>
-# $FreeBSD: ports/net/spread-j/Makefile,v 1.13 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: net/spread-j/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	spread
 PORTVERSION=	3.17.3
@@ -30,6 +30,7 @@ ANT_PARAMS+=	-Dlib.dir=${JAVAJARDIR} -Djavadoc.destdir=docs -Dversion=${PORTVERS
 WRKSRC=		${WRKDIR}/${PORTNAME}-src-${PORTVERSION}/java
 PLIST_SUB+=	PORTNAME="${PORTNAME}" PORTVERSION="${PORTVERSION}"
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && \
 		${SETENV} JAVA_HOME=${JAVA_HOME} ${ANT} ${ANT_TARGET} ${ANT_PARAMS}
