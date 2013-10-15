@@ -1,5 +1,5 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: net-p2p/ctcs/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-p2p/ctcs/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	ctcs
 PORTVERSION=	1.4.1
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/ctcs share/doc/ctcs/readme.txt
 PLIST_DIRS=	share/doc/ctcs
 WRKSRC=		${WRKDIR}/ctcs-${PORTVERSION}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL} -o ${SHAREOWN} -g ${SHAREGRP} -m 0755 \
 	${WRKSRC}/ctcs ${PREFIX}/bin/ctcs
