@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types-DateTime-MoreCoercions/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Types-DateTime-MoreCoercions/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MooseX-Types-DateTime-MoreCoercions
 PORTVERSION=	0.11
@@ -26,7 +26,5 @@ TEST_DEPENDS=	p5-Test-Exception>=0.27:${PORTSDIR}/devel/p5-Test-Exception \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		MooseX::Types::DateTime::MoreCoercions.3
 
 .include <bsd.port.mk>
