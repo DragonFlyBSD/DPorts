@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-Code/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: textproc/p5-XML-Code/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Code
 PORTVERSION=	0.4
@@ -14,4 +14,5 @@ MAN3=		XML::Code.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
