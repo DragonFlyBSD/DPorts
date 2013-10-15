@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/osc/Makefile 321869 2013-06-27 08:21:45Z amdmi3 $
+# $FreeBSD: devel/osc/Makefile 328170 2013-09-24 17:11:51Z amdmi3 $
 
 PORTNAME=	osc
 PORTVERSION=	0.140.0
@@ -24,7 +24,7 @@ PYDISTUTILS_PKGVERSION=${PORTVERSION:C/^([0-9]+\.[0-9]+)\.[0-9]+/\1/}
 MAN1=		osc.1
 MANCOMPRESSED=	yes
 
-PORTDOCS=	AUTHORS README NEWS TODO
+PORTDOCS=	*
 
 OPTIONS_DEFINE=	CA_BUNDLE DOCS
 OPTIONS_DEFAULT=CA_BUNDLE
@@ -45,12 +45,11 @@ post-patch:
 		${WRKSRC}/osc/conf.py
 
 post-install:
-	${LN} -s osc-wrapper.py ${PREFIX}/bin/osc
+	${LN} -s osc-wrapper.py ${STAGEDIR}${PREFIX}/bin/osc
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
-.endfor
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS README NEWS TODO \
+		${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
