@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/ipsorc/Makefile,v 1.18 2012/12/12 21:45:12 svnexp Exp $
+# $FreeBSD: net/ipsorc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ipsorc
 PORTVERSION=	1.7.5
@@ -13,6 +13,7 @@ COMMENT=	A tool to create and send IP packets with a graphical GTK front-end
 USE_GNOME=	gtk12
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.old
 	@${SED} s,gtk-config,${GTK_CONFIG}, < ${WRKSRC}/Makefile.old \
