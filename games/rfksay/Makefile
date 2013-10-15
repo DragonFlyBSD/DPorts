@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: games/rfksay/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: games/rfksay/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	rfksay
 PORTVERSION=	0.1
@@ -14,6 +14,7 @@ USES=		perl5
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
 	${INSTALL_SCRIPT} ${WRKDIR}/kittensay ${PREFIX}/bin/
