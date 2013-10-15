@@ -1,5 +1,5 @@
 # Created by: anderson@cnpm.embrapa.br
-# $FreeBSD: www/drupal6-panels/Makefile 322743 2013-07-11 05:53:09Z bapt $
+# $FreeBSD: www/drupal6-panels/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	panels
 DISTVERSION=	6.x-3.5
@@ -190,4 +190,5 @@ DOC_FILES=	README.txt LICENSE.txt \
 		KNOWN_ISSUES.txt INSTALL.txt \
 		D6UPDATE.txt CHANGELOG.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
