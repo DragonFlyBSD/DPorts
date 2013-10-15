@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/jclassinfo/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/jclassinfo/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	jclassinfo
 PORTVERSION=	0.19.1
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 
 MAN1=	jclassinfo.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s, docs,," ${WRKSRC}/Makefile.in
 
