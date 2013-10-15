@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: games/ptkei/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: games/ptkei/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ptkei
 PORTVERSION=	1.18.1
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinte
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-build:
 	@${FIND} ${WRKSRC} -name "*.pyc" | ${XARGS} ${RM}
 	@${FIND} ${WRKSRC} \( -type f -or -type l \) | ${XARGS} ${CHMOD} 644
