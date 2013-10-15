@@ -1,5 +1,5 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: www/py-scrapy/Makefile 321444 2013-06-21 06:17:24Z clsung $
+# $FreeBSD: www/py-scrapy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Scrapy
 PORTVERSION=	0.16.5
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	SSL
 OPTIONS_DEFAULT=SSL
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
