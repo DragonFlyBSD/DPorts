@@ -1,5 +1,5 @@
 # Created by: Mita Yoshio <mita@jp.FreeBSD.org>
-# $FreeBSD: japanese/k12/Makefile 320863 2013-06-13 23:50:37Z miwi $
+# $FreeBSD: japanese/k12/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kaname12
 PORTVERSION=	1.1
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf
 RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 WRKSRC=		${WRKDIR}/fonts
