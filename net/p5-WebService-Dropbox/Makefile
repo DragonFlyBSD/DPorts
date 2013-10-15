@@ -1,5 +1,5 @@
 # Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-# $FreeBSD: net/p5-WebService-Dropbox/Makefile 324383 2013-08-08 09:27:45Z culot $
+# $FreeBSD: net/p5-WebService-Dropbox/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	WebService-Dropbox
 PORTVERSION=	1.18
@@ -27,6 +27,7 @@ USE_PERL5=	configure
 
 MAN3=		WebService::Dropbox.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLWP}
