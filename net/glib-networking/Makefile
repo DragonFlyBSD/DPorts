@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net/glib-networking/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: net/glib-networking/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/trunk/net/glib-networking/Makefile 18537 2013-06-16 20:08:30Z kwm $
 
 PORTNAME=	glib-networking
@@ -28,6 +28,7 @@ CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e' s|-Wmissing-include-dirs||g' ${WRKSRC}/configure
 
