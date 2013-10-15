@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Data-TemporaryBag/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-TemporaryBag/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-TemporaryBag
 PORTVERSION=	0.09
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::TemporaryBag.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
