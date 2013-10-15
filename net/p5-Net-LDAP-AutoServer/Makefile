@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-LDAP-AutoServer
-# Date created:		2010-02-18
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: net/p5-Net-LDAP-AutoServer/Makefile 326506 2013-09-06 14:30:23Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: net/p5-Net-LDAP-AutoServer/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-LDAP-AutoServer
 PORTVERSION=	0.2.1
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::LDAP::AutoServer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
