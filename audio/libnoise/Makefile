@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/libnoise/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/libnoise/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libnoise
 DISTVERSION=	1.0.0
@@ -11,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generates three-dimensional coherent noise
 
 USE_ZIP=	yes
+NO_STAGE=	yes
 USES=		gmake
 USE_AUTOTOOLS=	libtool:env
 USE_LDCONFIG=	yes
