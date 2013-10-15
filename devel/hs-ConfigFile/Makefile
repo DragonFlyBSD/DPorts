@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-ConfigFile/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-ConfigFile/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	ConfigFile
 PORTVERSION=	1.1.1
@@ -12,5 +12,6 @@ LICENSE=	LGPL21
 
 USE_CABAL=	MissingH>=1.0.0 mtl parsec
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
