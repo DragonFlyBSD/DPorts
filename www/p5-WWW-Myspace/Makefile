@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-Myspace/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Myspace/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Myspace
 PORTVERSION=	0.92
@@ -29,4 +29,5 @@ MAN3=		WWW::Myspace.3 WWW::Myspace::Comment.3 \
 		WWW::Myspace::FriendChanges.3 \
 		WWW::Myspace::Message.3 WWW::Myspace::MyBase.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
