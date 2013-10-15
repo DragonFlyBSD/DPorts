@@ -1,40 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
-# $FreeBSD: www/squid32/Makefile 323084 2013-07-16 00:33:53Z delphij $
-#
-# Note:
-# Starting with Squid 3.1 SQUID_LANGUAGES and SQUID_DEFAULT_LANG are no longer
-# available and will be ignored.
-#
-# SQUID_CONFIGURE_ARGS
-#   Additional configuration options.
-#
-#   To enable them, use e.g
-#   `make SQUID_CONFIGURE_ARGS="--enable-ntml-fail-open" install'
-#
-#   The list below may be incomplete, please see the configure script
-#   in the Squid source distribution for the complete list of additional
-#   options.
-#   Note that you probably do not need to worry about these options in most
-#   cases, they are included in case you want to experiment with them.
-#
-#    --enable-xmalloc-statistics
-#     Show malloc statistics in status page
-#    --enable-cachemgr-hostname=some.hostname
-#     Make cachemgr.cgi default to this host
-#    --disable-unlinkd
-#     Do not use "unlinkd"
-#    --with-aufs-threads=N_THREADS
-#     Tune the number of worker threads for the aufs object
-#    --with-filedescriptors=N
-#     Force Squid to use N filedescriptors.
-#    --enable-ntlm-fail-open
-#     Enable NTLM fail open, where a helper that fails one of the
-#     Authentication steps can allow Squid to still authenticate the user
-#    --enable-x-accelerator-vary
-#     Enable support for the X-Accelerator-Vary HTTP header. Can be used
-#     to indicate variance within an accelerator setup. Typically used
-#     together with other code that adds custom HTTP headers to the
-#     requests.
+# $FreeBSD: www/squid32/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	squid
 PORTVERSION=	3.2.${SQUID_STABLE_VER}
@@ -79,9 +44,9 @@ LATEST_LINK=	squid32
 SQUID_STABLE_VER=	13
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!2].* cacheboy-[0-9]* lusca-head-[0-9]*
+USES=		perl5
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_PERL5=	yes
 USE_RC_SUBR=	squid
 
 USERS=		squid
@@ -236,6 +201,7 @@ CONFIGURE_ARGS=	--with-default-user=squid \
 		--disable-linux-tproxy \
 		--disable-translation
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${CC:T:Mclang} == "clang" || ${CXX:T:Mclang++} == "clang++" || ${OSVERSION} >= 1000024
