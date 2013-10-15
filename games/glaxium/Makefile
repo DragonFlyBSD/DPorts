@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: ports/games/glaxium/Makefile,v 1.22 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/glaxium/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	glaxium
 PORTVERSION=	0.5
@@ -30,6 +30,7 @@ DESKTOP_ENTRIES=	"Glaxium" \
 			"Game;ArcadeGame;" \
 			false
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g; \
 		 s|/games/glaxium|/glaxium|g' ${WRKSRC}/configure
