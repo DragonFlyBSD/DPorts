@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11/stjerm/Makefile 327169 2013-09-13 17:27:07Z marino $
+# $FreeBSD: x11/stjerm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	stjerm
 PORTVERSION=	0.16
@@ -21,4 +21,5 @@ MAN8=		stjerm.8
 LICENSE_FILE=	${WRKSRC}/COPYING
 PLIST_FILES=	bin/stjerm
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
