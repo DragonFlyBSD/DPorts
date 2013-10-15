@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/osm2mp/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: converters/osm2mp/Makefile 328587 2013-09-28 15:42:18Z amdmi3 $
 
 PORTNAME=	osm2mp
 PORTVERSION=	r475
@@ -27,13 +27,15 @@ NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+PLIST_FILES=	bin/${PORTNAME}
+PORTDATA=	*
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|garmin.yml|${DATADIR}/&|' ${WRKSRC}/osm2mp.pl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/osm2mp.pl ${PREFIX}/bin/osm2mp
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC} && ${COPYTREE_SHARE} '*.cmap *.yml *.txt *.typ polish-mp' ${DATADIR}/
-	@${ECHO_CMD}; ${CAT} ${PKGMESSAGE}; ${ECHO_CMD}
+	${INSTALL_SCRIPT} ${WRKSRC}/osm2mp.pl ${STAGEDIR}${PREFIX}/bin/osm2mp
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} '*.cmap *.yml *.txt *.typ polish-mp' ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
