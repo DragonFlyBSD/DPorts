@@ -1,5 +1,5 @@
 # Created by: Tim Cas <ports@stdrand.com>
-# $FreeBSD: devel/ChipmunkPhysics/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/ChipmunkPhysics/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ChipmunkPhysics
 PORTVERSION=	6.1.5
@@ -20,4 +20,5 @@ CMAKE_ARGS=	-DBUILD_DEMOS=OFF
 
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
