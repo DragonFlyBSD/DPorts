@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: sysutils/xdu/Makefile 322004 2013-06-28 22:32:28Z bapt $
+# $FreeBSD: sysutils/xdu/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xdu
 PORTVERSION=	3.0
@@ -17,4 +17,5 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 PLIST_FILES=	bin/xdu lib/X11/app-defaults/XDu
 MAN1=		xdu.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
