@@ -1,9 +1,5 @@
-# New ports collection makefile for:	relaydb
-# Date created:				10 August 2003
-# Whom:					Matt Jibson <dolmant@dolmant.net>
-#
-# $FreeBSD: ports/mail/relaydb/Makefile,v 1.10 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Matt Jibson <dolmant@dolmant.net>
+# $FreeBSD: mail/relaydb/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	relaydb
 PORTVERSION=	1.8
@@ -17,6 +13,7 @@ MAN8=		relaydb.8
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/relaydb
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/relaydb ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/relaydb.8.gz ${MAN8PREFIX}/man/man8
