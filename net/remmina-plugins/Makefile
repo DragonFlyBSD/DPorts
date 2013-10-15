@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/remmina-plugins/Makefile 321373 2013-06-20 12:01:10Z fluffy $
+# $FreeBSD: net/remmina-plugins/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME?=	remmina-plugins
 PORTVERSION=	1.0.0
@@ -15,6 +15,7 @@ DISTNAME=	remmina-${PORTVERSION}
 MAINTAINER?=	fluffy@FreeBSD.org
 COMMENT?=	Remmina plugin system
 
+NO_STAGE=	yes
 .if defined(PKGNAMESUFFIX)
 .include "${.CURDIR}/../remmina-plugins/bsd.plugin.mk"
 .else
