@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-toolkits/mygui/Makefile 326957 2013-09-11 09:36:48Z marino $
+# $FreeBSD: x11-toolkits/mygui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	mygui
 PORTVERSION=	3.2.0
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 USE_GCC=	yes
 USE_DOS2UNIX=	*.cpp *.h
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/install/ s|lib/pkgconfig|libdata/pkgconfig|' \
 		${WRKSRC}/CMake/ConfigureBuild.cmake
