@@ -1,4 +1,4 @@
-# $FreeBSD: ports/japanese/webalizer/Makefile,v 1.7 2012/11/17 05:58:41 svnexp Exp $
+# $FreeBSD: japanese/webalizer/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 CATEGORIES=	japanese
 
