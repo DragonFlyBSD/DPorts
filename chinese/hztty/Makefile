@@ -1,9 +1,5 @@
-# Ports collection makefile for:  hztty
-# Date created:			  Wed Sep 24, 1997
-# Whom:				  Ada T Lim <ada@not-enough.bandwidth.org>
-#
-# $FreeBSD: ports/chinese/hztty/Makefile,v 1.12 2012/11/17 05:54:56 svnexp Exp $
-#
+# Created by: Ada T Lim <ada@not-enough.bandwidth.org>
+# $FreeBSD: chinese/hztty/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
 
 PORTNAME=	hztty
 PORTVERSION=	2.0
@@ -14,8 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A translator between GuoBiao / Big5 and HZ
 
 ALL_TARGET=	bsd
-MAN1=		hztty.1
-PLIST_FILES=	bin/hztty
+PLIST_FILES=	bin/hztty man/man1/${PORTNAME}.1.gz
 
 .include <bsd.port.pre.mk>
 
@@ -24,7 +19,7 @@ PLIST_FILES=	bin/hztty
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hztty ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/hztty.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.post.mk>
