@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  svndelta
-# Date created:                   Thu Sep 21, 2006
-# Whom:                           mich@FreeBSD.org
-#
-# $FreeBSD: ports/devel/svndelta/Makefile,v 1.7 2012/11/17 05:57:04 svnexp Exp $
-#
+# Created by: mich@FreeBSD.org
+# $FreeBSD: devel/svndelta/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	svndelta
 PORTVERSION=	1.0.6
@@ -20,6 +15,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/svn:${PORTSDIR}/devel/subversion
 USE_RUBY=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin/
 	${MKDIR} ${DATADIR}
