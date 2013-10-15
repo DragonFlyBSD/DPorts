@@ -1,4 +1,4 @@
-# $FreeBSD: ports/dns/samba-nsupdate/Makefile,v 1.1 2013/02/14 00:56:45 svnexp Exp $
+# $FreeBSD: dns/samba-nsupdate/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=		nsupdate
 PORTVERSION=		9.8.4.1
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	\
 			--without-idn \
 			--with-randomdev=/dev/random
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
