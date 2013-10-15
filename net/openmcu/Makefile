@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@FreeBSD.org>
-# $FreeBSD: net/openmcu/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net/openmcu/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	openmcu
 PORTVERSION=	2.2.1
@@ -30,6 +30,7 @@ PLIST_SUB=	PORTNAME=${PORTNAME}
 DOCSDIR=	${PREFIX}/share/doc/openh323
 EXAMPLESDIR=	${PREFIX}/share/examples/openh323
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == sparc64
