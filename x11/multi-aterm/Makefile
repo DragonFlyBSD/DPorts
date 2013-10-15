@@ -1,5 +1,5 @@
 # Created by: Sebastian Yepes <esn@x123.info>
-# $FreeBSD: x11/multi-aterm/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/multi-aterm/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	multi-aterm
 PORTVERSION=	0.2.1
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.nongnu.org/materm/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A multi terminal based on aterm
+COMMENT=	Multi terminal based on aterm
 
 USE_XORG=	xpm
 GNU_CONFIGURE=	yes
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--enable-utmp
 CONFIGURE_ARGS+=	--enable-wtmp
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You can specify the following options:"
