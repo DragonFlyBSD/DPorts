@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/p5-Gtk2-ImageView/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Gtk2-ImageView/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Gtk2-ImageView
 PORTVERSION=	0.05
@@ -34,4 +34,5 @@ MAN3=		Gtk2::ImageView.3 \
 		Gtk2::ImageView::Zoom.3 \
 		Gtk2::ImageView::index.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
