@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-SimpleLinkChecker/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-SimpleLinkChecker/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-SimpleLinkChecker
 PORTVERSION=	1.16
@@ -19,4 +19,5 @@ MAN3=	HTTP::SimpleLinkChecker.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
