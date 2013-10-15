@@ -1,4 +1,4 @@
-# $FreeBSD: german/hunspell/Makefile 324225 2013-08-04 12:47:44Z az $
+# $FreeBSD: german/hunspell/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20120607
@@ -35,6 +35,7 @@ PLIST_FILES+=	%%DATADIR%%/${ALIAS}.aff \
 		%%DATADIR%%/${ALIAS}.dic
 .endfor
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/hunspell/de_AT.aff ${WRKSRC}/hunspell/de_AT.dic \
