@@ -1,5 +1,5 @@
 # Created by: Jan Stocker <Jan.Stocker@t-online.de>
-# $FreeBSD: games/zoom/Makefile 326523 2013-09-06 16:22:29Z danfe $
+# $FreeBSD: games/zoom/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	zoom
 PORTVERSION=	1.1.5
@@ -24,4 +24,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/zoom %%DATADIR%%/zoomrc
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
