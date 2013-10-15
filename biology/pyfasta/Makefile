@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: biology/pyfasta/Makefile 319570 2013-06-01 14:22:35Z wen $
+# $FreeBSD: biology/pyfasta/Makefile 329270 2013-10-04 08:09:02Z wen $
 
 PORTNAME=	pyfasta
-PORTVERSION=	0.4.5
+PORTVERSION=	0.5.1
 CATEGORIES=	biology python
 MASTER_SITES=	CHEESESHOP
 
@@ -15,4 +15,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=		2.5+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
