@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/pychecker/pkg-plist,v 1.13 2012/11/17 05:56:54 svnexp Exp $
+@comment $FreeBSD: devel/pychecker/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/pychecker
 %%PYTHON_SITELIBDIR%%/pychecker/CodeChecks.py
 %%PYTHON_SITELIBDIR%%/pychecker/CodeChecks.pyc
