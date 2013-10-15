@@ -1,9 +1,5 @@
-# Ports collection makefile for:	avr-gdb
-# Date created:				3 Sep 2002
-# Whom:					Joerg Wunsch <joerg@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/avr-gdb/Makefile,v 1.16 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: Joerg Wunsch <joerg@FreeBSD.org>
+# $FreeBSD: devel/avr-gdb/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	gdb
 PORTVERSION=	7.3.1
@@ -22,6 +18,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=avr --program-prefix=avr --disable-nls
 
+NO_STAGE=	yes
 pre-configure:
 	cd ${WRKSRC} ; ${RM} -rf dejagnu expect tcl texinfo
 
