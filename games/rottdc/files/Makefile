@@ -1,6 +1,6 @@
 # Makefile wrapper for building both full and shareware versions.
 #
-# $FreeBSD: ports/games/rottdc/files/Makefile,v 1.2 2012/11/17 05:57:51 svnexp Exp $
+# $FreeBSD: games/rottdc/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 all: rott rott-sw
