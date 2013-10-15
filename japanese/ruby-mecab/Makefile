@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/ruby-mecab/Makefile 324572 2013-08-11 05:21:49Z tota $
+# $FreeBSD: japanese/ruby-mecab/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
@@ -23,6 +23,7 @@ INSTALL_TARGET=	site-install
 OPTIONS_DEFINE=	DOCS EXAMPLES
 OPTIONSFILE=	${PORT_DBDIR}/ja-ruby-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}${RUBY_PKGNAMEPREFIX}
