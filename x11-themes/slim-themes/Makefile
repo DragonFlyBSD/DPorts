@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: x11-themes/slim-themes/Makefile 319970 2013-06-05 10:04:51Z bapt $
+# $FreeBSD: x11-themes/slim-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	slim-themes
 PORTVERSION=	1.0.1
@@ -74,6 +74,7 @@ NEWTHEMES:=	${ALLTHEMES}	${n}
 ALLTHEMES:=	${NEWTHEMES}
 .endfor # t in ${THEMELIST}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .for n in ${ALLTHEMES}
