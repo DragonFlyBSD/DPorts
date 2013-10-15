@@ -1,5 +1,5 @@
 # Created by: Hans de Hartog <hans@dehartog.nl>
-# $FreeBSD: sysutils/cdls/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: sysutils/cdls/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cdls
 PORTVERSION=	4.2
@@ -13,6 +13,7 @@ PLIST_FILES=	bin/cdls
 
 USES=		ncurses
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${NCURSESBASE} == /usr
