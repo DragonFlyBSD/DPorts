@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: net/sobby/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: net/sobby/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sobby
 PORTVERSION=	0.4.8
@@ -28,6 +28,7 @@ PLIST_FILES=	bin/${PORTNAME}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
