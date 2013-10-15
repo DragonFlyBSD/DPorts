@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/fpdns/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: dns/fpdns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	fpdns
 PORTVERSION=	0.10.0.${GH_TAGNAME}
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN1=		fpdns.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
