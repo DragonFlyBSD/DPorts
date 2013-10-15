@@ -1,9 +1,5 @@
-# New ports collection makefile for:	streamanalyze
-# Date created:				2005-10-30
-# Whom:					Heiner Eichmann
-#
-# $FreeBSD: ports/multimedia/streamanalyze/Makefile,v 1.9 2012/11/17 05:59:54 svnexp Exp $
-#
+# Created by: Heiner Eichmann
+# $FreeBSD: multimedia/streamanalyze/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	streamanalyze
 PORTVERSION=	0.4
@@ -21,6 +17,7 @@ WRKSRC=		${WRKDIR}/StreamAnalyze
 PLIST_FILES=	bin/streamanalyze
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc -g -Wall|${CC} ${CFLAGS} -I${LOCALBASE}/include -L${LOCALBASE}/lib|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e '/#include <getopt\.h>/ d' ${WRKSRC}/streamanalyze.c
