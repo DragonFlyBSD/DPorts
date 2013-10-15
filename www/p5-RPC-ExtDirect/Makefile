@@ -1,5 +1,5 @@
-# Created by:	Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 326033 2013-09-02 16:56:12Z az $
+# Created by: Tom Judge <tj@FreeBSD.org>
+# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	RPC-ExtDirect
 PORTVERSION=	2.13
@@ -34,4 +34,5 @@ MAN3=		RPC::ExtDirect.3 \
 		RPC::ExtDirect::Router.3 \
 		RPC::ExtDirect::Serialize.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
