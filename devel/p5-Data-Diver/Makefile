@@ -1,5 +1,5 @@
-# Created by:	Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Diver/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: devel/p5-Data-Diver/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Diver
 PORTVERSION=	1.0101
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::Diver.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
