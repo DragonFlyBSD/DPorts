@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gitolite/Makefile 327380 2013-09-16 10:58:05Z az $
+# $FreeBSD: devel/gitolite/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gitolite
 PORTVERSION=	3.5.1
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	GITUSER
 
 GITUSER_DESC=	Create git user as gitolite provider
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGITUSER}
