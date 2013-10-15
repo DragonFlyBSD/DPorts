@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/mvdsv/Makefile 327066 2013-09-12 13:53:53Z danfe $
+# $FreeBSD: games/mvdsv/Makefile 329800 2013-10-08 15:59:56Z danfe $
 
 PORTNAME?=	mvdsv
 PORTVERSION=	0.29
@@ -17,7 +17,6 @@ USE_ZIP=	yes
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	${OPSYS} ${ARCH:C/.*(64)/\1/}
-MAKE_ARGS=	CC="${CC}"
 ALL_TARGET=	${PORTNAME}
 WRKSRC=		${WRKDIR}/mvdsv
 
@@ -46,17 +45,10 @@ MAKE_ARGS+=	-DWITHOUT_X86_ASM
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's,gcc,${CC},' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's,^inline ,,' ${WRKSRC}/source/sv_sys_unix.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-
-post-install:
-# Checking for presence of ${PKGMESSAGE} explicitly does not work here
-.if exists(${.CURDIR}/pkg-message)
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
