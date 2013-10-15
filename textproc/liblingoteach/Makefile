@@ -1,5 +1,5 @@
 # Created by: Marcus von Appen
-# $FreeBSD: textproc/liblingoteach/Makefile 325997 2013-09-02 13:54:45Z bapt $
+# $FreeBSD: textproc/liblingoteach/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	liblingoteach
 PORTVERSION=	0.2.1
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-compression
 CONFIGURE_ARGS+=	--enable-debug
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "liblingoteach can be used with the following switches:"
