@@ -1,5 +1,5 @@
 # Created by: Ralf van Dooren <r.vdooren@snow.nl>
-# $FreeBSD: sysutils/rsnapshot/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: sysutils/rsnapshot/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rsnapshot
 PORTVERSION=	1.3.1
@@ -21,6 +21,7 @@ SHEBANG_FILES=	rsnapshot-program.pl
 MAN1=		rsnapshot.1 rsnapshot-diff.1
 PORTDOCS=	AUTHORS ChangeLog README TODO
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr/bin/pod2man,pod2man,' ${WRKSRC}/Makefile.in
 
