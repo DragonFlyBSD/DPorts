@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-GPGME
-# Date created:		29 September 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: security/ruby-gpgme/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: security/ruby-gpgme/Makefile 330026 2013-10-10 18:15:03Z tabthorpe $
 
 PORTNAME=	gpgme
 PORTVERSION=	1.0.8
@@ -32,6 +28,7 @@ EXAMPLES=	examples/*
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
+NO_STAGE=	yes
 post-build:
 .if !defined(NOPORTDOCS)
 	cd ${BUILD_WRKSRC}; ${RUBY_RDOC} lib
@@ -50,7 +47,7 @@ post-install:
 		's,^${PREFIX}/?,,' >> ${TMPPLIST}
 	@${FIND} -ds ${RUBY_MODDOCDIR} -type d -print | ${SED} -E -e \
 		's,^${PREFIX}/?,@dirrm ,' >> ${TMPPLIST}
-	@${ECHO_CMD} "@unexec rmdir %D/share/doc/ruby18/ 2>/dev/null || true" \
+	@${ECHO_CMD} "@unexec rmdir %D/share/doc/ruby19/ 2>/dev/null || true" \
 		>> ${TMPPLIST}
 .endif
 
