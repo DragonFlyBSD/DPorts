@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zebra-server
-# Date created:				14 Nov 2000
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: net/zebra-server/Makefile 326683 2013-09-07 19:49:41Z bsam $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: net/zebra-server/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	zebra-server
 PORTVERSION=	2.0.45
@@ -32,4 +28,5 @@ MLINKS=		idzebra-config-2.0.1 idzebra-config.1 \
 		zebraidx-2.0.1 zebraidx.1 \
 		zebrasrv-2.0.8 zebrasrv.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
