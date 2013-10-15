@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-pathauto/Makefile 313239 2013-03-02 14:40:43Z miwi $
+# $FreeBSD: www/drupal6-pathauto/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pathauto
 DISTVERSION=	6.x-2.0
@@ -17,4 +17,5 @@ MODULE_FILES=	pathauto.admin.inc pathauto.inc pathauto.install pathauto.module \
 		pathauto.pathauto.inc pathauto.tokens.inc
 DOC_FILES=	INSTALL.txt API.txt README.txt LICENSE.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
