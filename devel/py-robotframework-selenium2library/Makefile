@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework-selenium2library/Makefile 326588 2013-09-07 09:59:40Z rm $
+# $FreeBSD: devel/py-robotframework-selenium2library/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	robotframework-selenium2library
 PORTVERSION=	1.4.0
@@ -18,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}robotframework>=2.7.5:${PORTSDIR}/devel/py-r
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
