@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-metaid
-# Date created:		28, Dec 2008
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-metaid/Makefile,v 1.4 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: devel/rubygem-metaid/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	metaid
 PORTVERSION=	1.0
@@ -18,4 +14,5 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
