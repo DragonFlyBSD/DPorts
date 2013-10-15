@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/founts/Makefile 321741 2013-06-25 12:47:07Z wg $
+# $FreeBSD: graphics/founts/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	founts
 PORTVERSION=	12
@@ -29,6 +29,7 @@ OPTIONS_DEFINE=	DOCS
 DESKTOP_ENTRIES="Founts" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Graphics;Game;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
