@@ -1,5 +1,5 @@
 # Created by: oly@world.std.com
-# $FreeBSD: misc/dotfile/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/dotfile/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	dotfile
 PORTVERSION=	2.4.1
@@ -23,6 +23,7 @@ JAPANESE_DESC=	Use Japanese as default language
 
 USE_TK=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MJAPANESE}
