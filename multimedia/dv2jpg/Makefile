@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dv2jpg
-# Date created:				24 February 2003
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/dv2jpg/Makefile,v 1.17 2012/11/17 05:59:48 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: multimedia/dv2jpg/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dv2jpg
 PORTVERSION=	1.1
@@ -25,6 +21,7 @@ VID_FORMAT=	PAL
 VID_FORMAT=	NTSC
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "===> The default video format is NTSC"
 	@${ECHO_MSG} "===> You can change this to PAL by defining"
