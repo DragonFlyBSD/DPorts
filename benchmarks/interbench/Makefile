@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: benchmarks/interbench/Makefile 323295 2013-07-19 14:11:31Z danfe $
+# $FreeBSD: benchmarks/interbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	interbench
 DISTVERSION=	0.31
@@ -22,6 +22,7 @@ PORTDOCS=	readme readme.interactivity
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
