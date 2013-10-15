@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/gnotime/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: deskutils/gnotime/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gnotime
 PORTVERSION=	2.4.1
@@ -41,6 +41,7 @@ QOF_WRKSRC=	${WRKDIR}/${QOF_DISTNAME}
 LIBQOF_CFLAGS=	-I${QOF_WRKSRC}/qof
 LIBQOF_LIBS=	-L${QOF_WRKSRC}/qof/.libs -lqof
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^AM_CFLAGS =/s|-g||' ${WRKSRC}/src/Makefile.in
