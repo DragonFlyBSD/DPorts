@@ -1,9 +1,5 @@
-# New ports collection makefile for:	testoob
-# Date created:		Sun Oct 29 18:28:14 CET 2006
-# Whom:			Tobias Roth <ports@fsck.ch>
-#
-# $FreeBSD: ports/devel/py-testoob/Makefile,v 1.7 2012/11/17 05:56:51 svnexp Exp $
-#
+# Created by: Tobias Roth <ports@fsck.ch>
+# $FreeBSD: devel/py-testoob/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	testoob
 PORTVERSION=	1.15
@@ -29,6 +25,7 @@ PYDISTUTILS_PKGNAME=	${PORTNAME}
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTWISTED}
