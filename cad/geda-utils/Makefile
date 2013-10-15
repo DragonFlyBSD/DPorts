@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-utils/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: cad/geda-utils/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	utils
 PORTVERSION=	1.4.3
@@ -32,6 +32,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		grenum.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e "s,^(DATADIR[[:space:]]*=[[:space:]]*)gEDA,\1geda," \
