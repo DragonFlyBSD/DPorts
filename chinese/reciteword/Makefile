@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/reciteword/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: chinese/reciteword/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	reciteword
 PORTVERSION=	0.8.5
@@ -25,6 +25,7 @@ PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README TODO readme.txt
 
 XTRACT_AFTER_ARGS+=	--exclude CVS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 LIB_DEPENDS+=	espeak:${PORTSDIR}/audio/espeak
