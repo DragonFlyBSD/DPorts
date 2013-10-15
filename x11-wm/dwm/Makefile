@@ -1,5 +1,5 @@
 # Created by: Jeroen Schot <schot@a-eskwadraat.nl>
-# $FreeBSD: x11-wm/dwm/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-wm/dwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	dwm
 PORTVERSION=	6.0
@@ -26,6 +26,7 @@ MAN1=		dwm.1
 PLIST_FILES=	bin/dwm
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXINERAMA}
