@@ -1,9 +1,5 @@
-# New Ports collection makefile for:	twind
-# Date created:		2012-04-11
-# Whom:			nemysis@gmx.ch
-#
-# $FreeBSD: games/twind/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: games/twind/Makefile 328506 2013-09-27 17:57:38Z nemysis $
 
 PORTNAME=	twind
 PORTVERSION=	1.1.0
@@ -11,7 +7,7 @@ PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Match and remove all of the blocks before time runs out
 
 LICENSE=	GPLv2
@@ -21,7 +17,7 @@ USE_SDL=	sdl image mixer
 PORTDOCS=	AUTHORS CREDITS ChangeLog NEWS README TODO
 
 DESKTOP_ENTRIES="Twin Distress" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
+		"${PORTNAME}" "Game;ArcadeGame;" false
 
 .include <bsd.port.options.mk>
 
@@ -30,15 +26,13 @@ do-build:
 		-DDATA_PREFIX=\"${DATADIR}/\" -DAUDIO -DLINUX \
 		-lm `${SDL_CONFIG} --cflags --libs` -lSDL_mixer -lSDL_image twind.c
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${MKDIR} ${DATADIR}
-	@(cd ${WRKSRC} && ${COPYTREE_SHARE} "graphics music sound" ${DATADIR})
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	@(cd ${WRKSRC} && ${COPYTREE_SHARE} "graphics music sound" ${STAGEDIR}${DATADIR})
 
-	${INSTALL_DATA} ${WRKSRC}/graphics/${PORTNAME}.png ${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/graphics/${PORTNAME}.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
