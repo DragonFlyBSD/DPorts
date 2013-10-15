@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxmath/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: games/tuxmath/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tuxmath
 PORTVERSION=	2.0.3
@@ -38,6 +38,7 @@ T4K_VERSION=	0.1.1
 T4K_DISTFILE=	${T4K_NAME}-${T4K_VERSION}${EXTRACT_SUFX}
 T4K_WRKSRC=	${WRKDIR}/${T4K_NAME}-${T4K_VERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
