@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-packetfu/Makefile 327354 2013-09-15 19:00:03Z antoine $
+# $FreeBSD: net/rubygem-packetfu/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	packetfu
 PORTVERSION=	1.1.9
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
