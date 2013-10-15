@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11-fm/thunar/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: x11-fm/thunar/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	Thunar
 PORTVERSION=	1.6.3
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=--enable-gio-unix \
 
 MAN1=		Thunar.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBUS}
