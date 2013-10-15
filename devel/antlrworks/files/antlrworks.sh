@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: ports/devel/antlrworks/files/antlrworks.sh,v 1.2 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: devel/antlrworks/files/antlrworks.sh 300896 2012-07-14 13:54:48Z beat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -classpath "%%JAVAJARDIR%%/%%PORTNAME%%.jar" org.antlr.works.IDE "$@"
  

@@ -1,5 +1,5 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: ports/devel/antlrworks/Makefile,v 1.17 2013/01/23 15:05:32 svnexp Exp $
+# $FreeBSD: devel/antlrworks/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	antlrworks
 PORTVERSION=	1.4.2
@@ -28,6 +28,7 @@ PLIST_FILES=	bin/antlrworks \
 		${JAVAJARDIR:C,${PREFIX}/?,,}/${PORTNAME}.jar \
 		share/pixmaps/antlrworks.png
 
+NO_STAGE=	yes
 do-install:
 	${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|' \
 	-e 's|%%LOCALBASE%%|${LOCALBASE}|' \
