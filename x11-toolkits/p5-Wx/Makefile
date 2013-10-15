@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: x11-toolkits/p5-Wx/Makefile 327278 2013-09-14 12:04:18Z az $
+# $FreeBSD: x11-toolkits/p5-Wx/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Wx
 PORTVERSION=	0.99.16
@@ -46,6 +46,7 @@ MAN3=		Wx.3 \
 		Wx::build::Options.3 \
 		Wx::build::Utils.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501508
