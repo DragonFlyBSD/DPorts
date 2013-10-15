@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/tumgreyspf/Makefile 324957 2013-08-19 08:40:55Z sunpoet $
+# $FreeBSD: mail/tumgreyspf/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	tumgreyspf
 PORTVERSION=	1.37
@@ -37,6 +37,7 @@ TUMGREYSPF_DIR?=	/var/db/${PORTNAME}
 TUMGREYSPF_USER?=	nobody
 TUMGREYSPF_GROUP?=	nobody
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-everything::
