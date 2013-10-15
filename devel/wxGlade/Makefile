@@ -1,5 +1,5 @@
 # Created by: Michal Pasternak <dotz@irc.pl>
-# $FreeBSD: devel/wxGlade/Makefile 323472 2013-07-22 15:33:36Z miwi $
+# $FreeBSD: devel/wxGlade/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	wxglade
 PORTVERSION=	0.6.8
@@ -24,6 +24,7 @@ MAN1=		wxglade.1
 DESKTOP_ENTRIES="wxGlade" "" "${PYTHON_SITELIBDIR}/wxglade/icons/icon.xpm" \
 		"${PORTNAME}" "" true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
