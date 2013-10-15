@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vitetris
-# Date created:		2008-09-22
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/games/vitetris/Makefile,v 1.10 2012/11/17 05:57:55 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: games/vitetris/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	vitetris
 PORTVERSION=	0.57
