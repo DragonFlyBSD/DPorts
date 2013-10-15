@@ -1,5 +1,5 @@
 # Created by: janek
-# $FreeBSD: x11/x3270/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/x3270/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	x3270
 PORTVERSION=	3.3.10
@@ -38,6 +38,7 @@ MAN1=		x3270.1 x3270if.1 x3270-script.1
 MAN5=		ibm_hosts.5
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|\$$(INSTALL) -c|$$(INSTALL) $$(INSTALLFLAGS)|g' \
 		${WRKSRC}/Imakefile.in
