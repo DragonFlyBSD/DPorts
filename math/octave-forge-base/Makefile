@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-base/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/octave-forge-base/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-base
 PORTVERSION=	1.2
@@ -22,6 +22,7 @@ USES=		perl5
 SUB_FILES=	load-octave-pkg
 SUB_LIST+=	PERL=${PERL}
 
+NO_STAGE=	yes
 do-build:
 	@${DO_NADA}
 
