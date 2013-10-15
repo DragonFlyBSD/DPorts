@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libpff/Makefile 323928 2013-07-29 22:08:48Z antoine $
+# $FreeBSD: devel/libpff/Makefile 329091 2013-10-02 18:25:44Z antoine $
 
 PORTNAME=	libpff
 DISTVERSION=	alpha-20120802
@@ -13,33 +13,30 @@ COMMENT=	Library and tools to access the PFF and the OFF formats
 LICENSE=	LGPL3
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-python
+CONFIGURE_ARGS=	--enable-python --with-libintl-prefix=${LOCALBASE} ${ICONV_CONFIGURE_ARG}
 USES=		gettext iconv pathfix
 USE_PYTHON=	-2.7
 USE_LDCONFIG=	yes
-
+# Remove when configure gets LDFLAGS for python correctly
 LDFLAGS+=	-L${LOCALBASE}/lib
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:E}
 
-MAN1=		pffexport.1 pffinfo.1
-MAN3=		libpff.3
-
-OPTIONS_DEFINE=	DOCS EXAMPLES
-
 PORTDOCS=	AUTHORS ChangeLog
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/${PORTNAME}/* \
-		${WRKSRC}/examples/${PORTNAME:S,lib,py,}/* ${EXAMPLESDIR}
+		${WRKSRC}/examples/${PORTNAME:S,lib,py,}/* ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
