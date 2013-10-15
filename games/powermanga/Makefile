@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/powermanga/Makefile 325285 2013-08-24 03:34:00Z amdmi3 $
+# $FreeBSD: games/powermanga/Makefile 328538 2013-09-28 00:43:17Z amdmi3 $
 
 PORTNAME=	powermanga
 PORTVERSION=	0.91
@@ -14,16 +14,15 @@ COMMENT=	An arcade 2D shoot-em-up
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png
 
 USE_XORG=	xext xxf86dga
 USE_SDL=	sdl mixer
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf autoheader
 
-PORTDOCS=	AUTHORS CHANGES
-
-MAN6=		powermanga.6
+PORTDOCS=	*
+PORTDATA=	*
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -47,14 +46,10 @@ run-autotools:
 	cd ${WRKSRC} && ${SH} ./bootstrap
 
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/powermanga.desktop ${PREFIX}/share/applications/
-	${INSTALL_DATA} ${WRKSRC}/powermanga.xpm ${PREFIX}/share/pixmaps/
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.endif
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/powermanga.desktop ${STAGEDIR}${PREFIX}/share/applications/
+	${INSTALL_DATA} ${WRKSRC}/powermanga.xpm ${STAGEDIR}${PREFIX}/share/pixmaps/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/CHANGES ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
