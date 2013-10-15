@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ensemblist
-# Date created:				06 Sep 2005
-# Whom:					Igor Pokrovsky <ip@doom.homeunix.org>
-#
-# $FreeBSD: ports/games/ensemblist/Makefile,v 1.11 2012/11/17 05:57:37 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
+# $FreeBSD: games/ensemblist/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ensemblist
 PORTVERSION=	040126
@@ -30,6 +26,7 @@ PLIST_DIRS=	%%DATADIR%%
 MAN6=		ensemblist.6
 PORTDOCS=	*
 
+NO_STAGE=	yes
 pre-install:
 	@${RM} -f ${PLIST}
 	@${FIND} ${WRKSRC}/datas -type f | ${SORT} \
