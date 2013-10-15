@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-groupware/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: deskutils/horde-groupware/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	groupware
 PORTVERSION=	5.1.1
@@ -24,6 +24,7 @@ USE_HORDE_RUN=	Horde_Role \
 		trean \
 		turba
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
