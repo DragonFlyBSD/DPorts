@@ -1,6 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: misc/xfce4-appfinder/Makefile 317681 2013-05-08 15:35:23Z olivierd $
-#
+# $FreeBSD: misc/xfce4-appfinder/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xfce4-appfinder
 PORTVERSION=	4.10.1
@@ -23,6 +22,7 @@ USE_XFCE=	configenv garcon libmenu libutil xfconf
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
