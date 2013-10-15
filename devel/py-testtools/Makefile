@@ -1,6 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: ports/devel/py-testtools/Makefile,v 1.12 2012/11/17 05:56:51 svnexp Exp $
-#
+# $FreeBSD: devel/py-testtools/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	testtools
 PORTVERSION=	0.9.21
@@ -17,4 +16,5 @@ LICENSE=	MIT
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
