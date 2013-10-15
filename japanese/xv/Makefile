@@ -1,5 +1,5 @@
-# Created by:			Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: ports/japanese/xv/Makefile,v 1.13 2012/11/17 05:58:41 svnexp Exp $
+# Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
+# $FreeBSD: japanese/xv/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 CATEGORIES=	japanese
 
@@ -15,6 +15,7 @@ RUN_DEPENDS=	xv:${PORTSDIR}/graphics/xv
 
 NOMAN=		yes
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/xv ${PREFIX}/bin/ja-xv
 	@if [ ! -f ${PREFIX}/bin/xv.orig ]; then \
