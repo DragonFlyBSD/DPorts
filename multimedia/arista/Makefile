@@ -1,9 +1,5 @@
-# New ports collection makefile for:	arista
-# Date created:		2009-05-30
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: multimedia/arista/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: multimedia/arista/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	arista
 PORTVERSION=	0.9.6
@@ -21,6 +17,7 @@ USE_GNOME=	pygnomedesktop
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|Icon=.*|Icon=arista.svg|g' \
 		${WRKSRC}/arista.desktop
