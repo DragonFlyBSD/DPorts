@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libocas
-# Date created: 	5 Oct 2011
-# Whom: 	b.f. <bf@FreeBSD.org>
-#
-# $FreeBSD: ports/math/libocas/Makefile,v 1.5 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: b.f. <bf@FreeBSD.org>
+# $FreeBSD: math/libocas/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libocas
 PORTVERSION=	0.96
@@ -27,6 +23,7 @@ MAKE_ENV=	CLIBS="${CLIBS}" MEXDETECTED=no
 PLIST_FILES=	bin/linclassif bin/msvmocas bin/svmocas lib/libocas.so \
 		lib/libocas.so.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == sparc64
