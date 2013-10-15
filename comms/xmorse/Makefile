@@ -1,5 +1,5 @@
 # Created by: Sunry Chen <sunrychen@gmail.com>
-# $FreeBSD: comms/xmorse/Makefile 322505 2013-07-08 13:36:31Z bapt $
+# $FreeBSD: comms/xmorse/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	xmorse
 PORTVERSION=	20041125
@@ -22,4 +22,5 @@ USE_SDL=	sdl
 PLIST_FILES=	bin/xmorse
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
