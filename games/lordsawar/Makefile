@@ -1,4 +1,4 @@
-# $FreeBSD: games/lordsawar/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: games/lordsawar/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lordsawar
 PORTVERSION=	0.2.0
@@ -26,4 +26,5 @@ CONFIGURE_ARGS=	--with-boost-includedir=${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
