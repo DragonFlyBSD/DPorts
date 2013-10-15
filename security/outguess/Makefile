@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/outguess/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: security/outguess/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	outguess
 PORTVERSION=	0.2
@@ -24,6 +24,7 @@ MAN1=		outguess.1
 PLIST=		${WRKDIR}/pkg-plist
 WRKSRC=		${WRKDIR}/outguess
 
+NO_STAGE=	yes
 pre-install:
 	${ECHO_CMD} bin/extract > ${PLIST}
 	${ECHO_CMD} bin/outguess >> ${PLIST}
