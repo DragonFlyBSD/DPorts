@@ -1,5 +1,5 @@
 # Created by: Rafael Ostertag <rafi@guengel.ch>
-# $FreeBSD: security/yapet/Makefile 316883 2013-04-30 06:28:27Z jgh $
+# $FreeBSD: security/yapet/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	yapet
 PORTVERSION=	0.7
@@ -21,6 +21,7 @@ TTITLE_DESC=	Enable Terminal Title
 PWGEN_DESC=	Enable Password Generator
 CSV2YAPET_DESC=	Build csv2yapet
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # --enable-silent-rules:  will make the build quiet
