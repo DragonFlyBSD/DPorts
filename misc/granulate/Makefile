@@ -1,9 +1,5 @@
-# New ports collection makefile for:   granulate
-# Date created:			Feb 17, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/granulate/Makefile,v 1.11 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: misc/granulate/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	granulate
 PORTVERSION=	0.2
@@ -15,6 +11,7 @@ MAINTAINER=	jharris@widomaker.com
 COMMENT=	Granulate is a program for splitting files in place
 
 PLIST_FILES=	bin/granulate
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,^CC,#CC,g ; s,^CFLAGS,#CFLAGS,g" \
 	${WRKSRC}/Makefile
