@@ -1,5 +1,5 @@
 # Created by: Yuri Pankov <yuri.pankov@gmail.com>
-# $FreeBSD: deskutils/glipper/Makefile 326711 2013-09-08 08:44:57Z antoine $
+# $FreeBSD: deskutils/glipper/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	glipper
 PORTVERSION=	1.0
@@ -20,6 +20,7 @@ CONFIGURE_ARGS=	--libdir=${PREFIX}/libexec
 
 GCONF_SCHEMAS=	glipper.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/gtypes.h|glib.h|g' \
 		${WRKSRC}/glipper/keybinder/tomboykeybinder.h
