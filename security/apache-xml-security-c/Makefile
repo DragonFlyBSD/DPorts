@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: security/apache-xml-security-c/Makefile 321955 2013-06-28 11:07:48Z girgen $
+# $FreeBSD: security/apache-xml-security-c/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	xml-security-c
 PORTVERSION=	1.7.2
@@ -20,6 +20,7 @@ XERCES_3_DESC=		With Xerces vesion 3.x (shibboleth2 requires)
 
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXERCES_3}
