@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFCalendar/Makefile 314754 2013-03-20 18:52:36Z rm $
+# $FreeBSD: devel/py-Products.CMFCalendar/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.CMFCalendar
 PORTVERSION=	2.2.2
@@ -19,6 +19,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=0:${PORTSDIR}/devel/py-Pro
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
