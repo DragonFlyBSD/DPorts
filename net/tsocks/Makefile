@@ -1,8 +1,5 @@
-# New ports collection makefile for:	tsocks
-# Date created:				5th September 2003
-# Whom:					Marcin Jessa <freebsd@yazzy.org>
-#
-# $FreeBSD: ports/net/tsocks/Makefile,v 1.10 2012/11/17 06:00:23 svnexp Exp $
+# Created by: Marcin Jessa <freebsd@yazzy.org>
+# $FreeBSD: net/tsocks/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tsocks
 PORTVERSION=	1.8.b5
@@ -45,6 +42,7 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-hostnames
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
