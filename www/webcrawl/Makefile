@@ -1,9 +1,5 @@
-# New ports collection makefile for:	webcrawl
-# Date created:		31 January 1999
-# Whom:			Dima Sivachenko
-#
-# $FreeBSD: ports/www/webcrawl/Makefile,v 1.10 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: Dima Sivachenko
+# $FreeBSD: www/webcrawl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webcrawl
 PORTVERSION=	1.10
@@ -21,6 +17,7 @@ ALL_TARGET=
 MAN1=		webcrawl.1
 PLIST_FILES=	bin/webcrawl
 
+NO_STAGE=	yes
 do-install:
 		@ ${INSTALL_PROGRAM} ${WRKSRC}/webcrawl ${PREFIX}/bin/
 		@ ${INSTALL_MAN} ${WRKSRC}/webcrawl.1 ${MAN1PREFIX}/man/man1/
