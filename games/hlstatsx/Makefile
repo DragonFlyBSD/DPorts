@@ -1,4 +1,4 @@
-# $FreeBSD: games/hlstatsx/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: games/hlstatsx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	hlstatsx
 DISTVERSION=	1.20RC2
@@ -22,6 +22,7 @@ HLSTATSX?=	www/${PORTNAME}
 PLIST_SUB+=	HLSTATSX=${HLSTATSX}
 EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
 
+NO_STAGE=	yes
 do-install:
 	@ ${MKDIR} ${PREFIX}/${HLSTATSX}
 	@ ${CP} -R ${WRKSRC}/* ${PREFIX}/${HLSTATSX}
