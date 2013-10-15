@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/outerspace/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/outerspace/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	outerspace
 PORTVERSION=	0.2.2
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 SUB_FILES=	outerspace
 SUB_LIST=	PROGRAM_DIR="${PREFIX}/lib/${PORTNAME}"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/outerspace|${PREFIX}/lib/${PORTNAME}/res|' ${WRKSRC}/outerspace
 
