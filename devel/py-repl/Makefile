@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-repl/Makefile 316817 2013-04-29 14:19:40Z miwi $
+# $FreeBSD: devel/py-repl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	repl
 PORTVERSION=	0.8.4
@@ -18,6 +18,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	pyrepl
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|platforms =.*|zip_safe = False,|' ${WRKSRC}/setup.py
