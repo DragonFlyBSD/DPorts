@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/libaux/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: graphics/libaux/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libaux
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ USES=		imake
 USE_GL=		glut
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libaux.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/aux.h ${PREFIX}/include/GL
