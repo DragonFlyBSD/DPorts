@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: ports/sysutils/ipsc/Makefile,v 1.28 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: sysutils/ipsc/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ipsc
 PORTVERSION=	0.4.3
@@ -21,6 +21,7 @@ MAN8=	ipsc.8
 
 PRIPS_WRKSRC!=	cd ${.CURDIR}/../prips && ${MAKE} -V WRKSRC
 
+NO_STAGE=	yes
 post-extract:
 	${LN} -s ${PRIPS_WRKSRC} ${WRKDIR}/prips
 
