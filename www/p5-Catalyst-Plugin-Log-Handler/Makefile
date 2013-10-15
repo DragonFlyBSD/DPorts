@@ -1,6 +1,4 @@
-# Ports collection makefile for: p5-Catalyst-Log-Handler
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/p5-Catalyst-Plugin-Log-Handler/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Plugin-Log-Handler/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Log-Handler
 PORTVERSION=	0.08
@@ -25,4 +23,5 @@ PLIST_DIRS=		%%SITE_PERL%%/Catalyst/Plugin/Log \
 				%%SITE_PERL%%/Catalyst/Plugin \
 				%%SITE_PERL%%/Catalyst
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
