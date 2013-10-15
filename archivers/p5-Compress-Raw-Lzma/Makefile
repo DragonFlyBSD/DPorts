@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: archivers/p5-Compress-Raw-Lzma/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: archivers/p5-Compress-Raw-Lzma/Makefile 328780 2013-09-30 12:25:38Z sunpoet $
 
 PORTNAME=	Compress-Raw-Lzma
 PORTVERSION=	2.062
@@ -18,8 +18,6 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Compress::Raw::Lzma.3
 
 .include <bsd.port.pre.mk>
 
