@@ -1,4 +1,4 @@
-# $FreeBSD: net/pear-Horde_Rpc/Makefile 319920 2013-06-04 21:52:57Z mm $
+# $FreeBSD: net/pear-Horde_Rpc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Horde_Rpc
 PORTVERSION=	2.1.0
@@ -23,6 +23,7 @@ USE_HORDE_RUN+=	Horde_ActiveSync \
 		Horde_SyncMl \
 		Horde_Http
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
