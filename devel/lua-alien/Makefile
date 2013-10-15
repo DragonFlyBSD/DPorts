@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lua-alien
-# Date created:				24 Aug 2010
-# Whom:					Anonymous
-#
-# $FreeBSD: ports/devel/lua-alien/Makefile,v 1.10 2013/01/29 00:50:15 svnexp Exp $
-#
+# Created by: Anonymous
+# $FreeBSD: devel/lua-alien/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	alien
 PORTVERSION=	0.5.1
@@ -54,6 +50,7 @@ post-patch:	.SILENT
 		-e '/luarocks/d' \
 		${WRKSRC}/samples/*.lua ${WRKSRC}/tests/*.lua
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${LUA_MODLIBDIR}/${PORTNAME}
 .for f in core.so struct.so
