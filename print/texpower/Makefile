@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: print/texpower/Makefile 318805 2013-05-23 00:25:11Z hrs $
+# $FreeBSD: print/texpower/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	texpower
 PORTVERSION=	0.2
@@ -23,6 +23,7 @@ DOCFILES=	00readme.txt 01install.txt \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
