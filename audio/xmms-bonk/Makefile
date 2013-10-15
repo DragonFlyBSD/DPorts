@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/xmms-bonk/Makefile,v 1.12 2012/11/17 05:54:48 svnexp Exp $
+# $FreeBSD: audio/xmms-bonk/Makefile 328596 2013-09-28 16:59:55Z naddy $
 
 PORTNAME=	xmms-bonk
 PORTVERSION=	0.12
@@ -10,11 +10,14 @@ DISTNAME=	bonk-xmms-${PORTVERSION}
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	XMMS input plugin to play bonk files
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
 ALL_TARGET=
 
+PLIST_FILES=	lib/xmms/Input/libbonk.so
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libbonk.so ${PREFIX}/lib/xmms/Input
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/xmms/Input
+	${INSTALL_DATA} ${WRKSRC}/libbonk.so ${STAGEDIR}${PREFIX}/lib/xmms/Input
 
 .include <bsd.port.mk>
