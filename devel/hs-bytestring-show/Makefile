@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-bytestring-show/Makefile 321071 2013-06-16 19:54:10Z amdmi3 $
+# $FreeBSD: devel/hs-bytestring-show/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	bytestring-show
 PORTVERSION=	0.3.5.5
@@ -9,5 +9,6 @@ COMMENT=	Efficient conversion of values into readable byte strings
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
