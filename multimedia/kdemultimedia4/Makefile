@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: multimedia/kdemultimedia4/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	kdemultimedia
 PORTVERSION=	${KDE4_VERSION}
@@ -25,6 +25,7 @@ KMIX_DESC=		Audio mixer
 KSCD_DESC=		CD Player
 MPLAYER_DESC=		MPlayer-based video thumbnailer
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDRAGON}
