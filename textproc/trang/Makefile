@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@nigredo.org>
-# $FreeBSD: textproc/trang/Makefile 321887 2013-06-27 12:51:07Z wg $
+# $FreeBSD: textproc/trang/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	trang
 PORTVERSION=	2009.11.11
@@ -22,6 +22,7 @@ PORTDOCS=	copying.txt trang-manual.html
 SUB_FILES=	trang.sh
 PLIST_FILES=	%%JAVAJARDIR%%/trang.jar bin/trang
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
