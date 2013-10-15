@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: textproc/p5-Spork/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Spork/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Spork
 PORTVERSION=	0.21
@@ -22,6 +22,7 @@ MAN3=		Spork.3 Spork::Config.3 \
 		Spork::Formatter.3 Spork::Slides.3 \
 		Spork::Command.3 Spork::Plugin.3
 
+NO_STAGE=	yes
 post-install:
 		@${CAT} ${PKGMESSAGE}
 
