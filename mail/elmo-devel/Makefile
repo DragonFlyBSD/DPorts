@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/elmo-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/elmo-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.2
@@ -14,9 +14,9 @@ COMMENT=	Receive, filter, read, compose, and send mail at the text console
 CONFLICTS=	elmo-[0-9]*
 
 GNU_CONFIGURE=	yes
-USES=		iconv
+USES=		iconv perl5
 USE_OPENSSL=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -26,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		elmo.1 elmoconf.pl.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
