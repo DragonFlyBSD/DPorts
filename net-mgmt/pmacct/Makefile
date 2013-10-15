@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: net-mgmt/pmacct/Makefile 326631 2013-09-07 12:07:49Z zi $
+# $FreeBSD: net-mgmt/pmacct/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	pmacct
 DISTVERSION=	0.14.3
@@ -27,6 +27,7 @@ MMAP_DESC=	Enable mmap(2) support
 LAYER2_DESC=	Enable Layer-2 support: MAC addresses and VLANs
 SHARED_DESC=	Enable shared objects
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
