@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: misc/rname/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/rname/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	rname
 PORTVERSION=	1.0
@@ -13,6 +13,7 @@ COMMENT=	Execute a program with a fake name
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
