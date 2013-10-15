@@ -1,5 +1,5 @@
 # Created by: Christoph Moench-Tegeder <cmt@burggraben.net>
-# $FreeBSD: devel/librest/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: devel/librest/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	rest
 PORTVERSION=	0.7.90
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 
 PORTEXAMPLES=	*.c
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
