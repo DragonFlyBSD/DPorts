@@ -1,6 +1,5 @@
 # Created by: Shannon -jj Behrens <jjinux@yahoo.com>
-# $FreeBSD: security/gcipher/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/gcipher/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gcipher
 PORTVERSION=	1.1
@@ -19,6 +18,7 @@ USE_PYTHON=	yes
 MAN1=		gcipher.1
 LICENSE_FILES=	${WRKSRC}/LICENSE
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^VERSION/s|=.*|= "${PORTVERSION}"|g ; \
