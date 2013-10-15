@@ -1,5 +1,5 @@
 # Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
-# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 326939 2013-09-11 05:29:55Z az $
+# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Unicode-LineBreak
 PORTVERSION=	2012.10
@@ -32,4 +32,5 @@ MAN3=		Unicode::LineBreak.3 \
 		Unicode::GCString.3 \
 		Text::LineFold::JA_JP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
