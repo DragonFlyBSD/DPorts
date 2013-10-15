@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/helma/pkg-plist,v 1.4 2012/11/17 06:02:35 svnexp Exp $
+@comment $FreeBSD: www/helma/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec if cmp -s %D/%%ETCDIR%%/apps.properties.sample %D/%%ETCDIR%%/apps.properties; then rm -f %D/%%ETCDIR%%/apps.properties; fi
 %%ETCDIR%%/apps.properties.sample
 @exec if [ ! -f %D/%%ETCDIR%%/apps.properties ] ; then cp -p %D/%%ETCDIR%%/apps.properties.sample %D/%%ETCDIR%%/apps.properties; fi

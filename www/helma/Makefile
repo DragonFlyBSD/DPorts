@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: ports/www/helma/Makefile,v 1.8 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/helma/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	helma
 PORTVERSION=	1.7.0
@@ -35,6 +35,7 @@ PLIST_SUB=	DBDIR="${DBDIR}" \
 OPTIONS_DEFINE=	MYSQL
 OPTIONS_DESC=	"Install MySQL Connector for Java"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
