@@ -1,7 +1,5 @@
-# New ports collection makefile for:	netmask
-# Date created:				19 Novemver 2000
-# Whom:					Mike Bristow <mike@urgle.com>
-# $FreeBSD: ports/net-mgmt/netmask/Makefile,v 1.10 2012/11/17 06:00:34 svnexp Exp $
+# Created by: Mike Bristow <mike@urgle.com>
+# $FreeBSD: net-mgmt/netmask/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	netmask
 PORTVERSION=	2.4
@@ -23,4 +21,5 @@ MAN1=		netmask.1
 INFO=		netmask
 PLIST_FILES=	bin/netmask
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
