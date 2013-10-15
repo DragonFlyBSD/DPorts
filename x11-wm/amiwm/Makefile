@@ -1,5 +1,5 @@
 # Created by: Douglas Carmichael <dcarmich@mcs.com>
-# $FreeBSD: x11-wm/amiwm/Makefile 322755 2013-07-11 07:13:10Z bapt $
+# $FreeBSD: x11-wm/amiwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	amiwm
 PORTVERSION=	0.21.pl2
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_XORG=	x11 ice sm xext xmu
 MAN1=		amiwm.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${ECHO_MSG} "===>  Copying documents to ${DOCSDIR}"
