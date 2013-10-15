@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/mbrolavox/Makefile 324688 2013-08-14 08:32:51Z tijl $
+# $FreeBSD: audio/mbrolavox/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mbrolavox
 PORTVERSION=	3.0.1
@@ -12,6 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Voices for MBROLA voice synthesizer
 
 USE_ZIP=	yes
+NO_STAGE=	yes
 NO_BUILD=	yes
 RESTRICTED=	No commercial nor military use, no sale
 WRKSRC=		${WRKDIR}/voices
