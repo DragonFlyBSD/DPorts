@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: audio/flac123/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/flac123/Makefile 329338 2013-10-04 16:44:16Z bapt $
 
 PORTNAME=	flac123
 PORTVERSION=	0.0.11
@@ -10,9 +10,11 @@ MASTER_SITES=	SF/flac-tools/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Command-line player for flac audio files
 
-LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
-		ao.4:${PORTSDIR}/audio/libao \
-		popt.0:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libFLAC.so:${PORTSDIR}/audio/flac \
+		libao.so:${PORTSDIR}/audio/libao \
+		libpopt.so:${PORTSDIR}/devel/popt
+
+OPTIONS_DEFINE=	DOCS
 
 USES=		gmake
 GNU_CONFIGURE=	yes
@@ -25,11 +27,9 @@ post-patch:
 		${WRKSRC}/configure
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
