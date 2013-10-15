@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: converters/dumpasn1/Makefile 325433 2013-08-27 09:08:47Z ale $
+# $FreeBSD: converters/dumpasn1/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	dumpasn1
 PORTVERSION=	20130805
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	yes
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Dumps the contents of an ASN.1 encoded file, e.g. an SSL certificate
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/dumpasn1.c ${WRKSRC}
