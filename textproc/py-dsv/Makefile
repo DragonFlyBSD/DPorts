@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: ports/textproc/py-dsv/Makefile,v 1.13 2013/01/22 21:45:40 svnexp Exp $
+# $FreeBSD: textproc/py-dsv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dsv
 PORTVERSION=	1.4.1
@@ -16,6 +16,7 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	DSV
 DSV_BASEDIR=	${PYTHONPREFIX_SITELIBDIR}/DSV
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
