@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/ocaml-lacaml/Makefile 311842 2013-02-07 14:25:13Z miwi $
+# $FreeBSD: devel/ocaml-lacaml/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lacaml
 PORTVERSION=	7.0.7
@@ -38,6 +38,7 @@ EXAMPLESDIR=	${OCAML_EXAMPLESDIR}/${PORTNAME}
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
