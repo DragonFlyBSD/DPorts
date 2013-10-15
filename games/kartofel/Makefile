@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/kartofel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/kartofel/Makefile 328738 2013-09-29 21:46:22Z amdmi3 $
 
 PORTNAME=	kartofel
 PORTVERSION=	1.2
@@ -11,9 +11,9 @@ MASTER_SITES=	http://kartofel.jfedor.org/downloads/ \
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Connect the dots in order without crossing over yourself
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl gfx mixer image ttf
 
 ALL_TARGET=	default
@@ -38,10 +38,8 @@ post-patch:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/kartofel ${PREFIX}/bin
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC} && ${COPYTREE_SHARE} "${DATA_DIRS}" ${DATADIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/kartofel ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "${DATA_DIRS}" ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
