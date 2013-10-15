@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Make/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Make/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Make
 PORTVERSION=	1.00
@@ -16,6 +16,7 @@ USE_PERL5=	configure
 MAN1=		perlmake.1
 MAN3=		Make.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|pmake|perlmake|' \
 		${WRKSRC}/Makefile.PL
