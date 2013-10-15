@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: editors/mined/Makefile 327085 2013-09-12 16:10:31Z thierry $
+# $FreeBSD: editors/mined/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	mined
 PORTVERSION=	2012.23
@@ -31,6 +31,7 @@ PRFX2FIX=	src/makefile.bsd usrshare/conf_user/xinitrc.mined	\
 		src/minedaux.c man/mined.1 src/mkinclud.mak		\
 		src/makefile.gcc
 
+NO_STAGE=	yes
 pre-configure:
 .for FILE in ${PRFX2FIX}
 	${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|' ${WRKSRC}/${FILE}
