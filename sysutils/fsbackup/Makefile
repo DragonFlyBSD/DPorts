@@ -1,5 +1,5 @@
 # Created by: samm
-# $FreeBSD: sysutils/fsbackup/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: sysutils/fsbackup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fsbackup
 PORTVERSION=	1.2.1
@@ -23,6 +23,7 @@ MANCOMPRESSED=	no
 NO_BUILD=	yes
 NO_INSTALL_MANPAGES=yes
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC};./install.pl --prefix=${PREFIX}/fsbackup --prefix-man=${MANPREFIX}/man/man1
 	@${RM} ${PREFIX}/fsbackup/fsbackup.1
