@@ -1,5 +1,5 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: devel/p5-CPAN-SQLite/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-CPAN-SQLite/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPAN-SQLite
 PORTVERSION=	0.199
@@ -36,4 +36,5 @@ MAN3=	CPAN::SQLite::Index.3 \
 	CPAN::SQLite::Info.3 \
 	CPAN::SQLite::Search.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
