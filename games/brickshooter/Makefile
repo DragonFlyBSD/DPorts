@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/brickshooter/Makefile,v 1.12 2013/02/04 06:44:10 svnexp Exp $
+# $FreeBSD: games/brickshooter/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	brickshooter
 PORTVERSION=	0.04
@@ -15,6 +15,7 @@ USE_SDL=	sdl mixer image
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
