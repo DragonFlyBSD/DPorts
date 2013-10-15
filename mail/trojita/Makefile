@@ -1,8 +1,8 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: mail/trojita/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/trojita/Makefile 329908 2013-10-09 16:08:13Z wg $
 
 PORTNAME=	trojita
-PORTVERSION=	0.3.93
+PORTVERSION=	0.3.96
 CATEGORIES=	mail
 MASTER_SITES=	SF/${PORTNAME}/src/
 
@@ -12,18 +12,19 @@ COMMENT=	Fast cross-platform Qt IMAP e-mail client
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-
 USE_BZIP2=	yes
+USE_LDCONFIG=	yes
 
-USE_QT4=	linguist_build moc_build qmake_build rcc_build \
-		uic_build sql-sqlite3 webkit
+USES=		cmake compiler:c++11-lib desktop-file-utils
+CMAKE_ARGS+=	-DCMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make \
+		-DWITH_QT5:STRING=OFF -DWITH_TESTS:STRING=OFF
+
+USE_QT4=	linguist_build moc_build qmake_build rcc_build uic_build \
+		sql-sqlite3 webkit
 
 HAS_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-NO_INSTALL_MANPAGES=	yes
 
-do-configure:
-	cd ${WRKSRC} && ${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX} \
-		CONFIG+="release disable_tests" ${PORTNAME}.pro
+post-install:
 
 .include <bsd.port.mk>
