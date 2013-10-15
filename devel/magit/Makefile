@@ -1,4 +1,4 @@
-# $FreeBSD: devel/magit/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: devel/magit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	magit
 PORTVERSION=	1.2.0
@@ -15,4 +15,5 @@ USE_EMACS=	YES
 USE_GMAKE=	YES
 INFO=		magit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
