@@ -1,9 +1,5 @@
-# New ports collection makefile for:    wminfo
-# Date created:         09 February 2004
-# Whom:                 Thomas Kempka <t.kempka@web.de>
-#
-# $FreeBSD: ports/misc/wminfo/Makefile,v 1.8 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Thomas Kempka <t.kempka@web.de>
+# $FreeBSD: misc/wminfo/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	wminfo
 PORTVERSION=	1.51
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}/${PORTNAME}
 
 USE_XORG=	xpm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(LIBS)$$|& $$(OBJS)|g' \
 		-e 's|/usr/X11R6|$$(LOCALBASE)|g' \
