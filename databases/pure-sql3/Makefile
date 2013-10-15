@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: databases/pure-sql3/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: databases/pure-sql3/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pure-sql3
 PORTVERSION=	0.4
@@ -16,5 +16,6 @@ USE_PURE=	yes
 PLIST_FILES=	lib/pure/sql3.pure \
 		lib/pure/sql3util.so
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
