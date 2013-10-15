@@ -1,5 +1,5 @@
 # Created by: Jeff Putsch <jdputsch@comcast.net>
-# $FreeBSD: textproc/p5-POE-Filter-XML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-POE-Filter-XML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	POE-Filter-XML
 PORTVERSION=	1.102960
@@ -29,4 +29,5 @@ MAN3=		POE::Filter::XML.3 \
 		POE::Filter::XML::NS.3 \
 		POE::Filter::XML::Node.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
