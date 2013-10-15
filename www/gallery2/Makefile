@@ -1,5 +1,5 @@
 # Created by: Alex Varju <freebsd-ports@varju.ca>
-# $FreeBSD: www/gallery2/Makefile 325466 2013-08-27 16:24:56Z sunpoet $
+# $FreeBSD: www/gallery2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gallery2
 PORTVERSION=	2.3.2
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=		DCRAW FFMPEG GD GRAPHMAGICK IMAGEMAGICK JHEAD \
 			NETPBM NLS PGSQL UNZIP
 OPTIONS_DEFAULT=	IMAGEMAGICK JHEAD UNZIP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGSQL}
