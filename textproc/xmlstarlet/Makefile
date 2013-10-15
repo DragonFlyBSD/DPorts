@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/xmlstarlet/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: textproc/xmlstarlet/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	xmlstarlet
 PORTVERSION=	1.4.2
@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GNOME=	libxslt
 USES=		iconv
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 CONFIGURE_ARGS=	--with-libxml-prefix=${LOCALBASE} \
 		--with-libxslt-prefix=${LOCALBASE} \
 		${ICONV_CONFIGURE_ARG} \
