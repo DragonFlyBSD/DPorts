@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/meritous/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/meritous/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	meritous
 PORTVERSION=	1.2
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES="Meritous" \
 		"Game;ActionGame;AdventureGame;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
