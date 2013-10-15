@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: devel/p5-MooseX-HasDefaults/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-MooseX-HasDefaults/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-HasDefaults
 PORTVERSION=	0.03
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		MooseX::HasDefaults.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
