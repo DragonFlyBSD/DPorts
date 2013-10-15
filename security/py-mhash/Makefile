@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-mhash
-# Date created:			Feb 10, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/py-mhash/Makefile,v 1.12 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/py-mhash/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	mhash
 PORTVERSION=	1.4
@@ -29,4 +24,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 test: install
 	${PYTHON_CMD} ${WRKSRC}/test.py
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
