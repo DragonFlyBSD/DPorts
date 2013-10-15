@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: ports/biology/plink/Makefile,v 1.2 2012/11/17 05:54:52 svnexp Exp $
+# $FreeBSD: biology/plink/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	plink
 PORTVERSION=	1.07
@@ -20,6 +20,7 @@ USE_FORTRAN=	yes	# Make it use the same compiler as lapack
 
 PLIST_FILES=	bin/plink
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${PREFIX}/bin
