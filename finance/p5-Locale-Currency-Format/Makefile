@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: finance/p5-Locale-Currency-Format/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Locale-Currency-Format/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Locale-Currency-Format
 PORTVERSION=	1.30
@@ -18,4 +18,5 @@ LICENSE=	ART20 GPLv1
 
 MAN3=		Locale::Currency::Format.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
