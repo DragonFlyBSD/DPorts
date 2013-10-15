@@ -1,9 +1,5 @@
-# New ports collection makefile for:	violet
-# Date created:				Nov 1, 2010
-# Whom:					Aldis Berjoza <aldis@bsdroot.lv>
-#
-# $FreeBSD: ports/devel/violet/Makefile,v 1.4 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: Aldis Berjoza <aldis@bsdroot.lv>
+# $FreeBSD: devel/violet/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	violet
 PORTVERSION=	0.21.1
@@ -27,6 +23,7 @@ NO_BUILD=	YES
 PLIST_FILES=	%%JAVASHAREDIR%%/${PORTNAME}/com.horstmann.violet.jar bin/${PORTNAME}
 PLIST_DIRS=	%%JAVASHAREDIR%%/${PORTNAME}
 
+NO_STAGE=	yes
 pre-install:
 	${ECHO} "#!/bin/sh" > ${WRKDIR}/violet.sh
 	${ECHO} "${PREFIX}/bin/java -jar ${JAVASHAREDIR}/${PORTNAME}/com.horstmann.violet.jar" >> ${WRKDIR}/violet.sh
