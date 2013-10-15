@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-SyslogScan
-# Date created:			26 December 1999
-# Whom:	      			Dmitry Sivachenko <dima@Chg.RU>
-#
-# $FreeBSD: sysutils/p5-SyslogScan/Makefile 326574 2013-09-07 07:11:48Z az $
-#
+# Created by: Dmitry Sivachenko <dima@Chg.RU>
+# $FreeBSD: sysutils/p5-SyslogScan/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	SyslogScan
 PORTVERSION=	0.32
@@ -24,4 +20,5 @@ MAN3=		SyslogScan::ByGroup.3 SyslogScan::Delivery.3 \
 		SyslogScan::Summary.3 SyslogScan::SyslogEntry.3 \
 		SyslogScan::Usage.3 SyslogScan::WhereIs.3 read_mail_log.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
