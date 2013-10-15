@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: math/labplot/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: math/labplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	labplot
 DISTVERSION=	2.0.0.alpha3
@@ -26,6 +26,7 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USES=		cmake
 CMAKE_ARGS=	-DOPJ_LIBRARY:STRING=""
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCDF}
