@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-Class-C3-Adopt-NEXT/Makefile 326803 2013-09-09 11:55:30Z az $
+# $FreeBSD: devel/p5-Class-C3-Adopt-NEXT/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-C3-Adopt-NEXT
 PORTVERSION=	0.13
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::C3::Adopt::NEXT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
