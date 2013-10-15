@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.minmax
-# Date created:				Nov 9, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.minmax/Makefile,v 1.4 2012/11/17 05:56:54 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.minmax/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.minmax
 PORTVERSION=	1.1.2
@@ -22,5 +17,7 @@ RUN_DEPENDS=	zodb${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/databases/zodb3 \
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
