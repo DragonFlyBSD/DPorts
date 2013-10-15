@@ -1,5 +1,5 @@
-# Created by: chuckr@freebsd.org
-# $FreeBSD: print/transfig/Makefile 326401 2013-09-05 14:10:41Z wg $
+# Created by: chuckr@FreeBSD.org
+# $FreeBSD: print/transfig/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	transfig
 PORTVERSION=	3.2.5e
@@ -27,4 +27,5 @@ MAKE_ARGS+=	INSTALLFLAGS="${COPY}" \
 		INSTDATFLAGS="${_SHROWNGRP} -m ${SHAREMODE}" \
 		INSTMANFLAGS="${_MANOWNGRP} -m ${MANMODE}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
