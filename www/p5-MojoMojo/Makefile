@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-MojoMojo/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-MojoMojo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MojoMojo
 PORTVERSION=	1.10
@@ -199,6 +199,7 @@ TRANSCLUSION_DESC=	Transclusion support
 AMAZON_DESC=		Amazon boxes
 EMOTICONS_DESC=		Emoticons
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEPLOY}
