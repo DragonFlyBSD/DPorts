@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-ConfigFromFile/Makefile 324533 2013-08-10 14:38:07Z kuriyama $
+# $FreeBSD: devel/p5-MooseX-ConfigFromFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-ConfigFromFile
 PORTVERSION=	0.11
@@ -28,4 +28,5 @@ USE_PERL5=	configure
 
 MAN3=		MooseX::ConfigFromFile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
