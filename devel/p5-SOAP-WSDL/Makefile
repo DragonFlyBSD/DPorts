@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-SOAP-WSDL/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-SOAP-WSDL/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SOAP-WSDL
 PORTVERSION=	2.00.10
@@ -80,4 +80,5 @@ MAN3=		SOAP::WSDL.3 \
 		SOAP::WSDL::XSD::Typelib::Element.3 \
 		SOAP::WSDL::XSD::Typelib::SimpleType.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
