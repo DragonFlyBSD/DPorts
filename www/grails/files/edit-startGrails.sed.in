@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/grails/files/edit-startGrails.sed.in,v 1.2 2012/11/17 06:02:34 svnexp Exp $
+# $FreeBSD: www/grails/files/edit-startGrails.sed.in 300897 2012-07-14 14:29:18Z beat $
 14i\
 : ${GRAILS_HOME="%%DATADIR%%"}
 14i\

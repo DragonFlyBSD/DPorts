@@ -1,12 +1,11 @@
 # Created by: Mitchell Smith <mjs@bur.st>
-# $FreeBSD: ports/www/grails/Makefile,v 1.14 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/grails/Makefile 328795 2013-09-30 14:23:02Z bdrewery $
 
 PORTNAME=	grails
 DISTVERSION=	1.3.6
 CATEGORIES=	www java
 MASTER_SITES=	http://dist.codehaus.org/grails/ \
 		http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/
-DISTNAME=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	mjs@bur.st
 COMMENT=	Web framework built on Groovy
@@ -30,6 +29,7 @@ PLIST_FILES=	${SCRIPTFILES:S,^,bin/,} \
 PLIST_DIRS=	${DATADIR:S,${PREFIX}/,,}/bin
 SUB_FILES=	edit-startGrails.sed pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing data files in ${DATADIR}..."
 	@cd ${WRKSRC} \
