@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/darkice/Makefile 323460 2013-07-22 15:18:53Z miwi $
+# $FreeBSD: audio/darkice/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	darkice
 PORTVERSION=	1.2
@@ -20,6 +20,7 @@ OPTIONS_DEFAULT=	VORBIS
 OPUS_DESC=	Ogg Opus audio codec support
 AACPLUS_DESC=	AAC HEv2 and libsamplerate support
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf
 ACLOCAL_ARGS=	# none
 AUTOMAKE_ARGS=	--add-missing --copy --foreign
