@@ -1,5 +1,5 @@
 # Created by: Matthew West <mwest@uct.ac.za>
-# $FreeBSD: x11/xmotd/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: x11/xmotd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xmotd
 DISTVERSION=	1.17.3b
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/xmotd
 OPTIONS_DEFINE=	HTML MOTIF XPM
 HTML_DESC=	Use HTML widget instead of ASCII text
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTML}
