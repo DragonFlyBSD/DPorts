@@ -1,9 +1,4 @@
-# Ports collection makefile for:	pssh
-# Date created:				Mon Jul 2, 2007
-# Whom:					Brooks Davis <brooks@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pssh/Makefile,v 1.10 2012/11/17 06:01:16 svnexp Exp $
-#
+# $FreeBSD: security/pssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pssh
 PORTVERSION=	2.3.1
@@ -26,4 +21,5 @@ USE_PYDISTUTILS=	yes
 
 PROJECTHOST=	parallel-ssh
 
+NO_STAGE=	yes
 .include <bsd.port.mk>

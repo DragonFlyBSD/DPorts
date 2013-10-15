@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/pssh/files/patch-psshlib_psshutil.py,v 1.5 2012/11/17 06:01:16 svnexp Exp $
+$FreeBSD: security/pssh/files/patch-psshlib_psshutil.py 300897 2012-07-14 14:29:18Z beat $
 
 --- psshlib/psshutil.py.orig
 +++ psshlib/psshutil.py
