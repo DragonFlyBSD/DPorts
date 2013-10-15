@@ -1,9 +1,5 @@
-# New ports collection makefile for:    nl-ispell
-# Date created:                         13 January 2001
-# Whom:                                 alex
-#
-# $FreeBSD: ports/textproc/nl-ispell/Makefile,v 1.9 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: alex
+# $FreeBSD: textproc/nl-ispell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 MAINTAINER=	office@FreeBSD.org
 
@@ -13,4 +9,5 @@ PORTVERSION=	1.0.0
 PORTREVISION=	2
 MASTERDIR=	${.CURDIR}/../ispell
 
+NO_STAGE=	yes
 .include        "${MASTERDIR}/Makefile"
