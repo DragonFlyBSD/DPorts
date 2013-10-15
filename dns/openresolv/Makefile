@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openresolv
-# Date created:	20 December 2007
-# Whom:	Roy Marples <roy@marples.name>
-#
-# $FreeBSD: ports/dns/openresolv/Makefile,v 1.4 2012/12/12 18:51:44 svnexp Exp $
-#
+# Created by: Roy Marples <roy@marples.name>
+# $FreeBSD: dns/openresolv/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	openresolv
 PORTVERSION=	1.1
@@ -22,6 +18,7 @@ SUB_FILES=	pkg-deinstall pkg-message
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${WRKDIR}/pkg-message
 
