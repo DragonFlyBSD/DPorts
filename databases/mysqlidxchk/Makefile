@@ -1,5 +1,5 @@
 # Created by: Andrey Ignatov <rdna@rdna.ru>
-# $FreeBSD: databases/mysqlidxchk/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/mysqlidxchk/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysqlidxchk
 PORTVERSION=	1.0
@@ -23,6 +23,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/mysqlidxchk
 PORTDOCS=	mysqlidxchkdoc.html mysqlidxchkguide.html
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/mysqlidxchk ${PREFIX}/bin
 
