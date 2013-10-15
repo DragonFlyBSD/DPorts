@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: ports/graphics/xv-m17n/Makefile,v 1.14 2013/01/26 15:44:00 svnexp Exp $
+# $FreeBSD: graphics/xv-m17n/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PKGNAMESUFFIX=	-m17n
 
