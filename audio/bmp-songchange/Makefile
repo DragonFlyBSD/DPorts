@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/bmp-songchange/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: audio/bmp-songchange/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	bmp-songchange
 PORTVERSION=	0.0.2
@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	beep.2:${PORTSDIR}/multimedia/beep-media-player
 
+NO_STAGE=	yes
 USES=		pkgconfig
 
 GNU_CONFIGURE=	yes
