@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: sysutils/stowES/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: sysutils/stowES/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	stowES
 PORTVERSION=	0.5.6
@@ -24,6 +24,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|'md5sum',|'md5',|" ${WRKSRC}/${PORTNAME}.in
 
