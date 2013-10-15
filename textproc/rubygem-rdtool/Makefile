@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-rdtool/Makefile 320428 2013-06-10 01:27:05Z swills $
+# $FreeBSD: textproc/rubygem-rdtool/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rdtool
 PORTVERSION=	0.6.38
@@ -16,6 +16,7 @@ RUBYGEM_AUTOPLIST=	yes
 USE_RAKE=	yes
 PLIST_FILES=	bin/rd2 bin/rdswap.rb
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
