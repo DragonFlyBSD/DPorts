@@ -1,6 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: security/integrit/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/integrit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	integrit
 PORTVERSION=	4.1
@@ -18,6 +17,7 @@ PLIST_FILES=	bin/i-ls sbin/i-viewdb sbin/integrit
 MAN1=		i-ls.1 i-viewdb.1 integrit.1
 INFO=		integrit
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
