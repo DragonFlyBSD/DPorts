@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-bits-atomic/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-bits-atomic/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	bits-atomic
 PORTVERSION=	0.1.3
@@ -10,5 +10,6 @@ COMMENT=	Atomic bit operations on memory locations
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
