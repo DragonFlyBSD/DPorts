@@ -1,5 +1,5 @@
 # Created by: Masanori Kiriake <seiken@nbs.co.jp>
-# $FreeBSD: audio/play/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/play/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	play
 PORTVERSION=	1.0
@@ -15,6 +15,7 @@ CONFLICTS=	sox-[0-9]*
 MAKE_ARGS=	CFLAGS="${CFLAGS}" DESTDIR="${PREFIX}" MANDIR="/man/ja/man"
 
 MANLANG=	ja
+NO_STAGE=	yes
 MAN1=		play.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/play
