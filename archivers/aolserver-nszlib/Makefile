@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: archivers/aolserver-nszlib/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/aolserver-nszlib/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	nszlib
 PORTVERSION=	1.1
@@ -17,6 +17,7 @@ COMMENT=	Zlib library interface for AOLserver
 LICENSE=	MPL GPLv1
 LICENSE_COMB=	dual
 
+NO_STAGE=	yes
 AOLSERVERBASE?=	aolserver
 
 BUILD_DEPENDS+=	${LOCALBASE}/${AOLSERVERBASE}/bin/nsd:${PORTSDIR}/www/aolserver
