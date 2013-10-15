@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-experimental.cssselect
-# Date created:				03 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-experimental.cssselect/Makefile,v 1.3 2012/11/17 05:56:46 svnexp Exp $
-#
+# $FreeBSD: devel/py-experimental.cssselect/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	experimental.cssselect
 PORTVERSION=	0.3
@@ -18,7 +13,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=0:${PORTSDIR}/devel/py-lxml
 
 # Python3 ready
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
