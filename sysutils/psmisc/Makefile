@@ -1,5 +1,5 @@
 # Created by: rantapaa@uswest.net
-# $FreeBSD: sysutils/psmisc/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/psmisc/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	psmisc
 PORTVERSION=	22.16
@@ -20,6 +20,7 @@ USE_GMAKE=	yes
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAN1=		killall.1 pstree.1
