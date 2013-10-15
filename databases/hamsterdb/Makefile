@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hamsterdb
-# Date created:				17 July 2008
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/databases/hamsterdb/Makefile,v 1.20 2012/11/17 05:55:08 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: databases/hamsterdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	hamsterdb
 PORTVERSION=	1.1.15
@@ -19,6 +15,7 @@ USE_LDCONFIG=	yes
 
 HAM_DOCS=	README INSTALL ChangeLog TODO AUTHORS CREDITS
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's#-ldl##g' ${WRKSRC}/configure
 	${REINPLACE_CMD} -e 's#-ldl##g' ${WRKSRC}/unittests/Makefile.in
