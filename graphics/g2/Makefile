@@ -1,9 +1,5 @@
-# New ports collection makefile for:	g2
-# Date created:	16 July 1998
-# Whom:		Bill Fumerola <billf@chc-chimes.com>
-#
-# $FreeBSD: graphics/g2/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: Bill Fumerola <billf@chc-chimes.com>
+# $FreeBSD: graphics/g2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	g2
 PORTVERSION=	0.40
@@ -21,6 +17,7 @@ USE_XORG=	x11
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} ; make depend ; make
 
