@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@f2o.org>
-# $FreeBSD: databases/innotop/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/innotop/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	innotop
 PORTVERSION=	1.9.1
@@ -25,6 +25,7 @@ USE_MYSQL=	yes
 
 MAN1=		innotop.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/innotop|${PREFIX}/etc|g' ${WRKSRC}/innotop
 
