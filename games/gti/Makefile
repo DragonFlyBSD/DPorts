@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: games/gti/Makefile 321516 2013-06-22 01:58:17Z tota $
+# $FreeBSD: games/gti/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gti
 PORTVERSION=	1.1.1
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/${PORTNAME}
 GTI_SPEED?=	50
 CFLAGS+=	-DGTI_SPEED=${GTI_SPEED}
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG}
 	@${ECHO_MSG} " You can change the speed of the car at compile time."
