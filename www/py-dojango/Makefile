@@ -1,5 +1,5 @@
 # Created by: jpaetzel
-# $FreeBSD: www/py-dojango/Makefile 318314 2013-05-16 13:50:04Z wg $
+# $FreeBSD: www/py-dojango/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dojango
 PORTVERSION=	0.5.6
@@ -18,6 +18,7 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py
 
 OPTIONS_DEFINE=		JAVA
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJAVA}
