@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Math-Logic
-# Date created:				20 Sep 2000
-# Whom:			Mario S F Ferreira <lioux@linf.unb.br> et al.
-#
-# $FreeBSD: math/p5-Math-Logic/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
+# $FreeBSD: math/p5-Math-Logic/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Logic
 PORTVERSION=	1.19
@@ -18,4 +14,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Math::Logic.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
