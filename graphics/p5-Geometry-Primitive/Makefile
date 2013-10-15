@@ -1,6 +1,5 @@
-# Ports collection makefile for:	Geometry-Primitive
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Geometry-Primitive/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Geometry-Primitive/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Geometry-Primitive
 PORTVERSION=	0.22
@@ -35,4 +34,5 @@ MAN3=		Geometry::Primitive.3 \
 		Geometry::Primitive::Rectangle.3 \
 		Geometry::Primitive::Shape.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
