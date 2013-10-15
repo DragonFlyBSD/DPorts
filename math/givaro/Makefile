@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: math/givaro/Makefile 320051 2013-06-06 05:55:48Z bapt $
+# $FreeBSD: math/givaro/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	givaro
 PORTVERSION=	3.5.0
