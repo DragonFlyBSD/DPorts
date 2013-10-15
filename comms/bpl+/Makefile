@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bpl+
-# Date created:			22 Sep 1996
-# Whom:				Masafumi NAKANE <max@FreeBSD.org>
-#
-# $FreeBSD: ports/comms/bpl+/Makefile,v 1.14 2012/11/17 05:54:59 svnexp Exp $
-#
+# Created by: Masafumi NAKANE <max@FreeBSD.org>
+# $FreeBSD: comms/bpl+/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	bpl+
 PORTVERSION=	1.0
@@ -16,6 +12,7 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	B Plus file transfer protocol
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bpl ${PREFIX}/bin
 	@${LN} -fs ${PREFIX}/bin/bpl ${PREFIX}/bin/bp
