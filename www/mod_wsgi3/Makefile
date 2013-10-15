@@ -1,4 +1,4 @@
-# $FreeBSD: www/mod_wsgi3/Makefile 327109 2013-09-12 20:21:31Z ohauer $
+# $FreeBSD: www/mod_wsgi3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_wsgi
 PORTVERSION=	3.4
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=--with-apxs="${APXS}" --with-python="${PYTHON_CMD}"
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 300 && ${PYTHON_REL} < 310
