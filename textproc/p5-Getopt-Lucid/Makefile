@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: textproc/p5-Getopt-Lucid/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-Getopt-Lucid/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Getopt-Lucid
 PORTVERSION=	1.05
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Getopt::Lucid.3 Getopt::Lucid::Exception.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
