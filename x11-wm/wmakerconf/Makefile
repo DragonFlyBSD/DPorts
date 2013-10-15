@@ -1,5 +1,5 @@
 # Created by: Dominik Rothert <dr@domix.de>
-# $FreeBSD: x11-wm/wmakerconf/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: x11-wm/wmakerconf/Makefile 327786 2013-09-21 00:01:16Z bapt $
 #    $MCom: ports/x11-wm/wmakerconf/Makefile,v 1.2 2006/10/05 07:31:44 mezz Exp $
 PORTNAME=	wmakerconf
 PORTVERSION=	2.12
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--with-wmakerdataprefix="${LOCALBASE}/share" \
 
 MAN1=		mkpreview.1 wmakerconf.1
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name "*.gmo" -delete
 
