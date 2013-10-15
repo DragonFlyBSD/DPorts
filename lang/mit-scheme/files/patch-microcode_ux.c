@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/mit-scheme/files/patch-microcode_ux.c,v 1.1 2013/01/12 19:03:43 svnexp Exp $
+$FreeBSD: lang/mit-scheme/files/patch-microcode_ux.c 310285 2013-01-12 16:58:37Z olgeni $
 
 --- microcode/ux.c.orig
 +++ microcode/ux.c

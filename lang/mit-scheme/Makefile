@@ -1,5 +1,5 @@
 # Created by: jmacd@FreeBSD.org
-# $FreeBSD: ports/lang/mit-scheme/Makefile,v 1.47 2013/01/12 19:03:43 svnexp Exp $
+# $FreeBSD: lang/mit-scheme/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	mit-scheme
 PORTVERSION=	9.1.1
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	GDBM MCRYPT MHASH OPENSSL PGSQL X11
 MCRYPT_DESC=	mcrypt library support
 MHASH_DESC=	mhash library support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # TODO implement db4 support
