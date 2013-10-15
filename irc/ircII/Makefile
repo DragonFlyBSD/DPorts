@@ -1,9 +1,5 @@
-# New ports collection makefile for:	IrcII Client
-# Date created:		18 Oct 1994
-# Whom:			torstenb
-#
-# $FreeBSD: ports/irc/ircII/Makefile,v 1.57 2012/11/17 05:58:28 svnexp Exp $
-#
+# Created by: torstenb
+# $FreeBSD: irc/ircII/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ircii
 PORTVERSION=	20111115
@@ -22,4 +18,5 @@ MAN1=		irc.1 ircII.1 ircbug.1
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
