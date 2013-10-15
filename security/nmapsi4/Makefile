@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: security/nmapsi4/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: security/nmapsi4/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	nmapsi4
 PORTVERSION=	0.4.1
@@ -20,6 +20,7 @@ USE_QT4=	gui qmake_build uic_build moc_build rcc_build network \
 		linguist_build webkit dbus
 CMAKE_ARGS+=	-DBUILD_KDELIBS=off
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's#share/applications/kde4/#share/applications/#g' \
 		${WRKSRC}/src/CMakeLists.txt
