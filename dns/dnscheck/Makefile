@@ -1,5 +1,5 @@
 # Created by: Jarrod Sayers <jarrod@netleader.com.au>
-# $FreeBSD: dns/dnscheck/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/dnscheck/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnscheck
 PORTVERSION=	1.3
@@ -13,6 +13,7 @@ USES=		perl5
 
 PLIST_FILES=	bin/dnscheck
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|^#!/usr/bin/perl |#!${PERL} |' ${WRKSRC}/dnscheck.pl
 
