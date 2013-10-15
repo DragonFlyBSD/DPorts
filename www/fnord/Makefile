@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/fnord/Makefile,v 1.7 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/fnord/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fnord
 PORTVERSION=	1.10
@@ -27,6 +27,7 @@ DIR_LIST_DESC=		Enable directory listing
 SYSTEM_SYMLINK_DEREF_DESC=	Enable system symlink (needs DIR_LIST)
 OLD_STYLE_REDIRECT_DESC= "Enable old style redirection
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDAEMONTOOLS}
