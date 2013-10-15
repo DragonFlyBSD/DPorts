@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ja-xlockmore
-# Date created:				25 Nov 2003
-# Whom:					umeno@rr.iij4u.or.jp
-#
-# $FreeBSD: ports/japanese/xlockmore/Makefile,v 1.2 2012/11/17 05:58:41 svnexp Exp $
-#
+# Created by: umeno@rr.iij4u.or.jp
+# $FreeBSD: japanese/xlockmore/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 CATEGORIES=	japanese x11
 
@@ -14,4 +10,5 @@ MASTERDIR=	${.CURDIR}/../../x11/xlockmore
 WITH_MB=	yes
 XLOCKMORE_LANG=	ja
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
