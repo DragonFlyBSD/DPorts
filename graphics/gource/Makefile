@@ -1,5 +1,5 @@
 # Created by: demon@FreeBSD.org
-# $FreeBSD: graphics/gource/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: graphics/gource/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gource
 PORTVERSION=	0.40
@@ -30,4 +30,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gource.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
