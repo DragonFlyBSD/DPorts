@@ -1,5 +1,5 @@
 # Created by: Ozkan KIRIK <ozkan@enderunix.org>
-# $FreeBSD: mail/qsheff/Makefile 319871 2013-06-04 15:47:06Z bapt $
+# $FreeBSD: mail/qsheff/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qsheff-II
 PORTVERSION=	2.1.r3
@@ -39,6 +39,7 @@ DISABLELOCAL_DESC=	Disable Filters For Local Users
 BACKUP_DESC=		Logging Incoming/Outgoing Mail
 CUSTOMERROR_DESC=	Custom Error Patch
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCLAMAV}
