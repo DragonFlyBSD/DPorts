@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Macro
-# Date created:				January 27th, 2008
-# Whom:	      				Groovis <groovis@groovis.net>
-#
-# $FreeBSD: www/p5-HTML-Macro/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# Created by: Groovis <groovis@groovis.net>
+# $FreeBSD: www/p5-HTML-Macro/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Macro
 PORTVERSION=	1.27
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::Macro.3 HTML::Macro::Loop.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
