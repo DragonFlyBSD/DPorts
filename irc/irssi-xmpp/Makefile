@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: irc/irssi-xmpp/Makefile 325664 2013-08-30 07:45:58Z danfe $
+# $FreeBSD: irc/irssi-xmpp/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irssi-xmpp
 PORTVERSION=	0.52
@@ -23,6 +23,7 @@ DOCSDIR=	${PREFIX}/share/doc/irssi
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
