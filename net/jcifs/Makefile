@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/net/jcifs/Makefile,v 1.30 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: net/jcifs/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	jcifs
 PORTVERSION=	1.3.17
@@ -24,6 +24,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${JAVAJARDIR}/${PORTNAME}.jar
 .if !defined(NOPORTDOCS)
