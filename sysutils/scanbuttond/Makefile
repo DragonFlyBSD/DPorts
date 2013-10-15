@@ -1,5 +1,5 @@
 # Created by: Daniel Thiele
-# $FreeBSD: sysutils/scanbuttond/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/scanbuttond/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	scanbuttond
 PORTVERSION=	0.2.3
@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 
 SUB_FILES+=	pkg-message
 
+NO_STAGE=	yes
 pre-configure:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} \
 		${REINPLACE_CMD} -e 's|-ldl||g'
