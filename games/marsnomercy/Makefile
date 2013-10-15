@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/marsnomercy/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/marsnomercy/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	marsnomercy
 PORTVERSION=	0.2.1
@@ -25,6 +25,7 @@ WRKSRC=		${WRKDIR}/mars-${PORTVERSION}
 
 OPTIONS_DEFINE=	DEBUG OPENGL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
