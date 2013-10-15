@@ -1,9 +1,5 @@
-# New ports collection makefile for:	khmer
-# Date created:		July 30 2010
-# Whom:			Kuan-Chung Chiu <buganini@gmail.com>
-#
-# $FreeBSD: ports/x11-fonts/khmeros/Makefile,v 1.2 2012/11/17 06:03:28 svnexp Exp $
-#
+# Created by: Kuan-Chung Chiu <buganini@gmail.com>
+# $FreeBSD: x11-fonts/khmeros/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	khmeros
 PORTVERSION=	5.0
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 FONTSDIR=	lib/X11/fonts/Khmer/
 PLIST_SUB+=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 post-patch:
 	${MV} "${WRKSRC}/KhmerOS .ttf" ${WRKSRC}/KhmerOS.ttf
 
