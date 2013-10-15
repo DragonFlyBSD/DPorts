@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eldav, WebDAV for Emacs-MULE
-# Date created:		2002-09-05
-# Whom:			Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-#
-# $FreeBSD: ports/www/eldav.el/Makefile,v 1.11 2012/11/17 06:02:32 svnexp Exp $
-#
+# Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
+# $FreeBSD: www/eldav.el/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	eldav.el
 PORTVERSION=	0.8.1
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 EMACSLISPDIR=	${PREFIX}/share/emacs/site-lisp
 XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${EMACSLISPDIR}
 	${MKDIR} ${XEMACSLISPDIR}
