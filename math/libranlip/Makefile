@@ -1,7 +1,5 @@
-# New ports collection makefile for:	libranlip
-# Date created:		6 Feb 2010
-# Whom:			bf <bf@FreeBSD.org>
-# $FreeBSD: ports/math/libranlip/Makefile,v 1.4 2012/11/17 05:59:23 svnexp Exp $
+# Created by: bf <bf@FreeBSD.org>
+# $FreeBSD: math/libranlip/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libranlip
 DISTVERSION=	1.0
@@ -22,6 +20,7 @@ PORTDOCS=	ranlip.ps
 PORTEXAMPLES=	makefile ranliptest.cpp ranliptestproc.cpp
 TESTPROGS=	static_example static_example2 static_example3 shared_example
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
