@@ -1,9 +1,5 @@
-# New ports collection Makefile for: ja-ng-canna
-# Date created:		11 January 1999
-# Whom:				HONDA Yasuhiro <honda@kashio.info.mie-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/ng-canna/Makefile,v 1.9 2012/11/17 05:58:37 svnexp Exp $
-#
+# Created by: HONDA Yasuhiro <honda@kashio.info.mie-u.ac.jp>
+# $FreeBSD: japanese/ng-canna/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PKGNAMESUFFIX=	-canna
 
@@ -16,4 +12,5 @@ DESCR=		${.CURDIR}/pkg-descr
 
 WITH_CANNA=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
