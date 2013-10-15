@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net-p2p/lopster/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: net-p2p/lopster/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	lopster
 PORTVERSION=	1.2.2
@@ -21,6 +21,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 OPTIONS_DEFINE=	FLAC OGG ZLIB
 OPTIONS_DEFAULT=	FLAC OGG ZLIB
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # --with-flac is on by default
