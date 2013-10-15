@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compiz-plugins-extra/Makefile 326449 2013-09-05 21:32:14Z antoine $
+# $FreeBSD: x11-wm/compiz-plugins-extra/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	compiz-plugins-extra
 PORTVERSION=	0.8.4
@@ -57,6 +57,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|'	\
 		${WRKSRC}/src/group/group-internal.h	\
