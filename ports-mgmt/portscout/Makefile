@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: ports-mgmt/portscout/Makefile 314921 2013-03-22 12:40:32Z bapt $
+# $FreeBSD: ports-mgmt/portscout/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	portscout
 PORTVERSION=	0.8.1
@@ -14,8 +14,8 @@ COMMENT=	A tool to scan for new versions of FreeBSD ports
 OPTIONS_DEFINE=	SQLITE3 DOCS
 SQLITE3_DESC=	Use SQLite backend instead of PostgreSQL
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5=	yes
 
 PORTDOCS=	UPDATING portscout-portconfig.txt xml-datasrc-example.xml
 
@@ -29,6 +29,7 @@ RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI	\
 		p5-MIME-Lite>=0:${PORTSDIR}/mail/p5-MIME-Lite		\
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLITE3}
