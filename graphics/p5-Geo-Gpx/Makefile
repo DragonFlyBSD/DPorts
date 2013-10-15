@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-Gpx/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: graphics/p5-Geo-Gpx/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Geo-Gpx
 PORTVERSION=	0.26
@@ -25,4 +25,5 @@ MAN3=		Geo::Gpx.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
