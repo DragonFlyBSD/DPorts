@@ -1,9 +1,5 @@
-# Ports collection makefile for:    py-pycalendar
-# Date created:         April 23, 2011
-# Whom:                 Roland van Laar <roland@micite.net>
-#
-# $FreeBSD: ports/devel/py-pycalendar/Makefile,v 1.2 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Roland van Laar <roland@micite.net>
+# $FreeBSD: devel/py-pycalendar/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pycalendar
 PORTVERSION=	2.0
@@ -19,6 +15,7 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|distutils.core|setuptools|g' ${WRKSRC}/setup.py
 
