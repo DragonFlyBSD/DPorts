@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Nagios-Plugin
-# Date created:				13 08 2006
-# Whom:					Gerrit Beine <gerrit.beine@gmx.de>
-#
-# $FreeBSD: net-mgmt/p5-Nagios-Plugin/Makefile 326244 2013-09-04 03:24:02Z az $
-#
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: net-mgmt/p5-Nagios-Plugin/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Nagios-Plugin
 PORTVERSION=	0.36
@@ -23,6 +19,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		Nagios::Plugin.3 \
 		Nagios::Plugin::Config.3 \
