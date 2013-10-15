@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: multimedia/quark/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: multimedia/quark/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	quark
 PORTVERSION=	3.24
@@ -32,6 +32,7 @@ PLIST_SUB+=	NLS="@comment "
 PLIST_SUB+=	NLS=""
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|CFLAGS="-g |CFLAGS="$$CFLAGS |g' ${WRKSRC}/configure
