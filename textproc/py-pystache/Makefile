@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: textproc/py-pystache/Makefile 322459 2013-07-07 21:41:02Z gblach $
+# $FreeBSD: textproc/py-pystache/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pystache
 PORTVERSION=	0.5.3
@@ -16,6 +16,7 @@ LICENSE=	MIT
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
