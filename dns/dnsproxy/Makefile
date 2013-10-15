@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dnsproxy
-# Date created:				14 January 2004
-# Whom:					Clement Laforet <clement@FreeBSD.org>
-#
-# $FreeBSD: ports/dns/dnsproxy/Makefile,v 1.11 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: Clement Laforet <clement@FreeBSD.org>
+# $FreeBSD: dns/dnsproxy/Makefile 329634 2013-10-06 22:19:27Z marino $
 
 PORTNAME=	dnsproxy
 PORTVERSION=	1.16
@@ -11,7 +7,7 @@ CATEGORIES=	dns
 MASTER_SITES=	http://www.wolfermann.org/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A proxy for DNS queries
+COMMENT=	proxy for DNS queries
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libevent.so:${PORTSDIR}/devel/libevent
 
@@ -25,6 +21,7 @@ PLIST_FILES=	sbin/dnsproxy etc/${PORTNAME}/dnsproxy.conf.sample
 SUB_FILES=	pkg-message
 PLIST_DIRS=	%%ETCDIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
