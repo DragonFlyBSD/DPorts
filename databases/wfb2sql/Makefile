@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: databases/wfb2sql/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: databases/wfb2sql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	wfb2sql
 PORTVERSION=	0.6
@@ -16,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 NO_BUILD=	YES
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/wfb2sql ${PREFIX}/bin/wfb2sql
 	@${ECHO} "bin/wfb2sql" >> ${TMPPLIST}
