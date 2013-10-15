@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/devel/cvsspam/Makefile,v 1.11 2013/01/15 13:46:53 svnexp Exp $
+# $FreeBSD: devel/cvsspam/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsspam
 PORTVERSION=	0.2.12
@@ -19,6 +19,7 @@ PORTDOCS=	COPYING CREDITS TODO cvsspam-doc.html cvsspam-doc.pdf
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
