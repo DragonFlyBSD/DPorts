@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-build/Makefile 321606 2013-06-23 02:22:11Z swills $
+# $FreeBSD: devel/ruby-build/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ruby-build
 PORTVERSION=	20130518
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	RBENV
 RBENV_DESC=	Install rbenv for installation support
 OPTIONS_DEFAULT=	RBENV
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRBENV}
