@@ -1,9 +1,5 @@
-# New ports collection makefile for:  UpsDaemon
-# Date created:       		      17 June 2006
-# Whom:                               Ederson de Moura <ederbs@ederbs.org>
-#
-# $FreeBSD: ports/sysutils/upsdaemon/Makefile,v 1.5 2012/11/17 06:01:49 svnexp Exp $
-#
+# Created by: Ederson de Moura <ederbs@ederbs.org>
+# $FreeBSD: sysutils/upsdaemon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	upsdaemon
 PORTVERSION=	1.0
@@ -19,6 +15,7 @@ MANCOMPRESSED=	no
 
 USE_RC_SUBR=	upsdaemon
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
