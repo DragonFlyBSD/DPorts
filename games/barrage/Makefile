@@ -1,9 +1,5 @@
-# New ports collection makefile for:  	barrage
-# Date created:       	23 April 2003
-# Whom:  	Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/games/barrage/Makefile,v 1.26 2012/11/17 05:57:32 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: games/barrage/Makefile 329947 2013-10-10 00:15:20Z madpilot $
 
 PORTNAME=	barrage
 PORTVERSION=	1.0.4
@@ -15,8 +11,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Destroy as many targets as possible
 
 USE_SDL=	sdl mixer
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--with-profile-path=/var/games
 
 post-patch:
