@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: databases/slony1/Makefile 323379 2013-07-21 12:57:10Z marino $
+# $FreeBSD: databases/slony1/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	slony1
 PORTVERSION=	1.2.23
@@ -28,10 +28,11 @@ PERLTOOLS_DESC=	Install perl configuration tools
 
 CONFLICTS?=	slony1v2-2*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERLTOOLS}
-USE_PERL5=	yes
+USES=		perl5
 CONFIGURE_ARGS+=	--with-perltools=${LOCALBASE}/sbin
 RUN_DEPENDS+=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
 BUILD_DEPENDS+=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
