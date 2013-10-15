@@ -1,9 +1,5 @@
-# New ports collection makefile for:    html2tex
-# Date created:                 Nov 5 2008
-# Whom:                         martin.dieringer@gmx.de
-#
-# $FreeBSD: ports/textproc/html2tex/Makefile,v 1.3 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: martin.dieringer@gmx.de
+# $FreeBSD: textproc/html2tex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	html2tex
 PORTVERSION=	2.7
@@ -19,6 +15,7 @@ COMMENT=	HTML to LaTeX converter, last modified 2010
 PLIST_FILES=	bin/html2tex
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}/html2tex.c
