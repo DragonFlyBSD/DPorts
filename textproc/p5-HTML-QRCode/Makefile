@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-HTML-QRCode/Makefile 324918 2013-08-18 14:25:16Z az $
+# $FreeBSD: textproc/p5-HTML-QRCode/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-QRCode
 PORTVERSION=	0.01
@@ -21,4 +21,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 
 MAN3=		HTML::QRCode.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
