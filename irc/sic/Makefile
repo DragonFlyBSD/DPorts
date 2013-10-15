@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sic
-# Date created:		04 Apr 1998
-# Whom:			sec@42.org
-#
-# $FreeBSD: ports/irc/sic/Makefile,v 1.10 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: sec@42.org
+# $FreeBSD: irc/sic/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	sic
 PORTVERSION=	0.23a
@@ -21,4 +17,5 @@ PLIST_SUB+=	VERSION="${PORTVERSION}"
 MAN1=		sic.1
 MAN5=		sic-alias.5 sic-server.5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
