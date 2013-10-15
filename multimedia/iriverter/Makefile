@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iriverter
-# Date created:		2006-09-05
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/iriverter/Makefile,v 1.12 2012/11/17 05:59:50 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: multimedia/iriverter/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	iriverter
 PORTVERSION=	0.16
@@ -26,6 +22,7 @@ SWTDEVEL_DESC=	Use SWT Development port
 
 CONFIGURE_ARGS=	--with-swt="${JAVALIBDIR}/${SWT_JAR}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSWTDEVEL}
