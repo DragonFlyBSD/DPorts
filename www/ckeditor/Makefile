@@ -1,6 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-#
-# $FreeBSD: ports/www/ckeditor/Makefile,v 1.4 2012/12/05 01:21:42 svnexp Exp $
+# $FreeBSD: www/ckeditor/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CKEditor
 PORTVERSION=	4.0
@@ -16,6 +15,7 @@ LICENSE=	MPL
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/ckeditor
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL} -d -m 0755 ${WWWDIR}
 	@(cd ${WRKSRC} && ${FIND} . | ${CPIO} -pdmu -R${WWWOWN}:${WWWGRP} ${WWWDIR})
