@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: sysutils/fanout/Makefile 326573 2013-09-07 06:47:20Z az $
+# $FreeBSD: sysutils/fanout/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fanout
 PORTVERSION=	0.6.1
@@ -19,6 +19,7 @@ PLIST_FILES=	bin/fanout bin/fanterm bin/fanmux
 PORTDOCS=	README index.html
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},g' \
 		${WRKSRC}/fanterm
