@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-mirror
-# Date created:		2012-05-10
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: devel/rubygem-mirror/Makefile 303106 2012-08-25 00:53:16Z jgh $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-mirror/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	mirror
 PORTVERSION=	1.0.1
@@ -22,4 +18,5 @@ USE_RUBYGEMS=		yes
 GEM_NAME=		rubygems-${PORTNAME}-${PORTVERSION}
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
