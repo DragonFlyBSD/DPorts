@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-GDD/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/R-cran-GDD/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GDD
 DISTVERSION=	0.1-13.1
@@ -20,4 +20,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
