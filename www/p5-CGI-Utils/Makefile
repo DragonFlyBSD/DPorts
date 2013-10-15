@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-Utils
-# Date created:		2009-01-05
-# Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
-#
-# $FreeBSD: www/p5-CGI-Utils/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# Created by: Murilo Opsfelder <mopsfelder@gmail.com>
+# $FreeBSD: www/p5-CGI-Utils/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Utils
 PORTVERSION=	0.12
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 MAN3=		CGI::Utils.3 \
 		CGI::Utils::UploadFile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
