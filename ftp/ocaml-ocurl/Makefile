@@ -1,7 +1,5 @@
-# Ports collection makefile for:	ocurl
-# Date created:			Aug 6, 2004
-# Whom:				Marwan BURELLE <marwan.burelle@lri.fr>
-# $FreeBSD: ftp/ocaml-ocurl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# Created by: Marwan BURELLE <marwan.burelle@lri.fr>
+# $FreeBSD: ftp/ocaml-ocurl/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	ocurl
 PORTVERSION=	0.5.3
@@ -30,4 +28,5 @@ USE_OCAML=		yes
 USE_OCAML_FINDLIB=	yes
 USE_OCAML_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
