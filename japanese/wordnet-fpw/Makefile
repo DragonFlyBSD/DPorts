@@ -1,9 +1,5 @@
-# New ports collection makefile for:	WordNet - JIS X 4081 format version
-# Date created:        	00/06/19
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/wordnet-fpw/Makefile,v 1.11 2012/11/17 05:58:41 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: japanese/wordnet-fpw/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	wordnet-fpw
 PORTVERSION=	${WN_VER}.${WNFPW_VER}
@@ -23,6 +19,7 @@ WNFPW_VER=	1.1.3
 WN_VER=		1.6
 
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/dict/wordnet-fpw/wordnet/data
 	${INSTALL_DATA} ${WRKSRC}/wordnet/data/honmon ${PREFIX}/share/dict/wordnet-fpw/wordnet/data
