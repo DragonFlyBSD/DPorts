@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: chinese/oxim/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: chinese/oxim/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	oxim
 PORTVERSION=	1.2.2
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=--disable-qt-immodule
 
 MAN1=		oxim.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
