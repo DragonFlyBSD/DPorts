@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/automx/Makefile,v 1.2 2013/01/13 17:41:34 svnexp Exp $
+# $FreeBSD: mail/automx/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	automx
 PORTVERSION=	0.9
@@ -26,6 +26,7 @@ MAN5=		${PORTNAME}.conf.5 ${PORTNAME}_ldap.5 ${PORTNAME}_sql.5
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
