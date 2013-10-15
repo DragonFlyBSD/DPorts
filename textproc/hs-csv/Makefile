@@ -1,5 +1,5 @@
 # Created by: Kaspars Bankovskis <kaspars@bankovskis.lv>
-# $FreeBSD: textproc/hs-csv/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-csv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	csv
 PORTVERSION=	0.1.2
@@ -13,5 +13,6 @@ LICENSE=	MIT
 
 USE_CABAL=	parsec
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
