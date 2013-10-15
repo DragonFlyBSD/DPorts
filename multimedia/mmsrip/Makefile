@@ -1,5 +1,5 @@
 # Created by: Mun-Kyo Seo <munggo@pmy.lv>
-# $FreeBSD: ports/multimedia/mmsrip/Makefile,v 1.7 2012/11/17 05:59:51 svnexp Exp $
+# $FreeBSD: multimedia/mmsrip/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mmsrip
 PORTVERSION=	0.7.0
@@ -17,4 +17,5 @@ GNU_CONFIGURE=	yes
 MAN1=		mmsrip.1
 PLIST_FILES=	bin/mmsrip
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
