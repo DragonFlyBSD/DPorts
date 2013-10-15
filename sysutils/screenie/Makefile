@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/screenie/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: sysutils/screenie/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	screenie
 PORTVERSION=	1.30.0
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 MAN1=		screenie.1
 PLIST_FILES=	sbin/screenie
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
