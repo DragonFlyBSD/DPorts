@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: benchmarks/nttcp/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/nttcp/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	nttcp
 PORTVERSION=	1.47
@@ -20,6 +20,7 @@ USES=		gmake
 MAKE_ENV+=	OPT="${CFLAGS}"
 NOPRECIOUSMAKEVARS=yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nttcp ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/nttcp.1 ${PREFIX}/man/man1/
