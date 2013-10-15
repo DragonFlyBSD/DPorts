@@ -1,4 +1,4 @@
-# $FreeBSD: ports/irc/xchat-ruby/Makefile,v 1.10 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/xchat-ruby/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	ruby
 PORTVERSION=	1.2
@@ -14,6 +14,8 @@ COMMENT=	An ruby-scripting plugin for XChat
 RUN_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
 
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 USE_RUBY=	yes
 USE_LIBRUBY=	yes
