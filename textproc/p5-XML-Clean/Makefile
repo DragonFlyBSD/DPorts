@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: textproc/p5-XML-Clean/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-XML-Clean/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Clean
 PORTVERSION=	1.06
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::Clean.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
