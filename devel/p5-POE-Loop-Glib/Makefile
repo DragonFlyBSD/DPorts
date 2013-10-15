@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: devel/p5-POE-Loop-Glib/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-POE-Loop-Glib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Loop-Glib
 PORTVERSION=	0.038
@@ -23,6 +23,7 @@ USE_PERL5=	configure
 
 MAN3=		POE::Loop::Glib.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
