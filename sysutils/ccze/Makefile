@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/ccze/Makefile,v 1.9 2012/12/12 21:45:14 svnexp Exp $
+# $FreeBSD: sysutils/ccze/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ccze
 PORTVERSION=	0.2.1
@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 MAN1=		ccze.1 ccze-cssdump.1
 MAN7=		ccze-plugin.7
 
+NO_STAGE=	yes
 post-install:
 	@${WRKSRC}/src/ccze-dump > ${PREFIX}/etc/cczerc-sample
 .if !defined(NOPORTDOCS)
