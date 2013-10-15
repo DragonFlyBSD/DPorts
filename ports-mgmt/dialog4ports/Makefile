@@ -1,9 +1,9 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ports-mgmt/dialog4ports/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	dialog4ports
 PORTVERSION=	0.1.5
-PORTREVISION=	1
+PORTREVISION?=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://m1cro.tk/dialog4ports/ \
 		http://files.etoilebsd.net/dialog4ports/ \
@@ -14,18 +14,20 @@ MASTER_SITES=	http://m1cro.tk/dialog4ports/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/:dialog
 
 MAINTAINER=	rum1cro@yandex.ru
-COMMENT=	Console Interface to configure ports
+COMMENT?=	Console Interface to configure ports
 
 # CCACHE has options, so may need d4p, make d4p not ccache friendly
 # to avoid circular dependency
 NO_CCACHE=	yes
 MANCOMPRESSED=	yes
-MAN1=		${PORTNAME}.1
 MAKE_ENV+=	__MAKE_CONF=/dev/null SRCCONF=/dev/null
 
+.if !defined(D4P_SLAVE)
+MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/dialog4ports
+.endif
 
-
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAKE_ARGS+=	DEBUG_FLAGS="${DEBUG_FLAGS}"
@@ -36,7 +38,7 @@ MAKE_ARGS+=	DEBUG_FLAGS="${DEBUG_FLAGS}"
 DIALOG4PORTS=	${WRKSRC}/dialog4ports
 .endif
 
-.if ${OSVERSION} < 900030
+.if ${OSVERSION} < 900030 || defined(D4P_SLAVE)
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 		${DIALOGNAME}.tgz:dialog
 DIALOGNAME=	dialog-1.1-20120706
