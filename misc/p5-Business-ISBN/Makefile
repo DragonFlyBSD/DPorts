@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-ISBN/Makefile 324167 2013-08-02 17:11:34Z az $
+# $FreeBSD: misc/p5-Business-ISBN/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Business-ISBN
 PORTVERSION=	2.06
@@ -35,6 +35,7 @@ PLIST_DIRSTRY=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/ISBN \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Business \
 		%%SITE_PERL%%/Business
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBARCODE}
