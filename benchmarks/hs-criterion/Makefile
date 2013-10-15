@@ -1,5 +1,5 @@
-# Created by:  Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: benchmarks/hs-criterion/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
+# $FreeBSD: benchmarks/hs-criterion/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	criterion
 PORTVERSION=	0.6.2.1
@@ -20,5 +20,6 @@ INSTALL_PORTEXAMPLES=	\
 
 INSTALL_PORTDATA= 	${INSTALL_DATA} ${WRKSRC}/README.markdown ${DATADIR}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
