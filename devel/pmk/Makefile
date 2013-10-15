@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: devel/pmk/Makefile 319527 2013-05-31 15:42:57Z miwi $
+# $FreeBSD: devel/pmk/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pmk
 PORTVERSION=	0.10.4
@@ -15,6 +15,7 @@ MAN1=	pmk.1 pmkscan.1 pmkinstall.1 pmkpc.1
 MAN5=	pmk.conf.5 pmkfile.5 pmksyntax.5 scanfile.5
 MAN8=	pmksetup.8
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC}; SYSCONFDIR=${PREFIX}/etc ./pmkcfg.sh
 
