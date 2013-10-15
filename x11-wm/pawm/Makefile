@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/pawm/Makefile 326957 2013-09-11 09:36:48Z marino $
+# $FreeBSD: x11-wm/pawm/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	pawm
 PORTVERSION=	2.3.0
@@ -14,6 +14,7 @@ USE_XORG=	x11 xft xrandr xrender xpm
 USES=		cmake pkgconfig
 CMAKE_ARGS=	-DCMAKE_CONFIG_PREFIX:STRING="${PREFIX}/etc" \
 		-DX11_LIBRARY_DIRS:STRING="${LOCALBASE}/lib"
+LDFLAGS+=	-L${LOCALBASE}/lib -lXext -lXrender
 
 .if defined(WITH_SN)
 LIB_DEPENDS+=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
@@ -21,6 +22,7 @@ CFLAGS+=	-DENABLE_STARTUP -DSN_API_NOT_YET_FROZEN \
 		`pkg-config --cflags --libs libstartup-notification-1.0`
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/"\/etc"/s|^|#| ; \
