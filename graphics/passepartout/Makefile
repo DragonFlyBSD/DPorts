@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: graphics/passepartout/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: graphics/passepartout/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/graphics/passepartout/Makefile,v 1.4 2006/09/30 15:31:05 ahze Exp $
 
 PORTNAME=	passepartout
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		xml2ps.1 passepartout.1x
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libfam.a)
