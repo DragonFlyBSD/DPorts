@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pecl-eio/Makefile 313275 2013-03-02 16:45:58Z miwi $
+# $FreeBSD: devel/pecl-eio/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	eio
 PORTVERSION=	1.2.1
@@ -19,4 +19,5 @@ USE_PHP=	yes
 USE_PHPEXT=	yes
 IGNORE_WITH_PHP=	52
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
