@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	docbook-xsd
-# Date created:			Feb 9, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/docbook-xsd/Makefile,v 1.5 2012/11/17 06:01:54 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/docbook-xsd/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-xsd
 PORTVERSION=	1.0.b1
@@ -18,6 +13,7 @@ COMMENT=	DocBook W3C XML Schema
 USE_ZIP=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	@${CP} ${WRKSRC}/*.xsd ${DATADIR}
