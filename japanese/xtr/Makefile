@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xtr
-# Date created:			5 November 2002
-# Whom:				TANAKA Hiroyuki <kattyo@abk.nu>
-#
-# $FreeBSD: ports/japanese/xtr/Makefile,v 1.4 2012/11/17 05:58:41 svnexp Exp $
-#
+# Created by: TANAKA Hiroyuki <kattyo@abk.nu>
+# $FreeBSD: japanese/xtr/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	xtr
 PORTVERSION=	1.50e.0.2
@@ -23,6 +19,7 @@ GNU_CONFIGURE=	yes
 
 NO_CDROM=	Need to obtain permission for commercial redistribution.
 
+NO_STAGE=	yes
 post-extract:
 	@${ECHO_MSG} "===>  Converting Kanji code for ${DISTNAME}"
 	@(cd ${WRKSRC} && $(SH) EUCsetup )
