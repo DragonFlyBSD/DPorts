@@ -1,4 +1,4 @@
-# $FreeBSD: ports/ports-mgmt/fastest_sites/Makefile,v 1.7 2012/12/12 18:51:47 svnexp Exp $
+# $FreeBSD: ports-mgmt/fastest_sites/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	fastest_sites
 PORTVERSION=	20110317
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/fastest_sites
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
