@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-GOST_PP/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/p5-Crypt-GOST_PP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-GOST_PP
 PORTVERSION=	1.10
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::GOST_PP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
