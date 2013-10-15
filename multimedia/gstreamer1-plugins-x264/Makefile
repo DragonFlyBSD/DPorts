@@ -1,6 +1,6 @@
-# $FreeBSD: multimedia/gstreamer1-plugins-x264/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins-x264/Makefile 329667 2013-10-07 09:21:13Z koobs $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 COMMENT=	Gstreamer x264 plugin
@@ -10,4 +10,5 @@ DIST=		ugly
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
