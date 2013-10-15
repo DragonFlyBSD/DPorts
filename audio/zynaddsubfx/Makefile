@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/zynaddsubfx/Makefile 326957 2013-09-11 09:36:48Z marino $
+# $FreeBSD: audio/zynaddsubfx/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	zynaddsubfx
 PORTVERSION=	2.4.3
@@ -22,6 +22,7 @@ DSSI_DESC=	DSSI Plugin
 LO_DESC=	Open Sound Control support via LibLO
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		cmake pkgconfig
 
 PORTDOCS=	*
