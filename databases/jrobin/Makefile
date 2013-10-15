@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/databases/jrobin/Makefile,v 1.16 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/jrobin/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	jrobin
 PORTVERSION=	1.5.14
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 
 CLASSES=	jrobin
 
+NO_STAGE=	yes
 do-install:
 .for c in ${CLASSES}
 	${INSTALL_DATA} ${DISTDIR}/${c}-${PORTVERSION}.jar ${JAVAJARDIR}/${c}.jar
