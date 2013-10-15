@@ -1,8 +1,5 @@
-# New ports collection makefile for:	phplist
-# Date created:			August 24 2007
-# Whom:				Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/mail/phplist/Makefile,v 1.13 2012/12/09 01:32:53 svnexp Exp $
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: mail/phplist/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	phplist
 PORTVERSION=	2.10.19
@@ -23,6 +20,7 @@ PORTDOCS=	BUGS INSTALL NEWS PEOPLE README README.batches \
 
 SUB_FILES=	phplist pkg-message
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/public_html/lists/config/config.php ${WRKSRC}/public_html/lists/config/config.php-dist
 
