@@ -1,5 +1,5 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
-# $FreeBSD: multimedia/totem/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: multimedia/totem/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #   $MCom: ports/multimedia/totem/Makefile,v 1.151 2010/09/27 19:04:37 kwm Exp $
 
 PORTNAME=	totem
@@ -56,6 +56,7 @@ TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
 		properties skipto youtube opensubtitles screenshot \
 		brasero-disc-recorder coherence_upnp dbus-service iplayer
 
+NO_STAGE=	yes
 # Not using:
 # TOTEM_PLUGINS= mythtv bemused jamendo
 
