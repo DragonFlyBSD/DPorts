@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/gimp-resynthesizer/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: graphics/gimp-resynthesizer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	resynthesizer
 PORTVERSION=	2.0
@@ -28,6 +28,7 @@ USE_GCC=	any # uses nested functions (gcc ext.)
 OPTIONS_DEFINE=	THREADS
 THREADS_DESC=	Threading support (produces nondeterministic results)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
