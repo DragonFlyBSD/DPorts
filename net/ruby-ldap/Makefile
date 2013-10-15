@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/LDAP
-# Date created:		25 Sep 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: net/ruby-ldap/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: net/ruby-ldap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldap
 PORTVERSION=	0.9.10
@@ -30,6 +26,7 @@ USE_BZIP2=	yes
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Configure options:
