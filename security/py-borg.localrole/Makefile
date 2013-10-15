@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-borg.localrole
-# Date created:				02 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/security/py-borg.localrole/Makefile,v 1.3 2012/11/17 06:01:16 svnexp Exp $
-#
+# $FreeBSD: security/py-borg.localrole/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	borg.localrole
 PORTVERSION=	3.0.2
@@ -12,7 +7,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	A PAS plugin which can manage local roles via an adapter lookup
+COMMENT=	PAS plugin which can manage local roles via an adapter lookup
 
 LICENSE=	LGPL20
 
@@ -29,8 +24,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.annotation>=0:${PORTSDIR}/devel/py-zope
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 #USE_ZOPE=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
