@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: textproc/p5-XML-DTDParser/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-DTDParser/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	XML-DTDParser
 PORTVERSION=	2.01
@@ -12,6 +12,7 @@ COMMENT=	Perl module for parsing XML DTD strings
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		XML::DTDParser.3
 
