@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Parse-Method-Signatures/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Parse-Method-Signatures/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Parse-Method-Signatures
 PORTVERSION=	1.003015
@@ -27,10 +27,5 @@ TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Parse::Method::Signatures.3 \
-		Parse::Method::Signatures::Param.3 \
-		Parse::Method::Signatures::Sig.3 \
-		Parse::Method::Signatures::TypeConstraint.3
 
 .include <bsd.port.mk>
