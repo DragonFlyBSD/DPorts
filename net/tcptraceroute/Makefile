@@ -1,5 +1,5 @@
 # Created by: jeff@cetlink.net
-# $FreeBSD: net/tcptraceroute/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: net/tcptraceroute/Makefile 329615 2013-10-06 18:30:43Z sunpoet $
 
 PORTNAME=	tcptraceroute
 PORTVERSION=	1.4
@@ -11,17 +11,11 @@ MASTER_SITES=	http://michael.toren.net/code/tcptraceroute/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Traceroute implementation using TCP packets
 
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet10
+LICENSE=	GPLv2
 
-MAN8=	tcptraceroute.8
-
-LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
+BUILD_DEPENDS=	${LOCALBASE}/bin/libnet10-config:${PORTSDIR}/net/libnet10
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|libnet-config|${LIBNET_CONFIG}|' \
-		${WRKSRC}/${MAKEFILE}
-
-post-install:
-	@${CHMOD} u+s ${PREFIX}/sbin/tcptraceroute
+	@${REINPLACE_CMD} -e 's|libnet-config|libnet10-config|' ${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
