@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-turbocheetah
-# Date created:		2006-12-01
-# Whom:			Nicola Vitale <nivit@email.it>
-#
-# $FreeBSD: ports/devel/py-turbocheetah/Makefile,v 1.7 2012/11/17 05:56:51 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@email.it>
+# $FreeBSD: devel/py-turbocheetah/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	TurboCheetah
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ RUN_DEPENDS=	cheetah:${PORTSDIR}/devel/py-cheetah
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
