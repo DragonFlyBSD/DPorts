@@ -1,5 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@outlook.com>
-# $FreeBSD: devel/vera++/Makefile 325368 2013-08-25 22:38:47Z rakuco $
+# $FreeBSD: devel/vera++/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	vera++
 PORTVERSION=	1.2.1
@@ -24,6 +24,7 @@ CMAKE_ARGS+=	-DTCL_INCLUDE_PATH=${TCL_INCLUDEDIR} \
 
 MAN1=		vera++.1
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_MAN} ${WRKDIR}/vera++.1 ${PREFIX}/man/man1
 
