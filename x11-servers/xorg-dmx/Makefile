@@ -1,8 +1,7 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: x11-servers/xorg-dmx/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-servers/xorg-dmx/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	xorg-dmx
-PORTREVISION=	0
 
 COMMENT=	Distributed Multihead X from X.Org
 
@@ -25,6 +24,7 @@ MAN1=		Xdmx.1 dmxtodmx.1 vdltodmx.1 xdmxconfig.1
 
 SLAVE_PORT=	yes
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}/hw/dmx; ${MAKE} install
 
