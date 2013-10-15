@@ -1,4 +1,4 @@
-# $FreeBSD: games/sdl_lopan/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/sdl_lopan/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sdl_lopan
 PORTVERSION=	10
@@ -34,6 +34,7 @@ PORTDOCS=	Changelog README
 DESKTOP_ENTRIES="SDL Lopan" "${COMMENT}" "sdllopan" \
 		"sdllopan" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
