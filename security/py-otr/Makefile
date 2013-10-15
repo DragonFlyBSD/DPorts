@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-otr/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: security/py-otr/Makefile 330188 2013-10-12 21:11:48Z cs $
 
 PORTNAME=	otr
 PORTVERSION=	0.2.1.1
@@ -8,8 +8,8 @@ MASTER_SITES=	http://python-otr.pentabarf.de/releases/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	python-otr-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A set of python bindings for libotr
+MAINTAINER=	cs@FreeBSD.org
+COMMENT=	Python bindings for libotr
 
 BUILD_DEPENDS=	swig1.3:${PORTSDIR}/devel/swig13
 # This should be updated to the newer version of libotr
@@ -22,4 +22,5 @@ PYDISTUTILS_PKGNAME=	python-otr
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
