@@ -1,5 +1,5 @@
 # Created by: Kim Scarborough <user@unknown.nu>
-# $FreeBSD: misc/brs/Makefile 324158 2013-08-02 10:16:05Z antoine $
+# $FreeBSD: misc/brs/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	brs
 PORTVERSION=	4.03
@@ -17,6 +17,7 @@ ALL_TARGET=
 CFLAGS+=	-Wno-error=return-type
 MAN1=		bible.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's=%%PREFIX%%=${PREFIX}=g' \
 		${WRKSRC}/brl.c ${WRKSRC}/bible.1
