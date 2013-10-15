@@ -1,4 +1,4 @@
-# $FreeBSD: games/supertux-devel/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: games/supertux-devel/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	supertux
 PORTVERSION=	0.3.4
@@ -21,6 +21,7 @@ USE_GL=		glew
 USES=		cmake:outsource iconv
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/^Icon=/s,supertux.png,supertux2.png,' \
 		${WRKSRC}/supertux2.desktop
