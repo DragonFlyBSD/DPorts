@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-MIME-Fast/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-MIME-Fast/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	MIME-Fast
 PORTVERSION=	1.6
@@ -21,4 +21,5 @@ CONFIGURE_ENV=	PREFIX="${PREFIX}" CCFLAGS="${CCFLAGS} ${PTHREAD_CFLAGS}"
 
 MAN3=		MIME::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
