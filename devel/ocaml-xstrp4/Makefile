@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/ocaml-xstrp4/Makefile 309296 2012-12-20 05:54:02Z araujo $
+# $FreeBSD: devel/ocaml-xstrp4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	xstrp4
 PORTVERSION=	1.8
@@ -27,6 +27,7 @@ EXAMPLESDIR=	${OCAML_EXAMPLESDIR}/${PORTNAME}
 
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
