@@ -1,4 +1,4 @@
-# $FreeBSD: devel/csmith/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: devel/csmith/Makefile 328642 2013-09-29 03:05:51Z eadler $
 
 PORTNAME=	csmith
 PORTVERSION=	2.1.0
@@ -16,8 +16,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-USES=	gmake
+USES=		gmake
 
 ONLY_FOR_ARCHS=	i386 amd64
 
