@@ -1,5 +1,5 @@
 # Created by: Brad Lanam <bll@gentoo.com>
-# $FreeBSD: sysutils/di/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/di/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	di
 PORTVERSION=	4.34
@@ -15,6 +15,7 @@ MAN1=		di.1
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
