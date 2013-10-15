@@ -1,9 +1,5 @@
-# New ports collection makefile for:    quit
-# Date created:                25 Aug 2003
-# Whom:                        UMENO Takashi <umeno@rr.iij4u.or.jp>
-#
-# $FreeBSD: ports/games/quit/Makefile,v 1.6 2012/11/17 05:57:51 svnexp Exp $
-#
+# Created by: UMENO Takashi <umeno@rr.iij4u.or.jp>
+# $FreeBSD: games/quit/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	quit
 PORTVERSION=	1.2a
@@ -20,6 +16,7 @@ MANLANG=	ja
 PLIST_FILES=	bin/quit
 PORTDOCS=	README quit.txt
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} -o ${WRKSRC}/quit ${WRKSRC}/quit.c -lncurses
 
