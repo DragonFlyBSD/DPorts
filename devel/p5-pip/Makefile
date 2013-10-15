@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-pip/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/p5-pip/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pip
 PORTVERSION=	1.19
@@ -34,6 +34,7 @@ MAN3=		Module::Plan::Base.3 \
 		Module::Plan::Lite.3 \
 		pip.3
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} 's|(INST_SCRIPT)/pip|(INST_SCRIPT)/pip-perl|' ${WRKSRC}/Makefile
 
