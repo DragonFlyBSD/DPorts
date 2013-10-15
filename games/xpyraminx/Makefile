@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xpyraminx/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xpyraminx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xpyraminx
 PORTVERSION=	5.5.2
@@ -18,6 +18,7 @@ MAN1=		xpyraminx.1
 MANCOMPRESSED=	no
 XFREE86_HTML_MAN=	no
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xpyraminx ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/Pyraminx.ad ${PREFIX}/lib/X11/app-defaults/Pyraminx
