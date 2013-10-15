@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: games/lugaru/files/lugaru.in 329241 2013-10-03 21:58:56Z nemysis $
+#
+
+cd "%%DATADIR%%"
+./lugaru "${@}"
