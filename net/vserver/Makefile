@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vserver
-# Date created:				10. Jan 06
-# Whom:					Andreas Wetzel <mickey@netassembly.de>
-#
-# $FreeBSD: ports/net/vserver/Makefile,v 1.5 2012/11/17 06:00:24 svnexp Exp $
-#
+# Created by: Andreas Wetzel <mickey@netassembly.de>
+# $FreeBSD: net/vserver/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	vserver
 PORTVERSION=	2.43c
@@ -29,6 +25,7 @@ SUB_LIST+=	VCHATUSER=${VCHATUSER} \
 PLIST_FILES=	sbin/vserver sbin/vchatctl \
 		"@dirrmtry etc/vchat"
 
+NO_STAGE=	yes
 pre-install:
 	@${SETENV} PKG_PREFIX=${PREFIX} \
 		${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
