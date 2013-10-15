@@ -1,9 +1,5 @@
-# New ports collection makefile for: The cisco Systems IOS(tm) config register decoder
-# Date created:		24 May 2001
-# Whom:			Joe Clarke <marcus@marcuscom.com>
-#
-# $FreeBSD: ports/net-mgmt/confregdecode/Makefile,v 1.13 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: Joe Clarke <marcus@marcuscom.com>
+# $FreeBSD: net-mgmt/confregdecode/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	confregdecode
 PORTVERSION=	1.2.1
@@ -21,6 +17,7 @@ MAKE_ENV=	JAVAC="${JAVAC}" JAR="${JAR}"
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 SUB_FILES=	confregdecode
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/confregdecode.jar ${DATADIR}
