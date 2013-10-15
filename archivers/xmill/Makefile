@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/archivers/xmill/Makefile,v 1.20 2012/12/18 04:17:56 svnexp Exp $
+# $FreeBSD: archivers/xmill/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	xmill
 DISTVERSION=	0.8
@@ -12,6 +12,7 @@ COMMENT=	Efficient compressor for XML
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKEFILE=	makefile
 
+NO_STAGE=	yes
 USE_ZIP=	yes
 USE_DOS2UNIX=	${MAKEFILE} XMill/BZlib.cpp
 
