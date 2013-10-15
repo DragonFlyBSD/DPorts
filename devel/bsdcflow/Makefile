@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bsdcflow/Makefile 323476 2013-07-22 16:29:59Z mva $
+# $FreeBSD: devel/bsdcflow/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bsdcflow
 PORTVERSION=	0.0.6
@@ -24,4 +24,5 @@ MANCOMPRESSED=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/gnu
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
