@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: print/libgnomeprintmm/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: print/libgnomeprintmm/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	libgnomeprintmm
 PORTVERSION=	2.5.1
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.5" API_VERSION="2.6"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|\(-lglibmm\)|-L\$$(GMM_PROCDIR)/../.. \1|" \
 		${WRKSRC}/tools/extra_defs_gen/Makefile.in
