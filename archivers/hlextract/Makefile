@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/archivers/hlextract/Makefile,v 1.7 2013/02/14 22:51:42 svnexp Exp $
+# $FreeBSD: archivers/hlextract/Makefile 328312 2013-09-25 20:16:30Z danilo $
 
 PORTNAME=	hlextract
 PORTVERSION=	2.4.4
@@ -7,12 +7,12 @@ CATEGORIES=	archivers games
 MASTER_SITES=	http://nemesis.thewavelength.net/files/files/
 DISTNAME=	hllib${PORTVERSION:S/.//g}
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Utility to extract data from various Half-Life file formats
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	hl:${PORTSDIR}/games/hllib
+LIB_DEPENDS=	libhl.so:${PORTSDIR}/games/hllib
 
 USE_DOS2UNIX=	yes
 USE_ZIP=	yes
@@ -27,6 +27,6 @@ do-build:
 		${WRKSRC}/Main.c -o ${WRKSRC}/${PORTNAME} -lhl
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
