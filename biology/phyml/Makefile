@@ -1,5 +1,5 @@
 # Created by: ballen
-# $FreeBSD: biology/phyml/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/phyml/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	phyml
 PORTVERSION=	20121109
@@ -24,6 +24,7 @@ AUTOMAKE_ARGS=	--add-missing
 
 PLIST_FILES=	bin/phyml
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^AC_INIT/s|,esyscmd.*,|,[${PORTVERSION}],| ; \
