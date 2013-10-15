@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmfishtime
-# Date created:				31 March 2001
-# Whom:					Anders Nordby <anders@fix.no>
-#
-# $FreeBSD: ports/x11-clocks/wmfishtime/Makefile,v 1.23 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@fix.no>
+# $FreeBSD: x11-clocks/wmfishtime/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmfishtime
 PORTVERSION=	1.24
@@ -25,6 +21,7 @@ MAKE_ARGS+=	CFLAGS="${CPPFLAGS} ${CFLAGS} -Wall ${GTK_CFLAGS}" \
 PLIST_FILES=	bin/wmfishtime
 MAN1=	wmfishtime.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -E -e "s@1\.23@1\.24@g" ${WRKSRC}/fishmon.c ${WRKSRC}/wmfishtime.1
 
