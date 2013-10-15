@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ocaml-equeue
-# Date created:        21 July 2004
-# Whom:                David JULIEN
-#
-# $FreeBSD: ports/devel/ocaml-equeue/Makefile,v 1.14 2012/11/17 05:56:02 svnexp Exp $
-#
+# Created by: David JULIEN
+# $FreeBSD: devel/ocaml-equeue/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	equeue
 PORTVERSION=	2.1.4
@@ -39,6 +35,7 @@ PLIST_SUB+=		TCL=""
 PLIST_SUB+=		TCL="@comment "
 .endif
 
+NO_STAGE=	yes
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .if !defined(NOPORTDOCS)
