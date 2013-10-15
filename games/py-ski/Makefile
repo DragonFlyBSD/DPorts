@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/games/py-ski/Makefile,v 1.3 2013/01/09 20:04:45 svnexp Exp $
+# $FreeBSD: games/py-ski/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ski
 PORTVERSION=	6.5
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 MAN6=		ski.6
 PLIST_FILES=	bin/ski
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ski ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/ski.6 ${PREFIX}/man/man6/
