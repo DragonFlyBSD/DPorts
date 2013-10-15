@@ -1,5 +1,5 @@
 # Created by: Manuel Creach <manuel.creach@icloud.com>
-# $FreeBSD: net/libnfs/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/libnfs/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libnfs
 PORTVERSION=	1.3.0
@@ -21,6 +21,7 @@ ACLOCAL_ARGS=	-I.
 AUTOMAKE_ARGS=	--add-missing
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's|$$(libdir)/\(pkgconfig\)|$$(prefix)/libdata/\1|' \
 		${WRKSRC}/Makefile.am
