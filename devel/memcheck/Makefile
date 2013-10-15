@@ -1,9 +1,5 @@
-# Ports collection makefile for:	memcheck
-# Date created:				Mon Sep 2, 2002
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/memcheck/Makefile,v 1.14 2012/11/17 05:55:59 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: devel/memcheck/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	memcheck
 PORTVERSION=	0.2.4
