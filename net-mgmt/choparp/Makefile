@@ -1,9 +1,5 @@
-# New ports collection makefile for:	choparp
-# Date created:		7 October 1997
-# Whom:			itojun@itojun.org
-#
-# $FreeBSD: ports/net-mgmt/choparp/Makefile,v 1.20 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: itojun@itojun.org
+# $FreeBSD: net-mgmt/choparp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	choparp
 PORTVERSION=	20021107
@@ -20,4 +16,5 @@ MANCOMPRESSED=	yes
 MAN8=		choparp.8
 PLIST_FILES=	sbin/choparp
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
