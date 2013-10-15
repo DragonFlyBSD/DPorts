@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libsynaptics
-# Date created:				Sun Mar 19 21:20:25 CET 2006
-# Whom:					Markus Brueffer <markus@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libsynaptics/Makefile,v 1.10 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: Markus Brueffer <markus@FreeBSD.org>
+# $FreeBSD: x11/libsynaptics/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libsynaptics
 PORTVERSION=	0.14.6b
@@ -23,6 +19,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/%%PTHREAD_LIBS%%/${PTHREAD_LIBS}/g' \
 		${WRKSRC}/Makefile.in
