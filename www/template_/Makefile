@@ -1,5 +1,5 @@
 # Created by: Mun-Kyo Seo <munggo@pmy.lv>
-# $FreeBSD: ports/www/template_/Makefile,v 1.4 2012/11/17 06:03:06 svnexp Exp $
+# $FreeBSD: www/template_/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	template_
 PORTVERSION=	2.2.3
@@ -18,6 +18,7 @@ WANT_PHP_WEB=	yes
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 .for f in Template_.class.php Template_.compiler.php
