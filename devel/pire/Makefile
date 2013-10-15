@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/pire/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/pire/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pire
 PORTVERSION=	0.0.4
@@ -23,6 +23,7 @@ ONLY_FOR_ARCHS_REASON=	not yet ported to big-endian platforms
 OPTIONS_DEFINE=	UNITTEST
 OPTIONS_UNITTEST_DESC=	Compile with unittest support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUNITTEST} || defined(PACKAGE_BUILDING)
