@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xjump
-# Date created:				Sun 25 Feb 2001
-# Whom:					will
-#
-# $FreeBSD: ports/games/xjump/Makefile,v 1.16 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: games/xjump/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xjump
 PORTVERSION=	2.7.5
@@ -23,6 +19,7 @@ MAKE_ARGS=	CC="${CC} ${CFLAGS}" RECORD_FILE="/var/games/xjump.record" \
 		IDIR="-I${LOCALBASE}/include" LDIR="-L${LOCALBASE}/lib"
 ALL_TARGET=	xjump
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} -m 2755 -g games ${WRKSRC}/xjump ${PREFIX}/bin
 	@${CAT} ${PKGMESSAGE}
