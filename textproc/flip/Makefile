@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flip
-# Date created:		2005-07-01
-# Whom:			Radim Kolar <hsn@sanatana.dharma>
-#
-# $FreeBSD: ports/textproc/flip/Makefile,v 1.5 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Radim Kolar <hsn@sanatana.dharma>
+# $FreeBSD: textproc/flip/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	flip
 PORTVERSION=	1.19
@@ -23,6 +19,7 @@ ALL_TARGET=	bsd
 PLIST_FILES=	bin/flip
 MAN1=		flip.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/flip ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/flip.1 ${MAN1PREFIX}/man/man1
