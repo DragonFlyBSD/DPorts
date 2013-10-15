@@ -1,4 +1,4 @@
-# $FreeBSD: databases/openark-kit/Makefile 319292 2013-05-28 05:53:58Z miwi $
+# $FreeBSD: databases/openark-kit/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	openark-kit
 PORTVERSION=	196
@@ -16,4 +16,5 @@ PROJECTHOST=	openarkkit
 USE_PYDISTUTILS=	yes
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
