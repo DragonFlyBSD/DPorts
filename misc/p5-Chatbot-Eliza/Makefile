@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/p5-Chatbot-Eliza/Makefile 324167 2013-08-02 17:11:34Z az $
+# $FreeBSD: misc/p5-Chatbot-Eliza/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Chatbot-Eliza
 PORTVERSION=	1.04
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Chatbot::Eliza.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
