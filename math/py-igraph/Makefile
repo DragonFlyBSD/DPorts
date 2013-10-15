@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-igraph
-# Date created:		2006-12-20
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/math/py-igraph/Makefile,v 1.13 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: math/py-igraph/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	igraph
 PORTVERSION=	0.5.4
@@ -23,4 +19,5 @@ USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 PYDISTUTILS_PKGNAME=	python_igraph
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
