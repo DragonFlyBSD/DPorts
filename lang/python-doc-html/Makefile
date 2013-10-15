@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: lang/python-doc-html/Makefile 318355 2013-05-17 04:41:52Z rm $
+# $FreeBSD: lang/python-doc-html/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	python-doc-${DOCFORMAT}
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -24,6 +24,7 @@ PLIST=		${WRKDIR}/pkg-plist.${DOCFORMAT}
 
 DOCFORMAT?=	html
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .  if ${DOCFORMAT} == "html" || ${DOCFORMAT} == "text"
