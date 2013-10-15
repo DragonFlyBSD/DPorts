@@ -1,5 +1,5 @@
 # Created by: Martin Jackson <mhjacks@swbell.net>
-# $FreeBSD: ports/net-mgmt/py-snmp4-mibs/Makefile,v 1.11 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/py-snmp4-mibs/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	snmp4-mibs
 PORTVERSION=	0.1.4
@@ -29,6 +29,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	CHANGES \
 		README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
