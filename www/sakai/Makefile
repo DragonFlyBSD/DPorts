@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: ports/www/sakai/Makefile,v 1.11 2012/12/12 00:01:48 svnexp Exp $
+# $FreeBSD: www/sakai/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	sakai
 PORTVERSION=	2.7.1
@@ -23,6 +23,7 @@ TOMCAT_DIR=	${PREFIX}/apache-tomcat-6.0
 PLIST_SUB+=	TOMCAT_DIR=${TOMCAT_DIR:S|^${PREFIX}/||} \
 	SAKAI_VER="${PORTVERSION}" 
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKSRC}/webapps && `${LS} -1 |${SED} 's/.war//' >> ${WRKSRC}/list`
 	@cd ${WRKSRC}/webapps && ${MKDIR} `${CAT} ${WRKSRC}/list`
