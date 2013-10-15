@@ -1,5 +1,5 @@
 # Created by: Len Sassama
-# $FreeBSD: sysutils/pipemeter/Makefile 319271 2013-05-27 16:41:53Z bsam $
+# $FreeBSD: sysutils/pipemeter/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pipemeter
 PORTVERSION=	1.1.3
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 MAN1=		pipemeter.1
 PLIST_FILES=	bin/pipemeter
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pipemeter ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pipemeter.1 ${MANPREFIX}/man/man1
