@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/umark/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: games/umark/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	umark
 DISTVERSION=	2.0.0-Beta3
@@ -20,6 +20,7 @@ MAKEFILE=	${FILESDIR}/Makefile
 SUB_FILES=	pkg-message
 PORTDOCS=	ChangeLog INSTALL README TODO
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	@${MKDIR} ${DATADIR}
