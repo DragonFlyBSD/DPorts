@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-ODF-lpOD/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-ODF-lpOD/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ODF-lpOD
 PORTVERSION=	1.121
@@ -32,4 +32,5 @@ MAN3=		ODF::lpOD.3 \
 		ODF::lpOD::TextElement.3 \
 		ODF::lpOD::Tutorial.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
