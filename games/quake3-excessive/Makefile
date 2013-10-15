@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Q3 Mod: Excessive
-# Date created:				Sat Jun 23 23:40:21 EDT 2001
-# Whom:					pat@databits.net
-#
-# $FreeBSD: games/quake3-excessive/Makefile 317955 2013-05-12 13:00:07Z danfe $
-#
+# Created by: pat@databits.net
+# $FreeBSD: games/quake3-excessive/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	excessive
 PORTVERSION=	003
@@ -23,6 +19,7 @@ NO_BUILD=	yes
 
 DATADIR=	${Q3DIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	@(cd ${WRKSRC}; ${UNZIP_CMD} description.pk3)
 
