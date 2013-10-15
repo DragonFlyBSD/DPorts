@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: ports/net/py-beanstalkc/Makefile,v 1.6 2013/02/09 15:59:33 svnexp Exp $
+# $FreeBSD: net/py-beanstalkc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	beanstalkc
 PORTVERSION=	0.3.0
@@ -22,6 +22,7 @@ YAML_DESC=	Support parsing YAML responses
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MYAML}
