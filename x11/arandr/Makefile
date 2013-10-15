@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: x11/arandr/Makefile 321452 2013-06-21 10:10:08Z sbz $
+# $FreeBSD: x11/arandr/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	arandr
 PORTVERSION=	0.1.7.1
@@ -21,6 +21,7 @@ OPTIONS_DEFINE=	DOCS
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USES+=		gettext desktop-file-utils
