@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/graphics/cosmoplayer/Makefile,v 1.7 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: graphics/cosmoplayer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cosmoplayer
 PORTVERSION=	2.1.1
@@ -24,6 +24,7 @@ JARFILES=	npcosmop211.jar LICENSE.npcosmop211.txt
 
 PLIST_FILES=	${JARFILES:S|^|%%JAVAJARDIR%%/|}
 
+NO_STAGE=	yes
 post-extract:
 	${MV} ${WRKDIR}/comsoplayer-jar ${WRKSRC}
 	${MV} ${WRKSRC}/License ${WRKSRC}/LICENSE.npcosmop211.txt
