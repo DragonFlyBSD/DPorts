@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Curses-Forms
-# Date created:			Apr 3, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: devel/p5-Curses-Forms/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Curses-Forms/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Curses-Forms
 PORTVERSION=	1.997
@@ -27,4 +22,5 @@ MAN3=	Curses::Forms.3 \
 	Curses::Forms::Dialog::Input.3 \
 	Curses::Forms::Dialog::Logon.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
