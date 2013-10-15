@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: textproc/docbook-to-man/Makefile 322005 2013-06-28 22:34:15Z bapt $
+# $FreeBSD: textproc/docbook-to-man/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-to-man
 PORTVERSION=	1.0
@@ -25,6 +25,7 @@ XFREE86_HTML_MAN=	no
 
 MAN1=	oinstant.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Local variables
