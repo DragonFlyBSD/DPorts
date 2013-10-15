@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	aview
-# Date created:		Dec 18 1997
-# Whom:			frankch@waru.life.nthu.edu.tw
-#
-# $FreeBSD: ports/graphics/aview/Makefile,v 1.22 2012/11/17 05:58:01 svnexp Exp $
-#
+# Created by: frankch@waru.life.nthu.edu.tw
+# $FreeBSD: graphics/aview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	aview
 PORTVERSION=	1.3.0.r1
@@ -26,6 +22,7 @@ CONFIGURE_ARGS=	--with-x=no
 
 MAN1=		asciiview.1 aview.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/bash|/sh|g' ${WRKSRC}/asciiview
 	@${FIND} ${WRKSRC} -name '*.[ch]' | ${XARGS} ${REINPLACE_CMD} -e \
