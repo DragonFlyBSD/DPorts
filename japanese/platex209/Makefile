@@ -1,5 +1,5 @@
 # Created by: Makoto WATANABE <watanabe@zlab.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/platex209/Makefile 319148 2013-05-27 01:56:56Z hrs $
+# $FreeBSD: japanese/platex209/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	platex209
 PORTVERSION=	1.0
@@ -20,6 +20,7 @@ PLIST_SUB=	TEXMFDIR=${TEXMFDIR} \
 		WEB2CDIR=${WEB2CDIR} \
 		PLATEX209DIR=${PLATEX209DIR}
 
+NO_STAGE=	yes
 do-build:
 	@(cd ${WRKSRC}; ${LOCALBASE}/bin/ptex -ini 'plplain.tex\dump')
 
