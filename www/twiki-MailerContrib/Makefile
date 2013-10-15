@@ -1,8 +1,4 @@
-# New ports collection makefile for:	twiki-MailerContrib
-# Date created:		17 April 2008
-#
-# $FreeBSD: ports/www/twiki-MailerContrib/Makefile,v 1.4 2012/11/17 06:03:09 svnexp Exp $
-#
+# $FreeBSD: www/twiki-MailerContrib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MailerContrib
 SVNREV=		17641
@@ -11,5 +7,6 @@ COMMENT=	E-mail notification of changes
 
 RUN_DEPENDS=	p5-URI>=1.35:${PORTSDIR}/net/p5-URI
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
