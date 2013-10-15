@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: multimedia/clive1/Makefile 319909 2013-06-04 21:20:31Z jgh $
+# $FreeBSD: multimedia/clive1/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	clive
 PORTVERSION=	1.0.2
@@ -44,6 +44,7 @@ XINE_DESC=	xine as video player
 
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFEEDPARSER}
