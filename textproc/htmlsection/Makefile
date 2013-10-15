@@ -1,5 +1,5 @@
 # Created by: SAKAI Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
-# $FreeBSD: textproc/htmlsection/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/htmlsection/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	htmlsection
 PORTVERSION=	1.1
@@ -15,6 +15,7 @@ USE_PERL5=	build
 MAN1=		htmlsection.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 pre-build:
 		@(echo perl is set ${PERL} in pre-build:)
 		@(cd ${WRKSRC}; ./findperl.sh ${PERL} > whereperl)
