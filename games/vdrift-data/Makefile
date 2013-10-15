@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vdrift-data
-# Date created:		2006-02-21
-# Whom:			Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-#
-# $FreeBSD: ports/games/vdrift-data/Makefile,v 1.11 2012/11/17 05:57:55 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
+# $FreeBSD: games/vdrift-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	20100630
@@ -25,6 +21,7 @@ WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}${DATE_VERSION}
 
 DATE_VERSION=	2010-06-30
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKSRC}/data && \
 		${FIND} * -name "SConscript*" -print0 | ${XARGS} -0 ${RM}
