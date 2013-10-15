@@ -1,8 +1,8 @@
 # Created by: Edwin Groothuis (edwin@mavetju.org)
-# $FreeBSD: lang/tcl-manual/Makefile 315951 2013-04-17 09:05:39Z gahr $
+# $FreeBSD: lang/tcl-manual/Makefile 328932 2013-10-01 10:31:12Z gahr $
 
 PORTNAME=	tcl-manual
-PORTVERSION=	20130208
+PORTVERSION=	20131001
 CATEGORIES=	lang
 MASTER_SITES=	SF/tcl/Tcl/
 DISTFILES=	
@@ -13,9 +13,9 @@ COMMENT=	Documentation for TCL (Tool Command Language)
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
-VERSIONS=	8.4.19 \
-		8.5.14 \
-		8.6.0
+VERSIONS=	8.4.20 \
+		8.5.15 \
+		8.6.1
 
 .for v in ${VERSIONS}
 DISTFILES+=	$v/tcl$v-html.tar.gz
@@ -38,8 +38,8 @@ post-patch:
 
 do-install:
 .for v in ${VERSIONS}
-	${MKDIR} ${PREFIX}/share/doc/tcl${v:R:S/.//}
-	${CP} -R ${WRKDIR}/tcl${v}/html/* ${PREFIX}/share/doc/tcl${v:R:S/.//}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/tcl${v:R:S/.//}
+	${CP} -R ${WRKDIR}/tcl${v}/html/* ${STAGEDIR}${PREFIX}/share/doc/tcl${v:R:S/.//}
 .endfor
 
 .include <bsd.port.mk>
