@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/opencity/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: games/opencity/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	opencity
 PORTVERSION=	0.0.6.4
@@ -22,6 +22,7 @@ PORTDOCS=	*
 
 MAN6=		opencity.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
