@@ -1,8 +1,5 @@
-# New ports collection Makefile for:		soapui
-# Date created:					2007-07-25
-# Whom:						arved
-#
-# $FreeBSD: ports/devel/soapui/Makefile,v 1.16 2012/11/17 05:57:03 svnexp Exp $
+# Created by: arved
+# $FreeBSD: devel/soapui/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	soapui
 PORTVERSION=	4.5.1
@@ -21,6 +18,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 do-build:
 	${REINPLACE_CMD} -e 's:%%SOAPUI_HOME%%:${DATADIR}:' \
 			-e 's:%%JAVA%%:${JAVA}:' ${WRKSRC}/bin/${PORTNAME}.sh
