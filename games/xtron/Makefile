@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xtron/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xtron/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xtron
 PORTVERSION=	1.1a
@@ -20,6 +20,7 @@ DESKTOP_ENTRIES="xtron" \
 		"Game;ArcadeGame;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
