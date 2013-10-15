@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/belooted/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: games/belooted/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	belooted
 PORTVERSION=	0.1.4.1
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
