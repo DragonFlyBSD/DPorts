@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tcsh_nls
-# Date created:		14 Feb 2006
-# Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: shells/tcsh_nls/Makefile 316683 2013-04-27 18:25:24Z mva $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: shells/tcsh_nls/Makefile 329354 2013-10-04 18:15:16Z ume $
 
 PORTNAME=	tcsh_nls
 PORTVERSION=	1.0
@@ -67,7 +63,7 @@ do-fetch:
 do-install:
 	@for i in ${NLS_CATALOGS}; do \
 		${LN} -sf /usr/share/nls/$${i%%:*}/tcsh.cat \
-			${PREFIX}/share/nls/$${i##*:}/tcsh.cat; \
+			${STAGEDIR}${PREFIX}/share/nls/$${i##*:}/tcsh.cat; \
 	done
 
 .include <bsd.port.mk>
