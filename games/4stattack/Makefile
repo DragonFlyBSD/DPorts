@@ -1,9 +1,5 @@
-# New ports collection makefile for:	4stAttack
-# Date created:			26 Jan 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/games/4stattack/Makefile,v 1.14 2012/11/17 05:57:31 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: games/4stattack/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	4stattack
 PORTVERSION=	2.1.4
@@ -24,6 +20,7 @@ NO_BUILD=	yes
 
 PYC=		PYTHON="${PYTHON_CMD}" ${SH} ${SCRIPTDIR}/py-compile
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|; s|%%PYTHON%%|${PYTHON_CMD}|' \
 		${WRKSRC}/4stattack
