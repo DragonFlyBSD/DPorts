@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-im/mbpurple/Makefile,v 1.11 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/mbpurple/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	mbpurple
 PORTVERSION=	0.3.0
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pidgin:${PORTSDIR}/net-im/pidgin
 PROJECTHOST=	microblog-purple
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.Dist
 	@${SED} -e 's#make -C#gmake -C#' \
