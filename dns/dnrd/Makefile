@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: dns/dnrd/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: dns/dnrd/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=		dnrd
 PORTVERSION=		2.20.3
@@ -31,6 +31,7 @@ DNRD_DIR?=	${ETCDIR}
 SUB_FILES=	pkg-install
 SUB_LIST+=	DNRD_DIR=${DNRD_DIR}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTCP}
