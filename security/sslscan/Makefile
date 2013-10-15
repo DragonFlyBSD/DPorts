@@ -1,5 +1,5 @@
 # Created by: Matthieu BOUTHORS <matthieu@labs.fr>
-# $FreeBSD: security/sslscan/Makefile 322461 2013-07-07 21:57:17Z jgh $
+# $FreeBSD: security/sslscan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sslscan
 PORTVERSION=	1.8.2
@@ -16,4 +16,5 @@ MAKE_ARGS+=	LDFLAGS="-lcrypto -L${LOCALBASE}/lib"
 MAN1=	sslscan.1
 PLIST_FILES=	bin/sslscan
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
