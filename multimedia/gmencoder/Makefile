@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/gmencoder/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: multimedia/gmencoder/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gmencoder
 PORTVERSION=	0.1.0
@@ -25,6 +25,7 @@ MAN1=		gmencoder.1
 DESKTOP_ENTRIES=	"Gmencoder" "Gnome2 front-end to mplayer/mencoder" \
 		"" "gmencoder" "GNOME;AudioVideo;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
