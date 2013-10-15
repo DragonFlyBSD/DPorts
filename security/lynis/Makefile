@@ -1,12 +1,8 @@
-# New ports collection makefile for:  Lynis
-# Date created:        15 November 2008
-# Whom:                Cory McIntire (loon@noncensored.com)
-#
-# $FreeBSD: ports/security/lynis/Makefile,v 1.5 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: Cory McIntire (loon@noncensored.com)
+# $FreeBSD: security/lynis/Makefile 328315 2013-09-25 20:51:04Z wg $
 
 PORTNAME=	lynis
-PORTVERSION=	1.2.9
+PORTVERSION=	1.3.0
 CATEGORIES=	security
 MASTER_SITES=	http://www.rootkit.nl/files/ \
 		http://downloads.rootkit.nl/
@@ -16,8 +12,7 @@ COMMENT=	Security and system auditing tool
 
 NO_BUILD=	yes
 
-PORTDOCS=	*
-MAN8=		lynis.8
+PORTDOCS=	CHANGELOG INSTALL FAQ LICENSE README
 
 post-patch:
 	@${REINPLACE_CMD} -e '/tINCLUDE_TARGETS/ s|".*"|"${DATADIR}/include"|; \
@@ -25,19 +20,13 @@ post-patch:
 		/tDB_TARGETS/ s|".*"|"${DATADIR}/db"|' ${WRKSRC}/${PORTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.8 ${MANPREFIX}/man/man8
-	${MKDIR} ${PREFIX}/etc/lynis
-	${INSTALL_DATA} ${WRKSRC}/default.prf ${PREFIX}/etc/lynis
-	${MKDIR} ${DATADIR}
-.for dir in include db dev plugins
-	cd ${WRKSRC} && ${COPYTREE_SHARE} ${dir} ${DATADIR}/
-.endfor
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-.for f in CHANGELOG INSTALL FAQ LICENSE README
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.8 ${STAGEDIR}${MANPREFIX}/man/man8
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/lynis
+	${INSTALL_DATA} ${WRKSRC}/default.prf ${STAGEDIR}${PREFIX}/etc/lynis
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "include db dev plugins" ${STAGEDIR}${DATADIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
