@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/ansible/Makefile 327498 2013-09-17 17:58:10Z wg $
+# $FreeBSD: sysutils/ansible/Makefile 330116 2013-10-12 03:33:40Z danilo $
 
 PORTNAME=	ansible
-PORTVERSION=	1.3.1
+PORTVERSION=	1.3.3
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://ansibleworks.com/releases/
 
@@ -10,39 +10,40 @@ COMMENT=	Simple ssh-based configuration management and orchestration system
 
 LICENSE=	GPLv3
 
-OPTIONS_DEFINE=	EXAMPLES FIREBALL
-
-FIREBALL_DESC=	Enable fireball mode
-FIREBALL_RUN_DEPENDS= ${PYTHON_PKGNAMEPREFIX}asn1>=0:${PORTSDIR}/devel/py-asn1 \
-	${PYTHON_PKGNAMEPREFIX}pyzmq>=0:${PORTSDIR}/devel/py-pyzmq \
-	${PYTHON_PKGNAMEPREFIX}pycrypto>=0:${PORTSDIR}/security/py-pycrypto \
-	${PYTHON_PKGNAMEPREFIX}keyczar>=0:${PORTSDIR}/security/py-keyczar
-
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=0:${PORTSDIR}/devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}paramiko>=0:${PORTSDIR}/security/py-paramiko \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=0:${PORTSDIR}/devel/py-Jinja2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	-2.7
+OPTIONS_DEFINE=	ACCELERATE EXAMPLES
+OPTIONS_DEFAULT=	ACCELERATE
+
+ACCELERATE_DESC=	Enable accelerate mode
+ACCELERATE_RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}pycrypto>=0:${PORTSDIR}/security/py-pycrypto \
+		${PYTHON_PKGNAMEPREFIX}keyczar>=0:${PORTSDIR}/security/py-keyczar
+
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 USES=		shebangfix
 SHEBANG_FILES=	${WRKSRC}/library/*/*
 
 SUB_FILES=	pkg-message
-PORTEXAMPLES=	*
-MAN1=	ansible-doc.1 ansible-playbook.1 ansible-pull.1 ansible.1
+
+PORTEXAMPLES=	ansible.cfg hosts
 
 post-patch-script:
-	@${REINPLACE_CMD} -e "s|/etc/ansible|${ETCDIR}|" \
+	@${REINPLACE_CMD} -i -e "s|/etc/ansible|${ETCDIR}|" \
 		${WRKSRC}/docs/man/man1/ansible-playbook.1 \
 		${WRKSRC}/docs/man/man1/ansible.1 \
 		${WRKSRC}/examples/ansible.cfg \
 		${WRKSRC}/examples/hosts \
 		${WRKSRC}/lib/ansible/constants.py \
 		${WRKSRC}/lib/ansible/playbook/__init__.py \
-		${WRKSRC}/lib/ansible/runner/__init__.py
-	@${REINPLACE_CMD} -e "s|/usr/share/ansible|${DATADIR}|" \
+		${WRKSRC}/lib/ansible/runner/__init__.py \
+		${WRKSRC}/library/system/setup
+	@${REINPLACE_CMD} -i -e "s|/usr/share/ansible|${DATADIR}|" \
 		${WRKSRC}/docs/man/man1/ansible-playbook.1 \
 		${WRKSRC}/docs/man/man1/ansible.1 \
 		${WRKSRC}/examples/ansible.cfg \
@@ -50,21 +51,15 @@ post-patch-script:
 		${WRKSRC}/lib/ansible/playbook/__init__.py \
 		${WRKSRC}/lib/ansible/runner/__init__.py
 
-pre-install-script:
-	@(cd ${WRKSRC} && ${FIND} . -type f -name '*.bak' -exec ${RM} {} +)
-
-.include <bsd.port.options.mk>
-
 post-install:
-	@${MKDIR} ${MAN1PREFIX}/man/man1
-	${INSTALL_MAN} ${MAN1:S,^,${WRKSRC}/docs/man/man1/,} \
-		${MAN1PREFIX}/man/man1
-
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	(cd ${WRKSRC}/examples/ && \
-		${COPYTREE_SHARE} \* ${EXAMPLESDIR})
-	@${CAT} ${PKGMESSAGE}
-.endif
+	@${MKDIR} ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/docs/man/man1/*.1 \
+		${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${MAN3PREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/docs/man/man3/*.3 \
+		${STAGEDIR}${MAN3PREFIX}/man/man3
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${CP} ${WRKSRC}/examples/ansible.cfg ${STAGEDIR}${EXAMPLESDIR}
+	${CP} ${WRKSRC}/examples/hosts ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
