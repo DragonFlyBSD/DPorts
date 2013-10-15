@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/gss/Makefile 325745 2013-08-31 00:11:06Z bapt $
+# $FreeBSD: security/gss/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gss
 PORTVERSION=	1.0.2
@@ -25,6 +25,7 @@ PORTDOCS=	gss.html gss.ps gss.pdf
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include "Makefile.man"
 .include <bsd.port.options.mk>
 
