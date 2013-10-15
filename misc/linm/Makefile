@@ -1,5 +1,5 @@
 # Created by: cjh@FreeBSD.org
-# $FreeBSD: misc/linm/Makefile 320348 2013-06-09 16:50:22Z miwi $
+# $FreeBSD: misc/linm/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	linm
 DISTVERSION=	0.8.1-1
@@ -26,6 +26,7 @@ MAKE_JOBS_UNSAFE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSMB}
