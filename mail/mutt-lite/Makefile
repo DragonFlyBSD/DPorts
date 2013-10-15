@@ -1,9 +1,5 @@
-# Ports collection makefile for:	mutt-devel-lite
-# Date created:			30 May 2005
-# Whom:				Udo Schweigert <udo.schweigert@siemens.com>
-#
-# $FreeBSD: ports/mail/mutt-lite/Makefile,v 1.5 2012/11/17 05:59:06 svnexp Exp $
-#
+# Created by: Udo Schweigert <udo.schweigert@siemens.com>
+# $FreeBSD: mail/mutt-lite/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 # Just to get a mutt-devel-lite pkg on pkg cluster
 MASTERDIR=	${.CURDIR}/../mutt
@@ -14,4 +10,5 @@ CONFLICTS=	ja-mutt-[0-9]* ja-mutt-devel-[0-9]* mutt-[0-9]* mutt-devel-[0-9]* mut
 
 MUTT_LITE=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
