@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/py-poker-eval/Makefile 325711 2013-08-30 16:49:43Z mva $
+# $FreeBSD: games/py-poker-eval/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	poker-eval
 PORTVERSION=	0.138
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	PYTHON=""
 
 PLIST_SUB=	PYVER=${PYTHON_VER:S/./_/}
 
+NO_STAGE=	yes
 post-configure:
 	@${INSTALL_SCRIPT} ${AUTOMAKE_DIR}/py-compile ${WRKSRC}/config
 
