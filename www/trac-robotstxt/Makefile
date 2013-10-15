@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/www/trac-robotstxt/Makefile,v 1.8 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-robotstxt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	robotxt
 PORTVERSION=	1.0.1
@@ -19,4 +19,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracRobotsTxt
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
