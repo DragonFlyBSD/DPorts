@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/burpsuite/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: security/burpsuite/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	burpsuite
 PORTVERSION=	1.5
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 PLIST_FILES=	bin/${PORTNAME} \
 		%%JAVAJARDIR%%/${DISTNAME}.jar
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Get BSFEL agreement
