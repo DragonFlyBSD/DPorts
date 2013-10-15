@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-swallow/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: x11/gnome-swallow/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	gnome-swallow
 PORTVERSION=	1.2
@@ -18,6 +18,7 @@ CONFIGURE_ENV=	LIBS="`pkg-config --libs libgnomeui-2.0`"
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
