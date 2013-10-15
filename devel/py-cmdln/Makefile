@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-cmdln/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: devel/py-cmdln/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	cmdln
 PORTVERSION=	1.1.2
@@ -20,6 +20,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 PORTDOCS=	LICENSE README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
