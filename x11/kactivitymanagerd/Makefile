@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kactivitymanagerd/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: x11/kactivitymanagerd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kactivitymanagerd
 PORTVERSION=	${KDE4_VERSION}
@@ -29,6 +29,7 @@ CMAKE_ARGS+=	-DCMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS=-rdynamic
 # 'USES= moderncompiler' would help, for now force dependency on GCC
 USE_GCC=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Workaround to keep kactivitymanagerd from crashing:
