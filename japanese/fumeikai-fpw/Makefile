@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Fumeikai Dictionary - JIS X 4081 version
-# Date created:        	2000.11.28
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/fumeikai-fpw/Makefile,v 1.6 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: japanese/fumeikai-fpw/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	fumeikai-fpw
 PORTVERSION=	1.0
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/fumeikai
 EXTRACT_BEFORE_ARGS=	-qL
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/dict/fumeikai-fpw/fumeikai/data
 	${INSTALL_DATA} ${WRKSRC}/fumeikai/data/honmon ${PREFIX}/share/dict/fumeikai-fpw/fumeikai/data
