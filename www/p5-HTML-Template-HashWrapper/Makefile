@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: www/p5-HTML-Template-HashWrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-Template-HashWrapper/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Template-HashWrapper
 PORTVERSION=	1.3
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::Template::HashWrapper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
