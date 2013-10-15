@@ -1,9 +1,5 @@
-# New ports collection makefile for:	grep+mb
-# Date created:		2 April 1995
-# Whom:			Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-#
-# $FreeBSD: ports/japanese/grep/Makefile,v 1.26 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
+# $FreeBSD: japanese/grep/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	grep
 PORTVERSION=	2.4.2
@@ -30,6 +26,7 @@ MLINKS=		jgrep.1 jegrep.1 \
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
