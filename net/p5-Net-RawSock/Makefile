@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-RawSock/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: net/p5-Net-RawSock/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-RawSock
 PORTVERSION=	1.0
@@ -15,6 +15,7 @@ USE_PERL5=	configure patch
 MAN3=		Net::RawSock.3
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e 's/^our\s+([\$$\@\%]\w+)/use vars qw($$1);$$1/;' \
 		-e '$$_="" if /use warnings/;' \
