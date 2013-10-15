@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-ps/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: graphics/evas_generic_loaders-ps/Makefile 330169 2013-10-12 18:31:42Z gblach $
 
 PORTNAME=	ps
 PORTVERSION=	1.7.8
@@ -14,7 +14,7 @@ COMMENT=	Additional loader for Evas (ps)
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	spectre:${PORTSDIR}/print/libspectre
+LIB_DEPENDS=	libspectre.so:${PORTSDIR}/print/libspectre
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
@@ -26,9 +26,9 @@ USE_LDCONFIG=	yes
 BINSRC=		${WRKSRC}/src/bin/${PORTNAME}
 
 do-build:
-	${MAKE} -C ${BINSRC}
+	${MAKE} ${MAKE_ARGS} -C ${BINSRC}
 
 do-install:
-	${MAKE} -C ${BINSRC} install
+	${MAKE} ${MAKE_ARGS} -C ${BINSRC} install
 
 .include <bsd.port.mk>
