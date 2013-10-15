@@ -1,5 +1,5 @@
 # Created by: Denis Rakhmangulov <danfocus@gmail.com>
-# $FreeBSD: net-im/iserverd/Makefile 318883 2013-05-23 16:10:43Z jgh $
+# $FreeBSD: net-im/iserverd/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	iserverd
 PORTVERSION=	2.5.5
@@ -31,6 +31,7 @@ MAN1=		db_convert.1
 MAN5=		iserv.conf.5 v3_proto.conf.5 v5_proto.conf.5
 MAN8=		iserverd.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} >= 700042
