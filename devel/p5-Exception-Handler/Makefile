@@ -1,5 +1,5 @@
 # Created by: jeffhung
-# $FreeBSD: devel/p5-Exception-Handler/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-Exception-Handler/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Exception-Handler
 PORTVERSION=	1.004
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Exception::Handler.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
