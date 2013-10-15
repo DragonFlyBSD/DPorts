@@ -1,9 +1,5 @@
-# New ports collection makefile for:    qwebirc
-# Date created:                         12 January 2010
-# Whom:                                 Terry (tabmow@freenode.net)
-#
-# $FreeBSD: ports/irc/qwebirc/Makefile,v 1.5 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Terry (tabmow@freenode.net)
+# $FreeBSD: irc/qwebirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	qwebirc
 PORTVERSION=	0.1
@@ -27,6 +23,7 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/twisted/words/__init__.py:${PORTSDIR}/net-im/
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/twisted/names/__init__.py:${PORTSDIR}/dns/py-twistedNames
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/twisted/conch/__init__.py:${PORTSDIR}/security/py-twistedConch
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
