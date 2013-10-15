@@ -1,5 +1,5 @@
 # Created by: Marcin Gondek <drixter@e-utp.net>
-# $FreeBSD: dns/rbllookup/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/rbllookup/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	rbllookup
 PORTVERSION=	0.0.1.1
@@ -18,6 +18,7 @@ USES=		perl5
 PLIST_FILES=	bin/rbllookup
 PORTDOCS=	CHANGELOG INSTALL NOTES README TODO gpg.asc
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/rbl.pl ${PREFIX}/bin/rbllookup
 .if !defined(NOPORTDOCS)
