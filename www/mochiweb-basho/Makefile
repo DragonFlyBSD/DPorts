@@ -1,4 +1,4 @@
-# $FreeBSD: www/mochiweb-basho/Makefile 316450 2013-04-24 16:35:52Z olgeni $
+# $FreeBSD: www/mochiweb-basho/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mochiweb
 PORTVERSION=	1.5.1p5
@@ -26,6 +26,7 @@ GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
