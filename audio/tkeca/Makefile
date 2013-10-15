@@ -1,4 +1,4 @@
-# $FreeBSD: audio/tkeca/Makefile 315038 2013-03-23 15:06:47Z crees $
+# $FreeBSD: audio/tkeca/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	tkeca
 PORTVERSION=	4.4.3
@@ -14,6 +14,7 @@ RUN_DEPENDS=	normalize:${PORTSDIR}/audio/normalize \
 		ecasound:${PORTSDIR}/audio/ecasound
 
 USE_GNOME=	desktopfileutils
+NO_STAGE=	yes
 USE_TCL=	yes
 USE_TK=		yes
 
