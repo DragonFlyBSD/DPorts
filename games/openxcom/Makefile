@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/openxcom/Makefile 327200 2013-09-14 01:14:54Z amdmi3 $
+# $FreeBSD: games/openxcom/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	openxcom
 PORTVERSION=	0.9.0
@@ -36,6 +36,7 @@ PLIST_DIRSTRY=	share/applications
 PORTDOCS=	*
 PORTDATA=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} < 1000000
