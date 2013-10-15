@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: net/smbldap-tools/Makefile 323996 2013-07-30 20:49:36Z mm $
+# $FreeBSD: net/smbldap-tools/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	smbldap-tools
 PORTVERSION=	0.9.10
@@ -20,9 +20,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/a//}
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_PERL5=	yes
+USES=		gmake perl5
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 ALL_TARGET=	build
 
 PORTDOCS=	*
@@ -36,6 +35,7 @@ CONFIGURE_ARGS+=	--with-samba-sysconfdir=${LOCALBASE}/etc \
 			--with-perl=${PERL} \
 			--with-perl-libdir=sitelib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMIGRATION_SCRIPTS}
