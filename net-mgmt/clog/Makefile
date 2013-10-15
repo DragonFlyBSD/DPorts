@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  clog
-# Date created:			  Tue Nov 04, 1997
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: ports/net-mgmt/clog/Makefile,v 1.12 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: net-mgmt/clog/Makefile 329734 2013-10-07 20:12:48Z eadler $
 
 PORTNAME=	clog
 PORTVERSION=	1.6
@@ -15,10 +10,13 @@ MASTER_SITE_SUBDIR=	obrien
 MAINTAINER=	obrien@FreeBSD.org
 COMMENT=	Tcp connection logger daemon
 
+PATCH_DEPENDS=	rcsdiff:${PORTSDIR}/devel/rcs
+
 WRKSRC=		${WRKDIR}/clog
 ALL_TARGET=	freebsd
 MAN8=		clog.8
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/clog ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/clog.8 ${PREFIX}/man/man8
