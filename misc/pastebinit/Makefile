@@ -1,4 +1,4 @@
-# $FreeBSD: misc/pastebinit/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: misc/pastebinit/Makefile 328304 2013-09-25 18:17:57Z eadler $
 
 PORTNAME=	pastebinit
 PORTVERSION=	1.3.1
@@ -32,9 +32,9 @@ post-patch:
 	${REINPLACE_CMD} -e 's|/usr/share/pastebin.d|${DATADIR}/pastebin.d|' \
 		${WRKSRC}/pastebinit
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 .if ${PORT_OPTIONS:MPASTEBINS}
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} pastebin.d ${DATADIR})
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} pastebin.d ${STAGEDIR}${DATADIR})
 .endif
 
 .include <bsd.port.mk>
