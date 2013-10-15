@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: security/p5-Crypt-CBCeasy/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-CBCeasy/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-CBCeasy
 PORTVERSION=	0.24
@@ -28,6 +28,7 @@ BLOWFISH_PP_DESC=	Build with Crypt::Blowfish_PP support
 TWOFISH2_DESC=		Build with Crypt::Twofish2 support
 RIJNDAEL_DESC=		Build with Crypt::Rijndael support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDES}
