@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: sysutils/msyslog/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/msyslog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	msyslog
 PORTVERSION=	1.08g
@@ -25,6 +25,7 @@ MANCOMPRESSED=	yes
 
 PORTSCOUT=	skipv:1.09d
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} > 900006
