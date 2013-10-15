@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/nautilus-cd-burner/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: sysutils/nautilus-cd-burner/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.149 2009/09/25 18:40:01 kwm Exp $
 
 PORTNAME=	nautilus-cd-burner
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	DVD
 OPTIONS_DEFAULT=DVD
 DVD_DESC=	DVD support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVD}
