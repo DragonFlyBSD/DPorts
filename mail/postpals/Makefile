@@ -1,9 +1,5 @@
-# New ports collection makefile for:	postpals
-# Date created:				7 March 2010
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: mail/postpals/Makefile 326271 2013-09-04 12:28:16Z az $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: mail/postpals/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	postpals
 PORTVERSION=	0.01
@@ -29,6 +25,7 @@ NO_BUILD=	yes
 USERS=		postpals
 GROUPS=		postpals
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${DISTFILES:S|^|${DISTDIR}/|} ${PREFIX}/sbin/
 	@${INSTALL} -o ${PORTNAME} -g ${PORTNAME} -m 700 -d /var/db/postpals
