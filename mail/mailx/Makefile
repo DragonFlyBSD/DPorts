@@ -1,5 +1,5 @@
 # Created by: Issei Suzuki <issei@jp.FreeBSD.org>
-# $FreeBSD: mail/mailx/Makefile 324030 2013-07-31 10:14:47Z az $
+# $FreeBSD: mail/mailx/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailx
 PORTVERSION=	0.5
@@ -24,6 +24,7 @@ USE_PERL5=	run build patch
 MAN1=		mailx.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${PERL5} -pi.bak -e 's/^(\.Nm mail)/$$1x/i; s/^(\.Dt MAIL)/$$1X/' ${WRKSRC}/mail.1
 
