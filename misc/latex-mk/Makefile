@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	latex-mk
-# Date created:			May 22, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: misc/latex-mk/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: ijliao
+# $FreeBSD: misc/latex-mk/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	latex-mk
 PORTVERSION=	2.1
@@ -26,4 +21,5 @@ LICENSE=	BSD
 
 INFO=		latex-mk
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
