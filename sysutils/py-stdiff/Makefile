@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-stdiff
-# Date created:				11 Dec 2010
-# Whom:					Marcelo Araujo <araujo@FreeBSD.org>
-#
-# $FreeBSD: head/sysutils/py-stdiff/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# $FreeBSD: sysutils/py-stdiff/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=		stdiff
 PORTVERSION=		0.2.1
@@ -20,6 +15,7 @@ USE_PYDISTUTILS=	yes
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
