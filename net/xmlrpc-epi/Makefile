@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: net/xmlrpc-epi/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: net/xmlrpc-epi/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	xmlrpc-epi
 PORTVERSION=	0.54.2
@@ -29,6 +29,7 @@ METHODS=	TestNormal TestFault TestStruct TestArray TestBoolean \
 
 CONFLICTS=	xmlrpc-c-0.* xmlrpc-c-devel-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
