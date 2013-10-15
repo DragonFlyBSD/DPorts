@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/archivers/dzip/Makefile,v 1.11 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/dzip/Makefile 328237 2013-09-25 02:17:18Z vanilla $
 
 PORTNAME=	dzip
 PORTVERSION=	2.9
@@ -32,6 +32,6 @@ post-extract: .SILENT
 	${REINPLACE_CMD} -e '21d;23d' ${WRKSRC}/dzipcon.h
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
