@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-devhelp/Makefile 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD: devel/geany-plugin-devhelp/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	geany-plugin-devhelp
 PORTVERSION=	${GEANY_VER}
@@ -12,5 +12,6 @@ LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
 
 USE_GNOME=	gconf2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
