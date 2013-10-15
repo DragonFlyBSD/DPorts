@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sastatd
-# Date created:				2010-01-12
-# Whom:					Oleg A. Mamontov <oleg@mamontov.net>
-#
-# $FreeBSD: mail/sastatd/Makefile 326265 2013-09-04 09:48:54Z az $
-#
+# Created by: Oleg A. Mamontov <oleg@mamontov.net>
+# $FreeBSD: mail/sastatd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=		sastatd
 PORTVERSION=		0.05
@@ -43,6 +39,7 @@ SUB_FILES+=		pkg-install pkg-deinstall
 
 MAN1=			sastatd.1
 
+NO_STAGE=	yes
 post-install:
 	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
