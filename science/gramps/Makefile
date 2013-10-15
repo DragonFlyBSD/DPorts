@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: science/gramps/Makefile 321718 2013-06-24 22:02:02Z antoine $
+# $FreeBSD: science/gramps/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	gramps
 PORTVERSION=	3.3.0
@@ -37,6 +37,7 @@ ENCHANT_DESC=		Spellchecking support
 PYWEBKITGTK_DESC=	Use webkit backend for Geographic view
 EXIV_DESC=		Managing exiv metadata support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MENCHANT}
