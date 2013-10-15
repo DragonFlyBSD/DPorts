@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gdchart
-# Date created:         4 June 2001
-# Whom:                 Anders Nordby <anders@fix.no>
-#
-# $FreeBSD: graphics/gdchart/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: Anders Nordby <anders@fix.no>
+# $FreeBSD: graphics/gdchart/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gdchart
 PORTVERSION=	0.11.5
@@ -33,6 +29,7 @@ PLIST_SUB+=	PROFILE="@comment "
 PLIST_SUB+=	PROFILE=
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's/^#ifdef HAVE_JPEG/#ifndef NO_JPEG/' \
