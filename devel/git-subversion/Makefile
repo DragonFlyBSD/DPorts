@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/git-subversion/Makefile,v 1.5 2012/12/12 18:51:43 svnexp Exp $
+# $FreeBSD: devel/git-subversion/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PKGNAMESUFFIX=	-subversion
 
@@ -14,4 +14,5 @@ CONFLICTS?=	git-[0-9]*
 
 DISTINFO_FILE=	${MASTERDIR}/distinfo
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
