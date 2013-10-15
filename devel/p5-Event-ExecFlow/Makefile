@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Event-ExecFlow
 PORTVERSION=	0.64
@@ -24,4 +24,5 @@ MAN3=		Event::ExecFlow::Job::Code.3 Event::ExecFlow::Frontend.3 \
 		Event::ExecFlow::Callbacks.3 Event::ExecFlow::Job::Command.3 \
 		Event::ExecFlow.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
