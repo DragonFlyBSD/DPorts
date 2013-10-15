@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: mail/pgpsendmail/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/pgpsendmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	pgpsendmail
 PORTVERSION=	1.4
@@ -23,6 +23,7 @@ MAN1=		pgppipe.1 sendpgppass.1
 MAN8=		pgpsendmail.8 pgpdaemon.8
 PLIST_FILES=	bin/pgpdaemon bin/pgppipe bin/sendpgppass libexec/pgpsendmail
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CC =|CC ?=| ; \
