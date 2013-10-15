@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/xorgramana/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xorgramana/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xorgramana
 PORTVERSION=	0.0.8
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES="XorGramana" \
 		"Game;LogicGame;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
