@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dominic.marks@btinternet.com>
-# $FreeBSD: ports/x11-fonts/artwiz-fonts/Makefile,v 1.17 2012/11/17 06:03:27 svnexp Exp $
+# $FreeBSD: x11-fonts/artwiz-fonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	artwiz-fonts
 PORTVERSION=	1.0
@@ -22,6 +22,7 @@ FONTS=		anorexia aqui cure cursor drift edges gelly glisp-bold \
 FONTDIR=	${LOCALBASE}/lib/X11/fonts/${PORTNAME}/
 FILES=		${FONTS:S,$,.pcf.gz,} ${FILESDIR}/fonts.dir
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
