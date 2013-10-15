@@ -1,5 +1,5 @@
 # Created by: shalunov
-# $FreeBSD: sysutils/stmpclean/Makefile 317339 2013-05-04 20:02:01Z bapt $
+# $FreeBSD: sysutils/stmpclean/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	stmpclean
 PORTVERSION=	0.3
@@ -13,6 +13,7 @@ MAN8=		stmpclean.8
 MANCOMPRESSED=	no
 PLIST_FILES=	sbin/stmpclean
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s/-O6//g" ${WRKSRC}/Makefile
 
