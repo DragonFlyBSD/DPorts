@@ -1,8 +1,5 @@
-# New ports collection makefile for:	arpCounterattack
-# Date created:				05 November 2010
-# Whom:					Boris Kochergin <spawk@acm.poly.edu>
-# $FreeBSD: ports/security/arpCounterattack/Makefile,v 1.2 2012/11/17 06:01:00 svnexp Exp $
-#
+# Created by: Boris Kochergin <spawk@acm.poly.edu>
+# $FreeBSD: security/arpCounterattack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	arpCounterattack
 PORTVERSION=	1.2.0
@@ -20,6 +17,7 @@ SUB_FILES=	pkg-message
 
 USE_RC_SUBR=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
