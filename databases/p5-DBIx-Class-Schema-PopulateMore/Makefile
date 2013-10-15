@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-PopulateMore/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-PopulateMore/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-Schema-PopulateMore
 PORTVERSION=	0.17
@@ -49,6 +49,7 @@ MAN3=	DBIx::Class::Schema::PopulateMore.3 \
 	DBIx::Class::Schema::PopulateMore::Test::Schema::ResultSet::Person.3 \
 	DBIx::Class::Schema::PopulateMore::Visitor.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
