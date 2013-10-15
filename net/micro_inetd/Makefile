@@ -1,9 +1,5 @@
-# New ports collection makefile for:   micro_inetd
-# Date created:                2006-08-13
-# Whom:                        Pankov Pavel <pankov_p@mail.ru>
-#
-# $FreeBSD: ports/net/micro_inetd/Makefile,v 1.3 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Pankov Pavel <pankov_p@mail.ru>
+# $FreeBSD: net/micro_inetd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	micro_inetd
 PORTVERSION=	2005.06.29
@@ -18,6 +14,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	bin/micro_inetd
 MAN1=		micro_inetd.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/micro_inetd ${PREFIX}/bin/micro_inetd
 	${INSTALL_MAN} ${WRKSRC}/micro_inetd.1 ${MAN1PREFIX}/man/man1/micro_inetd.1
