@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py2html
-# Date created:				15 Nov 2000
-# Whom:					Hye-Shik Chang <perky@python.or.kr>
-#
-# $FreeBSD: ports/textproc/py2html/Makefile,v 1.9 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Hye-Shik Chang <perky@python.or.kr>
+# $FreeBSD: textproc/py2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	py2html
 PORTVERSION=	0.7
@@ -19,4 +15,5 @@ USE_PYTHON=	yes
 MAKE_ENV=	PORTSDIR=${PORTSDIR}
 INSTALLS_EGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
