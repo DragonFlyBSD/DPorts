@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-IntrospectableM2M/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/p5-DBIx-Class-IntrospectableM2M/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-IntrospectableM2M
 PORTVERSION=	0.001001
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::Class::IntrospectableM2M.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
