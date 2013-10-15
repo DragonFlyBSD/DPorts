@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-gbsplay/Makefile 320558 2013-06-11 13:26:32Z ehaupt $
+# $FreeBSD: audio/xmms-gbsplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PKGNAMEPREFIX=	xmms-
 
@@ -12,6 +12,7 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms \
 		gbsplay:${PORTSDIR}/audio/gbsplay
 
 USE_GNOME=	glib12
+NO_STAGE=	yes
 USE_GCC=	any
 
 CONFIGURE_ARGS=	--disable-nas
