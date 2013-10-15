@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-grab/Makefile 327256 2013-09-14 09:41:33Z rm $
+# $FreeBSD: devel/py-grab/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	grab
 PORTVERSION=	0.4.13
@@ -18,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>0:${PORTSDIR}/devel/py-lxml \
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
