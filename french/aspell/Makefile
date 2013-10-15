@@ -1,9 +1,5 @@
-# New ports collection makefile for:    fr-aspell
-# Date created:                         15 January 2002
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/french/aspell/Makefile,v 1.8 2012/11/17 05:57:28 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: french/aspell/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	-fr-0.50-3
@@ -16,5 +12,6 @@ COMMENT=	Aspell French dictionaries
 
 DICT=	 	fr
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
