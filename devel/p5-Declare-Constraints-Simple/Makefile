@@ -1,5 +1,5 @@
 # Created by: Anes Muhametov <anes@anes.su>
-# $FreeBSD: devel/p5-Declare-Constraints-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Declare-Constraints-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Declare-Constraints-Simple
 PORTVERSION=	0.03
@@ -36,4 +36,5 @@ MAN3=	Declare::Constraints::Simple::Library::Scalar.3 \
 	Declare::Constraints::Simple::Library::Base.3 \
 	Declare::Constraints::Simple::Library::General.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
