@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: multimedia/tstools/Makefile 323823 2013-07-28 12:26:14Z danfe $
+# $FreeBSD: multimedia/tstools/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	tstools
 DISTVERSION=	1_11
@@ -22,6 +22,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
