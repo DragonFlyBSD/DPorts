@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sshguard-pf
-# Date created:				17 May 2007
-# Whom:					Mij <mij@bitchx.it>
-#
-# $FreeBSD: ports/security/sshguard-pf/Makefile,v 1.5 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Mij <mij@bitchx.it>
+# $FreeBSD: security/sshguard-pf/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PKGNAMESUFFIX=	-pf
 
@@ -14,4 +10,5 @@ CONFLICTS=	sshguard-1.* sshguard-ipfilter-1.* sshguard-ipfw-1.*
 SSHGUARDFW=	pf
 MASTERDIR=	${.CURDIR}/../sshguard
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
