@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: emulators/gngeo/Makefile 324056 2013-07-31 14:39:37Z bapt $
+# $FreeBSD: emulators/gngeo/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	gngeo
 PORTVERSION=	0.7
@@ -35,6 +35,7 @@ STAR_DESC=	Use Starscream as 68k emulator
 
 MAN1=		gngeo.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MI386ASM} || ${PORT_OPTIONS:MRAZE} || \
