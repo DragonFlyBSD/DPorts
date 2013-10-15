@@ -1,9 +1,5 @@
-# New ports collection makefile for:	npc.cgi
-# Date created:		3 December 1998
-# Whom:			Yasuhiro Fukuma <yasuf@big.or.jp>
-#
-# $FreeBSD: ports/www/npc/Makefile,v 1.7 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
+# $FreeBSD: www/npc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	npc
 PORTVERSION=	0.83
@@ -18,6 +14,7 @@ MAKE_ARGS=	INDEX_DIR="${INDEX_DIR}"
 
 INDEX_DIR=	${PREFIX}/etc/npc
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/www/cgi-bin
 	cd ${WRKSRC}; \
