@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: databases/pear-DoctrineDBAL/Makefile 321562 2013-06-22 11:00:07Z wg $
+# $FreeBSD: databases/pear-DoctrineDBAL/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DoctrineDBAL
 PORTVERSION=	2.3.4
@@ -32,6 +32,7 @@ PEAR_AUTOINSTALL=	yes
 USE_PHP=	pdo
 WANT_PHP_CLI=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDBLIB}
