@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/mysqlviz/Makefile 317518 2013-05-06 14:10:45Z tota $
+# $FreeBSD: textproc/mysqlviz/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	mysqlviz
 PORTVERSION=	0.3
@@ -20,6 +20,7 @@ PORTEXAMPLES=	eg.png eg.sql sqlite-eg.sql
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
