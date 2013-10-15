@@ -1,5 +1,5 @@
 # Created by: sumikawa@FreeBSD.org
-# $FreeBSD: ports/misc/lv/Makefile,v 1.20 2013/01/14 07:41:35 svnexp Exp $
+# $FreeBSD: misc/lv/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	lv
 PORTVERSION=	4.51
@@ -22,6 +22,7 @@ MAN1=		lv.1
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
