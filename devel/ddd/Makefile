@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/ddd/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: devel/ddd/Makefile 328032 2013-09-23 19:40:09Z bsam $
 
 PORTNAME=	ddd
 PORTVERSION=	3.3.12
@@ -23,7 +23,6 @@ CONFIGURE_ARGS=	--with-motif-libraries="${LIBXMDIR}" \
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
-MAN1=		ddd.1
 DOCS=		AUTHORS INSTALL PROBLEMS README TIPS TODO \
 		doc/html/ddd.html doc/ddd-paper.ps \
 		doc/ddd-themes.pdf doc/ddd.pdf
@@ -51,13 +50,11 @@ post-configure:
 	@${ECHO_CMD} "LIBXM = ${MOTIFLIB}" >> ${WRKSRC}/ddd/Makefile
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${INSTALL} -d -o ${DOCOWN} -g ${DOCGRP} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${DOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-	@${GZIP_CMD} ${DOCSDIR}/*.ps
-.endif
+	${GZIP_CMD} ${STAGEDIR}${DOCSDIR}/*.ps
 
 check:
 	(cd ${WRKSRC} ; ${GMAKE} check)
