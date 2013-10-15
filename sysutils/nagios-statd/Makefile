@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nagios-statd
-# Date created:		2003-11-06
-# Whom:			Jim Shewmaker
-#
-# $FreeBSD: ports/sysutils/nagios-statd/Makefile,v 1.8 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: Jim Shewmaker
+# $FreeBSD: sysutils/nagios-statd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	nagios-statd
 PORTVERSION=	3.12
@@ -20,6 +16,7 @@ USE_RC_SUBR=	nagiosstatd
 MAN1=		nagios-stat.1
 MAN8=		nagios-statd.8
 
+NO_STAGE=	yes
 do-build:
 	${REINPLACE_CMD} -e 's,/usr/bin/python,/usr/bin/env python,' \
 		${WRKSRC}/bin/* ${WRKSRC}/sbin/*
