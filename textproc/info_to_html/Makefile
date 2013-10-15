@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/info_to_html/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: textproc/info_to_html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	info_to_html
 PORTVERSION=	0.9.6
@@ -14,6 +14,7 @@ PLIST_FILES=	bin/info_to_html
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
