@@ -1,5 +1,5 @@
 # Created by: okeeblow <root@cooltrainer.org>
-# $FreeBSD: emulators/snes9x-gtk/Makefile 325930 2013-09-01 22:57:27Z bapt $
+# $FreeBSD: emulators/snes9x-gtk/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	snes9x
 PORTVERSION=	1.52r79
@@ -35,6 +35,7 @@ NETPLAY_DESC=	Enable network support
 XV_DESC=	Enable XVideo output on GTK
 XRANDR_DESC=	Enable XRandR support on GTK
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
