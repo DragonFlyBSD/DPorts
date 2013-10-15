@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/py-AccessControl/Makefile,v 1.6 2012/12/20 11:13:33 svnexp Exp $
+# $FreeBSD: security/py-AccessControl/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	AccessControl
-PORTVERSION=	2.13.12
+PORTVERSION=	3.0.8
 CATEGORIES=	security python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -30,9 +30,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisit
 		${PYTHON_PKGNAMEPREFIX}zope.security>=0:${PORTSDIR}/security/py-zope.security \
 		${PYTHON_PKGNAMEPREFIX}zope.testing>=0:${PORTSDIR}/devel/py-zope.testing
 
+NO_STAGE=	yes
 PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
 .include <bsd.port.mk>
