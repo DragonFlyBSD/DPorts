@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mph
-# Date created:				2005/9/22
-# Whom:					Chuck Swiger <chuck@pkix.net>
-#
-# $FreeBSD: ports/devel/mph/Makefile,v 1.2 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: Chuck Swiger <chuck@pkix.net>
+# $FreeBSD: devel/mph/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mph
 PORTVERSION=	1.2
@@ -17,6 +13,7 @@ COMMENT=	Minimal perfect hashing code generator
 BIN_FILES=	emitc mph mphm
 PLIST_FILES=	bin/emitc bin/mph bin/mphm
 
+NO_STAGE=	yes
 do-install:
 .for i in ${BIN_FILES}
 	${INSTALL_PROGRAM} ${WRKSRC}/${i} ${PREFIX}/bin/
