@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  mixal
-# Date created:			  21-Dec-1996
-# Whom:                 	  David O'Brien <obrien@cs.ucdavis.edu>
-#
-# $FreeBSD: ports/lang/mixal/Makefile,v 1.20 2012/11/17 05:58:52 svnexp Exp $
-#
+# Created by: David O'Brien <obrien@cs.ucdavis.edu>
+# $FreeBSD: lang/mixal/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	mixal
 PORTVERSION=	1.11
@@ -20,6 +15,7 @@ ALL_TARGET=	${PORTNAME}
 
 MAN1=		mixal.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mixal ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/mixal.1 ${MANPREFIX}/man/man1
