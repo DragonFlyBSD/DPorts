@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: misc/gnome-osd/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: misc/gnome-osd/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gnome-osd
 PORTVERSION=	0.20.0
@@ -23,6 +23,7 @@ MAN1=		gnome-osd-client.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
