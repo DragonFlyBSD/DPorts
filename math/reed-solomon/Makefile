@@ -1,9 +1,5 @@
-# New ports collection makefile for:	reed-solomon
-# Date created:		29 Jun 2005
-# Whom:			Thomas Sandford <freebsduser@paradisegreen.co.uk>
-#
-# $FreeBSD: ports/math/reed-solomon/Makefile,v 1.4 2012/11/17 05:59:30 svnexp Exp $
-#
+# Created by: Thomas Sandford <freebsduser@paradisegreen.co.uk>
+# $FreeBSD: math/reed-solomon/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	reed-solomon
 PORTVERSION=	4.0
@@ -20,6 +16,7 @@ MAKEFILE=	makefile
 
 MAN3=		rs.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|' ${WRKSRC}/makefile.in
 
