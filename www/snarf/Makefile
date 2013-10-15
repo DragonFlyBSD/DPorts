@@ -1,9 +1,5 @@
-# New ports collection makefile for:   snarf
-# Date created:        2 January 1999
-# Whom:                Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/www/snarf/Makefile,v 1.11 2012/11/17 06:03:06 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: www/snarf/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	snarf
 PORTVERSION=	7.0
@@ -18,6 +14,7 @@ GNU_CONFIGURE=	yes
 MAN1=		snarf.1
 PLIST_FILES=	bin/snarf
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snarf ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/snarf.1 ${PREFIX}/man/man1/
