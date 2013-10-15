@@ -1,4 +1,4 @@
-# $FreeBSD: www/webmachine/Makefile 316478 2013-04-24 20:42:37Z olgeni $
+# $FreeBSD: www/webmachine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webmachine
 PORTVERSION=	1.10.1
@@ -26,6 +26,7 @@ GH_TAGNAME=     ${PORTVERSION}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
