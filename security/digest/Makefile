@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/security/digest/Makefile,v 1.24 2013/01/27 06:41:41 svnexp Exp $
+# $FreeBSD: security/digest/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME?=	digest
 PORTVERSION?=	20050323
@@ -19,6 +19,7 @@ MAN1?=		${PORTNAME}.1
 
 PLIST_FILES?=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 test: build
