@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php52-tidy
-# Date created:			17 Apr 2010
-# Whom:				Alex Keda <admin@lissyara.su>
-#
-# $FreeBSD: ports/www/php52-tidy/Makefile,v 1.2 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Alex Keda <admin@lissyara.su>
+# $FreeBSD: www/php52-tidy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 CATEGORIES=	www
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php52
 
 PKGNAMESUFFIX=	-tidy
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
