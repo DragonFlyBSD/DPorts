@@ -1,8 +1,5 @@
-# New ports collection makefile for:	unfonts-core-ttf
-# Date created:		27 September 2003
-# Whom:			Hye-Shik Chang <perky@FreeBSD.org>
-#
-# $FreeBSD: ports/korean/unfonts-core/Makefile,v 1.5 2012/11/17 05:58:47 svnexp Exp $
+# Created by: Hye-Shik Chang <perky@FreeBSD.org>
+# $FreeBSD: korean/unfonts-core/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	unfonts
 PORTVERSION?=	1.0.2.080608
@@ -45,6 +42,7 @@ PLIST_FILES+=	${FONTSDIR}/${f}.ttf
 PLIST_FILES+=	${FONTSDIR}/fonts.dir \
 		${FONTSDIR}/fonts.scale
 
+NO_STAGE=	yes
 do-build:
 	${LOCALBASE}/bin/mkfontscale ${WRKSRC}
 	${LOCALBASE}/bin/mkfontdir ${WRKSRC}
