@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sshsudo
-# Date created:				2012-02-06
-# Whom:					Hung-Yi Chen <gaod@hychen.org>
-#
-# $FreeBSD: ports/sysutils/sshsudo/Makefile,v 1.2 2012/11/17 06:01:46 svnexp Exp $
-#
+# Created by: Hung-Yi Chen <gaod@hychen.org>
+# $FreeBSD: sysutils/sshsudo/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sshsudo
 PORTVERSION=	1.0
@@ -28,6 +24,7 @@ NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	bin/sshsudo
 
+NO_STAGE=	yes
 post-patch:
 	${SED} -e "s,/bin/bash,${LOCALBASE}/bin/bash," -e "s,mktemp,mktemp -t sshsudo," \
 	<${DISTDIR}/${DISTNAME} >${WRKSRC}/${DISTNAME}
