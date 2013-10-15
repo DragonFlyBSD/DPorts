@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jove
-# Date created:		21 August 1994
-# Whom:			jkh
-#
-# $FreeBSD: ports/editors/jove/Makefile,v 1.24 2012/11/17 05:57:14 svnexp Exp $
-#
+# Created by: jkh
+# $FreeBSD: editors/jove/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	jove
 PORTVERSION=	4.16
@@ -19,4 +15,5 @@ COMMENT=	Jonathan's Own Version of Emacs
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		jove.1 teachjove.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
