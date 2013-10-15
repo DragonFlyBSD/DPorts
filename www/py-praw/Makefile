@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-praw/Makefile 322084 2013-06-30 13:44:49Z koobs $
+# $FreeBSD: www/py-praw/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	praw
 PORTVERSION=	2.1.3
@@ -26,4 +26,5 @@ GH_COMMIT=	8687d58
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
