@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-pynsq/Makefile 321560 2013-06-22 10:43:26Z koobs $
+# $FreeBSD: net/py-pynsq/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pynsq
 PORTVERSION=	0.4.2
@@ -18,6 +18,7 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install tools to run test suite
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_GITHUB=		yes
