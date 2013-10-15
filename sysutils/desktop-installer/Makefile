@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: sysutils/desktop-installer/Makefile 325253 2013-08-23 08:23:00Z makc $
+# $FreeBSD: sysutils/desktop-installer/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	desktop-installer
 PORTVERSION=	0.4.5
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/Doc/${PORTNAME}.man \
