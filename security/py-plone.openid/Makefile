@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-plone.openid/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: security/py-plone.openid/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.openid
 PORTVERSION=	2.0.1
@@ -19,8 +19,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}openid>=0:${PORTSDIR}/security/py-openid \
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-#USE_ZOPE=	yes
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
