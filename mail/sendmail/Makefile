@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sendmail/Makefile 318274 2013-05-16 05:28:01Z dinoex $
+# $FreeBSD: mail/sendmail/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	sendmail
 PORTVERSION=	8.14.7
@@ -13,6 +13,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Reliable, highly configurable mail transfer agent with utilities
 
 CONFLICTS?=	courier-0.* postfix-1.* postfix-2.* smail-3.* zmailer-2.* opensmtpd-*
+NO_STAGE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 WCONF=		${WRKSRC}/devtools/Site
