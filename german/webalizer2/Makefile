@@ -1,4 +1,4 @@
-# $FreeBSD: ports/german/webalizer2/Makefile,v 1.28 2012/11/17 05:58:00 svnexp Exp $
+# $FreeBSD: german/webalizer2/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 CATEGORIES=	german
 
