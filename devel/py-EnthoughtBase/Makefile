@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-EnthoughtBase
-# Date created:		2008-12-12
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-EnthoughtBase/Makefile,v 1.6 2012/11/17 05:56:44 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-EnthoughtBase/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	EnthoughtBase
 PORTVERSION=	3.1.0
@@ -18,4 +14,5 @@ COMMENT=	Core Packages for the Enthought Tool Suite
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
