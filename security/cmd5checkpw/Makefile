@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: ports/security/cmd5checkpw/Makefile,v 1.13 2012/11/17 06:01:02 svnexp Exp $
+# $FreeBSD: security/cmd5checkpw/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cmd5checkpw
 PORTVERSION=	0.22
@@ -16,6 +16,7 @@ MAN8=		cmd5checkpw.8
 PORTDOCS=	CHANGES CREDITS INSTALL README rfc1321.txt rfc2104.txt
 PLIST_FILES=	bin/cmd5checkpw etc/poppasswd.dist
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
