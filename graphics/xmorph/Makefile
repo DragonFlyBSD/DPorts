@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: graphics/xmorph/Makefile 316624 2013-04-26 16:39:14Z bapt $
+# $FreeBSD: graphics/xmorph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmorph
 PORTVERSION=	2006.08.17
@@ -28,6 +28,7 @@ USE_LDCONFIG=	yes
 MAN1=		gtkmorph.1 xmorph.1
 INFO=		xmorph
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
