@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: korean/nabi/Makefile 321505 2013-06-21 22:29:13Z jkim $
+# $FreeBSD: korean/nabi/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	nabi
 PORTVERSION=	1.0.0
@@ -18,6 +18,7 @@ USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USES=		pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
