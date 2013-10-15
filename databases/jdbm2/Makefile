@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/databases/jdbm2/Makefile,v 1.7 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/jdbm2/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	jdbm
 PORTVERSION=	2.4
@@ -22,6 +22,7 @@ PORTEXAMPLES=	*
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/lib/${DISTNAME}.jar \
 		${JAVAJARDIR}/${PORTNAME}.jar
