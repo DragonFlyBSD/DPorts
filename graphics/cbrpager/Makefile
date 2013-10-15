@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/cbrpager/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/cbrpager/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cbrpager
 PORTVERSION=	0.9.22
@@ -33,6 +33,7 @@ DESKTOP_ENTRIES="cbrPager" "Comic book viewer" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" "Graphics;Viewer;GNOME;" true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
