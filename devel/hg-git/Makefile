@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/hg-git/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/hg-git/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hg-git
 PORTVERSION=	0.4.0
@@ -21,6 +21,7 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/-/_/}
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
