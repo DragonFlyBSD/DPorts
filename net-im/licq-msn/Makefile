@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/licq-msn/Makefile 325717 2013-08-30 19:24:37Z dinoex $
+# $FreeBSD: net-im/licq-msn/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	msn
 PORTVERSION=	1.8.0
@@ -10,6 +10,8 @@ COMMENT=	MSN plugin for Licq
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
+
+NO_STAGE=	yes
 
 USES=		cmake
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
