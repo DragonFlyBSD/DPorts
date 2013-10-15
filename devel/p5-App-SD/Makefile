@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-SD/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-App-SD/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-SD
 PORTVERSION=	0.75
@@ -54,6 +54,7 @@ MAN3=	App::SD::ForeignReplica::PullEncoder.3 \
 
 MAN1=	sd.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGITHUB}
