@@ -1,5 +1,5 @@
 # Created by: Bob Hockney <zeus@ix.netcom.com>
-# $FreeBSD: security/webfwlog/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: security/webfwlog/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	webfwlog
 PORTVERSION=	0.94
@@ -30,6 +30,7 @@ PORTDOCS=	AUTHORS COPYING CREDITS ChangeLog INSTALL \
 		README ReleaseNotes
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
