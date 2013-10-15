@@ -1,4 +1,4 @@
-# $FreeBSD: cad/logisim/Makefile 313229 2013-03-02 13:26:40Z pawel $
+# $FreeBSD: cad/logisim/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	logisim
 PORTVERSION=	2.7.1
@@ -24,6 +24,7 @@ PLIST_DIRS=	%%DATADIR%%
 
 DESKTOP_ENTRIES="Logisim" "${COMMENT}" "" "${PORTNAME}" "" false
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKSRC}
