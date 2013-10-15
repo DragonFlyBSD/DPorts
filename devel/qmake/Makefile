@@ -1,5 +1,5 @@
 # Created by: mi@aldan.algebra.com
-# $FreeBSD: devel/qmake/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/qmake/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	qmake
 PORTVERSION=	3.3.8
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/qmake
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 PLIST_SUB+=	_PREFIX="${PREFIX}"
 MAKE_ENV+=	FILESDIR="${FILESDIR}"
+NO_STAGE=	yes
 
 USE_BZIP2=	yes
 
