@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/twiki-LdapContrib/Makefile 316241 2013-04-22 15:37:34Z bdrewery $
+# $FreeBSD: www/twiki-LdapContrib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LdapContrib
 SVNREV=		16840
@@ -11,5 +11,6 @@ COMMENT=	LDAP services for TWiki
 
 RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
