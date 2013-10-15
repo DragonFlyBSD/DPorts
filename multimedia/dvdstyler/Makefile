@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/dvdstyler/Makefile 325556 2013-08-28 21:28:50Z wg $
+# $FreeBSD: multimedia/dvdstyler/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dvdstyler
 PORTVERSION=	2.4.3
@@ -53,6 +53,7 @@ LIBAV_PC=	libavcodec1 libavformat1 libavutil1 libswscale1
 LIBAV_CFLAGS=	$$(pkg-config --cflags ${LIBAV_PC})
 LIBAV_LIBS=	$$(pkg-config --libs ${LIBAV_PC})
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOME}
