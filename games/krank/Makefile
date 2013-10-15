@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/krank/Makefile,v 1.7 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/krank/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	krank
 PORTVERSION=	07
@@ -23,6 +23,7 @@ PORTDOCS=	CHANGELOG.txt README
 DESKTOP_ENTRIES="Krank" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
