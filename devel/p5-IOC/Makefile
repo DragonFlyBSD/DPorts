@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-IOC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-IOC/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IOC
 PORTVERSION=	0.29
@@ -35,4 +35,5 @@ MAN3=		IOC.3 IOC::Config::XML.3 IOC::Config::XML::SAX::Handler.3 \
 		IOC::Visitor::SearchForService.3 IOC::Visitor::ServiceLocator.3 \
 		Test::IOC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
