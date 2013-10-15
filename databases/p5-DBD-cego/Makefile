@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/p5-DBD-cego/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: databases/p5-DBD-cego/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBD-cego
 PORTVERSION=	1.2.6
@@ -26,6 +26,7 @@ CC:=		${CXX}
 
 MAN3=		DBD::Cego.3
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -e 's|fno-strict-aliasing|fno-strict-aliasing -fpermissive|g' ${WRKSRC}/Makefile
 
