@@ -1,5 +1,5 @@
 # Created by: Andrea Sozzi <as@g-cows.org>
-# $FreeBSD: www/g-cows/Makefile 326973 2013-09-11 12:57:13Z culot $
+# $FreeBSD: www/g-cows/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	g-cows
 PORTVERSION=	1.12
