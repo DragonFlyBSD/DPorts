@@ -1,5 +1,5 @@
 # Created by: Michael Lednev <liettneff@bk.ru>
-# $FreeBSD: net/abills/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: net/abills/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	abills
 PORTVERSION=	0.54
@@ -27,6 +27,7 @@ USE_PERL5=	run
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lR "/usr/abills" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
 		's|/usr/abills|${PREFIX}/abills|g'
