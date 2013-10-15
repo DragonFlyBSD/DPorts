@@ -1,4 +1,4 @@
-# $FreeBSD: games/kmancala/Makefile 315374 2013-03-27 11:57:06Z makc $
+# $FreeBSD: games/kmancala/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kmancala
 PORTVERSION=	1.0.2
@@ -16,4 +16,5 @@ USES=		cmake:outsource
 USE_KDE4=	kdelibs kdeprefix automoc4 libkdegames
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
