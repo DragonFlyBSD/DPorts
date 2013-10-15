@@ -1,9 +1,5 @@
-# New ports collection makefile for:	detox
-# Date created:				4 March 2005
-# Whom:					Doug Harple
-#
-# $FreeBSD: ports/sysutils/detox/Makefile,v 1.4 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: Doug Harple
+# $FreeBSD: sysutils/detox/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	detox
 PORTVERSION=	1.2.0
@@ -22,4 +18,5 @@ GNU_CONFIGURE=	yes
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
