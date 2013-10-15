@@ -1,5 +1,5 @@
 # Created by: Thomas Sandford <freebsduser@paradisegreen.co.uk>
-# $FreeBSD: www/drush/Makefile 316092 2013-04-19 09:21:28Z culot $
+# $FreeBSD: www/drush/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	drush
 PORTVERSION=	5.9
@@ -23,6 +23,7 @@ WANT_PHP_CLI=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-configure:
