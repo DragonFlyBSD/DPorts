@@ -1,5 +1,5 @@
 # Created by: Jeroen Hogeveen <albast@xs4all.nl>
-# $FreeBSD: mail/ml/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: mail/ml/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ml
 PORTVERSION=	3.4
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USES=		imake motif
 USE_XORG=	ice sm x11 xext xmu xp xt
 
+NO_STAGE=	yes
 pre-configure:
 	@${ECHO_MSG} "===>  Building c-client"
 	@( cd ${WRKSRC}/../imap-4; make bsi )
