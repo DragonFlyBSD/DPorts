@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	sgrep
-# Date created:    			Apr 29 1998
-# Whom: 				<koshy@india.hp.com>
-#
-# $FreeBSD: ports/textproc/sgrep/Makefile,v 1.10 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: <koshy@india.hp.com>
+# $FreeBSD: textproc/sgrep/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sgrep
 PORTVERSION=	0.99
@@ -21,6 +17,7 @@ CONFLICTS=	sgrep2-1.*
 MAN1=		sgrep.1
 
 # Override the install target in the supplied makefile
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sgrep ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/sgrep.1 ${MANPREFIX}/man/man1
