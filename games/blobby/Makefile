@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/blobby/Makefile 315536 2013-03-29 10:22:43Z martymac $
+# $FreeBSD: games/blobby/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	blobby
 PORTVERSION=	1.0r3
@@ -29,6 +29,7 @@ DOS2UNIX_REGEX=	.*\.(c|h|cpp)
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
