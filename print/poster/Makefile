@@ -1,9 +1,5 @@
-# New ports collection makefile for:	poster
-# Date created:		15 January 2000
-# Whom:			Yoshiro MIHIRA <sanpei@sanpei.org>
-#
-# $FreeBSD: ports/print/poster/Makefile,v 1.8 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
+# $FreeBSD: print/poster/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	poster
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ NO_WRKSUBDIR=	yes
 MAN1=		poster.1
 PLIST_FILES=	bin/poster
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin
 	@${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.1 ${PREFIX}/man/man1/
