@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-shapely/Makefile 326981 2013-09-11 13:58:27Z wg $
+# $FreeBSD: devel/py-shapely/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Shapely
 PORTVERSION=	1.2.18
@@ -17,4 +17,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
