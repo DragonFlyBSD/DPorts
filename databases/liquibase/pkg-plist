@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/liquibase/pkg-plist,v 1.1 2013/02/12 11:36:48 svnexp Exp $
+@comment $FreeBSD: databases/liquibase/pkg-plist 312093 2013-02-12 10:30:26Z miwi $
 %%DATADIR%%/liquibase.jar
 bin/liquibase
 @dirrmtry %%DATADIR%%

@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/databases/liquibase/Makefile,v 1.1 2013/02/12 11:36:48 svnexp Exp $
+# $FreeBSD: databases/liquibase/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	liquibase
 PORTVERSION=	2.0.5
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USE_JAVA=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/liquibase.jar ${DATADIR}/
