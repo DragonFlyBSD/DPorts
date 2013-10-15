@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/shlock/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/shlock/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	shlock
 PORTVERSION=	2.5.3
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/${PORTNAME}
 verify:	checksum
 	gpg --verify ${DISTDIR}/inn-${PORTVERSION}${EXTRACT_SUFX}.asc
 
+NO_STAGE=	yes
 post-build:
 	@(cd ${WRKSRC}/backends && ${SETENV} ${MAKE_ENV} ${MAKE} \
 		${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${PORTNAME})
