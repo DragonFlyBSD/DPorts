@@ -1,8 +1,5 @@
-# New ports collection makefile for:    skipfish
-# Date created:         2010-03-25
-# Whom:                 rpsfa@rit.edu
-#
-# $FreeBSD: ports/security/skipfish/Makefile,v 1.28 2012/12/15 03:12:54 svnexp Exp $
+# Created by: rpsfa@rit.edu
+# $FreeBSD: security/skipfish/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	skipfish
 PORTVERSION=	2.10b
@@ -28,6 +25,7 @@ MAN1=		skipfish.1
 PORTDOCS=	README COPYING ChangeLog
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
