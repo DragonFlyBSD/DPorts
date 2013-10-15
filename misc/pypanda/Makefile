@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pypanda
-# Date created:				3 September 2001
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/pypanda/Makefile,v 1.11 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: misc/pypanda/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pypanda
 PORTVERSION=	0.6
@@ -18,6 +14,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-build:
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
 	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
