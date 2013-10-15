@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: www/rubygem-sinatra/Makefile 321776 2013-06-26 02:12:08Z swills $
+# $FreeBSD: www/rubygem-sinatra/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	sinatra
 PORTVERSION=	1.4.3
@@ -17,6 +17,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
