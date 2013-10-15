@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-em-http-request/Makefile 313018 2013-02-27 01:40:51Z swills $
+# $FreeBSD: www/rubygem-em-http-request/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	em-http-request
 PORTVERSION=	1.0.3
@@ -19,4 +19,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
