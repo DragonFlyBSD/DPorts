@@ -1,8 +1,5 @@
-# New ports collection makefile for:    examplep
-# Date created:         2012-05-11
-# Whom:                 Hiroto Kagotani <hiroto.kagotani@gmail.com>
-#
-# $FreeBSD: print/examplep/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
+# $FreeBSD: print/examplep/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	examplep
 PORTVERSION=	0.04
@@ -25,6 +22,7 @@ MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 CLASSDIR=	${TEXMFDIR}/tex/latex/${PORTNAME}
 CLASS_FILES=	${PORTNAME}.sty codep.sty verbfwr.sty
 
+NO_STAGE=	yes
 do-build:
 
 pre-install:
