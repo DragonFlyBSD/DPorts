@@ -1,9 +1,5 @@
-# New ports collection makefile for:	a2png
-# Date created:		07 Oct 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: graphics/a2png/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: graphics/a2png/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	a2png
 PORTVERSION=	0.1.5
@@ -25,6 +21,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 FONTROOTDIR?=	${LOCALBASE}/lib/X11/fonts
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin/
 	@${INSTALL_MAN} ${WRKSRC}/man/${MAN1} ${MAN1PREFIX}/man/man1/
