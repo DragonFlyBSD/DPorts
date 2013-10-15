@@ -1,9 +1,5 @@
-# Ports collection makefile for:	ah-tty
-# Date created:				Tue Jun 25, 2002
-# Whom:			Michael L. Hostbaek <mich@freebsdcluster.org>
-#
-# $FreeBSD: ports/sysutils/ah-tty/Makefile,v 1.9 2012/11/17 06:01:24 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
+# $FreeBSD: sysutils/ah-tty/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ah-tty
 PORTVERSION=	0.3.12
@@ -20,6 +16,7 @@ PLIST_FILES=	bin/ah-tty bin/ah-tty.static share/ah-tty.conf
 MAN1=		ah-tty.1
 INFO=		ah-tty
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' \
 		${WRKSRC}/dillib/vty/vtlabel.c
