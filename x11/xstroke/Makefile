@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xstroke/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/xstroke/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xstroke
 PORTVERSION=	0.5.12
@@ -24,6 +24,7 @@ CFLAGS+=	-I.
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX},g" ${WRKSRC}/etc/Imakefile
 	@${REINPLACE_CMD} -e "s,etc/,${PREFIX}/etc/,g" ${WRKSRC}/args.h
