@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Gungho/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Gungho/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Gungho
 PORTVERSION=	0.09.008
@@ -103,6 +103,7 @@ MAN3=		Gungho.3 \
 		Gungho::Response.3 \
 		Gungho::Util.3
 
+NO_STAGE=	yes
 post-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/script/gungho ${PREFIX}/bin/gungho
 
