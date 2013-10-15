@@ -1,5 +1,5 @@
 # Created by: papowell@lprng.com
-# $FreeBSD: sysutils/LPRngTool/Makefile 316672 2013-04-27 16:00:26Z hrs $
+# $FreeBSD: sysutils/LPRngTool/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	LPRngTool
 PORTVERSION=	1.3.2
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--with-spool_directory=/var/spool/lpd \
 
 MAN1=		lprngtool.1
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "If you want to replace the default printing system with LPRng, use:"
 	@${ECHO_MSG} "  make PREFIX=/usr SYSCONFDIR=/etc clean all install"
