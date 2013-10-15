@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-zentest/Makefile 319710 2013-06-02 18:52:12Z swills $
+# $FreeBSD: devel/rubygem-zentest/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	zentest
 PORTVERSION=	4.9.2
@@ -23,4 +23,5 @@ PLIST_FILES=	bin/autotest \
 		bin/unit_diff \
 		bin/zentest
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
