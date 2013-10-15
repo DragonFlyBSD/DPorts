@@ -1,5 +1,5 @@
 # Created by: Steven Enderle <enderle@mdn.de>
-# $FreeBSD: misc/bestfit/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: misc/bestfit/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	bestfit
 PORTVERSION=	0.2.0
@@ -17,4 +17,5 @@ MANCOMPRESSED=	no
 MAN1=		bestfit.1
 PLIST_FILES=	bin/bestfit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
