@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pantry
-# Date created:		21 July 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/pantry/Makefile,v 1.15 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: misc/pantry/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pantry
 PORTVERSION=	32
@@ -18,4 +14,5 @@ GNU_CONFIGURE=	yes
 
 MAN1=		pantry.1 pantryd.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
