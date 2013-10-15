@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: ports/archivers/pecl-phk/Makefile,v 1.6 2013/02/01 08:45:03 svnexp Exp $
+# $FreeBSD: archivers/pecl-phk/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	phk
 PORTVERSION=	2.1.0
@@ -14,6 +14,7 @@ COMMENT=	PHK is a PHP-oriented package/archive system
 
 LICENSE=	PHP301
 
+NO_STAGE=	yes
 USE_PHP=	yes
 USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
