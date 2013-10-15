@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-ISSN/Makefile 324167 2013-08-02 17:11:34Z az $
+# $FreeBSD: misc/p5-Business-ISSN/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=		Business-ISSN
 PORTVERSION=		0.91
@@ -15,6 +15,7 @@ USE_PERL5=		configure
 
 MAN3=			Business::ISSN.3
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,Business-ISSN,Business::ISSN,' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
