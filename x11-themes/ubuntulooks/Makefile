@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/ubuntulooks/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: x11-themes/ubuntulooks/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	ubuntulooks
 PORTVERSION=	0.9.12
@@ -20,4 +20,5 @@ USE_GMAKE=	yes
 USE_GNOME=	gtk20
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
