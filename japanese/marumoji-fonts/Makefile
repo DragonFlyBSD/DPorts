@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/marumoji-fonts/Makefile 320880 2013-06-14 03:22:02Z miwi $
+# $FreeBSD: japanese/marumoji-fonts/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	marumoji-fonts
 PORTVERSION=	1.0
@@ -25,6 +25,7 @@ RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 NO_WRKSUBDIR=	yes
 FONTSDIR=	lib/X11/fonts/local
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 EXTRACT_CMD=		${CP}
