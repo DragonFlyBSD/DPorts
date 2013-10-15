@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/subweb/Makefile,v 1.5 2012/12/12 21:45:14 svnexp Exp $
+# $FreeBSD: security/subweb/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	subweb
 PORTVERSION=	1.0
@@ -10,6 +10,7 @@ COMMENT=	SubWeb is a (reverse) proxy to inspect HTTP flows on the fly
 
 NO_BUILD=	YES
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/subweb ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
