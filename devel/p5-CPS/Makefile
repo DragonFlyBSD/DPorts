@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-CPS/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-CPS/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPS
 PORTVERSION=	0.18
@@ -31,4 +31,5 @@ MAN3=		CPS.3 \
 		CPS::Governor::Deferred.3 \
 		CPS::Governor::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
