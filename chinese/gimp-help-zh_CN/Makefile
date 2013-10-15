@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gimp-help
-# Date created:		10th April 2010
-# Whom:			SimaMoto,RyoTa <liangtai.s4@gmail.com>
-#
-# $FreeBSD: ports/chinese/gimp-help-zh_CN/Makefile,v 1.3 2012/11/17 05:54:56 svnexp Exp $
-#
+# Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
+# $FreeBSD: chinese/gimp-help-zh_CN/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 CATEGORIES=	chinese graphics
 
@@ -15,4 +11,5 @@ MASTERDIR=	${.CURDIR}/../../misc/gimp-help-en
 DOCLANG=	zh_CN
 AMPLE=	"@comment "
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
