@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: www/drraw/Makefile 327283 2013-09-14 13:38:20Z az $
+# $FreeBSD: www/drraw/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	drraw
 DISTVERSION=	2.2b2
@@ -29,6 +29,7 @@ TMPDIR?=	/var/db/${PORTNAME}/tmp
 
 PLIST_SUB+=	CONFDIR=${CONFDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MZOOM_PATCH}
