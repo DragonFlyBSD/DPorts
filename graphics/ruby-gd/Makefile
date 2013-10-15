@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ruby-gd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/ruby-gd/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	gd
 PORTVERSION=	0.8.0
@@ -15,6 +15,8 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Ruby extension library to use Thomas Boutell's gd library
 
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+
+NO_STAGE=	yes
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
