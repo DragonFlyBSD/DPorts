@@ -1,5 +1,5 @@
 # Created by: glewis@FreeBSD.org
-# $FreeBSD: games/ldmud/Makefile 326013 2013-09-02 15:39:17Z bapt $
+# $FreeBSD: games/ldmud/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ldmud
 PORTVERSION=	3.3.720
@@ -37,6 +37,7 @@ LPMUD_DESC=	Install default mudlib (LP-245)
 
 PORTSCOUT=	skipv:3.4.2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
