@@ -1,9 +1,5 @@
-# New ports collection makefile for:	byobu
-# Date created:		2011-04-09
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/sysutils/byobu/Makefile,v 1.3 2012/11/17 06:01:26 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: sysutils/byobu/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	byobu
 PORTVERSION=	3.29
@@ -39,6 +35,7 @@ MAN1=		byobu-config.1 \
 		byobu.1 \
 		shell.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e "s@/bin/bash@${LOCALBASE}/bin/bash@" \

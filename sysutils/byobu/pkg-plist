@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/sysutils/byobu/pkg-plist,v 1.3 2012/11/17 06:01:26 svnexp Exp $
+@comment $FreeBSD: sysutils/byobu/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DATADIR%%/ec2/rates.eu_ie
 %%DATADIR%%/ec2/rates.us_ca
 %%DATADIR%%/ec2/rates.us_va
