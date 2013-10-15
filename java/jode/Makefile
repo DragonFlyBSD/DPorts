@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: ports/java/jode/Makefile,v 1.14 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jode/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jode
 PORTVERSION=	1.1.1.1
@@ -27,6 +27,7 @@ CLASSLIB=	${JAVA_CLASSES}:${GETOPT_JAR}
 CONFIGURE_ENV+=	CLASSLIB=${CLASSLIB} JAR="${JAR}" \
 		JAVA="${JAVA}" JAVAC="${JAVAC}"
 CONFIGURE_ARGS+=--datadir="${JAVALIBDIR}"
+NO_STAGE=	yes
 # Don't create the dependencies:
 MAKE_ARGS+=	JAVADEP=:
 PLIST_SUB+=	VERSION=${VENDOR_VERSION}
