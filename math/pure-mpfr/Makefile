@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: math/pure-mpfr/Makefile 324729 2013-08-14 14:58:37Z marino $
+# $FreeBSD: math/pure-mpfr/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	pure-mpfr
 PORTVERSION=	0.4
@@ -16,5 +16,6 @@ PLIST_FILES=	lib/pure/mpfr.pure \
 
 MAKE_ARGS+=	libdir="${PREFIX}/lib"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
