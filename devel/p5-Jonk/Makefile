@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Jonk/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-Jonk/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Jonk
 PORTVERSION=	0.05
@@ -27,4 +27,5 @@ MAN3=	Jonk.3 \
 	Jonk::Cookbook::ForkModel.3 \
 	Jonk::Worker.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
