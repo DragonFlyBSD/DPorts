@@ -1,5 +1,5 @@
 # Created by: Fabian Keil <fk@fabiankeil.de>
-# $FreeBSD: net-mgmt/vidalia/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-mgmt/vidalia/Makefile 330089 2013-10-11 16:34:35Z danilo $
 
 PORTNAME=	vidalia
 PORTVERSION=	0.2.21
