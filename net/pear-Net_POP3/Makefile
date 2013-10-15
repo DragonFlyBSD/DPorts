@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: ports/net/pear-Net_POP3/Makefile,v 1.12 2013/02/03 18:10:19 svnexp Exp $
+# $FreeBSD: net/pear-Net_POP3/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_POP3
 PORTVERSION=	1.3.8
@@ -13,6 +13,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
