@@ -1,9 +1,4 @@
-# New ports collection makefile for:	te-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/te-hunspell/Makefile,v 1.5 2012/11/17 06:02:23 svnexp Exp $
-#
+# $FreeBSD: textproc/te-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 DISTVERSION=	0.01-2
@@ -32,7 +27,7 @@ do-build:
 		${SETENV} LANG=te_IN.utf8 ${LOCALBASE}/bin/wordlist2hunspell te.txt te_IN
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/te_IN.aff ${WRKSRC}/te_IN.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/te_IN.aff ${WRKSRC}/te_IN.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
