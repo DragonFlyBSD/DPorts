@@ -1,12 +1,12 @@
 # Created by: Danilo Egea Gondolfo <danilogondolfo@gmail.com>
-# $FreeBSD: x11/yad/Makefile 326287 2013-09-04 15:31:58Z wg $
+# $FreeBSD: x11/yad/Makefile 328211 2013-09-24 22:51:58Z danilo $
 
 PORTNAME=	yad
-PORTVERSION=	0.23.0
+PORTVERSION=	0.23.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Display GNOME dialogs from the command line
 
 USES=		gmake pkgconfig
@@ -15,8 +15,6 @@ GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV+=	DATADIRNAME=share
-
-MAN1=	yad.1
 
 OPTIONS_DEFINE=	NLS ICONBROWSER
 ICONBROWSER_DESC=	Build YAD icon browser
