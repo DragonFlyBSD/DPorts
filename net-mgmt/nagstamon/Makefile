@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-mgmt/nagstamon/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net-mgmt/nagstamon/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagstamon
 PORTVERSION=	0.9.9
@@ -24,6 +24,7 @@ MAN1=		nagstamon.1
 
 WRKSRC=		${WRKDIR}/Nagstamon
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/\(man/man1\)|\1|' ${WRKSRC}/setup.py
 
