@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Headers-Fast/Makefile 326156 2013-09-03 15:07:52Z az $
+# $FreeBSD: www/p5-HTTP-Headers-Fast/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Headers-Fast
 PORTVERSION=	0.16
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		HTTP::Headers::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
