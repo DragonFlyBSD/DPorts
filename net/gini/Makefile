@@ -1,9 +1,5 @@
-# New ports collection makefile for:	GINI
-# Date created:				23 April 2003
-# Whom:					Kimura Fuyuki <fuyuki@hadaly.org>
-#
-# $FreeBSD: ports/net/gini/Makefile,v 1.13 2012/11/17 06:00:01 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
+# $FreeBSD: net/gini/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gini
 PORTVERSION=	0.5.1
@@ -28,6 +24,7 @@ GROUPS=		${USERS}
 MAN1=		ginicon.1 ginifeed.1
 MAN8=		gini.8
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/gini.sh.sample ${PREFIX}/etc/rc.d
 .if !defined(NOPORTDOCS)
