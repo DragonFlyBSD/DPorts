@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/diary-hercules/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: misc/diary-hercules/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	hercules
 PORTVERSION=	0.1.1
@@ -24,6 +24,7 @@ USE_WX=		2.6+
 WX_UNICODE=	yes
 WX_COMPS=	python
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's#%%PREFIX%%#${PREFIX}#g' \
 		${WRKSRC}/Hercules/globals.py
