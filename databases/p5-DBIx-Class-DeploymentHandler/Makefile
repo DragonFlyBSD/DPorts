@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-DeploymentHandler/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-DBIx-Class-DeploymentHandler/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-DeploymentHandler
 PORTVERSION=	0.002206
@@ -63,4 +63,5 @@ MAN3=	DBIx::Class::DeploymentHandler.3 \
 	DBIx::Class::DeploymentHandler::WithApplicatorDumple.3 \
 	DBIx::Class::DeploymentHandler::WithReasonableDefaults.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
