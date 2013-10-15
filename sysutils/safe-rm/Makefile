@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/safe-rm/Makefile 324857 2013-08-17 16:57:13Z bdrewery $
+# $FreeBSD: sysutils/safe-rm/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	safe-rm
 PORTVERSION=	0.10
@@ -11,8 +11,8 @@ COMMENT=	Wrapper around the rm command to prevent accidental deletions
 
 LICENSE=	GPLv3
 
-USE_PERL5_RUN=	yes
-
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 FETCH_ARGS=	-pRr
@@ -20,6 +20,7 @@ FETCH_ARGS=	-pRr
 PORTDOCS=	COPYING Changes README
 PLIST_FILES=	bin/safe-rm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
