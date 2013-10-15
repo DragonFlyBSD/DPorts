@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: deskutils/pinot/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: deskutils/pinot/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	pinot
 PORTVERSION=	1.06
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 #MASTER_SITES=	http://colinf.chez.com/pinot/
@@ -76,6 +76,7 @@ LM2FIX=		textcat_conf.txt textcat3_conf.txt textcat31_conf.txt textcat32_conf.tx
 SHR2FIX=	Core/pinot-search.1 README
 UL2FIX=		Utils/xdgmime/xdgmime.c
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 700041
