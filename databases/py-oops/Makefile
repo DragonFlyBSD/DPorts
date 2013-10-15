@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-oops
-# Date created:			May 16, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/databases/py-oops/Makefile,v 1.6 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: databases/py-oops/Makefile 328563 2013-09-28 11:13:15Z mva $
 
 PORTNAME=	oops
 PORTVERSION=	0.9.1
@@ -15,7 +10,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Object Oriented Database Library For Persistent Storage in Python
 
-USE_PYTHON=	yes
+USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
