@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sortu
-# Date created:		Wed Mar 12 18:13:34 PDT 2008
-# Whom:			Matt Peterson <matt@peterson.org>
-#
-# $FreeBSD: ports/sysutils/sortu/Makefile,v 1.3 2012/11/17 06:01:46 svnexp Exp $
-#
+# Created by: Matt Peterson <matt@peterson.org>
+# $FreeBSD: sysutils/sortu/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sortu
 PORTVERSION=	2.1.2
@@ -22,6 +18,7 @@ PLIST_FILES=	bin/sortu
 
 ALL_TARGET=	sortu
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
