@@ -1,6 +1,5 @@
 # Created by: Ekkehard 'Ekki' Gehm <gehm@physik.tu-berlin.de>
-# $FreeBSD: security/aespipe/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/aespipe/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	aespipe
 DISTVERSION=	v2.3e
@@ -21,6 +20,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/aespipe
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 ALL_TARGET=
 .if ${ARCH} == x86_64
