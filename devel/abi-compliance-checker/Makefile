@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: devel/abi-compliance-checker/Makefile 319375 2013-05-29 14:53:52Z bf $
+# $FreeBSD: devel/abi-compliance-checker/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	abi-compliance-checker
 PORTVERSION=	1.99
@@ -15,11 +15,12 @@ COMMENT=	Checks binary compatibility of two versions of a C/C++ shared library
 LICENSE=	LGPL20 GPLv2
 LICENSE_COMB=	dual
 
+USES=		perl5
+
 .if defined(MAINTAINER_MODE) || defined(PACKAGE_BUILDING)
 BUILD_DEPENDS?=	exctags:${PORTSDIR}/devel/ctags
-USE_PERL5=	yes
 .else
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 .endif
 RUN_DEPENDS?=	exctags:${PORTSDIR}/devel/ctags
 USE_GCC=	any
@@ -29,6 +30,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}.pl
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CPPFILT?=	/usr/bin/c++filt
