@@ -1,7 +1,7 @@
-# $FreeBSD: databases/percona-toolkit/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: databases/percona-toolkit/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	percona-toolkit
-PORTVERSION=	2.2.3
+PORTVERSION=	2.2.4
 CATEGORIES=	databases
 MASTER_SITES=	http://www.percona.com/downloads/percona-toolkit/${PORTVERSION}/
 
@@ -51,4 +51,5 @@ MAN1=	percona-toolkit.1 \
 	pt-variable-advisor.1 \
 	pt-visual-explain.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
