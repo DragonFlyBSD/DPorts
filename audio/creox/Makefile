@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/creox/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/creox/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	creox
 PORTVERSION=	0.3.0
@@ -19,6 +19,7 @@ GH_TAGNAME=	0.3
 GH_COMMIT=	8e27483
 
 USES=		cmake:outsource
+NO_STAGE=	yes
 USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XORG=	xft xpm
