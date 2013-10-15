@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: net-im/p5-AnyEvent-XMPP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-AnyEvent-XMPP/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	AnyEvent-XMPP
 PORTVERSION=	0.54
@@ -72,6 +72,7 @@ MAN3=	AnyEvent::XMPP.3 \
 	AnyEvent::XMPP::Ext::Receipts.3 \
 	AnyEvent::XMPP::Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 # One of it's dependency is p5-GSSAPI which is marked broken for 7.X
 .if ${OSVERSION} < 800000
