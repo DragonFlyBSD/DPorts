@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-BSON/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: databases/p5-BSON/Makefile 328813 2013-09-30 15:27:13Z sunpoet $
 
 PORTNAME=	BSON
 PORTVERSION=	0.11
@@ -23,16 +23,5 @@ TEST_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		BSON.3 \
-		BSON::Binary.3 \
-		BSON::Bool.3 \
-		BSON::Code.3 \
-		BSON::MaxKey.3 \
-		BSON::MinKey.3 \
-		BSON::ObjectId.3 \
-		BSON::String.3 \
-		BSON::Time.3 \
-		BSON::Timestamp.3
 
 .include <bsd.port.mk>
