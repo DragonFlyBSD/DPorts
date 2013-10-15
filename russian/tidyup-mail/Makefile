@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tidyup-mail
-# Date created:				28 June 2006
-# Whom:					Alexander Gromnizki
-#
-# $FreeBSD: ports/russian/tidyup-mail/Makefile,v 1.2 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Alexander Gromnizki
+# $FreeBSD: russian/tidyup-mail/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	tidyup-mail
 PORTVERSION=	0.12
@@ -19,6 +15,7 @@ MANLANG=	ru.KOI8-R
 ALL_TARGET=	${PORTNAME}
 PLIST_FILES=	bin/tidyup-mail
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	@${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MAN1PREFIX}/man/ru.KOI8-R/man1/
