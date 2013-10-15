@@ -1,13 +1,8 @@
-# New ports collection makefile for:   snortreport
-# Date created:        18 Jan 2004
-# Whom:                Andrea Venturoli <freebsd@netfence.it>
-#
-# $FreeBSD: ports/security/snortreport/Makefile,v 1.13 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Andrea Venturoli <freebsd@netfence.it>
+# $FreeBSD: security/snortreport/Makefile 328595 2013-09-28 16:54:24Z ohauer $
 
 PORTNAME=	snortreport
-PORTVERSION=	1.3.3
-PORTREVISION=	1
+PORTVERSION=	1.3.4
 CATEGORIES=	security www
 MASTER_SITES=	http://www.symmetrixtech.com/ids/
 
@@ -16,46 +11,49 @@ COMMENT=	Add-on module for snort to generate real-time web reports
 
 LICENSE=	GPLv2
 
-.if !defined(WITHOUT_JPGRAPH)
-RUN_DEPENDS=	${LOCALBASE}/share/jpgraph/jpgraph.php:${PORTSDIR}/graphics/jpgraph2
-.endif
+OPTIONS_DEFINE=		BARNYARD JPGRAPH MYSQL PGSQL
+
+BARNYARD_DESC=		Depend on Barnyard2
+JPGRAPH_DESC=		Graphical charting
+
+BARNYARD_RUN_DEPENDS=	barnyard2:${PORTSDIR}/security/barnyard2
+JPGRAPH_RUN_DEPENDS=	${LOCALBASE}/share/jpgraph/jpgraph.php:${PORTSDIR}/graphics/jpgraph2
+.include <bsd.port.options.mk>
+
+NO_BUILD=	yes
+SUB_FILES=	pkg-message
+PORTDOCS=	INSTALL Performance.txt create_indexes.sql
+FTYPES=		css html js php phps png sample
 
 USE_PHP=	yes
 WANT_PHP_WEB=	yes
 
-PKGMESSAGE=	${WRKDIR}/pkg-message
-NO_BUILD=	yes
+.if ${PORT_OPTIONS:MMYSQL}
+USE_PHP+=	mysql
+.endif
+
+.if ${PORT_OPTIONS:MPGSQL}
+USE_PHP+=	pgsql
+.endif
 
 pre-everything::
 	@${ECHO} ""
 	@${ECHO} "You have to configure PHP either with MySQL or PostgreSQL"
 	@${ECHO} "support in order to let snortreport collect its data."
-	@${ECHO} "Is is also suggested to compile support for GD in"
-	@${ECHO} "and have Jpgraph installed in order to view the charts."
 	@${ECHO} ""
 
-pre-patch:
-	@${SED} 's|%%PREFIX%%|${PREFIX}|g' \
-		${PKGDIR}/pkg-message > ${PKGMESSAGE}
+post-patch:
+	${MV} ${WRKSRC}/srconf.php ${WRKSRC}/srconf.php.sample
 
 do-install:
-	${MKDIR} ${PREFIX}/www/snortreport
-	${CP} -p ${WRKSRC}/*.php ${PREFIX}/www/snortreport
-	${CP} -p ${WRKSRC}/*.css ${PREFIX}/www/snortreport
-	${CP} -p ${WRKSRC}/*.png ${PREFIX}/www/snortreport
-	${CP} -p ${WRKSRC}/*.html ${PREFIX}/www/snortreport
-	${CP} -p ${WRKSRC}/*.phps ${PREFIX}/www/snortreport
-	${CP} -p ${WRKSRC}/*.js ${PREFIX}/www/snortreport
-	${CHOWN} -R www:www ${PREFIX}/www/snortreport
+# srconf.conf contains snort database login credentials
+	${INSTALL} -o ${WWWOWN} -g ${WWWGRP} -m 750 -d ${STAGEDIR}${WWWDIR}
+	${INSTALL_DATA} ${FTYPES:S|^|${WRKSRC}/*|} ${STAGEDIR}${WWWDIR}
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${INSTALL} -d -o ${DOCOWN} -g ${DOCGRP} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/Performance.txt ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/create_indexes.sql ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
