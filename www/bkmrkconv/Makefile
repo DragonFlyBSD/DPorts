@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: www/bkmrkconv/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/bkmrkconv/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bkmrkconv
 PORTVERSION=	1.12
@@ -12,6 +12,7 @@ COMMENT=	Netscape bookmarks.html converter
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -i '' -e \
 		's|/usr/bin/perl|${PERL}|g ; \
