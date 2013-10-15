@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Session/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Session/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-Session
 PORTVERSION=	1.03
@@ -21,4 +21,5 @@ USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::Session.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
