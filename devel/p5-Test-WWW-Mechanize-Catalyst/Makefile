@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Test-WWW-Mechanize-Catalyst
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-WWW-Mechanize-Catalyst/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-WWW-Mechanize-Catalyst/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-WWW-Mechanize-Catalyst
 PORTVERSION=	0.58
@@ -29,5 +28,6 @@ USE_PERL5=	configure
 
 MAN3=		Test::WWW::Mechanize::Catalyst.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
 
