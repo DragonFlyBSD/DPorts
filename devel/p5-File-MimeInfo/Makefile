@@ -1,8 +1,9 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-File-MimeInfo/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/p5-File-MimeInfo/Makefile 329063 2013-10-02 16:13:58Z acm $
 
 PORTNAME=	File-MimeInfo
 PORTVERSION=	0.16
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -26,6 +27,7 @@ MAN3=		File::MimeInfo::Applications.3 \
 		File::MimeInfo::Rox.3 \
 		File::MimeInfo.3
 
+NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC} && ${PERL5} ${PL_BUILD} test
 
