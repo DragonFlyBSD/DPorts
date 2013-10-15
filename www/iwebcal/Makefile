@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iwebcal
-# Date created:		2006-01-14
-# Whom:			Babak Farrokhi <babak@farrokhi.net>
-#
-# $FreeBSD: ports/www/iwebcal/Makefile,v 1.7 2012/11/17 06:02:37 svnexp Exp $
-#
+# Created by: Babak Farrokhi <babak@farrokhi.net>
+# $FreeBSD: www/iwebcal/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	iwebcal
 PORTVERSION=	2.1
@@ -18,6 +14,7 @@ NO_BUILD=	yes
 USE_PHP=	yes
 WRKSRC=		${WRKDIR}/iWebCal
 
+NO_STAGE=	yes
 post-extract:
 	-@${FIND} ${WRKSRC}/ -type d -name '.svn' | ${XARGS} ${RM} -rf
 
