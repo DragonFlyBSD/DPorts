@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: graphics/py-gd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/py-gd/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gd
 PORTVERSION=	0.58
@@ -20,6 +20,7 @@ PYSETUP=	Setup.py
 USE_PYTHON_PREFIX=	yes
 PYDISTUTILS_PKGNAME=	gdmodule
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/\/usr\/lib/d ; \
