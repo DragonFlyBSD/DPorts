@@ -1,5 +1,5 @@
 # Created by: Tim Welch <ports@thepentagon.org>
-# $FreeBSD: news/nzbperl/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: news/nzbperl/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	nzbperl
 PORTVERSION=	0.6.8
@@ -27,6 +27,7 @@ USE_PERL5=	run
 RUN_DEPENDS+=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
 .endif
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKDIR}
