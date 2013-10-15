@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/prelude-manager/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/prelude-manager/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	prelude-manager
 PORTVERSION=	1.0.2
@@ -45,6 +45,7 @@ OPTIONS_DEFAULT=XML
 
 XML_DESC=	XML plugin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MXML}
