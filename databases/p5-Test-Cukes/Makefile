@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/p5-Test-Cukes/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: databases/p5-Test-Cukes/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Test-Cukes
 PORTVERSION=	0.10
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::Cukes.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
