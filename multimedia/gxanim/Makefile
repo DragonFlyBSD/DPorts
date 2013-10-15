@@ -1,5 +1,5 @@
 # Created by: Rod Taylor
-# $FreeBSD: multimedia/gxanim/Makefile 321038 2013-06-16 11:31:31Z wg $
+# $FreeBSD: multimedia/gxanim/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gxanim
 PORTVERSION=	0.50
@@ -21,4 +21,5 @@ WRKSRC=	${WRKDIR}/gxanim-${PORTVERSION}
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
