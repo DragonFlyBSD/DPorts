@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: x11-toolkits/termit/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
@@ -19,9 +19,7 @@ USE_GNOME=	gdkpixbuf2 vte
 
 CFLAGS+=	-I${LOCALBASE}/include/vte-0.0
 
-MAN1=		${PORTNAME}.1
-
-TERMIT_ETC=	${PREFIX}/etc/xdg/${PORTNAME}
+TERMIT_ETC=	${STAGEDIR}${PREFIX}/etc/xdg/${PORTNAME}
 
 OPTIONS_DEFINE=	DEBUG DOCS NLS
 OPTIONS_SUB=	yes
@@ -34,11 +32,6 @@ NLS_USES=	gettext
 .include <bsd.port.options.mk>
 
 post-patch:
-.if ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} 's|../COPYING||' ${WRKSRC}/doc/CMakeLists.txt
-.else
-	@${REINPLACE_CMD} '/TERMIT_DOCS/s|^|#|' ${WRKSRC}/doc/CMakeLists.txt
-.endif
 	@${REINPLACE_CMD} 's|share/man|man|' ${WRKSRC}/doc/CMakeLists.txt
 	@${REINPLACE_CMD} 's|ADD_SUBDIRECTORY(etc)||' ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} 's|/etc|${PREFIX}/etc|' ${WRKSRC}/src/lua_conf.c
@@ -46,12 +39,9 @@ post-patch:
 		${WRKSRC}/src/CMakeLists.txt
 
 post-install:
-	${MKDIR} ${TERMIT_ETC}
+	@${MKDIR} ${TERMIT_ETC}
 .for file in colormaps.lua rc.lua utils.lua
 	${CP} ${WRKSRC}/etc/termit/${file} ${TERMIT_ETC}/${file}.sample
-	@if [ ! -f ${TERMIT_ETC}/${file} ]; then \
-		${CP} -p ${TERMIT_ETC}/${file}.sample ${TERMIT_ETC}/${file}; \
-	fi
 .endfor
 
 .include <bsd.port.mk>
