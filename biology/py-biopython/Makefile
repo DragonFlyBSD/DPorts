@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: ports/biology/py-biopython/Makefile,v 1.35 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: biology/py-biopython/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	biopython
 PORTVERSION=	1.60
@@ -21,4 +21,5 @@ PYEASYINSTALL_ARCHDEP=	yes
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}reportlab>0:${PORTSDIR}/print/py-reportlab
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
