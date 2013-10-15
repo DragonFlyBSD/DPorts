@@ -1,5 +1,5 @@
 # Created by: Ross Timson <ross@rosstimson.com>
-# $FreeBSD: devel/chruby/Makefile 321857 2013-06-27 06:59:45Z miwi $
+# $FreeBSD: devel/chruby/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	chruby
 PORTVERSION=	0.3.6
@@ -27,6 +27,7 @@ GH_TAGNAME=	v${PORTVERSION}
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/chruby-exec ${PREFIX}/bin
 	( cd ${WRKSRC}/share/chruby && ${COPYTREE_BIN} \* ${PREFIX}/share/chruby )
