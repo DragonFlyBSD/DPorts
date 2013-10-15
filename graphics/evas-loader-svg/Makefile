@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-svg/Makefile 326369 2013-09-05 08:31:18Z bapt $
+# $FreeBSD: graphics/evas-loader-svg/Makefile 330159 2013-10-12 17:56:06Z gblach $
 
 PORTNAME=	loader-svg
 PORTVERSION=	1.7.8
@@ -14,7 +14,7 @@ COMMENT=	A hardware accelerated canvas API (SVG loader)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
