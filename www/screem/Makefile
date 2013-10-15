@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: www/screem/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: www/screem/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	screem
 PORTVERSION=	0.16.1
@@ -38,6 +38,7 @@ LIB_DEPENDS+=	enchant.1:${PORTSDIR}/textproc/enchant
 CONFIGURE_ARGS+=	--enable-enchant
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DGNOME_DISABLE_DEPRECATED||g ; \
 		s|-DGNOMEUI_DISABLE_DEPRECATED||g ; \
