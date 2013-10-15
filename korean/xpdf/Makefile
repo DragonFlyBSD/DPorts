@@ -1,5 +1,5 @@
 # Created by: Jung-uk Kim <jkim@FreeBSD.org>
-# $FreeBSD: korean/xpdf/Makefile 317774 2013-05-10 08:08:33Z hrs $
+# $FreeBSD: korean/xpdf/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -28,6 +28,7 @@ ADOBECMAPDIR=	${LOCALBASE}/share/fonts/adobe-cmaps
 INSTALL_FILES=	Adobe-Korea1.cidToUnicode ISO-2022-KR.unicodeMap \
 		README ../dot.xpdfrc
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/korean
 	cd ${WRKSRC} && \
