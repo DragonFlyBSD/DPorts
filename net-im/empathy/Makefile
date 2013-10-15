@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/empathy/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: net-im/empathy/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #    $MCom: ports/net-im/empathy/Makefile,v 1.90 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	empathy
@@ -58,6 +58,7 @@ HAZE_DESC=	Libpurple protocol integration
 NST_DESC=	Nautilus SendTo plugin
 MAP_DESC=	Graphical map support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJABBER}
