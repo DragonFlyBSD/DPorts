@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: graphics/libgnomecanvasmm/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: graphics/libgnomecanvasmm/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libgnomecanvasmm
 PORTVERSION=	2.0.1
@@ -20,6 +20,7 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
