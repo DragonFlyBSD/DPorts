@@ -1,8 +1,5 @@
-# New ports collection makefile for:	albatross
-# Date created:		29 August 2002
-# Whom:	      		Gregory Bond <gnb@itga.com.au>
-#
-# $FreeBSD: ports/www/py-albatross/Makefile,v 1.12 2012/11/17 06:02:58 svnexp Exp $
+# Created by: Gregory Bond <gnb@itga.com.au>
+# $FreeBSD: www/py-albatross/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	albatross
 PORTVERSION=	1.36
@@ -18,6 +15,7 @@ COMMENT=	Python toolkit for developing highly stateful web applications
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR} ${EXAMPLESDIR} ${DOCSDIR}/html
