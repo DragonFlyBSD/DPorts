@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-termcolor
-# Date created:		2009-07-12
-# Whom:			Dennis Herrmann <dhn@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/rubygem-termcolor/Makefile,v 1.9 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Dennis Herrmann <dhn@FreeBSD.org>
+# $FreeBSD: textproc/rubygem-termcolor/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	termcolor
 PORTVERSION=	1.2.2
@@ -20,4 +16,5 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
