@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mysqlsniffer
-# Date created:		26 May 2010
-# Whom:			Frederic Hardy <frederic.hardy@mageekbox.net>
-#
-# $FreeBSD: ports/databases/mysqlsniffer/Makefile,v 1.2 2012/11/17 05:55:12 svnexp Exp $
-#
+# Created by: Frederic Hardy <frederic.hardy@mageekbox.net>
+# $FreeBSD: databases/mysqlsniffer/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysqlsniffer
 PORTVERSION=	1.2
@@ -18,6 +14,7 @@ COMMENT=	Tcpdump clone specifically for MySQL
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/mysqlsniffer
 
+NO_STAGE=	yes
 do-build:
 	${CC} -lpcap -o ${WRKSRC}/${PORTNAME} ${WRKSRC}/mysqlsniffer.c ${WRKSRC}/packet_handlers.c ${WRKSRC}/misc.c
 
