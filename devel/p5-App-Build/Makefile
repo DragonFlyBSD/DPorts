@@ -1,5 +1,5 @@
 # Created by: Alex Bakhtin <Alex.Bakhtin@gmail.com>
-# $FreeBSD: devel/p5-App-Build/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-App-Build/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	App-Build
 PORTVERSION=	0.74
@@ -18,6 +18,7 @@ BUILD_DEPENDS=	p5-Test-Differences>=0.47:${PORTSDIR}/devel/p5-Test-Differences \
 
 USES=		perl5
 USE_PERL5=	modbuild
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 
