@@ -1,4 +1,4 @@
-# $FreeBSD: french/calligra-l10n/Makefile 311700 2013-02-05 11:36:39Z makc $
+# $FreeBSD: french/calligra-l10n/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
@@ -9,5 +9,6 @@ COMMENT=	French messages and documentation for Calligra
 
 CALLIGRA_L10N=	fr
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/calligra-l10n/files/bsd.l10n.mk"
 .include <bsd.port.mk>
