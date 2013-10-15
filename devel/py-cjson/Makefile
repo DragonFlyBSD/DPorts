@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-cjson
-# Date created:		Jan. 27, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/devel/py-cjson/Makefile,v 1.5 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: devel/py-cjson/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	cjson
 PORTVERSION=	1.0.5
@@ -21,4 +17,5 @@ PYDISTUTILS_PKGNAME=	python-cjson
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/cjson.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
