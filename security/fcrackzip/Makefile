@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: security/fcrackzip/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/fcrackzip/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fcrackzip
 PORTVERSION=	1.0
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/fcrackzip bin/fcrackzipinfo
 MAN1=		fcrackzip.1
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/zipinfo/fcrackzipinfo/g' ${WRKSRC}/zipinfo.c
 
