@@ -1,4 +1,4 @@
-# $FreeBSD: www/thundersnarf/Makefile 322886 2013-07-13 05:38:21Z sunpoet $
+# $FreeBSD: www/thundersnarf/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	thundersnarf
 PORTVERSION=	1.3
@@ -22,6 +22,7 @@ USE_BZIP2=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME:R}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
