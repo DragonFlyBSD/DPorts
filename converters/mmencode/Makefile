@@ -1,5 +1,5 @@
 # Created by: kbyanc
-# $FreeBSD: ports/converters/mmencode/Makefile,v 1.11 2012/12/31 12:35:21 svnexp Exp $
+# $FreeBSD: converters/mmencode/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	mmencode
 PORTVERSION=	2.7
@@ -21,6 +21,7 @@ MLINKS=		mmencode.1 mimencode.1
 ALL_TARGET=	mmencode
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC}		&& ${INSTALL_PROGRAM} mmencode ${PREFIX}/bin
 	@cd ${WRKSRC}/../man	&& ${INSTALL_MAN} mmencode.1 ${PREFIX}/man/man1
