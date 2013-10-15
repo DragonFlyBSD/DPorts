@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pvk
-# Date created:				6 June 2007
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pvk/Makefile,v 1.2 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: security/pvk/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pvk
 PORTVERSION=	20070406
@@ -17,6 +13,7 @@ COMMENT=	Tool to convert a RSA key in PEM format into a PVK file and vice versa
 
 WRKSRC=		${WRKDIR}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pvk ${PREFIX}/bin
 	${MKDIR} ${DOCSDIR}
