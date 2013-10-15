@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-moneta
-# Date created:				19 Mar 2010
-# Whom:					renchap@cocoa-x.com
-#
-# $FreeBSD: devel/rubygem-moneta/Makefile 323291 2013-07-19 13:55:24Z swills $
-#
+# Created by: renchap@cocoa-x.com
+# $FreeBSD: devel/rubygem-moneta/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	moneta
 PORTVERSION=	0.7.19
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
