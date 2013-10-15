@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/alienwave/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/alienwave/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	alienwave
 PORTVERSION=	0.4.0
@@ -27,6 +27,7 @@ ALL_TARGET=	${PORTNAME}
 PORTDOCS=	README STORY TO_DO
 PLIST_FILES=	bin/alienwave
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLEVEL_EASY}
