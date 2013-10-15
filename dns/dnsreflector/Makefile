@@ -1,9 +1,5 @@
-# New ports collection makefile for:   dnsreflector
-# Date created:        May 30 2009
-# Whom:                ismail.yenigul@endersys.com.tr
-#
-# $FreeBSD: ports/dns/dnsreflector/Makefile,v 1.2 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: ismail.yenigul@endersys.com.tr
+# $FreeBSD: dns/dnsreflector/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnsreflector
 PORTVERSION=	1.02
@@ -20,6 +16,7 @@ PORTDOCS=	README
 
 PLIST_FILES=	sbin/dnsreflector
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dnsreflector ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/dnsreflector.1 ${MANPREFIX}/man/man1/
