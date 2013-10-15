@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/w3mir/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/w3mir/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	w3mir
 PORTVERSION=	1.0.10
@@ -19,6 +19,7 @@ MAN1=		w3mir.1 w3mfix.1
 
 INSTALL_TARGET=	pure_install
 
+NO_STAGE=	yes
 do-configure:
 	@ cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${PERL} Makefile.PL PREFIX=${PREFIX} \
