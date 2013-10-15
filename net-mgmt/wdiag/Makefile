@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wdiag
-# Date created:				3 September 2006
-# Whom:					Josh Carroll <josh.carroll@gmail.com>
-#
-# $FreeBSD: ports/net-mgmt/wdiag/Makefile,v 1.5 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Josh Carroll <josh.carroll@gmail.com>
+# $FreeBSD: net-mgmt/wdiag/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	wdiag
 PORTVERSION=	0.10.2
@@ -16,4 +12,5 @@ COMMENT=	Utility to collect DSL line stats from Westell DSL modems
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
