@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/clisp-hyperspec/Makefile,v 1.5 2013/01/26 15:07:24 svnexp Exp $
+# $FreeBSD: devel/clisp-hyperspec/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	clisp-hyperspec
 PORTVERSION=	7.0
@@ -14,6 +14,7 @@ NO_CDROM=	Commercial redistribution prohibited
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DOCSDIR}
 	@${CP} -r ${WRKSRC}/* ${DOCSDIR}
