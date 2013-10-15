@@ -1,5 +1,5 @@
 # Created by: <trasz@FreeBSD.org>
-# $FreeBSD: audio/calf/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: audio/calf/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	calf
 PORTVERSION=	0.0.19
@@ -22,6 +22,7 @@ OPTIONS_DEFINE=	LASH LV2
 OPTIONS_DEFAULT=LASH LV2
 LV2_DESC=	LV2 audio plugin
 
+NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_GCC=	any
 USE_GNOME=	gtk20
