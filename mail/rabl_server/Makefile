@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: mail/rabl_server/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/rabl_server/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	rabl_server
 PORTVERSION=	1.0.0
@@ -22,6 +22,7 @@ USE_RC_SUBR=	${PORTNAME}
 
 RABL_GROUP?=	bind
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
