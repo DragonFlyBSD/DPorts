@@ -1,4 +1,4 @@
-# $FreeBSD: irc/bitlbee/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: irc/bitlbee/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	bitlbee
 PORTVERSION=	3.2
@@ -48,6 +48,7 @@ CONFIGURE_ARGS=	--config=/var/db/bitlbee --strip=0
 USERS=		bitlbee
 GROUPS=		bitlbee
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
