@@ -1,5 +1,5 @@
 # Created by: Joe Barbish <fbsd_user@a1poweruser.com>
-# $FreeBSD: security/ppars/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/ppars/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ppars
 PORTVERSION=	1.0
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${PREFIX}/sbin
