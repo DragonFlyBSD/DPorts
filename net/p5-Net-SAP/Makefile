@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: net/p5-Net-SAP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-SAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SAP
 PORTVERSION=	0.10
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 MAN1=		psapd.1
 MAN3=		Net::SAP.3 Net::SAP::Packet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
