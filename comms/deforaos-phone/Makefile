@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: comms/deforaos-phone/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: comms/deforaos-phone/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	phone
 PORTVERSION=	0.3.11
@@ -26,5 +26,7 @@ USES=		pkgconfig gettext
 USE_GNOME=	gtk20 desktopfileutils
 INSTALLS_ICONS=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
