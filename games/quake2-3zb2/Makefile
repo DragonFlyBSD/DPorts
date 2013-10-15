@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake2-3zb2/Makefile 317993 2013-05-13 03:21:29Z danfe $
+# $FreeBSD: games/quake2-3zb2/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	3zb2
 PORTVERSION=	0.97
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	ROUTES
 
 ROUTES_DESC=	Install routes for DM and CTF maps (recommended)
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../quake2-data/Makefile.include"
 .include <bsd.port.options.mk>
 
