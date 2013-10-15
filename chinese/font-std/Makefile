@@ -1,9 +1,5 @@
-# New ports collection makefile for:	font-std
-# Date created:		15 May 2009
-# Whom:			hrs
-#
-# $FreeBSD: ports/chinese/font-std/Makefile,v 1.4 2012/11/17 05:54:56 svnexp Exp $
-#
+# Created by: hrs
+# $FreeBSD: chinese/font-std/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	font-std
 PORTVERSION=	0.0.20090602
@@ -27,6 +23,7 @@ PLIST_FILES=	${FONTSDIR}/std.zh_CN/STHeiti-Regular \
 PLIST_DIRS=	${FONTSDIR}/std.zh_CN
 FONTSDIR=	share/fonts
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
