@@ -1,25 +1,27 @@
-# Created by: ijliao
-# $FreeBSD: textproc/p5-XML-Catalog/Makefile 324171 2013-08-02 18:21:05Z az $
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Catalog/Makefile 329713 2013-10-07 16:44:15Z culot $
 
 PORTNAME=	XML-Catalog
-PORTVERSION=	0.02
-PORTREVISION=	1
+PORTVERSION=	1.0.0
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Resolve public identifiers and remap system identifiers
 
-BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
-		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
-		p5-URI>=0:${PORTSDIR}/net/p5-URI
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
+		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
+		p5-Text-ParseWords>0:${PORTSDIR}/textproc/p5-Text-ParseWords \
+		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 USE_DOS2UNIX=	Catalog.pm
-
-MAN3=		XML::Catalog.3
 
 .include <bsd.port.mk>
