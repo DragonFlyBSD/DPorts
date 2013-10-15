@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: www/eaccelerator/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: www/eaccelerator/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	eaccelerator
 PORTVERSION=	0.9.7
@@ -33,6 +33,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCCOMM}
