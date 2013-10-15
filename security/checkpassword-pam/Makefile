@@ -1,9 +1,5 @@
-# New ports collection makefile for:	checkpassword-pam
-# Date created:				30 september 2003
-# Whom:					Clement Laforet <sheepkiller@cultdeadsheep.org>
-#
-# $FreeBSD: ports/security/checkpassword-pam/Makefile,v 1.9 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
+# $FreeBSD: security/checkpassword-pam/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	checkpassword-pam
 PORTVERSION=	0.99
@@ -18,4 +14,5 @@ GNU_CONFIGURE=	yes
 MAN8=		checkpassword-pam.8
 PLIST_FILES=	bin/checkpassword-pam
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
