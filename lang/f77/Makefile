@@ -1,9 +1,5 @@
-# Ports collection makefile for:	f77-freebsd
-# Date created:				19 JAN 1999
-# Whom:					Steven G. Kargl
-#
-# $FreeBSD: ports/lang/f77/Makefile,v 1.14 2012/11/17 05:58:49 svnexp Exp $
-#
+# Created by: Steven G. Kargl
+# $FreeBSD: lang/f77/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	f77
 PORTVERSION=	0.3
@@ -38,6 +34,7 @@ ALL_TARGET=	depend all
 MAN1=		${F77NAME}.1
 PLIST_FILES=	bin/${F77NAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/f77 ${PREFIX}/bin/${F77NAME}
 	@${SED} -e 's/F77/${F77NAME}/g' -e 's/f77/${F77NAME}/g' \
