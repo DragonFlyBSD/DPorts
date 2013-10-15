@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  ttlscan
-# Date created:                Wed Apr 2, 2003
-# Whom:                        Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/net/ttlscan/Makefile,v 1.7 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: net/ttlscan/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ttlscan
 PORTVERSION=	0.1.1
@@ -22,6 +17,7 @@ LDFLAGS+=	-lpcap -ldnet
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -I${LOCALBASE}/include -L${LOCALBASE}/lib -D_XOPEN_SOURCE \
 	`${LIBNET_CONFIG} --defines --cflags` ${PORTNAME}.c -o ${PORTNAME} `${LIBNET_CONFIG} --libs` ${LDFLAGS})
