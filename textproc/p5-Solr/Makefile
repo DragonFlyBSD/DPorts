@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Solr/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-Solr/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Solr
 PORTVERSION=	0.03
@@ -22,4 +22,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAN3=		Solr.3 Solr::HTTPUpdateHandler.3 Solr::Schema.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
