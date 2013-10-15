@@ -1,5 +1,5 @@
 # Created by: Igor Serikov <iserikov@acm.org>
-# $FreeBSD: science/2d-rewriter/Makefile 322001 2013-06-28 22:25:57Z bapt $
+# $FreeBSD: science/2d-rewriter/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	2d-rewriter
 PORTVERSION=	1.4
@@ -14,6 +14,7 @@ MANCOMPRESSED=	yes
 USES=		imake
 USE_XORG=	x11 xext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
