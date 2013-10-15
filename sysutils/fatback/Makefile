@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/fatback/Makefile 327262 2013-09-14 10:43:40Z bapt $
+# $FreeBSD: sysutils/fatback/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fatback
 PORTVERSION=	1.3
@@ -19,6 +19,7 @@ EXTRACT_AFTER_ARGS=	--exclude 'getopt*'	\
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
