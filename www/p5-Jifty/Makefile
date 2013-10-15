@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Jifty/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Jifty/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Jifty
 PORTVERSION=	1.10518
@@ -105,6 +105,7 @@ TEST_DEPENDS=	p5-Test-Base>=0.44:${PORTSDIR}/devel/p5-Test-Base \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include "Makefile.man"
 
 post-patch:
