@@ -1,5 +1,5 @@
 # Created by: ubique
-# $FreeBSD: www/mod_tsa/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_tsa/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_tsa
 PORTVERSION=	1.0
@@ -33,6 +33,7 @@ AP_LIB=	${LOCALBASE}/lib
 
 PORTEXAMPLES=	*.sql tsa.conf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
