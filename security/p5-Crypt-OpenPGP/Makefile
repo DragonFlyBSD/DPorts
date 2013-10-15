@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-OpenPGP/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: security/p5-Crypt-OpenPGP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-OpenPGP
 PORTVERSION=	1.06
@@ -46,6 +46,7 @@ MAN3=		Crypt::OpenPGP::ErrorHandler.3 Crypt::OpenPGP::Key.3 \
 		Crypt::OpenPGP::Trust.3 Crypt::OpenPGP::Certificate.3 \
 		Crypt::OpenPGP::Message.3 Crypt::OpenPGP::KeyServer.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/lib/Crypt/OpenPGP/Ciphertext.pm.orig
 
