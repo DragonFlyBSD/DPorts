@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: deskutils/gnochm/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: deskutils/gnochm/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gnochm
 PORTVERSION=	0.9.11
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GCONF_SCHEMAS=	gnochm.schemas
 INSTALLS_OMF=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$(prefix)/share/man|$(prefix)/man|' ${WRKSRC}/data/Makefile.in
 
