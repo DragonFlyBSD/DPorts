@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	genproto
-# Date created:			Jun 29, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/genproto/Makefile,v 1.5 2012/11/17 05:55:44 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/genproto/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	genproto
 PORTVERSION=	0.4.1
@@ -16,6 +11,7 @@ COMMENT=	Generates prototypes from C/C++ code
 
 PLIST_FILES=	bin/genproto
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,^CC,#CC," -e "s,^CFLAGS,#CFLAGS," \
 		${WRKSRC}/Makefile
