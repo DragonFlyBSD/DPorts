@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon <avg@icyb.net.ua>
-# $FreeBSD: sysutils/udfclient/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/udfclient/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	udfclient
 PORTVERSION=	0.7.5
@@ -29,6 +29,7 @@ PLIST_FILES=	bin/udfdump \
 		bin/cd_disect \
 		bin/mmc_format
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFUSE}
