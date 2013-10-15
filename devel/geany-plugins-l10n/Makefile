@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugins-l10n/Makefile 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD: devel/geany-plugins-l10n/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	geany-plugins-l10n
 PORTVERSION=	${GEANY_VER}
@@ -9,5 +9,6 @@ COMMENT=	Localization messages for Geany plugins
 
 USES=		pathfix
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
