@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-true/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-true/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	true
 PORTVERSION=	0.18
@@ -21,8 +21,5 @@ RUN_DEPENDS=	p5-B-Hooks-OP-Annotation>=0.43:${PORTSDIR}/devel/p5-B-Hooks-OP-Anno
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		true.3 \
-		true::VERSION.3
 
 .include <bsd.port.mk>
