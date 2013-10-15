@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: x11/xrsi/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/xrsi/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xrsi
 PORTVERSION=	0.9
@@ -14,6 +14,7 @@ USE_XORG=	x11
 PLIST_FILES=	bin/xrsi
 PORTDOCS=	Readme Licence
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
