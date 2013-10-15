@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: graphics/pure-gl/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: graphics/pure-gl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pure-gl
 PORTVERSION=	0.8
@@ -16,5 +16,6 @@ USE_GL=	glut
 
 MAKE_ARGS+=	LinkGL="-lglut -lGLU -lGL"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
