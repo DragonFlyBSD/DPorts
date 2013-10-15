@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gnomemm
-# Date created:         21 May 2003
-# Whom:                 Alexander Nedotsukov <bland@mail.ru>
-#
-# $FreeBSD: ports/x11-toolkits/gnomemm/Makefile,v 1.18 2012/11/17 06:03:34 svnexp Exp $
-#
+# Created by: Alexander Nedotsukov <bland@mail.ru>
+# $FreeBSD: x11-toolkits/gnomemm/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gnomemm
 PORTVERSION=	2.6.2
@@ -28,4 +24,5 @@ LATEST_LINK=	gnomemm2
 
 do-install:     # empty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
