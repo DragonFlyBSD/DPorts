@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  smtprc
-# Date created:                Mon Mar 3, 2003
-# Whom:                        Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/mail/smtprc/Makefile,v 1.9 2012/11/17 05:59:14 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: mail/smtprc/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	smtprc
 PORTVERSION=	2.0.3
@@ -22,6 +17,7 @@ PLIST_SUB+=	WITHGUI=""
 PLIST_SUB+=	WITHGUI="@comment "
 .endif
 
+NO_STAGE=	yes
 pre-fetch:
 .if defined(WITH_GUI)
 	@${ECHO_MSG} ""
