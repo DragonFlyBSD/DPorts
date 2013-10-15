@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-String-Compare-ConstantTime/Makefile 324557 2013-08-10 17:04:02Z kuriyama $
+# $FreeBSD: textproc/p5-String-Compare-ConstantTime/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	String-Compare-ConstantTime
 PORTVERSION=	0.300
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 MAN3=	String::Compare::ConstantTime.3 \
 	String::Compare::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
