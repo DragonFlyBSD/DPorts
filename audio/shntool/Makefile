@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: audio/shntool/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/shntool/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	shntool
 PORTVERSION=	3.0.10
@@ -29,6 +29,7 @@ KXS_DESC=	Kexis support
 RDEP=	AIFF:sox SHN:shorten FLAC APE:mac OFR:ofr:optimfrog LPAC WV:wavpack \
 	ALAC:alac LA:linux-laudio TTA:ttaenc:tta BONK KXS:kexis
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for o in ${PORT_OPTIONS}
