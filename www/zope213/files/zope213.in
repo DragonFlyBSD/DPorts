@@ -2,7 +2,7 @@
 #
 # Startup script for Zope server.
 #
-# $FreeBSD: ports/www/zope213/files/zope213.in,v 1.3 2012/11/17 06:03:14 svnexp Exp $
+# $FreeBSD: www/zope213/files/zope213.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: zope213
 # REQUIRE: LOGIN
