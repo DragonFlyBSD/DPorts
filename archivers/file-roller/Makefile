@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: archivers/file-roller/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: archivers/file-roller/Makefile 327699 2013-09-20 13:11:20Z bapt $
 #   $MCom: ports/archivers/file-roller/Makefile,v 1.184 2010/11/15 22:58:48 kwm Exp $
 
 PORTNAME=	file-roller
@@ -16,6 +16,7 @@ COMMENT=	An archive manager for zip files, tar, etc
 RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
     		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pkgconfig
