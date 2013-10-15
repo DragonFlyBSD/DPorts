@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/cmus-post.fm/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: audio/cmus-post.fm/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	post.fm
 PORTVERSION=	1.0
@@ -14,6 +14,7 @@ RUN_DEPENDS=	p5-libwww>=5.805:${PORTSDIR}/www/p5-libwww \
 		p5-Storable>=0:${PORTSDIR}/devel/p5-Storable
 
 USES=	shebangfix perl5
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_PERL5=	run
 SUB_FILES=	pkg-message
