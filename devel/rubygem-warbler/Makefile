@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: devel/rubygem-warbler/Makefile 322019 2013-06-29 01:46:36Z swills $
+# $FreeBSD: devel/rubygem-warbler/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	warbler
 PORTVERSION=	1.3.8
@@ -20,4 +20,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/warble
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
