@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/emerald/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11-wm/emerald/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	emerald
 PORTVERSION=	0.8.4
@@ -30,6 +30,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 # XXX - might want to change that
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|icons/gnome|icons/hicolor|' ${WRKSRC}/misc/Makefile.in
 	@${REINPLACE_CMD} -e 's|#define GDK_DISABLE_DEPRECATED||g' \
