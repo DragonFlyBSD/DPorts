@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-CatalystX-Profile/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CatalystX-Profile/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CatalystX-Profile
 PORTVERSION=	0.01
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=		CatalystX::Profile.3 CatalystX::Profile::Controller::ControlProfiling.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
