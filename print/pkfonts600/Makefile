@@ -1,11 +1,8 @@
-# New ports collection makefile for: English PK fonts at 600dpi
-# Date created:		06 Nov 1998
-# Whom:			Satoshi Asami <asami@FreeBSD.org>
-#
-# $FreeBSD: ports/print/pkfonts600/Makefile,v 1.7 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Satoshi Asami <asami@FreeBSD.org>
+# $FreeBSD: print/pkfonts600/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 RESOLUTION=	600
 MASTERDIR=	${.CURDIR}/../pkfonts300
 
+NO_STAGE=	yes
 .include	"${MASTERDIR}/Makefile"
