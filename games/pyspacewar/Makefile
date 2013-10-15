@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/pyspacewar/Makefile 317983 2013-05-12 22:13:57Z beech $
+# $FreeBSD: games/pyspacewar/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pyspacewar
 PORTVERSION=	0.9.7
@@ -27,6 +27,7 @@ ICON_SIZES=	16x16 22x22 32x32 48x48
 DESKTOP_ENTRIES="PySpaceWar" "${COMMENT}" ${PORTNAME} \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
