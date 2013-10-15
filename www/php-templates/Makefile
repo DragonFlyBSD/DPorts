@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php_templates
-# Date created:				Feb 28 2002
-# Whom:					vanilla
-#
-# $FreeBSD: ports/www/php-templates/Makefile,v 1.17 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: www/php-templates/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	php-templates
 PORTVERSION=	1.7.2
@@ -31,6 +27,7 @@ SUB_FILES=	pkg-message
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/lib/php/${PHP_EXT_DIR}
 	@${INSTALL_DATA} ${WRKSRC}/modules/templates.so \
