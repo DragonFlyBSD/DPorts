@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/cmatrix/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/cmatrix/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	cmatrix
 PORTVERSION=	1.2a
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 PORTDOCS=	ChangeLog README TODO
 PLIST_FILES=	bin/cmatrix
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
