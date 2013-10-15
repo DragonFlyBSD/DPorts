@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: science/devisor/Makefile 321386 2013-06-20 13:59:24Z bsam $
+# $FreeBSD: science/devisor/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	devisor
 PORTVERSION=	2.1
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/devisorgrid
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
