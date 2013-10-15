@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/pystemmer/Makefile 313714 2013-03-09 14:28:46Z wen $
+# $FreeBSD: textproc/pystemmer/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pystemmer
 PORTVERSION=	1.3.0
@@ -15,4 +15,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyStemmer
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
