@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/bomberinstinct/Makefile 323043 2013-07-15 14:48:34Z miwi $
+# $FreeBSD: games/bomberinstinct/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bomberinstinct
 PORTVERSION=	0.8.9
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl -pthread
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|<SDL/|<|g'
