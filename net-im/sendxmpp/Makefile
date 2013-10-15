@@ -1,5 +1,5 @@
 # Created by: Max E. Kuznecov <mek@mek.uz.ua>
-# $FreeBSD: net-im/sendxmpp/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/sendxmpp/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	sendxmpp
 PORTVERSION=	0.0.8
@@ -22,4 +22,5 @@ PLIST_FILES=	bin/sendxmpp \
 		%%SITE_PERL%%/mach/auto/sendxmpp/.packlist
 PLIST_DIRS=	%%SITE_PERL%%/mach/auto/sendxmpp
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
