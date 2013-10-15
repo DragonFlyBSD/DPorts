@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/mtr/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: net/mtr/Makefile 330010 2013-10-10 14:36:49Z sunpoet $
 
 PORTNAME=	mtr
 PORTVERSION=	0.85
@@ -21,30 +21,19 @@ X11_DESC=	Build X11-enabled mtr
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
 
-MAN8=		mtr.8
-PLIST_FILES=	sbin/mtr
+PLIST_FILES=	man/man8/mtr.8.gz \
+		sbin/mtr
+
+GLIB_CONFIGURE_WITH=	glib
+GLIB_USE=		GNOME=glib20
+IPV6_CATEGORIES=	ipv6
+IPV6_CONFIGURE_ENABLE=	ipv6
+X11_CONFIGURE_WITH=	gtk
+X11_USE=		GNOME=gtk20
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MGLIB}
-CONFIGURE_ARGS+=--with-glib
-USE_GNOME=	glib20
-.else
-CONFIGURE_ARGS+=--without-glib
-.endif
-
-.if ${PORT_OPTIONS:MIPV6}
-CONFIGURE_ARGS+=--enable-ipv6
-CATEGORIES+=	ipv6
-.else
-CONFIGURE_ARGS+=--disable-ipv6
-.endif
-
-.if ${PORT_OPTIONS:MX11}
-CONFIGURE_ARGS+=--with-gtk
-USE_GNOME=	gtk20
-.else
-CONFIGURE_ARGS+=--without-gtk
+.if !${PORT_OPTIONS:MX11}
 PKGNAMESUFFIX+=	-nox11
 .endif
 
