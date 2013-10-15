@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: archivers/amigadepacker/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: archivers/amigadepacker/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	amigadepacker
 PORTVERSION=	0.04
@@ -12,6 +12,7 @@ COMMENT=	Tool for depacking some compressed Amiga formats
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_CSTD=	gnu89
