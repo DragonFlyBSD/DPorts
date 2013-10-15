@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: games/deng/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/deng/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	deng
 PORTVERSION=	1.9.0b6.9
@@ -25,6 +25,7 @@ USES=		cmake:outsource
 CMAKE_SOURCE_PATH=	${WRKSRC}/doomsday
 CFLAGS+=	-I${LOCALBASE}/include/libpng15
 CMAKE_ARGS+=	-DCMAKE_EXE_LINKER_FLAGS:STRING="-Wl,--export-dynamic"
+LDFLAGS+=	-lm
 
 MAN6=		doomsday.6
 
@@ -32,6 +33,7 @@ OPTIONS_DEFINE=	OPENAL DOCS
 OPTIONS_DEFAULT=	DOCS
 OPENAL_DESC=	Build OpenAL sound plugin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENAL}
