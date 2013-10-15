@@ -1,9 +1,5 @@
-# New ports collection makefile for:	min12xxw
-# Date created:		29 September 2007
-# Whom:			Tim McCormick <tim@pcbsd.org>
-#
-# $FreeBSD: ports/print/min12xxw/Makefile,v 1.2 2012/11/17 06:00:52 svnexp Exp $
-#
+# Created by: Tim McCormick <tim@pcbsd.org>
+# $FreeBSD: print/min12xxw/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	min12xxw
 PORTVERSION=	0.0.9
@@ -18,6 +14,7 @@ HAS_CONFIGURE=	yes
 MAN1=		min12xxw.1
 PLIST_FILES=	bin/min12xxw bin/esc-m
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/min12xxw ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/esc-m ${PREFIX}/bin
