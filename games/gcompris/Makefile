@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: games/gcompris/Makefile 325964 2013-09-02 09:59:05Z bapt $
+# $FreeBSD: games/gcompris/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gcompris
 PORTVERSION=	12.11
@@ -37,6 +37,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN6=		gcompris.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 	    	${WRKSRC}/src/gcompris/gcompris.c
