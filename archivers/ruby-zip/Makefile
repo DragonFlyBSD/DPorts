@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: archivers/ruby-zip/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: archivers/ruby-zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zip
 PORTVERSION=	0.9.4
@@ -13,7 +13,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby module for reading and writing ZIP files
 
-
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBY_FEATURES=	zlib
 
