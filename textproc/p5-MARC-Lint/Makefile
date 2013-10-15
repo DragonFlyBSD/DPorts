@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: textproc/p5-MARC-Lint/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-MARC-Lint/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	MARC-Lint
 PORTVERSION=	1.46
@@ -22,4 +22,5 @@ WRKSRC=		${WRKDIR}/marc-lint
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
