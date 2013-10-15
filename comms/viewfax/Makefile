@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: comms/viewfax/Makefile 321975 2013-06-28 18:37:20Z bapt $
+# $FreeBSD: comms/viewfax/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	viewfax
 PORTVERSION=	2.6
@@ -18,4 +18,5 @@ PLIST_FILES=	bin/viewfax lib/viewfax.tif
 
 MAN1=		viewfax.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
