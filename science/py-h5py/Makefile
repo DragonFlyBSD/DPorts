@@ -1,5 +1,5 @@
 # Created by: TAOKA Fumiyoshi
-# $FreeBSD: science/py-h5py/Makefile 324659 2013-08-13 11:59:54Z koobs $
+# $FreeBSD: science/py-h5py/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	h5py
 PORTVERSION=	1.2.1
@@ -18,6 +18,7 @@ OPTIONS_DEFINE=	NEW_HDF5
 NEW_HDF5_DESC=	Use port science/hdf5-18 instead of science/hdf5
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MNEW_HDF5}
 LIB_DEPENDS=	hdf5:${PORTSDIR}/science/hdf5-18
