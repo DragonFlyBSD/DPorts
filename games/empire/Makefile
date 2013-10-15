@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/empire/Makefile 327117 2013-09-12 22:45:38Z nemysis $
+# $FreeBSD: games/empire/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	empire
 PORTVERSION=	1.10
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/empire \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
