@@ -1,5 +1,5 @@
 # Created by: FreeBSD Bio porters (bio@freebsd.net)
-# $FreeBSD: ports/biology/biojava/Makefile,v 1.22 2012/12/11 07:29:40 svnexp Exp $
+# $FreeBSD: biology/biojava/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	biojava
 DISTVERSION=	1.7
@@ -25,6 +25,7 @@ PORTEXAMPLES=	demos
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 .if !defined(WITHOUT_TESTS)
+NO_STAGE=	yes
 regression-test:
 	@(cd ${BUILD_WRKSRC}; \
 		${SETENV} ${MAKE_ENV} ${ANT} ${MAKE_ARGS} runtests)
