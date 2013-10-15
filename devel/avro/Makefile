@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/avro/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/avro/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
@@ -20,6 +20,7 @@ PYTHON_DESC=	Install Python library
 
 OPTIONS_DEFAULT=C CPP PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MC}
