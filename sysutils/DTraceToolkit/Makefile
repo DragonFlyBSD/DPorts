@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DTraceToolkit
-# Date created:		2008-12-11
-# Whom:			Steven Kreuzer <steven@exit2shell.com>
-#
-# $FreeBSD: ports/sysutils/DTraceToolkit/Makefile,v 1.3 2012/11/17 06:01:24 svnexp Exp $
-#
+# Created by: Steven Kreuzer <steven@exit2shell.com>
+# $FreeBSD: sysutils/DTraceToolkit/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	DTraceToolkit
 PORTVERSION=	0.99
@@ -16,6 +12,7 @@ COMMENT=	Collection of useful scripts for DTrace
 
 NO_BUILD=	YES
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} <= 701000
