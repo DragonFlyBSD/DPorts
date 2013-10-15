@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eights
-# Date created:				21 Febuary 2002
-# Whom:					Bob Bomar <bob@fly.homeunix.org>
-#
-# $FreeBSD: ports/games/eights/Makefile,v 1.7 2012/11/17 05:57:36 svnexp Exp $
-#
+# Created by: Bob Bomar <bob@fly.homeunix.org>
+# $FreeBSD: games/eights/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	eights
 PORTVERSION=	1.0
@@ -17,6 +13,7 @@ COMMENT=	Text based card game, the objective is to get rid of all your cards
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/eights
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${CC} ${CFLAGS} ${PORTNAME}.c -o ${PORTNAME}
 
