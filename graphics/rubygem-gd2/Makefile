@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-gd2
-# Date created:				07 June 2007
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: graphics/rubygem-gd2/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: graphics/rubygem-gd2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gd2
 PORTVERSION=	1.1.1
@@ -21,6 +18,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${REINPLACE_CMD} 's|so.2|so.4|' ${PREFIX}/${GEM_LIB_DIR}/lib/gd2.rb
 
