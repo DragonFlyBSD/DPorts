@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: mail/milter-skem/Makefile 320012 2013-06-05 18:24:42Z jgh $
+# $FreeBSD: mail/milter-skem/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	skem
 PORTVERSION=	1.0.1
@@ -25,6 +25,7 @@ SKEM_NETINET_DESC=	Support IPv4 addresses
 OPTIONS_DEFAULT=	SKEM_NETINET
 
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
