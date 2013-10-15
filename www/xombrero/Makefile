@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: www/xombrero/Makefile 327283 2013-09-14 13:38:20Z az $
+# $FreeBSD: www/xombrero/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xombrero
 PORTVERSION=	1.6.0
@@ -31,6 +31,7 @@ OPTIONS_DEFAULT=EXAMPLES GTK3
 
 SUB_FILES=	xombrero
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} < 800041
