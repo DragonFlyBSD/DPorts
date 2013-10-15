@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-korundum/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/ruby-korundum/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	korundum
 PORTVERSION=	${KDE4_VERSION}
@@ -22,6 +22,7 @@ USE_RUBY=	yes
 USE_XZ=		yes
 USES=		cmake:outsource
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CMAKE_ARGS+=	-DRUBY_LIBRARY=${LOCALBASE}/lib/lib${RUBY_NAME}.so \
