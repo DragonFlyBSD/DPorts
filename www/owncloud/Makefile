@@ -1,7 +1,7 @@
-# $FreeBSD: www/owncloud/Makefile 327466 2013-09-17 09:37:49Z kevlo $
+# $FreeBSD: www/owncloud/Makefile 329466 2013-10-05 15:03:22Z kevlo $
 
 PORTNAME=	owncloud
-PORTVERSION=	5.0.11
+PORTVERSION=	5.0.12
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 
@@ -15,8 +15,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv json mbstring \
-		mysql pdo pdo_mysql pdo_sqlite session simplexml sqlite3 xml \
-		wddx zip zlib
+		mysql openssl pdo pdo_mysql pdo_sqlite session simplexml \
+		sqlite3 xml xmlreader xsl wddx zip zlib
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
 
@@ -27,12 +27,11 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
 do-install:
-	${MKDIR} ${WWWDIR}
-	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
+	${MKDIR} ${STAGEDIR}${WWWDIR}
+	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}
+	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${STAGEDIR}${WWWDIR}
 
 post-install:
-	@${CAT} ${PKGMESSAGE}
 	@cd ${WRKSRC} && \
 	    ${FIND} -s -d . -type f -print | \
 		${SED} -e "s#^\.#${WWWDIR_REL}#" >> ${TMPPLIST}
