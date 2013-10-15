@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xpi-scrapbook
-# Date created:		6 April 2007
-# Whom:			Hannes Frederic Sowa <hannes@stressinduktion.org>
-#
-# $FreeBSD: ports/www/xpi-scrapbook/Makefile,v 1.2 2012/11/17 06:03:13 svnexp Exp $
+# Created by: Hannes Frederic Sowa <hannes@stressinduktion.org>
+# $FreeBSD: www/xpi-scrapbook/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	scrapbook
 PORTVERSION=	1.2.0.8
@@ -17,5 +14,6 @@ XPI_NUM=	427
 XPI_FILES=	LICENSE.txt chrome/scrapbook.jar chrome.manifest defaults/preferences/scrapbook-prefs.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
