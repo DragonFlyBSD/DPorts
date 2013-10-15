@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: archivers/fastjar/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/fastjar/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	fastjar
 PORTVERSION=	0.93.20060808
@@ -12,6 +12,7 @@ COMMENT=	Version of JDK's `jar' command written entirely in C
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 USES=		gmake perl5
 USES_PERL5=	build
 USE_BZIP2=	yes
