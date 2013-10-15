@@ -1,5 +1,5 @@
 # Created by: Seth Kingsley <sethk@osd.bsdi.com>
-# $FreeBSD: audio/nosefart/Makefile 325660 2013-08-30 04:16:51Z danfe $
+# $FreeBSD: audio/nosefart/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	nosefart
 PORTVERSION=	1.92f
@@ -14,6 +14,7 @@ COMMENT=	Player for NES Sound Format (NSF)
 LICENSE=	GPLv2
 
 USES=		gmake
+NO_STAGE=	yes
 MAKE_ENV=	INSTALL="${INSTALL}" COPY="${COPY}" STRIP="${STRIP}" \
 		BINGRP="${BINGRP}" BINMODE="${BINMODE}" BINOWN="${BINOWN}"
 
