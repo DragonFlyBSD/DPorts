@@ -1,5 +1,5 @@
 # Created by: Hugo Saro <hugo@barafranca.com>
-# $FreeBSD: net/haproxy-devel/Makefile 321118 2013-06-17 14:40:01Z demon $
+# $FreeBSD: net/haproxy-devel/Makefile 329875 2013-10-09 08:24:40Z demon $
 
 PORTNAME=	haproxy
 DISTVERSION=	1.5-dev19
@@ -13,9 +13,9 @@ COMMENT=	The Reliable, High Performance TCP/HTTP Load Balancer
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
+USES=		gmake
 CONFLICTS=	haproxy-[1234567890]\*
 USE_RC_SUBR=	haproxy
-USE_GMAKE=	yes
 SUB_FILES=	pkg-message
 MAN1=		haproxy.1
 
@@ -26,20 +26,19 @@ DPCRE_DESC=		Link dynamically
 SPCRE_DESC=		Link statically
 OPTIONS_DEFAULT=	PCRE DPCRE OPENSSL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAKE_ARGS=	TARGET=freebsd DEFINE=-DFREEBSD_PORTS USE_GETADDRINFO=1 \
 		USE_ZLIB=1 CC="${CC}" CFLAGS="${CFLAGS}"
 
-.if ${PORT_OPTIONS:MPCRE}
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
-
 .if ${PORT_OPTIONS:MDPCRE}
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 MAKE_ARGS+=	"USE_PCRE=1"
 .endif
 .if ${PORT_OPTIONS:MSPCRE}
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libpcre.a:${PORTSDIR}/devel/pcre
 MAKE_ARGS+=	"USE_STATIC_PCRE=1"
-.endif
 .endif
 
 .if ${PORT_OPTIONS:MOPENSSL}
