@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	podcatcher
-# Date created:			Sep 5, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/multimedia/podcatcher/Makefile,v 1.9 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/podcatcher/Makefile 330054 2013-10-11 03:28:30Z tabthorpe $
 
 PORTNAME=	podcatcher
 PORTVERSION=	3.1.6
@@ -16,7 +11,6 @@ MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Podcast client for the command line
 
 USE_RUBY=	yes
-RUBY_VER=	1.8
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
@@ -29,6 +23,7 @@ PLIST_FILES=	bin/podcatcher \
 
 PLIST_DIRS=	${EXAMPLESDIR_REL}
 
+NO_STAGE=	yes
 pre-install:
 	@${SED} -i.bak 's,#!/usr/bin/env ruby,#!${RUBY},' ${WRKSRC}/bin/${PORTNAME}
 
