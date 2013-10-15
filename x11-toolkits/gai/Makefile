@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/gai/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: x11-toolkits/gai/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gai
 PORTVERSION=	0.5.10
@@ -28,6 +28,7 @@ PLIST_DIRS=	include/gai
 PORTDOCS=	*
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|sdl-config --|${SDL_CONFIG} --|g; \
 		s|/usr/X11R6|${LOCALBASE}|g" ${WRKSRC}/configure
