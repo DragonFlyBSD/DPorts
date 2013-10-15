@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: lang/see/Makefile 317932 2013-05-12 06:05:03Z bapt $
+# $FreeBSD: lang/see/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	see
 PORTVERSION=	2.0.1131
@@ -22,13 +22,15 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-.include <bsd.port.pre.mk>
+NO_STAGE=	yes
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMULTIPLE_THREADS}
 CFLAGS+=	-DMULTIPLE_THREADS
@@ -64,4 +66,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
