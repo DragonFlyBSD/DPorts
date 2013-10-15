@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-AttributeHelpers/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-AttributeHelpers/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-AttributeHelpers
 PORTVERSION=	0.23
@@ -49,6 +49,7 @@ MAN3=	MooseX::AttributeHelpers.3 \
 	MooseX::AttributeHelpers::Trait::Number.3 \
 	MooseX::AttributeHelpers::Trait::String.3
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -i '' '/build_requires/d' ${WRKSRC}/Makefile.PL
 
