@@ -1,9 +1,5 @@
-# New ports collection makefile for:	perl2html
-# Date created:				27 May 1999
-# Whom:					Martin Kammerhofer
-#
-# $FreeBSD: ports/textproc/perl2html/Makefile,v 1.14 2012/11/17 06:02:16 svnexp Exp $
-#
+# Created by: Martin Kammerhofer
+# $FreeBSD: textproc/perl2html/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=		perl2html
 PORTVERSION=		0.9.2
@@ -16,6 +12,7 @@ MAINTAINER=		mkamm@gmx.net
 COMMENT=	Perl sources to HTML converter
 
 USE_AUTOTOOLS=	autoconf213
+NO_STAGE=	yes
 
 MAN1=			perl2html.1
 
