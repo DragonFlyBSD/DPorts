@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/snd/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: audio/snd/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	snd
 PORTVERSION=	13.0
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	--with-float-samples
 MAKEFILE=	makefile
 ALL_TARGET=	snd snd-info sndplay
 MAKE_JOBS_UNSAFE=	yes
+NO_STAGE=	yes
 
 MAN1=		snd.1
 
