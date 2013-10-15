@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/py-tagpy/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: audio/py-tagpy/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	tagpy
 PORTVERSION=	2013.1
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--taglib-inc-dir="${LOCALBASE}/include/taglib" \
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 USE_GCC=	yes
+NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
