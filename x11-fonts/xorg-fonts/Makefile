@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/xorg-fonts/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/xorg-fonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	xorg-fonts
 PORTVERSION=	7.7
@@ -23,6 +23,7 @@ RUN_DEPENDS=	xorg-fonts-100dpi>=0:${PORTSDIR}/x11-fonts/xorg-fonts-100dpi \
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 		${MKDIR} ${PREFIX}/libdata/xorg
 		${TOUCH} ${PREFIX}/libdata/xorg/fonts
