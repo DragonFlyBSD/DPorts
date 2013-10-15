@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: security/ranpwd/Makefile 317816 2013-05-10 14:40:33Z miwi $
+# $FreeBSD: security/ranpwd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ranpwd
 PORTVERSION=	1.2
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 MAN1=		ranpwd.1
 PLIST_FILES=	bin/ranpwd
 
+NO_STAGE=	yes
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ranpwd ${PREFIX}/bin)
 	(cd ${WRKSRC} && ${INSTALL_MAN} ranpwd.1 ${MANPREFIX}/man/man1)
