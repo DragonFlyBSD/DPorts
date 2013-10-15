@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/diameter/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: games/diameter/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	diameter
 PORTVERSION=	0.4.0.3
@@ -27,6 +27,7 @@ LDFLAGS+=	`${SDL_CONFIG} --libs` -L${LOCALBASE}/lib
 
 DATADIR=	${PREFIX}/share/gamediameter
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|sdl-config|${SDL_CONFIG}|; /^CFLAGS=.*march/ d; \
 		/PKG_CONFIG/ s|libpng|libpng15|' ${WRKSRC}/configure
