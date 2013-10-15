@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: math/msieve/Makefile 313321 2013-03-03 02:09:06Z bf $
+# $FreeBSD: math/msieve/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	msieve
 PORTVERSION=	1.51
@@ -26,6 +26,7 @@ PORTDOCS=	Changes Readme Readme.nfs Readme.qs
 OPTIONS_DEFINE=		OPTIMIZED_CFLAGS
 OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
