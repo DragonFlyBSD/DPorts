@@ -1,9 +1,5 @@
-# New ports collection makefile for:	archmage
-# Date created:				22 February 2005
-# Whom:					Vsevolod Stakhov <vsevolod@highsecure.ru>
-#
-# $FreeBSD: ports/textproc/archmage/Makefile,v 1.17 2012/11/17 06:01:52 svnexp Exp $
-#
+# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
+# $FreeBSD: textproc/archmage/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	archmage
 PORTVERSION=	0.2.4
@@ -23,6 +19,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 MAN1=	${PORTNAME}.1
 
+NO_STAGE=	yes
 post-extract:
 	@${GUNZIP_CMD} ${WRKSRC}/${PORTNAME}.1.gz
 
