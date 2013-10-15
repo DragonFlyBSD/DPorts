@@ -1,8 +1,8 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/snort/Makefile 326414 2013-09-05 16:55:34Z zi $
+# $FreeBSD: security/snort/Makefile 327880 2013-09-22 16:46:42Z zi $
 
 PORTNAME=	snort
-PORTVERSION=	2.9.5.3
+PORTVERSION=	2.9.5.5
 CATEGORIES=	security
 MASTER_SITES=	SF/snort/snort \
 		http://mirrors.rit.edu/zi/
@@ -43,6 +43,7 @@ DBGSNORT_DESC=		Enable debugging symbols+core dumps
 BARNYARD_DESC=		Depend on Barnyard2
 PULLEDPORK_DESC=	Depend on pulledpork
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_RC_SUBR=	snort
