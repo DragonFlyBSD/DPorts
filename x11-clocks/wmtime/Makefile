@@ -1,5 +1,5 @@
 # Created by: Rich Neswold <rneswold@mcs.net>
-# $FreeBSD: x11-clocks/wmtime/Makefile 322014 2013-06-28 23:05:59Z bapt $
+# $FreeBSD: x11-clocks/wmtime/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmtime
 PORTVERSION=	1.0b2
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/wmtime.app/wmtime
 USES=		imake
 USE_XORG=	xpm
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${WRKSRC}/../Imakefile ${WRKSRC}/Imakefile
 
