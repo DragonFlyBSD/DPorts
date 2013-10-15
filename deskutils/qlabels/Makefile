@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/deskutils/qlabels/Makefile,v 1.10 2013/01/23 15:05:32 svnexp Exp $
+# $FreeBSD: deskutils/qlabels/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	qlabels
 PORTVERSION=	0.2
@@ -23,6 +23,7 @@ DESKTOP_ENTRIES=	"qLabels" \
 			"Office;Qt;" \
 			"false"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr|${PREFIX}|g' \
 		${WRKSRC}/qlabels.pro \
