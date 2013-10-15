@@ -1,9 +1,5 @@
-# New ports collection makefile for:	plugdaemon
-# Date created:				Thu Jun 24 12:38:31 PDT 2004
-# Whom:					David Thiel <lx@redundancy.redundancy.org>
-#
-# $FreeBSD: ports/net/plugdaemon/Makefile,v 1.6 2012/12/13 19:19:44 svnexp Exp $
-#
+# Created by: David Thiel <lx@redundancy.redundancy.org>
+# $FreeBSD: net/plugdaemon/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	plugdaemon
 PORTVERSION=	2.5.5
@@ -17,6 +13,7 @@ COMMENT=	Plug proxy daemon, forwards TCP/IP connections
 MAN1=		plug.1
 PLIST_FILES=	sbin/plug
 
+NO_STAGE=	yes
 post-install:
 	@${STRIP_CMD} ${PREFIX}/sbin/plug
 
