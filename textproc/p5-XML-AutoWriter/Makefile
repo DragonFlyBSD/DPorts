@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-AutoWriter/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-XML-AutoWriter/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-AutoWriter
 PORTVERSION=	0.40
@@ -21,6 +21,7 @@ MAN3=		XML::AutoWriter.3 \
 		XML::Doctype::ElementDecl.3 \
 		XML::Doctype.3
 
+NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/lib/XML/*.orig
 
