@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types-URI/Makefile 326922 2013-09-10 18:07:44Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Types-URI/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MooseX-Types-URI
 PORTVERSION=	0.03
@@ -24,7 +24,5 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		MooseX::Types::URI.3
 
 .include <bsd.port.mk>
