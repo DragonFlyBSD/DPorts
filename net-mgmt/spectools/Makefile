@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <henrik@brixandersen.dk>
-# $FreeBSD: net-mgmt/spectools/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: net-mgmt/spectools/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	spectools
 PORTVERSION=	201004.r1
@@ -27,6 +27,7 @@ OPTIONS_DEFAULT=	GTK2 NCURSES
 
 ALL_TARGET=	spectool_net spectool_raw
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
