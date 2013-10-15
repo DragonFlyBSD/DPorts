@@ -1,5 +1,5 @@
-# Created by:	Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: java/sablevm-classpath/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# Created by: Björn König <bkoenig@alpha-tierchen.de>
+# $FreeBSD: java/sablevm-classpath/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	sablevm-classpath
 PORTVERSION=	1.13
@@ -32,6 +32,7 @@ CAIRO_DESC=	Use Cairo based Graphics2D
 GTK2_DESC=	Enable Gtk+ AWT peer
 ZIP_DESC=	Compress class library
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
