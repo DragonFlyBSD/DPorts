@@ -1,4 +1,4 @@
-# $FreeBSD: shells/ksh93/Makefile 326674 2013-09-07 18:13:59Z sunpoet $
+# $FreeBSD: shells/ksh93/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 # Make sure that your configuration DOES NOT set ANY gcc-related
 # variables.  ksh93 will not compile if you set even the seemingly
@@ -36,6 +36,7 @@ MAN1=		ksh93.1
 INITVERSION=	2013-05-24
 KSHVERSION=	2012-08-01
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSTATIC}
