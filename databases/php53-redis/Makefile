@@ -1,9 +1,5 @@
-# New ports collection makefile for:   php53-redis
-# Date created:        24 July 2012
-# Whom:                Glen Barber <gjb@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/php53-redis/Makefile,v 1.2 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: Glen Barber <gjb@FreeBSD.org>
+# $FreeBSD: databases/php53-redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	redis
 PORTVERSION=	2.2.1
@@ -28,4 +24,5 @@ DEFAULT_PHP_VER=53
 
 PHP_MODNAME=	redis
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
