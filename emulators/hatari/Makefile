@@ -1,5 +1,5 @@
 # Created by: Michael Neumann <mneumann@ntecs.de>
-# $FreeBSD: emulators/hatari/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/hatari/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	hatari
 PORTVERSION=	1.7.0
@@ -38,6 +38,7 @@ CFLAGS+=	-I${LOCALBASE}/include/portaudio2
 PA2_INCLUDE_DIR=-I${LOCALBASE}/include/portaudio2
 PA2_LIBRARY=	${LOCALBASE}/lib/portaudio2/libportaudio.so
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
