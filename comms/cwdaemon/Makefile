@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/cwdaemon/Makefile 316310 2013-04-23 06:34:47Z bapt $
+# $FreeBSD: comms/cwdaemon/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	cwdaemon
 PORTVERSION=	0.9.4
@@ -19,6 +19,7 @@ USES=		pkgconfig
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/doc
 MAN8=		cwdaemon.8
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	cd ${WRKSRC}; ${MAKE} install-data
