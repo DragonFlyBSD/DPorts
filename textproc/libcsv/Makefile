@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/libcsv/Makefile 316608 2013-04-26 13:28:32Z miwi $
+# $FreeBSD: textproc/libcsv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libcsv
 PORTVERSION=	3.0.3
@@ -23,6 +23,7 @@ SHLIB_MAJOR=	3
 MANCOMPRESSED=	maybe
 MAN3=		csv.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPROFILE}
