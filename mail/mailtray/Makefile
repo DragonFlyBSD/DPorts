@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/mailtray
-# Date created:				2011-09-28
-# Whom:					Martin Tournoij <martin@arp242.net>
-#
-# $FreeBSD: ports/mail/mailtray/Makefile,v 1.3 2012/11/17 05:59:05 svnexp Exp $
-#
+# Created by: Martin Tournoij <martin@arp242.net>
+# $FreeBSD: mail/mailtray/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailtray
 PORTVERSION=	1.4
@@ -20,4 +16,5 @@ USE_PYDISTUTILS=yes
 
 MAN1=		mailtray.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
