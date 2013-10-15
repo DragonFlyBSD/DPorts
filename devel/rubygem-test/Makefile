@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-test
-# Date created:		2011-06-19
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-test/Makefile,v 1.3 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-test/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	test
 PORTVERSION=	0.4.3
@@ -20,4 +16,5 @@ USE_RUBYGEMS=		yes
 GEM_NAME=		rubygems-test-${PORTVERSION}
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
