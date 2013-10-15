@@ -1,8 +1,5 @@
-# New ports collection makefile for:	pebrot
-# Date created:		26 March 2004
-# Whom:			Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/pebrot/Makefile,v 1.11 2012/11/17 06:00:28 svnexp Exp $
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: net-im/pebrot/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pebrot
 PORTVERSION=	0.8.9
@@ -17,4 +14,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_EGGINFO=	pebrot-0.8.9-py${PYTHON_VER}.egg-info
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
