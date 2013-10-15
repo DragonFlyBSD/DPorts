@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/memonix/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/memonix/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	memonix
 PORTVERSION=	1.6.070713
@@ -33,6 +33,7 @@ WRKSRC=		${WRKDIR}/MemonixSourceCode
 PLIST_FILES=	bin/Memonix %%DATADIR%%/gamedata.vfs
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-extract:
 	@${TAR} -C ${WRKDIR} -xzf ${DISTDIR}/memx16.tar.gz
 
