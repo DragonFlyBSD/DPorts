@@ -1,4 +1,4 @@
-# $FreeBSD: www/surfraw/Makefile 326003 2013-09-02 15:12:10Z az $
+# $FreeBSD: www/surfraw/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	surfraw
 PORTVERSION=	2.2.8
@@ -24,6 +24,7 @@ post-patch:	.SILENT
 		-e 's/^function[[:space:]]//' \
 		${WRKSRC}/examples/uzbl_load_url_from_surfraw.IN
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/uzbl_load_url_from_surfraw \
 		${PREFIX}/bin
