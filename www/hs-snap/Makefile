@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-snap/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-snap/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	snap
 PORTVERSION=	0.12.0
@@ -22,5 +22,6 @@ EXECUTABLE=	snap
 
 IGNORE_DYNAMIC=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
