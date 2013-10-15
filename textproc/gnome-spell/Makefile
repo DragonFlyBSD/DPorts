@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: textproc/gnome-spell/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: textproc/gnome-spell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 #   $MCom: ports/textproc/gnome-spell/Makefile,v 1.13 2007/10/15 17:17:18 mezz Exp $
 
 PORTNAME=	gnome-spell
@@ -22,6 +22,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@mkdir_p@|mkdir -p|g' \
 		${WRKSRC}/po/Makefile.in.in
