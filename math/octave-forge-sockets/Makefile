@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-sockets/Makefile 322356 2013-07-05 20:59:44Z stephen $
+# $FreeBSD: math/octave-forge-sockets/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-sockets
 PORTVERSION=	1.0.8
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 BUILD_DEPENDS+=	gsed:${PORTSDIR}/textproc/gsed
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-patch:
