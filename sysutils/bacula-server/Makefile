@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/bacula-server/Makefile 323486 2013-07-22 17:51:39Z rm $
+# $FreeBSD: sysutils/bacula-server/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bacula
 DISTVERSION=	5.2.12
@@ -30,6 +30,7 @@ OPTIONS_DEFINE?=	SQLITE3 MYSQL PGSQL MTX PYTHON NLS OPENSSL
 OPTIONS_DEFAULT?=	NLS OPENSSL PGSQL
 MTX_DESC=		Install mtx for control of autochanger devices
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PKGNAMESUFFIX} == "-client" || ${PKGNAMESUFFIX} == "-server"  #Till end of the file
