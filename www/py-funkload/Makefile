@@ -1,13 +1,8 @@
-# New ports collection makefile for:	py-funkload
-# Date created:		Mar. 03, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/www/py-funkload/Makefile,v 1.18 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: www/py-funkload/Makefile 327948 2013-09-23 06:58:55Z lwhsu $
 
 PORTNAME=	funkload
-PORTVERSION=	1.14.0
-PORTREVISION=	2
+PORTVERSION=	1.16.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,5 +18,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/docutils/__init__.py:${PORTSDIR}/textproc/py-d
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
