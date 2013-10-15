@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/tcpdump/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/tcpdump/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpdump
 PORTVERSION=	4.4.0
@@ -29,6 +29,7 @@ SMI_DESC=	Allow MIBs to be loaded on the fly
 USER_DESC=	Drop privileges to nobody
 CHROOT_DESC=	Chroot to /var/run/tcpdump (set CHROOTDIR to change)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 # The --without-crypto flag needs to be explicitly specified. The
 # configure script gets confused if you specify --with-crypto and
