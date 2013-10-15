@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	slffea
-# Date created:			Feb 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/cad/slffea/Makefile,v 1.30 2013/02/08 00:50:51 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: cad/slffea/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	slffea
 PORTVERSION=	1.5
@@ -37,6 +32,7 @@ EXEC=	beam/beam/bm beam/beam_gr/bmpost brick/brick/br \
 	truss/truss_gr/tspost
 PLIST_FILES=	${EXEC:T:S/^/bin\//}
 
+NO_STAGE=	yes
 post-patch:
 	@(${FIND} ${WRKSRC} -name Makefile | ${XARGS} \
 		${REINPLACE_CMD} -E -e "s|^CC = .*|CC = ${CC} ${CFLAGS}|g" \
