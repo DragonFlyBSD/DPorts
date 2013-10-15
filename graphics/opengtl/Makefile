@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/opengtl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/opengtl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	opengtl
 PORTVERSION=	0.9.18
@@ -15,9 +15,8 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 BUILD_DEPENDS=	${LOCALBASE}/lib/libLLVM-3.2.so:${PORTSDIR}/devel/llvm
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake perl5
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	SHIVA
@@ -27,6 +26,7 @@ SHIVA_DESC=	Install filters and generators
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSHIVA}
