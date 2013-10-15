@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/graphics/aoi/Makefile,v 1.25 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/aoi/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	aoi
 PORTVERSION=	2.9.2
@@ -34,6 +34,7 @@ DESKTOP_ENTRIES="Art of Illusion" "3D modelling and rendering studio" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" "Graphics;3DGraphics;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:

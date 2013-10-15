@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/graphics/aoi/files/aoi.in,v 1.2 2012/11/17 05:58:01 svnexp Exp $
+# $FreeBSD: graphics/aoi/files/aoi.in 306827 2012-11-01 23:09:41Z jkim $
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
 
