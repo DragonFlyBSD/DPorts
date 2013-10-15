@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-KYTProf/Makefile 324498 2013-08-10 13:18:44Z kuriyama $
+# $FreeBSD: devel/p5-Devel-KYTProf/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-KYTProf
 PORTVERSION=	0.05
@@ -22,4 +22,5 @@ MAN3=	Devel::KYTProf.3 \
 	Devel::KYTProf::Logger::LTSV.3 \
 	Devel::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
