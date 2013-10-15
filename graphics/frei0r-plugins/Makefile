@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/frei0r-plugins/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/frei0r-plugins/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-plugins
@@ -24,6 +24,7 @@ OPTIONS_DEFAULT=	GAVL OPENCV
 GAVL_DESC=	Install gavl plugins
 OPENCV_DESC=	Install OpenCV plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
 
 .include <bsd.port.options.mk>
