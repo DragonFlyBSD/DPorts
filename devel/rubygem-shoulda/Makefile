@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-shoulda/Makefile 321941 2013-06-28 04:05:17Z swills $
+# $FreeBSD: devel/rubygem-shoulda/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	shoulda
 PORTVERSION=	3.5.0
@@ -16,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
