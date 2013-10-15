@@ -1,5 +1,5 @@
 # Created by: John MacFarlane <jgm@berkeley.edu>
-# $FreeBSD: textproc/hs-pandoc/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-pandoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pandoc
 PORTVERSION=	1.11.1
@@ -31,6 +31,7 @@ OPTIONS_DEFINE=		EMBED_DATA_FILES
 
 EMBED_DATA_FILES_DESC=	Embed data files in binary for relocatable executable
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MEMBED_DATA_FILES}
