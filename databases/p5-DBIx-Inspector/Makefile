@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Inspector/Makefile 324480 2013-08-10 11:44:28Z kuriyama $
+# $FreeBSD: databases/p5-DBIx-Inspector/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Inspector
 PORTVERSION=	0.12
@@ -28,4 +28,5 @@ MAN3=	DBIx::Inspector.3 \
 	DBIx::Inspector::Iterator.3 \
 	DBIx::Inspector::Table.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
