@@ -1,9 +1,5 @@
-# New ports collection makefile for:    fswatch
-# Date created:         18 April 2006
-# Whom:                 dominik karczmarski <dominik@karczmarski.com>
-#
-# $FreeBSD: ports/security/fswatch/Makefile,v 1.3 2012/11/17 06:01:04 svnexp Exp $
-#
+# Created by: dominik karczmarski <dominik@karczmarski.com>
+# $FreeBSD: security/fswatch/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		fswatch
 DISTVERSION=		0.02beta5
@@ -29,6 +25,7 @@ MAN1=	fswbuild.1 fswcmp.1 fswshow.1 fswconf.1
 MAN5=	fswatch.conf.5
 MAN7=	fswatch.7
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
