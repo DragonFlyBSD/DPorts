@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-scriptaculous
-# Date created:		2007-02-14
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: www/py-scriptaculous/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: www/py-scriptaculous/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	scriptaculous
 PORTVERSION=	1.8.1.1
@@ -27,4 +23,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
