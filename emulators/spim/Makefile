@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: emulators/spim/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: emulators/spim/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	spim
 PORTVERSION=	8.0
@@ -23,6 +23,7 @@ PORTDOCS=	cycle.ps.gz spim.ps.gz SPIM.html
 PLIST_FILES=	bin/spim %%DATADIR%%/exceptions.s
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
