@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Cache-Mmap/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Cache-Mmap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Cache-Mmap
 PORTVERSION=	0.11
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Cache::Mmap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
