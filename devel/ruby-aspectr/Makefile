@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-aspectr
-# Date created:		08 April 2002
-# Whom:			Sean Chittenden <seanc@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/ruby-aspectr/Makefile,v 1.11 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: Sean Chittenden <seanc@FreeBSD.org>
+# $FreeBSD: devel/ruby-aspectr/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	aspectr
 PORTVERSION=	0.3.5
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 DOCS=		CHANGELOG README TODO
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/aspectr.rb ${RUBY_SITELIBDIR}/
 .if !defined(NOPORTDOCS)
