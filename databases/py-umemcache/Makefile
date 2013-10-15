@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: databases/py-umemcache/Makefile 320465 2013-06-10 12:12:21Z koobs $
+# $FreeBSD: databases/py-umemcache/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	umemcache
 PORTVERSION=	1.6.3
@@ -19,4 +19,5 @@ USE_ZIP=		yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/umemcache.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
