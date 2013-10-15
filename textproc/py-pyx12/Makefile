@@ -1,5 +1,5 @@
 # Created by: john@zoner.org
-# $FreeBSD: textproc/py-pyx12/Makefile 323433 2013-07-22 07:03:15Z rm $
+# $FreeBSD: textproc/py-pyx12/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pyx12
 PORTVERSION=	1.5.0
@@ -25,6 +25,7 @@ MAN1=	x12valid.1 x12norm.1 x12xml.1 x12html.1 xmlx12.1
 MAN5=	pyx12.conf.xml.5
 SUB_FILES=	pkg-deinstall
 
+NO_STAGE=	yes
 post-install:
 	${WRKSRC}/bin/x12_build_pkl.py ${PREFIX}/share/pyx12/map/
 	cd ${WRKSRC}/bin && ${INSTALL_MAN} ${MAN1} ${MAN1PREFIX}/man/man1
