@@ -1,5 +1,5 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng-devel/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: sysutils/syslog-ng-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	syslog-ng
 PORTVERSION=	3.4.3
@@ -50,6 +50,7 @@ CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --localstatedir=/var/db \
 		--enable-dynamic-linking \
 		--enable-debug
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSYS_SSL} || ${PORT_OPTIONS:MPORTS_SSL}
