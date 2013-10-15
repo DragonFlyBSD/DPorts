@@ -1,5 +1,5 @@
 # Created by: Carsten Jensen <carsten@sitracker.org>
-# $FreeBSD: www/sit/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/sit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	sit
 PORTVERSION=	3.67
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=	IMAP MBSTRING
 IMAP_DESC=	Email Support
 MBSTRING_DESC=	Inbound email feature
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAP}
