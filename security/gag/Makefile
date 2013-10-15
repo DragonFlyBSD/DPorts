@@ -1,6 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: security/gag/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/gag/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gag
 PORTVERSION=	2.9
@@ -19,6 +18,7 @@ ALL_TARGET=	gag
 PORTDOCS=	README
 PLIST_FILES=	sbin/gag
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/gag ${PREFIX}/sbin
 .if !defined(NOPORTDOCS)
