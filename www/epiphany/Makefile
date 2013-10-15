@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/epiphany/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: www/epiphany/Makefile 327776 2013-09-20 23:36:50Z bapt $
 #   $MCom: ports/www/epiphany/Makefile,v 1.246 2011/04/30 20:43:27 mezz Exp $
 
 PORTNAME=	epiphany
@@ -51,6 +51,7 @@ NSS_DESC=	Import passwords from 2.26 and older on first run
 SPELLCHECK_DESC=Enable spell checking by default
 SEED_DESC=	Seed (JavaScript) support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNSS}
