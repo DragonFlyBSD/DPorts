@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: games/vavoom/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/vavoom/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	vavoom
 PORTVERSION=	1.33
@@ -28,6 +28,7 @@ WXUNICODE_DESC=	Enable Unicode support
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # The `-fno-strict-aliasing' flag (default on FreeBSD 6.0+) produces
