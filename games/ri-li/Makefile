@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/ri-li/Makefile 327192 2013-09-14 01:13:38Z amdmi3 $
+# $FreeBSD: games/ri-li/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	Ri-li
 PORTVERSION=	2.0.1
@@ -24,6 +24,7 @@ DESKTOP_ENTRIES="Ri-li" \
 		"Game;ArcadeGame;" \
 		false
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lSDL |`${SDL_CONFIG} --libs`|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's| gentoo||' ${WRKSRC}/Makefile.in
