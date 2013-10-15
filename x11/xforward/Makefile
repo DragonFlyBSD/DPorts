@@ -1,5 +1,5 @@
 # Created by: Cy Schubert <cy@FreeBSD.org>
-# $FreeBSD: x11/xforward/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: x11/xforward/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xforward
 PORTVERSION=	1.0
@@ -21,4 +21,5 @@ USES=		motif
 MAN1=		xforward.1
 PLIST_FILES=	bin/xforward
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
