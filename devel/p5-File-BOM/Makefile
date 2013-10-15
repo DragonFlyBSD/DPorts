@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-File-BOM/Makefile 327233 2013-09-14 07:27:54Z sunpoet $
+# $FreeBSD: devel/p5-File-BOM/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-BOM
 PORTVERSION=	0.14
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		File::BOM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
