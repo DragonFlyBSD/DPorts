@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/fuse/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: emulators/fuse/Makefile 328453 2013-09-27 11:08:02Z rene $
 
 PORTNAME=	fuse
 PORTVERSION=	1.1.1
@@ -11,9 +11,9 @@ COMMENT=	Free Unix (Sinclair ZX-)Spectrum Emulator
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	spectrum:${PORTSDIR}/emulators/libspectrum \
-		png15:${PORTSDIR}/graphics/png \
-		gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	libspectrum.so:${PORTSDIR}/emulators/libspectrum \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
@@ -22,8 +22,6 @@ USE_GNOME=	libxml2 glib20 gtk20
 CONFIGURE_ARGS+=--without-alsa --without-joystick
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-
-MAN1=		fuse.1
 
 OPTIONS_DEFINE=	AO SAMPLERATE
 OPTIONS_DEFAULT=	SAMPLERATE
@@ -34,22 +32,22 @@ SAMPLERATE_DESC=	Better beeper sound quality
 
 .if ${PORT_OPTIONS:MAO}
 CONFIGURE_ARGS+=--with-libao
-LIB_DEPENDS+=	ao:${PORTSDIR}/audio/libao
+LIB_DEPENDS+=	libao.so:${PORTSDIR}/audio/libao
 .else
 CONFIGURE_ARGS+=--without-libao
 .endif
 
 .if ${PORT_OPTIONS:MSAMPLERATE}
-LIB_DEPENDS+=	samplerate:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS+=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate
 .else
 CONFIGURE_ARGS+=--without-libsamplerate
 .endif
 
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS ChangeLog README THANKS \
-		${DOCSDIR}
+		${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>

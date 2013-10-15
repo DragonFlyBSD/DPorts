@@ -1,5 +1,6 @@
-@comment $FreeBSD: emulators/fuse/pkg-plist 318604 2013-05-20 15:03:18Z rene $
+@comment $FreeBSD: emulators/fuse/pkg-plist 328453 2013-09-27 11:08:02Z rene $
 bin/fuse
+man/man1/fuse.1.gz
 %%DATADIR%%/128-0.rom
 %%DATADIR%%/128-1.rom
 %%DATADIR%%/48.rom
