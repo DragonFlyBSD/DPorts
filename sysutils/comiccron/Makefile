@@ -1,9 +1,5 @@
-# New ports collection makefile for: comiccron
-# Date created:        12 February 2007
-# Whom:                Zane C. Bowers
-#
-# $FreeBSD: sysutils/comiccron/Makefile 326574 2013-09-07 07:11:48Z az $
-#
+# Created by: Zane C. Bowers
+# $FreeBSD: sysutils/comiccron/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	comiccron
 PORTVERSION=	1.0.0
@@ -29,6 +25,7 @@ MAN1=		comiccron.1
 
 PLIST_FILES=	bin/comiccron
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} -v ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
