@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: security/paperkey/Makefile 323782 2013-07-27 12:00:24Z danfe $
+# $FreeBSD: security/paperkey/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	paperkey
 PORTVERSION=	1.3
@@ -21,6 +21,7 @@ PORTDOCS=	NEWS README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Setting ALL_TARGET to "all check" is racy and breaks parallel builds
