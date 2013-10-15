@@ -1,4 +1,4 @@
-# $FreeBSD: databases/sqlcipher/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: databases/sqlcipher/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlcipher
 PORTVERSION=	2.1.1
@@ -23,4 +23,5 @@ LDFLAGS+=	-lcrypto
 
 CONFLICTS=	sqlite3-3.*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
