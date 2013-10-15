@@ -1,9 +1,5 @@
-# New ports collection makefile for:	compiz-fusion
-# Date created:				2007-10-22
-# Whom:					Robert C. Noland III <rnoland@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-wm/compiz-fusion/Makefile,v 1.13 2012/11/17 06:03:41 svnexp Exp $
-#
+# Created by: Robert C. Noland III <rnoland@FreeBSD.org>
+# $FreeBSD: x11-wm/compiz-fusion/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	compiz-fusion
 PORTVERSION=	0.8.4
@@ -32,6 +28,7 @@ EMERALD_DESC=	Enable emerald window decorator
 
 do-install:	# empty
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXTRA}
