@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/libqxt/Makefile 321117 2013-06-17 14:39:05Z gahr $
+# $FreeBSD: devel/libqxt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libqxt
 PORTVERSION=	0.6.2
@@ -37,6 +37,7 @@ PLIST_SUB+=	SHVER_1=${PORTVERSION} \
     		SHVER_2=${PORTVERSION:R} \
 		SHVER_3=${PORTVERSION:R:R}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '\
 	    s|%%PREFIX%%|${PREFIX}|g; \
