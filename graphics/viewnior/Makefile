@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: graphics/viewnior/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/viewnior/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	viewnior
 PORTVERSION=	1.3
@@ -28,6 +28,7 @@ PORTDOCS=	AUTHORS ChangeLog NEWS README TODO
 OPTIONS_DEFINE=	NLS
 OPTIONS_DEFAULT=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
