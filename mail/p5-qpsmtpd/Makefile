@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: mail/p5-qpsmtpd/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-qpsmtpd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qpsmtpd
 PORTVERSION=	0.84
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	MODPERL
 OPTIONS_DEFAULT=MODPERL
 MOD_PERL_DESC=	"Apache Support via mod_perl"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMODPERL}
