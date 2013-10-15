@@ -1,9 +1,9 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: audio/gogglesmm/Makefile 323905 2013-07-29 20:11:55Z bapt $
+# $FreeBSD: audio/gogglesmm/Makefile 329703 2013-10-07 13:15:43Z gahr $
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	GOOGLE_CODE
 
@@ -32,6 +32,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man --prefix=${PREFIX}
 
 USES=		pkgconfig gmake
+NO_STAGE=	yes
 USE_XZ=		yes
 INSTALLS_ICONS=	yes
 MAN1=		gogglesmm.1
