@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-Rose-DBx-Object-MoreHelpers/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-Rose-DBx-Object-MoreHelpers/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Rose-DBx-Object-MoreHelpers
 PORTVERSION=	0.09
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Rose::DBx::Object::MoreHelpers.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
