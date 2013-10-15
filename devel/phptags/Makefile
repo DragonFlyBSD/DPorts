@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phptags
-# Date created:				06 May 2004
-# Whom:					Roman Bogorodskiy
-#
-# $FreeBSD: ports/devel/phptags/Makefile,v 1.12 2012/11/17 05:56:42 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy
+# $FreeBSD: devel/phptags/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	phptags
 PORTVERSION=	0.3.0
@@ -20,6 +16,7 @@ PLIST_FILES=	bin/phptags \
 		etc/phptags.conf.sample
 PORTDOCS=	AUTHORS TODO README ChangeLog INSTALL
 
+NO_STAGE=	yes
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/phptags.conf.sample ${PREFIX}/etc
 .if !defined(NOPORTDOCS)
