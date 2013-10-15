@@ -1,6 +1,5 @@
 # Created by: Mantas Kaulakys <stone@tainet.lt>
-# $FreeBSD: security/amavis-stats/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# $FreeBSD: security/amavis-stats/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	amavis-stats
 PORTVERSION=	0.1.12
@@ -39,6 +38,7 @@ SUB_LIST+=	AMAVISUSER=${AMAVISUSER} AMAVISGROUP=${AMAVISGROUP}
 pre-install: apply-slist
 	@${SH} ${PKGINSTALL} ${DISTNAME} PRE-INSTALL
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/amavis-stats ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/amavis-stats.1 ${MAN1PREFIX}/man/man1
