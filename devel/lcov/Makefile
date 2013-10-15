@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: devel/lcov/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/lcov/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lcov
 PORTVERSION=	1.10
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/lcov bin/gendesc bin/genhtml bin/genpng bin/geninfo
 MAN1=		gendesc.1 genhtml.1 geninfo.1 genpng.1 lcov.1
 MAN5=		lcovrc.5
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}/bin && ${COPYTREE_BIN} "gendesc genhtml geninfo genpng lcov" ${PREFIX}/bin
 	cd ${WRKSRC}/man && ${INSTALL_MAN} *.1 ${MANPREFIX}/man/man1
