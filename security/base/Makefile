@@ -1,5 +1,5 @@
 # Created by: Linh Pham <question+fbsdports@closedsrc.org>
-# $FreeBSD: ports/security/base/Makefile,v 1.31 2012/12/17 02:18:03 svnexp Exp $
+# $FreeBSD: security/base/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	base
 PORTVERSION=	1.4.5
@@ -26,6 +26,7 @@ DOCS=		docs/CHANGELOG docs/CREDITS docs/README docs/README.mssql \
 
 OPTIONS_DEFINE=	MYSQL PGSQL PDF DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
