@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-imdbpreview
-# Date created:		19 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-imdbpreview/Makefile,v 1.15 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-imdbpreview/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	imdbpreview
 DISTVERSION=	0.5
@@ -21,5 +17,6 @@ XPI_FILES=	chrome/imdb_preview.jar chrome.manifest \
 		defaults/preferences/defaults.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
