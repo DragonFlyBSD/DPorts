@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: security/p5-Digest-Nilsimsa/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/p5-Digest-Nilsimsa/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-Nilsimsa
 PORTVERSION=	0.06
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Digest::Nilsimsa.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
