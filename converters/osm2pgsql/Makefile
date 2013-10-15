@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/osm2pgsql/Makefile 326981 2013-09-11 13:58:27Z wg $
+# $FreeBSD: converters/osm2pgsql/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	osm2pgsql
 PORTVERSION=	r29250
@@ -28,6 +28,7 @@ PORTDOCS=	ChangeLog README AUTHORS TODO
 
 MAN1=		osm2pgsql.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
