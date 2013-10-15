@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	wtail
-# Date created:			Jan 11, 2003
-# Whom:				mich@freebsdcluster.org
-#
-# $FreeBSD: ports/sysutils/wtail/Makefile,v 1.6 2012/11/17 06:01:50 svnexp Exp $
-#
+# Created by: mich@freebsdcluster.org
+# $FreeBSD: sysutils/wtail/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	wtail
 PORTVERSION=	0.2.2
@@ -14,6 +9,7 @@ MASTER_SITES=	http://www.teaser.fr/~amajorel/wtail/
 MAINTAINER=	mich@FreeBSD.org
 COMMENT=	Wtail does the equivalent of tail -f on several files at once
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wtail ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
