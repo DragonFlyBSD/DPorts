@@ -1,5 +1,5 @@
 # Created by: Francisco Gomez <francisco@gomezmarin.com>
-# $FreeBSD: audio/mp3riot/Makefile 324216 2013-08-04 06:47:50Z az $
+# $FreeBSD: audio/mp3riot/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3riot
 PORTVERSION=	1.3
@@ -12,6 +12,7 @@ COMMENT=	Mp3riot creates mp3 playlists, HTML files, etc
 RUN_DEPENDS=	p5-MP3-Info>=0:${PORTSDIR}/audio/p5-MP3-Info
 
 USES=		perl5
+NO_STAGE=	yes
 USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
