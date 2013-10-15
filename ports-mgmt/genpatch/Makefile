@@ -20,6 +20,7 @@ DISTFILES=	# none
 MAINTAINER=	draco@marino.st
 COMMENT=	Patch generator tool for dports
 
+NO_STAGE=	yes
 NO_BUILD=	yes
 SUB_FILES=	genpatch.sh dupe.sh portfix.sh
 SUB_LIST=	PREFIX=${PREFIX}
