@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: www/py-selenium/Makefile 326809 2013-09-09 13:05:51Z culot $
+# $FreeBSD: www/py-selenium/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	selenium
 PORTVERSION=	2.35.0
@@ -22,6 +22,7 @@ USE_PYDISTUTILS=	easy_install
 OPTIONS_DEFINE=	FIREFOX
 FIREFOX_DESC=	Install Firefox
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFIREFOX}
