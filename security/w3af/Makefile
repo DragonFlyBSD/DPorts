@@ -1,5 +1,5 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: security/w3af/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: security/w3af/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	w3af
 DISTVERSION=	1.0-rc4
@@ -39,6 +39,7 @@ USE_PYTHON=	yes
 
 OPTIONS_DEFINE=	GUI
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
