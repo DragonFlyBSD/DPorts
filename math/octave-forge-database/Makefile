@@ -1,5 +1,5 @@
-# Created by: Stephen Montgomery-Smith <stephen@FreeBSd.org>
-# $FreeBSD: math/octave-forge-database/Makefile 322356 2013-07-05 20:59:44Z stephen $
+# Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
+# $FreeBSD: math/octave-forge-database/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-database
 PORTVERSION=	2.2.0
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 USE_PGSQL=	yes
 ALL_TARGET=
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
