@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/pipewalker/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/pipewalker/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pipewalker
 PORTVERSION=	0.8.3
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
