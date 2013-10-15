@@ -1,5 +1,5 @@
 # Created by: pgs
-# $FreeBSD: graphics/plotmtv/Makefile 321988 2013-06-28 21:19:31Z bapt $
+# $FreeBSD: graphics/plotmtv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	plotmtv
 PORTVERSION=	1.4.1
@@ -20,6 +20,7 @@ ALL_TARGET=	World
 MAN1=		plotmtv.1
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
