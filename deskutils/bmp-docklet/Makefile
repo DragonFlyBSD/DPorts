@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/bmp-docklet/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/bmp-docklet/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	bmp-docklet
 PORTVERSION=	1.3
@@ -23,6 +23,7 @@ USE_GNOME=	gnomehack intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
