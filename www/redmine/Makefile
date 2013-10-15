@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/redmine/Makefile 325001 2013-08-19 16:04:22Z zi $
+# $FreeBSD: www/redmine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	redmine
 PORTVERSION=	2.3.2
@@ -37,6 +37,7 @@ PASSENGER_DESC=	Use Apache/Nginx WEB server
 MYSQL2_DESC=	MySQL database support (via mysql2 rubygem)
 NO_OPTIONS_SORT=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
