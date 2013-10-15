@@ -1,9 +1,5 @@
-# New ports collection makefile for:   mtf
-# Date created:        02 June 2002
-# Whom:                Philippe Casidy <pcasidy@casidy.com>
-#
-# $FreeBSD: sysutils/whatpix/Makefile 326572 2013-09-07 06:13:27Z az $
-#
+# Created by: Philippe Casidy <pcasidy@casidy.com>
+# $FreeBSD: sysutils/whatpix/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	whatpix
 PORTVERSION=	1.2
@@ -21,6 +17,7 @@ PLIST_FILES=	bin/whatpix
 USES=		perl5
 USE_PERL5=	run
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/whatpix ${PREFIX}/bin
 
