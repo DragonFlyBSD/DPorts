@@ -1,5 +1,5 @@
 # Created by: Devon H. O'Dell <devon.odell@coyotepoint.com>
-# $FreeBSD: comms/ser2net/Makefile 315143 2013-03-24 16:22:09Z miwi $
+# $FreeBSD: comms/ser2net/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	ser2net
 PORTVERSION=	2.8
@@ -21,6 +21,7 @@ MAN8=		${PORTNAME}.8
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README
 PLIST_FILES=	sbin/${PORTNAME} etc/${PORTNAME}.conf.sample
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
