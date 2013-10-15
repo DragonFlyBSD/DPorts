@@ -1,5 +1,5 @@
 # Created by: jkoshy
-# $FreeBSD: devel/cvslines/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/cvslines/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=		cvslines
 PORTVERSION=		1.6.9
@@ -19,6 +19,7 @@ PLIST_FILES+=	bin/cvsline${ii}
 
 MAN1=	cvslines.1
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|the the|the|' ${WRKSRC}/cvslines.1
 
