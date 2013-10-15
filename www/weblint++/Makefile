@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: www/weblint++/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/weblint++/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	weblint++
 PORTVERSION=	1.15
@@ -32,4 +32,5 @@ USE_PERL5=	configure
 
 MAN1=		weblint++.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
