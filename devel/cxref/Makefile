@@ -1,5 +1,5 @@
-# Created by: Thomas Gellekum <tg@freebsd.org>
-# $FreeBSD: devel/cxref/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: devel/cxref/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cxref
 PORTVERSION=	1.6d
@@ -20,6 +20,7 @@ ALL_TARGET=	programs
 
 MAN1=		cxref.1 cxref-query.1
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${DATADIR}
 	@${INSTALL_SCRIPT} ${WRKSRC}/contrib/*.pl ${DATADIR}
