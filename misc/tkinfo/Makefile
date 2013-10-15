@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: misc/tkinfo/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/tkinfo/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	tkinfo
 PORTVERSION=	2.8
@@ -19,6 +19,7 @@ USE_TK_WRAPPER=	yes
 MAN1=		tkinfo.1
 PLIST_FILES=	bin/tkinfo
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/usr/local/info|${LOCALBASE}/info|' ${WRKSRC}/tkinfo
