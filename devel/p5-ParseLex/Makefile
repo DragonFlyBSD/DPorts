@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@uiuc.edu>
-# $FreeBSD: devel/p5-ParseLex/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-ParseLex/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ParseLex
 PORTVERSION=	2.21
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN3=		Parse::ALex.3 Parse::Lex.3 Parse::Token.3 Parse::YYLex.3 \
 		Parse::LexEvent.3 Parse::CLex.3 Parse::Trace.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
