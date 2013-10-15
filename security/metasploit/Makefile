@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: security/metasploit/Makefile 323920 2013-07-29 21:13:34Z antoine $
+# $FreeBSD: security/metasploit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	metasploit
 DISTVERSION=	4.7.0
@@ -36,6 +36,7 @@ OPTIONS_DEFINE=	DB
 OPTIONS_DEFAULT=DB
 DB_DESC=	Database support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDB}
