@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/pcb/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: cad/pcb/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	pcb
 PORTVERSION=	20110918
@@ -40,6 +40,7 @@ MOTIF_DESC=	Motif widgets
 GTK_DESC=	GIMP ToolKit widgets
 NONE_DESC=	No GUI support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
