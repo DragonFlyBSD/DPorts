@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/preview/Makefile 305832 2012-10-13 13:39:56Z dinoex $
+# $FreeBSD: graphics/preview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	preview
 PORTVERSION=	0.8.5
@@ -20,4 +20,5 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Preview
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
