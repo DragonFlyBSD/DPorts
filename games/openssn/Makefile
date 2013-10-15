@@ -1,5 +1,5 @@
 # Created by: Jesse Smith <jessefrgsmith@yahoo.ca>
-# $FreeBSD: games/openssn/Makefile 321824 2013-06-26 23:30:28Z wg $
+# $FreeBSD: games/openssn/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	openssn
 PORTVERSION=	1.4
@@ -19,6 +19,7 @@ USE_SDL=	sdl gfx image mixer
 USE_XORG=	x11 xau xdmcp xext xmu xpm xxf86vm
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,share/man/man6,man/man6,g' ${WRKSRC}/Makefile
 
