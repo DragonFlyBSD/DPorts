@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: audio/squash/Makefile 327119 2013-09-13 00:32:17Z mandree $
+# $FreeBSD: audio/squash/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=		squash
 PORTVERSION=		1.0
@@ -19,6 +19,7 @@ LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac \
 		ao:${PORTSDIR}/audio/libao
 RUN_DEPENDS=	id3v2:${PORTSDIR}/audio/id3v2
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gmake
 USE_RUBY=	yes
