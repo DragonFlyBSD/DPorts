@@ -1,9 +1,5 @@
-# New ports collection makefile for:	foomatic-db-hpijs
-# Date created:		2005-09-17
-# Whom:			Michael Nottebrock <lofi@FreeBSD.org>
-#
-# $FreeBSD: print/foomatic-db-hpijs/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: print/foomatic-db-hpijs/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	foomatic-db-hpijs
 PORTVERSION=	1.4
@@ -21,6 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/foomatic/db/oldprinterids:${PORTSDIR}/print/foom
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 			 -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/configure
