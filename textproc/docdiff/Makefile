@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/docdiff/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: textproc/docdiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docdiff
 PORTVERSION=	0.4.0
@@ -17,6 +17,7 @@ USE_RUBY_FEATURES=	iconv
 
 PORTDOCS=	readme.html readme.en.html readme.ja.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
