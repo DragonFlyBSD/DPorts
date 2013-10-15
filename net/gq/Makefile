@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net/gq/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: net/gq/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gq
 PORTVERSION=	1.3.4
@@ -28,6 +28,7 @@ CONFIGURE_ARGS=	--with-ldap-prefix=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS} -Wno-return-type
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDND}
