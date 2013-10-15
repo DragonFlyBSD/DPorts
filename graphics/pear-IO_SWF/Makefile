@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/pear-IO_SWF/Makefile 318088 2013-05-13 14:34:16Z miwi $
+# $FreeBSD: graphics/pear-IO_SWF/Makefile 329538 2013-10-06 08:40:20Z tota $
 
 PORTNAME=	IO_SWF
-PORTVERSION=	2.2.3
+PORTVERSION=	2.2.4
 CATEGORIES=	graphics www pear
 MASTER_SITES=	http://openpear.org/get/ \
 		LOCAL
@@ -21,14 +21,7 @@ USE_PHP=	yes
 PEAR_CHANNEL=	openpear
 PEAR_AUTOINSTALL=	yes
 
-x-generate-files: extract
-	@${FIND} ${WRKSRC}/IO -type f | ${SORT} | ${SED} 's@${WRKSRC}/@@' |\
-		${FMT} -50 | ${SED} -e 's@^@		@' -e 's@$$@ \\@'
-
-x-generate-examples: extract
-	@${FIND} ${WRKSRC}/sample -type f | ${SORT} | ${SED} 's@${WRKSRC}/sample/@@' |\
-		${FMT} -50 | ${SED} -e 's@^@		@' -e 's@$$@ \\@'
-
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
