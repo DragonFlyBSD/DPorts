@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/sprinkle/pkg-plist,v 1.2 2012/11/17 06:00:21 svnexp Exp $
+@comment $FreeBSD: net/sprinkle/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PORTDOCS%%%%DOCSDIR%%/README.html
 %%PORTDOCS%%%%DOCSDIR%%/README.txt
 %%PORTDOCS%%%%DOCSDIR%%/hackers.html
