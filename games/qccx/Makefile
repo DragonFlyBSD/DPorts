@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/qccx/Makefile 314428 2013-03-17 12:39:11Z danfe $
+# $FreeBSD: games/qccx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	qccx
 PORTVERSION=	1.0.0
@@ -22,6 +22,7 @@ PORTDOCS=	manual.txt readme.txt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
