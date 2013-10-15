@@ -1,6 +1,5 @@
 # Created by: Valery Komarov <komarov@valerka.net>
-# $FreeBSD: ports/devel/node-thrift/Makefile,v 1.4 2013/02/26 17:24:19 svnexp Exp $
-#
+# $FreeBSD: devel/node-thrift/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION}
@@ -17,6 +16,7 @@ FETCH_DEPENDS+=	${NONEXISTENT}:${PORTSDIR}/devel/thrift:extract
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
