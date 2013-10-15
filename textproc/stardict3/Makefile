@@ -1,5 +1,5 @@
 # Created by: eric
-# $FreeBSD: textproc/stardict3/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: textproc/stardict3/Makefile 329107 2013-10-02 20:50:35Z makc $
 
 PORTNAME=	stardict
 PORTVERSION=	3.0.4
@@ -10,8 +10,8 @@ DIST_SUBDIR=	stardict
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Dictionary lookup program written in Gtk2
 
-LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
-		enchant.1:${PORTSDIR}/textproc/enchant
+LIB_DEPENDS=	libsigc-2.0.so:${PORTSDIR}/devel/libsigc++20 \
+		libenchant.so:${PORTSDIR}/textproc/enchant
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
 GNU_CONFIGURE=	yes
@@ -21,8 +21,7 @@ CONFIGURE_ARGS=	--disable-festival \
 		--disable-espeak \
 		--disable-updateinfo
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
-USES=		gettext gmake pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 CONFIGURE_WRKSRC=	${WRKSRC}/dict
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
 INSTALL_WRKSRC=	${CONFIGURE_WRKSRC}
@@ -49,8 +48,6 @@ PLIST_SUB=	GNOME="@comment "
 MAKE_ARGS+=	AUTOMAKE="${TRUE}" ACLOCAL="${TRUE}"
 .endif
 
-MAN1=		stardict.1
-
 post-patch:
 .if !${PORT_OPTIONS:MGNOME}
 	${REINPLACE_CMD} -e '/DATADIRNAME=lib/s,lib,share,' ${WRKSRC}/dict/m4/intltool.m4
@@ -65,8 +62,5 @@ pre-configure:
 	cd ${WRKSRC}/lib && \
 	${SETENV} ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} && \
 	${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET}
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
