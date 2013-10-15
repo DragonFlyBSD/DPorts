@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scythia
-# Date created:		30 Jun 2007
-# Whom:			Yinghong.Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: ftp/scythia/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Yinghong.Liu <relaxbsd@gmail.com>
+# $FreeBSD: ftp/scythia/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	scythia
 DISTVERSION=	0.9.3
@@ -31,6 +27,7 @@ DESKTOP_ENTRIES=	"Scythia" \
 			"Network;FileTransfer;Qt;" \
 			"false"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|g' \
 		-e '/unix:desktop/d' \
