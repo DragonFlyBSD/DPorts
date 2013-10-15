@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: japanese/xpdf/Makefile 317774 2013-05-10 08:08:33Z hrs $
+# $FreeBSD: japanese/xpdf/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -31,6 +31,7 @@ INSTALL_FILES=	Adobe-Japan1.cidToUnicode ISO-2022-JP.unicodeMap \
 		EUC-JP.unicodeMap Shift-JIS.unicodeMap \
 		README ../dot.xpdfrc
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/japanese
 	cd ${WRKSRC} && \
