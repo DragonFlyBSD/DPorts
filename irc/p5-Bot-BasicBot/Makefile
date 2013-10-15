@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: irc/p5-Bot-BasicBot/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/p5-Bot-BasicBot/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	Bot-BasicBot
 PORTVERSION=	0.89
@@ -20,4 +20,5 @@ MAN3=	Bot::BasicBot.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
