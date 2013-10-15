@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: ports/archivers/pecl-lzf/Makefile,v 1.12 2012/11/17 05:54:22 svnexp Exp $
+# $FreeBSD: archivers/pecl-lzf/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	lzf
 PORTVERSION=	1.6.2
@@ -12,6 +12,7 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Handles LZF de/compression
 
+NO_STAGE=	yes
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
