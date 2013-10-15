@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/ximp3/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: audio/ximp3/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ximp3
 PORTVERSION=	0.1.15
@@ -10,6 +10,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A simple console MP3 player
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 PORTDOCS=	*
 
 PLIST_FILES=	bin/${PORTNAME}
