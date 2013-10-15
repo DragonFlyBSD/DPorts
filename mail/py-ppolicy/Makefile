@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/py-ppolicy/Makefile 319852 2013-06-04 10:37:12Z bapt $
+# $FreeBSD: mail/py-ppolicy/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ppolicy
 PORTVERSION=	2.6.6
@@ -26,6 +26,7 @@ SUB_FILES=	pkg-message
 OPTIONS_DEFINE=	GEOIP LDAP MYSQL DOCS
 OPTIONS_DEFAULT=	GEOIP LDAP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEOIP}
