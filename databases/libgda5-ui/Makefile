@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda5-ui/Makefile 326490 2013-09-06 11:43:34Z kwm $
+# $FreeBSD: databases/libgda5-ui/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/trunk/databases/libgda5-ui/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTREVISION=	1
@@ -16,6 +16,7 @@ CONFLICTS=	libgda4-4.*
 
 LIBGDA5_SLAVE=	ui
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}/libgda-ui && ${GMAKE}
 	@cd ${WRKSRC}/control-center && ${GMAKE}
