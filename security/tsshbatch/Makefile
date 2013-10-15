@@ -1,5 +1,5 @@
 # Created by: Tim Daneliuk <tsshbatch@tundraware.com>
-# $FreeBSD: security/tsshbatch/Makefile 313034 2013-02-27 05:50:20Z jgh $
+# $FreeBSD: security/tsshbatch/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tsshbatch
 PORTVERSION=	1.137
@@ -28,6 +28,7 @@ PORTDOCS=	WHATSNEW.txt \
 		tsshbatch.ps \
 		tsshbatch.rst
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
