@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: audio/bmp-wma/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/bmp-wma/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	bmp-wma
 PORTVERSION=	0.1.1
@@ -16,6 +16,7 @@ PLIST_FILES=	lib/bmp/Input/libwma.so \
 		lib/bmp/Input/libwma.la \
 		lib/bmp/Input/libwma.a
 
+NO_STAGE=	yes
 USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
