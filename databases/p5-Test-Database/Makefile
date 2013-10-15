@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/p5-Test-Database/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Test-Database/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Test-Database
 PORTVERSION=	1.11
@@ -30,4 +30,5 @@ MAN3=		Test::Database.3 Test::Database::Driver.3 \
 		Test::Database::Tutorial.3 \
 		Test::Database::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
