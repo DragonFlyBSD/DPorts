@@ -1,9 +1,5 @@
-# New ports collection makefile for:   gotmail
-# Date created:        9 August 2001
-# Whom:                Christopher Elkins <chrise@scardini.com>
-#
-# $FreeBSD: mail/gotmail/Makefile 326265 2013-09-04 09:48:54Z az $
-#
+# Created by: Christopher Elkins <chrise@scardini.com>
+# $FreeBSD: mail/gotmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gotmail
 PORTVERSION=	0.9.0
@@ -21,6 +17,7 @@ RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 MAN1=		${PORTNAME}.1
 USES=		perl5
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.man \
 		${MANPREFIX}/man/man1/${PORTNAME}.1
