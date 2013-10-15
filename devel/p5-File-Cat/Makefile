@@ -1,5 +1,5 @@
 # Created by: Jason Heiss <jheiss@aput.biz>
-# $FreeBSD: devel/p5-File-Cat/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-Cat/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Cat
 PORTVERSION=	1.2
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	File::Cat.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
