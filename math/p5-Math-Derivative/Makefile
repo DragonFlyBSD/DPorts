@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: math/p5-Math-Derivative/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: math/p5-Math-Derivative/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Derivative
 PORTVERSION=	0.01
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::Derivative.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
