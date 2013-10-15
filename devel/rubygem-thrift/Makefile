@@ -1,6 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/rubygem-thrift/Makefile,v 1.10 2013/02/26 17:18:30 svnexp Exp $
-#
+# $FreeBSD: devel/rubygem-thrift/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with ../thrift
@@ -15,5 +14,6 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include "../thrift/bsd.thrift.mk"
 .include <bsd.port.mk>
