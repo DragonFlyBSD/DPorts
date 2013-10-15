@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vhcp
-# Date created:        20 June 2009
-# Whom:            Maxim Ignatenko
-#
-# $FreeBSD: ports/net-p2p/vhcp/Makefile,v 1.3 2012/11/17 06:00:41 svnexp Exp $
-#
+# Created by: Maxim Ignatenko
+# $FreeBSD: net-p2p/vhcp/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	vhcp
 PORTVERSION=	1.7g2
@@ -25,6 +21,7 @@ SUB_FILES=	pkg-message
 SUB_LIST+=	VHCPDIR=${VHCPDIR}
 PLIST=	${WRKDIR}/pkg-plist
 
+NO_STAGE=	yes
 pre-install:
 	@if [ -f ${WRKSRC}/config.php ]; then \
 	   	${MV} ${WRKSRC}/config.php ${WRKSRC}/config.php.dist ; fi
