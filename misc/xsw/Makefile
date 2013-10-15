@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: misc/xsw/Makefile 317334 2013-05-04 19:33:20Z bapt $
+# $FreeBSD: misc/xsw/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xsw
 PORTVERSION=	0.3.5
@@ -40,6 +40,7 @@ DOCS=		AUTHORS \
 		TODO \
 		doc/xsw.vim
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
