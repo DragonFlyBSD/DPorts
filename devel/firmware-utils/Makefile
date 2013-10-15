@@ -1,9 +1,5 @@
-# New ports collection makefile for:	firmware-utils
-# Date created:			2011-12-22
-# Whom:				Stefan Bethke <stb@lassitu.de>
-#
-# $FreeBSD: ports/devel/firmware-utils/Makefile,v 1.2 2012/11/17 05:55:42 svnexp Exp $
-#
+# Created by: Stefan Bethke <stb@lassitu.de>
+# $FreeBSD: devel/firmware-utils/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	firmware-utils
 PORTVERSION=	20111222
@@ -18,4 +14,5 @@ USE_BZIP2=	yes
 MAKEFILE=	${FILESDIR}/Makefile
 MAKE_ARGS+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" PREFIX=${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
