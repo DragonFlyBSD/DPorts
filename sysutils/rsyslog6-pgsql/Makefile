@@ -1,9 +1,5 @@
-# New ports collection makefile for: rsyslog4-pgsql
-# Date created:     29 December 2008
-# Whom:             Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-#
-# $FreeBSD: ports/sysutils/rsyslog6-pgsql/Makefile,v 1.2 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
+# $FreeBSD: sysutils/rsyslog6-pgsql/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 COMMENT=	PostgreSQL output module for rsyslog
 MASTERDIR=	${.CURDIR}/../rsyslog6
@@ -13,6 +9,7 @@ USE_PGSQL=	yes
 
 CONFIGURE_ARGS+=--enable-pgsql
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} \
 		${WRKSRC}/plugins/ompgsql/.libs/ompgsql.so ${PREFIX}/lib/rsyslog
