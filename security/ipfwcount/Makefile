@@ -1,5 +1,5 @@
 # Created by: Robert Archer <freebsd@deathbeforedecaf.net>
-# $FreeBSD: security/ipfwcount/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/ipfwcount/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ipfwcount
 PORTVERSION=	0.2.1
@@ -22,6 +22,7 @@ PLIST_FILES+=	%%EXAMPLESDIR%%/100.ipfwcount
 SUB_FILES=	pkg-message
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '1s,^#![^ ]*,#!${PERL},' ${WRKSRC}/ipfwcount
 
