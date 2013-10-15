@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: www/uwsgitop/Makefile 325189 2013-08-22 12:20:07Z demon $
+# $FreeBSD: www/uwsgitop/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	uwsgitop
 PORTVERSION=	0.6.2
@@ -13,6 +13,7 @@ COMMENT=	uWSGI top-like app
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 post-install:
 		${MKDIR} ${DOCSDIR}
 		${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
