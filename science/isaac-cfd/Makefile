@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: science/isaac-cfd/Makefile 321398 2013-06-20 16:19:43Z bsam $
+# $FreeBSD: science/isaac-cfd/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	isaac
 PORTVERSION=	4.2
@@ -29,6 +29,7 @@ OPTIMIZED_FFLAGS_DESC=	Use extra compiler (fortran) optimizations
 DOCS_DISTFILES+=	man.4_2.ps.gz
 EXAMPLES_DISTFILES+=	example_cases${EXTRACT_SUFX}
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e 's+%%FC%%+${FC}+g ; s+%%FFLAGS%%+${FFLAGS}+;' \
 	${WRKSRC}/makefile
