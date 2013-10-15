@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: deskutils/gruler/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: deskutils/gruler/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gruler
 PORTVERSION=	0.6
@@ -16,6 +16,7 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -export-dynamic
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=""||' ${WRKSRC}/configure
 
