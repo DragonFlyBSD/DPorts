@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: astro/p5-Weather-Underground/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: astro/p5-Weather-Underground/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Weather-Underground
 PORTVERSION=	3.03
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		Weather::Underground.3
 
