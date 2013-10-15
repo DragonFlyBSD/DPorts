@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/spdict/Makefile 325296 2013-08-24 12:50:39Z danfe $
+# $FreeBSD: devel/spdict/Makefile 328161 2013-09-24 16:35:39Z vanilla $
 
 PORTNAME=	spdict
 PORTVERSION=	0.3
@@ -16,9 +16,9 @@ USE_LDCONFIG=	yes
 USES=		gmake
 
 do-install:
-	@${MKDIR} ${PREFIX}/include/spdict
-	${INSTALL_DATA} ${WRKSRC}/*.hpp ${PREFIX}/include/spdict
-	${INSTALL_DATA} ${WRKSRC}/libspdict.so ${PREFIX}/lib/libspdict.so.1
-	${LN} -s libspdict.so.1 ${PREFIX}/lib/libspdict.so
+	@${MKDIR} ${STAGEDIR}/${PREFIX}/include/spdict
+	${INSTALL_DATA} ${WRKSRC}/*.hpp ${STAGEDIR}/${PREFIX}/include/spdict
+	${INSTALL_DATA} ${WRKSRC}/libspdict.so ${STAGEDIR}/${PREFIX}/lib/libspdict.so.1
+	${LN} -s libspdict.so.1 ${STAGEDIR}/${PREFIX}/lib/libspdict.so
 
 .include <bsd.port.mk>
