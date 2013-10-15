@@ -1,5 +1,5 @@
 # Created by: Abel Chow <abel_chow@yahoo.com>
-# $FreeBSD: databases/rdb/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: databases/rdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	rdb
 PORTVERSION=	2.6d
@@ -19,6 +19,7 @@ BINFILES=	column compute dataent etbl headchg jointbl lst2tbl \
 
 DOCFILES=	RDB.pln.noM.gz RDB.ps.gz rdbi.doc
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}; \
 	${PERL} -pi -e 's|^\#\! /usr/bin/perl|\#\!${PERL}|g' ${BINFILES}
