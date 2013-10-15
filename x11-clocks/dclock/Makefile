@@ -1,5 +1,5 @@
 # Created by: David Leonard <leonard@dstc.edu.au>
-# $FreeBSD: x11-clocks/dclock/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-clocks/dclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	dclock
 PORTVERSION=	2.2.2
@@ -31,6 +31,7 @@ PLIST_FILES=	bin/dclock \
 PLIST_DIRS=	%%DATADIR%%/sounds \
 		%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSOX}
