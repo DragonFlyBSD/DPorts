@@ -1,5 +1,4 @@
-# Create by: stas
-# $FreeBSD: ports/devel/opengrok/Makefile,v 1.12 2013/01/29 16:47:44 svnexp Exp $
+# $FreeBSD: devel/opengrok/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	opengrok
 PORTVERSION=	0.11.1
@@ -31,6 +30,7 @@ OPTIONS_SINGLE=	AS
 OPTIONS_SINGLE_AS=	TOMCAT7 TOMCAT6 RESIN3
 OPTIONS_DEFAULT=	TOMCAT6
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 JARFILE=	${DATADIR}/opengrok.jar
