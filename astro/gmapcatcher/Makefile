@@ -1,4 +1,4 @@
-# $FreeBSD: astro/gmapcatcher/Makefile 324256 2013-08-05 02:51:55Z kevlo $
+# $FreeBSD: astro/gmapcatcher/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	gmapcatcher
 PORTVERSION=	0.8.0.4
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imagin
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/g}
+NO_STAGE=	yes
 USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
