@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/xjobs/Makefile 316566 2013-04-26 04:03:25Z jgh $
+# $FreeBSD: sysutils/xjobs/Makefile 328339 2013-09-26 07:13:05Z jgh $
 
 PORTNAME=	xjobs
 PORTVERSION=	20120412
@@ -13,21 +13,20 @@ COMMENT=	Utility reads job descriptions line by line and executes in parallel
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-PLIST_FILES=	bin/xjobs
-MAN1=	xjobs.1
+PLIST_FILES=	bin/xjobs man/man1/xjobs.1.gz
 
 PORTDOCS=	ChangeLog README
 
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 . for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
 . endfor
 .endif
 
