@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/mail/lookout/Makefile,v 1.8 2013/01/09 20:04:53 svnexp Exp $
+# $FreeBSD: mail/lookout/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	lookout
 PORTVERSION=	1.4
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 MAN1=		lookout.1
 PLIST_FILES=	bin/lookout
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lookout ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/lookout.1 ${PREFIX}/man/man1/lookout.1
