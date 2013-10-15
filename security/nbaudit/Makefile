@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  nat/nbaudit
-# Date created:			  Mon Feb 03, 1997
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: ports/security/nbaudit/Makefile,v 1.18 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: security/nbaudit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	nbaudit
 PORTVERSION=	1.0
@@ -21,6 +16,7 @@ COMMENT=	NetBIOS Auditing Tool / Security Kit
 WRKSRC=		${WRKDIR}/${DISTNAME}
 MAN1=		nat.1 nbaudit.1
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/nat ${PREFIX}/bin
 	@${LN} -f ${PREFIX}/bin/nat ${PREFIX}/bin/nbaudit
