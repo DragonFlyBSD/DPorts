@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/cdplay/files/patch-ad,v 1.3 2012/11/17 05:54:29 svnexp Exp $
+$FreeBSD: audio/cdplay/files/patch-ad 300895 2012-07-14 12:56:14Z beat $
 
 --- ./cdplay.h.orig	Mon May 19 15:44:41 2003
 +++ ./cdplay.h	Mon May 19 15:55:12 2003
