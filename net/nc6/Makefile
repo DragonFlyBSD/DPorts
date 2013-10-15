@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: net/nc6/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net/nc6/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nc6
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
