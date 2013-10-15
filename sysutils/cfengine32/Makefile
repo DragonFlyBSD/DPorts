@@ -1,5 +1,5 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine32/Makefile 322232 2013-07-03 15:12:04Z gjb $
+# $FreeBSD: sysutils/cfengine32/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.2.3
@@ -42,6 +42,7 @@ MAN8=	cf-agent.8	cf-key.8	cf-monitord.8	\
 	cf-know.8	cf-promises.8	cf-runagent.8
 	
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e '/^htmldir/s!=.*!= @htmldir@!'\
 				  ${WRKSRC}/docs/Makefile.in
