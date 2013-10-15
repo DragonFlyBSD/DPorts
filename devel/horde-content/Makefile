@@ -1,4 +1,4 @@
-# $FreeBSD: devel/horde-content/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: devel/horde-content/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	content
 PORTVERSION=	2.0.3
@@ -21,6 +21,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Rdo \
 		Horde_Util
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
