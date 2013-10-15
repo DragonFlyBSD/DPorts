@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/rubygem-syntax/Makefile,v 1.15 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: textproc/rubygem-syntax/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	syntax
 PORTVERSION=	1.0.0
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
