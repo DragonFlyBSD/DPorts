@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/pgbouncer/Makefile 317417 2013-05-05 14:30:56Z rakuco $
+# $FreeBSD: databases/pgbouncer/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgbouncer
 PORTVERSION=	1.5.4
@@ -45,6 +45,7 @@ PGBOUNCER_LOGDIR?=	/var/log/pgbouncer
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/gsed:${PORTSDIR}/textproc/gsed
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 SUB_LIST+=	PGBOUNCER_USER="${USERS}" \
