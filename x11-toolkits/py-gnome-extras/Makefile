@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-gnome-extras/Makefile 326142 2013-09-03 12:50:18Z bapt $
+# $FreeBSD: x11-toolkits/py-gnome-extras/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.55 2009/11/28 05:59:04 mezz Exp $
 
 PORTNAME=	gnome-extras
@@ -36,6 +36,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-gnome-extras
 DOCSDIR=	${WRKSRC}/share/doc/py-gnome-extras
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
