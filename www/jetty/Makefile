@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@freebsd-fr.org>
-# $FreeBSD: www/jetty/Makefile 319323 2013-05-28 19:34:51Z olgeni $
+# $FreeBSD: www/jetty/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jetty
 PORTVERSION=	8.1.11
@@ -49,6 +49,7 @@ SUB_FILES=	\
 		message \
 		message-advanced
 
+NO_STAGE=	yes
 do-build:
 
 post-build:
