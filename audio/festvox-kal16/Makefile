@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festvox-kal16/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: audio/festvox-kal16/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festvox-kal16
 PORTVERSION=	1.4.0
@@ -20,6 +20,7 @@ ${LOCALBASE}/share/festival/lib/dicts/cmu/cmulex.scm:${PORTSDIR}/audio/festlex-c
 CONFLICTS=	festvox-kal8-*
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 FHOME=		${PREFIX}/share/festival
 
