@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/griffith/Makefile 320840 2013-06-13 20:45:23Z antoine $
+# $FreeBSD: deskutils/griffith/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	griffith
 PORTVERSION=	0.13
@@ -33,6 +33,7 @@ NO_BUILD=	yes
 MANLANG=	"" pl pt
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLXML}
