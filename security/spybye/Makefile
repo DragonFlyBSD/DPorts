@@ -1,5 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/spybye/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/spybye/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	spybye
 PORTVERSION=	0.3
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		spybye.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCLAMAV}
