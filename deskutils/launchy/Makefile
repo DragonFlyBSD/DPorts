@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/launchy/Makefile 315513 2013-03-29 00:59:45Z eadler $
+# $FreeBSD: deskutils/launchy/Makefile 328542 2013-09-28 03:11:02Z eadler $
 
 PORTNAME=	launchy
 PORTVERSION=	2.5
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME}/Launchy%20on%20Linux/${PORTVERSION}
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source keystroke launcher
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
@@ -18,6 +18,7 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build gui network
 PORTDOCS=	*
 
 MAKE_JOBS_UNSAFE=	yes
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
