@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/tokamak/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: devel/tokamak/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tokamak
 PORTVERSION=	1.0.5a
@@ -22,6 +22,7 @@ BUILD_WRKSRC=	${WRKSRC}/build/gnu
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !defined(WITH_DEBUG)
