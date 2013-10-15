@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/uatraits/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: devel/uatraits/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	uatraits
 PORTVERSION=	20130430
@@ -22,6 +22,7 @@ USE_PYTHON=	yes
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${PYTHON_CMD}-config)
