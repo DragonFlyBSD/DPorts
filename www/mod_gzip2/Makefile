@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_gzip2 Apache module
-# Date created:		2008-06-27
-# Whom:			Stefan `Sec` Zehl <sec@42.org>
-#
-# $FreeBSD: www/mod_gzip2/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Stefan `Sec` Zehl <sec@42.org>
+# $FreeBSD: www/mod_gzip2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_gzip2
 PORTVERSION=	2.1.0
@@ -30,6 +26,7 @@ PLIST_DIRS=	${DOCSDIR:S/${PREFIX}\///}
 PLIST_FILES+=	share/examples/mod_gzip2/mod_gzip2.conf.sample
 PLIST_DIRS+=	share/examples/mod_gzip2
 
+NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/mod_gzip.c ${WRKSRC}/${PORTNAME}.c
 
