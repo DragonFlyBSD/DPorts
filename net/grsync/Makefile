@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: net/grsync/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: net/grsync/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	grsync
 PORTVERSION=	1.2.4
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		grsync.1 grsync-batch.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
