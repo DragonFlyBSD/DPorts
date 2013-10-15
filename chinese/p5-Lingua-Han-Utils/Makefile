@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/p5-Lingua-Han-Utils/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: chinese/p5-Lingua-Han-Utils/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Lingua-Han-Utils
 PORTVERSION=	0.12
