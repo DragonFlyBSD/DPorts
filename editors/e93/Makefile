@@ -1,9 +1,5 @@
-# New ports collection makefile for:	e93
-# Date created:		21 June 1995
-# Whom:			Satoshi Asami (asami)
-#
-# $FreeBSD: editors/e93/Makefile 318746 2013-05-22 08:03:52Z gahr $
-#
+# Created by: Satoshi Asami (asami)
+# $FreeBSD: editors/e93/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	e93
 PORTVERSION=	1.4.2
@@ -34,6 +30,7 @@ MAKE_ARGS=	PREFIX="${PREFIX}" \
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lstdc++||g ; \
 		 s|;make|;$$(MAKE)|g' ${WRKSRC}/Makefile
