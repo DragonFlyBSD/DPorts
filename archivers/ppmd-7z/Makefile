@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: archivers/ppmd-7z/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/ppmd-7z/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	ppmd
 PORTVERSION=	9.04
@@ -11,6 +11,7 @@ DISTNAME=	p7zip_${DISTVERSION}_src_all
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	High-ratio PPMD compressor
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gmake
 WRKSRC=		${WRKDIR}/p7zip_${DISTVERSION}
