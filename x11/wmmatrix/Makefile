@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmMatrix
-# Date created:		13 October 1999
-# Whom:			Brian Handy <handy@physics.montana.edu>
-#
-# $FreeBSD: ports/x11/wmmatrix/Makefile,v 1.16 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Brian Handy <handy@physics.montana.edu>
+# $FreeBSD: x11/wmmatrix/Makefile 329631 2013-10-06 21:51:02Z marino $
 
 PORTNAME=	wmmatrix
 PORTVERSION=	0.2
@@ -14,13 +10,16 @@ MASTER_SITES=	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/ \
 DISTNAME=	wmMatrix-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A DockApp that runs a version of the xmatrix screenhack
+COMMENT=	DockApp that runs a version of the xmatrix screenhack
+
+MAKE_JOBS_UNSAFE= yes
 
 PLIST_FILES=	bin/wmmatrix
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xpm
 ALL_TARGET=	clean all
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmMatrix ${PREFIX}/bin/wmmatrix
 
