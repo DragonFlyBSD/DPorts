@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/gourmet/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/gourmet/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gourmet
 PORTVERSION=	0.16.0
@@ -30,6 +30,7 @@ USE_GNOME=	pygnome2 pygnomeextras pygtk2
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' \
 		${WRKSRC}/gourmet/backends/db.py \
