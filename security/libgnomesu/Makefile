@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: security/libgnomesu/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: security/libgnomesu/Makefile 327769 2013-09-20 22:55:24Z bapt $
 #    $MCom: ports/security/libgnomesu/Makefile,v 1.2 2007/05/19 21:36:21 marcus Exp $
 
 PORTNAME=	libgnomesu
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=--disable-install-pam
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/src/Makefile.in
