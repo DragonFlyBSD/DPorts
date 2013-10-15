@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/semantik/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/semantik/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	semantik
 PORTVERSION=	0.8.3
@@ -24,6 +24,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-I${LOCALBASE}/include
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
