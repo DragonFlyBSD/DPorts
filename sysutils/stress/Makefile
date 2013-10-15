@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stress
-# Date created:				18 May 2004
-# Whom:					Dmitri Nikulin <setagllib@optusnet.com.au>
-#
-# $FreeBSD: ports/sysutils/stress/Makefile,v 1.15 2012/11/17 06:01:46 svnexp Exp $
-#
+# Created by: Dmitri Nikulin <setagllib@optusnet.com.au>
+# $FreeBSD: sysutils/stress/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	stress
 PORTVERSION=	1.0.4
@@ -20,6 +16,7 @@ INFO=		stress
 MAN1=		stress.1
 PLIST_FILES=	bin/stress
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(CFLAGS\ \)=|\1 +=|; s|^\(CFLAGS.*\)-Wall|\1|' \
 		${WRKSRC}/src/Makefile.in
