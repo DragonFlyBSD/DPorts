@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: ports/security/secpanel/Makefile,v 1.34 2013/01/23 15:05:37 svnexp Exp $
+# $FreeBSD: security/secpanel/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	secpanel
 PORTVERSION=	0.6.1
@@ -28,6 +28,7 @@ USE_TK_WRAPPER=	yes
 DESKTOP_ENTRIES="SecPanel" "${COMMENT}" "${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" "" "false"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|\[file dirname \[info script\]\]/../lib/secpanel|${DATADIR}|' \
