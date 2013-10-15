@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/pylint/Makefile 326708 2013-09-08 08:21:46Z mva $
+# $FreeBSD: devel/pylint/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pylint
 PORTVERSION=	1.0.0
@@ -21,6 +21,7 @@ USE_PYDISTUTILS=yes
 OPTIONS_DEFINE=	GUI
 OPTIONS_DEFAULTS=
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
