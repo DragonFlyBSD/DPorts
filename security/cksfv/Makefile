@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: security/cksfv/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: security/cksfv/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cksfv
 PORTVERSION=	1.3.14
@@ -21,6 +21,7 @@ PORTDOCS=	README ChangeLog
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
