@@ -1,5 +1,5 @@
 # Created by: paul@FreeBSD.org
-# $FreeBSD: net/ldapsdk/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/ldapsdk/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldapsdk
 PORTVERSION=	6.0.7
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	--disable-optimize \
 		--with-nspr-inc=${LOCALBASE}/include/nspr \
 		--with-nspr-lib=${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-extract:
 	@${MKDIR} ${WRKDIR}/fakeroot
 
