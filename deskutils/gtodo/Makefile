@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gtodo/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/gtodo/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gtodo
 PORTVERSION=	0.14
@@ -17,4 +17,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gtodo.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
