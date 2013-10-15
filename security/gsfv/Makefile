@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	gsfv
-# Date created:			18 September 2002
-# Whom:				Frederic Cambus
-#
-# $FreeBSD: ports/security/gsfv/Makefile,v 1.9 2012/11/17 06:01:04 svnexp Exp $
-#
+# Created by: Frederic Cambus
+# $FreeBSD: security/gsfv/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gsfv
 PORTVERSION=	0.2.1
@@ -20,4 +15,5 @@ PLIST_FILES=	bin/gsfv
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
