@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-hlint/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-hlint/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hlint
 PORTVERSION=	1.8.45
@@ -14,5 +14,6 @@ USE_CABAL=	cpphs>=1.11 haskell-src-exts>=1.11 hscolour>=1.17 \
 
 EXECUTABLE=	hlint
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
