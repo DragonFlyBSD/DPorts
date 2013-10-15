@@ -1,8 +1,8 @@
 # Created by: Diego Depaoli <trebestie@gmail.com> and Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: multimedia/smplayer/Makefile 321079 2013-06-16 22:03:47Z wg $
+# $FreeBSD: multimedia/smplayer/Makefile 329446 2013-10-05 12:06:39Z pawel $
 
 PORTNAME=	smplayer
-DISTVERSION=	0.8.5
+DISTVERSION=	0.8.6
 CATEGORIES=	multimedia audio kde
 MASTER_SITES=	SF/${PORTNAME}/SMPlayer/${PORTVERSION}
 
@@ -12,12 +12,11 @@ COMMENT=	Complete front-end based on Qt4 for mplayer
 RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
 		${LOCALBASE}/share/smplayer/themes:${PORTSDIR}/multimedia/smplayer-themes
 
-USE_QT4=	gui network xml qmake_build moc_build rcc_build uic_build \
+USE_QT4=	gui network script xml qmake_build moc_build rcc_build uic_build \
 		uic3_build porting_build linguist_build
 
 ALL_TARGET=	src/smplayer
 
-MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
@@ -28,6 +27,7 @@ MANCOMPRESSED=	yes
 PORTDOCS=	Changelog Copying.txt Install.txt Not_so_obvious_things.txt \
 		Readme.txt Release_notes.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -35,6 +35,7 @@ post-patch:
 		-e 's|lrelease|${QT_PREFIX}/bin/lrelease-qt4|g' \
 		-e 's|PREFIX=/usr/local|PREFIX=${PREFIX}|g' \
 		-e 's,/share/man,/man,g' \
+		-e 's, make, ${GMAKE},g' \
 		${WRKSRC}/Makefile
 
 post-install:
