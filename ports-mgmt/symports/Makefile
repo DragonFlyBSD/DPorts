@@ -1,4 +1,4 @@
-# $FreeBSD: ports/ports-mgmt/symports/Makefile,v 1.7 2012/11/17 06:00:46 svnexp Exp $
+# $FreeBSD: ports-mgmt/symports/Makefile 328551 2013-09-28 06:48:53Z eadler $
 
 PORTNAME=	symports
 PORTVERSION=	1.1
@@ -14,15 +14,10 @@ LICENSE=	BSD
 USE_BZIP2=	yes
 NO_BUILD=	yes
 
-MAN1=		symports.1
-MANCOMPRESSED=	no
-
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man1/symports.1.gz
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/auto-symlink-virtual.sh ${PREFIX}/bin/${PORTNAME}
-
-post-install:
-	${INSTALL_MAN} ${WRKDIR}/${MAN1} ${MAN1PREFIX}/man/man1/${MAN1}
+	${INSTALL_SCRIPT} ${WRKDIR}/auto-symlink-virtual.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_MAN} ${WRKDIR}/symports.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/symports.1
 
 .include <bsd.port.mk>
