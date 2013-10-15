@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	tkinspect
-# Date created:				Dec 28 2002
-# Whom:					Juergen Lock <nox@jelal.kn-bremen.de>
-#
-# $FreeBSD: ports/devel/tkinspect/Makefile,v 1.8 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: Juergen Lock <nox@jelal.kn-bremen.de>
+# $FreeBSD: devel/tkinspect/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tkinspect
 PORTVERSION=	5.1.6p10
@@ -16,6 +12,7 @@ COMMENT=	A Tk program browser
 
 RUN_DEPENDS=	wish8.4:${PORTSDIR}/x11-toolkits/tk84
 
+NO_STAGE=	yes
 # this would do an interactive install:
 #do-install:
 #		(cd ${WRKSRC} && ./install.tcl)
