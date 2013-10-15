@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net/minissdpd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net/minissdpd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	minissdpd
 PORTVERSION=	1.2
@@ -18,6 +18,7 @@ CFLAGS+=	-D_GNU_SOURCE
 MAN8=		minissdpd.8
 PLIST_FILES=	sbin/minissdpd
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/${PORTNAME}.1 ${WRKSRC}/${MAN8}
 
