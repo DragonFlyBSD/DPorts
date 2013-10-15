@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: x11-toolkits/p5-Wx-Perl-ProcessStream/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Wx-Perl-ProcessStream/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Wx-Perl-ProcessStream
 PORTVERSION=	0.32
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Wx::Perl::ProcessStream.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
