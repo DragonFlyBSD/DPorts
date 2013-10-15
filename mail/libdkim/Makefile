@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/libdkim/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: mail/libdkim/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	libdkim
 PORTVERSION=	1.0.21
@@ -20,6 +20,7 @@ USE_OPENSSL=	YES
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 #Check for OPENSSL 0.9.8 in BASE:  If not present require PORT
