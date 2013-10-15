@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: net/p5-AddressBook/Makefile 324195 2013-08-03 13:59:44Z mat $
+# $FreeBSD: net/p5-AddressBook/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	AddressBook
 PORTVERSION=	0.16
@@ -24,4 +24,5 @@ MAN3=	AddressBook.3 AddressBook::Config.3 AddressBook::DB::BBDB.3 \
 	AddressBook::DB::LDIF.3 AddressBook::DB::PDB.3 AddressBook::DB::Text.3 \
 	AddressBook::Entry.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
