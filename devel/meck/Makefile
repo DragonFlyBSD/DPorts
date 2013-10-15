@@ -1,4 +1,4 @@
-# $FreeBSD: devel/meck/Makefile 325996 2013-09-02 13:53:57Z olgeni $
+# $FreeBSD: devel/meck/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	meck
 PORTVERSION=	0.8.1
@@ -25,6 +25,7 @@ GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
