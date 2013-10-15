@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-Loki97/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-Crypt-Loki97/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Loki97
 PORTVERSION=	1.0.1
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Loki97.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
