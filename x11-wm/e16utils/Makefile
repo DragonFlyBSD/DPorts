@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: x11-wm/e16utils/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/e16utils/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	e16utils
 PORTVERSION=	0.16
@@ -23,6 +23,7 @@ SUB_STUBS=	e16menuedit-0.1 e16keyedit-0.7
 PLIST_FILES=	bin/e16menuedit \
 		bin/e16keyedit
 
+NO_STAGE=	yes
 do-patch:
 .for i in ${SUB_STUBS}
 	if [ -f "${PATCHDIR}/patch-${i}" ]; then \
