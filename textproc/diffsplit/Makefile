@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: textproc/diffsplit/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: textproc/diffsplit/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	diffsplit
 PORTVERSION=	1.0
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/diffsplit
 USES=		shebangfix perl5
 SHEBANG_FILES=	diffsplit
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/diffsplit ${WRKDIR}
