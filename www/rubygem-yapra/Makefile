@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: www/rubygem-yapra/Makefile 322085 2013-06-30 13:47:07Z tota $
+# $FreeBSD: www/rubygem-yapra/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yapra
 PORTVERSION=	0.2.2
@@ -18,4 +18,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/yapra
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
