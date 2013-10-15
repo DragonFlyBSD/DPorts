@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: devel/pear-PEAR_PackageFileManager_Plugins/Makefile 318058 2013-05-13 09:57:51Z miwi $
+# $FreeBSD: devel/pear-PEAR_PackageFileManager_Plugins/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PEAR_PackageFileManager_Plugins
 PORTVERSION=	1.0.2
@@ -17,6 +17,7 @@ LICENSE=	BSD
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
