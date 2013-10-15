@@ -1,5 +1,5 @@
 # Created by: Andrew Shevtsov <nyxo@dnuc.polyn.kiae.su>
-# $FreeBSD: sysutils/ssync/Makefile 322294 2013-07-04 22:04:48Z nox $
+# $FreeBSD: sysutils/ssync/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ssync
 PORTVERSION=	2.3
@@ -16,6 +16,7 @@ MAKEFILE=	makefile
 
 MAN1=		ssync.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's@/etc/init.d/ssyncd@\$$0@g' ${WRKSRC}/ssyncd.init
 	@${REINPLACE_CMD} -e "s@/etc@${PREFIX}/etc@g;s@/usr/sbin@${PREFIX}/sbin@g;" \
