@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: ports/java/mx4j/Makefile,v 1.10 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/mx4j/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	mx4j
 PORTVERSION=	3.0.2
@@ -30,6 +30,7 @@ NO_BUILD=	yes
 
 do-install: do-install-jar do-install-javadoc
 
+NO_STAGE=	yes
 do-install-jar:
 	@${ECHO_MSG} -n ">> Installing .jar files in ${JAVAJARDIR} ..."
 	@for jarfile in ${JARFILES}; do					\
