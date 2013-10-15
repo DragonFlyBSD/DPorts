@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: devel/rubygem-delayed_job/Makefile 319634 2013-06-02 02:28:23Z swills $
+# $FreeBSD: devel/rubygem-delayed_job/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	delayed_job
 PORTVERSION=	3.0.5
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
