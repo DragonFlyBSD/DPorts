@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: ports/games/wmtictactoe/Makefile,v 1.18 2013/02/07 23:50:54 svnexp Exp $
+# $FreeBSD: games/wmtictactoe/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wmtictactoe
 PORTVERSION=	1.1
@@ -18,6 +18,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	bin/wmtictactoe
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^void .*main|int main|' ${WRKSRC}/wmtictactoe.c
