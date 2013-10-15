@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/ganyremote/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/ganyremote/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	ganyremote
 PORTVERSION=	6.2
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
