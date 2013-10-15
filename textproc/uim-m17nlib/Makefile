@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: textproc/uim-m17nlib/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
+# $FreeBSD: textproc/uim-m17nlib/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 .if defined(WITHOUT_X11)
 PKGNAMESUFFIX=	-m17nlib-nox11
@@ -26,6 +26,7 @@ UIM_SLAVE=	yes
 
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-uim_Makefile.in
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}/uim && ${GMAKE} libuim-m17nlib.la)
 
