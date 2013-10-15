@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	arp-sk
-# Date Created:			Apr 14, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/net/arp-sk/Makefile,v 1.7 2013/02/18 21:46:31 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/arp-sk/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	arp-sk
 PORTVERSION=	0.0.16
@@ -26,6 +21,7 @@ PLIST_FILES=	sbin/arp-sk
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -Ee \
 		's| -pedantic -g||; \
