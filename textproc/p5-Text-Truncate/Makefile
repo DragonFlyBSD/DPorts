@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Text-Truncate
-# Date created:				25 February 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: textproc/p5-Text-Truncate/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Truncate/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Truncate
 PORTVERSION=	1.04
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Truncate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
