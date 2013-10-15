@@ -1,5 +1,5 @@
 # Created by: Dan Pelleg <daniel+boodler@pelleg.org>
-# $FreeBSD: audio/boodler/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/boodler/Makefile 329268 2013-10-04 07:18:59Z bapt $
 
 PORTNAME=	boodler
 PORTVERSION=	1.5.3
@@ -14,6 +14,7 @@ COMMENT=	A programmable soundscape tool
 RESTRICTED=	no commercial use
 RESTRICTED_FILES=	boodler-snd-021902.tar.gz
 
+NO_STAGE=	yes
 USES=		gmake
 USE_PYTHON=	yes
 DRIVER?=	oss
@@ -32,17 +33,8 @@ pre-everything::
 	@${ECHO} "interfaces. The default is to use OSS."
 	@${ECHO} ""
 
-.if ${DRIVER:tl} == "oss"
-# Probably nothing here...
-.endif
-
 .if ${DRIVER:tl} == "esd"
 LIB_DEPENDS+=	esd.2:${PORTSDIR}/audio/esound
-PKGNAMESUFFIX=	-esd
-.endif
-
-.if ${DRIVER:tl} == "file"
-PKGNAMESUFFIX=	-file
 .endif
 
 .include <bsd.port.pre.mk>
