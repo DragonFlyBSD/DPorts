@@ -1,5 +1,5 @@
 # Created by: chshen <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/xpdf/Makefile 317774 2013-05-10 08:08:33Z hrs $
+# $FreeBSD: chinese/xpdf/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -38,6 +38,7 @@ SIMP_FILES=	Adobe-GB1.cidToUnicode EUC-CN.unicodeMap GBK.unicodeMap \
 TRAD_FILES=	Adobe-CNS1.cidToUnicode Big5.unicodeMap \
 		Big5ascii.unicodeMap README
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/chinese-simplified
 	cd ${WRKSRC}/xpdf-chinese-simplified \
