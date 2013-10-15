@@ -1,9 +1,5 @@
-# New ports collection makefile for:	orangehrm
-# Date created:				06 Dec, 2008
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/orangehrm/Makefile,v 1.25 2012/11/17 06:02:44 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: www/orangehrm/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	orangehrm
 PORTVERSION=	2.7
@@ -13,6 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/stable/${PORTVERSION}
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Open Source Human Resource Management
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 USE_PHP=	mysql
