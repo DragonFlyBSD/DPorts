@@ -1,5 +1,5 @@
 # Created by: n@nectar.com
-# $FreeBSD: german/ding/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: german/ding/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	ding
 PORTVERSION=	1.7
@@ -20,6 +20,7 @@ MAN1=		ding.1
 DICTFILE=	de-en.txt
 SWISSDICT=	de_ch-en.txt
 
+NO_STAGE=	yes
 do-build:
 	${SED} -E -e '1,/^exec/ s!wish!wish8.4!' \
 	  -e 's!/usr/share/dict/de-en.txt!${PREFIX}/share/ding/de-en.txt!' \
