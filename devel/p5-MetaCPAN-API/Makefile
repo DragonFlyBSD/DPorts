@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-MetaCPAN-API/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MetaCPAN-API/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MetaCPAN-API
 PORTVERSION=	0.43
@@ -35,6 +35,7 @@ regression-test: build
 	cd ${WRKSRC} && ${PERL5} ${PL_BUILD} test
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
