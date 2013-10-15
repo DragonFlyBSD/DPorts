@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: deskutils/dailystrips/Makefile 313075 2013-02-28 01:43:31Z jgh $
+# $FreeBSD: deskutils/dailystrips/Makefile 328336 2013-09-26 06:35:39Z jgh $
 
 PORTNAME=	dailystrips
 PORTVERSION=	1.0.28
@@ -17,36 +17,29 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 
 NO_BUILD=	yes
-USE_PERL5=	yes
-
-PORTDOCS=	*
-PLIST_FILES=	bin/dailystrips \
-		bin/dailystrips-clean \
-		bin/dailystrips-update \
-		share/dailystrips/strips.def
-PLIST_DIRS=	share/dailystrips
+USES=		perl5 shebangfix
+SHEBANG_FILES=	${WRKSRC}/dailystrips*
 
 PORTSCOUT=	limit:^1\.0\.
 
 post-patch:
-	@${REINPLACE_CMD} 's|^#!/usr/bin/perl|#!${PERL}|; \
-		s!/usr/share/dailystrips/strips.def!${DATADIR}/strips.def!' \
+	@${REINPLACE_CMD} ' s!/usr/share/dailystrips/strips.def!${DATADIR}/strips.def!' \
 		${WRKSRC}/dailystrips ${WRKSRC}/dailystrips-clean \
 		${WRKSRC}/dailystrips-update
 
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips-clean ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips-update ${PREFIX}/bin
-	@${MKDIR} ${DATADIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/strips.def ${DATADIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips-clean ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips-update ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/strips.def ${STAGEDIR}${DATADIR}
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in README README.DEFS README.LOCAL README.dailystrips-clean \
 	README.dailystrips-update
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
