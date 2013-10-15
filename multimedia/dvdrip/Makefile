@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-# $FreeBSD: multimedia/dvdrip/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: multimedia/dvdrip/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dvdrip
 PORTVERSION=	0.98.11
@@ -40,6 +40,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		dvdrip.1 dvdrip-progress.1 dvdrip-splitpipe.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MVORBIS}
