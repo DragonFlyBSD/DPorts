@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: databases/mysqlsla/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/mysqlsla/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysqlsla
 PORTVERSION=	2.03
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/mysqlsla
 
 MAN3=		mysqlsla.3
 
+NO_STAGE=	yes
 pre-install:
 	@${MKDIR} ${WRKSRC}/doc
 	@pod2man ${WRKSRC}/lib/mysqlsla.pm > ${WRKSRC}/doc/${MAN3}
