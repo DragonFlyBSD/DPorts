@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/h2ps/Makefile 321159 2013-06-17 22:50:28Z jkim $
+# $FreeBSD: korean/h2ps/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	h2ps
 PORTVERSION=	2.06
@@ -11,6 +11,7 @@ COMMENT=	Formats an ASCII file for printing on a postscript printer with Korean 
 
 PLIST_FILES=	bin/h2ps
 
+NO_STAGE=	yes
 pre-build:
 	@(cd ${WRKSRC}; make clean)
 
