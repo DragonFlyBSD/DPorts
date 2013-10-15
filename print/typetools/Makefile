@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/typetools/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/typetools/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	typetools
 PORTVERSION=	2.98
@@ -22,4 +22,5 @@ MAN1=		cfftot1.1 mmafm.1 mmpfb.1 otfinfo.1 otftotfm.1 t1dotlessj.1 \
 
 DATADIR=	${PREFIX}/share/lcdf-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
