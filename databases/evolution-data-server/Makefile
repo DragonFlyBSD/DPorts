@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/evolution-data-server/Makefile 319722 2013-06-02 19:15:39Z bapt $
+# $FreeBSD: databases/evolution-data-server/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/databases/evolution-data-server/Makefile,v 1.218 2013/03/09 09:12:37 kwm Exp $
 
 PORTNAME=	evolution-data-server
@@ -45,6 +45,7 @@ OPTIONS_DEFINE=	WEATHER KERBEROS
 OPTIONS_DEFAULT=WEATHER KERBEROS
 WEATHER_DESC=	Weather calendar backend
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKERBEROS}
