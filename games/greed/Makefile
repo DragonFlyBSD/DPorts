@@ -1,9 +1,5 @@
-# New ports collection makefile for:	greed
-# Date created:			Apr 2, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/games/greed/Makefile,v 1.13 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: games/greed/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	greed
 PORTVERSION=	3.8
@@ -20,6 +16,7 @@ SCOREFILE?=	/var/games/greed.hs
 CFLAGS+=	-DSCOREFILE=\"${SCOREFILE}\" -DNOTBSD -DRELEASE=\"${PORTVERSION}\"
 LDFLAGS+=	-lcurses
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}&&${CC} ${CFLAGS} -o greed greed.c ${LDFLAGS}
 
