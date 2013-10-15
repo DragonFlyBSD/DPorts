@@ -1,8 +1,5 @@
-# New ports collection makefile for:	ntlmaps
-# Date created:				1 August 2007
-# Whom:					kevlo
-#
-# $FreeBSD: ports/net/ntlmaps/Makefile,v 1.5 2012/11/17 06:00:07 svnexp Exp $
+# Created by: kevlo
+# $FreeBSD: net/ntlmaps/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ntlmaps
 PORTVERSION=	0.9.9.0.1
@@ -18,6 +15,7 @@ USE_DOS2UNIX=	yes
 
 DOCS=		COPYING Install.txt changelog.txt readme.txt research.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	    's,^#! /usr/bin/python,#!${PYTHON_CMD},' ${WRKSRC}/main.py
