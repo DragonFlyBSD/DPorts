@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libmorph
-# Date Created:				14 September 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/libmorph/Makefile,v 1.18 2012/11/17 05:58:13 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: graphics/libmorph/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libmorph
 PORTVERSION=	0.1.2
