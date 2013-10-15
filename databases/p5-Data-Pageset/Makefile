@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: databases/p5-Data-Pageset/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-Data-Pageset/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Data-Pageset
 PORTVERSION=	1.06
@@ -19,4 +19,5 @@ MAN3=	Data::Pageset.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
