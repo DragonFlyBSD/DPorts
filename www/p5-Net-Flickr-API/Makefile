@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Flickr-API
-# Date created:		2006-07-23
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: www/p5-Net-Flickr-API/Makefile 326156 2013-09-03 15:07:52Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: www/p5-Net-Flickr-API/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Net-Flickr-API
 PORTVERSION=	1.7
@@ -29,4 +25,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Net::Flickr::API.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
