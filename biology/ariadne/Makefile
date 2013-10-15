@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: biology/ariadne/Makefile 321252 2013-06-19 14:10:02Z bsam $
+# $FreeBSD: biology/ariadne/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	ariadne
 PORTVERSION=	1.3
@@ -18,6 +18,7 @@ PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}| ; \
 		s|CC =|CC ?=| ; \
