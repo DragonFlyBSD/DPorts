@@ -1,5 +1,5 @@
 # Created by: Peter Vereshagin <peter@vereshagin.org>
-# $FreeBSD: www/links-hacked/Makefile 319952 2013-06-05 06:59:44Z bapt $
+# $FreeBSD: www/links-hacked/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	links-hacked
 DISTVERSION=	101110
@@ -32,6 +32,7 @@ DIRECTFB_DESC=	directfb driver support
 FORMSAVE_DESC=	Enable forms saving
 JS_DESC=	Enable Javascript (very basic)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSVGALIB} || ${PORT_OPTIONS:MX11} || ${PORT_OPTIONS:MDIRECTFB}
