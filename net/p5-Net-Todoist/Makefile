@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Todoist
-# Date created:		2010-11-06
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: net/p5-Net-Todoist/Makefile 326380 2013-09-05 10:32:23Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-Net-Todoist/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Todoist
 PORTVERSION=	0.04
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Todoist.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
