@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: www/llgal/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/llgal/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	llgal
 PORTVERSION=	0.13.17
@@ -30,6 +30,7 @@ USE_GMAKE=	yes
 MAN1=		llgal.1
 MAN5=		llgalrc.5
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
