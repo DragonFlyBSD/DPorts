@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/hs-curl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: ftp/hs-curl/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	curl
 PORTVERSION=	1.3.8
@@ -14,5 +14,6 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_GHC_NATIVE=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
