@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pam_pwdfile
-# Date created:				Aug 31, 2001
-# Whom:	      				Michael Schout <mschout@gkg.net>
-#
-# $FreeBSD: ports/security/pam_pwdfile/Makefile,v 1.8 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Michael Schout <mschout@gkg.net>
+# $FreeBSD: security/pam_pwdfile/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pam_pwdfile
 PORTVERSION=	0.99
@@ -20,6 +16,7 @@ PLIST_FILES=	lib/pam_pwdfile.so
 PORTDOCS=	README INSTALL changelog
 CFLAGS+=	-I${WRKSRC}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|#include <features.h>||g' ${WRKSRC}/pam_pwdfile.c
 	${CP} ${FILESDIR}/_pam_macros.h ${WRKSRC}
