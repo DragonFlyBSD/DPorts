@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-probability/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-probability/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	probability
 PORTVERSION=	0.2.4
@@ -13,5 +13,6 @@ LICENSE=	BSD
 
 USE_CABAL=	random>=1.0 transformers>=0.0.1 utility-ht>=0.0.6
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
