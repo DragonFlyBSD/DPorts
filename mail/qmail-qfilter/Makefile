@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qmail-qfilter
-# Date created:		2004-10-13
-# Whom:			Sergei Kolobov <sergei@FreeBSD.org>
-#
-# $FreeBSD: mail/qmail-qfilter/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sergei Kolobov <sergei@FreeBSD.org>
+# $FreeBSD: mail/qmail-qfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qmail-qfilter
 PORTVERSION=	2.1
@@ -22,6 +18,7 @@ BGLIBS_LIB=	${LOCALBASE}/lib/bglibs
 MAN1=		qmail-qfilter.1
 DOCS=		NEWS README TODO
 
+NO_STAGE=	yes
 do-configure:
 	${ECHO_CMD} "${PREFIX}/bin"	> ${WRKSRC}/conf-bin
 	${ECHO_CMD} "${MANPREFIX}/man"	> ${WRKSRC}/conf-man
