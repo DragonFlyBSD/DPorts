@@ -1,5 +1,5 @@
 # Created by: Carl Johan Madestrand
-# $FreeBSD: net-p2p/teknap/Makefile 318976 2013-05-24 14:26:48Z bapt $
+# $FreeBSD: net-p2p/teknap/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	TekNap
 PORTVERSION=	1.3.g
@@ -31,6 +31,7 @@ PORTDOCS=	*
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgtk12}!=""
