@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/keepassx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/keepassx/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	KeePassX
 PORTVERSION=	0.4.3
@@ -22,6 +22,7 @@ HAS_CONFIGURE=	yes
 USE_XORG=	xt inputproto xtst xrender xrandr xfixes xcursor\
 		xext x11 sm ice xi
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		${QMAKE} -unix PREFIX=${PREFIX} \
