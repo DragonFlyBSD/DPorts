@@ -1,5 +1,5 @@
 # Created by: Edson Brandi <ebrandi.home@uol.com.br> 
-# $FreeBSD: sysutils/livecd/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/livecd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	livecd
 PORTVERSION=	1.2.4b
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 MAKE_ENV=	INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e 's|/usr/local/|${PREFIX}|' \
 		${WRKSRC}/Makefile
