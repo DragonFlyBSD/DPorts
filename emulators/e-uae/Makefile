@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: emulators/e-uae/Makefile 322285 2013-07-04 18:08:34Z tijl $
+# $FreeBSD: emulators/e-uae/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	e-uae
 DISTVERSION=	0.8.29.w4
@@ -30,6 +30,7 @@ PORTDOCS=	ChangeLog README bsdsocket.txt cmd-line.txt \
 		joystick.txt keyboard.txt scsi.txt
 PLIST_FILES=	bin/readdisk bin/uae
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
