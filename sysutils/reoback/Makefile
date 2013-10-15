@@ -1,5 +1,5 @@
 # Created by: kiesel
-# $FreeBSD: sysutils/reoback/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: sysutils/reoback/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	reoback
 PORTVERSION=	1.0
@@ -18,6 +18,7 @@ USES=		perl5
 MAN1=		reoback.1 reoback.pl.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 pre-install:
 		cd ${WRKSRC} && ${REINPLACE_CMD} -e 's,/home/sforge/reoback/settings.conf,${PREFIX}/etc/reoback/settings.conf,g' ${WRKSRC}/run_reoback.sh
 		cd ${WRKSRC} && ${REINPLACE_CMD} -e 's,/home/sforge/reoback/reoback.pl,${PREFIX}/bin/reoback.pl,g' ${WRKSRC}/run_reoback.sh
