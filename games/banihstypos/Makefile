@@ -1,7 +1,5 @@
-# New ports collection makefile for:  banihstypos
-# Date created:                05 October 2007
-# Whom:                        Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/games/banihstypos/Makefile,v 1.3 2012/11/17 05:57:32 svnexp Exp $
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: games/banihstypos/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	banihstypos
 PORTVERSION=	0.2
@@ -20,6 +18,7 @@ PLIST_FILES=	bin/banihstypos
 
 PORTDOCS=	readme.txt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/banihstypos ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
