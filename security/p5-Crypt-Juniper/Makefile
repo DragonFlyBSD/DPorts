@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: security/p5-Crypt-Juniper/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/p5-Crypt-Juniper/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Juniper
 PORTVERSION=	0.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Juniper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
