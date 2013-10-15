@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-graphviz/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-graphviz/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.7.4
@@ -22,6 +22,7 @@ PYDISTUTILS_PKGNAME=	graphviz
 WRKSRC=			${WRKDIR}/${PORTNAME}plugin
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    -e 's|%%PREFIX%%|${PREFIX}|' \
