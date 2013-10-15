@@ -1,9 +1,5 @@
-# New ports collection makefile for:	team
-# Date created:		1 July 1995
-# Whom:			joerg
-#
-# $FreeBSD: ports/misc/team/Makefile,v 1.19 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: joerg
+# $FreeBSD: misc/team/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	team
 PORTVERSION=	3.1
@@ -19,4 +15,5 @@ MAN1=		team.1
 MANCOMPRESSED=	maybe
 PLIST_FILES=	bin/team
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
