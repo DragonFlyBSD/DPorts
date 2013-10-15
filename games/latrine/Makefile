@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: games/latrine/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: games/latrine/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	latrine
 PORTVERSION=	1.0.0
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		latrine.1
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.c" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|<ncursesw/|<|'
