@@ -1,9 +1,5 @@
-# New ports collection makefile for:    picp
-# Date created:         25 October 2002
-# Whom:                 Bruce M Simpson <bms@spc.org>
-#
-# $FreeBSD: ports/devel/picp/Makefile,v 1.9 2012/11/17 05:56:42 svnexp Exp $
-#
+# Created by: Bruce M Simpson <bms@spc.org>
+# $FreeBSD: devel/picp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	picp
 PORTVERSION=	0.6.8
@@ -15,6 +11,7 @@ COMMENT=	Driver for the Microchip Picstart Plus development programmer
 
 PLIST_FILES=	bin/picp
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/picp ${PREFIX}/bin
 
