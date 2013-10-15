@@ -1,5 +1,5 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: www/luakit/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/luakit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	luakit
 PORTVERSION=	2012.09.13r1
@@ -34,6 +34,7 @@ MAN1=		luakit.1
 OPTIONS_DEFINE=	LUAJIT
 LUAJIT_DESC=	Use the Just-In-Time compiler for lua
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "sparc64"
