@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net-im/bsflite/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net-im/bsflite/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	bsflite
 DISTVERSION=	0.85
@@ -15,6 +15,7 @@ PORTDOCS=	COPYING ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
