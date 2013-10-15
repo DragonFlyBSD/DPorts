@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtkfind
-# Date created:				28 Sept 1998
-# Whom:					Bill Fumerola <billf@chc-chimes.com>
-#
-# $FreeBSD: ports/misc/gtkfind/Makefile,v 1.32 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: Bill Fumerola <billf@chc-chimes.com>
+# $FreeBSD: misc/gtkfind/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gtkfind
 PORTVERSION=	1.1
@@ -25,6 +21,7 @@ GNU_CONFIGURE=	yes
 MAN1=		gtkfind.1
 PLIST_FILES=	bin/gtkfind
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,-O2,${CFLAGS}," ${WRKSRC}/configure ${WRKSRC}/Makefile.in
 
