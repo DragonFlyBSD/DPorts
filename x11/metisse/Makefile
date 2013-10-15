@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/metisse/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/metisse/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	metisse
 PORTVERSION=	0.4.1
@@ -46,6 +46,7 @@ GNOME_DESC=	Legacy GNOME 1.4 support
 OPTIONS_DEFAULT=	MMX GLX
 OPTIONS_DEFAULT_i386=	GLX_X86
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${MACHINE_CPU:Mmmx} && ${PORT_OPTIONS:MMMX}
