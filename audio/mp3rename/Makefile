@@ -1,5 +1,5 @@
 # Created by: Sander Janssen <janssen@rendo.dekooi.nl>
-# $FreeBSD: audio/mp3rename/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/mp3rename/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3rename
 PORTVERSION=	0.6
@@ -12,6 +12,7 @@ COMMENT=	Renaming program for MP3 files based on their ID3 tag
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.orig
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/mp3rename
 
 do-build:
