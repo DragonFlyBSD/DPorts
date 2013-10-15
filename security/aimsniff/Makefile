@@ -1,5 +1,5 @@
 # Created by: Andrew Marks <andrew@amrx.net>
-# $FreeBSD: security/aimsniff/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/aimsniff/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	aimsniff
 PORTVERSION=	0.9d
@@ -27,6 +27,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/aimsniff
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !exists(${LOCALBASE}/lib/perl5/${PERL_VER}/${PERL_ARCH}/GDBM_File.pm)
