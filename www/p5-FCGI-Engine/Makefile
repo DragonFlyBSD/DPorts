@@ -1,5 +1,5 @@
 # Created by: Anes Muhametov <anes@anes.su>
-# $FreeBSD: www/p5-FCGI-Engine/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-FCGI-Engine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	FCGI-Engine
 PORTVERSION=	0.21
@@ -41,4 +41,5 @@ MAN3=		FCGI::Engine.3 \
 		Plack::Server::FCGI::Engine.3 \
 		Plack::Server::FCGI::Engine::ProcManager.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
