@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/mopesnake/Makefile 314193 2013-03-14 23:31:14Z beech $
+# $FreeBSD: games/mopesnake/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	mopesnake
 PORTVERSION=	0.5
@@ -27,6 +27,7 @@ DESKTOP_ENTRIES="Master Of Pain (Eating) - Snake" "${COMMENT}" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
