@@ -1,5 +1,5 @@
 # Created by: Rouslan Iskhakov <rouslan@rshell.net>
-# $FreeBSD: devel/p5-Pipeline/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-Pipeline/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Pipeline
 PORTVERSION=	3.12
@@ -33,4 +33,5 @@ MAN3=		Pipeline::Segment.3 Pipeline::Store::ISA.3 Pipeline.3 \
 		Pipeline::Error::AsyncResults.3 Pipeline::Segment::Tester.3 \
 		Pipeline::Segment::Async::IThreads.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
