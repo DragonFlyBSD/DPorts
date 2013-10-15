@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/nagaina/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/nagaina/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	nagaina
 PORTVERSION=	0.1.2
@@ -39,6 +39,7 @@ DESKTOP_ENTRIES=	"Nagaina" \
 			"Qt;Office;Utility;" \
 			"false"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
