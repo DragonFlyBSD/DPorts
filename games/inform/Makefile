@@ -1,9 +1,5 @@
-# New ports collection makefile for:	inform
-# Date created:				28 June 1998
-# Whom:					Matthew Hunt <mph@FreeBSD.org>
-#
-# $FreeBSD: ports/games/inform/Makefile,v 1.21 2012/11/17 05:57:41 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@FreeBSD.org>
+# $FreeBSD: games/inform/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	inform
 PORTVERSION=	6.32
@@ -31,6 +27,7 @@ MAKEFILE=	${FILESDIR}/Makefile.inform
 # Install the library files in ${PREFIX}/share/inform, and install
 # documentation if appropriate.
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${DATADIR}
 	(cd ${DATADIR} && \
