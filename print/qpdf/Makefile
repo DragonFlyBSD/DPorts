@@ -1,8 +1,8 @@
 # Created by: Dmitry Kazarov <d.y.kazarov@mail.ru>
-# $FreeBSD: print/qpdf/Makefile 325172 2013-08-21 23:23:51Z wg $
+# $FreeBSD: print/qpdf/Makefile 328330 2013-09-26 02:58:10Z tabthorpe $
 
 PORTNAME=	qpdf
-PORTVERSION=	4.0.1
+PORTVERSION=	5.0.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}
@@ -21,6 +21,7 @@ USES=		gmake
 
 MAN1=		fix-qdf.1 qpdf.1 zlib-flate.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
 		-e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
