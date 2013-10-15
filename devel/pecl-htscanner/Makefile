@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-htscanner
-# Date created:			2007/03/02
-# Whom:				chinsan
-#
-# $FreeBSD: ports/devel/pecl-htscanner/Makefile,v 1.9 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/pecl-htscanner/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	htscanner
 PORTVERSION=	1.0.1
@@ -21,4 +17,5 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-htscanner
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
