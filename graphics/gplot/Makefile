@@ -1,9 +1,5 @@
-# New ports collection makefile for:    Gplot
-# Date created:         26 Dec 97
-# Whom:                 Pedro Giffuni <giffunip@asme.org>
-#
-# $FreeBSD: ports/graphics/gplot/Makefile,v 1.16 2012/11/17 05:58:08 svnexp Exp $
-#
+# Created by: Pedro Giffuni <giffunip@asme.org>
+# $FreeBSD: graphics/gplot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gplot
 PORTVERSION=	4.3
@@ -22,6 +18,7 @@ MAN1=		gplot.1
 DOCS=		gplot.hlp gplot.txt gtex.doc
 USE_FORTRAN=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
