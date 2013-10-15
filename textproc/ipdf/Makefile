@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	ipdf
-# Date created:			Nov 16, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/ipdf/Makefile,v 1.21 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/ipdf/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ipdf
 PORTVERSION=	1.0.0
@@ -26,4 +21,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		ipdf.1
 PLIST_FILES=	bin/ipdf
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
