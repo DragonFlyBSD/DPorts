@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: mail/dbmail22/Makefile 317694 2013-05-08 16:03:20Z bdrewery $
+# $FreeBSD: mail/dbmail22/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dbmail
 PORTVERSION=	2.2.18
@@ -55,6 +55,7 @@ PLIST_SUB+=	PORTDOCS="@comment "
 PLIST_SUB+=	PORTDOCS=""
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
