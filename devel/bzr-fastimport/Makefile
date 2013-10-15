@@ -1,6 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: ports/devel/bzr-fastimport/Makefile,v 1.2 2012/11/19 21:32:33 svnexp Exp $
-#
+# $FreeBSD: devel/bzr-fastimport/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-fastimport
 PORTVERSION=	0.13.0
@@ -8,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpadlibrarian.net/94774555/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Provide fast loading of revision control data into bzr
 
 LICENSE=	GPLv2
@@ -24,4 +23,5 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr_fastimport
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}.final.0
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
