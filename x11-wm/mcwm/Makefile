@@ -1,5 +1,5 @@
 # Created by: Jakub Lach <jakub_lach@mailplus.pl>
-# $FreeBSD: x11-wm/mcwm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-wm/mcwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	mcwm
 PORTVERSION=	20130209
@@ -24,6 +24,7 @@ MAN1=		mcwm.1 hidden.1
 PLIST_FILES=	bin/mcwm bin/hidden
 PORTDOCS=	README NEWS
 
+NO_STAGE=	yes
 pre-everything::
 		@${ECHO_MSG} "You can build mcwm with your own config.h using the MCWM_CONF knob:"
 		@${ECHO_MSG} "make MCWM_CONF=/path/to/mcwm/config.h install clean"
