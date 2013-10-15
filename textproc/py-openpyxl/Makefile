@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: textproc/py-openpyxl/Makefile 326547 2013-09-06 21:02:12Z antoine $
+# $FreeBSD: textproc/py-openpyxl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	openpyxl
 PORTVERSION=	1.6.2
@@ -22,6 +22,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
