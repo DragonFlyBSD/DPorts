@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-creole
-# Date created:			May 27 2009
-# Whom:				Stanislav Svirid <count@211.ru>
-#
-# $FreeBSD: ports/textproc/py-creole/Makefile,v 1.9 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Stanislav Svirid <count@211.ru>
+# $FreeBSD: textproc/py-creole/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	creole
 PORTVERSION=	1.0.1
@@ -25,4 +21,5 @@ PYDISTUTILS_PKGNAME=	python_creole
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
