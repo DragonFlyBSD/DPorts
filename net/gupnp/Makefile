@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp/Makefile 326612 2013-09-07 10:20:28Z sunpoet $
+# $FreeBSD: net/gupnp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gupnp
 PORTVERSION=	0.20.6
@@ -25,6 +25,7 @@ USE_PYTHON=	yes
 USE_XZ=		yes
 USES=		gmake pathfix pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/tools/gupnp-binding-tool
 
