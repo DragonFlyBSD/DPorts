@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: converters/p5-Text-Bidi/Makefile 327138 2013-09-13 09:50:53Z sunpoet $
+# $FreeBSD: converters/p5-Text-Bidi/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Text-Bidi
 PORTVERSION=	2.02
@@ -26,4 +26,5 @@ MAN3=		Text::Bidi.3 \
 		Text::Bidi::Array::Long.3 \
 		Text::Bidi::Paragraph.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
