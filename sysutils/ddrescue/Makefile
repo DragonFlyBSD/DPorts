@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/ddrescue/Makefile 323935 2013-07-30 02:46:59Z jgh $
+# $FreeBSD: sysutils/ddrescue/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ddrescue
 PORTVERSION=	1.16
@@ -24,6 +24,7 @@ INFO=		ddrescue
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 PLIST_FILES=	bin/ddrescue bin/ddrescuelog
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
