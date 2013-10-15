@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Pod-Tree
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Pod-Tree/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Pod-Tree/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Tree
 PORTVERSION=	1.17
@@ -34,6 +32,7 @@ MAN3=		Pod::Tree.3 \
 		Pod::Tree::Pod.3
 
 # conflict with pod2html in perl 5.6 or above
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's/pod2html //g' ${WRKSRC}/Makefile.PL
 	${REINPLACE_CMD} -e '/pod2html/d' ${WRKSRC}/MANIFEST
