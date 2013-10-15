@@ -1,9 +1,5 @@
-# New ports collection makefile for:	quake2-lights
-# Date created:				2006-12-24
-# Whom:					alepulver
-#
-# $FreeBSD: ports/games/quake2-lights/Makefile,v 1.6 2012/11/17 05:57:50 svnexp Exp $
-#
+# Created by: alepulver
+# $FreeBSD: games/quake2-lights/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lights
 PORTVERSION=	1
@@ -27,6 +23,7 @@ ALL_TARGET=	release
 
 DOCSDIR=	${PREFIX}/share/doc/${LATEST_LINK}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../quake2-data/Makefile.include"
 
 .include <bsd.port.pre.mk>
