@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-idle/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-im/telepathy-idle/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #    $MCom: ports/net-im/telepathy-idle/Makefile,v 1.6 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	telepathy-idle
@@ -33,6 +33,7 @@ CONFIGURE_ENV+=	OPENSSL_LIBS="-L/usr/lib -lssl -lcrypto" OPENSSL_CFLAGS="-I/usr/
 #  OPENSSL_LIBS
 #              linker flags for OPENSSL, overriding pkg-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|strnlen(\([^,]*\), [^)]*)|strlen(\1)|' \
 		${WRKSRC}/src/idle-connection.c \
