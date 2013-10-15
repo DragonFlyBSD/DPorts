@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: mail/crm114/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: mail/crm114/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	crm114
 PORTVERSION=	20100106
@@ -45,6 +45,7 @@ CRM_FILES=	mailfilter.crm mailfilter.cf mailreaver.crm mailtrainer.crm \
 
 OPTIONS_DEFINE=	PGO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGO}
