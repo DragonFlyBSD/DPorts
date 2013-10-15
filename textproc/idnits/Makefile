@@ -1,8 +1,8 @@
-# Created by: fenner@FreeBSD.Org
-# $FreeBSD: textproc/idnits/Makefile 320290 2013-06-08 21:07:31Z sunpoet $
+# Created by: fenner@FreeBSD.org
+# $FreeBSD: textproc/idnits/Makefile 329907 2013-10-09 16:07:46Z sunpoet $
 
 PORTNAME=	idnits
-PORTVERSION=	2.12.17
+PORTVERSION=	2.12.18
 CATEGORIES=	textproc
 MASTER_SITES=	http://tools.ietf.org/tools/idnits/ \
 		LOCAL/sunpoet
@@ -14,7 +14,7 @@ COMMENT=	Looks for problems in internet draft formatting
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
+RUN_DEPENDS=	${LOCALBASE}/bin/bash:${PORTSDIR}/shells/bash
 
 NO_BUILD=	yes
 
@@ -24,6 +24,6 @@ post-patch:
 	@${REINPLACE_CMD} -e '1 s|^#!/bin/bash|#!${LOCALBASE}/bin/bash|' ${WRKSRC}/${PORTNAME}
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
