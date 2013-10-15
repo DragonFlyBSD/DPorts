@@ -1,5 +1,5 @@
 # Created by: Brett Taylor <brett@peloton.physics.montana.edu>
-# $FreeBSD: x11-wm/afterstep-stable/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: x11-wm/afterstep-stable/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	afterstep
 PORTVERSION=	2.2.12
@@ -57,6 +57,7 @@ CONFIGURE_ARGS+=	--enable-different-looknfeels
 CONFIGURE_ARGS+=	--disable-savewindows
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${PREFIX}/share/gnome/wm-properties)
