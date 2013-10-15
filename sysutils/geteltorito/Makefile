@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geteltorito
-# Date created:				Wed Apr 15 11:35:12 PDT 2009
-# Whom:					Valerio Daelli <valerio.daelli@gmail.com>
-#
-# $FreeBSD: sysutils/geteltorito/Makefile 326573 2013-09-07 06:47:20Z az $
-#
+# Created by: Valerio Daelli <valerio.daelli@gmail.com>
+# $FreeBSD: sysutils/geteltorito/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	geteltorito
 PORTVERSION=	1.0
@@ -21,6 +17,7 @@ USE_PERL5=	run
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${DISTDIR}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
 
