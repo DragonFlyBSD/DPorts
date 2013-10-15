@@ -1,9 +1,5 @@
-# New ports collection makefile for:	affenspiel
-# Date created:				2 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: games/affenspiel/Makefile 313182 2013-03-02 03:55:25Z eadler $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/affenspiel/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	affenspiel
 PORTVERSION=	1.0
@@ -30,6 +26,7 @@ MAKE_ARGS=	CC="${CC}" LIBS="-L${LOCALBASE}/lib -lX11" \
 PORTDOCS=	COPYRIGHT README
 PLIST_FILES=	bin/affenspiel
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/affenspiel ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
