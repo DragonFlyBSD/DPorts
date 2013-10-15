@@ -1,9 +1,5 @@
-# New ports collection makefile for:	usermatic
-# Date created:		10 Januar 2004
-# Whom:			Andreas Fehlner (fehlner@gmx.de)
-#
-# $FreeBSD: sysutils/usermatic/Makefile 326574 2013-09-07 07:11:48Z az $
-#
+# Created by: Andreas Fehlner (fehlner@gmx.de)
+# $FreeBSD: sysutils/usermatic/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	usermatic
 PORTVERSION=	0.6.1
@@ -30,6 +26,7 @@ EXAMPLES=	digestion/list_digested digestion/list_raw \
 
 RUN_DEPENDS+=	${PREFIX}/sbin/userneu.pl:${PORTSDIR}/sysutils/userneu
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}/doc && ${INSTALL_MAN} ${MAN1} ${MANPREFIX}/man/man1
 	cd ${WRKSRC}/doc && ${INSTALL_MAN} ${MAN8} ${MANPREFIX}/man/man8
