@@ -1,9 +1,5 @@
-# New ports collection makefile for:	4va
-# Date created:		26 July 1998
-# Whom:			Malte Lance <malte.lance@gmx.net>
-#
-# $FreeBSD: ports/graphics/4va/Makefile,v 1.12 2012/11/17 05:58:00 svnexp Exp $
-#
+# Created by: Malte Lance <malte.lance@gmx.net>
+# $FreeBSD: graphics/4va/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	4va
 PORTVERSION=	1.21
@@ -26,6 +22,7 @@ MAN1=		4va.1
 4VA_DATA_FILES=		16cell.4vd 24cell.4vd 5cell.4vd 600cell.4vd ctor.4vd \
 			ctor2.4vd hcube.4vd hsph.4vd sin.4vd tripris.4vd
 
+NO_STAGE=	yes
 post-extract:
 	@${CHMOD} -R go-x ${WRKSRC}/
 
