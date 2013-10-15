@@ -1,5 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: security/log2timeline/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/log2timeline/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	log2timeline
 PORTVERSION=	0.64
@@ -82,4 +82,5 @@ MAN3=	Log2Timeline.3 \
 	Parse::Evtx2.3 \
 	Parse::Evtx2::Chunk.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
