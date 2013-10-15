@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/esmtp/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: mail/esmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	esmtp
 PORTVERSION=	1.2
@@ -29,6 +29,7 @@ SUB_FILES=	pkg-message
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 .for file in ${PORTNAME}.1
 	@${REINPLACE_CMD} -e \
