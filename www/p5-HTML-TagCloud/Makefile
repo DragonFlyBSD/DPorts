@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-TagCloud/Makefile 326763 2013-09-08 16:43:26Z tobez $
+# $FreeBSD: www/p5-HTML-TagCloud/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-TagCloud
 PORTVERSION=	0.38
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	HTML::TagCloud.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
