@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/apache-solr/Makefile 325389 2013-08-26 12:03:29Z vanilla $
+# $FreeBSD: textproc/apache-solr/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	apache-solr
 PORTVERSION=	4.4.0
@@ -23,6 +23,7 @@ USE_JAVA=	yes
 PORTEXAMPLES=	*
 LATEST_LINK=	apache-solr
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
