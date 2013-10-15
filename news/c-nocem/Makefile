@@ -1,8 +1,8 @@
-# $FreeBSD: news/c-nocem/Makefile 325955 2013-09-02 09:22:47Z az $
+# $FreeBSD: news/c-nocem/Makefile 328030 2013-09-23 18:54:29Z dinoex $
 
 PORTNAME=	c-nocem
 PORTVERSION=	3.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	news security
 MASTER_SITES=	http://sites.inka.de/~bigred/sw/ \
 		ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/
@@ -14,6 +14,8 @@ FETCH_DEPENDS=	${DISTDIR}/c-news/c-news.tar.Z:${PORTSDIR}/${CNEWS_PORT}:checksum
 BUILD_DEPENDS=	${CNEWSWRK}/conf/substitutions:${PORTSDIR}/${CNEWS_PORT}:configure
 BUILD_DEPENDS+=	${LOCALBASE}/lib/libcnews.a:${PORTSDIR}/${CNEWS_PORT} \
 		gpgv:${PORTSDIR}/security/gnupg1
+
+NO_STAGE=	yes
 
 WRKSRC=		${WRKDIR}/c-nocem
 CNEWS_PORT?=	news/cnews
