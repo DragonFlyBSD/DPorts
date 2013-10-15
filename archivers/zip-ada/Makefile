@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: archivers/zip-ada/Makefile 325243 2013-08-22 23:25:49Z marino $
+# $FreeBSD: archivers/zip-ada/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zip-ada
 PORTVERSION=	45
@@ -12,6 +12,7 @@ COMMENT=	Zip compressed archive file format library written in Ada
 
 LICENSE=	MIT
 
+NO_STAGE=	yes
 USES=		ada perl5
 USE_PERL5=	build
 USE_ZIP=	yes
