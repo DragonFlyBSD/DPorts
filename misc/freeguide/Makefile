@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: ports/misc/freeguide/Makefile,v 1.17 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: misc/freeguide/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	freeguide
 PORTVERSION=	0.11
@@ -30,6 +30,7 @@ MAKE_ARGS=	-Dinstall_share_dir=${PREFIX}/share \
 		-Dinstall_jar_dir=${JAVAJARDIR}/freeguide
 INSTALL_TARGET=	install
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|__ANT_INSTALL_DIRECTORY__|${JAVAJARDIR}/freeguide|; \
 		s|=java|=${JAVA}|;' \
