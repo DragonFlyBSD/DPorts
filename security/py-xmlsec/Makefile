@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	pyxmlsec
-# Date created:			Feb 3, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/py-xmlsec/Makefile,v 1.9 2012/11/17 06:01:17 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/py-xmlsec/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	xmlsec
 PORTVERSION=	0.3.0
@@ -27,6 +22,7 @@ PYDISTUTILS_PKGNAME=	pyxmlsec
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
