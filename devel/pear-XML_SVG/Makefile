@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-XML_SVG
-# Date created:			  4 April 2004
-# Whom:				  Thierry Thomas (<thierry@FreeBSD.org>)
-#
-# $FreeBSD: ports/devel/pear-XML_SVG/Makefile,v 1.9 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@FreeBSD.org>)
+# $FreeBSD: devel/pear-XML_SVG/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	XML_SVG
 PORTVERSION=	1.1.0
@@ -17,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
