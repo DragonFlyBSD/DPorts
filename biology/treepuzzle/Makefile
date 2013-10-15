@@ -1,9 +1,5 @@
-# Ports collection makefile for:	treepuzzle
-# Date created:				26 August 2002
-# Whom:					lentferj
-#
-# $FreeBSD: ports/biology/treepuzzle/Makefile,v 1.8 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: lentferj
+# $FreeBSD: biology/treepuzzle/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	treepuzzle
 PORTVERSION=	5.2
