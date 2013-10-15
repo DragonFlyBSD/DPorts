@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	dia2code
-# Date created:			Mar 7, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: devel/dia2code/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: devel/dia2code/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dia2code
 PORTVERSION=	0.8.5
@@ -29,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		dia2code.1
 PLIST_FILES=	bin/dia2code
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/dia2code.1 ${MANPREFIX}/man/man1
 
