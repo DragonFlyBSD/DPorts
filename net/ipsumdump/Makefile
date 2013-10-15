@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <krion@FreeBSD.org>
-# $FreeBSD: net/ipsumdump/Makefile 324974 2013-08-19 11:24:32Z danfe $
+# $FreeBSD: net/ipsumdump/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ipsumdump
 PORTVERSION=	1.82
@@ -24,6 +24,7 @@ OPTIONS_SUB=	yes
 
 IPV6_CONFIGURE_ENABLE=	ipv6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Try to unbreak parallel (-jX) builds
