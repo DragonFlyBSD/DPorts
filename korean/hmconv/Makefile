@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/hmconv/Makefile 321159 2013-06-17 22:50:28Z jkim $
+# $FreeBSD: korean/hmconv/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	hmconv
 PORTVERSION=	1.0.3
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
