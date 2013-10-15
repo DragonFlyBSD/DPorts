@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: devel/ecb/Makefile 316628 2013-04-26 17:36:46Z mva $
+# $FreeBSD: devel/ecb/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	ecb
 PORTVERSION=	2.40
@@ -31,6 +31,7 @@ CEDET_DESC=	Use the Cedet library
 
 PORTDOCS=	NEWS README RELEASE_NOTES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCEDET}
