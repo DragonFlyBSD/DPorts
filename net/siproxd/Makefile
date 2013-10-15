@@ -1,9 +1,5 @@
-# New ports collection makefile for:	siproxd
-# Date created:		10 October 2004
-# Whom:			Frank W. Josellis <frank@dynamical-systems.org>
-#
-# $FreeBSD: ports/net/siproxd/Makefile,v 1.23 2012/11/17 06:00:21 svnexp Exp $
-#
+# Created by: Frank W. Josellis <frank@dynamical-systems.org>
+# $FreeBSD: net/siproxd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	siproxd
 PORTVERSION=	0.7.2
@@ -25,6 +21,7 @@ PORTDOCS2=	FAQ KNOWN_BUGS RFC3261_compliance.txt \
 		sample_cfg_budgetone.txt sample_cfg_x-lite.txt
 PORTDOCS=	${PORTDOCS1} ${PORTDOCS2}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
