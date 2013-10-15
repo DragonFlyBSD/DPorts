@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gazpacho
-# Date created:		2006-09-08
-# Whom:			Gustavo Fukao <gustavofukao@gmail.com>
-#
-# $FreeBSD: devel/gazpacho/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Gustavo Fukao <gustavofukao@gmail.com>
+# $FreeBSD: devel/gazpacho/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gazpacho
 PORTVERSION=	0.7.2
@@ -27,6 +23,7 @@ USES=		gettext
 
 PORTDOCS=	AUTHORS ChangeLog CONTRIBUTORS COPYING README NEWS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
