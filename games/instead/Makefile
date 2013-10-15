@@ -1,5 +1,5 @@
 # Created by: neuroworker@gmail.com
-# $FreeBSD: games/instead/Makefile 323031 2013-07-15 13:23:32Z amdmi3 $
+# $FreeBSD: games/instead/Makefile 328855 2013-09-30 19:58:20Z bsam $
 
 PORTNAME=	instead
 PORTVERSION=	1.9.1
@@ -17,6 +17,7 @@ USE_GNOME=	gtk20
 USE_LUA=	5.1
 USE_SDL=	sdl image ttf mixer
 USES=		pkgconfig iconv
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 CONFIGURE_SCRIPT=	configure.sh
 CONFIGURE_ENV=	PREFIX="${PREFIX}"
@@ -26,6 +27,7 @@ MAN6=		instead.6
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
