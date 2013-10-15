@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/spfval/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: mail/spfval/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spfval
 PORTVERSION=	0.0.1
@@ -15,6 +15,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/spfval
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/spfval ${PREFIX}/bin
 
