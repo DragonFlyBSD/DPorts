@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: japanese/uim-anthy/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
+# $FreeBSD: japanese/uim-anthy/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 CATEGORIES=	japanese
 .if defined(WITHOUT_X11)
@@ -30,6 +30,7 @@ UIM_SLAVE=	yes
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-uim_Makefile.in \
 		${PATCHDIR}/extra-patch-gtk2_dict_Makefile.in
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}/uim && ${GMAKE} libuim-anthy.la)
 	(cd ${WRKSRC}/uim && ${GMAKE} libuim-anthy-utf8.la)
