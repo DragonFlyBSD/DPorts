@@ -1,5 +1,5 @@
 # Created by: knu@FreeBSD.org
-# $FreeBSD: devel/cvsutils/Makefile 319715 2013-06-02 18:58:23Z mva $
+# $FreeBSD: devel/cvsutils/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsutils
 PORTVERSION=	0.2.6
@@ -12,13 +12,14 @@ COMMENT=	CVS utilities which facilitate working with local working directories
 
 LICENSE=	GPLv2
 
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 
 MAN1=		cvsutils.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
