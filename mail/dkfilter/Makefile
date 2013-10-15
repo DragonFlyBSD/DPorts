@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dkfilter
-# Date created:				3 Nov 2005
-# Whom:					Yoshisato YANAGISAWA
-#
-# $FreeBSD: mail/dkfilter/Makefile 326271 2013-09-04 12:28:16Z az $
-#
+# Created by: Yoshisato YANAGISAWA
+# $FreeBSD: mail/dkfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dkfilter
 PORTVERSION=	0.11
@@ -30,4 +26,5 @@ GROUPS=		${DKFILTER_GROUPNAME}
 DKFILTER_USERNAME?=	dkfilter
 DKFILTER_GROUPNAME?=	${DKFILTER_USERNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
