@@ -1,5 +1,5 @@
 # Created by: Dmitry Frolov <frolov@riss-telecom.ru>
-# $FreeBSD: ports/sysutils/tw_cli/Makefile,v 1.18 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/tw_cli/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tw_cli
 PORTVERSION=	9.5.4
@@ -22,6 +22,7 @@ SUB_FILES+=	407.status-3ware-raid
 PORTDOCS=	tw_cli.8.html
 MAN8+=		tw_cli.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
