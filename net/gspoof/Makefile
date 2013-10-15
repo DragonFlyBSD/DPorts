@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	gspoof
 # Created by: ijliao
-# $FreeBSD: ports/net/gspoof/Makefile,v 1.29 2013/02/18 21:46:32 svnexp Exp $
+# $FreeBSD: net/gspoof/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gspoof
 PORTVERSION=	3.2
@@ -20,6 +18,7 @@ GNU_CONFIGURE=	yes
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-Wall -O2|$${CFLAGS}|g; \
