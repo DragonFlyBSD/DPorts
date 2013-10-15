@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: audio/cmus/Makefile 326108 2013-09-02 22:26:06Z bapt $
+# $FreeBSD: audio/cmus/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cmus
 PORTVERSION=	2.5.0
@@ -12,6 +12,7 @@ MAINTAINER=	h.skuhra@gmail.com
 COMMENT=	Console-based music player with really cool features
 
 USES=		gmake pkgconfig iconv ncurses
+NO_STAGE=	yes
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	HOSTCC=${CC}
