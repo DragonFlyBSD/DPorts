@@ -1,5 +1,5 @@
 # Created by: Matthew Dillon <dillon@backplane.com>
-# $FreeBSD: ports/sysutils/cpdup/Makefile,v 1.23 2012/11/17 06:01:27 svnexp Exp $
+# $FreeBSD: sysutils/cpdup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cpdup
 PORTVERSION=	1.17
@@ -19,6 +19,7 @@ CFLAGS+=	-D_ST_FLAGS_PRESENT_
 MAN1=		cpdup.1
 PLIST_FILES=	bin/cpdup
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cpdup ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cpdup.1 ${PREFIX}/man/man1
