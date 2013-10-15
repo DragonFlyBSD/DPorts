@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/dojo-shrinksafe/Makefile 318734 2013-05-21 23:28:01Z glarkin $
+# $FreeBSD: www/dojo-shrinksafe/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=		shrinksafe
 PORTVERSION=		1.9.0
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/${PKGNAMEPREFIX}${PORTNAME} %%DATADIR%%/shrinksafe.jar \
 PLIST_DIRS=	%%DATADIR%%
 SUB_FILES=	${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
