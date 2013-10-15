@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: astro/stellarium/Makefile 326785 2013-09-09 09:24:02Z danfe $
+# $FreeBSD: astro/stellarium/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	stellarium
 PORTVERSION=	0.12.3
@@ -21,6 +21,7 @@ INSTALLS_ICONS=	yes
 
 MAN1=		${PORTNAME}.1
 PORTDOCS=	AUTHORS ChangeLog README
+NO_STAGE=	yes
 
 OPTIONS_DEFINE=		MORE_STARS MULTIMEDIA DOCS
 OPTIONS_DEFAULT=	MULTIMEDIA
