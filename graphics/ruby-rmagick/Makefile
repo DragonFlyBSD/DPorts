@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ruby-rmagick/Makefile 319717 2013-06-02 19:07:09Z swills $
+# $FreeBSD: graphics/ruby-rmagick/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	rmagick
 PORTVERSION=	2.13.2
@@ -17,6 +17,7 @@ OPTIONS_DEFAULT=	X11
 
 OPTIONSFILE?=	${PORT_DBDIR}/ruby-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
