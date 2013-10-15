@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/yuicompressor/Makefile 319256 2013-05-27 15:41:16Z az $
+# $FreeBSD: www/yuicompressor/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yuicompressor
 PORTVERSION=	2.4.8
@@ -26,6 +26,7 @@ SUB_FILES=	yuicompressor
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
