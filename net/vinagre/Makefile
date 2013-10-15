@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/vinagre/Makefile 326159 2013-09-03 15:25:41Z bapt $
+# $FreeBSD: net/vinagre/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/net/vinagre/Makefile,v 1.48 2012/09/01 23:02:11 mezz Exp $
 
 PORTNAME=	vinagre
@@ -38,6 +38,7 @@ OPTIONS_DEFINE=	TELEPATHY
 OPTIONS_DEFAULT=TELEPATHY
 TELEPATHY_DESC=	Telepathy integration
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTELEPATHY}
