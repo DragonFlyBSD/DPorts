@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-RBLClient
-# Date created:		2006-07-13
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/dns/p5-Net-RBLClient/Makefile,v 1.5 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: dns/p5-Net-RBLClient/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-RBLClient
 PORTVERSION=	0.5
@@ -20,10 +16,11 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/RBLCLient-${PORTVERSION}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		spamalyze.1
 MAN3=		Net::RBLClient.3
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+NO_STAGE=	yes
+.include <bsd.port.mk>
