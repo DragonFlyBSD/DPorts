@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rapidsvn/Makefile 323919 2013-07-29 21:02:10Z mandree $
+# $FreeBSD: devel/rapidsvn/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rapidsvn
 PORTVERSION=	0.12.1
@@ -31,6 +31,7 @@ CONFIGURE_ARGS=	--with-apr-config=apr-1-config \
 USE_LDCONFIG=	yes
 MAN1=		rapidsvn.1
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/manpage/rapidsvn.1 ${MAN1PREFIX}/man/man1/
 
