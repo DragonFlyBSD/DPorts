@@ -1,5 +1,5 @@
 # Created by: Maxim Zakharov <maxime@maxime.net.ru>
-# $FreeBSD: www/dpsearch/Makefile 321713 2013-06-24 20:16:33Z antoine $
+# $FreeBSD: www/dpsearch/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dpsearch
 PORTVERSION=	4.53
@@ -35,6 +35,7 @@ MECAB_DESC=	Enable MeCab japanese analyzer
 CHASEN_DESC=	Enable ChaSen japanese analyzer
 EXTRACT_DESC=	Enable libextractor support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ENV+=	PORTNAME="${PORTNAME}"
