@@ -1,5 +1,5 @@
 # Created by: Alexander Brovikov <alexander@brovikov.ru>
-# $FreeBSD: net/libsrtp/Makefile 324083 2013-08-01 05:39:16Z bapt $
+# $FreeBSD: net/libsrtp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libsrtp
 PORTVERSION=	1.4.4
@@ -20,4 +20,5 @@ USES=		gmake
 USE_CSTD=	gnu89
 CFLAGS+=	-fPIC
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
