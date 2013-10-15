@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: x11/p5-X11-Resolution/Makefile 327036 2013-09-12 06:36:45Z az $
+# $FreeBSD: x11/p5-X11-Resolution/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	X11-Resolution
 PORTVERSION=	0.0.0
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		X11::Resolution.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
