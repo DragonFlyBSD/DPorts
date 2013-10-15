@@ -1,4 +1,4 @@
-# $FreeBSD: www/pear-Horde_Dav/Makefile 323620 2013-07-24 21:04:41Z mm $
+# $FreeBSD: www/pear-Horde_Dav/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Horde_Dav
 PORTVERSION=	1.0.2
@@ -13,6 +13,7 @@ USE_HORDE_RUN=	Horde_Auth \
 		Horde_Core \
 		Horde_Stream
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
