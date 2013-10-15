@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Tucan
-# Date created:         2009-14-11
-# Whom:                 Gustau Perez Querol <gustau.perez@gmail.com>
-#
-# $FreeBSD: net/tucan/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Gustau Perez Querol <gustau.perez@gmail.com>
+# $FreeBSD: net/tucan/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tucan
 PORTVERSION=	0.3.10
@@ -26,6 +22,7 @@ MANCOMPRESSED=	yes
 MAN1=		tucan.1
 USES=		gettext
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -Ee 's|#! /usr/bin/env python|#! ${PYTHON_CMD}|' ${WRKSRC}/tucan.py
 
