@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnome-bluecurve-theme
-# Date created:			29 May 2005
-# Whom:				Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gnome-bluecurve-theme/Makefile,v 1.9 2012/11/17 06:03:31 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: x11-themes/gnome-bluecurve-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	gnome-bluecurve-theme
 
@@ -20,6 +16,7 @@ MASTERDIR=	${.CURDIR}/../bluecurve-themes
 NO_BUILD=	yes
 PLIST_FILES=	share/themes/Bluecurve/index.theme
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/themes/Bluecurve
 	${INSTALL_DATA} ${WRKSRC}/art/index.theme ${PREFIX}/share/themes/Bluecurve
