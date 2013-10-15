@@ -1,9 +1,5 @@
-# New ports collection makefile for:	net/p5-Phone-Info
-# Date created:				16 Oct 2010
-# Whom:	      				Zane C. Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: net/p5-Phone-Info/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Zane C. Bowers <vvelox@vvelox.net>
+# $FreeBSD: net/p5-Phone-Info/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Phone-Info
 PORTVERSION=	0.0.1
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Phone::Info.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
