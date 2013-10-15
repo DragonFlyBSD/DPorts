@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: graphics/pornview/Makefile 326921 2013-09-10 17:39:41Z bapt $
+# $FreeBSD: graphics/pornview/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	pornview
 PORTVERSION=	0.2.0.p.1
@@ -21,11 +21,12 @@ USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk2
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lm
 
 OPTIONS_DEFINE=	LIBXINE MPLAYER NLS
 OPTIONS_DEFAULT=	LIBXINE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MLIBXINE}
 LIB_DEPENDS+=	xine.2:${PORTSDIR}/multimedia/libxine
