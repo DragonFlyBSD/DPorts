@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
-# $FreeBSD: www/mod_scgi/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_scgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_scgi
 PORTVERSION=	1.12
@@ -20,6 +20,7 @@ USE_APACHE=	22
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
