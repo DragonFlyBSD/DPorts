@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/misc/kde-xdg-env/files/xdg-env.sh.in,v 1.5 2012/11/17 05:59:38 svnexp Exp $
+# $FreeBSD: misc/kde-xdg-env/files/xdg-env.sh.in 300896 2012-07-14 13:54:48Z beat $
 #
 # Submit missing XDG-file locations to kde@freebsd.org!
 

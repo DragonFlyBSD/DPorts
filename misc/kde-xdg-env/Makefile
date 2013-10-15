@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kde-xdg-env
-# Date created:				April 03 2005
-# Whom:					Michael Nottebrock <lofi@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/kde-xdg-env/Makefile,v 1.7 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: misc/kde-xdg-env/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xdg
 PORTVERSION=	1.0
@@ -33,6 +29,7 @@ SUB_FILES=	xdg-env.sh
 PLIST_FILES=	env/xdg-env.sh
 PLIST_DIRS=	env
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/env
 	${INSTALL_SCRIPT} ${WRKDIR}/xdg-env.sh ${PREFIX}/env
