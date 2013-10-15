@@ -1,9 +1,5 @@
-# New ports collection makefile for:	arpdig
-# Date created:				23 April 2006
-# Whom:					marck@FreeBSD.org
-#
-# $FreeBSD: net/arpdig/Makefile 319291 2013-05-28 05:51:28Z miwi $
-#
+# Created by: marck@FreeBSD.org
+# $FreeBSD: net/arpdig/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	arpdig
 PORTVERSION=	0.5.6
@@ -17,4 +13,5 @@ PLIST_FILES=	bin/arpdig
 MAN1=		arpdig.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
