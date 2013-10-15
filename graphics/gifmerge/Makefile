@@ -1,9 +1,5 @@
-# New ports collection makefile for:   gifmerge
-# Date created:        20 Oct 1996
-# Whom:                Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/graphics/gifmerge/Makefile,v 1.13 2012/11/17 05:58:07 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: graphics/gifmerge/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gifmerge
 PORTVERSION=	1.33
@@ -17,6 +13,7 @@ COMMENT=	A tool for making a GIF Animation
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/gifmerge
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o gifmerge gifmerge.c
 
