@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-neo-diggler
-# Date created:		12 May 2008
-# Whom:			Harald Schmalzbauer <h.schmalzbauer@omnisec.de>
-#
-# $FreeBSD: ports/www/xpi-neo-diggler/Makefile,v 1.3 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Harald Schmalzbauer <h.schmalzbauer@omnisec.de>
+# $FreeBSD: www/xpi-neo-diggler/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	neo-diggler
 PORTVERSION=	1.0.6
@@ -20,5 +16,6 @@ XPI_FILES=	chrome.manifest install.rdf \
 		chrome/diggler.jar defaults/preferences/diggler.js
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
