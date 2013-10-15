@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/bamg/Makefile 322689 2013-07-10 13:12:03Z bapt $
+# $FreeBSD: math/bamg/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	bamg
 PORTVERSION=	1.01
@@ -28,6 +28,7 @@ INSTALL_TARGET=	install-world
 BINS=		bamg bamg-g cvmsh2 drawbdmesh
 EXDIRS=		NACA012 quadloop square test
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .pre-configure:
