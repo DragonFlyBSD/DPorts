@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/rtgui/Makefile,v 1.15 2012/12/17 16:36:09 svnexp Exp $
+# $FreeBSD: net-p2p/rtgui/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	rtgui
 PORTVERSION=	0.2.81
@@ -17,6 +17,7 @@ OPTIONS_DEFAULTS=	APACHE
 
 BUILD_DEPENDS+=	xmlrpc-c-config:${PORTSDIR}/net/xmlrpc-c
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
