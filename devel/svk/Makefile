@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/svk
-# Date created:				Mar 15 2004
-# Whom:					Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: devel/svk/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/svk/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	svk
 PORTVERSION=	2.2.3
@@ -53,7 +49,8 @@ BUILD_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-version>=0.68:${PORTSDIR}/devel/p5-version
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		svk.1
 MAN3=		SVK.3 \
@@ -156,6 +153,7 @@ MAN3=		SVK.3 \
 		SVK::Version.3 \
 		SVK::XD.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
