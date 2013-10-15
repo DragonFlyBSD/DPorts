@@ -1,5 +1,5 @@
 # Created by: Koen Martens <gmc@sonologic.nl>
-# $FreeBSD: dns/p5-Net-DNS-Resolver-Programmable/Makefile 325899 2013-09-01 18:17:20Z az $
+# $FreeBSD: dns/p5-Net-DNS-Resolver-Programmable/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS-Resolver-Programmable
 PORTVERSION=	0.003
@@ -20,6 +20,7 @@ USE_PERL5=	modbuild
 
 MAN3=		Net::DNS::Resolver::Programmable.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PORTDOCS=	CHANGES README TODO
