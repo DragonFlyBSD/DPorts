@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MouseX-Foreign/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-MouseX-Foreign/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MouseX-Foreign
 PORTVERSION=	0.007
@@ -18,11 +18,5 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		MouseX::Foreign.3 \
-		MouseX::Foreign::Meta::Role::Class.3 \
-		MouseX::Foreign::Meta::Role::Method::Constructor.3 \
-		MouseX::Foreign::Meta::Role::Method::Destructor.3 \
-		MouseX::NonMoose.3
 
 .include <bsd.port.mk>
