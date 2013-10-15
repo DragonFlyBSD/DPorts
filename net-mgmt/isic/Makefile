@@ -1,9 +1,5 @@
-# New ports collection makefile for:   isic
-# Date created:                25 February 2000
-# Whom:                        Brad Hendrickse <bradh@uunet.co.za>
-#
-# $FreeBSD: net-mgmt/isic/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Brad Hendrickse <bradh@uunet.co.za>
+# $FreeBSD: net-mgmt/isic/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	isic
 PORTVERSION=	0.07
@@ -23,6 +19,7 @@ MAN1=	isic.1
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lnet|`${LIBNET_CONFIG} --libs`|' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
