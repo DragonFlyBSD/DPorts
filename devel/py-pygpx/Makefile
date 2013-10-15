@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pygpx
-# Date created:		04 July 2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-pygpx/Makefile,v 1.2 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-pygpx/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pygpx
 PORTVERSION=	0.2
@@ -21,4 +17,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PKGDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
