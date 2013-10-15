@@ -1,9 +1,5 @@
-# New ports collection makefile for:	GNU Backgammon
-# Date created:		8 Dec 2002
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: games/gnubg/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: games/gnubg/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnubg
 PORTVERSION=	0.15
@@ -42,6 +38,7 @@ USE_AUTOTOOLS=	libtool automake
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MESOUND}
