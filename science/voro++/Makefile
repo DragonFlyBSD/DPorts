@@ -1,5 +1,5 @@
 # Created by: Jason Bacon
-# $FreeBSD: science/voro++/Makefile 315916 2013-04-16 22:46:18Z jgh $
+# $FreeBSD: science/voro++/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	voro++
 PORTVERSION=	0.4.5
@@ -15,6 +15,7 @@ USE_GMAKE=	yes
 
 MAN1=		voro++.1
 
+NO_STAGE=	yes
 post-patch-script:
 	${REINPLACE_CMD} \
 		-e 's|CC=|CC?=|g' \
