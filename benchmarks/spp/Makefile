@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars@eggert.org>
-# $FreeBSD: benchmarks/spp/Makefile 319106 2013-05-26 12:42:35Z culot $
+# $FreeBSD: benchmarks/spp/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	spp
 PORTVERSION=	0.3.4
@@ -12,6 +12,7 @@ COMMENT=	Calculates round trip time from pcap files or live capture
 PLIST_FILES=	bin/spp
 MAN1=		spp.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E '/(-DDEBUG|-g)/s|^|#|g' \
 		${WRKSRC}/Makefile
