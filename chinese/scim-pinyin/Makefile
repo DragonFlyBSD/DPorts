@@ -1,5 +1,5 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: chinese/scim-pinyin/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: chinese/scim-pinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	scim-pinyin
 PORTVERSION=	0.5.92
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
