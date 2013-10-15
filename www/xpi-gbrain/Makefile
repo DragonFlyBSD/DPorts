@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-gbrain
-# Date created:		18 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-gbrain/Makefile,v 1.10 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-gbrain/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gbrain
 PORTVERSION=	0.5.4
@@ -18,5 +14,6 @@ XPI_ID=		gbrain@andreas.gohr
 XPI_FILES=	chrome/gbrain.jar chrome.manifest defaults/preferences/gbrain.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
