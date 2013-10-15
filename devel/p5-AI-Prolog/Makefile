@@ -1,6 +1,5 @@
-# ex:ts=8
 # Created by: ijliao
-# $FreeBSD: devel/p5-AI-Prolog/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-AI-Prolog/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AI-Prolog
 PORTVERSION=	0.741
@@ -46,4 +45,5 @@ MAN3=	AI::Prolog.3 \
 	AI::Prolog::TermList::Primitive.3 \
 	AI::Prolog::TermList::Step.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
