@@ -1,9 +1,5 @@
-# New ports collection makefile for:	belier
-# Date created:		1 May 2011
-# Whom:				rokaz
-#
-# $FreeBSD: ports/security/belier/Makefile,v 1.2 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: rokaz
+# $FreeBSD: security/belier/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	belier
 PORTVERSION=	1.2
@@ -38,4 +34,5 @@ PLIST_DIRS=	lib/${PYTHON_VERSION}/site-packages/belier
 USE_PYTHON=		2.6+
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
