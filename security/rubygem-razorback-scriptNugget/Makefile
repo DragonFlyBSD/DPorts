@@ -1,9 +1,5 @@
-# New ports collection makefile for:	razorback-scriptNugget-ruby
-# Date created:				2011/06/8
-# Whom:					Tom Judge <tom@tomjudge.com>
-#
-# $FreeBSD: ports/security/rubygem-razorback-scriptNugget/Makefile,v 1.2 2012/11/17 06:01:19 svnexp Exp $
-#
+# Created by: Tom Judge <tom@tomjudge.com>
+# $FreeBSD: security/rubygem-razorback-scriptNugget/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	razorback-scriptNugget
 PORTVERSION=	0.5.0
@@ -19,4 +15,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
