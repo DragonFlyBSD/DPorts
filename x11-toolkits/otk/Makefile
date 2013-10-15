@@ -1,9 +1,5 @@
-# New ports collection makefile for:	otk
-# Date created:		21 Jan 2006
-# Whom:			Igor Pokrovsky <ip@doom.homeunix.org>
-#
-# $FreeBSD: ports/x11-toolkits/otk/Makefile,v 1.21 2012/11/17 06:03:37 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
+# $FreeBSD: x11-toolkits/otk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	otk
 PORTVERSION=	0.95
@@ -30,6 +26,7 @@ PLIST_FILES=	include/gadget_lib.h include/otk_lib.h \
 CPPFLAGS+=	-I${LOCALBASE}/include -fPIC
 LDFLAGS+=	-lGLU -lGL -lXmu -lXext -lX11 -L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} ${CPPFLAGS} -shared otk_lib.c \
 		-o libotk.so.0 ${LDFLAGS}
