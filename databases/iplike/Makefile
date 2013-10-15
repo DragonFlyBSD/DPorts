@@ -1,12 +1,8 @@
-# New ports collection makefile for:	iplike
-# Date created:		5 January 2010
-# Whom:			Sevan Janiyan <venture37@geeklan.co.uk>
-#
-# $FreeBSD: ports/databases/iplike/Makefile,v 1.5 2012/11/17 05:55:08 svnexp Exp $
-#
+# Created by: Sevan Janiyan <venture37@geeklan.co.uk>
+# $FreeBSD: databases/iplike/Makefile 329858 2013-10-09 04:41:30Z danilo $
 
 PORTNAME=	iplike
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	databases
 MASTER_SITES=	SF/opennms/IPLIKE/stable-2.0/
 
@@ -21,8 +17,5 @@ SUB_FILES=	pkg-message
 PLIST_FILES=	lib/postgresql/iplike.la \
 	lib/postgresql/iplike.so \
 	sbin/install_iplike.sh
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
