@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/tmpwatch/Makefile,v 1.22 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/tmpwatch/Makefile 327932 2013-09-23 06:16:25Z bapt $
 
 PORTNAME=	tmpwatch
 PORTVERSION=	2.11
@@ -14,8 +14,8 @@ USE_BZIP2=	yes
 
 GNU_CONFIGURE=	yes
 
-MAN8=		tmpwatch.8
-PLIST_FILES=	sbin/tmpwatch
+PLIST_FILES=	sbin/tmpwatch \
+		man/man8/tmpwatch.8.gz
 
 post-patch:
 	@${REINPLACE_CMD} -E "s/^#include.+mntent.h.+//g" ${WRKSRC}/tmpwatch.c
