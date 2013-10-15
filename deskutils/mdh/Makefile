@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/mdh/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: deskutils/mdh/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	mdh
 PORTVERSION=	1.9.60
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--disable-curl
 LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| make| $$(MAKE)|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|\.\./lib/getopt/getopt\.c||g ; \
