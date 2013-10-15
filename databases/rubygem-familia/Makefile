@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/rubygem-familia/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: databases/rubygem-familia/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	familia
 PORTVERSION=	0.7.1
@@ -19,4 +19,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
