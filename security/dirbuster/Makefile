@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/dirbuster/Makefile 308605 2012-12-10 13:43:43Z bapt $
+# $FreeBSD: security/dirbuster/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	dirbuster
 PORTVERSION=	1.0r1
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
