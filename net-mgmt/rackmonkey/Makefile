@@ -1,5 +1,5 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: net-mgmt/rackmonkey/Makefile 313588 2013-03-07 13:49:24Z bapt $
+# $FreeBSD: net-mgmt/rackmonkey/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	rackmonkey
 PORTVERSION=	1.2.5
@@ -27,11 +27,14 @@ SAMPLE_DESC= 	Install sample data (SQLite Only)
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}-1
 NO_BUILD=	YES
 
-USE_PERL5_RUN=	YES
+USES=		perl5
+USE_PERL5=	run
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
 .if ${PORT_OPTIONS:MSQLITE}
 USE_SQLITE=	yes
 RUN_DEPENDS+=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
