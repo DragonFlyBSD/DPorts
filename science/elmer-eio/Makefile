@@ -1,9 +1,5 @@
-# New ports collection makefile for:	elmer-eio
-# Date created:		5 Jan 2006
-# Whom:			Pedro Giffuni <giffunip@asme.org>
-#
-# $FreeBSD: ports/science/elmer-eio/Makefile,v 1.24 2012/11/17 06:00:57 svnexp Exp $
-#
+# Created by: Pedro Giffuni <giffunip@asme.org>
+# $FreeBSD: science/elmer-eio/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	eio
 PORTVERSION=	5.4.0
@@ -22,6 +18,7 @@ ALL_TARGET=
 
 PLIST_FILES=	include/eio_api.h lib/libeioc.a lib/libeiof.a
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
