@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ez-ipupdate
-# Date created:         24 July 2002
-# Whom:                 se
-#
-# $FreeBSD: ports/dns/ez-ipupdate/Makefile,v 1.17 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: se
+# $FreeBSD: dns/ez-ipupdate/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	ez-ipupdate
 PORTVERSION=	3.0.11b8
@@ -19,6 +15,7 @@ COMMENT=	Update your host name on any dynamic DNS service
 USE_RC_SUBR=	ez-ipupdate
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${PREFIX}/share/examples/${PORTNAME}
 	for f in ${WRKSRC}/example-*.conf; \

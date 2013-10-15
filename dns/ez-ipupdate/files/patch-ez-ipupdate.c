@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/dns/ez-ipupdate/files/patch-ez-ipupdate.c,v 1.2 2012/11/17 05:57:09 svnexp Exp $
+$FreeBSD: dns/ez-ipupdate/files/patch-ez-ipupdate.c 300896 2012-07-14 13:54:48Z beat $
 
 --- ez-ipupdate.c.orig
 +++ ez-ipupdate.c
