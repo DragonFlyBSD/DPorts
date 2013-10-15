@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/mp3mover/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: audio/mp3mover/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3mover
 PORTVERSION=	2.1.1
@@ -11,6 +11,7 @@ COMMENT=	Rename mp3s and manipulate them
 
 RUN_DEPENDS=	p5-tagged>=0:${PORTSDIR}/audio/p5-tagged
 
+NO_STAGE=	yes
 USES=		perl5
 NO_BUILD=	yes
 
