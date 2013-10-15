@@ -1,12 +1,12 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: editors/tea/Makefile 326627 2013-09-07 11:48:28Z wg $
+# $FreeBSD: editors/tea/Makefile 330015 2013-10-10 16:33:12Z danilo $
 
 PORTNAME=	tea
-PORTVERSION=	36.0.3
+PORTVERSION=	37.0.0
 CATEGORIES=	editors
 MASTER_SITES=	http://semiletov.org/tea/dloads/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Simple and powerful Qt4-based text editor
 
 LICENSE=	GPLv3
@@ -52,12 +52,10 @@ do-configure:
 
 do-install:
 	(cd ${WRKSRC}/bin \
-		&& ${INSTALL_PROGRAM} tea ${PREFIX}/bin)
+		&& ${INSTALL_PROGRAM} tea ${STAGEDIR}${PREFIX}/bin)
 	(cd ${WRKSRC}/icons \
-		&& ${INSTALL_DATA} tea_icon_v2.png ${PREFIX}/share/pixmaps)
-.if ${PORT_OPTIONS:MDOCS}
+		&& ${INSTALL_DATA} tea_icon_v2.png ${STAGEDIR}${PREFIX}/share/pixmaps)
 	(cd ${WRKSRC}/manuals \
-		&& ${COPYTREE_SHARE} . ${DOCSDIR})
-.endif
+		&& ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
