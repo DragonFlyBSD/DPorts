@@ -1,5 +1,5 @@
 # Created by: FURUSAWA, Kazuhisa <kazu@jp.freebsd.org>
-# $FreeBSD: x11-clocks/mouseclock/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: x11-clocks/mouseclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	mouseclock
 PORTVERSION=	1.0
@@ -14,6 +14,7 @@ COMMENT=	Display the current time using the X root cursor
 USES=		imake:notall
 USE_XORG=	x11
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
