@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/nautilus-open-terminal/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: deskutils/nautilus-open-terminal/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #    $MCom: ports/deskutils/nautilus-open-terminal/Makefile,v 1.17 2009/08/09 15:30:27 ahze Exp $
 
 PORTNAME=	nautilus-open-terminal
@@ -20,4 +20,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags gnome-vfs-2.0`
 LDFLAGS+=	-L${LOCALBASE}/lib
 GCONF_SCHEMAS=	nautilus-open-terminal.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
