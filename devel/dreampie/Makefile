@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: ports/devel/dreampie/Makefile,v 1.9 2012/12/31 13:09:33 svnexp Exp $
+# $FreeBSD: devel/dreampie/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dreampie
 PORTVERSION=	1.2.1
@@ -17,6 +17,7 @@ USE_PYDISTUTILS=yes
 
 MAN1=		dreampie.1
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e "s|share/man/man1|man/man1|" ${WRKSRC}/setup.py
 
