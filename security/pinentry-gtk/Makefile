@@ -1,5 +1,5 @@
-# Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: security/pinentry-gtk/Makefile 325273 2013-08-23 16:12:31Z makc $
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: security/pinentry-gtk/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pinentry
 PORTREVISION=	0
@@ -14,4 +14,5 @@ PORT_OPTIONS+=	GTK
 
 MASTERDIR=	${.CURDIR}/../pinentry
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
