@@ -1,9 +1,5 @@
-# New ports collection makefile for:   gngb
-# Date created:        16 April 2001
-# Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
-#
-# $FreeBSD: ports/emulators/gngb/Makefile,v 1.27 2012/11/17 05:57:20 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
+# $FreeBSD: emulators/gngb/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	gngb
 PORTVERSION=	20060309
@@ -32,6 +28,7 @@ USE_GL=		gl
 CONFIGURE_ARGS+=	--disable-gl
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 .if !defined(WITH_GL)
 	@${ECHO_MSG}
