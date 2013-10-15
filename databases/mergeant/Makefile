@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/mergeant/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: databases/mergeant/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/databases/mergeant/Makefile,v 1.20 2008/02/05 13:30:46 kwm Exp $
 
 PORTNAME=	mergeant
@@ -22,4 +22,5 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
