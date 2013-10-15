@@ -1,5 +1,5 @@
 # Created by: Matthew Holder <sixxgate@hotmail.com>
-# $FreeBSD: deskutils/mrundlg/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: deskutils/mrundlg/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	mrundlg
 PORTVERSION=	1.0
@@ -17,4 +17,5 @@ USE_XORG=	x11 xmu xt
 MAN1=		mrundlg.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
