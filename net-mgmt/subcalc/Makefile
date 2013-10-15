@@ -1,9 +1,5 @@
-# New ports collection makefile for:   subcalc
-# Date created:         24 August 2003
-# Whom:                 Chris S.J. Peron <maneo@bsdpro.com>
-#
-# $FreeBSD: ports/net-mgmt/subcalc/Makefile,v 1.7 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Chris S.J. Peron <maneo@bsdpro.com>
+# $FreeBSD: net-mgmt/subcalc/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	subcalc
 PORTVERSION=	1.1
@@ -18,4 +14,5 @@ MAN1=	subcalc.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/subcalc
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
