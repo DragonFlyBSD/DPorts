@@ -1,9 +1,5 @@
-# New ports collection makefile for:	md5deep
-# Date created:		15 July 2004
-# Whom:			Frank Laszlo <laszlof@vonostingroup.com>
-#
-# $FreeBSD: ports/security/md5deep/Makefile,v 1.33 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: Frank Laszlo <laszlof@vonostingroup.com>
+# $FreeBSD: security/md5deep/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	md5deep
 PORTVERSION=	4.3
@@ -23,4 +19,5 @@ MLINKS=		md5deep.1 sha1deep.1 md5deep.1 sha256deep.1 \
 PLIST_FILES=	bin/hashdeep bin/md5deep bin/sha1deep bin/sha256deep \
 		bin/whirlpooldeep bin/tigerdeep
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
