@@ -1,5 +1,5 @@
 # Created by: dom@happygiraffe.net
-# $FreeBSD: graphics/piddle/Makefile 314887 2013-03-22 02:17:31Z beech $
+# $FreeBSD: graphics/piddle/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	piddle
 PORTVERSION=	1.0.15
@@ -16,6 +16,7 @@ USE_PYDISTUTILS=	yes
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
