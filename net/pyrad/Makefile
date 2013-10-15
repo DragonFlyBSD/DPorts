@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net/pyrad/Makefile 322502 2013-07-08 12:42:01Z wg $
+# $FreeBSD: net/pyrad/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pyrad
 PORTVERSION=	2.0
@@ -18,6 +18,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
