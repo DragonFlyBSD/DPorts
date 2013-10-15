@@ -1,5 +1,5 @@
-# Created by: Adam Weinberger <adamw@freebsd.org>
-# $FreeBSD: accessibility/gok/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: accessibility/gok/Makefile 327768 2013-09-20 22:52:20Z bapt $
 #    $MCom: ports/accessibility/gok/Makefile,v 1.112 2010/09/29 07:37:57 kwm Exp $
 
 PORTNAME=	gok
@@ -16,6 +16,7 @@ COMMENT=	GNOME On-Screen Keyboard (GOK)
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gmake gettext pkgconfig
 INSTALLS_OMF=	yes
