@@ -1,9 +1,9 @@
 # Created by: Steffen Vogelreuter
-# $FreeBSD: sysutils/gtk-imonc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/gtk-imonc/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	gtk-imonc
 PORTVERSION=	0.6.4.1
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	sysutils
 MASTER_SITES=	http://stefan-strigler.de/download/
 
@@ -29,6 +29,7 @@ USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/gnome/apps/Internet|/applications|' ${WRKSRC}/Makefile.in
