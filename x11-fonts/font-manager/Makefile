@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-fonts/font-manager/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11-fonts/font-manager/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	font-manager
 PORTVERSION=	0.5.7
@@ -26,6 +26,7 @@ PORTDATA=	*
 OPTIONS_DEFINE=	REPORTLAB NLS
 REPORTLAB_DESC=	Enable font-sampler (PDF sample sheet)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(NOPORTDATA)
