@@ -1,8 +1,5 @@
-# New ports collection makefile for: clean
-# Date created:        2003-6-3
-# Whom:                chuck@pkix.net
-#
-# $FreeBSD: ports/sysutils/clean/Makefile,v 1.7 2012/11/17 06:01:26 svnexp Exp $
+# Created by: chuck@pkix.net
+# $FreeBSD: sysutils/clean/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	clean
 PORTVERSION=	3.4
@@ -16,4 +13,5 @@ USE_BZIP2=	yes
 MAN1=		clean.1
 PLIST_FILES=	bin/clean
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
