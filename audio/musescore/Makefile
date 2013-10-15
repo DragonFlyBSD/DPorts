@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: audio/musescore/Makefile 315265 2013-03-26 07:35:22Z miwi $
+# $FreeBSD: audio/musescore/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	musescore
 PORTVERSION=	1.3
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	JACK PORTAUDIO
 OPTIONS_DEFAULT=PORTAUDIO
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		cmake:outsource
 USE_QT4=	corelib designer gui network script scripttools svg webkit xml \
 		linguist_build moc_build qmake_build rcc_build uic_build
