@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-pybeanstalk
-# Date created:		2012-09-03
-# Whom:			Marcelo Araujo <araujo@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-pybeanstalk/Makefile,v 1.2 2012/11/17 06:00:16 svnexp Exp $
-#
+# $FreeBSD: net/py-pybeanstalk/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pybeanstalk
 PORTVERSION=	0.11.1
@@ -22,4 +17,5 @@ PYDISTUTILS_EGGINFO=	${PORTNAME}-${PORTVERSION}-py${PYTHON_VER}.egg-info
 
 WRKSRC=	${WRKDIR}/${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
