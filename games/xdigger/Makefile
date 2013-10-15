@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xdigger/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xdigger/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xdigger
 PORTVERSION=	1.0.10
@@ -16,6 +16,7 @@ USES=		imake
 USE_XORG=	x11 xext
 MAN6=		xdigger.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
