@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/mail/mime4j/Makefile,v 1.11 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: mail/mime4j/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mime4j
 PORTVERSION=	0.7.2
@@ -27,6 +27,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/apache-${PORTNAME}-core.jar \
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/apache-${PORTNAME}-core-${PORTVERSION}.jar \
 		${JAVAJARDIR}/apache-${PORTNAME}-core.jar
