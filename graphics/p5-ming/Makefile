@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/p5-ming/Makefile 325205 2013-08-22 15:21:03Z sunpoet $
+# $FreeBSD: graphics/p5-ming/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ming
 PORTREVISION=	0
@@ -57,6 +57,7 @@ MAN3=		SWF.3 \
 		SWF::TextField.3 \
 		SWF::VideoStream.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
