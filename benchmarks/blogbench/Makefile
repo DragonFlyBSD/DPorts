@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/benchmarks/blogbench/Makefile,v 1.5 2013/01/09 20:04:24 svnexp Exp $
+# $FreeBSD: benchmarks/blogbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	blogbench
 PORTVERSION=	1.1
@@ -17,6 +17,7 @@ MAN8=		blogbench.8
 PLIST_FILES=	bin/blogbench
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
