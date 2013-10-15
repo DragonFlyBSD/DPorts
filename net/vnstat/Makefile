@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: net/vnstat/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: net/vnstat/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	vnstat
 PORTVERSION=	1.11
@@ -33,6 +33,7 @@ OPTIONS_DEFINE=	GUI DOCS
 OPTIONS_DEFAULT=	GUI
 GUI_DESC=	Build with graphics/gd dependency
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PLIST_FILES=	bin/vnstat \
