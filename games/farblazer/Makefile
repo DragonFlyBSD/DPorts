@@ -1,9 +1,5 @@
-# New ports collection makefile for:    farblazer
-# Date created:         		12 December 2001
-# Whom:                 		Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/games/farblazer/Makefile,v 1.13 2012/11/17 05:57:38 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: games/farblazer/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	farblazer
 PORTVERSION=	0.7
@@ -18,6 +14,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-build:
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
 

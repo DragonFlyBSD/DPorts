@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/farblazer/files/patch-code::sprites::objrocket.py,v 1.2 2012/11/17 05:57:38 svnexp Exp $
+$FreeBSD: games/farblazer/files/patch-code::sprites::objrocket.py 300896 2012-07-14 13:54:48Z beat $
 
 --- code/sprites/objrocket.py	2002/05/10 00:24:42	1.1
 +++ code/sprites/objrocket.py	2002/05/10 00:24:53
