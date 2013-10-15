@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	html2fo
-# Date created:			Jul 30, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/html2fo/Makefile,v 1.10 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/html2fo/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	html2fo
 PORTVERSION=	0.4.2
@@ -19,6 +14,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/html2fo ${PREFIX}/bin
 
