@@ -1,5 +1,5 @@
 # Created by: Eoin Lawless (eoin@maths.tcd.ie)
-# $FreeBSD: math/parmetis/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/parmetis/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ParMetis
 PORTVERSION=	4.0
@@ -28,6 +28,7 @@ PLIST_FILES=	include/parmetis/parmetis.h \
 		lib/parmetis/libmetis.a lib/parmetis/libparmetis.a
 PLIST_DIRS=	include/parmetis lib/parmetis
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENMPI}
