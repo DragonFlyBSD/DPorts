@@ -1,8 +1,7 @@
-# $FreeBSD: finance/kmymoney-kde4/Makefile 327278 2013-09-14 12:04:18Z az $
+# $FreeBSD: finance/kmymoney-kde4/Makefile 329598 2013-10-06 15:46:16Z jhale $
 
 PORTNAME=	kmymoney
-PORTVERSION=	4.6.3
-PORTREVISION=	2
+PORTVERSION=	4.6.4
 CATEGORIES=	finance kde
 MASTER_SITES=	SF/${PORTNAME}2/KMyMoney-KDE4/${PORTVERSION}
 
@@ -11,73 +10,52 @@ COMMENT=	KDE4 personal finance manager
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	boost_graph:${PORTSDIR}/devel/boost-libs \
-		alkimia:${PORTSDIR}/finance/libalkimia
+LIB_DEPENDS=	libboost_graph.so:${PORTSDIR}/devel/boost-libs \
+		libalkimia.so:${PORTSDIR}/finance/libalkimia
 
-OPTIONS_DEFINE=	NLS CALENDAR KBANKING OFX QUOTES
-OPTIONS_DEFAULT=CALENDAR
-NO_OPTIONS_SORT=yes
-
-CALENDAR_DESC=	Enable Calendar plugin
-KBANKING_DESC=	Enable KBanking plugin
-OFX_DESC=	Enable OFX plugin
-QUOTES_DESC=	Enable online price quotes
-
-USE_BZIP2=	yes
+USE_XZ=		yes
 USES=		cmake pkgconfig
 USE_QT4=	gui dbus network phonon sql svg xml \
 		qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdehier kdeprefix automoc4 kdelibs pimlibs sharedmime
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
+
 MAN1=		kmymoney.1
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=		NLS CALENDAR KBANKING OFX QUOTES
+OPTIONS_DEFAULT=	CALENDAR
+OPTIONS_SUB=		yes
+NO_OPTIONS_SORT=	yes
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CMAKE_ARGS+=	-DENABLE_NLS:BOOL=OFF
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_USES=		gettext
+NLS_CMAKE_ON=		-DENABLE_NLS:BOOL=ON
+NLS_CMAKE_OFF=		-DENABLE_NLS:BOOL=OFF
 
-.if ${PORT_OPTIONS:MCALENDAR}
-LIB_DEPENDS+=	ical:${PORTSDIR}/devel/libical
-CMAKE_ARGS+=	-DENABLE_LIBICAL:BOOL=ON
-PLIST_SUB+=	CALENDAR=""
-.else
-CMAKE_ARGS+=	-DENABLE_LIBICAL:BOOL=OFF
-PLIST_SUB+=	CALENDAR="@comment "
-.endif
+CALENDAR_DESC=		Enable Calendar plugin
+CALENDAR_LIB_DEPENDS=	libical.so:${PORTSDIR}/devel/libical
+CALENDAR_CMAKE_ON=	-DENABLE_LIBICAL:BOOL=ON
+CALENDAR_CMAKE_OFF=	-DENABLE_LIBICAL:BOOL=OFF
 
-.if ${PORT_OPTIONS:MKBANKING}
-LIB_DEPENDS+=	gwengui-qt4:${PORTSDIR}/devel/gwenhywfar-qt4 \
-		aqbanking:${PORTSDIR}/finance/aqbanking
-CMAKE_ARGS+=	-DENABLE_KBANKING:BOOL=ON
-PLIST_SUB+=	KBANKING=""
-.else
-CMAKE_ARGS+=	-DENABLE_KBANKING:BOOL=OFF
-PLIST_SUB+=	KBANKING="@comment "
-.endif
+KBANKING_DESC=		Enable KBanking plugin
+KBANKING_LIB_DEPENDS=	libgwengui-qt4.so:${PORTSDIR}/devel/gwenhywfar-qt4 \
+			libaqbanking.so:${PORTSDIR}/finance/aqbanking
+KBANKING_CMAKE_ON=	-DENABLE_KBANKING:BOOL=ON
+KBANKING_CMAKE_OFF=	-DENABLE_KBANKING:BOOL=OFF
 
-.if ${PORT_OPTIONS:MOFX}
-LIB_DEPENDS+=	ofx:${PORTSDIR}/finance/libofx
-CMAKE_ARGS+=	-DENABLE_LIBOFX:BOOL=ON
-PLIST_SUB+=	OFX=""
-.else
-CMAKE_ARGS+=	-DENABLE_LIBOFX:BOOL=OFF
-PLIST_SUB+=	OFX="@comment "
-.endif
+OFX_DESC=		Enable OFX plugin
+OFX_LIB_DEPENDS=	libofx.so:${PORTSDIR}/finance/libofx
+OFX_CMAKE_ON=		-DENABLE_LIBOFX:BOOL=ON
+OFX_CMAKE_OFF=		-DENABLE_LIBOFX:BOOL=OFF
 
-.if ${PORT_OPTIONS:MQUOTES}
-USES+=		perl5
-USE_PERL5=	run
-RUN_DEPENDS+=	p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip \
-		p5-Finance-Quote>=0:${PORTSDIR}/finance/p5-Finance-Quote \
-		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
-		p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer \
-		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
-.endif
+QUOTES_DESC=		Enable online price quotes
+QUOTES_USES=		perl5
+QUOTES_USE=		PERL5=run
+QUOTES_RUN_DEPENDS=	p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip \
+			p5-Finance-Quote>=0:${PORTSDIR}/finance/p5-Finance-Quote \
+			p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
+			p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer \
+			p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
 .include <bsd.port.mk>
