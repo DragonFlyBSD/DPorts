@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/skencil/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/skencil/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	skencil
 PORTVERSION=	1.0.a784
@@ -37,6 +37,7 @@ CFLAGS+=	-I${TK_INCLUDEDIR} -I${LOCALBASE}/include \
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
