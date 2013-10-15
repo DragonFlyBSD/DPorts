@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/liblouisxml/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/liblouisxml/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	liblouisxml
 PORTVERSION=	1.8.0
@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 INFO=		liblouisxml-guide
 MAN1=		msword2brl.1 xml2brl.1
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e \
 		's#@libdir@#${PREFIX}/libdata#g' ${WRKSRC}/Makefile.in
