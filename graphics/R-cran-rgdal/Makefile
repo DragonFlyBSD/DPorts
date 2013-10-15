@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-rgdal/Makefile 326450 2013-09-05 21:37:54Z tota $
+# $FreeBSD: graphics/R-cran-rgdal/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	rgdal
 DISTVERSION=	0.8-11
@@ -21,4 +21,5 @@ R_MOD_AUTOPLIST=	yes
 
 R_POSTCMD_INSTALL_OPTIONS+=	--configure-args="--with-proj-lib=${LOCALBASE}/lib"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
