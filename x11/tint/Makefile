@@ -1,4 +1,4 @@
-# $FreeBSD: x11/tint/Makefile 325761 2013-08-31 01:17:11Z bapt $
+# $FreeBSD: x11/tint/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	tint2
 PORTVERSION=	0.11
@@ -32,6 +32,7 @@ MAN1=		tint2.1
 
 PORTDOCS=	AUTHORS ChangeLog README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYCONF}
