@@ -1,9 +1,5 @@
-# New ports collection makefile for:   gnusget
-# Date created:        19 January 2006
-# Whom:                Ilya A. Otyutskiy <ilya.otyutskiy@gmail.com>
-#
-# $FreeBSD: ports/ftp/gnusget/Makefile,v 1.7 2012/11/17 05:57:29 svnexp Exp $
-#
+# Created by: Ilya A. Otyutskiy <ilya.otyutskiy@gmail.com>
+# $FreeBSD: ftp/gnusget/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	gnusget
 PORTVERSION=	0.5.1
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/gnusget
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/gnusget ${PREFIX}/bin
 
