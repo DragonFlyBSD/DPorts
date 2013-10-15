@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <koshy@india.hp.com>
-# $FreeBSD: graphics/xaos/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/xaos/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xaos
 PORTVERSION=	3.5
@@ -33,6 +33,7 @@ PLIST_SUB+=	XAOSDIR="share/XaoS"
 
 DESKTOP_ENTRIES=	"XaoS" "${COMMENT}" "" "xaos" "" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPTHREAD}
