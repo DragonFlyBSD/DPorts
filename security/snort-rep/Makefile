@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: security/snort-rep/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/snort-rep/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	snort-rep
 PORTVERSION=	1.10
@@ -14,6 +14,7 @@ MAN1=		snort-rep.1
 USES=		shebangfix perl5
 SHEBANG_FILES=	snort-rep snort-rep-mail
 
+NO_STAGE=	yes
 do-build:
 	cd ${BUILD_WRKSRC} ; pod2man --lax snort-rep > snort-rep.1
 
