@@ -1,5 +1,5 @@
 # Created by: Patrick Powell <papowell@astart.com>
-# $FreeBSD: textproc/p5-XML-Rewrite/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-XML-Rewrite/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Rewrite
 PORTVERSION=	0.10
@@ -23,4 +23,5 @@ MAN1=	xmlrewrite.1
 MAN3=	XML::Rewrite.3 \
 	XML::Rewrite::Schema.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
