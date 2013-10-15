@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/dhttpd/files/dhttpd.in,v 1.2 2012/11/17 06:02:30 svnexp Exp $
+# $FreeBSD: www/dhttpd/files/dhttpd.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: dhttpd
 # REQUIRE: DAEMON
