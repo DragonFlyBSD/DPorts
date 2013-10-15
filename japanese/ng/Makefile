@@ -1,9 +1,5 @@
-# New ports collection makefile for:    Ng
-# Date created:         18 November 1998
-# Whom:                 Kawaguti Ginga <ginga@athena.club.ne.jp>
-#
-# $FreeBSD: ports/japanese/ng/Makefile,v 1.18 2012/11/17 05:58:37 svnexp Exp $
-#
+# Created by: Kawaguti Ginga <ginga@athena.club.ne.jp>
+# $FreeBSD: japanese/ng/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ng
 PORTVERSION=	1.4.4
@@ -30,6 +26,7 @@ PORTDOCS=	${MYPORTDOCS:C/$/.euc-jp/}
 
 PLIST_FILES=	bin/ng
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_CANNA)
