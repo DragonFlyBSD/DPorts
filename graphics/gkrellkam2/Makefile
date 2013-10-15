@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: graphics/gkrellkam2/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: graphics/gkrellkam2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gkrellkam
 PORTVERSION=	2.0.0
@@ -24,4 +24,5 @@ PLIST_FILES=	libexec/gkrellm2/plugins/gkrellkam2.so
 MAKE_ENV+=	MKDIR="${MKDIR}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
