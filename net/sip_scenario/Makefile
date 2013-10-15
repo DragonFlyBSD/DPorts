@@ -1,5 +1,5 @@
 # Created by: dterry@digifonica.com
-# $FreeBSD: net/sip_scenario/Makefile 326522 2013-09-06 16:11:30Z az $
+# $FreeBSD: net/sip_scenario/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sip_scenario
 PORTVERSION=	1.2.7
@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}
 PLIST_FILES=	bin/sip_scenario.pl
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${SED} -i -e '1s/local\///' ${WRKSRC}/sip_scenario.pl
 	${INSTALL_SCRIPT} ${WRKSRC}/sip_scenario.pl ${PREFIX}/bin
