@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/fireflyttf/Makefile 321295 2013-06-19 17:05:08Z rafan $
+# $FreeBSD: chinese/fireflyttf/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	fireflyttf
 PORTVERSION=	1.3.0
@@ -22,6 +22,7 @@ LGJ_FONT_DESC=	Patch for Taiwan horn
 
 TTF=		fireflysung.ttf
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLGJ_FONT}
