@@ -1,5 +1,5 @@
 # Created by: Otavio Fernandes <otaviof@gmail.com>
-# $FreeBSD: mail/wmpop3lb/Makefile 324084 2013-08-01 05:46:22Z bapt $
+# $FreeBSD: mail/wmpop3lb/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	wmpop3lb
 PORTVERSION=	2.4.2
@@ -23,6 +23,7 @@ PORTDOCS=	CHANGE_LOG COPYING INSTALL README
 
 BUILD_WRKSRC=	${WRKSRC}/wmpop3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,cc ,${CC} ,g" \
 			  -e "s,^FLAGS *=.*$$,FLAGS = ${CFLAGS}," \
