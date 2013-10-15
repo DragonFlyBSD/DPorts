@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: net/wakeonlan/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: net/wakeonlan/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	wakeonlan
 PORTVERSION=	0.41
@@ -14,6 +14,7 @@ USE_PERL5=	configure
 
 MAN1=		wakeonlan.1
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@${INSTALL_DATA} ${WRKSRC}/examples/lab001.wol ${EXAMPLESDIR}
