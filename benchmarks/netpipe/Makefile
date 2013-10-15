@@ -1,8 +1,5 @@
-# New ports collection makefile for: netpipe
-# Date created:		20 Feb 1998
-# Whom:			jkoshy
-#
-# $FreeBSD: ports/benchmarks/netpipe/Makefile,v 1.19 2012/11/17 05:54:50 svnexp Exp $
+# Created by: jkoshy
+# $FreeBSD: benchmarks/netpipe/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	NetPIPE
 PORTVERSION=	3.7.1
@@ -21,6 +18,7 @@ PLIST_FILES=	bin/NPtcp bin/NPtcp6
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:tl}
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} \
 		&& ${CC} ${CFLAGS} src/netpipe.c src/tcp.c -DTCP -o NPtcp \
