@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unfoo
-# Date created:		13 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/unfoo/Makefile,v 1.3 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: archivers/unfoo/Makefile 328286 2013-09-25 13:22:02Z vanilla $
 
 PORTNAME=	unfoo
 PORTVERSION=	1.0.6
@@ -27,6 +23,6 @@ post-patch:
 	@${REINPLACE_CMD} -e '1s|/.*|/bin/sh|;s|==|=|' ${WRKSRC}/${PORTNAME}
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
