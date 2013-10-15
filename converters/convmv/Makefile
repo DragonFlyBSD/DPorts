@@ -1,5 +1,5 @@
 # Created by: Kuang-che Wu <kcwu@csie.org>
-# $FreeBSD: converters/convmv/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: converters/convmv/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	convmv
 PORTVERSION=	1.15
@@ -18,4 +18,5 @@ PLIST_FILES=	bin/convmv
 
 MAN1=		convmv.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
