@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/ibp/Makefile 321975 2013-06-28 18:37:20Z bapt $
+# $FreeBSD: comms/ibp/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	ibp
 PORTVERSION=	0.21
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/ibp
 MAN1=		ibp.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM}	${WRKSRC}/ibp ${PREFIX}/bin/
 	${INSTALL_MAN}	${WRKSRC}/ibp.1 ${MANPREFIX}/man/man1/ibp.1
