@@ -1,5 +1,5 @@
 # Created by: Andrey V. Pevnev <andrey@mgul.ac.ru>
-# $FreeBSD: mail/mimedefang/Makefile 323790 2013-07-27 14:24:13Z swills $
+# $FreeBSD: mail/mimedefang/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mimedefang
 PORTVERSION=	2.74
@@ -23,7 +23,7 @@ OPTIONS_DEFINE=	CLAMAV EXAMPLES DOCS
 OPTIONS_DEFAULT=	CLAMAV
 CLAMAV_DESC=	Enable Clamav
 
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 
 MAILUSER?=		mailnull
@@ -49,6 +49,7 @@ SUB_FILES=	pkg-message
 
 CONFIG_FILES=	mimedefang-filter sa-mimedefang.cf mimedefang-ip-key
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !exists( /usr/include/libmilter/mfapi.h )
