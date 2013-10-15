@@ -1,5 +1,5 @@
 # Created by: obrien@cs.ucdavis.edu
-# $FreeBSD: news/tin/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: news/tin/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	tin
 PORTVERSION=	2.0.1
@@ -37,6 +37,7 @@ OPTIONS_DEFAULT=GNUPG ISPELL METAMAIL
 CANLOCK_DESC=	Enable Cancel-Lock key support via libcanlock
 NNTP_ONLY=	Only read news via NNTP (no spool dir support)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # --with-mime-default-charset=US-ASCII needed to build tin in the non-ascii
