@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: mail/p5-Mail-GnuPG/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-GnuPG/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-GnuPG
 PORTVERSION=	0.19
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Mail::GnuPG.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
