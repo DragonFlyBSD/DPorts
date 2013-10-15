@@ -1,5 +1,5 @@
 # Created by: simond@irrelevant.org
-# $FreeBSD: textproc/p5-EBook-Tools/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-EBook-Tools/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	EBook-Tools
 PORTVERSION=	0.4.9
@@ -43,4 +43,5 @@ MAN3=		EBook::Tools.3 \
 		EBook::Tools::PalmDoc.3 \
 		EBook::Tools::Unpack.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
