@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgis21/Makefile 327230 2013-09-14 07:14:53Z rm $
+# $FreeBSD: databases/postgis21/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	postgis
 PORTVERSION=	2.1.0
@@ -18,10 +18,10 @@ LATEST_LINK=	postgis21
 
 USE_GNOME=	libxml2
 USE_PGSQL=	yes
-USES=		gmake iconv pkgconfig
+USES=		gmake iconv perl5 pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 
 OPTIONS_DEFINE=		LOADERGUI RASTER TOPOLOGY
 OPTIONS_DEFAULT=	TOPOLOGY
@@ -32,6 +32,7 @@ LOADERGUI_DESC=	Enable shp2pgsql-gui
 RASTER_DESC=	Raster support
 TOPOLOGY_DESC=	Topology support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLOADERGUI}
