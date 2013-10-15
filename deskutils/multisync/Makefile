@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: deskutils/multisync/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: deskutils/multisync/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME?=	multisync
 PORTVERSION=	0.82
@@ -21,6 +21,7 @@ CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	@${FIND} ${WRKDIR} -type l -delete
 .for FILE in missing install-sh mkinstalldirs config.guess config.sub depcomp
