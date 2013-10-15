@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: archivers/p5-Mac-Macbinary/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-Mac-Macbinary/Makefile 328275 2013-09-25 12:30:08Z vanilla $
 
 PORTNAME=	Mac-Macbinary
 PORTVERSION=	0.06
@@ -12,7 +12,5 @@ COMMENT=	Perl module that can extract info from Macbinary files
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Mac::Macbinary.3
 
 .include <bsd.port.mk>
