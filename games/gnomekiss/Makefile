@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi <umeno@rr.iij4u.or.jp>
-# $FreeBSD: games/gnomekiss/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/gnomekiss/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnomekiss
 PORTVERSION=	2.0
@@ -19,4 +19,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		gnomekiss.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
