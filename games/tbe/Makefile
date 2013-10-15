@@ -1,4 +1,4 @@
-# $FreeBSD: games/tbe/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/tbe/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tbe
 PORTVERSION=	9
@@ -24,6 +24,7 @@ DESKTOP_ENTRIES="The Butterfly Effect" "Inspired by The Incredible Machine" \
 		"${DATADIR}/images/tbe-icon.png" \
 		"${PREFIX}/bin/tbe" "LogicGame;Game;" false
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} 's/ make/ ${GMAKE}/' \
 			${WRKSRC}/3rdParty/Makefile
