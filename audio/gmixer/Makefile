@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/gmixer/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: audio/gmixer/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmixer
 PORTVERSION=	0.98c
@@ -14,6 +14,7 @@ COMMENT=	X11/gtk+ mixer control
 ALL_TARGET=	gmixer
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 PLIST_FILES=	bin/gmixer share/pixmaps/gmixer.xpm
 
