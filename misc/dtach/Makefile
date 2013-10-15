@@ -1,5 +1,5 @@
 # Created by: Bjorn Lindstrom <bkhl@elektrubadur.se>
-# $FreeBSD: misc/dtach/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/dtach/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=		dtach
 PORTVERSION=		0.8
@@ -17,6 +17,7 @@ MAN1=		dtach.1
 PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
