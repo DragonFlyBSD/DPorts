@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 325947 2013-09-02 07:47:38Z az $
+# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Markdown
 PORTVERSION=	1.322000
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN1=		pod2markdown.1
 MAN3=		Pod::Markdown.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
