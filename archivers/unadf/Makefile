@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unadf
-# Date created:				1 October 2000
-# Whom:					Per Wigren
-#
-# $FreeBSD: archivers/unadf/Makefile 323088 2013-07-16 05:42:36Z ade $
-#
+# Created by: Per Wigren
+# $FreeBSD: archivers/unadf/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	unadf
 PORTVERSION=	0.7.12
@@ -21,6 +17,7 @@ USE_BZIP2=	yes
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtoolize aclocal autoconf autoheader automake
 
 #
