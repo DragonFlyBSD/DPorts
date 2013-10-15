@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Sender/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: mail/p5-Mail-Sender/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Sender
 PORTVERSION=	0.8.22
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		Mail::Sender.3
 
+NO_STAGE=	yes
 post-patch:
 .if defined(BATCH)
 	@${REINPLACE_CMD}  -e 's/res = <STDIN>;/res = "N";/' ${WRKSRC}/Config.PL
