@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: lang/tolua4/Makefile 324265 2013-08-05 08:27:46Z danfe $
+# $FreeBSD: lang/tolua4/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	tolua
 PORTVERSION=	4.0a
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 LATEST_LINK=	${PORTNAME}${LUA_VER_STR}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -Ee \
 		's|^(CC=).*|\1 ${CC}|; \
