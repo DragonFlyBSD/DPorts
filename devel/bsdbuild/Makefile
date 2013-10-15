@@ -1,31 +1,20 @@
-# $FreeBSD: devel/bsdbuild/Makefile 324006 2013-07-31 06:47:15Z bapt $
+# $FreeBSD: devel/bsdbuild/Makefile 328215 2013-09-24 23:32:30Z bapt $
 
 PORTNAME=	bsdbuild
 PORTVERSION=	3.0
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://stable.hypertriton.com/bsdbuild/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	BSD-licensed portable build system
 
-USES=		perl5
+USES=		perl5 shebangfix
+SHEBANG_FILES=	*.pl mk/*.pl
 GNU_CONFIGURE=	yes
 
 LICENSE=	BSD
 
 CONFIGURE_ARGS=	--with-catman=no
-
-MAN1=	uman.1 \
-	man2mediawiki.1 \
-	man2wiki.1 \
-	mkconfigure.1 \
-	mkify.1
-
-MAN5=	build.www.mk.5 \
-	build.proj.mk.5 \
-	build.prog.mk.5 \
-	build.lib.mk.5 \
-	build.dep.mk.5 \
-	build.common.mk.5
 
 .include <bsd.port.mk>
