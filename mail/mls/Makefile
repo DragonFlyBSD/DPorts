@@ -1,5 +1,5 @@
 # Created by: The Anarcat <anarcat@anarcat.ath.cx>
-# $FreeBSD: ports/mail/mls/Makefile,v 1.8 2012/11/20 19:16:29 svnexp Exp $
+# $FreeBSD: mail/mls/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mls
 PORTVERSION=	1.3
@@ -19,4 +19,5 @@ PLIST_FILES=	bin/mls
 MAKE_ARGS+=	DESTDIR="${PREFIX}" CC="${CC}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	mls
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
