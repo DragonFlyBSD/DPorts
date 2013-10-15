@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.DCWorkflow/Makefile 313744 2013-03-09 18:53:41Z miwi $
+# $FreeBSD: devel/py-Products.DCWorkflow/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.DCWorkflow
 PORTVERSION=	2.2.4
@@ -18,6 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=0:${PORTSDIR}/devel/py-Pro
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
