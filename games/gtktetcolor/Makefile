@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/gtktetcolor/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/gtktetcolor/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gtktetcolor
 PORTVERSION=	0.6.4
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|games\.games|games:games|g' ${WRKSRC}/Makefile.in
