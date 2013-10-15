@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/gupsc/Makefile 326572 2013-09-07 06:13:27Z az $
+# $FreeBSD: sysutils/gupsc/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gupsc
 PORTVERSION=	0.3.1
@@ -19,6 +19,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|/usr/local|${PREFIX}|' \
 			-e 's|DATADIRNAME=lib|DATADIRNAME=share|' \
