@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: net/hawknl/Makefile 319986 2013-06-05 12:51:05Z bapt $
+# $FreeBSD: net/hawknl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	hawknl
 PORTVERSION=	1.68
@@ -23,6 +23,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}${PORTVERSION}
 
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
