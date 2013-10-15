@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  nawk
-# Date created:			  29 April 1998
-# Whom:				  Josh Gilliam <josh@quick.net>
-#
-# $FreeBSD: ports/lang/nawk/Makefile,v 1.45 2012/11/17 05:58:53 svnexp Exp $
-#
+# Created by: Josh Gilliam <josh@quick.net>
+# $FreeBSD: lang/nawk/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	nawk
 PORTVERSION=	20110810
@@ -23,6 +18,7 @@ MAN1=		nawk.1
 CFLAGS+=	-DHAS_ISBLANK
 PLIST_FILES=	bin/nawk
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${PREFIX}/bin/nawk
 	${SED} -e 's|awk|nawk|g' ${WRKSRC}/awk.1 > ${WRKSRC}/nawk.1
