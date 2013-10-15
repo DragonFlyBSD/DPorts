@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: devel/fnorb/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: devel/fnorb/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	Fnorb
 PORTVERSION=	1.3
@@ -15,4 +15,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinte
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
