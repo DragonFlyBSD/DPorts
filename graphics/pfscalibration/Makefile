@@ -1,5 +1,5 @@
 # Created by: Iouri V. Ivliev
-# $FreeBSD: graphics/pfscalibration/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: graphics/pfscalibration/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pfscalibration
 PORTVERSION=	1.3
@@ -28,4 +28,5 @@ MAN1=		jpeg2hdrgen.1 \
 SHEBANG_FILES=	src/dcraw2hdrgen src/jpeg2hdrgen
 bash_CMD=	${SH}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
