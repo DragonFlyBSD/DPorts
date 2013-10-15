@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: misc/wmScoreBoard/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/wmScoreBoard/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	wmScoreBoard
 PORTVERSION=	0.30
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 USE_GMAKE=	yes
 USE_XORG=	xpm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
