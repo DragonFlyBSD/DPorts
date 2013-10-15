@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: mail/gml/Makefile 313536 2013-03-06 18:49:33Z rm $
+# $FreeBSD: mail/gml/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gml
 PORTVERSION=	0.4
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
