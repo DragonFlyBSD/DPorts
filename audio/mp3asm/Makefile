@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mp3asm/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/mp3asm/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	mp3asm
 PORTVERSION=	0.1.3.1
@@ -13,11 +13,12 @@ COMMENT=	MP3 frame level editor
 
 LICENSE=	GPLv2
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-0.1
+NO_STAGE=	yes
 
 USES=		gmake
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/${PORTNAME}-0.1
 
 post-extract:
 	@${RM} ${WRKSRC}/config.cache
