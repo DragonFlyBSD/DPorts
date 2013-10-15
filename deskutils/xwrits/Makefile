@@ -1,5 +1,5 @@
 # Created by: Matt Braithwaite <mab@red-bean.com>
-# $FreeBSD: ports/deskutils/xwrits/Makefile,v 1.17 2012/11/28 21:44:13 svnexp Exp $
+# $FreeBSD: deskutils/xwrits/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xwrits
 PORTVERSION=	2.26
@@ -19,6 +19,7 @@ MAN1=		xwrits.1
 
 PORTDOCS=	GESTURES NEWS README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
