@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-dotcloud.cli
-# Date created:		2011-05-03
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-dotcloud.cli/Makefile,v 1.5 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: www/py-dotcloud.cli/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dotcloud.cli
 PORTVERSION=	0.4.3
@@ -17,4 +13,5 @@ COMMENT=	dotCloud command-line interface client
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
