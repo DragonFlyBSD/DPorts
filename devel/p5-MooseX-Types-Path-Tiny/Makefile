@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-Path-Tiny/Makefile 324527 2013-08-10 14:28:23Z kuriyama $
+# $FreeBSD: devel/p5-MooseX-Types-Path-Tiny/Makefile 328816 2013-09-30 15:30:44Z sunpoet $
 
 PORTNAME=	MooseX-Types-Path-Tiny
 PORTVERSION=	0.006
@@ -14,14 +14,14 @@ RUN_DEPENDS=	\
 	p5-MooseX-Types>0:${PORTSDIR}/devel/p5-MooseX-Types \
 	p5-MooseX-Types-Stringlike>=0:${PORTSDIR}/devel/p5-MooseX-Types-Stringlike \
 	p5-Path-Tiny>0:${PORTSDIR}/devel/p5-Path-Tiny
-BUILD_DEPENDS=	${RUN_DEPENDS} \
-	p5-Module-Build-Tiny>=0.023:${PORTSDIR}/devel/p5-Module-Build-Tiny
+BUILD_DEPENDS=	${RUN_DEPENDS}
 TEST_DEPENDS=	\
 	p5-File-pushd>0:${PORTSDIR}/devel/p5-File-pushd \
 	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal
 
+NO_STAGE=	yes
 USES=	perl5
-USE_PERL5=	modbuild
+USE_PERL5=	modbuildtiny
 
 MAN3=	MooseX::Types::Path::Tiny.3
 
