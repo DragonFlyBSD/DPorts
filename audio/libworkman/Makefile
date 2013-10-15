@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: audio/libworkman/Makefile 321970 2013-06-28 18:19:20Z bapt $
+# $FreeBSD: audio/libworkman/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libworkman
 PORTVERSION=	1.4
@@ -16,6 +16,7 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
 USES=		imake
+NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/libworkman
 USE_LDCONFIG=	yes
 CFLAGS+=	-fPIC
