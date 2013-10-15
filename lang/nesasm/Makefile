@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nesasm
-# Date created:		6 August 2007
-# Whom:						Pontus Stenetorp <ninjin@kth.se>
-#
-# $FreeBSD: ports/lang/nesasm/Makefile,v 1.5 2012/11/17 05:58:53 svnexp Exp $
-#
+# Created by: Pontus Stenetorp <ninjin@kth.se>
+# $FreeBSD: lang/nesasm/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	nesasm
 PORTVERSION=	20040314
@@ -23,6 +19,7 @@ post-patch:	.SILENT
 		-e '/^CFLAGS/{s/=/+=/;s/-O2//;}' \
 		${WRKSRC}/Makefile.unix
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nesasm ${PREFIX}/bin
 .ifndef(NOPORTDOCS)
