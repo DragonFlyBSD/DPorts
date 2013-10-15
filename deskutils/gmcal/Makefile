@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmcal
-# Date created:		Mon Oct 15 09:09:46 GMT 2001
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/deskutils/gmcal/Makefile,v 1.13 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: deskutils/gmcal/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gmcal
 PORTVERSION=	0.0.1
@@ -22,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	bin/gmcal
 USE_GNOME=	gtk12
 
+NO_STAGE=	yes
 post-extract:
 	${CHMOD} a-x ${WRKSRC}/*
 
