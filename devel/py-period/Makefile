@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	py-period
-# Date created:			Mar 15, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-period/Makefile,v 1.8 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-period/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	period
 PORTVERSION=	0.5
@@ -18,6 +13,7 @@ COMMENT=	A basic time period checking library
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/period.py ${PYTHON_SITELIBDIR}
 .if !defined(NOPORTDOCS)
