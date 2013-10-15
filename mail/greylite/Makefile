@@ -1,5 +1,5 @@
 # Created by: Mij <mij@bitchx.it>
-# $FreeBSD: mail/greylite/Makefile 319615 2013-06-01 23:18:19Z bapt $
+# $FreeBSD: mail/greylite/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	greylite
 PORTVERSION=	2.3
@@ -27,6 +27,7 @@ GEOIP_DESC=		Support for GeoIP in suspicion rules
 DNSBLENV_DESC=		Module for interfacing with DNS blacklists
 UCSPI2SOCKET_DESC=	Module for using greylite as SMTP proxy
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MGEOIP}
