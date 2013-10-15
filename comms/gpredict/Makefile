@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/gpredict/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: comms/gpredict/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	gpredict
 PORTVERSION=	1.3
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		gpredict.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^Icon/s|=.*|=${PREFIX}/share/pixmaps/gpredict-icon.png|' \
