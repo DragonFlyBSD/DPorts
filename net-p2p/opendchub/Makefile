@@ -1,5 +1,5 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: net-p2p/opendchub/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-p2p/opendchub/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	opendchub
 PORTVERSION=	0.8.2
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/${PORTNAME}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 pre-install:
 	@${CHMOD} a+rx ${WRKSRC}/install-sh
 
