@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-Sequence
-# Date created:				15 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: math/p5-Math-Sequence/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Sequence/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Sequence
 PORTVERSION=	1.00
@@ -22,4 +18,5 @@ MAN3=	Math::Sequence.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
