@@ -1,6 +1,6 @@
 # Makefile for platon
 #
-# $FreeBSD: ports/biology/platon/files/Makefile,v 1.7 2012/11/17 05:54:52 svnexp Exp $
+# $FreeBSD: biology/platon/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 TARGET=	platon
 OBJS=	platon.o xdrvr.o

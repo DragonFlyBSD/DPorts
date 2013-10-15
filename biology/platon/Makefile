@@ -1,9 +1,5 @@
-# New ports collection makefile for:	platon
-# Date created:		1999-04-22
-# Whom:			Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-#
-# $FreeBSD: ports/biology/platon/Makefile,v 1.32 2012/11/17 05:54:52 svnexp Exp $
-#
+# Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
+# $FreeBSD: biology/platon/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	platon
 PORTVERSION=	2007.01.09
@@ -31,6 +27,7 @@ SAMPLES=	azt.dat bucky.spf c476.spf c540.cart3d check.def cubane.spf \
 TESTDATADIR=	ABSORB_EXAMPLE ABSTOMPA_EXAMPLE ABSTOMPA_TEST ADDSYM_EXAMPLE \
 		ASYM_EXAMPLE MULABS_EXAMPLE PSICOR_EXAMPLE SQUEEZE_EXAMPLE
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "alpha"
