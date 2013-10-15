@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Inner/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Inner/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Inner
 PORTVERSION=	0.200001
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Inner.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
