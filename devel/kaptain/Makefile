@@ -1,5 +1,5 @@
-# Created by: Alan Eldridge <alane@freebsd.org>
-# $FreeBSD: devel/kaptain/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Alan Eldridge <alane@FreeBSD.org>
+# $FreeBSD: devel/kaptain/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kaptain
 PORTVERSION=	0.73
@@ -22,6 +22,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/kaptain
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
