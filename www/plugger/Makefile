@@ -1,5 +1,5 @@
 # Created by: Jay Sachs <sachs@cs.williams.edu>
-# $FreeBSD: www/plugger/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: www/plugger/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	plugger
 PORTVERSION=	5.1.5
@@ -18,6 +18,7 @@ PKGDEINSTALL=	${PKGINSTALL}
 USE_WEBPLUGINS=	native
 WEBPLUGINS_FILES=npplugger.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 
