@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/find-zlib/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: security/find-zlib/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	find_zlib
 PORTVERSION=	1.9
@@ -21,6 +21,7 @@ USE_PERL5=	run
 
 PLIST_FILES=	bin/find-zlib
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${DISTDIR}/${DISTNAME} ${PREFIX}/bin
 
