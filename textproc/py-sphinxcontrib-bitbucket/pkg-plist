@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/py-sphinxcontrib-bitbucket/pkg-plist,v 1.2 2012/11/17 06:02:18 svnexp Exp $
+@comment $FreeBSD: textproc/py-sphinxcontrib-bitbucket/pkg-plist 302904 2012-08-21 21:09:15Z nivit $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt
