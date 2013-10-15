@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-dscope/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-dscope/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	dscope
 PORTVERSION=	1.3.1
@@ -17,6 +17,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 USE_GNOME=	gtk12
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|; s|-O3||; \
 		s|-Wall|-Wall ${CFLAGS}|; \
