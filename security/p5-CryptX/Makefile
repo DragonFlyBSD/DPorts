@@ -1,8 +1,8 @@
 # Created by: vanilla@
-# $FreeBSD: security/p5-CryptX/Makefile 326634 2013-09-07 13:19:42Z vanilla $
+# $FreeBSD: security/p5-CryptX/Makefile 327991 2013-09-23 12:44:32Z vanilla $
 
 PORTNAME=	CryptX
-PORTVERSION=	0.013
+PORTVERSION=	0.016
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Crypt
@@ -84,4 +84,5 @@ MAN3=		Crypt::AuthEnc::CCM.3 \
 regression-test: build
 	@cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${PERL5} ${PL_BUILD} ${MAKE_ARGS} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
