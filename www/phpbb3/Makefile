@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpbb3
-# Date created:		20 Dec 2007
-# Whom:	      		Zhen REN <bg1tpt@gmail.com>
-#
-# $FreeBSD: ports/www/phpbb3/Makefile,v 1.27 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Zhen REN <bg1tpt@gmail.com>
+# $FreeBSD: www/phpbb3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpbb
 PORTVERSION=	3.0.11
@@ -39,6 +35,7 @@ SUB_LIST=	PHPBBURL="${PHPBBURL}" \
 
 PLIST_SUB+=	PHPBBDIR=${PHPBBDIR} WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
+NO_STAGE=	yes
 # Set custom variables:
 #
 PHPBBDIR=	${WWWDOCROOT}/${PHPBBURL}
