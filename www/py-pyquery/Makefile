@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pyquery
-# Date created:		2009-01-27
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-pyquery/Makefile,v 1.10 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: www/py-pyquery/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pyquery
 PORTVERSION=	1.2.1
@@ -20,4 +16,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.1:${PORTSDIR}/devel/py-lxml \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
