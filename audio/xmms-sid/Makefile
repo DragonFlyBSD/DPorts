@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-sid/Makefile 318318 2013-05-16 14:10:53Z bdrewery $
+# $FreeBSD: audio/xmms-sid/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-sid
 PORTVERSION=	0.9.0
@@ -14,6 +14,7 @@ BUILD_DEPENDS=	xmms-config:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		gettext
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
