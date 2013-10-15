@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/chaco/Makefile 323290 2013-07-19 13:48:11Z danfe $
+# $FreeBSD: math/chaco/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	chaco
 PORTVERSION=	2.2
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/code
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
