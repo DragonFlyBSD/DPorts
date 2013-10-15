@@ -1,9 +1,5 @@
-# New ports collection makefile for:   qalculate
-# Date created:        07 July 2004
-# Whom:                Sergey Akifyev <asa@gascom.ru>
-#
-# $FreeBSD: math/qalculate/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Sergey Akifyev <asa@gascom.ru>
+# $FreeBSD: math/qalculate/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	qalculate
 PORTVERSION=	0.9.7
@@ -25,6 +21,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/^GMSGFMT = @GMSGFMT@/GMSGFMT = msgfmt/' ${WRKSRC}/po/Makefile.in.in
 
