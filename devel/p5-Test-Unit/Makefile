@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Test-Unit/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-Unit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Unit
 PORTVERSION=	0.25
@@ -35,4 +35,5 @@ MAN3=		Test::Unit.3 Test::Unit::Assert.3 Test::Unit::Assertion.3 \
 		Test::Unit::TkTestRunner.3 Test::Unit::Tutorial.3 \
 		Test::Unit::UnitHarness.3 Test::Unit::Warning.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
