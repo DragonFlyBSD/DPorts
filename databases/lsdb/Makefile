@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lsdb (for emacs21)
-# Date Created:		27 Apr 2002
-# Whom:			Yoichi NAKAYAMA <yoichi@FreeBSD.org>
-#
-# $FreeBSD: databases/lsdb/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Yoichi NAKAYAMA <yoichi@FreeBSD.org>
+# $FreeBSD: databases/lsdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	lsdb
 PORTVERSION=	0.11
@@ -25,6 +21,7 @@ ALL_TARGET=	elc
 
 FLIM_COOKIE=   flim-${EMACS_PORT_NAME}-1.14.FreeBSD-packages
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(EMACS_PORT_NAME)
