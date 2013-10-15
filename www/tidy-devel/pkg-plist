@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/tidy-devel/pkg-plist,v 1.10 2012/11/17 06:03:07 svnexp Exp $
+@comment $FreeBSD: www/tidy-devel/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/tab2space
 bin/tidy
 include/tidy/buffio.h

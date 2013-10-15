@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tidy
-# Date created:		27 Oct 1998
-# Whom:			Abel Chow <achow@transoft.net>
-#
-# $FreeBSD: ports/www/tidy-devel/Makefile,v 1.173 2012/11/17 06:03:07 svnexp Exp $
-#
+# Created by: Abel Chow <achow@transoft.net>
+# $FreeBSD: www/tidy-devel/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME?=	tidy
 DISTVERSION=	090315-cvs
@@ -22,6 +18,7 @@ COMMENT?=	Utility to clean up and pretty print HTML/XHTML/XML
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 
 SLAVEDIRS=	www/tidy-lib
 WRKSRC=		${WRKDIR}/${PORTNAME}
