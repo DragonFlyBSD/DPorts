@@ -1,5 +1,5 @@
 # Created by: Xin Li <delphij@FreeBSD.org>
-# $FreeBSD: devel/py-ujson/Makefile 326356 2013-09-05 06:31:35Z delphij $
+# $FreeBSD: devel/py-ujson/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ujson
 PORTVERSION=	1.33
@@ -18,4 +18,5 @@ USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/ujson.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
