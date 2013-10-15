@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: net-im/mu-conference/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-im/mu-conference/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	mu-conference
 PORTVERSION=	0.8
@@ -40,6 +40,7 @@ PORTDOCS=	*
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
