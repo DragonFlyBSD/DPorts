@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/pysycache-lang/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/pysycache-lang/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lang
 PORTVERSION=	2.0
@@ -29,6 +29,7 @@ SPANISH_DESC=	Spanish language support
 
 OPTIONS_DEFAULT=	FRENCH GERMAN ITALIAN PORTUGUESE SPANISH
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFRENCH}
