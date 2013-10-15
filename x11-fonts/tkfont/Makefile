@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tkfont-1.1
-# Date created:		11 May 1998
-# Whom:			Brett Taylor
-#
-# $FreeBSD: ports/x11-fonts/tkfont/Makefile,v 1.23 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Brett Taylor
+# $FreeBSD: x11-fonts/tkfont/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	tkfont
 PORTVERSION=	1.1
@@ -21,6 +17,7 @@ RUN_DEPENDS+=	xlsfonts:${PORTSDIR}/x11-fonts/xlsfonts
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${SED} -e "s,/usr/local,${LOCALBASE}," \
 		-e "s,#!/usr/X11/bin/wish,#!${WISH}," \
