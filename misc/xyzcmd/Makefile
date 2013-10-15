@@ -1,16 +1,12 @@
-# New ports collection makefile for:	xyzcmd
-# Date created:		2010-01-18
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: ports/misc/xyzcmd/Makefile,v 1.4 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: misc/xyzcmd/Makefile 329245 2013-10-03 22:35:12Z vg $
 
 PORTNAME=	xyzcmd
 PORTVERSION=	0.0.4
 CATEGORIES=	misc python
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Pure console visual file manager
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/urwid/raw_display.py:${PORTSDIR}/devel/py-urwid
@@ -21,6 +17,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 INSTALLS_EGGINFO=yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
