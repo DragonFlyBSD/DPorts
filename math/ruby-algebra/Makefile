@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/Algebra
-# Date created:		8 May 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/math/ruby-algebra/Makefile,v 1.14 2012/11/17 05:59:30 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: math/ruby-algebra/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	algebra
 PORTVERSION=	0.72
@@ -23,6 +19,7 @@ NO_BUILD=	yes
 DOCS_EN=	doc/*.rd	doc/*.html
 DOCS_JA=	doc-ja/*.rd	doc-ja/*.html
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODEXAMPLESDIR}
