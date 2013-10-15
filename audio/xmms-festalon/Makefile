@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-festalon/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/xmms-festalon/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PKGNAMEPREFIX=	xmms-
 
@@ -11,6 +11,7 @@ BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 USE_GNOME=	glib12
+NO_STAGE=	yes
 CONFIGURE_ARGS+=	--enable-interface=interface
 
 DESCR=		${.CURDIR}/pkg-descr
