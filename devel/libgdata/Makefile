@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/libgdata/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: devel/libgdata/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/libgdata/Makefile,v 1.14 2010/09/30 19:39:17 kwm Exp $
 
 PORTNAME=	libgdata
@@ -24,4 +24,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--with-html-dir="${PREFIX}/share/doc"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
