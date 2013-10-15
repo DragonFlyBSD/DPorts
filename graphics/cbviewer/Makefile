@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/graphics/cbviewer/Makefile,v 1.4 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/cbviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cbviewer
 PORTVERSION=	0.8
@@ -41,6 +41,7 @@ DESKTOP_ENTRIES="CBViewer" "Comic book viewer" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" "Graphics;Viewer;Java;" true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/graphics/cbviewer/files/cbviewer.in,v 1.1 2012/12/07 15:36:21 svnexp Exp $
+# $FreeBSD: graphics/cbviewer/files/cbviewer.in 308429 2012-12-07 15:33:53Z pawel $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
