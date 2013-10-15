@@ -1,5 +1,5 @@
 # Created by: andreas@marvin.robin.de
-# $FreeBSD: graphics/xmandel/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: graphics/xmandel/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmandel
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ NO_WRKSUBDIR=	yes
 MAN1=		xmandel.1
 PLIST_FILES=	bin/xmandel
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|malloc.h|stdlib.h|' ${WRKSRC}/mandel.c
 
