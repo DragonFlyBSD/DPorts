@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	py-mx-experimental
-# Date created:			Nov 3, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-mx-experimental/Makefile,v 1.16 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-mx-experimental/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mx-experimental
 PORTVERSION=	3.0.0
@@ -24,6 +19,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	egenix-mx-experimental
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|LIBGMPH|${PREFIX}/include|" ${WRKSRC}/mxEXPERIMENTAL.py
 
