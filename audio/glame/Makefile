@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/glame/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: audio/glame/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	glame
 PORTVERSION=	2.0.1
@@ -17,6 +17,7 @@ LIB_DEPENDS=	mp3lame:${PORTSDIR}/audio/lame \
 		guile:${PORTSDIR}/lang/guile
 
 USE_AUTOTOOLS=	libltdl libtool
+NO_STAGE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 USES=		gmake pathfix gettext pkgconfig
 USE_GNOME=	gnomeprefix libgnomeui
