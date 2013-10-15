@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/p5-Visio/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Visio/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Visio
 PORTVERSION=	1.010
@@ -20,4 +20,5 @@ MAN3=		Visio.3 Visio::Hyperlink.3 Visio::Layout.3 Visio::Line.3 \
 		Visio::Master.3 Visio::Page.3 Visio::PageProps.3 \
 		Visio::PageSheet.3 Visio::Shape.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
