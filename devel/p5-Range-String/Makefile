@@ -1,5 +1,5 @@
 # Created by: Andrey Ignatov <rdna@rdna.ru>
-# $FreeBSD: devel/p5-Range-String/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-Range-String/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Range-String
 PORTVERSION=	v0.01
@@ -18,4 +18,5 @@ MAN3=		Range::Integer.3 Range::String.3 Range::String::Parse.3 \
 		Range::String::Object.3 Range::Integer::Parse.3 \
 		Range::Integer::Object.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
