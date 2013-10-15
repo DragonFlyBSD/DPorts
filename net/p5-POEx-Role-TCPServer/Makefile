@@ -1,9 +1,4 @@
-# New ports collection makefile for:	POEx::Role::TCPServer
-# Date created:		10 Oct 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: net/p5-POEx-Role-TCPServer/Makefile 326526 2013-09-06 17:02:34Z az $
-#
+# $FreeBSD: net/p5-POEx-Role-TCPServer/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POEx-Role-TCPServer
 PORTVERSION=	1.102740
@@ -30,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=	POEx::Role::TCPServer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
