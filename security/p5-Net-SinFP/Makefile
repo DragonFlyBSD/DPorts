@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: security/p5-Net-SinFP/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Net-SinFP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME?=	Net-SinFP
 PORTVERSION=	2.09
@@ -59,6 +59,7 @@ MAN3=	Net::SinFP.3 \
 	Net::SinFP::SinFP4.3 \
 	Net::SinFP::SinFP6.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/.*EXE_FILES.*//' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
