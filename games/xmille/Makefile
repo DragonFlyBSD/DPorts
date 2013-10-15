@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xmille/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xmille/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xmille
 PORTVERSION=	2.0
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/xmille
 MAKE_JOBS_UNSAFE=	yes
 CFLAGS+=	-Wno-error=return-type
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name '*.[ao]' -delete
 
