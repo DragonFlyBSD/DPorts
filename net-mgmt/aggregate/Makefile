@@ -1,9 +1,5 @@
-# New ports collection makefile for:   aggregate
-# Date created:        16 Feb 2001
-# Whom:                jabley
-#
-# $FreeBSD: ports/net-mgmt/aggregate/Makefile,v 1.13 2012/11/17 06:00:30 svnexp Exp $
-#
+# Created by: jabley
+# $FreeBSD: net-mgmt/aggregate/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	aggregate
 PORTVERSION=	1.6
@@ -20,4 +16,5 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/aggregate bin/aggregate-ios
 MAN1=		aggregate.1 aggregate-ios.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
