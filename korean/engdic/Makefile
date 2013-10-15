@@ -1,5 +1,5 @@
 # Created by: Oh Junseon <hollywar@mail.holywar.net>
-# $FreeBSD: korean/engdic/Makefile 326196 2013-09-03 18:40:12Z jkim $
+# $FreeBSD: korean/engdic/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	engdic
 PORTVERSION=	0.2
@@ -15,6 +15,7 @@ MAKE_ARGS=	CC="${CC}"
 PLIST_FILES=	bin/edic bin/engdic
 PORTDATA=	[a-z].dic.gz
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|' ${WRKSRC}/engdic.h
 
