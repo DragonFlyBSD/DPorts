@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/xmolwt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/xmolwt/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	xmolwt
 PORTVERSION=	0.7
@@ -19,6 +19,7 @@ ALL_TARGET=	gmolwt
 PORTDOCS=	*
 PLIST_FILES=	bin/gmolwt bin/molwt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
