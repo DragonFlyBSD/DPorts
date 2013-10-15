@@ -1,5 +1,5 @@
 # Created by: darius@dons.net.au
-# $FreeBSD: ports/net-mgmt/nstreams/Makefile,v 1.17 2012/12/13 16:41:47 svnexp Exp $
+# $FreeBSD: net-mgmt/nstreams/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nstreams
 PORTVERSION=	1.0.4
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/nstreams \
 		etc/nstreams-networks.sample \
 		etc/nstreams-services
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/nstreams ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/docs/nstreams.1 ${MANPREFIX}/man/man1
