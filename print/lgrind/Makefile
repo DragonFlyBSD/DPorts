@@ -1,9 +1,5 @@
-# New ports collection makefile for: lgrind
-# Date created:				20 April 2002
-# Whom:					Kay Lehmann
-#
-# $FreeBSD: print/lgrind/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Kay Lehmann
+# $FreeBSD: print/lgrind/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	lgrind
 PORTVERSION=	3.67
@@ -65,6 +61,7 @@ RESTRICTED=	According to the README-file there is a license issue \
 		the source tarball. No response from author of some code \
 		this port is based on.
 
+NO_STAGE=	yes
 pre-everything::
 	@${MKDIR} ${DISTDIR}/${PORTNAME}
 
