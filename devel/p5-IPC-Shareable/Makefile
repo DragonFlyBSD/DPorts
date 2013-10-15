@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-IPC-Shareable/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-IPC-Shareable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IPC-Shareable
 PORTVERSION=	0.61
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		IPC::Shareable.3 IPC::Shareable::SharedMem.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
