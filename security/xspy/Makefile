@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: security/xspy/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: security/xspy/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	xspy
 PORTVERSION=	1.0c
@@ -16,6 +16,7 @@ USE_XORG=	x11
 
 ALL_TARGET=	xspy
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xspy ${PREFIX}/bin
 
