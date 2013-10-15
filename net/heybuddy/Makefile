@@ -1,5 +1,5 @@
 # Created by: Beni Keller <navigium@grindcore.ch>
-# $FreeBSD: net/heybuddy/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net/heybuddy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	heybuddy
 PORTVERSION=	0.2.4
@@ -25,6 +25,7 @@ DESKTOP_ENTRIES=	"Heybuddy" \
 			"" \
 			false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
