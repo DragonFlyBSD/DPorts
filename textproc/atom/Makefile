@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/atom/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: textproc/atom/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	atom
 PORTVERSION=	1.0
@@ -22,6 +22,7 @@ PORTDOCS=	README \
 		TODO \
 		testFile
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
