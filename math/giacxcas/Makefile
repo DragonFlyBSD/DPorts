@@ -1,5 +1,5 @@
 # Created by: Frederic Han <han@math.jussieu.fr>
-# $FreeBSD: math/giacxcas/Makefile 326854 2013-09-10 01:23:13Z wg $
+# $FreeBSD: math/giacxcas/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	giacxcas
 PORTVERSION=	1.1.0
@@ -46,6 +46,7 @@ COCOALIB-GIAC=	${WRKDIR}/CoCoALib-0.9950
 
 INFO=		giac_es giac_us
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -Rl --null /bin/bash ${COCOALIB-GIAC} | ${XARGS} -0 \
 		${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|'
