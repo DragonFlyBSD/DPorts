@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Radius/Makefile 325018 2013-08-19 20:45:58Z tobez $
+# $FreeBSD: security/p5-Authen-Radius/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Authen-Radius
 PORTVERSION=	0.23
@@ -31,6 +31,7 @@ RADDBFILES=	dictionary \
 		dictionary.versanet \
 		dictionary.xtradius
 
+NO_STAGE=	yes
 pre-configure:
 	@${RM} ${WRKSRC}/install-radius-db.PL
 	@${PERL} -pi -e 's|/etc/raddb|${DATADIR}|' ${WRKSRC}/Radius.pm
