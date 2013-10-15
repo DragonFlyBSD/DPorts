@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: x11-fonts/charis/Makefile 324287 2013-08-05 20:56:17Z bf $
+# $FreeBSD: x11-fonts/charis/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	CharisSIL
 PORTVERSION=	4.114
@@ -29,6 +29,7 @@ USE_TGZ=	yes	#prevent bsd.xorg.mk from setting USE_BZIP
 PLIST_FILES+=	${FONTROOTDIR:S/${PREFIX}\///}/${FONTDIR}/${PORTNAME}-${type}.ttf
 .endfor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
