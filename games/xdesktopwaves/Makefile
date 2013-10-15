@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xdesktopwaves
-# Date created:        24 February 2005
-# Whom:                ericyu@mail2000.com.tw
-#
-# $FreeBSD: ports/games/xdesktopwaves/Makefile,v 1.4 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: ericyu@mail2000.com.tw
+# $FreeBSD: games/xdesktopwaves/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xdesktopwaves
 PORTVERSION=	1.3
@@ -19,4 +15,5 @@ USE_XORG=	x11 xext
 
 PLIST_FILES=	bin/xdesktopwaves
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
