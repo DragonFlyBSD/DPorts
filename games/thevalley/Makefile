@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis
-# $FreeBSD: games/thevalley/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: games/thevalley/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	thevalley
 PORTVERSION=	0.98
@@ -22,6 +22,7 @@ CXXFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
 
 PLIST_FILES=	bin/valley
 
+NO_STAGE=	yes
 post-configure:
 	${REINPLACE_CMD} \
 		-e 's,^LIBTOOL =.*,LIBTOOL= $$(SHELL) ${LIBTOOL} --silent,' \
