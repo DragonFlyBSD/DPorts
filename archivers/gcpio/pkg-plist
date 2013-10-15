@@ -1,5 +1,6 @@
-@comment $FreeBSD: archivers/gcpio/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+@comment $FreeBSD: archivers/gcpio/pkg-plist 328015 2013-09-23 15:43:51Z naddy $
 bin/gcpio
+man/man1/gcpio.1.gz
 %%NLS%%share/locale/da/LC_MESSAGES/cpio.mo
 %%NLS%%share/locale/de/LC_MESSAGES/cpio.mo
 %%NLS%%share/locale/es/LC_MESSAGES/cpio.mo
