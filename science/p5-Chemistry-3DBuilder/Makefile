@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net
-# $FreeBSD: science/p5-Chemistry-3DBuilder/Makefile 326873 2013-09-10 08:26:53Z az $
+# $FreeBSD: science/p5-Chemistry-3DBuilder/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Chemistry-3DBuilder
 PORTVERSION=	0.10
@@ -29,4 +29,5 @@ USE_PERL5=	configure
 
 MAN3=	Chemistry::3DBuilder.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
