@@ -1,5 +1,5 @@
 # Created by: markm@FreeBSD.org
-# $FreeBSD: mail/exim/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: mail/exim/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}
@@ -19,9 +19,9 @@ LICENSE=	GPLv2
 
 USE_BZIP2=	yes
 WANT_GNOME=	yes
-WANT_PERL=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 # One can tune the following "hidden" knobs:
 # - EXIM_USER: user exim is running as;
 # - EXIM_GROUP: ditto for the group;
@@ -222,7 +222,7 @@ SEDLIST+=	-e 's,^\# (TLS_LIBS=.*-lgnutls[[:space:]]),\1,'
 .endif
 
 .if ${PORT_OPTIONS:MEMBEDDED_PERL}
-USE_PERL5=	yes
+USES+=		perl5
 SEDLIST+=	-e 's,^\# (EXIM_PERL=),\1,'
 .endif
 
@@ -234,7 +234,7 @@ SEDLIST+=	-e 's,XX_TCP_WRAPPERS_LIBS_XX,,'
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USES=		iconv
+USES+=		iconv
 SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,-L${LOCALBASE:S/,/\\,/g}/lib ${ICONV_LIB},' \
 		-e 's,^\# (HAVE_ICONV=),\1,'
 .else
