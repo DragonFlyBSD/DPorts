@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: mail/mailutils/Makefile 323187 2013-07-17 21:38:09Z mandree $
+# $FreeBSD: mail/mailutils/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailutils
 PORTVERSION=	2.2
@@ -42,6 +42,7 @@ GUILE_CONFIGURE_ON=	--with-guile
 GUILE_CONFIGURE_OFF=	--without-guile
 GUILE_LIB_DEPENDS=	guile:${PORTSDIR}/lang/guile
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGDBM}
