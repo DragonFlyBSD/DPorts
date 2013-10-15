@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Base-SVG/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: graphics/p5-Image-Base-SVG/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	Image-Base-SVG
 PORTVERSION=	4
@@ -17,8 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Image::Base::SVG.3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|Image-Base-SVG|Image::Base::SVG|g' ${WRKSRC}/Makefile.PL
