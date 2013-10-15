@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: biology/ruby-bio/Makefile 314532 2013-03-18 06:55:42Z jgh $
+# $FreeBSD: biology/ruby-bio/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	bio
 PORTVERSION=	1.4.1
@@ -21,6 +21,7 @@ OPTIONSFILE=	${PORT_DBDIR}/ruby-${PORTNAME}/options
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
