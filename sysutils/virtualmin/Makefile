@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/virtualmin/Makefile 325439 2013-08-27 12:50:44Z olgeni $
+# $FreeBSD: sysutils/virtualmin/Makefile 329460 2013-10-05 13:48:35Z olgeni $
 
 PORTNAME=	virtualmin
 PORTVERSION=	4.02
@@ -24,11 +24,8 @@ post-extract:
 	@${FIND} ${WRKSRC} -type d -empty | ${XARGS} ${RMDIR}
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/webmin
-	@${MKDIR} ${PREFIX}/etc/webmin/virtual-server
-	@${CP} -r ${WRKSRC} ${PREFIX}/lib/webmin
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/webmin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/webmin/virtual-server
+	${CP} -r ${WRKSRC} ${STAGEDIR}${PREFIX}/lib/webmin
 
 .include <bsd.port.mk>
