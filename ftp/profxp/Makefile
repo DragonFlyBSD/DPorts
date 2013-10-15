@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/profxp/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: ftp/profxp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	profxp
 PORTVERSION=	3p2
@@ -21,6 +21,7 @@ USES=		shebangfix perl5
 SHEBANG_FILES=	profxpv3.pl
 perl_OLD_CMD=	/home/tom/ActivePerl-5.6/bin/perl
 
+NO_STAGE=	yes
 post-patch1:
 	@${REINPLACE_CMD} -i '' '1s|^\#.*|#!${PERL}|' ${WRKSRC}/profxpv3.pl
 
