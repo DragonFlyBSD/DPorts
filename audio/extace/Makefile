@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/extace/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: audio/extace/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	extace
 PORTVERSION=	1.9.9
@@ -13,6 +13,7 @@ COMMENT=	Audio visualization plugin for the X Window System
 LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3
 
 USES=        pathfix pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	esound gnomehier gtk20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
