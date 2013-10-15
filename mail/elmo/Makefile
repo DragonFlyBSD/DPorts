@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/elmo/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: mail/elmo/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.0
@@ -36,6 +36,7 @@ OPTIONS_SUB=	yes
 .if exists(${LOCALBASE}/lib/libgpgme.so) || defined(WITH_GPGME)
 LIB_DEPENDS+=	gpgme.19:${PORTSDIR}/security/gpgme
 .else
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_CMD}
 	@${ECHO_CMD} "Define WITH_GPGME=yes to build with gpgme support."
