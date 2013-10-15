@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-monadcryptorandom/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-monadcryptorandom/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	monadcryptorandom
 PORTVERSION=	0.5.1
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	crypto-api>=0.2 mtl>=2.0 tagged>=0.2 transformers>=0.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
