@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/glade2/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: devel/glade2/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/devel/glade2/Makefile,v 1.20 2007/08/04 03:51:29 marcus Exp $
 
 PORTNAME=	glade
@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	GNOME
 OPTIONS_DEFAULT=GNOME
 GNOME_DESC=	Gnome support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOME}
