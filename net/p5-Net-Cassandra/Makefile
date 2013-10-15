@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Cassandra
-# Date created:		2009-07-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: net/p5-Net-Cassandra/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-Net-Cassandra/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Cassandra
 PORTVERSION=	0.35
@@ -22,4 +18,5 @@ MAN3=		Net::Cassandra.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
