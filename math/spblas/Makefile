@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/spblas/Makefile 315494 2013-03-28 19:25:12Z bf $
+# $FreeBSD: math/spblas/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	spblas
 DISTVERSION=	1_02
@@ -29,6 +29,7 @@ PLIST_FILES=	${HEADERS:S|^|${HDIR}/|} lib/libspblas.a lib/libspblas.so \
 SHLIB_MAJOR=	1
 SRCS=		nist_spblas.cc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPROFILE}
