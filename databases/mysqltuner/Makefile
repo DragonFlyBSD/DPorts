@@ -1,9 +1,5 @@
-# New ports collection makefile for:   mysqltuner
-# Date created:		09 September 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/databases/mysqltuner/Makefile,v 1.8 2012/11/17 05:55:12 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: databases/mysqltuner/Makefile 329005 2013-10-01 22:21:55Z ak $
 
 PORTNAME=	mysqltuner
 PORTVERSION=	1.2.0
@@ -11,28 +7,23 @@ PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/downloads/me-vlad/MySQLTuner-perl/
 
-MAINTAINER=	vlad@vlad.uz.ua
-COMMENT=	A Script Assist You with MySQL Configuration
+MAINTAINER=	fbsd-ports@opsec.eu
+COMMENT=	Assist you with MySQL Configuration
 
 LICENSE=	GPLv3
 
 FETCH_ARGS=	-pRr
-USE_PERL5=	yes
+
+USES=		perl5
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}.pl
 
 PORTDOCS=	README
 
-.include <bsd.port.pre.mk>
 do-install:
-	@${CP} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}.pl
-	@${CHMOD} 755 ${PREFIX}/bin/${PORTNAME}.pl
-	@${ECHO_CMD} '@exec ${CHMOD} 755 ${PREFIX}/bin/${PORTNAME}.pl' \
-		>> ${TMPPLIST}
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${STAGEDIR}${PREFIX}/bin/${PORTNAME}.pl
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
