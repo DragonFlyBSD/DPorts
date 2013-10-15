@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libs11n
-# Date created:         23 Nov 2005
-# Whom:                 aaron@FreeBSD.org
-#
-# $FreeBSD: ports/devel/libs11n/Makefile,v 1.10 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: aaron@FreeBSD.org
+# $FreeBSD: devel/libs11n/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libs11n
 PORTVERSION=	1.2.10
@@ -18,6 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_ZIP=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${PATCHDIR}/Makefile.bsd ${WRKSRC}/Makefile
 
