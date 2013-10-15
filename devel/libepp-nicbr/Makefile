@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: devel/libepp-nicbr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/libepp-nicbr/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libepp-nicbr
 PORTVERSION=	1.13
@@ -32,6 +32,7 @@ PLIST_SUB=	VER="${PORTVERSION}"
 USE_GMAKE=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
