@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: dns/p5-DNS-EasyDNS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-DNS-EasyDNS/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	DNS-EasyDNS
 PORTVERSION=	0.04
@@ -19,6 +19,7 @@ MAN3=	DNS::EasyDNS.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${EXAMPLESDIR}
