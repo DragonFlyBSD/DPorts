@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Tree-Simple-View/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Tree-Simple-View/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tree-Simple-View
 PORTVERSION=	0.17
@@ -26,4 +26,5 @@ MAN3=		Tree::Simple::View.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
