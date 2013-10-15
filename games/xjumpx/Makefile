@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xjumpx
-# Date created:				14 August 2001
-# Whom:					Tatsuya Kuidoh <cdr@ga.xdsl.ne.jp>
-#
-# $FreeBSD: ports/games/xjumpx/Makefile,v 1.10 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Tatsuya Kuidoh <cdr@ga.xdsl.ne.jp>
+# $FreeBSD: games/xjumpx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xjumpx
 PORTVERSION=	1.4
@@ -23,6 +19,7 @@ MANCOMPRESSED=	yes
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xjumpx ${PREFIX}/bin
 	${MKDIR} ${PREFIX}/lib/X11/xjumpx
