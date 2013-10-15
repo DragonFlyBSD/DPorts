@@ -1,9 +1,5 @@
-# New ports collection makefile for: German manpages
-# Date created:         29 September 1997
-# Whom:                 wosch
-#
-# $FreeBSD: ports/german/manpages/Makefile,v 1.26 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: wosch
+# $FreeBSD: german/manpages/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	manpages-de
 PORTVERSION=	0.5
@@ -21,6 +17,7 @@ PLIST=		${WRKSRC}/PLIST
 mandir=		${PREFIX}/man/${LANG}
 manpages=	${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-build:
 	makewhatis ${WRKSRC}/${manpages}
 .if !defined(NO_MANCOMPRESS)
