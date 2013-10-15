@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: ftp/cmdftp/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: ftp/cmdftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	cmdftp
 PORTVERSION=	0.9.8
@@ -16,4 +16,5 @@ MAN1=		${PORTNAME}.1
 
 PLIST_FILES=	bin/cmdftp
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
