@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/py-nzmath/Makefile 314813 2013-03-21 06:56:17Z wen $
+# $FreeBSD: math/py-nzmath/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	nzmath
 PORTVERSION=	1.2.0
@@ -15,6 +15,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	NZMATH
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDATA)
 	${MKDIR} ${DATADIR}
