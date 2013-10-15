@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/swfdec/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: graphics/swfdec/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/swfdec/Makefile,v 1.28 2009/01/01 13:38:17 kwm Exp $
 
 PORTNAME=	swfdec
@@ -27,6 +27,7 @@ PLIST_SUB=	VERSION=${PORTVERSION:R}
 OPTIONS_DEFINE=	PULSEAUDIO
 PULSEAUDIO_DESC="Enable the PulseAudio sound module"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
