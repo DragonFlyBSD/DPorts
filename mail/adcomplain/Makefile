@@ -1,5 +1,5 @@
 # Created by: ache@FreeBSD.org
-# $FreeBSD: mail/adcomplain/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: mail/adcomplain/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	adcomplain
 PORTVERSION=	3.52
@@ -20,6 +20,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/adcomplain
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC}; \
 	${CP} adcomplain.pl adcomplain.pl.old; \
