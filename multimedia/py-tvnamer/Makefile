@@ -1,8 +1,5 @@
-# New ports collection makefile for:	 tvnamer
-# Date created:		Mon Jul 25 02:11:57 UTC 2011
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/py-tvnamer/Makefile,v 1.3 2012/11/17 05:59:53 svnexp Exp $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: multimedia/py-tvnamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	tvnamer
 PORTVERSION=	2.2
@@ -24,4 +21,5 @@ USE_PYDISTUTILS=	easy_install
 PLIST_FILES=	bin/${PORTNAME} \
 		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
