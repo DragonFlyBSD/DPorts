@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI_Lite
-# Date created:				September 30th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: www/p5-CGI_Lite/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: www/p5-CGI_Lite/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Lite
 PORTVERSION=	2.02
@@ -22,6 +18,7 @@ MAN3=		CGI::Lite.3
 DOCS=		CHANGES README TODO
 EXAMPLES=	cookies get_post print upload file post reference
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing docs for ${PKGNAME}"
