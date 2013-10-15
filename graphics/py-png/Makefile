@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: ports/graphics/py-png/Makefile,v 1.3 2012/12/16 07:47:36 svnexp Exp $
+# $FreeBSD: graphics/py-png/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	png
 PORTVERSION=	0.0.13
@@ -17,4 +17,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	pypng
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
