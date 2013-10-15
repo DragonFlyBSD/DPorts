@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/nathive/Makefile 327127 2013-09-13 01:50:09Z amdmi3 $
+# $FreeBSD: graphics/nathive/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	nathive
 PORTVERSION=	0.924
@@ -24,6 +24,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
