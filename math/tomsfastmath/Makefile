@@ -1,4 +1,4 @@
-# $FreeBSD: math/tomsfastmath/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/tomsfastmath/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	tomsfastmath
 PORTVERSION=	0.12
@@ -18,6 +18,7 @@ ALL_TARGET=	default
 
 PLIST_FILES=	include/tfm.h lib/libtfm.a
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "sparc64"
