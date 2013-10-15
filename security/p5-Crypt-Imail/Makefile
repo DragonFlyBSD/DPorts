@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-Imail/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Crypt-Imail/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Imail
 PORTVERSION=	0.01
@@ -17,4 +17,5 @@ MAN3=		Crypt::Imail.3
 
 WRKSRC=		${WRKDIR}/Imail
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
