@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-gsl
-# Date created:		14 February 2002
-# Whom:			Hye-Shik Chang <perky@fallin.lv>
-#
-# $FreeBSD: math/py-gsl/Makefile 325401 2013-08-26 16:06:37Z bf $
-#
+# Created by: Hye-Shik Chang <perky@fallin.lv>
+# $FreeBSD: math/py-gsl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gsl
 PORTVERSION=	0.9.5
@@ -26,4 +22,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	pygsl
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
