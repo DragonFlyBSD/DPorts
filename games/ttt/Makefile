@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ttt
-# Date created:				11 July 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/ttt/Makefile,v 1.13 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/ttt/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ttt
 PORTVERSION=	2011.04
@@ -33,6 +29,7 @@ PORTDOCS=	README
 
 SUB_FILES=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:

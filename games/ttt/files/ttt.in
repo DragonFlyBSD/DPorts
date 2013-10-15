@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/ttt/files/ttt.in,v 1.2 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/ttt/files/ttt.in 304004 2012-09-09 22:08:43Z swills $
 
 echo "Tic Tac Toe: Starting up..."
 cd "%%DATADIR%%"
