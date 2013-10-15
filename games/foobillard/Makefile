@@ -1,5 +1,5 @@
 # Created by: Thomas Vogt <thomas.vogt@bsdunix.ch>
-# $FreeBSD: games/foobillard/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/foobillard/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	foobillard
 PORTVERSION=	3.0a
@@ -17,6 +17,7 @@ OPTIONS_DEFINE=	SDL NVIDIA_BUMPREF
 SDL_DESC=	SDL instead of glut
 NVIDIA_BUMPREF_DESC=	NVidia extensions
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 FREETYPE_CONFIG?=	${LOCALBASE}/bin/freetype-config
