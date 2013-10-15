@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/gnake/Makefile 324943 2013-08-19 05:45:23Z jgh $
+# $FreeBSD: games/gnake/Makefile 328091 2013-09-24 04:28:17Z jgh $
 
 PORTNAME=	gnake
 PORTVERSION=	0.94b
@@ -29,10 +29,10 @@ do-build:
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
