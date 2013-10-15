@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: audio/squeezeboxserver/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: audio/squeezeboxserver/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	squeezeboxserver
 PORTVERSION=	7.5.4
@@ -43,6 +42,7 @@ RUN_DEPENDS+=	p5-DBIx-Class>=0:${PORTSDIR}/databases/p5-DBIx-Class \
 RUN_DEPENDS+=	p5-Package-DeprecationManager>=0.10:${PORTSDIR}/devel/p5-Package-DeprecationManager
 
 USERS=		${SLIMUSER}
+NO_STAGE=	yes
 GROUPS=		${SLIMGROUP}
 USES=		perl5
 
