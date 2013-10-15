@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/pixie/Makefile 323361 2013-07-20 21:34:14Z miwi $
+# $FreeBSD: graphics/pixie/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pixie
 PORTVERSION=	2.2.6
@@ -44,6 +44,7 @@ CFLAGS+=	-fPIC
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
