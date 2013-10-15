@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-NEXUS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: biology/p5-Bio-NEXUS/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	Bio-NEXUS
 PORTVERSION=	0.78
@@ -52,4 +52,5 @@ MAN3=		Bio::NEXUS.3 \
 		Bio::NEXUS::Util::Logger.3 \
 		Bio::NEXUS::WeightSet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
