@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class
 PORTVERSION=	0.08250
@@ -181,6 +181,7 @@ MAN3=		DBIx::Class.3 \
 		SQL::Translator::Parser::DBIx::Class.3 \
 		SQL::Translator::Producer::DBIx::Class::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLT}
