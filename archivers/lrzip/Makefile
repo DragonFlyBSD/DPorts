@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/lrzip/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/lrzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	lrzip
 PORTVERSION=	0.614
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	nasm>=0:${PORTSDIR}/devel/nasm
 LIB_DEPENDS=	lzo2:${PORTSDIR}/archivers/lzo2
 
+NO_STAGE=		yes
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--enable-asm
 GNU_CONFIGURE=	yes
