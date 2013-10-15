@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sgf2tex
-# Date created:				24 August 1999
-# Whom:					spcoltri@unm.edu
-#
-# $FreeBSD: print/sgf2tex/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: spcoltri@unm.edu
+# $FreeBSD: print/sgf2tex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	sgf2tex
 PORTVERSION=	3.3
@@ -23,4 +19,5 @@ MAN1=		sgf2tex.1 sgfsplit.1
 TEX_BIN=	${LOCALBASE}/bin/etex
 MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
