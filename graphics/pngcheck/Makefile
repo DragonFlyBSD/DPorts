@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pngcheck
-# Date created:				Tue 04 Jul 2000
-# Whom:					will
-#
-# $FreeBSD: ports/graphics/pngcheck/Makefile,v 1.16 2012/11/24 19:32:05 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: graphics/pngcheck/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pngcheck
 PORTVERSION=	2.3.0
@@ -19,6 +15,7 @@ MAKE_ARGS=	CC="${CC}" LD="${CC}" CFLAGS="${CFLAGS} -DUSE_ZLIB" LIBS="-lz"
 PORTDOCS=	CHANGELOG README
 PLIST_FILES=	bin/pngcheck
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
