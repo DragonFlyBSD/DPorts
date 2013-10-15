@@ -1,9 +1,5 @@
-# New ports collection makefile for:	splint
-# Date created: 	9 September 1996
-# Whom:			moeding
-#
-# $FreeBSD: ports/devel/splint/Makefile,v 1.31 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: moeding
+# $FreeBSD: devel/splint/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	splint
 PORTVERSION=	3.1.2
@@ -20,6 +16,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		splint.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/src/Headers/constants.h
