@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvs2p4
-# Date created:		2 September 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/cvs2p4/Makefile,v 1.17 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/cvs2p4/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvs2p4
 PORTVERSION=	3.1
@@ -23,6 +19,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 PERFORCE_PORT?=	1666
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's,!!PREFIX!!,${PREFIX},g;' \
