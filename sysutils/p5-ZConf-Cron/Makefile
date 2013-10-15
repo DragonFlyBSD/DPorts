@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-ZConf-Cron
-# Date created:		2009-09-27
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: sysutils/p5-ZConf-Cron/Makefile 326572 2013-09-07 06:13:27Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: sysutils/p5-ZConf-Cron/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ZConf-Cron
 PORTVERSION=	1.1.1
@@ -32,4 +28,5 @@ USE_PERL5=	configure
 MAN3=		ZConf::Cron.3 \
 		ZConf::Cron::GUI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
