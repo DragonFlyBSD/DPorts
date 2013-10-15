@@ -1,4 +1,4 @@
-# $FreeBSD: net/pktanon/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/pktanon/Makefile 328977 2013-10-01 18:02:36Z marino $
 
 PORTNAME=	pktanon
 PORTVERSION=	1.4.0
@@ -12,10 +12,12 @@ COMMENT=	Network trace anonymizer
 LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs \
 		xerces-c.3:${PORTSDIR}/textproc/xerces-c3
 
+USE_DOS2UNIX=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lboost_system
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DATADIR}/profiles
 	(cd ${WRKSRC}/profiles/ && ${COPYTREE_SHARE} \* ${DATADIR}/profiles)
