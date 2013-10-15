@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-demjson
-# Date created:		2008-12-17
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-demjson/Makefile,v 1.5 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-demjson/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	demjson
 PORTVERSION=	1.6
@@ -19,6 +15,7 @@ COMMENT=	Encoder, Decoder, and Lint/Validator for JSON
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
