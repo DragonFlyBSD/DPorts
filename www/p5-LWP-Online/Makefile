@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-LWP-Online
-# Date created:				2011-04-07
-# Whom:					milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: www/p5-LWP-Online/Makefile 326054 2013-09-02 18:41:05Z az $
-#
+# Created by: milki <milki@rescomp.berkeley.edu>
+# $FreeBSD: www/p5-LWP-Online/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LWP-Online
 PORTVERSION=	1.08
@@ -26,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		LWP::Online.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
