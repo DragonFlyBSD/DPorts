@@ -1,4 +1,4 @@
-# $FreeBSD: www/twig/Makefile 305832 2012-10-13 13:39:56Z dinoex $
+# $FreeBSD: www/twig/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	twig
 PORTVERSION=	2.8.3
@@ -13,7 +13,9 @@ COMMENT=	Web Based Email Client and Scheduler
 USE_PHP=	ctype imap openssl pgsql pcre posix session tokenizer xml zlib
 .endif
 
-NO_BUILD=	YES
+NO_STAGE=	yes
+NO_BUILD=	yes
+
 TWIG?=		www/twig
 PLIST_SUB+=	TWIG=${TWIG}
 ROOTFILES=	index.php test.php goto.php
