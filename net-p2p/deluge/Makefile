@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/deluge/Makefile 323220 2013-07-18 10:42:14Z rm $
+# $FreeBSD: net-p2p/deluge/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	deluge
 PORTVERSION=	1.3.6
@@ -38,6 +38,7 @@ MAN1=		deluge.1 deluge-console.1 deluge-gtk.1 deluge-web.1 deluged.1
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # things that happen when PREFIX differs from LOCALBASE
