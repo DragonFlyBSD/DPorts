@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Tmpl/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/p5-Text-Tmpl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Tmpl
 PORTVERSION=	0.33
@@ -15,6 +15,7 @@ USE_PERL5=	configure patch
 
 MAN3=		template_syntax.3 Text::Tmpl.3 template_extend.3
 
+NO_STAGE=	yes
 pre-patch:
 	@${PERL} -pi -e '/OPTIMIZE|libtmpl.pod/ and $$_=""' \
 		${WRKSRC}/Makefile.PL
