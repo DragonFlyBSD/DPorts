@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-IO-Compress-Lzf/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: archivers/p5-IO-Compress-Lzf/Makefile 328783 2013-09-30 12:25:49Z sunpoet $
 
 PORTNAME=	IO-Compress-Lzf
 PORTVERSION=	2.062
@@ -21,7 +21,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		IO::Compress::Lzf.3 IO::Uncompress::UnLzf.3
 
 .include <bsd.port.mk>
