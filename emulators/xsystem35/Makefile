@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: emulators/xsystem35/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/xsystem35/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	xsystem35
 PORTVERSION=	1.7.2
@@ -33,6 +33,7 @@ SUB_FILES=	pkg-message
 
 DOCSDIR=	${PREFIX}/share/doc/ja/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MESOUND}
