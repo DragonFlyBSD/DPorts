@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-bitset
-# Date created:			2007/07/06
-# Whom:				Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/math/pecl-bitset/Makefile,v 1.5 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: math/pecl-bitset/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	bitset
 PORTVERSION=	1.0.1
@@ -19,4 +15,5 @@ COMMENT=	A PECL extension for manipulating bitsets
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
