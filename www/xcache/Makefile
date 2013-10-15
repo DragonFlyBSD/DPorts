@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/xcache/Makefile 316324 2013-04-23 08:49:56Z ale $
+# $FreeBSD: www/xcache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xcache
 DISTVERSION=	3.0.1
@@ -30,6 +30,7 @@ PLIST_DIRSTRY=	lib/php/%%PHP_EXT_DIR%%
 
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCONSTANT}
