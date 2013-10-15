@@ -1,4 +1,4 @@
-# $FreeBSD: mail/chk4mail/Makefile 320835 2013-06-13 19:56:33Z johans $
+# $FreeBSD: mail/chk4mail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	chk4mail
 PORTVERSION=	2.27
@@ -16,4 +16,5 @@ MAN1=		chk4mail.1 chkimap.1
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-imap
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
