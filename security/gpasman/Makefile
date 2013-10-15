@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: security/gpasman/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/gpasman/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gpasman
 PORTVERSION=	1.3.1
@@ -16,6 +16,7 @@ USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	GTKCONFIG="${GTK_CONFIG}"
 
+NO_STAGE=	yes
 do-install:
 	 ${INSTALL_PROGRAM} ${WRKSRC}/src/gpasman ${PREFIX}/bin
 
