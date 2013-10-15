@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pgpoolAdmin
-# Date created:				Apr 10, 2007
-# Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pgpoolAdmin/Makefile,v 1.7 2012/11/17 05:55:18 svnexp Exp $
-#
+# $FreeBSD: databases/pgpoolAdmin/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgpoolAdmin
 PORTVERSION=	3.0.1
@@ -19,6 +14,7 @@ USE_PHP=	mbstring pcre pgsql session
 NO_BUILD=	yes
 PLIST_SUB=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
+NO_STAGE=	yes
 post-extract:
 	${MV} ${WRKSRC}/conf/pgmgt.conf.php ${WRKSRC}/conf/pgmgt.conf.php.sample
 
