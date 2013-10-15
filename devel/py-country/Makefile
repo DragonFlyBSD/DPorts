@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-country/Makefile 322269 2013-07-04 10:14:55Z demon $
+# $FreeBSD: devel/py-country/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	country
 PORTVERSION=	0.16
@@ -17,6 +17,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	pycountry
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
