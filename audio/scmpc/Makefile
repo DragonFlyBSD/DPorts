@@ -1,5 +1,5 @@
 # Created by: Pavel Motyrev <legioner.r@gmail.com>
-# $FreeBSD: audio/scmpc/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/scmpc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	scmpc
 PORTVERSION=	0.3.1
@@ -16,6 +16,7 @@ LIB_DEPENDS=	confuse.0:${PORTSDIR}/devel/libconfuse \
 		curl:${PORTSDIR}/ftp/curl
 
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
