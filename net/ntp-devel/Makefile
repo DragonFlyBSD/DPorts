@@ -1,5 +1,5 @@
 # Created by: andreas
-# $FreeBSD: net/ntp-devel/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: net/ntp-devel/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ntp
 PORTVERSION=	4.2.7p364
@@ -25,6 +25,7 @@ LIB_DEPENDS=	event-2.0:${PORTSDIR}/devel/libevent2
 MAN5=		ntp.conf.5 ntp.keys.5
 MAN8=		ntp-keygen.8 ntpd.8 ntpdc.8 ntpq.8 sntp.8 ntp-wait.8
 
+NO_STAGE=	yes
 .include "Makefile.inc"
 
 .include <bsd.port.options.mk>
