@@ -1,5 +1,5 @@
 # Created by: Petr Holub <hopet@ics.muni.cz>
-# $FreeBSD: ports/ftp/bbftp/Makefile,v 1.5 2012/11/17 05:57:28 svnexp Exp $
+# $FreeBSD: ftp/bbftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	bbftp
 PORTVERSION=	3.0.2
@@ -19,6 +19,7 @@ USE_RC_SUBR=	bbftpd
 
 MAN1=		bbftp.1 bbftpd.1
 
+NO_STAGE=	yes
 do-configure:
 	${CP} -f ${TEMPLATES}/config.guess ${WRKSRC}
 	${CP} -f ${TEMPLATES}/config.sub ${WRKSRC}
