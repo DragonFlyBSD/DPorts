@@ -1,5 +1,5 @@
 # Created by: Jens Rehsack <rehsack@liwing.de>
-# $FreeBSD: devel/php-xdebug/Makefile 325209 2013-08-22 15:47:39Z wg $
+# $FreeBSD: devel/php-xdebug/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	xdebug
 PORTVERSION=	2.2.3
@@ -21,6 +21,7 @@ SUB_FILES=	pkg-message
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
