@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/py-cloudfiles/pkg-plist,v 1.2 2012/11/17 06:00:16 svnexp Exp $
+@comment $FreeBSD: net/py-cloudfiles/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/cloudfiles/__init__.py
 %%PYTHON_SITELIBDIR%%/cloudfiles/__init__.pyc
 %%PYTHON_SITELIBDIR%%/cloudfiles/__init__.pyo
