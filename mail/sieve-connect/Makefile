@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: mail/sieve-connect/Makefile 323933 2013-07-29 23:12:53Z wg $
+# $FreeBSD: mail/sieve-connect/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sieve-connect
 PORTVERSION=	0.86
@@ -23,12 +23,13 @@ RUN_DEPENDS=	p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL \
 		p5-ReadLine-Gnu>=0:${PORTSDIR}/devel/p5-ReadLine-Gnu \
 		p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
 
+USES=		perl5
 USE_BZIP2=	yes
-USE_PERL5=	yes
 PLIST_FILES=	bin/sieve-connect
 
 MAN1=		sieve-connect.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
