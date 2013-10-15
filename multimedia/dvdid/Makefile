@@ -1,5 +1,5 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: ports/multimedia/dvdid/Makefile,v 1.4 2012/11/17 18:51:10 svnexp Exp $
+# $FreeBSD: multimedia/dvdid/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dvdid
 PORTVERSION=	0.2.0a
@@ -12,6 +12,7 @@ COMMENT=	Tool for calculating dvdids
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
