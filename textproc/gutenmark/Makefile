@@ -1,9 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	GutenMark
-# Date created:			Jun 7, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/gutenmark/Makefile,v 1.14 2012/11/17 06:01:57 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: textproc/gutenmark/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	gutenmark
 PORTVERSION=	20090510
@@ -25,6 +21,7 @@ PLIST_FILES=	bin/GutenMark bin/GutenSplit bin/GUItenMark \
 		%%DATADIR%%/convert.jpg %%DATADIR%%/logo.jpg
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|cc|${CC}|g ; \
 		 s|-O3|${CFLAGS}|g ; \
