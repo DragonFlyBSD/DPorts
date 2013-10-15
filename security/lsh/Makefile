@@ -1,5 +1,5 @@
 # Created by: Eric Schwertfeger <eric@cybernut.com>
-# $FreeBSD: security/lsh/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/lsh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	lsh
 PORTVERSION=	2.0.4
@@ -35,6 +35,7 @@ MAN5=		secsh.5 SPKI.5 SHA.5 DSA.5
 MAN8=		sftp-server.8 lshd.8
 INFO=		lsh nettle
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s|M4)|M4) -g|g" ${WRKSRC}/src/nettle/Makefile.in
 
