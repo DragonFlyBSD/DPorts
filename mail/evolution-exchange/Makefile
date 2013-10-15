@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger, based off kiesel's ximian-exchange port
-# $FreeBSD: mail/evolution-exchange/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: mail/evolution-exchange/Makefile 327742 2013-09-20 19:59:12Z bapt $
 #   $MCom: ports/mail/evolution-exchange/Makefile,v 1.172 2012/09/20 23:06:27 kwm Exp $
 
 PORTNAME=	evolution-exchange
@@ -37,6 +37,7 @@ PLIST_SUB=	VERSION=${VERSION} EVO_VERSION=${EVO_VERSION} \
 
 GCONF_SCHEMAS=	apps_exchange_addressbook-${VERSION}.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL) || defined(NO_KERBEROS)
