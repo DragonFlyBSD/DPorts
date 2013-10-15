@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: ports/security/py-ssh/Makefile,v 1.6 2012/11/17 06:01:17 svnexp Exp $
+# $FreeBSD: security/py-ssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ssh
 PORTVERSION=	1.8.0
@@ -17,4 +17,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
