@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tits
-# Date created:				9 February 2001
-# Whom:					Steve Woodford <scw@netbsd.hut.fi>
-#
-# $FreeBSD: ports/comms/tits/Makefile,v 1.13 2012/11/17 05:55:01 svnexp Exp $
-#
+# Created by: Steve Woodford <scw@netbsd.hut.fi>
+# $FreeBSD: comms/tits/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	tits
 PORTVERSION=	1.1.2
@@ -21,6 +17,7 @@ USE_RC_SUBR=	tits
 MAN8=		tits.8
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/tits.8
 

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/comms/tits/files/patch-listener.c,v 1.2 2012/11/17 05:55:01 svnexp Exp $
+$FreeBSD: comms/tits/files/patch-listener.c 300895 2012-07-14 12:56:14Z beat $
 
 --- listener.c.orig
 +++ listener.c

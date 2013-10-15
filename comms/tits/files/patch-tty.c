@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/comms/tits/files/patch-tty.c,v 1.2 2012/11/17 05:55:01 svnexp Exp $
+$FreeBSD: comms/tits/files/patch-tty.c 300895 2012-07-14 12:56:14Z beat $
 
 --- tty.c	2001/04/18 14:43:52	1.1
 +++ tty.c	2001/04/18 14:45:57
