@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/comms/birda/files/patch-Makefile.inc,v 1.2 2012/11/17 05:54:59 svnexp Exp $
+$FreeBSD: comms/birda/files/patch-Makefile.inc 300895 2012-07-14 12:56:14Z beat $
 
 --- Makefile.inc	2002/07/16 17:28:32	1.1
 +++ Makefile.inc	2002/07/16 17:28:40
