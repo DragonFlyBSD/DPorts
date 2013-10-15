@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	txtbdf2ps
-# Date created:			Aug 10, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: print/txtbdf2ps/Makefile 326272 2013-09-04 13:07:40Z az $
-#
+# Created by: ijliao
+# $FreeBSD: print/txtbdf2ps/Makefile 328321 2013-09-25 21:47:31Z ak $
 
 PORTNAME=	txtbdf2ps
 PORTVERSION=	0.7.1
@@ -30,6 +25,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|g' ${WRKSRC}/${DISTNAME}.txt
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}.txt ${PREFIX}/bin/txtbdf2ps
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}.txt ${STAGEDIR}${PREFIX}/bin/txtbdf2ps
 
 .include <bsd.port.mk>
