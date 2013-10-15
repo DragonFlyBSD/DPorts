@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bdfresize
-# Date created:				1 April 2001
-# Whom:					Yoshihiko Sarumaru <mistral@imasy.or.jp>
-#
-# $FreeBSD: ports/x11-fonts/bdfresize/Makefile,v 1.7 2012/11/17 06:03:27 svnexp Exp $
-#
+# Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
+# $FreeBSD: x11-fonts/bdfresize/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	bdfresize
 PORTVERSION=	1.5
@@ -18,4 +14,5 @@ GNU_CONFIGURE=	yes
 MAN1=		bdfresize.1
 PLIST_FILES=	bin/bdfresize
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
