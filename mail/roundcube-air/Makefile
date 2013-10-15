@@ -1,9 +1,5 @@
-# New ports collection makefile for:	air
-# Date created:				Fri 14 Aug 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/mail/roundcube-air/Makefile,v 1.3 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: mail/roundcube-air/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	air
 PORTVERSION=	1.4
@@ -29,6 +25,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKSRC} && ${PAX} -r -w . ${WWWDIR}
