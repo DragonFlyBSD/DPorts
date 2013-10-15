@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: net/toonel/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: net/toonel/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	toonel
 PORTVERSION=	0.0.50.50
@@ -23,6 +23,7 @@ SUB_LIST=	JARNAME=${DISTNAME}${EXTRACT_SUFX}
 
 PLIST_FILES=	bin/${PORTNAME} ${JAVAJARDIR:C,${PREFIX}/?,,}/${DISTNAME}${EXTRACT_SUFX}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${JAVAJARDIR}/
 	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${JAVAJARDIR}/
