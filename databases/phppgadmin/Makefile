@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: databases/phppgadmin/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: databases/phppgadmin/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	phppgadmin
 PORTVERSION=	5.1
@@ -11,6 +11,8 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Web Based Postgres Administration
 
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 USE_BZIP2=	YES
 .if !defined(WITHOUT_PHP_DEPENDS)
