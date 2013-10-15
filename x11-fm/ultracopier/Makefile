@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ultracopier
-# Date created:		Mon Aug  1 01:00:17 UTC 2011
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: x11-fm/ultracopier/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: x11-fm/ultracopier/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	ultracopier
 PORTVERSION=	0.2.0.16
@@ -34,6 +30,7 @@ PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR_WITHOUT_PREFIX:Q} \
 DESKTOPDIR_WITHOUT_PREFIX=	${DESKTOPDIR:S,^${PREFIX}/,,}
 ICONS_DIR=	share/icons/hicolor
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|0\.2\.0\.15|0.2.0.16|; \
