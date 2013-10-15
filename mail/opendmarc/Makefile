@@ -1,5 +1,5 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: mail/opendmarc/Makefile 321980 2013-06-28 19:55:52Z lippe $
+# $FreeBSD: mail/opendmarc/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	opendmarc
 PORTVERSION=	1.1.3
@@ -29,6 +29,7 @@ MAN5=		opendmarc.conf.5
 MAN8=		opendmarc-check.8 opendmarc-expire.8 opendmarc-import.8 \
 		opendmarc-params.8 opendmarc-reports.8 opendmarc.8
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${PREFIX}/etc/mail
 	${INSTALL_DATA} \
