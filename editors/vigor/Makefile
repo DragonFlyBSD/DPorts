@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: editors/vigor/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/vigor/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	vigor
 PORTVERSION=	0.016
@@ -25,6 +25,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR}
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|tcl80|tcl${TCL_VER:S/.//}|; \
 		s|tk80|tk${TK_VER:S/.//}|; \
