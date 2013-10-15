@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: net/nbd-server/Makefile 317110 2013-05-02 13:14:54Z pawel $
+# $FreeBSD: net/nbd-server/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nbd
 PORTVERSION=	3.3
@@ -25,4 +25,5 @@ MAN8=		nbd-client.8
 regression-test: build
 		cd ${WRKSRC} && ${MAKE} check
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
