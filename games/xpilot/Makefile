@@ -1,5 +1,5 @@
 # Created by: jmacd
-# $FreeBSD: games/xpilot/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xpilot/Makefile 329380 2013-10-04 20:36:55Z lme $
 
 PORTNAME=	xpilot
 PORTVERSION=	4.5.5
@@ -11,8 +11,6 @@ COMMENT=	Xpilot(client) and xpilots(server)
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xext
-MAN6=		xpilot.6 xpilots.6 xp-mapedit.6 xp-replay.6
-USE_GCC=	any
 USES=		imake
 
 .include <bsd.port.mk>
