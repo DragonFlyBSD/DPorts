@@ -1,9 +1,5 @@
-# New ports collection makefile for:   colortail
-# Date created:                25 February 1999
-# Whom:                        Chris Piazza <cpiazza@FreeBSD.org>
-#
-# $FreeBSD: misc/colortail/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Chris Piazza <cpiazza@FreeBSD.org>
+# $FreeBSD: misc/colortail/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	colortail
 PORTVERSION=	0.3.3
@@ -16,6 +12,7 @@ COMMENT=	A colour-able replacement for tail(1)
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${EXAMPLESDIR}
