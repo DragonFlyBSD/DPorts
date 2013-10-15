@@ -1,5 +1,5 @@
 # Created by: marcus
-# $FreeBSD: misc/gone/Makefile 319758 2013-06-03 07:40:32Z jgh $
+# $FreeBSD: misc/gone/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gone
 PORTVERSION=	1.3.6
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 OPTIONS_DEFINE=	SETUID
 SETUID_DESC=	Install gone setuid root for password support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
