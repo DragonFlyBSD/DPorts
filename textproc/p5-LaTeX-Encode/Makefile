@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-Encode/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-LaTeX-Encode/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	LaTeX-Encode
 PORTVERSION=	0.08
@@ -20,4 +20,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 MAN1=	latex-encode.1
 MAN3=	LaTeX::Encode.3 LaTeX::Encode::EncodingTable.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
