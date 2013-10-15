@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars@eggert.org>
-# $FreeBSD: net/tcpsplit/Makefile 317242 2013-05-03 20:39:58Z antoine $
+# $FreeBSD: net/tcpsplit/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpsplit
 PORTVERSION=	0.2
@@ -14,6 +14,7 @@ LICENSE=	MIT
 PLIST_FILES=	bin/tcpsplit
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E '/^(CC|CFLAGS|INC|LD)/d' ${WRKSRC}/Makefile
 
