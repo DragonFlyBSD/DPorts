@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/gnustep-wrapper/Makefile,v 1.12 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: deskutils/gnustep-wrapper/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	wrapper
 PORTVERSION=	0.1.0
@@ -25,6 +25,7 @@ ADDITIONAL_LIB_DIRS+=	-L${WRKSRC}/libGSWrapper/obj
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 MAKE_FLAGS+=	debug=no
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|cp -u|#cp -p|' \
 		${WRKSRC}/WrapperFactory/GNUmakefile.postamble
