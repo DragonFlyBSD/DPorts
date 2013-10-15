@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: irc/cwirc/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: irc/cwirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	cwirc
 PORTVERSION=	2.0.0
@@ -17,6 +17,7 @@ BUILD_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
 
 USES=		pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' \
