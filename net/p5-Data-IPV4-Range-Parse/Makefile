@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-IPV4-Range-Parse
-# Date created:		2010-11-10
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: net/p5-Data-IPV4-Range-Parse/Makefile 326384 2013-09-05 11:09:23Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-Data-IPV4-Range-Parse/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Data-IPV4-Range-Parse
 PORTVERSION=	1.05
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::IPV4::Range::Parse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
