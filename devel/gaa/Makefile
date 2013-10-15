@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gaa
-# Date created:		2 February 1999
-# Whom:			Dima Sivachenko <dima@chg.ru>
-#
-# $FreeBSD: ports/devel/gaa/Makefile,v 1.10 2012/11/17 05:55:43 svnexp Exp $
-#
+# Created by: Dima Sivachenko <dima@chg.ru>
+# $FreeBSD: devel/gaa/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	gaa
 PORTVERSION=	1.6.6
