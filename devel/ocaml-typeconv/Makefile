@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ocaml-typeconv/Makefile 309294 2012-12-20 05:51:59Z araujo $
+# $FreeBSD: devel/ocaml-typeconv/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	type-conv
 PORTVERSION=	108.07.00
@@ -27,6 +27,7 @@ MAKE_JOBS_UNSAFE=yes
 DOCSDIR=	${OCAML_DOCSDIR}/${PORTNAME:S,-,_,}
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
