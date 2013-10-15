@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kdiff3
-# Date created:		2003/01/03
-# Whom:			Heiner Eichmann <h.eichmann@gmx.de>
-#
-# $FreeBSD: textproc/kdiff3/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Heiner Eichmann <h.eichmann@gmx.de>
+# $FreeBSD: textproc/kdiff3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	kdiff3
 PORTVERSION=	0.9.95
@@ -18,6 +14,7 @@ USE_KDE4=	kdelibs libkonq kdeprefix kdehier automoc4
 USES=		cmake gettext
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 
+NO_STAGE=	yes
 post-patch:
 #Fix build with kdelibs>=4.5.0
 	${REINPLACE_CMD} -e 's,V4.1.2-Based,V4.2-Based,g' \
