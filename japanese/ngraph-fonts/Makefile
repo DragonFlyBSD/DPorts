@@ -1,9 +1,5 @@
-# Ports collection makefile for: Japanese Font Setup for math/ngraph
-# Date created:		6 December 1999
-# Whom:			Yoshiro MIHIRA <sanpei@jp.FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/ngraph-fonts/Makefile,v 1.13 2012/11/17 05:58:37 svnexp Exp $
-#
+# Created by: Yoshiro MIHIRA <sanpei@jp.FreeBSD.org>
+# $FreeBSD: japanese/ngraph-fonts/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ngraph-fonts
 PORTVERSION=	1.0
@@ -27,4 +23,5 @@ NO_BUILD=	yes
 
 do-install:	# empty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
