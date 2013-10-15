@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-webkit/Makefile 326995 2013-09-11 17:17:35Z antoine $
+# $FreeBSD: www/hs-webkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webkit
 PORTVERSION=	0.12.4
@@ -14,5 +14,6 @@ USES=		pkgconfig
 USE_CABAL=	cairo>=0.12 glib>=0.12 gtk>=0.12 mtl pango>=0.12
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/webkit-1.0.pc:${PORTSDIR}/www/webkit-gtk2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
