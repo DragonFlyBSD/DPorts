@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-locale
-# Date created:		11 February 2009
-# Whom:			stas
-#
-# $FreeBSD: devel/ruby-locale2/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: stas
+# $FreeBSD: devel/ruby-locale2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	locale2
 PORTVERSION=	2.0.5
@@ -22,6 +18,7 @@ CONFLICTS=	${PKGNAMEPREFIX}locale-[0-9]*
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODDOCDIR}/
