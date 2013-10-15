@@ -1,5 +1,5 @@
 # Created by: Serge Gagnon <serge.gagnon.1@ulaval.ca>
-# $FreeBSD: devel/cvsdadm/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: devel/cvsdadm/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsdadm
 PORTVERSION=	0.3.2
@@ -26,6 +26,7 @@ PLIST_FILES=	bin/cvsdadm
 
 MAN1=	cvsdadm.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
