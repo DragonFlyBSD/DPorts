@@ -1,5 +1,5 @@
 # Created by: Michael Ranner <michael@ranner.eu>
-# $FreeBSD: textproc/pdfgrep/Makefile 326071 2013-09-02 20:02:01Z bapt $
+# $FreeBSD: textproc/pdfgrep/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pdfgrep
 PORTVERSION=	1.3.0
@@ -21,4 +21,5 @@ CONFIGURE_ARGS=	poppler_CFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/po
 PLIST_FILES=	bin/pdfgrep
 MAN1=		pdfgrep.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
