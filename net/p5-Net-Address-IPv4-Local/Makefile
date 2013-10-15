@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Address-IPv4-Local/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: net/p5-Net-Address-IPv4-Local/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Address-IPv4-Local
 PORTVERSION=	0.12
@@ -18,4 +18,5 @@ MAN3=	Net::Address::IPv4::Local.3
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
