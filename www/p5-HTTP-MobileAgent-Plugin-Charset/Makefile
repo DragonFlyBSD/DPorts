@@ -1,9 +1,4 @@
-# New ports collection makefile for:	HTTP::MobileAgent::Plugin::Charset
-# Date created:		20 Feb 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Charset/Makefile 327283 2013-09-14 13:38:20Z az $
-#
+# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Charset/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-MobileAgent-Plugin-Charset
 PORTVERSION=	0.04
@@ -23,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=	HTTP::MobileAgent::Plugin::Charset.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
