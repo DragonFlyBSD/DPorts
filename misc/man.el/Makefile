@@ -1,9 +1,5 @@
-# New ports collection makefile for:	man.el with I18N
-# Date created:		10 September 1998
-# Whom:			KIRIYAMA Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-#
-# $FreeBSD: ports/misc/man.el/Makefile,v 1.19 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: KIRIYAMA Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
+# $FreeBSD: misc/man.el/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	i18n-man
 PORTVERSION=	1.1
@@ -22,6 +18,7 @@ ELISPDIR=	${PREFIX}/share/emacs/site-lisp
 SITEPKGDIR=	${PREFIX}/lib/xemacs/site-packages
 PKGMODULES=	i18n-man-de i18n-man-en i18n-man-ja
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ELISPDIR} ${PREFIX}/share/doc/i18n-man
 	@cd ${WRKSRC}; \
