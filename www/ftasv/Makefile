@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ftasv
-# Date created:		2009-10-26
-# Whom:			Sylvio Cesar Teixeira <sylvio@FreeBSD.org>
-#
-# $FreeBSD: ports/www/ftasv/Makefile,v 1.8 2012/11/17 06:02:33 svnexp Exp $
-#
+# Created by: Sylvio Cesar Teixeira <sylvio@FreeBSD.org>
+# $FreeBSD: www/ftasv/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ftasv
 PORTVERSION=	0.9.2
@@ -22,6 +18,7 @@ SUB_FILES=	pkg-message
 
 PORTDOCS=	AUTHORS COPYING ChangeLog README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 700000
