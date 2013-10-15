@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: www/igal2/Makefile 327283 2013-09-14 13:38:20Z az $
+# $FreeBSD: www/igal2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	igal2
 PORTVERSION=	2.1
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 MAN1=		igal2.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXIF}
