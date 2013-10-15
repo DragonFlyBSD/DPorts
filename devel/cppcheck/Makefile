@@ -1,5 +1,5 @@
 # Created by: Gabor Pali <pgj@FreeBSD.org>
-# $FreeBSD: devel/cppcheck/Makefile 324407 2013-08-08 18:10:37Z bf $
+# $FreeBSD: devel/cppcheck/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cppcheck
 PORTVERSION=	1.61
@@ -29,6 +29,7 @@ RULES_DESC=		User-defined rule support (requires PCRE)
 
 PLIST_FILES=	bin/cppcheck
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
