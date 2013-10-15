@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MediaWiki-API
-# Date created:		23.09.2008
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: www/p5-MediaWiki-API/Makefile 325984 2013-09-02 12:52:42Z az $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: www/p5-MediaWiki-API/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MediaWiki-API
 PORTVERSION=	0.39
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		MediaWiki::API.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
