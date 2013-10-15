@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/cronolog-devel/Makefile,v 1.4 2012/11/17 06:01:27 svnexp Exp $
+# $FreeBSD: sysutils/cronolog-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cronolog
 PORTVERSION=	1.7.0
@@ -21,4 +21,5 @@ MAN1=		cronolog.1m cronosplit.1m
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
