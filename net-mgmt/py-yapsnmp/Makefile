@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-yapsnmp
-# Date created:				2005-01-07
-# Whom:					arved
-#
-# $FreeBSD: ports/net-mgmt/py-yapsnmp/Makefile,v 1.22 2012/11/17 06:00:36 svnexp Exp $
+# Created by: arved
+# $FreeBSD: net-mgmt/py-yapsnmp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	yapsnmp
 PORTVERSION=	0.7.8
@@ -27,6 +24,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${PYTHON_INCLUDEDIR}
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--enable-site-packages-prefix=${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if (${OSVERSION} >= 800000) && (${ARCH} == "i386")
