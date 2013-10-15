@@ -1,5 +1,5 @@
 # Created by: crwhipp@gmail.com
-# $FreeBSD: astro/foxtrotgps/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/foxtrotgps/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	foxtrotgps
 PORTVERSION=	1.1.1
@@ -16,6 +16,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		gps:${PORTSDIR}/astro/gpsd
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 USES=		gettext gmake pkgconfig shebangfix
 SHEBANG_FILES=	contrib/convert2gpx \
 		contrib/convert2osm \
