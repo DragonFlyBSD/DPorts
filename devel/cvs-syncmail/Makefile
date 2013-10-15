@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvs-syncmail
-# Date created:				13 August 2007
-# Whom:					Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/cvs-syncmail/Makefile,v 1.4 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: devel/cvs-syncmail/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvs-syncmail
 PORTVERSION=	2.1
@@ -26,6 +22,7 @@ USE_PYTHON=	2.0+
 
 PLIST_FILES=	bin/${DISTNAME}
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
