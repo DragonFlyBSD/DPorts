@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: net/ip6_int/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net/ip6_int/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ip6_int
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	ip6_int
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
