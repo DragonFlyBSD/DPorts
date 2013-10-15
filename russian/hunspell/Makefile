@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: ports/russian/hunspell/Makefile,v 1.11 2013/01/28 15:56:51 svnexp Exp $
+# $FreeBSD: russian/hunspell/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20120501
@@ -20,6 +19,7 @@ PLIST_FILES=	%%DATADIR%%/ru_RU.aff \
 		%%DATADIR%%/ru_RU.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/ru_RU.aff ${WRKSRC}/ru_RU.dic ${DATADIR}/
