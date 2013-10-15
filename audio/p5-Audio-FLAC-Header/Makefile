@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/p5-Audio-FLAC-Header/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: audio/p5-Audio-FLAC-Header/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Audio-FLAC-Header
 PORTVERSION=	2.4
@@ -14,6 +14,7 @@ COMMENT=	Interface to FLAC header metadata
 LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 CFLAGS+=	-I${LOCALBASE}/include
 
