@@ -1,5 +1,5 @@
 # Created by: Thomas Seck <tmseck@netcologne.de>
-# $FreeBSD: mail/usendmail/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/usendmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	usendmail
 PORTVERSION=	0.1.6
@@ -19,6 +19,7 @@ PORTDOCS=	NEWS README
 SUB_FILES=	pkg-message
 SUB_LIST=	QMAIL_PREFIX=${QMAIL_PREFIX}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/var/qmail,${QMAIL_PREFIX},' \
 	    ${WRKSRC}/src/usendmail.c
