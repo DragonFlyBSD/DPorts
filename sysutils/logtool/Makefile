@@ -1,9 +1,5 @@
-# New ports collection makefile for:	logtool
-# Date created:			Dec 30, 2000
-# Whom:				Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/sysutils/logtool/Makefile,v 1.26 2012/11/17 06:01:37 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
+# $FreeBSD: sysutils/logtool/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	logtool
 PORTVERSION=	1.3.1
@@ -23,6 +19,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 MAN1=		logtool.1
 DOCS=		CHANGES CREDITS README TODO doc/logtool.txt
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}/src && ${GMAKE} INCLUDES="${CPPFLAGS}"
 
