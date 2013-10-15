@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/dns/zonecheck/Makefile,v 1.19 2013/01/09 20:04:41 svnexp Exp $
+# $FreeBSD: dns/zonecheck/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	zonecheck
 PORTVERSION=	3.0.5
@@ -31,6 +31,7 @@ OPTIONS_DEFAULT=
 
 CGI_DESC=	Install with CGI support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 ZONECHECK_TARGET=	common cli

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/dns/zonecheck/pkg-plist,v 1.9 2012/11/17 05:57:11 svnexp Exp $
+@comment $FreeBSD: dns/zonecheck/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/zonecheck
 etc/zonecheck-dist/de.profile
 etc/zonecheck-dist/default.profile
