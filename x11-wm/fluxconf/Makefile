@@ -1,5 +1,5 @@
 # Created by: hendrik@scholz.net
-# $FreeBSD: x11-wm/fluxconf/Makefile 326989 2013-09-11 15:53:29Z bsam $
+# $FreeBSD: x11-wm/fluxconf/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	fluxconf
 PORTVERSION=	0.9.9
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/fluxbare bin/fluxconf bin/fluxkeys bin/fluxmenu \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
