@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-clamav
-# Date created:				26 Dec 2004
-# Whom:					Marcus Alves Grando <mnag@FreeBSD.org>
-#
-# $FreeBSD: ports/security/py-clamav/Makefile,v 1.17 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Marcus Alves Grando <mnag@FreeBSD.org>
+# $FreeBSD: security/py-clamav/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	clamav
 PORTVERSION=	0.4.1
@@ -30,6 +26,7 @@ EXAMPLESDIR?=	${PREFIX}/share/examples/py-${PORTNAME}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
