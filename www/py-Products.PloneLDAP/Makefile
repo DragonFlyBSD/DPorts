@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-Products.PloneLDAP
-# Date created:				20 May 2012
-# Whom:					Lawrence Stewart <lstewart@freebsd.org>
-#
-# $FreeBSD: ports/www/py-Products.PloneLDAP/Makefile,v 1.2 2012/11/17 06:02:58 svnexp Exp $
-#
+# Created by: Lawrence Stewart <lstewart@FreeBSD.org>
+# $FreeBSD: www/py-Products.PloneLDAP/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.PloneLDAP
 PORTVERSION=	1.1
@@ -21,6 +17,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.LDAPMultiPlugins>=1.10:${PORTSDIR}/
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
