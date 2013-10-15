@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: math/p5-Math-Random-OO/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/p5-Math-Random-OO/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Random-OO
 PORTVERSION=	0.21
@@ -24,4 +24,5 @@ MAN3=	Math::Random::OO.3 \
 	Math::Random::OO::Uniform.3 \
 	Math::Random::OO::UniformInt.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
