@@ -1,4 +1,4 @@
-# $FreeBSD: devel/kdevelop-php/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/kdevelop-php/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdevelop-php
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 PHPDOCS_DESC=	Integrate with PHP.net documentation
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHPDOCS}
