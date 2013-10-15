@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/moagg/Makefile,v 1.5 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: games/moagg/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	moagg
 PORTVERSION=	1.95b
@@ -30,6 +30,7 @@ PORTDATA=	*
 PORTDOCS=	AUTHORS README.txt
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch-script:
