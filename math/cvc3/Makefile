@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: math/cvc3/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: math/cvc3/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	cvc3
 PORTVERSION=	2.4.1
@@ -18,13 +18,10 @@ CONFIGURE_ARGS=	--enable-dynamic \
 		--with-extra-libs=${LOCALBASE}/lib
 CXXFLAGS+=	-fPIC
 GNU_CONFIGURE=	yes
-USES=		bison
-USE_GMAKE=	yes
+USES=		bison gmake perl5
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 
-.include <bsd.port.pre.mk>
-
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/bin/bash,/bin/sh,' ${WRKSRC}/Makefile.std
 	${REINPLACE_CMD} -e 's,.*$$(LDCONFIG).*,,' ${WRKSRC}/src/Makefile
@@ -33,4 +30,4 @@ post-patch:
 post-install:
 	${INSTALL_PROGRAM} `readlink ${WRKSRC}/bin/cvc3` ${PREFIX}/bin
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
