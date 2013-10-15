@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-DateTime-Calendar-Japanese/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-DateTime-Calendar-Japanese/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Calendar-Japanese
 PORTVERSION=	0.06001
@@ -32,4 +32,5 @@ USE_PERL5=	configure
 
 MAN3=		DateTime::Calendar::Japanese.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
