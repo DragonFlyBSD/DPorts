@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: databases/pgsphere/Makefile 325359 2013-08-25 16:16:32Z sunpoet $
+# $FreeBSD: databases/pgsphere/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgsphere
 PORTVERSION=	1.1.1
@@ -26,6 +26,7 @@ PLIST_FILES=	lib/postgresql/pg_sphere.so \
 		%%DATADIR%%/contrib/pg_sphere.sql
 PLIST_DIRSTRY=	%%DATADIR%%/contrib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
