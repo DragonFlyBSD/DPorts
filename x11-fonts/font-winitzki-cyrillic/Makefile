@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-winitzki-cyrillic/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/font-winitzki-cyrillic/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	font-winitzki-cyrillic
 PORTVERSION=	1.0.3
@@ -10,4 +10,5 @@ COMMENT=	X.Org Winitzki Cyrillic font
 
 XORG_CAT=	font
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
