@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: mail/qmhandle/Makefile 322321 2013-07-05 12:46:45Z bdrewery $
+# $FreeBSD: mail/qmhandle/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	qmhandle
 PORTVERSION=	1.3.2
@@ -14,10 +14,10 @@ LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	DOCS
 
-USES=		qmail:run
+USES=		qmail:run perl5
 
+NO_STAGE=	yes
 NO_BUILD=	yes
-USE_PERL5=	yes
 USE_BZIP2=	yes
 
 PORTDOCS=	HISTORY README
