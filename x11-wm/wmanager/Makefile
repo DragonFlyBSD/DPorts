@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: x11-wm/wmanager/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: x11-wm/wmanager/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	wmanager
 PORTVERSION=	0.2.1
@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	ADDONS
 OPTIONS_DEFAULT=ADDONS
 ADDONS_DESC=	Install the helper scripts and manpages
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MADDONS}
