@@ -1,8 +1,5 @@
-# New ports collection makefile for:	arcconf
-# Date created:				28 October 2007
-# Whom:					michael@fuckner.net
-#
-# $FreeBSD: ports/sysutils/arcconf/Makefile,v 1.14 2012/11/17 06:01:25 svnexp Exp $
+# Created by: michael@fuckner.net
+# $FreeBSD: sysutils/arcconf/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	arcconf
 DISTVERSION=	v7_30_18837
@@ -23,6 +20,7 @@ SUB_FILES+=	${PERIODICSCRIPT}
 RESTRICTED=	May not be redistributed in binary form
 NO_CDROM=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 800000
