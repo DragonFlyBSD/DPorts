@@ -1,9 +1,5 @@
-# New ports collection makefile for:    fftpack
-# Date created:         31 October 1996
-# Whom:			Pedro Giffuni S.
-#
-# $FreeBSD: ports/math/bihar/Makefile,v 1.29 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: Pedro Giffuni S.
+# $FreeBSD: math/bihar/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	bihar
 PORTVERSION=	1.0
@@ -42,6 +38,7 @@ COMMENT=	Biharmonic equation in rectangular geometry and polar coordinates
 
 LIB_DEPENDS=	linpack.3:${PORTSDIR}/math/linpack
 
+NO_STAGE=	yes
 NO_WRKSUBDIR=	yes
 USE_LDCONFIG=	yes
 USE_FORTRAN=	yes
