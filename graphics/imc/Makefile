@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: graphics/imc/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: graphics/imc/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imc
 PORTVERSION=	4.3
@@ -34,6 +34,7 @@ DOC_FILES2=	*.html *.ref *.txt
 
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
