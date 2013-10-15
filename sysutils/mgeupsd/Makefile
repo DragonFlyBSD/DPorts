@@ -1,5 +1,5 @@
 # Created by: Andreas Dobloug <andreasd@@ifi.uio.no>
-# $FreeBSD: sysutils/mgeupsd/Makefile 319252 2013-05-27 15:09:38Z bsam $
+# $FreeBSD: sysutils/mgeupsd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=		mgeupsd
 PORTVERSION=		0.3
@@ -18,6 +18,7 @@ PLIST_FILES=		sbin/mgeupsd sbin/powerhandler etc/rc.d/mgeupsd.sh
 MAN8=			mgeupsd.8
 SUB_FILES=		pkg-message
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e '/^CC=/s:gcc:${CC}:' \
 			-e '/^CFLAGS=/s:-Wall -O2:${CFLAGS}:' ${WRKSRC}/Makefile
