@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: devel/acme/Makefile 324299 2013-08-06 01:57:26Z jgh $
+# $FreeBSD: devel/acme/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	acme
 PORTVERSION=	091
@@ -34,6 +34,7 @@ PLIST_DIRSTRY=	%%DATADIR%%/6502 \
 		%%DATADIR%%/Own \
 		%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
