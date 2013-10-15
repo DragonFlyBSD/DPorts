@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-B-Deobfuscate/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-B-Deobfuscate/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	B-Deobfuscate
 PORTVERSION=	0.20
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		B::Deobfuscate.3 B::Deobfuscate::Dict::Flowers.3 B::Deobfuscate::Dict::PGPHashWords.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
