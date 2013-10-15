@@ -1,9 +1,8 @@
-# $FreeBSD: ports/www/baikal/Makefile,v 1.3 2013/01/23 21:58:53 svnexp Exp $
-# Created by:	Adam Weinberger <adamw@FreeBSD.org>
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: www/baikal/Makefile 329197 2013-10-03 14:19:44Z mat $
 
 PORTNAME=		baikal
-PORTVERSION=	0.2.4
-PORTREVISION=	2
+PORTVERSION=	0.2.6
 CATEGORIES=		www
 MASTER_SITES=	http://baikal-server.com/get/
 DISTNAME=		${PORTNAME}-regular-${PORTVERSION}
@@ -11,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=		adamw@FreeBSD.org
 COMMENT=		Lightweight CalDAV/CardDAV server
+
+LICENSE=		GPLv3
 
 USE_PHP=		ctype filter xml pdo_sqlite session mbstring dom
 
@@ -34,33 +35,29 @@ post-patch:
 	${CHMOD} 644 ${WRKSRC}/Specific/db/db.sqlite-dist
 # I can't decide whether to include this file or forbid it.
 #	${ECHO_CMD} "platypus" > ${WRKSRC}/Specific/ENABLE_INSTALL
-	${RM} ${WRKSRC}/Specific/ENABLE_INSTALL
+	${RM} -f ${WRKSRC}/Specific/ENABLE_INSTALL
 	${REINPLACE_CMD} -e 's,/var/www/dav.mydomain.com,${WWWDIR},g' \
 		${WRKSRC}/Specific/virtualhosts/baikal.*
 
 do-install:
-	${MKDIR} ${WWWDIR}
-.for DIR in Core html
+	${MKDIR} ${STAGEDIR}${WWWDIR}
+.for DIR in Core html vendor
 	cd ${WRKSRC} && ${FIND} ${DIR} | \
-		${CPIO} -pdmu -R ${BINOWN}:${BINGRP} --quiet ${WWWDIR}
+		${CPIO} -pdmu -R ${BINOWN}:${BINGRP} --quiet ${STAGEDIR}${WWWDIR}
 .endfor
 	cd ${WRKSRC} && ${FIND} Specific -not -path '*/virtualhosts*' | \
-		${CPIO} -pdmu -R ${WWWOWN}:${WWWGRP} --quiet ${WWWDIR}
-
+		${CPIO} -pdmu -R ${WWWOWN}:${WWWGRP} --quiet ${STAGEDIR}${WWWDIR}
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR} ${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in INSTALL.md LICENSE.txt README.md TROUBLESHOOTING.md
-	${INSTALL_DATA} ${WRKSRC}/$f ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/$f ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 .for f in apache2 nginx
-	${INSTALL_DATA} ${WRKSRC}/Specific/virtualhosts/baikal.$f ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/Specific/virtualhosts/baikal.$f ${STAGEDIR}${EXAMPLESDIR}
 .endfor
 .endif
-
-post-install:
-	@${SH} ${PKGINSTALL} POST-INSTALL
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
