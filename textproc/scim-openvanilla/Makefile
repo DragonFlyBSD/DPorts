@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: textproc/scim-openvanilla/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/scim-openvanilla/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scim-openvanilla
 PORTVERSION=	0.7.2.20070514
@@ -29,4 +29,5 @@ PLIST_FILES=	lib/scim-1.0/1.4.0/IMEngine/OVLoader-SCIM.a	\
 		lib/scim-1.0/1.4.0/IMEngine/OVLoader-SCIM.la	\
 		lib/scim-1.0/1.4.0/IMEngine/OVLoader-SCIM.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
