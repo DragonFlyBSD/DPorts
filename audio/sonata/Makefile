@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/sonata/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: audio/sonata/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	sonata
 PORTVERSION=	1.6.2.1
@@ -15,6 +15,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpd>=0.2.0:${PORTSDIR}/audio/py-mpd
 
 USES=		gettext pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
