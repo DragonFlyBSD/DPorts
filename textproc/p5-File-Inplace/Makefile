@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: textproc/p5-File-Inplace/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/p5-File-Inplace/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	File-Inplace
 PORTVERSION=	0.20
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Inplace.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
