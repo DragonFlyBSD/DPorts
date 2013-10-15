@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: ftp/urlgfe/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: ftp/urlgfe/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	urlgfe
 PORTVERSION=	0.7.1
@@ -21,6 +21,7 @@ USE_DOS2UNIX=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgnomehier}!=""
