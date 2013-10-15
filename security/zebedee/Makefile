@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zebedee
-# Date created:		4 January 2000
-# Whom:			Greg Hewgill <greg@hewgill.com>
-#
-# $FreeBSD: security/zebedee/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Greg Hewgill <greg@hewgill.com>
+# $FreeBSD: security/zebedee/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	zebedee
 PORTVERSION=	2.5.3
@@ -26,6 +22,7 @@ EXAMPLES=	vncviewer.zbd vncserver.zbd server.key server.id client1.key \
 		client2.key clients.id
 DOCS=		README.txt LICENCE.txt CHANGES.txt zebedee.html ftpgw.tcl.html
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's| gcc| ${CC}|' \
