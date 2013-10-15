@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-simpy/Makefile 318650 2013-05-21 07:09:46Z jgh $
+# $FreeBSD: devel/py-simpy/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	simpy
 PORTVERSION=	2.3.1
@@ -22,6 +22,7 @@ TKINTER_DESC=	py-tkinter for plot
 
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
