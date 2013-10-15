@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	libecc
-# Date created:			Oct 29, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/libecc/Makefile,v 1.21 2012/11/17 06:01:06 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/libecc/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libecc
 PORTVERSION=	0.14.0
