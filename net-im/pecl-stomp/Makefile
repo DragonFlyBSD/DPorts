@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: ports/net-im/pecl-stomp/Makefile,v 1.7 2013/02/04 09:53:05 svnexp Exp $
+# $FreeBSD: net-im/pecl-stomp/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	stomp
 PORTVERSION=	1.0.5
@@ -15,4 +15,5 @@ USE_PHP=	yes
 USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
