@@ -1,5 +1,5 @@
 # Created by: Thomas E. Zander with help from Vladimir Kushnir
-# $FreeBSD: multimedia/mplayer/Makefile 326088 2013-09-02 20:51:40Z bapt $
+# $FreeBSD: multimedia/mplayer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mplayer
 PORTVERSION=	${MPLAYER_PORT_VERSION}
@@ -7,6 +7,7 @@ PORTREVISION=	0
 
 COMMENT=	High performance media player supporting many formats
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.shared"
 
 OPTIONS_DEFINE= AALIB AMR_NB AMR_WB BLURAY CACA DEBUG DV \
