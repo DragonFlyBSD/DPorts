@@ -1,5 +1,5 @@
 # Created by: Mij <mij@bitchx.it>
-# $FreeBSD: mail/vmailmgr/Makefile 327311 2013-09-14 18:12:50Z az $
+# $FreeBSD: mail/vmailmgr/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	vmailmgr
 PORTVERSION=	0.97
@@ -29,6 +29,7 @@ AUTOMAKE_ARGS+=		--add-missing -Wno-portability
 OPTIONS_DEFINE=		PYTHONLIBS
 PYTHONLIBS_DESC=	Install the Python API
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(PREFIX)
