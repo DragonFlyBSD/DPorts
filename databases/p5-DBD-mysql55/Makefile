@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-mysql55/Makefile 316227 2013-04-22 12:53:58Z bapt $
+# $FreeBSD: databases/p5-DBD-mysql55/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PKGNAMESUFFIX=	55
 
@@ -11,4 +11,5 @@ WANT_MYSQL_VER=	55
 
 MASTERDIR=	${.CURDIR}/../p5-DBD-mysql
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
