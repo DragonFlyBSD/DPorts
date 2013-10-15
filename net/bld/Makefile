@@ -1,9 +1,5 @@
-# New ports collection makefile for:   bld
-# Date created:        12 October 2004
-# Whom:                ob
-#
-# $FreeBSD: ports/net/bld/Makefile,v 1.9 2012/11/17 05:59:57 svnexp Exp $
-#
+# Created by: ob
+# $FreeBSD: net/bld/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bld
 PORTVERSION=	0.3.4
@@ -25,6 +21,7 @@ MAN8=		bldsubmit.8 bld.8 bldquery.8 bldread.8 bldinsert.8 blddecr.8 \
 		bld-pf_policy.8 bld-pf_log.pl.8 bld-mrtg.pl.8 \
 		bld-will_spam_for_food.pl.8
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
