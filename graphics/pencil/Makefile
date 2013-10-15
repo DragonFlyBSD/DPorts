@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: graphics/pencil/Makefile 326030 2013-09-02 16:42:30Z bsam $
+# $FreeBSD: graphics/pencil/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pencil
 PORTVERSION=	0.4.4b
@@ -33,6 +33,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-source
 PLIST_FILES=	bin/pencil
 PORTDOCS=	README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
