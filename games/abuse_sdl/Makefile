@@ -1,4 +1,4 @@
-# $FreeBSD: games/abuse_sdl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/abuse_sdl/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	abuse_sdl
 PORTVERSION=	0.8
@@ -29,6 +29,7 @@ PORTDOCS=	AUTHORS ChangeLog NEWS README TODO
 DESKTOP_ENTRIES="Abuse-SDL" "${COMMENT}" "abuse" \
 		"abuse" "Game;StrategyGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
