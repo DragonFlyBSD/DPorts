@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: print/muttprint/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: print/muttprint/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME?=	muttprint
 PORTVERSION=	0.72d
@@ -46,6 +46,7 @@ PRINT_COMMAND=lpr -P$$PRINTER
 INSTALL_TARGET=install-with-doc
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO}
 	@${ECHO} Set PAPERSIZE=a4 if you need that paper size.
