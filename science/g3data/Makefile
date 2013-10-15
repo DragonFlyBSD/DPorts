@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: science/g3data/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: science/g3data/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	g3data
 PORTVERSION=	1.5.3
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/g3data %%EXAMPLESDIR%%/test1.png %%EXAMPLESDIR%%/test1.values \
 		%%EXAMPLESDIR%%/test2.png %%EXAMPLESDIR%%/test2.values
 PLIST_DIRS=	%%EXAMPLESDIR%%
 
+NO_STAGE=	yes
 post-install:
 		@${MKDIR} ${EXAMPLESDIR}
 		${INSTALL_DATA} ${WRKSRC}/test1.png ${EXAMPLESDIR}
