@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/xlreader/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: textproc/xlreader/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xlreader
 PORTVERSION=	0.9.0
@@ -12,6 +12,7 @@ COMMENT=	Convert .xls spread sheets to tab delimited CSV or SQL inserts
 
 PLIST_FILES=	bin/xlreader
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-L/usr/local/lib||; s|^CFLAGS=.*||; s|gcc|${CC}|' \
