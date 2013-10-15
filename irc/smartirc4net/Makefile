@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: irc/smartirc4net/Makefile 316344 2013-04-23 10:51:39Z bapt $
+# $FreeBSD: irc/smartirc4net/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	smartirc4net
 PORTVERSION=	0.4.5.1
@@ -16,4 +16,5 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=	pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
