@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/recvnet/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net/recvnet/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	recvnet
 PORTVERSION=	0.0.1
@@ -16,6 +16,7 @@ LDFLAGS+=	-lcurses
 
 PLIST_FILES=	bin/recvnet
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} -c ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}.o
 	${CC} ${LDFLAGS} ${WRKSRC}/${PORTNAME}.o -o ${WRKSRC}/${PORTNAME}
