@@ -1,5 +1,5 @@
 # Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
-# $FreeBSD: graphics/showimage/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/showimage/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	showimage
 PORTVERSION=	1.6.3
@@ -22,4 +22,5 @@ PLIST_FILES=	bin/${PORTNAME}-kde4 \
 		share/applications/kde4/${PORTNAME}.desktop \
 		share/icons/hicolor/32x32/apps/${PORTNAME}.png
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
