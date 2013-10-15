@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/p5-Socket-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Socket-Class/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Socket-Class
 PORTVERSION=	2.258
@@ -18,4 +18,5 @@ MAN3=		Socket::Class::Const.3 \
 		Socket::Class::SSL.3 \
 		Socket::Class.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
