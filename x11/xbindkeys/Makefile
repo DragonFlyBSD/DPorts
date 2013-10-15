@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xbindkeys/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: x11/xbindkeys/Makefile 328631 2013-09-28 23:45:19Z eadler $
 
 PORTNAME=	xbindkeys
 PORTVERSION=	1.8.5
@@ -18,8 +18,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		xbindkeys.1
-PLIST_FILES=	bin/xbindkeys %%EXAMPLESDIR%%/xbindkeysrc
+PLIST_FILES=	bin/xbindkeys %%EXAMPLESDIR%%/xbindkeysrc man/man1/xbindkeys.1.gz
 PLIST_DIRS=	%%EXAMPLESDIR%%
 
 WISH=		${LOCALBASE}/bin/wish8.4
@@ -34,8 +33,7 @@ CONFIGURE_ARGS+=	--disable-guile
 
 .if ${PORT_OPTIONS:MTCL}
 RUN_DEPENDS+=	wish8.4:${PORTSDIR}/x11-toolkits/tk84
-MAN1+=		xbindkeys_show.1
-PLIST_FILES+=	bin/xbindkeys_show
+PLIST_FILES+=	bin/xbindkeys_show man/man1/xbindkeys_show.1.gz
 .else
 CONFIGURE_ARGS+=	--disable-tk
 .endif
@@ -44,7 +42,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's| wish | ${WISH} |g' ${WRKSRC}/xbindkeys_show
 
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/xbindkeysrc ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/xbindkeysrc ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
