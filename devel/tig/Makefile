@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: devel/tig/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# $FreeBSD: devel/tig/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tig
 PORTVERSION=	1.1
@@ -25,6 +25,7 @@ USES=		iconv
 
 PLIST_FILES=	bin/tig
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1/
