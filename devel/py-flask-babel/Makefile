@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: devel/py-flask-babel/Makefile 325628 2013-08-29 18:42:29Z olivierd $
-#
+# $FreeBSD: devel/py-flask-babel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Flask-Babel
 PORTVERSION=	0.9
@@ -20,6 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0.10:${PORTSDIR}/www/py-flask \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
