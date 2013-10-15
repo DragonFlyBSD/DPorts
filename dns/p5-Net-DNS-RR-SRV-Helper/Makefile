@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: dns/p5-Net-DNS-RR-SRV-Helper/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/p5-Net-DNS-RR-SRV-Helper/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS-RR-SRV-Helper
 PORTVERSION=	0.0.0
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::DNS::RR::SRV::Helper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
