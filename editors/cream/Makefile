@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/editors/cream/Makefile,v 1.20 2013/01/09 20:04:41 svnexp Exp $
+# $FreeBSD: editors/cream/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	cream
 PORTVERSION=	0.42
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gvim:${PORTSDIR}/editors/vim
 NO_BUILD=	yes
 PLIST_SUB=	VIMRUNTIME="${VIMRUNTIME:S/${PREFIX}\///}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 VIMRUNTIME!=	cd ${PORTSDIR}/editors/vim && ${MAKE} -V DATADIR
