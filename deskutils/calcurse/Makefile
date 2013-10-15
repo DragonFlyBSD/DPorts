@@ -1,5 +1,5 @@
 # Created by: Herbert J. Skuhra <h.skuhra@gmail.com>
-# $FreeBSD: deskutils/calcurse/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/calcurse/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	calcurse
 PORTVERSION=	3.1.4
@@ -19,6 +19,7 @@ USE_GMAKE=	yes
 
 MAN1=		calcurse.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MDOCS)
