@@ -1,4 +1,4 @@
-# $FreeBSD: games/simutrans/Makefile 320326 2013-06-09 11:23:11Z tijl $
+# $FreeBSD: games/simutrans/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	simutrans
 DISTVERSION=	112-3
@@ -41,6 +41,7 @@ DESKTOP_ENTRIES=Simutrans "" "" simutrans "Game;Simulation;" "false"
 PLIST_FILES=	bin/simutrans bin/simutrans-bin
 PORTDATA=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPAK64}
