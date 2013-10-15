@@ -1,5 +1,5 @@
 # Created by: Rick Fournier <rick@help-desk.ca>
-# $FreeBSD: irc/hybserv/Makefile 323470 2013-07-22 15:32:10Z miwi $
+# $FreeBSD: irc/hybserv/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	hybserv
 PORTVERSION=	1.9.5
@@ -29,6 +29,7 @@ GROUPS=		${USERS}
 DAEMONTOOLS_RUN_DEPENDS=	supervise:${PORTSDIR}/sysutils/daemontools
 DAEMONTOOLS_CONFIGURE_ENABLE=	daemontools
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
