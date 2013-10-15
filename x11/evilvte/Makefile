@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11/evilvte/Makefile 326109 2013-09-02 22:31:37Z bapt $
+# $FreeBSD: x11/evilvte/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	evilvte
 PORTVERSION=	0.5.0
@@ -20,6 +20,7 @@ USE_GNOME=	vte
 
 MAN1=		evilvte.1 showvte.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 700000
