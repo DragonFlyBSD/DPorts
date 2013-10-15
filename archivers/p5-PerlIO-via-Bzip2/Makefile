@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: archivers/p5-PerlIO-via-Bzip2/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-PerlIO-via-Bzip2/Makefile 328279 2013-09-25 12:42:49Z vanilla $
 
 PORTNAME=	PerlIO-via-Bzip2
 PORTVERSION=	0.02
@@ -15,7 +15,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		PerlIO::via::Bzip2.3
 
 .include <bsd.port.mk>
