@@ -1,5 +1,5 @@
 # Created by: Riaan Kruger <riaank@gmail.com>
-# $FreeBSD: security/strongswan/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/strongswan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	strongswan
 PORTVERSION=	5.0.4
@@ -50,6 +50,7 @@ EAPAKA3GPP2_DESC=	Enable EAP AKA with 3gpp2 backend
 EAPSIMFILE_DESC=	Enable EAP SIM with file backend
 IKEv1_DESC=	Enable IKEv1 support (Experimental)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Extra options
