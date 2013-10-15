@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-merb-haml
-# Date created:				13 Dec 2011
-# Whom:					Scott Sanders <scott@jssjr.com>
-#
-# $FreeBSD: ports/www/rubygem-merb-haml/Makefile,v 1.2 2012/11/17 06:03:04 svnexp Exp $
-#
+# Created by: Scott Sanders <scott@jssjr.com>
+# $FreeBSD: www/rubygem-merb-haml/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	merb-haml
 PORTVERSION=	1.1.3
@@ -20,4 +16,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
