@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: security/pxytest/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/pxytest/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pxytest
 PORTVERSION=	1.36
@@ -21,6 +21,7 @@ USES=		perl5
 MAN1=		pxytest.1
 PLIST_FILES=	bin/pxytest
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's:^#!.*:#!${PERL}:' ${WRKSRC}/${PORTNAME}
