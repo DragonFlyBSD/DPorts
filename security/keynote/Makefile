@@ -1,5 +1,5 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: security/keynote/Makefile 324682 2013-08-14 03:58:16Z danfe $
+# $FreeBSD: security/keynote/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	keynote
 PORTVERSION=	2.3
@@ -26,6 +26,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
