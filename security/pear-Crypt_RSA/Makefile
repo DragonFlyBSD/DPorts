@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: security/pear-Crypt_RSA/Makefile 315262 2013-03-26 07:25:00Z miwi $
+# $FreeBSD: security/pear-Crypt_RSA/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt_RSA
 PORTVERSION=	1.2.1
@@ -20,6 +20,7 @@ LATEST_LINK=	pear-${PORTNAME}
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for opt in BCMATH GMP
