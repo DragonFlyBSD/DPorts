@@ -1,5 +1,5 @@
-# Whom:					Andy Clark <andrewclarkii@gmail.com>
-# $FreeBSD: ports/benchmarks/nuttcp/Makefile,v 1.4 2012/12/12 21:28:04 svnexp Exp $
+# Created by: Andy Clark <andrewclarkii@gmail.com>
+# $FreeBSD: benchmarks/nuttcp/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	nuttcp
 PORTVERSION=	6.1.2
@@ -14,7 +14,6 @@ MAINTAINER=	andrewclarkii@gmail.com
 COMMENT=	TCP/UDP network testing tool
 
 USE_BZIP2=	yes
-WANT_PERL=	yes
 MAKEFILE=	/dev/null
 ALL_TARGET=	${PORTNAME}
 MAN8=		${PORTNAME}.8
@@ -27,14 +26,17 @@ OPTIONS_DEFAULT=	NUTTSCP
 
 NUTTSCP_DESC=	Install script for copying files over nuttcp
 
-.include <bsd.port.pre.mk>
+NO_STAGE=	yes
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNUTTSCP}
-USE_PERL5=	yes
+USES+=		perl5
 PLIST_SUB+=	NUTTSCP=""
 .else
 PLIST_SUB+=	NUTTSCP="@comment "
 .endif
+
+.include <bsd.port.pre.mk>
 
 post-extract:	.SILENT
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${NUTTSCPDISTFILE} ${WRKDIR}/nuttscp
