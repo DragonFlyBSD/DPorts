@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: databases/py-sqlalchemy-devel/Makefile 323011 2013-07-14 23:55:26Z nivit $
+# $FreeBSD: databases/py-sqlalchemy-devel/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.8.2
@@ -49,6 +49,7 @@ TESTS_DESC=	Include nose for unit tests
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
