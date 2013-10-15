@@ -1,9 +1,5 @@
-# New ports collection makefile for:	chbg
-# Date created:		10 Dec 1999
-# Whom:			Peter Jones <p@dancris.com>
-#
-# $FreeBSD: graphics/chbg/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Peter Jones <p@dancris.com>
+# $FreeBSD: graphics/chbg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	chbg
 PORTVERSION=	1.5
@@ -25,6 +21,7 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--disable-gnome
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAN1=		chbg.1
