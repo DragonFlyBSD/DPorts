@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission/Makefile 325667 2013-08-30 08:19:28Z crees $
+# $FreeBSD: net-p2p/transmission/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	transmission
 PORTVERSION=	2.82
@@ -18,6 +18,7 @@ CONFLICTS_INSTALL=      ${PORTNAME}${PKGNAMESUFFIX}-2.[56]*
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${DO_NADA}
 
