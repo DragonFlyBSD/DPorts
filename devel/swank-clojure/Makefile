@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/swank-clojure/Makefile,v 1.7 2013/01/26 15:26:00 svnexp Exp $
+# $FreeBSD: devel/swank-clojure/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	swank-clojure
 PORTVERSION=	1.2.1
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/technomancy-swank-clojure-0af258a
 
 PLIST_FILES=	%%JAVAJARDIR%%/swank-clojure-1.2.1.jar
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${JAR} cf ${PORTNAME}-${PORTVERSION}.jar -C src swank
 
