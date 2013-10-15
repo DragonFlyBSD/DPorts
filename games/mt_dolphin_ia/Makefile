@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/mt_dolphin_ia/Makefile 326025 2013-09-02 16:21:38Z bapt $
+# $FreeBSD: games/mt_dolphin_ia/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		mt_dolphin_ia
 PORTVERSION=		0.1.98
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=		--with-libmt_client=${LOCALBASE}	\
 
 PLIST_FILES=		bin/mt_dolphin_ia
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
