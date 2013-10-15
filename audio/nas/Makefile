@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: audio/nas/Makefile 326024 2013-09-02 16:20:26Z tijl $
+# $FreeBSD: audio/nas/Makefile 329372 2013-10-04 20:04:08Z bapt $
 
 PORTNAME=	nas
 PORTVERSION=	1.9.3
@@ -21,8 +21,6 @@ MAKE_JOBS_UNSAFE=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
-.include "Makefile.man"
-
 .include <bsd.port.pre.mk>
 
 post-configure:
@@ -31,9 +29,6 @@ post-configure:
 	    -e 's,-c \$$(CCOPTIONS),-c $$(CFLAGS),' \
 	    -e 's,\(\$$(AR) \$$@ \$$\)(OBJS),\1(OBJS:S|^|unshared/|),' \
 		${WRKSRC}/lib/audio/Makefile
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .if ${ARCH} == "sparc64"
 FPIC=	-fPIC
