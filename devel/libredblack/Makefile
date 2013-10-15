@@ -1,5 +1,5 @@
-# Created by: smace@freebsd.org
-# $FreeBSD: ports/devel/libredblack/Makefile,v 1.17 2013/01/12 13:02:14 svnexp Exp $
+# Created by: smace@FreeBSD.org
+# $FreeBSD: devel/libredblack/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libredblack
 PORTVERSION=	1.3
@@ -26,6 +26,7 @@ USE_PYTHON=	yes
 PLIST_SUB+=	PYTHON=""
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CFLAGS =.*$$|CFLAGS = @CFLAGS@|g' ${WRKSRC}/Makefile.in
