@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11/xmascot/Makefile 324756 2013-08-15 10:32:22Z danfe $
+# $FreeBSD: x11/xmascot/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xmascot
 PORTVERSION=	2.6a
@@ -18,6 +18,7 @@ MAKE_ARGS=	MAKE="${MAKE_CMD}"
 MAN1=		xmascot.1
 
 # Unbreak parallel (-jX) builds: do not use unsafe MakeSubdirs() macro
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/MakeSubdirs(/Named&$$(IMAGELIB),/' \
 		${WRKSRC}/Imakefile
