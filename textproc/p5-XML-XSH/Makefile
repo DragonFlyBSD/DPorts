@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: textproc/p5-XML-XSH/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-XSH/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-XSH
 PORTVERSION=	1.8.2
@@ -25,6 +25,7 @@ USE_PERL5=	configure
 MAN1=		xsh.1
 MAN3=		XSH.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 test: build
