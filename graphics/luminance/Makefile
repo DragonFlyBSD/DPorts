@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Luminance HDR (nee Qtpfsgui)
-# Date created:				28 Jul 2007
-# Whom:					Yinghong Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: graphics/luminance/Makefile 325401 2013-08-26 16:06:37Z bf $
-#
+# Created by: Yinghong Liu <relaxbsd@gmail.com>
+# $FreeBSD: graphics/luminance/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	luminance-hdr
 PORTREVISION=	2
@@ -31,6 +27,7 @@ USE_QT4=	gui sql webkit xml linguist_build moc_build qmake_build \
 		rcc_build uic_build imageformats_run
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 post-patch:
 # Do not install yet another copy of GPL (we use license framework instead)
 # and fix installation path for docs (but not for internal help files)
