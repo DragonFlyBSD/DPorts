@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo347/Makefile 327287 2013-09-14 14:10:46Z sunpoet $
+# $FreeBSD: www/typo347/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	typo3
 PORTVERSION=	4.7.15
@@ -32,6 +32,7 @@ GD_DESC=	GDlib/freetype support
 IMAGICK_DESC=	${IMAGEMAGICK_DESC}
 MBSTRING_DESC=	${MULTIBYTE_DESC}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURL}
