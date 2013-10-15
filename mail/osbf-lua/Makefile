@@ -1,5 +1,5 @@
 # Created by: RicardoSSP <ricardo.katz@gmail.com>
-# $FreeBSD: mail/osbf-lua/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: mail/osbf-lua/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	osbf-lua
 PORTVERSION=	2.0.4
@@ -19,6 +19,7 @@ OPTIONS_DEFINE=		SPAMFILTER_PLUGIN
 OPTIONS_DEFAULT=	SPAMFILTER_PLUGIN
 SPAMFILTER_PLUGIN_DESC=		OSBF Spamfilter Plugin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSPAMFILTER_PLUGIN}
