@@ -1,9 +1,5 @@
-# New ports collection makefile for:	popd
-# Date created:				17 April 2001
-# Whom:					ianf@za.uu.net
-#
-# $FreeBSD: ports/mail/popd/Makefile,v 1.22 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: ianf@za.uu.net
+# $FreeBSD: mail/popd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	popd
 PORTVERSION=	2.2.2a
@@ -25,6 +21,7 @@ PLIST_SUB=	NOPROFILE="@comment "
 PLIST_SUB=	NOPROFILE=""
 .endif
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/popd.conf.default ${PREFIX}/etc/.
 

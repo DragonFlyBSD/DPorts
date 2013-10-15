@@ -1,4 +1,4 @@
-$FreeBSD: ports/mail/popd/files/patch-lib::funcs.c,v 1.2 2012/11/17 05:59:10 svnexp Exp $
+$FreeBSD: mail/popd/files/patch-lib::funcs.c 300896 2012-07-14 13:54:48Z beat $
 
 --- lib/funcs.c.orig	Mon Mar  3 21:10:19 2003
 +++ lib/funcs.c	Wed Oct 15 11:18:01 2003
