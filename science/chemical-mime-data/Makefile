@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: science/chemical-mime-data/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: science/chemical-mime-data/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	chemical-mime-data
 PORTVERSION=	0.1.94
@@ -23,6 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|*-*-solaris*|*| ; s|rsvg|rsvg-convert|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|(datadir)/pkgconfig|(prefix)/libdata/pkgconfig|' ${WRKSRC}/Makefile.in
