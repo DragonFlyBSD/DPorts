@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-imagesize
-# Date created:				8 August 2009
-# Whom:					Rick Elrod <codeblock@eighthbit.net>
-#
-# $FreeBSD: ports/graphics/rubygem-imagesize/Makefile,v 1.6 2012/11/17 05:58:22 svnexp Exp $
+# Created by: Rick Elrod <codeblock@eighthbit.net>
+# $FreeBSD: graphics/rubygem-imagesize/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imagesize
 PORTVERSION=	0.1.1
@@ -16,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
