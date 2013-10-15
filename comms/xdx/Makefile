@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/xdx/Makefile 326095 2013-09-02 21:32:24Z bapt $
+# $FreeBSD: comms/xdx/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	xdx
 PORTVERSION=	2.4
@@ -19,6 +19,7 @@ USES=		gmake pkgconfig
 MAN1=		xdx.1
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		's|-D.*_DISABLE_DEPRECATED||g'
