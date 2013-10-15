@@ -1,9 +1,5 @@
-# New ports collection makefile for:	typolight
-# Date created:		2008-09-15
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/typolight/Makefile,v 1.15 2012/11/17 06:03:09 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: www/typolight/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	typolight
 PORTVERSION=	2.8.4
@@ -19,6 +15,7 @@ USE_MYSQL=	yes
 SUB_FILES=	pkg-message
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
