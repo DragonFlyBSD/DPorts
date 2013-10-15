@@ -1,5 +1,5 @@
 # Created by: Helko Glathe <glathe.helko@googlemail.com>
-# $FreeBSD: net/clamz/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/clamz/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	clamz
 PORTVERSION=	0.5
@@ -22,6 +22,7 @@ USES=		pkgconfig
 
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-install:
 	@${ECHO}
 	@${CAT} ${PKGMESSAGE}
