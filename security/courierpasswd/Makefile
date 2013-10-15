@@ -1,5 +1,5 @@
 # Created by: Andrew St. Jean <andrew@arda.homeunix.net>
-# $FreeBSD: security/courierpasswd/Makefile 323796 2013-07-27 16:45:26Z marino $
+# $FreeBSD: security/courierpasswd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	courierpasswd
 PORTVERSION=	1.1.2
@@ -25,6 +25,7 @@ MAN8=		courierpasswd.8
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-fetch:
