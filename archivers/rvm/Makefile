@@ -1,10 +1,11 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: archivers/rvm/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/rvm/Makefile 329835 2013-10-08 20:48:34Z bapt $
 
 PORTNAME=	rvm
 PORTVERSION=	1.07
 CATEGORIES=	archivers
 MASTER_SITES=	SF
+PKGNAMESUFFIX=	an
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
@@ -14,16 +15,13 @@ BUILD_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-NO_LATEST_LINK=	yes
 
-USES=		gmake
-USE_GCC=	yes
+USES=		gmake compiler:c++11-lang
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-default-config-file=${PREFIX}/etc/rvm.conf \
 		--enable-assume-stl-memory-exception
 MAKE_ARGS=	CXXFLAGS="${CXXFLAGS}"
 
-MAN1=		rvm.1
-PLIST_FILES=	bin/rvm
+PLIST_FILES=	bin/rvm man/man1/rvm.1.gz
 
 .include <bsd.port.mk>
