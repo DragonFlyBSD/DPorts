@@ -1,9 +1,5 @@
-# Ports collection makefile for:  gdsreader
-# Date created:			  Sat, Apr 28, 2007
-# Whom:				  Hiroki Sato <hrs@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/gdsreader/Makefile,v 1.2 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: Hiroki Sato <hrs@FreeBSD.org>
+# $FreeBSD: cad/gdsreader/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	gdsreader
 PORTVERSION=	0.3.2
@@ -22,6 +18,7 @@ PLIST_FILES=	bin/gdsreader bin/maptolayer \
 		${EXFILES:S,^,${EXAMPLESDIR_REL}/,}
 PLIST_DIRS=	${EXAMPLESDIR_REL}
 
+NO_STAGE=	yes
 post-install:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} install-data
 .if !defined(NOPORTDOCS)
