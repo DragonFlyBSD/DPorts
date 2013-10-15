@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-foxyproxy
-# Date created:		2008-06-12
-# Whom:			Ashish Shukla <wahjava@gmail.com>
-#
-# $FreeBSD: ports/www/xpi-foxyproxy/Makefile,v 1.21 2013/01/20 17:48:32 svnexp Exp $
-#
+# Created by: Ashish Shukla <wahjava@gmail.com>
+# $FreeBSD: www/xpi-foxyproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	foxyproxy
 PORTVERSION=	4.1.1
@@ -20,6 +16,7 @@ XPI_DISTNAME=	foxyproxy_standard
 XPI_NUM=	2464
 XPI_ID=		foxyproxy@eric.h.jung
 
+NO_STAGE=	yes
 xpi-post-extract:
 	@${FIND} ${WRKSRC} -type f -name '*.js' |${XARGS} ${SED} -i '' -e 's/[[:space:]]*$$//g'
 
