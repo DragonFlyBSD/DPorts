@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Tangram/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Tangram/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Tangram
 PORTVERSION=	1.57
@@ -21,6 +21,7 @@ USE_PERL5=	configure
 MAN3=		Class::Tangram.3 Class::Tangram::Containers.3 \
 		Class::Tangram::Generator.3
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -i '' -e 's|\@|\\@|' ${WRKSRC}/Makefile.PL
 
