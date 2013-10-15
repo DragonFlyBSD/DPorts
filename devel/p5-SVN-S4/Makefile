@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-SVN-S4/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-SVN-S4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-S4
 PORTVERSION=	1.055
@@ -38,4 +38,5 @@ MAN3=		SVN::S4.3 \
 		SVN::S4::ViewSpec.3 \
 		SVN::S4::WorkProp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
