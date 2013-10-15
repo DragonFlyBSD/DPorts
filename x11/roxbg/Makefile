@@ -1,9 +1,5 @@
-# New ports collection makefile for: comiccron
-# Date created:        9 March 2007
-# Whom:                Zane C. Bowers
-#
-# $FreeBSD: ports/x11/roxbg/Makefile,v 1.8 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Zane C. Bowers
+# $FreeBSD: x11/roxbg/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	roxbg
 PORTVERSION=	1.0.0
@@ -22,6 +18,7 @@ NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	bin/roxbg
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} -v ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
