@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gcolor
-# Date created:		20 Feb 2000
-# Whom:			Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: ports/graphics/gcolor/Makefile,v 1.24 2012/11/17 05:58:06 svnexp Exp $
-#
+# Created by: Will Andrews <andrews@technologist.com>
+# $FreeBSD: graphics/gcolor/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gcolor
 PORTVERSION=	0.4
@@ -20,6 +16,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
