@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hidesvn
-# Date created:				6 March 2009
-# Whom:					Ed Schouten <ed@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/hidesvn/Makefile,v 1.4 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Ed Schouten <ed@FreeBSD.org>
+# $FreeBSD: sysutils/hidesvn/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hidesvn
 PORTVERSION=	1.2
@@ -21,6 +17,7 @@ MAN1=		${PORTNAME}.1
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's|/usr/local|${PREFIX}|' ${WRKSRC}/${PORTNAME}.sh
 
