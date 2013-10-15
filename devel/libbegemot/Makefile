@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libbegemot
-# Date created:			Sep 15 2005
-# Whom:				Andrey V. Elsukov <bu7cher@yandex.ru>
-#
-# $FreeBSD: ports/devel/libbegemot/Makefile,v 1.13 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: Andrey V. Elsukov <bu7cher@yandex.ru>
+# $FreeBSD: devel/libbegemot/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libbegemot
 PORTVERSION=	1.11
@@ -25,6 +21,7 @@ MAN1=	cstrc.1 frame.1 getfields.1 intro.1 panic.1 prstat.1 readline.1 \
 		rpoll.1 strnchr.1 strnlen.1 strsave.1 strtrimsp.1 verb.1 xalloc.1
 MLINKS=	xalloc.1 xrealloc.1
 
+NO_STAGE=	yes
 run-autotools::
 	@(cd ${CONFIGURE_WRKSRC} && ${ACLOCAL} -I ${LIBTOOL_SHAREDIR}/libltdl/)
 	@(cd ${CONFIGURE_WRKSRC} && ${AUTOCONF})
