@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-iCal-Parser/Makefile 324520 2013-08-10 14:06:12Z kuriyama $
+# $FreeBSD: devel/p5-iCal-Parser/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	iCal-Parser
 PORTVERSION=	1.20
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		iCal::Parser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
