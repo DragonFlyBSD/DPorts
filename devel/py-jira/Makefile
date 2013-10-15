@@ -1,5 +1,5 @@
 # Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-# $FreeBSD: devel/py-jira/Makefile 325354 2013-08-25 16:13:49Z olgeni $
+# $FreeBSD: devel/py-jira/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	jira
 PORTVERSION=	0.13
@@ -22,4 +22,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	jira_python
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
