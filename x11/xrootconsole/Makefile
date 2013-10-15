@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xrootconsole
-# Date created:			12 July 2002
-# Whom:				incabulos@mac.com
-#
-# $FreeBSD: ports/x11/xrootconsole/Makefile,v 1.10 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: incabulos@mac.com
+# $FreeBSD: x11/xrootconsole/Makefile 330211 2013-10-13 06:13:53Z eadler $
 
 PORTNAME=	xrootconsole
 PORTVERSION=	0.6
@@ -15,18 +11,16 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Writes any log live onto the background
 
 USE_XORG=	x11
-USE_GMAKE=	yes
+USES=		gmake
 
-MAN1=		xrootconsole.1
-PLIST_FILES=	bin/xrootconsole
-
+PLIST_FILES=	bin/xrootconsole man/man1/xrootconsole.1.gz
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CC =|CC ?=|g ; \
 		 s|^CFLAGS = -O2|CFLAGS +=|g ; \
 		 s|/usr/X11R6|$${LOCALBASE}|g' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xrootconsole ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xrootconsole.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/xrootconsole ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xrootconsole.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
