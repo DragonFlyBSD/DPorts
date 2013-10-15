@@ -1,5 +1,5 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: ports/www/pecl-yaf/Makefile,v 1.21 2013/01/13 10:41:37 svnexp Exp $
+# $FreeBSD: www/pecl-yaf/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yaf
 PORTVERSION=	2.2.9
@@ -23,4 +23,5 @@ USE_PHP=	yes
 USE_PHPEXT=	yes
 USE_PHPIZE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
