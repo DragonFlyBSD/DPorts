@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-Formula/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/R-cran-Formula/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Formula
 DISTVERSION=	1.1-1
@@ -15,4 +15,5 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
