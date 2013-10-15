@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: security/shimmer/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/shimmer/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	shimmer
 PORTVERSION=	0.1.0
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/shimmer \
 		bin/shimmerd \
 		etc/shimmer.conf
 
+NO_STAGE=	yes
 do-install:
 .if !defined(WITHOUT_CLIENT)
 	${INSTALL_SCRIPT} ${WRKSRC}/shimmer ${PREFIX}/bin/shimmer
