@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: comms/zmtx-zmrx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: comms/zmtx-zmrx/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	zmtx-zmrx
 PORTVERSION=	1.02
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		zmrx.1 zmtx.1
 PLIST_FILES=	bin/zmrx bin/zmtx
 
+NO_STAGE=	yes
 do-install:
 .for f in zmrx zmtx
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
