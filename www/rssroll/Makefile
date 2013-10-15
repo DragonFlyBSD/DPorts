@@ -1,4 +1,4 @@
-# $FreeBSD: www/rssroll/Makefile 324170 2013-08-02 17:37:19Z wg $
+# $FreeBSD: www/rssroll/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rssroll
 PORTVERSION=	0.4
@@ -17,6 +17,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rssroll ${PREFIX}/bin
 	@${MKDIR} ${PREFIX}/www/data/rssroll ${PREFIX}/www/cgi-bin
