@@ -1,9 +1,5 @@
-# New ports collection makefile for:	opensched
-# Date created:				31 January 2001
-# Whom:					Daniel McRobb <dwm@caimis.com>
-#
-# $FreeBSD: textproc/opensched/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Daniel McRobb <dwm@caimis.com>
+# $FreeBSD: textproc/opensched/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	opensched
 PORTVERSION=	0.1.0
@@ -22,6 +18,7 @@ ALL_TARGET=	build
 MAN1=		opensched.1
 PLIST_FILES=	bin/opensched
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/opensched ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/opensched.1 ${MANPREFIX}/man/man1
