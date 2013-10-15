@@ -1,5 +1,5 @@
 # Created by: Andrea Cervesato <andrea@cervesato.it>
-# $FreeBSD: www/mod_qos/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_qos/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_qos
 PORTVERSION=	10.15
@@ -18,4 +18,5 @@ AP_FAST_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/apache2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
