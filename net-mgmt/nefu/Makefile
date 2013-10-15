@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <krion@FreeBSD.org>
-# $FreeBSD: net-mgmt/nefu/Makefile 309043 2012-12-16 20:59:35Z bapt $
+# $FreeBSD: net-mgmt/nefu/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nefu
 PORTVERSION=	1.5
@@ -36,6 +36,7 @@ MAN4=		nefu.conf.4
 DBDIR=		/var/db/nefu
 PLIST_FILES=	bin/nefu
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
