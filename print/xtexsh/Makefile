@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xtexsh
-# Date created:         11 August 2001
-# Whom:                 Jean-Sebastien Roy <js@jeannot.org>
-#
-# $FreeBSD: print/xtexsh/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Jean-Sebastien Roy <js@jeannot.org>
+# $FreeBSD: print/xtexsh/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xtexsh
 PORTVERSION=	1.4.2
@@ -27,6 +23,7 @@ INSTALLS_ICONS=	yes
 MAN1=		xtexsh.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/usr/bin|${LOCALBASE}/bin|g ; \
