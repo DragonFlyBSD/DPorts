@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/brasero/Makefile 326159 2013-09-03 15:25:41Z bapt $
+# $FreeBSD: sysutils/brasero/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #    $MCom: ports/sysutils/brasero/Makefile,v 1.83 2010/11/15 21:53:38 kwm Exp $
 
 PORTNAME=	brasero
@@ -46,6 +46,7 @@ LIBBURNIA_DESC=	libburnia plug-ins
 
 PLIST_SUB=	FULL_VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNAUTILUS}
