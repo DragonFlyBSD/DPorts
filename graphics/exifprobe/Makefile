@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: graphics/exifprobe/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/exifprobe/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	exifprobe
 DISTVERSION=	2.0.1
@@ -12,6 +12,7 @@ COMMENT=	Probes JPEG or TIFF images and reports contents and structure
 MAN1=		exifgrep.1 exifprobe.1
 PLIST_FILES=	bin/exifgrep bin/exifprobe
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|cc|${CC}|; s|-DC|${CFLAGS} -DC|' \
 		${WRKSRC}/${MAKEFILE}
