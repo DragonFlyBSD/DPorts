@@ -1,9 +1,5 @@
-# New ports collection makefile for:	crashmail
-# Date created:				21 January 2003
-# Whom:					Max Khon <fjoe@FreeBSD.org>
-#
-# $FreeBSD: ports/news/crashmail/Makefile,v 1.7 2012/11/17 06:00:41 svnexp Exp $
-#
+# Created by: Max Khon <fjoe@FreeBSD.org>
+# $FreeBSD: news/crashmail/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	crashmail
 PORTVERSION=	0.71
@@ -22,6 +18,7 @@ ALL_TARGET=	linux
 USE_ZIP=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 	  -e 's^"crashmail.prefs"^"${PREFIX}/etc/crashmail/crashmail.prefs"^' \
