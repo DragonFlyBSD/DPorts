@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: irc/ngircd/Makefile 326392 2013-09-05 12:54:46Z wg $
+# $FreeBSD: irc/ngircd/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ngircd
 PORTVERSION=	20.3
@@ -33,6 +33,7 @@ IDENT_DESC=Enable IDENT (AUTH) protocol support
 SNIFFER_DESC=Enable IRC traffic sniffer
 DEBUG_DESC=Show additional debug output
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(/usr/include/tcpd.h) && !defined(WITHOUT_TCP_WRAPPERS)
