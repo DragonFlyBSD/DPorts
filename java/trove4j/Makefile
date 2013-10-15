@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: ports/java/trove4j/Makefile,v 1.16 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/trove4j/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	trove4j
 PORTVERSION=	1.1b5
@@ -21,6 +21,7 @@ PORTDOCS=	javadocs AUTHORS ChangeLog LICENSE.txt README-license.txt README.txt
 JARFILE=	trove.jar
 PLIST_FILES+=	%%JAVAJARDIR%%/${JARFILE}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${JARFILE}..."
 	@${INSTALL_DATA} ${WRKSRC}/lib/${JARFILE} ${JAVAJARDIR}/
