@@ -1,5 +1,5 @@
-# Created by: Marc G. Fournier <scrappy@freebsd.org>
-# $FreeBSD: www/mod_log_sql2-dtc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Marc G. Fournier <scrappy@FreeBSD.org>
+# $FreeBSD: www/mod_log_sql2-dtc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_log_sql
 PORTVERSION=	1.101
@@ -25,6 +25,7 @@ PLIST_SUB+=	SSL=${SSL_PLIST}
 USE_MYSQL=	yes
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib -L${LOCALBASE}/lib/mysql"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if defined(WITH_DBI) || exists(${LOCALBASE}/include/dbi/dbi.h)
 CONFIGURE_ARGS+=	--with-dbi=${LOCALBASE}
