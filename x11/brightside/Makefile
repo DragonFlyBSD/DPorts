@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/brightside/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: x11/brightside/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	brightside
 PORTVERSION=	1.4.0
@@ -21,4 +21,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	brightside.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
