@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/buildbot/Makefile 325854 2013-09-01 12:58:10Z lwhsu $
+# $FreeBSD: devel/buildbot/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	buildbot
 PORTVERSION=	0.8.8
@@ -34,6 +34,7 @@ OPTIONS_DEFINE=		TESTS
 TESTS_DESC=		Install py-mock for test suite
 OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
