@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gbuffy
-# Date created:		2 October 1999
-# Whom:			rasmus@kaj.se
-#
-# $FreeBSD: ports/mail/gbuffy/Makefile,v 1.20 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: rasmus@kaj.se
+# $FreeBSD: mail/gbuffy/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gbuffy
 PORTVERSION=	0.2.6
@@ -22,4 +18,5 @@ USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
