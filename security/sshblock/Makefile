@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: security/sshblock/Makefile 326999 2013-09-11 18:03:40Z az $
+# $FreeBSD: security/sshblock/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sshblock
 PORTVERSION=	1.0
@@ -25,6 +25,7 @@ EXTRACT_AFTER_ARGS=	${WRKDIR}
 SUB_FILES+=	pkg-message
 #SUB_FILES=	sshblock.sh
 
+NO_STAGE=	yes
 do-patch:
 	@${REINPLACE_CMD} -e "s@/usr/bin/perl@${PERL}@" \
 		${WRKSRC}/sshblock-${PORTVERSION}.pl
