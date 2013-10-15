@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-devise/Makefile 319636 2013-06-02 02:37:23Z swills $
+# $FreeBSD: devel/rubygem-devise/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	devise
 PORTVERSION=	2.2.4
@@ -18,4 +18,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
