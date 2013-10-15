@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis (edwin@mavetju.org)
-# $FreeBSD: net/smm++/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: net/smm++/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	smm++
 PORTVERSION=	6.1.1
@@ -21,6 +21,7 @@ USE_GMAKE=	yes
 USE_TK=		84+
 EXTRACT_AFTER_ARGS=--exclude CVS
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,itkarray=.*,itkarray=${WISH},' ${WRKSRC}/itk.sh
 
