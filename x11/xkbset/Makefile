@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: ports/x11/xkbset/Makefile,v 1.15 2012/11/22 03:30:11 svnexp Exp $
+# $FreeBSD: x11/xkbset/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xkbset
 PORTVERSION=	0.5
@@ -12,7 +12,8 @@ COMMENT=	Manage various XKB features of X Window
 
 MAN1=		xkbset.1
 USE_XORG=	x11
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
+USES=		perl5
 
 MAKE_ARGS=	X11BASE="${LOCALBASE}" X11PREFIX="${PREFIX}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
@@ -21,6 +22,7 @@ MAKE_ARGS=	X11BASE="${LOCALBASE}" X11PREFIX="${PREFIX}" \
 OPTIONS_DEFINE=	GUI
 GUI_DESC=	Install Tk GUI
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
