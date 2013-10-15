@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: misc/inplace/Makefile 323246 2013-07-18 17:12:33Z knu $
+# $FreeBSD: misc/inplace/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	inplace
 PORTVERSION=	1.2.3
@@ -26,4 +26,5 @@ PLIST_FILES=	bin/inplace
 test: build
 	cd ${WRKSRC}; ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
