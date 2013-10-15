@@ -1,4 +1,4 @@
-# $FreeBSD: cad/gdt/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: cad/gdt/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	gdt
 PORTVERSION=	4.0
@@ -17,6 +17,7 @@ SHEBANG_FILES=	Examples/gdsinfo Examples/scalegds
 WRKSRC=		${WRKDIR}/${PORTNAME:tu}-${PORTVERSION}
 PLIST_FILES=	bin/gdsinfo bin/gds2gdt bin/gdt2gds bin/scalegds
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},' \
 		${WRKSRC}/Examples/gdsinfo ${WRKSRC}/Examples/scalegds
