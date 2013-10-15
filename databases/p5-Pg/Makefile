@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-Pg/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Pg/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Pg
 PORTVERSION=	2.1.1
@@ -22,4 +22,5 @@ MAN3=		Pg.3
 
 CONFIGURE_ENV=	POSTGRES_INCLUDE=${LOCALBASE}/include POSTGRES_LIB=${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
