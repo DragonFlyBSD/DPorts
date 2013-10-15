@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/www/trac-timingandestimation/Makefile,v 1.8 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-timingandestimation/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	timingandestimation
 PORTVERSION=	1.0.8b
@@ -23,6 +23,7 @@ PYDISTUTILS_PKGNAME=	${PORTNAME}plugin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/.r/_r/}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
