@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile 326683 2013-09-07 19:49:41Z bsam $
+# $FreeBSD: www/apache24/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	apache24
 PORTVERSION=	2.4.6
@@ -21,9 +21,8 @@ CONFLICTS_INSTALL=	caudium14-1.* \
 		apache-*-2.2.* apache22-*
 
 USE_APACHE=	common24
-USES=		iconv
+USES=		iconv perl5
 USE_AUTOTOOLS=	autoconf libtool
-USE_PERL5=	yes
 USE_RC_SUBR=	apache24 htcacheclean
 LIBTOOLFILES=	configure.in
 
@@ -45,6 +44,7 @@ APACHEDIR=	${MASTERDIR}
 WITH_HTTP_PORT?=	80
 WITH_SSL_PORT?=		443
 
+NO_STAGE=	yes
 .include "${APACHEDIR}/Makefile.options"
 .include "${APACHEDIR}/Makefile.options.desc"
 .include <bsd.port.options.mk>
