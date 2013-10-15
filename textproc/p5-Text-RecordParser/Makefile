@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-RecordParser/Makefile 325958 2013-09-02 09:35:45Z lth $
+# $FreeBSD: textproc/p5-Text-RecordParser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-RecordParser
 PORTVERSION=	1.6.3
@@ -31,6 +31,7 @@ MAN3=		Text::RecordParser.3 \
 		Text::RecordParser::Tab.3 \
 		Text::RecordParser::Object.3
 
+NO_STAGE=	yes
 post-extract:
 		# workaround for https://rt.cpan.org/Public/Bug/Display.html?id=87855
 		${CHMOD} +w ${WRKSRC}/README.md
