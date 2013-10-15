@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@netcologne.de>
-# $FreeBSD: www/gatling/Makefile 319952 2013-06-05 06:59:44Z bapt $
+# $FreeBSD: www/gatling/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gatling
 PORTVERSION=	0.13
@@ -37,6 +37,7 @@ BENCHMARKS_DESC=	Install some benchmark programs
 TLS_DESC=		Build and install tlsgatling
 ZLIB_DESC=		Compress outgoing data
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MBENCHMARKS}
