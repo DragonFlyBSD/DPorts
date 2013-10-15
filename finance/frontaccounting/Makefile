@@ -1,5 +1,5 @@
 # Created by: Janky Jay <ek@purplehat.org>
-# $FreeBSD: finance/frontaccounting/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: finance/frontaccounting/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	frontaccounting
 DISTVERSION=	2.3.15
@@ -29,6 +29,7 @@ SHAREGRP=	${WWWGRP}
 OPTIONS_DEFINE=	APACHE LIGHTTPD MYSQL
 OPTIONS_DEFAULT=	APACHE MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
