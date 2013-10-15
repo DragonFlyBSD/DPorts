@@ -1,12 +1,8 @@
-# Ports collection Makefile for:	powwow
-# Date created:				15 Nov 2004
-# Whom:					Juraj Lutter <otis@sk.freebsd.org>
-#
-# $FreeBSD: ports/games/powwow/Makefile,v 1.10 2012/11/17 05:57:49 svnexp Exp $
-#
+# Created by: Juraj Lutter <otis@sk.freebsd.org>
+# $FreeBSD: games/powwow/Makefile 328764 2013-09-30 03:16:24Z tabthorpe $
 
 PORTNAME=	powwow
-PORTVERSION=	1.2.14
+PORTVERSION=	1.2.17
 CATEGORIES=	games
 MASTER_SITES=	http://hoopajoo.net/static/projects/ \
 		ftp://ftp.wilbury.sk/pub/FreeBSD/local/distfiles/
@@ -18,6 +14,7 @@ GNU_CONFIGURE=	yes
 
 MAN6=		powwow.6
 
+NO_STAGE=	yes
 pre-build:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/defines.h \
 		${WRKSRC}/list.c ${WRKSRC}/main.c ${WRKSRC}/cmd2.c ${WRKSRC}/beam.c
@@ -25,6 +22,10 @@ pre-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/powwow ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/powwow-movieplay ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/powwow-muc ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/catrw ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/follow ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/powwow.6 ${PREFIX}/man/man6
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/powwow.doc ${DATADIR}
