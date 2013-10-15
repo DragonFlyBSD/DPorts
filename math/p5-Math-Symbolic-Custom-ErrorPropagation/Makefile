@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Symbolic-Custom-ErrorPropagation/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-Symbolic-Custom-ErrorPropagation/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Symbolic-Custom-ErrorPropagation
 PORTVERSION=	0.11
@@ -18,4 +18,5 @@ MAN3=	Math::Symbolic::Custom::ErrorPropagation.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
