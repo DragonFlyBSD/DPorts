@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-FS-Gmail
-# Date created:		2006-07-20
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: net/p5-Net-FS-Gmail/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: net/p5-Net-FS-Gmail/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-FS-Gmail
 PORTVERSION=	0.2
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 MAN1=		gmailfs.1
 MAN3=		Net::FS::Gmail.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
