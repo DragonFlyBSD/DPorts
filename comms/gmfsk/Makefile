@@ -1,5 +1,5 @@
 # Created by: Carl Makin <carl@stagecraft.cx>
-# $FreeBSD: comms/gmfsk/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: comms/gmfsk/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	gmfsk
 PORTVERSION=	0.6
@@ -29,6 +29,7 @@ OPTIONS_DEFINE=	HAMLIB
 HAMLIB_DESC=	Enable HAMLIB Support
 OPTIONS_DEFAULT=	HAMLIB
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MHAMLIB}
