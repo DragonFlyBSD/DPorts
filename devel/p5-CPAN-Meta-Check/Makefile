@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Meta-Check/Makefile 324102 2013-08-01 13:11:43Z culot $
+# $FreeBSD: devel/p5-CPAN-Meta-Check/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPAN-Meta-Check
 PORTVERSION=	0.007
@@ -23,6 +23,7 @@ USE_PERL5=	configure
 
 MAN3=		CPAN::Meta::Check.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
