@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cursor-bluecurve-theme
-# Date created:			29 May 2005
-# Whom:				Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/cursor-bluecurve-theme/Makefile,v 1.11 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: x11-themes/cursor-bluecurve-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	cursor-bluecurve-theme
 
@@ -20,6 +16,7 @@ THEMES=		Bluecurve Bluecurve-inverse LBluecurve LBluecurve-inverse
 BC_HIERS+=	${WRKSRC}/art/cursor/${t}/${t}:${PREFIX}/lib/X11/icons/${t}/cursors
 .endfor
 
+NO_STAGE=	yes
 post-patch:
 .for t in ${THEMES}
 	@${REINPLACE_CMD} -e 's|dnd_|dnd-|' \
