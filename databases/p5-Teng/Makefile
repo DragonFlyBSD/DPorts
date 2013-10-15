@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Teng/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-Teng/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Teng
 PORTVERSION=	0.18
@@ -50,4 +50,5 @@ MAN3=	Teng.3 \
 	Teng::Schema::Loader.3 \
 	Teng::Schema::Table.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
