@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: lang/gforth/Makefile 317321 2013-05-04 14:13:34Z johans $
+# $FreeBSD: lang/gforth/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gforth
 PORTVERSION=	0.7.2
@@ -36,6 +36,7 @@ PORTDOCS=	AUTHORS BUGS Benchres COPYING COPYING.DOC \
 MAN1=		gforth.1
 INFO=		gforth vmgen
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == i386 || ${ARCH} == powerpc
