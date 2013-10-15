@@ -1,5 +1,5 @@
 # Created by: Johan Kerckaert <kirk@bricsnet.com>
-# $FreeBSD: ports/devel/picprog/Makefile,v 1.24 2013/01/12 15:13:01 svnexp Exp $
+# $FreeBSD: devel/picprog/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	picprog
 PORTVERSION=	1.9.1
@@ -14,6 +14,7 @@ USE_GMAKE=	yes
 PLIST_FILES=	bin/picprog
 MAN1=		picprog.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
