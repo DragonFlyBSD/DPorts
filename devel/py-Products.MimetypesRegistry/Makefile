@@ -1,7 +1,7 @@
-# $FreeBSD: devel/py-Products.MimetypesRegistry/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-Products.MimetypesRegistry/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	Products.MimetypesRegistry
-PORTVERSION=	2.0.4
+PORTVERSION=	2.0.5
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,5 +21,7 @@ DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
