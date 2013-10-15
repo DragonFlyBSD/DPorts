@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: devel/giggle/Makefile 317875 2013-05-11 13:15:45Z bapt $
+# $FreeBSD: devel/giggle/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	giggle
 PORTVERSION=	0.5
@@ -30,6 +30,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl `pkg-config -libs gmodule-2.0`
 PLIST_SUB+=	GIGGLE_VER=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEDS}
