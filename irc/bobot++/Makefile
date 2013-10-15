@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	bobot++
-# Date created:			Sep 7, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/irc/bobot++/Makefile,v 1.24 2012/11/17 05:58:27 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: irc/bobot++/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	bobotpp
 PORTVERSION=	2.2.3
@@ -31,6 +26,7 @@ PLIST_FILES=	bin/${PORTNAME}
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUILE}
