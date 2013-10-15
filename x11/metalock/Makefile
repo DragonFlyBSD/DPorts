@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: x11/metalock/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11/metalock/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	metalock
 PORTVERSION=	0.8.0
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	IMLIB2 XFT ULTRAGETOPT
 OPTIONS_DEFAULT=	IMLIB2 XFT ULTRAGETOPT
 ULTRAGETOPT_DESC=	Use Ultragetopt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAKE_ARGS=	PREFIX="${LOCALBASE}" DEST_PREFIX="${PREFIX}" CC="${CC}"
