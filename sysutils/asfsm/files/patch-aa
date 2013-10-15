@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/asfsm/files/patch-aa,v 1.3 2012/11/17 06:01:25 svnexp Exp $
+$FreeBSD: sysutils/asfsm/files/patch-aa 300897 2012-07-14 14:29:18Z beat $
 
 --- asfsm.c.orig	Sun Oct 18 12:02:09 1998
 +++ asfsm.c	Thu Aug 15 23:19:02 2002

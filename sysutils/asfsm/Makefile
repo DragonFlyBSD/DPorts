@@ -1,8 +1,5 @@
-# New ports collection makefile for:	asfsm
-# Date created:		4 June 1999
-# Whom:				jack
-#
-# $FreeBSD: ports/sysutils/asfsm/Makefile,v 1.15 2012/11/17 06:01:25 svnexp Exp $
+# Created by: jack
+# $FreeBSD: sysutils/asfsm/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	asfsm
 PORTVERSION=	1.0.p15
@@ -20,6 +17,7 @@ GNU_CONFIGURE=	yes
 MAN1=		asfsm.1
 PLIST_FILES=	bin/asfsm
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/asfsm.man ${PREFIX}/man/man1/asfsm.1
 	${INSTALL_PROGRAM} ${WRKSRC}/asfsm ${PREFIX}/bin
