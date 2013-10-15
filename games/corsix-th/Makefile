@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/corsix-th/Makefile 326377 2013-09-05 09:57:52Z madpilot $
+# $FreeBSD: games/corsix-th/Makefile 329938 2013-10-09 23:12:05Z madpilot $
 
 PORTNAME=	corsixth
 PORTVERSION=	0.21
@@ -16,33 +16,25 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
-USES=		cmake pkgconfig
+USES=		cmake compiler:c++11-lang pkgconfig
 USE_LUA=	yes
 USE_SDL=	mixer
 USE_DOS2UNIX=	CMake/FindFFmpeg.cmake \
-		CorsixTH/CMakeLists.txt
+		CorsixTH/CMakeLists.txt \
+		CorsixTH/Src/iso_fs.cpp
 
 OPTIONS_DEFINE=	MOVIES
 OPTIONS_DEFAULT=	MOVIES
 MOVIES_DESC=	Play in-game movies
 
+MOVIES_CMAKE_ON=	-DWITH_MOVIES=ON
+MOVIES_CMAKE_OFF=	-DWITH_MOVIES=OFF
+MOVIES_LIB_DEPENDS=	libswresample1.so:${PORTSDIR}/multimedia/ffmpeg1
+
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MMOVIES}
-CMAKE_ARGS+=	-DWITH_MOVIES=ON
-LIB_DEPENDS+=	swresample1:${PORTSDIR}/multimedia/ffmpeg1
-# partly copied from editors/libreoffice
-.if ${ARCH} == "i386"
-.if exists(/usr/bin/clang) && ${OSVERSION} > 900014
-CC=		/usr/bin/clang
-CPP=		/usr/bin/clang-cpp
-CXX=		/usr/bin/clang++
-.else
-USE_GCC=	yes
-.endif
-.endif
-.else
-CMAKE_ARGS+=	-DWITH_MOVIES=OFF
+.if ${PORT_OPTIONS:MMOVIES} && ${OSVERSION} < 900014
+FAVORITE_COMPILER=	gcc
 .endif
 
 post-patch:
@@ -52,10 +44,10 @@ post-patch:
 			${WRKSRC}/CorsixTH/Src/main.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/CorsixTH/CorsixTH ${PREFIX}/bin
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/CorsixTH/CorsixTH.lua ${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/CorsixTH/CorsixTH ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/CorsixTH/CorsixTH.lua ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/CorsixTH && ${COPYTREE_SHARE} "Bitmap Levels Lua" \
-		${DATADIR}
+		${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
