@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: ports/graphics/vp/Makefile,v 1.37 2012/11/17 05:58:24 svnexp Exp $
+# $FreeBSD: graphics/vp/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	vp
 PORTVERSION=	1.8
@@ -16,4 +16,5 @@ USE_XZ=		yes
 MAN1=		vp.1
 PLIST_FILES=	bin/vp
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
