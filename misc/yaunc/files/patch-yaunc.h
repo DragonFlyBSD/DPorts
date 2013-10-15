@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/misc/yaunc/files/patch-yaunc.h,v 1.2 2012/11/17 05:59:47 svnexp Exp $
+$FreeBSD: misc/yaunc/files/patch-yaunc.h 300896 2012-07-14 13:54:48Z beat $
 
 --- yaunc.h.orig	Fri Mar 14 07:14:11 2003
 +++ yaunc.h	Sun Apr 27 19:15:49 2003
