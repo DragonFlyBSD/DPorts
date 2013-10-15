@@ -1,5 +1,5 @@
 # Created by: hrkfrd@googlemail.com
-# $FreeBSD: audio/mpdas/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/mpdas/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpdas
 PORTVERSION=	0.3.0
@@ -14,6 +14,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		mpd.4:${PORTSDIR}/audio/libmpd
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 
 USE_RC_SUBR=	mpdas
