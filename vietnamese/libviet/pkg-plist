@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/vietnamese/libviet/pkg-plist,v 1.4 2012/11/17 06:02:26 svnexp Exp $
+@comment $FreeBSD: vietnamese/libviet/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 lib/libvntype.a
 lib/libviqr.a
 include/viet/charset.h
