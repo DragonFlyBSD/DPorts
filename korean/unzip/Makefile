@@ -1,8 +1,5 @@
-# Ports collection makefile for:  ko-unzip
-# Date created:		21 May 2003
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/korean/unzip/Makefile,v 1.7 2012/11/17 05:58:47 svnexp Exp $
+# Created by: Hye-Shik Chang
+# $FreeBSD: korean/unzip/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 CATEGORIES=	korean archivers
 
@@ -14,4 +11,5 @@ CONFLICTS=	unzip-[0-9]* unzip-iconv-[0-9]* ru-unzip-[0-9]* zh-unzip-[0-9]*
 EXTRA_PATCHES=	${.CURDIR}/files/patch-*
 MASTERDIR=	${.CURDIR}/../../archivers/unzip
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
