@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda5/Makefile 326490 2013-09-06 11:43:34Z kwm $
+# $FreeBSD: databases/libgda5/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/trunk/databases/libgda5/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgda
@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	--without-oracle \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 VERSION=	5.0
