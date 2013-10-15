@@ -1,9 +1,5 @@
-# New ports collection makefile for:	msp430mcu
-# Date created:		22 June 2011
-# Whom:			Lev Serebryakov <lev@serebryakov.spb.ru>
-#
-# $FreeBSD: ports/devel/msp430mcu/Makefile,v 1.8 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
+# $FreeBSD: devel/msp430mcu/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	${MCUTARGET}mcu
 PORTVERSION=	1.0.${MCUVERSION}
@@ -35,6 +31,7 @@ PLIST=		${WRKDIR}/.PLIST
 MCUINCPATH=	${MCUTARGET}/include
 MCULIBPATH=	${MCUTARGET}/lib
 
+NO_STAGE=	yes
 pre-install:
 	@cd ${WRKSRC} && ${FIND} upstream include -name '*.h' | ${SORT} | ${SED} -E 's,^[^/]+/,${MCUINCPATH}/,' > ${PLIST}
 	@${ECHO} ${MCULIBPATH}/msp430mcu.spec >> ${PLIST}
