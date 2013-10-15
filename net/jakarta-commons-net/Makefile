@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: ports/net/jakarta-commons-net/Makefile,v 1.14 2013/02/21 16:49:56 svnexp Exp $
+# $FreeBSD: net/jakarta-commons-net/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	commons-net
 PORTVERSION=	1.4.1
@@ -36,6 +36,7 @@ PORTDOCS=	LICENSE.txt NOTICE.txt api
 ALL_TARGET+=	javadoc
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/target/${PORTNAME}-${PORTVERSION}.jar \
