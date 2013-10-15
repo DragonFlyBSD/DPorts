@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: net-im/komclean/Makefile 318333 2013-05-16 20:07:39Z rakuco $
+# $FreeBSD: net-im/komclean/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	komclean
 PORTVERSION=	1.2.1
@@ -29,6 +29,7 @@ DESKTOP_ENTRIES="KOMclean" \
 		"" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
