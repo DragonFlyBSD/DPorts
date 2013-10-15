@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-fsm/Makefile 320606 2013-06-11 15:41:13Z skreuzer $
+# $FreeBSD: devel/py-fsm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	fsm
 PORTVERSION=	0.01
@@ -19,4 +19,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_EGGINFO=	python_${PORTNAME}-${PORTVERSION}-py${PYTHON_VER}.egg-info
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
