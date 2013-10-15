@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/gtk-sharp-beans/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: x11-toolkits/gtk-sharp-beans/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtk-sharp-beans
 PORTVERSION=	2.14.1
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
