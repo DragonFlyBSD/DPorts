@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Aliases/Makefile 326753 2013-09-08 16:15:52Z tobez $
+# $FreeBSD: devel/p5-MooseX-Aliases/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Aliases
 PORTVERSION=	0.11
@@ -25,4 +25,5 @@ MAN3=	MooseX::Aliases.3 \
 	MooseX::Aliases::Meta::Trait::Attribute.3 \
 	MooseX::Aliases::Meta::Trait::Method.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
