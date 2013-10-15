@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cmunge
-# Date created:			October 26th 2005
-# Whom:				Frerich Raabe <frerich.raabe@gmx.de>
-#
-# $FreeBSD: ports/devel/cmunge/Makefile,v 1.7 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Frerich Raabe <frerich.raabe@gmx.de>
+# $FreeBSD: devel/cmunge/Makefile 329363 2013-10-04 19:25:55Z lme $
 
 PORTNAME=	cmunge
 PORTVERSION=	1.0
@@ -22,17 +18,20 @@ MAKE_ARGS=	CC="${CC} ${CFLAGS}"
 PLIST_FILES=	bin/cmunge bin/ctran bin/proc-incl
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 post-patch:
-	@${REINPLACE_CMD} -e 's|/vcpc_users/jhm/bin/cmunger|${PREFIX}|; \
+	@${REINPLACE_CMD} -e \
+		's|/vcpc_users/jhm/bin/cmunger|${STAGEDIR}${PREFIX}|; \
 		s|/usr/ccs/lib/cpp|/usr/bin/cpp|' ${WRKSRC}/cmunge
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/ctran ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/proc-incl ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/cmunge ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/ctran ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/proc-incl ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/cmunge ${STAGEDIR}${PREFIX}/bin
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
