@@ -1,8 +1,8 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: java/proguard/Makefile 314667 2013-03-19 16:53:38Z ale $
+# $FreeBSD: java/proguard/Makefile 328477 2013-09-27 14:23:52Z ale $
 
 PORTNAME=	proguard
-PORTVERSION=	4.9
+PORTVERSION=	4.10
 CATEGORIES=	java devel
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION:S/.1$//}
@@ -23,6 +23,7 @@ SUB_FILES=	proguard.sh proguard-gui.sh retrace.sh
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
