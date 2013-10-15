@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@langille.org>
-# $FreeBSD: net-mgmt/fruity/Makefile 320372 2013-06-09 18:32:16Z miwi $
+# $FreeBSD: net-mgmt/fruity/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	fruity
 DISTVERSION=	1.0-rc2
@@ -22,6 +22,7 @@ USE_MYSQL=	yes
 SUB_LIST+=	REQ_MYSQL=mysql
 USE_PHP=	mysql session dba pcre
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
