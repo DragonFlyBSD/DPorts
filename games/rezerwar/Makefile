@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/rezerwar/Makefile 327191 2013-09-14 01:13:28Z amdmi3 $
+# $FreeBSD: games/rezerwar/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	rezerwar
 PORTVERSION=	0.4.2
@@ -21,6 +21,7 @@ CONFIGURE_ENV=	TARGET_BIN=${PREFIX}/bin \
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
