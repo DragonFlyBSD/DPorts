@@ -1,7 +1,7 @@
-# $FreeBSD: ports-mgmt/pchecker/Makefile 319779 2013-06-03 14:01:23Z ak $
+# $FreeBSD: ports-mgmt/pchecker/Makefile 328207 2013-09-24 22:26:34Z ak $
 
 PORTNAME=	pchecker
-PORTVERSION=	1.14
+PORTVERSION=	1.15
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PROJECTHOST=	ak-various-projects
@@ -17,6 +17,6 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
