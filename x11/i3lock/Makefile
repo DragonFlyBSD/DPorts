@@ -1,8 +1,9 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11/i3lock/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: x11/i3lock/Makefile 329986 2013-10-10 12:46:42Z bapt $
 
 PORTNAME=	i3lock
 PORTVERSION=	2.5
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://i3wm.org/${PORTNAME}/
 
@@ -23,14 +24,14 @@ MAKE_ARGS=	PREFIX="${PREFIX}" X11LIB="${LOCALBASE}/lib" \
 		MANDIR="${MANPREFIX}/man"
 
 PLIST_FILES=	bin/i3lock \
-		etc/pam.d/i3lock
-
-MAN1=	i3lock.1
+		man/man1/i3lock.1.gz
 
 LDFLAGS+=	${ICONV_LIB}
 USE_XORG=	x11 xcb xt xproto xext
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		iconv pkgconfig
+USES=		gmake iconv pkgconfig
+
+post-install:
+	${CHMOD} u+s ${STAGEDIR}${PREFIX}/bin/i3lock
 
 .include <bsd.port.mk>
