@@ -1,5 +1,5 @@
 # Created by: Andy Kosela <akosela@andykosela.com>
-# $FreeBSD: games/inform7/Makefile 317571 2013-05-07 05:33:17Z az $
+# $FreeBSD: games/inform7/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	inform7
 PORTVERSION=	6G60
@@ -24,6 +24,7 @@ SUB_FILES=	i7.sh
 
 MAN6=		i7.6
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
