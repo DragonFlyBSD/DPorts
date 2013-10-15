@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: ports/net/kippo/Makefile,v 1.1 2013/02/22 16:44:35 svnexp Exp $
+# $FreeBSD: net/kippo/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	kippo
 PORTVERSION=	0.5
@@ -27,6 +27,7 @@ GROUPS=		kippo
 SUB_FILES=	pkg-message
 SUB_LIST+=	PYTHON=${PYTHON_CMD}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 .for f in kippo.cfg kippo.tac fs.pickle

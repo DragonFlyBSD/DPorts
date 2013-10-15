@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/kippo/files/kippo.in,v 1.1 2013/02/22 16:44:35 svnexp Exp $
+# $FreeBSD: net/kippo/files/kippo.in 312776 2013-02-22 16:22:49Z culot $
 #
 # PROVIDE: kippo
 # REQUIRE: LOGIN
