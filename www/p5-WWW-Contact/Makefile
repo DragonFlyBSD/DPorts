@@ -1,5 +1,5 @@
 # Created by: Fred Cox
-# $FreeBSD: www/p5-WWW-Contact/Makefile 326150 2013-09-03 13:17:36Z az $
+# $FreeBSD: www/p5-WWW-Contact/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Contact
 PORTVERSION=	0.47
@@ -46,4 +46,5 @@ MAN3=		WWW::Contact.3 \
 		WWW::Contact::Rediffmail.3 \
 		WWW::Contact::Yahoo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
