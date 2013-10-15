@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nc
-# Date created:			Apr 27, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/net/nc/Makefile,v 1.8 2012/11/17 06:00:06 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: net/nc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nc
 PORTVERSION=	1.0.1
@@ -20,4 +16,5 @@ GNU_CONFIGURE=	yes
 MAN1=		ncat.1
 PLIST_FILES=	bin/ncat
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
