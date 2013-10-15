@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-uuid/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-uuid/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	uuid
 PORTVERSION=	1.2.13
@@ -11,5 +11,6 @@ LICENSE=	BSD
 
 USE_CABAL=	cryptohash>=0.7 maccatcher>=1.0 random>=1.0.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
