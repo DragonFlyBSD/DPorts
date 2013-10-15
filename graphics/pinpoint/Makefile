@@ -1,5 +1,5 @@
 # Created by: lichray@gmail.com
-# $FreeBSD: graphics/pinpoint/Makefile 326109 2013-09-02 22:31:37Z bapt $
+# $FreeBSD: graphics/pinpoint/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pinpoint
 DISTVERSION=	0.1.4
@@ -25,6 +25,7 @@ USES=	pathfix pkgconfig
 OPTIONS_DEFINE=	GST
 GST_DESC=	Live videos as slide backgrounds
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGST}
