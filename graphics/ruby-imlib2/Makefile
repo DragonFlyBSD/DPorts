@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Imlib2-Ruby
-# Date created:		7 April 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: graphics/ruby-imlib2/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: graphics/ruby-imlib2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imlib2
 PORTVERSION=	0.5.2
@@ -30,6 +26,7 @@ DOCSDIR=	${RUBY_MODDOCDIR}
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -E -e 's|RSTRING\(([^)]+)\)->len|RSTRING_LEN(\1)|g' ${WRKSRC}/imlib2.c
 
