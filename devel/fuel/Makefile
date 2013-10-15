@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <nukama@gmail.com>
-# $FreeBSD: devel/fuel/Makefile 325831 2013-08-31 20:23:20Z rm $
+# $FreeBSD: devel/fuel/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fuel
 DISTVERSION=	0.9.6
@@ -20,6 +20,7 @@ HAS_CONFIGURE=	yes
 
 PLIST_FILES+=	bin/Fuel
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
