@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	flawfinder
-# Date created:			Jul 23, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/flawfinder/Makefile,v 1.16 2012/11/17 06:01:03 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/flawfinder/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	flawfinder
 PORTVERSION=	1.27
@@ -23,6 +18,7 @@ MAN1=		flawfinder.1
 DOCS=		ChangeLog README flawfinder.pdf flawfinder.ps
 EXAMPLES=	test.c correct-results.html correct-results.txt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/flawfinder ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/flawfinder.1 ${MANPREFIX}/man/man1
