@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: databases/p5-Class-DBI-Loader/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Class-DBI-Loader/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI-Loader
 PORTVERSION=	0.34
@@ -28,6 +28,7 @@ MAN3=		Class::DBI::Loader.3 \
 
 OPTIONS_DEFINE=	PGSQL MYSQL SQLITE DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
