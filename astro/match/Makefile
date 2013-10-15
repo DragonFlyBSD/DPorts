@@ -1,6 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/astro/match/Makefile,v 1.20 2012/11/17 05:54:25 svnexp Exp $
-#
+# $FreeBSD: astro/match/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	match
 PORTVERSION=	0.16
@@ -15,6 +14,7 @@ LICENSE=	GPLv2
 
 CONFLICTS=	avenger-[0-9]*
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 MAN1=		match.1
 
