@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nohtml
-# Date Created:				17 February 2003
-# Whom:					nohtml@tundraware.com
-#
-# $FreeBSD: ports/mail/nohtml/Makefile,v 1.2 2012/11/17 05:59:07 svnexp Exp $
-#
+# Created by: nohtml@tundraware.com
+# $FreeBSD: mail/nohtml/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	nohtml
 PORTVERSION=	1.11
@@ -18,6 +14,7 @@ USE_PYTHON=	yes
 MANCOMPRESSED=	yes
 MAN1=		nohtml.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
