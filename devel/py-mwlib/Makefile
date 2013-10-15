@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-mwlib/Makefile 325079 2013-08-21 00:52:48Z wen $
+# $FreeBSD: devel/py-mwlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mwlib
 PORTVERSION=	0.15.11
@@ -32,6 +32,7 @@ USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's|lockfile==|lockfile>=|' \
