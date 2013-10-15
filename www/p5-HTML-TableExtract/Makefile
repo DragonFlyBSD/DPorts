@@ -1,5 +1,5 @@
 # Created by: Sergey Osokin aka oZZ <ports@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-TableExtract/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-TableExtract/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-TableExtract
 PORTVERSION=	2.11
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::TableExtract.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
