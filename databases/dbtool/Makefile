@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	dbtool
-# Date created:			Apr 29, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/databases/dbtool/Makefile,v 1.26 2012/12/10 19:23:59 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: databases/dbtool/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbtool
 PORTVERSION=	1.7
@@ -42,6 +37,7 @@ MAN1=	dbtool.1
 SH2BASH=	samples/account-db/accdb
 UB2PFX=		samples/locate/locate samples/locate/updatedb
 
+NO_STAGE=	yes
 post-extract:
 .if !defined(WITH_BERKELEY_DB)
 	@${ECHO_MSG}
