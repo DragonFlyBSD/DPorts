@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: editors/madedit/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: editors/madedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	madedit
 PORTVERSION=	0.2.9
@@ -26,6 +26,7 @@ PKG_CONFIG?=	${LOCALBASE}/bin/pkg-config
 glib_gtk2_CFLAGS=`${PKG_CONFIG} --cflags gtk+-2.0`
 glib_gtk2_LIBS=	`${PKG_CONFIG} --libs gtk+-2.0`
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
