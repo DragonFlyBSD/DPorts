@@ -1,9 +1,5 @@
-# New ports collection makefile for:	poppwd
-# Date created:		12 Jan 2001
-# Whom:			Andrew Stevenson <andrew@ugh.net.au>
-#
-# $FreeBSD: ports/mail/poppwd/Makefile,v 1.11 2012/11/17 05:59:11 svnexp Exp $
-#
+# Created by: Andrew Stevenson <andrew@ugh.net.au>
+# $FreeBSD: mail/poppwd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	poppwd
 PORTVERSION=	2.0
@@ -20,4 +16,5 @@ MAN8=		poppwd.8
 MANCOMPRESSED=	maybe
 PLIST_FILES=	libexec/poppwd
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
