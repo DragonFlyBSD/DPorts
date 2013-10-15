@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: ports/misc/grun/Makefile,v 1.16 2012/12/29 04:51:46 svnexp Exp $
+# $FreeBSD: misc/grun/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	grun
 PORTVERSION=	0.8.1
@@ -19,4 +19,5 @@ MAN1=		grun.1x
 PLIST_FILES=	bin/grun %%DATADIR%%/consfile %%DATADIR%%/gassoc
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
