@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-Text-Ngrams/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-Ngrams/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Ngrams
 PORTVERSION=	2.003
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 MAN1=		ngrams.pl.1
 MAN3=		Text::Ngrams.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
