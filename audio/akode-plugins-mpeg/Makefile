@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: audio/akode-plugins-mpeg/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/akode-plugins-mpeg/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	akode-plugins-${PORTNAMESUFX}
 PORTVERSION=	2.0.2
@@ -19,6 +19,7 @@ LIB_DEPENDS=	mad:${PORTSDIR}/audio/libmad
 
 CONFLICTS=	kdemultimedia-3.[1-3]*
 
+NO_STAGE=	yes
 PLUGIN=		mpeg_decoder
 PORTNAMESUFX=	${PLUGIN:S/_sink//:S/_decoder//:S/src_//}
 
