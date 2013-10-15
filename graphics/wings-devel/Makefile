@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: graphics/wings-devel/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/wings-devel/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	wings
 PORTVERSION=	1.3.1
@@ -28,6 +28,7 @@ USE_GMAKE=	yes
 
 PORTSCOUT=	limitw:1,odd
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(GCC)|${CC} -I${LOCALBASE}/include -L${LOCALBASE}/lib|g' \
 		${WRKSRC}/plugins_src/accel/Makefile
