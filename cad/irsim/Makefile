@@ -1,13 +1,13 @@
 # Created by: swallace
-# $FreeBSD: cad/irsim/Makefile 326421 2013-09-05 17:23:04Z wg $
+# $FreeBSD: cad/irsim/Makefile 328255 2013-09-25 05:28:35Z danilo $
 
 PORTNAME=	irsim
-PORTVERSION=	9.7.81
+PORTVERSION=	9.7.82
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/irsim/archive/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Event-driven logic-level simulator for MOS circuis
 
 LICENSE=	GPLv2
@@ -34,15 +34,10 @@ GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		irsim.1
-MAN3=		irsim-analyzer.3
-MAN5=		netchange.5
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTCL}
-USE_TK_BUILD=	yes
-USE_TK=		yes
+USES+=	tk
 PLIST_SUB+=	NOTCL="@comment "
 .else
 WISH=		${FALSE}
