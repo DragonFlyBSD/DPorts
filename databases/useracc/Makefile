@@ -1,9 +1,5 @@
-# New ports collection makefile for:    useracc
-# Date created:         December 20th, 2002
-# Whom:                 Konrad Heuer
-#
-# $FreeBSD: ports/databases/useracc/Makefile,v 1.3 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: Konrad Heuer
+# $FreeBSD: databases/useracc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	useracc
 PORTVERSION=	3.1
@@ -21,4 +17,5 @@ PLIST_FILES=	bin/useracc etc/rc.d/useracc.sh.sample
 
 CFLAGS+=	-DFreeBSD
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
