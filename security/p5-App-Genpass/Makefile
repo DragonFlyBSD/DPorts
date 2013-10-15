@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: security/p5-App-Genpass/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: security/p5-App-Genpass/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
 
 PORTNAME=	App-Genpass
 PORTVERSION=	2.33
@@ -27,9 +27,6 @@ TEST_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
 USE_PERL5=	configure
 USES=		perl5
 REINPLACE_ARGS=	-i ''
-
-MAN1=		genpass.1
-MAN3=		App::Genpass.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '1 s|.*|#!${PERL}|' ${WRKSRC}/bin/genpass
