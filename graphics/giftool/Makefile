@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: graphics/giftool/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: graphics/giftool/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	giftool
 PORTVERSION=	1.0
@@ -25,6 +25,7 @@ MALLOCSIZE_DESC=	Improve malloc size
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	COPYRIGHT README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRETVALUE}
