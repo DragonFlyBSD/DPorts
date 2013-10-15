@@ -1,5 +1,5 @@
 # Created by: Jordan DeLong <fracture@allusion.net>
-# $FreeBSD: games/prboom/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: games/prboom/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	prboom
 PORTVERSION=	2.5.0
@@ -28,6 +28,7 @@ MAN6=		prboom.6 prboom-game-server.6
 DATADIR=	${DMDIR}
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../doom-data/Makefile.include"
 
 .include <bsd.port.options.mk>
