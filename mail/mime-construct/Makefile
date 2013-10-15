@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mime-construct
-# Date created:				Tue 02 Mar 2010
-# Whom:					Alexey V. Degtyarev <alexey@renatasystems.org>
-#
-# $FreeBSD: mail/mime-construct/Makefile 326257 2013-09-04 07:19:56Z az $
-#
+# Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
+# $FreeBSD: mail/mime-construct/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mime-construct
 PORTVERSION=	1.11
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN1=		mime-construct.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
