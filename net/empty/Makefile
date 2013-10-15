@@ -1,5 +1,5 @@
 # Created by: Mikhail Zakharov <zmey20000@yahoo.com>
-# $FreeBSD: net/empty/Makefile 325408 2013-08-26 17:31:14Z bapt $
+# $FreeBSD: net/empty/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	empty
 PORTVERSION=	0.6.18b
@@ -19,6 +19,7 @@ MAKE_ARGS+=	CC=${CC}
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/empty ${PREFIX}/bin/
 	@${INSTALL_MAN} ${MAN1:S,^,${WRKSRC}/,} ${MAN1PREFIX}/man/man1/
