@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libproxy-kde
-# Date created:		26 February 2009
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/net/libproxy-kde/Makefile,v 1.6 2012/11/17 06:00:05 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net/libproxy-kde/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #    $MCom: ports/net/libproxy-kde/Makefile,v 1.1 2011/01/12 13:10:53 kwm Exp $
 
 PORTREVISION=	2
@@ -22,6 +19,7 @@ USE_KDE4=	automoc4 kdelibs
 
 LIBPROXY_SLAVE=	kde
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/lib/${PORTNAME}/${PORTVERSION}/modules/
 	${INSTALL_LIB} ${WRKSRC}/lib/config_kde4.so \
