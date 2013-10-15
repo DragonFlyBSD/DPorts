@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vm-pop3d
-# Date created:			24 August 2001
-# Whom:				Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
-#
-# $FreeBSD: ports/mail/vm-pop3d/Makefile,v 1.14 2012/11/17 05:59:17 svnexp Exp $
-#
+# Created by: Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
+# $FreeBSD: mail/vm-pop3d/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	vm-pop3d
 PORTVERSION=	1.1.6
@@ -31,6 +27,7 @@ MAN8=		vm-pop3d.8
 
 DOCS=		AUTHORS CHANGES COPYING FAQ INSTALL README
 
+NO_STAGE=	yes
 pre-patch:
 	@${ECHO} ""
 	@${ECHO} "You may use the following build options:"
