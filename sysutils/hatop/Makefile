@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hatop
-# Date created:		2010-08-16
-# Whom:			Jim Riggs <ports@christianserving.org>
-#
-# $FreeBSD: ports/sysutils/hatop/Makefile,v 1.3 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Jim Riggs <ports@christianserving.org>
+# $FreeBSD: sysutils/hatop/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hatop
 PORTVERSION=	0.7.7
@@ -25,6 +21,7 @@ PORTDOCS=	HACKING KEYBINDS README
 
 MAN1=		hatop.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/hatop ${PREFIX}/bin/hatop
 	${INSTALL_MAN} ${WRKSRC}/man/hatop.1 ${MAN1PREFIX}/man/man1
