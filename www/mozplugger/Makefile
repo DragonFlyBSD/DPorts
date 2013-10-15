@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang <loren@north-winds.org>
-# $FreeBSD: www/mozplugger/Makefile 321579 2013-06-22 15:52:44Z miwi $
+# $FreeBSD: www/mozplugger/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mozplugger
 PORTVERSION=	2.1.3
@@ -19,6 +19,7 @@ USE_WEBPLUGINS=	native
 WEBPLUGINS_FILES=mozplugger.so
 MAKE_ENV=	WEBPLUGINS_DIR="${WEBPLUGINS_DIR}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 
