@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/hploscripts/Makefile 317615 2013-05-07 14:30:31Z ehaupt $
+# $FreeBSD: sysutils/hploscripts/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hploscripts
 PORTVERSION=	3.0
@@ -13,16 +13,15 @@ COMMENT=	HP Lights-Out management perl scripts
 BUILD_DEPENDS=	p5-IO-Socket-SSL>=1.19:${PORTSDIR}/security/p5-IO-Socket-SSL
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
-
 SHEBANG_FILES=	locfg.pl
 
 PORTDOCS=	iLO_perl_xml.pdf linux-LOsamplescripts.txt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
