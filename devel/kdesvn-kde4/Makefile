@@ -1,5 +1,5 @@
 # Created by: Yuan Jue <yuanjue@yuanjue.net>
-# $FreeBSD: devel/kdesvn-kde4/Makefile 323850 2013-07-28 20:28:32Z dbn $
+# $FreeBSD: devel/kdesvn-kde4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	kdesvn
 DISTVERSION=	1.6.0
@@ -26,6 +26,7 @@ USE_QT4=	corelib gui xml network dbus svg qt3support sql \
 
 MAN1=		kdesvn.1 kdesvnaskpass.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
