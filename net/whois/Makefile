@@ -1,9 +1,5 @@
-# New ports collection makefile for:   whois
-# Date created:                02 Oct 2003
-# Whom:                        Filippo Natali <filippo@widestore.net>
-#
-# $FreeBSD: net/whois/Makefile 327086 2013-09-12 16:11:43Z az $
-#
+# Created by: Filippo Natali <filippo@widestore.net>
+# $FreeBSD: net/whois/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	whois
 PORTVERSION=	5.0.11
@@ -28,6 +24,7 @@ MAN1=		mwhois.1 mkpasswd.1
 
 PLIST_FILES=	bin/mwhois bin/mkpasswd
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g ; \
 		s|%%LOCALBASE%%|${LOCALBASE}|g" ${WRKSRC}/Makefile
