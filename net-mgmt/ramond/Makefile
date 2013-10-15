@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/ramond/Makefile 322372 2013-07-06 09:04:54Z ohauer $
+# $FreeBSD: net-mgmt/ramond/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ramond
 PORTVERSION=	0.5
@@ -20,6 +20,7 @@ USE_RC_SUBR=	ramon
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 LIB_DEPENDS+=	apr-1:${PORTSDIR}/devel/apr1
