@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/pancho/Makefile 326167 2013-09-03 16:18:49Z az $
+# $FreeBSD: net-mgmt/pancho/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	pancho
 PORTVERSION=	9.3.9
@@ -22,6 +22,7 @@ MAN1=		pancho.1
 
 DOCS=		README README.plugins Plugin.sample
 
+NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/lib/Pancho/Plugins/README ${WRKSRC}/README.plugins
 	@${MV} ${WRKSRC}/lib/Pancho/Plugins/Plugin.sample ${WRKSRC}/
