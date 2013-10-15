@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: graphics/p5-Acme-Steganography-Image-Png/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: graphics/p5-Acme-Steganography-Image-Png/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Acme-Steganography-Image-Png
 PORTVERSION=	0.06
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Acme::Steganography::Image::Png.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
