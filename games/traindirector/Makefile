@@ -1,4 +1,4 @@
-# $FreeBSD: games/traindirector/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/traindirector/Makefile 328679 2013-09-29 11:18:05Z madpilot $
 
 PORTNAME=	traindirector
 PORTVERSION=	3.6
@@ -30,6 +30,6 @@ PLIST_FILES=	bin/traindir3
 MAKEFILE=	Makefile.fc9
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/traindir3 ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/traindir3 ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
