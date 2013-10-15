@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mkxvcd
-# Date created:				Fri Mar  5 04:25:02 EST 2004
-# Whom:					michael johnson <ahze@ahze.net>
-#
-# $FreeBSD: ports/multimedia/mkxvcd/Makefile,v 1.14 2012/11/17 05:59:51 svnexp Exp $
-#
+# Created by: michael johnson <ahze@ahze.net>
+# $FreeBSD: multimedia/mkxvcd/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mkxvcd
 PORTVERSION=	2.0.2
@@ -24,6 +20,7 @@ PLIST_FILES=	bin/mkxvcd
 
 PORTDOCS=	AUTHORS Changelog INSTALL README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
