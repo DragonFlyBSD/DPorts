@@ -1,9 +1,5 @@
-# New ports collection makefile for:    grc-aspell
-# Date created:                         17 March 2009
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/grc-aspell/Makefile,v 1.4 2012/11/17 06:01:57 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/grc-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-${DICT}-0.02-0
@@ -14,5 +10,6 @@ COMMENT=	Aspell Ancient Greek dictionary
 
 DICT=	 	grc
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
