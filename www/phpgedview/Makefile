@@ -1,5 +1,5 @@
 # Created by: Hubert Tournier <hubert@frbsd.org>
-# $FreeBSD: www/phpgedview/Makefile 315443 2013-03-28 06:54:46Z bapt $
+# $FreeBSD: www/phpgedview/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpGedView
 PORTVERSION=	4.2.3
@@ -26,6 +26,7 @@ OPTIONS_MULTI_DB=	MYSQL PGSQL SQLITE
 OPTIONS_DEFAULT=	SQLITE
 DB_DESC=	Data storage
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
