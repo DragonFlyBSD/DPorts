@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/popup-stacks/Makefile,v 1.5 2012/11/17 06:02:16 svnexp Exp $
+# $FreeBSD: textproc/popup-stacks/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	popup
 PORTVERSION=	1.0
@@ -22,6 +22,7 @@ PLIST_DIRS=	share/examples/popup
 PLIST_FILES+=	share/examples/popup/${i}
 .endfor
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 .for i in ${DISTFILES}
