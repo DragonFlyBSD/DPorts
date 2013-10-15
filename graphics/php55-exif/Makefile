@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: graphics/php55-exif/Makefile 321684 2013-06-24 14:32:11Z ale $
+# $FreeBSD: graphics/php55-exif/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 CATEGORIES=	graphics
 
@@ -7,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-exif
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
