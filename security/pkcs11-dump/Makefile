@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pkcs11-dump
-# Date created:			4 Apr 2011
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pkcs11-dump/Makefile,v 1.2 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: security/pkcs11-dump/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pkcs11-dump
 PORTVERSION=	0.3.4
@@ -26,6 +22,7 @@ PLIST_FILES=	bin/pkcs11-dump
 
 MAN1=		pkcs11-dump.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|install-data-am: install-dist_docDATA|install-data-am:|' \
 		${WRKSRC}/Makefile.in
