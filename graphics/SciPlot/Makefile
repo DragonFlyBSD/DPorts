@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/SciPlot/Makefile 326044 2013-09-02 17:47:54Z thierry $
+# $FreeBSD: graphics/SciPlot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	SciPlot
 PORTVERSION=	1.36
@@ -26,6 +26,7 @@ PORTDOCS=	README SciPlot.html SciPlotDemo.html SciPlotProg.html
 EXDATA=		data.txt
 EXBINS=		realtime sciplot
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/include/${PORTNAME}
 	${INSTALL_DATA} ${INCLUDES:S|^|${WRKSRC}/|} ${PREFIX}/include/${PORTNAME}
