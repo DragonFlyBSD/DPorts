@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: ports/www/cl-lml-clisp/Makefile,v 1.13 2013/02/18 14:40:04 svnexp Exp $
+# $FreeBSD: www/cl-lml-clisp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lml
 PORTVERSION=	2.5.7
@@ -18,5 +18,6 @@ USE_ASDF_FASL=	yes
 FASL_TARGET=	clisp
 FASL_BUILD=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
 .include <bsd.port.mk>
