@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pbimaker
-# Date created:				June 23, 2011
-# Whom:					Jesse
-#
-# $FreeBSD: ports/sysutils/pbimaker/Makefile,v 1.3 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Jesse
+# $FreeBSD: sysutils/pbimaker/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pbimaker
 PORTVERSION=	1.3
@@ -19,4 +15,5 @@ NO_COFIGURE=	yes
 
 WRKSRC=	${WRKDIR}/PBIMaker
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
