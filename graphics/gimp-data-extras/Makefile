@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/gimp-data-extras/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: graphics/gimp-data-extras/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gimp-data-extras
 PORTVERSION=	2.0.2
@@ -23,4 +23,5 @@ USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
