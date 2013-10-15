@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Jed text editor w/ Japanese support
-# Date created:		2 Feb 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: japanese/jed/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: japanese/jed/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	jed
 PORTVERSION=	${VERSION}.j${JP_VERSION}
@@ -40,6 +36,7 @@ OPTIONS_DEFINE=	DOCS X11 CANNA
 OPTIONS_DEFAULT= CANNA X11
 CANNA_DESC=	Canna support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
