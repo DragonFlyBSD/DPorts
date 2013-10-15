@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-hS3/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-hS3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hS3
 PORTVERSION=	0.5.7
@@ -15,5 +15,6 @@ USE_CABAL=	Crypto>=4.1.0 dataenc HTTP>=4000.0.0 hxt>=9.0.0 \
 
 EXECUTABLE=	hs3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
