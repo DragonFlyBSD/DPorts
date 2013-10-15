@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net-p2p/litecoin/Makefile 324464 2013-08-10 02:18:49Z swills $
+# $FreeBSD: net-p2p/litecoin/Makefile 328086 2013-09-24 02:38:22Z swills $
 
 PORTNAME=	litecoin
-PORTVERSION=	0.8.3.7
+PORTVERSION=	0.8.5.1
 CATEGORIES=	net-p2p finance
 MASTER_SITES=	LOCAL/swills \
 		GH
@@ -14,7 +14,7 @@ LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	litecoin-project
-GH_COMMIT=	2884342
+GH_COMMIT=	6cef39c
 GH_TAGNAME=	v${PORTVERSION}
 
 USE_OPENSSL=	yes
@@ -34,6 +34,7 @@ DBUS_DESC=	Build with DBUS support
 CXXFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
 CXXFLAGS+=	-L${LOCALBASE}/lib -L${BDB_LIB_DIR}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUPNP}
