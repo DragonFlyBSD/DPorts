@@ -1,5 +1,5 @@
 # Created by: Edson Brandi <ebrandi@fugspbr.org>
-# $FreeBSD: sysutils/dar/Makefile 317491 2013-05-06 09:07:58Z bapt $
+# $FreeBSD: sysutils/dar/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dar
 PORTVERSION=	2.3.11
@@ -19,6 +19,7 @@ CPPFLAGS+=	-DHAVE_DECL_GETOPT=0
 
 MAN1=		dar.1 dar_cp.1 dar_manager.1 dar_slave.1 dar_xform.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
