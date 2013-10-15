@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/mp-player/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/mp-player/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp-player
 PORTVERSION=	0.6
@@ -13,6 +13,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	mikmod.2:${PORTSDIR}/audio/libmikmod
 
+NO_STAGE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lmikmod ${PTHREAD_LIBS} -lncurses -lpanel
 DEFINES=	-D_REENTRANT
