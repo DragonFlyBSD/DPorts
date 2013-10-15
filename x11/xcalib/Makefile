@@ -1,5 +1,5 @@
 # Created by: Petr Holub <hopet@ics.muni.cz>
-# $FreeBSD: x11/xcalib/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/xcalib/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	xcalib
 PORTVERSION=	0.8
@@ -8,17 +8,18 @@ MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-source-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A program for display calibration of X11-Servers with ICC profiles
+COMMENT=	Program for display calibration of X11-Servers with ICC profiles
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PORTDOCS=	README README.profilers
 USE_XORG=	x11 xext sm xxf86vm
-USE_GMAKE=	yes
+USES=		gmake
 
 DEFINES=	-DXCALIB_VERSION=\"${PORTVERSION}\" -DUNIX
 LDFLAGS+=	-L${LOCALBASE}/lib -L${LOCALBASE}/lib -lm -lX11 -lXxf86vm -lXext
 CFLAGS+=	-I./icclib -I${LOCALBASE}/include -I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
