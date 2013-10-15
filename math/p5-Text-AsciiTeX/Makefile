@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: math/p5-Text-AsciiTeX/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Text-AsciiTeX/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Text-AsciiTeX
 PORTVERSION=	0.05
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Text::AsciiTeX.3 Text::AsciiTeX::Syntax.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
