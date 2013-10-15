@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: misc/felis/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/felis/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	felis
 PORTVERSION=	1.0
@@ -12,6 +12,7 @@ COMMENT=	Displays one or more files as a single line of text
 MAN1=		felis.1
 PLIST_FILES=	bin/felis
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/felis ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/felis.1 ${PREFIX}/man/man1
