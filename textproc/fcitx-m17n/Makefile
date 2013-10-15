@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: textproc/fcitx-m17n/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: textproc/fcitx-m17n/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	fcitx-m17n
 PORTVERSION=	0.1.4
@@ -18,4 +18,5 @@ USE_XZ=		yes
 USES=		cmake gettext pkgconfig
 USE_GNOME=	intltool
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
