@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: deskutils/xchm/Makefile 325808 2013-08-31 14:02:08Z rm $
+# $FreeBSD: deskutils/xchm/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xchm
 PORTVERSION=	1.23
@@ -20,6 +20,7 @@ WX_CONF_ARGS=	absolute
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
