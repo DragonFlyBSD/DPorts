@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-JSON-Path/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-JSON-Path/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	JSON-Path
 PORTVERSION=	0.204
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		JSON::Path.3
 
+NO_STAGE=	yes
 post-patch::
 	@${RM} ${WRKSRC}/lib/JSON/Path.pm.orig
 
