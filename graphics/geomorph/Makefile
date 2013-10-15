@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/geomorph/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/geomorph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	geomorph
 PORTVERSION=	0.50
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--with-libintl-prefix="${LOCALBASE}"
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
