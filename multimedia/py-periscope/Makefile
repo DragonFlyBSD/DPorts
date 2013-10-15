@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/py-periscope/Makefile 319944 2013-06-05 01:18:48Z jgh $
+# $FreeBSD: multimedia/py-periscope/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	periscope
 PORTVERSION=	0.2.4
@@ -35,6 +35,7 @@ PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR_WITHOUT_PREFIX:Q}
 
 DESKTOPDIR_WITHOUT_PREFIX=	${DESKTOPDIR:S,^${PREFIX}/,,}
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${DESKTOPDIR}
 	@${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/periscope.desktop \
