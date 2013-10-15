@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: x11-fonts/sourcecodepro-ttf/Makefile 316111 2013-04-19 16:46:40Z sunpoet $
+# $FreeBSD: x11-fonts/sourcecodepro-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	sourcecodepro-ttf
 PORTVERSION=	1.017
@@ -34,6 +34,7 @@ INSTDAT=		fonts.dir fonts.scale
 MKFONTSCL_CMD=	${LOCALBASE}/bin/mkfontscale
 MKFONTDIR_CMD=	${LOCALBASE}/bin/mkfontdir
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}/TTF/ && ${MKFONTSCL_CMD}
 	cd ${WRKSRC}/TTF/ && ${MKFONTDIR_CMD}
