@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/deskutils/gcalcli/Makefile,v 1.8 2012/11/17 17:14:59 svnexp Exp $
+# $FreeBSD: deskutils/gcalcli/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gcalcli
 PORTVERSION=	2.1
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/gcalcli
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,/usr/bin/python2,${SETENV} python," ${WRKSRC}/${PORTNAME}
 
