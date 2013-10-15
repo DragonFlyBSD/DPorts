@@ -1,9 +1,5 @@
-# New ports collection makefile for: tren
-# Date created:        23 April 2010
-# Whom: Tim Daneliuk <tren@tundraware.com>
-#
-# $FreeBSD: ports/sysutils/tren/Makefile,v 1.4 2012/11/17 06:01:48 svnexp Exp $
-#
+# Created by: Tim Daneliuk <tren@tundraware.com>
+# $FreeBSD: sysutils/tren/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tren
 PORTVERSION=	1.242
@@ -21,6 +17,7 @@ MANCOMPRESSED=	yes
 PLIST_FILES=	bin/tren.py
 PORTDOCS=	WHATSNEW.txt tren-license.txt tren.html tren.pdf tren.ps tren.rst
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}/
