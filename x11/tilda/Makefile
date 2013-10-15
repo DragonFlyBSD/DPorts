@@ -1,5 +1,4 @@
-# Create by: Vlad V. Teterya <vlad@vlad.uz.ua>
-# $FreeBSD: x11/tilda/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11/tilda/Makefile 328962 2013-10-01 16:13:56Z eadler $
 
 PORTNAME=	tilda
 PORTVERSION=	0.9.6
@@ -7,7 +6,7 @@ PORTREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	vlad@vlad.uz.ua
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Drop down x11 terminal with transparency support
 
 LIB_DEPENDS=	confuse.0:${PORTSDIR}/devel/libconfuse
@@ -18,6 +17,7 @@ USES=		gmake pkgconfig
 
 DOCS=		AUTHORS ChangeLog README TODO
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|ps -C tilda -o pid=|pgrep tilda|' \
 		${WRKSRC}/src/tilda.c
