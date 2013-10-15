@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/simsu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/simsu/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	simsu
 PORTVERSION=	1.2.3
@@ -19,6 +19,7 @@ INSTALLS_ICONS=	yes
 
 PORTDOCS=	CREDITS ChangeLog
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
