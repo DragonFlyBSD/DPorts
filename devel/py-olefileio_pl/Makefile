@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-olefileio_pl/Makefile 323943 2013-07-30 06:37:29Z antoine $
+# $FreeBSD: devel/py-olefileio_pl/Makefile 328726 2013-09-29 20:03:14Z antoine $
 
 PORTNAME=	olefileio_pl
 PORTVERSION=	0.26
@@ -28,8 +28,8 @@ PORTDOCS=	README.txt
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
