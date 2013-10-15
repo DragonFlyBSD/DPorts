@@ -1,5 +1,5 @@
 # Created by: pgl@instinct.org
-# $FreeBSD: ports/irc/pisg/Makefile,v 1.36 2012/12/17 02:18:00 svnexp Exp $
+# $FreeBSD: irc/pisg/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	pisg
 PORTVERSION=	0.73
@@ -9,12 +9,13 @@ MASTER_SITES=	SF
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	A Perl IRC Statistics Generator
 
-USE_PERL5=	YES
+USES=		perl5
 NO_BUILD=	YES
 
 OPTIONS_DEFINE=	LOGCHARSET DOCS
 LOGCHARSET_DESC=	Character set for logfiles
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLOGCHARSET}
