@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@bsdguru.org>
-# $FreeBSD: audio/ogg2mp3/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/ogg2mp3/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ogg2mp3
 PORTVERSION=	0.6.1
@@ -16,6 +16,7 @@ RUN_DEPENDS=	lame:${PORTSDIR}/audio/lame \
 
 NO_BUILD=	yes
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		perl5
 
 PLIST_FILES=	bin/ogg2mp3
