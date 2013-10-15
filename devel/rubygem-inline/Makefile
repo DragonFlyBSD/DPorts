@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: devel/rubygem-inline/Makefile 319652 2013-06-02 12:20:19Z swills $
+# $FreeBSD: devel/rubygem-inline/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	inline
 PORTVERSION=	3.12.2
@@ -19,4 +19,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
