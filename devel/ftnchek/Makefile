@@ -1,5 +1,5 @@
 # Created by: kargl@apl.washington.edu
-# $FreeBSD: ports/devel/ftnchek/Makefile,v 1.33 2013/01/17 08:44:24 svnexp Exp $
+# $FreeBSD: devel/ftnchek/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	ftnchek
 PORTVERSION=	3.3.1
@@ -22,4 +22,5 @@ CONFIGURE_ARGS=	--libdir=${PREFIX}/share
 CONFIGURE_ENV=	ac_cv_path_CC="${CC}" ac_cv_path_EMACS="${TRUE}"
 MAKE_ARGS=	OPT="${CFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
