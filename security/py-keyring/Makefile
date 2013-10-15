@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-keyring/Makefile 324670 2013-08-13 15:00:47Z culot $
+# $FreeBSD: security/py-keyring/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	keyring
 PORTVERSION=	1.6.1
@@ -29,6 +29,7 @@ KEYCZAR_DESC=		Install keyczar to support keyring encryption
 PYFS_DESC=		Install pyfilesystem to support the pyfs backend
 SECRET_SERVICE_DESC=	Install SecretStorage to support the SecretService backend
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCRYPT_FILE}
