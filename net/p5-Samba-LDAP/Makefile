@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Samba-LDAP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Samba-LDAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Samba-LDAP
 PORTVERSION=	0.05
@@ -31,6 +31,7 @@ MAN3=		Samba::LDAP.3 Samba::LDAP::Base.3 Samba::LDAP::Config.3 \
 		Samba::LDAP::Group.3 Samba::LDAP::Machine.3 \
 		Samba::LDAP::User.3
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -i '' -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
