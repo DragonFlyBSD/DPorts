@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-ConfigReader/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/p5-ConfigReader/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ConfigReader
 PORTVERSION=	0.5
@@ -14,6 +14,7 @@ COMMENT=	Perl5 module to read directives from a configuration file
 USES=		perl5
 NO_BUILD=	YES
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${SITE_PERL_REL}/ConfigReader/
 	${INSTALL_DATA} ${WRKSRC}/DirectiveStyle.pm ${WRKSRC}/Spec.pm \
