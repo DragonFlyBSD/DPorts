@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: shells/vshnu/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: shells/vshnu/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	vshnu
 PORTVERSION=	1.0305
@@ -16,4 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
