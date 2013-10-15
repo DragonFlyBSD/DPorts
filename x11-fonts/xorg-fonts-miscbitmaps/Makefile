@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-fonts/xorg-fonts-miscbitmaps/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/xorg-fonts-miscbitmaps/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	xorg-fonts-miscbitmaps
 PORTVERSION=	7.7
@@ -31,4 +31,5 @@ FONTDIR=	${LOCALBASE}/lib/X11/fonts
 
 do-install:	# empty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
