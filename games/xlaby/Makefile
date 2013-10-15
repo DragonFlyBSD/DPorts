@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xlaby/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xlaby/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xlaby
 PORTVERSION=	2.0.1
@@ -19,4 +19,5 @@ USE_XORG=	x11
 MAN6=		xlaby.6
 PLIST_FILES=	bin/xlaby
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
