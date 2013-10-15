@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: textproc/pure-xml/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: textproc/pure-xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pure-xml
 PORTVERSION=	0.6
@@ -15,5 +15,6 @@ USE_GNOME=	libxml2 libxslt
 PLIST_FILES=	lib/pure/xml.pure \
 		lib/pure/xml.so
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
