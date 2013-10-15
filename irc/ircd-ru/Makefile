@@ -1,5 +1,5 @@
 # Created by: Khamushkin Ilya <ilya@ircd.ru>
-# $FreeBSD: irc/ircd-ru/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/ircd-ru/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ircd-ru
 PORTVERSION=	1.0.7
@@ -33,6 +33,7 @@ AUTHMODULE_DESC=	authmodule support
 DNSBL_DESC=		DNSBL support
 SELECT_DESC=		enable select I/O
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # irc.wenet.ru specific options
