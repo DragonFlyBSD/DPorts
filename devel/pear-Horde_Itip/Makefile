@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Icalendar
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: devel/pear-Horde_Itip/Makefile 319377 2013-05-29 15:02:18Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_Itip/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Itip
 PORTVERSION=	2.0.5
@@ -14,6 +11,7 @@ COMMENT=	Horde iTip invitation response handling
 USE_HORDE_RUN=	Horde_Icalendar \
 		Horde_Mime
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
