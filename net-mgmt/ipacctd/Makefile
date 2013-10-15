@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net-mgmt/ipacctd/Makefile 316454 2013-04-24 17:00:20Z eadler $
+# $FreeBSD: net-mgmt/ipacctd/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ipacctd
 PORTVERSION=	1.47
@@ -18,6 +18,7 @@ MAN8=		ipacctd.8
 MANLANG=	"" ru.KOI8-R
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
