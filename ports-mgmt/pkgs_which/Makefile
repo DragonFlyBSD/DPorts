@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: ports-mgmt/pkgs_which/Makefile 313945 2013-03-11 23:13:18Z mandree $
+# $FreeBSD: ports-mgmt/pkgs_which/Makefile 328953 2013-10-01 14:26:50Z mandree $
 
 PORTNAME=	pkgs_which
 PORTVERSION=	0.3.0
@@ -12,22 +12,22 @@ COMMENT=	Quickly find out which ports contributed to a file tree
 
 LICENSE=	GPLv3
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
-MAN1=		${PORTNAME}.1
+PLIST_FILES+=	man/man1/${PORTNAME}.1.gz
 .endif
 
 do-install:
-		${MKDIR} ${PREFIX}/bin
-		${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME} ${PREFIX}/bin
+		${MKDIR} ${STAGEDIR}${PREFIX}/bin
+		${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 .if ${PORT_OPTIONS:MDOCS}
-		${MKDIR} ${PREFIX}/man/man1
-		${LOCALBASE}/bin/pod2man ${FILESDIR}/${PORTNAME} >${PREFIX}/man/man1/${MAN1}
+		${MKDIR} ${STAGEDIR}${PREFIX}/man/man1
+		${LOCALBASE}/bin/pod2man ${FILESDIR}/${PORTNAME} >${STAGEDIR}${PREFIX}/man/man1/${PORTNAME}.1
 .endif
 
 .include <bsd.port.mk>
