@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/openrm/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: graphics/openrm/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	openrm
 PORTVERSION=	1.6.0.2
@@ -40,6 +40,7 @@ CFLAGS+=	-fPIC -DPIC
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
