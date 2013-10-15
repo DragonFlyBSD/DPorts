@@ -1,5 +1,5 @@
 # Created by: Takeshi MUTOH <tmutoh@mx10.freecom.ne.jp>
-# $FreeBSD: misc/xtypo/Makefile 321997 2013-06-28 22:10:14Z bapt $
+# $FreeBSD: misc/xtypo/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xtypo
 PORTVERSION=	1.02
@@ -17,4 +17,5 @@ ALL_TARGET=	xtypo
 
 WRKSRC=		${WRKDIR}/xtypo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
