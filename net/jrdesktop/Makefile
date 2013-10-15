@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jrdesktop
-# Date created:				May 7 2008
-# Whom:					gahr
-#
-# $FreeBSD: ports/net/jrdesktop/Makefile,v 1.7 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: net/jrdesktop/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	jrdesktop
 PORTVERSION=	0.2.0030
@@ -22,6 +18,7 @@ USE_ZIP=	yes
 WRKSRC=	${WRKDIR}/${DISTNAME}/${PORTNAME}
 TXTFILES=	changes.txt license.txt readme.txt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/dist/jrdesktop.jar ${JAVAJARDIR}
 	${INSTALL_SCRIPT} ${FILESDIR}/jrdesktop.in ${PREFIX}/bin/jrdesktop
