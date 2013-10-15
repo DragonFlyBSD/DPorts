@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rubygem-fluentd/Makefile 323890 2013-07-29 14:50:30Z kuriyama $
+# $FreeBSD: sysutils/rubygem-fluentd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fluentd
 PORTVERSION=	0.10.35
@@ -26,6 +26,7 @@ USERS=		fluentd
 GROUPS=		fluentd
 SUB_LIST+=	USER=${USERS} GROUP=${GROUPS}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${RUBY_VER} == "1.8"
