@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SNMP-Simple
-# Date created:		2007-11-16
-# Whom:			BluePex Security Solutions <freebsd-ports@bluepex.com>
-#
-# $FreeBSD: net-mgmt/p5-SNMP-Simple/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: BluePex Security Solutions <freebsd-ports@bluepex.com>
+# $FreeBSD: net-mgmt/p5-SNMP-Simple/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	SNMP-Simple
 PORTVERSION=	0.02
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		SNMP::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
