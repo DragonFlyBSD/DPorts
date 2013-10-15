@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-Array-Sorted/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Tie-Array-Sorted/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-Array-Sorted
 PORTVERSION=	1.4.1
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 MAN3=		Tie::Array::Sorted.3 \
 		Tie::Array::Sorted::Lazy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
