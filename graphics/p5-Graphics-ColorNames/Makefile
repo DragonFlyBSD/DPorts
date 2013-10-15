@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: graphics/p5-Graphics-ColorNames/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Graphics-ColorNames/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Graphics-ColorNames
 PORTVERSION=	2.11
@@ -24,4 +24,5 @@ MAN3=	Graphics::ColorNames.3 \
 	Graphics::ColorNames::Windows.3 \
 	Graphics::ColorNames::X.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
