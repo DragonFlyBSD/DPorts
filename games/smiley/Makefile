@@ -1,9 +1,5 @@
-# New ports collection makefile for:	smiley
-# Date created:		15.12.2001
-# Whom:			Lars Köller <Lars.Koeller@Uni-Bielefeld.DE>
-#
-# $FreeBSD: ports/games/smiley/Makefile,v 1.9 2012/11/17 05:57:53 svnexp Exp $
-#
+# Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.DE>
+# $FreeBSD: games/smiley/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	smiley
 PORTVERSION=	4.0
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		"smiley.1"
 PLIST_FILES=	bin/smiley
 
+NO_STAGE=	yes
 post-patch:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.input
 	${SED} "s|%CFLAGS%|${CFLAGS}|" ${WRKSRC}/Makefile.input > ${WRKSRC}/Makefile
