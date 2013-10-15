@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: net-mgmt/darkstat/Makefile 324694 2013-08-14 10:54:47Z wg $
+# $FreeBSD: net-mgmt/darkstat/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	darkstat
 PORTVERSION=	3.0.717
@@ -20,6 +20,7 @@ PLIST_FILES=	sbin/darkstat
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
