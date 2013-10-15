@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: x11/gtkterm2/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/gtkterm2/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	gtkterm2
 PORTVERSION=	0.2.3
@@ -8,11 +8,10 @@ CATEGORIES=	x11
 MASTER_SITES=	SF/gtkterm/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A simple GTK-2 terminal with tabs
+COMMENT=	Simple GTK-2 terminal with tabs
 
 USE_GNOME=	vte
-USE_GMAKE=	yes
-USES=		pkgconfig
+USES=		pkgconfig gmake
 USE_AUTOTOOLS=	libtool
 
 PORTDOCS=	README
@@ -24,6 +23,7 @@ PLIST_DIRS=	%%DATADIR%%/pixmaps %%DATADIR%%
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
