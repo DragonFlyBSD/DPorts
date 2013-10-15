@@ -1,9 +1,8 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: emulators/qemu-devel/Makefile 327414 2013-09-16 16:45:35Z bapt $
+# $FreeBSD: emulators/qemu-devel/Makefile 330184 2013-10-12 20:10:50Z nox $
 
 PORTNAME=	qemu
-PORTVERSION=	1.6.0
-PORTREVISION=	1
+PORTVERSION=	1.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/:release \
 		LOCAL/nox:snapshot
@@ -14,13 +13,12 @@ DIST_SUBDIR=	qemu/${PORTVERSION}
 MAINTAINER=	nox@FreeBSD.org
 COMMENT=	QEMU CPU Emulator - development version
 
-LIB_DEPENDS=	pixman-1:${PORTSDIR}/x11/pixman
-
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USES=		gmake pkgconfig bison perl5
 USE_PERL5=	build
 USE_PYTHON_BUILD=	-2.7
+USE_XORG=	pixman
 USE_GNOME+=	glib20
 PATCH_STRIP=	-p1
 MAKE_ENV+=	BSD_MAKE="${MAKE}"
@@ -47,6 +45,7 @@ BSD_USER_DESC=		Also build bsd-user targets (for testing)
 STATIC_LINK_DESC=	Statically link the executables
 OPTIONS_DEFAULT=X11 GTK2 OPENGL GNUTLS SASL JPEG PNG CDROM_DMA CURL PCAP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--extra-ldflags=-L${LOCALBASE}/lib
