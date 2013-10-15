@@ -1,5 +1,5 @@
 # Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
-# $FreeBSD: ports/chinese/phpbb3-tw/Makefile,v 1.7 2012/12/29 07:46:12 svnexp Exp $
+# $FreeBSD: chinese/phpbb3-tw/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	phpbb
 PORTVERSION=	3.0.11
@@ -35,6 +35,7 @@ SUB_LIST=	PHPBBURL="${PHPBBURL}" \
 PORTDOCS=	*
 PLIST_SUB+=	PHPBBDIR=${PHPBBDIR} WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
+NO_STAGE=	yes
 # Set custom variables:
 #
 PHPBBDIR=	${WWWDOCROOT}/${PHPBBURL}
