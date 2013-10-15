@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jtoolkit
-# Date created:		30 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: www/jtoolkit/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/jtoolkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jToolkit
 PORTVERSION=	0.7.8
@@ -22,4 +18,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYSETUP=	${PORTNAME}Setup.py
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
