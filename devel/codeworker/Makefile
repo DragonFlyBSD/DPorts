@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/codeworker/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/codeworker/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	codeworker
 PORTVERSION=	4.5.3
@@ -24,6 +24,7 @@ CFLAGS+=	-Dstricmp=strcasecmp
 
 PLIST_FILES=	bin/codeworker
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.cpp" -or -name "*.h" | ${XARGS} \
 		${REINPLACE_CMD} -e \
