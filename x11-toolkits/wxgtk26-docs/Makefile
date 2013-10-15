@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wxgtk_doc_26
-# Date created:				November, 15th 2005
-# Whom:					Matthias Sund <m.sund@arcor.de>
-#
-# $FreeBSD: ports/x11-toolkits/wxgtk26-docs/Makefile,v 1.7 2012/11/17 06:03:40 svnexp Exp $
-#
+# Created by: Matthias Sund <m.sund@arcor.de>
+# $FreeBSD: x11-toolkits/wxgtk26-docs/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	wxgtk_doc
 PORTVERSION=	2.6.4
@@ -21,6 +17,7 @@ NO_BUILD=	YES
 WXGTKDOCDIR=	share/doc/${PORTNAME}_26
 WRKSRC=		${WRKDIR}/wxWidgets-${PORTVERSION}/docs
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${WXGTKDOCDIR}
 	@(cd ${WRKSRC} && ${FIND} html -type d -exec ${MKDIR} ${PREFIX}/${WXGTKDOCDIR}/{} \;)
