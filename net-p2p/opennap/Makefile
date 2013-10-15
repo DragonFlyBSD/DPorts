@@ -1,9 +1,5 @@
-# New ports collection makefile for:	opennap
-# Date created:			26 July 2000
-# Whom:				Donald Burr <dburr@FreeBSD.ORG>
-#
-# $FreeBSD: ports/net-p2p/opennap/Makefile,v 1.14 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Donald Burr <dburr@FreeBSD.org>
+# $FreeBSD: net-p2p/opennap/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	opennap
 PORTVERSION=	0.44
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	YES
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 	(${ECHO_CMD} "" ; ${ECHO_CMD} "admin" ; ${ECHO_CMD} "opennap" ; ${ECHO_CMD} "") | ${WRKSRC}/setup
 .if defined(NOPORTDOCS)
