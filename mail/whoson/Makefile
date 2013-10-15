@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: mail/whoson/Makefile 325661 2013-08-30 04:45:28Z danfe $
+# $FreeBSD: mail/whoson/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	whoson
 PORTVERSION=	2.05
@@ -24,6 +24,7 @@ PORTDOCS=	README ChangeLog
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
