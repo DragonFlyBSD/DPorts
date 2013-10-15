@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bsdstats
-# Date created:		5 August 2006
-# Whom:			Marc G. Fournier <scrappy@freebsd.org>
-#
-# $FreeBSD: ports/sysutils/bsdstats/Makefile,v 1.65 2012/11/17 06:01:26 svnexp Exp $
-#
+# Created by: Marc G. Fournier <scrappy@FreeBSD.org>
+# $FreeBSD: sysutils/bsdstats/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bsdstats
 PORTVERSION=	5.5
@@ -18,6 +14,7 @@ NO_BUILD=	yes
 USE_RC_SUBR=	bsdstats
 SUB_FILES=	300.statistics pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/etc/periodic/monthly
 	${INSTALL_SCRIPT} ${WRKDIR}/300.statistics ${PREFIX}/etc/periodic/monthly

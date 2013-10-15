@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-# $FreeBSD: ports/sysutils/bsdstats/files/300.statistics.in,v 1.46 2012/07/28 12:27:28 scheidell Exp $
+# $FreeBSD: /tmp/pcvs/ports/sysutils/bsdstats/files/300.statistics.in,v 1.45 2011-09-25 21:35:26 eadler Exp $
 #
 
 # If there is a global system configuration file, suck it in.
