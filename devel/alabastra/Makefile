@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/alabastra/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/alabastra/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	alabastra
 PORTVERSION=	0.21b
@@ -24,6 +24,7 @@ ALL_TARGET=	Alabastra
 
 PLIST_FILES=	bin/alabastra
 
+NO_STAGE=	yes
 do-configure:
 	@(cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS})
 
