@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	rexx-sock
-# Date created:			Nov 11, 2003
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/net/rexx-sock/Makefile,v 1.10 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/rexx-sock/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sock
 PORTVERSION=	1.4
@@ -29,6 +24,7 @@ USE_LDCONFIG=	yes
 
 DATADIR=	${PREFIX}/share/rx${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|ld -Bdynamic -Bshareable|$${CC} -shared|g' \
 		${WRKSRC}/configure
