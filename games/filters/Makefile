@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: games/filters/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: games/filters/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	filters
 PORTVERSION=	2.49
@@ -54,6 +54,7 @@ MLINKS=	filters.1 b1ff.1 \
 		filters.1 scottish.1 \
 		filters.1 scramble.1
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/${PORTNAME}.6 ${WRKSRC}/${MAN1}
 
