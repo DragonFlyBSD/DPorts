@@ -1,5 +1,5 @@
 # Created by: Frerich Raabe <frerich.raabe@gmx.de>
-# $FreeBSD: devel/distcc/Makefile 317109 2013-05-02 13:10:23Z bapt $
+# $FreeBSD: devel/distcc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/devel/distcc/Makefile,v 1.3 2007/10/21 02:46:13 ahze Exp $
 
 PORTNAME=	distcc
@@ -35,6 +35,7 @@ COMPILER_LINKS=	Create symlinks to distcc
 
 OPTIONS_DEFAULT=	COMPILER_LINKS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
