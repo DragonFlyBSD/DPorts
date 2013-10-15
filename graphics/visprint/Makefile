@@ -1,9 +1,5 @@
-# New ports collection makefile for:	visprint
-# Date created:		11 November 2006
-# Whom:			stas
-#
-# $FreeBSD: graphics/visprint/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: stas
+# $FreeBSD: graphics/visprint/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	visprint
 PORTVERSION=	2.1
@@ -25,6 +21,7 @@ PLIST_FILES=	bin/visprint
 
 MAN1=		visprint.1
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -c visprint.c)
 	(cd ${WRKSRC} && ${CC} ${LDFLAGS} visprint.o -o visprint)
