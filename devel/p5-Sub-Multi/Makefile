@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Sub::Multi
 # Created by: ijliao
-# $FreeBSD: devel/p5-Sub-Multi/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Sub-Multi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sub-Multi
 PORTVERSION=	0.003
@@ -22,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Sub::Multi.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
