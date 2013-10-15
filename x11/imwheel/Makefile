@@ -1,5 +1,5 @@
 # Created by: jhb
-# $FreeBSD: x11/imwheel/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/imwheel/Makefile 330213 2013-10-13 06:15:19Z eadler $
 
 PORTNAME=	imwheel
 PORTVERSION=	1.0.0.p12
@@ -14,12 +14,13 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility to translate mouse wheel actions into X keyboard events
 
 USE_XORG=	x11 xpm xtst xext xmu
-USE_GMAKE=	YES
-GNU_CONFIGURE=	YES
+USES=		gmake
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-gpm
 
 MAN1=		imwheel.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
