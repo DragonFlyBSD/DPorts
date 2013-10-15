@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/brlcad/Makefile 325944 2013-09-02 06:39:37Z bapt $
+# $FreeBSD: cad/brlcad/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	brlcad
 PORTVERSION=	7.24.0
@@ -43,6 +43,7 @@ OPTIONS_DEFINE=		OPTIMIZATION
 OPTIMIZATION_DESC=	Build with optimizations
 OPTIONS_DEFAULT=	OPTIMIZATION
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.man"
 .include <bsd.port.pre.mk>
 
