@@ -1,5 +1,5 @@
 # Created by: verm@drunkmonk.net
-# $FreeBSD: games/lmarbles/Makefile 313624 2013-03-08 08:27:31Z rene $
+# $FreeBSD: games/lmarbles/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lmarbles
 PORTVERSION=	1.0.8
@@ -31,6 +31,7 @@ DOCSRCDIR2=	${WRKSRC}/src/manual
 DOCSDIR2=	${DOCSDIR}/manual
 DOC_FILES2=	*.jpg *.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
