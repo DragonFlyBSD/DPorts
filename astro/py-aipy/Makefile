@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-aipy/Makefile 319570 2013-06-01 14:22:35Z wen $
+# $FreeBSD: astro/py-aipy/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	aipy
 PORTVERSION=	1.1.1
@@ -19,5 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
