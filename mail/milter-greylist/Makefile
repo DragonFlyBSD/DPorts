@@ -1,5 +1,5 @@
 # Created by: Cyril Guibourg
-# $FreeBSD: mail/milter-greylist/Makefile 314743 2013-03-20 16:12:04Z ume $
+# $FreeBSD: mail/milter-greylist/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	milter-greylist
 PORTVERSION=	4.4.3
@@ -19,6 +19,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 MAKE_JOBS_UNSAFE=	yes
 
 ##
+NO_STAGE=	yes
 # Use the following quirks to choose which sendmail to use (ports or system):
 #
 #   WITH_SENDMAIL_BASE=yes
