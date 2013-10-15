@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: mail/p5-Mail-Graph/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-Graph/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Graph
 PORTVERSION=	0.14
@@ -26,6 +26,7 @@ EXAMPLEARCHIVE=	samples/archive/*.gz
 
 MAN3=	Mail::Graph.3
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@${MKDIR} ${EXAMPLESDIR}/archive
