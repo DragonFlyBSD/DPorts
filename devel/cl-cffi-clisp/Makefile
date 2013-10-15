@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cl-cffi-clisp/Makefile 314958 2013-03-22 19:41:06Z olgeni $
+# $FreeBSD: devel/cl-cffi-clisp/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cffi
 PORTVERSION=	0.11.0
@@ -23,5 +23,6 @@ FASL_TARGET=	clisp
 FASL_BUILD=	yes
 ASDF_MODULES=	cffi cffi-grovel cffi-uffi-compat
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
 .include <bsd.port.mk>
