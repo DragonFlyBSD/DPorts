@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/testdisk/Makefile 327007 2013-09-11 19:33:01Z madpilot $
+# $FreeBSD: sysutils/testdisk/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	testdisk
 PORTVERSION=	6.13
@@ -32,6 +32,7 @@ NTFSPROGS_DESC=		Use ntfsprogs extensions
 PROGSREISERFS_DESC=	Use reiserfs extensions
 #		E2FSPROGS "Use ext2fs extensions" off \
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 #.if !defined(NOPORTDOCS)
