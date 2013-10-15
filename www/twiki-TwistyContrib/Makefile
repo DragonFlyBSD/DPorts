@@ -1,8 +1,4 @@
-# New ports collection makefile for:	twiki-TwistyContrib
-# Date created:		17 April 2008
-#
-# $FreeBSD: ports/www/twiki-TwistyContrib/Makefile,v 1.3 2012/11/17 06:03:09 svnexp Exp $
-#
+# $FreeBSD: www/twiki-TwistyContrib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	TwistyContrib
 SVNREV=		17596
@@ -11,5 +7,6 @@ COMMENT=	JS library and CSS for Twisty sections
 
 TWDEP=	BehaviourContrib>=0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
