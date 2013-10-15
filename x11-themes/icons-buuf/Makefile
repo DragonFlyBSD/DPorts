@@ -1,9 +1,5 @@
-# New ports collection makefile for:	icons-buuf
-# Date created:		2006-10-09
-# Whom:			Phillip Neumann <pneumann@gmail.com>
-#
-# $FreeBSD: ports/x11-themes/icons-buuf/Makefile,v 1.8 2012/11/17 06:03:32 svnexp Exp $
-#
+# Created by: Phillip Neumann <pneumann@gmail.com>
+# $FreeBSD: x11-themes/icons-buuf/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	icons-buuf
 PORTVERSION=	1.6r2
@@ -22,6 +18,7 @@ WRKSRC=	${WRKDIR}/Buuf
 USE_GNOME=	gtk20
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${RM} ${WRKSRC}/128x128/status/sunny.png
 	@${MKDIR} ${PREFIX}/share/icons/Buuf
