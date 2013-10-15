@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: databases/rubygem-activerecord/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
+# $FreeBSD: databases/rubygem-activerecord/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	activerecord
 PORTVERSION=	3.2.13
@@ -26,6 +26,7 @@ OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
 
 GEM_ENV+=	LANG=en_US.UTF-8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
