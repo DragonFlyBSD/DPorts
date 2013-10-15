@@ -1,5 +1,5 @@
 # Created by: delphij@FreeBSD.org
-# $FreeBSD: mail/libvmime/Makefile 327101 2013-09-12 18:36:20Z delphij $
+# $FreeBSD: mail/libvmime/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	libvmime
 PORTVERSION=	0.9.1
@@ -31,6 +31,7 @@ CONFIGURE_ENV+=	EXTRA_CFLAGS="${CFLAGS}" EXTRA_CXXFLAGS="${CXXFLAGS}" \
 
 DOCSDIR=	${PREFIX}/share/doc/vmime
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
