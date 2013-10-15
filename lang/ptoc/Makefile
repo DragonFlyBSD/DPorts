@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: lang/ptoc/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: lang/ptoc/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ptoc
 PORTVERSION=	3.58
@@ -22,6 +22,7 @@ EXAMPLES=	arr.pas bgidemo.pas ccall.pas coord.txt dos.h dos.pas \
 		vibrkinp.pas vibrkinp.txt vibrtabl.pas war2.pas war2.txt \
 		xy2.txt xy2orig.txt
 
+NO_STAGE=	yes
 pre-build:
 	@${LN} -sf makefile.bsd ${WRKSRC}/Makefile
 	@${LN} -sf makefile.bsd ${WRKSRC}/Xbgi/Makefile
