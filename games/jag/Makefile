@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/jag/Makefile 327214 2013-09-14 03:06:04Z amdmi3 $
+# $FreeBSD: games/jag/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	jag
 PORTVERSION=	0.3.2
@@ -22,6 +22,7 @@ USE_XORG=	x11
 USE_QT4=	qmake_build uic_build moc_build rcc_build \
 		corelib svg xml opengl network
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/games/jag|${DATADIR}|' \
 		${WRKSRC}/main.cpp ${WRKSRC}/Game.pro
