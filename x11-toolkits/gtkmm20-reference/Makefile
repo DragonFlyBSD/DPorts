@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkmm20-reference/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: x11-toolkits/gtkmm20-reference/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTREVISION=	7
 
@@ -10,6 +10,7 @@ GNU_CONFIGURE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/gtkmm-2.0
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC}/examples -name Makefile.in \
 		| ${XARGS} ${REINPLACE_CMD} -e '/^install-am:/ s| all-am||'
