@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: graphics/kdc2tiff/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/kdc2tiff/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kdc2tiff
 PORTVERSION=	0.35
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	bin/kdc2jpeg bin/kdc2tiff
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^main|int main|' ${WRKSRC}/kdc2tiff.cpp
