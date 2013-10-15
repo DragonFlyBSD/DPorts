@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-bitstring/Makefile 316467 2013-04-24 18:25:56Z sbz $
+# $FreeBSD: devel/py-bitstring/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	bitstring
 PORTVERSION=	3.1.2
@@ -20,6 +20,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
 PORTDOCS=	PKG-INFO README.txt release_notes.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
