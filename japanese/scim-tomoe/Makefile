@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/scim-tomoe/Makefile 327188 2013-09-13 21:39:06Z antoine $
+# $FreeBSD: japanese/scim-tomoe/Makefile 330170 2013-10-12 18:32:05Z ume $
 
 PORTNAME=	scim-tomoe
 PORTVERSION=	0.6.0
@@ -7,7 +7,7 @@ PORTREVISION=	8
 CATEGORIES=	japanese
 MASTER_SITES=	SF/tomoe/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ume@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM IMEngine module using Tomoe
 
 BUILD_DEPENDS=	scim:${PORTSDIR}/textproc/scim
@@ -31,6 +31,7 @@ PLIST_FILES=	bin/scim-tomoe \
 		share/locale/ja/LC_MESSAGES/scim-tomoe.mo \
 		share/scim/icons/scim-tomoe.png
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO}
