@@ -1,5 +1,5 @@
 # Created by: David Le Brun <david@dyn-ns.net>
-# $FreeBSD: audio/gnupod/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: audio/gnupod/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gnupod
 PORTVERSION=	0.99.8
@@ -27,6 +27,7 @@ MAN1=		gnupod_addsong.pl.1 gnupod_check.pl.1 gnupod_INIT.pl.1 \
 MANCOMPRESSED=	yes
 
 USES=		perl5
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 
