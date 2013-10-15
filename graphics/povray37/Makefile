@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/povray37/Makefile,v 1.70 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/povray37/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	povray
 DISTVERSION=	3.7.0.RC6
@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	COMPILED_BY=${MAINTAINER} --prefix=${PREFIX} \
 		--program-transform-name='s/${PORTNAME}/${UNIQUENAME}/' \
 		--disable-optimiz
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
