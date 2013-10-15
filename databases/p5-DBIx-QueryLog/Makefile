@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-QueryLog/Makefile 324482 2013-08-10 11:45:25Z kuriyama $
+# $FreeBSD: databases/p5-DBIx-QueryLog/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-QueryLog
 PORTVERSION=	0.37
@@ -17,10 +17,12 @@ TEST_DEPENDS=	\
 	p5-Class-Method-Modifiers>0:${PORTSDIR}/devel/p5-Class-Method-Modifiers \
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	DBIx::QueryLog.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
