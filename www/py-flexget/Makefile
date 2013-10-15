@@ -1,12 +1,12 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: www/py-flexget/Makefile 327438 2013-09-16 20:29:19Z wg $
+# $FreeBSD: www/py-flexget/Makefile 329981 2013-10-10 11:38:47Z wg $
 
 PORTNAME=	flexget
-PORTVERSION=	1.1.121
+PORTVERSION=	1.1.131
 PORTEPOCH=	1
 CATEGORIES=	www python
-MASTER_SITES=	http://download.flexget.com/archive/ \
-		http://download.flexget.com/
+MASTER_SITES=	http://download.flexget.com/ \
+		http://download.flexget.com/archive/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	FlexGet-${PORTVERSION}
 
@@ -39,11 +39,10 @@ TEST_DEPENDS:=	${RUN_DEPENDS} \
 
 USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	FlexGet
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}
 PYDISTUTILS_NOEGGINFO=	yes
-
-PLIST_SUB=	PYDISTUTILS_EGGINFO=${PYDISTUTILS_EGGINFO}
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
