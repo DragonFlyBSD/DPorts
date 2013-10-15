@@ -1,5 +1,5 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: security/openvpn-devel/Makefile 322134 2013-07-01 18:10:27Z lme $
+# $FreeBSD: security/openvpn-devel/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openvpn
 DISTVERSION=	201326
@@ -42,6 +42,7 @@ SUB_LIST+=	OSVERSION=${OSVERSION}
 WITHOUT_CHECK=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .ifdef (LOG_OPENVPN)
