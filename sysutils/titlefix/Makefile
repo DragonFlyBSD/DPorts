@@ -1,9 +1,5 @@
-# New ports collection makefile for:	titlefix
-# Date created:		17 August 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: sysutils/titlefix/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: sysutils/titlefix/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	titlefix
 PORTVERSION=	0.5.3
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 MAN1=		titlefix.1 titlefixid3.1 titleid3.1
 PLIST_FILES=	bin/titlefix bin/titlefixid3 bin/titleid3
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	@${LN} -sf ${PREFIX}/bin/${PORTNAME} ${PREFIX}/bin/titlefixid3
