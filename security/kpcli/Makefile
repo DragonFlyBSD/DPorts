@@ -1,4 +1,4 @@
-# $FreeBSD: security/kpcli/Makefile 326999 2013-09-11 18:03:40Z az $
+# $FreeBSD: security/kpcli/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	kpcli
 PORTVERSION=	2.3
@@ -28,6 +28,7 @@ MAN1=	${PORTNAME}.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/kpcli
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${PORTNAME}-${PORTVERSION}.pl ${WRKSRC}/${PORTNAME}
