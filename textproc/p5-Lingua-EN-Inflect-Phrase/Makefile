@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Phrase/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Phrase/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-EN-Inflect-Phrase
 PORTVERSION=	0.18
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=	Lingua::EN::Inflect::Phrase.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
