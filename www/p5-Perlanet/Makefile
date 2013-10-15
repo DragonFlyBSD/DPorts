@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Perlanet/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Perlanet/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Perlanet
 PORTVERSION=	0.56
@@ -44,4 +44,5 @@ MAN3=		Perlanet.3 \
 		Perlanet::Trait::Tidy.3 \
 		Perlanet::Trait::YAMLConfig.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
