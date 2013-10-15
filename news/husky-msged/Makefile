@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: news/husky-msged/Makefile 325106 2013-08-21 11:17:07Z danfe $
+# $FreeBSD: news/husky-msged/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	msged
 PORTVERSION=	6.2RC1
@@ -18,6 +18,7 @@ MAKE_ARGS=	MSGEDCFG="\\\"~/.msged\\\""
 
 INFO=		msged
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,html info,info,' \
 		-e 's,install-html install-info,install-info,' \
