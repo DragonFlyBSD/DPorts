@@ -1,51 +1,41 @@
 # Created by: ijliao
-# $FreeBSD: devel/ragel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/ragel/Makefile 328324 2013-09-25 23:00:31Z danilo $
 
 PORTNAME=	ragel
 PORTVERSION=	6.8
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.complang.org/ragel/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Compile regular languages into executable C/C++ code
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_GMAKE=	yes
+USES=	gmake
 GNU_CONFIGURE=	yes
 
-MAN1=		${PORTNAME}.1
-
 OPTIONS_DEFINE=	DOCS EXAMPLES
+DOCS_CONFIGURE_ENABLE=	manual
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 USE_TEX=	latex:build
-CONFIGURE_ARGS+=	--enable-manual
 BUILD_DEPENDS+=	fig2dev:${PORTSDIR}/print/transfig
-PLIST_SUB+=	DOCS=""
-.else
-PLIST_SUB+=	DOCS="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MEXAMPLES}
-PLIST_SUB+=	EXAMPLES=""
-.else
-PLIST_SUB+=	EXAMPLES="@comment "
-.endif
+post-patch:
+	@${REINPLACE_CMD} 's/setiosflags/std::&/' \
+		${WRKSRC}/ragel/javacodegen.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ragel/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 ${MANPREFIX}/man/man1
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${DOCSDIR}
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	@(cd ${WRKSRC}/test; ${COPYTREE_SHARE} . ${EXAMPLESDIR})
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/ragel/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@(cd ${WRKSRC}/test; ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
 .include <bsd.port.mk>
