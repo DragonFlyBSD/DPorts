@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-PatchPerl/Makefile 327460 2013-09-17 09:14:05Z culot $
+# $FreeBSD: devel/p5-Devel-PatchPerl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-PatchPerl
 PORTVERSION=	1.12
@@ -25,4 +25,5 @@ MAN3=		Devel::PatchPerl.3 \
 		Devel::PatchPerl::Hints.3 \
 		Devel::PatchPerl::Plugin.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
