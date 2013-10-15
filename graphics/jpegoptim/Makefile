@@ -1,5 +1,5 @@
 # Created by: Devaux Fabien <fab@gcu.info>
-# $FreeBSD: graphics/jpegoptim/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: graphics/jpegoptim/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jpegoptim
 PORTVERSION=	1.3.0
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--with-libjpeg=${LOCALBASE}
 MAN1=		jpegoptim.1
 PLIST_FILES=	bin/jpegoptim
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^bindir =.*$$|bindir = @bindir@|g ; \
