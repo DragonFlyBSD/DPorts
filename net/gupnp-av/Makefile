@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-av/Makefile 326613 2013-09-07 10:20:31Z sunpoet $
+# $FreeBSD: net/gupnp-av/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gupnp-av
 PORTVERSION=	0.12.2
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 USE_XZ=		yes
 USES=		gmake pathfix pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wno-unused-parameters||' ${WRKSRC}/tests/Makefile.in
 
