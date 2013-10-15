@@ -1,5 +1,5 @@
 # Created by: jonny
-# $FreeBSD: x11/xtoolwait/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xtoolwait/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xtoolwait
 PORTVERSION=	1.3
@@ -16,4 +16,5 @@ USE_XORG=	x11 xext
 MAN1=		xtoolwait.1
 PLIST_FILES=	bin/xtoolwait
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
