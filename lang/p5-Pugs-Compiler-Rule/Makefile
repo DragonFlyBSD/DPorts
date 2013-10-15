@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Pugs::Compiler::Rule
 # Created by: ijliao
-# $FreeBSD: lang/p5-Pugs-Compiler-Rule/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: lang/p5-Pugs-Compiler-Rule/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Pugs-Compiler-Rule
 PORTVERSION=	0.37
@@ -37,4 +35,5 @@ MAN3=	Pugs::Compiler::Regex.3 \
 	Pugs::Runtime::StrPos.3 \
     	Pugs::Runtime::Tracer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
