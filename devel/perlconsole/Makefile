@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: devel/perlconsole/Makefile 325881 2013-09-01 17:10:01Z az $
+# $FreeBSD: devel/perlconsole/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	perlconsole
 PORTVERSION=	0.4
@@ -32,6 +32,7 @@ PLIST_FILES=	bin/perlconsole \
 
 PLIST_DIRS=	${SITE_PERL_REL}/PerlConsole
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
