@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: editors/gedit/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: editors/gedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 #   $MCom: ports/editors/gedit/Makefile,v 1.125 2010/09/30 19:58:54 kwm Exp $
 
 PORTNAME=	gedit
@@ -39,6 +39,7 @@ GCONF_SCHEMAS=	gedit.schemas gedit-file-browser.schemas
 WITH_GNOME=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mpygtksourceview}!=""
