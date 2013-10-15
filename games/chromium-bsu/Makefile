@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: games/chromium-bsu/Makefile 325962 2013-09-02 09:45:05Z bapt $
+# $FreeBSD: games/chromium-bsu/Makefile 328535 2013-09-28 00:30:22Z amdmi3 $
 
 PORTNAME=	chromium-bsu
 PORTVERSION=	0.9.15.1
@@ -9,9 +9,9 @@ MASTER_SITES=	SF/${PORTNAME}/Chromium%20B.S.U.%20source%20code/
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	An arcade-style, top-scrolling space shooter
 
-LIB_DEPENDS=	glpng:${PORTSDIR}/graphics/glpng \
-		ftgl:${PORTSDIR}/graphics/ftgl \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS=	libglpng.so:${PORTSDIR}/graphics/glpng \
+		libftgl.so:${PORTSDIR}/graphics/ftgl \
+		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	--disable-glc
 INSTALLS_ICONS=	yes
 
 PORTDOCS=	*
+PORTDATA=	*
 
 MAN6=		chromium-bsu.6
 
@@ -53,16 +54,6 @@ PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.endif
-
-post-patch:
-	@${REINPLACE_CMD} -e '/^LIBS =/ s|$$| @INTLLIBS@|' \
-		${WRKSRC}/src/Makefile.in
-	@${REINPLACE_CMD} -e 's|\([A-Z][A-Z_]*[A-Z]\)\+="\(.*\)"$$|\1="$$\1 \2"|; \
-		s|\([A-Z][A-Z_]*[A-Z]\)\+=\(.*\)$$|\1="$$\1 \2"|' \
-		${WRKSRC}/configure
-.if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e '/doc / d' ${WRKSRC}/data/Makefile.in
 .endif
 
 .include <bsd.port.mk>
