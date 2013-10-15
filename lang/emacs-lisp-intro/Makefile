@@ -1,9 +1,5 @@
-# New ports collection makefile for:	emacs-lisp-intro
-# Date created:		18 November 1997
-# Whom:			Don Croyle <croyle@gelemna.org>
-#
-# $FreeBSD: ports/lang/emacs-lisp-intro/Makefile,v 1.16 2012/11/17 05:58:49 svnexp Exp $
-#
+# Created by: Don Croyle <croyle@gelemna.org>
+# $FreeBSD: lang/emacs-lisp-intro/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	emacs-lisp-intro
 PORTVERSION=	2.04
@@ -17,4 +13,5 @@ COMMENT=	An introduction to Emacs Lisp programming
 USE_AUTOTOOLS=	autoconf213
 INFO=		emacs-lisp-intro
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
