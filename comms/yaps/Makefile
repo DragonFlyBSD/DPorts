@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: comms/yaps/Makefile 321423 2013-06-20 20:34:08Z bsam $
+# $FreeBSD: comms/yaps/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	yaps
 PORTVERSION=	0.96
@@ -22,6 +22,7 @@ PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
