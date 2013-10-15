@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-settings/Makefile 317675 2013-05-08 15:23:41Z olivierd $
+# $FreeBSD: sysutils/xfce4-settings/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xfce4-settings
 PORTVERSION=	4.10.1
@@ -30,6 +30,7 @@ OPTIONS_DEFINE=		XKLAVIER XCURSOR XRANDR NOTIFY NLS SOUND
 OPTIONS_DEFAULT=	XKLAVIER XCURSOR XRANDR NOTIFY NLS
 SOUND_DESC=		Enable sound control
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXKLAVIER}
