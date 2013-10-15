@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/dbh/Makefile 316313 2013-04-23 07:08:32Z bapt $
+# $FreeBSD: databases/dbh/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbh
 PORTVERSION=	4.6.2
@@ -31,6 +31,7 @@ MAN3=		dbh_close.3 dbh_create.3 dbh_destroy.3 dbh_erase.3 \
 OPTIONS_DEFINE=	GTKDOC EXAMPLES
 GTKDOC_DESC=	Enable GTK html documentation
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTKDOC}
