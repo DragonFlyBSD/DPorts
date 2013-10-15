@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Page-NoTotalEntries/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-Data-Page-NoTotalEntries/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Page-NoTotalEntries
 PORTVERSION=	0.02
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 MAN3=	Data::Page::NoTotalEntries.3 \
 	Data::Page::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
