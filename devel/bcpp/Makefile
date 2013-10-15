@@ -1,5 +1,5 @@
 # Created by: Mike Buchanon <buchanon@msu.edu>
-# $FreeBSD: ports/devel/bcpp/Makefile,v 1.10 2012/12/01 01:14:45 svnexp Exp $
+# $FreeBSD: devel/bcpp/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bcpp
 PORTVERSION=	20120318
@@ -17,6 +17,7 @@ MAKEFILE=	makefile
 
 CFLAGS+=	-DBCPP_CONFIG_DIR=\\\"${PREFIX}/etc/${PORTNAME}\\\"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
