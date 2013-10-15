@@ -1,9 +1,5 @@
-# New ports collection makefile for:	g-gcl
-# Date created:				21 Jun 1999
-# Whom:					G. Adam Stanislav <adam@whizkidtech.net>
-#
-# $FreeBSD: ports/www/g-gcl/Makefile,v 1.10 2012/11/17 06:02:34 svnexp Exp $
-#
+# Created by: G. Adam Stanislav <adam@whizkidtech.net>
+# $FreeBSD: www/g-gcl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	g-gcl
 PORTVERSION=	1.10
@@ -18,6 +14,7 @@ RUN_DEPENDS=	gracula:${PORTSDIR}/graphics/gracula
 
 NO_BUILD=
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/gracula
 	${MKDIR} ${PREFIX}/share/gracula/pix
