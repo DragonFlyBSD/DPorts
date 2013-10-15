@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: math/jsmath/Makefile 319993 2013-06-05 14:11:19Z bapt $
+# $FreeBSD: math/jsmath/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	jsMath
 DISTVERSION=	3.6e
@@ -17,6 +17,7 @@ OPTIONS_DEFAULT=	IMAGE_FONTS
 IMAGE_FONTS_DESC=	Image fonts
 SPRITE_FONTS_DESC=	Sprite fonts
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MIMAGE_FONTS}
