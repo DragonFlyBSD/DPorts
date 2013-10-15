@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-soapy
-# Date created:		10 July 2002
-# Whom:	      		Johann Visagie <wjv@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-soapy/Makefile,v 1.7 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: net/py-soapy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	soapy
 PORTVERSION=	0.1
@@ -19,6 +15,7 @@ RUN_DEPENDS=	${PYXML}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@ ${MKDIR} ${DOCSDIR}
