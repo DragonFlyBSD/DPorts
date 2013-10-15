@@ -1,9 +1,5 @@
-# New ports collection makefile for:   unhide
-# Date created:        26 February 2009
-# Whom:                ntarmos@cs.uoi.gr
-#
-# $FreeBSD: ports/security/unhide/Makefile,v 1.6 2013/02/09 15:08:47 svnexp Exp $
-#
+# Created by: ntarmos@cs.uoi.gr
+# $FreeBSD: security/unhide/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	unhide
 PORTVERSION=	20121229
@@ -20,6 +16,7 @@ PLIST_FILES=	sbin/unhide sbin/unhide-tcp
 MAN8=		unhide.8 unhide-tcp.8
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-configure:
