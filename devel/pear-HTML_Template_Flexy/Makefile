@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/devel/pear-HTML_Template_Flexy/Makefile,v 1.16 2012/12/17 02:17:59 svnexp Exp $
+# $FreeBSD: devel/pear-HTML_Template_Flexy/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_Template_Flexy
 PORTVERSION=	1.3.12
@@ -19,6 +19,7 @@ PEAR_TRANSLATION2_DESC=	PEAR::Translation2 support
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_HTML_JAVASCRIPT}
