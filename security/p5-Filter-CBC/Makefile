@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-Filter-CBC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Filter-CBC/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Filter-CBC
 PORTVERSION=	0.10
@@ -21,6 +21,7 @@ USE_PERL5=	configure
 
 MAN3=		Filter::CBC.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
