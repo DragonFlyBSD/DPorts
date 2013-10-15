@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/p5-Proclet/Makefile 324535 2013-08-10 14:44:17Z kuriyama $
+# $FreeBSD: sysutils/p5-Proclet/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Proclet
 PORTVERSION=	0.31
@@ -32,4 +32,5 @@ MAN1=	proclet.1
 MAN3=	Proclet.3 \
 	Proclet::Declare.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
