@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar Teixeira <sylvio@FreeBSD.org>
-# $FreeBSD: comms/gammu-devel/Makefile 326957 2013-09-11 09:36:48Z marino $
+# $FreeBSD: comms/gammu-devel/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	gammu
 PORTVERSION=	1.31.90
@@ -39,6 +39,7 @@ MAN7=		gammu-smsd-files.7 gammu-smsd-mysql.7 gammu-smsd-pgsql.7 \
 
 .endif
 
+NO_STAGE=	yes
 post-install:
 .for opt in -Qold -O
 	${PYTHON_CMD} ${opt} -m compileall -l ${PYTHONPREFIX_SITELIBDIR}/gammu
