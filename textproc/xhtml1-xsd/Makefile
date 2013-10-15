@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	xhtml1-xsd
-# Date created:			Feb 9, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/xhtml1-xsd/Makefile,v 1.2 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/xhtml1-xsd/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xhtml1-xsd
 PORTVERSION=	200208
@@ -23,6 +18,7 @@ EXTRACT_BEFORE_ARGS=	# empty
 EXTRACT_AFTER_ARGS=	.
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	@${CP} -R ${WRKSRC}/* ${DATADIR}
