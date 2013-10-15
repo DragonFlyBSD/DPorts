@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/falconseye/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: games/falconseye/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	falconseye
 PORTVERSION=	1.9.3
@@ -26,6 +26,7 @@ CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -I${LOCALBASE}/include/SDL11 
 NO_WRKSUBDIR=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e "s|<malloc.h>|<stdlib.h>|" \
 	${WRKSRC}/include/jtp_gen.h ${WRKSRC}/win/jtp/jtp_dirx.c \
