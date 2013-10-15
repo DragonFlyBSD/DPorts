@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: science/cdo/Makefile 325626 2013-08-29 18:35:35Z sunpoet $
+# $FreeBSD: science/cdo/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	cdo
 PORTVERSION=	1.6.1
@@ -23,6 +23,7 @@ USES=		gmake pathfix
 HDF5_VER?=	18
 NETCDF_VER?=	4
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNETCDF} && ${PORT_OPTIONS:MHDF5} && ${NETCDF_VER} == 4 && ${HDF5_VER} == 16
