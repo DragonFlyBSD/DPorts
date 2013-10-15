@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: textproc/xml2/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/xml2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xml2
 PORTVERSION=	0.5
@@ -23,4 +23,5 @@ PLIST_FILES=	bin/xml2 \
 		bin/html2 \
 		bin/2html
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
