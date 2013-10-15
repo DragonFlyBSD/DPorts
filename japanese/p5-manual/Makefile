@@ -1,9 +1,5 @@
-# New ports collection makefile for:	perl5jman
-# Date created:		29 June 1998
-# Whom:			SADA Kenji <sada@e-mail.ne.jp>
-#
-# $FreeBSD: ports/japanese/p5-manual/Makefile,v 1.16 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: SADA Kenji <sada@e-mail.ne.jp>
+# $FreeBSD: japanese/p5-manual/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	man
 PORTVERSION=	5.000
@@ -31,6 +27,7 @@ CAT3=		Abbrev.3pm AnyDBMFile.3pm AutoLoader.3pm AutoSplit.3pm \
 		Open2.3pm Open3.3pm POSIX.3pm Ping.3pm Socket.3pm \
 		integer.3pm less.3pm sigtrap.3pm strict.3pm subs.3pm
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
