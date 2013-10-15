@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tcpcat
-# Date created:		18 October 2000
-# Whom:			roam@orbitel.bg
-#
-# $FreeBSD: net/tcpcat/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: roam@orbitel.bg
+# $FreeBSD: net/tcpcat/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	tcpcat
 PORTVERSION=	1.2.0
