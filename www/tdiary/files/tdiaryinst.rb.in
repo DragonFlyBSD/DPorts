@@ -4,7 +4,7 @@
 # Date created:                        13 July 2003
 # Whom:                                KAMIYA Satosi  <mimoriso@gmail.com>
 #
-# $FreeBSD: www/tdiary/files/tdiaryinst.rb.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/tdiary/files/tdiaryinst.rb.in 330205 2013-10-13 05:25:07Z tota $
 #
 
 require 'getoptlong'
@@ -231,7 +231,7 @@ class TdiaryInstall
 
   def tdiaryConfReplace(filename)
     s = ''
-    File.open(filename) { |fp|
+    File.open(filename, "r:UTF-8") { |fp|
       fp.each { |line|
         line = "@data_path = '#{@passwd.dir}/#{@diarydir}'\n" if line =~ /^\@data_path\s/
         line = "@author_name = '#{@author_name}'\n" if line =~ /^\@author_name\s/
