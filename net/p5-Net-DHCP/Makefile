@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-DHCP/Makefile 326486 2013-09-06 10:47:10Z az $
+# $FreeBSD: net/p5-Net-DHCP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-DHCP
 PORTVERSION=	0.693
@@ -21,4 +21,5 @@ USE_PERL5=	modbuild
 MAN3=		Net::DHCP::Constants.3 \
 		Net::DHCP::Packet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
