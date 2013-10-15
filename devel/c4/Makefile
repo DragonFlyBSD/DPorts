@@ -1,9 +1,5 @@
-# New ports collection makefile for:	C4
-# Date created:		2 September 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/c4/Makefile,v 1.9 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/c4/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	c4
 PORTVERSION=	1.10
@@ -19,6 +15,7 @@ ALL_TARGET=	c4
 
 MAN1=		c4.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/c4 ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/c4.1 ${MAN1PREFIX}/man/man1/
