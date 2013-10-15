@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/p5-DR-Tarantool/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/p5-DR-Tarantool/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DR-Tarantool
 PORTVERSION=	0.37
@@ -28,4 +28,5 @@ MAN3=	\
 	DR::Tarantool::SyncClient.3 \
 	DR::Tarantool::Tuple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
