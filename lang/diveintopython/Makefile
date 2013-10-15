@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: lang/diveintopython/Makefile 307274 2012-11-10 12:27:38Z pawel $
+# $FreeBSD: lang/diveintopython/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	diveintopython
 PORTVERSION=	5.4
@@ -33,6 +33,7 @@ PLIST_SUB=	VERSION="${VERSIONSTR}"
 DIPDLDIR=	${DOCSDIR}/download
 VERSIONSTR=	${PORTVERSION:C|(\.[^.]*)\.([^.]*)$|\1-\2|}
 
+NO_STAGE=	yes
 post-patch:
 	@ ${FIND} ${WRKSRC} -name \*.html | ${XARGS} ${REINPLACE_CMD} \
 	  "s#http[^>]*\(download/${PORTNAME}-examples-${VERSIONSTR}.zip\)#\.\./\1#"
