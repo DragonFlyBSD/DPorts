@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: ports/sysutils/etcupdate/src/etcupdate.sh,v 1.5 2012/11/17 06:01:29 svnexp Exp $
+# $FreeBSD: sysutils/etcupdate/src/etcupdate.sh 300897 2012-07-14 14:29:18Z beat $
 
 # This is a tool to manage updating files that are not updated as part
 # of 'make installworld' such as files in /etc.  Unlike other tools,

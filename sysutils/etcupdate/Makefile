@@ -1,11 +1,5 @@
-# New ports collection makefile for:		etcupdate
-# Date created:					08 July 2010
-# Whom:						jhb
-#
-# $FreeBSD: ports/sysutils/etcupdate/Makefile,v 1.5 2012/11/17 06:01:29 svnexp Exp $
-#
-# This port is self contained in the src directory.
-#
+# Created by: jhb
+# $FreeBSD: sysutils/etcupdate/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	etcupdate
 PORTVERSION=	0.4
@@ -24,6 +18,7 @@ SRC=		${.CURDIR}/src
 MAN8=		${PORTNAME}.8
 PLIST_FILES=	sbin/etcupdate
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${SRC}/${PORTNAME}.sh ${PREFIX}/sbin/${PORTNAME}
 	${INSTALL_MAN} ${SRC}/${PORTNAME}.8 ${PREFIX}/man/man8
