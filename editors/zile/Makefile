@@ -1,5 +1,5 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD: editors/zile/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: editors/zile/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	zile
 PORTVERSION=	2.4.9
@@ -29,6 +29,7 @@ PLIST_DIRS=	%%DOCSDIR%%
 CPPFLAGS+=	-I${LOCALBASE}/include -isystem /usr/include/gnu
 LDFLAGS+=	-L${LOCALBASE}/lib -lgnuregex
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/need_charset_alias=/s|true|false|g' ${WRKSRC}/lib/Makefile.in
