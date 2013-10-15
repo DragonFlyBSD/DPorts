@@ -1,11 +1,5 @@
-# ex:ts=8	-*-mode: makefile-*-
-#
-# New ports collection makefile for:	cups-samba
-# Date created:		2004-02-10
-# Whom:			John Merryweather Cooper <coop9211@uidaho.edu>
-#
-# $FreeBSD: ports/print/cups-samba/Makefile,v 1.19 2013/01/31 19:48:37 svnexp Exp $
-#
+# Created by: John Merryweather Cooper <coop9211@uidaho.edu>
+# $FreeBSD: print/cups-samba/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	cups-samba
 PORTVERSION=	6.0
@@ -31,6 +25,7 @@ DRIVER_FILES=	cups6.inf cups6.ini cupsps6.dll cupsui6.dll
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 pre-install:
 	${MKDIR} ${DATADIR}/drivers
 
