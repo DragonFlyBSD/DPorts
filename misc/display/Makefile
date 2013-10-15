@@ -1,9 +1,5 @@
-# New ports collection makefile for: display
-# Date created:		25 August 1997
-# Whom:			Stephen J. Roznowski <sjr@home.net>
-#
-# $FreeBSD: ports/misc/display/Makefile,v 1.24 2012/11/17 05:59:34 svnexp Exp $
-#
+# Created by: Stephen J. Roznowski <sjr@home.net>
+# $FreeBSD: misc/display/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	display
 PORTVERSION=	1.2a
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	yes
 DISPLAY_PROGRAM_PREFIX?=
 
 .if empty(DISPLAY_PROGRAM_PREFIX)
+NO_STAGE=	yes
 pre-everything::
 		@${ECHO_MSG} "NOTE: You may set DISPLAY_PROGRAM_PREFIX to change the name of the 'display'"
 		@${ECHO_MSG} "utility so that it does not conflict with similarly named files from"
