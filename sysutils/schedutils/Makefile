@@ -1,9 +1,5 @@
-# New ports collection makefile for:	schedutils
-# Date created:		2012-03-12
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/schedutils/Makefile,v 1.2 2012/11/17 06:01:45 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: sysutils/schedutils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	schedutils
 PORTVERSION=	0.7.2
@@ -21,6 +17,7 @@ MANCOMPRESSED=	no
 MAN8=		sched.8
 MLINKS=		sched.8 resched.8
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/ctype.h/d' ${WRKSRC}/isnumber.c
 
