@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Quantum-Superpositions
-# Date created:				01 Jun 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: lang/p5-Quantum-Superpositions/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: lang/p5-Quantum-Superpositions/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Quantum-Superpositions
 PORTVERSION=	2.02
@@ -22,4 +18,5 @@ MAN3=	Quantum::Superpositions.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
