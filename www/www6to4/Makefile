@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@dante.org.uk>
-# $FreeBSD: ports/www/www6to4/Makefile,v 1.8 2013/01/09 20:05:19 svnexp Exp $
+# $FreeBSD: www/www6to4/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	www6to4
 PORTVERSION=	1.6
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/./-/}
 
 USE_RC_SUBR=	www6to4
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}/etc,' \
 		${WRKSRC}/www6to4.c
