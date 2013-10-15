@@ -1,5 +1,5 @@
 # Created by: Brian Candler <B.Candler@pobox.com>
-# $FreeBSD: print/pmw/Makefile 321320 2013-06-19 20:12:38Z linimon $
+# $FreeBSD: print/pmw/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pmw
 PORTVERSION=	4.12
@@ -18,6 +18,7 @@ MAN1=		pmw.1
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
