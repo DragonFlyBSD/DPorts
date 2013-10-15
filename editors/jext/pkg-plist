@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/editors/jext/pkg-plist,v 1.7 2012/11/17 05:57:14 svnexp Exp $
+@comment $FreeBSD: editors/jext/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/jext
 %%DATADIR%%/History.txt
 %%DATADIR%%/Jython-LICENSE

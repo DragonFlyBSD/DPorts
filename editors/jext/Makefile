@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/editors/jext/Makefile,v 1.30 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: editors/jext/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	jext
 PORTVERSION=	3.0.2
@@ -22,6 +22,7 @@ SUB_FILES=	jext.sh
 
 INSTALL_FILES=	Jython-LICENSE LICENSE README History.txt Names.txt bin lib
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/jext.sh ${PREFIX}/bin/jext
