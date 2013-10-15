@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/gnono/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/gnono/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnono
 PORTVERSION=	1.9.1
@@ -19,6 +19,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAN6=	${PORTNAME}.6
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -E -e \
 	    	's|-DG.*_DISABLE_DEPRECATED||g' -e 's|-Werror||g'
