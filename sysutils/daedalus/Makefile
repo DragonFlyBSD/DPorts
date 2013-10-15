@@ -1,9 +1,5 @@
-# New ports collection makefile for:	daedalus
-# Date created:				16 June 2004
-# Whom:					Kelley Reynolds <kelley@insidesystems.net>
-#
-# $FreeBSD: ports/sysutils/daedalus/Makefile,v 1.5 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: Kelley Reynolds <kelley@insidesystems.net>
+# $FreeBSD: sysutils/daedalus/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	daedalus
 PORTVERSION=	2.0.1
@@ -24,6 +20,7 @@ USE_RC_SUBR=	yes
 SED_SCRIPT=	-e 's,%%PREFIX%%,${PREFIX},g' \
 		-e 's,%%RUBY_WITHOUT_SUFFIX%%,${RUBY_WITHOUT_SUFFIX},g'
 
+NO_STAGE=	yes
 pre-install:
 	@${SED} ${SED_SCRIPT} ${FILESDIR}/${PORTNAME}.sh >${WRKDIR}/${PORTNAME}.sh
 
