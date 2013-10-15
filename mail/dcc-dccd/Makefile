@@ -1,5 +1,5 @@
 # Created by: Dean Hollister <dean@odyssey.apana.org.au>
-# $FreeBSD: mail/dcc-dccd/Makefile 319615 2013-06-01 23:18:19Z bapt $
+# $FreeBSD: mail/dcc-dccd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dcc-dccd
 PORTVERSION=	1.3.141
@@ -70,6 +70,7 @@ PLIST_SUB+=	DCCUSER="${DCCUSER}"
 #
 CONFIGURE_ARGS=	--with-uid=${DCCUSER} --bindir=${PREFIX}/bin --mandir=${MANPREFIX}/man --with-configsuffix=.sample
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 SUB_FILES=		pkg-install pkg-message
