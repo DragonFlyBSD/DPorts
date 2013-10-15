@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Graph-SocialMap
-# Date created:				31 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: graphics/p5-Graph-SocialMap/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: graphics/p5-Graph-SocialMap/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Graph-SocialMap
 PORTVERSION=	0.12
@@ -27,4 +23,5 @@ MAN3=	Graph::SocialMap.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
