@@ -1,9 +1,5 @@
-# New ports collection makefile for:	psearch
-# Date created:				17 February 2006
-# Whom:					Benjamin Lutz
-#
-# $FreeBSD: ports/ports-mgmt/psearch/Makefile,v 1.8 2012/11/17 06:00:46 svnexp Exp $
-#
+# Created by: Benjamin Lutz
+# $FreeBSD: ports-mgmt/psearch/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	psearch
 PORTVERSION=	2.0.2
@@ -16,6 +12,7 @@ COMMENT=	An utility for searching the FreeBSD Ports Collection
 MAN1=		psearch.1
 PLIST_FILES=	bin/psearch
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/psearch ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/psearch.1 ${MANPREFIX}/man/man1
