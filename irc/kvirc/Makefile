@@ -1,5 +1,5 @@
 # Created by: Michael Ranner
-# $FreeBSD: irc/kvirc/Makefile 327450 2013-09-17 06:12:35Z bapt $
+# $FreeBSD: irc/kvirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	kvirc
 PORTVERSION=	4.2.0
@@ -50,6 +50,7 @@ WEBKIT_DESC=	Build with QtWebkit support
 
 PLIST_SUB+=	VER="${PORTVERSION:R}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(PKGNAMESUFFIX)
