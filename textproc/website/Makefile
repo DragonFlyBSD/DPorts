@@ -1,5 +1,5 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: textproc/website/Makefile 323408 2013-07-21 18:20:24Z marino $
+# $FreeBSD: textproc/website/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	website
 PORTVERSION=	2.5.0
@@ -27,6 +27,7 @@ CATALOG_XSL=	${WRKSRC}/catalog
 
 DXVERSIONS=	current 2.2 2.3 2.4.0 2.4.1 2.5.0
 
+NO_STAGE=	yes
 post-extract:
 	${FIND} ${WRKSRC} -name '.#*' -delete
 
