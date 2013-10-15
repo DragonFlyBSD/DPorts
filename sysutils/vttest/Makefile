@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vttest
-# Date created:		2005-07-21
-# Whom:			Nicola Vitale <nivit@email.it>
-#
-# $FreeBSD: ports/sysutils/vttest/Makefile,v 1.8 2012/11/17 06:01:49 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@email.it>
+# $FreeBSD: sysutils/vttest/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	vttest
 PORTVERSION=	2012.05.06
@@ -22,4 +18,5 @@ MAKEFILE=	makefile
 MAN1=		vttest.1
 PLIST_FILES=	bin/vttest
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
