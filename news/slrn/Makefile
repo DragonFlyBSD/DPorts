@@ -1,5 +1,5 @@
 # Created by: Carey Jones <mcj@acquiesce.org>
-# $FreeBSD: news/slrn/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: news/slrn/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	slrn
 PORTVERSION=	1.0.1
@@ -28,6 +28,7 @@ MAN1=		slrn.1 slrnpull.1
 OPTIONS_DEFINE=	SSL DEVIEW
 OPTIONS_DEFAULT=SSL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
