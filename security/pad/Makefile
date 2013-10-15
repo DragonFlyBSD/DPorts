@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/security/pad/Makefile,v 1.16 2013/01/27 06:41:41 svnexp Exp $
+# $FreeBSD: security/pad/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pad
 PORTVERSION=	1.0.4
@@ -19,6 +19,7 @@ MAN1=		pad.1
 PLIST=		${WRKDIR}/pkg-plist
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 pre-install:
 	${ECHO_CMD} bin/pad > ${PLIST}
 .if !defined(NOPORTDOCS)
