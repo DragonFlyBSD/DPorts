@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: www/p5-Apache-MP3/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Apache-MP3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-MP3
 PORTVERSION=	4.00
@@ -28,6 +28,7 @@ MAN3=		Apache::MP3.3 \
 		Apache::MP3::Resample.3 \
 		Apache::MP3::Sorted.3
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/apache_mp3/* ${DATADIR}
