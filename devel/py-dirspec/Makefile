@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-dirspec/Makefile 323716 2013-07-26 12:38:21Z nivit $
+# $FreeBSD: devel/py-dirspec/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	dirspec
 PORTVERSION=	13.05
@@ -17,4 +17,5 @@ LICENSE=	GPLv3
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
