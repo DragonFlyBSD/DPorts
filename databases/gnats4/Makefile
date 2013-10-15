@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnats4
-# Date created:				22 Aug 2003
-# Whom:					Oliver Eikemeier <eikemeier@fillmore-labs.com>
-#
-# $FreeBSD: databases/gnats4/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
+# $FreeBSD: databases/gnats4/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=		gnats
 PORTVERSION=		4.1.0
@@ -81,6 +77,7 @@ PLIST_SUB+=		SERVER=""
 CONFLICTS+=		${PKGNAMEPREFIX}${PORTNAME}-client-4.*
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 .if !defined(PACKAGE_BUILDING) && !defined(WANT_FREEFALL_CFG)
 	@${ECHO} "============================================================="
