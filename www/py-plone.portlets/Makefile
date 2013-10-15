@@ -1,13 +1,13 @@
-# $FreeBSD: ports/www/py-plone.portlets/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plone.portlets/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	plone.portlets
-PORTVERSION=	2.1
+PORTVERSION=	2.2
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	An extension of zope.viewlet to support dynamic portlets
+COMMENT=	Extension of zope.viewlet to support dynamic portlets
 
 LICENSE=	GPLv2
 
@@ -24,7 +24,9 @@ RUN_DEPENDS=	zodb${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/databases/zodb3 \
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
