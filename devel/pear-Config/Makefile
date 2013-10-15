@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: devel/pear-Config/Makefile 314226 2013-03-15 02:22:36Z miwi $
+# $FreeBSD: devel/pear-Config/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config
 PORTVERSION=	1.10.12
@@ -18,6 +18,7 @@ PEAR_XML_UTIL_DESC=	PEAR::XML_Util support
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_XML_PARSER}
