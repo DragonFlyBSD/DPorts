@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-ANSIScreen/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Term-ANSIScreen/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Term-ANSIScreen
 PORTVERSION=	1.50
@@ -13,7 +13,5 @@ COMMENT=	Term::ANSIColor clone with screen mode support
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Term::ANSIScreen.3
 
 .include <bsd.port.mk>
