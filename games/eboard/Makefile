@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: games/eboard/Makefile 327451 2013-09-17 06:28:07Z bapt $
+# $FreeBSD: games/eboard/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	eboard
 PORTVERSION=	1.1.1
@@ -47,6 +47,7 @@ DESKTOP_ENTRIES="eboard" \
 		"Game;BoardGame;GTK;" \
 		true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJOYSTICK}
