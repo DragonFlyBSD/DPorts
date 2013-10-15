@@ -1,9 +1,5 @@
-# New ports collection makefile for:    netrek
-# Date created:         15 Mar 1999
-# Whom:                 Donald Burr <dburr@FreeBSD.org>
-#
-# $FreeBSD: ports/games/netrek-BRMH-bin/Makefile,v 1.14 2012/11/17 05:57:46 svnexp Exp $
-#
+# Created by: Donald Burr <dburr@FreeBSD.org>
+# $FreeBSD: games/netrek-BRMH-bin/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	netrek-BRMH
 PORTVERSION=	2.2.2
@@ -21,6 +17,7 @@ NO_BUILD=		YES
 NO_WRKSUBDIR=		YES
 PLIST_FILES=	bin/netrek
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${GUNZIP_CMD} < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} > ${WRKDIR}/netrek
