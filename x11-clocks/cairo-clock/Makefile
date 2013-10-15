@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-clocks/cairo-clock/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-clocks/cairo-clock/Makefile 329408 2013-10-05 03:50:02Z daichi $
 
 PORTNAME=	cairo-clock
 PORTVERSION=	0.3.4
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAN1=		cairo-clock.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -32,6 +33,12 @@ post-patch:
 	@${GZIP_CMD} -d ${WRKSRC}/man/cairo-clock.1.gz
 	@${REINPLACE_CMD} -e 's,.gz,,; s,datadir)\/man,prefix)\/man,' \
 		${WRKSRC}/man/Makefile.in
+
+post-configure:
+.if ${OSVERSION} > 1000000 || ${CC:Mclang} != ""
+	@${REINPLACE_CMD} -e 's,--export-dynamic,-export-dynamic,' \
+		${WRKSRC}/src/Makefile
+.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
