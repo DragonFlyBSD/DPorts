@@ -1,5 +1,5 @@
 # Created by: msciciel
-# $FreeBSD: mail/smtp-gated/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/smtp-gated/Makefile 328760 2013-09-29 23:36:27Z danilo $
 
 PORTNAME=	smtp-gated
 PORTVERSION=	1.4.20.0
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://software.klolik.org/smtp-gated/files/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Proxy for SMTP sessions with virus and spam scan
 
 LICENSE=	GPLv2
@@ -23,31 +23,15 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN5=		smtp-gated.conf.5
-MAN8=		smtp-gated.8
-PLIST_FILES=	sbin/smtp-gated
+PLIST_FILES=	sbin/smtp-gated \
+				man/man5/smtp-gated.conf.5.gz \
+				man/man8/smtp-gated.8.gz
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNAT}
-CONFIGURE_ARGS+=	--enable-nat
-.else
-CONFIGURE_ARGS+=	--disable-nat
-.endif
-
-.if ${PORT_OPTIONS:MCHUNKING}
-CONFIGURE_ARGS+=	--enable-chunking
-.endif
-
-.if ${PORT_OPTIONS:MECONNRESET}
-CONFIGURE_ARGS+=	--enable-silent-econnreset
-.endif
-
-.if ${PORT_OPTIONS:MPCRE}
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
-.else
-CONFIGURE_ARGS+=	--disable-pcre
-.endif
+NAT_CONFIGURE_ENABLE=	nat
+CHUNKING_CONFIGURE_ENABLE=	chunking
+ECONNRESET_CONFIGURE_ENABLE=	silent-econnreset
+PCRE_CONFIGURE_OFF=	--disable-pcre
+PCRE_LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 .include <bsd.port.pre.mk>
 
