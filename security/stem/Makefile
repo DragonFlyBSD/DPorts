@@ -1,6 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: security/stem/Makefile 315442 2013-03-28 06:44:19Z cs $
-#
+# $FreeBSD: security/stem/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	stem
 PORTVERSION=	1.0.1
@@ -21,4 +20,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
