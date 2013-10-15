@@ -1,5 +1,5 @@
 # Created by: ljo
-# $FreeBSD: math/eispack/Makefile 315494 2013-03-28 19:25:12Z bf $
+# $FreeBSD: math/eispack/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	eispack
 PORTVERSION=	1.0
@@ -28,6 +28,7 @@ MAKE_ENV+=	SHLIB_MAJOR="${SHLIB_MAJOR}" \
 
 OPTIONS_DEFINE=	PROFILE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPROFILE}
