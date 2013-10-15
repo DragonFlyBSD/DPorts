@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-File-DirSync/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-File-DirSync/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-DirSync
 PORTVERSION=	1.22
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 MAN1=		dirsync.1
 MAN3=		File::DirSync.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
