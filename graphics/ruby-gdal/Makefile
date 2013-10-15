@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/ruby-gdal/Makefile 326668 2013-09-07 17:29:15Z sunpoet $
+# $FreeBSD: graphics/ruby-gdal/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gdal
 PORTVERSION=	1.10.1
@@ -25,6 +25,7 @@ USE_RUBY=	yes
 USES=		gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/ruby
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SWIG = swig/ s|$$|2.0|' ${WRKSRC}/../SWIGmake.base
 	@${REINPLACE_CMD} -e 's|Config::CONFIG|Rb&|g' ${WRKSRC}/RubyMakefile.mk
