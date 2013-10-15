@@ -1,5 +1,5 @@
 # Created by: Shigeyuki Fukushima <shige@FreeBSD.org>
-# $FreeBSD: ports/japanese/eblook/Makefile,v 1.28 2013/01/15 05:43:23 svnexp Exp $
+# $FreeBSD: japanese/eblook/Makefile 328622 2013-09-28 19:16:18Z antoine $
 
 PORTNAME=	eblook
 PORTVERSION=	1.6.1
@@ -13,13 +13,15 @@ COMMENT=	Command to lookup words in EB format dictionaries
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	eb:${PORTSDIR}/japanese/eb
+LIB_DEPENDS=	libeb.so:${PORTSDIR}/japanese/eb
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-eb-includes=${PREFIX}/include \
 			--with-eb-libraries=${PREFIX}/lib
 
 INFO=		eblook
+PLIST_FILES=	bin/eblook
+PORTDOCS=	AUTHORS COPYING ChangeLog NEWS README
 
 OPTIONS_DEFINE=	DOCS
 
@@ -27,10 +29,8 @@ OPTIONS_DEFINE=	DOCS
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	for i in AUTHORS COPYING ChangeLog NEWS README ; do \
-		${INSTALL_DATA} ${WRKSRC}/$${i} ${DOCSDIR} ;\
-	done
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
