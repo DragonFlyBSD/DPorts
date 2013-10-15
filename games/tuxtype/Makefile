@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: games/tuxtype/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: games/tuxtype/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tuxtype
 PORTVERSION=	1.8.1
@@ -40,6 +40,7 @@ T4K_VERSION=	0.1.1
 T4K_DISTFILE=	${T4K_NAME}-${T4K_VERSION}${EXTRACT_SUFX}
 T4K_WRKSRC=	${WRKDIR}/${T4K_NAME}-${T4K_VERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
