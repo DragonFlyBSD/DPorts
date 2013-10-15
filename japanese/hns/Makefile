@@ -1,5 +1,5 @@
 # Created by: Hyper NIKKI System Project <hnsmaster@h14m.org>
-# $FreeBSD: japanese/hns/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/hns/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	hns
 PORTVERSION=	2.19.9
@@ -13,6 +13,7 @@ COMMENT=	Hyper NIKKI System, a CGI system for Electric Diary Interchange
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@if [ -d ${DATADIR} ]; then ${RM} -rf ${DATADIR}; fi
 	${MKDIR} ${DATADIR}
