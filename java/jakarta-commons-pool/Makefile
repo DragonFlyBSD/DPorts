@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@toha.org.ua>
-# $FreeBSD: ports/java/jakarta-commons-pool/Makefile,v 1.19 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-commons-pool/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-pool
 PORTVERSION=	1.6
@@ -25,6 +25,7 @@ PORTDOCS=	*
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/dist/${PORTNAME}-${PORTVERSION}.jar \
