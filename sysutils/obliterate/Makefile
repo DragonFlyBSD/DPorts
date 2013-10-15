@@ -1,5 +1,5 @@
 # Created by: Wes Peters <wes@FreeBSD.org>
-# $FreeBSD: sysutils/obliterate/Makefile 319264 2013-05-27 15:59:44Z bsam $
+# $FreeBSD: sysutils/obliterate/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	obliterate
 PORTVERSION=	0.5
@@ -13,4 +13,5 @@ COMMENT=	Securely delete file[s]
 PLIST_FILES=	bin/obliterate
 MAN8=		obliterate.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
