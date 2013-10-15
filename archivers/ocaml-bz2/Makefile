@@ -1,5 +1,5 @@
 # Created by: Jaap Boender <jaapb@kerguelen.org>
-# $FreeBSD: archivers/ocaml-bz2/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/ocaml-bz2/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	bz2
 PORTVERSION=	0.6.0
@@ -14,6 +14,7 @@ COMMENT=	OCaml library to manipulate bz2 files
 
 GNU_CONFIGURE=	yes
 USES=		gmake
+NO_STAGE=	yes
 
 USE_OCAML=		yes
 USE_OCAML_LDCONFIG=	yes
