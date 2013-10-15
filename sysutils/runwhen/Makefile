@@ -1,9 +1,5 @@
-# New ports collection makefile for:	runwhen
-# Date created:		2003-10-31
-# Whom:			David Thiel <lx@redundancy.redundancy.org>
-#
-# $FreeBSD: ports/sysutils/runwhen/Makefile,v 1.4 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: David Thiel <lx@redundancy.redundancy.org>
+# $FreeBSD: sysutils/runwhen/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	runwhen
 PORTVERSION=	2003.10.31
@@ -22,6 +18,7 @@ ALL_TARGET=	default
 
 DOCS=		src/CHANGES src/TODO package/README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's!gcc -O2!${CC} ${CFLAGS}!' \
 		${WRKSRC}/conf-compile/host_compile.sh
