@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-man
-# Date created:			Sat Aug 17 17:10:02 CEST 2000
-# Whom:				olgeni@uli.it
-#
-# $FreeBSD: lang/ruby-man/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: olgeni@uli.it
+# $FreeBSD: lang/ruby-man/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ruby-man
 PORTVERSION=	1.4.6
@@ -26,6 +22,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}${LANGSUFFIX}
 NO_BUILD=	yes
 PLIST_SUB=	LANGSUFFIX="${LANGSUFFIX}"
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${RUBY_MODDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.html ${RUBY_MODDOCDIR}
