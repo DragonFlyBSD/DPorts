@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xskat/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xskat/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xskat
 PORTVERSION=	4.0
@@ -21,6 +21,7 @@ USE_XORG=	x11
 MAN1=		xskat.1 xskat-de.1
 PLIST_FILES=	bin/xskat
 
+NO_STAGE=	yes
 pre-fetch:
 .if !defined(WITH_ALTENBURGER_CARDS)
 	@${ECHO}
