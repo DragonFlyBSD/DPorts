@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-DynaLoader-Functions/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-DynaLoader-Functions/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	DynaLoader-Functions
 PORTVERSION=	0.002
@@ -18,7 +18,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		DynaLoader::Functions.3
 
 .include <bsd.port.mk>
