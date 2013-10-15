@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-File-SLN/Makefile 326873 2013-09-10 08:26:53Z az $
+# $FreeBSD: science/p5-Chemistry-File-SLN/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Chemistry-File-SLN
 PORTVERSION=	0.11
@@ -27,4 +27,5 @@ MAN3=	Chemistry::File::SLN.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
