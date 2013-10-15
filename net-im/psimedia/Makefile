@@ -1,5 +1,4 @@
-# Created by: Max Brazhnikov <makc@FreeBSD.org>
-# $FreeBSD: net-im/psimedia/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: net-im/psimedia/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	psimedia
 PORTVERSION=	1.0.3
@@ -33,6 +32,7 @@ CONFIGURE_ARGS+=	--debug
 PLIST_SUB+=	DEBUG=""
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
 		${WRKSRC}/gstprovider/rwcontrol.h \
