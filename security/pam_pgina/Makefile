@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: security/pam_pgina/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: security/pam_pgina/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pam_pGina
 PORTVERSION=	1.1.3
@@ -19,6 +19,7 @@ USE_OPENSSL=	yes
 USES=		perl5
 USE_PERL5=	run
 
+NO_STAGE=	yes
 post-patch:
 # PREFIX safeness
 # Use correct PAM 'password change' service name
