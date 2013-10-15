@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/xymon-client/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: net-mgmt/xymon-client/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	xymon
 PORTVERSION=	4.3.12
@@ -29,6 +29,7 @@ PLIST_SUB+=	XYMONUSER="${XYMONUSER}"
 CONFIG_FILES=	clientlaunch.cfg xymonclient.cfg localclient.cfg
 
 # Configure script is interactive
+NO_STAGE=	yes
 do-configure:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}/
 
