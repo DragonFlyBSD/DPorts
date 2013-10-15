@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nomyso
-# Date created:		Thu Dec 22 18:29:59 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: converters/nomyso/Makefile 324194 2013-08-03 13:54:12Z mat $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: converters/nomyso/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	nomyso
 PORTVERSION=	4.3
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}.pl
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|[[:cntrl:]]$$||' \
