@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: print/cups-smb-backend/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: print/cups-smb-backend/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	cups-smb-backend
 PORTVERSION=	1.0
@@ -19,6 +19,7 @@ PLIST_FILES=	libexec/cups/backend/smb
 SAMBA_PORT?=	samba36
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${LN} -fs ${PREFIX}/bin/smbspool ${PREFIX}/libexec/cups/backend/smb
 	@${CAT} ${PKGMESSAGE}
