@@ -1,5 +1,5 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD: biology/crux/Makefile 314529 2013-03-18 06:48:55Z jgh $
+# $FreeBSD: biology/crux/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	crux
 PORTVERSION=	1.2.0
@@ -20,6 +20,7 @@ USE_PYTHON=	2.5+
 OPTIONS_DEFINE=	SYS_LINALG
 SYS_LINALG_DESC=	Enable system ATLAS/LAPACK
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include
