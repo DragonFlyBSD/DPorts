@@ -1,5 +1,5 @@
 # Created by: Hiroyuki Iwatsuki <don@na.rim.or.jp>
-# $FreeBSD: devel/ruby-subversion/Makefile 321328 2013-06-19 21:13:34Z ohauer $
+# $FreeBSD: devel/ruby-subversion/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PKGNAMEPREFIX=	ruby-
 
@@ -19,6 +19,7 @@ USE_RUBY=	yes
 
 SVN_BUILD_BINDINGS=yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 CATEGORIES+=	ruby
