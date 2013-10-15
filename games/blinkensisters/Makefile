@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/blinkensisters/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/blinkensisters/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	blinkensisters
 PORTVERSION=	0.5.3
@@ -11,8 +11,8 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Parallax-style 2D scrolling platform game
 
 USE_SDL=	sdl image ttf
-USE_PERL5_BUILD=	yes
-USES=		cmake
+USE_PERL5=	build
+USES=		cmake perl5
 
 CFLAGS+=	-I${LOCALBASE}/include
 CXXFLAGS+=	-I${LOCALBASE}/include
@@ -29,6 +29,7 @@ SDL_NET_DESC=	Build with network support
 
 OPTIONS_DEFAULT=	SDL_MIXER SDL_NET
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "sparc64"
