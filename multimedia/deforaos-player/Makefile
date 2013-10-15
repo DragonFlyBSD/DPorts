@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: multimedia/deforaos-player/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/deforaos-player/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	player
 PORTVERSION=	0.1.4
@@ -21,4 +21,5 @@ MAKE_ARGS+=	PREFIX=${PREFIX}
 USE_GNOME=	gtk20 desktopfileutils
 USES=		pkgconfig gettext
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
