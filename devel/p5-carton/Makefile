@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-carton/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-carton/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	carton
 PORTVERSION=	0.9.15
@@ -37,4 +37,5 @@ MAN3=	Carton.3 \
 	Carton::Doc::Tree.3 \
 	Carton::Doc::Version.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
