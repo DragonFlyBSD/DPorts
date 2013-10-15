@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Framework/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CGI-Framework/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	CGI-Framework
 PORTVERSION=	0.23
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		CGI::Framework.3
 
