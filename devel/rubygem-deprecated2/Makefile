@@ -1,11 +1,5 @@
-# New ports collection makefile for:	rubygem-deprecated
-# Date created:				20 Sept 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# Created because the gem interface changed significantly with v3
-#
-# $FreeBSD: devel/rubygem-deprecated2/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/rubygem-deprecated2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	deprecated
 PORTVERSION=	2.0.1
@@ -21,4 +15,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
