@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/rgbpaint/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: graphics/rgbpaint/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	rgbpaint
 PORTVERSION=	0.8.7
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=${MAN1PREFIX}/man/man1 \
 MAN1=		${PORTNAME}.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/if \[/s|==|=|g' ${WRKSRC}/configure
 
