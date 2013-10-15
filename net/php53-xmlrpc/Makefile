@@ -1,9 +1,4 @@
-# New ports collection makefile for:	php53-xmlrpc
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/net/php53-xmlrpc/Makefile,v 1.2 2012/11/17 06:00:15 svnexp Exp $
-#
+# $FreeBSD: net/php53-xmlrpc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 CATEGORIES=	net
 
@@ -11,4 +6,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-xmlrpc
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
