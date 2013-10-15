@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Role-WithOverloading/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Role-WithOverloading/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Role-WithOverloading
 PORTVERSION=	0.13
@@ -34,4 +34,5 @@ MAN3=		MooseX::Role::WithOverloading.3 \
 		MooseX::Role::WithOverloading::Meta::Role::Application::ToRole.3 \
 		MooseX::Role::WithOverloading::Meta::Role::Composite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
