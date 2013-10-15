@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-# $FreeBSD: sysutils/isomaster/Makefile 326995 2013-09-11 17:17:35Z antoine $
+# $FreeBSD: sysutils/isomaster/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	isomaster
 PORTVERSION=	1.3.9
@@ -26,6 +26,7 @@ PLIST_SUB=	DESKTOPDIR="${DESKTOPDIR:S,^${PREFIX}/,,}"
 
 MAN1=		isomaster.1
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@$$(CC)|$$(CC)|'
