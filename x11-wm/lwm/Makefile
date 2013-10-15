@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@photino.com>
-# $FreeBSD: x11-wm/lwm/Makefile 323701 2013-07-26 07:06:30Z bapt $
+# $FreeBSD: x11-wm/lwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	lwm
 PORTVERSION=	1.2.3
@@ -25,6 +25,7 @@ MAN1=		${PORTNAME}.1
 PORTDOCS=	AUTHORS BUGS ChangeLog README TODO
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
