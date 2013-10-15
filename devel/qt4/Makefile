@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@kiste>
-# $FreeBSD: ports/devel/qt4/Makefile,v 1.30 2013/02/03 21:43:07 svnexp Exp $
+# $FreeBSD: devel/qt4/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qt4
 DISTVERSION=	${QT4_VERSION}
@@ -26,6 +26,7 @@ CODECS_DESC=	CN, JP, KR, TW codecs support
 SQL_PLUGINS_DESC=	Install database plugins for QtSql
 TOOLS_DESC=	Install Qt tools (qmake, moc, etc.)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCODECS}
