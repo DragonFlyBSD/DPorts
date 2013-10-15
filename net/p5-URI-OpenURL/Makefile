@@ -1,9 +1,5 @@
-# New ports collection makefile for:	URI-OpenURL
-# Date created:				18 Feb 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: net/p5-URI-OpenURL/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: net/p5-URI-OpenURL/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	URI-OpenURL
 PORTVERSION=	0.4.6
@@ -22,4 +18,5 @@ MAN3=	URI::OpenURL.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
