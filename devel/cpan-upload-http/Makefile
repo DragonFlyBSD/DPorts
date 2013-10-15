@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cpan-upload-http/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/cpan-upload-http/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cpan-upload-http
 PORTVERSION=	2.4
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN1=	cpan-upload-http.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
