@@ -1,5 +1,5 @@
 # Created by: Masanori OZAWA (ozawa@ongs.co.jp)
-# $FreeBSD: deskutils/fusenshi/Makefile 326711 2013-09-08 08:44:57Z antoine $
+# $FreeBSD: deskutils/fusenshi/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	fusenshi
 PORTVERSION=	0.9.0
@@ -24,6 +24,7 @@ MAKE_ARGS+=	WITHOUT_SSL=yes
 LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
 .endif
 
+NO_STAGE=	yes
 post-install:
 	@${STRIP_CMD} ${PREFIX}/bin/fusenshi
 
