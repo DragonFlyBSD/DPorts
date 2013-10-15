@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-irc-transport
-# Date created:				21 April 2006
-# Whom:					Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/py-xmpppy-irc/Makefile,v 1.13 2012/11/22 12:33:55 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: net-im/py-xmpppy-irc/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	xmpppy-irc
 PORTVERSION=	0.3
@@ -32,6 +28,7 @@ DDIR=		${PYTHON_SITELIBDIR}/xmpp/irc
 
 PORTSCOUT=	limit:^0\.4[1-4]
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lr '/usr/bin/python' ${WRKSRC} | \
 		${XARGS} ${REINPLACE_CMD} -e "s,/usr/bin/python,${PYTHON_CMD}," \
