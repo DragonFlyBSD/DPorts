@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-wbxml
-# Date created:		2009-03-11
-# Whom:			Florian Smeets <flo@smeets.im>
-#
-# $FreeBSD: ports/textproc/pecl-wbxml/Makefile,v 1.6 2012/11/17 06:02:16 svnexp Exp $
-#
+# Created by: Florian Smeets <flo@smeets.im>
+# $FreeBSD: textproc/pecl-wbxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	wbxml
 PORTVERSION=	1.0.3
@@ -23,4 +19,5 @@ CONFIGURE_ARGS=	--with-wbxml=${LOCALBASE} \
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
