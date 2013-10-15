@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: x11-wm/afterstep/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11-wm/afterstep/Makefile 329453 2013-10-05 13:30:42Z dinoex $
 
 PORTNAME=	afterstep
 PORTVERSION=	1.0
@@ -8,20 +8,23 @@ CATEGORIES=	x11-wm afterstep
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	dinoex
 DISTNAME=	AfterStep-${PORTVERSION}
+PKGNAMESUFFIX=	1
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Window manager originally based on the Bowman NeXTstep clone
 
 RUN_DEPENDS=	asclock:${PORTSDIR}/x11-clocks/asclock
 
+CONFLICTS?=	afterstep-2*
+PORTSCOUT=	limit:^1\.[0-9.]*$$
 NO_LATEST_LINK=	yes
+NO_STAGE=	yes
+
 USE_XORG=	xpm xext x11
 USES=		imake
 INSTALL_TARGET=	install install.man
 MANCOMPRESSED=	yes
 MAN1=		afterstep.1 Animate.1 Audio.1 Auto.1 Banner.1 Pager.1 Wharf.1
-CONFLICTS?=	afterstep-2*
-PORTSCOUT=	limit:^1\.[0-9.]*$$
 CFLAGS+=	-Wno-return-type
 USE_CSTD=	gnu89
 
