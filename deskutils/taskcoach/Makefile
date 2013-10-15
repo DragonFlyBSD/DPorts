@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/taskcoach/Makefile 324257 2013-08-05 03:12:44Z kevlo $
+# $FreeBSD: deskutils/taskcoach/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	taskcoach
 PORTVERSION=	1.3.31
@@ -20,6 +20,7 @@ USE_WX=		2.8
 WX_COMPS=	python:lib
 WX_UNICODE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|taskcoach.py|taskcoach|' \
 		${WRKSRC}/build.in/fedora/taskcoach.desktop
