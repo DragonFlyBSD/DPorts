@@ -1,4 +1,4 @@
-# $FreeBSD: net/prosearch/Makefile 327365 2013-09-16 06:30:31Z az $
+# $FreeBSD: net/prosearch/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	prosearch
 PORTVERSION=	0.19.2
@@ -38,6 +38,7 @@ SPHINX_DESC=		sphinx fulltext search engine
 
 #		NGINX "With web server deps (NGINX)" off
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 RUN_DEPENDS+=\
