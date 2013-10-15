@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vinetto
-# Date created:		2006-12-26
-# Whom:			Aleksander Fafula <alex@BSDGuru.org>
-#
-# $FreeBSD: security/vinetto/Makefile 301257 2012-07-20 22:14:15Z bapt $
-#
+# Created by: Aleksander Fafula <alex@BSDGuru.org>
+# $FreeBSD: security/vinetto/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	vinetto
 PORTVERSION=	0.07
@@ -23,6 +19,7 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGVERSION=	0.06alpha
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAGING}
