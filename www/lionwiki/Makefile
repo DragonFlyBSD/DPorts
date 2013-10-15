@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lionwiki
-# Date created:		2009-10-07
-# Whom:			Sylvio Cesar <sylvio@FreeBSD.org>
-#
-# $FreeBSD: ports/www/lionwiki/Makefile,v 1.8 2012/11/17 06:02:39 svnexp Exp $
-#
+# Created by: Sylvio Cesar <sylvio@FreeBSD.org>
+# $FreeBSD: www/lionwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lionwiki
 PORTVERSION=	3.2.7
@@ -21,6 +17,7 @@ ROOTFILES=	config.php index.php
 ROOTDIRS=	lang plugins templates var
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	(cd ${WRKSRC} && ${MV} config.php config.php.sample)
 
