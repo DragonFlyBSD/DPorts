@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/terraform/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: misc/terraform/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	terraform
 PORTVERSION=	0.9.5
@@ -27,6 +27,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
