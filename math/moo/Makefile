@@ -1,9 +1,5 @@
-# New ports collection makefile for:	moo
-# Date created:				05 Apr 2007
-# Whom:					Steven Kreuzer <skreuzer@f2o.org>
-#
-# $FreeBSD: ports/math/moo/Makefile,v 1.7 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@f2o.org>
+# $FreeBSD: math/moo/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	moo
 PORTVERSION=	1.3
@@ -18,6 +14,7 @@ COMMENT=	Calculator that accepts C-like syntax as input
 PLIST_FILES=	bin/moo
 MAN1=		moo.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/moo ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/moo.1 ${MANPREFIX}/man/man1
