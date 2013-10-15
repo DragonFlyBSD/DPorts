@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.app.rotterdam
-# Date created:				23 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.app.rotterdam/Makefile,v 1.4 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.app.rotterdam/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.app.rotterdam
 PORTVERSION=	3.5.3
@@ -12,7 +7,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	A Zope 3 ZMI Skin
+COMMENT=	Zope 3 ZMI Skin
 
 LICENSE=	ZPL21
 
@@ -31,6 +26,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.app.basicskin>=0:${PORTSDIR}/devel/py-z
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
