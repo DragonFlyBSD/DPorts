@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: textproc/p5-SQL-Tokenizer/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-SQL-Tokenizer/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	SQL-Tokenizer
 PORTVERSION=	0.24
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		SQL::Tokenizer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
