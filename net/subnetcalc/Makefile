@@ -1,5 +1,5 @@
 # Created by: Thomas Dreibholz <dreibh@iem.uni-due.de>
-# $FreeBSD: ports/net/subnetcalc/Makefile,v 1.4 2012/12/25 13:17:30 svnexp Exp $
+# $FreeBSD: net/subnetcalc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	subnetcalc
 PORTVERSION=	2.1.4
@@ -21,4 +21,5 @@ USE_GMAKE=	yes
 PLIST_FILES=	bin/subnetcalc
 MAN1=		subnetcalc.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
