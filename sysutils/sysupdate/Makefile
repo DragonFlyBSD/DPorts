@@ -1,5 +1,5 @@
 # Created by: Tig <tigger@lvlworld.com>
-# $FreeBSD: sysutils/sysupdate/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/sysupdate/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sysupdate
 PORTVERSION=	0.5.8
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/sysupdate.sh
 OPTIONS_DEFINE=	FASTEST_CVSUP
 FASTEST_CVSUP_DESC=	Support fastest_cvsup
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFASTEST_CVSUP}
