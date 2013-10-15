@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stopwatch
-# Date created:				28 August 2008
-# Whom:					Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/x11-clocks/stopwatch/Makefile,v 1.5 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: x11-clocks/stopwatch/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	stopwatch
 PORTVERSION=	3.5
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/stopwatch
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE}," ${WRKSRC}/stopwatch
 
