@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Shell-Command/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: sysutils/p5-Shell-Command/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Shell-Command
 PORTVERSION=	0.06
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Shell::Command.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
