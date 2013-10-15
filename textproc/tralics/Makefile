@@ -1,8 +1,8 @@
 # Created by: siasia
-# $FreeBSD: textproc/tralics/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/tralics/Makefile 329630 2013-10-06 21:35:41Z danilo $
 
 PORTNAME=	tralics
-PORTVERSION=	2.15.0
+PORTVERSION=	2.15.1
 DISTVERSIONPREFIX=	src-
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp-sop.inria.fr/marelle/tralics/src/
@@ -18,6 +18,6 @@ ALL_TARGET=	${PORTNAME}
 PLIST_FILES=	bin/${PORTNAME}
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${STAGEDIR}${PREFIX}/bin)
 
 .include <bsd.port.mk>
