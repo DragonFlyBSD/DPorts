@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: editors/mlview/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: editors/mlview/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	mlview
 PORTVERSION=	0.8
@@ -21,6 +21,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags gnome-vfs-2.0 libgnomeui-
 
 GCONF_SCHEMAS=	mlview.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Autodetect dbus
