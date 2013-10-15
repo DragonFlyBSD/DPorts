@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: graphics/py-PyX/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: graphics/py-PyX/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	PyX
 PORTVERSION=	0.12.1
@@ -21,6 +21,7 @@ OPTIONS_DEFAULT=	T1CODE KPATHSEA
 T1CODE_DESC=		Fast t1 font encoding/decoding
 KPATHSEA_DESC=		Python wrapper around kpathsea
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MT1CODE} || ${PORT_OPTIONS:MKPATHSEA}
