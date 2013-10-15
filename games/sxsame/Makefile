@@ -1,5 +1,5 @@
 # Created by: Yuichi Narahara
-# $FreeBSD: games/sxsame/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/sxsame/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sxsame
 PORTVERSION=	3.02
@@ -25,6 +25,7 @@ BINGRP=		games
 BINMODE=	2755
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
