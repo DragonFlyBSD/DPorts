@@ -1,10 +1,5 @@
-# ex:ts=8
-# ports collection makefile for:	cproto
-# Date created:				2000 Feb. 13
-# Whom:					Abel Chow <abel_chow@yahoo.com>
-#
-# $FreeBSD: ports/devel/cproto/Makefile,v 1.23 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Abel Chow <abel_chow@yahoo.com>
+# $FreeBSD: devel/cproto/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cproto
 PORTVERSION=	4.7j
@@ -20,4 +15,5 @@ GNU_CONFIGURE=	yes
 MAN1=		cproto.1
 PLIST_FILES=	bin/cproto
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
