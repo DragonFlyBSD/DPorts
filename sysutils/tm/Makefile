@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/tm/Makefile 320951 2013-06-14 16:26:47Z bsam $
+# $FreeBSD: sysutils/tm/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tm
 PORTVERSION=	0.4.1
@@ -18,6 +18,7 @@ MAKE_ENV=	LINUX_LIBS=-lutil
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/web/index.html ${WRKSRC}/
 
