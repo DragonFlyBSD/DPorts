@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: math/liblbfgs/Makefile 322617 2013-07-10 06:14:32Z bapt $
+# $FreeBSD: math/liblbfgs/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	liblbfgs
 PORTVERSION=	1.10
@@ -18,6 +18,7 @@ USE_AUTOTOOLS=	autoconf:env
 OPTIONS_DEFINE=	OPTIMIZED DOCS
 OPTIMIZED_DESC=	SSE2 optimization routines
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Enable/disable compilation optimizations.
