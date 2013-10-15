@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/kktdirect/Makefile 324716 2013-08-14 13:06:49Z marino $
+# $FreeBSD: math/kktdirect/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	kktdirect
 PORTVERSION=	0.5
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${LAPACK} ${BLAS} -lm
 PLIST_FILES=	include/kktdirect.h lib/libkktdirect.a lib/libkktdirect_pic.a \
 		lib/libkktdirect.so lib/libkktdirect.so.0
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
