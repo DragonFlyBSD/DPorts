@@ -1,9 +1,5 @@
-# New ports collection makefile for:	disco
-# Date created:				08.06.2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/net-mgmt/disco/Makefile,v 1.18 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: net-mgmt/disco/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	disco
 PORTVERSION=	1.2
@@ -23,6 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PORTDOCS=	README
 PLIST_FILES=	bin/disco bin/disco.fp
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
