@@ -1,5 +1,5 @@
 # Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-# $FreeBSD: audio/p5-Ogg-Vorbis-Header-PurePerl/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/p5-Ogg-Vorbis-Header-PurePerl/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Ogg-Vorbis-Header-PurePerl
 PORTVERSION=	1.0
@@ -16,6 +16,7 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
 		vorbis:${PORTSDIR}/audio/libvorbis
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN3=		Ogg::Vorbis::Header::PurePerl.3
