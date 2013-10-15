@@ -1,9 +1,5 @@
-# New ports collection makefile for:	portfwd
-# Date created:         Sun May 5 16:12:30 CET 2002
-# Whom:                 Alex Dupre <sysadmin@alexdupre.com>
-#
-# $FreeBSD: ports/net/portfwd/Makefile,v 1.17 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Alex Dupre <sysadmin@alexdupre.com>
+# $FreeBSD: net/portfwd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	portfwd
 PORTVERSION=	0.29
@@ -19,6 +15,7 @@ USE_GMAKE=	yes
 MAN5=	portfwd.cfg.5
 MAN8=	portfwd.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|-Wall -ggdb -O3|${CFLAGS}|g" \
 		${WRKSRC}/src/Makefile.in
