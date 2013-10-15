@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11/xorg-edit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/xorg-edit/Makefile 330213 2013-10-13 06:15:19Z eadler $
 
 PORTNAME=	xorg-edit
 PORTVERSION=	08.08.06
@@ -18,7 +18,7 @@ USE_BZIP2=	yes
 USE_DOS2UNIX=	*.cpp *.h
 USE_WX=		2.6+
 WX_UNICODE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 PLIST_FILES=	bin/xorg-edit \
 		lib/xorg-edit/de_DE/LC_MESSAGES/xorg-edit.mo \
@@ -34,6 +34,7 @@ PLIST_DIRS=	lib/xorg-edit/options/devices \
 
 DESKTOP_ENTRIES="Xorg Edit" "" "" "${PORTNAME}" "Settings;" true
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CXX =|CXX ?=| ; \
