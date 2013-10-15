@@ -1,7 +1,5 @@
-# Created by:	nemysis@gmx.ch
-#
-# $FreeBSD: devel/allegro-devel/Makefile 323915 2013-07-29 20:46:47Z bapt $
-#
+# Created by: nemysis@gmx.ch
+# $FreeBSD: devel/allegro-devel/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	allegro
 DISTVERSION=	5.0.7
@@ -47,6 +45,7 @@ OPTIONS_DEFINE=	DEMOS
 OPTIONS_DEFAULT=	DEMOS
 DEMOS_DESC=	Install Demos programs
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include "Makefile.man"
 
