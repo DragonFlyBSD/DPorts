@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: news/brag/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: news/brag/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	brag
 PORTVERSION=	1.4.1
@@ -21,6 +21,7 @@ TCLSH=		tclsh8.4
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
