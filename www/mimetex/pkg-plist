@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/mimetex/pkg-plist,v 1.8 2012/11/17 06:02:39 svnexp Exp $
+@comment $FreeBSD: www/mimetex/pkg-plist 304422 2012-09-17 20:47:33Z nivit $
 %%WWWDIR%%/cgi-bin/mimetex.cgi
 @dirrm %%WWWDIR%%/cgi-bin
 @dirrm %%WWWDIR%%

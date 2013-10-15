@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: ports/www/mimetex/Makefile,v 1.21 2012/11/17 06:02:39 svnexp Exp $
+# $FreeBSD: www/mimetex/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mimetex
 PORTVERSION=	20120331.1.74
@@ -25,6 +25,7 @@ DESC_STATIC=	Possible use of mimetex on another machine
 
 PORTDOCS=	${PORTNAME}.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 # usefull if you run mimetex on another machine
 .if ${PORT_OPTIONS:MSTATIC}
