@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: textproc/p5-Text-Reflow/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-Reflow/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Reflow
 PORTVERSION=	1.09
@@ -17,4 +17,5 @@ MAN3=		Text::Reflow.3
 
 EXTRA_PATCHES=	${PATCHDIR}/5.8-Reflow.pm
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
