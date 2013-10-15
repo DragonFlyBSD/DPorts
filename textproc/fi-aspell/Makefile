@@ -1,9 +1,5 @@
-# New ports collection makefile for:    fi-aspell
-# Date created:                         28 August 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/fi-aspell/Makefile,v 1.7 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/fi-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-fi-0.7-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Finnish dictionary
 
 DICT=	 	fi
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
