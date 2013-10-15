@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: x11/gcb/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: x11/gcb/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	gcb
 PORTVERSION=	0.2.8
@@ -16,6 +16,7 @@ USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#!/bin/bash|#!${SH}|' \
 		${WRKSRC}/configure
