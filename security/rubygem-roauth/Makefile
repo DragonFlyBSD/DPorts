@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-roauth
-# Date created:		2010-11-03
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/security/rubygem-roauth/Makefile,v 1.5 2012/11/17 06:01:19 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: security/rubygem-roauth/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	roauth
 PORTVERSION=	0.0.8
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
