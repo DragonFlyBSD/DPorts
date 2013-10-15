@@ -1,9 +1,5 @@
-# New ports collection makefile for: sdig
-# Date created: 25 May 2004
-# Whom: Russell A. Jackson <rjackson@cserv62.csub.edu>
-#
-# $FreeBSD: ports/net-mgmt/sdig/Makefile,v 1.17 2012/11/17 06:00:37 svnexp Exp $
-#
+# Created by: Russell A. Jackson <rjackson@cserv62.csub.edu>
+# $FreeBSD: net-mgmt/sdig/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	sdig
 PORTVERSION=	0.45
@@ -23,6 +19,7 @@ MAN5=		sdig.conf.5
 MAN8=		sdig.8
 PLIST_FILES=	bin/sdig etc/sdig.conf etc/mactable
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},' ${WRKSRC}/sdig.conf
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},' ${WRKSRC}/sdig.conf.5
