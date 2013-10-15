@@ -1,4 +1,4 @@
-# $FreeBSD: ports/multimedia/mxflib/Makefile,v 1.3 2013/01/26 15:07:27 svnexp Exp $
+# $FreeBSD: multimedia/mxflib/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	mxflib
 PORTVERSION=	1.0.1
