@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: net/ucarp/Makefile 316763 2013-04-28 22:31:32Z stefan $
+# $FreeBSD: net/ucarp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ucarp
 PORTVERSION=	1.5.2
@@ -18,6 +18,7 @@ OPTIONS_DEFAULT=SCRIPTS
 
 SCRIPTS_DESC=	Install scripts to manage virtual IP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 GNU_CONFIGURE=	yes
