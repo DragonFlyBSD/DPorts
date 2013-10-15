@@ -1,9 +1,5 @@
-# New ports collection makefile for:	seq2
-# Date created:				31 Oct 2003
-# Whom:					osa
-#
-# $FreeBSD: ports/misc/seq2/Makefile,v 1.8 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: osa
+# $FreeBSD: misc/seq2/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	seq2
 PORTVERSION=	0.2
@@ -22,6 +18,7 @@ CONFIGURE_SCRIPT=	configure.1
 MAN1=		seq2.1
 PLIST_FILES=	bin/seq2
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(CC) -o|$$(CC) $$(CFLAGS) -o|' \
 		${WRKSRC}/Makefile.in
