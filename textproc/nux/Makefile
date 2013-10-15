@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: textproc/nux/Makefile 314783 2013-03-21 00:13:07Z jgh $
+# $FreeBSD: textproc/nux/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	nux
 PORTVERSION=	1.6
@@ -23,6 +23,7 @@ JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
