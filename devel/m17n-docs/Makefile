@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/m17n-docs/Makefile 322871 2013-07-12 22:54:10Z marino $
+# $FreeBSD: devel/m17n-docs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	m17n-docs
 PORTVERSION=	1.5.5
@@ -14,6 +14,7 @@ NO_BUILD=	yes
 OPTIONS_DEFINE=	JAPANESE
 JAPANESE_DESC=	Japanese documentation (HTML and PDF)
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.man"
 
 .include <bsd.port.options.mk>
