@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/rnv/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/rnv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rnv
 PORTVERSION=	1.7.11
@@ -20,4 +20,5 @@ CONFIGURE_ARGS=	--with-expat="${LOCALBASE}"
 MAN1=		rnv.1
 PLIST_FILES=	bin/arx bin/rnv bin/rvp bin/xsdck
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
