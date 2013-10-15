@@ -1,9 +1,5 @@
-# Ports collection makefile for:  Gollem
-# Date created:			  Sun Dec 16, 2001
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: ftp/horde3-gollem/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: ftp/horde3-gollem/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	gollem
 PORTVERSION=	1.1.2
@@ -17,5 +13,6 @@ USE_HORDE=	base
 USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
 .include <bsd.port.mk>
