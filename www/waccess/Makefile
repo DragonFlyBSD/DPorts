@@ -1,9 +1,5 @@
-# ports collection makefile for: waccess
-# Date Created:		3 August 2001
-# Whom:			tundra
-#
-# $FreeBSD: ports/www/waccess/Makefile,v 1.8 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: tundra
+# $FreeBSD: www/waccess/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	waccess
 PORTVERSION=	2.0
@@ -18,6 +14,7 @@ USE_PYTHON=	yes
 MAN1=	waccess.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^#!/usr/local/bin/python,#!${PYTHON_CMD},' \
 		${WRKSRC}/waccess
