@@ -1,9 +1,8 @@
 # Created by: Nicole Reid <root@cooltrainer.org>
-# $FreeBSD: ports/www/subsonic/Makefile,v 1.9 2012/12/20 06:16:46 svnexp Exp $
+# $FreeBSD: www/subsonic/Makefile 328062 2013-09-23 21:37:35Z wg $
 
 PORTNAME=	subsonic
-PORTVERSION=	4.7
-PORTREVISION=	1
+PORTVERSION=	4.8
 CATEGORIES=	www java
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION}-war
@@ -14,10 +13,11 @@ COMMENT=	Subsonic streaming media server
 BUILD_DEPENDS+=	${LOCALBASE}/apache-tomcat-6.0:${PORTSDIR}/www/tomcat6
 RUN_DEPENDS+=	${JAVAJARDIR}/servlet-api.jar:${PORTSDIR}/www/servlet-api
 
-OPTIONS_DEFINE=	TRANSCODING 
+OPTIONS_DEFINE=	TRANSCODING
 TRANSCODING_DESC=	Transcoding with FFmpeg and LAME
 OPTIONS_DEFAULT=	TRANSCODING
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTRANSCODING}
