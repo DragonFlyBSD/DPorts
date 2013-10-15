@@ -1,8 +1,8 @@
 # Created by: Aliaksandr Zahatski <zahatski@gmail.com>
-# $FreeBSD: lang/rakudo/Makefile 327250 2013-09-14 08:51:30Z sunpoet $
+# $FreeBSD: lang/rakudo/Makefile 328523 2013-09-27 20:57:56Z sunpoet $
 
 PORTNAME=	rakudo
-PORTVERSION=	2013.08
+PORTVERSION=	2013.09
 PORTEPOCH=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://rakudo.org/downloads/star/
@@ -60,6 +60,7 @@ PARROT_VERSION=	5.5.0
 NOT_FOR_ARCHS=	ia64 powerpc sparc64
 NOT_FOR_ARCHS_REASON=	does not compile
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
