@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-piston
-# Date created:				31 March 2009
-# Whom:					Tim Bishop <tdb@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-piston/Makefile,v 1.3 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Tim Bishop <tdb@FreeBSD.org>
+# $FreeBSD: devel/rubygem-piston/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	piston
 PORTVERSION=	1.4.0
@@ -18,4 +14,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/piston
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
