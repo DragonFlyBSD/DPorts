@@ -1,5 +1,5 @@
 # Created by: Conrad Sabatier <conrads@home.com>
-# $FreeBSD: misc/xless/Makefile 325295 2013-08-24 12:32:33Z danfe $
+# $FreeBSD: misc/xless/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xless
 PORTVERSION=	1.7
@@ -19,4 +19,5 @@ MAKE_ARGS=	MAKE="${MAKE_CMD}"
 MAN1=		xless.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
