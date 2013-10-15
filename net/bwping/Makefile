@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/bwping/Makefile,v 1.8 2012/11/17 05:59:57 svnexp Exp $
+# $FreeBSD: net/bwping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bwping
 PORTVERSION=	1.6
@@ -16,6 +16,7 @@ MAN8=		bwping.8
 
 PLIST_FILES=	sbin/bwping
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
