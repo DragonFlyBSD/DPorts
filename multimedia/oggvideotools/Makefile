@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: multimedia/oggvideotools/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/oggvideotools/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	oggvideotools
 PORTVERSION=	0.8a
@@ -27,4 +27,5 @@ MAN1=		mkThumbs.1 oggCat.1 oggCut.1 oggDump.1 oggJoin.1 \
 		oggLength.1 oggSilence.1 oggSlideshow.1 oggSplit.1 \
 		oggThumb.1 oggTranscode.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
