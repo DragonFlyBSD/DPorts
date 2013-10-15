@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: french/facturier/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: french/facturier/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	facturier
 PORTVERSION=	2.1.2
@@ -46,6 +46,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 TRASHFILES=	lib/Conf.pm~ cgi-bin/.articlemodif.cgi.swp lib/.Conf.pm.swp	\
 		html/UNGI/Editfacturemaj.pm.back html/temp/log_facture.gif.back
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "Vous pouvez définir trois variables :"
