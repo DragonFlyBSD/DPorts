@@ -1,9 +1,5 @@
-# New ports collection makefile for:   pligg
-# Date created:		10 August 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/pligg/Makefile,v 1.10 2012/11/17 06:02:58 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/pligg/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pligg
 PORTVERSION=	1.1.5
@@ -24,6 +20,7 @@ WRKSRC=		${WRKDIR}/pligg
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
