@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XCurs
-# Date created:				27 Dec 2004
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xcurs/Makefile,v 1.11 2012/11/17 06:03:21 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: x11/xcurs/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	xcurs
 PORTVERSION=	0.5.1
@@ -13,7 +9,7 @@ MASTER_SITES=	http://freebsd.nsu.ru/distfiles/ \
 		#http://varg.dyndns.org/psi/files/xcurs/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An editor for new XFree86/X.Org style full-color cursors properties
+COMMENT=	Editor for new X.Org style full-color cursors properties
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging
 
@@ -21,6 +17,7 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,#!/usr/bin/python,#!/usr/bin/env python,g' \
 		${WRKSRC}/parsexcursor.py ${WRKSRC}/xcurs.py
