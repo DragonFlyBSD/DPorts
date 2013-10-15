@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libsmacker/Makefile 314774 2013-03-20 22:52:04Z pawel $
+# $FreeBSD: multimedia/libsmacker/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libsmacker
 PORTVERSION=	1.0
@@ -13,6 +13,7 @@ USE_LDCONFIG=	yes
 
 PLIST_FILES=	lib/libsmacker.so
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} '/CFLAGS/s|+=|?=|; s|gcc|${CC}|g' \
 		${WRKSRC}/Makefile
