@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: mail/assp/Makefile 324758 2013-08-15 11:18:56Z wg $
+# $FreeBSD: mail/assp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	assp
 PORTVERSION=	1.9.9.13257
@@ -11,9 +11,10 @@ DISTNAME=	${PORTNAME:tu}_${PORTVERSION}_Install
 MAINTAINER=	rnejdl@ringofsaturn.com
 COMMENT=	Anti-Spam SMTP Proxy
 
+USES=		perl5
 USE_ZIP=	yes
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 MAN8=		assp.8 assplog.8
 
@@ -55,6 +56,7 @@ OPTIONS_DEFAULT=	EMVALID SPF SRS SEND FBACKW CLAMAV DNSBL MATCHRE SENDERB MIMEMO
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/ASSP_1.9.9_13227_install/${PORTNAME:tu}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 RUN_DEPENDS+=	p5-Net-DNS>=0.68:${PORTSDIR}/dns/p5-Net-DNS \
