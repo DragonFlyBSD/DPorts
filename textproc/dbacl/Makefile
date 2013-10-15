@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/dbacl/Makefile 321938 2013-06-28 03:54:13Z clsung $
+# $FreeBSD: textproc/dbacl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dbacl
 PORTVERSION=	1.14.1
@@ -20,6 +20,7 @@ DOCS=		AUTHORS ChangeLog README doc/dbacl.ps \
 		doc/email.html doc/tutorial.html doc/costs.ps
 EXAMPLES=	sample*.txt japanese.txt example*.risk toy.risk prop.pl
 
+NO_STAGE=	yes
 pre-install:
 	@cd ${WRKSRC}/src && \
 	${REINPLACE_CMD} -e 's,#!/bin/bash,#!${LOCALBASE}/bin/bash,' \
