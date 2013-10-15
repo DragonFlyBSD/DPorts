@@ -1,7 +1,8 @@
-# $FreeBSD: ports/sysutils/grok/Makefile,v 1.16 2012/12/12 18:51:48 svnexp Exp $
+# $FreeBSD: sysutils/grok/Makefile 330021 2013-10-10 17:34:34Z wxs $
 
 PORTNAME=	grok
 PORTVERSION=	1.20110708.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	GOOGLE_CODE
@@ -28,6 +29,7 @@ PROJECTHOST=	semicomplete
 PORTDOCS=	CHANGELIST INSTALL
 MAN1=		grok.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|PREFIX=|PREFIX?=|; s|-g root|-g wheel|' \
 		${WRKSRC}/Makefile
