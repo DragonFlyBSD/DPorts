@@ -1,5 +1,5 @@
 # Created by: Christoph Mallon <christoph.mallon@gmx.de>
-# $FreeBSD: lang/cparser/Makefile 316956 2013-04-30 17:48:36Z sperber $
+# $FreeBSD: lang/cparser/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	cparser
 PORTVERSION=	0.9.14
@@ -26,6 +26,7 @@ INSTALL_CMD=	${INSTALL_PROGRAM}
 
 OPTIONS_DEFINE=	DEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
