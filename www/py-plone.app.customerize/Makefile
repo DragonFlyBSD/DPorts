@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-plone.app.customerize
-# Date created:				03 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-plone.app.customerize/Makefile,v 1.3 2012/11/17 06:03:00 svnexp Exp $
-#
+# $FreeBSD: www/py-plone.app.customerize/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.app.customerize
 PORTVERSION=	1.2.2
@@ -28,8 +23,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.customerize>=0:${PORTSDIR}/devel/py-fiv
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-#USE_ZOPE=	yes
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
