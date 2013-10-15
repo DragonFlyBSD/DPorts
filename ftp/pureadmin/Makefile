@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/pureadmin/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: ftp/pureadmin/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	pureadmin
 PORTVERSION=	0.4
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 PORTDOCS=	index.txt introduction.txt main_window.txt \
 		preferences.txt user_manager.txt
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e '/install-data-local:/s|install-docs||' ${WRKSRC}/Makefile.in
 
