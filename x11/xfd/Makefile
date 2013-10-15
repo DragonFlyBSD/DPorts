@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xfd/Makefile 323159 2013-07-17 11:45:00Z zeising $
+# $FreeBSD: x11/xfd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfd
 PORTVERSION=	1.1.2
@@ -18,4 +18,5 @@ USE_XORG=	xft xt xaw
 
 MAN1=		xfd.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
