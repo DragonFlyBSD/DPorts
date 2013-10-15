@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: security/nessus-libraries/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: security/nessus-libraries/Makefile 327891 2013-09-22 19:15:28Z antoine $
 
 # Define NESSUS_CLIENT_ONLY if you only want to build this for the nessus
 # client.
@@ -23,6 +23,7 @@ WRKSRC=		${WRKDIR}/nessus-libraries
 
 USES=		bison
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 CONFIGURE_ARGS=	--enable-cipher
 .if defined(WITH_NESSUS_BPF_SHARE)
 CONFIGURE_ARGS+=	--enable-bpf-sharing
