@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: graphics/cadubi/Makefile 323680 2013-07-26 05:33:51Z az $
+# $FreeBSD: graphics/cadubi/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cadubi
 PORTVERSION=	1.3
@@ -14,7 +14,7 @@ LICENSE=	ART10
 
 RUN_DEPENDS=	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	*
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
