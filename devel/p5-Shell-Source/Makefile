@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: devel/p5-Shell-Source/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-Shell-Source/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Shell-Source
 PORTVERSION=	0.01
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Shell::Source.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
