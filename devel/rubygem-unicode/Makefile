@@ -1,5 +1,5 @@
-# Whom: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/rubygem-unicode/Makefile 319605 2013-06-01 21:38:36Z swills $
+# Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
+# $FreeBSD: devel/rubygem-unicode/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	unicode
 PORTVERSION=	0.4.4
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
