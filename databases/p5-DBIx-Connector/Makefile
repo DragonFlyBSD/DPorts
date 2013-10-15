@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Connector/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-DBIx-Connector/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Connector
 PORTVERSION=	0.53
@@ -25,4 +25,5 @@ MAN3=	DBIx::Connector.3 \
 	DBIx::Connector::Driver::SQLite.3 \
 	DBIx::Connector::Driver::mysql.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
