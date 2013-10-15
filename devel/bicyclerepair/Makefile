@@ -1,9 +1,5 @@
-# New ports collection makefile for: cuecat
-# Date created:		18 October 2000
-# Whom:			mwm@mired.org
-#
-# $FreeBSD: ports/devel/bicyclerepair/Makefile,v 1.4 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: mwm@mired.org
+# $FreeBSD: devel/bicyclerepair/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	bicyclerepair
 PORTVERSION=	0.9
@@ -16,6 +12,7 @@ COMMENT=	A python refactoring tool
 
 USE_PYTHON=	2.2+
 USE_PYDISTUTILS=yes
+NO_STAGE=	yes
 
 .if defined(EMACS_PORT_NAME)
 RUN_DEPENDS+=	${LOCALBASE}/bin/pymacs-services:${PORTSDIR}/devel/pymacs
