@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: games/xblackjack/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xblackjack/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xblackjack
 PORTVERSION=	2.2
@@ -19,4 +19,5 @@ USE_XORG=	x11 xext xp xt xmu
 MAN1=		xblackjack.1
 CFLAGS+=	-Wno-error=return-type
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
