@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: lang/smalltalk/Makefile 316855 2013-04-29 23:15:35Z johans $
+# $FreeBSD: lang/smalltalk/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	smalltalk
 PORTVERSION=	3.2.5
@@ -48,6 +48,7 @@ INFO=		gst gst-base gst-libs
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTCL}
