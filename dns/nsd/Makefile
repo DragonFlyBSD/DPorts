@@ -1,5 +1,5 @@
 # Created by: alexis
-# $FreeBSD: dns/nsd/Makefile 323534 2013-07-23 15:32:49Z pawel $
+# $FreeBSD: dns/nsd/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	nsd
 PORTVERSION=	3.2.16
@@ -62,6 +62,7 @@ MAXIPS_DESC=		Raise max-ips from 8 to ${NSDMAX_IPS}
 RRL_DESC=		Response Rate Limiting
 EUI_RRTYPES_DESC=	EUI48 and EUI64 RRtypes support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MROOT_SERVER}
