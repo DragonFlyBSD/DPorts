@@ -1,7 +1,7 @@
-# $FreeBSD: devel/liblognorm/Makefile 325177 2013-08-22 08:54:10Z danfe $
+# $FreeBSD: devel/liblognorm/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	liblognorm
-PORTVERSION=	0.3.5
+PORTVERSION=	0.3.7
 CATEGORIES=	devel net security
 MASTER_SITES=	http://www.liblognorm.com/download/files/download/
 
