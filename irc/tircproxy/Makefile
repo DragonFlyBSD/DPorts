@@ -1,9 +1,5 @@
-# New ports collection makefile for: tircproxy
-# Date created:		11 Aug 1999
-# Whom:			Eugeny Kuzakov <CoreDumped@CoreDumped.null.ru>
-#
-# $FreeBSD: ports/irc/tircproxy/Makefile,v 1.13 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Eugeny Kuzakov <CoreDumped@CoreDumped.null.ru>
+# $FreeBSD: irc/tircproxy/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	tircproxy
 PORTVERSION=	0.4.5
@@ -17,6 +13,7 @@ COMMENT=	IRC proxy server
 WRKSRC=		${WRKDIR}/tircproxy-0.4
 GNU_CONFIGURE=	YES
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tircproxy ${PREFIX}/sbin
 
