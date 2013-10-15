@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-httpfox
-# Date created:		30 Oct 2008
-# Whom:			Steven Kreuzer <skreuzer@exit2shell.com>
-#
-# $FreeBSD: ports/www/xpi-httpfox/Makefile,v 1.7 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@exit2shell.com>
+# $FreeBSD: www/xpi-httpfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	httpfox
 PORTVERSION=	0.8.10
@@ -16,5 +12,6 @@ COMMENT=	HTTP analyzer addon for Firefox
 XPI_NUM=	6647
 XPI_ID=	{4093c4de-454a-4329-8aff-c6b0b123c386}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
