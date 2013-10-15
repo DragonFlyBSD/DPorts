@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: graphics/claraocr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/claraocr/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	claraocr
 PORTVERSION=	20031214
@@ -22,6 +22,7 @@ SHEBANG_FILES=	clara.pl mkdoc.pl selthresh
 
 MAN1=	clara-adv.1 clara-dev.1 clara.1 selthresh.1
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/selthresh.1 ${MAN1PREFIX}/man/man1/
 
