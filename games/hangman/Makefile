@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/hangman/Makefile 324071 2013-07-31 22:48:51Z bapt $
+# $FreeBSD: games/hangman/Makefile 328739 2013-09-29 21:48:26Z amdmi3 $
 
 PORTNAME=	hangman
 PORTVERSION=	0.9.2
@@ -22,7 +22,8 @@ CONFIGURE_ENV=	SDL_CONFIG="${SDL_CONFIG}"
 CPPFLAGS+=	`${SDL_CONFIG} --cflags`
 LDFLAGS+=	`${SDL_CONFIG} --libs`
 
-MAN6=		hangman.6
+PLIST_FILES=	bin/${PORTNAME} man/man6/${PORTNAME}.6.gz
+PORTDATA=	*
 
 .include <bsd.port.pre.mk>
 
