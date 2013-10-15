@@ -1,5 +1,5 @@
 # Created by: mdh <mdh@solitox.net>
-# $FreeBSD: security/xyssl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/xyssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	xyssl
 PORTVERSION=	0.9
@@ -20,6 +20,7 @@ PORTDOCS=	ChangeLog
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
