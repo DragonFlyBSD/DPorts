@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-fonts/gfe/files/patch-src_glyph.h,v 1.2 2012/11/17 06:03:28 svnexp Exp $
+$FreeBSD: x11-fonts/gfe/files/patch-src_glyph.h 300897 2012-07-14 14:29:18Z beat $
 
 --- src/glyph.h.orig	Sat Nov 30 02:01:40 2002
 +++ src/glyph.h	Sat Nov 30 02:06:16 2002
