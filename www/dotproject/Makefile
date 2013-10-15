@@ -1,4 +1,4 @@
-# $FreeBSD: www/dotproject/Makefile 307587 2012-11-20 14:26:17Z garga $
+# $FreeBSD: www/dotproject/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dotproject
 PORTVERSION=	2.1.7
@@ -19,6 +19,7 @@ SUB_FILES=	pkg-message
 OPTIONS_DEFINE=	LDAP
 OPTIONS_DEFAULT=LDAP
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
