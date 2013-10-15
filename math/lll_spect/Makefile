@@ -1,7 +1,5 @@
-# New ports collection makefile for:	lll_spect
-# Date created:		6 Feb. 2010
-# Whom:			bf <bf@FreeBSD.org>
-# $FreeBSD: ports/math/lll_spect/Makefile,v 1.6 2012/11/17 05:59:23 svnexp Exp $
+# Created by: bf <bf@FreeBSD.org>
+# $FreeBSD: math/lll_spect/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	lll_spect
 DISTVERSION=	1.0
@@ -25,6 +23,7 @@ NO_WRKSUBDIR=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-extract:
 .for _file in lll_spect lll_search
 	@${CP} ${_DISTDIR}/${_file}.C ${WRKDIR}
