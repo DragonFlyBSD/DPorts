@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ssgless
-# Date created:				8 Nov 2011
-# Whom:					Pavel I Volkov
-#
-# $FreeBSD: ports/net-mgmt/ssgless/Makefile,v 1.2 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Pavel I Volkov
+# $FreeBSD: net-mgmt/ssgless/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ssgless
 PORTVERSION=	1.2
@@ -28,6 +24,7 @@ SUB_FILES=	${PORTNAME} lesspipe-ssg.awk
 
 SUB_LIST=	"AWK=${AWK}" "LESS=${LESS}"
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/lesspipe-ssg.awk ${PREFIX}/bin
