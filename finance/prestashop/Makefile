@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: finance/prestashop/Makefile 318417 2013-05-18 07:25:16Z wen $
+# $FreeBSD: finance/prestashop/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	prestashop
 PORTVERSION=	1.5.4.1
@@ -19,6 +19,7 @@ USE_PHP=	mysql gd
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-install:
