@@ -1,5 +1,5 @@
 # Created by: Gergely Nagy <8@free.bsd.hu>
-# $FreeBSD: ports/x11-wm/ratpoison/Makefile,v 1.26 2013/01/07 21:42:54 svnexp Exp $
+# $FreeBSD: x11-wm/ratpoison/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	ratpoison
 PORTVERSION=	1.4.5
@@ -20,6 +20,7 @@ GDM_SUPPORT_DESC=	Install session data files for GDM
 
 SUB_FILES=	ratpoison.desktop
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
