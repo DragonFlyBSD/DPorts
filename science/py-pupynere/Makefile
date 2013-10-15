@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-pupynere/Makefile 325976 2013-09-02 11:27:42Z koobs $
+# $FreeBSD: science/py-pupynere/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	pupynere
 PORTVERSION=	1.0.15
@@ -19,4 +19,5 @@ USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
