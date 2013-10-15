@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: www/cgicc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/cgicc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cgicc
 PORTVERSION=	3.2.10
@@ -24,6 +24,7 @@ CXXFLAGS+=	-Wno-unknown-pragmas
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/CXXFLAGS/s|-pedantic||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/^SUBDIRS/s|doc||g' ${WRKSRC}/Makefile.in
