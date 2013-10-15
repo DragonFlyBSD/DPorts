@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/ljit/Makefile 326504 2013-09-06 14:23:20Z bapt $
+# $FreeBSD: deskutils/ljit/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	ljit
 PORTVERSION=	0.2.5
@@ -25,6 +25,7 @@ USE_GNOME=	gtk20
 PLIST_FILES=	bin/ljit share/locale/ru/LC_MESSAGES/ljit.mo
 PORTDOCS=	BUGS NEWS README THANKS TODO
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e 's, -DMTRACE$$,, ; \
 		s,prefix)/$$(DATADIRNAME,datadir,' ${WRKSRC}/src/Makefile.in
