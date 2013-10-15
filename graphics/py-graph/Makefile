@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: graphics/py-graph/Makefile 324859 2013-08-17 17:19:06Z demon $
+# $FreeBSD: graphics/py-graph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	graph
 PORTVERSION=	1.8.2
@@ -19,6 +19,7 @@ USE_PYTHON=	yes
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${DO_NADA}
 
