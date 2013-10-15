@@ -1,9 +1,5 @@
-# New ports collection makefile for:	NagiosAgent
-# Date created:				02 Jun 2009
-# Whom:					Eugene Mychlo <myc@barev.net>
-#
-# $FreeBSD: ports/net-mgmt/nagiosagent/Makefile,v 1.7 2013/01/23 15:05:37 svnexp Exp $
-#
+# Created by: Eugene Mychlo <myc@barev.net>
+# $FreeBSD: net-mgmt/nagiosagent/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	NagiosAgent
 PORTVERSION=	1.2.0.1
@@ -26,6 +22,7 @@ DESKTOP_ENTRIES=	"NagiosAgent" "GUI client for Nagios" \
 			"${PREFIX}/share/pixmaps/NagiosAgent.png" \
 			"NagiosAgent" "Network;Qt;" false
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${QMAKE} -unix NagiosAgent.pro
 
