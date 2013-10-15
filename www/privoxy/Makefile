@@ -1,5 +1,5 @@
 # Created by: John von Essen
-# $FreeBSD: www/privoxy/Makefile 314158 2013-03-14 13:31:24Z miwi $
+# $FreeBSD: www/privoxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	privoxy
 PORTVERSION=	3.0.21
@@ -14,7 +14,7 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 WRKSRC=		${WRKDIR}/privoxy-${PORTVERSION}-stable
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	autoconf
 
 USE_RC_SUBR=	privoxy
@@ -48,6 +48,7 @@ TOGGLE_DESC=		Support for remote toggling
 
 OPTIONS_DEFAULT=	BROKEN_STRPTIME EDITOR DOCS FORCE TOGGLE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MACCEPT_FILTER}
@@ -79,7 +80,8 @@ CONFIGURE_ARGS+=	--disable-toggle
 .endif
 
 .if ${PORT_OPTIONS:MPRIVOXY_TOOLS}
-USE_PERL5_RUN=	yes
+USES+=		perl5
+USE_PERL5=	run
 RUN_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 PLIST_SUB+=	PRIVOXY_TOOLS=""
 .else
