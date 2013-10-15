@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-rttool/Makefile 320427 2013-06-10 01:21:22Z swills $
+# $FreeBSD: textproc/rubygem-rttool/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rttool
 PORTVERSION=	1.0.3.0
@@ -13,4 +13,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rdrt2 bin/rt2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
