@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-DSS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-DSS/Makefile 328610 2013-09-28 17:13:07Z sunpoet $
 
 PORTNAME=	Astro-DSS
 PORTVERSION=	1.6.1
@@ -16,7 +16,5 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Astro::DSS.3
 
 .include <bsd.port.mk>
