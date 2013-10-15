@@ -1,4 +1,4 @@
-# $FreeBSD: editors/nano-devel/Makefile 323131 2013-07-16 22:07:56Z eadler $
+# $FreeBSD: editors/nano-devel/Makefile 328632 2013-09-28 23:56:01Z eadler $
 
 PORTNAME=	nano
 PORTVERSION=	2.3.2
@@ -25,7 +25,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 PLIST_SUB+=	NLS=""
-MANLANG=	"" fr
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
@@ -38,8 +37,6 @@ MAKE_ARGS+=	install_htmlmanDATA=""
 .endif
 
 INFO=		nano
-MAN1=		nano.1 rnano.1
-MAN5=		nanorc.5
 
 PORTSCOUT=	limitw:1,odd
 
@@ -51,12 +48,12 @@ post-build:
 	cd ${WRKSRC}/doc/man; ${REINPLACE_CMD} \
 		-e 's:SYSCONFDIR:${PREFIX}/etc:g' \
 		-e 's:EXAMPLESDIR:${EXAMPLESDIR}:g' \
-		${MAN1} ${MAN5} ${WRKSRC}/doc/texinfo/${INFO:=.info}
+		nano.1 rnano.1 nanorc.5 ${WRKSRC}/doc/texinfo/${INFO:=.info}
 	${REINPLACE_CMD} -e 's/\\</[[:<:]]/g' -e 's/\\>/[[:>:]]/g' \
 		${WRKSRC}/doc/syntax/*.nanorc
 
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/nanorc.sample ${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/nanorc.sample ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.post.mk>
