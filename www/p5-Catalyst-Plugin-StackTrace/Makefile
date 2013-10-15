@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-StackTrace/Makefile 326607 2013-09-07 10:20:08Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Plugin-StackTrace/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-StackTrace
 PORTVERSION=	0.12
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::StackTrace.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
