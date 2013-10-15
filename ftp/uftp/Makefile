@@ -1,9 +1,5 @@
-# New ports collection makefile for:	uftp
-# Date created:				4 June 2008
-# Whom:					George V. Neville-Neil <gnn@FreeBSD.org>
-#
-# $FreeBSD: ftp/uftp/Makefile 325092 2013-08-21 06:56:47Z demon $
-#
+# Created by: George V. Neville-Neil <gnn@FreeBSD.org>
+# $FreeBSD: ftp/uftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	uftp
 PORTVERSION=	4.1.2
@@ -24,6 +20,7 @@ MAN1=		uftp.1 uftpd.1 uftpproxyd.1 uftp_keymgt.1
 MANCOMPRESSED=	no
 LICENSE=	GPLv3
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/uftp ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/uftpd ${PREFIX}/sbin/
