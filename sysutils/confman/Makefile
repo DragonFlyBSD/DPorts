@@ -1,9 +1,5 @@
-# New ports collection makefile for:   confman
-# Date created:        6 May 2009
-# Whom:                ccowart@timesinks.net
-#
-# $FreeBSD: ports/sysutils/confman/Makefile,v 1.13 2012/11/21 17:05:03 svnexp Exp $
-#
+# Created by: ccowart@timesinks.net
+# $FreeBSD: sysutils/confman/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	confman
 PORTVERSION=	1.9.4b
@@ -28,4 +24,5 @@ CONFIGURE_ARGS+=	--localstatedir=/var
 MAN5=		confman.conf.5
 MAN8=		confadmin.8 confaudit.8 confexport.8 confman.8 confsync.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
