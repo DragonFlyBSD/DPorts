@@ -1,10 +1,11 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-XML-Smart/Makefile 327248 2013-09-14 08:51:22Z sunpoet $
+# $FreeBSD: textproc/p5-XML-Smart/Makefile 329420 2013-10-05 06:06:13Z sunpoet $
 
 PORTNAME=	XML-Smart
-PORTVERSION=	1.78
+PORTVERSION=	1.79
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:TMHARISH
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -22,19 +23,14 @@ TEST_DEPENDS=	p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Smart.3 \
-		XML::Smart::DTD.3 \
-		XML::Smart::FAQ.3 \
-		XML::Smart::Shared.3 \
-		XML::Smart::Tutorial.3
 PORTDOCS=	Changes README
 
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
