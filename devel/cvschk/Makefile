@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: devel/cvschk/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/cvschk/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvschk
 PORTVERSION=	1.12
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 MAN1=		cvschk.1
 
+NO_STAGE=	yes
 do-configure:
 	${SED} -e "s,^#!/usr/bin/perl -w,#! ${PERL} -w," \
 	<${DISTDIR}/${DISTNAME} >${WRKSRC}/${DISTNAME}
