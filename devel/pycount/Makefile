@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pycount
-# Date created:		Feb. 10, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/devel/pycount/Makefile,v 1.5 2012/11/17 05:56:54 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: devel/pycount/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pycount
 PORTVERSION=	0.0.6
@@ -24,6 +20,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${WRKDIR}
