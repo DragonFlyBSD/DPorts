@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: cad/varkon/Makefile 310741 2013-01-21 03:35:02Z araujo $
+# $FreeBSD: cad/varkon/Makefile 329636 2013-10-06 22:58:15Z marino $
 
 PORTNAME=	varkon
 PORTVERSION=	1.19E
@@ -19,13 +19,14 @@ BUILD_WRKSRC=	${WRKSRC}/sources
 
 USE_XORG=	xpm
 USE_GL=		glu
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ENV=	PLATFORM=FreeBSD
 ALL_TARGET=	# none
 MAKE_JOBS_UNSAFE=	yes
 
 VARKON_PREFIX=	${PREFIX}/lib/${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name "*.o" -delete
 
