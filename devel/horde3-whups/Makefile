@@ -1,9 +1,5 @@
-# Ports collection makefile for:  horde-whups
-# Date created:			  Feb 28, 2008
-# Whom:				  Beech Rintoul <horde@FreeBSD.org
-#
-# $FreeBSD: devel/horde3-whups/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Beech Rintoul <horde@FreeBSD.org
+# $FreeBSD: devel/horde3-whups/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	whups
 PORTVERSION=	1.0.1
@@ -18,5 +14,6 @@ USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL TODO lighttpd-whups.conf
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
 .include <bsd.port.mk>
