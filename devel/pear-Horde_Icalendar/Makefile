@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Horde_Icalendar/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: devel/pear-Horde_Icalendar/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Icalendar
 PORTVERSION=	2.0.7
@@ -15,6 +15,7 @@ USE_HORDE_RUN=	Horde_Date \
 		Horde_Translation \
 		Horde_Util
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
