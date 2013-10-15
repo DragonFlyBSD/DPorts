@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/enscribe/Makefile 325653 2013-08-30 01:59:58Z bapt $
+# $FreeBSD: audio/enscribe/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	enscribe
 PORTVERSION=	0.1.0
@@ -18,6 +18,7 @@ LIB_DEPENDS=	sndfile:${PORTSDIR}/audio/libsndfile \
 		freetype:${PORTSDIR}/print/freetype2
 
 USES=		pkgconfig
+NO_STAGE=	yes
 
 LICENSE=	GPLv2
 
