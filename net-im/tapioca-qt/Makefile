@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: net-im/tapioca-qt/Makefile 326730 2013-09-08 14:06:52Z antoine $
+# $FreeBSD: net-im/tapioca-qt/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	tapioca-qt
 PORTVERSION=	0.14.1
@@ -22,6 +22,7 @@ CMAKE_SOURCE_PATH=	..
 USE_QT4=	corelib qmake_build uic_build moc_build rcc_build
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
