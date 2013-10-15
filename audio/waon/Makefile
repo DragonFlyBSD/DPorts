@@ -1,5 +1,5 @@
 # Created by: Kengo Ichiki <kichiki@users.sourceforge.net>
-# $FreeBSD: audio/waon/Makefile 325725 2013-08-30 22:31:38Z bapt $
+# $FreeBSD: audio/waon/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	waon
 PORTVERSION=	0.9
@@ -16,6 +16,7 @@ LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
 		samplerate.1:${PORTSDIR}/audio/libsamplerate
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk20
 
 MAN1=		waon.1 pv.1 gwaon.1
