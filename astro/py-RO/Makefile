@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/astro/py-RO/Makefile,v 1.9 2013/02/17 00:57:57 svnexp Exp $
+# $FreeBSD: astro/py-RO/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	RO
 PORTVERSION=	3.2.0
@@ -20,6 +20,7 @@ MATPLOTLIB_DESC=	Add support for Matplotlib
 PYFITS_DESC=		Add Support for PyFITS
 PYGAME_DESC=		Add Support for PyGame
 
+NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
