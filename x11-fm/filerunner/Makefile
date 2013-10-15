@@ -1,5 +1,5 @@
 # Created by: lukin
-# $FreeBSD: ports/x11-fm/filerunner/Makefile,v 1.43 2012/11/17 06:03:26 svnexp Exp $
+# $FreeBSD: x11-fm/filerunner/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	filerunner
 PORTVERSION=	12.05.23.16
@@ -19,6 +19,7 @@ USE_TK_WRAPPER=	yes
 
 PORTDOCS=	FAQ HISTORY README *.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
