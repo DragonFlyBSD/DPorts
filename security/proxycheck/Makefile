@@ -1,9 +1,5 @@
-# New ports collection makefile for:	proxycheck
-# Date created:				Fri Jun 13 02:26:04 EDT 2003
-# Whom:					Paul Chvostek <paul@it.ca>
-#
-# $FreeBSD: ports/security/proxycheck/Makefile,v 1.9 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Paul Chvostek <paul@it.ca>
+# $FreeBSD: security/proxycheck/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	proxycheck
 PORTVERSION=	0.49a
@@ -20,6 +16,7 @@ MAN1=		proxycheck.1
 
 HAS_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 		@${INSTALL_PROGRAM} ${WRKSRC}/proxycheck ${PREFIX}/sbin/
 		@${INSTALL_MAN} ${WRKSRC}/proxycheck.1 ${PREFIX}/man/man1/
