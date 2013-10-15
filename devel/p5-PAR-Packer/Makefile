@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/p5-PAR-Packer/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-PAR-Packer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PAR-Packer
 PORTVERSION=	1.01.4
@@ -41,4 +41,5 @@ MAN3=		pp.3 \
 		PAR::StrippedPARL::Base.3 \
 		Static.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
