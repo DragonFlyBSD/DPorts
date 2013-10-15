@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/quake2-zaero/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/quake2-zaero/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	zaero
 PORTVERSION=	1.1
@@ -23,6 +23,7 @@ DM_DESC=	Deathmatch maps
 
 DOCSDIR=	${PREFIX}/share/doc/${LATEST_LINK}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../quake2-data/Makefile.include"
 
 .include <bsd.port.options.mk>
