@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	sxm
-# Date created:		Jan 8, 2001
-# Whom:			Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/sxm/Makefile,v 1.10 2012/11/17 05:58:57 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: lang/sxm/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	sxm
 PORTVERSION=	1.1
@@ -20,6 +15,7 @@ ALL_TARGET=	all image Formlist
 
 MAN1=		sxm.1 sxi.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|/usr/local|${PREFIX}|g ; \
 		s,^CC,#CC,g" ${WRKSRC}/Makefile
