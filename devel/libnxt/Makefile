@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <bacon11@tds.net>
-# $FreeBSD: devel/libnxt/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: devel/libnxt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libnxt
 PORTVERSION=	0.3
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	scons:${PORTSDIR}/devel/scons \
 SUB_FILES=	pkg-message
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}; scons)
 
