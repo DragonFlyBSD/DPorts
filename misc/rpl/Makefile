@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  rpl
-# Date created:                          Thu Jul 25, 2002
-# Whom:                                  Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/misc/rpl/Makefile,v 1.6 2012/11/26 11:08:20 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: misc/rpl/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	rpl
 PORTVERSION=	1.4.1
@@ -19,6 +14,7 @@ GNU_CONFIGURE=	yes
 MAN1=		rpl.1
 PLIST_FILES=	bin/rpl
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/rpl ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/rpl.1 ${MANPREFIX}/man/man1
