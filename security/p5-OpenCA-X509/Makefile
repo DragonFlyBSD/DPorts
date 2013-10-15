@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: security/p5-OpenCA-X509/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-OpenCA-X509/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	OpenCA-X509
 PORTVERSION=	0.9.10
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 PORTSCOUT=	skipv:0.9.47
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
