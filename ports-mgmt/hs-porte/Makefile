@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: ports-mgmt/hs-porte/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: ports-mgmt/hs-porte/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	porte
 PORTVERSION=	0.0.4
@@ -15,5 +15,6 @@ USE_CABAL=	extensible-exceptions stringsearch
 
 EXECUTABLE=	porte
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
