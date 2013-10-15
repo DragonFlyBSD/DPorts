@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-fast-stemmer/Makefile 319639 2013-06-02 03:06:43Z swills $
+# $FreeBSD: devel/rubygem-fast-stemmer/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	fast-stemmer
 PORTVERSION=	1.0.2
@@ -13,4 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
