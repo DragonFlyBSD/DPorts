@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: math/sdpara/Makefile 322616 2013-07-10 06:09:21Z bapt $
+# $FreeBSD: math/sdpara/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	sdpara
 PORTVERSION=	7.2.1
@@ -55,6 +55,7 @@ SCALAPACK=	-L/usr/local/lib -lscalapack -lblacs -lblacsc
 FORTRAN_LIBS=	-lgfortran
 GCCLIBDIR=	-L`${CAT} ${WRKSRC}/LIBDIR` -L`${CAT} ${WRKSRC}/LIBDIR`/../../..
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%MPICC%%|${LOCALBASE}/bin/mpicc|g ; \
 				s|%%MPICXX%%|${LOCALBASE}/bin/mpicxx|g ; \
