@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	vodcatcher
-# Date created:			Sep 5, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/multimedia/vodcatcher/Makefile,v 1.3 2012/11/17 05:59:55 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/vodcatcher/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	vodcatcher
 PORTVERSION=	1.3.3
@@ -21,6 +16,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/vodcatcher
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
