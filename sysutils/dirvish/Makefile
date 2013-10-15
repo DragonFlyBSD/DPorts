@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dirvish
-# Date created:				28 April 2005
-# Whom:					Loren M. Lang
-#
-# $FreeBSD: sysutils/dirvish/Makefile 326574 2013-09-07 07:11:48Z az $
-#
+# Created by: Loren M. Lang
+# $FreeBSD: sysutils/dirvish/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dirvish
 PORTVERSION=	1.2.1
@@ -32,6 +28,7 @@ MAN8=		dirvish.8 dirvish-expire.8 dirvish-locate.8  dirvish-runall.8
 
 EXECUTABLES=	dirvish   dirvish-expire   dirvish-locate   dirvish-runall
 
+NO_STAGE=	yes
 do-patch:
 	@${SED} -e 's:%%CONFDIR%%:${PREFIX}/etc/dirvish:' -e 's:%%PERL%%:${PERL5}:' \
 		${FILESDIR}/header.pl > ${WRKDIR}/header.pl
