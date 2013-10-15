@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: japanese/canna-lib/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: japanese/canna-lib/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	canna
 PORTVERSION=	3.7p3
@@ -27,6 +27,7 @@ INSTALL_TARGET=	instsgs
 
 METAFILE=	${DATADIR_REL}/canna-lib-dic.meta
 
+NO_STAGE=	yes
 post-install:
 	${MTREE_CMD} -cdink uname,gname,mode,nochange \
 		-p ${DATADIR}/dic > ${PREFIX}/${METAFILE}
