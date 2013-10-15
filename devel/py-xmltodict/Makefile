@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-xmltodict/Makefile 325672 2013-08-30 11:48:18Z wg $
+# $FreeBSD: devel/py-xmltodict/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	xmltodict
 PORTVERSION=	0.7.0
@@ -15,6 +15,7 @@ LICENSE=	MIT
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
