@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-ghc-events/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-ghc-events/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	ghc-events
 PORTVERSION=	0.4.2.0
@@ -14,5 +14,6 @@ USE_CABAL=	mtl>=1.1
 
 EXECUTABLE=	ghc-events
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
