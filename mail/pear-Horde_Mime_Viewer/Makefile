@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Mime_Viewer
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: mail/pear-Horde_Mime_Viewer/Makefile 319377 2013-05-29 15:02:18Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: mail/pear-Horde_Mime_Viewer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Horde_Mime_Viewer
 PORTVERSION=	2.0.5
@@ -27,6 +24,7 @@ USE_HORDE_RUN=	Horde_Role \
 
 USE_PHP=	xml
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
