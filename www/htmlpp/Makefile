@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: www/htmlpp/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/htmlpp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	htmlpp
 PORTVERSION=	4.2a
@@ -15,6 +15,7 @@ USES=		perl5
 
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-build:
 	${SED} -e '1,1s:/usr/bin/perl:${PERL5}:' \
 		${WRKDIR}/htmlpp > ${WRKDIR}/htmlpp.temp
