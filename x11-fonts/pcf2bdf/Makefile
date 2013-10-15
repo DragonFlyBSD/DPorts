@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: ports/x11-fonts/pcf2bdf/Makefile,v 1.6 2012/11/17 06:03:29 svnexp Exp $
+# $FreeBSD: x11-fonts/pcf2bdf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	pcf2bdf
 PORTVERSION=	1.04
@@ -17,6 +17,7 @@ NO_WRKSUBDIR=	yes
 MAN1=		pcf2bdf.1
 PLIST_FILES=	bin/pcf2bdf
 
+NO_STAGE=	yes
 do-build:
 	${CXX} ${CXXFLAGS} -o ${WRKSRC}/pcf2bdf ${WRKSRC}/pcf2bdf.cc
 
