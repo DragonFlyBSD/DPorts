@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/htable/Makefile 321005 2013-06-15 16:11:19Z culot $
+# $FreeBSD: devel/htable/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	htable
 PORTVERSION=	1.2
@@ -18,6 +18,7 @@ PLIST_FILES=	include/htable.h
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/htable.h ${PREFIX}/include
 	${INSTALL_MAN} ${WRKSRC}/src/htable.3 ${MAN3PREFIX}/man/man3
