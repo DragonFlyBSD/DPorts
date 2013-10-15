@@ -1,4 +1,4 @@
-# $FreeBSD: mail/vbsfilter/Makefile 318103 2013-05-13 15:23:54Z dinoex $
+# $FreeBSD: mail/vbsfilter/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	vbsfilter
 PORTVERSION=	1.15
@@ -12,6 +12,8 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	A vbs-attachment filter for Sendmail Milter
 
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 USE_RC_SUBR=	vbsfilter
 PLIST_FILES=	libexec/vbsfilter
