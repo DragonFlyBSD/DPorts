@@ -1,5 +1,5 @@
-# Created By: Eric P. Scott <eps+pbug0703@ana.com>
-# $FreeBSD: graphics/lcdtest/Makefile 314006 2013-03-12 22:54:45Z beech $
+# Created by: Eric P. Scott <eps+pbug0703@ana.com>
+# $FreeBSD: graphics/lcdtest/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lcdtest
 PORTVERSION=	1.18
@@ -25,6 +25,7 @@ MAN1=	lcdtest.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
