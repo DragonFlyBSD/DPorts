@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-WebService-Simple/Makefile 325318 2013-08-24 22:28:07Z sunpoet $
+# $FreeBSD: www/p5-WebService-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-Simple
 PORTVERSION=	0.21
@@ -35,4 +35,5 @@ MAN3=		WebService::Simple.3 \
 		WebService::Simple::Parser::XML::Simple.3 \
 		WebService::Simple::Response.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
