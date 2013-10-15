@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: ports/graphics/lcms-python/Makefile,v 1.7 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: graphics/lcms-python/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lcms
 PORTVERSION=	1.19
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/_lcms.so \
 		%%PYTHON_SITELIBDIR%%/lcms.py
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${INSTALL_WRKSRC}/.libs/_lcms.so \
 		${PYTHON_SITELIBDIR}/_lcms.so
