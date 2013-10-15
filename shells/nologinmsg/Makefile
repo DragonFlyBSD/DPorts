@@ -1,10 +1,5 @@
-# Ports collection makefile for:   nologinmsg
-# Whom:                            Richard Rose <freebsd-security@rikrose.net>
-# Date created:                    20020710
-#
-# $FreeBSD: ports/shells/nologinmsg/Makefile,v 1.5 2012/11/17 06:01:23 svnexp Exp $
-#
-# The port is self contained in the src directory
+# Created by: Richard Rose <freebsd-security@rikrose.net>
+# $FreeBSD: shells/nologinmsg/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	nologinmsg
 PORTVERSION=	1.0
@@ -18,6 +13,7 @@ COMMENT=	More functional native binary replacement for /sbin/nologin
 MAN8=		nologinmsg.8
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 .for i in Makefile nologinmsg.c nologinmsg.8 pathnames.h
