@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@FreeBSD.org>
-# $FreeBSD: x11/thingylaunch/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/thingylaunch/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	thingylaunch
 PORTVERSION=	1.1.5
@@ -21,4 +21,5 @@ GH_COMMIT=	8acab93
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
