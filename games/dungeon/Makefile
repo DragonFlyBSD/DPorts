@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO
-# $FreeBSD: ports/games/dungeon/Makefile,v 1.18 2013/01/13 01:46:06 svnexp Exp $
+# $FreeBSD: games/dungeon/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	dungeon
 PORTVERSION=	3.2
@@ -34,6 +34,7 @@ PORTDOCS=	HISTORY MANIFEST README
 MAKE_FLAGS+=	DATADIR=${DATADIR}
 MAKE_ENV+=	GDT_FLAG=-DHAVE_GDT
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-patch:
