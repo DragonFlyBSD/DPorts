@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/telak/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: graphics/telak/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	telak
 PORTVERSION=	0.6
@@ -24,6 +24,7 @@ ALL_TARGET=	${PORTNAME}
 PLIST_FILES=	bin/telak
 MAN1=		telak.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
