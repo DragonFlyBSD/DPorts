@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/sysutils/rubygem-backup/Makefile,v 1.9 2012/12/04 13:03:23 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-backup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	backup
 PORTVERSION=	3.0.27
@@ -18,4 +18,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/backup
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
