@@ -1,7 +1,5 @@
-# New ports collection makefile for:   ampache
-# Date created:                28 December 2007
-# Whom:                        Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: audio/ampache/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: audio/ampache/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ampache
 PORTVERSION=	3.5.4
@@ -16,6 +14,7 @@ USE_PHP=	mysql pcre session iconv hash gettext mbstring
 WANT_PHP_WEB=	yes
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 USES=		gettext
 
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
