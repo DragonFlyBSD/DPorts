@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: databases/p5-Class-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Class-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI
 PORTVERSION=	3.0.17
@@ -32,6 +32,7 @@ MAN3=		Class::DBI.3 Class::DBI::Attribute.3 \
 		Class::DBI::SQL::Transformer.3 Class::DBI::Search::Basic.3 \
 		Class::DBI::Test::SQLite.3
 
+NO_STAGE=	yes
 post-configure:
 # dirty hack to deceive irritable pod2man
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
