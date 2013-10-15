@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-twofish
-# Date created:			Feb 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/py-twofish/Makefile,v 1.11 2012/11/17 06:01:17 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/py-twofish/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	twofish
 PORTVERSION=	0.7
@@ -21,6 +16,7 @@ USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-fPIC
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/_twofish.so ${PYTHON_SITELIBDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/*.py ${PYTHON_SITELIBDIR}
