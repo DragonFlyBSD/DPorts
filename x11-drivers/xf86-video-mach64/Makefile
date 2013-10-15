@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-mach64/Makefile 321798 2013-06-26 15:35:12Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-mach64/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-mach64
 PORTVERSION=	6.9.4
@@ -12,4 +12,5 @@ USE_GL=		gl
 XORG_CAT=	driver
 USE_XORG=	glproto xf86driproto xf86miscproto
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
