@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: graphics/hs-HGL/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: graphics/hs-HGL/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	HGL
 PORTVERSION=	3.2.0.2
@@ -13,5 +13,6 @@ LICENSE=	BSD
 
 USE_CABAL=	X11
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
