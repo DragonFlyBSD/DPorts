@@ -1,5 +1,5 @@
 # Created by: Talal Al-Dik <tad@vif.com>
-# $FreeBSD: mail/archmbox/Makefile 324312 2013-08-06 12:32:40Z danfe $
+# $FreeBSD: mail/archmbox/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	archmbox
 PORTVERSION=	4.10.0
@@ -22,6 +22,7 @@ PORTDOCS=	ChangeLog NEWS README THANKS TODO
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
