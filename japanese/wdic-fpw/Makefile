@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wdic - JIS X 4081 format version
-# Date created:        	2000.07.12
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/wdic-fpw/Makefile,v 1.15 2012/11/17 05:58:40 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: japanese/wdic-fpw/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	wdic-fpw
 PORTVERSION=	1.4
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/wdic
 EXTRACT_BEFORE_ARGS=	-qL
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/dict/wdic-fpw/wdic/data
 	${MKDIR} ${PREFIX}/share/dict/wdic-fpw/wdic/gaiji
