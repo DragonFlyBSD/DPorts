@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Untaint-date/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CGI-Untaint-date/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Untaint-date
 PORTVERSION=	1.00
@@ -20,4 +20,5 @@ MAN3=	CGI::Untaint::date.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
