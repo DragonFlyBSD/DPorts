@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: net-p2p/eiskaltdcpp-cli/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-p2p/eiskaltdcpp-cli/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	eiskaltdcpp-cli
 PORTVERSION=	2.2.4
@@ -25,6 +25,7 @@ USE_PERL5=	run
 MAN1=	${PORTNAME}.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} "${WRKSRC}/${PORTNAME}/cli.pl" "${PREFIX}/bin/eiskaltdcpp-cli"
 	@${INSTALL_MAN} "${WRKSRC}/${PORTNAME}/eiskaltdcpp-cli.1" "${PREFIX}/man/man1/"
