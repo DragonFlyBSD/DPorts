@@ -1,4 +1,4 @@
-# $FreeBSD: dns/p5-pgeodns/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-pgeodns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	pgeodns
 PORTVERSION=	1.41
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 NO_MANCOMPRESS=	no
 MAN1=	pgeodns.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
