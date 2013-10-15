@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xdemineur/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xdemineur/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xdemineur
 PORTVERSION=	2.1.1
@@ -17,4 +17,5 @@ USE_XORG=	xpm
 MAN1=		xdemineur.1
 PLIST_FILES=	bin/xdemineur
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
