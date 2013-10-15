@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: sysutils/pdumpfs/Makefile 319282 2013-05-27 19:46:50Z bsam $
+# $FreeBSD: sysutils/pdumpfs/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pdumpfs
 PORTVERSION=	1.3
@@ -24,6 +24,7 @@ MAN8=		pdumpfs.8
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
