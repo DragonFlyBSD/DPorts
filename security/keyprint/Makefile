@@ -1,9 +1,5 @@
-# New ports collection makefile for:	keyprint
-# Date created:		Sat May 29 02:05:00 PDT 1999
-# Whom:			mharo@FreeBSD.org
-#
-# $FreeBSD: ports/security/keyprint/Makefile,v 1.13 2012/11/17 06:01:06 svnexp Exp $
-#
+# Created by: mharo@FreeBSD.org
+# $FreeBSD: security/keyprint/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	keyprint
 PORTVERSION=	1.0
@@ -18,6 +14,7 @@ NO_BUILD=	yes
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,__PREFIX__,${PREFIX},' ${WRKSRC}/keyprint
 
