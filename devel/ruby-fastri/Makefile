@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-fastri
-# Date created:		16 June 2009
-# Whom:			stas
-#
-# $FreeBSD: devel/ruby-fastri/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: stas
+# $FreeBSD: devel/ruby-fastri/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	fastri
 PORTVERSION=	0.3.1
@@ -21,6 +17,7 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}"
 
 DOCS=		CHANGES README.en
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${RUBY_MODDOCDIR}
