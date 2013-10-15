@@ -1,9 +1,5 @@
-# New ports collection makefile for:	traceroute
-# Date created:		20 February 1997
-# Whom:			chris@vader.org
-#
-# $FreeBSD: ports/net/traceroute/Makefile,v 1.14 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: chris@vader.org
+# $FreeBSD: net/traceroute/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	traceroute
 PORTVERSION=	${RELEASEDATE}	
@@ -20,6 +16,7 @@ NO_WRKSUBDIR=	yes
 MAN8=		traceroute.8
 PLIST_FILES=	sbin/traceroute
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL} -c -m 4755 -o root -g bin ${WRKSRC}/traceroute ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/traceroute.8 ${PREFIX}/man/man8
