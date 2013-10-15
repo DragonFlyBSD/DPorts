@@ -1,5 +1,5 @@
 # Created by: HOTARU-YA <hotaru@tail.net>
-# $FreeBSD: games/oneko-sakura/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/oneko-sakura/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	oneko
 PORTVERSION=	1.2
@@ -21,6 +21,7 @@ NO_CDROM=	Including derivatives from CARDCAPTOR SAKURA. See http://www.clamp-net
 
 NO_LATEST_LINK=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e 's,/\*\*/# Cannot compile in using Gcc,/* Cannot compile using Gcc */,' \
 		${WRKSRC}/Imakefile
