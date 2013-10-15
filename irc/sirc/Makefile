@@ -1,4 +1,4 @@
-# $FreeBSD: irc/sirc/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: irc/sirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	sirc
 PORTVERSION=	2.211
@@ -29,6 +29,7 @@ MAN1=		ssfe.1 sirc.1
 
 PORTDOCS=	ChangeLog PROGRAMMING README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
