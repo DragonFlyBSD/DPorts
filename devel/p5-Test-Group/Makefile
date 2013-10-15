@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Group/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Test-Group/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Group
 PORTVERSION=	0.19
@@ -22,4 +22,5 @@ MAN3=		Test::Group.3 \
 		Test::Group::Plan.3 \
 		Test::Group::Tester.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
