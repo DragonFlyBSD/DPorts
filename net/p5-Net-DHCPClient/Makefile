@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-Net-DHCPClient
-# Date created:                21 October 2005
-# Whom:                        Sergey Matveychuk <sem@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-DHCPClient/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: Sergey Matveychuk <sem@FreeBSD.org>
+# $FreeBSD: net/p5-Net-DHCPClient/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-DHCPClient
 PORTVERSION=	1.0
@@ -22,4 +18,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAN3=		Net::DHCPClient.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
