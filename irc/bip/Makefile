@@ -1,9 +1,5 @@
-# New ports collection makefile for:   bip
-# Date created:        23 October 2007
-# Whom:                Chess Griffin <chess@chessgriffin.com>
-#
-# $FreeBSD: ports/irc/bip/Makefile,v 1.21 2012/11/17 05:58:27 svnexp Exp $
-#
+# Created by: Chess Griffin <chess@chessgriffin.com>
+# $FreeBSD: irc/bip/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	bip
 PORTVERSION=	0.8.8
@@ -33,6 +29,7 @@ PORTDOCS=	AUTHORS BUGS ChangeLog NEWS README TODO
 
 PORTEXAMPLES=	bip.conf bip.vim
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
