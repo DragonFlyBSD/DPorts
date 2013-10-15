@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Parsepp/Makefile 326624 2013-09-07 10:53:30Z sunpoet $
+# $FreeBSD: textproc/p5-XML-Parsepp/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	XML-Parsepp
 PORTVERSION=	0.06
@@ -15,8 +15,6 @@ LICENSE_COMB=	dual
 
 USE_PERL5=	5.14+ configure
 USES=		perl5
-
-MAN3=		XML::Parsepp.3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|lib/Acme/XMLpp.pm|lib/XML/Parsepp.pm|' ${WRKSRC}/Makefile.PL
