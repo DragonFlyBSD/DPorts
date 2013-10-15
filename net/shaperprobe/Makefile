@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shaperprobe
-# Date created:		2011-06-11
-# Whom:			Josh Carroll <josh.carroll@gmail.com>
-#
-# $FreeBSD: ports/net/shaperprobe/Makefile,v 1.4 2012/11/17 06:00:20 svnexp Exp $
-#
+# Created by: Josh Carroll <josh.carroll@gmail.com>
+# $FreeBSD: net/shaperprobe/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	shaperprobe
 PORTVERSION=	0.2
@@ -20,6 +16,7 @@ LICENSE=	GPLv2
 MAKEFILE=	Makefile.osx
 PLIST_FILES=	bin/prober
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/prober ${PREFIX}/bin/
 
