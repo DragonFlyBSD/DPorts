@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan@mail2000.com.tw>
-# $FreeBSD: security/gwee/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/gwee/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gwee
 PORTVERSION=	1.36
@@ -20,6 +20,7 @@ CFLAGS+=	-DWITH_SSL
 MAN1=		gwee.1
 PLIST_FILES=	bin/gwee
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} ${WRKSRC}/${PORTNAME}.c \
 		-o ${WRKSRC}/${PORTNAME}
