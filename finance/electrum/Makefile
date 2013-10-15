@@ -1,5 +1,5 @@
 # Created by: Neil Booth
-# $FreeBSD: finance/electrum/Makefile 321048 2013-06-16 13:50:54Z rm $
+# $FreeBSD: finance/electrum/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	electrum
 PORTVERSION=	1.7.3
@@ -20,6 +20,7 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	Electrum
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' \
 		${WRKSRC}/setup.py ${WRKSRC}/lib/util.py
