@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: textproc/p5-XML-Stream/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Stream/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Stream
 DISTVERSION=	1.23_06
@@ -25,4 +25,5 @@ MAN3=		XML::Stream.3 \
 		XML::Stream::Parser::DTD.3 \
 		XML::Stream::Tree.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
