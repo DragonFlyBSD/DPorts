@@ -1,5 +1,5 @@
 # Created by: coryking
-# $FreeBSD: graphics/p5-Image-Math-Constrain/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Image-Math-Constrain/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Math-Constrain
 PORTVERSION=	1.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Image::Math::Constrain.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
