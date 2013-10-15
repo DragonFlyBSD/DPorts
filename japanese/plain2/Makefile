@@ -1,9 +1,5 @@
-# New ports collection makefile for:	plain2
-# Date created:		20 April 1997
-# Whom:			nkazushi@highway.or.jp
-#
-# $FreeBSD: ports/japanese/plain2/Makefile,v 1.22 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: nkazushi@highway.or.jp
+# $FreeBSD: japanese/plain2/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	plain2
 PORTVERSION=	2.54.1
@@ -29,6 +25,7 @@ PORTDATA=	OHP.p2 OHP_t.p2 header.p2 header_t.p2 jbook.p2 supsnum.p2
 CFLAGS+=	-DBSD -DKANJI -DPICTURE -DHTML
 ALL_TARGET=	${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/usr/lib/plain2|${DATADIR}|g' ${BUILD_WRKSRC}/plain2.h
