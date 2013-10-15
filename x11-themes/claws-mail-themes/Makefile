@@ -1,9 +1,5 @@
-# New ports collection makefile for:	claws-mail-themes
-# Date created:		2008-10-04
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/claws-mail-themes/Makefile,v 1.11 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: x11-themes/claws-mail-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	claws-mail-themes
 PORTVERSION=	20120129
@@ -17,6 +13,7 @@ NO_BUILD=	yes
 
 THEMESDIR?=	${PREFIX}/share/claws-mail/themes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
