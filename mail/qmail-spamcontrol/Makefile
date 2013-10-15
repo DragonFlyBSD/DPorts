@@ -1,4 +1,4 @@
-# $FreeBSD: mail/qmail-spamcontrol/Makefile 325421 2013-08-26 23:30:41Z bdrewery $
+# $FreeBSD: mail/qmail-spamcontrol/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION=	${QMAIL_VERSION}.${SPAMCONTROL_VERSION}
@@ -14,6 +14,8 @@ EXTRACT_ONLY=	${QMAIL_DIST}
 COMMENT=	Qmail MTA with SpamControl patches
 
 CONFLICTS=	qmail-[0-9]* qmail-ldap-[0-9]* qmail-mysql-[0-9]* qmail-tls-[0-9]*
+
+NO_STAGE=	yes
 
 EXTRA_PATCHES+=	${MASTERDIR}/files/patch-install.c \
 		${MASTERDIR}/files/patch-Makefile \
