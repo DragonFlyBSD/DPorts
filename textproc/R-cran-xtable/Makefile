@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/R-cran-xtable/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: textproc/R-cran-xtable/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xtable
 DISTVERSION=	1.7-1
@@ -16,4 +16,5 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
