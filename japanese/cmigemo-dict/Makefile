@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: japanese/cmigemo-dict/Makefile 326889 2013-09-10 10:19:56Z az $
+# $FreeBSD: japanese/cmigemo-dict/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
@@ -27,6 +27,7 @@ INSTALL_TARGET=	gcc-install-dict
 SKKDIC_FILE=	SKK-JISYO.L-20110813.bz2
 LICENSE_DISTFILES=	${SKKDIC_FILE}
 
+NO_STAGE=	yes
 post-extract:
 	${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${SKKDIC_FILE} > ${WRKSRC}/dict/SKK-JISYO.L
 	${CHMOD} a+x ${WRKSRC}/configure
