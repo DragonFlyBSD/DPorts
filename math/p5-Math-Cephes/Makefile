@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Cephes/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-Cephes/Makefile 330139 2013-10-12 16:39:46Z sunpoet $
 
 PORTNAME=	Math-Cephes
-PORTVERSION=	0.5302
+PORTVERSION=	0.5303
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -11,14 +11,6 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the cephes math library
 
 MAKE_JOBS_UNSAFE=	yes
-
-MAN1=	pmath.1
-MAN3=	Math::Cephes.3 \
-	Math::Cephes::Complex.3 \
-	Math::Cephes::Fraction.3 \
-	Math::Cephes::Matrix.3 \
-	Math::Cephes::Polynomial.3
-
 USES=		perl5
 USE_PERL5=	configure
 
