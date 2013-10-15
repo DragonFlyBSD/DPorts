@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Subtitle Ripper
-# Date created:		Fri Oct 14 04:49:22 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: multimedia/subtitleripper/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: multimedia/subtitleripper/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	subtitleripper
 DISTVERSION=	0.3-4
@@ -44,6 +40,7 @@ PROGRAM_FILES=	\
 SCRIPT_FILES=	\
 		pgm2txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|^(CC[[:space:]]*=).*$$|\1${CC}|' \
