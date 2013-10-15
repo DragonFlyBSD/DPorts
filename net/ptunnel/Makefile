@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ptunnel
-# Date created:				23 April 2005
-# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/net/ptunnel/Makefile,v 1.8 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: net/ptunnel/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ptunnel
 PORTVERSION=	0.72
@@ -20,6 +16,7 @@ USE_GMAKE=	yes
 PLIST_FILES=	bin/ptunnel
 MAN8=		ptunnel.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^CC/d;s/-lpthread/${PTHREAD_LIBS}/' ${WRKSRC}/${MAKEFILE}
 	@${REINPLACE_CMD} -e 's/stdint.h/inttypes.h/' ${WRKSRC}/ptunnel.h
