@@ -1,5 +1,5 @@
 # Created by: Marcus von Appen
-# $FreeBSD: misc/lingoteach/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: misc/lingoteach/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	lingoteach
 PORTVERSION=	0.3.9
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--enable-debug
 PLIST=		${WRKDIR}/plist
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
