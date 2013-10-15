@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiw27@gmail.com>
-# $FreeBSD: shells/fish/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: shells/fish/Makefile 328855 2013-09-30 19:58:20Z bsam $
 
 PORTNAME=	fish
 PORTVERSION=	2.0.0
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -pthread ${ICONV_LIB}
 
 MAN1=		fish.1 fish_indent.1 fish_pager.1 fishd.1 mimedb.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
