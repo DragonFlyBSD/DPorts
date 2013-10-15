@@ -1,5 +1,5 @@
 # Created by: msmith@gsoft.com.au
-# $FreeBSD: ports/lang/bwbasic/Makefile,v 1.23 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: lang/bwbasic/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	bwbasic
 PORTVERSION=	2.60
@@ -21,6 +21,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${CHMOD} a+x ${WRKSRC}/${CONFIGURE_SCRIPT}
 
