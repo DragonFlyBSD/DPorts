@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fileschanged
-# Date created:				18 May 2004
-# Whom:					Konstantin Reznichenko <kot@premierbank.dp.ua>
-#
-# $FreeBSD: ports/sysutils/fileschanged/Makefile,v 1.12 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
+# $FreeBSD: sysutils/fileschanged/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	fileschanged
 PORTVERSION=	0.6.5
@@ -18,6 +14,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/argp.h:${PORTSDIR}/devel/argp-standalone \
 		help2man:${PORTSDIR}/misc/help2man
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 USE_GMAKE=	yes
 USE_FAM=	yes
 CONFIGURE_ENV+=	LIBS="-largp"
