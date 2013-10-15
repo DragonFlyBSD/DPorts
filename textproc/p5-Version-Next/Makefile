@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Version-Next/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: textproc/p5-Version-Next/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Version-Next
 PORTVERSION=	0.002
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Version::Next.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
