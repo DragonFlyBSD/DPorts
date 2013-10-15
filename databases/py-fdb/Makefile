@@ -1,8 +1,9 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: databases/py-fdb/Makefile 316408 2013-04-24 07:49:47Z culot $
+# $FreeBSD: databases/py-fdb/Makefile 328906 2013-09-30 23:44:57Z acm $
 
 PORTNAME=	fdb
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,6 +18,7 @@ LIB_DEPENDS=	fbclient:${PORTSDIR}/databases/firebird25-client
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
