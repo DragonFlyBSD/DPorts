@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@FreeBSD.org>
-# $FreeBSD: print/html2ps/Makefile 326272 2013-09-04 13:07:40Z az $
+# $FreeBSD: print/html2ps/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	html2ps
 DISTVERSION=	1.0b7
@@ -34,6 +34,7 @@ PLIST_FILES=	bin/html2ps \
 		%%DATADIR%%/hyphen.tex
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|exec perl|exec ${PERL}| ; \
