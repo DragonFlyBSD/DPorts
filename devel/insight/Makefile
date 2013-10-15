@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: devel/insight/Makefile 322646 2013-07-10 11:18:03Z bapt $
+# $FreeBSD: devel/insight/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTREVISION=	1
 
@@ -14,4 +14,5 @@ CONFLICTS=	gdb-[6-9]*
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
