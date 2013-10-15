@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net/libgweather/Makefile 320955 2013-06-14 17:21:30Z kwm $
+# $FreeBSD: net/libgweather/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #   $MCom: ports/trunk/net/libgweather/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libgweather
@@ -29,4 +29,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gweather.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
