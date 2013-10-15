@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xoids/Makefile 321994 2013-06-28 21:58:01Z bapt $
+# $FreeBSD: games/xoids/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xoids
 PORTVERSION=	1.5
@@ -15,6 +15,7 @@ USES=		imake
 USE_XORG=	xpm
 MAN6=		xoids.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
