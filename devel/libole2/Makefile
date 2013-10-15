@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libole2
-# Date created:				20th June 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libole2/Makefile,v 1.26 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: devel/libole2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libole2
 PORTVERSION=	0.2.4
@@ -20,4 +16,5 @@ USE_GNOME=	glib12
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
