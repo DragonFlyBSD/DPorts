@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/fyre/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/fyre/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	fyre
 PORTVERSION=	1.0.1
@@ -25,6 +25,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386" && !empty(PORT_OPTIONS:MOPT_CFLAGS)
