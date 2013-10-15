@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ncrypt
-# Date created:			30 Aug 2005
-# Whom:				Frank Laszlo <laszlof@vonostingroup.com>
-#
-# $FreeBSD: ports/security/ncrypt/Makefile,v 1.13 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: Frank Laszlo <laszlof@vonostingroup.com>
+# $FreeBSD: security/ncrypt/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	ncrypt
 PORTVERSION=	0.7.0
