@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-FreeBSD-Ports-INDEXhash
-# Date created:		2008-03-23
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports-INDEXhash/Makefile 326530 2013-09-06 17:55:21Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports-INDEXhash/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	FreeBSD-Ports-INDEXhash
 PORTVERSION=	1.2.2
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		FreeBSD::Ports::INDEXhash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
