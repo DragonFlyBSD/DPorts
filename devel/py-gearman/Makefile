@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-gearman
-# Date created:		28 Dec, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-gearman/Makefile,v 1.6 2012/11/17 05:56:47 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-gearman/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gearman
 PORTVERSION=	2.0.2
@@ -20,4 +16,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
