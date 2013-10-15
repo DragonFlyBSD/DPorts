@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: math/p5-Math-GMPz/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: math/p5-Math-GMPz/Makefile 328820 2013-09-30 15:38:15Z sunpoet $
 
 PORTNAME=	Math-GMPz
 PORTVERSION=	0.37
@@ -21,7 +21,5 @@ TEST_DEPENDS=	p5-Math-GMP>=0:${PORTSDIR}/math/p5-Math-GMP \
 CONFIGURE_ARGS=	INC=-I${LOCALBASE}/include LIBS="-L${LOCALBASE}/lib -lgmp"
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Math::GMPz.3
 
 .include <bsd.port.mk>
