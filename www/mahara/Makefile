@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/mahara/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/mahara/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mahara
 PORTVERSION=	1.1.8
@@ -16,6 +16,7 @@ FETCH_ARGS=	-pRr
 OPTIONS_DEFINE=	MYSQL PGSQL
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
