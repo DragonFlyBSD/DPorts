@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	sloccount
-# Date created:			May 21, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: misc/sloccount/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# Created by: ijliao
+# $FreeBSD: misc/sloccount/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	sloccount
 PORTVERSION=	2.26
@@ -24,6 +19,7 @@ PORTDOCS=	ChangeLog README TODO sloccount.html
 MAN1=		sloccount.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-install:
 .for file in lexcount1 c_count java_count php_count
 	@${STRIP_CMD} ${PREFIX}/bin/${file}
