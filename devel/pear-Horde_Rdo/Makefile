@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Rdo
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: devel/pear-Horde_Rdo/Makefile 316218 2013-04-21 22:16:15Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: devel/pear-Horde_Rdo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Rdo
 PORTVERSION=	2.0.2
@@ -15,6 +12,7 @@ COMMENT=	Horde Rampage Data Objects
 USE_HORDE_RUN=	Horde_Db \
 		Horde_Exception
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
