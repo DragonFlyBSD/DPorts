@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kbdscan/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: misc/kbdscan/Makefile 328333 2013-09-26 04:03:59Z eadler $
 
 PORTNAME=	kbdscan
 PORTVERSION=	20110507
@@ -15,6 +15,6 @@ USE_BZIP2=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
