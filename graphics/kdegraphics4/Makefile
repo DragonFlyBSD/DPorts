@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/kdegraphics4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: graphics/kdegraphics4/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kdegraphics
 PORTVERSION=	${KDE4_VERSION}
@@ -34,6 +34,7 @@ KSNAPSHOT_DESC=		Screen capture program
 OKULAR_DESC=		Universal document viewer
 SANE_DESC=		Plugin for scanning on KDE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGPHOTO}
