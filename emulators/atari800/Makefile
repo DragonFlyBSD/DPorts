@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <jsutton@webnet.com.au>
-# $FreeBSD: emulators/atari800/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: emulators/atari800/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	atari800
 PORTVERSION=	2.0.3
@@ -64,6 +64,7 @@ CONFIGURE_ARGS+=	--enable-bufferedlog
 CONFIGURE_ARGS+=	--enable-veryslow
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "Atari800 has the following tunable option(s):"
