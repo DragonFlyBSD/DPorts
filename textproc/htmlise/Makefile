@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/htmlise/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: textproc/htmlise/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	htmlise
 PORTVERSION=	0.2
@@ -15,6 +15,7 @@ TABSIZE?=	8
 SRC=		htmlise tables markup inline
 PLIST_FILES=	bin/htmlise
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\(TABSIZE\ \)[0-9]*|\1${TABSIZE}|' \
 		${WRKSRC}/${PORTNAME}.h
