@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/dangen/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/dangen/Makefile 328916 2013-10-01 05:52:03Z amdmi3 $
 
 PORTNAME=	dangen
 PORTVERSION=	0.5
@@ -12,7 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Shoot'em up game where accurate shooting matters
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl image
 DESKTOP_ENTRIES="dangen" \
 		"Shoot'em up game where accurate shooting matters" \
@@ -21,12 +21,10 @@ DESKTOP_ENTRIES="dangen" \
 		"Game;ArcadeGame;" \
 		false
 
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man6/${PORTNAME}.6.gz
 PORTDOCS=	*
-
-PLIST_FILES=	bin/${PORTNAME} %%DATADIR%%/image/font.png
-PLIST_DIRS=	%%DATADIR%%/image %%DATADIR%%
-
-MAN6=		dangen.6
+PORTDATA=	*
 
 .include <bsd.port.options.mk>
 
@@ -38,8 +36,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
