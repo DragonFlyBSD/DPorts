@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-mechanize/Makefile 319773 2013-06-03 11:54:46Z swills $
+# $FreeBSD: www/rubygem-mechanize/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mechanize
 PORTVERSION=	2.7.1
@@ -22,4 +22,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
