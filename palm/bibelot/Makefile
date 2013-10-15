@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: palm/bibelot/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: palm/bibelot/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	bibelot
 PORTVERSION=	0.9.4
@@ -15,6 +15,7 @@ USES=		perl5
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
 
