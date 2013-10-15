@@ -1,9 +1,4 @@
-# New ports collection makefile for:	no-hunspell
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/no-hunspell/Makefile,v 1.6 2012/11/17 06:02:03 svnexp Exp $
-#
+# $FreeBSD: textproc/no-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	2.0.10
@@ -31,8 +26,8 @@ post-extract:
 	@${EXTRACT_CMD} ${WRKDIR}/nn_NO.zip -d ${WRKSRC}/
 
 do-install:
-	${MKDIR} ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/nb_NO.aff ${WRKSRC}/nb_NO.dic \
-		${WRKSRC}/nn_NO.aff ${WRKSRC}/nn_NO.dic ${DATADIR}/
+		${WRKSRC}/nn_NO.aff ${WRKSRC}/nn_NO.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
