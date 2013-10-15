@@ -1,9 +1,8 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: emulators/mupen64plus-video-z64/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: emulators/mupen64plus-video-z64/Makefile 329344 2013-10-04 17:18:44Z acm $
 
-PORTREVISION=	2
 PKGNAMESUFFIX=	-video-z64
-DISTFILES=	${PORTNAME}${PKGNAMESUFFIX}-src-${PORTVERSION}${EXTRACT_SUFX}:plugin
+DISTFILES=	${PORTNAME}${PKGNAMESUFFIX}-src-${PORTVERSION}.0${EXTRACT_SUFX}:plugin
 
 COMMENT=	Low-level RDP plugin for the Mupen64Plus
 
@@ -23,4 +22,5 @@ EXTRACT_AFTER_ARGS=	#
 BUILD_WRKSRC=		${WRKSRC}/${PORTNAME}${PKGNAMESUFFIX}/projects/unix
 WRKSRC=			${WRKDIR}
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
