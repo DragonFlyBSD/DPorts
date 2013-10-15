@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: graphics/mscgen/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/mscgen/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mscgen
 PORTVERSION=	0.20
@@ -15,6 +15,7 @@ COMMENT=	A Message Sequence Chart Renderer
 OPTIONS_DEFINE=	PNG
 OPTIONS_DEFAULT=	PNG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPNG}
