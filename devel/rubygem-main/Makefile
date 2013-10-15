@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-main/Makefile 319632 2013-06-02 02:20:51Z swills $
+# $FreeBSD: devel/rubygem-main/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	main
 PORTVERSION=	5.2.0
@@ -18,4 +18,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
