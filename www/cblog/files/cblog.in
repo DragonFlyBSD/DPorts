@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/www/cblog/files/cblog.in,v 1.5 2012/11/18 16:55:49 svnexp Exp $
+# $FreeBSD: www/cblog/files/cblog.in 307542 2012-11-18 16:33:31Z hrs $
 #
 # cblog.fcgi startup script
 #

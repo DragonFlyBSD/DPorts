@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/cblog/Makefile,v 1.10 2012/12/31 15:07:25 svnexp Exp $
+# $FreeBSD: www/cblog/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cblog
 PORTVERSION=	0.1.6
@@ -23,6 +23,7 @@ PLIST_FILES=	libexec/cblog.fcgi \
 
 MAN1=		cblog.fcgi.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s#^INCLUDES=.*#INCLUDES=-I${LOCALBASE}/include#g" \
 		-e "s#^LIBDIR=.*#LIBDIR=-L${LOCALBASE}/lib#g" \
