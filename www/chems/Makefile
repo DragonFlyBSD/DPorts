@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/chems
-# Date created:		2008-12-28
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/chems/Makefile,v 1.4 2012/11/17 06:02:29 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: www/chems/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	chems
 DISTVERSION=	0x04
@@ -19,6 +15,7 @@ USE_PHP=	xml iconv gd
 SUB_FILES=	pkg-message
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
