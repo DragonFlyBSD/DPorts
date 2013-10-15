@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: textproc/xls2xml/Makefile 322645 2013-07-10 11:16:59Z bapt $
+# $FreeBSD: textproc/xls2xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xls2xml
 PORTVERSION=	1.0.0
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lcole
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
