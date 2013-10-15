@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: x11/xmangekyou/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/xmangekyou/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	xmangekyou
 PORTVERSION=	2.0.1
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://ftp.vector.co.jp/pack/unix/art/anime/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A kaleidoscope on X
+COMMENT=	Kaleidoscope on X
 
 USE_XORG=	x11 xpm xaw
 ALL_TARGET=	xmangekyou
@@ -19,6 +19,7 @@ PORTDOCS=	COPYRIGHT.euc HISTORY.euc README.euc
 PLIST_FILES=	bin/xmangekyou lib/X11/XMangekyou/animation.dat
 PLIST_DIRS=	lib/X11/XMangekyou
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
