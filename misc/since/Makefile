@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-martel
-# Date created:		11 February 2002
-# Whom:	      		Johann Visagie <wjv@FreeBSD.org>
-#
-# $FreeBSD: misc/since/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: misc/since/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	since
 PORTVERSION=	1.1
@@ -23,4 +19,5 @@ ALL_TARGET=	${PORTNAME}
 MAN1=		since.1
 PLIST_FILES=	bin/since
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
