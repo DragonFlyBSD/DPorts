@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: ports/games/py-mnemosyne/Makefile,v 1.23 2013/02/03 22:43:20 svnexp Exp $
+# $FreeBSD: games/py-mnemosyne/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	mnemosyne
 PORTVERSION=	2.2a
@@ -20,6 +20,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Mnemosyne
 
+NO_STAGE=	yes
 post-install:
 	@cd ${WRKSRC}/mo && ${COPYTREE_SHARE} . ${PREFIX}/share/locale
 	@${MKDIR} ${PREFIX}/share/applications
