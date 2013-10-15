@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/gx/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: graphics/gx/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gx
 PORTVERSION=	0.4.0
@@ -17,4 +17,5 @@ LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
 USES=		gettext pkgconfig
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
