@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: sysutils/p5-Schedule-Match/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: sysutils/p5-Schedule-Match/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Schedule-Match
 PORTVERSION=	0.07
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Schedule::Match.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
