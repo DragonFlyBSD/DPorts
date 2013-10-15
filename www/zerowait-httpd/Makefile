@@ -1,9 +1,5 @@
-# New ports collection makefile for:	0W-httpd
-# Date created:				17 March 2005
-# Whom:					Vsevolod Stakhov
-#
-# $FreeBSD: ports/www/zerowait-httpd/Makefile,v 1.14 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Vsevolod Stakhov
+# $FreeBSD: www/zerowait-httpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	zerowait
 PORTVERSION=	0.8d
@@ -25,4 +21,5 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --owner=${WWWOWN} --group=${WWWGRP}
 PLIST_SUB=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>

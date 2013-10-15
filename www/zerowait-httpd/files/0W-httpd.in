@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/www/zerowait-httpd/files/0W-httpd.in,v 1.4 2012/11/17 06:03:13 svnexp Exp $
+# $FreeBSD: www/zerowait-httpd/files/0W-httpd.in 300897 2012-07-14 14:29:18Z beat $
 
 # PROVIDE: zerowait
 # REQUIRE: DAEMON
