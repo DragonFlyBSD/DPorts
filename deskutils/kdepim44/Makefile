@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44/Makefile 327474 2013-09-17 12:50:49Z bapt $
+# $FreeBSD: deskutils/kdepim44/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	kdepim
 PORTVERSION=	4.4.11.1
@@ -35,4 +35,5 @@ MAN1=		kabcclient.1
 #cannot be built with assuan2
 CMAKE_ARGS+=	-DWITH_Assuan:BOOL=off
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
