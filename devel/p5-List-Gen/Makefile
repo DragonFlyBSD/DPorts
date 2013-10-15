@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-List-Gen/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-List-Gen/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	List-Gen
 PORTVERSION=	0.974
@@ -12,15 +12,5 @@ COMMENT=	Functions for generating lists
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		List::Gen.3 \
-		List::Gen::Benchmark.3 \
-		List::Gen::Cookbook.3 \
-		List::Gen::Haskell.3 \
-		List::Gen::Lazy.3 \
-		List::Gen::Lazy::Builtins.3 \
-		List::Gen::Lazy::Ops.3 \
-		List::Gen::Perl6.3 \
-		List::Generator.3
 
 .include <bsd.port.mk>
