@@ -1,5 +1,5 @@
 # Created by: Stephon Chen <stephon@gmail.com>
-# $FreeBSD: devel/p5-IO-Stty/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-IO-Stty/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IO-Stty
 PORTVERSION=	0.03
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		IO::Stty.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
