@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: sysutils/rubygem-god/Makefile 322883 2013-07-13 05:29:05Z swills $
+# $FreeBSD: sysutils/rubygem-god/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	god
 PORTVERSION=	0.13.2
@@ -16,4 +16,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/god
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
