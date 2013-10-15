@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-Acme-Lou/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/p5-Acme-Lou/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Acme-Lou
 PORTVERSION=	0.03
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Acme::Lou.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
