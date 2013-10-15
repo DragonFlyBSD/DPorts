@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: net/p5-Net-Amazon/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Amazon/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Amazon
 PORTVERSION=	0.62
@@ -22,6 +22,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include "Makefile.man"
 
 .include <bsd.port.mk>
