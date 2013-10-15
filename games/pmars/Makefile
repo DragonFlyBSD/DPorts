@@ -1,9 +1,5 @@
-# New ports collection makefile for:   games/pmars
-# Date created:        15 Feb 1999
-# Whom:                gmarco@giovannelli.it
-#
-# $FreeBSD: ports/games/pmars/Makefile,v 1.18 2012/11/17 05:57:49 svnexp Exp $
-#
+# Created by: gmarco@giovannelli.it
+# $FreeBSD: games/pmars/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pmars
 PORTVERSION=	0.9.2
@@ -31,6 +27,7 @@ MAKE_ARGS+=	CFLAGS+="${CFLAGS}" \
 
 MAN6=		pmars.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURSES}
