@@ -1,5 +1,5 @@
 # Created by: Mykola Marzhan <delgod@portaone.com>
-# $FreeBSD: devel/p5-Sys-Sendfile-FreeBSD/Makefile 326802 2013-09-09 11:01:46Z az $
+# $FreeBSD: devel/p5-Sys-Sendfile-FreeBSD/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sys-Sendfile-FreeBSD
 PORTVERSION=	0.01
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Sys::Sendfile::FreeBSD.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
