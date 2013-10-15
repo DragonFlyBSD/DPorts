@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: shells/shell-include/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: shells/shell-include/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	shell-include
 PORTVERSION=	0.1.2
@@ -21,6 +21,7 @@ MAN7=		shell-include.7
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 #nothing to configure
+NO_STAGE=	yes
 do-configure:
 	@${ECHO} -n
 
