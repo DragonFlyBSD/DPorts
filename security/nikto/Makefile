@@ -1,5 +1,5 @@
 # Created by: pandzilla
-# $FreeBSD: security/nikto/Makefile 316914 2013-04-30 11:21:41Z johans $
+# $FreeBSD: security/nikto/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	nikto
 PORTVERSION=	2.1.5
@@ -20,10 +20,12 @@ SSLEAY_DESC=	Use NET::SSLeay for ssl scanning
 NO_BUILD=	yes
 
 USE_BZIP2=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN1=		nikto.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSLEAY}
