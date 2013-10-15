@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mkntpwd
-# Date created:		2011-04-18
-# Whom:			Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/sysutils/mkntpwd/Makefile,v 1.2 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
+# $FreeBSD: sysutils/mkntpwd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mkntpwd
 PORTVERSION=	1.0
@@ -21,6 +17,7 @@ PLIST_FILES=	bin/mkntpwd
 LICENSE=	GPLv2 BSD
 LICENSE_COMB=	multi
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mkntpwd ${PREFIX}/bin
 
