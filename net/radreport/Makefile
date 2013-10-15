@@ -1,9 +1,5 @@
-# New ports collection makefile for:	radreport
-# Date created:		10/22/1999
-# Whom:			Kelly Yancey <kbyanc@posi.net>
-#
-# $FreeBSD: ports/net/radreport/Makefile,v 1.8 2012/11/17 06:00:17 svnexp Exp $
-#
+# Created by: Kelly Yancey <kbyanc@posi.net>
+# $FreeBSD: net/radreport/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=		radreport
 PORTVERSION=		1.3
@@ -20,6 +16,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/radreport
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@for i in $(DISTFILES); do ${CP} ${DISTDIR}/$$i ${WRKDIR}; done
