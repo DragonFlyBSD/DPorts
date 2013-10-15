@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-rak
-# Date created:				12 November 2007
-# Whom:					Robert Gogolok <gogo@cs.uni-sb.de>
-#
-# $FreeBSD: ports/textproc/rubygem-rak/Makefile,v 1.9 2013/01/22 02:55:10 svnexp Exp $
+# Created by: Robert Gogolok <gogo@cs.uni-sb.de>
+# $FreeBSD: textproc/rubygem-rak/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rak
 PORTVERSION=	1.4
@@ -20,4 +17,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/rak
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
