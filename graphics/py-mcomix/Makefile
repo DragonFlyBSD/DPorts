@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mcomix
-# Date created:		2012-05-16
-# Whom:			Ashish SHUKLA <ashish@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/py-mcomix/Makefile,v 1.2 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Ashish SHUKLA <ashish@FreeBSD.org>
+# $FreeBSD: graphics/py-mcomix/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mcomix
 PORTVERSION=	0.99
@@ -22,4 +18,5 @@ USE_GNOME=		pygtk2
 USE_PYTHON=		2.6+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
