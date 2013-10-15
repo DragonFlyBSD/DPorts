@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jpgtn
-# Date created:		07 September 2001
-# Whom:			mb@imp.ch
-#
-# $FreeBSD: ports/graphics/jpgtn/Makefile,v 1.11 2012/11/17 05:58:10 svnexp Exp $
-#
+# Created by: mb@imp.ch
+# $FreeBSD: graphics/jpgtn/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jpgtn
 PORTVERSION=	2.06
@@ -27,6 +23,7 @@ WITH_MAXSIZE?=	2048
 WITH_MINSIZE?=	1
 WITH_DEFSIZE?=	128
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "===>"
 	@${ECHO_MSG} "===> You can control program functionality by defining the following variables:"
