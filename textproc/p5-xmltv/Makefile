@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: textproc/p5-xmltv/Makefile 324012 2013-07-31 07:23:26Z bapt $
+# $FreeBSD: textproc/p5-xmltv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmltv
 PORTVERSION=	0.5.61
@@ -90,6 +90,7 @@ ICONSDIR?=	www/icons
 #
 PLIST_SUB+=	CGIDIR="${CGIDIR}"
 
+NO_STAGE=	yes
 post-patch:
 # fix man install location
 	@${REINPLACE_CMD} -e \
