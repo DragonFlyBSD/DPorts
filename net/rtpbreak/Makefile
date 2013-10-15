@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rtpbreak
-# Date created:		16 February 2008
-# Whom:			Prudhvi Krishna <prudhvikrishna@gmail.com>
-#
-# $FreeBSD: ports/net/rtpbreak/Makefile,v 1.8 2013/02/18 21:46:32 svnexp Exp $
-#
+# Created by: Prudhvi Krishna <prudhvikrishna@gmail.com>
+# $FreeBSD: net/rtpbreak/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rtpbreak
 PORTVERSION=	1.3a
@@ -22,6 +18,7 @@ MAKE_ARGS+=	CFLAGS="-Wall -O3 -I${LOCALBASE}/include/libnet11" \
 
 PLIST_FILES=	bin/rtpbreak
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/rtpbreak ${PREFIX}/bin
 
