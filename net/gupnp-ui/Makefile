@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-ui/Makefile 326615 2013-09-07 10:20:39Z sunpoet $
+# $FreeBSD: net/gupnp-ui/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gupnp-ui
 PORTVERSION=	0.1.1
@@ -23,4 +23,5 @@ USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USES=		pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
