@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: ports/security/webscarab/Makefile,v 1.6 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: security/webscarab/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	webscarab
 PORTVERSION=	20090427
@@ -20,6 +20,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 PORTDOCS=	README LICENSE ChangeLog
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:

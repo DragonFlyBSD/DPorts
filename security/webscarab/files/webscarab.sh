@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/webscarab/files/webscarab.sh,v 1.2 2012/11/17 06:01:22 svnexp Exp $
+# $FreeBSD: security/webscarab/files/webscarab.sh 300897 2012-07-14 14:29:18Z beat $
 #
 
 TEST=`/usr/bin/basename $0`
