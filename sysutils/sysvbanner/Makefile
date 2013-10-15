@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: sysutils/sysvbanner/Makefile 325499 2013-08-28 04:10:02Z amdmi3 $
+# $FreeBSD: sysutils/sysvbanner/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sysvbanner
 PORTVERSION=	1.0.15
@@ -19,6 +19,7 @@ MAN1=		sysvbanner.1
 
 PLIST_FILES=	bin/sysvbanner
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/banner ${PREFIX}/bin/sysvbanner
 	${INSTALL_MAN} ${BUILD_WRKSRC}/banner.1 ${MAN1PREFIX}/man/man1/sysvbanner.1
