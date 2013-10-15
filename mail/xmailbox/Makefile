@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: mail/xmailbox/Makefile 321995 2013-06-28 22:06:54Z bapt $
+# $FreeBSD: mail/xmailbox/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=		xmailbox
 PORTVERSION=		2.5
@@ -15,6 +15,7 @@ USES=		imake
 USE_XORG=	xaw
 MAN1=		xmailbox.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
