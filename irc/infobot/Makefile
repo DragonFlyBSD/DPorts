@@ -1,5 +1,5 @@
 # Created by: perlguy@perlguy.com
-# $FreeBSD: irc/infobot/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: irc/infobot/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	infobot
 PORTVERSION=	0.45.3
@@ -13,6 +13,7 @@ COMMENT=	Bot written in Perl with a rabid AI
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${CP} -r ${WRKSRC}/src ${WRKSRC}/extras ${WRKSRC}/files \
