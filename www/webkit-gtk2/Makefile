@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/webkit-gtk2/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: www/webkit-gtk2/Makefile 329166 2013-10-03 10:57:26Z kwm $
 #   $MCom: ports/www/webkit-gtk2/Makefile,v 1.92 2013/03/09 09:12:39 kwm Exp $
 
 PORTNAME=	webkit
@@ -14,12 +14,11 @@ COMMENT=	An opensource browser engine
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
-		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
-		icutu:${PORTSDIR}/devel/icu \
-		curl:${PORTSDIR}/ftp/curl \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc
+LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
+		libicutu.so:${PORTSDIR}/devel/icu \
+		libcurl.so:${PORTSDIR}/ftp/curl \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
 USE_XZ=		yes
 USE_PYTHON_BUILD=	yes
@@ -27,7 +26,7 @@ USE_GSTREAMER=	yes
 USE_XORG=	xt
 USES=		bison gmake pkgconfig gettext perl5
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gtk20 libxslt ltverhack
+USE_GNOME=	gtk20 introspection:build libxslt ltverhack
 USE_SQLITE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
