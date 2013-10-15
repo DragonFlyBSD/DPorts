@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	hanzim
-# Date created:			Sep 23, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/chinese/hanzim/Makefile,v 1.17 2012/11/17 05:54:56 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: chinese/hanzim/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	hanzim
 PORTVERSION=	1.3
@@ -28,6 +23,7 @@ ALL_TARGET=	${PORTNAME}
 
 MAN1=		hanzim.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' ${WRKSRC}/hanzim.c
 
