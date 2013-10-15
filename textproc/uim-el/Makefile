@@ -1,5 +1,5 @@
-# Created by: MANTANI Nobutaka <nobutaka@freebsd.org>
-# $FreeBSD: textproc/uim-el/Makefile 327088 2013-09-12 16:41:28Z az $
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: textproc/uim-el/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	uim-el
 PORTVERSION=	1.8.5
@@ -24,6 +24,7 @@ USE_GNOME=	intltool
 USES=		iconv gmake perl5
 USE_EMACS=	yes
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 BUILD_WRKSRC=	${WRKSRC}/emacs
 INSTALL_WRKSRC=	${WRKSRC}/emacs
