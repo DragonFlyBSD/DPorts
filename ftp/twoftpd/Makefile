@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
-# $FreeBSD: ftp/twoftpd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/twoftpd/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	twoftpd
 PORTVERSION=	1.42
@@ -30,6 +30,7 @@ PLIST_FILES=	bin/twoftpd-anon bin/twoftpd-anon-conf \
 		bin/twoftpd-conf bin/twoftpd-drop \
 		bin/twoftpd-switch bin/twoftpd-xfer
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
