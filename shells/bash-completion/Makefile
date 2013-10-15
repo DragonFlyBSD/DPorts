@@ -1,7 +1,5 @@
-# Created by:	kirk@strauser.com
-#
-# $FreeBSD: shells/bash-completion/Makefile 316125 2013-04-20 00:29:32Z adamw $
-#
+# Created by: kirk@strauser.com
+# $FreeBSD: shells/bash-completion/Makefile 328796 2013-09-30 14:23:54Z adamw $
 
 PORTNAME=	bash-completion
 PORTVERSION=	2.1
@@ -27,9 +25,6 @@ USE_BZIP2=	yes
 
 SUB_FILES=	pkg-message
 SUB_LIST+=	RUNFILE=${DATADIR}/bash_completion.sh
-PORTDOCS=	*
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g; \
@@ -48,13 +43,9 @@ post-patch:
 		${WRKSRC}/completions/*
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .	for i in README doc/bash_completion.txt doc/bashrc doc/inputrc
-		${INSTALL_DATA} ${WRKSRC}/$i ${DOCSDIR}
+		${INSTALL_DATA} ${WRKSRC}/$i ${STAGEDIR}${DOCSDIR}
 .	endfor
-.endif
-
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
