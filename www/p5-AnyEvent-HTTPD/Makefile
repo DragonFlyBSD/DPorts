@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-AnyEvent-HTTPD
-# Date created:		2009-07-17
-# Whom:			Mons Anderson <mons@cpan.org>
-#
-# $FreeBSD: www/p5-AnyEvent-HTTPD/Makefile 326003 2013-09-02 15:12:10Z az $
-#
+# Created by: Mons Anderson <mons@cpan.org>
+# $FreeBSD: www/p5-AnyEvent-HTTPD/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	AnyEvent-HTTPD
 PORTVERSION=	0.93
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	AnyEvent::HTTPD.3 AnyEvent::HTTPD::Request.3 AnyEvent::HTTPD::Util.3 AnyEvent::HTTPD::HTTPServer.3 AnyEvent::HTTPD::HTTPConnection.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
