@@ -1,5 +1,5 @@
 # Created by: Alex Povolotsky <tarkhil@over.ru>
-# $FreeBSD: www/cadaver/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: www/cadaver/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cadaver
 PORTVERSION=	0.23.3
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/cadaver
 # Neither expat nor libneon are needed at all, but the configure
 # script breaks if it can not find the Makefile* in them. Exclude
 # them to be sure, a stray .h is not included instead of what's
+NO_STAGE=	yes
 # found under PREFIX (installed by the neon port):
 EXTRACT_AFTER_ARGS=	\
 		--exclude '${PORTNAME}-${PORTVERSION}/lib/expat/*.[ch]' \
