@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: java/jboss72/Makefile 326770 2013-09-08 20:56:37Z crees $
+# $FreeBSD: java/jboss72/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jboss72
 PORTVERSION=	7.2.0
@@ -39,6 +39,7 @@ SUB_LIST=	APP_SHORTNAME=${PORTNAME} \
 		APP_HOME=${PREFIX}/${DISTNAME}
 PLIST_SUB=	APP_HOME=${DISTNAME}
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "To build you should have at least 2Gb of Ram (Or build will fail with java OOM Exception)"
