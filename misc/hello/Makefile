@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: misc/hello/Makefile 320869 2013-06-14 01:57:00Z miwi $
+# $FreeBSD: misc/hello/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	hello
 PORTVERSION=	2.8
@@ -10,13 +10,14 @@ MASTER_SITE_SUBDIR=	hello
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	A utility for saying hello to the world and reading email
 
-USE_PERL5_BUILD=	YES
+USES=		charsetfix perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	YES
-USES=		charsetfix
 
 MAN1=		hello.1
 INFO=		hello
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
