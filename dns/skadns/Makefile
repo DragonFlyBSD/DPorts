@@ -1,9 +1,5 @@
-# New ports collection makefile for:	skadns
-# Date created:		2004-01-01
-# Whom:			Sergei Kolobov <sergei@FreeBSD.org>
-#
-# $FreeBSD: dns/skadns/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sergei Kolobov <sergei@FreeBSD.org>
+# $FreeBSD: dns/skadns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	skadns
 PORTVERSION=	0.25
@@ -23,6 +19,7 @@ WRKSRC=		${WRKDIR}/web/${DISTNAME}
 DOCS=		package/CHANGES package/README package/THANKS package/TODO \
 		doc/*.html
 
+NO_STAGE=	yes
 do-configure:
 	${ECHO_CMD} "${CC} ${CFLAGS}"	> ${WRKSRC}/conf-compile/conf-cc
 	${ECHO_CMD} "${CC} ${LDFLAGS}"	> ${WRKSRC}/conf-compile/conf-ld
