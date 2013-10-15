@@ -1,5 +1,5 @@
 # Created by: Dave Glowacki <dglo@ssec.wisc.edu>
-# $FreeBSD: ports/java/java-checkstyle/Makefile,v 1.27 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/java-checkstyle/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	checkstyle
 PORTVERSION=	5.5
@@ -33,6 +33,7 @@ PORTEXAMPLES=	*
 
 SUB_FILES=	${PORTNAME}.sh
 
+NO_STAGE=	yes
 do-install:
 	@-${MKDIR} ${JAVAJARDIR}
 	@${INSTALL_DATA} ${WRKSRC}/${JAR_FILE} ${JAVAJARDIR}/${PORTNAME}.jar
