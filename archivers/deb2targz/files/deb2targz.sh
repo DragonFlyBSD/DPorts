@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/archivers/deb2targz/files/deb2targz.sh,v 1.2 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/deb2targz/files/deb2targz.sh 300895 2012-07-14 12:56:14Z beat $
 #
 
 PATH=/bin:/usr/bin
