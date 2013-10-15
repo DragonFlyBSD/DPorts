@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-sdl/Makefile 326373 2013-09-05 09:15:49Z bapt $
+# $FreeBSD: graphics/evas-engine-sdl/Makefile 329588 2013-10-06 15:16:25Z gblach $
 
 PORTNAME=	engine-sdl
 PORTVERSION=	1.7.8
@@ -14,7 +14,7 @@ COMMENT=	A hardware accelerated canvas API (SDL engine)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
@@ -37,6 +37,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/evas-software-sdl.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
