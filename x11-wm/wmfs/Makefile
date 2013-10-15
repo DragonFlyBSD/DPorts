@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: x11-wm/wmfs/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/wmfs/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	wmfs
 DISTVERSION=	201104
@@ -27,6 +27,7 @@ SUB_FILES=	pkg-message
 OPTIONS_DEFINE=	XRANDR XINERAMA IMLIB
 OPTIONS_DEFAULT=	XRANDR XINERAMA IMLIB
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS=	--prefix ${PREFIX} \
