@@ -1,5 +1,5 @@
 # Created by: jamie
-# $FreeBSD: graphics/intergif/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/intergif/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	interGif
 PORTVERSION=	6.15
@@ -18,6 +18,7 @@ ALL_TARGET=	intergif
 
 PLIST_FILES=	bin/intergif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|=.*cc|= $$(CC)| ; \
