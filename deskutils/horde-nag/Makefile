@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-nag/Makefile 325479 2013-08-27 18:10:33Z mm $
+# $FreeBSD: deskutils/horde-nag/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	nag
 PORTVERSION=	4.1.2
@@ -39,6 +39,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Util \
 		Horde_View
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
