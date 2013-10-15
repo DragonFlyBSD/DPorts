@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: x11-toolkits/v/Makefile 324038 2013-07-31 12:01:01Z danfe $
+# $FreeBSD: x11-toolkits/v/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	v
 PORTVERSION=	1.90
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/home/vgui
 OPTIONS_DEFINE=	OPENGL # DOCS (commented out, see below)
 OPTIONS_DEFAULT=	OPENGL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENGL}
