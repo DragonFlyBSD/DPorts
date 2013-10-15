@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/eruby/Makefile 318109 2013-05-13 15:37:24Z dinoex $
+# $FreeBSD: textproc/eruby/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	eruby
 PORTVERSION=	1.0.5
@@ -11,6 +11,8 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Interprets Ruby code embedded in a text file like PHP/ePerl/ASP/JSP
+
+NO_STAGE=	yes
 
 USE_RUBY=	yes
 
