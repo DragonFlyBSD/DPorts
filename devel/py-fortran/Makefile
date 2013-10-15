@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-fortran/Makefile 327431 2013-09-16 18:03:35Z antoine $
+# $FreeBSD: devel/py-fortran/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	fortran
 PORTVERSION=	8.5.3
@@ -17,4 +17,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Pyfort
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
