@@ -1,9 +1,5 @@
-# Ports collection makefile for: ocaml-mysql
-# Date created: 2011-09-25
-# Whom: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/databases/ocaml-mysql/Makefile,v 1.4 2012/11/17 05:55:12 svnexp Exp $
-#
+# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
+# $FreeBSD: databases/ocaml-mysql/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	mysql
 PORTVERSION=	1.1.1
@@ -26,6 +22,7 @@ USE_OCAML_LDCONFIG=	yes
 GNU_CONFIGURE=		yes
 
 ALL_TARGET=		all opt
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 ALL_TARGET+=		htdoc
