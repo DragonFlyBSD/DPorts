@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-sndfile/Makefile 325725 2013-08-30 22:31:38Z bapt $
+# $FreeBSD: audio/xmms-sndfile/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms
 PORTVERSION=	1.2
@@ -22,6 +22,7 @@ PLIST_FILES=	lib/xmms/Input/libxmms_sndfile.so \
 		lib/xmms/Input/libxmms_sndfile.la
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
