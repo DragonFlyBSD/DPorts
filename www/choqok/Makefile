@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Choqok
-# Date created:				15 Sep 2009
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: www/choqok/Makefile 316407 2013-04-24 07:35:40Z ak $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: www/choqok/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	choqok
 PORTVERSION=	1.3
@@ -29,4 +25,5 @@ USE_BZIP2=	yes
 USES=		cmake gettext
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
