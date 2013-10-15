@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jyuroku
-# Date created:		1 February 2001
-# Whom:			Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/jyuroku/Makefile,v 1.18 2012/11/17 05:58:35 svnexp Exp $
-#
+# Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
+# $FreeBSD: japanese/jyuroku/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	jyuroku
 PORTVERSION=	1.32
@@ -18,6 +14,7 @@ COMMENT=	Japanese address book
 ALL_TARGET=
 USE_GNOME=	gtk12
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s@gcc@${CC}@g; \
 			s@-g@${CFLAGS}@g; \
