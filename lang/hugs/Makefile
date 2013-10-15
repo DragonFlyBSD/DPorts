@@ -1,5 +1,5 @@
 # Created by: Torsten Teg Grust (Torsten.Grust@uni-konstanz.de)
-# $FreeBSD: lang/hugs/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: lang/hugs/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	hugs98
 PORTVERSION=	200609
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 #CONFIGURE_ARGS+=	--prefix=${PREFIX} --enable-ffi
 #CONFIGURE_ENV+=	CC="${CC}" CFLAGS="${CFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ARGS+=	--with-pthreads
