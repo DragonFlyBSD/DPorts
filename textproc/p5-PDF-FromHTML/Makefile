@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-PDF-FromHTML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-PDF-FromHTML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	PDF-FromHTML
 PORTVERSION=	0.31
@@ -48,4 +48,5 @@ MAN3=		PDF::FromHTML.3 PDF::FromHTML::Twig.3 \
 		PDF::FromHTML::Template::Element::Var.3 \
 		PDF::FromHTML::Template::Element::Weblink.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
