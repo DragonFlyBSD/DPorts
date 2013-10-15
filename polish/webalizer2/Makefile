@@ -1,8 +1,5 @@
-# New ports collection makefile for:	webalizer2
-# Date created:		11.Sep 2003
-# Whom:			wtp@bsdguru.org
-#
-# $FreeBSD: ports/polish/webalizer2/Makefile,v 1.3 2012/11/17 06:00:45 svnexp Exp $
+# Created by: wtp@bsdguru.org
+# $FreeBSD: polish/webalizer2/Makefile 327761 2013-09-20 22:34:42Z bapt $
 
 CATEGORIES=	polish
 
@@ -11,6 +8,7 @@ MAINTAINER=	wtp@bsdguru.org
 MASTERDIR?=	${.CURDIR}/../../www/webalizer
 WEBALIZER_LANG=	polish
 
+NO_STAGE=	yes
 .if exists(${.CURDIR}/Makefile.local)
 .include "${.CURDIR}/Makefile.local"
 .endif
