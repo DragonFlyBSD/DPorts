@@ -1,9 +1,5 @@
-# New ports collection makefile for:   sage
-# Date created:        4 February 2005
-# Whom:                Janni
-#
-# $FreeBSD: graphics/sage/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Janni
+# $FreeBSD: graphics/sage/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sage
 PORTVERSION=	0.2.0
@@ -25,6 +21,7 @@ MAN3=		sage.3 sage_init.3
 
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|sdl-config|${SDL_CONFIG}|g' ${WRKSRC}/configure
 
