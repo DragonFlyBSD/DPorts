@@ -1,9 +1,5 @@
-# New ports collection makefile for:    crw
-# Date created:         16 June 2002
-# Whom:                 dillon
-#
-# $FreeBSD: ports/graphics/crw/Makefile,v 1.12 2012/11/17 05:58:02 svnexp Exp $
-#
+# Created by: dillon
+# $FreeBSD: graphics/crw/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	crw
 PORTVERSION=	1.03
@@ -22,6 +18,7 @@ PLIST_FILES=	bin/crw
 
 #CFLAGS+=	-I${LOCALBASE}/include/libpng15
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/local/lib,${LOCALBASE}/lib,' \
 		-e 's,CFLAGS=,CFLAGS+=,' \
