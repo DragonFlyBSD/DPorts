@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/flounder/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: science/flounder/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	flounder
 PORTVERSION=	0.40
@@ -28,6 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 PLIST_FILES=	bin/flounder bin/igbhead
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUPLOT}
