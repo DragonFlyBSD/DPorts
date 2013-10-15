@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ky-aspell
-# Date created:                         28 February 2009
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/ky-aspell/Makefile,v 1.3 2012/11/17 06:02:01 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/ky-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-ky-0.01-0
@@ -14,5 +10,6 @@ COMMENT=	Aspell Kirghiz dictionary
 
 DICT=	 	ky
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
