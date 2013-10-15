@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdroot
-# Date created:				8 August 2002
-# Whom:					Brian Dean <bsd@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/cdroot/Makefile,v 1.7 2012/11/17 06:01:26 svnexp Exp $
-#
+# Created by: Brian Dean <bsd@FreeBSD.org>
+# $FreeBSD: sysutils/cdroot/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cdroot
 PORTVERSION=	1.2.5
@@ -14,4 +10,5 @@ MASTER_SITE_SUBDIR=	bsd
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scripts to automate setting up a bootable CD-ROM based FreeBSD system
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
