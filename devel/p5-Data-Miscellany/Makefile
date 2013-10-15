@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Data-Miscellany/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-Data-Miscellany/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Miscellany
 PORTVERSION=	1.100850
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::Miscellany.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
