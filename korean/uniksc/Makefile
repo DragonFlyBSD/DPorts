@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/uniksc/Makefile 321488 2013-06-21 17:53:21Z bsam $
+# $FreeBSD: korean/uniksc/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	uniksc
 PORTVERSION=	0.9
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/uniksc include/uniksc.h lib/libuniksc.so.0
 CFLAGS+=	"-fPIC"
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
