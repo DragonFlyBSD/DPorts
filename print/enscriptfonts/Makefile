@@ -1,9 +1,5 @@
-# New ports collection makefile for:	enscriptfonts
-# Date created:			15 June, 1998
-# Whom:				kline
-#
-# $FreeBSD: ports/print/enscriptfonts/Makefile,v 1.16 2012/11/17 06:00:49 svnexp Exp $
-#
+# Created by: kline
+# $FreeBSD: print/enscriptfonts/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	enscriptfonts
 PORTVERSION=	0.81
@@ -23,6 +19,7 @@ SUB_FILES+=	pkg-message
 # user should choose their own version
 #RUN_DEPENDS=	enscript:${PORTSDIR}/print/enscript-letter
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/share/enscript/xenscript
 	@${CP} -p ${WRKDIR}/* ${PREFIX}/share/enscript/xenscript
