@@ -1,5 +1,5 @@
 # Created by: Nadelyaev Stanislav <funkblaster@n11.bmstu.ru>
-# $FreeBSD: audio/icegenerator/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/icegenerator/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=		icegenerator
 DISTVERSION=		0.5.5-pre2
@@ -13,6 +13,7 @@ LIB_DEPENDS=		libshout.so:${PORTSDIR}/audio/libshout2
 
 GNU_CONFIGURE=		yes
 USES=			gmake pkgconfig
+NO_STAGE=	yes
 CONFIGURE_ARGS=		--exec-prefix=${PREFIX}
 
 OPTIONS_DEFINE=		DOCS MYSQL PGSQL
