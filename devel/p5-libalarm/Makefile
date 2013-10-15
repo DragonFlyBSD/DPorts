@@ -1,5 +1,5 @@
 # Created by: Marzhan Mykola <delgod@portaone.com>
-# $FreeBSD: devel/p5-libalarm/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-libalarm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libalarm
 PORTVERSION=	1.0
@@ -18,6 +18,7 @@ MAN3=		Alarm::_TieSIG.3 \
 		Alarm::Concurrent.3 \
 		Alarm::Queued.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/lib/Alarm/Concurrent.pm.orig
 
