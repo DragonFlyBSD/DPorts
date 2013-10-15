@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/webresolve/files/patch-webresolve.c,v 1.2 2012/11/17 06:03:10 svnexp Exp $
+$FreeBSD: www/webresolve/files/patch-webresolve.c 300897 2012-07-14 14:29:18Z beat $
 
 --- webresolve.c	2001/03/14 14:44:11	1.1
 +++ webresolve.c	2001/03/14 14:44:26
