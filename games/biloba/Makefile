@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/biloba/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/biloba/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	biloba
 PORTVERSION=	0.9.3
@@ -21,6 +21,7 @@ DESKTOP_ENTRIES="Biloba" \
 		"Game;LogicGame;" \
 		false
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/biloba_icon.png ${DATADIR}/
 
