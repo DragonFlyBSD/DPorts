@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <Kai_Allard_Liao@gmx.de>
-# $FreeBSD: sysutils/xcdroast/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: sysutils/xcdroast/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xcdroast
 PORTVERSION=	0.98.a.16
@@ -33,6 +33,7 @@ CONFIGURE_ARGS=	--with-cdrtools-prefix=${LOCALBASE} \
 
 MAN1=		xcdroast.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
