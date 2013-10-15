@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cmios9
-# Date created:                7 June 2003
-# Whom:                        M.Indlekofer@gmx.de
-#
-# $FreeBSD: ports/converters/cmios9/Makefile,v 1.6 2012/11/17 05:55:02 svnexp Exp $
-#
+# Created by: M.Indlekofer@gmx.de
+# $FreeBSD: converters/cmios9/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	cmios9
 PORTVERSION=	2.1
@@ -17,4 +13,5 @@ MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 
 PLIST_FILES=	bin/cmios9
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
