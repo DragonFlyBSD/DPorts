@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/autozen/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: audio/autozen/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	autozen
 PORTVERSION=	2.1
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	GTK2 DOCS
 
+NO_STAGE=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	zentime
 USE_PERL5=	run
