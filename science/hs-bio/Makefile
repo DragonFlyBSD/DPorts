@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: science/hs-bio/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: science/hs-bio/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	bio
 PORTVERSION=	0.5.2
@@ -15,5 +15,6 @@ USE_CABAL=	mtl parallel parsec QuickCheck>=2 tagsoup>=0.8
 
 EXECUTABLE=	fastout flowclip flx frecover frename orf rselect-pe
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
