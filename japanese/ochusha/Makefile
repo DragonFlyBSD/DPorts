@@ -1,5 +1,5 @@
 # Created by: sgr
-# $FreeBSD: japanese/ochusha/Makefile 316350 2013-04-23 11:46:54Z bapt $
+# $FreeBSD: japanese/ochusha/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ochusha
 PORTVERSION=	0.5.8.2
@@ -26,6 +26,7 @@ DESKTOP_ENTRIES="Ochusha" "${COMMENT}" \
 		"ochusha" "Network;" \
 		false
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|-DG.*_DISABLE_DEPRECATED||g'
