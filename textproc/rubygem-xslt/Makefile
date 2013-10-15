@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-xslt
-# Date created:		2011-04-03
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: textproc/rubygem-xslt/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: textproc/rubygem-xslt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xslt
 PORTVERSION=	0.9.9
@@ -20,4 +16,5 @@ USE_RUBYGEMS=	yes
 GEM_NAME=	ruby-${PORTNAME}-${PORTVERSION}
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
