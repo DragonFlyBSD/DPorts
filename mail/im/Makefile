@@ -1,5 +1,5 @@
 # Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: mail/im/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: mail/im/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	im
 PORTVERSION=	151
@@ -19,6 +19,7 @@ MAKE_ARGS=	prefix=${PREFIX} imlibdir=${ETCDIR}
 CONFIGURE_ARGS+=	--enable-rpop
 .endif
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
