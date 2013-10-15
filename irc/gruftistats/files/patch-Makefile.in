@@ -1,4 +1,4 @@
-$FreeBSD: ports/irc/gruftistats/files/patch-Makefile.in,v 1.2 2012/11/17 05:58:28 svnexp Exp $
+$FreeBSD: irc/gruftistats/files/patch-Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- Makefile.in.orig	Sun Sep 16 06:57:25 2001
 +++ Makefile.in	Mon Dec 24 23:43:31 2001
