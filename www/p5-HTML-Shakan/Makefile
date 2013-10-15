@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Shakan/Makefile 324540 2013-08-10 15:16:34Z kuriyama $
+# $FreeBSD: www/p5-HTML-Shakan/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Shakan
 PORTVERSION=	0.17
@@ -51,6 +51,7 @@ MAN3=	HTML::Shakan.3 \
 	HTML::Shakan::Widgets::Simple.3 \
 	HTML::Shakan::Widgets::jQueryUI.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
