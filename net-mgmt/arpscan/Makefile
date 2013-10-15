@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: ports/net-mgmt/arpscan/Makefile,v 1.15 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-mgmt/arpscan/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	arpscan
 PORTVERSION=	0.5
@@ -19,4 +19,5 @@ CONFIGURE_ARGS=--with-libdnet=${LOCALBASE}
 
 PLIST_FILES=	bin/arpscan
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
