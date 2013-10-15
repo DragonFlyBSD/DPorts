@@ -1,9 +1,5 @@
-# Ports collection makefile for:	zsync
-# Date created:			16 Jan 2005
-# Whom:				Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-#
-# $FreeBSD: ports/net/zsync/Makefile,v 1.12 2012/11/17 06:00:26 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
+# $FreeBSD: net/zsync/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	zsync
 PORTVERSION=	0.6.2
@@ -22,6 +18,7 @@ PORTDOCS=	COPYING INSTALL NEWS README
 MAN1=		zsync.1 \
 		zsyncmake.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${BINS:S,^,${WRKSRC}/,} ${PREFIX}/bin
 	${INSTALL_MAN} ${MAN1:S,^,${WRKSRC}/doc/,} ${MAN1PREFIX}/man/man1
