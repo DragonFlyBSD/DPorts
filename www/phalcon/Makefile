@@ -1,5 +1,5 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: www/phalcon/Makefile 324768 2013-08-15 12:03:21Z wg $
+# $FreeBSD: www/phalcon/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phalcon
 PORTVERSION=	1.2.3
@@ -24,6 +24,7 @@ USE_PHPEXT=	yes
 USE_PHPIZE=	yes
 USE_PHP_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
