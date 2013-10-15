@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/spe/Makefile 315272 2013-03-26 10:03:49Z bapt $
+# $FreeBSD: editors/spe/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	SPE
 PORTVERSION=	0.8.4.h
@@ -40,6 +40,7 @@ DESKTOP_ENTRIES=	"SPE (Stani's Python Editor)" \
 			"Development;IDE;Debugger;GUIDesigner;" \
 			true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MENCRYPTED_DEBUG}
