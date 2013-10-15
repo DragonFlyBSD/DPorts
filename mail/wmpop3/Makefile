@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: mail/wmpop3/Makefile 324137 2013-08-02 02:50:14Z danfe $
+# $FreeBSD: mail/wmpop3/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	wmpop3
 PORTVERSION=	0.5.6a
@@ -24,6 +24,7 @@ PORTEXAMPLES=	wmpop3rc
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
