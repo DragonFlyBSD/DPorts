@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mksunbootcd
-# Date Created:				5 Jan 2001
-# Whom:					Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/sysutils/mksunbootcd/Makefile,v 1.8 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: sysutils/mksunbootcd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mksunbootcd
 PORTVERSION=	1.0
@@ -19,6 +15,7 @@ PLIST_FILES=	bin/mksunbootcd
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mksunbootcd ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${PREFIX}/man/man1
