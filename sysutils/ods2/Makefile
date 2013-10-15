@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ods2
-# Date created:				31 January 2006
-# Whom:				Thierry Dussuet <dussuett@wigwam.ethz.ch>
-#
-# $FreeBSD: ports/sysutils/ods2/Makefile,v 1.2 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: Thierry Dussuet <dussuett@wigwam.ethz.ch>
+# $FreeBSD: sysutils/ods2/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ods2
 PORTVERSION=	1.3
@@ -22,6 +18,7 @@ MAKE_ARGS=	CCFLAGS="${CFLAGS}"
 PLIST_FILES=	sbin/ods2
 PORTDOCS=	aareadme.too aareadme.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|cc |${CC} |; /-oods2/ s|vmstime\.o|& -lcompat|' \
 		${WRKSRC}/${MAKEFILE}
