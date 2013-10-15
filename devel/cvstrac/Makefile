@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@spc.org>
-# $FreeBSD: devel/cvstrac/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/cvstrac/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME?=	cvstrac
 PORTVERSION=	2.0.1
@@ -20,6 +20,7 @@ MAKE_JOBS_UNSAFE=	yes
 NOMAN=
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	@${CAT} ${PKGMESSAGE}
