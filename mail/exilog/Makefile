@@ -1,9 +1,5 @@
-# New ports collection makefile for:	exilog
-# Date created:				03 Jun 2005
-# Whom:					Vsevolod Stakhov <vsevolod@highsecure.ru>
-#
-# $FreeBSD: ports/mail/exilog/Makefile,v 1.20 2012/11/17 05:59:02 svnexp Exp $
-#
+# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
+# $FreeBSD: mail/exilog/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	exilog
 PORTVERSION=	0.5
@@ -18,7 +14,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 # Default sql backend
@@ -41,6 +37,7 @@ EXILOGDIR?=	${PREFIX}/www/exilog
 .else
 EXILOGDIR?=	${PREFIX}/exilog
 .endif
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if defined(WITHOUT_AGENT)
 PLIST_SUB+=	AGENT="@comment "
