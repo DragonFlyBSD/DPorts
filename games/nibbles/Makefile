@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  nibbles
-# Date created:		Tue Jul 15, 2002
-# Whom:			Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/games/nibbles/Makefile,v 1.9 2012/11/17 05:57:47 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: games/nibbles/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	nibbles
 PORTVERSION=	1.2
@@ -19,6 +14,7 @@ CFLAGS+=	-Wall
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -c -o main.o main.c)
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -c -o misc.o misc.c)
