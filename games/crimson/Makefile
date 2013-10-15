@@ -1,5 +1,5 @@
 # Created by: Jan Jungnickel <jan@jungnickel.com>
-# $FreeBSD: games/crimson/Makefile 327385 2013-09-16 12:56:55Z bapt $
+# $FreeBSD: games/crimson/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	crimson
 PORTVERSION=	0.5.3
@@ -17,4 +17,5 @@ USE_SDL=	mixer sdl ttf
 
 MAN6=		crimson.6
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
