@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-themes/lxappearance/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-themes/lxappearance/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	lxappearance
 PORTVERSION=	0.5.2
@@ -15,8 +15,6 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gnomehack gtk20 intlhack
-
-MAN1=		lxappearance.1
 
 PORTDOCS=	AUTHORS README
 
@@ -34,9 +32,7 @@ post-patch:
 .endif
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
