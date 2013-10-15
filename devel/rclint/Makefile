@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rclint/Makefile 317149 2013-05-02 21:13:42Z crees $
+# $FreeBSD: devel/rclint/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rclint
 PORTVERSION=	0.0.6
@@ -18,6 +18,7 @@ SUB_FILES=	${PORTNAME}
 PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	${PORTNAME}.py errors.en
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,\(DATADIR = \)'\.',\1'${DATADIR}'," \
 		${WRKSRC}/${PORTNAME}.py
