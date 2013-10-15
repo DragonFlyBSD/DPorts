@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kuklomenos
-# Date created:				2008/08/31
-# Whom:					chinsan
-#
-# $FreeBSD: games/kuklomenos/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: chinsan
+# $FreeBSD: games/kuklomenos/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kuklomenos
 PORTVERSION=	0.4.5
@@ -27,6 +23,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHEAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MVORBIS}
