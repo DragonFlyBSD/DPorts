@@ -1,5 +1,5 @@
 # Created by: Hideyuki KURASHINA <rushani@FreeBSD.org>
-# $FreeBSD: japanese/yasou-fpw/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: japanese/yasou-fpw/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	yasou-fpw
 PORTVERSION=	1.0.b0
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/yasou
 EXTRACT_BEFORE_ARGS=	-qL
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/dict/yasou-fpw/yasou/data
 	${INSTALL_DATA} ${WRKSRC}/yasou/data/honmon ${PREFIX}/share/dict/yasou-fpw/yasou/data
