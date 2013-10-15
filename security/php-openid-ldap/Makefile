@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+freebsd@irtnog.org>
-# $FreeBSD: ports/security/php-openid-ldap/Makefile,v 1.1 2013/02/18 00:30:30 svnexp Exp $
+# $FreeBSD: security/php-openid-ldap/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openid-ldap
 PORTVERSION=	0.8.9
@@ -44,6 +44,7 @@ PLIST_DIRS=	%%WWWDIR%%/images/seatbelt \
 		%%WWWDIR%%/images \
 		%%WWWDIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
