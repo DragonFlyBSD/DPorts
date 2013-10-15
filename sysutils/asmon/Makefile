@@ -1,5 +1,5 @@
 # Created by: jack
-# $FreeBSD: sysutils/asmon/Makefile 324077 2013-07-31 22:59:47Z bapt $
+# $FreeBSD: sysutils/asmon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	asmon
 PORTVERSION=	0.61
@@ -23,6 +23,7 @@ MAKE_ARGS+=	LIBDIR="-L${LOCALBASE}/lib" \
 
 PLIST_FILES=	bin/asmon
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's:gcc:${CC} ${CFLAGS}:' ${BUILD_WRKSRC}/Makefile
 
