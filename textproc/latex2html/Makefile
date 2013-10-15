@@ -1,5 +1,5 @@
 # Created by: brett@peloton.physics.montana.edu
-# $FreeBSD: textproc/latex2html/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: textproc/latex2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	latex2html
 PORTVERSION=	2008
@@ -34,6 +34,7 @@ TEXMFDIR=	share/texmf
 MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 PORTDOCS=	FAQ INSTALL LICENSE README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
