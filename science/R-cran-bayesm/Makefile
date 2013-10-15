@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/R-cran-bayesm/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: science/R-cran-bayesm/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	bayesm
 PORTVERSION=	2.2.4
@@ -13,4 +13,5 @@ COMMENT=	Bayesian Inference for Marketing/Micro-econometrics
 USE_R_MOD=		yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
