@@ -1,5 +1,5 @@
 # Created by: Robert Schlotterbeck <robert@rs.tarrant.tx.us>
-# $FreeBSD: devel/xxl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/xxl/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xxl
 PORTVERSION=	1.0.1
@@ -21,6 +21,7 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	xxl.html xxl.pdf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MTHREADS}
