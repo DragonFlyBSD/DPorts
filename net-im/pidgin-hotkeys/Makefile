@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/pidgin-hotkeys/Makefile 325748 2013-08-31 00:18:11Z bapt $
+# $FreeBSD: net-im/pidgin-hotkeys/Makefile 328166 2013-09-24 16:47:23Z garga $
 
 PORTNAME=	pidgin-hotkeys
 PORTVERSION=	0.2.4
@@ -9,7 +9,7 @@ MASTER_SITES=	SF
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	A pidgin plugin that allows user to assign global hotkeys
 
-LIB_DEPENDS=	purple:${PORTSDIR}/net-im/libpurple
+LIB_DEPENDS=	libpurple.so:${PORTSDIR}/net-im/libpurple
 BUILD_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/pidgin/hotkeys.so \
 		lib/pidgin/hotkeys.la
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,X11/keysym.h,X11/X.h,' ${WRKSRC}/src/hotkeys.c
 
