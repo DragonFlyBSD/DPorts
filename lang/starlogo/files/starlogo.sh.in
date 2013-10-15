@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/lang/starlogo/files/starlogo.sh.in,v 1.3 2012/11/17 05:58:57 svnexp Exp $
+# $FreeBSD: lang/starlogo/files/starlogo.sh.in 300896 2012-07-14 13:54:48Z beat $
 
 cd %%DATADIR%%/sample-projects && \
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -cp "%%DATADIR%%/starlogo.jar" starlogo.Toplevel compiler english "init 100" "$@"
