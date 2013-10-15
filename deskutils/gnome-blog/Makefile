@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/gnome-blog/Makefile 326142 2013-09-03 12:50:18Z bapt $
+# $FreeBSD: deskutils/gnome-blog/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #   $MCom: ports/deskutils/gnome-blog/Makefile,v 1.5 2007/08/08 21:52:36 mezz Exp $
 
 PORTNAME=	gnome-blog
@@ -22,4 +22,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gnomeblog.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
