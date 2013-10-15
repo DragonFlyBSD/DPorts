@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sqlitemanager
-# Date created:		2006-12-18
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/databases/sqlitemanager/Makefile,v 1.5 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: databases/sqlitemanager/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlitemanager
 PORTVERSION=	1.2.3
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 PLIST_SUB+=	WWWDIR_REL="${WWWDIR_REL}"
 USE_PHP=	sqlite
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	${CP} -R ${WRKSRC}/ ${WWWDIR}
