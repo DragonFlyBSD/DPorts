@@ -1,5 +1,5 @@
 # Created by: John Alden + Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-Config-Wrest/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Config-Wrest/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-Wrest
 PORTVERSION=	1.036
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 MAN3=	Config::Wrest.3 \
 	Data::Serializer::Config::Wrest.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
