@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: shells/psh/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: shells/psh/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	psh
 PORTVERSION=	1.8.1
@@ -84,6 +84,7 @@ MAN3=	Psh::Builtins::Alias.3 \
 	Psh::Strategy::Perlfunc_heavy.3 \
 	Psh::Strategy::Perlscript.3
 
+NO_STAGE=	yes
 post-install:
 	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
