@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: ports/www/py-django-livesettings/Makefile,v 1.5 2013/01/04 19:44:32 svnexp Exp $
+# $FreeBSD: www/py-django-livesettings/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-livesettings
 DISTVERSION=	1.4-12
@@ -21,6 +21,7 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/-/_/}
 PYDISTUTILS_PKGVERSION=	${DISTVERSION:S/-/_/}
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" -delete
 
