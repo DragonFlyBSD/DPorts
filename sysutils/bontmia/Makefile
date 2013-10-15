@@ -1,5 +1,5 @@
 # Created by: Henrik Andersen
-# $FreeBSD: sysutils/bontmia/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: sysutils/bontmia/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bontmia
 PORTVERSION=	0.14
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/bontmia
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bontmia ${PREFIX}/bin
 
