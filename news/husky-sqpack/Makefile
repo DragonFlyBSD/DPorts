@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-sqpack/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-sqpack/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	sqpack
 PORTVERSION=	1.2.4
@@ -17,6 +17,7 @@ MAN1=		sqpack.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/sqpack
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's^/etc/fido/config^${PREFIX}/etc/fido/config^' \
 		${WRKSRC}/sqpack.1
