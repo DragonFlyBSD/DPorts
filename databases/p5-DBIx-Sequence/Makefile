@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: databases/p5-DBIx-Sequence/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: databases/p5-DBIx-Sequence/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Sequence
 PORTVERSION=	1.5
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		DBIx::Sequence.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
