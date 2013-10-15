@@ -1,5 +1,5 @@
 # Created by: anarcat@anarcat.ath.cx
-# $FreeBSD: finance/ledgersmb/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: finance/ledgersmb/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	ledger-smb
 PORTVERSION=	1.1.12
@@ -20,6 +20,7 @@ USES=		shebangfix perl5
 SHEBANG_FILES=	*.pl locale/*/*.pl bin/*/*.pl utils/*/*.pl
 SUB_FILES=	${PORTNAME}-httpd.conf pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKDIR} ; \
 		${TAR} -cf - ${PORTNAME} | ( cd ${PREFIX} ; ${TAR} xf - )
