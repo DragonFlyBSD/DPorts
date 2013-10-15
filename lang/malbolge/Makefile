@@ -1,9 +1,5 @@
-# New ports collection makefile for:	malbolge
-# Date created:		13 July 2012
-# Whom:		Dereckson <dereckson@gmail.com>
-#
-# $FreeBSD: ports/lang/malbolge/Makefile,v 1.7 2012/11/17 05:58:52 svnexp Exp $
-#
+# Created by: Dereckson <dereckson@gmail.com>
+# $FreeBSD: lang/malbolge/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	malbolge
 PORTVERSION=	0.1.1
@@ -17,6 +13,7 @@ PLIST_FILES=	bin/malbolge
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/malbolge ${PREFIX}/bin
 
