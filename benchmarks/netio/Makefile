@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: benchmarks/netio/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/netio/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	netio
 PORTVERSION=	1.26
@@ -22,6 +22,7 @@ MAKE_ENV+=	OUT="-o" LIBS=${PTHREAD_LIBS}
 PLIST_FILES+=	bin/netio6
 .endif
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} O=.o CFLAGS="${CFLAGS}" ${GMAKE} all
