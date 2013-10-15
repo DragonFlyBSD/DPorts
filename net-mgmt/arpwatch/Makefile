@@ -1,9 +1,5 @@
-# New ports collection makefile for:    arpwatch
-# Date created:         March 24 1997
-# Whom:                 Brian Somers <brian@FreeBSD.org>
-#
-# $FreeBSD: net-mgmt/arpwatch/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Brian Somers <brian@FreeBSD.org>
+# $FreeBSD: net-mgmt/arpwatch/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	arpwatch
 PORTVERSION=	2.1.a15
@@ -31,6 +27,7 @@ USE_RC_SUBR=	arpwatch
 MAKE_ARGS=	ARPDIR=${ARPDIR}
 .endif
 
+NO_STAGE=	yes
 post-install:
 	if [ ! -d ${PREFIX}/arpwatch ]; then				\
 		${MKDIR} ${PREFIX}/arpwatch;				\
