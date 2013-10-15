@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: audio/paprefs/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: audio/paprefs/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	paprefs
 PORTVERSION=	0.9.9
@@ -16,6 +16,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gnomeprefix intltool
 
 CONFIGURE_ARGS=	--disable-lynx
