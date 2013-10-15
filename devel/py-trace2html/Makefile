@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: ports/devel/py-trace2html/Makefile,v 1.6 2012/11/17 05:56:51 svnexp Exp $
+# $FreeBSD: devel/py-trace2html/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	trace2html
 PORTVERSION=	0.2.1
@@ -18,4 +18,5 @@ USE_PYDISTUTILS=	easy_install
 PLIST_FILES=	bin/trace2html.py \
 		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
