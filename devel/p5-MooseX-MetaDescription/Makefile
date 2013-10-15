@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-MetaDescription/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-MetaDescription/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MooseX-MetaDescription
 PORTVERSION=	0.06
@@ -19,11 +19,5 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		MooseX::MetaDescription.3 \
-		MooseX::MetaDescription::Description.3 \
-		MooseX::MetaDescription::Meta::Attribute.3 \
-		MooseX::MetaDescription::Meta::Class.3 \
-		MooseX::MetaDescription::Meta::Trait.3
 
 .include <bsd.port.mk>
