@@ -1,6 +1,5 @@
-# Ports collection Makefile for:		p5-Object-MultiType
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Object-MultiType/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Object-MultiType/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Object-MultiType
 PORTVERSION=	0.05
@@ -16,4 +15,5 @@ MAN3=		Object::MultiType.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
