@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA
-# $FreeBSD: x11/xcoloredit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/xcoloredit/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcoloredit
 PORTVERSION=	1.2
@@ -19,4 +19,5 @@ MANCOMPRESSED=	yes
 MAN1=		xcoloredit.1
 PLIST_FILES=	bin/xcoloredit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
