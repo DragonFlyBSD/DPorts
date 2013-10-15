@@ -1,5 +1,5 @@
 # Created by: n@nectar.com
-# $FreeBSD: dns/hesiod/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: dns/hesiod/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	hesiod
 PORTVERSION=	3.2.1
@@ -32,6 +32,7 @@ MAN3=		hesiod.3 hesiod_end.3 hesiod_free_list.3 	\
 		hesiod_free_string.3 hesiod_parse_result.3
 MAN5=		hesiod.conf.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIDN}
