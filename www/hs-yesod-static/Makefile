@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-yesod-static/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-yesod-static/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yesod-static
 PORTVERSION=	1.2.0
@@ -16,5 +16,6 @@ USE_CABAL=	base64-bytestring>=0.1.0.1 cereal>=0.3 conduit>=0.5 \
 		transformers>=0.2.2 unix-compat>=0.2 wai>=1.3 \
 		wai-app-static>=1.3 yesod-core>=1.2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
