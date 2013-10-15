@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/porteasy/Makefile 326530 2013-09-06 17:55:21Z az $
+# $FreeBSD: ports-mgmt/porteasy/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	porteasy
 PORTVERSION=	2.8.5
@@ -17,6 +17,7 @@ SRC=		${.CURDIR}/src
 
 MAN8=		porteasy.8
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
