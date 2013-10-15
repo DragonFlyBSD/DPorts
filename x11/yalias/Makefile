@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: x11/yalias/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: x11/yalias/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	yalias
 PORTVERSION=	0.7
@@ -14,6 +14,7 @@ COMMENT=	An enhanced execution box with regex pattern matching
 
 USES=		pkgconfig
 USE_GNOME=	gtk20
+NO_STAGE=	yes
 
 ALL_TARGET=	yalias
 MAKE_ARGS=	prefix=${PREFIX} YALIASDIR=${DATADIR}
