@@ -1,5 +1,5 @@
 # Created by: sec@42.org
-# $FreeBSD: graphics/gmt/Makefile 325086 2013-08-21 03:46:21Z sunpoet $
+# $FreeBSD: graphics/gmt/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gmt
 PORTVERSION=	4.5.8
@@ -37,6 +37,7 @@ GDAL_DESC=	Compile in experimental GDAL support
 NETCDF_DESC=	With netCDF (7) support
 OCTAVE_DESC=	With OCTAVE support
 
+NO_STAGE=	yes
 .include "Makefile.man"
 
 NETCDF_LIB_DEPENDS=	libnetcdf.so:${PORTSDIR}/science/netcdf4
