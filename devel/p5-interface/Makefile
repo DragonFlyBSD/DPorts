@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/p5-interface/Makefile 324043 2013-07-31 12:51:11Z az $
+# $FreeBSD: devel/p5-interface/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	interface
 PORTVERSION=	0.03
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		interface.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
