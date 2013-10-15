@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-event-loop
-# Date created:		08 November 2006
-# Whom:			Alexander Botero-Lowry <alexbl@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/ruby-event-loop/Makefile,v 1.5 2012/11/17 05:56:57 svnexp Exp $
-#
+# Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
+# $FreeBSD: devel/ruby-event-loop/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	event-loop
 PORTVERSION=	0.3
@@ -17,6 +13,7 @@ COMMENT=	An Event loop for Ruby
 USE_RUBY=	yes
 USE_RAKE=	yes
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${RUBY} setup.rb config --prefix=${PREFIX}
 
