@@ -1,9 +1,5 @@
-# New ports collection makefile for:	abntex
-# Date created:	Tue Sep 17 22:08:35 BRT 2002
-# Whom:		Hammurabi Mendes <hmendes@brturbo.com>
-#
-# $FreeBSD: print/abntex/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Hammurabi Mendes <hmendes@brturbo.com>
+# $FreeBSD: print/abntex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	abntex
 PORTVERSION=	0.8.2
@@ -21,6 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 # install files
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/geratss ${PREFIX}/bin
