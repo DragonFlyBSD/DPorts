@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: editors/leafpad/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: editors/leafpad/Makefile 328511 2013-09-27 20:04:54Z jgh $
 
 PORTNAME=	leafpad
 PORTVERSION=	0.8.18.1
@@ -40,8 +40,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${INSTALL} -d ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
