@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/tycho/Makefile 308006 2012-11-30 12:56:41Z bapt $
+# $FreeBSD: games/tycho/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tycho
 PORTVERSION=	0.1
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	bin/tycho \
 		bin/tycho-exstat
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/exstat ${PREFIX}/bin/${PORTNAME}-exstat
