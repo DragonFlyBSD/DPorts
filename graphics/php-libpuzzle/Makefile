@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php-libpuzzle
-# Date created:				18 May 2010
-# Whom:					Naram Qashat <cyberbotx@cyberbotx.com>
-#
-# $FreeBSD: graphics/php-libpuzzle/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Naram Qashat <cyberbotx@cyberbotx.com>
+# $FreeBSD: graphics/php-libpuzzle/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libpuzzle
 PORTVERSION=	0.11
@@ -32,4 +28,5 @@ USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 USE_PHP_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
