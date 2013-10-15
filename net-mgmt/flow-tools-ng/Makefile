@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flow-tools
-# Date created:				2000 Jul 25
-# Whom:					@BABOLO <.@babolo.ru>
-#
-# $FreeBSD: ports/net-mgmt/flow-tools-ng/Makefile,v 1.9 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: @BABOLO <.@babolo.ru>
+# $FreeBSD: net-mgmt/flow-tools-ng/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	flow-tools
 PORTVERSION=	0.68.5.1
@@ -69,6 +65,7 @@ CONFIGURE_ARGS+=--with-openssl="${OPENSSLBASE}"
 CONFIGURE_ARGS+=--without-openssl
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD}\
 	 -e 's|@sysconfdir@/sym/|${PREFIX}/share/flow-tools/|' \
