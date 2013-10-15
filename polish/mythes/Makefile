@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mythes
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/polish/mythes/Makefile,v 1.5 2012/11/17 06:00:44 svnexp Exp $
-#
+# $FreeBSD: polish/mythes/Makefile 327761 2013-09-20 22:34:42Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	1.5
@@ -26,6 +21,7 @@ PLIST_FILES=	%%DATADIR%%/th_pl_PL_v2.dat \
 		%%DATADIR%%/th_pl_PL_v2.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_pl_PL_v2.dat ${WRKSRC}/th_pl_PL_v2.idx ${DATADIR}/
