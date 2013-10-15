@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: www/py-django-mptt/Makefile 320552 2013-06-11 12:18:36Z wg $
+# $FreeBSD: www/py-django-mptt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-mptt
 PORTVERSION=	0.5.4
@@ -23,4 +23,5 @@ USES=		gettext
 USE_PYDISTUTILS=yes
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
