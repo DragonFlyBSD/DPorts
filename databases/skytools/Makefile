@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/skytools/Makefile 323437 2013-07-22 08:24:51Z marino $
+# $FreeBSD: databases/skytools/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	skytools
 PORTVERSION=	2.1.12
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--with-python=${PYTHON_CMD} \
 		--docdir=${EXAMPLESDIR} \
 		--with-pgconfig=${LOCALBASE}/bin/pg_config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's=share/doc=share/examples=' ${WRKSRC}/setup.py
 
