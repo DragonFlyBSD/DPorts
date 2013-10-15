@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-rbison/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/ruby-rbison/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rbison
 PORTVERSION=	0.0.7
@@ -23,6 +23,7 @@ EXAMPLES=	CalcFileLexer.rb	CalcStringLexer.rb	\
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rbison ${PREFIX}/bin/
 .if !defined(NOPORTDOCS)
