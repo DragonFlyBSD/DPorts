@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xbuffy
-# Date created:		18 June 1995
-# Whom:			dchapes@zeus.leitch.com
-#
-# $FreeBSD: ports/mail/xbuffy/Makefile,v 1.18 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: dchapes@zeus.leitch.com
+# $FreeBSD: mail/xbuffy/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	xbuffy
 PORTVERSION=	3.3.3
@@ -21,4 +17,5 @@ GNU_CONFIGURE=	yes
 MAN1=		xbuffy.1
 PLIST_FILES=	bin/xbuffy lib/X11/app-defaults/XBuffy
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
