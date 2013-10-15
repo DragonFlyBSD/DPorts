@@ -1,9 +1,5 @@
-# New ports collection makefile for:	easylatex
-# Date created:		2006-02-15
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: print/easylatex/Makefile 326272 2013-09-04 13:07:40Z az $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: print/easylatex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	easylatex
 PORTVERSION=	0.080
@@ -20,6 +16,7 @@ RUN_DEPENDS=	p5-Getopt-Declare>=0:${PORTSDIR}/devel/p5-Getopt-Declare
 NO_BUILD=	yes
 USES=		perl5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/lib/easylatex,${DATADIR},' \
 		${WRKSRC}/${PORTNAME}.pl
