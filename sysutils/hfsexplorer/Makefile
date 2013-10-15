@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hfsexplorer
-# Date created:		2009-11-27
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: sysutils/hfsexplorer/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: sysutils/hfsexplorer/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hfsexplorer
 PORTVERSION=	0.21
@@ -29,6 +25,7 @@ JAVA_VERSION=	1.6
 
 WRKSRC=		${WRKDIR}
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC}/dist && ${REINPLACE_CMD} -e 's|lib/|${DATADIR}/lib/|g' \
 		hfsx.sh resview.sh unhfs.sh
