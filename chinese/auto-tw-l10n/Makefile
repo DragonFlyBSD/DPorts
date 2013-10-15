@@ -1,9 +1,8 @@
 # Created by: Michael C . Wu <keichii@iteration.net>
-# $FreeBSD: ports/chinese/auto-tw-l10n/Makefile,v 1.36 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: chinese/auto-tw-l10n/Makefile 329141 2013-10-03 06:39:28Z sunpoet $
 
 PORTNAME=	auto-tw-l10n
-PORTVERSION=	1.13
-PORTREVISION=	1
+PORTVERSION=	1.14
 CATEGORIES=	chinese
 MASTER_SITES=	LOCAL/sunpoet
 
@@ -13,18 +12,10 @@ COMMENT=	Automatic localization for Traditional Chinese locale
 NO_BUILD=	yes
 USE_XZ=		yes
 
-PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
-pre-install:
-	@${FIND} ${WRKSRC} -name "*.orig" -delete
-	@${MV} ${WRKSRC}/make.conf.in ${WRKSRC}/make.conf
-
 do-install:
-	${MKDIR} ${PREFIX}/share/skel/zh_TW.UTF-8/
-	${CP} ${WRKSRC}/* ${PREFIX}/share/skel/zh_TW.UTF-8/
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/skel/zh_TW.UTF-8/
+	${INSTALL_DATA} ${WRKSRC}/* ${STAGEDIR}${PREFIX}/share/skel/zh_TW.UTF-8/
 
 .include <bsd.port.mk>
