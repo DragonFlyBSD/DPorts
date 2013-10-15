@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/link-grammar/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: textproc/link-grammar/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	link-grammar
 PORTVERSION=	4.7.4
@@ -28,6 +28,7 @@ MAKE_JOBS_UNSAFE=	yes
 DOCS=		AUTHORS LICENSE MAINTAINERS README
 MAN1=		link-parser.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|-lpthread|${PTHREAD_LIBS}|g" \
 		${WRKSRC}/configure ${WRKSRC}/${PORTNAME}/Makefile.in
