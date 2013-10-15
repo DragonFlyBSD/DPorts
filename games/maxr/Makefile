@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/maxr/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/maxr/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	maxr
 PORTVERSION=	0.2.8
@@ -24,6 +24,7 @@ DESKTOP_ENTRIES="M.A.X.R." \
 		"Game;StrategyGame;" \
 		false
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^LIBS=/ s|-lSDL_|`${SDL_CONFIG} --libs` &|' \
 		-e '/^LIBS=/ s|-lSDL |`${SDL_CONFIG} --libs` |' \
