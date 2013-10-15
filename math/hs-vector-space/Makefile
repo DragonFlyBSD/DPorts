@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-vector-space/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-vector-space/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	vector-space
 PORTVERSION=	0.8.6
@@ -13,5 +13,6 @@ LICENSE=	BSD
 
 USE_CABAL=	Boolean>=0.1.0 MemoTrie>=0.5 NumInstances>=1.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
