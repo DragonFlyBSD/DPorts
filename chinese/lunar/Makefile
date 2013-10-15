@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  lunar
-# Date created:			  Mon Feb 03, 1997
-# Whom:				  David O'Brien (obrien@FreeBSD.org)
-#
-# $FreeBSD: ports/chinese/lunar/Makefile,v 1.12 2012/11/17 05:54:57 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@FreeBSD.org)
+# $FreeBSD: chinese/lunar/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	lunar
 PORTVERSION=	2.1
@@ -18,6 +13,7 @@ COMMENT=	Convert between Gregorian Solar Calendar (SC) and Lunar Calendar (LC)
 ALL_TARGET=
 MAN1=		lunar.1
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/share/chinese
 	${INSTALL_PROGRAM} ${WRKSRC}/lunar ${PREFIX}/bin
