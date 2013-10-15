@@ -1,5 +1,5 @@
 # Created by: Robert Schlotterbeck <robert@rs.tarrant.tx.us>
-# $FreeBSD: devel/vstr/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/vstr/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	vstr
 PORTVERSION=	1.0.15
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 
 MAN3=		vstr.3 vstr_const.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
