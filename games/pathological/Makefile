@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/games/pathological/Makefile,v 1.9 2013/01/09 20:04:45 svnexp Exp $
+# $FreeBSD: games/pathological/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pathological
 PORTVERSION=	1.1.3
@@ -19,6 +19,7 @@ MANCOMPRESSED=	yes
 
 DOC_FILES=	favicon.ico index.html
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	(cd ${WRKSRC}; tar -cf - circuits graphics music sounds pathological.ico pathological.py pathological.xpm) | \
