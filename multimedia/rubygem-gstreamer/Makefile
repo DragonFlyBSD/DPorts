@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/rubygem-gstreamer/Makefile 320395 2013-06-09 18:52:18Z swills $
+# $FreeBSD: multimedia/rubygem-gstreamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gstreamer
 PORTVERSION=	2.0.2
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
