@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: audio/resid/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/resid/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	resid
 PORTVERSION=	0.16
