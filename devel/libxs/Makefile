@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/libxs/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/libxs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libxs
 PORTVERSION=	1.2.0
@@ -22,6 +22,7 @@ OPTIONS_RADIO=		PGM
 OPTIONS_RADIO_PGM=	INTERNAL EXTERNAL
 OPTIONS_DEFAULT=PLUGINS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
@@ -75,7 +76,7 @@ CONFIGURE_ARGS+=	--without-documentation
 
 .if ${PORT_OPTIONS:MINTERNAL}
 CONFIGURE_ARGS+=	--with-pgm
-USE_PERL5=		yes
+USES+=			perl5
 CFLAGS+=		-fPIC
 .endif
 
