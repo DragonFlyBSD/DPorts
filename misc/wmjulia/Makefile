@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: misc/wmjulia/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/wmjulia/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	wmjulia
 PORTVERSION=	0.40
@@ -15,6 +15,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}.app/${PORTNAME}
 USE_GMAKE=	yes
 USE_XORG=	xpm xext
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
