@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: sysutils/hdup/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/hdup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hdup
 PORTVERSION=	2.0.14
@@ -31,6 +31,7 @@ USE_AUTOTOOLS=	autoconf
 MAN1=		hdup.1
 MAN5=		hdup.conf.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTAR_PORT}
