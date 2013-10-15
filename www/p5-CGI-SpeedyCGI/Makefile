@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: www/p5-CGI-SpeedyCGI/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: www/p5-CGI-SpeedyCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-SpeedyCGI
 PORTVERSION=	2.22
@@ -19,6 +19,7 @@ OPTIONS_DEFINE=	APACHE
 OPTIONS_DEFAULT=APACHE
 APACHE_DESC=	Build mod_speedycgi
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
