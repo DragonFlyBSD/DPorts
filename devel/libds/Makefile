@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libds
-# Date created:			25 October 2002
-# Whom:				Peter Bozarov (kingofgib@users.sourceforge.net)
-#
-# $FreeBSD: ports/devel/libds/Makefile,v 1.6 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: Peter Bozarov (kingofgib@users.sourceforge.net)
+# $FreeBSD: devel/libds/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=		libds
 PORTVERSION=		1.0
@@ -17,6 +13,7 @@ COMMENT=		ANSI Generic Data Structures Library
 USE_LDCONFIG=		yes
 ALL_TARGET=		gcc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MAN3=	libds.3
