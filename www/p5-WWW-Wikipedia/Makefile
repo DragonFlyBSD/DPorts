@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-WWW-Wikipedia/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Wikipedia/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Wikipedia
 PORTVERSION=	2.01
@@ -25,4 +25,5 @@ MAN1=		wikipedia.1
 MAN3=		WWW::Wikipedia.3 \
 		WWW::Wikipedia::Entry.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
