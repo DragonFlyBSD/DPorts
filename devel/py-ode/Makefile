@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/devel/py-ode/Makefile,v 1.11 2013/02/04 06:49:10 svnexp Exp $
+# $FreeBSD: devel/py-ode/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ode
 PORTVERSION=	1.2.0
@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	TRIMESH
 OPTIONS_DEFAULT=TRIMESH
 TRIMESH_DESC=	Trimesh support (sync with OPCODE opt of devel/ode)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
