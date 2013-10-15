@@ -1,5 +1,5 @@
 # Created by: Jamie Hermans <jamie@hermans.ca>
-# $FreeBSD: www/gallery/Makefile 317472 2013-05-06 06:54:19Z bapt $
+# $FreeBSD: www/gallery/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gallery
 PORTVERSION=	1.5.10
@@ -19,6 +19,7 @@ RUN_DEPENDS=	giftopnm:${PORTSDIR}/graphics/netpbm \
 USE_PHP=	pcre session
 WANT_PHP_WEB=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
