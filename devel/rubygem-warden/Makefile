@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-warden
-# Date created:				2011-06-16
-# Whom:					Ryan Steinmetz <rpsfa@rit.edu>
-#
-# $FreeBSD: devel/rubygem-warden/Makefile 322963 2013-07-13 18:29:04Z swills $
+# Created by: Ryan Steinmetz <rpsfa@rit.edu>
+# $FreeBSD: devel/rubygem-warden/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	warden
 PORTVERSION=	1.2.2
@@ -18,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
