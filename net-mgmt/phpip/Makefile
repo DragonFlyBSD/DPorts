@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpip
-# Date created:		2006-10-28
-# Whom:			Babak Farrokhi <babak@farrokhi.net>
-#
-# $FreeBSD: net-mgmt/phpip/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Babak Farrokhi <babak@farrokhi.net>
+# $FreeBSD: net-mgmt/phpip/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	phpip
 PORTVERSION=	${SNAPSHOT}
@@ -24,6 +20,7 @@ WANT_PHP_WEB=	yes
 PHPIP?=		www/phpip
 PLIST_SUB+=	PHPIP=${PHPIP}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${PHPIP}
 	@${CP} -R ${WRKSRC}/ ${PREFIX}/${PHPIP}
