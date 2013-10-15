@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-Ima-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Ima-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Ima-DBI
 PORTVERSION=	0.35
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Ima::DBI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
