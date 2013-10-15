@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: graphics/ipe/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: graphics/ipe/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ipe
 PORTVERSION=	7.1.4
@@ -48,6 +48,7 @@ PORTDOCS=	*
 DESKTOP_ENTRIES="Ipe" "" "${DATADIR}/${PORTVERSION}/ipe.png" \
 		"${PORTNAME}" "" true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
