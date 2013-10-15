@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Apache2-SiteControl
-# Date created: 			18 June 2011
-# Whom:					Nick Hilliard <nick@foobar.org
-#
-# $FreeBSD: www/p5-Apache2-SiteControl/Makefile 313599 2013-03-07 16:53:45Z miwi $
-#
+# Created by: Nick Hilliard <nick@foobar.org
+# $FreeBSD: www/p5-Apache2-SiteControl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache2-SiteControl
 PORTVERSION=	1.05
@@ -29,7 +25,8 @@ RUN_DEPENDS=	p5-Apache-AuthCookie>=3.08:${PORTSDIR}/www/p5-Apache-AuthCookie \
 OPTIONS_DEFINE=		RADIUS
 OPTIONS_DEFAULT=	RADIUS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Apache2::SiteControl.3 \
 		Apache2::SiteControl::GrantAllRule.3 \
@@ -40,6 +37,7 @@ MAN3=		Apache2::SiteControl.3 \
 		Apache2::SiteControl::User.3 \
 		Apache2::SiteControl::UserFactory.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MRADIUS}
