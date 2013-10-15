@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/astro/sky2000/Makefile,v 1.5 2013/02/25 11:44:09 svnexp Exp $
+# $FreeBSD: astro/sky2000/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	sky2000
 PORTVERSION=	0.2
@@ -10,6 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Binary representation of the Sky2000 star catalog
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 DATADIR=	${PREFIX}/share/nova
 
