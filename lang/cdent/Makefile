@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdent
-# Date created:		2010-04-25
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/cdent/Makefile,v 1.5 2012/11/17 05:58:48 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: lang/cdent/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	cdent
 PORTVERSION=	0.5.7
@@ -18,4 +14,5 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/yaml/__init__.py:${PORTSDIR}/devel/py-yaml
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
