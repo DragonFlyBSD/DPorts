@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-SaltedHash/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Crypt-SaltedHash/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-SaltedHash
 PORTVERSION=	0.06
@@ -16,4 +16,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Crypt::SaltedHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
