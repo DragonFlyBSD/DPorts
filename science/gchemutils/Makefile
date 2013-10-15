@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: science/gchemutils/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: science/gchemutils/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	gchemutils
 PORTVERSION=	0.14.2
@@ -45,6 +45,7 @@ PLIST_SUB=	VER=0.14 GOFFICE=0.10
 OPTIONS_DEFINE=	XUL
 XUL_DESC=	Build browser plugin (requires libxul)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXUL}
