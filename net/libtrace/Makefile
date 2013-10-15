@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: ports/net/libtrace/Makefile,v 1.7 2013/02/18 05:49:50 svnexp Exp $
+# $FreeBSD: net/libtrace/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libtrace
 PORTVERSION=	3.0.15
@@ -24,6 +24,7 @@ MAN1=	traceanon.1 traceconvert.1 tracefilter.1 tracemerge.1 \
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
 	${WRKSRC}/configure
