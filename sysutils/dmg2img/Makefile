@@ -1,16 +1,10 @@
-# New ports collection makefile for:	dmg2img
-# Date created:		2009-11-27
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: sysutils/dmg2img/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: sysutils/dmg2img/Makefile 329066 2013-10-02 16:16:21Z vg $
 
 PORTNAME=	dmg2img
 PORTVERSION=	1.6.2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://fbsd.zlonet.ru/distfiles/ \
-		http://tourservice.kz/zloidemon/distfiles/ \
-		http://z-up.ru/zloidemon/distfiles/
+MASTER_SITES=	LOCAL/vg
 
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	DMG2IMG convert tool
@@ -18,6 +12,7 @@ COMMENT=	DMG2IMG convert tool
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/vfdecrypt
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}/bin|g' \
 		${WRKSRC}/Makefile
