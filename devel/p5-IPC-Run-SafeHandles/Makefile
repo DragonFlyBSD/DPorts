@@ -1,5 +1,4 @@
-# created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/p5-IPC-Run-SafeHandles/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-IPC-Run-SafeHandles/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IPC-Run-SafeHandles
 PORTVERSION=	0.04
@@ -27,4 +26,5 @@ PLIST_DIRS=	%%SITE_PERL%%/IPC/Run \
 PLIST_FILES=	%%SITE_PERL%%/IPC/Run/SafeHandles.pm \
 				%%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC/Run/SafeHandles/.packlist
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
