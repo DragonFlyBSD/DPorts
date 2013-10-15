@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: multimedia/smile/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/smile/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	smile
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 DESKTOP_ENTRIES="Smile" "${COMMENT}" "${PREFIX}/share/pixmaps/smile.png" \
 		"${PORTNAME}" "AudioVideo;Qt;" false
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|bash|sh|' ${WRKSRC}/mainfrm.cpp \
 		${WRKSRC}/render.cpp
