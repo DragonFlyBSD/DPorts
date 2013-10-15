@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/py-s3cmd/pkg-plist,v 1.5 2012/11/17 06:00:16 svnexp Exp $
+@comment $FreeBSD: net/py-s3cmd/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PORTDOCS%%%%DOCSDIR%%/INSTALL
 %%PORTDOCS%%%%DOCSDIR%%/NEWS
 %%PORTDOCS%%%%DOCSDIR%%/README
