@@ -1,5 +1,5 @@
 # Created by: Tom Sparks <tsparks@appliedops.net>
-# $FreeBSD: textproc/yali/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/yali/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	yali
 PORTVERSION=	1.1
@@ -26,6 +26,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/yali
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${WRKSRC}
 
