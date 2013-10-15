@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-yard/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: textproc/rubygem-yard/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	yard
 PORTVERSION=	0.8.6.2
@@ -19,4 +19,5 @@ PLIST_FILES=	bin/yard \
 		bin/yardoc \
 		bin/yri
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
