@@ -1,8 +1,5 @@
-# New ports collection makefile for:	apache-mode.el
-# Date created:				15 Nov 2006
-# Whom:					Max N. Boyarov <m.boyarov@bsd.by>
-#
-# $FreeBSD: ports/www/apache-mode.el/Makefile,v 1.2 2012/11/17 06:02:28 svnexp Exp $
+# Created by: Max N. Boyarov <m.boyarov@bsd.by>
+# $FreeBSD: www/apache-mode.el/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	apache-mode.el
 PORTVERSION=	2.0
@@ -22,6 +19,7 @@ NO_BUILD=	yes
 EMACSLISPDIR=	${PREFIX}/share/emacs/site-lisp
 XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${EMACSLISPDIR}
 	${MKDIR} ${XEMACSLISPDIR}
