@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/mydumper/Makefile 316992 2013-05-01 07:15:53Z wen $
+# $FreeBSD: databases/mydumper/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mydumper
 PORTVERSION=	0.5.2
@@ -21,6 +21,7 @@ USE_GNOME=	glib20
 USE_MYSQL=	yes
 USES=		cmake pkgconfig
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||' ${WRKSRC}/CMakeLists.txt
 
