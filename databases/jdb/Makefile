@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: databases/jdb/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/jdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	jdb
 PORTVERSION=	1.14
@@ -13,4 +13,5 @@ USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --datadir=${PREFIX}/lib/jdb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
