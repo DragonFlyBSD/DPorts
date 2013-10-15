@@ -1,4 +1,4 @@
-# $FreeBSD: devel/R-cran-gbm/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: devel/R-cran-gbm/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gbm
 DISTVERSION=	2.0-8
@@ -14,4 +14,5 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
