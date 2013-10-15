@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-FITS-Header/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-FITS-Header/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Astro-FITS-Header
 PORTVERSION=	3.07
@@ -14,6 +14,7 @@ LICENSE=	GPLv3
 
 USES=		perl5
 USE_PERL5=	modbuild
+NO_STAGE=	yes
 
 MAN3=	Astro::FITS::Header.3 \
 	Astro::FITS::Header::AST.3 \
