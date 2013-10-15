@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asr-manpages
-# Date created:		April 15, 2003
-# Whom:			Max Khon <fjoe@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/asr-manpages/Makefile,v 1.3 2012/11/17 05:59:32 svnexp Exp $
-#
+# Created by: Max Khon <fjoe@FreeBSD.org>
+# $FreeBSD: misc/asr-manpages/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	asr-manpages
 PORTVERSION=	20000406
@@ -22,6 +18,7 @@ MAN3=		chastise.3
 MAN5=		normality.5
 MAN8=		bosskill.8 ctluser.8 guru.8 knife.8 luser.8 nuke.8 pmsd.8
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_MAN} ${WRKDIR}/bosskill.8	${PREFIX}/man/man8
 	@${INSTALL_MAN} ${WRKDIR}/c.1		${PREFIX}/man/man1
