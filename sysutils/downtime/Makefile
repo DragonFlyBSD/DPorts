@@ -1,5 +1,5 @@
 # Created by: Nick Withers (nick@nickwithers.com)
-# $FreeBSD: sysutils/downtime/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: sysutils/downtime/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	downtime
 PORTVERSION=	0.4.0
@@ -16,4 +16,5 @@ USE_GNOME=	gtk20
 MAN1=		downtime.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
