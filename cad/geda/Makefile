@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: cad/geda/Makefile 326373 2013-09-05 09:15:49Z bapt $
+# $FreeBSD: cad/geda/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	geda
 PORTVERSION=	1.8.1
@@ -49,6 +49,7 @@ CONFLICTS=	geda-docs-[0-9]* geda-examples-[0-9]* geda-gattrib-[0-9]* \
 
 PORTSCOUT=	limitw:1,even
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MDOCS)
