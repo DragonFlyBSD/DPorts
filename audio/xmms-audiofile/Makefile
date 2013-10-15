@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-audiofile/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/xmms-audiofile/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-audiofile
 PORTVERSION=	0.1
@@ -16,6 +16,7 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 PLIST_FILES=	lib/xmms/Input/libaf.so
 USES=		gmake
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
