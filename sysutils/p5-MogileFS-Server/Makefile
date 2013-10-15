@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: sysutils/p5-MogileFS-Server/Makefile 325165 2013-08-21 19:47:57Z trociny $
+# $FreeBSD: sysutils/p5-MogileFS-Server/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	MogileFS-Server
 PORTVERSION=	2.70
@@ -25,7 +25,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 REINPLACE_ARGS=	-i ''
 USE_RC_SUBR=	mogilefsd mogstored
 
@@ -54,6 +55,7 @@ MAN3=		MogileFS::Checksum.3 \
 		MogileFS::Worker::Query.3 \
 		MogileFS::Worker::Replicate.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
