@@ -1,8 +1,8 @@
 # Created by: Ryan T. Dean <rtdean@cytherianage.net>
-# $FreeBSD: net/jicmp/Makefile 323763 2013-07-26 23:28:58Z wg $
+# $FreeBSD: net/jicmp/Makefile 329313 2013-10-04 14:26:06Z danilo $
 
 PORTNAME=	jicmp
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	net java
 MASTER_SITES=	SF/opennms/JICMP/stable-1.4/
 
