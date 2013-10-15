@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types/Makefile 327485 2013-09-17 16:28:18Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Types/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Types
 PORTVERSION=	0.38
@@ -38,4 +38,5 @@ MAN3=		MooseX::Types.3 \
 		MooseX::Types::Util.3 \
 		MooseX::Types::Wrapper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
