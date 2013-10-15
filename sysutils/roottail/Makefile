@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: sysutils/roottail/Makefile 322004 2013-06-28 22:32:28Z bapt $
+# $FreeBSD: sysutils/roottail/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	roottail
 PORTVERSION=	1.2
@@ -23,6 +23,7 @@ USES=		imake
 USE_XORG=	x11 xext
 MAKE_ARGS=	CC="${CC}"
 
+NO_STAGE=	yes
 pre-everything::
 .if defined(WITH_EXTRA_PATCH)
 	@${ECHO_MSG}
