@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-DOM-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-DOM-Lite/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-DOM-Lite
 PORTVERSION=	0.15
@@ -17,4 +17,5 @@ MAN3=		XML::DOM::Lite.3 XML::DOM::Lite::Document.3 \
 		XML::DOM::Lite::NodeList.3 XML::DOM::Lite::Parser.3 \
 		XML::DOM::Lite::XPath.3 XML::DOM::Lite::XSLT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
