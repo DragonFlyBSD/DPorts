@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-Borges
-# Date created:		31 January 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: www/ruby-borges/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: www/ruby-borges/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	borges
 PORTVERSION=	1.1.0
@@ -23,6 +19,7 @@ EXAMPLES=	data/examples/ruby/borges/*
 
 RUBY_REQUIRE=	Ruby > 180
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(RUBY_PROVIDED)
