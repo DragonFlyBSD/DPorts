@@ -1,9 +1,5 @@
-# New ports collection makefile for:	posadis
-# Date Created:				27 Feb 2003
-# Whom:					Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: dns/posadis/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: dns/posadis/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	posadis
 PORTVERSION=	0.60.5
@@ -20,6 +16,7 @@ USE_AUTOTOOLS=	autoconf libltdl libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+NO_STAGE=	yes
 
 .if defined(WITH_FAM) || exists(${LOCALBASE}/lib/libfam.so)
 CONFIGURE_ARGS=	--enable-fam
