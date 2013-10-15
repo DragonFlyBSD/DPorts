@@ -1,5 +1,5 @@
 # Created by: Dave Chapeskie <dchapes@ddm.on.ca>
-# $FreeBSD: games/ifm/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: games/ifm/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ifm
 PORTVERSION=	5.4
@@ -19,6 +19,7 @@ CONFIGURE_ENV=	WISH=${LOCALBASE}/bin/wish8.4
 
 MAN1=		ifm.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/lib doc man/lib man/g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e '/docdir/d' ${WRKSRC}/Makefile.in
