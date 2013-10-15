@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_timesheet/Makefile 324523 2013-08-10 14:10:44Z wg $
+# $FreeBSD: finance/trytond_timesheet/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_timesheet
 PORTVERSION=	2.4.2
@@ -19,4 +19,5 @@ CONFLICTS=	trytond_timesheet-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
