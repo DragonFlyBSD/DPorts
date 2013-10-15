@@ -1,9 +1,5 @@
-# New ports collection makefile for:   asmx
-# Date created:        28 October 2008
-# Whom:                elbarto
-#
-# $FreeBSD: ports/devel/asmx/Makefile,v 1.5 2012/11/17 05:55:33 svnexp Exp $
-#
+# Created by: elbarto
+# $FreeBSD: devel/asmx/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	asmx
 PORTVERSION=	1.8.2
@@ -34,6 +30,7 @@ USE_ZIP=	yes
 
 PORTDOCS=	README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:M1802}
