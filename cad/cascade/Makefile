@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cascade
-# Date created:				9 November 2002
-# Whom:					Marc Fonvieille <blackend@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/cascade/Makefile,v 1.6 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: Marc Fonvieille <blackend@FreeBSD.org>
+# $FreeBSD: cad/cascade/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	cascade
 PORTVERSION=	1.4
@@ -21,6 +17,7 @@ PLIST_FILES=	bin/cascade
 
 MAN1=		cascade.1
 
+NO_STAGE=	yes
 do-install:
 		@${INSTALL_SCRIPT} ${WRKSRC}/cascade ${PREFIX}/bin
 		@${INSTALL_MAN} ${WRKSRC}/cascade.1 ${MANPREFIX}/man/man1
