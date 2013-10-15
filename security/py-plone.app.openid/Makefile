@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-plone.app.openid
-# Date created:				22 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/security/py-plone.app.openid/Makefile,v 1.4 2012/11/17 06:01:17 svnexp Exp $
-#
+# $FreeBSD: security/py-plone.app.openid/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.app.openid
 PORTVERSION=	2.0.2
@@ -28,7 +23,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.openid>=0:${PORTSDIR}/security/py-plon
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-#USE_ZOPE=	yes
+USE_PYDISTUTILS=easy_install
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
