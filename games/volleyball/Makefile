@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/volleyball/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/volleyball/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	volleyball
 PORTVERSION=	0.8.6
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES="Pocket Volleyball" \
 		"Game;SportsGame;ArcadeGame;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-configure:
