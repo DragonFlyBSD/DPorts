@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael127@home.com>
-# $FreeBSD: graphics/feh/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: graphics/feh/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	feh
 PORTVERSION=	2.9.3
@@ -18,8 +18,8 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		giblib.1:${PORTSDIR}/graphics/giblib
 
 USE_XORG=	x11 xt xinerama
-USE_PERL5_RUN=	yes
-USE_GMAKE=	yes
+USES=		gmake perl5
+USE_PERL5=	run
 USE_BZIP2=	yes
 
 MAN1=		feh.1 feh-cam.1 gen-cam-menu.1
@@ -30,6 +30,7 @@ MAKE_ENV+=	LDFLAGS="${LDFLAGS}"
 
 PORTDOCS=	AUTHORS ChangeLog README TODO
 
+NO_STAGE=	yes
 .include	<bsd.port.options.mk>
 
 post-patch:
