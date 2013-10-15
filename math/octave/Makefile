@@ -1,5 +1,5 @@
-# Created by: chuckr@freebsd.org
-# $FreeBSD: math/octave/Makefile 327411 2013-09-16 16:32:07Z bapt $
+# Created by: chuckr@FreeBSD.org
+# $FreeBSD: math/octave/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave
 PORTVERSION=	3.6.4
@@ -42,6 +42,7 @@ GNU_CONFIGURE=	yes
 INFO=		octave liboctave OctaveFAQ
 MAN1=		octave.1 mkoctfile.1 octave-config.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libopenblas.so)
