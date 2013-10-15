@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/irc/ircd-hybrid/files/ircd-hybrid.in,v 1.2 2012/11/17 05:58:28 svnexp Exp $
+# $FreeBSD: irc/ircd-hybrid/files/ircd-hybrid.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: ircd-hybrid
 # REQUIRE: DAEMON
