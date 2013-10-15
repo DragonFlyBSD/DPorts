@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/gnudoku/Makefile 322366 2013-07-06 07:59:09Z bapt $
+# $FreeBSD: games/gnudoku/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	GNUDoku
 PORTVERSION=	0.93
@@ -16,6 +16,7 @@ LIB_DEPENDS=	gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
 USES=		gmake pkgconfig
 MAKE_ENV=	CXXLAGS="${CXXFLAGS}"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|PREFIX=|PREFIX?=|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|CXXFLAGS=|CXXFLAGS+=|' ${WRKSRC}/Makefile
