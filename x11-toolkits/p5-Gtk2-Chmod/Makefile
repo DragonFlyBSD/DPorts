@@ -1,9 +1,5 @@
-# New ports collection makefile for:	x11-toolkits/p5-Gtk2-Chmod
-# Date created:		2009-10-19
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: x11-toolkits/p5-Gtk2-Chmod/Makefile 325959 2013-09-02 09:36:29Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: x11-toolkits/p5-Gtk2-Chmod/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Gtk2-Chmod
 PORTVERSION=	0.0.0
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Gtk2::Chmod.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
