@@ -1,5 +1,5 @@
 # Created by: Andrey A. Chernov <ache@FreeBSD.org>
-# $FreeBSD: converters/trans/Makefile 326531 2013-09-06 18:02:19Z danfe $
+# $FreeBSD: converters/trans/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	trans
 PORTVERSION=	1.20
@@ -14,6 +14,7 @@ LIBDIR=		${PREFIX}/lib/trans
 MAN1=		transhtm.1 transiso.1 transce8.1 transtab.1 checkiso.1 \
 		checkuni.1
 
+NO_STAGE=	yes
 post-patch:
 # Fix the build against arbitrary make(1) implementation
 	@${REINPLACE_CMD} -e 's/cd src ; make/$$(MAKE) -C src/' \
