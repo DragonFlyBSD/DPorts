@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-module-empris/Makefile 325734 2013-08-30 23:31:49Z bapt $
+# $FreeBSD: x11-wm/e17-module-empris/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	empris
 PORTVERSION=	20130510
@@ -19,4 +19,5 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_EFL=	edje libtool_hack modarch_hack
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
