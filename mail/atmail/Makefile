@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: mail/atmail/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: mail/atmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	atmail
 PORTVERSION=	1.0.4
@@ -19,6 +19,7 @@ SUB_FILES=	pkg-message
 OPTIONS_DEFINE=	LDAP MBSTRING
 MBSTRING_DESC= Support for UTF8 folder names
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
