@@ -1,6 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: security/aescrypt/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/aescrypt/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	aescrypt
 PORTVERSION=	0.7
@@ -17,6 +16,7 @@ COMMENT=	Command-line AES encryption/decryption suite
 
 GNU_CONFIGURE=	yes
 MAKE_ENV+=	BINGRP=wheel
+NO_STAGE=	yes
 
 MAN1=		aescrypt.1 aesget.1
 MANCOMPRESSED=	yes
