@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	winpdb
-# Date created:			Feb 15, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/winpdb/Makefile,v 1.12 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/winpdb/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	winpdb
 PORTVERSION=	1.4.8
@@ -24,4 +19,5 @@ USE_WX=		2.6+
 WX_COMPS=	python
 WANT_UNICODE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
