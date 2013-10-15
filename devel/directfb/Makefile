@@ -1,5 +1,5 @@
 # Created by: Devaux Fabien <fab@gcu.info>
-# $FreeBSD: devel/directfb/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: devel/directfb/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	directfb
 PORTVERSION=	1.4.13
@@ -25,10 +25,9 @@ OPTIONS_DEFAULT=	FREETYPE X11 SDL
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=	pathfix ncurses
+USES=	pathfix ncurses gmake perl5
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 
 DIRECTFB_SHLIB=	5 # LT_CURRENT
 DIRECTFB_BIN=	5 # LT_BINARY
@@ -48,6 +47,7 @@ CONFIGURE_ARGS=	--disable-osx --disable-extra-warnings --disable-profiling \
 		--with-inputdrivers=all --with-smooth-scaling \
 		--with-dither-rgb16=advanced
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
