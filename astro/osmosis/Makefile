@@ -1,5 +1,5 @@
 # Created by: Gleb Smirnoff <glebius@FreeBSD.org>
-# $FreeBSD: astro/osmosis/Makefile 318915 2013-05-24 00:29:09Z amdmi3 $
+# $FreeBSD: astro/osmosis/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	osmosis
 PORTVERSION=	0.43.1
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Command line Java app for processing OpenStreetMap data
 
+NO_STAGE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
