@@ -1,5 +1,5 @@
 # Created by: Damian Gerow
-# $FreeBSD: security/openconnect/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/openconnect/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openconnect
 PORTVERSION=	5.01
@@ -36,6 +36,7 @@ OPTIONS_DEFINE=	PROXY GNUTLS
 PROXY_DESC=	Enable automatic proxy configuratio via libproxy
 GNUTLS_DESC=	Use GnuTLS instead of OpenSSL(EXPERIMENTAL)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
