@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fuzz
-# Date created:				25 July 2000
-# Whom:					Chris D. Faulhaber <jedgar@FreeBSD.org>
-#
-# $FreeBSD: ports/security/fuzz/Makefile,v 1.10 2012/11/17 06:01:04 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
+# $FreeBSD: security/fuzz/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fuzz
 PORTVERSION=	0.6
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	yes
 MAN1=		fuzz.1
 PLIST_FILES=	bin/fuzz
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
