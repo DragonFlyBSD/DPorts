@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@wenheping.com>
-# $FreeBSD: converters/py-svglib/Makefile 317273 2013-05-03 21:56:56Z bapt $
+# $FreeBSD: converters/py-svglib/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	svglib
 PORTVERSION=	0.6.3
@@ -20,4 +20,5 @@ LICENSE=	LGPL3
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
