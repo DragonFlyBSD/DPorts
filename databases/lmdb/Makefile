@@ -1,5 +1,5 @@
 # Created by: Xin Li <delphij@FreeBSD.org>
-# $FreeBSD: databases/lmdb/Makefile 326841 2013-09-09 19:29:00Z delphij $
+# $FreeBSD: databases/lmdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	lmdb
 PORTVERSION=	0.9.8
@@ -24,6 +24,7 @@ GO_PROJECT=	mdb
 GO_TAGNAME=	${PORTNAME:tu}_${PORTVERSION}
 FETCH_ARGS?=	-o ${DISTDIR}/${DISTFILES}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/liblmdb.a ${PREFIX}/lib/
 	${INSTALL_LIB} ${WRKSRC}/liblmdb.so ${PREFIX}/lib/liblmdb.so.0
