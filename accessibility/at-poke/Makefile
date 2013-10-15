@@ -1,5 +1,5 @@
 # Created by: Marcus von Appen <mva@sysfault.org>
-# $FreeBSD: accessibility/at-poke/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: accessibility/at-poke/Makefile 328663 2013-09-29 10:08:35Z mva $
 
 PORTNAME=	at-poke
 PORTVERSION=	0.2.3
