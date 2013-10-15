@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: archivers/squsq/Makefile 319452 2013-05-30 19:51:38Z antoine $
+# $FreeBSD: archivers/squsq/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	squsq
 PORTVERSION=	3.3
@@ -10,6 +10,7 @@ DISTNAME=	t20-squsq-3.3
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Compressor/decompressor for CP/M "Squeeze" compressed files
 
+NO_STAGE=	yes
 CONFLICTS=	squirrel-[0-9]*
 WRKSRC=		${WRKDIR}/t20-squsq
 MAKEFILE=	${FILESDIR}/Makefile
