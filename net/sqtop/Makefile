@@ -1,5 +1,5 @@
 # Created by: Marco Steinbach <coco@webdev.c0c0.intra>
-# $FreeBSD: net/sqtop/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: net/sqtop/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sqtop
 DISTVERSION=	2011-11-01
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 OPTIONS_DEFINE=		NCURSES
 OPTIONS_DEFAULT=	NCURSES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MNCURSES}
