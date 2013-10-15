@@ -1,4 +1,4 @@
-# $FreeBSD: net/vncreflector/Makefile 313119 2013-02-28 17:28:09Z brooks $
+# $FreeBSD: net/vncreflector/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	vncreflector
 PORTVERSION=	1.2.4
@@ -17,6 +17,7 @@ USE_RC_SUBR=	vncreflector
 ALL_TARGET=	default
 WRKSRC=		${WRKDIR}/vnc_reflector
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/Makefile
 
