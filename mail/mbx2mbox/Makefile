@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mbx2mbox
-# Date created:		23 November 1998
-# Whom:			Josh Gilliam <josh@quick.net>
-#
-# $FreeBSD: mail/mbx2mbox/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Josh Gilliam <josh@quick.net>
+# $FreeBSD: mail/mbx2mbox/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mbx2mbox
 PORTVERSION=	0.34
@@ -21,4 +17,5 @@ USE_PERL5=	configure
 
 MAN1=	mbx2mbox.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
