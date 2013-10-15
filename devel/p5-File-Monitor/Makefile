@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-File-Monitor/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-File-Monitor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Monitor
 PORTVERSION=	1.00
@@ -21,4 +21,5 @@ MAN3=		File::Monitor::Base.3 \
 		File::Monitor::Delta.3 \
 		File::Monitor::Object.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
