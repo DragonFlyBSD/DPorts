@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kissd
-# Date created:				25 Aug 2005
-# Whom:					Ed Schouten <ed@fxq.nl>
-#
-# $FreeBSD: ports/net/kissd/Makefile,v 1.5 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: Ed Schouten <ed@fxq.nl>
+# $FreeBSD: net/kissd/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	kissd
 PORTVERSION=	0.3
