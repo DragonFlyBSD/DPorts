@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/syndigator/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/syndigator/Makefile 327776 2013-09-20 23:36:50Z bapt $
 # $MCom: ports/www/syndigator/Makefile,v 1.4 2007/09/09 22:45:27 mezz Exp $
 
 PORTNAME=	syndigator
@@ -26,6 +26,7 @@ NO_BUILD=	yes
 
 GNOMEDIR=	${PREFIX}/share
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|./lib|${PREFIX}/${SITE_PERL_REL}/${PORTNAME}|' \
 		${WRKSRC}/syndigator
