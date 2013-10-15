@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 327214 2013-09-14 03:06:04Z amdmi3 $
+# $FreeBSD: games/neverball/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -27,6 +27,7 @@ MAN6=		neverball.6 neverputt.6
 
 LDFLAGS+=	-lX11 # calls X functions directly, but doesn't link libX11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
