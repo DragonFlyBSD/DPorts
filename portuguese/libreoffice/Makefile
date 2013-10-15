@@ -1,9 +1,10 @@
-# $FreeBSD: portuguese/libreoffice/Makefile 306473 2012-10-26 20:24:07Z jkim $
+# $FreeBSD: portuguese/libreoffice/Makefile 327763 2013-09-20 22:38:31Z bapt $
 
 LO_I18N=	pt
 LO_HAS_HELPPACK=	yes
 CATEGORIES=	portuguese editors
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 
 .include <bsd.port.mk>
