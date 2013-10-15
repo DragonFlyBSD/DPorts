@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net-im/tmsnc/Makefile 323776 2013-07-27 10:19:30Z marino $
+# $FreeBSD: net-im/tmsnc/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	tmsnc
 PORTVERSION=	0.3.2
@@ -19,4 +19,5 @@ PLIST_FILES=	bin/tmsnc
 
 MAN1=		tmsnc.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
