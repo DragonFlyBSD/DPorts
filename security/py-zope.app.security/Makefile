@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.app.security
-# Date created:				22 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/security/py-zope.app.security/Makefile,v 1.3 2012/11/17 06:01:17 svnexp Exp $
-#
+# $FreeBSD: security/py-zope.app.security/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.app.security
 PORTVERSION=	3.7.5
@@ -31,6 +26,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.app.localpermission>=0:${PORTSDIR}/secu
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
