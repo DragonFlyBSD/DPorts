@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: math/p5-Statistics-Distributions/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Statistics-Distributions/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-Distributions
 PORTVERSION=	1.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Statistics::Distributions.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
