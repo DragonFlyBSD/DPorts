@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/cre/Makefile 314400 2013-03-17 07:35:44Z beech $
+# $FreeBSD: games/cre/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cre
 DISTVERSION=	1.2beta_r2
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	*.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
