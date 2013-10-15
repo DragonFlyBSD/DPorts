@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xjig
-# Date Created:		17 Sep 1997
-# Whom:			Vanilla I. Shu <vanilla@MinJe.com.TW>
-#
-# $FreeBSD: ports/games/xjig/Makefile,v 1.12 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
+# $FreeBSD: games/xjig/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xjig
 PORTVERSION=	2.4
@@ -21,6 +17,7 @@ MAKEFILE=	Makefile.Linux
 MAN1=		xjig.1
 PLIST_FILES=	bin/xjig
 
+NO_STAGE=	yes
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/xjig ${PREFIX}/bin/xjig
 	@ ${INSTALL_MAN} ${WRKSRC}/xjig.man ${PREFIX}/man/man1/xjig.1
