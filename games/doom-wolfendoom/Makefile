@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-wolfendoom/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: games/doom-wolfendoom/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wolfendoom
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ NO_WRKSUBDIR=	yes
 
 DATADIR=	${DMDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../doom-data/Makefile.include"
 
 .include <bsd.port.pre.mk>
