@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: ports/mail/pm-lib/Makefile,v 1.10 2013/02/13 06:44:05 svnexp Exp $
+# $FreeBSD: mail/pm-lib/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	pm-lib
 PORTVERSION=	20091202
@@ -20,6 +20,7 @@ NO_BUILD=	yes
 PORTDOCS=	*
 PORTDATA=	*
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/pm-*.rc ${DATADIR}
