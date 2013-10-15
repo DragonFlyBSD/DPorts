@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aribas
-# Date created:		2007-06-19
-# Whom:			Lars Engels <lme@FreeBSD.org>
-#
-# $FreeBSD: ports/math/aribas/Makefile,v 1.5 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: Lars Engels <lme@FreeBSD.org>
+# $FreeBSD: math/aribas/Makefile 329546 2013-10-06 09:58:28Z lme $
 
 PORTNAME=	aribas
 PORTVERSION=	1.64
@@ -19,7 +15,6 @@ BUILD_WRKSRC=	${WRKSRC}/src
 PLIST_FILES=	bin/aribas
 PORTDOCS=	README aribas.doc aribas.man aribas.tut
 PORTEXAMPLES=	README factor.ari pi.ari queens.ari
-MAN1=		aribas.1
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^CC/d;' \
@@ -27,15 +22,13 @@ post-patch:
 		-e 's/CC) -o/CC) $$(CFLAGS) -o/' ${BUILD_WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/aribas ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 ${MAN1PREFIX}/man/man1/
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/examples/|} ${EXAMPLESDIR}
-.endif
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${DOCSDIR}/
-.endif
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/aribas ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 \
+		${STAGEDIR}${MAN1PREFIX}/man/man1/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/examples/|} \
+		${STAGEDIR}${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
