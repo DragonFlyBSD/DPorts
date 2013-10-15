@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:   indent
-# Date created:        28 August 1997
-# Whom:                Kapil Chowksey <kchowksey@hss.hns.com>
-#
-# $FreeBSD: devel/gindent/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Kapil Chowksey <kchowksey@hss.hns.com>
+# $FreeBSD: devel/gindent/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gindent
 PORTVERSION=	2.2.10
@@ -23,6 +18,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--program-prefix=g
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
