@@ -1,9 +1,5 @@
-# New ports collection makefile for:	adacurses
-# Date created:				19 June 2002
-# Whom:					olgeni@FreeBSD.org
-#
-# $FreeBSD: devel/adacurses/Makefile 316927 2013-04-30 12:27:50Z bapt $
-#
+# Created by: olgeni@FreeBSD.org
+# $FreeBSD: devel/adacurses/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=		adacurses
 PORTVERSION=		5.9
@@ -27,6 +23,7 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
 CONFIGURE_ENV=	ac_cv_path_LDCONFIG="${LDCONFIG} -m ${PREFIX}/lib" \
 		 ADA_SUBDIRS="gen src"
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/lib/adacurses
 	@${INSTALL_DATA} ${WRKSRC}/Ada95/src/*.ads ${PREFIX}/lib/adacurses
