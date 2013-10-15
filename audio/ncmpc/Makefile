@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/ncmpc/Makefile 321067 2013-06-16 19:16:13Z crees $
+# $FreeBSD: audio/ncmpc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ncmpc
 PORTVERSION=	0.20
@@ -13,6 +13,7 @@ LIB_DEPENDS=	mpdclient:${PORTSDIR}/audio/libmpdclient
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
+NO_STAGE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
