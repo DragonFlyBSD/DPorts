@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/odamex/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/odamex/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	odamex
 PORTVERSION=	0.6.2
@@ -19,6 +19,7 @@ OPTIONS_DEFINE=	LAUNCHER
 
 LAUNCHER_DESC=	Enable GUI launcher program
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLAUNCHER}
