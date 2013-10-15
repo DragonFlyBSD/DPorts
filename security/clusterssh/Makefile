@@ -1,5 +1,5 @@
 # Created by: lx
-# $FreeBSD: security/clusterssh/Makefile 325900 2013-09-01 18:18:40Z az $
+# $FreeBSD: security/clusterssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	clusterssh
 PORTVERSION=	4.01
@@ -34,4 +34,5 @@ MAN3=		App::ClusterSSH.3 \
 		App::ClusterSSH::L10N.3 \
 		App::ClusterSSH::L10N::en.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
