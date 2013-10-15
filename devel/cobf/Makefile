@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cobf
-# Date created:				14 May 2006
-# Whom:					Ed Schouten <ed@fxq.nl>
-#
-# $FreeBSD: ports/devel/cobf/Makefile,v 1.3 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Ed Schouten <ed@fxq.nl>
+# $FreeBSD: devel/cobf/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cobf
 PORTVERSION=	1.06
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}
 PORTDOCS=	COPYING README cobf.pdf
 PLIST_FILES=	bin/cobf
 
+NO_STAGE=	yes
 do-build:
 	@${MAKE} -C ${WRKSRC}/src/cpp
 
