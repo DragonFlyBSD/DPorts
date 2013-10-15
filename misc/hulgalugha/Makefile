@@ -1,5 +1,5 @@
-# Created by: alfred@freebsd.org
-# $FreeBSD: misc/hulgalugha/Makefile 317386 2013-05-04 22:30:06Z bapt $
+# Created by: alfred@FreeBSD.org
+# $FreeBSD: misc/hulgalugha/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	hulgalugha
 PORTVERSION=	1.0
