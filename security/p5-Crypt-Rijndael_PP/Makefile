@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/p5-Crypt-Rijndael_PP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-Rijndael_PP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Rijndael_PP
 PORTVERSION=	0.05
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Rijndael_PP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
