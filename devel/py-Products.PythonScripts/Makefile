@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-Products.PythonScripts/Makefile,v 1.4 2012/12/20 11:13:29 svnexp Exp $
+# $FreeBSD: devel/py-Products.PythonScripts/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.PythonScripts
 PORTVERSION=	2.13.2
@@ -22,5 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}AccessControl>=0:${PORTSDIR}/security/py-Acc
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
