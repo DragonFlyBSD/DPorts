@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/log4cpp/Makefile.man,v 1.3 2012/11/17 05:55:58 svnexp Exp $
+# $FreeBSD: devel/log4cpp/Makefile.man 300896 2012-07-14 13:54:48Z beat $
 
 .if exists (${LOCALBASE}/bin/doxygen) || !defined (NOPORTDOCS)
 MAN3+=	log4cpp.3

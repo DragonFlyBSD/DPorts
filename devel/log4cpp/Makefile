@@ -1,5 +1,5 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD: ports/devel/log4cpp/Makefile,v 1.31 2013/02/14 10:22:11 svnexp Exp $
+# $FreeBSD: devel/log4cpp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	log4cpp
 DISTVERSION=	1.1
@@ -17,6 +17,7 @@ USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 #.include "Makefile.man"
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # doxygen build is BROKEN atm
