@@ -1,5 +1,5 @@
 # Created by: Jesper Skriver <jesper@FreeBSD.org>
-# $FreeBSD: net/p5-Net-SSH-Perl/Makefile 325197 2013-08-22 13:38:34Z mat $
+# $FreeBSD: net/p5-Net-SSH-Perl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SSH-Perl
 PORTVERSION=	1.36
@@ -73,4 +73,5 @@ GMP_DESC=	Use the optimized Math::BigInt::GMP backend
 GMP_BUILD_DEPENDS=	p5-Math-BigInt-GMP>=0:${PORTSDIR}/math/p5-Math-BigInt-GMP
 GMP_RUN_DEPENDS=	${GMP_BUILD_DEPENDS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
