@@ -1,5 +1,5 @@
 # Created by: spf@xslt.cs.nccu.edu.tw
-# $FreeBSD: net/ifstat/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: net/ifstat/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ifstat
 PORTVERSION=	1.1
@@ -19,6 +19,7 @@ OPTIONS_DEFINE=	SNMP
 MAN1=		ifstat.1
 PLIST_FILES=	bin/ifstat
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSNMP}
