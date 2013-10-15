@@ -1,4 +1,4 @@
-# $FreeBSD: audio/tagutil/Makefile 323907 2013-07-29 20:13:57Z bapt $
+# $FreeBSD: audio/tagutil/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	tagutil
 PORTVERSION=	2.1
@@ -12,6 +12,7 @@ COMMENT=	Tool to manage tags in music files
 LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 
 USES=		pkgconfig
+NO_STAGE=	yes
 MAKE_ENV=	DESTDIR="${PREFIX}"
 
 MAN1=		tagutil.1
