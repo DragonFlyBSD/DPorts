@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mreport
-# Date created:		19 Dec 1999
-# Whom:			Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: ports/mail/mreport/Makefile,v 1.17 2012/11/17 05:59:06 svnexp Exp $
-#
+# Created by: Will Andrews <andrews@technologist.com>
+# $FreeBSD: mail/mreport/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mreport
 PORTVERSION=	0.9
@@ -17,6 +13,7 @@ ALL_TARGET=	ALL
 MAN8=		mreport.8
 PLIST_FILES=	sbin/mreport
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s/^.TH mreport 1/.TH mreport 8/g; s/^.LO 1/.LO 8/g;" \
 		${WRKSRC}/mreport.1
