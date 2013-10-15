@@ -1,9 +1,5 @@
-# New ports collection makefile for:   tuneradio
-# Date created:        5 Febuary 2004
-# Whom:                pozar
-#
-# $FreeBSD: ports/audio/tuneradio/Makefile,v 1.6 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: pozar
+# $FreeBSD: audio/tuneradio/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	tuneradio
 PORTVERSION=	1.3
@@ -15,6 +11,7 @@ MAINTAINER=	pozar@lns.com
 COMMENT=	A command line method of tuning a Brooktree FM tuner card
 
 PLIST_FILES=	bin/tuneradio
+NO_STAGE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tuneradio ${PREFIX}/bin
