@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-jack/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: audio/xmms-jack/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-jack
 PORTVERSION=	0.19
@@ -17,6 +17,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_GNOME=	gtk12
+NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 
