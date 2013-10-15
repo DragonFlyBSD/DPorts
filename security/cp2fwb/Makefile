@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: security/cp2fwb/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/cp2fwb/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	cp2fwb
 PORTVERSION=	0.6
@@ -17,6 +17,7 @@ PLIST_FILES=	bin/cp2fwbuilder
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
