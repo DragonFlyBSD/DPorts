@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stringencoders
-# Date created:        11 June 2007
-# Whom:                Steven Kreuzer <skreuzer@exit2shell.com>
-#
-# $FreeBSD: devel/stringencoders/Makefile 327376 2013-09-16 10:28:33Z az $
-#
+# Created by: Steven Kreuzer <skreuzer@exit2shell.com>
+# $FreeBSD: devel/stringencoders/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	stringencoders
 PORTVERSION=	3.10.3
@@ -19,6 +15,7 @@ HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
