@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/gopher/files/patch-object_BLblock.c,v 1.2 2012/11/17 06:00:01 svnexp Exp $
+$FreeBSD: net/gopher/files/patch-object_BLblock.c 300897 2012-07-14 14:29:18Z beat $
 
 --- object/BLblock.c.orig	Sun Aug 22 15:52:31 2004
 +++ object/BLblock.c	Sun Aug 22 15:53:33 2004

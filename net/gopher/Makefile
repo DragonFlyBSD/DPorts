@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gopher
-# Date created:		11 Dec 1994
-# Whom:			ats (original)
-#
-# $FreeBSD: ports/net/gopher/Makefile,v 1.32 2012/11/17 06:00:01 svnexp Exp $
-#
+# Created by: ats (original)
+# $FreeBSD: net/gopher/Makefile 328577 2013-09-28 15:14:32Z erwin $
 
 PORTNAME=	gopher
 PORTVERSION=	3.0.6
@@ -20,11 +16,18 @@ COMMENT=	Gopher client for access to a distributed document service
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
-MAN1=	gopher.1 gophfilt.1
-MAN5=	gopherrc.5
-
 pre-patch:
 	@${FIND} ${WRKSRC} -name '*.[ch]' | ${XARGS} ${REINPLACE_CMD} -e \
 		's,<malloc.h>,<stdlib.h>,'
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/gopher/gopher ${STAGEDIR}${PREFIX}/bin/gopher
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/gopher
+	${INSTALL_DATA} ${WRKSRC}/gopher/gopher.rc ${STAGEDIR}${PREFIX}/etc/gopher/gopher.rc
+	${INSTALL_DATA} ${WRKSRC}/gopher/gopherremote.rc ${STAGEDIR}${PREFIX}/etc/gopher/gopherremote.rc
+	${INSTALL_DATA} ${WRKSRC}/gopher/gopher.hlp ${STAGEDIR}${PREFIX}/etc/gopher/gopher.hlp
+	${INSTALL_PROGRAM} ${WRKSRC}/gophfilt/gophfilt ${STAGEDIR}${PREFIX}/bin/gophfilt
+	${INSTALL_MAN} ${WRKSRC}/doc/gopher.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/gophfilt.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/gopherrc.5 ${STAGEDIR}${MAN5PREFIX}/man/man5
 
 .include <bsd.port.mk>

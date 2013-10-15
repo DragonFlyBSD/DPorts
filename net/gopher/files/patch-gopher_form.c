@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/gopher/files/patch-gopher_form.c,v 1.2 2012/11/17 06:00:01 svnexp Exp $
+$FreeBSD: net/gopher/files/patch-gopher_form.c 300897 2012-07-14 14:29:18Z beat $
 
 --- gopher/form.c.orig	Sun Aug 22 15:55:22 2004
 +++ gopher/form.c	Sun Aug 22 15:55:36 2004

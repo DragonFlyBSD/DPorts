@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/gopher/files/patch-object_GSgopherobj.c,v 1.2 2012/11/17 06:00:01 svnexp Exp $
+$FreeBSD: net/gopher/files/patch-object_GSgopherobj.c 300897 2012-07-14 14:29:18Z beat $
 
 --- object/GSgopherobj.c.orig	Sun Aug 22 15:51:21 2004
 +++ object/GSgopherobj.c	Sun Aug 22 15:51:30 2004

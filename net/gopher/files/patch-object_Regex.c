@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/gopher/files/patch-object_Regex.c,v 1.2 2012/11/17 06:00:01 svnexp Exp $
+$FreeBSD: net/gopher/files/patch-object_Regex.c 300897 2012-07-14 14:29:18Z beat $
 
 --- object/Regex.c.orig	Wed Dec 18 22:49:17 2002
 +++ object/Regex.c	Wed Dec 18 22:49:29 2002
