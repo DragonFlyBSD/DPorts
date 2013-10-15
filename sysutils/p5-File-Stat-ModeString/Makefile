@@ -1,9 +1,5 @@
-# New ports collection makefile for:	File-Stat-ModeString
-# Date created:				Wed 10 Nov 2010 23:44:23 GMT
-# Whom:					Jase Thew <freebsd@beardz.net>
-#
-# $FreeBSD: sysutils/p5-File-Stat-ModeString/Makefile 326573 2013-09-07 06:47:20Z az $
-#
+# Created by: Jase Thew <freebsd@beardz.net>
+# $FreeBSD: sysutils/p5-File-Stat-ModeString/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	File-Stat-ModeString
 PORTVERSION=	1.00
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Stat::ModeString.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
