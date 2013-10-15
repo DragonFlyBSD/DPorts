@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Exporter-Declare/Makefile 324499 2013-08-10 13:19:11Z kuriyama $
+# $FreeBSD: devel/p5-Exporter-Declare/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Exporter-Declare
 PORTVERSION=	0.113
@@ -29,4 +29,5 @@ MAN3=	Exporter::Declare.3 \
 	Exporter::Declare::Meta.3 \
 	Exporter::Declare::Specs.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
