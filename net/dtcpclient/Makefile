@@ -1,4 +1,4 @@
-# $FreeBSD: net/dtcpclient/Makefile 319664 2013-06-02 14:23:35Z ume $
+# $FreeBSD: net/dtcpclient/Makefile 329331 2013-10-04 15:48:06Z ume $
 
 PORTNAME=	dtcpclient
 PORTVERSION=	20090812
@@ -10,15 +10,9 @@ MASTER_SITES=	http://www.mahoroba.org/~ume/ipv6/ \
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Dynamic Tunnel Configuration Protocol client
 
+LICENSE=	BSD
+
 USE_RC_SUBR=	dtcpclient
-
-MAN8=		dtcpclient.8
-MANCOMPRESSED=	yes
-
-pre-install:
-	@if [ -f ${PREFIX}/etc/rc.d/${USE_RC_SUBR} ]; then \
-		${ECHO_CMD} "Remove old ${PREFIX}/etc/rc.d/${USE_RC_SUBR} before install."; \
-		exit 1; \
-	fi
+NEED_ROOT=	yes
 
 .include <bsd.port.mk>
