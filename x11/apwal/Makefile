@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: x11/apwal/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/apwal/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	apwal
 PORTVERSION=	0.4.5
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
 PLIST_FILES=	bin/apwal bin/apwal-editor
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} ${FILESDIR}/group_member.c ${WRKSRC}
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
