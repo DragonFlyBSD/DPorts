@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: ftp/hsftp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/hsftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	hsftp
 PORTVERSION=	1.15
@@ -24,6 +24,7 @@ MAKEFILE=	makefile
 MAN1=		hsftp.1
 PLIST_FILES=	bin/hsftp
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSH}
