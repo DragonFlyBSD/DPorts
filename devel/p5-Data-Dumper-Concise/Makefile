@@ -1,5 +1,5 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: devel/p5-Data-Dumper-Concise/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Dumper-Concise/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Dumper-Concise
 PORTVERSION=	2.020
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	ARGNAMES
 OPTIONS_DEFAULT=	ARGNAMES
 ARGNAMES_DESC=	Enable DwarnN subroutine
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MARGNAMES}
