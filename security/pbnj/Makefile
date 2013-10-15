@@ -1,9 +1,5 @@
-# New ports collection makefile for:		pbnj
-# Date created:					July 26, 2006
-# Whom:						Joshua D. Abraham <jabra@ccs.neu.edu>
-#
-# $FreeBSD: security/pbnj/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Joshua D. Abraham <jabra@ccs.neu.edu>
+# $FreeBSD: security/pbnj/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pbnj
 PORTVERSION=	2.04
@@ -31,6 +27,7 @@ MAN1=	scanpbnj.1p \
 	outputpbnj.1p \
 	genlist.1p
 
+NO_STAGE=	yes
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
 
