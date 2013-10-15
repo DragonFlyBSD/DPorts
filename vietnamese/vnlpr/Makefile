@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  vnlpr
-# Date created:		Sat Dec 7, 1996
-# Whom:			David O'Brien (obrien@cs.ucdavis.edu)
-#
-# $FreeBSD: ports/vietnamese/vnlpr/Makefile,v 1.20 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@cs.ucdavis.edu)
+# $FreeBSD: vietnamese/vnlpr/Makefile 327775 2013-09-20 23:20:31Z bapt $
 
 PORTNAME=	vnlpr
 PORTVERSION=	2.0
@@ -19,6 +14,7 @@ COMMENT=	Shell script and set of fonts to print Vietnamese text on PostScript pr
 RUN_DEPENDS=	vn7to8:${PORTSDIR}/vietnamese/vn7to8 \
 		vnpstext:${PORTSDIR}/vietnamese/vnpstext
 
+NO_STAGE=	yes
 pre-patch:
 	@${MV} ${WRKSRC}/vnlpr ${WRKSRC}/vnlpr.in
 
