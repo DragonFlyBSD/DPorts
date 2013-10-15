@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-abstract-deque/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-abstract-deque/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	abstract-deque
 PORTVERSION=	0.2
@@ -15,6 +15,7 @@ OPTIONS_DEFINE=	USECAS
 
 USECAS_DESC=	Use hardware compare-and-swap
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MUSECAS}
