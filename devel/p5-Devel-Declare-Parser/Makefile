@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-Declare-Parser/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-Devel-Declare-Parser/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-Declare-Parser
 PORTVERSION=	0.017
@@ -27,4 +27,5 @@ MAN3=	Devel::Declare::Interface.3 \
 	Devel::Declare::Parser::Method.3 \
 	Devel::Declare::Parser::Sublike.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
