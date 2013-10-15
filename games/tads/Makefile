@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: games/tads/Makefile 312773 2013-02-22 15:17:50Z pawel $
+# $FreeBSD: games/tads/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tads
 PORTVERSION=	2.5.9
@@ -16,6 +16,7 @@ CONFLICTS=	frobtads-1.*
 
 WRKSRC=		${WRKDIR}/tads-3.0.8/tads2
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/tads2
 .for i in tadsc tadsr tdb
