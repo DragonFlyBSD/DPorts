@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/sdlmm/files/patch-src::Makefile.in,v 1.2 2012/11/17 05:57:02 svnexp Exp $
+$FreeBSD: devel/sdlmm/files/patch-src::Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- src/Makefile.in	2001/09/03 14:43:41	1.1
 +++ src/Makefile.in	2001/09/03 14:43:55
