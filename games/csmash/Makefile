@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/csmash/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: games/csmash/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	csmash
 PORTVERSION=	0.6.6
@@ -19,6 +19,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/SDL
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|/games/|/|g'
