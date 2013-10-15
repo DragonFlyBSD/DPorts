@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-XML-Compile-Tester/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-XML-Compile-Tester/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	XML-Compile-Tester
 PORTVERSION=	0.90
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	XML::Compile::Tester.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
