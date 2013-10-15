@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	ltl
-# Date created:			Sep 11, 2006
-# Whom:				rossiya
-#
-# $FreeBSD: ports/math/ltl/Makefile,v 1.9 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: rossiya
+# $FreeBSD: math/ltl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ltl
 PORTVERSION=	1.9.1
@@ -29,6 +24,7 @@ INSTALL_TARGET=	install install-data distdir
 
 PORTDOCS=	*.html
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
