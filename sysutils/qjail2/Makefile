@@ -1,5 +1,5 @@
 # Created by: Joe Barbish
-# $FreeBSD: sysutils/qjail2/Makefile 322339 2013-07-05 16:21:49Z pawel $
+# $FreeBSD: sysutils/qjail2/Makefile 329696 2013-10-07 12:23:05Z bapt $
 
 PORTNAME=	qjail
 PORTVERSION=	2.2
@@ -11,12 +11,13 @@ COMMENT=	Utility to quickly deploy and manage jails
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
-LATEST_LINK=	${PORTNAME}2
+PKGNAMESUFFIX=	2
 
 MAN8=		qjail.8 qjail-intro.8 qjail.conf.8 qjail-howto.8
 
 CONFLICTS_INSTALL=	qjail-1.* qjail-3.*
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|/usr/local|${PREFIX}|'
