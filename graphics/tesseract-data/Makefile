@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: graphics/tesseract-data/Makefile 316029 2013-04-18 08:37:38Z bf $
+# $FreeBSD: graphics/tesseract-data/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tesseract-data
 PORTVERSION=	3.02
@@ -48,6 +48,7 @@ DATADIR=	${PREFIX}/share/tessdata
 PORTDATA=	${TESSERACT_LANGS:O:u:S|$|.traineddata|}
 .endif
 
+NO_STAGE=	yes
 pre-fetch:
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "The choice of language data to be installed may"
