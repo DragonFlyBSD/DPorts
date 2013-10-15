@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-POE-Filter-LZF/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-POE-Filter-LZF/Makefile 328603 2013-09-28 17:12:38Z sunpoet $
 
 PORTNAME=	POE-Filter-LZF
 PORTVERSION=	1.7.0
@@ -18,7 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		POE::Filter::LZF.3
 
 .include <bsd.port.mk>
