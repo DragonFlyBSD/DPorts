@@ -1,8 +1,8 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: games/wolfpack/Makefile 318183 2013-05-14 18:23:49Z johans $
+# $FreeBSD: games/wolfpack/Makefile 329555 2013-10-06 12:34:35Z johans $
 
 PORTNAME=	wolfpack
-PORTVERSION=	4.3.31
+PORTVERSION=	4.3.32
 CATEGORIES=	games
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	empserver/${DISTNAME}
@@ -12,8 +12,8 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Long term multiplayer strategy game
 
 MAKEFILE=	GNUmakefile
-USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USES=		gmake perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 BINDIR=		${PREFIX}/lib/${PORTNAME}
 VARDIR=		${PREFIX}/var/${PORTNAME}
@@ -29,6 +29,8 @@ SUB_FILES+=	pkg-message
 
 MAN6=		empire.6 emp_server.6 empdump.6 empsched.6 \
 		fairland.6 files.6 pconfig.6
+
+NO_STAGE=	yes
 
 .include <bsd.port.pre.mk>
 
