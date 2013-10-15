@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: databases/p5-SQL-Translator/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-SQL-Translator/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	SQL-Translator
 PORTVERSION=	0.11016
@@ -122,6 +122,7 @@ MAN3=		SQL::Translator.3 \
 		SQL::Translator::Utils.3 \
 		Test::SQL::Translator.3
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
