@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ZCTextIndex/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-Products.ZCTextIndex/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.ZCTextIndex
 PORTVERSION=	2.13.4
@@ -24,5 +24,7 @@ PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=		yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
