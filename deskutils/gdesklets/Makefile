@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gdesklets/Makefile 326172 2013-09-03 16:56:25Z bapt $
+# $FreeBSD: deskutils/gdesklets/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gdesklets
 PORTVERSION=	0.36.2
@@ -30,6 +30,7 @@ MAN1=		${PORTNAME}.1
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGDBM}
