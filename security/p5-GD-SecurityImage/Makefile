@@ -1,5 +1,5 @@
 # Created by: ports@rbt.ca
-# $FreeBSD: security/p5-GD-SecurityImage/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-GD-SecurityImage/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	GD-SecurityImage
 PORTVERSION=	1.72
@@ -27,6 +27,7 @@ MAN3=		GD::SecurityImage.3 \
 		GD::SecurityImage::Magick.3 \
 		GD::SecurityImage::Styles.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
