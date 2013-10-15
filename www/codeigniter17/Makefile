@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/codeigniter17/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/codeigniter17/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	codeigniter
 PORTVERSION=	1.7.3
@@ -65,6 +65,7 @@ ODBC=	Install ODBC support for PHP
 PGSQL_DESC=	Install PostgreSQL support for PHP
 SQLITE_DESC=	Install SQLite support for PHP
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
