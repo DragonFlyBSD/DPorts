@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <trociny@FreeBSD.org>
-# $FreeBSD: ports/sysutils/p5-MogileFS-Network/Makefile,v 1.2 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-MogileFS-Network/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	MogileFS-Network
 PORTVERSION=	0.06
@@ -19,11 +19,13 @@ BUILD_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask \
 		p5-MogileFS-Server>=2.50:${PORTSDIR}/sysutils/p5-MogileFS-Server
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MogileFS::Network.3 \
 		MogileFS::ReplicationPolicy::MultipleNetworks.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
