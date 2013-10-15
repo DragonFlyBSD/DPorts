@@ -1,5 +1,5 @@
 # Created by: Piotr Rybicki <meritus@innervision.pl>
-# $FreeBSD: www/openx/Makefile 324444 2013-08-09 14:59:19Z erwin $
+# $FreeBSD: www/openx/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	openx
 PORTVERSION=	2.8.11
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 SUB_LIST+=	PKGNAME=${PKGNAME}
 SUB_FILES+=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_PHP_DEPENDS)
