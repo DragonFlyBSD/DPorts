@@ -1,8 +1,8 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: devel/libdombey/Makefile 326238 2013-09-04 00:48:38Z tabthorpe $
+# $FreeBSD: devel/libdombey/Makefile 329801 2013-10-08 16:01:12Z tabthorpe $
 
 PORTNAME=	libdombey
-PORTVERSION=	2.3
+PORTVERSION=	2.7
 CATEGORIES=	devel
 MASTER_SITES=	http://www.mammothcheese.ca/
 
@@ -16,4 +16,5 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
