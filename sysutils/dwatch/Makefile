@@ -1,5 +1,5 @@
 # Created by: Andrew Turner <zombie@i4free.co.nz>
-# $FreeBSD: sysutils/dwatch/Makefile 319156 2013-05-27 05:57:42Z bsam $
+# $FreeBSD: sysutils/dwatch/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dwatch
 PORTVERSION=	0.1.1
@@ -19,6 +19,7 @@ PLIST_FILES=	bin/dwatch etc/dwatch.conf-dist
 CFLAGS+=	-DETCDIR="\"${PREFIX}/etc\"" \
 		-DPS="\"/bin/ps -ax\""
 
+NO_STAGE=	yes
 do-build:
 	(cd ${BUILD_WRKSRC}; ${CC} ${CFLAGS} -o dwatch dwatch.c)
 
