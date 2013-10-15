@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-Products.MailHost
-# Date created:				Nov 9, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/mail/py-Products.MailHost/Makefile,v 1.4 2012/11/17 05:59:11 svnexp Exp $
-#
+# $FreeBSD: mail/py-Products.MailHost/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Products.MailHost
 PORTVERSION=	2.13.1
@@ -21,4 +16,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
