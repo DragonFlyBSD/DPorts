@@ -1,9 +1,5 @@
-# Ports collection makefile for:	libquicktime-lame
-# Date Created:				Aug 11, 2009
-# Whom:					mm
-#
-# $FreeBSD: ports/multimedia/libquicktime-lame/Makefile,v 1.8 2012/11/17 05:59:50 svnexp Exp $
-#
+# Created by: mm
+# $FreeBSD: multimedia/libquicktime-lame/Makefile 327750 2013-09-20 21:49:30Z mm $
 
 PORTNAME=	libquicktime
 PORTREVISION=	3
@@ -11,7 +7,7 @@ CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-lame
 PORTREVISION=	2
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LAME plugin for libquicktime
 
 LIB_DEPENDS=	quicktime.0:${PORTSDIR}/multimedia/libquicktime \
@@ -41,6 +37,7 @@ CONFIGURE_ARGS+=	--with-lame \
 			--without-x264 \
 			--without-schroedinger
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC}/plugins/lame && ${GMAKE} install
 
