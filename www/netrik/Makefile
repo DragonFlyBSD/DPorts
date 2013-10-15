@@ -1,11 +1,5 @@
-# ex:ts=8	-*-mode: makefile-*-
-#
-# New ports collection makefile for:	netrik
-# Date created:		2002-12-23
-# Whom:			Alan Eldridge <alane@FreeBSD.org>
-#
-# $FreeBSD: ports/www/netrik/Makefile,v 1.36 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Alan Eldridge <alane@FreeBSD.org>
+# $FreeBSD: www/netrik/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	netrik
 PORTVERSION=	1.16.1
@@ -27,6 +21,7 @@ MAN5=		netrikrc.5
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} "s/#include <ncursesw\//#include </" \
 		${WRKSRC}/*.c
