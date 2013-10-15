@@ -1,5 +1,5 @@
 # Created by: vvelox@vvelox.net
-# $FreeBSD: graphics/p5-Imager-AverageGray/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Imager-AverageGray/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Imager-AverageGray
 PORTVERSION=	0.0.0
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Imager::AverageGray.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
