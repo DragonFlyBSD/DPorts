@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/java/jcalendar/Makefile,v 1.14 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jcalendar/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jcalendar
 PORTVERSION=	1.3.3
@@ -25,6 +25,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar \
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 post-build:
 	cd ${WRKDIR}/build && \
 		${JAR} cmf ${WRKSRC}/${PORTNAME}.manifest \
