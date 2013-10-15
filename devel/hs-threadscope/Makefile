@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-threadscope/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-threadscope/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	threadscope
 PORTVERSION=	0.2.2
@@ -16,5 +16,6 @@ USE_CABAL=	cairo ghc-events>=0.4.2 glib gtk>=0.12 gtk2hs-buildtools mtl \
 EXECUTABLE=	threadscope
 STANDALONE=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
