@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@area51.fremont.ca.us>
-# $FreeBSD: net-im/naim/Makefile 324971 2013-08-19 10:15:12Z danfe $
+# $FreeBSD: net-im/naim/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	naim
 PORTVERSION=	0.11.8.3.2
@@ -21,6 +21,7 @@ PORTDOCS=	FAQ README commands.txt keyboard.txt
 OPTIONS_DEFINE=	DETACH DOCS
 DETACH_DESC=	Enable 'detach' feature (requires misc/screen)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Fix parallel (-jX) builds: events.c #include's generated "conio_cmds.h"
