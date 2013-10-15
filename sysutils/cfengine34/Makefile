@@ -1,5 +1,5 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine34/Makefile 322231 2013-07-03 15:10:49Z gjb $
+# $FreeBSD: sysutils/cfengine34/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.4.5
@@ -50,6 +50,7 @@ PGSQL_DESC=	Enable PostgreSQL connector
 MYSQL_DESC=	Enable MySQL connector
 LIBVIRT_DESC=	Enable libvirt compatibility
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOKYOCABINET}
