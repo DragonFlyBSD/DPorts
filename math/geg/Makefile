@@ -1,5 +1,5 @@
 # Created by: rom
-# $FreeBSD: ports/math/geg/Makefile,v 1.43 2012/12/29 04:51:44 svnexp Exp $
+# $FreeBSD: math/geg/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	geg
 PORTVERSION=	1.0.2
@@ -21,6 +21,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 MAN1=		geg.1
 PLIST_FILES=	bin/geg
 
+NO_STAGE=	yes
 pre-configure:
 	@cd ${WRKSRC}; ${ACLOCAL} -I ${LOCALBASE}/share/aclocal
 
