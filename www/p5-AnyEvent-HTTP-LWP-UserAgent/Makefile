@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-AnyEvent-HTTP-LWP-UserAgent/Makefile 325960 2013-09-02 09:44:14Z az $
+# $FreeBSD: www/p5-AnyEvent-HTTP-LWP-UserAgent/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	AnyEvent-HTTP-LWP-UserAgent
 PORTVERSION=	0.10
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	AnyEvent::HTTP::LWP::UserAgent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
