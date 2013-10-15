@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-TAP-SimpleOutput/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-TAP-SimpleOutput/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	TAP-SimpleOutput
 PORTVERSION=	0.001
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	TAP::SimpleOutput.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
