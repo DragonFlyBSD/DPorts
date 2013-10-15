@@ -1,9 +1,5 @@
-# New ports collection makefile for:	htmlsplit.rb
-# Date created:		20 September 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: textproc/ruby-htmlsplit/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: textproc/ruby-htmlsplit/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	htmlsplit
 PORTVERSION=	1.0.2
@@ -23,6 +19,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	%%RUBY_SITELIBDIR%%/htmlsplit.rb
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/htmlsplit.rb ${RUBY_SITELIBDIR}/
 
