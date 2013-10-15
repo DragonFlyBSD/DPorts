@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/gmidimonitor/Makefile 326709 2013-09-08 08:27:08Z antoine $
+# $FreeBSD: audio/gmidimonitor/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmidimonitor
 PORTVERSION=	3.6
@@ -14,6 +14,7 @@ LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 		lash.2:${PORTSDIR}/audio/lash
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtk20 libglade2
 
