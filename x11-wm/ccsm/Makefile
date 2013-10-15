@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ccsm
-# Date created:		2007-08-17
-# Whom:			Robert Noland <rnoland@FreeBSD.org>
-#
-# $FreeBSD: x11-wm/ccsm/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Robert Noland <rnoland@FreeBSD.org>
+# $FreeBSD: x11-wm/ccsm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	ccsm
 PORTVERSION=	0.8.4
@@ -26,4 +22,5 @@ INSTALLS_EGGINFO=	yes
 
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
