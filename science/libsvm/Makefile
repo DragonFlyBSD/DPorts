@@ -1,5 +1,5 @@
 # Created by: Chia-Hsing Yu <me@davidyu.org>
-# $FreeBSD: science/libsvm/Makefile 316757 2013-04-28 22:08:22Z bapt $
+# $FreeBSD: science/libsvm/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	libsvm
 PORTVERSION=	3.10
@@ -44,6 +44,7 @@ SUB_LIST=	DATADIR=${DATADIR}
 
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
