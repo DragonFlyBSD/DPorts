@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net-im/twitmail/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/twitmail/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	twitmail
 PORTVERSION=	0.42
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN1=		twitmail.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
