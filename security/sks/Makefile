@@ -1,4 +1,4 @@
-# $FreeBSD: security/sks/Makefile 324689 2013-08-14 08:32:53Z johans $
+# $FreeBSD: security/sks/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sks
 PORTVERSION=	1.1.4
@@ -29,6 +29,7 @@ MAN8=		sks.8
 MANCOMPRESSED=	yes
 PORTDOCS=	BUGS README.md TODO UPGRADING
 
+NO_STAGE=	yes
 post-extract:
 	@: > ${WRKSRC}/Makefile.local
 	@${REINPLACE_CMD} 's/-ccopt -pg //' ${WRKSRC}/Makefile
