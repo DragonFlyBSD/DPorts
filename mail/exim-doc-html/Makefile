@@ -1,9 +1,5 @@
-# New ports collection makefile for:	exim-doc-html
-# Date created:		27 November 2001
-# Whom:	      		Johann Visagie <wjv@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/exim-doc-html/Makefile,v 1.27 2012/11/17 05:59:02 svnexp Exp $
-#
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: mail/exim-doc-html/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	exim
 PORTVERSION=	4.71
@@ -21,6 +17,7 @@ MAINTAINER=	rea@FreeBSD.org
 COMMENT=	Documentation for the Exim MTA in multiple formats
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 
 DOCFORMAT?=	html
 DISTDOCFORMAT?=	${DOCFORMAT}
