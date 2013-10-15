@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: benchmarks/iperf/Makefile 325112 2013-08-21 12:19:43Z sunpoet $
+# $FreeBSD: benchmarks/iperf/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	iperf
 PORTVERSION=	2.0.5
@@ -20,6 +20,7 @@ MAN1=		iperf.1
 PLIST_FILES=	bin/iperf
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
