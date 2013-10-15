@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tinystats
-# Date created:				07 July 2005
-# Whom:				Filippo Natali <filippo.natali@gmail.com>
-#
-# $FreeBSD: ports/dns/tinystats/Makefile,v 1.6 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: Filippo Natali <filippo.natali@gmail.com>
+# $FreeBSD: dns/tinystats/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	tinystats
 PORTVERSION=	1.1
@@ -27,6 +23,7 @@ PLIST_FILES=	bin/tinystats \
 PLIST_DIRS=	%%EXAMPLESDIR%%
 PORTDOCS=	README LICENSE THANKS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
