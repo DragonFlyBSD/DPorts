@@ -1,9 +1,5 @@
-# New ports collection makefile for:	anyremote2html
-# Date created:				26 December 2008
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/www/anyremote2html/Makefile,v 1.10 2013/02/20 16:45:26 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: www/anyremote2html/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	anyremote2html
 PORTVERSION=	1.4
@@ -20,6 +16,7 @@ USE_PYTHON_RUN=	yes
 
 PORTDOCS=	ChangeLog README COPYING AUTHORS
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' ${WRKSRC}/${PORTNAME}
 .if defined(NOPORTDOCS)
