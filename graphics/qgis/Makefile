@@ -1,5 +1,5 @@
 # Created by: Laurent Courty
-# $FreeBSD: graphics/qgis/Makefile 326981 2013-09-11 13:58:27Z wg $
+# $FreeBSD: graphics/qgis/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	qgis
 PORTVERSION=	1.8.0
@@ -32,6 +32,7 @@ MAN1=		qgis.1
 
 OPTIONS_DEFINE=		GRASS POSTGIS MAPSERVER PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} < 800000
