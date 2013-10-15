@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/php-Auth_OpenID/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/php-Auth_OpenID/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Auth_OpenID
 PORTVERSION=	1.2.3
@@ -23,6 +23,7 @@ BCMATH_DESC=	Use bcmath instead of libgmp
 
 USE_PHP=	curl dom
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MBCMATH}
