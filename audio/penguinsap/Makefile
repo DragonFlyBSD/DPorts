@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/penguinsap/Makefile 323632 2013-07-25 09:38:40Z marino $
+# $FreeBSD: audio/penguinsap/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	penguinsap
 PORTVERSION=	0.1
@@ -10,6 +10,7 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command-line Atari(TM) .sap player
 
 USE_DOS2UNIX=	yes
+NO_STAGE=	yes
 
 SOURCES=	sapPokey pokey1 sapCpu sapEngine main pokey0
 
