@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-themes/qt4-style-phase/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-themes/qt4-style-phase/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	phase
 PORTVERSION=	0.8
@@ -23,6 +23,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLIST_FILES=	${QT_PLUGINDIR_REL}/styles/libphasestyle.so
 PLIST_DIRSTRY=	${QT_PLUGINDIR_REL}/styles
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
