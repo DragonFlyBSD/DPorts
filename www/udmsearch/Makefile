@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@posi.net>
-# $FreeBSD: www/udmsearch/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/udmsearch/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	udmsearch
 PORTVERSION=	3.1.7
@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	--enable-charset-guesser \
 MAN1=		indexer.1
 MAN5=		indexer.conf.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMSQL}
