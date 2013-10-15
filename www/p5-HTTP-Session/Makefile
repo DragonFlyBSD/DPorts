@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Session/Makefile 326139 2013-09-03 12:27:09Z az $
+# $FreeBSD: www/p5-HTTP-Session/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Session
 PORTVERSION=	0.48
@@ -40,4 +40,5 @@ MAN3=		HTTP::Session.3 \
 		HTTP::Session::Store::OnMemory.3 \
 		HTTP::Session::Store::Test.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
