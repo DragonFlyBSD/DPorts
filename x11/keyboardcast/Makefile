@@ -1,5 +1,5 @@
 # Created by: eimar.koort
-# $FreeBSD: x11/keyboardcast/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/keyboardcast/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	keyboardcast
 PORTVERSION=	0.1.1
@@ -16,6 +16,7 @@ USE_GNOME=	libwnck libglade2 gtk20
 USES=		pkgconfig
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
