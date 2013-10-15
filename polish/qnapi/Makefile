@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: polish/qnapi/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: polish/qnapi/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	qnapi
 PORTVERSION=	0.1.6.r2
@@ -16,16 +16,13 @@ RUN_DEPENDS=	7z:${PORTSDIR}/archivers/p7zip
 
 USE_QT4=	corelib gui network xml qmake_build moc_build uic_build rcc_build
 USE_KDE4=	kdehier
-QMAKE_ARGS=	PREFIX=${PREFIX} KDE4_PREFIX=${KDE4_PREFIX}
+PLIST_SUB=	KDE4=${KDE4_PREFIX:S|${LOCALBASE}/||}
+QMAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX} KDE4_PREFIX=${STAGEDIR}${KDE4_PREFIX}
 INSTALLS_ICONS=	yes
 
-MAN1=		qnapi.1
-MANCOMPRESSED=	yes
 PORTDOCS=	ChangeLog README.pl COPYRIGHT
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/share/icons/||g' \
@@ -37,11 +34,7 @@ pre-build:
 	@cd ${WRKSRC} && ${QMAKE} -spec ${QMAKESPEC} ${QMAKEFLAGS} ${QMAKE_ARGS}
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for file in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${file} ${DOCSDIR}
-.endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|g} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
