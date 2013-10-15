@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: security/ophcrack/Makefile 320251 2013-06-08 13:32:23Z danfe $
+# $FreeBSD: security/ophcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ophcrack
 PORTVERSION=	3.6.0
@@ -31,6 +31,7 @@ OPTIONS_DEFAULT=	X11 GRAPH
 X11_DESC=	Build Qt 4 GUI frontend
 GRAPH_DESC=	Enable graph rendering via Qwt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11} || ${PORT_OPTIONS:MGRAPH}
