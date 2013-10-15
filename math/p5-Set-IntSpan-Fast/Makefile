@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Set-IntSpan-Fast/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Set-IntSpan-Fast/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Set-IntSpan-Fast
 PORTVERSION=	1.15
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Set::IntSpan::Fast.3 Set::IntSpan::Fast::PP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
