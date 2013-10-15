@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/fcgiwrap
-# Date created:		31 March 2007
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/www/ruby-fcgiwrap/Makefile,v 1.4 2012/11/17 06:03:03 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: www/ruby-fcgiwrap/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fcgiwrap
 PORTVERSION=	0.1.6
@@ -23,6 +19,7 @@ USE_RUBY=	yes
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/fcgiwrap.rb ${RUBY_SITELIBDIR}/
 .if !defined(NOPORTDOCS)
