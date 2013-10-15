@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jags
-# Date created:				Thu Jul  5 17:13:11 EDT 2001
-# Whom:					Patrick Li <pat@databits.net>
-#
-# $FreeBSD: ports/net/jags/Makefile,v 1.28 2013/01/31 19:48:37 svnexp Exp $
-#
+# Created by: Patrick Li <pat@databits.net>
+# $FreeBSD: net/jags/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	jags
 PORTVERSION=	0.22.1
@@ -25,6 +21,7 @@ USE_XORG=	xi xext x11
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 700042
