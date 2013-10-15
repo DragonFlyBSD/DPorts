@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Component-ACCEPT_CONTEXT/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: www/p5-Catalyst-Component-ACCEPT_CONTEXT/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Component-ACCEPT_CONTEXT
 PORTVERSION=	0.07
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=	Catalyst::Component::ACCEPT_CONTEXT.3
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -i '' -e '/auto_install/d' \
 		-e '/Devel::Cycle/d' ${WRKSRC}/Makefile.PL
