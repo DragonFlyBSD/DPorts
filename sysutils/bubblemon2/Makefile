@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: sysutils/bubblemon2/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: sysutils/bubblemon2/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bubblemon2
 PORTVERSION=	2.0.17
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib `pkg-config --libs libgnomeui-2.0`
 MAN1=		bubblemon-gnome2.1
 MANLANG=	"" hu sv
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
