@@ -1,5 +1,5 @@
 # Created by: Michaël Grünewald
-# $FreeBSD: ports/devel/ocaml-classes/Makefile,v 1.14 2012/11/17 05:56:02 svnexp Exp $
+# $FreeBSD: devel/ocaml-classes/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	classes
 PORTVERSION=	3.05
@@ -16,6 +16,7 @@ COMMENT=	Ocaml Object interface for ocaml's standard library modules
 BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${FILESDIR}/META ${WRKSRC}
 
