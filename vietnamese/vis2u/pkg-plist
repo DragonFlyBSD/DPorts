@@ -1,2 +1,2 @@
-@comment $FreeBSD: ports/vietnamese/vis2u/pkg-plist,v 1.2 2012/11/17 06:02:26 svnexp Exp $
+@comment $FreeBSD: vietnamese/vis2u/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/vis2u
