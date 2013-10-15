@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-ftputil
-# Date created:		2006-12-25
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/ftp/py-ftputil/Makefile,v 1.7 2012/11/17 05:57:30 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: ftp/py-ftputil/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	ftputil
 PORTVERSION=	2.6
@@ -22,6 +18,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOC_FILES=	README.html README.txt ftputil.html ftputil.txt ftputil_ru_utf8.txt
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-fetch:
