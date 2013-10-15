@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: ports/devel/flyspray/Makefile,v 1.16 2012/11/17 05:55:43 svnexp Exp $
+# $FreeBSD: devel/flyspray/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	flyspray
 PORTVERSION=	0.9.9.7
@@ -54,6 +54,7 @@ SUB_LIST+=	FLYSPRAYDIR="${FLYSPRAYDIR}" \
 		WWWGRP="${WWWGRP}" \
 		WWWOWN="${WWWOWN}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}

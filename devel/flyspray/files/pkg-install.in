@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/flyspray/files/pkg-install.in,v 1.2 2012/11/17 05:55:43 svnexp Exp $
+# $FreeBSD: devel/flyspray/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
 
 case $2 in
 	POST-INSTALL)
