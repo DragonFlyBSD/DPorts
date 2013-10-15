@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/tomatoes/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# $FreeBSD: games/tomatoes/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tomatoes
 PORTVERSION=	1.5
@@ -47,6 +47,7 @@ DESKTOP_ENTRIES=	"Tomatoes" \
 			"Game;ArcadeGame;" \
 			false
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
