@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-ccgarch/Makefile 325104 2013-08-21 10:42:34Z tota $
+# $FreeBSD: finance/R-cran-ccgarch/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	ccgarch
 DISTVERSION=	0.2.1
@@ -15,4 +15,5 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
