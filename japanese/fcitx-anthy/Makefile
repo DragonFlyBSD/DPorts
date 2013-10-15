@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: japanese/fcitx-anthy/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: japanese/fcitx-anthy/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	fcitx-anthy
 PORTVERSION=	0.1.1
@@ -19,4 +19,5 @@ USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
