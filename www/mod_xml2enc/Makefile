@@ -1,5 +1,5 @@
 # Created by: Marin Atanasov Nikolov <dnaeon@gmail.com>
-# $FreeBSD: www/mod_xml2enc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_xml2enc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_xml2enc
 PORTVERSION=	1.0.3
@@ -28,6 +28,7 @@ AP_EXTRAS+=	-lxml2
 PLIST_FILES=	%%DOCSDIR%%/COPYING
 PLIST_DIRS=	%%DOCSDIR%%
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/COPYING ${DOCSDIR}
