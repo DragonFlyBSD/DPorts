@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: sysutils/uptimed/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/uptimed/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	uptimed
 PORTVERSION=	0.3.17
@@ -25,6 +25,7 @@ USE_RC_SUBR=	${PORTNAME}
 MAN1=		uprecords.1
 MAN8=		uptimed.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/usr/lib/sendmail|/usr/sbin/sendmail| ; \
