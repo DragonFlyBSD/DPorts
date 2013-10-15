@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-flake8/Makefile 318257 2013-05-15 19:33:14Z wg $
+# $FreeBSD: devel/py-flake8/Makefile 328418 2013-09-26 21:48:29Z wg $
 
 PORTNAME=	flake8
 PORTVERSION=	2.0
@@ -18,9 +18,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mccabe>=0.2:${PORTSDIR}/devel/py-mccabe \
 		${PYTHON_PKGNAMEPREFIX}pyflakes>=0.6.1:${PORTSDIR}/devel/py-pyflakes
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=yes
 
-PLIST_FILES=	bin/flake8 \
-		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+post-patch:
+	@${REINPLACE_CMD} -e 's|setuptools|distutils.core|' ${WRKSRC}/${PYSETUP}
 
 .include <bsd.port.mk>
