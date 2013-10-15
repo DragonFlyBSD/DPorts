@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/flobopuyo/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/flobopuyo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	flobopuyo
 PORTVERSION=	0.20
@@ -24,6 +24,7 @@ DESKTOP_ENTRIES="FloboPuyo" \
 		"Game;BlocksGame;" \
 		false
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name '._*' -delete
 
