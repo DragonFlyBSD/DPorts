@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson
-# $FreeBSD: biology/tinker/Makefile 324901 2013-08-18 11:38:34Z marino $
+# $FreeBSD: biology/tinker/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	tinker
 PORTVERSION=	6.2.06
@@ -27,6 +27,7 @@ INSTALL_TARGET=	rename
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_FFLAGS}
