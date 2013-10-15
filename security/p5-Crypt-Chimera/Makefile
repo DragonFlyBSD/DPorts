@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-Chimera/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/p5-Crypt-Chimera/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Chimera
 PORTVERSION=	1.01
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Chimera.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
