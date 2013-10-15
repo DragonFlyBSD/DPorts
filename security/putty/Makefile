@@ -1,4 +1,4 @@
-# $FreeBSD: security/putty/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: security/putty/Makefile 328955 2013-10-01 14:53:25Z mandree $
 
 PORTNAME=	putty
 PORTVERSION=	0.63
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 MAKEFILE=	Makefile.gtk
 
 PLIST_FILES=	bin/plink bin/pscp bin/psftp bin/puttygen
-MAN1=		plink.1 pscp.1 psftp.1 puttygen.1
+PLIST_FILES+=	man/man1/plink.1.gz man/man1/pscp.1.gz man/man1/psftp.1.gz man/man1/puttygen.1.gz
 
 OPTIONS_DEFINE=	GSSAPI GTK2
 OPTIONS_DEFAULT=GSSAPI GTK2
@@ -31,7 +31,7 @@ CFLAGS+=	-DBSD_PTYS -DOMIT_UTMP -DIPV6
 .if ${PORT_OPTIONS:MGTK2} && !defined(WITHOUT_X11)
 USE_GNOME=	gtk20
 PLIST_FILES+=	bin/pterm bin/putty bin/puttytel
-MAN1+=		pterm.1 putty.1 puttytel.1
+PLIST_FILES+=	man/man1/pterm.1.gz man/man1/putty.1.gz man/man1/puttytel.1.gz
 MAKE_ARGS+=	PUTTY_WITH_GTK=yes GTK_CONFIG="pkg-config gtk+-2.0 x11 --cflags"
 .else
 MAKE_ARGS+=	GTK_CONFIG=:
