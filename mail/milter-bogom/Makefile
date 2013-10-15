@@ -1,9 +1,5 @@
-# New ports collection makefile for:	milter-bogom
-# Date created:			12 Feb 2005
-# Whom:				Victor Balada Diaz <victor@bsdes.net>
-#
-# $FreeBSD: ports/mail/milter-bogom/Makefile,v 1.15 2012/11/17 05:59:06 svnexp Exp $
-#
+# Created by: Victor Balada Diaz <victor@bsdes.net>
+# $FreeBSD: mail/milter-bogom/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	bogom
 PORTVERSION=	1.9.2
@@ -31,6 +27,7 @@ PLIST_FILES=	sbin/bogom \
 
 PORTDOCS=	README CHANGELOG
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|g' ${WRKSRC}/bogom.8
 	@${REINPLACE_CMD} -e \
