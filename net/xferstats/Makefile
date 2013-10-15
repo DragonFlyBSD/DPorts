@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xferstats
-# Date created:         19 February 1999
-# Whom:                 Dima Sivachenko
-#
-# $FreeBSD: ports/net/xferstats/Makefile,v 1.17 2012/11/17 06:00:25 svnexp Exp $
-#
+# Created by: Dima Sivachenko
+# $FreeBSD: net/xferstats/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	xferstats
 PORTVERSION=	2.16
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	yes
 
 MAN8=		xferstats.8
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xferstats ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xferstats.8 ${MAN8PREFIX}/man/man8
