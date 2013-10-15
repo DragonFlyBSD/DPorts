@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior <antonio@inf.ufsc.br>
-# $FreeBSD: security/pear-File_Passwd/Makefile 318038 2013-05-13 09:40:29Z miwi $
+# $FreeBSD: security/pear-File_Passwd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	File_Passwd
 PORTVERSION=	1.1.7
@@ -17,6 +17,7 @@ PEAR_CRYPT_CHAP_DESC=	PEAR::Crypt_CHAP support
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPEAR_CRYPT_CHAP}
