@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: textproc/uncrustify/Makefile 313389 2013-03-04 02:17:55Z amdmi3 $
+# $FreeBSD: textproc/uncrustify/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	uncrustify
 PORTVERSION=	0.60
@@ -17,6 +17,7 @@ MAN1=		uncrustify.1
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
