@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: comms/uird/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: comms/uird/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	uird
 PORTVERSION=	1.1
@@ -20,6 +20,7 @@ ALL_TARGET=	${PORTNAME}
 PLIST_FILES=	bin/uird
 PORTDOCS=	Documentation
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|$${CC}\ $${CFLAGS}|; /strip/d' \
 		${WRKSRC}/Makefile
