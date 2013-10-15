@@ -1,5 +1,5 @@
 # Created by: Andy Gilligan
-# $FreeBSD: mail/mb2md/Makefile 325961 2013-09-02 09:45:00Z garga $
+# $FreeBSD: mail/mb2md/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mb2md
 PORTVERSION=	3.20
@@ -25,6 +25,7 @@ SHEBANG_FILES=	mb2md
 
 PLIST_FILES=	bin/mb2md
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
