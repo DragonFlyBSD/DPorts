@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Flea
-# Date created:		21 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Flea/Makefile 326053 2013-09-02 18:23:34Z az $
-#
+# $FreeBSD: www/p5-Flea/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Flea
 PORTVERSION=	0.04
@@ -32,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=	Flea.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
