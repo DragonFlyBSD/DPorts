@@ -1,4 +1,4 @@
-# $FreeBSD: security/rcracki_mt/Makefile 317245 2013-05-03 20:42:50Z antoine $
+# $FreeBSD: security/rcracki_mt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	rcracki_mt
 PORTVERSION=	0.7.0
@@ -24,6 +24,7 @@ EXTRACT_AFTER_ARGS=
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	ChangeLog.txt README.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,CC = g++,CXX ?= g++, ; s,CFLAGS =,CXXFLAGS +=, ; \
 		s,-lpthread,${PTHREAD_LIBS}, ; s,CC,CXX, ; s,CFLAGS,CXXFLAGS,' \
