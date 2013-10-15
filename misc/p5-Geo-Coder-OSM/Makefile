@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-OSM/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-OSM/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
 
 PORTNAME=	Geo-Coder-OSM
 PORTVERSION=	0.02
@@ -21,7 +21,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Geo::Coder::OSM.3
 
 .include <bsd.port.mk>
