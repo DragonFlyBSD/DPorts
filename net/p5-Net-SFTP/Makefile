@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net-SFTP
-# Date created:				08 Oct 2003
-# Whom:					Trevor Corpropst <tcornpropst@cox.net>
-#
-# $FreeBSD: net/p5-Net-SFTP/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Trevor Corpropst <tcornpropst@cox.net>
+# $FreeBSD: net/p5-Net-SFTP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SFTP
 PORTVERSION=	0.10
@@ -26,4 +22,5 @@ MAN3=		Net::SFTP.3 \
 		Net::SFTP::Constants.3 \
 		Net::SFTP::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
