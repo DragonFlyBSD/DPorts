@@ -1,5 +1,5 @@
 # Created by: pat
-# $FreeBSD: astro/wmjupiter/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/wmjupiter/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	wmjupiter
 PORTVERSION=	1.2
@@ -14,6 +14,7 @@ PLIST_FILES=	bin/wmJupiter
 WRKSRC=		${WRKDIR}/wmJupiter
 USE_XORG=	x11 xext xpm
 USES=		gmake
+NO_STAGE=	yes
 
 pre-patch:
 	@${REINPLACE_CMD} -e 's|values.h|float.h|; s|MAXDOUBLE|DBL_MAX|g' \
