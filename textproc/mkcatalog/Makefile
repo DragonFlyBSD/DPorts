@@ -1,11 +1,5 @@
-# New ports collection makefile for:	mkcatalog
-# Date created:		26 Oct 2000
-# Whom:			shige
-#
-# $FreeBSD: ports/textproc/mkcatalog/Makefile,v 1.8 2012/11/17 06:02:03 svnexp Exp $
-#
-# This port is self contained in the src directory.
-#
+# Created by: shige
+# $FreeBSD: textproc/mkcatalog/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	mkcatalog
 PORTVERSION=	1.1
@@ -24,6 +18,7 @@ SCRIPTS_ENV=	CONFIGURE_TARGETS=${CONFIGURE_TARGETS}
 SRC=			${.CURDIR}/src
 CONFIGURE_TARGETS=	mkcatalog
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
