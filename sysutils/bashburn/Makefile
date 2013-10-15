@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: sysutils/bashburn/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/bashburn/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bashburn
 PORTVERSION=	2.1.2
@@ -24,6 +24,7 @@ EJECT_DESC=	Ejecting the CD/DVD drive
 NORMALIZE_DESC=	An audio file volume normalizer
 SUDO_DESC=	To allow non-privileged users to burn CD's
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCDRDAO}
