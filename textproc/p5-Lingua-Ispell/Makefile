@@ -1,5 +1,5 @@
 # Created by: -
-# $FreeBSD: textproc/p5-Lingua-Ispell/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: textproc/p5-Lingua-Ispell/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	Lingua-Ispell
 PORTVERSION=	0.07
@@ -17,8 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 REINPLACE_ARGS=	-i ''
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Lingua::Ispell.3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/lib/Lingua/Ispell.pm
