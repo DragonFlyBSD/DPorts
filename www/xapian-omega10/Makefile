@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-# $FreeBSD: www/xapian-omega10/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: www/xapian-omega10/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xapian-omega10
 PORTVERSION=	1.0.23
@@ -38,12 +38,13 @@ OPTIONS_DEFAULT=	ICONV
 
 PORTSCOUT=	limit:^1\.0\.
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONV}
 USES+=			iconv
-LDFLAGS+=		${ICONV_LIB}
 CONFIGURE_ARGS+=	--with-iconv
+LDFLAGS+=		${ICONV_LIB}
 .else
 CONFIGURE_ARGS+=	--without-iconv
 .endif
