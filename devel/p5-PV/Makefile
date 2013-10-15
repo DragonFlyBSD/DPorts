@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-PV/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/p5-PV/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PV
 PORTVERSION=	1.5
@@ -18,6 +18,7 @@ USES=		perl5
 NO_BUILD=	YES
 PLIST_FILES=	%%SITE_PERL%%/PV.pm
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} -m 755 ${PREFIX}/${SITE_PERL_REL}/
 	${INSTALL_DATA} ${WRKSRC}/PV.pm ${PREFIX}/${SITE_PERL_REL}/
