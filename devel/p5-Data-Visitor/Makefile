@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Visitor/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-Visitor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Visitor
 PORTVERSION=	0.30
@@ -28,4 +28,5 @@ USE_PERL5=	configure
 MAN3=	Data::Visitor.3 \
 	Data::Visitor::Callback.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
