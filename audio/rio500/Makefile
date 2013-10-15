@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rio500
-# Date created:		27 May 2000
-# Whom:			Kazumasa Nishizawa <k_nishizawa@anet.ne.jp>
-#
-# $FreeBSD: ports/audio/rio500/Makefile,v 1.17 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: Kazumasa Nishizawa <k_nishizawa@anet.ne.jp>
+# $FreeBSD: audio/rio500/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	rio500
 PORTVERSION=	0.7
@@ -15,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utilities for Diamond Rio500
 
 USE_GNOME=	glib12
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-devicepath='/dev' \
 		--with-deviceentry='urio0' \
