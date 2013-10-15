@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Feersum/Makefile 326033 2013-09-02 16:56:12Z az $
+# $FreeBSD: www/p5-Feersum/Makefile 329849 2013-10-08 23:07:39Z gblach $
 
 PORTNAME=	Feersum
 PORTVERSION=	1.400
@@ -27,12 +27,5 @@ TEST_DEPENDS=	p5-AnyEvent>=5.26.1:${PORTSDIR}/devel/p5-AnyEvent \
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN1=		feersum.1
-MAN3=		Feersum.3 \
-		Feersum::Connection.3 \
-		Feersum::Connection::Handle.3 \
-		Feersum::Runner.3 \
-		Plack::Handler::Feersum.3
 
 .include <bsd.port.mk>
