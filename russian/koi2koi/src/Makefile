@@ -1,5 +1,5 @@
 # $Id: ports/russian/koi2koi/src/Makefile,v 1.1 2003/04/08 14:01:51 marck Exp $
-# $FreeBSD: ports/russian/koi2koi/src/Makefile,v 1.2 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: russian/koi2koi/src/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 .PATH: ${PKGDIR}/src
 

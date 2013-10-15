@@ -1,9 +1,5 @@
-# New ports collection makefile for:	koi2koi
-# Date created:				08 Apr 2003
-# Whom:					Dmitry Morozovsky <marck@rinet.ru>
-#
-# $FreeBSD: ports/russian/koi2koi/Makefile,v 1.4 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Dmitry Morozovsky <marck@rinet.ru>
+# $FreeBSD: russian/koi2koi/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	koi2koi
 PORTVERSION=	1998.04.16
@@ -23,4 +19,5 @@ MAN1=		koi2koi.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/koi2koi
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
