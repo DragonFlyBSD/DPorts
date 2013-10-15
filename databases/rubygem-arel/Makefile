@@ -1,8 +1,4 @@
-# Ports collection makefile for:	rubygem-arel
-# Date created:				1 September 2010
-# Whom:						Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/databases/rubygem-arel/Makefile,v 1.18 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/rubygem-arel/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	arel
 PORTVERSION=	3.0.2
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
