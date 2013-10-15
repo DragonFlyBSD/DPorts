@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/htmlcompressor/Makefile 318837 2013-05-23 03:49:27Z az $
+# $FreeBSD: www/htmlcompressor/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	htmlcompressor
 PORTVERSION=	1.5.3
@@ -23,6 +23,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/htmlcompressor %%JAVAJARDIR%%/htmlcompressor.jar
 SUB_FILES=	htmlcompressor
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
