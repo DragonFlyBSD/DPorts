@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-STX/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/p5-XML-STX/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-STX
 PORTVERSION=	0.43
@@ -23,6 +23,7 @@ MAN3=		XML::STX.3 XML::STX::Base.3 XML::STX::Buffer.3 \
 		XML::STX::STXPath.3 XML::STX::Stylesheet.3 XML::STX::TrAX.3 \
 		XML::STX::Writer.3
 
+NO_STAGE=	yes
 post-extract:
 	@${MKDIR} ${WRKSRC}/scripts
 	@${MV} ${WRKSRC}/stx*.pl ${WRKSRC}/scripts
