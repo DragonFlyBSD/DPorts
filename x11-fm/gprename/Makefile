@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-fm/gprename/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: x11-fm/gprename/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	gprename
 PORTVERSION=	2.7
@@ -25,6 +25,7 @@ NO_BUILD=	yes
 
 MAN1=		gprename.1
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -rf ${WRKSRC}/build
 
