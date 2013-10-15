@@ -1,5 +1,5 @@
 # Created by: William Josephson
-# $FreeBSD: devel/mk/Makefile 325435 2013-08-27 10:42:21Z bdrewery $
+# $FreeBSD: devel/mk/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mk
 PORTVERSION=	1.5
@@ -13,6 +13,7 @@ COMMENT=	Andrew Hume's mk by way of Research Unix, Plan 9, & Inferno
 MAN1=		mk.1
 PLIST_FILES=	bin/mk
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mk ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/mk.1 ${PREFIX}/man/man1
