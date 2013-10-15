@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/goose/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/goose/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	goose
 PORTVERSION=	0.5
@@ -24,6 +24,7 @@ POD2MAN?=	pod2man
 
 MAN1=	goose.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%LOCALBASE%%|${LOCALBASE}|g" \
 		-e "s|%%DATADIR%%|${DATADIR}|g" \
