@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-# $FreeBSD: sysutils/usbutils/Makefile 325741 2013-08-30 23:57:36Z bapt $
+# $FreeBSD: sysutils/usbutils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	usbutils
 PORTVERSION=	0.86
@@ -22,6 +22,7 @@ MAN1=		usb-devices.1
 MAN8=		lsusb.8
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly
