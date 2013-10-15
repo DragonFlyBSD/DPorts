@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: games/xmine/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xmine/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xmine
 PORTVERSION=	1.0.3
@@ -20,4 +20,5 @@ USE_XORG=	x11 xaw xext xmu xt xpm sm ice
 MAN6=		xmine.6
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
