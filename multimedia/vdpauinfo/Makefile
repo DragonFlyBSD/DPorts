@@ -1,5 +1,5 @@
 # Created by: Anonymous <swell.k@gmail.com>
-# $FreeBSD: multimedia/vdpauinfo/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: multimedia/vdpauinfo/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	vdpauinfo
 PORTVERSION=	0.0.6
@@ -19,4 +19,5 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 PLIST_FILES=	bin/vdpauinfo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
