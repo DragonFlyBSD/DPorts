@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ports/astro/wmsun/Makefile,v 1.21 2013/02/25 11:44:09 svnexp Exp $
+# $FreeBSD: astro/wmsun/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	wmsun
 PORTVERSION=	1.03
@@ -20,6 +20,7 @@ ALL_TARGET=	clean all
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" \
 		INCDIR="-I${LOCALBASE}/include" LIBDIR="-L${LOCALBASE}/lib"
 MAKE_JOBS_UNSAFE=	yes
+NO_STAGE=	yes
 
 MAN1=		wmSun.1
 PLIST_FILES=	bin/wmSun

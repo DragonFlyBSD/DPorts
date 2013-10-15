@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/astro/wmsun/files/patch-wmSun.c,v 1.2 2012/11/17 05:54:26 svnexp Exp $
+$FreeBSD: astro/wmsun/files/patch-wmSun.c 300895 2012-07-14 12:56:14Z beat $
 
 --- wmSun.c.orig	Thu Aug 15 18:04:04 2002
 +++ wmSun.c	Thu Aug 15 18:06:24 2002
