@@ -1,9 +1,5 @@
-# New ports collection makefile for:	monitord
-# Date created:				5 June 2000
-# Whom:					walt
-#
-# $FreeBSD: ports/sysutils/monitord/Makefile,v 1.13 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: walt
+# $FreeBSD: sysutils/monitord/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	monitord
 PORTVERSION=	0.4.1
@@ -17,6 +13,7 @@ COMMENT=	Service that restarts other standalone services
 USE_RC_SUBR=	monitord
 MAN8=		monitord.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|syslodg|syslogd|' ${WRKSRC}/${MAN8}
 	@${REINPLACE_CMD} -e 's|-pipe||' ${WRKSRC}/Makefile
