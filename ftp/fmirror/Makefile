@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fmirror
-# Date created:				26 June 2002
-# Whom:					Xavier Beaudouin <kiwi@oav.net>
-#
-# $FreeBSD: ports/ftp/fmirror/Makefile,v 1.7 2012/11/17 05:57:29 svnexp Exp $
-#
+# Created by: Xavier Beaudouin <kiwi@oav.net>
+# $FreeBSD: ftp/fmirror/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	fmirror
 PORTVERSION=	0.8.4
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		fmirror.1
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && \
 		${INSTALL_PROGRAM} fmirror ${PREFIX}/bin && \
