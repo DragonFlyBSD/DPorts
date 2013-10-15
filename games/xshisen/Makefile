@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xshisen/Makefile 322621 2013-07-10 06:55:28Z bapt $
+# $FreeBSD: games/xshisen/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xshisen
 PORTVERSION=	1.51
@@ -24,6 +24,7 @@ USES=		motif
 CONFIGURE_ARGS+=	--with-motif
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|XSHISEN_VERSION|${PORTVERSION}|g' ${WRKSRC}/lang/XShisen.ad*
