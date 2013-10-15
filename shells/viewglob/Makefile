@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: shells/viewglob/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: shells/viewglob/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	viewglob
 PORTVERSION=	2.0.4
@@ -17,7 +17,9 @@ USES=		pkgconfig
 USE_XORG=	x11
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
+LDFLAGS+=	-lm
 
 MAN1=		vgd.1 vgseer.1 viewglob.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
