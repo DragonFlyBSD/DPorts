@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: archivers/zipmix/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: archivers/zipmix/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zipmix
 DISTVERSION=	20070221
@@ -10,6 +10,7 @@ DISTNAME=	${PORTNAME}_src
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	Produce a .ZIP file from 2 other ones with the best compressed files
 
+NO_STAGE=	yes
 USE_DOS2UNIX=	yes
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
