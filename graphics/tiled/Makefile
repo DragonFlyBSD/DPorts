@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/tiled/Makefile 325501 2013-08-28 04:10:32Z amdmi3 $
+# $FreeBSD: graphics/tiled/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tiled
 PORTVERSION=	0.9.1
@@ -20,6 +20,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
