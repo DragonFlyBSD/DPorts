@@ -1,9 +1,5 @@
-# New ports collection makefile for:	policyd2
-# Date created:				2 December 2008
-# Whom:	      				Chifeng QU <chifeng@gmail.com>
-#
-# $FreeBSD: ports/mail/policyd2/Makefile,v 1.17 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: Chifeng QU <chifeng@gmail.com>
+# $FreeBSD: mail/policyd2/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	policyd2
 PORTVERSION=	2.0.12
@@ -19,7 +15,7 @@ RUN_DEPENDS=	p5-Net-Server>=0:${PORTSDIR}/net/p5-Net-Server \
 		p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles \
 		p5-Cache-FastMmap>=0:${PORTSDIR}/devel/p5-Cache-FastMmap
 
-USE_PERL5=	yes
+USES=		perl5
 USE_PHP=	yes
 NO_BUILD=	yes
 USE_RC_SUBR=	policyd2
@@ -33,6 +29,7 @@ PORTDATA=	*
 OPTIONS_DEFINE=	MYSQL PGSQL SQLITE
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 USE_PHP=	pdo_mysql
 .if ${PORT_OPTIONS:MMYSQL}
