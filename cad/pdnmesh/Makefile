@@ -1,9 +1,9 @@
 # Created by: Sarod Yatawatta <sarod@cs.pdn.ac.lk>
-# $FreeBSD: cad/pdnmesh/Makefile 323577 2013-07-24 08:10:12Z marino $
+# $FreeBSD: cad/pdnmesh/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	pdnmesh
 PORTVERSION=	0.2.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-source/${PORTVERSION}
 
@@ -41,6 +41,7 @@ MAN5=		pdnmesh_input.5
 
 DESKTOP_ENTRIES="pdnMesh" "${COMMENT}" "" "${PORTNAME}" "" "true"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MATLAS}
