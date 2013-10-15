@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/rubber/Makefile 320811 2013-06-13 16:07:05Z antoine $
+# $FreeBSD: textproc/rubber/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rubber
 PORTVERSION=	1.1
@@ -24,6 +24,7 @@ MANLANG=	"" fr
 MAN1=		rubber.1 rubber-info.1 rubber-pipe.1
 INFO=		rubber
 
+NO_STAGE=	yes
 post-install:
 	@${FIND} ${PYTHON_SITELIBDIR}/rubber ! -type d | ${SED} \
 		's,${PREFIX}/,,' >> ${TMPPLIST}
