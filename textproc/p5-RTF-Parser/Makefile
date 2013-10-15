@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: textproc/p5-RTF-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-RTF-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	RTF-Parser
 PORTVERSION=	1.09
@@ -21,4 +21,5 @@ MAN3=		RTF::HTML::Converter.3 \
 		RTF::TEXT::Converter.3 \
 		RTF::Parser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
