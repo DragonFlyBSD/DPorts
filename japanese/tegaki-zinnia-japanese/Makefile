@@ -1,9 +1,9 @@
-# New ports collection makefile for:	tegaki-zinnia-japanese
+# $FreeBSD: japanese/tegaki-zinnia-japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 # Date created:				15 Aug 2010
 # Whom:					Timothy Beyer <beyert@cs.ucr.edu>
 #
-# $FreeBSD: ports/japanese/tegaki-zinnia-japanese/Makefile,v 1.2 2012/11/17 05:58:40 svnexp Exp $
+# $FreeBSD: japanese/tegaki-zinnia-japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
 #
 
 PORTNAME=	tegaki
@@ -21,6 +21,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 do-build:
 
 .include <bsd.port.mk>
