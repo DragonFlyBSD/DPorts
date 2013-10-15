@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD: audio/slv2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/slv2/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	slv2
 PORTVERSION=	0.6.6
@@ -17,6 +17,7 @@ LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 		rdf.0:${PORTSDIR}/textproc/redland
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=	yes
 USE_LDCONFIG=	yes
