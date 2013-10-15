@@ -1,26 +1,18 @@
-# New ports collection makefile for:	py-rpyc
-# Date created:		2009-01-20
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-RPyC/Makefile,v 1.9 2012/11/17 05:56:44 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-RPyC/Makefile 328927 2013-10-01 07:24:06Z wen $
 
 PORTNAME=	rpyc
-PORTVERSION=	3.1.0
+PORTVERSION=	3.2.3
 CATEGORIES=	devel python
-MASTER_SITES=	SF/${PORTNAME}/files/main/${PORTVERSION} \
-		CHEESESHOP
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	RPyC-${PORTVERSION}
 
-MAINTAINER=	wenheping@gmail.com
+MAINTAINER=	kozlov.sergey.404@gmail.com
 COMMENT=	Remote Python Call
 
 LICENSE=	MIT
 
-USE_DOS2UNIX=	yes
-USE_PYTHON=		2.7
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	RPyC
 
 .include <bsd.port.mk>
