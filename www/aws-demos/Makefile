@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: www/aws-demos/Makefile 322832 2013-07-12 13:40:50Z marino $
+# $FreeBSD: www/aws-demos/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	aws
 PORTVERSION=	3.1.0.0
@@ -58,6 +58,7 @@ DEMO_DIRS+=	zdemo
 #DEMO_DIRS+=	hello_wsdl
 #DEMO_DIRS+=	interoplab
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
