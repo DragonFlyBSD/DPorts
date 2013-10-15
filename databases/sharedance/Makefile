@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sharedance
-# Date created:		2008-04-13
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/databases/sharedance/Makefile,v 1.4 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: databases/sharedance/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sharedance
 PORTVERSION=	0.6
@@ -20,6 +16,7 @@ CONFIGURE_ARGS=	--with-largefile
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/php/*.php ${DATADIR}
