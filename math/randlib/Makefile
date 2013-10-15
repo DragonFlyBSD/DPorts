@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ranlib
-# Date created:		06 April 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/math/randlib/Makefile,v 1.22 2012/11/17 05:59:30 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: math/randlib/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	randlib
 PORTVERSION=	1.3
@@ -24,6 +20,7 @@ PLIST_FILES=	include/randlib.h \
 		lib/librandlib.so \
 		lib/librandlib.so.1
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${FILESDIR}/Makefile.lib ${WRKSRC}/Makefile
 
