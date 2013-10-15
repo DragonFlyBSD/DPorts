@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-passwd/Makefile 325479 2013-08-27 18:10:33Z mm $
+# $FreeBSD: www/horde-passwd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	passwd
 PORTVERSION=	5.0.1
@@ -24,6 +24,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Util \
 		Horde_View
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
