@@ -1,4 +1,4 @@
-# $FreeBSD: devel/horde-whups/Makefile 325255 2013-08-23 08:30:45Z mm $
+# $FreeBSD: devel/horde-whups/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	whups
 DISTVERSION=	3.0.0RC2
@@ -40,6 +40,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Vfs \
 		Horde_View
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
