@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: java/mmake/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: java/mmake/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	mmake
 PORTVERSION=	2.3
@@ -21,4 +21,5 @@ NO_BUILD=	yes
 MAN1=		mmake.1
 PLIST_FILES=	bin/mmake
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
