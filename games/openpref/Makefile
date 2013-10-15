@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openpref
-# Date created:				2010-09-12
-# Whom:					Konstantin Tokarev <annulen@yandex.ru>
-#
-# $FreeBSD: ports/games/openpref/Makefile,v 1.5 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Konstantin Tokarev <annulen@yandex.ru>
+# $FreeBSD: games/openpref/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	openpref
 PORTVERSION=	0.1.3
@@ -21,6 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 DESKTOP_ENTRIES="OpenPref" "${COMMENT}" "${DATADIR}/openpref.png" \
 		"openpref" "Game;CardGame;" false
 
+NO_STAGE=	yes
 do-configure:
 	@(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS} ${QMAKE_ARGS} )
 
