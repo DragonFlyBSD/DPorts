@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: sysutils/fpart/Makefile 326866 2013-09-10 06:25:05Z martymac $
+# $FreeBSD: sysutils/fpart/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fpart
 PORTVERSION=	0.9
@@ -20,6 +20,7 @@ MAN1=		fpart.1
 PLIST_FILES=	bin/fpart
 PORTDOCS=	Changelog README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
