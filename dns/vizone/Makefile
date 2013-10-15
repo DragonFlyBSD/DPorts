@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: dns/vizone/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: dns/vizone/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	vizone
 PORTVERSION=	0.1
@@ -18,6 +18,7 @@ SHEBANG_FILES=	updserial
 PORTEXAMPLES=	example.tld
 PLIST_FILES=	bin/vizone bin/updserial
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/updserial ${PREFIX}/bin
