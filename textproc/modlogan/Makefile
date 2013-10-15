@@ -1,9 +1,5 @@
-# New ports collection makefile for:	modlogan
-# Date created:         06.Sep.2000
-# Whom:                 Alexander@Leidinger.net
-#
-# $FreeBSD: textproc/modlogan/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: Alexander@Leidinger.net
+# $FreeBSD: textproc/modlogan/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	modlogan
 PORTVERSION=	0.8.13
@@ -39,6 +35,7 @@ MAN1=		modlogan.1
 DOC1=		faq.txt glosar manual.txt translations.txt \
 		using-plugins.txt writing-plugins.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's:\@config_path\@:${PREFIX}/etc/modlogan:g' ${WRKSRC}/doc/modlogan.conf-dist.in
 
