@@ -1,5 +1,5 @@
 # Created by: Mina Naguib <webmaster@topfx.com>
-# $FreeBSD: irc/psybnc/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: irc/psybnc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	psybnc
 DISTVERSION=	2.3.2-9
@@ -20,6 +20,7 @@ PLIST_SUB=	PSYBASE=${PSYBASE:S,^${PREFIX}/,,}
 OPTIONS_DEFINE=	MENUCONFIG
 MENUCONFIG_DESC=Configure using menu
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMENUCONFIG}
