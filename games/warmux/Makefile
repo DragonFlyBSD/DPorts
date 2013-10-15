@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@FreeBSD.org>
-# $FreeBSD: games/warmux/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: games/warmux/Makefile 328988 2013-10-01 20:04:02Z marino $
 
 PORTNAME=	warmux
 DISTVERSION=	11.04.1
@@ -31,11 +31,12 @@ SERVER_DESC=	Enable dedicated server
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:R}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
 	${REINPLACE_CMD} -e "s,-Werror,," ${WRKSRC}/Makefile.in \
-	${WRKSRC}/src/Makefile.in
+	${WRKSRC}/src/Makefile.in ${WRKSRC}/configure
 	${REINPLACE_CMD} -e "s,warmux_files.desktop,," ${WRKSRC}/data/Makefile.in
 	${FIND} -d ${WRKSRC}/data/ -name "*.*~" -delete
 
