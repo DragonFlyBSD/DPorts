@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: archivers/xdms/Makefile 323960 2013-07-30 12:32:54Z bapt $
+# $FreeBSD: archivers/xdms/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	xdms
 PORTVERSION=	1.3.2
@@ -11,6 +11,7 @@ COMMENT=	Tool for decompressing Amiga DMS files
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
