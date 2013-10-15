@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adam@vectors.cx>
-# $FreeBSD: misc/wmtunlo/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/wmtunlo/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	wmtunlo
 PORTVERSION=	0.1.3
@@ -14,6 +14,7 @@ COMMENT=	Falling-down-a-tunnel dockapp
 USE_XORG=	x11 xpm xextproto
 ALL_TARGET=	wmtunlo
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/wmtunlo ${PREFIX}/bin
 .ifndef NOPORTEXAMPLES
