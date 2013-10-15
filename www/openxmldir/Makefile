@@ -1,9 +1,5 @@
-# New ports collection makefile for:	open79xxdir
-# Date created:		16 FEB 2006
-# Whom:			Babak Farrokhi <babak@farrokhi.net>
-#
-# $FreeBSD: ports/www/openxmldir/Makefile,v 1.7 2012/11/17 06:02:44 svnexp Exp $
-#
+# Created by: Babak Farrokhi <babak@farrokhi.net>
+# $FreeBSD: www/openxmldir/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	openxmldir
 PORTVERSION=	1.2
@@ -20,6 +16,7 @@ USE_PHP=	mysql xml
 PLIST_SUB+=	OPENXMLDIR=${OPENXMLDIR}
 OPENXMLDIR=	www/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	-${MKDIR} ${PREFIX}/${OPENXMLDIR}
 	@${CP} -R ${WRKSRC}/* ${PREFIX}/${OPENXMLDIR}
