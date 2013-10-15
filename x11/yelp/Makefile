@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/yelp/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: x11/yelp/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/yelp/Makefile,v 1.171 2012/10/01 16:19:07 kwm Exp $
 
 PORTNAME=	yelp
@@ -31,6 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	yelp.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Around the time GCC stack protection (aka Propolice) for userland
