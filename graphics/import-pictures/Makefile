@@ -1,5 +1,5 @@
 # Created by: Alexander Kuehn
-# $FreeBSD: graphics/import-pictures/Makefile 315157 2013-03-24 20:19:41Z beech $
+# $FreeBSD: graphics/import-pictures/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	import-pictures
 PORTVERSION=	1.4
@@ -16,8 +16,7 @@ RUN_DEPENDS=	p5-Image-ExifTool>=0:${PORTSDIR}/graphics/p5-Image-ExifTool \
 		p5-Time-modules>=0:${PORTSDIR}/devel/p5-Time-modules
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		gmake perl5
 
 PLIST_FILES=	bin/${PORTNAME}
 
@@ -25,6 +24,7 @@ MAN1=		${PORTNAME}.1
 
 PORTDOCS=	import-pictures.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
