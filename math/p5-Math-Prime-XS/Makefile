@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Prime-XS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: math/p5-Math-Prime-XS/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	Math-Prime-XS
 PORTVERSION=	0.26
@@ -19,7 +19,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Math::Prime::XS.3
 
 .include <bsd.port.mk>
