@@ -1,5 +1,5 @@
 # Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/gqview/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: graphics/gqview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gqview
 PORTVERSION=	2.0.4
@@ -26,6 +26,7 @@ CONFLICTS=	gqview-devel-[0-9]*
 # Restrict to stable (even) versions, indicated by the second component.
 PORTSCOUT=	limitw:1,even
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
