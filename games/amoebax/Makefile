@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/amoebax/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: games/amoebax/Makefile 328651 2013-09-29 08:38:19Z antoine $
 
 PORTNAME=	amoebax
 PORTVERSION=	0.2.1
@@ -19,10 +19,8 @@ LICENSE_PERMS_FAL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl mixer image
-
-MAN6=		amoebax.6
 
 PORTDOCS=	*
 
@@ -32,12 +30,8 @@ post-patch:
 	@${FIND} ${WRKSRC}/ -name Makefile.in|${XARGS}\
 		${REINPLACE_CMD} -e '/^pkgdatadir =/s|=.*|= ${DATADIR}|'
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf ${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
