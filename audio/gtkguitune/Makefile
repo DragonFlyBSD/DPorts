@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: audio/gtkguitune/Makefile 326109 2013-09-02 22:31:37Z bapt $
+# $FreeBSD: audio/gtkguitune/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gtkguitune
 PORTVERSION=	0.8
@@ -16,6 +16,7 @@ LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		pkgconfig
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
