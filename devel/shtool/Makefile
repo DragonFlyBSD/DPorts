@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall
-# $FreeBSD: devel/shtool/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/shtool/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	shtool
 PORTVERSION=	2.0.8
@@ -27,4 +27,5 @@ regression-test: test
 test: build
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
