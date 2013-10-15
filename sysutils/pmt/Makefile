@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pmt
-# Date created:		2010-01-05
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/pmt/Makefile,v 1.3 2012/11/17 06:01:41 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: sysutils/pmt/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pmt
 PORTVERSION=	0.2
@@ -19,6 +15,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	bin/pmt
 
+NO_STAGE=	yes
 do-install:
 	@${CP} ${WRKSRC}/pmt ${PREFIX}/bin
 
