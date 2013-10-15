@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	matrixssl
-# Date created:				2006-03-17
-# Whom:					arved
-#
-# $FreeBSD: security/matrixssl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: arved
+# $FreeBSD: security/matrixssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	matrixssl
 PORTVERSION=	3.3
@@ -25,6 +22,7 @@ USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CC}" DFLAGS="${CFLAGS}" STRIP="${TEST}"
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64" || ${ARCH} == "sparc64"
