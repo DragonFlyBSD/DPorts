@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	terminality
-# Date created:			Apr 28, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/terminality/Makefile,v 1.23 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/terminality/Makefile 329774 2013-10-08 11:16:43Z bsam $
 
 PORTNAME=	terminality
 PORTVERSION=	2.1
@@ -14,17 +9,17 @@ MASTER_SITE_SUBDIR=	gabor
 DISTNAME=	tn-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A cross-platform terminal manipulation library
+COMMENT=	Cross-platform terminal manipulation library
 
 USE_CSTD=	gnu89
 
+OPTIONS_DEFINE=	DOCS
+
 do-install:
-	@${MKDIR} ${PREFIX}/include/tn
-	${INSTALL_DATA} ${WRKSRC}/*.h ${PREFIX}/include/tn
-	${INSTALL_DATA} ${WRKSRC}/libtn.a ${PREFIX}/lib
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/screenshot
-	${CP} -R ${WRKSRC}/doc/* ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${PREFIX}/include/tn
+	${INSTALL_DATA} ${WRKSRC}/*.h ${STAGEDIR}${PREFIX}/include/tn
+	${INSTALL_DATA} ${WRKSRC}/libtn.a ${STAGEDIR}${PREFIX}/lib
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${CP} -R ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
