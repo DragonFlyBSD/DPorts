@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/systempreferences/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: deskutils/systempreferences/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	systempreferences
 PORTVERSION=	1.1.0
@@ -24,4 +24,5 @@ USE_GNUSTEP_MAKE_DIRS=	SystemPreferences Modules
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
