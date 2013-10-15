@@ -1,9 +1,5 @@
-# New ports collection makefile for:	strobe
-# Date created:		23 Sep 1996
-# Whom:			proff
-#
-# $FreeBSD: ports/security/strobe/Makefile,v 1.21 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: proff
+# $FreeBSD: security/strobe/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	strobe
 PORTVERSION=	1.06
@@ -22,4 +18,5 @@ MAN1=		strobe.1
 
 PLIST_FILES=	bin/strobe lib/strobe.services
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
