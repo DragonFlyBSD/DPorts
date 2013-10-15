@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Class-Accessor-Complex/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-Class-Accessor-Complex/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Accessor-Complex
 PORTVERSION=	1.100880
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Accessor::Complex.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
