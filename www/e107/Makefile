@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/e107/Makefile 319566 2013-06-01 14:04:39Z wen $
+# $FreeBSD: www/e107/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	e107
 PORTVERSION=	1.0.4
@@ -13,6 +13,7 @@ COMMENT=	A content management system written in PHP
 USE_PHP=	mysql xml
 WRKSRC=		${WRKDIR}/e107
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 NO_BUILD=	yes
