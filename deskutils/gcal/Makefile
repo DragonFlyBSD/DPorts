@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: deskutils/gcal/Makefile 316844 2013-04-29 20:03:38Z johans $
+# $FreeBSD: deskutils/gcal/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=		gcal
 PORTVERSION=		3.6.3
@@ -16,6 +16,7 @@ CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 INFO=		gcal
 #MAN1=		gcal.1 gcal2txt.1 tcal.1 txt2gcal.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
