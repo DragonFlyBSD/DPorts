@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: ports/net/tcpxd/Makefile,v 1.8 2013/02/18 14:39:48 svnexp Exp $
+# $FreeBSD: net/tcpxd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpxd
 PORTVERSION=	1.4
@@ -17,6 +17,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/tcpxd ${PREFIX}/sbin
 	@${INSTALL_DATA} ${WRKSRC}/tcpxd.conf ${PREFIX}/etc/tcpxd.conf.dist
