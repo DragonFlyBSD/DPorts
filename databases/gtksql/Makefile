@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: databases/gtksql/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: databases/gtksql/Makefile 329743 2013-10-07 23:03:12Z marino $
 
 PORTNAME=	gtksql
 PORTVERSION=	0.4.5
@@ -15,9 +15,9 @@ LIB_DEPENDS=	avahi-client:${PORTSDIR}/net/avahi-app
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
 USE_GNOME=	gtk20
+LDFLAGS+=	-L${LOCALBASE}/lib -lgmodule-2.0
 
 MAN1=		${PORTNAME}.1
 PORTDOCS=	AUTHORS ChangeLog NEWS README TODO
@@ -26,6 +26,7 @@ OPTIONS_MULTI=		DB
 OPTIONS_MULTI_DB=	MYSQL PGSQL SQLITE3
 OPTIONS_DEFAULT=	MYSQL PGSQL SQLITE3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
