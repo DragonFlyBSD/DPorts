@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Horde_Prefs/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: devel/pear-Horde_Prefs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Horde_Prefs
 PORTVERSION=	2.5.0
@@ -14,6 +14,7 @@ USE_HORDE_RUN=	Horde_Exception \
 		Horde_Util
 USE_PHP=	json
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
