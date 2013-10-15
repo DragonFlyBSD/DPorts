@@ -1,9 +1,5 @@
-# Ports collection makefile for:	gpgr
-# Date created:				15 February 2011
-# Whom:					Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/security/rubygem-gpgr/Makefile,v 1.3 2012/11/17 06:01:19 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: security/rubygem-gpgr/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gpgr
 PORTVERSION=	0.0.4
@@ -20,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
