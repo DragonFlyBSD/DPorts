@@ -1,5 +1,5 @@
 # Created by: Max N. Boyarov <m.boyarov@gmail.com>
-# $FreeBSD: textproc/dictem/Makefile 325078 2013-08-21 00:44:26Z wen $
+# $FreeBSD: textproc/dictem/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dictem
 PORTVERSION=	1.0.4
@@ -25,6 +25,7 @@ PLIST_DIRS+=	${LISPDIR}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PORTDOCS+=	README AUTHORS NEWS COPYING TODO
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_NAME} == "xemacs"
