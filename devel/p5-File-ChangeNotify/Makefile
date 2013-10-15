@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-File-ChangeNotify/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-File-ChangeNotify/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-ChangeNotify
 PORTVERSION=	0.22
@@ -31,4 +31,5 @@ MAN3=		File::ChangeNotify.3 \
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
