@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: ports/www/moinmoin/Makefile,v 1.58 2013/01/05 13:46:58 svnexp Exp $
+# $FreeBSD: www/moinmoin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	moinmoin
 PORTVERSION=	1.9.6
@@ -44,6 +44,7 @@ MOINSCRIPT=	${MOINDIR}/server/moin.wsgi
 BROKEN=		MOINTYPE must be a STANDALONE, FCGI, WSGI, MOD_PYTHON or CGI.
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO}
 	@${ECHO} "Set MOINTYPE=(CGI|FCGI|WSGI|STANDALONE) to define"
