@@ -1,9 +1,5 @@
-# New ports collection makefile for:	o_dbm - ObjectDBM
-# Date created:		16 March 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: databases/ruby-o_dbm/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: databases/ruby-o_dbm/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	o_dbm
 PORTVERSION=	0.5.1
@@ -20,6 +16,7 @@ USE_RUBY=	yes
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${RUBY_SITELIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/o_dbm.rb ${RUBY_SITELIBDIR}/
