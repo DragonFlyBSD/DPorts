@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: games/live-f1/Makefile 318073 2013-05-13 12:22:29Z koobs $
+# $FreeBSD: games/live-f1/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	live-f1
 PORTVERSION=	0.2.11
@@ -25,6 +25,7 @@ USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
