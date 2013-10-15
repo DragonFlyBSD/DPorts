@@ -1,5 +1,5 @@
 # Created by: Bartek Rutkowski <r@robakdesign.com>
-# $FreeBSD: net-im/jggtrans/Makefile 325748 2013-08-31 00:18:11Z bapt $
+# $FreeBSD: net-im/jggtrans/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	jggtrans
 PORTVERSION=	2.2.4
@@ -27,6 +27,7 @@ USE_RC_SUBR=	jggtrans
 OPTIONS_DEFINE=	DEBUG EJABBERD
 EJABBERD_DESC=	transport with ejabberd
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDEBUG}
