@@ -1,9 +1,5 @@
-# New ports collection makefile for:   portell
-# Date created:        Wed Jan 08 13:25:35 GMT 2003
-# Whom:                mich@freebsdcluster.org
-#
-# $FreeBSD: ports/ports-mgmt/portell/Makefile,v 1.17 2012/11/17 06:00:46 svnexp Exp $
-#
+# Created by: mich@freebsdcluster.org
+# $FreeBSD: ports-mgmt/portell/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	portell
 PORTVERSION=	0.2
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/portell
 PORTDOCS=	README.txt
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's/[[:cntrl:]]*$$//' ${WRKSRC}/portell.py
 	${REINPLACE_CMD} -e 's/free/freebsd/' ${WRKSRC}/portell.py

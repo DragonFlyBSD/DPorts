@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/ports-mgmt/portell/files/patch-portell.py,v 1.2 2012/11/17 06:00:46 svnexp Exp $
+$FreeBSD: ports-mgmt/portell/files/patch-portell.py 300897 2012-07-14 14:29:18Z beat $
 
 --- portell.py.orig
 +++ portell.py
