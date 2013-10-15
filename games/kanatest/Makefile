@@ -1,5 +1,5 @@
 # Created by: S H A N <shanali@yahoo.com>
-# $FreeBSD: games/kanatest/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: games/kanatest/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kanatest
 PORTVERSION=	0.4.8
@@ -35,6 +35,7 @@ post-patch:	.SILENT
 		${WRKSRC}/src/gui.c \
 		${WRKSRC}/src/options.c \
 		${WRKSRC}/src/stats.c
+NO_STAGE=	yes
 post-install:
 	-update-desktop-database ${PREFIX}/share/applications
 
