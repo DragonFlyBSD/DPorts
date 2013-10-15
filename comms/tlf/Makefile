@@ -1,9 +1,5 @@
-# ports collection makefile for:	tlf
-# Date created:		10 July 2004
-# Whom:			db
-#
-# $FreeBSD: comms/tlf/Makefile 323088 2013-07-16 05:42:36Z ade $
-#
+# Created by: db
+# $FreeBSD: comms/tlf/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	tlf
 PORTVERSION=	0.9.31
@@ -31,6 +27,7 @@ OPTION_DEFAULT=	HAMLIB
 
 MAN1=		tlf.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MHAMLIB}
