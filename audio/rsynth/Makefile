@@ -1,5 +1,5 @@
 # Created by: faulkner@mpd.tandem.com
-# $FreeBSD: ports/audio/rsynth/Makefile,v 1.34 2013/02/25 19:55:46 svnexp Exp $
+# $FreeBSD: audio/rsynth/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	rsynth
 PORTVERSION=	2.0
@@ -12,6 +12,8 @@ COMMENT=	Speech synthesizer
 
 LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm	\
 		audio:${PORTSDIR}/audio/nas
+
+NO_STAGE=	yes
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
