@@ -1,5 +1,5 @@
 # Created by: Sander Vesik <sander@haldjas.folklore.ee>
-# $FreeBSD: devel/tclcheck/Makefile 316428 2013-04-24 13:07:06Z gahr $
+# $FreeBSD: devel/tclcheck/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tclcheck
 PORTVERSION=	1.1.13
@@ -18,6 +18,7 @@ MAN1=		tclCheck.1
 PLIST_FILES=	bin/tclCheck
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
