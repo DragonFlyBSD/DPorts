@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/firemime
-# Date created:				Sun 31 May 16:35:00 WST 2004
-# Whom:					Dean Hollister <dean@odyssey.apana.org.au>
-#
-# $FreeBSD: ports/mail/firemime/Makefile,v 1.8 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: Dean Hollister <dean@odyssey.apana.org.au>
+# $FreeBSD: mail/firemime/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	firemime
 PORTVERSION=	0.9.4
@@ -26,6 +22,7 @@ MAN3=		firemime_decode_body.3 firemime_get_full_header.3 firemime_get_header.3 \
 		firemime_param_value.3 firemime_parse.3 firemime_strerror.3 \
 		firemime_strip_comments.3 firemime_strip_markup.3 libfiremime.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
