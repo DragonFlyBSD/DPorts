@@ -1,5 +1,5 @@
 # Created by: John Reynolds <johnjen@reynoldsnet.org>
-# $FreeBSD: graphics/imageindex/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/imageindex/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imageindex
 PORTVERSION=	1.1
@@ -26,6 +26,7 @@ PORTDOCS=	README
 
 MAN1=	imageindex.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|share/man|man| ;' ${WRKSRC}/Makefile
 
