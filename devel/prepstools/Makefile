@@ -1,5 +1,5 @@
 # Created by: jmelo@FreeBSD.org
-# $FreeBSD: devel/prepstools/Makefile 326142 2013-09-03 12:50:18Z bapt $
+# $FreeBSD: devel/prepstools/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	prepstools
 PORTVERSION=	2.2.0
@@ -25,4 +25,5 @@ CONFIGURE_ARGS+=--with-pgsqldir=${LOCALBASE} --with-plpgsqldir=${LOCALBASE}
 
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
