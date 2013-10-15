@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/burplex/Makefile,v 1.3 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/burplex/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	burplex
 PORTVERSION=	1.0.0
@@ -26,6 +26,7 @@ PLIST_FILES=	bin/${PORTNAME}
 DESKTOP_ENTRIES=	"burplex" "${COMMENT}" ""  \
 			"burplex" "" "false"
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},' \
 		${WRKSRC}/mainwindow.cpp
