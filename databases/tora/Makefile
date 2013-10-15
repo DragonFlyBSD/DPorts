@@ -1,5 +1,5 @@
 # Created by: anders
-# $FreeBSD: ports/databases/tora/Makefile,v 1.49 2013/02/03 22:42:53 svnexp Exp $
+# $FreeBSD: databases/tora/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	tora
 PORTVERSION=	2.1.3
@@ -26,6 +26,7 @@ GNU_CONFIGURE=	yes
 
 PREFIX2FIX=	doc/help/preferences.texi doc/help/preferences.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
