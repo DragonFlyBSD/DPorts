@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/nadar/files/patch-server_Game.c,v 1.2 2012/11/17 05:57:46 svnexp Exp $
+$FreeBSD: games/nadar/files/patch-server_Game.c 300896 2012-07-14 13:54:48Z beat $
 
 --- server/Game.c.orig	Sun Aug 22 16:35:40 2004
 +++ server/Game.c	Sun Aug 22 16:35:50 2004
