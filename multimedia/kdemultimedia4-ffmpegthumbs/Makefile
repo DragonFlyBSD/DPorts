@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 328168 2013-09-24 16:48:21Z makc $
 
 PORTNAME=	ffmpegthumbs
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,7 @@ LIB_DEPENDS=	swscale${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFI
 
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
-USES=		cmake:outsource
+USES=		cmake:outsource pkgconfig
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
@@ -28,4 +28,5 @@ USE_XZ=		yes
 FFMPEG_SUFFIX?=	1
 CMAKE_ARGS+=	-DFFMPEG_SUFFIX=${FFMPEG_SUFFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
