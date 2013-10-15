@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xipdump
-# Date created:				17 Jun 2001
-# Whom:					UMENO Takashi <umeno@rr.iij4u.or.jp>
-#
-# $FreeBSD: ports/net/xipdump/Makefile,v 1.18 2012/11/17 06:00:25 svnexp Exp $
-#
+# Created by: UMENO Takashi <umeno@rr.iij4u.or.jp>
+# $FreeBSD: net/xipdump/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	xipdump
 PORTVERSION=	1.5.4
@@ -29,6 +25,7 @@ MAN8=	xipdump.8
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
 
+NO_STAGE=	yes
 post-build:
 	@${CP} ${PKGDIR}/pkg-plist ${PLIST}
 	@(cd ${WRKSRC}/data; ${FIND} pkc pkt ! -type d | \
