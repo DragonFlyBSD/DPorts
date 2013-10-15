@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	ez-pine-gpg
-# Date created:				20 June 2008
-# Whom:					gahr
-#
-# $FreeBSD: ports/mail/ez-pine-gpg/Makefile,v 1.3 2012/11/17 05:59:03 svnexp Exp $
+# Created by: gahr
+# $FreeBSD: mail/ez-pine-gpg/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ez-pine-gpg
 DISTVERSION=	0.4h
@@ -20,6 +17,7 @@ RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 WRKSRC=	${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	(cd ${WRKSRC} && ./install ${PREFIX}/bin)
 
