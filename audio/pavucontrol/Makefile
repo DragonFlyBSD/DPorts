@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: audio/pavucontrol/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: audio/pavucontrol/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	pavucontrol
 PORTVERSION=	0.9.10
@@ -16,6 +16,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	intltool
 
 CONFIGURE_ARGS=	--disable-lynx
