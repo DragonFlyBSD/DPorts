@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/finance/jgnash/pkg-plist,v 1.10 2012/11/17 05:57:25 svnexp Exp $
+@comment $FreeBSD: finance/jgnash/pkg-plist 303692 2012-09-05 09:30:53Z decke $
 %%DATADIR%%/jgnash2.jar
 %%DATADIR%%/lib/DynamicJasper-3.2.1.jar
 %%DATADIR%%/lib/args4j-2.0.19.jar

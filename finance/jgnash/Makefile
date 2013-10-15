@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jgnash
-# Date created:		2009-12-27
-# Whom:			Bernhard Froehlich <decke@bluelife.at>
-#
-# $FreeBSD: ports/finance/jgnash/Makefile,v 1.12 2012/11/17 05:57:25 svnexp Exp $
-#
+# Created by: Bernhard Froehlich <decke@bluelife.at>
+# $FreeBSD: finance/jgnash/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	jgnash
 PORTVERSION=	2.10.0
@@ -27,6 +23,7 @@ JAVA_VENDOR=	openjdk
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	@${CP} ${WRKSRC}/jgnash2.jar ${DATADIR}
