@@ -1,4 +1,4 @@
-# $FreeBSD: games/3dpong/Makefile 316762 2013-04-28 22:30:41Z beech $
+# $FreeBSD: games/3dpong/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	3dpong
 PORTVERSION=	0.5
@@ -37,6 +37,7 @@ PORTEXAMPLES=	*
 DESKTOP_ENTRIES="3D Pong" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
