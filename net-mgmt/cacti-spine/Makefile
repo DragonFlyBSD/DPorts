@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cactid
-# Date created:        Feb 26 2005
-# Whom:                clement@FreeBSD.org
-#
-# $FreeBSD: ports/net-mgmt/cacti-spine/Makefile,v 1.33 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: clement@FreeBSD.org
+# $FreeBSD: net-mgmt/cacti-spine/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	spine
 PORTVERSION=	0.8.8
@@ -24,6 +20,7 @@ USE_MYSQL=	YES
 USE_OPENSSL=	YES
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 800040
