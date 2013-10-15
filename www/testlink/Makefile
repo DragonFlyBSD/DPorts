@@ -1,4 +1,4 @@
-# $FreeBSD: www/testlink/Makefile 319056 2013-05-25 14:41:31Z tota $
+# $FreeBSD: www/testlink/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	testlink
 PORTVERSION=	1.9.7
@@ -32,6 +32,7 @@ EXTJS_DESC=		Enable Ext JS support
 
 OPTIONS_DEFAULT=	MYSQL EXTJS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
