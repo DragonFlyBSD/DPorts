@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: accessibility/kdeaccessibility4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: accessibility/kdeaccessibility4/Makefile 327684 2013-09-20 11:02:49Z bapt $
 
 PORTNAME=	kdeaccessibility
 PORTVERSION=	${KDE4_VERSION}
@@ -12,6 +12,7 @@ COMMENT=	Accessibility applications for KDE 4
 
 USE_KDE4=	kdeprefix
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 LATEST_LINK=	${PORTNAME}4
 
