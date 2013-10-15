@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rabbitmq-c-devel
-# Date created:				31 March 2010
-# Whom:					Geoff Garside
-#
-# $FreeBSD: ports/net/rabbitmq-c-devel/Makefile,v 1.12 2012/11/17 06:00:17 svnexp Exp $
-#
+# Created by: Geoff Garside
+# $FreeBSD: net/rabbitmq-c-devel/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rabbitmq-c
 PORTVERSION=	0.0.1
@@ -40,6 +36,7 @@ OPTIONS_DEFINE=	64BIT POPT
 64BIT_DESC=	Produce 64-bit library
 POPT_DESC=	Popt support in tools
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:M64BIT}
