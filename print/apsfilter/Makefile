@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: print/apsfilter/Makefile 318069 2013-05-13 11:12:46Z hrs $
+# $FreeBSD: print/apsfilter/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	apsfilter
 PORTVERSION=	7.2.8
@@ -47,6 +47,7 @@ ATALK_DESC=	remote printing on AppleTalk remote printer
 SAMBA_DESC=	remote printing on Windows remote printer
 COMPRESS_DESC=	print compressed documents
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
