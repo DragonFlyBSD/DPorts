@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: sysutils/iat/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/iat/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	iat
 PORTVERSION=	0.1.7
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/iat
 MAN1=		iat.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/install-data-am:/ s|install-includeHEADERS||' \
 		${WRKSRC}/src/Makefile.in
