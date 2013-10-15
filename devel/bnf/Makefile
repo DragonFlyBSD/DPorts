@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bnf
-# Date created:				22 May 2003
-# Whom:					Frerich Raabe <frerich.raabe@gmx.de>
-#
-# $FreeBSD: ports/devel/bnf/Makefile,v 1.11 2012/11/17 05:55:35 svnexp Exp $
-#
+# Created by: Frerich Raabe <frerich.raabe@gmx.de>
+# $FreeBSD: devel/bnf/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	bnf
 PORTVERSION=	1.6.10
