@@ -1,5 +1,5 @@
 # Created by: Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
-# $FreeBSD: mail/qmail-auditor/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/qmail-auditor/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qmail-auditor
 PORTVERSION=	0.47
@@ -24,6 +24,7 @@ PORTDOCS=	README
 
 INSTALL_TARGET=	perm
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
