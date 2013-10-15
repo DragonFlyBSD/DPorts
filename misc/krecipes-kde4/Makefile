@@ -1,4 +1,4 @@
-# $FreeBSD: misc/krecipes-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/krecipes-kde4/Makefile 329736 2013-10-07 20:17:20Z jhale $
 
 PORTNAME=	krecipes
 DISTVERSION=	2.0-beta2
@@ -7,37 +7,28 @@ CATEGORIES=	misc kde
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	jhale@FreeBSD.org
-COMMENT=	Recipe database for KDE4
+COMMENT=	KDE4 recipe database
 
 LICENSE=	GPLv2
-
-LATEST_LINK=	${PORTNAME}-kde4
-
-OPTIONS_MULTI=		DB
-OPTIONS_MULTI_DB=	SQLITE MYSQL PGSQL
-OPTIONS_DEFAULT=	SQLITE
 
 USES=		cmake gettext
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdeprefix kdelibs qimageblitz sharedmime
 
-.include <bsd.port.options.mk>
+NO_STAGE=	yes
 
-.if ${PORT_OPTIONS:MSQLITE}
-USE_SQLITE=	yes
-USE_QT4+=	sql-sqlite3_run
-.else
-CMAKE_ARGS+=	-DWITH_Sqlite:BOOL=OFF
-.endif
+OPTIONS_MULTI=		DB
+OPTIONS_MULTI_DB=	SQLITE MYSQL PGSQL
+OPTIONS_DEFAULT=	SQLITE
 
-.if ${PORT_OPTIONS:MMYSQL}
-USE_MYSQL=	yes
-USE_QT4+=	sql-mysql_run
-.endif
+SQLITE_USE=		SQLITE=yes \
+			QT4=sql-sqlite3_run
+SQLITE_CMAKE_OFF=	-DWITH_Sqlite:BOOL=OFF
 
-.if ${PORT_OPTIONS:MPGSQL}
-USE_PGSQL=	yes
-USE_QT4+=	sql-pgsql_run
-.endif
+MYSQL_USE=		MYSQL=yes \
+			QT4=sql-mysql_run
+
+PGSQL_USE=		PGSQL=yes \
+			QT4=sql-pgsql_run
 
 .include <bsd.port.mk>
