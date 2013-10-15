@@ -1,5 +1,5 @@
 # Created by: Maksym Sobolyev <sobomax@pbxpress.it>
-# $FreeBSD: net/p5-Net-Syslog/Makefile 326522 2013-09-06 16:11:30Z az $
+# $FreeBSD: net/p5-Net-Syslog/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Syslog
 PORTVERSION=	0.04
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Syslog.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
