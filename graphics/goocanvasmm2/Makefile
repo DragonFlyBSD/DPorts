@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/goocanvasmm2/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: graphics/goocanvasmm2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/trunk/graphics/goocanvasmm2/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	goocanvasmm
@@ -21,4 +21,5 @@ CONFIGURE_ARGS=	--disable-documentation
 USE_XZ=		yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
