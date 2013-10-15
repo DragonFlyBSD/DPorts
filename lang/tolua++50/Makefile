@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: lang/tolua++50/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: lang/tolua++50/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	tolua++
 PORTVERSION=	1.0.92
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LUA_LIBDIR}
 
 PORTSCOUT=	limit:1\.0\.92
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/tolua++ ${LUA_BINDIR}
 	${LN} -sf ${LUA_SUBDIR}/tolua++ ${PREFIX}/bin/tolua++-${LUA_VER}
