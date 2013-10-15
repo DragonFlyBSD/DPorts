@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: mail/msgconvert/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: mail/msgconvert/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	msgconvert
 PORTVERSION=	20060330
@@ -26,6 +26,7 @@ EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	> ${PORTNAME}.pl
 SHEBANG_FILES=	${PORTNAME}.pl
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}.pl
 	${LN} -s ${PREFIX}/bin/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
