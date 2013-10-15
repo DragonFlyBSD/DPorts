@@ -1,9 +1,5 @@
-# New ports collection makefile for:   wmrecord
-# Date created:        2 April 2001
-# Whom:                Konstantinos Konstantinidis <kkonstan@daemon.gr>
-#
-# $FreeBSD: ports/audio/wmrecord/Makefile,v 1.10 2012/11/17 05:54:47 svnexp Exp $
-#
+# Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
+# $FreeBSD: audio/wmrecord/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	wmrecord
 PORTVERSION=	1.0.5
@@ -16,6 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	General purpose audio recording utility for the WindowMaker dock
 
 USE_XORG=	xpm x11 xext
+NO_STAGE=	yes
 MAKE_ARGS=	LIBS="-L${LOCALBASE}/lib -lXpm -lX11 -lXext" \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" LIBDIR=""
 
