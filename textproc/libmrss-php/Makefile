@@ -1,5 +1,5 @@
 # Created by: Rodrigo Osorio <rodrigo@bebik.net>
-# $FreeBSD: textproc/libmrss-php/Makefile 319328 2013-05-29 00:32:37Z miwi $
+# $FreeBSD: textproc/libmrss-php/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libmrss
 PORTVERSION=	0.19.2
@@ -29,4 +29,5 @@ PLIST_FILES=	lib/php/${PHP_EXT_DIR}/mrss.so
 PLIST_DIRSTRY=	lib/php/${PHP_EXT_DIR} \
 		lib/php
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
