@@ -1,9 +1,5 @@
-# New ports collection makefile for:    sgb
-# Date created:         2003-02-05
-# Whom:			Gerald Pfeifer <gerald@freebsd.org>
-#
-# $FreeBSD: ports/devel/sgb/Makefile,v 1.15 2012/11/17 05:57:02 svnexp Exp $
-#
+# Created by: Gerald Pfeifer <gerald@FreeBSD.org>
+# $FreeBSD: devel/sgb/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	sgb
 PORTVERSION=	20090810
@@ -22,6 +18,7 @@ NO_WRKSUBDIR=	yes
 ALL_TARGET=	lib tests
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
