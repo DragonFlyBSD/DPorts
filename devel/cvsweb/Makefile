@@ -1,5 +1,5 @@
 # Created by: SADA Kenji <sada@FreeBSD.org>
-# $FreeBSD: devel/cvsweb/Makefile 323795 2013-07-27 16:06:25Z az $
+# $FreeBSD: devel/cvsweb/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsweb
 PORTVERSION=	2.0.6
@@ -17,8 +17,9 @@ COMMENT=	WWW CGI script to browse CVS repository trees
 CONFLICTS=	cvsweb-3.*
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Specify where your repository belongs.
