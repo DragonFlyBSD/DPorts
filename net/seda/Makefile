@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/net/seda/Makefile,v 1.8 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: net/seda/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	seda
 PORTVERSION=	3.0
@@ -38,6 +38,7 @@ PORTDOCS=	${DOC_FILES} \
 PLIST_FILES=	\
 		%%JAVAJARDIR%%/${PORTNAME:tl}.jar
 
+NO_STAGE=	yes
 pre-build:
 # use our build.xml
 	@${CP} ${FILESDIR}/build.xml ${WRKSRC}
