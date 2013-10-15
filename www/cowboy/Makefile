@@ -1,4 +1,4 @@
-# $FreeBSD: www/cowboy/Makefile 325377 2013-08-26 08:30:29Z olgeni $
+# $FreeBSD: www/cowboy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cowboy
 PORTVERSION=	0.8.6
@@ -23,6 +23,7 @@ GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
