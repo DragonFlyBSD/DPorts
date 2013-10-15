@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/umph/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: multimedia/umph/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	umph
 PORTVERSION=	0.2.5
@@ -24,4 +24,5 @@ PLIST_DIRS=	${SITE_PERL_REL}/${PERL_ARCH}/auto/umph
 PLIST_FILES=	bin/umph \
 		${SITE_PERL_REL}/${PERL_ARCH}/auto/umph/.packlist
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
