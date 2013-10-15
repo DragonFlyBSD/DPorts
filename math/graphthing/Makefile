@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/graphthing/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/graphthing/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	graphthing
 PORTVERSION=	1.3.2
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/graphthing bin/gt
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|@@CXX@|@CXX@|' ${WRKSRC}/src/GNUmakefile.in
