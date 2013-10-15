@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: net-im/hotot/Makefile 323290 2013-07-19 13:48:11Z danfe $
+# $FreeBSD: net-im/hotot/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	hotot
 PORTVERSION=	0.9.8.14
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	GTK2 QT4 KDE4
 OPTIONS_DEFAULT=	GTK2 QT4
 KDE4_DESC=	KDE 4 integration (implies Qt 4)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
