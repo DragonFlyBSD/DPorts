@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-dynrules/Makefile 324792 2013-08-16 06:12:28Z mva $
+# $FreeBSD: devel/py-dynrules/Makefile 328655 2013-09-29 09:19:23Z mva $
 
 PORTNAME=	dynrules
 PORTVERSION=	0.1.0
@@ -12,6 +12,7 @@ COMMENT=	Dynamic Scripting for adaptive AI systems
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONS_DEFINE=	DOCS
 
@@ -19,9 +20,9 @@ OPTIONS_DEFINE=	DOCS
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${INSTALL} -d ${DOCSDIR}/html
+	@${INSTALL} -d ${STAGEDIR}${DOCSDIR}/html
 	@${TAR} -C ${WRKSRC}/doc/html -cf - . | \
-		${TAR} -C ${DOCSDIR}/html -xf -
+		${TAR} -C ${STAGEDIR}${DOCSDIR}/html -xf -
 .endif
 
 .include <bsd.port.mk>
