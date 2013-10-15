@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: net/binkd/Makefile 322644 2013-07-10 11:15:54Z bapt $
+# $FreeBSD: net/binkd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	binkd
 PORTVERSION=	0.9.9
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-aso
 CONFIGURE_ARGS+=	--with-https
 .endif
 
+NO_STAGE=	yes
 pre-configure:
 	@${RM} -rf ${WRKSRC}/mkfls/unix/CVS
 	@${CP} ${WRKSRC}/mkfls/unix/* ${WRKSRC}/
