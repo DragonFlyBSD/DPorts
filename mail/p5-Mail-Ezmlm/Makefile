@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Mail::Ezmlm
-# Date Created: 			18 May 2000
-# Whom: 				Guy Antony Halse <guy@rucus.ru.za.za>
-#
-# $FreeBSD: mail/p5-Mail-Ezmlm/Makefile 326248 2013-09-04 05:52:04Z az $
-#
+# Created by: Guy Antony Halse <guy@rucus.ru.za.za>
+# $FreeBSD: mail/p5-Mail-Ezmlm/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Ezmlm
 PORTVERSION=	0.08.2
@@ -31,4 +27,5 @@ CONFIGURE_ENV=	BSD_BATCH_INSTALL=yes
 
 MAN3=		Mail::Ezmlm.3 Mail::Ezmlm::GpgKeyRing.3 Mail::Ezmlm::GpgEzmlm.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
