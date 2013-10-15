@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	FEAR::API
 # Created by: ijliao
-# $FreeBSD: www/p5-FEAR-API/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-FEAR-API/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	FEAR-API
 PORTVERSION=	0.489
@@ -51,4 +49,5 @@ MAN3=	FEAR::API.3 \
 	FEAR::API::Filters.3 \
 	FEAR::API::Document.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
