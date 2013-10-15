@@ -1,9 +1,5 @@
-# New ports collection makefile for:	proxy-connect
-# Date created:				22 Jun 2005
-# Whom:					alfred@freebsd.org
-#
-# $FreeBSD: ports/net/proxy-connect/Makefile,v 1.6 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: alfred@FreeBSD.org
+# $FreeBSD: net/proxy-connect/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	proxy-connect
 PORTVERSION=	100
@@ -21,6 +17,7 @@ EXENAME=	$(PORTNAME)
 
 PLIST_FILES=	sbin/$(EXENAME)
 
+NO_STAGE=	yes
 do-build:
 		cd $(WRKSRC) && $(CC) $(CFLAGS) -o $(EXENAME) connect.c
 
