@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: multimedia/mpv/Makefile 326545 2013-09-06 20:31:50Z bapt $
+# $FreeBSD: multimedia/mpv/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mpv
 PORTVERSION=	20130711
@@ -51,6 +51,7 @@ AO_DESC=	Audio Output
 MAN1=		mpv.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBBLURAY}
