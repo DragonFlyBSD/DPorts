@@ -1,5 +1,5 @@
 # Created by: Michael Frey <frey@raum3.de>
-# $FreeBSD: ports/net/pear-Net_IDNA/Makefile,v 1.5 2013/02/03 16:58:19 svnexp Exp $
+# $FreeBSD: net/pear-Net_IDNA/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_IDNA
 PORTVERSION=	0.8.1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
