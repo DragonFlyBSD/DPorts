@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: audio/py-pyliblo/Makefile 322948 2013-07-13 17:23:19Z deischen $
+# $FreeBSD: audio/py-pyliblo/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	pyliblo
 PORTVERSION=	0.9.1
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	pyrex>=0.9.4:${PORTSDIR}/devel/pyrex
 LIB_DEPENDS=	lo:${PORTSDIR}/audio/liblo
 
 USE_PYTHON=		yes
+NO_STAGE=	yes
 USE_PYDISTUTILS=	yes
 MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
 LDFLAGS+=		-L${LOCALBASE}/lib
