@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: misc/ree/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: misc/ree/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	ree
 PORTVERSION=	1.3
@@ -17,6 +17,7 @@ ONLY_FOR_ARCHS=	i386 amd64
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
