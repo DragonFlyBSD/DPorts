@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: devel/pear-PEAR_Info/Makefile 314341 2013-03-16 08:09:10Z miwi $
+# $FreeBSD: devel/pear-PEAR_Info/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PEAR_Info
 PORTVERSION=	1.9.2
@@ -20,6 +20,7 @@ PEAR_PHPUNIT3_DESC=	PEAR::PHPUnit3 support
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_PHPUNIT3}
