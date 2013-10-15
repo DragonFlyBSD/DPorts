@@ -1,5 +1,5 @@
 # Created by: pusto@web.de
-# $FreeBSD: math/qhull/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/qhull/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	qhull
 PORTVERSION=	2012.1
@@ -19,6 +19,7 @@ MAN1=	qhull.1 rbox.1
 
 CONFLICTS=	qhull-1.0* afni-[0-9]*
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's#share/man/man#man/man#g' \
 		${WRKSRC}/CMakeLists.txt
