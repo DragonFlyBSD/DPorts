@@ -1,9 +1,5 @@
-# New ports collection makefile for:	elfrc
-# Date created:				13 July 2007
-# Whom:					Ed Schouten <ed@fxq.nl>
-#
-# $FreeBSD: ports/devel/elfrc/Makefile,v 1.4 2012/11/17 05:55:42 svnexp Exp $
-#
+# Created by: Ed Schouten <ed@fxq.nl>
+# $FreeBSD: devel/elfrc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	elfrc
 PORTVERSION=	0.7
@@ -16,6 +12,7 @@ COMMENT=	Resource compiler for ELF systems
 PLIST_FILES=	bin/elfrc
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-build:
 	@${ECHO} '#define ELFRC_VERSION "${PORTVERSION}"' > ${WRKSRC}/config.h
 	${CC} ${CFLAGS} ${LDFLAGS} -o ${WRKSRC}/elfrc ${WRKSRC}/elfrc.c
