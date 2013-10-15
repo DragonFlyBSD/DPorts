@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Data-Range-Compare/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-Data-Range-Compare/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Range-Compare
 PORTVERSION=	1.030
@@ -20,4 +20,5 @@ MAN3=		Data::Range::Compare.3 \
 		Data::Range::Compare::Cookbook::Recipe_a_to_z.3 \
 		Data::Range::Compare::Cookbook::Recipe_subclass_a_to_z.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
