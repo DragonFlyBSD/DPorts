@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.com>
-# $FreeBSD: ports/arabic/ae_fonts_ttf/Makefile,v 1.17 2012/12/23 07:08:39 svnexp Exp $
+# $FreeBSD: arabic/ae_fonts_ttf/Makefile 328292 2013-09-25 13:57:30Z vanilla $
 
 PORTNAME=	ae_fonts1_ttf
 PORTVERSION=	1.1
@@ -51,14 +51,9 @@ do-build:
 
 do-install:
 .for font in ${FONTS}
-	@${MKDIR} ${PREFIX}/lib/X11/fonts/ae_fonts1/${font}
+	@${MKDIR} ${STAGEDIR}/${PREFIX}/lib/X11/fonts/ae_fonts1/${font}
 	${INSTALL_DATA} ${WRKSRC}/${font}/* \
-		${PREFIX}/lib/X11/fonts/ae_fonts1/${font}
+		${STAGEDIR}/${PREFIX}/lib/X11/fonts/ae_fonts1/${font}
 .endfor
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
 
 .include <bsd.port.mk>
