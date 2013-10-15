@@ -1,5 +1,5 @@
-# Created by: Boris Popov <bp@freebsd.org>
-# $FreeBSD: sysutils/nut/Makefile 325741 2013-08-30 23:57:36Z bapt $
+# Created by: Boris Popov <bp@FreeBSD.org>
+# $FreeBSD: sysutils/nut/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	nut
 PORTVERSION=	2.6.5
@@ -56,6 +56,7 @@ MAN8=		nut-recorder.8 nut-scanner.8 nutupsdrv.8 upsc.8 \
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
