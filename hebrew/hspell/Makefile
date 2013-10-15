@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: hebrew/hspell/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: hebrew/hspell/Makefile 327734 2013-09-20 18:41:52Z bapt $
 
 PORTNAME=	hspell
 PORTVERSION=	1.1
@@ -22,6 +22,7 @@ MAN3=		hspell.3
 SUB_FILES=	pkg-message
 SUB_LIST=	PORTSDIR=${PORTSDIR}
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
