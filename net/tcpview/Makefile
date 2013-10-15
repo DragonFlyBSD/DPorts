@@ -1,5 +1,5 @@
 # Created by: Chung-Kie Tung <tung@turtle.ee.ncku.edu.tw>
-# $FreeBSD: net/tcpview/Makefile 324268 2013-08-05 09:29:19Z danfe $
+# $FreeBSD: net/tcpview/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcpview
 PORTVERSION=	1.0
@@ -15,6 +15,7 @@ USES=		bison motif
 
 MAN1=		tcpview.1
 
+NO_STAGE=	yes
 post-patch:
 .for f in nametoaddr.c addrtoname.c print-nfs.c detail-tcp.c tv_addrtoname.c
 	@${REINPLACE_CMD} -e 's/NTOHL/ntohl/ ; s/NTOHS/ntohs/' ${WRKSRC}/${f}
