@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Crypt-PassGen/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: security/p5-Crypt-PassGen/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-PassGen
 PORTVERSION=	0.06
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::PassGen.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
