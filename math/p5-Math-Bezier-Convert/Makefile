@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: math/p5-Math-Bezier-Convert/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-Bezier-Convert/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Bezier-Convert
 PORTVERSION=	0.02
@@ -16,6 +16,7 @@ USE_DOS2UNIX=	yes
 
 MAN3=		Math::Bezier::Convert.3
 
+NO_STAGE=	yes
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
 
