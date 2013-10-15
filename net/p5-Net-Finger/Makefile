@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-Net-Finger
-# Date created:                10 October 2002
-# Whom:                        Kimura Fuyuki <fuyuki@hadaly.org>
-#
-# $FreeBSD: net/p5-Net-Finger/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
+# $FreeBSD: net/p5-Net-Finger/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Finger
 PORTVERSION=	1.06
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Finger.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
