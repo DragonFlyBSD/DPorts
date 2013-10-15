@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dump.rb
-# Date created:		20 July 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: converters/ruby-dump.rb/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: converters/ruby-dump.rb/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	dump.rb
 PORTVERSION=	0.2
@@ -27,6 +23,7 @@ EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=	# none
 EXTRACT_AFTER_ARGS=	.
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME} ${RUBY_SITELIBDIR}/${PORTNAME}
 
