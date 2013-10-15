@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: net-mgmt/p5-Net-IPAddress/Makefile 326245 2013-09-04 03:27:37Z az $
+# $FreeBSD: net-mgmt/p5-Net-IPAddress/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-IPAddress
 PORTVERSION=	1.10
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::IPAddress.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
