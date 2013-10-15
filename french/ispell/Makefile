@@ -1,9 +1,5 @@
-# New ports collection makefile for:    fr-ispell
-# Date created:                         10 February 2000
-# Whom:                                 Alexander Langer <alex@big.endian.de>
-#
-# $FreeBSD: ports/french/ispell/Makefile,v 1.9 2012/11/17 05:57:28 svnexp Exp $
-#
+# Created by: Alexander Langer <alex@big.endian.de>
+# $FreeBSD: french/ispell/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 MAINTAINER=	office@FreeBSD.org
 
@@ -12,4 +8,5 @@ PORTVERSION=	1.4
 CATEGORIES=	french
 MASTERDIR=	${.CURDIR}/../../textproc/ispell
 
+NO_STAGE=	yes
 .include        "${MASTERDIR}/Makefile"
