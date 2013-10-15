@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-# $FreeBSD: devel/p5-Algorithm-Accounting/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-Algorithm-Accounting/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Algorithm-Accounting
 PORTVERSION=	0.08
@@ -31,4 +31,5 @@ MAN3=		Algorithm::Accounting.3 \
 		Algorithm::Accounting::Report::GDGraph.3 \
 		Algorithm::Accounting::Report::Text.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
