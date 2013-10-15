@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: converters/libiconv/Makefile 326541 2013-09-06 20:02:00Z madpilot $
+# $FreeBSD: converters/libiconv/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	libiconv
 PORTVERSION=	1.14
@@ -29,6 +29,7 @@ OPTIONS_DEFAULT=ENCODINGS
 ENCODINGS_DESC=	Include extra character sets
 PATCHES_DESC=	Apply patches to fix CP932, add EUCJP-MS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MENCODINGS}
