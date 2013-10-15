@@ -1,5 +1,5 @@
 # Created by: bmc@WillsCreek.COM
-# $FreeBSD: graphics/tgif/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: graphics/tgif/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tgif
 PORTVERSION=	4.2.2
@@ -19,7 +19,6 @@ OPTIONS_DEFINE=	NLS A4SIZE DOCS
 A4SIZE_DESC=	Set default paper size to A4
 
 USES=		imake
-USE_GCC=	any
 PORTDOCS=	HISTORY README
 USE_XORG=	x11 xext xt sm ice
 MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
@@ -27,6 +26,7 @@ CFLAGS+=	${PTHREAD_CFLAGS}
 
 MAN1=		tgif.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
