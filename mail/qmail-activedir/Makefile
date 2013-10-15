@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: mail/qmail-activedir/Makefile 324907 2013-08-18 13:18:12Z bdrewery $
+# $FreeBSD: mail/qmail-activedir/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qmail-activedir
 PORTVERSION=	0.17
@@ -29,6 +29,7 @@ PORTDOCS=	INSTALL README
 WANT_OPENLDAP_VER=	${WITH_OPENLDAP_VER}
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
