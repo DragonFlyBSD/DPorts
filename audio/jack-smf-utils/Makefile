@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/jack-smf-utils/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: audio/jack-smf-utils/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	jack-smf-utils
 PORTVERSION=	1.0
@@ -14,6 +14,7 @@ LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 		lash.2:${PORTSDIR}/audio/lash
 
 USES=		pkgconfig
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 
