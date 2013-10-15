@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net> et al
-# $FreeBSD: x11-clocks/wmtimer/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: x11-clocks/wmtimer/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmtimer
 PORTVERSION=	2.92
@@ -23,6 +23,7 @@ USE_GNOME=	gtk20
 MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/wmtimer ${PREFIX}/bin
 .ifndef(NOPORTDOCS)
