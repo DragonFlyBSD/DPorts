@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sys-HostIP
-# Date created:		2009-01-07
-# Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
-#
-# $FreeBSD: sysutils/p5-Sys-HostIP/Makefile 326572 2013-09-07 06:13:27Z az $
-#
+# Created by: Murilo Opsfelder <mopsfelder@gmail.com>
+# $FreeBSD: sysutils/p5-Sys-HostIP/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-HostIP
 PORTVERSION=	1.9.3
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Sys::HostIP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
