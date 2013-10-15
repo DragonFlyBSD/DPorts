@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: dns/inadyn/Makefile 321086 2013-06-17 06:22:19Z az $
+# $FreeBSD: dns/inadyn/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	inadyn
 PORTVERSION=	1.96.2
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/inadyn
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
