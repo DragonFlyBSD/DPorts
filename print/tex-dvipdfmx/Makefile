@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: print/tex-dvipdfmx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/tex-dvipdfmx/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	dvipdfmx
 PORTVERSION=	20120420
@@ -65,6 +65,7 @@ LDFLAGS+= 	-lpaper -L${LOCALBASE}/lib
 NO_MANCOMPRESS=	yes
 MAN1=	dvipdfm.1 dvipdft.1 ebb.1 extractbb.1
 
+NO_STAGE=	yes
 pre-su-install:
 	${CAT} ${DISTDIR}/${DIST_SUBDIR}/texlive-${DISTVERSION_TEXMF}-texmf${EXTRACT_SUFX} \
 		${EXTRACT_AFTER_ARGS_TEXMF}
