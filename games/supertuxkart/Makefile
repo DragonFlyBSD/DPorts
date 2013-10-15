@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/supertuxkart/Makefile 325956 2013-09-02 09:25:48Z bapt $
+# $FreeBSD: games/supertuxkart/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	supertuxkart
 PORTVERSION=	0.8
@@ -38,6 +38,7 @@ IRR_CPPFLAGS=	-DNO_IRR_USE_NON_SYSTEM_JPEG_LIB_ \
 		-DNO_IRR_COMPILE_WITH_BZIP2_ \
 		-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libIrrlicht.a|& -L${LOCALBASE}/lib -lpng -ljpeg|' ${WRKSRC}/CMakeLists.txt
 
