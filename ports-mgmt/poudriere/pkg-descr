@@ -1,0 +1,6 @@
+poudriere is a tool primarily designed to test package production on
+FreeBSD. It has been adopted as the package generator for DragonFly
+as well.  Many people may find this tool useful to maintain their
+own package set.
+
+WWW: https://fossil.etoilebsd.net/poudriere/doc/3.0.x/doc/index.wiki

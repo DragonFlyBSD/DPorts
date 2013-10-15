@@ -1,0 +1,62 @@
+etc/poudriere.conf.sample
+bin/poudriere
+man/man8/poudriere.8.gz
+libexec/poudriere/dirwatch
+libexec/poudriere/dirempty
+share/poudriere/status.sh
+share/poudriere/queue.sh
+share/poudriere/daemon.sh
+share/poudriere/awk/humanize.awk
+share/poudriere/awk/dependency_loop.awk
+share/poudriere/awk/siginfo_buildtime.awk
+share/poudriere/awk/json.awk
+share/poudriere/ports.sh
+share/poudriere/html/index.html
+share/poudriere/html/assets/poudriere.css
+share/poudriere/html/assets/logo.jpg
+share/poudriere/html/assets/poudriere.js
+share/poudriere/html/assets/dataTables/js/jquery.dataTables.min.js
+share/poudriere/html/assets/dataTables/images/forward_enabled_hover.png
+share/poudriere/html/assets/dataTables/images/sort_asc.png
+share/poudriere/html/assets/dataTables/images/forward_enabled.png
+share/poudriere/html/assets/dataTables/images/back_enabled_hover.png
+share/poudriere/html/assets/dataTables/images/sort_asc_disabled.png
+share/poudriere/html/assets/dataTables/images/back_enabled.png
+share/poudriere/html/assets/dataTables/images/sort_both.png
+share/poudriere/html/assets/dataTables/images/sort_desc.png
+share/poudriere/html/assets/dataTables/images/sort_desc_disabled.png
+share/poudriere/html/assets/dataTables/images/forward_disabled.png
+share/poudriere/html/assets/dataTables/images/back_disabled.png
+share/poudriere/html/assets/dataTables/css/jquery.dataTables.css
+share/poudriere/html/assets/jquery-1.9.1.min.js
+share/poudriere/html/assets/bootstrap/js/bootstrap.min.js
+share/poudriere/html/assets/bootstrap/img/glyphicons-halflings-white.png
+share/poudriere/html/assets/bootstrap/img/glyphicons-halflings.png
+share/poudriere/html/assets/bootstrap/css/bootstrap-responsive.min.css
+share/poudriere/html/assets/bootstrap/css/bootstrap.min.css
+share/poudriere/combo.sh
+share/poudriere/common.sh.dragonfly
+share/poudriere/jail.sh
+share/poudriere/jail.sh.dragonfly
+share/poudriere/jail.sh.freebsd
+share/poudriere/processonelog.sh
+share/poudriere/options.sh
+share/poudriere/common.sh.freebsd
+share/poudriere/distclean.sh
+share/poudriere/pkgclean.sh
+share/poudriere/common.sh
+share/poudriere/bulk.sh
+share/poudriere/clean.sh
+share/poudriere/testport.sh
+@dirrm share/poudriere/html/assets/dataTables/js
+@dirrm share/poudriere/html/assets/dataTables/images
+@dirrm share/poudriere/html/assets/dataTables/css
+@dirrm share/poudriere/html/assets/dataTables
+@dirrm share/poudriere/html/assets/bootstrap/js
+@dirrm share/poudriere/html/assets/bootstrap/img
+@dirrm share/poudriere/html/assets/bootstrap/css
+@dirrm share/poudriere/html/assets/bootstrap
+@dirrm share/poudriere/html/assets
+@dirrm share/poudriere/html
+@dirrm share/poudriere/awk
+@dirrm share/poudriere
