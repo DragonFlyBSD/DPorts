@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-zope.app.i18n
-# Date created:				18 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/textproc/py-zope.app.i18n/Makefile,v 1.3 2012/11/17 06:02:18 svnexp Exp $
-#
+# $FreeBSD: textproc/py-zope.app.i18n/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.app.i18n
-PORTVERSION=	3.6.3
+PORTVERSION=	3.6.4
 CATEGORIES=	textproc python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -28,6 +23,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.publisher>=3.9:${PORTSDIR}/devel/py-zop
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
