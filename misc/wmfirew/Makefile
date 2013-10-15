@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: misc/wmfirew/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/wmfirew/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	wmfirew
 PORTVERSION=	0.20
@@ -15,6 +15,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}.app/${PORTNAME}
 USE_GMAKE=	yes
 USE_XORG=	xpm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	    's|^void main|int main|' ${WRKSRC}/wmfirew.c
