@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	mmucl
-# Date created:				28 July 2000
-# Whom:					Matt Heckaman <matt@LUCIDA.QC.CA>
-#
-# $FreeBSD: ports/net/mmucl/Makefile,v 1.11 2012/11/17 06:00:06 svnexp Exp $
-#
+# Created by: Matt Heckaman <matt@LUCIDA.QC.CA>
+# $FreeBSD: net/mmucl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	mmucl
 PORTVERSION=	1.5.2
@@ -22,6 +18,7 @@ MAKE_ARGS=	BASE_DIR=${PREFIX} TCLSH=tclsh8.4 INFO_DIR=${PREFIX}/info \
 		INSTALL_INFO=/usr/bin/install-info
 INFO=		mmucl
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
