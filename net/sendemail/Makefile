@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sendEmail
-# Date created:				2005-12-17
-# Whom:			Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-#
-# $FreeBSD: ports/net/sendemail/Makefile,v 1.13 2012/12/12 18:56:06 svnexp Exp $
-#
+# Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
+# $FreeBSD: net/sendemail/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sendEmail
 PORTVERSION=	1.56
@@ -16,8 +12,9 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Lightweight, completely command line based, SMTP email agent
 
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
 
 PLIST_FILES=	bin/sendEmail
 PORTDOCS=	CHANGELOG README TODO
@@ -26,6 +23,7 @@ OPTIONS_DEFINE=	SSL
 OPTIONS_DEFINE=	DOCS
 SSL_DESC=	SSL/TLS support for communicating with the SMTP server
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${PORT_OPTIONS:MSSL}
 RUN_DEPENDS+=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
