@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xdeblock/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xdeblock/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xdeblock
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ USES=		imake
 USE_XORG=	xpm
 NO_INSTALL_MANPAGES=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/main.c
 
