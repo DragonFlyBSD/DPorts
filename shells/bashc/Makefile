@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: shells/bashc/Makefile 322689 2013-07-10 13:12:03Z bapt $
+# $FreeBSD: shells/bashc/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	bashc
 PORTVERSION=	3.2.33.0
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/bashc \
 		etc/bash_commander \
 		etc/bash_dialog
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|autoconf|${TRUE}|' ${WRKSRC}/Makefile.in
 
