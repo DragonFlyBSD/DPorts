@@ -1,5 +1,5 @@
 # Created by: Mamoru Sakaue / MwGhennndo
-# $FreeBSD: ports-mgmt/portsreinstall/Makefile 324135 2013-08-01 22:20:24Z wg $
+# $FreeBSD: ports-mgmt/portsreinstall/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	portsreinstall
 PORTVERSION=	3.0.3
@@ -15,6 +15,7 @@ LICENSE=	BSD
 MAN8=		${PORTNAME}.8
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${ECHO_MSG} "====================================================================="
 	@${ECHO_MSG} "This software invokes some installed files of portupgrade(1)"
