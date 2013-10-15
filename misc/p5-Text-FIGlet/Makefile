@@ -1,5 +1,5 @@
 # Created by: Daniel B. Hemmerich <dan@spot.org>
-# $FreeBSD: misc/p5-Text-FIGlet/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: misc/p5-Text-FIGlet/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
 
 PORTNAME=	Text-FIGlet
 PORTVERSION=	2.19.3
@@ -20,16 +20,5 @@ TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		charmap.pl.1 \
-		figlet.pl.1 \
-		minifig.pl.1 \
-		showfigfonts.pl.1
-MAN3=		Text::FIGlet.3 \
-		Text::FIGlet::Control.3 \
-		Text::FIGlet::Font.3 \
-		Text::FIGlet::Illuminated.3 \
-		Text::FIGlet::LICENSE.3 \
-		Text::FIGlet::Ransom.3
 
 .include <bsd.port.mk>
