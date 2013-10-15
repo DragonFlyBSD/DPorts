@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/icat/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: graphics/icat/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	icat
 PORTVERSION=	0.4
@@ -25,6 +25,7 @@ PLIST_FILES=	bin/icat
 
 CONFLICTS=	sleuthkit-[0-9]*
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
