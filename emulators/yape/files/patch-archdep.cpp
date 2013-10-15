@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/emulators/yape/files/patch-archdep.cpp,v 1.4 2012/11/17 05:57:25 svnexp Exp $
+$FreeBSD: emulators/yape/files/patch-archdep.cpp 300896 2012-07-14 13:54:48Z beat $
 
 --- archdep.cpp.orig
 +++ archdep.cpp

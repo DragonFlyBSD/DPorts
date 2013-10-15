@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/emulators/yape/Makefile,v 1.19 2013/01/09 20:04:42 svnexp Exp $
+# $FreeBSD: emulators/yape/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	yape
 PORTVERSION=	0.32.5
@@ -19,6 +19,7 @@ ALL_TARGET=	yape
 PLIST_FILES=	bin/yape
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} -E ${WRKDIR} -type f -iregex ".*\.(c|cpp|h|txt)" -print0 | \
 		${XARGS} -0 ${REINPLACE_CMD} -e 's/[[:cntrl:]]*$$//'

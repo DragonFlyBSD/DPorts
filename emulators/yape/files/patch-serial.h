@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/emulators/yape/files/patch-serial.h,v 1.2 2012/11/17 05:57:25 svnexp Exp $
+$FreeBSD: emulators/yape/files/patch-serial.h 300896 2012-07-14 13:54:48Z beat $
 
 --- serial.h.orig
 +++ serial.h
