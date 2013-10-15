@@ -1,9 +1,4 @@
-# New ports collection makefile for:	typetrainer
-# Date created:				29 January 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/misc/typetrainer/Makefile,v 1.9 2012/11/17 05:59:45 svnexp Exp $
-#
+# $FreeBSD: misc/typetrainer/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	typetrainer
 PORTVERSION=	0.5.2
@@ -21,4 +16,5 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
