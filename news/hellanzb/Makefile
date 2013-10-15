@@ -1,5 +1,5 @@
 # Created by: Philip Jenvey <pjenvey@groovie.org>
-# $FreeBSD: ports/news/hellanzb/Makefile,v 1.14 2013/02/26 19:43:36 svnexp Exp $
+# $FreeBSD: news/hellanzb/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	hellanzb
 PORTVERSION=	0.13
@@ -23,6 +23,7 @@ USE_PYDISTUTILS=yes
 USE_TWISTED_RUN=	web
 PORTDOCS=	CHANGELOG CREDITS README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 RUN_DEPENDS+=	unrar:${PORTSDIR}/archivers/unrar
