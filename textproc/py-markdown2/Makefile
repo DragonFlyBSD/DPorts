@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/textproc/py-markdown2/Makefile,v 1.23 2012/11/17 06:02:17 svnexp Exp $
+# $FreeBSD: textproc/py-markdown2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	markdown2
 PORTVERSION=	2.1.0
@@ -14,4 +14,5 @@ USE_ZIP=	yes
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
