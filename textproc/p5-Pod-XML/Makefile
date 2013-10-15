@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Pod-XML
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-Pod-XML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Pod-XML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-XML
 PORTVERSION=	0.99
@@ -22,4 +21,5 @@ USE_PERL5=	configure
 MAN1=		pod2xml.1
 MAN3=		Pod::XML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
