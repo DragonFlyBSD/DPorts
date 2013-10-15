@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/blue/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/blue/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	blue
 PORTVERSION=	2.11
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/blue \
 MAN6=		bluemoon.6
 MLINKS=		bluemoon.6 blue.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS?=|g ; \
 		 s|cc |$${CC} |g' ${WRKSRC}/Makefile
