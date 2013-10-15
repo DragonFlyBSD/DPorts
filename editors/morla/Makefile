@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/morla/Makefile 327530 2013-09-18 08:00:44Z bapt $
+# $FreeBSD: editors/morla/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
@@ -38,6 +38,7 @@ DESKTOP_ENTRIES="morla" \
 		"WebDevelopment;" \
 		true
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-D.*_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/configure
