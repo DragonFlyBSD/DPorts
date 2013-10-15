@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/compton/Makefile 322595 2013-07-10 01:43:23Z danfe $
+# $FreeBSD: x11-wm/compton/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	compton
 PORTVERSION=	20130625
@@ -32,6 +32,7 @@ PCRE_DESC=	Blacklist support (via libpcre)
 DRM_DESC=	DRM support
 DOCS_DESC=	Build manpages (requires AsciiDoc/DocBook)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPCRE}
