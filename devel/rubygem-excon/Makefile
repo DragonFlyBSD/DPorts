@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-excon/Makefile 322951 2013-07-13 17:41:20Z swills $
+# $FreeBSD: devel/rubygem-excon/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	excon
 PORTVERSION=	0.25.1
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
