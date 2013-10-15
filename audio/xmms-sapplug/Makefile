@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-sapplug/Makefile 323632 2013-07-25 09:38:40Z marino $
+# $FreeBSD: audio/xmms-sapplug/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-sapplug
 DISTVERSION=	0.3f
@@ -17,6 +17,7 @@ BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 USES=		gmake
+NO_STAGE=	yes
 USE_GNOME=	glib12
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
