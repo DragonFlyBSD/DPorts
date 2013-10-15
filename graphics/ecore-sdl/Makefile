@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/ecore-sdl/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/ecore-sdl/Makefile 329507 2013-10-05 21:29:23Z gblach $
 
 PORTNAME=	sdl
 PORTVERSION=	1.7.8
@@ -40,6 +40,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ecore-sdl.pc \
-		${PREFIX}/libdata/pkgconfig/
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
 .include <bsd.port.mk>
