@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SLirc
-# Date created:		6 Jan 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: irc/slirc/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: irc/slirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	slirc
 PORTVERSION=	0.12
@@ -46,6 +42,7 @@ DOCS+=		BUGS \
 		sldocs/VFile.txt \
 		sldocs/utilsfun.txt
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,/usr/local,${LOCALBASE}," ${WRKSRC}/Makefile ${WRKSRC}/scripts/init.sl
 
