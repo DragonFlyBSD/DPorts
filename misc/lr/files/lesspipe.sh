@@ -1,7 +1,7 @@
 #! /bin/sh
 # ex:ts=8
 
-# $FreeBSD: ports/misc/lr/files/lesspipe.sh,v 1.2 2012/11/17 05:59:41 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/misc/lr/files/lesspipe.sh,v 1.1 2003-04-13 10:43:20 edwin Exp $
 
 case "$1" in
 	*.Z)	uncompress -c $1	2>/dev/null
