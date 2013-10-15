@@ -1,5 +1,5 @@
 # Created by: Thinker K.F. Li <thinker@cowboy.branda.to>
-# $FreeBSD: www/py-GinGin/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: www/py-GinGin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	GinGin
 PORTVERSION=	1.0.1
@@ -18,4 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
