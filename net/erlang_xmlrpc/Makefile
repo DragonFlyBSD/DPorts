@@ -1,4 +1,4 @@
-# $FreeBSD: net/erlang_xmlrpc/Makefile 316451 2013-04-24 16:51:49Z olgeni $
+# $FreeBSD: net/erlang_xmlrpc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	erlang_xmlrpc
 PORTVERSION=	1.13
@@ -24,6 +24,7 @@ MAN3=		erlang_xmlrpc.3
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
