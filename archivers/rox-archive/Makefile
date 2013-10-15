@@ -1,4 +1,4 @@
-# $FreeBSD: ports/archivers/rox-archive/Makefile,v 1.25 2013/02/15 16:06:58 svnexp Exp $
+# $FreeBSD: archivers/rox-archive/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	rox-archive
 PORTVERSION=	2.3
@@ -12,6 +12,7 @@ COMMENT=	Archive management tool for the ROX desktop
 RUN_DEPENDS=	${LOCALBASE}/bin/rox:${PORTSDIR}/x11-fm/rox-filer \
 		${LOCALBASE}/lib/ROX-Lib2/python/rox/__init__.py:${PORTSDIR}/devel/py-roxlib
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 
