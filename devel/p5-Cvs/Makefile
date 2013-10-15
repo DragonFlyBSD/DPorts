@@ -1,5 +1,5 @@
 # Created by: Philip Drapeau <pdrapeau@advanis.ca>
-# $FreeBSD: devel/p5-Cvs/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Cvs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=       Cvs
 PORTVERSION=    0.07
@@ -36,4 +36,5 @@ RUN_DEPENDS+=    p5-IO-Tty>=0:${PORTSDIR}/devel/p5-IO-Tty
 RUN_DEPENDS+=   p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS+=   p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
