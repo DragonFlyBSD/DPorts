@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/rubygem-webmock/Makefile 322969 2013-07-13 20:27:20Z swills $
+# $FreeBSD: www/rubygem-webmock/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webmock
 PORTVERSION=	1.13.0
@@ -16,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
