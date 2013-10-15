@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Class-AlzaboWrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-AlzaboWrapper/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Class-AlzaboWrapper
 PORTVERSION=	0.14
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
+NO_STAGE=	yes
 
 MAN3=		Class::AlzaboWrapper.3 Class::AlzaboWrapper::Cursor.3
 
