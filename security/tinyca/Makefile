@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: security/tinyca/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/tinyca/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tinyca
 PORTVERSION=	0.7.5
@@ -25,6 +25,7 @@ DOC_FILES=	INSTALL
 LIB_FILES=	CA.pm CERT.pm GUI.pm HELPERS.pm KEY.pm OpenSSL.pm REQ.pm TCONFIG.pm
 LIB2_FILES=	CALLBACK.pm HELPERS.pm TCONFIG.pm WORDS.pm X509_browser.pm X509_infobox.pm
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${SITE_PERL}/${PORTNAME}/
 	@${MKDIR} ${SITE_PERL}/${PORTNAME}/GUI
