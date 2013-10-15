@@ -1,5 +1,5 @@
 # Created by: Alexander <alexander.4mail@gmail.com>
-# $FreeBSD: ports/misc/fbless/Makefile,v 1.2 2013/02/19 19:10:30 svnexp Exp $
+# $FreeBSD: misc/fbless/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	fbless
 PORTVERSION=	0.2.2
@@ -15,4 +15,5 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	matimatik
 GH_COMMIT=	b6259ab
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
