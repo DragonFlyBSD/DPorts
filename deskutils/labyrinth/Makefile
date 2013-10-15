@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/labyrinth/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: deskutils/labyrinth/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	labyrinth
 PORTVERSION=	0.5
@@ -17,4 +17,5 @@ USE_PYTHON=	yes
 USES=		gettext gmake pkgconfig
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
