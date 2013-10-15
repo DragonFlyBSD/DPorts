@@ -1,9 +1,9 @@
 # Created by: Jonathan Liu <Net147@hotmail.com>
-# $FreeBSD: sysutils/nitrogen/Makefile 325944 2013-09-02 06:39:37Z bapt $
+# $FreeBSD: sysutils/nitrogen/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	nitrogen
 PORTVERSION=	1.5.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://projects.l3ib.org/nitrogen/files/
 
@@ -48,6 +48,7 @@ MAN1=		nitrogen.1
 DESKTOP_ENTRIES="Nitrogen" "${COMMENT}" "${PORTNAME}" "${PORTNAME}" \
 		"Graphics;Viewer;" true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXINERAMA}
