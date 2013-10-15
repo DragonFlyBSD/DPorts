@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for: 	py-sgrep
-# Date created:			Jun 14, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/py-sgrep/Makefile,v 1.9 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/py-sgrep/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sgrep
 PORTVERSION=	1.1a
@@ -27,6 +22,7 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	pysgrep
 PYDISTUTILS_PKGVERSION=	1.0a
 
+NO_STAGE=	yes
 post-extract:
 	@${TAR} -zxf ${DISTDIR}/pysgrep-${PORTVERSION}.tar.gz -C ${WRKSRC}
 
