@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net/ldapscripts/Makefile 326902 2013-09-10 13:59:30Z martymac $
+# $FreeBSD: net/ldapscripts/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldapscripts
 PORTVERSION=	2.0.5
@@ -37,6 +37,7 @@ MAN5=	ldapscripts.5
 
 PORTDOCS=	README CHANGELOG VERSION TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Unset 'all' target set by default to 'help'
