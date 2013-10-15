@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: ports/devel/py-setproctitle/Makefile,v 1.11 2013/02/25 10:44:30 svnexp Exp $
+# $FreeBSD: devel/py-setproctitle/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	setproctitle
 PORTVERSION=	1.1.7
@@ -19,6 +19,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/${PORTNAME}.so
 
 PORTDOCS=	COPYRIGHT HISTORY.rst README.rst
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
