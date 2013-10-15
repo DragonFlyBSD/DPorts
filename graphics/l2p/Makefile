@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/l2p/Makefile 325698 2013-08-30 14:00:24Z nivit $
+# $FreeBSD: graphics/l2p/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	l2p
 PORTVERSION=	1.1.1
@@ -28,6 +28,7 @@ USES=		perl5 shebangfix
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
