@@ -1,4 +1,4 @@
-# $FreeBSD: www/thundercache/Makefile 322885 2013-07-13 05:38:02Z sunpoet $
+# $FreeBSD: www/thundercache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	thundercache
 PORTVERSION=	6.1
@@ -35,6 +35,7 @@ LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 LICENSE_TEXT=	Commercial software with shareware license to 50 threads
 RESTRICTED=	Commercial software with shareware license to 50 threads
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "i386"
