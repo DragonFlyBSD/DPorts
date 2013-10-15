@@ -1,5 +1,5 @@
 # Created by: František Dvořák <valtri@civ.zcu.cz>
-# $FreeBSD: audio/festvox-czech/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/festvox-czech/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festvox-czech
 PORTVERSION=	0.1
@@ -14,6 +14,7 @@ COMMENT=	Czech male voice for Festival
 RUN_DEPENDS=	${LOCALBASE}/share/festival/lib/dicts/czech-lexicon.out:${PORTSDIR}/audio/festlex-czech
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 USES=		gmake
 MAKE_ARGS=	festival_voices_path=${PREFIX}/share/festival/lib/voices
 
