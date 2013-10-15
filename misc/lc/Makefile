@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: misc/lc/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/lc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	lc
 PORTVERSION=	1.0
@@ -12,6 +12,7 @@ COMMENT=	Alternative to ls(1)
 MAN1=		lc.1
 PLIST_FILES=	bin/lc
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/lc ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/lc.1 ${MAN1PREFIX}/man/man1
