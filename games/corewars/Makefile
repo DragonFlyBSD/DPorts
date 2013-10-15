@@ -1,5 +1,4 @@
-# Ceeated by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: games/corewars/Makefile 317317 2013-05-04 14:03:36Z bapt $
+# $FreeBSD: games/corewars/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	corewars
 PORTVERSION=	0.9.13
@@ -25,6 +24,7 @@ USE_GMAKE=	yes
 MAN6=		corewars.6
 MLINKS=		corewars.6 corewars-cmd.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
