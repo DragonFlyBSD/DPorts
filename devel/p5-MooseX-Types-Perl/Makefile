@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-Types-Perl
-# Date created:		2011-02-16
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: devel/p5-MooseX-Types-Perl/Makefile 327380 2013-09-16 10:58:05Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-MooseX-Types-Perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Types-Perl
 PORTVERSION=	0.101341
@@ -23,6 +19,7 @@ USE_PERL5=	configure
 
 MAN3=		MooseX::Types::Perl.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
