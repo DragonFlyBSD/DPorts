@@ -1,9 +1,5 @@
-# Ports collection Makefile for:   pdb
-# Date created:        26 January 2007
-# Whom:                gnn
-#
-# $FreeBSD: ports/net/pdb/Makefile,v 1.4 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: gnn
+# $FreeBSD: net/pdb/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pdb
 PORTVERSION=	0.1
@@ -20,4 +16,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_PYTHON_PREFIX=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
