@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: devel/ireport/Makefile 308600 2012-12-10 11:25:27Z bapt $
+# $FreeBSD: devel/ireport/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	ireport
 PORTVERSION=	3.7.6
@@ -49,6 +49,7 @@ CLSSPTH=	ant-1.7.1 antlr-2.7.6 asm-attrs asm barbecue-1.5-beta1 \
 		saaj-api-1.3 slf4j-api slf4j-log4j12 spring \
 		sqleonardo-2009.03.rc1 swingx-2007_10_07 xml-apis-ext xml-apis
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Remark: HSQLDB and Oracle's dependencies already registered by databases/jasperreports
