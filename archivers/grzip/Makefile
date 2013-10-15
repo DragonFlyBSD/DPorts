@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: archivers/grzip/Makefile 327252 2013-09-14 08:53:58Z sunpoet $
+# $FreeBSD: archivers/grzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	grzip
 PORTVERSION=	0.3.0
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.ac-grenoble.fr/ge/compression/ CENKES
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient file compressor
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext
 USE_LDCONFIG=	yes
