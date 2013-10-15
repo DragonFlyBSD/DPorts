@@ -1,5 +1,4 @@
-# Creayed by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: databases/libodbc++/Makefile 325950 2013-09-02 09:01:51Z bapt $
+# $FreeBSD: databases/libodbc++/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libodbc++
 PORTVERSION=	0.2.5
@@ -27,6 +26,7 @@ OPTIONS_SINGLE=	ODBC
 OPTIONS_SINGLE_ODBC=	IODBC UNIXODBC
 OPTIONS_DEFAULT=	ODBC IODBC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIODBC}
