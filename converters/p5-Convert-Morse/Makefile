@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: converters/p5-Convert-Morse/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-Convert-Morse/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Convert-Morse
 PORTVERSION=	0.06
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Convert::Morse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
