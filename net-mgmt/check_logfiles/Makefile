@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/check_logfiles/Makefile,v 1.3 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/check_logfiles/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	check_logfiles
 PORTVERSION=	3.4.3.1
@@ -13,4 +13,5 @@ USE_GMAKE=	yes
 CONFIGURE_ARGS+=	--with-trusted-path=/bin:/sbin:/usr/bin:/usr/sbin:${LOCALBASE}/bin:${LOCALBASE}/sbin \
 			--libexecdir=${PREFIX}/libexec/nagios \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
