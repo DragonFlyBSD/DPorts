@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/libzeitgeist/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: sysutils/libzeitgeist/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	libzeitgeist
 PORTVERSION=	0.3.18
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
