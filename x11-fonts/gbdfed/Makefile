@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-fonts/gbdfed/Makefile 325971 2013-09-02 10:35:45Z bapt $
+# $FreeBSD: x11-fonts/gbdfed/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	gbdfed
 PORTVERSION=	1.6
@@ -20,4 +20,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 MAN1=		gbdfed.1
 PLIST_FILES=	bin/gbdfed
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
