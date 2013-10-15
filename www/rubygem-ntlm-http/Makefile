@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-ntlm-http
-# Date created:				31 Mar 2012
-# Whom:					MIHIRA Yoshiro <sanpei@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-ntlm-http/Makefile,v 1.2 2012/11/17 06:03:04 svnexp Exp $
+# Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
+# $FreeBSD: www/rubygem-ntlm-http/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ntlm-http
 PORTVERSION=	0.1.1
@@ -16,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
