@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/veusz/Makefile 321251 2013-06-19 13:53:12Z makc $
+# $FreeBSD: science/veusz/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	veusz
 PORTVERSION=	1.17.1
@@ -20,4 +20,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 INSTALLS_EGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
