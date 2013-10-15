@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.cachedescriptors
-# Date created:				18 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.cachedescriptors/Makefile,v 1.3 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.cachedescriptors/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.cachedescriptors
 PORTVERSION=	3.5.1
@@ -18,7 +13,9 @@ LICENSE=	ZPL21
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
