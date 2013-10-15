@@ -1,4 +1,4 @@
-# $FreeBSD: finance/aqbanking/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: finance/aqbanking/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	aqbanking
 PORTVERSION=	5.0.25
@@ -38,6 +38,7 @@ USE_LDCONFIG=	yes
 AQB_SHLIB_VER=	34
 GWEN_SHLIB_VER=	60
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOXYGEN}
