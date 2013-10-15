@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Shell::Base
-# Date created:				Sat Jan 31 10:41:28 EST 2004
-# Whom:					Christopher Nehren <apeiron@comcast.net>
-#
-# $FreeBSD: devel/p5-Shell-Base/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Christopher Nehren <apeiron@comcast.net>
+# $FreeBSD: devel/p5-Shell-Base/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Shell-Base
 PORTVERSION=	0.05
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Shell::Base.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
