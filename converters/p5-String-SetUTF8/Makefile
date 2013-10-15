@@ -1,5 +1,5 @@
 # Created by: Andrei V. Shetuhin <reki@reki.ru>
-# $FreeBSD: converters/p5-String-SetUTF8/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: converters/p5-String-SetUTF8/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	String-SetUTF8
 PORTVERSION=	1.00
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		String::SetUTF8.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
