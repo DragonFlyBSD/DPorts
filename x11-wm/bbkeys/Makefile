@@ -1,5 +1,5 @@
 # Created by: Patrick Seal <patseal@hyperhost.net>
-# $FreeBSD: x11-wm/bbkeys/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: x11-wm/bbkeys/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	bbkeys
 PORTVERSION=	0.9.1
@@ -30,6 +30,7 @@ PLIST_DIRS=	%%DATADIR%%
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
