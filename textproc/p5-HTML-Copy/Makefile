@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-HTML-Copy/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-HTML-Copy/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-Copy
 PORTVERSION=	1.30
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN1=		htmlcopy.1
 MAN3=		HTML::Copy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
