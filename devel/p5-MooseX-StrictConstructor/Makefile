@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: devel/p5-MooseX-StrictConstructor/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-MooseX-StrictConstructor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-StrictConstructor
 PORTVERSION=	0.19
@@ -24,4 +24,5 @@ MAN3=		MooseX::StrictConstructor.3 \
 		MooseX::StrictConstructor::Trait::Class.3 \
 		MooseX::StrictConstructor::Trait::Method::Constructor.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
