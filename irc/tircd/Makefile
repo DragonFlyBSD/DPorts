@@ -1,5 +1,5 @@
 # Created by: Gavin Atkinson <gavin@FreeBSD.org>
-# $FreeBSD: irc/tircd/Makefile 326895 2013-09-10 11:35:30Z az $
+# $FreeBSD: irc/tircd/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	tircd
 PORTVERSION=	0.10
@@ -27,6 +27,7 @@ NO_BUILD=	yes
 MAN1=		tircd.1
 USE_RC_SUBR=	tircd
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKDIR}/${PORTNAME} ${WRKSRC}
 
