@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateConvert
-# Date created:				13th September 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-DateConvert/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: devel/p5-DateConvert/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateConvert
 PORTVERSION=	0.16
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Date::Convert.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
