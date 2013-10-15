@@ -1,9 +1,5 @@
-# New ports collection makefile for:	oonsoo
-# Date created:		23rd June, 1997
-# Whom:			Joel Sutton <jsutton@bbcon.com.au>
-#
-# $FreeBSD: ports/games/oonsoo/Makefile,v 1.26 2012/11/17 05:57:47 svnexp Exp $
-#
+# Created by: Joel Sutton <jsutton@bbcon.com.au>
+# $FreeBSD: games/oonsoo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	oonsoo
 PORTVERSION=	1.2
@@ -25,6 +21,7 @@ MAKE_ARGS=	CC="${CXX}" CPPFLAGS="${CXXFLAGS} -ansi"	\
 		SYS_LIBS="-L${LOCALBASE}/lib -lX11"
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/oonsoo ${PREFIX}/bin
 
