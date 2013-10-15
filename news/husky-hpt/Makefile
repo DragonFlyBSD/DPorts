@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-hpt/Makefile 325955 2013-09-02 09:22:47Z az $
+# $FreeBSD: news/husky-hpt/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	hpt
 PORTVERSION=	1.2.4
@@ -26,6 +26,7 @@ MAN1=		hpt.1 hptlink.1 hpttree.1 txt2pkt.1
 MANCOMPRESSED=	yes
 INFO=		hpt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's^/path/to/config^${PREFIX}/etc/fido/config^' \
 		${WRKSRC}/man/hptlink.1
