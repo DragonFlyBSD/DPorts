@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/gdkxft/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: x11/gdkxft/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	gdkxft
 PORTVERSION=	1.5
@@ -8,9 +8,9 @@ CATEGORIES=	x11
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An anti-aliased font support for gtk+
+COMMENT=	Anti-aliased font support for gtk+
 
-LIB_DEPENDS=	Xft.2:${PORTSDIR}/x11-fonts/libXft
+LIB_DEPENDS=	libXft.so:${PORTSDIR}/x11-fonts/libXft
 LIB_DEPENDS+=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
 
@@ -27,6 +27,7 @@ USE_LDCONFIG=	yes
 
 MAN8=		gdkxft_sysinstall.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
