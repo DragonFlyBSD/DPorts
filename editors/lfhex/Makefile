@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: editors/lfhex/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/lfhex/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	lfhex
 PORTVERSION=	0.42
@@ -21,6 +21,7 @@ PORTDOCS=	README
 PLIST_FILES=	bin/lfhex
 LICENSE_FILES=	${WRKSRC}/../COPYING
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
