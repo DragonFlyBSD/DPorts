@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: graphics/jdraw/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: graphics/jdraw/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jdraw
 PORTVERSION=	1.1.5
@@ -26,6 +26,7 @@ SUB_LIST=	JAVA_VERSION=${JAVA_VERSION} JDRAWJAR=${JDRAWJAR} PLASTIC3D=${PLASTIC3
 
 JDRAWJAR=	${DATADIR}/${DISTFILES}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${DISTDIR}/${DISTFILES} ${DATADIR}
