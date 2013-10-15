@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-ldaptor
-# Date created:		10.Jun 2011
-# Whom:			bra@fsn.hu
-#
-# $FreeBSD: net/py-ldaptor/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: bra@fsn.hu
+# $FreeBSD: net/py-ldaptor/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldaptor
 PORTVERSION=	0.0.43
@@ -26,4 +23,5 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	0.0.0
 PYDISTUTILS_PKGNAME=	ldaptor
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
