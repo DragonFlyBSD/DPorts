@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-net-sftp
-# Date created:				14 January 2006
-# Whom:					Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-#
-# $FreeBSD: ports/security/rubygem-net-sftp/Makefile,v 1.22 2012/11/17 06:01:19 svnexp Exp $
-#
+# Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
+# $FreeBSD: security/rubygem-net-sftp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	net-sftp
 PORTVERSION=	2.0.5
@@ -20,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
