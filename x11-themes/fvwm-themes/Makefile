@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fvwm-themes
-# Date created:				2 February 2001
-# Whom:					Oyvind Albrigtsen
-#
-# $FreeBSD: x11-themes/fvwm-themes/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: Oyvind Albrigtsen
+# $FreeBSD: x11-themes/fvwm-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	fvwm-themes
 PORTVERSION=	0.7.0
@@ -29,6 +25,7 @@ GNU_CONFIGURE=	yes
 MAN1=		fvwm-themes-config.1 fvwm-themes-menuapp.1 fvwm-themes-com.1 \
 		fvwm-themes-images.1 fvwm-themes-start.1 fvwm-themes-root.1
 
+NO_STAGE=	yes
 post-install:
 	@cd ${WRKDIR}/${PORTNAME}-extra-${PORTVERSION} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/fvwm/themes
