@@ -1,9 +1,5 @@
-# New ports collection makefile for:	freedt
-# Date created:		25 May 2003
-# Whom:			Tim Bishop <tim@bishnet.net>
-#
-# $FreeBSD: ports/sysutils/freedt/Makefile,v 1.10 2012/11/17 06:01:31 svnexp Exp $
-#
+# Created by: Tim Bishop <tim@bishnet.net>
+# $FreeBSD: sysutils/freedt/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	freedt
 PORTVERSION=	0.22
