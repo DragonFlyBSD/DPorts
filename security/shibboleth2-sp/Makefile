@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: security/shibboleth2-sp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/shibboleth2-sp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	shibboleth-sp
 PORTVERSION=	2.5.2
@@ -27,6 +27,7 @@ GROUPS=		shibd
 USE_APACHE=	22-24
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${APACHE_VERSION} == 22
