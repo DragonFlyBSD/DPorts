@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-ParseTemplate
-# Date created:				03 August 2010
-# Whom:					Frederic Culot <frederic@culot.org>
-#
-# $FreeBSD: ports/devel/p5-ParseTemplate/Makefile,v 1.6 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Frederic Culot <frederic@culot.org>
+# $FreeBSD: devel/p5-ParseTemplate/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ParseTemplate
 PORTVERSION=	3.08
@@ -17,10 +13,12 @@ COMMENT=	Processor for templates containing Perl expressions
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::Template.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
