@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda5-mysql/Makefile 326490 2013-09-06 11:43:34Z kwm $
+# $FreeBSD: databases/libgda5-mysql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/trunk/databases/libgda5-mysql/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTREVISION=	0
@@ -16,4 +16,5 @@ PLIST=		${.CURDIR}/pkg-plist
 
 LIBGDA5_SLAVE=	mysql
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
