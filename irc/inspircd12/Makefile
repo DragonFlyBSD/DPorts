@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: irc/inspircd12/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: irc/inspircd12/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	inspircd
 PORTVERSION=	1.2.9
@@ -15,7 +15,7 @@ CONFLICTS=	inspircd-2.*
 
 LATEST_LINK=	inspircd12
 
-USES=		shebangfix
+USES=		shebangfix perl5
 USE_BZIP2=	yes
 USE_LDCONFIG=	${PREFIX}/lib/inspircd
 USE_RC_SUBR=	inspircd
@@ -40,7 +40,7 @@ SUB_LIST+=	\
 PLIST_SUB+=	INSPIRCD_GRP=${INSPIRCD_GRP}
 
 # Configure script is written in perl
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cc=${CXX} --config-dir=${ETCDIR}                   \
@@ -60,6 +60,7 @@ POSIX_RE_DESC=		Build m_regex_posix module
 PCRE_DESC=		Build m_regex_pcre module
 TRE_DESC=		Build m_regex_tre module
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
