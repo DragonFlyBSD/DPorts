@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-mserver/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/gmpc-mserver/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmpc-mserver
 PORTVERSION=	0.20.0
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GNOME=	glib20 gtk20 libxml2
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 
 .include <bsd.port.mk>
