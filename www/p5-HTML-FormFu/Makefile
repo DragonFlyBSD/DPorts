@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <andrey.zverev@electro-com.ru>
-# $FreeBSD: www/p5-HTML-FormFu/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-FormFu/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-FormFu
 PORTVERSION=	0.09010
@@ -171,4 +171,5 @@ MAN3=		HTML::FormFu.3 \
 		HTML::FormFu::Validator.3 \
 		HTML::FormFu::Validator::Callback.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
