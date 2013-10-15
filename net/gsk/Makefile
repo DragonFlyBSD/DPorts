@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/gsk/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/gsk/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gsk
 PORTVERSION=	1.0.63
@@ -16,6 +16,7 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-gtk-doc
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^SUBDIRS/s|doc||' ${WRKSRC}/Makefile.in
