@@ -1,9 +1,5 @@
-# New ports collection makefile for:    omi
-# Date created:		19 August 1995
-# Whom:                 ache
-#
-# $FreeBSD: ports/ftp/omi/Makefile,v 1.20 2012/11/17 05:57:30 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: ftp/omi/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	omi
 PORTVERSION=	20030719
@@ -19,6 +15,7 @@ COMMENT=	"mirror" subtrees of FTP servers
 WRKSRC=		${WRKDIR}/${PORTNAME}
 ALL_TARGET=	freebsd
 
+NO_STAGE=	yes
 pre-patch:
 	${REINPLACE_CMD} -E -e "s@^(OPTFLAGS).*@\1=${CFLAGS}@" \
 		${WRKSRC}/Makefile
