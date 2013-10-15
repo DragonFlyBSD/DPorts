@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pwebstats
-# Date created:         13.07.2003
-# Whom:                 HSIN-HSIUNG CHANG <sexbear@tmu.edu.tw>
-#
-# $FreeBSD: www/pwebstats/Makefile 326156 2013-09-03 15:07:52Z az $
-#
+# Created by: HSIN-HSIUNG CHANG <sexbear@tmu.edu.tw>
+# $FreeBSD: www/pwebstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pwebstats
 PORTVERSION=	1.3.8
@@ -20,6 +16,7 @@ USES=		perl5
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/etc/pwebstats/
 	${CP} -R ${WRKSRC}/* ${PREFIX}/etc/pwebstats/
