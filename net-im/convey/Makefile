@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: ports/net-im/convey/Makefile,v 1.8 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: net-im/convey/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	convey
 PORTVERSION=	0.3
@@ -26,6 +26,7 @@ FIND_DIRS=	lib
 
 SUB_FILES=	convey.sh
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
