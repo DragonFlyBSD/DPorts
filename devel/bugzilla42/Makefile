@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bugzilla42/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: devel/bugzilla42/Makefile 328405 2013-09-26 19:00:40Z ohauer $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.2.6
@@ -163,30 +163,25 @@ post-patch:
 		| ${XARGS} ${RM} -rf
 
 do-install:	.SILENT
-	${MKDIR} ${WWWDIR}
+	${MKDIR} ${STAGEDIR}${WWWDIR}
 	${FIND} ${WRKSRC} \! -type d -maxdepth 1 \! -name "UPGRADING*" -exec \
-		${INSTALL_SCRIPT} {} ${WWWDIR} \;
-	@${MKDIR} ${DATA_DIRS_LIST:S!^!${WWWDIR}/!}
+		${INSTALL_SCRIPT} {} ${STAGEDIR}${WWWDIR} \;
+	@${MKDIR} ${DATA_DIRS_LIST:S!^!${STAGEDIR}${WWWDIR}/!}
 .for D in ${DATA_DIRS_LIST}
-	(cd ${WRKSRC}/${D} && ${COPYTREE_SHARE} . ${WWWDIR}/${D})
+	(cd ${WRKSRC}/${D} && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}/${D})
 .endfor
-	${TAR} -C ${WRKSRC} -cf - Bugzilla template | ${TAR} --unlink -C ${WWWDIR} -xf -
-	@${MKDIR} ${EMPTY_DIRS_LIST:S!^!${WWWDIR}/!}
+	${TAR} -C ${WRKSRC} -cf - Bugzilla template | ${TAR} --unlink -C ${STAGEDIR}${WWWDIR} -xf -
+	@${MKDIR} ${EMPTY_DIRS_LIST:S!^!${STAGEDIR}${WWWDIR}/!}
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC}/docs/ && ${COPYTREE_SHARE} . ${DOCSDIR}/)
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/docs/ && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/)
 .endif
 
 .if ${PORT_OPTIONS:MCONTRIB}
 	@cd ${WRKSRC}/contrib && \
-		${FIND} . -type d -exec ${MKDIR} "${WWWDIR}/contrib/{}" \; && \
-		${FIND} . -type f -exec ${INSTALL_DATA} "{}" "${WWWDIR}/contrib/{}" \;
-.endif
-.if !defined(BATCH)
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+		${FIND} . -type d -exec ${MKDIR} "${STAGEDIR}${WWWDIR}/contrib/{}" \; && \
+		${FIND} . -type f -exec ${INSTALL_DATA} "{}" "${STAGEDIR}${WWWDIR}/contrib/{}" \;
 .endif
 
 .include <bsd.port.post.mk>
