@@ -1,9 +1,5 @@
-# New ports collection makefile for:   onenetd
-# Date created:        20 January 2003
-# Whom:                Tim Bishop <tim@bishnet.net>
-#
-# $FreeBSD: ports/net/onenetd/Makefile,v 1.8 2012/11/17 06:00:08 svnexp Exp $
-#
+# Created by: Tim Bishop <tim@bishnet.net>
+# $FreeBSD: net/onenetd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	onenetd
 PORTVERSION=	1.11
@@ -19,4 +15,5 @@ GNU_CONFIGURE=	yes
 MAN1=		onenetd.1
 PLIST_FILES=	bin/onenetd
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
