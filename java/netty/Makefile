@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: ports/java/netty/Makefile,v 1.6 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/netty/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	netty
 PORTVERSION=	3.5.5
@@ -30,6 +30,7 @@ PORTDATA=	*
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
