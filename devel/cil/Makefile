@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger <netchild@FreeBSD.org>
-# $FreeBSD: devel/cil/Makefile 325816 2013-08-31 16:07:19Z madpilot $
+# $FreeBSD: devel/cil/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cil
 PORTVERSION=	1.7.3
@@ -39,6 +39,7 @@ LIBFILES=	App/Cilly/KeptFile.pm \
 		App/Cilly/TempFile.pm
 LIBBINS=	patcher
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
