@@ -1,12 +1,9 @@
-# New ports collection makefile for:	exim-doc-info
-# Date created:				30 Aug 2003
-# Whom:					Oliver Eikemeier <eikemeier@fillmore-labs.com>
-#
-# $FreeBSD: ports/mail/exim-doc-info/Makefile,v 1.2 2012/11/17 05:59:02 svnexp Exp $
-#
+# Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
+# $FreeBSD: mail/exim-doc-info/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 DOCFORMAT=	info
 DISTDOCFORMAT=	texinfo
 MASTERDIR=	${.CURDIR}/../exim-doc-html
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
