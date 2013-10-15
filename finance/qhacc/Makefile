@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: finance/qhacc/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: finance/qhacc/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	qhacc
 PORTVERSION=	4.1
@@ -24,6 +24,7 @@ CXXFLAGS+=	-fpermissive
 
 DESKTOP_ENTRIES="QHacc" "" "" "${PORTNAME}" "" ""
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
