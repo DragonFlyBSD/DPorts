@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: sysutils/tenshi/Makefile 324031 2013-07-31 10:17:10Z az $
+# $FreeBSD: sysutils/tenshi/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=		tenshi
 PORTVERSION=		0.14
@@ -25,6 +25,7 @@ MAN8=			tenshi.8
 
 PORTDOCS=		README Changelog
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL5} -pi.bak -e ' \
 		s"/usr/bin/perl"${PERL}" if $$. == 1; \
