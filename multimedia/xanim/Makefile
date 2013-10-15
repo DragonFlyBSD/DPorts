@@ -1,5 +1,5 @@
 # Created by: piero
-# $FreeBSD: multimedia/xanim/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: multimedia/xanim/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	xanim
 PORTVERSION=	2.92.0
@@ -16,6 +16,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Play most popular animation formats and show pictures
 
 NO_CDROM=	redistributed without fee
+NO_STAGE=	yes
 
 # clang's cpp destroys whitespace, particularly hard tabs in makefiles,
 # which is fatal for imake.
