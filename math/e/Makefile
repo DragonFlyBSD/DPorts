@@ -1,9 +1,5 @@
-# New ports collection makefile for:  e
-# Date created:        3 November 2004
-# Whom:                snowy
-#
-# $FreeBSD: ports/math/e/Makefile,v 1.3 2012/11/17 05:59:20 svnexp Exp $
-#
+# Created by: snowy
+# $FreeBSD: math/e/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	e
 PORTVERSION=	0.02718
@@ -16,6 +12,7 @@ COMMENT=	A tiny expression evaluator
 MAKEFILE=	makefile
 ALL_TARGET=	e
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/${PORTNAME}
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|g ; \
