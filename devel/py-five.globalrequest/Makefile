@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-five.globalrequest
-# Date created:				23 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-five.globalrequest/Makefile,v 1.3 2012/11/17 05:56:46 svnexp Exp $
-#
+# $FreeBSD: devel/py-five.globalrequest/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	five.globalrequest
 PORTVERSION=	1.0
@@ -20,7 +15,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.globalrequest>=0:${PORTSDIR}/devel/py-z
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-#USE_ZOPE=	yes
+USE_PYDISTUTILS=easy_install
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
