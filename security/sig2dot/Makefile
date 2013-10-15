@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/sig2dot/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/sig2dot/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sig2dot
 PORTVERSION=	0.35
@@ -22,6 +22,7 @@ NO_BUILD=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	sig2dot.pl
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sig2dot.pl ${PREFIX}/bin/sig2dot
 
