@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: databases/p5-DBIWrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIWrapper/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIWrapper
 PORTVERSION=	0.24
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIWrapper.3 DBIWrapper::ResultSet.3 DBIWrapper::XMLParser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
