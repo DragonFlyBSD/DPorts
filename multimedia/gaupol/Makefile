@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/gaupol/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: multimedia/gaupol/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gaupol
 PORTVERSION=	0.19.2
@@ -24,6 +24,7 @@ INSTALLS_ICONS=	yes
 
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
