@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-hr/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: games/doom-hr/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	hr
 PORTVERSION=	1.0
@@ -29,6 +29,7 @@ DEMO_UV_DESC=	Install Ultra-Violence demos
 
 DATADIR=	${DMDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	@(cd ${WRKDIR} && ${SH} ${SCRIPTDIR}/lowercase.sh)
 
