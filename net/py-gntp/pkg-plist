@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/py-gntp/pkg-plist,v 1.2 2012/11/17 06:00:16 svnexp Exp $
+@comment $FreeBSD: net/py-gntp/pkg-plist 303573 2012-09-02 20:05:13Z nivit $
 bin/gntp
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 %%PORTDOCS%%%%DOCSDIR%%/.buildinfo
