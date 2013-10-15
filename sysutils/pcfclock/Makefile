@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pcfclock
-# Date created:				23 November 2004
-# Whom:					Frank W. Josellis <frank@dynamical-systems.org>
-#
-# $FreeBSD: ports/sysutils/pcfclock/Makefile,v 1.6 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Frank W. Josellis <frank@dynamical-systems.org>
+# $FreeBSD: sysutils/pcfclock/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pcfclock
 PORTVERSION=	0.44
@@ -22,6 +18,7 @@ CONFIGURE_ARGS=	--without-linux
 MAN8=		pcfdate.8
 PLIST_FILES=	sbin/pcfdate
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"

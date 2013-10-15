@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/pcfclock/files/pcfdate.in,v 1.6 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/pcfclock/files/pcfdate.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: pcfdate
 # REQUIRE: adjkerntz
