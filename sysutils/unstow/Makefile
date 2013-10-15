@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unstow
-# Date created:		3 January 2010
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/sysutils/unstow/Makefile,v 1.2 2012/11/17 06:01:48 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: sysutils/unstow/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	unstow
 PORTVERSION=	0.1.1
@@ -20,6 +16,7 @@ PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 PORTDOCS=	README.md
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin/
 .for man in ${MAN1}
