@@ -1,4 +1,4 @@
-# $FreeBSD: ports/comms/splat/Makefile,v 1.9 2012/12/23 16:37:08 svnexp Exp $
+# $FreeBSD: comms/splat/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	splat
 PORTVERSION=	1.4.0
@@ -40,6 +40,7 @@ HRM_4X4_DESC=	4 x 4 degrees
 HRM_5X5_DESC=	5 x 5 degrees
 HRM_6X6_DESC=	6 X 6 degrees
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHRM}
