@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-TSTP
-# Date created:		16 May 2004
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/p5-POE-Component-TSTP/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/p5-POE-Component-TSTP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Component-TSTP
 PORTVERSION=	0.02
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::TSTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
