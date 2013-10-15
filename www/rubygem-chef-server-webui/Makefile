@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-chef-server-webui/Makefile 313021 2013-02-27 02:18:10Z swills $
+# $FreeBSD: www/rubygem-chef-server-webui/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	chef-server-webui
 PORTVERSION=	10.24.0
@@ -27,4 +27,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/chef-server-webui
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
