@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: science/R-cran-som/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: science/R-cran-som/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	som
 DISTVERSION=	0.3-5
@@ -15,4 +15,5 @@ LICENSE=	GPLv3
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
