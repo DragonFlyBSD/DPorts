@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Thrift-XS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Thrift-XS/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	Thrift-XS
 PORTVERSION=	1.04
@@ -23,10 +23,5 @@ TEST_DEPENDS=	p5-Proc-ProcessTable>=0:${PORTSDIR}/devel/p5-Proc-ProcessTable \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Thrift::XS.3 \
-		Thrift::XS::BinaryProtocol.3 \
-		Thrift::XS::CompactProtocol.3 \
-		Thrift::XS::MemoryBuffer.3
 
 .include <bsd.port.mk>
