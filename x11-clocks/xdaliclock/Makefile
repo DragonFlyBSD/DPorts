@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xdaliclock
-# Date created:				10th February 1995
-# Whom:					gpalmer
-#
-# $FreeBSD: x11-clocks/xdaliclock/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: gpalmer
+# $FreeBSD: x11-clocks/xdaliclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	xdaliclock
 PORTVERSION=	2.39
@@ -21,4 +17,5 @@ USE_XORG=	xt sm ice xext x11
 MAN1=		xdaliclock.1
 PLIST_FILES=	bin/xdaliclock
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
