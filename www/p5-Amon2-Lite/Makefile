@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Amon2-Lite/Makefile 326053 2013-09-02 18:23:34Z az $
+# $FreeBSD: www/p5-Amon2-Lite/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Amon2-Lite
 PORTVERSION=	0.09
@@ -29,4 +29,5 @@ USE_PERL5=	modbuild
 MAN3=	Amon2::Lite.3 \
 	Amon2::Setup::Flavor::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
