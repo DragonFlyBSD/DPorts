@@ -1,9 +1,5 @@
-# New ports collection makefile for:	he2
-# Date created:				3 August 2001
-# Whom:					nadav@libagent.org
-#
-# $FreeBSD: ports/hebrew/he2/Makefile,v 1.15 2012/11/17 05:58:27 svnexp Exp $
-#
+# Created by: nadav@libagent.org
+# $FreeBSD: hebrew/he2/Makefile 327734 2013-09-20 18:41:52Z bapt $
 
 PORTNAME=	he2
 PORTVERSION=	0.61
@@ -20,6 +16,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	-j`${SYSCTL} -n hw.ncpu`
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
