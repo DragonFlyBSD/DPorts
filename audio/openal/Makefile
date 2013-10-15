@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: audio/openal/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: audio/openal/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	openal
 PORTVERSION=	20060211
@@ -14,6 +14,7 @@ COMMENT=	A 3D positional spatialized sound library
 CONFLICTS=	openal-soft-[0-9]*
 
 USE_AUTOTOOLS=	libtool
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-Wno-return-type
