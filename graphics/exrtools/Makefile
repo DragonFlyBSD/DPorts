@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/exrtools/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: graphics/exrtools/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
@@ -31,6 +31,7 @@ MAN1=		exrblur.1 exrchr.1 exricamtm.1 exrnlm.1 exrnormalize.1 \
 		exrpptm.1 exrstats.1 exrtools.1 exrtopng.1 jpegtoexr.1 \
 		pngtoexr.1 ppmtoexr.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<values\.h>|<float.h>|' \
 		${WRKSRC}/src/exrnormalize.c \
