@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/libchamplain/Makefile 318622 2013-05-20 19:35:45Z kwm $
+# $FreeBSD: graphics/libchamplain/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/libchamplain/Makefile,v 1.23 2010/09/27 18:17:23 kwm Exp $
 
 PORTNAME=	libchamplain
@@ -30,4 +30,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=0.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
