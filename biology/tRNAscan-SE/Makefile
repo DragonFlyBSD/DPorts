@@ -1,5 +1,5 @@
 # Created by: chuynh@biolateral.com.au
-# $FreeBSD: biology/tRNAscan-SE/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: biology/tRNAscan-SE/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	tRNAscan-SE
 PORTVERSION=	1.23
@@ -24,6 +24,7 @@ PORTDOCS=	Manual.ps
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|tRNAscanSE setpaths|tRNAscanSE|g ; \
 		 s|if tRNAscan-SE|if ./tRNAscan-SE|g' ${WRKSRC}/Makefile
