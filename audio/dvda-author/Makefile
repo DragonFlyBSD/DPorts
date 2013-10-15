@@ -1,5 +1,5 @@
 # Created by: dieringe@zedat.fu-berlin.de
-# $FreeBSD: audio/dvda-author/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/dvda-author/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	dvda-author
 PORTVERSION=	09.05
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/FLAC
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libltdl
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
