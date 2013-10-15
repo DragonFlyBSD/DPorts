@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: www/blastbeat/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: www/blastbeat/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	blastbeat
 PORTVERSION=	20121205
@@ -35,6 +35,7 @@ PLIST_DIRSTRY=	%%ETCDIR%%
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
