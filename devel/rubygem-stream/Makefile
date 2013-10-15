@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/rubygem-stream
-# Date created:				02.08.2005
-# Whom:					Ulrich Spoerlein <uspoerlein@gmail.com>
-#
-# $FreeBSD: ports/devel/rubygem-stream/Makefile,v 1.12 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
+# $FreeBSD: devel/rubygem-stream/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	stream
 PORTVERSION=	0.5
@@ -18,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
