@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ldapsh
-# Date created:				Jul 28 2004
-# Whom:					Florent Thoumie <flz@xbsd.org>
-#
-# $FreeBSD: net/ldapsh/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: Florent Thoumie <flz@xbsd.org>
+# $FreeBSD: net/ldapsh/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldapsh
 PORTVERSION=	2.00
@@ -32,6 +28,7 @@ MAN3=		Net::LDAP::Shell.3 Net::LDAP::Config.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,/usr/local/bin/perl,${PERL}," ${WRKSRC}/ldapsh
 
