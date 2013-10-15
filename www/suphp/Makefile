@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: www/suphp/Makefile 324854 2013-08-17 16:40:11Z bdrewery $
+# $FreeBSD: www/suphp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	suphp
 PORTVERSION=	0.7.2
@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	CFLAGS="${CFLAGS}" --with-apxs=${APXS}
 WITH_SETID_MODE?=	owner
 CONFIGURE_ARGS+=	--with-setid-mode=${WITH_SETID_MODE}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}
