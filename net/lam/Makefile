@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: net/lam/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net/lam/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	lam
 PORTVERSION=	7.1.5b2
@@ -366,6 +366,7 @@ MAN7=	LAM.7 \
 	libmpi.7 \
 	mpi.7
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64 || ${ARCH} == ia64 || ${ARCH} == sparc64
