@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: games/gturing/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/gturing/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gturing
 PORTVERSION=	0.1.1
@@ -20,6 +20,7 @@ INSTALLS_OMF=	yes
 PORTDOCS=	AUTHORS COPYING NEWS ChangeLog TODO README INSTALL
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-D.*_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/configure
