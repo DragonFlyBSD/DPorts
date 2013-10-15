@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/gaffitter/Makefile 323872 2013-07-29 08:06:12Z danfe $
+# $FreeBSD: sysutils/gaffitter/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gaffitter
 PORTVERSION=	0.6.0
@@ -19,6 +19,7 @@ MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 
 # Change "cd foo; $(MAKE)" into "$(MAKE) -C foo" to unbreak parallel builds
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E 's|cd (.+); (\$$\(MAKE\))|\2 -C \1|' \
 		${WRKSRC}/Makefile
