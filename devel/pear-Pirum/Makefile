@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-Pirum/Makefile,v 1.1 2012/12/17 16:39:58 svnexp Exp $
+# $FreeBSD: devel/pear-Pirum/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Pirum
 PORTVERSION=	1.1.4
@@ -21,6 +21,7 @@ PEAR_AUTOINSTALL=	yes
 DEFAULT_PHP_VER=5
 IGNORE_WITH_PHP=4
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
