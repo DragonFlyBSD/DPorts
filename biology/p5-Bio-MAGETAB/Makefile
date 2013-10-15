@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-MAGETAB/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: biology/p5-Bio-MAGETAB/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	Bio-MAGETAB
 PORTVERSION=	1.27
@@ -87,6 +87,7 @@ MAN3=		Bio::MAGETAB.3 \
 		Bio::MAGETAB::Util::Writer::SDRF.3 \
 		Bio::MAGETAB::Util::Writer::Tabfile.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^auto_install;/d' ${WRKSRC}/Makefile.PL
 
