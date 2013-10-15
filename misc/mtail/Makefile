@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/mtail/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/mtail/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	mtail
 PORTVERSION=	1.1.1
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	CHANGES LICENSE README
 PORTEXAMPLES=	mtailrc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
