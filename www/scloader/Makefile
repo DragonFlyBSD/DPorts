@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sanatana.dharma>
-# $FreeBSD: ports/www/scloader/Makefile,v 1.9 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/scloader/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	scloader
 PORTVERSION=	0.32
@@ -23,6 +23,7 @@ PORTDOCS=	README history todo
 
 DOS2UNIX_REGEX=	.+\.[^j][^a][^r]$
 
+NO_STAGE=	yes
 do-configure:
 		${SED} -e "s|%%JAVA%%|${LOCALBASE}/bin/java|" \
 		-e "s|%%JAVAJARDIR%%|${JAVAJARDIR}|" \
