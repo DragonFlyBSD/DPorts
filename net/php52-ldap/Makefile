@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php52-ldap
-# Date created:			17 Apr 2010
-# Whom:				Alex Keda <admin@lissyara.su>
-#
-# $FreeBSD: net/php52-ldap/Makefile 323158 2013-07-17 10:21:39Z erwin $
-#
+# Created by: Alex Keda <admin@lissyara.su>
+# $FreeBSD: net/php52-ldap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 CATEGORIES=	net
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php52
 
 PKGNAMESUFFIX=	-ldap
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
