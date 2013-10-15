@@ -1,5 +1,6 @@
-@comment $FreeBSD: ports/chinese/c2t/pkg-plist,v 1.6 2012/11/17 05:54:55 svnexp Exp $
+@comment $FreeBSD: chinese/c2t/pkg-plist 328366 2013-09-26 14:35:04Z vanilla $
 bin/c2t
+man/man1/c2t.1.gz
 share/chinese/gb/TONEPY.tit
 @dirrmtry share/chinese/gb
 @dirrmtry share/chinese
