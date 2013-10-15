@@ -1,4 +1,4 @@
-# $FreeBSD: ports/japanese/p5-Encode-JP-Mobile/Makefile,v 1.8 2012/11/17 05:58:38 svnexp Exp $
+# $FreeBSD: japanese/p5-Encode-JP-Mobile/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Encode-JP-Mobile
 PORTVERSION=	0.30
@@ -15,8 +15,10 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	\
 	p5-YAML>0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
