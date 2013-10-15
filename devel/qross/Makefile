@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/qross/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/qross/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qross
 PORTVERSION=	0.2.2
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 OPTIONS_DEFINE=	PYTHON
 OPTIONS_DEFAULT=PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
