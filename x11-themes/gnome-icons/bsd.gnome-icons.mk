@@ -2,7 +2,7 @@
 # Date created:				29 Feb 2004
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/x11-themes/gnome-icons/bsd.gnome-icons.mk,v 1.9 2012/11/17 06:03:31 svnexp Exp $
+# $FreeBSD: x11-themes/gnome-icons/bsd.gnome-icons.mk 300897 2012-07-14 14:29:18Z beat $
 #
 
 # Port logic gratuitously stolen from x11-themes/kde-icons-noia by
