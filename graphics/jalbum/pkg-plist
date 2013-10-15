@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/graphics/jalbum/pkg-plist,v 1.19 2012/11/17 05:58:10 svnexp Exp $
+@comment $FreeBSD: graphics/jalbum/pkg-plist 307131 2012-11-07 13:26:03Z tdb $
 bin/jalbum
 %%DATADIR%%/JAlbum.jar
 %%DATADIR%%/StartJAlbum.cmd
