@@ -1,9 +1,5 @@
-# New ports collection makefile for:	umodplayer
-# Date created:		14 September 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/umodplayer/Makefile,v 1.11 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: audio/umodplayer/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	umodplayer
 PORTVERSION=	0.${DISTVERSION:tl}
@@ -20,6 +16,7 @@ LIB_DEPENDS=	modplug.1:${PORTSDIR}/audio/libmodplug \
 		ao.4:${PORTSDIR}/audio/libao
 BUILD_DEPENDS=	${LOCALBASE}/lib/libaiff.a:${PORTSDIR}/audio/libaiff
 
+NO_STAGE=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 
