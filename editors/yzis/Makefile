@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: editors/yzis/Makefile 327459 2013-09-17 09:00:42Z bapt $
+# $FreeBSD: editors/yzis/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	yzis
 PORTVERSION=	1.0.a.1
@@ -37,6 +37,7 @@ OPTIONS_DEFINE=	KYZIS NYZIS
 KYZIS_DESC=	Build kyzis and Yzis kpart
 NYZIS_DESC=	Build nyzis (ncurses frontend)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKYZIS}
