@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/nucleus/Makefile,v 1.15 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-fonts/nucleus/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	nucleus
 PORTVERSION=	0.77
@@ -16,6 +16,7 @@ RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 NO_WRKSUBDIR=	yes
 USE_XORG=	x11
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${DESCR}
 
