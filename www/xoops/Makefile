@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/xoops/Makefile 319565 2013-06-01 14:03:30Z wen $
+# $FreeBSD: www/xoops/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xoops
 PORTVERSION=	2.5.6
@@ -14,6 +14,7 @@ USE_PHP=	mysql
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
