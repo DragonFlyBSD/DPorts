@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/games/jtans/Makefile,v 1.11 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: games/jtans/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	jtans
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ NO_BUILD=	yes
 SUB_FILES=	jtans.sh
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/jtans.sh ${PREFIX}/bin/jtans
 	@${MKDIR} ${DATADIR}
