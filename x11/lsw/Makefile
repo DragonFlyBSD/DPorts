@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lsw
-# Date created:		2011-07-03
-# Whom:			Dennis Herrmann <dhn@FreeBSD.org>
-#
-# $FreeBSD: x11/lsw/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Dennis Herrmann <dhn@FreeBSD.org>
+# $FreeBSD: x11/lsw/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	lsw
 PORTVERSION=	0.2
@@ -23,6 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 MAN1=	lsw.1
 USE_XORG=	x11 xt xproto xext
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-I/usr/include||;s|-L/usr/lib||;s|= -Os|+=|'\
 		-e 's|-DHAVE_SHADOW_H||' ${WRKSRC}/config.mk
