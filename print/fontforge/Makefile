@@ -1,5 +1,5 @@
 # Created by: KANOU Hiroki <kanou@khdd.net>
-# $FreeBSD: print/fontforge/Makefile 318190 2013-05-14 19:14:52Z rakuco $
+# $FreeBSD: print/fontforge/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	fontforge
 DISTVERSION=	20120731-b
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	DOCS MULTILAYER FREETYPE PLUGINS PYTHON CAIRO PANGO
 OPTIONS_DEFAULT=	DOCS MULTILAYER PLUGINS
 MULTILAYER_DESC=	type3/SVG multilayer font support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
