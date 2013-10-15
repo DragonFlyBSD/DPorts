@@ -1,6 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: security/fwanalog/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/fwanalog/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fwanalog
 PORTVERSION=	0.6.9
@@ -22,6 +21,7 @@ CONFFILES=	fwanalog-dom.tab \
 		fwanalog.opts \
 		services.conf
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e "s,the script's directory.*$$,${ETCDIR},;" \
