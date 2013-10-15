@@ -1,5 +1,5 @@
 # Created by: Dave Grochowski <malus.x@gmail.com>
-# $FreeBSD: devel/libdlna/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/libdlna/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libdlna
 PORTVERSION=	0.2.3
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--prefix="${PREFIX}" --disable-optimize \
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's#\(PKGCONFIG_DIR = \).*#\1${LOCALBASE}/libdata/pkgconfig#' \
