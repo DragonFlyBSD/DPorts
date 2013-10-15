@@ -1,5 +1,5 @@
 # Created by: Michael Alyn Miller <malyn@strangeGizmo.com>
-# $FreeBSD: ports/games/alephone-data/Makefile,v 1.18 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/alephone-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	1.0
@@ -30,6 +30,7 @@ INFINITY_DESC=	Install Marathon Infinity data
 
 SUB_FILES=	wrapper
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DATADIR!=	cd ${PORTSDIR}/games/alephone && ${MAKE} -V DATADIR
