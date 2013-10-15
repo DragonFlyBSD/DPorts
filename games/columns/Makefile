@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/columns/Makefile 320800 2013-06-13 13:43:36Z bsam $
+# $FreeBSD: games/columns/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	columns
 PORTVERSION=	1.2b
@@ -21,6 +21,7 @@ PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
