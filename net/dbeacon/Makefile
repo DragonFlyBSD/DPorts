@@ -1,9 +1,5 @@
-# New ports collection makefile for:  dbeacon
-# Date created:  July 19, 2009
-# Whom:		Antonio Querubin <tony@lava.net>
-#
-# $FreeBSD: ports/net/dbeacon/Makefile,v 1.2 2012/11/17 05:59:58 svnexp Exp $
-#
+# Created by: Antonio Querubin <tony@lava.net>
+# $FreeBSD: net/dbeacon/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dbeacon
 PORTVERSION=	0.3.9.1
@@ -20,6 +16,7 @@ MAN1=		dbeacon.1
 
 USE_RC_SUBR=	dbeacon
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/docs/dbeacon.1 ${MAN1PREFIX}/man/man1
