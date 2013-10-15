@@ -1,5 +1,5 @@
 # Created by: Ayumi M <ayu@commun.jp>
-# $FreeBSD: www/habari/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/habari/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	habari
 PORTVERSION=	0.8
@@ -20,6 +20,7 @@ OPTIONS_MULTI_DB=	MYSQL PGSQL SQLITE
 OPTIONS_DEFAULT=	MYSQL
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
