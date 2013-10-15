@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-ActionRole-ACL/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-ActionRole-ACL/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-ActionRole-ACL
 PORTVERSION=	0.07
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 MAN3=		Catalyst::Action::Role::ACL.3 \
 		Catalyst::ActionRole::ACL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
