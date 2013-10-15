@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/djview4/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/djview4/Makefile 329673 2013-10-07 10:02:45Z marino $
 
 PORTNAME=	djview
 PORTVERSION=	4.9
@@ -17,6 +17,7 @@ LIB_DEPENDS=	djvulibre:${PORTSDIR}/graphics/djvulibre
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_QT4=	gui network rcc_build uic_build moc_build qmake_build
+USE_XORG=	sm ice xt
 QT_NONSTANDARD=	yes
 CONFIGURE_ARGS=	--x-includes="${LOCALBASE}/include" \
 		--x-libraries="${LOCALBASE}/lib"
@@ -36,6 +37,7 @@ USE_WEBPLUGINS=		gecko*
 WEBPLUGINS_DIR=		${PREFIX}/lib/djview4/plugins
 WEBPLUGINS_FILES=	nsdejavu.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 
