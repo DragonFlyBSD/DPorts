@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/py-cclib/Makefile,v 1.7 2013/02/16 13:19:51 svnexp Exp $
+# $FreeBSD: devel/py-cclib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	cclib
 PORTVERSION=	1.1
@@ -16,4 +16,5 @@ RUN_DEPENDS=	${PYNUMPY}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
