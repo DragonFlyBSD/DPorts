@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Rcs-Agent/Makefile 326656 2013-09-07 16:51:08Z az $
+# $FreeBSD: devel/p5-Rcs-Agent/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Rcs-Agent
 PORTVERSION=	1.05
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Rcs::Agent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
