@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nspmod-0.1
-# Date created:				1 Jun 1997
-# Whom:					jmg
-#
-# $FreeBSD: ports/audio/nspmod/Makefile,v 1.15 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: jmg
+# $FreeBSD: audio/nspmod/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	nspmod
 PORTVERSION=	0.1
@@ -15,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MOD/S3M/MTM tracker that does its own DSP, uses VoxWare v2.90+
 
 MAN1=		nspmod.1
+NO_STAGE=	yes
 PLIST_FILES=	bin/nspmod
 
 do-install:
