@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: ports/devel/flexjson/Makefile,v 1.9 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/flexjson/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	flexjson
 PORTVERSION=	1.6
@@ -22,6 +22,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 PORTDOCS=	LICENSE-2.0.txt docs
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.jar \
