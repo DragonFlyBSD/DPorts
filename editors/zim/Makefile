@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: editors/zim/Makefile 322453 2013-07-07 16:47:36Z rm $
+# $FreeBSD: editors/zim/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	zim
 PORTVERSION=	0.60
@@ -32,6 +32,7 @@ GIT_DESC=	Version control for notebooks using git
 MERCURIAL_DESC=	Version control for notebooks using hg
 DITAA_DESC=		Diagram editor support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUR}
