@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/legesmotus/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/legesmotus/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	legesmotus
 PORTVERSION=	0.4.0
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES="Leges Motus" \
 		"Game;ActionGame;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCLIENT}
