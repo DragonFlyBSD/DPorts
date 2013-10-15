@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@FreeBSD.org>
-# $FreeBSD: net/p5-AnyEvent-Twitter-Stream/Makefile 326283 2013-09-04 15:16:50Z sunpoet $
+# $FreeBSD: net/p5-AnyEvent-Twitter-Stream/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	AnyEvent-Twitter-Stream
 PORTVERSION=	0.26
@@ -20,4 +20,5 @@ USE_PERL5=	modbuildtiny
 
 MAN3=		AnyEvent::Twitter::Stream.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
