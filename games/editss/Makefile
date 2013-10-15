@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/editss/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/editss/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	editss
 PORTVERSION=	2.2
@@ -18,6 +18,7 @@ MAN6=		editss.6
 NO_INSTALL_MANPAGES=	yes
 SUB_FILES=	editss
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|xxpms/ships2|.xpilot-shipshapes|' \
 		${WRKSRC}/editssrc
