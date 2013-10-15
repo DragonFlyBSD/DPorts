@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Tree-Node/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: devel/p5-Tree-Node/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tree-Node
 PORTVERSION=	0.08
@@ -16,4 +16,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Tree::Node.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
