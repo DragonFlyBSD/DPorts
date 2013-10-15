@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-HTML_Page2
-# Date created:			  21 January 2005
-# Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-#
-# $FreeBSD: ports/devel/pear-HTML_Page2/Makefile,v 1.9 2012/11/17 05:56:38 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+# $FreeBSD: devel/pear-HTML_Page2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_Page2
 PORTVERSION=	0.6.1
@@ -18,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/HTML/Common.php:${PORTSDIR}/devel/pear-HTML_Common
 
 PEAR_AUTOINSTALL=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
