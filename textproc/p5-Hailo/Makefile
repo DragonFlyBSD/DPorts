@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: textproc/p5-Hailo/Makefile 327459 2013-09-17 09:00:42Z bapt $
+# $FreeBSD: textproc/p5-Hailo/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Hailo
 PORTVERSION=	0.70
@@ -69,6 +69,7 @@ MAN3=		Hailo.3 \
 OPTIONS_DEFINE=	SQLITE PGSQL MYSQL
 OPTIONS_DEFAULT=	SQLITE
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
