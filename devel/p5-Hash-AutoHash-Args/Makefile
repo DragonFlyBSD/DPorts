@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-AutoHash-Args/Makefile 327218 2013-09-14 06:20:28Z sunpoet $
+# $FreeBSD: devel/p5-Hash-AutoHash-Args/Makefile 330182 2013-10-12 19:44:42Z sunpoet $
 
 PORTNAME=	Hash-AutoHash-Args
-PORTVERSION=	1.17
+PORTVERSION=	1.18
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,10 +13,12 @@ COMMENT=	Object-oriented processing of keyword-based argument lists
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Hash-AutoHash>=1.16:${PORTSDIR}/devel/p5-Hash-AutoHash
+BUILD_DEPENDS=	p5-Hash-AutoHash>=1.17:${PORTSDIR}/devel/p5-Hash-AutoHash
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
+TEST_DEPENDS=	p5-Test-Deep>=0.110:${PORTSDIR}/devel/p5-Test-Deep \
+		p5-Test-Pod>=1.48:${PORTSDIR}/devel/p5-Test-Pod
 
+NO_STAGE=	yes
 USE_PERL5=	modbuild
 USES=		perl5
 
