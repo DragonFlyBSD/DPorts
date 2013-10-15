@@ -1,5 +1,5 @@
 # Created by: camson@bilateral.com.au
-# $FreeBSD: ports/biology/artemis/Makefile,v 1.15 2012/12/10 11:29:53 svnexp Exp $
+# $FreeBSD: biology/artemis/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	artemis
 PORTVERSION=	9
@@ -20,6 +20,7 @@ JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type d -name CVS -exec ${RM} -rf {} +
 
