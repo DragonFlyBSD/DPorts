@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-assistant-adp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: devel/qt4-assistant-adp/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	assistant
 PORTVERSION=	4.6.3
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/src/version/}
 
 PLIST_FILES=	bin/assistant_adp
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|$$$$\[QT_INSTALL_BINS]|${PREFIX}/bin|g' \
 		${WRKSRC}/compat.pro
