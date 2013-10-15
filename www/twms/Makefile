@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: www/twms/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: www/twms/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	twms
 PORTVERSION=	0.02w
@@ -32,6 +32,7 @@ USE_RC_SUBR=	twms
 USERS=		${TWMS_USER}
 GROUPS=		${TWMS_GROUP}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '1,1 s|/usr/bin/python|/usr/bin/env python|' ${WRKSRC}/twms.py
 	@${REINPLACE_CMD} -e 's|/etc/twms/twms.conf|${PREFIX}/etc/twms.conf|' ${WRKSRC}/twms/twms.py
