@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/beets/Makefile 326398 2013-09-05 13:46:55Z feld $
+# $FreeBSD: audio/beets/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	beets
 PORTVERSION=	1.2.2
@@ -19,6 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mutagen>=1.21:${PORTSDIR}/audio/py-mutagen \
 MAN1=	beet.1
 MAN5=	beetsconfig.5
 
+NO_STAGE=	yes
 USE_PYTHON=	2.7+
 USE_PYDISTUTILS=	easy_install
 
