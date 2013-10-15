@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: devel/viewvc/files/viewvc.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: devel/viewvc/files/viewvc.in 328494 2013-09-27 15:53:09Z ohauer $
 #
 # PROVIDE: viewvc
 # REQUIRE: LOGIN
@@ -40,7 +40,7 @@ viewvc_user=${viewvc_user:-"www"}
 
 pidfile=/var/run/viewvc.pid
 command=%%PYTHON_CMD%%
-standalone=%%INSTDIR%%/bin/standalone.py
+standalone=%%PREFIX%%/viewvc/bin/standalone.py
 
 start_precmd=viewvc_precmd
 start_cmd=viewvc_start
