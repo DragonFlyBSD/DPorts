@@ -1,5 +1,5 @@
 # Created by: Steve Ames <steve@energistic.com>
-# $FreeBSD: net/mediaproxy/Makefile 319985 2013-06-05 12:22:03Z bapt $
+# $FreeBSD: net/mediaproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	mediaproxy
 PORTVERSION=	1.8.2
@@ -20,6 +20,7 @@ SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 OPTIONS_DEFINE=	ACCOUNTING
 ACCOUNTING_DESC=	ACCOUNTING support (Requires MySQL)
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MACCOUNTING}
