@@ -1,8 +1,5 @@
-# New ports collection makefile for:	aleefonts-ttf
-# Date created:		23 July 2004
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/korean/aleefonts-ttf/Makefile,v 1.20 2012/11/17 05:58:46 svnexp Exp $
+# Created by: Hye-Shik Chang
+# $FreeBSD: korean/aleefonts-ttf/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	aleefonts
 PORTVERSION=	12
@@ -32,6 +29,7 @@ PLIST_FILES+=	${FONTSDIR}/${f}.ttf
 PLIST_FILES+=	${FONTSDIR}/fonts.dir \
 		${FONTSDIR}/fonts.scale
 
+NO_STAGE=	yes
 do-build:
 	${LOCALBASE}/bin/mkfontscale ${WRKSRC}
 	${LOCALBASE}/bin/mkfontdir ${WRKSRC}
