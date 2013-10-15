@@ -1,5 +1,5 @@
 # Created by: Nick Esborn <nick@netdot.net>
-# $FreeBSD: astro/roadmap/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: astro/roadmap/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	roadmap
 PORTVERSION=	1.2.1
@@ -19,6 +19,7 @@ INSTALL_WRKSRC=	${WRKSRC}/src
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 MAKE_ARGS=	INSTALLDIR="${PREFIX}" CC="${CC}" CXX="${CXX}"
