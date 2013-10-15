@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/Google
-# Date created:		13 April 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: www/ruby-google/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: www/ruby-google/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	google
 PORTVERSION=	0.6.0
@@ -24,6 +20,7 @@ RUBY_SETUP=	install.rb
 DOCS=		CHANGES Changelog README google.html
 EXAMPLES=	examples/*
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODEXAMPLESDIR}
