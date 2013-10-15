@@ -1,5 +1,5 @@
-# Created by: Alan Somers <asomers@freebsd.org>
-# $FreeBSD: devel/kyua-atf-compat/Makefile 321053 2013-06-16 14:29:59Z bdrewery $
+# Created by: Alan Somers <asomers@FreeBSD.org>
+# $FreeBSD: devel/kyua-atf-compat/Makefile 328410 2013-09-26 20:08:38Z eadler $
 
 PORTNAME=	kyua-atf-compat
 PORTVERSION=	0.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PROJECTHOST=	kyua
 
-MAINTAINER=	asomers@freebsd.org
+MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Kyua (automated testing framework) - ATF compatibility tools
 
 LICENSE=	BSD
@@ -19,6 +19,7 @@ USES=		pkgconfig
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--docdir=${DOCSDIR}
