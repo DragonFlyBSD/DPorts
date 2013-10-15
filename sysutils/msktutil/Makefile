@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: sysutils/msktutil/Makefile 322429 2013-07-07 12:01:34Z zi $
+# $FreeBSD: sysutils/msktutil/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	msktutil
 PORTVERSION=	0.5
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=--with-sasldir=${PREFIX}
 MAN1=		msktutil.1
 PLIST_FILES=	sbin/msktutil
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900035
