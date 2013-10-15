@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <info@logvinov.com>
-# $FreeBSD: ports/mail/mdpop3d/Makefile,v 1.8 2013/02/20 23:49:31 svnexp Exp $
+# $FreeBSD: mail/mdpop3d/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mdpop3d
 PORTVERSION=	0.97
@@ -16,6 +16,7 @@ MANCOMPRESSED=	no
 OPTIONS_DEFINE=	PAM APOP
 APOP_DESC=	Build with APOP command support (requires PAM)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
