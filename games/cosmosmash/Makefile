@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/cosmosmash/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: games/cosmosmash/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cosmosmash
 DISTVERSION=	1.4.7
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} `${SDL_CONFIG} --libs`
 
 MAN6=	cosmosmash.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
