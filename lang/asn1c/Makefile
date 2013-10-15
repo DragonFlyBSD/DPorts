@@ -1,5 +1,5 @@
 # Created by: Lev Walkin <vlm@lionet.info>
-# $FreeBSD: lang/asn1c/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: lang/asn1c/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	asn1c
 PORTVERSION=	0.9.24
@@ -19,6 +19,7 @@ USE_GMAKE=	yes
 
 MAN1=	asn1c.1 enber.1 unber.1
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
