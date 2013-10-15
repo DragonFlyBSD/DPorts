@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@FreeBSD.org
-# $FreeBSD: ports/sysutils/py-nagiosplugin/Makefile,v 1.5 2013/02/09 15:59:45 svnexp Exp $
+# $FreeBSD: sysutils/py-nagiosplugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	nagiosplugin
 PORTVERSION=	0.4.5
@@ -15,4 +14,5 @@ LICENSE=	ZPL21
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
