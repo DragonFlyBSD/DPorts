@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/geronimo/files/geronimo3.in,v 1.1 2012/08/05 23:19:36 dougb Exp $
+# $FreeBSD: /tmp/pcvs/ports/www/geronimo/files/geronimo3.sh.in,v 1.1 2012-07-09 13:36:34 gahr Exp $
 #
 
 # PROVIDE: %%APP_SHORTNAME%%

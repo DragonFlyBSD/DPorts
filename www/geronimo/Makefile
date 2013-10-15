@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: ports/www/geronimo/Makefile,v 1.20 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/geronimo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	geronimo
 DISTVERSION=	3.0-beta-1
@@ -21,6 +21,7 @@ SUB_FILES=	pkg-deinstall
 OPTIONS_DEFINE=	TOMCAT7
 TOMCAT7_DESC=	Use Tomcat instead of default Jetty
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOMCAT7}
