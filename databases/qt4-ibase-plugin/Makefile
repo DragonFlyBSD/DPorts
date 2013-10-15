@@ -1,8 +1,9 @@
-# Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: databases/qt4-ibase-plugin/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: databases/qt4-ibase-plugin/Makefile 328907 2013-09-30 23:45:14Z acm $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	kde@FreeBSD.org
@@ -29,4 +30,5 @@ MAKE_ENV+=	DB="${DB}" DRIVER="${DRIVER}" MOC="${MOC}" \
 		QT_LIBDIR="${QT_LIBDIR}"
 PLIST_SUB=	DB=${DB}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
