@@ -1,5 +1,5 @@
 # Created by: Janik Galasso <janik@hikarihq.com>
-# $FreeBSD: audio/mangler/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/mangler/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mangler
 PORTVERSION=	1.2.3
@@ -18,6 +18,7 @@ LIB_DEPENDS=	celt0.2:${PORTSDIR}/audio/celt \
 		gsm.1:${PORTSDIR}/audio/gsm
 
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	librsvg2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-alsa
