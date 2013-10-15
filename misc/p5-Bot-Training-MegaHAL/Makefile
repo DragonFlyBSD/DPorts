@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	Bot-Training-MegaHAL
-# Date created:	   2011-07-19
-# Whom:		   milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: misc/p5-Bot-Training-MegaHAL/Makefile 325959 2013-09-02 09:36:29Z az $
-#
+# Created by: milki <milki@rescomp.berkeley.edu>
+# $FreeBSD: misc/p5-Bot-Training-MegaHAL/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Bot-Training-MegaHAL
 PORTVERSION=	0.02
@@ -27,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	Bot::Training::MegaHAL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
