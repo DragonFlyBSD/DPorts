@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: devel/xxgdb/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: devel/xxgdb/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xxgdb
 PORTVERSION=	1.12
@@ -19,6 +19,7 @@ MAN1=		xxgdb.1
 #  Yes, I know this will recompile the program every time, but
 #  we have the cookie anyway and it's much easier this way
 #  than modifying the Imakefile.
+NO_STAGE=	yes
 post-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o xxgdbiowin xxgdbiowin.c
 
