@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: multimedia/mpeg_play/Makefile 321998 2013-06-28 22:12:51Z bapt $
+# $FreeBSD: multimedia/mpeg_play/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mpeg_play
 PORTVERSION=	2.4
@@ -18,6 +18,7 @@ USE_XORG=	x11 xext
 MAN1=		mpeg_play.1
 PLIST_FILES=	bin/mpeg_play
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc"
