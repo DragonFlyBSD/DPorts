@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-psycopg
-# Date created:		22 March 2002
-# Whom:			Alex Rodioukov <simuran@shaw.ca>
-#
-# $FreeBSD: ports/databases/py-psycopg/Makefile,v 1.26 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: Alex Rodioukov <simuran@shaw.ca>
+# $FreeBSD: databases/py-psycopg/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	psycopg
 PORTVERSION=	1.1.21
@@ -14,13 +10,13 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	psycopg-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	The high performance Python adapter for PostgreSQL
+COMMENT=	High performance Python adapter for PostgreSQL
 
 RUN_DEPENDS=	${DATETIME_DEP}:${PORTSDIR}/lang/py-mx-base
 BUILD_DEPENDS=	${DATETIME_DEP}:${PORTSDIR}/lang/py-mx-base
 
 USE_PGSQL=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 
@@ -33,7 +29,7 @@ CONFIGURE_ARGS=	--with-python=${PYTHON_CMD} \
 		--with-mxdatetime-includes=${DATETIME_INC}
 
 .if defined(WITH_ZOPE)
-USE_ZOPE=	yes
+USES+=		zope
 PLIST_SUB+=	ZOPE=""
 .else
 PLIST_SUB+=	ZOPE="@comment "
@@ -53,6 +49,7 @@ EXAMPLES=	binary.py bool.py bounded.py commit.py copy_from.py \
 DOCS=		AUTHORS COPYING CREDITS ChangeLog FAQ INSTALL NEWS \
 		README RELEASE-1.0 SUCCESS TODO
 
+NO_STAGE=	yes
 pre-everything::
 .if !defined(WITH_ZOPE)
 	@${ECHO} ""
