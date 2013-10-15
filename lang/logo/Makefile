@@ -1,9 +1,5 @@
-# New ports collection makefile for:	logo
-# Date created:		22 October 1994
-# Whom:			jkh
-#
-# $FreeBSD: lang/logo/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: jkh
+# $FreeBSD: lang/logo/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ucblogo
 PORTVERSION=	5.5
@@ -52,6 +48,7 @@ PLIST_SUB+=	EMACS_LOGO_MODE=""
 PLIST_SUB+=	EMACS_LOGO_MODE="@comment "
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
