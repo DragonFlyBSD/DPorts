@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: devel/rsvndump/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: devel/rsvndump/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rsvndump
 PORTVERSION=	0.5.8
@@ -11,6 +11,7 @@ COMMENT=	Remote Subversion repository dumpfile generator
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
