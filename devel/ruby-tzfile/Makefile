@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/TZFile
-# Date created:		8 June 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/ruby-tzfile/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-tzfile/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tzfile
 PORTVERSION=	0.1
@@ -24,6 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 DOCS=		${RUBY_RD_HTML_FILES}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
