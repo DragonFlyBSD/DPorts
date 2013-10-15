@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: net-mgmt/zabbix2-server/Makefile 325775 2013-08-31 05:33:55Z rm $
+# $FreeBSD: net-mgmt/zabbix2-server/Makefile 328009 2013-09-23 14:26:59Z rm $
 
 PORTNAME=	zabbix2
 PORTVERSION=	2.0.8
@@ -49,7 +49,7 @@ PLIST_SUB+=	SERVER=""
 PLIST_SUB+=	SERVER="@comment "
 .endif
 
-PLIST_SUB+=	ZABBIX_BUILD=${ZABBIX_BUILD}
+PLIST_SUB+=	ZABBIX_BUILD=${ZABBIX_BUILD} PORTVERSION=${PORTVERSION}
 SUB_LIST=	ZABBIX_BUILD=${ZABBIX_BUILD} ZABBIX_REQUIRE=${ZABBIX_REQUIRE}
 
 MAKE_ARGS+=	ARCH=freebsd
@@ -87,11 +87,8 @@ OPTIONS_SINGLE=	DB ODBC
 OPTIONS_SINGLE_DB=	MYSQL PGSQL SQLITE
 OPTIONS_SINGLE_ODBC=	IODBC UNIXODBC
 
-.include <bsd.port.pre.mk>
-
-.if !empty(ICONV_LIB)
-CONFIGURE_ARGS+=	--with-iconv=${LOCALBASE}
-.endif
+NO_STAGE=	yes
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
 ZABBIX_REQUIRE=	" mysql"
@@ -198,4 +195,4 @@ post-install:
 .endif
 .endif # if ${ZABBIX_BUILD} != "frontend"
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
