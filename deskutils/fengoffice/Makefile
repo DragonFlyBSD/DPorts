@@ -1,12 +1,8 @@
-# New ports collection makefile for:	opengoo
-# Date created:		2009-08-19
-# Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/fengoffice/Makefile,v 1.5 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
+# $FreeBSD: deskutils/fengoffice/Makefile 329067 2013-10-02 16:16:37Z acm $
 
 PORTNAME=	fengoffice
-PORTVERSION=	2.0.0
+PORTVERSION=	2.3.2.1
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/opengoo/${PORTNAME}/${PORTNAME}_${PORTVERSION}
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -24,9 +20,14 @@ WANT_PHP_WEB=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST=		${WRKDIR}/pkg-plist
 SUB_FILES=	pkg-message
+EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
 
 FENGOFFICE_DIR=		www/${PORTNAME}
 FENGOFFICE_WWWDIR=	${PREFIX}/${FENGOFFICE_DIR}
+
+NO_STAGE=	yes
+pre-extract:
+	@${MKDIR} ${WRKDIR}/${PORTNAME}
 
 post-extract:
 	@${MKDIR} ${WRKDIR}/${PORTNAME}-docs
