@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake2-xatrix/Makefile 314433 2013-03-17 13:30:38Z danfe $
+# $FreeBSD: games/quake2-xatrix/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xatrix
 PORTVERSION=	3.20
@@ -19,6 +19,7 @@ SUB_FILES=	pkg-message
 PLIST_FILES=	%%Q2DIR%%/${PORTNAME}/game.so
 PLIST_DIRS=	%%Q2DIR%%/${PORTNAME}
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@cd ${WRKDIR} && uncompress -c ${DISTDIR}/${DISTFILES} | \
