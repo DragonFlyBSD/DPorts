@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/cdargs/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/cdargs/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cdargs
 PORTVERSION=	1.35
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 MAN1=		cdargs.1
 PLIST_FILES=	bin/cdargs
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^AM_CXXFLAGS|#AM_CXXFLAGS|' ${WRKSRC}/src/Makefile.in
