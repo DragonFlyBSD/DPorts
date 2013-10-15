@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-clocks/gdesklets-clock/Makefile,v 1.22 2012/12/31 17:20:47 svnexp Exp $
+# $FreeBSD: x11-clocks/gdesklets-clock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	clock
 PORTVERSION=	0.32
@@ -23,6 +23,7 @@ NAME=		Clock
 
 LANG=		de fr pt sq sr sr@Latn sv
 
+NO_STAGE=	yes
 do-build:
 	@${WRKSRC}/Install_${NAME}_Sensor.bin --nomsg ${WRKSRC}
 	@${PATCH} ${WRKSRC}/Clock/__init__.py < ${FILESDIR}/Clock::__init__.py
