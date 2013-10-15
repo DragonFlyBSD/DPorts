@@ -1,9 +1,5 @@
-# New ports collection makefile for:  pcal
-# Date created:               10 June 2001
-# Whom:                       mwest@uct.ac.za
-#
-# $FreeBSD: ports/print/pcal/Makefile,v 1.18 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: mwest@uct.ac.za
+# $FreeBSD: print/pcal/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pcal
 PORTVERSION=	4.11.0
@@ -23,6 +19,7 @@ PORTDOCS=	ReadMe.txt pcal.html pcalw.html
 
 WWWSERVER!=	hostname
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
