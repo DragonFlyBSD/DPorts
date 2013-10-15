@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-salut/Makefile 326113 2013-09-02 22:58:16Z bapt $
+# $FreeBSD: net-im/telepathy-salut/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #   $MCom: ports/net-im/telepathy-salut/Makefile,v 1.9 2012/08/17 19:06:46 kwm Exp $
 
 PORTNAME=	telepathy-salut
@@ -26,6 +26,7 @@ LDFLAGS+=	${PTHREAD_LIBS}
 
 MAN8=		telepathy-salut.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|make -C|${GMAKE} -C|g' \
 		${WRKSRC}/src/Makefile.in \
