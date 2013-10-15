@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-DNS-ZoneFile-Fast/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-Net-DNS-ZoneFile-Fast/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS-ZoneFile-Fast
 PORTVERSION=	1.21
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::DNS::ZoneFile::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
