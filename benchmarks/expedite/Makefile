@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: benchmarks/expedite/Makefile 326373 2013-09-05 09:15:49Z bapt $
+# $FreeBSD: benchmarks/expedite/Makefile 328750 2013-09-29 22:23:02Z gblach $
 
 PORTNAME=	expedite
 PORTVERSION=	1.7.8
