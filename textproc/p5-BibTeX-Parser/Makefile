@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-BibTeX-Parser/Makefile 326225 2013-09-03 20:04:29Z tobez $
+# $FreeBSD: textproc/p5-BibTeX-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	BibTeX-Parser
 PORTVERSION=	0.65
@@ -21,4 +21,5 @@ MAN3=		BibTeX::Parser.3 \
 		BibTeX::Parser::Entry.3 \
 		BibTeX::Parser::Author.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
