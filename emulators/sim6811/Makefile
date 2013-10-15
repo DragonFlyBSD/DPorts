@@ -1,9 +1,5 @@
-# New ports collection makefile for:    6811sim
-# Date created:         Thu Sep 14 11:10:01 CDT 1995
-# Whom:                 erich@rrnet.com
-#
-# $FreeBSD: ports/emulators/sim6811/Makefile,v 1.20 2012/11/17 05:57:23 svnexp Exp $
-#
+# Created by: erich@rrnet.com
+# $FreeBSD: emulators/sim6811/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	sim6811
 PORTVERSION=	1.6
@@ -18,4 +14,5 @@ COMMENT=	A Motorola 6811 simulator
 
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
