@@ -1,5 +1,5 @@
 # Created by: Oyvind Moll <oyvindmo@initio.no>
-# $FreeBSD: ports/audio/juke/Makefile,v 1.17 2013/02/26 11:41:49 svnexp Exp $
+# $FreeBSD: audio/juke/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	juke
 PORTVERSION=	0.7
@@ -11,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple (n)curses based juke box program
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 MAN1=		juke.1
 PLIST_FILES=	bin/juke etc/juke.conf.sample
