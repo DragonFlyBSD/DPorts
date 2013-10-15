@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tileworld
-# Date created:         08. Oct 02
-# Whom:                 sec@42.org
-#
-# $FreeBSD: ports/games/tileworld/Makefile,v 1.14 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: sec@42.org
+# $FreeBSD: games/tileworld/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tileworld
 PORTVERSION=	1.3.0
@@ -23,6 +19,7 @@ DATADIR=	share/tworld
 
 MAN6=		tworld.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|make|$${MAKE}|g; s|cp -i|cp|' ${WRKSRC}/Makefile.in
 
