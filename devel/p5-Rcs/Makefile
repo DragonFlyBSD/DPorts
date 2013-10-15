@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Rcs/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Rcs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Rcs
 PORTVERSION=	1.05
@@ -23,6 +23,7 @@ EXAMPLES=	access.pl ci.pl co-tree.pl co.pl comments.pl \
 		rcsdiff.pl revdate.pl rlog.pl symbols.pl symrev.pl \
 		test1.pl test2.pl test3.pl unlock.pl
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${MKDIR} ${EXAMPLESDIR}/project
