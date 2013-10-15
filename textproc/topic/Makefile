@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/topic/Makefile 324159 2013-08-02 10:33:26Z danfe $
+# $FreeBSD: textproc/topic/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	topic
 PORTVERSION=	1.02
@@ -11,6 +11,7 @@ COMMENT=	Topic markup parser
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 pre-build:
 	@${RM} ${WRKSRC}/topic.txt
 
