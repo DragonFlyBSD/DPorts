@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/rdup/Makefile 323798 2013-07-27 17:08:56Z danfe $
+# $FreeBSD: sysutils/rdup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rdup
 PORTVERSION=	1.1.14
@@ -36,4 +36,5 @@ MAN1=		rdup.1 \
 
 MAN7=		rdup-backups.7
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
