@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ipfm
-# Date Created:				4 Mar 2000
-# Whom:					Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/net-mgmt/ipfm/Makefile,v 1.15 2012/11/17 06:00:33 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: net-mgmt/ipfm/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ipfm
 PORTVERSION=	0.11.5
@@ -20,6 +16,7 @@ CONFIGURE_ARGS=	--localstatedir=/var
 MAN5=		ipfm.conf.5
 MAN8=		ipfm.8
 
+NO_STAGE=	yes
 post-install:
 	@${STRIP_CMD} ${PREFIX}/sbin/ipfm
 
