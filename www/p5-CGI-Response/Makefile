@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CGI-Response
-# Date created:				3 June 2004
-# Whom:					Guy P.
-#
-# $FreeBSD: www/p5-CGI-Response/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Guy P.
+# $FreeBSD: www/p5-CGI-Response/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Response
 PORTVERSION=	0.03
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		CGI::Response.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
