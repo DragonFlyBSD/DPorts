@@ -1,5 +1,5 @@
 # Created by: Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
-# $FreeBSD: games/xpuyopuyo/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: games/xpuyopuyo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xpuyopuyo
 PORTVERSION=	0.9.8
@@ -22,6 +22,7 @@ OPTIONS_DEFINE=	MIKMOD ROTATE_FIXED AIBREED
 ROTATE_FIXED_DESC=	Fix position of one blob during rotation
 AIBREED_DESC=	Allow AI breeding
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMIKMOD} || exists(${LOCALBASE}/lib/libmikmod.a)
