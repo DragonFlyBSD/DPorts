@@ -1,9 +1,5 @@
-# New ports collection makefile for:   elgg
-# Date created:		25 Feberury 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: www/elgg/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/elgg/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	elgg
 PORTVERSION=	1.8.0.1
@@ -23,6 +19,7 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 ELGGDATADIR=	${WWWDIR}data
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
