@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vectoroids
-# Date created:				27 June 2003
-# Whom:					Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/games/vectoroids/Makefile,v 1.18 2012/11/17 05:57:55 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: games/vectoroids/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	vectoroids
 PORTVERSION=	1.1.0
@@ -28,6 +24,7 @@ MAN6=		${PORTNAME}.6
 PORTDATA=	*
 PORTDOCS=	CHANGES.txt README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
