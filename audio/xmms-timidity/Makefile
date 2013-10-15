@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xmms-timidity
-# Date created:		2009-01-05
-# Whom:			Timothy Beyer <beyert@cs.ucr.edu>
-#
-# $FreeBSD: ports/audio/xmms-timidity/Makefile,v 1.3 2012/11/17 05:54:49 svnexp Exp $
+# Created by: Timothy Beyer <beyert@cs.ucr.edu>
+# $FreeBSD: audio/xmms-timidity/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-timidity
 PORTVERSION=	0.0.3
@@ -17,6 +14,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	timidity:${PORTSDIR}/audio/timidity
 
 USE_LDCONFIG=	${PREFIX}/lib/xmms/Input
+NO_STAGE=	yes
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
