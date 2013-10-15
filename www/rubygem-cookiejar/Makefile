@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-cookiejar
-# Date created:		2012-06-10
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-cookiejar/Makefile,v 1.2 2012/11/17 06:03:03 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: www/rubygem-cookiejar/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cookiejar
 PORTVERSION=	0.3.0
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
