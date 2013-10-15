@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-em-socksify/Makefile 321661 2013-06-24 03:07:53Z swills $
+# $FreeBSD: www/rubygem-em-socksify/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	em-socksify
 PORTVERSION=	0.3.0
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
