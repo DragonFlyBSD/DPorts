@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-qtruby/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/ruby-qtruby/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qtruby
 PORTVERSION=	${KDE4_VERSION}
@@ -29,6 +29,7 @@ SUB_FILES=	ruby-kdebindings-env.sh pkg-message
 SUB_LIST+=	RUBY_SITELIBDIR=${RUBY_SITELIBDIR} \
 		RUBY_SITEARCHLIBDIR=${RUBY_SITEARCHLIBDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CMAKE_ARGS+=	-DRUBY_LIBRARY=${LOCALBASE}/lib/lib${RUBY_NAME}.so \
