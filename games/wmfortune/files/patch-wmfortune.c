@@ -1,4 +1,4 @@
-$FreeBSD: ports/games/wmfortune/files/patch-wmfortune.c,v 1.2 2012/11/17 05:57:56 svnexp Exp $
+$FreeBSD: games/wmfortune/files/patch-wmfortune.c 300896 2012-07-14 13:54:48Z beat $
 
 --- wmfortune.c.orig	Thu May 16 11:01:43 2002
 +++ wmfortune.c	Thu May 16 11:02:18 2002

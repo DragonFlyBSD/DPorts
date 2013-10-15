@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmfortune
-# Date created:			16 May 2002
-# Whom:				Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: ports/games/wmfortune/Makefile,v 1.11 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: games/wmfortune/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wmfortune
 PORTVERSION=	0.241
@@ -18,6 +14,7 @@ PLIST_FILES=	bin/wmfortune
 USE_GMAKE=	yes
 USE_XORG=	xpm
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmfortune ${PREFIX}/bin
 
