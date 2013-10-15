@@ -1,5 +1,5 @@
 # Created by: Kalten <kalten@gmx.at>
-# $FreeBSD: games/fairymax/Makefile 320627 2013-06-11 18:46:57Z rakuco $
+# $FreeBSD: games/fairymax/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	fairymax
 PORTVERSION=	4.8S.5
@@ -29,11 +29,12 @@ MAN6=		${PORTNAME}.6
 MLINKS=		${PORTNAME}.6 shamax.6 \
 		${PORTNAME}.6 maxqi.6
 
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USES=		gmake perl5
+USE_PERL5=	build
 MAKE_ARGS+=	INI_F=${DATADIR}/fmax.ini \
 		INI_Q=${DATADIR}/qmax.ini
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
