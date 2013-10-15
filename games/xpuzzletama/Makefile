@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xpuzzletama/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xpuzzletama/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xpuzzletama
 PORTVERSION=	1.5b
@@ -24,6 +24,7 @@ NO_INSTALL_MANPAGES=	yes
 PLIST_FILES=	bin/xpuzzletama lib/X11/xpuzzletama/tama_score
 PLIST_DIRS=	lib/X11/xpuzzletama
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${PREFIX}/lib/X11/xpuzzletama
 	${INSTALL} ${COPY} -o ${SHAREOWN} -g ${SHAREGRP} -m 666 \
