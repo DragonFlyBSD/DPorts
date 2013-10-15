@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/kludge3d/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/kludge3d/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	kludge3d
 PORTVERSION=	20040822
@@ -25,8 +25,9 @@ PLIST_FILES=	bin/kludge3d
 CPPFLAGS+=	-I${LOCALBASE}/include \
 		-I${PYTHON_INCLUDEDIR} ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib \
-		-L${PYTHON_LIBDIR}/config ${PTHREAD_LIBS}
+		-L${PYTHON_LIBDIR}/config -lm ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@EXTRA_CFLAGS@|@CFLAGS@|g ; \
