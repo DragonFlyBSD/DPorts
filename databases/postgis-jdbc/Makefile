@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: ports/databases/postgis-jdbc/Makefile,v 1.21 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/postgis-jdbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	postgis-jdbc
 PORTVERSION=	1.4.0
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/postgis_1.4.0.jar
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${_DISTDIR}postgis_${PORTVERSION}.jar ${JAVAJARDIR}
 
