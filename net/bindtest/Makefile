@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/net/bindtest/Makefile,v 1.5 2013/01/09 20:04:59 svnexp Exp $
+# $FreeBSD: net/bindtest/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bindtest
 PORTVERSION=	1.56
@@ -18,6 +18,7 @@ COMMENT=	Test bind() semantics of IPv6 sockets
 
 MAN1=		bindtest.1
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/bindtest ${PREFIX}/bin/
 		${INSTALL_SCRIPT} ${WRKSRC}/test.sh ${PREFIX}/bin/bindtest.sh
