@@ -1,5 +1,5 @@
 # Created by: Harry Newton
-# $FreeBSD: mail/xmailwatcher/Makefile 321995 2013-06-28 22:06:54Z bapt $
+# $FreeBSD: mail/xmailwatcher/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	xmailwatcher
 PORTVERSION=	1.6
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/xmailwatcher
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 
+NO_STAGE=	yes
 post-install:
 	${STRIP_CMD} ${PREFIX}/bin/xmailwatcher
 
