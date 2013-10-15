@@ -1,5 +1,5 @@
 # Created by: Dean Hollister <dean@odyssey.apana.org.au>
-# $FreeBSD: mail/firepay/Makefile 324709 2013-08-14 12:32:17Z marino $
+# $FreeBSD: mail/firepay/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	firepay
 PORTVERSION=	0.9.5
@@ -19,6 +19,7 @@ MAKE_JOBS_UNSAFE=yes
 MAN1=		checkpayment.1 firepay.1 multiwrap.1 processmail.1 \
 		sendmailpay.1 strippayment.1 takepayment.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
