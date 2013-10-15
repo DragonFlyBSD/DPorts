@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/iceicepenguin/Makefile 323439 2013-07-22 11:35:56Z marino $
+# $FreeBSD: games/iceicepenguin/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	iceicepenguin
 PORTVERSION=	1.5.1
@@ -34,6 +34,7 @@ SUB_FILES=	${PORTNAME}
 DESKTOP_ENTRIES="Ice Ice Penguin" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
