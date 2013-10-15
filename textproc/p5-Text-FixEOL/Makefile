@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Text-FixEOL
-# Date created:				Mar 21 2007
-# Whom:					lth@FreeBSD.org
-#
-# $FreeBSD: textproc/p5-Text-FixEOL/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: lth@FreeBSD.org
+# $FreeBSD: textproc/p5-Text-FixEOL/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-FixEOL
 PORTVERSION=	1.06
@@ -20,4 +16,5 @@ MAN3=		Text::FixEOL.3
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
