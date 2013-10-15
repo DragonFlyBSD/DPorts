@@ -1,8 +1,8 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: security/silktools/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/silktools/Makefile 329919 2013-10-09 18:53:49Z lx $
 
 PORTNAME=	silktools
-PORTVERSION=	2.5.0
+PORTVERSION=	3.7.2
 CATEGORIES=	security net
 MASTER_SITES=	http://tools.netsa.cert.org/releases/ \
 		http://redundancy.redundancy.org/mirror/
@@ -34,10 +34,13 @@ MAN1=	mapsid.1 num2dot.1 rwaddrcount.1 rwappend.1 \
 	rwsetmember.1 rwsettool.1 rwsetunion.1 \
 	rwsort.1 rwsplit.1 rwstats.1 rwswapbytes.1 \
 	rwtotal.1 rwtuc.1 rwuniq.1 rwcompare.1 silk_config.1 \
-	rwidsquery.1 rwipfix2silk.1 rwp2yaf2silk.1 rwsilk2ipfix.1
+	rwidsquery.1 rwipfix2silk.1 rwp2yaf2silk.1 rwsilk2ipfix.1 \
+	rwpmaplookup.1 rwrecgenerator.1 rwsiteinfo.1 rwdpu2silk.1 \
+	rwpdu2silk.1
 
 MAN3=	addrtype.3 ccfilter.3 flowrate.3 pmapfilter.3 pysilk.3 \
-		silk-plugin.3 silkpython.3
+		silk-plugin.3 silkpython.3 int-ext-fields.3 \
+		packlogic-generic.3 packlogic-twoway.3
 
 MAN5=	sensor.conf.5 silk.conf.5
 
@@ -47,6 +50,7 @@ MAN8=	flowcap.8 rwflowappend.8 rwflowpack.8 rwguess.8 \
 		rwpackchecker.8 rwpollexec.8 rwreceiver.8 \
 		rwsender.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
