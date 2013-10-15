@@ -1,5 +1,5 @@
-# Created by:   nemysis@gmx.ch
-# $FreeBSD: ports/multimedia/pymp/Makefile,v 1.3 2013/01/23 15:05:36 svnexp Exp $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: multimedia/pymp/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	pymp
 PORTVERSION=	1.1
@@ -25,6 +25,7 @@ DESKTOP_ENTRIES="Pymp" "MPlayer frontend" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" "AudioVideo;Player;" "false"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
