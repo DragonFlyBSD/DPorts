@@ -1,5 +1,5 @@
 # Created by: Jonathan McGee <mcgee@wam.umd.edu>
-# $FreeBSD: misc/uf-view/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: misc/uf-view/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	uf-view
 PORTVERSION=	2.4
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
