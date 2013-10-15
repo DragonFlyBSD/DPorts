@@ -1,9 +1,5 @@
-# New ports collection makefile for:	psi3
-# Date created:				March 17 2004
-# Whom:					NAKATA Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: ports/science/psi3/Makefile,v 1.28 2013/01/07 14:49:21 svnexp Exp $
-#
+# Created by: NAKATA Maho <maho@FreeBSD.org>
+# $FreeBSD: science/psi3/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	psi3
 PORTVERSION=	3.4.0
@@ -61,6 +57,7 @@ CONFIGURE_ARGS=	--with-cc=${CC} \
 		--with-libdirs="-L${LOCALBASE}/lib" \
 		--with-libs="-lcompat"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_OPTIMIZED_FLAGS)
