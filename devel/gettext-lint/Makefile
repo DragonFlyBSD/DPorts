@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	gettext-lint
-# Date created:			Feb 3, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: devel/gettext-lint/Makefile 316434 2013-04-24 13:36:18Z ak $
-#
+# Created by: ijliao
+# $FreeBSD: devel/gettext-lint/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gettext-lint
 PORTVERSION=	0.4
@@ -27,6 +22,7 @@ MAN1=		POFileChecker.1 POFileClean.1 POFileConsistency.1 \
 		POFileEquiv.1 POFileFill.1 POFileGlossary.1 \
 		POFileSpell.1 POFileStatus.1
 
+NO_STAGE=	yes
 post-patch:
 .for i in POFileChecker POFileClean POFileConsistency POFileEquiv POFileFill \
 	POFileGlossary POFileSpell POFileStatus
