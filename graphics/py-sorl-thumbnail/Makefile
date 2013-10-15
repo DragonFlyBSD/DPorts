@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: graphics/py-sorl-thumbnail/Makefile 318829 2013-05-23 02:35:26Z jgh $
+# $FreeBSD: graphics/py-sorl-thumbnail/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sorl-thumbnail
 PORTVERSION=	3.2.5
@@ -28,6 +28,7 @@ WORD_DESC=	Word Document thumbnail handling
 
 OPTIONS_DEFAULT=	DJANGO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDJANGO}
