@@ -1,5 +1,5 @@
 # Created by: Nicolas de Bari Embriz <nbari@dalmp.com>
-# $FreeBSD: databases/dalmp/Makefile 318115 2013-05-13 15:47:47Z miwi $
+# $FreeBSD: databases/dalmp/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dalmp
 PORTVERSION=	2.1
@@ -18,6 +18,7 @@ DEFAULT_PHP_VER=5
 NO_BUILD=	YES
 USE_PHP=	pcre mysql mysqli session memcache sqlite3 curl
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	@${CP} -R ${WRKSRC}/ ${DATADIR}
