@@ -1,5 +1,5 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: security/tor-devel/Makefile 326474 2013-09-06 07:56:44Z bf $
+# $FreeBSD: security/tor-devel/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tor
 DISTVERSION=	0.2.4.17-rc
@@ -83,6 +83,7 @@ CONFLICTS=	tor-[0-9]*
 MANCOMPRESSED=	no
 MAN1=		tor.1 tor-resolve.1 torify.1 tor-gencert.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGMAKE}
