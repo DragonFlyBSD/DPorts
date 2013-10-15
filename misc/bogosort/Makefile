@@ -1,5 +1,5 @@
 # Created by: roam@orbitel.bg
-# $FreeBSD: misc/bogosort/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: misc/bogosort/Makefile 328332 2013-09-26 03:18:22Z eadler $
 
 PORTNAME=	bogosort
 PORTVERSION=	0.4.2
@@ -17,8 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 GNU_CONFIGURE=	yes
 
-MAN1=		bogosort.1
 INFO=		bogosort
-PLIST_FILES=	bin/bogosort
+PLIST_FILES=	bin/bogosort man/man1/bogosort.1.gz
 
 .include <bsd.port.mk>
