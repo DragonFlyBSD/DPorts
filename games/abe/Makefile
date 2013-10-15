@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/abe/Makefile 325470 2013-08-27 17:13:25Z deischen $
+# $FreeBSD: games/abe/Makefile 328410 2013-09-26 20:08:38Z eadler $
 
 PORTNAME=	abe
 PORTVERSION=	1.1
@@ -7,7 +7,7 @@ PORTREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	nemysis@freebsd.org
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Abe's Amazing Adventure
 
 LICENSE=	GPLv2
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	GOD_MODE OPTIMIZED_CFLAGS
 OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
 GOD_MODE_DESC=	Enable God Mode (toggle with 'g')
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
