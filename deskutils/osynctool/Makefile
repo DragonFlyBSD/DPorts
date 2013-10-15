@@ -1,15 +1,15 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/osynctool/Makefile 319890 2013-06-04 18:14:34Z bdrewery $
+# $FreeBSD: deskutils/osynctool/Makefile 328419 2013-09-26 21:55:12Z danilo $
 
 PORTNAME=	osynctool
 PORTVERSION=	0.39
 CATEGORIES=	deskutils
 MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Command line client for the OpenSync framework
 
-LIB_DEPENDS=	opensync:${PORTSDIR}/devel/libopensync
+LIB_DEPENDS=	libopensync.so:${PORTSDIR}/devel/libopensync
 
 CONFLICTS=	msynctool-0.2*
 
