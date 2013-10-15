@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pstoepsi
-# Date created:		21 Jul 2002
-# Whom:			Mita Yoshio <mita@jp.FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/pstoepsi/Makefile,v 1.16 2012/11/17 05:58:19 svnexp Exp $
-#
+# Created by: Mita Yoshio <mita@jp.FreeBSD.org>
+# $FreeBSD: graphics/pstoepsi/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pstoepsi
 PORTVERSION=	20020711
@@ -22,6 +18,7 @@ RUN_DEPENDS=	pbmtoepsi:${PORTSDIR}/graphics/netpbm
 USE_GHOSTSCRIPT_RUN=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .SILENT:
 
 pre-patch:
