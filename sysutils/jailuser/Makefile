@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan <vaida.bogdan@gmail.com>
-# $FreeBSD: sysutils/jailuser/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: sysutils/jailuser/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	jailuser
 PORTVERSION=	1.9
@@ -23,6 +23,7 @@ PORTDOCS=	CHANGELOG INSTALL README SECURITY VERSION \
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's!/usr/bin/perl!${PERL}!' \
 		-e 's!gcc!$(CC)!' ${WRKSRC}/Makefile
