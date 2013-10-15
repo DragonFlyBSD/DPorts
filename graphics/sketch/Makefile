@@ -1,5 +1,5 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: graphics/sketch/Makefile 319857 2013-06-04 13:36:21Z wg $
+# $FreeBSD: graphics/sketch/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sketch
 PORTVERSION=	0.3.7
@@ -14,12 +14,13 @@ LICENSE=	GPLv3
 
 MAKEFILE=	makefile
 ALL_TARGET=
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USES=		gmake perl5
+USE_PERL5=	build
 USE_DOS2UNIX=	yes
 
 PLIST_FILES=	bin/sketch
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
