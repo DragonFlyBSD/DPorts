@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Geo-Distance-XS/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Geo-Distance-XS/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Geo-Distance-XS
 PORTVERSION=	0.11
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Geo::Distance::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
