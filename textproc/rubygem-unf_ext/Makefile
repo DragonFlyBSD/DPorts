@@ -1,5 +1,5 @@
 # Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-unf_ext/Makefile 319731 2013-06-02 23:39:09Z swills $
+# $FreeBSD: textproc/rubygem-unf_ext/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	unf_ext
 PORTVERSION=	0.0.6
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
