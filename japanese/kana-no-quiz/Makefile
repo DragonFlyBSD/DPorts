@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kana-no-quiz
-# Date created:		2006-04-10
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: japanese/kana-no-quiz/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: japanese/kana-no-quiz/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kana-no-quiz
 DISTVERSION=	1.9
@@ -32,6 +28,7 @@ PYDISTUTILS_PKGNAME=	Kana-no-quiz
 
 WRKSRC=		"${WRKDIR}/Kana no quiz-${DISTVERSION}"
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKSRC} && ${RM} ${RM_OPTS} ${RM_FILES}
 
