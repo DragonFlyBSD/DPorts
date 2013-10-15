@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/zipcodes/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/zipcodes/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	zipcodes
 PORTVERSION=	20130830
@@ -21,6 +21,7 @@ MAKE_ENV=	INSTALL_DATA="${INSTALL_DATA}" SCRIPTDIR=${SCRIPTDIR} PERL=${PERL}
 PORTVERSION_K?=	${PORTVERSION}
 PORTVERSION_J?=	${PORTVERSION}
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${FILESDIR}/Makefile ${WRKDIR}
 
