@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: converters/p5-Boulder/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: converters/p5-Boulder/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Boulder
 PORTVERSION=	1.30
@@ -34,4 +34,5 @@ MAN3=		Boulder.3 \
 		Stone::Cursor.3 \
 		Stone::GB_Sequence.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
