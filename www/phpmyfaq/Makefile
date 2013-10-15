@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan@mail2000.com.tw>
-# $FreeBSD: www/phpmyfaq/Makefile 323665 2013-07-25 20:34:34Z flo $
+# $FreeBSD: www/phpmyfaq/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpmyfaq
 PORTVERSION=	2.8.2
@@ -16,6 +16,7 @@ FAQ_DIR=	attachments data images inc pdf xml
 NO_BUILD=	YES
 WANT_PHP_WEB=	YES
 
+NO_STAGE=	yes
 do-install:
 	-${MKDIR} ${WWWDIR}
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${WWWDIR}
