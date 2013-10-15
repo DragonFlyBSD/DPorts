@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/plover/files/patch-setup.py,v 1.2 2012/11/17 06:02:16 svnexp Exp $
+$FreeBSD: textproc/plover/files/patch-setup.py 306923 2012-11-03 16:42:40Z olgeni $
 
 --- setup.py.orig
 +++ setup.py

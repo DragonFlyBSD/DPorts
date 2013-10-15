@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/plover/Makefile,v 1.3 2013/01/26 15:26:04 svnexp Exp $
+# $FreeBSD: textproc/plover/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	plover
 PORTVERSION=	2.2.0
@@ -21,6 +21,7 @@ USE_WX=		2.8
 WX_COMPS=	wx
 WX_UNICODE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s@%%PREFIX%%@${PREFIX}@g" ${WRKSRC}/setup.py
 
