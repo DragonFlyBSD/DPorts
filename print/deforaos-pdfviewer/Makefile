@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: print/deforaos-pdfviewer/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: print/deforaos-pdfviewer/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pdfviewer
 PORTVERSION=	0.0.1
@@ -23,4 +23,5 @@ USE_GNOME=	gtk20 desktopfileutils
 PLIST_FILES=	bin/pdfviewer \
 		share/applications/pdfviewer.desktop
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
