@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Data-ObjectDriver/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Data-ObjectDriver/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-ObjectDriver
 PORTVERSION=	0.09
@@ -37,4 +37,5 @@ MAN3=		Data::ObjectDriver.3 Data::ObjectDriver::BaseObject.3 \
 		Data::ObjectDriver::SQL.3 \
 		Data::ObjectDriver::SQL::Oracle.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
