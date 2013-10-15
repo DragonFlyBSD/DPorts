@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-jruby-rack/Makefile 322018 2013-06-29 01:46:11Z swills $
+# $FreeBSD: www/rubygem-jruby-rack/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jruby-rack
 PORTVERSION=	1.1.13.2
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
