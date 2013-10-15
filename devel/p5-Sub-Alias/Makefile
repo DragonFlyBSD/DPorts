@@ -1,5 +1,5 @@
 # Created by: Peter Vereshagin <peter@vereshagin.org>
-# $FreeBSD: devel/p5-Sub-Alias/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-Sub-Alias/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sub-Alias
 PORTVERSION=	0.03
@@ -24,4 +24,5 @@ LICENSE=	MIT
 
 MAN3=		Sub::Alias.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
