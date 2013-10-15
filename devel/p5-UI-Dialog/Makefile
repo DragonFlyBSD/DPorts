@@ -1,5 +1,5 @@
 # Created by: Dmitry Karasik <dmitry@karasik.eu.org>
-# $FreeBSD: devel/p5-UI-Dialog/Makefile 327163 2013-09-13 15:42:03Z sunpoet $
+# $FreeBSD: devel/p5-UI-Dialog/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	UI-Dialog
 PORTVERSION=	1.09
@@ -40,6 +40,7 @@ MAN3=		UI::Dialog.3 \
 		UI::Dialog::KDE.3 \
 		UI::Dialog::Screen::Menu.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKDE}
