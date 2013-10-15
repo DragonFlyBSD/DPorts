@@ -1,9 +1,5 @@
-# Ports collection makefile for:  thcrut
-# Date created:			  23 Aug 2001
-# Whom:				  Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/net/thcrut/Makefile,v 1.11 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: net/thcrut/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	thcrut
 PORTVERSION=	1.2.5
