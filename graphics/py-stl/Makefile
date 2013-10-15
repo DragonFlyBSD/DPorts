@@ -1,5 +1,5 @@
 # Created by: Roland Smith <rsmith@xs4all.nl>
-# $FreeBSD: ports/graphics/py-stl/Makefile,v 1.3 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/py-stl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=		stl
 PORTVERSION=		3.1
@@ -28,6 +28,7 @@ MAN1=			stl2ps.1 stlinfo.1 stl2pov.1
 OPTIONS_DEFINE=		PYCAIRO
 PYCAIRO_DESC=		Use (py)Cairo to enable stl2pdf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 STL_SCRIPTS=		stl2pov stl2ps stlinfo
