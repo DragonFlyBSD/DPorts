@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: security/opensaml2/Makefile 325939 2013-09-02 06:20:09Z bapt $
+# $FreeBSD: security/opensaml2/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	opensaml2
 PORTVERSION=	2.5.3
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=--with-log4shib=${LOCALBASE} --with-openssl=${OPENSSLBASE} \
 USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^pkgdocdir.*=.*,pkgdocdir = ${DOCSDIR},' \
 		${WRKSRC}/doc/Makefile.in
