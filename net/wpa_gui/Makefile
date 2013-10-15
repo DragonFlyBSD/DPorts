@@ -1,5 +1,5 @@
 # Created by: Ilya Bakulin <webmaster@kibab.com>
-# $FreeBSD: net/wpa_gui/Makefile 323946 2013-07-30 07:40:14Z jgh $
+# $FreeBSD: net/wpa_gui/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	wpa_gui
 PORTVERSION=	0.7.3
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/wpa_supplicant/wpa_gui-qt4
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 HAS_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|Exec=wpa_gui|Exec=${PREFIX}/sbin/wpa_gui|" \
 	    ${WRKSRC}/wpa_gui.desktop
