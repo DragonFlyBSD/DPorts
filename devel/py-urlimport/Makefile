@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-urlimport
-# Date created:		2006-12-31
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/devel/py-urlimport/Makefile,v 1.3 2012/11/17 05:56:51 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: devel/py-urlimport/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	urlimport
 PORTVERSION=	0.42b
@@ -24,6 +20,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/urlimport.py \
 		%%PYTHON_SITELIBDIR%%/urlimport.pyc \
 		%%PYTHON_SITELIBDIR%%/urlimport.pyo
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${CP} ${DISTDIR}/${DISTFILES} ${WRKDIR}/${PORTNAME}.py
