@@ -1,9 +1,5 @@
-# New ports collection makefile for:	forecastfox
-# Date created:		2006-05-15
-# Whom:			Simon Olofsson <simon@olofsson.de>
-#
-# $FreeBSD: ports/www/xpi-forecastfox/Makefile,v 1.14 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Simon Olofsson <simon@olofsson.de>
+# $FreeBSD: www/xpi-forecastfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	forecastfox
 PORTVERSION=	2.2.1
@@ -19,5 +15,6 @@ XPI_NUM=	398
 XPI_FILES=	chrome/forecastfox.jar chrome.manifest icon.png install.rdf
 XPI_DIRS=	chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
