@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-IOC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-IOC/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-IOC
 PORTVERSION=	0.03
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		MooseX::IOC.3 MooseX::IOC::Meta::Attribute.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
