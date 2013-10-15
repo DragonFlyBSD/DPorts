@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dc20ctrl
-# Date created:		17 Feb 1998
-# Whom:			Ugo Paternostro <paterno@dsi.unifi.it>
-#
-# $FreeBSD: ports/graphics/dc20ctrl/Makefile,v 1.24 2012/11/17 05:58:03 svnexp Exp $
-#
+# Created by: Ugo Paternostro <paterno@dsi.unifi.it>
+# $FreeBSD: graphics/dc20ctrl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	dc20ctrl
 PORTVERSION=	0.4
@@ -23,6 +19,7 @@ MAKE_ARGS=	-DUSE_JPEG -DUSE_TIFF -DUSE_PNG
 MAN1=		dc20ctrl.1
 PLIST_FILES=	bin/dc20ctrl
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} -g dialer -m 02755 ${WRKSRC}/dc20ctrl ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/dc20ctrl.man ${MANPREFIX}/man/man1/dc20ctrl.1
