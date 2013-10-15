@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: audio/jack-rack/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: audio/jack-rack/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	jack-rack
 PORTVERSION=	1.4.7
@@ -16,6 +16,7 @@ LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
 RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_GNOME=	libgnomeui libxml2
 USES=		gettext shebangfix pkgconfig
 USE_PYTHON=	yes
