@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/ksmp3play/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: audio/ksmp3play/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ksmp3play
 PORTVERSION=	0.5.2.1
@@ -14,6 +14,7 @@ LIB_DEPENDS=	smpeg:${PORTSDIR}/multimedia/smpeg
 
 GNU_CONFIGURE=	yes
 USES=	pathfix
+NO_STAGE=	yes
 USE_SDL=	sdl
 NO_WRKSUBDIR=	yes
 
