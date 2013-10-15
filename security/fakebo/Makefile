@@ -1,6 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: security/fakebo/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: security/fakebo/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fakebo
 PORTVERSION=	0.4.2.1
@@ -22,6 +21,7 @@ MAN1=		fakebo.1
 PORTDOCS=	README custom.replies
 PLIST_FILES=	bin/fakebo etc/fakebo.conf.sample
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type l -delete
 
