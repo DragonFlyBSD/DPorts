@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	cvsps
-# Date Created:			Feb 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/cvsps-devel/Makefile,v 1.13 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/cvsps-devel/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsps
 DISTVERSION=	2.2b1
@@ -27,6 +22,7 @@ PLIST_FILES=	bin/cvsps
 PORTDOCS=	README
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cvsps ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cvsps.1 ${MANPREFIX}/man/man1
