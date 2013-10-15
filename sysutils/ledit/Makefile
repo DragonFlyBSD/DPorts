@@ -1,5 +1,5 @@
 # Created by: Marwan Burelle <marwan.burelle@lri.fr>
-# $FreeBSD: sysutils/ledit/Makefile 319209 2013-05-27 11:14:56Z bsam $
+# $FreeBSD: sysutils/ledit/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ledit
 PORTVERSION=	2.03
@@ -28,6 +28,7 @@ MAN1=		ledit.1
 PORTDOCS=	CHANGES LICENSE README
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 do-configure:
 	${REINPLACE_CMD} -e '/^BINDIR=/s;/usr/local;${PREFIX};' \
 			-e '/^LIBDIR=/s;/usr/local;${PREFIX};' \
