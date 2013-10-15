@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/stymulator/Makefile 317642 2013-05-08 08:03:22Z ehaupt $
+# $FreeBSD: audio/stymulator/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	stymulator
 DISTVERSION=	0.21a
@@ -14,6 +14,7 @@ COMMENT=	Command-line Yamaha YM2149 (.ym) chiptune player
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 USE_DOS2UNIX=	yes
 MAKE_JOBS_UNSAFE=	yes
 
