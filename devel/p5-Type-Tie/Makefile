@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Type-Tie/Makefile 326748 2013-09-08 15:43:07Z sunpoet $
+# $FreeBSD: devel/p5-Type-Tie/Makefile 329419 2013-10-05 06:06:08Z sunpoet $
 
 PORTNAME=	Type-Tie
-PORTVERSION=	0.004
+PORTVERSION=	0.006
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOBYINK
@@ -14,16 +14,15 @@ COMMENT=	Tie a variable to a type constraint
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Hash-FieldHash>=0:${PORTSDIR}/devel/p5-Hash-FieldHash \
-		p5-Type-Tiny>=0.004:${PORTSDIR}/devel/p5-Type-Tiny
+BUILD_DEPENDS=	p5-Exporter-Tiny>=0.026:${PORTSDIR}/devel/p5-Exporter-Tiny \
+		p5-Hash-FieldHash>=0:${PORTSDIR}/devel/p5-Hash-FieldHash
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-MooseX-Types>=0:${PORTSDIR}/devel/p5-MooseX-Types \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
-		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
+		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
+		p5-Type-Tiny>=0.004:${PORTSDIR}/devel/p5-Type-Tiny
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Type::Tie.3
 
 .include <bsd.port.mk>
