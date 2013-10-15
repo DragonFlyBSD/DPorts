@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/zaz/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: games/zaz/Makefile 329260 2013-10-04 02:15:48Z amdmi3 $
 
 PORTNAME=	zaz
 PORTVERSION=	1.0.0
@@ -10,10 +10,10 @@ MASTER_SITES=	SF/${PORTNAME}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A puzzle game where the player has to arrange balls in triplets
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
-		theora:${PORTSDIR}/multimedia/libtheora \
-		vorbis:${PORTSDIR}/audio/libvorbis \
-		ftgl:${PORTSDIR}/graphics/ftgl
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libtheora.so:${PORTSDIR}/multimedia/libtheora \
+		libvorbis.so:${PORTSDIR}/audio/libvorbis \
+		libftgl.so:${PORTSDIR}/graphics/ftgl
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
@@ -26,6 +26,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CONFIGURE_ARGS=	--with-icondir="${PREFIX}/share/pixmaps"
 
 PORTDOCS=	*
+PORTDATA=	*
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
@@ -41,9 +44,5 @@ PLIST_SUB+=	NLS="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e '/^zazdocdir =/ s|$${prefix}/doc|$${prefix}/share/doc|' \
 		${WRKSRC}/Makefile.in
-.if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e '/^install-data-am:/ s|install-dist_docDATA||' \
-		${WRKSRC}/Makefile.in
-.endif
 
 .include <bsd.port.mk>
