@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@marcuscom.com>
-# $FreeBSD: palm/gnome-pilot/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: palm/gnome-pilot/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	gnome-pilot
 PORTVERSION=	2.0.17
@@ -28,4 +28,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 MAN1=		gpilot-install-file.1
 GCONF_SCHEMAS=	pilot.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
