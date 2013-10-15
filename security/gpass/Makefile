@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: security/gpass/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: security/gpass/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gpass
 PORTVERSION=	0.5.1
@@ -22,6 +22,7 @@ USES=        pathfix gmake pkgconfig
 USE_GNOME=	gnomeprefix gtk20 libgnomeui intltool libglade2
 GCONF_SCHEMAS=	gpass.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|{packageprefix}/share|{datadir}|g' \
 		${WRKSRC}/configure
