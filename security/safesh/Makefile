@@ -1,11 +1,5 @@
-# New ports collection makefile for:		safesh
-# Date created:					26 January 2002
-# Whom:						eivind
-#
-# $FreeBSD: ports/security/safesh/Makefile,v 1.10 2012/11/17 06:01:19 svnexp Exp $
-#
-# This port is self contained in the src directory.
-#
+# Created by: eivind
+# $FreeBSD: security/safesh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	safesh
 PORTVERSION=	1.5
@@ -25,6 +19,7 @@ SRC=		${.CURDIR}/src
 # contact me.
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
