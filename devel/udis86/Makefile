@@ -1,5 +1,5 @@
 # Created by: Lutz Boehne <lboehne@damogran.de>
-# $FreeBSD: devel/udis86/Makefile 326500 2013-09-06 14:10:36Z bf $
+# $FreeBSD: devel/udis86/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	udis86
 PORTVERSION=	1.7.2
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--without-sphinx-build  --enable-shared
 INFO=		udis86
 PORTDOCS=	x86
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
