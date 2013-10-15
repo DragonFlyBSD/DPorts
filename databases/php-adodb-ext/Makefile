@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php-adodb-ext
-# Date created:		29 July 2008
-# Whom:			JoeHorn <joehorn@gmail.com>
-#
-# $FreeBSD: ports/databases/php-adodb-ext/Makefile,v 1.6 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: JoeHorn <joehorn@gmail.com>
+# $FreeBSD: databases/php-adodb-ext/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	adodb-ext
 PORTVERSION=	5.04
@@ -29,6 +25,7 @@ SUB_FILES=	pkg-message
 PLIST_SUB=	PHP_EXT_DIR=${PHP_EXT_DIR}
 USE_DOS2UNIX=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PHP_VER} == "5"
