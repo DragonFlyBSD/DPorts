@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fmars
-# Date created:				16 Jul 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/fmars/Makefile,v 1.9 2012/11/17 05:57:38 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/fmars/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	fmars
 PORTVERSION=	0.0.207
@@ -26,6 +22,7 @@ ALL_TARGET=	x${PORTNAME}
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS DOCS
 OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
