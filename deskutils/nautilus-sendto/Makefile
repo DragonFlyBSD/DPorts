@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/nautilus-sendto/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: deskutils/nautilus-sendto/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.30 2010/09/30 06:21:18 kwm Exp $
 
 PORTNAME=	nautilus-sendto
@@ -28,6 +28,7 @@ UPNP_DESC=	Build upnp sendto plugin
 # check configure script for allowed_plugins="..." for new plugins
 SENDTO_PLUGINS=	evolution gajim nautilus-burn removable-devices
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPIDGIN}
