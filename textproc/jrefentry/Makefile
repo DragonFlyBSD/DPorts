@@ -1,9 +1,5 @@
-# New ports collection makefile for:   jrefentry
-# Date created:                1 February 2002
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/textproc/jrefentry/Makefile,v 1.8 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: textproc/jrefentry/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jrefentry
 PORTVERSION=	1.1
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 
 XMLDIR=		${PREFIX}/share/xml/docbook/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${XMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/jrefentry.dtd ${XMLDIR}
