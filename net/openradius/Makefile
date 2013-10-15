@@ -1,5 +1,5 @@
 # Created by: Adam Jette <jettea46@yahoo.com>
-# $FreeBSD: net/openradius/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: net/openradius/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	openradius
 PORTVERSION=	0.9.12c
@@ -28,6 +28,7 @@ SUB_LIST=	LOGFILE="${LOGFILE}"
 
 OPTIONS_DEFINE=	LDAP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
