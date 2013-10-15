@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libcyrillic
-# Date created:				8 December 2003
-# Whom:					Pavel Novikov
-#
-# $FreeBSD: ports/russian/libcyrillic/Makefile,v 1.5 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Pavel Novikov
+# $FreeBSD: russian/libcyrillic/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	libcyrillic
 PORTVERSION=	1.9
@@ -23,4 +19,5 @@ USE_LDCONFIG=	yes
 CFLAGS+=	-O2
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
