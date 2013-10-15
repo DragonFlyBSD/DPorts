@@ -1,5 +1,5 @@
 # Created by: Josh Elsasser <jre@vineyard.net>
-# $FreeBSD: net-p2p/gtkhx/Makefile 317039 2013-05-01 18:18:44Z jgh $
+# $FreeBSD: net-p2p/gtkhx/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	gtkhx
 PORTVERSION=	0.9.4
@@ -19,6 +19,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gtkhx.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
