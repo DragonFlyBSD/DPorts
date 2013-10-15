@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: x11-toolkits/hs-gtk2hs/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11-toolkits/hs-gtk2hs/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtk2hs
 PORTVERSION=	0.12.4
@@ -25,6 +25,7 @@ VTE_DESC=		Terminal emulator
 WEBKIT_DESC=		WebKit rendering engine
 SOEGTK_DESC=		Examples for Haskell SoE
 
+NO_STAGE=	yes
 .include "../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MGCONF}
