@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-libtre
-# Date created:				6 June 2007
-# Whom:					bf <bf2006a@yahoo.com>
-#
-# $FreeBSD: ports/textproc/py-libtre/Makefile,v 1.7 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: bf <bf2006a@yahoo.com>
+# $FreeBSD: textproc/py-libtre/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libtre
 PORTVERSION=	0.8.0
@@ -38,4 +34,5 @@ CFLAGS+=	-Wuninitialized -ffast-math -finline-functions \
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/tre.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
