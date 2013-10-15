@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gotthard
-# Date created:				11 Feb 2006
-# Whom:					Anton Karpov <toxa@toxahost.ru>
-#
-# $FreeBSD: ports/net/gotthard/Makefile,v 1.3 2012/11/17 06:00:01 svnexp Exp $
-#
+# Created by: Anton Karpov <toxa@toxahost.ru>
+# $FreeBSD: net/gotthard/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gotthard
 PORTVERSION=	1.3
@@ -15,6 +11,7 @@ COMMENT=	Ssh through https proxy tunnel
 
 MAN8=		gotthard.8
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gotthard ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/gotthard.8 ${PREFIX}/man/man8
