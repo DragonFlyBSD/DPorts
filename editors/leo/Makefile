@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <ports@geeksrus.net>
-# $FreeBSD: editors/leo/Makefile 320619 2013-06-11 18:22:13Z rm $
+# $FreeBSD: editors/leo/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	leo
 PORTVERSION=	4.10
@@ -32,6 +32,7 @@ USE_PYTHON=	yes
 
 LEO_DIR=	${PYTHONPREFIX_SITELIBDIR}/leo
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYENCHANT}
