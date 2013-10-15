@@ -1,5 +1,5 @@
 # Created by: Niek Bergboer <niek@bergboer.net>
-# $FreeBSD: misc/birthday/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/birthday/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	birthday
 PORTVERSION=	1.5
@@ -18,6 +18,7 @@ MAKEFILE=	${WRKSRC}/Makefile.gnu
 ALL_TARGET=	birthday
 MAKE_ARGS=	CFLAGS="${CFLAGS} -DUNIX"
 
+NO_STAGE=	yes
 do-configure:
 		cd ${WRKSRC} && ${MAKE} Makefile.gnu
 
