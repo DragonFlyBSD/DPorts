@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/www/phpwebapp/Makefile,v 1.6 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/phpwebapp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpwebapp
 PORTVERSION=	1.2
@@ -14,6 +14,7 @@ WANT_PHP_WEB=	yes
 NO_BUILD=	yes
 PHPWEBAPP?=	${PREFIX}/www/data/web_app
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} -p ${PREFIX}/www/data
 	${CP} -R ${WRKSRC}/web_app/ ${PHPWEBAPP}
