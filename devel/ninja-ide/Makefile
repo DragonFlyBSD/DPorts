@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/ninja-ide/Makefile 323003 2013-07-14 20:52:10Z nivit $
+# $FreeBSD: devel/ninja-ide/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ninja-ide
 PORTVERSION=	2.3
@@ -30,4 +30,5 @@ GH_ACCOUNT=	ninja-ide
 GH_COMMIT=	85027df
 GH_TAGNAME=	v${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
