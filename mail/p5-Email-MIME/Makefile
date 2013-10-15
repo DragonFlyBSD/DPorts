@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-MIME/Makefile 325799 2013-08-31 11:50:49Z lth $
+# $FreeBSD: mail/p5-Email-MIME/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-MIME
 PORTVERSION=	1.924
@@ -25,4 +25,5 @@ MAN3=		Email::MIME.3 \
 		Email::MIME::Header.3 \
 		Email::MIME::Modifier.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
