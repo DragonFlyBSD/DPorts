@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: comms/tkhylafax/Makefile 321399 2013-06-20 16:23:22Z bsam $
+# $FreeBSD: comms/tkhylafax/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	tkhylafax
 PORTVERSION=	3.2b
@@ -20,4 +20,5 @@ USE_TK_RUN=	84
 WRKSRC=		${WRKDIR}/tkhylafax
 MAN1=		tkhylafax.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
