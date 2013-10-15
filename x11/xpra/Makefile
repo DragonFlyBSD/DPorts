@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: x11/xpra/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: x11/xpra/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xpra
 PORTVERSION=	0.8.8
@@ -32,4 +32,5 @@ USE_XORG=	x11 xext xtst xfixes xcomposite xdamage
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	parti_all
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
