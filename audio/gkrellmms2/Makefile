@@ -1,11 +1,12 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: audio/gkrellmms2/Makefile 326709 2013-09-08 08:27:08Z antoine $
+# $FreeBSD: audio/gkrellmms2/Makefile 330177 2013-10-12 19:05:09Z ume $
 
 PORTNAME=	gkrellmms
 PORTVERSION=	2.1.22
 PORTREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
+PKGNAMESUFFIX=	2
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	GKrellM XMMS Plugin
@@ -13,7 +14,6 @@ COMMENT=	GKrellM XMMS Plugin
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
-LATEST_LINK=	gkrellmms2
 WRKSRC=		${WRKDIR}/gkrellmms
 
 PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmms.so \
@@ -33,15 +33,12 @@ OPTIONS_SINGLE=		PLAYER
 OPTIONS_SINGLE_PLAYER=	BMP XMMS
 OPTIONS_DEFAULT=	XMMS
 BMP_DESC=		Use Beep Media Player
+BMP_LIB_DEPENDS=	libbeep.so:${PORTSDIR}/multimedia/beep-media-player
+BMP_MAKE_ENV=		USE_BMP=yes
 XMMS_DESC=		Use XMMS
+XMMS_LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MBMP}
-LIB_DEPENDS=	beep.2:${PORTSDIR}/multimedia/beep-media-player
-MAKE_ENV+=	USE_BMP=yes
-.elif ${PORT_OPTIONS:MXMMS}
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
-.endif
+pre-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins
 
 .include <bsd.port.mk>
