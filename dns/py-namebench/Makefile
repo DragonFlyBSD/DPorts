@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-namebench
-# Date created:				04 December 2009
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: ports/dns/py-namebench/Makefile,v 1.8 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: dns/py-namebench/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	namebench
 PORTVERSION=	1.3.1
@@ -25,6 +21,7 @@ RUN_DEPENDS+=	\
 	${PYTHON_PKGNAMEPREFIX}httplib2>=0.6.0:${PORTSDIR}/www/py-httplib2 \
 	${PYTHON_PKGNAMEPREFIX}simplejson>=2.1.6:${PORTSDIR}/devel/py-simplejson
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MX11)
