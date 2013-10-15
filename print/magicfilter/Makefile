@@ -1,9 +1,5 @@
-# New ports collection makefile for:	magicfilter
-# Date created:		24 Mar 1999
-# Whom:			CHOI Junho <cjh@FreeBSD.org>
-#
-# $FreeBSD: ports/print/magicfilter/Makefile,v 1.26 2012/11/17 06:00:52 svnexp Exp $
-#
+# Created by: CHOI Junho <cjh@FreeBSD.org>
+# $FreeBSD: print/magicfilter/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	magicfilter
 PORTVERSION=	2.3.h
@@ -26,6 +22,7 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 MAN5=		magicfilter.5
 MAN8=		magicfilter.8
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libmagic.so)
