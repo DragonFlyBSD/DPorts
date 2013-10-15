@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: benchmarks/wrk/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/wrk/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	wrk
 PORTVERSION=	2.2.2
@@ -20,6 +20,7 @@ CFLAGS+=	-std=c99 -D_DECLARE_C99_LDBL_MATH
 
 PLIST_FILES=	bin/wrk
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800000
