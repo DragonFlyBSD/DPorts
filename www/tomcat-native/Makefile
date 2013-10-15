@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/tomcat-native/Makefile 322372 2013-07-06 09:04:54Z ohauer $
+# $FreeBSD: www/tomcat-native/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tomcat-native
 PORTVERSION=	1.1.27
@@ -35,6 +35,7 @@ PLIST_FILES=	lib/libtcnative-1.a \
 		lib/libtcnative-1.so \
 		lib/libtcnative-1.so.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOCSP}
