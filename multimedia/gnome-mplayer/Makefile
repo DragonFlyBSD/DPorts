@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: multimedia/gnome-mplayer/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: multimedia/gnome-mplayer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gnome-mplayer
 PORTVERSION=	1.0.8
@@ -34,6 +34,7 @@ MAN1=		${PORTNAME}.1
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README \
 		dbus.txt keyboard_shortcuts.txt plugin-interaction.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALSA}
