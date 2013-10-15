@@ -1,9 +1,5 @@
-# New ports collection makefile for:	uplog
-# Date created:				16.06.2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/net/uplog/Makefile,v 1.17 2012/11/17 06:00:24 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: net/uplog/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	uplog
 PORTVERSION=	0.3
@@ -20,6 +16,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 PORTDOCS=	README
 PLIST_FILES=	bin/uplog
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e \
 	's|#include <malloc.h>||g' \
