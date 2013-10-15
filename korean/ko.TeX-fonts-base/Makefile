@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ko.TeX-fonts-base
-# Date created: 			7 January 2008
-# Whom:					Hyogeol Lee <hyogeollee@gmail.com>
-#
-# $FreeBSD: korean/ko.TeX-fonts-base/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Hyogeol Lee <hyogeollee@gmail.com>
+# $FreeBSD: korean/ko.TeX-fonts-base/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	ko.TeX-fonts-base
 PORTVERSION=	0.1.0.20070927
@@ -32,6 +28,7 @@ PLIST_SUB+=	MKTEXLSR=${MKTEXLSR} \
 		UPDMAP_SYS=${UPDMAP_SYS}
 DOCS=		COPYING LICENSE MANIFEST
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
