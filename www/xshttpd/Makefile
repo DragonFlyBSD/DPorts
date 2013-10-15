@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: www/xshttpd/Makefile 324345 2013-08-07 10:53:31Z danfe $
+# $FreeBSD: www/xshttpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xshttpd
 DISTVERSION=	3.6g01
@@ -35,6 +35,7 @@ PERSISTENT_PERL_DESC=	Enable persistent Perl interpreter
 
 PORTDOCS=	README ChangeLog
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # By default XS-HTTPD stores its data in ${PREFIX}/lib/httpd
@@ -63,7 +64,7 @@ CONFIGURE_ARGS+=--without-preprocessor
 .endif
 
 .if ${PORT_OPTIONS:MPERSISTENT_PERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=--with-perl
 .else
 CONFIGURE_ARGS+=--without-perl
