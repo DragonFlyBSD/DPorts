@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-PF
-# Date created:		2009-02-07
-# Whom:			Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/security/py-PF/Makefile,v 1.10 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: security/py-PF/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	PF
 PORTVERSION=	0.0.6
@@ -25,6 +21,7 @@ PYDISTUTILS_PKGNAME=	${PYTHON_PKGNAMEPREFIX:C/[0-9]+//}_${PORTNAME}
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 .if !defined(BATCH)
 	@${CAT} ${PKGMESSAGE}
