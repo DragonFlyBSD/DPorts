@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_proxy_xml/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_proxy_xml/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_proxy_xml
 PORTVERSION=	0.1
@@ -23,6 +23,7 @@ AP_GENPLIST=	yes
 AP_INC=	${LOCALBASE}/include/libxml2
 AP_LIB=	${LOCALBASE}/lib -lxml2
 
+NO_STAGE=	yes
 pre-extract:
 	@${MKDIR} ${WRKDIR}
 
