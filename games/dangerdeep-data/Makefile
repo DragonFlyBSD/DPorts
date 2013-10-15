@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dangerdeep-data
-# Date created:		2006-10-12
-# Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-#
-# $FreeBSD: ports/games/dangerdeep-data/Makefile,v 1.4 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
+# $FreeBSD: games/dangerdeep-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	0.3.0
@@ -23,6 +19,7 @@ DATADIR=	share/${PKGNAMEPREFIX:S/-//}
 PLIST=		${WRKDIR}/pkg-plist
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 pre-install:
 	@${RM} -f ${PLIST}
 	@cd ${WRKSRC} && \
