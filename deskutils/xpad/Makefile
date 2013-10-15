@@ -1,5 +1,5 @@
 # Created by: Guillaume Paquet <amyfoub@gmail.com>
-# $FreeBSD: deskutils/xpad/Makefile 322360 2013-07-06 01:22:56Z jgh $
+# $FreeBSD: deskutils/xpad/Makefile 328257 2013-09-25 06:44:35Z jgh $
 
 PORTNAME=	xpad
 PORTVERSION=	3.1
@@ -24,8 +24,6 @@ USES=	pkgconfig gmake
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 
-MAN1=		xpad.1
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -37,8 +35,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
-
-MAN1+=		xpad.1
 
 post-patch-script:
 .if ! ${PORT_OPTIONS:MNLS}
