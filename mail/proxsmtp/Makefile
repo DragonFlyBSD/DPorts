@@ -1,5 +1,5 @@
 # Created by: Dario Freni <saturnero@gufi.org>
-# $FreeBSD: mail/proxsmtp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/proxsmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	proxsmtp
 PORTVERSION=	1.10
@@ -22,6 +22,7 @@ MAN8=		proxsmtpd.8
 
 PORTDOCS=	ChangeLog NEWS README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^acx_pthread_flags/s|=.*|="${PTHREAD_LIBS}"|' \
