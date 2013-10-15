@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: www/horde3-meta/Makefile 323405 2013-07-21 17:19:25Z marino $
+# $FreeBSD: www/horde3-meta/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	meta
 PORTVERSION=	1.0
@@ -37,6 +37,7 @@ VACATION_DESC=	Vacation & Auto Respond
 WHUPS_DESC=	Bug Tracking/Ticket System
 KLUTZ_DESC=	Comic Strip Viewer
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 RUN_DEPENDS+=	${LOCALBASE}/${LHORDEDIR}/base/rpc.php:${PORTSDIR}/www/horde3-base
