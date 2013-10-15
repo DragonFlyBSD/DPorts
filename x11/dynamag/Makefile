@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11/dynamag/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/dynamag/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	dynamag
 PORTVERSION=	1.1
@@ -19,6 +19,7 @@ USES=		imake
 USE_XORG=	x11 xaw xext xmu xt xpm sm ice
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/dynamag ${PREFIX}/bin
 
