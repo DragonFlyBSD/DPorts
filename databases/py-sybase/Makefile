@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-sybase
-# Date created:				21 November 2002
-# Whom:					Gregory Bond <gnb@itga.com.au>
-#
-# $FreeBSD: ports/databases/py-sybase/Makefile,v 1.8 2012/11/17 05:55:23 svnexp Exp $
+# Created by: Gregory Bond <gnb@itga.com.au>
+# $FreeBSD: databases/py-sybase/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sybase
 PORTVERSION=	0.37
@@ -23,6 +20,7 @@ USE_PYDISTUTILS=	yes
 .if defined(TDS_VERSION)
 TDS_SUF="=${TDS_VERSION}"
 .else
+NO_STAGE=	yes
 pre-fetch:
 	@V=`${PKG_INFO} | sed -ne 's/^freetds-0.\(..\).*/\1/p'` ; \
 	if [ $$V -le 60 ]; then \
