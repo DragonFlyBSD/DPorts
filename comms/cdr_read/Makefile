@@ -1,5 +1,5 @@
 # Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-# $FreeBSD: comms/cdr_read/Makefile 321395 2013-06-20 15:36:14Z bsam $
+# $FreeBSD: comms/cdr_read/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	cdr_read
 PORTVERSION=	1.09
@@ -19,6 +19,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
