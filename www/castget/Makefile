@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/castget/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: www/castget/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	castget
 PORTVERSION=	1.0.1
@@ -25,4 +25,5 @@ PLIST_FILES=	bin/castget include/libcastget.h lib/libcastget.la lib/libcastget.s
 MAN1=	castget.1
 MAN5=	castgetrc.5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
