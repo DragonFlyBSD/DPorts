@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: graphics/pqiv/Makefile 327112 2013-09-12 21:46:30Z marino $
+# $FreeBSD: graphics/pqiv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pqiv
 PORTVERSION=	0.12
@@ -40,6 +40,7 @@ PLIST_FILES=	bin/pqiv
 CPPFLAGS+=	`pkg-config --cflags gtk+-2.0 gthread-2.0`
 LDFLAGS+=	`pkg-config --libs gtk+-2.0 gthread-2.0`
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MSORTING)
