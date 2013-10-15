@@ -1,5 +1,5 @@
 # Created by: mstowe@chicago.us.mensa.org
-# $FreeBSD: misc/heyu2/Makefile 319758 2013-06-03 07:40:32Z jgh $
+# $FreeBSD: misc/heyu2/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	heyu2
 PORTVERSION=	2.10
@@ -39,6 +39,7 @@ OREGON_DESC=	Oregon Support
 
 OPTIONS_DEFAULT=	CM17A EXTENDED RFXSENS RFXMETER DMX OREGON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MCM17A}
