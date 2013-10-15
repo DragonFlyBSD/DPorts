@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: cad/p5-GDS2/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: cad/p5-GDS2/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	GDS2
 PORTVERSION=	3.00
@@ -23,6 +23,7 @@ PROGRAMS=	gdsdump2gds modgds2 gdslayers testgds2 \
 		gdspath4topath0 testgdt
 # XXX: gdsdump disabled for the moment
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_SCRIPT} ${PROGRAMS:S,^,${WRKSRC}/Examples/,} ${PREFIX}/bin
 
