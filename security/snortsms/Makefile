@@ -1,9 +1,5 @@
-# New ports collection makefile for:	snortsms
-# Date created:		Mon May 28 16:05:01 CST 2005
-# Whom:			J Randolph <snortsms@servangle.net>
-#
-# $FreeBSD: ports/security/snortsms/Makefile,v 1.12 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: J Randolph <snortsms@servangle.net>
+# $FreeBSD: security/snortsms/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	snortsms
 PORTVERSION=	1.7.8
@@ -25,6 +21,7 @@ SUB_LIST=	PORTNAME=${PORTNAME} \
 		WRKSRC=${WRKSRC} \
 		PORTSDIR=${PORTSDIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${WWWDIR})
