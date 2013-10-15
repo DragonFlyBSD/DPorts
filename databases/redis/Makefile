@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/redis/Makefile 325618 2013-08-29 17:56:43Z osa $
+# $FreeBSD: databases/redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	redis
 DISTVERSION=	2.6.16
@@ -21,6 +21,7 @@ LUA_DESC=	Use lang/lua instead of builtin lua
 LUAJIT_DESC=	Use lang/luajit instead of builtin lua
 TESTS_DESC=	Install lang/tcl for redis unit tests
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLUA}
