@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/twirssi/Makefile 325975 2013-09-02 11:11:59Z garga $
+# $FreeBSD: net-im/twirssi/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	twirssi
 PORTVERSION=	2.6.0
@@ -20,6 +20,7 @@ OPTIONS_DEFAULT=PROD
 PROD_DESC=	Use production irc/irssi port
 DEVEL_DESC=	Use development irc/irssi-devel port
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPROD}
