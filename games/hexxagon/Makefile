@@ -1,4 +1,4 @@
-# $FreeBSD: games/hexxagon/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: games/hexxagon/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	hexxagon
 PORTVERSION=	1.0.1
@@ -19,4 +19,5 @@ GNU_CONFIGURE=	yes
 DESKTOP_ENTRIES="Hexxagon" "Strategy Game" "" \
 		"hexxagon" "Game;StrategyGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
