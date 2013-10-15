@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fwbuilder
-# Date Created:				3 Feb 2001
-# Whom:					Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: security/fwbuilder/Makefile 326938 2013-09-11 00:48:44Z cy $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: security/fwbuilder/Makefile 329531 2013-10-06 04:23:20Z cy $
 
 PORTNAME=	fwbuilder
 DISTVERSION=	5.1.0
@@ -76,10 +72,16 @@ MAN1=		fwbuilder.1 \
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 800107
 MAKE_ENV+=	CCACHE_DISABLE=yes
+.endif
+
+.if  ${OSVERSION} >= 1000055
+# IMPORTANT: Newer versions of rcs will NOT work with fwbuilder.
+RUN_DEPENDS=	rcs:${PORTSDIR}/devel/rcs57
 .endif
 
 post-install:
