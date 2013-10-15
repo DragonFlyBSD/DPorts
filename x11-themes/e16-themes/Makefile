@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	e16-themes
-# Date created:				20 August 2008
-# Whom:					gahr
-#
-# $FreeBSD: ports/x11-themes/e16-themes/Makefile,v 1.7 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: x11-themes/e16-themes/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	e16-themes
 PORTVERSION=	1.0.1
