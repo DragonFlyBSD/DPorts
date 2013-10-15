@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-dtflickr
-# Date created:				19 August 2008
-# Whom:					Douglas Thrift
-#
-# $FreeBSD: ports/www/py-dtflickr/Makefile,v 1.10 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Douglas Thrift
+# $FreeBSD: www/py-dtflickr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dtflickr
 PORTVERSION=	1.5
@@ -22,6 +18,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_VERSION} == "python2.5"
