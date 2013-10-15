@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Accessor
-# Date created:		6 Mar 2002
-# Whom:			Sergey Skvortsov <skv@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Class-Factory/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Sergey Skvortsov <skv@FreeBSD.org>
+# $FreeBSD: devel/p5-Class-Factory/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Factory
 PORTVERSION=	1.06
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Factory.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
