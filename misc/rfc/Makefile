@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rfc
-# Date created:				05 October 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/misc/rfc/Makefile,v 1.22 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: misc/rfc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	rfc
 PORTVERSION=	3.2.3
@@ -22,6 +18,7 @@ MAN1=		rfc.1
 PLIST_FILES=	bin/rfc \
 		"@unexec rm -f %%PREFIX%%/etc/rfc-index"
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} -e 's|/usr/local/etc/rfc|${PREFIX}/etc/rfc| ; \
 		s|/usr/local/etc/nmap|${PREFIX}/share/misc/nmap| ; \
