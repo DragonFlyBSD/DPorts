@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: devel/p5-Child/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-Child/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Child
 PORTVERSION=	0.009
@@ -25,4 +25,5 @@ MAN3=		Child.3 \
 		Child::Link::Proc.3 \
 		Child::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
