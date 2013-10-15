@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: japanese/p5-WWW-2ch/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/p5-WWW-2ch/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	WWW-2ch
 PORTVERSION=	0.07
@@ -25,4 +25,5 @@ MAN3=		WWW::2ch.3	\
 	WWW::2ch::Dat.3		\
 	WWW::2ch::Plugin::Jbbs.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
