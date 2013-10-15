@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-toolkits/pure-gtk/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: x11-toolkits/pure-gtk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	pure-gtk
 PORTVERSION=	0.11
@@ -14,5 +14,6 @@ USES=		pkgconfig
 USE_PURE=	ffi
 USE_GNOME=	glib20 gtk20 atk pango
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
