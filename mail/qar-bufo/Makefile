@@ -1,9 +1,5 @@
-# New ports collection makefile for: qar-bufo
-# Date created:        8 March 2007
-# Whom:                Zane C. Bowers
-#
-# $FreeBSD: mail/qar-bufo/Makefile 326265 2013-09-04 09:48:54Z az $
-#
+# Created by: Zane C. Bowers
+# $FreeBSD: mail/qar-bufo/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qar-bufo
 PORTVERSION=	1.3.1
@@ -23,6 +19,7 @@ MAN1=		qar-bufo.1
 
 PLIST_FILES=	bin/qar-bufo
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} -v ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
