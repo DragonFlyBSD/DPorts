@@ -1,5 +1,5 @@
 # Created by: Michael Kohn <mike@mikekohn.net>
-# $FreeBSD: net/nakenchat/Makefile 323279 2013-07-19 10:19:26Z danfe $
+# $FreeBSD: net/nakenchat/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nakenchat
 PORTVERSION=	2.12
@@ -31,6 +31,7 @@ DOTQ_CONFIGURE_ON=		--enable-dotQ
 FUSERLIST_CONFIGURE_ON=		--enable-whofile
 ELITEFILTER_CONFIGURE_ON=	--enable-elite
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
