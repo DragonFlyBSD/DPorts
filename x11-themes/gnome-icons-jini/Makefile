@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-themes/gnome-icons-jini/Makefile,v 1.4 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-themes/gnome-icons-jini/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	jini
 PORTVERSION=	0.8
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}
 WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@for FILE in ${WRKDIR}/JiniOrange/scalable/apps/haansoft-hwp.svg \
 		${WRKDIR}/JiniYellowishGreen/scalable/apps/haansoft-hwp.svg \
