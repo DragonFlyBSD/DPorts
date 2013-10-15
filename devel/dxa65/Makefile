@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: devel/dxa65/Makefile 324009 2013-07-31 07:11:46Z jgh $
+# $FreeBSD: devel/dxa65/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dxa
 PORTVERSION=	0.1.3
@@ -20,6 +20,7 @@ MLINKS=	dxa.1 dxa65.1
 PLIST_FILES=	bin/dxa65
 PORTDOCS=	INSTALL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch-script:
