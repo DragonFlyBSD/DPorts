@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-POE/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-POE/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-POE
 PORTVERSION=	0.215
@@ -36,4 +36,5 @@ MAN3=		MooseX::POE.3 \
 		MooseX::POE::Role.3 \
 		MooseX::POE::SweetArgs.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
