@@ -1,21 +1,17 @@
-# New ports collection makefile for:	bsdcrashtar
-# Date created:				18 October 2009
-# Whom:					Mikolaj Golub <to.my.trociny@gmail.com>
-#
-# $FreeBSD: sysutils/bsdcrashtar/Makefile 327341 2013-09-15 13:42:07Z trociny $
-#
+# Created by: Mikolaj Golub <to.my.trociny@gmail.com>
+# $FreeBSD: sysutils/bsdcrashtar/Makefile 329996 2013-10-10 13:34:37Z trociny $
 
 PORTNAME=	bsdcrashtar
 PORTVERSION=	0.1.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Archive FreeBSD kernel crash files
 
-PLIST_FILES=	sbin/bsdcrashtar
-MAN8=		bsdcrashtar.8
-MANCOMPRESSED=	yes
+PLIST_FILES=	sbin/bsdcrashtar \
+		man/man8/bsdcrashtar.8.gz
 
 MAKE_ENV+=	NO_OBJ=yes
 
