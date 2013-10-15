@@ -1,4 +1,4 @@
-# $FreeBSD: math/armadillo/Makefile 314935 2013-03-22 14:54:42Z pawel $
+# $FreeBSD: math/armadillo/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	armadillo
 PORTVERSION=	3.800.1
@@ -16,4 +16,5 @@ LIB_DEPENDS=	lapack:${PORTSDIR}/math/lapack	\
 USES=		cmake
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
