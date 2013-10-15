@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-net-ssh-multi
-# Date created:				02 May 2011
-# Whom:					Renaud Chaput <renchap@cocoa-x.com>
-#
-# $FreeBSD: ports/security/rubygem-net-ssh-multi/Makefile,v 1.4 2012/11/17 06:01:19 svnexp Exp $
-#
+# Created by: Renaud Chaput <renchap@cocoa-x.com>
+# $FreeBSD: security/rubygem-net-ssh-multi/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	net-ssh-multi
 PORTVERSION=	1.1
@@ -20,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
