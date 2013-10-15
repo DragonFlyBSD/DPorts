@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: net-im/gale/Makefile 322713 2013-07-10 17:04:49Z bapt $
+# $FreeBSD: net-im/gale/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	gale
 PORTVERSION=	0.99f
@@ -29,6 +29,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib \
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 # cheesy hack - test-oop doesn't build, but we don't care.
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's/\(^noinst_PROGRAMS =.*\)test-oop/\1/' \
 			${WRKSRC}/liboop/Makefile.in
