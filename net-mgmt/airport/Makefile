@@ -1,5 +1,5 @@
 # Created by: Nick Sayer
-# $FreeBSD: ports/net-mgmt/airport/Makefile,v 1.27 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: net-mgmt/airport/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	airport
 PORTVERSION=	2.0.1
@@ -35,6 +35,7 @@ SUB_FILES=	airport.sh
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/*jar ${DATADIR}

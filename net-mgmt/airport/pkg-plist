@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net-mgmt/airport/pkg-plist,v 1.12 2012/11/17 06:00:30 svnexp Exp $
+@comment $FreeBSD: net-mgmt/airport/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/airport
 bin/airport2
 bin/hostmon
