@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: mail/rlytest/Makefile 326271 2013-09-04 12:28:16Z az $
+# $FreeBSD: mail/rlytest/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	rlytest
 PORTVERSION=	1.22
@@ -21,6 +21,7 @@ USES=		perl5
 MAN1=		rlytest.1
 PLIST_FILES=	bin/rlytest
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^#!.*|#!${PERL}|' ${WRKSRC}/${PORTNAME}
 
