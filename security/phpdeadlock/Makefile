@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpdeadlock
-# Date created:		08 Oct 2007
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/security/phpdeadlock/Makefile,v 1.7 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: security/phpdeadlock/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	phpdeadlock
 PORTVERSION=	1.01
@@ -28,6 +24,7 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 SUB_LIST=	DLURL=${DLURL} DLDIR=${DLDIR}
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKDIR} && ${MV} "Deadlock v1.01" Deadlock-1.01
 
