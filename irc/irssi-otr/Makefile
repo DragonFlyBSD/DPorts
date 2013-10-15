@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: irc/irssi-otr/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: irc/irssi-otr/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irssi-otr
 PORTVERSION=	0.3
@@ -28,4 +28,5 @@ PLIST_FILES=	lib/irssi/modules/libotr.so \
 		%%DOCSDIR%%/LICENSE %%DOCSDIR%%/README
 PLIST_DIRS=	%%DOCSDIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
