@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: misc/gkx86info2/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: misc/gkx86info2/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gkx86info2
 PORTVERSION=	0.0.2
@@ -20,6 +20,7 @@ USE_GNOME=	gtk20
 
 WRKSRC=		${WRKDIR}/gkx86info${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
