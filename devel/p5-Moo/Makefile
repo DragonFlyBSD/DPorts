@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Moo/Makefile 326914 2013-09-10 15:58:56Z sunpoet $
+# $FreeBSD: devel/p5-Moo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Moo
 PORTVERSION=	1.003001
@@ -31,6 +31,7 @@ MAN3=		Moo.3 \
 		Sub::Defer.3 \
 		Sub::Quote.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
