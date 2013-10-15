@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: games/speyes/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/speyes/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	speyes
 PORTVERSION=	1.2.0
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/speyes
 USES=		imake
 USE_XORG=	xpm xmu
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
