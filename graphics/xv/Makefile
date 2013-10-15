@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: graphics/xv/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: graphics/xv/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	xv
 PORTVERSION=	3.10a
@@ -22,6 +22,8 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		tiff:${PORTSDIR}/graphics/tiff \
 		png15:${PORTSDIR}/graphics/png \
 		jasper:${PORTSDIR}/graphics/jasper
+
+NO_STAGE=	yes
 
 USES=		imake
 USE_XORG=	xext x11 xt
