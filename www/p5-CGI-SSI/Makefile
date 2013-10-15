@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-SSI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CGI-SSI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-SSI
 PORTVERSION=	0.92
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		CGI::SSI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
