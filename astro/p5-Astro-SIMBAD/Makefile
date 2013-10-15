@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-SIMBAD/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-SIMBAD/Makefile 328614 2013-09-28 17:13:24Z sunpoet $
 
 PORTNAME=	Astro-SIMBAD
 PORTVERSION=	2.0.0
@@ -16,10 +16,5 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Astro::SIMBAD.3 \
-	Astro::SIMBAD::Query.3 \
-	Astro::SIMBAD::Result.3 \
-	Astro::SIMBAD::Result::Object.3
 
 .include <bsd.port.mk>
