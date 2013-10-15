@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-# $FreeBSD: devel/rubygem-logging/Makefile 319660 2013-06-02 13:54:44Z swills $
+# $FreeBSD: devel/rubygem-logging/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	logging
 PORTVERSION=	1.8.1
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
