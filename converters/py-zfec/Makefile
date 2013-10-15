@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-zfec
-# Date created:		2 March 2012
-# Whom:			Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/py-zfec/Makefile,v 1.5 2012/11/17 05:55:04 svnexp Exp $
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: converters/py-zfec/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	zfec
 PORTVERSION=	1.4.22
@@ -28,6 +25,7 @@ PYEASYINSTALL_ARCHDEP=  yes
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
