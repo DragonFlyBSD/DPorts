@@ -1,8 +1,5 @@
-# New ports collection makefile for:	dikt
-# Date created:			28-12-2008
-# Whom:				Goran Tal <goran.tal@gmail.com>
-#
-# $FreeBSD: textproc/dikt/Makefile 320631 2013-06-11 19:26:42Z rakuco $
+# Created by: Goran Tal <goran.tal@gmail.com>
+# $FreeBSD: textproc/dikt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dikt
 PORTVERSION=	2l
@@ -29,4 +26,5 @@ PLIST_FILES=	bin/dikt \
 		share/kde4/services/dict.protocol
 PLIST_DIRS=	share/apps/dikt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
