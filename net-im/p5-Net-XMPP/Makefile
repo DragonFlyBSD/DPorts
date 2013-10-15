@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars.eggert@gmx.net>
-# $FreeBSD: net-im/p5-Net-XMPP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-Net-XMPP/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-XMPP
 PORTVERSION=	1.02.04
@@ -38,4 +38,5 @@ MAN3=		Net::XMPP.3 \
 		Net::XMPP::Roster.3 \
 		Net::XMPP::Stanza.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
