@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/ioquake3/Makefile 325812 2013-08-31 14:45:10Z marino $
+# $FreeBSD: games/ioquake3/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME?=	ioquake3
 DISTVERSION?=	1.36
@@ -14,6 +14,7 @@ COMMENT?=	Cleaned-up and enhanced version of Quake 3
 
 USES=		pkgconfig gmake
 
+NO_STAGE=	yes
 # Port configuration flags:
 # 	CLIENT SERVER TOOLS DLRENDERER GAMELIBS OPUS OPENGL2
 IOQ3?=		CLIENT TOOLS GAMELIBS
