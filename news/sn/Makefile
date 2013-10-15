@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: news/sn/Makefile 325302 2013-08-24 16:46:12Z danfe $
+# $FreeBSD: news/sn/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	sn
 PORTVERSION=	0.3.8
@@ -28,6 +28,7 @@ MAN8=		sn.8 sncancel.8 sncat.8 sndelgroup.8 sndumpdb.8 \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Try to fix parallel builds (-jX); respect CFLAGS
