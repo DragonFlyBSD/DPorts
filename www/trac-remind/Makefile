@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/www/trac-remind/Makefile,v 1.10 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-remind/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	remind
 PORTVERSION=	1
@@ -20,6 +20,7 @@ USE_PYTHON=	-2.7
 
 PLIST_FILES=	bin/tracremind.py etc/tracremind.conf
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX}," \
 		 -e "s,%%PYTHON%%,${PYTHON_CMD}," ${WRKSRC}/tracremind.py
