@@ -1,9 +1,5 @@
-# New ports collection makefile for:	html2hdml
-# Date created:		27 February 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: www/html2hdml/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: www/html2hdml/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	html2hdml
 PORTVERSION=	1.0.5
