@@ -1,4 +1,4 @@
-# $FreeBSD: www/rekonq/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/rekonq/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rekonq
 PORTVERSION=	2.3.2
@@ -19,6 +19,7 @@ OPTIONS_DEFAULT=	NEPOMUK
 OPERA_DESC=	Support for Opera Sync service
 NEPOMUK_DESC=	Bookmarks tagging via Nepomuk
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
