@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 326035 2013-09-02 17:06:54Z bapt $
+# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	monitor-core
 PORTVERSION=	3.4.0
@@ -59,6 +59,7 @@ IGNORE=		the variable GMOND_CONF must point to a file when defined
 GMOND_CONF=	${WRKDIR}/gmond.conf
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_RC_SUBR=	gmond
