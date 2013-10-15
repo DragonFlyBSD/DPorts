@@ -1,4 +1,4 @@
-# $FreeBSD: math/libmissing/Makefile 324786 2013-08-15 22:13:42Z bf $
+# $FreeBSD: math/libmissing/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libmissing
 DISTVERSION=	20130815
@@ -31,6 +31,7 @@ SRCS=		libmissing.c
 CFLAGS+=	-fno-builtin -fno-math-errno -I. -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPROFILE} || defined(WITH_PROFILE)
