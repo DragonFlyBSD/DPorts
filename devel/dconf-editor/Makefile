@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/dconf-editor/Makefile 325634 2013-08-29 21:24:04Z kwm $
+# $FreeBSD: devel/dconf-editor/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/trunk/devel/dconf-editor/Makefile 18422 2013-05-06 11:04:38Z kwm $
 
 PORTNAME=	dconf
@@ -14,6 +14,7 @@ MASTERDIR=	${.CURDIR}/../dconf
 
 PLIST=		${.CURDIR}/pkg-plist
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}/editor && ${GMAKE}
 
