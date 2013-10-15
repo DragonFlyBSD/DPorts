@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-# $FreeBSD: multimedia/gmimms/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: multimedia/gmimms/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gmimms
 DISTVERSION=	0.0.9
@@ -30,6 +30,7 @@ DESKTOP_ENTRIES=	"GIMMS" \
 			"GTK;AudioVideo;Network;" \
 			"false"
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
