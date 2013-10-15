@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-timers/Makefile 313473 2013-03-05 20:02:45Z zi $
+# $FreeBSD: devel/rubygem-timers/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	timers
 PORTVERSION=	1.1.0
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
