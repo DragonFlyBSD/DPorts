@@ -1,5 +1,5 @@
 # Created by: Quinton Dolan <q@onthenet.com.au>
-# $FreeBSD: ports/databases/frontbase-jdbc/Makefile,v 1.6 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/frontbase-jdbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	frontbase
 PORTVERSION=	2.5.6
@@ -22,6 +22,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE}
 SUB_FILES+=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/${JARFILE} ${JAVAJARDIR}/${JARFILE}
 
