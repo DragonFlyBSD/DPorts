@@ -1,9 +1,5 @@
-# New ports collection makefile for:	glexcess
-# Date created:			1 September 2006
-# Whom:				Hernan Di Pietro <hernan.di.pietro@gmail.com>
-#
-# $FreeBSD: ports/graphics/glexcess/Makefile,v 1.8 2012/11/17 05:58:07 svnexp Exp $
-#
+# Created by: Hernan Di Pietro <hernan.di.pietro@gmail.com>
+# $FreeBSD: graphics/glexcess/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	glexcess
 PORTVERSION=	1.0
@@ -21,6 +17,7 @@ USE_GL=		glut
 MAKE_ARGS=	'CXXFLAGS=${CXXFLAGS} -I${LOCALBASE}/include -pipe -s -O2' \
 		'LDFLAGS=-L${LOCALBASE}/lib -lGL -lGLU -lglut'
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|data/|${DATADIR}/|' ${WRKSRC}/scene*.cpp
 	@${REINPLACE_CMD} -e 's|k_InitGL(GLvoid)|k_InitGL(void)|' ${WRKSRC}/scene12.cpp
