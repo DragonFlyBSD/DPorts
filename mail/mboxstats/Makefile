@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	mboxstats
-# Date created:			Oct 31 2003
-# Whom:				clsung
-#
-# $FreeBSD: ports/mail/mboxstats/Makefile,v 1.16 2012/11/17 05:59:05 svnexp Exp $
-#
+# Created by: clsung
+# $FreeBSD: mail/mboxstats/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mboxstats
 PORTVERSION=	3.1
@@ -17,6 +12,7 @@ COMMENT=	Creates top-10 lists of the messages in a mailbox
 
 PLIST_FILES=	bin/mboxstats
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
