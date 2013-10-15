@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gd2
-# Date created:				19 Aug 1998
-# Whom:					ichiro@ichiro.org
-#
-# $FreeBSD: ports/japanese/gd/Makefile,v 1.18 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: ichiro@ichiro.org
+# $FreeBSD: japanese/gd/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 CATEGORIES=	japanese
 
