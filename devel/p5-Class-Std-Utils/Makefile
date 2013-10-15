@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Class-Std-Utils/Makefile 326592 2013-09-07 10:16:46Z az $
+# $FreeBSD: devel/p5-Class-Std-Utils/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Std-Utils
 DISTVERSION=	v0.0.3
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Std::Utils.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
