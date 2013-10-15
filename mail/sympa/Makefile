@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: mail/sympa/Makefile 327311 2013-09-14 18:12:50Z az $
+# $FreeBSD: mail/sympa/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sympa
 PORTVERSION=	6.1.17
@@ -86,6 +86,7 @@ OPTIONS_SET+=	${option}
 .  endfor
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
