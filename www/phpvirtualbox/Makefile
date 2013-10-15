@@ -1,5 +1,5 @@
-# Created by:	Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/phpvirtualbox/Makefile 327100 2013-09-12 18:28:45Z decke $
+# Created by: Bernhard Froehlich <decke@bluelife.at>
+# $FreeBSD: www/phpvirtualbox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpvirtualbox
 DISTVERSION=	4.2-7
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 USE_DOS2UNIX=	yes
 DOS2UNIX_REGEX=	.*\.(php|txt|js|css|html)
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${WWWDIR}
 	(cd ${WRKSRC}/ && ${COPYTREE_SHARE} "*" ${WWWDIR} "! -name *.orig")
