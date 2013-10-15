@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	libAfterBase
-# Date created:			Oct 7, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/libafterbase/Makefile,v 1.17 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/libafterbase/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libafterbase
 PORTVERSION=	0.92
@@ -21,6 +16,7 @@ CONFIGURE_ARGS=	--disable-staticlibs --enable-sharedlibs --with-x
 USE_LDCONFIG=	yes
 PLIST_SUB=	STATIC="@comment "
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.[ch]' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|<malloc.h>|<stdlib.h>|g'
