@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: x11/docker/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: x11/docker/Makefile 330198 2013-10-13 01:53:23Z eadler $
 
 PORTNAME=	docker
 PORTVERSION=	1.5
@@ -9,7 +9,7 @@ MASTER_SITES=	http://offload2.icculus.org:9090/openbox/2/docker/ \
 		http://offload1.icculus.org:9090/openbox/2/docker/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockapp with support for GNOME2 and KDE3 tray icons
+COMMENT=	Dockapp with support for GNOME2 and KDE3 tray icons
 
 LICENSE=	GPLv2 # (or later)
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -30,6 +30,6 @@ post-patch:
 		 s|-lX11||' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
