@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-MessageID/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Email-MessageID/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-MessageID
 PORTVERSION=	1.402
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Email::MessageID.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
