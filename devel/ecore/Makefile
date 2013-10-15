@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ecore/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: devel/ecore/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	ecore
 PORTVERSION=	1.7.8
@@ -22,6 +22,7 @@ OPTIONS_DEFAULT=CON EVAS FILE IMF IMF_EVAS INPUT INPUT_EVAS IPC X11
 ${NODE}_DESC=	Install ${NODE:tl} module
 .endfor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for NODE in ${OPTIONS_DEFINE}
