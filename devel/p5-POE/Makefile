@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE/Makefile 325325 2013-08-25 04:29:02Z sunpoet $
+# $FreeBSD: devel/p5-POE/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE
 PORTVERSION=	1.356
@@ -51,6 +51,7 @@ MAN3=		POE.3 POE::Component.3 POE::Component::Client::TCP.3 \
 		POE::Wheel::ReadWrite.3 POE::Wheel::Run.3 \
 		POE::Wheel::SocketFactory.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
