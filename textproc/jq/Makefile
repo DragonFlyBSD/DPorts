@@ -1,24 +1,29 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: ports/textproc/jq/Makefile,v 1.1 2012/11/19 21:26:03 svnexp Exp $
+# $FreeBSD: textproc/jq/Makefile 329072 2013-10-02 16:34:01Z knu $
 
 PORTNAME=	jq
-PORTVERSION=	1.1
+PORTVERSION=	1.3
 CATEGORIES=	textproc
+MASTER_SITES=	http://stedolan.github.io/jq/download/source/
 
 MAINTAINER=	jnlin@csie.nctu.edu.tw
 COMMENT=	Lightweight and flexible command-line JSON processor
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	stedolan
-GH_TAGNAME=	jq-${PORTVERSION}
-GH_COMMIT=	bf61e95
-
-USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-docs --docdir="${DOCSDIR}"
 USE_CSTD=	gnu99
 
-PLIST_FILES=	bin/jq
+PLIST_FILES=	bin/${PORTNAME}
+MAN1=		${PORTNAME}.1
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/jq ${PREFIX}/bin
+NO_STAGE=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
+PORTDOCS=	*
+.else
+MAKE_ARGS=	docdir=
+.endif
+
+.include <bsd.port.post.mk>
