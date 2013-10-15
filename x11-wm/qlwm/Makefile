@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/qlwm/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: x11-wm/qlwm/Makefile 329631 2013-10-06 21:51:02Z marino $
 
 PORTNAME=	qlwm
 PORTVERSION=	4.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.alinden.mynetcologne.de/qlwm/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qt-based window manager
+
+MAKE_JOBS_UNSAFE= yes
 
 USE_QT4=	corelib gui moc_build qmake_build
 
@@ -31,6 +33,7 @@ PLIST_DIRS=	lib/qlwm/files \
 
 SUB_FILES=	qlwm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/qlwm|${PREFIX}/lib/qlwm|g ; \
 		 s|/usr/local/man|${MANPREFIX}/man|g' ${WRKSRC}/Makefile
