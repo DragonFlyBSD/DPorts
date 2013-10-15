@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-Diff/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-Hash-Diff/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Hash-Diff
 PORTVERSION=	0.005
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Hash::Diff.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
