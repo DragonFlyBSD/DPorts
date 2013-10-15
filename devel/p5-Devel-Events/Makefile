@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Events/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-Devel-Events/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-Events
 PORTVERSION=	0.08
@@ -41,4 +41,5 @@ MAN3=		Devel::Events.3 \
 		Devel::Events::Handler::Multiplex.3 \
 		Devel::Events::Match.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
