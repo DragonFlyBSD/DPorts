@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: x11-wm/ctwm/Makefile 322010 2013-06-28 22:57:16Z bapt $
+# $FreeBSD: x11-wm/ctwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	ctwm
 PORTVERSION=	3.8.1
@@ -18,6 +18,7 @@ USES=		imake
 USE_XORG=	xpm xmu
 MAN1=		ctwm.1
 
+NO_STAGE=	yes
 pre-configure:
 	${CP} ${WRKSRC}/Imakefile.local-template ${WRKSRC}/Imakefile.local
 	${CAT} ${FILESDIR}/Imakefile.local-additional >> ${WRKSRC}/Imakefile.local
