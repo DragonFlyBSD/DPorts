@@ -1,5 +1,5 @@
 # Created by: Noritaka Ishizumi <graphite@taurus.bekkoame.or.jp>
-# $FreeBSD: news/suck/Makefile 325678 2013-08-30 13:01:33Z danfe $
+# $FreeBSD: news/suck/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	suck
 PORTVERSION=	4.3.2
@@ -14,6 +14,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Receives/sends news to/from localhost via NNTP
 
 CONFLICTS?=	suckblow-1.*
+NO_STAGE=	yes
 
 USES=		gmake
 GNU_CONFIGURE=	yes
