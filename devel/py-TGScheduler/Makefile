@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-TGScheduler/Makefile 314839 2013-03-21 12:07:16Z rm $
+# $FreeBSD: devel/py-TGScheduler/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	TGScheduler
 PORTVERSION=	1.6.3
@@ -17,6 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:${PORTSDIR}/devel/py-dateutil
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,<2.0dev,!=2.0,g' ${WRKSRC}/setup.py
 
