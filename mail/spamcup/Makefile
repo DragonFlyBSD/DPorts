@@ -1,9 +1,5 @@
-# New ports collection makefile for:	spamcup
-# Date created:				07 February 2005
-# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: mail/spamcup/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: mail/spamcup/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spamcup
 PORTVERSION=	1.09
@@ -28,4 +24,5 @@ PLIST_FILES=	bin/spamcup.pl ${SITE_PERL_REL}/spamcup.pl \
 
 PLIST_DIRS=	${SITE_PERL_REL}/${PERL_ARCH}/auto/Spamcup
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
