@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@freebsd-fr.org>
-# $FreeBSD: audio/gspeakers/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: audio/gspeakers/Makefile 327706 2013-09-20 14:36:35Z bapt $
 #    $MCom: ports/audio/gspeakers/Makefile,v 1.6 2007/05/30 17:08:11 mezz Exp $
 
 PORTNAME=	gspeakers
@@ -14,6 +14,7 @@ COMMENT=	Gnome-based loudspeaker design program
 LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gnomeprefix libxml2
 USE_AUTOTOOLS=	automake:env
 GNU_CONFIGURE=	yes
