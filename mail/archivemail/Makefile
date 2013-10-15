@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: ports/mail/archivemail/Makefile,v 1.24 2013/02/19 18:47:57 svnexp Exp $
+# $FreeBSD: mail/archivemail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	archivemail
 PORTVERSION=	0.9.0
@@ -17,6 +17,7 @@ MAN1=		archivemail.1
 DOCS=		CHANGELOG FAQ NEWS README TODO
 EXAMPLES=	test_archivemail examples/archivemail_all
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
