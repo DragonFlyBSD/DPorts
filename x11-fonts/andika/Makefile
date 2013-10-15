@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/andika/Makefile 323538 2013-07-23 16:10:10Z gabor $
+# $FreeBSD: x11-fonts/andika/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	Andika
 PORTVERSION=	1.004
@@ -31,6 +31,7 @@ SUB_FILES=	pkg-message
 DOCSLIST=	FONTLOG.txt OFL-FAQ.txt README.txt
 PORTDOCS=	${DOCSLIST:C,^.*/,,}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
