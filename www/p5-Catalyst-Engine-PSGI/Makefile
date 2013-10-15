@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Catalyst::Engine::PSGI
-# Date created:		13 Oct 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Catalyst-Engine-PSGI/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# $FreeBSD: www/p5-Catalyst-Engine-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Engine-PSGI
 PORTVERSION=	0.13
@@ -28,4 +23,5 @@ MAN3=	Catalyst::Controller::Metal.3 \
 	Catalyst::Helper::PSGI.3 \
 	Plack::Test::Adopt::Catalyst.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
