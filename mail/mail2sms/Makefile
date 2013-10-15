@@ -1,5 +1,5 @@
 # Created by: Gerhard Gonter <g.gonter@ieee.org>
-# $FreeBSD: mail/mail2sms/Makefile 321433 2013-06-20 22:57:15Z wg $
+# $FreeBSD: mail/mail2sms/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mail2sms
 PORTVERSION=	1.3.5
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	README REGEX example.conf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
