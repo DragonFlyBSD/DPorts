@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <q@uni.de>
-# $FreeBSD: audio/mp3splt/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: audio/mp3splt/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3splt
 PORTVERSION=	2.5.2
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	mp3splt:${PORTSDIR}/audio/libmp3splt
 
 USES=	pkgconfig:build
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-oggsplt_symlink
