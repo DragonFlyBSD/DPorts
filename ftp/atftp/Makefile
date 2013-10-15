@@ -1,4 +1,4 @@
-# $FreeBSD: ports/ftp/atftp/Makefile,v 1.5 2012/11/21 05:49:17 svnexp Exp $
+# $FreeBSD: ftp/atftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	atftp
 PORTVERSION=	0.7
@@ -22,4 +22,5 @@ PLIST_FILES=	bin/atftp \
 MAN1=		atftp.1
 MAN8=		atftpd.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
