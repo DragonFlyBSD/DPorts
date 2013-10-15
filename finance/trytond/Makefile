@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: finance/trytond/Makefile 324161 2013-08-02 11:17:07Z wg $
+# $FreeBSD: finance/trytond/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond
 PORTVERSION=	2.4.8
@@ -44,6 +44,7 @@ LOGDIR?=	/var/log
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PIDDIR%%|${PIDDIR}|g' -e 's|%%LOGDIR%%|${LOGDIR}|g' \
 		${WRKSRC}/etc/${PORTNAME}.conf
