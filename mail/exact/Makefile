@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: mail/exact/Makefile 321149 2013-06-17 19:50:25Z antoine $
+# $FreeBSD: mail/exact/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	exact
 PORTVERSION=	1.41
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	--with-user=${MAILUSER} \
 		--with-group=${MAILGROUP} \
 		--with-watch=${MAILLOG}
 
+NO_STAGE=	yes
 pre-install:
 	@${SED} -e "s,/usr/local/var,/var,g; s,/state,,g" ${WRKSRC}/exact.conf > ${WRKSRC}/exact.conf.sample
 	@${SED} -e "s,%%PREFIX%%,${PREFIX},g; s,%%EXACTDIR%%,${EXACTDIR},g" ${FILESDIR}/exact.sh > ${WRKSRC}/exact.sh
