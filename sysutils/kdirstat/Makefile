@@ -1,5 +1,5 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: sysutils/kdirstat/Makefile 321131 2013-06-17 15:27:18Z miwi $
+# $FreeBSD: sysutils/kdirstat/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	kdirstat
 PORTVERSION=	2.7.4
@@ -20,6 +20,7 @@ USE_KDE4=	automoc4 kdelibs kdeprefix libkonq
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^Categories/s|=.*|=Qt;KDE;Utility;|' \
