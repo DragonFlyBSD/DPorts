@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: lang/p5-Interpolation/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: lang/p5-Interpolation/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Interpolation
 PORTVERSION=	0.74
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Interpolation.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
