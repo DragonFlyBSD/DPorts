@@ -1,5 +1,4 @@
-# Created by: pgollucci@p6m7g8.com
-# $FreeBSD: mail/p5-Clamd/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Clamd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Clamd
 PORTVERSION=	1.04
@@ -25,6 +24,7 @@ PLIST_FILES=	%%SITE_PERL%%/Clamd.pm \
 
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Clamd
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},g' ${WRKSRC}/Makefile.PL
 
