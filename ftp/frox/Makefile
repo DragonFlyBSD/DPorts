@@ -1,9 +1,5 @@
-# New ports collection makefile for:	frox
-# Date created:				11 June 2002
-# Whom:					Sergey Matveychuk <sem@ciam.ru>
-#
-# $FreeBSD: ports/ftp/frox/Makefile,v 1.35 2012/11/17 05:57:29 svnexp Exp $
-#
+# Created by: Sergey Matveychuk <sem@ciam.ru>
+# $FreeBSD: ftp/frox/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	frox
 PORTVERSION=	0.7.18
@@ -49,6 +45,7 @@ LOCAL_CACHE_DESC=	Enable use of local cache
 CCP_DESC=	 	Ftp-proxy style command control programs
 ROOT_RUN_DESC=	 	Allow frox running as root (not recomended)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPFILTER}
