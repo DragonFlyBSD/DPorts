@@ -1,5 +1,5 @@
 # Created by: steve farrell
-# $FreeBSD: games/xqf/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: games/xqf/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xqf
 PORTVERSION=	1.0.5
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 OPTIONS_DEFINE=	GTK2 GEOIP BZIP2
 OPTIONS_DEFAULT=	GTK2 GEOIP BZIP2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
