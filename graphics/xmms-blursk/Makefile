@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-blursk/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-blursk/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	blursk
 PORTVERSION=	1.3
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 
 CPPFLAGS+=	${CFLAGS} ${PTHREAD_CFLAGS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT} \
