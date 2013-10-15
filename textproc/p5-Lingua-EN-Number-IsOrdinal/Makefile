@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Lingua-EN-Number-IsOrdinal/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/p5-Lingua-EN-Number-IsOrdinal/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-EN-Number-IsOrdinal
 PORTVERSION=	0.04
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	Lingua::EN::Number::IsOrdinal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
