@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-rubigen
-# Date created:				8 October 2008
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-rubigen/Makefile,v 1.13 2012/11/17 05:57:01 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/rubygem-rubigen/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rubigen
 PORTVERSION=	1.5.7
@@ -22,4 +19,5 @@ PLIST_FILES=	bin/install_rubigen_scripts	\
 		bin/rubigen			\
 		bin/ruby_app
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
