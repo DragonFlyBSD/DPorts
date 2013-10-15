@@ -1,8 +1,5 @@
-# New ports collection makefile for:	farbot
-# Date created:		29 November 2006
-# Whom:			Nick Barkas <snb@threerings.net>
-#
-# $FreeBSD: ports/sysutils/farbot/Makefile,v 1.9 2012/11/17 06:01:30 svnexp Exp $
+# Created by: Nick Barkas <snb@threerings.net>
+# $FreeBSD: sysutils/farbot/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	farbot
 PORTVERSION=	1.0.b2
@@ -24,6 +21,7 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	farb
 PYDISTUTILS_PKGVERSION=	0.1
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/farbot.conf ${PREFIX}/etc/farbot.conf.sample
 
