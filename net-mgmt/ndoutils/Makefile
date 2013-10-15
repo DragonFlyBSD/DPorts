@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ndoutils/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net-mgmt/ndoutils/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ndoutils
 PORTVERSION=	1.4b8
@@ -29,6 +29,7 @@ USES=		perl5
 USE_RC_SUBR=	ndo2db
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
