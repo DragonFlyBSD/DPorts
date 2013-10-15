@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/graphics/barbecue/Makefile,v 1.11 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: graphics/barbecue/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	barbecue
 DISTVERSION=	1.5-beta1
@@ -33,6 +33,7 @@ OPTIONS_SINGLE=	AS
 OPTIONS_SINGLE_AS=	TOMCAT6 TOMCAT7
 OPTIONS_DEFAULT=	TOMCAT6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOMCAT6}
