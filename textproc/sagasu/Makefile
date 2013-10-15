@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: textproc/sagasu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/sagasu/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sagasu
 PORTVERSION=	2.0.12
@@ -21,6 +21,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		sagasu.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|: install-docDATA|:|g' ${WRKSRC}/Makefile.in
