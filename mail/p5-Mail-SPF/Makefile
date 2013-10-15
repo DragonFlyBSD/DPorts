@@ -1,5 +1,5 @@
 # Created by: gmc@sonologic.nl
-# $FreeBSD: mail/p5-Mail-SPF/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: mail/p5-Mail-SPF/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-SPF
 PORTVERSION=	2.007
@@ -40,6 +40,7 @@ MAN3=		Mail::SPF.3 Mail::SPF::Mech::PTR.3 Mail::SPF::Mech.3 \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 DOCSDIR=	${PREFIX}/share/doc/p5-Mail-SPF
