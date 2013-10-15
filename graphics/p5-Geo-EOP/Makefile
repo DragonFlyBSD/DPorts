@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-EOP/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: graphics/p5-Geo-EOP/Makefile 328765 2013-09-30 03:17:59Z wen $
 
 PORTNAME=	Geo-EOP
 PORTVERSION=	0.13
@@ -8,7 +8,7 @@ CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	wenheping@gmail.com
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Module to Process Earth Observation Products Meta-data
 
 RUN_DEPENDS=	p5-Geo-GML>=0.12:${PORTSDIR}/graphics/p5-Geo-GML \
@@ -21,4 +21,5 @@ MAN3=		Geo::EOP::Util.3 Geo::EOP.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
