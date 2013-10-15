@@ -1,5 +1,5 @@
-# Created by: alfred@freebsd.org
-# $FreeBSD: devel/cvsdiff2patch/Makefile 317363 2013-05-04 21:49:35Z bapt $
+# Created by: alfred@FreeBSD.org
+# $FreeBSD: devel/cvsdiff2patch/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	cvsdiff2patch
 PORTVERSION=	1.0.1
