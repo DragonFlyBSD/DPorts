@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: chinese/fqterm/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: chinese/fqterm/Makefile 329015 2013-10-02 06:19:40Z marino $
 
 PORTNAME=	fqterm
 PORTVERSION=	0.9.3
@@ -19,13 +19,14 @@ USE_QT4=	gui network script qt3support imageformats \
 		qmake_build moc_build rcc_build uic_build linguist_build
 
 HAS_CONFIGURE=	yes
-USE_DOS2UNIX=	src/ui/popwidget.cpp
+USE_DOS2UNIX=	yes
 USES=		cmake:outsource
 CMAKE_ARGS=	-Wno-dev
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 DESKTOP_ENTRIES=	"FQTerm" "BBS client" "${PREFIX}/share/FQTerm/pic/fqterm.png" \
 			"fqterm -caption \"%c\" %i %m %u" "Network;Qt;" ""
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
