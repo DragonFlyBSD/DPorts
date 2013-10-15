@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-INET6Glue
-# Date created:		7 Apr 2009
-# Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-INET6Glue/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: net/p5-Net-INET6Glue/Makefile 329356 2013-10-04 18:33:50Z ume $
 
 PORTNAME=	Net-INET6Glue
 PORTVERSION=	0.6
@@ -20,9 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Net::INET6Glue.3 \
-		Net::INET6Glue::FTP.3 \
-		Net::INET6Glue::INET_is_INET6.3
 
 .include <bsd.port.mk>
