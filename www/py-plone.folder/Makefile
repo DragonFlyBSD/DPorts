@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.folder/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.folder/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	plone.folder
 PORTVERSION=	1.0.4
@@ -19,7 +19,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.memoize>0:${PORTSDIR}/www/py-plone.mem
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
