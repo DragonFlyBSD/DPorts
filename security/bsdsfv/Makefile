@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/bsdsfv/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: security/bsdsfv/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	bsdsfv
 PORTVERSION=	1.18
@@ -15,6 +15,7 @@ PORTDOCS=	MANUAL
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
