@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	script4rss
-# Date created:			Aug 2, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: www/script4rss/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: ijliao
+# $FreeBSD: www/script4rss/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	script4rss
 PORTVERSION=	0.4b
@@ -19,6 +14,7 @@ USE_BZIP2=	yes
 USE_PERL5=	run
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,#!/usr/bin/perl,#!${SETENV} perl," ${WRKSRC}/script4rss.pl
 
