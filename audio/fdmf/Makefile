@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/fdmf/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: audio/fdmf/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	fdmf
 DISTVERSION=	0.0.9s
@@ -19,6 +19,7 @@ RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
 		p5-GDBM>=0:${PORTSDIR}/databases/p5-GDBM
 
 USES=		perl5
+NO_STAGE=	yes
 CFLAGS=		-I${LOCALBASE}/include -L. -L${LOCALBASE}/lib
 MAKE_ENV=	VPATH=common
 PORTDOCS=	README
