@@ -1,5 +1,5 @@
 # Created by: Emmanuel Richiardone (err@tollari.org)
-# $FreeBSD: devel/bufferpool/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/bufferpool/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bufferpool
 PORTVERSION=	0.0.4
@@ -15,4 +15,5 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=	pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
