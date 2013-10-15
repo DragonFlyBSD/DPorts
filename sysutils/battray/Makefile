@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/battray
-# Date created:				2011-08-30
-# Whom:					Martin Tournoij <martin@arp242.net>
-#
-# $FreeBSD: ports/sysutils/battray/Makefile,v 1.5 2012/11/17 06:01:25 svnexp Exp $
-#
+# Created by: Martin Tournoij <martin@arp242.net>
+# $FreeBSD: sysutils/battray/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	battray
 PORTVERSION=	1.5
@@ -21,4 +17,5 @@ USE_PYDISTUTILS=yes
 
 MAN1=		battray.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
