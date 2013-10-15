@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <lewiz@compsoc.man.ac.uk>
-# $FreeBSD: misc/esniper/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: misc/esniper/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	esniper
 DISTVERSION=	2-28-0
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/esniper
 
 PORTEXAMPLES=	sample_auction.txt sample_config.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
