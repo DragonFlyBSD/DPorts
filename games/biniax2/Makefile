@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/biniax2/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/biniax2/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	biniax2
 PORTVERSION=	1.30
@@ -16,6 +16,7 @@ USE_SDL=	sdl mixer image
 USE_DOS2UNIX=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/data/Thumbs.db
 	@${REINPLACE_CMD} -e 's|data/|${DATADIR}/|g' \
