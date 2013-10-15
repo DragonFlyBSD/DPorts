@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Deflater/Makefile 324545 2013-08-10 15:35:19Z kuriyama $
+# $FreeBSD: www/p5-Plack-Middleware-Deflater/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-Deflater
 PORTVERSION=	0.11
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Deflater.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
