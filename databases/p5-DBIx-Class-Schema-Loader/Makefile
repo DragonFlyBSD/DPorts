@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 325045 2013-08-20 12:17:29Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-Schema-Loader
 PORTVERSION=	0.07036
@@ -90,6 +90,7 @@ MAN3=	DBIx::Class::Schema::Loader.3 \
 	DBIx::Class::Schema::Loader::Table::Informix.3 \
 	DBIx::Class::Schema::Loader::Table::Sybase.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
