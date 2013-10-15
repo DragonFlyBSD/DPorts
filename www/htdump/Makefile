@@ -1,9 +1,5 @@
-# Ports collection makefile for:  htdump
-# Date created:                   Tue Feb 20, 2001
-# Whom:                           Maxime Henrion (mux@FreeBSD.org)
-#
-# $FreeBSD: www/htdump/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Maxime Henrion (mux@FreeBSD.org)
+# $FreeBSD: www/htdump/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	htdump
 PORTVERSION=	0.9x
@@ -20,6 +16,7 @@ OPTIONS_DEFAULT=SSL
 CFLAGS+=	${CPPFLAGS}
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LFLAGS="-s ${LDFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
