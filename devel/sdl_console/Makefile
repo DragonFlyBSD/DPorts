@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/sdl_console/Makefile 317876 2013-05-11 13:49:05Z bapt $
+# $FreeBSD: devel/sdl_console/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	sdl_console
 PORTVERSION=	2.1
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 OPTIONS_DEFINE=	SDL_IMAGE
 SDL_IMAGE_DESC=	SDL Image support
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/objformat/s/aout/elf/' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
