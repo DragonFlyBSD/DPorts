@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/rtf2html/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: textproc/rtf2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rtf2html
 DISTVERSION=	1.1b
@@ -13,6 +13,7 @@ PLIST_FILES=	bin/rtf2html
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}
 
