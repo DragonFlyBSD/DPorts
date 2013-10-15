@@ -1,9 +1,5 @@
-# Ports collection makefile for:  dcetest
-# Date created:			  Jan 11 2003
-# Whom:				  Yonatan <onatan@gmail.com>
-#
-# $FreeBSD: ports/security/dcetest/Makefile,v 1.5 2012/11/17 06:01:03 svnexp Exp $
-#
+# Created by: Yonatan <onatan@gmail.com>
+# $FreeBSD: security/dcetest/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	dcetest
 PORTVERSION=	1.2
@@ -20,6 +16,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/dcetest
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dcetest ${PREFIX}/bin
 
