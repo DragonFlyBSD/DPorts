@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-control-center/Makefile 327108 2013-09-12 20:18:06Z kwm $
+# $FreeBSD: sysutils/gnome-control-center/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.214 2010/11/18 11:46:09 kwm Exp $
 
 PORTNAME=	gnome-control-center
@@ -43,6 +43,7 @@ GCONF_SCHEMAS=	control-center.schemas fontilus.schemas \
 WITH_GNOME=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mevolutiondataserver}!=""
