@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: net/py-ndg_httpsclient/Makefile 316625 2013-04-26 16:43:59Z olivierd $
-#
+# $FreeBSD: net/py-ndg_httpsclient/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ndg_httpsclient
 PORTVERSION=	0.3.2
@@ -18,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}openssl>=0.13:${PORTSDIR}/security/py-openss
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
