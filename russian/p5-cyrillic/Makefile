@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev
-# $FreeBSD: russian/p5-cyrillic/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: russian/p5-cyrillic/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	cyrillic
 PORTVERSION=	2.09
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	cyrillic.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
