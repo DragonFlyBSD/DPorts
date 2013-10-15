@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-runkit
-# Date created:				4 Aug 2005
-# Whom:					Elias Mandouvalos <ocean@mail.gr>
-#
-# $FreeBSD: devel/pecl-runkit/Makefile 322581 2013-07-09 21:26:48Z pav $
-#
+# Created by: Elias Mandouvalos <ocean@mail.gr>
+# $FreeBSD: devel/pecl-runkit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	runkit
 PORTVERSION=	0.9
@@ -24,4 +20,5 @@ DEFAULT_PHP_VER=53
 
 CONFIGURE_ARGS=	--enable-runkit=classkit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
