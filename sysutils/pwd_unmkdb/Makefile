@@ -1,5 +1,5 @@
 # Created by: Matthew Fuller <fullermd@over-yonder.net>
-# $FreeBSD: sysutils/pwd_unmkdb/Makefile 322024 2013-06-29 04:33:46Z ak $
+# $FreeBSD: sysutils/pwd_unmkdb/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pwd_unmkdb
 PORTVERSION=	1.3.1
@@ -13,6 +13,7 @@ COMMENT=	Recover a master.passwd from the hashed database
 MAN8=		pwd_unmkdb.8
 PLIST_FILES=	sbin/pwd_unmkdb
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pwd_unmkdb ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/pwd_unmkdb.8 ${MAN8PREFIX}/man/man8
