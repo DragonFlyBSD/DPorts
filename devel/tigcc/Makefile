@@ -1,5 +1,5 @@
 # Created by: Ben Haga <tuximus@tuximus.mine.nu>
-# $FreeBSD: devel/tigcc/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/tigcc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tigcc
 PORTVERSION=	0.96.b8
@@ -22,6 +22,7 @@ USE_GMAKE=	yes
 USES=		bison
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${MKDIR} ${WRKSRC}/tigcc
