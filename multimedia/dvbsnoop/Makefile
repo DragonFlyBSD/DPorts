@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dvbsnoop
-# Date created:		2009 January 12
-# Whom:			J.R. Oldroyd <fbsd@opal.com>
-#
-# $FreeBSD: ports/multimedia/dvbsnoop/Makefile,v 1.4 2012/11/17 05:59:48 svnexp Exp $
-#
+# Created by: J.R. Oldroyd <fbsd@opal.com>
+# $FreeBSD: multimedia/dvbsnoop/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dvbsnoop
 PORTVERSION=	1.4.50
@@ -22,6 +18,7 @@ USE_GMAKE=	yes
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
