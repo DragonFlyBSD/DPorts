@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/comfortaa-ttf/Makefile 322051 2013-06-29 18:10:30Z rakuco $
+# $FreeBSD: x11-fonts/comfortaa-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	comfortaa-ttf
 PORTVERSION=	2.004
@@ -26,6 +26,7 @@ SUB_FILES=	pkg-message
 SUB_LIST=	FONTDIR=${FONTDIR}
 WRKSRC=		${WRKDIR}/Comfortaa
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}/ && \
 		${LOCALBASE}/bin/mkfontscale && \
