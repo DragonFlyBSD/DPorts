@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/mail/xpi-displayquota/Makefile,v 1.15 2012/11/17 20:23:10 svnexp Exp $
+# $FreeBSD: mail/xpi-displayquota/Makefile 327810 2013-09-21 12:12:51Z flo $
 
 PORTNAME=	displayquota
-PORTVERSION=	0.3.5
+PORTVERSION=	0.3.6
 DISTVERSIONSUFFIX=	-tb
 CATEGORIES=	mail
 
@@ -20,5 +20,6 @@ XPI_DIRS=	defaults/preferences \
 		defaults \
 		chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
