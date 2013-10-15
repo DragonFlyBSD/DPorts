@@ -1,5 +1,5 @@
 # Created by: Alexander Matey <matey@cis.ohio-state.edu>
-# $FreeBSD: x11/xxkb/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: x11/xxkb/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xxkb
 PORTVERSION=	1.11
@@ -21,6 +21,7 @@ PORTDOCS=	README CHANGES.ru README.ru
 
 OPTIONS_DEFINE=	LIBRSVG2 DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLIBRSVG2}
