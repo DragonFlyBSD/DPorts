@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/pipepanic/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/pipepanic/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pipepanic
 PORTVERSION=	0.1.3
@@ -20,6 +20,7 @@ PORTDOCS=	README
 DATAFILES=	ascii15.bmp ascii30.bmp digits24.bmp \
 		digits48.bmp tiles24.bmp tiles48.bmp
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
