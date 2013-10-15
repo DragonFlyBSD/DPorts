@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rash/Makefile 321840 2013-06-27 02:38:27Z clsung $
+# $FreeBSD: devel/rubygem-rash/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rash
 PORTVERSION=	0.4.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
