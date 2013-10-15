@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openam
-# Date created:		Tue May  2 15:43:02 BST 2000
-# Whom:			Roger Hardiman <roger@FreeBSD.org>
-#
-# $FreeBSD: ports/net/openam/Makefile,v 1.38 2012/11/17 06:00:08 svnexp Exp $
-#
+# Created by: Roger Hardiman <roger@FreeBSD.org>
+# $FreeBSD: net/openam/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	openam
 PORTVERSION=	1.1.18
@@ -31,6 +27,7 @@ MAKE_ARGS=	OSTYPE=${OPSYS} MACHTYPE=${ARCH:S/i386/x86/} \
 PLIST_SUB=	PORTNAME=${PORTNAME}
 DOCSDIR=	${PREFIX}/share/doc/openh323
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/obj_r/openam ${PREFIX}/bin
 	@${MKDIR} ${DOCSDIR}/${PORTNAME}
