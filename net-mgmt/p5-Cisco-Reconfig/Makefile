@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Cisco-Reconfig
-# Date created:		2006-08-25
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: net-mgmt/p5-Cisco-Reconfig/Makefile 326167 2013-09-03 16:18:49Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net-mgmt/p5-Cisco-Reconfig/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Cisco-Reconfig
 PORTVERSION=	0.91
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Cisco::Reconfig.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
