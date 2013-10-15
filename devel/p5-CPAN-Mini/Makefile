@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Mini/Makefile 326737 2013-09-08 14:54:41Z tobez $
+# $FreeBSD: devel/p5-CPAN-Mini/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPAN-Mini
 PORTVERSION=	1.111013
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 MAN1=	minicpan.1
 MAN3=	CPAN::Mini.3 CPAN::Mini::App.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
