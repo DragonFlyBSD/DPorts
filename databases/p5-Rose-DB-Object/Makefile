@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-Rose-DB-Object/Makefile 325578 2013-08-29 09:31:17Z tobez $
+# $FreeBSD: databases/p5-Rose-DB-Object/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Rose-DB-Object
 PORTVERSION=	0.8070
@@ -99,4 +99,5 @@ MAN3=		Rose::DB::Object.3 \
 		Rose::DB::Object::Tutorial.3 \
 		Rose::DB::Object::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
