@@ -1,4 +1,4 @@
-# $FreeBSD: www/flood/Makefile 322372 2013-07-06 09:04:54Z ohauer $
+# $FreeBSD: www/flood/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	flood
 PORTVERSION=	0.20041105
@@ -27,6 +27,7 @@ EX_DATA=	flood.dtd relative-averages-time.awk round-robin-dynamic.xml \
 		round-robin-relative-reports.xml round-robin-ssl.xml \
 		round-robin-timed.xml round-robin.xml
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 .for f in ${EX_SCRIPTS}
