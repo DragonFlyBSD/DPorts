@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ftpcopy
-# Date created:				5 June 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ftp/ftpcopy/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: ftp/ftpcopy/Makefile 329633 2013-10-06 22:06:43Z mandree $
 
 PORTNAME=	ftpcopy
 PORTVERSION=	0.6.7
@@ -18,7 +14,7 @@ USE_PERL5=	build
 
 WRKSRC=		${WRKDIR}/web/${DISTNAME}
 
-MAN1=		ftpcopy.1 ftpcp.1 ftpls.1
+.include <bsd.port.options.mk>
 
 pre-build:
 	${ECHO} "${CC}" >${WRKSRC}/src/conf-cc
@@ -27,14 +23,14 @@ pre-build:
 
 do-install:
 	cd ${WRKSRC}/compile && \
-		${INSTALL_PROGRAM} ftpcopy ftpls ${PREFIX}/bin && \
-		${INSTALL_MAN} ${MAN1} ${PREFIX}/man/man1 && \
-		${INSTALL_SCRIPT} ftpcp ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR} && \
+		${INSTALL_PROGRAM} ftpcopy ftpls ${STAGEDIR}${PREFIX}/bin && \
+		${INSTALL_MAN} *.1 ${STAGEDIR}${PREFIX}/man/man1 && \
+		${INSTALL_SCRIPT} ftpcp ${STAGEDIR}${PREFIX}/bin
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR} && \
 	cd ${WRKSRC}/compile && \
 		${INSTALL_DATA} ChangeLog NEWS \
-			README THANKS ftpcopy.html ftpls.html ${DOCSDIR}
+			README THANKS ftpcopy.html ftpls.html ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
