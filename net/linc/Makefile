@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/linc/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/linc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	linc
 PORTVERSION=	1.0.3
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS/ s|docs||' ${WRKSRC}/Makefile.in
 
