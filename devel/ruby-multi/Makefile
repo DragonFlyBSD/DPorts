@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-multi
-# Date created:		24 Marth 2008
-# Whom:			Stanislav Sedov <stas@FreeBSD.org>
-#
-# $FreeBSD: devel/ruby-multi/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Stanislav Sedov <stas@FreeBSD.org>
+# $FreeBSD: devel/ruby-multi/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	multi
 PORTVERSION=	0.1
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 EXAMPLES=	multi_example.rb
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/multi.rb ${RUBY_SITELIBDIR}/
 	${INSTALL_DATA} ${WRKSRC}/smulti.rb ${RUBY_SITELIBDIR}/
