@@ -1,6 +1,5 @@
 # Created by: Wu Ching-hong <woju@freebsd.ee.ntu.edu.tw>
-# 				  and David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net/queso/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/queso/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	queso
 PORTVERSION=	980922
@@ -17,6 +16,7 @@ OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
