@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/thegrind/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/thegrind/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	thegrind
 PORTVERSION=	0.1.2
@@ -36,6 +36,7 @@ PORTDOCS=	ChangeLog
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
