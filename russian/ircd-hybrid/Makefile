@@ -1,5 +1,5 @@
 # Created by: Evgueni V. Gavrilov <aquatique@rusunix.org>
-# $FreeBSD: russian/ircd-hybrid/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: russian/ircd-hybrid/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	ircd
 PORTVERSION=	7.2.4
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=--with-topiclen=${TOPICLENGTH}
 CONFIGURE_ARGS+=--with-maxconn=${MAXCONN}
 .endif
 
+NO_STAGE=	yes
 pre-extract:
 	@${ECHO_MSG} "* * * Build options for ircd-hybrid-ru * * *"
 	@${ECHO_MSG} "Issue make WITH_SMALL_NET=yes to build server optimized for small network"
