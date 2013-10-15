@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: devel/k8048/Makefile 326282 2013-09-04 15:09:54Z mi $
+# $FreeBSD: devel/k8048/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	k8048
 PORTVERSION=	2.13
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/${PORTNAME} bin/kio ${BIN_SYMLINKS}
 
 BIN_SYMLINKS=	bin/k12 bin/k14 bin/k16 bin/ktest
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CC=|CC?=| ; \
