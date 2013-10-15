@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-List-Cycle/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-List-Cycle/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	List-Cycle
 PORTVERSION=	1.02
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	List::Cycle.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
