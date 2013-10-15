@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-DOM2/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-DOM2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-DOM2
 PORTVERSION=	0.06
@@ -27,4 +27,5 @@ MAN3=		XML::DOM2::Attribute.3 XML::DOM2::Element.3 \
 		XML::DOM2::DOM::Element.3 XML::DOM2::Element::Comment.3 \
 		XML::DOM2::DOM::Attribute.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
