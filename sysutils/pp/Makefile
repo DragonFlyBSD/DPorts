@@ -1,5 +1,5 @@
 # Created by: Artem Zaytsev <a.arepo@gmail.com>
-# $FreeBSD: sysutils/pp/Makefile 316101 2013-04-19 13:19:45Z culot $
+# $FreeBSD: sysutils/pp/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pp
 PORTVERSION=	1.03
@@ -17,4 +17,5 @@ USE_BZIP2=	yes
 
 PLIST_FILES=	bin/pp
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
