@@ -1,9 +1,5 @@
-# Ports collection makefile for: ocaml-ounit
-# Date created:        28th February 2006
-# Whom:                Meikel Brandmeyer <ocaml-ounit-port@kotka.de>
-#
-# $FreeBSD: ports/devel/ocaml-ounit/Makefile,v 1.5 2012/11/17 05:56:02 svnexp Exp $
-#
+# Created by: Meikel Brandmeyer <ocaml-ounit-port@kotka.de>
+# $FreeBSD: devel/ocaml-ounit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ounit
 PORTVERSION=	1.0.3
@@ -27,6 +23,7 @@ ALL_TARGET=	all allopt testall doc
 
 MAKE_ENV=	OCAMLFIND_DESTDIR=${PREFIX}/lib/ocaml/site-lib
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${ECHO_MSG} "==>  Installing port documentation for ${PKGORIGIN}..."
