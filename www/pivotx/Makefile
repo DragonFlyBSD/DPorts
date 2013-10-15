@@ -1,5 +1,5 @@
 # Created by: Fumiyuki Shimizu <fumifumi@abacustech.jp>
-# $FreeBSD: www/pivotx/Makefile 324656 2013-08-13 11:23:29Z wg $
+# $FreeBSD: www/pivotx/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pivotx
 PORTVERSION=	2.3.7
@@ -18,6 +18,7 @@ LICENSE=	GPLv2
 PORTDOCS=	LICENSE.txt README.txt
 PORTEXAMPLES=	example.htaccess example.web.config
 
+NO_STAGE=	yes
 # Requirements:
 # http://book.pivotx.net/index.php?page=app-e#anchor-determining-if-your-server-meets-pivotxs-requirements
 
