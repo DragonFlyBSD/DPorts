@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize-FormFiller/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Mechanize-FormFiller/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Mechanize-FormFiller
 PORTVERSION=	0.10
@@ -31,4 +31,5 @@ MAN3=	WWW::Mechanize::FormFiller.3 \
 	WWW::Mechanize::FormFiller::Value::Random::Date.3 \
 	WWW::Mechanize::FormFiller::Value::Random::Word.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
