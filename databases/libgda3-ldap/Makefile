@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libgda2
-# Date created:				02 June 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/libgda3-ldap/Makefile,v 1.5 2012/11/17 05:55:09 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: databases/libgda3-ldap/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/databases/libgda3-ldap/Makefile,v 1.2 2008/02/26 21:23:34 kwm Exp $
-#
 
 PORTREVISION?=	2
 CATEGORIES=	databases gnome
@@ -20,4 +16,5 @@ PLIST=		${.CURDIR}/pkg-plist
 
 LIBGDA3_SLAVE=	ldap
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
