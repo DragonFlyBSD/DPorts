@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: science/getdp/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: science/getdp/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	getdp
 PORTVERSION=	2.2.1
@@ -30,6 +30,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		getdp.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	cd ${WRKSRC}/doc && ${FIND} -s ${WRKSRC}/doc/* | ${SED} -e 's#${WRKSRC}/doc/##' | ${CPIO} -pmud -R ${BINOWN}:${BINGRP} ${DOCSDIR}
