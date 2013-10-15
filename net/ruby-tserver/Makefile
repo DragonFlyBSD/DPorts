@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/TServer
-# Date created:		13 November 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: net/ruby-tserver/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: net/ruby-tserver/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tserver
 PORTVERSION=	0.2.1
@@ -21,6 +17,7 @@ RUBY_SHEBANG_FILES=	${WRKSRC}/sample/*
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/tserver.rb ${RUBY_SITELIBDIR}/
 .if !defined(NOPORTDOCS)
