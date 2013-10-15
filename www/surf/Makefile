@@ -1,10 +1,11 @@
 # Created by: Christopher Knaust <jigboe@gmx.de>
-# $FreeBSD: www/surf/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/surf/Makefile 329095 2013-10-02 18:34:38Z bapt $
 
 PORTNAME=	surf
 PORTVERSION=	0.6
 CATEGORIES=	www
 MASTER_SITES=	http://dl.suckless.org/${PORTNAME}/
+PKGNAMESUFFIX=	-browser
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple Web browser based on WebKit/Gtk+
@@ -32,6 +33,7 @@ CONFLICTS=	surf-1* # math/surf
 # Name conflicts with the math/surf port
 NO_LATEST_LINK=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-everything::
