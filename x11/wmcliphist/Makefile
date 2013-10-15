@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: x11/wmcliphist/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: x11/wmcliphist/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	wmcliphist
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ USES=		pkgconfig
 USE_XORG=	xpm
 USE_GNOME=	gtk20
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	@${MKDIR} ${EXAMPLESDIR}
