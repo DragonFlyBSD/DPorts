@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ksshaskpass
-# Date created:		2010-12-26
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: deskutils/ksshaskpass/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: deskutils/ksshaskpass/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	ksshaskpass
 PORTVERSION=	0.5.3
@@ -23,6 +19,7 @@ USE_QT4=	moc_build uic_build qmake_build rcc_build
 MAN1=		ksshaskpass.1
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
