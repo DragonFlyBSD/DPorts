@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/kdenetwork4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/kdenetwork4/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	kdenetwork
 PORTVERSION=	${KDE4_VERSION}
@@ -43,6 +43,7 @@ KOPETE_DESC=	Multi-protocol instant messenger
 KRDC_DESC=	RDP and VNC client for KDE
 KRFB_DESC=	VNC server for KDE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKOPETE}
