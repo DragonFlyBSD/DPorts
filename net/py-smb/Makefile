@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/py-smb/Makefile 325581 2013-08-29 10:09:37Z rm $
+# $FreeBSD: net/py-smb/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	smb
 PORTVERSION=	1.1.6
@@ -20,6 +20,7 @@ PYDISTUTILS_PKGNAME=	py${PORTNAME}
 
 DOCSDIR=	${PREFIX}/share/doc/py-smb
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
