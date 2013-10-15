@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/burgerspace/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: games/burgerspace/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	burgerspace
 PORTVERSION=	1.9.2
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN6=		burgerspace.6 burgerspace-server.6
 PORTDOCS=	AUTHORS COPYING INSTALL NEWS README THANKS TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
