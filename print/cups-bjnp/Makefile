@@ -1,5 +1,4 @@
-# $FreeBSD: print/cups-bjnp/Makefile 325426 2013-08-27 00:35:46Z db $
-#
+# $FreeBSD: print/cups-bjnp/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	cups-bjnp
 PORTVERSION=	1.2.1
@@ -17,4 +16,5 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
