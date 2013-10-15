@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/devel/netscape-java40/Makefile,v 1.8 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/netscape-java40/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	netscape-java40
 PORTVERSION=	1999.11.15
@@ -20,6 +20,7 @@ JARFILES=	java40.jar LICENSE.java40.txt
 
 PLIST_FILES=	${JARFILES:S|^|%%JAVAJARDIR%%/|}
 
+NO_STAGE=	yes
 post-extract:
 	${MV} ${WRKSRC}/License ${WRKSRC}/LICENSE.java40.txt
 
