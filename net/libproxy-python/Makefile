@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libproxy-python
-# Date created:		11 Januari 2011
-# Whom:			Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: ports/net/libproxy-python/Makefile,v 1.2 2012/11/17 06:00:05 svnexp Exp $
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: net/libproxy-python/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #    $MCom: ports/net/libproxy-python/Makefile,v 1.1 2011/01/12 13:10:54 kwm Exp $
 
 PORTREVISION=	0
@@ -21,6 +18,7 @@ USE_PYTHON=	2.5+
 
 LIBPROXY_SLAVE=	python
 
+NO_STAGE=	yes
 do-build:
 # empty	
 
