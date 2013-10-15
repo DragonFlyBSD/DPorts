@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: math/alt-ergo/Makefile 314582 2013-03-18 16:11:34Z bf $
+# $FreeBSD: math/alt-ergo/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	alt-ergo
 PORTVERSION=	0.94
@@ -27,6 +27,7 @@ MAN1=	alt-ergo.1
 OPTIONS_DEFINE=		GUI
 OPTIONS_DEFAULT=	GUI
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
