@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	PyMT
-# Date created:			Dec 8, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: www/py-mt/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: ijliao
+# $FreeBSD: www/py-mt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mt
 PORTVERSION=	1.0
@@ -20,6 +15,7 @@ USE_PYTHON=	-2.7
 NO_BUILD=	yes
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/PyMT.py
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/PyMT.py ${PYTHON_SITELIBDIR}
 
