@@ -1,6 +1,5 @@
 # Created by: joerg
-# $FreeBSD: emulators/cpmtools/Makefile 320434 2013-06-10 06:06:03Z joerg $
-#
+# $FreeBSD: emulators/cpmtools/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	cpmtools
 PORTVERSION=	1.1
@@ -20,6 +19,7 @@ USE_GCC=	any
 #
 # need our own build target to pass PREFIX down to the make command
 #
+NO_STAGE=	yes
 do-build:
 	@(cd ${WRKSRC}; ${MAKE} PREFIX=${PREFIX} ${MAKE_FLAGS} ${MAKEFILE} all)
 
