@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/madbomber/Makefile 314191 2013-03-14 23:14:38Z beech $
+# $FreeBSD: games/madbomber/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	madbomber
 PORTVERSION=	0.2.5
@@ -24,6 +24,7 @@ DESKTOP_ENTRIES="Mad Bomber" "${COMMENT}" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
