@@ -1,9 +1,5 @@
-# New ports collection makefile for:	FAQ::OMatic
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: www/p5-FAQ-OMatic/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: www/p5-FAQ-OMatic/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	FAQ-OMatic
 PORTVERSION=	2.719
@@ -19,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		FAQ::OMatic::API.3
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${WRKSRC}/install.notes
 
