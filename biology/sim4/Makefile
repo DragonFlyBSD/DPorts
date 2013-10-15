@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/sim4/Makefile 321290 2013-06-19 16:36:53Z bsam $
+# $FreeBSD: biology/sim4/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	sim4
 PORTVERSION=	2003.09.21
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/sim4.${PORTVERSION:S/./-/g}
 ALL_TARGET=	sim4
 PLIST_FILES=	bin/sim4
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|^CC=|CC?=|g ; \
 		s|^CFLAGS=|CFLAGS+=|g' ${WRKSRC}/Makefile
