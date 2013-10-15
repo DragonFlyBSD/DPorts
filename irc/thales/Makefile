@@ -1,9 +1,5 @@
-# Ports collection makefile for:	GNU Thales
-# Date created:				30 May 2004
-# Whom:					Gerrit Beine <tux@pinguru.net>
-#
-# $FreeBSD: ports/irc/thales/Makefile,v 1.10 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Gerrit Beine <tux@pinguru.net>
+# $FreeBSD: irc/thales/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	thales
 PORTVERSION=	1.0
@@ -63,6 +59,7 @@ post-patch: .SILENT
 	${REINPLACE_CMD} -e 's,thales.conf,${PREFIX}/etc/&,' \
 		${WRKSRC}/src/conf.h
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/src/thales ${PREFIX}/sbin
