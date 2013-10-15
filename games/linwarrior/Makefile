@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/linwarrior/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/linwarrior/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	linwarrior
 PORTVERSION=	20100320
@@ -27,6 +27,7 @@ DESKTOP_ENTRIES="LinWarrior 3D" \
 		"Game;ActionGame;Simulation;" \
 		false
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type d -exec chmod a+rx {} \;
 	@${FIND} ${WRKSRC} -type f -exec chmod a+r {} \;
