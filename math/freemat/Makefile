@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/freemat/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: math/freemat/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=		FreeMat
 PORTVERSION=		4.0
@@ -56,6 +56,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/libavcall.a:${PORTSDIR}/devel/ffcall
 LIB_DEPENDS+=	portaudio.0:${PORTSDIR}/audio/portaudio
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800023
