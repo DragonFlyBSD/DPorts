@@ -1,9 +1,5 @@
-# New ports collection makefile for:    nopastectl
-# Date created:		12 January 2007
-# Whom:			Aron Schlesinger <as@bsdgroup.de>
-#
-# $FreeBSD: ports/german/bsdpaste/Makefile,v 1.5 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Aron Schlesinger <as@bsdgroup.de>
+# $FreeBSD: german/bsdpaste/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	bsdpaste
 PORTVERSION=	1.0.1
@@ -20,6 +16,7 @@ USE_RUBY_FEATURES=	ruby18
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bsdpaste.rb ${PREFIX}/bin/bsdpaste
 
