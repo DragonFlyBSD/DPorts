@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Eval-WithLexicals/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-Eval-WithLexicals/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Eval-WithLexicals
 PORTVERSION=	1.002000
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=	Eval::WithLexicals.3 \
 	Eval::WithLexicals::WithHintPersistence.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
