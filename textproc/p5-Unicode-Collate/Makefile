@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-Collate/Makefile 326008 2013-09-02 15:12:56Z sunpoet $
+# $FreeBSD: textproc/p5-Unicode-Collate/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	Unicode-Collate
 PORTVERSION=	0.99
@@ -16,15 +16,5 @@ LICENSE_COMB=	dual
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Unicode::Collate.3 \
-		Unicode::Collate::CJK::Big5.3 \
-		Unicode::Collate::CJK::GB2312.3 \
-		Unicode::Collate::CJK::JISX0208.3 \
-		Unicode::Collate::CJK::Korean.3 \
-		Unicode::Collate::CJK::Pinyin.3 \
-		Unicode::Collate::CJK::Stroke.3 \
-		Unicode::Collate::CJK::Zhuyin.3 \
-		Unicode::Collate::Locale.3
 
 .include <bsd.port.mk>
