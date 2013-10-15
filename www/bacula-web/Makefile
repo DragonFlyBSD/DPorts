@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@langille.org>
-# $FreeBSD: www/bacula-web/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: www/bacula-web/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bacula-web
 DISTVERSION=	1.38.9
@@ -22,6 +22,7 @@ OPTIONS_DEFAULT=	PGSQL
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGSQL}
