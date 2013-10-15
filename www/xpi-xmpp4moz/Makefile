@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-xmpp4moz
-# Date created:		3 April 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-xmpp4moz/Makefile,v 1.9 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-xmpp4moz/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xmpp4moz
 PORTVERSION=	0.5.2.2007113019
@@ -16,5 +12,6 @@ COMMENT=	Support for XMPP
 XPI_ID=		xmpp4moz@hyperstruct.net
 XPI_NUM=	3632
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
