@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: misc/rubygem-vpim/Makefile 321509 2013-06-21 23:51:42Z swills $
+# $FreeBSD: misc/rubygem-vpim/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	vpim
 PORTVERSION=	0.695
@@ -15,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/reminder bin/rrule
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
