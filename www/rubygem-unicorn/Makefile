@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-unicorn/Makefile 321778 2013-06-26 02:45:00Z swills $
+# $FreeBSD: www/rubygem-unicorn/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	unicorn
 PORTVERSION=	4.6.3
@@ -18,4 +18,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/unicorn bin/unicorn_rails
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
