@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: net/pure-sockets/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: net/pure-sockets/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pure-sockets
 PORTVERSION=	0.6
@@ -13,5 +13,6 @@ USE_PURE=	yes
 PLIST_FILES=	lib/pure/sockets.pure \
 		lib/pure/sockets.so
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
