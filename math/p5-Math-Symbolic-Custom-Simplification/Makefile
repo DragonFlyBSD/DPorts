@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-Symbolic-Custom-Simplification
-# Date created:				15 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: math/p5-Math-Symbolic-Custom-Simplification/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Symbolic-Custom-Simplification/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Symbolic-Custom-Simplification
 PORTVERSION=	1.01
@@ -22,4 +18,5 @@ MAN3=	Math::Symbolic::Custom::Simplification.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
