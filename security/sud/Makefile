@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sud
-# Date created:				20 Sep 2004
-# Whom:					bugghy <bugghy@SAFe-mail.net>
-#
-# $FreeBSD: ports/security/sud/Makefile,v 1.5 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: bugghy <bugghy@SAFe-mail.net>
+# $FreeBSD: security/sud/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sud
 PORTVERSION=	1.3
@@ -17,6 +13,7 @@ COMMENT=	Execute processes with special privileges in a nosuid environment
 GNU_CONFIGURE=	yes
 MAN1=		sud.1 suz.1 ilogin.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} > 900007
