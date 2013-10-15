@@ -1,5 +1,5 @@
 # Created by: Patrick Rinke <patrick@rinke-bochum.de>
-# $FreeBSD: sysutils/ucspi-unix/Makefile 323304 2013-07-19 15:16:31Z danfe $
+# $FreeBSD: sysutils/ucspi-unix/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ucspi-unix
 PORTVERSION=	0.36
@@ -25,6 +25,7 @@ PORTDOCS=	NEWS PROTOCOL README TODO
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch: .SILENT
