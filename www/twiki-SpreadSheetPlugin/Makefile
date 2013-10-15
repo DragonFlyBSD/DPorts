@@ -1,13 +1,10 @@
-# New ports collection makefile for:	twiki-SpreadSheetPlugin
-# Date created:		17 April 2008
-#
-# $FreeBSD: ports/www/twiki-SpreadSheetPlugin/Makefile,v 1.2 2012/11/17 06:03:09 svnexp Exp $
-#
+# $FreeBSD: www/twiki-SpreadSheetPlugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	SpreadSheetPlugin
 SVNREV=		16417
 
 COMMENT=	Spreadsheet capabilities in topics
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
