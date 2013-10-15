@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	WebService::Bloglines
 # Created by: ijliao
-# $FreeBSD: www/p5-WebService-Bloglines/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WebService-Bloglines/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-Bloglines
 PORTVERSION=	0.12
@@ -23,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	WebService::Bloglines.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
