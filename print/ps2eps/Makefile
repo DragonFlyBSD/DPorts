@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ps2eps
-# Date created:		2005-12-30
-# Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: print/ps2eps/Makefile 326272 2013-09-04 13:07:40Z az $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: print/ps2eps/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ps2eps
 PORTVERSION=	1.64
@@ -22,6 +18,7 @@ USES=		perl5
 USE_PERL5=	run
 MAN1=		ps2eps.1 bbox.1
 
+NO_STAGE=	yes
 do-build:
 	${CC} -o ${WRKSRC}/bbox ${WRKSRC}/src/C/bbox.c
 
