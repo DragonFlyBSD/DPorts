@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: net-im/p5-Net-AOLIM/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-Net-AOLIM/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-AOLIM
 PORTVERSION=	1.61
@@ -16,4 +16,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAN3=		Net::AOLIM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
