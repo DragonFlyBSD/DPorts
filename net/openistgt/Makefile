@@ -1,9 +1,5 @@
-# New ports collection makefile for:	istgt
-# Date created:		2009-02-23
-# Whom:			Daisuke Aoyama <aoyama@peach.ne.jp>
-#
-# $FreeBSD: ports/net/openistgt/Makefile,v 1.33 2012/11/17 06:00:08 svnexp Exp $
-#
+# Created by: Daisuke Aoyama <aoyama@peach.ne.jp>
+# $FreeBSD: net/openistgt/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	openistgt
 PORTVERSION=	20120516
@@ -35,6 +31,7 @@ PORTDOCS=	${DOCS:T}
 
 DOCS=		ChangeLog.jp README doc/QUICKSTART doc/QUICKSTART.jp
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e '/\/doc\/istgt/d' ${WRKSRC}/doc/Makefile.in
 
