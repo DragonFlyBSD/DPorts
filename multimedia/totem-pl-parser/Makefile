@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/totem-pl-parser/Makefile 326103 2013-09-02 22:03:38Z bapt $
+# $FreeBSD: multimedia/totem-pl-parser/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.45 2011/02/21 19:10:03 kwm Exp $
 
 PORTNAME=	totem-pl-parser
@@ -29,6 +29,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 OPTIONS_DEFINE=	QUVI
 QUVI_DESC=	Enable flash media stream URL support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQUVI}
