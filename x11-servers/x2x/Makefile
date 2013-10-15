@@ -1,5 +1,5 @@
 # Created by: grog
-# $FreeBSD: x11-servers/x2x/Makefile 322011 2013-06-28 22:58:59Z bapt $
+# $FreeBSD: x11-servers/x2x/Makefile 327782 2013-09-20 23:52:24Z bapt $
 
 PORTNAME=	x2x
 PORTVERSION=	1.27
@@ -15,4 +15,5 @@ USE_XORG=	x11 xext xtst
 MAN1=		x2x.1
 PLIST_FILES=	bin/x2x
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
