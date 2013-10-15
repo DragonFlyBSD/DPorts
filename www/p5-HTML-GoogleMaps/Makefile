@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	HTML::GoogleMaps
-# Date created:				2008-11-06
-# Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTML-GoogleMaps/Makefile 325965 2013-09-02 10:00:38Z az $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: www/p5-HTML-GoogleMaps/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-GoogleMaps
 PORTVERSION=	10
@@ -23,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		HTML::GoogleMaps.3
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name ".*.pm" -delete
 
