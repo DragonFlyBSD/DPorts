@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Test-Mini/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-Test-Mini/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Mini
 PORTVERSION=	v1.1.3
@@ -33,4 +33,5 @@ MAN3=	Test::Mini.3 \
 	Test::Mini::TestCase.3 \
 	Test::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
