@@ -1,5 +1,5 @@
 # Created by: Anderson Soares Ferreira <anderson@cnpm.embrapa.br>
-# $FreeBSD: www/drupal6-imce/Makefile 322743 2013-07-11 05:53:09Z bapt $
+# $FreeBSD: www/drupal6-imce/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	imce
 DISTVERSION=	6.x-1.4
@@ -54,4 +54,5 @@ MODULE_FILES=	translations/uk.po \
 
 DOC_FILES=	README.txt LICENSE.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
