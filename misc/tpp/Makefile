@@ -1,8 +1,5 @@
-# New ports collection makefile for:	tpp
-# Date created:				2004-08-30
-# Whom:					arved
-#
-# $FreeBSD: ports/misc/tpp/Makefile,v 1.7 2012/11/17 05:59:45 svnexp Exp $
+# Created by: arved
+# $FreeBSD: misc/tpp/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	tpp
 PORTVERSION=	1.3.1
@@ -21,4 +18,5 @@ RUBY_NO_BUILD_DEPENDS=	yes
 
 MAN1=	tpp.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
