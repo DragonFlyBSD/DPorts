@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: emulators/ia64sim/Makefile 324139 2013-08-02 04:17:33Z danfe $
+# $FreeBSD: emulators/ia64sim/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	ia64sim
 PORTVERSION=	0.5
@@ -23,6 +23,7 @@ PORTDOCS=	ia64user.txt readme
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-build:
