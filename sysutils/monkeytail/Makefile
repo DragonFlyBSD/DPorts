@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/monkeytail/Makefile 326573 2013-09-07 06:47:20Z az $
+# $FreeBSD: sysutils/monkeytail/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	monkeytail
 PORTVERSION=	0.3.2
@@ -25,6 +25,7 @@ PLIST_FILES=	bin/mtail
 MAN1=		mtail.1
 MAN5=		mtailrc.5
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mtail ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/mtail.1 ${MAN1PREFIX}/man/man1
