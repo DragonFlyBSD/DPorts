@@ -1,5 +1,5 @@
 # Created by: enigmatyc
-# $FreeBSD: shells/rssh/Makefile 322611 2013-07-10 04:05:14Z miwi $
+# $FreeBSD: shells/rssh/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	rssh
 PORTVERSION=	2.3.4
@@ -17,6 +17,7 @@ MAN5=		rssh.conf.5
 OPTIONS_DEFINE=	RDIST
 RDIST_DESC=	rdist support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRDIST}
