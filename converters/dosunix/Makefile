@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	dosunix
-# Date created:			Nov 17, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/converters/dosunix/Makefile,v 1.9 2012/11/17 05:55:02 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: converters/dosunix/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	dosunix
 PORTVERSION=	1.0.14
