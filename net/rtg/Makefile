@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rtg
-# Date created:				6 January 2004
-# Whom:					Brad Davis <so14k@so14k.com>
-#
-# $FreeBSD: ports/net/rtg/Makefile,v 1.17 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: Brad Davis <so14k@so14k.com>
+# $FreeBSD: net/rtg/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rtg
 PORTVERSION=	0.7.4
@@ -25,6 +21,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc/${PORTNAME} \
 			--with-mysql=${LOCALBASE} \
 			--with-snmp=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ( ${OSVERSION} >= 800040 )

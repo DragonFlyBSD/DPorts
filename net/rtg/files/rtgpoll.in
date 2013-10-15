@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/rtg/files/rtgpoll.in,v 1.4 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/rtg/files/rtgpoll.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: rtgpoll
 # REQUIRE: LOGIN mysql
