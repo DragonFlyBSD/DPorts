@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mingw32-zlib
-# Date created:		3 December 2011
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/mingw32-zlib/Makefile,v 1.5 2013/02/25 16:18:09 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/mingw32-zlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	zlib
 PORTVERSION=	1.2.7
@@ -29,4 +25,5 @@ MAKE_ARGS=	PREFIX=${PKGNAMEPREFIX} \
 		LIBRARY_PATH=${CROSS_BASE}/lib
 CROSS_BASE=	${PREFIX}/mingw32
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
