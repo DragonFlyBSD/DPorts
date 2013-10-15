@@ -1,4 +1,4 @@
-# $FreeBSD: print/latex-beamer/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/latex-beamer/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-beamer
 PORTVERSION=	3.07
@@ -24,6 +24,7 @@ CLASS_SUBDIRS=	base emulation emacs examples extensions lyx themes
 DOC_SUBDIRS=	AUTHORS ChangeLog FILES INSTALL README TODO \
 		doc solutions
 
+NO_STAGE=	yes
 pre-install:
 	${RM} -f ${PLIST}
 	${TOUCH} ${PLIST}
