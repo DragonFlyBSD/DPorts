@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: net/rwhoisd/Makefile 321813 2013-06-26 20:22:37Z feld $
+# $FreeBSD: net/rwhoisd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rwhoisd
 PORTVERSION=	1.5.9.6
@@ -38,6 +38,7 @@ ETCFILES=	rwhoisd.allow rwhoisd.auth_area rwhoisd.conf rwhoisd.deny \
 		rwhoisd.dir rwhoisd.root rwhoisd.x.dir
 PLIST_SUB+=	ETCFILES="${ETCFILES}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MIPV6)
