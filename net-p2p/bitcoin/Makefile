@@ -1,8 +1,8 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: net-p2p/bitcoin/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-p2p/bitcoin/Makefile 328082 2013-09-24 01:48:57Z swills $
 
 PORTNAME=	bitcoin
-PORTVERSION=	0.8.3
+PORTVERSION=	0.8.5
 CATEGORIES=	net-p2p finance
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://people.freebsd.org/~swills/ \
@@ -23,7 +23,7 @@ QRCODES_DESC=	Build with QR code display
 USE_GITHUB=	yes
 GH_ACCOUNT=	bitcoin
 GH_PROJECT=	bitcoin
-GH_COMMIT=	6a0ba5c
+GH_COMMIT=	8090e11
 GH_TAGNAME=	v${PORTVERSION}
 
 USE_GMAKE=	yes
@@ -35,6 +35,7 @@ CXXFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
 CXXFLAGS+=	-L${LOCALBASE}/lib -L${BDB_LIB_DIR}
 CXXFLAGS+=	-Wno-invalid-offsetof
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI} && !defined(WITHOUT_X11)
