@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/R-cran-R2HTML/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: textproc/R-cran-R2HTML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	R2HTML
 PORTVERSION=	2.2.1
@@ -15,4 +15,5 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
