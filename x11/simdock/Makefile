@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: x11/simdock/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/simdock/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	simdock
 PORTVERSION=	1.2
@@ -9,7 +9,7 @@ MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A fast and customizable dockbar
+COMMENT=	Fast and customizable dockbar
 
 GNU_CONFIGURE=	yes
 USES=		pathfix pkgconfig
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/trunk
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL LICENSE NEWS README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
