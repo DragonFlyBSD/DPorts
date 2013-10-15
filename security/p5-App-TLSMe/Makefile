@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-App-TLSMe/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-App-TLSMe/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	App-TLSMe
 PORTVERSION=	0.100000
@@ -24,4 +24,5 @@ MAN3=	App::TLSMe.3 \
 	App::TLSMe::Connection.3 \
 	App::TLSMe::Pool.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
