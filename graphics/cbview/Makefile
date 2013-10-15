@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/cbview/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: graphics/cbview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cbview
 PORTVERSION=	0.06
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	Changes README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
