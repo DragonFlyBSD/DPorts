@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Tree-Nary/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Tree-Nary/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		Tree-Nary
 PORTVERSION=		1.30
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=			Tree::Nary.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
