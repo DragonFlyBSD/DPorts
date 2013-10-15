@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Thunk/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Data-Thunk/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Thunk
 PORTVERSION=	0.07
@@ -27,4 +27,5 @@ MAN3=	Data::Thunk.3 \
 	Data::Thunk::Object.3 \
 	Data::Thunk::ScalarValue.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
