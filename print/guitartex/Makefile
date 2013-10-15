@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/guitartex/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: print/guitartex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	guitartex
 PORTVERSION=	2.8.2
@@ -19,6 +19,7 @@ RUN_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk \
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} -e 's!/usr/local/lib/guitartex!${DATADIR}!g' ${WRKSRC}/gtx2tex.pl
 	@${REINPLACE_CMD} -e 's!/usr/local/lib/guitartex!${DATADIR}!g' ${WRKSRC}/guitartex.pl
