@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sst
-# Date created:		Nov 7, 2000
-# Whom:			Mikhail Teterin <mi@aldan.algebra.com>
-#
-# $FreeBSD: security/sst/Makefile 321436 2013-06-21 03:10:20Z mi $
-#
+# Created by: Mikhail Teterin <mi@aldan.algebra.com>
+# $FreeBSD: security/sst/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sst
 PORTVERSION=	1.0
@@ -26,4 +22,5 @@ PLIST_FILES=	sbin/sst
 
 MAKEFILE=	${FILESDIR}/Makefile
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
