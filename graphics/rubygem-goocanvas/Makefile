@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-goocanvas/Makefile 320399 2013-06-09 18:53:36Z swills $
+# $FreeBSD: graphics/rubygem-goocanvas/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	goocanvas
 PORTVERSION=	2.0.2
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
