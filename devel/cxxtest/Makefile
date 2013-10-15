@@ -1,5 +1,5 @@
 # Created by: andrew morton
-# $FreeBSD: devel/cxxtest/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/cxxtest/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cxxtest
 PORTVERSION=	3.10.1
@@ -19,6 +19,7 @@ DOCS=		README TODO docs/*.html docs/*.png
 EXAMPLES=	sample/*.cpp sample/*.h sample/*.tpl sample/Construct \
 		sample/Makefile.unix sample/gui/GreenYellowRed.h
 
+NO_STAGE=	yes
 do-install:
 # scripts
 	@${MKDIR} ${PREFIX}/include/cxxtest
