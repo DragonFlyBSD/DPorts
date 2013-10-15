@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Twiggy/Makefile 324552 2013-08-10 16:49:03Z kuriyama $
+# $FreeBSD: www/p5-Twiggy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Twiggy
 PORTVERSION=	0.1023
@@ -27,4 +27,5 @@ MAN1=	twiggy.1
 MAN3=	Plack::Handler::Twiggy.3 \
 	Twiggy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
