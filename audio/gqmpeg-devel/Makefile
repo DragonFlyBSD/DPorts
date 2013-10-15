@@ -1,5 +1,5 @@
 # Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
-# $FreeBSD: audio/gqmpeg-devel/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: audio/gqmpeg-devel/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gqmpeg
 PORTVERSION=	0.91.1
@@ -27,6 +27,7 @@ RUN_DEPENDS+=	ogg123:${PORTSDIR}/audio/vorbis-tools
 .endif
 
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 LATEST_LINK=	gqmpeg-devel
 USE_XORG=	xext xrender xinerama xi xrandr xcursor xcomposite xdamage x11 \
 		xfixes xproto
