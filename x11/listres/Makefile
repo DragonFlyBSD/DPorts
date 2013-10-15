@@ -1,4 +1,4 @@
-# $FreeBSD: x11/listres/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/listres/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	listres
 PORTVERSION=	1.0.3
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/listres
 
 MAN1=		listres.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
