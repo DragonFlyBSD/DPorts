@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-hxt/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-hxt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	hxt
 PORTVERSION=	9.3.1.1
@@ -13,5 +13,6 @@ LICENSE=	MIT
 USE_CABAL=	HUnit>=1.2 hxt-charproperties>=9.1 hxt-regex-xmlschema>=9 \
 		hxt-unicode>=9.0.1 mtl>=2 network>=2.1 parsec>=2.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
