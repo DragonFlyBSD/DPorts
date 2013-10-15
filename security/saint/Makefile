@@ -1,5 +1,5 @@
 # Created by: Carl Johan Madestrand <calle.madestrand@norrgarden.se>
-# $FreeBSD: security/saint/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/saint/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	saint
 PORTVERSION=	3.5.8
@@ -25,6 +25,7 @@ MAKE_ENV=	"LIBS=-lrpcsvc" "XFLAGS=-g -O2   -DSTDC_HEADERS=1 -DGETGROUPS_T=gid_t 
 INSTALL_TARGET=	all
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
