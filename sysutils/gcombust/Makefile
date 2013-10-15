@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: sysutils/gcombust/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/gcombust/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gcombust
 PORTVERSION=	0.1.55
@@ -16,14 +16,15 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	cdlabelgen:${PORTSDIR}/print/cdlabelgen \
 		cdrecord:${PORTSDIR}/sysutils/cdrtools
 
-USES=		gettext
-USE_PERL5_BUILD=yes
+USES=		gettext perl5
+USE_PERL5=	build
 USE_GNOME=	gtk12 gnomehier
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--without-included-gettext --datadir=${PREFIX}/share
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-patch:
