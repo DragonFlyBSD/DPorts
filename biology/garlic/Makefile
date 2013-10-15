@@ -1,9 +1,5 @@
-# New ports collection makefile for:    garlic
-# Date created:         28 July 2003
-# Whom:                 maho@FreeBSD.org
-#
-# $FreeBSD: ports/biology/garlic/Makefile,v 1.17 2012/11/17 05:54:51 svnexp Exp $
-#
+# Created by: maho@FreeBSD.org
+# $FreeBSD: biology/garlic/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	garlic
 PORTVERSION=	1.6
@@ -29,6 +25,7 @@ CFLAGS+=	-mfancy-math-387 -mpreferred-stack-boundary=3
 .endif # i386
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g ;\
 	s|%%CC%%|${CC}|g ; \
