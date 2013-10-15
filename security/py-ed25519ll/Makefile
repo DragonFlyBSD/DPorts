@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: security/py-ed25519ll/Makefile 323717 2013-07-26 12:44:03Z nivit $
+# $FreeBSD: security/py-ed25519ll/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ed25519ll
 PORTVERSION=	0.6
@@ -18,4 +18,5 @@ PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
