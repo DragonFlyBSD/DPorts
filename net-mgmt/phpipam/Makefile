@@ -1,5 +1,5 @@
 # Created by: Jake Smith <jake@xz.cx>
-# $FreeBSD: net-mgmt/phpipam/Makefile 322223 2013-07-03 12:31:47Z wg $
+# $FreeBSD: net-mgmt/phpipam/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	phpipam
 PORTVERSION=	0.8
@@ -31,6 +31,7 @@ USE_MYSQL=	yes
 USE_PHP=	ctype mysqli session gmp
 WANT_PHP_WEB=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
