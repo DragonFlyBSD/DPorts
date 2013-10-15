@@ -1,5 +1,5 @@
 # Created by: Yeti <yeti@gwyddion.net>
-# $FreeBSD: science/gwyddion/Makefile 326113 2013-09-02 22:58:16Z bapt $
+# $FreeBSD: science/gwyddion/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	gwyddion
 PORTVERSION=	2.31
@@ -38,6 +38,7 @@ GCONF_SCHEMAS=	gwyddion-thumbnailer.schemas
 
 MAN1=		gwyddion.1 gwyddion-thumbnailer.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
