@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/games/wmshuffle/Makefile,v 1.11 2013/02/07 23:32:14 svnexp Exp $
+# $FreeBSD: games/wmshuffle/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wmshuffle
 PORTVERSION=	0.6
@@ -19,6 +19,7 @@ PLIST_FILES=	bin/wmshuffle \
 		%%DATADIR%%/skin-lucyenne.xpm
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^void .*main|int main|' ${WRKSRC}/wmshuffle.c
