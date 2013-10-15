@@ -1,9 +1,5 @@
-# Ports collection makefile for:  klutz
-# Date created:			  Thu Nov 4, 2010
-# Whom:				  Beech Rintoul (<beech@Freebsd.org>)
-#
-# $FreeBSD: deskutils/horde3-klutz/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Beech Rintoul (<beech@FreeBSD.org>)
+# $FreeBSD: deskutils/horde3-klutz/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	klutz
 PORTVERSION=	1.0
@@ -18,5 +14,6 @@ USE_HORDE=	base
 USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
 .include <bsd.port.mk>
