@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@chg.ru>
-# $FreeBSD: x11-fm/xnc/Makefile 324013 2013-07-31 07:25:25Z danfe $
+# $FreeBSD: x11-fm/xnc/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	xnc
 PORTVERSION=	5.0.4
@@ -13,6 +13,7 @@ COMMENT=	File manager for X11 similar to Norton Commander
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 # xnc will use the following programs if you have them installed:
 #RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 #		unzip:${PORTSDIR}/archivers/unzip \
