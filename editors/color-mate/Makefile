@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: editors/color-mate/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: editors/color-mate/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	color-mate
 PORTVERSION=	10.6.4
@@ -19,6 +19,7 @@ XELISPDIR=	${SITEPKGDIR}/lisp/color-mate
 THEME_DIR=	${ELISPDIR}/theme
 MANIFEST=	MANIFEST.color-mate
 
+NO_STAGE=	yes
 do-build:
 # Create color-mate-rgb.el
 	cd ${WRKSRC}; \
