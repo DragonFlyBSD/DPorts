@@ -1,5 +1,5 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
-# $FreeBSD: editors/xmlcopyeditor/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: editors/xmlcopyeditor/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	xmlcopyeditor
 PORTVERSION=	1.2.0.9
@@ -34,4 +34,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include \
 		-I${LOCALBASE}/include/libxml2 ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} ${ICONV_LIB}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
