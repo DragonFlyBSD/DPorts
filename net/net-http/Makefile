@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/net-http/Makefile 317123 2013-05-02 14:34:29Z bapt $
+# $FreeBSD: net/net-http/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	net-http
 PORTVERSION=	0.3.1
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 GUILE_VER!=	${MAKE} -C ${PORTSDIR}/lang/guile -V GUILE_VER
