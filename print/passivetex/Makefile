@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: print/passivetex/Makefile 318830 2013-05-23 02:55:29Z hrs $
+# $FreeBSD: print/passivetex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	passivetex
 PORTVERSION=	1.24
@@ -41,6 +41,7 @@ CLASS_FILES=	dummyels.sty fotex.xmt fotex.sty \
 		mlnames.sty ucharacters.sty unicode.sty \
 		dummyels.sty nomulticol.sty
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
