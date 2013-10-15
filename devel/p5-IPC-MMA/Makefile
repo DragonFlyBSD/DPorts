@@ -1,5 +1,5 @@
 # Created by: Peter Vereshagin <peter@vereshagin.org>
-# $FreeBSD: devel/p5-IPC-MMA/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-IPC-MMA/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IPC-MMA
 PORTVERSION=	0.81
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		IPC::MMA.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
