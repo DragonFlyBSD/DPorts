@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: textproc/py-xlutils/Makefile 317042 2013-05-01 18:49:02Z skreuzer $
+# $FreeBSD: textproc/py-xlutils/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xlutils
 PORTVERSION=	1.6.0
@@ -18,4 +18,5 @@ RUN_DEPENDS:=   ${BUILD_DEPENDS}
 USE_PYTHON=	2.5-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
