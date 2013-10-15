@@ -1,5 +1,5 @@
 # Created by: faber@lunabase.org
-# $FreeBSD: textproc/grap/Makefile 317346 2013-05-04 20:57:31Z bapt $
+# $FreeBSD: textproc/grap/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	grap
 PORTVERSION=	1.44
@@ -21,6 +21,7 @@ CONFLICTS_INSTALL=heirloom-doctools-[0-9]*
 MAN1=		grap.1
 PORTDOCS=	README CHANGES COPYRIGHT grap.man
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
