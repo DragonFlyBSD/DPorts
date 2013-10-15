@@ -1,5 +1,5 @@
 # Created by: candy@fct.kgc.co.jp
-# $FreeBSD: net/xipmsg/Makefile 322030 2013-06-29 08:59:00Z bapt $
+# $FreeBSD: net/xipmsg/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	xipmsg
 PORTVERSION=	0.8088
@@ -16,4 +16,5 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xipmsg.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
