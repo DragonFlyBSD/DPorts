@@ -1,9 +1,5 @@
-# New ports collection makefile for:  akpop3d
-# Date created:        Sun Apr  6 10:12:16 CEST 2003
-# Whom:                Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/mail/akpop3d/Makefile,v 1.11 2012/11/17 05:58:58 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: mail/akpop3d/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	akpop3d
 PORTVERSION=	0.7.7
@@ -26,6 +22,7 @@ CPPFLAGS+=	-I${OPENSSLBASE}/include
 LDFLAGS+=	-L${OPENSSLBASE}/lib -lssl -lcrypto
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/akpop3d ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/akpop3d.8 ${MANPREFIX}/man/man8
