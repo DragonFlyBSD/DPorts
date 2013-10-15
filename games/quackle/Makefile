@@ -1,5 +1,5 @@
 # Created by: shoemaker@bluebottle.com (Jonathan Shoemaker)
-# $FreeBSD: games/quackle/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/quackle/Makefile 328532 2013-09-27 22:56:06Z pawel $
 
 PORTNAME=	quackle
 PORTVERSION=	0.97
@@ -47,7 +47,8 @@ pre-build:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/quacker ${PREFIX}/bin/quackle
-	@(cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${DATADIR})
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/quacker \
+		${STAGEDIR}${PREFIX}/bin/quackle
+	@(cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
 
 .include <bsd.port.mk>
