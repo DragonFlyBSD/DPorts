@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lacheck
-# Date created:		8 February 2002
-# Whom:			Uwe Pierau <uwe.pierau@tu-clausthal.de>
-#
-# $FreeBSD: ports/textproc/lacheck/Makefile,v 1.6 2012/11/17 06:02:01 svnexp Exp $
-#
+# Created by: Uwe Pierau <uwe.pierau@tu-clausthal.de>
+# $FreeBSD: textproc/lacheck/Makefile 330106 2013-10-11 22:56:23Z ak $
 
 PORTNAME=	lacheck
 PORTVERSION=	1.26
@@ -11,15 +7,15 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://cam.ctan.org/tex-archive/support/lacheck/ \
 		http://www.heim2.tu-clausthal.de/~upp/lacheck/
 
-MAINTAINER=	uwe.pierau@tu-clausthal.de
-COMMENT=	A tool for finding common mistakes in LaTeX documents
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Tool for finding common mistakes in LaTeX documents
 
-MAN1=		lacheck.1
-PLIST_FILES=	bin/lacheck
+PLIST_FILES=	bin/lacheck \
+		man/man1/lacheck.1.gz
 ALL_TARGET=	lacheck lacheck.1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/lacheck ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/lacheck.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/lacheck ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/lacheck.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
