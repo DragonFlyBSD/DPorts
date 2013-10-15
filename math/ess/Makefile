@@ -1,5 +1,5 @@
 # Created by: Christopher J. Ruwe
-# $FreeBSD: math/ess/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/ess/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ess
 DISTVERSION=	13.05
@@ -18,6 +18,7 @@ RUN_DEPENDS=	R:${PORTSDIR}/math/R
 USE_EMACS=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
