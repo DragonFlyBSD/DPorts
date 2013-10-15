@@ -1,8 +1,5 @@
-# New ports collection makefile for:   xbubble
-# Date created:        2002-11-03
-# Whom:                Klaus Goger <klaus.goger@reflex.at>
-#
-# $FreeBSD: games/xbubble/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Klaus Goger <klaus.goger@reflex.at>
+# $FreeBSD: games/xbubble/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xbubble
 PORTVERSION=	0.5.8
@@ -26,4 +23,5 @@ USES=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include/libpng15
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
