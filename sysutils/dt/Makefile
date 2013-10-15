@@ -1,11 +1,5 @@
-# New ports collection makefile for:    dt
-# Date created:         		14 Jan 2004
-# Whom:                 		Radim Kolar
-#
-# $FreeBSD: ports/sysutils/dt/Makefile,v 1.12 2012/11/17 06:01:28 svnexp Exp $
-#
-# $Tecnik: ports/sysutils/dt/Makefile,v 1.3 2005/12/12 19:58:36 itetcu Exp $
-#
+# Created by: Radim Kolar
+# $FreeBSD: sysutils/dt/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dt
 PORTVERSION=	17.07
@@ -24,6 +18,7 @@ LICENSE=	BSD
 
 PORTDOCS=	README.1st ToDoList WhatsNew-* dt-UsersGuide.pdf dt-Overview.txt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dt ${PREFIX}/sbin
 	${MKDIR} ${DATADIR}
