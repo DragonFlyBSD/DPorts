@@ -1,5 +1,5 @@
 # Created by: Hsin-Han You <hhyou@cs.nctu.edu.tw>
-# $FreeBSD: mail/rubygem-vmail/Makefile 322806 2013-07-12 03:33:48Z swills $
+# $FreeBSD: mail/rubygem-vmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	vmail
 PORTVERSION=	2.8.6
@@ -22,4 +22,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/vmail bin/vmail_client bin/vmailsend
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
