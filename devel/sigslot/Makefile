@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	sigslot
-# Date created:			Jul 30, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/sigslot/Makefile,v 1.7 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/sigslot/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	sigslot
 PORTVERSION=	1.0.0
@@ -19,6 +14,7 @@ PLIST_FILES=	include/sigslot.h
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@(cd ${WRKSRC} ; ${MV} -f sigslot.h sigslot.h.orig ; \
 		${CAT} sigslot.h.orig | /usr/bin/col -b > sigslot.h)
