@@ -1,9 +1,5 @@
-# New ports collection makefile for:   clig
-# Date created:        27 July 1998
-# Whom:                Bill Fumerola <billf@chc-chimes.com>
-#
-# $FreeBSD: ports/devel/clig/Makefile,v 1.19 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Bill Fumerola <billf@chc-chimes.com>
+# $FreeBSD: devel/clig/Makefile 328356 2013-09-26 13:36:23Z gahr $
 
 PORTNAME=	clig
 PORTVERSION=	1.9.11.1
@@ -14,21 +10,21 @@ MASTER_SITES=	http://wsd.iitb.fhg.de/~geg/clighome/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Auto-generate an (argc, argv) processor, usage message, and manpage
 
-NO_BUILD=	yes
-USE_TCL_BUILD=	yes
-USE_TCL=	yes
-MAKEFILE=	makefile
-WRKSRC=		${WRKDIR}/${PORTNAME}
+OPTIONS_DEFINE=	DOCS
 
-MAN1=		clig.1
-MANN=		clig_Commandline.n clig_Description.n clig_Double.n clig_Flag.n \
-		clig_Float.n clig_Int.n clig_Long.n clig_Name.n clig_Rest.n \
-		clig_String.n clig_Usage.n clig_Version.n clig_parseCmdline.n
+NO_BUILD=	yes
+USES+=		tcl
+MAKEFILE=	makefile
+MAKE_ENV+=	NOPORTDOCS=${NOPORTDOCS}
+WRKSRC=		${WRKDIR}/${PORTNAME}
+PORTDOCS=	*
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${RM} ${WRKSRC}/example/.cvsignore
 	@${FIND} -d ${WRKSRC} -type d -and -name CVS -exec ${RM} -r {} \;
-	@${REINPLACE_CMD} -e 's|prefix =/usr|prefix=${PREFIX}|; \
+	@${REINPLACE_CMD} -e 's|prefix =/usr|prefix=${STAGEDIR}${PREFIX}|; \
 		s|/usr/bin/tclsh|${TCLSH}|; \
 		s|/doc/|/share/doc/|; \
 		s|-$$(VERSION)||;' \
