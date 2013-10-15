@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/mod_webkit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_webkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_webkit
 PORTVERSION=	1.1.1
@@ -18,6 +18,7 @@ AP_EXTRAS=	marshal.c
 
 WRKSRC=		${WRKDIR}/Webware-${PORTVERSION}/WebKit/Adapters/${PORTNAME}2
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/sbin/apxs|${APXS}|' ${WRKSRC}/Makefile
 
