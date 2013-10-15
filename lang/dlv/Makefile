@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: lang/dlv/Makefile 313812 2013-03-10 07:01:48Z rm $
+# $FreeBSD: lang/dlv/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	dlv
 PORTVERSION=	20121217
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/dlv
 ONLY_FOR_ARCHS=	i386 amd64
 RESTRICTED=	Not sure if we can redistribute it
 
+NO_STAGE=	yes
 do-extract:
 	${RM} -rf ${WRKDIR}
 	${MKDIR} ${WRKDIR}
