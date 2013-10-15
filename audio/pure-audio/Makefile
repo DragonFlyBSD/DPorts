@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: audio/pure-audio/Makefile 325703 2013-08-30 15:04:54Z amdmi3 $
+# $FreeBSD: audio/pure-audio/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	pure-audio
 PORTVERSION=	0.5
@@ -14,6 +14,7 @@ LIB_DEPENDS=	portaudio.2:${PORTSDIR}/audio/portaudio2 \
 		fftw3:${PORTSDIR}/math/fftw3
 
 USE_PURE=	yes
+NO_STAGE=	yes
 
 post-patch:
 	${REINPLACE_CMD} \
