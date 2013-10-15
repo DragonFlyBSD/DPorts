@@ -1,8 +1,9 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: sysutils/syslog-ng/Makefile 330086 2013-10-11 15:55:42Z olgeni $
 
 PORTNAME=	syslog-ng
 PORTVERSION=	3.4.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 DISTVERSION=	$(PORTVERSION:S/a/alpha/:S/b/beta/:S/r/rc/)
 DISTFILES=	syslog-ng_${DISTVERSION}.tar.gz
@@ -37,10 +38,6 @@ USES=		pkgconfig
 .include <bsd.port.options.mk>
 
 LIB_DEPENDS=	evtlog.0:${PORTSDIR}/sysutils/eventlog
-
-MAN1=		loggen.1 pdbtool.1 syslog-ng-ctl.1
-MAN5=		syslog-ng.conf.5
-MAN8=		syslog-ng.8
 
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	syslog-ng
@@ -143,22 +140,17 @@ CONFIGURE_ARGS+=        --disable-linux-caps
 post-patch:
 	@${REINPLACE_CMD} -e 's:libnet-config:libnet11-config:g' ${WRKSRC}/configure
 	@${LN} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
+	@${LN} ${WRKSRC}/scl/scl.conf ${WRKSRC}/scl/scl.conf.dist
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} \
-			${PREFIX}/share/doc/syslog-ng \
-			${PREFIX}/share/doc/syslog-ng
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/syslog-ng
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/syslog-ng
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/syslog-ng
+	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${STAGEDIR}${DOCSDIR}
 .endif
-	@if [ ! -f ${PREFIX}/etc/syslog-ng.conf.sample ]; then \
-		${INSTALL_DATA} ${FILESDIR}/syslog-ng.conf.sample ${PREFIX}/etc; \
-	fi
-	@if [ ! -f ${PREFIX}/etc/syslog-ng.conf.dist ]; then \
-		${INSTALL_DATA} ${WRKSRC}/scl/syslog-ng.conf.dist ${PREFIX}/etc; \
-	fi
-	@${CAT} ${PKGMESSAGE}
+	${INSTALL_DATA} ${FILESDIR}/syslog-ng.conf.sample ${STAGEDIR}${PREFIX}/etc
+	${INSTALL_DATA} ${WRKSRC}/scl/syslog-ng.conf.dist ${STAGEDIR}${PREFIX}/etc
+	${INSTALL_DATA} ${WRKSRC}/scl/scl.conf.dist ${STAGEDIR}${PREFIX}/etc
 
 .include <bsd.port.post.mk>
