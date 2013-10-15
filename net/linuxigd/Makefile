@@ -1,9 +1,5 @@
-# New ports collection makefile for:	linuxigd
-# Date created:				02 August 2002
-# Whom:	      				Yen-Ming Lee <leeym@leeym.com>
-#
-# $FreeBSD: ports/net/linuxigd/Makefile,v 1.23 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@leeym.com>
+# $FreeBSD: net/linuxigd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	linuxigd
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ MAKE_ENV=	PTHREAD_LIBS=${PTHREAD_LIBS}
 
 MAN8=		upnpd.8
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} ${WRKSRC}/iptc.?
 
