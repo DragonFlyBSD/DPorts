@@ -1,9 +1,5 @@
-# New ports collection makefile for:    bonnie
-# Date created:         26 September 1994
-# Whom:                 se
-#
-# $FreeBSD: ports/benchmarks/bonnie/Makefile,v 1.19 2012/11/17 05:54:49 svnexp Exp $
-#
+# Created by: se
+# $FreeBSD: benchmarks/bonnie/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	bonnie
 PORTVERSION=	2.0.6
@@ -23,6 +19,7 @@ ALL_TARGET=	bsd
 MAN1=		bonnie.1
 PLIST_FILES=	bin/bonnie
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Bonnie ${PREFIX}/bin/bonnie
 	${INSTALL_MAN} ${FILESDIR}/bonnie.1 ${PREFIX}/man/man1
