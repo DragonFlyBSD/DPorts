@@ -1,5 +1,5 @@
 # Created by: Valerio Daelli <valerio.daelli@gmail.com>
-# $FreeBSD: ports/security/ossec-hids-server/Makefile,v 1.19 2013/01/16 16:42:44 svnexp Exp $
+# $FreeBSD: security/ossec-hids-server/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ossec-hids
 PORTVERSION=	2.7
@@ -31,6 +31,7 @@ SUB_FILES=	pkg-message
 PLIST_SUB=	PORTNAME=${PORTNAME}
 PORTDOCS=	BUGS CONFIG CONTRIBUTORS INSTALL LICENSE README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${OSVERSION} < 800067
 # Add string function that didn't exist until 8.x
