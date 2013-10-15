@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/scite/Makefile 327053 2013-09-12 11:34:39Z madpilot $
+# $FreeBSD: editors/scite/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	scite
 PORTVERSION=	3.3.5
@@ -26,6 +26,7 @@ MAKEFILE=	makefile
 MAN1=		scite.1
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
