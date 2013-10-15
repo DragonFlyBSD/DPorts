@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gist
-# Date created:		2009-08-16
-# Whom:			Ricky E. <codeblock@eighthbit.net>
-#
-# $FreeBSD: www/gist/Makefile 321609 2013-06-23 03:35:42Z swills $
-#
+# Created by: Ricky E. <codeblock@eighthbit.net>
+# $FreeBSD: www/gist/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gist
 PORTVERSION=	3.1.0
@@ -26,6 +22,7 @@ USE_RUBY=	YES
 NO_BUILD=	YES
 PLIST_FILES=	bin/gist
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${RUBY_VER} < 1.9
