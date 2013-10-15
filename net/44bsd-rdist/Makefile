@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  rdist
-# Date created:			  11 November 2000
-# Whom:				  David O'Brien <obrien@NUXI.com>
-#
-# $FreeBSD: ports/net/44bsd-rdist/Makefile,v 1.10 2012/11/17 05:59:55 svnexp Exp $
-#
+# Created by: David O'Brien <obrien@NUXI.com>
+# $FreeBSD: net/44bsd-rdist/Makefile 330038 2013-10-11 00:43:27Z cy $
 
 PORTNAME=	44bsd-rdist
 PORTVERSION=	20001111
@@ -15,12 +10,20 @@ MASTER_SITE_SUBDIR=	cy
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	The traditional 4.4BSD rdist
 
+
 USE_BZIP2=	yes
 
 NO_WRKSUBDIR=	yes
 MAN1=		44bsd-rdist.1
 PLIST_FILES=	bin/44bsd-rdist
 
+.include <bsd.port.pre.mk>
+
+.if  ${OSVERSION} >= 1000055
+BUILD_DEPENDS=    rcs:${PORTSDIR}/devel/rcs57
+.endif
+
+NO_STAGE=	yes
 post-extract:
 	cd ${WRKSRC} ; co RCS/*,v
 
@@ -32,4 +35,4 @@ tarup:
 	-cd ${WRKSRC} ; ${RM} *
 	cd ${WRKSRC} ; ${TAR} cvyf /tmp/${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} .
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
