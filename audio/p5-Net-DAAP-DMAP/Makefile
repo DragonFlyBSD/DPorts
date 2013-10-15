@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-DAAP-DMAP
-# Date created:		2004-08-08
-# Whom:			Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: audio/p5-Net-DAAP-DMAP/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: audio/p5-Net-DAAP-DMAP/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Net-DAAP-DMAP
 PORTVERSION=	1.27
@@ -21,6 +17,7 @@ TEST_DEPENDS=	p5-Data-HexDump>0:${PORTSDIR}/devel/p5-Data-HexDump \
 		p5-Test-Differences>0:${PORTSDIR}/devel/p5-Test-Differences
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN3=		Net::DAAP::DMAP.3
