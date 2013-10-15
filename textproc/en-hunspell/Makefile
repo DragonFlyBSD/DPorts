@@ -1,9 +1,4 @@
-# New ports collection makefile for:	en-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/en-hunspell/Makefile,v 1.8 2012/11/17 06:01:55 svnexp Exp $
-#
+# $FreeBSD: textproc/en-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	7.1
@@ -42,15 +37,15 @@ PLIST_FILES+=	%%DATADIR%%/${ALIAS}.aff \
 .endfor
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/*.aff ${WRKSRC}/*.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/*.aff ${WRKSRC}/*.dic ${STAGEDIR}${DATADIR}/
 .for ALIAS in ${GBALIASES}
-	${LN} -s en_GB.aff ${DATADIR}/${ALIAS}.aff
-	${LN} -s en_GB.dic ${DATADIR}/${ALIAS}.dic
+	${LN} -s en_GB.aff ${STAGEDIR}${DATADIR}/${ALIAS}.aff
+	${LN} -s en_GB.dic ${STAGEDIR}${DATADIR}/${ALIAS}.dic
 .endfor
 .for ALIAS in ${USALIASES}
-	${LN} -s en_US.aff ${DATADIR}/${ALIAS}.aff
-	${LN} -s en_US.dic ${DATADIR}/${ALIAS}.dic
+	${LN} -s en_US.aff ${STAGEDIR}${DATADIR}/${ALIAS}.aff
+	${LN} -s en_US.dic ${STAGEDIR}${DATADIR}/${ALIAS}.dic
 .endfor
 
 .include <bsd.port.mk>
