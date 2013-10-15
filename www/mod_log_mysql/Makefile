@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_log_mysql/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_log_mysql/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_log_mysql
 PORTVERSION=	1.0
@@ -28,4 +28,5 @@ USE_MYSQL=	yes
 AP_INC+=	${LOCALBASE}/include/mysql
 AP_LIB+=	${LOCALBASE}/lib/mysql -lmysqlclient
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
