@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-signal/Makefile 322356 2013-07-05 20:59:44Z stephen $
+# $FreeBSD: math/octave-forge-signal/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-signal
 PORTVERSION=	1.2.2
@@ -18,6 +18,7 @@ RUN_DEPENDS+=	${TARBALLS_DIR}/specfun.tar.gz:${PORTSDIR}/math/octave-forge-specf
 RUN_DEPENDS+=	${TARBALLS_DIR}/control.tar.gz:${PORTSDIR}/math/octave-forge-control
 RUN_DEPENDS+=	${TARBALLS_DIR}/general.tar.gz:${PORTSDIR}/math/octave-forge-general
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-patch:
