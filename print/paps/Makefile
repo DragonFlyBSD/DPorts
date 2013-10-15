@@ -1,5 +1,5 @@
 # Created by: johans
-# $FreeBSD: print/paps/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: print/paps/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	paps
 PORTVERSION=	0.6.8
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	pango
 USES=		pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
