@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-XML-Atom/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Atom/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Atom
 PORTVERSION=	0.41
@@ -33,4 +33,5 @@ MAN3=		XML::Atom.3 \
 		XML::Atom::Server.3 \
 		XML::Atom::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
