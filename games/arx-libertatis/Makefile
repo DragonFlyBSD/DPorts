@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/arx-libertatis/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/arx-libertatis/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	arx-libertatis
 PORTVERSION=	1.0.3
@@ -35,6 +35,7 @@ PORTDOCS=	AUTHORS CHANGELOG README.md
 OPTIONS_DEFINE=	CRASHREPORTER 
 CRASHREPORTER_DESC=	Build crash reporter (requires Qt4)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCRASHREPORTER}
