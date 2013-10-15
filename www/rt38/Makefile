@@ -1,5 +1,6 @@
-# $FreeBSD: www/rt38/Makefile 327292 2013-09-14 14:47:56Z az $
+# $FreeBSD: www/rt38/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
+NO_STAGE=	yes
 # TODO:
 # o etc/rt38 files permissions
 # o GRANTS
