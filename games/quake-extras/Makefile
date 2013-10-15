@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake-extras/Makefile 317948 2013-05-12 12:03:06Z danfe $
+# $FreeBSD: games/quake-extras/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	extras
 PORTVERSION=	1.1
@@ -33,6 +33,7 @@ RETEXTURE_HQ_DESC=	High quality textures (200MB)
 RETEXTURE_LW_DESC=	Low (still good) quality textures (15MB)
 SKYBOXES_DESC=		Skyboxes (sky replacement images)
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../quake-data/Makefile.include"
 .include <bsd.port.options.mk>
 
