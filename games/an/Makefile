@@ -1,9 +1,5 @@
-# New ports collection makefile for:	an
-# Date created:		28 Feb 1997
-# Whom:			proff
-#
-# $FreeBSD: ports/games/an/Makefile,v 1.15 2012/11/17 05:57:31 svnexp Exp $
-#
+# Created by: proff
+# $FreeBSD: games/an/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	an
 PORTVERSION=	0.95
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN6=		an.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<stdint.h>/d' ${WRKSRC}/an.c
 
