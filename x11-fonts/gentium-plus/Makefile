@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: x11-fonts/gentium-plus/Makefile 323427 2013-07-22 06:44:10Z bapt $
+# $FreeBSD: x11-fonts/gentium-plus/Makefile 328431 2013-09-27 05:48:27Z matthew $
 
 PORTNAME=	GentiumPlus
 PORTVERSION=	1.510
@@ -18,7 +18,7 @@ USE_ZIP=	yes
 XORG_CAT=	font
 
 FONTLIBPATH=	lib/X11/fonts
-FONTROOTDIR=	${PREFIX}/${FONTLIBPATH}
+FONTROOTDIR=	${STAGEDIR}${PREFIX}/${FONTLIBPATH}
 INSTALLS_TTF=	yes
 MEDIA_ID=	${DISTNAME}${EXTRACT_SUFX}
 NO_BUILD=	yes
@@ -27,13 +27,12 @@ USE_TGZ=	yes	#prevent bsd.xorg.mk from setting USE_BZIP
 PLIST_FILES=	${FONTLIBPATH}/${FONTDIR}/${PORTNAME}-I.ttf \
 		${FONTLIBPATH}/${FONTDIR}/${PORTNAME}-R.ttf
 
-SUB_LIST=	"FONTPATH=${FONTROOTDIR}/${FONTDIR}"
+SUB_LIST=	"FONTPATH=${PREFIX}$FONTLIBPATH}/${FONTDIR}"
 SUB_FILES=	pkg-message
 
 DOCSLIST=	FONTLOG.txt GENTIUM-FAQ.txt OFL-FAQ.txt OFL.txt README.txt \
 		documentation/GentiumPlus-features.pdf
 PORTDOCS=	${DOCSLIST:C,^.*/,,}
-
 
 .include <bsd.port.options.mk>
 
@@ -43,9 +42,6 @@ do-configure:
 	@${DO_NADA}
 
 do-install: install-fonts install-docs
-	${ECHO_MSG}
-	${CAT} ${PKGMESSAGE}
-	${ECHO_MSG}
 
 install-fonts:
 	${MKDIR} ${FONTROOTDIR}/${FONTDIR}
@@ -53,8 +49,8 @@ install-fonts:
 
 install-docs:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${DOCSLIST:S,^,${WRKSRC}/,} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DOCSLIST:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
