@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/pixz/Makefile 320063 2013-06-06 09:19:57Z hrs $
+# $FreeBSD: archivers/pixz/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	pixz
 PORTVERSION=	1.0.2
@@ -12,6 +12,7 @@ COMMENT=	Parallel, indexing version of XZ
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+NO_STAGE=	yes
 SUB_FILES=	Makefile
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
