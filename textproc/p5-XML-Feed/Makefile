@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-XML-Feed/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Feed/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Feed
 PORTVERSION=	0.52
@@ -36,4 +36,5 @@ MAN3=		XML::Feed.3 \
 		XML::Feed::Enclosure.3 \
 		XML::Feed::Entry.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
