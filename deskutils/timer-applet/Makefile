@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/timer-applet/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/timer-applet/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	timer-applet
 PORTVERSION=	2.1.4
@@ -29,4 +29,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	timer-applet.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
