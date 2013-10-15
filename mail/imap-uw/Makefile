@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: mail/imap-uw/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/imap-uw/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	imap
 PORTVERSION=	2007f
@@ -40,6 +40,7 @@ SSL_AND_PLAINTEXT_DESC=	Allow plain text passwords and SSL
 DRAC_DESC=		Dynamically open MTA for relaying
 NETSCAPE_BRAIN_DAMAGE_DESC=	See Makefile for documentation
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDRAC}
