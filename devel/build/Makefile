@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	build
-# Date created:				14 June 2010
-# Whom:					gahr
-#
-# $FreeBSD: ports/devel/build/Makefile,v 1.5 2012/11/17 05:55:35 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: devel/build/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	build
 PORTVERSION=	0.3.9
@@ -25,4 +21,5 @@ MAKE_ARGS=	install_prefix=${PREFIX}
 
 PLIST_SUB=	BUILD_VER=${PORTVERSION:R}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
