@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: deskutils/plans/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: deskutils/plans/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	plans
 PORTVERSION=	8.2.1
@@ -38,6 +38,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${_DISTDIR}/powerani.gif ${WRKSRC}/theme/graphics/freebsd.gif
 	@${CP} ${_DISTDIR}/*.pl ${WRKSRC}/
