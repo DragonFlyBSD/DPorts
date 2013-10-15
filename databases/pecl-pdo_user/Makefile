@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-pdo_user
-# Date created:			  2011-05-26
-# Whom:				  Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/databases/pecl-pdo_user/Makefile,v 1.2 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: databases/pecl-pdo_user/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pdo_user
 PORTVERSION=	0.3.0
@@ -25,4 +21,5 @@ USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	pdo_user
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
