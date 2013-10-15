@@ -1,5 +1,5 @@
 # Created by: Rodrigo Graeff <delphus@gmail.com>
-# $FreeBSD: sysutils/gdmap/Makefile 326095 2013-09-02 21:32:24Z bapt $
+# $FreeBSD: sysutils/gdmap/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gdmap
 PORTVERSION=	0.7.5
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=	gdmap.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,<sys/vfs.h>,<sys/statvfs.h>,' \
 		${WRKSRC}/src/gui_main.c
