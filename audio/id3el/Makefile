@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: audio/id3el/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/id3el/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	id3el
 PORTVERSION=	0.05
@@ -11,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Add-on to edit ID3 tags for mpg123-mode (mpg123.el) on Emacsen
 
 RUN_DEPENDS=	${LOCALBASE}/lib/xemacs/site-lisp/mpg123.el:${PORTSDIR}/audio/mpg123.el
+NO_STAGE=	yes
 
 ALL_TARGET=	id3put
 
