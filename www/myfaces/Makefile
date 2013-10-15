@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/www/myfaces/Makefile,v 1.8 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/myfaces/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	myfaces
 PORTVERSION=	1.1.1
@@ -24,6 +24,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar \
 		${JAR_FILES:S|^|%%DATADIR%%/|}
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
