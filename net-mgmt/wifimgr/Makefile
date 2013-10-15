@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: net-mgmt/wifimgr/Makefile 318625 2013-05-20 20:16:03Z crees $
+# $FreeBSD: net-mgmt/wifimgr/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	wifimgr
 PORTVERSION=	1.10
@@ -17,6 +17,7 @@ USE_XORG=	x11
 USE_GNOME=	gtk20
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
