@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: security/switzerland/Makefile 315749 2013-04-06 23:22:20Z wg $
+# $FreeBSD: security/switzerland/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	switzerland
 PORTVERSION=	0.1.0
@@ -14,6 +14,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
