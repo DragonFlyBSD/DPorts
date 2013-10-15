@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Task-Plack/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/p5-Task-Plack/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Task-Plack
 PORTVERSION=	0.25
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl module bundle for Plack
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Task::Plack.3
 
@@ -32,6 +33,7 @@ SQUATTING_DESC=		Squatting::On
 CGIAPP_DESC=		CGI::Application::PSGI
 #OPTIONS:=${OPTIONS:C/off/on/g}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFASTCGI}
