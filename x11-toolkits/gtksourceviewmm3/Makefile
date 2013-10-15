@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtksourceviewmm3/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: x11-toolkits/gtksourceviewmm3/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #    $MCom: ports/x11-toolkits/gtksourceviewmm3/Makefile,v 1.1 2011/10/16 22:00:24 kwm Exp $
 
 PORTNAME=	gtksourceviewmm
@@ -20,4 +20,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBAS}/lib
 CONFIGURE_ARGS=	--disable-documentation
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
