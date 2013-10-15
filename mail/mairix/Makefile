@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: mail/mairix/Makefile 323781 2013-07-27 11:49:20Z danfe $
+# $FreeBSD: mail/mairix/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mairix
 PORTVERSION=	0.22
@@ -27,6 +27,7 @@ BZIP2_DESC=	bzip2 compressed mbox support
 GZIP_CONFIGURE_ENABLE=	gzip-mbox
 BZIP2_CONFIGURE_ENABLE=	bzip-mbox
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Do not hardcode make(1) binary name and fix atomicity to allow -jX builds
