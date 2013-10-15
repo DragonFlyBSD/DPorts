@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <tiamat@komi.mts.ru>
-# $FreeBSD: mail/imapsync/Makefile 325542 2013-08-28 15:58:57Z wg $
+# $FreeBSD: mail/imapsync/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	imapsync
 PORTVERSION=	1.564
@@ -25,6 +25,7 @@ MAN1=		${PORTNAME}.1
 
 POD2MAN?=	pod2man
 
+NO_STAGE=	yes
 do-patch:
 	${REINPLACE_CMD} \
 		-e 's|/usr/bin/perl|${PERL}|g' \
