@@ -1,4 +1,4 @@
-# $FreeBSD: databases/pglesslog/Makefile 315505 2013-03-28 22:55:18Z kuriyama $
+# $FreeBSD: databases/pglesslog/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pglesslog
 PORTVERSION=	1.4.1
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/pg_lesslog_${PORTVERSION}_pg84
 PGSQL_PORT=	databases/postgresql${PGSQL_VER}
 PGSQL_SRCDIR=	`cd ${PORTSDIR}/${PGSQL_PORT}-server; ${MAKE} -VWRKSRC`
 
+NO_STAGE=	yes
 pre-build:
 	${REINPLACE_CMD} "s|top_builddir = ../..|top_builddir = ${PGSQL_SRCDIR}|" ${WRKSRC}/Makefile.*
 
