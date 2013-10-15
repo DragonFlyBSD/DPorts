@@ -1,5 +1,5 @@
 # Created by: Vadim Vatlin
-# $FreeBSD: devel/p5-JSON-RPC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-JSON-RPC/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	JSON-RPC
 PORTVERSION=	1.03
@@ -37,6 +37,7 @@ MAN3=		JSON::RPC.3 \
 		JSON::RPC::Procedure.3 \
 		JSON::RPC::Test.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
