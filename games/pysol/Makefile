@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/pysol/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: games/pysol/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pysol
 PORTVERSION=	4.82
@@ -23,6 +23,7 @@ NO_BUILD=	yes
 
 MAN6=		pysol.6
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/src/tk/soundoptionsdialog.py.orig
 	@${REINPLACE_CMD} -e "s|@pkgdatadir@|${DATADIR}|" \
