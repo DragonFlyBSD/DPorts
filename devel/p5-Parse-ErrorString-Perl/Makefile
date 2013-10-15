@@ -1,8 +1,8 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Parse-ErrorString-Perl/Makefile 324421 2013-08-09 08:39:09Z culot $
+# $FreeBSD: devel/p5-Parse-ErrorString-Perl/Makefile 329712 2013-10-07 16:16:01Z culot $
 
 PORTNAME=	Parse-ErrorString-Perl
-PORTVERSION=	0.19
+PORTVERSION=	0.20
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,10 +20,5 @@ TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN1=		check_perldiag.1
-MAN3=		Parse::ErrorString::Perl.3 \
-		Parse::ErrorString::Perl::ErrorItem.3 \
-		Parse::ErrorString::Perl::StackItem.3
 
 .include <bsd.port.mk>
