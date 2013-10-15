@@ -1,5 +1,5 @@
 # Created by: Olli Hauer <ohauer@FreeBSD.org>
-# $FreeBSD: sysutils/monitorix/Makefile 327503 2013-09-17 20:56:33Z crees $
+# $FreeBSD: sysutils/monitorix/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	monitorix
 PORTVERSION=	3.3.0
@@ -55,6 +55,7 @@ WWW_FILES=	logo_top.png \
 PORTDOCS=	*
 PORTDATA=	*.pm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-everything::
