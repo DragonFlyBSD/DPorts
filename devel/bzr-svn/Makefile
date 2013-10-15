@@ -1,9 +1,5 @@
-# Ports collection makefile for:	bzr-svn
-# Date created:				8 August 2010
-# Whom:					Carlo Strub
-#
-# $FreeBSD: ports/devel/bzr-svn/Makefile,v 1.10 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Carlo Strub
+# $FreeBSD: devel/bzr-svn/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-svn
 PORTVERSION=	1.2.2
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://launchpadlibrarian.net/102178824/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin for bzr to work with svn
 
 LICENSE=	GPLv2
@@ -26,4 +22,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr_svn
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
