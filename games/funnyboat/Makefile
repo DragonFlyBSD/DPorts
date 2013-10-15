@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/funnyboat/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/funnyboat/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	funnyboat
 PORTVERSION=	1.5
@@ -24,6 +24,7 @@ SUB_LIST=	PROGRAM_DIR="${PREFIX}/lib/${PORTNAME}"
 
 PORTDOCS=	README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
