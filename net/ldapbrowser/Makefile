@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/ldapbrowser/Makefile 325787 2013-08-31 10:27:30Z danfe $
+# $FreeBSD: net/ldapbrowser/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ldapbrowser
 PORTVERSION=	2.8.2
@@ -21,6 +21,7 @@ NOMAN=		defined
 WRKSRC=		${WRKDIR}/${PORTNAME}
 REINPLACE_ARGS=	-i ''
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e 's|lbe\.jar|${PREFIX}/lib/ldapbrowser/lbe.jar|' \
 		${WRKSRC}/lbe.sh
