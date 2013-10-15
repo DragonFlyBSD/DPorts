@@ -1,5 +1,5 @@
 # Created by: David Bushong <david@bushong.net>
-# $FreeBSD: ports/audio/dtmfdial/Makefile,v 1.4 2012/12/31 16:35:55 svnexp Exp $
+# $FreeBSD: audio/dtmfdial/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	dtmfdial
 PORTVERSION=	0.2
@@ -11,9 +11,12 @@ DISTNAME=	dtmf-dial-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generate DTMF dial tones from the command line
 
+NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/dial
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
 PORTDOCS=	README TODO
+
+PLIST_FILES=	bin/dtmfdial
 
 .include <bsd.port.options.mk>
 do-install:
