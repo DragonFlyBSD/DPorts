@@ -1,5 +1,5 @@
 # Created by: Quinton Dolan <q@onthenet.com.au>
-# $FreeBSD: ports/databases/openbase-jdbc/Makefile,v 1.5 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/openbase-jdbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	openbase
 PORTVERSION=	2006.10
@@ -25,6 +25,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 OBVERSION=	Oct2006
 WORK_SUBDIR=	JDBC_10.09.2006
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
