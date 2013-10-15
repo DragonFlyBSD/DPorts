@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/security/sguil-sensor/files/example_agent.in,v 1.2 2012/11/17 06:01:19 svnexp Exp $
+# $FreeBSD: security/sguil-sensor/files/example_agent.in 302141 2012-08-05 23:19:36Z dougb $
 
 # PROVIDE: example_agent
 # REQUIRE: DAEMON

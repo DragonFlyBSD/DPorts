@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: ports/security/sguil-sensor/Makefile,v 1.13 2013/02/18 01:16:40 svnexp Exp $
+# $FreeBSD: security/sguil-sensor/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sguil-sensor
 PORTVERSION=	0.8.0
@@ -41,6 +41,7 @@ PORTDOCS2=	README.daemonlogger
 PORTDOCS3=	CHANGES FAQ INSTALL INSTALL.openbsd OPENSSL.README \
 		TODO UPGRADE USAGE sguildb.dia
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSANCP}

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/security/sguil-sensor/files/snort_agent.in,v 1.3 2013/02/18 01:16:40 svnexp Exp $
+# $FreeBSD: security/sguil-sensor/files/snort_agent.in 312466 2013-02-18 00:56:47Z miwi $
 
 # PROVIDE: snort_agent
 # REQUIRE: DAEMON
