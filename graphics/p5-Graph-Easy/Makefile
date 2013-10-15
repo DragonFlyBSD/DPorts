@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: graphics/p5-Graph-Easy/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: graphics/p5-Graph-Easy/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Graph-Easy
 PORTVERSION=	0.73
@@ -47,4 +47,5 @@ MAN3=	Graph::Easy.3 \
 	Graph::Easy::Parser::VCG.3 \
 	Graph::Easy::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
