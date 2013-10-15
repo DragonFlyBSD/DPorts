@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bzr-externals
-# Date created:				2010-08-30
-# Whom:					Carlo Strub
-#
-# $FreeBSD: ports/devel/bzr-externals/Makefile,v 1.5 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Carlo Strub
+# $FreeBSD: devel/bzr-externals/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-externals
 PORTVERSION=	1.3.3
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpadlibrarian.net/91495699/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Support external branches like svn:externals
 
 LICENSE=	GPLv2
@@ -25,4 +21,5 @@ WRKSRC=		${WRKDIR}/externals
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
