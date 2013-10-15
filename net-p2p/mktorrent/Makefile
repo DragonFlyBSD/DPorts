@@ -1,5 +1,5 @@
 # Created by: Damian Gerow <dgerow@afflictions.org>
-# $FreeBSD: net-p2p/mktorrent/Makefile 317259 2013-05-03 21:15:43Z bapt $
+# $FreeBSD: net-p2p/mktorrent/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	mktorrent
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ THREADS_DESC=	Enable support for pthreads
 OPENSSL_DESC=	Use OpenSSL for hashing
 HASHCHECK_DESC=	Verify file hashes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTHREADS}
