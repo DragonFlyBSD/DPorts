@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: news/knews/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: news/knews/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	knews
 PORTVERSION=	1.0b.1
@@ -17,6 +17,8 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 RUN_DEPENDS=	newsp:${PORTSDIR}/print/mp-letter
 
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 USES=		imake
 USE_XORG=	xmu xpm xt sm ice xext x11
