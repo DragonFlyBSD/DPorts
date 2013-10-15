@@ -1,5 +1,5 @@
 # Created by: Honza Betik
-# $FreeBSD: ports/net/radsecproxy/Makefile,v 1.3 2013/02/19 23:46:03 svnexp Exp $
+# $FreeBSD: net/radsecproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	radsecproxy
 PORTVERSION=	1.4.2
@@ -20,6 +20,7 @@ USE_RC_SUBR=	${PORTNAME}
 USE_OPENSSL=	yes
 CONFIGURE_ARGS=	--with-ssl=${OPENSSLBASE}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/radsecproxy ${PREFIX}/bin/catgconf
 	${INSTALL_PROGRAM} ${WRKSRC}/radsecproxy ${PREFIX}/sbin/radsecproxy
