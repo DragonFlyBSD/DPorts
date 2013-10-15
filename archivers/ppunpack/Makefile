@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ppunpack
-# Date created:				Sat 3 June 2000
-# Whom:					will
-#
-# $FreeBSD: ports/archivers/ppunpack/Makefile,v 1.13 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: archivers/ppunpack/Makefile 328280 2013-09-25 12:45:36Z vanilla $
 
 PORTNAME=	ppunpack
 PORTVERSION=	1.0
@@ -24,6 +20,6 @@ PLIST_FILES=	bin/ppunpack
 ALL_TARGET=	ppunpack
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ppunpack ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ppunpack ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
