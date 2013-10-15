@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-IMDB-Film/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-IMDB-Film/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	IMDB-Film
 PORTVERSION=	0.53
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		IMDB::BaseClass.3 IMDB::Film.3 IMDB::Persons.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
