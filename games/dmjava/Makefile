@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <lehmann@ans-netz.de>
-# $FreeBSD: ports/games/dmjava/Makefile,v 1.10 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: games/dmjava/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	dmjava
 PORTVERSION=	1.05
@@ -20,6 +20,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${PORTNAME}
 	@${CP} -r ${WRKSRC}/* ${PREFIX}/${PORTNAME}
