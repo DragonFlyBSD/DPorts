@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: ports/graphics/tifmerge/Makefile,v 1.17 2013/02/19 10:07:13 svnexp Exp $
+# $FreeBSD: graphics/tifmerge/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tifmerge
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ PLIST_FILES=	lib/libtifmerge.a \
 
 MAN3=		tifmerge.3
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}/TIFMERGE.H ${WRKSRC}/tifmerge.h
 	@${MV} ${WRKSRC}/TIFMERGE.C ${WRKSRC}/tifmerge.c
