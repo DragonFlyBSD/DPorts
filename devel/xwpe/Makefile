@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  xwpe
-# Date created:			  Fri Jan 24, 1997
-# Whom:				  David O'Brien (obrien@FreeBSD.org)
-#
-# $FreeBSD: ports/devel/xwpe/Makefile,v 1.29 2012/11/17 05:57:07 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@FreeBSD.org)
+# $FreeBSD: devel/xwpe/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xwpe
 PORTVERSION=	1.5.30a
@@ -28,6 +23,7 @@ MLINKS=		xwpe.1 xwe.1 \
 		xwpe.1 wpe.1 \
 		xwpe.1 we.1
 
+NO_STAGE=	yes
 post-patch:
 .for file in we_prog.c we_fl_unix.c
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g ; \
