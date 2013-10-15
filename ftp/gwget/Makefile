@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: ftp/gwget/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: ftp/gwget/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	gwget
 PORTVERSION=	1.0.4
@@ -29,6 +29,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	${PORTNAME}.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOTIFY}
