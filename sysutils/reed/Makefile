@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: sysutils/reed/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: sysutils/reed/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	reed
 PORTVERSION=	5.4
@@ -20,6 +20,7 @@ CONFIGURE_SCRIPT=	configures
 
 MAN1=	breed.1 reed.1 wrap.1
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's!/usr/local!${PREFIX}!g' ${WRKSRC}/configures
 	@${PERL} -pi -e 's!sys/dir.h!dirent.h!g;s!.*getopt.h.*\n!!' \
