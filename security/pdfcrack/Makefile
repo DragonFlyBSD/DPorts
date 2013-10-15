@@ -1,7 +1,5 @@
-# New ports collection makefile for:   snoopy
-# Date created:			24 October 2007
-# Whom:                        Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/security/pdfcrack/Makefile,v 1.6 2012/11/17 06:01:14 svnexp Exp $
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: security/pdfcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pdfcrack
 PORTVERSION=	0.11
@@ -16,6 +14,7 @@ USE_GMAKE=	yes
 PLIST_FILES=	bin/pdfcrack
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pdfcrack ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
