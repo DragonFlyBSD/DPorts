@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	etcd
-# Date created:				2 October 2009
-# Whom:					gahr
-#
-# $FreeBSD: ports/audio/etcd/Makefile,v 1.5 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: audio/etcd/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	etcd
 PORTVERSION=	1.0.1
@@ -17,6 +13,7 @@ MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Enhanced Tiny CD, a simple ncurses-based CD player
 
 USE_SDL=	sdl
+NO_STAGE=	yes
 MANCOMPRESSED=	no
 
 MAKE_ARGS=	INCDIR=${LOCALBASE}/include LIBDIR=${LOCALBASE}/lib \
