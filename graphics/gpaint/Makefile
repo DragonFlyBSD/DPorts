@@ -1,7 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: graphics/gpaint/Makefile 326133 2013-09-03 10:23:55Z bapt $
-#
+# $FreeBSD: graphics/gpaint/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gpaint
 PORTVERSION=	0.3.3
@@ -21,6 +19,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/gpaint-2 %%DATADIR%%/glade/gpaint.glade
 PLIST_DIRS=	%%DATADIR%%/glade %%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|_RESPONSE_DISCARD|_RESPONSE_NO|g' ${WRKSRC}/src/drawing.c
