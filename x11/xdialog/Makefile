@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: x11/xdialog/Makefile 317383 2013-05-04 22:25:56Z bapt $
+# $FreeBSD: x11/xdialog/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xdialog
 PORTVERSION=	2.3.1
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MNLS)
