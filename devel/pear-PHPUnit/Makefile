@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-PHPUnit
-# Date created:			  24 February 2004
-# Whom:				  Gerrit Beine (<gerrit@beine-computer.de>)
-#
-# $FreeBSD: ports/devel/pear-PHPUnit/Makefile,v 1.18 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: Gerrit Beine (<gerrit@beine-computer.de>)
+# $FreeBSD: devel/pear-PHPUnit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHPUnit
 PORTVERSION=	1.3.3
@@ -25,6 +21,7 @@ NO_LATEST_LINK=	yes
 PEAR_CHANNEL=	phpunit
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
