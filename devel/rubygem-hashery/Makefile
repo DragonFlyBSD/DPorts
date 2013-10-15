@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-hashery/Makefile 321526 2013-06-22 02:38:31Z swills $
+# $FreeBSD: devel/rubygem-hashery/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	hashery
 PORTVERSION=	2.1.0
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
