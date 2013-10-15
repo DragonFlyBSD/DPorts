@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: archivers/ruby-lha/Makefile 309150 2012-12-18 07:57:31Z danfe $
+# $FreeBSD: archivers/ruby-lha/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	lha
 PORTVERSION=	0.8.1
@@ -13,6 +13,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby extension to unpack LHA-compressed files
 
+NO_STAGE=	yes
 USE_ZIP=	yes
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
