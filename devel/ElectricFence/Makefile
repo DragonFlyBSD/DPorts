@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for: Electric Fence
-# Date created: 	13 November 1997
-# Whom:			jraynard
-#
-# $FreeBSD: ports/devel/ElectricFence/Makefile,v 1.26 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: jraynard
+# $FreeBSD: devel/ElectricFence/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	electricfence
 PORTVERSION=	2.2.2
@@ -24,6 +19,7 @@ MAN3=		efence.3
 MAKE_ARGS=	CC="${CC}"
 PLIST_FILES=	bin/ef.sh lib/libefence.a lib/libefence.so.0
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libefence.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libefence.so.0.0 ${PREFIX}/lib/libefence.so.0
