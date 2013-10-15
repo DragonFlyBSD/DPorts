@@ -1,5 +1,5 @@
 # Created by: Mita Yoshio <mita@jp.FreeBSD.org>
-# $FreeBSD: x11-fonts/etlfonts/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: x11-fonts/etlfonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	etlfonts-noncjk
 PORTVERSION=	1.0
@@ -18,6 +18,7 @@ RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 
 USE_XORG=	x11
 
+NO_STAGE=	yes
 post-extract:
 	@${GUNZIP_CMD} ${WRKSRC}/*.gz
 
