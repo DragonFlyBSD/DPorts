@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/clipit/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: deskutils/clipit/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	clipit
 PORTVERSION=	1.4.2
@@ -16,6 +16,7 @@ USE_GNOME=	gtk20
 OPTIONS_DEFINE=	NLS XDOTOOL
 XDOTOOL_DESC=	Automatic paste functionality
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
