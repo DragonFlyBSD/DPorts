@@ -1,5 +1,5 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: math/ggobi/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: math/ggobi/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ggobi
 PORTVERSION=	2.1.9
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--with-all-plugins
 
 ALL_TARGET=	all ggobirc
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|ND_coord_i|ND_coord|' \
 		${WRKSRC}/plugins/GraphLayout/graphviz.c
