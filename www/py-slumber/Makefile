@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-slumber/Makefile 316706 2013-04-28 08:20:44Z koobs $
+# $FreeBSD: www/py-slumber/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	slumber
 PORTVERSION=	0.6.0
@@ -17,6 +17,7 @@ OPTIONS_DEFINE=		YAML
 YAML_DESC=		Enable YAML serializer support
 OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MYAML}
