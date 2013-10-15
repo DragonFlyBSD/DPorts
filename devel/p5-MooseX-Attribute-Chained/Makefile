@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Attribute-Chained/Makefile 325474 2013-08-27 17:44:26Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Attribute-Chained/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Attribute-Chained
 PORTVERSION=	1.0.1
@@ -26,4 +26,5 @@ MAN3=		Moose::Meta::Attribute::Custom::Trait::Chained.3 \
 		MooseX::ChainedAccessors::Accessor.3 \
 		MooseX::Traits::Attribute::Chained.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
