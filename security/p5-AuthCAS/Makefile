@@ -1,5 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: security/p5-AuthCAS/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-AuthCAS/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	AuthCAS
 PORTVERSION=	1.6
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		AuthCAS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
