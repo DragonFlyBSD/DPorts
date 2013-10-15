@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: devel/bin86/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/bin86/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bin86
 PORTVERSION=	0.16.19
@@ -20,6 +20,7 @@ CONFLICTS=	bcc-[0-9]* dev86-[0-9]*
 
 BINS=		as/as86 ld/ld86 ld/objchop ld/catimage ld/objdump86
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
