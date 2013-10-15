@@ -1,22 +1,18 @@
-# New ports collection makefile for:	cpmtools
-# Date created:		31 January 2008
-# Whom:			joerg
-#
-# $FreeBSD: ports/emulators/cpmtools2/Makefile,v 1.9 2012/11/17 05:57:20 svnexp Exp $
-#
+# Created by: joerg
+# $FreeBSD: emulators/cpmtools2/Makefile 329360 2013-10-04 19:09:45Z ak $
 
-PORTNAME=	cpmtools
-PORTVERSION=	2.15
+PORTNAME=	cpmtools2
+PORTVERSION=	2.16
 CATEGORIES=	emulators sysutils
 MASTER_SITES=	http://www.moria.de/~michael/cpmtools/
+DISTNAME=	${PORTNAME:C/2$//}-${PORTVERSION}
 
 MAINTAINER=	ak@FreeBSD.org
 COMMENT=	Tools to access CP/M disks and disk images
 
 LICENSE=	GPLv3
 
-LATEST_LINK=	cpmtools2
-
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--bindir=${PREFIX}/sbin \
 		--datarootdir=${DATADIR}
@@ -28,14 +24,9 @@ OPTIONS_DEFINE=	LIBDSK
 
 LIBDSK_DESC=	Access to disks and disk images support
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MLIBDISK}
-LIB_DEPENDS+=	dsk:${PORTSDIR}/emulators/libdsk
-CONFIGURE_ARGS+=--with-libdsk=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=--with-libdsk=''
-.endif
+LIBDSK_CONFIGURE_ON=	--with-libdsk=${LOCALBASE}
+LIBDSK_CONFIGURE_OFF=	--with-libdsk=''
+LIBDSK_LIB_DEPENDS+=	libdsk.so:${PORTSDIR}/emulators/libdsk
 
 # remove unneeded getopt*.c
 # remove curses from all but fsed.cpm
