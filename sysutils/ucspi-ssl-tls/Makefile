@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/ucspi-ssl-tls/Makefile,v 1.7 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/ucspi-ssl-tls/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTREVISION=	4
 PORTEPOCH=	0
@@ -17,4 +17,5 @@ PATCH_WRKSRC=		${WRKSRC}/src
 
 MASTERDIR=	${.CURDIR}/../ucspi-ssl
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
