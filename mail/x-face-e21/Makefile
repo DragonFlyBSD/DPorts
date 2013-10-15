@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: mail/x-face-e21/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: mail/x-face-e21/Makefile 330175 2013-10-12 18:46:32Z ume $
 
 PORTNAME=	x-face-e21
 PORTVERSION=	20070306
@@ -14,13 +14,14 @@ MAINTAINER=	ume@FreeBSD.org
 COMMENT=	X-Face utilities for Emacs 21 (and possibly 22)
 
 RUN_DEPENDS=	uncompface:${PORTSDIR}/mail/faces
+
 USE_EMACS=	yes
 
 .include <bsd.port.pre.mk>
 
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${GZCAT}
-EXTRACT_BEFORE_ARGS=	
+EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	> ${DISTNAME}
 
 PLIST_FILES=	${EMACS_VERSION_SITE_LISPDIR}/${DISTNAME} \
@@ -31,9 +32,10 @@ do-build:
 		-f batch-byte-compile ${DISTNAME}
 
 do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 	@${INSTALL_DATA} ${WRKSRC}/${DISTNAME} \
-		${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 	@${INSTALL_DATA} ${WRKSRC}/${DISTNAME}c \
-		${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 
 .include <bsd.port.post.mk>
