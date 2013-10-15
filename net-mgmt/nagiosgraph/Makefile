@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nagiosgraph
-# Date created:				Wed May  3 17:26:19 MSD 2006
-# Whom:					Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: net-mgmt/nagiosgraph/Makefile 326245 2013-09-04 03:27:37Z az $
-#
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: net-mgmt/nagiosgraph/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagiosgraph
 PORTVERSION=	1.4.4
@@ -32,6 +28,7 @@ CFGFILES=	nagiosgraph.conf nagiosgraph_de.conf nagiosgraph_es.conf nagiosgraph_f
 
 PLIST_SUB=	NAGIOSWWWDIR=${NAGIOSWWWDIR} PORTNAME=${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's!%%PREFIX%%!${PREFIX}!' ${WRKSRC}/etc/nagiosgraph.conf
 .for i in ${CGIFILES}
