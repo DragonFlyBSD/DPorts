@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: www/httpsqs/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/httpsqs/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	httpsqs
 PORTVERSION=	1.7
@@ -18,6 +18,7 @@ USES=		pkgconfig
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${CP} ${PATCHDIR}/Makefile ${WRKSRC}
 	@${REINPLACE_CMD} -e 's|{ 0 }|"${PREFIX}/bin/${PORTNAME}"|' \
