@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-Machines/Makefile 325009 2013-08-19 17:37:34Z tobez $
+# $FreeBSD: textproc/p5-XML-SAX-Machines/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-SAX-Machines
 PORTVERSION=	0.46
@@ -29,6 +29,7 @@ MAN3=		XML::Filter::Distributor.3 XML::Filter::DocSplitter.3 \
 regression-test: build
 	${MAKE} -C ${WRKSRC} test
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 		@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
