@@ -1,9 +1,5 @@
-# Ports collection makefile for:	dimp3
-# Date created:			Sat Sep 13, 2008
-# Whom:				Beech Rintoul <beech@FreeBSD.org>
-#
-# $FreeBSD: mail/horde3-dimp/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Beech Rintoul <beech@FreeBSD.org>
+# $FreeBSD: mail/horde3-dimp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dimp
 PORTVERSION=	1.1.8
@@ -31,6 +27,7 @@ USE_HORDE=	base
 USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES
 
+NO_STAGE=	yes
 pre-configure:
 .if !defined(NOCRYPT)
 	@${REINPLACE_CMD} -e "s:%%GPG%%:${LOCALBASE}/bin/gpg:" \
