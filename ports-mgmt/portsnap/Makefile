@@ -9,6 +9,7 @@ MASTER_SITES=	http://leaf.dragonflybsd.org/~marino/dports-src/
 MAINTAINER=	cperciva@daemonology.net
 COMMENT=	Provides secure snapshots of the ports directory
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 MAN5=		portsnap.conf.5
 MAN8=		portsnap.8
