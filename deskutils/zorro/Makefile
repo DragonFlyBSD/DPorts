@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zorro
-# Date created:         03 Aug 1996
-# Whom:                 shanee@rabbit.augusta.de
-#
-# $FreeBSD: ports/deskutils/zorro/Makefile,v 1.33 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: shanee@rabbit.augusta.de
+# $FreeBSD: deskutils/zorro/Makefile 328259 2013-09-25 09:55:38Z gahr $
 
 PORTNAME=	zorro
 PORTVERSION=	1.1.8
@@ -17,10 +13,14 @@ DISTNAME=	${PORTNAME}-1.1p8
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A simple to-do list manager
 
-USE_TK_RUN=	yes
+USES+=		tk:run
 NO_BUILD=	yes
 PLIST_FILES=	bin/zorro
-PORTDOCS=	DOTzorrorc
+PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/bin/wish|${WISH}|' \
@@ -28,12 +28,14 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|oof|of|' ${WRKSRC}/DOTzorrorc
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${PREFIX}/bin/zorro
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/DOTzorrorc ${DOCSDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${STAGEDIR}${PREFIX}/bin/zorro
+
+.if ${PORT_OPTIONS:MDOCS}
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/DOTzorrorc ${STAGEDIR}${DOCSDIR}/
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} "Take a look at ${DOCSDIR}/DOTzorrorc"
+	@${ECHO_MSG} "Take a look at ${STAGEDIR}${DOCSDIR}/DOTzorrorc"
 	@${ECHO_MSG} ""
 .endif
 
