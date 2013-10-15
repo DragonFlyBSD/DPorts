@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: ports/benchmarks/scimark2/Makefile,v 1.8 2012/12/10 11:29:53 svnexp Exp $
+# $FreeBSD: benchmarks/scimark2/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	scimark2
 PORTVERSION=	2.0
@@ -28,6 +28,7 @@ SMSH=		${PORTNAME}${PKGNAMESUFFIX}
 PLIST_SUB=	SMDIR=${LSMDIR}
 PKGMESSAGE=	${WRKSRC}/pkg-message
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${JAVAC} ${JAVAC_OPTS} commandline.java
 	@${CP} ${WRKSRC}/commandline.class ${WRKSRC}/jnt/scimark2
