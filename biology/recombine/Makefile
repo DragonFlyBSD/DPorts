@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/recombine/Makefile 321313 2013-06-19 19:15:14Z bsam $
+# $FreeBSD: biology/recombine/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	recombine
 PORTVERSION=	1.41
@@ -19,6 +19,7 @@ PORTDOCS=	recombine.txt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/filetran ${PREFIX}/bin/
