@@ -1,10 +1,6 @@
-# New ports collection makefile for:   gnucash-doc
-# Date created:        Sun Feb 16 2003
-# Whom:                Glenn Johnson <glennpj@charter.net>
-#
-# $FreeBSD: ports/finance/gnucash-docs/Makefile,v 1.28 2012/11/17 05:57:25 svnexp Exp $
+# Created by: Glenn Johnson <glennpj@charter.net>
+# $FreeBSD: finance/gnucash-docs/Makefile 327727 2013-09-20 17:18:38Z bapt $
 #   $MCom: ports/finance/gnucash-docs/Makefile,v 1.7 2007/08/04 03:51:29 marcus Exp $
-#
 
 PORTNAME=	gnucash-docs
 PORTVERSION=	2.4.1
@@ -27,4 +23,5 @@ USE_GNOME=	libxml2 gnomehier
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
