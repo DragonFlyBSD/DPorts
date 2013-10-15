@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-spreadmodule
-# Date created:		24 May 2002
-# Whom:			Joshua Goodall <joshua@roughtrade.net>
-#
-# $FreeBSD: ports/net/py-spreadmodule/Makefile,v 1.11 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Joshua Goodall <joshua@roughtrade.net>
+# $FreeBSD: net/py-spreadmodule/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	spreadmodule
 PORTVERSION=	1.5
@@ -23,6 +19,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	SpreadModule
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/local,${PREFIX},g' ${WRKSRC}/setup.py
 
