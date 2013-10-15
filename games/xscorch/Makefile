@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: games/xscorch/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xscorch/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xscorch
 PORTVERSION=	0.2.1
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 
 MAN6=		xscorch.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMIKMOD}
