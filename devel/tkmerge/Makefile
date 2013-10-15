@@ -1,5 +1,5 @@
 # Created by: Bob Willcox <bob@immure.com>
-# $FreeBSD: devel/tkmerge/Makefile 314663 2013-03-19 16:26:27Z tabthorpe $
+# $FreeBSD: devel/tkmerge/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tkmerge
 PORTVERSION=	0.85
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 MAN1=		tkmerge.1
 PLIST_FILES=	bin/tkmerge
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
