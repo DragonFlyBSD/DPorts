@@ -1,5 +1,5 @@
 # Created by: TAKANO Yuji <takano@net-chef.net>
-# $FreeBSD: net/irrd/Makefile 322737 2013-07-10 23:59:46Z jgh $
+# $FreeBSD: net/irrd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	irrd
 PORTVERSION=	2.3.10
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/etc/irrd.conf|${IRRD_CONFDIR}/irrd.conf|g' \
 		${WRKSRC}/programs/IRRd/irrd.8	\
