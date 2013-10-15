@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/cocaine-core/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: devel/cocaine-core/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cocaine-core
 PORTVERSION=	0.10
@@ -30,6 +30,7 @@ GH_TAGNAME=	${GH_COMMIT}
 
 CONFLICTS=	json-c-[0-9]*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,boost_thread,boost_thread,g" \
 		${WRKSRC}/CMakeLists.txt
