@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Node
-# Date created:		13 March 2001
-# Whom:	      		Johann Visagie <johann@egenetics.com>
-#
-# $FreeBSD: textproc/p5-XML-Node/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Johann Visagie <johann@egenetics.com>
+# $FreeBSD: textproc/p5-XML-Node/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Node
 PORTVERSION=	0.11
@@ -21,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::Node.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
