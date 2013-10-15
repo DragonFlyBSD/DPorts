@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: biology/seqio/Makefile 321248 2013-06-19 13:30:50Z bsam $
+# $FreeBSD: biology/seqio/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	seqio
 PORTVERSION=	1.2.2
@@ -22,6 +22,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
