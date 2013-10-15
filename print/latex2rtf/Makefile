@@ -1,9 +1,5 @@
-# New ports collection makefile for:	latex2rtf
-# Date created:         14 Dec 1999
-# Whom:                 Joerg Wunsch <joerg@FreeBSD.org>
-#
-# $FreeBSD: print/latex2rtf/Makefile 326361 2013-09-05 07:29:05Z az $
-#
+# Created by: Joerg Wunsch <joerg@FreeBSD.org>
+# $FreeBSD: print/latex2rtf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex2rtf
 PORTVERSION=	2.0.0
@@ -23,6 +19,7 @@ USE_PERL5=	build
 
 INSTALL_TARGET=	install install-info
 
+NO_STAGE=	yes
 pre-patch:
 	@${CP} ${WRKSRC}/doc/latex2rtf.info ${WRKSRC}/doc/latex2rtf.info.bak
 	@${TR} -d '\r\b\0' < ${WRKSRC}/doc/latex2rtf.info.bak > ${WRKSRC}/doc/latex2rtf.info
