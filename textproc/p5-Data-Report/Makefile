@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Data-Report/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-Data-Report/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Data-Report
 PORTVERSION=	0.10
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Data::Report.3 Data::Report::Base.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
