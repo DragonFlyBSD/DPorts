@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jspacker
-# Date created:		2009-07-04
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: www/jspacker/Makefile 326033 2013-09-02 16:56:12Z az $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: www/jspacker/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jspacker
 DISTVERSION=	1.00b
@@ -28,6 +24,7 @@ SUB_FILES=	${PORTNAME}
 SUB_LIST=	JSPACKER=${JSPACKER} \
 		PERL5=${PERL5}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
 	${MKDIR} ${DATADIR} && \
