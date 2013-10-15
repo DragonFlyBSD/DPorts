@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sinfp
-# Date created:		26 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/security/sinfp/Makefile,v 1.21 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: security/sinfp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sinfp
 PORTREVISION=	${DBDATE}
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 MASTERDIR=	${.CURDIR}/../p5-Net-SinFP
 DBDATE=		20110125
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's!$$Bin/../db/!${DATADIR}/!' ${WRKSRC}/bin/${PORTNAME}.pl
 
