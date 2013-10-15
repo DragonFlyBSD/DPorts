@@ -1,5 +1,5 @@
-# Created by: MANTANI Nobutaka <nobutaka@freebsd.org>
-# $FreeBSD: sysutils/dd_rescue/Makefile 323953 2013-07-30 10:06:51Z bapt $
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: sysutils/dd_rescue/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dd_rescue
 PORTVERSION=	1.32
@@ -19,6 +19,7 @@ USE_CSTD=	gnu89
 WRKSRC=		${WRKDIR}/${PORTNAME}
 ALL_TARGET=	default
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
