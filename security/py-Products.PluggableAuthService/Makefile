@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-Products.PluggableAuthService/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: security/py-Products.PluggableAuthService/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.PluggableAuthService
 PORTVERSION=	1.10.0
@@ -16,7 +16,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.PluginRegistry>=0:${PORTSDIR}/devel
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
-USE_ZOPE=	yes
+USE_PYDISTUTILS=easy_install
+USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
