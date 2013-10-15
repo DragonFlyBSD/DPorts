@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: x11/ooxcb/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/ooxcb/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	ooxcb
 PORTVERSION=	1.1
@@ -14,4 +14,5 @@ USE_XORG=	xcb
 USE_PYDISTUTILS=easy_install
 PLIST_FILES=	${PYTHON_SITELIBDIR:S/${LOCALBASE}\///}/${PORTNAME}-${PORTVERSION}-py${PYTHON_VER}.egg
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
