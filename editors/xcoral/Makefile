@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xcoral
-# Date created:         1995/10/02
-# Whom:                 erich@rrnet.com
-#
-# $FreeBSD: ports/editors/xcoral/Makefile,v 1.26 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: erich@rrnet.com
+# $FreeBSD: editors/xcoral/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	xcoral
 PORTVERSION=	3.47
@@ -20,6 +16,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${PREFIX}/bin
 	@${MKDIR} ${DATADIR}
