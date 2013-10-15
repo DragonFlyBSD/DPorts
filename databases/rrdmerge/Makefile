@@ -1,5 +1,5 @@
 # Created by: sobomax
-# $FreeBSD: databases/rrdmerge/Makefile 325022 2013-08-19 21:35:56Z sobomax $
+# $FreeBSD: databases/rrdmerge/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	rrdmerge
 PORTVERSION=	0.0.1
@@ -19,6 +19,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rrdmerge ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/rrdmergetree ${PREFIX}/bin
