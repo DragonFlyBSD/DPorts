@@ -1,7 +1,8 @@
-# $FreeBSD: audio/libcoverart/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/libcoverart/Makefile 329872 2013-10-09 07:04:18Z jhale $
 
 PORTNAME=	libcoverart
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://cloud.github.com/downloads/metabrainz/${PORTNAME}/
 
@@ -10,12 +11,11 @@ COMMENT=	Library for accessing the MusicBrainz cover art archive
 
 LICENSE=	LGPL20
 
-LIB_DEPENDS=	jansson:${PORTSDIR}/devel/jansson \
-		neon:${PORTSDIR}/www/neon29
+LIB_DEPENDS=	libjansson.so:${PORTSDIR}/devel/jansson \
+		libneon.so:${PORTSDIR}/www/neon29
 
 USES=		cmake
 USE_LDCONFIG=	yes
-
 
 # {PROJECT_VERSION} is not a variable nor a typo, just part of the directory name
 WRKSRC=		${WRKDIR}/${PORTNAME}-{PROJECT_VERSION}
