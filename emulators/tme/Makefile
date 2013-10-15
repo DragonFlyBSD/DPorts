@@ -1,9 +1,9 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: emulators/tme/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: emulators/tme/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	tme
 PORTVERSION=	0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://people.csail.mit.edu/fredette/tme/
 
@@ -21,9 +21,8 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		expat:${PORTSDIR}/textproc/expat2 \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
-USES=		pkgconfig gettext iconv perl5
+USES=		pkgconfig gettext gmake iconv perl5
 USE_GNOME=	gdkpixbuf2 gtk20
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool libltdl
 CONFIGURE_ENV=	ac_cv_have_isinff=no
 CONFIGURE_ARGS=	--datadir=${WRKDIR}/tmproot --disable-warnings
@@ -37,6 +36,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${WRKSRC}/ic/ieee754/.libs
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
