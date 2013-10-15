@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.com>
-# $FreeBSD: ports/arabic/ae_fonts_mono/Makefile,v 1.12 2012/12/20 09:21:00 svnexp Exp $
+# $FreeBSD: arabic/ae_fonts_mono/Makefile 328292 2013-09-25 13:57:30Z vanilla $
 
 PORTNAME=	ae_fonts_mono
 PORTVERSION=	1.0
@@ -23,13 +23,8 @@ do-build:
 	@mkfontdir ${WRKSRC}
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/X11/fonts/ae_fonts_mono
+	@${MKDIR} ${STAGEDIR}/${PREFIX}/lib/X11/fonts/ae_fonts_mono
 	${INSTALL_DATA} ${WRKSRC}/*.pcf ${WRKSRC}/fonts.dir \
-		${PREFIX}/lib/X11/fonts/ae_fonts_mono
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+		${STAGEDIR}/${PREFIX}/lib/X11/fonts/ae_fonts_mono
 
 .include <bsd.port.mk>
