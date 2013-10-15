@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-happstack/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-happstack/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	happstack
 PORTVERSION=	7.0.1
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	happstack-server>=7.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
