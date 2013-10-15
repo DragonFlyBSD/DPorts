@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-wxc/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11-toolkits/hs-wxc/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	wxc
 PORTVERSION=	0.90.0.4
@@ -17,6 +17,7 @@ WX_UNICODE=	yes
 NOPORTDOCS=	yes
 USE_DOS2UNIX=	yes
 
+NO_STAGE=	yes
 post-patch::
 	@${REINPLACE_CMD} 's|"wx-config"|"wxgtk2u-2.9-config"| ; \
 	    s|/sbin/ldconfig -n|/sbin/ldconfig -m| ' ${WRKSRC}/Setup.hs
