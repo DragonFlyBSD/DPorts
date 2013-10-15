@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-adobe-utopia-type1/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/font-adobe-utopia-type1/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	font-adobe-utopia-type1
 PORTVERSION=	1.0.4
@@ -10,4 +10,5 @@ COMMENT=	X.Org Adobe Utopia Type1 font
 
 XORG_CAT=	font
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
