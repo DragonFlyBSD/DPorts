@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/sysutils/wiimms/Makefile,v 1.5 2012/11/17 06:01:50 svnexp Exp $
+# $FreeBSD: sysutils/wiimms/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	wiimms
 DISTVERSION=	2.10a
@@ -19,6 +19,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 WRKSRC=	${WRKDIR}/wiimms-iso-tools
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
