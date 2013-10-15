@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/tiarra/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/tiarra/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	tiarra
 PORTVERSION=	20100212
@@ -30,6 +30,7 @@ PLIST_SUB=	TIARRA_USER=${TIARRA_USER} \
 TIARRA_USER=	tiarra
 TIARRA_GROUP=	tiarra
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/tiarra
 	@${TAR} cfC - ${WRKSRC} . | ${TAR} xfC - ${PREFIX}/tiarra
