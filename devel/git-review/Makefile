@@ -1,4 +1,4 @@
-# $FreeBSD: devel/git-review/Makefile 325323 2013-08-25 02:07:08Z rakuco $
+# $FreeBSD: devel/git-review/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	git-review
 PORTVERSION=	1.23
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 
 MAN1=		git-review.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
