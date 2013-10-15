@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Tk-Pod/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-Tk-Pod/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	Tk-Pod
 PORTVERSION=	0.9941
@@ -18,19 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		tkmore.1 \
-		tkpod.1
-MAN3=		Tk::More.3 \
-		Tk::Pod.3 \
-		Tk::Pod::Cache.3 \
-		Tk::Pod::FindPods.3 \
-		Tk::Pod::Search.3 \
-		Tk::Pod::Search_db.3 \
-		Tk::Pod::SimpleBridge.3 \
-		Tk::Pod::Text.3 \
-		Tk::Pod::Tree.3 \
-		Tk::Pod::Util.3 \
-		Tk::Pod_usage.3
 
 .include <bsd.port.mk>
