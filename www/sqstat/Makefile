@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sqstat
-# Date created:		4 May 2006
-# Whom:			Sergey Matveychuk <sem@FreeBSD.org>
-#
-# $FreeBSD: ports/www/sqstat/Makefile,v 1.6 2012/11/17 06:03:06 svnexp Exp $
-#
+# Created by: Sergey Matveychuk <sem@FreeBSD.org>
+# $FreeBSD: www/sqstat/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	sqstat
 PORTVERSION=	1.20
@@ -32,6 +28,7 @@ PLIST_FILES=	${SQSTATDIR}/arrow.gif ${SQSTATDIR}/sqstat.class.php \
 		${SQSTATDIR}/config.inc.php.defaults
 PORTDOCS=	CHANGES FAQ LICENSE README TODO
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${SQSTATDIR}; \
 	for f in ${PLIST_FILES}; do \
