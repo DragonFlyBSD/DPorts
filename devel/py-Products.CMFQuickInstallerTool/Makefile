@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-Products.CMFQuickInstallerTool
-# Date created:				20 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-Products.CMFQuickInstallerTool/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
-#
+# $FreeBSD: devel/py-Products.CMFQuickInstallerTool/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.CMFQuickInstallerTool
 PORTVERSION=	3.0.6
@@ -27,6 +22,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.annotation>=0:${PORTSDIR}/devel/py-zope
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
