@@ -1,9 +1,5 @@
-# Ports collection makefile for:	bzr-colo
-# Date created:		2010-10-18
-# Whom:			Carlo Strub
-#
-# $FreeBSD: ports/devel/bzr-colo/Makefile,v 1.7 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Carlo Strub
+# $FreeBSD: devel/bzr-colo/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-colo
 PORTVERSION=	0.4.0
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://launchpadlibrarian.net/91504187/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin for bzr to support colocated branches
 
 LICENSE=	GPLv2
@@ -25,4 +21,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr_colo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
