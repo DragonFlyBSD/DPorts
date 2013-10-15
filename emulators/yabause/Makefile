@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: emulators/yabause/Makefile 318300 2013-05-16 09:44:11Z miwi $
+# $FreeBSD: emulators/yabause/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	yabause
 PORTVERSION=	0.9.11.1
@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	QT4
 OPTIONS_DEFAULT=	QT4
 QT4_DESC=	Build wit qt4 interface instead of gtk2 one
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQT4}
