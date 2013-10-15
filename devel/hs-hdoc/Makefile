@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/hs-hdoc/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-hdoc/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hdoc
 PORTVERSION=	0.8.3
@@ -31,6 +31,7 @@ USE_GMAKE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 ALL_TARGET=	# empty
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR} && \
