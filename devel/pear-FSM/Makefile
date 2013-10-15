@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-FSM/Makefile 314216 2013-03-15 01:30:55Z miwi $
+# $FreeBSD: devel/pear-FSM/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	FSM
 PORTVERSION=	1.3.1
@@ -17,6 +17,7 @@ LATEST_LINK=	pear-${PORTNAME}
 OPTIONS_DEFINE=	PEAR_GRAPGHVIZ
 PEAR_GRAPGHVIZ_DESC=	PEAR::GraphViz support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_GRAPHVIZ}
