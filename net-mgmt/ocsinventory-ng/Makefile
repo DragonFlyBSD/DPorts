@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ocsinventory-ng
 PORTVERSION=	2.0.5
@@ -20,15 +20,16 @@ RUN_DEPENDS=	p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
 		p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite \
 		p5-XML-Entities>=0:${PORTSDIR}/textproc/p5-XML-Entities
 
+USES=		perl5
 USE_APACHE_RUN=	22+
 USE_MYSQL=	41+
-USE_PERL5=	yes
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=	5
 USE_PHP=	mysql pcre zlib session xml gd zip openssl mbstring
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
