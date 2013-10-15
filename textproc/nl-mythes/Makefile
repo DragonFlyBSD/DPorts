@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: textproc/nl-mythes/Makefile 317664 2013-05-08 14:48:04Z sunpoet $
+# $FreeBSD: textproc/nl-mythes/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2012.12.11
@@ -29,6 +28,7 @@ PLIST_FILES+=	%%DATADIR%%/th_${ALIAS}_v2.dat \
 		%%DATADIR%%/th_${ALIAS}_v2.idx
 .endfor
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_nl_v2.dat ${DATADIR}/th_nl_NL_v2.dat
