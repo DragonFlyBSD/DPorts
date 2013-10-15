@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Parallel-Scoreboard/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-Parallel-Scoreboard/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Parallel-Scoreboard
 PORTVERSION=	0.03
@@ -22,4 +22,5 @@ MAN3=	Parallel::Scoreboard.3 \
 	Parallel::Scoreboard::PSGI::App.3 \
 	Parallel::Scoreboard::PSGI::App::JSON.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
