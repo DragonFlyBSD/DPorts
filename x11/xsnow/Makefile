@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xsnow/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xsnow/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xsnow
 PORTVERSION=	1.42
@@ -15,6 +15,7 @@ USE_XORG=	xpm
 MAN6=		xsnow.6
 PLIST_FILES=	bin/xsnow
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} \
 		-e 's: BINDIR .*:BINDIR=${PREFIX}/bin:' \
