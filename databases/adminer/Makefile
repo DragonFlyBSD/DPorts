@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/adminer/Makefile 322118 2013-07-01 08:37:23Z wen $
+# $FreeBSD: databases/adminer/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	adminer
 PORTVERSION=	3.7.1
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 USE_PHP=	mssql mysql odbc pgsql session pdo_sqlite
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
 	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
