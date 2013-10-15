@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/dnstracer/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: dns/dnstracer/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnstracer
 PORTVERSION=	1.9
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/dnstracer
 
 OPTIONS_DEFINE=		IPV6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
