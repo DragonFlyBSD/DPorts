@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Mason
-# Date created:				03 April, 2012
-# Whom:					Muhammad Moinur Rahman <5u623l20@gmail.com>
-#
-# $FreeBSD: www/p5-Mason/Makefile 325965 2013-09-02 10:00:38Z az $
-#
+# Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
+# $FreeBSD: www/p5-Mason/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Mason
 PORTVERSION=	2.20
@@ -74,4 +70,5 @@ MAN3=		Mason.3 \
 		Mason::Request.3 \
 		Mason::Result.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
