@@ -1,5 +1,5 @@
 # Created by: liamfoy@sepulcrum.org
-# $FreeBSD: mail/qsf/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/qsf/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qsf
 PORTVERSION=	1.2.7
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/qsf
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGDBM}
