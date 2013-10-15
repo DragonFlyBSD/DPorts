@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: games/nuclearchess/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/nuclearchess/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	nuclearchess
 PORTVERSION=	1.0.0
@@ -29,6 +29,7 @@ DESKTOP_ENTRIES="NuclearChess" "${COMMENT}"  \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" "Game;BoardGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
