@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Cstools
-# Date created:				12th October 2003
-# Whom:					Pav Lucistnik <pav@oook.cz>
-#
-# $FreeBSD: converters/p5-Cstools/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Pav Lucistnik <pav@oook.cz>
+# $FreeBSD: converters/p5-Cstools/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Cstools
 PORTVERSION=	3.42
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 MAN1=		cssort.1 cstocs.1 dbfcstocs.1
 MAN3=		Cz::Cstocs.3 Cz::Sort.3 Cz::Time.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
