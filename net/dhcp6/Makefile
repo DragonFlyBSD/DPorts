@@ -1,5 +1,5 @@
 # Created by: Munechika SUMIKAWA <sumikawa@FreeBSD.org>
-# $FreeBSD: net/dhcp6/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/dhcp6/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dhcp6
 PORTVERSION=	20080615
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	DOCS
 MAN5=		dhcp6c.conf.5 dhcp6s.conf.5
 MAN8=		dhcp6c.8 dhcp6s.8 dhcp6relay.8 dhcp6ctl.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
