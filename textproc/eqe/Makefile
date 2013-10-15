@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/eqe/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: textproc/eqe/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	eqe
 PORTVERSION=	1.3.0
@@ -27,6 +27,7 @@ MAN1=		eqe.1 eqedit.1
 PORTDOCS=	TODO changelog README FAQ copyright
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^\(install:\) install-doc,\1,' \
 		${WRKSRC}/Makefile
