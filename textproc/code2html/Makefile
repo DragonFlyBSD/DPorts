@@ -1,9 +1,5 @@
-# New ports collection makefile for:	code2html
-# Date created:				01 October 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: textproc/code2html/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: textproc/code2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	code2html
 PORTVERSION=	0.9.1
@@ -22,6 +18,7 @@ USE_PERL5=	run
 MAN1=		code2html.1
 PLIST_FILES=	bin/code2html
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} \
 		-e 's|/usr/bin/bzip2|${BZIP2_CMD}|' \
