@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: games/java-games-suite/Makefile 321447 2013-06-21 06:37:05Z jgh $
+# $FreeBSD: games/java-games-suite/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	java-games-suite
 PORTVERSION=	1.0
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/java-games-suite \
 SUB_FILES=	${PORTNAME}.sh
 GAMES=	MM reversi Mine Tetris RT Number
 
+NO_STAGE=	yes
 post-extract-script:
 .for game in ${GAMES}
 	@${ECHO_CMD} "Main-Class: ${game}" > ${WRKSRC}/${game}/MANIFEST.MF
