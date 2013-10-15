@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-Template-DBI/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: databases/p5-Template-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Template-DBI
 PORTVERSION=	2.65
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN3=	Template::DBI.3 \
 	Template::Plugin::DBI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
