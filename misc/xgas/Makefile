@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: misc/xgas/Makefile 321997 2013-06-28 22:10:14Z bapt $
+# $FreeBSD: misc/xgas/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xgas
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ USE_XORG=	ice sm x11 xaw xext xmu xt
 MAN1=		xgas.1
 PLIST_FILES=	bin/xgas lib/X11/app-defaults/XGas
 
+NO_STAGE=	yes
 post-install:
 	@${CHMOD} 755 ${PREFIX}/bin/xgas
 	@${CHOWN} bin:bin ${PREFIX}/bin/xgas
