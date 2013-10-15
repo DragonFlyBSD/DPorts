@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmxss
-# Date created:		27 August 2002
-# Whom:			Bruce M Simpson <bms@FreeBSD.org>
-#
-# $FreeBSD: x11/wmxss/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Bruce M Simpson <bms@FreeBSD.org>
+# $FreeBSD: x11/wmxss/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	wmxss
 PORTVERSION=	0.1
@@ -18,6 +14,7 @@ USE_XORG=	x11 xpm
 PLIST_FILES=	bin/wmxss
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/Src
 
+NO_STAGE=	yes
 post-extract:
 	@( cd ${WRKSRC} ; ${MAKE} clean ; ${RM} -f .nfs* )
 
