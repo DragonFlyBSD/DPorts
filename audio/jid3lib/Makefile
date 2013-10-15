@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: ports/audio/jid3lib/Makefile,v 1.9 2012/12/10 13:24:54 svnexp Exp $
+# $FreeBSD: audio/jid3lib/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	jid3lib
 PORTVERSION=	0.5.4
@@ -11,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java ID3 Tag Library
 
 USE_JAVA=	yes
+NO_STAGE=	yes
 JAVA_VERSION=	1.6+
 USE_ANT=	yes
 
