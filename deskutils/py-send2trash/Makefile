@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: deskutils/py-send2trash/Makefile 323644 2013-07-25 14:25:51Z pawel $
+# $FreeBSD: deskutils/py-send2trash/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	send2trash
 PORTVERSION=	1.3.0
@@ -24,6 +24,7 @@ PORTDOCS=	CHANGES.rst README.rst
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
