@@ -1,9 +1,5 @@
-# New ports collection makefile for: py-pickledb
-# Date created:		2011-11-04
-# Whom:		Olivier Duchateau <duchateau.olivier@gmail.com>
-#
-# $FreeBSD: ports/databases/py-pickledb/Makefile,v 1.4 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
+# $FreeBSD: databases/py-pickledb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pickleDB
 PORTVERSION=	0.3
@@ -23,4 +19,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pickledb.py \
 		%%PYTHON_SITELIBDIR%%/pickledb.pyc \
 		%%PYTHON_SITELIBDIR%%/pickledb.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
