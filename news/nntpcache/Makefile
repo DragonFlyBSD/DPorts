@@ -1,5 +1,5 @@
 # Created by: proff@suburbia.net
-# $FreeBSD: news/nntpcache/Makefile 318959 2013-05-24 11:47:26Z bdrewery $
+# $FreeBSD: news/nntpcache/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	nntpcache
 PORTVERSION=	3.0.2
@@ -27,6 +27,7 @@ USE_RC_SUBR=	nntpcached
 OPTIONS_DEFINE=	LDAP RADIUS SPAMPHOBIA
 SPAMPHOBIA_DESC=	Spamphobia NoCeM support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRADIUS}
