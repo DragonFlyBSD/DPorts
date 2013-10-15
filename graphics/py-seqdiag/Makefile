@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/py-seqdiag/Makefile,v 1.24 2013/02/11 02:50:27 svnexp Exp $
+# $FreeBSD: graphics/py-seqdiag/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	seqdiag
 PORTVERSION=	0.8.2
@@ -27,6 +27,7 @@ MAN1=	${PORTNAME}.1
 PORTDOCS=	README.txt
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
