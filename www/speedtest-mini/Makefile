@@ -1,9 +1,5 @@
-# New ports collection makefile for:	speedtest-mini
-# Date created:		2010-09-19
-# Whom:			Anton Grytsuk <gx@bsdplanet.ru>
-#
-# $FreeBSD: ports/www/speedtest-mini/Makefile,v 1.8 2012/11/17 06:03:06 svnexp Exp $
-#
+# Created by: Anton Grytsuk <gx@bsdplanet.ru>
+# $FreeBSD: www/speedtest-mini/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	speedtest-mini
 PORTVERSION=	2.2.0
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} -m 755 ${WWWDIR}/speedtest
 	@${INSTALL_DATA} ${WRKDIR}/index-php.html ${WWWDIR}/index.html
