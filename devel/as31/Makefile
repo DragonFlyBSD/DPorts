@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: devel/as31/Makefile 325658 2013-08-30 03:37:22Z danfe $
+# $FreeBSD: devel/as31/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	as31
 PORTVERSION=	2.0.b3
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/as31 %%X11%%bin/as31_gtk
 OPTIONS_DEFINE=	X11
 OPTIONS_SUB=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
