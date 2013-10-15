@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Scalar-String
-# Date created:				25 Mar 2009
-# Whom:					brix@FreeBSD.org
-#
-# $FreeBSD: devel/p5-Scalar-String/Makefile 326581 2013-09-07 08:23:45Z az $
-#
+# Created by: brix@FreeBSD.org
+# $FreeBSD: devel/p5-Scalar-String/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Scalar-String
 PORTVERSION=	0.002
@@ -21,4 +17,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Scalar::String.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
