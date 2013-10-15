@@ -1,5 +1,5 @@
 # Created by: Dave McKay <dave@mu.org>
-# $FreeBSD: security/seahorse-plugins/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: security/seahorse-plugins/Makefile 327769 2013-09-20 22:55:24Z bapt $
 #   $MCom: ports/security/seahorse-plugins/Makefile,v 1.28 2011/07/03 11:57:45 kwm Exp $
 
 PORTNAME=	seahorse-plugins
@@ -33,6 +33,7 @@ APPLET_DESC=	Clipboard encryption applet
 GCONF_SCHEMAS=	seahorse-plugins.schemas
 MAN1=		seahorse-agent.1 seahorse-tool.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEDIT}
