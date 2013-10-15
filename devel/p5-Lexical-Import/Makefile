@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Lexical-Import/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Lexical-Import/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	Lexical-Import
 PORTVERSION=	0.002
@@ -19,7 +19,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Lexical::Import.3
 
 .include <bsd.port.mk>
