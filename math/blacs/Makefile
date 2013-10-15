@@ -1,9 +1,5 @@
-# New ports collection makefile for:    blacs
-# Date created:                 5 May 2003
-# Whom:                         NAKATA, Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: ports/math/blacs/Makefile,v 1.28 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: NAKATA, Maho <maho@FreeBSD.org>
+# $FreeBSD: math/blacs/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	blacs
 PORTVERSION=	1.7
@@ -25,6 +21,7 @@ COMMENT=	The BLACS (Basic Linear Algebra Communication Subprograms)
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/mpi/openmpi/bin/mpirun)
