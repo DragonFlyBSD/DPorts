@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: www/cgi-lib.pl/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/cgi-lib.pl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cgi-lib_pl
 PORTVERSION=	2.18
@@ -23,6 +23,7 @@ EXTRACT_AFTER_ARGS=	> cgi-lib.pl
 INSTALL_BASE=	${SITE_PERL_REL}
 INSTALL_DIR=	${PREFIX}/${INSTALL_BASE}
 
+NO_STAGE=	yes
 do-install:
 	-${MKDIR} ${INSTALL_DIR}
 	${INSTALL_DATA} ${WRKDIR}/cgi-lib.pl ${INSTALL_DIR}
