@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-File_Archive
-# Date created:			  18 April 2005
-# Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-#
-# $FreeBSD: ports/archivers/pear-File_Archive/Makefile,v 1.15 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+# $FreeBSD: archivers/pear-File_Archive/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	File_Archive
 PORTVERSION=	1.5.5
@@ -17,6 +13,7 @@ BUILD_DEPENDS=	${PEARDIR}/MIME/Type.php:${PORTSDIR}/mail/pear-MIME_Type \
 RUN_DEPENDS=	${PEARDIR}/MIME/Type.php:${PORTSDIR}/mail/pear-MIME_Type \
 		${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
+NO_STAGE=	yes
 USE_PHP=	bz2 pcre zlib
 LATEST_LINK=	pear-${PORTNAME}
 
