@@ -1,9 +1,5 @@
-# ports collection makefile for:	nagcon
-# Date created:			Wed Mar 29 20:41:02 CST 2006
-# Whom:				Douglas K. Rand <rand@meridian-enviro.com>
-#
-# $FreeBSD: ports/net-mgmt/nagcon/Makefile,v 1.8 2012/11/17 06:00:33 svnexp Exp $
-#
+# Created by: Douglas K. Rand <rand@meridian-enviro.com>
+# $FreeBSD: net-mgmt/nagcon/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagcon
 PORTVERSION=	0.0.30
@@ -24,6 +20,7 @@ CPPFILES=	utils.cpp br.cpp nc.cpp pl.cpp
 CFLAGS+=	-DVERSION=\"${PORTVERSION}\" -I${LOCALBASE}/include
 LDFLAGS+=	-lncurses -lstdc++ -L${LOCALBASE}/lib -lstrfunc
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} -c -o ${WRKSRC}/${CFILES:C/\.c//}.o ${WRKSRC}/${CFILES}
 .for f in ${CPPFILES}
