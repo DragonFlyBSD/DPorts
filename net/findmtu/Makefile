@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/net/findmtu/Makefile,v 1.4 2013/01/09 20:04:59 svnexp Exp $
+# $FreeBSD: net/findmtu/Makefile 330165 2013-10-12 18:11:47Z sunpoet $
 
 PORTNAME=	findmtu
 PORTVERSION=	0.9
@@ -7,20 +7,27 @@ CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.dia.uniroma3.it/~compunet/tunneldiscovery/findmtu/
 
 MAINTAINER=	jmohacsi@bsd.hu
-COMMENT=	A tool for performing IPv6 path MTU discovery on *NIX
+COMMENT=	Tool for performing IPv6 path MTU discovery on *NIX
+
+OPTIONS_DEFINE=	DOCS
 
 SUB_FILES=	findmtu
+
+.include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|gcc|${CC}|' ${WRKSRC}/Makefile.rawsocket
 
 do-configure:
 	${LN} -s ${WRKSRC}/Makefile.rawsocket ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/findmtu ${PREFIX}/bin/findmtu
-	${INSTALL_PROGRAM} ${WRKSRC}/findmtu ${PREFIX}/bin/findmtu.real
-.ifndef(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.freebsd ${DOCSDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/findmtu ${STAGEDIR}${PREFIX}/bin/findmtu
+	${INSTALL_PROGRAM} ${WRKSRC}/findmtu ${STAGEDIR}${PREFIX}/bin/findmtu.real
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.freebsd ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
