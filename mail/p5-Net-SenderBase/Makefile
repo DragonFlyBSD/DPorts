@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-Net-SenderBase
-# Date created:				2009 March 18
-# Whom:					J.R. Oldroyd <fbsd@opal.com>
-#
-# $FreeBSD: mail/p5-Net-SenderBase/Makefile 326271 2013-09-04 12:28:16Z az $
-#
+# Created by: J.R. Oldroyd <fbsd@opal.com>
+# $FreeBSD: mail/p5-Net-SenderBase/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net-SenderBase
 PORTVERSION=	1.02
@@ -24,4 +20,5 @@ MAN3=		Net::SenderBase.3 \
 		Net::SenderBase::Query.3 \
 		Net::SenderBase::Results.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
