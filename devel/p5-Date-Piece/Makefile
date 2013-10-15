@@ -1,5 +1,5 @@
-# Created by:	      				Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Piece/Makefile 326581 2013-09-07 08:23:45Z az $
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: devel/p5-Date-Piece/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date-Piece
 PORTVERSION=	0.0.3
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 MAN1=	day.1
 MAN3=	Date::Piece.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
