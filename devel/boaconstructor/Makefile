@@ -1,9 +1,5 @@
-# New ports collection makefile for:    boa-constructor
-# Date created:         		15 December 2000
-# Whom:                 		Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: devel/boaconstructor/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: devel/boaconstructor/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	boaconstructor
 PORTVERSION=	0.6.1
@@ -25,6 +21,7 @@ USE_WX=		2.6
 WX_COMPS=	python
 DATADIR=	${PREFIX}/share/Boa
 
+NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -x zoa ${WRKSRC}
 	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py -x zoa ${WRKSRC}
