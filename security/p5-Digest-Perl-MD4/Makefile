@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-Perl-MD4/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/p5-Digest-Perl-MD4/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-Perl-MD4
 PORTVERSION=	1.4
@@ -18,4 +18,5 @@ MAN3=	Digest::Perl::Digest-MD4.3 \
 
 WRKSRC=	${WRKDIR}/MD4
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
