@@ -1,5 +1,4 @@
-# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-# $FreeBSD: print/p5-Font-FreeType/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: print/p5-Font-FreeType/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	Font-FreeType
 PORTVERSION=	0.03
@@ -19,4 +18,5 @@ MAN3=	Font::FreeType.3 \
 	Font::FreeType::Face.3 \
 	Font::FreeType::Glyph.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
