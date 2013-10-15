@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.Marshall/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-Products.Marshall/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.Marshall
 PORTVERSION=	2.1.2
@@ -23,7 +23,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}transaction>=0:${PORTSDIR}/devel/py-transact
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
