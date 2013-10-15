@@ -1,5 +1,5 @@
 # Created by: Amir Husaini <amir.husaini@bsdit.com>
-# $FreeBSD: www/zikula/Makefile 321972 2013-06-28 18:28:49Z lippe $
+# $FreeBSD: www/zikula/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	zikula
 PORTVERSION=	1.3.5
@@ -22,6 +22,7 @@ IGNORE_WITH_MYSQL=	41 50
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${WWWDIR}
 		@cd ${WRKSRC} && \
