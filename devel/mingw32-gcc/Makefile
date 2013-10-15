@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/mingw32-gcc/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: devel/mingw32-gcc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}
@@ -20,12 +20,13 @@ LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
 
 GCCVERSION=	4.7.2
 
+SSP_UNSAFE=	yes
+
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
 USE_LDCONFIG=	yes
-USES=		bison iconv
+USES=		bison iconv gmake perl5
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 
 GCC_TARG=	${PKGNAMEPREFIX:S/-$//}
 
@@ -34,6 +35,7 @@ CONFIGURE_SCRIPT=	../${SRCDIR:C/${WRKDIR}//}/configure
 
 BINARIES=	c++ cpp g++ gcc gcov gfortran
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
