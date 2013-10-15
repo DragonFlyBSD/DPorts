@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xvattr/Makefile 323695 2013-07-26 06:47:04Z bapt $
+# $FreeBSD: x11/xvattr/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xvattr
 PORTVERSION=	1.3
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/${PORTNAME} bin/g${PORTNAME}
 
 CFLAGS+=	-DVERSION=\"${PORTVERSION}\"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK1}
