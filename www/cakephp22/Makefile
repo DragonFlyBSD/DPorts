@@ -1,5 +1,5 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp22/Makefile 321716 2013-06-24 20:55:09Z madpilot $
+# $FreeBSD: www/cakephp22/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cakephp
 PORTVERSION=	2.2.7
@@ -51,6 +51,7 @@ MEMCACHE_DESC=	Enable Memcached caching engine client
 CONFDIR=	${PREFIX}/${CONFDIR_REL}
 CONFDIR_REL=	${APACHEETCDIR}/Includes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 WITH_PHP_CGI?=	/cgi-bin/php
