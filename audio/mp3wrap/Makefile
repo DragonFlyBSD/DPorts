@@ -1,9 +1,5 @@
-# New ports collection makefile for:	audio/mp3wrap
-# Date created:				30.05.2003
-# Whom:					Ulrich Spoerlein <uspoerlein@gmail.com>
-#
-# $FreeBSD: ports/audio/mp3wrap/Makefile,v 1.10 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
+# $FreeBSD: audio/mp3wrap/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3wrap
 PORTVERSION=	0.5
@@ -15,6 +11,7 @@ MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Utility to merge mp3 files (and other formats)
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
