@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz
-# $FreeBSD: net-mgmt/jnettop/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-mgmt/jnettop/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	jnettop
 PORTVERSION=	0.13.0
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_GNOME=	glib20
 USE_GMAKE=	yes
+NO_STAGE=	yes
 
 LICENSE=	GPLv2
 
