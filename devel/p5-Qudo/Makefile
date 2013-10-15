@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Qudo/Makefile 326870 2013-09-10 07:12:35Z az $
+# $FreeBSD: devel/p5-Qudo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Qudo
 PORTVERSION=	0.0213
@@ -28,4 +28,5 @@ MAN3=	Qudo.3 \
 	Qudo::Manual::JA::Tutorial.3 \
 	Qudo::Worker.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
