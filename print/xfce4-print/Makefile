@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: print/xfce4-print/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: print/xfce4-print/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xfce4-print
 PORTVERSION=	4.6.1
@@ -32,6 +32,7 @@ OPTIONS_SINGLE_PRINTMETHOD=	LPR CUPS
 LETTER_DESC=	Use letter paper format instead of A4
 LPR_DESC=	Use lpr as printing system
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
