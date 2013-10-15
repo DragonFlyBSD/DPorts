@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net-im/mikutter/Makefile 324685 2013-08-14 08:01:09Z tota $
+# $FreeBSD: net-im/mikutter/Makefile 328682 2013-09-29 12:25:20Z tota $
 
 PORTNAME=	mikutter
-PORTVERSION=	0.2.2.1328
+PORTVERSION=	0.2.2.1373
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/ \
 		LOCAL
@@ -65,15 +65,15 @@ post-patch:
 	@${RM} -r ${WRKSRC}/vendor
 
 do-install:
-	${INSTALL_SCRIPT} ${INSTALL_WRKSRC}/mikutter.rb ${PREFIX}/bin/mikutter
+	${INSTALL_SCRIPT} ${INSTALL_WRKSRC}/mikutter.rb ${STAGEDIR}${PREFIX}/bin/mikutter
 	cd ${INSTALL_WRKSRC} \
-		&& ${COPYTREE_SHARE} core ${RUBY_SITELIBDIR}/mikutter \
-		&& ${COPYTREE_SHARE} plugin ${RUBY_SITELIBDIR}/mikutter
-	@${MKDIR} ${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKDIR}/${SUB_FILES} ${PREFIX}/share/applications/
+		&& ${COPYTREE_SHARE} core ${STAGEDIR}${RUBY_SITELIBDIR}/mikutter \
+		&& ${COPYTREE_SHARE} plugin ${STAGEDIR}${RUBY_SITELIBDIR}/mikutter
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKDIR}/${SUB_FILES} ${STAGEDIR}${PREFIX}/share/applications/
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${INSTALL_WRKSRC}/${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${INSTALL_WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 x-generate-plist:
