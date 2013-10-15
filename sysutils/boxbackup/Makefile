@@ -1,5 +1,5 @@
 # Created by: James O'Gorman <james@netinertia.co.uk>
-# $FreeBSD: ports/sysutils/boxbackup/Makefile,v 1.24 2013/02/23 12:46:34 svnexp Exp $
+# $FreeBSD: sysutils/boxbackup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	boxbackup
 PORTVERSION=	0.11.1
@@ -16,9 +16,9 @@ LICENSE=	BSD GPLv2
 LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE-DUAL.txt
 
+USES=		perl5
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 USE_AUTOTOOLS=	autoconf aclocal autoheader
 ACLOCAL_ARGS+=	-I ${WRKSRC}/infrastructure/m4
 
@@ -38,6 +38,7 @@ SERVER_DESC=	Install the bbstored server
 
 OPTIONS_DEFAULT=CLIENT SERVER
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}

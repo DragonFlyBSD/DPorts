@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/boxbackup/files/999.boxbackup.in,v 1.3 2013/02/09 12:22:31 svnexp Exp $
+# $FreeBSD: sysutils/boxbackup/files/999.boxbackup.in 311969 2013-02-09 12:00:52Z crees $
 #
 # Box Backup monthly store compare
 #

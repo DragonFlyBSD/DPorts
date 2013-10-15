@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/boxbackup/files/bbstored.in,v 1.7 2013/02/23 12:46:34 svnexp Exp $
+# $FreeBSD: sysutils/boxbackup/files/bbstored.in 312808 2013-02-23 12:30:08Z crees $
 #
 # PROVIDE: bbstored
 # REQUIRE: NETWORKING
