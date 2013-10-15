@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11-clocks/bclock/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11-clocks/bclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	bclock
 PORTVERSION=	1.0
@@ -18,4 +18,5 @@ MAN1=		bclock.1
 PLIST_FILES=	bin/bclock \
 		lib/X11/app-defaults/Clock-color
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
