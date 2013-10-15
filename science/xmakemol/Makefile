@@ -1,5 +1,5 @@
 # Created by: Chi
-# $FreeBSD: science/xmakemol/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: science/xmakemol/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	xmakemol
 PORTVERSION=	5.16
@@ -21,4 +21,5 @@ PLIST_FILES=	bin/xmake_anim.pl \
 		%%DATADIR%%/elements
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
