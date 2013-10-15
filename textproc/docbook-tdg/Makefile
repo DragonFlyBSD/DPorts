@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: textproc/docbook-tdg/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: textproc/docbook-tdg/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	docbook-tdg
 PORTVERSION=	2.0.17
@@ -14,6 +14,7 @@ USE_ZIP=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/tdg/en
 
+NO_STAGE=	yes
 do-install:
 .for D in html/figures/callouts html/figures/admon html/figures html
 	${MKDIR} ${DOCSDIR}/${D}
