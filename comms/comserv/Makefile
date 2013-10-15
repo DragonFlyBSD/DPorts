@@ -1,5 +1,5 @@
 # Created by: Brian Dean <bsd@FreeBSD.org>
-# $FreeBSD: comms/comserv/Makefile 321403 2013-06-20 16:52:50Z bsam $
+# $FreeBSD: comms/comserv/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	comserv
 PORTVERSION=	1.4.3
@@ -14,4 +14,5 @@ MAN8=		comservd.8
 MANCOMPRESSED=	yes
 PLIST_FILES=	sbin/comservd etc/comservd.conf.sample etc/rc.d/comservd.sh.sample
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
