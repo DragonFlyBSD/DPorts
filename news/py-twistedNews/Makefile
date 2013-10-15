@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: news/py-twistedNews/Makefile 326650 2013-09-07 16:15:40Z sunpoet $
+# $FreeBSD: news/py-twistedNews/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	twistedNews
 PORTVERSION=	13.1.0
@@ -22,4 +22,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
