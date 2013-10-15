@@ -1,5 +1,5 @@
 # Created by: bz
-# $FreeBSD: ports/security/clamav-milter/Makefile,v 1.3 2012/11/17 06:01:02 svnexp Exp $
+# $FreeBSD: security/clamav-milter/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PKGNAMESUFFIX=	-milter
 
@@ -10,4 +10,5 @@ LATEST_LINK=	clamav-milter
 
 CONFLICTS=	clamav-[0-9]* clamav-devel-[0-9]*
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
