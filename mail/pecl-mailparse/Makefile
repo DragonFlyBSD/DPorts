@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-mailparse
-# Date created:			  09 January 2003
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: ports/mail/pecl-mailparse/Makefile,v 1.21 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: mail/pecl-mailparse/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailparse
 PORTVERSION=	2.1.6
@@ -22,4 +18,5 @@ USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	mailparse
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
