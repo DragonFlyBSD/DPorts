@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-ZConf-RSS
-# Date created:         2009-11-09
-# Whom:                 Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: www/p5-ZConf-RSS/Makefile 325984 2013-09-02 12:52:42Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: www/p5-ZConf-RSS/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ZConf-RSS
 PORTVERSION=	2.2.0
@@ -29,4 +25,5 @@ USE_PERL5=	configure
 MAN3=		ZConf::RSS.3 \
 		ZConf::RSS::GUI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
