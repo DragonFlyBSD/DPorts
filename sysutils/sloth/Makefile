@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	sloth
-# Date created:			May 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/sysutils/sloth/Makefile,v 1.10 2012/11/17 06:01:46 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: sysutils/sloth/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sloth
 PORTVERSION=	1.1.0
@@ -20,6 +15,7 @@ GNU_CONFIGURE=	yes
 MAN1=		sloth.1
 PLIST_FILES=	bin/sloth
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,wait.h,sys/wait.h,g" ${WRKSRC}/configure
 
