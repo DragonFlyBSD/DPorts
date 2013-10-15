@@ -1,5 +1,5 @@
 # Created by: Matt <matt@xtaz.net>
-# $FreeBSD: security/clamassassin/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/clamassassin/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	clamassassin
 PORTVERSION=	1.2.4
@@ -23,6 +23,7 @@ OPTIONS_DEFAULT=	CLAMDSCAN
 CLAMDSCAN_DESC=		Scanning using clamd
 SUBREWRITE_DESC=	Mail subject rewriting
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCLAMDSCAN}
