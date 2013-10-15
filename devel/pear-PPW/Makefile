@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-PPW/Makefile,v 1.1 2013/02/18 01:30:00 svnexp Exp $
+# $FreeBSD: devel/pear-PPW/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PPW
 PORTVERSION=	1.0.4
@@ -24,6 +24,7 @@ PEAR_CHANNEL=	phpunit
 PEAR_AUTOINSTALL=	yes
 IGNORE_WITH_PHP=52
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
