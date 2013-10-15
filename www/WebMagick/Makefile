@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/WebMagick/Makefile 324377 2013-08-08 07:12:36Z ache $
+# $FreeBSD: www/WebMagick/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebMagick
 PORTVERSION=	2.03p23
@@ -31,6 +31,7 @@ SHEBANG_FILES=	utils/aub \
 		utils/help2man \
 		utils/make_dir_index.pl
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !exists(${LOCALBASE}/bin/xlsfonts)
