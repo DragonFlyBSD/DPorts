@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/prado/Makefile 320363 2013-06-09 17:44:17Z miwi $
+# $FreeBSD: www/prado/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	prado
 PORTVERSION=	3.1.6.r2699
@@ -37,6 +37,7 @@ PLIST_SUB+=	CONFDIR=${CONFDIR_REL}
 CONFDIR=	${PREFIX}/${CONFDIR_REL}
 CONFDIR_REL=	${APACHEETCDIR}/Includes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
