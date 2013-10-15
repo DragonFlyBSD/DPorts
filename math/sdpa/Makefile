@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: math/sdpa/Makefile 323694 2013-07-26 06:38:59Z danfe $
+# $FreeBSD: math/sdpa/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	sdpa
 PORTVERSION=	7.3.1
@@ -14,6 +14,7 @@ COMMENT=	Very efficient SDP (semidefinite programming) solver
 
 USES=		gmake
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 SRCDATE=	20090729
