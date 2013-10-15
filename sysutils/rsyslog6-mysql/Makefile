@@ -1,9 +1,5 @@
-# New ports collection makefile for: rsyslog4-mysql
-# Date created:     29 December 2008
-# Whom:             Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-#
-# $FreeBSD: ports/sysutils/rsyslog6-mysql/Makefile,v 1.2 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
+# $FreeBSD: sysutils/rsyslog6-mysql/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 COMMENT=	MySQL output module for rsyslog
 MASTERDIR=	${.CURDIR}/../rsyslog6
@@ -13,6 +9,7 @@ USE_MYSQL=	yes
 
 CONFIGURE_ARGS+=--enable-mysql
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} \
 		${WRKSRC}/plugins/ommysql/.libs/ommysql.so ${PREFIX}/lib/rsyslog
