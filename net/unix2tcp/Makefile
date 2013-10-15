@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  unix2tcp
-# Date created:                Thu Jan 30, 2003
-# Whom:                        Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/net/unix2tcp/Makefile,v 1.6 2012/11/17 06:00:24 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: net/unix2tcp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	unix2tcp
 PORTVERSION=	0.8.2
@@ -18,6 +13,7 @@ COMMENT=	A connection forwarder that converts Unix sockets into TCP sockets
 CFLAGS+=	-DHAVE_CONFIG_H -I.
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 	${CC} ${CFLAGS} -c ${PORTNAME}.c -o ${PORTNAME}.o &&\
