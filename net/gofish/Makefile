@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	gofish
-# Date created:			Apr 1, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/net/gofish/Makefile,v 1.6 2012/11/17 06:00:01 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/gofish/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gofish
 PORTVERSION=	1.1
@@ -26,6 +21,7 @@ MAN1=		gofish.1 mkcache.1
 MAN5=		dotcache.5 gofish.5
 MLINKS=		gofish.1 gopherd.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
