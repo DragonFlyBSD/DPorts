@@ -1,5 +1,5 @@
 # Created by: Takuya Tsuchida <tsucchi@cpan.org>
-# $FreeBSD: devel/p5-Module-Used/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/p5-Module-Used/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Used
 PORTVERSION=	v1.2.0
@@ -24,4 +24,5 @@ USE_PERL5=	modbuild
 MAN3=	Module::Used.3
 MAN1=	modules-used.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
