@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/floatator/Makefile 322749 2013-07-11 06:39:14Z bapt $
+# $FreeBSD: misc/floatator/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	floatator
 PORTVERSION=	0.2.1
@@ -19,6 +19,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DNDEBUG" \
 PLIST_FILES=	bin/floatator bin/floatator_X_interface
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 do-install:
 .for f in floatator floatator_X_interface
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
