@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: ports/archivers/lbzip2/Makefile,v 1.10 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/lbzip2/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	lbzip2
 PORTVERSION=	0.23
@@ -12,6 +12,7 @@ COMMENT=	Multi-threaded bzip2/bunzip2 filter
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	bin/lbzip2
 
+NO_STAGE=	yes
 MAN1=		lbzip2.1
 
 PORTDOCS=	ChangeLog README
