@@ -1,8 +1,9 @@
 # Created by: David Le Brun <david@trucs.org>
-# $FreeBSD: astro/viking/Makefile 324936 2013-08-18 20:45:45Z nemysis $
+# $FreeBSD: astro/viking/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	viking
 PORTVERSION=	1.4.2
+PORTREVISION=	1
 CATEGORIES=	astro
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
@@ -26,6 +27,7 @@ USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 USE_GNOME=	gnomedocutils gtk20
 USE_PERL5=	run
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
