@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: ports/java/sqlitejdbc/Makefile,v 1.8 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/sqlitejdbc/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	sqlitejdbc
 PORTVERSION=	056
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/sqlitejdbc-native.jar lib/libsqlitejdbc.so
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/Makefile
 
