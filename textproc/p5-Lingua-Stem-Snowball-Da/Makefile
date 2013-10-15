@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::Stem::Snowball:Da
-# Date created:				29 Dec 2003
-# Whom:					Thorsten Greiner <thorsten.greiner@web.de>
-#
-# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-Da/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Thorsten Greiner <thorsten.greiner@web.de>
+# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-Da/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		Lingua-Stem-Snowball-Da
 PORTVERSION=		1.01
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Lingua::Stem::Snowball::Da.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
