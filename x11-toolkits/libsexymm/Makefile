@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-toolkits/libsexymm/Makefile 326113 2013-09-02 22:58:16Z bapt $
+# $FreeBSD: x11-toolkits/libsexymm/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libsexymm
 PORTVERSION=	0.1.9
@@ -21,4 +21,5 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
