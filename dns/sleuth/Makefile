@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: dns/sleuth/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: dns/sleuth/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	sleuth
 PORTVERSION=	1.4.4
@@ -16,6 +16,7 @@ SHEBANG_FILES=	sleuth
 
 PLIST_FILES=	bin/sleuth etc/sleuth.conf.sample
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|/etc/sleuth.conf|${PREFIX}/etc/sleuth.conf|' \
 		${WRKSRC}/sleuth
