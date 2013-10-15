@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/www/mybb/Makefile,v 1.18 2013/02/19 18:15:05 svnexp Exp $
+# $FreeBSD: www/mybb/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mybb
 PORTVERSION=	1.6.9
@@ -19,6 +19,7 @@ USE_MYSQL=	yes
 SUB_FILES=	pkg-message
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
