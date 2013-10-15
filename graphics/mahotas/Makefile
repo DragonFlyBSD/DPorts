@@ -1,5 +1,5 @@
 # Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
-# $FreeBSD: graphics/mahotas/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: graphics/mahotas/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mahotas
 PORTVERSION=	0.9.6
@@ -18,4 +18,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
