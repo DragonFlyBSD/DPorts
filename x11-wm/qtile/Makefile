@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: x11-wm/qtile/Makefile 318428 2013-05-18 13:00:09Z wg $
+# $FreeBSD: x11-wm/qtile/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	qtile
 PORTVERSION=	0.6
@@ -25,6 +25,7 @@ USE_PYDISTUTILS=	easy_install
 
 PORTDOCS=	CHANGELOG INSTALL.rst LICENSE README.rst
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
