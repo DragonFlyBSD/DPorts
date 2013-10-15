@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/mg/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/mg/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	mg
 PORTVERSION=	5.0.1.3
@@ -15,6 +15,7 @@ USES=		perl5
 USE_PERL5=	run
 CONFLICTS=	mg-200*
 
+NO_STAGE=	yes
 do-build:
 	${SED} -e "s|/usr/local|${PREFIX}|g" \
 		${DISTDIR}/${DISTFILES} > ${WRKDIR}/${PORTNAME}
