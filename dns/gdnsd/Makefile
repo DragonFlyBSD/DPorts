@@ -1,8 +1,8 @@
-# Created by: Stefan Caunter <stef@scaleengine.com>
-# $FreeBSD: dns/gdnsd/Makefile 326374 2013-09-05 09:22:10Z bapt $
+# Created by: Allan Jude <ports@scaleengine.com>
+# $FreeBSD: dns/gdnsd/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	gdnsd
-PORTVERSION=	1.9.0
+PORTVERSION=	1.10.0
 CATEGORIES=	dns
 MASTER_SITES=	http://downloads.gdnsd.net/ \
 		http://gdnsd.scaleengine.net/gdnsd/
@@ -12,7 +12,7 @@ COMMENT=	Authoritative-only GeoIP-aware DNS server
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	ev:${PORTSDIR}/devel/libev
+LIB_DEPENDS=	libev.so:${PORTSDIR}/devel/libev
 
 OPTIONS_DEFINE=	GEOIP
 
@@ -34,10 +34,16 @@ USE_RC_SUBR=	gdnsd
 USERS?=		gdnsd
 GROUPS?=	gdnsd
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEOIP}
 RUN_DEPENDS+=	${LOCALBASE}/share/GeoIP/GeoIP.dat:${PORTSDIR}/net/GeoIP
 .endif
+
+post-install:
+	${MKDIR} ${PREFIX}/var/run/gdnsd
+	${MKDIR} ${PREFIX}/etc/gdnsd/zones
+	${TOUCH} ${PREFIX}/etc/gdnsd/zones/.keep-me
 
 .include <bsd.port.mk>
