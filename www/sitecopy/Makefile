@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: www/sitecopy/Makefile 317472 2013-05-06 06:54:19Z bapt $
+# $FreeBSD: www/sitecopy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	sitecopy
 PORTVERSION=	0.16.6
@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	--with-neon --with-libxml2
 USE_GNOME=	libxml2
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
