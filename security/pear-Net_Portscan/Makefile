@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: security/pear-Net_Portscan/Makefile 314343 2013-03-16 08:30:46Z miwi $
+# $FreeBSD: security/pear-Net_Portscan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Net_Portscan
 PORTVERSION=	1.0.3
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
