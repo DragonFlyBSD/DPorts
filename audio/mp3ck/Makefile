@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mp3ck
-# Date created:		Feb 3 2002
-# Whom:			Yar Tikhiy <yar@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/mp3ck/Makefile,v 1.7 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: Yar Tikhiy <yar@FreeBSD.org>
+# $FreeBSD: audio/mp3ck/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3ck
 PORTVERSION=	0.04
@@ -15,5 +11,6 @@ COMMENT=	A consistency check utility for MPEG Layer 2 or 3 files or streams
 
 MAN1=		mp3ck.1
 PLIST_FILES=	bin/mp3ck
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
