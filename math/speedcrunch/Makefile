@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: math/speedcrunch/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/speedcrunch/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	speedcrunch
 DISTVERSION=	0.10.1
@@ -20,6 +20,7 @@ LRELEASE_ARGS=	-compress -silent
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
