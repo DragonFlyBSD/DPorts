@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pybench
-# Date created:         		29 March 2001
-# Whom:                 		Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/benchmarks/pybench/Makefile,v 1.11 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: benchmarks/pybench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	pybench
 PORTVERSION=	2.0
@@ -20,6 +16,7 @@ USE_PYTHON=	yes
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
 	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
