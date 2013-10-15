@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: textproc/p5-Lingua-Stem/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Lingua-Stem/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		Lingua-Stem
 PORTVERSION=		0.84
@@ -30,4 +30,5 @@ MAN3=			Lingua::Stem.3 Lingua::Stem::AutoLoader.3 \
 			Lingua::Stem::No.3 Lingua::Stem::De.3 \
 			Lingua::Stem::Sv.3 Lingua::Stem::Da.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
