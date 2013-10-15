@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/fldiff/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: textproc/fldiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	fldiff
 PORTVERSION=	1.1
@@ -25,6 +25,7 @@ PORTDOCS=	index.html fldiff.jpg
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
