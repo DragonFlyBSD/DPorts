@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: sysutils/ucspi-ssl/Makefile 326574 2013-09-07 07:11:48Z az $
+# $FreeBSD: sysutils/ucspi-ssl/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ucspi-ssl
 PORTVERSION?=	0.70
@@ -29,6 +29,7 @@ WRKSRC=		${WRKDIR}/host/superscript.com/net/${DISTNAME}
 
 SCRIPTS_TO_INSTALL=	https@ sslcat sslconnect
 
+NO_STAGE=	yes
 post-patch:
 .for x in ${SCRIPTS_TO_INSTALL}
 	@${REINPLACE_CMD} -i ''	-e 's|HOME/command/|${PREFIX}/bin/|' \
