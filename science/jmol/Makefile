@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: science/jmol/Makefile 308605 2012-12-10 13:43:43Z bapt $
+# $FreeBSD: science/jmol/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	jmol
 PORTVERSION=	12.2.23
@@ -41,6 +41,7 @@ ALL_TARGET=	main
 NO_BUILD=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-fetch:
