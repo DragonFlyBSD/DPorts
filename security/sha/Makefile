@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sha
-# Date created:		20 August 2001
-# Whom:			asaddi@philosophysw.com
-#
-# $FreeBSD: ports/security/sha/Makefile,v 1.9 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: asaddi@philosophysw.com
+# $FreeBSD: security/sha/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sha
 PORTVERSION=	1.0.4
@@ -19,4 +15,5 @@ USE_GMAKE=	yes
 MAN1=		sha.1
 PLIST_FILES=	bin/sha
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
