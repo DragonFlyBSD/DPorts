@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/kudu/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/kudu/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kudu
 PORTVERSION=	0.1.2
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES="Kudu" \
 		"Graphics;3DGraphics;GTK;" \
 		true
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|COPYING||' ${WRKSRC}/Makefile.in
 
