@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/libosmpbf/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/libosmpbf/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	libosmpbf
 PORTVERSION=	1.3.0
@@ -18,6 +18,7 @@ GH_PROJECT=	OSM-binary
 GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	d9be2d1
 
+NO_STAGE=	yes
 USES=		gmake
 BUILD_WRKSRC=	${WRKSRC}/src
 INSTALL_WRKSRC=	${WRKSRC}/src
