@@ -1,8 +1,8 @@
 # Created by: Maxime Henrion <mux@FreeBSD.org>
-# $FreeBSD: games/wtf/Makefile 324587 2013-08-11 13:18:19Z wg $
+# $FreeBSD: games/wtf/Makefile 328752 2013-09-29 22:37:14Z wg $
 
 PORTNAME=	wtf
-PORTVERSION=	20130810
+PORTVERSION=	20130928
 CATEGORIES=	games
 MASTER_SITES=	SF/bsdwtf
 
@@ -11,19 +11,14 @@ COMMENT=	Translates common Internet acronyms
 
 NO_BUILD=	yes
 
-MAN6=		wtf.6
-
-PLIST_FILES=	bin/wtf %%DATADIR%%/acronyms %%DATADIR%%/acronyms.comp
-PLIST_DIRS=	%%DATADIR%%
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/misc|${DATADIR}|g' ${WRKSRC}/wtf*
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/wtf ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/wtf.6 ${PREFIX}/man/man6
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/acronyms ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/acronyms.comp ${DATADIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/wtf ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/wtf.6 ${STAGEDIR}${MAN6PREFIX}/man/man6
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/acronyms ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/acronyms.comp ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
