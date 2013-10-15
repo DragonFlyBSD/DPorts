@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@FreeBSD.org>
-# $FreeBSD: devel/bpython/Makefile 326682 2013-09-07 19:16:54Z sunpoet $
+# $FreeBSD: devel/bpython/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bpython
 PORTVERSION=	0.12
@@ -26,6 +26,7 @@ MAN1=		bpython.1
 MAN5=		bpython-config.5
 PORTEXAMPLES=	light.theme sample-config sample.theme
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
