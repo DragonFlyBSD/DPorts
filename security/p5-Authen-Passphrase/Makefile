@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Authen-Passphrase/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: security/p5-Authen-Passphrase/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Authen-Passphrase
 PORTVERSION=	0.008
@@ -49,4 +49,5 @@ MAN3=	Authen::Passphrase.3 \
 	Authen::Passphrase::SaltedDigest.3 \
 	Authen::Passphrase::VMSPurdy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
