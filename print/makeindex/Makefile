@@ -1,9 +1,5 @@
-# New ports collection makefile for:    makeindex
-# Date created:         12 October 1994
-# Whom:                 jmz
-#
-# $FreeBSD: ports/print/makeindex/Makefile,v 1.21 2012/11/17 06:00:52 svnexp Exp $
-#
+# Created by: jmz
+# $FreeBSD: print/makeindex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	makeindex
 PORTVERSION=	3.0.8
@@ -21,6 +17,7 @@ CONFLICTS=	teTeX-base-[0-9]*
 WRKSRC=		${WRKDIR}/makeindex
 MAN1=		makeindex.1
 
+NO_STAGE=	yes
 post-patch:
 	@(cd ${WRKSRC}/doc; \
 	  ${SED} -e s:/usr/local/lib/tex/macros/:${PREFIX}/share/texmf/makeindx/: \
