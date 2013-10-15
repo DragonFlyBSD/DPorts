@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xroach
-# Date created:		22 December 1995
-# Whom:			markm
-#
-# $FreeBSD: ports/games/xroach/Makefile,v 1.20 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: markm
+# $FreeBSD: games/xroach/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xroach
 PORTVERSION=	4.4
@@ -23,4 +19,5 @@ PLIST_FILES=	bin/xroach
 IGNOREFILES=	${DISTFILES}
 WRKSRC=		${WRKDIR}/pub/bsd-sources/4.4BSD-Lite/usr/src/games/xroach
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
