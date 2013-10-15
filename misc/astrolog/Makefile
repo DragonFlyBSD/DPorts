@@ -1,5 +1,5 @@
 # Created by: faulkner@cactus.org
-# $FreeBSD: misc/astrolog/Makefile 320970 2013-06-14 22:22:51Z wg $
+# $FreeBSD: misc/astrolog/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	astrolog
 PORTVERSION=	5.41g
@@ -38,6 +38,7 @@ PORTDOCS=	helpfile.540 readme.541 changes.txt
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
