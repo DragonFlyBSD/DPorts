@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-passwordmaker
-# Date created:		2008-05-21
-# Whom:			Anatoly Borodin <anatoly.borodin@gmail.com>
-#
-# $FreeBSD: ports/www/xpi-passwordmaker/Makefile,v 1.5 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
+# $FreeBSD: www/xpi-passwordmaker/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	passwordmaker
 PORTVERSION=	1.7.8
@@ -20,5 +16,6 @@ XPI_FILES=	LICENSE chrome/passwdmaker.jar chrome.manifest \
 		install.js install.rdf
 XPI_DIRS=	chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
