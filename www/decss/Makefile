@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: www/decss/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/decss/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	decss
 PORTVERSION=	1.0
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}/source
 NO_BUILD=	YES
 USES=		perl5
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/DeCSS ${PREFIX}/bin/decss
 	${MKDIR} ${PREFIX}/share/doc/decss
