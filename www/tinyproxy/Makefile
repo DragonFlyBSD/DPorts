@@ -1,5 +1,5 @@
 # Created by: Mitsuru Yoshida <mitsuru@riken.go.jp>
-# $FreeBSD: www/tinyproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/tinyproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tinyproxy
 PORTVERSION=	1.8.3
@@ -34,6 +34,7 @@ XHEADER_DESC=		X-Tinyproxy header
 REVERSE_DESC=		Reverse proxy support
 TRANSPARENT_DESC=	Transparent proxy support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREVERSE}
