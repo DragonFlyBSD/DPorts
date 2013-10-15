@@ -1,9 +1,5 @@
-# New ports collection makefile for:   pybookreader
-# Date created:        30 September 2006
-# Whom:                Valeri Vassiliev
-#
-# $FreeBSD: ports/deskutils/pybookreader/Makefile,v 1.12 2012/11/17 05:55:30 svnexp Exp $
-#
+# Created by: Valeri Vassiliev
+# $FreeBSD: deskutils/pybookreader/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	pybookreader
 PORTVERSION=	0.5.0
@@ -22,4 +18,5 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyBookReader
 USE_GNOME=	pygtk2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
