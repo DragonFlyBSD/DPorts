@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: mail/p5-Log-Procmail/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Log-Procmail/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Log-Procmail
 PORTVERSION=	0.12
@@ -12,6 +12,7 @@ COMMENT=	Perl extension for reading procmail logfiles
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN1=		mailstat.pl.1
 MAN3=		Log::Procmail.3
