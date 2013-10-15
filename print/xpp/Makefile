@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpp
-# Date created:         23 Mar 2007
-# Whom:                 Nate Lawson <njl@freebsd.org>
-#
-# $FreeBSD: ports/print/xpp/Makefile,v 1.25 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Nate Lawson <njl@FreeBSD.org>
+# $FreeBSD: print/xpp/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xpp
 PORTVERSION=	1.5
@@ -25,6 +21,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/xpp share/doc/xpp/README
 PLIST_DIRS=	share/doc/xpp
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -e 's|$$(all_includes)|-I ${PREFIX}/include|' \
 	    ${WRKSRC}/Makefile
