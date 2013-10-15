@@ -1,5 +1,5 @@
 # Created by: yinjieh
-# $FreeBSD: games/ggz-gtk-games/Makefile 326109 2013-09-02 22:31:37Z bapt $
+# $FreeBSD: games/ggz-gtk-games/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ggz-gtk-games
 PORTVERSION=	${GGZ_VERSION}
@@ -20,6 +20,7 @@ USE_GGZ=	client
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
