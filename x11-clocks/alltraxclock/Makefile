@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: x11-clocks/alltraxclock/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: x11-clocks/alltraxclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	alltraxclock
 PORTVERSION=	2.0.2
@@ -21,6 +21,7 @@ ALL_TARGET=	alltraxclock.so
 PLIST_FILES=	libexec/gkrellm2/plugins/alltraxclock.so
 WRKSRC=		${WRKDIR}/${PORTNAME}2_0.2/
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|;s|-O2||;s|-lpthread|${PTHREAD_LIBS}|' ${WRKSRC}/Makefile
 
