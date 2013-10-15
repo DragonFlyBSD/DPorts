@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Pod-Stripper/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Pod-Stripper/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-Stripper
 PORTVERSION=	0.22
@@ -18,4 +18,5 @@ USE_DOS2UNIX=	yes
 MAN1=		podstrip.1
 MAN3=		Pod::Stripper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
