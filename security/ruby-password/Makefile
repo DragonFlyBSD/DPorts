@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: security/ruby-password/Makefile 321605 2013-06-23 02:15:09Z swills $
+# $FreeBSD: security/ruby-password/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	password
 PORTVERSION=	0.5.3
@@ -29,6 +29,7 @@ MANCOMPRESSED=	no
 
 DOCS_EN=	CHANGES README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e 's,([^[:alpha:]]+)crack.h,\1packer.h,g' \
 		${WRKSRC}/rbcrack.c ${WRKSRC}/extconf.rb
