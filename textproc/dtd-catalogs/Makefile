@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dtd-catalogs
-# Date created:		23 January 1999
-# Whom:			shige
-#
-# $FreeBSD: ports/textproc/dtd-catalogs/Makefile,v 1.12 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: shige
+# $FreeBSD: textproc/dtd-catalogs/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dtd-catalogs
 PORTVERSION=	1.2
@@ -27,6 +23,7 @@ ISO12083_CAT=	${LOCALBASE}/share/sgml/iso12083/catalog
 HTML_CAT=	${LOCALBASE}/share/sgml/html/catalog
 LINUXDOC_CAT=	${LOCALBASE}/share/sgml/linuxdoc/catalog
 
+NO_STAGE=	yes
 do-install:
 	@${DO_NADA}
 
