@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: net/phpldapadmin/Makefile 320371 2013-06-09 18:29:06Z miwi $
+# $FreeBSD: net/phpldapadmin/Makefile 328467 2013-09-27 13:39:05Z matthew $
 
 PORTNAME=	phpldapadmin
 PORTVERSION=	1.2.3
@@ -74,7 +74,7 @@ install-app:
 	cd ${WRKSRC} ;				    \
 	for src in $$( ${FIND} . ! -name .cvsignore \
 			 ! -name .gitignore  ) ; do \
-	    dst=${WWWDIR}$${src#.} ;		    \
+	    dst=${STAGEDIR}${WWWDIR}$${src#.} ;	    \
 	    if ${TEST} -d $$src ; then		    \
 		${MKDIR} $$dst ;		    \
 	    else				    \
@@ -83,17 +83,11 @@ install-app:
 	done
 
 install-conf:
-	cd ${WWWDIR}/${CFGDIR} ;		     \
+	cd ${STAGEDIR}${WWWDIR}/${CFGDIR} ;	     \
 	${CHMOD} 0640 ${CFGFILE}.example ;	     \
 	${CHGRP} ${GROUPS} ${CFGFILE}.example ;	     \
 	if ${TEST} ! -f ${CFGFILE} ; then	     \
 	    ${CP} -p ${CFGFILE}.example ${CFGFILE} ; \
 	fi
-
-post-install:
-.if ${PORT_OPTIONS:MSUPHP}
-	${SETENV} ${SCRIPTS_ENV} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.endif
-	${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
