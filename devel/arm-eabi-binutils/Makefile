@@ -1,4 +1,4 @@
-# $FreeBSD: devel/arm-eabi-binutils/Makefile 324178 2013-08-03 04:20:46Z kientzle $
+# $FreeBSD: devel/arm-eabi-binutils/Makefile 328410 2013-09-26 20:08:38Z eadler $
 
 PORTNAME=	binutils
 PORTVERSION=	2.23.2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEWARE}
 MASTER_SITE_SUBDIR=	binutils/releases
 PKGNAMEPREFIX=	arm-eabi-
 
-MAINTAINER=	kientzle@freebsd.org
+MAINTAINER=	kientzle@FreeBSD.org
 COMMENT=	GNU binutils for vanilla ARM cross-development
 
 OPTIONS_DEFINE=	NLS
@@ -33,6 +33,7 @@ MAN1=		${PKGNAMEPREFIX}addr2line.1 ${PKGNAMEPREFIX}as.1 \
 		${PKGNAMEPREFIX}elfedit.1 ${PKGNAMEPREFIX}windmc.1 \
 		${PKGNAMEPREFIX}gprof.1
 
+NO_STAGE=	yes
 post-install:
 .for F in addr2line c++filt elfedit gprof objcopy objdump readelf size strings
 	${LN} -f ${PREFIX}/bin/${PKGNAMEPREFIX}$F  \
