@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: security/py-itsdangerous/Makefile 324430 2013-08-09 12:16:33Z olivierd $
-#
+# $FreeBSD: security/py-itsdangerous/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	itsdangerous
 PORTVERSION=	0.23
@@ -17,6 +16,7 @@ USE_PYDISTUTILS=	easy_install
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	JSON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
