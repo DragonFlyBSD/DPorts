@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: ports/lang/sisc/Makefile,v 1.22 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: lang/sisc/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	sisc
 PORTVERSION=	1.16.6
@@ -16,6 +16,7 @@ JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 PORTDOCS=	COPYING README
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|\(SISC_HOME=\).*$$|\1${DATADIR}|' \
 		-e 's|\(JAVA=\)java|\1"${LOCALBASE}/bin/java" ; export JAVA_VERSION="${JAVA_VERSION}"|' \
