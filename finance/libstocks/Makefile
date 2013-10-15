@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: finance/libstocks/Makefile 318993 2013-05-24 16:35:30Z bapt $
+# $FreeBSD: finance/libstocks/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	libstocks
 PORTVERSION=	0.5.0
@@ -13,6 +13,7 @@ USE_LDCONFIG=	yes
 REINPLACE_ARGS=	-i ""
 MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's/<malloc.h>/<stdlib.h>/' \
 			-e 's/__UNIX__/__unix__/' \
