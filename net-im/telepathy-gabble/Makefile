@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-gabble/Makefile 319965 2013-06-05 09:02:46Z kwm $
+# $FreeBSD: net-im/telepathy-gabble/Makefile 327756 2013-09-20 22:13:34Z bapt $
 #    $MCom: ports/trunk/net-im/telepathy-gabble/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	telepathy-gabble
@@ -38,6 +38,7 @@ PLIST_SUB=	PVERSION=${PORTVERSION}
 CONFIGURE_ENV+=	OPENSSL_LIBS="-L/usr/lib -ssl -crypto" OPENSSL_CFLAGS="-I/usr/include"
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||g' \
 		${WRKSRC}/lib/ext/wocky/configure
