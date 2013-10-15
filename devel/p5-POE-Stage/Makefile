@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE-Stage/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-POE-Stage/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Stage
 PORTVERSION=	0.0600
@@ -30,4 +30,5 @@ MAN3=		POE::Callback.3 POE::Request.3 POE::Request::Emit.3 \
 		POE::Watcher.3 POE::Watcher::Delay.3 POE::Watcher::Input.3 \
 		POE::Watcher::Wheel.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
