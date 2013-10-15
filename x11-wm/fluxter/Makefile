@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: x11-wm/fluxter/Makefile 322360 2013-07-06 01:22:56Z jgh $
+# $FreeBSD: x11-wm/fluxter/Makefile 328425 2013-09-27 01:59:19Z jgh $
 
 PORTNAME=	fluxter
 PORTVERSION=	0.2.0
