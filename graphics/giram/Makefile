@@ -1,5 +1,5 @@
 # Created by: Brandon Fosdick <bfoz@glue.umd.edu>
-# $FreeBSD: graphics/giram/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: graphics/giram/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	giram
 PORTVERSION=	0.3.5
@@ -27,6 +27,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 MAN1=		giram.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '36s,static ,,' ${WRKSRC}/src/tools/tool_disc.c
 	@${REINPLACE_CMD} -e 's|-D.*_DISABLE_DEPRECATED||g' \
