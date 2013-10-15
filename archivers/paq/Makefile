@@ -1,11 +1,11 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: archivers/paq/Makefile 324369 2013-08-07 23:32:02Z bf $
+# $FreeBSD: archivers/paq/Makefile 328565 2013-09-28 12:59:17Z bf $
 
 PORTNAME=	paq
-PORTVERSION=	20130802
+PORTVERSION=	20130926
 CATEGORIES=	archivers
 MASTER_SITES=	http://mattmahoney.net/dc/ LOCAL/bf/paq/
-DISTFILES=	wbpe110.zip zpaqd633.zip zpaq641.zip zpipe.201.zip
+DISTFILES=	wbpe110.zip zpaqd633.zip zpaq642.zip zpipe.201.zip
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTFILES:M*.zip}
 
@@ -15,6 +15,7 @@ COMMENT=	Family of archivers with extremely high compression ratios
 LICENSE=	GPLv3 MIT
 LICENSE_COMB=	multi
 
+NO_STAGE=	yes
 USE_DOS2UNIX=	yes
 USE_ZIP=	yes
 
