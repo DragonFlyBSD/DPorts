@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: net/pear-Net_Geo/Makefile 316898 2013-04-30 08:41:59Z miwi $
+# $FreeBSD: net/pear-Net_Geo/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_Geo
 PORTVERSION=	1.0.5
@@ -17,6 +17,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
