@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-email2trac/Makefile 313241 2013-03-02 14:41:33Z miwi $
+# $FreeBSD: www/trac-email2trac/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	email2trac
 PORTVERSION=	2.6.2
@@ -27,6 +27,7 @@ USE_PYTHON=	-2.7
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPOSTFIX}
