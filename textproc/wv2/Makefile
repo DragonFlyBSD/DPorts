@@ -1,5 +1,5 @@
-# Created by: lofi@freebsd.org
-# $FreeBSD: textproc/wv2/Makefile 326957 2013-09-11 09:36:48Z marino $
+# Created by: lofi@FreeBSD.org
+# $FreeBSD: textproc/wv2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	wv2
 PORTVERSION=	0.4.2
@@ -15,6 +15,7 @@ USE_BZIP2=	yes
 USES=		cmake iconv pkgconfig
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|LIBGSF_INCLUDE_DIR|PC_LIBGSF_INCLUDE_DIRS|g' \
 		-e 's|LIBGSF_LIBRARIES|PC_LIBGSF_LIBRARIES|g' \
