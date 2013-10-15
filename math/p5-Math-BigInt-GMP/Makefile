@@ -1,5 +1,5 @@
 # Created by: Maxime Henrion <mux@FreeBSD.org>
-# $FreeBSD: math/p5-Math-BigInt-GMP/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: math/p5-Math-BigInt-GMP/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-BigInt-GMP
 PORTVERSION=	1.37
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	INC="-I${LOCALBASE}/include"
 
 MAN3=		Math::BigInt::GMP.3
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e "s!-lgmp!-L${LOCALBASE}/lib $$&!;" \
 		     -e "if (/'LIBS'/) { print qq!'INC' => '-I${LOCALBASE}/include',!; }" \
