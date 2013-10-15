@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: mail/textmail/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: mail/textmail/Makefile 329638 2013-10-06 23:11:56Z marino $
 
 PORTNAME=	textmail
 PORTVERSION=	20070803
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/${PORTNAME}
 NO_WRKSUBDIR=	yes
 MAN1=	${PORTNAME}.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '3s|^|\${.newline}$$ENV{'PATH'} = "${LOCALBASE}/libexec/xpdf:$$ENV{'PATH'}";\${.newline}|' ${WRKSRC}/${PORTNAME}
 
