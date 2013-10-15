@@ -1,5 +1,5 @@
 # Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-# $FreeBSD: www/py-gunicorn/Makefile 322396 2013-07-06 14:33:06Z koobs $
+# $FreeBSD: www/py-gunicorn/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gunicorn
 PORTVERSION=	17.5
@@ -30,6 +30,7 @@ TESTS_DESC=	Install pytest for unit tests
 OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
 NO_OPTIONS_SORT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEVENTLET}
