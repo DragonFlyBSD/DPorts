@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/biology/pycogent/Makefile,v 1.10 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: biology/pycogent/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	pycogent
 PORTVERSION=	1.5.3
@@ -21,4 +21,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	cogent
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
