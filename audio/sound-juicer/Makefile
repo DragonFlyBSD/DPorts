@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: audio/sound-juicer/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: audio/sound-juicer/Makefile 327706 2013-09-20 14:36:35Z bapt $
 #   $MCom: ports/audio/sound-juicer/Makefile,v 1.102 2010/09/29 13:19:43 kwm Exp $
 
 PORTNAME=	sound-juicer
@@ -21,6 +21,7 @@ LIB_DEPENDS=	musicbrainz3.6:${PORTSDIR}/audio/libmusicbrainz3 \
 		brasero-media.3:${PORTSDIR}/sysutils/brasero
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_GNOME=	intlhack gnomeprefix gconf2 libglade2 gnomedocutils
