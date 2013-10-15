@@ -1,4 +1,4 @@
-# $FreeBSD: x11/i3status/Makefile 322326 2013-07-05 13:51:13Z bapt $
+# $FreeBSD: x11/i3status/Makefile 329213 2013-10-03 17:11:18Z bapt $
 
 PORTNAME=	i3status
 PORTVERSION=	2.7
@@ -10,24 +10,20 @@ COMMENT=	Small program for generating a status bar
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	confuse:${PORTSDIR}/devel/libconfuse \
-		yajl:${PORTSDIR}/devel/yajl
+LIB_DEPENDS=	libconfuse.so:${PORTSDIR}/devel/libconfuse \
+		libyajl.so:${PORTSDIR}/devel/yajl
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USES=		gmake
 USE_BZIP2=	yes
 
-PLIST_FILES=	bin/i3status \
-		etc/i3status.conf.sample
-MAN1=	i3status.1
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|g' ${WRKSRC}/i3status.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/i3status ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/man/i3status.1 ${MANPREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/i3status.conf ${PREFIX}/etc/i3status.conf.sample
+	${INSTALL_PROGRAM} ${WRKSRC}/i3status ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/man/i3status.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/i3status.conf ${STAGEDIR}${PREFIX}/etc/i3status.conf.sample
 
 .include <bsd.port.mk>
