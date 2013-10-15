@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-origami/Makefile 319801 2013-06-03 19:22:34Z antoine $
+# $FreeBSD: security/rubygem-origami/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	origami
 PORTVERSION=	1.2.6
@@ -14,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
