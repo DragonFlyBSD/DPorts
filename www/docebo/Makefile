@@ -1,9 +1,5 @@
-# New ports collection makefile for:   docebo
-# Date created:		6 April 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/docebo/Makefile,v 1.5 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/docebo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	docebo
 PORTVERSION=	4.0.2
@@ -22,6 +18,7 @@ DO_FILES=	config.php admin.php index.php
 DO_DIRS=	doceboCms doceboCore doceboCrm doceboEcom doceboLms doceboScs \
 		files install readmelicense template upgrade xml_language
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
