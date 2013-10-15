@@ -1,5 +1,5 @@
 # Created by: andreas
-# $FreeBSD: net/ntp/Makefile 315766 2013-04-08 21:26:54Z jgh $
+# $FreeBSD: net/ntp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ntp
 PORTVERSION?=	4.2.6p5
@@ -26,6 +26,7 @@ MAN1=		sntp.1 \
 		ntpsnmpd.1 \
 		ntp-keygen.1 \
 
+NO_STAGE=	yes
 .include "Makefile.inc"
 
 .include <bsd.port.options.mk>
