@@ -1,5 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/chaosreader/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/chaosreader/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	chaosreader
 PORTVERSION=	0.94
@@ -19,6 +19,7 @@ USE_PERL5=	run
 
 PLIST_FILES=	bin/${PORTNAME} bin/sshkeydata
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${DISTDIR}/${PORTNAME}${PORTVERSION} ${WRKDIR}/${PORTNAME}
 	${CP} ${DISTDIR}/sshkeydata0.20 ${WRKDIR}/sshkeydata
