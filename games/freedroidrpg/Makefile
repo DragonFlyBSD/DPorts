@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/freedroidrpg/Makefile 325220 2013-08-22 17:49:35Z amdmi3 $
+# $FreeBSD: games/freedroidrpg/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	freedroidrpg
 PORTVERSION=	0.15
@@ -24,6 +24,7 @@ BACKTRACE_DESC=	Use backtrace() to generate nice bug reports
 
 OPTIONS_DEFAULT=	BACKTRACE OPENGL VORBIS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBACKTRACE}
