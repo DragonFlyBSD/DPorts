@@ -1,9 +1,5 @@
-# New ports collection makefile for:    0verkill
-# Date created:         5 May 2001
-# Whom:                 Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/games/0verkill/Makefile,v 1.15 2012/11/17 05:57:31 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: games/0verkill/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	0verkill
 PORTVERSION=	0.16
@@ -27,6 +23,7 @@ CONFIGURE_ARGS+=	--with-x
 PLIST_SUB=	X11=""
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 .if !defined(WITHOUT_X11)
 	@${ECHO_MSG}
