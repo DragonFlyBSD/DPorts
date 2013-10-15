@@ -1,8 +1,5 @@
-# New ports collection makefile for:   totd
-# Date created:        17 Nov 2000
-# Whom:                Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/dns/totd/Makefile,v 1.24 2012/11/17 05:57:11 svnexp Exp $
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: dns/totd/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	totd
 PORTVERSION=	1.5.1
@@ -22,6 +19,7 @@ PLIST_FILES=	etc/totd.conf.sample sbin/totd
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-ne_mesg.c \
 		${FILESDIR}/extra-patch-tcp_response.c
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^CC/d' ${WRKSRC}/${MAKEFILE}.in
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/dns/totd/files/totd.in,v 1.5 2012/11/17 05:57:11 svnexp Exp $
+# $FreeBSD: dns/totd/files/totd.in 300896 2012-07-14 13:54:48Z beat $
 #
 
 # PROVIDE: totd
