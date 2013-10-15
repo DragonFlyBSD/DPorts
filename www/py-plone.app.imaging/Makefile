@@ -1,7 +1,7 @@
-# $FreeBSD: www/py-plone.app.imaging/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.app.imaging/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	plone.app.imaging
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.9
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.scale>=0:${PORTSDIR}/www/py-plone.scal
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
