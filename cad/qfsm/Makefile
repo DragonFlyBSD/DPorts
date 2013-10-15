@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	qfsm
-# Date created:			Mar 14, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: cad/qfsm/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: ijliao
+# $FreeBSD: cad/qfsm/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	qfsm
 PORTVERSION=	0.53.0
@@ -27,6 +22,7 @@ USE_GNOME=	desktopfileutils
 USES=		cmake
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGRAPHVIZ}
