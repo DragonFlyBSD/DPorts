@@ -1,4 +1,4 @@
-# $FreeBSD: science/pyteomics/Makefile 317856 2013-05-11 07:42:20Z makc $
+# $FreeBSD: science/pyteomics/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	pyteomics
 PORTVERSION=	2.1.5
@@ -16,4 +16,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=0:${PORTSDIR}/devel/py-lxml \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
