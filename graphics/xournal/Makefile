@@ -1,5 +1,5 @@
 # Created by: Jan Henrik Sylvester <me@janh.de>
-# $FreeBSD: graphics/xournal/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: graphics/xournal/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xournal
 PORTVERSION=	0.4.7
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=		GHOSTSCRIPT
 GHOSTSCRIPT_DESC=	Install ghostscript (PS/PDF as bitmap bg)
 OPTIONS_DEFAULT=	GHOSTSCRIPT
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGHOSTSCRIPT}
