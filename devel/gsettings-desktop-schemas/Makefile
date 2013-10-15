@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/gsettings-desktop-schemas/Makefile 325714 2013-08-30 18:01:51Z kwm $
+# $FreeBSD: devel/gsettings-desktop-schemas/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/trunk/devel/gsettings-desktop-schemas/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gsettings-desktop-schemas
@@ -43,4 +43,5 @@ GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.system.locale.gschema.xml \
 		org.gnome.system.proxy.gschema.xml
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
