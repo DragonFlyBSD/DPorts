@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-PerlIO-via-symlink/Makefile 326802 2013-09-09 11:01:46Z az $
+# $FreeBSD: devel/p5-PerlIO-via-symlink/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PerlIO-via-symlink
 PORTVERSION=	0.05
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		PerlIO::via::symlink.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
