@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/sakura/Makefile 323707 2013-07-26 09:28:34Z bapt $
+# $FreeBSD: x11-toolkits/sakura/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	sakura
 PORTVERSION=	2.4.2
@@ -19,6 +19,7 @@ LDFLAGS+=	-lintl
 
 MAN1=		sakura.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 post-patch:
 	@${REINPLACE_CMD} -e '/NOT MATCHES "Debug"/d ; \
