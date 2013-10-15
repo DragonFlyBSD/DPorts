@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/pecl-zookeeper/Makefile,v 1.1 2013/02/08 12:17:02 svnexp Exp $
+# $FreeBSD: devel/pecl-zookeeper/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	zookeeper
 PORTVERSION=	0.2.1
@@ -18,6 +18,7 @@ USE_PHP=	session
 USE_PHP_BUILD=	session
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/zookeeper-api.php ${DATADIR}/
