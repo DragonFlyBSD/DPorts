@@ -1,5 +1,5 @@
 # Created by: Renaud Chaput <renchap@cocoa-x.com>
-# $FreeBSD: sysutils/rubygem-chef/Makefile 323318 2013-07-19 17:12:05Z swills $
+# $FreeBSD: sysutils/rubygem-chef/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	chef
 PORTVERSION=	11.4.4
@@ -44,6 +44,7 @@ MAN8=		chef-client.8 chef-solo.8
 SUB_LIST=	RUBY=${RUBY}
 USE_RC_SUBR=	chef_client
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NO_INSTALL_MANPAGES)
 .for n in 1 8
