@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-clocks/sanduhr/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: x11-clocks/sanduhr/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	sanduhr
 PORTVERSION=	1.93
@@ -19,4 +19,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		sanduhr.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
