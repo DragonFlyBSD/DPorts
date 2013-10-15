@@ -1,6 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/ocaml-xstr/Makefile 309295 2012-12-20 05:53:00Z araujo $
-#
+# $FreeBSD: devel/ocaml-xstr/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	xstr
 PORTVERSION=	0.2.1
@@ -24,4 +23,5 @@ USE_OCAMLFIND_PLIST=yes
 USE_GMAKE=	yes
 ALL_TARGET=	all opt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
