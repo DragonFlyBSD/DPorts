@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/xymon-server/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: net-mgmt/xymon-server/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	xymon
 PORTVERSION=	4.3.12
@@ -68,6 +68,7 @@ MAN8=	enadis.cgi.8 xymon-mailack.8 xymoncgimsg.cgi.8 xymond.8 \
 OPTIONS_DEFINE=LDAP NETSNMP
 NETSNMP_DESC=Enable Net-SNMP support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
