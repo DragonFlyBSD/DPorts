@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-DateTime-Format-Flexible/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-DateTime-Format-Flexible/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Format-Flexible
 PORTVERSION=	0.25
@@ -26,4 +26,5 @@ MAN3=	DateTime::Format::Flexible.3 \
 	DateTime::Format::Flexible::lang::en.3 \
 	DateTime::Format::Flexible::lang::es.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
