@@ -1,5 +1,5 @@
 # Created by: Alan E <alane@FreeBSD.org>
-# $FreeBSD: misc/kenny/Makefile 325959 2013-09-02 09:36:29Z az $
+# $FreeBSD: misc/kenny/Makefile 328316 2013-09-25 21:06:04Z ak $
 
 PORTNAME=	kenny
 PORTVERSION=	1.7
@@ -17,14 +17,15 @@ PROJECTHOST=	ak-various-projects
 CONFLICTS=	filters-*
 
 USES=		perl5
+USE_PERL5=	extract build run
 EXTRACT_CMD=	${GZCAT}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	> ${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
-MAN1=		kenny.1
-PLIST_FILES=	bin/kenny
+PLIST_FILES=	bin/kenny \
+		man/man1/kenny.1.gz
 
 POD2MAN?=	${LOCALBASE}/bin/pod2man
 
@@ -33,7 +34,7 @@ post-extract:
 	@${POD2MAN} ${WRKDIR}/${PORTNAME} > ${WRKDIR}/${PORTNAME}.1
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/
-	@${INSTALL_MAN} ${WRKDIR}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1/
+	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${INSTALL_MAN} ${WRKDIR}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
