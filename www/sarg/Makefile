@@ -1,5 +1,5 @@
 # Created by: mt@primats.org.ua
-# $FreeBSD: www/sarg/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: www/sarg/Makefile 328166 2013-09-24 16:47:23Z garga $
 
 PORTNAME=	sarg
 PORTVERSION=	2.3.6
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	CPPFLAGS=-I${LOCALBASE}/include \
 
 MAN1=		sarg.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -42,7 +43,7 @@ CONFIGURE_ARGS+=--disable-nls
 
 .if ${PORT_OPTIONS:MGD}
 CONFIGURE_ARGS+=--with-gd
-LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
+LIB_DEPENDS+=	libgd.so:${PORTSDIR}/graphics/gd
 .else
 CONFIGURE_ARGS+=--without-gd
 .endif
@@ -57,7 +58,7 @@ PLIST_SUB+=	PHP="@comment "
 
 .if ${PORT_OPTIONS:MPCRE}
 CONFIGURE_ARGS+=--with-pcre
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 .else
 CONFIGURE_ARGS+=--without-pcre
 .endif
