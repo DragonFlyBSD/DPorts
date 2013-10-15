@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: net/babeld/Makefile 321858 2013-06-27 07:00:26Z miwi $
+# $FreeBSD: net/babeld/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	babeld
 PORTVERSION=	1.4.2
@@ -13,4 +13,5 @@ PLIST_FILES=	bin/babeld
 
 MAN8=		babeld.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
