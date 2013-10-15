@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fm/rox-session/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: x11-fm/rox-session/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	rox-session
 PORTVERSION=	0.40.0
@@ -31,6 +31,7 @@ GDM_DESC=	Install GDM login manager
 
 SUB_FILES=	${PORTNAME} rox.desktop
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGDM}
