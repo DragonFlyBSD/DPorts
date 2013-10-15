@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/ceferino/Makefile 316624 2013-04-26 16:39:14Z bapt $
+# $FreeBSD: games/ceferino/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ceferino
 PORTVERSION=	0.97.8
@@ -20,6 +20,7 @@ CEFEDIRS=	ima music levels sounds
 
 OPTIONS_DEFINE=	NLS DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
