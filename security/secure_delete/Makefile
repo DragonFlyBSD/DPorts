@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan <vaida.bogdan@gmail.com>
-# $FreeBSD: security/secure_delete/Makefile 316857 2013-04-30 00:38:41Z miwi $
+# $FreeBSD: security/secure_delete/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	secure_delete
 PORTVERSION=	3.1
@@ -27,6 +27,7 @@ PLIST_FILES=	${BIN_PROGRAMS:S,^,bin/,} ${BIN_SCRIPTS:S,^,bin/,} bin/sdel
 BIN_PROGRAMS=	srm sfill sswap smem
 BIN_SCRIPTS=	the_cleaner.sh
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
