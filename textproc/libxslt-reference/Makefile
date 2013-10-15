@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: ports/textproc/libxslt-reference/Makefile,v 1.5 2012/11/17 06:02:02 svnexp Exp $
+# $FreeBSD: textproc/libxslt-reference/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTREVISION=	0
 
@@ -9,6 +9,7 @@ PARENT_WRKSRC!=	cd ${.CURDIR}/../libxslt && ${MAKE} -V WRKSRC
 EXTRACT_ONLY=
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 	@cd ${PARENT_WRKSRC}/doc && ${GMAKE} install-data-local
