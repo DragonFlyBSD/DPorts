@@ -1,10 +1,5 @@
-#
-# New ports collection makefile for:	nos-ttb
-# Date created:				6 May 2005
-# Whom:					Edwin Groothuis
-#
-# $FreeBSD: ports/net/nos-ttb/Makefile,v 1.12 2012/11/17 06:00:07 svnexp Exp $
-#
+# Created by: Edwin Groothuis
+# $FreeBSD: net/nos-ttb/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nos-ttb
 PORTVERSION=	0.9.5
@@ -22,6 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc:${PORTSDIR}/x11-toolkit
 NO_BUILD=	yes
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/ttb
 	${INSTALL_SCRIPT} ${WRKSRC}/src/ttb ${PREFIX}/bin
