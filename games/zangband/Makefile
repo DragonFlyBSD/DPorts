@@ -1,5 +1,5 @@
 # Created by: Makoto YAMAKURA <makoto@pinpott.spnet.ne.jp>
-# $FreeBSD: games/zangband/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: games/zangband/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	zangband
 PORTVERSION=	2.6.2
@@ -34,6 +34,7 @@ BINMODE=	2755
 ANGBANDLIB?=	lib/${PORTNAME}
 ANGBANDBIN?=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|^aclocal|${ACLOCAL}|' \
 		-e 's|^autoheader|${AUTOHEADER}|' \
