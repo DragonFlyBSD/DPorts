@@ -1,4 +1,4 @@
-# $FreeBSD: net/get_iplayer/Makefile 325791 2013-08-31 11:14:41Z az $
+# $FreeBSD: net/get_iplayer/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	get_iplayer
 PORTVERSION=	2.83
@@ -42,6 +42,7 @@ PORTDATA=	html plugins
 PORTDOCS=	CHANGELOG-get_iplayer.cgi.txt CHANGELOG.txt \
 		README-get_iplayer.cgi.txt README.md web.sh
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
