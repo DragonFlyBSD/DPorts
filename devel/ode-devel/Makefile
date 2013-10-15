@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@yahoo.com>
-# $FreeBSD: devel/ode-devel/Makefile 317876 2013-05-11 13:49:05Z bapt $
+# $FreeBSD: devel/ode-devel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ode
 DISTVERSION=	${ODEVER}-060223
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	OPCODE
 OPTIONS_DEFAULT=	OPCODE
 OPCODE_DESC=	Enable code required by TriList (trimesh) class
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
