@@ -1,4 +1,4 @@
-# $FreeBSD: comms/trustedqsl/Makefile 323809 2013-07-27 22:50:01Z db $
+# $FreeBSD: comms/trustedqsl/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	trustedqsl
 PORTVERSION=	1.14.2
@@ -20,6 +20,7 @@ MAN5=		trustedqsl.5
 
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
