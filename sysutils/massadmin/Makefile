@@ -1,9 +1,5 @@
-# New ports collection makefile for:	massadmin
-# Date created:				27 Sep 2010
-# Whom:					Sascha Klauder <sklauder@trimind.de>
-#
-# $FreeBSD: sysutils/massadmin/Makefile 326530 2013-09-06 17:55:21Z az $
-#
+# Created by: Sascha Klauder <sklauder@trimind.de>
+# $FreeBSD: sysutils/massadmin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	massadmin
 PORTVERSION=	2.3
@@ -29,6 +25,7 @@ MAN1=		massadmin.1
 .endif
 PLIST_FILES=	bin/massadmin
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/massadmin ${PREFIX}/bin
 .if !defined(NO_INSTALL_MANPAGES)
