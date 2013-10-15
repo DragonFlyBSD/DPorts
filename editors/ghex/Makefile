@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: editors/ghex/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: editors/ghex/Makefile 327720 2013-09-20 16:36:23Z bapt $
 #   $MCom: ports/editors/ghex/Makefile,v 1.13 2008/08/23 18:22:59 mezz Exp $
 
 PORTNAME=	ghex
@@ -24,4 +24,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	ghex2.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
