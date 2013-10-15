@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/security/py-pysha3/Makefile,v 1.4 2013/02/09 15:59:42 svnexp Exp $
+# $FreeBSD: security/py-pysha3/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pysha3
 PORTVERSION=	0.3
@@ -19,6 +19,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/_sha3.so \
 		%%PYTHON_SITELIBDIR%%/sha3.pyc \
 		%%PYTHON_SITELIBDIR%%/sha3.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
