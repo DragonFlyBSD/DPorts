@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: lang/whitespace/Makefile 325942 2013-09-02 06:33:01Z az $
+# $FreeBSD: lang/whitespace/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	whitespace
 PORTVERSION=	0.3
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	DOCS EXAMPLES
 PORTEXAMPLES=		*
 PORTDOCS=		*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
