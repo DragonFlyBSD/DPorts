@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/timemachine/Makefile 325725 2013-08-30 22:31:38Z bapt $
+# $FreeBSD: audio/timemachine/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	timemachine
 PORTVERSION=	0.3.3
@@ -19,6 +19,7 @@ LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
 OPTIONS_DEFINE=	LASH
 
 USES=		gmake pathfix pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-lm
