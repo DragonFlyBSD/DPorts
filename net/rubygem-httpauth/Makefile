@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-httpauth/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: net/rubygem-httpauth/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	httpauth
 PORTVERSION=	0.2.0
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
