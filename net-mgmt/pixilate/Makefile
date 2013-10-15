@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pixilate
-# Date created:			  Wed Apr 30 06:10:16 PDT 2003
-# Whom:				  Barry Irwin <bvi@moria.org>
-#
-# $FreeBSD: ports/net-mgmt/pixilate/Makefile,v 1.28 2013/02/18 21:46:32 svnexp Exp $
+# Created by: Barry Irwin <bvi@moria.org>
+# $FreeBSD: net-mgmt/pixilate/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	pixilate
 PORTVERSION=	0.4.2
@@ -27,6 +24,7 @@ PLIST_FILES=	bin/pixilate
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|libnet-config|${LIBNET_CONFIG}|; \
