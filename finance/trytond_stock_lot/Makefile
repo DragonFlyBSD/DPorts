@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_stock_lot/Makefile 324519 2013-08-10 14:05:57Z wg $
+# $FreeBSD: finance/trytond_stock_lot/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_stock_lot
 PORTVERSION=	2.4.1
@@ -20,4 +20,5 @@ CONFLICTS=	trytond_stock_lot-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
