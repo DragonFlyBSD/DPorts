@@ -1,5 +1,5 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: graphics/commons-utilities/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: graphics/commons-utilities/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	commons-utilities
 PORTVERSION=	1.0
@@ -32,6 +32,7 @@ PLIST_DIRS=	%%DOCSDIR%%
 PLIST_FILES+=	%%DOCSDIR%%/README
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/commons-csv-creator ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/commons-upload ${PREFIX}/bin
