@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/qpopper/files/patch-ap,v 1.7 2012/11/17 05:59:13 svnexp Exp $
+$FreeBSD: mail/qpopper/files/patch-ap 300896 2012-07-14 13:54:48Z beat $
 
 --- man/popauth.8.orig	Wed Apr  4 03:23:13 2001
 +++ man/popauth.8	Fri Apr 13 19:05:06 2001

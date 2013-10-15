@@ -1,6 +1,5 @@
 # Created by: pst
-#
-# $FreeBSD: ports/mail/qpopper/Makefile,v 1.107 2012/11/30 19:09:43 svnexp Exp $
+# $FreeBSD: mail/qpopper/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qpopper
 PORTVERSION=	4.1.0
@@ -62,6 +61,7 @@ U_OPTION_DESC=	include support for user .qpopper-options
 
 OPTIONS_DEFAULT=	APOP QPOPAUTH_SETUID SSL U_OPTION
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MAPOP)
