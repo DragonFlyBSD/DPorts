@@ -1,5 +1,5 @@
 # Created by: Yuri Victorovich <yuri@tsoft.com>
-# $FreeBSD: math/timbl/Makefile 325752 2013-08-31 00:35:35Z bapt $
+# $FreeBSD: math/timbl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	timbl
 PORTVERSION=	6.4.2
@@ -19,6 +19,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's#doc/@PACKAGE@/examples#examples/@PACKAGE@#' ${WRKSRC}/demos/Makefile.in
 
