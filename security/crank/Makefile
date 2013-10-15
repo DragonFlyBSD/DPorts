@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	Crank
-# Date created:			Apr 18, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/security/crank/Makefile,v 1.19 2012/11/17 06:01:02 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: security/crank/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	crank
 PORTVERSION=	0.2.1
@@ -26,4 +21,5 @@ USE_GMAKE=	yes
 
 INFO=		crank
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
