@@ -1,5 +1,5 @@
 # Created by: Brent J. Nordquist <bjn@visi.com>
-# $FreeBSD: ports/www/cgiwrap/Makefile,v 1.32 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/cgiwrap/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cgiwrap
 PORTVERSION=	4.1
@@ -67,6 +67,7 @@ CONFIGURE_ARGS=	--with-httpd-user=${WWWOWN} \
 		--with-check-shell \
 		--with-wall
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 ##
