@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: devel/p5-Test-Dependencies/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-Dependencies/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Dependencies
 PORTVERSION=	0.12
@@ -25,4 +25,5 @@ MAN3=		Test::Dependencies.3 \
 		Test::Dependencies::Heavy.3 \
 		Test::Dependencies::Light.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
