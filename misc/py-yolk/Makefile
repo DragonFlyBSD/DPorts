@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: misc/py-yolk/Makefile 324722 2013-08-14 14:00:20Z nivit $
+# $FreeBSD: misc/py-yolk/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	yolk
 PORTVERSION=	0.4.3
@@ -18,6 +18,7 @@ OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	EXAMPLES MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
