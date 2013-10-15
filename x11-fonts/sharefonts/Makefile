@@ -1,5 +1,5 @@
 # Created by: dburr@FreeBSD.org
-# $FreeBSD: x11-fonts/sharefonts/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: x11-fonts/sharefonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	sharefonts
 PORTVERSION=	0.10
@@ -14,6 +14,7 @@ RESTRICTED=	Shareware.  Cannot be distributed w/o prior authorization.
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/lib/X11/fonts/sharefont
 	${CP} ${WRKDIR}/sharefont/* ${PREFIX}/lib/X11/fonts/sharefont
