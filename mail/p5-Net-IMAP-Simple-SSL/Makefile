@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-Net-IMAP-Simple-SSL
-# Date created:				30 December 2004
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: mail/p5-Net-IMAP-Simple-SSL/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: mail/p5-Net-IMAP-Simple-SSL/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net-IMAP-Simple-SSL
 PORTVERSION=	1.3
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::IMAP::Simple::SSL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
