@@ -1,5 +1,5 @@
 # Created by: Jung-uk Kim <jkim@FreeBSD.org>
-# $FreeBSD: sysutils/asusoled/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: sysutils/asusoled/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	asusoled
 PORTVERSION=	0.10
@@ -25,6 +25,7 @@ MAKE_ARGS+=	TTF_FONT=${FONTDIR}/TTF/luxisr.ttf
 
 FONTDIR?=	${LOCALBASE}/lib/X11/fonts
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
