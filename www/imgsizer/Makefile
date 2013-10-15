@@ -1,9 +1,5 @@
-# New ports collection makefile for:	imgsizer
-# Date created:			08 Jun 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/www/imgsizer/Makefile,v 1.12 2012/11/17 06:02:37 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: www/imgsizer/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	imgsizer
 PORTVERSION=	2.8
@@ -25,6 +21,7 @@ MAN1=		imgsizer.1
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/imgsizer
 
