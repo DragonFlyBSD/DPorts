@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	pipebench
-# Date created:			Jan 14, 2003
-# Whom:				mich@freebsdcluster.org
-#
-# $FreeBSD: ports/benchmarks/pipebench/Makefile,v 1.7 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: mich@freebsdcluster.org
+# $FreeBSD: benchmarks/pipebench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	pipebench
 PORTVERSION=	0.40
@@ -16,6 +11,7 @@ COMMENT=	Pipebench shows current throughput/amount of data through a pipe
 
 CFLAGS+=	-w -pedantic
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 	${CC} ${CFLAGS} -o ${PORTNAME} ${PORTNAME}.c
