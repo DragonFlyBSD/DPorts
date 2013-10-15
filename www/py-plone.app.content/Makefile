@@ -1,7 +1,7 @@
-# $FreeBSD: www/py-plone.app.content/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.app.content/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.app.content
-PORTVERSION=	2.0.12
+PORTVERSION=	2.1.3
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,6 +12,7 @@ COMMENT=	Content Views for Plone
 LICENSE=	GPLv2
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.memoize>=0:${PORTSDIR}/www/py-plone.memoize \
+		${PYTHON_PKGNAMEPREFIX}plone.batching>0:${PORTSDIR}/www/py-plone.batching \
 		${PYTHON_PKGNAMEPREFIX}plone.i18n>=0:${PORTSDIR}/www/py-plone.i18n \
 		${PYTHON_PKGNAMEPREFIX}zope.i18n>=0:${PORTSDIR}/devel/py-zope.i18n \
 		${PYTHON_PKGNAMEPREFIX}zope.i18nmessageid>=0:${PORTSDIR}/textproc/py-zope.i18nmessageid \
@@ -29,8 +30,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.memoize>=0:${PORTSDIR}/www/py-plone.me
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-USE_ZOPE=	yes
+USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
