@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: audio/ezstream/Makefile 326123 2013-09-03 06:41:36Z bapt $
+# $FreeBSD: audio/ezstream/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ezstream
 PORTVERSION=	0.5.6
@@ -20,6 +20,7 @@ OPTIONS_DEFAULT=	TAGLIB
 TAGLIB_DESC=	TagLib support
 
 USES=		iconv pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	libxml2
 USE_RC_SUBR=	${PORTNAME}
 GNU_CONFIGURE=	yes
