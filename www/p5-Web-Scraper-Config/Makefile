@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Web-Scraper-Config
-# Date created:		2008-01-30
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: www/p5-Web-Scraper-Config/Makefile 326150 2013-09-03 13:17:36Z az $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: www/p5-Web-Scraper-Config/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Web-Scraper-Config
 PORTVERSION=	0.01
@@ -28,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		Web::Scraper::Config.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
