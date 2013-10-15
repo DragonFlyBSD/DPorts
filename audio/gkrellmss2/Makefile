@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: audio/gkrellmss2/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/gkrellmss2/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gkrellmss
 PORTVERSION=	2.7
@@ -17,6 +17,7 @@ LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
 USES=		gmake
+NO_STAGE=	yes
 USE_XORG=	x11
 USE_GNOME=	esound gtk20
 MAKE_ENV=	LOCALEDIR="${PREFIX}/share/locale"
