@@ -1,5 +1,5 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: japanese/py-mecab/Makefile 324571 2013-08-11 05:21:29Z tota $
+# $FreeBSD: japanese/py-mecab/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
@@ -20,6 +20,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_EGGINFO=	${PORTNAME}_python-${PKGVERSION}-${PYTHON_VERSION:S/thon//}.egg-info
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|cmd1("mecab-config --version")|"${PKGVERSION}"|' \
 		${WRKSRC}/setup.py
