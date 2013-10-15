@@ -1,5 +1,5 @@
 # Created by: Matthew Fuller <fullermd@futuresouth.com>
-# $FreeBSD: x11/bgrot/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: x11/bgrot/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	bgrot
 PORTVERSION=	1.30
@@ -19,6 +19,7 @@ SHEBANG_FILES=	*.pl
 MAN1=		bgrot.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} pkg-message
 
