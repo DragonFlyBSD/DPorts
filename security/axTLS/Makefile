@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: security/axTLS/Makefile 321983 2013-06-28 20:55:58Z lippe $
+# $FreeBSD: security/axTLS/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	axTLS
 PORTVERSION=	1.4.9
@@ -38,7 +38,7 @@ HIGH_DESC=		Use the strongest cipher(s) at the cost of speed
 CONFIG_SUB=	PREFIX=\"${PREFIX}\" WWWDIR=\"${WWWDIR}\" \
 		HTTP_PORT=${WITH_HTTP_PORT} SSL_PORT=${WITH_SSL_PORT}
 NO_OPTIONS_SORT=yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 STAGE=		${WRKSRC}/_stage
@@ -46,6 +46,7 @@ STAGE=		${WRKSRC}/_stage
 WITH_HTTP_PORT?=	80
 WITH_SSL_PORT?=		443
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSERVER_ONLY}
@@ -122,7 +123,7 @@ CONFIG_SUB+=	X509="\# "
 BUILD_DEPENDS+=	swig:${PORTSDIR}/devel/swig13
 CONFIG_SUB+=	PERL=""
 PLIST_SUB+=	PERL=""
-USE_PERL5=	yes
+USES+=		perl5
 .else
 CONFIG_SUB+=	PERL="\# "
 PLIST_SUB+=	PERL="@comment "
