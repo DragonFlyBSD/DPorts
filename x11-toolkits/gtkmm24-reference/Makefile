@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkmm24-reference/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: x11-toolkits/gtkmm24-reference/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTREVISION=	1
 
@@ -11,6 +11,7 @@ GNU_CONFIGURE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/gtkmm-2.4
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 .for d in docs
