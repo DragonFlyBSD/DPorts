@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: ports/textproc/saxon-he/Makefile,v 1.24 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/saxon-he/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	saxon-he
 PORTVERSION=	9.3.0.5
@@ -36,6 +36,7 @@ PORTEXAMPLES=	*
 SUB_FILES=	saxon.sh
 SUB_LIST=	SAXON_JARS="${JARFILES:S,^,${DATADIR}/,}"
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JARs in ${DATADIR}/..."
 	@${MKDIR} ${DATADIR}
