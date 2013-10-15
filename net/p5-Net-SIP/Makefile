@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-SIP/Makefile 325191 2013-08-22 12:39:00Z mat $
+# $FreeBSD: net/p5-Net-SIP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SIP
 PORTVERSION=	0.68.2
@@ -50,4 +50,5 @@ MAN3=		Net::SIP.3 \
 		Net::SIP::StatelessProxy.3 \
 		Net::SIP::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
