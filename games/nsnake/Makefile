@@ -1,5 +1,5 @@
 # Created by: markand
-# $FreeBSD: games/nsnake/Makefile 324674 2013-08-13 16:53:48Z wg $
+# $FreeBSD: games/nsnake/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	nsnake
 PORTVERSION=	1.4
@@ -18,6 +18,7 @@ MAN6=		${PORTNAME}.6
 PORTDOCS=	CHANGELOG
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
