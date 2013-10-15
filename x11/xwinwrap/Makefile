@@ -1,17 +1,11 @@
-# New ports collection makefile for:	xwinwrap
-# Date created:		2009-11-16
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: x11/xwinwrap/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: x11/xwinwrap/Makefile 329066 2013-10-02 16:16:21Z vg $
 
 PORTNAME=	xwinwrap
 PORTVERSION=	0.3
 PORTREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://fbsd.zlonet.ru/distfiles/ \
-		http://tourservice.kz/zloidemon/distfiles/ \
-		http://z-up.ru/zloidemon/distfiles/
+MASTER_SITES=	LOCAL/vg
 
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	XWinWrap replace a desktop background with a movie or screensaver
@@ -23,6 +17,7 @@ USE_BZIP2=	yes
 USE_XORG=	x11 xproto xrender xext
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
