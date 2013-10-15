@@ -1,5 +1,5 @@
 # Created by: Holger Lamm <holger@e-gitt.net>
-# $FreeBSD: net-p2p/mldonkey-gui/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: net-p2p/mldonkey-gui/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 # build only the GUI
 WITHOUT_CORE=	yes
@@ -10,4 +10,5 @@ COMMENT=	A OCAML/GTK GUI for the MLdonkey peer-to-peer network client
 
 MASTERDIR=	${.CURDIR}/../mldonkey
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
