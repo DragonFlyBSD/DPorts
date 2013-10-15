@@ -1,5 +1,5 @@
 # Created by: Philip Jenvey <pjenvey@turntables.org>
-# $FreeBSD: databases/rdfdb/Makefile 320786 2013-06-13 11:56:17Z bsam $
+# $FreeBSD: databases/rdfdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	rdfdb
 PORTVERSION=	0.46
@@ -27,6 +27,7 @@ RDFDB_PORT?=	7001
 
 PLIST_FILES=	bin/rdfdb bin/rdfdb etc/rc.d/rdfdb-server.sh
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},g' \
 		-e 's,%%PTHREAD_LIBS%%,${PTHREAD_LIBS:S/"//g},g' \
