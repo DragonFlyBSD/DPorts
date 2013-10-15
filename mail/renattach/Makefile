@@ -1,9 +1,5 @@
-# New ports collection makefile for:	renattach
-# Date created:				20 June 2004
-# Whom:					Stefan A. Deutscher (sad@mailaps.org)
-#
-# $FreeBSD: mail/renattach/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Stefan A. Deutscher (sad@mailaps.org)
+# $FreeBSD: mail/renattach/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	renattach
 PORTVERSION=	1.2.4
@@ -20,6 +16,7 @@ MAN1=		renattach.1
 PORTDOCS=	INSTALL
 PLIST_FILES=	bin/renattach etc/renattach.conf.ex
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/src/getopt*
 
