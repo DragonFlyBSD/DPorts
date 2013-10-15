@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/awele/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/awele/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	awele
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ USE_TK=		yes
 MAN6=		xawele.6
 PLIST_FILES=	bin/awelewish bin/xawele
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|%%LOCALBASE%%|${LOCALBASE}|; \
