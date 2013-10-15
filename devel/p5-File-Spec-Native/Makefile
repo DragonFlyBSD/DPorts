@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-Spec-Native/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-File-Spec-Native/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Spec-Native
 PORTVERSION=	1.003
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	File::Spec::Native.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
