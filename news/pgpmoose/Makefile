@@ -1,4 +1,4 @@
-# $FreeBSD: ports/news/pgpmoose/Makefile,v 1.15 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/pgpmoose/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	pgpmoose
 PORTVERSION=	1.19
@@ -13,6 +13,8 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	PGP Moose - signatures for moderated newsgroups
+
+NO_STAGE=	yes
 
 MAN1=		pmapp.1 pmcanon.1 pmcheck.1 pmnewsgroups.1 \
 		pmdaemon.1 pmcancel.1
