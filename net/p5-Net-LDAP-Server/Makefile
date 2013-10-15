@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: net/p5-Net-LDAP-Server/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: net/p5-Net-LDAP-Server/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-LDAP-Server
 PORTVERSION=	0.43
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::LDAP::Server.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
