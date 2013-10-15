@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/oniguruma/Makefile 306100 2012-10-18 19:46:21Z dinoex $
+# $FreeBSD: devel/oniguruma/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	oniguruma
 PORTVERSION=	2.5.8
@@ -22,6 +22,7 @@ CONFLICTS_INSTALL=	oniguruma-4.*
 GNU_CONFIGURE=	yes
 DOCS=		HISTORY README doc/*
 
+NO_STAGE=	yes
 post-patch:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/ruby187p248-oniguruma.patch \
 		${WRKSRC}/ruby187.patch
