@@ -1,9 +1,5 @@
-# New ports collection makefile for:	napster
-# Date created:				21.07.2004
-# Whom:					Roman Y. Bogdanov <sam@brj.pp.ru>
-#
-# $FreeBSD: ports/russian/napster/Makefile,v 1.3 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Roman Y. Bogdanov <sam@brj.pp.ru>
+# $FreeBSD: russian/napster/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	nap
 CATEGORIES=	russian
@@ -17,6 +13,7 @@ CONFLICTS=	nap-[0-9]*
 
 WITH_ENCODING_PATCH=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	@${PATCH} ${PATCH_ARGS} < ${.CURDIR}/files/extra-win2koi
 
