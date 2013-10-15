@@ -1,5 +1,5 @@
 # Created by: chuckr@FreeBSD.org
-# $FreeBSD: devel/global/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/global/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	global
 PORTVERSION=	6.2.8
@@ -17,6 +17,7 @@ INFO=		global
 
 DOCS=		AUTHORS COPYING ChangeLog FAQ INSTALL LICENSE NEWS README THANKS
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -E 's,^(gtags_DATA = )AUTHORS .* THANKS( \\$$),\1\2,' ${WRKSRC}/Makefile.in
 
