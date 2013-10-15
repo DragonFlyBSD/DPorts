@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: security/fakeroot/Makefile 319193 2013-05-27 09:28:45Z martymac $
+# $FreeBSD: security/fakeroot/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fakeroot
 PORTVERSION=	1.19
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAN1=		faked.1 fakeroot.1
 MANLANG=	"" de es fr nl sv
 
+NO_STAGE=	yes
 pre-configure:
 	 @${REINPLACE_CMD} -e '/LIBS=.*-lpthread/s/-lpthread/${PTHREAD_LIBS}/g' \
 	 	${WRKSRC}/${CONFIGURE_SCRIPT}
