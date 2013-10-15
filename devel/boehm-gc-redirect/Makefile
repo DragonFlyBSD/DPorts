@@ -1,9 +1,5 @@
-# New ports collection makefile for:	boehm-gc-redirect
-# Date created:		12/17/2009
-# Whom:			stas
-#
-# $FreeBSD: ports/devel/boehm-gc-redirect/Makefile,v 1.6 2012/11/17 05:55:35 svnexp Exp $
-#
+# Created by: stas
+# $FreeBSD: devel/boehm-gc-redirect/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	boehm-gc
 PORTVERSION=	7.1
@@ -32,6 +28,7 @@ OPTIONS_DEFINE=	DEBUG
 PLIST_FILES=	${INSTLIBS:S,^,lib/lib,g:S,$,-${GC_VARIANT}.so.${SOVER},g} \
 		${INSTLIBS:S,^,lib/lib,g:S,$,-${GC_VARIANT}.so,g}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
