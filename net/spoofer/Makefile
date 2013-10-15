@@ -1,9 +1,5 @@
-# New ports collection makefile for:	spoofer
-# Date created:		6 February 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/net/spoofer/Makefile,v 1.13 2012/11/17 06:00:21 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: net/spoofer/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	spoofer
 PORTVERSION=	0.8
@@ -18,6 +14,7 @@ PORTDOCS=	README CHANGES
 
 HAS_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
