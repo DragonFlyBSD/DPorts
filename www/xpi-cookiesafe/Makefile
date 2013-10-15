@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-cookiesafe
-# Date created:			18 April 2008
-# Whom:				Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/www/xpi-cookiesafe/Makefile,v 1.6 2013/02/20 16:45:27 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: www/xpi-cookiesafe/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cookiesafe
 PORTVERSION=	3.0.5
@@ -27,6 +23,7 @@ XPI_FILES=	chrome/cookiesafe.jar defaults/preferences/cookiesafe.js \
 		chrome.manifest install.js install.rdf
 XPI_DIRS=	chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|0\.7|1.*|' ${WRKSRC}/install.rdf
 	@${RM} -f ${WRKSRC}/install.rdf.bak
