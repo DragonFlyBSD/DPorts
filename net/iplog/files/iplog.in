@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/iplog/files/iplog.in,v 1.3 2012/11/17 06:00:03 svnexp Exp $
+# $FreeBSD: net/iplog/files/iplog.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: iplog
 # REQUIRE: LOGIN
