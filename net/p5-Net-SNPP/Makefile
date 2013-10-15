@@ -1,5 +1,5 @@
 # Created by: devin@spamcop.net
-# $FreeBSD: net/p5-Net-SNPP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-SNPP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SNPP
 PORTVERSION=	1.17
@@ -17,6 +17,7 @@ USE_PERL5=	configure
 MAN3=		Net::SNPP.3 \
 		Net::SNPP::Server.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e '/warnings/d' \
 		${WRKSRC}/lib/Net/SNPP/Server.pm
