@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-backgrounds
-# Date Created:				12 January 2005
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: x11-themes/gnome-backgrounds/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: x11-themes/gnome-backgrounds/Makefile 327783 2013-09-20 23:54:03Z bapt $
 #   $MCom: ports/x11-themes/gnome-backgrounds/Makefile,v 1.49 2010/09/27 19:52:50 kwm Exp $
-#
 
 PORTNAME=	gnome-backgrounds
 PORTVERSION=	2.32.0
@@ -23,4 +19,5 @@ USE_GNOME=	gnomeprefix gnomehack intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
