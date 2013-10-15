@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-fpl/Makefile 323842 2013-07-28 18:02:18Z stephen $
+# $FreeBSD: math/octave-forge-fpl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-fpl
 PORTVERSION=	1.3.4
@@ -14,6 +14,7 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 RUN_DEPENDS+=	dx:${PORTSDIR}/graphics/opendx
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 do-build:
