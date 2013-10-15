@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: games/xonix/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xonix/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xonix
 PORTVERSION=	1.4
@@ -14,4 +14,5 @@ USES=		imake
 USE_XORG=	xaw
 MAN1=		xonix.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
