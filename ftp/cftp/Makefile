@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cftp
-# Date created:				14 October 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/ftp/cftp/Makefile,v 1.32 2012/12/06 16:41:45 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: ftp/cftp/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	cftp
 PORTVERSION=	0.12

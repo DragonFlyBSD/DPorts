@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/ftp/cftp/files/patch-ftp.c,v 1.2 2012/11/17 05:57:29 svnexp Exp $
+$FreeBSD: ftp/cftp/files/patch-ftp.c 300896 2012-07-14 13:54:48Z beat $
 
 --- ftp.c.orig	Tue Sep 17 16:58:18 2002
 +++ ftp.c	Sat Sep 28 15:49:05 2002
