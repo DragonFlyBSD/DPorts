@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Test-MockModule
-# Date created:				26 December 2004
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Test-MockModule/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-MockModule/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-MockModule
 PORTVERSION=	0.05
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Test::MockModule.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
