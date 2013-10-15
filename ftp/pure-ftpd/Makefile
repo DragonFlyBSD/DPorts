@@ -1,5 +1,5 @@
 # Created by: Frank DENIS
-# $FreeBSD: ftp/pure-ftpd/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: ftp/pure-ftpd/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	pure-ftpd
 PORTVERSION=	1.0.36
@@ -49,6 +49,7 @@ ANONRESUME_DESC=	Allow anonymous user to resume file upload
 ANONRENAME_DESC=	Allow anonymous user to rename file
 ANONDELETE_DESC=	Allow anonymous user to delete file
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # language support requested?
