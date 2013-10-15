@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: devel/p5-App-Cmd/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-App-Cmd/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-Cmd
 PORTVERSION=	0.320
@@ -37,4 +37,5 @@ MAN3=		App::Cmd.3 \
 		App::Cmd::Tester::CaptureExternal.3 \
 		App::Cmd::Tutorial.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
