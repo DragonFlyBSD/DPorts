@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: databases/p5-DBIx-DataSource/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: databases/p5-DBIx-DataSource/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-DataSource
 PORTVERSION=	0.02
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN3=	DBIx::DataSource.3 DBIx::DataSource::Driver.3 \
 	DBIx::DataSource::mysql.3 DBIx::DataSource::Pg.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
