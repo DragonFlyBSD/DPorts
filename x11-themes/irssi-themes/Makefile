@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: x11-themes/irssi-themes/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: x11-themes/irssi-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	irssi-themes
 PORTVERSION=	20101013
@@ -20,6 +20,7 @@ PLIST=		${WRKDIR}/pkg-plist
 
 THEMESDIR_REL=	share/irssi/themes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${MASTERDIR}/Makefile.inc"
 
