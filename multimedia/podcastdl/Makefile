@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: multimedia/podcastdl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/podcastdl/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	podcastdl
 PORTVERSION=	0.3.0
@@ -18,4 +18,5 @@ USES=		cmake
 
 PLIST_FILES=	bin/podcastdl
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
