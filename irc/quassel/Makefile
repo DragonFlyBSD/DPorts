@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: irc/quassel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: irc/quassel/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	quassel
 PORTVERSION=	0.9.0
@@ -31,6 +31,7 @@ CMAKE_ARGS+=	-DWANT_MONO=${QUASSEL_MONO} \
 		-DWANT_QTCLIENT=${QUASSEL_CLIENT} \
 		-DWITH_LIBINDICATE=OFF
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
