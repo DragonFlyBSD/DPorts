@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stamp
-# Date created:	11 August 1998
-# Whom:		Bill Fumerola <billf@chc-chimes.com>
-#
-# $FreeBSD: ports/graphics/stamp/Makefile,v 1.26 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: Bill Fumerola <billf@chc-chimes.com>
+# $FreeBSD: graphics/stamp/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	stamp
 PORTVERSION=	2.0.8
@@ -23,6 +19,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 USE_GNOME=	gtk12
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's#/usr/local/share/stamp#${DATADIR}#' \
 		${WRKSRC}/configure
