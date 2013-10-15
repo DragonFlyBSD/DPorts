@@ -1,9 +1,4 @@
-# New ports collection makefile for:	hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/french/hunspell/Makefile,v 1.9 2012/11/17 05:57:28 svnexp Exp $
-#
+# $FreeBSD: french/hunspell/Makefile 328056 2013-09-23 21:24:50Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	4.6
@@ -30,12 +25,12 @@ PLIST_FILES+=	%%DATADIR%%/${ALIAS}.aff \
 .endfor
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/fr-moderne.aff ${DATADIR}/fr_FR.aff
-	${INSTALL_DATA} ${WRKSRC}/fr-moderne.dic ${DATADIR}/fr_FR.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/fr-moderne.aff ${STAGEDIR}${DATADIR}/fr_FR.aff
+	${INSTALL_DATA} ${WRKSRC}/fr-moderne.dic ${STAGEDIR}${DATADIR}/fr_FR.dic
 .for ALIAS in ${FRALIASES}
-	${LN} -s fr_FR.aff ${DATADIR}/${ALIAS}.aff
-	${LN} -s fr_FR.dic ${DATADIR}/${ALIAS}.dic
+	${LN} -sf fr_FR.aff ${STAGEDIR}${DATADIR}/${ALIAS}.aff
+	${LN} -sf fr_FR.dic ${STAGEDIR}${DATADIR}/${ALIAS}.dic
 .endfor
 
 .include <bsd.port.mk>
