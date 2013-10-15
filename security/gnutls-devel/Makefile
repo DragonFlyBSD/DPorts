@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: security/gnutls-devel/Makefile 325745 2013-08-31 00:11:06Z bapt $
+# $FreeBSD: security/gnutls-devel/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gnutls
 PORTVERSION=	2.99.4
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-guile --disable-silent-rules \
 			--disable-hardware-acceleration
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if (defined(WITH_LIBTASN1) || exists(${LOCALBASE}/lib/libtasn1.so.5)) && !defined(WITHOUT_LIBTASN1)
