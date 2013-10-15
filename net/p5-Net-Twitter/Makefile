@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Twitter/Makefile 325193 2013-08-22 12:50:49Z mat $
+# $FreeBSD: net/p5-Net-Twitter/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Twitter
 PORTVERSION=	4.00007
@@ -63,4 +63,5 @@ MAN3=		Net::Identica.3 \
 		Net::Twitter::Role::WrapError.3 \
 		Net::Twitter::Search.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
