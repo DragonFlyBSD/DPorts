@@ -1,4 +1,4 @@
-# $FreeBSD: math/qtoctave/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/qtoctave/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	qtoctave
 PORTVERSION=	0.10.1
@@ -16,6 +16,7 @@ USE_QT4=	designer gui network script svg xml \
 USES=		cmake
 CMAKE_ARGS+=	-DWITH_UseRPMTools:Bool=Off
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/COMMAND "lrelease"/s,lrelease,$${QT_LRELEASE_EXECUTABLE},' \
 		${WRKSRC}/qtoctave/src/CMakeLists.txt
