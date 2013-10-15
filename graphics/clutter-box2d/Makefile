@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter-box2d/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: graphics/clutter-box2d/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	clutter-box2d
 PORTVERSION=	0.10.0
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--enable-introspection=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
