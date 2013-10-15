@@ -1,5 +1,5 @@
 # Created by: Dave Chapeskie <dchapes@ddm.on.ca>
-# $FreeBSD: games/xmemory/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xmemory/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xmemory
 PORTVERSION=	3.7
@@ -16,6 +16,7 @@ USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xmemory.1
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${LOCALBASE}/lib/X11/xmemory
 	${INSTALL_DATA} ${WRKSRC}/home.mem ${WRKSRC}/sports.mem \
