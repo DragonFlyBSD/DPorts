@@ -1,6 +1,5 @@
-# Ports collection makefile for:	Perl::Critic
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Perl-Critic/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Perl-Critic/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Perl-Critic
 PORTVERSION=	1.11.8
@@ -236,4 +235,5 @@ MAN3=	Perl::Critic.3 \
 	Perl::Critic::Violation.3 \
 	Test::Perl::Critic::Policy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
