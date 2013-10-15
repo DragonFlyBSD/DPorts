@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/apache-solr3/pkg-plist,v 1.1 2013/02/26 04:54:35 svnexp Exp $
+@comment $FreeBSD: textproc/apache-solr3/pkg-plist 312958 2013-02-26 04:01:30Z vanilla $
 %%JAVAJARDIR%%/apache-solr-%%PORTVERSION%%.war
 %%JAVAJARDIR%%/apache-solr-analysis-extras-%%PORTVERSION%%.jar
 %%JAVAJARDIR%%/apache-solr-cell-%%PORTVERSION%%.jar

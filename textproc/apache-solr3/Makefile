@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/textproc/apache-solr3/Makefile,v 1.1 2013/02/26 04:54:35 svnexp Exp $
+# $FreeBSD: textproc/apache-solr3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	apache-solr
 PORTVERSION=	3.6.2
@@ -22,6 +22,7 @@ PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 USE_JAVA=	yes
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}/dist && ${COPYTREE_SHARE} \* ${JAVAJARDIR}
 .if !defined(NOPORTEXAMPLES)
