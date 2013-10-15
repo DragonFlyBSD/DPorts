@@ -1,5 +1,5 @@
 # Created by: Filipe Rocha <filiperocha@gmail.com>
-# $FreeBSD: www/ojs2/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/ojs2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ojs2
 PORTVERSION=	2.2.1
@@ -27,6 +27,7 @@ OPTIONS_DEFAULT=	MYSQL LDAP
 MEMCACHE_DESC=	memcached cache system
 DB_DESC=	DB backend
 
+NO_STAGE=	yes
 pre-install::
 	@${ECHO_MSG} "======================================================================"
 	@${ECHO_MSG} "If you are upgrading please refer to docs/UPGRADE or browse to"
