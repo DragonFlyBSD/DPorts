@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/colorcode/Makefile,v 1.8 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/colorcode/Makefile 329803 2013-10-08 16:03:13Z makc $
 
 PORTNAME=	colorcode
 PORTVERSION=	0.7.2
@@ -11,7 +11,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Advanced MasterMind game and solver
 
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
-HAS_CONFIGURE=	yes
+USES=		qmake
 WRKSRC=		${WRKDIR}/ColorCode-${PORTVERSION}
 
 DESKTOP_ENTRIES=	"ColorCode" "${COMMENT}" \
@@ -21,13 +21,10 @@ DESKTOP_ENTRIES=	"ColorCode" "${COMMENT}" \
 PLIST_FILES=	bin/colorcode \
 		share/pixmaps/colorcode.png
 
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS} ${QMAKE_ARGS}
-
 do-install:
-	${MKDIR} ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/colorcode ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/pixmaps
-	${INSTALL_DATA}	${WRKSRC}/img/cc64.png	${PREFIX}/share/pixmaps/colorcode.png
+	@${MKDIR} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/colorcode ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA}	${WRKSRC}/img/cc64.png	${STAGEDIR}${PREFIX}/share/pixmaps/colorcode.png
 
 .include <bsd.port.mk>
