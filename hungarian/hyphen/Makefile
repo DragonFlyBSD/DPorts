@@ -1,9 +1,4 @@
-# New ports collection makefile for:	hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/hungarian/hyphen/Makefile,v 1.7 2012/11/17 05:58:27 svnexp Exp $
-#
+# $FreeBSD: hungarian/hyphen/Makefile 327735 2013-09-20 18:43:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2007.05.17
@@ -25,6 +20,7 @@ NO_WRKSUBDIR=	yes
 PLIST_FILES=	%%DATADIR%%/hyph_hu_HU.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/hyph_hu_HU.dic ${DATADIR}/
