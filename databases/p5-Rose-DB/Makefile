@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-Rose-DB/Makefile 325039 2013-08-20 09:54:16Z mat $
+# $FreeBSD: databases/p5-Rose-DB/Makefile 329267 2013-10-04 07:07:10Z sunpoet $
 
 PORTNAME=	Rose-DB
 PORTVERSION=	0.771
@@ -29,6 +29,8 @@ BUILD_DEPENDS=	p5-Bit-Vector>=6.4:${PORTSDIR}/math/p5-Bit-Vector \
 		p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+PORTSCOUT=	skipv:0.7591
+
 USES=		perl5
 USE_PERL5=	configure
 
@@ -46,4 +48,5 @@ MAN3=		Rose::DB.3 \
 		Rose::DB::SQLite.3 \
 		Rose::DB::Tutorial.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
