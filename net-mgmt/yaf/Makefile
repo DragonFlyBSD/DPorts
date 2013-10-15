@@ -1,5 +1,5 @@
 # Created by: Dikshie <dikshie@sfc.wide.ad.jp>
-# $FreeBSD: net-mgmt/yaf/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: net-mgmt/yaf/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	yaf
 PORTVERSION=	2.1.1
@@ -31,6 +31,7 @@ MAN1=		airdaemon.1 applabel.1 \
 CONFIGURE_ARGS+=	--with-dag=${LOCALBASE}
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
