@@ -1,5 +1,5 @@
 # Created by: Thomas Hentschel <thomas at hentschel dot net>
-# $FreeBSD: devel/orbitcpp/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/orbitcpp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	orbitcpp
 PORTVERSION=	1.3.9
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(SUBDIRS =.*\)test\(.*\)|\1\2|' ${WRKSRC}/Makefile.in
 
