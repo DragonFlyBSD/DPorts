@@ -1,5 +1,5 @@
 # Created by: Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
-# $FreeBSD: science/dcl/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: science/dcl/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	dcl
 PORTVERSION=	5.4.7
@@ -24,6 +24,7 @@ PORTEXAMPLES=	*
 
 RESTRICTED=	No commercial use
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
