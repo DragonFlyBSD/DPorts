@@ -1,5 +1,5 @@
 # Created by: minoura@netbsd.org
-# $FreeBSD: x11-fm/xcruise/Makefile 322013 2013-06-28 23:01:51Z bapt $
+# $FreeBSD: x11-fm/xcruise/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	xcruiser
 PORTVERSION=	0.30
@@ -14,6 +14,7 @@ USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xcruiser.1
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${PREFIX}/share/doc/xcruise
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xcruise
