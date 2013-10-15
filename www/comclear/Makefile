@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: www/comclear/Makefile 315059 2013-03-23 18:00:14Z miwi $
+# $FreeBSD: www/comclear/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	comclear
 PORTVERSION=	1.2
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--disable-gtktest
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README
 PLIST_FILES=	bin/comclear
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK1}
