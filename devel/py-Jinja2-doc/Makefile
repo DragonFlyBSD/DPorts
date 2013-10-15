@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-Jinja2-doc/Makefile,v 1.2 2012/11/17 05:56:44 svnexp Exp $
+# $FreeBSD: devel/py-Jinja2-doc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PKGNAMESUFFIX=	-doc
 
@@ -16,4 +16,5 @@ OPTIONS_DEFAULT=
 
 PLIST=	${.CURDIR}/pkg-plist
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/py-Jinja2-doc/pkg-plist,v 1.2 2012/11/17 05:56:44 svnexp Exp $
+@comment $FreeBSD: devel/py-Jinja2-doc/pkg-plist 303727 2012-09-05 22:00:27Z nivit $
 %%DOCSDIR%%/.buildinfo
 %%DOCSDIR%%/_sources/api.txt
 %%DOCSDIR%%/_sources/changelog.txt
