@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-panel/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: x11/gnome-panel/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gnome-panel/Makefile,v 1.237 2012/10/25 09:21:00 kwm Exp $
 
 PORTNAME=	gnome-panel
@@ -47,6 +47,7 @@ OPTIONS_DEFAULT=EVOLUTION BONOBO
 EVOLUTION_DESC=	Use the Evolution calendar
 BONOBO_DESC=	Support for bonobo applets aka Gnome 2 applets
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEVOLUTION}
