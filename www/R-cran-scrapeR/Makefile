@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/R-cran-scrapeR/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: www/R-cran-scrapeR/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	scrapeR
 PORTVERSION=	0.1.6
@@ -16,4 +16,5 @@ RUN_DEPENDS=	R-cran-XML>0:${PORTSDIR}/textproc/R-cran-XML \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
