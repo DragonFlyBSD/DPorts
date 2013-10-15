@@ -1,9 +1,5 @@
-# New ports collection makefile for:	BIjective COMpressor
-# Date created:				09 May 2003
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: archivers/bicom/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: archivers/bicom/Makefile 328236 2013-09-25 02:06:25Z vanilla $
 
 PORTNAME=	bicom
 PORTVERSION=	1.01
@@ -24,6 +20,6 @@ MAKEFILE=	${FILESDIR}/Makefile
 PLIST_FILES=	bin/bicom
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bicom/bicom ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bicom/bicom ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
