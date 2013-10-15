@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-coffee-rails
-# Date created:		2011-09-12
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: devel/rubygem-coffee-rails/Makefile 310121 2013-01-09 03:53:15Z swills $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-coffee-rails/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	coffee-rails
 PORTVERSION=	3.2.2
@@ -21,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
