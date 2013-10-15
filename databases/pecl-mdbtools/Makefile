@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: databases/pecl-mdbtools/Makefile 326071 2013-09-02 20:02:01Z bapt $
+# $FreeBSD: databases/pecl-mdbtools/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mdbtools
 PORTVERSION=	1.0.0
@@ -26,4 +26,5 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libmdb.a:${PORTSDIR}/databases/mdbtools
 
 CONFIGURE_ARGS=	--with-mdbtools=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
