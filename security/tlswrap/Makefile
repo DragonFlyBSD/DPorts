@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: security/tlswrap/Makefile 320746 2013-06-13 09:52:06Z johans $
+# $FreeBSD: security/tlswrap/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tlswrap
 PORTVERSION=	1.0.4
@@ -17,6 +17,7 @@ USE_OPENSSL=	yes
 PLIST_FILES=	bin/tlswrap
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E 's,^(CC|CFLAGS|LDFLAGS).*=,\1?=,g' \
 		${WRKSRC}/Makefile.in
