@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/ndpmon/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-mgmt/ndpmon/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ndpmon
 PORTVERSION=	1.4.0
@@ -20,6 +20,7 @@ OPTIONS_DEFAULT=
 PY4SUITE_DESC=		Depend on py-4suite-xml (for generating HTML)
 MACRESOLV_DESC=		Enable MAC Manufacturer Resolution (use p5-libwww)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPY4SUITE}
@@ -30,8 +31,9 @@ PLIST_SUB+=	PY=""
 PLIST_SUB+=	PY="@comment "
 .endif
 
+USES=		perl5
+USE_PERL5=	run
 USE_GNOME=	libxml2
-USE_PERL5_RUN=	yes
 USE_RC_SUBR=	ndpmonitor
 
 GNU_CONFIGURE=	yes
