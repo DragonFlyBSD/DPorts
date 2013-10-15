@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: www/squidview/Makefile 307101 2012-11-06 22:46:01Z madpilot $
+# $FreeBSD: www/squidview/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	squidview
 PORTVERSION=	0.79
@@ -17,6 +17,7 @@ DATAFILES=	aliases users words
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
