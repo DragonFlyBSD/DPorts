@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: sysutils/apcupsd/Makefile 324574 2013-08-11 05:43:04Z dinoex $
+# $FreeBSD: sysutils/apcupsd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	apcupsd
 PORTVERSION=	3.14.10
@@ -55,6 +55,7 @@ GAPCMON_DESC=		Build GTK GUI front-end
 
 PORTDOCS=	${PORTNAME}.pdf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPCSMART_DRV}
