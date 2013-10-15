@@ -1,4 +1,4 @@
-# $FreeBSD: security/pam_yubico/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: security/pam_yubico/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pam_yubico
 PORTVERSION=	2.13
@@ -32,6 +32,7 @@ OPTIONS_DEFINE=	CR LDAP DOCS
 CR_DESC=	Include Challenge/response support
 OPTIONS_DEFAULT=	CR LDAP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCR}
