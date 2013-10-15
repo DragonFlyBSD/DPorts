@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomegames2-extra-data
-# Date created:				16 August 2004
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/games/gnome-games-extra-data/Makefile,v 1.26 2012/11/17 05:57:40 svnexp Exp $
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: games/gnome-games-extra-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 #   $MCom: ports/games/gnome-games-extra-data/Makefile,v 1.31 2010/04/02 18:32:52 kwm Exp $
-#
 
 PORTNAME=	gnome-games-extra-data
 PORTVERSION=	2.30.0
@@ -25,4 +21,5 @@ USE_GNOME=	gnomehack gnomeprefix
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
