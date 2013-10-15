@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: games/qcc/Makefile 314461 2013-03-17 16:44:33Z danfe $
+# $FreeBSD: games/qcc/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	qcc
 PORTVERSION=	1.01
@@ -21,6 +21,7 @@ PORTDOCS=	readme.txt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
