@@ -1,5 +1,5 @@
 # Created by: Slaven Rezic <slaven@rezic.de>
-# $FreeBSD: misc/lesspipe/Makefile 325955 2013-09-02 09:22:47Z az $
+# $FreeBSD: misc/lesspipe/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	lesspipe
 PORTVERSION=	1.55
@@ -39,6 +39,7 @@ SUB_FILES=	pkg-message
 
 MAN1=		lesspipe.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/code2color  ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/lesspipe.sh ${PREFIX}/bin
