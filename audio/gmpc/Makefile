@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/gmpc/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/gmpc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmpc
 PORTVERSION=	11.8.16
@@ -22,6 +22,7 @@ LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd \
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 gtk20 libglade2
+NO_STAGE=	yes
 INSTALLS_ICONS=	yes
 USES=		gettext gmake pathfix pkgconfig
 CONFIGURE_ARGS=	--enable-system-libsexy
