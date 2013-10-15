@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: databases/p5-Prophet/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Prophet/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Prophet
 PORTVERSION=	0.751
@@ -138,4 +137,5 @@ MAN3=	Prophet.3 \
 	Prophet::Web::Menu.3 \
 	Prophet::Web::Result.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
