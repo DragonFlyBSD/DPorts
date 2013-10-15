@@ -1,9 +1,5 @@
-# New ports collection makefile for:	root-doc
-# Date created:		23 Apr 2004
-# Whom:			Radim Kolar
-#
-# $FreeBSD: ports/devel/root-doc/Makefile,v 1.4 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: Radim Kolar
+# $FreeBSD: devel/root-doc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	root-doc
 PORTVERSION=	5.02
@@ -23,6 +19,7 @@ IGNOREFILES=	${DISTFILES}
 IGNORE=		This package contains only documentation
 .endif
 
+NO_STAGE=	yes
 pre-install:
 	cd ${WRKSRC} && ${FIND} . \( -type f -or -type l \) -exec ${ECHO_CMD} "%%DOCSDIR%%/{}" \; > ${PLIST}
 	cd ${WRKSRC} && ${FIND} -d . -mindepth 1 -type d -exec ${ECHO_CMD} "@dirrm %%DOCSDIR%%/{}" \; >> ${PLIST}
