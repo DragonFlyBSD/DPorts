@@ -1,5 +1,5 @@
 # Created by: A. Gabriel <backslash@BSDCode.org>
-# $FreeBSD: irc/darkbot/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: irc/darkbot/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	darkbot
 PORTVERSION=	6f6.r6
@@ -20,6 +20,7 @@ MANCOMPRESSED=	yes
 PORTDOCS=	README
 PLIST_FILES=	bin/darkbot %%ETCDIR%%/logs/.pkgcreate
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
