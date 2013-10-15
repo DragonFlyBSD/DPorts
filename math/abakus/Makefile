@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: math/abakus/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/abakus/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	abakus
 PORTVERSION=	0.92
@@ -24,4 +24,5 @@ CMAKE_ARGS=	-DCMAKE_REQUIRED_INCLUDES:STRING="${LOCALBASE}/include" \
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
