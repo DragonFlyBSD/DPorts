@@ -1,5 +1,5 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
-# $FreeBSD: ports/databases/powerarchitect/Makefile,v 1.7 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/powerarchitect/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	powerarchitect
 PORTVERSION=	1.0.6
@@ -25,6 +25,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 WRKSRC=		${WRKDIR}/architect-${PORTVERSION}
 SUB_FILES=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MORACLE_JDBC}

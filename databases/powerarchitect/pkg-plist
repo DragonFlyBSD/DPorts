@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/powerarchitect/pkg-plist,v 1.4 2012/11/17 05:55:21 svnexp Exp $
+@comment $FreeBSD: databases/powerarchitect/pkg-plist 300962 2012-07-16 17:41:53Z jgh $
 bin/powerarchitect
 %%DATADIR%%/architect.jar
 %%DATADIR%%/jdbc/sqlserver_2005.jar
