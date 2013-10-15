@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Inherited/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-Data-Inherited/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Inherited
 PORTVERSION=	1.100860
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::Inherited.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
