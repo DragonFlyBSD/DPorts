@@ -1,5 +1,5 @@
 # Created by: Herbert J. Skuhra <h.skuhra@gmail.com>
-# $FreeBSD: audio/mixmos/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: audio/mixmos/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mixmos
 PORTVERSION=	0.2.0
@@ -11,6 +11,7 @@ MAINTAINER=	h.skuhra@gmail.com
 COMMENT=	A GTK2 audio mixer
 
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
