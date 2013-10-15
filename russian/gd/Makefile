@@ -1,4 +1,4 @@
-# $FreeBSD: ports/russian/gd/Makefile,v 1.19 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: russian/gd/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 MASTERDIR=	${.CURDIR}/../../graphics/gd
 CATEGORIES=	russian
