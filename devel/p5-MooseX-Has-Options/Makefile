@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Has-Options/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Has-Options/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Has-Options
 PORTVERSION=	0.003
@@ -28,4 +28,5 @@ MAN3=	MooseX::Has::Options.3 \
 	MooseX::Has::Options::Handler::NativeTypes.3 \
 	MooseX::Has::Options::Handler::NoInit.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
