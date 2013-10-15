@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: www/zenphoto/Makefile 322604 2013-07-10 03:35:29Z sunpoet $
+# $FreeBSD: www/zenphoto/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	zenphoto
 PORTVERSION=	1.4.5
@@ -23,6 +23,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message pkg-deinstall
 SUB_LIST=	PORTNAME=${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} ${WRKSRC}/doc_files/Zenphoto\ license.txt ${WRKSRC}/doc_files/README.html ${WRKSRC}/zp-core/Zenphoto.package
 
