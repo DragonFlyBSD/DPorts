@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: print/trueprint/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: print/trueprint/Makefile 328888 2013-09-30 22:44:26Z danilo $
 
 PORTNAME=	trueprint
 PORTVERSION=	5.4
@@ -7,17 +7,15 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	trueprint
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Print program listings on postscript printer
 
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
-MAN1=		trueprint.1
 INFO=		trueprint
 
-PLIST_FILES=	bin/trueprint
+PLIST_FILES=	bin/trueprint man/man1/trueprint.1.gz
 
 .include <bsd.port.mk>
