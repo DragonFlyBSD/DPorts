@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: mail/perdition/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: mail/perdition/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	perdition
 PORTVERSION=	1.18
@@ -44,6 +44,7 @@ DAEMON_MAP_DESC=	Daemon Map support
 GDBM_DESC=		GDBM database
 POSIX_REGEX_DESC=	Native regex support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
