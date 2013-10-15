@@ -1,5 +1,5 @@
 # Created by: Hammurabi Mendes <hmendes@brturbo.com>
-# $FreeBSD: security/proxytunnel/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: security/proxytunnel/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	proxytunnel
 PORTVERSION=	1.9.0
@@ -17,6 +17,7 @@ ALL_TARGET=	${PORTNAME}
 MAN1=		proxytunnel.1
 PLIST_FILES=	bin/proxytunnel
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
