@@ -1,5 +1,5 @@
 # Created by: mek
-# $FreeBSD: games/pvpgn/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/pvpgn/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pvpgn
 PORTVERSION=	1.8.5
@@ -47,6 +47,7 @@ D2_DESC=	Diablo II server (D2CS/D2DBS)
 
 OPTIONS_DEFAULT=	D2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
