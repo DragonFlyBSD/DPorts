@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-hasktags/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-hasktags/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hasktags
 PORTVERSION=	0.68.2
@@ -14,5 +14,6 @@ EXECUTABLE=	hasktags
 
 STANDALONE=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
