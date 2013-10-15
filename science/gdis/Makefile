@@ -1,5 +1,4 @@
-# Created y: ijliao
-# $FreeBSD: science/gdis/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: science/gdis/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	gdis
 PORTVERSION=	0.90
@@ -20,6 +19,7 @@ USE_GL=		glu
 USE_GNOME=	gtk20
 USES=		gmake pkgconfig
 MAKEFILE=	GNUmakefile
+LDFLAGS+=	-lm
 
 PORTDOCS=	CHANGELOG README TODO
 PLIST_FILES=	bin/gdis %%DATADIR%%/gdis.elements %%DATADIR%%/gdis.library \
@@ -29,6 +29,7 @@ PLIST_DIRS=	%%DATADIR%%
 DESKTOP_ENTRIES="GDIS" "Molecular modelling GUI" \
 		"${PREFIX}/share/pixmaps/gdis.xpm" "${PORTNAME}" "" true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
