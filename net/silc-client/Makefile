@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net/silc-client/Makefile 327343 2013-09-15 14:54:36Z az $
+# $FreeBSD: net/silc-client/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	silc
 PORTVERSION=	1.1.8
@@ -57,6 +57,7 @@ EXTRA_PATCHES += \
 MAN1=		silc.1
 .endif
 
+NO_STAGE=	yes
 post-patch:
 # install neither documentation nor silc server, we have ports for those
 	@${REINPLACE_CMD} -e 's/-D_THREAD_SAFE//' ${WRKSRC}/${CONFIGURE_SCRIPT}
