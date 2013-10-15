@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/astro/gpsprune/files/gpsprune.sh.in,v 1.1 2012/12/03 23:25:50 svnexp Exp $
+# $FreeBSD: astro/gpsprune/files/gpsprune.sh.in 308179 2012-12-03 23:20:38Z amdmi3 $
 
 JAVA="%%LOCALBASE%%/bin/java"
 JARPATH="%%JAVALIBDIR%%"

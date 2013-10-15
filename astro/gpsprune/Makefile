@@ -1,8 +1,8 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/astro/gpsprune/Makefile,v 1.2 2012/12/10 11:29:52 svnexp Exp $
+# $FreeBSD: astro/gpsprune/Makefile 328586 2013-09-28 15:37:25Z amdmi3 $
 
 PORTNAME=	gpsprune
-PORTVERSION=	14
+PORTVERSION=	15.1
 CATEGORIES=	astro java
 MASTER_SITES=	http://activityworkshop.net/software/${PORTNAME}/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -34,8 +34,8 @@ RUN_DEPENDS+=	java3d>=1.5.2:${PORTSDIR}/java/java3d
 .endif
 
 do-install:
-	${MKDIR} ${JAVAJARDIR}/
-	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${JAVAJARDIR}/
-	${INSTALL_SCRIPT} ${WRKDIR}/gpsprune.sh ${PREFIX}/bin/gpsprune
+	${MKDIR} ${STAGEDIR}${JAVAJARDIR}/
+	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${STAGEDIR}${JAVAJARDIR}/
+	${INSTALL_SCRIPT} ${WRKDIR}/gpsprune.sh ${STAGEDIR}${PREFIX}/bin/gpsprune
 
 .include <bsd.port.mk>
