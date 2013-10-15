@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-guard/Makefile 327484 2013-09-17 16:28:08Z sunpoet $
+# $FreeBSD: sysutils/rubygem-guard/Makefile 330144 2013-10-12 16:40:09Z sunpoet $
 
 PORTNAME=	guard
-PORTVERSION=	1.8.3
+PORTVERSION=	2.0.5
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
@@ -12,11 +12,12 @@ COMMENT=	Command line tool to easily handle events on file system modifications
 LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-formatador>=0.2.4:${PORTSDIR}/devel/rubygem-formatador \
-		rubygem-listen>=1.3:${PORTSDIR}/devel/rubygem-listen \
-		rubygem-lumberjack>=1.0.2:${PORTSDIR}/devel/rubygem-lumberjack \
-		rubygem-pry>=0.9.10:${PORTSDIR}/devel/rubygem-pry \
-		rubygem-thor>=0.14.6:${PORTSDIR}/devel/rubygem-thor
+		rubygem-listen>=2:${PORTSDIR}/devel/rubygem-listen \
+		rubygem-lumberjack>=1:${PORTSDIR}/devel/rubygem-lumberjack \
+		rubygem-pry>=0.9.12:${PORTSDIR}/devel/rubygem-pry \
+		rubygem-thor>=0.18.1:${PORTSDIR}/devel/rubygem-thor
 
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
