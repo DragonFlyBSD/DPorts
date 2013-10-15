@@ -1,5 +1,5 @@
 # Created by: Dmitry Shulgachik <legh@legh.ru>
-# $FreeBSD: sysutils/jx/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/jx/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	jx
 PORTVERSION=	1.23
@@ -9,8 +9,9 @@ MASTER_SITES=	http://legh.ru/wp-content/uploads/jx/
 MAINTAINER=	legh@legh.ru
 COMMENT=	Wrapper to jexec with more feature in interpreting jail id
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 PLIST_FILES=	bin/${PORTNAME}
 
@@ -20,6 +21,7 @@ MANCOMPRESSED=	yes
 OPTIONS_DEFINE=	CONFIG
 CONFIG_DESC=	Enable custom config (recuire Config::General)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCONFIG}
