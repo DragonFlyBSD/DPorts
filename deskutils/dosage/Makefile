@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: deskutils/dosage/Makefile 327185 2013-09-13 21:25:56Z antoine $
+# $FreeBSD: deskutils/dosage/Makefile 328620 2013-09-28 18:54:58Z antoine $
 
 PORTNAME=	dosage
 PORTVERSION=	2.5
@@ -16,16 +16,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=Dosage
-
-MAN1=		dosage.1
+PYTHON_PY3K_PLIST_HACK=yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/man/man1|man/man1|' ${WRKSRC}/setup.py
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
