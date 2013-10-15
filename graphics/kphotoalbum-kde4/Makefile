@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: graphics/kphotoalbum-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/kphotoalbum-kde4/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kphotoalbum
 PORTVERSION=	4.4
@@ -27,6 +27,7 @@ OPTIONS_DEFAULT=MARBLE
 
 MARBLE_DESC=	Geolocation support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMARBLE}
