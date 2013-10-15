@@ -1,9 +1,5 @@
-# New ports collection makefile for: openastromenace
-# Date created:		23 Sep 2007
-# Whom:			Oleg Alexeenkov
-#
-# $FreeBSD: games/openastromenace/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Oleg Alexeenkov
+# $FreeBSD: games/openastromenace/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	openastromenace
 PORTVERSION=	1.2.0
@@ -39,6 +35,7 @@ EN_DESC=	"English language pack"
 DE_DESC=	"German language pack"
 RU_DESC=	"Russian language pack"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MEN}
