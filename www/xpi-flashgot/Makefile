@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-flashgot
-# Date created:		19 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-flashgot/Makefile,v 1.33 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-flashgot/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	flashgot
 PORTVERSION=	1.3.7
@@ -16,5 +12,6 @@ COMMENT=	Download links using popular download managers
 XPI_ID=		{19503e42-ca3c-4c27-b1e2-9cdb2170ee34}
 XPI_NUM=	220
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
