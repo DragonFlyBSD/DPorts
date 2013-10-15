@@ -1,9 +1,8 @@
 # Created by: Dmitriy Limonov
-# $FreeBSD: net-p2p/ncdc/Makefile 321197 2013-06-18 15:48:06Z wg $
+# $FreeBSD: net-p2p/ncdc/Makefile 329317 2013-10-04 14:41:19Z danilo $
 
 PORTNAME=	ncdc
-PORTVERSION=	1.17
-PORTREVISION=	1
+PORTVERSION=	1.18
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF \
 		http://dev.yorhel.nl/download/
@@ -14,20 +13,19 @@ COMMENT=	Lightweight direct connect client with ncurses interface
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3 \
-		pcre:${PORTSDIR}/devel/pcre \
-		gmp:${PORTSDIR}/math/gmp \
-		gnutls:${PORTSDIR}/security/gnutls \
-		gcrypt:${PORTSDIR}/security/libgcrypt \
-		nettle:${PORTSDIR}/security/nettle \
-		p11-kit:${PORTSDIR}/security/p11-kit
+LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3 \
+		libpcre.so:${PORTSDIR}/devel/pcre \
+		libgmp.so:${PORTSDIR}/math/gmp \
+		libgnutls.so:${PORTSDIR}/security/gnutls \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libnettle.so:${PORTSDIR}/security/nettle \
+		libp11-kit.so:${PORTSDIR}/security/p11-kit
 
-USES=		pkgconfig ncurses
+USES=		gmake pkgconfig ncurses
 USE_GNOME=	glib20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAN1=		ncdc.1
-PLIST_FILES=	bin/ncdc
+PLIST_FILES=	bin/ncdc \
+		man/man1/ncdc.1.gz
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
