@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: textproc/words/Makefile 323752 2013-07-26 20:49:31Z marino $
+# $FreeBSD: textproc/words/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	words
 PORTVERSION=	1.97F
@@ -18,6 +18,7 @@ GNATMAKE=	env ${MAKE_ENV} gnatmake
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
