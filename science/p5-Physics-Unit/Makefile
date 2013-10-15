@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: science/p5-Physics-Unit/Makefile 326873 2013-09-10 08:26:53Z az $
+# $FreeBSD: science/p5-Physics-Unit/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Physics-Unit
 PORTVERSION=	0.53
@@ -24,6 +24,7 @@ MAN3=		Physics::Unit.3 \
 		Physics::Unit::UnitsByName.3 \
 		Physics::Unit::UnitsByType.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	${MKDIR} ${EXAMPLESDIR}
