@@ -1,5 +1,5 @@
 # Created by: Chao Shin <quakelee@cn.freebsd.org>
-# $FreeBSD: benchmarks/mdtest/Makefile 318592 2013-05-20 10:43:12Z bsam $
+# $FreeBSD: benchmarks/mdtest/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	mdtest
 PORTVERSION=	1.9.1
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 CFLAGS+=	-DDarwin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENMPI}
