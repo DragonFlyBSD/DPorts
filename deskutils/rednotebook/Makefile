@@ -1,5 +1,5 @@
 # Created by: Hon-Yu Lawrence Cheung (cheunghonyu@gmail.com)
-# $FreeBSD: deskutils/rednotebook/Makefile 322027 2013-06-29 07:07:07Z ak $
+# $FreeBSD: deskutils/rednotebook/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	rednotebook
 PORTVERSION=	1.7.2
@@ -25,4 +25,5 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
