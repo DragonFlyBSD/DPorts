@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 326714 2013-09-08 08:59:54Z delphij $
+# $FreeBSD: net/openldap24-server/Makefile 329102 2013-10-02 19:51:11Z delphij $
 
 PORTNAME=		openldap
 DISTVERSION=		2.4.36
@@ -56,7 +56,7 @@ BROKEN=			incompatible OpenLDAP version: ${WANT_OPENLDAP_VER}
 .endif
 
 PORTREVISION_CLIENT=	0
-PORTREVISION_SERVER=	1
+PORTREVISION_SERVER=	2
 OPENLDAP_SHLIB_MAJOR=	8
 
 OPTIONS_DEFINE=	FETCH
@@ -124,6 +124,7 @@ OPENLDAP_PKGFILESUFX=
 
 CONFIGURE_SED=		-e 's,-kthread,${PTHREAD_LIBS},g' -e 's,uuid/uuid.h,xxuuid/uuid.h,g'
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(CLIENT_ONLY)
@@ -392,7 +393,7 @@ PLIST_SUB+=		BACK_SOCK="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=		yes
+USES+=			perl5
 CONFIGURE_ARGS+=	--enable-perl=${BACKEND_ENABLE}
 CONFIGURE_ENV+=		PERLBIN="${PERL}"
 PLIST_SUB+=		BACK_PERL=${BACKEND_PLIST}
