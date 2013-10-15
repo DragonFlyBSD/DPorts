@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11-wm/swm/Makefile,v 1.26 2013/01/27 06:41:43 svnexp Exp $
+# $FreeBSD: x11-wm/swm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	swm
 PORTVERSION=	1.3.4c
@@ -34,6 +34,7 @@ SCRIPTS=	startswm
 DATA=		background.xpm closebox.xpm maxbox.xpm stickybox.xpm \
 		swm.colors unstickybox.xpm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|monotype|fixed|g ; \
 		 s|/usr/share/swm|${DATADIR}|g' ${WRKSRC}/swm.conf
