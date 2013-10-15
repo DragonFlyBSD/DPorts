@@ -1,5 +1,5 @@
 # Created by: alanp@unixpower.org
-# $FreeBSD: deskutils/logjam/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: deskutils/logjam/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	logjam
 PORTVERSION=	4.6.2
@@ -44,6 +44,7 @@ PLIST_SUB+=		WITH_XMMS="@comment "
 CONFIGURE_ARGS+=	--without-xmms
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgtkhtml3}!=""
