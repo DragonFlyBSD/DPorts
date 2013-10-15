@@ -1,5 +1,5 @@
-# Created by: Joseph Koshy <jkoshy@freebsd.org>
-# $FreeBSD: math/ocaml-ocamlgraph/Makefile 320883 2013-06-14 05:12:34Z johans $
+# Created by: Joseph Koshy <jkoshy@FreeBSD.org>
+# $FreeBSD: math/ocaml-ocamlgraph/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ocamlgraph
 PORTVERSION=	1.8.3
@@ -31,6 +31,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 PORTSCOUT=	skipv:1.81
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
