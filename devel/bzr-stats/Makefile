@@ -1,9 +1,5 @@
-# Ports collection makefile for:	bzr-stats
-# Date created:				2011-02-27
-# Whom:					Carlo Strub
-#
-# $FreeBSD: ports/devel/bzr-stats/Makefile,v 1.4 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Carlo Strub
+# $FreeBSD: devel/bzr-stats/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-stats
 PORTVERSION=	0.1.0
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpadlibrarian.net/65203347/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple statistics plugin for bzr
 
 BUILD_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
@@ -26,4 +22,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr_stats
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
