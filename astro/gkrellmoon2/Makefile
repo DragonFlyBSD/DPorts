@@ -1,5 +1,5 @@
 # Created by: Jan Srzednicki <w@wrzask.pl>
-# $FreeBSD: astro/gkrellmoon2/Makefile 326705 2013-09-08 08:12:26Z antoine $
+# $FreeBSD: astro/gkrellmoon2/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	gkrellmoon2
 PORTVERSION=	0.6
@@ -14,6 +14,7 @@ COMMENT=	A moon clock plugin for Gkrellm2
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
+NO_STAGE=	yes
 USES=		pkgconfig
 USE_GNOME=	gtk20
 
