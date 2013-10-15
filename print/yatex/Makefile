@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: print/yatex/Makefile 318638 2013-05-21 03:33:12Z hrs $
+# $FreeBSD: print/yatex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	yatex
 PORTVERSION=	1.77
@@ -32,6 +32,7 @@ ELFILES=	comment.el yatex.el yatexadd.el yatexgen.el \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
