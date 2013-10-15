@@ -1,5 +1,5 @@
 # Created by: Vsevolod Lobko <seva@sevasoft.kiev.ua>
-# $FreeBSD: ports/mail/py-milter/Makefile,v 1.19 2013/02/13 06:44:05 svnexp Exp $
+# $FreeBSD: mail/py-milter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	milter
 PORTVERSION=	0.9.7
@@ -25,4 +25,5 @@ USE_PYTHON=	2.6-2.9
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	${PYPORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
