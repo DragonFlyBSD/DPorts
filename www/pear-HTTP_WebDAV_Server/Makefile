@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: www/pear-HTTP_WebDAV_Server/Makefile 314214 2013-03-15 01:28:32Z miwi $
+# $FreeBSD: www/pear-HTTP_WebDAV_Server/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP_WebDAV_Server
 PORTVERSION=	1.0.0.r4
@@ -11,6 +11,7 @@ COMMENT=	WebDAV Server Baseclass
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
