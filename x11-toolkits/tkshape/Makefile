@@ -1,5 +1,5 @@
 # Created by: nivit@users.sourceforge.net
-# $FreeBSD: x11-toolkits/tkshape/Makefile 318234 2013-05-15 09:44:44Z gahr $
+# $FreeBSD: x11-toolkits/tkshape/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=		tkshape
 PORTVERSION=		0.4
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 MANPAGES_DESC=	Install manual pages
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
