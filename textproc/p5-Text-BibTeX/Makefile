@@ -1,5 +1,5 @@
 # Created by: David Bremner <bremner@unb.ca>
-# $FreeBSD: textproc/p5-Text-BibTeX/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-BibTeX/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-BibTeX
 PORTVERSION=	0.66
@@ -38,6 +38,7 @@ MAN3=		Text::BibTeX.3 \
 		Text::BibTeX::Structure.3 \
 		Text::BibTeX::Value.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
