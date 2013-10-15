@@ -1,5 +1,5 @@
 # Created by: cy
-# $FreeBSD: graphics/qxv/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: graphics/qxv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	qxv
 PORTVERSION=	0.2
@@ -33,6 +33,7 @@ HAS_CONFIGURE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 	${QMAKE} PREFIX=${PREFIX} ${PORTNAME}.pro
