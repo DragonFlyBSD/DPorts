@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-YAML-Shell/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-YAML-Shell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	YAML-Shell
 PORTVERSION=	0.60
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN1=		ysh.1
 MAN3=		YAML::Shell.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
