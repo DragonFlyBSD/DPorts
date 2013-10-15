@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-cli/Makefile 327184 2013-09-13 20:53:52Z marino $
+# $FreeBSD: net-p2p/transmission-cli/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	transmission
 PORTVERSION=	2.82
@@ -25,6 +25,7 @@ CONFLICTS_INSTALL=	${PORTNAME}${PKGNAMESUFFIX}-2.5*
 
 OPTIONS_DEFINE=	LITE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${SLAVEPORT} != web
