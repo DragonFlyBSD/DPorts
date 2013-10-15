@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-bitvector
-# Date created:		2006-12-27
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/math/py-bitvector/Makefile,v 1.7 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: math/py-bitvector/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	bitvector
 PORTVERSION=	3.1
@@ -27,6 +23,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/BitVector.py \
 		%%PYTHON_SITELIBDIR%%/BitVector.pyc \
 		%%PYTHON_SITELIBDIR%%/BitVector.pyo
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/test.py
 
