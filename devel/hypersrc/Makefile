@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/hypersrc/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: devel/hypersrc/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hypersrc
 PORTVERSION=	5.4.21
@@ -25,6 +25,7 @@ SHEBANG_FILES=	Hypersrc.pl
 MAN1=		hypersrc.1
 PLIST_FILES=	bin/hypersrc bin/Hypersrc.pl bin/ctags.pl
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|"ctags"|"${LOCALBASE}/bin/exctags"|' \
 		-e 's|"ctags.pl"|"${PREFIX}/bin/ctags.pl"|' ${WRKSRC}/Hypersrc.pl
