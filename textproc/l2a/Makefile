@@ -1,9 +1,5 @@
-# New ports collection makefile for:	l2a
-# Date created:				05 February 2003
-# Whom:					James Flemer <jflemer@alum.rpi.edu>
-#
-# $FreeBSD: ports/textproc/l2a/Makefile,v 1.4 2012/11/17 06:02:01 svnexp Exp $
-#
+# Created by: James Flemer <jflemer@alum.rpi.edu>
+# $FreeBSD: textproc/l2a/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	l2a
 PORTVERSION=	1.2
@@ -22,4 +18,5 @@ MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" INSTALL_MAN="${INSTALL_MAN}"
 MAN1=		l2a.1
 PLIST_FILES=	bin/l2a
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
