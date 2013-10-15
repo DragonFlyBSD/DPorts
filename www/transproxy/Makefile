@@ -1,9 +1,5 @@
-# New ports collection makefile for:	transproxy
-# Date created:			Fri Mar 27 21:24:13 WST 1998
-# Whom:				Peter Wemm <peter@netplex.com.au>
-#
-# $FreeBSD: ports/www/transproxy/Makefile,v 1.20 2012/11/17 06:03:09 svnexp Exp $
-#
+# Created by: Peter Wemm <peter@netplex.com.au>
+# $FreeBSD: www/transproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	transproxy
 PORTVERSION=	1.6
@@ -21,4 +17,5 @@ MAN8=		tproxy.8
 
 PLIST_FILES=	sbin/tproxy sbin/tproxyrun sbin/tproxywatch
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
