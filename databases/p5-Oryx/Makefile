@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-Oryx/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Oryx/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Oryx
 PORTVERSION=	0.24
@@ -44,4 +44,5 @@ MAN3=	Oryx.3 Oryx::Association.3 Oryx::Association::Array.3 Oryx::Attribute.3 \
 	Oryx::DBM::Association.3 Oryx::DBM::Class.3 Oryx::DBI::Parent.3 \
 	Oryx::Association::Reference.3 Oryx::DBM::Util.3 Oryx::Value::Text.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
