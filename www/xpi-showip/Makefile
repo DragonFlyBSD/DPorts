@@ -1,5 +1,5 @@
 # Created by: Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: www/xpi-showip/Makefile 314381 2013-03-16 18:37:12Z bar $
+# $FreeBSD: www/xpi-showip/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	showip
 PORTVERSION=	2.0
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 XPI_NUM=	590
 XPI_ID=		{3e9bb2a7-62ca-4efa-a4e6-f6f6168a652d}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<em:maxVersion>14\.\*<|<em:maxVersion>99.*<|; \
 		s|<em:maxVersion>2\.11\.\*<|<em:maxVersion>99.99.*<|' \
