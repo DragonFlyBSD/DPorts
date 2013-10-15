@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-fonts/fntsample/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-fonts/fntsample/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME?=	fntsample
 PORTVERSION=	3.2
@@ -40,6 +40,7 @@ USES+=		gettext
 PLIST_FILES=	bin/${PORTNAME} share/locale/uk/LC_MESSAGES/${PORTNAME}.mo
 .endif
 
+NO_STAGE=	yes
 post-extract:
 .if !defined(PDFOUTLINE)
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/Blocks.txt ${WRKSRC}
