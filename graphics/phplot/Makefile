@@ -1,5 +1,5 @@
 # Created by: yukinopo@livedoor.com
-# $FreeBSD: graphics/phplot/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/phplot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	phplot
 PORTVERSION=	6.1.0
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=		FONTS
 OPTIONS_DEFAULT=	FONTS
 FONTS_DESC=		install TrueType fonts
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFONTS}
