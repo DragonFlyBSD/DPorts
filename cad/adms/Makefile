@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/adms/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: cad/adms/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	adms
 PORTVERSION=	2.3.0
@@ -21,4 +21,5 @@ USE_LDCONFIG=	yes
 
 MAN1=		admsXml.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
