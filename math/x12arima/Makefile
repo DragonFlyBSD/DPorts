@@ -1,8 +1,5 @@
-# New ports collection makefile for: 	x12arima
-# Date created:				22 June 2010
-# Whom:					jh@jameshoward.us
-#
-# $FreeBSD: ports/math/x12arima/Makefile,v 1.2 2012/11/17 05:59:32 svnexp Exp $
+# Created by: jh@jameshoward.us
+# $FreeBSD: math/x12arima/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	x12arima
 PORTVERSION=	0.3
@@ -17,6 +14,7 @@ COMMENT=	X-12-ARIMA seasonal adjustment program
 USE_FORTRAN=	yes
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile.lnx
+NO_STAGE=	yes
 
 PLIST_FILES=	bin/x12a
 
