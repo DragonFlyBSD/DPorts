@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-django-evolution/Makefile 313467 2013-03-05 18:09:08Z lwhsu $
+# $FreeBSD: www/py-django-evolution/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-evolution
 PORTVERSION=	0.6.8
@@ -19,4 +19,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.1.1<1.5:${PORTSDIR}/www/py-django1
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
