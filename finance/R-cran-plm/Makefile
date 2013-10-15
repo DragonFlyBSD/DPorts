@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-plm/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: finance/R-cran-plm/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	plm
 DISTVERSION=	1.3-1
@@ -21,4 +21,5 @@ RUN_DEPENDS=	R-cran-bdsmatrix>0:${PORTSDIR}/math/R-cran-bdsmatrix \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
