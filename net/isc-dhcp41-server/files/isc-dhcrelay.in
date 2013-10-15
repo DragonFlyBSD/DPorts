@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: ports/net/isc-dhcp41-server/files/isc-dhcrelay.in,v 1.6 2012/11/17 06:00:03 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/net/isc-dhcp41-server/files/isc-dhcrelay.in,v 1.5 2012-04-18 17:55:19 zi Exp $
 #
 # PROVIDE: dhcrelay
 # REQUIRE: DAEMON

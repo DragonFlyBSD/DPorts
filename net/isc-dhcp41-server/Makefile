@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/isc-dhcp41-server/Makefile,v 1.33 2012/12/12 18:51:46 svnexp Exp $
+# $FreeBSD: net/isc-dhcp41-server/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dhcp
 DISTVERSION=	4.1-ESV
@@ -58,6 +58,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-D_PATH_DHCLIENT_SCRIPT='\"${PREFIX}/sbin/dhclient-script\"' -D_PATH_DHCLIENT_CONF='\"${PREFIX}/etc/dhclient.conf\"' -D_PATH_DHCPD_CONF='\"${PREFIX}/etc/dhcpd.conf\"'
 SCRIPTS_ENV+=	PKG_PREFIX=${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${SUBSYS} == client
@@ -110,7 +111,8 @@ PLIST_SUB+=		SCHEMA_DIR="${SCHEMA_DIR:S,^${PREFIX}/,,}" LDAP=""
 PORTDOCS+=		README.ldap LICENSE.ldap
 LDAP_SCRIPT=		${WRKDIR}/${LDAPPATCHDIST}/dhcpd-conf-to-ldap
 LDAP_SCHEMA=		${WRKDIR}/${LDAPPATCHDIST}/dhcp.schema
-USE_PERL5_RUN=		yes
+USES+=			perl5
+USE_PERL5=		run
 USE_OPENLDAP=		yes
 USE_AUTOTOOLS=		aclocal libtoolize autoconf autoheader automake
 LIBTOOLIZE_ARG=		--copy --force
