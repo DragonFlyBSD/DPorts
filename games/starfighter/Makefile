@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/starfighter/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/starfighter/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	starfighter
 PORTVERSION=	1.2
@@ -29,6 +29,7 @@ INSTALLS_ICONS=	yes
 DESKTOP_ENTRIES="Project Starfighter" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
