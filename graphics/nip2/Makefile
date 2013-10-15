@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/nip2/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/nip2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	nip2
 PORTVERSION=	7.26.3
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 # This port has no man-pages. It installs a number of HTML files,
 # which are available through the GUI's Help. For this reason, they
 # are always installed, regardless of the NOPORTDOCS setting.
+NO_STAGE=	yes
 # The PDF version of the documentation is another story:
 .if defined(NOPORTDOCS)
 EXTRACT_AFTER_ARGS=	--exclude nipguide --exclude pdf
