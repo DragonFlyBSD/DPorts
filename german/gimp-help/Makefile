@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gimp-help
-# Date created:		10th April 2010
-# Whom:			SimaMoto,RyoTa <liangtai.s4@gmail.com>
-#
-# $FreeBSD: ports/german/gimp-help/Makefile,v 1.3 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
+# $FreeBSD: german/gimp-help/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 CATEGORIES=	german graphics
 
@@ -15,4 +11,5 @@ MASTERDIR=	${.CURDIR}/../../misc/gimp-help-en
 DOCLANG=	de
 AMPLE=	"@comment "
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
