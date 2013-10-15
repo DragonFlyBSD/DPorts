@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-mocha/Makefile 323413 2013-07-21 19:08:39Z swills $
+# $FreeBSD: devel/rubygem-mocha/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	mocha
 PORTVERSION=	0.14.0
@@ -16,4 +16,5 @@ USE_RAKE=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
