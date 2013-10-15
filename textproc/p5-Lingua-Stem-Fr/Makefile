@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua-Stem-Fr
-# Date created:				Jul 25 2004
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: textproc/p5-Lingua-Stem-Fr/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: textproc/p5-Lingua-Stem-Fr/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		Lingua-Stem-Fr
 PORTVERSION=		0.02
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Lingua::Stem::Fr.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
