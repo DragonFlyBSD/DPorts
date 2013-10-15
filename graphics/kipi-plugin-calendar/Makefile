@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kipi-plugin-calendar/Makefile 315762 2013-04-08 17:10:56Z makc $
+# $FreeBSD: graphics/kipi-plugin-calendar/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kipi-plugin-${KIPI_PLUGIN}
 PORTVERSION=	${DIGIKAM_VER}
@@ -10,5 +10,6 @@ COMMENT=	${${KIPI_PLUGIN}_DESC}
 USE_KDE4=	pimlibs
 
 KIPI_PLUGIN=	calendar
+NO_STAGE=	yes
 .include "${.CURDIR}/../digikam-kde4/Makefile.common"
 .include <bsd.port.mk>
