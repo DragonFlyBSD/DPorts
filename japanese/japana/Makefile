@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: japanese/japana/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/japana/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	japana
 PORTVERSION=	2.0.6
@@ -17,6 +17,7 @@ USES=		perl5
 MAN1=	${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME} etc/${PORTNAME}.conf.default
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' ${WRKSRC}/${PORTNAME}* ${WRKSRC}/default.conf
 
