@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/misc/tkcron/files/Makefile,v 1.9 2012/11/17 05:59:45 svnexp Exp $
+# $FreeBSD: misc/tkcron/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 BINDIR=		${PREFIX}/bin
