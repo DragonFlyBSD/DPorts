@@ -1,9 +1,5 @@
-# New ports collection makefile for: relay-ctrl
-# Date created:		2003-12-05
-# Whom:			Fumihiko Kimura <jfkimura@yahoo.co.jp>
-#
-# $FreeBSD: mail/relay-ctrl/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Fumihiko Kimura <jfkimura@yahoo.co.jp>
+# $FreeBSD: mail/relay-ctrl/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	relay-ctrl
 PORTVERSION=	3.1.1
@@ -29,6 +25,7 @@ PKGDEINSTALL=	${PKGINSTALL}
 SUB_FILES=	pkg-message pkg-install
 SUB_LIST=	EXPIRY=${RELAY_CTRL_EXPIRY} FIXUP=${RELAY_CTRL_RELAYCLIENT}
 
+NO_STAGE=	yes
 do-configure:
 	${ECHO_CMD} "${CC} ${CFLAGS}"		> ${WRKSRC}/conf-cc
 	${ECHO_CMD} "${CC} ${STRIP} ${LDGFLAGS} "	> ${WRKSRC}/conf-ld
