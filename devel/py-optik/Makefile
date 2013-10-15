@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	py-optik
-# Date created:			Nov 13, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-optik/Makefile,v 1.23 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-optik/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	optik
 PORTVERSION=	1.5.3
@@ -17,6 +12,7 @@ COMMENT=	A command-line parsing library for Python
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
