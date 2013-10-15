@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: sysutils/colorize/Makefile 327086 2013-09-12 16:11:43Z az $
+# $FreeBSD: sysutils/colorize/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	colorize
 PORTVERSION=	0.3.4
@@ -23,6 +23,7 @@ SHEBANG_FILES=	colorize
 MAN1=		colorize.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|/etc/colorizerc|${PREFIX}/etc/colorizerc|' \
 		${WRKSRC}/colorize
