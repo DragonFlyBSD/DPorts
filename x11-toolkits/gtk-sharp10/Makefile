@@ -1,6 +1,5 @@
 # Created by: Juli Mallett
-# $FreeBSD: x11-toolkits/gtk-sharp10/Makefile 326137 2013-09-03 12:13:23Z bapt $
-#   $Id: Makefile,v 1.13 2006/10/08 01:57:16 killfill Exp $
+# $FreeBSD: x11-toolkits/gtk-sharp10/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtk-sharp
 PORTVERSION=	1.0.10
@@ -24,6 +23,7 @@ USE_GNOME=	gnomehack gtkhtml3 vte librsvg2 libgnomecanvas \
 
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^#!/usr/bin/perl|#!${PERL}|'
