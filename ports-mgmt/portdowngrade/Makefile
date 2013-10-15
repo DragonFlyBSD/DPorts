@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: ports-mgmt/portdowngrade/Makefile 319411 2013-05-30 10:22:43Z crees $
+# $FreeBSD: ports-mgmt/portdowngrade/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	portdowngrade
 PORTVERSION=	1.4
@@ -15,6 +15,7 @@ RUN_DEPENDS=	svn:${PORTSDIR}/devel/subversion
 NO_BUILD=	yes
 PLIST_FILES=	sbin/portdowngrade
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME} ${PREFIX}/sbin/
 
