@@ -1,5 +1,5 @@
 # Created by: wolpert
-# $FreeBSD: ports/mail/rbl-milter/Makefile,v 1.11 2013/01/26 16:56:11 svnexp Exp $
+# $FreeBSD: mail/rbl-milter/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	rbl-milter
 PORTVERSION=	0.30
@@ -9,6 +9,8 @@ MASTER_SITES=	http://opensource.confusticate.com/rbl-milter/
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	A milter that adds mail header warnings on mail from open-relays
+
+NO_STAGE=	yes
 
 USE_RC_SUBR=	rblmilter
 GNU_CONFIGURE=	yes
