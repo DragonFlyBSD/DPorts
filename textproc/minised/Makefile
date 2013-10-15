@@ -1,23 +1,22 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/textproc/minised/Makefile,v 1.10 2013/02/16 23:44:06 svnexp Exp $
+# $FreeBSD: textproc/minised/Makefile 328890 2013-09-30 22:47:07Z danilo $
 
 PORTNAME=	minised
 PORTVERSION=	1.14
 CATEGORIES=	textproc
 MASTER_SITES=	http://dl.exactcode.de/oss/minised/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Smaller, cheaper, faster sed implementation
 
 ALL_TARGET=	${PORTNAME}
-PLIST_FILES=	bin/${PORTNAME}
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} man/man1/minised.1.gz
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O1||' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
 
 .include <bsd.port.mk>
