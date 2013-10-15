@@ -1,5 +1,5 @@
 # Created by: Anton Yudin (<contact@toha.org.ua>)
-# $FreeBSD: ports/databases/exist/Makefile,v 1.5 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/exist/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	exist
 PORTVERSION=	1.1.1
@@ -28,6 +28,7 @@ SUB_LIST=	JAVA="${JAVA}" \
 		EXIST_USER=${EXIST_USER} \
 		EXIST_GROUP=${EXIST_GROUP}
 
+NO_STAGE=	yes
 do-install:
 	@${JAVA} -Djava.awt.headless=true -jar ${DISTDIR}/${DISTFILES} \
 		-p ${DATADIR}
