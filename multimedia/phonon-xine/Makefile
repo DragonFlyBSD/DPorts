@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon-xine/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: multimedia/phonon-xine/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	phonon
 PORTVERSION=	4.4.4
@@ -27,6 +27,7 @@ USE_QT4=	gui dbus xml phonon \
 
 PLIST_SUB+=	QT_PREFIX=${QT_PREFIX}
 
+NO_STAGE=	yes
 pre-su-install:
 	${MKDIR} ${QT_PLUGINDIR}/phonon_backend
 
