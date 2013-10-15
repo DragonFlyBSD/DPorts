@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: mail/tlb/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: mail/tlb/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	tlb
 PORTVERSION= 	0.11a
@@ -26,6 +26,7 @@ USES=		shebangfix perl5
 SHEBANG_FILES=	${FIXPREFIX}
 perl_OLD_CMD=	/usr/local/bin/perl5
 
+NO_STAGE=	yes
 pre-patch:
 .for f in ${FIXPREFIX}
 	@${REINPLACE_CMD} -i '' -e 's@/usr/lib/sendmail@/usr/sbin/sendmail@' ${WRKSRC}/${f}
