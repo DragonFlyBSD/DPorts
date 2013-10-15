@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/bcc/scripts/configure,v 1.3 2012/11/17 05:55:34 svnexp Exp $
+# $FreeBSD: devel/bcc/scripts/configure 300896 2012-07-14 13:54:48Z beat $
 #
 # Author:		Jörg Wunsch <joerg@FreeBSD.org>
 # Date of creation:	Mar 26, 1995
