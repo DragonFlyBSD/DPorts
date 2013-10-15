@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-PerlPoint-Package/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-PerlPoint-Package/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	PerlPoint-Package
 PORTVERSION=	0.45.2
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN1=		pp2sdf.1 perlpoint.1
 MAN3=		PerlPoint::Anchors.3 \
