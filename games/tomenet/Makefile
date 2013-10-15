@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: games/tomenet/Makefile 325132 2013-08-21 14:00:43Z culot $
+# $FreeBSD: games/tomenet/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tomenet
 PORTVERSION=	4.5.4
@@ -19,6 +19,7 @@ CFLAGS+=	-DDEFAULT_PATH="\\\"${DATADIR}/lib/\\\""
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 .for f in tomenet tomenet.server accedit evilmeta
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
