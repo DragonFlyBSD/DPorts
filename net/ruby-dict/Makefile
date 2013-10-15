@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Ruby/DICT
-# Date created:                26 September 2002
-# Whom:                        Kimura Fuyuki <fuyuki@hadaly.org>
-#
-# $FreeBSD: ports/net/ruby-dict/Makefile,v 1.7 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
+# $FreeBSD: net/ruby-dict/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dict
 PORTVERSION=	0.9.4
@@ -24,6 +20,7 @@ RUBY_SHEBANG_FILES=	${WRKSRC}/rdict
 
 DOCS=		Changelog README doc/dict.html doc/rdict.html
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rdict ${PREFIX}/bin/
 .if !defined(NOPORTDOCS)
