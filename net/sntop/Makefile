@@ -1,5 +1,5 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: ports/net/sntop/Makefile,v 1.17 2012/11/17 06:00:21 svnexp Exp $
+# $FreeBSD: net/sntop/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sntop
 PORTVERSION=	1.4.3
@@ -18,6 +18,7 @@ SUB_FILES=	pkg-message
 
 MAN1=		sntop.1
 
+NO_STAGE=	yes
 post-install:
 	@${STRIP_CMD} ${PREFIX}/bin/sntop
 .if !defined(NOPORTDOCS)
