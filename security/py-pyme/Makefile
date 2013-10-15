@@ -1,9 +1,5 @@
-# New ports collection makefile for:	security/py-pyme
-# Date created:				28 December 2008
-# Whom:					Johan van Selst <johans@stack.nl>
-#
-# $FreeBSD: ports/security/py-pyme/Makefile,v 1.9 2012/11/17 06:01:17 svnexp Exp $
-#
+# Created by: Johan van Selst <johans@stack.nl>
+# $FreeBSD: security/py-pyme/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pyme
 PORTVERSION=	0.8.1
@@ -23,6 +19,7 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=pygpgme
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
