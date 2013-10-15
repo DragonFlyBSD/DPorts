@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-Thin
-# Date created:		2010-11-09
-# Whom:			Phil Phillips
-#
-# $FreeBSD: www/p5-CGI-Thin/Makefile 326054 2013-09-02 18:41:05Z az $
-#
+# Created by: Phil Phillips
+# $FreeBSD: www/p5-CGI-Thin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Thin
 PORTVERSION=	0.52
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 MAN3=		CGI::Thin.3 \
 		CGI::Thin::Cookies.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
