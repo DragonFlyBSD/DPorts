@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <martin.dieringe@gmx.de>
-# $FreeBSD: graphics/pdf2svg/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/pdf2svg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pdf2svg
 PORTVERSION=	0.2.2
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/pdf2svg
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
