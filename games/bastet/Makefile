@@ -1,5 +1,5 @@
-# Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: games/bastet/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: games/bastet/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bastet
 PORTVERSION=	0.43
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN6=		bastet.6
 PLIST_FILES=	bin/bastet
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"
