@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/rubygem-maruku/Makefile 319751 2013-06-03 02:39:46Z swills $
+# $FreeBSD: www/rubygem-maruku/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	maruku
 PORTVERSION=	0.6.1
@@ -17,4 +17,5 @@ USE_RUBY_FEATURES=	iconv
 RUBYGEM_AUTOPLIST=  yes
 PLIST_FILES=	bin/maruku bin/marutex
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
