@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: databases/libgdamm5/Makefile 327326 2013-09-15 03:48:52Z bland $
+# $FreeBSD: databases/libgdamm5/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/trunk/databases/libgdamm5/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgdamm
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--enable-static --disable-documentation
 
 OPTIONS_DEFINE=	BDB
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBDB} || exists(${LOCALBASE}/libdata/pkgconfig/libgda-bdb-5.0.pc)
