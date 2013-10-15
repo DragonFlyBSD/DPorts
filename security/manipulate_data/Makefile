@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan <vaida.bogdan@gmail.com>
-# $FreeBSD: ports/security/manipulate_data/Makefile,v 1.5 2012/12/20 05:52:22 svnexp Exp $
+# $FreeBSD: security/manipulate_data/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	manipulate_data
 PORTVERSION=	1.3
@@ -17,6 +17,7 @@ PLIST_FILES=	${SBIN_PROGRAMS:S,^,sbin/,}
 
 SBIN_PROGRAMS=	read_data replace_data search_data write_data
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
