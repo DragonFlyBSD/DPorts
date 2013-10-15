@@ -1,5 +1,5 @@
 # Created by: John Prather
-# $FreeBSD: net-im/pidgin-sipe/Makefile 326504 2013-09-06 14:23:20Z bapt $
+# $FreeBSD: net-im/pidgin-sipe/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pidgin-sipe
 PORTVERSION=	1.13.1
@@ -31,6 +31,7 @@ KRB5_DESC=		With Kerberos5
 CONFIGURE_ARGS+=	--enable-purple \
 			--disable-telepathy
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOSC2005}
