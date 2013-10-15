@@ -1,5 +1,5 @@
 # Created by: rflynn@acsalaska.net
-# $FreeBSD: ports/sysutils/ldapenter/Makefile,v 1.3 2013/01/23 10:44:11 svnexp Exp $
+# $FreeBSD: sysutils/ldapenter/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	ldapenter
 PORTVERSION=	0.2.0
@@ -14,6 +14,7 @@ LICENSE=	BSD
 MAKEFILE=	BSDmakefile
 USE_BZIP2=	yes
 USE_OPENLDAP=	24
+LDFLAGS+=	-L${LOCALBASE}/lib -llber-2.4
 
 MANCOMPRESSED=	yes
 MAN1=		ldapform.1 ldapedit.1
@@ -21,4 +22,5 @@ MAN1=		ldapform.1 ldapedit.1
 PLIST_FILES=	bin/ldapform \
 		bin/ldapedit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
