@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Spreadsheet-ParseExcel/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Spreadsheet-ParseExcel/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Spreadsheet-ParseExcel
 PORTVERSION=	0.59
@@ -35,6 +35,7 @@ MAN3=		Spreadsheet::ParseExcel.3 \
 		Spreadsheet::ParseExcel::Workbook.3 \
 		Spreadsheet::ParseExcel::Worksheet.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
