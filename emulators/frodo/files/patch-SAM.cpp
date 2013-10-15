@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/emulators/frodo/files/patch-SAM.cpp,v 1.2 2012/11/17 05:57:20 svnexp Exp $
+$FreeBSD: emulators/frodo/files/patch-SAM.cpp 300896 2012-07-14 13:54:48Z beat $
 
 --- SAM.cpp.orig	Sat Nov 30 01:25:40 2002
 +++ SAM.cpp	Sat Nov 30 01:26:38 2002

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/emulators/frodo/files/patch-Display__x.i,v 1.2 2012/11/17 05:57:20 svnexp Exp $
+$FreeBSD: emulators/frodo/files/patch-Display__x.i 300896 2012-07-14 13:54:48Z beat $
 
 --- Display_x.i.orig	Sat Nov 30 01:11:07 2002
 +++ Display_x.i	Sat Nov 30 01:11:41 2002

@@ -1,4 +1,4 @@
-# $FreeBSD: ports/emulators/frodo/Makefile,v 1.42 2012/11/17 05:57:20 svnexp Exp $
+# $FreeBSD: emulators/frodo/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	frodo
 PORTVERSION=	4.1b
@@ -11,6 +11,8 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Emulates a Commodore 64
 
 RUN_DEPENDS=	wish8.4:${PORTSDIR}/x11-toolkits/tk84
+
+NO_STAGE=	yes
 
 USE_XORG=	x11 xt xext sm ice
 ALL_TARGET=	Frodo
