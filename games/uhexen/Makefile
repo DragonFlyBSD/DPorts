@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/uhexen/Makefile 315369 2013-03-27 10:20:36Z miwi $
+# $FreeBSD: games/uhexen/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	uhexen
 PORTVERSION=	0.601
@@ -12,6 +12,7 @@ COMMENT=	Yet another port of Hexen, popular game from Raven Software
 
 USE_GMAKE=	yes
 USE_SDL=	mixer sdl
+MAKE_ENV+=	EXTRA_LIBS=-lm
 
 OPTIONS_DEFINE=	MUSIC
 OPTIONS_DEFAULT=	MUSIC
@@ -19,6 +20,7 @@ MUSIC_DESC=	In-game MIDI music support
 
 PLIST_FILES=	bin/uhexen
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
