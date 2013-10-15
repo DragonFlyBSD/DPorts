@@ -1,9 +1,5 @@
-# New ports collection makefile for:   rngstreams
-# Date created:        13 November 2008
-# Whom:                bf <bf2006a@yahoo.com>
-#
-# $FreeBSD: ports/math/testu01/Makefile,v 1.12 2012/11/17 05:59:31 svnexp Exp $
-#
+# Created by: bf <bf2006a@yahoo.com>
+# $FreeBSD: math/testu01/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	TestU01
 PORTVERSION=	1.2.3
@@ -31,6 +27,7 @@ CFLAGS+=	-fPIC
 PLIST_SUB=	PORTNAME="${PORTNAME}"
 CONFLICTS=	emboss-[0-9]*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|return|& (0)|' ${WRKSRC}/testu01/fftc.c
