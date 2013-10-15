@@ -1,5 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: devel/p5-Mac-PropertyList/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-Mac-PropertyList/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Mac-PropertyList
 PORTVERSION=	1.38
@@ -23,4 +23,5 @@ MAN3=	Mac::PropertyList.3 \
 	Mac::PropertyList::ReadBinary.3 \
 	Mac::PropertyList::WriteBinary.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
