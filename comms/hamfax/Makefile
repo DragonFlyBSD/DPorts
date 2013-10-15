@@ -1,5 +1,5 @@
 # Created by: Carl Makin <carl@stagecraft.cx>
-# $FreeBSD: comms/hamfax/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: comms/hamfax/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	hamfax
 PORTVERSION=	0.8.1
@@ -20,4 +20,5 @@ USE_BZIP2=	yes
 
 
 MAN1=		hamfax.1
+NO_STAGE=	yes
 .include <bsd.port.mk>
