@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gnewtellium
-# Date created:				9 April 2002
-# Whom:					haikal
-#
-# $FreeBSD: ports/net-p2p/gnewtellium/Makefile,v 1.15 2012/11/17 06:00:39 svnexp Exp $
+# Created by: haikal
+# $FreeBSD: net-p2p/gnewtellium/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	gnewtellium
 PORTVERSION=	0.05b
@@ -24,4 +21,5 @@ MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOMAKE="${TRUE}" \
 PLIST_FILES=	bin/gnewtellium %%DATADIR%%/pixmaps/gnewtellium.xpm
 PLIST_DIRS=	%%DATADIR%%/pixmaps %%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
