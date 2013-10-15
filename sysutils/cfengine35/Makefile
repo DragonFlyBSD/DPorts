@@ -1,8 +1,8 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine35/Makefile 327260 2013-09-14 10:35:26Z bapt $
+# $FreeBSD: sysutils/cfengine35/Makefile 328875 2013-09-30 21:02:13Z cy $
 
 PORTNAME=	cfengine
-PORTVERSION=	3.5.1
+PORTVERSION=	3.5.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 
@@ -19,7 +19,7 @@ FETCH_BEFORE_ARGS=	-o ${DISTDIR}/${DISTFILES}
 
 CONFLICTS=	cfengine-[234]*
 
-USE_RC_SUBR=	cf-execd cf-serverd
+USE_RC_SUBR=	cf-execd cf-serverd cf-monitord
 
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
@@ -49,6 +49,7 @@ MYSQL_DESC=	Enable MySQL integration
 LIBVIRT_DESC=	Enable libvirt integration
 OPTIONS_DEFAULT=TOKYOCABINET
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTOKYOCABINET}
