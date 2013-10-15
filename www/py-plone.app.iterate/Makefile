@@ -1,7 +1,7 @@
-# $FreeBSD: www/py-plone.app.iterate/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.app.iterate/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.app.iterate
-PORTVERSION=	2.1.9
+PORTVERSION=	2.1.10
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -33,8 +33,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.locking>=0:${PORTSDIR}/www/py-plone.lo
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-USE_ZOPE=	yes
+USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
