@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-GitPython
-# Date created:		2006-07-18
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: devel/py-gitpython/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-gitpython/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	GitPython
 PORTVERSION=	0.3.1
@@ -19,4 +15,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gitdb>0:${PORTSDIR}/devel/py-gitdb
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
