@@ -1,5 +1,5 @@
 # Created by: Lapo Luchin <lapo@lapo.it>
-# $FreeBSD: devel/commit-patch/Makefile 325166 2013-08-21 20:05:58Z madpilot $
+# $FreeBSD: devel/commit-patch/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	commit-patch
 PORTVERSION=	2.5
@@ -28,6 +28,7 @@ PLIST_FILES=	bin/commit-partial bin/commit-patch \
 MAN1=		commit-partial.1 commit-patch.1
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -e 's/share[/]man/man/' \
 			-e 's/PREFIX=/PREFIX?=/' ${WRKSRC}/Makefile
