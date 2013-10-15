@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ilohamail
-# Date created:		2004-01-20
-# Whom:			TAKATSU Tomonari <tota@rtfm.jp>
-#
-# $FreeBSD: ports/mail/ilohamail/Makefile,v 1.6 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@rtfm.jp>
+# $FreeBSD: mail/ilohamail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ilohamail
 PORTVERSION=	0.8.13
@@ -36,6 +32,7 @@ PLIST_SUB+=	ILOHADIR="${ILOHADIR:S,^${PREFIX}/,,}"
 SUB_FILES=	pkg-message
 SUB_LIST=	ILOHADIR=${ILOHADIR}
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "  define WITHOUT_MYSQL: not to use MySQL back-end"
