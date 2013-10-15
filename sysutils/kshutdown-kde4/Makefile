@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/kshutdown-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/kshutdown-kde4/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	kshutdown
 DISTVERSION=	3.0beta6
@@ -18,4 +18,5 @@ LATEST_LINK=	${PORTNAME}-kde4
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
