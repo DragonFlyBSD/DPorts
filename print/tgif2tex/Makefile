@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: print/tgif2tex/Makefile 317151 2013-05-02 21:20:22Z hrs $
+# $FreeBSD: print/tgif2tex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	tgif2tex
 PORTVERSION=	2.13
@@ -12,7 +12,6 @@ COMMENT=	Converting texts in figure by tgif to LaTeX commands
 
 LICENSE=	GPLv2
 
-USE_PERL5_RUN=	yes
 PLIST_FILES=	bin/tgif2tex
 PORTDOCS= 	how-to-use.dvi how-to-use.ps how-to-use.tex \
 		example.obj example.tex \
@@ -26,6 +25,10 @@ PORTDOCS= 	how-to-use.dvi how-to-use.ps how-to-use.tex \
 
 OPTIONS_DEFINE=	DOCS
 
+USES=		perl5
+USE_PERL5=	run
+
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
