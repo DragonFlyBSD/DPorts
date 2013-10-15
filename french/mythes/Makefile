@@ -1,4 +1,4 @@
-# $FreeBSD: ports/french/mythes/Makefile,v 1.6 2012/11/17 05:57:28 svnexp Exp $
+# $FreeBSD: french/mythes/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2.3
@@ -26,6 +26,7 @@ PLIST_FILES+=	%%DATADIR%%/th_${ALIAS}_v2.dat \
 		%%DATADIR%%/th_${ALIAS}_v2.idx
 .endfor
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/thes_fr.dat ${DATADIR}/th_fr_FR_v2.dat
