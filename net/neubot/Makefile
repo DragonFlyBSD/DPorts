@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: net/neubot/Makefile 315610 2013-03-30 12:40:29Z miwi $
+# $FreeBSD: net/neubot/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	neubot
 PORTVERSION=	0.4.15.6
@@ -36,6 +36,7 @@ SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 PLIST_SUB+=	STATEDIR=${STATEDIR}
 PKGMESSAGE=	${WRKDIR}/pkg_message
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
