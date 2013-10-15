@@ -1,4 +1,4 @@
-# $FreeBSD: ports/astro/openmap/Makefile,v 1.11 2012/12/10 13:24:54 svnexp Exp $
+# $FreeBSD: astro/openmap/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	openmap
 PORTVERSION=	4.6.4
@@ -15,6 +15,7 @@ JAVA_VERSION=	1.6+
 
 PKGMESSAGE=	${WRKSRC}/LICENSE
 
+NO_STAGE=	yes
 USE_ANT=	yes
 MAKE_ARGS+=	-Dopenmap.home=${WRKSRC} \
 		-Didl2java.compiler=${JAVA_HOME}/bin/idlj
