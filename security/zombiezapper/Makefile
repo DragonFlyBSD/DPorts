@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: ports/security/zombiezapper/Makefile,v 1.13 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: security/zombiezapper/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	zombiezapper
 PORTVERSION=	1.2
@@ -22,6 +22,7 @@ LDFLAGS+=	$$(${LIBNET_CONFIG} --libs)
 PORTDOCS=	USAGE tekpaper.txt
 PLIST_FILES=	bin/zz
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
