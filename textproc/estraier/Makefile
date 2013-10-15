@@ -1,9 +1,5 @@
-# New ports collection makefile for:	estraier
-# Date created:		2004-08-28
-# Whom:			Michael Johnson <ahze@ahze.net>
-#
-# $FreeBSD: textproc/estraier/Makefile 316683 2013-04-27 18:25:24Z mva $
-#
+# Created by: Michael Johnson <ahze@ahze.net>
+# $FreeBSD: textproc/estraier/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	estraier
 PORTVERSION=	1.2.30
@@ -30,6 +26,7 @@ CONFIGURE_ARGS=	--with-sysqdbm \
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/include ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCHASEN}
