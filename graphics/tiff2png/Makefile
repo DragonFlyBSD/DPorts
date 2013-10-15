@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: graphics/tiff2png/Makefile 314228 2013-03-15 02:27:30Z beech $
+# $FreeBSD: graphics/tiff2png/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	tiff2png
 PORTVERSION=	0.91
@@ -28,6 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lpng -lz -ltiff -ljpeg -lm
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
