@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: textproc/discount/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/discount/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	discount
 DISTVERSION=	2.1.5a
@@ -50,6 +50,7 @@ EXTRA_DESC=	Enable all extra features
 TAB8_DESC=	Use a tabstop of 8 (default is 4)
 SAMPLES_DESC=	Install sample programs
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXTRA}
