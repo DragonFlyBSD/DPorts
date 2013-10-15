@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 326585 2013-09-07 09:46:48Z tobez $
+# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Net-OpenID-Common
 PORTVERSION=	1.18
@@ -40,4 +40,5 @@ regression-test: build
 	cd ${WRKSRC} && ${MAKE} test
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
