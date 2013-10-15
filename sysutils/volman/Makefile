@@ -1,5 +1,5 @@
 # Created by: Aragon Gouveia <aragon@phat.za.net>
-# $FreeBSD: sysutils/volman/Makefile 314144 2013-03-14 11:20:54Z miwi $
+# $FreeBSD: sysutils/volman/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	volman
 PORTVERSION=	0.7
@@ -18,6 +18,7 @@ OPTIONS_DEFINE=	 OPENBOX NTFS3G
 OPENBOX_DESC=	Openbox pipemenu script
 NTFS3G_DESC=	Use fusefs-ntfs extensions
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENBOX}
