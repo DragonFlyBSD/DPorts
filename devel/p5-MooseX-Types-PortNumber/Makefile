@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-PortNumber/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-MooseX-Types-PortNumber/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Types-PortNumber
 PORTVERSION=	0.02
@@ -25,4 +25,5 @@ MAN3=		MooseX::Types::PortNumber.3
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
