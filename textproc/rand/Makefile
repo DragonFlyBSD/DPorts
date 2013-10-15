@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: textproc/rand/Makefile 313108 2013-02-28 16:33:38Z miwi $
+# $FreeBSD: textproc/rand/Makefile 328891 2013-09-30 22:47:41Z danilo $
 
 PORTNAME=	rand
 PORTVERSION=	1.9
@@ -7,17 +7,16 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://bzflag.bz/~erik/files/ \
 		http://elfga.com/~erik/files/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Utility to display files or streams in random order
 
-USE_GMAKE=	yes
+USES=	gmake
 GNU_CONFIGURE=	yes
 
-MAN1=		rand.1
-PLIST_FILES=	bin/rand
+PLIST_FILES=	bin/rand man/man1/rand.1.gz
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/rand ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/rand.1 ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/rand ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/docs/rand.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
