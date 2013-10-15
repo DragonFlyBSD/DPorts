@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-File-Signature
-# Date created:				2010-11-11
-# Whom:					Frederic Culot <culot@FreeBSD.org>
-#
-# $FreeBSD: sysutils/p5-File-Signature/Makefile 326573 2013-09-07 06:47:20Z az $
-#
+# Created by: Frederic Culot <culot@FreeBSD.org>
+# $FreeBSD: sysutils/p5-File-Signature/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	File-Signature
 PORTVERSION=	1.009
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Signature.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
