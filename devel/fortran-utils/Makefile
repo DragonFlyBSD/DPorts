@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: ports/devel/fortran-utils/Makefile,v 1.9 2012/12/03 09:55:25 svnexp Exp $
+# $FreeBSD: devel/fortran-utils/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fortran-utils
 PORTVERSION=	1.1
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/fortran-utils
 
 MAN1=		fpr.1 fsplit.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fpr/fpr ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/fsplit/fsplit ${PREFIX}/bin
