@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: math/add/Makefile 313118 2013-02-28 17:19:30Z culot $
+# $FreeBSD: math/add/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	add
 PORTVERSION=	20130226
@@ -17,6 +17,7 @@ MAN1=		add.1
 PLIST_FILES=	bin/add %%DATADIR%%/add.hlp
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/add ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/add.1 ${MANPREFIX}/man/man1
