@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-ZConf/Makefile 326506 2013-09-06 14:30:23Z az $
+# $FreeBSD: net/p5-ZConf/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ZConf
 PORTVERSION=	6.1.0
@@ -30,4 +30,5 @@ MAN3=		ZConf.3 \
 		ZConf::backends::file.3 \
 		ZConf::backends::ldap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
