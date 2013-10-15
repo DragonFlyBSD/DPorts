@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/watchfolder/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/watchfolder/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	watchfolder
 PORTVERSION=	0.3.3
@@ -17,6 +17,7 @@ USE_RC_SUBR=	watchd
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
