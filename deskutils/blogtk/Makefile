@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: deskutils/blogtk/Makefile 326396 2013-09-05 13:31:31Z wg $
+# $FreeBSD: deskutils/blogtk/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	blogtk
 PORTVERSION=	2.0
@@ -25,6 +25,7 @@ MAKE_ENV+=	PYTHON="${PYTHON_CMD}"
 
 DATADIR=	${PREFIX}/share/${PORTNAME}2
 
+NO_STAGE=	yes
 post-install:
 	@${RM} -f ${DATADIR}/lib/blogtk2/*.py~
 
