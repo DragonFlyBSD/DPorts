@@ -1,9 +1,5 @@
-# New ports collection makefile for:   scnc
-# Date created:                        27 April 2008
-# Whom:                                Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/net/scnc/Makefile,v 1.9 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: net/scnc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	scnc
 PORTVERSION=	1.05
@@ -22,6 +18,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 PLIST_FILES=	bin/${PORTNAME}
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
 
