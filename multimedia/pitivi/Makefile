@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: multimedia/pitivi/Makefile 325750 2013-08-31 00:29:43Z bapt $
+# $FreeBSD: multimedia/pitivi/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #    $MCom: ports/multimedia/pitivi/Makefile,v 1.8 2006/04/26 19:31:01 ahze Exp $
 
 PORTNAME=	pitivi
@@ -26,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--localstatedir=/var
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${LOCALBASE}/bin/python|g' \
 		${WRKSRC}/bin/pitivi.in
