@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/beadm/Makefile 307049 2012-11-06 03:22:47Z bdrewery $
+# $FreeBSD: sysutils/beadm/Makefile 327984 2013-09-23 11:47:47Z bdrewery $
 
 PORTNAME=	beadm
 PORTVERSION=	0.8.5
@@ -18,18 +18,13 @@ NO_BUILD=	YES
 
 CONFLICTS_INSTALL=	beadm-devel-*
 
-PLIST_FILES=	sbin/${PORTNAME}
-
-MAN1=		${PORTNAME}.1
-
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800000
-IGNORE=		not supported on 7.x
-.endif
+PLIST_FILES=	sbin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin/${PORTNAME}
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1/
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} \
+	    ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 \
+	  ${STAGEDIR}${MANPREFIX}/man/man1/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
