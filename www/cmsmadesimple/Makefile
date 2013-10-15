@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cmsmadesimple
-# Date created:		1st September 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/cmsmadesimple/Makefile,v 1.7 2012/11/17 06:02:30 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/cmsmadesimple/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cmsmadesimple
 PORTVERSION=	1.9.1
@@ -29,6 +25,7 @@ CMS_FILES=	favicon_cms.ico fileloc.php include.php \
 WRITABLE_DIRS=	tmp tmp/templates_c tmp/cache \
 		uploads uploads/images modules
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 post-extract:
 	@cd ${WRKSRC} && ${RM} -f config.php
