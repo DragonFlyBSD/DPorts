@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-rainbow
-# Date created:		2012-01-11
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-rainbow/Makefile,v 1.3 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: devel/rubygem-rainbow/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rainbow
 PORTVERSION=	1.1.4
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
