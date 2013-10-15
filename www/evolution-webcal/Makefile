@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: www/evolution-webcal/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: www/evolution-webcal/Makefile 327776 2013-09-20 23:36:50Z bapt $
 #   $MCom: ports/www/evolution-webcal/Makefile,v 1.69 2010/09/29 12:56:07 kwm Exp $
 
 PORTNAME=	evolution-webcal
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	evolution-webcal.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@mkdir_p@|mkdir -p|g' \
 		${WRKSRC}/po/Makefile.in.in
