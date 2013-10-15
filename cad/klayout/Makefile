@@ -1,9 +1,5 @@
-# Ports collection makefile for:  klayout
-# Date created:			  Sat, Apr 28, 2007
-# Whom:				  Hiroki Sato <hrs@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/klayout/Makefile,v 1.23 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: Hiroki Sato <hrs@FreeBSD.org>
+# $FreeBSD: cad/klayout/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	klayout
 PORTVERSION=	0.21.19
@@ -30,6 +26,7 @@ PLIST_FILES=	bin/klayout \
 
 PLATFORMKEYWORD=	freebsd-32-gcc-release
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 		${SH} build.sh -platform ${PLATFORMKEYWORD} \
