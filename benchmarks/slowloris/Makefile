@@ -1,9 +1,5 @@
-# New ports collection makefile for:	slowloris
-# Date created:				Fri 03 Jul 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/benchmarks/slowloris/Makefile,v 1.2 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: benchmarks/slowloris/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	slowloris
 PORTVERSION=	0.7
@@ -13,7 +9,7 @@ MASTER_SITES=	ftp://ftp.renatasystems.org/pub/FreeBSD/ports/distfiles/
 MAINTAINER=	alexey@renatasystems.org
 COMMENT=	The low bandwidth, yet greedy and poisonous HTTP client
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 RUN_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
@@ -21,6 +17,7 @@ RUN_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
 
 PLIST_FILES=	bin/slowloris
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PERL_THREADS=	no
