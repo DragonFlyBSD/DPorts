@@ -1,4 +1,4 @@
-# $FreeBSD: ports/java/jakarta-bcel/Makefile,v 1.12 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-bcel/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	bcel
 PORTVERSION=	5.2
@@ -21,6 +21,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/bcel.jar
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar \
 	    ${JAVAJARDIR}/${PORTNAME}.jar
