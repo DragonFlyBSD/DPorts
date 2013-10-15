@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: audio/mcplay/Makefile 313028 2013-02-27 03:08:45Z danfe $
+# $FreeBSD: audio/mcplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mcplay
 DISTVERSION=	0.3i
@@ -13,6 +13,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	glib-12:${PORTSDIR}/devel/glib12
 
+NO_STAGE=	yes
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 
