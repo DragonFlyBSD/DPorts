@@ -1,5 +1,5 @@
 # Created by: Morten Slot Kristensen
-# $FreeBSD: x11/dzen2/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11/dzen2/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	dzen2
 PORTVERSION=	0.8.5
@@ -17,6 +17,7 @@ PLIST_FILES=	bin/${PORTNAME}
 OPTIONS_DEFINE=	XPM XINERAMA
 OPTIONS_DEFAULT=	XPM XINERAMA
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXPM}
