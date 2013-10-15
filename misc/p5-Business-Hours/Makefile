@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: misc/p5-Business-Hours/Makefile 325276 2013-08-23 19:32:48Z matthew $
+# $FreeBSD: misc/p5-Business-Hours/Makefile 328440 2013-09-27 08:29:51Z matthew $
 
 PORTNAME=	Business-Hours
 PORTVERSION=	0.12
@@ -17,7 +17,5 @@ TEST_DEPENDS=	p5-Test-Pod>-1.0:${PORTSDIR}/devel/p5-Test-Pod \
 
 USES+=		perl5
 USE_PERL5=	configure
-
-MAN3=		Business::Hours.3
 
 .include <bsd.port.mk>
