@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	shmap
-# Date Created:			Feb 20, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/shmap/Makefile,v 1.24 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/shmap/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	shmap
 PORTVERSION=	0.3.2
