@@ -1,5 +1,5 @@
 # Created by: Bruce Simpson
-# $FreeBSD: net-mgmt/py-pyang/Makefile 313215 2013-03-02 06:41:11Z miwi $
+# $FreeBSD: net-mgmt/py-pyang/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	pyang
 PORTVERSION=	1.3
@@ -19,6 +19,7 @@ DATADIR=	${PREFIX}/share/yang
 
 MAN1=		pyang.1 yang2dsdl.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|share/man|man|' ${WRKSRC}/setup.py
