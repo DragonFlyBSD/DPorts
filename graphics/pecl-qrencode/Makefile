@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-qrencode
-# Date created:				Apr 16 2007
-# Whom:					vanilla
-#
-# $FreeBSD: ports/graphics/pecl-qrencode/Makefile,v 1.8 2012/11/17 05:58:18 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: graphics/pecl-qrencode/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	qrencode
 PORTVERSION=	0.4
@@ -26,4 +22,5 @@ CONFIGURE_ARGS=	--with-qrencode=${LOCALBASE}
 LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS}
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
