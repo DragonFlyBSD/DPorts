@@ -1,5 +1,5 @@
 # Created by: Lefteris Chatzibarbas <lefcha@hellug.gr>
-# $FreeBSD: mail/imapfilter/Makefile 321069 2013-06-16 19:38:38Z stefan $
+# $FreeBSD: mail/imapfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	imapfilter
 PORTVERSION=	2.5.5
@@ -40,6 +40,7 @@ PLIST_FILES=	bin/imapfilter \
 		%%EXAMPLESDIR%%/extend.lua
 PLIST_DIRS=	%%DATADIR%% %%EXAMPLESDIR%%
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -Ee ' \
 	    s|^(PREFIX =).*|\1${PREFIX}|; \
