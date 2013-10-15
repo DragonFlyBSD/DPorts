@@ -1,5 +1,5 @@
 # Created by: Norio Suzuki <nosuzuki@e-mail.ne.jp>
-# $FreeBSD: graphics/xzgv/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: graphics/xzgv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xzgv
 PORTVERSION=	0.9
@@ -18,6 +18,7 @@ USE_GNOME=	imlib gdkpixbuf gtk20
 MAN1=		xzgv.1
 PLIST_FILES=	bin/xzgv
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
