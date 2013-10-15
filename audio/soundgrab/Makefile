@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/soundgrab/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: audio/soundgrab/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	soundgrab
 PORTVERSION=	1.0.1
@@ -21,6 +21,7 @@ RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox \
 LICENSE=	GPLv2
 
 USES=		perl5
+NO_STAGE=	yes
 NO_BUILD=	yes
 
 MAN1=	soundgrab.1
