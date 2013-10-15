@@ -1,9 +1,5 @@
-# New ports collection makefile for:	minisapserver
-# Date created:		2004-05-25
-# Whom:			michael johnson <ahze@ahze.net>
-#
-# $FreeBSD: net/minisapserver/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: michael johnson <ahze@ahze.net>
+# $FreeBSD: net/minisapserver/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	minisapserver
 PORTVERSION=	0.3.8
@@ -28,6 +24,7 @@ SLP_DESC=	"Enable SLP support via openslp"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSLP}
