@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/p5-Proc-WaitStat/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Proc-WaitStat/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Proc-WaitStat
 PORTVERSION=	1.00
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Proc::WaitStat.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
