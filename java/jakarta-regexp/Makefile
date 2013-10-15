@@ -1,5 +1,5 @@
 # Created by: Dave Glowacki <dglo@ssec.wisc.edu> #
-# $FreeBSD: ports/java/jakarta-regexp/Makefile,v 1.22 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-regexp/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jakarta-regexp
 PORTVERSION=	1.5
@@ -24,6 +24,7 @@ JAVALIBNAME=	${PORTNAME}-${PORTVERSION}
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-build:
 	@if [ ! -f ${WRKSRC}/lib ]; then ${MKDIR} ${WRKSRC}/lib; fi
 	@cd ${WRKSRC} && \
