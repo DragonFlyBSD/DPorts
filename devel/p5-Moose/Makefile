@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Moose/Makefile 326597 2013-09-07 10:19:26Z sunpoet $
+# $FreeBSD: devel/p5-Moose/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Moose
 PORTVERSION=	2.1005
@@ -183,6 +183,7 @@ MAN3=		Class::MOP.3 \
 		metaclass.3 \
 		oose.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^check_conflicts()/d' ${WRKSRC}/Makefile.PL
 
