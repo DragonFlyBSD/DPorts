@@ -1,9 +1,5 @@
-# New ports collection makefile for: cut
-# Date created:			December 5 2004
-# Whom:       		Sergei Gnezdov <sergeiga@yahoo.com>
-#
-# $FreeBSD: ports/devel/cut/Makefile,v 1.7 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Sergei Gnezdov <sergeiga@yahoo.com>
+# $FreeBSD: devel/cut/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cut
 PORTVERSION=	2.6
@@ -16,6 +12,7 @@ COMMENT=	Unit Testing Framework for C, C++, and Objective-C
 USE_PYTHON_RUN=	yes
 ALL_TARGET=	build
 
+NO_STAGE=	yes
 post-patch:
 .for FILE in common.py cutgen.py options.py parser.py
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PREFIX}/bin/python|' \
