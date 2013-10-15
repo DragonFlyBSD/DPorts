@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/z88/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: cad/z88/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	z88
 PORTVERSION=	13.0
@@ -28,6 +28,7 @@ Z88_BINS=	z88f z88i1 z88i2 z88com z88d z88e z88g z88h z88n z88o	\
 		z88x z88v
 Z88_DATA=	z88.fcd z88.dyn *.dxf *.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} ${WRKSRC}/z88.fcd.linux ${WRKSRC}/z88.fcd
 	@${CP} ${WRKSRC}/z88.mk.kernel.gcc32 ${WRKSRC}/z88.kernel.mk
