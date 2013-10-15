@@ -1,5 +1,5 @@
 # Created by: Daisuke Aoyama <aoyama@peach.ne.jp>
-# $FreeBSD: ports/net/istgt/Makefile,v 1.38 2012/11/17 06:00:03 svnexp Exp $
+# $FreeBSD: net/istgt/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	istgt
 PORTVERSION=	20121028
@@ -34,6 +34,7 @@ OPTIONS_DEFAULT=
 SYMLNKDEV_DESC=	Allow symbolic link for device file
 VBOXVD_DESC=	Build with VBox VD support(no X11 required)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSYMLNKDEV}
