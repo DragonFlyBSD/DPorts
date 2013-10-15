@@ -1,5 +1,5 @@
 # Created by: Andrew Greenwood <greenwood.andy@gmail.com>
-# $FreeBSD: dns/p5-Net-DNSBL-MultiDaemon/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: dns/p5-Net-DNSBL-MultiDaemon/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNSBL-MultiDaemon
 PORTVERSION=	0.29
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::DNSBL::MultiDaemon.3 Net::DNSBL::Utilities.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
