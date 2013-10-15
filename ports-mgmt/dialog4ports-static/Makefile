@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/dialog4ports-static/Makefile 327356 2013-09-15 19:03:55Z crees $
+# $FreeBSD: ports-mgmt/dialog4ports-static/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PKGNAMESUFFIX=	-static
 
@@ -11,6 +11,7 @@ D4P_SLAVE=	yes
 
 PLIST_FILES=	bin/dialog4ports-static
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dialog4ports \
 		${PREFIX}/bin/dialog4ports-static
