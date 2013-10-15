@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/compiz/Makefile 322169 2013-07-02 13:20:09Z rene $
+# $FreeBSD: x11-wm/compiz/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	compiz
 PORTVERSION=	0.8.4
@@ -77,6 +77,7 @@ DESKTOP_ENTRIES=	"Compiz Manager" \
 			"System;Core;" \
 			false
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libpng|libpng15|' -e 's|gnome-desktop-2.0|gnome-desktop-2.0 gconf-2.0|g' \
 		${WRKSRC}/configure
