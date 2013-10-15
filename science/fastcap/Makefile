@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: science/fastcap/Makefile 323817 2013-07-28 09:46:15Z danfe $
+# $FreeBSD: science/fastcap/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	fastcap
 DISTVERSION=	2.0wr-011109
@@ -17,6 +17,7 @@ BINFILES=	busgen capgen cubegen fastcap pipedgen pyragen
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
