@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rblcheck
-# Date created:		28 January 1998
-# Whom:			itojun@itojun.org
-#
-# $FreeBSD: ports/mail/rblcheck/Makefile,v 1.23 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: itojun@itojun.org
+# $FreeBSD: mail/rblcheck/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	rblcheck
 PORTVERSION=	1.5
@@ -19,6 +15,7 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/rbl ${PREFIX}/bin
 	@${INSTALL_PROGRAM} ${WRKSRC}/rblcheck ${PREFIX}/bin
