@@ -1,9 +1,5 @@
-# Ports collection Makefile for: libecap
-# Date created:			2009/06/02
-# Whom:				Thomas-Martin Seck <tmseck@web.de>
-#
-# $FreeBSD: www/libecap/Makefile 313740 2013-03-09 18:09:24Z tmseck $
-#
+# Created by: Thomas-Martin Seck <tmseck@web.de>
+# $FreeBSD: www/libecap/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	libecap
 PORTVERSION=	0.2.0
@@ -25,6 +21,7 @@ PORTDOCS=	CREDITS LICENSE NOTICE README
 
 CONFIGURE_ARGS+=--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
