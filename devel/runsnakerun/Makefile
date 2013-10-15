@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: devel/runsnakerun/Makefile 325419 2013-08-26 22:36:14Z sbz $
+# $FreeBSD: devel/runsnakerun/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	runsnakerun
 DISTVERSION=	2.0.3
@@ -20,4 +20,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	${PORTNAME:C/r/R/g:C/s/S/}
 PYDISTUTILS_PKGVERSION=	${DISTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
