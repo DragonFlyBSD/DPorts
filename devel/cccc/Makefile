@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	cccc
-# Date created:				12 September 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/devel/cccc/Makefile,v 1.27 2012/11/17 05:55:36 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: devel/cccc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cccc
 PORTVERSION=	3.1.4
@@ -24,6 +19,7 @@ MAKE_JOBS_UNSAFE=	yes
 PORTDOCS=	readme.txt changes.txt
 PLIST_FILES=	bin/cccc
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|=g++|=${CXX}|' ${WRKSRC}/*/posix*.mak
 
