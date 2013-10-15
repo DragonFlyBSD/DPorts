@@ -1,5 +1,5 @@
 # Created by: vsevolod
-# $FreeBSD: net-im/mcabber/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: net-im/mcabber/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	mcabber
 PORTVERSION=	0.10.1
@@ -32,6 +32,7 @@ GPGME_DESC=	Use security/gpgme for PGP support
 OTR_DESC=	Off-the-record messaging support
 ENCHANT_DESC=	Spell checking via enchant
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGPGME}
