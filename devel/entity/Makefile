@@ -1,5 +1,5 @@
 # Created by: Jesse McConnell <jesse@cylant.com>
-# $FreeBSD: devel/entity/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/entity/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	entity
 PORTVERSION=	0.7.2
@@ -25,6 +25,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		entity.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
