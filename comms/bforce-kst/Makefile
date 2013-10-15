@@ -1,5 +1,5 @@
 # Created by: Andrew Dolgov <fox@furry.spb.ru>
-# $FreeBSD: comms/bforce-kst/Makefile 321404 2013-06-20 16:55:56Z bsam $
+# $FreeBSD: comms/bforce-kst/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	bforce
 PORTVERSION=	0.22.8.7
@@ -42,6 +42,7 @@ PORTDOCS=	CHANGES CHANGES.kst COPYING README README.kst
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 pre-configure:
 	@${MKDIR} ${WRKSRC}/bin
 
