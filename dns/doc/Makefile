@@ -1,9 +1,5 @@
-# New ports collection makefile for:	doc
-# Date created:			28 November 1999
-# Whom:				MIHIRA Yoshiro <sanpei@jp.FreeBSD.org>
-#
-# $FreeBSD: ports/dns/doc/Makefile,v 1.15 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: MIHIRA Yoshiro <sanpei@jp.FreeBSD.org>
+# $FreeBSD: dns/doc/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	doc
 PORTVERSION=	2.2.3
@@ -22,6 +18,7 @@ AUX_FILES=	doc-1.awk doc-3.awk doc-4.awk INFO RFC.XXXX
 
 MAN8=		doc.8
 
+NO_STAGE=	yes
 do-build:
 	@${MV} ${WRKSRC}/doc ${WRKSRC}/doc.org
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' -e 's|$${AUX_DIR}|${AUX_DIR}|g' ${WRKSRC}/doc.org \
