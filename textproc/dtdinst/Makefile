@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: textproc/dtdinst/Makefile 317809 2013-05-10 14:34:42Z miwi $
+# $FreeBSD: textproc/dtdinst/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dtdinst
 PORTVERSION=	2009.11.11
@@ -27,6 +27,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/dtdinst.jar share/xsl/dtdinst/dtdinst2rng.xsl
 PLIST_DIRS=	share/xsl/dtdinst
 PLIST_DIRSTRY=	share/xsl
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
