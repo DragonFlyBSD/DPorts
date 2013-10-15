@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: multimedia/devede/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/devede/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	devede
 DISTVERSION=	3.23.0
@@ -31,6 +31,7 @@ PSYCO_DESC=	devel/py-psyco optimization support
 DEJAVU_FONTSDIR=	${LOCALBASE}/lib/X11/fonts/dejavu
 DEJAVU_FONTFILE=	${DEJAVU_FONTSDIR}/DejaVuSans.ttf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIBUS}
