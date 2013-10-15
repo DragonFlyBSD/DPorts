@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/gapcmon/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/gapcmon/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gapcmon
 PORTVERSION=	0.8.9
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
