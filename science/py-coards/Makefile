@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-coards/Makefile 321026 2013-06-16 08:29:46Z mandree $
+# $FreeBSD: science/py-coards/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	coards
 PORTVERSION=	1.0.5
@@ -15,4 +15,5 @@ LICENSE=	MIT
 USE_PYTHON=		2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
