@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-B-Hooks-OP-Annotation/Makefile 325460 2013-08-27 15:20:44Z sunpoet $
+# $FreeBSD: devel/p5-B-Hooks-OP-Annotation/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	B-Hooks-OP-Annotation
 PORTVERSION=	0.44
@@ -18,7 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		B::Hooks::OP::Annotation.3
 
 .include <bsd.port.mk>
