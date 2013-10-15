@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Devel-ebug/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Devel-ebug/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-ebug
 PORTVERSION=	0.55
@@ -30,4 +30,5 @@ USE_PERL5=	modbuild
 MAN1=		ebug.1 ebug_client.1 ebug_server.1
 MAN3=		Devel::ebug.3 Devel::ebug::Console.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
