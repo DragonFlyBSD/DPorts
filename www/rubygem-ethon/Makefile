@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-ethon/Makefile 324062 2013-07-31 16:52:45Z antoine $
+# $FreeBSD: www/rubygem-ethon/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ethon
 PORTVERSION=	0.5.12
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
