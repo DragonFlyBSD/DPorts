@@ -1,6 +1,8 @@
-@comment $FreeBSD: games/gtypist/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+@comment $FreeBSD: games/gtypist/pkg-plist 328828 2013-09-30 16:16:06Z naddy $
 bin/gtypist
 bin/typefortune
+man/man1/gtypist.1.gz
+man/man1/typefortune.1.gz
 share/gtypist/c.typ
 share/gtypist/cs.typ
 share/gtypist/d.typ

@@ -1,4 +1,4 @@
-# $FreeBSD: games/gtypist/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: games/gtypist/Makefile 328864 2013-09-30 20:23:38Z naddy $
 
 PORTNAME=	gtypist
 PORTVERSION=	2.9.3
@@ -9,23 +9,19 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Interactive typing tutor
 
+USES=		iconv
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	EMACS=no
-CPPFLAGS=	-I${WRKDIR}/include
+CPPFLAGS+=	-I${WRKDIR}/include
 
 INFO=		gtypist gtypist.cs gtypist.es
-MAN1=		gtypist.1 typefortune.1
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_USES=	gettext
+NLS_CONFIGURE_ENABLE=	nls
 
 # wide curses header expected at <ncursesw/ncurses.h>
 pre-configure:
