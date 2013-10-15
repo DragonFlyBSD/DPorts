@@ -1,7 +1,5 @@
-# New ports collection makefile for:	gugod-clean
-# Date Created:                         21 Jun 2001
-# Whom:                                 Kang-min Liu <gugod@gugod.org>
-# $FreeBSD: ports/chinese/gugod-clean/Makefile,v 1.16 2012/11/17 05:54:56 svnexp Exp $
+# Created by: Kang-min Liu <gugod@gugod.org>
+# $FreeBSD: chinese/gugod-clean/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	gugod-clean
 PORTVERSION=	1.3
@@ -23,6 +21,7 @@ NO_BUILD=	yes
 SHAREMODE=	644
 XFONTDIR=	${LOCALBASE}/lib/X11/fonts/local
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${XFONTDIR}
 .for i in ${FONTFILES}
