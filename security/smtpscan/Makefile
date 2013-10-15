@@ -1,5 +1,5 @@
 # Created by: Hubert Tournier <hubert@frbsd.org>
-# $FreeBSD: security/smtpscan/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: security/smtpscan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	smtpscan
 PORTVERSION=	0.5
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/smtpscan \
 		%%DATADIR%%/tests
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^#!.*|#!${PERL}| ; \
