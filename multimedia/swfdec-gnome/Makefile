@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: multimedia/swfdec-gnome/Makefile 326146 2013-09-03 13:01:56Z bapt $
+# $FreeBSD: multimedia/swfdec-gnome/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.29 2010/09/29 14:04:43 kwm Exp $
 
 PORTNAME=	swfdec-gnome
@@ -26,6 +26,7 @@ GCONF_SCHEMAS=	swfdec-thumbnailer.schemas
 
 MAN1=		swfdec-player.1 swfdec-thumbnailer.1
 
+NO_STAGE=	yes
 post-install:
 	@-update-desktop-database
 
