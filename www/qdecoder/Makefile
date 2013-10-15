@@ -1,5 +1,5 @@
 # Created by: CHOI Junho <cjh@FreeBSD.org>
-# $FreeBSD: ports/www/qdecoder/Makefile,v 1.25 2012/12/11 20:44:13 svnexp Exp $
+# $FreeBSD: www/qdecoder/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	qdecoder
 PORTVERSION=	12.0.4
@@ -23,6 +23,7 @@ PLIST_FILES=	include/qdecoder.h \
 		lib/libqdecoder.so \
 		lib/libqdecoder.so.12
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
