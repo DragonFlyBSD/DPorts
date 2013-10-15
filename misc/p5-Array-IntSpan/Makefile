@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Array-IntSpan/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: misc/p5-Array-IntSpan/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Array-IntSpan
 PORTVERSION=	2.002
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=	Array::IntSpan.3 Array::IntSpan::Fields.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's/3pm/3/g' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
