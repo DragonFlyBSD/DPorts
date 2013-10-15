@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/bg5ps/Makefile 316593 2013-04-26 09:23:54Z bapt $
+# $FreeBSD: chinese/bg5ps/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	bg5ps
 PORTVERSION=	1.3.0p3
@@ -17,6 +17,7 @@ USE_PYTHON=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
