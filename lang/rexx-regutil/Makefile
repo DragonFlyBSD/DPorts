@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rexx-regutil
-# Date created:				09 September 2010
-# Whom:					Bob Eager <bob@eager.cx>
-#
-# $FreeBSD: ports/lang/rexx-regutil/Makefile,v 1.3 2012/11/17 05:58:56 svnexp Exp $
-#
+# Created by: Bob Eager <bob@eager.cx>
+# $FreeBSD: lang/rexx-regutil/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	regutil
 PORTVERSION=	1.26
@@ -29,6 +25,7 @@ SUB_FILES=	regutil.1 pkg-message
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
