@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	libsdb
-# Date created:			Jul 2, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/databases/libsdb/Makefile,v 1.21 2012/11/17 05:55:10 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: databases/libsdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libsdb
 PORTVERSION=	0.10.0
@@ -27,4 +22,5 @@ MAN8=		sdbd.8
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
