@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tss
-# Date created:				25 October 2006
-# Whom:					Peter Ankerstal <peter@pean.org>
-#
-# $FreeBSD: ports/sysutils/tss/Makefile,v 1.5 2012/11/17 06:01:48 svnexp Exp $
-#
+# Created by: Peter Ankerstal <peter@pean.org>
+# $FreeBSD: sysutils/tss/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tss
 PORTVERSION=	0.8.2
@@ -13,6 +9,7 @@ MASTER_SITES=	http://www.pulia.nu/tss/src/
 MAINTAINER=	peter@pean.org
 COMMENT=	Terminal ScreenSaver that allows you to lock you terminal
 
+NO_STAGE=	yes
 post-patch:
 	@ ${REINPLACE_CMD} -e "s|/etc/tss|${PREFIX}/etc/tss|" ${WRKSRC}/src/main.c
 
