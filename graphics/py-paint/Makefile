@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: graphics/py-paint/Makefile 316593 2013-04-26 09:23:54Z bapt $
+# $FreeBSD: graphics/py-paint/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	paint
 PORTVERSION=	0.3
@@ -25,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 post-patch:
 	@${REINPLACE_CMD} -e "s,art_lgpl,art_lgpl_2," ${WRKSRC}/setup.py
