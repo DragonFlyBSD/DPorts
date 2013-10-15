@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/gnome-web-photo/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: www/gnome-web-photo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 #   $MCom: ports/www/gnome-web-photo/Makefile,v 1.5 2007/08/07 03:27:32 mezz Exp $
 
 PORTNAME=	gnome-web-photo
@@ -28,6 +28,7 @@ GCONF_SCHEMAS=	thumbnailer.schemas
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/test/s|==|=|g' ${WRKSRC}/configure
 
