@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-Forward/Makefile 324485 2013-08-10 11:48:31Z kuriyama $
+# $FreeBSD: devel/p5-Class-Forward/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Forward
 PORTVERSION=	0.100006
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	Class::Forward.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
