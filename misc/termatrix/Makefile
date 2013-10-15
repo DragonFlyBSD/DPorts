@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/termatrix/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/termatrix/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	termatrix
 PORTVERSION=	0.2
@@ -13,6 +13,7 @@ COMMENT=	Emulates Matrix terminal's "green tears" effect
 PLIST_FILES=	bin/termatrix
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
