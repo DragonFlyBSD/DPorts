@@ -1,9 +1,5 @@
-# New ports collection makefile for: English PK fonts
-# Date created:		16 Mar 1996
-# Whom:			Hideaki Ohmon <ohmon@tom.sfc.keio.ac.jp>
-#
-# $FreeBSD: ports/print/pkfonts300/Makefile,v 1.31 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Hideaki Ohmon <ohmon@tom.sfc.keio.ac.jp>
+# $FreeBSD: print/pkfonts300/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	pkfonts${RESOLUTION}
 PORTVERSION=	1.0
@@ -19,6 +15,7 @@ COMMENT=	English PK fonts, for ghostscripts, xdvi, and so on
 DIST_SUBDIR=	pkfonts
 EXTRACT_ONLY=	# extracted directly in install target
 NO_BUILD=	yes
+NO_STAGE=	yes
 PLIST=		${PKGDIR}/pkg-plist.${RESOLUTION}
 
 .if !defined(RESOLUTION)
