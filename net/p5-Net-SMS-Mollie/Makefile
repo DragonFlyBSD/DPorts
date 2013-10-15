@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-SMS-Mollie/Makefile 326506 2013-09-06 14:30:23Z az $
+# $FreeBSD: net/p5-Net-SMS-Mollie/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SMS-Mollie
 PORTVERSION=	0.04
@@ -19,4 +19,5 @@ RUN_DEPENDS+=	p5-Test-Simple>=0.44:${PORTSDIR}/devel/p5-Test-Simple \
 
 MAN3=		Net::SMS::Mollie.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
