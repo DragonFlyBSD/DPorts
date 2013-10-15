@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/security/xml-security/Makefile,v 1.11 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: security/xml-security/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	xml-security
 PORTVERSION=	1.5.3
@@ -33,6 +33,7 @@ PORTEXAMPLES=	*
 
 PLIST_FILES=	%%JAVAJARDIR%%/xmlsec.jar
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} -n ">> Installing JAR as ${JAVAJARDIR}/xmlsec.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/build/xmlsec-${PORTVERSION}.jar ${JAVAJARDIR}/xmlsec.jar
