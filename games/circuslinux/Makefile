@@ -1,9 +1,5 @@
-# New ports collection makefile for:	circuslinux
-# Date created:				1 March 2003
-# Whom:					Edwin Groothuis
-#
-# $FreeBSD: ports/games/circuslinux/Makefile,v 1.16 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: Edwin Groothuis
+# $FreeBSD: games/circuslinux/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	circuslinux
 PORTVERSION=	1.0.3
@@ -18,4 +14,5 @@ USE_SDL=	image mixer sdl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=""
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
