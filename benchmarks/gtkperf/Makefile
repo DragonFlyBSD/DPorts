@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: benchmarks/gtkperf/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: benchmarks/gtkperf/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	gtkperf
 PORTVERSION=	0.40
@@ -16,6 +16,7 @@ USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 gnomeprefix
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
