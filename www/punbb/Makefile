@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/punbb/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/punbb/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	punbb
 PORTVERSION=	1.2.23
@@ -31,6 +31,7 @@ OPTIONS_DEFAULT=	LANGUAGE_PACK EXTRAS
 LANGUAGE_PACK_DESC=	Install language packs
 EXTRAS_DESC=		Install all plugins available
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLANGUAGE_PACK}
