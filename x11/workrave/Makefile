@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: x11/workrave/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/workrave/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	workrave
 PORTVERSION=	1.9.4
@@ -32,6 +32,7 @@ CONFIGURE_ENV=	LIBS="`pkg-config --libs libgnomeui-2.0`"
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-gconf --disable-pulse
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 LIB_DEPENDS+=	gdome.8:${PORTSDIR}/textproc/gdome2
 
