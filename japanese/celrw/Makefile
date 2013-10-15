@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ja-celrw
-# Date created:		13 Nov 2001
-# Whom:			IWASHITA Yoji <shuna@pop16.odn.ne.jp>
-#
-# $FreeBSD: ports/japanese/celrw/Makefile,v 1.11 2012/11/17 05:58:31 svnexp Exp $
-#
+# Created by: IWASHITA Yoji <shuna@pop16.odn.ne.jp>
+# $FreeBSD: japanese/celrw/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	celrw
 PORTVERSION=	0.16
@@ -21,6 +17,7 @@ ALL_TARGET=	${PORTNAME}
 PORTDOCS=	README
 PLIST_FILES=	bin/celrw
 
+NO_STAGE=	yes
 post-extract:
 .for file in config.guess config.sub install.sh
 	@${RM} -f ${WRKSRC}/${file}
