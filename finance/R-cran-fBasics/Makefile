@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: finance/R-cran-fBasics/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: finance/R-cran-fBasics/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	fBasics
 PORTVERSION=	3010.86
@@ -21,4 +21,5 @@ RUN_DEPENDS=	R-cran-timeDate>0:${PORTSDIR}/finance/R-cran-timeDate \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
