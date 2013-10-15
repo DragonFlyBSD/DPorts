@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Log-TraceMessages/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Log-TraceMessages/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-TraceMessages
 PORTVERSION=	1.4
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Log::TraceMessages.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
