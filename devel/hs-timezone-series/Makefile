@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-timezone-series/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-timezone-series/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	timezone-series
 PORTVERSION=	0.1.2
@@ -10,5 +10,6 @@ COMMENT=	Enhanced timezone handling for Data.Time
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
