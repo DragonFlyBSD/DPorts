@@ -1,5 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-# $FreeBSD: sysutils/rsyslog6-relp/Makefile 326992 2013-09-11 16:49:09Z wg $
+# $FreeBSD: sysutils/rsyslog6-relp/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTREVISION=	1
 
@@ -18,6 +18,7 @@ PLIST_FILES+=	lib/rsyslog/imrelp.la \
 		lib/rsyslog/omrelp.la \
 		lib/rsyslog/omrelp.so
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} \
 		${WRKSRC}/plugins/omrelp/.libs/omrelp.so ${PREFIX}/lib/rsyslog
