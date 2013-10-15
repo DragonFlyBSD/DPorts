@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/atutor/Makefile 319749 2013-06-03 02:19:20Z wen $
+# $FreeBSD: www/atutor/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	atutor
 PORTVERSION=	2.1.1
@@ -13,6 +13,7 @@ COMMENT=	An Open Source Web-based Learning Content Management System (LCMS)
 USE_PHP=	session mbstring zlib mysql
 WRKSRC=		${WRKDIR}/ATutor
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 NO_BUILD=	yes
