@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmBinClock
-# Date created:			16 Mar 2003
-# Whom:				Harold Gutch <logix@foobar.franken.de>
-#
-# $FreeBSD: ports/x11-clocks/wmbinclock/Makefile,v 1.11 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Harold Gutch <logix@foobar.franken.de>
+# $FreeBSD: x11-clocks/wmbinclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	wmbinclock
 PORTVERSION=	0.3
@@ -18,6 +14,7 @@ PLIST_FILES=	bin/wmBinClock
 USE_GMAKE=	yes
 USE_XORG=	xpm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#include <values.h>||' ${WRKSRC}/wmBinClock.c
 	@${REINPLACE_CMD} -e 's|^CC.*=|CC ?=|' -e 's|^CFLAGS.*=|CFLAGS +=|' \
