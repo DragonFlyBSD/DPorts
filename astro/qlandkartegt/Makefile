@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <freebsd@levsha.org.ua>
-# $FreeBSD: astro/qlandkartegt/Makefile 325235 2013-08-22 21:42:42Z makc $
+# $FreeBSD: astro/qlandkartegt/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	qlandkartegt
 PORTVERSION=	1.7.3
@@ -15,6 +15,7 @@ LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal \
 		proj:${PORTSDIR}/graphics/proj \
 		gps:${PORTSDIR}/astro/gpsd
 
+NO_STAGE=	yes
 USES=		cmake
 USE_QT4=	dbus gui opengl network sql xml linguist_build \
 		moc_build uic_build rcc_build qmake_build
