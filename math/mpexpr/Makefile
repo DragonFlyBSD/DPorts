@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpexpr
-# Date created:		20 April 2001
-# Whom:			Chuck Hein <geekdude@pacbell.net>
-#
-# $FreeBSD: ports/math/mpexpr/Makefile,v 1.9 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Chuck Hein <geekdude@pacbell.net>
+# $FreeBSD: math/mpexpr/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	mpexpr
 PORTVERSION=	1.1
@@ -27,6 +23,7 @@ PLIST_FILES=	lib/libMpexpr10.so \
 		lib/Mpexpr10/pkgIndex.tcl
 MANN=		mpexpr.n
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/lib/Mpexpr10
 	${INSTALL_PROGRAM} ${WRKSRC}/libMpexpr10.so ${PREFIX}/lib/
