@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-flexmock/Makefile 319623 2013-06-02 01:48:59Z swills $
+# $FreeBSD: devel/ruby-flexmock/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	flexmock
 PORTVERSION=	1.3.2
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
