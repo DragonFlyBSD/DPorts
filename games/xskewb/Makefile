@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xskewb/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xskewb/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xskewb
 PORTVERSION=	5.5.2
@@ -18,6 +18,7 @@ MAN1=		xskewb.1
 MANCOMPRESSED=	no
 XFREE86_HTML_MAN=	no
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xskewb ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/Skewb.ad ${PREFIX}/lib/X11/app-defaults/Skewb
