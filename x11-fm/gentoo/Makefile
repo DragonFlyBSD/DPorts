@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: x11-fm/gentoo/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-fm/gentoo/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	gentoo
 PORTVERSION=	0.19.13
@@ -23,6 +23,7 @@ MAN1=		gentoo.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFAM}
