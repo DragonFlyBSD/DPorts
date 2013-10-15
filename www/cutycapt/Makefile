@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CutyCapt
-# Date created:		2010-09-29
-# Whom:			Axel Gonzalez <loox@e-shell.net>
-#
-# $FreeBSD: www/cutycapt/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Axel Gonzalez <loox@e-shell.net>
+# $FreeBSD: www/cutycapt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cutycapt
 PORTVERSION=	20100608
@@ -22,6 +18,7 @@ USE_QT4=	qmake_build moc_build imageformats webkit
 
 PLIST_FILES=	bin/CutyCapt
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE}
 
