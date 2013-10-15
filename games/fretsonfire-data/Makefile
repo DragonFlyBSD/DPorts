@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/fretsonfire-data/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: games/fretsonfire-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	1.3.110
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/Frets\ on\ Fire-${PORTVERSION}
 
 EXTRACT_AFTER_ARGS=	--exclude 'win32' "Frets on Fire-${PORTVERSION}/${PORTNAME}"
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${DATADIR}
 	@cd ${WRKSRC}/data && \
