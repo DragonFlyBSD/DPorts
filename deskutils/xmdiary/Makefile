@@ -1,5 +1,5 @@
 # Created by: mi@aldan.ziplink.net
-# $FreeBSD: deskutils/xmdiary/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/xmdiary/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xmdiary
 PORTVERSION=	3.0.3
@@ -21,6 +21,7 @@ MAN1=		xdaclunix.1 xdalarm.1 xdcustom.1 xddump.1 xdiary.1 xdinitdb.1 \
 		xdlight.1 xdnotify.1 xdprformat.1 xdremind.1 xdremove.1 \
 		xdrestore.1
 
+NO_STAGE=	yes
 post-patch:
 	@${ECHO_MSG} removing the "malloc.h" includes
 	${SH} ${SCRIPTDIR}/nomalloc $(WRKSRC) 2>&1 > /dev/zero
