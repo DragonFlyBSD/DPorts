@@ -1,6 +1,5 @@
-# Ports collection makefile for:	Layout-Manager
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Layout-Manager/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Layout-Manager/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Layout-Manager
 PORTVERSION=	0.34
@@ -32,4 +31,5 @@ MAN3=		Layout::Manager.3 \
 		Layout::Manager::Grid.3 \
 		Layout::Manager::Single.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
