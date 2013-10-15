@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/pks/pkg-install,v 1.3 2012/11/17 06:01:16 svnexp Exp $
+# $FreeBSD: security/pks/pkg-install 300897 2012-07-14 14:29:18Z beat $
 
 PKGNAME=$1
 STAGE=$2

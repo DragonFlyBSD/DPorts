@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/pks/files/pksd.in,v 1.2 2012/11/17 06:01:16 svnexp Exp $
+# $FreeBSD: security/pks/files/pksd.in 302141 2012-08-05 23:19:36Z dougb $
 #
 #
 # PROVIDE: pksd
