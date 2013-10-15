@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/py-pss/Makefile 321943 2013-06-28 04:24:33Z clsung $
+# $FreeBSD: textproc/py-pss/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pss
 PORTVERSION=	1.38
@@ -14,4 +14,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	pss
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
