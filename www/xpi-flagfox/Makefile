@@ -1,5 +1,5 @@
 # Created by: Oleg Sidorkin <osidorkin@gmail.com>
-# $FreeBSD: www/xpi-flagfox/Makefile 325265 2013-08-23 13:47:12Z wg $
+# $FreeBSD: www/xpi-flagfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	flagfox
 PORTVERSION=	4.2.11
@@ -12,5 +12,6 @@ COMMENT=	Displays a country flag of the location of the website's server
 XPI_NUM=	5791
 XPI_ID=		{1018e4d6-728f-4b20-ad56-37578a4de76b}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
