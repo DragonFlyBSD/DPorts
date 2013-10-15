@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-iris/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-iris/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	iris
 PORTVERSION=	0.12
@@ -21,6 +21,7 @@ USE_GMAKE=	yes
 USE_GL=		yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|-lpthread|${PTHREAD_LIBS:S/"//g}|g' \
