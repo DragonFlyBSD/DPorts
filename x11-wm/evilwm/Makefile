@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11-wm/evilwm/Makefile,v 1.22 2013/01/27 06:41:43 svnexp Exp $
+# $FreeBSD: x11-wm/evilwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	evilwm
 PORTVERSION=	1.1.0
@@ -23,6 +23,7 @@ PLIST_DIRSTRY=	${DESKTOPDIR:S,^${PREFIX}/,,}
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
