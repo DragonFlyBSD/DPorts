@@ -1,5 +1,5 @@
 # Created by: Gavin McDonald <gavin@16degrees.com.au>
-# $FreeBSD: security/orthrus/Makefile 323096 2013-07-16 06:30:29Z jgh $
+# $FreeBSD: security/orthrus/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	orthrus
 PORTVERSION=	0.8.0
@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 USES=		iconv
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
