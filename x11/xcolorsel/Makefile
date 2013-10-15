@@ -1,5 +1,5 @@
 # Created by: Wayne Cuddy <wayne@crb-web.com>
-# $FreeBSD: x11/xcolorsel/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xcolorsel/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcolorsel
 PORTVERSION=	1.1a
@@ -23,6 +23,7 @@ USE_XORG=	xpm
 MAN1=		xcolorsel.1
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${ECHO_CMD} "*.file: ${LOCALBASE}/lib/X11/rgb.txt" >> ${WRKSRC}/Xcolorsel.ad
 	@${REINPLACE_CMD} -e 's|#include <malloc.h>||g' \
