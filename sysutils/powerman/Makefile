@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: sysutils/powerman/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: sysutils/powerman/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	powerman
 PORTVERSION=	2.3.16
@@ -31,6 +31,7 @@ MAN8=		httppower.8 plmpower.8 powermand.8 vpcd.8
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^install-data-am/s|:.*|:|' ${WRKSRC}/scripts/Makefile.in
