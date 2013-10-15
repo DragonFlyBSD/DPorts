@@ -1,9 +1,4 @@
-# New ports collection makefile for:	id-hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/id-hyphen/Makefile,v 1.7 2012/11/17 06:01:59 svnexp Exp $
-#
+# $FreeBSD: textproc/id-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2004.08.12
@@ -27,7 +22,7 @@ PLIST_FILES=	%%DATADIR%%/hyph_id_ID.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_id_ID.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_id_ID.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
