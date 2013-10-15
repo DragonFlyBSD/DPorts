@@ -1,5 +1,5 @@
 # Created by: igor@zynaps.ru
-# $FreeBSD: ports/misc/aclgen/Makefile,v 1.13 2013/02/04 12:19:20 svnexp Exp $
+# $FreeBSD: misc/aclgen/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	aclgen
 PORTVERSION=	2.02
@@ -18,6 +18,7 @@ MAKE_ARGS=	PROG=aclgen
 MAN1=		aclgen.1
 PLIST_FILES=	bin/aclgen
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|<malloc.h>|<unistd.h>| ; \
