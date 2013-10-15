@@ -1,5 +1,5 @@
 # Created by: Niclas Zeising <zeising@FreeBSD.org>
-# $FreeBSD: net/ostinato/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/ostinato/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ostinato
 PORTVERSION=	0.5.1
@@ -23,6 +23,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 HAS_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-configure:
 		@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
