@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ptools
-# Date created:				2008-01-15
-# Whom:					alepulver
-#
-# $FreeBSD: games/ptools/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: alepulver
+# $FreeBSD: games/ptools/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ptools
 PORTVERSION=	1.1
@@ -28,6 +24,7 @@ NO_WRKSUBDIR=	yes
 
 MAN6=		ptools-mopt.6 ptools-mts.6
 
+NO_STAGE=	yes
 post-build:
 	(${ECHO_CMD} "#!${PERL}"; ${CAT} ${DISTDIR}/p3-2.pl) \
 		> ${WRKSRC}/p3-2.pl
