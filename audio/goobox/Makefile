@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: audio/goobox/Makefile 327040 2013-09-12 08:00:37Z jhale $
+# $FreeBSD: audio/goobox/Makefile 327706 2013-09-20 14:36:35Z bapt $
 #   $MCom: ports/audio/goobox/Makefile,v 1.25 2007/08/15 03:03:09 mezz Exp $
 
 PORTNAME=	goobox
@@ -20,6 +20,7 @@ LIB_DEPENDS=	discid:${PORTSDIR}/audio/libdiscid \
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_XORG=	x11
+NO_STAGE=	yes
 USES=		gettext gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 gconf2 desktopfileutils
