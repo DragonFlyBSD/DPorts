@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tavrasm
-# Date created:                         12 December 2003
-# Whom:                                 Wes Peters <@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/avra/Makefile,v 1.14 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: Wes Peters <@FreeBSD.org>
+# $FreeBSD: devel/avra/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	avra
 PORTVERSION=	1.3.0
@@ -27,6 +23,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/avra
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/avra ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
