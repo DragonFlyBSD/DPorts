@@ -1,12 +1,9 @@
-# New ports collection makefile for:	gtkspell-reference
-# Date created:				09 May 2006
-# Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/gtkspell-reference/Makefile,v 1.3 2012/11/17 06:01:57 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: textproc/gtkspell-reference/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTREVISION=	1
 
 REFERENCE_SRC=	${WRKSRC}/docs
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
