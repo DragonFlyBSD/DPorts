@@ -1,5 +1,5 @@
 # Created by: Christopher Nehren <apeiron+ports@coitusmentis.info>
-# $FreeBSD: devel/nant/Makefile 326338 2013-09-05 03:06:06Z sunpoet $
+# $FreeBSD: devel/nant/Makefile 330180 2013-10-12 19:25:53Z sunpoet $
 
 PORTNAME=	nant
 PORTVERSION=	0.92
@@ -13,12 +13,12 @@ COMMENT=	.NET build tool inspired by Ant
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
+BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-INSTALL_TARGET=	install prefix=${PREFIX}
+INSTALL_TARGET=	install destdir=${STAGEDIR} prefix=${PREFIX}
 MAKE_JOBS_UNSAFE=	yes
 USES=		gmake pkgconfig
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -36,8 +36,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
-	cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} . ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 regression-test test: build
