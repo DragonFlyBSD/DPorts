@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kpcal
-# Date created:		1 February 2001
-# Whom:			Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/kpcal/Makefile,v 1.13 2012/11/17 05:58:36 svnexp Exp $
-#
+# Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
+# $FreeBSD: japanese/kpcal/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kpcal
 PORTVERSION=	2.0
@@ -23,6 +19,7 @@ ALL_TARGET=	kpcal
 MAN1=		kpcal.1
 PLIST_FILES=	bin/kpcal
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's/long/time_t/' ${WRKSRC}/kpcal.c
 do-install:
