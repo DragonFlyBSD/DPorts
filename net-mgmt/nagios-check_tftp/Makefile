@@ -1,5 +1,5 @@
 # Created by: hr <holgerrepp@googlemail.com>
-# $FreeBSD: net-mgmt/nagios-check_tftp/Makefile 315799 2013-04-14 14:10:51Z bdrewery $
+# $FreeBSD: net-mgmt/nagios-check_tftp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	check_tftp
 PORTVERSION=	1.0.1
@@ -20,6 +20,7 @@ PLIST_FILES=	libexec/nagios/check_tftp
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/check_tftp
 
