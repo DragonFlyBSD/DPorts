@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-OpenID-Consumer/Makefile 326586 2013-09-07 09:55:50Z tobez $
+# $FreeBSD: net/p5-Net-OpenID-Consumer/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-OpenID-Consumer
 PORTVERSION=	1.15
@@ -28,4 +28,5 @@ regression-test: build
 	cd ${WRKSRC} && ${MAKE} test
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
