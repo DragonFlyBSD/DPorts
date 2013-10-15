@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-ExtUtils-MakeMaker-Coverage/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-ExtUtils-MakeMaker-Coverage/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ExtUtils-MakeMaker-Coverage
 PORTVERSION=	0.05
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		ExtUtils::MakeMaker::Coverage.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
