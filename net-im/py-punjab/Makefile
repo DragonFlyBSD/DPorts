@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-punjab
-# Date created:		17 February 2006
-# Whom:			jodocus <jodocus@jodocus.org>
-#
-# $FreeBSD: net-im/py-punjab/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
-#
+# Created by: jodocus <jodocus@jodocus.org>
+# $FreeBSD: net-im/py-punjab/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	punjab
 PORTVERSION=	0.14
@@ -26,6 +22,7 @@ USE_RC_SUBR=	punjab
 SUB_FILES=	pkg-message punjab.tac
 SUB_LIST+=	"PYTHON_CMD=${PYTHON_CMD}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
