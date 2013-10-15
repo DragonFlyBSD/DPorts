@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/mplayer-skins/Makefile 319909 2013-06-04 21:20:31Z jgh $
+# $FreeBSD: multimedia/mplayer-skins/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mplayer-skins
 PORTVERSION=	1.1.3
@@ -15,6 +15,7 @@ COMMENT=	Skins for MPlayer's Graphical User Interface (GUI)
 
 #
 # When adding a new skin, please make sure to add it into the following
+NO_STAGE=	yes
 # Makefiles:
 # - Makefile.skins
 # - Makefile.options
