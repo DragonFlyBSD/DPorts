@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: net/p5-Crypt-DH-GMP/Makefile 326479 2013-09-06 08:34:39Z tobez $
+# $FreeBSD: net/p5-Crypt-DH-GMP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Crypt-DH-GMP
 PORTVERSION=	0.00011
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 MAN3=		Crypt::DH::GMP.3 \
 		Crypt::DH::GMP::Compat.3
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's#%%LOCALBASE%%#${LOCALBASE}#g' ${WRKSRC}/Makefile.PL
 
