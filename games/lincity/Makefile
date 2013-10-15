@@ -1,5 +1,5 @@
 # Created by: Julian Assange
-# $FreeBSD: games/lincity/Makefile 325550 2013-08-28 20:24:50Z amdmi3 $
+# $FreeBSD: games/lincity/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lincity
 PORTVERSION=	1.13.1
@@ -21,6 +21,7 @@ MAN6=		lincity.6
 
 OPTIONS_DEFINE=	SVGALIB NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSVGALIB}
