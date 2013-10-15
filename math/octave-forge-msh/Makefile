@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-msh/Makefile 323113 2013-07-16 17:23:53Z stephen $
+# $FreeBSD: math/octave-forge-msh/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-msh
 PORTVERSION=	1.0.8
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 RUN_DEPENDS+=	${TARBALLS_DIR}/splines.tar.gz:${PORTSDIR}/math/octave-forge-splines
 RUN_DEPENDS+=	gmsh:${PORTSDIR}/cad/gmsh
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
