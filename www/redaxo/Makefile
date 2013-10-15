@@ -1,5 +1,5 @@
 # Created by: Marco Steinbach <coco@executive-computing.de>
-# $FreeBSD: www/redaxo/Makefile 322252 2013-07-03 20:13:37Z lippe $
+# $FreeBSD: www/redaxo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	redaxo
 PORTVERSION=	4.5
@@ -25,6 +25,7 @@ GD_DESC=	Enable Image Manager extension (requires gd)
 
 OPTIONS_DEFAULT=	APACHE MYSQLS GD
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQLS}
