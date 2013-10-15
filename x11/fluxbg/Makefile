@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: x11/fluxbg/Makefile 327564 2013-09-18 15:58:10Z jgh $
+# $FreeBSD: x11/fluxbg/Makefile 328370 2013-09-26 14:53:55Z jgh $
 
 PORTNAME=	fluxbg
 PORTVERSION=	0.7
@@ -18,14 +18,11 @@ USES=		pathfix pkgconfig
 PLIST_FILES=	bin/fluxbg \
 		bin/fluxbgd \
 		bin/fluxbg_conf
+SUB_FILES=	pkg-message
+SUB_LIST=	PORTNAME=${PORTNAME}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|/usr/X11R6|${LOCALBASE}|g' ${WRKSRC}/src/fluxbg_conf.cc
-
-post-install:
-	@${ECHO_CMD}
-	@${ECHO_MSG} "Execution of ${PREFIX}/bin/${PORTNAME}_conf is a prerequisite of running ${PORTNAME}!"
-	@${ECHO_CMD}
 
 .include <bsd.port.mk>
