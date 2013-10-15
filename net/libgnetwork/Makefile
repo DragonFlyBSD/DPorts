@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/libgnetwork/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: net/libgnetwork/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	libgnetwork
 PORTVERSION=	0.0.9
@@ -27,6 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--enable-ssl=no
 #.endif
 
+NO_STAGE=	yes
 #pre-everything::
 #	@${ECHO_MSG} ""
 #	@${ECHO_MSG} "libgnetwork has the following configurable option(s):"
