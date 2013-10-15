@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-App-GitHub/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-App-GitHub/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-GitHub
 PORTVERSION=	1.0.1
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN1=		github.pl.1
 MAN3=		App::GitHub.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
