@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tcl-getopt
-# Date created:				Mar 18, 1999
-# Whom:					mi
-#
-# $FreeBSD: ports/devel/tclgetopts/Makefile,v 1.12 2012/11/17 05:57:04 svnexp Exp $
-#
+# Created by: mi
+# $FreeBSD: devel/tclgetopts/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tclGetOpts
 PORTVERSION=	1.0
@@ -19,6 +15,7 @@ NO_BUILD=	YES
 
 MANN=		getopt.n typedopts.n
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/lib/foxGetOpt
 	${INSTALL_SCRIPT} \
