@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/sokoban/Makefile 314610 2013-03-18 23:48:12Z bdrewery $
+# $FreeBSD: games/sokoban/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		sokoban
 PORTVERSION=		1.0
@@ -14,6 +14,7 @@ COMMENT=	Logical game: problems with packets in cave
 WRKSRC=			${WRKDIR}/sokoban
 ALL_TARGET=
 
+NO_STAGE=	yes
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/sokoban ${PREFIX}/bin/sokoban
 	@ ${CHOWN} root:games ${PREFIX}/bin/sokoban
