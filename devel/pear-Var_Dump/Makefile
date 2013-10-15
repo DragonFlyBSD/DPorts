@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-Var_Dump/Makefile 318037 2013-05-13 09:40:03Z miwi $
+# $FreeBSD: devel/pear-Var_Dump/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Var_Dump
 PORTVERSION=	1.0.4
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
