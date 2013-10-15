@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: ports/net/java-beepcore/Makefile,v 1.16 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: net/java-beepcore/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	beepcore
 PORTVERSION=	0.9.08
@@ -18,6 +18,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/beep*.jar ${JAVAJARDIR}
 	cd ${WRKSRC}/example \
