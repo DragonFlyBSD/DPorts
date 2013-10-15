@@ -1,5 +1,5 @@
 # Created by: Justin Hawkins <justin@hawkins.id.au>
-# $FreeBSD: www/twiki/Makefile 326139 2013-09-03 12:27:09Z az $
+# $FreeBSD: www/twiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	twiki
 PORTVERSION=	5.1.4
@@ -30,6 +30,7 @@ RUN_DEPENDS=	\
 USES=		perl5
 WRKSRC=	${WRKDIR}/twiki
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -rf ${WRKSRC}/lib/CPAN
 	@${CAT} ${.CURDIR}/../twiki-*/pkg-plist |\
