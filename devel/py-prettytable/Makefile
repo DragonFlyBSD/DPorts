@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-prettytable
-# Date created:				2011-12-08
-# Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-prettytable/Makefile,v 1.5 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
+# $FreeBSD: devel/py-prettytable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	prettytable
 PORTVERSION=	0.6.1
@@ -21,4 +17,5 @@ PYDISTUTILS_NOEGGINFO=	yes
 
 PLIST_FILES=	${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}/${PYEASYINSTALL_EGG}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
