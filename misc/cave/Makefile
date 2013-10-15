@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	cave
-# Date created:			Dec 30, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/misc/cave/Makefile,v 1.17 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: misc/cave/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	cave
 PORTVERSION=	1.0b
@@ -19,6 +14,7 @@ GNU_CONFIGURE=	yes
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${LN} -sf ${PORTNAME}.man ${WRKSRC}/doc/${PORTNAME}.1
 
