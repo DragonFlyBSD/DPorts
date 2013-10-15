@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-gtk/Makefile 321800 2013-06-26 17:12:08Z crees $
+# $FreeBSD: net-p2p/transmission-gtk/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PKGNAMESUFFIX=	-gtk
 
@@ -37,4 +37,5 @@ post-patch: general-patch
 post-install: general-install
 	@-update-desktop-database
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
