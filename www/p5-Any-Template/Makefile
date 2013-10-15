@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-Any-Template/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Any-Template/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Any-Template
 PORTVERSION=	1.015
@@ -23,4 +23,5 @@ MAN3=	Any::Template.3 Any::Template::Backend.3 \
 	Any::Template::Backend::Text::MicroMason.3 \
 	Any::Template::Backend::Text::Template.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
