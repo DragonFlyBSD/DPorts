@@ -1,5 +1,5 @@
 # Created by: Don Owens <don@regexguy.com>
-# $FreeBSD: databases/p5-DBIx-Wrapper/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-DBIx-Wrapper/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Wrapper
 PORTVERSION=	0.28
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 MAN3=		DBIx::Wrapper.3 \
 		DBIx::Wrapper::Request.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
