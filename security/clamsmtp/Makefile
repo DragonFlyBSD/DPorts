@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: security/clamsmtp/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/clamsmtp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	clamsmtp
 PORTVERSION=	1.10
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	LOCAL_CLAMAV
 LOCAL_CLAMAV_DESC=		RUN_DEPEND on security/clamav
 LOCAL_CLAMAV_DEVEL_DESC=	RUN_DEPEND on security/clamav-devel
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLOCAL_CLAMAV}
