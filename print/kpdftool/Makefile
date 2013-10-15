@@ -1,5 +1,5 @@
 # Created by: Yuan, Jue <yuanjue@yuanjue.net>
-# $FreeBSD: print/kpdftool/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/kpdftool/Makefile 329880 2013-10-09 10:08:04Z makc $
 
 PORTNAME=	kpdftool
 PORTVERSION=	0.23.1
@@ -16,16 +16,13 @@ RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 USE_ZIP=	yes
 USE_QT4=	qt3support moc_build porting_build qmake_build uic3_build
 USE_GHOSTSCRIPT_RUN=	yes
+USES=		qmake
 
 DESKTOP_ENTRIES=	"KPDFTool" "${COMMENT}" "kpdftool" \
-			"kpdftool" "Qt;Utility;" false
-
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} ${QMAKE_ARGS}
+			"kpdftool" "Qt;Utility;" true
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	cd ${WRKSRC}/icons && ${COPYTREE_SHARE} hicolor ${PREFIX}/share/icons/
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	cd ${WRKSRC}/icons && ${COPYTREE_SHARE} hicolor ${STAGEDIR}${PREFIX}/share/icons/
 
 .include <bsd.port.mk>
