@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-POE-Component-Client-HTTP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-POE-Component-Client-HTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	POE-Component-Client-HTTP
 PORTVERSION=	0.9480
@@ -31,6 +31,7 @@ MAN3=		POE::Component::Client::HTTP.3 \
 		POE::Component::Client::HTTP::RequestFactory.3 \
 		POE::Filter::HTTPChunk.3 POE::Filter::HTTPHead.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
