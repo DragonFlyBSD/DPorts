@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: multimedia/libquvi/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: multimedia/libquvi/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	libquvi
 PORTVERSION=	0.4.1
@@ -33,6 +33,7 @@ PROJECTHOST=	quvi
 
 PORTSCOUT=	limit:0.4.[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
