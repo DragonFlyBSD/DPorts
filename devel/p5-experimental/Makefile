@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-experimental/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-experimental/Makefile 328774 2013-09-30 08:28:04Z sunpoet $
 
 PORTNAME=	experimental
 PORTVERSION=	0.005
@@ -14,9 +14,8 @@ COMMENT=	Experimental features made easy
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Module-Build-Tiny>=0.021:${PORTSDIR}/devel/p5-Module-Build-Tiny
-
-USE_PERL5=	modbuild
+NO_STAGE=	yes
+USE_PERL5=	modbuildtiny
 USES=		perl5
 
 MAN3=		experimental.3
