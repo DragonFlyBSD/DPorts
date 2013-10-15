@@ -1,5 +1,5 @@
 # Created by: KIMURA Shigekazu <rikimura@a011.broada.jp>
-# $FreeBSD: archivers/untar/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: archivers/untar/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	untar
 PORTVERSION=	1.4
@@ -13,6 +13,7 @@ EXTRACT_ONLY=
 MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Lists/Extracts files from a "*.tgz" or "*.gz" archive
 
+NO_STAGE=	yes
 MAKEFILE=	/usr/share/mk/bsd.prog.mk
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/untar
