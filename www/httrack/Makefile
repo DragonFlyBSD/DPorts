@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: www/httrack/Makefile 327407 2013-09-16 15:17:59Z sunpoet $
+# $FreeBSD: www/httrack/Makefile 330146 2013-10-12 16:42:36Z sunpoet $
 
 PORTNAME=	httrack
 PORTVERSION=	3.47.27
@@ -16,14 +16,14 @@ LICENSE_COMB=	dual
 
 OPTIONS_DEFINE=	DOCS
 
+PORTSCOUT=	skipv:3.47.99
+
 CONFIGURE_ARGS=	--docdir="${DOCSDIR}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 USES=		gmake iconv
-
-MAN1=		htsserver.1 httrack.1 proxytrack.1 webhttrack.1
 
 .include <bsd.port.options.mk>
 
@@ -37,7 +37,7 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${INSTALL_DATA} ${WRKSRC}/html/httrack.css ${DOCSDIR}/httrack.css
+	${INSTALL_DATA} ${WRKSRC}/html/httrack.css ${STAGEDIR}${DOCSDIR}/httrack.css
 .endif
 
 .include <bsd.port.mk>
