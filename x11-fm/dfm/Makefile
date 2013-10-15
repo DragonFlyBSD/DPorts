@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dfm
-# Date created:				25 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/x11-fm/dfm/Makefile,v 1.43 2012/11/17 06:03:26 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: x11-fm/dfm/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	dfm
 PORTVERSION=	0.99.9
@@ -28,6 +24,7 @@ MAN1=		dfm.1x
 MYPORTDOCS=	ANNOUNCE BUGS COPYRIGHT CREDITS ChangeLog DOWNLOAD HELP.ERROR \
 		NO_WARRANTY README START TESTED TODO
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e \
 		's|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
