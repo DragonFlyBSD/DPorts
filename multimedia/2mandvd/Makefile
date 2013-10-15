@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: multimedia/2mandvd/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: multimedia/2mandvd/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	2ManDVD
 PORTVERSION=	1.8.4
@@ -43,6 +43,7 @@ DATADIR=	${PREFIX}/share/2ManDVD
 
 LRELEASE=	${LOCALBASE}/bin/lrelease-qt4
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name "*~" -delete
 
