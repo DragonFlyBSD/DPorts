@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: misc/geekcode/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/geekcode/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	geekcode
 PORTVERSION=	1.7.3
@@ -14,6 +14,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 PLIST_FILES=	bin/geekcode
 PORTDOCS=	geekcode.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
