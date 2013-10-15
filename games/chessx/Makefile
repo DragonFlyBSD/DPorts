@@ -1,4 +1,4 @@
-# $FreeBSD: games/chessx/Makefile 315544 2013-03-29 16:16:18Z jgh $
+# $FreeBSD: games/chessx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	chessx
 PORTVERSION=	0.9.6
@@ -21,6 +21,7 @@ STOCKFISH_DESC=	Build with Stockfish Chess Engine
 CRAFTY_DESC=	Build with Crafty Chess Application
 OPTIONS_DEFAULT=STOCKFISH CRAFTY
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSTOCKFISH}
