@@ -1,2 +1,2 @@
-@comment $FreeBSD: ports/misc/jive/pkg-plist,v 1.4 2012/11/17 05:59:38 svnexp Exp $
+@comment $FreeBSD: misc/jive/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/jive
