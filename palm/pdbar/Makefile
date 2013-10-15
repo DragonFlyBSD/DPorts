@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pdbar
-# Date created:		5 January 2004
-# Whom:			Eric P. Scott <eps+pdbar@ana.com>
-#
-# $FreeBSD: ports/palm/pdbar/Makefile,v 1.3 2012/11/17 06:00:44 svnexp Exp $
-#
+# Created by: Eric P. Scott <eps+pdbar@ana.com>
+# $FreeBSD: palm/pdbar/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	pdbar
 PORTVERSION=	00.05.01
@@ -20,6 +16,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="" AR=${AR} RANLIB=${RANLIB} LD
 MAN1=		pdbar.1
 PLIST_FILES=	bin/pdbar
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/par ${PREFIX}/bin/pdbar
 		${INSTALL_MAN} ${WRKSRC}/par.man ${MANPREFIX}/man/man1/pdbar.1
