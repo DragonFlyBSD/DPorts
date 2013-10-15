@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bvi
-# Date created:				05 November 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/editors/bvi/Makefile,v 1.13 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: editors/bvi/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	bvi
 PORTVERSION=	1.3.2
@@ -21,4 +17,5 @@ MAN1=		bvi.1 bmore.1
 MLINKS=		bvi.1 bview.1 \
 		bvi.1 bvedit.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
