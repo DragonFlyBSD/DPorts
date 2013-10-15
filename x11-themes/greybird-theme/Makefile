@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/greybird-theme/Makefile 325412 2013-08-26 17:50:36Z olivierd $
-#
+# $FreeBSD: x11-themes/greybird-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	greybird
 PORTVERSION=	1.2
@@ -27,6 +26,7 @@ OPTIONS_DEFINE=	NOTIFYD
 OPTIONS_DEFAULT=	NOTIFYD
 NOTIFYD_DESC=	Install xfce4-notifyd theme
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
