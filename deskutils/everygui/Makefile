@@ -1,8 +1,5 @@
-# New ports collection makefile for:	everygui
-# Date Created:				09 Jan 2006
-# Whom:					Remington Lang <MrL0Lz@gmail.com>
-#
-# $FreeBSD: ports/deskutils/everygui/Makefile,v 1.12 2012/11/17 05:55:27 svnexp Exp $
+# Created by: Remington Lang <MrL0Lz@gmail.com>
+# $FreeBSD: deskutils/everygui/Makefile 328649 2013-09-29 07:13:33Z mva $
 
 PORTNAME=	everygui
 PORTVERSION=	0.99.b
@@ -15,6 +12,7 @@ COMMENT=	Dynamic GUI for an OS command
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_GNOME=	libglade2 pygnome2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
