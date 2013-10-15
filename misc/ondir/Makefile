@@ -1,23 +1,26 @@
-# New ports collection makefile for:	ondir
-# Date created:		2010-01-24
-# Whom:			ports@c0decafe.net <ports@c0decafe.net>
-#
-# $FreeBSD: misc/ondir/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
-#
+# Created by: ports@c0decafe.net <ports@c0decafe.net>
+# $FreeBSD: misc/ondir/Makefile 329917 2013-10-09 18:19:05Z antoine $
 
 PORTNAME=	ondir
-PORTVERSION=	0.2.2
+PORTVERSION=	0.2.4
 CATEGORIES=	misc
 MASTER_SITES=	http://swapoff.org/files/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automatically executes scripts as you traverse directories
 
-ALL_TARGET=	${PORTNAME}
-MAKE_ARGS=	PREFIX=${PREFIX} CONF=${PREFIX}/etc/ondirrc
-MAN1=		${PORTNAME}.1
-MANCOMPRESSED=	no
+LICENSE=	GPLv2
 
-PLIST_FILES=	bin/${PORTNAME}
+ALL_TARGET=	${PORTNAME}
+MAKE_ARGS=	PREFIX="${PREFIX}" \
+		CC="${CC}" LD="${CC}" \
+		CFLAGS="${CFLAGS} -DVERSION=\\\"${PORTVERSION}\\\" -DGLOBAL_CONF=\\\"${PREFIX}/etc/ondirrc\\\"" \
+		LDFLAGS="${LDFLAGS}"
+
+PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
+
+do-install:
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
