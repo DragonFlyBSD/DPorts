@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Ubic
-# Date created:		21 Sep 2011
-# Whom:			Dmitry Yashin <dmitry@yashin.su>
-#
-# $FreeBSD: sysutils/p5-Ubic/Makefile 327368 2013-09-16 07:29:08Z az $
-#
+# Created by: Dmitry Yashin <dmitry@yashin.su>
+# $FreeBSD: sysutils/p5-Ubic/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Ubic
 PORTVERSION=	1.44
@@ -88,6 +84,7 @@ MAN3=		Ubic.3 \
 		Ubic::UA.3 \
 		Ubic::Watchdog.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
