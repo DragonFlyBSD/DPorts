@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: comms/fl_moxgen/Makefile 314855 2013-03-21 17:39:03Z bapt $
+# $FreeBSD: comms/fl_moxgen/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	fl_moxgen
 PORTVERSION=	0.05
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	PDF
 OPTIONS_DEFAULT=	PDF
 PDF_DESC=	Enable PDF Writing (requires libharu)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPDF}
