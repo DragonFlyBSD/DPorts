@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-rime/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: chinese/fcitx-rime/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	fcitx-rime
 PORTVERSION=	0.1.2
@@ -22,4 +22,5 @@ INSTALLS_ICONS=	yes
 
 PROJECTHOST=	fcitx
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
