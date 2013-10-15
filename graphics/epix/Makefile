@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/epix/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/epix/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	epix
 PORTVERSION=	1.2.11
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--with-bash=${LOCALBASE}/bin/bash \
 MAN1=		elaps.1 epix.1 flix.1 laps.1
 INFO=		epix
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
