@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: net/polyorb/Makefile 324631 2013-08-12 14:21:36Z marino $
+# $FreeBSD: net/polyorb/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	polyorb
 PORTVERSION=	2.9.0
@@ -38,6 +38,7 @@ CONFIGURE_ARGS=	--with-appli-perso="corba dsa moma" \
 # However, GPL 2012 is particularly unstable, so a custom tarball from
 # SVN revision 201373 has been created, which is the last of PCS version 5.
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} default
 
