@@ -1,9 +1,5 @@
-# New ports collection makefile for:	epoch
-# Date created:		2010-06-15
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: deskutils/epoch/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: deskutils/epoch/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	epoch
 PORTVERSION=	1.6
@@ -29,6 +25,7 @@ DESKTOP_ENTRIES="Epoch" "Timeline application" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" "${PORTNAME}" \
 		"" false
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
