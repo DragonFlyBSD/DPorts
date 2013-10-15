@@ -1,5 +1,5 @@
 # Created by: John M. Cooper <john_m_cooper@yahoo.com>
-# $FreeBSD: devel/afay/Makefile 323753 2013-07-26 20:50:50Z marino $
+# $FreeBSD: devel/afay/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	afay
 PORTVERSION=	041111
@@ -19,6 +19,7 @@ MAN1=		aflex.1 ayacc.1
 NO_WRKSUBDIR=	yes
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
