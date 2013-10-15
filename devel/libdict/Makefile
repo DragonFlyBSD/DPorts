@@ -1,5 +1,5 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: ports/devel/libdict/Makefile,v 1.8 2013/01/12 13:02:13 svnexp Exp $
+# $FreeBSD: devel/libdict/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libdict
 PORTVERSION=	0.2.1
@@ -17,6 +17,7 @@ USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-extract:
 .	for ___f in avl_insert.pdf empty.pdf treap_insert.pdf
 	@${CP} ${DISTDIR}/${___f} ${WRKSRC}/

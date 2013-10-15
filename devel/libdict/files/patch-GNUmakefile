@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libdict/files/patch-GNUmakefile,v 1.2 2012/11/17 05:55:53 svnexp Exp $
+$FreeBSD: devel/libdict/files/patch-GNUmakefile 300896 2012-07-14 13:54:48Z beat $
 
 --- GNUmakefile.orig
 +++ GNUmakefile
