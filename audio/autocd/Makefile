@@ -1,9 +1,5 @@
-# New ports collection makefile for:	 autocd
-# Date created:		11 Marth 2003
-# Whom:			Dmitry Afanasiev <KOT@MATPOCKuH.Ru>
-#
-# $FreeBSD: ports/audio/autocd/Makefile,v 1.15 2012/11/17 05:54:28 svnexp Exp $
-#
+# Created by: Dmitry Afanasiev <KOT@MATPOCKuH.Ru>
+# $FreeBSD: audio/autocd/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	autocd
 PORTVERSION=	3.02.12b
@@ -14,6 +10,7 @@ MASTER_SITES=	ftp://kot.spb.ru/pub/src/projects/autocd/
 MAINTAINER=	KOT@MATPOCKuH.Ru
 COMMENT=	Compact disc control utility
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 MAN1=		cdctl.1 acdplay.1
 MAN8=		autocd.8
