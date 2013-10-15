@@ -1,11 +1,5 @@
-# New ports collection makefile for:		etcmerge
-# Date created:					05 July 2003
-# Whom:						eivind
-#
-# $FreeBSD: ports/sysutils/etcmerge/Makefile,v 1.11 2012/11/17 06:01:29 svnexp Exp $
-#
-# This port is self contained in the src directory.
-#
+# Created by: eivind
+# $FreeBSD: sysutils/etcmerge/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	etcmerge
 PORTVERSION=	0.4
@@ -25,6 +19,7 @@ SRC=		${.CURDIR}/src
 MAN8=		${PORTNAME}.8
 PLIST_FILES=	sbin/etcmerge
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${SRC}/${PORTNAME}.sh ${PREFIX}/sbin/${PORTNAME}
 	${INSTALL_MAN} ${SRC}/${PORTNAME}.8 ${PREFIX}/man/man8
