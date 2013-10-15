@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: ports/x11-fm/mucommander/Makefile,v 1.15 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: x11-fm/mucommander/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	mucommander
 PORTVERSION=	0.9.0
@@ -22,6 +22,7 @@ PORTDOCS=	readme.txt
 
 WRKSRC=		${WRKDIR}/muCommander-${PORTVERSION:S/./_/g}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/mucommander.jar ${DATADIR}
