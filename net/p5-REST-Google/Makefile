@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-REST-Google/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-REST-Google/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	REST-Google
 PORTVERSION=	1.0.8
@@ -35,4 +35,5 @@ MAN3=	REST::Google.3 \
 	REST::Google::Search::Web.3 \
 	REST::Google::Translate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
