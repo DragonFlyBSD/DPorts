@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/qct/Makefile 319123 2013-05-26 17:36:38Z bsam $
+# $FreeBSD: devel/qct/Makefile 328201 2013-09-24 21:58:37Z bsam $
 
 PORTNAME=	qct
 PORTVERSION=	1.7
@@ -20,12 +20,8 @@ USE_PYDISTUTILS=	yes
 WRKSRC=		${WRKDIR}/qct
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/doc/qct.1.txt ${DOCSDIR}/qct.1.txt
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/doc/qct.1.txt ${STAGEDIR}${DOCSDIR}/qct.1.txt
 
 .include <bsd.port.mk>
