@@ -1,5 +1,5 @@
 # Created by: Piero Serini <piero@FreeBSD.org>
-# $FreeBSD: astro/xearth/Makefile 323101 2013-07-16 12:15:05Z madpilot $
+# $FreeBSD: astro/xearth/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	xearth
 PORTVERSION=	1.2
@@ -12,6 +12,7 @@ COMMENT=	Set the root window to the image of earth
 
 USE_XORG=	x11 xext sm ice xt
 USE_XZ=		yes
+NO_STAGE=	yes
 MAN1=		xearth.1
 PLIST_FILES=	bin/xearth \
 		lib/X11/xearth/freebsd.committers.markers \

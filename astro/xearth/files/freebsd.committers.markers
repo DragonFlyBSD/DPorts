@@ -1,4 +1,4 @@
-# $FreeBSD: astro/xearth/files/freebsd.committers.markers 321759 2013-06-25 19:16:58Z eadler $
+# $FreeBSD: astro/xearth/files/freebsd.committers.markers 330096 2013-10-11 18:49:15Z mat $
 #
 # FreeBSD Project Committers
 #
@@ -187,7 +187,7 @@
  48.827111,	2.347019,	"sbz"				# Paris, France
  41.6666,	2.3333,		"jesusr"			# Barcelona, Spain
  48.87,		2.33,		"dumbbell,cognet"	align=left	# Paris, France
- 48.847135,	2.28514,	"mat"				# Paris, France
+ 48.8473,	2.2856,		"mat"				# Paris, France
  48.912,	2.256,		"mich"		align=left	# La Garenne-Colombes, France
  48.818344,	2.245696,	"roberto"	align=left	# Meudon, France
  48.836,	2.242,		"blackend"	align=left	# Boulogne-Billancourt, France
@@ -271,6 +271,7 @@
  43.039,	-87.906,	"silby"				# Milwaukee, WI, USA
  48.400,	-89.233,	"tabthorpe"			# (CORE) Thunder Bay, ON, Canada
  43.19,		-89.38,		"jlemon"			# Madison, WI, USA
+ 43.02,		-89.41,		"feld"				# Madison, WI, USA
  43.063,	-89.452,	"nwhitehorn"			# Madison, WI, USA
  41.748,	-92.724,	"brooks"			# Grinnell, IA, USA
  44.99,		-93.25,		"mpp"				# Minneapolis, MN, USA
