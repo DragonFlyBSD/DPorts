@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-synaptics/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-input-synaptics/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	xf86-input-synaptics
 PORTVERSION=	${SYNAPTICS_VERSION}
@@ -13,10 +13,11 @@ CONFLICTS=	synaptics-[0-9]*
 OPTIONS_DEFINE=	HAL
 OPTIONS_DEFAULT=HAL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USES=		pathfix
-USE_XORG=	x11
+USE_XORG=	x11 xtst
 XORG_CAT=	driver
 
 .if ${PORT_OPTIONS:MHAL}
