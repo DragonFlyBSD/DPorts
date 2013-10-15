@@ -1,5 +1,5 @@
 # Created by: Dmitry Frolov <frol@nov.net>
-# $FreeBSD: sysutils/ipmitool/Makefile 325311 2013-08-24 20:39:45Z sunpoet $
+# $FreeBSD: sysutils/ipmitool/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ipmitool
 PORTVERSION=	1.8.12
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--enable-intf-open
 CONFIGURE_ARGS+=	--disable-intf-open
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MDOCS)
