@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/misc/delay/files/patch-delay.c,v 1.2 2012/11/17 05:59:33 svnexp Exp $
+$FreeBSD: misc/delay/files/patch-delay.c 300896 2012-07-14 13:54:48Z beat $
 
 --- delay.c.orig	Sun Aug 22 22:05:16 2004
 +++ delay.c	Sun Aug 22 22:05:28 2004
