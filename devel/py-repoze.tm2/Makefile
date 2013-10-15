@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-repoze.tm2
-# Date created:		9th August,2009
-# Whom:	      		Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-repoze.tm2/Makefile,v 1.7 2012/11/17 05:56:50 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-repoze.tm2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	repoze.tm2
 PORTVERSION=	1.0
@@ -21,4 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
