@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-wx/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11-toolkits/hs-wx/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	0.90.0.1
@@ -14,5 +14,6 @@ USE_WX=		2.9
 WX_COMPS=	wx
 WX_UNICODE=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
