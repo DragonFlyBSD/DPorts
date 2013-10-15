@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: ports/net/sixxs-aiccu/Makefile,v 1.20 2013/02/05 16:54:24 svnexp Exp $
+# $FreeBSD: net/sixxs-aiccu/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	aiccu
 PORTVERSION=	20070115
@@ -16,6 +16,8 @@ LIB_DEPENDS=	gnutls-openssl:${PORTSDIR}/security/gnutls
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
+
+NO_STAGE=	yes
 
 USE_RC_SUBR=	sixxs-aiccu
 USE_GMAKE=	yes
