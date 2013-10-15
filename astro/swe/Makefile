@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/swe/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/swe/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	swe
 PORTVERSION=	1.79.00
@@ -10,6 +10,7 @@ DISTNAME=	${PORTNAME}_unix_src_${PORTVERSION}
 MAINTAINER=	5u623l20@gmail.com
 COMMENT=	High Precision Ephemeris Developed By Astrodienst
 
+NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/src
 USES=		gmake
 ALL_TARGET=	#
