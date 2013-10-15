@@ -1,5 +1,5 @@
 # Created by: pdseniura@techie.com
-# $FreeBSD: net/c3270/Makefile 319986 2013-06-05 12:51:05Z bapt $
+# $FreeBSD: net/c3270/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	c3270
 PORTVERSION=	3.3.12ga13
@@ -45,6 +45,7 @@ SCRIPT_DESC=		Include scripting support
 TN3270E_DESC=		Include TN3270-Extended support
 TRACE_DESC=		Include trace support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
