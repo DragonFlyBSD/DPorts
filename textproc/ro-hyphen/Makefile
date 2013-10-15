@@ -1,9 +1,4 @@
-# New ports collection makefile for:	ro-hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/ro-hyphen/Makefile,v 1.6 2012/11/17 06:02:19 svnexp Exp $
-#
+# $FreeBSD: textproc/ro-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	3.3.6
@@ -28,7 +23,7 @@ PLIST_FILES=	%%DATADIR%%/hyph_ro_RO.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_ro_RO.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_ro_RO.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
