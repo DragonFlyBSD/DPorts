@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-shakespeare-text/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-shakespeare-text/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	shakespeare-text
 PORTVERSION=	1.0.0.5
@@ -12,5 +12,6 @@ LICENSE=	MIT
 
 USE_CABAL=	shakespeare>=1.0 text>=0.7
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
