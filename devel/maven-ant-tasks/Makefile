@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	maven-ant-tasks
-# Date created:		June 2010
-# Whom:			Chris Rees <utisoft@gmail.com>
-#
-# $FreeBSD: ports/devel/maven-ant-tasks/Makefile,v 1.9 2012/11/17 05:55:59 svnexp Exp $
-#
+# Created by: Chris Rees <utisoft@gmail.com>
+# $FreeBSD: devel/maven-ant-tasks/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	maven-ant-tasks
 PORTVERSION=	2.1.3
@@ -26,6 +22,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	%%JAVASHAREDIR%%/apache-ant/lib/${DISTNAME}${EXTRACT_SUFX}
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
 		${JAVASHAREDIR}/apache-ant/lib/
