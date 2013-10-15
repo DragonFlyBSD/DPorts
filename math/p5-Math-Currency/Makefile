@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Math-Currency/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-Currency/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Math-Currency
 PORTVERSION=	0.47
@@ -15,6 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
+NO_STAGE=	yes
 
 MAN3=		Math::Currency.3
 
