@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wordgrinder
-# Date created:				15 August 2010
-# Whom:					Vitaly Magerya <vmagerya@gmail.com>
-#
-# $FreeBSD: ports/editors/wordgrinder/Makefile,v 1.2 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: Vitaly Magerya <vmagerya@gmail.com>
+# $FreeBSD: editors/wordgrinder/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	wordgrinder
 PORTVERSION=	0.3.3
@@ -26,6 +22,7 @@ MAN1=		wordgrinder.1
 PLIST_DIRS=	share/doc/wordgrinder
 PLIST_FILES=	bin/wordgrinder share/doc/wordgrinder/README.wg
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,^PREFIX =.*$$,PREFIX = "${PREFIX}",' \
 		-e 's,/usr/include/lua5.1,${LUA_INCDIR},' \
