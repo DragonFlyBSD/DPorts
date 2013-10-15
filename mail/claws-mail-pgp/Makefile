@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: mail/claws-mail-pgp/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: mail/claws-mail-pgp/Makefile 329440 2013-10-05 11:25:29Z pawel $
 
 PORTNAME=	pgp
 PORTREVISION=	0
