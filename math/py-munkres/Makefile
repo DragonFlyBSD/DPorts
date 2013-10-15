@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: math/py-munkres/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: math/py-munkres/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	munkres
 PORTVERSION=	1.0.5.4
@@ -21,4 +21,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/munkres.py \
 		%%PYTHON_SITELIBDIR%%/munkres.pyc \
 		%%PYTHON_SITELIBDIR%%/munkres.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
