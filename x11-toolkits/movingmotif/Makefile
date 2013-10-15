@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/movingmotif/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: x11-toolkits/movingmotif/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	movingmotif
 PORTVERSION=	2.3.0
@@ -14,6 +14,7 @@ USES=		motif
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
