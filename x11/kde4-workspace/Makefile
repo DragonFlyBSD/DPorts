@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-workspace/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/kde4-workspace/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_VERSION}
@@ -85,6 +85,7 @@ UPOWER_DESC=	Power management via UPower
 VLC_DESC=	Multimedia via Phonon-VLC
 WALLPAPERS_DESC=Install official KDE wallpapers
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGPS}
