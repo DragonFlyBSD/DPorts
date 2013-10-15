@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Remember/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Data-Remember/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Remember
 PORTVERSION=	0.07
@@ -27,4 +27,5 @@ MAN3=	Data::Remember.3 \
 	Data::Remember::POE.3 \
 	Data::Remember::YAML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
