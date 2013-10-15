@@ -1,17 +1,13 @@
-# New ports collection makefile for:	e00compr
-# Date created:				May 04 , 2008
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/e00compr/Makefile,v 1.4 2012/11/17 05:55:41 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/e00compr/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	e00compr
 PORTVERSION=	1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://avce00.maptools.org/dl/
 
-MAINTAINER=	wenheping@gmail.com
-COMMENT=	A Library to Read/Write Compressed E00 Files
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	Library to Read/Write Compressed E00 Files
 
 USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
@@ -19,13 +15,19 @@ PLIST_FILES=	bin/e00conv include/e00compr.h \
 		lib/e00compr.a
 PORTDOCS=	e00compr.html
 
+NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
+post-extract:
+	${REINPLACE_CMD} -e 's#gcc#${CC}#g' ${WRKSRC}/Makefile
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/e00conv ${PREFIX}/bin/e00conv
 	${INSTALL_DATA} ${WRKSRC}/e00compr.h ${PREFIX}/include/e00compr.h
 	${INSTALL_DATA} ${WRKSRC}/e00compr.a ${PREFIX}/lib/e00compr.a
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/e00compr.html ${DOCSDIR}
 .endif
