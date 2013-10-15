@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	genmenu
-# Date created:			Nov 10, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/x11-wm/genmenu/Makefile,v 1.9 2012/11/17 06:03:42 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: x11-wm/genmenu/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	genmenu
 PORTVERSION=	1.0.7
@@ -20,6 +15,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 PLIST_FILES=	bin/genmenu
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|^#!/bin/bash|#!${LOCALBASE}/bin/bash|" ${WRKSRC}/genmenu
 
