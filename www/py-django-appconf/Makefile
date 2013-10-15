@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/py-django-appconf/Makefile,v 1.3 2013/02/12 19:40:13 svnexp Exp $
+# $FreeBSD: www/py-django-appconf/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-appconf
 PORTVERSION=	0.6
@@ -17,4 +17,5 @@ PYDISTUTILS_PKGNAME=	${PORTNAME:S/-/_/}
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
