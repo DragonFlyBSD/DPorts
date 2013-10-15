@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	spinner
-# Date created:			Dec 16, 2002
-# Whom:				mich@freebsdcluster.org
-#
-# $FreeBSD: ports/sysutils/spinner/Makefile,v 1.6 2012/11/17 06:01:46 svnexp Exp $
-#
+# Created by: mich@freebsdcluster.org
+# $FreeBSD: sysutils/spinner/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	spinner
 PORTVERSION=	1.2.4
@@ -17,6 +12,7 @@ COMMENT=	Keep ssh and telnet connections from dropping due to inactivity
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/spinner ${PREFIX}/sbin
 .if !defined(NOPORTDOCS)
