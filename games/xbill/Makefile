@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/xbill/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xbill/Makefile 329259 2013-10-04 02:00:37Z amdmi3 $
 
 PORTNAME=	xbill
 PORTVERSION=	2.1
@@ -12,10 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Save your computers from the evil clutches of Bill
 
 GNU_CONFIGURE=	yes
-WANT_GNOME=	yes
 CONFIGURE_ARGS=	--localstatedir=${SCORES_DIR}
-
-MAN6=		xbill.6
 
 SCORES_DIR?=	${DATADIR}/scores
 
@@ -25,6 +22,11 @@ DESKTOP_ENTRIES="xBill" \
 		"xbill" \
 		"Game;ArcadeGame;" \
 		false
+
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man6/${PORTNAME}.6.gz
+
+PORTDATA=	*
 
 OPTIONS_SINGLE=	WIDGETSET
 OPTIONS_SINGLE_WIDGETSET=	ATHENA GTK MOTIF
