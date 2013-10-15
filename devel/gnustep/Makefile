@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: devel/gnustep/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gnustep
 PORTVERSION=	1.28.0
@@ -23,4 +23,5 @@ USE_GNUSTEP_GUI=	yes
 USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_CAIRO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
