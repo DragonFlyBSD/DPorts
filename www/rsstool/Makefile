@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rsstool
-# Date created:		11 June 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: www/rsstool/Makefile 316683 2013-04-27 18:25:24Z mva $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/rsstool/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rsstool
 DISTVERSION=	1.0.0
@@ -21,6 +17,7 @@ BUILD_WRKSRC=	${WRKSRC}/src
 CONFIGURE_WRKSRC=	${WRKSRC}/src
 HAS_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${BUILD_WRKSRC}/&&${REINPLACE_CMD} -e 's|gcc|${CC}|' Makefile
 
