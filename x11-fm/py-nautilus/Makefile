@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: x11-fm/py-nautilus/Makefile 326145 2013-09-03 12:56:24Z bapt $
+# $FreeBSD: x11-fm/py-nautilus/Makefile 327780 2013-09-20 23:49:39Z bapt $
 #   $MCom: ports/x11-fm/py-nautilus/Makefile,v 1.11 2009/04/07 17:54:12 marcus Exp $
 
 PORTNAME=	nautilus
@@ -26,6 +26,7 @@ CONFIGURE_ENV=	PYTHON_VERSION="${PYTHON_VER}"
 
 DOCSDIR=	${PREFIX}/share/doc/nautilus-python
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|[(]datadir[)]/doc/|(prefix)/share/doc/|g' \
 		${WRKSRC}/examples/Makefile.in
