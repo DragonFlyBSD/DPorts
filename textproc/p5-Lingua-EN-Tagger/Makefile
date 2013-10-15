@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-Lingua-EN-Tagger/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Lingua-EN-Tagger/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-EN-Tagger
 PORTVERSION=	0.24
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Lingua::EN::Tagger.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
