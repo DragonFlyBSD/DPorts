@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: sysutils/cw/Makefile 319132 2013-05-26 20:02:15Z bsam $
+# $FreeBSD: sysutils/cw/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cw
 PORTVERSION=	1.0.16
@@ -18,6 +18,7 @@ MAN1=		cw.1 cwe.1 cwu.1
 OPTIONS_DEFINE=	DOCS
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
