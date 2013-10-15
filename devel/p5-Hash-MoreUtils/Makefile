@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Hash-MoreUtils/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-Hash-MoreUtils/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Hash-MoreUtils
 PORTVERSION=	0.02
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	Hash::MoreUtils.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
