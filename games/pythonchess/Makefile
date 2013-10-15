@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/pythonchess/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: games/pythonchess/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pythonchess
 PORTVERSION=	0.6
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinte
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-build:
 	@(${ECHO_CMD} "#!${SH}"; \
 	  ${ECHO_CMD} "cd ${DATADIR} && ${PYTHON_CMD} board.py") \
