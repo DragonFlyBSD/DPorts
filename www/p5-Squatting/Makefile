@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Squatting/Makefile 326764 2013-09-08 16:52:06Z tobez $
+# $FreeBSD: www/p5-Squatting/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Squatting
 PORTVERSION=	0.82
@@ -45,4 +45,5 @@ MAN3=	\
 	Squatting::With::MockRequest.3 \
 	Squatting::With::Mount.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
