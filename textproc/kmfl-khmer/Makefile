@@ -1,8 +1,5 @@
-# New ports collection makefile for:	kmfl-khmer
-# Date created:		12 May 2011
-# Whom:			Kuan-Chung Chiu <buganini@gmail.com>
-#
-# $FreeBSD: ports/textproc/kmfl-khmer/Makefile,v 1.5 2012/11/17 06:02:00 svnexp Exp $
+# Created by: Kuan-Chung Chiu <buganini@gmail.com>
+# $FreeBSD: textproc/kmfl-khmer/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	khmer
 PORTVERSION=	1.0
@@ -29,6 +26,7 @@ PLIST_FILES=	${KMFL_DIR}/khmer.kmn \
 PLIST_DIRSTRY=	${KMFL_ICONS_DIR} \
 		${KMFL_DIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${KMFL_ICONS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/*.kmn ${PREFIX}/${KMFL_DIR}
