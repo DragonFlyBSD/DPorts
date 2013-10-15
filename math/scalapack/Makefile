@@ -1,9 +1,5 @@
-# New ports collection makefile for:    scalapack
-# Date created:                         5 Feb 2003
-# Whom:                                 NAKATA, Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: ports/math/scalapack/Makefile,v 1.28 2012/11/17 05:59:30 svnexp Exp $
-#
+# Created by: NAKATA, Maho <maho@FreeBSD.org>
+# $FreeBSD: math/scalapack/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	scalapack
 PORTVERSION=	1.8.0
@@ -38,6 +34,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${PORTNAME:tu}
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include "files/manpages"
 
 .include <bsd.port.pre.mk>

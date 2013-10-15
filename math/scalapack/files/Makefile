@@ -1,6 +1,6 @@
 # Makefile of Sample program
 # Written by NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: ports/math/scalapack/files/Makefile,v 1.3 2012/11/17 05:59:30 svnexp Exp $
+# $FreeBSD: math/scalapack/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 all: densg densg2
 
