@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: devel/horde3-chora/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/horde3-chora/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	chora
 PORTVERSION=	2.1.1
@@ -11,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CVS web-viewer
 
 #-----------------------------------------------------------------------
+NO_STAGE=	yes
 # You may define these options:
 #
 # - WITHOUT_SVN		: if you don't need subversion;
