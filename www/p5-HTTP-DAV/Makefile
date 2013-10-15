@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-DAV/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-DAV/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-DAV
 PORTVERSION=	0.47
@@ -25,4 +25,5 @@ MAN1=		dave.1
 MAN3=		HTTP::DAV.3 HTTP::DAV::Lock.3 HTTP::DAV::Resource.3 \
 		HTTP::DAV::Response.3 HTTP::DAV::Changes.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
