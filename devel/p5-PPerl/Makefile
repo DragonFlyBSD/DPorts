@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-PPerl/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-PPerl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PPerl
 PORTVERSION=	0.25
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 MAN1=	pperl.1
 MAN3=	PPerl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
