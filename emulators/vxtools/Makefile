@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vxtools
-# Date created:		10 December 1999
-# Whom:			Martin Hinner
-#
-# $FreeBSD: ports/emulators/vxtools/Makefile,v 1.7 2012/11/17 05:57:24 svnexp Exp $
-#
+# Created by: Martin Hinner
+# $FreeBSD: emulators/vxtools/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	vxtools
 PORTVERSION=	0.2
@@ -21,6 +17,7 @@ USE_GMAKE=	yes
 MAN1=		vxmount.1 vxumount.1
 MAN8=		prtvtoc.8
 
+NO_STAGE=	yes
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/vxls ${PREFIX}/bin
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/vxmount ${PREFIX}/bin
