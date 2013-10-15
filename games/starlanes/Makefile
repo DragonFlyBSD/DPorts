@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/games/starlanes/Makefile,v 1.11 2013/02/07 23:12:08 svnexp Exp $
+# $FreeBSD: games/starlanes/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	starlanes
 PORTVERSION=	1.2.2
@@ -12,6 +12,7 @@ COMMENT=	Classic space-age stock trading game
 MAN6=		starlanes.6
 PLIST_FILES=	bin/starlanes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's| restrict| m_restrict| ; \
