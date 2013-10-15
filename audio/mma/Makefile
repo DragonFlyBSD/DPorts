@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/mma/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/mma/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mma
 PORTVERSION=	12.02
@@ -12,6 +12,7 @@ MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Musical MIDI Accompaniment generator
 
 USE_PYTHON=	-2.7
+NO_STAGE=	yes
 
 OPTIONS_DEFINE=	TIMIDITY PLAYMIDI DOCS EXAMPLES
 
