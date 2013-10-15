@@ -1,5 +1,5 @@
 # Created by: past@ebs.gr
-# $FreeBSD: ports/x11-fonts/mgopen/Makefile,v 1.8 2012/11/17 06:03:29 svnexp Exp $
+# $FreeBSD: x11-fonts/mgopen/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	mgopen
 PORTVERSION=	1.0
@@ -22,6 +22,7 @@ PLIST_SUB=	FONTSDIR=${FONTSDIR:S|^${PREFIX}/||}
 SUB_FILES=	pkg-message
 SUB_LIST=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${FONTSDIR}
 	${INSTALL_DATA} ${WRKDIR}/*.ttf ${FONTSDIR}
