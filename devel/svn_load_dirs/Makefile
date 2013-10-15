@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/svn_load_dirs/Makefile 327528 2013-09-18 07:36:53Z knu $
+# $FreeBSD: devel/svn_load_dirs/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	svn_load_dirs
 PORTVERSION=	${SVN_PORTVERSION}
@@ -21,6 +21,7 @@ USES=		perl5
 
 PLIST_FILES=	bin/svn_load_dirs
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
