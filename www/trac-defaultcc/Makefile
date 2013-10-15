@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea@FreeBSD.org>
-# $FreeBSD: ports/www/trac-defaultcc/Makefile,v 1.3 2012/12/26 11:30:31 svnexp Exp $
+# $FreeBSD: www/trac-defaultcc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	defaultcc
 PORTVERSION=	0.1
@@ -24,4 +24,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 WRKSRC=		${WRKDIR}/${PORTNAME}plugin/trunk
 REL=		10605
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
