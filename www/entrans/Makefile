@@ -1,5 +1,5 @@
 # Created by: Prudhvi Krishna <prudhvikrishna@gmail.com>
-# $FreeBSD: www/entrans/Makefile 320591 2013-06-11 14:53:46Z miwi $
+# $FreeBSD: www/entrans/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	entrans
 PORTVERSION=	0.3.2
@@ -20,6 +20,7 @@ PLIST=		${WRKDIR}/pkg-plist
 
 PORTDOCS=	README INSTALL COPYING AUTHORS HACKING THANKS
 
+NO_STAGE=	yes
 pre-install:
 	cd ${WRKSRC} && ${FIND} -s * -type f | \
 		${SED} -e 's|^|${ENTRANS}/|' > ${PLIST} \
