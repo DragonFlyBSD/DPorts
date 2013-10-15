@@ -1,9 +1,4 @@
-# New ports collection makefile for:	PilRC
-# Date created:		29 Mar 2000
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/palm/pilrc/Makefile,v 1.24 2012/11/17 06:00:44 svnexp Exp $
-#
+# $FreeBSD: palm/pilrc/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	pilrc
 PORTVERSION=	3.2
@@ -20,6 +15,7 @@ CONFIGURE_ARGS+=	--enable-pilrcui
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pilrc ${WRKSRC}/pilrcui ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
