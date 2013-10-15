@@ -1,9 +1,8 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: devel/p5-File-DesktopEntry/Makefile 326803 2013-09-09 11:55:30Z az $
+# $FreeBSD: devel/p5-File-DesktopEntry/Makefile 329061 2013-10-02 16:12:31Z acm $
 
 PORTNAME=	File-DesktopEntry
-PORTVERSION=	0.04
-PORTREVISION=	1
+PORTVERSION=	0.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=	File::DesktopEntry.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
