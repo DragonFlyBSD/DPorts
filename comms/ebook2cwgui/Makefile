@@ -1,5 +1,4 @@
-# $FreeBSD: comms/ebook2cwgui/Makefile 314176 2013-03-14 18:49:15Z db $
-#
+# $FreeBSD: comms/ebook2cwgui/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	ebook2cwgui
 PORTVERSION=	0.1.2
@@ -21,6 +20,7 @@ USE_WX=	yes
 PLIST_FILES=	bin/ebook2cwgui
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|wx-config|${WX_CONFIG:S,${PREFIX}/bin/,,}|g' \
 	     ${WRKSRC}/Makefile
