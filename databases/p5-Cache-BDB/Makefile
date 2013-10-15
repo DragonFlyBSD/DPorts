@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Cache-BDB/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: databases/p5-Cache-BDB/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Cache-BDB
 PORTVERSION=	0.04
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Cache::BDB.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
