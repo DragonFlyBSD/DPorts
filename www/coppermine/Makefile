@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@FreeBSD.org>
-# $FreeBSD: www/coppermine/Makefile 319023 2013-05-25 01:51:53Z bdrewery $
+# $FreeBSD: www/coppermine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	coppermine
 PORTVERSION=	1.5.24
@@ -23,6 +22,7 @@ DOCFILES=	CHANGELOG.txt COPYING.txt README.txt
 
 SUB_FILES+=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
