@@ -1,4 +1,4 @@
-# $FreeBSD: devel/distel/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: devel/distel/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	distel
 PORTVERSION=	2012.05.28
@@ -22,6 +22,7 @@ USE_EMACS=	yes
 DISTEL_DOCS=	AUTHORS ChangeLog INSTALL INSTALL.WIN32 NEWS README README.ie-session
 DISTEL_ROOT=	${PREFIX}/lib/erlang/lib/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-build:
 	@${MKDIR} ${WRKSRC}/ebin
 	@cd ${WRKSRC} && erlc -W0 -o ebin/ +debug_info src/*.erl
