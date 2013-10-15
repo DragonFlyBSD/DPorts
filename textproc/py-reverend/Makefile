@@ -1,9 +1,5 @@
-# New ports collection makefile for:	reverend
-# Date created:		2006-04-29
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: ports/textproc/py-reverend/Makefile,v 1.6 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: textproc/py-reverend/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	reverend
 PORTVERSION=	0.3
@@ -28,6 +24,7 @@ PORTEXAMPLES=	""
 .endif
 PLIST_SUB=	PORTEXAMPLES=${PORTEXAMPLES}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(WITHOUT_EXAMPLES)
 	${MKDIR} ${EXAMPLESDIR}
