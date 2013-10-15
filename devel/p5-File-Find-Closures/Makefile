@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Find-Closures/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-File-Find-Closures/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Find-Closures
 PORTVERSION=	1.09
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Find::Closures.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
