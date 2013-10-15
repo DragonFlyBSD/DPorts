@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net/corkscrew/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net/corkscrew/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	corkscrew
 PORTVERSION=	2.0
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
