@@ -1,4 +1,4 @@
-# $FreeBSD: editors/yasnippet/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: editors/yasnippet/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	yasnippet
 PORTVERSION=	0.6.1c
@@ -16,6 +16,7 @@ USE_EMACS=	yes
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC}/snippets -type d -empty | ${XARGS} ${RMDIR}
 
