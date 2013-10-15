@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/ftp/jftp/Makefile,v 1.24 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: ftp/jftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	jftp
 PORTVERSION=	1.56
@@ -25,6 +25,7 @@ PLIST_DIRS=	%%DATADIR%%
 PLIST_FILES=	bin/jftp %%DATADIR%%/jftp.jar
 SUB_FILES=	jftp.sh
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_SCRIPT} ${WRKDIR}/jftp.sh ${PREFIX}/bin/jftp
