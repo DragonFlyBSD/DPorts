@@ -1,5 +1,5 @@
 # Created by: bland@FreeBSD.org
-# $FreeBSD: print/gribouy/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: print/gribouy/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	gribouy
 PORTVERSION=	0.0.8
@@ -17,4 +17,5 @@ USES=		gmake pkgconfig
 USE_GNOME=      gnomeprefix gnomehack libglade2 libgnomeui
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
