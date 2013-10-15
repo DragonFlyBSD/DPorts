@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/bogged/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: games/bogged/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bogged
 PORTVERSION=	1.0.0
@@ -22,6 +22,7 @@ USE_TK_WRAPPER=	yes
 
 PLIST_FILES=	bin/bogged
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
