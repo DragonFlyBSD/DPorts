@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/pecl-solr/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/pecl-solr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	solr
 PORTVERSION=	1.0.2
@@ -20,4 +20,5 @@ USE_PHPEXT=	yes
 USE_PHPIZE=	yes
 USE_PHP_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
