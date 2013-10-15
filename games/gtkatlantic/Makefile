@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: games/gtkatlantic/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: games/gtkatlantic/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gtkatlantic
 PORTVERSION=	0.4.3
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/-Werror/s|^|#|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|mkdir |$$(mkdir_p) |g' ${WRKSRC}/Makefile.in
