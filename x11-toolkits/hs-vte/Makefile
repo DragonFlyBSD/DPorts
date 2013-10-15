@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-vte/Makefile 326995 2013-09-11 17:17:35Z antoine $
+# $FreeBSD: x11-toolkits/hs-vte/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	vte
 PORTVERSION=	0.12.1
@@ -14,5 +14,6 @@ USES=		pkgconfig
 USE_CABAL=	glib>=0.12 gtk>=0.12 mtl pango>=0.12
 USE_GNOME=	vte
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
