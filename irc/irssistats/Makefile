@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: ports/irc/irssistats/Makefile,v 1.12 2012/12/03 10:48:29 svnexp Exp $
+# $FreeBSD: irc/irssistats/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irssistats
 PORTVERSION=	0.75
@@ -16,6 +16,7 @@ MAN1=	irssistats.1
 ALL_TARGET=	irssistats
 INSTALL_TARGET=	install
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/irssistats.conf|${PREFIX}/etc/irssistats.conf|g' ${WRKSRC}/irssistats.c
 
