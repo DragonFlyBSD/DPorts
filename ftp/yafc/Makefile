@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ftp/yafc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: ftp/yafc/Makefile 328269 2013-09-25 11:39:38Z wg $
 
 PORTNAME=	yafc
 PORTVERSION=	1.2.5
@@ -25,10 +25,10 @@ CONFIGURE_ARGS=	--with-socks=no --with-socks5=no --with-krb4=no \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		yafc.1
-INFO=		yafc
 PORTEXAMPLES=	inputrc yafcrc
-PLIST_FILES=	bin/yafc
+PLIST_FILES=	bin/yafc \
+		info/yafc.info \
+		man/man1/yafc.1.gz
 
 .include <bsd.port.options.mk>
 
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--without-readline
 .endif
 
 .if ${PORT_OPTIONS:MSSH}
-LIB_DEPENDS+=	ssh:${PORTSDIR}/security/libssh
+LIB_DEPENDS+=	libssh.so:${PORTSDIR}/security/libssh
 .else
 CONFIGURE_ARGS+=	--without-ssh
 .endif
@@ -64,8 +64,8 @@ CONFIGURE_ARGS+=	--with-bash-completion=no
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/* ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/* ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
