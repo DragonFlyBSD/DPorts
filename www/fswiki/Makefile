@@ -1,4 +1,4 @@
-# $FreeBSD: www/fswiki/Makefile 326148 2013-09-03 13:06:13Z az $
+# $FreeBSD: www/fswiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fswiki
 PORTVERSION=	3.6.2
@@ -18,6 +18,7 @@ USE_ZIP=	yes
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-extract:
 	${SED} -e 's|__DATADIR__|${DATADIR}|' ${FILESDIR}/setup.sh \
 		>${WRKSRC}/setup.sh
