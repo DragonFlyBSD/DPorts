@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: converters/pecl-fribidi/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: converters/pecl-fribidi/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	fribidi
 PORTVERSION=	1.2
@@ -20,4 +20,5 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--with-fribidi=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
