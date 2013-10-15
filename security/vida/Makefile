@@ -1,9 +1,5 @@
-# New ports collection makefile for:   vida
-# Date created:        Thu Apr 17 11:22:35 GMT 2003
-# Whom:                mich@freebsdcluster.org
-#
-# $FreeBSD: ports/security/vida/Makefile,v 1.5 2012/11/17 06:01:22 svnexp Exp $
-#
+# Created by: mich@freebsdcluster.org
+# $FreeBSD: security/vida/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	vida
 PORTVERSION=	0.7.1
@@ -22,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 	${CC} `${LIBNET_CONFIG} --defines --cflags` ${CFLAGS} \
