@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gnote/Makefile 326507 2013-09-06 14:30:42Z bapt $
+# $FreeBSD: deskutils/gnote/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #   $MCom: ports/deskutils/gnote/Makefile,v 1.14 2010/11/15 16:21:49 kwm Exp $
 
 PORTNAME=	gnote
@@ -46,6 +46,7 @@ PLIST_SUB+=	APPLET="@comment "
 
 PLIST_SUB+=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/include/boost|${LOCALBASE}/include/boost|g' \
 		${WRKSRC}/configure
