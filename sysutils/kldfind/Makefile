@@ -1,9 +1,5 @@
-# New ports collection makefile for:   kldfind
-# Date created:        15 July 2006
-# Whom:                Ricardo A. Reis <ricardo.areis@gmail.com>
-#
-# $FreeBSD: ports/sysutils/kldfind/Makefile,v 1.5 2012/11/17 06:01:36 svnexp Exp $
-#
+# Created by: Ricardo A. Reis <ricardo.areis@gmail.com>
+# $FreeBSD: sysutils/kldfind/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	kldfind
 PORTVERSION=	0.61
@@ -19,6 +15,7 @@ USE_BZIP2=	yes
 MAN8=		kldfind.8
 PLIST_FILES=	sbin/kldfind
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} "===>  Installing kldfind."
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}-${PORTVERSION} ${PREFIX}/sbin/${PORTNAME}
