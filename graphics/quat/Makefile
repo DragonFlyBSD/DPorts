@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/quat/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/quat/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	quat
 PORTVERSION=	1.20
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--disable-gui \
 PORTDOCS=	*
 PLIST_FILES=	bin/quat-txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
