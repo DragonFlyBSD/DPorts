@@ -1,9 +1,5 @@
-# Ports collection makefile for:  dnsutl
-# Date created:			  Nov 05, 1998
-# Whom:				  Karl Dietz (Karl.Dietz@frankfurt.netsurf.de)
-#
-# $FreeBSD: ports/dns/dnsutl/Makefile,v 1.19 2012/11/17 05:57:08 svnexp Exp $
-#
+# Created by: Karl Dietz (Karl.Dietz@frankfurt.netsurf.de)
+# $FreeBSD: dns/dnsutl/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dnsutl
 PORTVERSION=	1.11
@@ -22,4 +18,5 @@ MAN1=		dns-boot-check.1 dns-bootp.1 dns-bootparams.1 \
 		dns-ethers.1 dns-filter.1 dns-hosts-import.1 \
 		dns-hosts.1 dns-license.1 dns-ng.1 dns-rev.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
