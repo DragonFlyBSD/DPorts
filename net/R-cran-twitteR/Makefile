@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net/R-cran-twitteR/Makefile 323593 2013-07-24 13:06:07Z tota $
+# $FreeBSD: net/R-cran-twitteR/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	twitteR
 PORTVERSION=	1.1.7
@@ -18,4 +18,5 @@ RUN_DEPENDS=	R-cran-RCurl>0:${PORTSDIR}/ftp/R-cran-RCurl \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
