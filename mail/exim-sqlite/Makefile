@@ -1,13 +1,10 @@
-# New ports collection makefile for:	exim-sqlite
-# Date created:				27 Sep 2005
-# Whom:					krion
-#
-# $FreeBSD: ports/mail/exim-sqlite/Makefile,v 1.2 2012/11/17 05:59:02 svnexp Exp $
-#
+# Created by: krion
+# $FreeBSD: mail/exim-sqlite/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PKGNAMESUFFIX=	-sqlite
 MASTERDIR=	${.CURDIR}/../exim
 
 WITH_SQLITE=		yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
