@@ -1,5 +1,5 @@
 # Created by: Guy Antony Halse <guy@rucus.ru.za.za>
-# $FreeBSD: mail/ezmlm-web/Makefile 325882 2013-09-01 17:12:03Z az $
+# $FreeBSD: mail/ezmlm-web/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ezmlm-web
 PORTVERSION=	3.2
@@ -21,6 +21,7 @@ USES=		gmake perl5 shebangfix
 USE_PERL5=	configure
 SHEBANG_FILES=	ezmlm-web.cgi
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|local/share|share|' \
 		-e 's|$$SHAREDIR/www-data|${WWWDIR}|' \
