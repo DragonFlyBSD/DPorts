@@ -1,9 +1,5 @@
-# New ports collection makefile for:	i18ntools
-# Date created:				17 April 1999
-# Whom:					G. Adam Stanislav
-#
-# $FreeBSD: ports/converters/i18ntools/Makefile,v 1.8 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: G. Adam Stanislav
+# $FreeBSD: converters/i18ntools/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	i18ntools
 PORTVERSION=	1.0
@@ -51,6 +47,7 @@ DOCFILES=	fgetu8.html fputu8.html index.html libutf-8.html rfc1641.txt \
 		rfc2277.txt rfc2279.txt sgetu8.html sputu8.html utrans.html
 MAN1=		hutrans.1 ptrans.1 utrans.1 uhtrans.1
 
+NO_STAGE=	yes
 do-install:
 .for f in ${BINARIES}
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
