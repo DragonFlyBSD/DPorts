@@ -1,4 +1,4 @@
-# $FreeBSD: devel/horde-timeobjects/Makefile 321450 2013-06-21 08:28:05Z mm $
+# $FreeBSD: devel/horde-timeobjects/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	timeobjects
 PORTVERSION=	2.0.4
@@ -19,6 +19,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Url \
 		Horde_Util
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
