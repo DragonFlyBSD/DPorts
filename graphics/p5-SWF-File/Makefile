@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: graphics/p5-SWF-File/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-SWF-File/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	SWF-File
 PORTVERSION=	0.42
@@ -23,6 +23,7 @@ MAN3=		SWF::BinStream.3 SWF::BinStream::Codec.3 \
 		SWF::BinStream::Codec::Zlib.3 SWF::BinStream::File.3 \
 		SWF::Element.3 SWF::File.3 SWF::Parser.3
 
+NO_STAGE=	yes
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
 
