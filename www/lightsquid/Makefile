@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <info@logvinov.com>
-# $FreeBSD: www/lightsquid/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/lightsquid/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lightsquid
 PORTVERSION=	1.8
@@ -14,9 +14,11 @@ COMMENT=	A light and fast web based squid proxy traffic analyser
 OPTIONS_DEFINE=		GD DOCS
 OPTIONS_DEFAULT=	GD
 
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGS=	lightsquid.cfg realname.cfg skipuser.cfg group.cfg
