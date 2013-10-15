@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-IPC-PubSub/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-IPC-PubSub/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IPC-PubSub
 PORTVERSION=	0.29
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	IPC::PubSub.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
