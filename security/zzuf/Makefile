@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zzuf
-# Date created:		2007-03-03
-# Whom:			Peter Johnson <johnson.peter@gmail.com>
-#
-# $FreeBSD: ports/security/zzuf/Makefile,v 1.9 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: Peter Johnson <johnson.peter@gmail.com>
+# $FreeBSD: security/zzuf/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	zzuf
 PORTVERSION=	0.13
@@ -19,6 +15,7 @@ USE_LDCONFIG=	yes
 MAN1=	zzuf.1 zzcat.1
 MAN3=	libzzuf.3
 
+NO_STAGE=	yes
 post-install:
 	@${RM} -f ${PREFIX}/lib/zzuf/libzzuf.la
 
