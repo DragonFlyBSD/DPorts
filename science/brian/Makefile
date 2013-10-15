@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: science/brian/Makefile 323508 2013-07-23 03:19:47Z wen $
+# $FreeBSD: science/brian/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	brian
 PORTVERSION=	1.4.1
@@ -19,4 +19,5 @@ USE_ZIP=	yes
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
