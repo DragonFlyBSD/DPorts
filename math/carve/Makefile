@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: math/carve/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/carve/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	carve
 PORTVERSION=	1.4.0
@@ -24,6 +24,7 @@ LICENSE=	GPLv2
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
