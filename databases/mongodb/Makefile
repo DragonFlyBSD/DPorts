@@ -1,5 +1,5 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: databases/mongodb/Makefile 325447 2013-08-27 13:51:54Z ale $
+# $FreeBSD: databases/mongodb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mongodb
 PORTVERSION=	2.4.6
@@ -41,6 +41,7 @@ USE_RC_SUBR=	mongod
 
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSM}
