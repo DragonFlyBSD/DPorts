@@ -1,5 +1,5 @@
 # Created by: jhanna@home.com
-# $FreeBSD: devel/spin/Makefile 317876 2013-05-11 13:49:05Z bapt $
+# $FreeBSD: devel/spin/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	spin
 PORTVERSION=	5.2.2
@@ -14,6 +14,7 @@ OPTIONS_DEFINE=	XSPIN DOCS
 OPTIONS_DEFAULT=	XSPIN
 XSPIN_DESC=	Install xspin and TCL/Tk dependency
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXSPIN}
