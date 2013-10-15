@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bforce
-# Date created:		19 Feb 2003
-# Whom:			Vladimir Kurtikov <vk@vk.pp.ru>
-#
-# $FreeBSD: ports/comms/bforce/Makefile,v 1.8 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: Vladimir Kurtikov <vk@vk.pp.ru>
+# $FreeBSD: comms/bforce/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	bforce
 PORTVERSION=	0.22.8
@@ -22,6 +18,7 @@ CFLAGS+=	-fno-builtin
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/etc/bforce
 	${INSTALL_DATA} ${WRKSRC}/../examples/bforce.conf ${PREFIX}/etc/bforce/bforce.conf.sample
