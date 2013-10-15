@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: graphics/qiviewer/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: graphics/qiviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	qiviewer
 PORTVERSION=	0.5.0
@@ -31,6 +31,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}/src
 OPTIONS_DEFINE=	WEBP
 WEBP_DESC=	Support for WebP image format (experimental)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWEBP}
