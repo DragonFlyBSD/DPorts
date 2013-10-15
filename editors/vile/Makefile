@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/vile/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: editors/vile/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	vile
 PORTVERSION=	9.8k
@@ -28,6 +28,7 @@ MAN1=		vile.1
 
 CONFLICTS_INSTALL=	xvile-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFILTERS}
