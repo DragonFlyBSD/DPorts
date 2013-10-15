@@ -1,5 +1,5 @@
 # Created by: autrijus@autrijus.org
-# $FreeBSD: devel/p5-VCP-autrijus/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-VCP-autrijus/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	VCP
 PORTVERSION=	0.9.20050110
@@ -101,6 +101,7 @@ MAN3=		RevML::Doctype.3 \
 		VCP::Utils::revml.3 \
 		VCP::Utils::vss.3
 
+NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -a -exec ${RM} -f {} \;
 
