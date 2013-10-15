@@ -1,9 +1,5 @@
-# New ports collection makefile for:	amanda
-# Date created:				28th Feb 1995
-# Whom:					gpalmer
-#
-# $FreeBSD: ports/misc/amanda-client/Makefile,v 1.69 2012/11/17 05:59:32 svnexp Exp $
-#
+# Created by: gpalmer
+# $FreeBSD: misc/amanda-client/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PKGNAMESUFFIX=	-client
 PORTREVISION=	0
@@ -17,4 +13,5 @@ PLIST=		${PKGDIR}/pkg-plist.client
 
 CLIENT_ONLY=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
