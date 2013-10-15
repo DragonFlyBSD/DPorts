@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: science/gromacs/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: science/gromacs/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	gromacs
 PORTVERSION=	4.6.3
@@ -57,6 +57,7 @@ MAN1=		do_dssp.1 editconf.1 eneconv.1 g_anadock.1 \
 		xpm2ps.1
 MAN7=		gromacs.7
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MATLAS}
