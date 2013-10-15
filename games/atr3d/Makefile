@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: games/atr3d/Makefile 323795 2013-07-27 16:06:25Z az $
+# $FreeBSD: games/atr3d/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	atr3d
 PORTVERSION=	0.6
@@ -19,10 +19,10 @@ SDL_CONFIG?=	${LOCALBASE}/bin/sdl-config
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USE_GMAKE=	yes
+USES=		gmake perl5
 USE_GL=		glut glu
 USE_XORG=	xmu xi x11
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	SDL_CONFIG="${SDL_CONFIG}"
 USE_AUTOTOOLS=	automake autoconf
@@ -30,6 +30,7 @@ USE_AUTOTOOLS=	automake autoconf
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib -L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENAL}
