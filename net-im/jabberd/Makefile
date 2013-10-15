@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net-im/jabberd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-im/jabberd/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	jabberd
 PORTVERSION=	2.2.17
@@ -28,9 +28,9 @@ CYRUS_DESC=	Use Cyrus SASL backend (not supported)
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_OPENSSL=	yes
-USES=		iconv
+USES=		iconv perl5
 USE_RC_SUBR=	jabberd
 USE_LDCONFIG=	${PREFIX}/lib/jabberd
 CONFIGURE_ARGS+=	--localstatedir=/var \
@@ -64,6 +64,7 @@ DOCFILES=	AUTHORS COPYING ChangeLog INSTALL NEWS README \
 
 _REQUIRE=	LOGIN
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 ELP+=	${OPENSSLLIB}
