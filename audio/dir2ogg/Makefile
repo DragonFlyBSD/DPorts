@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/audio/dir2ogg/Makefile,v 1.15 2012/12/31 16:32:37 svnexp Exp $
+# $FreeBSD: audio/dir2ogg/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	dir2ogg
 PORTVERSION=	0.11.8
@@ -16,6 +16,7 @@ RUN_DEPENDS=	faad:${PORTSDIR}/audio/faad \
 		mplayer:${PORTSDIR}/multimedia/mplayer \
 		oggenc:${PORTSDIR}/audio/vorbis-tools
 
+NO_STAGE=	yes
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
