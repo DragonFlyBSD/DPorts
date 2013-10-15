@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: devel/cvsmonitor/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: devel/cvsmonitor/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsmonitor
 PORTVERSION=	0.6.3
@@ -67,6 +67,7 @@ FILES_DATA=	README setup.conf
 
 CVSMONITOR_ROOT=	${PREFIX}/${CGIDIR}/cvsmonitor
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e '$$_=q{	my $$solaris=1;} if $$.==270' \
 		${WRKSRC}/modules/CVSMonitor/MetaData/Module.pm
