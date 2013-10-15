@@ -1,8 +1,5 @@
-# New ports collection Makefile for: 	xmms-ladspa
-# Date created:			11 May 2002
-# Whom:				Tilman Linneweh <arved@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/xmms-ladspa/Makefile,v 1.23 2012/11/17 05:54:48 svnexp Exp $
+# Created by: Tilman Linneweh <arved@FreeBSD.org>
+# $FreeBSD: audio/xmms-ladspa/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-ladspa
 PORTVERSION=	1.1
@@ -25,6 +22,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 PLIST_FILES=	lib/xmms/Effect/ladspa.so
 
 USE_GNOME=	gtk12
+NO_STAGE=	yes
 
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/ladspa.so ${PREFIX}/lib/xmms/Effect/
