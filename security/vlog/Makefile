@@ -1,5 +1,5 @@
 # Created by: hannes sowa <satbran@web.de>
-# $FreeBSD: security/vlog/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/vlog/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	vlog
 PORTVERSION=	1.1f
@@ -22,6 +22,7 @@ MAN1=		vlog.1
 MANCOMPRESSED=	no
 PLIST_FILES=	bin/vlog
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s@/usr/local@${PREFIX}@g" ${WRKSRC}/Makefile
 
