@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA
-# $FreeBSD: x11/xco/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xco/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xco
 PORTVERSION=	1.3
@@ -16,6 +16,7 @@ MAN1=		xco.1
 MANCOMPRESSED=	yes
 DOCDIR=		${PREFIX}/share/doc/xco
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e 's/extern char \*malloc();//g' \
 			${WRKSRC}/xco.c ${WRKSRC}/xargs.c
