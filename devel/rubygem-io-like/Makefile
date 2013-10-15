@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/rubygem-io-like/Makefile 317456 2013-05-06 02:27:13Z tota $
+# $FreeBSD: devel/rubygem-io-like/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	io-like
 PORTVERSION=	0.3.0.20130301
@@ -54,6 +54,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}-ruby-1.9-temp
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
