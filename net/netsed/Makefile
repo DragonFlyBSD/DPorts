@@ -1,9 +1,5 @@
-# New ports collection makefile for:	NetSED
-# Date created:				Jan 9 2000
-# Whom:					Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/net/netsed/Makefile,v 1.8 2012/11/17 06:00:07 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: net/netsed/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netsed
 PORTVERSION=	0.01
@@ -23,6 +19,7 @@ WRKSRC=		${WRKDIR}
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
