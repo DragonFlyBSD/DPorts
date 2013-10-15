@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Precise/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Precise/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Precise
 PORTVERSION=	1.05
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		DateTime::Precise.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
