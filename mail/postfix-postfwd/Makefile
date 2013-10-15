@@ -1,9 +1,5 @@
-# New ports collection makefile for:	postfwd
-# Date created:				8 May 2008
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: mail/postfix-postfwd/Makefile 326061 2013-09-02 19:15:19Z sahil $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: mail/postfix-postfwd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	postfwd
 PORTVERSION=	1.35
@@ -28,7 +24,8 @@ PLIST_FILES=	bin/${PORTNAME} etc/${PORTNAME}.conf.sample
 SUB_FILES=	pkg-message
 
 USE_RC_SUBR=	${PORTNAME}
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 MAN8=		${PORTNAME}.8 ${PORTNAME}2.8
@@ -36,6 +33,7 @@ MAN8=		${PORTNAME}.8 ${PORTNAME}2.8
 OPTIONS_DEFINE=	EXAMPLES DOCS POSTFWD2
 POSTFWD2_DESC=	Install postfwd v2 rather than v1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
