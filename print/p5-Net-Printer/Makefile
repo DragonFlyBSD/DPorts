@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: print/p5-Net-Printer/Makefile 326272 2013-09-04 13:07:40Z az $
+# $FreeBSD: print/p5-Net-Printer/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	Net-Printer
 PORTVERSION=	1.12
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Printer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
