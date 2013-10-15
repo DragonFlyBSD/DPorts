@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sniff
-# Date created:		7 December 1998
-# Whom:			Rick & Samu
-#
-# $FreeBSD: ports/security/sniff/Makefile,v 1.12 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Rick & Samu
+# $FreeBSD: security/sniff/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		sniff
 PORTVERSION=		1.0
@@ -20,6 +16,7 @@ CONFIGURE_SCRIPT=	configure
 
 PLIST_FILES=		sbin/sniff
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|PREFIX=/usr/local|PREFIX=${PREFIX}|g' ${WRKSRC}/Makefile.in
 
