@@ -1,5 +1,4 @@
-# Createe by: Krzysztof Pawlowski
-# $FreeBSD: net/py-dpkt/Makefile 318941 2013-05-24 09:48:08Z sbz $
+# $FreeBSD: net/py-dpkt/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dpkt
 PORTVERSION=	1.8
@@ -21,6 +20,7 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	AUTHORS CHANGES HACKING LICENSE PKG-INFO README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
