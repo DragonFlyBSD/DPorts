@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/thebridge/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: comms/thebridge/Makefile 328761 2013-09-29 23:40:13Z db $
 
 PORTNAME=	thebridge
 PORTVERSION=	1.09
@@ -13,12 +13,12 @@ COMMENT=	Amateur Radio Echolink conference bridge
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		gmake
 GNU_CONFIGURE=	yes
 PORTDOCS=	README
 USE_RC_SUBR=	tbd
-USE_AUTOTOOLS=	autoconf
-CONFIGURE_ENV=	AUTOMAKE=/usr/bin/true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
