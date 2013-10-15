@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-clutter/Makefile 320392 2013-06-09 18:51:30Z swills $
+# $FreeBSD: graphics/rubygem-clutter/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	clutter
 PORTVERSION=	2.0.2
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
