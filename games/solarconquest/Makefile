@@ -1,5 +1,5 @@
-# Created by:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/solarconquest/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/solarconquest/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	solarconquest
 PORTVERSION=	0.2
@@ -19,6 +19,7 @@ USE_DOS2UNIX=	makefile source/MenuScreen.h source/main.cpp
 
 MAKEFILE=	makefile
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|images/|${DATADIR}/images/|' \
 		${WRKSRC}/source/main.cpp
