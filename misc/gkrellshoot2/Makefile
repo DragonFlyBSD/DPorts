@@ -1,5 +1,5 @@
 # Created by: Andrew Stuart <elitetek@tekrealm.net>
-# $FreeBSD: misc/gkrellshoot2/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: misc/gkrellshoot2/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gkrellshoot
 PORTVERSION=	0.4.4
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/gkrellShoot-${PORTVERSION}
 
 ALL_TARGET=	${PORTNAME}.so
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.so ${PREFIX}/libexec/gkrellm2/plugins
 
