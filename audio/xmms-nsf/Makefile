@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-nsf/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/xmms-nsf/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-nsf
 PORTVERSION=	0.0.3
@@ -18,6 +18,7 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 USE_CSTD=	gnu89
 
 ONLY_FOR_ARCHS=	i386 amd64
