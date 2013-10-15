@@ -1,9 +1,5 @@
-# New ports collection makefile for:   jdresolve
-# Date created:        15 June 2001
-# Whom:                Christophe Labouisse <christophe@labouisse.org>
-#
-# $FreeBSD: www/jdresolve/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# Created by: Christophe Labouisse <christophe@labouisse.org>
+# $FreeBSD: www/jdresolve/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jdresolve
 PORTVERSION=	0.6.1
@@ -27,6 +23,7 @@ MAN1=	rhost.1 jdresolve.1
 
 DOC1=	AUTHORS BUGS CHANGELOG COPYING CREDITS INSTALL README TODO
 
+NO_STAGE=	yes
 do-install:
 .for file in jdresolve rhost
 	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${PREFIX}/bin
