@@ -1,5 +1,5 @@
 # Created by: Eric Turgeon <ericturgeon.bsd@gmail.com>
-# $FreeBSD: x11/lxrandr/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: x11/lxrandr/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	lxrandr
 PORTVERSION=	0.1.2
@@ -26,6 +26,7 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
