@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: print/pdfcube/Makefile 326095 2013-09-02 21:32:24Z bapt $
+# $FreeBSD: print/pdfcube/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pdfcube
 PORTVERSION=	0.0.5
@@ -20,6 +20,7 @@ CONFIGURE_ARGS=	--libdir=${LOCALBASE}/lib --includedir=${LOCALBASE}/include
 
 PLIST_FILES=	bin/pdfcube
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e \
 		's|BOOSTLIBDIR/libboost_program_options\*\.{so,a}\*|BOOSTLIBDIR/libboost_program_options.so|' \
