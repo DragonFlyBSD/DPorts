@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-CookieJar/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: www/p5-HTTP-CookieJar/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	HTTP-CookieJar
 PORTVERSION=	0.005
@@ -23,8 +23,5 @@ TEST_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		HTTP::CookieJar.3 \
-		HTTP::CookieJar::LWP.3
 
 .include <bsd.port.mk>
