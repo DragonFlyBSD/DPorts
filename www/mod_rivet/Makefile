@@ -1,5 +1,5 @@
 # Created by: Peter Lai <cowbert@gmail.com>
-# $FreeBSD: www/mod_rivet/Makefile 324942 2013-08-19 05:10:46Z ohauer $
+# $FreeBSD: www/mod_rivet/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_rivet
 PORTVERSION=	2.1.2
@@ -24,6 +24,7 @@ GNU_CONFIGURE=	yes
 
 INSTALL_TARGET=	install install-packages
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ARGS+=	--with-apache-version=2 \
