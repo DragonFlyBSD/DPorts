@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/redis-devel/Makefile 325701 2013-08-30 14:40:18Z osa $
+# $FreeBSD: databases/redis-devel/Makefile 330121 2013-10-12 06:28:07Z osa $
 
 PORTNAME=	redis
-DISTVERSION=	2.8.0-rc4
+DISTVERSION=	2.8.0-rc5
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 PKGNAMESUFFIX=	-devel
@@ -21,6 +21,7 @@ LUA_DESC=	Use lang/lua instead of builtin lua
 LUAJIT_DESC=	Use lang/luajit instead of builtin lua
 TESTS_DESC=	Install lang/tcl for redis unit tests
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLUA}
