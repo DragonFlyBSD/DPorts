@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SNMP-Util
-# Date created:				September 7 1999
-# Whom:					Bill Fenner <fenner@FreeBSD.org>
-#
-# $FreeBSD: net-mgmt/p5-SNMP-Util/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Bill Fenner <fenner@FreeBSD.org>
+# $FreeBSD: net-mgmt/p5-SNMP-Util/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	SNMP-Util
 PORTVERSION=	1.8
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		SNMP::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
