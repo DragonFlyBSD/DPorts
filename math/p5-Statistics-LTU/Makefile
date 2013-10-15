@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: math/p5-Statistics-LTU/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Statistics-LTU/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-LTU
 PORTVERSION=	2.8
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Statistics::LTU.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
