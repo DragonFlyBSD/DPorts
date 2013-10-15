@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: irc/irssi-scripts/Makefile 324041 2013-07-31 12:34:39Z jadawin $
+# $FreeBSD: irc/irssi-scripts/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irssi-scripts
 PORTVERSION=	20130629
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/irssi/scripts
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.pl ${PREFIX}/share/irssi/scripts
