@@ -1,9 +1,5 @@
-# New ports collection makefile for:   modules
-# Date created:        9 March 2005
-# Whom:                Hokan
-#
-# $FreeBSD: ports/sysutils/modules/Makefile,v 1.5 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Hokan
+# $FreeBSD: sysutils/modules/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	modules
 PORTVERSION=	3.1.6
@@ -34,6 +30,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX}/Modules/@VERSION@ \
 MAN1=		module.1
 MAN5=		modulefile.5
 
+NO_STAGE=	yes
 post-extract:
 		${MV} ${WRKSRC}/doc/modulefile.4.in ${WRKSRC}/doc/modulefile.5.in
 
