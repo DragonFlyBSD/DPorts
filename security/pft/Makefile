@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pft
-# Date created:			  21 July 2004
-# Whom:				  Yonatan <onatan@gmail.com>
-#
-# $FreeBSD: ports/security/pft/Makefile,v 1.7 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Yonatan <onatan@gmail.com>
+# $FreeBSD: security/pft/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pft
 PORTVERSION=	1.3
@@ -21,6 +17,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	bin/pft lib/libPJL.a
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|g++|${CXX} ${CXXFLAGS}|' \
 		${WRKSRC}/pft/Makefile
