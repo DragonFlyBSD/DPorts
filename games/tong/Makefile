@@ -1,5 +1,5 @@
-# Created by:   nemysis@gmx.ch
-# $FreeBSD: games/tong/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: games/tong/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tong
 PORTVERSION=	1.2
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 DESKTOP_ENTRIES="TONG!" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
