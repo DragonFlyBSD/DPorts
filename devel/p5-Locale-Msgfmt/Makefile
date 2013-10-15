@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Locale-Msgfmt/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Locale-Msgfmt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Locale-Msgfmt
 PORTVERSION=	0.15
@@ -19,4 +19,5 @@ MAN3=		Locale::Msgfmt::Utils.3 \
 		Locale::Msgfmt::po.3 \
 		Locale::Msgfmt.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
