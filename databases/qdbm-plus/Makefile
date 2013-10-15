@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qdbm-plus
-# Date created:		September 25th, 2006
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/qdbm-plus/Makefile,v 1.8 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: databases/qdbm-plus/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-plus
@@ -18,4 +14,5 @@ PLIST=		${.CURDIR}/pkg-plist
 DESCR=		${.CURDIR}/pkg-descr
 PATCHDIR=	${.CURDIR}/files
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
