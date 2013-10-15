@@ -1,5 +1,5 @@
 # Created by: Andrey A. Chernov <ache@FreeBSD.org>
-# $FreeBSD: sysutils/less/Makefile 320422 2013-06-10 00:48:32Z danfe $
+# $FreeBSD: sysutils/less/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	less
 PORTVERSION=	458
@@ -21,6 +21,7 @@ PLIST_FILES=	bin/less bin/lesskey bin/lessecho
 OPTIONS_DEFINE=	COLORS
 COLORS_DESC=	Enable colors support via escape sequence
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCOLORS}
