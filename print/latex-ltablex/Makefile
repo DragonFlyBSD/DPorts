@@ -1,4 +1,4 @@
-# $FreeBSD: print/latex-ltablex/Makefile 319647 2013-06-02 10:21:14Z rakuco $
+# $FreeBSD: print/latex-ltablex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ltablex
 PORTVERSION=	1.0
@@ -33,6 +33,7 @@ PORTDOCS=	ltablex.pdf ltablex.tex
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${CLASSDIR}
 	${INSTALL_DATA} ${CLASS_FILES:S@^@${WRKSRC}/@} ${PREFIX}/${CLASSDIR}
