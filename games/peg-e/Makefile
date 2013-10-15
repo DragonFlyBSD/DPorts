@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/peg-e/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/peg-e/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	peg-e
 PORTVERSION=	1.1.2
@@ -18,6 +18,7 @@ INSTALLS_ICONS=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS} \
 		PREFIX=${PREFIX} ${PORTNAME}.pro
