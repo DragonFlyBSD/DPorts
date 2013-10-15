@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net-mgmt/mbrowse/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: net-mgmt/mbrowse/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	mbrowse
 PORTVERSION=	0.4.0
@@ -20,4 +20,5 @@ CONFIGURE_ARGS=	--with-snmp-prefix=${PREFIX} --with-snmp-type=net
 CPPFLAGS+=	`net-snmp-config --cflags`
 LDFLAGS+=	`net-snmp-config --libs`
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
