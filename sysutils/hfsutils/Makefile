@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: sysutils/hfsutils/Makefile 319165 2013-05-27 07:58:10Z danfe $
+# $FreeBSD: sysutils/hfsutils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hfsutils
 PORTVERSION=	3.2.6
@@ -41,6 +41,7 @@ DEVLIBS_DESC=	Install developer libraries and header files
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTCLTK}
