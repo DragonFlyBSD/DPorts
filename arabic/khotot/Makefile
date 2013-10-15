@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.com>
-# $FreeBSD: ports/arabic/khotot/Makefile,v 1.10 2012/12/20 09:21:00 svnexp Exp $
+# $FreeBSD: arabic/khotot/Makefile 328292 2013-09-25 13:57:30Z vanilla $
 
 PORTNAME=	khotot
 PORTVERSION=	1.0
@@ -36,10 +36,5 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/X11/fonts/ae_fonts1/AAHS/fonts.dir:${PORTSDIR}/ar
 .if ${PORT_OPTIONS:MKACST}
 RUN_DEPENDS+=	${LOCALBASE}/lib/X11/fonts/kacst_fonts/fonts.dir:${PORTSDIR}/arabic/kacst_fonts
 .endif
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
 
 .include <bsd.port.mk>
