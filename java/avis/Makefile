@@ -1,5 +1,5 @@
 # Created by: Benjamin Close <benjsc@FreeBSD.org>
-# $FreeBSD: ports/java/avis/Makefile,v 1.6 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/avis/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	avis
 PORTVERSION=	1.2.0
@@ -31,6 +31,7 @@ PORTDOCS=	README.txt\
 		history.txt
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-fetch:
