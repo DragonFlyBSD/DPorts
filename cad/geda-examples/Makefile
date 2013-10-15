@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geda
-# Date created:			27 June 2006
-# Whom:				Stanislav Sedov <ssedov@mbsd.msk.ru>
-#
-# $FreeBSD: ports/cad/geda-examples/Makefile,v 1.8 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
+# $FreeBSD: cad/geda-examples/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	examples
 PORTVERSION=	1.4.3
