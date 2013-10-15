@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tochnog
-# Date created:		19 Apr 2003
-# Whom:			Pedro Giffuni <giffunip@asme.org>
-#
-# $FreeBSD: cad/tochnog/Makefile 311861 2013-02-07 14:57:49Z gahr $
-#
+# Created by: Pedro Giffuni <giffunip@asme.org>
+# $FreeBSD: cad/tochnog/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	tochnog
 PORTVERSION=	20010211
@@ -60,6 +56,7 @@ USE_FORTRAN=	yes
 FORTRANLIBS=	-lgfortranbegin -lgfortran
 GCCLIBDIR=	-L`${CAT} ${WRKSRC}/LIBDIR` -L`${CAT} ${WRKSRC}/LIBDIR`/../../..
 
+NO_STAGE=	yes
 pre-build:
 	@${DIRNAME} `${FC} -print-libgcc-file-name` > ${WRKSRC}/LIBDIR
 	@${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},g ; \
