@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: x11/xwatchwin/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xwatchwin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xwatchwin
 PORTVERSION=	1.1.1
@@ -19,4 +19,5 @@ PLIST_FILES=	bin/xwatchwin
 USES=		imake
 USE_XORG=	x11 xext
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
