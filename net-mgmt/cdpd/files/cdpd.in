@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/cdpd/files/cdpd.in,v 1.5 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/cdpd/files/cdpd.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: cdpd

@@ -1,8 +1,5 @@
-# New ports collection makefile for:	cdpd
-# Date created:				26 Sep 2001
-# Whom:					Alexandre Snarskii <snar@paranoia.ru>
-#
-# $FreeBSD: ports/net-mgmt/cdpd/Makefile,v 1.14 2012/11/17 06:00:31 svnexp Exp $
+# Created by: Alexandre Snarskii <snar@paranoia.ru>
+# $FreeBSD: net-mgmt/cdpd/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	cdpd
 PORTVERSION=	1.0.4.1
@@ -20,6 +17,7 @@ PLIST_FILES=	sbin/cdpd
 
 MAN8=	cdpd.8
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/cdpd ${PREFIX}/sbin
 	@${INSTALL_MAN} ${WRKSRC}/cdpd.8 ${MAN8PREFIX}/man/man8
