@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-ncurses
-# Date created:			29 Apr 2010
-# Whom:				Jille Timmermans <jille@quis.cx>
-#
-# $FreeBSD: ports/devel/pecl-ncurses/Makefile,v 1.6 2012/12/09 06:44:08 svnexp Exp $
-#
+# Created by: Jille Timmermans <jille@quis.cx>
+# $FreeBSD: devel/pecl-ncurses/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ncurses
 PORTVERSION=	1.0.2
@@ -24,4 +20,5 @@ USE_PHPEXT=	yes
 WANT_PHP_CLI=	yes
 IGNORE_WITH_PHP=4 52
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
