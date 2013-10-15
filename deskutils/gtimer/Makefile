@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: deskutils/gtimer/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/gtimer/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gtimer
 PORTVERSION=	2.0.0
@@ -24,6 +24,7 @@ MAN1=		${PORTNAME}.1
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-return-type
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|1.1.7|${PORTVERSION}|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|"sensible-browser"|"xdg-open"|g' ${WRKSRC}/config.h
