@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: comms/tkscanfax/Makefile 321415 2013-06-20 19:28:27Z bsam $
+# $FreeBSD: comms/tkscanfax/Makefile 328163 2013-09-24 16:43:55Z gahr $
 
 PORTNAME=	tkscanfax
 PORTVERSION=	1.1.8
@@ -14,12 +14,13 @@ COMMENT=	Tcl/Tk frontend for fax scan/receive/send program (command is tkfax)
 WRKSRC=		${WRKDIR}/${PORTNAME}1
 
 NO_BUILD=	yes
-USE_TK_WRAPPER=	yes
+USES+=		tk:wrapper
 
 PLIST_SUB=	TKSCANFAXDIR="${TKSCANFAXDIR:S,^${PREFIX}/,,}"
 
 TKSCANFAXDIR=	${PREFIX}/lib/tkscanfax1
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -i '' -e \
 		's|/usr/local/lib|${PREFIX}/lib|g'
