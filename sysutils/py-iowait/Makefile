@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <olivierd@FreeBSD.org>
-# $FreeBSD: sysutils/py-iowait/Makefile 326988 2013-09-11 15:21:32Z olivierd $
+# $FreeBSD: sysutils/py-iowait/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	iowait
 PORTVERSION=	0.2
@@ -13,6 +13,7 @@ COMMENT=	Python module for I/O completion events
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
