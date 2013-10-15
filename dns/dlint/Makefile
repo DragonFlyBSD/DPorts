@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  dlint
-# Date created:			  Wed Dec 23, 1998
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: dns/dlint/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: dns/dlint/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	dlint
 PORTVERSION=	1.4.0
@@ -19,6 +14,7 @@ COMMENT=	Lint for DNS zones (Domain Name Server zone verification utility)
 NO_BUILD=	yes
 MAN8=		dlint.8
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} -e 's:/usr/local/bin:${PREFIX}/sbin:g' ${WRKSRC}/dlint
 	@${SED} -e 's:DLINT 1:DLINT 8:g' ${WRKSRC}/dlint.1  >${WRKSRC}/dlint.8
