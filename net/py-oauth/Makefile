@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-oauth
-# Date created:		03 Dec,2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/net/py-oauth/Makefile,v 1.3 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: net/py-oauth/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	oauth
 PORTVERSION=	1.0.1
@@ -17,4 +13,5 @@ COMMENT=	Python Library for OAuth
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
