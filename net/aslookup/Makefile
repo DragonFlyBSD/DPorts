@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/net/aslookup/Makefile,v 1.7 2013/01/09 20:04:59 svnexp Exp $
+# $FreeBSD: net/aslookup/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	aslookup
 PORTVERSION=	0.12
@@ -11,6 +11,7 @@ DISTNAME=	${PORTNAME}-alpha${PORTVERSION}
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Tool that searches the sequence of AS numbers
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e "s|CFLAGS.*=|CFLAGS +=|" \
 		-e "s|CC.*=|CC ?=|" ${WRKSRC}/Makefile
