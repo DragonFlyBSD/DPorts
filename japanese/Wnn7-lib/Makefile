@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/Wnn7-lib/Makefile 323355 2013-07-20 19:10:22Z hrs $
+# $FreeBSD: japanese/Wnn7-lib/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Wnn7
 PORTVERSION=	2001.10.17
@@ -22,6 +22,7 @@ PORTDOCS=	README
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=DOCS
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/X11R6,${LOCALBASE},g' \
 		${WRKSRC}/config/Project.tmpl \
