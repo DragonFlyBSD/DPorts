@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/malint/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/malint/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	malint
 DISTVERSION=	0.2
@@ -14,6 +14,7 @@ COMMENT=	MPEG Audio stream validator
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 PORTDOCS=	README
 PLIST_FILES=	bin/malint
