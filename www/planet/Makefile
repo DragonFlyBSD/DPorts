@@ -1,5 +1,5 @@
 # Created by: Alan Snelson <alan@wave2.co.uk>
-# $FreeBSD: www/planet/Makefile 313404 2013-03-04 11:19:40Z lwhsu $
+# $FreeBSD: www/planet/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	planet
 PORTVERSION=	2.0
@@ -18,6 +18,7 @@ USE_PYTHON=	yes
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 post-extract:
 	@${RM}	${WRKSRC}/.bzrignore
 	@${FIND} ${WRKSRC}/ -type d -name '.bzr' | ${XARGS} ${RM} -rf
