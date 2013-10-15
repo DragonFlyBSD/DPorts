@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-SExpression/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-Data-SExpression/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-SExpression
 PORTVERSION=	0.41
@@ -21,4 +21,5 @@ MAN3=	Data::SExpression.3 \
 	Data::SExpression::Cons.3 \
 	Data::SExpression::Symbol.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
