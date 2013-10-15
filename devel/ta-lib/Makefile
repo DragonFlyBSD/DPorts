@@ -1,5 +1,5 @@
 # Created by: Balwinder S "bsd" Dheeman <bsd@rubyforge.org>
-# $FreeBSD: devel/ta-lib/Makefile 324698 2013-08-14 11:17:15Z marino $
+# $FreeBSD: devel/ta-lib/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ta-lib
 PORTVERSION=	0.4.0
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^LIBTOOL[ ]*=.*|LIBTOOL=${LIBTOOL}|g'
