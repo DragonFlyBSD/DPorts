@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: comms/p5-Cisco-UCS/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: comms/p5-Cisco-UCS/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	Cisco-UCS
 PORTVERSION=	0.30
@@ -29,4 +29,5 @@ MAN3=		Cisco::UCS.3 Cisco::UCS::Blade.3 Cisco::UCS::Chassis.3 \
 		Cisco::UCS::Fault.3 Cisco::UCS::Interconnect.3 \
 		Cisco::UCS::MgmtEntity.3 Cisco::UCS::ServiceProfile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
