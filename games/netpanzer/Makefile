@@ -1,4 +1,4 @@
-# $FreeBSD: games/netpanzer/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/netpanzer/Makefile 329289 2013-10-04 11:31:21Z madpilot $
 
 PORTNAME=	netpanzer
 PORTVERSION=	0.8.4
@@ -15,33 +15,30 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LDFLAGS+=	${PTHREAD_LIBS}
 CFLAGS+=	${PTHREAD_CFLAGS}
 
+USES=		scons
 USE_BZIP2=	yes
 USE_SDL=	sdl mixer image
 USE_GNOME=	libxml2
-USE_SCONS=	yes
 SCONS_ARGS+=	datadir="${DATADIR}"
 SCONS_BUILDENV=	${SCONS_ENV}
 
 PORTDOCS=	*
 PORTDATA=	*
-MAN6=		netpanzer.6
 
 post-configure:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/SConstruct
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/netpanzer ${PREFIX}/bin
-	${MKDIR} ${DATADIR}
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} "cache maps pics powerups scripts sound units wads"  ${DATADIR})
-	${INSTALL_MAN} ${WRKSRC}/docs/netpanzer.6 ${MANPREFIX}/man/man6
-	${MKDIR} ${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/netpanzer.desktop ${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/netpanzer.png ${WRKSRC}/netpanzer.xpm ${PREFIX}/share/pixmaps
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC} && ${INSTALL_MAN} COPYING ChangeLog README RELNOTES TODO ${DOCSDIR})
-	(cd ${WRKSRC}/docs && ${INSTALL_MAN} Doxyfile code-notes.txt coding.txt serverhowto.html tipofday.txt ${DOCSDIR})
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/netpanzer ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} "cache maps pics powerups scripts sound units wads" ${STAGEDIR}${DATADIR})
+	${INSTALL_MAN} ${WRKSRC}/docs/netpanzer.6 ${STAGEDIR}${MANPREFIX}/man/man6
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/netpanzer.desktop ${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/netpanzer.png ${WRKSRC}/netpanzer.xpm ${STAGEDIR}${PREFIX}/share/pixmaps
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_MAN} COPYING ChangeLog README RELNOTES TODO ${STAGEDIR}${DOCSDIR})
+	(cd ${WRKSRC}/docs && ${INSTALL_MAN} Doxyfile code-notes.txt coding.txt serverhowto.html tipofday.txt ${STAGEDIR}${DOCSDIR})
 
 do-fetch-svn:
 	svn export svn://svn.berlios.de/${PORTNAME}/tags/${PORTNAME}/${PORTVERSION} ${PORTNAME}-${PORTVERSION}
