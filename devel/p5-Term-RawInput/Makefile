@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-RawInput/Makefile 326592 2013-09-07 10:16:46Z az $
+# $FreeBSD: devel/p5-Term-RawInput/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Term-RawInput
 PORTVERSION=	1.15
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Term::RawInput.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
