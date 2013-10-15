@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-plone.scale
-# Date created:				02 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-plone.scale/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
-#
+# $FreeBSD: www/py-plone.scale/Makefile 328478 2013-09-27 14:24:18Z rm $
 
 PORTNAME=	plone.scale
-PORTVERSION=	1.2.2
+PORTVERSION=	1.3.2
 PORTREVISION=	1
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
@@ -20,13 +15,17 @@ LICENSE=	BSD
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.annotation>=0:${PORTSDIR}/devel/py-zope.annotation \
 		${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.component \
 		${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.interface \
-		${PYTHON_PKGNAMEPREFIX}imaging>=1.1:${PORTSDIR}/graphics/py-imaging \
 		${PYTHON_PKGNAMEPREFIX}Persistence>=0:${PORTSDIR}/devel/py-Persistence
 
 DIST_SUBDIR=	zope
-PLIST_FILES+=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,zip_safe=True,zip_safe=False,g' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
