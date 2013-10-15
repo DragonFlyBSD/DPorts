@@ -1,5 +1,5 @@
 # Created by: Yuu Yashiki
-# $FreeBSD: graphics/lfview/Makefile 321988 2013-06-28 21:19:31Z bapt $
+# $FreeBSD: graphics/lfview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	lfview
 PORTVERSION=	1.1a
@@ -16,6 +16,7 @@ USE_XORG=	x11 xext
 USE_LDCONFIG=	yes
 NO_INSTALL_MANPAGES=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
