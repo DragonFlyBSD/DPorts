@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	tex2im
-# Date created:			Nov 28, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: textproc/tex2im/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/tex2im/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	tex2im
 PORTVERSION=	1.8
@@ -25,6 +20,7 @@ PORTEXAMPLES=	example1.png example1.tex example2.png example2.tex \
 		example3.png example3.tex example4.png example4.tex \
 		fig_1.eps
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,^#!/bin/bash,#!${LOCALBASE}/bin/bash,g" ${WRKSRC}/tex2im
 
