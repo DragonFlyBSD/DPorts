@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Enurl/Makefile 326033 2013-09-02 16:56:12Z az $
+# $FreeBSD: www/p5-CGI-Enurl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Enurl
 PORTVERSION=	1.07
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		CGI::Enurl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
