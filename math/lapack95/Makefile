@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: math/lapack95/Makefile 324718 2013-08-14 13:14:59Z marino $
+# $FreeBSD: math/lapack95/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	lapack95
 PORTVERSION=	1.0
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/LAPACK95
 
 MAKE_JOBS_UNSAFE=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
