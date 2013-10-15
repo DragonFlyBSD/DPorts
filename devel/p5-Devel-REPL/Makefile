@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: devel/p5-Devel-REPL/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-Devel-REPL/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-REPL
 PORTVERSION=	1.003014
@@ -66,4 +66,5 @@ MAN3=	Devel::REPL.3 \
 	Devel::REPL::Plugin::Turtles.3 \
 	Devel::REPL::Profile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
