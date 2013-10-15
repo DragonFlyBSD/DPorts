@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-WWW-Mechanize-CGI
-# Date created:				25 November 2008
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: www/p5-WWW-Mechanize-CGI/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: www/p5-WWW-Mechanize-CGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Mechanize-CGI
 PORTVERSION=	0.3
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	WWW::Mechanize::CGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
