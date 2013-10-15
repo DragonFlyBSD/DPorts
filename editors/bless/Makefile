@@ -1,4 +1,4 @@
-# $FreeBSD: editors/bless/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: editors/bless/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	bless
 PORTVERSION=	0.6.0
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|tests$$||g' \
 		${WRKSRC}/Makefile.in
