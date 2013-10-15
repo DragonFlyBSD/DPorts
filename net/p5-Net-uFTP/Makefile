@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net-uFTP
-# Date created:				2010-11-10
-# Whom:					Jase Thew <freebsd@beardz.net>
-#
-# $FreeBSD: net/p5-Net-uFTP/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: Jase Thew <freebsd@beardz.net>
+# $FreeBSD: net/p5-Net-uFTP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-uFTP
 PORTVERSION=	0.161
@@ -30,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::uFTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
