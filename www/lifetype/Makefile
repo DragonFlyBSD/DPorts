@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: www/lifetype/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/lifetype/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lifetype
 PORTVERSION=	1.2.11
@@ -30,6 +30,7 @@ OPTIONS_DEFINE=	BIG5 GD IMAGEMAGICK
 OPTIONS_DEFAULT=	GD
 BIG5_DESC=	Big5 chinese template fix
 #
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGD}
