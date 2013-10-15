@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libXprintAppUtil/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXprintAppUtil/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	libXprintAppUtil
 PORTVERSION=	1.0.1
@@ -11,4 +11,5 @@ XORG_CAT=	lib
 USE_XORG=	printproto x11 xau xp xprintutil xproto:both
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
