@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nagios-check_puppet
-# Date created:				Wed 27 May 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/net-mgmt/nagios-check_puppet/Makefile,v 1.4 2012/12/17 16:25:56 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: net-mgmt/nagios-check_puppet/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	check_puppet
 PORTVERSION=	1.3
@@ -23,6 +19,7 @@ SUB_FILES=	pkg-message
 
 PLIST_FILES=	bin/check_puppet
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/check_puppet ${PREFIX}/bin/check_puppet
 .for man in ${MANS}
