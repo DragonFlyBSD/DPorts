@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/devel/py-sanetime/Makefile,v 1.5 2013/02/12 16:01:42 svnexp Exp $
+# $FreeBSD: devel/py-sanetime/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	sanetime
 PORTVERSION=	4.2.3
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Include tools for unit tests
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
