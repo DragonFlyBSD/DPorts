@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: devel/p5-orz/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-orz/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	orz
 PORTVERSION=	0.13
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		orz.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
