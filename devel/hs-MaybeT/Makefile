@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-MaybeT/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-MaybeT/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	MaybeT
 PORTVERSION=	0.1.2
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	mtl
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
