@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: mail/smail/Makefile 322713 2013-07-10 17:04:49Z bapt $
+# $FreeBSD: mail/smail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	smail
 PORTVERSION=	3.2.0.121
@@ -45,6 +45,7 @@ CYRUS22_DESC=	Use mail/cyrus-imapd22 as local transport
 CYRUS23_DESC=	Use mail/cyrus-imapd23 as local transport
 REPLACE_CONF_DESC=	Replace /etc/mail/mailer.conf
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCYRUS22}
