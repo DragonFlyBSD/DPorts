@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bomstrip
-# Date created:			14 June 2008
-# Whom:				Peter Pentchev <roam@FreeBSD.org>
-#
-# $FreeBSD: textproc/bomstrip/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Peter Pentchev <roam@FreeBSD.org>
+# $FreeBSD: textproc/bomstrip/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	bomstrip
 PORTVERSION=	9
@@ -30,4 +26,5 @@ MLINKS=		bomstrip.1 bomstrip-files.1
 MAN1=		bomstrip.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
