@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-xslcache
-# Date created:			2007/10/28
-# Whom:				chinsan
-#
-# $FreeBSD: ports/textproc/pecl-xslcache/Makefile,v 1.6 2012/11/17 06:02:16 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: textproc/pecl-xslcache/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xslcache
 PORTVERSION=	0.7.1
@@ -22,4 +18,5 @@ USE_PHPEXT=	yes
 DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
