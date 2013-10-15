@@ -1,5 +1,5 @@
 # Created by: Serge Gagnon <ser_gagnon@sympatico.ca>
-# $FreeBSD: textproc/en-aspell/Makefile 304800 2012-09-24 21:23:51Z bapt $
+# $FreeBSD: textproc/en-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-en-7.1-0
@@ -11,5 +11,6 @@ COMMENT=	Aspell English dictionaries
 
 DICT=		en
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
