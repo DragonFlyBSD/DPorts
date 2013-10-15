@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/textproc/jarnal/Makefile,v 1.5 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/jarnal/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jarnal
 PORTVERSION=	999
@@ -25,6 +25,7 @@ NO_WRKSUBDIR=	yes
 SCRIPTS=	jarnal.sh jarnalannotate.sh
 LIBFILES=	lbouncy_license.html lib-ver.txt jarnal-readme.txt
 
+NO_STAGE=	yes
 pre-configure:
 	${MV} ${WRKDIR}/lib/readme.txt ${WRKDIR}/lib/jarnal-readme.txt
 	${REINPLACE_CMD} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|'	\
