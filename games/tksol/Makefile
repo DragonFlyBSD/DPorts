@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tksol
-# Date created:         26 June 1995
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/games/tksol/Makefile,v 1.30 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: games/tksol/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tksol
 PORTVERSION=	1.8.4
@@ -24,6 +20,7 @@ USE_TK_WRAPPER=	yes
 
 MAN6=		tksol.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^#/bin/sh|#!/bin/sh| ; \
