@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/print/pnm2ppa/pkg-install,v 1.2 2012/11/17 06:00:53 svnexp Exp $
+# $FreeBSD: print/pnm2ppa/pkg-install 300897 2012-07-14 14:29:18Z beat $
 
 sysconfdir=${PKG_PREFIX}/etc
 conffile=pnm2ppa.conf
