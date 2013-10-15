@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: mail/anomy-sanitizer/Makefile 326265 2013-09-04 09:48:54Z az $
+# $FreeBSD: mail/anomy-sanitizer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	anomy-sanitizer
 PORTVERSION=	1.76
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/anomy
 
 DOCS=		CHANGELOG.sanitizer CREDITS README.sanitizer sanitizer.html
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${SITE_PERL}/Anomy/Sanitizer/
 	${INSTALL_DATA} ${WRKSRC}/bin/Anomy/HTMLCleaner.pm ${SITE_PERL}/Anomy
