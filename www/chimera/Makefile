@@ -1,5 +1,5 @@
 # Created by: Satoshi Asami <asami@FreeBSD.org>
-# $FreeBSD: www/chimera/Makefile 323880 2013-07-29 10:26:40Z danfe $
+# $FreeBSD: www/chimera/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	chimera
 PORTVERSION=	1.70p0
@@ -19,6 +19,7 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		chimera.1
 
 # Call the port's configure script explicitly, since USES=imake masks it out
+NO_STAGE=	yes
 pre-configure:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
 
