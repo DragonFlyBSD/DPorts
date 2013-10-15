@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: mail/imaptools/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: mail/imaptools/Makefile 328205 2013-09-24 22:23:45Z bsam $
 
 PORTNAME=	imaptools
 PORTVERSION=	1.135
@@ -22,6 +22,6 @@ SHEBANG_FILES=	*.pl
 USE_PERL5=	run
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/*.pl ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/*.pl ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
