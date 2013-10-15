@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/p5-Sudo/Makefile 324978 2013-08-19 12:33:15Z mat $
+# $FreeBSD: security/p5-Sudo/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Sudo
 PORTVERSION=	0.33
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Sudo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
