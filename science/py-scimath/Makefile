@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/py-scimath/Makefile 323513 2013-07-23 04:27:27Z wen $
+# $FreeBSD: science/py-scimath/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	scimath
 PORTVERSION=	4.1.2
@@ -17,4 +17,5 @@ USE_PYTHON=		yes
 PYEASYINSTALL_ARCHDEP=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
