@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool10/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: databases/rrdtool10/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.0.50
@@ -10,13 +10,12 @@ MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.0.x/
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Round Robin Database Tools
 
-USE_PERL5=	yes
 MAKE_ENV=	PERL=${PERL}
 
 CONFLICTS=	rrdtool-1.2*
 LATEST_LINK=	rrdtool10
 
-USES=		pkgconfig
+USES=		pkgconfig perl5
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-local-zlib \
@@ -37,6 +36,7 @@ MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 OPTIONS_DEFINE=	LATIN2
 LATIN2_DESC=	ISO-8859-2 fonts support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLATIN2}
