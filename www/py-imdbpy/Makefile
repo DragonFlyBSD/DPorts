@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-IMDbPY
-# Date created:			Jul 8, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: www/py-imdbpy/Makefile 325854 2013-09-01 12:58:10Z lwhsu $
-#
+# Created by: ijliao
+# $FreeBSD: www/py-imdbpy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	imdbpy
 PORTVERSION=	4.9
@@ -33,6 +28,7 @@ PYEASYINSTALL_ARCHDEP=	yes
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
