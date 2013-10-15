@@ -1,5 +1,5 @@
 # Created by: pat
-# $FreeBSD: mail/wmmaiload/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: mail/wmmaiload/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	wmmaiload
 PORTVERSION=	2.2.1
@@ -37,6 +37,7 @@ MAKE_ARGS+=	GTK_CFLAGS="pkg-config --cflags gtk+" \
 		GTK_LIBS="pkg-config --libs gtk+"
 .endif
 
+NO_STAGE=	yes
 post-patch:
 .for i in wmmaiload/Init.make
 	@${REINPLACE_CMD} -e 's|-L/usr/X11R6/lib||g' ${WRKSRC}/${i}
