@@ -1,5 +1,5 @@
 # Created by: Richard Neese
-# $FreeBSD: audio/sphinx3/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/sphinx3/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	sphinx3
 PORTVERSION=	0.8
@@ -13,6 +13,7 @@ COMMENT=	Speech recognition system
 LIB_DEPENDS=	sphinxbase:${PORTSDIR}/audio/sphinxbase
 
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 USE_AUTOTOOLS=libtool
 USE_CSTD=	gnu99
 MAKE_JOBS_UNSAFE=	yes
