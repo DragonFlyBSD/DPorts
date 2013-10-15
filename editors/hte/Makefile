@@ -1,5 +1,5 @@
-# Created By: Ying-Chieh Liao
-# $FreeBSD: editors/hte/Makefile 321301 2013-06-19 18:17:13Z mva $
+# Created by: Ying-Chieh Liao
+# $FreeBSD: editors/hte/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	hte
 PORTVERSION=	2.0.22
@@ -26,6 +26,7 @@ X11_DESC=	X11 textmode support
 NOT_FOR_ARCHS=	ia64
 NOT_FOR_ARCHS_REASON=	does not build on ia64
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLZO2}
@@ -39,7 +40,6 @@ USE_XORG=	x11
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 .else
-PKGNAMESUFFIX=	-nox11
 CONFIGURE_ARGS+=--disable-x11-textmode
 .endif
 
