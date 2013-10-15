@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-statsd
-# Date created:		Feburary 18 2012
-# Whom:			Evan Sarmiento <bsdports@wayfair.com>
-#
-# $FreeBSD: devel/rubygem-ruby-statsd/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Evan Sarmiento <bsdports@wayfair.com>
+# $FreeBSD: devel/rubygem-ruby-statsd/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	statsd
 PORTVERSION=	0.5.4
@@ -22,4 +18,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/statsd
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
