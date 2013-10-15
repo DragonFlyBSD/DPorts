@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-cld/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/py-cld/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	cld
 PORTVERSION=	0.2
@@ -23,4 +23,5 @@ PYDISTUTILS_PKGNAME=	chromium_compact_language_detector
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/cld.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
