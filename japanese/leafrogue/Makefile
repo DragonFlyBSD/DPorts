@@ -1,9 +1,5 @@
-# New ports collection makefile for:	leafrogue
-# Date created:				2 Oct 2000
-# Whom:					TAKAHASHI Kaoru
-#
-# $FreeBSD: ports/japanese/leafrogue/Makefile,v 1.5 2012/11/17 05:58:36 svnexp Exp $
-#
+# Created by: TAKAHASHI Kaoru
+# $FreeBSD: japanese/leafrogue/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	leafrogue
 PORTVERSION=	0.72
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 DOC_FILES=	readme.txt lf_rogue.html lf_rogue.txt guide.tex guide.txt
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/rogue
 	${INSTALL_DATA} ${WRKSRC}/leaf.msg ${PREFIX}/share/rogue
