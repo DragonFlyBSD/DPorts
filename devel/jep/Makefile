@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: ports/devel/jep/Makefile,v 1.20 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/jep/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	jep
 PORTVERSION=	2.4
@@ -21,6 +21,7 @@ USE_LDCONFIG=	yes
 
 MAN1=	jep.1
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/jep.jar ${JAVAJARDIR}/
 

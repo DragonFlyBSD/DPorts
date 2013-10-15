@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/jep/pkg-plist,v 1.6 2012/11/17 05:55:51 svnexp Exp $
+@comment $FreeBSD: devel/jep/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/libjep.a
 lib/libjep.la
 lib/libjep.so.2
