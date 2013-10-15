@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: textproc/p5-RTF-Writer/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-RTF-Writer/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	RTF-Writer
 PORTVERSION=	1.11
@@ -20,4 +20,5 @@ MAN3=	RTF::Writer.3 \
 	RTF::Writer::TableRowDecl.3 \
 	RTF::Cookbook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
