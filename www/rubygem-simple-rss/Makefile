@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/rubygem-simple-rss/Makefile 322897 2013-07-13 06:50:08Z swills $
+# $FreeBSD: www/rubygem-simple-rss/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	simple-rss
 PORTVERSION=	1.2.3
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
