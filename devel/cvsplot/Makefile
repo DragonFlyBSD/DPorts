@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsplot/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: devel/cvsplot/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsplot
 PORTVERSION=	1.7.4
@@ -19,6 +19,7 @@ PLIST_FILES=	bin/cvsplot
 USES=		shebangfix perl5
 SHEBANG_FILES=	cvsplot.pl
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cvsplot.pl ${PREFIX}/bin/cvsplot
 
