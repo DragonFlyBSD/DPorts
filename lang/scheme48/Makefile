@@ -1,5 +1,5 @@
 # Created by: jmacd
-# $FreeBSD: lang/scheme48/Makefile 321343 2013-06-20 00:59:21Z wen $
+# $FreeBSD: lang/scheme48/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	scheme48
 PORTVERSION=	1.9
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		scheme48.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PLIST_SUB+=	VER=${PORTVERSION}
