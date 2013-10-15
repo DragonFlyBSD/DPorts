@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/bunny/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: devel/bunny/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bunny
 PORTVERSION=	0.93
@@ -22,6 +22,7 @@ ONLY_FOR_ARCHS_REASON=	Fails to compile: invokes i386 asm
 
 OPTIONS_DEFINE=DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
