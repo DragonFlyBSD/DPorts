@@ -1,18 +1,15 @@
 # Created by: Radim Kolar
-# $FreeBSD: archivers/advancecomp/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/advancecomp/Makefile 328322 2013-09-25 21:54:48Z danilo $
 
 PORTNAME=	advancecomp
 PORTVERSION=	1.17
 CATEGORIES=	archivers
 MASTER_SITES=	SF/advancemame/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Recompression utilities for .ZIP, .PNG, .MNG, and .GZ files
 
 USES=		gmake
 GNU_CONFIGURE=	yes
-
-MAN1=		advdef.1 advmng.1 advpng.1 advzip.1
-PLIST_FILES=	bin/advdef bin/advmng bin/advpng bin/advzip
 
 .include <bsd.port.mk>
