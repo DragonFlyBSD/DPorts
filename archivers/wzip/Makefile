@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: ports/archivers/wzip/Makefile,v 1.8 2012/12/18 06:44:42 svnexp Exp $
+# $FreeBSD: archivers/wzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	wzip
 PORTVERSION=	1.1.1
@@ -10,6 +10,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	onatan@gmail.com
 COMMENT=	Preprocessor for lossy data compression
 
+NO_STAGE=	yes
 ALL_TARGET=	${PORTNAME}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAN1=		${PORTNAME}.1
