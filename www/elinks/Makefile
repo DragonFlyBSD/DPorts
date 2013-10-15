@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/elinks/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: www/elinks/Makefile 330024 2013-10-10 18:06:10Z tabthorpe $
 
 PORTNAME=	elinks
 DISTVERSION=	0.11.7
@@ -11,9 +11,8 @@ MAINTAINER=	beat@FreeBSD.org
 COMMENT=	Elinks - links text WWW browser with enhancements
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_BZIP2=	yes
-USES=		bison
+USES=		bison gmake
 USE_OPENSSL=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -26,7 +25,7 @@ MAN5=		elinkskeys.5 elinks.conf.5
 
 OPTIONS_DEFINE=		88COLORS 256COLORS SPIDERMONKEY XBELMARKS LOCAL_CGI \
 			FINGER GOPHER BITTORRENT NNTP FTP FSP SMB EXMODE \
-			HIGHLIGHT IDN NOROOT FASTMEM PERL RUBY \
+			HIGHLIGHT IDN NOROOT FASTMEM PERL \
 			LUA GUILE ICONV MOUSE NLS
 OPTIONS_DEFAULT=	88COLORS 256COLORS FTP EXMODE HIGHLIGHT FASTMEM MOUSE
 88COLORS_DESC=		88 color support
@@ -40,6 +39,7 @@ HIGHLIGHT_DESC=		HTML highlighting using DOM engine
 NOROOT_DESC=		Prevention of usage by root
 FASTMEM_DESC=		Fast memory allocation functions
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--without-zlib
@@ -52,12 +52,12 @@ PLIST_SUB+=	NLS="@comment "
 CONFIGURE_ARGS+=	--disable-nls
 .endif
 
-.if ${PORT_OPTIONS:MRUBY}
-LIB_DEPENDS+=	ruby18:${PORTSDIR}/lang/ruby18
-CONFIGURE_ARGS+=	--with-ruby
-.else
-CONFIGURE_ARGS+=	--without-ruby
-.endif
+#.if ${PORT_OPTIONS:MRUBY}
+#LIB_DEPENDS+=	ruby18:${PORTSDIR}/lang/ruby18
+#CONFIGURE_ARGS+=	--with-ruby
+#.else
+#CONFIGURE_ARGS+=	--without-ruby
+#.endif
 
 .if ${PORT_OPTIONS:MGUILE}
 LIB_DEPENDS+=	guile:${PORTSDIR}/lang/guile
@@ -76,7 +76,7 @@ CONFIGURE_ARGS+=	--without-lua
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=	--with-perl
 .else
 CONFIGURE_ARGS+=	--without-perl
@@ -197,7 +197,9 @@ CONFIGURE_ARGS+=	${ICONV_CONFIGURE_ARG}
 #
 # Elinks will try to use it if exists
 #
-.if exists(${LOCALBASE}/include/execinfo.h)
+.if exists(/usr/include/execinfo.h)
+LDFLAGS+=	-lexecinfo
+.elif exists(${LOCALBASE}/include/execinfo.h)
 LIB_DEPENDS+=	execinfo.1:${PORTSDIR}/devel/libexecinfo
 LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo
 .endif
