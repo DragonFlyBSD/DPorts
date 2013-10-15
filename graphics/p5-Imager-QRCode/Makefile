@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Imager-QRCode/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Imager-QRCode/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Imager-QRCode
 PORTVERSION=	0.03.4
@@ -22,4 +22,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 
 MAN3=		Imager::QRCode.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
