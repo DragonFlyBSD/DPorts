@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: textproc/aft/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/aft/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	aft
 PORTVERSION=	5.098
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-binSCRIPTS install-pkgdataDATA install-pkgdataSCRIPTS
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
