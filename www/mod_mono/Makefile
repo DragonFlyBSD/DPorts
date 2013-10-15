@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: www/mod_mono/Makefile 317238 2013-05-03 20:32:10Z bapt $
+# $FreeBSD: www/mod_mono/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_mono
 PORTVERSION=	2.10
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--man=${PREFIX}/man
 
 MAN8=		mod_mono.8
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${APACHE_VERSION} == 13
 MOD_MONOCONFDIR=${APACHEETCDIR}
