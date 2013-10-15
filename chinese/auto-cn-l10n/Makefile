@@ -1,8 +1,5 @@
-# New ports collection makefile for:	zh-auto-cn-l10n
-# Date created:		12 May 2006
-# Whom:			Yinghong Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: ports/chinese/auto-cn-l10n/Makefile,v 1.13 2012/11/17 05:54:55 svnexp Exp $
+# Created by: Yinghong Liu <relaxbsd@gmail.com>
+# $FreeBSD: chinese/auto-cn-l10n/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
 
 PORTNAME=	auto-cn-l10n
 PORTVERSION=	1.1
@@ -16,7 +13,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The automatic localization for Simplified Chinese zh_CN.eucCN locale
 
 NO_BUILD=	yes
-PKGMESSAGE=	${WRKDIR}/pkg-message
+SUB_FILES=  	pkg-message
 REINPLACE_ARGS=	-i ""
 
 OPTIONS_DEFINE=	WQY FIREFLYTTF FCITX SCIM MINICHINPUT RELAXCONF
@@ -60,12 +57,7 @@ post-patch:
 		s|%%LOCALBASE%%|${LOCALBASE}|g" ${WRKSRC}/dot.xselector ${WRKSRC}/dot.xinitrc
 
 do-install:
-	${MKDIR} ${PREFIX}/share/skel/zh_CN.eucCN
-	${CP} ${WRKSRC}/* ${PREFIX}/share/skel/zh_CN.eucCN
-
-post-install:
-	@${SED} "s|%%PREFIX%%|${PREFIX}|g" \
-		${.CURDIR}/pkg-message > ${PKGMESSAGE}
-	@${CAT} ${PKGMESSAGE}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/skel/zh_CN.eucCN
+	${CP} ${WRKSRC}/* ${STAGEDIR}${PREFIX}/share/skel/zh_CN.eucCN
 
 .include <bsd.port.post.mk>
