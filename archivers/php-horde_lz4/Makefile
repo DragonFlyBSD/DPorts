@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: archivers/php-horde_lz4/Makefile 319925 2013-06-04 22:14:58Z mm $
+# $FreeBSD: archivers/php-horde_lz4/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	horde_lz4
 PORTVERSION=	1.0.0
@@ -12,6 +12,7 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Horde LZ4 Compression Extension for php
 
+NO_STAGE=	yes
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
