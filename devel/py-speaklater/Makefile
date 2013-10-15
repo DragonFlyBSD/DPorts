@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: devel/py-speaklater/Makefile 325627 2013-08-29 18:35:45Z olivierd $
-#
+# $FreeBSD: devel/py-speaklater/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	speaklater
 PORTVERSION=	1.3
@@ -17,6 +16,7 @@ LICENSE=	BSD
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
