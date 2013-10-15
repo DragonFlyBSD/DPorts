@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Iterator-IO
-# Date created:				18 Feb 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Iterator-IO/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: devel/p5-Iterator-IO/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Iterator-IO
 PORTVERSION=	0.02
@@ -22,4 +18,5 @@ MAN3=	Iterator::IO.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
