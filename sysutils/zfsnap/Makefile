@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: ports/sysutils/zfsnap/Makefile,v 1.22 2012/12/30 06:36:42 svnexp Exp $
+# $FreeBSD: sysutils/zfsnap/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	zfsnap
 PORTVERSION=	1.11.0
@@ -18,6 +18,7 @@ GH_COMMIT=	2228749
 PERIODICDIR?=	${PREFIX}/etc/periodic
 PLIST_SUB+=	PERIODICDIR="${PERIODICDIR:S,^${PREFIX}/,,}"
 
+NO_STAGE=	yes
 do-patch:
 .for period in hourly daily weekly monthly reboot
 	@${SED} -e "s/xPERIODICx/${period}/g" -e "s#xPREFIXx#${PREFIX}/sbin#g" ${WRKSRC}/xPERIODICx_zfSnap.sh > ${WRKSRC}/${period}_zfSnap.sh
