@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-pmock
-# Date created:		2005-01-13
-# Whom:			Piet Delport <pjd@satori.za.net>
-#
-# $FreeBSD: devel/py-pmock/Makefile 300896 2012-07-14 13:54:48Z beat $
+# Created by: Piet Delport <pjd@satori.za.net>
+# $FreeBSD: devel/py-pmock/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pmock
 PORTVERSION=	0.3
@@ -23,6 +20,7 @@ PORTDOCS=	*
 
 CPIOFLAGS=	--quiet -pdm -R ${SHAREOWN}:${SHAREGRP}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
