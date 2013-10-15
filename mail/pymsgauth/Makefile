@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pymsgauth
-# Date created:		12 Aug 2002
-# Whom:			Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: mail/pymsgauth/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: mail/pymsgauth/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	pymsgauth
 PORTVERSION=	2.1.0
@@ -20,6 +16,7 @@ SUB_FILES=	pkg-message
 DOCS=		BUGS CHANGELOG pymsgauth.txt pymsgauth.html
 EXAMPLES=	pymsgauthrc-example
 
+NO_STAGE=	yes
 do-build:
 	${REINPLACE_CMD} -e 's,#!/usr/bin/python,#!/usr/bin/env python,' \
 	 	${WRKSRC}/pymsgauth-*
