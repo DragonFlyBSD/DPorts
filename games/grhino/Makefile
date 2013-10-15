@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi <umeno@rr.iij4u.or.jp>
-# $FreeBSD: games/grhino/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/grhino/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	grhino
 PORTVERSION=	0.16.1
@@ -19,6 +19,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALLS_OMF=	yes
 PLIST_SUB+=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
