@@ -1,4 +1,4 @@
-# $FreeBSD: net/turnserver/Makefile 320468 2013-06-10 12:37:37Z gabor $
+# $FreeBSD: net/turnserver/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	turnserver
 PORTVERSION=	1.8.6.3
@@ -33,6 +33,7 @@ REDIS_DESC=	Redis support for user database and for status and statistics report
 
 OPTIONS_DEFAULT=	MYSQL PGSQL REDIS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PORTDOCS=	html TURNServerRESTAPI.pdf TurnNetworks.pdf
