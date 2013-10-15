@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/help_hannahs_horse/Makefile,v 1.1 2013/02/10 08:59:10 svnexp Exp $
+# $FreeBSD: games/help_hannahs_horse/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	help_hannahs_horse
 PORTVERSION=	1.0
@@ -33,6 +33,7 @@ ICON_SIZES=	32x32 48x48 64x64 72x72 96x96
 DESKTOP_ENTRIES="Help Hannah's Horse" "${COMMENT}" "${PORTNAME}.png" \
 		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
