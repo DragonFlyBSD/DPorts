@@ -1,5 +1,5 @@
 # Created by: Jesse van den Kieboom <troplosti@orcaweb.cjb.net>
-# $FreeBSD: sysutils/gksu/Makefile 319005 2013-05-24 18:27:19Z bsam $
+# $FreeBSD: sysutils/gksu/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gksu
 PORTVERSION=	2.0.2
@@ -25,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		gksu.1
 MLINKS=		gksu.1 gksudo.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/gkeyfile.h|glib.h|g' \
 		${WRKSRC}/nautilus-gksu/libnautilus-gksu.c
