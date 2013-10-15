@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pytest/Makefile 317632 2013-05-07 19:42:37Z rm $
+# $FreeBSD: devel/py-pytest/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pytest
 PORTVERSION=	2.3.5
@@ -23,6 +23,7 @@ TEST_DEPENDS:=	${RUN_DEPENDS}
 regression-test: build
 	@cd ${WRKSRC} && PYTHONPATH=${WRKSRC} ${PYTHON_CMD} pytest.py --ignore=doc/ja
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
