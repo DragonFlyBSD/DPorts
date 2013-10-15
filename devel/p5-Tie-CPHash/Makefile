@@ -1,5 +1,5 @@
 # Created by: David Chaplin-Loebell <direct@klatha.com>
-# $FreeBSD: devel/p5-Tie-CPHash/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-Tie-CPHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-CPHash
 PORTVERSION=	1.04
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Tie::CPHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
