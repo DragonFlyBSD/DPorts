@@ -1,5 +1,5 @@
 # Created by: Roland Jesse <roland.jesse@gmx.net>
-# $FreeBSD: graphics/pho/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: graphics/pho/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pho
 DISTVERSION=	0.9.8
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|make|$$(MAKE)| ; \
 		/bin/s|$$(INSTALL)|${INSTALL_PROGRAM}| ; \
