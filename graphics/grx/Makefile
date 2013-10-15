@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: graphics/grx/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/grx/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	grx
 PORTVERSION=	2.4.9
@@ -36,6 +36,7 @@ PLIST_SUB=	VERSION="${PORTVERSION}"
 
 INFO=		grx
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBGI}
