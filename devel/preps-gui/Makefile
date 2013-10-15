@@ -1,5 +1,5 @@
 # Created by: shadow@psoft.net
-# $FreeBSD: devel/preps-gui/Makefile 326177 2013-09-03 17:06:57Z bapt $
+# $FreeBSD: devel/preps-gui/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	preps
 PORTVERSION=	2.0.4
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--with-pgsqldir=${LOCALBASE} \
 			--with-libprepsdir=${LOCALBASE} \
 			--localstatedir=/var
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@PACKAGE@/gnome/help|gnome/help|g' \
 		${WRKSRC}/help/C/Makefile.in
