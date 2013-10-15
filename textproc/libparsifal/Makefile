@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libparsifal/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: textproc/libparsifal/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libparsifal
 PORTVERSION=	1.1.0
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O3|${CFLAGS}|g' ${WRKSRC}/configure
 
