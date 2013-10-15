@@ -1,6 +1,5 @@
 # Created by: Trevor Caira <trevor@bitba.se>
-# $FreeBSD: www/py-selector/Makefile 327012 2013-09-11 21:25:13Z wg $
-#
+# $FreeBSD: www/py-selector/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	selector
 PORTVERSION=	0.9.4
@@ -18,6 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}resolver>=0.2.1:${PORTSDIR}/devel/py-resolve
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's/license="MIT",/license="MIT", zip_safe=False,/' \
 		${WRKSRC}/setup.py
