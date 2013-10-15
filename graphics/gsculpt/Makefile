@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/gsculpt/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: graphics/gsculpt/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gsculpt
 PORTVERSION=	0.99.47
@@ -30,6 +30,7 @@ USE_LDCONFIG=	${PREFIX}/lib/gSculpt
 
 DATADIR=	${PREFIX}/share/gSculpt
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
