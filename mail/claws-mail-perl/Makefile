@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-perl/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: mail/claws-mail-perl/Makefile 329440 2013-10-05 11:25:29Z pawel $
 
 PORTNAME=	perl
 PORTREVISION=	0
@@ -13,8 +13,9 @@ PLIST_FILES+=	share/claws-mail/matcherrc2perlfilter.pl
 CLAWS_PLUGINS_BUILD=	perl
 
 post-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/src/plugins/perl/tools/matcherrc2perlfilter.pl \
-		${PREFIX}/share/claws-mail/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/claws-mail
+	${INSTALL_SCRIPT} ${WRKSRC}/src/plugins/perl/tools/matcherrc2perlfilter.pl \
+		${STAGEDIR}${PREFIX}/share/claws-mail/
 
 .include "../claws-mail/Makefile.claws"
 .include <bsd.port.mk>
