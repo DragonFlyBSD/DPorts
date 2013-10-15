@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/osgg/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/osgg/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	osgg
 PORTVERSION=	0.99
@@ -16,6 +16,7 @@ USE_GL=		yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/osgg
 	@${REINPLACE_CMD} -e 's|"[a-z]*.txt"|DATADIR&|; s|endian.h|sys/&|' \
