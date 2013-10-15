@@ -1,5 +1,5 @@
 # Created by: rodrigc@FreeBSD.org
-# $FreeBSD: dns/hostdb/Makefile 323202 2013-07-18 05:39:00Z rodrigc $
+# $FreeBSD: dns/hostdb/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	hostdb
 PORTVERSION=	1.004
@@ -15,6 +15,7 @@ NO_BUILD=	yes
 HOSTDB_EXAMPLES_DIRS=	example1/out example1/ example2 hiddenmaster
 HOSTDB_EXAMPLES_DIRS+=	mailserverexample/out mailserverexample
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-install:
