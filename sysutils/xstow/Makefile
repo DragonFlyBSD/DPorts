@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: sysutils/xstow/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/xstow/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xstow
 PORTVERSION=	1.0.0
@@ -23,6 +23,7 @@ MAN5=		xstow.ini.5
 # This port always installs documentation, so we cannot respect NOPORTDOCS
 PORTDOCS=	AUTHORS COPYING ChangeLog NEWS README TODO xstow.html xstow.ini xstow.ini.html
 
+NO_STAGE=	yes
 post-install:
 	(cd ${WRKSRC} && \
 	 ${INSTALL_MAN} AUTHORS COPYING ChangeLog NEWS README TODO ${DOCSDIR})
