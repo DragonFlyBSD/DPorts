@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: editors/chexedit/Makefile 323483 2013-07-22 17:29:52Z amdmi3 $
+# $FreeBSD: editors/chexedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	chexedit
 PORTVERSION=	0.9.7
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/chexedit
 
 MAN1=		chexedit.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/hexedit ${PREFIX}/bin/chexedit
 	${INSTALL_MAN} ${WRKSRC}/docs/hexedit.1 ${PREFIX}/man/man1/chexedit.1
