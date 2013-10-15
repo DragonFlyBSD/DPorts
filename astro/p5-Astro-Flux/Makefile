@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-Flux/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: astro/p5-Astro-Flux/Makefile 328790 2013-09-30 14:10:43Z sunpoet $
 
 PORTNAME=	Astro-Flux
 PORTVERSION=	0.01
@@ -18,9 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Astro::Flux.3 \
-		Astro::FluxColor.3 \
-		Astro::Fluxes.3
 
 .include <bsd.port.mk>
