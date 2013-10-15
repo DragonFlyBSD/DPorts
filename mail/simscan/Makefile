@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: mail/simscan/Makefile 319871 2013-06-04 15:47:06Z bapt $
+# $FreeBSD: mail/simscan/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	simscan
 PORTVERSION=	1.4.0
@@ -41,6 +41,7 @@ PASSTHRU_DESC=	Pass Spam Thru, Do Not Reject (required SPAMD)
 HEADERS_DESC=	Add a Received Line With Versions of Scanners
 DSPAM_DESC=	Turn on DSPAM scanning
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ARGS=--enable-clamavdb-path=/var/db/clamav \
