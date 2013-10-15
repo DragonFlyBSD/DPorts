@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Net-SAML/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Net-SAML
 PORTVERSION=	1.11
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Net
 
 MAN3=		Net::SAML.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/apps/openssl/std|${LOCALBASE}|' ${WRKSRC}/Makefile.PL
 
