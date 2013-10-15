@@ -1,5 +1,5 @@
 # Created by: Oleg Alexeenkov <proler@gmail.com>
-# $FreeBSD: sysutils/watchmen/Makefile 325901 2013-09-01 18:24:49Z az $
+# $FreeBSD: sysutils/watchmen/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	watchmen
 PORTVERSION=	0.08
@@ -33,6 +33,7 @@ PLIST_FILES=	\
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/App/watchmen \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/App
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
