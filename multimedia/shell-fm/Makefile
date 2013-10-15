@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: multimedia/shell-fm/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: multimedia/shell-fm/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	shell-fm
 PORTVERSION=	0.7
@@ -25,6 +25,7 @@ PORTDOCS=	AUTHORS RELEASE INSTALL
 PORTEXAMPLES=	shell-colors.sh shell-fm-tune.sh \
 		unix.pl zcontrol
 
+NO_STAGE=	yes
 pre-build:
 	@${REINPLACE_CMD} \
 		-e 's/^PREFIX.*$$/\PREFIX := $$(LOCALBASE)/g' \
