@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-repoze.what-pylons
-# Date created:		9 August,2009
-# Whom:	      		Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-repoze.what-pylons/Makefile,v 1.4 2012/11/17 05:56:50 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-repoze.what-pylons/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	repoze.what-pylons
 PORTVERSION=	1.0
@@ -23,4 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
