@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: x11-toolkits/libgnomeuimm/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: x11-toolkits/libgnomeuimm/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libgnomeuimm
 PORTVERSION=	2.0.0
@@ -23,4 +23,5 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
