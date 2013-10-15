@@ -1,9 +1,5 @@
-# Ports collection makefile for:	mini_sendmail
-# Date created:				11 July 2003
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/mini_sendmail/Makefile,v 1.8 2012/11/17 05:59:06 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: mail/mini_sendmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mini_sendmail
 PORTVERSION=	1.3.6
@@ -17,6 +13,7 @@ COMMENT=	Tiny MTA with only smart relay capability
 MAN8=		mini_sendmail.8
 PLIST_FILES=	bin/mini_sendmail
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 	${CC} ${CFLAGS} -static -o ${PORTNAME} ${PORTNAME}.c
