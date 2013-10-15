@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: www/wordpress/Makefile 327093 2013-09-12 17:24:41Z sunpoet $
+# $FreeBSD: www/wordpress/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wordpress
 PORTVERSION=	3.6.1
@@ -27,6 +27,7 @@ PORTDOCS=	license.txt readme.html
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_CMD} "If you want to upgrade, you must read upgrade document."
 	@${ECHO_CMD} ""
