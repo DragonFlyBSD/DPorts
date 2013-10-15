@@ -1,5 +1,5 @@
 # Created by: Stephon Chen <stephon@pixnet.tw>
-# $FreeBSD: mail/p5-SES/Makefile 326272 2013-09-04 13:07:40Z az $
+# $FreeBSD: mail/p5-SES/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	SES
 PORTVERSION=	1.01
@@ -33,6 +33,7 @@ PLIST_FILES=	bin/ses-get-stats.pl \
 
 SCRIPTS=	ses-get-stats.pl ses-send-email.pl ses-verify-email-address.pl
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKSRC} && ${REINPLACE_CMD} -e '1 s|/usr/bin/perl|${PERL}|' ${SCRIPTS}
 
