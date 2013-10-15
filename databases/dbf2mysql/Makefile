@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dbf2mysql
-# Date created:				02 October 1999
-# Whom:					jedgar@fxp.org
-#
-# $FreeBSD: ports/databases/dbf2mysql/Makefile,v 1.20 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: jedgar@fxp.org
+# $FreeBSD: databases/dbf2mysql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbf2mysql
 PORTVERSION=	1.14
@@ -19,6 +15,7 @@ USE_MYSQL=	yes
 PORTDOCS=	README
 PLIST_FILES=	bin/dbf2mysql bin/mysql2dbf
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dbf2mysql ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mysql2dbf ${PREFIX}/bin
