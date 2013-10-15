@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rtf2LaTeX
-# Date created:		25 Jan 1995
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/print/rtf2latex/Makefile,v 1.17 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: print/rtf2latex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	rtf2latex
 PORTVERSION=	1.5
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}/rtf2LaTeX
 
 MAN1=		rtf2LaTeX.1
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
