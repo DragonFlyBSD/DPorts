@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: devel/glib20-reference/Makefile 318868 2013-05-23 13:02:32Z kwm $
+# $FreeBSD: devel/glib20-reference/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTREVISION=	2
 
@@ -12,6 +12,7 @@ MAN1=		${glib_MAN} ${gobject_MAN}
 
 PLIST=		${.CURDIR}/pkg-plist
 
+NO_STAGE=	yes
 do-install:
 .for d in ${BOOKS}
 	if [ -d ${REFERENCE_SRC}/${d}/html ]; then \
