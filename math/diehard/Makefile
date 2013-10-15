@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: math/diehard/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: math/diehard/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	diehard
 PORTVERSION=	0.1
@@ -17,6 +17,7 @@ PLIST_SUB=	DOCSDIR="share/doc/${PORTNAME}" DATADIR="share/${PORTNAME}"
 
 DOCSLIST=	NOTES readme
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|operm5\.cov|${DATADIR}/operm5.cov|g;' \
 		${WRKSRC}/cdoperm5.c
