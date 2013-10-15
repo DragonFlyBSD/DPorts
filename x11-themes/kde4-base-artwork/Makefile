@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: x11-themes/kde4-base-artwork/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: x11-themes/kde4-base-artwork/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	kde-base-artwork
 PORTVERSION=	${KDE4_VERSION}
@@ -21,4 +21,5 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
