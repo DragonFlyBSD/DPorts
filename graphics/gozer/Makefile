@@ -1,9 +1,5 @@
-# Ports collection makefile for:	gom
-# Date created:				12 Nov 2000
-# Whom:					Jeremy Norris <ishmael27@home.com>
-#
-# $FreeBSD: graphics/gozer/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Jeremy Norris <ishmael27@home.com>
+# $FreeBSD: graphics/gozer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gozer
 PORTVERSION=	0.7
@@ -25,4 +21,5 @@ MAN1=		gozer.1
 MAKE_ENV=	NO_DOC=yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
