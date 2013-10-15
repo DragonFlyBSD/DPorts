@@ -1,9 +1,5 @@
-# -*- mode: makefile-bsdmake -*-
-# New ports collection makefile for:	www/mathjax
-# Date created:				7 December 2010
-# Whom:					Lukasz Stelmach <lukasz.stelmach@iem.pw.edu.pl>
-#
-# $FreeBSD: ports/www/mathjax/Makefile,v 1.2 2012/11/17 06:02:39 svnexp Exp $
+# Created by: Lukasz Stelmach <lukasz.stelmach@iem.pw.edu.pl>
+# $FreeBSD: www/mathjax/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MathJax
 PORTVERSION=	2.0
@@ -22,6 +18,7 @@ WRKSRC=	${WRKDIR}/mathjax-MathJax-07669ac
 
 # Changing permissions of 30k files with find -exec (COPYTREE) is way
 # too slow.
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	(cd ${WRKSRC} && \
