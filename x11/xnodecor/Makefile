@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xnodecor
-# Date created:		15 November 2002
-# Whom:			Katsura Matsumoto <katsura@cc.okayama-u.ac.jp>
-#
-# $FreeBSD: ports/x11/xnodecor/Makefile,v 1.6 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Katsura Matsumoto <katsura@cc.okayama-u.ac.jp>
+# $FreeBSD: x11/xnodecor/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xnodecor
 PORTVERSION=	0.1
@@ -19,6 +15,7 @@ NO_WRKSUBDIR=	yes
 USE_XORG=	x11
 PLIST_FILES=	bin/xnodecor
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${FILESDIR}/Makefile ${WRKDIR}
