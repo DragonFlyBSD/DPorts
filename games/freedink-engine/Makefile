@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: games/freedink-engine/Makefile 326035 2013-09-02 17:06:54Z bapt $
+# $FreeBSD: games/freedink-engine/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	freedink
 PORTVERSION=	1.08.${PORTVER}
@@ -26,6 +26,7 @@ EMBEDDED_DESC=	Embedded Resources
 
 OPTIONS_DEFAULT=	EMBEDDED
 
+NO_STAGE=	yes
 post-patch:
 	@${CHMOD} 0755 ${WRKSRC}/autotools/install-reloc
 
