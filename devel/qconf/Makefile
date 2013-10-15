@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qconf
-# Date created:		2010-10-28
-# Whom:			Andreev Maxim <andreevmaxim@gmail.com>
-#
-# $FreeBSD: devel/qconf/Makefile 324298 2013-08-06 01:13:53Z mandree $
-#
+# Created by: Andreev Maxim <andreevmaxim@gmail.com>
+# $FreeBSD: devel/qconf/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	qconf
 PORTVERSION=	1.4
@@ -23,4 +19,5 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--qtdir=${QT_PREFIX} \
 		--verbose
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
