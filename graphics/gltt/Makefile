@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
-# $FreeBSD: graphics/gltt/Makefile 316593 2013-04-26 09:23:54Z bapt $
+# $FreeBSD: graphics/gltt/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gltt
 PORTVERSION=	2.5.2
@@ -26,4 +26,5 @@ CONFIGURE_ARGS=	--with-ttf-includes=${LOCALBASE}/include/freetype1 \
 		--with-glut-libraries=${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
