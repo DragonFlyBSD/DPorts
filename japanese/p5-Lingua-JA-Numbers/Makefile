@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Lingua-JA-Numbers
-# Date created:				18 Jun 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: japanese/p5-Lingua-JA-Numbers/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: japanese/p5-Lingua-JA-Numbers/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Lingua-JA-Numbers
 PORTVERSION=	0.04
@@ -19,4 +15,5 @@ MAN3=	Lingua::JA::Numbers.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
