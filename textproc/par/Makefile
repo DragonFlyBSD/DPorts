@@ -1,5 +1,5 @@
 # Created by: Mark R V Murray <mark@grondar.za>
-# $FreeBSD: textproc/par/Makefile 316998 2013-05-01 07:55:03Z danfe $
+# $FreeBSD: textproc/par/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	par
 PORTVERSION=	1.52
@@ -17,6 +17,7 @@ ALL_TARGET=	#
 MAN1=		par.1
 PLIST_FILES=	bin/par
 
+NO_STAGE=	yes
 do-configure:
 	(cd ${WRKSRC}; ${CP} protoMakefile Makefile)
 
