@@ -1,5 +1,5 @@
 # Created by: Russell A. Jackson <raj@csub.edu>
-# $FreeBSD: deskutils/wyrd/Makefile 327147 2013-09-13 13:35:24Z wg $
+# $FreeBSD: deskutils/wyrd/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	wyrd
 PORTVERSION=	1.4.6
@@ -25,6 +25,7 @@ PORTDOCS=	manual.html manual.pdf
 OPTIONS_DEFINE=	UTF8 DOCS
 UTF8_CONFIGURE_ENABLE=	utf8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
