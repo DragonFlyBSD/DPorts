@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: www/hs-scgi/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-scgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 # deprecated: use wai
 
@@ -15,5 +15,6 @@ LICENSE=	BSD
 
 USE_CABAL=	cgi network>=2.2.3
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
