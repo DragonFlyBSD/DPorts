@@ -1,9 +1,5 @@
-# New ports collection makefile for:	yould
-# Date created:		23 June 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/yould/Makefile,v 1.5 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: textproc/yould/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	yould
 PORTVERSION=	0.3.7
@@ -15,6 +11,7 @@ COMMENT=	Pronounceable word generator
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+NO_STAGE=	yes
 PYDISTUTILS_INSTALLARGS=-Z -O 1 -N -S ${PYTHON_SITELIBDIR} ${WRKSRC}/dist/${PYEASYINSTALL_EGG}
 PORTDOCS=	NEWS.txt README.txt
 
