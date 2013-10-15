@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgresql_autodoc/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: databases/postgresql_autodoc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	postgresql_autodoc
 PORTVERSION=	1.41
@@ -21,6 +21,7 @@ MAN1=		postgresql_autodoc.1
 
 WRKSRC=		${WRKDIR}/postgresql_autodoc
 
+NO_STAGE=	yes
 do-install:
 		@${INSTALL_SCRIPT} ${WRKSRC}/postgresql_autodoc ${PREFIX}/bin
 		@${INSTALL_MAN} ${WRKSRC}/postgresql_autodoc.1 ${MANPREFIX}/man/man1
