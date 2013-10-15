@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/games/polypuzzle/Makefile,v 1.7 2013/01/09 20:04:45 svnexp Exp $
+# $FreeBSD: games/polypuzzle/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	polypuzzle
 PORTVERSION=	1.6
@@ -23,6 +23,7 @@ DATA_FILES=	menus pieces.3x20 pieces.783 pieces.bonus pieces.colours \
 		pieces.round pieces.small pieces.square pieces.star \
 		pieces.triangle
 
+NO_STAGE=	yes
 pre-install:
 	 @${REINPLACE_CMD} -e "s:%%DATADIR%%:${DATADIR}:g" ${WRKSRC}/polypuzzle
 do-install:
