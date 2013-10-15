@@ -1,5 +1,5 @@
 # Created by: Thawatchai Piyawat <piyawat@usablelabs.com>
-# $FreeBSD: devel/libthai/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/libthai/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libthai
 PORTVERSION=	0.1.19
@@ -21,6 +21,7 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOXYGEN
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOXYGEN}
