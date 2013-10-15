@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/forg/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: net/forg/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	forg
 PORTVERSION=	0.5.1
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinte
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 .for file in forg.py mini-forg.py
 	@${REINPLACE_CMD} -e "s,/usr/bin/python,${PYTHON_CMD},g" ${WRKSRC}/${file}
