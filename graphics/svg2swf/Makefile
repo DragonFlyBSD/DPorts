@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	svg2swf
-# Date created:			24 August 2000
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/svg2swf/Makefile,v 1.14 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/svg2swf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	svg2swf
 PORTVERSION=	0.1.3
@@ -24,6 +19,7 @@ PLIST_FILES=	bin/svg2swf
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_VERSION} == "python1.5"
