@@ -1,5 +1,5 @@
 # Created by: HIYAMA Takeshi <th@cis.ibaraki.ac.jp>
-# $FreeBSD: games/gru/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/gru/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gru
 PORTVERSION=	8087
@@ -15,6 +15,7 @@ USE_XORG=	x11 xext xmu xpm xaw xt sm ice
 
 MAN1=		gru.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
