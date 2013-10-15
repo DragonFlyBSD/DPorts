@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	libxode
-# Date created:			May 16, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/libxode/Makefile,v 1.28 2012/11/17 06:02:02 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/libxode/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libxode
 PORTVERSION=	0.71
