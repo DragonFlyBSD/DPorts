@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-rubytter
-# Date created:		2009-07-12
-# Whom:			Dennis Herrmann <dhn@FreeBSD.org>
-#
-# $FreeBSD: ports/net/rubygem-rubytter/Makefile,v 1.11 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: Dennis Herrmann <dhn@FreeBSD.org>
+# $FreeBSD: net/rubygem-rubytter/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rubytter
 PORTVERSION=	1.4.2
@@ -21,4 +17,5 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
