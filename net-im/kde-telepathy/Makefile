@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/kde-telepathy/Makefile 317156 2013-05-02 21:47:33Z avilla $
+# $FreeBSD: net-im/kde-telepathy/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	kde-telepathy
 PORTVERSION=	${KTP_VERSION}
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=PLASMA SEND_FILE
 PLASMA_DESC=	Applets for KDE Plasma Desktop integration
 SEND_FILE_DESC=	Context menu plugin for sending files
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPLASMA}
