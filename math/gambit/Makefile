@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/gambit/Makefile 325144 2013-08-21 14:45:11Z gahr $
+# $FreeBSD: math/gambit/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gambit
 PORTVERSION=	13.1.0
@@ -17,4 +17,5 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-wx-config=${WX_CONFIG}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
