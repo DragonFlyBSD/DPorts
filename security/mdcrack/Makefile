@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	mdcrack
-# Date created:			Apr 19, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/security/mdcrack/Makefile,v 1.12 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: security/mdcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	mdcrack
 PORTVERSION=	1.2
@@ -18,4 +13,5 @@ COMMENT=	Bruteforce password MD5 hashes
 ALL_TARGET=	little
 PLIST_FILES=	bin/mdcrack
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
