@@ -1,9 +1,5 @@
-# New ports collection makefile for:	opendpi
-# Date created:		13 November 2009
-# Whom:			fernandotcl
-#
-# $FreeBSD: ports/net/opendpi/Makefile,v 1.5 2012/11/17 06:00:08 svnexp Exp $
-#
+# Created by: fernandotcl
+# $FreeBSD: net/opendpi/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	opendpi
 PORTVERSION=	1.2.0
