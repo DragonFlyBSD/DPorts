@@ -1,5 +1,5 @@
 # Created by: Vladimir Gorelov <virtual.lark@gmail.com>
-# $FreeBSD: devel/art/Makefile 326013 2013-09-02 15:39:17Z bapt $
+# $FreeBSD: devel/art/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	art
 PORTVERSION=	0.9.01
@@ -16,6 +16,7 @@ LIB_DEPENDS=	xml++-2.6:${PORTSDIR}/textproc/libxml++26
 
 USES=	gmake pkgconfig
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/artlibgen/src/artlibgen ${PREFIX}/bin
 	@${INSTALL_PROGRAM} ${WRKSRC}/artrepgen/artrepgen ${PREFIX}/bin
