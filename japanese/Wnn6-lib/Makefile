@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/Wnn6-lib/Makefile 321992 2013-06-28 21:55:51Z bapt $
+# $FreeBSD: japanese/Wnn6-lib/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Wnn6-lib
 PORTVERSION=	2000.9.1
@@ -16,6 +16,7 @@ USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/src/contrib/im/Xsi
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/X11R6,${LOCALBASE},g' \
 		${WRKSRC}/config/Project.tmpl \
