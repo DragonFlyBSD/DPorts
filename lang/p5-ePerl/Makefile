@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall <rse@engelschall.com>
-# $FreeBSD: lang/p5-ePerl/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: lang/p5-ePerl/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	eperl
 PORTVERSION=	2.2.14
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Parse::ePerl.3 Apache::ePerl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
