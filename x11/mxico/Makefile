@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: x11/mxico/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/mxico/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 # NB: Do not delete or wrap post-install section, since we have to provide
 #     READMEj and README
@@ -18,6 +18,7 @@ USE_XORG=	x11 xext
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		mxico.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
