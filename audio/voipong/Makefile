@@ -1,9 +1,5 @@
-# New ports collection makefile for:	voipong
-# Date created:			20 May 2005
-# Whom:				Necati Ersen SISECI <siseci@enderunix.org>
-#
-# $FreeBSD: ports/audio/voipong/Makefile,v 1.8 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: Necati Ersen SISECI <siseci@enderunix.org>
+# $FreeBSD: audio/voipong/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	voipong
 PORTVERSION=	2.0
@@ -16,6 +12,7 @@ COMMENT=	Detect Voice Over IP calls and dump them to separate wave files
 USE_LDCONFIG=	yes
 PORTDOCS=	ALGORITHMS AUTHORS ChangeLog COPYING INSTALL KNOWN_BUGS \
 		LICENSE  NEWS README THANKS TODO
+NO_STAGE=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile.bsd ${WRKSRC}/Makefile
