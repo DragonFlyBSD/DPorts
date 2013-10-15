@@ -1,8 +1,8 @@
 # Created by: Will Andrews <will@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-TreeBuilder/Makefile 326918 2013-09-10 16:48:41Z az $
+# $FreeBSD: textproc/p5-XML-TreeBuilder/Makefile 329779 2013-10-08 12:41:01Z culot $
 
 PORTNAME=	XML-TreeBuilder
-PORTVERSION=	4.3
+PORTVERSION=	5.0
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,16 +15,16 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-HTML-Tagset>=3.02:${PORTSDIR}/www/p5-HTML-Tagset \
 		p5-HTML-Tree>=4.1:${PORTSDIR}/www/p5-HTML-Tree \
+		p5-XML-Catalog>=1.0:${PORTSDIR}/textproc/p5-XML-Catalog \
 		p5-XML-Parser>0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Devel-Cover>0:${PORTSDIR}/devel/p5-Devel-Cover \
-		p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception \
-		p5-Test-Perl-Critic>0:${PORTSDIR}/textproc/p5-Test-Perl-Critic \
-		p5-Test-Pod-Coverage>0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
+		p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
 
 USES=		perl5
 USE_PERL5=	modbuild
 
 MAN3=		XML::TreeBuilder.3 XML::Element.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
