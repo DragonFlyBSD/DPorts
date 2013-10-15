@@ -1,5 +1,5 @@
-# Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 321434 2013-06-20 23:10:18Z wg $
+# Created by: Kris Moore <kmoore@FreeBSD.org>
+# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	lxde-icon-theme
 PORTVERSION=	0.5.0
@@ -24,6 +24,7 @@ PORTDOCS=	AUTHORS
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
