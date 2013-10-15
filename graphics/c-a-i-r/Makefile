@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: graphics/c-a-i-r/Makefile 326168 2013-09-03 16:19:05Z bapt $
+# $FreeBSD: graphics/c-a-i-r/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	c-a-i-r
 PORTVERSION=	2.19
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}
 
 PLIST_FILES=	bin/cair
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cair ${PREFIX}/bin
 
