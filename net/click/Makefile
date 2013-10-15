@@ -1,5 +1,5 @@
 # Created by: gnn
-# $FreeBSD: net/click/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: net/click/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 # XXX: TODO: fix kernel module
 
@@ -93,6 +93,7 @@ USERCLICK_DESC=		Build user-space Click
 WIFI_ELEMS_DESC=	Build Wi-Fi elements
 XML_EXPAT_DESC=		Enable XML support with expat
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXML_EXPAT}
