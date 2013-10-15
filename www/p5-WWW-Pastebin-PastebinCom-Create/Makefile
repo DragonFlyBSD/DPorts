@@ -1,5 +1,4 @@
-# Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: www/p5-WWW-Pastebin-PastebinCom-Create/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Pastebin-PastebinCom-Create/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Pastebin-PastebinCom-Create
 PORTVERSION=	0.004
@@ -26,4 +25,5 @@ PLIST_DIRS+=	%%SITE_PERL%%/WWW/Pastebin/PastebinCom \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Pastebin \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
