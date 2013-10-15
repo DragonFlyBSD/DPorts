@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Reflex
-# Date created:				2011-03-16
-# Whom:					Jase Thew <freebsd@beardz.net>
-#
-# $FreeBSD: devel/p5-Reflex/Makefile 327380 2013-09-16 10:58:05Z az $
-#
+# Created by: Jase Thew <freebsd@beardz.net>
+# $FreeBSD: devel/p5-Reflex/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Reflex
 PORTVERSION=	0.099
@@ -105,6 +101,7 @@ MAN3=		MooseX::Role::Reactive.3 \
 		Reflex::UdpPeer.3 \
 		Reflex::Wakeup.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
