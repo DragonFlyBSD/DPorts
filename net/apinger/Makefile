@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: net/apinger/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: net/apinger/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	apinger
 PORTVERSION=	0.6.1
@@ -17,6 +17,7 @@ SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	IPV6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MIPV6}
