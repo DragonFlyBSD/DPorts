@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: editors/conglomerate/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: editors/conglomerate/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	conglomerate
 PORTVERSION=	0.9.1
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/enchant.pc) || defined(WITH_ENCHANT)
