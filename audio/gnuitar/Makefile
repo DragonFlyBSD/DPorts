@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: audio/gnuitar/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/gnuitar/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=		gnuitar
 PORTVERSION=		0.3.2
@@ -11,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The real-time guitar processor
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-gtk2 \
