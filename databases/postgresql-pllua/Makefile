@@ -1,5 +1,5 @@
 # Created by: sunghyuk
-# $FreeBSD: databases/postgresql-pllua/Makefile 323430 2013-07-22 06:50:03Z marino $
+# $FreeBSD: databases/postgresql-pllua/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pllua
 PORTVERSION=	0.3.2
@@ -18,6 +18,7 @@ USE_LUA=	5.1+
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKSRC}/pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%LUA_INC%|${LUA_INCDIR}|g' \
 			-e 's|%LUA_LIB%|${LUA_LIBDIR}|g' \
