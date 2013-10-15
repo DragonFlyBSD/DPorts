@@ -1,5 +1,4 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: devel/rbtools/Makefile 320798 2013-06-13 12:58:25Z wg $
+# $FreeBSD: devel/rbtools/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	${ORIGNAME:tl}
 DISTVERSION=	0.5
@@ -23,4 +22,5 @@ PLIST_FILES=	bin/post-review \
 		bin/rbt \
 		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
