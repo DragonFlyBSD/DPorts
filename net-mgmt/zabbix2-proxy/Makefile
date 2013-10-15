@@ -1,13 +1,10 @@
-# New ports collection makefile for:	zabbix-proxy
-# Date created:		2009-12-09
-# Whom:			Jim Riggs <ports@christianserving.org>
-#
-# $FreeBSD: ports/net-mgmt/zabbix2-proxy/Makefile,v 1.4 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Jim Riggs <ports@christianserving.org>
+# $FreeBSD: net-mgmt/zabbix2-proxy/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	zabbix2
 PKGNAMESUFFIX=	-proxy
 
 MASTERDIR=	${.CURDIR}/../zabbix2-server
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
