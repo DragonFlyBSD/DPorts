@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dbd_odbc for DBD-for-Ruby
-# Date created:		9 June 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: databases/ruby-dbd_odbc/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: databases/ruby-dbd_odbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbd_odbc
 PORTVERSION=	0.2.5
@@ -23,4 +19,5 @@ RUN_DEPENDS=	${RUBY_SITELIBDIR}/dbi.rb:${PORTSDIR}/databases/ruby-dbi \
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
