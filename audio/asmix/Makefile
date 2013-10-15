@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asmix
-# Date created:		1 January 2003
-# Whom:			mtm@identd.net
-#
-# $FreeBSD: ports/audio/asmix/Makefile,v 1.11 2012/11/17 05:54:28 svnexp Exp $
-#
+# Created by: mtm@identd.net
+# $FreeBSD: audio/asmix/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	asmix
 PORTVERSION=	1.5
@@ -20,6 +16,7 @@ CONFIGURE_ARGS=	--with-xpm \
 		--with-xpm-includes=${LOCALBASE}/include \
 		--with-xpm-library=${LOCALBASE}/lib
 
+NO_STAGE=	yes
 MAN1=		${PORTNAME}.1x
 PLIST_FILES=	bin/asmix
 
