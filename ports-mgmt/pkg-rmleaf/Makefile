@@ -1,5 +1,5 @@
 # Created by: Yanhui Shen <shen.elf@gmail.com>
-# $FreeBSD: ports-mgmt/pkg-rmleaf/Makefile 318266 2013-05-15 22:21:30Z rakuco $
+# $FreeBSD: ports-mgmt/pkg-rmleaf/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	pkg-rmleaf
 PORTVERSION=	0.2
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}
 
 PLIST_FILES=	sbin/pkg-rmleaf
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${FILESDIR}/pkg-rmleaf ${WRKSRC}
