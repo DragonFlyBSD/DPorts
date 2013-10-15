@@ -1,9 +1,5 @@
-# New ports collection makefile for:	FTJam
-# Date created:		Wed Oct 12 03:26:39 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/ftjam/Makefile,v 1.9 2012/11/17 05:55:43 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: devel/ftjam/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	ftjam
 PORTVERSION=	2.5.2
@@ -31,6 +27,7 @@ PORTDOCS=	\
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} -E \
 		-e 's|^(CC[[:space:]]*=).*$$|\1${CC}|' \
