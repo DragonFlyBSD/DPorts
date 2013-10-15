@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/devel/libcfg/Makefile,v 1.11 2013/01/12 13:02:13 svnexp Exp $
+# $FreeBSD: devel/libcfg/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libcfg
 PORTVERSION=	0.6.2
@@ -32,6 +32,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	EXAMPLES DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
