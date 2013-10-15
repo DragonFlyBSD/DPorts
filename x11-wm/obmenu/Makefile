@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-wm/obmenu/Makefile,v 1.11 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: x11-wm/obmenu/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	obmenu
 PORTVERSION=	1.0
@@ -16,6 +16,7 @@ PYDISTUTILS_PKGNAME=	obMenu
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
