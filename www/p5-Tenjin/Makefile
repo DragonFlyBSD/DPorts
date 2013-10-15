@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Tenjin
-# Date created:		04 Dec 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Tenjin/Makefile 325965 2013-09-02 10:00:38Z az $
-#
+# $FreeBSD: www/p5-Tenjin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Tenjin
 PORTVERSION=	0.070001
@@ -27,4 +22,5 @@ MAN3=	Tenjin.3 \
 	Tenjin::Template.3 \
 	Tenjin::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
