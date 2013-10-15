@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: security/courierpassd/Makefile 323796 2013-07-27 16:45:26Z marino $
+# $FreeBSD: security/courierpassd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	courierpassd
 PORTVERSION=	1.1.2
@@ -26,6 +26,7 @@ MAN8=		courierpassd.8
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-everything::
