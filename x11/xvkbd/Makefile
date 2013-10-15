@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: x11/xvkbd/Makefile 323466 2013-07-22 15:25:58Z miwi $
+# $FreeBSD: x11/xvkbd/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xvkbd
 PORTVERSION=	3.5
@@ -21,6 +21,7 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 
 MAN1=		xvkbd.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXAW3D}
