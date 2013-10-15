@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/xfsinfo/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-fonts/xfsinfo/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	xfsinfo
 PORTVERSION=	1.0.4
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/xfsinfo
 
 MAN1=		xfsinfo.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
