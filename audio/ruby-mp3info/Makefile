@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/mp3info
-# Date created:		24 March 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: audio/ruby-mp3info/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: audio/ruby-mp3info/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3info
 PORTVERSION=	0.5
@@ -18,6 +14,7 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby library to access to information on mp3 files
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 USE_RUBY_RDOC=	yes
