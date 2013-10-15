@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/schism/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/schism/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	schism
 PORTVERSION=	20100101
@@ -17,6 +17,7 @@ LICENSE=	GPLv2
 ONLY_FOR_ARCHS=	i386 amd64
 
 USE_SDL=	yes
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
