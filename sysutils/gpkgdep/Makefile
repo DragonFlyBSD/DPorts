@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/gpkgdep/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: sysutils/gpkgdep/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gpkgdep
 PORTVERSION=	0.2
@@ -19,4 +19,5 @@ AUTOMAKE_ARGS=	--add-missing
 USES=		gmake pkgconfig
 PLIST_FILES=	bin/gpkgdep
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
