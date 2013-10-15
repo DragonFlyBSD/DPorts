@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/flot/Makefile,v 1.4 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/flot/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	flot
 PORTVERSION=	0.7
@@ -24,6 +24,7 @@ PORTDOCS=	API.txt	\
 		README.txt
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL} -d -g ${USERS} -o ${GROUPS} ${WWWDIR}
 	${INSTALL_DATA} -o www -g www ${WRKSRC}/*.js ${WWWDIR}
