@@ -1,4 +1,4 @@
-# $FreeBSD: ports/french/hyphen/Makefile,v 1.7 2012/11/17 05:57:28 svnexp Exp $
+# $FreeBSD: french/hyphen/Makefile 328067 2013-09-23 21:53:56Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	3.0
@@ -23,10 +23,10 @@ PLIST_FILES+=	%%DATADIR%%/hyph_${ALIAS}.dic
 .endfor
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_fr.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_fr.dic ${STAGEDIR}${DATADIR}/
 .for ALIAS in ${FRALIASES}
-	${LN} -s hyph_fr.dic ${DATADIR}/hyph_${ALIAS}.dic
+	${LN} -s hyph_fr.dic ${STAGEDIR}${DATADIR}/hyph_${ALIAS}.dic
 .endfor
 
 .include <bsd.port.mk>
