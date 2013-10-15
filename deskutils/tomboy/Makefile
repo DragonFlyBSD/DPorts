@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: deskutils/tomboy/Makefile 326447 2013-09-05 20:49:55Z antoine $
+# $FreeBSD: deskutils/tomboy/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tomboy
 PORTVERSION=	1.12.2
@@ -39,6 +39,7 @@ APPLET_DESC=	Enable GNOME panel applet
 # Restrict to stable (even) versions, indicated by the second component.
 PORTSCOUT=	limitw:1,even
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MAPPLET}
