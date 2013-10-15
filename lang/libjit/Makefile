@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libjit
-# Date created:		2004-04-27
-# Whom:			michael johnson <ahze@ahze.net>
-#
-# $FreeBSD: lang/libjit/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: michael johnson <ahze@ahze.net>
+# $FreeBSD: lang/libjit/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	libjit
 PORTVERSION=	0.1.2
@@ -25,6 +21,7 @@ CFLAGS+=	-O0
 INFO=		libjit
 MAN3=		libjit.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
