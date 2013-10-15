@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/nethack33/Makefile 322594 2013-07-10 01:31:18Z glewis $
+# $FreeBSD: games/nethack33/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	nethack
 PORTVERSION=	3.3.1
@@ -46,6 +46,7 @@ GRAPHICS=	# none
 .endif
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .include <bsd.port.options.mk>
