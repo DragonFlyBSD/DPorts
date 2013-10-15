@@ -1,5 +1,5 @@
-# Created by:	Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/devel/libcidr/Makefile,v 1.5 2012/11/17 05:55:53 svnexp Exp $
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: devel/libcidr/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libcidr
 DISTVERSION=	1.2.1
@@ -28,4 +28,5 @@ MAKE_ENV+=	NO_DOCS=yes
 MAKE_ENV+=	NO_EXAMPLES=yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
