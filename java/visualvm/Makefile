@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: java/visualvm/Makefile 321341 2013-06-19 22:35:23Z swills $
+# $FreeBSD: java/visualvm/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	visualvm
 PORTVERSION=	1.3.5
@@ -20,6 +20,7 @@ NO_BUILD=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 
+NO_STAGE=	yes
 post-extract-script:
 	@${FIND} ${WRKSRC} -type f \( -name '*.bak' -or -name '*.dll' -or -name '*.exe' \) -delete
 	@${RM} -rf ${WRKSRC}/profiler/lib/deployed
