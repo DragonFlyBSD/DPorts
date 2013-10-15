@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/lfpfonts-fix/Makefile,v 1.12 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-fonts/lfpfonts-fix/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	lfpfonts-fix
 PORTVERSION=	0.82
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/lfpfonts-fix
 NO_BUILD=	yes
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/lib/X11/fonts/lfpfonts-fix
 	@${INSTALL_DATA} ${WRKSRC}/lfp-fix/*.pcf.gz ${PREFIX}/lib/X11/fonts/lfpfonts-fix
