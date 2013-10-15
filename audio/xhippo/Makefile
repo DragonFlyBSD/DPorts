@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <rod@zort.on.ca>
-# $FreeBSD: audio/xhippo/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/xhippo/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xhippo
 PORTVERSION=	3.5
@@ -15,6 +15,7 @@ LIB_DEPENDS=	id3tag:${PORTSDIR}/audio/libid3tag
 RUN_DEPENDS=	mpg123:${PORTSDIR}/audio/mpg123
 
 USE_GNOME=	gtk20
+NO_STAGE=	yes
 USES=		gettext pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk2
