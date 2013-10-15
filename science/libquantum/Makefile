@@ -1,9 +1,5 @@
-# Ports collection makefile for:	libquantum
-# Date created:				6 Aug, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/science/libquantum/Makefile,v 1.3 2012/11/17 06:00:58 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: science/libquantum/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	libquantum
 PORTVERSION=	1.1.0
@@ -18,4 +14,5 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
