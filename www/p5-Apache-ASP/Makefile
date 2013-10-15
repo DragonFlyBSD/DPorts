@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: www/p5-Apache-ASP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Apache-ASP/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-ASP
 PORTVERSION=	2.61
@@ -39,4 +39,5 @@ MAN3=		Apache::ASP.3 \
 		Bundle::Apache::ASP.3 \
 		Bundle::Apache::ASP::Extra.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
