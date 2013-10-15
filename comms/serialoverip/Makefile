@@ -1,5 +1,5 @@
 # Created by: Devon H. O'Dell <devon.odell@coyotepoint.com>
-# $FreeBSD: ports/comms/serialoverip/Makefile,v 1.4 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: comms/serialoverip/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	serialoverip
 PORTVERSION=	1.0
@@ -11,6 +11,7 @@ COMMENT=	Transport of serial interfaces over UDP/IP
 
 PLIST_FILES=	sbin/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}; ${CC} ${CFLAGS} ${PORTNAME}.c -o ${PORTNAME}
 
