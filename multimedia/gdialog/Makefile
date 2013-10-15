@@ -1,5 +1,5 @@
 # Created by: Heiner Eichmann <h.eichmann@gmx.de>
-# $FreeBSD: ports/multimedia/gdialog/Makefile,v 1.6 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: multimedia/gdialog/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gdialog
 PORTVERSION=	2.5
@@ -22,6 +22,7 @@ NO_WRKSUBDIR=	yes
 SUB_FILES=	gdialog
 DATADIR=	${JAVASHAREDIR}/projectx
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/GDialog.jar ${DATADIR}
