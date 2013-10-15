@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: irc/p5-AnyEvent-IRC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: irc/p5-AnyEvent-IRC/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	AnyEvent-IRC
 PORTVERSION=	0.97
@@ -22,4 +22,5 @@ MAN3=	AnyEvent::IRC::Client.3 \
 	AnyEvent::IRC.3 \
 	AnyEvent::IRC::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
