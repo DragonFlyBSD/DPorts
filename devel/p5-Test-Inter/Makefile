@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Inter/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Test-Inter/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Inter
 PORTVERSION=	1.05
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Test::Inter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
