@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-wheel/Makefile 323732 2013-07-26 15:15:10Z nivit $
+# $FreeBSD: devel/py-wheel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	wheel
 PORTVERSION=	0.21.0
@@ -22,6 +22,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 PIP_DESC=	Use pip to install wheels
 SIGNATURE_DESC=	Enable digital signature of wheels
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
