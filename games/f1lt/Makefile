@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: games/f1lt/Makefile 323495 2013-07-22 19:16:07Z jgh $
+# $FreeBSD: games/f1lt/Makefile 328256 2013-09-25 06:14:31Z jgh $
 
 PORTNAME=	f1lt
 PORTVERSION=	2.1.1
@@ -32,9 +32,9 @@ PORTDOCS=	CHANGELOG
 .include <bsd.port.options.mk>
 
 post-patch-script:
-	@${REINPLACE_CMD} -e 's|PREFIX = /opt/$$$$TARGET|PREFIX = ${PREFIX}|g' \
+	@${REINPLACE_CMD} -e 's|PREFIX = /opt/$$$$TARGET|PREFIX = ${STAGEDIR}${PREFIX}|g' \
 		${WRKSRC}/F1LT.pro
-	@${REINPLACE_CMD} -e 's|SHARE=$$$$PREFIX/share|SHARE=$$$$PREFIX/share/${PORTNAME}|g' \
+	@${REINPLACE_CMD} -e 's|SHARE=$$$$PREFIX/share|SHARE=${STAGEDIR}${PREFIX}/share/${PORTNAME}|g' \
 		${WRKSRC}/F1LT.pro
 .if ${ARCH} == "i386"
 	@${REINPLACE_CMD} -e 's|999999999998|1000000|g' \
@@ -47,14 +47,14 @@ do-configure:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${STAGEDIR}${DOCSDIR}
 .endif
-	${STRIP_CMD} ${PREFIX}/bin/F1LT
-	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/bin/F1LT
-	${CHMOD} 755 ${PREFIX}/bin/F1LT
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/f1lt/*.dat
-	${CHMOD} 644 ${PREFIX}/share/f1lt/*.dat
-	@${LN} -s ${PREFIX}/bin/F1LT ${PREFIX}/bin/${PORTNAME}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/F1LT
+	${CHOWN} ${BINOWN}:${BINGRP} ${STAGEDIR}${PREFIX}/bin/F1LT
+	${CHMOD} 755 ${STAGEDIR}${PREFIX}/bin/F1LT
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${PREFIX}/share/f1lt/*.dat
+	${CHMOD} 644 ${STAGEDIR}${PREFIX}/share/f1lt/*.dat
+	${LN} -sf F1LT ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
