@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11-toolkits/py-wax/pkg-plist,v 1.2 2012/11/17 06:03:38 svnexp Exp $
+@comment $FreeBSD: x11-toolkits/py-wax/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/wax/__init__.py
 %%PYTHON_SITELIBDIR%%/wax/application.py
 %%PYTHON_SITELIBDIR%%/wax/artprovider.py

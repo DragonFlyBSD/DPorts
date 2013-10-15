@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wax
-# Date created:		2006-04-03
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: ports/x11-toolkits/py-wax/Makefile,v 1.10 2012/11/17 06:03:38 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: x11-toolkits/py-wax/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	wax
 PORTVERSION=	0.3.33
@@ -32,6 +28,7 @@ PLIST_SUB=	PORTEXAMPLES="@comment "
 PLIST_SUB=	PORTEXAMPLES=""
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC} && ${FIND} . ${FIND_DIRS} -exec ${MKDIR} ${DATADIR}/{} \;
 	@cd ${WRKSRC} && ${FIND} . ${FIND_DELETE} -delete
