@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cups-pdf
-# Date created:		Jun 15 2004
-# Whom:			Mark Reidel <ports@mark.reidel.info>
-#
-# $FreeBSD: ports/print/cups-pdf/Makefile,v 1.30 2012/11/17 06:00:48 svnexp Exp $
-#
+# Created by: Mark Reidel <ports@mark.reidel.info>
+# $FreeBSD: print/cups-pdf/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	cups-pdf
 PORTVERSION=	2.6.1
@@ -53,6 +49,7 @@ SUBST_CMD+=	-e 's,\#Out /var/spool/cups-pdf/$${USER},Out ${OUTPUT_DIRECTORY},'
 SUBST_CMD+=	-e "s,\#Log /var/log/cups,Log ${LOG_DIRECTORY},"
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 .if !defined(PDF_VERSION) || !defined(HOME_SUBDIR) || \
 !defined(OUTPUT_DIRECTORY) || !defined(LOG_DIRECTORY)
