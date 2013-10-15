@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-SSH-Expect
-# Date created:		2007-06-30
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: net/p5-Net-SSH-Expect/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: net/p5-Net-SSH-Expect/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-SSH-Expect
 PORTVERSION=	1.09
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::SSH::Expect.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
