@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bsp
-# Date created:			22 April 2002
-# Whom:				Christian Brueffer <chris@unixpages.org>
-#
-# $FreeBSD: ports/games/bsp/Makefile,v 1.11 2012/11/17 05:57:33 svnexp Exp $
-#
+# Created by: Christian Brueffer <chris@unixpages.org>
+# $FreeBSD: games/bsp/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bsp
 PORTVERSION=	5.2
@@ -18,6 +14,7 @@ GNU_CONFIGURE=	yes
 
 MAN6=		bsp.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2 -fomit-frame-pointer|${CFLAGS} &|' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
