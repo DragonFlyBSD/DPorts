@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: emulators/advancemenu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/advancemenu/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	advancemenu
 PORTVERSION=	2.6
@@ -30,6 +30,7 @@ MAN1=		advmenu.1
 PORTDOCS=	*
 PLIST_FILES=	bin/advmenu
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFREETYPE}
