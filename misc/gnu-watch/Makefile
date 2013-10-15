@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: misc/gnu-watch/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: misc/gnu-watch/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	watch
 DISTVERSION=	3.2.8
@@ -19,6 +19,7 @@ LDFLAGS+=	-lncurses
 MAN1=		gnu-watch.1
 PLIST_FILES=	bin/${UNIQUENAME}
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} ${WRKSRC}/${PORTNAME}.c \
 		-o ${WRKSRC}/${UNIQUENAME}
