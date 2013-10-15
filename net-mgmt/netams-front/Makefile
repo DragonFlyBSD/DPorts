@@ -1,9 +1,5 @@
-# New ports collection makefile for:	netams-front
-# Date created:				Sun 10 May 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/net-mgmt/netams-front/Makefile,v 1.2 2012/11/17 06:00:34 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: net-mgmt/netams-front/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	netams-front
 PORTVERSION=	0.4
@@ -29,6 +25,7 @@ x-generate-plist: build
 	${FIND} . -type d | ${SORT} -r | ${SED} \
 	     -e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 	     -e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC}/www; \
 	for src in $$( ${FIND} . ! -name '*.orig' -a \
