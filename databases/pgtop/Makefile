@@ -1,5 +1,5 @@
 # Created by: Bartek Rutkowski <r@robakdesign.com>
-# $FreeBSD: databases/pgtop/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/pgtop/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgtop
 PORTVERSION=	0.05
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN1=	pgtop.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
