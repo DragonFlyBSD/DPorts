@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyEvent-Filesys-Notify
 PORTVERSION=	0.22
@@ -31,4 +31,5 @@ MAN3=	AnyEvent::Filesys::Notify.3 \
 	AnyEvent::Filesys::Notify::Role::Inotify2.3 \
 	AnyEvent::Filesys::Notify::Role::KQueue.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
