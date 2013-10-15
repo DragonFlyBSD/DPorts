@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/rej/Makefile 317591 2013-05-07 08:57:37Z ehaupt $
+# $FreeBSD: sysutils/rej/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rej
 PORTVERSION=	0.16
@@ -9,8 +9,7 @@ MASTER_SITES=	CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Merges patch-rejects and runs a merge program to verify the changes
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
 
 SHEBANG_FILES=	qp mp
@@ -20,6 +19,7 @@ PLIST_FILES=	bin/rej bin/rej-qp bin/rej-mp
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
