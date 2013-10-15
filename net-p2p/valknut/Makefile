@@ -1,5 +1,5 @@
 # Created by: Sverrir Valgeirsson <e96sv@yahoo.se>
-# $FreeBSD: net-p2p/valknut/Makefile 326921 2013-09-10 17:39:41Z bapt $
+# $FreeBSD: net-p2p/valknut/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	valknut
 PORTVERSION=	0.4.9
@@ -29,6 +29,7 @@ LDFLAGS+=	-L${QT_LIBDIR}
 QTCFGLIBS+=	${PTHREAD_LIBS}
 CONFIGURE_ENV+=	DCLIB_CFLAGS=-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g;\
 	    s|-D_XOPEN_SOURCE=500||g' \
