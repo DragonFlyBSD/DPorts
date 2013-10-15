@@ -1,5 +1,5 @@
 # Created by: Lukasz Wasikowski <lukasz@wasikowski.net>
-# $FreeBSD: mail/sgwi/Makefile 326317 2013-09-04 20:07:04Z wg $
+# $FreeBSD: mail/sgwi/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sgwi
 PORTVERSION=	1.1.6
@@ -25,6 +25,7 @@ PGSQL_DESC=	PostgreSQL back-end (use pgsql PHP extension)
 
 OPTIONS_DEFAULT=MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
