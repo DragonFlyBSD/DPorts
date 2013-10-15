@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpmp
-# Date created:		2007-02-27
-# Whom:			Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/www/phpmp/Makefile,v 1.5 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: www/phpmp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpmp
 PORTVERSION=	0.12.0
@@ -21,6 +17,7 @@ USE_PHP=	pcre sockets
 PHPMP?=		${WWWDIR_REL}
 PLIST_SUB+=	PHPMP=${PHPMP}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${PHPMP}
 	@${CP} -R ${WRKSRC}/ ${PREFIX}/${PHPMP}
