@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/xwota/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: comms/xwota/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	xwota
 PORTVERSION=	0.4
@@ -17,6 +17,7 @@ USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 post-install:
 .if	!defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
