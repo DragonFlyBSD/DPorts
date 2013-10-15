@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/ocaml-pomap/Makefile 309289 2012-12-20 05:47:45Z araujo $
+# $FreeBSD: devel/ocaml-pomap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pomap
 PORTVERSION=	3.0.1
@@ -29,6 +29,7 @@ EXAMPLESDIR=	${OCAML_EXAMPLESDIR}/${PORTNAME}
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
