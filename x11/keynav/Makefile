@@ -1,4 +1,4 @@
-# $FreeBSD: x11/keynav/Makefile 326997 2013-09-11 17:20:45Z marino $
+# $FreeBSD: x11/keynav/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	keynav
 DISTVERSION=	0.20110708.0
@@ -20,6 +20,7 @@ USE_XORG=	xtst x11 xinerama
 PLIST_FILES=	bin/keynav
 PORTEXAMPLES=	keynavrc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
