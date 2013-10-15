@@ -1,11 +1,5 @@
 # Created by: Udo Schweigert
-# $FreeBSD: mail/mutt/Makefile 326316 2013-09-04 20:01:05Z bsam $
-#
-# In addition to the options you can enable other configuration
-# options of mutt by adding them to the MUTT_CONFIGURE_ARGS variable. For
-# example you could say "MUTT_CONFIGURE_ARGS=--with-homespool=MyMail" to
-# configure a different file for mutt's homespool.
-#
+# $FreeBSD: mail/mutt/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mutt
 PORTVERSION=	1.5.21
@@ -112,6 +106,7 @@ PLIST=		${WRKDIR}/PLIST
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SCRIPTS_ENV=	WRKDIR="${WRKDIR}"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DW_PATCH_VERSION=	1.5.6
