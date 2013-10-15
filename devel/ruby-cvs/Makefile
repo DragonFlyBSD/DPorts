@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-cvs/Makefile 317274 2013-05-03 21:58:42Z bapt $
+# $FreeBSD: devel/ruby-cvs/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	cvs
 PORTVERSION=	0.2
@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}/ruby-${PORTNAME}
 
 DOCS=		README TODO ${RUBY_RD_HTML_FILES}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
