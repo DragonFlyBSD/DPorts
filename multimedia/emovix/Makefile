@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: multimedia/emovix/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: multimedia/emovix/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	emovix
 PORTVERSION=	0.9.0
@@ -13,4 +13,5 @@ GNU_CONFIGURE=	yes
 USES=		perl5
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
