@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-Div
-# Date created:		10 February 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: www/ruby-div/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: www/ruby-div/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	div
 PORTVERSION=	1.3.2
@@ -20,6 +16,7 @@ USE_RUBY_FEATURES=	drb erb
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}; ${RUBY} install.rb
 .if !defined(NOPORTDOCS)
