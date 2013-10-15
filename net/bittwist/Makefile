@@ -1,4 +1,4 @@
-# $FreeBSD: net/bittwist/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/bittwist/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bittwist
 PORTVERSION=	1.1
@@ -15,4 +15,5 @@ USE_GMAKE=	yes
 MAN1=		bittwist.1 bittwistb.1 bittwiste.1
 PLIST_FILES=	bin/bittwist bin/bittwistb bin/bittwiste
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
