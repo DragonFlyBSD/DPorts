@@ -1,9 +1,5 @@
-# New ports collection makefile for:    socketbind
-# Date created:         		20 Mar 2003
-# Whom:                 		Gaspar Chilingarov <nm@web.am>
-#
-# $FreeBSD: ports/net/socketbind/Makefile,v 1.4 2012/11/17 06:00:21 svnexp Exp $
-#
+# Created by: Gaspar Chilingarov <nm@web.am>
+# $FreeBSD: net/socketbind/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	socketbind
 PORTVERSION=	1
@@ -19,6 +15,7 @@ NOMAN=		YES
 INSTALL_TARGET=
 PLIST_SUB=	"DOCSDIR=share/doc/${PORTNAME}"
 
+NO_STAGE=	yes
 post-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} -R ${PATCHDIR}/ ${WRKSRC}
