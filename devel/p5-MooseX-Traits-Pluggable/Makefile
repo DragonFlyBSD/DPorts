@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: devel/p5-MooseX-Traits-Pluggable/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-MooseX-Traits-Pluggable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Traits-Pluggable
 PORTVERSION=	0.10
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	MooseX::Traits::Pluggable.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
