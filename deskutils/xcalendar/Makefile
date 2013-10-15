@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@iis.u-tokyo.ac.jp>
-# $FreeBSD: deskutils/xcalendar/Makefile 321984 2013-06-28 20:56:05Z bapt $
+# $FreeBSD: deskutils/xcalendar/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xcalendar
 PORTVERSION=	4.0.2008
@@ -21,4 +21,5 @@ ALL_TARGET=	all XCal-uj.ad xcalendar-uj.hlp xcalendar-uj.man
 MAN1=		xcalendar.1
 MANLANG=	"" ja
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
