@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	tetradraw
-# Date created:			1 October 2002
-# Whom:				Frederic Cambus
-#
-# $FreeBSD: ports/editors/tetradraw/Makefile,v 1.10 2012/11/17 05:57:18 svnexp Exp $
-#
+# Created by: Frederic Cambus
+# $FreeBSD: editors/tetradraw/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	tetradraw
 PORTVERSION=	2.0.2
