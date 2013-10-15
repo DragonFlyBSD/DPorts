@@ -1,5 +1,5 @@
 # Created by: HONDA Yasuhiro <honda@kashio.info.mie-u.ac.jp>
-# $FreeBSD: japanese/yc.el/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: japanese/yc.el/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	yc.el
 PORTVERSION=	5.2.1
@@ -28,6 +28,7 @@ PLIST_DIRS=	%%EMACS_VERSION_SITE_LISPDIR%%/yc
 OPTIONS_DEFINE=	ICANNA
 ICANNA_DESC=	Enable icanna support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MICANNA}
