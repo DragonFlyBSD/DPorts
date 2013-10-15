@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: x11/xcb/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/xcb/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xcb
 PORTVERSION=	2.4
@@ -21,4 +21,5 @@ MAN1=		xcb.1
 PLIST_FILES=	bin/xcb \
 		lib/X11/app-defaults/Xcb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
