@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net-im/p5-DJabberd/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-DJabberd/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	DJabberd
 PORTVERSION=	0.85
@@ -44,4 +44,5 @@ MAN3=	DJabberd.3\
 	DJabberd::SASL::DumbPlain.3\
 	DJabberd::SASL::ManagerBase.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
