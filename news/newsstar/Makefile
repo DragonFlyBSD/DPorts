@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: news/newsstar/Makefile 327278 2013-09-14 12:04:18Z az $
+# $FreeBSD: news/newsstar/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	newsstar
 PORTVERSION=	1.5.6
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=--prefix=${PREFIX} \
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
