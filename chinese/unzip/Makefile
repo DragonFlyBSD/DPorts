@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zh-unzip
-# Date created:			3 July 1999
-# Whom:				Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-#
-# $FreeBSD: ports/chinese/unzip/Makefile,v 1.8 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
+# $FreeBSD: chinese/unzip/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 CATEGORIES=	chinese
 
@@ -15,4 +11,5 @@ MASTERDIR=	${.CURDIR}/../../archivers/unzip
 
 EXTRA_PATCHES=	${.CURDIR}/files/patch-fileio.c
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
