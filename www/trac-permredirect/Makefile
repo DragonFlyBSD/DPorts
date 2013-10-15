@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/trac-permredirect/Makefile 324747 2013-08-15 00:24:56Z gblach $
+# $FreeBSD: www/trac-permredirect/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	permredirect
 PORTVERSION=	3.0
@@ -25,4 +25,5 @@ WRKSRC=			${WRKDIR}/${PORTNAME}plugin/tags/${PORTVERSION}
 
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
