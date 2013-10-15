@@ -1,5 +1,5 @@
 # Created by: Baptiste Daroussin
-# $FreeBSD: devel/p5-Config-GitLike/Makefile 324381 2013-08-08 08:29:04Z lth $
+# $FreeBSD: devel/p5-Config-GitLike/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-GitLike
 PORTVERSION=	1.12
@@ -29,4 +29,5 @@ MAN3+=		Config::GitLike::Git.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
