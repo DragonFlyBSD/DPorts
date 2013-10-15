@@ -1,4 +1,4 @@
-# $FreeBSD: ports/converters/cl-babel-clisp/Makefile,v 1.6 2013/01/26 15:07:23 svnexp Exp $
+# $FreeBSD: converters/cl-babel-clisp/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	babel
 PORTVERSION=	2010.01.16
@@ -24,5 +24,6 @@ FASL_TARGET=	clisp
 FASL_BUILD=	yes
 ASDF_MODULES=	babel babel-streams
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
 .include <bsd.port.mk>
