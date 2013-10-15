@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rdigest
-# Date created:				2004-06-24
-# Whom:					eik
-#
-# $FreeBSD: ports/security/rdigest/Makefile,v 1.3 2012/11/17 06:01:18 svnexp Exp $
-#
+# Created by: eik
+# $FreeBSD: security/rdigest/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	rdigest
 
@@ -19,4 +15,5 @@ PATCHDIR=	${.CURDIR}/files
 
 MASTERDIR=	${.CURDIR}/../digest
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
