@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/tinc/Makefile 324743 2013-08-14 21:12:06Z dinoex $
+# $FreeBSD: security/tinc/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	tinc
 PORTVERSION=	1.0.22
@@ -14,6 +14,8 @@ COMMENT=	A Virtual Private Network (VPN) daemon
 LIB_DEPENDS=	lzo2:${PORTSDIR}/archivers/lzo2
 
 LICENSE=	GPLv3
+
+NO_STAGE=	yes
 
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
