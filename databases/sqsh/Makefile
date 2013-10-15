@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: databases/sqsh/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/sqsh/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	sqsh
 PORTVERSION=	2.1.8
@@ -25,13 +25,12 @@ ALL_TARGET=	build
 MAN1=		sqsh.1
 PLIST_FILES=	bin/sqsh etc/sqshrc.default
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
 USES+=		motif
 CONFIGURE_ARGS+=	--with-motif --with-x
-.else
-PKGNAMESUFFIX=	-nox11
 .endif
 
 post-patch:
