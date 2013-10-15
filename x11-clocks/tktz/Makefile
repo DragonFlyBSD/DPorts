@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tktz
-# Date created:				2 May 2006
-# Whom:					Alexander Gromnizki
-#
-# $FreeBSD: ports/x11-clocks/tktz/Makefile,v 1.5 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Alexander Gromnizki
+# $FreeBSD: x11-clocks/tktz/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	tktz
 PORTVERSION=	0.2
@@ -18,6 +14,7 @@ RUN_DEPENDS=	wish8.4:${PORTSDIR}/x11-toolkits/tk84
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@ ${MKDIR} ${PREFIX}/lib/tktz
 	@ ${INSTALL_SCRIPT} ${WRKSRC}/tktz ${PREFIX}/lib/tktz
