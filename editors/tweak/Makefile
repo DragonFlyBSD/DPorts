@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: ports/editors/tweak/Makefile,v 1.4 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/tweak/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	tweak
 PORTVERSION=	3.01
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/tweak
 MAKEFILE=	${FILESDIR}/Makefile.in
 MAKE_ENV+=	BINDIR="${LOCALBASE}/bin" MANDIR="${PREFIX}/man/man"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
