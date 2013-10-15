@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: textproc/p5-Net-IDN-Encode/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-Net-IDN-Encode/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Net-IDN-Encode
 PORTVERSION=	2.003
@@ -21,4 +21,5 @@ MAN3=		Net::IDN::Encode.3 Net::IDN::Overview.3 Net::IDN::Punycode.3 \
 		Net::IDN::Punycode::PP.3 Net::IDN::Standards.3 \
 		Net::IDN::UTS46.3 Net::IDN::UTS46::_Mapping.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
