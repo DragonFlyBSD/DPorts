@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-desktop/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: x11-wm/xfce4-desktop/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	xfce4-desktop
 PORTVERSION=	4.10.2
@@ -35,6 +35,7 @@ THUNAR_DESC=	Enable thunar support
 
 MAN1=		xfdesktop.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTHUNAR}
