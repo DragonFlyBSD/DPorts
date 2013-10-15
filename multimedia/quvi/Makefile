@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/quvi/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: multimedia/quvi/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	quvi
 PORTVERSION=	0.4.2
@@ -27,4 +27,5 @@ PLIST_FILES=	bin/quvi
 
 PORTSCOUT=	limit:0.4.[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
