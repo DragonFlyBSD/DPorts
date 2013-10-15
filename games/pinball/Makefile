@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pinball
-# Date created:		Tue 13 aug 2002 22:46:02 CEST
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/games/pinball/Makefile,v 1.38 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: games/pinball/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pinball
 PORTVERSION=	0.3.1
@@ -40,6 +36,7 @@ ALLEGRO_CONFIG=	${LOCALBASE}/bin/allegro-config
 
 DOCS=		README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # For gmake>=3.82
