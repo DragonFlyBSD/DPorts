@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pysol-sound-server
-# Date created:				7 January 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/pysol-sound-server/Makefile,v 1.39 2012/11/17 05:54:42 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: audio/pysol-sound-server/Makefile 328530 2013-09-27 22:36:11Z mva $
 
 PORTNAME=	pysol-sound-server
 PORTVERSION=	3.01
@@ -15,15 +11,16 @@ MASTER_SITES=	http://www.pysol.org/download/pysol/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python extension module to play sounds and background music
 
-LIB_DEPENDS=	smpeg.1:${PORTSDIR}/multimedia/smpeg
+LIB_DEPENDS=	libsmpeg.so:${PORTSDIR}/multimedia/smpeg
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pysolsoundserver.so
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 USE_SDL=	mixer sdl
 USE_BZIP2=	yes
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 HAS_CONFIGURE=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 INSTALLS_EGGINFO=	yes
 PYDISTUTILS_PKGNAME=	pysolsoundserver
 

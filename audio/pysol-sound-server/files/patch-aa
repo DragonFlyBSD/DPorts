@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/pysol-sound-server/files/patch-aa,v 1.6 2012/11/17 05:54:42 svnexp Exp $
+$FreeBSD: audio/pysol-sound-server/files/patch-aa 300895 2012-07-14 12:56:14Z beat $
 
 --- configure.orig	Mon Jun 24 18:01:01 2002
 +++ configure	Mon May  5 18:41:52 2003
