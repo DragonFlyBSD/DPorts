@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: astro/py-metar/Makefile 316649 2013-04-27 04:49:25Z sunpoet $
+# $FreeBSD: astro/py-metar/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	metar
 PORTVERSION=	0.19
@@ -20,6 +20,7 @@ OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}/options
 PYDISTUTILS_PKGNAME=	${REALPORTNAME}
 USE_PYDISTUTILS=yes
 USE_PYTHON=	-2.7
+NO_STAGE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${REALPORTNAME}-${PORTVERSION}
 MAN1=		${REALPORTNAME}.1
