@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-SVN-Agent/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-SVN-Agent/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Agent
 PORTVERSION=	0.04
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	SVN::Agent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
