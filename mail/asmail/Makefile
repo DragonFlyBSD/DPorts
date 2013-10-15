@@ -1,9 +1,5 @@
-# New ports collection makefile for:	 asmail
-# Date created:		15 August 1997
-# Whom:			brett@peloton.physics.montana.edu
-#
-# $FreeBSD: ports/mail/asmail/Makefile,v 1.33 2012/11/17 05:58:59 svnexp Exp $
-#
+# Created by: brett@peloton.physics.montana.edu
+# $FreeBSD: mail/asmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	asmail
 PORTVERSION=	2.1
@@ -28,6 +24,7 @@ MAN5=	asmailrc.5x
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS} -lssl -lcrypto
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|machine/soundcard|sys/soundcard|g' ${WRKSRC}/configure
