@@ -1,5 +1,5 @@
 # Created by: Anton Voronin <anton@urc.ac.ru>
-# $FreeBSD: russian/tac+ia/Makefile 324081 2013-08-01 05:33:01Z bapt $
+# $FreeBSD: russian/tac+ia/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	tac+ia
 PORTVERSION=	0.96p9.3
@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=	--disable-deny
 CONFIGURE_ARGS+=	--disable-cron
 CFLAGS+=		-Wno-return-type
 
+NO_STAGE=	yes
 post-build:
 	@mv ${WRKSRC}/tac_plus/tac_plus.1 ${WRKSRC}/tac_plus/tac_plus.8
 
