@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/scramble/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/scramble/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	scramble
 PORTVERSION=	0.9.5
@@ -20,6 +20,7 @@ LDFLAGS+=	`${SDL_CONFIG} --libs`
 
 MAN6=		scramble.6
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_DICTIONARY)
