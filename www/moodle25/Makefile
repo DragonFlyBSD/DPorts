@@ -1,5 +1,5 @@
 # Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
-# $FreeBSD: www/moodle25/Makefile 327243 2013-09-14 08:27:52Z wen $
+# $FreeBSD: www/moodle25/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	moodle
 PORTVERSION=	2.5.2
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=MYSQL
 MSSQL_DESC=	MS SQL Server support
 MIMETEX_DESC=	mimeTeX filter functionality support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
