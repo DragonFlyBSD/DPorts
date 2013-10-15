@@ -1,5 +1,5 @@
 # Created by: Tatsuki Makino <tatsuki_makino@hotmail.com>
-# $FreeBSD: audio/libamrwb/Makefile 326829 2013-09-09 18:19:14Z sunpoet $
+# $FreeBSD: audio/libamrwb/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libamrwb
 PORTVERSION=	11.0.0.0
@@ -21,6 +21,7 @@ LICENSE_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 RESTRICTED=	license prohibits redistribution
 RESTRICTED_FILES=	${SRC3GPP}
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		gmake
 USE_AUTOTOOLS=	libtool
 PORTDOCS=	AUTHORS COPYING ChangeLog NEWS README TODO readme.txt
