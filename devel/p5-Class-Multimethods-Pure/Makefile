@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Class-Multimethods-Pure/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Multimethods-Pure/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Multimethods-Pure
 PORTVERSION=	0.13
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Multimethods::Pure.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
