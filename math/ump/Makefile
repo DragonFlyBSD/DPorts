@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: math/ump/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: math/ump/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ump
 PORTVERSION=	0.8.6
@@ -26,6 +26,7 @@ MAKE_ENV+=	DATADIR="${DATADIR}"
 FIND_DIRS=	-type d
 FIND_DATA=	-type f
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/src/main.cpp
 
