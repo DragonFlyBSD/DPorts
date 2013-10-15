@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <alex.deiter@gmail.com>
-# $FreeBSD: sysutils/openipmi/Makefile 325741 2013-08-30 23:57:36Z bapt $
+# $FreeBSD: sysutils/openipmi/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	openipmi
 PORTVERSION=	2.0.19
@@ -42,6 +42,7 @@ GDBM_DESC=	Local SDR caching on startup
 GLIB12_DESC=	Simply OS handler for glib 1.2
 GLIB20_DESC=	Simply OS handler for glib 2.0
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/lib/libgdbm.so.3)
@@ -78,7 +79,7 @@ PLIST_SUB+=		TKINTER="@comment "
 
 .if ${PORT_OPTIONS:MPERL}
 WITH_SWIG=		yes
-USE_PERL5=		yes
+USES+=			perl5
 CONFIGURE_ARGS+=	--with-perl
 PLIST_SUB+=		PERL=""
 .else
