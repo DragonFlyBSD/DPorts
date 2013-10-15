@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: x11/aterm/Makefile 308377 2012-12-06 10:19:32Z rene $
+# $FreeBSD: x11/aterm/Makefile 329631 2013-10-06 21:51:02Z marino $
 
 PORTNAME=	aterm
 PORTVERSION=	1.0.1
@@ -9,6 +9,8 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Color vt102 terminal emulator with transparency support
+
+MAKE_JOBS_UNSAFE= yes
 
 USE_XORG=	xpm
 GNU_CONFIGURE=	yes
@@ -35,6 +37,7 @@ MAN1=		aterm.1
 
 PLIST_FILES=       bin/aterm
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${OSVERSION} > 900007
 CONFIGURE_ARGS+=	--disable-utmp
