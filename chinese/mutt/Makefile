@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  mutt w/pgp hooks
-# Date created:			  Thur July 25, 1996
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: ports/chinese/mutt/Makefile,v 1.56 2012/11/17 05:54:57 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: chinese/mutt/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTREVISION=	3
 CATEGORIES=	chinese
@@ -37,6 +32,7 @@ MUTT_SLAVE_HTML_PAGES=	1
 
 PKGMESSAGE=	${.CURDIR}/pkg-message
 
+NO_STAGE=	yes
 post-patch::
 	@${REINPLACE_CMD} -e '/^mutt_SOURCES/s/\\$$/ myiconv.c \\/' ${WRKSRC}/Makefile.am
 	@for i in ${.CURDIR}/files/patch-*; do \
