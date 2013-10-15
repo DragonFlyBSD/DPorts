@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-ipaddress
-# Date created:		2010-11-15
-# Whom:			Boris Lytochkin <lytboris@gmail.com>
-#
-# $FreeBSD: ports/net/rubygem-ipaddress/Makefile,v 1.3 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: Boris Lytochkin <lytboris@gmail.com>
+# $FreeBSD: net/rubygem-ipaddress/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ipaddress
 PORTVERSION=	0.8.0
@@ -17,4 +13,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
