@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: ports/editors/drjava/Makefile,v 1.15 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: editors/drjava/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	drjava
 DISTVERSION=	20100913-r5387
@@ -25,6 +25,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 DRJAVAJAR=	${DISTFILES}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${DISTDIR}/${DISTFILES} ${DATADIR}/${DRJAVAJAR}
