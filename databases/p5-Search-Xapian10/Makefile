@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-Search-Xapian10/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Search-Xapian10/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Search-Xapian10
 PORTVERSION=	1.0.23.0
@@ -41,6 +41,7 @@ MAN3=	Search::Xapian.3 \
 	Search::Xapian::Weight.3 \
 	Search::Xapian::WritableDatabase.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/^if (defined $$builddir/if (0/' ${WRKSRC}/Makefile.PL
 
