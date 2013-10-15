@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-control/Makefile 324821 2013-08-16 22:41:43Z stephen $
+# $FreeBSD: math/octave-forge-control/Makefile 329894 2013-10-09 13:00:59Z stephen $
 
 PORTNAME=	octave-forge-control
-PORTVERSION=	2.4.4
+PORTVERSION=	2.4.5
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -14,6 +14,7 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
