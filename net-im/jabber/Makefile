@@ -1,5 +1,5 @@
 # Created by: joe
-# $FreeBSD: net-im/jabber/Makefile 319722 2013-06-02 19:15:39Z bapt $
+# $FreeBSD: net-im/jabber/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	jabber
 PORTVERSION=	1.6.1.1
@@ -66,6 +66,7 @@ SUB_LIST+=	JABBER_USER=${JABBER_USER} JABBER_UID=${JABBER_UID} \
 DOCS=		AUTHORS ChangeLog INSTALL NEWS README README.SQL README.config \
 		README.filespool README.karma README.protocols TODO UPGRADE mysql.sql
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
