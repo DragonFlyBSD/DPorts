@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/hppsmtools/Makefile 315177 2013-03-24 22:51:18Z beech $
+# $FreeBSD: graphics/hppsmtools/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	hppsmtools
 PORTVERSION=	1.1
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 PORTDOCS=	README changes.txt
 PLIST_FILES=	bin/psmdel bin/psmdir bin/psmget bin/psmsho
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CC=|#CC=|g ; \
 		 s|-Wall -pedantic|$$(CFLAGS)|g' ${WRKSRC}/Makefile
