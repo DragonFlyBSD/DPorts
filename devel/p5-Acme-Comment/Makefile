@@ -1,5 +1,5 @@
 # Created by: Marcello Coutinho <marcellocoutinho@gmail.com>
-# $FreeBSD: devel/p5-Acme-Comment/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-Acme-Comment/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Acme-Comment
 PORTVERSION=	1.04
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Acme::Comment.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
