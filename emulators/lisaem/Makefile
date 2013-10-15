@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lisaem
-# Date created:		2007-07-04
-# Whom:			Edward Tomasz Napierala <trasz@FreeBSD.org>
-#
-# $FreeBSD: emulators/lisaem/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
+# $FreeBSD: emulators/lisaem/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	lisaem
 DISTVERSION=	1.2.6
@@ -22,6 +18,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
 USE_WX=		2.8
 
+NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -e "s|/usr/local|${PREFIX}|g" \
 				 -e "s|wx-config|${WX_CONFIG}|g" ${WRKSRC}/build.sh
