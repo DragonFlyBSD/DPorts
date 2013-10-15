@@ -1,9 +1,5 @@
-# New ports collection makefile for:	seccure
-# Date created:				30 August 2007
-# Whom:					Lukasz Komsta
-#
-# $FreeBSD: ports/security/ssss/Makefile,v 1.5 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: Lukasz Komsta
+# $FreeBSD: security/ssss/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ssss
 PORTVERSION=	0.5
@@ -20,4 +16,5 @@ PLIST_FILES=	bin/ssss-combine bin/ssss-split
 
 MAN1=		ssss.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
