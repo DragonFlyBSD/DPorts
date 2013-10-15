@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Specio/Makefile 325471 2013-08-27 17:15:28Z sunpoet $
+# $FreeBSD: devel/p5-Specio/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Specio
 PORTVERSION=	0.08
@@ -33,30 +33,5 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Specio.3 \
-		Specio::Coercion.3 \
-		Specio::Constraint::AnyCan.3 \
-		Specio::Constraint::AnyDoes.3 \
-		Specio::Constraint::AnyIsa.3 \
-		Specio::Constraint::Enum.3 \
-		Specio::Constraint::ObjectCan.3 \
-		Specio::Constraint::ObjectDoes.3 \
-		Specio::Constraint::ObjectIsa.3 \
-		Specio::Constraint::Parameterizable.3 \
-		Specio::Constraint::Parameterized.3 \
-		Specio::Constraint::Role::CanType.3 \
-		Specio::Constraint::Role::DoesType.3 \
-		Specio::Constraint::Role::Interface.3 \
-		Specio::Constraint::Role::IsaType.3 \
-		Specio::Constraint::Simple.3 \
-		Specio::Declare.3 \
-		Specio::DeclaredAt.3 \
-		Specio::Exception.3 \
-		Specio::Exporter.3 \
-		Specio::Helpers.3 \
-		Specio::Library::Builtins.3 \
-		Specio::Registry.3 \
-		Specio::Role::Inlinable.3
 
 .include <bsd.port.mk>
