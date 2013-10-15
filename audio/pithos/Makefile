@@ -1,5 +1,5 @@
 # Created by: John Hixson <john@pcbsd.org>
-# $FreeBSD: audio/pithos/Makefile 322520 2013-07-08 17:15:04Z bapt $
+# $FreeBSD: audio/pithos/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	pithos
 PORTVERSION=	0.3.17
@@ -20,6 +20,7 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
 USE_PYTHON=	2.6+
+NO_STAGE=	yes
 USE_GNOME=	pygtk2
 USE_PYDISTUTILS=	yes
 USE_GSTREAMER=	good bad python
