@@ -1,5 +1,5 @@
 # Created by: <janos.mohacsi@bsd.hu>
-# $FreeBSD: games/njam/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/njam/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	njam
 PORTVERSION=	1.25
@@ -17,6 +17,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -D__linux__
 USE_SDL=	mixer image net sdl
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
