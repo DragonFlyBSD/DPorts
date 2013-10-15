@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/p5-String-Dump/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-String-Dump/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	String-Dump
 PORTVERSION=	0.09
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 MAN1=	dumpstr.1
 MAN3=	String::Dump.3 String::Dump::Debugging.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
