@@ -1,9 +1,5 @@
-# New ports collection makefile for:	supercat
-# Date created:		3 September 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/supercat/Makefile,v 1.5 2012/11/17 06:02:22 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: textproc/supercat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	supercat
 PORTVERSION=	0.5.5
@@ -17,6 +13,7 @@ GNU_CONFIGURE=	yes
 MAN1=		spc.1
 PORT_VERBS=	${PORTNAME} spc
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/supercat|${ETCDIR}|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|c:C:dDhmnrt:vS|&Rw|' ${WRKSRC}/src/spc.c
