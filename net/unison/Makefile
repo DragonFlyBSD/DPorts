@@ -1,5 +1,5 @@
 # Created by: Dan Pelleg <dpelleg+unison@cs.cmu.edu>
-# $FreeBSD: net/unison/Makefile 322531 2013-07-08 18:44:24Z madpilot $
+# $FreeBSD: net/unison/Makefile 328659 2013-09-29 09:38:57Z madpilot $
 
 PORTNAME=	unison
 PORTVERSION=	2.40.102
@@ -52,6 +52,7 @@ MAKE_ARGS+=	UISTYLE=text
 PLIST_SUB+=	TEXT="@comment "
 BUILD_DEPENDS+=	ocamlc:${PORTSDIR}/lang/ocaml-nox11
 PATCH_DEPENDS+=	${BUILD_DEPENDS}
+PKGMESSAGE=	${PKGDIR}/pkg-message.nox11
 .endif
 
 .if ${PORT_OPTIONS:MX11}
@@ -67,23 +68,18 @@ post-build:
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/unison ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/unison ${STAGEDIR}${PREFIX}/bin
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
-	cd ${DISTDIR}/${DIST_SUBDIR} && ${INSTALL_DATA} ${EXTRA_DOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
+	cd ${DISTDIR}/${DIST_SUBDIR} && ${INSTALL_DATA} ${EXTRA_DOCS} ${STAGEDIR}${DOCSDIR}
 .if ${PORT_OPTIONS:MX11}
-	@${INSTALL_PROGRAM} ${WRKSRC}/unison-text ${PREFIX}/bin
-	@${MKDIR} ${DESKTOPDIR}
-	@${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${DESKTOPDIR}
+	@${INSTALL_PROGRAM} ${WRKSRC}/unison-text ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DESKTOPDIR}
+	@${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
 	@-update-desktop-database > /dev/null
-	@${INSTALL_DATA} ${WRKSRC}/win32rc/U_4_48x48x32.png ${PREFIX}/share/pixmaps/${PORTNAME}.png
-	@${CAT} ${PKGMESSAGE}
-.else
-	@${CAT} ${PKGMESSAGE}.nox11
+	@${INSTALL_DATA} ${WRKSRC}/win32rc/U_4_48x48x32.png ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
 .endif
 
 .include <bsd.port.mk>
