@@ -1,9 +1,5 @@
-# New ports collection makefile for:   XFireworks
-# Date created:        29 July 2000
-# Whom:                Sakai Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
-#
-# $FreeBSD: games/xfireworks/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Sakai Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
+# $FreeBSD: games/xfireworks/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xfireworks
 PORTVERSION=	1.4
@@ -21,6 +17,7 @@ USE_XORG=	x11
 
 MAN1=		xfireworks.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xfireworks ${PREFIX}/bin/xfireworks
 	${INSTALL_MAN} ${WRKSRC}/xfireworks.1 ${MANPREFIX}/man/man1
