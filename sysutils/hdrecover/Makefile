@@ -1,9 +1,5 @@
-# New ports collection makefile for:   hdrecover
-# Date created:        18 June 2012
-# Whom:                Cy Schubert <cy@freebsd.org>
-#
-# $FreeBSD: sysutils/hdrecover/Makefile 323840 2013-07-28 17:24:23Z cy $
-#
+# Created by: Cy Schubert <cy@FreeBSD.org>
+# $FreeBSD: sysutils/hdrecover/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	hdrecover
 PORTVERSION=	0.5
