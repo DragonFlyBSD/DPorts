@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/scale2x/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/scale2x/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	scale2x
 PORTVERSION=	3.0
@@ -26,6 +26,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/scalex bin/scalerx
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMMX}
