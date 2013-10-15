@@ -1,5 +1,5 @@
 # Created by: sumikawa
-# $FreeBSD: japanese/kbanner/Makefile 324779 2013-08-15 17:51:05Z antoine $
+# $FreeBSD: japanese/kbanner/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kbanner
 PORTVERSION=	2.1
@@ -17,4 +17,5 @@ CFLAGS+=	-Wno-error=return-type
 MAN1=		kbanner.1
 PLIST_FILES=	bin/kbanner
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
