@@ -1,5 +1,5 @@
 # Created by: simonm@dcs.gla.ac.uk
-# $FreeBSD: ports/games/cgoban/Makefile,v 1.39 2013/02/04 07:33:09 svnexp Exp $
+# $FreeBSD: games/cgoban/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cgoban
 PORTVERSION=	1.9.14
@@ -17,6 +17,7 @@ USE_XORG=	x11 ice sm
 MAN6=		cgoban.6
 PLIST_FILES=	bin/cgoban
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/gnugo|${LOCALBASE}/bin/gnugo|' ${WRKSRC}/src/cgoban.c
 	@${REINPLACE_CMD} -e 's|linux/soundcard.h|sys/soundcard.h|' ${WRKSRC}/configure
