@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: x11/hs-xmobar/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: x11/hs-xmobar/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xmobar
 PORTVERSION=	0.17
@@ -28,6 +28,7 @@ INOTIFY_DESC=		inotify support
 DATEZONE_DESC=		Localized date support
 THREADED_DESC=		Use threaded runtime
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 # Disable unsupported options
