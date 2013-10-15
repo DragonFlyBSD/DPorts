@@ -1,5 +1,5 @@
 # Created by: Christophe Juniet <cjuniet@entreview.com>
-# $FreeBSD: japanese/kanjipad/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: japanese/kanjipad/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	kanjipad
 PORTVERSION=	2.0.0
@@ -14,11 +14,13 @@ USES=		perl5 gmake pkgconfig
 USE_GNOME=	gtk20
 MAKE_ARGS=	OPTIMIZE="${CFLAGS}" PREFIX="${PREFIX}" \
 		GTKINC="`pkg-config --cflags gtk+-2.0`"
+LDFLAGS+=	-lm
 
 PORTDOCS=	README
 PLIST_FILES=	bin/kanjipad bin/kpengine %%DATADIR%%/jdata.dat
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/kanjipad ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/kpengine ${PREFIX}/bin
