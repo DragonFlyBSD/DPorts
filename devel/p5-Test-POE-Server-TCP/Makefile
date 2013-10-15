@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Test-POE-Server-TCP
-# Date created:				23 Feb 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Test-POE-Server-TCP/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-POE-Server-TCP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-POE-Server-TCP
 PORTVERSION=	1.16
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::POE::Server::TCP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
