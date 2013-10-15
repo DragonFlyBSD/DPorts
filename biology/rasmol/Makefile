@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/rasmol/Makefile 321974 2013-06-28 18:32:25Z bapt $
+# $FreeBSD: biology/rasmol/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	rasmol
 PORTVERSION=	2.7.2.1.1
@@ -25,6 +25,7 @@ PLIST_FILES=	bin/rasmol bin/rasmol-16 bin/rasmol-32 bin/rasmol-8 \
 		lib/X11/rasmol/rasmol.hlp
 PLIST_DIRS=	lib/X11/rasmol
 
+NO_STAGE=	yes
 do-build:
 	${SETENV} ${MAKE_ENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/build_viewer
 
