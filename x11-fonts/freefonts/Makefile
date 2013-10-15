@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: x11-fonts/freefonts/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: x11-fonts/freefonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	freefonts
 PORTVERSION=	0.10
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	type1inst:${PORTSDIR}/x11-fonts/p5-type1inst
 RESTRICTED=	see accompanying .license files
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}/freefont && ${LOCALBASE}/bin/type1inst -silent -quiet -nolog >/dev/null 2>&1
 	@${RM} ${WRKSRC}/freefont/Fontmap.bak
