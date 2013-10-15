@@ -1,5 +1,5 @@
 # Created by: janek
-# $FreeBSD: games/xminesweep/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xminesweep/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xminesweep
 PORTVERSION=	3.0
@@ -20,4 +20,5 @@ USE_XORG=	x11 xext xmu xaw xt xpm sm ice
 MAN1=		xminesweep.1
 PLIST_FILES=	bin/xminesweep
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
