@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: dns/bindgraph/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/bindgraph/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	bindgraph
 PORTVERSION=	0.2
@@ -31,6 +31,7 @@ DOCS=		README ChangeLog
 PORTDOCS=	${DOCS}
 .endif
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You may set following options:"
