@@ -1,9 +1,4 @@
-# New ports collection makefile for:	rubygem-gemcutter
-# Date created:		21 September 2010
-# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/rubygem-gemcutter/Makefile,v 1.5 2012/11/17 05:56:59 svnexp Exp $
-#
+# $FreeBSD: devel/rubygem-gemcutter/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gemcutter
 PORTVERSION=	0.7.1
@@ -22,4 +17,5 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
