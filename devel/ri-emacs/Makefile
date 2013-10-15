@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ri-emacs
-# Date created:		16 June 2009
-# Whom:			stas
-#
-# $FreeBSD: devel/ri-emacs/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: stas
+# $FreeBSD: devel/ri-emacs/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ri-emacs
 PORTVERSION=	0.2.3
@@ -27,6 +23,7 @@ XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 ELISP_FILES=	ri-ruby.el
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${RUBY_ELISPDIR}/
 	${INSTALL_DATA} ${ELISP_FILES:S,^,${WRKSRC}/,} ${RUBY_ELISPDIR}/
