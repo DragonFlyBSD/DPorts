@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dae
-# Date created:				11 March 2009
-# Whom:					Dylan Bridgman
-#
-# $FreeBSD: ports/sysutils/dae/Makefile,v 1.2 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: Dylan Bridgman
+# $FreeBSD: sysutils/dae/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dae
 PORTVERSION=	0.9
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	sbin/dae
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${FILESDIR}/dae.sh ${PREFIX}/sbin/dae
 	@${INSTALL_MAN} ${FILESDIR}/dae.1 ${MAN1PREFIX}/man/man1
