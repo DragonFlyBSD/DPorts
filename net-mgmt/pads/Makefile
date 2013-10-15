@@ -1,5 +1,5 @@
 # Created by: Andrew Thompson <andy@fud.org.nz>
-# $FreeBSD: net-mgmt/pads/Makefile 321037 2013-06-16 11:29:27Z wg $
+# $FreeBSD: net-mgmt/pads/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	pads
 PORTVERSION=	1.2
@@ -19,4 +19,5 @@ GNU_CONFIGURE=	yes
 
 MAN8=		pads.8 pads-report.8 pads.conf.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
