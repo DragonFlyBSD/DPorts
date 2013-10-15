@@ -1,5 +1,5 @@
 # Created by: jmg
-# $FreeBSD: www/cgiparse/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
+# $FreeBSD: www/cgiparse/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cgiparse
 PORTVERSION=	0.9b
@@ -16,6 +16,7 @@ MAN3=		cgiclose.3 cgigetvalue.3 cginewquerystr.3
 USE_LDCONFIG=	yes
 CFLAGS+=	"-fPIC"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
