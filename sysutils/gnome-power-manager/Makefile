@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-power-manager/Makefile 326160 2013-09-03 15:27:14Z bapt $
+# $FreeBSD: sysutils/gnome-power-manager/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.73 2011/04/30 20:43:26 mezz Exp $
 
 PORTNAME=	gnome-power-manager
@@ -43,6 +43,7 @@ MAN1=		gnome-power-manager.1 gnome-power-preferences.1 \
 		gnome-power-statistics.1
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lresolv|| ; s|-Werror||g' \
 		${WRKSRC}/configure
