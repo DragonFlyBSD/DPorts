@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wen@FreeBSD.org>
-# $FreeBSD: astro/p5-Starlink-AST/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: astro/p5-Starlink-AST/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Starlink-AST
 PORTVERSION=	1.02
@@ -16,6 +16,7 @@ RUN_DEPENDS=	p5-Test-Number-Delta>=0:${PORTSDIR}/devel/p5-Test-Number-Delta
 
 USES=		perl5
 USE_PERL5=	modbuild
+NO_STAGE=	yes
 
 MAN3=		Starlink::AST.3 \
 		Starlink::AST::PGPLOT.3 \
