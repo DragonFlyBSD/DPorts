@@ -1,9 +1,5 @@
-# New ports collection makefile for:   qtresistors
-# Date created:                2010-01-10
-# Whom:                        Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: science/qtresistors/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: science/qtresistors/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	qtresistors
 PORTVERSION=	0.1
@@ -21,6 +17,7 @@ WRKSRC=		${WRKDIR}/qtResistors
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ${QMAKE} ${QMAKEFLAGS}
 
