@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/libdap/Makefile 327001 2013-09-11 18:06:41Z sunpoet $
+# $FreeBSD: devel/libdap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libdap
 PORTVERSION=	3.12.0
@@ -24,6 +24,7 @@ USES=		gmake pathfix
 MAN1=		dap-config.1 \
 		getdap.1
 
+NO_STAGE=	yes
 post-patch:
 	# do not alter ${PREFIX}/lib/charset.alias
 	@${REINPLACE_CMD} -e '/^install-exec-am: / s|install-exec-local||' ${WRKSRC}/gl/Makefile.in
