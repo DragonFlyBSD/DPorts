@@ -1,5 +1,5 @@
 # Created by: dm
-# $FreeBSD: mail/avenger/Makefile 313677 2013-03-08 22:27:59Z pawel $
+# $FreeBSD: mail/avenger/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	avenger
 PORTVERSION=	0.8.3
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	--with-db=${LOCALBASE} --with-etcdir=${ETCDIR}
 
 OPTIONS_DEFINE=	SASL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSASL}
