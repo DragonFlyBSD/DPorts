@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kenosis
-# Date created:		Thu Jan 13 01:15:19 UTC 2005
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/net-p2p/py-kenosis/Makefile,v 1.9 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: net-p2p/py-kenosis/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	kenosis
 PORTVERSION=	0.96
@@ -22,6 +18,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYSETUP=	${PORTNAME}_setup.py
 
+NO_STAGE=	yes
 post-extract:
 # Avoid name collision and move ds inside kenosis package
 # it is only used by kenosis anyway
