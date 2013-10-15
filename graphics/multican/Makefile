@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/multican/Makefile 316831 2013-04-29 16:43:05Z rene $
+# $FreeBSD: graphics/multican/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	multican
 DISTVERSION=	0.0.5
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/multican lib/libmultican.so.0 lib/libmultican.so \
 
 PORTDOCS=	ChangeLog README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
