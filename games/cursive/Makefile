@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cursive
-# Date created:		4 December 1999
-# Whom:			James Howard <howardj@wam.umd.edu>
-#
-# $FreeBSD: ports/games/cursive/Makefile,v 1.7 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: James Howard <howardj@wam.umd.edu>
+# $FreeBSD: games/cursive/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cursive
 PORTVERSION=	1.0
@@ -18,6 +14,7 @@ COMMENT=	Create ASCII character cursive handwriting
 MAN6=		cursive.6
 PLIST_FILES=	bin/cursive
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cursive ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/cursive.6 ${PREFIX}/man/man6
