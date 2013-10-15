@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: net/py-netaddr/Makefile 326898 2013-09-10 12:34:27Z wen $
+# $FreeBSD: net/py-netaddr/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netaddr
 PORTVERSION=	0.7.10
@@ -21,6 +21,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	AUTHORS CHANGELOG README
 TESTFILES=	__init__.py
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
