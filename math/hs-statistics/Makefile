@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-statistics/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: math/hs-statistics/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	statistics
 PORTVERSION=	0.10.3.1
@@ -15,5 +15,6 @@ USE_CABAL=	erf math-functions>=0.1.2 monad-par>=0.3.4 mwc-random>=0.11.0.0 \
 
 INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/README.markdown ${DATADIR}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
