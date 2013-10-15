@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <jlaffaye@FreeBSD.org>
-# $FreeBSD: www/pelican/Makefile 321034 2013-06-16 10:40:11Z koobs $
+# $FreeBSD: www/pelican/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pelican
 PORTVERSION=	3.2.2
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install tools for test suite
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_GITHUB=		yes
