@@ -1,9 +1,5 @@
-# New ports collection makefile for:    atp
-# Date created:         9 Nov 1997
-# Whom:                 Donald Burr <dburr@FreeBSD.org>
-#
-# $FreeBSD: ports/news/atp/Makefile,v 1.11 2012/11/17 06:00:41 svnexp Exp $
-#
+# Created by: Donald Burr <dburr@FreeBSD.org>
+# $FreeBSD: news/atp/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=		atp
 PORTVERSION=		1.50
@@ -27,6 +23,7 @@ MAN1=			atp.1 \
 			rot13.1
 MAN3=			editline.3
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
