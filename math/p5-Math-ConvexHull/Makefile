@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Math-ConvexHull/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Math-ConvexHull/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-ConvexHull
 PORTVERSION=	1.04
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Math::ConvexHull.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
