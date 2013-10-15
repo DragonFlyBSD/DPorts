@@ -1,9 +1,5 @@
-# New ports collection makefile for:   	adamem
-# Date created:				November 11, 2001
-# Whom:					Jeremy Karlson
-#
-# $FreeBSD: ports/emulators/adamem/Makefile,v 1.9 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: Jeremy Karlson
+# $FreeBSD: emulators/adamem/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	adamem
 PORTVERSION=	1.0
@@ -21,6 +17,7 @@ ALL_TARGET=	x
 
 PROGDIR=	${PREFIX}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PROGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/adamem ${PROGDIR}
