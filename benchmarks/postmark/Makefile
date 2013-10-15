@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: ports/benchmarks/postmark/Makefile,v 1.20 2012/12/01 00:45:35 svnexp Exp $
+# $FreeBSD: benchmarks/postmark/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	postmark
 PORTVERSION=	1.53
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAN1=		postmark.1
 PLIST_FILES=	sbin/postmark
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -o postmark postmark-${PORTVERSION}.c)
 
