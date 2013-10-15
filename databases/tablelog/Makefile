@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: databases/tablelog/Makefile 323428 2013-07-22 06:47:06Z marino $
+# $FreeBSD: databases/tablelog/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	tablelog
 PORTVERSION=	0.4.4
@@ -19,6 +19,7 @@ MAKE_ARGS=	USE_PGXS=1
 
 PORTDOCS=	README.table_log table_log.sql
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/lib/postgresql/
 	@${INSTALL_PROGRAM} ${WRKSRC}/table_log.so ${PREFIX}/lib/postgresql/
