@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: multimedia/castpodder/Makefile 313404 2013-03-04 11:19:40Z lwhsu $
+# $FreeBSD: multimedia/castpodder/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	castpodder
 PORTVERSION=	5.1
@@ -39,6 +39,7 @@ RM_FILES=	AUTHORS COPY CREDITS INSTALL KNOWN-ISSUES LICENSE NOTES README THANKS 
 LN_OPTS=	-sf
 RM_OPTS=	-rf
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC} && ${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|g' -e "s|ensureMinimal('2.6')|select('${WX_PYTHON_DIR:S/^wx-//g}')|g" CastPodderGui.py ${CASTPOD_SCRIPT}
 	cd ${WRKSRC} && ${RM} ${RM_OPTS} *.bak *.orig
