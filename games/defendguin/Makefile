@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/defendguin/Makefile 314188 2013-03-14 21:57:16Z beech $
+# $FreeBSD: games/defendguin/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	defendguin
 PORTVERSION=	0.0.12
@@ -31,6 +31,7 @@ DESKTOP_ENTRIES="Defendguin" "${COMMENT}"  \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
