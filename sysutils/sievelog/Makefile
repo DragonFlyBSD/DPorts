@@ -1,8 +1,5 @@
-# New ports collection makefile for:	sievelog
-# Date created:				2010-07-26
-# Whom:					Jesse Kempf <jessekempf@gmail.com>
-# $FreeBSD: ports/sysutils/sievelog/Makefile,v 1.2 2012/11/17 06:01:46 svnexp Exp $
-#
+# Created by: Jesse Kempf <jessekempf@gmail.com>
+# $FreeBSD: sysutils/sievelog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sievelog
 PORTVERSION=	1.0.1
@@ -24,6 +21,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 MAN1=		${PORTNAME}.1
 MAN5=		${PORTNAME}.conf.5
 
+NO_STAGE=	yes
 post-install:
 	@${CP} -p ${WRKSRC}/test.sv ${PREFIX}/etc/${PORTNAME}.conf.example
 	@${INSTALL_MAN} ${WRKSRC}/man/man1/${MAN1} ${MANPREFIX}/man/man1
