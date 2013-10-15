@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooX-Options/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-MooX-Options/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooX-Options
 PORTVERSION=	3.77
@@ -35,4 +35,5 @@ USE_PERL5=	modbuild
 MAN3=		MooX::Options.3 \
 		MooX::Options::Role.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
