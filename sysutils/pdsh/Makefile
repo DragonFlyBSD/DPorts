@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <i@levsha.me>
-# $FreeBSD: sysutils/pdsh/Makefile 314144 2013-03-14 11:20:54Z miwi $
+# $FreeBSD: sysutils/pdsh/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pdsh
 PORTVERSION=	2.28
@@ -11,9 +11,10 @@ COMMENT=	Parallel Distributed Shell
 
 LICENSE=	GPLv2
 
+USES=		perl5
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 
 OPTIONS_DEFINE=		SSH DSHGROUPS NETGROUP READLINE RSH
 OPTIONS_DEFAULT=	SSH DSHGROUPS
@@ -21,6 +22,7 @@ DSHGROUPS_DESC=		DSH groups supprt
 NETGROUP_DESC=		NIS Netgroup support
 RSH_DESC=		RSH support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSH}
