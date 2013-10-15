@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11/vdesk/Makefile 314504 2013-03-17 23:48:01Z eadler $
+# $FreeBSD: x11/vdesk/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	vdesk
 PORTVERSION=	1.2
@@ -14,6 +14,7 @@ DOCS=		AUTHORS COPYING ChangeLog INSTALL NEWS README
 PLIST_DIRS=	share/doc/vdesk
 PLIST_FILES=	bin/vdesk
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MDOCS}	
 .for ii in ${DOCS}
