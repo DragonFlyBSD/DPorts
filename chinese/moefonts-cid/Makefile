@@ -1,9 +1,5 @@
-# New ports collection makefile for:	MOE CIDFonts
-# Date created:		3 Mar 2000
-# Whom:			Jing-Tang Keith Jang <keith@FreeBSD.org>
-#
-# $FreeBSD: ports/chinese/moefonts-cid/Makefile,v 1.25 2012/11/17 05:54:57 svnexp Exp $
-#
+# Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
+# $FreeBSD: chinese/moefonts-cid/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	moefonts-cid
 PORTVERSION=	1.0
@@ -26,6 +22,7 @@ PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 
 ADOBECMAPDIR=	${LOCALBASE}/share/fonts/adobe-cmaps
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${DISTDIR}/MOEKai-Regular \
 		${DISTDIR}/MOESung-Regular \
