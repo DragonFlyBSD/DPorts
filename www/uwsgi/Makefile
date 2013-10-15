@@ -1,8 +1,8 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: www/uwsgi/Makefile 327494 2013-09-17 17:24:43Z demon $
+# $FreeBSD: www/uwsgi/Makefile 330099 2013-10-11 20:07:26Z demon $
 
 PORTNAME=	uwsgi
-PORTVERSION=	1.9.16
+PORTVERSION=	1.9.18.1
 CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
 
@@ -21,6 +21,7 @@ LDFLAGS+=	"-L${LOCALBASE}/lib"
 PLIST_FILES=	bin/uwsgi \
 		%%PYTHON_SITELIBDIR%%/uwsgidecorators.py
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|python|${PYTHON_CMD}|' ${WRKSRC}/Makefile
 
