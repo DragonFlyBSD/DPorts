@@ -1,5 +1,5 @@
 # Created by: James Raftery <james@now.ie>
-# $FreeBSD: textproc/p5-Text-Netstring/Makefile 326939 2013-09-11 05:29:55Z az $
+# $FreeBSD: textproc/p5-Text-Netstring/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Netstring
 PORTVERSION=	0.07
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Netstring.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
