@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xml-parse.el
-# Date created:				March 09 2005
-# Whom:					Dryice Liu <dryice@liu.com.cn>
-#
-# $FreeBSD: ports/textproc/xml-parse.el/Makefile,v 1.9 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: Dryice Liu <dryice@liu.com.cn>
+# $FreeBSD: textproc/xml-parse.el/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xml-parse.el
 PORTVERSION=	1.5
@@ -28,6 +24,7 @@ PORTNAMESUFFIX=	${PKGNAMESUFFIX}
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${PREFIX}/${EMACS_SITE_LISPDIR}
 
