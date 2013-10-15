@@ -1,5 +1,5 @@
 # Created by: Tobias Kortkamp <tobias.kortkamp@gmail.com>
-# $FreeBSD: deskutils/easystroke/Makefile 326711 2013-09-08 08:44:57Z antoine $
+# $FreeBSD: deskutils/easystroke/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	easystroke
 PORTVERSION=	0.6.0
@@ -26,6 +26,7 @@ INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
