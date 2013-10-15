@@ -1,9 +1,5 @@
-# New ports collection makefile for:	boxquote.el
-# Date created:				14 Jul 2006
-# Whom:					Andrey Slusar <anrays@gmail.com>
-#
-# $FreeBSD: ports/misc/boxquote.el/Makefile,v 1.3 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Andrey Slusar <anrays@gmail.com>
+# $FreeBSD: misc/boxquote.el/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	boxquote.el
 PORTVERSION=	1.18
@@ -25,6 +21,7 @@ XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 PLIST_FILES=	share/emacs/site-lisp/${PORTNAME} lib/xemacs/site-lisp/${PORTNAME}
 PLIST_DIRS=	lib/xemacs/site-lisp lib/xemacs
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${EMACSLISPDIR}
 	${MKDIR} ${XEMACSLISPDIR}
