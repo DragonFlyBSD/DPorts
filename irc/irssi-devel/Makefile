@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: irc/irssi-devel/Makefile 327447 2013-09-16 23:50:58Z bdrewery $
+# $FreeBSD: irc/irssi-devel/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irssi
 PORTVERSION=	20130915
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	PERL IPV6 SSL
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.8.16-rc1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Process options.
