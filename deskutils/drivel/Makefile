@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: deskutils/drivel/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/drivel/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	drivel
 PORTVERSION=	3.0.5
@@ -30,6 +30,7 @@ GCONF_SCHEMAS=	drivel.schemas
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTKSPELL}
