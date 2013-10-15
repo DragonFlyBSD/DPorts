@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/py-dialog/files/patch-dialog.py,v 1.5 2012/12/12 01:16:39 svnexp Exp $
+$FreeBSD: devel/py-dialog/files/patch-dialog.py 308727 2012-12-12 01:13:40Z sobomax $
 
 --- dialog.py.orig
 +++ dialog.py

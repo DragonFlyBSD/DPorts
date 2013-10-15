@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	pythondialog
-# Date created:			Sep 12, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-dialog/Makefile,v 1.13 2012/12/12 01:16:39 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/py-dialog/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	dialog
 PORTVERSION=	2.7
@@ -26,6 +21,7 @@ PYDISTUTILS_PKGNAME=	pythondialog
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-dialog
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/demo.py ${EXAMPLESDIR}
