@@ -1,8 +1,8 @@
 # Created by: Oddbjorn Steffensen <oddbjorn@tricknology.org>
-# $FreeBSD: www/web2ldap/Makefile 323972 2013-07-30 15:30:09Z bsam $
+# $FreeBSD: www/web2ldap/Makefile 328968 2013-10-01 17:06:12Z bsam $
 
 PORTNAME=	web2ldap
-PORTVERSION=	1.1.40
+PORTVERSION=	1.1.46
 CATEGORIES=	www
 MASTER_SITES=	http://www.web2ldap.de/download/ \
 		http://www.sfr-fresh.com/unix/www/
@@ -28,23 +28,17 @@ do-build:
 	@(cd ${WRKSRC} && ${PYTHON_CMD} ./sbin/compile.py)
 
 do-install:
-	@${ECHO_CMD} "==> Installing program files..."
-	@${MKDIR} ${DATADIR}
+	@${ECHO_MSG} "==> Installing program files..."
+	@${MKDIR} ${STAGEDIR}${DATADIR}
 	@(cd ${WRKSRC}; \
-		${FIND} * -type d | ${GREP} -vE "^htdocs" | ${CPIO} -p ${DATADIR}; \
-		${FIND} * -type f | ${GREP} -vE "^htdocs" | ${CPIO} -pd ${DATADIR})
-
-.include <bsd.port.options.mk>
+		${FIND} * -type d | ${GREP} -vE "^htdocs" | ${CPIO} -p ${STAGEDIR}${DATADIR}; \
+		${FIND} * -type f | ${GREP} -vE "^htdocs" | ${CPIO} -pd ${STAGEDIR}${DATADIR})
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${ECHO_CMD} "==> Installing document files..."
-	@${MKDIR} ${DOCSDIR}
+	@${ECHO_MSG} "==> Installing document files..."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@(cd ${WRKSRC}; \
-		${FIND} * -type d | ${GREP} "^htdocs" | ${CPIO} -p ${DOCSDIR}; \
-		${FIND} * -type f | ${GREP} "^htdocs" | ${CPIO} -pd ${DOCSDIR})
-.endif
-	@${SETENV} "PKG_PREFIX=${PREFIX}" ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-	@${CAT} ${PKGMESSAGE}
+		${FIND} * -type d | ${GREP} "^htdocs" | ${CPIO} -p ${STAGEDIR}${DOCSDIR}; \
+		${FIND} * -type f | ${GREP} "^htdocs" | ${CPIO} -pd ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
