@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-ffc/Makefile 318891 2013-05-23 17:56:55Z miwi $
+# $FreeBSD: math/py-ffc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ffc
 PORTVERSION=	${MMVERSION}.0
@@ -23,6 +23,7 @@ MANCOMPRESSED=	yes
 
 MMVERSION=	1.2
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -i '' -e 's|os.path.join(os.path.sep, "usr")|os.path.normpath("${PREFIX}")|' \
 		 ${WRKSRC}/test/regression/test.py
