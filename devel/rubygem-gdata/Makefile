@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-gdata
-# Date created:				Feb 27, 2009
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-gdata/Makefile,v 1.9 2012/11/17 05:56:59 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/rubygem-gdata/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	gdata
 PORTVERSION=	1.1.2
@@ -16,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
