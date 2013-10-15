@@ -1,5 +1,5 @@
-# Created by:	Patrick MARIE <mycroft@virgaria.org>
-# $FreeBSD: net/proxychains/Makefile 306081 2012-10-18 19:13:07Z ak $
+# Created by: Patrick MARIE <mycroft@virgaria.org>
+# $FreeBSD: net/proxychains/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	proxychains
 PORTVERSION=	3.1
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's!$$(srcdir)/proxychains.conf!$$(srcdir)/proxychains.conf.sample!' \
 		-e 's!libproxychains_la_LIBADD = -ldl!libproxychains_la_LIBADD =!' \
