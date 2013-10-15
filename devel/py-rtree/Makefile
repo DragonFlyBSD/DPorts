@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-rtree
-# Date created:			16 June, 2008
-# Whom:				wenheping@gmail.com
-#
-# $FreeBSD: ports/devel/py-rtree/Makefile,v 1.8 2012/11/17 05:56:50 svnexp Exp $
-#
+# Created by: wenheping@gmail.com
+# $FreeBSD: devel/py-rtree/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	rtree
 PORTVERSION=	0.7.0
@@ -25,6 +21,7 @@ PYDISTUTILS_PKGNAME=	Rtree
 PYDISTUTILS_NOEGGINFO=	yes
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's#/usr/local#${LOCALBASE}#g' \
 		${WRKSRC}/setup.cfg
