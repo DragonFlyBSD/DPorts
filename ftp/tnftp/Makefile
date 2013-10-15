@@ -1,17 +1,16 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: ftp/tnftp/Makefile 317543 2013-05-06 19:09:58Z bdrewery $
+# $FreeBSD: ftp/tnftp/Makefile 328693 2013-09-29 13:46:55Z danilo $
 
 PORTNAME=	tnftp
 PORTVERSION=	20130505
 CATEGORIES=	ftp ipv6
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Enhanced ftp client from NetBSD
 
 GNU_CONFIGURE=	yes
 
-MAN1=		tnftp.1
-PLIST_FILES=	bin/tnftp
+PLIST_FILES=	bin/tnftp man/man1/tnftp.1.gz
 
 .include <bsd.port.mk>
