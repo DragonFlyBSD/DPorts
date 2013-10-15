@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/rubygem-graf/Makefile 325203 2013-08-22 15:19:00Z tota $
+# $FreeBSD: devel/rubygem-graf/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	graf
 PORTVERSION=	0.0.3
@@ -16,4 +16,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/graf
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
