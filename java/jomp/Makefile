@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <brueffer@FreeBSD.org>
-# $FreeBSD: ports/java/jomp/Makefile,v 1.8 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jomp/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jomp
 PORTVERSION=	1.0b
@@ -23,6 +23,7 @@ JARFILE=	${DISTNAME}${EXTRACT_SUFX}
 
 PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} -n ">> Installing JAR as ${JAVAJARDIR}/${JARFILE}..."
 	@${CP} ${DISTDIR}/${JARFILE} ${JAVAJARDIR}/${JARFILE}
