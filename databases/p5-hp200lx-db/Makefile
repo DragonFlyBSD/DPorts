@@ -1,5 +1,5 @@
 # Created by: Gerhard Gonter <g.gonter@ieee.org>
-# $FreeBSD: databases/p5-hp200lx-db/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: databases/p5-hp200lx-db/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	hp200lx-db
 PORTVERSION=	0.09
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		HP200LX::DB.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
