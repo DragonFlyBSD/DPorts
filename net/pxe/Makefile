@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pxe
-# Date created:        			7 April 2002
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: ports/net/pxe/Makefile,v 1.13 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: net/pxe/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pxe
 PORTVERSION=	1.4.2
@@ -24,6 +20,7 @@ CONFIGURE_ARGS+=	--with-config=${PREFIX}/etc/pxe.conf \
 
 DOCS=	Changes INSTALL LICENCE README THANKS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
