@@ -1,12 +1,9 @@
-# New ports collection makefile for:	xinetd
-# Date created:				28 June 1996
-# Whom:					markm
-#
-# $FreeBSD: ports/security/xinetd/Makefile,v 1.56 2012/11/17 06:01:22 svnexp Exp $
-#
+# Created by: markm
+# $FreeBSD: security/xinetd/Makefile 329174 2013-10-03 12:54:10Z sem $
 
 PORTNAME=	xinetd
 PORTVERSION=	2.3.15
+PORTREVISION=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	http://www.xinetd.org/
 
@@ -24,6 +21,7 @@ CONFIGURE_ARGS+=	--with-loadavg --with-libwrap --with-ipv6
 MAN5=		xinetd.conf.5
 MAN8=		xconv.8 xinetd.8 xinetd.log.8
 
+NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC}/libs/src -name Makefile.in | ${XARGS} \
 		${REINPLACE_CMD} -e 's!\@INSTALL\@!/bin/cp!; s!-m 640!!'
