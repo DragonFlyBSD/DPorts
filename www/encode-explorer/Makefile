@@ -1,5 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: www/encode-explorer/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/encode-explorer/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	encode
 PORTVERSION=	5.0
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 WWWDIR=		${PREFIX}/www/${PORTNAME}${PKGNAMESUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXPERIMENTAL}
