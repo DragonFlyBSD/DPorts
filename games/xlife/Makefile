@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/xlife/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xlife/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xlife
 PORTVERSION=	6.6.1
@@ -26,6 +26,7 @@ DESKTOP_ENTRIES="XLife" "" "" "${PORTNAME}" "" false
 DOC_FILES=	CHANGES DEVELOPMENT-TREE HACKING HOW-TO-INSTALL INSTALL \
 		MISSED README SHORT-INFO changelog.debian changelog.openbsd
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
