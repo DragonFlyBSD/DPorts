@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-ExtractUse/Makefile 326296 2013-09-04 17:04:42Z tobez $
+# $FreeBSD: devel/p5-Module-ExtractUse/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-ExtractUse
 PORTVERSION=	0.32
@@ -24,6 +24,7 @@ USE_PERL5=	modbuild
 
 MAN3=		Module::ExtractUse.3 Module::ExtractUse::Grammar.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
