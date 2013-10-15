@@ -1,5 +1,5 @@
 # Created by: Otacilio de Araujo Ramos Neto <otacilio.neto@ee.ufcg.edu.br>
-# $FreeBSD: cad/p5-Verilog-Perl/Makefile 317268 2013-05-03 21:42:40Z rakuco $
+# $FreeBSD: cad/p5-Verilog-Perl/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	Verilog-Perl
 PORTVERSION=	3.400
@@ -12,11 +12,8 @@ COMMENT=	Building point for Verilog support in the Perl language
 
 BUILD_DEPENDS=	flex>=2.5.35:${PORTSDIR}/textproc/flex
 
-USE_GMAKE=	yes
-USE_PERL5=	yes
-USES=		bison
-
-PERL_CONFIGURE=	yes
+USES=		bison gmake perl5
+USE_PERL5=	configure
 
 MAN1=	vhier.1 vpassert.1 vppreproc.1 vrename.1
 
@@ -29,6 +26,7 @@ MAN3=	Verilog::EditFiles.3 Verilog::Netlist::Logger.3 \
 	Verilog::Netlist::ContAssign.3 Verilog::Netlist::ModPort.3 \
 	Verilog::Verilog-Perl.3 Verilog::Netlist::Interface.3 Verilog::Std.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
