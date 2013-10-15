@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@liu.com.cn>
-# $FreeBSD: www/session2/Makefile 305307 2012-10-05 16:30:22Z bapt $
+# $FreeBSD: www/session2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	session2
 PORTVERSION=	0.6.1
@@ -19,6 +19,7 @@ PYDISTUTILS_PKGVERSION=	0.6
 OPTIONS_DEFINE=	MYSQL PGSQL DOCS
 OPTIONS_DEFAULT=	MYSQL PGSQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
