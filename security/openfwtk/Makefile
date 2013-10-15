@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: ports/security/openfwtk/Makefile,v 1.7 2012/11/17 06:01:09 svnexp Exp $
+# $FreeBSD: security/openfwtk/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openfwtk
 PORTVERSION=	2.0
@@ -25,6 +25,7 @@ MAKE_JOBS_UNSAFE=yes
 SUB_FILES=	pkg-message
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
