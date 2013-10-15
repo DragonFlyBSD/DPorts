@@ -1,9 +1,5 @@
-# New ports collection makefile for:  pty
-# Date created:                       Fri, 07 Sep 2007 22:47:06 EDT
-# Whom:                               James Bailie <jimmy@mammothcheese.ca>
-#
-# $FreeBSD: ports/devel/pty/Makefile,v 1.4 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: James Bailie <jimmy@mammothcheese.ca>
+# $FreeBSD: devel/pty/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pty
 PORTVERSION=	1.2
@@ -18,4 +14,5 @@ MANCOMPRESSED=	yes
 
 PLIST_FILES=	bin/pty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
