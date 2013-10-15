@@ -1,9 +1,5 @@
-# New ports collection makefile for:	chordpack
-# Date created:		July 8, 2001
-# Whom:			sethk
-#
-# $FreeBSD: ports/audio/chordpack/Makefile,v 1.5 2012/11/17 05:54:29 svnexp Exp $
-#
+# Created by: sethk
+# $FreeBSD: audio/chordpack/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	chordpack
 PORTVERSION=	0.8.1
@@ -17,6 +13,7 @@ COMMENT=	Script to convert ChordPro files to HTML, ASCII, and TeX
 
 NO_WRKSUBDIR=	true
 NO_BUILD=	true
+NO_STAGE=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/chordpack ${PREFIX}/bin
