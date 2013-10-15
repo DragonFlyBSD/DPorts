@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-versionomy/Makefile 313314 2013-03-03 01:28:07Z swills $
+# $FreeBSD: devel/rubygem-versionomy/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	versionomy
 PORTVERSION=	0.4.4
@@ -16,4 +16,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
