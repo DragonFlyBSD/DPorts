@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: multimedia/ogmrip/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: multimedia/ogmrip/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	ogmrip
 PORTVERSION=	1.0.0
@@ -43,6 +43,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		dvdcpy.1 avibox.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
