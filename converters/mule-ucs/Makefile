@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Mule-UCS for GNU Emacs 21
-# Date created:		14 January 2000
-# Whom:			OKAZAKI Tetsurou
-#
-# $FreeBSD: ports/converters/mule-ucs/Makefile,v 1.21 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: OKAZAKI Tetsurou
+# $FreeBSD: converters/mule-ucs/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	mule-ucs
 PORTVERSION=	0.85.r3
@@ -32,6 +28,7 @@ EMACS_PORT_NAME?=	emacs21
 MULEUCS_DESTDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/mule-ucs
 EMACS_ARGS=	-q --no-site-file -batch
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}/lisp/big5conv && \
 	    ${EMACS_CMD} ${EMACS_ARGS} -l big5-comp.el
