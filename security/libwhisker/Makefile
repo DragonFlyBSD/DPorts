@@ -1,5 +1,5 @@
 # Created by: pandzilla
-# $FreeBSD: security/libwhisker/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/libwhisker/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libwhisker
 PORTVERSION=	2.5
@@ -24,6 +24,7 @@ MANPREFIX=	${LOCALBASE}/lib/perl5/${PERL_VER}/perl/
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${PERL5} Makefile.pl lib
 
