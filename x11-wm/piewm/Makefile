@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: x11-wm/piewm/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11-wm/piewm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	piewm
 PORTVERSION=	1.04
@@ -17,4 +17,5 @@ MAN1=		piewm.1
 
 CFLAGS+=	-Wno-return-type
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
