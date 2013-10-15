@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2fe/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/aria2fe/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	aria2fe
 DISTVERSION=	0.0.5
@@ -23,6 +23,7 @@ USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-configure:
 	@(cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS})
 
