@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: textproc/sphinxsearch/Makefile 325450 2013-08-27 14:08:58Z matthew $
+# $FreeBSD: textproc/sphinxsearch/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 # Note: the Sphinx Storage Engine MySQL plugin is not supported by
 # this port.  You need a patched version of mysql server for that.
@@ -39,6 +39,7 @@ OPTIONS_DEFAULT=	ICONV MYSQL SYSLOG
 CONFLICTS=	sphinxsearch-devel-[0-9]* dpsearch-[0-9]* rdb-[0-9]* \
 		swish++-[0-9]* xaira-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # The port will successfully compile with both PGSQL and MYSQL support
