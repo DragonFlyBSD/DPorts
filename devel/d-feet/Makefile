@@ -1,5 +1,5 @@
 # Created by: Thinker K.F. Li <thinker@eeebox.branda.to>
-# $FreeBSD: devel/d-feet/Makefile 316523 2013-04-25 17:24:32Z bapt $
+# $FreeBSD: devel/d-feet/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	d-feet
 PORTVERSION=	0.1.12
@@ -27,4 +27,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
