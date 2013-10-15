@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/claroline/Makefile 324977 2013-08-19 11:50:35Z wen $
+# $FreeBSD: www/claroline/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	claroline
 PORTVERSION=	1.11.8
@@ -17,6 +17,7 @@ SUB_FILES=	pkg-message
 OPTIONS_DEFINE=		LDAP GD SSL
 OPTIONS_DEFAULT=	GD
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGD}
