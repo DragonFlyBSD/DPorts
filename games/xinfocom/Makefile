@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: games/xinfocom/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xinfocom/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	xinfocom
 PORTVERSION=	1.8m
@@ -14,10 +14,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	An Infocom game interpreter for X11
 
-PLIST_FILES=	bin/xinfocom
-WRKSRC=		${WRKDIR}/xinfocom
+NO_STAGE=	yes
 
 USES=		imake
 USE_XORG=	xt sm ice xext x11
+WRKSRC=		${WRKDIR}/xinfocom
+PLIST_FILES=	bin/xinfocom
 
 .include <bsd.port.mk>
