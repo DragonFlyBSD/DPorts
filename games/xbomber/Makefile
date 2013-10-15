@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xbomber
-# Date created:        28 June 1998
-# Whom:                marcus
-#
-# $FreeBSD: ports/games/xbomber/Makefile,v 1.14 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: marcus
+# $FreeBSD: games/xbomber/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xbomber
 PORTVERSION=	0.8
@@ -20,6 +16,7 @@ USE_XORG=	x11
 
 MAKEFILE=	makefile
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xbomber ${PREFIX}/bin
 	@${MKDIR} ${PREFIX}/share/xbomber
