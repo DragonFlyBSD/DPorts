@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: editors/le/Makefile 315168 2013-03-24 22:00:39Z zi $
+# $FreeBSD: editors/le/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	le
 PORTVERSION=	1.14.9
@@ -27,6 +27,7 @@ MISC_DATA=	colors-black colors-blue colors-defbg colors-green \
 		colors-white keymap-emacs mainmenu mainmenu-ru syntax
 SRC_DATA=	le.hlp
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800000
