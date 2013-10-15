@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gastex
-# Date created:			Sep 18. 2005
-# Whom:				Volker Stolz <vs@FreeBSD.org>
-#
-# $FreeBSD: textproc/gastex/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Volker Stolz <vs@FreeBSD.org>
+# $FreeBSD: textproc/gastex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	gastex
 PORTVERSION=	2.7
@@ -24,6 +20,7 @@ TEXMFDIR?=	share/texmf
 GASTEXDIR=	${PREFIX}/${TEXMFDIR}/tex/latex/gastex
 GASDVIDIR=	${PREFIX}/${TEXMFDIR}/dvips/gastex
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${GASTEXDIR}
 	@${MKDIR} ${GASDVIDIR}
