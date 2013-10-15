@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/meep/Makefile 326176 2013-09-03 17:06:48Z skreuzer $
+# $FreeBSD: science/meep/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	meep
 PORTVERSION=	1.2
@@ -33,6 +33,7 @@ OPTIONS_DEFINE=		OPENMPI
 OPTIONS_DEFAULT=	OPENMPI
 OPENMPI_DESC=		MPI support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENMPI}
