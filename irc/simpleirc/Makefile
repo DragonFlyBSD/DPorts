@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simpleirc
-# Date created:		24. Dez 2008
-# Whom:			Dennis Herrmann <adox@mcx2.org>
-#
-# $FreeBSD: ports/irc/simpleirc/Makefile,v 1.6 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Dennis Herrmann <adox@mcx2.org>
+# $FreeBSD: irc/simpleirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	simpleirc
 PORTVERSION=	1.1
@@ -20,6 +16,7 @@ MAN1=		simpleirc.1
 PLIST_FILES=	bin/simpleirc
 PORTDOCS=	README LICENSE
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${ECHO_MSG} "installing additional documentation to ${DOCSDIR}"
