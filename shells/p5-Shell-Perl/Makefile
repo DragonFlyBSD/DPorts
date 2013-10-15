@@ -1,5 +1,5 @@
 # Created by: Shinsuke Matsui <smatsui@karashi.org>
-# $FreeBSD: shells/p5-Shell-Perl/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: shells/p5-Shell-Perl/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	Shell-Perl
 PORTVERSION=	0.0022
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 MAN1=		pirl.1
 MAN3=		Shell::Perl.3 Shell::Perl::Dumper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
