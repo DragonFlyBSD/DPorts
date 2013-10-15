@@ -1,4 +1,4 @@
-# $FreeBSD: audio/gstreamer-plugins-opus/Makefile 323078 2013-07-15 20:24:59Z naddy $
+# $FreeBSD: audio/gstreamer-plugins-opus/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTREVISION=	1
 CATEGORIES=	audio
@@ -8,5 +8,6 @@ COMMENT=	Gstreamer Opus audio encoder/decoder plugin
 GST_PLUGIN=	opus
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
+NO_STAGE=	yes
 
 .include "${MASTERDIR}/Makefile"
