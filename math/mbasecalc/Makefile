@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: math/mbasecalc/Makefile 314654 2013-03-19 15:11:01Z tabthorpe $
+# $FreeBSD: math/mbasecalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	mbasecalc
 PORTVERSION=	1.1
@@ -18,6 +18,7 @@ MAKE_ARGS=	INCLUDES="`fltk-config --cflags` -I." \
 
 PLIST_FILES=	bin/mbasecalc
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mbasecalc ${PREFIX}/bin
 
