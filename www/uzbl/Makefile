@@ -1,5 +1,5 @@
 # Created by: Klaus Aehlig <aehlig@linta.de>
-# $FreeBSD: www/uzbl/Makefile 326643 2013-09-07 15:49:54Z wg $
+# $FreeBSD: www/uzbl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	uzbl
 DISTVERSION=	0.0.0.${GITDATE}
@@ -29,6 +29,7 @@ WRKSRC=		${WRKDIR}/Dieterbe-uzbl-${GITVERSION}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
