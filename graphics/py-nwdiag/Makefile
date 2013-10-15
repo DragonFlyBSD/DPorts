@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/py-nwdiag/Makefile,v 1.21 2012/12/21 16:09:09 svnexp Exp $
+# $FreeBSD: graphics/py-nwdiag/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	nwdiag
 PORTVERSION=	0.9.4
@@ -27,6 +27,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 PORTDOCS=	README.txt
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
