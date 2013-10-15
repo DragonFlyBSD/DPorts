@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sawfish-themes
-# Date created:				May 12 2004
-# Whom:					Alexey Mikhailov <karma@ez.pereslavl.ru>
-#
-# $FreeBSD: ports/x11-themes/sawfish-themes/Makefile,v 1.18 2012/12/01 00:27:02 svnexp Exp $
-#
+# Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
+# $FreeBSD: x11-themes/sawfish-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	sawfish-themes
 PORTVERSION=	0.13
@@ -29,6 +25,7 @@ DATA_DIRS=	2YearsToNever Anonymous Aquiline BWM Big Blackwindow \
 		T-16-red T-16-yellow Titanium V absolute-metal bluefoo \
 		debian gorilla gorillaz mxflat typo
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/share/sawfish/themes
 .for d in ${DATA_DIRS}
