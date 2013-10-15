@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/align/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: textproc/align/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	align
 PORTVERSION=	1.7.2
@@ -21,6 +21,7 @@ SHEBANG_FILES=	align width
 
 PLIST_FILES=	bin/align bin/width
 
+NO_STAGE=	yes
 do-install:
 .for i in align width
 	(cd ${WRKSRC} && ${INSTALL_SCRIPT} ${i} ${PREFIX}/bin)
