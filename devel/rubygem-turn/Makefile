@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-turn
-# Date created:		2011-10-27
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-turn/Makefile,v 1.5 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-turn/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	turn
 PORTVERSION=	0.9.6
@@ -22,4 +18,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/turn
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
