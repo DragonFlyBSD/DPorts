@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dxpc
-# Date created:		2 May 1998
-# Whom:			Bruce A. Mah <bmah@ca.sandia.gov>
-#
-# $FreeBSD: x11/dxpc/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Bruce A. Mah <bmah@ca.sandia.gov>
+# $FreeBSD: x11/dxpc/Makefile 330213 2013-10-13 06:15:19Z eadler $
 
 PORTNAME=	dxpc
 PORTVERSION=	3.9.2
@@ -19,13 +15,14 @@ LIB_DEPENDS=	lzo2.2:${PORTSDIR}/archivers/lzo2
 LICENSE=	BSD
 
 USE_XORG=	x11
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-lzo-lib=${LOCALBASE}
 
 MAN1=		dxpc.1
 PLIST_FILES=	bin/dxpc
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/bindir/s|(INSTALL)|(INSTALL_PROGRAM)|g' ${WRKSRC}/Makefile.in
