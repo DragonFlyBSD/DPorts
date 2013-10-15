@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php52-posix
-# Date created:			17 Apr 2010
-# Whom:				Alex Keda <admin@lissyara.su>
-#
-# $FreeBSD: ports/sysutils/php52-posix/Makefile,v 1.2 2012/11/17 06:01:41 svnexp Exp $
-#
+# Created by: Alex Keda <admin@lissyara.su>
+# $FreeBSD: sysutils/php52-posix/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 CATEGORIES=	sysutils
 
@@ -11,4 +7,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php52
 
 PKGNAMESUFFIX=	-posix
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
