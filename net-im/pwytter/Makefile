@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: net-im/pwytter/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net-im/pwytter/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pwytter
 PORTVERSION=	0.8
@@ -40,6 +40,7 @@ post-patch: .SILENT
 # Remove gettext `.po' files: not needed when we have them precompiled
 	${FIND} ${WRKSRC}/locale -name pwytter.po -delete
 
+NO_STAGE=	yes
 post-install:
 # Install themes and media files where they belong
 	@${MKDIR} ${DATADIR}/media ${DATADIR}/theme
