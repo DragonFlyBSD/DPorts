@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars@eggert.org>
-# $FreeBSD: benchmarks/flowgrind/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: benchmarks/flowgrind/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	flowgrind
 PORTVERSION=	0.6.1
@@ -23,4 +23,5 @@ MAN1=		flowgrind-stop.1 \
 		flowgrind.1 \
 		flowgrindd.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
