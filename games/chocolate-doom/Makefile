@@ -1,4 +1,4 @@
-# $FreeBSD: games/chocolate-doom/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/chocolate-doom/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	chocolate-doom
 PORTVERSION=	1.7.0
@@ -19,6 +19,7 @@ MAN5=		chocolate-doom.cfg.5 default.cfg.5
 MAN6=		chocolate-doom.6 chocolate-server.6 chocolate-setup.6
 PORTDOCS=	CMDLINE ChangeLog HACKING INSTALL NEWS NOT-BUGS README README.OPL
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../doom-data/Makefile.include"
 
 .include <bsd.port.options.mk>
