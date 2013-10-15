@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bibtool
-# Date created:				Oct 10, 2005
-# Whom:					Rong-En Fan <rafan@infor.org>
-#
-# $FreeBSD: textproc/bibtool/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Rong-En Fan <rafan@infor.org>
+# $FreeBSD: textproc/bibtool/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	bibtool
 PORTVERSION=	2.48
@@ -31,6 +27,7 @@ TXT_DOCS=	Doc/bibtool.dvi Doc/ref_card.dvi Doc/c_lib.dvi
 PORTDOCS=	${TXT_DOCS:S/^Doc\///}
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
