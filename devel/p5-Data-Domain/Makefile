@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Domain/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Data-Domain/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Domain
 PORTVERSION=	1.05
@@ -27,4 +27,5 @@ USES=		perl5
 
 MAN3=		Data::Domain.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
