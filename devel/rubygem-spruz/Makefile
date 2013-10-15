@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/rubygem-spruz/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: devel/rubygem-spruz/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	spruz
 PORTVERSION=	0.2.13
@@ -15,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/enum
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
