@@ -1,5 +1,5 @@
 # Created by: Hubert Tournier <hubert@frbsd.org>
-# $FreeBSD: www/geneweb/Makefile 322658 2013-07-10 11:31:14Z bapt $
+# $FreeBSD: www/geneweb/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	geneweb
 PORTVERSION=	6.06
@@ -21,6 +21,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	GTK2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
