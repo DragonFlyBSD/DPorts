@@ -1,4 +1,4 @@
-# $FreeBSD: comms/fldigi/Makefile 320730 2013-06-13 00:06:17Z db $
+# $FreeBSD: comms/fldigi/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	fldigi
 PORTVERSION=	3.21.72
@@ -37,6 +37,7 @@ HAMLIB_DESC=		Support rig control via hamlib
 
 OPTIONS_DEFAULT=	OPTFLARQ OPTOSS HAMLIB
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
