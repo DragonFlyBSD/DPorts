@@ -1,9 +1,5 @@
-# New ports collection makefile for:	steghide
-# Date created:				26 February 2001
-# Whom:					RaRa Rasputin <rasputin@submonkey.net>
-#
-# $FreeBSD: security/steghide/Makefile 327091 2013-09-12 17:07:08Z az $
-#
+# Created by: RaRa Rasputin <rasputin@submonkey.net>
+# $FreeBSD: security/steghide/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	steghide
 PORTVERSION=	0.5.1
@@ -29,6 +25,7 @@ CPPFLAGS+=	${CFLAGS} -I${LOCALBASE}/include -fpermissive
 
 MAN1=		steghide.1
 
+NO_STAGE=	yes
 post-patch:
 .ifdef(NOPORTDOCS)
 	${REINPLACE_CMD} -e 's|install-data-am\: install-docDATA||' \
