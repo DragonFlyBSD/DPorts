@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-tinyatom/Makefile 322021 2013-06-29 02:24:26Z swills $
+# $FreeBSD: www/rubygem-tinyatom/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tinyatom
 PORTVERSION=	0.3.6
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
