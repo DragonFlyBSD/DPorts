@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fragroute
-# Date created:				19 May 2002
-# Whom:		Dominic Marks <dominic.marks@btinternet.com>
-#
-# $FreeBSD: ports/security/fragroute/Makefile,v 1.28 2012/11/17 06:01:04 svnexp Exp $
-#
+# Created by: Dominic Marks <dominic.marks@btinternet.com>
+# $FreeBSD: security/fragroute/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fragroute
 PORTVERSION=	1.2
@@ -30,6 +26,7 @@ SCRIPTS=	README.snort base-1 frag-1 frag-2 frag-3 frag-4 frag-5 \
 	frag-6 frag-7-unix frag-7-win32 ins-2 ins-3 tcbc-2 tcp-3 tcp-5 \
 	tcp-7 tcp-9
 
+NO_STAGE=	yes
 pre-install:
 	${MKDIR} ${DATADIR}
 .for FILE in ${SCRIPTS}
