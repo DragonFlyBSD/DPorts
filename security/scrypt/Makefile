@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: security/scrypt/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/scrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	scrypt
 PORTVERSION=	1.1.6
@@ -20,6 +20,7 @@ MAN1=	scrypt.1
 OPTIONS_DEFINE=	SSE2
 SSE2_DESC=	Use SSE2-optimized code
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSE2}
