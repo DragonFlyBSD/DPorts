@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: net/gnome-mud/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: net/gnome-mud/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gnome-mud
 PORTVERSION=	0.11.2
@@ -25,4 +25,5 @@ INSTALLS_ICONS=	yes
 MAN6=		gnome-mud.6
 GCONF_SCHEMAS=	gnome-mud.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
