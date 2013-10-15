@@ -1,5 +1,5 @@
 # Created by: Fumihiko Kimura <jfkimura@yahoo.com>
-# $FreeBSD: www/asterisk-stat/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: www/asterisk-stat/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	asterisk-stat
 PORTVERSION=	2.0.1
@@ -25,6 +25,7 @@ SUB_LIST+=	ASTERISKDIR=${ASTERISKDIR}
 OPTIONS_DEFINE=	PGSQL
 PGSQL_DESC=	Use PostgreSQL instead of MySQL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGSQL}
