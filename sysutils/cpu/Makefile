@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cpu
-# Date created:        15 November 2003
-# Whom:                Hye-Shik Chang <perky@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/cpu/Makefile,v 1.12 2012/11/17 06:01:27 svnexp Exp $
-#
+# Created by: Hye-Shik Chang <perky@FreeBSD.org>
+# $FreeBSD: sysutils/cpu/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cpu
 PORTVERSION=	1.4.3
@@ -24,6 +20,7 @@ CPPFLAGS+=	-DLDAP_DEPRECATED
 MAN5=		cpu.conf.5
 MAN8=		cpu.8 cpu-ldap.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
