@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@FreeBSD.org>
-# $FreeBSD: games/mkgichessclub/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/mkgichessclub/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	mkgichessclub
 PORTVERSION=	2.2.0
@@ -27,6 +27,7 @@ USE_PYTHON=	yes
 
 WRKSRC=	${WRKDIR}/MKGIChessClub-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
