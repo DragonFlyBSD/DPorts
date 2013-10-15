@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: deskutils/basket/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/basket/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	basket
 PORTVERSION=	1.81
@@ -20,4 +20,5 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USES=		cmake
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
