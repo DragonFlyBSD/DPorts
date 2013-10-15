@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang (keith@FreeBSD.org)
-# $FreeBSD: print/latex-cjk/Makefile 318634 2013-05-21 01:41:23Z hrs $
+# $FreeBSD: print/latex-cjk/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-cjk
 PORTVERSION=	4.8.2
@@ -40,6 +40,7 @@ CCMAP_DESC=	CCT CCMap package (for PDFTeX's CID support)
 DVIPDFMX_DESC=	Install and configure DVIPDFMx for CJK
 UTF8ARPHIC_DESC=	Arphic free fonts in UTF-8 (no Type 1)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCCMAP}
