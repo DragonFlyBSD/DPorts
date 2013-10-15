@@ -1,8 +1,8 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/mkgmap/Makefile 321193 2013-06-18 15:12:06Z amdmi3 $
+# $FreeBSD: astro/mkgmap/Makefile 328581 2013-09-28 15:31:40Z amdmi3 $
 
 PORTNAME=	mkgmap
-PORTVERSION=	r2648
+PORTVERSION=	r2724
 CATEGORIES=	astro converters java
 MASTER_SITES=	http://www.mkgmap.org.uk/download/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -17,20 +17,24 @@ JAVA_VERSION=	1.6+
 
 SUB_FILES=	${PORTNAME}.sh
 
+PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
+PORTDATA=	*
+
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
 .include <bsd.port.options.mk>
 
 do-install:
-	${MKDIR} ${DATADIR}/lib
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.jar ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/lib/* ${DATADIR}/lib/
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
+	${MKDIR} ${STAGEDIR}${DATADIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.jar ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/lib/* ${STAGEDIR}${DATADIR}/lib/
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 .if ${PORT_OPTIONS:MDOCS}
-post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
