@@ -1,9 +1,5 @@
-# New ports collection makefile for:	makeztxt
-# Date created:		Oct 19, 2002
-# Whom:			Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/palm/makeztxt/Makefile,v 1.12 2012/11/17 06:00:44 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: palm/makeztxt/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	makeztxt
 PORTVERSION=	1.62
@@ -20,6 +16,7 @@ USE_GMAKE=	yes
 
 MAKE_ENV+=	USEPOSIX=1 LONG_OPTS=1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's/-O2//' ${WRKSRC}/libztxt/Makefile
 
