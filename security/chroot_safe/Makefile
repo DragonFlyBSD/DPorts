@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/chroot_safe/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/chroot_safe/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	chroot_safe
 PORTVERSION=	1.4
@@ -17,6 +17,7 @@ MAN1=		chroot_safe.1
 PLIST_FILES=	sbin/chroot_safe libexec/chroot_safe/chroot_safe.so
 PLIST_DIRS=	libexec/chroot_safe
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e  's|CXX=g++|CXX?=c++|' \
 		-e 's|-o chroot_safe.so|chroot_safe.cpp -o chroot_safe.so|' \
