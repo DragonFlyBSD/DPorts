@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: graphics/swfmill/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/swfmill/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	swfmill
 PORTVERSION=	0.3.2
@@ -21,4 +21,5 @@ USE_AUTOTOOLS=	libtool
 
 PLIST_FILES=	bin/swfmill
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
