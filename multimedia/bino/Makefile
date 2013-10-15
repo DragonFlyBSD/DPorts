@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <i@levsha.me>
-# $FreeBSD: multimedia/bino/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: multimedia/bino/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	bino
 PORTVERSION=	1.2.1
@@ -31,6 +31,7 @@ LIB_DEPENDS+=	ass.5:${PORTSDIR}/multimedia/libass \
 MAN1=	bino.1
 INFO=	bino
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
