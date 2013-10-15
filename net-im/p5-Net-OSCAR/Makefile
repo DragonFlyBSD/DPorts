@@ -1,5 +1,5 @@
 # Created by: Kelly Cochran <kcochran@trolans.net>
-# $FreeBSD: net-im/p5-Net-OSCAR/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-Net-OSCAR/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-OSCAR
 PORTVERSION=	1.928
@@ -34,4 +34,5 @@ MAN3=	Net::OSCAR.3 \
 	Net::OSCAR::XML.3 \
 	Net::OSCAR::_BLInternal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
