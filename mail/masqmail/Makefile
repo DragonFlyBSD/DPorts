@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: mail/masqmail/Makefile 320122 2013-06-06 19:33:19Z bapt $
+# $FreeBSD: mail/masqmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	masqmail
 PORTVERSION=	0.3.4
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	RESOLVER AUTH
 RESOLVER_DESC=	Resolver
 AUTH_DESC=	SMTP AUTH (RFC2554) support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ! ${PORT_OPTIONS:MRESOLVER}
