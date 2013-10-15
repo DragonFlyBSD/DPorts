@@ -1,9 +1,5 @@
-# New ports collection makefile for:	google-styleguide
-# Date created:				2010-07-28
-# Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/google-styleguide/Makefile,v 1.5 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: devel/google-styleguide/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	google-styleguide
 PORTVERSION=	66
@@ -22,6 +18,7 @@ NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/cpplint.py
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC}
