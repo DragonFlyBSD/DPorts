@@ -1,9 +1,5 @@
-# New ports collection makefile for:	png2html
-# Date created:				11 November 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: graphics/png2html/Makefile 324437 2013-08-09 14:05:52Z dinoex $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: graphics/png2html/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	png2html
 PORTVERSION=	1.1
@@ -22,6 +18,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 
 PLIST_FILES=	bin/png2html
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|CHANGE_ME|${LOCALBASE}|g' ${WRKSRC}/Makefile
 
