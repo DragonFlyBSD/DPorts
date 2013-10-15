@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libdisorder/Makefile 327126 2013-09-13 01:42:13Z kevlo $
+# $FreeBSD: devel/libdisorder/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libdisorder
 PORTVERSION=	0.0.2
@@ -13,6 +13,7 @@ LICENSE=	GPLv2
 
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900027
