@@ -1,6 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: www/c-icap-modules/Makefile 323990 2013-07-30 20:20:40Z mm $
+# $FreeBSD: www/c-icap-modules/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	c-icap
 PORTVERSION=	0.2.4
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--enable-static \
 			--with-c-icap=${LOCALBASE} \
 			--with-clamav=${LOCALBASE}
 
+NO_STAGE=	yes
 post-install:
 	@${CP} -np ${PREFIX}/etc/c-icap/srv_url_check.conf.default \
 		${PREFIX}/etc/c-icap/srv_url_check.conf || ${TRUE}
