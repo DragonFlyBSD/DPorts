@@ -1,9 +1,5 @@
-# New ports collection makefile for:   eieio
-# Date created:                10 December 2001
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/devel/eieio/Makefile,v 1.21 2012/11/17 05:55:41 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: devel/eieio/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	eieio
 PORTVERSION=	0.17
@@ -33,6 +29,7 @@ INFO=		eieio
 
 LISPDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/eieio
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "New version of eieio is now in devel/cedet."
