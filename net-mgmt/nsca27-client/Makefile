@@ -1,9 +1,5 @@
-# New ports collection makefile for:    nsca-client
-# Date created:         Sun Apr 30 17:23:00 CET 2006
-# Whom:                 Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/net-mgmt/nsca27-client/Makefile,v 1.1 2013/01/29 19:56:32 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: net-mgmt/nsca27-client/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PKGNAMESUFFIX=	-client
 
@@ -14,4 +10,5 @@ LICENSE=	GPLv2
 _BUILDING_NSCA_CLIENT=	yes
 MASTERDIR=	${.CURDIR}/../nsca27
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
