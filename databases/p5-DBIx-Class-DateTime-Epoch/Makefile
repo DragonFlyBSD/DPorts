@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-DateTime-Epoch/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-DateTime-Epoch/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-DateTime-Epoch
 PORTVERSION=	0.10
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::Class::DateTime::Epoch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
