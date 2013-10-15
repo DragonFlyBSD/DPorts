@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rtty
-# Date created:		24 Aug 1996
-# Whom:			jkh
-#
-# $FreeBSD: ports/sysutils/rtty/Makefile,v 1.15 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: jkh
+# $FreeBSD: sysutils/rtty/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rtty
 PORTVERSION=	4.0
@@ -20,4 +16,5 @@ EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	|sh
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
