@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: deskutils/taskwarrior/Makefile 315948 2013-04-17 08:24:26Z gahr $
+# $FreeBSD: deskutils/taskwarrior/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	taskwarrior
 PORTVERSION=	2.2.0
@@ -20,4 +20,5 @@ CMAKE_ARGS+=	-DTASK_DOCDIR:STRING=${DATADIR:S/${PREFIX}\///} \
 MAN1=		task.1
 MAN5=		taskrc.5 task-faq.5 task-color.5 task-sync.5 task-tutorial.5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
