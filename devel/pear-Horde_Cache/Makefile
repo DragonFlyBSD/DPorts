@@ -1,7 +1,7 @@
-# $FreeBSD: devel/pear-Horde_Cache/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: devel/pear-Horde_Cache/Makefile 330034 2013-10-10 21:56:48Z mm $
 
 PORTNAME=	Horde_Cache
-PORTVERSION=	2.2.1
+PORTVERSION=	2.3.0
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
@@ -17,6 +17,7 @@ USE_HORDE_RUN=	Horde_Compress_Fast \
 		Horde_Util
 USE_PHP=	hash
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MAPC}
