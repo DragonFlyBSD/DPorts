@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/gtimelapse/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: graphics/gtimelapse/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gtimelapse
 DISTVERSION=	0.1
@@ -22,4 +22,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
