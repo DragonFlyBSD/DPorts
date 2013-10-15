@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/highlight/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: textproc/highlight/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	highlight
 PORTVERSION=	2.16
@@ -27,6 +27,7 @@ PORTDOCS=	ChangeLog INSTALL README README_DE \
 
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
