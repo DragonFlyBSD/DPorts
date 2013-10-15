@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/impresscms/Makefile 315110 2013-03-24 10:45:21Z wen $
+# $FreeBSD: www/impresscms/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	impresscms
 PORTVERSION=	1.3.4
@@ -16,6 +16,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} htdocs ${WWWDIR}
