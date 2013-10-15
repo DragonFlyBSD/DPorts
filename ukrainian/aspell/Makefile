@@ -1,9 +1,5 @@
-# New ports collection makefile for:    uk-aspell
-# Date created:                         18 October 2002
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/ukrainian/aspell/Makefile,v 1.10 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: ukrainian/aspell/Makefile 327774 2013-09-20 23:19:33Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-uk-1.4.0-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Ukrainian dictionaries
 
 DICT=	 	uk
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
