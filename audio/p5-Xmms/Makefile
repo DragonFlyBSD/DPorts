@@ -1,8 +1,5 @@
-# New ports collection makefile for:	Xmms
-# Date created:			10 December 2000
-# Whom:				Jeremy Shaffner <jeremy@external.org>
-#
-# $FreeBSD: audio/p5-Xmms/Makefile 324171 2013-08-02 18:21:05Z az $
+# Created by: Jeremy Shaffner <jeremy@external.org>
+# $FreeBSD: audio/p5-Xmms/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Xmms
 PORTVERSION=	0.12
@@ -20,6 +17,7 @@ BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms \
 		p5-ReadLine-Perl>=0:${PORTSDIR}/devel/p5-ReadLine-Perl
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 REINPLACE_ARGS=	-i ''
 
