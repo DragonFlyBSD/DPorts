@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: textproc/ppower4/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: textproc/ppower4/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ppower4
 PORTVERSION=	0.9.4
@@ -37,6 +37,7 @@ PLIST_SUB=	STY_DIR="${STY_DIR:S,^${PREFIX}/,,}" \
 SUB_FILES=	ppower4.sh
 SUB_LIST=	JARFILE=${JAR_DIR}/pp4p.jar
 
+NO_STAGE=	yes
 do-install:
 # install docs?
 .if !defined(NOPORTDOCS)
