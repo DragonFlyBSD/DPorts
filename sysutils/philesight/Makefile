@@ -1,9 +1,5 @@
-# New ports collection makefile for:	philesight
-# Date created:		2009-02-11
-# Whom:			stas
-#
-# $FreeBSD: sysutils/philesight/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: stas
+# $FreeBSD: sysutils/philesight/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	philesight
 PORTVERSION=	20090105
@@ -30,6 +26,7 @@ PLIST_FILES=	bin/${PORTNAME} ${RUBY_SITELIBDIR:C,^${PREFIX}/?,,}/${PORTNAME}.rb
 PORTEXAMPLES=	${PORTNAME}.cgi
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${RUBY_VER} == 1.9
