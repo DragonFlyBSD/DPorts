@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@netmag.cz>
-# $FreeBSD: archivers/lzma/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/lzma/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	lzma
 PORTVERSION=	9.22
@@ -14,6 +14,7 @@ CONFLICTS=	lzmautils-[0-9]* xz-[0-9]*
 
 USES=		gmake
 USE_BZIP2=	yes
+NO_STAGE=	yes
 NO_WRKSUBDIR=	yes
 USE_DOS2UNIX=	yes
 BUILD_WRKSRC=	${WRKSRC}/CPP/7zip/Bundles/LzmaCon
