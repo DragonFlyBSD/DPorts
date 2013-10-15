@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: editors/p5-Proc-InvokeEditor/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: editors/p5-Proc-InvokeEditor/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	Proc-InvokeEditor
 PORTVERSION=	1.06
@@ -23,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Proc::InvokeEditor.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
