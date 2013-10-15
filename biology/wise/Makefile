@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: biology/wise/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: biology/wise/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	wise
 PORTVERSION=	2.4.1
@@ -43,6 +43,7 @@ DATAFILES=	BLOSUM30.bla BLOSUM45.bla BLOSUM62.bla BLOSUM80.bla aa.rnd \
 		human.stats idenity.bla methods pb.gf pombe.gf tm.pri \
 		wise.2 wise.per worm.gf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
