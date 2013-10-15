@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: math/p5-Set-Window/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Set-Window/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Set-Window
 PORTVERSION=	1.01
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		Set::Window.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' '/use 5/d' ${WRKSRC}/Window.pm
 
