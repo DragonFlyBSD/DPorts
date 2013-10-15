@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: net-mgmt/netdisco/Makefile 326420 2013-09-05 17:19:32Z wg $
+# $FreeBSD: net-mgmt/netdisco/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	netdisco
 PORTVERSION=	1.3.2
@@ -56,6 +56,7 @@ CONFIG_FILES=	netdisco.conf netdisco.crontab netdisco-topology.txt \
 
 DOCFILES=	ChangeLog doc/*.pod INSTALL README* UPGRADE
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MIBSDIR=	${PREFIX}/share/netdisco-mibs
