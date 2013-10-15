@@ -1,5 +1,5 @@
 # Created by: Tzanetos Balitsaris <tzabal@it.teithe.gr>
-# $FreeBSD: net-im/jitsi/Makefile 327446 2013-09-16 23:00:36Z wg $
+# $FreeBSD: net-im/jitsi/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	jitsi
 PORTVERSION=	2.3
@@ -28,6 +28,7 @@ DESKTOP_ENTRIES="Jitsi" \
 		"Network;InstantMessaging;VideoConference;Java;" \
 		true
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
