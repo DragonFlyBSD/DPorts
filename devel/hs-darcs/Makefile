@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/hs-darcs/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: devel/hs-darcs/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	darcs
 PORTVERSION=	2.8.4
@@ -33,6 +33,7 @@ THREADED_DESC=		Use threading and SMP support
 COLOR_DESC=		Use ANSI color escapes
 MMAP_DESC=		Compile with mmap support
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 CONFIGURE_ARGS+=	--flags="library executable"
