@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: lang/parrot/Makefile 327219 2013-09-14 06:21:24Z sunpoet $
+# $FreeBSD: lang/parrot/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	parrot
 PORTVERSION=	${PARROT_VERSION}
@@ -52,6 +52,7 @@ PARROT_DOCS=		${PARROT_SHARE_DIR}
 PLIST_SUB+=	PARROT_VER="${PORTVERSION}" \
 		PARROT_DOCS="${PARROT_DOCS}"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 .include <bsd.port.pre.mk>
 
