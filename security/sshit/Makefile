@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: security/sshit/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/sshit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	sshit
 PORTVERSION=	0.6
@@ -23,6 +23,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/sshit
 
