@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: devel/tcl-mmap/Makefile 316411 2013-04-24 08:09:56Z gahr $
+# $FreeBSD: devel/tcl-mmap/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tcl-mmap
 PORTVERSION=	1.1
@@ -11,7 +11,7 @@ COMMENT=	New TCL channel type using mmap-ed files
 
 LICENSE=	GPLv3
 
-USE_TCL=	84+
+USES+=		tcl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-tcl=${TCL_LIBDIR} \
 		--prefix=${PREFIX} \
@@ -30,4 +30,5 @@ regression-test: build
 	    echo "load ../libmmap${PORTVERSION}.so; source $$t" | ${TCLSH}; \
 	done;
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
