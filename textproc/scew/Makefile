@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@gahr.ch>
-# $FreeBSD: textproc/scew/Makefile 314584 2013-03-18 16:36:41Z gahr $
+# $FreeBSD: textproc/scew/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scew
 PORTVERSION=	1.1.4
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 SCEW_EXAMPLES=	print stream write
 
+NO_STAGE=	yes
 post-install:
 .for ex in ${SCEW_EXAMPLES}
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/${PORTNAME}_${ex}/${PORTNAME}_${ex} ${PREFIX}/bin
