@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/baekmukfonts-bdf/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: korean/baekmukfonts-bdf/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	baekmukfonts
 PORTVERSION=	2.0
@@ -41,6 +41,7 @@ USES=		perl5
 USE_PERL5=	build
 
 # manually install hinted fonts
+NO_STAGE=	yes
 do-configure:
 .for FONTNAME in ${FONTLIST_MANUAL}
 	${GZIP_CMD} -cd ${_DISTDIR}/${FONTNAME}.bdf.gz \
