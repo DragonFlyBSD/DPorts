@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: ftp/ftpmirror/Makefile 325961 2013-09-02 09:45:00Z garga $
+# $FreeBSD: ftp/ftpmirror/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	ftpmirror
 PORTVERSION=	1.96
@@ -23,6 +23,7 @@ CONFIGURE_ENV+=	PERL="${PERL}" INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 
 PORTDOCS=	README.jis RELEASE.jis
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -i '' -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/Fan/Fan.pm
 
