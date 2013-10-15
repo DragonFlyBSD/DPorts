@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ipfw-graph
-# Date created:		16 November 2001
-# Whom:			Edwin Groothuis (edwin@mavetju.org)
-#
-# $FreeBSD: ports/net/ipfw-graph/Makefile,v 1.13 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: Edwin Groothuis (edwin@mavetju.org)
+# $FreeBSD: net/ipfw-graph/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ipfw-graph
 PORTVERSION=	1.4
@@ -18,6 +14,7 @@ USE_GNOME=	gtk12
 
 MAN8=		ipfw-al.8 ipfw-graph.8
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/ipfw-graph.h
 
