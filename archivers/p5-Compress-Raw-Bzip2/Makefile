@@ -1,5 +1,5 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: archivers/p5-Compress-Raw-Bzip2/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: archivers/p5-Compress-Raw-Bzip2/Makefile 328779 2013-09-30 08:50:37Z sunpoet $
 
 PORTNAME=	Compress-Raw-Bzip2
 PORTVERSION=	2.062
@@ -18,7 +18,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Compress::Raw::Bzip2.3
 
 .include <bsd.port.mk>
