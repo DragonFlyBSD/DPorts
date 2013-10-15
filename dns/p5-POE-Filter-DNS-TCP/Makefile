@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-POE-Filter-DNS-TCP/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: dns/p5-POE-Filter-DNS-TCP/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	POE-Filter-DNS-TCP
 PORTVERSION=	0.04
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	POE::Filter::DNS::TCP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
