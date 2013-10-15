@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-freebsd
-# Date created:		14 June 2002
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/devel/py-freebsd/Makefile,v 1.25 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Hye-Shik Chang
+# $FreeBSD: devel/py-freebsd/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	freebsd
 PORTVERSION=	0.9.3
@@ -27,6 +23,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/freebsd.so \
 		%%PYTHON_SITELIBDIR%%/freebsd_compat02.pyc \
 		%%PYTHON_SITELIBDIR%%/freebsd_compat02.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Multi-IPv4/v6/no-IP jails.
