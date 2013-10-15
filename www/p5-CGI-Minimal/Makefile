@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Minimal/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-CGI-Minimal/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	CGI-Minimal
 PORTVERSION=	1.29
@@ -12,6 +12,7 @@ COMMENT=	Extremely lightweight CGI processing package
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		CGI::Minimal.3
 
