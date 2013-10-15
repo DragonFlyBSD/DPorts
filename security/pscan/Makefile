@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pscan
-# Date created:				02 September 2000
-# Whom:					Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pscan/Makefile,v 1.9 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: security/pscan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pscan
 PORTVERSION=	1.3
@@ -20,6 +16,7 @@ WRKSRC=		${WRKDIR}
 PLIST_FILES=	bin/pscan \
 		bin/find_formats
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pscan ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/find_formats.sh ${PREFIX}/bin/find_formats
