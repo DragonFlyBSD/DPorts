@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: math/xgobi/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: math/xgobi/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	xgobi
 PORTVERSION=	2002.06.20
@@ -33,6 +33,7 @@ MANDIR=		${WRKSRC}/manpages
 # 3 files extract to current directory so use post-extract to move
 # them to proper locations.
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@for file in ${EXTRACT_ONLY}; do \
