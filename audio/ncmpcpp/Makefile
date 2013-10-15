@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/ncmpcpp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/ncmpcpp/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ncmpcpp
 PORTVERSION=	0.5.10
@@ -15,6 +15,7 @@ LIB_DEPENDS=	mpdclient:${PORTSDIR}/audio/libmpdclient \
 		fftw3:${PORTSDIR}/math/fftw3
 
 USES=		iconv ncurses pkgconfig
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
