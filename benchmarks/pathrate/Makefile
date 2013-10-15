@@ -1,5 +1,5 @@
 # Created by: dikshie <dikshie@lapi.itb.ac.id>
-# $FreeBSD: benchmarks/pathrate/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/pathrate/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	pathrate
 PORTVERSION=	2.4.1
@@ -18,6 +18,7 @@ MAKEFILE=	makefile
 
 PLIST_FILES=	bin/pathrate_rcv bin/pathrate_snd
 
+NO_STAGE=	yes
 do-install:
 .for f in pathrate_rcv pathrate_snd
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
