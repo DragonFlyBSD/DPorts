@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: dns/rbldnsd/Makefile 326153 2013-09-03 14:21:09Z feld $
+# $FreeBSD: dns/rbldnsd/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	rbldnsd
 PORTVERSION=	0.997a
@@ -23,6 +23,7 @@ GROUPS=	${USERS}
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
