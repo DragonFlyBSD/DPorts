@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: comms/gtkmmorse/Makefile 325963 2013-09-02 09:50:21Z bapt $
+# $FreeBSD: comms/gtkmmorse/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	gtkmmorse
 PORTVERSION=	0.9.27
@@ -21,4 +21,5 @@ USES=		pkgconfig
 PLIST_FILES=	bin/gtkmmorse
 MAN1=		gtkmmorse.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
