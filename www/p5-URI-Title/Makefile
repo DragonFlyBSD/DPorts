@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-URI-Title/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-URI-Title/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	URI-Title
 PORTVERSION=	1.86
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=	URI::Title.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
