@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ibus-el/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: textproc/ibus-el/Makefile 329341 2013-10-04 16:59:14Z ume $
 
 PORTNAME=	ibus-el
 PORTVERSION=	0.3.2
@@ -30,14 +30,17 @@ do-build:
 		-f batch-byte-compile ibus.el
 
 do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 	@${INSTALL_DATA} ${WRKSRC}/ibus.el \
-		${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 	@${INSTALL_DATA} ${WRKSRC}/ibus.elc \
-		${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
-	@${INSTALL_SCRIPT} ${WRKSRC}/ibus-el-agent ${PREFIX}/libexec
+		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+	@${INSTALL_SCRIPT} ${WRKSRC}/ibus-el-agent \
+		${STAGEDIR}${PREFIX}/libexec
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@cd ${WRKSRC} && \
+		${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
