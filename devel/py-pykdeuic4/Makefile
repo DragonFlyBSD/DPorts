@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pykdeuic4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/py-pykdeuic4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pykdeuic4
 PORTVERSION=	${KDE4_VERSION}
@@ -23,6 +23,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/tools/${PORTNAME}
 
 PLIST_SUB+=	PYTHON_VER=${PYTHON_VER}
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's,$${PYTHON_SITE_PACKAGES_INSTALL_DIR},${PYTHONPREFIX_SITELIBDIR},g' \
 		${WRKSRC}/CMakeLists.txt
