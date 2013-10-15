@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-wm/jwm/Makefile 327046 2013-09-12 09:39:19Z bapt $
+# $FreeBSD: x11-wm/jwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	jwm
 PORTVERSION=	2.0.1
@@ -32,6 +32,7 @@ FRIBIDI_BUILD_DEPENDS=	fribidi:${PORTSDIR}/converters/fribidi
 JPEG_LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 DEBUG_CONFIGURE_ON=	--enable-debug
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXFT}
