@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@FreeBSD.org>
-# $FreeBSD: emulators/x48/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: emulators/x48/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	x48
 PORTVERSION=	0.6.4
@@ -32,6 +32,7 @@ PORTDOCS=	ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract: .SILENT
