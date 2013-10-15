@@ -1,4 +1,4 @@
-$FreeBSD: ports/benchmarks/bonnie++/files/patch-bonnie++.cpp,v 1.4 2012/11/17 05:54:49 svnexp Exp $
+$FreeBSD: benchmarks/bonnie++/files/patch-bonnie++.cpp 300895 2012-07-14 12:56:14Z beat $
 
 --- bonnie++.cpp.orig	Mon Aug 25 17:08:46 2003
 +++ bonnie++.cpp	Mon Aug 25 17:08:46 2003
