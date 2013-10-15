@@ -1,9 +1,5 @@
-# New ports collection makefile for:	archivesmtp
-# Date created:				1 Nov 2009
-# Whom:					Netherby <netherby@dancingfortune.com>
-#
-# $FreeBSD: ports/mail/archivesmtp/Makefile,v 1.3 2012/11/17 05:58:58 svnexp Exp $
-#
+# Created by: Netherby <netherby@dancingfortune.com>
+# $FreeBSD: mail/archivesmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	archivesmtp
 PORTVERSION=	1.1.b1
@@ -33,6 +29,7 @@ MAN8=		archivesmtp.8
 SOCKETBASE?=	/var/run
 SOCKETDIR?=	archivesmtp
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Sets up libmilter dependencies and options
