@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: net/p5-AnyEvent-Twitter/Makefile 326068 2013-09-02 19:32:09Z az $
+# $FreeBSD: net/p5-AnyEvent-Twitter/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	AnyEvent-Twitter
 PORTVERSION=	0.64
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		AnyEvent::Twitter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
