@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: sysutils/cdrkit/Makefile 322611 2013-07-10 04:05:14Z miwi $
+# $FreeBSD: sysutils/cdrkit/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cdrkit
 PORTVERSION=	1.1.11
@@ -19,6 +19,7 @@ MAN5=		genisoimagerc.5
 
 CONFLICTS=	cdrtools-[0-9]* cjk-cdrtools-[0-9]* cdrtools-devel-[0-9]*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/man|man|' ${WRKSRC}/include/AddSchilyBits.cmake \
 	    ${WRKSRC}/3rd-party/dirsplit/CMakeLists.txt
