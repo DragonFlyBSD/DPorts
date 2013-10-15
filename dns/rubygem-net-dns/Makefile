@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: dns/rubygem-net-dns/Makefile 319713 2013-06-02 18:56:18Z swills $
+# $FreeBSD: dns/rubygem-net-dns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	net-dns
 PORTVERSION=	0.8.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
