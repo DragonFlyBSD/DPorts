@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/rubygem-rye/Makefile 321639 2013-06-23 13:47:32Z swills $
+# $FreeBSD: net/rubygem-rye/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rye
 PORTVERSION=	0.9.8
@@ -20,4 +20,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
