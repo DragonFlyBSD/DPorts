@@ -1,8 +1,8 @@
 # Created by: Anonymous
-# $FreeBSD: www/wgetpaste/Makefile 316068 2013-04-18 17:52:57Z sunpoet $
+# $FreeBSD: www/wgetpaste/Makefile 328381 2013-09-26 16:47:01Z sunpoet $
 
 PORTNAME=	wgetpaste
-PORTVERSION=	2.22
+PORTVERSION=	2.23
 CATEGORIES=	www
 MASTER_SITES=	http://wgetpaste.zlin.dk/ \
 		LOCAL/sunpoet
@@ -26,10 +26,10 @@ post-patch:
 			${WRKSRC}/${PORTNAME}
 
 do-install:
-	${MKDIR} ${PREFIX}/etc/${PORTNAME}.d/ ${PREFIX}/share/zsh/site-functions/
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-	${INSTALL_DATA} ${DISTDIR}/${PORTNAME}.example ${PREFIX}/etc/${PORTNAME}.conf.sample
-	${INSTALL_DATA} ${DISTDIR}/zlin.conf ${PREFIX}/etc/${PORTNAME}.d/
-	${INSTALL_DATA} ${WRKSRC}/_${PORTNAME} ${PREFIX}/share/zsh/site-functions/
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.d/ ${STAGEDIR}${PREFIX}/share/zsh/site-functions/
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${DISTDIR}/${PORTNAME}.example ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.conf.sample
+	${INSTALL_DATA} ${DISTDIR}/zlin.conf ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.d/
+	${INSTALL_DATA} ${WRKSRC}/_${PORTNAME} ${STAGEDIR}${PREFIX}/share/zsh/site-functions/
 
 .include <bsd.port.mk>
