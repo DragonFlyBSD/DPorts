@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/hamster-applet/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: deskutils/hamster-applet/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.42 2010/06/06 11:27:47 kwm Exp $
 
 PORTNAME=	hamster-applet
@@ -30,6 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	hamster-applet.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # WAF needs that
