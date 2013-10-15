@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/sid-milter/Makefile,v 1.27 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/sid-milter/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	sid-milter
 PORTVERSION=	1.0.0
@@ -9,6 +9,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	An sid and spf milter for Sendmail
 
 RESTRICTED=	may incorporate intellectual property, possible patent issues
+NO_STAGE=	yes
 
 WCONF=		${WRKSRC}/devtools/Site
 MAN8=		sid-filter.8
