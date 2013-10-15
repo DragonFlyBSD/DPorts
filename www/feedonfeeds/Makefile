@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	feedonfeeds
-# Date created:			Jul 8, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/feedonfeeds/Makefile,v 1.4 2012/11/17 06:02:33 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/feedonfeeds/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	feedonfeeds
 PORTVERSION=	0.5
@@ -23,6 +18,7 @@ NO_BUILD=	yes
 DATADIR?=	${PREFIX}/www/data/feed-on-feeds
 WRKSRC=	${WRKDIR}/${PROJECTHOST}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${CP} -R ${WRKSRC}/ ${DATADIR}
