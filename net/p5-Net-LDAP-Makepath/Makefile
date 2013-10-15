@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-LDAP-Makepath
-# Date created:		2008-06-24
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: net/p5-Net-LDAP-Makepath/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: net/p5-Net-LDAP-Makepath/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-LDAP-Makepath
 PORTVERSION=	1.0.1
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::LDAP::Makepath.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
