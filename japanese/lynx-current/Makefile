@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: japanese/lynx-current/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: japanese/lynx-current/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
@@ -67,6 +67,7 @@ INSTALL_TARGET=	install install-help
 L_LIB=		${PREFIX}/etc
 L_HELP=		${PREFIX}/share/lynx_help
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lssl -lcrypto|-L${OPENSSLLIB} &|g' \
 		${WRKSRC}/configure
