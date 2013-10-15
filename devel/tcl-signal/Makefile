@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	tcl-signal
-# Date created:				16 August 2012
-# Whom:					gahr
-#
-# $FreeBSD: ports/devel/tcl-signal/Makefile,v 1.4 2012/11/26 23:00:39 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: devel/tcl-signal/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tcl-signal
 PORTVERSION=	1.4.0.1
@@ -14,7 +10,7 @@ DISTNAME=	signal_ext${PORTVERSION:R:R}
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Dynamically loadable signal handling for Tcl/Tk scripts
 
-USE_TCL=	yes
+USES+=		tcl
 GNU_CONFIGURE=	yes
 ALL_TARGET=	signal.so
 CONFIGURE_ARGS+=--with-tcl=${TCL_LIBDIR}
@@ -24,6 +20,7 @@ PLIST_FILES=	lib/signal/signal.so \
 		lib/signal/pkgIndex.tcl
 PLIST_DIRS=	lib/signal
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|\.\./lib||' ${WRKSRC}/${CONFIGURE_SCRIPT}
 	${REINPLACE_CMD} -e 's|mkdir|${MKDIR}|; s|@TCL_PACKAGE_PATH@|@TCL_PREFIX@/lib|g' ${WRKSRC}/Makefile.in
