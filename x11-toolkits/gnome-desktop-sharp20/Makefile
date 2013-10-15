@@ -1,5 +1,5 @@
 # Created by: pneumann@gmail.com
-# $FreeBSD: x11-toolkits/gnome-desktop-sharp20/Makefile 326438 2013-09-05 19:29:18Z antoine $
+# $FreeBSD: x11-toolkits/gnome-desktop-sharp20/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gnome-desktop-sharp
 PORTVERSION=	2.26.0
@@ -18,6 +18,7 @@ USE_PERL5=	run
 USE_GNOME=	gnomehack gnomepanel gtkhtml3 gtksharp20 gnomesharp20 librsvg2 vte \
 		libgnomeprintui gtksourceview2 gnomepanel libwnck nautiluscdburner
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^#!/usr/bin/perl|#!${PERL}|'
