@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: sysutils/zisofs-tools/Makefile 320634 2013-06-11 19:44:50Z rakuco $
+# $FreeBSD: sysutils/zisofs-tools/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	zisofs-tools
 PORTVERSION=	1.0.8
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	LFS DOCS
 OPTIONS_DEFAULT=	LFS
 LFS_DESC=	Enable Large Files Support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MLFS}
