@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kmess
-# Date created:			21 June 2002
-# Whom:				Hye-Shik Chang <perky@python.or.kr>
-#
-# $FreeBSD: net-im/kmess-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Hye-Shik Chang <perky@python.or.kr>
+# $FreeBSD: net-im/kmess-kde4/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	kmess
 PORTVERSION=	2.0.6.2
@@ -25,4 +21,5 @@ USE_KDE4=	kdehier kdeprefix kdelibs libkonq automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USES=		cmake gettext
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
