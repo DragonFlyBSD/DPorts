@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Proc-Background/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Proc-Background/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Proc-Background
 PORTVERSION=	1.10
@@ -18,4 +18,5 @@ MAN3=		Proc::Background.3 \
 		Proc::Background::Win32.3 \
 		Proc::Background::Unix.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
