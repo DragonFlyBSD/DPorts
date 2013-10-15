@@ -1,5 +1,5 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/libcmime/Makefile 327497 2013-09-17 17:55:30Z wg $
+# $FreeBSD: mail/libcmime/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	libcmime
 PORTVERSION=	0.1.8
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	DEBUG DOCS
 
 PORTDOCS=	AUTHORS CHANGELOG INSTALL README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
