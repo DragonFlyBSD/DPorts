@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdrom2
-# Date created:			03 Feb 1997
-# Whom:				Masafumi NAKANE <max@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/cdrom2/Makefile,v 1.13 2012/11/17 05:58:31 svnexp Exp $
-#
+# Created by: Masafumi NAKANE <max@FreeBSD.org>
+# $FreeBSD: japanese/cdrom2/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	cdrom2
 PORTVERSION=	1996.06.16
@@ -23,6 +19,7 @@ DOCS=		errata.doc gaiji.txt index.doc install.doc kekka.txt \
 
 SUB_FILES+=	pkg-message
 
+NO_STAGE=	yes
 do-configure:
 	@${ECHO_MSG} "Copying custom Makefile."
 	@${CP} ${FILESDIR}/Makefile ${WRKSRC}
