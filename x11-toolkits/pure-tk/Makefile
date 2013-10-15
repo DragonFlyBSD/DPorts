@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-toolkits/pure-tk/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: x11-toolkits/pure-tk/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	pure-tk
 PORTVERSION=	0.3
@@ -18,6 +18,7 @@ PLIST_FILES=	lib/pure/gnocl.pure \
 		lib/pure/tk.so \
 		lib/pure/tk.pure
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
  		-e "s|/usr/include|${LOCALBASE}/include|g" \
