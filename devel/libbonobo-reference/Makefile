@@ -1,13 +1,10 @@
-# New ports collection makefile for:	libbonobo-reference
-# Date created:				09 May 2006
-# Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libbonobo-reference/Makefile,v 1.3 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: devel/libbonobo-reference/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTREVISION=	0
 
 REFERENCE_SRC=	${WRKSRC}/doc
 BOOKS=		activation-api api
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
