@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-File-Touch/Makefile 327236 2013-09-14 07:37:39Z sunpoet $
+# $FreeBSD: devel/p5-File-Touch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Touch
 PORTVERSION=	0.08
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Touch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
