@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-TryCatch/Makefile 327452 2013-09-17 06:40:21Z bapt $
+# $FreeBSD: lang/p5-TryCatch/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	TryCatch
 PORTVERSION=	1.003002
@@ -35,6 +35,7 @@ USE_PERL5=	configure
 
 MAN3=		TryCatch.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAUTHOR}
