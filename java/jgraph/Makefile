@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/java/jgraph/Makefile,v 1.15 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jgraph/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jgraph
 PORTVERSION=	5.13.0.4
@@ -38,6 +38,7 @@ PORTDOCS=	*
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
+NO_STAGE=	yes
 pre-fetch:
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You may use the following build options:"
