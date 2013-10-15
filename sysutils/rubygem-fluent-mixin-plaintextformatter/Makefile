@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rubygem-fluent-mixin-plaintextformatter/Makefile 320042 2013-06-06 01:22:30Z kuriyama $
+# $FreeBSD: sysutils/rubygem-fluent-mixin-plaintextformatter/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fluent-mixin-plaintextformatter
 PORTVERSION=	0.2.2
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
