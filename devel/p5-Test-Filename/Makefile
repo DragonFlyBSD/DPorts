@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Filename/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-Test-Filename/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Filename
 PORTVERSION=	0.03
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Test::Filename.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
