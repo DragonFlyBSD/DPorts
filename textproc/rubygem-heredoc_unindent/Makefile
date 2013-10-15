@@ -1,8 +1,5 @@
-# New ports collection makefile for:	rubygem-heredoc_unindent
-# Date created:		2011-07-08
-# Whom:			Loic Pefferkorn <loic-freebsd@loicp.eu>
-#
-# $FreeBSD: ports/textproc/rubygem-heredoc_unindent/Makefile,v 1.2 2012/11/17 06:02:20 svnexp Exp $
+# Created by: Loic Pefferkorn <loic-freebsd@loicp.eu>
+# $FreeBSD: textproc/rubygem-heredoc_unindent/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	heredoc_unindent
 PORTVERSION=	1.1.2
@@ -20,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
