@@ -1,5 +1,5 @@
 # Created by: wen
-# $FreeBSD: databases/pecl-mongo/Makefile 319877 2013-06-04 16:55:15Z miwi $
+# $FreeBSD: databases/pecl-mongo/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mongo
 PORTVERSION=	1.4.1
@@ -20,6 +20,7 @@ USE_PHPEXT=	yes
 CONFIGURE_ARGS=	--enable-mongo=${LOCALBASE}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
