@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-activehs/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-activehs/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	activehs
 PORTVERSION=	0.3.1
@@ -21,5 +21,6 @@ USE_CABAL=	activehs-base>=0.2 blaze-html>=0.5 blaze-markup>=0.5.1.0 \
 STANDALONE=	yes
 EXECUTABLE=	activehs
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
