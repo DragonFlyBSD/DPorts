@@ -1,4 +1,4 @@
-# $FreeBSD: editors/gobby/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: editors/gobby/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	gobby
 PORTVERSION=	0.4.13
@@ -26,6 +26,7 @@ INSTALLS_ICONS=	yes
 
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTKSPELL}
