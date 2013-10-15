@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-Haval256/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/p5-Digest-Haval256/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-Haval256
 PORTVERSION=	1.0.5
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Digest::Haval256.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
