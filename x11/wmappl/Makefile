@@ -1,5 +1,5 @@
 # Created by: od <od@iclub.nsu.ru>
-# $FreeBSD: x11/wmappl/Makefile 317350 2013-05-04 21:10:23Z bapt $
+# $FreeBSD: x11/wmappl/Makefile 330201 2013-10-13 02:44:28Z eadler $
 
 PORTNAME=	wmappl
 PORTVERSION=	0.71
@@ -10,18 +10,15 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:main \
 		16x16xpms.tar.gz:icons icons_16x16.tar.gz:icons smallicons.tar.gz:icons
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An application launcher dockapp similar to wmbutton
+COMMENT=	Application launcher dockapp similar to wmbutton
 
 GNU_CONFIGURE=	yes
 USE_XORG=	xpm x11 xext sm ice
 MAKE_ENV=	DATADIR="${DATADIR}"
 
 .if defined(.PARSEDIR)
-USE_GMAKE=	yes
+USES+=		gmake
 .endif
-
-MAN1=	wmappl.1
-MAN5=	wmapplrc.5
 
 .include <bsd.port.options.mk>
 
@@ -29,16 +26,13 @@ post-extract:
 	@${RM} -rf ${WRKSRC}/icons/CVS
 
 post-install:
-	@${ECHO_CMD} ""
-	@${ECHO_CMD} "===>   Installing icons to ${DATADIR} directory"
-	@${MKDIR} ${DATADIR}
-	@cd ${WRKDIR} && ${INSTALL_DATA} *.xpm ${DATADIR}
-	@cd ${WRKDIR}/smallicons && ${INSTALL_DATA} *.xpm ${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	@cd ${WRKDIR} && ${INSTALL_DATA} *.xpm ${STAGEDIR}${DATADIR}
+	@cd ${WRKDIR}/smallicons && ${INSTALL_DATA} *.xpm ${STAGEDIR}${DATADIR}
 .if ${PORT_OPTIONS:MDOCS}
-	@${ECHO_CMD} "===>   Installing README as ${DOCSDIR}/README"
-	@${ECHO_CMD} "===>   Please read for configuration information"
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	@${ECHO_CMD} "===>   Please read ${DOCSDIR}/README for configuration information"
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
