@@ -1,5 +1,5 @@
 # Created by: Ted Faber <faber@isi.edu>
-# $FreeBSD: mail/xfaces/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: mail/xfaces/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	xfaces
 PORTVERSION=	3.3
@@ -30,6 +30,7 @@ USE_XORG=	ice sm x11 xaw xext xmu xt xpm
 
 MAN1=		xfaces.1
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DATADIR}/images
 	${INSTALL_DATA} ${WRKSRC}/images/* ${DATADIR}/images
