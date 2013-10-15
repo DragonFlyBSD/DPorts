@@ -1,5 +1,5 @@
 # Created by: TATEISHI Katsuyuki <katsu@iec.hiroshima-u.ac.jp>
-# $FreeBSD: graphics/gimageview/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/gimageview/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gimageview
 PORTVERSION=	0.2.27
@@ -31,6 +31,7 @@ USE_XORG=	xinerama ice
 CONFIGURE_ARGS=	--with-gtk2
 CFLAGS+=	-DUSE_GTK2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MSPLASH}
