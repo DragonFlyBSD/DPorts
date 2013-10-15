@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/xsc/Makefile 322641 2013-07-10 11:11:36Z bdrewery $
+# $FreeBSD: games/xsc/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xsc
 PORTVERSION=	1.6
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 DESKTOP_ENTRIES="Xce" "${COMMENT}" ${PORTNAME} \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png ${PREFIX}/share/pixmaps
 
