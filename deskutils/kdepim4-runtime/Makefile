@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim4-runtime/Makefile 327474 2013-09-17 12:50:49Z bapt $
+# $FreeBSD: deskutils/kdepim4-runtime/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -31,6 +31,7 @@ USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 CMAKE_ARGS=	-DKDEPIM_MOBILE_UI:BOOL=OFF
 
+NO_STAGE=	yes
 post-patch:
 	${GREP} -H -r "#include <q" ${WRKSRC} | ${CUT} -d: -f1 | uniq | \
 		${XARGS} ${REINPLACE_CMD} -f ${FILESDIR}/qt3to4headers.txt
