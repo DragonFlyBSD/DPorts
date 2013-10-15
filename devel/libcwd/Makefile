@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/libcwd/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/libcwd/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libcwd
 PORTVERSION=	1.0.4
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 
 CFLAGS+=	-D__GNU_LIBRARY__
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc\.h|stdlib.h|g ; \
 		 s|localtime(|localtime((const time_t *)|g' ${WRKSRC}/debugmalloc.cc
