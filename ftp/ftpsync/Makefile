@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ftpsync
-# Date created:		31 August 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ftp/ftpsync/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: ftp/ftpsync/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	ftpsync
 PORTVERSION=	1.3.03
@@ -23,6 +19,7 @@ USES=		perl5
 PLIST_FILES=	bin/${PORTNAME}.pl
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/
 
