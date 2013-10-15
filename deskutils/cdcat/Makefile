@@ -1,5 +1,5 @@
 # Created by: Aren Tyr <aren.tyr@gawab.com>
-# $FreeBSD: deskutils/cdcat/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: deskutils/cdcat/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	cdcat
 PORTVERSION=	2.1
@@ -63,6 +63,7 @@ L7Z_VERSION=	1.6.3
 L7Z_DISTFILE=	${L7Z_NAME}-${L7Z_VERSION}.tar.gz
 L7Z_WRKSRC=	${WRKDIR}/${L7Z_NAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 P7Z_WRKSRC=	$$(cd ${PORTSDIR}/archivers/p7zip && ${MAKE} -V WRKSRC)
