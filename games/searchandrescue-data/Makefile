@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SearchAndRescue-data
-# Date created:			10 June 2010
-# Whom:				Jesse Smith <jessefrgsmith@yahoo.ca>
-#
-# $FreeBSD: ports/games/searchandrescue-data/Makefile,v 1.3 2012/11/17 05:57:52 svnexp Exp $
-#
+# Created by: Jesse Smith <jessefrgsmith@yahoo.ca>
+# $FreeBSD: games/searchandrescue-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	SearchAndRescue
 PORTVERSION=	1.3.0
@@ -20,6 +16,7 @@ NO_WRKSUBDIR=	yes
 
 DATADIR=	${PREFIX}/share/${PORTNAME:tl}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${DATADIR}
