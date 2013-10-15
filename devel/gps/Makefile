@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/gps/Makefile 327402 2013-09-16 14:18:21Z bapt $
+# $FreeBSD: devel/gps/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gps
 PORTVERSION=	5.2.1
@@ -35,6 +35,7 @@ OPTIONS_DEFAULT=	SYSLOG SQLITE PYTHON READLINE
 
 PYTHON_DESC=		Enable Python console
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
