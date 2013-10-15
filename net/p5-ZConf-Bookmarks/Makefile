@@ -1,9 +1,5 @@
-# New ports collection makefile for:	net/p5-ZConf-Bookmarks
-# Date created:		2009-10-19
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: net/p5-ZConf-Bookmarks/Makefile 326522 2013-09-06 16:11:30Z az $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: net/p5-ZConf-Bookmarks/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ZConf-Bookmarks
 PORTVERSION=	0.2.4
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		ZConf::Bookmarks.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
