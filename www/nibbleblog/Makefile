@@ -1,5 +1,5 @@
 # Created by: Marek Holienka	<marekholienka@gmail.com>
-# $FreeBSD: www/nibbleblog/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: www/nibbleblog/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	nibbleblog
 PORTVERSION=	3.0.2
@@ -22,6 +22,7 @@ USE_PHP=	session filter xml simplexml gd
 PKGMESSAGE=	${MASTERDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
