@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: science/fasthenry/Makefile 315424 2013-03-28 01:06:02Z bf $
+# $FreeBSD: science/fasthenry/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	fasthenry
 DISTVERSION=	3.0wr-021113
@@ -13,6 +13,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config
 WRKSRC =	${WRKDIR}/fasthenry-3.0wr
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -Ee '/CFLAGS =/{s/=/+=/;s/-O[[:digit:]]*//;}' \
 		${WRKSRC}/src/fasthenry/Makefile.default \
