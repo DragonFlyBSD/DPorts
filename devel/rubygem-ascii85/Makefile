@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-ascii85/Makefile 321527 2013-06-22 02:39:57Z swills $
+# $FreeBSD: devel/rubygem-ascii85/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ascii85
 PORTVERSION=	1.0.2
@@ -17,4 +17,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/ascii85
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
