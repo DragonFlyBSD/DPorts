@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/sysutils/utcount/pkg-plist,v 1.2 2012/11/17 06:01:49 svnexp Exp $
+@comment $FreeBSD: sysutils/utcount/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/count_client
 bin/count_gate
 bin/count_ipa

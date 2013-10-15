@@ -1,9 +1,5 @@
-# New ports collection makefile for:	utcount
-# Date created:				May 14 2003
-# Whom:					Denis N. Peplin <info@volginfo.ru>
-#
-# $FreeBSD: ports/sysutils/utcount/Makefile,v 1.5 2012/11/17 06:01:49 svnexp Exp $
-#
+# Created by: Denis N. Peplin <info@volginfo.ru>
+# $FreeBSD: sysutils/utcount/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	utcount
 PORTVERSION=	0.1
@@ -13,4 +9,5 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Users Traffic Count
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
