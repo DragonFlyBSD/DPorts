@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-AnyMQ/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-AnyMQ/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	AnyMQ
 PORTVERSION=	0.35
@@ -22,10 +22,5 @@ TEST_DEPENDS=	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		AnyMQ.3 \
-		AnyMQ::Queue.3 \
-		AnyMQ::Topic.3 \
-		AnyMQ::Topic::Trait::WithBacklog.3
 
 .include <bsd.port.mk>
