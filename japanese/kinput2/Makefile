@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/kinput2/Makefile 322662 2013-07-10 11:37:25Z bapt $
+# $FreeBSD: japanese/kinput2/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kinput2
 PORTVERSION=	3.1
@@ -76,6 +76,7 @@ PLIST.WNN=		lib/X11/ccdef/ccdef.kinput2 \
 			lib/X11/ccdef/rule.katakana.egg \
 			lib/X11/ccdef/rule.kigou.egg
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFREEWNN} || \
