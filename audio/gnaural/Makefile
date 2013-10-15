@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: audio/gnaural/Makefile 326269 2013-09-04 11:38:58Z martymac $
+# $FreeBSD: audio/gnaural/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gnaural
 PORTVERSION=	1.0.20110606
@@ -18,6 +18,7 @@ LIB_DEPENDS=	portaudio.2:${PORTSDIR}/audio/portaudio2 \
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_CSTD=	gnu89
 USE_GNOME=	libglade2 desktopfileutils
 
