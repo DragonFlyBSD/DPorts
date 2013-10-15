@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/gretools/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: games/gretools/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gretools
 PORTVERSION=	1.2.4
@@ -20,6 +20,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python -t|/usr/bin/env python|g ; \
 		 s|@prefix@|${LOCALBASE}|g ; s|@share@|share|g' \
