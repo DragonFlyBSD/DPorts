@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: chinese/pcmanx/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: chinese/pcmanx/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	pcmanx
 PORTVERSION=	1.2
@@ -31,6 +31,7 @@ PROXY_DESC=	Proxy support
 
 MAN1=		pcmanx.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
