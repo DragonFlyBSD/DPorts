@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/net/netstrain/Makefile,v 1.4 2013/01/09 20:05:00 svnexp Exp $
+# $FreeBSD: net/netstrain/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netstrain
 PORTVERSION=	3.0
@@ -11,6 +11,7 @@ COMMENT=	Tool to measure practical TCP throughput between two machines
 
 DOC_FILES=	README
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/netstrain ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/netstraind ${PREFIX}/bin
