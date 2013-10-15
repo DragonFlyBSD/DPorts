@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/open-cobol/Makefile 319859 2013-06-04 13:58:44Z bapt $
+# $FreeBSD: lang/open-cobol/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	open-cobol
 PORTVERSION=	1.1
@@ -21,6 +21,7 @@ INFO=		open-cobol
 CPPFLAGS+=	-I${BDB_INCLUDE_DIR} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include  <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
