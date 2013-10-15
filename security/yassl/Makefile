@@ -1,7 +1,7 @@
-# $FreeBSD: security/yassl/Makefile 321318 2013-06-19 20:09:26Z johans $
+# $FreeBSD: security/yassl/Makefile 329581 2013-10-06 15:01:51Z johans $
 
 PORTNAME=	cyassl
-PORTVERSION=	2.7.0
+PORTVERSION=	2.8.0
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.yassl.com/
 
