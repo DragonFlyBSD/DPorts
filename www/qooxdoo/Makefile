@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/qooxdoo/Makefile 313827 2013-03-10 14:47:31Z nivit $
+# $FreeBSD: www/qooxdoo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	qooxdoo
 PORTVERSION=	2.1.1
@@ -28,6 +28,7 @@ SHAREMODE=	644
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
