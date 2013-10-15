@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/phpgroupware/Makefile,v 1.4 2013/01/26 15:07:29 svnexp Exp $
+# $FreeBSD: www/phpgroupware/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpgroupware
 PORTVERSION=	0.9.16.017
@@ -15,6 +15,7 @@ WANT_PHP_MOD=	yes
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 		@${MKDIR} -p ${PREFIX}/www/data-dist/phpgroupware
 		@${CP} -r ${WRKSRC}/* ${PREFIX}/www/data-dist/phpgroupware
