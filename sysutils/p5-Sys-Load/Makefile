@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-Sys-Load
-# Date created:                19 January 2010
-# Whom:                        Konstantin Menshikov <kostjnspb@yandex.ru>
-#
-# $FreeBSD: sysutils/p5-Sys-Load/Makefile 326572 2013-09-07 06:13:27Z az $
-#
+# Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
+# $FreeBSD: sysutils/p5-Sys-Load/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-Load
 PORTVERSION=	0.2
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Sys::Load.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
