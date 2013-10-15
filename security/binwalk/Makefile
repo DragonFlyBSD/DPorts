@@ -1,4 +1,4 @@
-# $FreeBSD: security/binwalk/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/binwalk/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	binwalk
 PORTVERSION=	0.5.0
@@ -28,6 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
