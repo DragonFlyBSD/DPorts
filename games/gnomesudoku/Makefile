@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/gnomesudoku/Makefile 322467 2013-07-07 23:06:17Z bapt $
+# $FreeBSD: games/gnomesudoku/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gnomesudoku
 PORTVERSION=	0.6.0
@@ -21,4 +21,5 @@ USE_GNOME=	gnomeprefix pygnome2 pygnomedesktop
 
 PYDISTUTILS_PKGNAME=	gnome-sudoku
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
