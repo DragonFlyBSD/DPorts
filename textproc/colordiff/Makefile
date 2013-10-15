@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/colordiff/Makefile 327088 2013-09-12 16:41:28Z az $
+# $FreeBSD: textproc/colordiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	colordiff
 PORTVERSION=	1.0.13
@@ -18,6 +18,7 @@ SHEBANG_FILES=	colordiff.pl
 
 MAN1=		colordiff.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' ${WRKSRC}/${MAN1}
 
