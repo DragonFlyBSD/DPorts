@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <martin.dieringer@gmx.de>
-# $FreeBSD: math/clipper/Makefile 317887 2013-05-11 15:31:37Z wen $
+# $FreeBSD: math/clipper/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	clipperlib
 PORTVERSION=	5.1.5
@@ -17,4 +17,5 @@ USE_LDCONFIG=	yes
 USE_ZIP=	yes
 USES=		cmake
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
