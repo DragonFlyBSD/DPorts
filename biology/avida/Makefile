@@ -1,5 +1,5 @@
 # Created by: Jeremy <karlj000@unbc.ca>
-# $FreeBSD: biology/avida/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/avida/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	avida
 PORTVERSION=	2.12.4
@@ -30,6 +30,7 @@ DATA_FILES=	analyze.cfg avida.cfg default-gx.org \
 		instset-heads-sex.cfg instset-heads.cfg instset-smt.cfg \
 		instset-transsmt.cfg
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
