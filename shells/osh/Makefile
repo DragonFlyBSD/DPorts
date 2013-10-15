@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: ports/shells/osh/Makefile,v 1.35 2013/02/03 20:12:28 svnexp Exp $
+# $FreeBSD: shells/osh/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	osh
 DISTVERSION=	20120604
@@ -18,6 +18,7 @@ MAN1=		fd2.1 goto.1 if.1 osh.1 sh6.1 glob6.1
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
