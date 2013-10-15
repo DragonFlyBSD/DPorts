@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/softflowd/files/patch-softflowd.c,v 1.2 2012/11/17 06:00:38 svnexp Exp $
+$FreeBSD: net-mgmt/softflowd/files/patch-softflowd.c 300897 2012-07-14 14:29:18Z beat $
 
 --- softflowd.c.orig
 +++ softflowd.c

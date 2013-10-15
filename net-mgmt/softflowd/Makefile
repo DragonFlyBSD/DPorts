@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/net-mgmt/softflowd/Makefile,v 1.8 2013/01/09 20:05:04 svnexp Exp $
+# $FreeBSD: net-mgmt/softflowd/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	softflowd
 PORTVERSION=	0.9.8
@@ -17,6 +17,7 @@ MAN8=		softflowd.8 softflowctl.8
 PORTDOCS=	README
 USE_RC_SUBR=	softflowd
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
