@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/R-cran-Rpad/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: www/R-cran-Rpad/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Rpad
 PORTVERSION=	1.3.0
@@ -15,4 +15,5 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
