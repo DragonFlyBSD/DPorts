@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: x11/bricons/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/bricons/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	bricons
 PORTVERSION=	3.0
@@ -20,6 +20,7 @@ USE_XORG=	xaw
 
 MAN1=		bricons.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
