@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: misc/gkrellweather2/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: misc/gkrellweather2/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gkrellweather
 PORTVERSION=	2.0.7
@@ -19,6 +19,7 @@ ALL_TARGET=	gkrellweather.so
 
 MAKE_ENV=	enable_nls=1 PTHREAD_LIBS=${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # uses C99 builtin lrintf
