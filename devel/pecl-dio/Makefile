@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-dio
-# Date created:		2010-12-23
-# Whom:			Florian Smeets <flo@smeets.im>
-#
-# $FreeBSD: ports/devel/pecl-dio/Makefile,v 1.7 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: Florian Smeets <flo@smeets.im>
+# $FreeBSD: devel/pecl-dio/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	dio
 DISTVERSION=	0.0.6
@@ -22,4 +18,5 @@ LICENSE=	PHP30
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
