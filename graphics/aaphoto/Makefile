@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aaphoto
-# Date created:				2009-12-24
-# Whom:					Andras Horvath <han@log69.com>
-#
-# $FreeBSD: ports/graphics/aaphoto/Makefile,v 1.22 2012/11/17 05:58:00 svnexp Exp $
-#
+# Created by: Andras Horvath <han@log69.com>
+# $FreeBSD: graphics/aaphoto/Makefile 329751 2013-10-08 02:24:46Z linimon $
 
 PORTNAME=	aaphoto
 PORTVERSION=	0.41
@@ -12,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://log69.com/downloads/
 DISTNAME=	${PORTNAME}_sources_v${PORTVERSION}
 
-MAINTAINER=	han@log69.com
+MAINTAINER=	mail@log69.com
 COMMENT=	Auto Adjust Photo, automatic color correction of photos
 
 LIB_DEPENDS=	jasper:${PORTSDIR}/graphics/jasper \
@@ -32,6 +28,7 @@ PLIST_FILES=	bin/aaphoto
 PORTDOCS=	AUTHORS ChangeLog COPYING COPYRIGHT INSTALL LICENSE \
 		NEWS README TODO
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if (${ARCH} == "x86_64" || ${ARCH} == "i386") && ${OSVERSION} >= 700000
