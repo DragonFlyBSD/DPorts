@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-nebulus/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-nebulus/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmms-nebulus
 PORTVERSION=	0.8.0
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-Wall||' \
