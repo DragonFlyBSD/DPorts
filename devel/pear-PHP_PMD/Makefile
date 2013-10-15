@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-PHP_PMD/Makefile,v 1.2 2012/12/17 19:02:23 svnexp Exp $
+# $FreeBSD: devel/pear-PHP_PMD/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHP_PMD
 PORTVERSION=	1.4.1
@@ -21,6 +21,7 @@ PEAR_CHANNEL=	phpmd
 PEAR_AUTOINSTALL=	yes
 USE_PHP=	dom simplexml
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
