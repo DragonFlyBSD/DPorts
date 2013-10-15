@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: math/ent/Makefile 323853 2013-07-28 20:37:23Z nox $
+# $FreeBSD: math/ent/Makefile 329312 2013-10-04 14:20:29Z danilo $
 
 PORTNAME=	ent
 PORTVERSION=	0.20080128
@@ -24,6 +24,6 @@ post-patch:
 		${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ent ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
