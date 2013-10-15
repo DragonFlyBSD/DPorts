@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/monsterz/Makefile 325004 2013-08-19 16:37:37Z nemysis $
+# $FreeBSD: games/monsterz/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	monsterz
 PORTVERSION=	0.7.1
@@ -32,6 +32,7 @@ PLIST_SUB=	SCOREDIR=${SCOREDIR}
 DESKTOP_ENTRIES="Monsterz" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
