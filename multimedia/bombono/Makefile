@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: multimedia/bombono/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: multimedia/bombono/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	bombono
 PORTVERSION=	1.2.2
@@ -37,6 +37,7 @@ SCONS_ARGS=	DVDREAD_LIBPATH=${LOCALBASE}/lib \
 MAN1=		bombono-dvd.1 mpeg2demux.1
 MANDIR=		${MANPREFIX}/man/man1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/SConstruct
 
