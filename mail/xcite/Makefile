@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xcite
-# Date created:		8 Novemver 2008
-# Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: mail/xcite/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
+# $FreeBSD: mail/xcite/Makefile 330174 2013-10-12 18:41:20Z ume $
 
 PORTNAME=	xcite
 PORTVERSION=	1.60
@@ -34,9 +30,10 @@ do-build:
 		-f batch-byte-compile ${DISTNAME}
 
 do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 	@${INSTALL_DATA} ${WRKSRC}/${DISTNAME} \
-		${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 	@${INSTALL_DATA} ${WRKSRC}/${DISTNAME}c \
-		${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 
 .include <bsd.port.mk>
