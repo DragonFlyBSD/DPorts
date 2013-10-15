@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/net/mad_fcl/Makefile,v 1.15 2013/01/09 20:05:00 svnexp Exp $
+# $FreeBSD: net/mad_fcl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	mad_fcl
 PORTVERSION=	1.3
@@ -23,6 +23,7 @@ DOC_FILES=	fdt-example.xml flute-sdp-example.sdp
 PORTDOCS=	${DOC_FILES} README.TXT
 PLIST_FILES=	bin/flute
 
+NO_STAGE=	yes
 pre-patch:
 	# Fixing the end-of-lines:
 	for f in `${FIND} ${WRKSRC}/.. -type f` ; do \

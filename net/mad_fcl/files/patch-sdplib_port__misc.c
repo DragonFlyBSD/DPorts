@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/mad_fcl/files/patch-sdplib_port__misc.c,v 1.3 2012/11/17 06:00:05 svnexp Exp $
+$FreeBSD: net/mad_fcl/files/patch-sdplib_port__misc.c 300897 2012-07-14 14:29:18Z beat $
 
 --- sdplib/port_misc.c.orig
 +++ sdplib/port_misc.c

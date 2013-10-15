@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/mad_fcl/files/patch-alclib_linux__ssm.h,v 1.2 2012/11/17 06:00:05 svnexp Exp $
+$FreeBSD: net/mad_fcl/files/patch-alclib_linux__ssm.h 300897 2012-07-14 14:29:18Z beat $
 
 --- alclib/linux_ssm.h.orig	Fri Jul 30 14:15:54 2004
 +++ alclib/linux_ssm.h	Mon Aug  2 11:50:48 2004
