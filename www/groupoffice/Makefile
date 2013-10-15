@@ -1,5 +1,5 @@
 # Created by: Aron Schlesinger <as@bsdgroup.de>
-# $FreeBSD: www/groupoffice/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: www/groupoffice/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	groupoffice
 DISTVERSIONPREFIX=	com-
@@ -27,6 +27,7 @@ IMAP_DESC=	IMAP support
 GD_DESC=	Gallery support (GD)
 WBXML_DESC=	Synchronization Support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAP}
