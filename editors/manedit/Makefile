@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/manedit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/manedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	manedit
 PORTVERSION=	1.2.1
@@ -17,6 +17,7 @@ USE_GNOME=	gtk12
 
 MAN1=		manedit.1
 
+NO_STAGE=	yes
 pre-configure:
 	@${CP} ${FILESDIR}/mntent* ${WRKSRC}
 
