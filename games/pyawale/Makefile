@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/games/pyawale/Makefile,v 1.14 2012/12/24 09:44:11 svnexp Exp $
+# $FreeBSD: games/pyawale/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pyawale
 PORTVERSION=	0.4.0
@@ -33,6 +33,7 @@ DOC_FILES2=	*.rest *.html *.jpg
 
 SUB_FILES=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
