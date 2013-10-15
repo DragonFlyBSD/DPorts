@@ -1,5 +1,5 @@
 # Created by: Ilia Chipitsine <ilia@jane.cgu.chel.su>
-# $FreeBSD: databases/p5-DBD-XBase/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBD-XBase/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBD-XBase
 PORTVERSION=	1.05
@@ -25,4 +25,5 @@ MAN3=		DBD::XBase.3 \
 		XBase::Memo.3 \
 		XBase::SDBM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
