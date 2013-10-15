@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: chinese/celvis/Makefile 324187 2013-08-03 10:41:48Z antoine $
+# $FreeBSD: chinese/celvis/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	celvis
 PORTVERSION=	1.3
@@ -14,6 +14,7 @@ CFLAGS+=	-Wno-error=return-type
 MAN1=		celvis.1
 MLINKS=		celvis.1 cvi.1
 
+NO_STAGE=	yes
 do-install:
 	@# install target in celvis Makefile is not too good -- this is easier
 	${INSTALL_PROGRAM} ${WRKSRC}/celvis ${WRKSRC}/virec ${PREFIX}/bin
