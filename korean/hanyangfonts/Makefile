@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/hanyangfonts/Makefile 321161 2013-06-17 23:18:06Z jkim $
+# $FreeBSD: korean/hanyangfonts/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	hanyangfonts
 PORTVERSION=	1.0
@@ -24,6 +24,7 @@ NO_WRKSUBDIR=   yes
 FONTS=		hgm10 hgm12 hgm14 hgm16 hgm18 hgm20 \
 		hmm10 hmm12 hmm14 hmm16 hmm18 hmm20
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}; \
 	for fn in ${FONTS}; do \
