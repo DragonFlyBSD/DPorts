@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: devel/tpasm/Makefile 324319 2013-08-06 15:44:38Z danfe $
+# $FreeBSD: devel/tpasm/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tpasm
 PORTVERSION=	1.8
@@ -20,6 +20,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
