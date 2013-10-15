@@ -1,9 +1,5 @@
-# Ports collection makefile for:  Mnemo
-# Date created:			  Sun May 19, 2002
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: deskutils/horde3-mnemo/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: deskutils/horde3-mnemo/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	mnemo
 PORTVERSION=	2.2.5
@@ -19,5 +15,6 @@ USE_HORDE=	base
 USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES TODO UPGRADING
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
 .include <bsd.port.mk>
