@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lbreakout
-# Date created:				19 October 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/games/lbreakout/Makefile,v 1.27 2012/11/17 05:57:43 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: games/lbreakout/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lbreakout
 PORTVERSION=	010315
@@ -19,6 +15,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-lcompat"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
 	@${GREP} -lR "SDL/SDL" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
