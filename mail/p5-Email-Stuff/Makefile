@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Email-Stuff
-# Date created:				12 Aug, 2009
-# Whom:	      				Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: mail/p5-Email-Stuff/Makefile 326257 2013-09-04 07:19:56Z az $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: mail/p5-Email-Stuff/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Stuff
 PORTVERSION=	2.102
@@ -27,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Email::Stuff.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
