@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner (fehlner@gmx.de)
-# $FreeBSD: ports/math/geonext/Makefile,v 1.10 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: math/geonext/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	geonext
 PORTVERSION=	1.71
@@ -39,6 +39,7 @@ PKGNAMEPREFIX=	${WITH_LANG}-
 PLIST_SUB=	LANG=${WITH_LANG}
 GLOCATE=	${DATADIR}-${WITH_LANG}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
