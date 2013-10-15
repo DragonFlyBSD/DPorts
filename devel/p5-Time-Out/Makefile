@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Time-Out/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Time-Out/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-Out
 PORTVERSION=	0.11
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Time::Out.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
