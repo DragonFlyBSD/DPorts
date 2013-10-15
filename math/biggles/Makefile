@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/biggles/Makefile 327063 2013-09-12 13:38:36Z bsam $
+# $FreeBSD: math/biggles/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	biggles
 PORTVERSION=	1.6.6
@@ -23,6 +23,7 @@ MAKE_ARGS=	CC="${CC}" \
 		LIBPLOT_CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBPLOT_LDFLAGS="-L${LOCALBASE}/lib -lplot"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/CC/s,gcc,$$\{CC\},' ${WRKSRC}/make.inc
 
