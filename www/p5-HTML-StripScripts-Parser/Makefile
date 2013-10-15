@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-StripScripts-Parser
-# Date Created:				May 08, 2008
-# Whom:					kftseng@iyard.org
-#
-# $FreeBSD: www/p5-HTML-StripScripts-Parser/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: kftseng@iyard.org
+# $FreeBSD: www/p5-HTML-StripScripts-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-StripScripts-Parser
 PORTVERSION=	1.03
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::StripScripts::Parser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
