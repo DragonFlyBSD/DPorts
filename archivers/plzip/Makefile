@@ -1,8 +1,8 @@
 # Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-# $FreeBSD: archivers/plzip/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/plzip/Makefile 328397 2013-09-26 17:29:29Z delphij $
 
 PORTNAME=	plzip
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	archivers
 MASTER_SITES=	SAVANNAH/lzip
 
@@ -13,6 +13,7 @@ BUILD_DEPENDS=	lzlib>=1.1:${PORTSDIR}/archivers/lzlib
 
 PLIST_FILES=	bin/plzip
 
+NO_STAGE=	yes
 USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	CXXFLAGS="-I${LOCALBASE}/include" \
