@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: net-mgmt/smokeping/Makefile 327296 2013-09-14 15:39:55Z az $
+# $FreeBSD: net-mgmt/smokeping/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	smokeping
 PORTVERSION=	2.6.9
@@ -116,6 +116,7 @@ DNS_DESC=	Support for AnotherDNS probes
 OPTIONS_DEFINE=	ECHOPING CURL RADIUS TELNET DNS FPING LDAP LDAPSSL
 OPTIONS_DEFAULT=	FPING
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFPING}
