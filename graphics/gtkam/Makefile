@@ -1,5 +1,5 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/gtkam/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: graphics/gtkam/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gtkam
 PORTVERSION=	0.1.18
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gtkam.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libgimp-2.0.so) && !defined(WITHOUT_GIMP)
