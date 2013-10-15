@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/ttyrec/Makefile 319758 2013-06-03 07:40:32Z jgh $
+# $FreeBSD: misc/ttyrec/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	ttyrec
 PORTVERSION=	1.0.8
@@ -20,6 +20,7 @@ BINS=	ttyplay ttyrec ttytime
 OPTIONS_DEFINE=	OPENPTY
 OPENPTY_DESC=	Use openpty instead
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
