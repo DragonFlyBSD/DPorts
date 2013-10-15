@@ -1,4 +1,4 @@
-# $FreeBSD: ports/news/suck-cnews/Makefile,v 1.7 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/suck-cnews/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 CATEGORIES=	news
 
