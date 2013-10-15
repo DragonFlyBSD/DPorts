@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/p5-Iterator-File/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: sysutils/p5-Iterator-File/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Iterator-File
 PORTVERSION=	1.01
@@ -21,4 +21,5 @@ MAN3=		Iterator::File::Status.3 \
 		Iterator::File.3 \
 		Iterator::File::State::IPCShareable.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
