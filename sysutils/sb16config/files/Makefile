@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/sysutils/sb16config/files/Makefile,v 1.3 2012/11/17 06:01:45 svnexp Exp $
+# $FreeBSD: sysutils/sb16config/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PROG=		sb16config
