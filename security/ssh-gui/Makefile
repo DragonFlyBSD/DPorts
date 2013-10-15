@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ssh-gui
-# Date created:	Fri Nov 30 22:14:14 BRST 2001
-# Whom:         Hammurabi Mendes <hmendes@brturbo.com>
-#
-# $FreeBSD: ports/security/ssh-gui/Makefile,v 1.15 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Hammurabi Mendes <hmendes@brturbo.com>
+# $FreeBSD: security/ssh-gui/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ssh-gui
 PORTVERSION=	0.7.1
@@ -21,6 +17,7 @@ ALL_TARGET=	ssh-gui
 PLIST_FILES=	bin/ssh-gui
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !exists(/usr/bin/ssh) && !exists(${LOCALBASE}/bin/ssh)
