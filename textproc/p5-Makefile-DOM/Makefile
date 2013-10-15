@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Makefile-DOM/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-Makefile-DOM/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Makefile-DOM
 PORTVERSION=	0.006
@@ -27,4 +27,5 @@ MAN3=		MDOM::Dumper.3 \
 		MDOM::Token::Whitespace.3 \
 		Makefile::DOM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
