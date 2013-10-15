@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-CHI/Makefile 324484 2013-08-10 11:48:02Z kuriyama $
+# $FreeBSD: devel/p5-CHI/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CHI
 PORTVERSION=	0.580
@@ -53,4 +53,5 @@ MAN3=	CHI.3 \
 	CHI::Driver::RawMemory.3 \
 	CHI::Stats.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
