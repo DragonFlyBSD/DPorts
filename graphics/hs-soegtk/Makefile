@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/hs-soegtk/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: graphics/hs-soegtk/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	soegtk
 PORTVERSION=	0.12.1
@@ -13,5 +13,6 @@ LICENSE=	LGPL21
 USE_CABAL=	cairo>=0.12 gtk>=0.11 mtl stm>=2
 USE_GNOME=	gtk20
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
