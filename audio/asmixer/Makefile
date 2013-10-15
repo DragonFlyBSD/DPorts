@@ -1,5 +1,5 @@
 # Created by: Mike Makonnen <mtm@identd.net>
-# $FreeBSD: audio/asmixer/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/asmixer/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	asmixer
 PORTVERSION=	0.5
@@ -13,6 +13,7 @@ COMMENT=	Mixer control for AfterStep window manager
 MAN1=		${PORTNAME}.1x
 PLIST_FILES=	bin/asmixer
 
+NO_STAGE=	yes
 USE_XORG=	xpm x11
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-xpm \
