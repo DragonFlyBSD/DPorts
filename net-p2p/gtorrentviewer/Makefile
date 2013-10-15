@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: net-p2p/gtorrentviewer/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: net-p2p/gtorrentviewer/Makefile 327758 2013-09-20 22:28:25Z bapt $
 #   $MCom: ports/net-p2p/gtorrentviewer/Makefile,v 1.4 2007/08/06 17:16:29 mezz Exp $
 
 PORTNAME=	gtorrentviewer
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--with-pixmapsdir=${PREFIX}/share/pixmaps \
 MAN1=		gtorrentviewer.1
 DOCS=		AUTHORS COPYING ChangeLog README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<curl\/types.h>/d' ${WRKSRC}/src/main.c
 
