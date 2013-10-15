@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/devel/smc/Makefile,v 1.12 2012/12/10 11:29:55 svnexp Exp $
+# $FreeBSD: devel/smc/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	smc
 PORTVERSION=	4.3.0
@@ -16,6 +16,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/bin/Smc.jar ${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/statemap.h ${PREFIX}/include
