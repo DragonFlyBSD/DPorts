@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Flock/Makefile 327488 2013-09-17 16:28:31Z sunpoet $
+# $FreeBSD: devel/p5-File-Flock/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Flock
 PORTVERSION=	2013.11
@@ -27,4 +27,5 @@ MAN3=		File::Flock.3 \
 		File::Flock::Forking.3 \
 		File::Flock::Subprocess.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
