@@ -1,9 +1,5 @@
-# New ports collection makefile for:	selenium
-# Date created:				28 July 2005
-# Whom:					kaworu
-#
-# $FreeBSD: ports/www/selenium/Makefile,v 1.3 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: kaworu
+# $FreeBSD: www/selenium/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	selenium
 PORTVERSION=	0.6.1
@@ -19,6 +15,7 @@ HAS_CONFIGURE=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
