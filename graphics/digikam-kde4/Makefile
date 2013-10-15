@@ -1,5 +1,5 @@
 # Created by: Arjan van Leeuwen <avleeuwen@piwebs.com>
-# $FreeBSD: graphics/digikam-kde4/Makefile 318865 2013-05-23 11:32:27Z makc $
+# $FreeBSD: graphics/digikam-kde4/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	digikam
 PORTVERSION=	${DIGIKAM_VER}
@@ -10,6 +10,7 @@ CATEGORIES=	graphics kde
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE4 digital photo management application
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.common"
 
 BUILD_DEPENDS=	${LOCALBASE}/include/eigen3/Eigen/Eigen:${PORTSDIR}/math/eigen3
