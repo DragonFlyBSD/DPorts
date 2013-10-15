@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: net-p2p/btqueue/Makefile 313404 2013-03-04 11:19:40Z lwhsu $
+# $FreeBSD: net-p2p/btqueue/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	btqueue
 PORTVERSION=	0.1.3
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	PYXML
 OPTIONS_DEFAULT=	PYXML
 PYXML_DESC=	Add dependency on PyXML (needed for crawler only)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYXML}
