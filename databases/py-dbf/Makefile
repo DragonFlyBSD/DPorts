@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/py-dbf/Makefile 319111 2013-05-26 14:25:20Z wen $
+# $FreeBSD: databases/py-dbf/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbf
 PORTVERSION=	0.95.004
@@ -14,4 +14,5 @@ USE_ZIP=		yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
