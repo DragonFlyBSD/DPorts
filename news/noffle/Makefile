@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: news/noffle/Makefile 318258 2013-05-15 19:39:20Z wg $
+# $FreeBSD: news/noffle/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	noffle
 PORTVERSION=	1.1.5
@@ -27,6 +27,7 @@ MAN5=		noffle.conf.5
 DOCS=		ChangeLog docs/FAQ INSTALL docs/INTERNALS README \
 		docs/testing.txt docs/noffle.lsm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	's|/etc/noffle.conf|${PREFIX}/etc/noffle.conf|g' \
