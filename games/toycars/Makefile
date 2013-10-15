@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/toycars/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/toycars/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	toycars
 PORTVERSION=	0.3.10
@@ -22,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
