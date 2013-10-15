@@ -1,5 +1,5 @@
 # Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
-# $FreeBSD: audio/spek/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/spek/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	spek
 PORTVERSION=	0.8.2
@@ -17,6 +17,7 @@ LIB_DEPENDS=	avcodec1:${PORTSDIR}/multimedia/ffmpeg1
 MAN1=		spek.1
 
 USE_XZ=		yes
+NO_STAGE=	yes
 USE_GCC=	4.7+
 USES=		gettext gmake
 USE_GNOME=	desktopfileutils intltool
