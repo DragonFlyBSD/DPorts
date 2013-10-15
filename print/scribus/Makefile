@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/scribus/Makefile 324393 2013-08-08 12:09:50Z bsam $
+# $FreeBSD: print/scribus/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	scribus
 PORTVERSION=	1.4.3
@@ -40,6 +40,7 @@ MAN1=		scribus.1
 MANLANG=	"" pl de
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 post-install:
 	${LN} ${DATADIR}/icons/scribus.png ${PREFIX}/share/pixmaps/
 
