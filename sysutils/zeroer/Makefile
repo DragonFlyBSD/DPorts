@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/zeroer/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/zeroer/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	zeroer
 PORTVERSION=	0.1
@@ -21,6 +21,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lpopt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
