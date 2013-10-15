@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simpleproxy
-# Date created:		06 May 2009
-# Whom:			Sergey Kandaurov <pluknet@gmail.com>
-#
-# $FreeBSD: ports/net/simpleproxy/Makefile,v 1.3 2012/11/17 06:00:20 svnexp Exp $
-#
+# Created by: Sergey Kandaurov <pluknet@gmail.com>
+# $FreeBSD: net/simpleproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	simpleproxy
 PORTVERSION=	3.4
@@ -21,4 +17,5 @@ PLIST_FILES=	bin/${PORTNAME}
 MAN1=		simpleproxy.1
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
