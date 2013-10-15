@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-im/prosody/files/pkg-deinstall.in,v 1.3 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/prosody/files/pkg-deinstall.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 case $2 in
