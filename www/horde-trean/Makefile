@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-trean/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: www/horde-trean/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	trean
 PORTVERSION=	1.0.3
@@ -33,6 +33,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Vfs \
 		Horde_View
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
