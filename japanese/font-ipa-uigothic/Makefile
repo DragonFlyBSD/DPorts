@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/font-ipa-uigothic/Makefile 316971 2013-04-30 23:39:23Z hrs $
+# $FreeBSD: japanese/font-ipa-uigothic/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ipa-uigothic
 PORTVERSION=	00203
@@ -33,6 +33,7 @@ X_FONTSDIR=	lib/X11/fonts
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
