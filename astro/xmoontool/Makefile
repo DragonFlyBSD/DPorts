@@ -1,5 +1,5 @@
 # Created by: Frank W. Josellis <frank@dynamical-systems.org>
-# $FreeBSD: astro/xmoontool/Makefile 322578 2013-07-09 21:06:22Z bapt $
+# $FreeBSD: astro/xmoontool/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	xmoontool
 PORTVERSION=	3.0.3
@@ -10,6 +10,7 @@ MASTER_SITES=	http://www.senax.net/xmoontool/
 MAINTAINER=	frank@dynamical-systems.org
 COMMENT=	A version of John Walker's classical moontool for X11/Motif
 
+NO_STAGE=	yes
 USES=		motif
 
 MAN1=		xmoontool.1
