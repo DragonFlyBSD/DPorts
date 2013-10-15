@@ -1,9 +1,5 @@
-# New ports collection makefile for:	9menu
-# Date created:				Sun Aug 13 12:36:14 CDT 1995
-# Whom:					Eric L. Hernes <erich@rrnet.com>
-#
-# $FreeBSD: ports/x11/9menu/Makefile,v 1.38 2012/11/17 06:03:14 svnexp Exp $
-#
+# Created by: Eric L. Hernes <erich@rrnet.com>
+# $FreeBSD: x11/9menu/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	9menu
 PORTVERSION=	1.8
@@ -14,7 +10,7 @@ MASTER_SITES=	ftp://freefriends.org/arnold/Source/ \
 EXTRACT_SUFX=	.shar.gz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A simple menu patterned after Plan9
+COMMENT=	Simple menu patterned after Plan9
 
 EXTRACT_CMD=	${GZCAT}
 EXTRACT_BEFORE_ARGS=	# empty
@@ -29,6 +25,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 PLIST_FILES=	bin/9menu
 MAN1=		9menu.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MAN1PREFIX}/man/man1
