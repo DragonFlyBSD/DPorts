@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-vimperator
-# Date created:		14 April 2007
-# Whom:			stas
-#
-# $FreeBSD: ports/www/xpi-vimperator/Makefile,v 1.16 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: stas
+# $FreeBSD: www/xpi-vimperator/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	vimperator
 PORTVERSION=	3.5
@@ -19,5 +15,6 @@ LICENSE_FILE=${WRKSRC}/License.txt
 XPI_ID=		vimperator@mozdev.org
 XPI_NUM=	4891
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
