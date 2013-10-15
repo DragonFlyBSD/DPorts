@@ -1,2 +1,2 @@
-@comment $FreeBSD: ports/devel/py-ScriptTest/pkg-plist,v 1.2 2012/11/17 05:56:44 svnexp Exp $
+@comment $FreeBSD: devel/py-ScriptTest/pkg-plist 303867 2012-09-08 06:23:02Z nivit $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
