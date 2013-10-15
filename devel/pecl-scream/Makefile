@@ -1,8 +1,5 @@
-# Date created:			  2011-12-28
-# Whom:				  Volodymyr Kostyrko <c.kworr@gmail.com>
-#
-# $FreeBSD: ports/devel/pecl-scream/Makefile,v 1.2 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Volodymyr Kostyrko <c.kworr@gmail.com>
+# $FreeBSD: devel/pecl-scream/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	scream
 DISTVERSION=	0.1.0
@@ -23,4 +20,5 @@ USE_PHPEXT=	yes
 test: build
 	@(cd ${WRKSRC} && ${MAKE} test)
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
