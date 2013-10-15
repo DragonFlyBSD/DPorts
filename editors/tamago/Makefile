@@ -1,5 +1,5 @@
 # Created by: tetsushi NAKAI <nakai@tsl.pe.u-tokyo.ac.jp>
-# $FreeBSD: editors/tamago/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/tamago/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	tamago
 PORTVERSION=	4.0.6.0.20041122.19
@@ -30,6 +30,7 @@ PORTDOCS=	AUTHORS ChangeLog ChangeLog.1997-1998 \
 		README.Debian changelog.Debian
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_PORT_NAME} == emacs21 || \
