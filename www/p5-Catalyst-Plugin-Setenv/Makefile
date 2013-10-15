@@ -1,6 +1,5 @@
-# Ports collection makefile for: p5-Catalyst-Plugin-Setenv
-# Created by: lbr@freebsd.org
-# $FreeBSD: www/p5-Catalyst-Plugin-Setenv/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: lbr@FreeBSD.org
+# $FreeBSD: www/p5-Catalyst-Plugin-Setenv/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Setenv
 PORTVERSION=	0.03
@@ -19,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Catalyst::Plugin::Setenv.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
