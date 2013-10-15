@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <m.seaman@infracaninophile.co.uk>
-# $FreeBSD: ports/ports-mgmt/wanted-ports/Makefile,v 1.6 2012/12/15 09:34:28 svnexp Exp $
+# $FreeBSD: ports-mgmt/wanted-ports/Makefile 328434 2013-09-27 06:56:36Z matthew $
 
 PORTNAME=	wanted-ports
 PORTVERSION=	0.2
@@ -19,9 +19,8 @@ SUB_FILES=	${PORTNAME}   \
 SUB_LIST=	PORTNAME=${PORTNAME} \
 		PKGNAME=${PKGNAME}
 PLIST_SUB=	PORTNAME=${PORTNAME}
-PLIST_FILES=	bin/${PORTNAME}
-
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
 .if defined(WANTEDPORTSCFG)
 CFGFILE=	${WANTEDPORTSCFG}
@@ -34,7 +33,7 @@ CFGFILE?=	/var/db/${PORTNAME}.conf
 .endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
-	${INSTALL_MAN} ${WRKDIR}/${PORTNAME}.1 ${MANPREFIX}/man/man1/
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_MAN} ${WRKDIR}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1/
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/ports-mgmt/wanted-ports/files/wanted-ports.in,v 1.3 2012/11/17 06:00:47 svnexp Exp $
+# $FreeBSD: ports-mgmt/wanted-ports/files/wanted-ports.in 300897 2012-07-14 14:29:18Z beat $
 
 # Copyright 2010,2012 Matthew Seaman. All rights reserved.
 # 
