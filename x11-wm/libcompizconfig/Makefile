@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/libcompizconfig/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/libcompizconfig/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	libcompizconfig
 PORTVERSION=	0.8.4
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	INOTIFY
 OPTIONS_DEFAULT=	INOTIFY
 INOTIFY_DESC?=	Enable inotify support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MINOTIFY}
