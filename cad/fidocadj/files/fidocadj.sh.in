@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/cad/fidocadj/files/fidocadj.sh.in,v 1.2 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/fidocadj/files/fidocadj.sh.in 300895 2012-07-14 12:56:14Z beat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/fidocadj.jar" "$@"

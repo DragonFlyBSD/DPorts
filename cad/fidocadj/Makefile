@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: ports/cad/fidocadj/Makefile,v 1.4 2012/12/10 11:29:53 svnexp Exp $
+# $FreeBSD: cad/fidocadj/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	fidocadj
 PORTVERSION=	0.24
@@ -26,6 +26,7 @@ USE_JAVA=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 FDCJ_MANUAL=	${PORTNAME}_manual_en.pdf
