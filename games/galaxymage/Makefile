@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/galaxymage/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/galaxymage/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	galaxymage
 PORTVERSION=	0.3.0
@@ -22,6 +22,7 @@ NO_BUILD=	yes
 OPTIONS_DEFINE=	PSYCO
 PSYCO_DESC=	Use just-in-time Python compiler
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPSYCO}
