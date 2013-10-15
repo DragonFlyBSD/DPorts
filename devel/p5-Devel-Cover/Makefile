@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-Cover/Makefile 325337 2013-08-25 11:30:23Z az $
+# $FreeBSD: devel/p5-Devel-Cover/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-Cover
 PORTVERSION=	1.08
@@ -67,6 +67,7 @@ MAN3=		Devel::Cover.3 \
 		Devel::Cover::Web.3
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
