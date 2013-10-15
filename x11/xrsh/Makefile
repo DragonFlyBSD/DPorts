@@ -1,5 +1,5 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: x11/xrsh/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xrsh/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xrsh
 PORTVERSION=	5.92
@@ -21,4 +21,5 @@ MAN1=		xrsh.1 xrlogin.1
 
 PLIST_FILES=	bin/xrsh bin/xrlogin
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
