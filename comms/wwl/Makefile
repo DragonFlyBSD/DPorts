@@ -1,9 +1,5 @@
-# ports collection makefile for:	wwl
-# Date created:		1 July 2005
-# Whom:			db
-#
-# $FreeBSD: ports/comms/wwl/Makefile,v 1.5 2012/11/17 05:55:02 svnexp Exp $
-#
+# Created by: db
+# $FreeBSD: comms/wwl/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	wwl
 PORTVERSION=	1.3
@@ -21,6 +17,7 @@ PORTDOCS=	INSTALL
 PLIST_FILES=	bin/wwl bin/locator
 MAN1=		wwl.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wwl ${PREFIX}/bin
 	${RM} -f ${PREFIX}/bin/locator
