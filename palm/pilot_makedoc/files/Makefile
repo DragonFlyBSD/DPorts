@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/palm/pilot_makedoc/files/Makefile,v 1.5 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: palm/pilot_makedoc/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 CXX?=	g++
