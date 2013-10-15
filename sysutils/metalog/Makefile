@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: sysutils/metalog/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/metalog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	metalog
 DISTVERSION=	0.8
@@ -31,6 +31,7 @@ PLIST_FILES=	sbin/metalog
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|' ${WRKSRC}/man/*[58]
 
