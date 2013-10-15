@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Jspice
-# Date created:         26 Feb 2006
-# Whom:                 Pedro F. Giffuni
-#
-# $FreeBSD: cad/jspice3/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Pedro F. Giffuni
+# $FreeBSD: cad/jspice3/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	jspice3
 PORTVERSION=	2.5.011109
@@ -22,6 +18,7 @@ OPTIONS_DEFINE=	X11 EXAMPLES
 OPTIONS_DEFAULT=	X11
 WRKSRC=		${WRKDIR}/${PORTNAME}-2.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
