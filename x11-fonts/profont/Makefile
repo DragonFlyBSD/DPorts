@@ -1,9 +1,5 @@
-# New ports collection makefile for:   profont-x11
-# Date Created:                         25 Sep 2008
-# Whom:                                 Manuel Giraud <manuel.giraud@gmail.com>
-#
-# $FreeBSD: ports/x11-fonts/profont/Makefile,v 1.2 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Manuel Giraud <manuel.giraud@gmail.com>
+# $FreeBSD: x11-fonts/profont/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	profont
 PORTVERSION=	400
@@ -20,6 +16,7 @@ BUILD_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 FONTDIR=	lib/X11/fonts/${PORTNAME}
 PLIST_SUB+=	FONTDIR=${FONTDIR}
 
+NO_STAGE=	yes
 do-build:
 	${GZIP_CMD} ${WRKSRC}/*.pcf
 
