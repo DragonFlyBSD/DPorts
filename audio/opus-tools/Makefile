@@ -1,4 +1,4 @@
-# $FreeBSD: audio/opus-tools/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: audio/opus-tools/Makefile 328190 2013-09-24 19:09:51Z naddy $
 
 PORTNAME=	opus-tools
 PORTVERSION=	0.1.6
@@ -10,13 +10,10 @@ MASTER_SITES=	http://downloads.xiph.org/releases/opus/ \
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Encode, inspect, and decode Opus files
 
-LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
-		opus:${PORTSDIR}/audio/opus
+LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg \
+		libopus.so:${PORTSDIR}/audio/opus
 
-GNU_CONFIGURE=	yes
 USES=		pkgconfig
-
-PLIST_FILES=	bin/opusdec bin/opusenc bin/opusinfo
-MAN1=		opusdec.1 opusenc.1 opusinfo.1
+GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
