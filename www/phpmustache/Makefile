@@ -1,5 +1,5 @@
 # Created by: Steve Polyack <spolyack@collaborativefusion.com>
-# $FreeBSD: www/phpmustache/Makefile 323492 2013-07-22 18:55:37Z marino $
+# $FreeBSD: www/phpmustache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	phpmustache
 PORTVERSION=	2.4.0
@@ -22,6 +22,7 @@ USE_PHP_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-build:
 	@${WRKSRC}/bin/build_bootstrap.php
 
