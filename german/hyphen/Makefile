@@ -1,9 +1,4 @@
-# New ports collection makefile for:	de-hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/german/hyphen/Makefile,v 1.7 2012/11/17 05:57:59 svnexp Exp $
-#
+# $FreeBSD: german/hyphen/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2007.02.17
@@ -30,6 +25,7 @@ DEALIASES=	de_AT de_BE de_CH de_LI de_LU
 PLIST_FILES+=	%%DATADIR%%/hyph_${ALIAS}.dic
 .endfor
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/hyph_de_DE.dic ${DATADIR}/
