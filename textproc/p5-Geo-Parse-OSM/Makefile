@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: textproc/p5-Geo-Parse-OSM/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-Geo-Parse-OSM/Makefile 328920 2013-10-01 05:53:47Z amdmi3 $
 
 PORTNAME=	Geo-Parse-OSM
 PORTVERSION=	0.42
@@ -20,9 +20,5 @@ PORTSCOUT=	skipv:0.221
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Geo::Parse::OSM.3 \
-	Geo::Parse::OSM::Multipass.3 \
-	Geo::Parse::OSM::Singlepass.3
 
 .include <bsd.port.mk>
