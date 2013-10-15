@@ -1,5 +1,5 @@
 # Created by: Ruben de Groot <rdg@bzerk.org>
-# $FreeBSD: devel/p5-Tie-File-AsHash/Makefile 326592 2013-09-07 10:16:46Z az $
+# $FreeBSD: devel/p5-Tie-File-AsHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-File-AsHash
 PORTVERSION=	0.08
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Tie::File::AsHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
