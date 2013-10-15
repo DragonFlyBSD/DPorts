@@ -1,9 +1,5 @@
-# New ports collection makefile for:	icon-bluecurve-theme
-# Date created:			29 May 2005
-# Whom:				Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/icon-bluecurve-theme/Makefile,v 1.9 2012/11/17 06:03:32 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: x11-themes/icon-bluecurve-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	icon-bluecurve-theme
 
@@ -20,6 +16,7 @@ INSTALLS_ICONS=	yes
 BUILD_WRKSRC=	${WRKSRC}/art/icon/Bluecurve/sheets
 BC_HIERS=	${BUILD_WRKSRC}/Bluecurve:${PREFIX}/share/icons/Bluecurve
 
+NO_STAGE=	yes
 do-build:
 	@BUILD_WRKSRC="${BUILD_WRKSRC}" ${SH} ${SCRIPTDIR}/do-build
 
