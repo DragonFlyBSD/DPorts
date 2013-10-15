@@ -1,5 +1,5 @@
 # Created by: Ralf Becker <ralf@akk.org>
-# $FreeBSD: games/moon-buggy/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
+# $FreeBSD: games/moon-buggy/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	moon-buggy
 PORTVERSION=	1.0.51
@@ -24,6 +24,7 @@ LIB_DEPENDS=	esd:${PORTSDIR}/audio/esound
 .endif
 
 USE_AUTOTOOLS=	autoconf
+NO_STAGE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--sharedstatedir=/var/games\
 		--with-setgid=games
