@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-Anubis/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/p5-Crypt-Anubis/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Anubis
 PORTVERSION=	1.0.4
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Anubis.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
