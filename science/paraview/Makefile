@@ -1,5 +1,5 @@
-# Created by: anholt@FreeBSD.ORG
-# $FreeBSD: science/paraview/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: anholt@FreeBSD.org
+# $FreeBSD: science/paraview/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	paraview
 PORTVERSION=	3.10.1
@@ -58,6 +58,7 @@ GL2PS_DESC=	Install support conversion OpenGL to PostScript
 
 VERMAJORMINOR=	${PORTVERSION:R}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Simple solution to avoid lots of patching to support NOPORTDOCS
