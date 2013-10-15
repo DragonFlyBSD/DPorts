@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libcgi
-# Date created:				7 January 2000
-# Whom:					Sergey Samoyloff <gonza@techline.ru>
-#
-# $FreeBSD: ports/www/cgi-lib/Makefile,v 1.10 2012/11/17 06:02:29 svnexp Exp $
-#
+# Created by: Sergey Samoyloff <gonza@techline.ru>
+# $FreeBSD: www/cgi-lib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cgi-lib
 PORTVERSION=	1.4
@@ -19,6 +15,7 @@ MAKEFILE=	makefile
 
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	@ ${INSTALL_DATA} ${WRKSRC}/cgi-lib.a ${PREFIX}/lib/libcgi.a
 .for file in cgi-lib.h html-lib.h list-lib.h
