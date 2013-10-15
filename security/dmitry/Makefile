@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan
-# $FreeBSD: security/dmitry/Makefile 322870 2013-07-12 22:51:34Z marino $
+# $FreeBSD: security/dmitry/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	dmitry
 PORTVERSION=	1.3a
@@ -19,6 +19,7 @@ MAN1=		dmitry.1
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
