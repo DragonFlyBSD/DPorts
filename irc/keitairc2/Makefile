@@ -1,5 +1,5 @@
 # Created by: Makoto Matsushita <matusita@FreeBSD.org>
-# $FreeBSD: irc/keitairc2/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: irc/keitairc2/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=		keitairc
 PORTVERSION=		2.0
@@ -25,6 +25,7 @@ NO_BUILD=	yes
 
 SHEBANG_FILES=	keitairc
 
+NO_STAGE=	yes
 post-extract:
 	${FIND} ${WRKSRC} -name .cvsignore | ${XARGS} ${RM} -rf
 
