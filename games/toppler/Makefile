@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: games/toppler/Makefile 317947 2013-05-12 11:48:49Z makc $
+# $FreeBSD: games/toppler/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	toppler
 PORTVERSION=	1.1.5
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
