@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-formfox
-# Date created:		21 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-formfox/Makefile,v 1.10 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-formfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	formfox
 PORTVERSION=	1.7
@@ -16,5 +12,6 @@ COMMENT=	An extension to display form's action
 XPI_NUM=	1579
 XPI_ID=		formfox@daniel.steinbrook
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
