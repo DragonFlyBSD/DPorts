@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: palm/p5-Palm-PalmDoc/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: palm/p5-Palm-PalmDoc/Makefile 327760 2013-09-20 22:33:41Z bapt $
 
 PORTNAME=	Palm-PalmDoc
 PORTVERSION=	0.13
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Palm::PalmDoc.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
