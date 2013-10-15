@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-orm_adapter
-# Date created:				2011-06-16
-# Whom:					rpsfa@rit.edu
-#
-# $FreeBSD: ports/devel/rubygem-orm_adapter/Makefile,v 1.7 2012/11/17 05:57:00 svnexp Exp $
+# Created by: rpsfa@rit.edu
+# $FreeBSD: devel/rubygem-orm_adapter/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	orm_adapter
 PORTVERSION=	0.4.0
@@ -16,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
