@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fli2gif
-# Date created:		7 Jan 1998
-# Whom:			giffunip@asme.org
-#
-# $FreeBSD: ports/graphics/fli2gif/Makefile,v 1.18 2012/11/17 05:58:05 svnexp Exp $
-#
+# Created by: giffunip@asme.org
+# $FreeBSD: graphics/fli2gif/Makefile 328303 2013-09-25 18:08:38Z ak $
 
 PORTNAME=	fli2gif
 PORTVERSION=	1.1
@@ -20,6 +16,9 @@ NO_WRKSUBDIR=	yes
 USE_ZIP=	yes
 USE_DOS2UNIX=	fli2gif.cpp FLI2GIF.TXT
 
+PLIST_FILES=	bin/${PORTNAME}
+PORTDOCS=	fli2gif.txt
+
 post-extract:
 	@cd ${WRKSRC} && ${UNZIP_CMD} -q source.zip \
 		&& ${LN} -sf GIF.CPP gif.cpp \
@@ -29,10 +28,8 @@ do-build:
 	@cd ${WRKSRC} && ${CXX} ${CXXFLAGS} -o ${PORTNAME} *.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fli2gif ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA}	${WRKSRC}/FLI2GIF.TXT ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/fli2gif ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA}	${WRKSRC}/FLI2GIF.TXT ${STAGEDIR}${DOCSDIR}/fli2gif.txt
 
 .include <bsd.port.mk>
