@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-DateTime-Format-Oracle/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-DateTime-Format-Oracle/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	DateTime-Format-Oracle
 PORTVERSION=	0.06
@@ -17,7 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		DateTime::Format::Oracle.3
 
 .include <bsd.port.mk>
