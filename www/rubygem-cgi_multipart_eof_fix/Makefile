@@ -1,8 +1,4 @@
-# Ports collection makefile for:	rubygem-cgi_multipart_eof_fix
-# Date created:				December 08, 2010
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/www/rubygem-cgi_multipart_eof_fix/Makefile,v 1.2 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/rubygem-cgi_multipart_eof_fix/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cgi_multipart_eof_fix
 PORTVERSION=	2.5.0
@@ -16,4 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
