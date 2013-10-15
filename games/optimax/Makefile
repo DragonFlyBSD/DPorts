@@ -1,9 +1,5 @@
-# New ports collection makefile for:	optimax
-# Date created:				2008-01-15
-# Whom:					alepulver
-#
-# $FreeBSD: games/optimax/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: alepulver
+# $FreeBSD: games/optimax/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	optimax
 PORTVERSION=	0.63
@@ -28,6 +24,7 @@ WRKSRC=		${WRKDIR}/publish_${PORTVERSION:S/.//}
 BUILD_WRKSRC=	${WRKSRC}/optimars/optimars_0.1
 ALL_TARGET=	exmars
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -rf ${WRKSRC}/fsh94nop0.2
 	@${MV} ${WRKDIR}/fsh* ${WRKDIR}/optimax/fsh* ${WRKSRC}
