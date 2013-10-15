@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby20/Makefile 327412 2013-09-16 16:34:10Z bapt $
+# $FreeBSD: lang/ruby20/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -48,6 +48,7 @@ OPTIONS_DEFINE=	RDOC DEBUG
 RDOC_DESC=	Build and install Rdoc indexes
 DEBUG_DESC=	Compile-in debug info
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # PORTEPOCH/PORTREVISION hack
