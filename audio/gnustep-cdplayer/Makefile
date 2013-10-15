@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/gnustep-cdplayer/Makefile,v 1.17 2012/11/17 05:54:33 svnexp Exp $
+# $FreeBSD: audio/gnustep-cdplayer/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cdplayer
 PORTVERSION=	0.5.1
@@ -14,6 +14,7 @@ LIB_DEPENDS+=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_GNUSTEP=	yes
 USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
