@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compizconfig-python/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/compizconfig-python/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	compizconfig-python
 PORTVERSION=	0.8.4
@@ -23,6 +23,7 @@ USES=		pathfix pkgconfig
 USE_GNOME=	glib20
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g' \
