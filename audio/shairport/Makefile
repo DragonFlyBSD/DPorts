@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <graudeejs@gmail.com>
-# $FreeBSD: audio/shairport/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/shairport/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	shairport
 PORTVERSION=	0.05
@@ -21,6 +21,7 @@ RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64 \
 		avahi-publish-service:${PORTSDIR}/net/avahi-app
 
 USES=		gmake perl5 pkgconfig
+NO_STAGE=	yes
 USE_PERL5=	run
 USE_OPENSSL=	yes
 
