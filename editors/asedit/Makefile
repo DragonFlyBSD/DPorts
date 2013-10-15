@@ -1,5 +1,5 @@
 # Created by: Andreas Kohout <shanee@augusta.de>
-# $FreeBSD: editors/asedit/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: editors/asedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	asedit
 PORTVERSION=	1.3.2
@@ -17,4 +17,5 @@ USE_XORG=	ice sm x11 xext xmu xp xt
 
 MAN1=		asedit.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
