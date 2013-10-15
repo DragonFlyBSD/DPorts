@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pine
-# Date created:		15 July 1998
-# Whom:			Tai-hwa Liang <avatar@www.mmlab.cse.yzu.edu.tw>
-#
-# $FreeBSD: ports/chinese/pine4/Makefile,v 1.37 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: Tai-hwa Liang <avatar@www.mmlab.cse.yzu.edu.tw>
+# $FreeBSD: chinese/pine4/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	pine
 PORTVERSION=	4.64
@@ -31,6 +27,7 @@ NO_LATEST_LINK=	yes
 
 MAN1=		pine.1 pico.1 pilot.1
 
+NO_STAGE=	yes
 pre-fetch:
 .if !defined(BATCH) && !defined(PACKAGE_BUILDING)
 	${SH} pkg-install
