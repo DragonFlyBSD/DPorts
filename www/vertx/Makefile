@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/vertx/Makefile 321158 2013-06-17 22:32:05Z nivit $
+# $FreeBSD: www/vertx/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	vertx
 PORTVERSION=	1.3.1
@@ -38,6 +38,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES JYTHON JRUBY
 JYTHON_DESC=	Use Python to write verticles
 JRUBY_DESC=	Use Ruby to write verticles
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJYTHON}
