@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.app.component
-# Date created:				22 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-zope.app.component/Makefile,v 1.4 2012/11/17 05:56:53 svnexp Exp $
-#
+# $FreeBSD: devel/py-zope.app.component/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.app.component
 PORTVERSION=	3.9.3
@@ -33,6 +28,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.site>=0:${PORTSDIR}/devel/py-zope.site 
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
