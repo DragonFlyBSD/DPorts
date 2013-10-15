@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/tecnoballz/Makefile 323088 2013-07-16 05:42:36Z ade $
+# $FreeBSD: games/tecnoballz/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tecnoballz
 PORTVERSION=	0.92
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES=	"TecnoballZ" \
 			"Game;ArcadeGame;" \
 			false
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC}/include -name '*.h' | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|SDL/||'
