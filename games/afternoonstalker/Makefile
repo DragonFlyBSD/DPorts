@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/afternoonstalker/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: games/afternoonstalker/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	afternoonstalker
 PORTVERSION=	1.1.5
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN6=		afternoonstalker.6
 PORTDOCS=	AUTHORS COPYING INSTALL NEWS README THANKS TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
