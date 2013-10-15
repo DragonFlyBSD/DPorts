@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/cvs2html/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/cvs2html/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvs2html
 PORTVERSION=	1.98
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/cvs2html
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${DISTDIR}/${PORTNAME} ${WRKDIR}
