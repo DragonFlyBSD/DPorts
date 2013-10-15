@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-fog/Makefile 323859 2013-07-28 22:32:33Z swills $
+# $FreeBSD: devel/rubygem-fog/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	fog
 PORTVERSION=	1.14.0
@@ -25,4 +25,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/fog
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
