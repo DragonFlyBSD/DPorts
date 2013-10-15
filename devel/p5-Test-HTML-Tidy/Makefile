@@ -1,5 +1,5 @@
 # Created by: rafan@FreeBSD.org
-# $FreeBSD: devel/p5-Test-HTML-Tidy/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-Test-HTML-Tidy/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-HTML-Tidy
 PORTVERSION=	1.00
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::HTML::Tidy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
