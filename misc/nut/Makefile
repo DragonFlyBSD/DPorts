@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: misc/nut/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/nut/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	nut
 PORTVERSION=	18.4
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/${PORTNAME} %%DATADIR%%/FOOD_DES.txt \
 		%%DATADIR%%/WEIGHT.txt %%DATADIR%%/sr25.nut
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFLTK}
