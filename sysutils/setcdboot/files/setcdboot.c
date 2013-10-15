@@ -28,7 +28,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: ports/sysutils/setcdboot/files/setcdboot.c,v 1.4 2012/11/17 06:01:45 svnexp Exp $
+ * $FreeBSD: sysutils/setcdboot/files/setcdboot.c 300897 2012-07-14 14:29:18Z beat $
  */
 
 /*
