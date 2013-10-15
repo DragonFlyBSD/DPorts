@@ -1,5 +1,5 @@
 # Created by: jeffhung
-# $FreeBSD: devel/p5-File-Util/Makefile 326702 2013-09-08 05:43:26Z az $
+# $FreeBSD: devel/p5-File-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Util
 PORTVERSION=	3.27
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
