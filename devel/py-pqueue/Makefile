@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	py-pqueue
-# Date created:				24 October 2001
-# Whom:					Hye-Shik Chang <perky@fallin.lv>
-#
-# $FreeBSD: ports/devel/py-pqueue/Makefile,v 1.9 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Hye-Shik Chang <perky@fallin.lv>
+# $FreeBSD: devel/py-pqueue/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pqueue
 PORTVERSION=	0.2
@@ -23,6 +19,7 @@ PYDISTUTILS_PKGVERSION=	0.0.0
 
 WRKSRC=		${WRKDIR}/PQueue
 
+NO_STAGE=	yes
 post-patch:
 	${CP} ${FILESDIR}/setup.py ${WRKSRC}
 
