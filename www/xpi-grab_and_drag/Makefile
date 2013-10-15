@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-grab_and_drag
-# Date created:				2009-04-26
-# Whom:					Norikatsu Shigemura <nork@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-grab_and_drag/Makefile,v 1.5 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Norikatsu Shigemura <nork@FreeBSD.org>
+# $FreeBSD: www/xpi-grab_and_drag/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	grab_and_drag
 PORTVERSION=	2.7.6
@@ -20,5 +16,6 @@ XPI_FILES=	chrome.manifest chrome/grabanddrag.jar \
 		icon.png install.rdf license.txt
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
