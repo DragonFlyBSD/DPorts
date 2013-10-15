@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@FreeBSD.org>
-# $FreeBSD: science/bddsolve/Makefile 327313 2013-09-14 19:13:46Z ed $
+# $FreeBSD: science/bddsolve/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	bddsolve
 PORTVERSION=	1.03
@@ -16,6 +16,7 @@ LIB_DEPENDS+=	bdd:${PORTSDIR}/science/buddy \
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
