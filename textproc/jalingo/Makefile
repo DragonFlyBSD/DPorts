@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: ports/textproc/jalingo/Makefile,v 1.7 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/jalingo/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jalingo
 PORTVERSION=	0.6.0
@@ -32,6 +32,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 JALINGOJAR=	${PORTNAME}.jar
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR} && ${P7ZIP_CMD} ${P7ZIP_ARGS} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
