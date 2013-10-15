@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-gnome-desktop/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: x11-toolkits/py-gnome-desktop/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.103 2010/09/30 06:27:40 kwm Exp $
 
 PORTNAME=	gnome-desktop
@@ -44,6 +44,7 @@ DOCSDIR=	${PREFIX}/share/doc/py-gnome-desktop
 DOCSDIR=	${WRKSRC}/share/doc/py-gnome-desktop
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
