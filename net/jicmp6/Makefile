@@ -1,7 +1,7 @@
-# $FreeBSD: net/jicmp6/Makefile 323832 2013-07-28 14:14:31Z wg $
+# $FreeBSD: net/jicmp6/Makefile 329314 2013-10-04 14:27:25Z danilo $
 
 PORTNAME=	jicmp6
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	net java
 MASTER_SITES=	SF/opennms/JICMP6/stable-1.2
 
