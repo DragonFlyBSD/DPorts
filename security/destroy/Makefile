@@ -1,6 +1,5 @@
 # Created by: shane@freebsdhackers.net
-# $FreeBSD: security/destroy/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/destroy/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	destroy
 PORTVERSION=	20050329
@@ -17,6 +16,7 @@ USE_GMAKE=	yes
 MAN1=		destroy.1
 PLIST_FILES=	bin/destroy
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/destroy ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/destroy.1 ${MAN1PREFIX}/man/man1
