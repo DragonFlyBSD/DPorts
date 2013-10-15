@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/libflame/Makefile 320054 2013-06-06 06:17:40Z bapt $
+# $FreeBSD: math/libflame/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libflame
 DISTVERSION=	r7421
@@ -43,6 +43,7 @@ SHARED_DESC=		Build a shared library and PIC archive
 STATIC_DESC=		Build a non-PIC archive
 SUPERMATRIX_DESC=	Task scheduling and parallel execution
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBLAS3_CNTL}
