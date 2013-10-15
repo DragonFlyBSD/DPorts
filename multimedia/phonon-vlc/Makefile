@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/phonon-vlc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/phonon-vlc/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	phonon
 PORTVERSION=	0.6.2
@@ -27,6 +27,7 @@ PHONON_BRANCH=	stable
 
 PLIST_SUB+=	QT_PREFIX=${QT_PREFIX}
 
+NO_STAGE=	yes
 pre-su-install:
 	${MKDIR} ${QT_PLUGINDIR}/phonon_backend
 
