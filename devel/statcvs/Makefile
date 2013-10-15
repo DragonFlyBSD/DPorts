@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/devel/statcvs/Makefile,v 1.7 2012/12/10 11:29:55 svnexp Exp $
+# $FreeBSD: devel/statcvs/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	statcvs
 PORTVERSION=	0.7.0
@@ -28,6 +28,7 @@ ALL_TARGET=	jar
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC}/dist && ${COPYTREE_SHARE} . ${DATADIR}
 .if !defined(NOPORTDOCS)
