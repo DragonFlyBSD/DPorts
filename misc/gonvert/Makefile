@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/gonvert/Makefile 320931 2013-06-14 14:28:42Z miwi $
+# $FreeBSD: misc/gonvert/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gonvert
 PORTVERSION=	0.2.33
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 
 PORTDOCS=	CHANGELOG FAQ README THANKS TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
