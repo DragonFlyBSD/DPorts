@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-URI-SmartURI
-# Date created:				2008-07-09
-# Whom:					Oleg Mamontov <oleg@mamontov.net>
-#
-# $FreeBSD: net/p5-URI-SmartURI/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: Oleg Mamontov <oleg@mamontov.net>
+# $FreeBSD: net/p5-URI-SmartURI/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	URI-SmartURI
 PORTVERSION=	0.032
@@ -33,4 +29,5 @@ USE_PERL5=	configure
 
 MAN3=		URI::SmartURI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
