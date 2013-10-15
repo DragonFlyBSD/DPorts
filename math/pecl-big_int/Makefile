@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pecl-big_int
-# Date created:				16 May 2005
-# Whom:					Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-#
-# $FreeBSD: ports/math/pecl-big_int/Makefile,v 1.5 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+# $FreeBSD: math/pecl-big_int/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	big_int
 PORTVERSION=	1.0.7
@@ -18,6 +14,7 @@ COMMENT=	Functions for calculations with arbitrary length integers and bitsets
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
+NO_STAGE=	yes
 
 DOCS=		CREDITS INSTALL LICENSE README docs/index.html libbig_int/CREDITS \
 		libbig_int/LICENSE
