@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flim for emacs21
-# Date created:		29 July 2007
-# Whom:			MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/editors/flim-emacs21/Makefile,v 1.2 2012/11/17 05:57:13 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: editors/flim-emacs21/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	FLIM, message representation or encoding elisp library for emacs21
@@ -17,4 +13,5 @@ MASTERDIR=	${.CURDIR}/../../editors/flim
 USE_EMACS=	yes
 EMACS_PORT_NAME=	emacs21
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
