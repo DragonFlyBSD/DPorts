@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rsyncbackup
-# Date created:				8 October 2007
-# Whom: 				Daniel Bond
-#
-# $FreeBSD: sysutils/rsyncbackup/Makefile 326572 2013-09-07 06:13:27Z az $
-#
+# Created by: Daniel Bond
+# $FreeBSD: sysutils/rsyncbackup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rsyncbackup
 PORTVERSION=	1.0
@@ -26,6 +22,7 @@ NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 
