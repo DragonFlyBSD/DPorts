@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/gtkpool/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: games/gtkpool/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gtkpool
 PORTVERSION=	0.5.0
@@ -19,6 +19,7 @@ USE_AUTOTOOLS=	aclocal automake autoheader autoconf
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
 
+NO_STAGE=	yes
 post-patch:
 .for file in application.cpp options.cpp
 	@${REINPLACE_CMD} -e 's|/usr/local/share/gtkpool|${DATADIR}|' \
