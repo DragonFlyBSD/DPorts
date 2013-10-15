@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: textproc/elasticsearch/Makefile 318606 2013-05-20 15:29:17Z tj $
+# $FreeBSD: textproc/elasticsearch/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	elasticsearch
 PORTVERSION=	0.90.0
@@ -18,6 +18,7 @@ JAVA_VERSION=	1.7+
 ONLY_FOR_ARCHS=	i386 amd64
 USE_RC_SUBR=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 LUCENEVER=	4.2.1
