@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/kaistfonts/Makefile 321159 2013-06-17 22:50:28Z jkim $
+# $FreeBSD: korean/kaistfonts/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	kaistfonts-ksc
 PORTVERSION=	1.0
@@ -21,6 +21,7 @@ USE_GMAKE=	yes
 NO_WRKSUBDIR=	yes
 MAKE_ENV=	DISTDIR=${DISTDIR} DISTFILES="${DISTFILES}"
 
+NO_STAGE=	yes
 do-extract:
 	@${RM} -fr ${WRKDIR} && \
 	${MKDIR} ${WRKDIR} && \
