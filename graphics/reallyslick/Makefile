@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/reallyslick/Makefile 323700 2013-07-26 07:03:25Z bapt $
+# $FreeBSD: graphics/reallyslick/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	reallyslick
 PORTVERSION=	0.9.1
@@ -32,6 +32,7 @@ MAN1=		biof.1 busyspheres.1 colorfire.1 cyclone.1 drempels.1 \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lXext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFREEALUT}
