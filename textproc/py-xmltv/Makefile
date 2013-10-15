@@ -1,9 +1,5 @@
-# New ports collection makefile for:	python xmltv
-# Date created:		Sun May  8 21:31:15 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/py-xmltv/Makefile,v 1.8 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: textproc/py-xmltv/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmltv
 PORTVERSION=	1.3
@@ -28,6 +24,7 @@ PROJECTHOST=	python-xmltv
 PORTDOCS=	README.txt
 .endif
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
