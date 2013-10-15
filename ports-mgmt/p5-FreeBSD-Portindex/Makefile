@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Portindex/Makefile 324134 2013-08-01 22:04:01Z matthew $
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Portindex/Makefile 328480 2013-09-27 14:26:32Z matthew $
 
 PORTNAME=	FreeBSD-Portindex
 PORTVERSION=	3.2
@@ -38,28 +38,17 @@ CACHE_MODE?=	0775
 
 CFG_FILE=	portindex.cfg
 
-MAN1=		find-updated.1 cache-init.1 cache-update.1 portindex.1 \
-		portdepends.1 make-readmes.1
+SUB_FILES+=	pkg-install
+SUB_LIST+=	CACHE_DIR=${CACHE_DIR} \
+		CACHE_OWNER=${CACHE_OWNER} \
+		CACHE_GROUP=${CACHE_GROUP} \
+		CACHE_MODE=${CACHE_MODE} \
+		CFG_FILE=${PREFIX}/etc/portindex.cfg
 
-post-install: install-conf install-cache
+post-install: install-conf
 
 install-conf:
 	cd ${WRKSRC} ; \
-	${INSTALL_DATA} ${CFG_FILE}.sample ${PREFIX}/etc/${CFG_FILE}.sample
-	cd ${PREFIX}/etc ; \
-	if ${TEST} ! -f ${CFG_FILE} ; then \
-	    ${CP} -p ${CFG_FILE}.sample ${CFG_FILE} ; \
-	fi
-
-# Create the cache directory and make it writable by group 'operator'
-# by default.  Only if the cache directory doesn't already exist.
-# Have to do this by hand if installing via pkg.
-
-install-cache:
-	if ${TEST} ! -d ${CACHE_DIR} ; then \
-	    ${MKDIR} ${CACHE_DIR} ; \
-	    ${CHOWN} ${CACHE_OWNER}:${CACHE_GROUP} ${CACHE_DIR} ; \
-	    ${CHMOD} ${CACHE_MODE} ${CACHE_DIR} ; \
-	fi
+	${INSTALL_DATA} ${CFG_FILE}.sample ${STAGEDIR}${PREFIX}/etc/${CFG_FILE}.sample
 
 .include <bsd.port.mk>
