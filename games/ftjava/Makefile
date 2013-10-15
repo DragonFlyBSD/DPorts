@@ -1,5 +1,5 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: ports/games/ftjava/Makefile,v 1.15 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/ftjava/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ftjava
 PORTVERSION=	1.3
@@ -40,6 +40,7 @@ DESKTOP_ENTRIES=	"FTJava" "A PBEM client for Full Thrust" \
 			"ftjava" "Game;BoardGame;StrategyGame;" \
 			false
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	cd ${WRKSRC} && ${FIND} ${DATAFILES} -type d -exec ${MKDIR} ${DATADIR}/{} ";"
