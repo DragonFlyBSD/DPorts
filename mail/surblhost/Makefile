@@ -1,9 +1,5 @@
-# New ports collection makefile for:	surblhost
-# Date created:		20 August 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/surblhost/Makefile,v 1.9 2012/11/17 05:59:16 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: mail/surblhost/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	surblhost
 PORTVERSION=	0.8.0
@@ -18,4 +14,5 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
