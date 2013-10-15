@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/axel/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: ftp/axel/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	axel
 PORTVERSION=	2.4
@@ -18,6 +18,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=${MANPREFIX}/man
 
 OPTIONS_DEFINE=	NLS DEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
