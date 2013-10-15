@@ -1,5 +1,5 @@
 # Created by: Oleg Alexeenkov <proler@gmail.com>
-# $FreeBSD: net-p2p/p5-Net-DirectConnect-TigerHash/Makefile 324097 2013-08-01 08:07:46Z bapt $
+# $FreeBSD: net-p2p/p5-Net-DirectConnect-TigerHash/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	Net-DirectConnect-TigerHash
 PORTVERSION=	0.06
@@ -17,4 +17,5 @@ CC=		${CXX}
 
 MAN3=		Net::DirectConnect::TigerHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
