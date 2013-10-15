@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unroff
-# Date created:		18 Feb 1996
-# Whom:			Thomas Gellekum <tg@freebsd.org>
-#
-# $FreeBSD: ports/textproc/unroff/Makefile,v 1.21 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: textproc/unroff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	unroff
 PORTVERSION=	1.0.2
@@ -34,6 +30,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DBSD"	\
 MAN1=		unroff.1 unroff-html.1 unroff-html-man.1 \
 		unroff-html-me.1 unroff-html-ms.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/unroff ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${PREFIX}/man/man1
