@@ -1,8 +1,5 @@
-# New ports collection makefile for:	spamcalc
-# Date created:			13 August 2002
-# Whom:				Harold Gutch <logix@foobar.franken.de>
-#
-# $FreeBSD: misc/spamcalc/Makefile 325959 2013-09-02 09:36:29Z az $
+# Created by: Harold Gutch <logix@foobar.franken.de>
+# $FreeBSD: misc/spamcalc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	spamcalc
 PORTVERSION=	0.5
@@ -16,6 +13,7 @@ COMMENT=	Calculates "DNS-spam"-values for hostnames
 
 USES=		perl5
 
+NO_STAGE=	yes
 do-build:
 	${REINPLACE_CMD} -e "s,sc.conf,${PREFIX}/etc/spamcalc.conf," \
 		${WRKSRC}/sc.pl
