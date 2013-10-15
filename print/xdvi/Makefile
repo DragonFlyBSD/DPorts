@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
-# $FreeBSD: print/xdvi/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: print/xdvi/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	xdvi
 PORTVERSION=	pl20
@@ -29,6 +29,7 @@ IS_INTERACTIVE=	yes
 
 MAN1=		xdvi.1
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -e "s=distclean::=distclean:=g" ${WRKSRC}/Makefile
 .for F in pkg-install pkg-deinstall
