@@ -1,9 +1,5 @@
-# New ports collection makefile for:	doom-freedoom
-# Date created:				23 November 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/doom-freedoom/Makefile,v 1.12 2012/11/17 05:57:36 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/doom-freedoom/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	freedoom
 PORTVERSION=	0.7
@@ -26,6 +22,7 @@ PLIST_FILES=	%%DATADIR%%/doom2.wad
 PLIST_DIRS=	%%DATADIR%%
 PORTDOCS=	ChangeLog NEWS README
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/doom2.wad ${DATADIR}
