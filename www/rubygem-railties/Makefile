@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/rubygem-railties/Makefile 323826 2013-07-28 13:21:04Z swills $
+# $FreeBSD: www/rubygem-railties/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	railties
 PORTVERSION=	3.2.13
@@ -22,4 +21,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/rails
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
