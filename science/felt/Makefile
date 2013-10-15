@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: science/felt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: science/felt/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	felt
 PORTVERSION=	3.07
@@ -32,6 +32,7 @@ MAN4=		corduroy.4 felt.4
 DOCSDIR=	${PREFIX}/share/doc/FElt
 EXAMPLESDIR=	${PREFIX}/share/examples/FElt
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|["<]malloc\.h[">]|<stdlib.h>|g'
