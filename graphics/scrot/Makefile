@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/scrot/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/scrot/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	scrot
 PORTVERSION=	0.8
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		scrot.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
