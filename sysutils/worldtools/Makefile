@@ -1,9 +1,5 @@
-# New ports collection makefile for:	whereintheworld
-# Date created:		13 august 2003
-# Whom:			anarcat
-#
-# $FreeBSD: sysutils/worldtools/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: anarcat
+# $FreeBSD: sysutils/worldtools/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	worldtools
 PORTVERSION=	1.3.1
@@ -22,4 +18,5 @@ MAN8=		buildit.8 upgrade.8 whereintheworld.8
 MAKE_ARGS=	SHAREDIR=${PREFIX}
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
