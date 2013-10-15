@@ -1,5 +1,5 @@
 # Created by: Janne Snabb <snabb@epipe.com>
-# $FreeBSD: sysutils/downtimed/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/downtimed/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	downtimed
 PORTVERSION=	0.6
@@ -19,6 +19,7 @@ MAN8=		downtimed.8
 USE_RC_SUBR=	${PORTNAME}
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-install:
 		@${MKDIR} /var/db/downtimed
 		@${CAT} ${PKGMESSAGE}
