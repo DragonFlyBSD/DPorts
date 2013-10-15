@@ -1,4 +1,4 @@
-# $FreeBSD: net/daemonlogger/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/daemonlogger/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	daemonlogger
 PORTVERSION=	1.2.1
@@ -15,4 +15,5 @@ USE_RC_SUBR=	daemonlogger
 
 PLIST_FILES=	bin/daemonlogger
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
