@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/hungarian/hu-zipcodes/Makefile,v 1.8 2013/01/09 20:04:49 svnexp Exp $
+# $FreeBSD: hungarian/hu-zipcodes/Makefile 327735 2013-09-20 18:43:02Z bapt $
 
 PORTNAME=	zipcodes
 PORTVERSION=	20020622
@@ -19,6 +19,7 @@ EXTRACT_BEFORE_ARGS=	# None
 EXTRACT_AFTER_ARGS=	> ${WRKSRC}/hu.zipcodes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/hu.zipcodes ${PREFIX}/share/misc/
 
