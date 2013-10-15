@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Test-Compile/Makefile 326802 2013-09-09 11:01:46Z az $
+# $FreeBSD: devel/p5-Test-Compile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Compile
 PORTVERSION=	0.24
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::Compile.3 Test::Compile::Internal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
