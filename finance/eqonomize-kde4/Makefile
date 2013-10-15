@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: finance/eqonomize-kde4/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: finance/eqonomize-kde4/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	eqonomize
 PORTVERSION=	0.6
@@ -19,6 +19,7 @@ INSTALLS_ICONS=	yes
 DATADIR=	${PREFIX}/share/apps/${PORTNAME}
 DOCSDIR=	${PREFIX}/share/doc
 
+NO_STAGE=	yes
 post-patch:
 #Fix build with kdelibs>=4.5.0
 	${REINPLACE_CMD} -e 's,V4.1.2-Based,V4.2-Based,g' \
