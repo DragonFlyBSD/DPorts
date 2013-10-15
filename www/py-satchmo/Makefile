@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-satchmo/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/py-satchmo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	satchmo
 PORTVERSION=	0.9.2
@@ -39,6 +39,7 @@ SOUTH_DESC=		Use South database migration tool for upgrades
 FEDEX_DESC=		Use Fedex web services for shipping
 AKISMET_DESC=	Use Akismet for spam filtering on product reviews
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSOUTH}
