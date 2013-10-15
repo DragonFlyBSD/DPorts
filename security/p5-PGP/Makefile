@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PGP
-# Date created:				October 21st 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: security/p5-PGP/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: security/p5-PGP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	PGP
 PORTVERSION=	0.3a
@@ -21,6 +17,7 @@ USE_PERL5=	configure
 
 MAN3=		PGP::Pipe.3
 
+NO_STAGE=	yes
 pre-configure:
 		@${CP} ${WRKSRC}/PGP/Pipe.pm ${WRKSRC}
 
