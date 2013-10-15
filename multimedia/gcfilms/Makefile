@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: multimedia/gcfilms/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: multimedia/gcfilms/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gcfilms
 PORTVERSION=	6.4
@@ -24,6 +24,7 @@ NO_BUILD=	yes
 
 SHEBANG_FILES=	bin/gcfilms install
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} ; ./install --prefix=${PREFIX}
 
