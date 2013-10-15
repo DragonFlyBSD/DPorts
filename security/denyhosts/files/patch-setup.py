@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/denyhosts/files/patch-setup.py,v 1.3 2012/11/17 06:01:03 svnexp Exp $
+$FreeBSD: security/denyhosts/files/patch-setup.py 300897 2012-07-14 14:29:18Z beat $
 
 --- setup.py.orig
 +++ setup.py

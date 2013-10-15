@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/denyhosts/files/denyhosts.in,v 1.5 2012/11/17 06:01:03 svnexp Exp $
+# $FreeBSD: security/denyhosts/files/denyhosts.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: denyhosts
 # REQUIRE: DAEMON

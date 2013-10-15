@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/security/denyhosts/Makefile,v 1.16 2013/01/09 20:05:07 svnexp Exp $
+# $FreeBSD: security/denyhosts/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	denyhosts
 PORTVERSION=	2.6
@@ -21,6 +21,7 @@ SUB_FILES=	pkg-message
 
 PORTDOCS=	CHANGELOG.txt LICENSE.txt README.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},' \
 		${WRKSRC}/daemon-control-dist \
