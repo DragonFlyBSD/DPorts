@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: misc/gkrellm-xkb/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: misc/gkrellm-xkb/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gkrellm-xkb
 PORTVERSION=	1.05
@@ -18,4 +18,5 @@ PLIST_FILES=	libexec/gkrellm2/plugins/xkb.so
 MAKE_ENV=	PLUGIN_DIR=${PREFIX}/libexec/gkrellm2/plugins
 ALL_TARGET=	xkb.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
