@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festdoc/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: audio/festdoc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festdoc
 PORTVERSION=	1.4.0.1
@@ -12,6 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Documentation for Festival
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 INFO=		festival
 FDOC=		${PREFIX}/share/doc/festival
