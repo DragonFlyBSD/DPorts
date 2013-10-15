@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cfdg
-# Date created:		2008-03-14
-# Whom:			Anatoly Borodin <anatoly.borodin@gmail.com>
-#
-# $FreeBSD: ports/graphics/cfdg/Makefile,v 1.6 2012/11/17 05:58:02 svnexp Exp $
-#
+# Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
+# $FreeBSD: graphics/cfdg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	cfdg
 PORTVERSION=	2.2.2
@@ -34,6 +30,7 @@ PLIST_FILES=	bin/cfdg
 PORTEXAMPLES=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cfdg ${PREFIX}/bin
 .if !defined(NOPORTEXAMPLES)
