@@ -1,5 +1,5 @@
 # Created by: Joachim Strombergson <watchman@ludd.ltu.se>
-# $FreeBSD: cad/dinotrace/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: cad/dinotrace/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	dinotrace
 PORTVERSION=	9.4c
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 INFO=		dinotrace
 PLIST_FILES=	bin/dinotrace
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEMACS}
