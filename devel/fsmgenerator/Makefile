@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	FSMGenerator
-# Date created:			Jan 5, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/fsmgenerator/Makefile,v 1.7 2012/11/17 05:55:43 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/fsmgenerator/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fsmgenerator
 PORTVERSION=	1.0.b.7
@@ -19,6 +14,7 @@ COMMENT=	Finite State Machine generating software
 PLIST_FILES=	bin/fsmgenerator
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile" | ${XARGS} \
 		${REINPLACE_CMD} -e "s|make$$|${GMAKE}|" \
