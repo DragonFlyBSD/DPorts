@@ -1,5 +1,5 @@
 # Created by: mph
-# $FreeBSD: net-im/climm/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: net-im/climm/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	climm
 PORTVERSION=	0.7.1
@@ -28,6 +28,7 @@ OTR_DESC=	Enable OTR encryption support
 REMOTE_DESC=	Enable Remote control fifo support
 XMPP_DESC=	Enable XMPP Jabber support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOTR}
