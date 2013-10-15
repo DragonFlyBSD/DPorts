@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdm/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: x11/xdm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xdm
 PORTVERSION=	1.1.11
@@ -22,6 +22,7 @@ CFFILES=	GiveConsole TakeConsole Xaccess Xreset Xresources \
 OPTIONS_DEFINE=	XDMSHELL
 XDMSHELL_DESC=	Install xdmshell
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXDMSHELL}
