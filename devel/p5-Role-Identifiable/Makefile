@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Role-Identifiable/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-Role-Identifiable/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Role-Identifiable
 PORTVERSION=	0.005
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 MAN3=	Role::Identifiable::HasIdent.3 \
 	Role::Identifiable::HasTags.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
