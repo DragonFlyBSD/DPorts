@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net-Packet-Target
-# Date created:		28 September 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Packet-Target/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Packet-Target/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Packet-Target
 PORTVERSION=	1.01
@@ -22,4 +18,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=	${PORTNAME:S/-/::/g}.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
