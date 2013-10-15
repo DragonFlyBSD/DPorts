@@ -1,7 +1,7 @@
-# $FreeBSD: databases/percona55-client/Makefile 310554 2013-01-17 16:43:07Z flo $
+# $FreeBSD: databases/percona55-client/Makefile 329247 2013-10-03 23:18:52Z flo $
 
 PORTNAME=	percona
-PKGNAMESUFFIX=	-client
+PKGNAMESUFFIX=	55-client
 
 COMMENT=	Multithreaded SQL database (client)
 
@@ -11,9 +11,7 @@ PKGMESSAGE=	mustnotexist
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${.CURDIR}/pkg-plist
 
-LATEST_LINK=	percona55-client
-
-CONFLICTS_INSTALL=	mysql-client-[345].* mariadb-client-5.* percona-client-5.[0-46-9].*
+CONFLICTS_INSTALL=	mysql[0-9][0-9]-client-* mariadb[0-9][0-9]-client-* percona5.[0-46-9]-client-* percona[0-46-9][0-9]-client-*
 
 CMAKE_ARGS+=	-DWITHOUT_SERVER=1
 
@@ -25,4 +23,5 @@ MAN1=		comp_err.1 msql2mysql.1 mysql.1 mysql_config.1 mysql_find_rows.1 \
 
 CLIENT_ONLY=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
