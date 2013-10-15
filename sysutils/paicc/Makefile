@@ -1,9 +1,5 @@
-# New ports collection makefile for:	paicc
-# Date created:		28 Apr 2001
-# Whom:			peter
-#
-# $FreeBSD: ports/sysutils/paicc/Makefile,v 1.3 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: peter
+# $FreeBSD: sysutils/paicc/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	paicc
 PORTVERSION=	1.4
@@ -17,4 +13,5 @@ COMMENT=	Paint Changed Characters
 MAKE_ENV=	BIN=${PREFIX}/bin MAN=${PREFIX}/man DATA=${PREFIX}/libdata
 MAN1=		paicc.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
