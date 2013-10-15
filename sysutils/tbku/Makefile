@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tbku
-# Date Created:				19 March 2008
-# Whom:					tundra
-#
-# $FreeBSD: sysutils/tbku/Makefile 317331 2013-05-04 18:08:36Z rakuco $
-#
+# Created by: tundra
+# $FreeBSD: sysutils/tbku/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tbku
 PORTVERSION=	1.117
@@ -13,6 +9,7 @@ MASTER_SITES=	http://www.tundraware.com/Software/tbku/
 MAINTAINER=	tbku@tundraware.com
 COMMENT=	A Tool For Incremental And Imaging Backups
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
