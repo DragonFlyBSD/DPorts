@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/devel/tinylaf/Makefile,v 1.13 2012/12/10 11:29:55 svnexp Exp $
+# $FreeBSD: devel/tinylaf/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	tinylaf
 PORTVERSION=	1.4.0
@@ -19,6 +19,7 @@ JARFILE=	${PORTNAME}.jar tinycp.jar
 PORTDOCS=	readme.html gpl.txt lgpl.txt
 PLIST_FILES=	${JARFILE:S|^|%%JAVAJARDIR%%/|}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${JARFILE:S|^|${WRKSRC}/|} ${JAVAJARDIR}
 .if !defined(NOPORTDOCS)
