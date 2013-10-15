@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tpad
-# Date created:		10 November 2003
-# Whom:			Antonio Bonifati <ant@monitor.deis.unical.it>
-#
-# $FreeBSD: ports/editors/tpad/Makefile,v 1.10 2012/11/17 05:57:18 svnexp Exp $
-#
+# Created by: Antonio Bonifati <ant@monitor.deis.unical.it>
+# $FreeBSD: editors/tpad/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	tpad
 PORTVERSION=	1.3
@@ -28,6 +24,7 @@ MLINKS=		tpad.1 tview.1
 PLIST_SUB=	LIBDIR=lib/tpad${PORTVERSION}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/bin/tpad ${PREFIX}/bin/tpad
 	@${MKDIR} ${PREFIX}/lib/tpad${PORTVERSION}/msgs
