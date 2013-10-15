@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-PDFJ
-# Date created:		Oct 22, 2002
-# Whom:			kuriyama@FreeBSD.org
-#
-# $FreeBSD: ports/japanese/p5-PDFJ/Makefile,v 1.12 2012/11/17 05:58:38 svnexp Exp $
-#
+# $FreeBSD: japanese/p5-PDFJ/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	PDFJ
 PORTVERSION=	0.90
@@ -14,11 +9,13 @@ MASTER_SITES=	http://hp1.jonex.ne.jp/%7Enakajima.yasushi/archives/
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	PDFJ module provides methods to generate Japanese PDF file
 
+USES=		perl5
 USE_ZIP=	YES
-PERL_CONFIGURE=	YES
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}
 EXTRACT_BEFORE_ARGS=	-qo -a
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
