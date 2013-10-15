@@ -1,5 +1,5 @@
 # Created by: Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
-# $FreeBSD: mail/softfail/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/softfail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	softfail
 PORTVERSION=	2.0
@@ -34,6 +34,7 @@ QMAIL_SLAVEPORT=	spamcontrol
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 crontab-entry: extract
