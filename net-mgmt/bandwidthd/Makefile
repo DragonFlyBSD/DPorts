@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: net-mgmt/bandwidthd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: net-mgmt/bandwidthd/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	bandwidthd
 PORTVERSION=	2.0.1
@@ -16,6 +16,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 
 USE_CSTD=	gnu89
+NO_STAGE=	yes
 
 GNU_CONFIGURE=	YES
 USES=		iconv gmake
