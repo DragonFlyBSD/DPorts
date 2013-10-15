@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: mail/queue-repair/Makefile 322321 2013-07-05 12:46:45Z bdrewery $
+# $FreeBSD: mail/queue-repair/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	queue-repair
 PORTVERSION=	0.9.0
@@ -12,6 +12,7 @@ COMMENT=	Qmail queue diagnostic and repair tool
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 USE_PYTHON=	yes
 
 OPTIONS_DEFINE=		DOCS QMAIL_PORT
