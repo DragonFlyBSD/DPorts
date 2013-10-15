@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/noattach/Makefile,v 1.33 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/noattach/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	noattach
 PORTVERSION=	1.2
@@ -11,6 +11,8 @@ COMMENT=	An attachment filter for Sendmail Milter
 
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=    noattach
+
+NO_STAGE=	yes
 
 CFLAGS+=	${PTHREAD_CFLAGS:S=""==}
 MAN8=		noattach.8
