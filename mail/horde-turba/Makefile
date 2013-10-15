@@ -1,4 +1,4 @@
-# $FreeBSD: mail/horde-turba/Makefile 325479 2013-08-27 18:10:33Z mm $
+# $FreeBSD: mail/horde-turba/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	turba
 PORTVERSION=	4.1.2
@@ -43,6 +43,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Util \
 		Horde_View
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MFACEBOOK}
