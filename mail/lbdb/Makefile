@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: mail/lbdb/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/lbdb/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	lbdb
 PORTVERSION=	0.37
@@ -22,9 +22,9 @@ WRKSRC=		${WRKDIR}/lbdb-${PORTVERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --sysconfdir=${PREFIX}/etc \
 			--libdir=${PREFIX}/libexec --enable-lbdb-dotlock
-USE_GMAKE=	yes
-USE_PERL5=	yes
+USES=		gmake perl5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists (/usr/bin/getent)
