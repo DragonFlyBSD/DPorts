@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/tkdvd/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/tkdvd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tkdvd
 PORTVERSION=	4.0.9
@@ -29,6 +29,7 @@ DESKTOP_ENTRIES="TkDVD" \
 		"" \
 		true
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
