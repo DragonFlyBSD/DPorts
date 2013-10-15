@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/torrent/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# $FreeBSD: games/torrent/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	torrent
 PORTVERSION=	0.8.2
@@ -20,6 +20,7 @@ LDFLAGS+=	`${SDL_CONFIG} --libs`
 
 MAN6=		torrent.6
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} -E ${WRKDIR} -type f -iregex ".*\.(c|cpp|h|txt)" -print0 | \
 		${XARGS} -0 ${REINPLACE_CMD} -e 's/[[:cntrl:]]*$$//'
