@@ -1,5 +1,5 @@
 # Created by: Chris St Denis <chris@smartt.com>
-# $FreeBSD: net-mgmt/nagiosql/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net-mgmt/nagiosql/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagiosql
 PORTVERSION=	3.2.0
@@ -40,6 +40,7 @@ CURL_DESC=	Configure with cURL support
 FTP_DESC=	Configure with FTP support
 SSH2_DESC=	Configure with SSH2 support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURL}
