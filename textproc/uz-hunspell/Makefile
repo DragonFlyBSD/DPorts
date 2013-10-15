@@ -1,9 +1,4 @@
-# New ports collection makefile for:	uz-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/uz-hunspell/Makefile,v 1.5 2012/11/17 06:02:24 svnexp Exp $
-#
+# $FreeBSD: textproc/uz-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	0.6
@@ -26,7 +21,7 @@ PLIST_FILES=	%%DATADIR%%/uz_UZ.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/uz_UZ.aff ${WRKSRC}/uz_UZ.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/uz_UZ.aff ${WRKSRC}/uz_UZ.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
