@@ -1,5 +1,5 @@
 # Created by: Thomas Hurst <tom@hur.st>
-# $FreeBSD: x11/terminator/Makefile 317031 2013-05-01 16:13:45Z jgh $
+# $FreeBSD: x11/terminator/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	terminator
 PORTVERSION=	0.96
@@ -29,6 +29,7 @@ INSTALLS_ICONS=	yes
 
 WANT_GNOME=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
