@@ -1,5 +1,5 @@
 # Created by: Stepan Zastupov [RedChrom] <redchrom@gmail.com>
-# $FreeBSD: audio/mpdscribble/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/mpdscribble/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpdscribble
 PORTVERSION=	0.22
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS+=	mpdclient.2:${PORTSDIR}/audio/libmpdclient
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		pkgconfig
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
