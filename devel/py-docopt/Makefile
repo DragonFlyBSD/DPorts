@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-docopt/Makefile 325873 2013-09-01 16:44:50Z antoine $
+# $FreeBSD: devel/py-docopt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	docopt
 PORTVERSION=	0.6.1
@@ -25,6 +25,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
