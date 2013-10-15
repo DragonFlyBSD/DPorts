@@ -1,19 +1,22 @@
 # Created by: me
-# $FreeBSD: x11-wm/fvwm/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: x11-wm/fvwm/Makefile 329455 2013-10-05 13:36:39Z dinoex $
 
 PORTNAME=	fvwm
 PORTVERSION=	1.24r
 PORTREVISION=	5
 CATEGORIES=	x11-wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-1/
+PKGNAMESUFFIX=	1
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	The fvwm window manager
 
 NO_LATEST_LINK=	yes
+NO_STAGE=	yes
 
 USES=		imake
 USE_XORG=	xbitmaps xpm xext x11 xmu
+
 MAN1=		FvwmAudio.1 FvwmAuto.1 FvwmBacker.1 FvwmBanner.1 FvwmClean.1 \
 		FvwmDebug.1 FvwmIconBox.1 FvwmIdent.1 FvwmPager.1 FvwmSave.1 \
 		FvwmSaveDesk.1 FvwmScroll.1 FvwmWinList.1 GoodStuff.1 fvwm.1 \
