@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flick
-# Date created:		21 Mar 1998
-# Whom:			giffunip@asme.org
-#
-# $FreeBSD: devel/flick/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: giffunip@asme.org
+# $FreeBSD: devel/flick/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	flick
 PORTVERSION=	2.1
@@ -25,6 +21,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
