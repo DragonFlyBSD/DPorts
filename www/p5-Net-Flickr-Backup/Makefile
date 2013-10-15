@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Flickr-Backup
-# Date created:		2006-08-05
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: www/p5-Net-Flickr-Backup/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: www/p5-Net-Flickr-Backup/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Net-Flickr-Backup
 PORTVERSION=	3.1
@@ -31,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Flickr::Backup.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
