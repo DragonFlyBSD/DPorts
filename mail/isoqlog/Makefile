@@ -1,9 +1,5 @@
-# New ports collection makefile for:   isoqlog
-# Date created:                 17 June 2002
-# Whom:				ofsen@enderunix.org
-#
-# $FreeBSD: ports/mail/isoqlog/Makefile,v 1.14 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: ofsen@enderunix.org
+# $FreeBSD: mail/isoqlog/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	isoqlog
 PORTVERSION=	2.2.1
@@ -21,6 +17,7 @@ USE_GMAKE=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .ifdef NOPORTDOCS
