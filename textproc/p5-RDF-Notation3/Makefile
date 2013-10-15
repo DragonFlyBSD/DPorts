@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-RDF-Notation3/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-RDF-Notation3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	RDF-Notation3
 PORTVERSION=	0.91
@@ -27,6 +27,7 @@ MAN3=		RDF::Notation3.3 RDF::Notation3::PrefTriples.3 \
 		RDF::Notation3::Template::TXML.3 RDF::Notation3::Triples.3 \
 		RDF::Notation3::XML.3
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.pm" | \
 	${XARGS} ${REINPLACE_CMD} -i '' -e 's!^require 5.005_62;!!'
