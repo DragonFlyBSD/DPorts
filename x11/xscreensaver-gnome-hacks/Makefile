@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/xscreensaver-gnome-hacks/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: x11/xscreensaver-gnome-hacks/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xscreensaver-gnome-hacks
 PORTREVISION=	1
@@ -26,6 +26,7 @@ MAN1=		xscreensaver-getimage-desktop.1 xscreensaver-getimage-file.1 \
 		xscreensaver-getimage-video.1 xscreensaver-getimage.1 \
 		xscreensaver-text.1
 
+NO_STAGE=	yes
 post-build:
 	@cd ${WRKSRC}/driver && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		Makefile ${MAKE_ARGS} xscreensaver-getimage
