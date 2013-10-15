@@ -1,4 +1,4 @@
-# $FreeBSD: databases/pear-Horde_HashTable/Makefile 323620 2013-07-24 21:04:41Z mm $
+# $FreeBSD: databases/pear-Horde_HashTable/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Horde_HashTable
 PORTVERSION=	1.1.0
@@ -11,6 +11,7 @@ COMMENT=	Horde Hash Table Interface
 OPTIONS_DEFINE=	MEMCACHE
 USE_HORDE_RUN=	Horde_Exception
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMEMCACHE}
