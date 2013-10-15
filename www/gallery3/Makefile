@@ -1,5 +1,5 @@
 # Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
-# $FreeBSD: www/gallery3/Makefile 323191 2013-07-17 22:12:15Z delphij $
+# $FreeBSD: www/gallery3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gallery3
 PORTVERSION=	3.0.9
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	DCRAW FFMPEG GD GRAPHMAGICK IMAGEMAGICK JHEAD \
 		NETPBM NLS UNZIP
 OPTIONS_DEFAULT=	IMAGEMAGICK JHEAD UNZIP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(GALLERY3DIR)
