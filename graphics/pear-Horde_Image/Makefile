@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/pear-Horde_Image/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: graphics/pear-Horde_Image/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Horde_Image
 PORTVERSION=	2.0.5
@@ -16,6 +16,7 @@ USE_HORDE_RUN=	Horde_Exception \
 OPTIONS_DEFINE=	GD
 GD_DESC=	Depend on PHP gd extension
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MGD}
