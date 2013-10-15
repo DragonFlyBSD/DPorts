@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: www/webcalendar/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/webcalendar/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebCalendar
 PORTVERSION=	1.0.5
@@ -32,6 +32,7 @@ OPTIONS_DEFAULT=	MYSQL
 DB_DESC=	Database backend
 DBASE_DESC=	DBase database support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
