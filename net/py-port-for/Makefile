@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/net/py-port-for/Makefile,v 1.3 2013/02/09 15:59:33 svnexp Exp $
+# $FreeBSD: net/py-port-for/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	port-for
 PORTVERSION=	0.3
@@ -16,6 +16,7 @@ LICENSE=	MIT
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} '/DEFAULT_CONFIG_PATH/ s|/etc|${PREFIX}&|' ${WRKSRC}/port_for/store.py
 
