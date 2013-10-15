@@ -1,5 +1,5 @@
 # Created by: Eric L. Camachat <eric@camachat.org>
-# $FreeBSD: chinese/ibus-chewing/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: chinese/ibus-chewing/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	ibus-chewing
 PORTVERSION=	1.4.3
@@ -30,4 +30,5 @@ PROJECTHOST=	ibus
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
