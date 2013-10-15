@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: security/gnome-gpg/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: security/gnome-gpg/Makefile 327769 2013-09-20 22:55:24Z bapt $
 #    $MCom: ports/security/gnome-gpg/Makefile,v 1.1 2006/09/02 15:20:58 ahze Exp $
 
 PORTNAME=	gnome-gpg
@@ -24,4 +24,5 @@ CONFIGURE_ENV=	set_more_warnings="no"
 PLIST_FILES=	bin/gnome-gpg
 MAN1=		gnome-gpg.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
