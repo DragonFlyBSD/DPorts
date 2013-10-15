@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/opencdk/Makefile 325745 2013-08-31 00:11:06Z bapt $
+# $FreeBSD: security/opencdk/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	opencdk
 PORTVERSION=	0.6.6
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--with-libgcrypt-prefix=${LOCALBASE}
 
 DOCS=		AUTHORS NEWS README THANKS doc/opencdk-api.html
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,(libdir)/pkgconfig,(prefix)/libdata/pkgconfig,' \
 		${WRKSRC}/src/Makefile.in
