@@ -1,5 +1,5 @@
 # Created by: DarwinSurvivor <darwinsurvivor@gmail.com>
-# $FreeBSD: mail/notmuch/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: mail/notmuch/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	notmuch
 PORTVERSION=	0.15.2
@@ -32,4 +32,5 @@ MAN5=		notmuch-hooks.5
 MAN7=		notmuch-search-terms.7
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
