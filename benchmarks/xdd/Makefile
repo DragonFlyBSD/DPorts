@@ -1,5 +1,5 @@
 # Created by: Gerhard Gonter <g.gonter@ieee.org>
-# $FreeBSD: benchmarks/xdd/Makefile 321320 2013-06-19 20:12:38Z linimon $
+# $FreeBSD: benchmarks/xdd/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	xdd
 PORTVERSION=	65
@@ -17,6 +17,7 @@ PLIST_FILES=	bin/xdd bin/timeserver bin/gettime
 USE_DOS2UNIX=	yes
 DOS2UNIX_REGEX=	.*\.(c|cpp|h)
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${FILESDIR}/freebsd.makefile ${WRKSRC}
 
