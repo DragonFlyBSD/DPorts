@@ -1,9 +1,5 @@
-# New ports collection makefile for:	chpp
-# Date created:				4 May 1999
-# Whom:					Andrey Zakhvatov <andy@FreeBSD.org>
-#
-# $FreeBSD: textproc/chpp/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Andrey Zakhvatov <andy@FreeBSD.org>
+# $FreeBSD: textproc/chpp/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	chpp
 PORTVERSION=	0.3.5
@@ -29,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 INFO=		chpp
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386" && ${ARCH} != "x86_64"
