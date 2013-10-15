@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: finance/p5-Finance-Quote/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: finance/p5-Finance-Quote/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	Finance-Quote
 PORTVERSION=	1.18
@@ -22,53 +22,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Finance::Quote.3 \
-		Finance::Quote::AEX.3 \
-		Finance::Quote::AIAHK.3 \
-		Finance::Quote::ASEGR.3 \
-		Finance::Quote::ASX.3 \
-		Finance::Quote::BMONesbittBurns.3 \
-		Finance::Quote::BSERO.3 \
-		Finance::Quote::Bourso.3 \
-		Finance::Quote::Cdnfundlibrary.3 \
-		Finance::Quote::Cominvest.3 \
-		Finance::Quote::Currencies.3 \
-		Finance::Quote::DWS.3 \
-		Finance::Quote::Deka.3 \
-		Finance::Quote::FTPortfolios.3 \
-		Finance::Quote::Fidelity.3 \
-		Finance::Quote::FinanceCanada.3 \
-		Finance::Quote::Finanzpartner.3 \
-		Finance::Quote::Fool.3 \
-		Finance::Quote::GoldMoney.3 \
-		Finance::Quote::HEX.3 \
-		Finance::Quote::HU.3 \
-		Finance::Quote::IndiaMutual.3 \
-		Finance::Quote::LeRevenu.3 \
-		Finance::Quote::ManInvestments.3 \
-		Finance::Quote::Morningstar.3 \
-		Finance::Quote::NZX.3 \
-		Finance::Quote::Platinum.3 \
-		Finance::Quote::SEB.3 \
-		Finance::Quote::TSP.3 \
-		Finance::Quote::TSX.3 \
-		Finance::Quote::Tdefunds.3 \
-		Finance::Quote::Tdwaterhouse.3 \
-		Finance::Quote::Tiaacref.3 \
-		Finance::Quote::Troweprice.3 \
-		Finance::Quote::Trustnet.3 \
-		Finance::Quote::USFedBonds.3 \
-		Finance::Quote::Union.3 \
-		Finance::Quote::VWD.3 \
-		Finance::Quote::Yahoo::Asia.3 \
-		Finance::Quote::Yahoo::Australia.3 \
-		Finance::Quote::Yahoo::Base.3 \
-		Finance::Quote::Yahoo::Brasil.3 \
-		Finance::Quote::Yahoo::Europe.3 \
-		Finance::Quote::Yahoo::NZ.3 \
-		Finance::Quote::Yahoo::USA.3 \
-		Finance::Quote::ZA.3
 
 post-patch:
 	@${FIND} ${WRKSRC}/lib/Finance/ -name '*.orig' -delete
