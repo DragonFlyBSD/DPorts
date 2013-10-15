@@ -1,5 +1,5 @@
 # Created by: patrick
-# $FreeBSD: audio/ample/Makefile 320949 2013-06-14 16:05:09Z antoine $
+# $FreeBSD: audio/ample/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ample
 PORTVERSION=	0.5.7
@@ -9,6 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-devel/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Allows you to listen to your own MP3's away from home
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
 MAN1=		ample.1
