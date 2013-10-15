@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flash
-# Date created:		11 Dec 1999
-# Whom:			Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: ports/shells/flash/Makefile,v 1.24 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: Will Andrews <andrews@technologist.com>
+# $FreeBSD: shells/flash/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	flash
 PORTVERSION=	0.9.5
@@ -29,6 +25,7 @@ DATA=		system.bg.Netsoc.3 system.bg.Netsoc.4 system.flashlogin \
 		system.maillogin system.module system.module.9798 system.rc \
 		system.rc.mailshell
 
+NO_STAGE=	yes
 post-patch:
 .for file in ${SCRIPT}
 	@${REINPLACE_CMD} -e "s:/usr/slocal:${PREFIX}:g" ${WRKSRC}/orcasetup/${file}
