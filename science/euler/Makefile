@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/euler/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: science/euler/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	euler
 PORTVERSION=	1.61.0
@@ -17,6 +17,7 @@ USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
