@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DBIx-Password
-# Date created:				March 17th 2002
-# Whom:	      				Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: databases/p5-DBIx-Password/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: databases/p5-DBIx-Password/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Password
 PORTVERSION=	1.9
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		DBIx::Password.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
