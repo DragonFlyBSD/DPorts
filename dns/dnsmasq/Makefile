@@ -1,5 +1,5 @@
 # Created by: Steven Honson
-# $FreeBSD: dns/dnsmasq/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: dns/dnsmasq/Makefile 328831 2013-09-30 16:44:41Z mandree $
 
 PORTNAME=	dnsmasq
 DISTVERSION=	2.66
@@ -15,8 +15,6 @@ COMMENT=	Lightweight DNS forwarder, DHCP, and TFTP server
 LICENSE=	GPLv2
 
 CONFLICTS_INSTALL=dnsmasq-devel-*
-
-MAN8=		dnsmasq.8
 
 PORTDOCS=	CHANGELOG CHANGELOG.archive FAQ doc.html setup.html
 
@@ -40,20 +38,20 @@ CFLAGS+=	-DNO_IPV6
 
 .if ${PORT_OPTIONS:MNLS}
 USES+=		pkgconfig gettext
-LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
+LIB_DEPENDS+=	libidn.so:${PORTSDIR}/dns/libidn
 PLIST_SUB+=	NLS=""
 ALL_TARGET=	all-i18n
-USE_GMAKE=	yes
+USES+=		gmake
 .else
 PLIST_SUB+=	NLS="@comment "
 .if ${PORT_OPTIONS:MIDN}
 CFLAGS+=	-DHAVE_IDN
-LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
+LIB_DEPENDS+=	libidn.so:${PORTSDIR}/dns/libidn
 .endif
 .endif
 
 .if ${PORT_OPTIONS:MDBUS}
-LIB_DEPENDS+=	dbus-1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	libdbus-1.so:${PORTSDIR}/devel/dbus
 USES+=		pkgconfig
 CFLAGS+=	-DHAVE_DBUS
 .endif
@@ -85,28 +83,24 @@ pre-configure:
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/dnsmasq ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/dnsmasq.conf.example ${PREFIX}/etc
-	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.8 ${PREFIX}/man/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/src/dnsmasq ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/dnsmasq.conf.example ${STAGEDIR}${PREFIX}/etc
+	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.8 ${STAGEDIR}${PREFIX}/man/man8
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 .if ${PORT_OPTIONS:MNLS}
 .for i in de es fi fr id it no pl pt_BR ro
-	${MKDIR} ${PREFIX}/share/locale/${i}/LC_MESSAGES
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/locale/${i}/LC_MESSAGES
 	${INSTALL_DATA} ${WRKSRC}/src/${i}.mo \
-		${PREFIX}/share/locale/${i}/LC_MESSAGES/${PORTNAME}.mo
+		${STAGEDIR}${PREFIX}/share/locale/${i}/LC_MESSAGES/${PORTNAME}.mo
 .endfor
 .endif
-	${MKDIR} ${EXAMPLESDIR}/dynamic-dnsmasq ${EXAMPLESDIR}/dnslist
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/dynamic-dnsmasq/dynamic-dnsmasq.pl ${EXAMPLESDIR}/dynamic-dnsmasq/
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/dnslist/dnslist.pl ${EXAMPLESDIR}/dnslist/
-	${INSTALL_DATA} ${WRKSRC}/contrib/dnslist/dhcp.css ${EXAMPLESDIR}/dnslist/
-	${INSTALL_DATA} ${WRKSRC}/contrib/dnslist/dnslist.tt2 ${EXAMPLESDIR}/dnslist/
-	if [ ! -f ${PREFIX}/etc/dnsmasq.conf ]; then \
-		${CP} -p ${PREFIX}/etc/dnsmasq.conf.example ${PREFIX}/etc/dnsmasq.conf; \
-	fi
-	@${CAT} ${PKGMESSAGE}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/dynamic-dnsmasq ${STAGEDIR}${EXAMPLESDIR}/dnslist
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/dynamic-dnsmasq/dynamic-dnsmasq.pl ${STAGEDIR}${EXAMPLESDIR}/dynamic-dnsmasq/
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/dnslist/dnslist.pl ${STAGEDIR}${EXAMPLESDIR}/dnslist/
+	${INSTALL_DATA} ${WRKSRC}/contrib/dnslist/dhcp.css ${STAGEDIR}${EXAMPLESDIR}/dnslist/
+	${INSTALL_DATA} ${WRKSRC}/contrib/dnslist/dnslist.tt2 ${STAGEDIR}${EXAMPLESDIR}/dnslist/
 
 .include <bsd.port.post.mk>
