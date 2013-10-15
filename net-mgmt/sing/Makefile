@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net-mgmt/sing/Makefile 321547 2013-06-22 06:46:05Z culot $
+# $FreeBSD: net-mgmt/sing/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	sing
 PORTVERSION=	1.1
@@ -26,6 +26,7 @@ PLIST_FILES=	sbin/sing
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -rf ${WRKSRC}/libpcap-* ;\
 	${RM} -rf ${WRKSRC}/Libnet-*
