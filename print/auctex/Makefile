@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer
-# $FreeBSD: print/auctex/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/auctex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	auctex
 PORTVERSION=	11.87
@@ -39,6 +39,7 @@ MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 
 NOT_FOR_ARCHS=	ia64
 
+NO_STAGE=	yes
 post-install:
 	${MKTEXLSR} ${PREFIX}/${TEXMFDIR}
 	@${CAT} ${PKGMESSAGE}
