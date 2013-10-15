@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@freebsdmatrix.net>
-# $FreeBSD: games/euchre/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: games/euchre/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	euchre
 PORTVERSION=	0.8
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/euchre
 
 DESKTOP_ENTRIES="Euchre" "" "" "${PORTNAME}" "" true
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^AM_/s|-Werror||' ${WRKSRC}/configure
