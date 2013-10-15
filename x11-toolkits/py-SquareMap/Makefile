@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-SquareMap/Makefile 325423 2013-08-26 23:33:37Z sbz $
+# $FreeBSD: x11-toolkits/py-SquareMap/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	SquareMap
 PORTVERSION=	1.0.2
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wxPython>0:${PORTSDIR}/x11-toolkits/py-wxPyt
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
