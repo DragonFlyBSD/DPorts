@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-pyramid/Makefile 321925 2013-06-28 02:26:08Z clsung $
+# $FreeBSD: www/py-pyramid/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pyramid
 PORTVERSION=	1.4.2
@@ -27,4 +27,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
