@@ -1,17 +1,16 @@
 # Created by: miwi
-# $FreeBSD: german/wordpress/Makefile 323324 2013-07-19 18:02:44Z miwi $
+# $FreeBSD: german/wordpress/Makefile 328628 2013-09-28 20:19:00Z sunpoet $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.5.2
+PORTVERSION=	3.6.1
 CATEGORIES=	german www
 MASTER_SITES=	http://de.wordpress.org/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-de_DE
 
 MAINTAINER=	miwi@FreeBSD.org
-COMMENT=	A state-of-the-art semantic personal publishing platform
+COMMENT=	State-of-the-art semantic personal publishing platform
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/license.txt
 
 CONFLICTS_INSTALL=	wordpress-3.* ja-wordpress-3.* ru-wordpress-3.*
 
@@ -28,6 +27,7 @@ PORTDOCS=	license.txt readme.html
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_CMD} "If you want to upgrade, you must read upgrade document."
 	@${ECHO_CMD} ""
