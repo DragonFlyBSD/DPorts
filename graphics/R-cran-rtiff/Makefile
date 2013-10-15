@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-rtiff/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: graphics/R-cran-rtiff/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	rtiff
 PORTVERSION=	1.4.2
@@ -18,4 +18,5 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
