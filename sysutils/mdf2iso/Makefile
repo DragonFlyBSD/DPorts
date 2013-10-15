@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@inec.ru>
-# $FreeBSD: sysutils/mdf2iso/Makefile 319245 2013-05-27 14:17:55Z bsam $
+# $FreeBSD: sysutils/mdf2iso/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	mdf2iso
 PORTVERSION=	0.3.0
