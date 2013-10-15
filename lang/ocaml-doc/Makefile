@@ -1,5 +1,5 @@
 # Created by: Eugene Ossintsev
-# $FreeBSD: ports/lang/ocaml-doc/Makefile,v 1.14 2012/12/31 15:58:09 svnexp Exp $
+# $FreeBSD: lang/ocaml-doc/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	ocaml
 PORTVERSION=	3.12.1
@@ -26,6 +26,7 @@ PORTDOCS=	${DISTNAME:R}-refman.ps \
 IGNORE=		installs only documentation and you have NOPORTDOCS defined
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DOCSDIR}/html/libref
 	cd ${WRKDIR}/htmlman/libref && ${INSTALL_DATA} * ${DOCSDIR}/html/libref
