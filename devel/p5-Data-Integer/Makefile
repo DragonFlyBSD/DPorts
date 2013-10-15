@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Data-Integer/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/p5-Data-Integer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Integer
 PORTVERSION=	0.004
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Data::Integer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
