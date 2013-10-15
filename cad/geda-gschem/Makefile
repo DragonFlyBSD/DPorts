@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-gschem/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: cad/geda-gschem/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	gschem
 PORTVERSION=	1.4.3
@@ -32,6 +32,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gschem.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
