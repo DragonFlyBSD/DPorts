@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: ports/www/opencart/Makefile,v 1.9 2013/01/17 02:44:11 svnexp Exp $
+# $FreeBSD: www/opencart/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	opencart
 PORTVERSION=	1.5.4.1
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}_v${PORTVERSION}/upload
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
