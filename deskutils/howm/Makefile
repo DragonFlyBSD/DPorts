@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/howm/Makefile 318678 2013-05-21 11:35:54Z kuriyama $
+# $FreeBSD: deskutils/howm/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	howm
 PORTVERSION=	1.4.1
@@ -21,6 +21,7 @@ PLIST_SUB=	COMPILED_ELISP=""
 PLIST_SUB=	COMPILED_ELISP="@comment "
 .endif
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} *.el ${PREFIX}/${EMACS_SITE_LISPDIR}
 .if defined(WITH_COMPILED_ELISP)
