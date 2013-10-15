@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: ports/arabic/libitl/Makefile,v 1.11 2012/12/20 09:21:00 svnexp Exp $
+# $FreeBSD: arabic/libitl/Makefile 328297 2013-09-25 15:50:40Z vanilla $
 
 PORTNAME=	libitl
 PORTVERSION=	0.7.0
