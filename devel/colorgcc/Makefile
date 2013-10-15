@@ -1,9 +1,5 @@
-# New ports collection makefile for:	colorgcc
-# Date created:		2009-07-21
-# Whom:			Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/devel/colorgcc/Makefile,v 1.6 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: devel/colorgcc/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	colorgcc
 PORTVERSION=	1.3.2
@@ -26,6 +22,7 @@ SUB_FILES=	pkg-message
 
 NO_BUILD=yes
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKSRC}/${PORTNAME}
