@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/wmpal/Makefile 323729 2013-07-26 15:06:12Z bapt $
+# $FreeBSD: misc/wmpal/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	wmpal
 PORTVERSION=	0.6.1
@@ -17,6 +17,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lX11
 PORTDOCS=	README
 PLIST_FILES=	bin/wmpal
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
