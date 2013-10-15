@@ -1,8 +1,5 @@
-# New ports collection makefile for:	www/joomla15
-# Date created:				4 march 2008
-# Whom:					Roberto Nunnari <robi@nunnisoft.ch>
-#
-# $FreeBSD: ports/www/joomla15/Makefile,v 1.31 2012/11/17 06:02:37 svnexp Exp $
+# Created by: Roberto Nunnari <robi@nunnisoft.ch>
+# $FreeBSD: www/joomla15/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	joomla15
 PORTVERSION=	1.5.24
@@ -27,6 +24,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 SUB_LIST+=	PORTVERSION="${PORTVERSION}"
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${TAR} -yxf ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} -C ${WRKSRC}
