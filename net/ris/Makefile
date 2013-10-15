@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ris
-# Date created:		3 September 2005
-# Whom:			Alex Deiter <tiamat@komi.mts.ru>
-#
-# $FreeBSD: ports/net/ris/Makefile,v 1.8 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: Alex Deiter <tiamat@komi.mts.ru>
+# $FreeBSD: net/ris/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ris
 PORTVERSION=	0.4
@@ -37,6 +33,7 @@ SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}	\
 		LOG_FILE=${LOG_FILE}		\
 		DEVLIST_CACHE=${DEVLIST_CACHE}
 
+NO_STAGE=	yes
 post-patch:
 .for SCRIPT in ${SCRIPTS}
 	@${REINPLACE_CMD} -e \
