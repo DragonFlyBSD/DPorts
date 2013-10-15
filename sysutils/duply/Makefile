@@ -1,5 +1,5 @@
-# Created By: Michael Ranner <michael@ranner.eu>
-# $FreeBSD: sysutils/duply/Makefile 313851 2013-03-11 01:09:57Z beech $
+# Created by: Michael Ranner <michael@ranner.eu>
+# $FreeBSD: sysutils/duply/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	duply
 PORTVERSION=	1.5.9
@@ -22,6 +22,7 @@ NO_BUILD=	yes
 PORTDOCS=	INSTALL.txt gpl-2.0.txt
 PLIST_FILES=	bin/duply
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,/etc/duply,${ETCDIR},g" ${WRKSRC}/duply
 
