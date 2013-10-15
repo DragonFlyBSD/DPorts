@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: graphics/p5-Graph-ReadWrite/Makefile 325137 2013-08-21 14:17:50Z mat $
+# $FreeBSD: graphics/p5-Graph-ReadWrite/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Graph-ReadWrite
 PORTVERSION=	2.04
@@ -30,6 +30,7 @@ MAN3=		Graph::Reader.3 \
 		Graph::Writer::XML.3 \
 		Graph::Writer::daVinci.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|Graph-ReadWrite|Graph::ReadWrite|' ${WRKSRC}/Makefile.PL
 
