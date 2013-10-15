@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Cache-Transparent/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-Cache-Transparent/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Cache-Transparent
 PORTVERSION=	1.1
@@ -17,4 +17,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		HTTP::Cache::Transparent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
