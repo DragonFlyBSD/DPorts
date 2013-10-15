@@ -1,9 +1,5 @@
-# New ports collection makefile for:	LWP-UserAgent-POE
-# Date created:				25 February 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: www/p5-LWP-UserAgent-POE/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: www/p5-LWP-UserAgent-POE/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LWP-UserAgent-POE
 PORTVERSION=	0.03
@@ -26,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		LWP::UserAgent::POE.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
