@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org> et al.
-# $FreeBSD: graphics/shotwell/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: graphics/shotwell/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	shotwell
 PORTVERSION=	0.14.1
@@ -39,6 +39,7 @@ SHEBANG_FILES=	${WRKSRC}/${CONFIGURE_SCRIPT} ${WRKSRC}/chkver
 
 GLIB_SCHEMAS=	org.yorba.shotwell.gschema.xml org.yorba.shotwell-extras.gschema.xml
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -E \
 		-e 's|share/shotwell|${DATADIR_REL}|g' \
