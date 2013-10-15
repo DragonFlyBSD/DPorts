@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/p5-Yahoo-BBAuth/Makefile 326999 2013-09-11 18:03:40Z az $
+# $FreeBSD: security/p5-Yahoo-BBAuth/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Yahoo-BBAuth
 PORTVERSION=	0.50
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		Yahoo::BBAuth.3
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${WWWDIR}/cgi-bin
 	${INSTALL_SCRIPT} ${WRKSRC}/eg/* ${WWWDIR}/cgi-bin
