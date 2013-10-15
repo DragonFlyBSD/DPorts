@@ -1,9 +1,5 @@
-# New ports collection makefile for:	syslogger
-# Date created:				01 October 2008
-# Whom:					Xavier Beaudouin <kiwi@oav.net>
-#
-# $FreeBSD: ports/sysutils/syslogger/Makefile,v 1.2 2012/11/17 06:01:47 svnexp Exp $
-#
+# Created by: Xavier Beaudouin <kiwi@oav.net>
+# $FreeBSD: sysutils/syslogger/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	syslogger
 PORTVERSION=	1.0
@@ -17,6 +13,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=		bin/syslogger
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/syslogger ${PREFIX}/bin
 
