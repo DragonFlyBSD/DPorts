@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/urxvt-perls/Makefile,v 1.1 2013/01/08 05:44:36 svnexp Exp $
+# $FreeBSD: x11/urxvt-perls/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	urxvt-perls
 PORTVERSION=	2.0
@@ -25,6 +25,7 @@ PLIST_FILES+=	${DOCSDIR_REL}/README
 PLIST_DIRS+=	${DOCSDIR_REL}
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${INSTDIR_REL}
 .for s in ${SCRIPTS}
