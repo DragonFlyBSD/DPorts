@@ -1,9 +1,4 @@
-# New ports collection makefile for:	php53-exif
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/php53-exif/Makefile,v 1.2 2012/11/17 05:58:18 svnexp Exp $
-#
+# $FreeBSD: graphics/php53-exif/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 CATEGORIES=	graphics
 
@@ -11,4 +6,5 @@ MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-exif
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
