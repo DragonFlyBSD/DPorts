@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: ports/sysutils/safecat/Makefile,v 1.17 2012/11/17 06:01:45 svnexp Exp $
+# $FreeBSD: sysutils/safecat/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	safecat
 PORTVERSION=	1.13
@@ -21,6 +21,7 @@ MAKE_JOBS_UNSAFE=yes
 MAN1=		maildir.1 safecat.1
 PLIST_FILES=	bin/maildir bin/safecat
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,/usr/local,${PREFIX}," ${WRKSRC}/conf-root
 	@${REINPLACE_CMD} -e "s,cc -O2,${CC} ${CFLAGS}," ${WRKSRC}/conf-cc
