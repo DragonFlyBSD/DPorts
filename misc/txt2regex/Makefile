@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/txt2regex/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/txt2regex/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	txt2regex
 PORTVERSION=	0.8
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 MAN1=		txt2regex.1
 PLIST_FILES=	bin/txt2regex
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		"s,/bin/bash,${LOCALBASE}/bin/bash,g" ${WRKSRC}/${DISTNAME}.sh
