@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: graphics/p5-SVG-Graph/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: graphics/p5-SVG-Graph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	SVG-Graph
 PORTVERSION=	0.04
@@ -40,4 +40,5 @@ MAN3=		SVG::Graph.3 \
 		SVG::Graph::Glyph::tree.3 \
 		SVG::Graph::Glyph::wedge.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
