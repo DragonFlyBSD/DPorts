@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/pngwriter/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/pngwriter/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pngwriter
 PORTVERSION=	0.5.4
@@ -29,6 +29,7 @@ PLIST_DIRS=	%%DATADIR%%/fonts \
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
