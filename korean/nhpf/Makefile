@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/nhpf/Makefile 321492 2013-06-21 18:10:18Z bsam $
+# $FreeBSD: korean/nhpf/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	nhpf
 PORTVERSION=	1.42
@@ -15,6 +15,7 @@ PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
