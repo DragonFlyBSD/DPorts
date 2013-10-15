@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: www/roundup/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/roundup/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	roundup
 PORTVERSION=	1.4.21
@@ -18,6 +18,7 @@ USE_PYDISTUTILS=yes
 OPTIONS_DEFINE=	SQLITE PGSQL MYSQL NLS
 OPTIONS_DEFAULT=SQLITE NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLITE}
