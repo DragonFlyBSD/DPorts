@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/pecl-inclued/Makefile 311564 2013-02-04 03:00:46Z miwi $
+# $FreeBSD: devel/pecl-inclued/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	inclued
 PORTVERSION=	0.1.3
@@ -19,4 +19,5 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-inclued
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
