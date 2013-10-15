@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: games/pengpong/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: games/pengpong/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pengpong
 PORTVERSION=	0.3
@@ -18,6 +18,7 @@ USE_PERL5=	build
 DATAFILES=	24P_Copperplate_Blue.png ball.tga logo.jpg \
 		paddle.tga red.png
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|/usr/local/share/games/pengpong|${DATADIR}|' \
 		${WRKSRC}/files.h
