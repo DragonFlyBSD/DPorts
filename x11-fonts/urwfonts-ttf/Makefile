@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/x11-fonts/urwfonts-ttf/Makefile,v 1.11 2013/02/18 14:40:13 svnexp Exp $
+# $FreeBSD: x11-fonts/urwfonts-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	urwfonts-ttf
 PORTVERSION=	1.0.7b18
@@ -17,6 +17,7 @@ NO_WRKSUBDIR=	yes
 USE_BZIP2=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/lib/X11/fonts/urwfonts-ttf
 	${INSTALL_DATA} ${WRKSRC}/*.ttf ${WRKSRC}/fonts.* ${PREFIX}/lib/X11/fonts/urwfonts-ttf
