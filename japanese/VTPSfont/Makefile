@@ -1,9 +1,5 @@
-# New ports collection makefile for:	VTPSfont
-# Date created:		99/06/15
-# Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/VTPSfont/Makefile,v 1.9 2012/11/17 05:58:31 svnexp Exp $
-#
+# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
+# $FreeBSD: japanese/VTPSfont/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	VTPSfont
 PORTVERSION=	1.3
@@ -21,6 +17,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-extract:
 		@${RM} -rf ${WRKDIR}
 		@${MKDIR} ${WRKDIR}
