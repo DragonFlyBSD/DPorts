@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pysearch
-# Date created:		Mar. 01, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/www/py-pysearch/Makefile,v 1.8 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: www/py-pysearch/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pysearch
 PORTVERSION=	3.1
@@ -22,6 +18,7 @@ PYDISTUTILS_PKGNAME=	pYsearch
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
