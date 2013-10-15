@@ -1,5 +1,5 @@
 # Created by: Josh Elsasser <jre@vineyard.net>
-# $FreeBSD: lang/haskell-mode.el/Makefile 318454 2013-05-18 20:42:13Z rakuco $
+# $FreeBSD: lang/haskell-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	haskell-mode
 PORTVERSION=	2.9.1
@@ -34,6 +34,7 @@ PLIST_DIRS=	share/emacs/site-lisp/${PORTNAME}/
 PLIST_FILES=	${ELISPFILES:C/^| [^ ]/${PLIST_DIRS}/g}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 do-install:
 	@${MKDIR} ${ELISPDIR}
