@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: print/ttftot42/Makefile 316593 2013-04-26 09:23:54Z bapt $
+# $FreeBSD: print/ttftot42/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ttftot42
 PORTVERSION=	0.3.1
@@ -19,4 +19,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include/freetype1/freetype \
 		-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
