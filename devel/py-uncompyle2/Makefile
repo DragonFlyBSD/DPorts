@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: ports/devel/py-uncompyle2/Makefile,v 1.2 2013/01/06 11:42:00 svnexp Exp $
+# $FreeBSD: devel/py-uncompyle2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	uncompyle2
 PORTVERSION=	1.1
@@ -17,6 +17,7 @@ USE_PYTHON=	2.7
 USE_PYDISTUTILS=yes
 REINPLACE_ARGS=	-i ""
 
+NO_STAGE=	yes
 pre-patch:
 	# Removing blanks at EOL
 	${FIND} ${WRKSRC} -type f -print0 | \
