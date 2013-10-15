@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: graphics/gimp/Makefile 321699 2013-06-24 18:24:31Z kwm $
+# $FreeBSD: graphics/gimp/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/gimp/Makefile,v 1.22 2012/11/26 13:31:16 kwm Exp $
 
 PORTNAME=	gimp
@@ -24,6 +24,7 @@ HELP_DESC=	Gimp-Help (50+MB distfile)
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHELP}
