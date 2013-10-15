@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sceptre
-# Date created:		11 February 2001
-# Whom:			grog
-#
-# $FreeBSD: ports/cad/sceptre/Makefile,v 1.15 2012/11/17 05:54:55 svnexp Exp $
-#
+# Created by: grog
+# $FreeBSD: cad/sceptre/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	sceptre
 PORTVERSION=	2012.061
@@ -20,6 +16,7 @@ USE_FORTRAN=	yes
 MAKE_JOBS_UNSAFE=	yes
 NO_WRKSUBDIR=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 FFLAGS+=	-fno-automatic
