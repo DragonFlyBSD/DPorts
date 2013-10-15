@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer1-plugins-vpx/Makefile 325825 2013-08-31 18:29:55Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins-vpx/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
@@ -10,4 +10,5 @@ DIST=		good
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
