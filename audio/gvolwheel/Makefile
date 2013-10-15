@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: audio/gvolwheel/Makefile 325020 2013-08-19 21:25:22Z vg $
+# $FreeBSD: audio/gvolwheel/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gvolwheel
 PORTVERSION=	1.0
@@ -17,6 +17,7 @@ BUILD_DEPENDS=	intltoolize:${PORTSDIR}/textproc/intltool
 CONFIGURE_ARGS+=--enable-oss
 GNU_CONFIGURE=	yes
 USES=		gmake iconv pathfix pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk30
 
 PORTDOCS=	AUTHORS ChangeLog README
