@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.securitypolicy
-# Date created:				18 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/security/py-zope.securitypolicy/Makefile,v 1.3 2012/11/17 06:01:18 svnexp Exp $
-#
+# $FreeBSD: security/py-zope.securitypolicy/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	zope.securitypolicy
 PORTVERSION=	3.7.0
@@ -30,6 +25,8 @@ RUN_DEPENDS=	zodb${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/databases/zodb3 \
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
