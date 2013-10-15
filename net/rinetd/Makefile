@@ -1,5 +1,5 @@
 # Created by: alexp
-# $FreeBSD: net/rinetd/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/rinetd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rinetd
 PORTVERSION=	0.62
@@ -25,6 +25,7 @@ PLIST_FILES=	sbin/rinetd
 
 USE_RC_SUBR=	rinetd
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
