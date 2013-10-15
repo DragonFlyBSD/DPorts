@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: databases/rubygem-rubyrep/Makefile 320106 2013-06-06 15:41:26Z bapt $
+# $FreeBSD: databases/rubygem-rubyrep/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=		rubyrep
 PORTVERSION=		1.2.0
@@ -26,6 +26,7 @@ OPTIONS_DEFAULT=	PGSQL
 
 PLIST_FILES=	bin/rubyrep
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGSQL}
