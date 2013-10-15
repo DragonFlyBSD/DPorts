@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Metacity theme microGUI
-# Date created:	23 April 2004
-# Whom:	Douglas Thrift <douglas@douglasthrift.net>
-#
-# $FreeBSD: ports/x11-themes/metacity-theme-microgui/Makefile,v 1.10 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Douglas Thrift <douglas@douglasthrift.net>
+# $FreeBSD: x11-themes/metacity-theme-microgui/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	microgui
 PORTVERSION=	1.0
@@ -24,5 +20,6 @@ RESTRICTED=	${REASON}
 
 WRKSRC=		${WRKDIR}/microGUI
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../metacity-themes/Makefile.metacity"
 .include <bsd.port.mk>
