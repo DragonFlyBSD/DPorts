@@ -1,9 +1,5 @@
-# New ports collection makefile for:   abs
-# Date created:        20 January 1999
-# Whom:                gmarco@giovannelli.it
-#
-# $FreeBSD: ports/math/abs/Makefile,v 1.22 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: gmarco@giovannelli.it
+# $FreeBSD: math/abs/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	abs
 PORTVERSION=	0908
@@ -20,6 +16,7 @@ PLIST_FILES=	bin/abs
 USE_XORG=	x11 xpm xaw
 WRKSRC=		${WRKDIR}/abs-src-0.908
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/trcasestr/strcasestr_/g' ${WRKSRC}/Database/cell.c
 
