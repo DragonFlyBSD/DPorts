@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/tpm-tools/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: security/tpm-tools/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tpm-tools
 PORTVERSION=	1.3.5
@@ -38,4 +38,5 @@ MAN8=		tpm_changeownerauth.8 tpm_clear.8 tpm_createek.8	\
 		tpm_setclearable.8 tpm_setenable.8 tpm_setoperatorauth.8 \
 		tpm_setownable.8 tpm_setpresence.8 tpm_takeownership.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
