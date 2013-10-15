@@ -1,5 +1,4 @@
-# Created by: Philip M. Goillucci <pgollucci@p6m7g8.com>
-# $FreeBSD: textproc/p5-HTML-SuperForm/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-HTML-SuperForm/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-SuperForm
 PORTVERSION=	1.09
@@ -30,6 +29,7 @@ MAN3=	HTML::SuperForm.3 \
 	HTML::SuperForm::Field::Text.3\
 	HTML::SuperForm::Field::Textarea.3
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} ${WRKSRC}/lib/HTML/SuperForm.pm.orig
 
