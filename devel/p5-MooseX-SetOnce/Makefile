@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-SetOnce/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-SetOnce/Makefile 329609 2013-10-06 17:45:15Z sunpoet $
 
 PORTNAME=	MooseX-SetOnce
-PORTVERSION=	0.200001
+PORTVERSION=	0.200002
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,13 +14,10 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Moose>=0.90:${PORTSDIR}/devel/p5-Moose
-RUN_DEPENDS=	p5-Moose>=0.90:${PORTSDIR}/devel/p5-Moose
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		MooseX::SetOnce.3
 
 .include <bsd.port.mk>
