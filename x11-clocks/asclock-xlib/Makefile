@@ -1,5 +1,4 @@
-# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-# $FreeBSD: x11-clocks/asclock-xlib/Makefile 322014 2013-06-28 23:05:59Z bapt $
+# $FreeBSD: x11-clocks/asclock-xlib/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	asclock-xlib
 PORTVERSION=	2.0.11
@@ -22,6 +21,7 @@ IS_INTERACTIVE=	YES
 HAS_CONFIGURE=	YES
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
