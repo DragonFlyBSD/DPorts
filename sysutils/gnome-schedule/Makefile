@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-schedule/Makefile 317491 2013-05-06 09:07:58Z bapt $
+# $FreeBSD: sysutils/gnome-schedule/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-schedule/Makefile,v 1.5 2007/09/10 06:20:14 mezz Exp $
 
 PORTNAME=	gnome-schedule
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--disable-applet
 PLIST_SUB+=	APPLET="@comment "
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
