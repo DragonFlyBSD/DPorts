@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/linsmith/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: science/linsmith/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	linsmith
 PORTVERSION=	0.99.26
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^Icon/s|/usr/share|${PREFIX}/share|' \
