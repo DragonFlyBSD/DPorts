@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/pygts/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: graphics/pygts/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pygts
 PORTVERSION=	0.3.1
@@ -17,4 +17,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 USES=			pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
