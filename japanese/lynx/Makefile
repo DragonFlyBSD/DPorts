@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: japanese/lynx/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: japanese/lynx/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
@@ -46,6 +46,7 @@ JAPANESE_UTF8_CONFIGURE_ENABLE=	japanese-utf8
 COLOR_STYLE_CONFIGURE_ENABLE=	color-style
 DEFAULT_COLORS_CONFIGURE_ENABLE=default-colors
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
