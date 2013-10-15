@@ -1,5 +1,5 @@
 # Created by: rox@fearme.com
-# $FreeBSD: ports/irc/roxirc/Makefile,v 1.20 2012/11/26 23:00:52 svnexp Exp $
+# $FreeBSD: irc/roxirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	roxirc
 PORTVERSION=	2.0
@@ -10,9 +10,10 @@ MASTER_SITES=	http://roxirc.lighter.net/download/
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	A tcl/tk irc client
 
-USE_TK=		yes
+USES+=		tk:run
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|if \[ -x .*|${WISH} "$$0" "$$@"|' ${WRKSRC}/roxirc
 
