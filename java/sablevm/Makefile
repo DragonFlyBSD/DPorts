@@ -1,5 +1,4 @@
-# Creaetd by:	Archie Cobbs <archie@freebsd.org>
-# $FreeBSD: java/sablevm/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: java/sablevm/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	sablevm
 PORTVERSION=	1.13
@@ -31,6 +30,7 @@ OPTIONS_DEFAULT=MAN SVMCP
 MAN_DESC=	Build and install man pages
 SVMCP_DESC=	Install SableVM classpath
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMAN}
