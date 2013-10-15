@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ng-devel
-# Date created:				18 June 2003
-# Whom:					Kawaguti Ginga <ginga-freebsd@ginganet.org>
-#
-# $FreeBSD: ports/japanese/ng-devel/Makefile,v 1.17 2012/11/17 05:58:37 svnexp Exp $
-#
+# Created by: Kawaguti Ginga <ginga-freebsd@ginganet.org>
+# $FreeBSD: japanese/ng-devel/Makefile 329696 2013-10-07 12:23:05Z bapt $
 
 PORTNAME=	ng
 PORTVERSION=	1.5.b1
@@ -19,9 +15,10 @@ GNU_CONFIGURE=	yes
 
 MYPORTDOCS=	CHANGES.1_3 CHANGES.1_4 CHANGES.doc Ng.FAQ Ng.doc Ng.ref Ng.tut \
 		README.Ng README.SKG
-LATEST_LINK=	ng-devel
+PKGNAMESUFFIX=	-devel
 DOCSDIR=	${PREFIX}/share/doc/ja/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ng ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
