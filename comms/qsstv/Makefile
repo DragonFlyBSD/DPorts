@@ -1,4 +1,4 @@
-# $FreeBSD: comms/qsstv/Makefile 324748 2013-08-15 01:52:50Z db $
+# $FreeBSD: comms/qsstv/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	qsstv
 PORTVERSION=	7.1.7
@@ -21,6 +21,7 @@ USE_QT4=	gui network moc_build qmake_build rcc_build uic_build
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
