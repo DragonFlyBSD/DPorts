@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/net-p2p/phex/Makefile,v 1.33 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: net-p2p/phex/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	phex
 PORTVERSION=	3.4.2.116
@@ -22,6 +22,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 PORTDOCS=	Phex_other.htm \
 		Undocumented.htm
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
 	@${MKDIR} ${DATADIR}
