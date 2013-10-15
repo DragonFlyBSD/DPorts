@@ -1,4 +1,4 @@
-$FreeBSD: ports/textproc/tkxmlive/files/patch-interface.tcl,v 1.3 2012/11/17 06:02:23 svnexp Exp $
+$FreeBSD: textproc/tkxmlive/files/patch-interface.tcl 300897 2012-07-14 14:29:18Z beat $
 --- interface.tcl	Thu May 30 23:56:36 2002
 +++ interface.tcl.new	Fri Feb 20 11:06:41 2004
 @@ -1,4 +1,6 @@

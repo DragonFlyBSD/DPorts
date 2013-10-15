@@ -1,8 +1,5 @@
-# New ports collection makefile for:	tkxmlive
-# Date created:				4 December 2003
-# Whom:					nivit@users.sourceforge.net
-#
-# $FreeBSD: ports/textproc/tkxmlive/Makefile,v 1.7 2012/11/17 06:02:23 svnexp Exp $
+# Created by: nivit@users.sourceforge.net
+# $FreeBSD: textproc/tkxmlive/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		tkxmlive
 PORTVERSION=		0.1.5
@@ -22,6 +19,7 @@ USE_TK_RUN=		84+
 
 WRKSRC=			${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 REPLACE_FILES=		${WRKSRC}/interface.tcl \
