@@ -1,5 +1,5 @@
 # Created by: Mattis Michel <sic_zer0@hotmail.com>
-# $FreeBSD: ports/x11-wm/matwm2/Makefile,v 1.11 2013/01/29 07:44:40 svnexp Exp $
+# $FreeBSD: x11-wm/matwm2/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	matwm2
 DISTVERSION=	0.1.2pre3
@@ -18,4 +18,5 @@ USE_XORG=	x11 xext xinerama xft
 PLIST_FILES=	bin/matwm2
 MAN1=		matwm2.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
