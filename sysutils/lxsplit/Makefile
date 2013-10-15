@@ -1,5 +1,5 @@
 # Created by: kiesel@schlund.de
-# $FreeBSD: sysutils/lxsplit/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: sysutils/lxsplit/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	lxsplit
 PORTVERSION=	0.2.4
@@ -17,6 +17,7 @@ PORTDOCS=	ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
