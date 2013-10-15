@@ -1,8 +1,5 @@
-# New ports collection makefile for:	plonx
-# Date created:				25 November 2005
-# Whom:					clive crous <clive@darkarts.co.za>
-#
-# $FreeBSD: ports/games/plonx/Makefile,v 1.3 2012/11/17 05:57:49 svnexp Exp $
+# Created by: clive crous <clive@darkarts.co.za>
+# $FreeBSD: games/plonx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	plonx
 PORTVERSION=	0.03
@@ -17,6 +14,7 @@ PORTDOCS=	README
 
 LDFLAGS+=	-lncurses
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} -o ${WRKSRC}/${PORTNAME} \
 		${WRKSRC}/${PORTNAME}.c
