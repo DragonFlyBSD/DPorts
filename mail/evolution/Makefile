@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: mail/evolution/Makefile 326159 2013-09-03 15:25:41Z bapt $
+# $FreeBSD: mail/evolution/Makefile 327742 2013-09-20 19:59:12Z bapt $
 #   $MCom: ports/trunk/mail/evolution/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution
@@ -55,6 +55,7 @@ OPTIONS_DEFAULT=LDAP CANBERRA
 CANBERRA_DESC=	Canberra theme audio plugin
 SPAMASSASSIN_DESC=	SpamAssassin spam filtering
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
