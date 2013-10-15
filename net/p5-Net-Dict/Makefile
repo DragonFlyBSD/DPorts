@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net/p5-Net-Dict/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: net/p5-Net-Dict/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
 
 PORTNAME=	Net-Dict
 PORTVERSION=	2.10
@@ -16,8 +16,6 @@ LICENSE_COMB=	dual
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Net::Dict.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '/&configure_testsuite/d; /EXE_FILES/d' ${WRKSRC}/Makefile.PL
