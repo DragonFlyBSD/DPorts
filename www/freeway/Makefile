@@ -1,9 +1,5 @@
-# New ports collection makefile for:   freeway
-# Date created:		22 Sep 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/freeway/Makefile,v 1.3 2012/11/17 06:02:33 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/freeway/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	freeway
 PORTVERSION=	1.4.2.197
@@ -20,6 +16,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
