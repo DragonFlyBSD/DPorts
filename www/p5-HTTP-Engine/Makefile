@@ -1,9 +1,4 @@
-# New ports collection makefile for:	HTTP::Engine
-# Date created:		20 Jan 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTTP-Engine/Makefile 325974 2013-09-02 11:04:10Z az $
-#
+# $FreeBSD: www/p5-HTTP-Engine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Engine
 PORTVERSION=	0.03005
@@ -52,4 +47,5 @@ MAN3=		HTTP::Engine.3 \
 		HTTP::Engine::Test::Request.3 \
 		HTTP::Engine::Types::Core.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
