@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tt
-# Date created:				11 Sep 2003
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: ports/games/tt/Makefile,v 1.6 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: games/tt/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tt
 PORTVERSION=	15.1
@@ -17,6 +13,7 @@ ALL_TARGET=	tt
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} -g games -m 2555 ${WRKSRC}/tt ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
