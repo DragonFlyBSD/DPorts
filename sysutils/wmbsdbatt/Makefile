@@ -1,8 +1,5 @@
-# New ports collection Makefile for: 	wmbsdbatt
-# Date created:				04 Feb 2004
-# Whom:					Josef El-Rayes <josef@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/wmbsdbatt/Makefile,v 1.12 2012/11/17 06:01:50 svnexp Exp $
+# Created by: Josef El-Rayes <josef@FreeBSD.org>
+# $FreeBSD: sysutils/wmbsdbatt/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	wmbsdbatt
 PORTVERSION=	0.1
@@ -17,6 +14,7 @@ USE_XORG=	x11 xpm
 
 PLIST_FILES=	bin/wmbsdbatt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmbsdbatt ${PREFIX}/bin
 
