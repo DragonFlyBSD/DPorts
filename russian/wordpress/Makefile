@@ -1,5 +1,5 @@
 # Created by: Mihail Timofeev <9267096@gmail.com>
-# $FreeBSD: russian/wordpress/Makefile 327072 2013-09-12 14:29:29Z sunpoet $
+# $FreeBSD: russian/wordpress/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	wordpress
 PORTVERSION=	3.6.1
@@ -27,6 +27,7 @@ PORTDOCS=	license.txt readme.html
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_CMD} "If you want to upgrade, you must read upgrade document."
 	@${ECHO_CMD} ""
