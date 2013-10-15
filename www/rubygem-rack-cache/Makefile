@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: www/rubygem-rack-cache/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: www/rubygem-rack-cache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rack-cache
 PORTVERSION=	1.2
@@ -15,4 +15,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
