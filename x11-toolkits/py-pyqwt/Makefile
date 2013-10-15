@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: x11-toolkits/py-pyqwt/Makefile 322831 2013-07-12 13:20:04Z bapt $
+# $FreeBSD: x11-toolkits/py-pyqwt/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	pyqwt
 PORTVERSION=	5.2.0
@@ -28,6 +28,7 @@ USE_PYTHON=	2.5+
 MAKEFILE=	GNUmakefile
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -e 's#%%LOCALBASE%%#${LOCALBASE}#g' \
 			${WRKSRC}/GNUmakefile
