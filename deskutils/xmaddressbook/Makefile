@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: deskutils/xmaddressbook/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# $FreeBSD: deskutils/xmaddressbook/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xmaddressbook
 PORTVERSION=	1.5.3
@@ -17,4 +17,5 @@ USE_XORG=	ice sm x11 xext xi xp xt oldx
 WRKSRC=		${WRKDIR}/xmaddressbook
 MAN1=		xmaddressbook.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
