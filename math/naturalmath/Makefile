@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith
-# $FreeBSD: math/naturalmath/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: math/naturalmath/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	naturalmath
 PORTVERSION=	0.5
@@ -14,6 +14,7 @@ USE_TEX=	latex:build dvipsk:build
 USES=		shebangfix perl5
 SHEBANG_FILES=	naturalmath
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}; ./naturalmath tutor.nat; \
 		${LOCALBASE}/bin/latex tutor; ${LOCALBASE}/bin/latex tutor; \
