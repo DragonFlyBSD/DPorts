@@ -1,9 +1,5 @@
-# New ports collection makefile for:        gb2jis
-# Date created:     8 November 2001
-# Whom:             Zhang Shu
-#
-# $FreeBSD: ports/chinese/jis2gb/Makefile,v 1.6 2012/11/17 05:54:57 svnexp Exp $
-#
+# Created by: Zhang Shu
+# $FreeBSD: chinese/jis2gb/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	jis2gb
 PORTVERSION=	1.5
@@ -17,6 +13,6 @@ COMMENT=	Convert JIS Kanji to GuoBiao Hanzi
 WRKSRC=		${WRKDIR}/${PORTNAME}
 ALL_TARGET=
 
-MAN1=		${PORTNAME}.1
+#MAN1=		${PORTNAME}.1
 
 .include <bsd.port.mk>
