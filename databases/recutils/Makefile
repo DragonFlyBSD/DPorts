@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: databases/recutils/Makefile 322066 2013-06-29 21:46:23Z antoine $
+# $FreeBSD: databases/recutils/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	recutils
 PORTVERSION=	1.5
@@ -22,6 +22,7 @@ MAN1=		csv2rec.1 rec2csv.1 recdel.1 recfix.1 recfmt.1 recinf.1 \
 		recins.1 recsel.1 recset.1
 PORTDOCS=	ChangeLog NEWS README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
