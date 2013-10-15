@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Changes/Makefile 324945 2013-08-19 07:07:05Z culot $
+# $FreeBSD: devel/p5-CPAN-Changes/Makefile 329780 2013-10-08 13:22:57Z culot $
 
 PORTNAME=	CPAN-Changes
-PORTVERSION=	0.23
+PORTVERSION=	0.25
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,11 +15,5 @@ LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN1=	tidy_changelog.1
-MAN3=	CPAN::Changes.3 \
-	CPAN::Changes::Release.3 \
-	CPAN::Changes::Spec.3 \
-	Test::CPAN::Changes.3 \
 
 .include <bsd.port.mk>
