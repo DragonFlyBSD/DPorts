@@ -1,9 +1,5 @@
-# New ports collection makefile for:	biology/p5-Bio-ASN1-EntrezGene
-# Date created:				12 October 2005
-# Whom:					Mauricio Herrera Cuadra <mauricio@arareko.net>
-#
-# $FreeBSD: biology/p5-Bio-ASN1-EntrezGene/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: Mauricio Herrera Cuadra <mauricio@arareko.net>
+# $FreeBSD: biology/p5-Bio-ASN1-EntrezGene/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	Bio-ASN1-EntrezGene
 PORTVERSION=	1.091
@@ -25,4 +21,5 @@ MAN3=		Bio::ASN1::EntrezGene.3 \
 		Bio::ASN1::Sequence.3 \
 		Bio::ASN1::Sequence::Indexer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
