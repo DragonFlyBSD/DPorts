@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: games/xjewel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xjewel/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xjewel
 PORTVERSION=	1.6
@@ -23,6 +23,7 @@ MAN6=		xjewel.6
 FONTSDIR=	lib/X11/fonts/local
 PLIST_SUB=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 pre-install:
 	@${SETENV} PKG_PREFIX=${PREFIX} \
 		${SH} ${PKGREQ} ${PKGNAME} INSTALL
