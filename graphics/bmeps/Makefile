@@ -1,5 +1,5 @@
 # Created by: Hideyuki KURASHINA <rushani@FreeBSD.org>
-# $FreeBSD: graphics/bmeps/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/bmeps/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	bmeps
 PORTVERSION=	2.2.26
@@ -41,6 +41,7 @@ PLIST_FILES=	bin/bmeps \
 PLIST_DIRS=	%%DATADIR%%/de \
 		%%DATADIR%%
 
+NO_STAGE=	yes
 post-build:
 	@(cd ${WRKSRC} && ./stc --/log/stderr/level=error \
 		--log/stdout/level=none --/log/file/keep=none \
