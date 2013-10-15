@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	cdash
-# Date created:				12 August 2011
-# Whom:					gahr
-#
-# $FreeBSD: devel/cdash/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: gahr
+# $FreeBSD: devel/cdash/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cdash
 PORTVERSION=	2.0.2
@@ -32,6 +28,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/./-/g}
 SUB_FILES=	pkg-message
 SUB_LIST+=	DB_TYPE=${DB_TYPE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
