@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/geoip-java/Makefile,v 1.4 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/geoip-java/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	geoip
 PORTVERSION=	1.2.8
@@ -25,6 +25,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/maxmind-geoip-${PORTVERSION}.jar
 PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-build:
