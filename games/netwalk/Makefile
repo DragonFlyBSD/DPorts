@@ -1,4 +1,4 @@
-# $FreeBSD: games/netwalk/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/netwalk/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	netwalk
 PORTVERSION=	0.4.10
@@ -40,6 +40,7 @@ PORTDOCS=	README
 DESKTOP_ENTRIES="NetWalk" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;LogicGame;" "false"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
