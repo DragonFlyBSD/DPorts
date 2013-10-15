@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-jsonlib
-# Date created:		2008-07-21
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-jsonlib/Makefile,v 1.10 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-jsonlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	jsonlib
 PORTVERSION=	1.6.1
@@ -21,4 +17,5 @@ PYEASYINSTALL_ARCHDEP=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
