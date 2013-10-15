@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@freebsddiary.org>
-# $FreeBSD: security/logcheck/Makefile 323257 2013-07-18 21:52:19Z glarkin $
+# $FreeBSD: security/logcheck/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	logcheck
 PORTVERSION=	1.3.15
@@ -33,7 +33,7 @@ OPTIONS_DEFAULT=CRON
 .endif
 
 # Enable Perl dependency for logtail script
-USE_PERL5=	yes
+USES=		perl5
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S!_!-!}
 BINMODE=	755
@@ -58,6 +58,7 @@ PATCH_LIST=	extra-patch-debian__logcheck.cron.d \
 		extra-patch-src__logtail2
 EXTRA_PATCHES=	${PATCH_LIST:C|^|${WRKDIR}/|g}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-patch:
