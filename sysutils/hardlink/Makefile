@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: sysutils/hardlink/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/hardlink/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	hardlink
 PORTVERSION=	0.2.0
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=PCRE
 
 PORTSCOUT=	limit:(?<!~rc[0-9])$$
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(WITHOUT_PCRE)
