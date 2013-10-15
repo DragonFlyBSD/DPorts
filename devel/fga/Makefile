@@ -1,10 +1,5 @@
-# New ports collection makefile for:	fga
-# Date created:		2006-11-29
-# Whom:			Stanislav Sedov <stas@FreeBSD.org>
-#
-# $MBSDlabs$
-# $FreeBSD: devel/fga/Makefile 312209 2013-02-14 09:42:12Z gahr $
-#
+# Created by: Stanislav Sedov <stas@FreeBSD.org>
+# $FreeBSD: devel/fga/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fga
 PORTVERSION=	1.4
@@ -24,6 +19,7 @@ EXAMPLES=	graph_gen maxbit tsp tsp_bf
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA}	${WRKSRC}/include/fga.hpp ${PREFIX}/include
 	${INSTALL_PROGRAM} ${EXAMPLES:S,^,${WRKSRC}/,} ${PREFIX}/bin
