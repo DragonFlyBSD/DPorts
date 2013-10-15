@@ -1,5 +1,5 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net/remmina-plugin-nx/Makefile 321344 2013-06-20 01:59:25Z fluffy $
+# $FreeBSD: net/remmina-plugin-nx/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PKGNAMESUFFIX=	-nx
 
@@ -12,4 +12,5 @@ MASTERDIR=	${.CURDIR}/../remmina-plugins
 
 WITH_NX=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
