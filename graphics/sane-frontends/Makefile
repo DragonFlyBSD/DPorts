@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-frontends/Makefile 326266 2013-09-04 09:52:48Z bapt $
+# $FreeBSD: graphics/sane-frontends/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sane-frontends
 PORTVERSION=	1.0.14
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	GTK1 GIMP
 GTK1_DESC=	GTK1 support (Default is GTK2)
 GIMP_DESC=	also build xscanimage as a GIMP plug-in
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK1}
