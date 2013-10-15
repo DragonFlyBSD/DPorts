@@ -1,5 +1,5 @@
 # Created by: jon@witchspace.com
-# $FreeBSD: ports/sysutils/jdiskreport/Makefile,v 1.16 2013/01/23 15:05:38 svnexp Exp $
+# $FreeBSD: sysutils/jdiskreport/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	jdiskreport
 PORTVERSION=	1.4.0
@@ -25,6 +25,7 @@ JDISKDIR?=	${PREFIX}/lib/jdiskreport
 DESKTOP_ENTRIES="JDiskReport" "${COMMENT}" "" "jdiskreport" \
 		"System;Filesystem;" "false"
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKDIR}
 	@${SED} -e 's,%%JDISKDIR%%,${JDISKDIR},g' \

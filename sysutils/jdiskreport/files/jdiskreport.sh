@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: ports/sysutils/jdiskreport/files/jdiskreport.sh,v 1.3 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: sysutils/jdiskreport/files/jdiskreport.sh 300897 2012-07-14 14:29:18Z beat $
 JDISKDIR="%%JDISKDIR%%"
 JAVAVM="%%JAVAVM%%"
 PORTVERSION="%%PORTVERSION%%"
