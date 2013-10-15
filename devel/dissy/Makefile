@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dissy
-# Date created:		2010-10-19
-# Whom:			Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/devel/dissy/Makefile,v 1.5 2012/11/17 05:55:40 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: devel/dissy/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dissy
 PORTVERSION=	10
@@ -31,6 +27,7 @@ USE_PYDISTUTILS=	yes
 
 PORTDOCS=	COPYING ChangeLog README UPGRADE
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
