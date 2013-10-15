@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for: 	sgrep2
-# Date created:			Oct 31, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/sgrep2/Makefile,v 1.10 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/sgrep2/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sgrep2
 PORTVERSION=	1.94a
@@ -24,4 +19,5 @@ CONFLICTS=	sgrep-0.*
 
 MAN1=		sgrep.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
