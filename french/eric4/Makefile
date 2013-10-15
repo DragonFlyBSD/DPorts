@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: french/eric4/Makefile 313845 2013-03-10 21:52:35Z bsam $
+# $FreeBSD: french/eric4/Makefile 329493 2013-10-05 18:30:05Z bsam $
 
 CATEGORIES=	french devel python
 
