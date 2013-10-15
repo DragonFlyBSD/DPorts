@@ -1,5 +1,4 @@
-# Created by George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: devel/fnccheck/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/fnccheck/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fnccheck
 PORTVERSION=	3.2.0
@@ -27,6 +26,7 @@ STRIP=		# none
 
 INFO=		libfc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # should be same as binutils
