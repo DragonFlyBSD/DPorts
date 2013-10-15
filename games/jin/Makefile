@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: ports/games/jin/Makefile,v 1.7 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: games/jin/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	jin
 PORTVERSION=	2.14.1
@@ -28,6 +28,7 @@ FIND_DIRS=	. -type d
 FIND_DATA=	. -type f
 RM_FILES=	${PORTNAME} README changelog.txt gpl.txt
 
+NO_STAGE=	yes
 post-extract:
 .for f in ${RM_FILES}
 	@${RM} ${WRKSRC}/${f}
