@@ -1,5 +1,5 @@
 # Created by: FURUSAWA,Kazuhisa <kazu@jp.freebsd.org>
-# $FreeBSD: ports/x11/lupe/Makefile,v 1.21 2013/01/21 04:11:52 svnexp Exp $
+# $FreeBSD: x11/lupe/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	lupe
 PORTVERSION=	0.08c
@@ -24,6 +24,7 @@ MAN1=		${PORTNAME}.1
 PORTDOCS=	${PORTNAME}.doc
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
