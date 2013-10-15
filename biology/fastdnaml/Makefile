@@ -1,5 +1,5 @@
 # Created by: Motomichi Matsuzaki <mzaki@e-mail.ne.jp>
-# $FreeBSD: biology/fastdnaml/Makefile 321249 2013-06-19 13:35:55Z bsam $
+# $FreeBSD: biology/fastdnaml/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	fastdnaml
 PORTVERSION=	1.2.2
@@ -20,6 +20,7 @@ PORTDOCS=	fastDNAml_doc_1.2.txt fastDNAml_scripts.txt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
