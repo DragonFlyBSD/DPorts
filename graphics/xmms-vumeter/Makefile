@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-vumeter/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/xmms-vumeter/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	vumeter
 PORTVERSION=	0.9.2
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 
 DATADIR=	${PREFIX}/share/xmms/VU_Meter_skins
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|' ${WRKSRC}/src/vumeter.h
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
