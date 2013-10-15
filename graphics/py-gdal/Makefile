@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/py-gdal/Makefile 326670 2013-09-07 17:53:23Z sunpoet $
+# $FreeBSD: graphics/py-gdal/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gdal
 PORTVERSION=	1.10.1
@@ -25,6 +25,7 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/python
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNUMPY}
