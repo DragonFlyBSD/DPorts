@@ -1,10 +1,6 @@
-# New ports collection makefile for:	clearlooks-metacity
-# Date created:		2005-03-20
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/clearlooks-metacity/Makefile,v 1.19 2012/11/17 06:03:30 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: x11-themes/clearlooks-metacity/Makefile 327783 2013-09-20 23:54:03Z bapt $
 #   $MCom: ports/x11-themes/clearlooks-metacity/Makefile,v 1.3 2007/09/10 15:44:29 mezz Exp $
-#
 
 PORTNAME=	clearlooks-metacity
 PORTVERSION=	2.0
@@ -28,6 +24,7 @@ PLIST_FILES=	%%DATADIR%%/metacity-theme-1.xml
 PLIST_DIRS=	%%DATADIR%% \
 		share/themes/Clearlooks
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/metacity-theme-1.xml ${PREFIX}/${DATADIR}
