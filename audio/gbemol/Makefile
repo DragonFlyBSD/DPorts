@@ -1,5 +1,5 @@
 # Created by: Thomas M. Hermann <tmh.public@gmail.com>
-# $FreeBSD: audio/gbemol/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/gbemol/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gbemol
 PORTVERSION=	0.3.2
@@ -16,6 +16,7 @@ LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd \
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk20
 
 post-patch:
