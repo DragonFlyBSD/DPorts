@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/IRC
-# Date created:		19 Jan 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/irc/ruby-irc/Makefile,v 1.10 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: irc/ruby-irc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irc
 PORTVERSION=	0.14
@@ -25,6 +21,7 @@ DOCS_EN=	BUGS		ChangeLog	MANIFEST \
 		NEWS		README		TODO
 DOCS_JA=	MEMO.ja		README.ja	doc.ja/*
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/localize.rb ${RUBY_SITELIBDIR}
 	${MKDIR} ${RUBY_SITELIBDIR}/irc
