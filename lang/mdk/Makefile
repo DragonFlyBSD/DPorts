@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: lang/mdk/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: lang/mdk/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	mdk
 PORTVERSION=	1.2.6
@@ -29,6 +29,7 @@ PLIST_FILES=	bin/mixasm \
 		%%DATADIR%%/mixvm.el
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGLADE}
