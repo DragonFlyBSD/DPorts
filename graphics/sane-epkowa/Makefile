@@ -1,5 +1,5 @@
 # Created by: luigi@FreeBSD.org
-# $FreeBSD: graphics/sane-epkowa/Makefile 326095 2013-09-02 21:32:24Z bapt $
+# $FreeBSD: graphics/sane-epkowa/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 # Maintainers:		Luigi Rizzo <luigi@FreeBSD.org>
 #
@@ -19,6 +19,7 @@
 # Given that there is no other way for us to get version 2.11.0,
 # and since this is allowed by the license, we go straight at the
 # URL for the .tar.gz we need.
+NO_STAGE=	yes
 # The various versions of the code are at:
 #
 # http://lx1.avasys.jp/iscan/2.7.0/iscan-2.7.0-1.c2.tar.gz
