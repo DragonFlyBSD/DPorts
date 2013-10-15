@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/raysfilter/Makefile,v 1.17 2012/11/17 05:59:13 svnexp Exp $
+# $FreeBSD: mail/raysfilter/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	raysfilter
 PORTVERSION=	1.14
@@ -9,6 +9,8 @@ DISTNAME=	rays-filter-${PORTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	A configurable filter for Sendmail Milter
+
+NO_STAGE=	yes
 
 CTARGETS+=	rays-filter
 CFLAGS+=	-Wall ${PTHREAD_CFLAGS:S=""==}
