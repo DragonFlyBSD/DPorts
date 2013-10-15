@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: textproc/py-twistedLore/Makefile 326647 2013-09-07 16:15:26Z sunpoet $
+# $FreeBSD: textproc/py-twistedLore/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	twistedLore
 PORTVERSION=	13.1.0
@@ -22,4 +22,5 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
