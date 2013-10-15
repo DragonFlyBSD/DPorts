@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: security/opieprint/Makefile 326999 2013-09-11 18:03:40Z az $
+# $FreeBSD: security/opieprint/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	opieprint
 PORTVERSION=	1.0
@@ -23,6 +23,7 @@ EXTRACT_CMD=	${GZCAT}
 EXTRACT_BEFORE_ARGS=	#
 EXTRACT_AFTER_ARGS=	> ${WRKSRC}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr/local/bin/perl,${PERL},' ${WRKSRC}/opieprint
 
