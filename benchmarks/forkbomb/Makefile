@@ -1,9 +1,5 @@
-# New ports collection makefile for:	forkbomb
-# Date created:		21 Jan 2004
-# Whom:			Radim Kolar
-#
-# $FreeBSD: ports/benchmarks/forkbomb/Makefile,v 1.10 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Radim Kolar
+# $FreeBSD: benchmarks/forkbomb/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	forkbomb
 PORTVERSION=	1.4
@@ -18,4 +14,5 @@ COMMENT=	System stress testing tool
 MAN8=		forkbomb.8
 PLIST_FILES=	sbin/forkbomb
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
