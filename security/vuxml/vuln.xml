@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 327145 2013-09-13 13:13:36Z eadler $
+  $FreeBSD: security/vuxml/vuln.xml 330031 2013-10-10 20:02:42Z ohauer $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,482 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="9003b500-31e3-11e3-b0d0-20cf30e32f6d">
+    <topic>mod_fcgid -- possible heap buffer overwrite</topic>
+    <affects>
+      <package>
+	<name>ap22-mod_fcgid</name>
+	<range><lt>2.3.9</lt></range>
+      </package>
+      <package>
+	<name>ap24-mod_fcgid</name>
+	<range><lt>2.3.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Apache Project reports:</p>
+	<blockquote cite="https://mail-archives.apache.org/mod_mbox/httpd-cvs/201309.mbox/%3C20130929174048.13B962388831@eris.apache.org%3E">
+	  <p>Fix possible heap buffer overwrite.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4365</cvename>
+    </references>
+    <dates>
+      <discovery>2013-09-29</discovery>
+      <entry>2013-10-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="749b5587-2da1-11e3-b1a9-b499baab0cbe">
+    <topic>gnupg -- possible infinite recursion in the compressed packet parser</topic>
+    <affects>
+      <package>
+	<name>gnupg</name>
+	<range><lt>1.4.15</lt></range>
+	<range><ge>2.0.0</ge><lt>2.0.22</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Werner Koch reports:</p>
+	<blockquote cite="http://lists.gnupg.org/pipermail/gnupg-announce/2013q4/000333.html">
+	  <p>Special crafted input data may be used to cause a denial of service
+against GPG (GnuPG's OpenPGP part) and some other OpenPGP
+implementations.  All systems using GPG to process incoming data are
+affected..</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4402</cvename>
+    </references>
+    <dates>
+      <discovery>2013-10-05</discovery>
+      <entry>2013-10-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5c34664f-2c2b-11e3-87c2-00215af774f0">
+    <topic>xinetd -- ignores user and group directives for TCPMUX services</topic>
+    <affects>
+      <package>
+	<name>xinetd</name>
+	<range><lt>2.3.15_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>xinetd would execute configured TCPMUX services without dropping
+	  privilege to match the service configuration allowing the service to
+	  run with same privilege as the xinetd process (root).</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4342</cvename>
+      <url>http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=324678</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=1006100</url>
+    </references>
+    <dates>
+      <discovery>2005-08-23</discovery>
+      <entry>2013-10-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ccefac3e-2aed-11e3-af10-000c29789cb5">
+    <topic>polarssl -- Timing attack against protected RSA-CRT implementation</topic>
+    <affects>
+      <package>
+	<name>polarssl</name>
+	<range><lt>1.2.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PolarSSL Project reports:</p>
+	<blockquote cite="https://polarssl.org/tech-updates/security-advisories/polarssl-security-advisory-2013-05">
+	  <p>The researchers Cyril Arnaud and Pierre-Alain Fouque
+	    investigated the PolarSSL RSA implementation and discovered
+	    a bias in the implementation of the Montgomery multiplication
+	    that we used. For which they then show that it can be used to
+	    mount an attack on the RSA key. Although their test attack is
+	    done on a local system, there seems to be enough indication
+	    that this can properly be performed from a remote system as
+	    well.</p>
+	  <p>All versions prior to PolarSSL 1.2.9 and 1.3.0 are affected
+	    if a third party can send arbitrary handshake messages to your
+	    server.</p>
+	  <p>If correctly executed, this attack reveals the entire private
+	    RSA key after a large number of attack messages (&gt; 600.000 on
+	    a local machine) are sent to show the timing differences.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-5915</cvename>
+      <url>https://polarssl.org/tech-updates/security-advisories/polarssl-security-advisory-2013-05</url>
+      <url>https://polarssl.org/tech-updates/releases/polarssl-1.2.9-released</url>
+    </references>
+    <dates>
+      <discovery>2013-10-01</discovery>
+      <entry>2013-10-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e5414d0c-2ade-11e3-821d-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>30.0.1599.66</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>50 security fixes in this release, including:</p>
+	  <ul>
+	    <li>[223962][270758][271161][284785][284786] Medium CVE-2013-2906:
+	      Races in Web Audio. Credit to Atte Kettunen of OUSPG.</li>
+	    <li>[260667] Medium CVE-2013-2907: Out of bounds read in
+	      Window.prototype object. Credit to Boris Zbarsky.</li>
+	    <li>[265221] Medium CVE-2013-2908: Address bar spoofing related to
+	      the “204 No Content” status code. Credit to Chamal de Silva.</li>
+	    <li>[265838][279277] High CVE-2013-2909: Use after free in
+	      inline-block rendering. Credit to Atte Kettunen of OUSPG.</li>
+	    <li>[269753] Medium CVE-2013-2910: Use-after-free in Web Audio.
+	      Credit to Byoungyoung Lee of Georgia Tech Information Security
+	      Center (GTISC).</li>
+	    <li>[271939] High CVE-2013-2911: Use-after-free in XSLT. Credit to
+	      Atte Kettunen of OUSPG.</li>
+	    <li>[276368] High CVE-2013-2912: Use-after-free in PPAPI. Credit to
+	      Chamal de Silva and 41.w4r10r(at)garage4hackers.com.</li>
+	    <li>[278908] High CVE-2013-2913: Use-after-free in XML document
+	      parsing. Credit to cloudfuzzer.</li>
+	    <li>[279263] High CVE-2013-2914: Use after free in the Windows
+	      color chooser dialog. Credit to Khalil Zhani.</li>
+	    <li>[280512] Low CVE-2013-2915: Address bar spoofing via a
+	      malformed scheme. Credit to Wander Groeneveld. </li>
+	    <li>[281256] High CVE-2013-2916: Address bar spoofing related to
+	      the “204 No Content” status code. Credit to Masato Kinugawa.</li>
+	    <li>[281480] Medium CVE-2013-2917: Out of bounds read in Web Audio.
+	      Credit to Byoungyoung Lee and Tielei Wang of Georgia Tech
+	      Information Security Center (GTISC).</li>
+	    <li>[282088] High CVE-2013-2918: Use-after-free in DOM. Credit to
+	      Byoungyoung Lee of Georgia Tech Information Security Center
+	      (GTISC).</li>
+	    <li>[282736] High CVE-2013-2919: Memory corruption in V8. Credit to
+	      Adam Haile of Concrete Data.</li>
+	    <li>[285742] Medium CVE-2013-2920: Out of bounds read in URL
+	      parsing. Credit to Atte Kettunen of OUSPG.</li>
+	    <li>[286414] High CVE-2013-2921: Use-after-free in resource loader.
+	      Credit to Byoungyoung Lee and Tielei Wang of Georgia Tech
+	      Information Security Center (GTISC).</li>
+	    <li>[286975] High CVE-2013-2922: Use-after-free in template
+	      element. Credit to Jon Butler.</li>
+	    <li>[299016] CVE-2013-2923: Various fixes from internal audits,
+	      fuzzing and other initiatives (Chrome 30).</li>
+	    <li>[275803] Medium CVE-2013-2924: Use-after-free in ICU. Upstream
+	      bug here.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2906</cvename>
+      <cvename>CVE-2013-2907</cvename>
+      <cvename>CVE-2013-2908</cvename>
+      <cvename>CVE-2013-2909</cvename>
+      <cvename>CVE-2013-2910</cvename>
+      <cvename>CVE-2013-2911</cvename>
+      <cvename>CVE-2013-2912</cvename>
+      <cvename>CVE-2013-2913</cvename>
+      <cvename>CVE-2013-2914</cvename>
+      <cvename>CVE-2013-2915</cvename>
+      <cvename>CVE-2013-2916</cvename>
+      <cvename>CVE-2013-2917</cvename>
+      <cvename>CVE-2013-2918</cvename>
+      <cvename>CVE-2013-2919</cvename>
+      <cvename>CVE-2013-2920</cvename>
+      <cvename>CVE-2013-2921</cvename>
+      <cvename>CVE-2013-2922</cvename>
+      <cvename>CVE-2013-2923</cvename>
+      <cvename>CVE-2013-2924</cvename>
+      <url>http://googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2013-10-01</discovery>
+      <entry>2013-10-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e1f99d59-81aa-4662-bf62-c1076f5016c8">
+    <topic>py-graphite-web -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py26-graphite-web</name>
+	<name>py27-graphite-web</name>
+	<name>py31-graphite-web</name>
+	<name>py32-graphite-web</name>
+	<name>py33-graphite-web</name>
+	<range><ge>0.9.5</ge><lt>0.9.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Graphite developers report:</p>
+	<blockquote cite="http://graphite.readthedocs.org/en/0.9.11/releases/0_9_11.html">
+	  <p>This release contains several security fixes for cross-site
+	     scripting (XSS) as well as a fix for a remote-execution exploit in
+	     graphite-web (CVE-2013-5903).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-5093</cvename>
+      <url>https://github.com/rapid7/metasploit-framework/pull/2260</url>
+    </references>
+    <dates>
+      <discovery>2013-08-21</discovery>
+      <entry>2013-09-30</entry>
+      <modified>2013-09-30</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="05dc6efa-2370-11e3-95b7-00e0814cab4e">
+    <topic>django -- denial-of-service via large passwords</topic>
+    <affects>
+      <package>
+	<name>py26-django</name>
+	<name>py27-django</name>
+	<range><ge>1.5</ge><lt>1.5.4</lt></range>
+	<range><ge>1.4</ge><lt>1.4.8</lt></range>
+      </package>
+      <package>
+	<name>py26-django-devel</name>
+	<name>py27-django-devel</name>
+	<range><lt>20130922,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Django project reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2013/sep/15/security/">
+	  <p>These releases address a denial-of-service attack against Django's
+	    authentication framework. All users of Django are encouraged to
+	    upgrade immediately.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1443</cvename>
+      <url>https://www.djangoproject.com/weblog/2013/sep/15/security/</url>
+    </references>
+    <dates>
+      <discovery>2013-09-15</discovery>
+      <entry>2013-09-22</entry>
+      <modified>2013-09-30</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="b72bad1c-20ed-11e3-be06-000c29ee3065">
+    <topic>FreeBSD -- Cross-mount links between nullfs(5) mounts</topic>
+    <affects>
+      <system>
+	<name>FreeBSD</name>
+	<range><gt>9.1</gt><lt>9.1_7</lt></range>
+	<range><gt>8.4</gt><lt>8.4_4</lt></range>
+	<range><gt>8.3</gt><lt>8.3_11</lt></range>
+      </system>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Problem Description:</p>
+	<p>The nullfs(5) implementation of the VOP_LINK(9) VFS
+	  operation does not check whether the source and target of
+	  the link are both in the same nullfs instance.  It is
+	  therefore possible to create a hardlink from a location in
+	  one nullfs instance to a file in another, as long as the
+	  underlying (source) filesystem is the same.</p>
+	<p>Impact:</p>
+	<p>If multiple nullfs views into the same filesystem are
+	  mounted in different locations, a user with read access to
+	  one of these views and write access to another will be able
+	  to create a hard link from the latter to a file in the
+	  former, even though they are, from the user's perspective,
+	  different filesystems.  The user may thereby gain write
+	  access to files which are nominally on a read-only
+	  filesystem.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-5710</cvename>
+      <freebsdsa>SA-13:13.nullfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2013-09-10</discovery>
+      <entry>2013-09-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4d87d357-202c-11e3-be06-000c29ee3065">
+    <topic>FreeBSD -- Insufficient credential checks in network ioctl(2)</topic>
+    <affects>
+      <system>
+	<name>FreeBSD</name>
+	<range><gt>9.1</gt><lt>9.1_7</lt></range>
+	<range><gt>8.4</gt><lt>8.4_4</lt></range>
+	<range><gt>8.3</gt><lt>8.3_11</lt></range>
+      </system>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Problem Description:</p>
+	<p>As is commonly the case, the IPv6 and ATM network layer
+	  ioctl request handlers are written in such a way that an
+	  unrecognized request is passed on unmodified to the link
+	  layer, which will either handle it or return an error
+	  code.</p>
+	<p>Network interface drivers, however, assume that the
+	  SIOCSIFADDR, SIOCSIFBRDADDR, SIOCSIFDSTADDR and
+	  SIOCSIFNETMASK requests have been handled at the network
+	  layer, and therefore do not perform input validation or
+	  verify the caller's credentials.  Typical link-layer actions
+	  for these requests may include marking the interface as "up"
+	  and resetting the underlying hardware.</p>
+	<p>Impact:</p>
+	<p>An unprivileged user with the ability to run arbitrary code
+	  can cause any network interface in the system to perform the
+	  link layer actions associated with a SIOCSIFADDR,
+	  SIOCSIFBRDADDR, SIOCSIFDSTADDR or SIOCSIFNETMASK ioctl
+	  request; or trigger a kernel panic by passing a specially
+	  crafted address structure which causes a network interface
+	  driver to dereference an invalid pointer.</p>
+	<p>Although this has not been confirmed, the possibility that
+	  an attacker may be able to execute arbitrary code in kernel
+	  context can not be ruled out.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-5691</cvename>
+      <freebsdsa>SA-13:12.ifioctl</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2013-09-10</discovery>
+      <entry>2013-09-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7dfed67b-20aa-11e3-b8d8-0025905a4771">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><gt>18.0,1</gt><lt>24.0,1</lt></range>
+	<range><lt>17.0.9,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>17.0.9,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.21</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>17.0.9</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.21</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>24.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="http://www.mozilla.org/security/known-vulnerabilities/">
+	  <p> MFSA 2013-76 Miscellaneous memory safety hazards (rv:24.0 /
+	    rv:17.0.9)</p>
+	  <p> MFSA 2013-77 Improper state in HTML5 Tree Builder with templates</p>
+	  <p> MFSA 2013-78 Integer overflow in ANGLE library</p>
+	  <p> MFSA 2013-79 Use-after-free in Animation Manager during stylesheet
+	    cloning</p>
+	  <p> MFSA 2013-80 NativeKey continues handling key messages after
+	    widget is destroyed</p>
+	  <p> MFSA 2013-81 Use-after-free with select element</p>
+	  <p> MFSA 2013-82 Calling scope for new Javascript objects can lead to
+	    memory corruption</p>
+	  <p> MFSA 2013-83 Mozilla Updater does not lock MAR file after
+	    signature verification</p>
+	  <p> MFSA 2013-84 Same-origin bypass through symbolic links</p>
+	  <p> MFSA 2013-85 Uninitialized data in IonMonkey</p>
+	  <p> MFSA 2013-86 WebGL Information disclosure through OS X NVIDIA
+	    graphic drivers</p>
+	  <p> MFSA 2013-87 Shared object library loading from writable location</p>
+	  <p> MFSA 2013-88 compartment mismatch re-attaching XBL-backed nodes</p>
+	  <p> MFSA 2013-89 Buffer overflow with multi-column, lists, and floats</p>
+	  <p> MFSA 2013-90 Memory corruption involving scrolling</p>
+	  <p> MFSA 2013-91 User-defined properties on DOM proxies get the wrong
+	    "this" object</p>
+	  <p> MFSA 2013-92 GC hazard with default compartments and frame chain
+	    restoration</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	<cvename>CVE-2013-1718</cvename>
+	<cvename>CVE-2013-1719</cvename>
+	<cvename>CVE-2013-1720</cvename>
+	<cvename>CVE-2013-1721</cvename>
+	<cvename>CVE-2013-1722</cvename>
+	<cvename>CVE-2013-1723</cvename>
+	<cvename>CVE-2013-1724</cvename>
+	<cvename>CVE-2013-1725</cvename>
+	<cvename>CVE-2013-1726</cvename>
+	<cvename>CVE-2013-1727</cvename>
+	<cvename>CVE-2013-1728</cvename>
+	<cvename>CVE-2013-1729</cvename>
+	<cvename>CVE-2013-1730</cvename>
+	<cvename>CVE-2013-1731</cvename>
+	<cvename>CVE-2013-1732</cvename>
+	<cvename>CVE-2013-1735</cvename>
+	<cvename>CVE-2013-1736</cvename>
+	<cvename>CVE-2013-1737</cvename>
+	<cvename>CVE-2013-1738</cvename>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-76.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-77.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-78.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-79.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-80.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-81.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-82.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-83.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-84.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-85.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-86.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-87.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-88.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-89.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-90.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-91.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-92.html</url>
+	<url>http://www.mozilla.org/security/known-vulnerabilities/</url>
+    </references>
+    <dates>
+      <discovery>2013-08-17</discovery>
+      <entry>2013-08-18</entry>
+      <modified>2013-09-19</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="5bd6811f-1c75-11e3-ba72-98fc11cdc4f5">
     <topic>linux-flashplugin -- multiple vulnerabilities</topic>
     <affects>
@@ -109,10 +585,12 @@ Note:  Please add new entries to the beginning of this file.
     </description>
     <references>
       <cvename>CVE-2013-4315</cvename>
+      <url>https://www.djangoproject.com/weblog/2013/sep/10/security-releases-issued/</url>
     </references>
     <dates>
       <discovery>2013-09-10</discovery>
       <entry>2013-09-12</entry>
+      <modified>2013-09-30</modified>
     </dates>
   </vuln>
 
@@ -1370,6 +1848,10 @@ Note:  Please add new entries to the beginning of this file.
 	<name>ruby19</name>
 	<range><lt>1.9.3.448,1</lt></range>
       </package>
+      <package>
+	<name>ruby18</name>
+	<range><lt>1.8.7.374,1</lt></range>
+      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -1389,6 +1871,7 @@ Note:  Please add new entries to the beginning of this file.
     <dates>
       <discovery>2013-06-27</discovery>
       <entry>2013-07-11</entry>
+      <modified>2013-09-24</modified>
     </dates>
   </vuln>
 

@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/vuxml/Makefile 321330 2013-06-19 21:20:50Z eadler $
+# $FreeBSD: security/vuxml/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	vuxml
 PORTVERSION=	1.1
@@ -46,6 +46,7 @@ PLIST=		${WRKDIR}/PLIST
 
 VUXML_FILE?=	${PKGDIR}/vuln.xml
 
+NO_STAGE=	yes
 do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
