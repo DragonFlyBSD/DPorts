@@ -1,9 +1,5 @@
-# New ports collection makefile for:  	mixer.app
-# Date created:		16 April 1999
-# Whom:			Chris Piazza <cpiazza@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/mixer.app/Makefile,v 1.24 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: Chris Piazza <cpiazza@FreeBSD.org>
+# $FreeBSD: audio/mixer.app/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mixer.app
 PORTVERSION=	1.8.0
@@ -22,6 +18,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lXpm -lXext -lX11
 MAKE_ARGS=	CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
 
 USE_XORG=	xpm xext x11
+NO_STAGE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Mixer.app ${PREFIX}/bin
