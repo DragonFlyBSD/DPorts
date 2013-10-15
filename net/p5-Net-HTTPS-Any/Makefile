@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: net/p5-Net-HTTPS-Any/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: net/p5-Net-HTTPS-Any/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-HTTPS-Any
 PORTVERSION=	0.10
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::HTTPS::Any.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
