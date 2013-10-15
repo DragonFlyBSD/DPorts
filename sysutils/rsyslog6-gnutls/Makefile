@@ -1,5 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-# $FreeBSD: sysutils/rsyslog6-gnutls/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: sysutils/rsyslog6-gnutls/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTREVISION=	2
 
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=--enable-gnutls
 PLIST_FILES+=	lib/rsyslog/lmnsd_gtls.la \
 		lib/rsyslog/lmnsd_gtls.so
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} \
 		${WRKSRC}/runtime/.libs/lmnsd_gtls.so ${PREFIX}/lib/rsyslog
