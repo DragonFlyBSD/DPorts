@@ -1,5 +1,5 @@
 # Created by: Dave Walton <dwalton@acm.org>
-# $FreeBSD: ports/games/taipan/Makefile,v 1.7 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/taipan/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	taipan
 PORTVERSION=	0.9
@@ -15,6 +15,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 PORTDOCS=	README
 PLIST_FILES=	bin/taipan
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
