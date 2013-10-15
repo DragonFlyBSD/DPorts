@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IPC-Session
-# Date created:	   01 Jun 2010
-# Whom:		   Alexander Kriventsov <avk@vl.ru>
-#
-# $FreeBSD: net/p5-IPC-Session/Makefile 326380 2013-09-05 10:32:23Z az $
-#
+# Created by: Alexander Kriventsov <avk@vl.ru>
+# $FreeBSD: net/p5-IPC-Session/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	IPC-Session
 PORTVERSION=	0.05
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	IPC::Session.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
