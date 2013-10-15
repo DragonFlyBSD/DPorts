@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/libghthash/Makefile 317343 2013-05-04 20:09:01Z bapt $
+# $FreeBSD: devel/libghthash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libghthash
 PORTVERSION=	0.6.2
@@ -35,6 +35,7 @@ MAN3=		ght_create.3 \
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
