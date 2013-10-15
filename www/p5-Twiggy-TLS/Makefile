@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Twiggy-TLS/Makefile 324553 2013-08-10 16:50:22Z kuriyama $
+# $FreeBSD: www/p5-Twiggy-TLS/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Twiggy-TLS
 PORTVERSION=	0.0019
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 MAN3=	Twiggy::TLS.3 \
 	Twiggy::TLS::Info.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
