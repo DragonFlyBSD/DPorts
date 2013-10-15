@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Unicode-UTF8simple
-# Date created:		Tue Dec 20 14:31:48 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: converters/p5-Unicode-UTF8simple/Makefile 324171 2013-08-02 18:21:05Z az $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: converters/p5-Unicode-UTF8simple/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-UTF8simple
 PORTVERSION=	1.06
@@ -18,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Unicode::UTF8simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
