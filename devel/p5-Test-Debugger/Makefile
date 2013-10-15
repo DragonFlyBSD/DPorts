@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Debugger/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Test-Debugger/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Debugger
 PORTVERSION=	0.14
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::Debugger.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
