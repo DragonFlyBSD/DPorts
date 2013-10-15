@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: mail/xlbiff/Makefile 321995 2013-06-28 22:06:54Z bapt $
+# $FreeBSD: mail/xlbiff/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	xlbiff
 PORTVERSION=	3.0
@@ -15,4 +15,5 @@ USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xlbiff.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
