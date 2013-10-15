@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-RSSAutodiscovery
-# Date created:		2006-09-25
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: www/p5-HTML-RSSAutodiscovery/Makefile 325974 2013-09-02 11:04:10Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-HTML-RSSAutodiscovery/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-RSSAutodiscovery
 PORTVERSION=	1.21
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::RSSAutodiscovery.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
