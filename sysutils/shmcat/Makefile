@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: sysutils/shmcat/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: sysutils/shmcat/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	shmcat
 PORTVERSION=	1.6
@@ -19,6 +19,7 @@ OPTIONS_DEFINE=	NLS
 MAN1=		shmcat.1 \
 		ftok.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
