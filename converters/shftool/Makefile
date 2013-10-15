@@ -1,9 +1,5 @@
-# New ports collection makefile for:   shftool
-# Date created:		2003-10-28
-# Whom:			Joachim Strombergson <watchman@ludd.ltu.se>
-#
-# $FreeBSD: converters/shftool/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Joachim Strombergson <watchman@ludd.ltu.se>
+# $FreeBSD: converters/shftool/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	shftool
 PORTVERSION=	1.2.0
