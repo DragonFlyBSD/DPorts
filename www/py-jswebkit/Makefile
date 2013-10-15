@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: www/py-jswebkit/Makefile 326730 2013-09-08 14:06:52Z antoine $
+# $FreeBSD: www/py-jswebkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=		jswebkit
 PORTVERSION=		0.0.3
@@ -24,4 +24,5 @@ USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python_jswebkit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
