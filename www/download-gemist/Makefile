@@ -1,6 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: ports/www/download-gemist/Makefile,v 1.1 2013/02/10 20:38:02 svnexp Exp $
-#
+# $FreeBSD: www/download-gemist/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	download-gemist
 PORTVERSION=	1.2
@@ -21,6 +20,7 @@ PLIST_FILES=	bin/download-gemist \
 		bin/download-gemist-guide \
 		%%DOCSDIR%%/README.md
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/download-gemist* ${PREFIX}/bin/
 	${MKDIR} ${DOCSDIR}
