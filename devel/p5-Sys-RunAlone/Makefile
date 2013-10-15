@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Sys-RunAlone/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Sys-RunAlone/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sys-RunAlone
 PORTVERSION=	0.12
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Sys::RunAlone.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
