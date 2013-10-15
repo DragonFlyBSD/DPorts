@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/font-shinonome/Makefile 326328 2013-09-04 21:15:21Z hrs $
+# $FreeBSD: japanese/font-shinonome/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	font-shinonome
 PORTVERSION=	0.9.11.p1
@@ -51,6 +51,7 @@ FONTNAMES=\
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
