@@ -1,5 +1,5 @@
 # Created by: Rob Evers <rob@debank.tv>
-# $FreeBSD: deskutils/moregroupware/Makefile 319886 2013-06-04 18:01:46Z flo $
+# $FreeBSD: deskutils/moregroupware/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	moregroupware
 PORTVERSION=	0.7.4
@@ -23,6 +23,7 @@ WANT_PHP_MOD=	yes
 OPTIONS_DEFINE=	ADDONS PGSQL NLS
 ADDONS_DESC=	install additional workgroup features (addons)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
