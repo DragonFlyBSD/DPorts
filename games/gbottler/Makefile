@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gbottler
-# Date created:				3 Apr 2004
-# Whom:					UMENO Takashi
-#
-# $FreeBSD: ports/games/gbottler/Makefile,v 1.24 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: UMENO Takashi
+# $FreeBSD: games/gbottler/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gbottler
 PORTVERSION=	0.1.7
@@ -23,4 +19,5 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
