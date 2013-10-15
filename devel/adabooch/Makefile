@@ -1,9 +1,5 @@
-# New ports collection makefile for:	adabooch
-# Date created:			21 December 2002
-# Whom:				David Holm <david@realityrift.com>
-#
-# $FreeBSD: ports/devel/adabooch/Makefile,v 1.12 2012/11/17 05:55:32 svnexp Exp $
-#
+# Created by: David Holm <david@realityrift.com>
+# $FreeBSD: devel/adabooch/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	adabooch
 PORTVERSION=	20030309
@@ -19,6 +15,7 @@ LICENSE=	GPLv2
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} Installing library files
 	@${MKDIR} ${PREFIX}/lib/adabooch
