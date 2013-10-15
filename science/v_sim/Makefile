@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: science/v_sim/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: science/v_sim/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	v_sim
 PORTVERSION=	3.6.1.1
@@ -29,6 +29,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
