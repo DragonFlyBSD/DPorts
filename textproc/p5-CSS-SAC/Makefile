@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CSS-SAC
-# Date created:	   07 July 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: textproc/p5-CSS-SAC/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-CSS-SAC/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	CSS-SAC
 PORTVERSION=	0.08
@@ -38,6 +34,7 @@ MAN3=		CSS::SAC.3 CSS::SAC::Condition.3 \
 		CSS::SAC::TestWriter.3 CSS::SAC::Writer.3
 
 # Bareword "_out_" not allowed while "strict subs"
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,_out_,'_out_',g" ${WRKSRC}/lib/CSS/SAC/TestWriter.pm
 	@${FIND} ${WRKSRC} -name "*.bak" -delete
