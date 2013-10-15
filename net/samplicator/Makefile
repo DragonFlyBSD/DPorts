@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/samplicator/Makefile,v 1.11 2012/11/17 06:00:19 svnexp Exp $
+# $FreeBSD: net/samplicator/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	samplicator
 PORTVERSION=	1.3.7.b6
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/samplicate
 PORTDOCS=	NEWS README
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/samplicate ${PREFIX}/bin/
 .if !defined(NOPORTDOCS)
