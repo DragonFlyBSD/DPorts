@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-Products.PluginRegistry
-# Date created:				20 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-Products.PluginRegistry/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
-#
+# $FreeBSD: devel/py-Products.PluginRegistry/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.PluginRegistry
 PORTVERSION=	1.3
@@ -21,7 +16,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.GenericSetup>=0:${PORTSDIR}/devel/p
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-#USE_ZOPE=	yes
+USE_PYDISTUTILS=easy_install
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
