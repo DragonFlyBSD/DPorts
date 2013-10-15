@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: mail/openwebmail/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: mail/openwebmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	openwebmail
 PORTVERSION=	2.53
@@ -44,6 +44,7 @@ VIRUSCHECK_ALL_DESC=	Virus check for all (default: pop3)
 WGET_DESC=	wget
 ZLIB_DESC=	ZLib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # WITH_SPEEDYCGI needs suidperl enabled under perl 5.8.4 or above,
