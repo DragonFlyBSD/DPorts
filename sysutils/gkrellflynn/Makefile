@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: sysutils/gkrellflynn/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: sysutils/gkrellflynn/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gkrellflynn
 PORTVERSION=	0.8
@@ -23,6 +23,7 @@ ALL_TARGET=	${PORTNAME}.so
 CFLAGS+=	`pkg-config --cflags gtk+-2.0 gthread-2.0` \
 		-I${LOCALBASE}/include -DGKRELLM2
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gkrellflynn.so \
 		${PREFIX}/libexec/gkrellm2/plugins
