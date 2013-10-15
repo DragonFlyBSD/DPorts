@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  cvsdelta
-# Date created:                   Thu Jul 25, 2002
-# Whom:                           Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/devel/cvsdelta/Makefile,v 1.22 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: devel/cvsdelta/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsdelta
 PORTVERSION=	1.7.0
@@ -19,6 +14,7 @@ COMMENT=	Cvsdelta summarizes differences between local and in-cvs files
 USE_RUBY=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
 	${INSTALL_MAN} ${WRKSRC}/cvsdelta.1 ${PREFIX}/man/man1/
