@@ -1,41 +1,32 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Gnome2
-# Date created:			Jan 2, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: x11-toolkits/p5-Gnome2/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: x11-toolkits/p5-Gnome2/Makefile 329889 2013-10-09 12:33:00Z sunpoet $
 
 PORTNAME=	Gnome2
-PORTVERSION=	1.042
-PORTREVISION=	5
+PORTVERSION=	1.043
 CATEGORIES=	x11-toolkits gnome perl5
 MASTER_SITES=	SF/gtk2-perl/${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Allows a perl developer to use the Gnome libraries
 
 BUILD_DEPENDS=	p5-ExtUtils-Depends>=0:${PORTSDIR}/devel/p5-ExtUtils-Depends \
 		p5-ExtUtils-PkgConfig>=0:${PORTSDIR}/devel/p5-ExtUtils-PkgConfig \
 		p5-Glib2>=0:${PORTSDIR}/devel/p5-Glib2 \
-		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
-		p5-Cairo>=0:${PORTSDIR}/graphics/p5-Cairo \
+		p5-Gnome2-Canvas>=0:${PORTSDIR}/x11-toolkits/p5-Gnome2-Canvas \
 		p5-Gnome2-VFS>=0:${PORTSDIR}/x11-toolkits/p5-Gnome2-VFS \
-		p5-Gnome2-Canvas>=0:${PORTSDIR}/x11-toolkits/p5-Gnome2-Canvas
+		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 RUN_DEPENDS=	p5-Glib2>=0:${PORTSDIR}/devel/p5-Glib2 \
-		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
+		p5-Gnome2-Canvas>=0:${PORTSDIR}/x11-toolkits/p5-Gnome2-Canvas \
 		p5-Gnome2-VFS>=0:${PORTSDIR}/x11-toolkits/p5-Gnome2-VFS \
-		p5-Gnome2-Canvas>=0:${PORTSDIR}/x11-toolkits/p5-Gnome2-Canvas
-
-USE_GNOME=	libgnomeui libgnome libbonoboui
-USES=		perl5
-USE_PERL5=	configure
+		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
 MAKE_JOBS_UNSAFE=	yes
+USES=		perl5
+USE_GNOME=	libbonoboui libgnome libgnomeui
+USE_PERL5=	configure
 
-post-install:
-	@cd ${WRKSRC}/blib/man3 && ${FIND} * -name "*.3" | ${SED} \
-		's,^,${MAN3PREFIX:S,^${PREFIX}/,,}/man/man3/,' >> ${TMPPLIST}
+post-patch:
+	@${REINPLACE_CMD} -e '185d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
