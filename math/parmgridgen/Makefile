@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: math/parmgridgen/Makefile 322922 2013-07-13 13:16:02Z bapt $
+# $FreeBSD: math/parmgridgen/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	parmgridgen
 PORTVERSION=	1.0
@@ -19,6 +19,7 @@ LIB_DEPENDS+=	mpi.1:${PORTSDIR}/net/openmpi
 USES=		gmake
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-patch:
 #respect CFLAGS
 .		for f in IMlib Lib Programs
