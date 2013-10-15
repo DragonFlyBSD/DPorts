@@ -1,4 +1,4 @@
-# $FreeBSD: java/cryptix-jce/Makefile 314511 2013-03-18 01:36:42Z eadler $
+# $FreeBSD: java/cryptix-jce/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	cryptix-jce
 PORTVERSION=	20050328
@@ -15,6 +15,7 @@ JAVA_VERSION=	1.6+
 USE_ZIP=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
