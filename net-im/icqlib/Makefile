@@ -1,9 +1,5 @@
-# New ports collection makefile for:    icqlib
-# Date created:                         16 March 1999
-# Whom:                                 Pavel Andreev
-#
-# $FreeBSD: ports/net-im/icqlib/Makefile,v 1.30 2012/11/17 06:00:26 svnexp Exp $
-#
+# Created by: Pavel Andreev
+# $FreeBSD: net-im/icqlib/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	icqlib
 PORTVERSION=	1.0.0
@@ -19,6 +15,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
