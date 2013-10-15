@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.de>
-# $FreeBSD: graphics/jpeg2ps/Makefile 316672 2013-04-27 16:00:26Z hrs $
+# $FreeBSD: graphics/jpeg2ps/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jpeg2ps
 PORTVERSION=	1.9
@@ -19,6 +19,7 @@ MAKE_ARGS=	LDADD="${LDADD}"
 MAN1=		jpeg2ps.1
 PLIST_FILES=	bin/jpeg2ps
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
