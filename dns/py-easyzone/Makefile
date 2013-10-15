@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: ports/dns/py-easyzone/Makefile,v 1.3 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: dns/py-easyzone/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	easyzone
 PORTVERSION=	1.2.2
@@ -19,4 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
