@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-zope.app.wsgi
-# Date created:				23 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-zope.app.wsgi/Makefile,v 1.4 2012/11/17 06:03:02 svnexp Exp $
-#
+# $FreeBSD: www/py-zope.app.wsgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	zope.app.wsgi
 PORTVERSION=	3.15.0
@@ -41,4 +36,5 @@ DIST_SUBDIR=	zope
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
