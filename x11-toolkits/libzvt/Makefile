@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libzvt/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: x11-toolkits/libzvt/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libzvt
 PORTVERSION=	2.0.1
@@ -20,6 +20,7 @@ USE_GNOME=	gnomeprefix gtk20 libartlgpl2
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|malloc\.h|stdlib.h|g'
