@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	pfbtopfa
-# Date created:			Dec 24, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/print/pfbtopfa/Makefile,v 1.3 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: print/pfbtopfa/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pfbtopfa
 PORTVERSION=	1.0
@@ -18,6 +13,7 @@ COMMENT=	Convert PFB files to the PFA format
 MAN1=		pfbtopfa.1
 PLIST_FILES=	bin/pfbtopfa
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pfbtopfa ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pfbtopfa.1 ${MAN1PREFIX}/man/man1
