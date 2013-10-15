@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pychecker
-# Date created:         		20 November 2009
-# Whom:                 		Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/net/sippy_b2bua/Makefile,v 1.4 2012/11/17 06:00:21 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: net/sippy_b2bua/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	sippy_b2bua
 PORTVERSION=	1.0.2
@@ -18,6 +14,7 @@ COMMENT=	SIP Back-to-back user agent (B2BUA) server with Radius support
 USE_PYTHON=		yes
 USE_TWISTED=	yes
 USE_PYDISTUTILS=	yes
+NO_STAGE=	yes
 PYDISTUTILS_PKGNAME=	sippy
 DOCSDIR=	${PREFIX}/share/doc/${PYDISTUTILS_PKGNAME}
 
