@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-Method-Modifiers-Fast/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-Class-Method-Modifiers-Fast/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Method-Modifiers-Fast
 PORTVERSION=	0.041
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::Method::Modifiers::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
