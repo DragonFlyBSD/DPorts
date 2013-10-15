@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-lastfm/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/gmpc-lastfm/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmpc-lastfm
 PORTVERSION=	0.20.0
@@ -18,6 +18,7 @@ RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 gtk20 intltool libxml2
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 
 .include <bsd.port.mk>
