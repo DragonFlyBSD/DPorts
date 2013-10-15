@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-Lite/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Crypt-Lite/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Lite
 PORTVERSION=	0.82.11
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
