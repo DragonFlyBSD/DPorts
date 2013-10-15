@@ -1,4 +1,4 @@
-# $FreeBSD: comms/conserver-com/Makefile 315081 2013-03-23 21:28:12Z zi $
+# $FreeBSD: comms/conserver-com/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	conserver
 PORTVERSION=	8.1.18
@@ -25,6 +25,7 @@ UDS_DESC=	Use Unix domain sockets for client/server
 STRIPREALM_DESC=Strip @REALM when using GSSAPI
 GSSAPIONLY_DESC=Never prompt for a password when using GSSAPI
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DEFAULTPORT?=	782
