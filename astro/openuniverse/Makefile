@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: astro/openuniverse/Makefile 325648 2013-08-30 01:15:20Z bapt $
+# $FreeBSD: astro/openuniverse/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	openuniverse
 DISTVERSION=	1.0beta3
@@ -14,6 +14,7 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
 
 USE_GL=		glut
 
+NO_STAGE=	yes
 USES=		gmake
 USE_XORG=	sm ice xmu xi xext x11
 GNU_CONFIGURE=	yes
