@@ -1,5 +1,5 @@
 # Created by: Josef El-Rayes <j.el-rayes@daemon.li>
-# $FreeBSD: www/swiggle/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: www/swiggle/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	swiggle
 PORTVERSION=	0.4
@@ -14,6 +14,7 @@ COMMENT=	Swiggle is a commandline web image gallery generator
 LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		exif.12:${PORTSDIR}/graphics/libexif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},g' ${WRKSRC}/Makefile
 
