@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: ports/chinese/cnprint/Makefile,v 1.15 2012/11/22 06:56:08 svnexp Exp $
+# $FreeBSD: chinese/cnprint/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	cnprint
 PORTVERSION=	3.30b
@@ -24,6 +24,7 @@ OPTIONS_DEFAULT=	A4SIZE
 
 A4SIZE_DESC=	Set A4 (not Letter) as a default paper size
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-extract:
