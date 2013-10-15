@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: www/cgic/Makefile 319583 2013-06-01 18:13:25Z antoine $
+# $FreeBSD: www/cgic/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cgic
 PORTVERSION=	2.05
@@ -18,6 +18,7 @@ MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
 SHLIB_MAJOR=	${PORTVERSION:R}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
