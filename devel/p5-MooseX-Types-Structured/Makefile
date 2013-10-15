@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Types-Structured/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Types-Structured/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Types-Structured
 PORTVERSION=	0.28
@@ -34,6 +34,7 @@ MAN3=		MooseX::Meta::TypeCoercion::Structured.3 \
 		MooseX::Types::Structured::MessageStack.3 \
 		MooseX::Types::Structured::OverflowHandler.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
