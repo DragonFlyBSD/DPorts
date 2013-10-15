@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Harness-Straps/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-Harness-Straps/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Harness-Straps
 PORTVERSION=	0.30
@@ -17,4 +17,5 @@ MAN3=	Test::Harness::Assert.3 Test::Harness::Iterator.3 \
 	Test::Harness::Point.3 Test::Harness::Results.3 \
 	Test::Harness::Straps.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
