@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jstrings
-# Date created:				29 July 2004
-# Whom:					ryo
-#
-# $FreeBSD: japanese/jstrings/Makefile 313600 2013-03-07 17:08:13Z miwi $
-#
+# Created by: ryo
+# $FreeBSD: japanese/jstrings/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	jstrings
 PORTVERSION=	0.6
@@ -27,6 +23,7 @@ MAKEFILE=	makefile.gcc
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" BINDIR="${PREFIX}/bin"
 ALL_TARGET=	jstrings
 
+NO_STAGE=	yes
 post-extract:
 	@${ECHO_MSG} "===>  Converting Kanji code and deleting CR for ${DISTNAME}"
 	@(cd ${WRKSRC}; \
