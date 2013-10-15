@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net-p2p/bitflu/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net-p2p/bitflu/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	bitflu
 PORTVERSION=	1.35
@@ -29,6 +29,7 @@ PORTDOCS=	ChangeLog.txt README.txt README_IPv6.txt
 OPTIONS_DEFINE=	IPV6 EXAMPLES DOCS
 OPTIONS_DEFAULT=	IPV6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
