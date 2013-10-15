@@ -1,4 +1,4 @@
-# $FreeBSD: games/sdl_jewels/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/sdl_jewels/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sdl_jewels
 PORTVERSION=	1.1.1
@@ -33,6 +33,7 @@ PORTDOCS=	ChangeLog README
 DESKTOP_ENTRIES="SDL Jewels" "${COMMENT}" "sdljewels" \
 		"sdljewels" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
