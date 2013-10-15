@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: devel/eggdbus/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: devel/eggdbus/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/devel/eggdbus/Makefile,v 1.3 2009/11/24 01:46:27 marcus Exp $
 
 PORTNAME=	eggdbus
@@ -32,6 +32,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/text
 MAN1=	eggdbus-binding-tool.1
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wl,--as-needed||' \
 	    	${WRKSRC}/configure
