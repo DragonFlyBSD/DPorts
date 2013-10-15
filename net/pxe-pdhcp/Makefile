@@ -1,4 +1,4 @@
-# $FreeBSD: net/pxe-pdhcp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/pxe-pdhcp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pxe-pdhcp
 PORTVERSION=	0.0.2007
@@ -24,4 +24,5 @@ OPTIONS_DEFINE=	DOCS
 post-extract: apply-slist
 	@${INSTALL_DATA} ${WRKDIR}/Makefile ${FILESDIR}/${PORTNAME}.8 ${WRKSRC}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
