@@ -1,8 +1,5 @@
 # Created by: Gary Palmer <gpalmer@FreeBSD.org>
-# $FreeBSD: x11/rxvt-devel/Makefile 324007 2013-07-31 06:54:09Z az $
-#
-# If possible, please consider updating the simple ports/x11-clocks/rclock
-# when you upgrade rxvt. These ports all use the same distfile.
+# $FreeBSD: x11/rxvt-devel/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	rxvt
 PORTVERSION=	2.7.10
@@ -12,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-dev/${PORTVERSION}
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A low memory usage xterm replacement that supports color
+COMMENT=	Low memory usage xterm replacement that supports color
 
 USE_AUTOTOOLS=	libtool
 USES=		perl5
@@ -46,6 +43,7 @@ USE_LDCONFIG=	yes
 
 MAN1=		rxvt.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 900007
