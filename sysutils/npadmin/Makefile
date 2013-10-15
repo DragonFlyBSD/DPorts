@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: sysutils/npadmin/Makefile 319255 2013-05-27 15:39:59Z bsam $
+# $FreeBSD: sysutils/npadmin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	npadmin
 PORTVERSION=	0.8.7
@@ -15,6 +15,7 @@ PLIST_FILES=	bin/npadmin
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	${RM} ${WRKSRC}/getopt.h ${WRKSRC}/getopt1.c
 
