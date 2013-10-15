@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <martin@tradex.sk>
-# $FreeBSD: security/p5-File-Scan/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/p5-File-Scan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	File-Scan
 PORTVERSION=	1.43
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		File::Scan.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR} ${DOCSDIR}/docs
