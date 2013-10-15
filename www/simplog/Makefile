@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simplog
-# Date created:		19 April 2004, 21:40 +08:00 (CST)
-# Whom:			Jose Liang <jose@jose.idv.tw>
-#
-# $FreeBSD: ports/www/simplog/Makefile,v 1.16 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Jose Liang <jose@jose.idv.tw>
+# $FreeBSD: www/simplog/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	simplog
 PORTVERSION=	0.9.3.4
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 
 WRKSRC?=	${WRKDIR}/simplog
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} ""
 	@${ECHO} "===> Installing simplog"
