@@ -1,9 +1,5 @@
-# New ports collection makefile for:   blast
-# Date created:         9 Jul 1996
-# Whom:            searle
-#
-# $FreeBSD: ports/x11/blast/Makefile,v 1.26 2012/11/17 06:03:14 svnexp Exp $
-#
+# Created by: searle
+# $FreeBSD: x11/blast/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	blast
 PORTVERSION=	1.1
@@ -21,6 +17,7 @@ USE_XORG=	ice sm x11 xau xcursor xdmcp xext xfixes xt xrandr
 MAN1=		blast.1
 PLIST_FILES=	bin/blast
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${WRKSRC}/blast.c -I${LOCALBASE}/include -L${LOCALBASE}/lib -lX11 -lXext -o ${WRKSRC}/blast
 
