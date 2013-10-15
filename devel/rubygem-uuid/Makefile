@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-uuid/Makefile 319705 2013-06-02 18:14:53Z swills $
+# $FreeBSD: devel/rubygem-uuid/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	uuid
 PORTVERSION=	2.3.7
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
