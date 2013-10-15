@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: graphics/fraqtive/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/fraqtive/Makefile 329881 2013-10-09 10:08:19Z makc $
 
 PORTNAME=	fraqtive
 PORTVERSION=	0.4.6
@@ -17,26 +17,15 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	QMAKESPEC="${QMAKESPEC}" \
 		QMAKE_CFLAGS="${CFLAGS}"
 CONFIGURE_ARGS=	-prefix ${PREFIX} -qmake ${QMAKE}
+DESTDIRNAME=	INSTALL_ROOT
 
 OPTIONS_DEFINE=	SSE2
 SSE2_DESC=	Enable SSE2 optimization
+SSE2_CONFIGURE_OFF=	-no-sse2
 
 STRIP_FILES=	bin/fraqtive
 
-.include <bsd.port.options.mk>
-
-.if !${PORT_OPTIONS:MSSE2}
-CONFIGURE_ARGS+=-no-sse2
-.endif
-
-post-configure:
-	@${FIND} ${WRKSRC} -name Makefile | ${XARGS} ${REINPLACE_CMD} \
-		-e 's|^CC .*|CC=${CC}|; s|^CXX .*|CXX=${CXX}|' \
-		-e 's|^LINK .*|LINK=${CXX}|' \
-		-e 's|^CFLAGS .*|CFLAGS=${CFLAGS} -Wall -W $$\(DEFINES\)|' \
-		-e 's|^CXXFLAGS .*|CXXFLAGS=${CXXFLAGS} -Wall -W $$\(DEFINES\)|'
-
 post-install:
-		${STRIP_CMD} ${STRIP_FILES:S,^,${PREFIX}/,}
+		${STRIP_CMD} ${STRIP_FILES:S,^,${STAGEDIR}${PREFIX}/,}
 
 .include <bsd.port.mk>
