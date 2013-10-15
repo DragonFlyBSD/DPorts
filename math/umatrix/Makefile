@@ -1,9 +1,5 @@
-# New ports collection makefile for:	umatrix
-# Date created:				1 May 1997
-# Whom:					Sandro Sigala <ssigala@globalnet.it>
-#
-# $FreeBSD: ports/math/umatrix/Makefile,v 1.10 2012/11/17 05:59:31 svnexp Exp $
-#
+# Created by: Sandro Sigala <ssigala@globalnet.it>
+# $FreeBSD: math/umatrix/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	umatrix
 PORTVERSION=	1.1
@@ -17,4 +13,5 @@ GNU_CONFIGURE=	yes
 MAN1=		umatrix.1
 PLIST_FILES=	bin/umatrix
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
