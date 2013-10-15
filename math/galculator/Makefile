@@ -1,4 +1,4 @@
-# $FreeBSD: math/galculator/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: math/galculator/Makefile 329323 2013-10-04 15:21:09Z naddy $
 
 PORTNAME=	galculator
 PORTVERSION=	2.1.2
@@ -15,7 +15,5 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-gtk3
-
-MAN1=		galculator.1
 
 .include <bsd.port.mk>

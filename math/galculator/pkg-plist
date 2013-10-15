@@ -1,5 +1,6 @@
-@comment $FreeBSD: math/galculator/pkg-plist 316826 2013-04-29 15:00:15Z naddy $
+@comment $FreeBSD: math/galculator/pkg-plist 329323 2013-10-04 15:21:09Z naddy $
 bin/galculator
+man/man1/galculator.1.gz
 share/applications/galculator.desktop
 %%DATADIR%%/ui/about.ui
 %%DATADIR%%/ui/basic_buttons_gtk2.ui
