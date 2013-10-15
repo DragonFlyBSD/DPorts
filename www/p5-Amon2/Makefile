@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Amon2/Makefile 324532 2013-08-10 14:37:31Z kuriyama $
+# $FreeBSD: www/p5-Amon2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Amon2
 PORTVERSION=	3.85
@@ -50,4 +50,5 @@ MAN3=	Amon2.3 \
 	Amon2::Web::Response::Callback.3 \
 	Amon2::Web::WebSocket.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
