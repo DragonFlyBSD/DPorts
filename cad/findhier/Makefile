@@ -1,9 +1,5 @@
-# Ports collection makefile for:  findhier
-# Date created:			  Sat, Apr 28, 2007
-# Whom:				  Hiroki Sato <hrs@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/findhier/Makefile,v 1.2 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: Hiroki Sato <hrs@FreeBSD.org>
+# $FreeBSD: cad/findhier/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	findhier
 PORTVERSION=	1.14
@@ -19,6 +15,7 @@ PLIST_FILES=	bin/fh
 
 MAN1=		fh.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fh ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/fh.1 ${MAN1PREFIX}/man/man1
