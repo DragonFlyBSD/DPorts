@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: www/py-turbogears/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/py-turbogears/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	TurboGears
 PORTVERSION=	1.5.1
@@ -36,6 +36,7 @@ NOSE_DESC=	Use nose TG[testtools]
 SQLOBJECT_DESC=	Use SQLObject as DB backend
 SQLALCHEMY_DESC=Use SQLAlchemy as DB backend TG[future]
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
