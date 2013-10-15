@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-DBIx-Class-UUIDColumns/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-UUIDColumns/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-UUIDColumns
 PORTVERSION=	0.02006
@@ -30,4 +30,5 @@ MAN3=	DBIx::Class::UUIDColumns.3 \
 	DBIx::Class::UUIDColumns::UUIDMaker::Win32::Guidgen.3 \
 	DBIx::Class::UUIDColumns::UUIDMaker::Win32API::GUID.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
