@@ -1,5 +1,5 @@
 # Created by: anders
-# $FreeBSD: www/varnish-nagios/Makefile 325737 2013-08-30 23:47:19Z bapt $
+# $FreeBSD: www/varnish-nagios/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	varnish-nagios
 DISTVERSION=	1.1
@@ -21,6 +21,7 @@ USES=		pkgconfig
 PLIST_DIRSTRY=	libexec/nagios
 PLIST_FILES=	libexec/nagios/check_varnish
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/libexec/nagios
 	${INSTALL_SCRIPT} ${WRKSRC}/check_varnish ${PREFIX}/libexec/nagios
