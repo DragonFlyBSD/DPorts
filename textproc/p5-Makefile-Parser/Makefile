@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Makefile-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Makefile-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Makefile-Parser
 PORTVERSION=	0.215
@@ -34,4 +34,5 @@ MAN3=		Makefile::AST.3 \
 		Makefile::Parser.3 \
 		Makefile::Parser::GmakeDB.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
