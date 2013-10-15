@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-msnp
-# Date created:			Dec 26, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: net-im/py-msnp/Makefile 323776 2013-07-27 10:19:30Z marino $
-#
+# Created by: ijliao
+# $FreeBSD: net-im/py-msnp/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	msnp
 PORTVERSION=	0.4.1
@@ -23,6 +18,7 @@ EXPIRATION_DATE=2013-10-31
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	msnp.py
+NO_STAGE=	yes
 
 .if !defined(NOPORTDOCS)
 post-install:
