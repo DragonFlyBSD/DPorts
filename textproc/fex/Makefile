@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fex
-# Date created:				17 October 2011
-# Whom:					Ryan Steinmetz <zi@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/fex/Makefile,v 1.5 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: textproc/fex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	fex
 PORTVERSION=	2.0.0
@@ -21,6 +17,7 @@ MAKE_ENV+=	INSTALLMAN=${PREFIX}/man
 PLIST_FILES=	bin/fex
 MAN1=		fex.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|CC=gcc|CC=${CC}|g' ${WRKSRC}/Makefile
 
