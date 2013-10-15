@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-Component-Daemon/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-POE-Component-Daemon/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Component-Daemon
 PORTVERSION=	0.1400
@@ -23,6 +23,7 @@ MAN3=		POE::Component::Daemon.3
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@for i in ${WRKSRC}/eg/*forking; do \
