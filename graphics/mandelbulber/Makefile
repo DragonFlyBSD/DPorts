@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/mandelbulber/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: graphics/mandelbulber/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mandelbulber
 DISTVERSION=	1.13-1
@@ -25,6 +25,7 @@ PLIST_DIRSTRY=	share/applications
 PORTDOCS=	README NEWS
 PORTDATA=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
