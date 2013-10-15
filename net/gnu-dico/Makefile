@@ -1,5 +1,5 @@
 # Created by: Goran Tal
-# $FreeBSD: net/gnu-dico/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net/gnu-dico/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dico
 PORTVERSION=	2.2
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	PYTHON GUILE PCRE GSASL PAM LDAP
 OPTIONS_DEFAULT=	PYTHON GUILE PCRE
 GSASL_DESC=	GSASL support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
