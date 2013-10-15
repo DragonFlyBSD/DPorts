@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/evince/Makefile 326159 2013-09-03 15:25:41Z bapt $
+# $FreeBSD: graphics/evince/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/trunk/graphics/evince/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evince
@@ -50,6 +50,7 @@ COMICS_DESC=	Comic book archives support
 IMPRESS_DESC=	Impress presentations support
 DJVU_DESC=	DJVU support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVI} || ${PORT_OPTIONS:MT1LIB}
