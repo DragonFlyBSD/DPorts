@@ -1,9 +1,5 @@
-# New ports collection makefile for:	trn
-# Date created:		21 October 1994
-# Whom:			smace
-#
-# $FreeBSD: ports/news/trn/Makefile,v 1.27 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: smace
+# $FreeBSD: news/trn/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	trn
 PORTVERSION=	3.6
@@ -26,6 +22,7 @@ CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ENV=	PREFIX="${PREFIX}"
 CONFIGURE_ARGS=	-S
 
+NO_STAGE=	yes
 post-install:
 .if !defined(BATCH)
 	@${ECHO_MSG} ""
