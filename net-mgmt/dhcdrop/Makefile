@@ -1,5 +1,5 @@
 # Created by: Nick F <ffault@gmail.com>
-# $FreeBSD: net-mgmt/dhcdrop/Makefile 324040 2013-07-31 12:34:35Z antoine $
+# $FreeBSD: net-mgmt/dhcdrop/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	dhcdrop
 PORTVERSION=	0.5
@@ -23,6 +23,7 @@ PLIST_DIRSTRY=	man/ru/man8 man/ru
 OPTIONS_DEFINE=	STATIC
 STATIC_DESC=	Build a static version of dhcdrop
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSTATIC}
