@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-App-Info/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-App-Info/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-Info
 PORTVERSION=	0.57
@@ -21,4 +21,5 @@ MAN3=		App::Info::HTTPD.3 App::Info::Lib::Iconv.3 \
 		App::Info::Handler::Prompt.3 App::Info::Handler::Carp.3 \
 		App::Info::RDBMS::SQLite.3 App::Info::Lib::OSSPUUID.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
