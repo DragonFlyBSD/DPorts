@@ -1,4 +1,4 @@
-# $FreeBSD: net/openntpd/Makefile 324112 2013-08-01 15:40:49Z naddy $
+# $FreeBSD: net/openntpd/Makefile 329324 2013-10-04 15:30:43Z naddy $
 
 PORTNAME=	openntpd
 PORTVERSION=	4.6
@@ -19,26 +19,18 @@ USE_RC_SUBR=	openntpd
 
 WRKSRC=		${WRKDIR}/ntpd
 
-MAN5=		ntpd.conf.5
-MAN8=		ntpd.8
-
 post-extract:
-.for i in compat.h adjfreq.c
-	@${CP} ${FILESDIR}/$i ${WRKSRC}
-.endfor
+	@${CP} ${FILESDIR}/compat.h ${FILESDIR}/adjfreq.c ${WRKSRC}
 
 pre-build:
 	${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' \
 	    ${WRKSRC}/ntpd.h ${WRKSRC}/ntpd.conf.5 ${WRKSRC}/ntpd.8
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ntpd ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/ntpd.conf.5 ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/ntpd.8 ${PREFIX}/man/man8
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${FILESDIR}/ntpd.conf ${EXAMPLESDIR}
-	@if [ ! -f ${PREFIX}/etc/ntpd.conf ]; then \
-	    ${CP} ${EXAMPLESDIR}/ntpd.conf ${PREFIX}/etc; \
-	fi
+	${INSTALL_PROGRAM} ${WRKSRC}/ntpd ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/ntpd.conf.5 ${STAGEDIR}${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/ntpd.8 ${STAGEDIR}${PREFIX}/man/man8
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${FILESDIR}/ntpd.conf ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
