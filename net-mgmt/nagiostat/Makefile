@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/nagiostat/Makefile 326244 2013-09-04 03:24:02Z az $
+# $FreeBSD: net-mgmt/nagiostat/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagiostat
 PORTVERSION=	1.0.0
@@ -23,6 +23,7 @@ DOC_FILES=	README GPL.txt
 NAGIOSWWWDIR?=	www/nagios
 PLIST_SUB+=	NAGIOSWWWDIR=${NAGIOSWWWDIR}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|%%NAGIOSTATCONFDIR%%|${PREFIX}/etc/|' \
