@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: net-mgmt/cnagios/Makefile 326244 2013-09-04 03:24:02Z az $
+# $FreeBSD: net-mgmt/cnagios/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	cnagios
 PORTVERSION=	0.30
@@ -26,6 +26,7 @@ ALL_TARGET=	cnagios
 
 MAN1=		cnagios.1
 
+NO_STAGE=	yes
 post-install:
 	@if [ ! -f ${ETCDIR}/cnagiosrc ]; then \
 		${CP} -p ${ETCDIR}/cnagiosrc.sample ${ETCDIR}/cnagiosrc ; \
