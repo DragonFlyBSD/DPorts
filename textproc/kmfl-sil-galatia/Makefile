@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scim-kmfl-sil-galatia
-# Date created:		24 August 2009
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/kmfl-sil-galatia/Makefile,v 1.7 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/kmfl-sil-galatia/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	kmfl-sil-galatia
 PORTVERSION=	1.03
@@ -36,6 +32,7 @@ PLIST_FILES=	${KMFL_DIR}/GrkPolyCompv${PORTVERSION:S|.||}.kmn \
 PLIST_DIRSTRY=	${KMFL_ICONS_DIR} \
 		${KMFL_DIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${LOCALBASE}/${KMFL_DIR} ${LOCALBASE}/${KMFL_ICONS_DIR}
 	${CP} -f ${WRKSRC}/GrkPolyCompv${PORTVERSION:S|.||}.KMN \
