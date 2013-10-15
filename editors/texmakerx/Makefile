@@ -1,5 +1,5 @@
 # Created by: lx
-# $FreeBSD: editors/texmakerx/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: editors/texmakerx/Makefile 329021 2013-10-02 07:45:46Z marino $
 
 PORTNAME=	texmakerx
 PORTVERSION=	2.1
@@ -21,6 +21,7 @@ USE_GHOSTSCRIPT=yes
 USE_QT4=	gui network xml moc_build qmake_build rcc_build \
 		uic_build qtestlib script
 USE_TEX=	latex dvipsk
+USE_DOS2UNIX=	yes
 HAS_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 MAKE_JOBS_UNSAFE=	yes
@@ -29,6 +30,7 @@ OPTIONS_DEFINE=	XDVI GV
 GV_DESC=	View ps files with gv
 XDVI_DESC=	View dvi files with xdvi
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXDVI}
