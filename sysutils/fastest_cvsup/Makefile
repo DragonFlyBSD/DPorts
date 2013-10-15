@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fastest_cvsup
-# Date created:        16 July 2002
-# Whom:                A.J.Robinson (ajr@subdimension.com)
-#
-# $FreeBSD: sysutils/fastest_cvsup/Makefile 326574 2013-09-07 07:11:48Z az $
-#
+# Created by: A.J.Robinson (ajr@subdimension.com)
+# $FreeBSD: sysutils/fastest_cvsup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fastest_cvsup
 PORTVERSION=	0.3.0
@@ -18,4 +14,5 @@ USES=		perl5
 MAN7=		fastest_cvsup.7
 PLIST_FILES=	bin/fastest_cvsup
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
