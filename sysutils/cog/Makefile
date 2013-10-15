@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/cog/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: sysutils/cog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cog
 PORTVERSION=	0.8.0
@@ -19,4 +19,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
