@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/lafontaine/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: lang/lafontaine/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	lafontaine
 PORTVERSION=	0.4.1
@@ -17,7 +17,9 @@ USES=		pathfix gmake pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_CSTD=	gnu89
+LDFLAGS+=	-lm
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
