@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: ports/devel/umlgraph/Makefile,v 1.7 2012/12/10 11:29:55 svnexp Exp $
+# $FreeBSD: devel/umlgraph/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	umlgraph
 PORTVERSION=	5.6
@@ -24,6 +24,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PLIST_FILES=	bin/umlgraph %%JAVAJARDIR%%/UmlGraph.jar
 
+NO_STAGE=	yes
 post-configure:
 	${REINPLACE_CMD} -e 's|%%JAVA_HOME%%|${JAVA_HOME}|; \
 		s|%%JAVAJARDIR%%|${JAVAJARDIR}|' \
