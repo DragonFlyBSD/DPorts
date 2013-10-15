@@ -1,5 +1,5 @@
 # Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/gqview-devel/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: graphics/gqview-devel/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	gqview
 PORTVERSION=	2.1.5
@@ -11,6 +11,8 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Another gtk2-based graphic file viewer
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+
+NO_STAGE=	yes
 
 USES=		pkgconfig
 USE_GNOME=	gnomehier gtk20
