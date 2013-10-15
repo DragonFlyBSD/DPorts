@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/poker-engine/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/poker-engine/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	poker-engine
 PORTVERSION=	1.3.6
@@ -29,6 +29,7 @@ GNU_CONFIGURE=	yes
 
 MAN8=	pokerconfigupgrade.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|{datadir}/pkgconfig|(prefix)/libdata/pkgconfig|g' \
