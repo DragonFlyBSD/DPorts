@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/py-actdiag/Makefile,v 1.20 2013/02/11 02:28:44 svnexp Exp $
+# $FreeBSD: graphics/py-actdiag/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	actdiag
 PORTVERSION=	0.4.3
@@ -24,6 +24,7 @@ MAN1=	${PORTNAME}.1
 DOCSDIR=	${PREFIX}/share/doc/${UNIQUENAME}
 PORTDOCS=	README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
