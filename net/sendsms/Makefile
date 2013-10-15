@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: net/sendsms/Makefile 326361 2013-09-05 07:29:05Z az $
+# $FreeBSD: net/sendsms/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sendsms
 PORTVERSION=	0.2.4
@@ -24,6 +24,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USES=		perl5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,/usr/bin/perl,${PERL},g" ${WRKSRC}/${PORTNAME}
 
