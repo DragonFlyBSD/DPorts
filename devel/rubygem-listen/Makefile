@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-listen/Makefile 326751 2013-09-08 15:51:54Z sunpoet $
+# $FreeBSD: devel/rubygem-listen/Makefile 330143 2013-10-12 16:40:05Z sunpoet $
 
 PORTNAME=	listen
-PORTVERSION=	1.3.1
+PORTVERSION=	2.0.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -11,13 +11,15 @@ COMMENT=	Listen to file modifications and notify about the changes
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	rubygem-rb-kqueue>=0.2.0:${PORTSDIR}/devel/rubygem-rb-kqueue
+RUN_DEPENDS=	rubygem-celluloid>=0.15.2:${PORTSDIR}/devel/rubygem-celluloid \
+		rubygem-rb-kqueue>=0.2.0:${PORTSDIR}/devel/rubygem-rb-kqueue
 
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
 post-patch:
-	@${REINPLACE_CMD} -e '14,41 d' ${WRKSRC}/${GEM_NAME}.gemspec
+	@${REINPLACE_CMD} -e '27,54 d' ${WRKSRC}/${GEM_NAME}.gemspec
 
 .include <bsd.port.mk>
