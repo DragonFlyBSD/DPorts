@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/p5-Net-Blogger/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Blogger/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Blogger
 PORTVERSION=	1.02
@@ -35,4 +35,5 @@ MAN3=	Net::Blogger.3 \
 	Net::Blogger::Engine::Userland.3 \
 	Net::Blogger::Engine::Userland::metaWeblog.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
