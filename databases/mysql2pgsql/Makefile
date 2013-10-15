@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: databases/mysql2pgsql/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/mysql2pgsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql2pgsql
 PORTVERSION=	1.2
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/mysql2pgsql
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${CP} -p ${DISTDIR}/mysql2pgsql.perl ${WRKDIR}
