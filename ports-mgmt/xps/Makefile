@@ -1,5 +1,5 @@
 # Created by: Antonios Anastasiadis <antonakis@gmail.com>
-# $FreeBSD: ports-mgmt/xps/Makefile 324108 2013-08-01 14:39:03Z wg $
+# $FreeBSD: ports-mgmt/xps/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	xps
 PORTVERSION=	0.5.2
@@ -20,6 +20,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/xps
 MAN1=		xps.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xps ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
