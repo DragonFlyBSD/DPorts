@@ -1,5 +1,5 @@
 # Created by: Tatsumi Hosokawa
-# $FreeBSD: x11/kb2mb2/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/kb2mb2/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kb2mb2
 PORTVERSION=	1.0
@@ -14,4 +14,5 @@ PLIST_FILES=	bin/kb2mb2
 USES=		imake
 USE_XORG=	x11 xext xtst
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
