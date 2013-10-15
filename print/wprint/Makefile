@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/wprint/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: print/wprint/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	wprint
 PORTVERSION=	2.05
@@ -23,6 +23,7 @@ MAN1=		wprint.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 .for file in man/wprint.1.pod src/wprint.c
 	@${REINPLACE_CMD} -e "s|/etc/wprint\.conf|${PREFIX}/etc/wprint.conf|g" \
