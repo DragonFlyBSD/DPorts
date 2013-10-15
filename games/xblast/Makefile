@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: games/xblast/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xblast/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xblast
 PORTVERSION=	2.10.4
@@ -58,6 +58,7 @@ MODELS_DATE=	2005-01-06
 MUSICS_DATE=	2005-01-06
 SOUNDS_DATE=	2004-04-29
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
