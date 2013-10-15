@@ -1,5 +1,5 @@
 # Created by: Zak Johnson <zakj@nox.cx>
-# $FreeBSD: mail/sendok/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/sendok/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sendok
 PORTVERSION=	0.9.2
@@ -16,6 +16,7 @@ PLIST_FILES=	bin/sendok-check bin/sendok-create
 
 ALL_TARGET=	it
 
+NO_STAGE=	yes
 post-patch:
 	@${ECHO_CMD} ${CC} ${CFLAGS} >${WRKSRC}/conf-cc
 
