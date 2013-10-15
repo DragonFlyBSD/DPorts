@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: www/gaeo/Makefile 324852 2013-08-17 16:32:41Z bdrewery $
+# $FreeBSD: www/gaeo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gaeo
 PORTVERSION=	0.3
@@ -23,6 +23,7 @@ GAEOHOME=	${PYTHON_SITELIBDIR}/${PYEASYINSTALL_EGG}
 
 PORTDOCS=	LICENSE NOTICE README.TXT CHANGELOG
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
