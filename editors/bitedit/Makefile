@@ -1,9 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  bitedit
-# Date created:			Tue Jul 18, 2002
-# Whom:				Michael L. Hostbaek (mich@freebsdcluster.org)
-#
-# $FreeBSD: ports/editors/bitedit/Makefile,v 1.6 2012/11/17 05:57:11 svnexp Exp $
+# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
+# $FreeBSD: editors/bitedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	bitedit
 PORTVERSION=	0.9.4
@@ -17,6 +13,7 @@ MAKE_ARGS=	CFLAGS="${CFLAGS} -DVERSION=\\\"${PORTVERSION}\\\""
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bitedit ${PREFIX}/bin/
 .if !defined(NOPORTDOCS)
