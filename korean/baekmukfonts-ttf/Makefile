@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/baekmukfonts-ttf/Makefile 321160 2013-06-17 23:04:51Z jkim $
+# $FreeBSD: korean/baekmukfonts-ttf/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	baekmukfonts
 PORTVERSION=	2.2
@@ -20,6 +20,7 @@ FONTNAME=	baekmuk
 FONTSDIR=	lib/X11/fonts/${FONTNAME}${PKGNAMESUFFIX}
 PLIST_SUB=	FONTSDIR=${FONTSDIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${FONTSDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/${FONTSDIR}
