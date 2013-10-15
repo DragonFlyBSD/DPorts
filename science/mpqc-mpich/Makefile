@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpqc-mpich
-# Date created:			27 April 2001
-# Whom:				Nakata Maho <chat95@mbox.kyoto-inet.or.jp>
-#
-# $FreeBSD: ports/science/mpqc-mpich/Makefile,v 1.12 2012/11/17 06:00:58 svnexp Exp $
-#
+# Created by: Nakata Maho <chat95@mbox.kyoto-inet.or.jp>
+# $FreeBSD: science/mpqc-mpich/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 MASTERDIR=	${.CURDIR}/../mpqc
 
@@ -11,4 +7,5 @@ PKGNAMESUFFIX=	-mpich
 
 WITH_MPICH=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
