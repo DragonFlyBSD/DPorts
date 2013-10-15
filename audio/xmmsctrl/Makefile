@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmmsctrl/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/xmmsctrl/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmmsctrl
 PORTVERSION=	1.8
@@ -18,6 +18,7 @@ BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 USES=		gmake
+NO_STAGE=	yes
 MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
