@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: net/dropbox-uploader/Makefile 326903 2013-09-10 14:05:23Z nivit $
+# $FreeBSD: net/dropbox-uploader/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dropbox-uploader
 PORTVERSION=	0.12
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/dropShell.sh bin/dropbox_uploader.sh
 
 USE_GITHUB=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -E -e 's,("darwin9"),\1 -o "$${OSTYPE:0:7}" == "freebsd" ,1' -i.bak ${WRKSRC}/dropShell.sh
 
