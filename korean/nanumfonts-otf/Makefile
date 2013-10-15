@@ -1,4 +1,4 @@
-# $FreeBSD: korean/nanumfonts-otf/Makefile 322534 2013-07-08 19:37:40Z jkim $
+# $FreeBSD: korean/nanumfonts-otf/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	nanumfonts
 PORTVERSION=	3.1
@@ -55,6 +55,7 @@ PLIST_FILES+=	${FONTSDIR}/${f}.${FONTTYPE}
 PLIST_FILES+=	${FONTSDIR}/fonts.dir \
 		${FONTSDIR}/fonts.scale
 
+NO_STAGE=	yes
 do-build:
 	${LOCALBASE}/bin/mkfontscale ${WRKSRC}
 	${LOCALBASE}/bin/mkfontdir ${WRKSRC}
