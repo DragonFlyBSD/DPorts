@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/calligra-l10n-cs/Makefile,v 1.5 2013/02/05 12:23:32 svnexp Exp $
+# $FreeBSD: editors/calligra-l10n-cs/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	2.4.3
@@ -9,5 +9,6 @@ COMMENT=	Czech messages and documentation for Calligra
 
 CALLIGRA_L10N=	cs
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/calligra-l10n/files/bsd.l10n.mk"
 .include <bsd.port.mk>
