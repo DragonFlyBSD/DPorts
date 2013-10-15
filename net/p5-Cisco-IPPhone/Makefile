@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Cisco-IPPhone
-# Date created:				July 27th 2007
-# Whom:	      				Simun Mikecin < numisemis at yahoo dot com >
-#
-# $FreeBSD: net/p5-Cisco-IPPhone/Makefile 326384 2013-09-05 11:09:23Z az $
-#
+# Created by: Simun Mikecin < numisemis at yahoo dot com >
+# $FreeBSD: net/p5-Cisco-IPPhone/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Cisco-IPPhone
 PORTVERSION=	0.05
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Cisco::IPPhone.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
