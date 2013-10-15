@@ -1,9 +1,5 @@
-# New ports collection makefile for:	greyfix
-# Date created:				2011-05-14
-# Whom:					Keith Gaughan <k@stereochro.me>
-#
-# $FreeBSD: ports/mail/greyfix/Makefile,v 1.2 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: Keith Gaughan <k@stereochro.me>
+# $FreeBSD: mail/greyfix/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	greyfix
 PORTVERSION=	0.3.9
@@ -21,6 +17,7 @@ CONFIGURE_ARGS=	--with-berkeleydb-libdir=${BDB_LIB_DIR} \
 		--with-berkeleydb-includedir=${BDB_INCLUDE_DIR} \
 		--localstatedir=/var
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|-ldb|-l${BDB_LIB_NAME}|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} 's|$$(localstatedir)/lib|$$(localstatedir)/db|' ${WRKSRC}/Makefile.in
