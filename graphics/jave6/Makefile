@@ -1,5 +1,5 @@
 # Created by: Andreas Daehn <ad001@uni-rostock.de>
-# $FreeBSD: ports/graphics/jave6/Makefile,v 1.9 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: graphics/jave6/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jave6
 PORTVERSION=	0.1
@@ -23,6 +23,7 @@ HLPSKRIPT=	jave6
 
 PLIST_SUB+=DATADIR=%%JAVASHAREDIR%%/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} "Installing JavE6 files in ${DATADIR}..."
 	@${MKDIR} ${DATADIR}
