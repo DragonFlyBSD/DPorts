@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: www/deforaos-surfer/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: www/deforaos-surfer/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	surfer
 PORTVERSION=	0.2.6
@@ -30,4 +30,5 @@ MAKE_ENV+=	MANDIR=${MANPREFIX}/man
 
 MAN1=		download.1 helper.1 surfer.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
