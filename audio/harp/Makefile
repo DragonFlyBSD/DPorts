@@ -1,4 +1,4 @@
-# $FreeBSD: audio/harp/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/harp/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	harp
 PORTVERSION=	0.5.2
@@ -15,6 +15,7 @@ LICENSE=	GPLv3
 GNU_CONFIGURE=	yes
 
 USE_SQLITE=	yes
+NO_STAGE=	yes
 
 USE_LDCONFIG=	yes
 
