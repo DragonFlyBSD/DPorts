@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/editors/heme/Makefile,v 1.4 2013/02/15 11:30:30 svnexp Exp $
+# $FreeBSD: editors/heme/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	heme
 PORTVERSION=	0.4.2
@@ -20,6 +20,7 @@ PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
