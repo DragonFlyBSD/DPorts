@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kipi-plugins-kde4/Makefile 319675 2013-06-02 15:13:14Z tijl $
+# $FreeBSD: graphics/kipi-plugins-kde4/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kipi-plugins
 PORTVERSION=	${DIGIKAM_VER}
@@ -14,6 +14,7 @@ LATEST_LINK=	${PORTNAME}-kde4
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../digikam-kde4/Makefile.common"
 
 OPTIONS_DEFINE=		DOCS NLS
