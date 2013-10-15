@@ -1,6 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: security/mussh/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/mussh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	mussh
 PORTVERSION=	1.0
@@ -18,6 +17,7 @@ PORTDOCS=	BUGS CHANGES EXAMPLES README
 PLIST_FILES=	bin/mussh
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,^#!/bin/bash,#!/usr/bin/env bash,g" \
 			  -e "s,seq 1 ,jot 1 ,g" \
