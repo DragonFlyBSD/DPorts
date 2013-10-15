@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hinventoryFreeBSD
-# Date created:				14 July 2006
-# Whom:					Thomas BRETON <tom@h-inventory.com>
-#
-# $FreeBSD: ports/www/hinventory-client/Makefile,v 1.2 2012/11/17 06:02:35 svnexp Exp $
-#
+# Created by: Thomas BRETON <tom@h-inventory.com>
+# $FreeBSD: www/hinventory-client/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hinventory-client
 PORTVERSION=	1.2.5
@@ -17,6 +13,7 @@ COMMENT=	H-Inventory Client for FreeBSD
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/hinventoryFreeBSD
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/hinventory_FreeBSD.sh \
 		${PREFIX}/bin/hinventory_FreeBSD.sh
