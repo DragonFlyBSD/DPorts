@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: shells/es/Makefile 317241 2013-05-03 20:39:02Z bapt $
+# $FreeBSD: shells/es/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	es
 PORTVERSION=	0.9.b1
@@ -20,4 +20,5 @@ ALL_TARGET=	es
 MAN1=		es.1
 PLIST_FILES=	bin/es
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
