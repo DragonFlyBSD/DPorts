@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: print/gsview/Makefile 314582 2013-03-18 16:11:34Z bf $
+# $FreeBSD: print/gsview/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	gsview
 PORTVERSION=	4.9
@@ -32,6 +32,7 @@ PORTDOCS=	gsview.css cdorder.txt regorder.txt Readme.htm LICENCE \
 		gvxit.htm gvxnl.htm gvxru.htm gvxse.htm gvxsk.htm
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	${CP} ${WRKSRC}/srcunx/unx.mak ${WRKSRC}/Makefile
 	${REINPLACE_CMD} -e 's;malloc\.h;stdlib\.h;g' \
