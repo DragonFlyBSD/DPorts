@@ -1,9 +1,5 @@
-# Ports collection makefile for:  horde3
-# Date created:			  Sun Oct 07, 2001
-# Whom:				  Thierry Thomas (<thierry@thomas.as>)
-#
-# $FreeBSD: www/horde3-base/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Thierry Thomas (<thierry@thomas.as>)
+# $FreeBSD: www/horde3-base/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	base
 PORTVERSION=	3.3.13
@@ -17,6 +13,7 @@ MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Common code-base used by Horde applications
 
 #----------------------------------------------------------------------------
+NO_STAGE=	yes
 # You may define these options:
 #
 # - WITHOUT_SUPPORTED_DB: if you run a database not in the ports tree.
