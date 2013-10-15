@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libmsocket/files/patch-file.c,v 1.2 2012/11/17 05:55:55 svnexp Exp $
+$FreeBSD: devel/libmsocket/files/patch-file.c 300896 2012-07-14 13:54:48Z beat $
 
 --- file.c.orig
 +++ file.c

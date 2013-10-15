@@ -1,5 +1,5 @@
 # Created by: Matt Harris <mattdharris@users.sourceforge.net>
-# $FreeBSD: ports/devel/libmsocket/Makefile,v 1.7 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/libmsocket/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libmsocket
 PORTVERSION=	0.4
@@ -24,6 +24,7 @@ PLIST_FILES=	lib/libmsocket.so \
 		include/msocket.h \
 		include/msocketutils.h
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"
