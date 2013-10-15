@@ -1,5 +1,5 @@
 # Created by: stb
-# $FreeBSD: net/netatalk3/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# $FreeBSD: net/netatalk3/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netatalk
 PORTVERSION=	3.0.5
@@ -41,6 +41,7 @@ KRB5_DESC=	Enable Kerberos V UAM
 DTRACE_DESC=	Enable DTrace support
 SENDFILE_DESC=	Enable Sendfile support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAN1=		ad.1 afpldaptest.1 afppasswd.1 apple_dump.1 asip-status.pl.1 \
