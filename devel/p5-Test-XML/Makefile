@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Test-XML
-# Date created:				04 November 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Test-XML/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-XML/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-XML
 PORTVERSION=	0.08
@@ -26,4 +22,5 @@ MAN3=	Test::XML.3 \
 	Test::XML::Twig.3 \
 	Test::XML::XPath.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
