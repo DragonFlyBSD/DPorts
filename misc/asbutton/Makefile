@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: misc/asbutton/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/asbutton/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	asbutton
 PORTVERSION=	0.3
@@ -16,6 +16,7 @@ MAKE_ARGS=	INCLUDES="-I${LOCALBASE}/include/X11 -I${LOCALBASE}/include" \
 		LIBINC="-L${LOCALBASE}/lib" LIBS="-lm -lX11 -lXpm -lXext" \
 		CCFLAGS="${CFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
