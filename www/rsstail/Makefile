@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rsstail
-# Date created:		21 April 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rsstail/Makefile,v 1.14 2012/11/17 06:03:03 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/rsstail/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rsstail
 PORTVERSION=	1.8
@@ -21,6 +17,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|=-O2 -Wall|+=|;/^LDFLAGS/s|=|+=|' ${WRKSRC}/Makefile
 
