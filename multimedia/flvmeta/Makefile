@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flvmeta
-# Date created:		31 July 2009
-# Whom:			Earl Gay <earl@eeg3.net>
-#
-# $FreeBSD: ports/multimedia/flvmeta/Makefile,v 1.4 2012/11/17 05:59:48 svnexp Exp $
-#
+# Created by: Earl Gay <earl@eeg3.net>
+# $FreeBSD: multimedia/flvmeta/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	flvmeta
 PORTVERSION=	1.0.11
