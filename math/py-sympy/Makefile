@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/math/py-sympy/Makefile,v 1.11 2013/02/13 12:16:30 svnexp Exp $
+# $FreeBSD: math/py-sympy/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	sympy
 PORTVERSION=	0.7.2
@@ -21,6 +21,7 @@ MAN1=	isympy.1
 OPTIONS_DEFINE=	PYGLET
 PYGLET_DESC=	Enable plotting support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYGLET}
