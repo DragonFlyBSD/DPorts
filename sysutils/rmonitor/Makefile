@@ -1,9 +1,5 @@
-# New ports collection makefile for:    rmonitor
-# Date created:         March 1st, 2001
-# Whom:                 Konrad Heuer
-#
-# $FreeBSD: ports/sysutils/rmonitor/Makefile,v 1.8 2012/11/17 06:01:43 svnexp Exp $
-#
+# Created by: Konrad Heuer
+# $FreeBSD: sysutils/rmonitor/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rmonitor
 PORTVERSION=	1.2
@@ -20,6 +16,7 @@ MANCOMPRESSED=	yes
 
 #CFLAGS+=	-w
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 900007
