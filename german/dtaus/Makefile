@@ -1,4 +1,4 @@
-# $FreeBSD: ports/german/dtaus/Makefile,v 1.5 2012/11/17 05:57:59 svnexp Exp $
+# $FreeBSD: german/dtaus/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	dtaus
 PORTVERSION=	0.9
@@ -9,6 +9,8 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Belegloser DatenTraegerAUStausch
 
 LICENSE=	GPLv2
+
+NO_STAGE=	yes
 
 ALL_TARGET=	dtaus
 PLIST_FILES=	bin/dtaus
