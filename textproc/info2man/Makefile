@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/info2man/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: textproc/info2man/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	info2man
 PORTVERSION=	20040717
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 
 PLSCRIPTS=	info2man info2pod
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|' ${WRKSRC}/info2pod
 
