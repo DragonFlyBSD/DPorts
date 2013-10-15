@@ -1,5 +1,5 @@
 # Created by: ade, archie
-# $FreeBSD: x11-fm/nautilus/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: x11-fm/nautilus/Makefile 327780 2013-09-20 23:49:39Z bapt $
 #   $MCom: ports/x11-fm/nautilus/Makefile,v 1.212 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	nautilus
@@ -37,6 +37,7 @@ GCONF_SCHEMAS=	apps_nautilus_preferences.schemas
 MAN1=		nautilus-connect-server.1 nautilus-file-management-properties.1 \
 		nautilus.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|G_CONST_RETURN|const|g' \
 		${WRKSRC}/eel/eel-*.[ch] \
