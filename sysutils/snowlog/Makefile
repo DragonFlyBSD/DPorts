@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	snowlog
-# Date created:			Jul 30 2004
-# Whom:				Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/sysutils/snowlog/Makefile,v 1.10 2012/12/10 19:24:05 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: sysutils/snowlog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	snowlog
 PORTVERSION=	1.1.1
@@ -21,6 +16,7 @@ MAN1=		snowlog.1
 DOCS=		INSTALLATION doc/README doc/filters.example
 SHAREDOCS=	referers.regexp useragents.regexp
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
