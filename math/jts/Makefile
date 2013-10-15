@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/jts/Makefile 312393 2013-02-16 23:57:07Z wen $
+# $FreeBSD: math/jts/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	jts
 PORTVERSION=	1.13
@@ -21,6 +21,7 @@ NO_WRKSUBDIR=	yes
 VER=		${PORTVERSION:tl}
 JARFILES=	JTS_Test acme jts-${VER}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
