@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Text-Hatena/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-Hatena/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Hatena
 PORTVERSION=	0.20
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Hatena.3 Text::Hatena::AutoLink.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
