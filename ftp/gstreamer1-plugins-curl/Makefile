@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/gstreamer1-plugins-curl/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: ftp/gstreamer1-plugins-curl/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	ftp
@@ -10,4 +10,5 @@ DIST=		bad
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
