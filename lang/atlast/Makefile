@@ -1,9 +1,5 @@
-# New ports collection makefile for:	atlast
-# Date created:				26 Aug 97
-# Whom:					Pedro Giffuni
-#
-# $FreeBSD: ports/lang/atlast/Makefile,v 1.16 2012/11/17 05:58:48 svnexp Exp $
-#
+# Created by: Pedro Giffuni
+# $FreeBSD: lang/atlast/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	atlast
 PORTVERSION=	1.2
@@ -18,6 +14,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	atlast.html atlast.pdf
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "/^COPTIONS = /s, = .*, = ${CFLAGS}, " \
 		-e "/^CC = /s,= .*, = ${CC}," \
