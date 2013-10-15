@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Perlish/Makefile 325524 2013-08-28 12:39:15Z tobez $
+# $FreeBSD: databases/p5-DBIx-Perlish/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Perlish
 PORTVERSION=	0.60
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::Perlish.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
