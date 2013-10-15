@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/ttfquery/Makefile 313191 2013-03-02 05:45:11Z miwi $
+# $FreeBSD: print/ttfquery/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	ttfquery
 PORTVERSION=	1.0.5
@@ -20,4 +20,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TTFQuery
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
