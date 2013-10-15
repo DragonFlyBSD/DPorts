@@ -1,5 +1,5 @@
 # Created by: Victor Popov
-# $FreeBSD: ports/security/pam_search_list/Makefile,v 1.1 2012/12/17 15:06:32 svnexp Exp $
+# $FreeBSD: security/pam_search_list/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pam_search_list
 PORTVERSION=	0.1
@@ -20,4 +20,5 @@ PLIST_FILES=	lib/libpam_search_list.a \
 		lib/pam_search_list.so \
 		lib/pam_search_list.so.0
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
