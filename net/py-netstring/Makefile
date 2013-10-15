@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-netstring
-# Date created:				04 Nov 2006
-# Whom:					Alexander Botero-Lowry <alexbl@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-netstring/Makefile,v 1.5 2012/11/17 06:00:16 svnexp Exp $
+# Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
+# $FreeBSD: net/py-netstring/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netstring
 PORTVERSION=	1.14
@@ -18,4 +15,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-netstring
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
