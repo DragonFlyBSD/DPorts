@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-gen/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: devel/pure-gen/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pure-gen
 PORTVERSION=	0.15
@@ -17,5 +17,6 @@ MAN1=		pure-gen.1
 
 CC= 		gcc
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
