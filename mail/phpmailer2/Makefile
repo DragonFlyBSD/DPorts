@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phpmailer2
-# Date created:				30 May 2009
-# Whom:					Joe Horn <joehorn@gmail.com>
-#
-# $FreeBSD: ports/mail/phpmailer2/Makefile,v 1.3 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: Joe Horn <joehorn@gmail.com>
+# $FreeBSD: mail/phpmailer2/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	phpmailer2
 PORTVERSION=	2.0.4
@@ -22,6 +18,7 @@ USE_PHP=	pcre
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 .for f in class.phpmailer.php class.pop3.php class.smtp.php
