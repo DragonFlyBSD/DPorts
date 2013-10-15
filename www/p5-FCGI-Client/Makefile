@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-FCGI-Client/Makefile 326167 2013-09-03 16:18:49Z az $
+# $FreeBSD: www/p5-FCGI-Client/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	FCGI-Client
 PORTVERSION=	0.08
@@ -25,4 +25,5 @@ MAN3=	FCGI::Client.3 \
 	FCGI::Client::RecordFactory.3 \
 	FCGI::Client::RecordHeader.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
