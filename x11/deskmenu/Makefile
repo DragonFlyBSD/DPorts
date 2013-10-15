@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: x11/deskmenu/Makefile 326527 2013-09-06 17:07:00Z bapt $
+# $FreeBSD: x11/deskmenu/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	deskmenu
 PORTVERSION=	1.3.0
@@ -16,6 +16,7 @@ USES=		gmake
 USE_GNOME=	gtk12
 USE_CSTD=	gnu89
 
+NO_STAGE=	yes
 post-install:
 	${STRIP_CMD} ${PREFIX}/bin/deskmenu
 
