@@ -1,10 +1,11 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-File-Map/Makefile 324774 2013-08-15 16:00:39Z wen $
+# $FreeBSD: devel/p5-File-Map/Makefile 329414 2013-10-05 06:05:43Z sunpoet $
 
 PORTNAME=	File-Map
-PORTVERSION=	0.60
+PORTVERSION=	0.61
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:LEONT
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -17,12 +18,13 @@ BUILD_DEPENDS=	p5-PerlIO-Layers>=0:${PORTSDIR}/devel/p5-PerlIO-Layers \
 		p5-Sub-Exporter-Progressive>=0.001.005:${PORTSDIR}/devel/p5-Sub-Exporter-Progressive
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
-		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
-		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
+		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
+		p5-Test-Warnings>=0:${PORTSDIR}/devel/p5-Test-Warnings
 
 USES=		perl5
 USE_PERL5=	modbuild
 
 MAN3=		File::Map.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
