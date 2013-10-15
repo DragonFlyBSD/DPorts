@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Struct/Makefile 326139 2013-09-03 12:27:09Z az $
+# $FreeBSD: www/p5-CGI-Struct/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Struct
 PORTVERSION=	1.21
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		CGI::Struct.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
