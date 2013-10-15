@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	SCSS
-# Date created:			Mar 22, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/scss/Makefile,v 1.9 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/scss/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scss
 PORTVERSION=	0.4.2
@@ -26,6 +21,7 @@ FILES=	lexer.scm parser.scm scss.scm properties.scm \
 
 INFO=	scss
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/share/guile/scss
 .for f in ${FILES}
