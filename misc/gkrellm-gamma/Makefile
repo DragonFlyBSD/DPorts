@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: misc/gkrellm-gamma/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: misc/gkrellm-gamma/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	gkrellm-gamma
 PORTVERSION=	2.03
@@ -19,4 +19,5 @@ PLIST_FILES=	libexec/gkrellm2/plugins/gamma.so
 MAKE_ENV=	PLUGIN_DIR=${PREFIX}/libexec/gkrellm2/plugins
 ALL_TARGET=	gamma.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
