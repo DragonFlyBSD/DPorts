@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: games/quake3-osp/Makefile 317864 2013-05-11 11:29:39Z danfe $
+# $FreeBSD: games/quake3-osp/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	osp
 PORTVERSION=	1.03a
@@ -20,6 +20,7 @@ DATADIR=	${Q3DIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../quake3-data/Makefile.include"
 .include <bsd.port.options.mk>
 
