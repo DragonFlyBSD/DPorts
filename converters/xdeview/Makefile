@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xdeview
-# Date Created:		9 Feb 1997
-# Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-#
-# $FreeBSD: converters/xdeview/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
+# $FreeBSD: converters/xdeview/Makefile 328169 2013-09-24 16:49:15Z gahr $
 
 PORTNAME=	xdeview
 PORTVERSION=	0.5.20
@@ -17,9 +13,9 @@ COMMENT=	An X11 program for uu/xx/Base64/BinHex/yEnc de-/encoding
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	uu.3:${PORTSDIR}/converters/uulib
+LIB_DEPENDS=	libuu.so:${PORTSDIR}/converters/uulib
 
-USE_TK=		84+
+USES+=		tk
 GNU_CONFIGURE=	yes
 # Explicitly disable Tcl otherwise the configure script picks-up
 # crud from the $PATH like /usr/opt/Simili/tcl/.
@@ -38,6 +34,7 @@ MAN1=		xdeview.1
 PORTDOCS=	porting.notes
 PLIST_FILES=	bin/uuwish bin/xdeview
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
