@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <kevin@caomhin.demon.co.uk>
-# $FreeBSD: www/webstats/Makefile 326148 2013-09-03 13:06:13Z az $
+# $FreeBSD: www/webstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webstats
 PORTVERSION=	0.3
@@ -18,6 +18,7 @@ RUN_DEPENDS=	analog:${PORTSDIR}/www/analog \
 NO_BUILD=	yes
 USES=		perl5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|%%PREFIX%%|${PREFIX}|' \
 	   ${WRKSRC}/configfiles/serverwide/webstats.ini \
