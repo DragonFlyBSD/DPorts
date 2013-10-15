@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: sysutils/xfsm/Makefile 322004 2013-06-28 22:32:28Z bapt $
+# $FreeBSD: sysutils/xfsm/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xfsm
 PORTVERSION=	1.99
@@ -18,4 +18,5 @@ MAKE_ARGS=	CC="${CC}" CCOPTIONS="-DFreeBSD"
 MAN1=		xfsm.1
 PLIST_FILES=	bin/xfsm
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
