@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-MooseX-SemiAffordanceAccessor/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-SemiAffordanceAccessor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-SemiAffordanceAccessor
 PORTVERSION=	0.09
@@ -20,4 +20,5 @@ MAN3=		MooseX::SemiAffordanceAccessor.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
