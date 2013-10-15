@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-russian
-# Date created:				22 June 2009
-# Whom:					Alexander Logvinov <avl@FreeBSD.org>
-#
-# $FreeBSD: ports/russian/rubygem-russian/Makefile,v 1.10 2012/11/17 06:00:56 svnexp Exp $
+# Created by: Alexander Logvinov <avl@FreeBSD.org>
+# $FreeBSD: russian/rubygem-russian/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	russian
 PORTVERSION=	0.6.0
@@ -18,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
