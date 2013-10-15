@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gwrite
-# Date created:				07 Mar 2010
-# Whom:					Ju Pengfei <jupengfei@gmail.com>
-#
-# $FreeBSD: ports/editors/gwrite/Makefile,v 1.7 2012/11/17 05:57:14 svnexp Exp $
-#
+# Created by: Ju Pengfei <jupengfei@gmail.com>
+# $FreeBSD: editors/gwrite/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	gwrite
 PORTVERSION=	0.5.1
@@ -30,4 +26,5 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
