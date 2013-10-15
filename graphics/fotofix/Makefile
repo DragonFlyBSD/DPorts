@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/fotofix/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: graphics/fotofix/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	fotofix
 PORTVERSION=	0.01.1.79
@@ -20,6 +20,7 @@ USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 
