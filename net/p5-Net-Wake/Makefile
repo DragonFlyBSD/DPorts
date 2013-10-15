@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Wake-0.01
-# Date created:				15 April 2001
-# Whom:	      				Yoshihiko Sarumaru <mistral@imasy.or.jp>
-#
-# $FreeBSD: net/p5-Net-Wake/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
+# $FreeBSD: net/p5-Net-Wake/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Wake
 PORTVERSION=	0.02
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Wake.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
