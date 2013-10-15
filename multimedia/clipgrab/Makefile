@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: multimedia/clipgrab/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: multimedia/clipgrab/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	clipgrab
 PORTVERSION=	3.2.0.10
@@ -28,6 +28,7 @@ DESKTOP_ENTRIES="Clipgrab" "Download and convert videos from YouTube and etc" \
 		"${DATADIR}/icon.png" "${PORTNAME}" \
 		"AudioVideo;" false
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,img/,share/${PORTNAME}/,g' \
 	${WRKSRC}/*.cpp
