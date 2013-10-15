@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: games/aop/Makefile 317831 2013-05-10 17:25:55Z lme $
+# $FreeBSD: games/aop/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	aop
 PORTVERSION=	0.6
@@ -20,6 +20,7 @@ ALL_TARGET=	#empty
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
