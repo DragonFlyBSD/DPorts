@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro
-# $FreeBSD: x11-fonts/mkbold/Makefile 327091 2013-09-12 17:07:08Z az $
+# $FreeBSD: x11-fonts/mkbold/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	mkbold
 PORTVERSION=	1.0
@@ -23,6 +23,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mkbold ${PREFIX}/bin
 
