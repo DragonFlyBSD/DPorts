@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-gif/Makefile 324364 2013-08-07 20:57:26Z gblach $
+# $FreeBSD: graphics/evas-loader-gif/Makefile 330130 2013-10-12 15:05:08Z gblach $
 
 PORTNAME=	loader-gif
 PORTVERSION=	1.7.8
@@ -14,8 +14,8 @@ COMMENT=	A hardware accelerated canvas API (GIF loader)
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
-		freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libgif.so:${PORTSDIR}/graphics/giflib \
+		libfreetype.so:${PORTSDIR}/print/freetype2
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
