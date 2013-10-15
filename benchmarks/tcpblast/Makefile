@@ -1,10 +1,5 @@
-# New ports collection makefile for:	tcpblast
-# Date created:		22 August 1994
-# Whom:			mr
-#
-# $FreeBSD: benchmarks/tcpblast/Makefile 301494 2012-07-24 21:09:44Z cs $
-#
-# port's source files are in src dir in portball
+# Created by: mr
+# $FreeBSD: benchmarks/tcpblast/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	tcpblast
 PORTVERSION=	1.1
