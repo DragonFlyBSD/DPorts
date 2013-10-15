@@ -1,5 +1,5 @@
 # Created by: Hannes Hauswedell <h2+fbsdports@fsfe.org>
-# $FreeBSD: biology/ugene/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/ugene/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	ugene
 DISTVERSION=	1.11.4
@@ -25,6 +25,7 @@ INSTALLS_ICONS=	yes
 MAN1=		${PORTNAME}.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
