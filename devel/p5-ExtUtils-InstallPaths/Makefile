@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-InstallPaths/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-InstallPaths/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	ExtUtils-InstallPaths
 PORTVERSION=	0.009
@@ -18,7 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		ExtUtils::InstallPaths.3
 
 .include <bsd.port.mk>
