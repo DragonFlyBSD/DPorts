@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: ports/mail/mbox2mdir/Makefile,v 1.4 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mbox2mdir/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mbox2mdir
 PORTVERSION=	1.4
@@ -15,6 +15,7 @@ USE_BZIP2=	yes
 
 PLIST_FILES=	bin/mbox2mdir
 
+NO_STAGE=	yes
 do-build:
 	${CXX} ${CXXFLAGS} ${WRKSRC}/mbox2mdir.cpp -o ${WRKSRC}/mbox2mdir
 
