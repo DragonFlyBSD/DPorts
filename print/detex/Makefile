@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: print/detex/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: print/detex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	detex
 PORTVERSION=	2.8
@@ -14,6 +14,7 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DNO_MALLOC_DECL -DHAVE_STRING_H"
 MAN1=		detex.1
 PLIST_FILES=	bin/detex
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/detex ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MAN1}l ${MANPREFIX}/man/man1/${MAN1}
