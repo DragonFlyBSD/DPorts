@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sshbuddy
-# Date created:		26 September 1999
-# Whom:			Dan Moschuk <dan@freebsd.org>
-#
-# $FreeBSD: ports/misc/sshbuddy/Makefile,v 1.17 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: Dan Moschuk <dan@FreeBSD.org>
+# $FreeBSD: misc/sshbuddy/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	sshbuddy
 PORTVERSION=	1.05
@@ -23,6 +19,7 @@ PLIST_FILES=	bin/sshbuddy
 BROKEN=		Broken dependency
 .endif
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/sshbuddy.expk ${PREFIX}/bin/sshbuddy
 
