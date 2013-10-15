@@ -1,5 +1,5 @@
 # Created by: Murata Shuuichirou <mrt@mickey.ai.kyutech.ac.jp>
-# $FreeBSD: japanese/skkinput/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: japanese/skkinput/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	skkinput
 PORTVERSION=	2.06.4
@@ -20,6 +20,7 @@ RG1_DESC=	Skkserver Selection
 DBSKKD_DESC=	Use ja-dbskkd-cdb as skkserver
 RSKKSERV_DESC=	Use ja-rskkserv as skkserver
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBSKKD}
