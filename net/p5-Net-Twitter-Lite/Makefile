@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Twitter-Lite
-# Date created:				Aug  2, 2009
-# Whom:					Masafumi NAKANE <max@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Twitter-Lite/Makefile 326522 2013-09-06 16:11:30Z az $
-#
+# Created by: Masafumi NAKANE <max@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Twitter-Lite/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Twitter-Lite
 PORTVERSION=	0.12001
@@ -36,4 +32,5 @@ MAN3=		Net::Twitter::Lite.3 Net::Twitter::Lite::API::V1.3 \
 		Net::Twitter::Lite::API::V1_1.3 Net::Twitter::Lite::Error.3 \
 		Net::Twitter::Lite::WithAPIv1_1.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
