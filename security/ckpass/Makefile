@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: security/ckpass/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: security/ckpass/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ckpass
 PORTVERSION=	0.2
@@ -19,4 +19,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	bin/ckpass
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
