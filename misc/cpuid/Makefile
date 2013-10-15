@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/cpuid/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: misc/cpuid/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	cpuid
 PORTVERSION=	3.3
