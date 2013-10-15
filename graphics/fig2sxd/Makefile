@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/fig2sxd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: graphics/fig2sxd/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	fig2sxd
 PORTVERSION=	0.21
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAN1=		fig2sxd.1
 PLIST_FILES=	bin/fig2sxd
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^CXX/d; s|^\(all:\).*|\1 $$(TARGET1) fig2sxd.1|' \
