@@ -1,5 +1,5 @@
 # Created by: Jeremy Chadwick <koitsu@FreeBSD.org>
-# $FreeBSD: databases/rrdtool12/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: databases/rrdtool12/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.2.30
@@ -21,15 +21,15 @@ CONFLICTS=	rrdtool-1.0* rrdtool-1.3*
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-WANT_PERL=	yes
+USES=		gmake
 
 CONFIGURE_ARGS=	--disable-tcl
 
 OPTIONS_DEFINE=	PYTHON RUBY PERL DOCS EXAMPLES
 OPTIONS_DEFAULT=	PERL
 
-.include <bsd.port.pre.mk>
+NO_STAGE=	yes
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON=	yes
@@ -54,7 +54,7 @@ PLIST_SUB+=	WITH_RUBY="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES=		perl5
 CONFIGURE_ARGS+=	--enable-perl --enable-perl-site-install
 PLIST_SUB+=	WITH_PERL=""
 .else
@@ -97,4 +97,4 @@ post-install:
 	@${ECHO_MSG} "############################################################################"
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
