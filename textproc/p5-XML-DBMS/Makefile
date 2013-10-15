@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-DBMS/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: textproc/p5-XML-DBMS/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-DBMS
 PORTVERSION=	1.03
@@ -23,6 +23,7 @@ USES=		perl5
 USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
