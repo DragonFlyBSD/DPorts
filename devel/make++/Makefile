@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	make++
-# Date created:			Fab 21, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: devel/make++/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: devel/make++/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	make++
 PORTVERSION=	2.0
@@ -19,8 +14,8 @@ COMMENT=	A drop-in replacement for GNU make
 LICENSE=	ART10 GPLv1 GPLv2 GPLv3
 LICENSE_COMB=	dual
 
+USES=		perl5
 USE_XZ=		yes
-USE_PERL5=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=${MANPREFIX}/man
 
@@ -44,6 +39,7 @@ MAN1=		makepp.1 makepp_build_algorithm.1 \
 		makepplog.1 makeppreplay.1 \
 		perl_performance.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(NOPORTDOCS)
