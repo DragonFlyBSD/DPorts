@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: security/keychain/Makefile 325961 2013-09-02 09:45:00Z garga $
+# $FreeBSD: security/keychain/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	keychain
 PORTVERSION=	2.7.1
@@ -24,6 +24,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	ChangeLog README.rst
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !exists(${LOCALBASE}/bin/ssh-agent) && !exists(/usr/bin/ssh-agent)
