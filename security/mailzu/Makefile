@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: security/mailzu/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/mailzu/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	mailzu
 DISTVERSION=	0.8rc3
@@ -36,6 +36,7 @@ PGSQL_DESC=	Use PostgreSQL database/auth storage backend
 IMAP_DESC=	Use IMAP auth backend
 LDAP_DESC=	Use LDAP auth backend
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
