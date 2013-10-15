@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-POE-Component-SSLify/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-POE-Component-SSLify/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	POE-Component-SSLify
 PORTVERSION=	1.008
@@ -25,4 +25,5 @@ MAN3=		POE::Component::SSLify.3 \
 		POE::Component::SSLify::ClientHandle.3 \
 		POE::Component::SSLify::ServerHandle.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
