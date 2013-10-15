@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: math/py-symeig/Makefile 319912 2013-06-04 21:26:52Z bapt $
+# $FreeBSD: math/py-symeig/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	symeig
 PORTVERSION=	1.4
@@ -24,6 +24,7 @@ USE_PYDISTUTILS=	yes
 OPTIONS_DEFINE=	ATLAS
 ATLAS_DESC=	Use optimized blas library
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MATLAS}
