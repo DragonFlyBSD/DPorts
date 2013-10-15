@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.locking/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.locking/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.locking
 PORTVERSION=	2.0.4
@@ -24,8 +24,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.annotation>=0:${PORTSDIR}/devel/py-zope
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-#USE_ZOPE	yes
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
