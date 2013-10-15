@@ -1,4 +1,4 @@
-# $FreeBSD: ports/russian/bugzilla/Makefile,v 1.5 2013/02/23 10:03:42 svnexp Exp $
+# $FreeBSD: russian/bugzilla/Makefile 328405 2013-09-26 19:00:40Z ohauer $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.0.10
@@ -17,13 +17,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.ru
 .include "${.CURDIR}/../../devel/bugzilla/Makefile.common"
 
 do-install:
-	${MKDIR} ${WWWDIR}
-	(cd ${WRKSRC}/ && ${PAX} -r -w * ${WWWDIR})
-.if !defined(BATCH)
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
-.endif
+	${MKDIR} ${STAGEDIR}${WWWDIR}
+	(cd ${WRKSRC}/ && ${PAX} -r -w * ${STAGEDIR}${WWWDIR})
 
 # Maintainer
 plist:	patch
