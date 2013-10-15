@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/p5-Time-Human/Makefile 324222 2013-08-04 12:30:54Z az $
+# $FreeBSD: textproc/p5-Time-Human/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Time-Human
 PORTVERSION=	1.03
@@ -18,4 +18,5 @@ MAN3=		Time::Human.3
 test:		build
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
