@@ -1,4 +1,4 @@
-# $FreeBSD: www/phprecipebook/Makefile 320652 2013-06-11 22:07:57Z madpilot $
+# $FreeBSD: www/phprecipebook/Makefile 329124 2013-10-02 22:56:47Z madpilot $
 
 PORTNAME=	phprecipebook
 PORTVERSION=	3.01
@@ -39,14 +39,11 @@ post-extract:
 	@${CHMOD} -R u+w ${WRKSRC}
 
 do-install:
-	@${CP} ${WRKSRC}/custom_inc.php ${WRKSRC}/custom_inc.php.sample
-	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
-	@if [ ! -f ${WWWDIR}/custom_inc.php ]; then \
-		${CP} ${WWWDIR}/custom_inc.php.sample \
-		${WWWDIR}/custom_inc.php ; fi
-	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
+	${MV} ${WRKSRC}/custom_inc.php ${WRKSRC}/custom_inc.php.sample
+	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}
+	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${STAGEDIR}${WWWDIR}
 
 post-install:
-	@${SED} -e 's|%%RECIPEDIR%%|${WWWDIR}|' ${PKGMESSAGE}
+	@${ECHO_CMD} '@exec ${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}' >> ${TMPPLIST}
 
 .include <bsd.port.mk>
