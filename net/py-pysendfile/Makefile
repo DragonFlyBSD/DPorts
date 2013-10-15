@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/net/py-pysendfile/Makefile,v 1.3 2013/02/09 15:59:33 svnexp Exp $
+# $FreeBSD: net/py-pysendfile/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	pysendfile
 PORTVERSION=	2.0.0
@@ -16,4 +16,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>

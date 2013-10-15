@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/py-pysendfile/pkg-plist,v 1.2 2012/11/17 06:00:16 svnexp Exp $
+@comment $FreeBSD: net/py-pysendfile/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/sendfile.so
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/sendfile.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/sendfile.pyc
