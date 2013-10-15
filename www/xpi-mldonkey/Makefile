@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-mldonkey
-# Date created:		18 April 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-mldonkey/Makefile,v 1.15 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-mldonkey/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mldonkey
 PORTVERSION=	2.5
@@ -19,5 +15,6 @@ XPI_FILES=	chrome/mldonkey.jar components/ed2kprotocol.js defaults/preferences/d
 		install.rdf chrome.manifest
 XPI_DIRS=	chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
