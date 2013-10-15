@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/makepatch/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/makepatch/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	makepatch
 PORTVERSION=	2.05
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN1=		makepatch.1 applypatch.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
