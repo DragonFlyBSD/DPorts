@@ -1,9 +1,5 @@
-# New ports collection makefile for: net2ftp
-# Date created:	  14 Apr 2009
-# Whom:		   Alexander Kriventsov
-#
-# $FreeBSD: ports/ftp/net2ftp/Makefile,v 1.3 2012/11/17 05:57:30 svnexp Exp $
-#
+# Created by: Alexander Kriventsov
+# $FreeBSD: ftp/net2ftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	net2ftp
 PORTVERSION=	0.98
@@ -31,6 +27,7 @@ SUB_FILES+=	pkg-message
 # When creating a package, empty directories will not be generated
 # from the pkg tarball.  Therefore make sure no directories are empty.
 
+NO_STAGE=	yes
 post-patch:
 	 @cd ${WRKSRC}/files_to_upload ; \
 	 for emptydir in $$( ${FIND} . -type d -empty -print ) ; do \
