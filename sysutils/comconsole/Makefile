@@ -1,5 +1,5 @@
 # Created by: SADA Kenji <sada@FreeBSD.org>
-# $FreeBSD: sysutils/comconsole/Makefile 319131 2013-05-26 19:36:04Z bsam $
+# $FreeBSD: sysutils/comconsole/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	comconsole
 PORTVERSION=	0.1
@@ -13,6 +13,7 @@ COMMENT=	Setup your PC to use serial port COM1 as its console device
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
