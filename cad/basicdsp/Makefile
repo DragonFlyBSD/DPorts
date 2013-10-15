@@ -1,9 +1,5 @@
-# New ports collection makefile for:	basicdsp
-# Date created:				4 August 2008
-# Whom:					Diane Bruce <db@db.net>
-#
-# $FreeBSD: ports/cad/basicdsp/Makefile,v 1.7 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: Diane Bruce <db@db.net>
+# $FreeBSD: cad/basicdsp/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	basicdsp
 PORTVERSION=	1.01
@@ -25,6 +21,7 @@ WX_COMPS=	wx wx:build wx:run
 PLIST_FILES=	bin/basicdsp
 MAN1=		basicdsp.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%WX_CONFIG%%|${WX_CONFIG}|g' ${WRKSRC}/Makefile
 
