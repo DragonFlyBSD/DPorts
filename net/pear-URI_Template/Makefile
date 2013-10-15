@@ -1,5 +1,5 @@
 # Created by: wenheping <wenheping@gmail.com>
-# $FreeBSD: net/pear-URI_Template/Makefile 314261 2013-03-15 06:44:24Z miwi $
+# $FreeBSD: net/pear-URI_Template/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	URI_Template
 PORTVERSION=	0.3.3
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
