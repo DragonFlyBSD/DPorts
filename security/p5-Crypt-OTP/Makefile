@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: security/p5-Crypt-OTP/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/p5-Crypt-OTP/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		Crypt-OTP
 PORTVERSION=		2.00
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Crypt::OTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
