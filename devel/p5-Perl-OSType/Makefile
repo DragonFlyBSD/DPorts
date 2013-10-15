@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Perl-OSType/Makefile 326951 2013-09-11 07:44:22Z tobez $
+# $FreeBSD: devel/p5-Perl-OSType/Makefile 328389 2013-09-26 16:47:30Z sunpoet $
 
 PORTNAME=	Perl-OSType
-PORTVERSION=	1.005
+PORTVERSION=	1.006
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,7 +15,5 @@ LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Perl::OSType.3
 
 .include <bsd.port.mk>
