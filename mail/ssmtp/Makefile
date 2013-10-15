@@ -1,5 +1,5 @@
 # Created by: Tomasz Paszkowski <ns88@k.pl>
-# $FreeBSD: mail/ssmtp/Makefile 325613 2013-08-29 17:37:23Z sunpoet $
+# $FreeBSD: mail/ssmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ssmtp
 PORTVERSION=	2.64
@@ -36,6 +36,7 @@ LOGFILE_DESC=	log file
 USERPREFS_DESC=	user defined revaliases
 XORIGIP_DESC=	Add X-Originating-IP header
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLOGFILE}
