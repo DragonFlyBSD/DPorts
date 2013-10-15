@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: net/p5-XML-RPC/Makefile 326526 2013-09-06 17:02:34Z az $
+# $FreeBSD: net/p5-XML-RPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	XML-RPC
 PORTVERSION=	0.9
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	XML::RPC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
