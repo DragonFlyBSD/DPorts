@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Config-MVP-Reader-INI/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Config-MVP-Reader-INI/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-MVP-Reader-INI
 PORTVERSION=	2.101461
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Config::MVP::Reader::INI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
