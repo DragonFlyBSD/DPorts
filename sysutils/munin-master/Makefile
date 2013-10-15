@@ -1,5 +1,5 @@
 # Created by: Lupe Christoph <lupe@lupe-christoph.de>
-# $FreeBSD: sysutils/munin-master/Makefile 327370 2013-09-16 07:47:02Z az $
+# $FreeBSD: sysutils/munin-master/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
@@ -45,6 +45,7 @@ USES=		gmake perl5
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../munin-common/munin.mk"
 
 EXTRA_PATCHES=	${MUNIN_PATCHES}
