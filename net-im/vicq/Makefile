@@ -1,5 +1,5 @@
 # Created by: Kevin Lo<kevlo@FreeBSD.org>
-# $FreeBSD: net-im/vicq/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/vicq/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	vicq
 PORTVERSION=	0.4.2
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 SIGNAL_PATCH=p5.8-patch-sigalrm
 
+NO_STAGE=	yes
 post-extract:
 	${MV} ${WRKSRC}/Net/vICQ/*  ${WRKSRC}
 	${RM} ${WRKSRC}/install.pl
