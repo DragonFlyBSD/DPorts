@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	JFlex
-# Date created:				27 January 2004
-# Whom:					Conor McDermottroe <ports@mcdermottroe.com>
-#
-# $FreeBSD: ports/java/jflex/Makefile,v 1.10 2012/11/17 05:58:45 svnexp Exp $
-#
+# Created by: Conor McDermottroe <ports@mcdermottroe.com>
+# $FreeBSD: java/jflex/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jflex
 PORTVERSION=	1.4.2
@@ -32,6 +28,7 @@ PORTDOCS=	*
 
 SUB_FILES=	jflex.sh
 
+NO_STAGE=	yes
 post-extract:
 	${MKDIR} ${WRKSRC}/tools
 	${CP} ${DISTDIR}/JFlex.jar ${WRKSRC}/tools/
