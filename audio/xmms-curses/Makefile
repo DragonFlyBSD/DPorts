@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: audio/xmms-curses/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: audio/xmms-curses/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-curses
 PORTVERSION=	0.2.2
@@ -15,6 +15,7 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 LIB_DEPENDS=	pthread-stubs.0:${PORTSDIR}/devel/libpthread-stubs
 
 USES=		gettext iconv
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 USE_XORG=	x11 xau xcb xdmcp xext xi
 
