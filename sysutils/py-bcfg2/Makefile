@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: sysutils/py-bcfg2/Makefile 320136 2013-06-06 22:08:41Z bapt $
+# $FreeBSD: sysutils/py-bcfg2/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bcfg2
 PORTVERSION=	1.1.1
@@ -22,6 +22,7 @@ OPTIONS_DEFINE=	CHEETAH GENSHI
 CHEETAH_DESC=	Support Cheetah Templates
 GENSHI_DESC=	Support Genshi Templates
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_PYTHON=		yes
