@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/batv-milter/files/milter-batv.in,v 1.2 2012/11/17 05:58:59 svnexp Exp $
+# $FreeBSD: mail/batv-milter/files/milter-batv.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: milter-batv

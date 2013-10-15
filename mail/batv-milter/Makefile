@@ -1,9 +1,5 @@
-# New ports collection makefile for:	batv-milter
-# Date created:		2009-06-04
-# Whom:			Hirohisa Yamaguchi <umq@ueo.co.jp>
-#
-# $FreeBSD: ports/mail/batv-milter/Makefile,v 1.4 2012/11/17 05:58:59 svnexp Exp $
-#
+# Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
+# $FreeBSD: mail/batv-milter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	batv-milter
 PORTVERSION=	0.5.0
@@ -28,6 +24,7 @@ SITE_SUB=	-e "s|%%PREFIX%%|${PREFIX}|g" \
 		-e "s|%%OPENSSLINC%%|${OPENSSLINC}|g" \
 		-e "s|%%OPENSSLLIB%%|${OPENSSLLIB}|g"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/mail/sendmail/bsd.milter.mk"
 
