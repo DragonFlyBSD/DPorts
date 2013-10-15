@@ -1,16 +1,12 @@
-# New ports collection makefile for:   rendercheck
-# Date Created:			26 Sep, 2004
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/rendercheck/Makefile,v 1.8 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/rendercheck/Makefile 330199 2013-10-13 02:01:16Z eadler $
 
 PORTNAME=	rendercheck
 PORTVERSION=	1.4
 CATEGORIES=	x11
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A small program for testing basic Render extension conformance
+COMMENT=	Small program for testing basic Render extension conformance
 
 XORG_CAT=	app
 USE_XORG=	xrender
@@ -19,4 +15,5 @@ MAN1=		rendercheck.1
 
 PLIST_FILES=	bin/rendercheck
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
