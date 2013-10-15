@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-fm/xdiskusage/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: x11-fm/xdiskusage/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	xdiskusage
 PORTVERSION=	1.48
@@ -22,6 +22,7 @@ LDFLAGS+=	`fltk-config --ldflags`
 PLIST_FILES=	bin/xdiskusage
 MAN1=		xdiskusage.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '22,24d' ${WRKSRC}/Makefile
 
