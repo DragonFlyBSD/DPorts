@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: print/jabref/Makefile 316476 2013-04-24 19:42:33Z mandree $
+# $FreeBSD: print/jabref/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	jabref
 PORTVERSION=	2.9.2
@@ -30,6 +30,7 @@ SUB_LIST=	JARNAME=${PORTNAME}.jar
 
 USE_GNOME=	desktopfileutils
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${DISTDIR}/${DISTFILES} ${DATADIR}/${PORTNAME}.jar
