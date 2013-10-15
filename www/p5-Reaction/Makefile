@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Reaction/Makefile 326923 2013-09-10 19:06:01Z sunpoet $
+# $FreeBSD: www/p5-Reaction/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Reaction
 PORTVERSION=	0.002005
@@ -215,4 +215,5 @@ MAN3=		Catalyst::Model::Reaction::InterfaceModel::DBIC.3 \
 		Reaction::UI::WidgetClass.3 \
 		Reaction::UI::Window.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
