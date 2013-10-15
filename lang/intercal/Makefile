@@ -1,5 +1,5 @@
-# Created by: Matthew Hunt <mph@freebsd.org>
-# $FreeBSD: lang/intercal/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# Created by: Matthew Hunt <mph@FreeBSD.org>
+# $FreeBSD: lang/intercal/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	intercal
 PORTVERSION=	0.29
@@ -18,6 +18,7 @@ DATADIR=	${PREFIX}/share/ick
 MAN1=		ick.1 convickt.1
 INFO=		ick
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/ICK_SPECIFIC_SUBDIR/s/-@PACKAGE_VERSION@// ' \
 		${WRKSRC}/buildaux/Makefile.in
