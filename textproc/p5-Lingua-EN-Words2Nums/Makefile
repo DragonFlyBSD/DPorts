@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Lingua-EN-Words2Nums/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-Lingua-EN-Words2Nums/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	Lingua-EN-Words2Nums
 PORTVERSION=	0.18
@@ -15,7 +15,5 @@ LICENSE_COMB=	dual
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Lingua::EN::Words2Nums.3
 
 .include <bsd.port.mk>
