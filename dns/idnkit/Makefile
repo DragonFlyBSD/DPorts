@@ -1,9 +1,5 @@
-# New ports collection makefile for:	idnkit
-# Date created:		19 March 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: dns/idnkit/Makefile 326444 2013-09-05 20:18:30Z bsam $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: dns/idnkit/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	idnkit
 PORTVERSION=	1.0
@@ -36,6 +32,7 @@ MANCOMPRESSED=	no
 DOCS_EN=	ChangeLog NEWS README
 DOCS_JA=	README.ja
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		's|mode=link $$(LD)|mode=link $$(CC)|'
