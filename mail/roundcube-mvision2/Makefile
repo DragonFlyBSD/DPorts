@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mvision2
-# Date created:				Thu 16 Jul 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/mail/roundcube-mvision2/Makefile,v 1.2 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: mail/roundcube-mvision2/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mvision2
 PORTVERSION=	2
@@ -32,6 +28,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKDIR}/mvision2_en && ${PAX} -r -w . \
