@@ -1,5 +1,5 @@
-# Created by: pst@freebsd.org
-# $FreeBSD: devel/idutils/Makefile 320592 2013-06-11 14:54:05Z miwi $
+# Created by: pst@FreeBSD.org
+# $FreeBSD: devel/idutils/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	idutils
 PORTVERSION=	4.6
@@ -21,6 +21,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 INFO=		idutils
 MAN1=		aid.1 defid.1 eid.1 fid.1 fnid.1 gid.1 lid.1 mkid.1 xtokid.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
