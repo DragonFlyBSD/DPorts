@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mysql-udf
-# Date created:		April 2008
-# Whom:			Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/mysql-udf/Makefile,v 1.7 2012/11/17 05:55:11 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: databases/mysql-udf/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql-udf
 PORTVERSION=	0.3
@@ -28,6 +24,7 @@ PLIST_FILES+=	lib/mysql/plugin/udf_${MODULE}.so
 
 PLIST_DIRS=	lib/mysql/plugin
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64
