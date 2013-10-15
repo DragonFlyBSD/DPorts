@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: devel/xa65/Makefile 324015 2013-07-31 07:45:04Z jgh $
+# $FreeBSD: devel/xa65/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xa
 PORTVERSION=	2.3.5
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/xa65 \
 		bin/printcbm \
 		bin/uncpk
 
+NO_STAGE=	yes
 post-patch-script:
 .for i in CC LDFLAGS CFLAGS
 	@${REINPLACE_CMD} 's|${i} = |${i} ?= |g' ${WRKSRC}/Makefile
