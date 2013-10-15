@@ -1,9 +1,5 @@
-# New ports collection makefile for:	java2html
-# Date created:				21 March 1999
-# Whom:					Martin Kammerhofer
-#
-# $FreeBSD: ports/textproc/java2html/Makefile,v 1.16 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Martin Kammerhofer
+# $FreeBSD: textproc/java2html/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=		java2html
 PORTVERSION=		0.9.2
@@ -16,6 +12,7 @@ MAINTAINER=		mkamm@gmx.net
 COMMENT=	Java sources to HTML converter
 
 USE_AUTOTOOLS=	autoconf213
+NO_STAGE=	yes
 
 MAN1=			java2html.1
 
