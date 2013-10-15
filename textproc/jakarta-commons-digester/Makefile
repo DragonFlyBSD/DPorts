@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/textproc/jakarta-commons-digester/Makefile,v 1.10 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/jakarta-commons-digester/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	commons-digester
 PORTVERSION=	1.8
@@ -39,6 +39,7 @@ COMMONS_BEANUTILS_API=	${LOCALBASE}/share/doc/commons-beanutils
 COMMONS_COLLECTIONS_API=${LOCALBASE}/share/doc/commons-collections/apidocs
 COMMONS_LOGGING_API=	${LOCALBASE}/share/doc/commons-logging/api
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 JAR_DEPENDS=	${JAVALIBDIR}/commons-beanutils.jar:${PORTSDIR}/java/jakarta-commons-beanutils \
