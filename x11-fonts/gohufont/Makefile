@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/gohufont/Makefile 321150 2013-06-17 19:59:44Z rakuco $
+# $FreeBSD: x11-fonts/gohufont/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	gohufont
 PORTVERSION=	2.0
@@ -20,6 +20,7 @@ FONTDIR=	lib/X11/fonts/${PORTNAME}
 NO_BUILD=	yes
 PLIST_SUB+=	FONTDIR=${FONTDIR}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${LOCALBASE}/${FONTDIR}
 	@${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${LOCALBASE}/${FONTDIR}
