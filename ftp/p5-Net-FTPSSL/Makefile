@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ftp/p5-Net-FTPSSL/Makefile 324434 2013-08-09 13:20:40Z jadawin $
+# $FreeBSD: ftp/p5-Net-FTPSSL/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	Net-FTPSSL
 PORTVERSION=	0.23
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::FTPSSL.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
