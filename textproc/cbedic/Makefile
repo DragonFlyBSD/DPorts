@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cbedic
-# Date created:			15 April 2002
-# Whom:				Peter Pentchev <roam@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/cbedic/Makefile,v 1.7 2012/11/17 06:01:52 svnexp Exp $
-#
+# Created by: Peter Pentchev <roam@FreeBSD.org>
+# $FreeBSD: textproc/cbedic/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	cbedic
 PORTVERSION=	1.2
@@ -24,4 +20,5 @@ USE_GMAKE=	yes
 
 CONFIGURE_ARGS=	--datadir=${DICT_DIR}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
