@@ -1,6 +1,5 @@
 # Created by: David E. Thiel <lx@FreeBSD.org>
-# $FreeBSD: security/ncrack/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/ncrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ncrack
 PORTVERSION=	0.4
@@ -17,4 +16,5 @@ USE_GMAKE=	yes
 
 MAN1=	ncrack.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
