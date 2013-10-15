@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-http-cookie/Makefile 319772 2013-06-03 11:49:08Z swills $
+# $FreeBSD: www/rubygem-http-cookie/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	http-cookie
 PORTVERSION=	1.0.1
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
