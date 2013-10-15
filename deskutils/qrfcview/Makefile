@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/qrfcview/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# $FreeBSD: deskutils/qrfcview/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	qrfcview
 PORTVERSION=	0.62
@@ -14,6 +14,7 @@ COMMENT=	Graphical RFC viewer
 USE_QT4=	gui network corelib qmake_build uic_build moc_build rcc_build
 PLIST_FILES=	bin/qRFCView
 
+NO_STAGE=	yes
 do-configure:
 	@cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${QMAKE} -unix rfcview.pro
 
