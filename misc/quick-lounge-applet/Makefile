@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: misc/quick-lounge-applet/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: misc/quick-lounge-applet/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/misc/quick-lounge-applet/Makefile,v 1.15 2010/11/16 10:06:22 kwm Exp $
 
 PORTNAME=	quick-lounge-applet
@@ -24,4 +24,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	quick-lounge.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
