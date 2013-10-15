@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sed+mb
-# Date created:		2 April 1995
-# Whom:			Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-#
-# $FreeBSD: ports/japanese/sed/Makefile,v 1.21 2012/11/17 05:58:39 svnexp Exp $
-#
+# Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
+# $FreeBSD: japanese/sed/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	sed
 PORTVERSION=	3.02
@@ -26,6 +22,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAN1=		sed.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/${PKGBASE}
