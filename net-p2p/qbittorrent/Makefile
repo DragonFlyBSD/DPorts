@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent/Makefile 327432 2013-09-16 18:05:14Z nemysis $
+# $FreeBSD: net-p2p/qbittorrent/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	qbittorrent
 PORTVERSION=	3.0.11
@@ -36,6 +36,7 @@ PORTDOCS=	AUTHORS Changelog README TODO
 
 OPTIONS_DEFINE=	DOCS DBUS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBUS}
