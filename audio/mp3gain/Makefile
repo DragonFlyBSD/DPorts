@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: ports/audio/mp3gain/Makefile,v 1.18 2013/01/26 16:56:07 svnexp Exp $
+# $FreeBSD: audio/mp3gain/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	mp3gain
 PORTVERSION=	1.5.2
@@ -12,11 +12,12 @@ COMMENT=	A tool to normalize the gain of MP3 files
 
 LICENSE=	LGPL21
 
-PLIST_FILES=	bin/mp3gain
+NO_STAGE=	yes
+
 USE_ZIP=	yes
 USE_DOS2UNIX=	yes
-
 NO_WRKSUBDIR=	yes
+PLIST_FILES=	bin/mp3gain
 
 post-patch:
 	@${CP} ${FILESDIR}/Makefile.main ${WRKSRC}/Makefile
