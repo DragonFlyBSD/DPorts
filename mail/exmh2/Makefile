@@ -1,9 +1,5 @@
-# New ports collection Makefile for:    exmh2
-# Date created:			1 Jan 97
-# Whom:				Peter Wemm <peter@freebsd.org>
-#
-# $FreeBSD: ports/mail/exmh2/Makefile,v 1.69 2012/12/08 07:11:48 svnexp Exp $
-#
+# Created by: Peter Wemm <peter@FreeBSD.org>
+# $FreeBSD: mail/exmh2/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 # "+=" and "?=" lines are for sharing this Makefile with japanese/exmh2.
 
@@ -37,6 +33,7 @@ SCRIPTS_ENV+=	USE_NMH=YES
 # full mime support needs mmencode/mmdecode from metamail
 RUN_DEPENDS+=	mmencode:${PORTSDIR}/mail/metamail
 
+NO_STAGE=	yes
 # Additionally, exmh will use the following ports if present:
 # lang/expect
 # textproc/glimpse
