@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: mail/p5-FuzzyOcr/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: mail/p5-FuzzyOcr/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	FuzzyOcr
 DISTVERSION=	2.3b
@@ -46,6 +46,7 @@ PLIST_FILES=	${SA_CONFIGDIR}/FuzzyOcr.pm				\
 		%%EXAMPLESDIR%%/FuzzyOcr.cf %%EXAMPLESDIR%%/FuzzyOcr.words
 PLIST_DIRS=	%%EXAMPLESDIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
