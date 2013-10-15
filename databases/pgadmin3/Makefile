@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pgadmin3
-# Date created:                         November 4, 2003
-# Whom:                                 Max Khon
-#
-# $FreeBSD: databases/pgadmin3/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Max Khon
+# $FreeBSD: databases/pgadmin3/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgadmin3
 PORTVERSION=	1.16.1
@@ -35,6 +31,7 @@ WX_UNICODE=	yes
 PLIST_FILES=	bin/pgadmin3 bin/png2c
 PORTDATA=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/wx-config,/${WX_CONFIG:T},' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's,/usr/bin/xterm,${LOCALBASE}/bin/xterm,' ${WRKSRC}/plugins.d/plugins.ini
