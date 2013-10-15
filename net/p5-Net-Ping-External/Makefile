@@ -1,9 +1,5 @@
-# New ports collection makefile for: p5-Net-Ping-External
-# Date created: March 5th 2004
-# Whom: Douglas Thrift <douglas@douglasthrift.net>
-#
-# $FreeBSD: net/p5-Net-Ping-External/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Douglas Thrift <douglas@douglasthrift.net>
+# $FreeBSD: net/p5-Net-Ping-External/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Ping-External
 PORTVERSION=	0.13
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Ping::External.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
