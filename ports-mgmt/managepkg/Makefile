@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: ports-mgmt/managepkg/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: ports-mgmt/managepkg/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	managepkg
 PORTVERSION=	1.1
@@ -20,6 +20,7 @@ WRKSRC=	${WRKDIR}
 NO_BUILD=	yes
 PLIST_FILES=	sbin/managepkg
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin/
 
