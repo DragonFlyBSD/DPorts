@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xisola/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xisola/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xisola
 PORTVERSION=	1.0
@@ -16,6 +16,7 @@ USES=		imake
 USE_XORG=	x11 xext xaw xmu xt sm ice
 NO_INSTALL_MANPAGES=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
