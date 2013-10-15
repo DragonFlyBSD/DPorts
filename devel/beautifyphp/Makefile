@@ -1,9 +1,5 @@
-# New ports collection makefile for:	beautifyphp
-# Date created:				03 August 2005
-# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/beautifyphp/Makefile,v 1.5 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: devel/beautifyphp/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	beautifyphp
 PORTVERSION=	0.5.0
@@ -23,6 +19,7 @@ PLIST_FILES=	bin/beautify_php share/${PORTNAME}/beautify_php.php \
 		share/pear/beautify_php.class.inc
 PLIST_DIRS=	share/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's,/usr/bin/php,${LOCALBASE}/bin/php,g' ${WRKSRC}/beautify_php
 	@${FIND} ${WRKSRC} -name "*.bak" -or -name "*.orig" -delete
