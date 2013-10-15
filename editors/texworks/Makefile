@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: editors/texworks/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/texworks/Makefile 329815 2013-10-08 17:37:36Z marino $
 
 PORTNAME=	texworks
 PORTVERSION=	0.4.4
@@ -19,6 +19,7 @@ LIB_DEPENDS=	poppler-qt4:${PORTSDIR}/graphics/poppler-qt4
 USES=		pkgconfig
 USE_QT4=	qmake_build gui corelib rcc_build moc_build uic_build \
 		dbus xml scripttools designer_build
+QMAKEFLAGS=	QMAKE_LFLAGS="-lz"
 QMAKE_ARGS=	INSTALL_PREFIX=${PREFIX} \
 		DATA_DIR=${DATADIR} \
 		DOCS_DIR=${DOCSDIR} \
@@ -27,7 +28,6 @@ QMAKE_ARGS=	INSTALL_PREFIX=${PREFIX} \
 		MAN_DIR=${MAN1PREFIX}/man/man1 \
 		TW_DICPATH=${LOCALBASE}/share/hunspell \
 		TW_HELPPATH=${DOCSDIR}
-QMAKEFLAGS+=	QMAKE_LFLAGS="-lz"
 
 VCS_REVISION=	1004
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -46,6 +46,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
