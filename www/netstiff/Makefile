@@ -1,9 +1,5 @@
-# New ports collection makefile for:	netstiff
-# Date created:				23 March 2007
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/www/netstiff/Makefile,v 1.6 2013/02/20 16:45:27 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: www/netstiff/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	netstiff
 PORTVERSION=	20080331
@@ -22,6 +18,7 @@ PORTDOCS=	ChangeLog LICENSE THANKSTO
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/ruby|${RUBY}|' ${WRKSRC}/${PORTNAME}
 
