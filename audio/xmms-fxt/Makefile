@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: audio/xmms-fxt/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/xmms-fxt/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-fxt
 PORTVERSION=	0.4
@@ -14,6 +14,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 GNU_CONFIGURE=	yes
 USES=		gmake
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 
 PLIST_FILES=	lib/xmms/Effect/libfxt.la \
