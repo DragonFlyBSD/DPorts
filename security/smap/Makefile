@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	smap
-# Date created:			May 25, 2007
-# Whom:				Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/security/smap/Makefile,v 1.3 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: security/smap/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	smap
 PORTVERSION=	0.5.0
@@ -20,6 +15,7 @@ PLIST_DIRS=	share/smap
 
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/smap ${PREFIX}/bin
 	${MKDIR} ${PREFIX}/share/smap
