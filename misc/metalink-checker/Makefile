@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Metalink checker
-# Date created:		Sun 10 Aug 2008 04:22:51 UTC
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/metalink-checker/Makefile,v 1.4 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: misc/metalink-checker/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	metalink
 PORTVERSION=	1.3
@@ -31,6 +27,7 @@ PORTDOCS=	*
 
 PLIST_FILES=	bin/${PORTNAME}.py
 
+NO_STAGE=	yes
 do-patch:
 	@${REINPLACE_CMD} -E \
 		-e "s|#!/usr/bin/env[[:space:]]python|#!${PYTHON_CMD}|" \
