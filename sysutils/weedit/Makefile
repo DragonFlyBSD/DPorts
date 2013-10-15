@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/weedit/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/weedit/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	weedit
 PORTVERSION=	2.0.3
@@ -20,6 +20,7 @@ SRCF=		crc32 dlink weedit md5
 
 PLIST_FILES=	bin/weedit bin/weeditreaddb
 
+NO_STAGE=	yes
 do-build:
 .for f in ${SRCF}
 	${CC} ${CFLAGS} -c ${WRKSRC}/${f}.c -o ${WRKSRC}/${f}.o
