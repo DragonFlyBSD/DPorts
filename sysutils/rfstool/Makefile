@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: sysutils/rfstool/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: sysutils/rfstool/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rfstool
 PORTVERSION=	0.14
@@ -15,6 +15,7 @@ USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/rfstool-0.14/RFSTOOL
 MAKEFILE=	makefile.gcc3x
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e "s,g++,\$${CXX},g" ${WRKSRC}/${MAKEFILE}
 
