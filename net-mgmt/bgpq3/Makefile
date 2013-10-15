@@ -1,5 +1,5 @@
 # Created by: Alexandre Snarskii <snar@snar.spb.ru>
-# $FreeBSD: net-mgmt/bgpq3/Makefile 318587 2013-05-20 08:59:26Z miwi $
+# $FreeBSD: net-mgmt/bgpq3/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	bgpq3
 PORTVERSION=	0.1.19
@@ -16,4 +16,5 @@ HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=--prefix=${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
