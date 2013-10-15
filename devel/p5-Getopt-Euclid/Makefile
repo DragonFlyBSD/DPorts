@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Getopt-Euclid/Makefile 325692 2013-08-30 13:21:45Z tobez $
+# $FreeBSD: devel/p5-Getopt-Euclid/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Getopt-Euclid
 PORTVERSION=	0.4.4
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Getopt::Euclid.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
