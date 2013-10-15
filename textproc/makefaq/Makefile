@@ -1,9 +1,5 @@
-# Ports collection makefile for:	makefaq
-# Date created:				Sat Aug 23 07:15:39 CEST 2003
-# Whom:					king@v2project.com
-#
-# $FreeBSD: ports/textproc/makefaq/Makefile,v 1.6 2012/11/17 06:02:02 svnexp Exp $
-#
+# Created by: king@v2project.com
+# $FreeBSD: textproc/makefaq/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	makefaq
 PORTVERSION=	2.5
@@ -21,6 +17,7 @@ MAN1=		makefaq.1
 PLIST_FILES=	bin/makefaq.py
 PORTDOCS=	README UPGRADING faq.html
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/makefaq.py ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/makefaq.1  ${MAN1PREFIX}/man/man1
