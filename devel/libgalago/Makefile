@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libgalago/Makefile 326027 2013-09-02 16:29:30Z bapt $
+# $FreeBSD: devel/libgalago/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libgalago
 PORTVERSION=	0.5.2
@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--disable-tests
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-configure:
 	@${ECHO_CMD} "#define HAVE_STRCHR 1" >> ${WRKSRC}/config.h
 
