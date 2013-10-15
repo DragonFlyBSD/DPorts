@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: math/p5-Bit-Vector-Minimal/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Bit-Vector-Minimal/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Bit-Vector-Minimal
 PORTVERSION=	1.3
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Bit::Vector::Minimal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
