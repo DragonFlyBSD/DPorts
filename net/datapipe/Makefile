@@ -1,5 +1,5 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org> <dbaker@cuckoo.com>
-# $FreeBSD: net/datapipe/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: net/datapipe/Makefile 328557 2013-09-28 07:08:21Z eadler $
 
 PORTNAME=	datapipe
 PORTVERSION=	1.0
@@ -33,6 +33,6 @@ do-build:
 	${CC} ${CFLAGS} -o ${WRKDIR}/${DISTNAME}/datapipe ${WRKDIR}/${DISTNAME}/datapipe.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/datapipe ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/datapipe ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.post.mk>
