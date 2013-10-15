@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jumpgate
-# Date created:				20 March 2001
-# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/net/jumpgate/Makefile,v 1.8 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: net/jumpgate/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	jumpgate
 PORTVERSION=	0.7
@@ -18,4 +14,5 @@ GNU_CONFIGURE=	yes
 MAN8=		jumpgate.8
 PLIST_FILES=	sbin/jumpgate
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
