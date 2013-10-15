@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: korean/fcitx-hangul/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: korean/fcitx-hangul/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	fcitx-hangul
 PORTVERSION=	0.2.0
@@ -24,4 +24,5 @@ INSTALLS_ICONS=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
