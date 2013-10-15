@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: editors/gedit-plugins/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: editors/gedit-plugins/Makefile 327720 2013-09-20 16:36:23Z bapt $
 #   $MCom: ports/editors/gedit-plugins/Makefile,v 1.48 2010/10/29 14:47:24 kwm Exp $
 
 PORTNAME=	gedit-plugins
@@ -33,6 +33,7 @@ GCONF_SCHEMAS=	gedit-show-tabbar-plugin.schemas \
 
 OPTIONS_DEFINE=	PYTHON
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
