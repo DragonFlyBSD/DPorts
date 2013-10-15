@@ -1,5 +1,5 @@
 # Created by: dglo@ssec.wisc.edu
-# $FreeBSD: dns/nslint/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: dns/nslint/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	nslint
 PORTVERSION=	3.1
@@ -22,6 +22,7 @@ CONFFILE?=	/etc/namedb/named.conf
 MAN8=		nslint.8
 PLIST_FILES=	bin/nslint
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^\ \{4\}V_CCOPT/d' ${WRKSRC}/configure
 	@@${REINPLACE_CMD} -e 's|/etc/named.boot|${BOOTFILE}|; \
