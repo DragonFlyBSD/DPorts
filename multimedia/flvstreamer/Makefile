@@ -1,8 +1,5 @@
-# Ports collection makefile for:	flvstreamer
-# Date created:				March 15, 2010
-# Whom:					hrs
-#
-# $FreeBSD: ports/multimedia/flvstreamer/Makefile,v 1.4 2012/11/17 05:59:48 svnexp Exp $
+# Created by: hrs
+# $FreeBSD: multimedia/flvstreamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	flvstreamer
 PORTVERSION=	2.1.c.1
@@ -24,6 +21,7 @@ MAKE_ARGS=	THREADLIB="${PTHREAD_LIBS}" \
 PLIST_FILES=	bin/flvstreamer bin/streams
 PORTDOCS=	ChangeLog ChangeLog.rtmpdump README
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PLIST_FILES:S,^bin/,,} \
 		${PREFIX}/bin
