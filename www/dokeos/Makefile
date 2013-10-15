@@ -1,5 +1,5 @@
 # Created by: Filipe Rocha <filiperocha@gmail.com>
-# $FreeBSD: www/dokeos/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/dokeos/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dokeos
 PORTVERSION=	1.8.6
@@ -14,6 +14,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 OPTIONS_DEFINE=	LDAP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
