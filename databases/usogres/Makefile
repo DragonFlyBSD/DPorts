@@ -1,9 +1,4 @@
-# New ports collection makefile for:	usogres
-# Date Created:				20 Aug, 2003
-# Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/usogres/Makefile,v 1.7 2012/11/17 05:55:25 svnexp Exp $
-#
+# $FreeBSD: databases/usogres/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	usogres
 PORTVERSION=	0.8.1
@@ -23,6 +18,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 # To avoid syslogd load, add this parameter.
 #MAKE_ARGS=	NDEBUG=yes
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC}; ${CP} usogresrc usogresrc.sample
 
