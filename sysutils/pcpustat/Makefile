@@ -1,9 +1,5 @@
-# New ports collection makefile for:   pcpustat
-# Date created:        13 July 2010
-# Whom:                sterling
-#
-# $FreeBSD: ports/sysutils/pcpustat/Makefile,v 1.8 2012/11/17 06:01:41 svnexp Exp $
-#
+# Created by: sterling
+# $FreeBSD: sysutils/pcpustat/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pcpustat
 PORTVERSION=	1.6
@@ -20,6 +16,7 @@ MAN1=		pcpustat.1
 USE_BZIP2=	yes
 PLIST_FILES=	bin/pcpustat
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/man1/${PORTNAME}.1 ${MANPREFIX}/man/man1
