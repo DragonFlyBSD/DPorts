@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/tomahawk/Makefile 321989 2013-06-28 21:24:04Z nivit $
+# $FreeBSD: audio/tomahawk/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	tomahawk
 PORTVERSION=	0.7.0
@@ -45,6 +45,7 @@ PLIST_SUB+=	DESKTOPDIR=${DESKTOPDIR:S,^${PREFIX}/,,} \
 		PORTVERSION=${PORTVERSION}
 
 USES=		cmake pkgconfig
+NO_STAGE=	yes
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
