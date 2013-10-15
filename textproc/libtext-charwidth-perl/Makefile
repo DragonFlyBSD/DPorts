@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libtext-charwidth-perl
-# Date created:				08 Januar 2006
-# Whom:					Meno Abels <meno.abels@adviser.com>
-#
-# $FreeBSD: textproc/libtext-charwidth-perl/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Meno Abels <meno.abels@adviser.com>
+# $FreeBSD: textproc/libtext-charwidth-perl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libtext-charwidth-perl
 PORTVERSION=	0.04
@@ -22,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		Text::CharWidth.3
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}.orig ${WRKSRC}
 
