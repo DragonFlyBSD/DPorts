@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: net/pear-Net_CheckIP/Makefile 314274 2013-03-15 07:17:45Z miwi $
+# $FreeBSD: net/pear-Net_CheckIP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_CheckIP
 PORTVERSION=	1.2.2
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
