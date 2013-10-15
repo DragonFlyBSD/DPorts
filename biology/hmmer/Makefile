@@ -1,5 +1,5 @@
 # Created by: barnhart@genetics.wustl.edu
-# $FreeBSD: biology/hmmer/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: biology/hmmer/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	hmmer
 PORTVERSION=	3.0
@@ -24,6 +24,7 @@ EXAMPLES=	7LESS_DROME Pkinase.sto fn3.sto globins4.sto minifam.h3f minifam.h3p \
 OPTIONS_DEFINE=	PVM
 PVM_DESC=	PVM support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPVM}
