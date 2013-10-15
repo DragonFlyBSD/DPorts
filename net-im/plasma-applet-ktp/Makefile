@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/plasma-applet-ktp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-im/plasma-applet-ktp/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	ktp
 PORTVERSION=	${KTP_VERSION}
@@ -21,4 +21,5 @@ USE_QT4=	corelib declarative \
 USES=		cmake gettext
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
