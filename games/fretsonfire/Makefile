@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/fretsonfire/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: games/fretsonfire/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	fretsonfire
 PORTVERSION=	1.3.110
@@ -30,6 +30,7 @@ WRKSRC=		"${WRKDIR}/Frets on Fire-${PORTVERSION}"
 
 FOF_DIR=	${PREFIX}/lib/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"
