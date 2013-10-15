@@ -1,9 +1,5 @@
-# New ports collection makefile for:   pspresent
-# Date created:        25 Jul 2007
-# Whom:                Timothy Bourke <timbob@bigpond.com>
-#
-# $FreeBSD: misc/pspresent/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Timothy Bourke <timbob@bigpond.com>
+# $FreeBSD: misc/pspresent/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pspresent
 PORTVERSION=	1.3
@@ -27,6 +23,7 @@ PLIST_FILES=	bin/pspresent
 CFLAGS+=	-I${LOCALBASE}/include -DHAVE_LIBXINERAMA
 LDFLAGS+=	-L${LOCALBASE}/lib -lX11 -lXext -lXinerama
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pspresent ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pspresent.1 ${MAN1PREFIX}/man/man1
