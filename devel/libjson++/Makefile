@@ -1,5 +1,5 @@
 # Created by: Kojedzinszky Richard <krichy@tvnetwork.hu>
-# $FreeBSD: devel/libjson++/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/libjson++/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libjson++
 PORTVERSION=	0.4.0
@@ -12,4 +12,5 @@ COMMENT=	Small C++ library to handle JSON serialized data
 USES=		cmake
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
