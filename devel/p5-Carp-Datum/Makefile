@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: devel/p5-Carp-Datum/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-Carp-Datum/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Carp-Datum
 PORTVERSION=	0.1.3
@@ -25,4 +25,5 @@ MAN3=		Carp::Datum::Assert.3 \
 		Carp::Datum::Cfg.3 \
 		Carp::Datum::Flags.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
