@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sendmail.cz>
-# $FreeBSD: databases/py-cql/Makefile 318489 2013-05-19 05:19:35Z bdrewery $
+# $FreeBSD: databases/py-cql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	cql
 PORTVERSION=	1.4.0
@@ -19,4 +19,5 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	cql
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
