@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: deskutils/superswitcher/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/superswitcher/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	superswitcher
 PORTVERSION=	0.6
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/superswitcher \
 		share/dbus-1/services/superswitcher.SuperSwitcher.service
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's/x11//g' ${WRKSRC}/configure
