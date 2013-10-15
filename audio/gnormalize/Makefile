@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: audio/gnormalize/Makefile 327419 2013-09-16 17:07:26Z bapt $
+# $FreeBSD: audio/gnormalize/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gnormalize
 PORTVERSION=	0.63
@@ -14,6 +14,7 @@ RUN_DEPENDS+=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		wavegain:${PORTSDIR}/audio/wavegain
 
 USES=		perl5 shebangfix
+NO_STAGE=	yes
 USE_PERL5=	run
 INSTALLS_ICONS=	yes
 
