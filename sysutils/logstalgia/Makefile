@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/logstalgia/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/logstalgia/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	logstalgia
 PORTVERSION=	1.0.3
@@ -27,4 +27,5 @@ MANCOMPRESSED=	yes
 
 MAN1=		logstalgia.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
