@@ -1,9 +1,5 @@
-# New ports collection makefile for:	RubyNumruUnits
-# Date created:		14 March 2004
-# Whom:			Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
-#
-# $FreeBSD: ports/math/ruby-numru_units/Makefile,v 1.9 2012/11/17 05:59:30 svnexp Exp $
-#
+# Created by: Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
+# $FreeBSD: math/ruby-numru_units/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	numru_units
 PORTVERSION=	1.7
@@ -26,6 +22,7 @@ NO_BUILD=	yes
 
 DOCS=		ChangeLog LICENSE.txt doc/units.html doc/units.rd
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKSRC}/ && ${RUBY} ./install.rb
 
