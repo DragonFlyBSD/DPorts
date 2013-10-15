@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Graphics-Primitive
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Graphics-Primitive/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Graphics-Primitive/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Graphics-Primitive
 PORTVERSION=	0.61
@@ -49,4 +48,5 @@ MAN3=		Graphics::Primitive.3 \
 		Graphics::Primitive::Path.3 \
 		Graphics::Primitive::TextBox.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
