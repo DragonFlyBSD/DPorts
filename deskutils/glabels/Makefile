@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/glabels/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: deskutils/glabels/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #   $MCom: ports/deskutils/glabels/Makefile,v 1.10 2010/04/03 19:25:49 kwm Exp $
 
 PORTNAME=	glabels
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		glabels.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mevolutiondataserver}!=""
