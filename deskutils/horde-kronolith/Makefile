@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@thomas.as>)
-# $FreeBSD: deskutils/horde-kronolith/Makefile 325493 2013-08-27 22:52:23Z mm $
+# $FreeBSD: deskutils/horde-kronolith/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	kronolith
 PORTVERSION=	4.1.3
@@ -55,6 +55,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Util \
 		Horde_View
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDATE_HOLIDAYS}
