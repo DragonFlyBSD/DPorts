@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-fancy/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: mail/claws-mail-fancy/Makefile 329440 2013-10-05 11:25:29Z pawel $
 
 PORTNAME=	fancy
 PORTREVISION=	0
