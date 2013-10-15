@@ -1,5 +1,5 @@
 # Created by: Klaus T. Aehlig <aehlig@linta.de>
-# $FreeBSD: devel/py-wsgitools/Makefile 314550 2013-03-18 10:23:47Z culot $
+# $FreeBSD: devel/py-wsgitools/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	wsgitools
 PORTVERSION=	0.2.4
@@ -15,4 +15,5 @@ LICENSE=	GPLv2                    # or higher
 USE_PYTHON=	2.5-2.7
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
