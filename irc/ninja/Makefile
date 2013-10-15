@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: irc/ninja/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: irc/ninja/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ninja
 PORTVERSION=	1.5.8.1
@@ -17,6 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 LATEST_LINK=	irc-ninja
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%IRCLIB%%|${DATADIR}|g" \
 		${WRKSRC}/include/config.h.dist
