@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/pixelize/Makefile 327021 2013-09-12 00:48:38Z marino $
+# $FreeBSD: graphics/pixelize/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pixelize
 PORTVERSION=	1.0.0
@@ -19,6 +19,7 @@ USES=		pkgconfig
 USE_GNOME=	gtk20 imlib
 PLIST_FILES=	bin/make_db bin/pixelize
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|^CC|#CC|" -e "s|CFLAGS = -g|CFLAGS+= |" \
 		-e "s|gtk-config|${GTK_CONFIG}|g" \
