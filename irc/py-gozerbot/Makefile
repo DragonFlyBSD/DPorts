@@ -1,5 +1,5 @@
 # Created by: Sten Spans <sten@blinkenlights.nl>
-# $FreeBSD: irc/py-gozerbot/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/py-gozerbot/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	gozerbot
 PORTVERSION=	0.8.1.1
@@ -26,6 +26,7 @@ MAN1=		gozerbot.1
 
 RUN_DEPENDS+=	${LOCALBASE}/bin/gpg:${PORTSDIR}/security/gnupg
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
