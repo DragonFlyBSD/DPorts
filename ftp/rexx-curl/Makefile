@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/rexx-curl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: ftp/rexx-curl/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	curl
 PORTVERSION=	1.4
@@ -26,6 +26,7 @@ USE_LDCONFIG=	yes
 DOCSDIR=	${PREFIX}/share/doc/rexx${PORTNAME}
 DATADIR=	${PREFIX}/share/rexx${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
