@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	hebcal
-# Date created:				Aug 26, 2010
-# Whom:	      				Edwin Groothuis
-#
-# $FreeBSD: ports/deskutils/hebcal/Makefile,v 1.2 2012/11/17 05:55:28 svnexp Exp $
-#
+# Created by: Edwin Groothuis
+# $FreeBSD: deskutils/hebcal/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	hebcal
 PORTVERSION=	3.7
@@ -20,4 +15,5 @@ PLIST_FILES=	bin/hebcal
 MAN1=		hebcal.1
 INFO=		hebcal
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
