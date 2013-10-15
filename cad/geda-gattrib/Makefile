@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/geda-gattrib/Makefile 326113 2013-09-02 22:58:16Z bapt $
+# $FreeBSD: cad/geda-gattrib/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	gattrib
 PORTVERSION=	1.4.3
@@ -30,6 +30,7 @@ CONFIGURE_ARGS=	--with-docdir="${DOCSDIR}" --disable-update-mime-database \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
