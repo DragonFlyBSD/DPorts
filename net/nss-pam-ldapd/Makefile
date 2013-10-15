@@ -1,5 +1,5 @@
 # Created by: melifaro@ipfw.ru
-# $FreeBSD: net/nss-pam-ldapd/Makefile 317699 2013-05-08 16:30:05Z zi $
+# $FreeBSD: net/nss-pam-ldapd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=		nss-pam-ldapd
 PORTVERSION=		0.8.13
@@ -48,6 +48,7 @@ CONFLICTS+=		nss-pam-ldapd-sasl-[0-9]*
 USERS=			nslcd
 GROUPS=			nslcd
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CPPFLAGS+=		-I${LOCALBASE}/include
