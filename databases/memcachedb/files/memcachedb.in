@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/databases/memcachedb/files/memcachedb.in,v 1.6 2012/11/17 05:55:10 svnexp Exp $
+# $FreeBSD: databases/memcachedb/files/memcachedb.in 300896 2012-07-14 13:54:48Z beat $
 
 # PROVIDE: memcachedb
 # REQUIRE: LOGIN
