@@ -1,9 +1,5 @@
-# New ports collection makefile for:    lpr-wrapper
-# Date created:         22 Apr 2005 17:00:00 CEST
-# Whom:                 e-masson@kisoft-services.com
-#
-# $FreeBSD: print/lpr-wrapper/Makefile 316401 2013-04-24 04:13:09Z hrs $
-#
+# Created by: e-masson@kisoft-services.com
+# $FreeBSD: print/lpr-wrapper/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	lpr-wrapper
 PORTVERSION=	0.7
@@ -27,6 +23,7 @@ RUN_DEPENDS+=	pstops:${PORTSDIR}/print/psutils
 
 PLIST_FILES=	bin/lpr-wrapper bin/lpr-wrapper-cups bin/lpr-wrapper-features
 
+NO_STAGE=	yes
 post-build:
 	${REINPLACE_CMD} -e 's|#!/bin/bash|#!/usr/bin/env bash|' \
 		${WRKSRC}/lpr-wrapper ${WRKSRC}/lpr-wrapper-cups \
