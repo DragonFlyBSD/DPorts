@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <lkoeller@cc.fh-lippe.de>
-# $FreeBSD: x11-clocks/tclock/Makefile 322014 2013-06-28 23:05:59Z bapt $
+# $FreeBSD: x11-clocks/tclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	tclock
 PORTVERSION=	1.0.1
@@ -21,4 +21,5 @@ PLIST_FILES=	bin/tclock
 LICENSE=	GPLv1
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
