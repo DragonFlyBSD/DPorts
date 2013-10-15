@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-fngrab
-# Date created:			Mar 23, 2002
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/net-p2p/py-fngrab/Makefile,v 1.10 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net-p2p/py-fngrab/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	fngrab
 PORTVERSION=	0.0.4
@@ -22,6 +17,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	FreenetGrab
 
+NO_STAGE=	yes
 post-install:
 	@${MV} ${PREFIX}/bin/fngrab.py ${PREFIX}/bin/fngrab
 
