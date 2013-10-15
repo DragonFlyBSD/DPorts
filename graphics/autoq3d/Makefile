@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: graphics/autoq3d/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/autoq3d/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	autoq3d
 PORTVERSION=	1.40
@@ -29,6 +29,7 @@ DESKTOP_ENTRIES="AutoQ3D" \
 		"Graphics;3DGraphics;Qt;" \
 		false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 post-patch:
 .for file in src/main.cpp src/fgui/cadform.cpp src/dialogs/prgsettings.cpp
