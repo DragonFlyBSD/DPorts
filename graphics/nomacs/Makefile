@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/nomacs/Makefile 325924 2013-09-01 22:40:22Z bapt $
+# $FreeBSD: graphics/nomacs/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	nomacs
 PORTVERSION=	1.4.0
@@ -29,6 +29,7 @@ OPTIONS_DEFAULT=	RAW TIFF
 RAW_DESC=	RAW images support
 TIFF_DESC=	Support multi-page TIFF images
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRAW}
