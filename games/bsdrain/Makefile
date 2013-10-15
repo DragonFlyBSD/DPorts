@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rain
-# Date created:	Oct 15 2008
-# Whom:	Jacob Myers
-#
-# $FreeBSD: ports/games/bsdrain/Makefile,v 1.4 2012/11/17 05:57:33 svnexp Exp $
-#
+# Created by: Jacob Myers
+# $FreeBSD: games/bsdrain/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bsdrain
 PORTVERSION=	5.0
@@ -22,4 +18,5 @@ PLIST_FILES=	bin/rain
 
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
