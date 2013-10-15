@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: multimedia/smtube/Makefile 325007 2013-08-19 17:34:41Z pawel $
+# $FreeBSD: multimedia/smtube/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	smtube
 PORTVERSION=	1.8
@@ -22,21 +22,13 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|qmake|${QMAKE} ${QMAKEFLAGS}|' \
 		-e 's|lrelease|${QT_PREFIX}/bin/lrelease-qt4|g' \
 		-e 's|PREFIX=/usr/local|PREFIX=${PREFIX}|g' \
 		-e 's|$$(PREFIX)/share/smtube|${DATADIR}|g' \
+		-e 's|$$(PREFIX)/share/doc/smtube|${DOCSDIR}|' \
 		-e 's| make| ${GMAKE}|' \
 		${WRKSRC}/Makefile
-
-.if ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e 's|$$(PREFIX)/share/doc/smtube|${DOCSDIR}|' \
-		${WRKSRC}/Makefile
-.else
-	@${REINPLACE_CMD} -e '/DOC_PATH/d' ${WRKSRC}/Makefile
-.endif
 
 .include <bsd.port.mk>
