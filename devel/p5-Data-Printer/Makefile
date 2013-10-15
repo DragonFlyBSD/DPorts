@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Printer/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Data-Printer/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	Data-Printer
 PORTVERSION=	0.30
@@ -24,11 +24,6 @@ TEST_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Data::Printer.3 \
-		Data::Printer::Filter.3 \
-		Data::Printer::Filter::DB.3 \
-		Data::Printer::Filter::DateTime.3
 
 .include <bsd.port.pre.mk>
 
