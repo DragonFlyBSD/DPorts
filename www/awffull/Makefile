@@ -1,5 +1,5 @@
 # Created by: Chadwick Sorrell chad@wickdev.com
-# $FreeBSD: www/awffull/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: www/awffull/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	awffull
 PORTVERSION=	3.10.2
@@ -36,6 +36,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		awffull.1
 MAN5=		awffull.conf.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEOIP}
