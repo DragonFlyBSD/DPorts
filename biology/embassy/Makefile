@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsamn.edu.ar>
-# $FreeBSD: biology/embassy/Makefile 322587 2013-07-09 21:49:35Z bapt $
+# $FreeBSD: biology/embassy/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	embassy
 PORTVERSION=	6.2.0
@@ -74,6 +74,7 @@ EMBASSY_APPS=		DOMAINATRIX EMNU ESIM4 HMMER MEMENEW MSE PHYLIPNEW \
 			TOPO DOMALIGN DOMSEARCH SIGNATURE STRUCTURE MYEMBOSS \
 			VIENNA MIRA IPRSCAN CBSTOOLS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
