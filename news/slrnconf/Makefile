@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: news/slrnconf/Makefile 325955 2013-09-02 09:22:47Z az $
+# $FreeBSD: news/slrnconf/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	slrnconf
 PORTVERSION=	0.8.4
@@ -17,6 +17,7 @@ USE_BZIP2=	yes
 USES=		perl5
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}/help
 	@${INSTALL_DATA} ${WRKSRC}/help/* ${DATADIR}/help
