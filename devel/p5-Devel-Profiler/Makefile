@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Devel-Profiler/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Devel-Profiler/Makefile 329343 2013-10-04 17:13:12Z az $
 
 PORTNAME=	Devel-Profiler
 PORTVERSION=	0.04
@@ -16,7 +16,10 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::Profiler.3 Devel::Profiler::Apache.3 \
-		Devel::Profiler::Test.3
+.include <bsd.port.pre.mk>
 
-.include <bsd.port.mk>
+.if ${PERL_LEVEL} > 501600
+IGNORE=	Devel::DProf has been removed from the Perl core, use Devel::NYTProf instead
+.endif
+
+.include <bsd.port.post.mk>
