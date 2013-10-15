@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: math/geogebra-i18n/Makefile 320996 2013-06-15 13:30:13Z nivit $
+# $FreeBSD: math/geogebra-i18n/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	geogebra
 PORTVERSION=	4.2.47.0
@@ -34,6 +34,7 @@ WRKSRC=	${WRKDIR}/geogebra-${PORTVERSION}
 
 FIND_JARS=	-type f -name "*.jar" -maxdepth 1 -print0
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && ${MKDIR} ${DATADIR} && \
 	${INSTALL_SCRIPT} ${WRKSRC}/geogebra ${DATADIR} && \
