@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mplayer-themes
-# Date created:				18 Jun, 2007
-# Whom:	Diego Depaoli <trebestie@gmail.com> and Yinghong Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: ports/multimedia/smplayer-themes/Makefile,v 1.13 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: Diego Depaoli <trebestie@gmail.com> and Yinghong Liu <relaxbsd@gmail.com>
+# $FreeBSD: multimedia/smplayer-themes/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	smplayer-themes
 PORTVERSION=	0.1.20
