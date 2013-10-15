@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: audio/p5-MP3-Find/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/p5-MP3-Find/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	MP3-Find
 PORTVERSION=	0.07
@@ -14,6 +14,7 @@ BUILD_DEPENDS=	p5-MP3-Info>=0:${PORTSDIR}/audio/p5-MP3-Info
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN1=		mp3db.1 mp3find.1
