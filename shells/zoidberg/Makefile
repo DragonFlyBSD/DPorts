@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: shells/zoidberg/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: shells/zoidberg/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	zoidberg
 PORTVERSION=	0.96
@@ -51,6 +51,7 @@ MAN3=	Bundle::Zoidberg.3 \
 	Zoidberg::Utils::GetOpt.3 \
 	Zoidberg::Utils::Output.3
 
+NO_STAGE=	yes
 post-install:
 	@${ECHO_CMD} ${PREFIX}/bin/zoid >> /etc/shells
 
