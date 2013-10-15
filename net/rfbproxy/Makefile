@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	rfbproxy
-# Date created:			Sep 5, 2002
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/net/rfbproxy/Makefile,v 1.12 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/rfbproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rfbproxy
 PORTVERSION=	1.1.1
@@ -21,4 +16,5 @@ USE_BZIP2=	yes
 MAN1=		rfbproxy.1
 PLIST_FILES=	bin/rfbproxy
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
