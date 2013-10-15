@@ -1,5 +1,5 @@
 # Created by: Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: print/lyx/Makefile 327334 2013-09-15 08:15:41Z az $
+# $FreeBSD: print/lyx/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	lyx
 PORTVERSION=	${MAJOR_VERSION}.${MINOR_VERSION}
@@ -42,6 +42,7 @@ OPTIONS_DEFINE=		ASPELL ENCHANT HUNSPELL NLS
 OPTIONS_DEFAULT=	HUNSPELL NLS
 ENCHANT_DESC=		Spell checking using Enchant
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASPELL}
