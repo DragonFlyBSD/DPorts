@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Xfstt
-# Date created:				11 September 1998
-# Whom:					jabley@clear.co.nz
-#
-# $FreeBSD: ports/x11-servers/Xfstt/Makefile,v 1.26 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: jabley@clear.co.nz
+# $FreeBSD: x11-servers/Xfstt/Makefile 327782 2013-09-20 23:52:24Z bapt $
 
 PORTNAME=	xfstt
 PORTVERSION=	1.6
@@ -25,6 +21,7 @@ TTFONTDIR=	${PREFIX}/lib/X11/fonts/TrueType
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 .for file in INSTALL doc/xfstt.1x src/Makefile.in
 	@${REINPLACE_CMD} -e 's|%%TTFONTDIR%%|${TTFONTDIR}|g' ${WRKSRC}/${file}
