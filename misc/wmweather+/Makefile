@@ -1,5 +1,5 @@
 # Created by: Harald Wille <harald.wille@students.jku.at>
-# $FreeBSD: misc/wmweather+/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: misc/wmweather+/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=		wmweather+
 PORTVERSION=		2.13
@@ -45,6 +45,7 @@ MAN1=		wmweather+.1
 
 PLIST_FILES=	bin/wmweather+
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWM}
