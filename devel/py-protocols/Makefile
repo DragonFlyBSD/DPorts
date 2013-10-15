@@ -1,9 +1,5 @@
-# Ports collection makefile for:	protocols
-# Date created:			2005-07-17
-# Whom:				Nicola Vitale
-#
-# $FreeBSD: ports/devel/py-protocols/Makefile,v 1.4 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Nicola Vitale
+# $FreeBSD: devel/py-protocols/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	protocols
 PORTVERSION=	0.9.3
@@ -20,4 +16,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyProtocols
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
