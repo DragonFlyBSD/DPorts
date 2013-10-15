@@ -1,5 +1,5 @@
 # Created by: Lukasz Komsta
-# $FreeBSD: security/seccure/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/seccure/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	seccure
 PORTVERSION=	0.4
@@ -15,4 +15,5 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 MAN1=		seccure.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
