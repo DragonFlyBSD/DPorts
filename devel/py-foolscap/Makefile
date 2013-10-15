@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-foolscap 
-# Date created:		2 March 2012
-# Whom:			Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-foolscap/Makefile,v 1.4 2012/11/17 05:56:46 svnexp Exp $
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: devel/py-foolscap/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	foolscap
 PORTVERSION=	0.6.4
@@ -23,4 +20,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
