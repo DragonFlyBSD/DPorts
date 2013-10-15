@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi
-# $FreeBSD: net/tapidbus/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/tapidbus/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tapidbus
 PORTVERSION=	0.2.1
@@ -21,6 +21,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\-O2||' ${WRKSRC}/configure
 
