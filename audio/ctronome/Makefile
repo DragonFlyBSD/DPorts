@@ -1,5 +1,5 @@
 # Created by: Charles Mercadal <mercadal@diablonet.net>
-# $FreeBSD: ports/audio/ctronome/Makefile,v 1.5 2012/11/17 05:54:29 svnexp Exp $
+# $FreeBSD: audio/ctronome/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ctronome
 PORTVERSION=	0.5.4
@@ -11,6 +11,7 @@ COMMENT=	Programmable console-based metronome
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 PLIST_FILES=	bin/ctronome \
 		%%DATADIR%%/metronome1.wav \
 		%%DATADIR%%/metronome2.wav
