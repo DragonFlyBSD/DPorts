@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/seaview/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/seaview/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	seaview
 PORTVERSION=	4.4.2
@@ -35,6 +35,7 @@ PLIST_DIRS=	%%DATADIR%%
 DESKTOP_ENTRIES="SeaView" "${COMMENT}" "" \
 		"${PORTNAME}" "Biology;Science;" "true"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPDFLIB}
