@@ -1,7 +1,7 @@
-# $FreeBSD: comms/pear-Horde_ActiveSync/Makefile 326775 2013-09-08 22:50:31Z mm $
+# $FreeBSD: comms/pear-Horde_ActiveSync/Makefile 330034 2013-10-10 21:56:48Z mm $
 
 PORTNAME=	Horde_ActiveSync
-PORTVERSION=	2.7.3
+PORTVERSION=	2.8.3
 CATEGORIES=	comms www pear
 
 MAINTAINER=	horde@FreeBSD.org
@@ -14,6 +14,7 @@ USE_HORDE_RUN=	Horde_Date \
 		Horde_Support \
 		Horde_Util
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
