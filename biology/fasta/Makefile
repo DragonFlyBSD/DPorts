@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/fasta/Makefile 322100 2013-06-30 20:53:06Z antoine $
+# $FreeBSD: biology/fasta/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	fasta
 PORTVERSION=	21.1.1
@@ -25,6 +25,7 @@ MLINKS=		fasta.1 tfasta.1 fasta.1 lfasta.1 fasta.1 plfasta.1 \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 do-extract:
 	@ ${RM} -rf ${WRKDIR}
 	@ ${MKDIR} ${WRKSRC}
