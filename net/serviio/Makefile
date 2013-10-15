@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: net/serviio/Makefile 326621 2013-09-07 10:28:26Z netchild $
+# $FreeBSD: net/serviio/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	serviio
 PORTVERSION=	1.3.1
@@ -28,6 +28,7 @@ EXTRACT_AFTER_ARGS=--exclude junit.jar	\
 USERS=	dlna
 GROUPS=	dlna
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${JAVAJARDIR}/${PORTNAME}/plugins
 	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${JAVAJARDIR}/${PORTNAME}/
