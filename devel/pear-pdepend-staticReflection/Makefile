@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-pdepend-staticReflection/Makefile,v 1.1 2012/12/03 18:41:28 svnexp Exp $
+# $FreeBSD: devel/pear-pdepend-staticReflection/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	staticReflection
 PORTVERSION=	1.0.0
@@ -22,6 +22,7 @@ PEAR_CHANNEL=	pdepend
 PEAR_AUTOINSTALL=	yes
 IGNORE_WITH_PHP=52
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
