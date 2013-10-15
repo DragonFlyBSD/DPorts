@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/net-p2p/xnap/Makefile,v 1.37 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: net-p2p/xnap/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	XNap
 DISTVERSION=	2.5r3
@@ -26,6 +26,7 @@ PLIST_FILES=	\
 		bin/${PORTNAME:tl} \
 		%%JAVAJARDIR%%/${PORTNAME:tl}.jar
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e "s|%%JAVAJARDIR%%|${JAVAJARDIR:S,^${PREFIX}/,,}|; \
 		s|%%JAVAVM%%|${JAVAVM}|; \
