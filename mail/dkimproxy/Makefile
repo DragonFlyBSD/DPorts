@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dkimproxy
-# Date created:				16 July 2006
-# Whom:					Yoshisato YANAGISAWA
-#
-# $FreeBSD: mail/dkimproxy/Makefile 326249 2013-09-04 06:06:59Z az $
-#
+# Created by: Yoshisato YANAGISAWA
+# $FreeBSD: mail/dkimproxy/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dkimproxy
 PORTVERSION=	1.4.1
@@ -34,6 +30,7 @@ MAN8=		dkimproxy_in.8 dkimproxy_out.8
 SUB_LIST+=	PERL=${PERL} \
 		DKIMPROXYUSER=${DKIMPROXYUSER}
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -Ril 'perl' ${WRKDIR} | ${XARGS} ${REINPLACE_CMD} -i '' \
 		-e 's|/usr/bin/perl|${PERL}|' -e 's|@PERL@|${PERL}|'
