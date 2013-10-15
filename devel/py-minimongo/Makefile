@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-minimongo
-# Date created:		2011-05-14
-# Whom:			Mirko Zinn <mail@derzinn.de>
-#
-# $FreeBSD: ports/devel/py-minimongo/Makefile,v 1.2 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: Mirko Zinn <mail@derzinn.de>
+# $FreeBSD: devel/py-minimongo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	minimongo
 PORTVERSION=	0.2.7
@@ -21,4 +17,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
