@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Filesys-Notify-Simple/Makefile 324501 2013-08-10 13:19:59Z kuriyama $
+# $FreeBSD: devel/p5-Filesys-Notify-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Filesys-Notify-Simple
 PORTVERSION=	0.12
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Filesys::Notify::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
