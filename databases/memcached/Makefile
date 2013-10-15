@@ -1,9 +1,5 @@
-# New ports collection makefile for:	memcached
-# Date created:		July 21, 2003
-# Whom:			Sean Chittenden <seanc@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/memcached/Makefile,v 1.62 2012/11/17 05:55:10 svnexp Exp $
-#
+# Created by: Sean Chittenden <seanc@FreeBSD.org>
+# $FreeBSD: databases/memcached/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	memcached
 PORTVERSION=	1.4.15
@@ -45,6 +41,7 @@ PLIST_DIRS=	include/memcached
 
 PORTDOCS=	protocol.txt readme.txt
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 800000
