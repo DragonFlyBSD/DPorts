@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shuffle
-# Date created:			3 June 2001
-# Whom:				Dima Dorfman <dima@unixfreak.org>
-#
-# $FreeBSD: ports/misc/shuffle/Makefile,v 1.8 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: Dima Dorfman <dima@unixfreak.org>
+# $FreeBSD: misc/shuffle/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	shuffle
 PORTVERSION=	20010603
@@ -27,6 +23,7 @@ MANCOMPSUFFIX=
 
 PLIST_FILES=	bin/shuffle
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/shuffle ${PREFIX}/bin/shuffle
 .for __s in ${MANSECTS}
