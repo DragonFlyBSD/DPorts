@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/sysutils/wmflame/Makefile,v 1.10 2012/11/17 06:01:50 svnexp Exp $
+# $FreeBSD: sysutils/wmflame/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	wmflame
 PORTVERSION=	0.60
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/wmflame
 
 WRKSRC=		${WRKDIR}/wmflame.app/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmflame ${PREFIX}/bin
 
