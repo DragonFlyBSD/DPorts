@@ -1,5 +1,4 @@
-# Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: www/p5-App-Nopaste/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-App-Nopaste/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	App-Nopaste
 PORTVERSION=	0.92
@@ -46,6 +45,7 @@ MAN3=		App::Nopaste.3 \
 		App::Nopaste::Service::Ubuntu.3 \
 		App::Nopaste::Service::ssh.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCLIPBOARD}
