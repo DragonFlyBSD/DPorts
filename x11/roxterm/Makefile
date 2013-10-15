@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: x11/roxterm/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/roxterm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	roxterm
 PORTVERSION=	2.7.2
@@ -31,6 +31,7 @@ MAN1=	roxterm.1 \
 
 MAITCHFLAGS=	CC=${CC};CPP=${CC};CFLAGS=${CFLAGS};PARALLEL=${MAKE_JOBS_NUMBER}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
