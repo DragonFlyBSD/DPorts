@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: ports/mail/james/Makefile,v 1.11 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: mail/james/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	james
 PORTVERSION=	2.3.1
@@ -28,6 +28,7 @@ SUB_LIST=	JAVA_HOME=${JAVA_HOME} \
 		JAMES_HOME=${APP_HOME} \
 		JAMES_VERSION=${PORTVERSION:S/.//g}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-patch:
