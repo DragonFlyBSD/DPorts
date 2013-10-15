@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/trimines/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
+# $FreeBSD: games/trimines/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	trimines
 PORTVERSION=	1.3.0
@@ -13,6 +13,7 @@ COMMENT=	Mine sweeper game that uses triangles instead of squares
 
 USE_SDL=	sdl
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|data/|${DATADIR}/|' ${WRKSRC}/src/gfx.c
 
