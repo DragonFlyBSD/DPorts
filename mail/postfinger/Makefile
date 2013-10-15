@@ -1,9 +1,5 @@
-# New ports collection makefile for: postfinger
-# Date created:			16 May 2003
-# Whom:				Andrew J. Caines <A.J.Caines@halplant.com>
-#
-# $FreeBSD: ports/mail/postfinger/Makefile,v 1.5 2012/11/17 05:59:11 svnexp Exp $
-#
+# Created by: Andrew J. Caines <A.J.Caines@halplant.com>
+# $FreeBSD: mail/postfinger/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	postfinger
 PORTVERSION=	1.30
@@ -25,6 +21,7 @@ PLIST_FILES=		bin/postfinger
 
 PORTDOCS=		README
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${PORTNAME}
 .if !defined(NOPORTDOCS)
