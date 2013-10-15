@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/webinject/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/webinject/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webinject
 PORTVERSION=	1.41
@@ -30,6 +30,7 @@ PLIST_FILES=	bin/webinject.pl \
 		${DATADIR:S,^${PREFIX}/,,}/testcases.xml
 PLIST_DIRS=	${DATADIR:S,^${PREFIX}/,,}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	@cd ${WRKSRC} && ${INSTALL_DATA} *.xml ${DATADIR}
