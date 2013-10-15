@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	netscript
-# Date created:			May 30, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/net/netscript/Makefile,v 1.25 2012/11/17 06:00:07 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/netscript/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netscript
 PORTVERSION=	1.7.1
@@ -20,6 +15,7 @@ COMMENT=	Portable/multi-platform lightweight TCP socket scripting
 
 WANT_GNOME=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgtk12}!=""
