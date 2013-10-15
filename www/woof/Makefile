@@ -1,9 +1,5 @@
-# New ports collection makefile for:    woof
-# Date created:                         7 July 2009
-# Whom:                                 Dereckson <dereckson@gmail.com>
-#
-# $FreeBSD: ports/www/woof/Makefile,v 1.6 2012/11/17 06:03:11 svnexp Exp $
-#
+# Created by: Dereckson <dereckson@gmail.com>
+# $FreeBSD: www/woof/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	woof
 PORTVERSION=	2009.12.27
@@ -22,6 +18,7 @@ USE_PYTHON=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/woof
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 270
