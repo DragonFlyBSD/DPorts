@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kbiff
-# Date created:		So  14 Jun 1998 13:09:18 CEST
-# Whom:			andreas
-#
-# $FreeBSD: mail/kbiff/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: andreas
+# $FreeBSD: mail/kbiff/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	kbiff
 PORTVERSION=	4.0
@@ -25,4 +21,5 @@ USES=		cmake gettext perl5
 
 MAN1=		kbiff.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
