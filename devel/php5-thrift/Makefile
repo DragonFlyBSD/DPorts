@@ -1,6 +1,5 @@
 # Created by: Ilya Bakulin <webmaster@kibab.com>
-# $FreeBSD: ports/devel/php5-thrift/Makefile,v 1.9 2013/02/26 17:11:46 svnexp Exp $
-#
+# $FreeBSD: devel/php5-thrift/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION}
@@ -21,6 +20,7 @@ PHP_MODNAME=	thrift_protocol
 
 WRKSRC=		${WRKDIR}/php/src/ext/thrift_protocol
 
+NO_STAGE=	yes
 post-extract:
 	${LN} -sfh \
 		`${MAKE} -C ${PORTSDIR}/devel/thrift -V WRKSRC`/lib/php \
