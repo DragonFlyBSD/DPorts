@@ -1,8 +1,8 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: devel/p5-MooseX-Types-Common/Makefile 327332 2013-09-15 06:15:30Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Types-Common/Makefile 328520 2013-09-27 20:57:43Z sunpoet $
 
 PORTNAME=	MooseX-Types-Common
-PORTVERSION=	0.001009
+PORTVERSION=	0.001010
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ETHER
@@ -17,11 +17,11 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Moose>=0.39:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Types>=0.04:${PORTSDIR}/devel/p5-MooseX-Types
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny \
-		p5-Test-CheckDeps>=0.004:${PORTSDIR}/devel/p5-Test-CheckDeps \
+TEST_DEPENDS=	p5-Test-CheckDeps>=0.007:${PORTSDIR}/devel/p5-Test-CheckDeps \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
-		p5-Test-Warnings>=0:${PORTSDIR}/devel/p5-Test-Warnings
+		p5-Test-Warnings>=0.005:${PORTSDIR}/devel/p5-Test-Warnings
 
+NO_STAGE=	yes
 USES=		perl5
 USE_PERL5=	modbuildtiny
 
