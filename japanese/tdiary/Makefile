@@ -1,5 +1,5 @@
 # Created by: Fumihiko Kimura <jfkimura@yahoo.co.jp>
-# $FreeBSD: ports/japanese/tdiary/Makefile,v 1.12 2013/01/29 13:44:11 svnexp Exp $
+# $FreeBSD: japanese/tdiary/Makefile 330205 2013-10-13 05:25:07Z tota $
 
 CATEGORIES=	japanese www ruby
 
