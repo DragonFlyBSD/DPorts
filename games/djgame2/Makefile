@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/djgame2/Makefile 312098 2013-02-12 11:25:16Z bapt $
+# $FreeBSD: games/djgame2/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	djgame2
 PORTVERSION=	3.2.0
@@ -24,6 +24,7 @@ DATADIR=	${PREFIX}/share/djgame2
 
 SUB_FILES=	djgame2.desktop startdjg
 
+NO_STAGE=	yes
 post-patch:
 	${RM} -f ${WRKSRC}/Hall/HallRes/platform/x11/install
 	@${REINPLACE_CMD} -e 's|linux/soundcard.h|sys/soundcard.h|g' \
