@@ -1,5 +1,4 @@
-# Create by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/www/trac-estimator/Makefile,v 1.6 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-estimator/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	estimator
 PORTVERSION=	0.1.1
@@ -22,6 +21,7 @@ PYDISTUTILS_PKGNAME=	estimatorplugin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/.r/_r/}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
