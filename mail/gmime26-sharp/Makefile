@@ -1,6 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: mail/gmime26-sharp/Makefile 318750 2013-05-22 09:04:54Z kwm $
-#   $Id: Makefile,v 1.17 2006/10/26 18:37:29 tmclau02 Exp $
+# $FreeBSD: mail/gmime26-sharp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	mail
@@ -26,6 +25,7 @@ LATEST_LINK=	gmime26-sharp
 OPTIONS_EXCLUDE=	DOCS
 
 # Done in pre-configure because master port has a post-patch target already.
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e 's|.@GMIME_VERSION@||g' \
 		${WRKSRC}/mono/gmime-sharp.dll.config.in
