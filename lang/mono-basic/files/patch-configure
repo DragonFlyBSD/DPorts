@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/mono-basic/files/patch-configure,v 1.2 2012/11/17 05:58:53 svnexp Exp $
+$FreeBSD: lang/mono-basic/files/patch-configure 300896 2012-07-14 13:54:48Z beat $
 
 --- configure.orig
 +++ configure
