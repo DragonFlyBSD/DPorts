@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-biplist/Makefile 324234 2013-08-04 13:57:30Z wg $
+# $FreeBSD: devel/py-biplist/Makefile 328800 2013-09-30 14:48:38Z wg $
 
 PORTNAME=	biplist
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,6 +20,7 @@ TEST_DEPENDS:=	${RUN_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
