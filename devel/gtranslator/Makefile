@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/gtranslator/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: devel/gtranslator/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/devel/gtranslator/Makefile,v 1.12 2007/07/04 15:52:37 mezz Exp $
 
 PORTNAME=	gtranslator
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--disable-debug \
 
 MAN1=		gtranslator.1 pozilla.sh.1
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e "s|-Werror||" ${WRKSRC}/src/Makefile.in
 
