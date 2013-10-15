@@ -1,5 +1,5 @@
-# Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: x11/florence/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# Created by: Kris Moore <kmoore@FreeBSD.org>
+# $FreeBSD: x11/florence/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	florence
 PORTVERSION=	0.6.0
@@ -37,6 +37,7 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
