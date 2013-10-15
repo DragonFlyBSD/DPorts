@@ -1,8 +1,7 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: polish/hunspell/Makefile 327392 2013-09-16 13:38:03Z sunpoet $
+# $FreeBSD: polish/hunspell/Makefile 329718 2013-10-07 18:13:20Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20130915
+PORTVERSION=	20131006
 CATEGORIES=	polish textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}
 DISTNAME=	sjp-myspell-pl-${PORTVERSION}
@@ -21,6 +20,7 @@ PLIST_FILES=	%%DATADIR%%/pl_PL.aff \
 		%%DATADIR%%/pl_PL.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-extract:
 	@${EXTRACT_CMD} ${WRKDIR}/pl_PL.zip -d ${WRKSRC}/
 
