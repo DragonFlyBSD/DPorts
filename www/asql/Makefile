@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asql
-# Date created:		2008-10-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: www/asql/Makefile 325960 2013-09-02 09:44:14Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/asql/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	asql
 PORTVERSION=	1.7
@@ -22,4 +18,5 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/asql
 USES=		perl5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
