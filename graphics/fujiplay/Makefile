@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fujiplay
-# Date created:		20 Sep 1999
-# Whom:			KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
-#
-# $FreeBSD: ports/graphics/fujiplay/Makefile,v 1.11 2012/11/17 05:58:06 svnexp Exp $
-#
+# Created by: KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
+# $FreeBSD: graphics/fujiplay/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	fujiplay
 PORTVERSION=	1.33
@@ -21,6 +17,7 @@ NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/fujiplay bin/yycc2ppm
 PORTDOCS=	README fujiplay.lsm mx700-commands.html
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/^\(CC[^g]*\)gcc$$/\1${CC}/' ${WRKSRC}/Makefile
 
