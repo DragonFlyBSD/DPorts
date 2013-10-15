@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	prototype
-# Date created:			Aug 4, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/prototype/Makefile,v 1.8 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/prototype/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	prototype
 PORTVERSION=	1.10
@@ -19,4 +14,5 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
