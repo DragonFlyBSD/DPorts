@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake2-extras/Makefile 324420 2013-08-09 08:35:55Z danfe $
+# $FreeBSD: games/quake2-extras/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	extras
 PORTVERSION=	1.0
@@ -32,6 +32,7 @@ RETEX_PAKS=	10 11 12 13 14 16 17 19
 RETEX_FULL=	all_q2_textures_07_17_2006.zip
 SKINS=		models.zip
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../quake2-data/Makefile.include"
 .include <bsd.port.options.mk>
 
