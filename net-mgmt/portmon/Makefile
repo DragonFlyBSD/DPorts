@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: net-mgmt/portmon/Makefile 315736 2013-04-05 19:42:03Z bdrewery $
+# $FreeBSD: net-mgmt/portmon/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	portmon
 PORTVERSION=	2.0
@@ -18,6 +18,7 @@ MAN8=		portmon.8
 PORTDOCS=	README
 PLIST_FILES=	bin/portmon etc/portmon.hosts.sample
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|g' \
 		 ${WRKSRC}/extras/${PORTNAME}.8
