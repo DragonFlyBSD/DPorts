@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-# $FreeBSD: misc/clex/Makefile 326418 2013-09-05 17:03:45Z mich $
+# $FreeBSD: misc/clex/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	clex
 PORTVERSION=	4.6.6
@@ -23,6 +23,7 @@ PLIST_FILES=	bin/clex bin/cfg-clex bin/kbd-test
 PORTDOCS=	AUTHORS ChangeLog README
 MAN1=		clex.1 cfg-clex.1 kbd-test.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '18s,^,#include <stdio.h>,' \
 		${WRKSRC}/src/preview.c
