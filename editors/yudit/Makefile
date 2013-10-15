@@ -1,9 +1,5 @@
-# New ports collection makefile for:	yudit
-# Date created:		October 3, 1998
-# Whom:			rch@richard.eu.org
-#
-# $FreeBSD: ports/editors/yudit/Makefile,v 1.44 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: rch@richard.eu.org
+# $FreeBSD: editors/yudit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	yudit
 PORTVERSION=	2.9.2
@@ -25,4 +21,5 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		mytool.1 uniconv.1 uniprint.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
