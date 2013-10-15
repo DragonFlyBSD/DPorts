@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/py-elib.intl/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: textproc/py-elib.intl/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	elib.intl
 PORTVERSION=	0.0.3
@@ -20,4 +20,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}.dev
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
