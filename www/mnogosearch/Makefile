@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/mnogosearch/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: www/mnogosearch/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mnogosearch
 PORTVERSION=	3.3.12
@@ -46,6 +46,7 @@ SHLIB_VER=	1
 
 SUB_FILES+=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
