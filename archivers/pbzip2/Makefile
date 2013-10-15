@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: archivers/pbzip2/Makefile 325646 2013-08-30 01:02:57Z bapt $
+# $FreeBSD: archivers/pbzip2/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	pbzip2
 PORTVERSION=	1.1.6
@@ -17,6 +17,7 @@ MAN1=		pbzip2.1
 MLINKS=		pbzip2.1 pbunzip2.1
 
 USES=		gmake
+NO_STAGE=	yes
 
 PLIST_FILES=	bin/pbzip2 bin/pbunzip2
 
