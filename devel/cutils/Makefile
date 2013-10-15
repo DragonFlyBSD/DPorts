@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cutils
-# Date created:			26 November 1996
-# Whom:				Sandro Sigala
-#
-# $FreeBSD: ports/devel/cutils/Makefile,v 1.21 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Sandro Sigala
+# $FreeBSD: devel/cutils/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cutils
 PORTVERSION=	1.6
@@ -24,4 +20,5 @@ MAKE_JOBS_UNSAFE=	yes
 
 CONFLICTS=	cdecl-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
