@@ -1,9 +1,4 @@
-# New ports collection makefile for:	php53-readline
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/php53-readline/Makefile,v 1.2 2012/11/17 05:56:42 svnexp Exp $
-#
+# $FreeBSD: devel/php53-readline/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 CATEGORIES=	devel
 
@@ -13,4 +8,5 @@ PKGNAMESUFFIX=	-readline
 
 USES+=		readline
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
