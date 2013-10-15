@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pup Printer Utility Program
-# Date created:         7 Nob 2002
-# Whom:                 Klaus Goger <klaus.goger@reflex.at>
-#
-# $FreeBSD: ports/print/pup/Makefile,v 1.13 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Klaus Goger <klaus.goger@reflex.at>
+# $FreeBSD: print/pup/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	pup
 PORTVERSION=	1.1
@@ -21,6 +17,7 @@ USE_GNOME=	gtk12
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}/
 
+NO_STAGE=	yes
 post-patch:
 	@echo ${WRKSRC}
 	@${REINPLACE_CMD} -e 's|gtk-config|${GTK_CONFIG}|g' ${WRKSRC}/Makefile
