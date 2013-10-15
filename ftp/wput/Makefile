@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: ftp/wput/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: ftp/wput/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	wput
 PORTVERSION=	0.6.2
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=	TLS
 
 MAN1=		wdel.1 wput.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTLS}
