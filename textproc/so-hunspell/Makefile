@@ -1,9 +1,4 @@
-# New ports collection makefile for:	so-hunspell
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/so-hunspell/Makefile,v 1.5 2012/11/17 06:02:21 svnexp Exp $
-#
+# $FreeBSD: textproc/so-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.0.2
@@ -30,7 +25,7 @@ PLIST_FILES=	%%DATADIR%%/so_SO.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/so_SO.aff ${WRKSRC}/so_SO.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/so_SO.aff ${WRKSRC}/so_SO.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
