@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: devel/libvanessa_socket/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/libvanessa_socket/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libvanessa_socket
 PORTVERSION=	0.0.12
@@ -24,6 +24,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/^SUBDIRS/s|debian||' ${WRKSRC}/Makefile.in
 
