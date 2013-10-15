@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: databases/p5-Class-DBI-SQLite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Class-DBI-SQLite/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Class-DBI-SQLite
 PORTVERSION=	0.11
@@ -20,6 +20,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		Class::DBI::SQLite.3
 
