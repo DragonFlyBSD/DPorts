@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/skanlite/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/skanlite/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	skanlite
 PORTVERSION=	1.0
@@ -19,4 +19,5 @@ USES=		cmake
 # Fix build with no-default PREFIX
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${KDE4_PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
