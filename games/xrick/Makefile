@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xrick
-# Date created:        15 March 2002
-# Whom:                David Siebörger <drs@rucus.ru.ac.za>
-#
-# $FreeBSD: ports/games/xrick/Makefile,v 1.18 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: David Siebörger <drs@rucus.ru.ac.za>
+# $FreeBSD: games/xrick/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xrick
 PORTVERSION=	021212
@@ -24,6 +20,7 @@ USE_SDL=	sdl
 MAN6=		xrick.6
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|sysarg_args_data = NULL|sysarg_args_data = "${PREFIX}/share/xrick/data.zip"|' ${WRKSRC}/src/sysarg.c
 
