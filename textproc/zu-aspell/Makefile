@@ -1,9 +1,5 @@
-# New ports collection makefile for:    zu-aspell
-# Date created:                         31 March 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/zu-aspell/Makefile,v 1.5 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/zu-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	-zu-0.50-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Zulu dictionary
 
 DICT=	 	zu
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
