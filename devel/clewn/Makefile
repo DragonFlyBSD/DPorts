@@ -1,9 +1,5 @@
-# New ports collection makefile for:	clewn
-# Date created:		21 Oct 2008
-# Whom:			Giacomo Mariani <giacomomariani_at_yahoo_dot_it>
-#
-# $FreeBSD: ports/devel/clewn/Makefile,v 1.5 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Giacomo Mariani <giacomomariani_at_yahoo_dot_it>
+# $FreeBSD: devel/clewn/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	clewn
 PORTVERSION=	1.14
@@ -20,4 +16,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	vimdir=${PREFIX}/share/vim/vimfiles
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
