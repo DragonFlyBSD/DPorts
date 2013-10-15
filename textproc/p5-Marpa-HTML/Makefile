@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Marpa-HTML/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-Marpa-HTML/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	Marpa-HTML
 PORTVERSION=	0.112
@@ -22,11 +22,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		html_fmt.1 \
-		html_score.1
-MAN3=		Marpa::HTML.3 \
-		Marpa::HTML::Support.3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|lib/Marpa/Support.pod|lib/Marpa/HTML/Support.pod|' ${WRKSRC}/Build.PL
