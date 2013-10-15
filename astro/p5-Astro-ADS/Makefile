@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-ADS/Makefile 325035 2013-08-20 09:37:16Z mat $
+# $FreeBSD: astro/p5-Astro-ADS/Makefile 328608 2013-09-28 17:12:59Z sunpoet $
 
 PORTNAME=	Astro-ADS
 PORTVERSION=	1.25.1
@@ -16,8 +16,5 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN1=	adsquery.1
-MAN3=	Astro::ADS.3 Astro::ADS::Query.3 Astro::ADS::Result.3 Astro::ADS::Result::Paper.3
 
 .include <bsd.port.mk>
