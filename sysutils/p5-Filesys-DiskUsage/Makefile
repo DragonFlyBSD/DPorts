@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/p5-Filesys-DiskUsage
-# Date created:				20 September 2005
-# Whom:					Alex Deiter <tiamat@komi.mts.ru>
-#
-# $FreeBSD: sysutils/p5-Filesys-DiskUsage/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: Alex Deiter <tiamat@komi.mts.ru>
+# $FreeBSD: sysutils/p5-Filesys-DiskUsage/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Filesys-DiskUsage
 PORTVERSION=	0.05
@@ -19,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		Filesys::DiskUsage.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/lib/Filesys/DiskUsage.pm.orig
 
