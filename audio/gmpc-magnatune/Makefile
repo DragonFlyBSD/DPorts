@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-magnatune/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/gmpc-magnatune/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmpc-magnatune
 PORTVERSION=	11.8.16
@@ -17,6 +17,7 @@ RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	intltool glib20 gtk20 libglade2
+NO_STAGE=	yes
 USES=		gettext gmake pkgconfig
 
 .include <bsd.port.mk>
