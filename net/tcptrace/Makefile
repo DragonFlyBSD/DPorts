@@ -1,5 +1,5 @@
 # Created by: fenner
-# $FreeBSD: net/tcptrace/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net/tcptrace/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcptrace
 PORTVERSION=	6.6.7
@@ -23,6 +23,7 @@ PORTDOCS=	ARGS CHANGES FAQ README README.mailing_list \
 		README.modules README.tline_graphs README.tput_graphs \
 		README.version README.xpl2gpl THANKS dot_tcptracerc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
