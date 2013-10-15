@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-grequests/Makefile 316800 2013-04-29 10:43:25Z koobs $
+# $FreeBSD: www/py-grequests/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	grequests
 PORTVERSION=	0.2.0
@@ -25,4 +25,5 @@ USE_PYDISTUTILS=	easy_install
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
