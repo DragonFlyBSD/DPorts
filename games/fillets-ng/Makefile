@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/fillets-ng/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/fillets-ng/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	fillets-ng
 PORTVERSION=	1.0.1
@@ -40,6 +40,7 @@ DESKTOP_ENTRIES="Fish Fillets - Next Generation" \
 
 OPTIONS_DEFINE=	FRIBIDI
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MFRIBIDI}
