@@ -1,5 +1,5 @@
 # Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-# $FreeBSD: devel/py-celery/Makefile 326138 2013-09-03 12:21:54Z wg $
+# $FreeBSD: devel/py-celery/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	celery
 PORTVERSION=	3.0.23
@@ -21,4 +21,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}amqplib>=0:${PORTSDIR}/net/py-amqplib \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
