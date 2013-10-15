@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: deskutils/gtweakui/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: deskutils/gtweakui/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #    $MCom: ports/deskutils/gtweakui/Makefile,v 1.2 2007/05/19 21:36:03 marcus Exp $
 
 PORTNAME=	gTweakUI
@@ -22,6 +22,7 @@ DESKTOP_FILES=	gtweakui-galeon.desktop.in \
 				gtweakui-nautilus.desktop.in \
 				gtweakui-session.desktop.in
 
+NO_STAGE=	yes
 post-patch:
 .for FILE in ${DESKTOP_FILES}
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
