@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: science/massxpert/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: science/massxpert/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	massxpert
 PORTVERSION=	3.4.0
@@ -30,4 +30,5 @@ MAKE_JOBS_UNSAFE=	yes
 MAN7=		massxpert-data.7
 MAN1=		massxpert.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
