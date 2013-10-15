@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libsoup-gnome/Makefile 317222 2013-05-03 16:56:48Z ehaupt $
+# $FreeBSD: devel/libsoup-gnome/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/devel/libsoup-gnome/Makefile,v 1.3 2011/06/06 17:50:29 kwm Exp $
 
 PORTREVISION=	3
@@ -15,4 +15,5 @@ PLIST=		${.CURDIR}/pkg-plist
 
 SOUP_SLAVE=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
