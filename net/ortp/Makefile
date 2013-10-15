@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/ortp/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/ortp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ortp
 PORTVERSION=	0.13.0
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 pre-install:
 .if defined(NOPORTDOCS)
 	${RM} -rf ${WRKSRC}/docs/html
