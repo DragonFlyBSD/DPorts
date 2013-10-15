@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: audio/wxguitar/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/wxguitar/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	wxguitar
 PORTVERSION=	1.01
@@ -15,6 +15,7 @@ RUN_DEPENDS=	wavplay:${PORTSDIR}/audio/wavplay
 
 GNU_CONFIGURE=	yes
 USE_WX=		2.8+
+NO_STAGE=	yes
 WX_UNICODE=	yes
 CONFIGURE_ARGS=	--with-wx-config=${WX_CONFIG}
 CPPFLAGS+=	-I${LOCALBASE}/include
