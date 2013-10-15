@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: textproc/scim-m17n/Makefile 327338 2013-09-15 12:27:30Z antoine $
+# $FreeBSD: textproc/scim-m17n/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scim-m17n
 PORTVERSION=	0.2.3
@@ -19,4 +19,5 @@ RUN_DEPENDS=	scim:${PORTSDIR}/textproc/scim
 USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
