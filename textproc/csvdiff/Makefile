@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/csvdiff/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/csvdiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	csvdiff
 PORTVERSION=	1.7
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}
 PORTDOCS=	CHANGES README TODO
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl \
 		${PREFIX}/bin/${PORTNAME}
