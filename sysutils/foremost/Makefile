@@ -1,5 +1,5 @@
 # Created by: Yonatan <Yonatan@xpert.com>
-# $FreeBSD: sysutils/foremost/Makefile 314904 2013-03-22 11:18:39Z rm $
+# $FreeBSD: sysutils/foremost/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	foremost
 PORTVERSION=	1.5.7
@@ -15,6 +15,7 @@ MAN8=		foremost.8
 
 PLIST_FILES=	bin/foremost etc/foremost.conf.sample
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|; s|-Wall -O2|${CFLAGS}|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|' ${WRKSRC}/config.c
