@@ -1,5 +1,5 @@
 # Created by: Jesse Smith
-# $FreeBSD: sysutils/swapexd/Makefile 321299 2013-06-19 17:50:55Z wg $
+# $FreeBSD: sysutils/swapexd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	swapexd
 PORTVERSION=	0.4
@@ -13,6 +13,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	sbin/${PORTNAME} etc/rc.d/swapexd
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
