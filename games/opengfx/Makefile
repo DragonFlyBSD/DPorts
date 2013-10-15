@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: games/opengfx/Makefile 320803 2013-06-13 14:04:43Z danfe $
+# $FreeBSD: games/opengfx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	opengfx
 PORTVERSION=	0.4.7
@@ -16,6 +16,7 @@ USE_ZIP=	yes
 NO_BUILD=	yes
 LATEST_LINK=	openttd-${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/share/openttd/baseset/opengfx
 	${INSTALL_DATA} ${WRKDIR}/opengfx-${PORTVERSION}/* \
