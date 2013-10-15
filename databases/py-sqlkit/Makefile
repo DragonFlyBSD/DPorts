@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: databases/py-sqlkit/Makefile 318331 2013-05-16 19:48:29Z rm $
+# $FreeBSD: databases/py-sqlkit/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlkit
 PORTVERSION=	0.9.5.1
@@ -29,6 +29,7 @@ SYBASE_DESC=	Sybase support
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -I.bak -e "s:/usr:${PREFIX}:" ${WRKSRC}/sqlkit.desktop
 
