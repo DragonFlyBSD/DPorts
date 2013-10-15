@@ -1,5 +1,5 @@
 # Created by: Takashi Mega <mega@minz.org>
-# $FreeBSD: japanese/slrn/Makefile 323723 2013-07-26 14:29:35Z danfe $
+# $FreeBSD: japanese/slrn/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	slrn
 PORTVERSION=	0.9.6.2
@@ -31,6 +31,7 @@ MANLANG=	'' ja
 MAN1=		slrn.1
 
 # Tentatively improve inner makefiles in attempt to fix parallel builds
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-mkdir|mkdir -p| ; \
 		/DOT_O_DEPS/s|$$| $$(OBJDIR)|' \
