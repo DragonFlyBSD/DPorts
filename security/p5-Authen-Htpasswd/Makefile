@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Htpasswd/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: security/p5-Authen-Htpasswd/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Authen-Htpasswd
 PORTVERSION=	0.171
@@ -25,4 +25,5 @@ MAN3=	Authen::Htpasswd.3 \
 	Authen::Htpasswd::User.3 \
 	Authen::Htpasswd::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
