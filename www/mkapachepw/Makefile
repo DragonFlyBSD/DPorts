@@ -1,9 +1,5 @@
-# New ports collection makefile for:	apachepw
-# Date Created:				07 April 2005
-# Whom:					tundra
-#
-# $FreeBSD: ports/www/mkapachepw/Makefile,v 1.2 2012/11/17 06:02:39 svnexp Exp $
-#
+# Created by: tundra
+# $FreeBSD: www/mkapachepw/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mkapachepw
 PORTVERSION=	1.121
@@ -18,6 +14,7 @@ USE_PYTHON=	yes
 MANCOMPRESSED=	yes
 MAN1=		mkapachepw.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
