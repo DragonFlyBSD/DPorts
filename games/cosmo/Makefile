@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/cosmo/Makefile 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: games/cosmo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cosmo
 PORTVERSION=	2.0.4
@@ -26,6 +26,7 @@ USES=		imake:notall
 USE_XORG=	x11 xext
 NO_INSTALL_MANPAGES=	yes
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/cosmorc ${PREFIX}/lib/X11/cosmo
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/moon.tif.gz \
