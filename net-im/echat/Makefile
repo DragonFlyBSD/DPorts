@@ -1,9 +1,5 @@
-# New ports collection makefile for:    echat
-# Date created:        26 Aug 2003
-# Whom:                SeaD
-#
-# $FreeBSD: ports/net-im/echat/Makefile,v 1.7 2012/11/17 06:00:26 svnexp Exp $
-#
+# Created by: SeaD
+# $FreeBSD: net-im/echat/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	echat
 DISTVERSION=	0.04beta1
@@ -15,6 +11,7 @@ COMMENT=	LAN chat program over the TCP/IP networks
 
 MAN1=		echat.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS+=|g ; \
 		s|PREFIX=|PREFIX?=|g ; s|CC=|CC?=|g; \
