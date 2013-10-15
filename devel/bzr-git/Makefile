@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-git/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: devel/bzr-git/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-git
 PORTVERSION=	0.6.8
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://launchpadlibrarian.net/98666746/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin for bzr to work with git trees
 
 LICENSE=	GPLv2
@@ -23,4 +23,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr_git
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
