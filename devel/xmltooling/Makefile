@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: devel/xmltooling/Makefile 327150 2013-09-13 14:09:10Z bapt $
+# $FreeBSD: devel/xmltooling/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xmltooling
 PORTVERSION=	1.5.3
@@ -23,6 +23,7 @@ USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^pkgdocdir.*=.*,pkgdocdir = ${DOCSDIR},' \
 		${WRKSRC}/doc/Makefile.in
