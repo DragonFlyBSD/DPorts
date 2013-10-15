@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/grr/Makefile,v 1.4 2012/11/17 06:02:34 svnexp Exp $
+# $FreeBSD: www/grr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	grr
 PORTVERSION=	1.0
@@ -18,4 +18,5 @@ USE_GNUSTEP_LOCAL_LIBS+=	RSSKit:${RSSKIT_PORT}
 
 RSSKIT_PORT?=	www/rsskit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
