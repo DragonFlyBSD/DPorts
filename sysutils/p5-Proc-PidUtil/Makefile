@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Proc-PidUtil
-# Date created:		2006-09-11
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: sysutils/p5-Proc-PidUtil/Makefile 326575 2013-09-07 07:44:26Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: sysutils/p5-Proc-PidUtil/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Proc-PidUtil
 PORTVERSION=	0.08
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Proc::PidUtil.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
