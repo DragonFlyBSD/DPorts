@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: deskutils/gkrellm-reminder2/Makefile 326711 2013-09-08 08:44:57Z antoine $
+# $FreeBSD: deskutils/gkrellm-reminder2/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	reminder
 PORTVERSION=	2.0.0
@@ -22,6 +22,7 @@ USE_GNOME=	gtk20
 PLIST_FILES=	libexec/gkrellm2/plugins/reminder.so
 PORTDOCS=	README
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/reminder.so ${PREFIX}/libexec/gkrellm2/plugins/
 
