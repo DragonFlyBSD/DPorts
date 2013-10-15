@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/java/poseidon/files/poseidon.sh.in,v 1.4 2012/11/17 05:58:46 svnexp Exp $
+# $FreeBSD: java/poseidon/files/poseidon.sh.in 300896 2012-07-14 13:54:48Z beat $
 
 JAVA_HOME=${JAVA_HOME:-"%%JAVA_HOME%%"}
 POSEIDON_HOME="$HOME/.poseidon"

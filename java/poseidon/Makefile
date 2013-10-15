@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: ports/java/poseidon/Makefile,v 1.31 2012/12/10 16:59:39 svnexp Exp $
+# $FreeBSD: java/poseidon/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	poseidon
 PORTVERSION=	6.0.2
@@ -44,6 +44,7 @@ PLIST_FILES+=	%%DATADIR%%/docs %%DATADIR%%/examples
 SUB_FILES=	poseidon.sh
 SUB_LIST=	JAVA_HOME="${JAVA_HOME}" EDITION="${EDITION}"
 
+NO_STAGE=	yes
 pre-fetch:
 	@${ECHO_MSG}
 	@${ECHO_MSG} "There is a free usable edition of Poseidon for UML,"
