@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-pylast/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: audio/py-pylast/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	pylast
 PORTVERSION=	0.5.11
@@ -13,6 +13,7 @@ LICENSE=	AL2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PYTHON=	yes
+NO_STAGE=	yes
 USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pylast.py \
