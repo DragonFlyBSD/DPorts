@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ports/x11-toolkits/py-gui/Makefile,v 1.23 2013/01/08 07:48:53 svnexp Exp $
+# $FreeBSD: x11-toolkits/py-gui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gui
 PORTVERSION=	1.7.2
@@ -32,6 +32,7 @@ WRKSRC=		${WRKDIR}/PyGUI-${PORTVERSION}
 OPTIONS_DEFINE=	OPENGL DOCS
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENGL}
