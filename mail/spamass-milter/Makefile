@@ -1,5 +1,5 @@
 # Created by: Eugene M. Kim <ab@astralblue.net>
-# $FreeBSD: mail/spamass-milter/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/spamass-milter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spamass-milter
 PORTVERSION=	0.3.2
@@ -21,6 +21,7 @@ ADDAUTH_PATCH_DESC=	Bypass checks for SMTP AUTH connections
 REJECTTEXT_PATCH_DESC=	Customize SMTP reject message
 SENDMAIL_PORT_DESC=	Build against sendmail port
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 ORIG_ARGS=	fd:mMp:P:r:u:D:i:b:B:e:x
