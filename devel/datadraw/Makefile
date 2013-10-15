@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/datadraw/Makefile 315910 2013-04-16 21:45:17Z bapt $
+# $FreeBSD: devel/datadraw/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	datadraw
 PORTVERSION=	3.1.1
@@ -16,6 +16,7 @@ HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 ALL_TARGET=	# empty
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} < 1000013
