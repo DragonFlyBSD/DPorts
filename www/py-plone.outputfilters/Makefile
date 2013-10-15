@@ -1,7 +1,7 @@
-# $FreeBSD: www/py-plone.outputfilters/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.outputfilters/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	plone.outputfilters
-PORTVERSION=	1.8
+PORTVERSION=	1.11.1
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +18,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=0:${PORTSDIR}/devel/py-Pro
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
