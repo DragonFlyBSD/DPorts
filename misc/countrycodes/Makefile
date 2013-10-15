@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: misc/countrycodes/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: misc/countrycodes/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	countrycodes
 PORTVERSION=	1.0.5
@@ -23,6 +23,7 @@ MAKE_ARGS=	prefix="${PREFIX}" CC="${CC}" CCOPTS="${CFLAGS}" WARNINGS=""
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
