@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	onyx
-# Date created:		15 May 2001
-# Whom:			jasone
-#
-# $FreeBSD: ports/lang/onyx/Makefile,v 1.37 2012/12/10 19:24:02 svnexp Exp $
-#
+# Created by: jasone
+# $FreeBSD: lang/onyx/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	onyx
 PORTVERSION=	5.1.2
@@ -28,6 +24,7 @@ MAN1=		onyx.1 onyx_config.1
 
 PLIST_SUB=	ONYX_VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
