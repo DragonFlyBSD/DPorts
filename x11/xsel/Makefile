@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xsel/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/xsel/Makefile 329750 2013-10-08 00:15:34Z marino $
 
 PORTNAME=	xsel
 PORTVERSION=	0.04.1
@@ -15,11 +15,12 @@ CONFLICTS=	xsel-conrad-[0-9]*
 USE_BZIP2=	yes
 USE_XORG=	xmu xaw xt xproto xkbfile
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lXt -lXaw
+LDFLAGS+=	-L${LOCALBASE}/lib -lXt -lXaw -lX11 -lXmu
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	${PORTNAME}.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
