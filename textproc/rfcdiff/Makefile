@@ -1,8 +1,5 @@
-# New ports collection makefile for: rfcdiff
-# Date Created:		11 November 2004
-# Whom:			lars.eggert@gmx.net
-#
-# $FreeBSD: ports/textproc/rfcdiff/Makefile,v 1.11 2012/11/17 06:02:19 svnexp Exp $
+# Created by: lars.eggert@gmx.net
+# $FreeBSD: textproc/rfcdiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rfcdiff
 PORTVERSION=	1.33
@@ -27,6 +24,7 @@ NO_BUILD=	YES
 
 PLIST_FILES=	bin/rfcdiff
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
 		${WRKSRC}/${DISTNAME}
