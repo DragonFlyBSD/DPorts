@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: net/miredo/Makefile 320529 2013-06-11 03:42:47Z sumikawa $
+# $FreeBSD: net/miredo/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=		miredo
 PORTVERSION=		1.2.6
@@ -27,6 +27,7 @@ USE_RC_SUBR=		miredo-server miredo
 
 LDFLAGS+=		-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
