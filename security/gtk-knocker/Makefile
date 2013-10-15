@@ -1,6 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: security/gtk-knocker/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/gtk-knocker/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	knocker
 PORTVERSION=	0.6.6
@@ -19,6 +18,7 @@ USE_GNOME=	gtk12
 
 MAN1=		gtk-knocker.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
