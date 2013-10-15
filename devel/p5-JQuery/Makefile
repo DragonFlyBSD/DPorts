@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-JQuery/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-JQuery/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	JQuery
 PORTVERSION=	1.06
@@ -35,4 +35,5 @@ MAN3=		JQuery.3 \
 		JQuery::Taconite.3 \
 		JQuery::Treeview.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
