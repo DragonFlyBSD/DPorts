@@ -1,4 +1,4 @@
-# $FreeBSD: emulators/qemu-launcher/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: emulators/qemu-launcher/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	qemu-launcher
 PORTVERSION=	1.7.4
@@ -22,6 +22,7 @@ USES=		gettext perl5
 
 MAN1=	qemu-launcher.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr,${PREFIX},g' ${WRKSRC}/qemu-launcher.pl
 	@${REINPLACE_CMD} -e 's,/usr/local,${PREFIX},g' ${WRKSRC}/Makefile
