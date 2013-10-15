@@ -1,9 +1,10 @@
-# $FreeBSD: chinese/libreoffice-zh_CN/Makefile 306473 2012-10-26 20:24:07Z jkim $
+# $FreeBSD: chinese/libreoffice-zh_CN/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 LO_I18N=	zh_CN
 LO_HAS_HELPPACK=	yes
 CATEGORIES=	chinese editors
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 
 .include <bsd.port.mk>
