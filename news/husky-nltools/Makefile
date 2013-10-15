@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-nltools/Makefile 322828 2013-07-12 12:28:43Z bapt $
+# $FreeBSD: news/husky-nltools/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	nltools
 PORTVERSION=	1.2.4
@@ -13,5 +13,6 @@ COMMENT=	Nodelist tools
 
 LIB_DEPENDS=	fidoconfig.0:${PORTSDIR}/news/husky-fidoconf
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../husky-base/Makefile.inc"
 .include <bsd.port.mk>
