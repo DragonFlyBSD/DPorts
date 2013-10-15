@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sybtcl
-# Date created:			Jul 30, 2002
-# Whom:				mi
-#
-# $FreeBSD: databases/sybtcl/Makefile 316351 2013-04-23 11:51:52Z gahr $
-#
+# Created by: mi
+# $FreeBSD: databases/sybtcl/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sybtcl
 PORTVERSION=	3.0rc2
@@ -23,6 +19,7 @@ MAKE_ARGS+=	TCL_VER=${TCL_VER}
 
 MANN=		${PORTNAME}.n
 
+NO_STAGE=	yes
 post-install:
 	#######
 	# This port installs two of the vendor-supplied sample programs,
