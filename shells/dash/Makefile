@@ -1,4 +1,4 @@
-# $FreeBSD: shells/dash/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: shells/dash/Makefile 328553 2013-09-28 06:57:32Z eadler $
 
 PORTNAME=	dash
 PORTVERSION=	0.5.7
@@ -11,10 +11,9 @@ COMMENT=	POSIX-compliant implementation of /bin/sh
 GNU_CONFIGURE=	yes
 CFLAGS+=	-DUNUSABLE_RT_SIGNALS
 
-USES=	gmake
+USES=		gmake
 
-PLIST_FILES=	bin/dash
-MAN1=		dash.1
+PLIST_FILES=	bin/dash man/man1/dash.1.gz
 
 post-patch:
 	@${REINPLACE_CMD} -e '/COMMON_CFLAGS =/ s|$$| ${CFLAGS}|' \
