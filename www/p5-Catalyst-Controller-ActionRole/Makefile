@@ -1,8 +1,5 @@
-# New ports collection makefile for:  Catalyst-Controller-ActionRole
-# Whom: mons
-# Date created: 07 December 2009
-# $FreeBSD: www/p5-Catalyst-Controller-ActionRole/Makefile 325960 2013-09-02 09:44:14Z az $
-# Generated with portupload. Do not edit directly, please
+# Created by: mons
+# $FreeBSD: www/p5-Catalyst-Controller-ActionRole/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Controller-ActionRole
 PORTVERSION=	0.15
@@ -25,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Catalyst::Controller::ActionRole.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
