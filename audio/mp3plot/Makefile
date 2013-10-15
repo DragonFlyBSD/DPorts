@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/mp3plot/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/mp3plot/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3plot
 DISTVERSION=	0.6.0
@@ -17,6 +17,7 @@ OPTIONS_DEFAULT=	GD
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-boost-program-options=boost_program_options \
 		--with-boost-thread=boost_thread
