@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: ports/www/trac-down/Makefile,v 1.8 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-down/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	down
 PORTVERSION=	0.0.1.r11
@@ -21,4 +21,5 @@ PYDISTUTILS_PKGVERSION=	0.0.1
 
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
