@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/timelimit/Makefile 323129 2013-07-16 21:59:48Z eadler $
+# $FreeBSD: sysutils/timelimit/Makefile 328252 2013-09-25 04:27:30Z eadler $
 
 PORTNAME=	timelimit
 PORTVERSION=	1.8
@@ -13,11 +13,10 @@ LICENSE=	BSD
 
 CONFLICTS=	netpipes-[0-9]*
 
-MAN1=		timelimit.1
-PLIST_FILES=	bin/timelimit
+PLIST_FILES=	bin/timelimit man/man1/timelimit.1.gz
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/timelimit ${PREFIX}/bin
-		${INSTALL_DATA} ${WRKSRC}/timelimit.1 ${PREFIX}/man/man1/
+		${INSTALL_PROGRAM} ${WRKSRC}/timelimit ${STAGEDIR}${PREFIX}/bin
+		${INSTALL_DATA} ${WRKSRC}/timelimit.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
 
 .include <bsd.port.mk>
