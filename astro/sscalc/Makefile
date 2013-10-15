@@ -1,5 +1,5 @@
 # Created by: Keith Walker <kew@icehouse.net>
-# $FreeBSD: ports/astro/sscalc/Makefile,v 1.9 2013/02/25 11:44:09 svnexp Exp $
+# $FreeBSD: astro/sscalc/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	sscalc
 PORTVERSION=	1.0
@@ -10,6 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sunrise and sunset time calculator
 
 MAN1=		sscalc.1
+NO_STAGE=	yes
 
 .include <bsd.port.options.mk>
 
