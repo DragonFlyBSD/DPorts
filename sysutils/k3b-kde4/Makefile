@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/k3b-kde4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/k3b-kde4/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.2
@@ -50,6 +50,7 @@ NORMALIZE_DESC=	Misc: normalize (adjust audio to a std. level)
 TAGLIB_DESC=	Misc: TagLib (reading/writing audio metadata)
 TRANSCODE_DESC=	Misc: Transcode (DVD ripping)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCDRDAO}
