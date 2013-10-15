@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-netcdf/Makefile 326326 2013-09-04 21:10:44Z stephen $
+# $FreeBSD: math/octave-forge-netcdf/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	octave-forge-netcdf
 PORTVERSION=	1.0.1
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 LIB_DEPENDS+=	netcdf:${PORTSDIR}/science/netcdf4
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
