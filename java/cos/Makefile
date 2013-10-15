@@ -1,5 +1,5 @@
 # Created by: Jose Marques <noway@nohow.demon.co.uk>
-# $FreeBSD: java/cos/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: java/cos/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	cos
 PORTVERSION=	2002.11.05
@@ -21,6 +21,7 @@ RESTRICTED=	Special conditions apply for commercial use, see licence
 DATAFILES=	readme.txt license.txt doc
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/lib/cos.jar ${JAVAJARDIR}/
 	@cd ${WRKSRC} \
