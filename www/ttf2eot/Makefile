@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ttf2eot
-# Date Created:				July 16 2009
-# Whom:					Stefan Bethke <stb@lassitu.de>
-#
-# $FreeBSD: ports/www/ttf2eot/Makefile,v 1.2 2012/11/17 06:03:09 svnexp Exp $
-#
+# Created by: Stefan Bethke <stb@lassitu.de>
+# $FreeBSD: www/ttf2eot/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ttf2eot
 DISTVERSION=	0.0.2-2
@@ -19,6 +15,7 @@ ALL_TARGET=	ttf2eot
 PLIST_FILES=	bin/ttf2eot
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|g++|${CXX}|' ${WRKSRC}/Makefile
 
