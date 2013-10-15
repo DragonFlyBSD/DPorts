@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: multimedia/mp3cd/Makefile 325885 2013-09-01 17:18:49Z az $
+# $FreeBSD: multimedia/mp3cd/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mp3cd
 PORTVERSION=	1.027
@@ -20,4 +20,5 @@ SHEBANG_FILES=	scripts/mp3cd
 MAN1=	mp3cd.1
 MANCOMPRESS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
