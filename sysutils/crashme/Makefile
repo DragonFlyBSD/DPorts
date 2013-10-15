@@ -1,9 +1,5 @@
-# New ports collection makefile for:	crashme
-# Date created:			Apr 1, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/sysutils/crashme/Makefile,v 1.9 2012/11/17 06:01:27 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: sysutils/crashme/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	crashme
 PORTVERSION=	2.4
@@ -17,6 +13,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	gjc@alum.mit.edu
 COMMENT=	A tool to test an operating system's robustness
 
+NO_STAGE=	yes
 # according to license.rtf, and using the most restrictive one:
 LICENSE=	LGPL21
 
