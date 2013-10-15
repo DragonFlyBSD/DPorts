@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: net/liferea/Makefile 326422 2013-09-05 17:37:22Z antoine $
+# $FreeBSD: net/liferea/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	liferea
 PORTVERSION=	1.8.15
@@ -30,4 +30,5 @@ MANLANG=	"" pl
 GCONF_SCHEMAS=	liferea.schemas
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
