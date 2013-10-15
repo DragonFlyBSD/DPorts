@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <m.seaman@infracaninophile.co.uk>
-# $FreeBSD: www/p5-RTx-Calendar/Makefile 324143 2013-08-02 05:47:41Z matthew $
+# $FreeBSD: www/p5-RTx-Calendar/Makefile 328879 2013-09-30 21:53:55Z matthew $
 
 PORTNAME=	RTx-Calendar
 PORTVERSION=	0.17
@@ -37,7 +37,6 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
 
 MAN3PREFIX=	${PREFIX}
 
-MAN3=		RTx::Calendar.3
 PLIST_SUB+=	RTHOME=share/rt${RT_VER}
 
 post-patch:
