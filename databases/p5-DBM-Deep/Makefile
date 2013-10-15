@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: databases/p5-DBM-Deep/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/p5-DBM-Deep/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBM-Deep
 PORTVERSION=	2.0008
@@ -29,4 +29,5 @@ MAN3=		DBM::Deep.3 DBM::Deep::Cookbook.3 DBM::Deep::Internals.3 \
 		DBM::Deep::Iterator::File::Index.3 DBM::Deep::Null.3 \
 		DBM::Deep::Engine::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
