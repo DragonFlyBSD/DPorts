@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-sgfsummary
-# Date created:			January 16, 2004
-# Whom:				Leland Wang <llwang@infor.org>
-#
-# $FreeBSD: ports/games/py-sgfsummary/Makefile,v 1.3 2012/11/17 05:57:49 svnexp Exp $
-#
+# Created by: Leland Wang <llwang@infor.org>
+# $FreeBSD: games/py-sgfsummary/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sgfsummary
 PORTVERSION=	1.0
@@ -23,6 +19,7 @@ USE_PYTHON=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sgfsummary.py ${PREFIX}/bin
 
