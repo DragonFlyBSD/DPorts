@@ -1,5 +1,5 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: security/rubygem-jugyo-twitter_oauth/Makefile 321349 2013-06-20 04:15:59Z swills $
+# $FreeBSD: security/rubygem-jugyo-twitter_oauth/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	jugyo-twitter_oauth
 DISTVERSION=	0.5.0.pre5
@@ -18,4 +18,5 @@ USE_RUBYGEMS=	yes
 GEM_NAME=	${PORTNAME}-${DISTVERSION}
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
