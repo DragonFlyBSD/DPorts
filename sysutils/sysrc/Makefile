@@ -1,5 +1,5 @@
 # Created by: Devin Teske <dteske@FreeBSD.org>
-# $FreeBSD: sysutils/sysrc/Makefile 322348 2013-07-05 18:58:02Z wxs $
+# $FreeBSD: sysutils/sysrc/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sysrc
 PORTVERSION=	5.2
@@ -24,6 +24,7 @@ PLIST_DIRS=	share/${PORTNAME}           \
 		libexec/${PORTNAME}/include \
 		libexec/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin/
 	${MKDIR} ${PREFIX}/share/${PORTNAME}
