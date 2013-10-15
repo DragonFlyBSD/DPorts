@@ -1,9 +1,5 @@
-# New ports collection makefile for:	LeakTracer
-# Date created:				04 Feb 2004
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: devel/leaktracer/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: devel/leaktracer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	leaktracer
 PORTVERSION=	2.4
@@ -22,6 +18,7 @@ USE_PERL5=	run
 PLIST_FILES=	bin/LeakCheck bin/leak-analyze lib/LeakTracer.so
 PORTDOCS=	README README.html
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/LeakCheck ${WRKSRC}/leak-analyze \
 		${PREFIX}/bin
