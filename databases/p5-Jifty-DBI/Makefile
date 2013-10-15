@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-Jifty-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Jifty-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Jifty-DBI
 PORTVERSION=	0.76
@@ -79,4 +79,5 @@ MAN3=	Jifty::DBI.3 \
 	Jifty::DBI::Schema.3 \
 	Jifty::DBI::SchemaGenerator.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
