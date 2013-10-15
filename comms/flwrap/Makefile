@@ -1,9 +1,5 @@
-# New ports collection makefile for:	flwrap
-# Date created:				January 23 2011
-# Whom:					Diane Bruce <db@db.net>
-#
-# $FreeBSD: ports/comms/flwrap/Makefile,v 1.6 2012/11/17 05:54:59 svnexp Exp $
-#
+# Created by: Diane Bruce <db@db.net>
+# $FreeBSD: comms/flwrap/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	flwrap
 PORTVERSION=	1.3.4
@@ -22,6 +18,7 @@ GNU_CONFIGURE=	yes
 USE_DOS2UNIX=	yes
 CONFIGURE_ENV=	FLTK_CONFIG="${LOCALBASE}/bin/fltk-config"
 
+NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|' \
 		-e 's|^CPPFLAGS|#CPPFLAGS|' \
