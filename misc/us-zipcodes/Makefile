@@ -1,9 +1,5 @@
-# New ports collection makefile for:	USA zipcodes
-# Date created:         1997-12-30
-# Whom:                 wosch
-#
-# $FreeBSD: ports/misc/us-zipcodes/Makefile,v 1.14 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: wosch
+# $FreeBSD: misc/us-zipcodes/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	zipcodes
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ EXTRACT_AFTER_ARGS=	> ${WRKSRC}/zipcodes
 NO_BUILD=	yes
 PLIST_FILES=	share/misc/us.zipcodes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/zipcodes ${PREFIX}/share/misc/us.zipcodes
 
