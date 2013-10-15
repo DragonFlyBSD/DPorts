@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/winefish/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: editors/winefish/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	winefish
 DISTVERSION=	1.3.3
@@ -33,6 +33,7 @@ CONTEXT_DESC=		ConTexT support (Experimental)
 VNTEX_DESC=		Vietnamese TeX user
 UNIKEY_GTK_DESC=	Vietname Tex user with UnikeyGTK input method
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCONTEXT}
