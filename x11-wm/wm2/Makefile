@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wm2
-# Date created:		16 February 1997
-# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/x11-wm/wm2/Makefile,v 1.15 2012/11/17 06:03:44 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: x11-wm/wm2/Makefile 330215 2013-10-13 06:29:40Z eadler $
 
 PORTNAME=	wm2
 PORTVERSION=	4.0
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.all-day-breakfast.com/wm2/
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A very simple window manager for X
+COMMENT=	Simple window manager for X
 
 BUILD_DEPENDS=	makedepend:${PORTSDIR}/devel/makedepend
 
@@ -21,10 +17,10 @@ USE_XORG=	x11 xext xmu
 ALL_TARGET=	depend wm2
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wm2 ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/wm2 ${STAGEDIR}${PREFIX}/bin
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
