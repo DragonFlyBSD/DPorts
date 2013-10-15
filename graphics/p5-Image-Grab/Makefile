@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev <tolid@plab.ku.dk>
-# $FreeBSD: graphics/p5-Image-Grab/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: graphics/p5-Image-Grab/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Grab
 PORTVERSION=	1.4.2
@@ -23,4 +23,5 @@ CONFIGURE_ENV=	${ECHO_CMD} "N" |
 
 MAN3=		Image::Grab.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
