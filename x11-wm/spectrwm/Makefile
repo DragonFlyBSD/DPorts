@@ -1,5 +1,5 @@
 # Created by: Aragon Gouveia <aragon@phat.za.net>
-# $FreeBSD: x11-wm/spectrwm/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-wm/spectrwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	spectrwm
 PORTVERSION=	2.3.0
@@ -28,6 +28,7 @@ PORTEXAMPLES=	spectrwm_cz.conf \
 		spectrwm_se.conf \
 		spectrwm_us.conf
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' ${WRKSRC}/spectrwm.*
 
