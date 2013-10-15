@@ -1,10 +1,5 @@
-# New ports collection makefile for:	camlidl
-# Date created:		2006-07-31
-# Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
-#
-# $MBSDlabs$
-# $FreeBSD: lang/ocaml-camlidl/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
+# $FreeBSD: lang/ocaml-camlidl/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	camlidl
 PORTVERSION=	1.05
@@ -25,6 +20,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/ocaml/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
