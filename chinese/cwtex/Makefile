@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cwtex
-# Date created:                10 Mar 2001
-# Whom:                        Shen Chuan-Hsing
-#
-# $FreeBSD: chinese/cwtex/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Shen Chuan-Hsing
+# $FreeBSD: chinese/cwtex/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	cwtex
 PORTVERSION=	16.6
@@ -20,6 +16,7 @@ USE_TEX=	latex
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}/share ${WRKSRC}/bin
 	${TAR} -kxzf ${DISTDIR}/cwtexmain.tgz -C ${WRKSRC}/share
