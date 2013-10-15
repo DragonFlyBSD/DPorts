@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/dvdisaster/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: sysutils/dvdisaster/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dvdisaster
 PORTVERSION=	0.72.4
@@ -40,6 +40,7 @@ PORTSCOUT=	limitw:1,even
 MAN1=		dvdisaster.1
 MANLANG=	"" cs de it
 
+NO_STAGE=	yes
 do-configure:
 	@(cd ${CONFIGURE_WRKSRC} && \
 		if ! ${SETENV} CC="${CC}" CXX="${CXX}" \
