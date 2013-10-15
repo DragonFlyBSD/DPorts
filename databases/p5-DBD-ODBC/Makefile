@@ -1,5 +1,5 @@
 # Created by: clive@FreeBSD.org
-# $FreeBSD: databases/p5-DBD-ODBC/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBD-ODBC/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBD-ODBC
 PORTVERSION=	1.43
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	-o ${LOCALBASE}
 MAN3=		DBD::ODBC.3
 PORTDOCS=	Changes README README.adabas README.informix
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MODBC)
