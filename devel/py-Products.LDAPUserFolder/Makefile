@@ -1,5 +1,5 @@
 # Created by: Lawrence Stewart <lstewart@FreeBSD.org>
-# $FreeBSD: devel/py-Products.LDAPUserFolder/Makefile 319339 2013-05-29 04:46:28Z jgh $
+# $FreeBSD: devel/py-Products.LDAPUserFolder/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.LDAPUserFolder
 PORTVERSION=	2.23
@@ -23,8 +23,10 @@ OPTIONS_DEFAULT=	POSIXGROUP_PATCH
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
-#USE_ZOPE=	yes
+USE_PYDISTUTILS=easy_install
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.options.mk>
 
