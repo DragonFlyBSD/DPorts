@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: devel/gtkparasite/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: devel/gtkparasite/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gtkparasite
 PORTVERSION=	20090819
@@ -22,6 +22,7 @@ PLIST_FILES=	lib/gtk-2.0/modules/libgtkparasite.a \
 		lib/gtk-2.0/modules/libgtkparasite.so
 USE_AUTOTOOLS=	autoconf automake libtool
 
+NO_STAGE=	yes
 pre-configure:
 	cd ${WRKSRC} && ${REINPLACE_CMD} -e '/.\/configure/d' ./autogen.sh \
 		&& ./autogen.sh
