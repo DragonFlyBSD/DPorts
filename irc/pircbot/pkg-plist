@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/irc/pircbot/pkg-plist,v 1.9 2012/11/17 05:58:29 svnexp Exp $
+@comment $FreeBSD: irc/pircbot/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%JAVAJARDIR%%/pircbot.jar
 %%PORTDOCS%%%%DOCSDIR%%/constant-values.html
 %%PORTDOCS%%%%DOCSDIR%%/org/jibble/pircbot/class-use/NickAlreadyInUseException.html
