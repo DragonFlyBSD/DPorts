@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/java/springframework31/Makefile,v 1.3 2013/02/17 19:45:59 svnexp Exp $
+# $FreeBSD: java/springframework31/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	springframework
 PORTVERSION=	3.1.4
@@ -49,6 +49,7 @@ JAR_FILES=	org.springframework.aop.jar \
 PLIST_FILES +=	%%JAVAJARDIR%%/${f}
 .endfor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRESRCS}
