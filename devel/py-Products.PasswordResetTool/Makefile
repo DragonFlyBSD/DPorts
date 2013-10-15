@@ -1,7 +1,7 @@
-# $FreeBSD: devel/py-Products.PasswordResetTool/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-Products.PasswordResetTool/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.PasswordResetTool
-PORTVERSION=	2.0.12
+PORTVERSION=	2.0.15
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,8 +22,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.memoize>=0:${PORTSDIR}/www/py-plone.me
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-USE_ZOPE=	yes
+USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
