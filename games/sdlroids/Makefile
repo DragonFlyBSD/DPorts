@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/games/sdlroids/Makefile,v 1.16 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/sdlroids/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sdlroids
 PORTVERSION=	1.3.4
@@ -30,6 +30,7 @@ PORTDOCS=	ChangeLog README README.orig README.petopt README.xhyperoid TODO
 DESKTOP_ENTRIES="SDLRoids" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME} -n 2" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
