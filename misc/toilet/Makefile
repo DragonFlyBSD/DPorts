@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/toilet/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: misc/toilet/Makefile 327924 2013-09-23 06:11:19Z bapt $
 
 PORTNAME=	toilet
 PORTVERSION=	0.3
@@ -10,7 +10,7 @@ MASTER_SITES=	http://caca.zoy.org/raw-attachment/wiki/toilet/
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Enhanced figlet(6)
 
-LIB_DEPENDS=	caca.0:${PORTSDIR}/graphics/libcaca
+LIB_DEPENDS=	libcaca.so:${PORTSDIR}/graphics/libcaca
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-transform-name=""
@@ -18,7 +18,6 @@ USES=		pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-fno-strength-reduce
-MAN1=		${PORTNAME}.1
 PORT_VERBS=	${PORTNAME} caca2tlf share/figlet/*tlf
 
 post-patch:
@@ -27,6 +26,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|\$$\^|$${.ALLSRC}|' ${WRKSRC}/doc/Makefile.in
 
 post-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/tools/caca2tlf ${PREFIX}/bin/
+	@${INSTALL_PROGRAM} ${WRKSRC}/tools/caca2tlf ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
