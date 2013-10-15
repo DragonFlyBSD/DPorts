@@ -1,5 +1,5 @@
 # Created by: Lucio Costa <lucio@zetasolucoes.com.br>
-# $FreeBSD: ports/net-mgmt/ezradius/Makefile,v 1.4 2013/02/05 13:13:14 svnexp Exp $
+# $FreeBSD: net-mgmt/ezradius/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ezradius
 PORTVERSION=	0.2.1.2
@@ -19,6 +19,7 @@ USE_MYSQL=	yes
 USE_PHP=	mysql session xml
 WANT_PHP_WEB=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${WWWDIR}
 	@cd ${WRKSRC} && \
