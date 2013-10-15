@@ -1,9 +1,5 @@
-# Ports collection makefile for:	spike-proxy
-# Date created:				2 Aug 2004
-# Whom:					Yonatan <Yonatan@xpert.com>
-#
-# $FreeBSD: ports/security/spike-proxy/Makefile,v 1.4 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Yonatan <Yonatan@xpert.com>
+# $FreeBSD: security/spike-proxy/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	spike-proxy
 PORTVERSION=	1.4.8
@@ -21,6 +17,7 @@ WRKSRC=		${WRKDIR}/spkproxy
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} "s|\#\!/usr/bin/python|\#\!${LOCALBASE}/bin/python|" ${WRKSRC}/*.py
 
