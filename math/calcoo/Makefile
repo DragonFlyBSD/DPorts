@@ -1,4 +1,4 @@
-# $FreeBSD: math/calcoo/Makefile 324122 2013-08-01 20:22:27Z naddy $
+# $FreeBSD: math/calcoo/Makefile 329323 2013-10-04 15:21:09Z naddy $
 
 PORTNAME=	calcoo
 PORTVERSION=	1.3.18
@@ -13,8 +13,7 @@ USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 
-MAN1=		calcoo.1
-
-PLIST_FILES=	bin/calcoo
+PLIST_FILES=	bin/calcoo \
+		man/man1/calcoo.1.gz
 
 .include <bsd.port.mk>
