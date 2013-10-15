@@ -1,9 +1,5 @@
-# ports collection makefile for:	nsf
-# Date created:				2000/09/09
-# Whom:					kaz
-#
-# $FreeBSD: ports/misc/nsf/Makefile,v 1.7 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: kaz
+# $FreeBSD: misc/nsf/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	nsf
 PORTVERSION=	1.0
@@ -20,6 +16,7 @@ MANCOMPRESSED=	yes
 PLIST_FILES=	bin/nsf
 ALL_TARGET=
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/nsf ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${MAN1} ${PREFIX}/man/man1/
