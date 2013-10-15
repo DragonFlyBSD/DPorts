@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Mock-Quick/Makefile 325058 2013-08-20 15:22:10Z mat $
+# $FreeBSD: devel/p5-Mock-Quick/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Mock-Quick
 PORTVERSION=	1.107
@@ -29,4 +29,5 @@ MAN3=		Mock::Quick.3 Object::Quick.3 \
 		Mock::Quick::Object::Control.3 \
 		Mock::Quick::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
