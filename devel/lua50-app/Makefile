@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lua50-app
-# Date created:        17 April 2006
-# Whom:                Andrew Turner <andrew+ports@fubar.geek.nz>
-#
-# $FreeBSD: ports/devel/lua50-app/Makefile,v 1.10 2012/11/17 05:55:59 svnexp Exp $
-#
+# Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
+# $FreeBSD: devel/lua50-app/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	app
 PORTVERSION=	1.72
@@ -24,6 +20,7 @@ NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	%%LUA_MODSHAREDIR%%/app.lua
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DISTFILES} \
 		${LUA_MODSHAREDIR}/${DISTFILES:C/\?.*$//}
