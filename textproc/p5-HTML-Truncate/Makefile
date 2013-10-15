@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-HTML-Truncate/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-HTML-Truncate/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	HTML-Truncate
 PORTVERSION=	0.20
@@ -19,6 +19,7 @@ USE_PERL5=	configure
 
 MAN3=		HTML::Truncate.3
 
+NO_STAGE=	yes
 post-patch:
 	${RM} -f ${WRKSRC}/lib/HTML/Truncate.pm.orig
 
