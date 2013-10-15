@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-tgMochiKit
-# Date created:		5th Oct, 2009
-# Whom:			Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-tgMochiKit/Makefile,v 1.3 2012/11/17 05:56:51 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: devel/py-tgMochiKit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	tgMochiKit
 PORTVERSION=	1.4.2
@@ -17,4 +13,5 @@ COMMENT=	MochiKit packaged as TurboGears widgets
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
