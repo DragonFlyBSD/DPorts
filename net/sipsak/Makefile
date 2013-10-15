@@ -1,5 +1,5 @@
 # Created by: jesusr
-# $FreeBSD: net/sipsak/Makefile 323964 2013-07-30 12:43:10Z bapt $
+# $FreeBSD: net/sipsak/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	sipsak
 PORTVERSION=	0.9.6
@@ -16,4 +16,5 @@ GNU_CONFIGURE=	yes
 MAN1=		sipsak.1
 PLIST_FILES=	bin/sipsak
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
