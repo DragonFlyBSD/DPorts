@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Alias
-# Date created:				04 Nov 2000
-# Whom:					will
-#
-# $FreeBSD: devel/p5-Alias/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: will
+# $FreeBSD: devel/p5-Alias/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Alias
 PORTVERSION=	2.32
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Alias.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
