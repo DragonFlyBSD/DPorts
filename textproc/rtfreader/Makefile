@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rtfreader
-# Date created:			14 Jan 2002
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/rtfreader/Makefile,v 1.7 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: textproc/rtfreader/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rtfreader
 PORTVERSION=	1.0
@@ -19,6 +15,7 @@ ALL_TARGET=	rtfreader
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 PLIST_FILES=	bin/rtfreader
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/rtfreader ${PREFIX}/bin
 
