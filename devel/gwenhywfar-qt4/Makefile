@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/gwenhywfar-qt4/Makefile,v 1.4 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: devel/gwenhywfar-qt4/Makefile 329953 2013-10-10 00:58:16Z jhale $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-${SLAVEPORT}
