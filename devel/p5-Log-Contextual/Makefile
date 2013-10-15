@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Contextual/Makefile 324503 2013-08-10 13:21:36Z kuriyama $
+# $FreeBSD: devel/p5-Log-Contextual/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Contextual
 PORTVERSION=	0.005005
@@ -25,4 +25,5 @@ MAN3=	Log::Contextual.3 \
 	Log::Contextual::TeeLogger.3 \
 	Log::Contextual::WarnLogger.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
