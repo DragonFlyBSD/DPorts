@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: textproc/jaxup/Makefile 317123 2013-05-02 14:34:29Z bapt $
+# $FreeBSD: textproc/jaxup/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jaxup
 PORTVERSION=	1.01
@@ -41,6 +41,7 @@ PLIST_DIRS=	%%DATADIR%%
 PORTDOCS=	LICENSE.txt api index.html jaxup_files xupdate-wd.html xupdate-wd_files
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 UTIL_CLASSPATH_JARS=	jaxen-full saxpath xercesImpl
