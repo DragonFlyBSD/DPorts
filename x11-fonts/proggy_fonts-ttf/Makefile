@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/proggy_fonts-ttf/Makefile,v 1.4 2012/11/17 06:03:29 svnexp Exp $
+# $FreeBSD: x11-fonts/proggy_fonts-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	proggy_fonts-ttf
 PORTVERSION=	1.0
@@ -22,6 +22,7 @@ USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
 INSTALLDIR=	${PREFIX}/lib/X11/fonts/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${LOCALBASE}/bin/mkfontscale
 	@cd ${WRKSRC} && ${LOCALBASE}/bin/mkfontdir
