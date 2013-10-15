@@ -1,9 +1,5 @@
-# New ports collection makefile for:	costsh
-# Date created:				May 22, 2000
-# Whom:					Allan Bowhill <kosmos@blarg.net>
-#
-# $FreeBSD: ports/textproc/cost/Makefile,v 1.17 2012/11/17 06:01:53 svnexp Exp $
-#
+# Created by: Allan Bowhill <kosmos@blarg.net>
+# $FreeBSD: textproc/cost/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	cost
 PORTVERSION=	2.2p1
@@ -23,6 +19,7 @@ CONFIGURE_ARGS+=--with-tcl=${LOCALBASE}/lib/tcl8.4 \
 CONFIGURE_ENV+=	TCL_INCLUDE_SPEC="${LOCALBASE}/include/tcl8.4"
 CFLAGS+=	-fPIC
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|TCL_SRC_DIR%g|TCL_INCLUDE_SPEC%g|' \
 		${WRKSRC}/configure
