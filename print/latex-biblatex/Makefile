@@ -1,5 +1,5 @@
 # Created by: vj562001@yahoo.de
-# $FreeBSD: print/latex-biblatex/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/latex-biblatex/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	biblatex
 PORTVERSION=	0.9e
@@ -40,6 +40,7 @@ WRKSRC=		${WRKDIR}/${CLASSNAME}
 OPTIONS_DEFINE=	BIBTEXT8_CSF DOCS
 BIBTEXT8_CSF_DESC=	BibTeX8 sort definition files
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-install:
