@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/ruby-langscan/Makefile 317305 2013-05-04 10:26:09Z tota $
+# $FreeBSD: devel/ruby-langscan/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	langscan
 PORTVERSION=	1.2.20070115
@@ -17,9 +17,10 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	p5-PPI>=0:${PORTSDIR}/textproc/p5-PPI
 BUILD_DEPENDS=	flex>=2.5.31:${PORTSDIR}/textproc/flex
 
+USES=		perl5
 USE_AUTOTOOLS=	aclocal:env automake:env autoconf:env
 USE_RUBY=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_OCAML=	yes
 NO_OCAML_RUNDEPENDS=	yes
 HAS_CONFIGURE=	yes
@@ -32,6 +33,7 @@ DOCSDIR=	${RUBY_MODDOCDIR}
 OPTIONS_DEFINE=	DOCS
 OPTIONSFILE=	${PORT_DBDIR}/ruby-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CFLAGS+=	-fPIC
