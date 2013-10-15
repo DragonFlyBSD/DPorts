@@ -1,5 +1,5 @@
 # Created by: kevit
-# $FreeBSD: devel/p5-Class-Declare/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-Class-Declare/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Declare
 PORTVERSION=	0.17
@@ -17,4 +17,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=	Class::Declare::Dump.3 Class::Declare.3 Class::Declare::Hash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
