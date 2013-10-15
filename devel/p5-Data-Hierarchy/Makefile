@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-Data-Hierarchy/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-Data-Hierarchy/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Hierarchy
 PORTVERSION=	0.34
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Data::Hierarchy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
