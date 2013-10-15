@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Method-Signatures/Makefile 327161 2013-09-13 15:41:53Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Method-Signatures/Makefile 329084 2013-10-02 17:47:51Z sunpoet $
 
 PORTNAME=	MooseX-Method-Signatures
-PORTVERSION=	0.45
+PORTVERSION=	0.46
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -30,10 +30,11 @@ BUILD_DEPENDS=	p5-B-Hooks-EndOfScope>=0.10:${PORTSDIR}/devel/p5-B-Hooks-EndOfSco
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Eval-Closure>=0:${PORTSDIR}/devel/p5-Eval-Closure \
-		p5-Test-CheckDeps>=0.006:${PORTSDIR}/devel/p5-Test-CheckDeps \
+		p5-Test-CheckDeps>=0.007:${PORTSDIR}/devel/p5-Test-CheckDeps \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
+NO_STAGE=	yes
 USES=		perl5
 USE_PERL5=	modbuildtiny
 
