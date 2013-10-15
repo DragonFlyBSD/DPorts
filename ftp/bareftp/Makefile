@@ -1,5 +1,5 @@
 # Created by: Chris Petrik (chris@officialunix.com)
-# $FreeBSD: ftp/bareftp/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: ftp/bareftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	bareftp
 PORTVERSION=	0.3.10
@@ -27,6 +27,7 @@ MAN1=		bareftp.1
 OPTIONS_DEFINE=	GNOMEKEYRING NLS
 OPTIONS_DEFAULT=	GNOMEKEYRING
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOMEKEYRING}
