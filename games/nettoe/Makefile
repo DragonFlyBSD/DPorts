@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nettoe
-# Date created:		01 July 2001
-# Whom:			Christopher Preston <rbg@gayteenresource.org>
-#
-# $FreeBSD: ports/games/nettoe/Makefile,v 1.9 2012/11/17 05:57:47 svnexp Exp $
-#
+# Created by: Christopher Preston <rbg@gayteenresource.org>
+# $FreeBSD: games/nettoe/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	nettoe
 PORTVERSION=	1.3.2
@@ -22,6 +18,7 @@ MAN6=		nettoe.6
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 
 PORTDOCS=	AUTHORS BUGS ChangeLog NEWS README TO-DO
 
