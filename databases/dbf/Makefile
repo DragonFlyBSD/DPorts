@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/dbf/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: databases/dbf/Makefile 329864 2013-10-09 06:26:00Z bapt $
 
 PORTNAME=	dbf
 PORTVERSION=	0.9.0
@@ -16,13 +16,13 @@ OPTIONS_DEFINE=	NLS
 WRKSRC=		${WRKDIR}/lib${PORTNAME}
 
 USE_ZIP=	yes
-USES=        pathfix
+USES=		pathfix
 USE_GNOME=	intltool
-USE_GCC=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_prog_DOC_TO_MAN=""
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
