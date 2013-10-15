@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Timer/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-Test-Timer/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Timer
 PORTVERSION=	0.05
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	Test::Timer.3 Test::Timer::TimeoutException.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
