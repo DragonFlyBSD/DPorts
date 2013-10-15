@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-Products.LDAPMultiPlugins
-# Date created:				20 May 2012
-# Whom:					Lawrence Stewart <lstewart@freebsd.org>
-#
-# $FreeBSD: ports/devel/py-Products.LDAPMultiPlugins/Makefile,v 1.2 2012/11/17 05:56:44 svnexp Exp $
-#
+# Created by: Lawrence Stewart <lstewart@FreeBSD.org>
+# $FreeBSD: devel/py-Products.LDAPMultiPlugins/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.LDAPMultiPlugins
 PORTVERSION=	1.14
@@ -22,6 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ldap2>=2.0.6:${PORTSDIR}/net/py-ldap2 \
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
