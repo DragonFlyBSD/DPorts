@@ -1,9 +1,5 @@
-# New ports collection makefile for: reposado
-# Date created:		23 Jun 2012
-# Whom:			Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-#
-# $FreeBSD: net/reposado/Makefile 319424 2013-05-30 13:05:34Z swills $
-#
+# Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
+# $FreeBSD: net/reposado/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	reposado
 PORTVERSION=	0.0.20130415
@@ -27,6 +23,7 @@ USE_PYDISTUTILS=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE},g" \
 		${WRKSRC}/code/reposadolib/reposadocommon.py
