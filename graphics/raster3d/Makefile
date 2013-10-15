@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: graphics/raster3d/Makefile 324437 2013-08-09 14:05:52Z dinoex $
+# $FreeBSD: graphics/raster3d/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	raster3d
 PORTVERSION=	3.0.2
@@ -36,6 +36,7 @@ MAGICK_RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 MAGICK_CFLAGS=		-DIMAGEPIPE
 OPTIONS_SUB=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
