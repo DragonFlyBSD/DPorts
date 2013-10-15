@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/nelly/Makefile 314118 2013-03-13 22:26:44Z beech $
+# $FreeBSD: games/nelly/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	nelly
 PORTVERSION=	1.0
@@ -30,6 +30,7 @@ DESKTOP_ENTRIES="Nelly's Rooftop Garden" "${COMMENT}" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
