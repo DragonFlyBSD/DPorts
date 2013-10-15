@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/lynx-current/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: www/lynx-current/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lynx
 PORTVERSION=	2.8.8d15
@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	--with-zlib --libdir="${L_LIB}" \
 
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAKE_FLAGS=	helpdir=${L_HELP} docdir=${L_DOC} -f
