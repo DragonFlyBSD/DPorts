@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/goonies/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/goonies/Makefile 329256 2013-10-04 01:47:03Z amdmi3 $
 
 PORTNAME=	goonies
 PORTVERSION=	1.0.1
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Remake of the 8 bit classic game 'The Goonies'
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl mixer image
 USE_GL=		yes
 
@@ -23,7 +23,6 @@ MAKE_ENV=	DATADIR="${DATADIR}"
 
 PLIST_FILES=	bin/${PORTNAME}
 
-DATADIRS=	sound graphics maps
 PORTDOCS=	*
 PORTDATA=	*
 
@@ -42,14 +41,13 @@ post-patch:
 		${WRKSRC}/src/TheGoonies.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/goonies ${PREFIX}/bin/
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC} && ${COPYTREE_SHARE} 'sound graphics maps' ${DATADIR}/
-.endif
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/goonies ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} \
+		'sound graphics maps' ${STAGEDIR}${DATADIR}/
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
