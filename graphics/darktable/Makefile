@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/darktable/Makefile 327363 2013-09-16 03:10:34Z danfe $
+# $FreeBSD: graphics/darktable/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	darktable
 PORTVERSION=	1.2.3
@@ -41,6 +41,7 @@ GCC_DESC=	Build with modern GCC (better OpenMP support)
 
 OPTIONS_DEFAULT=	GPHOTO RAWSPEED GCC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGPHOTO}
