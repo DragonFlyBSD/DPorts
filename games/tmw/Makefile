@@ -1,5 +1,5 @@
 # Created by: Tobias Gion
-# $FreeBSD: games/tmw/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/tmw/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tmw
 PORTVERSION=	0.5.2
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	MUSIC OPENGL
 MANASERV_DESC=	Server component
 MUSIC_DESC=	Install additional music
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANASERV}
