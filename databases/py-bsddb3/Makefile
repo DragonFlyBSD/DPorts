@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: ports/databases/py-bsddb3/Makefile,v 1.34 2012/11/17 05:55:21 svnexp Exp $
+# $FreeBSD: databases/py-bsddb3/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	bsddb3
 PORTVERSION=	5.3.0
@@ -20,6 +20,7 @@ PYDISTUTILS_INSTALLARGS=-c -O1 --prefix=${PREFIX} --berkeley-db=${LOCALBASE}
 PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
