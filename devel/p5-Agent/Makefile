@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Agent
-# Date created:				04 Nov 2000
-# Whom:					will
-#
-# $FreeBSD: devel/p5-Agent/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: will
+# $FreeBSD: devel/p5-Agent/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Agent
 PORTVERSION=	3.20
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 MAN3=		Agent.3 Agent::Transport::TCP.3 \
 		Agent::Transport.3 Agent::Message.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
