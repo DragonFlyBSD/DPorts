@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports-mgmt/distilator/Makefile 326530 2013-09-06 17:55:21Z az $
+# $FreeBSD: ports-mgmt/distilator/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	distilator
 PORTVERSION=	0.2
@@ -17,4 +17,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
