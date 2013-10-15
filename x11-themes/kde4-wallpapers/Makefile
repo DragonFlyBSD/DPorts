@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde4-wallpapers/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: x11-themes/kde4-wallpapers/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	kde-wallpapers
 PORTVERSION=	${KDE4_VERSION}
@@ -19,4 +19,5 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
