@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/springgraph/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: graphics/springgraph/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	springgraph
 PORTVERSION=	0.88
@@ -25,6 +25,7 @@ NO_BUILD=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	springgraph.pl
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/springgraph.pl ${PREFIX}/bin/springgraph
 
