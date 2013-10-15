@@ -1,4 +1,4 @@
-# $FreeBSD: devel/oserl/Makefile 326259 2013-09-04 08:00:01Z bsam $
+# $FreeBSD: devel/oserl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	oserl
 PORTVERSION=	3.2.4
@@ -32,6 +32,7 @@ MAN3=		gen_esme.3 gen_esme_session.3 gen_mc.3 gen_mc_session.3 \
 		smpp_pdu_syntax.3 smpp_ref_num.3 smpp_req_tab.3 smpp_sm.3 \
 		smpp_tty_log_hlr.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
