@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: devel/jcmdline/Makefile 308600 2012-12-10 11:25:27Z bapt $
+# $FreeBSD: devel/jcmdline/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	jcmdline
 PORTVERSION=	2.0.0
@@ -21,6 +21,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE}
 DOCFILES=	CHANGES CREDITS README
 PORTDOCS=	*
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${JARFILE:S|.jar|-${PORTVERSION}.jar|:S|^|${WRKSRC}/|}	\
 		${JAVAJARDIR}/${JARFILE}
