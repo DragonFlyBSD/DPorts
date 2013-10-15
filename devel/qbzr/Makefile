@@ -1,9 +1,5 @@
-# Ports collection makefile for:        qbzr
-# Date created:         26 May 2010
-# Whom:                 Carlo Strub
-#
-# $FreeBSD: devel/qbzr/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Carlo Strub
+# $FreeBSD: devel/qbzr/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	qbzr
 PORTVERSION=	0.23.0
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpadlibrarian.net/109906138/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qt interface for bzr
 
 LICENSE=	GPLv2
@@ -31,4 +27,5 @@ USE_PYDISTUTILS=	yes
 USES=		gettext
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
