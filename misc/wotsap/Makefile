@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/misc/wotsap/Makefile,v 1.10 2013/02/17 18:46:26 svnexp Exp $
+# $FreeBSD: misc/wotsap/Makefile 328759 2013-09-29 23:32:33Z danilo $
 
 PORTNAME=	wotsap
 PORTVERSION=	0.7
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.lysator.liu.se/~jc/wotsap/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Web of trust statistics and pathfinder
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}imaging>0:${PORTSDIR}/graphics/py-imaging
@@ -19,7 +19,7 @@ PLIST_FILES=	bin/pks2wot bin/wotsap
 PORTSCOUT=	ignore:1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pks2wot ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/wotsap ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/pks2wot ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/wotsap ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
