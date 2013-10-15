@@ -1,5 +1,4 @@
-# Created by: Philip M. Goillucci <pgollucci@p6m7g8.com>
-# $FreeBSD: textproc/p5-Template-Plugin-HTML-SuperForm/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Template-Plugin-HTML-SuperForm/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Template-Plugin-HTML-SuperForm
 PORTVERSION=	1.0
@@ -20,4 +19,5 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 
 MAN3=	Template::Plugin::HTML::SuperForm.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
