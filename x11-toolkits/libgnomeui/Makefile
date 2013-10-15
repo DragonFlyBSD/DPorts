@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreBSD.org>
-# $FreeBSD: x11-toolkits/libgnomeui/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: x11-toolkits/libgnomeui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.129 2010/09/27 20:16:41 kwm Exp $
 
 PORTNAME=	libgnomeui
@@ -30,6 +30,7 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
 
 .endif
