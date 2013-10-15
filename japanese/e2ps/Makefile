@@ -1,9 +1,5 @@
-# New ports collection makefile for:	e2ps
-# Date created:		27 Nov 1998
-# Whom:			Daisuke Kawahara <kawahara@pine.kuee.kyoto-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/e2ps/Makefile,v 1.6 2012/11/17 05:58:32 svnexp Exp $
-#
+# Created by: Daisuke Kawahara <kawahara@pine.kuee.kyoto-u.ac.jp>
+# $FreeBSD: japanese/e2ps/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	e2ps
 PORTVERSION=	4.34
@@ -16,6 +12,7 @@ COMMENT=	Text file to postscript converter (with Japanese support)
 USE_BZIP2=	yes
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
