@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFCore/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-Products.CMFCore/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	Products.CMFCore
 PORTVERSION=	2.2.7
@@ -19,7 +19,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.localsitemanager>=0:${PORTSDIR}/devel/p
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
-#USE_ZOPE=	yes # cyclic dependency
+USE_PYDISTUTILS=easy_install
+#USES=		zope # cyclic dependency
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
