@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: ports/java/netbeans/Makefile,v 1.55 2013/02/26 11:44:14 svnexp Exp $
+# $FreeBSD: java/netbeans/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	netbeans
 PORTVERSION=	7.3
@@ -28,6 +28,7 @@ DESKTOP_ENTRIES="NetBeans" \
 		"Development;" \
 		${FALSE}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i "" -e '57s|#||;57s|/path/to/jdk|${JAVA_HOME}|' \
 	    ${WRKSRC}/etc/netbeans.conf
