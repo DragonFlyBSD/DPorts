@@ -1,9 +1,9 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: emulators/catapult/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/catapult/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	catapult
 PORTVERSION=	0.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	SF/openmsx/openmsx/${PORTVERSION}
 DISTNAME=	openmsx-${PORTNAME}-${PORTVERSION}
@@ -32,8 +32,7 @@ OPTIONS_DEFINE=	DEBUG DOCS
 USE_GNOME=	gdkpixbuf2 glib20 gtk20 libxml2
 USE_WX=		2.6+
 USE_PYTHON_BUILD=yes
-USE_GMAKE=	yes
-USES=		gettext iconv
+USES=		gettext gmake iconv
 USE_XORG=	ice pixman sm x11 xau xcb xcomposite xcursor xdamage xdmcp \
 		xext xfixes xi xinerama xrandr xrender xxf86vm
 MAKEFILE=	GNUmakefile
@@ -44,6 +43,7 @@ MAKE_ARGS=	INSTALL_BASE="${PREFIX}" \
 		CATAPULT_OPENMSX_SHARE="${LOCALBASE}/share/openmsx" \
 		SYMLINK_FOR_BINARY="false"
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
