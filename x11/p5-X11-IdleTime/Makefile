@@ -1,5 +1,5 @@
 # Created by: Sean Farley <sean-freebsd@farley.org>
-# $FreeBSD: x11/p5-X11-IdleTime/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: x11/p5-X11-IdleTime/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	X11-IdleTime
 PORTVERSION=	0.5
@@ -23,6 +23,7 @@ USE_PERL5=	configure patch
 MANPREFIX=	${SITE_PERL}
 MAN3=		X11::IdleTime.3
 
+NO_STAGE=	yes
 post-patch:
 .for i in IdleTime.pm
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' ${WRKSRC}/${i}
