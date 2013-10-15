@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hgrep
-# Date created:				10. April 2003
-# Whom:					Aaron Zauner <az_mail@gmx.at>
-#
-# $FreeBSD: ports/textproc/hgrep/Makefile,v 1.4 2012/11/17 06:01:57 svnexp Exp $
-#
+# Created by: Aaron Zauner <az_mail@gmx.at>
+# $FreeBSD: textproc/hgrep/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	hgrep
 PORTVERSION=	1.0
@@ -19,4 +15,5 @@ WRKSRC=		${WRKDIR}/hgrep
 MAN1=		hgrep.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
