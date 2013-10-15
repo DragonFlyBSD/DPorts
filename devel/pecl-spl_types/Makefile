@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-spl_types
-# Date created:			15 Jan 2007
-# Whom:				Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/devel/pecl-spl_types/Makefile,v 1.7 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: devel/pecl-spl_types/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	spl_types
 PORTVERSION=	0.3.0
@@ -30,4 +26,5 @@ IGNORE_WITH_PHP=5
 CONFIGURE_ARGS=	--enable-spl-types
 CFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
