@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-SQL-Abstract-Plugin-InsertMulti/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-SQL-Abstract-Plugin-InsertMulti/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	SQL-Abstract-Plugin-InsertMulti
 PORTVERSION=	0.03
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	SQL::Abstract::Plugin::InsertMulti.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
