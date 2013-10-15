@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: sysutils/racktables/Makefile 321793 2013-06-26 11:27:52Z zi $
+# $FreeBSD: sysutils/racktables/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	racktables
 DISTVERSION=	0.20.5
@@ -29,6 +29,7 @@ PCRE_DESC=	Regular Expression Support
 PCNTL_DESC=	pcntl Support
 LANG_DESC=	Additional Language Support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
