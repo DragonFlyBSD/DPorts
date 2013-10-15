@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Server-Simple-Recorder/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-HTTP-Server-Simple-Recorder/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Server-Simple-Recorder
 PORTVERSION=	0.03
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	HTTP::Server::Simple::Recorder.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
