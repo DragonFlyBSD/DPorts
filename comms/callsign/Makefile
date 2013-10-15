@@ -1,5 +1,5 @@
 # Created by: Rick Elrod <codeblock@eighthbit.net>
-# $FreeBSD: comms/callsign/Makefile 321424 2013-06-20 20:40:29Z bsam $
+# $FreeBSD: comms/callsign/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	callsign
 PORTVERSION=	1.0.2
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 PLIST_FILES=	bin/callsign
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/callsign ${LOCALBASE}/bin/
 
