@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	netmap
-# Date created:			Feb 10, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/net/netmap/Makefile,v 1.16 2012/11/17 06:00:07 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/netmap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	netmap
 PORTVERSION=	0.1.3
@@ -21,6 +16,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	bin/makelist bin/netmap
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/makelist/makelist ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/netmap/netmap ${PREFIX}/bin
