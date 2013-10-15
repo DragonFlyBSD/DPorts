@@ -1,5 +1,5 @@
 # Created by: Elisey Savateev <b3k@mail.ru>
-# $FreeBSD: security/umit/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: security/umit/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	umit
 PORTVERSION=	1.0
@@ -20,6 +20,7 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386" || ${PYTHON_REL} > 260
