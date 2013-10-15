@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-yslow
-# Date created:			19 January 2008
-# Whom:				Sutra Zhou <zhoushuqun@gmail.com>
-#
-# $FreeBSD: ports/www/xpi-yslow/Makefile,v 1.7 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Sutra Zhou <zhoushuqun@gmail.com>
+# $FreeBSD: www/xpi-yslow/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yslow
 PORTVERSION=	3.1.0
@@ -18,5 +14,6 @@ RUN_DEPENDS=	xpi-firebug>=1.3.0:${PORTSDIR}/www/xpi-firebug
 XPI_NUM=	5369
 XPI_ID=		yslow@yahoo-inc.com
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
