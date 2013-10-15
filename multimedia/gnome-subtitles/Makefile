@@ -1,5 +1,5 @@
 # Created by: Marcin Simonides <marcin@studio4plus.com>
-# $FreeBSD: multimedia/gnome-subtitles/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: multimedia/gnome-subtitles/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gnome-subtitles
 PORTVERSION=	1.2
@@ -31,6 +31,7 @@ USE_LDCONFIG=	${PREFIX}/lib/gnome-subtitles
 
 MAN1=		gnome-subtitles.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
