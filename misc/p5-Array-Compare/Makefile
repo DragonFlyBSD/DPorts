@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Array-Compare/Makefile 324167 2013-08-02 17:11:34Z az $
+# $FreeBSD: misc/p5-Array-Compare/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Array-Compare
 PORTVERSION=	2.02
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Array::Compare.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
