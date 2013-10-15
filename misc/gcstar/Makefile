@@ -1,8 +1,9 @@
 # Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-# $FreeBSD: misc/gcstar/Makefile 325959 2013-09-02 09:36:29Z az $
+# $FreeBSD: misc/gcstar/Makefile 329065 2013-10-02 16:14:59Z acm $
 
 PORTNAME=	gcstar
 PORTVERSION=	1.7.0
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.gna.org/gcstar/ \
 		http://djdomics.free.fr/distfiles/
@@ -40,6 +41,7 @@ USE_PERL5=	run
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 		@${MKDIR} ${PREFIX}/share/applications
 		@${MKDIR} ${PREFIX}/share/pixmaps
