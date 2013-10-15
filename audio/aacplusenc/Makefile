@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: audio/aacplusenc/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/aacplusenc/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	aacplusenc
 PORTVERSION=	0.17.5
@@ -17,6 +17,7 @@ RESTRICTED=	unclear legal status, probably need licenses from 3GPP, Via Licensin
 CONFLICTS=	libaacplus-[0-9]*
 
 PLIST_FILES=	bin/aacplusenc
+NO_STAGE=	yes
 
 .if defined(WITHOUT_FFTW3)
 MAKE_ARGS+=	NOFFTW3=1
