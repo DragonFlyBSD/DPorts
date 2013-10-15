@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-libxml/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-libxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libxml
 PORTVERSION=	0.1.1
@@ -15,5 +15,6 @@ USE_GNOME=	libxml2
 
 CONFIGURE_ARGS+=	--extra-include-dirs="${LOCALBASE}/include/libxml2"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
