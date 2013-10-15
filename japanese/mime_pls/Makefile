@@ -1,5 +1,5 @@
 # Created by: n-shigemura@ensure.jp
-# $FreeBSD: japanese/mime_pls/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/mime_pls/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	mime_pls
 PORTVERSION=	2.02
@@ -21,6 +21,7 @@ BINS=		rmime wmime rbody wbody
 LIBS=		mimer.pl mimew.pl
 PLIST_FILES=	${BINS:C,^,bin/,} ${LIBS:C,^,${SITE_PERL_REL}/,}
 
+NO_STAGE=	yes
 do-install:
 		@${INSTALL_SCRIPT} ${BINS:C,^,${WRKSRC}/,} ${PREFIX}/bin
 		@${INSTALL_DATA}   ${LIBS:C,^,${WRKSRC}/,} ${SITE_PERL}
