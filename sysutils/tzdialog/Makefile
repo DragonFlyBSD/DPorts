@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tzdialog
-# Date created:				11 January 2012
-# Whom:					Devin Teske <dteske@vicor.com>
-#
-# $FreeBSD: ports/sysutils/tzdialog/Makefile,v 1.2 2012/11/17 06:01:48 svnexp Exp $
-#
+# Created by: Devin Teske <dteske@vicor.com>
+# $FreeBSD: sysutils/tzdialog/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	tzdialog
 PORTVERSION=	1.2
@@ -18,6 +14,7 @@ NO_BUILD=	yes
 PLIST_FILES=	sbin/${PORTNAME}
 MAN8=		${PORTNAME}.8
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/${MAN8} ${MANPREFIX}/man/man8/
