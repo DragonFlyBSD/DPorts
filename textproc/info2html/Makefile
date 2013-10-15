@@ -1,9 +1,5 @@
-# New ports collection makefile for: info2html
-# Date created:         9 October 1997
-# Whom:                 wosch
-#
-# $FreeBSD: ports/textproc/info2html/Makefile,v 1.13 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: wosch
+# $FreeBSD: textproc/info2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	info2html
 PORTVERSION=	2.0
@@ -17,6 +13,7 @@ COMMENT=	Translate GNU info files into HTML pages
 NO_BUILD=	yes
 PLIST_FILES=	bin/info2html bin/infocat bin/info2html.css bin/info2html.conf
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/info2html ${LOCALBASE}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/infocat ${LOCALBASE}/bin
