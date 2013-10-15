@@ -1,4 +1,4 @@
-# $FreeBSD: games/bzflag/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/bzflag/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bzflag
 PORTVERSION=	2.4.2
@@ -29,4 +29,5 @@ DESKTOP_ENTRIES=	"BZFlag" "Battle enemy tanks" \
 MAN5=	bzw.5
 MAN6=	bzadmin.6 bzflag.6 bzfs.6
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
