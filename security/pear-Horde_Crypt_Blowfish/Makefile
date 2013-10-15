@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Crypt
-# Date created:			  12 December 2012
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pear-Horde_Crypt_Blowfish/Makefile,v 1.2 2013/01/10 10:41:48 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: security/pear-Horde_Crypt_Blowfish/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Horde_Crypt_Blowfish
 PORTVERSION=	1.0.2
@@ -20,6 +16,7 @@ OPTIONS_DEFINE=	MHASH OPENSSL
 MHASH_DESC=	Depend on mhash PHP extension
 OPENSSL_DESC=	Depend on OpenSSL PHP extension
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMHASH}
