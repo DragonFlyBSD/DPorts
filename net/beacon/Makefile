@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/net/beacon/Makefile,v 1.28 2013/01/09 20:04:59 svnexp Exp $
+# $FreeBSD: net/beacon/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	beacon
 PORTVERSION=	1.4
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 
 WWW_DIR?=	${PREFIX}/www/
 PLIST_SUB+=	VERSION=${PORTVERSION}
-USE_PERL5=	yes
+
+USES=		perl5
 USE_AUTOTOOLS=	autoconf
 
 OPTIONS_DEFINE=		IPV6
@@ -23,6 +24,7 @@ OPTIONS_DEFAULT=
 
 IPV6_DESC=		Enable IPv6 PTR lookups
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
