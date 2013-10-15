@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-WAP-wbxml/Makefile 326872 2013-09-10 07:55:33Z az $
+# $FreeBSD: converters/p5-WAP-wbxml/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	WAP-wbxml
 PORTVERSION=	1.13
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 MAN1=		wbxmlc.1
 MAN3=		WAP::wbxml.3 WAP::wbxml::WbRules.3
 
+NO_STAGE=	yes
 post-patch:
 .for file in syncml.wbrules.xml wap.wbrules.xml wv.wbrules.xml
 		@${REINPLACE_CMD} -i '' -e 's/^M$$//' ${WRKSRC}/lib/WAP/wbxml/${file}
