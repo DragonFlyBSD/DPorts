@@ -1,4 +1,4 @@
-# $FreeBSD: security/rndpassw/Makefile 315250 2013-03-25 22:13:49Z jgh $
+# $FreeBSD: security/rndpassw/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	rndpassw
 PORTVERSION=	0.1
@@ -16,4 +16,5 @@ FETCH_ARGS=	-Fpr
 MAN1=		rndpassw.1
 PLIST_FILES=	bin/rndpassw
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
