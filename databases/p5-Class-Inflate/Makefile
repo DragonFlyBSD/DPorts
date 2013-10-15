@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Class-Inflate/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Class-Inflate/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-Inflate
 PORTVERSION=	0.07
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Class::Inflate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
