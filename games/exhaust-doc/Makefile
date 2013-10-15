@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/exhaust-doc/Makefile 323462 2013-07-22 15:21:40Z miwi $
+# $FreeBSD: games/exhaust-doc/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	exhaust
 PORTVERSION=	1.9.2
@@ -12,6 +12,7 @@ COMMENT=	Redcode simulator easy to embed into applications (docs)
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|./\(exhaust\)|\1|g' ${WRKSRC}/test.pl
 
