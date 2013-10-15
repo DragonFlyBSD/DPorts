@@ -1,5 +1,5 @@
 # Created by: kirk@daycos.com
-# $FreeBSD: ports/databases/pgdbf/Makefile,v 1.10 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgdbf/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pgdbf
 PORTVERSION=	0.6.2
@@ -22,6 +22,7 @@ PLIST_FILES=	bin/pgdbf \
 		%%DOCSDIR%%/README
 PLIST_DIRS=	%%DOCSDIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
