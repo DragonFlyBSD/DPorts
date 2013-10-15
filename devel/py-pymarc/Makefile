@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-pymarc/Makefile 323306 2013-07-19 15:22:25Z wen $
+# $FreeBSD: devel/py-pymarc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pymarc
 PORTVERSION=	2.8.9
@@ -20,4 +20,5 @@ USE_PYDISTUTILS=	easy_install
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} test.py
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
