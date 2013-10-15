@@ -1,5 +1,5 @@
 # Created by: Zahatski Aliaksandr <zag@cpan.org>
-# $FreeBSD: www/p5-WebDAO/Makefile 326156 2013-09-03 15:07:52Z az $
+# $FreeBSD: www/p5-WebDAO/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebDAO
 PORTVERSION=	2.14
@@ -55,6 +55,7 @@ MAN3=		WebDAO.3 \
 		WebDAO::Test.3 \
 		WebDAO::Util.3
 
+NO_STAGE=	yes
 # maintainer section:
 x-generate-plist:
 	(${PORTSDIR}/Tools/scripts/plist -d -m ${MTREE_FILE} ${PREFIX} \
