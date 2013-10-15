@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rolo
-# Date created:				04 April 2003
-# Whom:	      				Andrew Hsu <ahsu@users.sf.net>
-#
-# $FreeBSD: ports/deskutils/rolo/Makefile,v 1.13 2012/11/17 05:55:30 svnexp Exp $
-#
+# Created by: Andrew Hsu <ahsu@users.sf.net>
+# $FreeBSD: deskutils/rolo/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	rolo
 PORTVERSION=	011
@@ -17,6 +13,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libvc.a:${PORTSDIR}/devel/libvc
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 CFLAGS+=	-I${PREFIX}/include \
 		-L${PREFIX}/lib
 
