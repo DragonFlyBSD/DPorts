@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ods2reader
-# Date created:		21 Jan 2006
-# Whom:			Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-#
-# $FreeBSD: ports/emulators/ods2reader/Makefile,v 1.3 2012/11/17 05:57:22 svnexp Exp $
-#
+# Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
+# $FreeBSD: emulators/ods2reader/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	ods2reader
 PORTVERSION=	19930601
@@ -22,6 +18,7 @@ EXTRACT_BEFORE_ARGS=	-qoa
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/ods2reader
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o ods2reader ods-2-reader.c
 
