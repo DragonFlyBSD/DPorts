@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	sonice
-# Date created:			Jan 30, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/audio/sonice/Makefile,v 1.16 2012/11/17 05:54:44 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: audio/sonice/Makefile 328531 2013-09-27 22:39:18Z mva $
 
 PORTNAME=	sonice
 PORTVERSION=	2.0
@@ -20,8 +15,10 @@ RUN_DEPENDS=	oggenc:${PORTSDIR}/audio/vorbis-tools \
 		vorbisgain:${PORTSDIR}/audio/vorbisgain \
 		${PYTHON_SITELIBDIR}/yaml/__init__.py:${PORTSDIR}/devel/py-yaml
 
-USE_PYTHON=	yes
+NO_STAGE=	yes
+USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 WRKSRC=		${WRKDIR}/sonice
 
 post-install:
