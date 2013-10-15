@@ -1,5 +1,5 @@
 # Created by: Mita Yoshio <mita@jp.FreeBSD.org>
-# $FreeBSD: japanese/tgif/Makefile 316986 2013-05-01 03:23:00Z hrs $
+# $FreeBSD: japanese/tgif/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	tgif
 PORTVERSION=	4.2.2
@@ -22,6 +22,7 @@ PLIST_SUB=	XAPPLRESDIR=${XAPPLRESDIR}
 
 XAPPLRESDIR=	lib/X11/ja_JP.eucJP/app-defaults
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${XAPPLRESDIR}
 	${INSTALL_DATA} ${FILESDIR}/Tgif.in ${PREFIX}/${XAPPLRESDIR}/Tgif.ja-dist
