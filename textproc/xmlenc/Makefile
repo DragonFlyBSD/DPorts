@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: textproc/xmlenc/Makefile 317123 2013-05-02 14:34:29Z bapt $
+# $FreeBSD: textproc/xmlenc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmlenc
 PORTVERSION=	0.52
@@ -23,6 +23,7 @@ PORTDOCS=	*
 JARFILE=	${PORTNAME}.jar
 PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 JDK_API!=	(${FIND} -s ${LOCALBASE}/share/doc/jdk1.? -maxdepth 1 -name api -type d 2>/dev/null || ${ECHO_CMD}) | ${TAIL} -n 1
