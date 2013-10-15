@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/pmccabe/Makefile,v 1.2 2012/11/17 05:56:42 svnexp Exp $
+# $FreeBSD: devel/pmccabe/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pmccabe
 PORTVERSION=	2.6
@@ -20,6 +20,7 @@ MAN1=		codechanges.1 decomment.1 pmccabe.1 vifn.1
 PLIST_FILES=	${BINARIES:S,^,bin/,} \
 		${SCRIPTS:S,^,bin/,}
 
+NO_STAGE=	yes
 do-install:
 .for f in ${BINARIES}
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
