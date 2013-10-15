@@ -1,9 +1,5 @@
-# New ports collection makefile for:	FXRuby
-# Date created:    8 October 2008
-# Whom:            Luiz Eduardo Roncato Cordeiro <lercordeiro@gmail.com>
-#
-# $FreeBSD: x11-toolkits/ruby-fox16/Makefile 316372 2013-04-23 16:45:40Z gahr $
-#
+# Created by: Luiz Eduardo Roncato Cordeiro <lercordeiro@gmail.com>
+# $FreeBSD: x11-toolkits/ruby-fox16/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	fox
 PORTVERSION=	1.6.19
@@ -33,6 +29,7 @@ NOHARM_ARGS=	--no-harm
 USE_XORG=	xcursor xproto x11 xextproto xext xrandr
 USE_GL=		yes
 
+NO_STAGE=	yes
 install-noharm:
 	cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_FLAGS} ${RUBY_SETUP} install ${NOHARM_ARGS} ${RUBY_INSTALL_ARGS}
