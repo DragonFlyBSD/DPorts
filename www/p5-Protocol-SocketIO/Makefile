@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Protocol-SocketIO/Makefile 325466 2013-08-27 16:24:56Z sunpoet $
+# $FreeBSD: www/p5-Protocol-SocketIO/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	Protocol-SocketIO
 PORTVERSION=	0.04
@@ -18,10 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Protocol::SocketIO.3 \
-		Protocol::SocketIO::Handshake.3 \
-		Protocol::SocketIO::Message.3 \
-		Protocol::SocketIO::Path.3
 
 .include <bsd.port.mk>
