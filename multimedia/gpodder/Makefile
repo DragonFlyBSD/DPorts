@@ -1,5 +1,5 @@
 # Created by: Chess Griffin <chess@chessgriffin.com>
-# $FreeBSD: multimedia/gpodder/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: multimedia/gpodder/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gpodder
 PORTVERSION=	3.5.1
@@ -38,6 +38,7 @@ PORTDOCS=	PKG-INFO README
 
 MAN1=		gpo.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
