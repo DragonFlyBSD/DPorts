@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-krossruby/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/ruby-krossruby/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	krossruby
 PORTVERSION=	${KDE4_VERSION}
@@ -25,4 +25,5 @@ CMAKE_ARGS+=	-DBUILD_python:BOOL=FALSE \
 
 PLIST_FILES=	lib/kde4/krossruby.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
