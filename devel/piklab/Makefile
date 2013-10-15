@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@kiste>
-# $FreeBSD: devel/piklab/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/piklab/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	piklab
 PORTVERSION=	0.16.2
@@ -22,6 +22,7 @@ USES=		cmake gettext readline
 
 MAN1=		piklab-hex.1 piklab-prog.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKDE4}
