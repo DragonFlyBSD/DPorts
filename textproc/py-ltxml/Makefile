@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-ltxml
-# Date created:		31 January 2002
-# Whom:	      		Johann Visagie <wjv@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/py-ltxml/Makefile,v 1.14 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: textproc/py-ltxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ltxml
 PORTVERSION=	1.3
@@ -26,6 +22,7 @@ USE_LDCONFIG=	yes
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
