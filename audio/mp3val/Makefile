@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/mp3val/Makefile 325160 2013-08-21 17:07:48Z sunpoet $
+# $FreeBSD: audio/mp3val/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3val
 PORTVERSION=	0.1.8
@@ -13,6 +13,7 @@ COMMENT=	Program for MPEG audio stream validation
 ALL_TARGET=	mp3val
 MAKEFILE=	${WRKSRC}/Makefile.linux
 USES=		gmake
+NO_STAGE=	yes
 
 PLIST_FILES=	bin/mp3val
 
