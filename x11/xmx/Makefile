@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmx 1.1
-# Date created:		February 23, 1999
-# Whom:			Oliver Breuninger <ob@seicom.NET>
-#
-# $FreeBSD: ports/x11/xmx/Makefile,v 1.14 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Oliver Breuninger <ob@seicom.NET>
+# $FreeBSD: x11/xmx/Makefile 330196 2013-10-13 01:48:11Z eadler $
 
 PORTNAME=	xmx
 PORTVERSION=	1.1
@@ -13,14 +9,15 @@ MASTER_SITES=	ftp://ftp.cs.brown.edu/pub/xmx/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An X protocol multiplexor
+COMMENT=	X protocol multiplexor
 
 USE_XORG=	x11
 
-MAN1=		xmx.1
-PLIST_FILES=	bin/xmx
+PLIST_FILES=	bin/xmx man/man1/xmx.1.gz
+
+MAKE_ARGS+=	BIN=${STAGEDIR}${PREFIX}/bin/ MANPATH=${STAGEDIR}${MAN1PREFIX}/man/
 
 post-install:
-	@${STRIP_CMD} ${PREFIX}/bin/xmx
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/xmx
 
 .include <bsd.port.mk>
