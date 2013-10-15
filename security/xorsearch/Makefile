@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xorsearch
-# Date created:				18 December 2007
-# Whom:				Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/security/xorsearch/Makefile,v 1.2 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: security/xorsearch/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	xorsearch
 PORTVERSION=	1.2.0
@@ -19,6 +15,7 @@ WRKSRC=		${WRKDIR}
 
 PLIST_FILES=	bin/xorsearch
 
+NO_STAGE=	yes
 do-build:
 	${CC} -o ${WRKDIR}/XORSearch ${WRKDIR}/XORSearch.c
 
