@@ -1,5 +1,5 @@
-# Created By: nemysis@gmx.ch
-# $FreeBSD: games/black-box/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: games/black-box/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	black-box
 PORTVERSION=	1.4.8
@@ -25,6 +25,7 @@ PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README
 DESKTOP_ENTRIES="Black-Box" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
