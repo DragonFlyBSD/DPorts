@@ -1,5 +1,5 @@
 # Created by: Ryan Grove <ryan@wonko.com>
-# $FreeBSD: www/notftp/Makefile 326437 2013-09-05 18:40:18Z tabthorpe $
+# $FreeBSD: www/notftp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	notftp
 PORTVERSION=	1.3.1
@@ -23,6 +23,7 @@ NO_BUILD=	yes
 
 PLIST_SUB+=	INSTALLDIR=${INSTALLDIR:S,^${PREFIX}/,,}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${INSTALLDIR}
 	cd ${WRKSRC}; ${FIND} . \
