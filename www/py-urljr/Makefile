@@ -1,9 +1,5 @@
-# New ports collection makefile for:	urljr
-# Date created:				2006-12-19
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-urljr/Makefile,v 1.4 2012/11/17 06:03:02 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: www/py-urljr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	urljr
 PORTVERSION=	1.0.1
@@ -21,4 +17,5 @@ USE_PYTHON=	2.2+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-urljr
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
