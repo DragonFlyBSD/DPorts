@@ -1,5 +1,5 @@
 # Created by: Geistteufel <geistteufel@yahoo.fr>
-# $FreeBSD: devel/p5-Dancer-Debug/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Dancer-Debug/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Dancer-Debug
 PORTVERSION=	0.03
@@ -25,4 +25,5 @@ MAN3=		Dancer::Debug.3 \
 		Plack::Middleware::Debug::Dancer::Settings.3 \
 		Plack::Middleware::Debug::Dancer::Version.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
