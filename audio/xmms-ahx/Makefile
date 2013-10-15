@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-ahx/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/xmms-ahx/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-ahx
 PORTVERSION=	0.6
@@ -20,6 +20,7 @@ PLIST_FILES=	lib/xmms/Input/libahx.la \
 
 GNU_CONFIGURE=	yes
 USES=		gmake
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
