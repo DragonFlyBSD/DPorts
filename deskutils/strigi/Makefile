@@ -1,5 +1,5 @@
 # Created by: Tilman Keskinoz <arved@FreeBSD.org>
-# $FreeBSD: deskutils/strigi/Makefile 315308 2013-03-26 15:43:09Z makc $
+# $FreeBSD: deskutils/strigi/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	strigi
 PORTVERSION=	${STRIGI_VERSION}
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 OPTIONS_DEFINE=	CLIENT DAEMON UTILITIES
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
+NO_STAGE=	yes
 .include <${.CURDIR}/Makefile.common>
 .include <bsd.port.options.mk>
 
