@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-fonts/code2001/Makefile 325384 2013-08-26 10:33:05Z marino $
+# $FreeBSD: x11-fonts/code2001/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	code2001
 PORTVERSION=	0.919
@@ -24,6 +24,7 @@ MKFONTSCL_CMD=	${LOCALBASE}/bin/mkfontscale
 MKFONTDIR_CMD=	${LOCALBASE}/bin/mkfontdir
 FCCACHE_CMD=	${LOCALBASE}/bin/fc-cache -f -v
 
+NO_STAGE=	yes
 post-extract:
 	@${MKDIR} ${WRKSRC}/
 	@${MV} ${WRKDIR}/CODE2001.TTF ${WRKSRC}/${FONTNAME}.ttf
