@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Async/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Async/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Async
 PORTVERSION=	0.07
@@ -21,6 +21,7 @@ MAN3=	MooseX::Async.3 \
 	MooseX::Async::Meta::Class.3 \
 	MooseX::Async::Meta::Method::State.3
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/lib/MooseX/._Async.pm
 
