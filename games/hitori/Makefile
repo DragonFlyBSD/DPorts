@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/hitori/Makefile 327282 2013-09-14 13:35:52Z nemysis $
+# $FreeBSD: games/hitori/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	hitori
 PORTVERSION=	0.4.1
@@ -34,6 +34,7 @@ OPTIONS_SUB=	yes
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
