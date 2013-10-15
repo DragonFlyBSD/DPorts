@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sk-ispell
-# Date created:				28 Nov 2006
-# Whom:					Martin Otto
-#
-# $FreeBSD: ports/textproc/sk-ispell/Makefile,v 1.2 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: Martin Otto
+# $FreeBSD: textproc/sk-ispell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sk-ispell
 PORTVERSION=	0.3.2
@@ -14,4 +10,5 @@ MASTERDIR=	${.CURDIR}/../ispell
 ISPELL_SK=	yes
 SCRIPTS_ENV=	ISPELL_SK=yes
 
+NO_STAGE=	yes
 .include	"${MASTERDIR}/Makefile"
