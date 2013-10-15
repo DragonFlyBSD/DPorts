@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tnote
-# Date created:		2010-07-25
-# Whom:			ports@c0decafe.net
-#
-# $FreeBSD: deskutils/tnote/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
-#
+# Created by: ports@c0decafe.net
+# $FreeBSD: deskutils/tnote/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tnote
 PORTVERSION=	0.2.1
@@ -25,6 +21,7 @@ PLIST_FILES=	bin/tnote
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e 's|share/man|man|' ${WRKSRC}/setup.py
 
