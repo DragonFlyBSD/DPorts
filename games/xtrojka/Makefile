@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xtrojka
-# Date created:				22 march 2000
-# Whom:					Edwin Mons
-#
-# $FreeBSD: ports/games/xtrojka/Makefile,v 1.8 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Edwin Mons
+# $FreeBSD: games/xtrojka/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xtrojka
 PORTVERSION=	1.1
@@ -20,6 +16,7 @@ WRKSRC=		${WRKDIR}
 MAN6=		xtrojka.6
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 pre-install:
 	${MKDIR} ${PREFIX}/share/xtrojka
 
