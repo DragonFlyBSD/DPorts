@@ -1,5 +1,5 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: converters/chmview/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: converters/chmview/Makefile 328282 2013-09-25 13:02:26Z ak $
 
 PORTNAME=	chmview
 PORTVERSION=	2.0b4
@@ -12,7 +12,7 @@ COMMENT=	Extractor from .chm files
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	chm:${PORTSDIR}/misc/chmlib
+LIB_DEPENDS=	libchm.so:${PORTSDIR}/misc/chmlib
 
 PROJECTHOST=	ak-various-projects
 
@@ -22,7 +22,7 @@ USE_DOS2UNIX=	chmview.c utf8.c utf8.h
 WRKSRC=		${WRKDIR}/src
 PLIST_FILES=	bin/chmview
 
-pre-patch:
+post-extract:
 	@${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
 .include <bsd.port.mk>
