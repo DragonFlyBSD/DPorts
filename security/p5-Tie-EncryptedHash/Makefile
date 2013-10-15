@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: security/p5-Tie-EncryptedHash/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Tie-EncryptedHash/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Tie-EncryptedHash
 PORTVERSION=	1.24
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Tie::EncryptedHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
