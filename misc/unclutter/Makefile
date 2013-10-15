@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: misc/unclutter/Makefile 321997 2013-06-28 22:10:14Z bapt $
+# $FreeBSD: misc/unclutter/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	unclutter
 PORTVERSION=	8
@@ -18,4 +18,5 @@ USE_XORG=	x11 xext
 MAN1=		unclutter.1
 PLIST_FILES=	bin/unclutter
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
