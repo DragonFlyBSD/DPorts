@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: mail/cyrus2dovecot/Makefile 326265 2013-09-04 09:48:54Z az $
+# $FreeBSD: mail/cyrus2dovecot/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	cyrus2dovecot
 PORTVERSION=	1.2
@@ -17,6 +17,7 @@ MAN1=		${PORTNAME}.1
 USES=		perl5
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} -v ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
