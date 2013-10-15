@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/avinfo/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: multimedia/avinfo/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	avinfo
 PORTVERSION=	1.0.a15
@@ -22,6 +22,7 @@ PORTDOCS=	*
 
 MAN1=		avinfo.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
