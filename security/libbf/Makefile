@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libbf
-# Date created:				Sep 30, 2002
-# Whom:					Jim Geovedi <jim@corebsd.or.id>
-#
-# $FreeBSD: ports/security/libbf/Makefile,v 1.6 2012/11/17 06:01:06 svnexp Exp $
-#
+# Created by: Jim Geovedi <jim@corebsd.or.id>
+# $FreeBSD: security/libbf/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libbf
 PORTVERSION=	0.8.2b
@@ -26,6 +22,7 @@ WRKSRC=		${WRKDIR}/bf
 
 MYPORTDOCS=	blowfish.doc COPYRIGHT README VERSION
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bfspeed ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bftest ${PREFIX}/bin
