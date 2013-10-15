@@ -1,8 +1,5 @@
-# Ports collection makefile for:	p5-Lingua-ZH-Wrap
-# Date Created:			Oct 13th 2003
-# Whom:				clsung@dragon2.net
-#
-# $FreeBSD: chinese/p5-Lingua-ZH-Wrap/Makefile 324171 2013-08-02 18:21:05Z az $
+# Created by: clsung@dragon2.net
+# $FreeBSD: chinese/p5-Lingua-ZH-Wrap/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Lingua-ZH-Wrap
 PORTVERSION=	0.03
