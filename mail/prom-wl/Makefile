@@ -1,9 +1,5 @@
-# New ports collection makefile for:	prom-wl
-# Date created:		28 Aug 1999
-# Whom:			KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
-#
-# $FreeBSD: ports/mail/prom-wl/Makefile,v 1.16 2012/11/17 05:59:11 svnexp Exp $
-#
+# Created by: KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
+# $FreeBSD: mail/prom-wl/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	prom-wl
 PORTVERSION=	2.7.0
@@ -23,6 +19,7 @@ NO_BUILD=	yes
 ELISPDIR=	${PREFIX}/share/emacs/site-lisp
 SITEPKGDIR=	${PREFIX}/lib/xemacs/site-packages
 
+NO_STAGE=	yes
 do-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
