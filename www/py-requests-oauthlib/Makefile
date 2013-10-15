@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-requests-oauthlib/Makefile 320426 2013-06-10 01:12:52Z koobs $
+# $FreeBSD: www/py-requests-oauthlib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	requests-oauthlib
 PORTVERSION=	0.3.2
@@ -26,4 +26,5 @@ USE_PYDISTUTILS=	easy_install
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
