@@ -1,9 +1,5 @@
-# New ports collection makefile for:	arping
-# Date Created:				1 Oct 2000
-# Whom:					Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/net/arping/Makefile,v 1.29 2013/02/18 21:46:32 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: net/arping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	arping
 PORTVERSION=	2.09
@@ -27,4 +23,5 @@ LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 MAN8=		arping.8
 PLIST_FILES=	sbin/arping
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
