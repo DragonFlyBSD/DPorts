@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-GPS-OID/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: astro/p5-GPS-OID/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	GPS-OID
 PORTVERSION=	0.07
@@ -12,6 +12,7 @@ COMMENT=	Package for GPS PRN - Object ID conversions
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		GPS::OID.3
 
