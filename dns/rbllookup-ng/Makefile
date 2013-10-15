@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/rbllookup-ng/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/rbllookup-ng/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	rbllookup-ng
 PORTVERSION=	1.0
@@ -21,6 +21,7 @@ PORTDOCS=	CHANGELOG INSTALL NOTES README TODO gpg.asc
 
 CONFLICTS=	rbllookup-0.*
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' ${WRKSRC}/rbllookup.pl
 
