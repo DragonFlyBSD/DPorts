@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-sdl2/Makefile 327429 2013-09-16 17:51:34Z mva $
+# $FreeBSD: devel/py-sdl2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	sdl2
 PORTVERSION=	0.6.0
@@ -17,6 +17,7 @@ PYDISTUTILS_PKGNAME=	PySDL2
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
