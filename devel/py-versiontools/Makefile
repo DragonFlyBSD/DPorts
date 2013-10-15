@@ -1,8 +1,4 @@
-# New ports collection makefile for:	py-versiontools
-# Date created:				13 April 2012
-# Whom:					Ruslan Mahmatkhanov <rm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-versiontools/Makefile,v 1.2 2012/11/17 05:56:51 svnexp Exp $
+# $FreeBSD: devel/py-versiontools/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	versiontools
 PORTVERSION=	1.9.1
@@ -19,4 +15,5 @@ USE_PYDISTUTILS=easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
