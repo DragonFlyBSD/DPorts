@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-HTTP-Request-Params/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTTP-Request-Params/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	HTTP-Request-Params
 PORTVERSION=	1.01
@@ -18,6 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		HTTP::Request::Params.3
 
