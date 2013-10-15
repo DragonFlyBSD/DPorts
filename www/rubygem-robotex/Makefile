@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-robotex
-# Date created:		2012-06-05
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: www/rubygem-robotex/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: www/rubygem-robotex/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	robotex
 PORTVERSION=	1.0.0
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
