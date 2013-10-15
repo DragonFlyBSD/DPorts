@@ -1,9 +1,5 @@
-# New ports collection makefile for: mrng-cfgtg-ping-probe
-# Date created:         17 Jan 2004
-# Whom:                 sanpei@FreeBSD.org
-#
-# $FreeBSD: net-mgmt/mrtg-ping-probe/Makefile 326248 2013-09-04 05:52:04Z az $
-#
+# Created by: sanpei@FreeBSD.org
+# $FreeBSD: net-mgmt/mrtg-ping-probe/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	mrtg-ping-probe
 PORTVERSION=	2.2.0
@@ -22,6 +18,7 @@ USES=		perl5
 
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PERL%%|${PERL5}|' ${WRKSRC}/${PORTNAME}
 	@${CHMOD} +x ${WRKSRC}/${PORTNAME}
