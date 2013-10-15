@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: misc/biblical-curse/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: misc/biblical-curse/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	biblical-curse
 PORTVERSION=	0.02
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/src
 
 SRC=		${.CURDIR}/src
 
+NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 
