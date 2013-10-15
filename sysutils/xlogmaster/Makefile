@@ -1,5 +1,5 @@
 # Created by: Adrian Wontroba <aw1@stade.co.uk>
-# $FreeBSD: sysutils/xlogmaster/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: sysutils/xlogmaster/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xlogmaster
 PORTVERSION=	1.6.2
@@ -20,6 +20,7 @@ INFO=		xlogmaster
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_DECL_GETOPT
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|getopt_long_only|getopt_long|g' ${WRKSRC}/src/xlogmaster.cc
