@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xkoules/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xkoules/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xkoules
 PORTVERSION=	1.4
@@ -18,6 +18,7 @@ USE_XORG=	x11 xext
 MAN6=		xkoules.6
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
