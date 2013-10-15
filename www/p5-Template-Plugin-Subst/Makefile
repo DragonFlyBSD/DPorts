@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Template-Plugin-Subst
-# Date created:				27 January 2006
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Template-Plugin-Subst/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: www/p5-Template-Plugin-Subst/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Plugin-Subst
 PORTVERSION=	0.02
@@ -22,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Template::Plugin::Subst.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
