@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bar
-# Date created:			Wed May 18 2005
-# Whom:				Erik Greenwald <erik@smluc.org>
-#
-# $FreeBSD: ports/textproc/bar/Makefile,v 1.5 2012/11/17 06:01:52 svnexp Exp $
-#
+# Created by: Erik Greenwald <erik@smluc.org>
+# $FreeBSD: textproc/bar/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	bar
 PORTVERSION=	1.4
@@ -19,6 +15,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/bar
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bar ${PREFIX}/bin
 
