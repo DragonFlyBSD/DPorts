@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: databases/p5-DBIx-SearchBuilder/Makefile 327379 2013-09-16 10:53:08Z demon $
+# $FreeBSD: databases/p5-DBIx-SearchBuilder/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-SearchBuilder
 PORTVERSION=	1.65
@@ -41,4 +41,5 @@ MAN3=	DBIx::SearchBuilder.3 DBIx::SearchBuilder::Handle.3 \
 	DBIx::SearchBuilder::Unique.3 \
 	DBIx::SearchBuilder::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
