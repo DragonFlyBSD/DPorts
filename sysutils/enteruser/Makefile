@@ -1,5 +1,5 @@
 # Created by: Danny Howard <dannyman@toldme.com>
-# $FreeBSD: sysutils/enteruser/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: sysutils/enteruser/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	enteruser
 PORTVERSION=	1.0
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 
 SHEBANG_FILES=	enteruser
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
