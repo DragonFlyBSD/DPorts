@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Getopt/Makefile 327247 2013-09-14 08:51:18Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Getopt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Getopt
 PORTVERSION=	0.58
@@ -46,4 +46,5 @@ MAN3=		MooseX::Getopt.3 \
 		MooseX::Getopt::ProcessedArgv.3 \
 		MooseX::Getopt::Strict.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
