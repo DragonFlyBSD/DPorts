@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/migrate/Makefile 319096 2013-05-26 07:49:47Z wen $
+# $FreeBSD: biology/migrate/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	migrate
 PORTVERSION=	3.5.1
@@ -22,6 +22,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/${PORTNAME} bin/${PORTNAME}-n
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 NOT_FOR_ARCHS=	alpha
