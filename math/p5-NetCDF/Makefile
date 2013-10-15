@@ -1,5 +1,5 @@
 # Created by: Douglas K. Rand (rand@meridian-enviro.com)
-# $FreeBSD: math/p5-NetCDF/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: math/p5-NetCDF/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	NetCDF
 PORTVERSION=	1.2.4
@@ -29,6 +29,7 @@ CONFIGURE_ENV=	CPP_NETCDF=-I${LOCALBASE}/include LD_NETCDF=-lnetcdf \
 
 MAN1=		netCDFPerl.1
 
+NO_STAGE=	yes
 pre-install:
 	@${PERL5} -pi -e 's/ doc_(perl|site|\$$\(INSTALLDIRS\))_install$$//' ${WRKSRC}/perl/Makefile
 
