@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: mail/premail/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: mail/premail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	premail
 PORTVERSION=	0.46
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	premail
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && ${INSTALL_SCRIPT} premail ${PREFIX}/bin
 	${MKDIR} -m 555 ${PREFIX}/share/doc/premail
