@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: databases/p5-Class-DBI-AbstractSearch/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Class-DBI-AbstractSearch/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI-AbstractSearch
 PORTVERSION=	0.07
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::DBI::AbstractSearch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
