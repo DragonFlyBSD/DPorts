@@ -1,8 +1,4 @@
-# New ports collection makefile for:	luckybackup
-# Date created:				2009-04-28
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: sysutils/luckybackup/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/luckybackup/Makefile 329137 2013-10-03 04:08:12Z jhale $
 
 PORTNAME=	luckybackup
 PORTVERSION=	0.4.7
@@ -18,10 +14,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 
 USE_QT4=	gui qmake_build moc_build rcc_build uic_build
-MAKE_ENV=	INSTALL_ROOT=${PREFIX}
-
-MAN8=		luckybackup.8
-MANCOMPRESSED=	yes
+MAKE_ENV=	INSTALL_ROOT=${STAGEDIR}${PREFIX}
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr||g' -e '/INSTALLS/s|debianmenu ||' \
