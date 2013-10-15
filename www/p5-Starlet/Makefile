@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Starlet/Makefile 324554 2013-08-10 16:52:43Z kuriyama $
+# $FreeBSD: www/p5-Starlet/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Starlet
 PORTVERSION=	0.19
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	Starlet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
