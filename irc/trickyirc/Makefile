@@ -1,5 +1,5 @@
 # Created by: Adam Strohl <troll@digitalspark.net>
-# $FreeBSD: irc/trickyirc/Makefile 325097 2013-08-21 08:42:48Z danfe $
+# $FreeBSD: irc/trickyirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	trickyirc
 PORTVERSION=	1.1.0
@@ -26,6 +26,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Use better make(1) syntax in attempt to fix parallel (-jX) builds; do not
