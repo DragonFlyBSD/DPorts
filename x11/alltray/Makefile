@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: x11/alltray/Makefile 326111 2013-09-02 22:50:21Z bapt $
+# $FreeBSD: x11/alltray/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	alltray
 PORTVERSION=	0.70
@@ -22,6 +22,7 @@ MAN1=		alltray.1
 OPTIONS_DEFINE=	KDE
 KDE_DESC=	Support only KDE desktop
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKDE}
