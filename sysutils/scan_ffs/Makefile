@@ -1,9 +1,5 @@
-# New ports collection makefile for: scan_ffs
-# Date created:         20040112
-# Whom:                 mranner@inode.at
-#
-# $FreeBSD: ports/sysutils/scan_ffs/Makefile,v 1.7 2012/11/17 06:01:45 svnexp Exp $
-#
+# Created by: mranner@inode.at
+# $FreeBSD: sysutils/scan_ffs/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	scan_ffs
 PORTVERSION=	1.2
@@ -18,6 +14,7 @@ USE_BZIP2=	yes
 MAN8=		scan_ffs.8
 PLIST_FILES=	sbin/scan_ffs
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scan_ffs ${PREFIX}/sbin/.
 	${INSTALL_MAN} ${WRKSRC}/scan_ffs.8 ${MAN8PREFIX}/man/man8/.
