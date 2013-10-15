@@ -1,9 +1,5 @@
-# New ports collection makefile for:	 asmail
-# Date created:		16 August 1997
-# Whom:			brett@peloton.physics.montana.edu
-#
-# $FreeBSD: ports/print/asprint/Makefile,v 1.18 2012/11/17 06:00:48 svnexp Exp $
-#
+# Created by: brett@peloton.physics.montana.edu
+# $FreeBSD: print/asprint/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	asprint
 PORTVERSION=	1.0
@@ -21,6 +17,7 @@ USE_XORG=	xmu xpm xt xaw x11
 ALL_TARGET=	asprint
 MAKEFILE=	makefile
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} $(WRKSRC)/asprint ${PREFIX}/bin
 
