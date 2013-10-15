@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: x11-toolkits/p5-Alien-wxWidgets/Makefile 327278 2013-09-14 12:04:18Z az $
+# $FreeBSD: x11-toolkits/p5-Alien-wxWidgets/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Alien-wxWidgets
 PORTVERSION=	0.62
@@ -20,6 +20,7 @@ USE_PERL5=	modbuild
 USE_WX=		2.6+
 WX_COMPS=	wx contrib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MUNICODE}
