@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/conduit/Makefile 326175 2013-09-03 17:05:18Z bapt $
+# $FreeBSD: deskutils/conduit/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #    $MCom: ports/deskutils/conduit/Makefile,v 1.7 2008/03/18 14:53:42 ahze Exp $
 
 PORTNAME=	conduit
@@ -38,6 +38,7 @@ OPTIONS_DEFAULT=NAUTILUS EOG
 NAUTILUS_DESC=	Build Nautilus Plugin
 EOG_DESC=	Build Eye-Of-Gnome Plugin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNAUTILUS}
