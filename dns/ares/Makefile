@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ares
-# Date created:		8 September 2003
-# Whom:			roam@FreeBSD.org
-#
-# $FreeBSD: ports/dns/ares/Makefile,v 1.5 2012/11/17 05:57:07 svnexp Exp $
-#
+# Created by: roam@FreeBSD.org
+# $FreeBSD: dns/ares/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	ares
 PORTVERSION=	1.1.1
@@ -28,4 +24,5 @@ MAN3=		ares_destroy.3 ares_expand_name.3 ares_fds.3 \
 
 PLIST_FILES=	include/ares.h lib/libares.a
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
