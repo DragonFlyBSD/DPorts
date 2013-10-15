@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pytc
-# Date created:		2009-02-18
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/py-pytc/Makefile,v 1.17 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: databases/py-pytc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pytc
 PORTVERSION=	0.8
@@ -22,6 +18,7 @@ USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pytc.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
