@@ -1,12 +1,12 @@
-# Created by:	Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/fdk-aac/Makefile 323995 2013-07-30 20:45:38Z mm $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: audio/fdk-aac/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	fdk-aac
 PORTVERSION=	0.1.2
 CATEGORIES=	audio
 MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Port of the Fraunhofer FDK AAC Codec Library
 
 NOT_FOR_ARCHS=		sparc64
