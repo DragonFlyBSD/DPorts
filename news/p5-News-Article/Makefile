@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: news/p5-News-Article/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: news/p5-News-Article/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	News-Article
 PORTVERSION=	1.27
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	PGP_SIGN
 OPTIONS_DEFAULT=	PGP_SIGN
 PGP_SIGN_DESC=	PGP::Sign support for header signing
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGP_SIGN}
