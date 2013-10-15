@@ -1,5 +1,5 @@
 # Created by: erik@habatech.no
-# $FreeBSD: devel/sdts++/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/sdts++/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	sdts++
 PORTVERSION=	1.5.1
@@ -25,4 +25,5 @@ USE_LDCONFIG=	yes
 
 INFO=		sdts++
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
