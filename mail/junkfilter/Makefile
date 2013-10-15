@@ -1,5 +1,5 @@
 # Created by: Gregory Sutter <gsutter@zer0.org>
-# $FreeBSD: ports/mail/junkfilter/Makefile,v 1.12 2012/12/26 20:35:33 svnexp Exp $
+# $FreeBSD: mail/junkfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	junkfilter
 PORTVERSION=	20030115
@@ -31,6 +31,7 @@ JFFILES=	LICENSE Makefile README TODO addresses bodychk dialups \
 
 JFDOMFILES=	general
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${BINDIR}/domains
 .for FILE in ${JFFILES}
