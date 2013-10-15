@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vdradmin-am
-# Date created:		Wed Apr 14 18:11:42 CEST 2010
-# Whom:			Juergen Lock <nox@freebsd.org>
-#
-# $FreeBSD: ports/www/vdradmin-am/Makefile,v 1.6 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: Juergen Lock <nox@FreeBSD.org>
+# $FreeBSD: www/vdradmin-am/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	vdradmin-am
 PORTVERSION=	3.6.9
@@ -59,6 +55,7 @@ GROUPS=		${VDR_GROUP}
 PLIST_SUB=	VDR_USER=${VDR_USER}
 PLIST_SUB+=	VDR_GROUP=${VDR_GROUP}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 1s-^#!/bin/bash-#!${LOCALBASE}/bin/bash- \
 		${WRKSRC}/install.sh ${WRKSRC}/make.sh
