@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: textproc/p5-Text-Capitalize/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-Text-Capitalize/Makefile 328922 2013-10-01 05:54:10Z amdmi3 $
 
 PORTNAME=	Text-Capitalize
 PORTVERSION=	1.3
@@ -14,7 +14,5 @@ TEST_DEPENDS=	p5-PerlIO-locale>=0:${PORTSDIR}/devel/p5-PerlIO-locale
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Text::Capitalize.3
 
 .include <bsd.port.mk>
