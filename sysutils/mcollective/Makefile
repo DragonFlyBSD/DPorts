@@ -1,5 +1,5 @@
 # Created by: Russell Jackson <raj@csub.edu>
-# $FreeBSD: sysutils/mcollective/Makefile 321721 2013-06-25 02:57:53Z swills $
+# $FreeBSD: sysutils/mcollective/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	mcollective
 PORTVERSION=	2.2.4
@@ -25,6 +25,7 @@ SCRIPTS=	mco mc-call-agent
 
 SUB_LIST+=	RUBY=${RUBY}
 
+NO_STAGE=	yes
 do-patch:
 	@${REINPLACE_CMD} -e "s|/etc/mcollective|${ETCDIR}|" \
 	    ${WRKSRC}/bin/mcollectived \
