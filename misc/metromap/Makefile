@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: misc/metromap/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
+# $FreeBSD: misc/metromap/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	metromap
 PORTVERSION=	0.1.4
@@ -22,6 +22,7 @@ USES=		gettext
 
 PORTDOCS=	AUTHORS NEWS README README.data TODO
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
