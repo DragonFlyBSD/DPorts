@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Class-DBI-Plugin-RetrieveAll
-# Date created:				Apr 2 2004
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: databases/p5-Class-DBI-Plugin-RetrieveAll/Makefile 324352 2013-08-07 13:20:32Z az $
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: databases/p5-Class-DBI-Plugin-RetrieveAll/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI-Plugin-RetrieveAll
 PORTVERSION=	1.04
@@ -22,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::DBI::Plugin::RetrieveAll.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
