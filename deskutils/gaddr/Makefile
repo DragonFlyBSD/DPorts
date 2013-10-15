@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: deskutils/gaddr/Makefile 317786 2013-05-10 10:20:00Z lme $
+# $FreeBSD: deskutils/gaddr/Makefile 329357 2013-10-04 18:46:15Z lme $
 
 PORTNAME=	gaddr
 PORTVERSION=	1.1.4
@@ -15,6 +15,8 @@ PLIST_FILES=	bin/gaddr
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
 WANT_GNOME=	yes
+
+MAKE_ARGS+=	PREFIX="${STAGEDIR}${PREFIX}"
 
 .include <bsd.port.pre.mk>
 
