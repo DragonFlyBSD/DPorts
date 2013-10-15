@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stone
-# Date created:		25 April 2001
-# Whom:			Yoshihiko Sarumaru <mistral@imasy.or.jp>
-#
-# $FreeBSD: ports/net/stone/Makefile,v 1.20 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
+# $FreeBSD: net/stone/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	stone
 PORTVERSION=	2.3e
@@ -21,6 +17,7 @@ MANLANG=	"" ja
 USE_RC_SUBR=	stone
 USE_OPENSSL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITHOUT_SSL)
