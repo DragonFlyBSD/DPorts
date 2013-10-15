@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/cripple/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/cripple/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cripple
 PORTVERSION=	0.06b
@@ -10,6 +10,7 @@ MASTER_SITES=	http://www.vortex.prodigynet.co.uk/${PORTNAME}/
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Command line CD ripper/encoder wrapper with cddb support
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
