@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@nonsensss.de>
-# $FreeBSD: ports/german/pecl-konto_check/Makefile,v 1.4 2012/12/29 04:51:35 svnexp Exp $
+# $FreeBSD: german/pecl-konto_check/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	konto_check
 PORTVERSION=	2.98
@@ -20,6 +20,7 @@ DEFAULT_PHP_VER=53
 
 WRKSRC=	${WRKDIR}/php
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
