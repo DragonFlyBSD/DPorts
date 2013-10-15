@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-SIMBAD-Client/Makefile 325034 2013-08-20 09:36:32Z mat $
+# $FreeBSD: astro/p5-Astro-SIMBAD-Client/Makefile 328615 2013-09-28 17:13:28Z sunpoet $
 
 PORTNAME=	Astro-SIMBAD-Client
 PORTVERSION=	0.027
@@ -21,8 +21,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	-y
-
-MAN1=		simbadc.1
-MAN3=		Astro::SIMBAD::Client.3
 
 .include <bsd.port.mk>
