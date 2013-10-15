@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: graphics/mapyrus/Makefile 320836 2013-06-13 20:18:12Z nivit $
+# $FreeBSD: graphics/mapyrus/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	mapyrus
 PORTVERSION=	1.302
@@ -32,6 +32,7 @@ FIND_HERE=	userdoc
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
