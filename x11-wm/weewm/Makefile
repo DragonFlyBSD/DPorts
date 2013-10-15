@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: x11-wm/weewm/Makefile 314654 2013-03-19 15:11:01Z tabthorpe $
+# $FreeBSD: x11-wm/weewm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	weewm
 PORTVERSION=	0.0.2
@@ -14,6 +14,7 @@ COMMENT=	Fast and ultra light windowmanager with total keyboard control
 PLIST_FILES=	bin/weewm
 USE_XORG=	x11
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,^CC=,CC?=,' -e 's,/usr/X11R6,${LOCALBASE},g' \
 		${WRKSRC}/src/Makefile
