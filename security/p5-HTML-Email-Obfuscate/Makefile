@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: security/p5-HTML-Email-Obfuscate/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-HTML-Email-Obfuscate/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	HTML-Email-Obfuscate
 PORTVERSION=	1.00
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	HTML::Email::Obfuscate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
