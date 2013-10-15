@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/cloc/Makefile 325955 2013-09-02 09:22:47Z az $
+# $FreeBSD: misc/cloc/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	cloc
 PORTVERSION=	1.58
@@ -20,6 +20,7 @@ EXTRACT_AFTER_ARGS=	./${PORTNAME}
 PLIST_FILES=	bin/${PORTNAME}
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/
 
