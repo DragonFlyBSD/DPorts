@@ -1,5 +1,4 @@
-# Created by: Alberto Villa <villa.alberto@gmail.com>
-# $FreeBSD: graphics/qtgtl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/qtgtl/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	qtgtl
 PORTVERSION=	0.9.2
@@ -21,6 +20,7 @@ USE_BZIP2=	yes
 USES=		cmake pkgconfig
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|set(QTGTL_LIB_SOVERSION.*|set(QTGTL_LIB_SOVERSION "0")|' \
 		${PATCH_WRKSRC}/CMakeLists.txt
