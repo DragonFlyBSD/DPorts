@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: devel/hs-drift/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-drift/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	drift
 PORTVERSION=	2.2.3
@@ -19,6 +19,7 @@ OPTIONS_DEFAULT=		GHC
 NHC98_DESC=	Build with NHC98
 GHC_DESC=	Build with GHC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGHC}
