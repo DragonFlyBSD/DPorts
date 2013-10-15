@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-applets/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: x11/gnome-applets/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gnome-applets/Makefile,v 1.219 2011/04/10 19:41:38 mezz Exp $
 
 PORTNAME=	gnome-applets
@@ -43,6 +43,7 @@ GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
 OPTIONS_DEFINE=	MINI_COMMANDER NOTIFY
 MINI_COMMANDER_DESC=	Mini-commander applet
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/libnotify.pc) || \
