@@ -1,9 +1,5 @@
-# New ports collection makefile for:	apoolGL
-# Date created:				26 Aug 2005
-# Whom:					Igor Pokrovsky <ip@doom.homeunix.org>
-#
-# $FreeBSD: ports/games/apoolGL/Makefile,v 1.11 2012/11/17 05:57:31 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
+# $FreeBSD: games/apoolGL/Makefile 329744 2013-10-07 23:13:03Z marino $
 
 PORTNAME=	apoolGL
 PORTVERSION=	0.99.22
@@ -20,6 +16,7 @@ USE_GL=		gl
 
 PORTDOCS=	ApoolGL.txt CHANGELOG OpenGL-Features
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|`${PRINTF} '\r'`$$||" ${WRKSRC}/ApoolGL.txt
 	@${REINPLACE_CMD} -e 's|SDL/||' ${WRKSRC}/*.c
