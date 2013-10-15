@@ -1,5 +1,5 @@
 # Created by: kai
-# $FreeBSD: textproc/p5-Text-Striphigh/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-Text-Striphigh/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Striphigh
 PORTVERSION=	0.02
@@ -16,4 +16,5 @@ WRKSRC=		${WRKDIR}/Striphigh-${PORTVERSION}
 
 MAN3=		Text::Striphigh.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
