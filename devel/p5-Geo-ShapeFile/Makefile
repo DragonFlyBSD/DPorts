@@ -1,5 +1,5 @@
 # Created by: estith
-# $FreeBSD: devel/p5-Geo-ShapeFile/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-Geo-ShapeFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Geo-ShapeFile
 PORTVERSION=	2.52
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Geo::ShapeFile.3 Geo::ShapeFile::Point.3 Geo::ShapeFile::Shape.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
