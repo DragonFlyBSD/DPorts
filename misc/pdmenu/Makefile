@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: misc/pdmenu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: misc/pdmenu/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pdmenu
 PORTVERSION=	1.3.2
@@ -38,6 +38,7 @@ PLIST_FILES=	bin/pdmenu \
 		%%DATADIR%%/showdir.pl
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^LANGS/s|=.*$$|= da es fr ru|g' ${WRKSRC}/Makefile
