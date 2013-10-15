@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/libsbml/Makefile 314530 2013-03-18 06:50:12Z jgh $
+# $FreeBSD: biology/libsbml/Makefile 330025 2013-10-10 18:08:34Z tabthorpe $
 
 PORTNAME=	libsbml
 PORTVERSION=	4.2.0
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
@@ -37,7 +38,7 @@ PLIST_SUB+=		WITH_PYTHON="@comment "
 
 .if ${PORT_OPTIONS:MRUBY}
 .include "../../Mk/bsd.ruby.mk"
-BUILD_DEPENDS+=		${LOCALBASE}/bin/ruby:${PORTSDIR}/lang/ruby18
+BUILD_DEPENDS+=		${LOCALBASE}/bin/ruby:${PORTSDIR}/lang/ruby19
 CONFIGURE_ARGS+=	--with-ruby
 PLIST_SUB+=		WITH_RUBY=""
 .else
