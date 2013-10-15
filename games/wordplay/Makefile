@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@scientia.demon.co.uk>
-# $FreeBSD: games/wordplay/Makefile 318548 2013-05-19 20:34:30Z rene $
+# $FreeBSD: games/wordplay/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wordplay
 PORTVERSION=	7.22
@@ -19,6 +19,7 @@ PORTDOCS=	readme
 PLIST_FILES=	bin/${PORTNAME} %%DATADIR%%/words721.txt
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
