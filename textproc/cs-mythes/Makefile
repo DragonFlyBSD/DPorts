@@ -1,9 +1,4 @@
-# New ports collection makefile for:	cs-mythes
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/cs-mythes/Makefile,v 1.6 2012/11/17 06:01:53 svnexp Exp $
-#
+# $FreeBSD: textproc/cs-mythes/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2007.09.26
@@ -27,6 +22,7 @@ PLIST_FILES=	%%DATADIR%%/th_cs_CZ_v2.dat \
 		%%DATADIR%%/th_cs_CZ_v2.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_cs_CZ_v2.dat ${WRKSRC}/th_cs_CZ_v2.idx ${DATADIR}/
