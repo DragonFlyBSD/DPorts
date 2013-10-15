@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	pylize
-# Date created:			Jun 10, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/misc/pylize/Makefile,v 1.9 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: misc/pylize/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pylize
 PORTVERSION=	1.3.b
@@ -31,6 +26,7 @@ PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/.b/b/}
 
 PLIST_FILES=	bin/pylize
 
+NO_STAGE=	yes
 post-install:
 	@${FIND} ${DATADIR} ! -type d | \
 		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
