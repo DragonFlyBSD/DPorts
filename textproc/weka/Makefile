@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: ports/textproc/weka/Makefile,v 1.19 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/weka/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	weka
 DISTVERSION=	3-6-8
@@ -27,6 +27,7 @@ PLIST_FILES=	%%DATADIR%%/${PORTNAME}.jar \
 		bin/${PORTNAME}
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.jar \
