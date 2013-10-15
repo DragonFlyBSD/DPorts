@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gimp-help
-# Date created:		10th April 2010
-# Whom:			SimaMoto,RyoTa <liangtai.s4@gmail.com>
-#
-# $FreeBSD: ports/russian/gimp-help/Makefile,v 1.3 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
+# $FreeBSD: russian/gimp-help/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 CATEGORIES=	russian graphics
 
@@ -15,4 +11,5 @@ MASTERDIR=	${.CURDIR}/../../misc/gimp-help-en
 DOCLANG=	ru
 AMPLE=	"@comment "
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
