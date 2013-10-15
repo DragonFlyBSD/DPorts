@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: ports/devel/gengetopt/Makefile,v 1.36 2012/12/17 17:17:08 svnexp Exp $
+# $FreeBSD: devel/gengetopt/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gengetopt
 PORTVERSION=	2.22.6
@@ -42,6 +42,7 @@ DOC_EXAMPLES=	README.example cmdline1.c cmdline1.h cmdline2.c cmdline2.h \
 TESTS_EXAMPLES=	test_manual_help.c test_manual_help_cmd.c \
 		test_manual_help_cmd.ggo test_manual_help_cmd.h
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
