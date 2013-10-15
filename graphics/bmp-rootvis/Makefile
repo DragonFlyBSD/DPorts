@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: graphics/bmp-rootvis/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/bmp-rootvis/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	bmp-rootvis
 PORTVERSION=	0.0.1
@@ -22,4 +22,5 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
