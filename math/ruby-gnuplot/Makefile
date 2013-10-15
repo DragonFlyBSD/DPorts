@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/Gnuplot
-# Date created:		1 Feb 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: math/ruby-gnuplot/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: math/ruby-gnuplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	gnuplot
 PORTVERSION=	0.5
@@ -28,6 +24,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/gplot
 
+NO_STAGE=	yes
 post-patch:
 	${RUBY} -i.orig -p \
 		-e 'gsub %r:#!/bin/env:, "#!/usr/bin/env"' \
