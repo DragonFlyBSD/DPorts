@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-musicbrainzngs/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: audio/py-musicbrainzngs/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	musicbrainzngs
 PORTVERSION=	0.4
@@ -14,6 +14,7 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PYTHON=	yes
+NO_STAGE=	yes
 USE_PYDISTUTILS=	yes
 
 .include <bsd.port.mk>
