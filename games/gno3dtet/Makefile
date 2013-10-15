@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: games/gno3dtet/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: games/gno3dtet/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gno3dtet
 PORTVERSION=	1.96.1
@@ -25,6 +25,7 @@ INSTALLS_OMF=	yes
 run-autotools:: run-autotools-aclocal run-autotools-autoheader \
 		run-autotools-automake run-autotools-autoconf
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKSRC} && ${LOCALBASE}/bin/intltoolize -c -f
 
