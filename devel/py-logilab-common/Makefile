@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-logilab-common/Makefile 324260 2013-08-05 06:18:31Z mva $
+# $FreeBSD: devel/py-logilab-common/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	logilab-common
 PORTVERSION=	0.60.0
@@ -14,4 +14,5 @@ MAKE_ENV=	NO_SETUPTOOLS=1
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
