@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net-im/p5-Net-NetSend/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/p5-Net-NetSend/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-NetSend
 PORTVERSION=	0.12
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::NetSend.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
