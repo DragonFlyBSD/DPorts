@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/google-sitemapgen/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: www/google-sitemapgen/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	google-sitemapgen
 PORTVERSION=	1.5
@@ -18,4 +18,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	sitemap_gen
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
