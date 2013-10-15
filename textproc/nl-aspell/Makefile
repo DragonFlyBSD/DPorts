@@ -1,9 +1,5 @@
-# New ports collection makefile for:    nl-aspell
-# Date created:                         2 September 2002
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/nl-aspell/Makefile,v 1.9 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/nl-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	-nl-0.50-2
@@ -16,5 +12,6 @@ COMMENT=	Aspell Dutch dictionary
 
 DICT=	 	nl
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
