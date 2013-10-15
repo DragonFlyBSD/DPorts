@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11/xantfarm/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xantfarm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xantfarm
 PORTVERSION=	1.16
@@ -17,4 +17,5 @@ USE_XORG=	x11 xext xt
 MAN1=		xantfarm.1
 PLIST_FILES=	bin/xantfarm
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
