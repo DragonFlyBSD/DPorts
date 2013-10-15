@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: net-mgmt/cidr/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net-mgmt/cidr/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	cidr
 PORTVERSION=	2.3.2
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 MAN1=		cidr.1
 PLIST_FILES=	bin/cidr
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}
 
