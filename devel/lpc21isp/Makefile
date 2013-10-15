@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: devel/lpc21isp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/lpc21isp/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lpc21isp
 PORTVERSION=	1.85
@@ -18,6 +18,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	bin/lpc21isp
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CC .*=|CC ?=|' ${WRKSRC}/Makefile
