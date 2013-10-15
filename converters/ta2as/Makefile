@@ -1,9 +1,5 @@
-# New ports collection makefile for:	TASM TO AT&T asm
-# Date created:		Thu Dec 22 14:46:11 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/ta2as/Makefile,v 1.5 2012/11/17 05:55:05 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: converters/ta2as/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	ta2as
 PORTVERSION=	0.8.2
@@ -23,6 +19,7 @@ USE_ZIP=	yes
 PORTDOCS=	*
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
