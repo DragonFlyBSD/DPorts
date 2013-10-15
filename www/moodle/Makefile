@@ -1,5 +1,5 @@
 # Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
-# $FreeBSD: www/moodle/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/moodle/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	moodle
 PORTVERSION=	1.9.19
@@ -20,6 +20,7 @@ OPTIONS_DEFAULT=	ZLIB
 NETWORK_DESC=	Moodle Network functionality
 MIMETEX_DESC=	mimeTeX filter functionality
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MMYSQL} && ! ${PORT_OPTIONS:MPGSQL} && ! ${PORT_OPTIONS:MMSSQL}
