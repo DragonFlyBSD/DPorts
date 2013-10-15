@@ -1,5 +1,5 @@
 # Created by: Francisco Cabrita <include@npf.pt.freebsd.org>
-# $FreeBSD: www/joomla31/Makefile 316731 2013-04-28 16:00:13Z nivit $
+# $FreeBSD: www/joomla31/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	joomla
 PORTVERSION=	3.1.1
@@ -29,6 +29,7 @@ USE_PHP=	gd json mbstring mysql mysqli pcre pdf session simplexml xml zip zlib
 WANT_PHP_WEB=	yes
 WWWDIR=	${PREFIX}/www/joomla31
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${WWWDIR}
 	@cd ${WRKSRC} && \
