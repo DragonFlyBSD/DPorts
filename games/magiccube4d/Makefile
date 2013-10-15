@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Magic Cube 4D
-# Date Created: 			September 25, 2000
-# Whom:					Jeremy <karlj000@unbc.ca>
-#
-# $FreeBSD: ports/games/magiccube4d/Makefile,v 1.14 2012/11/17 05:57:45 svnexp Exp $
-#
+# Created by: Jeremy <karlj000@unbc.ca>
+# $FreeBSD: games/magiccube4d/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	magiccube4d
 PORTVERSION=	2.2
@@ -22,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-src-${PORTVERSION:S/./_/}
 DOCS=		ChangeLog Intro.txt MagicCube4D-unix.txt \
 		ideas.txt readme-unix.txt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/magiccube4d ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
