@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951#comcast.net>
-# $FreeBSD: deskutils/osmo/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: deskutils/osmo/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	osmo
 PORTVERSION=	0.2.10
@@ -32,6 +32,7 @@ POFILES=	bg ca cs da de el en_GB es fi fr hu it ja lt nl pl pt \
 
 MSGFMT=		${LOCALBASE}/bin/msgfmt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/src/Makefile.in
