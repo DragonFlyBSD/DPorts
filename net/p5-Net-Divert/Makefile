@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-Divert/Makefile 326380 2013-09-05 10:32:23Z az $
+# $FreeBSD: net/p5-Net-Divert/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Divert
 PORTVERSION=	0.01
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Divert.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
