@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php-mode.el
-# Date created:				21 June 2002
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/php-mode.el/Makefile,v 1.12 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: lang/php-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	php-mode.el
 PORTVERSION=	1.5.0
@@ -19,6 +15,7 @@ INFO=		php-mode
 EMACSLISPDIR=	${PREFIX}/share/emacs/site-lisp
 XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
+NO_STAGE=	yes
 do-build:
 	cd ${BUILD_WRKSRC} && makeinfo --no-split php-mode.texi
 
