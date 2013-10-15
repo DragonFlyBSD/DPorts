@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/lang/groovy/Makefile,v 1.20 2012/12/29 00:43:49 svnexp Exp $
+# $FreeBSD: lang/groovy/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	groovy
 DISTVERSION=	2.0.5
@@ -23,6 +23,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 DATAFILES=	ANTLR-LICENSE.txt ASM-LICENSE.txt CLI-LICENSE.txt JSR223-LICENSE.txt LICENSE.txt conf lib
 SCRIPTFILES=	groovy groovyConsole groovyc groovysh java2groovy startGroovy
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
