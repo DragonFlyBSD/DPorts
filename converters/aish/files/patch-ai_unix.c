@@ -1,4 +1,4 @@
-$FreeBSD: ports/converters/aish/files/patch-ai_unix.c,v 1.2 2012/11/17 05:55:02 svnexp Exp $
+$FreeBSD: converters/aish/files/patch-ai_unix.c 300895 2012-07-14 12:56:14Z beat $
 
 --- ai_unix.c.orig	Fri Jun  7 12:59:05 2002
 +++ ai_unix.c	Fri Jun  7 13:00:49 2002

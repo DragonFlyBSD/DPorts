@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aish
-# Date created:		01 Aug 1998
-# Whom:			Masanori Kiriake <seiken@nbs.co.jp>
-#
-# $FreeBSD: ports/converters/aish/Makefile,v 1.10 2012/11/17 05:55:02 svnexp Exp $
-#
+# Created by: Masanori Kiriake <seiken@nbs.co.jp>
+# $FreeBSD: converters/aish/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	aish
 PORTVERSION=	1.13
@@ -14,6 +10,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}u
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ish/uuencode/Base64 converter
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/ja/aish
