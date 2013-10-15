@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-ClassAttribute/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-ClassAttribute/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-ClassAttribute
 PORTVERSION=	0.27
@@ -37,4 +37,5 @@ MAN3=		MooseX::ClassAttribute.3 \
 		MooseX::ClassAttribute::Trait::Role.3 \
 		MooseX::ClassAttribute::Trait::Role::Composite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
