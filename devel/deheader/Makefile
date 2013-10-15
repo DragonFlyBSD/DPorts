@@ -1,4 +1,4 @@
-# $FreeBSD: devel/deheader/Makefile 324140 2013-08-02 04:54:11Z kevlo $
+# $FreeBSD: devel/deheader/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	deheader
 PORTVERSION=	0.7
@@ -18,6 +18,7 @@ MAN1=		deheader.1
 
 PLIST_FILES=	bin/deheader
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/deheader ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/deheader.1 ${PREFIX}/man/man1
