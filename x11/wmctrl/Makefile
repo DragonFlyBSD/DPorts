@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: x11/wmctrl/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: x11/wmctrl/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	wmctrl
 PORTVERSION=	1.07
@@ -19,4 +19,5 @@ PLIST_FILES=	bin/wmctrl
 
 MAN1=		wmctrl.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
