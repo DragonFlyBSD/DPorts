@@ -1,9 +1,5 @@
-# New ports collection makefile for:	RubyFilter
-# Date created:		6 February 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: mail/ruby-rfilter/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: mail/ruby-rfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	rfilter
 PORTVERSION=	0.12
@@ -24,6 +20,7 @@ RUBY_SETUP=	install.rb
 
 DOCS=		NEWS README THANKS TODO doc
 
+NO_STAGE=	yes
 post-extract:
 	${FIND} ${WRKSRC} -name '*~' -delete
 
