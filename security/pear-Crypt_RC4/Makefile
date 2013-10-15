@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: security/pear-Crypt_RC4/Makefile 314224 2013-03-15 02:20:50Z miwi $
+# $FreeBSD: security/pear-Crypt_RC4/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt_RC4
 PORTVERSION=	1.0.3
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
