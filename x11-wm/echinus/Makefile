@@ -1,5 +1,5 @@
 # Created by: hrkfrd@gmail.com
-# $FreeBSD: x11-wm/echinus/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-wm/echinus/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	echinus
 PORTVERSION=	0.4.9
@@ -31,6 +31,7 @@ PLIST_FILES=	bin/echinus \
 PLIST_DIRS=	etc/echinus
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|-Os|${CFLAGS}|' ${WRKSRC}/config.mk
 
