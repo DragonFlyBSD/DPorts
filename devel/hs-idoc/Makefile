@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/hs-idoc/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-idoc/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	idoc
 PORTVERSION=	0.2.6
@@ -23,6 +23,7 @@ MAKE_ARGS=	PREFIX="${PREFIX}"
 
 ALL_TARGET=	# empty
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|IOExts|Debug.Trace|' ${WRKSRC}/IDoc.hs
 
