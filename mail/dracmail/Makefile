@@ -1,5 +1,5 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: mail/dracmail/Makefile 319615 2013-06-01 23:18:19Z bapt $
+# $FreeBSD: mail/dracmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dracmail
 PORTVERSION=	0.1.2
@@ -25,6 +25,7 @@ PLIST_DIRSTRY=	%%WWWDIR%%
 OPTIONS_DEFINE=	PGSQL APACHE LIGHTTPD
 OPTIONS_DEFAULT=	APACHE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPGSQL}
