@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: databases/p5-DWH_File/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DWH_File/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DWH_File
 PORTVERSION=	0.24
@@ -27,4 +27,5 @@ MAN3=		DWH_File.3 DWH_File::Registry::URI.3 DWH_File::Value::Factory.3 \
 		DWH_File::Cache.3 DWH_File::Tie::Array.3 DWH_File::Slot.3 \
 		DWH_File::Tie::Foreign.3 DWH_File::Tie::Subscripted.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
