@@ -1,4 +1,4 @@
-# $FreeBSD: ports/comms/predict/files/Makefile,v 1.3 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: comms/predict/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 .ifndef	CC
 CC	= 	-cc
