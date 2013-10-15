@@ -1,9 +1,5 @@
-# New ports collection makefile for:	musca
-# Date created:		2009-03-30
-# Whom:			Dennis Herrmann <dhn@FreeBSD.org>
-#
-# $FreeBSD: x11-wm/musca/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Dennis Herrmann <dhn@FreeBSD.org>
+# $FreeBSD: x11-wm/musca/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	musca
 PORTVERSION=	0.9.24
@@ -24,6 +20,7 @@ MAKE_ARGS=	CFLAGS="-I${LOCALBASE}/include \
 PLIST_FILES=	bin/musca
 MAN1=	musca.1
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "You can build musca with your own config.h using the MUSCA_CONF knob:"
 	@${ECHO_MSG} "make MUSCA_CONF=/path/to/musca/config.h install clean"
