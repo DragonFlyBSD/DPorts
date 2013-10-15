@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-net-geoip
-# Date created:		2002-10-08
-# Whom:			Sean Chittenden <seanc@FreeBSD.org>
-#
-# $FreeBSD: net/ruby-net-geoip/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: Sean Chittenden <seanc@FreeBSD.org>
+# $FreeBSD: net/ruby-net-geoip/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	net-geoip
 PORTVERSION=	0.07
@@ -25,6 +21,7 @@ INSTALL_TARGET=	site-install
 
 DOCS=	README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${RUBY_MODDOCDIR}
