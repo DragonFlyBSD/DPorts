@@ -1,5 +1,5 @@
 # Created by: chris
-# $FreeBSD: mail/spampd/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: mail/spampd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spampd
 PORTVERSION=	2.30
@@ -18,6 +18,7 @@ PLIST_FILES=	sbin/spampd
 USES=		perl5
 USE_RC_SUBR=	spampd
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/spampd ${PREFIX}/sbin
 
