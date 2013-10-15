@@ -1,5 +1,5 @@
 # Created by: cartola (Carlos E. G. Carvalho)
-# $FreeBSD: ports/deskutils/freemind/Makefile,v 1.15 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: deskutils/freemind/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	freemind
 PORTVERSION=	0.9.0
@@ -30,6 +30,7 @@ ZIP_CMD=	zip
 
 SUB_FILES=	freemind.sh
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}; \
 	${UNZIP_CMD} lib/freemind.jar freemind.properties; \
