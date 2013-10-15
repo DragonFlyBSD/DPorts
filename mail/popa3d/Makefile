@@ -1,5 +1,5 @@
 # Created by: Sergey Samoyloff <gonza@techline.ru>
-# $FreeBSD: ports/mail/popa3d/Makefile,v 1.44 2012/11/21 20:21:13 svnexp Exp $
+# $FreeBSD: mail/popa3d/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	popa3d
 PORTVERSION=	1.0.2
@@ -24,6 +24,7 @@ SMTP_AFTER_POP3_DESC=Enable SMTP-after-POP support
 STANDALONE_POP3_DESC=Enable standalone server mode
 SETPROCTITLE_DESC=Enable setproctitle() support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSTANDALONE_POP3}

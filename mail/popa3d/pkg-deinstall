@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/popa3d/pkg-deinstall,v 1.3 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/popa3d/pkg-deinstall 300896 2012-07-14 13:54:48Z beat $
 #
 
 if [ "$2" != "POST-DEINSTALL" ]; then
