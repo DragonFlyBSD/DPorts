@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	db2latex
-# Date created:			Jun 24, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: textproc/db2latex/Makefile 316712 2013-04-28 11:24:26Z stefan $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/db2latex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	db2latex
 PORTVERSION=	0.8p1
@@ -26,6 +21,7 @@ NO_BUILD=	yes
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}
 	${CP} -R ${WRKSRC}/xsl ${DATADIR}
