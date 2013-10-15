@@ -1,9 +1,5 @@
-# New ports collection makefile for:   wmnetmon
-# Date created:		1 April 2001
-# Whom:			Konstantinos Konstantinidis <kkonstan@daemon.gr>
-#
-# $FreeBSD: ports/net/wmnetmon/Makefile,v 1.11 2012/11/17 06:00:24 svnexp Exp $
-#
+# Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
+# $FreeBSD: net/wmnetmon/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	wmnetmon
 PORTVERSION=	0.2p5
@@ -22,6 +18,7 @@ BINMODE=	4755
 PLIST_FILES=	bin/wmnetmon share/examples/wmnetmon/wmnetmonrc
 PLIST_DIRS=	share/examples/wmnetmon
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmnetmon ${PREFIX}/bin
 	@${MKDIR} ${EXAMPLESDIR}
