@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-Hipparcos/Makefile 325811 2013-08-31 14:23:18Z az $
+# $FreeBSD: astro/p5-Astro-Hipparcos/Makefile 328612 2013-09-28 17:13:16Z sunpoet $
 
 PORTNAME=	Astro-Hipparcos
 PORTVERSION=	0.09
@@ -16,8 +16,5 @@ BUILD_DEPENDS=	p5-ExtUtils-XSpp>=0.06:${PORTSDIR}/devel/p5-ExtUtils-XSpp \
 MAKE_ARGS+=	CC="${CXX}"
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Astro::Hipparcos::Record.3 \
-		Astro::Hipparcos.3
 
 .include <bsd.port.mk>
