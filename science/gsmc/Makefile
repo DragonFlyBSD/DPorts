@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: science/gsmc/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: science/gsmc/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	gsmc
 PORTVERSION=	1.1
@@ -21,4 +21,5 @@ AUTOMAKE_ARGS=	-i --add-missing --foreign --copy
 MAN1=		gsmc.1
 PLIST_FILES=	bin/gsmc
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
