@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/lua-lunit/Makefile 320131 2013-06-06 22:03:20Z mandree $
+# $FreeBSD: devel/lua-lunit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	lunit
 PORTVERSION=	0.5
@@ -22,6 +22,7 @@ NO_BUILD=	yes
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} ==	"x86_64"
