@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-errand
-# Date created:				17 January 2012
-# Whom:					Brad Davis <brd@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-errand/Makefile,v 1.2 2012/11/17 05:56:58 svnexp Exp $
-#
+# Created by: Brad Davis <brd@FreeBSD.org>
+# $FreeBSD: devel/rubygem-errand/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	errand
 PORTVERSION=	0.7.3
@@ -19,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
