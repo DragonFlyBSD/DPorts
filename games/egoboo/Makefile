@@ -1,5 +1,5 @@
 # Created by: Jan Stocker <Jan.Stocker@t-online.de>
-# $FreeBSD: games/egoboo/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/egoboo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	egoboo
 PORTVERSION=	2.7.5
@@ -25,6 +25,7 @@ PLIST_FILES=	bin/${PORTNAME} libexec/${PORTNAME}
 
 PORTDATA=	*
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/egoboo|${DATADIR}|g; \
 		s|cp -a|cp -RPp|; s|/usr/libexec|${PREFIX}/libexec|' \
