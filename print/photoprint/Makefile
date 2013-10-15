@@ -1,7 +1,8 @@
-# $FreeBSD: print/photoprint/Makefile 325944 2013-09-02 06:39:37Z bapt $
+# $FreeBSD: print/photoprint/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	photoprint
 DISTVERSION=	0.4.2-pre2
+PORTREVISION=	1
 CATEGORIES=	print graphics
 MASTER_SITES=	http://www.blackfiveimaging.co.uk/photoprint/
 
@@ -10,22 +11,21 @@ COMMENT=	Utility to print multiple images per sheet
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	cups:${PORTSDIR}/print/cups-client \
-		expat:${PORTSDIR}/textproc/expat2 \
-		gdk_pixbuf-2.0:${PORTSDIR}/graphics/gdk-pixbuf2 \
-		gutenprint:${PORTSDIR}/print/gutenprint \
-		lcms:${PORTSDIR}/graphics/lcms \
-		netpbm:${PORTSDIR}/graphics/netpbm \
-		pcre:${PORTSDIR}/devel/pcre \
-		pixman:${PORTSDIR}/x11/pixman \
-		png15:${PORTSDIR}/graphics/png \
-		pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		tiff:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	libcups.so:${PORTSDIR}/print/cups-client \
+		libexpat.so:${PORTSDIR}/textproc/expat2 \
+		libgdk_pixbuf-2.0.so:${PORTSDIR}/graphics/gdk-pixbuf2 \
+		libgutenprint.so:${PORTSDIR}/print/gutenprint \
+		liblcms.so:${PORTSDIR}/graphics/lcms \
+		libnetpbm.so:${PORTSDIR}/graphics/netpbm \
+		libpcre.so:${PORTSDIR}/devel/pcre \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libpthread-stubs.so:${PORTSDIR}/devel/libpthread-stubs \
+		libtiff.so:${PORTSDIR}/graphics/tiff
 
 GNU_CONFIGURE=	yes
 USES=		desktop-file-utils gettext pkgconfig
 USE_GNOME=	pango
-USE_XORG=	x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
+USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 INSTALLS_ICONS=	yes
 
