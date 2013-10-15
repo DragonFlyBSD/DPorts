@@ -1,9 +1,5 @@
-# New ports collection makefile for:	leafpak
-# Date created:		25 Sep 2000
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: ports/graphics/leafpak/Makefile,v 1.4 2012/11/17 05:58:11 svnexp Exp $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: graphics/leafpak/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	leafpak
 PORTVERSION=	1.1.1
@@ -15,6 +11,7 @@ COMMENT=	Graphic file cutter for LEAF/AQUAPLUS PAK format archives
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/leafpak ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/leafpak2 ${PREFIX}/bin
