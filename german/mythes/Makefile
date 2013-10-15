@@ -1,8 +1,7 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: german/mythes/Makefile 327391 2013-09-16 13:37:59Z sunpoet $
+# $FreeBSD: german/mythes/Makefile 329717 2013-10-07 18:13:16Z sunpoet $
 
 PORTNAME=	mythes
-PORTVERSION=	2013.09.15
+PORTVERSION=	2013.10.06
 CATEGORIES=	german textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 DISTNAME=	Deutscher-Thesaurus-${PORTVERSION:C/\.//g}
@@ -29,6 +28,7 @@ PLIST_FILES+=	%%DATADIR%%/th_${ALIAS}_v2.idx \
 		%%DATADIR%%/th_${ALIAS}_v2.dat
 .endfor
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_de_DE_v2.dat ${WRKSRC}/th_de_DE_v2.idx ${DATADIR}/
