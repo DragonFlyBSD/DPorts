@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Regexp-Compare/Makefile 325158 2013-08-21 16:40:12Z sunpoet $
+# $FreeBSD: devel/p5-Regexp-Compare/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Regexp-Compare
 PORTVERSION=	0.20
@@ -15,7 +15,5 @@ LICENSE_COMB=	dual
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Regexp::Compare.3
 
 .include <bsd.port.mk>
