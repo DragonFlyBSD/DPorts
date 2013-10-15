@@ -1,5 +1,5 @@
 # Created by: Andrew Stevenson <andrew@ugh.net.au>
-# $FreeBSD: ports/x11/settitle/Makefile,v 1.14 2012/11/28 12:23:19 svnexp Exp $
+# $FreeBSD: x11/settitle/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	settitle
 PORTVERSION=	1.1.1
@@ -15,4 +15,5 @@ MAN1=		settitle.1
 MANCOMPRESSED=	maybe
 PLIST_FILES=	bin/settitle
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
