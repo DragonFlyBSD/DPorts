@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: misc/xdg-menu/Makefile 314520 2013-03-18 02:31:52Z beech $
+# $FreeBSD: misc/xdg-menu/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xdg-menu
 PORTVERSION=	1.5
@@ -37,6 +37,7 @@ ROX_DESC=	Enable ROX panel applet support
 
 SUB_FILES=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
