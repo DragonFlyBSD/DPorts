@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Directory-Scratch-Structured
-# Date created:				22 April 2008
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Directory-Scratch-Structured/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Directory-Scratch-Structured/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Directory-Scratch-Structured
 PORTVERSION=	0.04
@@ -31,4 +27,5 @@ TEST_DEPENDS=	p5-Test-Block>0:${PORTSDIR}/devel/p5-Test-Block \
 
 MAN3=	Directory::Scratch::Structured.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
