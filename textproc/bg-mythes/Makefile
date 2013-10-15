@@ -1,9 +1,4 @@
-# New ports collection makefile for:	bg-mythes
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/bg-mythes/Makefile,v 1.5 2012/11/17 06:01:52 svnexp Exp $
-#
+# $FreeBSD: textproc/bg-mythes/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	4.3
@@ -27,6 +22,7 @@ PLIST_FILES=	%%DATADIR%%/th_bg_BG.dat \
 		%%DATADIR%%/th_bg_BG.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_bg_BG.dat ${WRKSRC}/th_bg_BG.idx ${DATADIR}/
