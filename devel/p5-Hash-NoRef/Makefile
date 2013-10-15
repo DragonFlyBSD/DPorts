@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-NoRef/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Hash-NoRef/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	Hash-NoRef
 PORTVERSION=	0.03
@@ -12,7 +12,5 @@ COMMENT=	HASH that store values without increase the reference count
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Hash::NoRef.3
 
 .include <bsd.port.mk>
