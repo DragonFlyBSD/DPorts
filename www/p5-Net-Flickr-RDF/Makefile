@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Flickr-RDF
-# Date created:		2006-07-29
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: www/p5-Net-Flickr-RDF/Makefile 326021 2013-09-02 16:07:56Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: www/p5-Net-Flickr-RDF/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Net-Flickr-RDF
 PORTVERSION=	2.2
@@ -27,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Flickr::RDF.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
