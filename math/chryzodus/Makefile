@@ -1,9 +1,5 @@
-# New ports collection makefile for:	chryzodus
-# Date created:		2005-07-09
-# Whom:			Nicola Vitale <nivit@email.it>
-#
-# $FreeBSD: math/chryzodus/Makefile 323734 2013-07-26 16:04:47Z crees $
-#
+# Created by: Nicola Vitale <nivit@email.it>
+# $FreeBSD: math/chryzodus/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	chryzodus
 PORTVERSION=	0.32
@@ -20,6 +16,7 @@ LIB_DEPENDS=	alleg:${PORTSDIR}/devel/allegro
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKEFILE=	makefile.unx
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
 
