@@ -1,5 +1,5 @@
-# Created by: Daniel Eischen <deischen@freebsd.org>
-# $FreeBSD: editors/nedit/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# Created by: Daniel Eischen <deischen@FreeBSD.org>
+# $FreeBSD: editors/nedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	nedit
 PORTVERSION=	5.5
@@ -29,6 +29,7 @@ MAN1=		nclient.1 nedit.1
 ALL_TARGET=	freebsd
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${DISTDIR}/nedit.app-defaults ${WRKSRC}/NEdit.ad
 
