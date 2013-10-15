@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-wsgiauth
-# Date created:				1 December 2008
-# Whom:					Andriy Pylypenko <bamby@sippysoft.com>
-#
-# $FreeBSD: ports/www/py-wsgiauth/Makefile,v 1.2 2012/11/17 06:03:02 svnexp Exp $
-#
+# Created by: Andriy Pylypenko <bamby@sippysoft.com>
+# $FreeBSD: www/py-wsgiauth/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wsgiauth
 PORTVERSION=	0.1
@@ -18,4 +14,5 @@ COMMENT=	A WSGI authentication middleware
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
