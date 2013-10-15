@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ishido
-# Date created:         Wed June 24, 1998
-# Whom:                 Steven H. Samorodin (samorodi@NUXI.com)
-#
-# $FreeBSD: ports/games/ishido/Makefile,v 1.11 2012/11/17 05:57:42 svnexp Exp $
-#
+# Created by: Steven H. Samorodin (samorodi@NUXI.com)
+# $FreeBSD: games/ishido/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ishido
 PORTVERSION=	1.1
@@ -19,6 +15,7 @@ MAKE_ENV=	X11BASE=${LOCALBASE}
 USE_XORG=	x11
 MAN6=		ishido.6
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/ishido.6 ${PREFIX}/man/man6
 	${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g games -m 2511 ${WRKSRC}/ishido ${PREFIX}/bin
