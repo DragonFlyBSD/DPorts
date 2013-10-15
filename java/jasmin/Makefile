@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: ports/java/jasmin/Makefile,v 1.15 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jasmin/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jasmin
 PORTVERSION=	2.4
@@ -20,6 +20,7 @@ DOS2UNIX_REGEX=	.*\.(txt|xml|j|class|java|mf|css|bnf|html)
 
 SUB_FILES=	jasmin.sh
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/jasmin.jar ${JAVAJARDIR}
 .if !defined(NOPORTEXAMPLES)
