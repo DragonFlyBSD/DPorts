@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/interlogic/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/interlogic/Makefile 328736 2013-09-29 21:42:52Z amdmi3 $
 
 PORTNAME=	interlogic
 PORTVERSION=	0.30
@@ -11,8 +11,8 @@ DISTNAME=	interLOGIC-src-${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Move colored balls through the maze connecting it with each other
 
+USES=		gmake
 USE_SDL=	image sdl
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/interlogic
@@ -23,6 +23,6 @@ post-patch:
 	@${ECHO_CMD} "#!/bin/sh" > ${WRKSRC}/missing # suppress autotools madness
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/interlogic ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/interlogic ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
