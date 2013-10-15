@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rbbr
-# Date created:		24 November 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/ruby-rbbr/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-rbbr/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	rbbr
 PORTVERSION=	0.6.0
@@ -25,6 +21,7 @@ USES=		gettext
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 RUBY_SETUP=	install.rb
+NO_STAGE=	yes
 
 DOCS_EN=	AUTHORS COPYING ChangeLog README
 DOCS_JA=	COPYING.ja README.ja
