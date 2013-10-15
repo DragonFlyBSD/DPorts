@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/t_coffee/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: biology/t_coffee/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	t_coffee
 PORTVERSION=	9.03
@@ -27,6 +27,7 @@ MAKEFILE=	makefile
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/TMalign bin/t_coffee
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
