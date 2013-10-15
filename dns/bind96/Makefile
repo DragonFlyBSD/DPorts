@@ -1,7 +1,7 @@
-# $FreeBSD: dns/bind96/Makefile 326444 2013-09-05 20:18:30Z bsam $
+# $FreeBSD: dns/bind96/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	bind96
-PORTVERSION=	9.6.3.2.ESV.R9
+PORTVERSION=	9.6.3.2.ESV.R10
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
@@ -13,7 +13,7 @@ COMMENT=	BIND DNS suite with updated DNSSEC and threads
 LICENSE=	ISCL
 
 # ISC releases things like 9.4.0b3, which our versioning doesn't like
-ISCVERSION=	9.6-ESV-R9-P1
+ISCVERSION=	9.6-ESV-R10
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -47,6 +47,7 @@ DLZ_LDAP_DESC=		DLZ LDAP driver
 DLZ_FILESYSTEM_DESC=	DLZ filesystem driver
 DLZ_STUB_DESC=		DLZ stub driver
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if (${ARCH} == "x86_64")
