@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: devel/monodevelop/Makefile 326438 2013-09-05 19:29:18Z antoine $
+# $FreeBSD: devel/monodevelop/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	monodevelop
 PORTVERSION=	4.0.12
@@ -36,6 +36,7 @@ SVN_RUN_DEPENDS=	svn:${PORTSDIR}/devel/subversion
 # Restrict to stable (even) versions, indicated by the second component.
 PORTSCOUT=	limitw:1,even
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|[(]gnome_data[)]/mime$$|(prefix)/share/mime|g ; \
 		s|[(]gnome_data[)]/mime/packages$$|(prefix)/share/mime/packages|g ; \
