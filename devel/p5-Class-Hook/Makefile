@@ -1,5 +1,5 @@
 # Created by: Brian Skrab <brian@quynh-and-brian.org>
-# $FreeBSD: devel/p5-Class-Hook/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Hook/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=		Class-Hook
 PORTVERSION=		0.03
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Class::Hook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
