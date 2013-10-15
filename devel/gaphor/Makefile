@@ -1,5 +1,5 @@
 # Created by: rehsack@liwing.de
-# $FreeBSD: devel/gaphor/Makefile 323467 2013-07-22 15:27:08Z miwi $
+# $FreeBSD: devel/gaphor/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gaphor
 PORTVERSION=	0.17.2
@@ -39,6 +39,7 @@ GAPHAS_DISTNAME=	gaphas-0.7.2
 GAPHAS_EGG=		${GAPHAS_DISTNAME}-py${PYTHON_VER}.egg
 SGENERIC_DISTNAME=	simplegeneric-0.8.1
 
+NO_STAGE=	yes
 post-extract:
 	@${UNZIP_CMD} -qo ${DISTDIR}/${SGENERIC_DISTNAME}.zip -d ${WRKDIR}
 
