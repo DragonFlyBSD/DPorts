@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-MidasPattern/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: science/p5-Chemistry-MidasPattern/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Chemistry-MidasPattern
 PORTVERSION=	0.11
@@ -25,4 +25,5 @@ MAN3=	Chemistry::MidasPattern.3 Chemistry::File::MidasPattern.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
