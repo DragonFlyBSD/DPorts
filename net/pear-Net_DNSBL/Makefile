@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/net/pear-Net_DNSBL/Makefile,v 1.18 2012/11/17 22:15:12 svnexp Exp $
+# $FreeBSD: net/pear-Net_DNSBL/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_DNSBL
 PORTVERSION=	1.3.7
@@ -23,6 +23,7 @@ PEAR_AUTOINSTALL=	yes
 
 PORTSCOUT=	skipv:1.3.0a1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
