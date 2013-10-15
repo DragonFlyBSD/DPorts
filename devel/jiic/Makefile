@@ -1,9 +1,5 @@
-# Ports collection makefile for:	jiic
-# Date created:			28 Jun 2010
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/jiic/Makefile,v 1.4 2012/12/10 11:29:54 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: devel/jiic/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	jiic
 PORTVERSION=	20120110
@@ -28,6 +24,7 @@ ALL_TARGET=	jar
 
 PLIST_FILES=	%%JAVAJARDIR%%/iso9660.jar
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${FILESDIR}/build.xml ${WRKSRC}
 
