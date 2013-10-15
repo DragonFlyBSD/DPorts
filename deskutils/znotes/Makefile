@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: deskutils/znotes/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: deskutils/znotes/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	znotes
 PORTVERSION=	0.4.5
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=		NLS
 PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.png
 
+NO_STAGE=	yes
 post-patch:
 	    @${REINPLACE_CMD} -e 's|lrelease|lrelease-qt4|g' \
 		${WRKSRC}/${PORTNAME}.pro
