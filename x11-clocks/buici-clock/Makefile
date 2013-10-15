@@ -1,5 +1,5 @@
 # Created by: Hendrik Scholz <hscholz@raisdorf.net>
-# $FreeBSD: x11-clocks/buici-clock/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-clocks/buici-clock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	buici-clock
 PORTVERSION=	0.4.9.2
@@ -25,6 +25,7 @@ MAKE_JOBS_UNSAFE=yes
 MAN1=		buici-clock.1
 PLIST_FILES=	bin/buici-clock
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|echo -e|echo| ; \
