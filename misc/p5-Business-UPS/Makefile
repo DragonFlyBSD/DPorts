@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-UPS/Makefile 324167 2013-08-02 17:11:34Z az $
+# $FreeBSD: misc/p5-Business-UPS/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Business-UPS
 PORTVERSION=	2.0
@@ -19,6 +19,7 @@ USE_PERL5=	configure
 
 MAN3=		Business::UPS.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${EXAMPLESDIR}
