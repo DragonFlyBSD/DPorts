@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nbench
-# Date created:				17 December 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/benchmarks/nbench/Makefile,v 1.18 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: benchmarks/nbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	nbench
 PORTVERSION=	2.2.3
@@ -17,6 +13,7 @@ COMMENT=	BYTE Magazine's native benchmarks
 ALL_TARGET=	# empty
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nbench ${PREFIX}/bin
 	@${MKDIR} ${DATADIR}
