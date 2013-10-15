@@ -1,9 +1,5 @@
-# New ports collection makefile for:	last-cmus
-# Date created:				30 November 2008
-# Whom:					Dennis Herrmann <adox@mcx2.org>
-#
-# $FreeBSD: ports/audio/last-cmus/Makefile,v 1.3 2012/11/17 05:54:35 svnexp Exp $
-#
+# Created by: Dennis Herrmann <adox@mcx2.org>
+# $FreeBSD: audio/last-cmus/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	last
 PORTVERSION=	1.0
@@ -18,6 +14,7 @@ MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Cmus plugin for submitting songs into last.fm
 
 USE_PYTHON=	yes
+NO_STAGE=	yes
 SUB_FILES=	pkg-message
 NO_BUILD=	yes
 PLIST_FILES=	bin/${DISTNAME}
