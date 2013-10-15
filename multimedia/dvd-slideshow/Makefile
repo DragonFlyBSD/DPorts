@@ -1,5 +1,5 @@
 # Created by: Phil Oleson <oz@nixil.net>
-# $FreeBSD: multimedia/dvd-slideshow/Makefile 319416 2013-05-30 11:52:44Z pawel $
+# $FreeBSD: multimedia/dvd-slideshow/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	dvd-slideshow
 PORTVERSION=	0.8.4
@@ -38,6 +38,7 @@ MAN1=		dvd-slideshow.1 \
 		gallery1-to-slideshow.1 \
 		jigl2slideshow.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLAME}
