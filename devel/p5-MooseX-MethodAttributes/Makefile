@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-MethodAttributes/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-MethodAttributes/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-MethodAttributes
 PORTVERSION=	0.28
@@ -39,4 +39,5 @@ MAN3=		MooseX::MethodAttributes.3 \
 		MooseX::MethodAttributes::Role::Meta::Role::Application.3 \
 		MooseX::MethodAttributes::Role::Meta::Role::Application::Summation.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
