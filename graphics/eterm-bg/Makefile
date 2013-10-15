@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eterm-bg
-# Date created:        99/06/12
-# Whom:                Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/eterm-bg/Makefile,v 1.18 2012/11/17 05:58:04 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: graphics/eterm-bg/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	eterm-bg
 PORTVERSION=	0.9.6
@@ -17,6 +13,7 @@ COMMENT=	Image files for background of Eterm
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/Eterm
 	${MKDIR} ${PREFIX}/share/Eterm/pix
