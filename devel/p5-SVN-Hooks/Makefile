@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Hooks/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-SVN-Hooks/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Hooks
 PORTVERSION=	1.21
@@ -40,4 +40,5 @@ MAN3=		SVN::Hooks.3 \
 		SVN::Hooks::Notify.3 \
 		SVN::Hooks::UpdateConfFile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
