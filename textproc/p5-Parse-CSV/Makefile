@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: textproc/p5-Parse-CSV/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-Parse-CSV/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Parse-CSV
 PORTVERSION=	2.00
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Parse::CSV.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
