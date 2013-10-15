@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-sis/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-sis/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-sis
 PORTVERSION=	0.10.7
@@ -15,4 +15,5 @@ XORG_CAT=	driver
 USE_XORG=	xf86dgaproto xf86driproto xineramaproto xf86miscproto glproto
 MAN4=		sis.4x
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
