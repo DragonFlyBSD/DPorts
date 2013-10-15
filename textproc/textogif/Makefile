@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: textproc/textogif/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/textogif/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	textogif
 PORTVERSION=	1.1
@@ -19,6 +19,7 @@ USE_TEX=	latex dvipsk
 USES=		perl5
 USE_PERL5=	run
 
+NO_STAGE=	yes
 do-install:
 	@cd ${WRKDIR};\
 	${INSTALL_SCRIPT} ${PORTNAME} ${PREFIX}/bin
