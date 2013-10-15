@@ -1,5 +1,5 @@
 # Created by: Edini <ports@edini.net>
-# $FreeBSD: irc/evangeline/Makefile 318141 2013-05-14 08:02:31Z gahr $
+# $FreeBSD: irc/evangeline/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	evangeline
 PORTVERSION=	1.1.4
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	IPV6 CRYPT
 OPTIONS_DEFAULT=	CRYPT
 CRYPT_DESC=	Enable Encryption
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
