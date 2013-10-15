@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-Socket-Multicast6
-# Date created:		2007-03-10
-# Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 326526 2013-09-06 17:02:34Z az $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	IO-Socket-Multicast6
 PORTVERSION=	0.03
@@ -26,4 +22,5 @@ USE_PERL5=	modbuild
 
 MAN3=		IO::Socket::Multicast6.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
