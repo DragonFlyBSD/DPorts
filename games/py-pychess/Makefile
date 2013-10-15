@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: games/py-pychess/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/py-pychess/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	pychess
 DISTVERSION=	0.10rc1
@@ -44,6 +44,7 @@ MANCOMPRESSED=	yes
 MAKE_ENV+=	NO_INSTALL_MANPAGES=${NO_INSTALL_MANPAGES}
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC} && ${REINPLACE_CMD} ${PORTNAME} ${PYSETUP} lib/pychess/widgets/newGameDialog.py lib/pychess/Players/PyChess.py
 
