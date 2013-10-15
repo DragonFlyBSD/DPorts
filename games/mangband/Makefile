@@ -1,5 +1,5 @@
 # Created by: driedfruit
-# $FreeBSD: games/mangband/Makefile 317526 2013-05-06 15:53:46Z bapt $
+# $FreeBSD: games/mangband/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	mangband
 PORTVERSION=	1.1.2
@@ -23,6 +23,7 @@ GCU_DESC=	Display module GCU
 X11_DESC=	Display module X11
 SDL_DESC=	Display module SDL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCU}
