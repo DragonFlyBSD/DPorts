@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: ports/www/chpasswd/Makefile,v 1.22 2012/12/10 20:43:18 svnexp Exp $
+# $FreeBSD: www/chpasswd/Makefile 329122 2013-10-02 22:56:00Z madpilot $
 
 PORTNAME=	chpasswd
 PORTVERSION=	2.2.4
@@ -18,9 +18,6 @@ CONFIGURE_ARGS=	--prefix=${PREFIX}/etc/chpasswd \
 		--enable-cgidir=${PREFIX}/www/cgi-bin
 
 pre-install:
-	@${MKDIR} ${PREFIX}/www/cgi-bin
-
-post-install:
-	@${ECHO} 'Remember, passwd and log file must be owned by httpd user, or chmod 777'
+	@${MKDIR} ${STAGEDIR}${PREFIX}/www/cgi-bin
 
 .include <bsd.port.mk>
