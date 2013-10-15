@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: ports/comms/libfec/Makefile,v 1.10 2013/02/18 14:39:01 svnexp Exp $
+# $FreeBSD: comms/libfec/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	libfec
 PORTVERSION=	3.0.1
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 ONLY_FOR_ARCHS=	i386 amd64
 PLIST_FILES=	include/fec.h lib/libfec.so lib/libfec.a
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
