@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/www/august/Makefile,v 1.16 2013/01/27 06:41:42 svnexp Exp $
+# $FreeBSD: www/august/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	august
 PORTVERSION=	0.63b
@@ -25,6 +25,7 @@ USE_TK_WRAPPER=	yes
 PORTDOCS=	specchars.txt
 PLIST_FILES=	bin/august
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/usr/bin|${LOCALBASE}/bin|g' ${WRKSRC}/august
