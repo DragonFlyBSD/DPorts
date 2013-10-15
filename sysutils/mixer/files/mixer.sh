@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/sysutils/mixer/files/mixer.sh,v 1.2 2012/11/17 06:01:38 svnexp Exp $
+# $FreeBSD: sysutils/mixer/files/mixer.sh 300897 2012-07-14 14:29:18Z beat $
 
 MIXERSTATE=/var/db/mixer-state
 
