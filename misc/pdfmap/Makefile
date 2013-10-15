@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/pdfmap/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/pdfmap/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	pdfmap
 PORTVERSION=	2.00
@@ -20,6 +20,7 @@ USE_PYDISTUTILS=	yes
 
 DOCS=		CREDITS NEWS README TODO doc/*.html
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
