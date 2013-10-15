@@ -1,9 +1,5 @@
-# New ports collection makefile for:    waveplay
-# Date created:         23 Jan 1999
-# Whom:                 Yoshihide SONODA <ysonoda@dontaku.csce.kyushu-u.ac.jp>
-#
-# $FreeBSD: ports/audio/waveplay/Makefile,v 1.12 2012/11/17 05:54:47 svnexp Exp $
-#
+# Created by: Yoshihide SONODA <ysonoda@dontaku.csce.kyushu-u.ac.jp>
+# $FreeBSD: audio/waveplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=		waveplay
 PORTVERSION=		2001.09.24
@@ -15,6 +11,7 @@ DISTNAME=		waveplay-20010924
 MAINTAINER=		yshd@na.rim.or.jp
 COMMENT=	A simple wav file player
 
+NO_STAGE=	yes
 MAN1=			waveplay.1
 MANLANG=		"" ja
 ONLY_FOR_ARCHS=		i386 amd64
