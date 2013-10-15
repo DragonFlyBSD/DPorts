@@ -1,9 +1,5 @@
-# New ports collection makefile for:    portsopt
-# Date created:                         25 Dec 2006
-# Whom:                                 Beat Gaetzi <beat@chruetertee.ch>
-#
-# $FreeBSD: ports/ports-mgmt/portsopt/Makefile,v 1.8 2012/11/17 06:00:46 svnexp Exp $
-#
+# Created by: Beat Gaetzi <beat@chruetertee.ch>
+# $FreeBSD: ports-mgmt/portsopt/Makefile 327762 2013-09-20 22:36:49Z bapt $
 
 PORTNAME=	portsopt
 PORTVERSION=	1.5
@@ -17,6 +13,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	sbin/portsopt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/portsopt ${PREFIX}/sbin
 
