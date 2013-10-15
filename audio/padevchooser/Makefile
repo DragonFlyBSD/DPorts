@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: audio/padevchooser/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: audio/padevchooser/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	padevchooser
 PORTVERSION=	0.9.3
@@ -18,6 +18,7 @@ RUN_DEPENDES=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 
 CONFIGURE_ARGS=	--disable-lynx
 
