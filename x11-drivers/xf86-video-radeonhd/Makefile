@@ -1,5 +1,5 @@
 # Created by: Rene Ladan <r.c.ladan@gmail.com>
-# $FreeBSD: ports/x11-drivers/xf86-video-radeonhd/Makefile,v 1.24 2013/01/05 23:45:47 svnexp Exp $
+# $FreeBSD: x11-drivers/xf86-video-radeonhd/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-radeonhd
 PORTVERSION=	1.3.0
@@ -19,6 +19,7 @@ CONFLICTS=	xf86-video-radeonhd-devel-[0-9]*
 
 MAN4=	radeonhd.4x
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUTILS}
