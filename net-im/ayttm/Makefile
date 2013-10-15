@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/ayttm/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: net-im/ayttm/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	ayttm
 PORTVERSION=	0.5.0.111
@@ -34,6 +34,7 @@ MAN1=		ayttm.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MESOUND}
