@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: mail/biabam/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: mail/biabam/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	biabam
 PORTVERSION=	0.9.7
@@ -18,6 +18,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 NO_BUILD=	yes
 PLIST_FILES=	bin/biabam
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '1s|\(#!\)\(/bin/bash\)|\1${LOCALBASE}\2|' \
 		${WRKSRC}/${PORTNAME}
