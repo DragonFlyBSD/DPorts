@@ -1,4 +1,4 @@
-# $FreeBSD: net/gstreamer1-plugins-libmms/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: net/gstreamer1-plugins-libmms/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	net
@@ -10,4 +10,5 @@ DIST=		bad
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
