@@ -1,4 +1,4 @@
-# $FreeBSD: www/ajaxplorer/Makefile 326234 2013-09-03 23:28:30Z madpilot $
+# $FreeBSD: www/ajaxplorer/Makefile 329121 2013-10-02 22:55:18Z madpilot $
 
 PORTNAME=	ajaxplorer
 PORTVERSION=	5.0.3
@@ -25,24 +25,13 @@ post-patch:
 	@${MV} ${WRKSRC}/conf/bootstrap_repositories.php ${WRKDIR}/bootstrap_repositories.php.sample
 
 do-install:
-	${MKDIR} ${WWWDIR}
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} "* .htaccess" ${WWWDIR})
-	${INSTALL_DATA} ${WRKDIR}/bootstrap_*.php.sample ${WWWDIR}/conf
-	${INSTALL_DATA} ${FILESDIR}/4.2.3-5.0.0-db-upgrade.sql ${WWWDIR}/conf
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
+	${MKDIR} ${STAGEDIR}${WWWDIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} "* .htaccess" ${STAGEDIR}${WWWDIR})
+	${INSTALL_DATA} ${WRKDIR}/bootstrap_*.php.sample ${STAGEDIR}${WWWDIR}/conf
+	${INSTALL_DATA} ${FILESDIR}/4.2.3-5.0.0-db-upgrade.sql ${STAGEDIR}${WWWDIR}/conf
+	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${STAGEDIR}${WWWDIR}
 
 post-install:
-	@if [ ! -f ${WWWDIR}/conf/bootstrap_conf.php ]; then \
-		${CP} -p ${WWWDIR}/conf/bootstrap_conf.php.sample ${WWWDIR}/conf/bootstrap_conf.php ; \
-	fi
-	@if [ ! -f ${WWWDIR}/conf/bootstrap_context.php ]; then \
-		${CP} -p ${WWWDIR}/conf/bootstrap_context.php.sample ${WWWDIR}/conf/bootstrap_context.php ; \
-	fi
-	@if [ ! -f ${WWWDIR}/conf/bootstrap_repositories.php ]; then \
-		${CP} -p ${WWWDIR}/conf/bootstrap_repositories.php.sample ${WWWDIR}/conf/bootstrap_repositories.php ; \
-	fi
 	@${ECHO_CMD} '@exec ${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}' >> ${TMPPLIST}
-	@PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
