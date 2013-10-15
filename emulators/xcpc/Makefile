@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: emulators/xcpc/Makefile 322621 2013-07-10 06:55:28Z bapt $
+# $FreeBSD: emulators/xcpc/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	xcpc
 PORTVERSION=	20070122
@@ -29,6 +29,7 @@ MOTIF_DESC=	With Motif widget set
 ATHENA_DESC=	With Athen widget set
 XSHM_DESC=	With XShm support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
