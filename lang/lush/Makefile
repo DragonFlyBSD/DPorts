@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: lang/lush/Makefile 323720 2013-07-26 14:23:12Z bapt $
+# $FreeBSD: lang/lush/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	lush
 PORTVERSION=	1.2.1
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--without-bfd
 
 MAN1=		lush.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
