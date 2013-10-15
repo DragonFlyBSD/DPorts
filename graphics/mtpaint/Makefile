@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mtpaint/Makefile 326090 2013-09-02 21:16:30Z bapt $
+# $FreeBSD: graphics/mtpaint/Makefile 328835 2013-09-30 18:11:44Z marino $
 
 PORTNAME=	mtpaint
 PORTVERSION=	3.40
@@ -25,14 +25,16 @@ OPENJPEG_DESC=	Enable OpenJPEG support
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
-USES=		gmake pkgconfig
+USES=		gmake pkgconfig iconv
 HAS_CONFIGURE=	yes
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=${MAN1PREFIX}/man/man1 \
 		--localedir=${PREFIX}/share/locale \
 		gtk2 cflags asneeded ft jpeg tiff man GIF
 
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLCMS2}
