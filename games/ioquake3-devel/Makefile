@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD: games/ioquake3-devel/Makefile 325812 2013-08-31 14:45:10Z marino $
+# $FreeBSD: games/ioquake3-devel/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME?=	ioquake3-devel
 DISTVERSION?=	GIT${GITREVISION}
@@ -24,4 +24,5 @@ BINSUFFIX?=	-devel
 IOQ3?=		CLIENT TOOLS DLRENDERER GAMELIBS OPUS OPENGL2
 IOQ3ARCH?=	${ARCH:S/i386/x86/:S/amd64/x86_64/}
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
