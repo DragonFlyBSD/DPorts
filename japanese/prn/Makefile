@@ -1,9 +1,5 @@
-# New ports collection makefile for:	prn
-# Date created:		19 Jun 1997
-# Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/prn/Makefile,v 1.16 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
+# $FreeBSD: japanese/prn/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	prn
 PORTVERSION=	1.0
@@ -21,4 +17,5 @@ MANLANG=	ja
 MAN1=		prn.1 cprn.1 cmt.1 psconv.1
 MAN5=		cmtdefs.5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
