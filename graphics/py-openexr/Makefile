@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-openexr
-# Date created:				10 October 2010
-# Whom:					James Bowman <jamesb-bsd@excamera.com>
-#
-# $FreeBSD: ports/graphics/py-openexr/Makefile,v 1.3 2013/01/17 04:09:20 svnexp Exp $
-#
+# Created by: James Bowman <jamesb-bsd@excamera.com>
+# $FreeBSD: graphics/py-openexr/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	openexr
 PORTVERSION=	1.2.0
@@ -19,6 +15,7 @@ COMMENT=	Python module for ILM's OpenEXR image format and library
 
 LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's#/usr/local#${LOCALBASE}#g' ${WRKSRC}/setup.py
 
