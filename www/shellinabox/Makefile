@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: www/shellinabox/Makefile 327308 2013-09-14 17:16:04Z sunpoet $
+# $FreeBSD: www/shellinabox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	shellinabox
 PORTVERSION=	2.14
@@ -35,6 +35,7 @@ PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 SUB_FILES=	pkg-deinstall
 SUB_LIST=	USERS=${USERS} GROUPS=${GROUPS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOLOGIN}
