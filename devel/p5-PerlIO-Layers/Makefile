@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-PerlIO-Layers/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-PerlIO-Layers/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PerlIO-Layers
 PORTVERSION=	0.010
@@ -21,4 +21,5 @@ USES=		perl5
 
 MAN3=		PerlIO::Layers.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
