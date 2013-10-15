@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/oyranos/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: graphics/oyranos/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	oyranos
 PORTVERSION=	0.9.4
@@ -39,6 +39,7 @@ MAN1=		oyranos-config-fltk.1 oyranos-monitor-daemon.1 oyranos-monitor.1 \
 		oyranos-profile.1 oyranos-profiles.1 oyranos-xforms-modules.1 qcmsevents.1
 MAN3=		oyranos-config.3 oyranos.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(/usr/bin/clang) && ${OSVERSION} > 901502
