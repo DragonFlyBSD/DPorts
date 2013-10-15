@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-lua/Makefile 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD: devel/geany-plugin-lua/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	geany-plugin-lua
 PORTVERSION=	${GEANY_VER}
@@ -9,5 +9,6 @@ COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
 
 USE_LUA=	5.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
