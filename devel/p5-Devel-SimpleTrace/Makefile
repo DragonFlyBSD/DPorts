@@ -1,5 +1,5 @@
 # Created by: estith
-# $FreeBSD: devel/p5-Devel-SimpleTrace/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-Devel-SimpleTrace/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-SimpleTrace
 PORTVERSION=	0.08
@@ -18,4 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		Devel::SimpleTrace.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
