@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pebble
-# Date created:		2009-02-06
-# Whom:			Herve Quiroz <hq@FreeBSD.org>
-#
-# $FreeBSD: ports/www/pebble/Makefile,v 1.8 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Herve Quiroz <hq@FreeBSD.org>
+# $FreeBSD: www/pebble/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pebble
 PORTVERSION=	2.3.2
@@ -41,6 +37,7 @@ PORTDOCS=	configuration.html credits.html images index.html \
 PLIST_FILES=	${WEBAPP_SUBDIR}/${PORTNAME}.war
 PEBBLE_CONTEXT=	WEB-INF/applicationContext-pebble.xml
 
+NO_STAGE=	yes
 do-patch:
 	cd ${WRKSRC} && ${UNZIP_CMD} -o pebble.war "${PEBBLE_CONTEXT}"
 	${SED} -i.bak 's,/WEB-INF/pebble\.properties,file:${PEBBLE_PROPERTIES},' "${WRKSRC}/${PEBBLE_CONTEXT}"

@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/pebble/files/pebble.properties.in,v 1.2 2012/11/17 06:02:57 svnexp Exp $
+# $FreeBSD: www/pebble/files/pebble.properties.in 300897 2012-07-14 14:29:18Z beat $
 
 # the location where your Pebble data is stored, default is ${pebble.home}/pebble
 dataDirectory=%%PEBBLE_HOME%%
