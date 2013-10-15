@@ -1,10 +1,10 @@
 # Created by: Laurent LEVIER <llevier@argosnet.com>
-# $FreeBSD: security/hydra/Makefile 326528 2013-09-06 17:09:57Z rm $
+# $FreeBSD: security/hydra/Makefile 329365 2013-10-04 19:27:20Z rm $
 
 PORTNAME=	hydra
 PORTVERSION=	7.5
 CATEGORIES=	security
-MASTER_SITES=	http://freeworld.thc.org/releases/ \
+MASTER_SITES=	https://www.thc.org/releases/ \
 		PACKETSTORM/groups/thc/
 
 MAINTAINER=	rm@FreeBSD.org
@@ -16,9 +16,8 @@ LIB_DEPENDS=	libidn.so:${PORTSDIR}/dns/libidn \
 		libpcre.so:${PORTSDIR}/devel/pcre \
 		libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 
-CONFLICTS=	hydra-[0-9]*
+CONFLICTS_INSTALL=	hydra-web-[0-9]*
 
-NO_LATEST_LINK=	yes
 PLIST_FILES=	bin/hydra bin/pw-inspector bin/dpl4hydra.sh
 GNU_CONFIGURE=	yes
 USES=		gmake
@@ -30,6 +29,7 @@ MAN1=		hydra.1 pw-inspector.1
 OPTIONS_DEFINE=	FIREBIRD SSH SVN X11
 OPTIONS_EXCLUDE=NLS DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFIREBIRD}
