@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: emulators/jzintv/Makefile 315461 2013-03-28 12:15:17Z martymac $
+# $FreeBSD: emulators/jzintv/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	jzintv
 PORTVERSION=	1.0b4
@@ -31,6 +31,7 @@ TOOLS=	as1600 bin2rom cgc_update crc32 dasm0256 dasm1600 dasm1600o dis1600 \
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTOOLS}
