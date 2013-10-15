@@ -1,9 +1,5 @@
-# New ports collection makefile for:	WWW::Link
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: www/p5-WWW-Link/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: www/p5-WWW-Link/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Link
 PORTVERSION=	0.036
@@ -48,4 +44,5 @@ MAN3=	WWW::Link.3 \
 	WWW::Link::Tester::Complex.3 \
 	WWW::Link::Tester::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
