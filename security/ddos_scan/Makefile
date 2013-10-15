@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  ddos_scan
-# Date created:			  Sun Feb 12, 2000
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: security/ddos_scan/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: security/ddos_scan/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ddos_scan
 PORTVERSION=	1.6
@@ -19,6 +14,7 @@ COMMENT=	Scans for a limited set of distributed denial of service agents
 
 ALL_TARGET=	dds
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/dds ${PREFIX}/sbin
 .if !defined(NOPORTDOCS)
