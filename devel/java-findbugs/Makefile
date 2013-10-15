@@ -1,9 +1,5 @@
-# New ports collection makefile for:   findbugs
-# Date created:        19 December 2010
-# Whom:                glewis
-#
-# $FreeBSD: ports/devel/java-findbugs/Makefile,v 1.3 2012/11/17 05:55:51 svnexp Exp $
-#
+# Created by: glewis
+# $FreeBSD: devel/java-findbugs/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	findbugs
 PORTVERSION=	1.3.9
@@ -56,6 +52,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@-${MKDIR} ${DATADIR}/lib
 .for f in ${JAR_FILES}
