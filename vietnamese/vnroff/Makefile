@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  vnTeX
-# Date created:		Monday, Dec 9, 1996
-# Whom:			David O'Brien (obrien@cs.ucdavis.edu)
-#
-# $FreeBSD: ports/vietnamese/vnroff/Makefile,v 1.19 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@cs.ucdavis.edu)
+# $FreeBSD: vietnamese/vnroff/Makefile 327775 2013-09-20 23:20:31Z bapt $
 
 PORTNAME=	vnroff
 PORTVERSION=	2.1
@@ -20,6 +15,7 @@ COMMENT=	Converts Vietnamese VIQR text into troff format
 NO_WRKSUBDIR=	yes
 MAN1=		vnroff.1
 
+NO_STAGE=	yes
 do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
