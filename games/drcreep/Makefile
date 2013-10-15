@@ -1,5 +1,5 @@
 # Created by: Robert Crossfield <robcrossfield@gmail.com>
-# $FreeBSD: ports/games/drcreep/Makefile,v 1.5 2012/12/24 14:32:11 svnexp Exp $
+# $FreeBSD: games/drcreep/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	drcreep
 PORTVERSION=	1.0
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/DrCreep
 
 SUB_FILES+=	pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 801000
