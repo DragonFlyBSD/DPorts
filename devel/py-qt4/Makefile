@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: devel/py-qt4/Makefile 311475 2013-02-03 18:16:07Z makc $
+# $FreeBSD: devel/py-qt4/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	qt4
 PORTVERSION=	${PYQT4_VERSION}
@@ -41,6 +41,7 @@ RUN_DEPENDS+=	${PKGNAMEPREFIX2}core>=${PYQT4_VERSION}:${PORTSDIR}/devel/py-qt4-c
 		${PKGNAMEPREFIX2}phonon>=${PYQT4_VERSION}:${PORTSDIR}/multimedia/py-qt4-phonon \
 		${PKGNAMEPREFIX2}qscintilla2>=${QSCI2_VERSION}:${PORTSDIR}/devel/py-qt4-qscintilla2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
