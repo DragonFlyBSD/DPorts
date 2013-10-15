@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: x11/thinglaunch/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: x11/thinglaunch/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	thinglaunch
 PORTVERSION=	1.8
@@ -16,6 +16,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	bin/thinglaunch
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} ${WRKSRC}/${PORTNAME}.c \
 		-o ${WRKSRC}/${PORTNAME}
