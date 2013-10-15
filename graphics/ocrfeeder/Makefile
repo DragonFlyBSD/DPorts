@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: graphics/ocrfeeder/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: graphics/ocrfeeder/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ocrfeeder
 PORTVERSION=	0.7.7
@@ -30,6 +30,7 @@ USE_GNOME=	pygtk2 pygnomeextras
 USES=		gettext gmake pkgconfig
 USE_GHOSTSCRIPT=yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
