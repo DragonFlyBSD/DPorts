@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/rox-edit/Makefile,v 1.26 2013/01/26 15:07:25 svnexp Exp $
+# $FreeBSD: editors/rox-edit/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	rox-edit
 PORTVERSION=	2.2
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/rox:${PORTSDIR}/x11-fm/rox-filer \
 USE_PYTHON=	yes
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name .cvsignore | ${XARGS} ${RM}
 	@${FIND} ${WRKSRC} -name CVS | ${XARGS} ${RM} -rf
