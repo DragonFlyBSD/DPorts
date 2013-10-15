@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	todo
-# Date created:			Jul 13, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/deskutils/todo/Makefile,v 1.12 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: deskutils/todo/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	todo
 PORTVERSION=	2.9
@@ -22,6 +17,7 @@ CONFLICTS=	devtodo-[0-9]*
 OPTIONS_DEFINE=	BASH
 BASH_DESC=	Install programmable completions for Bash
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 NO_BUILD=	yes
