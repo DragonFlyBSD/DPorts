@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <philip@p6m7g8.com>
-# $FreeBSD: databases/p5-DBIx-Tree/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Tree/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Tree
 PORTVERSION=	1.96
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		DBIx::Tree.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
