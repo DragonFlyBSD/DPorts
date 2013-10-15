@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-File-Pid-Quick/Makefile 327235 2013-09-14 07:33:30Z sunpoet $
+# $FreeBSD: devel/p5-File-Pid-Quick/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Pid-Quick
 PORTVERSION=	1.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Pid::Quick.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
