@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/xrot/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/xrot/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xrot
 PORTVERSION=	1.3.2
@@ -25,6 +25,7 @@ CFLAGS+=	-Wno-return-type
 
 PLIST_FILES=	bin/xrot
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xrot ${PREFIX}/bin
 	${CHOWN} root:games ${PREFIX}/bin/xrot
