@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/trackballs/Makefile 321296 2013-06-19 17:11:08Z antoine $
+# $FreeBSD: games/trackballs/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	trackballs
 PORTVERSION=	1.1.4
@@ -36,6 +36,7 @@ OPTIONS_DEFINE=	NLS MUSIC
 MUSIC_DESC=	Install additional music
 OPTIONS_DEFAULT=	NLS MUSIC
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
