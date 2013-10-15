@@ -1,4 +1,4 @@
-# $FreeBSD: www/yahoo-ui/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/yahoo-ui/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yahoo
 DISTVERSION=	2.8.2
@@ -24,6 +24,7 @@ NO_BUILD=	yes
 
 OPTIONS_DEFINE=	APACHE DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
