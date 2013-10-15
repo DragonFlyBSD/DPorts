@@ -1,5 +1,5 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: mail/sylpheed/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
@@ -40,6 +40,7 @@ ONIGURUMA_DESC=	Oniguruma support
 
 OPTIONS_DEFAULT=SSL GTKSPELL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
