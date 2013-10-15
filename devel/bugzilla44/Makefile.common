@@ -1,9 +1,8 @@
-# $FreeBSD: devel/bugzilla44/Makefile.common 321429 2013-06-20 22:21:36Z ohauer $
+# $FreeBSD: devel/bugzilla44/Makefile.common 328405 2013-09-26 19:00:40Z ohauer $
 
 DIST_SUBDIR=	${PORTNAME}
 
 CONFLICTS_INSTALL=	\
-		bugzilla-3.* \
 		bugzilla-4.[^4].*
 
 PORTSCOUT=	limitw:1,even
