@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: audio/crip/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/crip/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	crip
 PORTVERSION=	3.9
@@ -25,6 +25,7 @@ PORTDOCS=	Changelog README criprc_example
 
 NO_BUILD=	yes
 USES=		perl5
+NO_STAGE=	yes
 
 pre-fetch:
 .if !defined (WITH_SOX)
