@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: astro/weather/Makefile 326797 2013-09-09 10:09:03Z sunpoet $
+# $FreeBSD: astro/weather/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	weather
 PORTVERSION=	2.0
@@ -15,6 +15,7 @@ LICENSE=	ISCL
 
 CONFLICTS_INSTALL=	expect-[0-9]* expect-nox11-[0-9]*
 
+NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_XZ=		yes
 USES=		shebangfix
