@@ -1,5 +1,5 @@
 # Created by: Stefan Schmidt <stefan.schmidt@stadtbuch.de>
-# $FreeBSD: ports/databases/isql-viewer/Makefile,v 1.10 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/isql-viewer/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	isql-viewer
 PORTVERSION=	2.1.8
@@ -46,6 +46,7 @@ JAR_DEPENDS=	mysql-connector-java.jar \
 
 CLASSPATH=	"${JARFILES:S,^,${JAVAJARDIR}/,}:${JYTHON_PREFIX}/${JYTHON_JAR}:${JAR_DEPENDS:S,^,${JAVALIBDIR}/,:S| |:|g}"
 
+NO_STAGE=	yes
 do-configure:
 	@${SED} -e 's|%%CLASSPATH%%|${CLASSPATH:C,[[:space:]],:,g}|g'	\
 		-e 's|%%JAVA_VERSION%%|${JAVA_VERSION}|g'	\
