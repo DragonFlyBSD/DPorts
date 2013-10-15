@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/mail/dk-milter/Makefile,v 1.35 2013/01/26 16:56:10 svnexp Exp $
+# $FreeBSD: mail/dk-milter/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	dk-milter
 PORTVERSION=	1.0.2
@@ -8,6 +8,8 @@ MASTER_SITES=	SF/${PORTNAME}/DomainKeys%20Milter/${PORTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Domainkeys milter for Sendmail
+
+NO_STAGE=	yes
 
 USE_RC_SUBR=	milter-dk
 USE_OPENSSL=	yes

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/dk-milter/files/milter-dk.in,v 1.2 2012/11/17 05:59:01 svnexp Exp $
+# $FreeBSD: mail/dk-milter/files/milter-dk.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: milter-dk

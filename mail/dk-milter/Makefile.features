@@ -4,7 +4,7 @@
 # This file is used to tune build time options.
 # Please refer FEATURES file distributed with the source for details.
 #
-# $FreeBSD: ports/mail/dk-milter/Makefile.features,v 1.3 2012/11/17 05:59:01 svnexp Exp $
+# $FreeBSD: mail/dk-milter/Makefile.features 300896 2012-07-14 13:54:48Z beat $
 #
 
 .if defined(WITH_ANTICIPATE_SENDMAIL_MUNGE) && !defined(WITHOUT_ANTICIPATE_SENDMAIL_MUNGE)
