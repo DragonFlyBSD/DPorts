@@ -1,5 +1,5 @@
 # Created by: rea-fbsd@codelabs.ru
-# $FreeBSD: net-mgmt/pnp/Makefile 327302 2013-09-14 16:38:28Z az $
+# $FreeBSD: net-mgmt/pnp/Makefile 328653 2013-09-29 09:00:04Z lme $
 
 PORTNAME=	pnp
 PORTVERSION=	0.6.18
@@ -8,13 +8,13 @@ MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=pnp4nagios/PNP-0.6
 DISTNAME=	pnp4nagios-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
-MAINTAINER=	rea@FreeBSD.org
-COMMENT=	Nagios performance data collector and grapher
+MAINTAINER?=	rea@FreeBSD.org
+COMMENT?=	Nagios performance data collector and grapher
 
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/rrdtool:${PORTSDIR}/databases/rrdtool
-RUN_DEPENDS=	${LOCALBASE}/bin/rrdtool:${PORTSDIR}/databases/rrdtool \
+RUN_DEPENDS?=	${LOCALBASE}/bin/rrdtool:${PORTSDIR}/databases/rrdtool \
 		nagios:${PORTSDIR}/net-mgmt/nagios
 
 MAKE_JOBS_UNSAFE=	yes
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	PDF
 OPTIONS_DEFAULT=	PDF
 PDF_DESC=	Use built-in fpdf library to produce PDF views
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_PHP=	gd iconv json pcre simplexml sockets xml zlib
