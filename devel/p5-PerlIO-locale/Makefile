@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-PerlIO-locale/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-PerlIO-locale/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PerlIO-locale
 PORTVERSION=	0.08
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	PerlIO::locale.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
