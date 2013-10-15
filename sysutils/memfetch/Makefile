@@ -1,9 +1,5 @@
-# New ports collection makefile for:    memfetch
-# Date created:         		25 Nov 2004
-# Whom:					Yonatan <onatan@gmail.com>
-#
-# $FreeBSD: sysutils/memfetch/Makefile 326574 2013-09-07 07:11:48Z az $
-#
+# Created by: Yonatan <onatan@gmail.com>
+# $FreeBSD: sysutils/memfetch/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	memfetch
 PORTVERSION=	0.05b
@@ -21,6 +17,7 @@ USE_PERL5=	run
 
 CFLAGS+=	${CPPFLAGS}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mffind.pl ${PREFIX}/bin
