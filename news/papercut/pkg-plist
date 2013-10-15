@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/news/papercut/pkg-plist,v 1.6 2012/11/17 06:00:43 svnexp Exp $
+@comment $FreeBSD: news/papercut/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/papercut
 %%DATADIR%%/papercut.py
 %%DATADIR%%/papercut_cache.py
