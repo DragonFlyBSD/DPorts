@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pgworksheet
-# Date created:				03 Mar. 2005
-# Whom:					Henri Michelon
-#
-# $FreeBSD: ports/databases/pgworksheet/Makefile,v 1.16 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Henri Michelon
+# $FreeBSD: databases/pgworksheet/Makefile 328563 2013-09-28 11:13:15Z mva $
 
 PORTNAME=	pgworksheet
 PORTVERSION=	1.9
@@ -19,8 +15,9 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pyPgSQL/libpq/__init__.py:${PORTSDIR}/database
 USE_PGSQL=	yes
 USE_BZIP2=	yes
 USE_GNOME=	pygtk2
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGVERSION=	1.9
 
 post-patch:
