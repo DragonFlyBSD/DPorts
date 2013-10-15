@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: misc/py-qt4-demo/Makefile 311475 2013-02-03 18:16:07Z makc $
+# $FreeBSD: misc/py-qt4-demo/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	demo
 PORTVERSION=	${PYQT4_VERSION}
@@ -22,6 +22,7 @@ OPTIONSFILE?=	${PORT_DBDIR}/py-qt4-${PORTNAME}/options
 EXAMPLESDIR=	${PREFIX}/share/examples/py-qt4
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
