@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Core/Makefile 326198 2013-09-03 18:43:02Z mm $
+# $FreeBSD: devel/pear-Horde_Core/Makefile 330034 2013-10-10 21:56:48Z mm $
 
 PORTNAME=	Horde_Core
-PORTVERSION=	2.8.0
+PORTVERSION=	2.9.0
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
@@ -63,6 +63,7 @@ USE_HORDE_RUN=	Horde_Role \
 # Not required but wanted
 USE_HORDE_RUN+=	Horde_Routes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_KOLAB)
