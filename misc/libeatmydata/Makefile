@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libeatmydata
-# Date created:				Sat Jan 16 20:41:35 CET 2010
-# Whom:					Attila Nagy <bra@fsn.hu>
-#
-# $FreeBSD: ports/misc/libeatmydata/Makefile,v 1.2 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: Attila Nagy <bra@fsn.hu>
+# $FreeBSD: misc/libeatmydata/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	libeatmydata
 PORTVERSION=	9
@@ -21,6 +17,7 @@ PLIST_FILES=	lib/libeatmydata.so \
 		lib/libeatmydata.so.1 \
 		lib/libeatmydata.so.1.0
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libeatmydata.so.1.0 ${PREFIX}/lib
 
