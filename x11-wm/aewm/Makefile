@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11-wm/aewm/Makefile,v 1.29 2013/01/27 06:41:43 svnexp Exp $
+# $FreeBSD: x11-wm/aewm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	aewm
 PORTVERSION=	1.2.7
@@ -23,6 +23,7 @@ PORTDOCS=	DESIGN LICENSE NEWS README TODO
 GTKCLIENTS=	aemenu-gtk aepanel-gtk
 XAWCLIENTS=	aemenu-xaw aepanel-xaw aesession set-gnome-pda
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgtk20} != ""
