@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: security/medusa/Makefile 316749 2013-04-28 21:02:39Z bapt $
+# $FreeBSD: security/medusa/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	medusa
 PORTVERSION=	2.1
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--enable-module-ncp=no --enable-module-afp=no
 
 MAN1=		medusa.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
