@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-Filter-Crypto/Makefile 326068 2013-09-02 19:32:09Z az $
+# $FreeBSD: security/p5-Filter-Crypto/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Filter-Crypto
 PORTVERSION=	2.03
@@ -22,4 +22,5 @@ MAN1=		crypt_file.1
 MAN3=		Filter::Crypto.3 Filter::Crypto::CryptFile.3 \
 		Filter::Crypto::Decrypt.3 PAR::Filter::Crypto.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
