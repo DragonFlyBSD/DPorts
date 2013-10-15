@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: graphics/glitz/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: graphics/glitz/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/glitz/Makefile,v 1.8 2006/09/10 00:51:10 mezz Exp $
 
 PORTNAME=	glitz
@@ -20,4 +20,5 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
