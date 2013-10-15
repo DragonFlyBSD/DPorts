@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: textproc/p5-MARC-XML/Makefile 326939 2013-09-11 05:29:55Z az $
+# $FreeBSD: textproc/p5-MARC-XML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	MARC-XML
 PORTVERSION=	1.0.1
@@ -21,4 +21,5 @@ MAN3=		MARC::File::XML.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
