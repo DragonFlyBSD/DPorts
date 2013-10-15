@@ -1,5 +1,5 @@
 # Created by: Ryan T. Dean <rtdean@cytherianage.net>
-# $FreeBSD: databases/jrrd/Makefile 325133 2013-08-21 14:07:52Z wg $
+# $FreeBSD: databases/jrrd/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	jrrd
 PORTVERSION=	1.0.6
@@ -24,6 +24,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/jrrd.jar \
 		lib/libjrrd.la \
 		lib/libjrrd.so
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG}	""
 	@${ECHO_MSG}	"Installation settings:"
