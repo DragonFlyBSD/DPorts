@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: security/gringotts/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: security/gringotts/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gringotts
 PORTVERSION=	1.2.10
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^install-data-am:/s|install-DsktpDATA|| ; \
