@@ -1,9 +1,5 @@
-# Ports collection makefile for:	klat4
-# Date created:			14 September 2008
-# Whom:				laddassm
-#
-# $FreeBSD: editors/klat4/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: laddassm
+# $FreeBSD: editors/klat4/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	klat4
 PORTVERSION=	0.6.1
@@ -21,4 +17,5 @@ USES=		cmake
 USE_KDE4=	kdeprefix kdelibs automoc4
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
