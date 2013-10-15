@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xgospel
-# Date created:        13 November 2001
-# Whom:                Shao Zhang <shaoz@asia.com>
-#
-# $FreeBSD: ports/games/xgospel/Makefile,v 1.14 2012/11/17 05:57:57 svnexp Exp $
+# Created by: Shao Zhang <shaoz@asia.com>
+# $FreeBSD: games/xgospel/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xgospel
 PORTVERSION=	1.12d
@@ -21,6 +18,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 CONFIGURE_ARGS=	--with-x --with-xpm --with-xaw3d
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,#ifndef _POSIX_SOURCE,#if 0," \
 		${WRKSRC}/connect.c ${WRKSRC}/relay.c ${WRKSRC}/relog.c \
