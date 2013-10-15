@@ -1,9 +1,5 @@
-# New ports collection makefile for:	HTML::Template::Pluggable
-# Date created:				21 March 2006
-# Whom:					Espen Tagestad <espen@tagestad.no>
-#
-# $FreeBSD: www/p5-HTML-Template-Pluggable/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# Created by: Espen Tagestad <espen@tagestad.no>
+# $FreeBSD: www/p5-HTML-Template-Pluggable/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Template-Pluggable
 PORTVERSION=	0.17
@@ -26,4 +22,5 @@ USE_PERL5=	configure
 MAN3=		HTML::Template::Pluggable.3 \
 		HTML::Template::Plugin::Dot.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
