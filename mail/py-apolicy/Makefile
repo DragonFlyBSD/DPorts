@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-apolicy
-# Date created:				24 November 2008
-# Whom:	      				Chifeng QU <chifeng@gmail.com>
-#
-# $FreeBSD: ports/mail/py-apolicy/Makefile,v 1.5 2012/11/17 05:59:11 svnexp Exp $
-#
+# Created by: Chifeng QU <chifeng@gmail.com>
+# $FreeBSD: mail/py-apolicy/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	apolicy
 PORTVERSION=	0.73
@@ -30,6 +26,7 @@ SUB_LIST=	PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR} \
 		PYTHON_CMD=${PYTHON_CMD}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/etc|${PREFIX}/etc|' ${WRKSRC}/setup.py
 
