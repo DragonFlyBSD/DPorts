@@ -1,5 +1,5 @@
 # Created by: Will Andrews <will@FreeBSD.org>
-# $FreeBSD: www/asp2php/Makefile 323821 2013-07-28 12:02:52Z danfe $
+# $FreeBSD: www/asp2php/Makefile 328567 2013-09-28 13:34:04Z erwin $
 
 PORTNAME=	asp2php
 PORTVERSION=	0.76.26
@@ -34,9 +34,9 @@ post-patch:
 		 s|`gtk-config|`\$$\{GTK_CONFIG\}|g'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/asp2php ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/asp2php ${STAGEDIR}${PREFIX}/bin
 .if defined(HAVE_GTK)
-	${INSTALL_PROGRAM} ${WRKSRC}/gtkasp2php ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/gtkasp2php ${STAGEDIR}${PREFIX}/bin
 .endif
 
 .include <bsd.port.post.mk>
