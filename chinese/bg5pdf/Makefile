@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bg5pdf
-# Date created:		17 June 1998
-# Whom:					Shen Chuan-Hsing
-#
-# $FreeBSD: ports/chinese/bg5pdf/Makefile,v 1.23 2012/11/17 05:54:55 svnexp Exp $
-#
+# Created by: Shen Chuan-Hsing
+# $FreeBSD: chinese/bg5pdf/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
 
 PORTNAME=	bg5pdf
 PORTVERSION=	1.0.0
@@ -29,12 +25,13 @@ do-build:
 		-I${PYTHON_INCLUDEDIR} -L${PREFIX}/lib -lpdf -o ${WRKSRC}/bg5pdflib.so
 
 do-install:
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/bg5pdf ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/gbpdf ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bg5pdflib.so ${PYTHON_SITELIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/test.big5 ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/test.big5.pdf ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/genTest.py ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/bg5pdf ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/gbpdf ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bg5pdflib.so ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/test.big5 ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/test.big5.pdf ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/genTest.py ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
