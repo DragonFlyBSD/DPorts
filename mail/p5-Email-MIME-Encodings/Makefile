@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-MIME-Encodings/Makefile 325800 2013-08-31 11:53:57Z lth $
+# $FreeBSD: mail/p5-Email-MIME-Encodings/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-MIME-Encodings
 PORTVERSION=	1.315
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Email::MIME::Encodings.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
