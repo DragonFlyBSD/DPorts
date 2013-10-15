@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tcping
-# Date created:		2003-12-16
-# Whom:			Dryice Liu
-#
-# $FreeBSD: ports/net/tcping/Makefile,v 1.10 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: Dryice Liu
+# $FreeBSD: net/tcping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcping
 PORTVERSION=	1.3.5
@@ -16,6 +12,7 @@ COMMENT=	Do a TCP connect to the given IP/port combination
 
 DOCS=		README
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 	${CC} ${CFLAGS} -DHAVE_HSTRERROR -o tcping tcping.c

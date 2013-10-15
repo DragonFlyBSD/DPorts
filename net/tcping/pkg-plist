@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/tcping/pkg-plist,v 1.2 2012/11/17 06:00:22 svnexp Exp $
+@comment $FreeBSD: net/tcping/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/tcping
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
