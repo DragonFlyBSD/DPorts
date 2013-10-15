@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/deskutils/ganttproject/Makefile,v 1.17 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: deskutils/ganttproject/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	ganttproject
 DISTVERSION=	2.1-m3
@@ -22,6 +22,7 @@ CPIOARGS=	--quiet -pdum -R
 
 SUB_FILES=	${PORTNAME}.sh
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
