@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: ports/chinese/tintin++/Makefile,v 1.15 2012/11/17 05:54:58 svnexp Exp $
+# $FreeBSD: chinese/tintin++/Makefile 329911 2013-10-09 16:48:21Z sunpoet $
 
 CATEGORIES=	chinese
 
