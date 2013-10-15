@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtk20-reference/Makefile 318868 2013-05-23 13:02:32Z kwm $
+# $FreeBSD: x11-toolkits/gtk20-reference/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTREVISION=	1
 
@@ -7,6 +7,7 @@ BOOKS=		gdk gtk
 
 PLIST=		${.CURDIR}/pkg-plist
 
+NO_STAGE=	yes
 do-install:
 .for d in ${BOOKS}
 	if [ -d ${REFERENCE_SRC}/${d}/html ]; then \
