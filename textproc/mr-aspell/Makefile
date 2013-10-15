@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mr-aspell
-# Date created:                         02 June 2005
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/mr-aspell/Makefile,v 1.7 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/mr-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-mr-0.10-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Marathi dictionary
 
 DICT=	 	mr
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
