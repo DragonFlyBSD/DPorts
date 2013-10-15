@@ -1,9 +1,5 @@
-# New ports collection makefile for:	imgv
-# Date created:		2007-02-03
-# Whom:			Simon Olofsson <simon@olofsson.de>
-#
-# $FreeBSD: ports/graphics/imgv/Makefile,v 1.7 2012/11/17 05:58:09 svnexp Exp $
-#
+# Created by: Simon Olofsson <simon@olofsson.de>
+# $FreeBSD: graphics/imgv/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imgv
 PORTVERSION=	3.1.6
@@ -20,6 +16,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game \
 USE_PYTHON=	2.2+
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
