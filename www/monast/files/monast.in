@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/monast/files/monast.in,v 1.4 2012/11/17 06:02:43 svnexp Exp $
+# $FreeBSD: www/monast/files/monast.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: monast
 # BEFORE: LOGIN
