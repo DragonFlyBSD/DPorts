@@ -1,9 +1,5 @@
-# Ports collection makefile for:	sudoku_solver
-# Date created:			Apr 9, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/games/sudoku_solver/Makefile,v 1.4 2012/11/17 05:57:53 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: games/sudoku_solver/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sudoku_solver
 PORTVERSION=	1.20
@@ -20,6 +16,7 @@ ALL_TARGET=	# empty
 
 PLIST_FILES=	bin/sudoku_solver
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,^CC,#CC, ; s,^CFLAGS,#CFLAGS," \
 		${WRKSRC}/${MAKEFILE}
