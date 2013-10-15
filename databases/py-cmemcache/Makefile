@@ -1,9 +1,5 @@
-# New ports collection makefile for:    py-cmemcache
-# Date created:                         17 Jan 2009
-# Whom:                                 Qing Feng <qingfeng@douban.com>
-#
-# $FreeBSD: ports/databases/py-cmemcache/Makefile,v 1.4 2012/11/17 05:55:21 svnexp Exp $
-#
+# Created by: Qing Feng <qingfeng@douban.com>
+# $FreeBSD: databases/py-cmemcache/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	cmemcache
 PORTVERSION=	0.95
@@ -20,4 +16,5 @@ USE_BZIP2=	yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
