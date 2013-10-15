@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-ruledispatch
-# Date created:		15 December 2006
-# Whom:			Dryice Liu	<dryice@dryice.name>
-#
-# $FreeBSD: ports/devel/py-ruledispatch/Makefile,v 1.12 2012/11/17 05:56:50 svnexp Exp $
-#
+# Created by: Dryice Liu	<dryice@dryice.name>
+# $FreeBSD: devel/py-ruledispatch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	RuleDispatch
 PORTVERSION=	0.5.a1.r2506
@@ -27,4 +23,5 @@ PYEASYINSTALL_ARCHDEP=	yes
 
 PLIST_FILES+=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
