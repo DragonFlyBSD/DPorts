@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Role-HasWidgets/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: x11-toolkits/p5-Tk-Role-HasWidgets/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-Role-HasWidgets
 PORTVERSION=	1.112.380
@@ -23,4 +23,5 @@ USES=		perl5
 
 MAN3=		Tk::Role::HasWidgets.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
