@@ -1,9 +1,4 @@
-# New ports collection makefile for:	es-hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/es-hyphen/Makefile,v 1.7 2012/11/17 06:01:55 svnexp Exp $
-#
+# $FreeBSD: textproc/es-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2005.11.18
@@ -31,10 +26,10 @@ PLIST_FILES+=	%%DATADIR%%/hyph_${ALIAS}.dic
 .endfor
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_es_ES.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_es_ES.dic ${STAGEDIR}${DATADIR}/
 .for ALIAS in ${ESALIASES}
-	${LN} -s hyph_es_ES.dic ${DATADIR}/hyph_${ALIAS}.dic
+	${LN} -s hyph_es_ES.dic ${STAGEDIR}${DATADIR}/hyph_${ALIAS}.dic
 .endfor
 
 .include <bsd.port.mk>
