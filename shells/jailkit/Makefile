@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: shells/jailkit/Makefile 324765 2013-08-15 11:51:39Z danfe $
+# $FreeBSD: shells/jailkit/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	jailkit
 PORTVERSION=	2.15
@@ -32,6 +32,7 @@ MANCOMPRESSED=	yes
 
 PORTDOCS=	COPYRIGHT README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
