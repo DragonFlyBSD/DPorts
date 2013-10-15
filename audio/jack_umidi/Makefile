@@ -1,5 +1,5 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/jack_umidi/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/jack_umidi/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	jack_umidi
 PORTVERSION=	1.0.4
@@ -15,6 +15,7 @@ LICENSE=	BSD
 LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 MANCOMPRESSED=	yes
 MAN8=		jack_umidi.8
 
