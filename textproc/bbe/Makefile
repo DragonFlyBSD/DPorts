@@ -1,9 +1,5 @@
-# New ports collection makefile for:    bbe
-# Date created:                         8 November 2006
-# Whom:                                 Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: textproc/bbe/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: textproc/bbe/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	bbe
 PORTVERSION=	0.2.2
@@ -21,6 +17,7 @@ PLIST_FILES=	bin/${PORTNAME}
 DOCS=		AUTHORS ChangeLog README
 PORTDOCS=	bbe.html ${DOCS}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/${MAN1} ${MAN1PREFIX}/man/man1
