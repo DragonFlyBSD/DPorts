@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stalonetray
-# Date created:		Apr 6 2006
-# Whom:			Stepan Zastupov [RedChrom] <redchrom@gmail.com>
-#
-# $FreeBSD: ports/x11/stalonetray/Makefile,v 1.15 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Stepan Zastupov [RedChrom] <redchrom@gmail.com>
+# $FreeBSD: x11/stalonetray/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	stalonetray
 PORTVERSION=	0.8.1
@@ -26,6 +22,7 @@ PORTDOCS=	AUTHORS ChangeLog NEWS README TODO stalonetray.html
 PORTEXAMPLES=	stalonetrayrc.sample
 PLIST_FILES=	bin/stalonetray
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
