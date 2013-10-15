@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Monoceros/Makefile 324565 2013-08-11 01:55:13Z kuriyama $
+# $FreeBSD: www/p5-Monoceros/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Monoceros
 PORTVERSION=	0.19
@@ -28,4 +28,5 @@ USE_PERL5=	modbuild
 MAN3=	Monoceros.3 \
 	Plack::Middleware::MonocerosStatus.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
