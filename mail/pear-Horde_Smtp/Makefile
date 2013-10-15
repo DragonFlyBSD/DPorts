@@ -1,7 +1,7 @@
-# $FreeBSD: mail/pear-Horde_Smtp/Makefile 326198 2013-09-03 18:43:02Z mm $
+# $FreeBSD: mail/pear-Horde_Smtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Horde_Smtp
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.3
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	pear-
 
@@ -12,6 +12,7 @@ USE_HORDE_RUN=	Horde_Exception \
 		Horde_Mail \
 		Horde_Support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
