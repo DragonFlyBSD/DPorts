@@ -1,4 +1,4 @@
-# $FreeBSD: editors/calligra-l10n/Makefile 315684 2013-04-02 18:04:48Z avilla $
+# $FreeBSD: editors/calligra-l10n/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
@@ -30,6 +30,7 @@ uk_PORT=	ukrainian/calligra-l10n
 zh_CN_PORT=	chinese/calligra-l10n-zh_CN
 zh_TW_PORT=	chinese/calligra-l10n-zh_TW
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../misc/kde4-l10n/files/kde4-lang-names"
 nb_NAME=	Norwegian Bokmal
 
