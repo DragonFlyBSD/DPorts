@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org
-# $FreeBSD: net/ctrace/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net/ctrace/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ctrace
 PORTVERSION=	0.9
@@ -19,6 +19,7 @@ USES=		perl5
 MAN1=		ctrace.1
 PLIST_FILES=	sbin/ctrace
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ctrace ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/ctrace.man ${PREFIX}/man/man1/ctrace.1
