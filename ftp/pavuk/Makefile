@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ftp/pavuk/Makefile 316624 2013-04-26 16:39:14Z bapt $
+# $FreeBSD: ftp/pavuk/Makefile 329271 2013-10-04 08:52:32Z bapt $
 
 PORTNAME=	pavuk
 PORTVERSION=	0.9.35
@@ -23,6 +23,7 @@ MAN1=		pavuk.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -36,7 +37,6 @@ PLIST_SUB+=	NLS="@comment "
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgtk20}!=""
-PKGNAMESUFFIX=	-gtk
 USE_GNOME+=	gtk20
 .else
 CONFIGURE_ARGS+=	--disable-gtk
