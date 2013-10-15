@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/rox-memo/Makefile,v 1.26 2013/01/26 15:07:24 svnexp Exp $
+# $FreeBSD: deskutils/rox-memo/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	rox-memo
 PORTVERSION=	2.1
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/rox:${PORTSDIR}/x11-fm/rox-filer \
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} -m compileall ${WRKSRC}
 	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
