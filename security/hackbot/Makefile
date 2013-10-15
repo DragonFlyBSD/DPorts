@@ -1,5 +1,5 @@
 # Created by: mich@freebsdcluster.org
-# $FreeBSD: security/hackbot/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/hackbot/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	hackbot
 PORTVERSION=	2.21
@@ -15,6 +15,7 @@ USES=		perl5
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/etc|${DATADIR}|' ${WRKSRC}/hackbot.pl
 
