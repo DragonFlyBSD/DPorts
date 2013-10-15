@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: textproc/ro-hunspell/Makefile 315837 2013-04-16 16:13:11Z sunpoet $
+# $FreeBSD: textproc/ro-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	3.3.8
@@ -24,7 +23,7 @@ PLIST_FILES=	%%DATADIR%%/ro_RO.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/ro_RO.aff ${WRKSRC}/ro_RO.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/ro_RO.aff ${WRKSRC}/ro_RO.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
