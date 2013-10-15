@@ -1,8 +1,9 @@
 # Created by: smace
-# $FreeBSD: news/trn4/Makefile 323297 2013-07-19 14:28:59Z johans $
+# $FreeBSD: news/trn4/Makefile 329591 2013-10-06 15:22:10Z johans $
 
 PORTNAME=	trn
 PORTVERSION=	4.0.b77
+PKGNAMESUFFIX=	4
 CATEGORIES=	news
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}4
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.b/-test/}
@@ -12,9 +13,9 @@ COMMENT=	Version 4.0 of the threaded readnews newsreader
 
 CONFLICTS_INSTALL=trn-3.[0-9]* cnews-* s-news-[0-9]*
 
-NO_LATEST_LINK=	yes
 MAN1=		trn.1 Pnews.1 Rnmail.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
