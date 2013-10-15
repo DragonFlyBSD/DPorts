@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: astro/weatherspect/Makefile 327033 2013-09-12 06:03:58Z az $
+# $FreeBSD: astro/weatherspect/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	weatherspect
 PORTVERSION=	1.9
@@ -19,6 +19,7 @@ RUN_DEPENDS=	p5-Term-Animation>=0:${PORTSDIR}/devel/p5-Term-Animation \
 
 PORTSCOUT=	skipv:1.31	# Wrong versioning upstream
 
+NO_STAGE=	yes
 NO_BUILD=	yes
 USES=		perl5
 PLIST_FILES=	bin/weatherspect
