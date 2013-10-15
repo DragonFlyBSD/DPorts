@@ -1,5 +1,5 @@
 # Created by: mainland@apeiron.net
-# $FreeBSD: textproc/hs-lhs2tex/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: textproc/hs-lhs2tex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	lhs2tex
 PORTVERSION=	1.18.1
@@ -19,5 +19,6 @@ EXECUTABLE=	lhs2TeX
 
 MAN1=		lhs2TeX.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
