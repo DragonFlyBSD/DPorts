@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/py-apgl/Makefile 319567 2013-06-01 14:09:58Z wen $
+# $FreeBSD: math/py-apgl/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	apgl
 PORTVERSION=	0.7.3
@@ -17,4 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
