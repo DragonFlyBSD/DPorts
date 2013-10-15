@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-mcrypt
-# Date created:			Jul 21, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/py-mcrypt/Makefile,v 1.11 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/py-mcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	mcrypt
 PORTVERSION=	1.1
@@ -26,6 +21,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/mcrypt.so
 
+NO_STAGE=	yes
 pre-patch:
 	# put a missed terminating quote
 	${REINPLACE_CMD} -e '1136s,$$,\\,g' -e '1678s,$$,\\,g' ${WRKSRC}/mcrypt.c
