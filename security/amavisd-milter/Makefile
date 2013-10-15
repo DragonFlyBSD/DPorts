@@ -1,5 +1,5 @@
 # Created by: Petr Rehor <prehor@gmail.com>
-# $FreeBSD: security/amavisd-milter/Makefile 325174 2013-08-22 02:37:47Z bdrewery $
+# $FreeBSD: security/amavisd-milter/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	amavisd-milter
 PORTVERSION=	1.6.0
@@ -36,6 +36,7 @@ SUB_LIST=	AMAVISUSER=${AMAVISUSER} \
 
 PORTDOCS=	AUTHORS CHANGES INSTALL LICENSE README TODO
 
+NO_STAGE=	yes
 PLIST_FILES=	sbin/amavisd-milter
 PLIST_SUB=	RC_DIR=${RC_DIR} \
 		RC_SUFX=${RC_SUFX}
