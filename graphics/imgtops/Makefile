@@ -1,9 +1,5 @@
-# New ports collection makefile for:   imgtops
-# Date created:        17 Mar 2008
-# Whom:                Timothy Bourke <timbob@bigpond.com>
-#
-# $FreeBSD: ports/graphics/imgtops/Makefile,v 1.8 2012/11/17 05:58:09 svnexp Exp $
-#
+# Created by: Timothy Bourke <timbob@bigpond.com>
+# $FreeBSD: graphics/imgtops/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	imgtops
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ USE_PYDISTUTILS=	yes
 
 MAN1=		imgtops.1 epstoimg.1
 
+NO_STAGE=	yes
 post-install:
 	${CHMOD} 644 ${MANPREFIX}/man/man1/imgtops.1
 	${CHMOD} 644 ${MANPREFIX}/man/man1/epstoimg.1
