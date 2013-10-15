@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-clocks/intclock/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: x11-clocks/intclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	intclock
 PORTVERSION=	2.13
@@ -16,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$$zonedir/$$countryfile|/usr/share/misc/iso3166|' \
