@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: databases/p5-DBIx-Custom/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Custom/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Custom
 PORTVERSION=	0.2800
@@ -34,4 +34,5 @@ MAN3=		DBIx::Custom.3 \
 		DBIx::Custom::Util.3 \
 		DBIx::Custom::Where.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
