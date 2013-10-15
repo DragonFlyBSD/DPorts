@@ -1,5 +1,5 @@
 # Created by: Joe Clarke <marcus@marcuscom.com>
-# $FreeBSD: security/pam_ldap/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/pam_ldap/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pam_ldap
 PORTVERSION=	1.8.6
@@ -29,6 +29,7 @@ PORTDATA=	*.schema
 
 MAN5=		pam_ldap.5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${LOCALBASE}/bin/perl|' \
 	    	${WRKSRC}/vers_string
