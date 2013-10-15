@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/netspeed_applet/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: net/netspeed_applet/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #    $MCom: ports/net/netspeed_applet/Makefile,v 1.2 2007/05/19 21:36:17 marcus Exp $
 
 PORTNAME=	netspeed_applet
@@ -21,4 +21,5 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
