@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpqxx3/Makefile 326011 2013-09-02 15:26:23Z bapt $
+# $FreeBSD: databases/postgresql-libpqxx3/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libpqxx
 PORTVERSION=	3.1
@@ -25,4 +25,5 @@ CONFIGURE_ARGS=	--with-postgres=${LOCALBASE} \
 		--enable-shared \
 		--with-postgres-include=${LOCALBASE}/include/postgresql
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
