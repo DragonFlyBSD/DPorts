@@ -1,5 +1,5 @@
 # Created by: tmartin@andrew.cmu.edu
-# $FreeBSD: games/senken/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: games/senken/Makefile 329743 2013-10-07 23:03:12Z marino $
 
 PORTNAME=	senken
 PORTVERSION=	0.3.0
@@ -9,13 +9,15 @@ MASTER_SITES=	${MASTER_SITE_GENTOO}
 MASTER_SITE_SUBDIR=	distfiles
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A city simulation game
+COMMENT=	City simulation game
 
 USES=		pkgconfig
 USE_GNOME=	gtk20
 USE_SDL=	image sdl
 GNU_CONFIGURE=	yes
+LDFLAGS+=	-lm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-I/usr/X11R6/include||g  ; \
 		 s|-L/usr/X11R6/lib||g' ${WRKSRC}/configure
