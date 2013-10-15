@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: textproc/p5-XML-Mini/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-XML-Mini/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Mini
 PORTVERSION=	1.38
@@ -19,4 +19,5 @@ MAN3=	XML::Mini.3 XML::Mini::Document.3 XML::Mini::Element.3 \
 	XML::Mini::Element::Header.3 XML::Mini::Node.3 \
 	XML::Mini::TreeComponent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
