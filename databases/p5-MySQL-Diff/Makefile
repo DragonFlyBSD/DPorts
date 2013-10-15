@@ -1,5 +1,5 @@
 # Created by: Andrew McNaughton <andrew@scoop.co.nz>
-# $FreeBSD: databases/p5-MySQL-Diff/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/p5-MySQL-Diff/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	MySQL-Diff
 PORTVERSION=	0.43
@@ -24,6 +24,7 @@ MAN3=		MySQL::Diff.3 \
 		MySQL::Diff::Table.3 \
 		MySQL::Diff::Utils.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '1 s|/usr/bin/perl|${PERL}|' ${WRKSRC}/bin/mysqldiff
 
