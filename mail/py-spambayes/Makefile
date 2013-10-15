@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: mail/py-spambayes/Makefile 313404 2013-03-04 11:19:40Z lwhsu $
+# $FreeBSD: mail/py-spambayes/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spambayes
 PORTVERSION=	1.1b1
@@ -40,6 +40,7 @@ PORTDOCS=	CHANGELOG.txt \
 		utilities/ \
 		contrib/
 
+NO_STAGE=	yes
 post-extract:
 	@${CHMOD} -Rf u+w ${WRKSRC}
 
