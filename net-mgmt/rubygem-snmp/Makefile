@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@FreeBSD.org>
-# $FreeBSD: net-mgmt/rubygem-snmp/Makefile 321653 2013-06-23 20:40:21Z swills $
+# $FreeBSD: net-mgmt/rubygem-snmp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	snmp
 PORTVERSION=	1.1.1
@@ -13,4 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
