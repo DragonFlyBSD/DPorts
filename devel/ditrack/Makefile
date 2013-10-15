@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/ditrack/Makefile,v 1.13 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: devel/ditrack/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	ditrack
 PORTVERSION=	0.8
@@ -20,6 +20,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	DITrack
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:

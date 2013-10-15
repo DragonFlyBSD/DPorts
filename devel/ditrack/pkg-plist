@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/ditrack/pkg-plist,v 1.7 2012/11/17 05:55:40 svnexp Exp $
+@comment $FreeBSD: devel/ditrack/pkg-plist 307110 2012-11-06 23:31:28Z pawel $
 bin/dt
 bin/dt-createdb
 %%PYTHON_SITELIBDIR%%/DITrack/Backend/__init__.py
