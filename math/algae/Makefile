@@ -1,5 +1,5 @@
 # Created by: Michael Neumann <mneumann@ntecs.de>
-# $FreeBSD: math/algae/Makefile 324425 2013-08-09 10:00:56Z danfe $
+# $FreeBSD: math/algae/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	algae
 PORTVERSION=	4.3.6
@@ -25,6 +25,7 @@ FORTRANLIBS=	gfortranbegin gfortran
 MAN1=		${PORTNAME}.1
 INFO=		${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,<malloc\.h>,<stdlib.h>,' \
 		${WRKSRC}/src/mem.h \
