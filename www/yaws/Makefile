@@ -1,4 +1,4 @@
-# $FreeBSD: www/yaws/Makefile 316359 2013-04-23 14:53:51Z olgeni $
+# $FreeBSD: www/yaws/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yaws
 PORTVERSION=	1.96
@@ -27,6 +27,7 @@ SUB_FILES=	pkg-message
 
 CONFIGURE_ARGS+=--prefix=${PREFIX} --localstatedir=/var
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
