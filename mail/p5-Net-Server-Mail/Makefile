@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Server-Mail
-# Date created:				6th February 2004
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: mail/p5-Net-Server-Mail/Makefile 326249 2013-09-04 06:06:59Z az $
-#
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: mail/p5-Net-Server-Mail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net-Server-Mail
 PORTVERSION=	0.18
@@ -25,4 +21,5 @@ MAN3=		Net::Server::Mail.3 \
 		Net::Server::Mail::LMTP.3 \
 		Net::Server::Mail::SMTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
