@@ -1,8 +1,5 @@
-# New ports collection makefile for:	myphpmoney
-# Date created:				Sun Mar 09, 2003
-# Whom:					courou <courou@users.sourceforge.net>
-#
-# $FreeBSD: ports/finance/myphpmoney/Makefile,v 1.9 2012/11/17 05:57:25 svnexp Exp $
+# Created by: courou <courou@users.sourceforge.net>
+# $FreeBSD: finance/myphpmoney/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=		myphpmoney
 PORTVERSION=		1.3.r3
@@ -25,6 +22,7 @@ NO_BUILD=		yes
 
 PLIST_SUB+=		INSTALLDIR=${INSTALLDIR:S,^${PREFIX}/,,}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${INSTALLDIR}
 	cd ${WRKSRC}; ${FIND} . \
