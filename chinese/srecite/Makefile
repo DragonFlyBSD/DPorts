@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/srecite/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: chinese/srecite/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	srecite
 PORTVERSION=	0.6.2
@@ -23,6 +23,7 @@ USE_GNOME=	gnomeprefix libgnomeui
 
 WORDBOOKS_PATH=	${PREFIX}/share/${PORTNAME}/wordbooks
 
+NO_STAGE=	yes
 post-install:
 	cd ${WRKDIR}/wordbooks && ${INSTALL_DATA} * ${WORDBOOKS_PATH}
 	${INSTALL_DATA} ${FILESDIR}/srecite.desktop ${PREFIX}/share/applications
