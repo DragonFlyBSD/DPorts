@@ -1,4 +1,4 @@
-# $FreeBSD: security/fbopenssl/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/fbopenssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	fbopenssl
 PORTVERSION=	0.0.4
@@ -19,6 +19,7 @@ PORTDOCS=	readme.txt
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
