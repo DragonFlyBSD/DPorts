@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ftp/weex/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: ftp/weex/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	weex
 PORTVERSION=	2.6.1.5
@@ -18,6 +18,7 @@ MAN1=		weex.1
 
 OPTIONS_DEFINE=	DOCS NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
