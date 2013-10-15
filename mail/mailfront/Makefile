@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: mail/mailfront/Makefile 318542 2013-05-19 16:39:01Z rene $
+# $FreeBSD: mail/mailfront/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailfront
 PORTVERSION=	1.21
@@ -29,6 +29,7 @@ MODULES_DIR=	${PREFIX}/libexec/${PORTNAME}
 
 DOCS=		NEWS README TODO *.html
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 ALL_TARGET=	all
