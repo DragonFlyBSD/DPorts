@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: audio/hs-ALUT/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: audio/hs-ALUT/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	ALUT
 PORTVERSION=	2.2.0.0
@@ -12,6 +12,7 @@ COMMENT=	Binding for the OpenAL Utility Toolkit
 LICENSE=	BSD
 
 USE_CABAL=	OpenAL StateVar
+NO_STAGE=	yes
 USE_OPENAL=	al alut
 
 INSTALL_PORTEXAMPLES=	@(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
