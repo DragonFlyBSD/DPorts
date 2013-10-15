@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-readline/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: devel/pure-readline/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pure-readline
 PORTVERSION=	0.1
@@ -14,5 +14,6 @@ NO_PURE_EXAMPLES=	yes
 PLIST_FILES=	lib/pure/readline.pure \
 		lib/pure/readline.so
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
 .include <bsd.port.mk>
