@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: mail/nullmailer/Makefile 322694 2013-07-10 13:37:17Z wg $
+# $FreeBSD: mail/nullmailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	nullmailer
 PORTVERSION=	1.13
@@ -45,6 +45,7 @@ MAN8=	nullmailer-queue.8 nullmailer-send.8
 
 OPTIONS_DEFINE=	GNUTLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
