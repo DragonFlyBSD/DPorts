@@ -1,9 +1,5 @@
-# Ports collection makefile for:  Ingo
-# Date created:			  Dec 3, 2004
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: mail/horde3-ingo/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: mail/horde3-ingo/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	ingo
 PORTVERSION=	1.2.6
@@ -16,6 +12,7 @@ MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Email-filter management application
 
 #-----------------------------------------------------------------------
+NO_STAGE=	yes
 # You may define this option:
 #
 # - WITH_SIEVE	: if you run timsieved (with Cyrus).
