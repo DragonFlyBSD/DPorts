@@ -1,5 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@outlook.com>
-# $FreeBSD: ports/sysutils/loganalyzer/Makefile,v 1.16 2013/02/26 04:49:23 svnexp Exp $
+# $FreeBSD: sysutils/loganalyzer/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	loganalyzer
 PORTVERSION=	3.6.3
@@ -27,6 +27,7 @@ USE_PHP=	session pdo gd xml zlib
 WANT_PHP_WEB=	YES
 DEFAULT_PHP_VER=5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHP_MYSQL}
