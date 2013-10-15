@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-AnyEvent-Subprocess/Makefile 326636 2013-09-07 14:07:59Z az $
+# $FreeBSD: devel/p5-AnyEvent-Subprocess/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyEvent-Subprocess
 PORTVERSION=	1.102912
@@ -69,4 +69,5 @@ MAN3=		AnyEvent::Subprocess.3 \
 		AnyEvent::Subprocess::Running::Delegate::Timeout.3 \
 		AnyEvent::Subprocess::Types.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
