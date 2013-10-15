@@ -1,5 +1,5 @@
 # Created by: Martin Blapp
-# $FreeBSD: mail/up-imapproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/up-imapproxy/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	imapproxy
 PORTVERSION=	1.2.7
@@ -30,6 +30,7 @@ SUB_FILES=	pkg-message
 DOCS=		ChangeLog README README.debian README.known_issues README.ssl
 SBIN=		in.imapproxyd pimpstat
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOVECOT}
