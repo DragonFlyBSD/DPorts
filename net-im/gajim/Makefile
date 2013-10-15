@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: net-im/gajim/Makefile 325659 2013-08-30 03:51:10Z rm $
+# $FreeBSD: net-im/gajim/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	gajim
 PORTVERSION=	0.15.4
@@ -39,6 +39,7 @@ PORTDOCS=	AUTHORS ChangeLog README.html
 OPTIONS_SUB=	yes
 NLS_USES=	gettext
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MNLS}
