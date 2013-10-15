@@ -1,9 +1,5 @@
-# New ports collection makefile for:   speedbar
-# Date created:                29 December 2001
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/editors/speedbar/Makefile,v 1.24 2012/11/17 05:57:18 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: editors/speedbar/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	speedbar
 PORTVERSION=	0.14.b4
@@ -32,6 +28,7 @@ MUST_BE_RECOMPILED=	gud.el info.el rmail.el vhdl-mode.el
 
 EMACS_ARGS=	 -batch -l speedbar-compile-script -f batch-byte-compile
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "New version of speedbar is now in devel/cedet."
