@@ -1,5 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: textproc/simplehtmldom/Makefile 320355 2013-06-09 17:27:04Z miwi $
+# $FreeBSD: textproc/simplehtmldom/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		simplehtmldom
 DISTVERSION=		1.5
@@ -23,6 +23,7 @@ DEFAULT_PHP_VER=	5
 SUB_FILES+=		pkg-message
 SUB_LIST+=		DATADIR=${DATADIR} PREFIX=${PREFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
