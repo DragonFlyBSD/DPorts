@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: graphics/p5-Image-Caa/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Image-Caa/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Caa
 PORTVERSION=	1.01
@@ -18,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		Image::Caa.3
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/demos/* ${EXAMPLESDIR}
