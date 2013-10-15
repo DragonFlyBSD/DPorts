@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/scim-hangul/Makefile 321160 2013-06-17 23:04:51Z jkim $
+# $FreeBSD: korean/scim-hangul/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	scim-hangul
 PORTVERSION=	0.4.0
@@ -20,6 +20,7 @@ USES=		pkgconfig
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
