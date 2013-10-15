@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/irc/p5-Parse-IRC/Makefile,v 1.6 2012/12/04 08:54:03 svnexp Exp $
+# $FreeBSD: irc/p5-Parse-IRC/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	Parse-IRC
 PORTVERSION=	1.20
@@ -13,10 +13,12 @@ COMMENT=	Parser for the IRC protocol
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::IRC.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501600
