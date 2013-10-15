@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AI-Genetic
-# Date created:				19 Feb 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: math/p5-AI-Genetic/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-AI-Genetic/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	AI-Genetic
 PORTVERSION=	0.05
@@ -23,4 +19,5 @@ MAN3=	AI::Genetic.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
