@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mirage/Makefile 318781 2013-05-22 17:42:46Z pawel $
+# $FreeBSD: graphics/mirage/Makefile 328532 2013-09-27 22:56:06Z pawel $
 
 PORTNAME=	mirage
 PORTVERSION=	0.9.5.2
@@ -19,6 +19,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Mirage
 
+PORTDOCS=	CHANGELOG README TODO TRANSLATORS
 PORT_VERBS=	${PORTNAME} imgfuncs
 
 OPTIONS_DEFINE=	DOCS GNOME
@@ -34,11 +35,7 @@ post-patch:
 		's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/setup.py
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for file in CHANGELOG README TODO TRANSLATORS
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
-.endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
