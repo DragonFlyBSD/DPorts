@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ssid
-# Date created:		2011-02-15
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/ssid/Makefile,v 1.2 2012/11/17 06:01:46 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: sysutils/ssid/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	ssid
 PORTVERSION=	0.1
