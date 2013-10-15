@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <bacon@smithers.neuro.mcw.edu>
-# $FreeBSD: science/nifticlib/Makefile 323814 2013-07-28 08:32:18Z danfe $
+# $FreeBSD: science/nifticlib/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	nifticlib
 PORTVERSION=	1.1.0
@@ -13,6 +13,7 @@ USES=		gmake
 
 MAN1=		nifticlib.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/include depend.mk/-&/' \
 		${WRKSRC}/fsliolib/Makefile ${WRKSRC}/nifticdf/Makefile \
