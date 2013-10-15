@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-gitit/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-gitit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	gitit
 PORTVERSION=	0.10.3.1
@@ -20,5 +20,6 @@ USE_CABAL=	base64-bytestring>=0.1 blaze-html>=0.4 cgi ConfigFile>=1 \
 
 EXECUTABLE=	expireGititCache gitit
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
