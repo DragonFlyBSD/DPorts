@@ -1,5 +1,5 @@
 # Created by: <benlutz@datacomm.ch>
-# $FreeBSD: games/freedroid/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/freedroid/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	freedroid
 PORTVERSION=	1.0.2
@@ -25,6 +25,7 @@ DESKTOP_ENTRIES=	"Freedroid Classic" "${COMMENT}" \
 
 MAN6=		freedroid.6
 
+NO_STAGE=	yes
 post-extract:
 .for d in graphics map sound
 	@${FIND} ${WRKSRC}/${d} -type f -name "Makefile*" -print0 | \
