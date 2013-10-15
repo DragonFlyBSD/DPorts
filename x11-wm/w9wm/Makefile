@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: x11-wm/w9wm/Makefile 322010 2013-06-28 22:57:16Z bapt $
+# $FreeBSD: x11-wm/w9wm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	w9wm
 PORTVERSION=	0.4.2
@@ -18,6 +18,7 @@ USE_XORG=	x11 xext
 MAN1=		w9wm.1
 PLIST_FILES=	bin/w9wm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/malloc\.h/d' ${WRKSRC}/client.c
 
