@@ -2,7 +2,7 @@
 +++ Makefile	Tue Apr  1 23:23:43 2003
 @@ -0,0 +1,26 @@
 +# Makefile for Tetris
-+# $FreeBSD: ports/games/bsdtris/files/patch-Makefile,v 1.2 2012/11/17 05:57:33 svnexp Exp $
++# $FreeBSD: /tmp/pcvs/ports/games/bsdtris/files/patch-Makefile,v 1.1 2003-04-02 13:02:40 edwin Exp $
 +
 +TMPLDFLAGS+= -lcurses -ltermcap
 +SRCS= screen.c shapes.c input.c tetris.c scores.c

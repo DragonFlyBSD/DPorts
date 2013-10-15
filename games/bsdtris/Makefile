@@ -1,9 +1,5 @@
-# Ports collection makefile for:  bsdtris
-# Date created:	                  01 Apr 2003
-# Whom:                           Yonatan <onatan@gmail.com>
-#
-# $FreeBSD: ports/games/bsdtris/Makefile,v 1.6 2012/11/17 05:57:33 svnexp Exp $
-#
+# Created by: Yonatan <onatan@gmail.com>
+# $FreeBSD: games/bsdtris/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bsdtris
 PORTVERSION=	1.1
@@ -18,6 +14,7 @@ NO_WRKSUBDIR=	yes
 
 MAN6=		bsdtris.6
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -E "s|%%PREFIX%%|${PREFIX}|" ${WRKSRC}/pathnames.h
 

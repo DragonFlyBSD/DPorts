@@ -1,2 +1,2 @@
-@comment $FreeBSD: ports/games/bsdtris/pkg-plist,v 1.2 2012/11/17 05:57:33 svnexp Exp $
+@comment $FreeBSD: /tmp/pcvs/ports/games/bsdtris/pkg-plist,v 1.1 2003-04-02 13:02:40 edwin Exp $
 bin/bsdtris
