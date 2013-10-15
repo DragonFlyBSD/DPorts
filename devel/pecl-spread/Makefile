@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/pecl-spread/Makefile 313372 2013-03-03 18:12:06Z ohauer $
+# $FreeBSD: devel/pecl-spread/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	spread
 PORTVERSION=	2.1.0
@@ -25,4 +25,5 @@ IGNORE_WITH_PHP=4
 
 CONFIGURE_ARGS+=--with-spread=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
