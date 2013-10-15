@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	bibcursed
-# Date created:			Aug 11, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/print/bibcursed/Makefile,v 1.8 2012/11/17 06:00:48 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: print/bibcursed/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	bibcursed
 PORTVERSION=	2.0.1
@@ -21,6 +16,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}; ${CC} ${CFLAGS} ${PORTNAME}.c -o ${PORTNAME} -lncurses
 
