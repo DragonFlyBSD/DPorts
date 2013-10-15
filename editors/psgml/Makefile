@@ -1,5 +1,5 @@
 # Created by: Shigeyuki Fukushima <shige@FreeBSD.org>
-# $FreeBSD: editors/psgml/Makefile 319754 2013-06-03 05:22:26Z hrs $
+# $FreeBSD: editors/psgml/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	psgml
 PORTVERSION=	1.3.2
@@ -31,6 +31,7 @@ INFO=		psgml psgml-api
 PSGML_STARTUPEL=	psgml-startup.el
 PSGML_LISPDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/psgml
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_PORT_NAME} == xemacs21-mule
