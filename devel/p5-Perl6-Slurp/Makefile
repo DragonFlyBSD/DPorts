@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl6-Slurp/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Perl6-Slurp/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
 
 PORTNAME=	Perl6-Slurp
 PORTVERSION=	0.05.1003
@@ -19,7 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Perl6::Slurp.3
 
 .include <bsd.port.mk>
