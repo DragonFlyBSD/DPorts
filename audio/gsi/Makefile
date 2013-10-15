@@ -1,5 +1,5 @@
 # Created by: Sean Farley <sean-freebsd@farley.org>
-# $FreeBSD: audio/gsi/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/gsi/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gsi
 PORTVERSION=	0.9.6
@@ -11,6 +11,7 @@ MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	General sound interface
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USES=		gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" MYFLAGS="${CFLAGS}" OPTIMIZE=""
 USE_LDCONFIG=	yes
