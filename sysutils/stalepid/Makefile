@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/stalepid/Makefile 324222 2013-08-04 12:30:54Z az $
+# $FreeBSD: sysutils/stalepid/Makefile 328548 2013-09-28 03:48:23Z eadler $
 
 PORTNAME=	stalepid
 PORTVERSION=	1.0.b1
@@ -17,8 +17,6 @@ USE_PERL5=	run
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-MAN1=		stalepid.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/stalepid
+PLIST_FILES=	bin/stalepid man/man1/stalepid.1.gz
 
 .include <bsd.port.mk>
