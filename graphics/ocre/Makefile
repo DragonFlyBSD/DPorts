@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/ocre/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: graphics/ocre/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ocre
 PORTVERSION=	0.042
@@ -27,6 +27,7 @@ MAKE_ENV=	CFLAGS1="${CFLAGS}"
 MANLANG=	"" es
 MAN1=		${PORTNAME}.1
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKSRC} && ${TAR} --exclude "*.orig" -xof ocre-decsWood-${PORTVERSION}.tgz
 
