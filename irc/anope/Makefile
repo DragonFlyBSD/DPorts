@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: irc/anope/Makefile 315270 2013-03-26 09:25:33Z miwi $
+# $FreeBSD: irc/anope/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	anope
 PORTVERSION=	1.8.7
@@ -9,14 +9,14 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/Anope%20${PORTVERSION}
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	A set of IRC services for IRC networks
 
-USE_GMAKE=	yes
+USES=		gmake perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir="${LOCALBASE}/lib" \
 		--includedir="${LOCALBASE}/include" \
 		--with-bindir=${PREFIX}/libexec/anope \
 		--with-datadir=${DATADIR} \
 		--with-rungroup=ircdru
-USE_PERL5_BUILD=	yes
 
 PORTDOCS=	BUGS COPYING DEFCON EVENTS \
 		FAQ INSTALL IRCD MODULES MYSQL \
@@ -27,6 +27,7 @@ USE_RC_SUBR=	anope
 OPTIONS_DEFINE=	MYSQL
 OPTIONS_DEFAULT=	MYSQL
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # XXX Add here other arch which needs -fPIC :-)
