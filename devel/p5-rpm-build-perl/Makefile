@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-rpm-build-perl/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-rpm-build-perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	rpm-build-perl
 PORTVERSION=	0.82
@@ -23,6 +23,7 @@ MAN3=		B::Clobbers.3 \
 		B::Walker.3 \
 		PerlReq::Utils.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| perl.clean||' ${WRKSRC}/Makefile.PL
 
