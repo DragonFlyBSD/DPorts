@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@SYSTEM.PL>
-# $FreeBSD: lang/tinypy/Makefile 319870 2013-06-04 15:13:42Z bapt $
+# $FreeBSD: lang/tinypy/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	tinypy
 PORTVERSION=	1.1
@@ -21,6 +21,7 @@ PORTEXAMPLES=	*
 OPTIONS_DEFINE=	PYGAME
 PYGAME_DESC=	PyGame support (requires SDL)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYGAME}
