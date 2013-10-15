@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-IO-Toolkit/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-IO-Toolkit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	IO-Toolkit
 PORTVERSION=	1.008
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	IO::Toolkit.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
