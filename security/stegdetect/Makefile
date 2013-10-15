@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: ports/security/stegdetect/Makefile,v 1.35 2012/12/16 18:21:08 svnexp Exp $
+# $FreeBSD: security/stegdetect/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	stegdetect
 PORTVERSION=	0.6
@@ -15,6 +15,7 @@ COMMENT=	Automated tool for detecting steganographic content in JPEGs
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=	X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
