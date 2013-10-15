@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/ipfmeta/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: security/ipfmeta/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ipfmeta
 PORTVERSION=	1.3
@@ -14,6 +14,7 @@ USES=		perl5
 MAN1=	ipfmeta.1
 POD2MAN?=	pod2man
 
+NO_STAGE=	yes
 do-build:
 	@${POD2MAN} ${WRKSRC}/ipfmeta > ${WRKSRC}/${MAN1}
 
