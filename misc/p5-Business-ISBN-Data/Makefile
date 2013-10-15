@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Business-ISBN-Data
-# Date created:				22 Sep 2005
-# Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: misc/p5-Business-ISBN-Data/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: misc/p5-Business-ISBN-Data/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Business-ISBN-Data
 PORTVERSION=	20120719.001
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Business::ISBN::Data.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
