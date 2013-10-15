@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xplot
-# Date created:		3 March 1997
-# Whom:			fenner
-#
-# $FreeBSD: math/xplot/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: fenner
+# $FreeBSD: math/xplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	xplot
 PORTVERSION=	0.90.7.1
@@ -23,6 +19,7 @@ MAN1=		tcpdump2xplot.1 xplot.1
 PORTDOCS=	README README.tcp_plots
 PLIST_FILES=	bin/tcpdump2xplot bin/tcpdump2xplot.pl bin/xplot
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/INSTALL/s|2xplot$$|2xplot.pl|' ${WRKSRC}/Makefile.in
