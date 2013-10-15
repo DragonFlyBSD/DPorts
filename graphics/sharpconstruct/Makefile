@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/sharpconstruct/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: graphics/sharpconstruct/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	sharpconstruct
 PORTVERSION=	0.11
@@ -23,6 +23,7 @@ ONLY_FOR_ARCHS_REASON=	uses SSE
 
 MAN1=		sharpconstruct.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/include/Align.hh
 	@${REINPLACE_CMD} -e 's|"/sharpconstruct|"|' ${WRKSRC}/src/MainWindow.cc
