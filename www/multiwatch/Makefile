@@ -1,4 +1,4 @@
-# $FreeBSD: www/multiwatch/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: www/multiwatch/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	multiwatch
 PORTVERSION=	1.0.0
@@ -24,4 +24,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	bin/multiwatch
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
