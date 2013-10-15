@@ -1,9 +1,5 @@
-# New ports collection makefile for:   unuran
-# Date created:        13 November 2008
-# Whom:                bf <bf2006a@yahoo.com>
-#
-# $FreeBSD: ports/math/unuran/Makefile,v 1.15 2012/11/17 05:59:31 svnexp Exp $
-#
+# Created by: bf <bf2006a@yahoo.com>
+# $FreeBSD: math/unuran/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	unuran
 PORTVERSION=	1.8.1
@@ -29,6 +25,7 @@ USE_LDCONFIG=	yes
 INFO=		unuran
 PORTDOCS=	unuran.pdf unuran.txt
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/UNURANFULLCHECK=true make check/s/make/${GMAKE}/' \
 		${WRKSRC}/Makefile.in
