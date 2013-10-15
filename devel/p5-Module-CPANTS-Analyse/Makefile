@@ -1,15 +1,17 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-CPANTS-Analyse/Makefile 325327 2013-08-25 05:17:05Z sunpoet $
+# $FreeBSD: devel/p5-Module-CPANTS-Analyse/Makefile 327858 2013-09-22 09:36:43Z sunpoet $
 
 PORTNAME=	Module-CPANTS-Analyse
-PORTVERSION=	0.90.02
+PORTVERSION=	0.92
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generate Kwalitee ratings for a distribution
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Archive-Any-Lite>=0.06:${PORTSDIR}/archivers/p5-Archive-Any-Lite \
 		p5-Array-Diff>=0.04:${PORTSDIR}/misc/p5-Array-Diff \
@@ -30,6 +32,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Warn>=0.11:${PORTSDIR}/devel/p5-Test-Warn
 
+NO_STAGE=	yes
 USES=		perl5
 USE_PERL5=	modbuild
 
