@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	py-basemap
-# Date created:			April 21, 2006
-# Whom:				mainland@apeiron.net
-#
-# $FreeBSD: ports/math/py-basemap/Makefile,v 1.9 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: mainland@apeiron.net
+# $FreeBSD: math/py-basemap/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	basemap
 PORTVERSION=	0.9.2
@@ -38,6 +33,7 @@ PLISTDIR=	${PYTHON_SITELIBDIR}/matplotlib/toolkits/basemap \
 PLISTDIR+=	${EXAMPLESDIR}
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 post-patch:
 	@${GREP} -lR "share/basemap" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
