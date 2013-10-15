@@ -1,5 +1,5 @@
 # Created by: searle
-# $FreeBSD: games/flying/Makefile 321991 2013-06-28 21:48:59Z bapt $
+# $FreeBSD: games/flying/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	flying
 PORTVERSION=	6.20
@@ -17,4 +17,5 @@ USE_XORG=	x11
 MAN1=		flying.1
 PLIST_FILES=	bin/flying
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
