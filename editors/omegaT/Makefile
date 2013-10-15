@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: editors/omegaT/Makefile 318255 2013-05-15 18:51:13Z zeising $
+# $FreeBSD: editors/omegaT/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	omegaT
 DISTVERSION=	2.6.3_01
@@ -35,6 +35,7 @@ DESKTOP_ENTRIES="OmegaT" "Translation memory application" \
 		"omegaT" "Office;WordProcessor;Java;" \
 		false
 
+NO_STAGE=	yes
 post-build:
 	@cd ${WRKDIR} && ${MV} 'dist' ${PORTNAME}
 
