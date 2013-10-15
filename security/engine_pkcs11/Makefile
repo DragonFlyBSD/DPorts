@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/engine_pkcs11/Makefile 320660 2013-06-12 06:07:33Z miwi $
+# $FreeBSD: security/engine_pkcs11/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	engine_pkcs11
 PORTVERSION=	0.1.8
@@ -25,6 +25,7 @@ PORTDOCS=	*
 .ifndef(NOPORTDOCS)
 CONFIGURE_ARGS+=--enable-doc
 .else
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|install-data-am: install-dist_docDATA|install-data-am:|' \
 		${WRKSRC}/Makefile.in ${WRKSRC}/doc/Makefile.in
