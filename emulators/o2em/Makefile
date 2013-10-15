@@ -1,9 +1,5 @@
-# New ports collection makefile for:	o2em
-# Date created:				24 June 2005
-# Whom:					Gunter Wambaugh <techgunter@yahoo.com>
-#
-# $FreeBSD: emulators/o2em/Makefile 323734 2013-07-26 16:04:47Z crees $
-#
+# Created by: Gunter Wambaugh <techgunter@yahoo.com>
+# $FreeBSD: emulators/o2em/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=		o2em
 PORTVERSION=		1.17
@@ -25,6 +21,7 @@ USE_ZIP=		yes
 USE_GMAKE=		yes
 LDFLAGS+=		${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} -E ${WRKDIR} -type f -iregex ".*\.(c|h|txt)" -print0 | \
 		${XARGS} -0 ${REINPLACE_CMD} -e 's/[[:cntrl:]]*$$//'
