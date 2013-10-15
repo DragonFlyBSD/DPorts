@@ -1,6 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: www/mawstats/Makefile 325858 2013-09-01 14:36:31Z itetcu $
-#
+# $FreeBSD: www/mawstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mawstats
 DISTVERSION=	0.8
@@ -22,6 +21,7 @@ DEFAULT_PHP_VER=5
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${WWWDIR}
