@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Net_LDAP2
-# Date created:			  04 May 2004
-# Whom:				  Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/net/pear-Net_LDAP2/Makefile,v 1.31 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: net/pear-Net_LDAP2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_LDAP2
 PORTVERSION=	2.0.12
@@ -20,6 +16,7 @@ USE_PHP=	ldap
 
 PEAR_AUTOINSTALL=yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
