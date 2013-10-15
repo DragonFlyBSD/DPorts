@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: devel/p5-List-Uniq/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-List-Uniq/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	List-Uniq
 PORTVERSION=	0.20
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		List::Uniq.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
