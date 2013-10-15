@@ -1,9 +1,5 @@
-# New ports collection makefile for:	websvn
-# Date created:				11 May 2004
-# Whom:					Yuan-Chung Hsiao (ychsiao@ychsiao.idv.tw)
-#
-# $FreeBSD: ports/devel/websvn/Makefile,v 1.18 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: Yuan-Chung Hsiao (ychsiao@ychsiao.idv.tw)
+# $FreeBSD: devel/websvn/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	websvn
 PORTVERSION=	2.3.3
@@ -22,6 +18,7 @@ SUB_FILES=	pkg-message
 SUB_LIST+=	WEBSVNDIR="${WEBSVNDIR}"
 PLIST_SUB+=	WEBSVNDIR="${WEBSVNDIR}"
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${WEBSVNDIR}
 	(cd ${WRKSRC} \
