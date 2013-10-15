@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@posi.net>
-# $FreeBSD: editors/aee/Makefile 313252 2013-03-02 14:53:32Z miwi $
+# $FreeBSD: editors/aee/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	aee
 PORTVERSION=	2.2.15b
@@ -21,6 +21,7 @@ MAN1=		aee.1
 PLIST_FILES=	bin/aee bin/rae %%DATADIR%%/help.ae
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXAE}
