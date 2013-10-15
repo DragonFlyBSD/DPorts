@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-PHP_Shell
-# Date created:			  05 August 2007
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/shells/pear-PHP_Shell/Makefile,v 1.5 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: shells/pear-PHP_Shell/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	PHP_Shell
 PORTVERSION=	0.3.2
@@ -19,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
