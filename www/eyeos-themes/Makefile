@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: www/eyeos-themes/Makefile 319971 2013-06-05 10:11:41Z bapt $
+# $FreeBSD: www/eyeos-themes/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	themes
 PORTVERSION=	1.2
@@ -38,6 +38,7 @@ eyeOSVista_THEME_DESC=	based on the new Vista style
 animus_THEME_DESC=	created by AnimusMedia.com
 minimal_THEME_DESC=	based on minimalist art
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .for theme in ${OPTIONS_DEFINE:M*_THEME:S/_THEME//}
