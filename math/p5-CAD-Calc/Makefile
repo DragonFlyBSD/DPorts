@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-CAD-Calc/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: math/p5-CAD-Calc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	CAD-Calc
 PORTVERSION=	0.27
@@ -21,4 +21,5 @@ MAN3=	CAD::Calc.3
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
