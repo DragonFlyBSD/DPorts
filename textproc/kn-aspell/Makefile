@@ -1,9 +1,5 @@
-# New ports collection makefile for:    kn-aspell
-# Date created:                         05 May 2011
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/kn-aspell/Makefile,v 1.3 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/kn-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-kn-0.01-1
@@ -16,5 +12,6 @@ LICENSE=	GPLv3
 
 DICT=	 	kn
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
