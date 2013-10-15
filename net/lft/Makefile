@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lft
-# Date created:			19 Feb 2003
-# Whom:				Marco P. Rodrigues <drkangel@drkangel.org>
-#
-# $FreeBSD: ports/net/lft/Makefile,v 1.16 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: Marco P. Rodrigues <drkangel@drkangel.org>
+# $FreeBSD: net/lft/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	lft
 PORTVERSION=	3.33
@@ -19,6 +15,7 @@ MAN8=		lft.8 whob.8
 PLIST_FILES=	sbin/lft bin/whob
 PORTDOCS=	CHANGELOG README TODO
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lft ${PREFIX}/sbin/
 	${INSTALL_PROGRAM} ${WRKSRC}/whob ${PREFIX}/bin/
