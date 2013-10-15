@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xfwp/Makefile 324251 2013-08-04 20:19:48Z bapt $
+# $FreeBSD: x11/xfwp/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfwp
 PORTVERSION=	1.0.3
@@ -16,4 +16,5 @@ PLIST_FILES=	bin/xfwp
 
 MAN1=		xfwp.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
