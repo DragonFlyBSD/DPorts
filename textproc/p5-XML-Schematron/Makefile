@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-XML-Schematron/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Schematron/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Schematron
 PORTVERSION=	1.09
@@ -27,4 +27,5 @@ MAN3=	XML::Schematron::XPath.3 \
 		XML::Schematron::LibXSLT.3 \
 		XML::Schematron.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
