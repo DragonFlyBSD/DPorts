@@ -1,5 +1,5 @@
 # Created by: Joey Mingrone <joey@mingrone.org>
-# $FreeBSD: deskutils/parcellite/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/parcellite/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	parcellite
 PORTVERSION=	1.0.1
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
