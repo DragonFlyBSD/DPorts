@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: ports/x11/yeahconsole/Makefile,v 1.3 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: x11/yeahconsole/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	yeahconsole
 PORTVERSION=	0.3.4
@@ -13,4 +13,5 @@ USE_XORG=	x11
 
 PLIST_FILES=	bin/yeahconsole
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
