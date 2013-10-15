@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ftpcube
-# Date created:			Dec 13, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/ftp/ftpcube/Makefile,v 1.32 2012/11/17 05:57:29 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ftp/ftpcube/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	ftpcube
 PORTVERSION=	0.5.1
@@ -22,6 +18,7 @@ USE_WX=		2.6+
 WX_COMPS=	python
 WX_UNICODE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's,/usr/local,${PREFIX},' ${WRKSRC}/setup.cfg
 	@${ECHO_CMD} record=installed-files.log >> ${WRKSRC}/setup.cfg
