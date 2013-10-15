@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: x11/xprompt/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/xprompt/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xprompt
 PORTVERSION=	1.4
@@ -18,4 +18,5 @@ MAN1=		xprompt.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/xprompt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
