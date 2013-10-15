@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Adsense
-# Date created:		2007-06-29
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: www/p5-HTML-Adsense/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-HTML-Adsense/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Adsense
 PORTVERSION=	0.2
@@ -22,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		HTML::Adsense.3
 
+NO_STAGE=	yes
 post-patch:
 	${RM} -f ${WRKSRC}/lib/HTML/._Adsense.pm
 
