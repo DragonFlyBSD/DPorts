@@ -1,4 +1,4 @@
-# $FreeBSD: www/man2web/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/man2web/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	man2web
 PORTVERSION=	0.88
@@ -21,6 +21,7 @@ CGIDIR=	www/cgi-bin
 MAN1=	man2web.1
 MAN5=	man2web.conf.5
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${FILESDIR}/freebsd.h ${WRKSRC}/src/section_h/
 
