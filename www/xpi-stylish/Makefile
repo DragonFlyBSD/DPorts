@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-stylish
-# Date created:		26 June 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-stylish/Makefile,v 1.14 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-stylish/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	stylish
 PORTVERSION=	1.2.5
@@ -16,5 +12,6 @@ COMMENT=	User styles manager
 XPI_NUM=	2108
 XPI_ID=		{46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
