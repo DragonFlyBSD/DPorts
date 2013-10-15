@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-attempt/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-attempt/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	attempt
 PORTVERSION=	0.4.0
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	failure>=0.2.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
