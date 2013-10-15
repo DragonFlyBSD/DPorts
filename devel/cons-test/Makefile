@@ -1,5 +1,5 @@
 # Created by: rv@FreeBSD.org
-# $FreeBSD: devel/cons-test/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: devel/cons-test/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cons-test
 PORTVERSION=	2.2.0
@@ -35,6 +35,7 @@ DOCS=		CHANGES COPYRIGHT README TODO Tests.txt
 TESTS=		1..83,101..147
 TEST_LIBS=	Cmd.pm Cons.pm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's:/usr/lib:${PREFIX}/lib:g' \
 		${WRKSRC}/cons-test
