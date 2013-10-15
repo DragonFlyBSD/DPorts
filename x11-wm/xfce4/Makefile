@@ -1,6 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4/Makefile 318986 2013-05-24 15:53:54Z bapt $
-#
+# $FreeBSD: x11-wm/xfce4/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	xfce
 PORTVERSION=	4.10
@@ -32,6 +31,7 @@ RUN_DEPENDS=	xfwm4:${PORTSDIR}/x11-wm/xfce4-wm \
 NO_BUILD=	yes
 LATEST_LINK=	xfce4
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/sbin/gdm)
