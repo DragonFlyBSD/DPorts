@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bnbt
-# Date created:				Jan 31 2004
-# Whom:					Florent Thoumie <flz@xbsd.org>
-#
-# $FreeBSD: ports/net-p2p/bnbt/Makefile,v 1.21 2012/11/17 06:00:39 svnexp Exp $
-#
+# Created by: Florent Thoumie <flz@xbsd.org>
+# $FreeBSD: net-p2p/bnbt/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	bnbt
 PORTVERSION=	8.5
@@ -33,6 +29,7 @@ USE_MYSQL=	yes
 ALL_TARGET=	bnbt
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
