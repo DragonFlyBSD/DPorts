@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Exuberant Ctags with Japanese support
-# Date created:        29 May 2007
-# Whom:                issei
-#
-# $FreeBSD: japanese/ctags/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: issei
+# $FreeBSD: japanese/ctags/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ctags
 PORTVERSION=	5.8j2
@@ -22,6 +18,7 @@ MAN1=		jexctags.1
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
