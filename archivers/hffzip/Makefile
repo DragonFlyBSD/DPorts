@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hffzip
-# Date created:				10 Jun 2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/archivers/hffzip/Makefile,v 1.9 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: archivers/hffzip/Makefile 328238 2013-09-25 02:22:52Z vanilla $
 
 PORTNAME=	hffzip
 PORTVERSION=	1.01
@@ -22,6 +18,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	bin/hffzip
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
