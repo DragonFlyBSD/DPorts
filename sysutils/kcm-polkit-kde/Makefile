@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	polkit-kde
 DISTVERSION=	0.0-${PORTDATE}
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-kcmodules-1
 
 PORTDATE=	20121008
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr,${KDE4_PREFIX},' \
 		-e 's,/etc,${KDE4_PREFIX}/etc,' \
