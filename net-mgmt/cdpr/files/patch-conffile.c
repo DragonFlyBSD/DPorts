@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/cdpr/files/patch-conffile.c,v 1.2 2012/11/17 06:00:31 svnexp Exp $
+$FreeBSD: net-mgmt/cdpr/files/patch-conffile.c 300897 2012-07-14 14:29:18Z beat $
 
 --- conffile.c.orig
 +++ conffile.c
