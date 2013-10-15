@@ -1,9 +1,5 @@
-# New ports collection makefile for:    memtest
-# Date created:         18 Jun 2000
-# Whom:			Mario S F Ferreira <lioux@linf.unb.br> et al.
-#
-# $FreeBSD: ports/sysutils/memtest/Makefile,v 1.21 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
+# $FreeBSD: sysutils/memtest/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	memtest
 PORTVERSION=	4.2.2
@@ -19,6 +15,7 @@ LICENSE=	GPLv2
 MAN8=		${PORTNAME}.8
 PLIST_FILES=	bin/memtest
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|cc|${CC}|' \
 		${WRKSRC}/conf-*
