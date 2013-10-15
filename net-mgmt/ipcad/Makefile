@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ipcad
-# Date created:				15 April 2001
-# Whom:					Lev Walkin <vlm@lionet.info>
-#
-# $FreeBSD: ports/net-mgmt/ipcad/Makefile,v 1.23 2012/11/17 06:00:33 svnexp Exp $
-#
+# Created by: Lev Walkin <vlm@lionet.info>
+# $FreeBSD: net-mgmt/ipcad/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	ipcad
 PORTVERSION=	3.7.3
@@ -24,6 +20,7 @@ MANCOMPRESSED=	no
 MAN5=		ipcad.conf.5
 MAN8=		ipcad.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g ; \
 		s|/usr/local|${PREFIX}|g; s|pthread_detach|pthread_create|g'\
