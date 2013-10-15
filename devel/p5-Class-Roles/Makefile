@@ -1,5 +1,5 @@
-# Created by: Alex Kapranoff <kappa@freebsd.org.ua>
-# $FreeBSD: devel/p5-Class-Roles/Makefile 324175 2013-08-02 21:38:09Z mat $
+# Created by: Alex Kapranoff <kappa@FreeBSD.org.ua>
+# $FreeBSD: devel/p5-Class-Roles/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Roles
 PORTVERSION=	0.30
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Class::Roles.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
