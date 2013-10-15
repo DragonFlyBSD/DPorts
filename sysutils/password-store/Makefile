@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/password-store/Makefile 306215 2012-10-21 04:14:32Z swills $
+# $FreeBSD: sysutils/password-store/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	password-store
 PORTVERSION=	1.4.2
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=		GIT XCLIP
 GIT_DESC=		Enable git storage
 XCLIP_DESC=		Enable xclip feature
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGIT}
