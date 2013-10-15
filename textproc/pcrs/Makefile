@@ -1,5 +1,5 @@
 # Created by: Ken Wong <wongk@apt.homeunix.net>
-# $FreeBSD: textproc/pcrs/Makefile 324759 2013-08-15 11:27:16Z danfe $
+# $FreeBSD: textproc/pcrs/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	pcrs
 PORTVERSION=	0.0.3
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/pcrsed \
 		lib/libpcrs.so \
 		lib/libpcrs.so.0
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pcrsed ${PREFIX}/bin
 
