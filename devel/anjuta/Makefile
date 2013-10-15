@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/anjuta/Makefile 326449 2013-09-05 21:32:14Z antoine $
+# $FreeBSD: devel/anjuta/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/devel/anjuta/Makefile,v 1.72 2012/12/13 20:33:05 kwm Exp $
 
 PORTNAME=	anjuta
@@ -65,6 +65,7 @@ OPTIONS_DEFINE=	SVN DEVHELP
 OPTIONS_DEFAULT=DEVHELP
 DEVHELP_DESC=	Devhelp support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSVN}
