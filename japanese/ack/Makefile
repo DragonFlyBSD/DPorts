@@ -1,5 +1,5 @@
 # Created by: Masanori Kiriake <seiken@nbs.co.jp>
-# $FreeBSD: japanese/ack/Makefile 324160 2013-08-02 10:59:31Z antoine $
+# $FreeBSD: japanese/ack/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ack
 PORTVERSION=	1.39
@@ -21,4 +21,5 @@ MANLANG=	ja
 MAN1=		ack.1
 PLIST_FILES=	bin/ack
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
