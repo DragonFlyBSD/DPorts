@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: games/bugsx/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/bugsx/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	bugsx
 PORTVERSION=	1.08
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/bugsx
 MAN1=		bugsx.1
 PLIST_FILES=	bin/bugsx
 
+NO_STAGE=	yes
 post-install:
 	${STRIP_CMD} ${PREFIX}/bin/bugsx
 
