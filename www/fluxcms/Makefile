@@ -1,4 +1,4 @@
-# $FreeBSD: www/fluxcms/Makefile 320363 2013-06-09 17:44:17Z miwi $
+# $FreeBSD: www/fluxcms/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fluxcms
 PORTVERSION=	1.6.0
@@ -28,6 +28,7 @@ DEFAULT_PHP_VER=	5
 
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTIDY}
