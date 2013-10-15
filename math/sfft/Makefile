@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/sfft/Makefile 324787 2013-08-15 23:01:27Z bf $
+# $FreeBSD: math/sfft/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	sfft
 PORTVERSION=	0.1.0
@@ -40,6 +40,7 @@ SRCS=	common.cc computefourier-1.0-2.0.cc \
 	computefourier-3.0.cc fftw.cc filters.cc parameters.cc \
 	sfft.cc simulation.cc timer.cc utils.cc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${ARCH:Mamd64} && !${MACHINE_CPU:Msse2}
