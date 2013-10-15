@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/rubygem-png/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: graphics/rubygem-png/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	png
 PORTVERSION=	1.2.0
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
