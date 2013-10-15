@@ -1,9 +1,5 @@
-# New ports collection makefile for: mailmgr
-# Date created:         14 August 2003
-# Whom:                 Hsin-Hsiung Chang
-#
-# $FreeBSD: ports/mail/mailmgr/Makefile,v 1.8 2012/11/17 05:59:05 svnexp Exp $
-#
+# Created by: Hsin-Hsiung Chang
+# $FreeBSD: mail/mailmgr/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailmgr
 PORTVERSION=	1.2.3
@@ -17,6 +13,7 @@ GNU_CONFIGURE=	yes
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/mailmgr.conf ${PREFIX}/etc/mailmgr.conf.default
 .if !exists(${PREFIX}/etc/mailmgr.conf)
