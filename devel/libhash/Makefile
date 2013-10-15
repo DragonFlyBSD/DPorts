@@ -1,5 +1,5 @@
 # Created by: Andrew <andrew@ugh.net.au>
-# $FreeBSD: devel/libhash/Makefile 315367 2013-03-27 10:12:20Z miwi $
+# $FreeBSD: devel/libhash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libhash
 PORTVERSION=	1.0.3
@@ -37,4 +37,5 @@ PLIST_SUB+=	PROFILE="@comment "
 PLIST_SUB+=	PROFILE=""
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
