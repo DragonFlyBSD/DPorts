@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11-themes/kdeartwork4/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11-themes/kdeartwork4/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	kdeartwork
 PORTVERSION=	${KDE4_VERSION}
@@ -29,6 +29,7 @@ USE_XORG=	x11 xt
 OPTIONS_DEFINE=	GNOME
 GNOME_DESC=	Use Gnome screensavers
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOME}
