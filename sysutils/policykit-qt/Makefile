@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@Fluffy.Khv.RU>
-# $FreeBSD: sysutils/policykit-qt/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: sysutils/policykit-qt/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	policykit-qt
 PORTVERSION=	0.9.4
@@ -23,6 +23,7 @@ USES=		cmake gettext
 
 PORTSCOUT=	limit:^0
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's|$${LIB_INSTALL_DIR}/pkgconfig|libdata/pkgconfig|' \
 		${WRKSRC}/CMakeLists.txt
