@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/py-gimp/Makefile 313872 2013-03-11 12:19:08Z kwm $
+# $FreeBSD: graphics/py-gimp/Makefile 328501 2013-09-27 17:25:16Z kwm $
 #    $MCom: ports/graphics/py-gimp/Makefile,v 1.6 2009/08/25 00:06:39 marcus Exp $
 
-PORTREVISION=	0
+PORTREVISION=	1
 PORTEPOCH=	0
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
