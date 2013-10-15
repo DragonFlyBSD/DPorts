@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO
-# $FreeBSD: biology/psi88/Makefile 321315 2013-06-19 19:54:13Z bsam $
+# $FreeBSD: biology/psi88/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	psi88
 PORTVERSION=	1.0
@@ -19,6 +19,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 USE_FORTRAN=	yes
