@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/mitmproxy/Makefile 326905 2013-09-10 14:38:14Z wg $
+# $FreeBSD: www/mitmproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mitmproxy
 PORTVERSION=	0.9.2
@@ -23,4 +23,5 @@ USE_PYDISTUTILS=easy_install
 USE_PYTHON=	yes
 PLIST_SUB+=	PORTVERSION=${PORTVERSION} PYTHONVERSION=${PYTHON_VER}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
