@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WebService-Validator-HTML-W3C
-# Date created:				Oct 10, 2005
-# Whom:					toni.viemero@iki.fi
-#
-# $FreeBSD: www/p5-webservice-validator-html-w3c/Makefile 326042 2013-09-02 17:29:36Z az $
-#
+# Created by: toni.viemero@iki.fi
+# $FreeBSD: www/p5-webservice-validator-html-w3c/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-Validator-HTML-W3C
 PORTVERSION=	0.28
@@ -26,4 +22,5 @@ USE_PERL5=	configure
 MAN3=	WebService::Validator::HTML::W3C::Error.3 \
 	WebService::Validator::HTML::W3C.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
