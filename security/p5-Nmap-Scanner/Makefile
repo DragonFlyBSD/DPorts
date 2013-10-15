@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-Nmap-Scanner/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Nmap-Scanner/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Nmap-Scanner
 PORTVERSION=	1.0
@@ -36,6 +36,7 @@ MAN3=		Nmap::Scanner.3 Nmap::Scanner::Address.3 \
 		Nmap::Scanner::Task.3 Nmap::Scanner::TaskProgress.3 \
 		Nmap::Scanner::Util::BannerScanner.3
 
+NO_STAGE=	yes
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
 
