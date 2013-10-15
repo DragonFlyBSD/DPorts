@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/nekobee/Makefile 327018 2013-09-12 00:21:10Z marino $
+# $FreeBSD: audio/nekobee/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	nekobee
 PORTVERSION=	0.1.8
@@ -18,6 +18,7 @@ LIB_DEPENDS=	dssialsacompat:${PORTSDIR}/audio/libdssialsacompat \
 		jack:${PORTSDIR}/audio/jack
 
 USE_GITHUB=	yes
+NO_STAGE=	yes
 GH_ACCOUNT=	gordonjcp
 GH_COMMIT=	3f4737f
 
