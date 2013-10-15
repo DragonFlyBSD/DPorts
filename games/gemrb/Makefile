@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: games/gemrb/Makefile 317866 2013-05-11 12:03:02Z ak $
+# $FreeBSD: games/gemrb/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gemrb
 PORTVERSION=	0.8.0
@@ -24,6 +24,7 @@ CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
 CMAKE_C_FLAGS=	${CFLAGS}
 CMAKE_ARGS=	-DDOC_DIR="${DOCSDIR}" -DMAN_DIR="${MAN6PREFIX}/man/man6/" -DDISABLE_WERROR=1 -DINSOURCEBUILD=1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAN6=		gemrb.6
