@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/cpige/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/cpige/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	cpige
 DISTVERSION=	1.5
@@ -12,6 +12,7 @@ MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Icecast/Shoutcast stream ripper
 
 USES=		gmake
+NO_STAGE=	yes
 
 MAKE_ARGS=	CC="${CC}"
 
