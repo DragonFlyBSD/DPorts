@@ -1,5 +1,5 @@
 # Created by: Jaosn Helfman <jgh@FreeBSD.org>
-# $FreeBSD: deskutils/xpad-current/Makefile 322360 2013-07-06 01:22:56Z jgh $
+# $FreeBSD: deskutils/xpad-current/Makefile 328257 2013-09-25 06:44:35Z jgh $
 
 PORTNAME=	xpad
 PORTVERSION=	4.1
@@ -36,8 +36,6 @@ PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
-
-MAN1+=		xpad.1
 
 post-patch-script:
 .if ! ${PORT_OPTIONS:MNLS}
