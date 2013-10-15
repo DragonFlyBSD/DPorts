@@ -1,5 +1,5 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: security/pecl-taint/Makefile 315594 2013-03-30 04:41:48Z miwi $
+# $FreeBSD: security/pecl-taint/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	taint
 PORTVERSION=	1.2.2
@@ -19,4 +19,5 @@ USE_PHP=	yes
 USE_PHPEXT=	yes
 USE_PHPIZE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
