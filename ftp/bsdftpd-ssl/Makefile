@@ -1,5 +1,5 @@
 # Created by: Nick Leuta
-# $FreeBSD: ftp/bsdftpd-ssl/Makefile 323294 2013-07-19 14:09:28Z bapt $
+# $FreeBSD: ftp/bsdftpd-ssl/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	bsdftpd-ssl
 PORTVERSION=	1.1.0
@@ -21,6 +21,7 @@ USE_OPENSSL=	yes
 
 MAKE_ENV+=	OBJFORMAT=elf
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Client only part
