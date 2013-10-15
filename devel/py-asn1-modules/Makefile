@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-asn1-modules/Makefile 317630 2013-05-07 19:41:26Z rm $
+# $FreeBSD: devel/py-asn1-modules/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	asn1-modules
 PORTVERSION=	0.0.5
@@ -27,6 +27,7 @@ TOOLS=		cmpdump.py crldump.py crmfdump.py ocspclient.py ocspreqdump.py \
 		ocsprspdump.py ocspserver.py pkcs10dump.py pkcs1dump.py \
 		pkcs7dump.py pkcs8dump.py snmpget.py x509dump.py
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
