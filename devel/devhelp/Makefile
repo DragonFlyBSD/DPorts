@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: devel/devhelp/Makefile 326438 2013-09-05 19:29:18Z antoine $
+# $FreeBSD: devel/devhelp/Makefile 327722 2013-09-20 17:03:26Z bapt $
 #   $MCom: ports/devel/devhelp/Makefile,v 1.45 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	devhelp
@@ -33,6 +33,7 @@ LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib
 OPTIONS_DEFINE=	GEDIT
 GEDIT_DESC=	Enable GEdit plug-in support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEDIT}
