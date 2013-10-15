@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-addcomment/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-addcomment/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	addcomment
 PORTVERSION=	0.3
@@ -21,4 +21,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracAddCommentMacro
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
