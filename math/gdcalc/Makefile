@@ -1,5 +1,5 @@
 # Created by: Jan Srocker <Jan.Stocker@t-online.de>
-# $FreeBSD: math/gdcalc/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: math/gdcalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 #    $MCom: ports/math/gdcalc/Makefile,v 1.1 2006/10/04 15:51:37 ahze Exp $
 
 PORTNAME=	gdcalc
@@ -17,4 +17,5 @@ USES=		pkgconfig
 USE_GNOME=	gnomehier libgnomeui
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
