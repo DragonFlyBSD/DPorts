@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/rockdodger/files/patch-main.c,v 1.3 2012/11/17 05:57:51 svnexp Exp $
+$FreeBSD: games/rockdodger/files/patch-main.c 300896 2012-07-14 13:54:48Z beat $
 
 --- main.c.orig
 +++ main.c

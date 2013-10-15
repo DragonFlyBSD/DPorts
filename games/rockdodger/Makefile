@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Rock Dodger
-# Date created:				02 Dec 2002
-# Whom:					Neil Blakey-Milner <nbm@FreeBSD.org>
-#
-# $FreeBSD: ports/games/rockdodger/Makefile,v 1.22 2012/11/17 05:57:51 svnexp Exp $
-#
+# Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
+# $FreeBSD: games/rockdodger/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	rockdodger
 PORTVERSION=	0.6.0a
@@ -19,6 +15,7 @@ USE_GMAKE=	yes
 
 GAMESDIR?=	/var/games
 
+NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} \
 		-e "s%/usr/share/rockdodger/.highscore%${GAMESDIR}/rockdodger.highscore%" \
