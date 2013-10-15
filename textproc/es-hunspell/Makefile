@@ -1,5 +1,4 @@
-# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: ports/textproc/es-hunspell/Makefile,v 1.8 2012/12/09 10:42:16 svnexp Exp $
+# $FreeBSD: textproc/es-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	0.6
@@ -32,12 +31,12 @@ PLIST_FILES+=	%%DATADIR%%/${ALIAS}.aff \
 .endfor
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/es_ANY.aff ${DATADIR}/es_ES.aff
-	${INSTALL_DATA} ${WRKSRC}/es_ANY.dic ${DATADIR}/es_ES.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/es_ANY.aff ${STAGEDIR}${DATADIR}/es_ES.aff
+	${INSTALL_DATA} ${WRKSRC}/es_ANY.dic ${STAGEDIR}${DATADIR}/es_ES.dic
 .for ALIAS in ${ESALIASES}
-	${LN} -s es_ES.aff ${DATADIR}/${ALIAS}.aff
-	${LN} -s es_ES.dic ${DATADIR}/${ALIAS}.dic
+	${LN} -s es_ES.aff ${STAGEDIR}${DATADIR}/${ALIAS}.aff
+	${LN} -s es_ES.dic ${STAGEDIR}${DATADIR}/${ALIAS}.dic
 .endfor
 
 .include <bsd.port.mk>
