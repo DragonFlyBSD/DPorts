@@ -1,5 +1,5 @@
 # Created by: lx@redundancy.redundancy.org
-# $FreeBSD: audio/wmalbum/Makefile 324069 2013-07-31 22:40:38Z bapt $
+# $FreeBSD: audio/wmalbum/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	wmalbum
 PORTVERSION=	0.1.5
@@ -14,6 +14,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 		gdk_pixbuf_xlib.2:${PORTSDIR}/graphics/gdk-pixbuf
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 USE_CSTD=	gnu89
 
 MAN1=		wmalbum.1
