@@ -1,5 +1,5 @@
 # Created by: Rodrigo Graeff <delphus@gmail.com>
-# $FreeBSD: converters/ytnef/Makefile 326872 2013-09-10 07:55:33Z az $
+# $FreeBSD: converters/ytnef/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	ytnef
 PORTVERSION=	2.6
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/ytnef bin/ytnefprocess.pl bin/ytnefprint
 PORTDOCS=	AUTHORS NEWS README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/usr/bin/perl|#!${PERL}|' \
 		${WRKSRC}/src/ytnef/ytnefprocess.pl
