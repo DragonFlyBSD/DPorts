@@ -1,9 +1,5 @@
-# New ports collection makefile for:   py-coil
-# Date created:        13 April 2010
-# Whom:                ghostonthewire <ghostonthewire at gmail dot com>
-#
-# $FreeBSD: ports/devel/py-coil/Makefile,v 1.4 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: ghostonthewire <ghostonthewire at gmail dot com>
+# $FreeBSD: devel/py-coil/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	coil
 PORTVERSION=	0.3.20
@@ -23,6 +19,7 @@ USE_PYDISTUTILS=	yes
 PORTDOCS=	README.txt \
 		TODO.txt
 
+NO_STAGE=	yes
 post-install:
 # docs
 .ifndef(NOPORTDOCS)
