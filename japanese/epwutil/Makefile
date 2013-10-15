@@ -1,9 +1,5 @@
-# New ports collection makefile for:	epwutil
-# Date created:		22 January 1999
-# Whom:			Kazutoki TAKAMUNE <takamune@avrl.mei.co.jp>
-#
-# $FreeBSD: ports/japanese/epwutil/Makefile,v 1.12 2012/11/17 05:58:32 svnexp Exp $
-#
+# Created by: Kazutoki TAKAMUNE <takamune@avrl.mei.co.jp>
+# $FreeBSD: japanese/epwutil/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	epwutil
 PORTVERSION=	1.1
@@ -20,6 +16,7 @@ EPWPROGS=	bookinfo catdump squeeze
 EPWDOCS=	epwutil.doc
 EPWDOCDIR=	share/doc/epwutil
 
+NO_STAGE=	yes
 do-install:
 .for file in ${EPWPROGS}
 	cd ${WRKSRC};\
