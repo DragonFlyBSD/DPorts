@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: mail/wmbiff/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/wmbiff/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	wmbiff
 PORTVERSION=	0.4.27
@@ -26,6 +26,7 @@ PLIST_DIRS=	%%DATADIR%%/skins \
 		%%DATADIR%% \
 		lib/wmbiff
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
