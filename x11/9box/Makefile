@@ -1,9 +1,5 @@
-# New ports collection makefile for:	9box
-# Date created:		Fri Mar 21 10:10:48 EST 2003
-# Whom:			Serge Gagnon <gagnon__s@videotron.ca>
-#
-# $FreeBSD: ports/x11/9box/Makefile,v 1.12 2012/11/17 06:03:14 svnexp Exp $
-#
+# Created by: Serge Gagnon <gagnon__s@videotron.ca>
+# $FreeBSD: x11/9box/Makefile 330212 2013-10-13 06:14:24Z eadler $
 
 PORTNAME=	9box
 PORTVERSION=	0.2.1
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	9box can "pack" windows inside itself
 
 PLIST_FILES=	bin/9box
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xbitmaps x11 xt
 
 BUILD_WRKSRC=	${WRKSRC}/src
@@ -27,6 +23,6 @@ post-patch:
 		${WRKSRC}/src/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/9box ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/9box ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
