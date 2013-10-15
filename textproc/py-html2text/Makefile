@@ -1,9 +1,5 @@
-# New ports collection makefile for:	html2text
-# Date created:		23 April 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/py-html2text/Makefile,v 1.12 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: textproc/py-html2text/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	html2text
 PORTVERSION=	3.200.3
@@ -19,4 +15,5 @@ USE_PYDISTUTILS=easy_install
 
 CONFLICTS=	html2text-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
