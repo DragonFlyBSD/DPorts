@@ -1,9 +1,5 @@
-# New ports collection makefile for:	boclient
-# Date created:		12 August 1998
-# Whom:			darius@dons.net.au
-#
-# $FreeBSD: ports/net/boclient/Makefile,v 1.12 2012/11/17 05:59:57 svnexp Exp $
-#
+# Created by: darius@dons.net.au
+# $FreeBSD: net/boclient/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	boclient
 PORTVERSION=	1.21
@@ -18,6 +14,7 @@ PLIST_FILES=	bin/bounix
 WRKSRC=		${WRKDIR}/bo
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/Makefile.in
 
