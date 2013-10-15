@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bbappconf
-# Date created:				26 July 2004
-# Whom:				Gerrit Beine <tux@pinguru.net>
-#
-# $FreeBSD: ports/x11/bbappconf/Makefile,v 1.8 2012/11/17 06:03:14 svnexp Exp $
-#
+# Created by: Gerrit Beine <tux@pinguru.net>
+# $FreeBSD: x11/bbappconf/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	bbappconf
 PORTVERSION=	0.0.2
@@ -17,6 +13,7 @@ COMMENT=	Application configuring tool for the blackbox window manager
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/bbappconf ${PREFIX}/bin
 	@${MKDIR} ${PREFIX}/share/bbtools
