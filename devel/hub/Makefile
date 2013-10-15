@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: devel/hub/Makefile 326820 2013-09-09 16:24:12Z rakuco $
+# $FreeBSD: devel/hub/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	hub
 PORTVERSION=	1.10.6
@@ -23,6 +23,7 @@ PLIST_DIRSTRY=	etc/bash_completion.d \
 		share/zsh/site-functions share/zsh
 MAN1=		hub.1
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${RAKE_BIN} standalone
 
