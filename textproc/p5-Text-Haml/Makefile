@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Haml/Makefile 324529 2013-08-10 14:29:20Z kuriyama $
+# $FreeBSD: textproc/p5-Text-Haml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Haml
 PORTVERSION=	0.990109
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 MAN3=	Text::Haml.3 \
 	Text::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
