@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: editors/emacs21/Makefile 313760 2013-03-09 21:43:02Z bapt $
+# $FreeBSD: editors/emacs21/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	emacs
 PORTVERSION=	21.3
@@ -20,6 +20,8 @@ COMMENT=	GNU editing macros
 CONFLICTS=	emacs-19.* emacs-22.* emacs-23.* emacs-24.* \
 		xemacs-[0-9]* xemacs-devel-[0-9]* \
 		xemacs-mule-[0-9]* xemacs-devel-mule-[0-9]*
+
+SSP_UNSAFE=	yes
 
 .if !defined(WITHOUT_X11)
 LIB_DEPENDS=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d \
@@ -54,6 +56,7 @@ INFO=		ada-mode autotype ccmode cl dired-x ebrowse ediff \
 
 LATEST_LINK=	emacs21
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
