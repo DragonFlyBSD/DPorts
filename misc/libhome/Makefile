@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: misc/libhome/Makefile 320128 2013-06-06 21:53:22Z bapt $
+# $FreeBSD: misc/libhome/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	libhome
 PORTVERSION=	0.10.2
@@ -21,6 +21,7 @@ PGSQL_DESC=	Support for PostgreSQL (Experimental)
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(LIBHOME_WITH_BDB_VER)
