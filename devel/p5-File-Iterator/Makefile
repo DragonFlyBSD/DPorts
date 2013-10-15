@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-File-Iterator/Makefile 327234 2013-09-14 07:31:07Z sunpoet $
+# $FreeBSD: devel/p5-File-Iterator/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Iterator
 PORTVERSION=	0.14
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Iterator.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
