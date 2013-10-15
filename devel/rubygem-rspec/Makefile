@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <romanbsd@yahoo.com>
-# $FreeBSD: devel/rubygem-rspec/Makefile 326695 2013-09-07 21:36:32Z sunpoet $
+# $FreeBSD: devel/rubygem-rspec/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rspec
 PORTVERSION=	2.14.1
@@ -18,4 +18,5 @@ USE_RAKE=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
