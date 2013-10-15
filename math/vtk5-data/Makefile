@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: math/vtk5-data/Makefile 313143 2013-03-01 09:52:47Z gahr $
+# $FreeBSD: math/vtk5-data/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	vtk
 PORTVERSION=	5.10.1
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}/VTKData
 
