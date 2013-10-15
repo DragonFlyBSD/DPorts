@@ -1,8 +1,5 @@
-# Ports collection makefile for:	gem-loquacious
-# Date created:				06 Nov 2009
-# Whom:					Ryan Steinmetz (<rpsfa@rit.edu>)
-#
-# $FreeBSD: ports/devel/rubygem-loquacious/Makefile,v 1.16 2012/11/17 05:57:00 svnexp Exp $
+# Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
+# $FreeBSD: devel/rubygem-loquacious/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	loquacious
 PORTVERSION=	1.9.1
@@ -18,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 RUN_DEPENDS=	rubygem-rspec>=2.7.0:${PORTSDIR}/devel/rubygem-rspec
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
