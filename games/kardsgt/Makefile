@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/games/kardsgt/Makefile,v 1.12 2013/01/16 08:49:06 svnexp Exp $
+# $FreeBSD: games/kardsgt/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kardsgt
 PORTVERSION=	0.7.1
@@ -17,6 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN6=		kardsgt.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^QT +=|#QT +=|g' \
 		${WRKSRC}/src/src.pro
