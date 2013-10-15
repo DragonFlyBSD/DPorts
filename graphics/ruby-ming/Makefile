@@ -1,8 +1,5 @@
-# New ports collection makefile for:	Ruby/Ming
-# Date created:		16 Oct 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/graphics/ruby-ming/Makefile,v 1.33 2012/11/17 05:58:21 svnexp Exp $
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: graphics/ruby-ming/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ming
 PORTVERSION=	0.4.3.${RUBY_MING_VERSION}
@@ -29,6 +26,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-ruby
 
 DOCS=	ChangeLog INSTALL LGPL NEWS README TODO
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODEXAMPLESDIR}
