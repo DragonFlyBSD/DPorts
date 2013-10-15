@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tet-aspell
-# Date created:                         28 August 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/tet-aspell/Makefile,v 1.7 2012/11/17 06:02:23 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/tet-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	5-tet-0.1.1
@@ -16,5 +12,6 @@ COMMENT=	Aspell Tetum dictionary
 
 DICT=	 	tet
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
