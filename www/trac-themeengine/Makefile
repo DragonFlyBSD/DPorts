@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-themeengine/Makefile 313242 2013-03-02 14:42:01Z miwi $
+# $FreeBSD: www/trac-themeengine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	themeengine
 PORTVERSION=	2.1.3
@@ -20,4 +20,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracThemeEngine
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
