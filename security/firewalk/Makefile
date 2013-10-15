@@ -1,6 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: security/firewalk/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/firewalk/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	firewalk
 PORTVERSION=	5.0
@@ -24,6 +23,7 @@ MAN8=		firewalk.8
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lnet|`${LIBNET_CONFIG} --libs`|' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
