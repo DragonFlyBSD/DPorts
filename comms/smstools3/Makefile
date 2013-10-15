@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: comms/smstools3/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: comms/smstools3/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	smstools
 PORTVERSION=	3.1.15
@@ -36,6 +36,7 @@ PLIST_SUB+=	SPOOLDIR="${SPOOLDIR}" LOGDIR="${LOGDIR}" PIDDIR="${PIDDIR}" \
 PORTDOCS=	*
 PORTEXAMPLES=	.procmailrc .qmailrc *
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MSTATS}
