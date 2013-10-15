@@ -1,9 +1,5 @@
-# New ports collection makefile for:  nast
-# Date created:        Sun Apr  6 10:12:16 CEST 2003
-# Whom:                Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: net/nast/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: net/nast/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nast
 PORTVERSION=	0.2.0
@@ -28,6 +24,7 @@ PLIST_FILES=	bin/nast
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
