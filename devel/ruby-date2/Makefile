@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-date2
-# Date created:		7 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-date2/Makefile,v 1.38 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-date2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	date2
 PORTVERSION=	4.0.19
@@ -25,6 +21,7 @@ EXAMPLES_EN=	cal.rb daylight.rb goodfriday.rb
 EXAMPLES_JA=	ncal.rb
 
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODEXAMPLESDIR}/ja
