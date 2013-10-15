@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	sudosh
-# Date created:				10/28/2004
-# Whom:					cy@FreeBSD.org
-#
-# $FreeBSD: ports/security/sudosh/Makefile,v 1.26 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: cy@FreeBSD.org
+# $FreeBSD: security/sudosh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		sudosh
 PORTVERSION=		1.8.2
@@ -32,4 +28,5 @@ MAN1=			sudosh.1
 MAN5=			sudosh.conf.5
 MAN8=			sudosh-replay.8
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
