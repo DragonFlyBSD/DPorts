@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/p5-MasonX-Request-WithApacheSession/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-MasonX-Request-WithApacheSession/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MasonX-Request-WithApacheSession
 PORTVERSION=	0.31
@@ -21,4 +21,5 @@ USE_PERL5=	modbuild
 MAN3=		MasonX::Request::WithApacheSession.3 \
 		MasonX::Request::WithMultiSession.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
