@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: textproc/uim-kde4/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
+# $FreeBSD: textproc/uim-kde4/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PKGNAMESUFFIX=	-kde4
 
@@ -30,6 +30,7 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-qt4_toolbar_CMakeLists.txt
 IGNORE=		requires X11
 .endif
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}/qt4/toolbar/build && ${SETENV} ${MAKE_ENV} ${GMAKE})
 
