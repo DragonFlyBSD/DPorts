@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: biology/lagan/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: biology/lagan/Makefile 327709 2013-09-20 15:55:44Z bapt $
 
 PORTNAME=	lagan
 PORTVERSION=	2.0
@@ -39,6 +39,7 @@ SCRIPTUTILS=	cmerge2.pl draft.pl mextract.pl mf2bin.pl mpretty.pl \
 READMES=	README.FIRST README.chaos README.lagan README.mlagan \
 		README.tools README.shuffle
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile" | ${XARGS} ${REINPLACE_CMD} -e \
 		'/^CC/s|^|#| ; \
