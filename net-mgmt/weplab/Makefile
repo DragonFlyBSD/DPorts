@@ -1,9 +1,5 @@
-# New ports collection makefile for:	weplab
-# Date created:				24 Aug 2006
-# Whom:					Anton Karpov <toxa@toxahost.ru>
-#
-# $FreeBSD: ports/net-mgmt/weplab/Makefile,v 1.6 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Anton Karpov <toxa@toxahost.ru>
+# $FreeBSD: net-mgmt/weplab/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	weplab
 PORTVERSION=	0.1.5
@@ -19,6 +15,7 @@ USE_CSTD=	gnu89
 MAN1=		weplab.1
 PLIST_FILES=	bin/weplab
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E 's,^(CC|CFLAGS|LDFLAGS) *=,\1 ?=,g' \
 		${WRKSRC}/Makefile.in
