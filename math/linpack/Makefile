@@ -1,5 +1,5 @@
 # Created by: ljo
-# $FreeBSD: math/linpack/Makefile 318993 2013-05-24 16:35:30Z bapt $
+# $FreeBSD: math/linpack/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	linpack
 PORTVERSION=	1.0
@@ -14,6 +14,7 @@ COMMENT=	Linear Algebra package
 LIB_DEPENDS=	blas.2:${PORTSDIR}/math/blas
 MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 USE_FORTRAN=	yes
