@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gstreamer-plugins-cairo
-# Date created:			Mar 8 2005
-# Whom:				Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/gstreamer-plugins-cairo/Makefile,v 1.17 2012/11/17 05:58:09 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: graphics/gstreamer-plugins-cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #   $MCom: ports/graphics/gstreamer-plugins-cairo/Makefile,v 1.6 2008/03/19 14:05:34 ahze Exp $
-#
 
 PORTREVISION=	0
 CATEGORIES=	graphics
@@ -15,4 +11,5 @@ GST_PLUGIN=	cairo
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
