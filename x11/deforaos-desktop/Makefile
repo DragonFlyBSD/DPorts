@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/x11/deforaos-desktop/Makefile,v 1.1 2012/12/19 14:48:14 svnexp Exp $
+# $FreeBSD: x11/deforaos-desktop/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	desktop
 PORTVERSION=	0.1
@@ -27,6 +27,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/keyboard:${PORTSDIR}/x11/deforaos-keyboard \
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 
 pre-everything::
