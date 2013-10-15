@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/admesh/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: cad/admesh/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	admesh
 PORTVERSION=	0.95
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 PORTDOCS=	admesh.doc
 PLIST_FILES=	bin/admesh
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
