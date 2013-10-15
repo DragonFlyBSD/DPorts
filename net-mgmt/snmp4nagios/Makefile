@@ -1,9 +1,5 @@
-# New ports collection makefile for:   snmp4nagios
-# Date created:        22 June 2008
-# Whom:                Ryan Steinmetz
-#
-# $FreeBSD: ports/net-mgmt/snmp4nagios/Makefile,v 1.8 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Ryan Steinmetz
+# $FreeBSD: net-mgmt/snmp4nagios/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	SNMP4Nagios
 PORTVERSION=	0.4
@@ -25,6 +21,7 @@ NAGIOSDIR?=	/var/spool/nagios
 OPTIONS_DEFINE=	RRDTOOL
 RRDTOOL_DESC=	Build with rrdtool support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS=	--sbindir=${PREFIX}/${NAGIOSWWWDIR}/cgi-bin \
