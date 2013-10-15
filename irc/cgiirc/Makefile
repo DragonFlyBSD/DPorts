@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: irc/cgiirc/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/cgiirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	cgiirc
 PORTVERSION=	0.5.10
@@ -15,6 +15,7 @@ LICENSE=	GPLv2
 USES=		perl5
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 pre-install:
 	@${MV} ${WRKSRC}/cgiirc.config ${WRKSRC}/cgiirc.config.sample 2>/dev/null || true
 
