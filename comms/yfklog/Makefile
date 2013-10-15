@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/yfklog/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: comms/yfklog/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	yfklog
 PORTVERSION=	0.3.5
@@ -25,6 +25,7 @@ USES=		perl5
 NO_BUILD=	yes
 MAN1=		yfklog.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|' \
 	     ${WRKSRC}/yfk ${WRKSRC}/yfksubs.pl
