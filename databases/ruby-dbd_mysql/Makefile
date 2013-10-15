@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dbd_mysql for DBD-for-Ruby
-# Date created:		3 June 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: databases/ruby-dbd_mysql/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: databases/ruby-dbd_mysql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dbd_mysql
 PORTVERSION=	0.4.4
@@ -23,4 +19,5 @@ RUN_DEPENDS=	${RUBY_SITELIBDIR}/dbi.rb:${PORTSDIR}/databases/ruby-dbi \
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
