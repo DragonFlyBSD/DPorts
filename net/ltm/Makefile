@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ltm
-# Date created:        21 June 2006
-# Whom:                Statseeker
-#
-# $FreeBSD: ports/net/ltm/Makefile,v 1.2 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Statseeker
+# $FreeBSD: net/ltm/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ltm
 PORTVERSION=	3.0.0.608281003
@@ -18,6 +14,7 @@ NO_BUILD=	yes
 MAN1=		ltm.1 ltm-client.1 ltm-mkprotodb.1
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 s: .IGNORE
