@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: devel/jenkins/files/jenkins.in 322443 2013-07-07 15:10:01Z lwhsu $
+# $FreeBSD: devel/jenkins/files/jenkins.in 329474 2013-10-05 16:11:37Z lwhsu $
 #
 # PROVIDE: jenkins
 # REQUIRE: LOGIN
@@ -71,9 +71,6 @@ jenkins_prestart() {
 		touch "${jenkins_log_file}"
 		chown "${jenkins_user}:${jenkins_group}" "${jenkins_log_file}"
 		chmod 640 "${jenkins_log_file}"
-	fi
-	if [ ! -d "${jenkins_home}" ]; then
-		install -d -o "${jenkins_user}" -g "${jenkins_group}" -m 750 "${jenkins_home}"
 	fi
 	if [ ! -d "/var/run/jenkins" ]; then
 		install -d -o "${jenkins_user}" -g "${jenkins_group}" -m 750 "/var/run/jenkins"

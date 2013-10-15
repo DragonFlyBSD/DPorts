@@ -1,7 +1,7 @@
-# $FreeBSD: devel/jenkins/Makefile 327087 2013-09-12 16:12:09Z lwhsu $
+# $FreeBSD: devel/jenkins/Makefile 330059 2013-10-11 07:31:10Z lwhsu $
 
 PORTNAME=	jenkins
-PORTVERSION=	1.530
+PORTVERSION=	1.534
 CATEGORIES=	devel java
 MASTER_SITES=	http://mirrors.jenkins-ci.org/war/${PORTVERSION}/
 DISTNAME=	jenkins
@@ -42,7 +42,7 @@ SUB_LIST+=	JENKINS_HOME=${JENKINS_HOME} JENKINS_USER=${JENKINS_USER} JENKINS_GRO
 .include <bsd.port.pre.mk>
 
 do-install:
-	${MKDIR} "${DATADIR}"
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR} ${STAGEDIR}${JENKINS_HOME}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.post.mk>
