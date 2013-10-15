@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net-im/p5-Net-Stomp/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-Net-Stomp/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-Stomp
 PORTVERSION=	0.45
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Stomp.3 Net::Stomp::Frame.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
