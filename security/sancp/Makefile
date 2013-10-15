@@ -1,42 +1,48 @@
-# New ports collection makefile for:	sancp
-# Date created:				10 Feb 2005
-# Whom:					Paul Schmehl <pauls@utdallas.edu>
-#
-# $FreeBSD: security/sancp/Makefile 317389 2013-05-04 22:48:03Z flo $
-#
+# Created by: Paul Schmehl <pauls@utdallas.edu>
+# $FreeBSD: security/sancp/Makefile 329707 2013-10-07 14:11:44Z danilo $
 
 PORTNAME=	sancp
 PORTVERSION=	1.6.1
 DISTVERSIONSUFFIX=	-stable
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}-stable
 
 MAINTAINER=	pauls@utdallas.edu
-COMMENT=	A network connection profiler
+COMMENT=	Network connection profiler
+
+LICENSE=	QPLv1
+LICENSE_NAME=	Q PUBLIC LICENSE v1.0
+LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_PERMS=	auto-accept
 
 ALL_TARGET=	bsd
 USE_RC_SUBR=	sancp
-SUB_FILES=	pkg-message
+LOG_DIR=	/var/log/sancp
+PLIST_SUB+=	LOG_DIR=${LOG_DIR}
 
 USERS=		sancp
 GROUPS=		sancp
 
-PORTDOCS=	CHANGES INSTALL ISSUES README \
-		SETUP fields.LIST LICENSE
+OPTIONS_DEFINE=	DOCS
 
-post-extract:
-	@cd ${WRKSRC} && ${MV} LICENSE docs/
+PORTDOCS=	CHANGES INSTALL ISSUES \
+		README SETUP fields.LIST
+
+MAKE_ARGS=	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
+		LFLAGS="${LDFLAGS}"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|gcc|$${CC}|g ; s|g++|$${CXX}|g' \
+		${WRKSRC}/Makefile
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/sancp ${PREFIX}/bin
-	@${INSTALL_DATA} ${WRKSRC}/etc/sancp/sancp.conf ${PREFIX}/etc/sancp.conf-dist
-	@${CP} -n ${PREFIX}/etc/sancp.conf-dist ${PREFIX}/etc/sancp.conf || ${TRUE}
-
-.if !defined(NOPORTDOCS)
-	@${INSTALL} -d ${DOCSDIR}/
-	cd ${WRKSRC}/docs/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
-.endif
-	@${CAT} ${PKGMESSAGE}
+	@${INSTALL_PROGRAM} ${WRKSRC}/sancp \
+		${STAGEDIR}${PREFIX}/bin
+	@${INSTALL_DATA} ${WRKSRC}/etc/sancp/sancp.conf \
+		${STAGEDIR}${PREFIX}/etc/sancp.conf.dist
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/docs/|} ${STAGEDIR}${DOCSDIR}
+	${INSTALL} -m 750 -d ${STAGEDIR}${LOG_DIR}
 
 .include <bsd.port.mk>
