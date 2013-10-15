@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: textproc/uim-gtk3/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
+# $FreeBSD: textproc/uim-gtk3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PKGNAMESUFFIX=	-gtk3
 
@@ -26,6 +26,7 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-gtk3_candwin_Makefile.in \
 IGNORE=		requires X11
 .endif
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}/uim && ${GMAKE} libuim-x-util.la libuim-counted-init.la)
 	(cd ${WRKSRC}/gtk3 && ${GMAKE})
