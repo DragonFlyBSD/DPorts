@@ -1,4 +1,4 @@
-# $FreeBSD: ports/misc/saaghar/Makefile,v 1.2 2013/02/26 15:53:36 svnexp Exp $
+# $FreeBSD: misc/saaghar/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	saaghar
 PORTVERSION=	1.0.94
@@ -23,6 +23,7 @@ HAS_CONFIGURE=	yes
 QMAKEFLAGS+=	PREFIX=${PREFIX}
 WRKSRC=		${WRKDIR}/Saaghar
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MDEBUG}
