@@ -1,5 +1,5 @@
 # Created by: Jonathan Hanna
-# $FreeBSD: japanese/edict-utf-8/Makefile 326697 2013-09-07 21:59:42Z bsam $
+# $FreeBSD: japanese/edict-utf-8/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	edict-utf-8
 PORTVERSION=	20100420
@@ -38,6 +38,7 @@ DATADIR=	${PREFIX}/share/dict/edict-utf-8
 
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-extract:
