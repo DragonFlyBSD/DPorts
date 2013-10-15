@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stldoc
-# Date created:		26 Mar 2002
-# Whom:			Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-#
-# $FreeBSD: ports/lang/stldoc/Makefile,v 1.8 2012/11/17 05:58:57 svnexp Exp $
-#
+# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
+# $FreeBSD: lang/stldoc/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	stldoc
 PORTVERSION=	1.0
@@ -16,6 +12,7 @@ COMMENT=	The STL reference manual by SGI
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/* ${DOCSDIR}
