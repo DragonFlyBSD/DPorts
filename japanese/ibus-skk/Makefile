@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: japanese/ibus-skk/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: japanese/ibus-skk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ibus-skk
 PORTVERSION=	1.4.1
@@ -24,6 +24,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/skk/SKK-JISYO.L|${LOCALBASE}/share/skk/SKK-JISYO.L|' ${WRKSRC}/src/preferences.c
 
