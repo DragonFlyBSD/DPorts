@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/py-bottle/pkg-plist,v 1.3 2012/11/17 06:02:59 svnexp Exp $
+@comment $FreeBSD: www/py-bottle/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/bottle.py
 %%PYTHON_SITELIBDIR%%/bottle.py
 %%PYTHON_SITELIBDIR%%/bottle.pyc

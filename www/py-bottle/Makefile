@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: ports/www/py-bottle/Makefile,v 1.19 2013/02/02 14:43:11 svnexp Exp $
+# $FreeBSD: www/py-bottle/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	bottle
 PORTVERSION=	0.11.6
@@ -16,6 +16,7 @@ LICENSE=	MIT
 USE_PYTHON=	2.6-
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
