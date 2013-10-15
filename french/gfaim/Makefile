@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gfaim
-# Date created:		Monday 27 May 2002
-# Whom:			Clement Laforet <sheepkiller@cultdeadsheep.org>
-#
-# $FreeBSD: ports/french/gfaim/Makefile,v 1.20 2012/11/17 05:57:28 svnexp Exp $
-#
+# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
+# $FreeBSD: french/gfaim/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	gfaim
 PORTVERSION=	0.30
@@ -29,4 +25,5 @@ PORTDOCS=	legal.txt lisezmoi.txt
 MAKE_ENV+=	NOPORTDOCS=yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
