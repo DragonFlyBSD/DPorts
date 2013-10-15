@@ -1,5 +1,5 @@
 # Created by: mnag@FreeBSD.org
-# $FreeBSD: security/pecl-gnupg/Makefile 324453 2013-08-09 17:22:27Z sunpoet $
+# $FreeBSD: security/pecl-gnupg/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	gnupg
 PORTVERSION=	1.3.3
@@ -20,6 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$GNUPG_DIR/lib|${LOCALBASE}/lib|; s| -ldl||g' ${WRKSRC}/config.m4
 
