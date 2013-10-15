@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <chat95@mbox.kyoto-inet.or.jp>
-# $FreeBSD: math/lapack++/Makefile 322711 2013-07-10 16:55:42Z bapt $
+# $FreeBSD: math/lapack++/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	lapack++
 PORTVERSION=	2.5.3
@@ -22,6 +22,7 @@ COMMENT=	Linear Algebra PACKage in C++, a wrapper for LAPACK
 WANT_GNOME=	yes
 USES=	pathfix gmake
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libatlas.so) && !defined(WITH_BLAS)
