@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-mail/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: mail/rubygem-mail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mail
 PORTVERSION=	2.5.4
@@ -20,4 +20,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
