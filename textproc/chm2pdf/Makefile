@@ -1,9 +1,5 @@
-# New ports collection makefile for:	chm2pdf
-# Date created:				20 December 2007
-# Whom:					Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/chm2pdf/Makefile,v 1.7 2012/11/17 06:01:53 svnexp Exp $
-#
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: textproc/chm2pdf/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	chm2pdf
 PORTVERSION=	0.9.1
@@ -23,4 +19,5 @@ PYDISTUTILS_PKGVERSION=	0.9
 
 PLIST_FILES=	bin/chm2pdf
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
