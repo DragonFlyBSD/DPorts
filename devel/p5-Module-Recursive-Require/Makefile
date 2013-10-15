@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: devel/p5-Module-Recursive-Require/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Module-Recursive-Require/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Recursive-Require
 PORTVERSION=	0.04
@@ -17,4 +17,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=	Module::Recursive::Require.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
