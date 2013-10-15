@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: graphics/liblug/Makefile 321039 2013-06-16 11:34:53Z wg $
+# $FreeBSD: graphics/liblug/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=		liblug
 PORTVERSION=		1.0.6
@@ -21,6 +21,7 @@ WRKSRC=			${WRKDIR}/lug
 MAKEFILE=		Makefile.linux
 USE_LDCONFIG=		yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DiTIFF|-DiTIFF -DTIFF_VERSION=TIFF_VERSION_CLASSIC|' \
 		${WRKSRC}/Makefile.linux
