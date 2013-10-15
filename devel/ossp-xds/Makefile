@@ -1,9 +1,5 @@
-# New ports collection makefile for:   OSSP xds
-# Date created:                22 February 2004
-# Whom:                        Kimura Fuyuki <fuyuki@nigredo.org>
-#
-# $FreeBSD: ports/devel/ossp-xds/Makefile,v 1.15 2012/11/17 05:56:03 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@nigredo.org>
+# $FreeBSD: devel/ossp-xds/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	xds
 PORTVERSION=	0.9.3
@@ -24,6 +20,7 @@ MAN3=		xds.3
 check:  build
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check)
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
