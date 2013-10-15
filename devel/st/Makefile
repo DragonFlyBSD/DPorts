@@ -1,6 +1,5 @@
 # Created by: tobez
-# $FreeBSD: ports/devel/st/Makefile,v 1.16 2013/02/08 05:39:06 svnexp Exp $
-#
+# $FreeBSD: devel/st/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	st
 PORTVERSION=	1.9
@@ -19,6 +18,7 @@ DOCS=		fig.gif notes.html reference.html st.html \
 EXAMPLES=	Makefile README error.c lookupdns.c proxy.c \
 		res.c server.c
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
