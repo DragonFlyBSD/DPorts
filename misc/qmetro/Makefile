@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: misc/qmetro/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: misc/qmetro/Makefile 329815 2013-10-08 17:37:36Z marino $
 
 PORTNAME=	qmetro
 PORTVERSION=	0.6.5
@@ -15,8 +15,10 @@ USE_ZIP=	yes
 INSTALLS_ICONS=	yes
 USE_QT4=	gui xml qmake_build uic_build moc_build multimedia \
 		rcc_build
+QMAKEFLAGS=	QMAKE_LFLAGS="-lz"
 USE_DOS2UNIX=	rc/alarm.pri
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
 
