@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-subatom/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-subatom/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	subatom
 PORTVERSION=	0.12
@@ -20,4 +20,5 @@ PLIST_FILES=	bin/subatom
 
 MAN1=		subatom.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
