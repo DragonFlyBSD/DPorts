@@ -1,4 +1,4 @@
-# $FreeBSD: www/hotcrp/Makefile 324258 2013-08-05 03:29:25Z kevlo $
+# $FreeBSD: www/hotcrp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hotcrp
 PORTVERSION=	2.60
@@ -26,6 +26,7 @@ SUB_FILES=	pkg-message
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
