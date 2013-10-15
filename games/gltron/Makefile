@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/gltron/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: games/gltron/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gltron
 PORTVERSION=	0.70
@@ -32,6 +32,7 @@ DESKTOP_ENTRIES=	"GLtron" \
 	"Game;ArcadeGame;" \
 	false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSDL_NET}
