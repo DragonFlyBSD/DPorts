@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zh-tw-irssi
-# Date created:				April 26 2001
-# Whom:					vanilla
-#
-# $FreeBSD: ports/chinese/irssi/Makefile,v 1.37 2012/11/17 05:54:56 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: chinese/irssi/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTREVISION=	0
 CATEGORIES=	chinese
