@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/libopendaap/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/libopendaap/Makefile 329377 2013-10-04 20:15:46Z bapt $
 
 PORTNAME=	libopendaap
 PORTVERSION=	0.4.0
@@ -15,8 +15,6 @@ USE_BZIP2=	yes
 USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-MAN3=		libopendaap.3
 
 post-patch:
 .for file in Makefile.in opendaap.pc.in
