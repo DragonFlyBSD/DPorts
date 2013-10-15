@@ -1,23 +1,24 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/bug5/Makefile 317059 2013-05-01 23:13:41Z bdrewery $
+# $FreeBSD: chinese/bug5/Makefile 327832 2013-09-21 15:42:12Z sunpoet $
 
 PORTNAME=	bug5
-PORTVERSION=	1.15
+PORTVERSION=	1.17
 CATEGORIES=	chinese converters
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
 
 MAINTAINER=	buganini@gmail.com
-COMMENT=	A Big5/GBK <-> UTF-8 translating layer in terminal
+COMMENT=	Big5/GBK <-> UTF-8 translating layer in terminal
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	bsdconv:${PORTSDIR}/converters/bsdconv
+LIB_DEPENDS=	libbsdconv.so:${PORTSDIR}/converters/bsdconv
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
-GH_COMMIT=	67beea0
+GH_COMMIT=	992e2d3
 
 MAKE_ARGS=	PREFIX=${PREFIX}
+NO_STAGE=	yes
 
 PLIST_FILES=	bin/bug5
 
