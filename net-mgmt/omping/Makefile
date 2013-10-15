@@ -1,5 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: net-mgmt/omping/Makefile 326936 2013-09-10 22:44:04Z wg $
+# $FreeBSD: net-mgmt/omping/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	omping
 PORTVERSION=	0.0.4
@@ -17,6 +17,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 MAN8=		${PORTNAME}.8
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e 's|/share/man|/man|g' ${WRKSRC}/Makefile
 
