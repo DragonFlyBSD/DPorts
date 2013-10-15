@@ -1,5 +1,5 @@
 # Created by: babak@farrokhi.net
-# $FreeBSD: www/serendipity/Makefile 320209 2013-06-07 15:08:58Z miwi $
+# $FreeBSD: www/serendipity/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	serendipity
 PORTVERSION=	1.7
@@ -23,6 +23,7 @@ USE_BZIP2=	YES
 OPTIONS_DEFINE=	MYSQL PGSQL SQLITE MAGICK
 OPTIONS_DEFAULT=	MYSQL MAGICK
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
