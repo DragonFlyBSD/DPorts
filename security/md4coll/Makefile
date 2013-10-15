@@ -1,9 +1,5 @@
-# New ports collection makefile for:	md4 collision generator
-# Date created:		Wed Nov 23 04:51:32 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/security/md4coll/Makefile,v 1.7 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: security/md4coll/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	md4coll
 DISTVERSION=	0.1
@@ -20,6 +16,7 @@ COMMENT=	Fast MD4 collision generator
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
