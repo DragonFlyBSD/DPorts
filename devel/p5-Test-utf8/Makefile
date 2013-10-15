@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-utf8/Makefile 325140 2013-08-21 14:26:07Z sunpoet $
+# $FreeBSD: devel/p5-Test-utf8/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	Test-utf8
 PORTVERSION=	1.00
@@ -12,7 +12,5 @@ COMMENT=	Handy UTF-8 tests
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Test::utf8.3
 
 .include <bsd.port.mk>
