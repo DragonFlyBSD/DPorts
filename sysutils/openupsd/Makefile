@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openupsd
-# Date created:				15 August 2004
-# Whom:					Tim Bishop <tim@bishnet.net>
-#
-# $FreeBSD: ports/sysutils/openupsd/Makefile,v 1.5 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: Tim Bishop <tim@bishnet.net>
+# $FreeBSD: sysutils/openupsd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	openupsd
 PORTVERSION=	0.3.1
@@ -20,6 +16,7 @@ CONFIGURE_ARGS=	--program-transform-name= --bindir=${PREFIX}/sbin
 
 PLIST_FILES=	sbin/openupsd etc/openupsd.conf.sample
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/openupsd.conf ${PREFIX}/etc/openupsd.conf.sample
 
