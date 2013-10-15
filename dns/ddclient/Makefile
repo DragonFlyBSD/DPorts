@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: ports/dns/ddclient/Makefile,v 1.34 2013/01/11 20:26:46 svnexp Exp $
+# $FreeBSD: dns/ddclient/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	ddclient
 PORTVERSION=	3.8.1
@@ -13,13 +13,15 @@ COMMENT=	Update dynamic DNS entries
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 USE_RC_SUBR=	${PORTNAME}
 
 OPTIONS_DEFINE=	SSL
 OPTIONS_DEFAULT=SSL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
