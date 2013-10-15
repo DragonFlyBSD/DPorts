@@ -1,5 +1,5 @@
 # Created by: Douglas Anestad <yotta@dougdidit.com>
-# $FreeBSD: lang/gprolog/Makefile 321594 2013-06-22 21:23:22Z rakuco $
+# $FreeBSD: lang/gprolog/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	gprolog
 PORTVERSION=	1.4.1
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	FD
 OPTIONS_DEFAULT=FD
 FD_DESC=	Enable finite domain constraint solver
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
