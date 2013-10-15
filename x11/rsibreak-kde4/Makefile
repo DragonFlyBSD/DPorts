@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: x11/rsibreak-kde4/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: x11/rsibreak-kde4/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	rsibreak
 DISTVERSION=	0.11
@@ -18,4 +18,5 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdehier kdeprefix kdelibs automoc4
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
