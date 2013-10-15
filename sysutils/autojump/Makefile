@@ -1,9 +1,5 @@
-# New ports collection makefile for:  autojump
-# Date created:        12 October 2011
-# Whom:                Neeraj Verma <neeraj.verma.ports@vermatech.com>
-#
-# $FreeBSD: sysutils/autojump/Makefile 314144 2013-03-14 11:20:54Z miwi $
-#
+# Created by: Neeraj Verma <neeraj.verma.ports@vermatech.com>
+# $FreeBSD: sysutils/autojump/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	autojump
 PORTVERSION=	13
@@ -34,6 +30,7 @@ MAN1=		autojump.1
 OPTIONS_DEFINE=		ZSH
 OPTIONS_DEFAULT=	ZSH
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MZSH}
