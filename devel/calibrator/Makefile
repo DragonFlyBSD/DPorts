@@ -1,5 +1,5 @@
 # Created by: bms@FreeBSD.org
-# $FreeBSD: devel/calibrator/Makefile 317270 2013-05-03 21:53:38Z bapt $
+# $FreeBSD: devel/calibrator/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=		calibrator
 PORTVERSION=		0.9
@@ -14,6 +14,7 @@ COMMENT=		Cache Profiling Tool
 NO_WRKSUBDIR=		yes
 PLIST_FILES=		bin/calibrator
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
