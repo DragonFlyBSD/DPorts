@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: lang/seed7/Makefile 326786 2013-09-09 09:31:22Z gahr $
+# $FreeBSD: lang/seed7/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	seed7
 DISTVERSION=	05_20130908
@@ -32,6 +32,7 @@ S7_LIBS=	s7_comp.a s7_con.a s7_draw.a s7_data.a seed7_05.a
 PORTEXAMPLES=	*
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAKEFILE=	mk_freebsd.mk
