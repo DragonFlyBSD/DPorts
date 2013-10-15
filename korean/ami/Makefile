@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/ami/Makefile 321160 2013-06-17 23:04:51Z jkim $
+# $FreeBSD: korean/ami/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	ami
 PORTVERSION=	1.2.3
@@ -22,6 +22,7 @@ USE_GNOME=	gtk12 gdkpixbuf
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
