@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libgnomedb
-# Date created:				02 June 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: databases/libgnomedb/Makefile 326422 2013-09-05 17:37:22Z antoine $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: databases/libgnomedb/Makefile 327717 2013-09-20 16:13:47Z bapt $
 #   $MCom: ports/databases/libgnomedb/Makefile,v 1.32 2008/02/05 13:09:24 kwm Exp $
-#
 
 PORTNAME=	libgnomedb
 PORTVERSION=	3.0.0
@@ -34,5 +30,6 @@ GCONF_SCHEMAS=	libgnomedb-3.0.schemas
 
 PLIST_SUB=	VERSION=${PORTVERSION:R}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
 .endif
