@@ -1,9 +1,5 @@
-# New ports collection makefile for:   clonehdd
-# Date created:        21 August 2007
-# Whom:            Anton Lysenok <bart@tapolsky.net.ua>
-#
-# $FreeBSD: sysutils/clonehdd/Makefile 324191 2013-08-03 13:44:00Z mat $
-#
+# Created by: Anton Lysenok <bart@tapolsky.net.ua>
+# $FreeBSD: sysutils/clonehdd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	clonehdd
 PORTVERSION=	2.0.3
@@ -20,6 +16,7 @@ NO_BUILD=	YES
 MAN8=		clonehdd.8
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/clonehdd ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/clonehdd.8 ${MAN8PREFIX}/man/man8
