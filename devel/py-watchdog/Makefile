@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-watchdog/Makefile,v 1.2 2012/11/17 05:56:52 svnexp Exp $
+# $FreeBSD: devel/py-watchdog/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	watchdog
 PORTVERSION=	0.6.0
@@ -27,6 +27,7 @@ USE_PYDISTUTILS=	easy_install
 # Python3 ready (installation tested)
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}

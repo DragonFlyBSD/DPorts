@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/py-watchdog/pkg-plist,v 1.2 2012/11/17 05:56:52 svnexp Exp $
+@comment $FreeBSD: devel/py-watchdog/pkg-plist 304140 2012-09-12 09:06:06Z nivit $
 bin/watchmedo
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
