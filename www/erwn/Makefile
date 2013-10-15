@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jimFreeBSD.org>
-# $FreeBSD: www/erwn/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/erwn/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	erwn
 PORTVERSION=	0.8
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 
 MAN1=		erwin.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|gtkhtml-3.6|gtkhtml-3.14|g" \
 		${WRKSRC}/configure
