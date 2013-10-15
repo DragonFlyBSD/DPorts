@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_flickr
-# Date created:				2009-08-24
-# Whom:						vshankar
-#
-# $FreeBSD: www/mod_flickr/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: vshankar
+# $FreeBSD: www/mod_flickr/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_flickr
 PORTVERSION=	1.0
@@ -33,6 +29,7 @@ USE_APACHE=	22+
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<curl\/types.h>/d' ${WRKSRC}/mod_flickr.c
 
