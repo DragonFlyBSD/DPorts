@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: ports/irc/ircd-ratbox/Makefile,v 1.26 2013/01/04 12:44:37 svnexp Exp $
+# $FreeBSD: irc/ircd-ratbox/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ircd-ratbox
 PORTVERSION=	3.0.8
@@ -60,6 +60,7 @@ OPTIONS_EXCLUDE=	NLS EXAMPLES
 
 #----------------------------------------------------------------------
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
@@ -99,7 +100,8 @@ PLIST_SUB+=		SERVICES="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSHORTCUTS}
-USE_PERL5_BUILD=	yes
+USES+=			perl5
+USE_PERL5=		build
 PLIST_SUB+=		SHORTCUTS=""
 .else
 PLIST_SUB+=		SHORTCUTS="@comment "
