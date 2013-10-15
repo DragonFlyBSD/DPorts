@@ -1,9 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/httping/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: net/httping/Makefile 329048 2013-10-02 14:15:52Z ehaupt $
 
 PORTNAME=	httping
-PORTVERSION=	2.2.1
-PORTREVISION=	1
+PORTVERSION=	2.3.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.vanheusden.com/httping/ \
 		CRITICAL
@@ -12,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Ping-like tool for HTTP requests
 
-USES=		gmake
+USES=		gmake gettext
 
 MAN1=		httping.1
 PLIST_FILES=	bin/httping
@@ -20,6 +19,8 @@ PLIST_FILES=	bin/httping
 OPTIONS_DEFINE=	NCURSES FFTW SSL
 
 OPTIONS_DEFAULT=NCURSES SSL
+
+NO_STAGE=	yes
 
 .include <bsd.port.options.mk>
 
