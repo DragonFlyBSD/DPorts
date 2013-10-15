@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-kerberos
-# Date created:				April 23, 2011
-# Whom:					Roland van Laar <roland@micite.net>
-#
-# $FreeBSD: ports/security/py-kerberos/Makefile,v 1.3 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Roland van Laar <roland@micite.net>
+# $FreeBSD: security/py-kerberos/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=		kerberos
 PORTVERSION=		1.1.1
@@ -23,6 +19,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|krb5|${PREFIX}/bin/krb5|g' ${WRKSRC}/setup.py
 	@${REINPLACE_CMD} -e 's|split|replace("/usr/lib:", "").split|g' ${WRKSRC}/setup.py
