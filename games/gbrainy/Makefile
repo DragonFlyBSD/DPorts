@@ -1,4 +1,4 @@
-# $FreeBSD: games/gbrainy/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: games/gbrainy/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	gbrainy
 PORTVERSION=	2.1.5
@@ -25,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN6=		gbrainy.6
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
