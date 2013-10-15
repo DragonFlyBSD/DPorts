@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-im/p5-Net-XMPP2/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/p5-Net-XMPP2/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-XMPP2
 PORTVERSION=	0.14
@@ -85,4 +85,5 @@ MAN3=		Net::XMPP2.3 \
 		Net::XMPP2::Util.3 \
 		Net::XMPP2::Writer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
