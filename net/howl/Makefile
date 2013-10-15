@@ -1,5 +1,5 @@
 # Created by: David Magda <dmagda+howl@ee.ryerson.ca>
-# $FreeBSD: net/howl/Makefile 325749 2013-08-31 00:26:08Z bapt $
+# $FreeBSD: net/howl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	howl
 PORTVERSION=	1.0.0
@@ -26,6 +26,7 @@ LDFLAGS+=	${PTHREAD_LIBS}
 
 MAN8=		mDNSResponder.8
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-pthread||g' ${WRKSRC}/configure
 
