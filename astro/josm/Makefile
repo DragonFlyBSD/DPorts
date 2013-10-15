@@ -1,8 +1,8 @@
 # Created by: Gleb Smirnoff <glebius@FreeBSD.org>
-# $FreeBSD: astro/josm/Makefile 325044 2013-08-20 12:17:26Z amdmi3 $
+# $FreeBSD: astro/josm/Makefile 328250 2013-09-25 03:51:17Z amdmi3 $
 
 PORTNAME=	josm
-PORTVERSION=	6115
+PORTVERSION=	6238
 CATEGORIES=	astro java
 MASTER_SITES=	http://josm.openstreetmap.de/download/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -32,8 +32,8 @@ pre-everything::
 	@${ECHO_CMD} "JOSM_MEMORY_LIMIT variable in /etc/make.conf. Default is 1024 (MB)."
 
 do-install:
-	${MKDIR} ${JAVAJARDIR}/
-	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${JAVAJARDIR}/
-	${INSTALL_SCRIPT} ${WRKDIR}/josm.sh ${PREFIX}/bin/josm
+	${MKDIR} ${STAGEDIR}${JAVAJARDIR}/
+	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${STAGEDIR}${JAVAJARDIR}/
+	${INSTALL_SCRIPT} ${WRKDIR}/josm.sh ${STAGEDIR}${PREFIX}/bin/josm
 
 .include <bsd.port.mk>
