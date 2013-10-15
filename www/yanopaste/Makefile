@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/www/yanopaste/Makefile,v 1.6 2013/02/18 08:44:55 svnexp Exp $
+# $FreeBSD: www/yanopaste/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yanopaste
 PORTVERSION=	1.3.0
@@ -15,6 +15,7 @@ USE_PHP=	xsl session xmlwriter xmlreader
 SUB_FILES=	pkg-message
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
