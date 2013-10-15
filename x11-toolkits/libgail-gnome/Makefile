@@ -1,10 +1,6 @@
-# New ports collection makefile for:   libgail-gnome
-# Date Created:			12 April 2002
-# Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: x11-toolkits/libgail-gnome/Makefile 326415 2013-09-05 17:01:12Z antoine $
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: x11-toolkits/libgail-gnome/Makefile 327785 2013-09-20 23:57:47Z bapt $
 #   $MCom: ports-stable/x11-toolkits/libgail-gnome/Makefile,v 1.1 2010/06/23 12:27:01 kwm Exp $
-#
 
 PORTNAME=	libgail-gnome
 PORTVERSION=	1.20.3
@@ -29,4 +25,5 @@ PLIST_FILES=	lib/gtk-2.0/modules/libgail-gnome.la \
 		libdata/pkgconfig/libgail-gnome.pc
 GCONF_SCHEMAS=	libgail-gnome.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
