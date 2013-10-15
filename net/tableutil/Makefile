@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tableutil
-# Date created:				19 September 2005
-# Whom:					jameskamlyn@gmail.com
-#
-# $FreeBSD: ports/net/tableutil/Makefile,v 1.3 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: jameskamlyn@gmail.com
+# $FreeBSD: net/tableutil/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tableutil
 PORTVERSION=	0.6
@@ -16,6 +12,7 @@ COMMENT=	Utility for converting and aggregating lists of IP addresses
 PLIST_FILES=	bin/tableutil
 MAN1=		tableutil.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${PREFIX}/man/man1/
