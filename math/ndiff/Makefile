@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ndiff
-# Date created:        31 January 2004
-# Whom:                Stefan A. Deutscher (sad@mailaps.org)
-#
-# $FreeBSD: ports/math/ndiff/Makefile,v 1.10 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Stefan A. Deutscher (sad@mailaps.org)
+# $FreeBSD: math/ndiff/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ndiff
 PORTVERSION=	2.00
@@ -15,6 +11,7 @@ PKGNAMEPREFIX=
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Compare putatively similar files, ignoring small numeric differences
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_GMP)
