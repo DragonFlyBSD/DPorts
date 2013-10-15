@@ -1,9 +1,5 @@
-# New ports collection makefile for:	imerge(1)
-# Date created:		18 January 2007
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/misc/imerge/Makefile,v 1.5 2012/12/25 19:44:22 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: misc/imerge/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	imerge
 PORTVERSION=	0.2.4
@@ -24,4 +20,5 @@ MAN1=		imerge.1
 MANCOMPRESSED=	maybe
 PLIST_FILES=	bin/imerge
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
