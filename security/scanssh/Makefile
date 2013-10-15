@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: security/scanssh/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: security/scanssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	scanssh
 PORTVERSION=	2.1
@@ -18,6 +18,7 @@ PLIST_FILES=	bin/scanssh
 
 MAN1=		scanssh.1
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scanssh ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/scanssh.1 ${PREFIX}/man/man1
