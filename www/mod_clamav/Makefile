@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_clamav/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_clamav/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_clamav
 PORTVERSION=	0.23
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 OPTIONS_DEFINE=		CLAMAVDEVEL
 CLAMAVDEVEL_DESC=	development version of CLAMAV
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCLAMAVDEVEL}
