@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: net-mgmt/cricket/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net-mgmt/cricket/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	cricket
 PORTVERSION=	1.0.5
@@ -25,6 +25,7 @@ SUB_FILES=	pkg-message
 USERS=	cricket
 GROUPS=	www
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
