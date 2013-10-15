@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Module-CPANfile/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Module-CPANfile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-CPANfile
-PORTVERSION=	1.0001
+PORTVERSION=	1.0002
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Module
@@ -13,9 +13,11 @@ COMMENT=	Parse cpanfile
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	mymeta-cpanfile.1
+MAN1=	cpanfile-dump.1 \
+	mymeta-cpanfile.1
 MAN3=	Module::CPANfile.3 \
 	cpanfile-faq.3 \
 	cpanfile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
