@@ -1,5 +1,5 @@
 # Created by: Cy Schubert <cy@FreeBSD.org>
-# $FreeBSD: x11/xascii/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/xascii/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xascii
 PORTVERSION=	1.0
@@ -18,4 +18,5 @@ USE_XORG=	x11 xt xaw
 MAN1=		xascii.1
 PLIST_FILES=	bin/xascii
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
