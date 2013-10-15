@@ -1,7 +1,5 @@
 # Created by: Mykola Dzham <i@levsha.me>
-#
-# $FreeBSD: audio/libbpm/Makefile 325966 2013-09-02 10:06:03Z bapt $
-#
+# $FreeBSD: audio/libbpm/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libbpm
 PORTVERSION=	0.3
