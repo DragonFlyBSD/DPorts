@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tei-p3
-# Date created:				19 May 2002
-# Whom:					Henrik Motakef <henrik.motakef@web.de>
-#
-# $FreeBSD: ports/textproc/tei-p3/Makefile,v 1.7 2012/11/17 06:02:23 svnexp Exp $
-#
+# Created by: Henrik Motakef <henrik.motakef@web.de>
+# $FreeBSD: textproc/tei-p3/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	tei
 PORTVERSION=	p3
@@ -30,6 +26,7 @@ DTDDIR=		${PORTNAME}/${PORTVERSION}
 XMLCATMGR=	${LOCALBASE}/bin/xmlcatmgr
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
+NO_STAGE=	yes
 do-install:
 	@[ -d ${INSTDIR} ] || ${MKDIR} ${INSTDIR}
 	@${INSTALL_MAN} ${WRKSRC}/*.dtd ${INSTDIR}
