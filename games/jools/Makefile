@@ -1,8 +1,5 @@
-# New ports collection makefile for:	jools
-# Date created:				6 June 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: games/jools/Makefile 322581 2013-07-09 21:26:48Z pav $
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: games/jools/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	jools
 PORTVERSION=	0.20
@@ -18,6 +15,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name ".arch-ids" | ${XARGS} ${RM} -r
 
