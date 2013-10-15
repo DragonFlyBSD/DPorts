@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/axis2/Makefile,v 1.14 2012/11/20 19:25:43 svnexp Exp $
+# $FreeBSD: www/axis2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	axis2
 PORTVERSION=	1.6.2
@@ -21,6 +21,7 @@ OPTIONS_SINGLE=	AS
 OPTIONS_SINGLE_AS=	TOMCAT6 TOMCAT7
 OPTIONS_DEFAULT=	TOMCAT6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOMCAT6}
