@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: benchmarks/unixbench/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: benchmarks/unixbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	unixbench
 PORTVERSION=	4.1.0
@@ -14,6 +14,7 @@ COMMENT=	The BYTE magazine's Public Domain benchmark for UNIX
 SUB_FILES=	unixbench
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 post-extract:
 	${RM} -f ${WRKSRC}/pgms/select
 
