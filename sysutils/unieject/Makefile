@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/unieject/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: sysutils/unieject/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	unieject
 PORTVERSION=	6
@@ -30,6 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		unieject.1
 MAN5=		unieject.conf.5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/-D_POSIX_C_SOURCE/s|^CPPFLAGS|#CPPFLAGS|' ${WRKSRC}/configure
