@@ -1,5 +1,5 @@
 # Created by: jaap
-# $FreeBSD: dns/credns/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: dns/credns/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	credns
 PORTVERSION=	0.2.10
@@ -47,6 +47,7 @@ CHECKING_DESC=	Internal runtime checks
 MMAP_DESC=	Use mmap instead of malloc(experimental)
 MAXIPS_DESC=	Raise max-ips from 8 to ${NSDMAX_IPS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MROOT_SERVER}
