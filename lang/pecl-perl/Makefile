@@ -1,5 +1,5 @@
 # Created by: Luke Jee
-# $FreeBSD: lang/pecl-perl/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: lang/pecl-perl/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	perl
 DISTVERSION=	1.0.0
@@ -20,4 +20,5 @@ DEFAULT_PHP_VER=53
 
 USES=		perl5
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
