@@ -1,5 +1,5 @@
 # Created by: SADA Kenji <sada@FreeBSD.org>
-# $FreeBSD: devel/cvsweb3/Makefile 323795 2013-07-27 16:06:25Z az $
+# $FreeBSD: devel/cvsweb3/Makefile 329692 2013-10-07 11:09:05Z bapt $
 
 PORTNAME=	cvsweb
 PORTVERSION=	3.0.6
@@ -27,12 +27,13 @@ RUN_DEPENDS+=	p5-MIME-Types>=0:${PORTSDIR}/mail/p5-MIME-Types \
 PAPERSIZE?=	letter
 RUN_DEPENDS+=	enscript:${PORTSDIR}/print/enscript-${PAPERSIZE}
 
-LATEST_LINK=	cvsweb3
+PKGNAMESUFFIX=	3
 CONFLICTS=	cvsweb-2.*
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Specify where your repository belongs.
