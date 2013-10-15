@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: lang/fsharp/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: lang/fsharp/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	fsharp
 PORTVERSION=	3.0.25
@@ -29,5 +29,6 @@ PLIST_SUB+=	LB="${LOCALBASE}/"
 PLIST_SUB+=	LB=""
 .endif
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
