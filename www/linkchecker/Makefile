@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/linkchecker/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/linkchecker/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	linkchecker
 PORTVERSION=	8.4
@@ -37,6 +37,7 @@ MANLANG=	"" de
 MAN1=		linkchecker.1
 MAN5=		linkcheckerrc.5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # For Virus checking
