@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Authen-PAAS
-# Date created:				22 Jun 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: security/p5-Authen-PAAS/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: security/p5-Authen-PAAS/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Authen-PAAS
 PORTVERSION=	1.1.1
@@ -34,4 +30,5 @@ MAN3=	Authen::PAAS.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
