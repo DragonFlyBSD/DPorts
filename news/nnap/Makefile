@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  nnap
-# Date created:                          Sun May 26, 2002
-# Whom:                                  Lasse L. Johnsen (lasse@freebsdcluster.org)
-#
-# $FreeBSD: ports/news/nnap/Makefile,v 1.6 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Lasse L. Johnsen (lasse@freebsdcluster.org)
+# $FreeBSD: news/nnap/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	nnap
 PORTVERSION=	1.1
@@ -19,6 +14,7 @@ COMMENT=	Nnap is a lightweight NNTP authentication proxy
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	sbin/nnap
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${DISTDIR}/${DISTFILES} ${WRKDIR}
