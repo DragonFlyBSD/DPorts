@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-tcpwrap
-# Date created:			2006/08/01
-# Whom:				chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/security/pecl-tcpwrap/Makefile,v 1.8 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: security/pecl-tcpwrap/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tcpwrap
 PORTVERSION=	1.1.3
@@ -21,6 +17,7 @@ USE_PHPEXT=	yes
 DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's, -ldl,,' ${WRKSRC}/config.m4
 
