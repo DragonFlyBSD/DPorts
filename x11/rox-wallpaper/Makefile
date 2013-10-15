@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/rox-wallpaper/Makefile,v 1.20 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11/rox-wallpaper/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	rox-wallpaper
 PORTVERSION=	2.3
@@ -17,6 +17,7 @@ USE_PYTHON=	yes
 
 WRKSRC=		${WRKDIR}/Wallpaper
 
+NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} -m compileall ${WRKSRC}
 	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
