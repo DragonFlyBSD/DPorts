@@ -1,5 +1,5 @@
-# Created by: Daniel Eischen <deischen@freebsd.org>
-# $FreeBSD: deskutils/plan/Makefile 322620 2013-07-10 06:49:35Z bapt $
+# Created by: Daniel Eischen <deischen@FreeBSD.org>
+# $FreeBSD: deskutils/plan/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 # Also update	ports/japanese/plan/ (ja-plan) when this port is updated
 
@@ -20,6 +20,7 @@ MAN4=		plan.4
 
 MAKE_ENV+=	DATADIR=${DATADIR} EXAMPLESDIR=${EXAMPLESDIR}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${OSVERSION} > 900006
 EXTRA_PATCHES=	${PATCHDIR}/utmpx-src-daemon.c
