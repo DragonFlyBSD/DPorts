@@ -1,9 +1,5 @@
-# ports collection makefile for:	linrad
-# Date created:		7 July 2004
-# Whom:			db
-#
-# $FreeBSD: ports/astro/libgal/Makefile,v 1.9 2012/11/17 05:54:25 svnexp Exp $
-#
+# Created by: db
+# $FreeBSD: astro/libgal/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libgal
 PORTVERSION=	0.5.0
