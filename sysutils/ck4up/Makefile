@@ -1,9 +1,5 @@
-# Ports collection makefile for:       	ck4up
-# Date created:                 November 19, 2006
-# Whom:                        	Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/ck4up/Makefile,v 1.8 2012/11/17 06:01:26 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: sysutils/ck4up/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	ck4up
 PORTVERSION=	1.2
@@ -25,6 +21,7 @@ PORTEXAMPLES=	ck4up.conf
 
 PLIST_FILES=	bin/ck4up
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${LOCALBASE}|g' \
 	    ${WRKSRC}/Makefile
