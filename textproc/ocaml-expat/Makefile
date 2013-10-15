@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	ocaml-expat
-# Date created:			Sept 15, 2004
-# Whom:				Marwan Burelle <marwan.burelle@lri.fr
-#
-# $FreeBSD: ports/textproc/ocaml-expat/Makefile,v 1.10 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Marwan Burelle <marwan.burelle@lri.fr
+# $FreeBSD: textproc/ocaml-expat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	ocaml-expat
 PORTVERSION=	0.9.1
@@ -35,6 +30,7 @@ PORTDOCS=	*
 
 PKGDEINSTALL=	${PKGINSTALL}
 
+NO_STAGE=	yes
 post-install:
 	@${FIND} ${PREFIX}/lib/ocaml/site-lib/expat -type f | \
 		${SED} "s,^${PREFIX}/,," >> ${TMPPLIST}
