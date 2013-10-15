@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tkabber
-# Date created:				22 October 2003
-# Whom:					Alexander Timoshenko <gonzo@univ.kiev.ua>
-#
-# $FreeBSD: ports/net-im/tkabber/Makefile,v 1.13 2012/11/17 06:00:30 svnexp Exp $
-#
+# Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
+# $FreeBSD: net-im/tkabber/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	tkabber
 PORTVERSION=	0.11.1
@@ -26,6 +22,7 @@ NO_BUILD=	yes
 SUBDIRS=	contrib doc emoticons examples ifacetk jabberlib mclistbox \
 		msgs pixmaps plugins sounds tclxml trans
 
+NO_STAGE=	yes
 do-install:
 	${ECHO} -e "#!/bin/sh\nexec wish8.5 ${DATADIR}/tkabber.tcl \
 		-name tkabber \"\$$@\"\n" > ${PREFIX}/bin/tkabber
