@@ -1,5 +1,5 @@
 # Created by: Rene Ladan <r.c.ladan@student.tue.nl>
-# $FreeBSD: math/coq/Makefile 320753 2013-06-13 10:57:23Z johans $
+# $FreeBSD: math/coq/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	coq
 PORTVERSION=	8.4.2
@@ -33,6 +33,7 @@ IDE_DESC=	Include desktop environment (coqide)
 MAN1=	coq-tex.1 coq_makefile.1 coqc.1 coqchk.1 coqdep.1 coqdoc.1 \
 	coqmktop.1 coqtop.1 coqtop.byte.1 coqtop.opt.1 coqwc.1 gallina.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
