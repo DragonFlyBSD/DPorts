@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: net-mgmt/p5-Net-IP-Match-Regexp/Makefile 326244 2013-09-04 03:24:02Z az $
+# $FreeBSD: net-mgmt/p5-Net-IP-Match-Regexp/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-IP-Match-Regexp
 PORTVERSION=	1.01
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::IP::Match::Regexp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
