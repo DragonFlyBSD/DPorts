@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: ports/converters/gbsdconv/Makefile,v 1.7 2012/11/17 05:55:03 svnexp Exp $
+# $FreeBSD: converters/gbsdconv/Makefile 327834 2013-09-21 15:42:20Z sunpoet $
 
 PORTNAME=	gbsdconv
-PORTVERSION=	1.0
+PORTVERSION=	11.1
 CATEGORIES=	converters python
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
 
@@ -11,13 +11,13 @@ COMMENT=	GUI for bsdconv
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bsdconv>=8.0:${PORTSDIR}/converters/py-bsdconv \
 		${LOCALBASE}/bin/g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
-GH_COMMIT=	ac7e05f
+GH_COMMIT=	0a9ad34
 
 USE_GNOME=	gtk30
 USE_PYTHON=	yes
@@ -25,6 +25,7 @@ USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 
 MAKE_ARGS=	PREFIX=${PREFIX}
+NO_STAGE=	yes
 
 PLIST_FILES=	bin/gbsdconv \
 		lib/gbsdconv_taglib.so \
