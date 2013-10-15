@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qfaktury
-# Date created:		2009-04-20
-# Whom:			Piotr Rybicki (meritus@innervision.pl)
-#
-# $FreeBSD: ports/polish/qfaktury/Makefile,v 1.5 2012/11/17 06:00:44 svnexp Exp $
-#
+# Created by: Piotr Rybicki (meritus@innervision.pl)
+# $FreeBSD: polish/qfaktury/Makefile 327761 2013-09-20 22:34:42Z bapt $
 
 PORTNAME=	qfaktury
 PORTVERSION=	0.6.2
@@ -18,6 +14,7 @@ USE_QT4=	qmake_build uic_build moc_build rcc_build corelib gui xml qt3support
 
 PORTDOCS=	ChangeLog.txt ReadMe.txt ReleaseNotes.txt TODO.txt
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} && ${REINPLACE_CMD} -e 's|@PREFIX@|${PREFIX}|g' qfaktury.pro \
 	QFaktury.desktop
