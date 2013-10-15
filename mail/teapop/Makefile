@@ -1,9 +1,5 @@
-# New ports collection makefile for:	teapop
-# Date created:			18 May 2000
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: mail/teapop/Makefile 322581 2013-07-09 21:26:48Z pav $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: mail/teapop/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	teapop
 PORTVERSION=	0.3.8
@@ -18,6 +14,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-flock
 
 ##
+NO_STAGE=	yes
 ## Available knobs:
 ## General options
 ##   WITHOUT_IPV6: disable IPv6 support
