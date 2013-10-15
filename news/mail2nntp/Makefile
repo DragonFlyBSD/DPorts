@@ -1,5 +1,5 @@
 # Created by: gary@hayers.org
-# $FreeBSD: ports/news/mail2nntp/Makefile,v 1.1 2013/02/14 05:41:54 svnexp Exp $
+# $FreeBSD: news/mail2nntp/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	mail2nntp
 PORTVERSION=	1.0
@@ -13,12 +13,14 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-NNTPClient>=0:${PORTSDIR}/news/p5-NNTPClient
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 PORTDOCS=	*
 PLIST_FILES=	bin/mail2nntp.pl
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
