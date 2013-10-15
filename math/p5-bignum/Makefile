@@ -1,4 +1,4 @@
-# $FreeBSD: math/p5-bignum/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-bignum/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	bignum
 PORTVERSION=	0.32
@@ -17,4 +17,5 @@ MAN3=		bigint.3 \
 		bignum.3 \
 		bigrat.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
