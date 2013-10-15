@@ -1,5 +1,5 @@
 # Created by: Stefan Zehl <sec@42.org>
-# $FreeBSD: x11/xaniroc/Makefile 322009 2013-06-28 22:52:39Z bapt $
+# $FreeBSD: x11/xaniroc/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xaniroc
 PORTVERSION=	1.02
@@ -17,6 +17,7 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xaniroc.1
 PLIST_FILES=	bin/xaniroc
 
+NO_STAGE=	yes
 post-extract:
 	${MV} ${WRKSRC}/manpage.1 ${WRKSRC}/xaniroc.man
 
