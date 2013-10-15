@@ -1,5 +1,5 @@
 # Created by: Chuck Robey <chuckr@FreeBSD.org>
-# $FreeBSD: lang/moscow_ml/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: lang/moscow_ml/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	moscow_ml
 PORTVERSION=	2.01
@@ -49,6 +49,7 @@ post-patch: .SILENT
 	${FIND} ${WRKSRC} -type f -name Makefile -print0 | ${XARGS} -0 \
 		${REINPLACE_CMD} -E 's|cd (.+); make|$$(MAKE) -C \1|'
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mosml/copyrght/copyrght.att ${DOCSDIR}
 	${INSTALL_DATA} ${WRKDIR}/mosml/copyrght/copyrght.cl ${DOCSDIR}
