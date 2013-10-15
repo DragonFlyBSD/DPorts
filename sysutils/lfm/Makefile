@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: sysutils/lfm/Makefile 319212 2013-05-27 11:33:08Z bsam $
+# $FreeBSD: sysutils/lfm/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	lfm
 PORTVERSION=	2.3
@@ -21,6 +21,7 @@ USE_PYDISTUTILS=	yes
 MAN1=		lfm.1 pyview.1
 PORTDOCS=	ChangeLog NEWS README README.pyview TODO
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/DOC_FILES/d ; \
