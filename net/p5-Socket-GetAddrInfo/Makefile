@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: net/p5-Socket-GetAddrInfo/Makefile 326508 2013-09-06 14:40:39Z mat $
+# $FreeBSD: net/p5-Socket-GetAddrInfo/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Socket-GetAddrInfo
 PORTVERSION=	0.22
@@ -25,6 +25,7 @@ USES=		perl5 shebangfix
 USE_PERL5=	modbuild
 SHEBANG_FILES=	bin/getaddrinfo bin/getnameinfo
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # It only needs to compile stuff on perl older than 5.16.
