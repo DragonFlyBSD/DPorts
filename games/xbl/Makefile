@@ -1,5 +1,5 @@
 # Created by: pgs (original)
-# $FreeBSD: games/xbl/Makefile 325395 2013-08-26 13:22:00Z marino $
+# $FreeBSD: games/xbl/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xbl
 PORTVERSION=	1.1.6
@@ -27,6 +27,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@CFLA@ -g|@CFLA@|g' ${WRKSRC}/Makefile.in
 
