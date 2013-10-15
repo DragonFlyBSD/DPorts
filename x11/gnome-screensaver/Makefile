@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-screensaver/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: x11/gnome-screensaver/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.125 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	gnome-screensaver
@@ -45,6 +45,7 @@ OPTIONS_DEFAULT=PAM KEYRING
 PAM_DESC=	Pluggable Authentication Module support
 KEYRING_DESC=	GnomeKeyring integration (needs PAM)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPAM}
