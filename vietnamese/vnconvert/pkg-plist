@@ -1,2 +1,2 @@
-@comment $FreeBSD: ports/vietnamese/vnconvert/pkg-plist,v 1.3 2012/11/17 06:02:26 svnexp Exp $
+@comment $FreeBSD: vietnamese/vnconvert/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/vnconvert
