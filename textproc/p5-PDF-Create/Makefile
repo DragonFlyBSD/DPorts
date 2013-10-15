@@ -1,5 +1,5 @@
 # Created by: petef@databits.net
-# $FreeBSD: textproc/p5-PDF-Create/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-PDF-Create/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	PDF-Create
 PORTVERSION=	1.06
@@ -14,4 +14,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		PDF::Create.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
