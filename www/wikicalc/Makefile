@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wikicalc
-# Date created:		June 24, 2007
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: www/wikicalc/Makefile 326054 2013-09-02 18:41:05Z az $
-#
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: www/wikicalc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wikicalc
 PORTVERSION=	1.0
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SUB_FILES=	setup.sh
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/gpl.txt
 
