@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/www/hudson/Makefile,v 1.96 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/hudson/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hudson
 PORTVERSION=	1.395
@@ -27,6 +27,7 @@ PLIST_FILES=	%%DATADIR%%/${DISTNAME}${EXTRACT_SUFX}
 PLIST_DIRS=	%%DATADIR%%
 SUB_LIST+=	HUDSON_HOME=${HUDSON_HOME} HUDSON_USER=${HUDSON_USER} HUDSON_GROUP=${HUDSON_GROUP} JAVA_HOME=${JAVA_HOME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} "${DATADIR}"
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ${DATADIR}/

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/hudson/files/hudson.in,v 1.2 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/hudson/files/hudson.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: hudson
