@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/pam_p11/Makefile 325745 2013-08-31 00:11:06Z bapt $
+# $FreeBSD: security/pam_p11/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	pam_p11
 PORTVERSION=	0.1.5
@@ -16,6 +16,7 @@ USE_AUTOTOOLS=	libtool
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
+NO_STAGE=	yes
 
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl"
