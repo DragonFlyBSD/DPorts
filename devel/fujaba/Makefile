@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: ports/devel/fujaba/Makefile,v 1.10 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/fujaba/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	fujaba
 PORTVERSION=	4.3.2
@@ -32,6 +32,7 @@ PLIST_FILES+=	%%DATADIR%%/doc
 SUB_FILES=	fujaba.sh
 SUB_LIST=	LOCALBASE="${LOCALBASE}" DATADIR="${DATADIR}"
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/fujaba.sh ${DATADIR}/bin/
