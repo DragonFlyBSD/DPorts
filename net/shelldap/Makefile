@@ -1,5 +1,5 @@
 # Created by: Mahlon E. Smith <mahlon@martini.nu>
-# $FreeBSD: net/shelldap/Makefile 326384 2013-09-05 11:09:23Z az $
+# $FreeBSD: net/shelldap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	shelldap
 PORTVERSION=	1.0.0
@@ -18,13 +18,14 @@ RUN_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff \
 		p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck
 
 USES=		perl5
-
+USE_PERL5=	extract build run
 MAN1=		shelldap.1
 
 PLIST_FILES=	bin/shelldap
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-extract:
 	${LOCALBASE}/bin/pod2man < ${WRKSRC}/shelldap > ${WRKSRC}/shelldap.1
 
