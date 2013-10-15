@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: print/abcm2ps/Makefile 319186 2013-05-27 09:17:44Z araujo $
+# $FreeBSD: print/abcm2ps/Makefile 328769 2013-09-30 04:13:18Z araujo $
 
 PORTNAME=	abcm2ps
 PORTVERSION=	6.6.22
@@ -21,12 +21,12 @@ PLIST_FILES=	bin/abcm2ps %%DATADIR%%/fbook.fmt %%DATADIR%%/fonts.fmt \
 PLIST_DIRS=	%%DATADIR%%
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/abcm2ps ${PREFIX}/bin/
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/*.fmt ${DATADIR}/
+	${INSTALL_PROGRAM} ${WRKSRC}/abcm2ps ${STAGEDIR}${PREFIX}/bin/
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/*.fmt ${STAGEDIR}${DATADIR}/
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
