@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fm/rox-mime-editor/Makefile,v 1.24 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-fm/rox-mime-editor/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	rox-mime-editor
 PORTVERSION=	0.6
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/rox:${PORTSDIR}/x11-fm/rox-filer \
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} -m compileall ${WRKSRC}
 	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
