@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/pylot/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/pylot/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pylot
 PORTVERSION=	1.26
@@ -28,6 +28,7 @@ SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}
 USE_PYTHON=	2.5+
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR} && cd ${WRKSRC} && ${COPYTREE_SHARE} . ${DATADIR}
 	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
