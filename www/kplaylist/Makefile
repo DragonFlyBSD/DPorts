@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kplaylist
-# Date created:		28 October 2010
-# Whom:			Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/www/kplaylist/Makefile,v 1.3 2012/11/17 06:02:38 svnexp Exp $
-#
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: www/kplaylist/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	kplaylist
 PORTVERSION=	1.8.505
@@ -28,6 +24,7 @@ NO_BUILD=	yes
 PLIST_FILES=	%%WWWDIR%%/index.php
 PLIST_DIRS=	%%WWWDIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	@cd ${WRKSRC} && ${CP} kplaylist.1.8.505.php ${WWWDIR}/index.php
