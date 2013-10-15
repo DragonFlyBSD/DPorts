@@ -1,5 +1,5 @@
 # Created by: Joseph Scott <joseph@randomnetworks.com>
-# $FreeBSD: devel/pear-Text_Diff/Makefile 318020 2013-05-13 09:06:43Z miwi $
+# $FreeBSD: devel/pear-Text_Diff/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Text_Diff
 PORTVERSION=	1.1.1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
