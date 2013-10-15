@@ -1,5 +1,5 @@
 # Created by: OISHI Masakuni <yamasa@bsdhouse.org>
-# $FreeBSD: java/jai/Makefile 322451 2013-07-07 16:27:30Z glewis $
+# $FreeBSD: java/jai/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	jai
 PORTVERSION=	1.1.3
@@ -34,6 +34,7 @@ PORTDOCS=	\
 		LICENSE-jai.txt \
 		THIRDPARTYLICENSEREADME-jai.txt
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
