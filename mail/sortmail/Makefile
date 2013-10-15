@@ -1,9 +1,5 @@
-# Ports collection makefile for:  sortmail
-# Date created:                   Thu August 21, 2003
-# Whom:                           Lasse L. Johnsen (lasse@freebsdcluster.org)
-#
-# $FreeBSD: ports/mail/sortmail/Makefile,v 1.3 2012/11/17 05:59:14 svnexp Exp $
-#
+# Created by: Lasse L. Johnsen (lasse@freebsdcluster.org)
+# $FreeBSD: mail/sortmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sortmail
 PORTVERSION=	1.20
@@ -17,6 +13,7 @@ NO_WRKSUBDIR=	yes
 MAN1=		recomposemail.1 decomposemail.1 sortmail.1
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/recomposemail ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/decomposemail ${PREFIX}/bin
