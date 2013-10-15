@@ -1,5 +1,5 @@
 # Created by: Gen Otsuji<otsuji@users.sourceforge.jp>
-# $FreeBSD: japanese/prime/Makefile 325755 2013-08-31 00:41:48Z bapt $
+# $FreeBSD: japanese/prime/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	prime
 DISTVERSION=	1.0.0.1
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=		--with-rubydir=${RUBY_SITELIBDIR}
 USE_AUTOTOOLS=	automake autoconf
 MAKE_JOBS_UNSAFE=	yes
 
+NO_STAGE=	yes
 pre-configure:
 	@(cd ${CONFIGURE_WRKSRC} && ${SETENV} ${AUTOTOOLS_ENV} ${ACLOCAL})
 
