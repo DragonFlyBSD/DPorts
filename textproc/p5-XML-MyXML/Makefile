@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-MyXML/Makefile 326878 2013-09-10 08:58:17Z tobez $
+# $FreeBSD: textproc/p5-XML-MyXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-MyXML
 PORTVERSION=	0.10.02
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::MyXML.3 XML::MyXML::II.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
