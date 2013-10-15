@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phamm
-# Date created:		2006-02-15
-# Whom:			Gustavo Fukao <gustavofukao@gmail.com>
-#
-# $FreeBSD: net/phamm/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Gustavo Fukao <gustavofukao@gmail.com>
+# $FreeBSD: net/phamm/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	phamm
 PORTVERSION=	0.5.18
@@ -27,6 +23,7 @@ PLIST_SUB=	PHAMMDIR=${PHAMMDIR}
 
 PORTDOCS=	CHANGELOG INSTALL README LICENSE THANKS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
