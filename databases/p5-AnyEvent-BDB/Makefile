@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-AnyEvent-BDB/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: databases/p5-AnyEvent-BDB/Makefile 328810 2013-09-30 15:26:59Z sunpoet $
 
 PORTNAME=	AnyEvent-BDB
 PORTVERSION=	1.1
@@ -16,7 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		AnyEvent::BDB.3
 
 .include <bsd.port.mk>
