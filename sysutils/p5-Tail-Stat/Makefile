@@ -1,5 +1,5 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: sysutils/p5-Tail-Stat/Makefile 326530 2013-09-06 17:55:21Z az $
+# $FreeBSD: sysutils/p5-Tail-Stat/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Tail-Stat
 PORTVERSION=	0.21
@@ -41,6 +41,7 @@ MAN3=		Tail::Stat.3 \
 		Tail::Stat::Plugin::nginx.3 \
 		Tail::Stat::Plugin::spamd.3
 
+NO_STAGE=	yes
 post-install:
 	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
