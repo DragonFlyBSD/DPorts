@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-waterfall/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-waterfall/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	waterfall
 PORTVERSION=	0.11
@@ -19,6 +19,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/xmms/Visualization/libwaterfall.la \
 		lib/xmms/Visualization/libwaterfall.so
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2|${CFLAGS}|' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/ltconfig
