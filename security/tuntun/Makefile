@@ -1,5 +1,5 @@
 # Created by: Anderson S. Ferreira <anderson@cnpm.embrapa.br>
-# $FreeBSD: security/tuntun/Makefile 322743 2013-07-11 05:53:09Z bapt $
+# $FreeBSD: security/tuntun/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	tuntun
 PORTVERSION=	0.4.0
@@ -20,4 +20,5 @@ CONFIGURE_ARGS=	--libdir=${PREFIX}/libdata/servers
 
 USE_GNOME=	gnomehier intlhack gnomeprefix gnomepanel glib20 libgnomeui
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
