@@ -1,5 +1,5 @@
 # Created by: Leif Pedersen <pedersen@meridian-enviro.com>
-# $FreeBSD: devel/p5-Shape/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-Shape/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Shape
 PORTVERSION=	0.04
@@ -17,4 +17,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Shape.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
