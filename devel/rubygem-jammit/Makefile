@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-jammit/Makefile 320413 2013-06-09 21:42:08Z swills $
+# $FreeBSD: devel/rubygem-jammit/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	jammit
 PORTVERSION=	0.6.6
@@ -18,4 +18,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/jammit
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
