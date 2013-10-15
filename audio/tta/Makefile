@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <Martin.Dieringer@t-online.de>
-# $FreeBSD: audio/tta/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/tta/Makefile 329374 2013-10-04 20:11:29Z bapt $
 
 PORTNAME=	tta
 PORTVERSION=	3.4.1
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 USES=		gmake
 ALL_TARGET=	ttaenc
-MAKE_ARGS=	CFLAGS="${CFLAGS}" INSDIR="${PREFIX}/bin"
+MAKE_ARGS=	CFLAGS="${CFLAGS}" INSDIR="${STAGEDIR}${PREFIX}/bin"
 
 PLIST_FILES=	bin/ttaenc
 PORTDOCS=	README
@@ -28,9 +28,7 @@ post-patch:
 		s|install -m 755|${INSTALL_PROGRAM}|' ${WRKSRC}/Makefile
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
