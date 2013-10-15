@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/hs-zip-archive/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: archivers/hs-zip-archive/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	zip-archive
 PORTVERSION=	0.1.3.4
@@ -11,6 +11,7 @@ COMMENT=	Library for creating and modifying zip archives
 LICENSE=	BSD
 
 USE_CABAL=	digest>=0.0.0.1 mtl utf8-string>=0.3.1 zlib
+NO_STAGE=	yes
 
 OPTIONS_DEFINE=		EXECUTABLE
 
