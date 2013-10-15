@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: security/p5-Cisco-Hash/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Cisco-Hash/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Cisco-Hash
 PORTVERSION=	0.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Cisco::Hash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
