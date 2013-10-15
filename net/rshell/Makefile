@@ -1,9 +1,5 @@
-# New ports collection makefile for:  rshell
-# Date created:        1997/06/09
-# Whom:                wosch
-#
-# $FreeBSD: ports/net/rshell/Makefile,v 1.15 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: wosch
+# $FreeBSD: net/rshell/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rshell
 PORTVERSION=	1.0
@@ -17,4 +13,5 @@ MAN1=		rshell.1
 MLINKS=		rshell.1 rcopy.1
 MANCOMPRESSED=	maybe
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
