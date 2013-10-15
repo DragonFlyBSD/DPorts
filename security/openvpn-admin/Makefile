@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: security/openvpn-admin/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: security/openvpn-admin/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openvpn-admin
 PORTVERSION=	1.9.4
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
