@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libunique3/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: x11-toolkits/libunique3/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libunique
 PORTVERSION=	3.0.2
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--disable-maintainer-flags --enable-gtk-doc-html=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libdir)/pkgconfig|prefix)/libdata/pkgconfig|g' \
 		-e 's|unique tests doc|unique tests|g' \
