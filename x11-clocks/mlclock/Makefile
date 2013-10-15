@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: ports/x11-clocks/mlclock/Makefile,v 1.19 2013/02/10 10:45:37 svnexp Exp $
+# $FreeBSD: x11-clocks/mlclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	mlclock
 PORTVERSION=	1.1
@@ -17,6 +17,7 @@ USE_XORG=	x11 xau xdmcp
 PLIST_FILES=	bin/mlclock %%DATADIR%%/mlclockrc %%DATADIR%%/mlclockrc-kanji
 PLIST_DIRS=	%%DATADIR%%
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^void main|int main| ; \
