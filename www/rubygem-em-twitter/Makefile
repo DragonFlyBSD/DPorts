@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/rubygem-em-twitter/Makefile 319638 2013-06-02 03:01:13Z swills $
+# $FreeBSD: www/rubygem-em-twitter/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	em-twitter
 PORTVERSION=	0.2.2
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
