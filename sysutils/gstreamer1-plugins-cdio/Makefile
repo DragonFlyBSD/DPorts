@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/gstreamer1-plugins-cdio/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: sysutils/gstreamer1-plugins-cdio/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	sysutils
@@ -10,4 +10,5 @@ DIST=		ugly
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
