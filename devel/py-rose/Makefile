@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-rose/Makefile 318257 2013-05-15 19:33:14Z wg $
+# $FreeBSD: devel/py-rose/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	rose
 PORTVERSION=	1.0.0
@@ -17,4 +17,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
