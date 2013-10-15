@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: devel/p5-Thread-Queue-Duplex/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-Thread-Queue-Duplex/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Thread-Queue-Duplex
 PORTVERSION=	0.92
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Thread::Queue::Duplex.3 Thread::Queue::Queueable.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
