@@ -1,7 +1,5 @@
-# New ports collection makefile for: ifdepd
-# Date created:         03 03 2005
-# Whom:                 Alexander Hausner <alex@hugo.bmg.gv.at>
-# $FreeBSD: ports/net/ifdepd/Makefile,v 1.10 2012/11/17 06:00:02 svnexp Exp $
+# Created by: Alexander Hausner <alex@hugo.bmg.gv.at>
+# $FreeBSD: net/ifdepd/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ifdepd
 PORTVERSION=	20110412
@@ -17,6 +15,7 @@ PLIST_FILES=	bin/ifdepd
 
 USE_RC_SUBR=	${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
