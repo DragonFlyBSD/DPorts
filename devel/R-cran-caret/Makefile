@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-caret/Makefile 324607 2013-08-12 01:23:06Z tota $
+# $FreeBSD: devel/R-cran-caret/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	caret
 DISTVERSION=	5.17-7
@@ -18,4 +18,5 @@ RUN_DEPENDS=	R-cran-reshape2>0:${PORTSDIR}/devel/R-cran-reshape2 \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
