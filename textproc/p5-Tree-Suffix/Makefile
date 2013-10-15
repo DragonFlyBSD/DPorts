@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: textproc/p5-Tree-Suffix/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Tree-Suffix/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Tree-Suffix
 PORTVERSION=	0.21
@@ -18,4 +18,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 
 MAN3=		Tree::Suffix.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
