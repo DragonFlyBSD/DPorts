@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-erubis
-# Date created:				8 Oct 2008
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-erubis/Makefile,v 1.11 2012/11/17 06:03:04 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: www/rubygem-erubis/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	erubis
 PORTVERSION=	2.7.0
@@ -19,4 +16,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/erubis
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
