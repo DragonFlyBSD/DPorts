@@ -1,5 +1,5 @@
 # Created by: Jan-Peter Koopmann <j.koopmann@seceidos.de>
-# $FreeBSD: ports/mail/mailscanner/Makefile,v 1.105 2013/01/29 19:48:35 svnexp Exp $
+# $FreeBSD: mail/mailscanner/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	MailScanner
 PORTVERSION=	4.84.5
@@ -40,7 +40,7 @@ CONFLICTS=	MailScanner-devel-[0-9]*
 
 PATCHLEVEL=	2
 
-USE_PERL5=	yes
+USES=		perl5
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-install-${PORTVERSION}
 SUB_FILES=	MailScanner.8 pkg-message pkg-install pkg-deinstall
@@ -62,6 +62,7 @@ BDC_DESC=		Install BitDefender
 
 OPTIONS_DEFAULT=	SPAMASSASSIN CLAMAV
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSPAMASSASSIN}

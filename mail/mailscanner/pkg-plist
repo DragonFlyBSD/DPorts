@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/mailscanner/pkg-plist,v 1.44 2012/11/17 05:59:05 svnexp Exp $
+@comment $FreeBSD: mail/mailscanner/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%ETCDIR%%/archives.filename.rules.conf.sample
 %%ETCDIR%%/archives.filetype.rules.conf.sample
 %%ETCDIR%%/country.domains.conf.sample
