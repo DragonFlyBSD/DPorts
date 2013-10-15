@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Session
-PORTVERSION=	0.37
+PORTVERSION=	0.38
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -34,6 +34,7 @@ MAN3=		Catalyst::Plugin::Session.3 \
 		Catalyst::Plugin::Session::Test::Store.3 \
 		Catalyst::Plugin::Session::Tutorial.3
 
+NO_STAGE=	yes
 post-extract:
 	@${PERL} -i.bak -ne 'print unless /^(is_upgrading_needed|test_requires)/' ${WRKSRC}/Makefile.PL
 
