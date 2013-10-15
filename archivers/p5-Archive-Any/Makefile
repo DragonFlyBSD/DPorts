@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-Archive-Any/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: archivers/p5-Archive-Any/Makefile 328597 2013-09-28 17:12:12Z sunpoet $
 
 PORTNAME=	Archive-Any
 PORTVERSION=	0.09.32
@@ -24,8 +24,5 @@ TEST_DEPENDS=	p5-Test-Perl-Critic>=0:${PORTSDIR}/textproc/p5-Test-Perl-Critic \
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Archive::Any.3 Archive::Any::Plugin.3 \
-		Archive::Any::Plugin::Tar.3 Archive::Any::Plugin::Zip.3
 
 .include <bsd.port.mk>
