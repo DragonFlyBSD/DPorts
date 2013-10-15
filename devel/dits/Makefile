@@ -1,5 +1,5 @@
 # Created by: Greg Becker <greg@codeconcepts.com>
-# $FreeBSD: devel/dits/Makefile 322481 2013-07-08 03:50:54Z ak $
+# $FreeBSD: devel/dits/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	dits
 PORTVERSION=	2.3.202
@@ -17,4 +17,5 @@ PLIST_FILES=	bin/dits
 MAN1=		dits.1
 MANCOMPRESSED=	no
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
