@@ -1,9 +1,5 @@
-# New ports collection makefile for:   consolehm
-# Date created:        27 September 1999
-# Whom:                Mike Muir <mmuir@es.co.nz>
-#
-# $FreeBSD: ports/sysutils/consolehm/Makefile,v 1.17 2012/11/17 06:01:27 svnexp Exp $
-#
+# Created by: Mike Muir <mmuir@es.co.nz>
+# $FreeBSD: sysutils/consolehm/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	consolehm
 PORTVERSION=	1.31
@@ -22,6 +18,7 @@ MAN8=		chm.8
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/chm
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
