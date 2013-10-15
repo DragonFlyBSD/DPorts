@@ -1,4 +1,4 @@
-# $FreeBSD: www/cplanet/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/cplanet/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	cplanet
 PORTVERSION=	0.9
@@ -19,6 +19,7 @@ MAN1=		cplanet.1
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
