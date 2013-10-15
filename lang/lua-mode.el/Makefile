@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lua-mode.el
-# Date created:				4 March 2004
-# Whom:					Josh Elsasser <jre@vineyard.net>
-#
-# $FreeBSD: ports/lang/lua-mode.el/Makefile,v 1.4 2012/11/17 05:58:52 svnexp Exp $
-#
+# Created by: Josh Elsasser <jre@vineyard.net>
+# $FreeBSD: lang/lua-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	lua-mode.el
 PORTVERSION=	1.26
@@ -26,6 +22,7 @@ XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 PLIST_FILES=	share/emacs/site-lisp/lua-mode.el lib/xemacs/site-lisp/lua-mode.el
 PLIST_DIRS=	lib/xemacs/site-lisp lib/xemacs
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${EMACSLISPDIR}
 	${MKDIR} ${XEMACSLISPDIR}
