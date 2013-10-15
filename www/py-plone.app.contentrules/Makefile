@@ -1,7 +1,7 @@
-# $FreeBSD: www/py-plone.app.contentrules/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.app.contentrules/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	plone.app.contentrules
-PORTVERSION=	2.1.9
+PORTVERSION=	3.0.4
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,12 +12,10 @@ COMMENT=	Plone integration for plone.contentrules
 LICENSE=	GPLv2
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.formlib>=0:${PORTSDIR}/devel/py-five.formlib \
-		${PYTHON_PKGNAMEPREFIX}kss-core>=0:${PORTSDIR}/devel/py-kss-core \
 		${PYTHON_PKGNAMEPREFIX}plone.contentrules>=0:${PORTSDIR}/www/py-plone.contentrules \
 		${PYTHON_PKGNAMEPREFIX}plone.memoize>=0:${PORTSDIR}/www/py-plone.memoize \
 		${PYTHON_PKGNAMEPREFIX}plone.stringinterp>=0:${PORTSDIR}/www/py-plone.stringinterp \
 		${PYTHON_PKGNAMEPREFIX}plone.app.form>=0:${PORTSDIR}/www/py-plone.app.form \
-		${PYTHON_PKGNAMEPREFIX}plone.app.kss>=0:${PORTSDIR}/www/py-plone.app.kss \
 		${PYTHON_PKGNAMEPREFIX}plone.app.vocabularies>=0:${PORTSDIR}/www/py-plone.app.vocabularies \
 		${PYTHON_PKGNAMEPREFIX}transaction>=0:${PORTSDIR}/devel/py-transaction \
 		${PYTHON_PKGNAMEPREFIX}zope.annotation>=0:${PORTSDIR}/devel/py-zope.annotation \
@@ -42,8 +40,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.formlib>=0:${PORTSDIR}/devel/py-five.fo
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-USE_ZOPE=	yes
+USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
