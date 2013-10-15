@@ -1,9 +1,5 @@
-# New ports collection makefile for: silence
-# Date created:		21 May 2010
-# Whom:			Mina R Waheeb <syncer@gmail.com>
-#
-# $FreeBSD: deskutils/silence/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Mina R Waheeb <syncer@gmail.com>
+# $FreeBSD: deskutils/silence/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	silence
 PORTVERSION=	0.2
@@ -23,4 +19,5 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build linguist_build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
