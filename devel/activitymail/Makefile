@@ -1,9 +1,5 @@
-# New ports collection makefile for:	activitymail
-# Date created:			11 Nov 2003
-# Whom:					Joseph Scott <joseph@randomnetworks.com>
-#
-# $FreeBSD: devel/activitymail/Makefile 326581 2013-09-07 08:23:45Z az $
-#
+# Created by: Joseph Scott <joseph@randomnetworks.com>
+# $FreeBSD: devel/activitymail/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	activitymail
 PORTVERSION=	1.26
@@ -20,4 +16,5 @@ USE_PERL5=	modbuild
 PLIST_FILES=	bin/activitymail
 MAN1=		activitymail.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
