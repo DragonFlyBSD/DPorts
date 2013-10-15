@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: mail/p5-Mail-LMLM/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-LMLM/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-LMLM
 PORTVERSION=	0.6802
@@ -21,6 +21,7 @@ MAN3=		Mail::LMLM.3 Mail::LMLM::Object.3 Mail::LMLM::Render.3 \
 		Mail::LMLM::Types::Listar.3 Mail::LMLM::Types::Listserv.3 \
 		Mail::LMLM::Types::Mailman.3 Mail::LMLM::Types::Majordomo.3
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DATADIR}
