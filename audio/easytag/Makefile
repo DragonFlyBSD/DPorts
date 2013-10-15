@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/easytag/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/easytag/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	easytag
 PORTVERSION=	2.1.8
@@ -19,6 +19,7 @@ LIB_DEPENDS=	libid3.so:${PORTSDIR}/audio/id3lib \
 MAN1=		easytag.1
 CONFLICTS=	easytag-devel-[0-9]*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomehack gnomeprefix gtk20 desktopfileutils
