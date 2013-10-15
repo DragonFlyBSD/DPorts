@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net-mgmt/rubygem-blimpy/Makefile 319622 2013-06-02 01:34:47Z swills $
+# $FreeBSD: net-mgmt/rubygem-blimpy/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	blimpy
 PORTVERSION=	0.6.7
@@ -19,4 +19,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/blimpy
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
