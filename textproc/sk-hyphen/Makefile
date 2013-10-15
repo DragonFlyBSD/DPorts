@@ -1,9 +1,4 @@
-# New ports collection makefile for:	sk-hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/sk-hyphen/Makefile,v 1.7 2012/11/17 06:02:21 svnexp Exp $
-#
+# $FreeBSD: textproc/sk-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2004.04.15
@@ -27,7 +22,7 @@ PLIST_FILES=	%%DATADIR%%/hyph_sk_SK.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_sk_SK.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_sk_SK.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
