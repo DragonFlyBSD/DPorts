@@ -1,5 +1,5 @@
 # Created by: Quentin Stievenart <acieroid@awesom.eu>
-# $FreeBSD: ports/devel/nxt-python/Makefile,v 1.4 2012/12/28 00:15:21 svnexp Exp $
+# $FreeBSD: devel/nxt-python/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	nxt-python
 PORTVERSION=	2.2.2
@@ -17,4 +17,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
