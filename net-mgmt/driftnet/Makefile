@@ -1,9 +1,5 @@
-# New ports collection makefile for:	driftnet
-# Date created:		28 February 2002
-# Whom:			Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-#
-# $FreeBSD: ports/net-mgmt/driftnet/Makefile,v 1.17 2012/11/17 06:00:31 svnexp Exp $
-#
+# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
+# $FreeBSD: net-mgmt/driftnet/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	driftnet
 PORTVERSION=	0.1.6
@@ -28,6 +24,7 @@ MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}" PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
 MAN1=		driftnet.1
 PLIST_FILES=	bin/driftnet
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/driftnet ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/driftnet.1 ${MAN1PREFIX}/man/man1/
