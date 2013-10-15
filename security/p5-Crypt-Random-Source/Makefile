@@ -1,5 +1,5 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: security/p5-Crypt-Random-Source/Makefile 327002 2013-09-11 19:02:50Z az $
+# $FreeBSD: security/p5-Crypt-Random-Source/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Random-Source
 PORTVERSION=	0.07
@@ -38,4 +38,5 @@ MAN3=		Crypt::Random::Source.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
