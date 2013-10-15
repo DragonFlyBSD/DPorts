@@ -1,6 +1,5 @@
 # Created by: Thomas Quinot <thomas@cuivre.fr.eu.org>
-# $FreeBSD: security/calife-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: security/calife-devel/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	calife
 PORTVERSION=	3.0.1
@@ -25,6 +24,7 @@ CONFLICTS?=	calife-2.*
 MAN1=		calife.1
 MAN5=		calife.auth.5
 
+NO_STAGE=	yes
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/pam/freebsd5 ${PREFIX}/etc/pam.d/calife.sample
 	@${CAT} ${PKGMESSAGE}
