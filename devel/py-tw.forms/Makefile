@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-tw.forms
-# Date created:     2012-05-08
-# Whom:             Yuan-Chung Hsiao <ychsiao@gmail.com>
-#
-# $FreeBSD: ports/devel/py-tw.forms/Makefile,v 1.2 2012/11/17 05:56:51 svnexp Exp $
-#
+# Created by: Yuan-Chung Hsiao <ychsiao@gmail.com>
+# $FreeBSD: devel/py-tw.forms/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	tw.forms
 PORTVERSION=	0.9.9
@@ -23,4 +19,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	tw.forms
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
