@@ -1,5 +1,5 @@
 # Created by: stb@lassitu.de
-# $FreeBSD: graphics/pngnq/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/pngnq/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pngnq
 PORTVERSION=	1.1
@@ -26,6 +26,7 @@ PORTDOCS=	README COPYING
 PLIST_FILES=	bin/pngcomp bin/pngnq
 MAN1=		pngnq.1
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
