@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: net-im/p5-Protocol-XMPP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-Protocol-XMPP/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Protocol-XMPP
 PORTVERSION=	0.005
@@ -51,4 +51,5 @@ MAN3=		Protocol::XMPP.3 \
 		Protocol::XMPP::TextElement.3 \
 		Protocol::XMPP::User.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
