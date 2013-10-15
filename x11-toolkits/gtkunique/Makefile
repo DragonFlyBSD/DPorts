@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkunique/Makefile 322581 2013-07-09 21:26:48Z pav $
+# $FreeBSD: x11-toolkits/gtkunique/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	gtkunique
 PORTVERSION=	0.9.1
@@ -23,6 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 OPTIONS_DEFINE=	DBUS
 OPTIONS_DEFAULT=	DBUS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBUS}
