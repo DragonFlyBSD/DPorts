@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/courier-imap/Makefile 318826 2013-05-23 02:19:02Z jgh $
+# $FreeBSD: mail/courier-imap/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	courier-imap
 PORTVERSION=	4.13
@@ -13,10 +13,9 @@ COMMENT=	IMAP (and POP3) server that provides access to Maildir mailboxes
 BUILD_DEPENDS=	courierauthconfig:${PORTSDIR}/security/courier-authlib-base
 RUN_DEPENDS=	courierauthconfig:${PORTSDIR}/security/courier-authlib-base
 
+USES=		gmake perl5
 USE_BZIP2=	yes
-USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_RC_SUBR=	courier-imap-imapd courier-imap-imapd-ssl \
 		courier-imap-pop3d courier-imap-pop3d-ssl
 
@@ -27,6 +26,7 @@ CONFIGURE_ENV=	REHASH=${SCRIPTDIR}/c_rehash
 MAKE_ENV:=	${CONFIGURE_ENV}
 
 #
+NO_STAGE=	yes
 # options available:
 #
 # WITH_SYSLOG_FACILITY:         The syslogfacility to use
