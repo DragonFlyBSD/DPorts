@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-PHP_Compat/Makefile 314212 2013-03-15 01:26:21Z miwi $
+# $FreeBSD: devel/pear-PHP_Compat/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHP_Compat
 PORTVERSION=	1.5.0
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 PORTSCOUT=	skipv:1.6.0a1,1.6.0a2
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
