@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-five.localsitemanager
-# Date created:				18 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-five.localsitemanager/Makefile,v 1.3 2012/11/17 05:56:46 svnexp Exp $
-#
+# $FreeBSD: devel/py-five.localsitemanager/Makefile 328002 2013-09-23 13:42:48Z rm $
 
 PORTNAME=	five.localsitemanager
 PORTVERSION=	2.0.5
@@ -28,8 +23,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisit
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-#USE_ZOPE=	yes
+#USES=		zope
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
