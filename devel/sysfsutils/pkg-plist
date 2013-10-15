@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/sysfsutils/pkg-plist,v 1.2 2012/11/17 05:57:04 svnexp Exp $
+@comment $FreeBSD: devel/sysfsutils/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/dlist_test
 bin/get_device
 bin/get_driver
