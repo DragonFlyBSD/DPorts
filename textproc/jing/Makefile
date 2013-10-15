@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: ports/textproc/jing/Makefile,v 1.18 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/jing/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jing
 PORTVERSION=	2008.10.28
@@ -21,6 +21,7 @@ PORTDOCS=	*
 
 SUB_FILES=	jing.sh
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/jing.sh ${PREFIX}/bin/jing
 	${INSTALL_DATA} ${WRKSRC}/bin/jing.jar ${JAVAJARDIR}
