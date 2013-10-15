@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: print/latexmk/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: print/latexmk/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latexmk
 PORTVERSION=	435
@@ -26,6 +26,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/latexmk
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
