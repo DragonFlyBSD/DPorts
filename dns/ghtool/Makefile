@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ghtool
-# Date created:		19 September 2000
-# Whom:			roam@orbitel.bg
-#
-# $FreeBSD: ports/dns/ghtool/Makefile,v 1.9 2012/11/17 05:57:09 svnexp Exp $
-#
+# Created by: roam@orbitel.bg
+# $FreeBSD: dns/ghtool/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	ghtool
 PORTVERSION=	1.0
@@ -25,6 +21,7 @@ EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	${WRKSRC}/${SRC}
 PLIST_FILES=	bin/gh
 
+NO_STAGE=	yes
 do-build:
 		${CC} ${CFLAGS} -o ${WRKSRC}/${TGT} ${WRKSRC}/${SRC}
 
