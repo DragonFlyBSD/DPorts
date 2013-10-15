@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: x11/xdtm/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xdtm/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xdtm
 PORTVERSION=	2.5.8
@@ -18,4 +18,5 @@ MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		xdtm.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
