@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/colord-gtk/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: graphics/colord-gtk/Makefile 327733 2013-09-20 18:35:44Z bapt $
 #    $MCom: ports/trunk/graphics/colord-gtk/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	colord-gtk
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--enable-gtk-doc-html=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wclobbered||g' \
 		-e 's|-Wempty-body||g' \
