@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: mail/majordomo/Makefile 326319 2013-09-04 20:27:13Z anders $
+# $FreeBSD: mail/majordomo/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	majordomo
 PORTVERSION=	1.94.5
@@ -13,8 +13,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	A mailing list manager
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 
 SHEBANG_FILES=	contrib/sequencer
 
@@ -26,6 +25,7 @@ PKGMESSAGE=	${FILESDIR}/post-install-notes
 
 DOCSDIR=	${PREFIX}/${PORTNAME}/doc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-fetch:
