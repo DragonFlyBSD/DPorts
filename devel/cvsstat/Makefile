@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: devel/cvsstat/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/cvsstat/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvsstat
 PORTVERSION=	2.24
@@ -17,6 +17,7 @@ USES=		perl5
 NO_BUILD=	yes
 PLIST_FILES=	bin/cvsstat
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} -p ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
