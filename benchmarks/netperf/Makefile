@@ -1,5 +1,5 @@
 # Created by: koshy
-# $FreeBSD: ports/benchmarks/netperf/Makefile,v 1.37 2013/01/30 23:00:07 svnexp Exp $
+# $FreeBSD: benchmarks/netperf/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	netperf
 PORTVERSION=	2.6.0
@@ -20,6 +20,7 @@ SOCKETS_DESC=	Enable Unix Domain socket support
 HISTOGRAM_DESC=	Enable optional histogram output
 EXS_DESC=	Enable ICSC async socket support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_CSTD=	gnu89
