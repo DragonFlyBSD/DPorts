@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: net-mgmt/p5-GRNOC-Config/Makefile 326832 2013-09-09 18:19:46Z sunpoet $
+# $FreeBSD: net-mgmt/p5-GRNOC-Config/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	GRNOC-Config
 PORTVERSION=	1.0.9
@@ -25,4 +25,5 @@ PLIST_DIRSTRY=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/GRNOC/Config \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/GRNOC \
 		%%SITE_PERL%%/GRNOC
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
