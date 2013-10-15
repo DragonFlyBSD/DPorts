@@ -1,5 +1,5 @@
 # Created by: Chin-San Huang <chinsan@mail2000.com.tw>
-# $FreeBSD: www/dokuwiki/Makefile 318124 2013-05-13 19:45:26Z delphij $
+# $FreeBSD: www/dokuwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dokuwiki
 PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
@@ -29,6 +29,7 @@ SUB_LIST+=	PORTNAME=${PORTNAME} DOKUWIKI_DIR=${DOKUWIKI_DIR}
 
 REINPLACE_ARGS=	-i ''
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # This target is only meant to be used by the port maintainer.
