@@ -1,5 +1,5 @@
 # Created by: Oleg Alexeenkov <proler@gmail.com>
-# $FreeBSD: net-p2p/p5-Net-DirectConnect/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-p2p/p5-Net-DirectConnect/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	Net-DirectConnect
 PORTVERSION=	0.13
@@ -30,4 +30,5 @@ USE_PERL5=	configure
 MAN1=		dcget.1 dcshare.1
 MAN3=		Net::DirectConnect.3 Net::DirectConnect::filelist.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
