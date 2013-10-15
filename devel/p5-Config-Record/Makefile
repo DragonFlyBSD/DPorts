@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Record/Makefile 327237 2013-09-14 07:42:44Z sunpoet $
+# $FreeBSD: devel/p5-Config-Record/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-Record
 PORTVERSION=	1.1.2
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Config::Record.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
