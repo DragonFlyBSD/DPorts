@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: multimedia/gxmms/Makefile 326507 2013-09-06 14:30:42Z bapt $
+# $FreeBSD: multimedia/gxmms/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gxmms
 PORTVERSION=	0.3.0
@@ -24,6 +24,7 @@ OPTIONS_DEFAULT=		XMMS
 XMMS_DESC=	Use xmms as frontend
 BMP_DESC=	Use BMP as frontend
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXMMS}
