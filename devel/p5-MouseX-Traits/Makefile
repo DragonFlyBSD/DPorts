@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MouseX-Traits/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-MouseX-Traits/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MouseX-Traits
 PORTVERSION=	0.1102
@@ -17,7 +17,5 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		MouseX::Traits.3
 
 .include <bsd.port.mk>
