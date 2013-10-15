@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: games/kobodeluxe/Makefile 325494 2013-08-27 23:36:12Z bapt $
+# $FreeBSD: games/kobodeluxe/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	kobodeluxe
 PORTVERSION=	0.5.1
@@ -34,6 +34,7 @@ DESKTOP_ENTRIES="Kobo Deluxe" \
 OPTIONS_DEFINE=	OPENGL
 OPTIONS_DEFAULT=OPENGL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENGL}
