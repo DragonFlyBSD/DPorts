@@ -1,7 +1,7 @@
-# $FreeBSD: www/py-plone.autoform/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: www/py-plone.autoform/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	plone.autoform
-PORTVERSION=	1.3
+PORTVERSION=	1.5
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,7 +21,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
