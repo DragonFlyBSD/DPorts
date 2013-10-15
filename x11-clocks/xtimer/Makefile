@@ -1,5 +1,5 @@
 # Created by: candy@kgc.co.jp
-# $FreeBSD: x11-clocks/xtimer/Makefile 322014 2013-06-28 23:05:59Z bapt $
+# $FreeBSD: x11-clocks/xtimer/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	xtimer
 PORTVERSION=	0.8089
@@ -16,4 +16,5 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xtimer.1
 PLIST_FILES=	bin/xtimer
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
