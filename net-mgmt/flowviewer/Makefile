@@ -1,8 +1,5 @@
-# New ports collection makefile for:	flowviewer
-# Date created:			Oct 15, 2006
-# Whom:				Alex Samorukov, samm@os2.kiev.ua
-#
-# $FreeBSD: net-mgmt/flowviewer/Makefile 326245 2013-09-04 03:27:37Z az $
+# Created by: Alex Samorukov, samm@os2.kiev.ua
+# $FreeBSD: net-mgmt/flowviewer/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	flowviewer
 PORTVERSION=	3.3.1
@@ -34,6 +31,7 @@ NO_BUILD=	yes
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e "s|%%PREFIX%%|${PREFIX}|" \
