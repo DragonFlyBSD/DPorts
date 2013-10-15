@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: lang/p5-Parse-Perl/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: lang/p5-Parse-Perl/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Parse-Perl
 PORTVERSION=	0.007
@@ -24,4 +24,5 @@ MAN3=		Parse::Perl.3 \
 		Parse::Perl::CopHintsHash.3 \
 		Parse::Perl::Environment.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
