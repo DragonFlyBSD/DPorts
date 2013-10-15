@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-iplib
-# Date created:		2010-02-22
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/net/py-iplib/Makefile,v 1.2 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/py-iplib/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	iplib
 PORTVERSION=	1.1
@@ -17,4 +13,5 @@ COMMENT=	Convert amongst many different IPv4 notations
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
