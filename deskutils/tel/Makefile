@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tel
-# Date created:		7 March 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: deskutils/tel/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: deskutils/tel/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tel
 PORTVERSION=	0.1.7.1
@@ -19,4 +15,5 @@ USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
