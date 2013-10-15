@@ -1,5 +1,5 @@
 # Created by: toni.viemero@iki.fi
-# $FreeBSD: www/p5-webservice-validator-css-w3c/Makefile 326033 2013-09-02 16:56:12Z az $
+# $FreeBSD: www/p5-webservice-validator-css-w3c/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-Validator-CSS-W3C
 PORTVERSION=	0.2
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	WebService::Validator::CSS::W3C.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
