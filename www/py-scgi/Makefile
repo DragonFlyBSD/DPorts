@@ -1,9 +1,5 @@
-# New ports collection makefile for: scgi
-# Date created:		19 Aug 2002
-# Whom:			Neil Blakey-Milner <nbm@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-scgi/Makefile,v 1.24 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
+# $FreeBSD: www/py-scgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	scgi
 PORTVERSION=	1.14
@@ -20,4 +16,5 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
