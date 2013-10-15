@@ -1,5 +1,5 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: ports/www/rssowl/Makefile,v 1.16 2013/01/23 15:05:38 svnexp Exp $
+# $FreeBSD: www/rssowl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rssowl
 PORTVERSION=	1.2.3
@@ -41,6 +41,7 @@ DESKTOP_ENTRIES="RSSOwl" \
 		"Network;News;Java;" \
 		true
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$${java\.io\.tmpdir}/source/|$${basedir}/temp/|; \
