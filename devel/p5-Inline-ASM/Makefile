@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline-ASM/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Inline-ASM/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Inline-ASM
 PORTVERSION=	0.03
@@ -19,4 +19,5 @@ CONFIGURE_ARGS=	</dev/null
 
 MAN3=		Inline::ASM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
