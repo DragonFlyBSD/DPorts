@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: net/tintin++/Makefile 325161 2013-08-21 17:17:25Z sunpoet $
+# $FreeBSD: net/tintin++/Makefile 329918 2013-10-09 18:36:09Z sunpoet $
 
 PORTNAME=	tintin++
 PORTVERSION=	2.00.9
@@ -43,10 +43,10 @@ post-configure:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tt++ ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/tt++ ${STAGEDIR}${PREFIX}/bin/
 .if ${PORT_OPTIONS:MDOCS}
-	${INSTALL} -d ${DOCSDIR}/
-	cd ${WRKSRC}/../ && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/../ && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
