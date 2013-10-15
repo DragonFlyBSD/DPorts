@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-DBICx-TestDatabase/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-DBICx-TestDatabase/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBICx-TestDatabase
 PORTVERSION=	0.04
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 MAN3=		DBICx::TestDatabase.3 \
 		DBICx::TestDatabase::Subclass.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
