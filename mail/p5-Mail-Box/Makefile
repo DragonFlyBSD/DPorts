@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Box/Makefile 325352 2013-08-25 16:13:05Z az $
+# $FreeBSD: mail/p5-Mail-Box/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Box
 PORTVERSION=	2.109
@@ -37,6 +37,7 @@ USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 CONFIGURE_ENV+=	MAILBOX_INSTALL_OPTIONALS=n
 
+NO_STAGE=	yes
 .include "Makefile.man"
 .include <bsd.port.pre.mk>
 
