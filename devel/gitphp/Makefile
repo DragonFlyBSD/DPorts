@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gitphp/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/gitphp/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gitphp
 PORTVERSION=	0.2.8
@@ -20,6 +20,7 @@ SUB_FILES=	pkg-message
 
 RUN_DEPENDS+=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/xdiff.so:${PORTSDIR}/textproc/pecl-xdiff
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	(cd ${WRKSRC} \
