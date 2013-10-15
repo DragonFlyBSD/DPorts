@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-RTP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-RTP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-RTP
 PORTVERSION=	0.09
@@ -27,4 +27,5 @@ MAN1=		rtpdump.pl.1 \
 MAN3=		Net::RTP.3 \
 		Net::RTP::Packet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
