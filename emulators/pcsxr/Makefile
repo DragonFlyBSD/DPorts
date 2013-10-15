@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: emulators/pcsxr/Makefile 327135 2013-09-13 08:24:10Z martymac $
+# $FreeBSD: emulators/pcsxr/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	pcsxr
 PORTVERSION=	1.9.94.r87113
@@ -43,6 +43,7 @@ PORTDOCS=	ChangeLog README
 # accessed through libcdio (using cam(4) and pass(4))
 DEFAULT_DVD_DEVICE?=	/dev/cd0
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64"
