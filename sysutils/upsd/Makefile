@@ -1,5 +1,5 @@
 # Created by: alexis
-# $FreeBSD: sysutils/upsd/Makefile 317253 2013-05-03 21:01:38Z bapt $
+# $FreeBSD: sysutils/upsd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	upsd
 PORTVERSION=	2.0.1.6
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/upsd-2.0
 
 PLIST_FILES=	sbin/upsd etc/upsd.conf etc/rc.d/upsd.sh
 
+NO_STAGE=	yes
 pre-build:
 	@${MV} ${WRKSRC}/config.h ${WRKSRC}/conf.h.orig
 	@${SED} -e "s!@prefix@!${PREFIX}!g" ${WRKSRC}/conf.h.orig > ${WRKSRC}/conf.h
