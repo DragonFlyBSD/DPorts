@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-Test-XPath/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: lang/p5-Test-XPath/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	Test-XPath
 PORTVERSION=	0.16
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	CSS PODT
 CSS_DESC=	Include CSS selectors
 PODT_DESC=	Include Pod package test dependencies
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCSS}
