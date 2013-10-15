@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: graphics/impressive/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: graphics/impressive/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	impressive
 PORTVERSION=	0.10.3
@@ -30,6 +30,7 @@ MAN1=		${PORTNAME}.1
 
 PORTDOCS=	${PORTNAME}.html demo.pdf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
