@@ -1,4 +1,4 @@
-# $FreeBSD: www/foswiki/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/foswiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	foswiki
 PORTVERSION=	1.1.5
@@ -26,6 +26,7 @@ OPTINT_DESC=	Install Perl modules for intl character support
 OPTOTH_DESC=	Install other optional Perl modules
 APACHE_DESC=	Install Apache web server and sample config file
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTINT}
