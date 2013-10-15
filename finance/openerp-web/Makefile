@@ -1,9 +1,5 @@
-# New ports collection makefile for:   openerp-web
-# Date created:        11 January 2010
-# Whom:                Borja Lopez<borja@pexego.es>
-#
-# $FreeBSD: finance/openerp-web/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Borja Lopez<borja@pexego.es>
+# $FreeBSD: finance/openerp-web/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	openerp-web
 PORTVERSION=	5.0.11
@@ -35,6 +31,7 @@ USE_RC_SUBR=	openerp-web
 
 WRKSRC=		${WRKDIR}/openerp-web-${PORTVERSION}
 
+NO_STAGE=	yes
 post-install:
 	@${INSTALL_DATA} ${FILESDIR}/openerp-web.conf ${PREFIX}/etc/openerp-web.conf.sample
 	@${INSTALL_SCRIPT} ${FILESDIR}/openerp-web.wrapper ${PREFIX}/bin/openerp-web
