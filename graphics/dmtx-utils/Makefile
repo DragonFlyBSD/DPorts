@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dmtx-utils
-# Date created:				3 June 2011
-# Whom:					johans
-#
-# $FreeBSD: ports/graphics/dmtx-utils/Makefile,v 1.3 2012/11/17 05:58:03 svnexp Exp $
-#
+# Created by: johans
+# $FreeBSD: graphics/dmtx-utils/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	dmtx-utils
 PORTVERSION=	0.7.4
@@ -24,4 +20,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 MAN1=		dmtxread.1 dmtxwrite.1 dmtxquery.1
 PLIST_FILES=	bin/dmtxread bin/dmtxwrite bin/dmtxquery
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
