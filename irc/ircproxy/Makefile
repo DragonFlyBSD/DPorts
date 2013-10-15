@@ -1,5 +1,5 @@
 # Created by: Jonas Kvinge <jonas@night-light.net>
-# $FreeBSD: irc/ircproxy/Makefile 318254 2013-05-15 18:30:49Z zi $
+# $FreeBSD: irc/ircproxy/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ircproxy
 PORTVERSION=	1.3.6
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	SSL MEMDEBUG FDDEBUG
 MEMDEBUG_DESC=	Enable memory debugging
 FDDEBUG_DESC=	Enable file descriptor debugging
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
