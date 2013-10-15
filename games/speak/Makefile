@@ -1,9 +1,5 @@
-# New ports collection makefile for: speak
-# Date created:		18 January 2000
-# Whom:			freebsd@spatula.net
-#
-# $FreeBSD: ports/games/speak/Makefile,v 1.6 2012/11/17 05:57:53 svnexp Exp $
-#
+# Created by: freebsd@spatula.net
+# $FreeBSD: games/speak/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	speak
 PORTVERSION=	1.2
@@ -15,4 +11,5 @@ COMMENT=	Generates random middle-management synergy speak
 
 CONFLICTS=	espeak-1.[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
