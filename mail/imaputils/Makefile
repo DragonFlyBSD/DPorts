@@ -1,5 +1,5 @@
 # Created by: Mikhail T. (m.tsatsenko@gmail.com)
-# $FreeBSD: mail/imaputils/Makefile 325883 2013-09-01 17:15:21Z az $
+# $FreeBSD: mail/imaputils/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	imaputils
 PORTVERSION=	1.0.2
@@ -19,6 +19,7 @@ SHEBANG_FILES=	bin/*
 
 OPTIONS_DEFINE=	SSL UNICODE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
