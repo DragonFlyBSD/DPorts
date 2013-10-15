@@ -1,9 +1,5 @@
-# New ports collection makefile for:	exslt
-# Date created:				2004-07-08
-# Whom:					Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-#
-# $FreeBSD: ports/textproc/exslt/Makefile,v 1.3 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
+# $FreeBSD: textproc/exslt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	exslt
 PORTVERSION=	2003.10.24
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 
 DATAFILES=	base.css date dyn exsl func howto.html index.html math random regexp set str
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} ">> Installing stylesheets and documentation in ${DATADIR}"
 	@${MKDIR} ${DATADIR}
