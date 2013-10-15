@@ -1,9 +1,5 @@
-# New ports collection makefile for:	msort
-# Date created:		2006-08-11
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: textproc/msort/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/msort/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	msort
 PORTVERSION=	8.53
@@ -27,6 +23,7 @@ GNU_CONFIGURE=	yes
 USE_TK_RUN=	yes
 USE_TCL_WRAPPER=	yes
 USES=		gettext
+NO_STAGE=	yes
 
 PLIST_FILES=	bin/msg bin/msort
 
