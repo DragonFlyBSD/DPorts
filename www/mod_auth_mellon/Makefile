@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: www/mod_auth_mellon/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: www/mod_auth_mellon/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=		mod_auth_mellon
 PORTVERSION=		0.5.0
@@ -23,4 +23,5 @@ USE_APACHE=		22
 
 PLIST_FILES=		${APACHEMODDIR}/mod_auth_mellon.so
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
