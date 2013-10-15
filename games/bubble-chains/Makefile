@@ -1,5 +1,5 @@
-# Created by: nemysis@gmx.ch
-# $FreeBSD: games/bubble-chains/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: games/bubble-chains/Makefile 329815 2013-10-08 17:37:36Z marino $
 
 PORTNAME=	bubble-chains
 PORTVERSION=	0.1.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://bubble-chains.sintegrial.com/files/
 DISTNAME=	chains-${DISTVERSION}
 EXTRACT_SUFX=	-src.7z
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	The aim is to remove all of the targets on each level
 
 LICENSE=	GPLv2
@@ -22,16 +22,17 @@ WRKSRC=		${WRKDIR}/chains-${PORTVERSION}-src
 USE_SDL=	sdl image mixer
 USE_GL=		glut glew glu
 USE_XORG=	xrandr
+USE_DOS2UNIX=	*.pro *.cpp  *.h *.ui *.ui *.rc *.htm *.dat *.css
 USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats \
 		corelib svg xml opengl network
-QMAKEFLAGS+=	QMAKE_LFLAGS="-L${LOCALBASE}/lib -lX11 -lSDL-1.2"
-
+QMAKEFLAGS=	QMAKE_LFLAGS="-L${LOCALBASE}/lib -lX11 -lSDL-1.2"
 
 PORTDOCS=	README
 
-DESKTOP_ENTRIES="Bubble Chains" "${COMMENT}" \
-		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
+DESKTOP_ENTRIES="Bubble Chains" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
@@ -50,18 +51,21 @@ do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
 
+post-configure:
+	@${REINPLACE_CMD} -e 's|CFLAGS        =|CFLAGS        ?=|' \
+		-e 's|CXXFLAGS      =|CXXFLAGS     ?=|' \
+		${WRKSRC}/Makefile
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/chains ${PREFIX}/bin/${PORTNAME}
-	@(cd ${WRKSRC} && ${COPYTREE_SHARE} data ${DATADIR})
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/chains ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	@(cd ${WRKSRC} && ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR})
 
 	${INSTALL_DATA} ${WRKSRC}/images/logo.png \
-		${PREFIX}/share/pixmaps/${PORTNAME}.png
+		${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
 	${INSTALL_DATA} ${WRKSRC}/icon.ico \
-		${PREFIX}/share/pixmaps/${PORTNAME}.ico
+		${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.ico
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
