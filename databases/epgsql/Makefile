@@ -1,4 +1,4 @@
-# $FreeBSD: databases/epgsql/Makefile 319061 2013-05-25 16:27:41Z olgeni $
+# $FreeBSD: databases/epgsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	epgsql
 PORTVERSION=	1.4
@@ -25,6 +25,7 @@ ALL_TARGET=	app
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
