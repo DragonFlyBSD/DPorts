@@ -1,5 +1,5 @@
 # Created by: Frank W. Josellis <frank@dynamical-systems.org>
-# $FreeBSD: astro/aa/Makefile 324154 2013-08-02 08:33:09Z danfe $
+# $FreeBSD: astro/aa/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	aa
 PORTVERSION=	56
@@ -12,6 +12,7 @@ COMMENT=	Self-contained ephemeris calculator
 
 EXTRACT_BEFORE_ARGS=	-aqo
 
+NO_STAGE=	yes
 USE_ZIP=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	aa
