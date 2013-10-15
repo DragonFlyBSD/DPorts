@@ -1,9 +1,5 @@
-# Ports collection makefile for:	bzr-git
-# Date created:		25 May 2010
-# Whom:			Carlo Strub
-#
-# $FreeBSD: devel/bzr-explorer/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Carlo Strub
+# $FreeBSD: devel/bzr-explorer/Makefile 329496 2013-10-05 19:04:33Z cs $
 
 PORTNAME=	bzr-explorer
 PORTVERSION=	1.3.0
@@ -11,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://launchpadlibrarian.net/109861791/ \
 		http://www.c-s.li/ports/
 
-MAINTAINER=	cs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Desktop application for using bzr
 
 LICENSE=	GPLv2
@@ -25,4 +21,5 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	explorer
 USES=		gettext
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
