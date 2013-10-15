@@ -1,5 +1,5 @@
 # Created by: Daniel Nebdal <dnebdal@gmail.com>
-# $FreeBSD: multimedia/bangarang/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/bangarang/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	bangarang
 PORTVERSION=	2.1
@@ -23,4 +23,5 @@ USE_KDE4=	automoc4 kdelibs kdeprefix
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
