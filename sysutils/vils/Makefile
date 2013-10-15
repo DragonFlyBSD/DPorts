@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vils
-# Date created:				22 January 2006
-# Whom:					Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-#
-# $FreeBSD: ports/sysutils/vils/Makefile,v 1.4 2012/11/17 06:01:49 svnexp Exp $
-#
+# Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
+# $FreeBSD: sysutils/vils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	vils
 PORTVERSION=	20020228
@@ -19,6 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PLIST_FILES=	bin/vils
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${CP} ${DISTDIR}/vils ${WRKDIR}/vils
