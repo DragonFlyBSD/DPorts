@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mythes
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/hungarian/mythes/Makefile,v 1.6 2012/11/17 05:58:27 svnexp Exp $
-#
+# $FreeBSD: hungarian/mythes/Makefile 327735 2013-09-20 18:43:02Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2003.09.29
@@ -26,6 +21,7 @@ PLIST_FILES=	%%DATADIR%%/th_hu_HU.dat \
 		%%DATADIR%%/th_hu_HU.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_hu_HU.dat ${WRKSRC}/th_hu_HU.idx ${DATADIR}/
