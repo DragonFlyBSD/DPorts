@@ -1,5 +1,5 @@
 # Created by: Nobuhiro Yasutomi
-# $FreeBSD: x11-clocks/emiclock/Makefile 322014 2013-06-28 23:05:59Z bapt $
+# $FreeBSD: x11-clocks/emiclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	emiclock
 PORTVERSION=	2.0.2
@@ -23,6 +23,7 @@ EMICLOCKDIR=	${LOCALBASE}/lib/X11/EmiClock
 PORTDOCS=	COPYRIGHT COPYRIGHT.en
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"
