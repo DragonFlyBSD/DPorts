@@ -1,5 +1,5 @@
 # Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-# $FreeBSD: www/validator/Makefile 327283 2013-09-14 13:38:20Z az $
+# $FreeBSD: www/validator/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	validator
 PORTVERSION=	1.3
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	HTML_TIDY
 OPTIONS_DEFAULT=HTML_TIDY
 HTML_TIDY_DESC=	Enable HTML Markup Cleaning
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MHTML_TIDY}
