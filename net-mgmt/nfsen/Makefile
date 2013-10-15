@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/nfsen/Makefile 326399 2013-09-05 13:48:34Z feld $
+# $FreeBSD: net-mgmt/nfsen/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nfsen
 PORTVERSION=	1.3.6p1
@@ -38,6 +38,7 @@ SUB_LIST+=	"PORTVERSION=${PORTVERSION}"
 SUB_LIST+=	"PREFIX=${PREFIX}"
 SUB_LIST+=	"WWWDIR=${WWWDIR}"
 
+NO_STAGE=	yes
 post-patch:
 .for nfsenfile in ${REINPLACE_LIST}
 	@${REINPLACE_CMD} ${_SUB_LIST_TEMP} ${WRKSRC}/${nfsenfile}
