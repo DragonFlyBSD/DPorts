@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-jsonschema/Makefile 320088 2013-06-06 12:56:22Z wg $
+# $FreeBSD: devel/py-jsonschema/Makefile 328313 2013-09-25 20:19:42Z wg $
 
 PORTNAME=	jsonschema
-PORTVERSION=	2.0.0
+PORTVERSION=	2.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
