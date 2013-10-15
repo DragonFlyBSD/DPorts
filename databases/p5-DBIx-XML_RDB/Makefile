@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DBIx-XML_RDB
-# Date created:				May 26 2001
-# Whom:					vanilla
-#
-# $FreeBSD: databases/p5-DBIx-XML_RDB/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: vanilla
+# $FreeBSD: databases/p5-DBIx-XML_RDB/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-XML_RDB
 PORTVERSION=	0.05
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		DBIx::XML_RDB.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
