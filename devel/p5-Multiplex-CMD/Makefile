@@ -1,5 +1,5 @@
 # Created by: Andrey Ignatov <rdna@rdna.ru>
-# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 326636 2013-09-07 14:07:59Z az $
+# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Multiplex-CMD
 PORTVERSION=	0.03
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Multiplex::CMD.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
