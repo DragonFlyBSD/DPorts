@@ -1,5 +1,5 @@
 # Created by: dikshie <dikshie@lapi.itb.ac.id>
-# $FreeBSD: benchmarks/pathload/Makefile 325728 2013-08-30 23:09:24Z bapt $
+# $FreeBSD: benchmarks/pathload/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	pathload
 PORTVERSION=	1.3.2
@@ -19,6 +19,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/pathload_rcv bin/pathload_snd
 
+NO_STAGE=	yes
 do-install:
 .for f in pathload_rcv pathload_snd
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
