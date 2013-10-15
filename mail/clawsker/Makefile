@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/clawsker/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: mail/clawsker/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	clawsker
 PORTVERSION=	0.7.10
@@ -18,7 +18,6 @@ RUN_DEPENDS=	claws-mail>=3.9.1:${PORTSDIR}/mail/claws-mail \
 USES=		shebangfix perl5
 SHEBANG_FILES=	${PORTNAME}
 
-MAN1=		clawsker.1
 PORTDOCS=	NEWS README
 
 OPTIONS_DEFINE=	DOCS NLS
@@ -35,10 +34,7 @@ post-patch:
 .endif
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|g} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
