@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Mail::Spool
-# Date created:				24 October 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: mail/p5-Mail-Spool/Makefile 326248 2013-09-04 05:52:04Z az $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: mail/p5-Mail-Spool/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Spool
 PORTVERSION=	0.50
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::Spool.3 Mail::Spool::Handle.3 Mail::Spool::Node.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
