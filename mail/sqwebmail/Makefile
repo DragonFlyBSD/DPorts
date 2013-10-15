@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/sqwebmail/Makefile 327333 2013-09-15 07:14:12Z az $
+# $FreeBSD: mail/sqwebmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sqwebmail
 PORTVERSION=	5.6.1
@@ -28,6 +28,7 @@ MIMETYPES_DESC=	search for a mime.types file
 SENTRENAME_DESC=	Periodic rename the Sent folder
 CHARSET_DESC=	charsets
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../security/courier-authlib/Makefile.opt"
 
 CGIBINDIR?=	www/cgi-bin-dist
