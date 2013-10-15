@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
-# $FreeBSD: databases/gnatsweb4/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: databases/gnatsweb4/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	gnatsweb
 PORTVERSION=	4.00
@@ -27,6 +27,7 @@ PORTDOCS=	CUSTOMIZE CUSTOMIZE.cb CUSTOMIZE.vars \
 
 PORTEXAMPLESS=	gnatsweb-site-example.pl
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${ETCDIR}/
 	@${INSTALL_DATA} ${WRKSRC}/gnatsweb-site.pl  ${ETCDIR}/gnatsweb-site.pl.default
