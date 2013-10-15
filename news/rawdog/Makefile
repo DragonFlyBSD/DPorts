@@ -1,9 +1,5 @@
-# New ports collection makefile for:   rawdog
-# Date created:        9 September 2003
-# Whom:                Tim Bishop <tim@bishnet.net>
-#
-# $FreeBSD: ports/news/rawdog/Makefile,v 1.27 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Tim Bishop <tim@bishnet.net>
+# $FreeBSD: news/rawdog/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	rawdog
 PORTVERSION=	2.13
@@ -19,6 +15,7 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 MAN1=		rawdog.1
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/config ${EXAMPLESDIR}
