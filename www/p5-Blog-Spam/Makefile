@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Blog-Spam/Makefile 326053 2013-09-02 18:23:34Z az $
+# $FreeBSD: www/p5-Blog-Spam/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Blog-Spam
 PORTVERSION=	1.0.2
@@ -46,4 +46,5 @@ MAN3=		Blog::Spam::API.3 \
 		Blog::Spam::Plugin::wordcount.3 \
 		Blog::Spam::Server.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
