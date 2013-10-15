@@ -1,5 +1,5 @@
 # Created by: Alexey Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: databases/mysqlbackup/Makefile 322050 2013-06-29 16:17:05Z feld $
+# $FreeBSD: databases/mysqlbackup/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysqlbackup
 PORTVERSION=	2.7
@@ -26,6 +26,7 @@ PLIST_FILES=	bin/mysqlbackup \
 PLIST_DIRS=	${PERIODICS:C,^(.*)\.(.*)$,etc/periodic/\2,:u} \
 		etc/periodic
 
+NO_STAGE=	yes
 pre-install:
 	${REINPLACE_CMD} ${SUB_LIST:S,$,!g,:S,^, -e s!%%,:S,=,%%!,} \
 		${PERIODICS:S,^,${WRKSRC}/,}
