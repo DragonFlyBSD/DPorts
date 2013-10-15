@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-File-Sort/Makefile 324167 2013-08-02 17:11:34Z az $
+# $FreeBSD: misc/p5-File-Sort/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=		File-Sort
 PORTVERSION=		1.01
@@ -15,4 +15,5 @@ USE_PERL5=		configure
 
 MAN3=			File::Sort.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
