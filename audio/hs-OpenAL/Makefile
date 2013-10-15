@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: audio/hs-OpenAL/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: audio/hs-OpenAL/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	OpenAL
 PORTVERSION=	1.4.0.2
@@ -12,6 +12,7 @@ COMMENT=	A binding to the OpenAL cross-platform 3D audio API
 LICENSE=	BSD
 
 USE_CABAL=	ObjectName StateVar Tensor
+NO_STAGE=	yes
 USE_OPENAL=	al
 
 INSTALL_PORTEXAMPLES=	@(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
