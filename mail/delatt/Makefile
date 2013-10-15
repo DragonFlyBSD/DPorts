@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/delatt/Makefile 327077 2013-09-12 15:23:58Z az $
+# $FreeBSD: mail/delatt/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	delatt
 DISTVERSION=	1.1.3
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 SHEBANG_FILES=	delatt
 PLIST_FILES=	bin/delatt
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
