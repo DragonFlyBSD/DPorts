@@ -1,4 +1,4 @@
-# $FreeBSD: games/wesnoth/Makefile 326957 2013-09-11 09:36:48Z marino $
+# $FreeBSD: games/wesnoth/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.10.6
@@ -46,6 +46,7 @@ SERVER_DESC=	Server
 TESTS_DESC=	Unit tests
 TOOLS_DESC=	Extra tools for artists and translators
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # XXX: breaks compilation because of -Werror
