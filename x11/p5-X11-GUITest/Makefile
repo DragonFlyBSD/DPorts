@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/p5-X11-GUITest/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: x11/p5-X11-GUITest/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	X11-GUITest
 PORTVERSION=	0.25
@@ -17,6 +17,7 @@ USE_PERL5=	configure
 
 MAN3=		X11::GUITest.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/X11R6/\([a-z]*\)\(64\)*|${LOCALBASE}/\1|' ${WRKSRC}/Makefile.PL
 
