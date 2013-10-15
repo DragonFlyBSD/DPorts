@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/font-jisx0213/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: japanese/font-jisx0213/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	jisx0213
 PORTVERSION=	20040425
@@ -34,6 +34,7 @@ LOCALFONTDIR=	share/font-${PORTNAME}
 
 pre-build: apply-slist
 
+NO_STAGE=	yes
 do-configure:
 	@${DO_NADA}
 
