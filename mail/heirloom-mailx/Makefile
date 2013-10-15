@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: mail/heirloom-mailx/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/heirloom-mailx/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mailx
 PORTVERSION=	12.4
@@ -36,6 +36,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
