@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-MIME-EncWords
-# Date created:				05 June 2007
-# Whom:					Olivier Girard <Olivier.Girard@univ-angers.fr>
-#
-# $FreeBSD: mail/p5-MIME-EncWords/Makefile 326271 2013-09-04 12:28:16Z az $
-#
+# Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
+# $FreeBSD: mail/p5-MIME-EncWords/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	MIME-EncWords
 PORTVERSION=	1.011.1
@@ -21,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		MIME::EncWords.3 MIME::EncWords::JA_JP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
