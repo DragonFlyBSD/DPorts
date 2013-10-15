@@ -1,4 +1,4 @@
-# $FreeBSD: www/wwwstat/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/wwwstat/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wwwstat
 PORTVERSION=	2.01
@@ -21,6 +21,7 @@ MAKE_ENV+=	PERL5=${PERL5}
 
 MAN1=	wwwstat.1 splitlog.1
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/wwwstat    ${PREFIX}/bin
 	@${INSTALL_SCRIPT} ${WRKSRC}/splitlog   ${PREFIX}/bin
