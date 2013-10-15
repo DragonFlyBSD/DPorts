@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/php-gdal/Makefile 326666 2013-09-07 17:29:08Z sunpoet $
+# $FreeBSD: graphics/php-gdal/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gdal
 PORTVERSION=	1.10.1
@@ -28,6 +28,7 @@ USE_PHP_BUILD=	yes
 USES=		gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/php
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SWIG = swig/ s|$$|2.0|' ${WRKSRC}/../SWIGmake.base
 	@${REINPLACE_CMD} -e 's|^CC=.*$$|CC=${CC}|; s|^CXX=.*$$|CXX=${CXX}|; s|^CFLAGS=.*$$|CFLAGS=${CFLAGS}|' ${WRKSRC}/${MAKEFILE}
