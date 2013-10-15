@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-clocks/asclock/Makefile 327268 2013-09-14 10:56:34Z bapt $
+# $FreeBSD: x11-clocks/asclock/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	asclock
 PORTVERSION=	1.0
@@ -14,6 +14,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Afterstep clock with some language extensions
 
 CONFLICTS=	asclock-gtk-[0-9]* asclock-xlib-[0-9]*
+NO_STAGE=	yes
 
 # clang's cpp destroys whitespace, particularly hard tabs in makefiles,
 # which is fatal for imake.
