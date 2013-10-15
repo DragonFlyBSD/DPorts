@@ -1,9 +1,5 @@
-# New ports collection makefile for:   dcfldd
-# Date created:        09 January 2005
-# Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/dcfldd/Makefile,v 1.8 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: sysutils/dcfldd/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dcfldd
 DISTVERSION=	1.3.4-1
@@ -18,4 +14,5 @@ MAN1=		dcfldd.1
 
 PLIST_FILES=	bin/dcfldd
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
