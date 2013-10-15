@@ -1,5 +1,5 @@
 # Created by: Gerard Seibert <gerard@seibercom.net>
-# $FreeBSD: security/scamp/Makefile 317186 2013-05-03 09:36:05Z ehaupt $
+# $FreeBSD: security/scamp/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	scamp
 PORTVERSION=	5.6
@@ -29,6 +29,7 @@ MAN1=		scamp.1
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
