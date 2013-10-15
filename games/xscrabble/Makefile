@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xscrabble/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xscrabble/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	xscrabble
 PORTVERSION=	2.12
@@ -10,6 +10,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PORTNAME}_en${EXTRACT_SUFX}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	X version of the popular board game
+
+NO_STAGE=	yes
 
 USES=		imake
 USE_BZIP2=	yes
