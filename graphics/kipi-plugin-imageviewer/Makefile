@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kipi-plugin-imageviewer/Makefile 315762 2013-04-08 17:10:56Z makc $
+# $FreeBSD: graphics/kipi-plugin-imageviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kipi-plugin-${KIPI_PLUGIN}
 PORTVERSION=	${DIGIKAM_VER}
@@ -11,5 +11,6 @@ USE_GL=		glu
 USE_XORG=	xrandr
 
 KIPI_PLUGIN=	imageviewer
+NO_STAGE=	yes
 .include "${.CURDIR}/../digikam-kde4/Makefile.common"
 .include <bsd.port.mk>
