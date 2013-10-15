@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: devel/p5-POE-Quickie/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-POE-Quickie/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Quickie
 PORTVERSION=	0.18
@@ -25,6 +25,7 @@ USE_PERL5=	configure
 
 MAN3=		POE::Quickie.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/lib/POE/Quickie.pm.orig
 
