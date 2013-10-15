@@ -1,9 +1,5 @@
-# New ports collection makefile for:    scim-array
-# Date created:                 23 December 2009
-# Whom:                         Li-Lun Wang <llwang@infor.org>
-#
-# $FreeBSD: chinese/scim-array/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: Li-Lun Wang <llwang@infor.org>
+# $FreeBSD: chinese/scim-array/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	scim-array
 PORTVERSION=	1.0.1
@@ -24,6 +20,7 @@ USES=		gettext pkgconfig iconv
 CFLAGS+=	-fPIC
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e "s,@SCIM_MODULEDIR@,$$(pkg-config --variable=moduledir scim | ${SED} -e s,`pkg-config --variable=prefix scim`,${PREFIX},)," ${WRKSRC}/src/Makefile.in
 	@${REINPLACE_CMD} -e "s,@SCIM_ICONDIR@,$$(pkg-config --variable=icondir scim | ${SED} -e s,`pkg-config --variable=prefix scim`,${PREFIX},)," ${WRKSRC}/data/Makefile.in
