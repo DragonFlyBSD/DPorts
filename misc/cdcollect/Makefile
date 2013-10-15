@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: misc/cdcollect/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: misc/cdcollect/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	cdcollect
 PORTVERSION=	0.6.0
@@ -21,6 +21,7 @@ GCONF_SCHEMAS=	cdcollect.schemas
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's,SqliteClient,Sqlite,' \
 	    ${WRKSRC}/src/Makefile.in \
