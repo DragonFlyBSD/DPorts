@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11/xzoom/Makefile 322008 2013-06-28 22:51:40Z bapt $
+# $FreeBSD: x11/xzoom/Makefile 328646 2013-09-29 03:22:49Z eadler $
 
 PORTNAME=	xzoom
 PORTVERSION=	0.3
@@ -14,7 +14,10 @@ COMMENT=	Magnify, rotate, mirror the image on the X screen
 
 USES=		imake
 USE_XORG=	x11 xext
-MAN1=		xzoom.1
-PLIST_FILES=	bin/xzoom
+PLIST_FILES=	bin/xzoom man/man1/xzoom.1.gz
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/xzoom ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xzoom.man ${STAGEDIR}${MAN1PREFIX}/man/man1/xzoom.1
 
 .include <bsd.port.mk>
