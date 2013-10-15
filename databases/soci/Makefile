@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: databases/soci/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/soci/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	soci
 PORTVERSION=	3.1.0
@@ -30,6 +30,7 @@ IODBC_DESC=	use iODBC driver
 UODBC_DESC=	use unixODBC driver
 OPTIONS_DEFAULT=MYSQL PGSQL SQLITE ODBC IODBC BOOST
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
