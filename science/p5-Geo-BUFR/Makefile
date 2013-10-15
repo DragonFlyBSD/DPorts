@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Geo-BUFR/Makefile 327231 2013-09-14 07:19:23Z sunpoet $
+# $FreeBSD: science/p5-Geo-BUFR/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Geo-BUFR
 PORTVERSION=	1.25
@@ -31,4 +31,5 @@ MAN3=		Geo::BUFR.3 \
 		Geo::bufrread.3 \
 		Geo::bufrresolve.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
