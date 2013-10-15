@@ -1,5 +1,5 @@
 # Created by: Richard Neese <r.neese@gmail.com>
-# $FreeBSD: www/fusionpbx/Makefile 325233 2013-08-22 20:58:30Z wg $
+# $FreeBSD: www/fusionpbx/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	fusionpbx
 DISTVERSION=	3.3
@@ -33,6 +33,7 @@ OPTIONS_DEFINE=	PDOPGSQL PDOMYSQL
 PDOPGSQL_DESC=	Install POSTGRESQL PDO Connector
 PDOMYSQL_DESC=	Install MySQL PDO Connector
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPDOPGSQL}
