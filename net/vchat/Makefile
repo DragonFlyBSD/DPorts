@@ -1,9 +1,5 @@
-# New ports collection makefile for:   vchat
-# Date created:        20 Mar 2001
-# Whom:                Andreas Wetzel <mickey@netassembly.de>
-#
-# $FreeBSD: ports/net/vchat/Makefile,v 1.7 2012/11/17 06:00:24 svnexp Exp $
-#
+# Created by: Andreas Wetzel <mickey@netassembly.de>
+# $FreeBSD: net/vchat/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	vchat
 PORTVERSION=	2.42c
@@ -22,4 +18,5 @@ MAN8=		vchatd.8
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLIST_FILES=	bin/vchat libexec/vchatd
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
