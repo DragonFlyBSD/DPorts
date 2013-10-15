@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/pacman/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: sysutils/pacman/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pacman
 PORTVERSION=	4.0.3
@@ -44,6 +44,7 @@ OPTIONS_DEFAULT=CURL GPGME EXAMPLES NLS
 CURL_DESC=	Use libcurl fetcher instead of external curl/wget
 GPGME_DESC=	Use GPGME for PGP signature verification
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURL}
