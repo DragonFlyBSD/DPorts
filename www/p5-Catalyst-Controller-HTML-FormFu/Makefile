@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <andrey.zverev@electro-com.ru>
-# $FreeBSD: www/p5-Catalyst-Controller-HTML-FormFu/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Controller-HTML-FormFu/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Controller-HTML-FormFu
 PORTVERSION=	0.09004
@@ -47,4 +47,5 @@ MAN3=		Catalyst::Controller::HTML::FormFu.3 \
 		Catalyst::Helper::HTML::FormFu.3 \
 		HTML::FormFu::Element::RequestToken.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
