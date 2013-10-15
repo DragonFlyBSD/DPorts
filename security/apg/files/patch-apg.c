@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/apg/files/patch-apg.c,v 1.3 2012/11/17 06:01:00 svnexp Exp $
+$FreeBSD: security/apg/files/patch-apg.c 304744 2012-09-23 14:59:36Z matthew $
 
 --- apg.c.orig
 +++ apg.c
