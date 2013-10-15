@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: mail/emh/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: mail/emh/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	emh
 PORTVERSION=	1.14.1
@@ -18,6 +18,7 @@ SEMI_TRUNK=	1.14
 SEMI_COOKIE=	semi-${EMACS_PORT_NAME}-${SEMI_TRUNK}.FreeBSD-packages
 
 USE_EMACS=	yes
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_PORT_NAME} == xemacs21-mule
