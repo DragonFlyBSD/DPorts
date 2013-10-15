@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: x11-clocks/astzclock/Makefile 322014 2013-06-28 23:05:59Z bapt $
+# $FreeBSD: x11-clocks/astzclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	astzclock
 PORTVERSION=	1.0
@@ -15,6 +15,7 @@ USE_XORG=	xpm
 MAN1=		astzclock.1
 PLIST_FILES=	bin/astzclock
 
+NO_STAGE=	yes
 pre-configure:
 	(cd ${WRKSRC}; \
 	${ECHO_CMD} ${ASCLOCK_LANG} | ${WRKSRC}/configure > /dev/null)
