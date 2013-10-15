@@ -1,9 +1,5 @@
-# New ports collection makefile for:    retail
-# Date created:                         19 May 2010
-# Whom:                                 Oleg Ginzburg
-#
-# $FreeBSD: ports/sysutils/retail/Makefile,v 1.3 2012/11/17 06:01:43 svnexp Exp $
-#
+# Created by: Oleg Ginzburg
+# $FreeBSD: sysutils/retail/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	retail
 PORTVERSION=	1.0.1
@@ -18,6 +14,7 @@ GNU_CONFIGURE=	yes
 MAN1=		retail.1
 PLIST_FILES=	bin/retail
 
+NO_STAGE=	yes
 post-configure:
 	${REINPLACE_CMD} -e 's/%.o: %.c \*.h ..\/config.h//g' ${WRKSRC}/src/Makefile
 
