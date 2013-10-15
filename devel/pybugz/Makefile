@@ -1,9 +1,4 @@
-# New ports collection makefile for:	py-pybugz
-# Date created:				2012-03-18
-# Whom:					Chris Rees <crees@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pybugz/Makefile,v 1.4 2012/11/17 05:56:54 svnexp Exp $
-#
+# $FreeBSD: devel/pybugz/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pybugz
 PORTVERSION=	0.9.3
@@ -27,4 +22,5 @@ PLIST_FILES=	bin/bugz
 DATADIR=	${PYTHONPREFIX_SITELIBDIR}/bugz
 PORTDATA=	*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
