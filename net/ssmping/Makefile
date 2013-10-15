@@ -1,5 +1,5 @@
 # Created by: dikshie@lapi.itb.ac.id
-# $FreeBSD: ports/net/ssmping/Makefile,v 1.7 2013/01/16 22:42:37 svnexp Exp $
+# $FreeBSD: net/ssmping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ssmping
 PORTVERSION=	0.9.1
@@ -19,6 +19,7 @@ PLIST_FILES=	bin/ssmping \
 		bin/mcfirst \
 		sbin/ssmpingd
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} <= 800000
