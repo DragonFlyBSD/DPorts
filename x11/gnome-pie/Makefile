@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: x11/gnome-pie/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/gnome-pie/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	gnome-pie
 PORTVERSION=	0.5.5
@@ -29,6 +29,7 @@ INSTALLS_ICONS=	yes
 OPTIONS_DEFINE=	DOCS MANPAGES NLS
 OPTIONS_DEFAULT=	MANPAGES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
