@@ -1,9 +1,5 @@
-# New ports collection makefile for:	redet
-# Date created:		2005-07-18
-# Whom:			Vsevolod Stakhov <vsevolod@highsecure.ru>
-#
-# $FreeBSD: ports/textproc/redet/Makefile,v 1.34 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
+# $FreeBSD: textproc/redet/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	redet
 PORTVERSION=	8.26
@@ -23,6 +19,7 @@ PORTDOCS=	AUTHORS COPYING CREDITS LICENSE NEWS README-General ChangeLog
 MAN1=		redet.1
 PLIST_FILES=	bin/redet
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s@exec wish@exec ${WISH}@" ${WRKSRC}/redet.tcl
 
