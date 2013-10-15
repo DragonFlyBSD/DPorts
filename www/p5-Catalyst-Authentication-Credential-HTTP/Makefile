@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Catalyst-Authentication-Credential-HTTP
-# Date created:	   15 May 2009
-# Whom:		   Denis Pokataev <catone@cpan.org>
-#
-# $FreeBSD: www/p5-Catalyst-Authentication-Credential-HTTP/Makefile 326150 2013-09-03 13:17:36Z az $
-#
+# Created by: Denis Pokataev <catone@cpan.org>
+# $FreeBSD: www/p5-Catalyst-Authentication-Credential-HTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Authentication-Credential-HTTP
 PORTVERSION=	1.015
@@ -28,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		Catalyst::Authentication::Credential::HTTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
