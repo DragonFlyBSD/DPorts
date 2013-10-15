@@ -1,4 +1,4 @@
-# $FreeBSD: security/scanhill/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: security/scanhill/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	scanhill
 DISTVERSION=	0.5-p1
@@ -19,6 +19,7 @@ PORTDOCS=	README.txt INSTALL.txt mysql.sql
 
 OPTIONS_DEFINE=	MYSQL DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
