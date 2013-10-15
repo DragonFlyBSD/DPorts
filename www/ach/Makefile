@@ -1,5 +1,5 @@
 # Created by: Carlo Strub <c-s@c-s.li>
-# $FreeBSD: www/ach/Makefile 322028 2013-06-29 07:52:25Z ak $
+# $FreeBSD: www/ach/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ACH
 PORTVERSION=	1.0.3
@@ -22,6 +22,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
 # Get rid of temp files packaged in the upstream distfile
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type f -not -name .htaccess -a \
 		-name .\* -delete
