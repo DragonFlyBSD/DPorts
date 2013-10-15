@@ -1,5 +1,5 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: devel/p5-Hash-Union/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Hash-Union/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Hash-Union
 PORTVERSION=	0.03
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Hash::Union.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
