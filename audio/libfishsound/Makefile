@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libfishsound/Makefile 326205 2013-09-03 19:31:29Z sunpoet $
+# $FreeBSD: audio/libfishsound/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
@@ -21,6 +21,7 @@ OPTIONS_DEFINE=	DOCS DOXYGEN
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+NO_STAGE=	yes
 USES=		pathfix pkgconfig
 
 PORTDOCS=	*
