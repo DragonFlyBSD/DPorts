@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/ccd2iso/files/patch-src-ccd2iso.c,v 1.2 2012/11/17 06:01:26 svnexp Exp $
+$FreeBSD: sysutils/ccd2iso/files/patch-src-ccd2iso.c 300897 2012-07-14 14:29:18Z beat $
 
 --- src/ccd2iso.c.orig	Thu Nov 13 06:43:41 2003
 +++ src/ccd2iso.c	Thu Jun 24 15:31:04 2004
