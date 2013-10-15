@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/xmlindent/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: textproc/xmlindent/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xmlindent
 PORTVERSION=	0.2.17
@@ -19,6 +19,7 @@ SOURCES=	error.c indent.c buffer.c main.c
 MAN1=		xmlindent.1
 PLIST_FILES=	bin/xmlindent
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}; flex xmlindent.yy
 	${CC} ${CFLAGS} ${SOURCES:C/(.*)/${WRKSRC}\/\1/} \
