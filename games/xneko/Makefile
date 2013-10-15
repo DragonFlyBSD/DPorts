@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: games/xneko/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: games/xneko/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	xneko
 PORTVERSION=	1.0
@@ -12,6 +12,8 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	The classic cat-and-mouse
+
+NO_STAGE=	yes
 
 NO_WRKSUBDIR=	yes
 USES=		imake
