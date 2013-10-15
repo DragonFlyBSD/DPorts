@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: sysutils/gai-leds/Makefile 326504 2013-09-06 14:23:20Z bapt $
+# $FreeBSD: sysutils/gai-leds/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	gai-leds
 PORTVERSION=	0.6
@@ -19,6 +19,7 @@ USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|\(GNOMEDIR=\).*|\1"${PREFIX}"|; \
