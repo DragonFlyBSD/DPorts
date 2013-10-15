@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: dns/zonenotify/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: dns/zonenotify/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	zonenotify
 PORTVERSION=	0.1
@@ -13,6 +13,7 @@ COMMENT=	DNS notify sender written in C
 PLIST_FILES=	bin/zonenotify
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|' \
 		${WRKSRC}/Makefile
