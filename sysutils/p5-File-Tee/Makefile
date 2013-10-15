@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-File-Tee
-# Date created:                30 December 2010
-# Whom:                        Konstantin Menshikov <kostjnspb@yandex.ru>
-#
-# $FreeBSD: sysutils/p5-File-Tee/Makefile 326573 2013-09-07 06:47:20Z az $
-#
+# Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
+# $FreeBSD: sysutils/p5-File-Tee/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	File-Tee
 PORTVERSION=	0.07
@@ -20,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	File::Tee.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
