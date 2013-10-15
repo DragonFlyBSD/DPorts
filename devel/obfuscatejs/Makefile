@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: ports/devel/obfuscatejs/Makefile,v 1.11 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/obfuscatejs/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	obfuscatejs
 PORTVERSION=	0.3.6
@@ -29,6 +29,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 OBFUSCATEJSJAR=	${DISTNAME}${EXTRACT_SUFX}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${OBFUSCATEJSJAR} ${DATADIR}

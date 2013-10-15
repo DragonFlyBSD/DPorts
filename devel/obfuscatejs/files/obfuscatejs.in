@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/devel/obfuscatejs/files/obfuscatejs.in,v 1.3 2012/11/17 05:56:02 svnexp Exp $
+# $FreeBSD: devel/obfuscatejs/files/obfuscatejs.in 300896 2012-07-14 13:54:48Z beat $
 if [ "$1" != "Obfuscator" -a "$1" != "WeightWatch" -a "$1" != "BuildUtils" ]; then
     echo "Usage:"
     echo "obfuscatejs Obfuscator {src} {dest} {prefix}"
