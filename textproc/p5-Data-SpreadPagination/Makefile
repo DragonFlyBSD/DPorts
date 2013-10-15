@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: textproc/p5-Data-SpreadPagination/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-Data-SpreadPagination/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Data-SpreadPagination
 PORTVERSION=	0.1.2
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=	Data::SpreadPagination.3
 
+NO_STAGE=	yes
 test:
 	cd ${WRKSRC} && ${MAKE} test
 
