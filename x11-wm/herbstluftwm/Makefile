@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/herbstluftwm/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: x11-wm/herbstluftwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
 
 PORTNAME=	herbstluftwm
 PORTVERSION=	0.5.2
@@ -25,6 +25,7 @@ MAN7=		herbstluftwm-tutorial.7
 
 OPTIONS_DEFINE=	BASH ZSH DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBASH}
