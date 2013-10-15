@@ -1,5 +1,5 @@
 # Created by: Peter Kieser <peter@kieser.ca>
-# $FreeBSD: mail/spamdyke/Makefile 322321 2013-07-05 12:46:45Z bdrewery $
+# $FreeBSD: mail/spamdyke/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	spamdyke
 PORTVERSION=	4.3.1
@@ -17,6 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/tcprules:${PORTSDIR}/sysutils/ucspi-tcp
 WRKSRC=		${WRKDIR}/${DISTNAME}/spamdyke
 
 USES=		qmail
+NO_STAGE=	yes
 
 GNU_CONFIGURE=	yes
 
