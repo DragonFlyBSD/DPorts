@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: converters/gbase/Makefile 316310 2013-04-23 06:34:47Z bapt $
+# $FreeBSD: converters/gbase/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	gbase
 PORTVERSION=	0.5
@@ -17,6 +17,7 @@ OPTIONS_DEFINE=	GTK2
 PLIST_FILES=	bin/${PORTNAME}
 USES=		pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
