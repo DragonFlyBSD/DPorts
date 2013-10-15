@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/dvdbackup/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/dvdbackup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	dvdbackup
 PORTVERSION=	0.4.2
@@ -26,6 +26,7 @@ DEFAULT_DVD_DEVICE?=	/dev/cd0
 
 OPTIONS_DEFINE=	DOCS NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
