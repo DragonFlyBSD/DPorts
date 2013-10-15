@@ -1,5 +1,5 @@
 # Created by: Søren Straarup <xride@x12.dk>
-# $FreeBSD: comms/gpsk31/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: comms/gpsk31/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	gpsk31
 PORTVERSION=	0.3
@@ -14,6 +14,7 @@ USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,-lpthread,${PTHREAD_LIBS},g" ${WRKSRC}/configure
 
