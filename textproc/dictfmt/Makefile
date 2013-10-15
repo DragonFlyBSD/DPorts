@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: textproc/dictfmt/Makefile 321936 2013-06-28 03:08:46Z clsung $
+# $FreeBSD: textproc/dictfmt/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	dictfmt
 PORTVERSION=	1.12.1
@@ -27,4 +27,5 @@ PLIST_FILES=	bin/dictfmt bin/dictfmt_index2suffix bin/dictfmt_index2word \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
