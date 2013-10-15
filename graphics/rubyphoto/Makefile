@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubyphoto
-# Date created:			June 14, 2003
-# Whom:				Munish Chopra <mchopra@engmail.uwaterloo.ca>
-#
-# $FreeBSD: ports/graphics/rubyphoto/Makefile,v 1.13 2012/11/17 05:58:22 svnexp Exp $
-#
+# Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
+# $FreeBSD: graphics/rubyphoto/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	rubyphoto
 PORTVERSION=	1.4
@@ -25,6 +21,7 @@ USE_RUBY=	yes
 RUBY_SHEBANG_FILES=	ruby_photo.rb
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/abspath.rb ${RUBY_SITELIBDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/findbin.rb ${RUBY_SITELIBDIR}
