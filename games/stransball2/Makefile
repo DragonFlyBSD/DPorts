@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/stransball2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/stransball2/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	stransball2
 PORTVERSION=	1.5
@@ -23,6 +23,7 @@ BUILD_WRKSRC=	${WRKSRC}/sources
 
 PORTDOCS=	readme.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
