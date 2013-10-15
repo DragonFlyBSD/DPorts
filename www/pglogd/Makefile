@@ -1,9 +1,5 @@
-# New ports collection makefile for: pglogd
-# Date created: 	23 April 2003
-# Whom:			Allie Micka <allie@pajunas.com>
-#
-# $FreeBSD: ports/www/pglogd/Makefile,v 1.8 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Allie Micka <allie@pajunas.com>
+# $FreeBSD: www/pglogd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pglogd
 PORTVERSION=	2.3
@@ -16,6 +12,7 @@ COMMENT=	Sends web server log entries to a PostgreSQL database
 
 USE_PGSQL=	yes
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${FILESDIR}/020.pglogd.sh ${WRKSRC}/020.pglogd.sh
 	@${REINPLACE_CMD} -e "s=%%PREFIX%%=${PREFIX}=g" ${WRKSRC}/020.pglogd.sh
