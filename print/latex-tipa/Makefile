@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tipa
-# Date created:		18 November 2003
-# Whom:			Andreas Braml
-#
-# $FreeBSD: print/latex-tipa/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Andreas Braml
+# $FreeBSD: print/latex-tipa/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-tipa
 PORTVERSION=	1.3
@@ -20,6 +16,7 @@ NO_INSTALL_MANPAGES=	yes
 NO_BUILD=	yes
 LATEX_BIN=	${LOCALBASE}/bin/latex
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/teTeX/share/texmf|${PREFIX}/share/texmf|' ${WRKSRC}/Makefile
 
