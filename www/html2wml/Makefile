@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: www/html2wml/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/html2wml/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	html2wml
 PORTVERSION=	0.4.11
@@ -22,6 +22,7 @@ MAN1=		html2wml.1
 PORTDOCS=	*
 .endif
 
+NO_STAGE=	yes
 do-build:
 	cd ${BUILD_WRKSRC}/doc; \
 	${LN} -sf readme.pod html2wml.pod; \
