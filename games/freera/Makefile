@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/freera/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/freera/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	freera
 PORTVERSION=	080203
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/freera++
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/SConstruct ${WRKSRC}/SConstruct.orig
 	@${CP} ${FILESDIR}/SConstruct ${WRKSRC}/
