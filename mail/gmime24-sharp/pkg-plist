@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/gmime24-sharp/pkg-plist,v 1.2 2012/11/17 05:59:03 svnexp Exp $
+@comment $FreeBSD: mail/gmime24-sharp/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/mono/gac/gmime-sharp/2.4.0.0__2b75c2ad004c52e4/gmime-sharp.dll
 lib/mono/gac/gmime-sharp/2.4.0.0__2b75c2ad004c52e4/gmime-sharp.dll.config
 lib/mono/gmime-sharp-2.4/gmime-sharp.dll
