@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: www/p5-HTML-Template-Compiled/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-HTML-Template-Compiled/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Template-Compiled
 PORTVERSION=	1.001
@@ -38,4 +38,5 @@ MAN3=		HTML::Template::Compiled.3 \
 		HTML::Template::Compiled::Token.3 \
 		HTML::Template::Compiled::Utils.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
