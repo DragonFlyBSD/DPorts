@@ -1,5 +1,5 @@
 # Created by: nobu@rd.isac.co.jp
-# $FreeBSD: math/ngraph/Makefile 322623 2013-07-10 07:02:33Z bapt $
+# $FreeBSD: math/ngraph/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	ngraph
 PORTVERSION=	6.3.51
@@ -14,4 +14,5 @@ COMMENT=	XY plotting tool for students, scientists, and engineers
 
 USES=		gmake motif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
