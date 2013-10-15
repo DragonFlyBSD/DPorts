@@ -1,9 +1,5 @@
-# New ports collection makefile for:   bnc
-# Date created:        06 July 1998
-# Whom:                Bill Fumerola <billf@chc-chimes.com>
-#
-# $FreeBSD: ports/irc/bnc/Makefile,v 1.18 2012/11/17 05:58:27 svnexp Exp $
-#
+# Created by: Bill Fumerola <billf@chc-chimes.com>
+# $FreeBSD: irc/bnc/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	bnc
 PORTVERSION=	2.9.4
@@ -22,6 +18,7 @@ DOCS=		COPYING Changelog README example.conf
 BINS=		bnc mkpasswd
 SCRIPTS=	bncchk bncsetup
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
