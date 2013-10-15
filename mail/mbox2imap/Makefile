@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	mbox2imap
-# Date created:				25 September 2008
-# Whom:					gahr
-#
-# $FreeBSD: ports/mail/mbox2imap/Makefile,v 1.2 2012/11/17 05:59:05 svnexp Exp $
-#
+# Created by: gahr
+# $FreeBSD: mail/mbox2imap/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mbox2imap
 PORTVERSION=	1.0
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	${CP} ${DISTDIR}/${PORTNAME} ${WRKDIR}
 
