@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Server-Simple-Authen/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/p5-HTTP-Server-Simple-Authen/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	HTTP-Server-Simple-Authen
 PORTVERSION=	0.04
@@ -16,7 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		HTTP::Server::Simple::Authen.3
 
 .include <bsd.port.mk>
