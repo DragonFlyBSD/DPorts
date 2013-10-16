@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: net/p5-NetAddr-IP-Count/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: net/p5-NetAddr-IP-Count/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	NetAddr-IP-Count
 PORTVERSION=	2.01
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		NetAddr::IP::Count.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
