@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Depends/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-Module-Depends/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Depends
 PORTVERSION=	0.16
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Module::Depends::Intrusive.3 Module::Depends.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
