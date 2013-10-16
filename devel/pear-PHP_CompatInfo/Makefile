@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-PHP_CompatInfo/Makefile 314340 2013-03-16 08:01:34Z miwi $
+# $FreeBSD: devel/pear-PHP_CompatInfo/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHP_CompatInfo
 PORTVERSION=	1.9.0
@@ -30,6 +30,7 @@ PEAR_PHPUNIT_DESC=	PEAR::PHPUnit support
 PEAR_XML_UTIL_DESC=	PEAR::XML_Util support
 PEAR_HTML_TABLE_DESC=	PEAR::HTML_Table
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_XML_BEAUTIFIER}
