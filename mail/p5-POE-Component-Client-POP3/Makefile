@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: mail/p5-POE-Component-Client-POP3/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-POE-Component-Client-POP3/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	POE-Component-Client-POP3
 PORTVERSION=	0.02
@@ -18,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::POP3.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
