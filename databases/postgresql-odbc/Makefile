@@ -1,5 +1,4 @@
-# Create by: Palle Girgensohn <girgen@partitur.se>
-# $FreeBSD: ports/databases/postgresql-odbc/Makefile,v 1.25 2013/02/13 06:44:02 svnexp Exp $
+# $FreeBSD: databases/postgresql-odbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	postgresql
 PORTVERSION=	09.01.0200
@@ -37,6 +36,7 @@ CONFIGURE_ARGS+=	--with-iodbc=${LOCALBASE}
 PKGNAMESUFFIX=	-iodbc
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DATADIR_1=	${DATADIR}/odbc
