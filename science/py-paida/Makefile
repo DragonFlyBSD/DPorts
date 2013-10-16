@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: science/py-paida/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: science/py-paida/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	paida
 PORTVERSION=	3.2.1.2.10
@@ -20,4 +20,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	3.2.1_2.10.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
