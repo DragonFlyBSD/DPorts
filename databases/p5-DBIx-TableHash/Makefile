@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/p5-DBIx-TableHash/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-TableHash/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-TableHash
 CATEGORIES=	databases perl5
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::TableHash.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
