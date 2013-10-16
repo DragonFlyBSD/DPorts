@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Mechanize-SpamCop
-# Date created:		2011-01-01
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-WWW-Mechanize-SpamCop/Makefile,v 1.2 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-WWW-Mechanize-SpamCop/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Mechanize-SpamCop
 PORTVERSION=	0.08
@@ -16,9 +12,10 @@ COMMENT=	SpamCop reporting automation
 
 RUN_DEPENDS=	p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Mechanize::SpamCop.3
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+NO_STAGE=	yes
+.include <bsd.port.mk>
