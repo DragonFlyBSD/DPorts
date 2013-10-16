@@ -1,5 +1,5 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: databases/py-firebirdsql/Makefile 316414 2013-04-24 09:09:19Z culot $
+# $FreeBSD: databases/py-firebirdsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	firebirdsql
 PORTVERSION=	0.7.3
@@ -16,4 +16,5 @@ LICENSE=	BSD
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
