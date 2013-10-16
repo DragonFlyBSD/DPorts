@@ -1,5 +1,5 @@
 # Created by: <swhetzel@gmail.com>
-# $FreeBSD: graphics/php5-chartdirector/Makefile 320366 2013-06-09 18:06:37Z miwi $
+# $FreeBSD: graphics/php5-chartdirector/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	chartdirector
 PORTVERSION=	5.0.2
@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=	${WRKDIR}/ChartDirector
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 DISTVERSION=	${PORTVERSION:C/\.//g}
