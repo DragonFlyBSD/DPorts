@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-WebForm/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-WebForm/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-WebForm
 PORTVERSION=	0.02
@@ -21,4 +21,5 @@ USE_PERL5=	modbuild
 
 MAN3=	DBIx::Class::WebForm.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
