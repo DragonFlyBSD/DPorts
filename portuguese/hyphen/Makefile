@@ -1,9 +1,4 @@
-# New ports collection makefile for:	hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/portuguese/hyphen/Makefile,v 1.7 2012/11/17 06:00:47 svnexp Exp $
-#
+# $FreeBSD: portuguese/hyphen/Makefile 327763 2013-09-20 22:38:31Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2004.04.15
@@ -26,6 +21,7 @@ PLIST_FILES=	%%DATADIR%%/hyph_pt_BR.dic \
 		%%DATADIR%%/hyph_pt_PT.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/hyph_pt_PT.dic ${DATADIR}/
