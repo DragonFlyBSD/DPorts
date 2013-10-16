@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Handler::AnyEvent::SCGI
-# Date created:		17 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Plack-Handler-AnyEvent-SCGI/Makefile 326042 2013-09-02 17:29:36Z az $
-#
+# $FreeBSD: www/p5-Plack-Handler-AnyEvent-SCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Handler-AnyEvent-SCGI
 PORTVERSION=	0.02
@@ -25,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Plack::Handler::AnyEvent::SCGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
