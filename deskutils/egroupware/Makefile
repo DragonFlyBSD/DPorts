@@ -1,14 +1,14 @@
 # Created by: Jimmy Olgeni <olgeni@uli.it>
-# $FreeBSD: deskutils/egroupware/Makefile 326155 2013-09-03 14:49:48Z sunpoet $
+# $FreeBSD: deskutils/egroupware/Makefile 329808 2013-10-08 16:21:04Z danilo $
 
 PORTNAME=	eGroupware
-PORTVERSION=	1.8.004.20130831
+PORTVERSION=	1.8.005.20131007
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}-1.8/${PORTNAME}-${PORTVERSION}
 DISTFILES=	${PORTNAME}-${PORTVERSION}.tar.bz2 \
 		${PORTNAME}-egw-pear-${PORTVERSION}.tar.bz2
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Web-based GroupWare system
 
 BUILD_DEPENDS=	${PEARDIR}/Auth/SASL.php:${PORTSDIR}/security/pear-Auth_SASL \
@@ -38,6 +38,7 @@ MBSTRING_DESC=	Support multi-byte character sets
 POSTGRES_DESC=	PostgreSQL database support
 ZIP_DESC=	Install PHP zip extension
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
@@ -82,7 +83,7 @@ WRKSRC=	${WRKDIR}/egroupware
 EG_DIR=	www/eg
 EG_WWWDIR=	${PREFIX}/${EG_DIR}
 EG_DATA=	www/egdata
-EG_DATADIR=	${PREFIX}/www/egdata
+EG_DATADIR=	${PREFIX}/${EG_DATA}
 
 pre-install:
 	@${FIND} -s -d ${WRKSRC} -type f | ${SED} "s#${WRKSRC}#${EG_DIR}#g" >${PLIST}
