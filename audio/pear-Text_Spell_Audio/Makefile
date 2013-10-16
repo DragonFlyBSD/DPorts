@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: audio/pear-Text_Spell_Audio/Makefile 314271 2013-03-15 07:14:42Z miwi $
+# $FreeBSD: audio/pear-Text_Spell_Audio/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Text_Spell_Audio
 PORTVERSION=	0.1.0
@@ -11,6 +11,7 @@ COMMENT=	Generates a sound clip saying the contents of a string of characters
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
+NO_STAGE=	yes
 PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
