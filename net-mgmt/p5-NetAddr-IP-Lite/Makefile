@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-NetAddr-IP-Lite
-# Date created:		2006-06-07
-# Whom:			Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-#
-# $FreeBSD: net-mgmt/p5-NetAddr-IP-Lite/Makefile 326167 2013-09-03 16:18:49Z az $
-#
+# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
+# $FreeBSD: net-mgmt/p5-NetAddr-IP-Lite/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	NetAddr-IP-Lite
 PORTVERSION=	1.01
@@ -21,4 +17,5 @@ CONFIGURE_ARGS=	-noxs
 
 MAN3=		NetAddr::IP::UtilPP.3 NetAddr::IP::Util.3 NetAddr::IP::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
