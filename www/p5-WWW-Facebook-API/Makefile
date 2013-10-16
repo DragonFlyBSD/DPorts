@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Facebook-API/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Facebook-API/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Facebook-API
 PORTVERSION=	0.4.18
@@ -50,4 +50,5 @@ MAN3=		WWW::Facebook::API.3 \
 		WWW::Facebook::API::Users.3 \
 		WWW::Facebook::API::Video.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
