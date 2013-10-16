@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: converters/p5-Encode-DoubleEncodedUTF8/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: converters/p5-Encode-DoubleEncodedUTF8/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Encode-DoubleEncodedUTF8
 PORTVERSION=	0.05
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Encode::DoubleEncodedUTF8.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
