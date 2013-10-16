@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: x11-themes/gtk-nodoka-engine/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: x11-themes/gtk-nodoka-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	gtk-nodoka-engine
 PORTVERSION=	0.7.5
@@ -19,6 +19,7 @@ USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANIMATION}
