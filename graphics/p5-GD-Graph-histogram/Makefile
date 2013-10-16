@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: graphics/p5-GD-Graph-histogram/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: graphics/p5-GD-Graph-histogram/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GD-Graph-histogram
 PORTVERSION=	1.1
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		GD::Graph::histogram.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
