@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: dns/p5-Net-Amazon-Route53/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/p5-Net-Amazon-Route53/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-Amazon-Route53
 PORTVERSION=	0.122310
@@ -29,4 +29,5 @@ MAN3=		Net::Amazon::Route53.3 \
 		Net::Amazon::Route53::ResourceRecordSet::Change.3 \
 		Net::Amazon::Route53::Change.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
