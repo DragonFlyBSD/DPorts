@@ -1,10 +1,5 @@
-# New ports collection makefile for:	ocaml-camomile-examples
-# Date created:		2006-07-27
-# Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
-#
-# $MBSDlabs$
-# $FreeBSD: devel/ocaml-camomile-examples/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
+# $FreeBSD: devel/ocaml-camomile-examples/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	camomile
 PORTVERSION=	0.4.1
@@ -22,6 +17,7 @@ NO_BUILD=	yes
 USE_BZIP2=	yes
 EXAMPLESDIR=	${PREFIX}/share/examples/ocaml/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@${TAR} -cf- -C ${WRKSRC} . | \
