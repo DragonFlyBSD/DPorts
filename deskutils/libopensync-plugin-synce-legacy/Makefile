@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-synce-legacy/Makefile 326107 2013-09-02 22:23:53Z bapt $
+# $FreeBSD: deskutils/libopensync-plugin-synce-legacy/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	libopensync-plugin-synce
 PORTVERSION=	0.22.1
@@ -21,4 +21,5 @@ USE_GNOME=	glib20 libxml2
 CFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
