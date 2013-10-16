@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-unsafe_image_rules-plugin/Makefile 326249 2013-09-04 06:06:59Z az $
+# $FreeBSD: mail/squirrelmail-unsafe_image_rules-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	unsafe_image_rules
 PORTVERSION=	0.8
@@ -16,6 +16,7 @@ USE_PERL5=	run
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 .include <bsd.port.mk>
