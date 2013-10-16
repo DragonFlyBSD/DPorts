@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-chapterfolder
-# Date created:		16 July 2011
-# Whom:			hrs
-#
-# $FreeBSD: print/latex-chapterfolder/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs
+# $FreeBSD: print/latex-chapterfolder/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	chapterfolder
 PORTVERSION=	2.0.20051124
@@ -37,6 +34,7 @@ SRC_FILES=	chapterfolder.dtx chapterfolder.ins
 CLASS_FILES=	chapterfolder.sty
 PORTDOCS=	chapterfolder.pdf
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${DISTDIR}/${DIST_SUBDIR} && ${INSTALL_DATA} ${DISTFILES} ${WRKSRC}
