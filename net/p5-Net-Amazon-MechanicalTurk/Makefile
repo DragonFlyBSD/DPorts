@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Amazon-MechanicalTurk/Makefile 326506 2013-09-06 14:30:23Z az $
+# $FreeBSD: net/p5-Net-Amazon-MechanicalTurk/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Amazon-MechanicalTurk
 PORTVERSION=	1.02
@@ -38,6 +38,7 @@ MAN3=		Net::Amazon::MechanicalTurk.3 \
 SUB_LIST+=	HOME=${HOME} EXAMPLESDIR=${EXAMPLESDIR}
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${INSTALL} -d ${EXAMPLESDIR}
