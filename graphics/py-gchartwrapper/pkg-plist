@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/graphics/py-gchartwrapper/pkg-plist,v 1.4 2012/11/17 05:58:20 svnexp Exp $
+@comment $FreeBSD: graphics/py-gchartwrapper/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/GChartWrapper/GChart.py
 %%PYTHON_SITELIBDIR%%/GChartWrapper/GChart.pyc
 %%PYTHON_SITELIBDIR%%/GChartWrapper/GChart.pyo

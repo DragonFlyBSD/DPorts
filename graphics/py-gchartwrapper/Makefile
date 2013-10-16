@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gchartwrapper
-# Date created:		2009-01-09
-# Whom:			Nicola Vitale	<nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/py-gchartwrapper/Makefile,v 1.5 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@FreeBSD.org>
+# $FreeBSD: graphics/py-gchartwrapper/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	GChartWrapper
 PORTVERSION=	0.9
@@ -25,6 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}imaging>=1.1.6_2:${PORTSDIR}/graphics/py-ima
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_ZIP=	yes
+NO_STAGE=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
