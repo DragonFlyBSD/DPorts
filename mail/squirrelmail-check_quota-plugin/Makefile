@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-check_quota-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-check_quota-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	check-quota
 PORTVERSION=	2.2
@@ -14,6 +14,7 @@ USE_SM_COMPAT=	YES
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 .include <bsd.port.mk>
