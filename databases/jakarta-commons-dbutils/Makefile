@@ -1,5 +1,5 @@
 # Created by: Michael Winking <mwfp@foldl.net>
-# $FreeBSD: ports/databases/jakarta-commons-dbutils/Makefile,v 1.12 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: databases/jakarta-commons-dbutils/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	commons-dbutils
 PORTVERSION=	1.1
@@ -27,6 +27,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 PORTDOCS=	LICENSE.txt api
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%JAVALIBDIR%%|${JAVALIBDIR}|' ${WRKSRC}/build.xml
 
