@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-firefox-showcase
-# Date created:		21 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-firefox-showcase/Makefile,v 1.26 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-firefox-showcase/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	firefox-showcase
 PORTVERSION=	0.9.5.6
@@ -20,5 +16,6 @@ XPI_FILES=	chrome/showcase.jar components/showcase-clhandler.js defaults/prefere
 		install.rdf chrome.manifest LICENSE
 XPI_DIRS=	chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
