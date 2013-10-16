@@ -1,5 +1,5 @@
 # Created by: Tommy Scheunemann <net@arrishq.net>
-# $FreeBSD: www/mod_auth_form/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_auth_form/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_auth_form
 PORTVERSION=	2.05
@@ -27,6 +27,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 
 PORTDOCS=	AUTHORS NEWS README
 
+NO_STAGE=	yes
 post-install:
 	${ECHO} ${APACHE_VERSION}
 .if !defined(NOPORTDOCS)
