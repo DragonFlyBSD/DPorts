@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Modified/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-File-Modified/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	File-Modified
 PORTVERSION=	0.07
@@ -16,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		File::Modified.3
 
