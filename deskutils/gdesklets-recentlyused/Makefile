@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/gdesklets-recentlyused/Makefile,v 1.21 2012/12/31 17:20:08 svnexp Exp $
+# $FreeBSD: deskutils/gdesklets-recentlyused/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	recentlyused
 PORTVERSION=	0.6
@@ -22,6 +22,7 @@ SUB_FILES=	pkg-message
 DATADIR=	${PREFIX}/share/gdesklets
 NAME=		RecentlyUsed
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}/Displays/${NAME}
 	${INSTALL_DATA} ${WRKSRC}/*.display ${DATADIR}/Displays/${NAME}
