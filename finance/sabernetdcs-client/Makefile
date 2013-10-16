@@ -1,9 +1,5 @@
-# New ports collection makefile for:   sabernetdcs
-# Date created:        29 December 2006
-# Whom:                Matthew Ranostay <mranostay@saberlogic.com>
-#
-# $FreeBSD: finance/sabernetdcs-client/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Matthew Ranostay <mranostay@saberlogic.com>
+# $FreeBSD: finance/sabernetdcs-client/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	sabernetdcs
 PORTVERSION=	2.0.3
@@ -34,6 +30,7 @@ PYDISTUTILS_PKGNAME=	sndcs
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-setup.py
 .endif
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/setup.py
 
