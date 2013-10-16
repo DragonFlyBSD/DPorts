@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: graphics/p5-Image-Compare/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Image-Compare/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Compare
 PORTVERSION=	0.9
@@ -30,4 +30,5 @@ MAN3=		Image::Compare.3 \
 		Image::Compare::THRESHOLD.3 \
 		Image::Compare::THRESHOLD_COUNT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
