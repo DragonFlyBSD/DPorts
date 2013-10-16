@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Plugin-SmartURI/Makefile 327458 2013-09-17 08:55:11Z culot $
+# $FreeBSD: www/p5-Catalyst-Plugin-SmartURI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-SmartURI
 PORTVERSION=	0.037
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::SmartURI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
