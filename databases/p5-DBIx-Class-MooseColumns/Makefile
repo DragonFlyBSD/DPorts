@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-MooseColumns/Makefile 324224 2013-08-04 12:39:45Z az $
+# $FreeBSD: databases/p5-DBIx-Class-MooseColumns/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-MooseColumns
 PORTVERSION=	0.22
@@ -39,4 +39,5 @@ MAN3=	\
 	DBIx::Class::MooseColumns::Meta::Role::Attribute::DBICColumn.3 \
 	DBIx::Class::MooseColumns::Meta::Role::Attribute::DBICColumn::Inflated.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
