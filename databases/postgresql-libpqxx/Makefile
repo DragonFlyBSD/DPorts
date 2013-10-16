@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpqxx/Makefile 322415 2013-07-07 00:15:47Z jgh $
+# $FreeBSD: databases/postgresql-libpqxx/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libpqxx
 PORTVERSION=	4.0
@@ -25,6 +25,7 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION} \
 CONFIGURE_ARGS=	--enable-shared \
 		--disable-dependency-tracking
 
+NO_STAGE=	yes
 post-install:
 #	This is needed for ldconfig
 	${LN} -s ${PREFIX}/lib/libpqxx-${PORTVERSION}.so \
