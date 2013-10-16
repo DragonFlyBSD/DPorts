@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-page_title/Makefile 313238 2013-03-02 14:40:02Z miwi $
+# $FreeBSD: www/drupal6-page_title/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	page_title
 DISTVERSION=	6.x-2.7
@@ -25,4 +25,5 @@ MODULE_DIRS=	modules views/plugins/ views tests
 
 DOC_FILES=	CHANGELOG.txt README.txt LICENSE.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
