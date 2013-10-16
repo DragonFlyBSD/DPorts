@@ -1,9 +1,5 @@
-# New ports collection makefile for: rubygem-url_mount
-# Date created:	2 January 2012
-# Whom:			Rodrigo Nicola Lombardo <rodnic@gmail.com>
-#
-# $FreeBSD: ports/www/rubygem-url-mount/Makefile,v 1.2 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Rodrigo Nicola Lombardo <rodnic@gmail.com>
+# $FreeBSD: www/rubygem-url-mount/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME= 	url_mount
 PORTVERSION=	0.2.1
@@ -19,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
