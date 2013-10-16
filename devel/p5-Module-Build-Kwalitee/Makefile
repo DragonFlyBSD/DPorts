@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao & <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-Module-Build-Kwalitee/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Module-Build-Kwalitee/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Build-Kwalitee
 PORTVERSION=	0.24
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Module::Build::Kwalitee.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
