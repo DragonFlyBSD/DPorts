@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Lingua-ZH-WordSegmenter
-# Date created:		2007-06-08
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: chinese/p5-Lingua-ZH-WordSegmenter/Makefile 326361 2013-09-05 07:29:05Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: chinese/p5-Lingua-ZH-WordSegmenter/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Lingua-ZH-WordSegmenter
 PORTVERSION=	0.01
@@ -17,7 +13,5 @@ COMMENT=	Simplified Chinese Word Segmentation
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Lingua::ZH::WordSegmenter.3
 
 .include <bsd.port.mk>
