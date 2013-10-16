@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-Filter/Makefile 325147 2013-08-21 14:52:09Z mat $
+# $FreeBSD: mail/p5-Email-Filter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Filter
 PORTVERSION=	1.03.3
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Email::Filter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
