@@ -1,5 +1,5 @@
-# Created by: mbr@freebsd.org
-# $FreeBSD: www/mod_auth_mysql_another/Makefile 324744 2013-08-14 22:35:50Z ak $
+# Created by: mbr@FreeBSD.org
+# $FreeBSD: www/mod_auth_mysql_another/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_auth_mysql
 PORTVERSION=	3.0.0
@@ -23,6 +23,7 @@ AP_LIB=	${LOCALBASE}/lib/mysql
 AP_EXTRAS=	-lmysqlclient -lz -lm
 AP_EXTRAS+=	-DAPACHE2
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
