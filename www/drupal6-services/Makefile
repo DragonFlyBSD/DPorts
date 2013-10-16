@@ -1,5 +1,5 @@
 # Created by: whitekid@gmail.com
-# $FreeBSD: www/drupal6-services/Makefile 313224 2013-03-02 11:20:15Z miwi $
+# $FreeBSD: www/drupal6-services/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	services
 DISTVERSION=	6.x-2.2
@@ -61,4 +61,5 @@ MODULE_FILES=	auth/services_keyauth/services_keyauth.admin.inc \
 
 DOC_FILES=	LICENSE.txt README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
