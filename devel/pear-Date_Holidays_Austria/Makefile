@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Date_Holidays_Austria/Makefile 319308 2013-05-28 14:05:24Z miwi $
+# $FreeBSD: devel/pear-Date_Holidays_Austria/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date_Holidays_Austria
 PORTVERSION=	0.1.4
@@ -12,6 +12,7 @@ RUN_DEPENDS=	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holidays
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
