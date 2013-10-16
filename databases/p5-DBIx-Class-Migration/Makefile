@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-Migration/Makefile 324479 2013-08-10 11:43:56Z kuriyama $
+# $FreeBSD: databases/p5-DBIx-Class-Migration/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-Migration
 PORTVERSION=	0.039
@@ -106,4 +106,5 @@ MAN3=	Catalyst::TraitFor::Model::DBIC::Schema::FromMigration.3 \
 	DBIx::Class::Migration::Types.3 \
 	Test::DBIx::Class::FixtureCommand::Population.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
