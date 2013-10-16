@@ -1,5 +1,5 @@
 # Created by: dindin@dindin.ru
-# $FreeBSD: russian/fortune-bashorgru/Makefile 320910 2013-06-14 13:04:27Z bsam $
+# $FreeBSD: russian/fortune-bashorgru/Makefile 328715 2013-09-29 17:22:55Z bsam $
 
 PORTNAME=	fortune-bashorgru
 PORTVERSION=	20080903
@@ -15,14 +15,11 @@ SUB_FILES=	pkg-message
 SUB_LIST=	PORTNAME=${PORTNAME}
 
 do-install:
-	@${MKDIR} ${EXAMPLESDIR}
-	@${MKDIR} ${PREFIX}/share/games/fortune/ru_RU.UTF-8
-	@${MKDIR} ${PREFIX}/share/games/fortune/ru_RU.KOI8-R
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}/utf-8/* ${PREFIX}/share/games/fortune/ru_RU.UTF-8/
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}/koi8-r/* ${PREFIX}/share/games/fortune/ru_RU.KOI8-R/
-	${INSTALL_DATA} ${WRKSRC}/fortune-update.py ${EXAMPLESDIR}/
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/games/fortune/ru_RU.UTF-8
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/games/fortune/ru_RU.KOI8-R
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}/utf-8/* ${STAGEDIR}${PREFIX}/share/games/fortune/ru_RU.UTF-8/
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}/koi8-r/* ${STAGEDIR}${PREFIX}/share/games/fortune/ru_RU.KOI8-R/
+	${INSTALL_DATA} ${WRKSRC}/fortune-update.py ${STAGEDIR}${EXAMPLESDIR}/
 
 .include <bsd.port.mk>
