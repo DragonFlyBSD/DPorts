@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/pear-Services_W3C_HTMLValidator/Makefile 314404 2013-03-17 08:11:30Z miwi $
+# $FreeBSD: www/pear-Services_W3C_HTMLValidator/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Services_W3C_HTMLValidator
 PORTVERSION=	1.0.0
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
