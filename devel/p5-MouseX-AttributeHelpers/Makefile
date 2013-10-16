@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MouseX-AttributeHelpers/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-MouseX-AttributeHelpers/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MouseX-AttributeHelpers
 PORTVERSION=	0.07
@@ -34,4 +34,5 @@ MAN3=	MouseX::AttributeHelpers.3 \
 	MouseX::AttributeHelpers::String.3 \
 	MouseX::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
