@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xorg-minimal/Makefile,v 1.17 2012/11/17 06:03:22 svnexp Exp $
+# $FreeBSD: x11/xorg-minimal/Makefile 328295 2013-09-25 14:22:23Z eadler $
 
 PORTNAME=	xorg
 PORTVERSION=	7.5.2
@@ -12,6 +12,7 @@ MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	X.Org minimal distribution metaport
 
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 VIDEO_DRIVER?=	vesa
 
