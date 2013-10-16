@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/makehuman/Makefile 327480 2013-09-17 15:53:01Z amdmi3 $
+# $FreeBSD: graphics/makehuman/Makefile 328214 2013-09-24 23:24:51Z amdmi3 $
 
 PORTNAME=	makehuman
 DISTVERSION=	0.9.1-rc1a
@@ -10,18 +10,20 @@ MASTER_SITES=	SF/${PORTNAME}/MakeHuman%20Source/MakeHuman_091
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Application for parametrical modeling of 3D humanoid characters
 
-LIB_DEPENDS=	animorph:${PORTSDIR}/graphics/animorph \
-		mhgui:${PORTSDIR}/graphics/mhgui
+LIB_DEPENDS=	libanimorph.so:${PORTSDIR}/graphics/animorph \
+		libmhgui.so:${PORTSDIR}/graphics/mhgui
 
 USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_GL=		glut
-USE_GCC=	yes # Animation.cpp:94:26: error: variable length array of non-POD element type 'Animorph::BodySettings'
+USE_GCC=	any # Animation.cpp:94:26: error: variable length array of non-POD element type 'Animorph::BodySettings'
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
+PORTDATA=	*
 
 .include <bsd.port.options.mk>
 
@@ -32,12 +34,9 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^makehuman_pixmapsdir =/ s|pixmaps/makehuman|makehuman/pixmaps|' ${WRKSRC}/pixmaps/Makefile.in
 	@${REINPLACE_CMD} -e '/^packagepixmapsdir=/ s|pixmaps/\$${PACKAGE}|$${PACKAGE}/pixmaps|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/^makehumandocdir =/ s|doc/|share/doc/|' ${WRKSRC}/Makefile.in
-.if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e '/^install-data-am:/ s|install-makehumandocDATA||' ${WRKSRC}/Makefile.in
-.endif
 
 post-install:
-	${FIND} ${DATADIR} -type d -print0 | ${XARGS} -0 -n 10 ${CHMOD} 0755
-	${FIND} ${DATADIR} -type f -print0 | ${XARGS} -0 -n 10 ${CHMOD} 0644
+	${FIND} ${STAGEDIR}${DATADIR} -type d -print0 | ${XARGS} -0 -n 10 ${CHMOD} 0755
+	${FIND} ${STAGEDIR}${DATADIR} -type f -print0 | ${XARGS} -0 -n 10 ${CHMOD} 0644
 
 .include <bsd.port.mk>
