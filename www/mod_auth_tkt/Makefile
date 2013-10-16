@@ -1,5 +1,4 @@
-# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-# $FreeBSD: ports/www/mod_auth_tkt/Makefile,v 1.6 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_tkt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_auth_tkt
 PORTVERSION=	2.1.0
@@ -26,6 +25,7 @@ OPTIONS_DEFINE=	QUERY_SEP
 QUERY_SEP_DESC=	Experimental TKTAuthQuerySeparator directive
 OPTIONS_DEFAULT=QUERY_SEP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQUERY_SEP}
