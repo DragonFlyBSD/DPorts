@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-subfloat
-# Date created:		24 Jan 2004
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: print/latex-subfloat/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: print/latex-subfloat/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-subfloat
 PORTVERSION=	2.14.20030821
@@ -31,6 +28,7 @@ CLASS_FILES=	subfloat.dtx subfloat.sty subfloat.ins
 
 DOC_FILES=	README ChangeLog subfloat.dvi subfloat.xml
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC}
