@@ -1,9 +1,4 @@
-# New ports collection makefile for:	GunghoX::FollowLinks
-# Date created:		31 Dec 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-GunghoX-FollowLinks/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# $FreeBSD: www/p5-GunghoX-FollowLinks/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	GunghoX-FollowLinks
 PORTVERSION=	0.00006
@@ -43,4 +38,5 @@ MAN3=	GunghoX::FollowLinks.3 \
 	GunghoX::FollowLinks::Rule::MIME.3 \
 	GunghoX::FollowLinks::Rule::URI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
