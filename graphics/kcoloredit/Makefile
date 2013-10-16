@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kcoloredit
-# Date created:		2008-09-01
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: graphics/kcoloredit/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: graphics/kcoloredit/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kcoloredit
 PORTVERSION=	${APP_VER}.${EXTRA_VER}
@@ -25,4 +20,5 @@ USES=		cmake
 APP_VER=	2.0.0
 EXTRA_VER=	4.4.0
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
