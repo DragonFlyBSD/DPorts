@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Whois-ARIN
-# Date created:				03 Jan 2007
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Whois-ARIN/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Whois-ARIN/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Whois-ARIN
 PORTVERSION=	0.12
@@ -26,4 +22,5 @@ MAN3=		Net::Whois::ARIN.3 \
 		Net::Whois::ARIN::Network.3 \
 		Net::Whois::ARIN::Organization.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
