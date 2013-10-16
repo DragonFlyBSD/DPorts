@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rubygem-fluent-plugin-tail-asis/Makefile 320143 2013-06-07 02:06:48Z kuriyama $
+# $FreeBSD: sysutils/rubygem-fluent-plugin-tail-asis/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fluent-plugin-tail-asis
 PORTVERSION=	0.0.3
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
