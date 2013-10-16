@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/gtk-theme-switch/Makefile 327478 2013-09-17 13:10:00Z bapt $
+# $FreeBSD: x11/gtk-theme-switch/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	gtk-theme-switch
 PORTVERSION=	1.0.1
@@ -16,6 +16,7 @@ USES=		gmake
 
 MAN1=		gtk-theme-switch.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
