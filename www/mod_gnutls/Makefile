@@ -1,5 +1,5 @@
 # Created by: Fumiyuki Shimizu <fumifumi@abacustech.jp>
-# $FreeBSD: www/mod_gnutls/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/mod_gnutls/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_gnutls
 PORTVERSION=	0.5.10
@@ -25,6 +25,7 @@ GNU_CONFIGURE=	yes
 
 DOCS=		LICENSE NEWS README README.ENV
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 DBDIR=	${PREFIX}/var/db/${PORTNAME}
