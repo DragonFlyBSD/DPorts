@@ -1,12 +1,9 @@
-# New ports collection makefile for:	lua50-socket
-# Date created:		14 October 2007
-# Whom:			Andrew Turner <andrew+ports@fubar.geek.nz>
-#
-# $FreeBSD: ports/net/lua50-luasocket/Makefile,v 1.2 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
+# $FreeBSD: net/lua50-luasocket/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 USE_LUA=	5.0
 
 MASTERDIR=	${.CURDIR}/../luasocket
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
