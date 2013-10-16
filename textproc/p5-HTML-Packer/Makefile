@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-HTML-Packer/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: textproc/p5-HTML-Packer/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	HTML-Packer
 PORTVERSION=	1.004.001
@@ -17,7 +17,5 @@ TEST_DEPENDS=	p5-Test-Pod>=1.22:${PORTSDIR}/devel/p5-Test-Pod
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		HTML::Packer.3
 
 .include <bsd.port.mk>
