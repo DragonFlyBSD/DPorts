@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-Unihan/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-Unicode-Unihan/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Unicode-Unihan
 DISTVERSION=	0.04
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		Unicode::Unihan.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/use 5.008001;/d' ${WRKSRC}/Unihan.pm
 
