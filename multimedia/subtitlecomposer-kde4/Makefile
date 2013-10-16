@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/subtitlecomposer-kde4/Makefile 317967 2013-05-12 16:16:56Z makc $
+# $FreeBSD: multimedia/subtitlecomposer-kde4/Makefile 330033 2013-10-10 20:31:30Z makc $
 
 PORTNAME=	subtitlecomposer
 PORTVERSION=	0.5.3
@@ -10,35 +10,23 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Subtitle editor for KDE
 
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake:outsource gettext
 USE_KDE4=	kdeprefix kdelibs automoc4 sharedmime
-USE_QT4=	gui qmake_build moc_build rcc_build uic_build
+USE_QT4=	qmake_build moc_build rcc_build uic_build phonon
 
-LATEST_LINK=	${PORTNAME}-kde4
+OPTIONS_GROUP=	BACKEND
+BACKEND_DESC=	Additional video backens
+OPTIONS_GROUP_BACKEND=	GSTREAMER MPLAYER XINE
 
-OPTIONS_DEFINE=	GSTREAMER MPLAYER XINE
-OPTIONS_DEFAULT=	MPLAYER
+MPLAYER_DESC=	Install MPlayer
+MPLAYER_RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer
 
-MPLAYER_DESC=	Enable MPlayer backend (recommended)
-XINE_DESC=	Enable Xine backend
-GSTREAMER_DESC=	Enable GStreamer backend (broken)
+XINE_DESC=	Build Xine backend
+XINE_LIB_DEPENDS=	libxine.so:${PORTSDIR}/multimedia/libxine
+XINE_CMAKE_OFF=	-DWITH_Xine:Bool=Off
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MMPLAYER}
-RUN_DEPENDS+=	mplayer:${PORTSDIR}/multimedia/mplayer
-.endif
-
-.if ${PORT_OPTIONS:MXINE}
-LIB_DEPENDS+=	xine.2:${PORTSDIR}/multimedia/libxine
-.else
-CMAKE_ARGS+=	-DWITH_Xine:Bool=Off
-.endif
-
-.if ${PORT_OPTIONS:MGSTREAMER}
-USE_GSTREAMER=	yes
-.else
-CMAKE_ARGS+=	-DWITH_GStreamer:Bool=Off
-.endif
+GSTREAMER_DESC=	Build GStreamer backend (broken)
+GSTREAMER_USE=	GSTREAMER=yes
+GSTREAMER_CMAKE_OFF=	-DWITH_GStreamer:Bool=Off
 
 .include <bsd.port.mk>
