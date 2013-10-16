@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: graphics/p5-Tk-JPEG-Lite/Makefile 325152 2013-08-21 15:04:15Z mat $
+# $FreeBSD: graphics/p5-Tk-JPEG-Lite/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Tk-JPEG-Lite
 PORTVERSION=	2.01500
@@ -21,6 +21,7 @@ USE_PERL5=	configure
 MAN1=	tkjpeg-lite.1
 MAN3=	Tk::JPEG::Lite.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
 		${WRKSRC}/Makefile.PL
