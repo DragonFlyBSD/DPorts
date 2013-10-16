@@ -1,5 +1,5 @@
 # Created by: Shawn Webb <bsdports@wayfair.com>
-# $FreeBSD: www/drupal7-jailadmin/Makefile 322773 2013-07-11 15:20:03Z miwi $
+# $FreeBSD: www/drupal7-jailadmin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	jailadmin
 DISTVERSION=	7.x-0.6.2
@@ -14,6 +14,7 @@ LICENSE=	BSD
 
 USE_DRUPAL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 DRUPAL_MODULE=	yes
