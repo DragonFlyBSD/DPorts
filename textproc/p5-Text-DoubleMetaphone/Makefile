@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-DoubleMetaphone/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: textproc/p5-Text-DoubleMetaphone/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-DoubleMetaphone
 PORTVERSION=	0.07
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::DoubleMetaphone.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
