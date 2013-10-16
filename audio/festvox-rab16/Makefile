@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festvox-rab16/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: audio/festvox-rab16/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festvox-rab16
 PORTVERSION=	1.4.1
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/festival
 CONFLICTS=	festvox-rab8
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 FHOME=		${PREFIX}/share/festival
 
