@@ -1,4 +1,4 @@
-# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Karma/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Karma/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	POE-Component-IRC-Plugin-Karma
 PORTVERSION=	0.003
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Plugin::Karma.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
