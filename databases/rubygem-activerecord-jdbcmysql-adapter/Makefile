@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov,com>
-# $FreeBSD: databases/rubygem-activerecord-jdbcmysql-adapter/Makefile 321612 2013-06-23 04:44:48Z swills $
+# $FreeBSD: databases/rubygem-activerecord-jdbcmysql-adapter/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	activerecord-jdbcmysql-adapter
 PORTVERSION=	1.2.9
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
