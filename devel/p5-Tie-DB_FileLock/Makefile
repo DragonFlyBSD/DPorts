@@ -1,5 +1,5 @@
 # Created by: Josh Tiefenbach <josh@zipperup.org>
-# $FreeBSD: devel/p5-Tie-DB_FileLock/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-Tie-DB_FileLock/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-DB_FileLock
 PORTVERSION=	0.11
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Tie::DB_FileLock.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
