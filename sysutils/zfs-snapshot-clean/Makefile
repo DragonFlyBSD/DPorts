@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zfs-snapshot-clean
-# Date created:		2 January 2010
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/sysutils/zfs-snapshot-clean/Makefile,v 1.7 2012/11/17 06:01:51 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: sysutils/zfs-snapshot-clean/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	zfs-snapshot-clean
 PORTVERSION=	0.1.3
@@ -17,6 +13,7 @@ COMMENT=	A tool to sieve ZFS snapshots as per given spec a la 'pdumpfs-clean'
 NO_BUILD=	yes
 PLIST_FILES=	sbin/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin/
 
