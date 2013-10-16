@@ -1,9 +1,5 @@
-# New ports collection makefile for:	advancemess
-# Date created:				2007-01-10
-# Whom:					alepulver
-#
-# $FreeBSD: ports/emulators/advancemess/Makefile,v 1.10 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: alepulver
+# $FreeBSD: emulators/advancemess/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	advancemess
 PORTVERSION=	0.102.0.1
@@ -28,6 +24,7 @@ SLANG_DESC=	Enable sLang support (for video driver)
 
 MAN1=		advmess.1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
