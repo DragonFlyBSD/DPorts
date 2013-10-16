@@ -1,9 +1,5 @@
-# New ports collection makefile for:	groupvice
-# Date created:				Thu 30 Jul 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/mail/roundcube-groupvice/Makefile,v 1.2 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: mail/roundcube-groupvice/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	groupvice
 PORTVERSION=	0.1.2
@@ -31,6 +27,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKSRC} && ${PAX} -r -w . ${WWWDIR}
